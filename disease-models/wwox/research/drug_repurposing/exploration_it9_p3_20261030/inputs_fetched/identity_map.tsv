@@ -1,0 +1,1223 @@
+family_id	name	origin	identity_route	chembl_id	note
+FAM:CAT:CHEMBL102714	SB-216763	chembl_selected	catalogue_chembl	CHEMBL102714	
+FAM:CAT:CHEMBL103	PROGESTERONE	chembl_selected	catalogue_chembl	CHEMBL103	
+FAM:CAT:CHEMBL1040	CALCIFEDIOL ANHYDROUS	chembl_selected	catalogue_chembl	CHEMBL1040	
+FAM:CAT:CHEMBL1042	CHOLECALCIFEROL	chembl_selected	catalogue_chembl	CHEMBL1042	
+FAM:CAT:CHEMBL107430	NRX195183	chembl_selected	catalogue_chembl	CHEMBL107430	
+FAM:CAT:CHEMBL1082407	ENZALUTAMIDE	chembl_selected	catalogue_chembl	CHEMBL1082407	
+FAM:CAT:CHEMBL1084546	PF-00562271	chembl_selected	catalogue_chembl	CHEMBL1084546	
+FAM:CAT:CHEMBL1090479	GSK-1070916	chembl_selected	catalogue_chembl	CHEMBL1090479	
+FAM:CAT:CHEMBL1090771	AVAGACESTAT	chembl_selected	catalogue_chembl	CHEMBL1090771	
+FAM:CAT:CHEMBL1091	HYDROCORTISONE ACETATE	chembl_selected	catalogue_chembl	CHEMBL1091	
+FAM:CAT:CHEMBL1093266		chembl_selected	catalogue_chembl	CHEMBL1093266	
+FAM:CAT:CHEMBL1093458	ENDOXIFEN	chembl_selected	catalogue_chembl	CHEMBL1093458	
+FAM:CAT:CHEMBL1094	FELBAMATE	chembl_selected	catalogue_chembl	CHEMBL1094	
+FAM:CAT:CHEMBL1152	PREDNISOLONE ACETATE	chembl_selected	catalogue_chembl	CHEMBL1152	
+FAM:CAT:CHEMBL1159650	CLOBETASOL PROPIONATE	chembl_selected	catalogue_chembl	CHEMBL1159650	
+FAM:CAT:CHEMBL1161	MOMETASONE FUROATE	chembl_selected	catalogue_chembl	CHEMBL1161	
+FAM:CAT:CHEMBL1162	NORETHINDRONE	chembl_selected	catalogue_chembl	CHEMBL1162	
+FAM:CAT:CHEMBL1170	TESTOSTERONE PROPIONATE	chembl_selected	catalogue_chembl	CHEMBL1170	
+FAM:CAT:CHEMBL1200335	TESTOSTERONE ENANTHATE	chembl_selected	catalogue_chembl	CHEMBL1200335	
+FAM:CAT:CHEMBL1200342	PARAMETHASONE ACETATE	chembl_selected	catalogue_chembl	CHEMBL1200342	
+FAM:CAT:CHEMBL1200376	BETAMETHASONE BENZOATE	chembl_selected	catalogue_chembl	CHEMBL1200376	
+FAM:CAT:CHEMBL1200384	BETAMETHASONE DIPROPIONATE	chembl_selected	catalogue_chembl	CHEMBL1200384	
+FAM:CAT:CHEMBL1200386	PREDNICARBATE	chembl_selected	catalogue_chembl	CHEMBL1200386	
+FAM:CAT:CHEMBL1200412	NANDROLONE PHENPROPIONATE	chembl_selected	catalogue_chembl	CHEMBL1200412	
+FAM:CAT:CHEMBL1200436	OXANDROLONE	chembl_selected	catalogue_chembl	CHEMBL1200436	
+FAM:CAT:CHEMBL1200449	TRIAMCINOLONE DIACETATE	chembl_selected	catalogue_chembl	CHEMBL1200449	
+FAM:CAT:CHEMBL1200495	HYDROCORTISONE SODIUM SUCCINATE	chembl_selected	catalogue_chembl	CHEMBL1200495	
+FAM:CAT:CHEMBL1200500	BECLOMETHASONE DIPROPIONATE	chembl_selected	catalogue_chembl	CHEMBL1200500	
+FAM:CAT:CHEMBL1200538	BETAMETHASONE ACETATE	chembl_selected	catalogue_chembl	CHEMBL1200538	
+FAM:CAT:CHEMBL1200545	DIFLORASONE DIACETATE	chembl_selected	catalogue_chembl	CHEMBL1200545	
+FAM:CAT:CHEMBL1200562	HYDROCORTISONE VALERATE	chembl_selected	catalogue_chembl	CHEMBL1200562	
+FAM:CAT:CHEMBL1200585	OXYMETHOLONE	chembl_selected	catalogue_chembl	CHEMBL1200585	
+FAM:CAT:CHEMBL1200598	DIETHYLSTILBESTROL DIPHOSPHATE	chembl_selected	catalogue_chembl	CHEMBL1200598	
+FAM:CAT:CHEMBL1200600	FLUOROMETHOLONE	chembl_selected	catalogue_chembl	CHEMBL1200600	
+FAM:CAT:CHEMBL1200617	RIMEXOLONE	chembl_selected	catalogue_chembl	CHEMBL1200617	
+FAM:CAT:CHEMBL1200622	PARICALCITOL	chembl_selected	catalogue_chembl	CHEMBL1200622	
+FAM:CAT:CHEMBL1200623	ETHYLESTRENOL	chembl_selected	catalogue_chembl	CHEMBL1200623	
+FAM:CAT:CHEMBL1200624	ETHYNODIOL DIACETATE	chembl_selected	catalogue_chembl	CHEMBL1200624	
+FAM:CAT:CHEMBL1200635	HYDROCORTAMATE HYDROCHLORIDE	chembl_selected	catalogue_chembl	CHEMBL1200635	
+FAM:CAT:CHEMBL1200666	CALCIPOTRIENE	chembl_selected	catalogue_chembl	CHEMBL1200666	
+FAM:CAT:CHEMBL1200732	AMCINONIDE	chembl_selected	catalogue_chembl	CHEMBL1200732	
+FAM:CAT:CHEMBL1200760	BALSALAZIDE DISODIUM	chembl_selected	catalogue_chembl	CHEMBL1200760	
+FAM:CAT:CHEMBL1200762	BETAMETHASONE SODIUM PHOSPHATE	chembl_selected	catalogue_chembl	CHEMBL1200762	
+FAM:CAT:CHEMBL1200774	FLUPREDNISOLONE	chembl_selected	catalogue_chembl	CHEMBL1200774	
+FAM:CAT:CHEMBL1200807	NORELGESTROMIN	chembl_selected	catalogue_chembl	CHEMBL1200807	
+FAM:CAT:CHEMBL1200810	DOXERCALCIFEROL	chembl_selected	catalogue_chembl	CHEMBL1200810	
+FAM:CAT:CHEMBL1200826	LITHIUM CARBONATE	chembl_selected	catalogue_chembl	CHEMBL1200826	
+FAM:CAT:CHEMBL1200845	HALCINONIDE	chembl_selected	catalogue_chembl	CHEMBL1200845	
+FAM:CAT:CHEMBL1200848	HYDROXYPROGESTERONE CAPROATE	chembl_selected	catalogue_chembl	CHEMBL1200848	
+FAM:CAT:CHEMBL1200853	DYDROGESTERONE	chembl_selected	catalogue_chembl	CHEMBL1200853	
+FAM:CAT:CHEMBL1200865	LOTEPREDNOL ETABONATE	chembl_selected	catalogue_chembl	CHEMBL1200865	
+FAM:CAT:CHEMBL1200877	FLUMETHASONE PIVALATE	chembl_selected	catalogue_chembl	CHEMBL1200877	
+FAM:CAT:CHEMBL1200878	TRIAMCINOLONE HEXACETONIDE	chembl_selected	catalogue_chembl	CHEMBL1200878	
+FAM:CAT:CHEMBL1200908	HALOBETASOL PROPIONATE	chembl_selected	catalogue_chembl	CHEMBL1200908	
+FAM:CAT:CHEMBL1200909	PREDNISOLONE TEBUTATE	chembl_selected	catalogue_chembl	CHEMBL1200909	
+FAM:CAT:CHEMBL1200934	NORGESTIMATE	chembl_selected	catalogue_chembl	CHEMBL1200934	
+FAM:CAT:CHEMBL1200946	NANDROLONE DECANOATE	chembl_selected	catalogue_chembl	CHEMBL1200946	
+FAM:CAT:CHEMBL1200953	HYDROCORTISONE PROBUTATE	chembl_selected	catalogue_chembl	CHEMBL1200953	
+FAM:CAT:CHEMBL1200968	HYDROCORTISONE SODIUM PHOSPHATE	chembl_selected	catalogue_chembl	CHEMBL1200968	
+FAM:CAT:CHEMBL1200975	CLOCORTOLONE PIVALATE	chembl_selected	catalogue_chembl	CHEMBL1200975	
+FAM:CAT:CHEMBL1200989	ALCLOMETASONE DIPROPIONATE	chembl_selected	catalogue_chembl	CHEMBL1200989	
+FAM:CAT:CHEMBL1201012	FLURANDRENOLIDE	chembl_selected	catalogue_chembl	CHEMBL1201012	
+FAM:CAT:CHEMBL1201013	OLSALAZINE SODIUM	chembl_selected	catalogue_chembl	CHEMBL1201013	
+FAM:CAT:CHEMBL1201014	PREDNISOLONE SODIUM PHOSPHATE	chembl_selected	catalogue_chembl	CHEMBL1201014	
+FAM:CAT:CHEMBL1201048	DROMOSTANOLONE PROPIONATE	chembl_selected	catalogue_chembl	CHEMBL1201048	
+FAM:CAT:CHEMBL1201064	FLUOROMETHOLONE ACETATE	chembl_selected	catalogue_chembl	CHEMBL1201064	
+FAM:CAT:CHEMBL1201081	METHYLPREDNISOLONE SODIUM SUCCINATE	chembl_selected	catalogue_chembl	CHEMBL1201081	
+FAM:CAT:CHEMBL1201101	TESTOSTERONE CYPIONATE	chembl_selected	catalogue_chembl	CHEMBL1201101	
+FAM:CAT:CHEMBL1201109	DESONIDE	chembl_selected	catalogue_chembl	CHEMBL1201109	
+FAM:CAT:CHEMBL1201139	MEGESTROL ACETATE	chembl_selected	catalogue_chembl	CHEMBL1201139	
+FAM:CAT:CHEMBL1201146	NORETHINDRONE ACETATE	chembl_selected	catalogue_chembl	CHEMBL1201146	
+FAM:CAT:CHEMBL1201148	MEPREDNISONE	chembl_selected	catalogue_chembl	CHEMBL1201148	
+FAM:CAT:CHEMBL1201165	QUINESTROL	chembl_selected	catalogue_chembl	CHEMBL1201165	
+FAM:CAT:CHEMBL1201170	LITHIUM CITRATE ANHYDROUS	chembl_selected	catalogue_chembl	CHEMBL1201170	
+FAM:CAT:CHEMBL1201173	MEDRYSONE	chembl_selected	catalogue_chembl	CHEMBL1201173	
+FAM:CAT:CHEMBL1201466	ESTROGENS, CONJUGATED SYNTHETIC A	chembl_selected	catalogue_chembl	CHEMBL1201466	
+FAM:CAT:CHEMBL1201467	SYNTHETIC CONJUGATED ESTROGENS, B	chembl_selected	catalogue_chembl	CHEMBL1201467	
+FAM:CAT:CHEMBL1201468	ESTROGENS, ESTERIFIED	chembl_selected	catalogue_chembl	CHEMBL1201468	
+FAM:CAT:CHEMBL1201572	ETANERCEPT	chembl_selected	catalogue_chembl	CHEMBL1201572	
+FAM:CAT:CHEMBL1201580	ADALIMUMAB	chembl_selected	catalogue_chembl	CHEMBL1201580	
+FAM:CAT:CHEMBL1201581	INFLIXIMAB	chembl_selected	catalogue_chembl	CHEMBL1201581	
+FAM:CAT:CHEMBL1201649	ESTROGENS, CONJUGATED	chembl_selected	catalogue_chembl	CHEMBL1201649	
+FAM:CAT:CHEMBL1201749	DIFLUPREDNATE	chembl_selected	catalogue_chembl	CHEMBL1201749	
+FAM:CAT:CHEMBL1201830	RILONACEPT	chembl_selected	catalogue_chembl	CHEMBL1201830	
+FAM:CAT:CHEMBL1201831	CERTOLIZUMAB PEGOL	chembl_selected	catalogue_chembl	CHEMBL1201831	
+FAM:CAT:CHEMBL1201833	GOLIMUMAB	chembl_selected	catalogue_chembl	CHEMBL1201833	
+FAM:CAT:CHEMBL1201834	CANAKINUMAB	chembl_selected	catalogue_chembl	CHEMBL1201834	
+FAM:CAT:CHEMBL1201891	DEFLAZACORT	chembl_selected	catalogue_chembl	CHEMBL1201891	
+FAM:CAT:CHEMBL1207366	GW468816	chembl_selected	catalogue_chembl	CHEMBL1207366	
+FAM:CAT:CHEMBL1213492	GIVINOSTAT	chembl_selected	catalogue_chembl	CHEMBL1213492	
+FAM:CAT:CHEMBL1213583	GESTODENE	chembl_selected	catalogue_chembl	CHEMBL1213583	
+FAM:CAT:CHEMBL1215331	PF-03882845	chembl_selected	catalogue_chembl	CHEMBL1215331	
+FAM:CAT:CHEMBL1218	RAMELTEON	chembl_selected	catalogue_chembl	CHEMBL1218	
+FAM:CAT:CHEMBL1230314	ESTETROL ANHYDROUS	chembl_selected	catalogue_chembl	CHEMBL1230314	
+FAM:CAT:CHEMBL1230541		chembl_selected	catalogue_chembl	CHEMBL1230541	
+FAM:CAT:CHEMBL1231124	AZD-1480	chembl_selected	catalogue_chembl	CHEMBL1231124	
+FAM:CAT:CHEMBL1254766	DEXTRORPHAN	chembl_selected	catalogue_chembl	CHEMBL1254766	
+FAM:CAT:CHEMBL1255840	NEBOGLAMINE	chembl_selected	catalogue_chembl	CHEMBL1255840	
+FAM:CAT:CHEMBL1265	ADAPALENE	chembl_selected	catalogue_chembl	CHEMBL1265	
+FAM:CAT:CHEMBL1274	NILUTAMIDE	chembl_selected	catalogue_chembl	CHEMBL1274	
+FAM:CAT:CHEMBL1276308	MIFEPRISTONE	chembl_selected	catalogue_chembl	CHEMBL1276308	
+FAM:CAT:CHEMBL128748	DIMETHYLCURCUMIN	chembl_selected	catalogue_chembl	CHEMBL128748	
+FAM:CAT:CHEMBL1287853	FEDRATINIB	chembl_selected	catalogue_chembl	CHEMBL1287853	
+FAM:CAT:CHEMBL131	PREDNISOLONE	chembl_selected	catalogue_chembl	CHEMBL131	
+FAM:CAT:CHEMBL1358	FULVESTRANT	chembl_selected	catalogue_chembl	CHEMBL1358	
+FAM:CAT:CHEMBL1364144	METHYLPREDNISOLONE ACETATE	chembl_selected	catalogue_chembl	CHEMBL1364144	
+FAM:CAT:CHEMBL1370	BUDESONIDE	chembl_selected	catalogue_chembl	CHEMBL1370	
+FAM:CAT:CHEMBL1387	NORETHYNODREL	chembl_selected	catalogue_chembl	CHEMBL1387	
+FAM:CAT:CHEMBL1389	LEVONORGESTREL	chembl_selected	catalogue_chembl	CHEMBL1389	
+FAM:CAT:CHEMBL1395	METHYLTESTOSTERONE	chembl_selected	catalogue_chembl	CHEMBL1395	
+FAM:CAT:CHEMBL139835	CYPROTERONE ACETATE	chembl_selected	catalogue_chembl	CHEMBL139835	
+FAM:CAT:CHEMBL140	CURCUMIN	chembl_selected	catalogue_chembl	CHEMBL140	
+FAM:CAT:CHEMBL1418176	METHANDROSTENOLONE	chembl_selected	catalogue_chembl	CHEMBL1418176	
+FAM:CAT:CHEMBL1445	FLUOXYMESTERONE	chembl_selected	catalogue_chembl	CHEMBL1445	
+FAM:CAT:CHEMBL1451	TRIAMCINOLONE	chembl_selected	catalogue_chembl	CHEMBL1451	
+FAM:CAT:CHEMBL146032	LONAPRISAN	chembl_selected	catalogue_chembl	CHEMBL146032	
+FAM:CAT:CHEMBL1473	FLUTICASONE PROPIONATE	chembl_selected	catalogue_chembl	CHEMBL1473	
+FAM:CAT:CHEMBL1476022	NOMEGESTROL ACETATE	chembl_selected	catalogue_chembl	CHEMBL1476022	
+FAM:CAT:CHEMBL1479	DANAZOL	chembl_selected	catalogue_chembl	CHEMBL1479	
+FAM:CAT:CHEMBL1497	BETAMETHASONE VALERATE	chembl_selected	catalogue_chembl	CHEMBL1497	
+FAM:CAT:CHEMBL1501	FLUOCINONIDE	chembl_selected	catalogue_chembl	CHEMBL1501	
+FAM:CAT:CHEMBL1504	TRIAMCINOLONE ACETONIDE	chembl_selected	catalogue_chembl	CHEMBL1504	
+FAM:CAT:CHEMBL1509	DROSPIRENONE	chembl_selected	catalogue_chembl	CHEMBL1509	
+FAM:CAT:CHEMBL1512	FLUNISOLIDE	chembl_selected	catalogue_chembl	CHEMBL1512	
+FAM:CAT:CHEMBL1522313		chembl_selected	catalogue_chembl	CHEMBL1522313	
+FAM:CAT:CHEMBL1531	ETONOGESTREL	chembl_selected	catalogue_chembl	CHEMBL1531	
+FAM:CAT:CHEMBL1533	DESOGESTREL	chembl_selected	catalogue_chembl	CHEMBL1533	
+FAM:CAT:CHEMBL1536	ERGOCALCIFEROL	chembl_selected	catalogue_chembl	CHEMBL1536	
+FAM:CAT:CHEMBL1549	HYDROCORTISONE CYPIONATE	chembl_selected	catalogue_chembl	CHEMBL1549	
+FAM:CAT:CHEMBL1569	AMANTADINE HYDROCHLORIDE	chembl_selected	catalogue_chembl	CHEMBL1569	
+FAM:CAT:CHEMBL1601669	ALFACALCIDOL	chembl_selected	catalogue_chembl	CHEMBL1601669	
+FAM:CAT:CHEMBL1650	CORTISONE ACETATE	chembl_selected	catalogue_chembl	CHEMBL1650	
+FAM:CAT:CHEMBL1650595	AR-12	chembl_selected	catalogue_chembl	CHEMBL1650595	
+FAM:CAT:CHEMBL1657	TAZAROTENE	chembl_selected	catalogue_chembl	CHEMBL1657	
+FAM:CAT:CHEMBL1676	FLUTICASONE FUROATE	chembl_selected	catalogue_chembl	CHEMBL1676	
+FAM:CAT:CHEMBL1683	HYDROCORTISONE BUTYRATE	chembl_selected	catalogue_chembl	CHEMBL1683	
+FAM:CAT:CHEMBL1699	MEMANTINE HYDROCHLORIDE	chembl_selected	catalogue_chembl	CHEMBL1699	
+FAM:CAT:CHEMBL1743026	GEVOKIZUMAB	chembl_selected	catalogue_chembl	CHEMBL1743026	
+FAM:CAT:CHEMBL1743050	OLOKIZUMAB	chembl_selected	catalogue_chembl	CHEMBL1743050	
+FAM:CAT:CHEMBL1743054	OZORALIZUMAB	chembl_selected	catalogue_chembl	CHEMBL1743054	
+FAM:CAT:CHEMBL1743057	PEGSUNERCEPT	chembl_selected	catalogue_chembl	CHEMBL1743057	
+FAM:CAT:CHEMBL1743070	SILTUXIMAB	chembl_selected	catalogue_chembl	CHEMBL1743070	
+FAM:CAT:CHEMBL1743071	SIRUKUMAB	chembl_selected	catalogue_chembl	CHEMBL1743071	
+FAM:CAT:CHEMBL1765740		chembl_selected	catalogue_chembl	CHEMBL1765740	
+FAM:CAT:CHEMBL1766	DESOXIMETASONE	chembl_selected	catalogue_chembl	CHEMBL1766	
+FAM:CAT:CHEMBL1766779		chembl_selected	catalogue_chembl	CHEMBL1766779	
+FAM:CAT:CHEMBL1770916	NIROGACESTAT	chembl_selected	catalogue_chembl	CHEMBL1770916	
+FAM:CAT:CHEMBL1774055		chembl_selected	catalogue_chembl	CHEMBL1774055	
+FAM:CAT:CHEMBL1801250	NANATINOSTAT	chembl_selected	catalogue_chembl	CHEMBL1801250	
+FAM:CAT:CHEMBL181	DIAZOXIDE	chembl_selected	catalogue_chembl	CHEMBL181	
+FAM:CAT:CHEMBL1873475	IBRUTINIB	chembl_selected	catalogue_chembl	CHEMBL1873475	
+FAM:CAT:CHEMBL1908373	ONAPRISTONE	chembl_selected	catalogue_chembl	CHEMBL1908373	
+FAM:CAT:CHEMBL1908376	SEOCALCITOL	chembl_selected	catalogue_chembl	CHEMBL1908376	
+FAM:CAT:CHEMBL1908397	KW-2449	chembl_selected	catalogue_chembl	CHEMBL1908397	
+FAM:CAT:CHEMBL1923234	WP 1066	chembl_selected	catalogue_chembl	CHEMBL1923234	
+FAM:CAT:CHEMBL1933288		chembl_selected	catalogue_chembl	CHEMBL1933288	
+FAM:CAT:CHEMBL1950289	TANZISERTIB	chembl_selected	catalogue_chembl	CHEMBL1950289	
+FAM:CAT:CHEMBL1957266		chembl_selected	catalogue_chembl	CHEMBL1957266	
+FAM:CAT:CHEMBL1967878	CENISERTIB	chembl_selected	catalogue_chembl	CHEMBL1967878	
+FAM:CAT:CHEMBL1969664	AZD-1080	chembl_selected	catalogue_chembl	CHEMBL1969664	
+FAM:CAT:CHEMBL1980391	RG-1530	chembl_selected	catalogue_chembl	CHEMBL1980391	
+FAM:CAT:CHEMBL198877	AUS-131	chembl_selected	catalogue_chembl	CHEMBL198877	
+FAM:CAT:CHEMBL2010872	CEP-11981	chembl_selected	catalogue_chembl	CHEMBL2010872	
+FAM:CAT:CHEMBL2018302	TUBASTATIN A	chembl_selected	catalogue_chembl	CHEMBL2018302	
+FAM:CAT:CHEMBL2035185	CT-1578	chembl_selected	catalogue_chembl	CHEMBL2035185	
+FAM:CAT:CHEMBL2035187	PACRITINIB	chembl_selected	catalogue_chembl	CHEMBL2035187	
+FAM:CAT:CHEMBL2040682	CICLESONIDE	chembl_selected	catalogue_chembl	CHEMBL2040682	
+FAM:CAT:CHEMBL2057915		chembl_selected	catalogue_chembl	CHEMBL2057915	
+FAM:CAT:CHEMBL2079587	STANOZOLOL	chembl_selected	catalogue_chembl	CHEMBL2079587	
+FAM:CAT:CHEMBL2103822	TASIMELTEON	chembl_selected	catalogue_chembl	CHEMBL2103822	
+FAM:CAT:CHEMBL2103863	ABEXINOSTAT	chembl_selected	catalogue_chembl	CHEMBL2103863	
+FAM:CAT:CHEMBL2103876	MAPRACORAT	chembl_selected	catalogue_chembl	CHEMBL2103876	
+FAM:CAT:CHEMBL2104449	SARAKALIM	chembl_selected	catalogue_chembl	CHEMBL2104449	
+FAM:CAT:CHEMBL2104765	TRIMEGESTONE	chembl_selected	catalogue_chembl	CHEMBL2104765	
+FAM:CAT:CHEMBL2104955	BECOCALCIDIOL	chembl_selected	catalogue_chembl	CHEMBL2104955	
+FAM:CAT:CHEMBL2105107	INECALCITOL	chembl_selected	catalogue_chembl	CHEMBL2105107	
+FAM:CAT:CHEMBL2105160	NAMINIDIL	chembl_selected	catalogue_chembl	CHEMBL2105160	
+FAM:CAT:CHEMBL2105657	TOZASERTIB LACTATE	chembl_selected	catalogue_chembl	CHEMBL2105657	
+FAM:CAT:CHEMBL2105662	LOMITAPIDE MESYLATE	chembl_selected	catalogue_chembl	CHEMBL2105662	
+FAM:CAT:CHEMBL2105705	LUNACALCIPOL	chembl_selected	catalogue_chembl	CHEMBL2105705	
+FAM:CAT:CHEMBL2105707	POMAGLUMETAD METHIONIL	chembl_selected	catalogue_chembl	CHEMBL2105707	
+FAM:CAT:CHEMBL2105759	BARICITINIB	chembl_selected	catalogue_chembl	CHEMBL2105759	
+FAM:CAT:CHEMBL2105763	QUISINOSTAT	chembl_selected	catalogue_chembl	CHEMBL2105763	
+FAM:CAT:CHEMBL2105804	IMPLITAPIDE	chembl_selected	catalogue_chembl	CHEMBL2105804	
+FAM:CAT:CHEMBL2105842	CORTIVAZOL	chembl_selected	catalogue_chembl	CHEMBL2105842	
+FAM:CAT:CHEMBL2107067	TESTOSTERONE UNDECANOATE	chembl_selected	catalogue_chembl	CHEMBL2107067	
+FAM:CAT:CHEMBL2107819	BELNACASAN	chembl_selected	catalogue_chembl	CHEMBL2107819	
+FAM:CAT:CHEMBL2107823	GANDOTINIB	chembl_selected	catalogue_chembl	CHEMBL2107823	
+FAM:CAT:CHEMBL2107911	ONERCEPT	chembl_selected	catalogue_chembl	CHEMBL2107911	
+FAM:CAT:CHEMBL2108208	LENERCEPT	chembl_selected	catalogue_chembl	CHEMBL2108208	
+FAM:CAT:CHEMBL2108316	EDIFOLIGIDE	chembl_selected	catalogue_chembl	CHEMBL2108316	
+FAM:CAT:CHEMBL2108438	MILODISTIM	chembl_selected	catalogue_chembl	CHEMBL2108438	
+FAM:CAT:CHEMBL2108566	NERELIMOMAB	chembl_selected	catalogue_chembl	CHEMBL2108566	
+FAM:CAT:CHEMBL2108589	CLAZAKIZUMAB	chembl_selected	catalogue_chembl	CHEMBL2108589	
+FAM:CAT:CHEMBL2108591	ELSILIMOMAB	chembl_selected	catalogue_chembl	CHEMBL2108591	
+FAM:CAT:CHEMBL2108594	EPTOTERMIN ALFA	chembl_selected	catalogue_chembl	CHEMBL2108594	
+FAM:CAT:CHEMBL2108739	PLACULUMAB	chembl_selected	catalogue_chembl	CHEMBL2108739	
+FAM:CAT:CHEMBL2108887	AFELIMOMAB	chembl_selected	catalogue_chembl	CHEMBL2108887	
+FAM:CAT:CHEMBL2109058	EDIFOLIGIDE SODIUM	chembl_selected	catalogue_chembl	CHEMBL2109058	
+FAM:CAT:CHEMBL2109459	CDP-484	chembl_selected	catalogue_chembl	CHEMBL2109459	
+FAM:CAT:CHEMBL2109587	AZ9773	chembl_selected	catalogue_chembl	CHEMBL2109587	
+FAM:CAT:CHEMBL2109615	MRA 003 US	chembl_selected	catalogue_chembl	CHEMBL2109615	
+FAM:CAT:CHEMBL2140408	AMG-900	chembl_selected	catalogue_chembl	CHEMBL2140408	
+FAM:CAT:CHEMBL215152	DEFOSBARASERTIB	chembl_selected	catalogue_chembl	CHEMBL215152	
+FAM:CAT:CHEMBL2169919		chembl_selected	catalogue_chembl	CHEMBL2169919	
+FAM:CAT:CHEMBL2170016		chembl_selected	catalogue_chembl	CHEMBL2170016	
+FAM:CAT:CHEMBL2177161		chembl_selected	catalogue_chembl	CHEMBL2177161	
+FAM:CAT:CHEMBL2179387		chembl_selected	catalogue_chembl	CHEMBL2179387	
+FAM:CAT:CHEMBL2204995		chembl_selected	catalogue_chembl	CHEMBL2204995	
+FAM:CAT:CHEMBL2208034		chembl_selected	catalogue_chembl	CHEMBL2208034	
+FAM:CAT:CHEMBL2216824		chembl_selected	catalogue_chembl	CHEMBL2216824	
+FAM:CAT:CHEMBL235191	TACEDINALINE	chembl_selected	catalogue_chembl	CHEMBL235191	
+FAM:CAT:CHEMBL2356023	DIHYDROTACHYSTEROL	chembl_selected	catalogue_chembl	CHEMBL2356023	
+FAM:CAT:CHEMBL2431768	LCL-161	chembl_selected	catalogue_chembl	CHEMBL2431768	
+FAM:CAT:CHEMBL245030	SR-13668	chembl_selected	catalogue_chembl	CHEMBL245030	
+FAM:CAT:CHEMBL25202	TAMIBAROTENE	chembl_selected	catalogue_chembl	CHEMBL25202	
+FAM:CAT:CHEMBL259084	MLN-8054	chembl_selected	catalogue_chembl	CHEMBL259084	
+FAM:CAT:CHEMBL259571	TAPINAROF	chembl_selected	catalogue_chembl	CHEMBL259571	
+FAM:CAT:CHEMBL271220	CORT 108297	chembl_selected	catalogue_chembl	CHEMBL271220	
+FAM:CAT:CHEMBL272621	HYODEOXYCHOLIC_ACID	chembl_selected	catalogue_chembl	CHEMBL272621	
+FAM:CAT:CHEMBL272980	MOCETINOSTAT	chembl_selected	catalogue_chembl	CHEMBL272980	
+FAM:CAT:CHEMBL27759	ENTINOSTAT	chembl_selected	catalogue_chembl	CHEMBL27759	
+FAM:CAT:CHEMBL278703	ERTEBEREL	chembl_selected	catalogue_chembl	CHEMBL278703	
+FAM:CAT:CHEMBL284121	ILX23-7553	chembl_selected	catalogue_chembl	CHEMBL284121	
+FAM:CAT:CHEMBL291278	N-METHYL-D-ASPARTIC ACID (NMDA)	chembl_selected	catalogue_chembl	CHEMBL291278	
+FAM:CAT:CHEMBL296468	BMS-387032	chembl_selected	catalogue_chembl	CHEMBL296468	
+FAM:CAT:CHEMBL297453	EPIGALOCATECHIN GALLATE	chembl_selected	catalogue_chembl	CHEMBL297453	
+FAM:CAT:CHEMBL306823	SODIUM DICHLOROACETATE	chembl_selected	catalogue_chembl	CHEMBL306823	
+FAM:CAT:CHEMBL3086883		chembl_selected	catalogue_chembl	CHEMBL3086883	
+FAM:CAT:CHEMBL3087498		chembl_selected	catalogue_chembl	CHEMBL3087498	
+FAM:CAT:CHEMBL3115681	NARAZACICLIB	chembl_selected	catalogue_chembl	CHEMBL3115681	
+FAM:CAT:CHEMBL3183409	APALUTAMIDE	chembl_selected	catalogue_chembl	CHEMBL3183409	
+FAM:CAT:CHEMBL3183703		chembl_selected	catalogue_chembl	CHEMBL3183703	
+FAM:CAT:CHEMBL3185133	ALLYLESTRENOL	chembl_selected	catalogue_chembl	CHEMBL3185133	
+FAM:CAT:CHEMBL3188172		chembl_selected	catalogue_chembl	CHEMBL3188172	
+FAM:CAT:CHEMBL3287735	GSK2816126	chembl_selected	catalogue_chembl	CHEMBL3287735	
+FAM:CAT:CHEMBL3301582	POLATUZUMAB VEDOTIN	chembl_selected	catalogue_chembl	CHEMBL3301582	
+FAM:CAT:CHEMBL3301588	TAREXTUMAB	chembl_selected	catalogue_chembl	CHEMBL3301588	
+FAM:CAT:CHEMBL3301600	SPEBRUTINIB BESYLATE	chembl_selected	catalogue_chembl	CHEMBL3301600	
+FAM:CAT:CHEMBL3301610	ABEMACICLIB	chembl_selected	catalogue_chembl	CHEMBL3301610	
+FAM:CAT:CHEMBL3301672	ERITORAN TETRASODIUM	chembl_selected	catalogue_chembl	CHEMBL3301672	
+FAM:CAT:CHEMBL3358954	BI 653048	chembl_selected	catalogue_chembl	CHEMBL3358954	
+FAM:CAT:CHEMBL3392776	C-188-9	chembl_selected	catalogue_chembl	CHEMBL3392776	
+FAM:CAT:CHEMBL3393333		chembl_selected	catalogue_chembl	CHEMBL3393333	
+FAM:CAT:CHEMBL3414621	TAZEMETOSTAT	chembl_selected	catalogue_chembl	CHEMBL3414621	
+FAM:CAT:CHEMBL343448	ROMIDEPSIN	chembl_selected	catalogue_chembl	CHEMBL343448	
+FAM:CAT:CHEMBL3544932	TAK-901	chembl_selected	catalogue_chembl	CHEMBL3544932	
+FAM:CAT:CHEMBL3545092	CR 1447	chembl_selected	catalogue_chembl	CHEMBL3545092	
+FAM:CAT:CHEMBL3545094	ELOCALCITOL	chembl_selected	catalogue_chembl	CHEMBL3545094	
+FAM:CAT:CHEMBL3545110	RIBOCICLIB	chembl_selected	catalogue_chembl	CHEMBL3545110	
+FAM:CAT:CHEMBL3545157	TIDEGLUSIB	chembl_selected	catalogue_chembl	CHEMBL3545157	
+FAM:CAT:CHEMBL3545173	IRX4310	chembl_selected	catalogue_chembl	CHEMBL3545173	
+FAM:CAT:CHEMBL3545193	MSC-2364447	chembl_selected	catalogue_chembl	CHEMBL3545193	
+FAM:CAT:CHEMBL3545210	TAS-108	chembl_selected	catalogue_chembl	CHEMBL3545210	
+FAM:CAT:CHEMBL3545213	BENTAMAPIMOD	chembl_selected	catalogue_chembl	CHEMBL3545213	
+FAM:CAT:CHEMBL3545215	BMS-911543	chembl_selected	catalogue_chembl	CHEMBL3545215	
+FAM:CAT:CHEMBL3545238	CS-8080	chembl_selected	catalogue_chembl	CHEMBL3545238	
+FAM:CAT:CHEMBL3545239	PF-05019702	chembl_selected	catalogue_chembl	CHEMBL3545239	
+FAM:CAT:CHEMBL3545241	AC-430	chembl_selected	catalogue_chembl	CHEMBL3545241	
+FAM:CAT:CHEMBL3545261	BRONTICTUZUMAB	chembl_selected	catalogue_chembl	CHEMBL3545261	
+FAM:CAT:CHEMBL3545270	LY2969822	chembl_selected	catalogue_chembl	CHEMBL3545270	
+FAM:CAT:CHEMBL3545274	MK-6913	chembl_selected	catalogue_chembl	CHEMBL3545274	
+FAM:CAT:CHEMBL3545327	TTP-607	chembl_selected	catalogue_chembl	CHEMBL3545327	
+FAM:CAT:CHEMBL3545357	JTE-151	chembl_selected	catalogue_chembl	CHEMBL3545357	
+FAM:CAT:CHEMBL3545368	PANOBINOSTAT LACTATE	chembl_selected	catalogue_chembl	CHEMBL3545368	
+FAM:CAT:CHEMBL3545378	MK-6592	chembl_selected	catalogue_chembl	CHEMBL3545378	
+FAM:CAT:CHEMBL3545391	ORG-34517	chembl_selected	catalogue_chembl	CHEMBL3545391	
+FAM:CAT:CHEMBL3545395	BI-811283	chembl_selected	catalogue_chembl	CHEMBL3545395	
+FAM:CAT:CHEMBL3545411	MF101	chembl_selected	catalogue_chembl	CHEMBL3545411	
+FAM:CAT:CHEMBL3581693	BRILANESTRANT	chembl_selected	catalogue_chembl	CHEMBL3581693	
+FAM:CAT:CHEMBL3590187	CLASCOTERONE	chembl_selected	catalogue_chembl	CHEMBL3590187	
+FAM:CAT:CHEMBL3622533	FIMEPINOSTAT	chembl_selected	catalogue_chembl	CHEMBL3622533	
+FAM:CAT:CHEMBL362558	LY-2090314	chembl_selected	catalogue_chembl	CHEMBL362558	
+FAM:CAT:CHEMBL3655950		chembl_selected	catalogue_chembl	CHEMBL3655950	
+FAM:CAT:CHEMBL3692206	TAS-119	chembl_selected	catalogue_chembl	CHEMBL3692206	
+FAM:CAT:CHEMBL3702854	RILZABRUTINIB	chembl_selected	catalogue_chembl	CHEMBL3702854	
+FAM:CAT:CHEMBL3707348	ACALABRUTINIB	chembl_selected	catalogue_chembl	CHEMBL3707348	
+FAM:CAT:CHEMBL3707377	SEGESTERONE ACETATE	chembl_selected	catalogue_chembl	CHEMBL3707377	
+FAM:CAT:CHEMBL375611	LY404039	chembl_selected	catalogue_chembl	CHEMBL375611	
+FAM:CAT:CHEMBL37676	APC-100	chembl_selected	catalogue_chembl	CHEMBL37676	
+FAM:CAT:CHEMBL3786673	EDASALONEXENT	chembl_selected	catalogue_chembl	CHEMBL3786673	
+FAM:CAT:CHEMBL382277	EX-527	chembl_selected	catalogue_chembl	CHEMBL382277	
+FAM:CAT:CHEMBL384467	DEXAMETHASONE	chembl_selected	catalogue_chembl	CHEMBL384467	
+FAM:CAT:CHEMBL386630	TESTOSTERONE	chembl_selected	catalogue_chembl	CHEMBL386630	
+FAM:CAT:CHEMBL389621	HYDROCORTISONE	chembl_selected	catalogue_chembl	CHEMBL389621	
+FAM:CAT:CHEMBL3900554	BMS-986142	chembl_selected	catalogue_chembl	CHEMBL3900554	
+FAM:CAT:CHEMBL3919831	AMREDOBRESIB	chembl_selected	catalogue_chembl	CHEMBL3919831	
+FAM:CAT:CHEMBL3936761	ZANUBRUTINIB	chembl_selected	catalogue_chembl	CHEMBL3936761	
+FAM:CAT:CHEMBL3989862	PEFCALCITOL	chembl_selected	catalogue_chembl	CHEMBL3989862	
+FAM:CAT:CHEMBL3989870	BERZOSERTIB	chembl_selected	catalogue_chembl	CHEMBL3989870	
+FAM:CAT:CHEMBL3989943	DAPANSUTRILE	chembl_selected	catalogue_chembl	CHEMBL3989943	
+FAM:CAT:CHEMBL402548	DANUSERTIB	chembl_selected	catalogue_chembl	CHEMBL402548	
+FAM:CAT:CHEMBL4065122	FENEBRUTINIB	chembl_selected	catalogue_chembl	CHEMBL4065122	
+FAM:CAT:CHEMBL4067549	ULECACICLIB	chembl_selected	catalogue_chembl	CHEMBL4067549	
+FAM:CAT:CHEMBL4068611	RELACORILANT	chembl_selected	catalogue_chembl	CHEMBL4068611	
+FAM:CAT:CHEMBL4071161	TIRABRUTINIB	chembl_selected	catalogue_chembl	CHEMBL4071161	
+FAM:CAT:CHEMBL4072833	EVOBRUTINIB	chembl_selected	catalogue_chembl	CHEMBL4072833	
+FAM:CAT:CHEMBL4080228	MEVROMETOSTAT	chembl_selected	catalogue_chembl	CHEMBL4080228	
+FAM:CAT:CHEMBL408513	BELINOSTAT	chembl_selected	catalogue_chembl	CHEMBL408513	
+FAM:CAT:CHEMBL409	BICALUTAMIDE	chembl_selected	catalogue_chembl	CHEMBL409	
+FAM:CAT:CHEMBL4114766	ATUZABRUTINIB	chembl_selected	catalogue_chembl	CHEMBL4114766	
+FAM:CAT:CHEMBL415049	BARASERTIB	chembl_selected	catalogue_chembl	CHEMBL415049	
+FAM:CAT:CHEMBL4163691	POSELTINIB	chembl_selected	catalogue_chembl	CHEMBL4163691	
+FAM:CAT:CHEMBL4173075		chembl_selected	catalogue_chembl	CHEMBL4173075	
+FAM:CAT:CHEMBL4226570		chembl_selected	catalogue_chembl	CHEMBL4226570	
+FAM:CAT:CHEMBL4277900	CROZBACICLIB	chembl_selected	catalogue_chembl	CHEMBL4277900	
+FAM:CAT:CHEMBL4285417	CERALASERTIB	chembl_selected	catalogue_chembl	CHEMBL4285417	
+FAM:CAT:CHEMBL4289017	PF-03814735	chembl_selected	catalogue_chembl	CHEMBL4289017	
+FAM:CAT:CHEMBL4297185	DAROLUTAMIDE	chembl_selected	catalogue_chembl	CHEMBL4297185	
+FAM:CAT:CHEMBL4297218	ROVAZOLAC	chembl_selected	catalogue_chembl	CHEMBL4297218	
+FAM:CAT:CHEMBL4297228	BRIVOLIGIDE	chembl_selected	catalogue_chembl	CHEMBL4297228	
+FAM:CAT:CHEMBL4297326	SLX-4090	chembl_selected	catalogue_chembl	CHEMBL4297326	
+FAM:CAT:CHEMBL4297422	RG-4733	chembl_selected	catalogue_chembl	CHEMBL4297422	
+FAM:CAT:CHEMBL4297436	SRT-2104	chembl_selected	catalogue_chembl	CHEMBL4297436	
+FAM:CAT:CHEMBL4297509	ELACESTRANT	chembl_selected	catalogue_chembl	CHEMBL4297509	
+FAM:CAT:CHEMBL4297523	PIROMELATINE	chembl_selected	catalogue_chembl	CHEMBL4297523	
+FAM:CAT:CHEMBL4297608	ELDECALCITOL	chembl_selected	catalogue_chembl	CHEMBL4297608	
+FAM:CAT:CHEMBL4297640	VECABRUTINIB	chembl_selected	catalogue_chembl	CHEMBL4297640	
+FAM:CAT:CHEMBL4297674	BRANEBRUTINIB	chembl_selected	catalogue_chembl	CHEMBL4297674	
+FAM:CAT:CHEMBL4297717	CD24FC	chembl_selected	catalogue_chembl	CHEMBL4297717	
+FAM:CAT:CHEMBL4297732	ZILTIVEKIMAB	chembl_selected	catalogue_chembl	CHEMBL4297732	
+FAM:CAT:CHEMBL4297813	PRI-724	chembl_selected	catalogue_chembl	CHEMBL4297813	
+FAM:CAT:CHEMBL4297863	REMTOLUMAB	chembl_selected	catalogue_chembl	CHEMBL4297863	
+FAM:CAT:CHEMBL4303389	NS-018	chembl_selected	catalogue_chembl	CHEMBL4303389	
+FAM:CAT:CHEMBL4303525	OMAVELOXOLONE	chembl_selected	catalogue_chembl	CHEMBL4303525	
+FAM:CAT:CHEMBL43452	POMALIDOMIDE	chembl_selected	catalogue_chembl	CHEMBL43452	
+FAM:CAT:CHEMBL4447181	LONDAMOCITINIB	chembl_selected	catalogue_chembl	CHEMBL4447181	
+FAM:CAT:CHEMBL4452527		chembl_selected	catalogue_chembl	CHEMBL4452527	
+FAM:CAT:CHEMBL4475463	AMCENESTRANT	chembl_selected	catalogue_chembl	CHEMBL4475463	
+FAM:CAT:CHEMBL45	MELATONIN	chembl_selected	catalogue_chembl	CHEMBL45	
+FAM:CAT:CHEMBL450940	PRINABEREL	chembl_selected	catalogue_chembl	CHEMBL450940	
+FAM:CAT:CHEMBL456237	LXR-623	chembl_selected	catalogue_chembl	CHEMBL456237	
+FAM:CAT:CHEMBL4585668	BELZUTIFAN	chembl_selected	catalogue_chembl	CHEMBL4585668	
+FAM:CAT:CHEMBL4594348	ELSUBRUTINIB	chembl_selected	catalogue_chembl	CHEMBL4594348	
+FAM:CAT:CHEMBL4594417	PRUXELUTAMIDE	chembl_selected	catalogue_chembl	CHEMBL4594417	
+FAM:CAT:CHEMBL4594518	LUTIKIZUMAB	chembl_selected	catalogue_chembl	CHEMBL4594518	
+FAM:CAT:CHEMBL463981	BEGACESTAT	chembl_selected	catalogue_chembl	CHEMBL463981	
+FAM:CAT:CHEMBL4647810	ELIMUSERTIB	chembl_selected	catalogue_chembl	CHEMBL4647810	
+FAM:CAT:CHEMBL4650276	REZVILUTAMIDE	chembl_selected	catalogue_chembl	CHEMBL4650276	
+FAM:CAT:CHEMBL4650278	REVUMENIB SESQUIFUMARATE	chembl_selected	catalogue_chembl	CHEMBL4650278	
+FAM:CAT:CHEMBL4650286	M4344	chembl_selected	catalogue_chembl	CHEMBL4650286	
+FAM:CAT:CHEMBL4650316	GIREDESTRANT	chembl_selected	catalogue_chembl	CHEMBL4650316	
+FAM:CAT:CHEMBL4650321	ORELABRUTINIB	chembl_selected	catalogue_chembl	CHEMBL4650321	
+FAM:CAT:CHEMBL4650323	TOLEBRUTINIB	chembl_selected	catalogue_chembl	CHEMBL4650323	
+FAM:CAT:CHEMBL4650338	EDRALBRUTINIB	chembl_selected	catalogue_chembl	CHEMBL4650338	
+FAM:CAT:CHEMBL4650350	INZOMELID	chembl_selected	catalogue_chembl	CHEMBL4650350	
+FAM:CAT:CHEMBL4650365	CAMIZESTRANT	chembl_selected	catalogue_chembl	CHEMBL4650365	
+FAM:CAT:CHEMBL4650485	PIRTOBRUTINIB	chembl_selected	catalogue_chembl	CHEMBL4650485	
+FAM:CAT:CHEMBL468	THALIDOMIDE	chembl_selected	catalogue_chembl	CHEMBL468	
+FAM:CAT:CHEMBL482767	SNS-314	chembl_selected	catalogue_chembl	CHEMBL482767	
+FAM:CAT:CHEMBL482967	CYC-116	chembl_selected	catalogue_chembl	CHEMBL482967	
+FAM:CAT:CHEMBL483465	ELRAGLUSIB	chembl_selected	catalogue_chembl	CHEMBL483465	
+FAM:CAT:CHEMBL4858811	TRC-253	chembl_selected	catalogue_chembl	CHEMBL4858811	
+FAM:CAT:CHEMBL491	HYDROXYFLUTAMIDE	chembl_selected	catalogue_chembl	CHEMBL491	
+FAM:CAT:CHEMBL495727	AT-9283	chembl_selected	catalogue_chembl	CHEMBL495727	
+FAM:CAT:CHEMBL506678	SITOGLUSIDE	chembl_selected	catalogue_chembl	CHEMBL506678	
+FAM:CAT:CHEMBL5095023	LS-104	chembl_selected	catalogue_chembl	CHEMBL5095023	
+FAM:CAT:CHEMBL5095408	ABEQUOLIXRON ZINC	chembl_selected	catalogue_chembl	CHEMBL5095408	
+FAM:CAT:CHEMBL513909	BI-2536	chembl_selected	catalogue_chembl	CHEMBL513909	
+FAM:CAT:CHEMBL520733	SEMAGACESTAT	chembl_selected	catalogue_chembl	CHEMBL520733	
+FAM:CAT:CHEMBL539934	TT-232	chembl_selected	catalogue_chembl	CHEMBL539934	
+FAM:CAT:CHEMBL573107		chembl_selected	catalogue_chembl	CHEMBL573107	
+FAM:CAT:CHEMBL59030		chembl_selected	catalogue_chembl	CHEMBL59030	
+FAM:CAT:CHEMBL598797	CUDC-101	chembl_selected	catalogue_chembl	CHEMBL598797	
+FAM:CAT:CHEMBL603469	LESTAURTINIB	chembl_selected	catalogue_chembl	CHEMBL603469	
+FAM:CAT:CHEMBL605525	DP001	chembl_selected	catalogue_chembl	CHEMBL605525	
+FAM:CAT:CHEMBL6068160	PACIBEKITUG	chembl_selected	catalogue_chembl	CHEMBL6068160	
+FAM:CAT:CHEMBL6068337	LENALIDOMIDE HYDROCHLORIDE MONOHYDRATE	chembl_selected	catalogue_chembl	CHEMBL6068337	
+FAM:CAT:CHEMBL635	PREDNISONE	chembl_selected	catalogue_chembl	CHEMBL635	
+FAM:CAT:CHEMBL650	METHYLPREDNISOLONE	chembl_selected	catalogue_chembl	CHEMBL650	
+FAM:CAT:CHEMBL704	MESALAMINE	chembl_selected	catalogue_chembl	CHEMBL704	
+FAM:CAT:CHEMBL717	MEDROXYPROGESTERONE ACETATE	chembl_selected	catalogue_chembl	CHEMBL717	
+FAM:CAT:CHEMBL806	FLUTAMIDE	chembl_selected	catalogue_chembl	CHEMBL806	
+FAM:CAT:CHEMBL8145	DAIDZEIN	chembl_selected	catalogue_chembl	CHEMBL8145	
+FAM:CAT:CHEMBL846	CALCITRIOL	chembl_selected	catalogue_chembl	CHEMBL846	
+FAM:CAT:CHEMBL8759	EGLUMETAD	chembl_selected	catalogue_chembl	CHEMBL8759	
+FAM:CAT:CHEMBL964	DISULFIRAM	chembl_selected	catalogue_chembl	CHEMBL964	
+FAM:CAT:CHEMBL98	VORINOSTAT	chembl_selected	catalogue_chembl	CHEMBL98	
+FAM:CAT:CHEMBL989	FLUOCINOLONE ACETONIDE	chembl_selected	catalogue_chembl	CHEMBL989	
+FAM:CAT:DGIDB:004e12ec02db	Tapinarof	dgidb_only	name_exact_unique	CHEMBL259571	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:006565434e24	Diarylpropionitrile	dgidb_only	name_exact_unique	CHEMBL334773	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:00ec5038ece9	Suramin	dgidb_only	name_exact_unique	CHEMBL265502	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:0144213450e7	Compound 24 [Pmid: 15955699]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:014f815d97af	Ceralasertib	dgidb_only	name_exact_unique	CHEMBL4285417	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:0154bd5bb36c	At9283	dgidb_only	name_exact_unique	CHEMBL495727	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:01aa410e818f	Trichostatin A	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:02771b72fbcc	4P-Pdot	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:027780b88744	Cbobnea	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:02d3870f3f63	[125I]Sd6	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:0308adece3fd	Platinum	dgidb_only	name_exact_unique	CHEMBL1235478	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:0313a310a905	Compound 19A [Pmid: 24359159]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:0323631b6138	M826	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:0359d7a68db2	25-Hydroxycholesterol	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:036dd311b713	Thrombin	dgidb_only	name_exact_unique	CHEMBL2108110	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:0385c199ba54	Ar-Ao-14418	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:03b1f671920b	Jnj-65234637	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:043f52a79646	L-Ccg-I	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:045ff335316a	Belnacasan	dgidb_only	name_exact_unique	CHEMBL2107819	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:047a127d44b4	Bizelesin	dgidb_only	name_exact_unique	CHEMBL284642	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:0662a550799f	Drospirenone	dgidb_only	name_exact_unique	CHEMBL1509	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:068aeaf22a50	Cinsebrutinib	dgidb_only	name_exact_unique	CHEMBL5314511	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:069bdff57cba	Sulindac	dgidb_only	name_exact_unique	CHEMBL15770	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:06abd23310e8	24(S), 25-Epoxycholesterol	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:06dd0185c305	Bsj-03-204	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:0735d41c558e	[125I]Div880	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:073beac86e8f	Azacitidine	dgidb_only	name_exact_unique	CHEMBL1489	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:075216d6a4c7	Decernotinib	dgidb_only	name_exact_unique	CHEMBL3039513	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:0775f5cbbcf5	Lestaurtinib	dgidb_only	name_exact_unique	CHEMBL603469	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:0788c7732488	Tetradecanoylphorbol Acetate	dgidb_only	name_exact_unique	CHEMBL279115	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:07ddcc364600	Gsk2646264	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:08083da7c335	Canakinumab	dgidb_only	name_exact_unique	CHEMBL1201834	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:0876735cc5fb	Compound 8L [Pmid: 36053746]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:093981c89886	Somatropin (Recombinant Dna Origin)	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:095622567d60	Unc1999	dgidb_only	name_exact_unique	CHEMBL3414619	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:09a08406c920	Bay-8400	dgidb_only	name_exact_unique	CHEMBL4851439	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:09afa1e9db65	N-Methyl-2-Pyrrolidone	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:0a09153dc3eb	Ebselen	dgidb_only	name_exact_unique	CHEMBL51085	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:0a31a3ff2d4c	Prednisolone Acetate	dgidb_only	name_exact_unique	CHEMBL1152	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:0ad547bc9621	Ibuprofen, Sodium Salt	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:0addb0a44032	Cholesterol	dgidb_only	name_exact_unique	CHEMBL112570	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:0b2061b656a2	Zanubrutinib	dgidb_only	name_exact_unique	CHEMBL3936761	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:0bc1cf72f3bb	Sorafenib	dgidb_only	name_exact_unique	CHEMBL1336	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:0be6484eb827	Ro 41-5253	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:0c081e7c3bfe	Rgfp109	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:0c0ee87f0d3f	Imr-1	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:0cb76630431d	Serine, D-	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:0cc2ae469263	Eldecalcitol	dgidb_only	name_exact_unique	CHEMBL4297608	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:0cde89492d21	Rimexolone	dgidb_only	name_exact_unique	CHEMBL1200617	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:0d35c5f6363b	Ss-208	dgidb_only	name_exact_unique	CHEMBL4469488	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:0d89da6f7eab	Alpha-Tocopherol	dgidb_only	unresolved		name matches 2 ChEMBL parents
+FAM:CAT:DGIDB:0d9b57ae6bd5	Chembl:Chembl1091502	dgidb_only	dgidb_concept_chembl	CHEMBL1091502	
+FAM:CAT:DGIDB:0dcaafc84cd6	N-[2-(2-Iodo-5-Methoxy-1H-Indol-3-Yl)Ethyl]Acetamide	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:0dd69e5d8d89	Zk159222	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:0dfe60cde8de	Sd-91	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:0e0fcb16e612	Srt2104	dgidb_only	name_exact_unique	CHEMBL4297436	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:0e119ae547a0	Ro4929097	dgidb_only	name_exact_unique	CHEMBL4297422	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:0e5293e56c62	Inixaciclib	dgidb_only	name_exact_unique	CHEMBL5095102	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:0ecbcd6c2a17	Compound 8U [Pmid: 31999451]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:0f3551cb29e3	Acivicin	dgidb_only	name_exact_unique	CHEMBL1231101	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:0f6897a3cba4	Compound 30 [Pmid: 22468970]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:0fda6a7b5f8d	Ro 31-8220	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:10931b92d076	Ursolic Acid	dgidb_only	name_exact_unique	CHEMBL169	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:111f25d9cc39	Ver-246608	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:11918d76d1d7	Dactinomycin	dgidb_only	name_exact_unique	CHEMBL1554	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:11a31110f6d5	Ornithine Decarboxylase Inhibitor	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:11d8309893ad	Gr 196429	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:11dcd9a41857	D-Ccpene	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:1234619c0645	Tulmimetostat	dgidb_only	name_exact_unique	CHEMBL5095231	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:12376451c30a	Tuvusertib	dgidb_only	name_exact_unique	CHEMBL5314933	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:12653e8e06c7	Sofnobrutinib	dgidb_only	name_exact_unique	CHEMBL4209441	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:13284e35045a	Sirolimus	dgidb_only	name_exact_unique	CHEMBL413	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:13728e6ab6dc	Pirtobrutinib	dgidb_only	name_exact_unique	CHEMBL4650485	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:137f51f9a945	Compound 72 [Wo2013026806]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:13a0efd314f3	Chembl:Chembl584458	dgidb_only	dgidb_concept_chembl	CHEMBL584458	
+FAM:CAT:DGIDB:142731870a52	Ebi-2511	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:143ca7ceed50	Diclofenac Sodium	dgidb_only	name_exact_unique	CHEMBL139	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:143cc91f37a7	(1S,3R)-Acpd	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:14a13c156b7f	Recombinant Macrophage Colony-Stimulating Factor	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:14f043b6196c	Cobalt Co-60	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:15b56108e84d	Onapristone	dgidb_only	name_exact_unique	CHEMBL1908373	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:15f1d1e7f58e	Icoa-13	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:165aa4303ed0	Edifoligide	dgidb_only	name_exact_unique	CHEMBL2108316	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:16dd2349fef4	Org 214007-0	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:16ec5368e34c	Chembl:Chembl429335	dgidb_only	dgidb_concept_chembl	CHEMBL429335	
+FAM:CAT:DGIDB:171bd5b16921	Darolutamide	dgidb_only	name_exact_unique	CHEMBL4297185	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:1721f8d286e9	Selisistat	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:17722ce88cc0	Hydrocortisone Cypionate	dgidb_only	name_exact_unique	CHEMBL1549	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:1777537b2599	Isotretinoin	dgidb_only	name_exact_unique	CHEMBL547	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:188c864b6592	Sb-747651A	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:18b66ef6beee	Cpi-1205	dgidb_only	name_exact_unique	CHEMBL4297463	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:192cf2264058	Bsj-04-132	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:1946c1e0d282	Chembl:Chembl261693	dgidb_only	dgidb_concept_chembl	CHEMBL261693	
+FAM:CAT:DGIDB:198741f77ba6	Elnd006	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:19a0fdd3e919	Ozoralizumab	dgidb_only	name_exact_unique	CHEMBL1743054	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:19c30bba559e	Bromo-Deaza-Sah	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:1a5439bf05e1	Z-Yvad-Fmk	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:1a864fb4552a	Splitomicin	dgidb_only	name_exact_unique	CHEMBL86537	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:1b066b3df1ff	Lutikizumab	dgidb_only	name_exact_unique	CHEMBL4594518	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:1b57e9fae79e	Ots964	dgidb_only	name_exact_unique	CHEMBL3672267	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:1b6645831580	Hydrocortisone Probutate	dgidb_only	name_exact_unique	CHEMBL1200953	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:1bf6ba392558	Btk Inhibitor 16 [Pmid: 30122225]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:1c4444d46e12	Calcipotriene	dgidb_only	name_exact_unique	CHEMBL1200666	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:1c6ef38ed6e3	Ly3372689	dgidb_only	name_exact_unique	CHEMBL5095251	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:1caf8c518b16	Mocetinostat	dgidb_only	name_exact_unique	CHEMBL272980	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:1d49dc0cf8d3	Cdk2 Inhibitor Iv	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:1d5e6550c667	Aurora Kinase Inhibitor Ii	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:1d92cdc13351	Triamcinolone Hexacetonide	dgidb_only	name_exact_unique	CHEMBL1200878	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:1dd805aec05e	Bi-847325	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:1e650c95ffff	Panobinostat Lactate	dgidb_only	name_exact_unique	CHEMBL483254	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:1e67452430e9	6-Hydroxymelatonin	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:1f5adc54c6df	Halobetasol	dgidb_only	unresolved		name matches 2 ChEMBL parents
+FAM:CAT:DGIDB:1f6977ce50ed	Ergocalciferol	dgidb_only	name_exact_unique	CHEMBL1536	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:1f69c0c22540	Bsj-03-123	dgidb_only	name_exact_unique	CHEMBL5204174	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:1f73d158c3ff	Ag-17724	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:1f8a9f49030d	Srt-2104	dgidb_only	name_exact_unique	CHEMBL4297436	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:1fc017f04da4	J27644	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:200fb4682f11	Abrocitinib	dgidb_only	name_exact_unique	CHEMBL3655081	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:2062f50d5e38	[3H]Cgp39653	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:207317c1b624	Stm2457	dgidb_only	name_exact_unique	CHEMBL5405231	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:20c2cdc765d0	Cortisone Acetate	dgidb_only	name_exact_unique	CHEMBL1650	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:222c75ca1d6e	Suprastat	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:222da6a76f85	Tarextumab	dgidb_only	name_exact_unique	CHEMBL3301588	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:2293d5222177	Sr1001	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:237760772630	Lif	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:239c9b0c2ac7	6-Diazo-5-Oxo-L-Norleucine	dgidb_only	name_exact_unique	CHEMBL97485	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:24c4530c1d09	Cdk/Crk Inhibitor	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:24d93ed90cd4	Chembl:Chembl379975	dgidb_only	dgidb_concept_chembl	CHEMBL379975	
+FAM:CAT:DGIDB:24f41c19eaf2	Oxymetholone	dgidb_only	name_exact_unique	CHEMBL1200585	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:2551da72c2b7	Begacestat	dgidb_only	name_exact_unique	CHEMBL463981	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:255ce6a4a3eb	Dextromethorphan Polistirex	dgidb_only	name_exact_unique	CHEMBL52440	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:25b0801d9bba	Quisinostat	dgidb_only	name_exact_unique	CHEMBL2105763	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:25c86c6df239	Edifoligide Sodium	dgidb_only	name_exact_unique	CHEMBL2109058	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:26429cd8d013	Chembl:Chembl546797	dgidb_only	dgidb_concept_chembl	CHEMBL546797	
+FAM:CAT:DGIDB:26952b0465d0	Il-7	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:26acdfbd2199	Tanaproget	dgidb_only	name_exact_unique	CHEMBL539163	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:26bcaee63324	Dexamethasone Acetate	dgidb_only	name_exact_unique	CHEMBL1530428	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:276e3560fbd5	Estradiol Valerate	dgidb_only	name_exact_unique	CHEMBL1511	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:2791163ab0ec	Prednisolone Tebutate	dgidb_only	name_exact_unique	CHEMBL1200909	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:27db363a1b3c	Tranilast	dgidb_only	name_exact_unique	CHEMBL415324	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:28a63164639a	Chf-5074	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:29764904c696	Desmosterol	dgidb_only	name_exact_unique	CHEMBL455876	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:29913e103f10	Gne-3500	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:2998e18efe34	Asoprisnil	dgidb_only	name_exact_unique	CHEMBL267431	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:2a8f29507705	Dcg-Iv	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:2ac80472f050	Romidepsin	dgidb_only	name_exact_unique	CHEMBL343448	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:2ac8d6cafa76	Tmp269	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:2ae5596b26cf	Imatinib	dgidb_only	name_exact_unique	CHEMBL941	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:2b027f4e02da	Antibiotic	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:2b0652397469	Ricolinostat	dgidb_only	name_exact_unique	CHEMBL2364628	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:2b33f4df701f	Indapamide	dgidb_only	name_exact_unique	CHEMBL406	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:2b38dde5779c	Bx-912	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:2b6b69a912a3	Belzutifan	dgidb_only	name_exact_unique	CHEMBL4585668	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:2b9938ad915a	Erbstatin	dgidb_only	dgidb_concept_chembl	CHEMBL47986	
+FAM:CAT:DGIDB:2bb4f084b3c0	Fmk	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:2bf054b78a68	Basic Fibroblast Growth Factor	dgidb_only	name_exact_unique	CHEMBL6068603	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:2bfd17a5789f	Diflorasone Diacetate	dgidb_only	name_exact_unique	CHEMBL1200545	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:2c4cc7dddb4a	Bms641	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:2c4e6b034ad4	Thz1	dgidb_only	name_exact_unique	CHEMBL3603847	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:2c575c362357	Ethyl 3-[(E)-2-Amino-1-Cyanoethenyl]-6,7-Dichloro-1-Methyl-1H-Indole-2-Carboxylate	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:2c655dcafeea	[3H]Dizocilpine	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:2c661a452b1f	Flumethasone Pivalate	dgidb_only	name_exact_unique	CHEMBL1200877	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:2cab023d9d78	Bms753	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:2cc583f0b993	Recombinant Fibroblast Growth Factor 2	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:2e071dcf8a76	Sp-600125	dgidb_only	dgidb_concept_chembl	CHEMBL1725279	
+FAM:CAT:DGIDB:2e26dd734f99	22R-Hydroxycholesterol	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:2e60899cccf5	Uracil 20	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:2e8ec2410b6f	I-Bet282	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:2ea4defd66a7	Miricorilant	dgidb_only	name_exact_unique	CHEMBL4297602	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:2f02c290e2e5	Belinostat	dgidb_only	name_exact_unique	CHEMBL408513	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:2f1af45b9391	Lobaplatin	dgidb_only	name_exact_unique	CHEMBL4594256	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:2f4526341239	Spebrutinib Besylate	dgidb_only	name_exact_unique	CHEMBL3301625	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:2f5204af23a0	Hpte	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:2f631e5233a8	Hydrogen Peroxide	dgidb_only	name_exact_unique	CHEMBL71595	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:2f6772132a7d	Sr2211	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:2fa5b995fa48	Velsecorat	dgidb_only	name_exact_unique	CHEMBL3666807	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:2fe3ff7e7633	Apicidin	dgidb_only	name_exact_unique	CHEMBL430060	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:2ffeff2ec274	Compound 1 [Pmid: 31465224]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:300a1f119a63	Omaveloxolone	dgidb_only	name_exact_unique	CHEMBL4303525	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:30277a03dc85	Triamcinolone	dgidb_only	name_exact_unique	CHEMBL1451	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:3076a7e09188	Ethynodiol Diacetate	dgidb_only	name_exact_unique	CHEMBL1200624	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:30c9c30bd4a3	Lamivudine	dgidb_only	name_exact_unique	CHEMBL141	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:3101efe09ce6	L6H21	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:310b1705a307	Osugacestat	dgidb_only	name_exact_unique	CHEMBL4297269	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:316b73312895	Vorinostat	dgidb_only	name_exact_unique	CHEMBL98	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:31c2ebae4775	Pinometostat	dgidb_only	name_exact_unique	CHEMBL3414626	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:329179d638e2	Pralnacasan	dgidb_only	name_exact_unique	CHEMBL437526	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:33293252ca9a	Daunorubicin Liposomal	dgidb_only	name_exact_unique	CHEMBL178	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:333fca0f84c8	Ns-018	dgidb_only	dgidb_concept_chembl	CHEMBL3545217	
+FAM:CAT:DGIDB:336d2d2229a4	Siltuximab	dgidb_only	name_exact_unique	CHEMBL1743070	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:33a3b87b284e	Rilonacept	dgidb_only	name_exact_unique	CHEMBL1201830	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:341d112e662e	Fenebrutinib	dgidb_only	name_exact_unique	CHEMBL4065122	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:342d6428af28	Naminidil	dgidb_only	name_exact_unique	CHEMBL2105160	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:34a373fd03c6	Meprednisone	dgidb_only	name_exact_unique	CHEMBL1201148	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:34eebcba2b28	Aspartic Acid	dgidb_only	name_exact_unique	CHEMBL274323	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:34eff248d0d0	Mapracorat	dgidb_only	name_exact_unique	CHEMBL2103876	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:35cc5266a85c	Compound 32 [Pmid: 31638797]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:361e0a6b6737	Palinurin	dgidb_only	dgidb_concept_chembl	CHEMBL464381	
+FAM:CAT:DGIDB:36423f3f5bff	Ei1	dgidb_only	name_exact_unique	CHEMBL3414574	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:37cee0f0671a	Recombinant Interferon	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:37e234e791af	Azd1080	dgidb_only	name_exact_unique	CHEMBL1969664	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:38b6db5eff01	Stc-15	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:38f888d51ca7	Elsubrutinib	dgidb_only	name_exact_unique	CHEMBL4594348	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:38ff5b0e0f26	Sj995973	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:39c1057d9351	Flunisolide Anhydrous	dgidb_only	name_exact_unique	CHEMBL1512	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:39e20f55f729	2-Methoxy-&Alpha;,&Beta;-Didehydro-Agomelatine	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:39fedf622b2c	Balsalazide Disodium	dgidb_only	name_exact_unique	CHEMBL1201346	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:3a59bd642ca0	Bicalutamide	dgidb_only	unresolved		name matches 2 ChEMBL parents
+FAM:CAT:DGIDB:3aa598685369	Homoquinolinic Acid	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:3ad59977f4b3	Remtolumab	dgidb_only	name_exact_unique	CHEMBL4297863	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:3af0766b5a01	[3H]Mdl105519	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:3b2aceac7055	Gnf4877	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:3b44d33b9351	Slx-4090	dgidb_only	name_exact_unique	CHEMBL4297326	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:3b46a0ff2a88	Cp-424,174	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:3b5bdd7ae5b5	Desidustat	dgidb_only	name_exact_unique	CHEMBL4650314	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:3bdfb5253ec6	Mitogen-Activated Protein Kinase Inhibitor	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:3be2fd1c4ca1	Gsk852	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:3c05ad4af58c	Yl5084	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:3c56953da57a	Betamethasone	dgidb_only	name_exact_unique	CHEMBL632	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:3c77e3ac5b84	Dd-03-171	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:3cde66ae5af7	Recombinant Interferon Alfa	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:3d009ed50fe9	Dual Brd4/Plk1 Inhibitor 23	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:3d764f7fdf0b	Bml-281	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:3d80de713937	Gartisertib	dgidb_only	name_exact_unique	CHEMBL4650286	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:3e2332f9877b	Norethindrone Acetate	dgidb_only	name_exact_unique	CHEMBL1201146	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:3e3f0c949351	Way-255348	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:3fe53c3a24b2	Mibolerone	dgidb_only	name_exact_unique	CHEMBL425863	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:402fdd0a4fd9	Fedratinib Hydrochloride	dgidb_only	name_exact_unique	CHEMBL1287853	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:40aa5a5b0ce2	Xl019	dgidb_only	unresolved		name matches 2 ChEMBL parents
+FAM:CAT:DGIDB:40b59f7e194e	Staurosporine	dgidb_only	name_exact_unique	CHEMBL388978	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:40bbcacf0388	Tolebrutinib	dgidb_only	name_exact_unique	CHEMBL4650323	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:4172adf3398a	Compound 1 [Pmid: 21742770]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:42027b00475f	Compound 46 [Pmid: 16451062]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:42788f518ac3	Genistein	dgidb_only	name_exact_unique	CHEMBL44	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:427f7bb98d58	Ribociclib Succinate	dgidb_only	name_exact_unique	CHEMBL3545110	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:42d5d5465a4d	5,7-Dichlorokynurenic Acid	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:4312e76e7a6b	Therapeutic Glucocorticoid	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:4436cf2b661e	Olsalazine Sodium	dgidb_only	name_exact_unique	CHEMBL425	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:445db364fa47	Compound 14I [Pmid: 37204466]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:4476f5c496e4	Bms-986142	dgidb_only	name_exact_unique	CHEMBL3900554	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:44b0c65b08e2	Cnx-774	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:44d5c33be04e	Calcifediol Anhydrous	dgidb_only	name_exact_unique	CHEMBL1040	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:450658fc3be8	Sirukumab	dgidb_only	name_exact_unique	CHEMBL1743071	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:457a07d382fd	Thymidine	dgidb_only	name_exact_unique	CHEMBL52609	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:4581d3df3b09	2-({6-[(3-Chlorophenyl)Amino]-9-Isopropyl-9H-Purin-2-Yl}Amino)Ethanol	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:458510d146dd	Perindopril	dgidb_only	name_exact_unique	CHEMBL1581	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:45b2405f8f75	7-Hydroxycholesterol	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:45bad1162976	S24014	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:45fd8e7b05d8	Compound 11 [Pmid: 35653642]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:4679eaf4a822	Pseudoephedrine	dgidb_only	name_exact_unique	CHEMBL1590	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:46811ae27751	Bcl3 Inhibitor Js6	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:469b27f0fb57	Medroxyprogesterone Acetate	dgidb_only	name_exact_unique	CHEMBL717	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:46ad0bbbecb2	Harmine	dgidb_only	name_exact_unique	CHEMBL269538	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:46cf880ffb75	Mk-5108	dgidb_only	name_exact_unique	CHEMBL3600873	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:4729f05af735	Dbet6	dgidb_only	name_exact_unique	CHEMBL4303781	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:4803fdd0a90d	Flurandrenolide	dgidb_only	name_exact_unique	CHEMBL1201012	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:486419346510	Ac-186	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:48760995c299	S24773	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:48b09bf11952	Methamphetamine	dgidb_only	name_exact_unique	CHEMBL1201201	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:48cee98fb72f	Nilutamide	dgidb_only	name_exact_unique	CHEMBL1274	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:497cc58d16e0	Jnk Inhibitor 9L	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:4a2b31fc1086	Camizestrant	dgidb_only	name_exact_unique	CHEMBL4650365	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:4aa00b4cfaf5	Dubermatinib	dgidb_only	name_exact_unique	CHEMBL2022968	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:4adb0ecadd25	Norethynodrel	dgidb_only	name_exact_unique	CHEMBL1387	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:4ae9a1c1ace4	Safimaltib	dgidb_only	name_exact_unique	CHEMBL5095244	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:4b04c94a20c7	Chir-98014	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:4b603061c382	Drugsatfda.Nda:008378	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:4b8e1694eb56	Dizocilpine	dgidb_only	name_exact_unique	CHEMBL284237	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:4ba65fd13821	Alisertib	dgidb_only	name_exact_unique	CHEMBL483158	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:4bbf11b55536	Elsamitrucin	dgidb_only	name_exact_unique	CHEMBL2106409	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:4c53fdbd3f0a	Nomegestrol Acetate	dgidb_only	name_exact_unique	CHEMBL1476022	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:4c7cf4c9d55a	Dmamcl	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:4d0a432f5e1d	Compound 13 [Pmid: 35653642]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:4d6bb6aa868e	Compound 11H [Pmid: 29808961]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:4d8ae89da94a	Mitapivat	dgidb_only	name_exact_unique	CHEMBL4299940	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:4dc249d67a55	Betamethasone Benzoate	dgidb_only	name_exact_unique	CHEMBL1200376	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:4dc960f61af0	Chembl:Chembl588859	dgidb_only	dgidb_concept_chembl	CHEMBL588859	
+FAM:CAT:DGIDB:4dcc619f7d50	Diazepam	dgidb_only	name_exact_unique	CHEMBL12	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:4eb06a9000b0	Hydroxyprogesterone Caproate (Usp)	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:4ee060cc6aaf	Compound 9 [Pmid: 23517011]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:4ee7280b4d26	Dydrogesterone	dgidb_only	name_exact_unique	CHEMBL1200853	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:4ef11159ec1f	Oicr-8268	dgidb_only	name_exact_unique	CHEMBL5407645	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:4f028718b81f	Mf101	dgidb_only	name_exact_unique	CHEMBL3545411	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:4f4ff54b0d7f	Rovadicitinib	dgidb_only	name_exact_unique	CHEMBL5314485	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:4f8cd1f7b6d7	Cyclophosphamide Anhydrous	dgidb_only	name_exact_unique	CHEMBL88	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:4ff67bfa66c8	Prednisone	dgidb_only	name_exact_unique	CHEMBL635	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:50b9c763a7f1	(Rs)-(Tetrazol-5-Yl)Glycine	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:50c2a146d931	Relacorilant	dgidb_only	name_exact_unique	CHEMBL4068611	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:50c4eb727873	Emzeltrectinib	dgidb_only	name_exact_unique	CHEMBL5314458	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:50ccc7b5c33e	Lithium Carbonate	dgidb_only	name_exact_unique	CHEMBL1200826	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:51081bd5ca15	C646	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:515c66228b9f	C108297	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:51ca711129b9	Clomiphene	dgidb_only	name_exact_unique	CHEMBL2355051	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:51e647d14317	Cep-33779	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:522592743475	Photosensitizing Agent	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:52d01b8327f7	Cgp37849	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:538de3546c06	Elraglusib	dgidb_only	name_exact_unique	CHEMBL483465	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:53902220f25f	Verapamil	dgidb_only	name_exact_unique	CHEMBL6966	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:5431327e2708	Compound 13 [Chen Et Al., 2016]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:545b1db929ec	Mk-8719	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:54f69a6d1b4b	Elimusertib	dgidb_only	name_exact_unique	CHEMBL4647810	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:554550d33afa	Tanuxiciclib	dgidb_only	name_exact_unique	CHEMBL5095084	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:556409ed0f0c	Alclometasone	dgidb_only	unresolved		name matches 2 ChEMBL parents
+FAM:CAT:DGIDB:558a9793e4fc	Nicotine Polacrilex	dgidb_only	name_exact_unique	CHEMBL3	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:563ad6bab442	Chembl:Chembl1214407	dgidb_only	dgidb_concept_chembl	CHEMBL1214407	
+FAM:CAT:DGIDB:56648a1e28b6	Afimoxifene	dgidb_only	name_exact_unique	CHEMBL489	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:566b9f3d3b22	(S)-Liquiritigenin	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:56e259d3663f	Tak-828F	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:56e892e86e90	Inecalcitol	dgidb_only	name_exact_unique	CHEMBL2105107	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:575cca50ddbe	Nerelimomab	dgidb_only	name_exact_unique	CHEMBL2108566	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:57a4bd222504	Azd0284	dgidb_only	name_exact_unique	CHEMBL4802194	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:580d69afd7ca	Compound 5B [Pmid: 24900464]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:5834235c36ff	Fx1	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:586632d51798	Rorc2 Inverse Agonist 66 [Pmid: 30130103]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:58f04d27e75b	Ubenimex	dgidb_only	name_exact_unique	CHEMBL29292	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:590757460269	Perillyl Alcohol	dgidb_only	name_exact_unique	CHEMBL236687	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:5939058f5e3e	Cpi-203	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:59d3829578ad	Protein Synthesis Inhibitor	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:59dd73e95fbc	Fluprednisolone	dgidb_only	name_exact_unique	CHEMBL1200774	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:59f2e13deadd	Ospemifene	dgidb_only	name_exact_unique	CHEMBL2105395	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:5a130973549c	1-Cyclohexyl-N-{[1-(4-Methylphenyl)-1H-Indol-3-Yl]Methyl}Methanamine	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:5a2846b1461c	Compound 4G [Pmid: 2680437]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:5a5e52082feb	Tamibarotene	dgidb_only	name_exact_unique	CHEMBL25202	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:5ad1ed401021	Olaparib	dgidb_only	name_exact_unique	CHEMBL521686	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:5af3dd6c5c76	Lll12	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:5b596b82de07	Hydrocortisone Valerate	dgidb_only	name_exact_unique	CHEMBL1200562	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:5ba35e7a459e	Cisplatin	dgidb_only	name_exact_unique	CHEMBL11359	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:5be9fe4f2f42	Compound 8C [Pmid: 28760529]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:5c2b9a9c2e70	Jnk Inhibitor Viii	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:5c43c5064b70	Tanzisertib	dgidb_only	name_exact_unique	CHEMBL1950289	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:5c478c270209	Palbinone	dgidb_only	dgidb_concept_chembl	CHEMBL575924	
+FAM:CAT:DGIDB:5c557afd4483	Fluorometholone Acetate	dgidb_only	name_exact_unique	CHEMBL1201064	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:5c8842c6a811	Cyc116	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:5c9c898449fc	Disulfiram	dgidb_only	name_exact_unique	CHEMBL964	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:5ca5f91c1152	Warfarin	dgidb_only	name_exact_unique	CHEMBL1464	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:5d003de6e684	Mrl-871	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:5d37247d86ec	5-Methoxy-Luzindole	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:5d4cc0399c79	Dalpiciclib	dgidb_only	name_exact_unique	CHEMBL4802161	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:5dcbc0337c66	Bzt-7	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:5de5a4921a59	Enzalutamide	dgidb_only	name_exact_unique	CHEMBL1082407	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:5e51ae58bbe1	Lenalidomide	dgidb_only	name_exact_unique	CHEMBL848	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:5e7d484ce8f9	Iik7	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:5effa7381e1e	Pomaglumetad Methionil	dgidb_only	name_exact_unique	CHEMBL2110730	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:5f024309405e	Ramelteon	dgidb_only	name_exact_unique	CHEMBL1218	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:5f120f5a5ec0	Methyltestosterone	dgidb_only	name_exact_unique	CHEMBL1395	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:5f1a59b0ce87	Allylestrenol	dgidb_only	name_exact_unique	CHEMBL3185133	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:5fafe52fef26	Compound 13 [Pmid: 37465299]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:5fc231a5b885	Cgi560	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:5fe3f07f70bf	Deuruxolitinib	dgidb_only	name_exact_unique	CHEMBL1789941	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:60000138e703	Cortivazol	dgidb_only	name_exact_unique	CHEMBL2105842	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:6081d8079492	Prednicarbate	dgidb_only	name_exact_unique	CHEMBL1200386	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:60c4300ad86b	Bazedoxifene	dgidb_only	name_exact_unique	CHEMBL46740	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:6102045491fa	Chembl:Chembl257158	dgidb_only	dgidb_concept_chembl	CHEMBL257158	
+FAM:CAT:DGIDB:610ddcf467ed	[3H]2-Deoxyglucose	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:62054f51e80a	Pegsunercept	dgidb_only	name_exact_unique	CHEMBL1743057	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:62c594195bd0	Az4800	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:632fc450b83a	Compound 14 [Schnute Et Al., 2023]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:633c645744ec	Alsterpaullone	dgidb_only	name_exact_unique	CHEMBL50894	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:634453a6965e	Compound 4G [Pmid: 30893553]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:6396e14ba67c	3-Hydroxyanthranilic Acid	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:63f7075aecd7	Vitamin A	dgidb_only	name_exact_unique	CHEMBL986	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:648084fa2168	[3H]Cpp	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:648262c833d9	Birinapant	dgidb_only	name_exact_unique	CHEMBL3039522	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:6492cf06b2ee	Mizoribine	dgidb_only	name_exact_unique	CHEMBL245019	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:64d60f1c88fb	Fosdagrocorat	dgidb_only	name_exact_unique	CHEMBL3137316	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:64e56ec1058b	Jqez5	dgidb_only	name_exact_unique	CHEMBL4545488	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:6505fa3daab7	Paclitaxel	dgidb_only	name_exact_unique	CHEMBL428647	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:6548482cdfa6	Ly379268	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:6558ef7e085f	Phosphorodiamidate Morpholino Oligomer Avi-4126	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:6592b6195ab6	Difluprednate	dgidb_only	name_exact_unique	CHEMBL1201749	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:663ba3b527e5	Il-5	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:66cccc44ca60	Trail	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:66ec3312b309	4-Chloromercuribenzoic Acid	dgidb_only	dgidb_concept_chembl	CHEMBL575867	
+FAM:CAT:DGIDB:66ed9e130102	Mw05	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:672d3a5ad699	Indirubin-3'-Monoxime	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:67d3092e5959	Epz005687	dgidb_only	name_exact_unique	CHEMBL3360855	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:680142496473	Ferb 033	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:6802569a3c41	Lithocholic Acid	dgidb_only	name_exact_unique	CHEMBL1478	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:6809f6ded657	Docetaxel Anhydrous	dgidb_only	name_exact_unique	CHEMBL92	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:68bfd480bfcc	Protoporphyrin	dgidb_only	name_exact_unique	CHEMBL1325592	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:69354161595e	Tacalcitol	dgidb_only	name_exact_unique	CHEMBL2105611	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:69731c2f59bb	Eritoran Tetrasodium	dgidb_only	name_exact_unique	CHEMBL501259	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:6a659f488bd0	Medi-5117	dgidb_only	dgidb_concept_chembl	CHEMBL2109614	
+FAM:CAT:DGIDB:6abd8a09f576	Ruxolitinib Phosphate	dgidb_only	name_exact_unique	CHEMBL1789941	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:6abfb05ed0d9	Agn193109	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:6b48651747ab	Mevociclib	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:6b518066e3b8	Anthracycline Antineoplastic Antibiotic	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:6be795e95c1c	Manzamine A	dgidb_only	dgidb_concept_chembl	CHEMBL403233	
+FAM:CAT:DGIDB:6be98d9edc6d	Tepp-46	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:6ca3531f5299	S26131	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:6cd003bb430b	Gw843682X	dgidb_only	dgidb_concept_chembl	CHEMBL514499	
+FAM:CAT:DGIDB:6cdebf56bf1b	1-Azakenpaullone	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:6d03c34fa1e7	Example A225 [Wo2012170976A2]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:6d1ada936653	Fluticasone Furoate	dgidb_only	name_exact_unique	CHEMBL1676	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:6d6a447c8103	Chembl:Chembl125044	dgidb_only	dgidb_concept_chembl	CHEMBL125044	
+FAM:CAT:DGIDB:6dce3f58cbc3	Azd7545	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:6e5b745e54eb	Trimegestone	dgidb_only	name_exact_unique	CHEMBL2104765	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:6e77ca1bf303	Vecabrutinib	dgidb_only	name_exact_unique	CHEMBL4297640	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:6ed5607e5b5e	Gsk4112	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:6f290929d303	Testosterone Cypionate	dgidb_only	name_exact_unique	CHEMBL1201101	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:6f787e5d07a8	Deflazacort	dgidb_only	name_exact_unique	CHEMBL1201891	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:6fa918c594c4	Aae-M-Pbp-Amine	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:7045a30c53de	Pf-9363	dgidb_only	name_exact_unique	CHEMBL5723326	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:70ce494df19e	Stanolone	dgidb_only	name_exact_unique	CHEMBL27769	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:71634dc5ca10	Implitapide	dgidb_only	name_exact_unique	CHEMBL2105804	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:71c5708d2fca	L689560	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:7221bb7a3e9b	Riluzole	dgidb_only	name_exact_unique	CHEMBL744	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:722ab907edd0	Thalidomide	dgidb_only	name_exact_unique	CHEMBL468	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:72580f43d84e	Valemetostat	dgidb_only	name_exact_unique	CHEMBL4597193	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:7276cc0a1091	Il-9	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:72b05cf197be	Hydralazine	dgidb_only	name_exact_unique	CHEMBL276832	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:738dec9ffd44	Compound 8A [Pmid: 23713581]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:7394eaefe42e	Tirabrutinib	dgidb_only	name_exact_unique	CHEMBL4071161	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:73a27f326b59	Etanercept-Szzs	dgidb_only	name_exact_unique	CHEMBL1201572	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:73d1ef181e48	Ly 156735	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:73e4caa94c28	Wxfl10203614	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:741b1f2cf3cb	Amifostine Anhydrous	dgidb_only	name_exact_unique	CHEMBL1006	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:74274cbb9dad	Chembl:Chembl154580	dgidb_only	dgidb_concept_chembl	CHEMBL154580	
+FAM:CAT:DGIDB:744c4344e9aa	Tws119	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:74cc419c7176	Sy-5609	dgidb_only	name_exact_unique	CHEMBL5090754	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:74d72b009738	Asparaginase	dgidb_only	name_exact_unique	CHEMBL2108989	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:74f98eb23a87	Ac261066	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:751d166e1e52	Elocalcitol	dgidb_only	name_exact_unique	CHEMBL3545094	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:752009d1c0e8	Compound 6 [Pmid: 30125504]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:75514db0fe61	Yt47R	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:75ad8857ad10	Cholesterol Sulphate	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:768abbeca460	Tideglusib	dgidb_only	name_exact_unique	CHEMBL3545157	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:76afb86af839	Adalimumab-Adbm	dgidb_only	name_exact_unique	CHEMBL1201580	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:78cf90272935	Bisphenol A	dgidb_only	name_exact_unique	CHEMBL418971	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:7991e75635a2	Bentamapimod	dgidb_only	name_exact_unique	CHEMBL3545213	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:79d6fb3c3c09	Estetrol	dgidb_only	name_exact_unique	CHEMBL1230314	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:79d9fde1e294	Ubp141	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:7a0554580c65	Selfotel	dgidb_only	name_exact_unique	CHEMBL39664	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:7a16d90d7d6c	Compound 2-2C [Pmid: 32003560]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:7a317b0e9875	Estrogens, Conjugated (Usp)	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:7acb9175bd51	Glyburide	dgidb_only	name_exact_unique	CHEMBL472	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:7af209a4b8a8	Mitoguazone	dgidb_only	name_exact_unique	CHEMBL216913	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:7b1b402689c3	Ezutromid	dgidb_only	name_exact_unique	CHEMBL1773683	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:7b1c6df417ac	Org-34517	dgidb_only	name_exact_unique	CHEMBL3545391	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:7bae3d659dec	Remibrutinib	dgidb_only	name_exact_unique	CHEMBL4483575	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:7c1c470d3c7e	Aminopterin	dgidb_only	name_exact_unique	CHEMBL376180	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:7c261e183d98	Adozelesin	dgidb_only	name_exact_unique	CHEMBL35493	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:7c3a4af58c15	Chembl:Chembl449063	dgidb_only	dgidb_concept_chembl	CHEMBL449063	
+FAM:CAT:DGIDB:7ce9007760d4	Amcenestrant	dgidb_only	name_exact_unique	CHEMBL4475463	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:7cf9c39c9e58	Nitroglycerin	dgidb_only	name_exact_unique	CHEMBL730	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:7d52ffd3bf7c	Compound 34 [Pmid: 24749861]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:7da8e82db38f	Silver Sulfadiazine	dgidb_only	name_exact_unique	CHEMBL439	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:7dc2020cce4d	Citalopram	dgidb_only	name_exact_unique	CHEMBL549	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:7e35747fdcf3	Org2058	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:7e3c67305ca1	Cyproterone Acetate	dgidb_only	name_exact_unique	CHEMBL139835	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:7e5db75ee534	Acetyl-Podocarpic Dimer	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:7e973eb600c9	Compound 11 [Pmid: 26431428]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:7eb00d275f22	N1-Dansyl-Spermine	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:7ef0adfec698	Sp600125	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:7f061bf749aa	Tretinoin	dgidb_only	name_exact_unique	CHEMBL38	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:8007dbf268ec	[3H]Cgp61594	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:801bc201b3a1	3-Hydroxybenzylhydrazine	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:8023244b2afd	Kcl-286	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:80292bbfb538	Ivarmacitinib	dgidb_only	name_exact_unique	CHEMBL5095398	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:805c90c7cd8b	Compound 71 [Wo2018191577A1]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:806b78a03d44	As101	dgidb_only	name_exact_unique	CHEMBL4597200	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:8072505249c7	Imlunestrant	dgidb_only	name_exact_unique	CHEMBL5095183	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:80986b1aeb4f	Doxercalciferol	dgidb_only	name_exact_unique	CHEMBL1200810	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:80ffd9194985	Betamethasone Acetate	dgidb_only	name_exact_unique	CHEMBL1200538	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:811ca6a4d45c	Cyclosporine	dgidb_only	name_exact_unique	CHEMBL160	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:816d882e19f6	Clazakizumab	dgidb_only	name_exact_unique	CHEMBL2108589	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:8181b92bdd4d	Penicillamine	dgidb_only	name_exact_unique	CHEMBL1430	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:822588ad5387	Apalutamide	dgidb_only	name_exact_unique	CHEMBL3183409	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:823281ba7c1c	Methylprednisolone Sodium Succinate	dgidb_only	name_exact_unique	CHEMBL1201265	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:8232c3359ea9	Chembl:Chembl1276446	dgidb_only	dgidb_concept_chembl	CHEMBL1276446	
+FAM:CAT:DGIDB:82cc7f4ce1af	Gsk-3Beta Inhibitor I	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:830f4ec04842	Compound 6F [Pmid: 35476936]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:834ea90dfe54	Acalabrutinib Maleate	dgidb_only	name_exact_unique	CHEMBL3707348	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:8355ca849495	Thioguanine	dgidb_only	name_exact_unique	CHEMBL727	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:8378c30e01d0	Azd2906	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:83e5f9790a96	Desogestrel	dgidb_only	name_exact_unique	CHEMBL1533	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:83eaea166871	Metribolone	dgidb_only	name_exact_unique	CHEMBL166444	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:8411aaf9b637	Antioxidant	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:846313cfd6a0	Sotrastaurin	dgidb_only	name_exact_unique	CHEMBL565612	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:849d8cc9a128	Compound 2 [Maurer Et Al., 2012]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:853465a5cf67	Bay 61-3606	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:856abb7634dd	Bjp-06-005-3	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:857e941dfc98	S20928	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:85b2a02cc2f9	Brivudine Phosphoramidate	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:85ce88c948e1	Epz011989	dgidb_only	name_exact_unique	CHEMBL3672841	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:8629a7fc04cf	Chembl:Chembl1333049	dgidb_only	dgidb_concept_chembl	CHEMBL1333049	
+FAM:CAT:DGIDB:8643362103b5	Ascorbic Acid	dgidb_only	name_exact_unique	CHEMBL196	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:864a49d67c17	Erteberel	dgidb_only	name_exact_unique	CHEMBL278703	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:8662f470cb85	To-901317	dgidb_only	name_exact_unique	CHEMBL62136	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:866ba4c88735	Biochanin A	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:86c5cdcdadbc	Dinaciclib	dgidb_only	name_exact_unique	CHEMBL2103840	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:871f044a9f90	Vrt-043198	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:87abb4e16d54	Muramyl Dipeptide	dgidb_only	name_exact_unique	CHEMBL1779325	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:87b0f270569b	Sgc-Cbp30	dgidb_only	name_exact_unique	CHEMBL3622373	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:882c2f78eeba	Ucm 724	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:882d6b9e69bd	Entinostat	dgidb_only	name_exact_unique	CHEMBL27759	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:88f4aeb726f1	3-Keto-Lithocholic Acid	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:8919c34439ea	Recombinant Neurotrophic Factor	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:89a55208d4e5	Sanguinarium	dgidb_only	name_exact_unique	CHEMBL417799	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:89add2f59126	Etoposide	dgidb_only	name_exact_unique	CHEMBL44657	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:89aec13d0c52	Compound 1D [Pmid: 21493067]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:89c5118fd77d	Compound 15 [Hay Et Al., 2013]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:89ce230eac69	Bms-189532	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:89e6d66f8457	Medrysone	dgidb_only	name_exact_unique	CHEMBL1201173	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:8a3171b5484b	Chembl:Chembl599013	dgidb_only	dgidb_concept_chembl	CHEMBL599013	
+FAM:CAT:DGIDB:8a3e93a80c06	Way200070	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:8a52a55f3a98	[3H]L689560	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:8a6c80403023	Ds96432529	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:8ade50e369ea	Agn193836	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:8b135ee93a22	Rgfp966	dgidb_only	name_exact_unique	CHEMBL4078477	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:8b25aca585c2	Onercept	dgidb_only	name_exact_unique	CHEMBL2107911	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:8b55393c704d	Promegestone	dgidb_only	name_exact_unique	CHEMBL196003	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:8b6ac88a5720	Prexasertib	dgidb_only	name_exact_unique	CHEMBL3544911	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:8b7f3a930682	Sklb-03220	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:8beed913fd32	Imb-808	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:8c16382b2c45	Hydrocortisone Acetate	dgidb_only	name_exact_unique	CHEMBL1091	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:8c4c0b05a467	Pha-767491	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:8c80f6243eca	Dasa-58	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:8ccabe53a647	Neoceptin-3	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:8d33802a6c2b	Valproic Acid	dgidb_only	name_exact_unique	CHEMBL109	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:8dc27d963f06	Voruciclib	dgidb_only	name_exact_unique	CHEMBL3905910	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:8ddd1e9e1ab7	Phenytoin Sodium	dgidb_only	name_exact_unique	CHEMBL16	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:8df5f32bdf3b	Danusertib	dgidb_only	name_exact_unique	CHEMBL402548	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:8e52eead3994	Andarine	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:8ed0f4cd93e2	Lexacalcitol	dgidb_only	name_exact_unique	CHEMBL432600	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:8f49db9bfa79	Ttk21	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:8f7292fc60ff	Tolbutamide	dgidb_only	name_exact_unique	CHEMBL782	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:8f7bcfa0abc6	Lonaprisan	dgidb_only	name_exact_unique	CHEMBL146032	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:8f95e41c6aa9	Chembl:Chembl473721	dgidb_only	dgidb_concept_chembl	CHEMBL473721	
+FAM:CAT:DGIDB:8fbc25f7f5e3	Pracinostat	dgidb_only	name_exact_unique	CHEMBL1851943	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:901979e6ba30	Sodium Dichloroacetate	dgidb_only	name_exact_unique	CHEMBL306823	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:901fc9ed9b89	Thyrotropin	dgidb_only	name_exact_unique	CHEMBL1201532	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:905ea4953db1	Im-12	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:90b640e2134f	Paricalcitol	dgidb_only	name_exact_unique	CHEMBL1200622	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:9136df9c9bbf	Norgestrel	dgidb_only	name_exact_unique	CHEMBL2107797	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:9197858e6b95	Nomegestrol	dgidb_only	name_exact_unique	CHEMBL1476022	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:925ab80c64cb	Gemcitabine	dgidb_only	name_exact_unique	CHEMBL888	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:925d0dea7d7b	Vincristine	dgidb_only	name_exact_unique	CHEMBL90555	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:9286266ea33c	Brilanestrant	dgidb_only	name_exact_unique	CHEMBL3581693	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:933a2a41e968	Ibrutinib	dgidb_only	name_exact_unique	CHEMBL1873475	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:93e5438541e3	Avagacestat	dgidb_only	name_exact_unique	CHEMBL1090771	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:943f948ed754	Isoxazole Azepine Compound 3	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:944f7457d2bd	Megestrol Acetate	dgidb_only	name_exact_unique	CHEMBL1201139	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:9453a175b05e	Dexamethasone Sodium Phosphate	dgidb_only	name_exact_unique	CHEMBL1201302	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:94d582bb690f	Itacitinib	dgidb_only	name_exact_unique	CHEMBL3622820	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:953f482b0bbc	Ac430	dgidb_only	name_exact_unique	CHEMBL3545241	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:95fc79c07856	Protein Kinase Inhibitor	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:9613cb9314a2	Resminostat	dgidb_only	name_exact_unique	CHEMBL4296717	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:96958e9a8723	Trifarotene	dgidb_only	name_exact_unique	CHEMBL3707313	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:96bd6bd79082	Ly3405105	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:96fa32c54567	24(S)-Hydroxycholesterol	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:97323b9f8bcf	Doxorubicin Hydrochloride	dgidb_only	name_exact_unique	CHEMBL53463	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:9761f418a0f4	Hypoxanthine	dgidb_only	name_exact_unique	CHEMBL1427	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:97738670fe63	Ethylestrenol	dgidb_only	name_exact_unique	CHEMBL1200623	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:9790d724878b	Pregnant Mare Serum Gonadotropin	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:984e67631bd3	Deferoxamine	dgidb_only	name_exact_unique	CHEMBL556	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:987ef71eeeb1	Nt-0796	dgidb_only	name_exact_unique	CHEMBL5409389	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:99960e67dd34	Ro 40-6055	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:99bf739a540e	Triamcinolone Diacetate	dgidb_only	name_exact_unique	CHEMBL1200449	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:9a1848b2e12a	Diazoxide	dgidb_only	name_exact_unique	CHEMBL181	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:9a65594663e8	Synthetic Conjugated Estrogens, B	dgidb_only	name_exact_unique	CHEMBL1201467	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:9a8b449e52a7	Etonogestrel	dgidb_only	name_exact_unique	CHEMBL1531	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:9b487b8ecfb8	K185	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:9bc633afd268	Jnj-7706621	dgidb_only	name_exact_unique	CHEMBL191003	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:9bed2c5562cc	Ucsf4226	dgidb_only	name_exact_unique	CHEMBL5568071	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:9c14025a223e	Az12260493	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:9c2b6800b9f3	Mannitol	dgidb_only	name_exact_unique	CHEMBL689	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:9d211fca1157	2-[125I]Melatonin	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:9d25141c6f73	Rovazolac	dgidb_only	name_exact_unique	CHEMBL4297218	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:9e339adae01c	Bms614	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:9e792c232ac1	Mesalamine	dgidb_only	name_exact_unique	CHEMBL704	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:9ec52dbec023	[3H]D-Aspartic Acid	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:a0075ef476f9	Abbv-3373	dgidb_only	name_exact_unique	CHEMBL4297572	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:a01b90413a8a	Ka1010	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:a05c307ca0ce	Fluocinonide	dgidb_only	name_exact_unique	CHEMBL1501	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:a06a80b52836	Folic Acid	dgidb_only	name_exact_unique	CHEMBL1622	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:a07c7735e4d0	Az20	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:a0a5402dc5cd	Dagrocorat	dgidb_only	name_exact_unique	CHEMBL3137304	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:a0ae8af82104	Tucidinostat	dgidb_only	name_exact_unique	CHEMBL3621988	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:a11a0f1dd5a9	Methionine	dgidb_only	unresolved		name matches 2 ChEMBL parents
+FAM:CAT:DGIDB:a2252eb573a8	Tazarotene	dgidb_only	name_exact_unique	CHEMBL1657	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:a2553ceb6557	Norelgestromin	dgidb_only	name_exact_unique	CHEMBL1200807	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:a2a8a04e6517	(Hydroxymethylphenyl)Agomelatine	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:a2dc5518a040	Flutamide	dgidb_only	name_exact_unique	CHEMBL806	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:a34729bed515	Prinaberel	dgidb_only	name_exact_unique	CHEMBL450940	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:a351bc099fa6	Novobiocin	dgidb_only	name_exact_unique	CHEMBL36506	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:a35f493386a5	Paramethasone Acetate	dgidb_only	name_exact_unique	CHEMBL1200342	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:a3c14c38917f	Itacnosertib	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:a3d03ae2ef6c	Ml385	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:a3d8ccc77935	Tazemetostat Hydrobromide	dgidb_only	name_exact_unique	CHEMBL3414621	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:a4349a0e6c97	Erd-308	dgidb_only	name_exact_unique	CHEMBL4582373	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:a48768eaeb46	S26284	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:a4c5aa722407	Compound 4D [Pmid: 21851057]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:a59747178c82	Calcitriol-26,23-Lactone	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:a5d52bc79d17	Xy-06-007	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:a5ef2958c633	Zm447439	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:a61a8b72fd3f	Cholecalciferol	dgidb_only	name_exact_unique	CHEMBL1042	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:a78328242880	Gsk866	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:a81c1f2c4eee	Sirt1 Activator 3	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:a8dc348e5418	Methotrexate	dgidb_only	name_exact_unique	CHEMBL34259	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:a8edcc5d1f21	Oxidopamine	dgidb_only	name_exact_unique	CHEMBL337702	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:a922f34d6abc	Bromocriptine	dgidb_only	name_exact_unique	CHEMBL493	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:a92aa9fd2add	Gandotinib	dgidb_only	name_exact_unique	CHEMBL2107823	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:a987a36a17e3	Pf0998425	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:a9c0c1246334	Testosterone	dgidb_only	name_exact_unique	CHEMBL386630	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:a9f5f87a8baa	Prunetin	dgidb_only	name_exact_unique	CHEMBL491174	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:aa0e15795ab3	Norethindrone	dgidb_only	name_exact_unique	CHEMBL1162	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:aa465c989153	Desoximetasone	dgidb_only	name_exact_unique	CHEMBL1766	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:aac02b952823	Compound 3B [Pmid: 23454515]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:aac12c557a5b	Xd1	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:aae3d057d8a6	Azd-1480	dgidb_only	name_exact_unique	CHEMBL1231124	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:aaedf4c249a8	Indomethacin	dgidb_only	name_exact_unique	CHEMBL6	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:ab103883bd98	(3Z)-N,N-Dimethyl-2-Oxo-3-(4,5,6,7-Tetrahydro-1H-Indol-2-Ylmethylidene)-2,3-Dihydro-1H-Indole-5-Sulfonamide	dgidb_only	name_exact_unique	CHEMBL605003	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:acc5d1aa754e	Ischemin	dgidb_only	name_exact_unique	CHEMBL1615026	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:acd40045120c	1,4-Benzoquinone	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:ace28a052219	Gsk2881078	dgidb_only	name_exact_unique	CHEMBL3545174	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:ad0ad93f2d5c	Compound 1 [Pmid: 25408830]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:ad931472df14	Compound 25C [Pmid: 36649216]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:ae55a2b9b882	Zk216348	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:ae6953d74009	Ucm 793	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:ae888d8dc593	Azd-5423	dgidb_only	name_exact_unique	CHEMBL4072756	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:af54f618bd1a	Testosterone Propionate	dgidb_only	name_exact_unique	CHEMBL1170	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:afb3a2efa45e	Halcinonide	dgidb_only	name_exact_unique	CHEMBL1200845	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:b0aa912369e0	Compound 20 [Pmid: 25091930]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:b0bb45a45124	Proteasome Inhibitor	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:b0ca5cf2303c	D-Ap5	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:b0d90f466877	Camonsertib	dgidb_only	name_exact_unique	CHEMBL5095260	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:b0e127475c4d	Ribociclib	dgidb_only	name_exact_unique	CHEMBL3545110	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:b0e7c0202f3d	Hydrocortisone Sodium Succinate	dgidb_only	name_exact_unique	CHEMBL977	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:b184058fefa4	Gnf2133	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:b1b490291831	Trilaciclib Dihydrochloride	dgidb_only	name_exact_unique	CHEMBL3894860	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:b25450e2af1b	Ard-69	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:b28d52919b48	Becocalcidiol	dgidb_only	name_exact_unique	CHEMBL2104955	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:b2ce55e5e71f	Compound 35 [Pmid: 23916259]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:b386878b887a	Amcinonide	dgidb_only	name_exact_unique	CHEMBL1200732	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:b3c5641e9214	Methandrostenolone	dgidb_only	name_exact_unique	CHEMBL1418176	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:b40a8358fec5	Prednisolone Sodium Phosphate	dgidb_only	name_exact_unique	CHEMBL1201231	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:b459313a7710	Anti-Hif-1Alpha Lna Antisense Oligonucleotide Ezn-2968	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:b4b6948be1b7	Levonorgestrel	dgidb_only	name_exact_unique	CHEMBL1389	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:b52b7a02faa9	Segesterone Acetate	dgidb_only	name_exact_unique	CHEMBL3707377	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:b52fd29203f7	Clotrimazole	dgidb_only	name_exact_unique	CHEMBL104	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:b55163862f85	Abequolixron	dgidb_only	name_exact_unique	CHEMBL573677	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:b5a7b746b17d	Tasimelteon	dgidb_only	name_exact_unique	CHEMBL2103822	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:b5db37404a51	Arachidonic Acid	dgidb_only	name_exact_unique	CHEMBL15594	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:b600b74b4aa0	Rgb-286638	dgidb_only	name_exact_unique	CHEMBL3545083	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:b63d26abc373	Tcdd	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:b63eeea56658	Bi6015	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:b6ab3af5c7a4	Compound 7D [Pmid: 25703523]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:b6b070da5ccc	Droxinostat	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:b7551f23273b	Sr1555	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:b771b7f96970	Compound 8 [Pmid: 17480064]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:b78f2077f6f4	S-Allylglycine	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:b7b1e7e5089f	Beclomethasone Dipropionate	dgidb_only	name_exact_unique	CHEMBL1200500	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:b7b428289af4	Luxeptinib	dgidb_only	name_exact_unique	CHEMBL4594420	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:b81c4f7f2883	Quinestrol	dgidb_only	name_exact_unique	CHEMBL1201165	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:b864887635c8	Pomalidomide	dgidb_only	name_exact_unique	CHEMBL43452	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:b884da5f3057	Px-478	dgidb_only	name_exact_unique	CHEMBL4117516	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:b8ad886b94a3	Progesterone	dgidb_only	name_exact_unique	CHEMBL103	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:b8e22b29ae74	Ru28362	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:b91725253b11	Brontictuzumab	dgidb_only	name_exact_unique	CHEMBL3545261	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:b92b8b1ce56b	Nhwd-870	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:b9586dbf6a66	Paxilline	dgidb_only	name_exact_unique	CHEMBL410063	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:b95e2f18106b	Ucsf3384	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:b98350579779	[3H]Cgs19755	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:b9d0b1d05dd5	Isoamyl-Agomelatine	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:ba122a75ebe4	Ebvaciclib	dgidb_only	name_exact_unique	CHEMBL4446357	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:ba348e1c7077	Orelabrutinib	dgidb_only	name_exact_unique	CHEMBL4650321	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:bae9868a4fcf	Estrogens, Esterified (Usp)	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:baeb1e23e392	Fenretinide	dgidb_only	name_exact_unique	CHEMBL7301	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:bbec9d41c3a2	Cytarabine	dgidb_only	name_exact_unique	CHEMBL803	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:bc1ae3ae5cc3	Nexturastat A	dgidb_only	name_exact_unique	CHEMBL2179618	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:bc207c1db0d0	Fluorometholone	dgidb_only	name_exact_unique	CHEMBL1200600	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:bc21325ec143	Vintafolide	dgidb_only	name_exact_unique	CHEMBL3039521	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:bc3921481ef1	Loteprednol	dgidb_only	unresolved		name matches 2 ChEMBL parents
+FAM:CAT:DGIDB:bc4993a39378	Evobrutinib	dgidb_only	name_exact_unique	CHEMBL4072833	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:bc63160f00e3	Gsk2981278	dgidb_only	name_exact_unique	CHEMBL4225088	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:bce553ea6196	Fimepinostat	dgidb_only	name_exact_unique	CHEMBL3622533	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:bdac90835dc9	Xmd-12	dgidb_only	name_exact_unique	CHEMBL4649424	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:bdcfd01a577e	Lerociclib	dgidb_only	name_exact_unique	CHEMBL3904602	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:be66bf676885	Ciclesonide	dgidb_only	name_exact_unique	CHEMBL2040682	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:bf4508b20cd0	Methyl-Piperidino-Pyrazole	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:bf9eed7017e8	Ac-430	dgidb_only	name_exact_unique	CHEMBL3545241	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:bfa3a8018a80	Abemaciclib	dgidb_only	name_exact_unique	CHEMBL3301610	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:c074cb76e927	Conantokin-G	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:c0761d5c7905	Compound 2 [Pmid: 25408830]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:c0bfb32ed518	Ucm 765	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:c18d221d1a61	Leo 134310	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:c19dd34c9850	Fluocinolone Acetonide	dgidb_only	name_exact_unique	CHEMBL989	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:c2152db1c108	Pri-724	dgidb_only	name_exact_unique	CHEMBL4297813	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:c273df15d763	Compound 25 [Pmid: 20855207]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:c2ba047bad82	Milrebrutinib	dgidb_only	name_exact_unique	CHEMBL5077961	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:c2cc6146166d	Citco	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:c33be91c5af5	Compound 16 [Pmid: 31977207]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:c3756a4bd6c7	Lsz102	dgidb_only	name_exact_unique	CHEMBL4076124	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:c38fb95dbaa5	Zk112993	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:c4bdb6c8b262	(+)-Mcpg	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:c4fcb2b92e53	Cimpuciclib	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:c50058647863	Tak-901	dgidb_only	name_exact_unique	CHEMBL3544932	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:c5616f14da5c	Ptd10	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:c567743ed0f6	Cd666	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:c589f0e64dc4	Clocortolone	dgidb_only	name_exact_unique	CHEMBL2106011	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:c62597f0cb64	Citarinostat	dgidb_only	name_exact_unique	CHEMBL3693786	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:c68191de754a	Ac55649	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:c7a13951be3c	Sr8278	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:c7cc08beb018	Pf-03814735	dgidb_only	name_exact_unique	CHEMBL4289017	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:c81601c2f829	Compound 50 [Pmid: 24313754]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:c8221b11292d	Pf-04236921	dgidb_only	dgidb_concept_chembl	CHEMBL2109613	
+FAM:CAT:DGIDB:c8511f5afd4f	Rosiglitazone	dgidb_only	name_exact_unique	CHEMBL121	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:c976c1379de3	Pivaloyloxymethylbutyrate	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:ca0cbcf4f1e9	Gv196771A	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:ca7c06af9bf8	Infliximab-Dyyb	dgidb_only	name_exact_unique	CHEMBL1201581	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:cac503e8d6b7	Clobetasol Propionate	dgidb_only	name_exact_unique	CHEMBL1159650	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:cad2b10535df	Mw01	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:caf143670019	Pkr Inhibitor	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:cb078136028d	Ucm1014	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:cb2d773a310b	Ucm 549	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:cc0e62936d06	Glycine	dgidb_only	name_exact_unique	CHEMBL773	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:cc329ae9d3aa	Therapeutic Hormone	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:ccce741a959d	Dacinostat	dgidb_only	name_exact_unique	CHEMBL356066	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:ccf0411ed98e	Dromostanolone	dgidb_only	name_exact_unique	CHEMBL1582	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:ccfe1fc77752	Efppea	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:cde9d0752901	Adapalene	dgidb_only	name_exact_unique	CHEMBL1265	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:ce496ff00491	Stat3 Inhibitor 8Q	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:ce63378d51cd	(2R,3R)-Apdc	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:cf301d2ea69b	Difluoroagomelatine	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:cf4a9ed8944d	Quisqualic Acid	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:cff341dde758	Estriol	dgidb_only	name_exact_unique	CHEMBL193482	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:d0097bbd6c63	Calcitriol	dgidb_only	name_exact_unique	CHEMBL846	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:d0aabe6a6f00	Ly395756	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:d0c15660ccb8	Lomitapide Mesylate	dgidb_only	name_exact_unique	CHEMBL354541	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:d1fc53fdb24f	Ethinyl Estradiol	dgidb_only	name_exact_unique	CHEMBL691	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:d22a611bb50d	Fluoxymesterone	dgidb_only	name_exact_unique	CHEMBL1445	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:d23a0b307aad	Cromakalim	dgidb_only	name_exact_unique	CHEMBL49035	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:d2991102be6b	Bomppa	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:d29f613e2f52	Hydrocortisone Sodium Phosphate	dgidb_only	name_exact_unique	CHEMBL1641	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:d2a215815825	Cifea	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:d2d2a13c770a	Indirubin Derivative E804	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:d2f0b45182ac	Ms417	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:d3f00fec5ac5	Tinengotinib	dgidb_only	name_exact_unique	CHEMBL5314430	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:d44a1d6d8ac6	At-9283	dgidb_only	name_exact_unique	CHEMBL495727	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:d6a52820b985	Gevokizumab	dgidb_only	name_exact_unique	CHEMBL1743026	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:d7fe3d6d9e92	Barasertib	dgidb_only	name_exact_unique	CHEMBL415049	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:d8934932f587	R,R-Thc	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:d9244bf60923	2-Tert-Butyl-9-Fluoro-1,6-Dihydrobenzo[H]Imidazo[4,5-F]Isoquinolin-7-One	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:d9a35f76b751	Tomivosertib	dgidb_only	name_exact_unique	CHEMBL4073443	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:d9f9f1b8c197	Luzindole	dgidb_only	name_exact_unique	CHEMBL286615	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:da429e38def8	Sarakalim	dgidb_only	name_exact_unique	CHEMBL2104449	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:dae6cfceb22a	Gestodene	dgidb_only	name_exact_unique	CHEMBL1213583	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:db51bba9e470	Isospaglumic Acid	dgidb_only	name_exact_unique	CHEMBL1329032	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:db6e9db6b9d8	Ucm 454	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:dd19391662d3	Alrt 1550	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:de26e608f305	3 Alpha-Aminocholestane	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:de8412f5a163	Hydrocortamate Hydrochloride	dgidb_only	name_exact_unique	CHEMBL1201263	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:de8663614b90	Abexinostat	dgidb_only	name_exact_unique	CHEMBL2103863	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:df5cf988ec5f	Cdk12 Inhibitor 2	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:e05afc012259	Mk-0752	dgidb_only	name_exact_unique	CHEMBL4205422	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:e1171258c805	Lasofoxifene	dgidb_only	name_exact_unique	CHEMBL328190	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:e1b85a54dc9c	Phencyclidine	dgidb_only	name_exact_unique	CHEMBL275528	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:e1cab85af880	Ucsf7447	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:e245e65e1ab2	Tibremciclib	dgidb_only	name_exact_unique	CHEMBL5314545	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:e2a06e37dae6	Nirogacestat	dgidb_only	name_exact_unique	CHEMBL1770916	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:e2d8b7c02633	Ard-266	dgidb_only	name_exact_unique	CHEMBL4525203	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:e4331b8a099b	Bcl6 Protac 15	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:e4afa445a7e0	Xct790	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:e5c74740dfc2	Compound 68 [Pmid: 24900699]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:e5c93569503a	Bifonazole	dgidb_only	name_exact_unique	CHEMBL277535	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:e629de192426	Sulfopin	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:e67ba0b4647f	Cintirorgon	dgidb_only	name_exact_unique	CHEMBL4472508	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:e684c32844c8	Repotrectinib	dgidb_only	name_exact_unique	CHEMBL4298138	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:e70b1b244ec2	Mivebresib	dgidb_only	name_exact_unique	CHEMBL3987016	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:e78bc88ee9d4	Testosterone Enanthate	dgidb_only	name_exact_unique	CHEMBL1200335	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:e8009722f9bc	Betamethasone Sodium Phosphate	dgidb_only	name_exact_unique	CHEMBL1201207	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:e837e4cfafd7	Dapansutrile	dgidb_only	name_exact_unique	CHEMBL3989943	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:e8aa067dbc00	Compound 38 [Pmid: 20817473]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:e8e1abfdb80d	Akk(Thioac)Lm21	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:e8e72b8b40a8	Betamethasone Valerate	dgidb_only	name_exact_unique	CHEMBL1497	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:e8fc14d39448	Nandrolone Decanoate	dgidb_only	name_exact_unique	CHEMBL1200946	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:e9025ffbd637	Ucm1341	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:e94243bde99c	Golimumab	dgidb_only	name_exact_unique	CHEMBL1201833	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:ebce87d0e62c	Clascoterone	dgidb_only	name_exact_unique	CHEMBL3590187	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:ec16120922f2	Scriptaid	dgidb_only	name_exact_unique	CHEMBL96051	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:ec17368be03c	[125I]S70254	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:ec1f021cf6ea	Martinostat	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:ec2005879bc4	Chmfl-Btk-11	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:ec3ecdc40c41	Aspirin	dgidb_only	name_exact_unique	CHEMBL25	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:ec7f7d35898a	Bay-299	dgidb_only	name_exact_unique	CHEMBL4086276	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:ede1773aae0e	Danazol	dgidb_only	name_exact_unique	CHEMBL1479	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:edfa16086b89	4-Phenylbutyric Acid	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:eef19c54306d	Null	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:ef1566b62f47	Arotinoid Acid	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:ef3920a517ae	Norgestimate	dgidb_only	name_exact_unique	CHEMBL1200934	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:ef3c374f0fc6	Apr19	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:efb24703a281	Certolizumab Pegol	dgidb_only	name_exact_unique	CHEMBL1201831	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:f00011e958ea	Dihydrotachysterol	dgidb_only	name_exact_unique	CHEMBL2356023	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:f00a4deba5e2	Lenercept	dgidb_only	name_exact_unique	CHEMBL2108208	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:f0320db1e9f6	Selnoflast	dgidb_only	name_exact_unique	CHEMBL5095423	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:f0a2b29421af	Mometasone	dgidb_only	name_exact_unique	CHEMBL1201404	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:f0ae7b99b80d	Halicin	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:f1465322f2a2	Margatoxin	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:f1529f916473	Phtpp	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:f1a832eb015a	Tyk2 Inhibitor 14L	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:f20362268b9d	Tazemetostat	dgidb_only	name_exact_unique	CHEMBL3414621	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:f225f8272b71	Compound 38 [Pmid: 24000170]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:f2356402f4c0	5&Beta;-Pregnane-3,20-Dione	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:f2d429879845	Pacritinib Citrate	dgidb_only	name_exact_unique	CHEMBL2035187	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:f2ef4d444789	Cp-10	dgidb_only	name_exact_unique	CHEMBL4553408	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:f346181a3d91	6-Cl-Mlt	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:f38a1a97065e	Estrone	dgidb_only	name_exact_unique	CHEMBL1405	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:f53f4b5e65a6	Desonide	dgidb_only	name_exact_unique	CHEMBL1201109	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:f562bb034a33	Thiamet-G	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:f571f2fbfdf4	Sch-900229	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:f5aacf22df23	Ly233053	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:f5e262598b4f	Recombinant Tumor Necrosis Factor Family Protein	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:f6366d581009	Seocalcitol	dgidb_only	name_exact_unique	CHEMBL1908376	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:f6ce53ab1f6a	Elsilimomab	dgidb_only	name_exact_unique	CHEMBL2108591	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:f7102e5728c8	2-(Indolin-1Yl)-Melatonin	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:f71dfdc36426	(S)-Cr8	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:f724688ff44c	Xy101	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:f7d3ab00ba4d	Compound 17 [Pmid: 29741897]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:f836f65a1f20	Olokizumab	dgidb_only	name_exact_unique	CHEMBL1743050	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:f8f8a78bd93d	Hexestrol	dgidb_only	name_exact_unique	CHEMBL9225	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:f94d877faa8b	Lfm-A13	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:f9861012416f	Ndt-19795	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:f9c35a07bf9f	Levorphanol	dgidb_only	name_exact_unique	CHEMBL592	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:f9ecb57f1990	L701324	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:fa02013892b7	Dh97	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:fa2c565df7e0	Lg190178	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:fb197a69a54e	Berzosertib	dgidb_only	name_exact_unique	CHEMBL3989870	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:fb1b27cbf8a6	Minoxidil	dgidb_only	name_exact_unique	CHEMBL802	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:fb77282c2057	Compound 10 [Pmid: 19402633]	dgidb_only	unresolved		name pattern not looked up (code name / class name)
+FAM:CAT:DGIDB:fb92d02b5da3	Givinostat	dgidb_only	name_exact_unique	CHEMBL1213492	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:fb9a6166ce48	Sns-314	dgidb_only	name_exact_unique	CHEMBL482767	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:fc25ca3f4ba3	Branebrutinib	dgidb_only	name_exact_unique	CHEMBL4297674	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:fc2ad4997b00	Ag-122018	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:fc3b30ce2707	Srt1720	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:fc83e79dea8e	Cy-09	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:fcb6e74032d9	Oxandrolone	dgidb_only	name_exact_unique	CHEMBL1200436	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:fd310066a390	Methylprednisolone	dgidb_only	name_exact_unique	CHEMBL650	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:fd925f0e36eb	I-Cbp112	dgidb_only	name_exact_unique	CHEMBL3774655	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:fea95527d588	Alfacalcidol	dgidb_only	name_exact_unique	CHEMBL1601669	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:ff14fa84130d	Tacedinaline	dgidb_only	name_exact_unique	CHEMBL235191	identity UNVERIFIED (no structure check)
+FAM:CAT:DGIDB:ff7fa5d89505	Gr 128107	dgidb_only	unresolved		no exact name match
+FAM:CAT:DGIDB:ffd34c9a95e6	Afelimomab	dgidb_only	name_exact_unique	CHEMBL2108887	identity UNVERIFIED (no structure check)

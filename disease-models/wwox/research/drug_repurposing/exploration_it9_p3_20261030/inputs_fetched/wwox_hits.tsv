@@ -1,0 +1,4 @@
+parent	name_searched	pmid	year_source	title	opened_at_title_abstract_level	concerns_compound_in_WWOX_context
+CHEMBL413	sirolimus	36621327	2023 Feb Int Immunopharmacol	WWOX activates autophagy to alleviate lipopolysaccharide-induced acute lung injury by regulating mTOR.	title only (abstract not opened)	WWOX and mTOR/autophagy, non-neural system (title)
+CHEMBL413	sirolimus	24008736	2013 Sep 5 Cell Death Dis	WWOX suppresses autophagy for inducing apoptosis in methotrexate-treated human squamous cell carcinoma.	title only (abstract not opened)	WWOX and mTOR/autophagy, non-neural system (title)
+CHEMBL413	sirolimus	23666471	2013 Jul Curr Opin Oncol	New molecular insights into osteosarcoma targeted therapy.	title only (abstract not opened)	unclear from title (review of osteosarcoma targeted therapy)

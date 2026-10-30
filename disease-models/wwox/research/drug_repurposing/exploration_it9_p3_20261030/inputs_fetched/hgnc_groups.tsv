@@ -1,0 +1,100 @@
+symbol	group	state
+AHR	Basic helix-loop-helix proteins	OK
+ALDH2	Aldehyde dehydrogenases	OK
+APH1A	Gamma-secretase complex subunits	OK
+AR	Nuclear receptor subfamily 3 group C	OK
+ATR	Armadillo like helical domain containing	OK
+AURKB	Protein phosphatase 1 regulatory subunits	OK
+BCL3	Ankyrin repeat domain containing	OK
+BCL6	Zinc fingers C2H2-type	OK
+BMPR1A	Type 1 receptor serine/threonine kinases	OK
+BRD4	Bromodomain and extra-terminal domain family	OK
+BTK	Pleckstrin homology domain containing	OK
+CASP1	Caspases	OK
+CDK6	Cyclin dependent kinases	OK
+CDK7	Cyclin dependent kinases	OK
+CDK8	Cyclin dependent kinases	OK
+CLK4	CDC like kinases	OK
+CRBN	NO_GROUP	OK
+CREBBP	Zinc fingers ZZ-type	OK
+CUL4A	Cullins	OK
+DCAF1	DDB1 and CUL4 associated factors	OK
+DOT1L	Histone lysine methyltransferases	OK
+DYRK1A	Dual-specificity tyrosine-regulated kinase family	OK
+E2F1	E2F transcription factors	OK
+E2F5	E2F transcription factors	OK
+EGLN2	Egl-9 family hypoxia inducible factors	OK
+EGR1	Zinc fingers C2H2-type	OK
+EIF2AK2	Protein phosphatase 1 regulatory subunits	OK
+EP300	Zinc fingers ZZ-type	OK
+EPAS1	Basic helix-loop-helix proteins	OK
+ERN1	Endoribonucleases	OK
+ESR1	Estrogen receptors	OK
+ESR2	Estrogen receptors	OK
+ESRRA	Estrogen related receptors	OK
+EZH2	Histone lysine methyltransferases	OK
+GMPS	Glutamine amidotransferase class 1 domain containing	OK
+HDAC1	Histone deacetylases, class I	OK
+HDAC3	Histone deacetylases, class I	OK
+HDAC5	Histone deacetylases, class IIA	OK
+HIF1A	Basic helix-loop-helix proteins	OK
+HMGB1	Canonical high mobility group	OK
+HNF4A	MicroRNA protein coding host genes	OK
+INPP5D	SH2 domain containing	OK
+JAK2	SH2 domain containing	OK
+KAT7	Zinc fingers C2H2C-type	OK
+KCNJ8	Potassium inwardly rectifying channel subfamily J	OK
+LY96	MD-2 related lipid recognition domain containing	OK
+MAPK8	Mitogen-activated protein kinase 8-10 (JNK) family	OK
+MEN1	NO_GROUP	OK
+METTL3	m6A methyltransferase complex	OK
+MTNR1A	Melatonin receptors	OK
+MTNR1B	Melatonin receptors	OK
+NAIP	Baculoviral IAP repeat containing	OK
+NFE2L2	MicroRNA protein coding host genes	OK
+NFKB2	Ankyrin repeat domain containing	OK
+NLRP1	NLR family	OK
+NLRP3	NLR family	OK
+NOTCH1	Notch receptors	OK
+NOTCH3	Notch receptors	OK
+NR1D1	Nuclear receptor subfamily 1 group D	OK
+NR1H3	Nuclear receptor subfamily 1 group H	OK
+NR1I3	Nuclear receptor subfamily 1 group I	OK
+NR2C2	Nuclear receptor subfamily 2 group C	OK
+NR3C1	Nuclear receptor subfamily 3 group C	OK
+OGA	Hexosaminidases	OK
+P4HB	Protein disulfide isomerases	OK
+PBK	PDZ binding kinase family	OK
+PDE2A	Phosphodiesterases	OK
+PGR	Nuclear receptor subfamily 3 group C	OK
+PIN1	Parvulins	OK
+PPARG	Peroxisome proliferator activated receptors	OK
+PRKCZ	Protein kinase C family	OK
+PSEN1	Presenilin family	OK
+PTPRM	Fibronectin type III domain containing	OK
+RARA	Retinoic acid receptors	OK
+RARB	Retinoic acid receptors	OK
+RORA	RAR related orphan receptors	OK
+RORC	RAR related orphan receptors	OK
+RPS6KA3	MAPK activated protein kinases	OK
+RPS6KA4	MAPK activated protein kinases	OK
+RPS6KA5	MAPK activated protein kinases	OK
+SIRT1	Sirtuins	OK
+SIRT5	Sirtuins	OK
+SIRT6	Sirtuins	OK
+SKP2	F-box and leucine rich repeat proteins	OK
+STAT3	SH2 domain containing	OK
+TAF1	Lysine acetyltransferases	OK
+TUBB	Tubulin beta family	OK
+VDR	Protein phosphatase 1 regulatory subunits	OK
+GAD1	Decarboxylases	OK
+GRIN2C	Glutamate ionotropic receptor NMDA type subunits	OK
+GRM3	Glutamate metabotropic receptors	OK
+GSK3B	Glycogen synthase kinase 3 family	OK
+IL1B	Interleukins	OK
+IL6	Interleukins	OK
+KCNA2	Potassium voltage-gated channels	OK
+PDK1	Pyruvate dehydrogenase kinase family	OK
+PKM	Pyruvate kinase family	OK
+SLC7A11	Solute carrier family 7	OK
+TNF	Tumor necrosis factor superfamily	OK
