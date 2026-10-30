@@ -1,0 +1,5 @@
+seed_id	gene	kind	members	direction	level	direction_status	readout_level	evidence_class	species	ortholog_map	source_ref	note
+Q4_protein_tiersAB:GAD1	GAD1	gene		down	1.0	defined	protein	protein_state	mouse	HGNC approved symbol with HGNC mgd ortholog link (MGI:95632); 1:1 assumed from a single link	S064	directions seen: ['down']; tiers ['B']; P1 gives no magnitude (equal weight)
+Q4_protein_tiersAB:GAD2	GAD2	gene		down	1.0	defined	protein	protein_state	mouse	HGNC approved symbol with HGNC mgd ortholog link (MGI:95634); 1:1 assumed from a single link	S065	directions seen: ['down']; tiers ['B']; P1 gives no magnitude (equal weight)
+Q4_protein_tiersAB:NPY	NPY	gene		down	1.0	defined	protein	protein_state	mouse	HGNC approved symbol with HGNC mgd ortholog link (MGI:97374); 1:1 assumed from a single link	S066	directions seen: ['down']; tiers ['B']; P1 gives no magnitude (equal weight)
+Q4_protein_tiersAB:PVALB	PVALB	gene		down	1.0	defined	protein	protein_state	mouse	HGNC approved symbol with HGNC mgd ortholog link (MGI:97821); 1:1 assumed from a single link	S063	directions seen: ['down']; tiers ['B']; P1 gives no magnitude (equal weight)

@@ -1,0 +1,61 @@
+{
+ "p1_seeds_sha256": "726dd2a192c71f560eaf870b0ec579a6d648e4265cfbec3d34b33264b95f162b",
+ "tiers": [
+  "A",
+  "B"
+ ],
+ "per_question": {
+  "D1": {
+   "not_usable_or_reserved": 10
+  },
+  "D2": {
+   "not_usable_or_reserved": 5
+  },
+  "D3": {
+   "not_usable_or_reserved": 2
+  },
+  "D5": {
+   "not_usable_or_reserved": 1
+  },
+  "D6": {
+   "not_usable_or_reserved": 1
+  },
+  "Q1": {
+   "usable_rows": 6,
+   "tier_not_selected": 3,
+   "rows_placed": 1,
+   "process_or_state_without_gene_members_not_representable": 2,
+   "not_usable_or_reserved": 10
+  },
+  "Q2": {
+   "usable_rows": 17,
+   "rows_placed": 8,
+   "unchanged_null_observation_not_a_seed": 2,
+   "no_hgnc_ortholog_link_dropped": 1,
+   "tier_not_selected": 5,
+   "process_or_state_without_gene_members_not_representable": 1,
+   "not_usable_or_reserved": 6
+  },
+  "Q3": {
+   "usable_rows": 13,
+   "rows_placed": 6,
+   "unchanged_null_observation_not_a_seed": 2,
+   "process_or_state_without_gene_members_not_representable": 5,
+   "not_usable_or_reserved": 5
+  },
+  "Q4": {
+   "usable_rows": 12,
+   "process_or_state_without_gene_members_not_representable": 5,
+   "rows_placed": 7,
+   "not_usable_or_reserved": 6
+  },
+  "Q5": {
+   "usable_rows": 10,
+   "process_or_state_without_gene_members_not_representable": 1,
+   "unchanged_null_observation_not_a_seed": 1,
+   "no_hgnc_ortholog_link_dropped": 1,
+   "rows_placed": 7,
+   "not_usable_or_reserved": 7
+  }
+ }
+}

@@ -1,0 +1,17 @@
+label	seed_units	defined	uncertain	examined	nonzero_families_rawQ	T1_PASS	T2_PASS	T2a_rho_median	T2a_top100_overlap_median	T2b_shuffle_rho_median	T2c_decoy_rho	T2_Z_rho_median	T2_Z_top100_overlap_median	families_absz_gt3	T3_identity_PASS	T3_norm_ingraph_rho	T3_probes_examined	T3_probes_with_own_target_seed	T3_probes_flagged	T4_rho_netind_direct	T4_n_direct_any	T4_rawQ_new	T4_rawQ_new_specific	T4_rawQ_outcome	T4_Z_new	T4_Z_new_specific	T4_Z_outcome	T5_PASS
+p1_Q1_protein_tiersAB	1	1	0	12560	2190	True	True	0.034	2.0	NA	-0.071	0.951	59.0	0	True	1.0	11	0	0	nan	2	96	0	NONE	30	0	NONE	True
+p1_Q1_protein_tiersAB_indeg	1	1	0	12560	2190	True	True	0.063	4.0	NA	-0.071	0.942	33.0	0	True	1.0	11	0	0	nan	2	96	0	NONE	44	0	NONE	True
+p1_Q2_expression_tiersAB	17	15	2	12560	4935	True	False	0.096	0.0	1.0	0.077	0.649	0.0	158	True	0.99998	11	1	1	-0.0003	29	99	56	ADDS	99	66	ADDS	True
+p1_Q2_expression_tiersAB_indeg	17	15	2	12560	4935	True	False	0.092	1.0	1.0	0.077	0.633	0.0	85	True	0.99998	11	1	1	-0.0003	29	99	22	LIMITED	100	86	ADDS	True
+p1_Q3_expression_tiersAB	17	1	16	12560	4962	True	True	0.061	0.0	NA	0.126	0.81	1.0	0	True	0.99997	11	0	0	nan	31	100	0	NONE	43	0	NONE	True
+p1_Q3_expression_tiersAB_indeg	17	1	16	12560	4962	True	True	0.06	0.0	NA	0.126	0.824	0.0	2	True	0.99997	11	0	0	nan	31	100	0	NONE	62	0	NONE	True
+p1_Q4_expression_tiersAB	3	2	1	12560	2859	True	True	-0.006	0.0	NA	-0.026	0.822	0.0	179	True	1.0	11	0	0	0.0116	133	100	5	NONE	65	5	NONE	True
+p1_Q4_expression_tiersAB_indeg	3	2	1	12560	2859	True	True	-0.014	0.0	NA	-0.026	0.843	0.0	130	True	1.0	11	0	0	0.0116	133	100	3	NONE	11	3	NONE	True
+p1_Q4_protein_tiersAB	4	4	0	12560	2927	True	False	0.164	1.0	1.0	-0.001	0.852	0.0	100	True	1.0	11	0	0	-0.0003	6	100	38	ADDS	100	88	ADDS	True
+p1_Q4_protein_tiersAB_indeg	4	4	0	12560	2927	True	False	0.171	1.0	1.0	-0.001	0.845	1.0	1	True	1.0	11	0	0	-0.0003	6	100	31	ADDS	100	30	ADDS	True
+p1_Q5_expression_tiersAB	3	2	1	12560	5187	True	True	0.124	0.0	NA	-0.133	0.831	0.0	84	True	0.99997	11	0	0	0.0011	120	100	87	ADDS	100	82	ADDS	True
+p1_Q5_expression_tiersAB_indeg	3	2	1	12560	5187	True	True	0.131	0.0	NA	-0.133	0.808	1.0	92	True	0.99997	11	0	0	0.0011	120	100	57	ADDS	100	52	ADDS	True
+p1_Q5_protein_tiersAB	2	1	1	12560	2979	False	True	0.064	1.0	NA	0.012	0.853	19.0	33	True	1.0	11	0	0	nan	21	0	0	NONE	0	0	NONE	True
+p1_Q5_protein_tiersAB_indeg	2	1	1	12560	2979	False	True	0.175	0.0	NA	0.012	0.904	54.0	2	True	1.0	11	0	0	nan	21	0	0	NONE	0	0	NONE	True
+provisional	15	6	9	12560	5709	True	False	0.127	0.0	0.924	-0.105	0.666	0.0	54	True	0.99997	11	1	1	-0.0003	85	96	7	NONE	97	4	NONE	True
+provisional_indeg	15	6	9	12560	5709	True	False	0.142	0.0	0.924	-0.105	0.679	0.0	23	True	0.99997	11	1	1	-0.0003	85	96	4	NONE	96	4	NONE	True

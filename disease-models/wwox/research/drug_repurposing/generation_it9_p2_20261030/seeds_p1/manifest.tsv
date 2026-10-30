@@ -1,0 +1,8 @@
+set	seed_rows	defined	uncertain	gene_units
+Q1_protein_tiersAB	1	1	0	1
+Q2_expression_tiersAB	8	6	2	17
+Q3_expression_tiersAB	6	1	5	17
+Q4_expression_tiersAB	3	2	1	3
+Q4_protein_tiersAB	4	4	0	4
+Q5_expression_tiersAB	3	2	1	3
+Q5_protein_tiersAB	2	1	1	2
