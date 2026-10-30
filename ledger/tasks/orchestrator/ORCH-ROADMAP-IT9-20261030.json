@@ -42,9 +42,9 @@
    "steps": [
     {
      "step": "P3 exploration beyond current cards over a declared universe (catalogued/resolved/usable/examined/deepened), novelty and WWOX contribution per proposal",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "scientist-b",
-     "evidence": ""
+     "evidence": "606 parents from 778 seed-specific families (Q2,Q4p,Q5,Q6; none for Q1,Q3,Q7), 20 taken to deepening (13 proposals, 2 artefact controls, 5 references); 12,560 of 40,268 examined; 6 known to LEGEND, 14 not found in searched surfaces"
     },
     {
      "step": "P4 qualification of decision-changing candidates; complete truncated LDHA/PDK pulls, LDHB; restate the three IT8 decisions",
