@@ -333,13 +333,15 @@ function enterExport(ids) {
 }
 // ---------------------------------------------------------------- one section on its own, for A4 print (#section=selection|hypotheses|predictive)
 function enterSection(id) {
-  var src = { selection: 'selection', hypotheses: 'hypotheses', predictive: 'predictive' }[id] && $(id);
+  var src = { selection: 'selection', hypotheses: 'hypotheses', predictive: 'predictive', ranking: 'ranking', rankingprint: 'rankingprint' }[id] && $(id);
   var area = $('export-area');
   if (!src) { area.innerHTML = '<p class="state-none">' + esc(T.sec_unknown) + '</p>'; document.body.classList.add('exporting'); return; }
   var clone = src.cloneNode(true);
   Array.prototype.forEach.call(clone.querySelectorAll('.noprint'), function (e) { e.parentNode.removeChild(e); });
   Array.prototype.forEach.call(clone.querySelectorAll('[id]'), function (e) { e.removeAttribute('id'); });
   Array.prototype.forEach.call(clone.querySelectorAll('details'), function (d) { d.open = true; });
+  Array.prototype.forEach.call(clone.querySelectorAll('.rk-view'), function (e) { e.hidden = false; });
+  Array.prototype.forEach.call(clone.querySelectorAll('.rk-hide'), function (e) { e.classList.remove('rk-hide'); });
   clone.removeAttribute('id');
   area.innerHTML = '<div class="btns noprint"><button type="button" id="x-back">' + esc(T.ex_back) + '</button><button type="button" id="x-print">' + esc(T.ex_print) + '</button></div><div class="secprint" data-section="' + esc(id) + '"></div>';
   area.querySelector('.secprint').appendChild(clone);
@@ -416,6 +418,52 @@ $('rk-mode').onchange = function () { RK.mode = this.value; renderRank(); };
 $('rk-sort').onchange = function () { RK.sort = this.value; renderRank(); };
 $('cand-sort').onchange = function () { CSORT = this.value; renderCands(); };
 document.addEventListener('click', function (e) { var a = e.target.closest ? e.target.closest('a[data-open]') : null; if (a) { e.preventDefault(); openCand(a.dataset.open); } });
+
+// ---------------------------------------------------------------- IT8 P9: provisional ranking: view, filters, export (all data are D.cur.ranking; no network)
+(function () {
+  var R = C.ranking;
+  if (!R || !$('rk-table')) return;
+  var UB = {}; R.units.forEach(function (u) { UB[u.id] = u; });
+  var rows = Array.prototype.slice.call(document.querySelectorAll('#rk-table tr.rk-row'));
+  var dets = {}; Array.prototype.forEach.call(document.querySelectorAll('#rk-table tr.rk-row-detail'), function (r) { dets[r.getAttribute('data-unit')] = r; });
+  var IDS = { view: 'rk-view', cls: 'rk-class', group: 'rk-group', track: 'rk-track', need: 'rk-need', access: 'rk-access', evq: 'rk-evq', q: 'rk-q' };
+  var F = { view: 'general', cls: '', group: '', track: '', need: '', access: '', evq: '', q: '' };
+  function has(attr, v) { return (' ' + attr + ' ').indexOf(' ' + v + ' ') >= 0; }
+  function ok(r) {
+    var a = function (n) { return r.getAttribute('data-' + n) || ''; };
+    if (F.view !== 'general' && !a('g-' + F.view)) return false;
+    if (F.cls && a('class') !== F.cls) return false;
+    if (F.group && a('g-' + F.view) !== F.group) return false;
+    if (F.track && !has(a('track'), F.track)) return false;
+    if (F.need && !has(a('needs'), F.need)) return false;
+    if (F.access && !has(a('access'), F.access)) return false;
+    if (F.evq && !has(a('evq'), F.evq)) return false;
+    if (F.q) { var w = F.q.toLowerCase().split(/\s+/); for (var i = 0; i < w.length; i++) if (w[i] && a('text').indexOf(w[i]) < 0) return false; }
+    return true;
+  }
+  function apply() {
+    var n = 0;
+    rows.forEach(function (r) { var show = ok(r); r.classList.toggle('rk-hide', !show); dets[r.getAttribute('data-unit')].classList.toggle('rk-hide', !show); if (show) n++; });
+    Array.prototype.forEach.call(document.querySelectorAll('.rk-view'), function (v) { v.hidden = v.getAttribute('data-view') !== F.view; });
+    $('rk-count').textContent = fill(T.rk_count, { n: n, m: rows.length });
+  }
+  Object.keys(IDS).forEach(function (k) { var el = $(IDS[k]); el.addEventListener(k === 'q' ? 'input' : 'change', function () { F[k] = this.value; apply(); }); });
+  $('rk-reset').onclick = function () { Object.keys(IDS).forEach(function (k) { F[k] = k === 'view' ? 'general' : ''; $(IDS[k]).value = F[k]; }); apply(); };
+  function download(name, type, body) { var a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([body], { type: type })); a.download = name; document.body.appendChild(a); a.click(); a.remove(); }
+  function cell(v) { return String(v == null ? '' : v).replace(/[\t\r\n]+/g, ' '); }
+  function grp(u, v) { var x = u.views[v]; return x && x.member ? x.group : ''; }
+  $('rk-tsv').onclick = function () {
+    var cols = ['unit_id', 'label', 'class', 'group_broad', 'group_partial', 'lead_broad', 'lead_partial', 'tracks', 'access', 'depth', 'cards', 'wwox_evidence', 'mechanism', 'uncertainty'];
+    var out = [cols.join('\t')];
+    rows.filter(function (r) { return !r.classList.contains('rk-hide'); }).forEach(function (r) {
+      var u = UB[r.getAttribute('data-unit')];
+      out.push([u.id, u.label, u.class, grp(u, 'broad'), grp(u, 'partial'), (u.views.broad.lead || ''), (u.views.partial.lead || ''), u.tracks.join(','), u.access, u.depth + ' ' + u.depth_text, u.cards.join(';'), u.comp.W.text, u.comp.M.text, u.comp.U.text].map(cell).join('\t'));
+    });
+    download('wwox_graduatoria_' + R.meta.as_of + '.tsv', 'text/tab-separated-values', out.join('\n') + '\n');
+  };
+  $('rk-json').onclick = function () { download('wwox_graduatoria_' + R.meta.as_of + '.json', 'application/json', JSON.stringify(R, null, 1) + '\n'); };
+  apply();
+})();
 window.addEventListener('hashchange', fromHash);
 renderAll();
 fromHash();

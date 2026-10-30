@@ -1923,7 +1923,7 @@ class It7P7Data(unittest.TestCase):
         self.assertIn("details>summary{padding:3px 0;min-height:24px}", css)
         for t in re.findall(r'<table class="tbl[^"]*stk">.*?</table>', self.h, re.S):
             self.assertIn("data-label=", t)
-        self.assertEqual(len(re.findall(r'<table class="tbl[^"]*stk">', self.h)), 3)
+        self.assertEqual(len(re.findall(r'<table class="tbl[^"]*stk">', self.h)), 3 + len(self.cur["ranking"]["units"]) + 2)     # three IT7 tables; IT8 P9: one pathway table per ranked entry, the uncarded items and the triggers
 
     def test_p4_matrix_checker_passes(self):
         r = subprocess.run([sys.executable, "-I", str(DR / rv.P4_DIR / "check_context_matrix.py")], capture_output=True, text=True, timeout=120)
@@ -1937,7 +1937,7 @@ class It7P7Data(unittest.TestCase):
         self.assertIn('id="contexts"', self.h)
         js = (DR / "view/assets/curated.js").read_text()
         self.assertIn("#section=", js)
-        self.assertEqual(self.h.count('href="#section='), 3)
+        self.assertEqual(self.h.count('href="#section='), 7)     # selection, hypotheses, predictive and, from IT8 P9, four on the ranking (controls, print, section end, one-page)
         for k in ("sec_print", "sec_unknown", "sec_title"):
             self.assertTrue(rv.UI_IT[k])
 

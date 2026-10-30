@@ -16,9 +16,9 @@
     "values": 126,
     "why": "lead dispositions attached to cards"
    },
-   "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts)(\\.|\\[\\]|$)": {
+   "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 3556,
+    "values": 6780,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -80,6 +80,16 @@
     "class": "BIBLIO",
     "values": 90,
     "why": "PMID of the observation source"
+   },
+   "^\\.cur\\.ranking\\.units\\[\\]\\.(access|access_cats\\[\\])$": {
+    "class": "SRC_A",
+    "values": 36,
+    "why": "access statement of a ranked intervention: class-A sources (openFDA NDC, MATRIX) only in the shareable edition; other categories are withheld"
+   },
+   "^\\.cur\\.ranking\\.units\\[\\]\\.(pmids\\[\\]|views\\.(broad|partial)\\.evidence\\.pmids\\[\\])$": {
+    "class": "BIBLIO",
+    "values": 194,
+    "why": "PMID of a cited work (ranking)"
    },
    "^\\.excluded_detail\\[\\]\\.(id|name|src)$": {
     "class": "ID",
@@ -183,7 +193,7 @@
    },
    "^\\.ui\\.": {
     "class": "UI",
-    "values": 779,
+    "values": 998,
     "why": "Italian orientation text (builder data UI_IT and siblings)"
    }
   },
@@ -193,26 +203,27 @@
    "DOI": 5,
    "HGNC": 6,
    "NCT": 0,
-   "PMID": 58
+   "PMID": 88
   },
   "links": {
-   "distinct_hrefs": 59,
-   "external_public": 7,
+   "distinct_hrefs": 107,
+   "external_public": 52,
    "hosts": [
     "civicdb.org",
     "open.fda.gov",
+    "pubmed.ncbi.nlm.nih.gov",
     "www.docm.info",
     "www.ebi.ac.uk",
     "www.genenames.org",
     "www.ncbi.nlm.nih.gov",
     "www.nlm.nih.gov"
    ],
-   "internal_anchors": 52
+   "internal_anchors": 55
   },
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 1975,
+    "forbidden-name": 2395,
     "forbidden-wording": 12
    },
    "co_attested_wording": [
@@ -237,7 +248,7 @@
    "forbidden_names": 126046,
    "forbidden_wordings": 2888,
    "pair_unmarked_attested_or_unchecked": {
-    "count": 92,
+    "count": 107,
     "names": [
      "act 709478",
      "apinocaltamide",
@@ -249,11 +260,12 @@
      "phenylbutyrate",
      "proteasome inhibitor"
     ],
-    "unchecked_without_corpus": 92
+    "unchecked_without_corpus": 107
    },
    "suppressed_by_exemption": {
     "bibliographic journal name (validated against the journals of the cache)": 4,
-    "category labels of catalogue-wide counts": 1
+    "category labels of catalogue-wide counts": 1,
+    "inside a bibliographic title (line-broken text layer)": 3
    }
   },
   "text_provenance_file": "TEXT_PROVENANCE.json",
@@ -322,6 +334,7 @@
    "meta": "differs",
    "needs": "differs",
    "predictive": "identical",
+   "ranking": "differs",
    "scopes": "identical",
    "selection": "identical",
    "threads": "identical",
@@ -434,14 +447,14 @@
   "view_schema": "legend.wwox.repurposing_view/2"
  },
  "embedded_field_classes": {
-  "BIBLIO": 1945,
+  "BIBLIO": 2139,
   "COUNT": 7757,
   "ID": 3048,
-  "OWN": 54183,
+  "OWN": 57407,
   "ROWNAME": 1506,
-  "SRC_A": 91,
+  "SRC_A": 127,
   "SRC_META": 256,
-  "UI": 779
+  "UI": 998
  },
  "embedded_sources": [
   {
@@ -476,7 +489,7 @@
  "files": {
   "COMPARISON.md": {
    "bytes": 6433,
-   "sha256": "c89e18c74cca5017ffb15a2cfbb4eeb8024598bceba90c8c686bc98b2e733dea"
+   "sha256": "b4f78876a3856badc33025e491164f5532dffee0e998dc8509201068448e5710"
   },
   "LICENSES/CC-BY-4.0.txt": {
    "bytes": 18657,
@@ -496,7 +509,7 @@
   },
   "NOTICE.md": {
    "bytes": 12612,
-   "sha256": "64cd941389b2787479e93c4f1cf5c736aaeea31d4e2b0c2065c10a477c8b2a76"
+   "sha256": "debfaba09d7a9bde51271c536a2e1a581515fe608926c16d51a7f0e526e2a6a0"
   },
   "README.md": {
    "bytes": 4642,
@@ -519,8 +532,8 @@
    "sha256": "d8fe6a3455466783564803428b6318c1c442db6a16dfb97de8a6b7dcf944cc9d"
   },
   "index.html": {
-   "bytes": 2504686,
-   "sha256": "af8041c7f0894be4eaed16a837f9ec5520be0da9a21bc88870dd427c80fc844b"
+   "bytes": 3008548,
+   "sha256": "daa9c0b4b0dfaef2ce172531e00a3d075c075dc586ed21e2182ed9c218bc6894"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
@@ -580,7 +593,7 @@
   "lead_field_redactions": 11,
   "pair_status_rule": "pairs[].p.cr.pha[1] (status classes of the row) is dropped in the shareable build: a status class derives from ChEMBL max_phase, DGIdb approved flags, MATRIX and openFDA together, and the build does not re-derive a class-A-only status per row.",
   "pairs_status_class_dropped": 680,
-  "repository_file_names_described": 48,
+  "repository_file_names_described": 60,
   "rule": "IT5 P13 fix. Own analysis stays in the shareable build: a conclusion at the level of a need, a class or a card subject, in our own words, short, attributed to a published work. Withheld: (1) a sentence that states a compound-target(-action) pair together with its database of origin when the pair is asserted only by a class-B/C catalogue source; (2) a compound named in prose whose only provenance in the repository is a class-B/C catalogue row (it appears in no cited full text and is not a card subject); (3) a per-compound status, phase, approval or access statement attributed to a class-B/C source; (4) repository file names, which cannot be used outside the repository. The replacement keeps the research conclusion and names the withheld source class with the phrase in withheld_phrase. The FULL build keeps everything. The audit enforces (1) and (2) by derivation from the catalogue, (3) and (4) by pattern, and every redaction below must match exactly once or more: a stale redaction fails the build.",
   "withheld_phrase": "dato di una fonte non inclusa in questa versione"
  },
