@@ -18,7 +18,7 @@
  "END_UTC": "2026-10-22T07:45:00Z",
  "MAX_SCIENTISTS": 4,
  "AUTHORISED_QUEUE_20261021": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_SELECT": {
    "order": 1,
    "steps": [
@@ -39,12 +39,13 @@
     },
     {
      "step": "Hourly watch for ten hours: detect a stopped Scientist (rate limit or finished lot) and restart it, continuing the lot or taking new studies",
-     "status": "IN_PROGRESS",
-     "evidence": "watch cycles 1-3 done; rate-limit stop at ~02:00Z (reset 02:40Z) recovered at 03:16Z; 4 scientists running: A P5, B GSE156243, C R3c+repair, D WWOX-rows sweep"
+     "status": "DONE",
+     "evidence": "DONE, checked 2026-10-30 by the integrator (IT9 batch path). Earlier note: watch cycles 1-3 done; rate-limit stop at ~02:00Z (reset 02:40Z) recovered at 03:16Z; 4 scientists running: A P5, B GSE156243, C R3c+repair, D WWOX-rows sweep. Now: the window ended (END_UTC 2026-10-22T07:45Z); the closing watch was recorded at cycle 5 (WATCH.log, 2026-10-22T08:20Z) and the self-evaluation states the last watch ran at 08:16 UTC after the end; the watch was bounded by END_UTC and by the 7-day auto-expiry of the cron job stated in DECISIONS_TAKEN."
     },
     {
      "step": "Integrate returns: record staged receipts with record_staged_receipts.py, BATCH_COMMIT of candidates, blind audit where a trigger fires or the author declares one, Mirror ex post, battery on the final SHA, push",
-     "status": "TODO"
+     "status": "DONE",
+     "evidence": "DONE, checked 2026-10-30 by the integrator (IT9 batch path): staged receipts recorded after clone trials (WATCH.log: 7+12+16 receipts at the closing watch; 17 earlier), BATCH_20261019_011 to _014 propagated, blind audits dispatched and returned (R3 deeb737c, R3c, R4 and R4b+R2b audits under disease-models/wwox/research/page_adjudications/) with repairs following, release battery PASS WITH SKIPS (154 targets, 12 environmental skips) on a fresh clone of 771155d0, gate PASS, pushed and verified: disease-models/wwox/research/session_evaluations/2026-10-22_orchestrator_repurposing_10h.md. NOT shown: a Mirror ex-post review of these batches (none found in the repository; not a precondition, LEGEND_CORE 21e) and the debts the self-evaluation names (rerun of 53 unverifiable figure attestations; audits of the 3 R1d corrected entries, the R2f repairs and the 21 narrowed R2 entries)."
     }
    ]
   },
@@ -280,7 +281,14 @@
    "reversibility": "high",
    "how_to_revert": "CronDelete 4b6b5252"
   },
-  "2026-10-22: operator wrote \"Procedi con worktree se landati in main eliminali\": removed 48 detached worktrees, each verified an ancestor of main with a clean tree; 195 ignored files that existed only in those worktrees (check_runs, figures, fulltext, supplement, batch backups) were copied into the root checkout first with copy-if-absent; backup/vps-main-2026-09-25 untouched; one running audit worktree kept."
+  "2026-10-22: operator wrote \"Procedi con worktree se landati in main eliminali\": removed 48 detached worktrees, each verified an ancestor of main with a clean tree; 195 ignored files that existed only in those worktrees (check_runs, figures, fulltext, supplement, batch backups) were copied into the root checkout first with copy-if-absent; backup/vps-main-2026-09-25 untouched; one running audit worktree kept.",
+  {
+   "what": "2026-10-30 (integrator, IT9 batch path): MANDATE_STATE set to COMPLETE. Every step is DONE with evidence (see the steps), the ten-hour window ended on 2026-10-22, and the scope (P3 qualification and P4 cards for both paths, adjacent literature, four Scientists) was carried out and then superseded by the mandates ORCH-ROADMAP-IT1 to IT8, all COMPLETE.",
+   "alternatives_rejected": "leaving it OPEN (it is re-checked hourly against a window that closed eight days earlier); deleting the record",
+   "who_consulted": "none; evidence read from the record, git history and the session evaluation",
+   "reversibility": "high",
+   "how_to_revert": "set MANDATE_STATE back to OPEN and the integration step to TODO. Residual, not closed by this record: the figure-attestation rerun and the absence of a Mirror ex-post review named in the step evidence; the Orchestrator may prefer to carry them as debts in the IT9 record."
+  }
  ],
  "DEFAULTS_TAKEN": [
   {

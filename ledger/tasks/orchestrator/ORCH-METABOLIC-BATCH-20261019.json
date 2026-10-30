@@ -151,12 +151,13 @@
     },
     {
      "step": "Place the operator's roadmap v4 r14 and scout log r20 in the repository; reconcile the plan with what is really present; implement the feasible increments",
-     "status": "IN_PROGRESS",
-     "evidence": "two plan agents dispatched: PLAN-REPURPOSING-INTEGRATION-20261020 (placement, reconciliation, bridge increments, rescue-reference scaffold) and PLAN-CLINICAL-CENSUS-20261020 (Spectrum manifest correction, ClinicalTrials.gov v2 census, P2 kg_thin_slice)"
+     "status": "DONE",
+     "evidence": "DONE, checked 2026-10-30 by the integrator (IT9 batch path). Earlier note: two plan agents dispatched: PLAN-REPURPOSING-INTEGRATION-20261020 (placement, reconciliation, bridge increments, rescue-reference scaffold) and PLAN-CLINICAL-CENSUS-20261020 (Spectrum manifest correction, ClinicalTrials.gov v2 census, P2 kg_thin_slice). Now: both plan records are finished and landed: PLAN-REPURPOSING-INTEGRATION-20261020 CURRENT_STATE COMPLETED (landed 2026-10-20, closeout landed 2026-10-21 as af1e0e6f) and PLAN-CLINICAL-CENSUS-20261020 CLOSED (release battery PASS WITH SKIPS on a fresh clone); the placed documents exist in disease-models/wwox/research/drug_repurposing/ (roadmap_v4_r14_20261020.md, scout_log_r20_20261020.md, reconciliation_20261020.md, roadmap_current.md, woree_rescue_reference_scaffold.md, clinical_census_20261020.md)."
     },
     {
      "step": "After the reconciliation: P3 scientific qualification and P4/P5 candidate cards for both paths, by Scientists; integrate, batch, Mirror, push",
-     "status": "TODO"
+     "status": "DONE",
+     "evidence": "DONE by supersession, checked 2026-10-30 by the integrator (IT9 batch path): the P3 qualification and the P4/P5 candidate cards were produced under ORCH-REPURPOSING-10H-20261021 (9 early and 12 deep cards, BATCH_20261019_011 to _014, release battery PASS WITH SKIPS on a fresh clone of 771155d0 with 154 targets, pushed and verified: disease-models/wwox/research/session_evaluations/2026-10-22_orchestrator_repurposing_10h.md) and continued by the mandates ORCH-ROADMAP-IT1 to IT8, all MANDATE_STATE COMPLETE. No Mirror ex-post review of the repurposing batches was found in the repository (a Mirror review is not a precondition, LEGEND_CORE 21e); debts named in that self-evaluation (a figure-attestation rerun, audits of narrowed entries) are not shown closed here."
     }
    ]
   }
@@ -186,6 +187,13 @@
    "reversibility": "high",
    "how_to_revert": "CronDelete on job 17750720 or 8eebf5b0",
    "known_limit": "these jobs are session-only and in-memory: if this session exits they are gone, and nothing on disk restarts the work"
+  },
+  {
+   "what": "2026-10-30 (integrator, IT9 batch path): the two non-blocked steps of OBJ_REPURPOSING_INTEGRATION are marked DONE with the evidence on the steps; MANDATE_STATE stays OPEN because OBJ_STANDING_NEXT_WAVES is still BLOCKED (the neuro-WWOX and metabolic lawful pool is exhausted; revival needs operator-supplied PDFs or a new paper). The record's verdict becomes ALL_BLOCKED instead of CONTINUE, so the hourly re-check no longer finds an executable step.",
+   "alternatives_rejected": "setting COMPLETE (the standing wave rule is not finished and no successor supersedes metabolic literature waves); deleting the BLOCKED step",
+   "who_consulted": "none; evidence read from the plan records, the repository and the session evaluations",
+   "reversibility": "high",
+   "how_to_revert": "set the two steps back to IN_PROGRESS and TODO; the previous text is quoted in the step evidence. Recommendation to the Orchestrator or operator: set MANDATE_STATE PAUSED with the unblock condition of the BLOCKED step if the hourly watch should stop altogether."
   }
  ],
  "DEFAULTS_TAKEN": [
