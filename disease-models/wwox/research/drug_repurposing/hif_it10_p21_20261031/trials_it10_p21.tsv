@@ -1,0 +1,18 @@
+intervention_query	studies_all	studies_with_child_age_group	studies_neuro_terms_in_condition	first_neuro_matches(NCT:title)
+PX-478	1	0	0	
+echinomycin	0	0	0	
+acriflavine	1	0	0	
+KC7F2	0	0	0	
+topotecan	493	142	32	NCT07371663:An Phase Ib/II Clinical Trial of TCC1727 Combination Therapy in Advanc;NCT03927274:Intratumorally-Administered Topotecan Using Convection-Enhanced Delive;NCT00014443:Topotecan and Thalidomide in Treating Patients With Recurrent or Refra;NCT00918320:Studies of Temozolomide in Combination With Topotecan in Refractory an;NCT06666712:Chronic CED of TPT for Recurrent Malignant Glioma
+digoxin	295	12	7	NCT00831506:Dimebon (PF-01913539)-Digoxin Drug-Drug Interaction Study In Healthy S;NCT01583036:An Open-label, Single-centre Study Evaluating the Pharmacokinetics of ;NCT02633774:Comparison of Brain Perfusion in Rhythm Control and Rate Control of Pe;NCT04233437:Drug-Drug Interaction Study of MLC1501 Using Cocktail of Drugs Acting ;NCT00563732:Study Evaluating Potential Pharmacokinetic (PK) Interaction Between Le
+BAY 87-2243	1	0	0	
+belzutifan	48	5	0	
+PT2385	5	0	0	
+daprodustat	39	1	0	
+vadadustat	42	2	0	
+molidustat	14	0	0	
+enarodustat	13	0	0	
+desidustat	5	0	0	
+roxadustat	67	4	0	
+IOX2	0	0	0	
+dimethyloxalylglycine	0	0	0	

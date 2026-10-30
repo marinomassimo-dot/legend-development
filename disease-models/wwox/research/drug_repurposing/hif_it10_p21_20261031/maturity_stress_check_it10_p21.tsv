@@ -1,0 +1,45 @@
+group	gene	KO_vs_WT_log2_shift_GSE156243	meanCPM_KO/WT	min_raw_count_any_library	all4KO_beyond_both_WT	culture_time_slope_per_log10day_GSE150123_[between-line_95pct]	time_confounded_(interval_excludes_0)	marker_predicted_shift_median_[min,max]_over_12_markers	mean_raw_count_GSE150123	deposited_DESeq2_padj_(list_padj<=0.05_only)_and_log2FC
+HIF_axis	HIF1A	-0.24	39.0/46.3	1281	no	-0.28 [-0.76,+0.20]	no	+0.03 [-0.04,+0.18]	2387	not on the padj<=0.05 list
+HIF_axis	EPAS1	+1.41	5.5/1.5	44	yes	+2.08 [+0.07,+4.10]	yes	-0.06 [-0.57,+0.51]	109	0.0019 / +1.97
+HIF_axis	ARNT	+0.54	62.2/42.5	1252	yes	-0.59 [-0.94,-0.23]	yes	+0.06 [-0.04,+0.31]	567	0.0092 / +0.40
+HIF_axis	EGLN1	-0.20	27.4/31.6	911	yes	+0.19 [-0.44,+0.82]	no	-0.06 [-0.22,+0.15]	1323	not on the padj<=0.05 list
+HIF_axis	EGLN2	-0.17	91.5/103.2	3080	yes	+0.04 [-0.37,+0.45]	no	-0.00 [-0.08,+0.02]	787	not on the padj<=0.05 list
+HIF_axis	EGLN3	+0.82	22.1/12.1	383	yes	+1.04 [+0.01,+2.06]	yes	-0.02 [-0.42,+0.26]	866	2.4e-05 / +0.83
+HIF_axis	VHL	+0.38	67.1/51.4	1537	yes	-0.19 [-0.65,+0.27]	no	-0.03 [-0.16,+0.02]	1103	not on the padj<=0.05 list
+glycolysis_HIF_targets	SLC2A1	+1.40	156.3/58.5	1637	yes	-2.16 [-3.66,-0.66]	yes	+0.16 [-0.12,+0.99]	3992	1e-09 / +1.44
+glycolysis_HIF_targets	HK2	+2.18	80.6/17.0	429	yes	-2.15 [-4.10,-0.19]	yes	+0.08 [-0.08,+0.79]	2534	8.7e-34 / +2.46
+glycolysis_HIF_targets	LDHA	+0.75	90.8/53.5	1644	yes	-1.89 [-3.07,-0.71]	yes	+0.08 [-0.11,+0.51]	3498	4.9e-06 / +0.91
+glycolysis_HIF_targets	LDHB	+0.37	439.2/340.3	10320	no	-0.03 [-0.80,+0.74]	no	+0.09 [-0.16,+0.34]	6554	not on the padj<=0.05 list
+glycolysis_HIF_targets	PGK1	-0.09	355.2/379.3	11182	no	-0.39 [-1.24,+0.47]	no	+0.05 [-0.06,+0.25]	8764	not on the padj<=0.05 list
+glycolysis_HIF_targets	ALDOA	+0.17	1596.1/1417.1	37252	no	-0.50 [-0.98,-0.01]	yes	+0.04 [-0.03,+0.32]	10838	not on the padj<=0.05 list
+glycolysis_HIF_targets	ENO1	+0.23	923.6/789.1	21804	no	-0.59 [-1.15,-0.03]	yes	+0.09 [-0.10,+0.52]	18006	not on the padj<=0.05 list
+glycolysis_HIF_targets	PFKP	+0.00	101.1/100.7	2999	no	+0.31 [-0.70,+1.32]	no	-0.03 [-0.30,+0.11]	2374	not on the padj<=0.05 list
+glycolysis_HIF_targets	PKM	+0.17	865.6/768.8	21403	no	-0.17 [-0.77,+0.42]	no	+0.05 [-0.00,+0.40]	14079	not on the padj<=0.05 list
+glycolysis_HIF_targets	BNIP3	+0.46	66.4/48.1	1408	yes	-0.35 [-1.10,+0.39]	no	+0.01 [-0.18,+0.22]	3654	not on the padj<=0.05 list
+glycolysis_HIF_targets	PDK1	-0.34	14.5/18.5	478	yes	-1.08 [-2.57,+0.40]	no	-0.01 [-0.17,+0.21]	1639	not on the padj<=0.05 list
+hypoxia_response_other	VEGFA	+0.48	151.9/108.6	3185	yes	-0.87 [-2.41,+0.67]	no	-0.04 [-0.46,+0.20]	4821	not on the padj<=0.05 list
+hypoxia_response_other	ADM	+2.60	13.8/1.4	26	yes	-0.22 [-2.15,+1.72]	no	+0.01 [-0.20,+0.39]	512	1.6e-11 / +3.42
+hypoxia_response_other	NDRG1	+0.15	181.8/163.8	5195	no	+0.81 [-0.53,+2.15]	no	-0.07 [-0.70,+0.23]	1320	not on the padj<=0.05 list
+hypoxia_response_other	ANKRD37	+0.91	7.1/3.3	96	yes	-0.94 [-2.07,+0.19]	no	+0.03 [-0.28,+0.27]	140	0.0028 / +0.97
+hypoxia_response_other	BHLHE40	+1.26	68.5/27.9	776	yes	+0.10 [-0.20,+0.40]	no	+0.02 [-0.16,+0.32]	738	4.5e-08 / +1.32
+hypoxia_response_other	P4HA1	+1.48	80.6/28.2	704	yes	-0.82 [-1.56,-0.08]	yes	+0.15 [-0.03,+0.69]	2522	2.2e-06 / +1.59
+hypoxia_response_other	DDIT4	+0.75	162.7/96.5	2804	yes	-1.50 [-2.33,-0.67]	yes	+0.02 [-0.06,+0.51]	4320	1e-05 / +0.71
+hypoxia_response_other	ERO1A	-0.20	17.3/20.1	545	yes	-0.74 [-1.46,-0.01]	yes	+0.02 [-0.03,+0.19]	896	not on the padj<=0.05 list
+hypoxia_response_other	CA9	+0.06	7.9/7.6	226	no	+1.91 [-0.15,+3.98]	no	-0.23 [-1.45,+0.25]	119	not on the padj<=0.05 list
+hypoxia_response_other	ENO2	-0.02	670.4/677.7	19830	no	-0.40 [-1.19,+0.39]	no	-0.09 [-0.25,+0.12]	6619	not on the padj<=0.05 list
+organoid_stress_Bhaduri	PGK1	-0.09	355.2/379.3	11182	no	-0.39 [-1.24,+0.47]	no	+0.05 [-0.06,+0.25]	8764	not on the padj<=0.05 list
+organoid_stress_Bhaduri	ARCN1	+0.18	107.0/94.3	2694	no	-0.46 [-0.72,-0.21]	yes	+0.01 [-0.12,+0.07]	2330	not on the padj<=0.05 list
+organoid_stress_Bhaduri	GORASP2	+0.20	182.0/157.9	4552	no	-0.42 [-1.40,+0.56]	no	-0.02 [-0.10,+0.06]	988	not on the padj<=0.05 list
+organoid_stress_Bhaduri	HSPA5	+0.47	455.6/328.7	9094	yes	-0.19 [-0.91,+0.52]	no	+0.04 [-0.11,+0.19]	2940	not on the padj<=0.05 list
+organoid_stress_Bhaduri	DDIT3	-0.19	63.3/72.5	1859	no	-0.03 [-0.68,+0.62]	no	+0.08 [-0.28,+0.33]	664	not on the padj<=0.05 list
+organoid_stress_Bhaduri	ATF4	-0.19	293.5/334.5	9470	yes	-0.91 [-1.55,-0.26]	yes	+0.03 [-0.25,+0.22]	4482	not on the padj<=0.05 list
+organoid_stress_Bhaduri	XBP1	+0.16	93.6/83.7	2553	no	-0.72 [-1.25,-0.19]	yes	+0.08 [-0.30,+0.32]	1014	not on the padj<=0.05 list
+astro_oligo_composition	GFAP	-0.19	135.4/154.5	1649	no	+11.44 [+8.57,+14.30]	yes	-0.26 [-2.00,+1.34]	15210	not on the padj<=0.05 list
+astro_oligo_composition	AQP4	+0.52	0.7/0.2	5	yes	+9.43 [+6.29,+12.57]	yes	-0.30 [-2.05,+1.28]	7157	not on the padj<=0.05 list
+astro_oligo_composition	S100B	+0.58	7.1/4.4	72	no	+4.55 [+2.55,+6.56]	yes	-0.07 [-0.60,+0.69]	385	not on the padj<=0.05 list
+astro_oligo_composition	SLC1A3	+0.04	105.1/102.4	2695	no	+2.80 [+1.11,+4.48]	yes	-0.21 [-0.81,+0.70]	4580	not on the padj<=0.05 list
+astro_oligo_composition	ALDH1L1	-0.28	16.2/19.8	541	yes	+4.86 [+2.47,+7.25]	yes	-0.11 [-0.97,+0.76]	282	not on the padj<=0.05 list
+astro_oligo_composition	OLIG2	+0.16	1.2/1.0	25	no	+1.92 [+1.05,+2.78]	yes	-0.15 [-0.70,+0.36]	103	not on the padj<=0.05 list
+astro_oligo_composition	MBP	+0.55	2.6/1.4	42	no	+0.29 [-0.74,+1.33]	no	+0.09 [-0.12,+0.54]	79	0.045 / +1.41
+MYC_axis	MYC	+0.56	14.2/9.3	282	yes	+0.17 [-1.21,+1.55]	no	-0.01 [-0.49,+0.03]	259	not on the padj<=0.05 list
+MYC_axis	MYCN	+0.38	87.6/67.3	2189	no	-0.64 [-1.75,+0.46]	no	-0.07 [-0.27,+0.13]	618	not on the padj<=0.05 list

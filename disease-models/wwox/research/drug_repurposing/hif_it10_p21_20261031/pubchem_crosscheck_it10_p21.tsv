@@ -1,0 +1,18 @@
+compound	name_queried	pubchem_cid_by_name	title	formula	mwt	inchikey_by_name	pubchem_cid_by_chembl_inchikey	comparison
+PX-478	PX-478	11234794	Px 478	C13H20Cl4N2O3	394.1	GIGCDIVNDFQKRA-LTCKWSDVSA-N	11234794	same_CID
+echinomycin	echinomycin	6857732	Echinomycin	C51H64N12O12S2	1101.3	AUJXLBOHYWTPFV-VITLIGDRSA-N	6857732	same_CID
+acriflavine	acriflavine	443101	Acriflavine	C27H25ClN6	469.0	PEJLNXHANOHNSU-UHFFFAOYSA-N		different_CID_or_not_reached: see title/formula
+KC7F2	KC7F2	16047442	KC7f2	C16H16Cl4N2O4S4	570.4	REQLACDIZMLXIC-UHFFFAOYSA-N		different_CID_or_not_reached: see title/formula
+topotecan	topotecan	60700	Topotecan	C23H23N3O5	421.4	UCFGDBYHRUNTLO-QHCPKHFHSA-N	60700	same_CID
+digoxin	digoxin	2724385	Digoxin	C41H64O14	780.9	LTMHDMANZUZIPE-PUGKRICDSA-N	2724385	same_CID
+BAY 87-2243	BAY 87-2243	67377767	1-cyclopropyl-4-(4-((5-methyl-3-(3-(4-(trifluoromethoxy)phenyl)-1,2,4-oxadiazol-5-yl)-1H-pyrazol-1-yl)methyl)pyridin-2-yl)piperazine	C26H26F3N7O2	525.5	CDJNNOJINJAXPV-UHFFFAOYSA-N	67377767	same_CID
+belzutifan	belzutifan	117947097	Belzutifan	C17H12F3NO4S	383.3	LOMMPXLFBTZENJ-ZACQAIPSSA-N	117947097	same_CID
+PT2385	PT2385	91754484	PT-2385	C17H12F3NO4S	383.3	ONBSHRSJOPSEGS-INIZCTEOSA-N	91754484	same_CID
+daprodustat	daprodustat	91617630	Daprodustat	C19H27N3O6	393.4	RUEYEZADQJCKGV-UHFFFAOYSA-N	91617630	same_CID
+vadadustat	vadadustat	23634441	Vadadustat	C14H11ClN2O4	306.70	JGRXMPYUTJLTKT-UHFFFAOYSA-N	23634441	same_CID
+molidustat	molidustat	59603622	Molidustat	C13H14N8O2	314.30	IJMBOKOTALXLKS-UHFFFAOYSA-N	59603622	same_CID
+enarodustat	enarodustat	50899324	Jtz-951	C17H16N4O4	340.33	FJYRBJKWDXVHHO-UHFFFAOYSA-N		different_CID_or_not_reached: see title/formula
+desidustat	desidustat	75593290	Desidustat	C16H16N2O6	332.31	IKRKQQLJYBAPQT-UHFFFAOYSA-N	75593290	same_CID
+roxadustat	roxadustat	11256664	FG 4592	C19H16N2O5	352.3	YOZBGTLTNGAVFU-UHFFFAOYSA-N	11256664	same_CID
+IOX2	IOX2	54685215	N-(1-Benzyl-4-hydroxy-2-oxo-1,2-dihydroquinoline-3-carbonyl)glycine	C19H16N2O5	352.3	CAOSCCRYLYQBES-UHFFFAOYSA-N	54685215	same_CID
+DMOG	dimethyloxalylglycine	560326	Dimethyloxalylglycine	C6H9NO5	175.14	BNJOZDZCRHCODO-UHFFFAOYSA-N	560326	same_CID

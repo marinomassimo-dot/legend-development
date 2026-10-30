@@ -1,0 +1,13 @@
+marker	panel	KO_vs_WT_log2_shift_GSE156243
+VIM	progenitor	+0.86
+NES	progenitor	+1.32
+SOX9	progenitor	+0.54
+SOX2	progenitor	+0.51
+PAX6	progenitor	+0.14
+HES1	progenitor	+0.39
+STMN2	neuronal	-0.41
+MAP2	neuronal	-0.62
+SYT1	neuronal	-0.50
+RBFOX3	neuronal	+0.04
+TUBB3	neuronal	-0.23
+SNAP25	neuronal	-0.41

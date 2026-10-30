@@ -1,0 +1,12 @@
+compound	chembl_id	mechanism_of_action	action_type	target_chembl_id	direct_interaction	max_phase
+digoxin	CHEMBL1751	Sodium/potassium-transporting ATPase inhibitor	INHIBITOR	CHEMBL2095186	1	4
+belzutifan	CHEMBL4585668	Endothelial PAS domain-containing protein 1 inhibitor	INHIBITOR	CHEMBL1744522	1	4
+daprodustat	CHEMBL3544988	Hypoxia-inducible factor prolyl hydroxylase inhibitor	INHIBITOR	CHEMBL3831261	1	4
+vadadustat	CHEMBL3646221	Egl nine homolog 1 inhibitor	INHIBITOR	CHEMBL5697	1	4
+vadadustat	CHEMBL3646221	Egl nine homolog 3 inhibitor	INHIBITOR	CHEMBL5705	1	4
+vadadustat	CHEMBL3646221	Hypoxia-inducible factor prolyl hydroxylase 1 inhibitor	INHIBITOR	CHEMBL3028	1	4
+molidustat	CHEMBL3646118	Egl nine homolog 1 inhibitor	INHIBITOR	CHEMBL5697	1	2
+molidustat	CHEMBL3646118	Hypoxia-inducible factor prolyl hydroxylase 1 inhibitor	INHIBITOR	CHEMBL3028	1	2
+molidustat	CHEMBL3646118	Egl nine homolog 3 inhibitor	INHIBITOR	CHEMBL5705	1	2
+enarodustat	CHEMBL4297619	Egl nine homolog 1 inhibitor	INHIBITOR	CHEMBL5697	1	3
+roxadustat	CHEMBL2338329	Hypoxia-inducible factor prolyl hydroxylase inhibitor	INHIBITOR	CHEMBL3831261	1	4
