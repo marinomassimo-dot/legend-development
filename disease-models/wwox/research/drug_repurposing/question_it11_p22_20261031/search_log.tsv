@@ -1,0 +1,16 @@
+id	service	query	hits	used_or_note
+S01	Europe PMC REST search (key-less)	"TITLE_ABS:(WWOX AND (MYC OR ""c-Myc""))"	23	42397075 (organoids); 38182577 (osteosarcoma, Wwox/Trp53 double knockout; Myc up, add-back lowers Myc); 41090157 (B-cell Wwox deletion in a Vk*MYC model; MYC activated by transgene, not a WWOX-to-MYC test)
+S02	Europe PMC REST	TITLE_ABS:(WWOX AND (neural progenitor OR neurogenesis OR radial glia OR neural stem OR neural precursor))	9	42397075; 32581702 (lde/lde rat and fetus cortical layering); 31543760 (hNPC silencing); 42101182; 30290271; 34204789; 25417742
+S03	Europe PMC REST	TITLE_ABS:((Mycn OR N-myc OR c-Myc OR Myc) AND (cortex OR cortical) AND (conditional knockout OR deletion OR Emx1-Cre OR Nestin-Cre OR hGFAP-Cre) AND (progenitor OR neurogenesis))	3	12381668 (N-myc nestin-Cre: brain mass halved)
+S04	Europe PMC REST	TITLE_ABS:(MYCN AND (microcephaly OR Feingold) AND (cortex OR neural OR brain))	10	15821734; 37710961; 30573562 (gain of function: megalencephaly)
+S05	Europe PMC REST	TITLE_ABS:(MYC AND (neural progenitor OR radial glia) AND (differentiation OR neurogenesis) AND (organoid OR human cortical))	0	none (query too narrow; not evidence of absence)
+S06	Europe PMC REST	TITLE_ABS:((palbociclib OR abemaciclib OR ribociclib OR CDK4/6 inhibitor) AND (neural progenitor OR neural stem OR neurogenesis OR radial glia OR cortical organoid))	4	all oncology; no pharmacological CDK4/6 study in cortical progenitors found
+S07	Europe PMC REST	TITLE_ABS:((G1 length OR G1 phase OR cell cycle length) AND (cortical OR cortex) AND (neurogenesis OR neural progenitor) AND (Cdk4 OR cyclin D1 OR CDK4))	11	19733543; 19959663; 29570951 used
+S08	Europe PMC REST	TITLE_ABS:((omomyc OR OMO-103) AND (brain OR neural OR glioblastoma OR blood-brain))	5	oncology; no neural exposure datum
+S09	Europe PMC REST	TITLE_ABS:((WWOX OR WOREE OR SCAR12) AND microcephaly AND (patients OR cohort OR phenotype OR spectrum))	20	clinical papers; mostly paywalled; Chong 2023 read from the local text
+S10	Europe PMC REST	TITLE_ABS:(lithium AND (neural progenitor OR neural stem OR radial glia OR cortical progenitor) AND (proliferation OR neurogenesis) AND (Wnt OR beta-catenin OR GSK3 OR Myc))	21	17968353; 30834157; 21931595 abstracts read
+S11	Europe PMC REST	TITLE_ABS:(GSK3 AND (beta-catenin OR Wnt) AND (cortical OR cortex) AND (neural progenitor OR radial glia) AND (neurogenesis OR differentiation) AND (conditional OR knockout OR stabilized))	1	34431536 (mitotic WNT signalling in neocortex) not read
+S12	Europe PMC REST	TITLE:(BET bromodomain inhibition as a therapeutic strategy to target c-Myc)	4	28100400 replication study abstract read
+S13	Europe PMC REST	TITLE_ABS:(abemaciclib AND (blood-brain OR brain penetration OR CSF OR cerebrospinal) AND (palbociclib OR CDK4/6))	19	40092791 PBPK model (oncology) abstract read; no paediatric or neural-progenitor datum
+S14	ChEMBL REST (key-less)	molecule by pref_name, mechanism, activity IC50 on CDK4 (CHEMBL331) and CDK6 (CHEMBL2508)	n/a	palbociclib, abemaciclib, simvastatin, lithium carbonate resolved; JQ1 and OMO-103 by name search do not resolve to a clean record
+S15	Local files	files/fulltext PMID42397075 accepted manuscript text and figure images; PMID33914858 text; PMID36537114 text	n/a	read at the depths in premises.tsv; supplementary PDFs of 42397075 not present locally
