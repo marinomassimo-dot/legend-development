@@ -1,0 +1,66 @@
+unit_id	label	class	broad_group	partial_group
+U01	4-phenylbutyrate and bile-acid chemical chaperones (class)	ORD	G4b	-
+U02	Proteasome-inhibitor class (degradation blockade)	ORD	G4b	-
+U03	Client-binding pharmacological chaperone (SDR-domain ligand)	INSUFF	GU	-
+U04	ER-proteostasis regulators (IRE1/XBP1s, ERAD)	INSUFF	GU	-
+U05	HSP70-axis modulation	INSUFF	GU	-
+U06	PTC read-through agents, amlexanox and class	WEAK	G5	-
+U07	AAV9-delivered human WWOX (gene addition)	ORD	G1	G3
+U08	Splice-correcting antisense oligonucleotide / editing (splice-acceptor allele)	INSUFF	GU	-
+U09	Endogenous boost (CRISPRa or equivalent)	INSUFF	GU	-
+U10	A51, a multi-kinase inhibitor (experimental)	WEAK	GU	G3
+U11	Wnt-lowering (tankyrase-type) agents	INSUFF	GU	GU
+U12	Integrated-stress-response modulators (class)	ORD	-	G4b
+U13	LDH inhibition or lowering (stiripentol, LDHA tool compounds, oligonucleotide)	ORD	-	G4b
+U14	Dichloroacetate and PDK inhibition	ORD	-	G4b
+U15	Ketogenic diet (complex dietary intervention)	WEAK	-	G3
+U16	Cannabidiol (class level)	INSUFF	-	GU
+U17	Ethosuximide	ORD	-	G2b
+U18	ACTH, corticosteroids and phenobarbital-containing regimens (class level)	INSUFF	-	GU
+U19	mTOR-inhibitor class (sirolimus)	INSUFF	-	GU
+U20	Vigabatrin and GABA-aminotransferase inactivators	WEAK	-	G3
+U21	d-APV (a tool compound; the only agent with a WWOX readout) and the NMDAR/AMPAR class (memantine, perampanel, radiprodil and others are untested siblings)	ORD	-	G2b
+U22	Pro-myelinating agents (activity-dependent myelination sign problem)	INSUFF	-	GU
+U23	Bumetanide and the chloride gradient	INSUFF	-	GU
+U24	Lithium	ORD	-	G2b
+U25	Apinocaltamide (T-type calcium channel blocker, clinical-stage)	ORD	-	G4a
+U26	Glial-reactivity modulators (class)	INSUFF	-	GU
+U27	Extracellular magnesium (nutrient / supplement)	WEAK	-	G5
+U28	The HIF axis in the glycolytic shift: genetic HIF1A and EPAS1 knockdown and a PX-478-class lever, with a prolyl-hydroxylase inhibitor as a conditional arm (direction conditional, not established as the disease direction; a mechanism experiment, not a treatment)	ORD	-	G4b
+U29	Belnacasan (caspase-1 inhibitor prodrug; active acid VRT-043198): gated proposal for the IL-1 axis	ORD	-	G4b
+U30	Apabetalone (BET inhibitor): conditional proposal for the microglial cytokine axis	ORD	-	G4b
+U31	Sulfopin (covalent PIN1 probe): mechanism experiment on MYC, after a MYC-specific lever	ORD	-	G4b
+U32	Belzutifan (HIF-2alpha inhibitor)	INSUFF	-	GU
+U33	JTE-151 (RORgamma inverse agonist)	INSUFF	-	GU
+U34	Infigratinib (FGFR inhibitor)	INSUFF	-	GU
+U35	Gamcemetinib (MAPKAPK2 inhibitor)	INSUFF	-	GU
+U36	Balsalazide	EXCL	-	-
+U37	Ramelteon	EXCL	-	-
+U38	Ceperognastat (OGA inhibitor)	EXCL	-	-
+U39	Fosfestrol (prodrug of diethylstilbestrol)	EXCL	-	-
+U40	Implitapide	EXCL	-	-
+U41	Curcumin	EXCL	-	-
+U42	Harmine	EXCL	-	-
+U43	Pomalidomide	EXCL	-	-
+U44	Defosbarasertib (Aurora B inhibitor)	EXCL	-	-
+U45	Pinometostat (DOT1L inhibitor)	EXCL	-	-
+U46	Dimethyl fumarate	EXCL	-	-
+U47	Ceralasertib (ATR inhibitor)	EXCL	-	-
+U48	Roxadustat (HIF prolyl-hydroxylase inhibitor): dropped as a lever on label and pharmacology grounds (seizures, thyromimetic action, rat brain necrosis, no paediatric data), not on direction	EXCL	-	-
+U49	Nirogacestat (gamma-secretase inhibitor)	EXCL	-	-
+U50	STM2457 (METTL3 inhibitor, tool compound)	EXCL	-	-
+U51	D4476 (casein kinase 1 inhibitor, tool compound)	EXCL	-	-
+U52	AR-12 (reference: PDPK1, not a PDH-kinase hit)	EXCL	-	-
+U53	Dichloroacetate (reference for the Q2 engine)	EXCL	-	-
+U54	Felbamate (reference)	EXCL	-	-
+U55	Memantine (reference, IT8 P3 qualification reused)	EXCL	-	-
+U56	Sirolimus (reference; card EB-MTOR-AX-01 unchanged)	EXCL	-	-
+U57	Lenalidomide (artefact control)	EXCL	-	-
+U58	AT9283 (artefact control)	EXCL	-	-
+U59	The NRF2 (KEAP1) axis in WWOX-deficient neural cells: a genetic KEAP1/NFE2L2 arm, omaveloxolone and monomethyl/dimethyl fumarate as two chemotypes (a role-resolving mechanism experiment, not a treatment)	ORD	-	G4b
+U60	Voclosporin (calcineurin inhibitor): dropped; label names seizure and PRES, and its TNF seed is the non-significant one	EXCL	-	-
+U61	PF-03758309 (pan-PAK inhibitor; reference: dominated by the direct NRF2 arm)	EXCL	-	-
+U62	CDDO-EA (NRF2-activator analogue; class precedent in adult rat seizure models, not transferable to omaveloxolone)	EXCL	-	-
+X01	Developmental benefit or disease modification (axis)	EXCL	-	-
+X02	Growth endpoint (axis)	EXCL	-	-
+X03	Pharmacodynamic anchor (axis)	EXCL	-	-

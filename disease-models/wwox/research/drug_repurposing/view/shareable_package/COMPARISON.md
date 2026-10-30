@@ -4,8 +4,8 @@ The full version (`view/index.html` in the repository, local use) and this packa
 
 ## Same in both
 
-- 37 candidate cards with their six answers, evidence by scope, counter-evidence, next step, public identifiers and F/C/P positions: card text and positions are identical (the only card fields that differ are listed under 'Different').
-- 22 needs and their observations, the threads, groups, goals, funnel, access chart (catalogue-wide counts), matrix summary, dispositions, observations, lead dispositions and the Italian orientation texts.
+- 38 candidate cards with their six answers, evidence by scope, counter-evidence, next step, public identifiers and F/C/P positions: card text and positions are identical (the only card fields that differ are listed under 'Different').
+- 23 needs and their observations, the threads, groups, goals, funnel, access chart (catalogue-wide counts), matrix summary, dispositions, observations, lead dispositions and the Italian orientation texts.
 - Sections of the data object that are byte-identical: access, dispositions, exploration_flagged, has_distinct, matrix_summary, no_probability, observations, orphan_priorities, pair_unit, ranking_note, schema, strings.
 - Curated sections identical: contexts, evidence_graph, gaps, goals, group_note, groups, hypotheses, predictive, scopes, selection, threads, tracks, work_order.
 
@@ -13,19 +13,19 @@ The full version (`view/index.html` in the repository, local use) and this packa
 
 | What | Full | Shareable |
 |---|---|---|
-| Catalogue rows shown with a name | 1498 | 44 (card names only; the other 1467 rows carry an identifier) |
-| Rows with per-row status class or modality | 1511 | 0 |
-| Rows with a per-row access category | 1486 | 13 (openFDA-stated categories and absence statements only) |
-| Matrix pairs with a target list | 1342 of 1717 | 12 of 1717 |
-| Target symbols listed in pairs | 1861 | 12 |
-| Card actions on targets listed | 39 | 0 |
-| Pair objects carrying a status class | 685 | 0 |
+| Catalogue rows shown with a name | 2233 | 48 (card names only; the other 2199 rows carry an identifier) |
+| Rows with per-row status class or modality | 2247 | 0 |
+| Rows with a per-row access category | 2221 | 16 (openFDA-stated categories and absence statements only) |
+| Matrix pairs with a target list | 2204 of 2580 | 13 of 2580 |
+| Target symbols listed in pairs | 2727 | 13 |
+| Card actions on targets listed | 41 | 0 |
+| Pair objects carrying a status class | 920 | 0 |
 | Excluded rows listed with compound name and gene | 3 | 0 |
-| Card fields that differ (count of cards) | n/a | {"access": 9, "access_text": 7, "actions": 8, "asserts": 2, "brief": 1, "card_path": 37, "country": 5, "for": 2, "identity": 7, "links": 9, "mechanism": 1, "next_full": 2, "novelty": 2, "pharm": 2, "reopen": 1} |
+| Card fields that differ (count of cards) | n/a | {"access": 9, "access_text": 7, "actions": 9, "asserts": 2, "brief": 1, "card_path": 38, "country": 5, "for": 2, "identity": 8, "links": 9, "mechanism": 1, "next_full": 2, "novelty": 2, "pharm": 2, "reopen": 1} |
 
 ## Prose redactions (shareable only)
 
-12 card sentences and 11 lead fields that stated a compound-target pair, a catalogue-only compound or a per-compound status from a class-B/C source are rewritten at the level of the need or class and name the withheld source class (`dato di una fonte non inclusa in questa versione`); 59 repository file names are described instead of printed. The conclusion of each lead and card is kept. The rule is in `view/shareable_sources.json` (`prose_policy`) and the audit enforces it.
+12 card sentences and 11 lead fields that stated a compound-target pair, a catalogue-only compound or a per-compound status from a class-B/C source are rewritten at the level of the need or class and name the withheld source class (`dato di una fonte non inclusa in questa versione`); 90 repository file names are described instead of printed. The conclusion of each lead and card is kept. The rule is in `view/shareable_sources.json` (`prose_policy`) and the audit enforces it.
 
 ## Why: counts of catalogue target rows by class
 
@@ -34,7 +34,7 @@ The catalogue holds 44,211 records. Its target rows by class: {"A": 1623, "B": 4
 | Claim source | Class | Catalogue rows | Terms | In this page |
 |---|---|---|---|---|
 | CGI | C (identifiers and counts) | 368 | CC BY-NC 4.0, declared by DGIdb | 0 |
-| CIViC | A (attribution) | 1,120 | CC0 1.0; verified at docs.civicdb.org | 19 |
+| CIViC | A (attribution) | 1,120 | CC0 1.0; verified at docs.civicdb.org | 20 |
 | COSMIC | C (identifiers and counts) | 37 | custom terms, declared by DGIdb | 0 |
 | CancerCommons | C (identifiers and counts) | 109 | custom terms, declared by DGIdb | 0 |
 | ChEMBL | B (share-alike) | 16,947 | CC BY-SA 3.0 Unported (chembl.gitbook.io); attribution: ChEMBL URL and release version (chembl.github.io/chembl-licensing, read 2026-10-29) | 0 |

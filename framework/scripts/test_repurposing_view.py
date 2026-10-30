@@ -79,7 +79,7 @@ class RealData(unittest.TestCase):
         self.assertEqual(len(self.P["pairs"]), len(self.cm["cells"]))
 
     def test_needs_panel_matches_data(self):
-        self.assertEqual(len(self.P["needs"]), 22)
+        self.assertEqual(len(self.P["needs"]), 23)
         per = self.sm["needs"]["per_need"]
         for n in self.P["needs"]:
             self.assertEqual(n["fam_link"], per[n["id"]]["families_with_documented_link"])
@@ -302,7 +302,7 @@ class Curated(unittest.TestCase):
     def test_units_never_conflated(self):
         n = static_numbers(self.full)
         cur = self.PF["cur"]
-        self.assertEqual(n["cur.needs"], "22")
+        self.assertEqual(n["cur.needs"], "23")
         self.assertEqual(n["cur.cards"], str(len(cur["cands"])))
         self.assertNotEqual(n["cur.cards"], n["funnel.records"])
         for key, unit in (("cur.needs", "bisogni"), ("cur.cards", "schede candidato"), ("cur.threads", "filoni biologici")):
@@ -347,7 +347,7 @@ class Curated(unittest.TestCase):
         n = static_numbers(self.full)
         d, p = n["cur.goal.deep_recovery.cards"], n["cur.goal.partial_benefit.cards"]
         self.assertEqual(int(d) + int(p), len([c for c in self.PF["cur"]["cands"] if c["goal"]]))
-        self.assertEqual(int(n["cur.goal.deep_recovery.needs"]) + int(n["cur.goal.partial_benefit.needs"]), 22)
+        self.assertEqual(int(n["cur.goal.deep_recovery.needs"]) + int(n["cur.goal.partial_benefit.needs"]), 23)
         self.assertEqual(self.full.count('class="goal '), 2)
         self.assertIn("Track (campo separato)", self.full)
         self.assertIn("2026-", re.search(r'data-k="meta.data_date" data-v="([^"]+)"', self.full).group(1))
@@ -1040,10 +1040,10 @@ class ItalianFix(unittest.TestCase):
     def test_goal_tiles_count_every_position_link(self):
         cur = self.P["cur"]
         n_links = sum(len(c["links"]) for c in cur["cands"])
-        self.assertEqual(n_links, 52)
+        self.assertEqual(n_links, 53)      # 52 + the link of card L01 (IT10 P5)
         goals = re.findall(r'<div class="goal (?:deep|partial)".*?<span class="mini mut">\((\d+)\)</span></div></div>', self.page, re.S)
         self.assertEqual(sum(map(int, goals)), n_links)
-        self.assertIn("I 52 legami candidato-bisogno sono contati tutti", self.page)
+        self.assertIn("I 53 legami candidato-bisogno sono contati tutti", self.page)
 
     def test_no_raw_status_code_in_the_header_and_italian_labels(self):
         head = self.page[:self.page.index('<nav ')]
@@ -1383,7 +1383,7 @@ class It6P13Data(unittest.TestCase):
         eleven = {"NEED-WWOX-GENE-ADDITION", "NEED-SEIZURE-CONTROL-SYMPTOMATIC", "NEED-T-TYPE-CALCIUM", "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR", "NEED-LACTATE-LDH", "NEED-PDH-PYRUVATE-AXIS",
                   "NEED-ISR-ATTENUATION", "NEED-MYC-PROGENITOR-PROLIFERATION", "NEED-SYSTEMIC-GLYCAEMIA-GROWTH", "NEED-MYELINATION", "NEED-WWOX-MISSENSE-PROTEIN-RESCUE"}
         self.assertEqual(len([l for l in sec.splitlines() if l.startswith("| ")]), 12)       # header and the eleven rows of the review's table
-        self.assertEqual(set(ids), eleven | {"NEED-NEUROINFLAMMATION-GLIA"})
+        self.assertEqual(set(ids), eleven | {"NEED-NEUROINFLAMMATION-GLIA", "NEED-REDOX-NRF2"})      # NEED-REDOX-NRF2 added by IT10 P5
         self.assertEqual(self.mutated_wo(lambda d: None), [])
         by = {e["need"]: e for e in self.wo_doc["entries"]}
         for nid, upd in (("NEED-NEUROINFLAMMATION-GLIA", "P10"), ("NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR", "P11"), ("NEED-ISR-ATTENUATION", "P4"), ("NEED-WWOX-MISSENSE-PROTEIN-RESCUE", "P6"), ("NEED-WWOX-GENE-ADDITION", "P7")):
@@ -1923,7 +1923,7 @@ class It7P7Data(unittest.TestCase):
         self.assertIn("details>summary{padding:3px 0;min-height:24px}", css)
         for t in re.findall(r'<table class="tbl[^"]*stk">.*?</table>', self.h, re.S):
             self.assertIn("data-label=", t)
-        self.assertEqual(len(re.findall(r'<table class="tbl[^"]*stk">', self.h)), 3 + 2 * len(self.cur["ranking"]["units"]) + 3)     # three IT7 tables; IT8 P9: one pathway and one member-evidence table per ranked entry, the uncarded items and the triggers
+        self.assertEqual(len(re.findall(r'<table class="tbl[^"]*stk">', self.h)), 3 + 2 * len(self.cur["ranking"]["units"]) + 4)     # (IT10 P5: +1, the IT10 qualification records table) three IT7 tables; IT8 P9: one pathway and one member-evidence table per ranked entry, the uncarded items and the triggers
 
     def test_p4_matrix_checker_passes(self):
         r = subprocess.run([sys.executable, "-I", str(DR / rv.P4_DIR / "check_context_matrix.py")], capture_output=True, text=True, timeout=120)

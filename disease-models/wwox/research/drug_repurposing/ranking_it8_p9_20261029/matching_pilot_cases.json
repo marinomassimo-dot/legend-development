@@ -28,7 +28,11 @@
     "source_pointers": [
       "cards/F01_glutamate_receptor_node.packet.json:DR-W2-001",
       "ranking_it8_p9_20261029/unit_caveats.tsv:U21"
-    ]
+    ],
+    "generating_path": "Perturbazione fenotipica diretta: un composto-strumento (d-APV) con un readout funzionale in un sistema WWOX-deficiente (scheda F01); non nasce da un percorso di grafo.",
+    "supporting_evidence": "DR-W2-001: riduzione dei burst nel sistema WWOX-deficiente con d-APV; un solo composto-strumento e un solo readout.",
+    "refutation": "Un effetto uguale nel controllo corretto o wild-type (non specifico), oppure perdita di funzione o maturazione di rete insieme alla riduzione dei burst; un esito negativo non si trasferisce ad altri antagonisti.",
+    "research_despite_requirements": "La trasferibilità della sonda a un agente clinico è sconosciuta, ma la domanda di specificità del risultato per genotipo si misura con la sonda stessa e non dipende da quel requisito."
   },
   {
     "case_id": "NMDA-member",
@@ -58,7 +62,11 @@
     "evidence_limit": "Precedenti esterni con esiti diversi restano esterni. L’assenza di un risultato attribuito non dimostra inattività.",
     "source_pointers": [
       "cards/F01_glutamate_receptor_node.packet.json:DR-W2-001..005"
-    ]
+    ],
+    "generating_path": "Analogia di meccanismo: stesso nodo (NMDAR) della sonda d-APV; nessun percorso WWOX proprio della molecola.",
+    "supporting_evidence": "Nessuna asserzione WWOX attribuita a memantina; il risultato d-APV vale per il meccanismo e non per la molecola; i precedenti GRIN esterni hanno esiti diversi.",
+    "refutation": "Nessuna risposta funzionale, oppure tolleranza di rete peggiorata, a esposizione definita nel sistema WWOX-deficiente rispetto al corretto.",
+    "research_despite_requirements": "Il requisito (beneficio della molecola nel sistema WWOX) è sconosciuto e non sfavorevole: manca la misura, ed è proprio la domanda di ricerca."
   },
   {
     "case_id": "chloride",
@@ -94,7 +102,11 @@
     "source_pointers": [
       "cards/F03_bumetanide_chloride_gradient.packet.json",
       "pharmacological_qualification_it8_p3_20261029/comparison.tsv"
-    ]
+    ],
+    "generating_path": "Via diretta con direzione (gradiente del cloruro e segnalazione GABA) sulla scheda F03; la scheda è oggi un'astensione sulla premessa biologica.",
+    "supporting_evidence": "Nessun risultato WWOX sul gradiente del cloruro; il candidato poggia su un'ipotesi di meccanismo, non su una misura nel sistema.",
+    "refutation": "E_GABA non spostato o già favorevole nei neuroni WWOX-deficienti, o rapporto NKCC1/KCC2 invariato: la premessa cadrebbe e il farmaco non andrebbe testato.",
+    "research_despite_requirements": "L'esposizione cerebrale libera è un ostacolo noto allo sviluppo sistemico, ma non annulla l'utilità di misurare E_GABA e di provare il farmaco in bagno; priorità di ricerca e requisiti restano separati."
   },
   {
     "case_id": "residual-product",
@@ -126,7 +138,11 @@
     "source_pointers": [
       "cards/A01_pba_class.packet.json:DR-A01-001",
       "cards/A01_pba_class.packet.json:p4_fields"
-    ]
+    ],
+    "generating_path": "Recupero del prodotto residuo e analogia di meccanismo (proteostasi); nessun percorso di grafo.",
+    "supporting_evidence": "Nessun risultato WWOX attribuito alla molecola; i precedenti su altre proteine (SLC6A1) non si trasferiscono a WWOX o a Q230P.",
+    "refutation": "Assenza di prodotto variante (Q230P senza banda), oppure più proteina senza funzione recuperata.",
+    "research_despite_requirements": "Presenza e recuperabilità del prodotto sono sconosciute: sono la premessa da risolvere, non una ragione per non fare la ricerca."
   },
   {
     "case_id": "HIF-emergent",
@@ -165,6 +181,109 @@
     "source_pointers": [
       "cards/K01_hif_axis_glycolytic_shift.packet.json:DR-K01-001..004",
       "qualification_it9_p4c_e_20261030/records/E-01_PX-478.md:5,6,8"
-    ]
+    ],
+    "generating_path": "Propagazione di rete con segni (motore a semi IT9, domanda Q2, braccio «opposes»), poi qualificazione IT9 P4c-e; in IT10 il ruolo del cambiamento HIF è riaperto in entrambe le direzioni (H-harm e H-protect).",
+    "supporting_evidence": "HIF-1α nucleare più alto e rescue con knockdown di HIF1A in MEF Wwox-null (non neurale, un laboratorio); trascritti EPAS1, HK2 e SLC2A1 più alti nell'organoide knockout (4 contro 2 librerie).",
+    "refutation": "Nel cervello di topo a P17 nessuna elevazione dei trascritti HIF; HIF-α proteico non più alto nelle cellule neurali WWOX-deficienti (compartimento e ossigeno); knockdown che non muove lattato e captazione di glucosio; vitalità che peggiora (ruolo adattativo); spiegazioni rivali (stato di coltura, attività, MYC).",
+    "research_despite_requirements": "Esposizione e tollerabilità pediatriche nel SNC sono sconosciute e la molecola ha un'allerta mustard, ma la premessa HIF si misura con perturbazione genetica senza il composto: la ricerca non dipende da quei requisiti."
+  },
+  {
+    "case_id": "NRF2-omaveloxolone",
+    "as_of": "2026-10-31",
+    "unit_id": "U59",
+    "member_key": "FAM:CAT:CHEMBL4303525",
+    "compound": "Omaveloxolone",
+    "action": "Attivatore di NRF2 (via KEAP1); potenza sul bersaglio nelle cellule neurali non misurata.",
+    "context": "Sonda ex vivo in colture neurali isogeniche WWOX-deficiente e corretto che includano microglia o cellule simil-macrofagiche; il ruolo di ROS e citochine è sconosciuto, quindi il beneficio è condizionale.",
+    "benefit_hypothesis": "Braccio citochine: abbassare Il6 e Il1b SE sono dannose E se esiste un compartimento che le esprime. Braccio redox: aumentare la capacità antiossidante SE le ROS sono dannose e il tono di NRF2 non è già massimo. Ruolo sconosciuto: entrambi condizionali.",
+    "goals": [
+      "partial_benefit"
+    ],
+    "discovery_logic": [
+      "signed_network_propagation",
+      "mechanistic_context_transfer"
+    ],
+    "research_priority": "Passo 0 (una o due settimane): dice se esiste un compartimento citochinico o un eccesso di ROS prima di qualsiasi test del composto; priorità di ricerca media.",
+    "research_question": "Tono di NRF2, ROS e proteina IL-6/IL-1β nelle cellule WWOX-deficienti e corrette; poi attivazione con controllo di dipendenza da NFE2L2 (prima il knockdown di KEAP1; omaveloxolone e fumarato come due chemotipi) e knockdown di NFE2L2 come controllo di specificità.",
+    "development_scope": "Uso sistemico pediatrico per un effetto neurale WWOX-specifico. È DISTINTO dalla sonda ex vivo: verdetto sonda condizionale (via libera condizionato al passo 0), verdetto di sviluppo oggi non supportato.",
+    "development_requirements": [
+      {
+        "question": "Età di indicazione e sicurezza pediatrica",
+        "state": "unfavorable",
+        "reason": "Etichetta: indicato da 16 anni in su; sicurezza ed efficacia non stabilite sotto i 16 anni."
+      },
+      {
+        "question": "Esposizione perinatale",
+        "state": "unfavorable",
+        "reason": "Etichetta: nel ratto l'esposizione perinatale ha peggiorato la funzione neurocomportamentale della prole a tutte le dosi."
+      },
+      {
+        "question": "Interazioni con induttori del CYP3A4 (molti antiepilettici)",
+        "state": "unknown",
+        "reason": "L'etichetta chiede di evitare induttori forti o moderati; quali antiepilettici lo siano non è stato recuperato."
+      },
+      {
+        "question": "Esposizione cerebrale libera e potenza nelle cellule neurali",
+        "state": "unknown",
+        "reason": "Nella scimmia il contenuto cerebrale è simile al plasma ma l'induzione dei bersagli è modesta; ChEMBL non ha righe di potenza sul bersaglio; legame alle proteine elevato."
+      }
+    ],
+    "evidence_limit": "Nessun dato su NRF2, ROS o proteina citochinica in cellule neurali WWOX-deficienti di mammifero; il meccanismo citochinico viene da macrofagi di midollo (Il6 e Il1b giù, Tnf invariato). Un'etichetta senza la stringa «seizure» non è efficacia.",
+    "source_pointers": [
+      "cards/L01_nrf2_axis.packet.json:DR-L01-001..004",
+      "axis_it10_p22_20261031/candidates.tsv:P22-01",
+      "axis_it10_p22_20261031/premises.tsv:PR1,PR4-PR8"
+    ],
+    "generating_path": "Grafo con segni, motore v4 con giunzione di membri: NFE2L2 -T(-)-> IL1B (arco terminale singolo, record con PMID letto) dai semi IL1B (cervelletto P47T) e IL6 (ippocampo null, l'unica citochina significativa); più il braccio redox aggiunto in IT10 P2.2.",
+    "supporting_evidence": "NRF2 attivato abbassa Il6 e Il1b e lascia Tnf invariato nei macrofagi (non neurale); ROS più alte nel moscerino con knockdown neuronale e nei MEF Wwox-null a passaggio tardivo; contenuto cerebrale simile al plasma nella scimmia. Nessun risultato in un sistema WWOX di mammifero.",
+    "refutation": "Nel passo 0 nessuna differenza di ROS o di tono NRF2 e nessuna proteina citochinica sopra la soglia; attivazione che non cambia nulla mentre il knockdown di NFE2L2 non cambia nulla (asse inerte); un effetto che sopravvive al knockdown di NFE2L2 (fuori bersaglio); organoide senza cellule che esprimono citochine.",
+    "research_despite_requirements": "I requisiti di sviluppo sistemico sono sfavorevoli o sconosciuti, ma il passo 0 e il braccio genetico (KEAP1, NFE2L2) non usano il composto e rispondono alla domanda di ruolo per ogni leva Q5; il verdetto della sonda ex vivo è separato da quello dello sviluppo e non è annullato da esso."
+  },
+  {
+    "case_id": "ACK1-dasatinib",
+    "as_of": "2026-10-31",
+    "unit_id": "N12",
+    "member_key": "UNCARDED",
+    "compound": "Dasatinib",
+    "action": "Inibizione del sito ATP di ACK1 (TNK2) e di SRC/ABL (non selettivo): sonda di meccanismo, non un trattamento.",
+    "context": "Solo cellule con una banda WWOX (linee tumorali con ACK1 attivo, poi cellule neurali o organoidi con proteina residua); non si applica a Q230P finché il dato unico resta una non-rilevazione.",
+    "benefit_hypothesis": "Emivita e livello stazionario di WWOX più lunghi SE la via Tyr287-ACK1 limita WWOX in quella cellula; solo quantità di proteina, la funzione non è prevista. Condizionale alla presenza di proteina.",
+    "goals": [
+      "restore_wwox_function"
+    ],
+    "discovery_logic": [
+      "residual_product_rescue",
+      "mechanistic_context_transfer"
+    ],
+    "research_priority": "Prima il testo completo di Mahajan 2005 e il dato sul destino della proteina; poi, se c'è proteina, il confronto dasatinib, bosutinib e knockdown di TNK2.",
+    "research_question": "Emivita (cicloesimide) e livello stazionario di WWOX con composto, knockdown di TNK2 come comparatore genetico, WWOX Tyr287Phe come controllo insensibile; regola di concordanza fra i due inibitori e il knockdown; lettura di funzione separata dalla quantità.",
+    "development_scope": "Uso di un chinasi-inibitore antineoplastico multi-bersaglio in un contesto neurale pediatrico, distinto dalla sonda in cellule.",
+    "development_requirements": [
+      {
+        "question": "Proteina WWOX presente nel sistema di interesse",
+        "state": "unknown",
+        "reason": "Per Q230P il dato unico è una non-rilevazione con un limite di sensibilità; senza proteina la leva non si applica."
+      },
+      {
+        "question": "Esposizione e tollerabilità nel SNC",
+        "state": "unknown",
+        "reason": "Non valutate; entrambi i composti sono antineoplastici multi-bersaglio."
+      },
+      {
+        "question": "ACK1 espresso e attivo nei neuroni",
+        "state": "unknown",
+        "reason": "Solo RNA da atlante, in tutti i tessuti; la proteina non è stata controllata."
+      }
+    ],
+    "evidence_limit": "Nessun composto è stato dato a un sistema WWOX; le osservazioni ACK1-WWOX vengono da cancro (prostata, fegato) a livello di abstract; i valori ChEMBL ripetuti sono valori di letteratura riportati fra articoli, non repliche. Nessuna scheda e nessuna voce ordinata: la voce N12 non ha scheda.",
+    "source_pointers": [
+      "recovery_it10_p23_20261031/README.md sections 1-3, 11",
+      "recovery_it10_p23_20261031/candidates_it10_p23.tsv:T1,T2",
+      "ranking_it8_p9_20261029/uncarded_items.tsv:N12"
+    ],
+    "generating_path": "Percorso non da grafo: Q1 non ha via di grafo; la ricerca complementare dei regolatori della stabilità della proteina trova ACK1, che fosforila WWOX in Tyr287 con poliubiquitinazione e degradazione (cellule LNCaP, abstract) e il cui knockdown alza WWOX in linee di epatocarcinoma (solo la direzione, abstract).",
+    "supporting_evidence": "Due sistemi tumorali indipendenti (prostata, fegato; solo abstract); inibitori catalogati con potenza nanomolare misurata su TNK2 (valori di letteratura riportati fra articoli, non repliche). Nessun dato in una cellula neurale o con variante.",
+    "refutation": "Nessuna variazione di emivita o di livello di WWOX con l'inibitore o con il knockdown di TNK2 in cellule neurali o con variante; risposta a un solo inibitore (fuori bersaglio); nessuna proteina in Q230P; ACK1 non attivo nei neuroni; sensibilizzazione all'apoptosi con ACK1 inibita nei neuroni granulari cerebellari di ratto.",
+    "research_despite_requirements": "Presenza di proteina, esposizione nel SNC e tollerabilità sono sconosciute: non tolgono la domanda su cosa limiti l'emivita di WWOX in una cellula che ha una banda, misurabile in vitro con la regola di concordanza. La voce resta senza scheda finché non c'è il testo completo di Mahajan 2005."
   }
 ]

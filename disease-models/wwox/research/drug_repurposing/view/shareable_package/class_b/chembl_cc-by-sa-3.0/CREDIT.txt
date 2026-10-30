@@ -6,7 +6,7 @@ Credit line (CC BY-SA 3.0 section 4(c); ChEMBL's own attribution instruction: th
 
 Adaptation notice (section 3(b) and 4(c)(iv))
 
-  chembl_cc-by-sa-3.0.jsonl is an adaptation of ChEMBL: a selection of 15 molecule records (the compounds the cards of the LEGEND WWOX repurposing module name,
+  chembl_cc-by-sa-3.0.jsonl is an adaptation of ChEMBL: a selection of 18 molecule records (the compounds the cards of the LEGEND WWOX repurposing module name,
   by ChEMBL identifier) and of the fields chembl_id, pref_name, molecule_type, max_phase, withdrawn_flag, first_approval_year, black_box_warning_in_source and the
   curated mechanisms (mechanism_of_action, action_type, target_name, target_type, organism, gene_symbols), re-serialised as JSON Lines.
   No ChEMBL value was altered. The adaptation is distributed under the same licence (CC BY-SA 3.0). No endorsement by ChEMBL or EMBL-EBI is implied.

@@ -23015,6 +23015,33 @@
  {
   "axis": "all",
   "claims_named": [],
+  "digest": "b93c7f31a7b9f3f3",
+  "kind": "lead",
+  "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
+  "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
+  "origin_id": "DL-MECH-178",
+  "origin_line": 4606,
+  "origin_title": "DL-MECH-178 — HIF axis in the WWOX-deficient glycolytic shift: a mechanism experiment, not a treatment; step 0 is the missing measurement of HIF-1 alpha and HIF-2 alpha protein by compartment and oxygen condition in WWOX-deficient versus corrected neural cells",
+  "papers_named": [],
+  "pmids": [],
+  "query_id": "Q-DL-MECH-178",
+  "terms": [
+   "MECH",
+   "HIF",
+   "WWOX",
+   "LDH",
+   "PDK"
+  ]
+ },
+ {
+  "axis": "all",
+  "claims_named": [],
   "digest": "73bd30832d71e26c",
   "kind": "lead",
   "leads_named": [],

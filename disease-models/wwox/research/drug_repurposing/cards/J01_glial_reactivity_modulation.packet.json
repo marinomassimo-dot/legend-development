@@ -51,7 +51,7 @@
     "cell_type": "hippocampal subfields",
     "developmental_stage": "2 weeks"
    },
-   "measured_result_note": "Area fraction, not cell number; dentate gyrus unmarked; Il6 and Tnf-a both more than 1.5-fold up by qPCR (p below 0.05, n 4 per group; full text re-read 2026-10-30, correcting the earlier registry reading 'Il6 but not Tnf-a'); the paper records no seizure measurement for these animals and leaves cause versus consequence open.",
+   "measured_result_note": "Area fraction, not cell number; dentate gyrus unmarked; Il6 and Tnf-a transcripts both about 1.5-fold or more up by qPCR (n 4 per group), but only Il6 reaches p below 0.05: Results 3.3 reads '( Il6 significant at p < .05)', and Fig 4E shows Il6 about 1.48x with one asterisk and Tnf-a about 1.85x with a large error bar and no mark; full text re-read 2026-10-31 (IT10 P2.2, publisher text and figure image), which restores the original registry reading 'Il6 but not Tnf-a' and corrects the 2026-10-30 'correction' that had dropped the word Il6; the authors' own abstract and Discussion nevertheless state that both cytokines are increased, which their significance mark does not support; the paper records no seizure measurement for these animals and leaves cause versus consequence open.",
    "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
    "receipt": "FTR-20260806-30290271-01"
   },

@@ -1,0 +1,7 @@
+cand_id	package	compound	state	decision	unit_id	class	origin	need
+P22-01	P2.2	omaveloxolone (RTA 408, BIIB141, Skyclarys)	KEEP	KEEP-AS-PROPOSAL (conditional on step 0)	U59	ORD	generated_in_it10	NEED-REDOX-NRF2
+P22-02	P2.2	dimethyl fumarate / monomethyl fumarate (MMF is the active moiety)	CONDITIONAL	CONDITIONAL	U59	ORD	generated_in_it10	NEED-REDOX-NRF2
+P22-03	P2.2	NRF2 genetic arm: KEAP1 knockdown/CRISPRi (activation) and NFE2L2 knockdown/knockout (loss) in WWOX-deficient vs corrected cells	KEEP	KEEP-AS-PROPOSAL (the simplest alternative to any compound)	U59	ORD	generated_in_it10	NEED-REDOX-NRF2
+P22-04	P2.2	voclosporin	DROP	DROP	U60	EXCL	generated_in_it10	NEED-NEUROINFLAMMATION-GLIA
+P22-05	P2.2	PF-03758309	REFERENCE	REFERENCE-ONLY	U61	EXCL	reference_or_control	NEED-REDOX-NRF2
+P22-06	P2.2	CDDO-EA (RTA 405)	REFERENCE	REFERENCE-ONLY	U62	EXCL	reference_or_control	NEED-REDOX-NRF2

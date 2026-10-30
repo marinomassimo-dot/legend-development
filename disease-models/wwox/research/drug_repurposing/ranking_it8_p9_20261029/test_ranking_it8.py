@@ -314,8 +314,9 @@ class RealData(unittest.TestCase):
         self.assertEqual(unit_by_label(self.uni, "Ketogenic")["unit_type"], "diet")
         self.assertEqual(unit_by_label(self.uni, "Ethosuximide")["unit_type"], "molecule")
         self.assertEqual(unit_by_label(self.uni, "d-APV")["unit_type"], "tool_compound_and_class")
-        self.assertEqual({u["origin"] for u in self.uni["units"] if u["cards"] and u["unit_id"] != "U28"}, {"known_track_before_it9"})
+        self.assertEqual({u["origin"] for u in self.uni["units"] if u["cards"] and u["unit_id"] not in ("U28", "U59")}, {"known_track_before_it9"})
         self.assertEqual({u["origin"] for u in self.uni["units"] if u["unit_id"] in ("U28", "U29")}, {"generated_in_it9"})
+        self.assertEqual(by_id(self.uni, "U59")["origin"], "generated_in_it10")       # the NRF2 card unit (IT10 P2.2): a mechanism probe generated in IT10
 
     def test_mutation_missing_or_invalid_type_or_origin_is_refused(self):
         for col, val in (("origin", ""), ("origin", "invented"), ("unit_type", ""), ("unit_type", "invented")):
@@ -628,8 +629,8 @@ class MatchingV3Fixtures(unittest.TestCase):
     def test_pilot_reaches_existing_export_and_full_view(self):
         import repurposing_view as v
         exported = json.loads(rk.build_all()["ranking.json"])["matching_pilot"]
-        self.assertEqual(len(exported), 5)  # four contrasting cases; NMDA has two actual members
-        self.assertEqual({c["case_id"] for c in exported}, {"NMDA-tool", "NMDA-member", "chloride", "residual-product", "HIF-emergent"})
+        self.assertEqual(len(exported), 7)  # four contrasting cases (NMDA has two actual members) plus the IT10 cases NRF2-omaveloxolone and ACK1-dasatinib
+        self.assertEqual({c["case_id"] for c in exported}, {"NMDA-tool", "NMDA-member", "chloride", "residual-product", "HIF-emergent", "NRF2-omaveloxolone", "ACK1-dasatinib"})
         cur = state()["ctx"]["cur"]
         full = v.build_ranking(rk.DR, cur, "full")
         self.assertEqual(full["matching_pilot"], exported)
@@ -638,8 +639,138 @@ class MatchingV3Fixtures(unittest.TestCase):
         self.assertIn("PX-478", html)
         self.assertIn("sconosciuto", html)
         self.assertIn("nessun risultato WWOX attribuito", html)
+        for label in ("Perché è emerso", "Evidenza a sostegno", "Che cosa potrebbe confutarlo", "Perché merita ricerca nonostante i requisiti irrisolti"):
+            self.assertEqual(html.count(label), 7, label)          # the five questions of the mandate are shown for every pilot case
+        self.assertIn("NFE2L2 -T(-)-&gt; IL1B", html)
+        self.assertIn("ACK1-dasatinib".split("-")[0], html)
+        self.assertIn("Percorso non da grafo", html)
         self.assertEqual(v.build_ranking(rk.DR, cur, "shareable")["matching_pilot"], [])
         self.assertEqual(v.render_matching_pilot([]), "")
+
+
+class It10Integration(unittest.TestCase):
+    """IT10 P5: the NRF2 card unit, the IT10 qualification entries, the ACK1 uncarded item and its reopenable searches, the dated correction overlay, and the two new pilot cases."""
+
+    @staticmethod
+    def fixture(name):
+        return json.loads((HERE / "fixtures" / (name + ".json")).read_text())
+
+    def test_nrf2_card_unit_enters_by_the_existing_rule_and_nothing_moves(self):
+        S = state()
+        u = by_id(S["uni"], "U59")
+        self.assertEqual((u["unit_type"], u["origin"], u["cards"]), ("mechanism_probe", "generated_in_it10", ["L01_nrf2_axis"]))
+        v = u["views"]["partial"]
+        self.assertEqual((v["group"], v["lead"], v["lead_need"]), ("G4b", "F3", "NEED-REDOX-NRF2"))
+        self.assertEqual(v["next_priority"]["level"], "NX2")                                    # F3 in G4b: first test, direction not established
+        self.assertNotIn(u["unit_id"], sum((s_["top"] for s_ in rk.build_selections(S["uni"]).values()), []))     # never selectable without a WWOX-system result
+        # the unit's members are attributed by subject: no WWOX-system assertion belongs to omaveloxolone or to the fumarates
+        for m in u["member_evidence"]:
+            self.assertEqual(m["tested_in_wwox_system"], "no", m["member"])
+        # K01 / U28 did not move
+        k = by_id(S["uni"], "U28")
+        self.assertEqual((k["class"], k["views"]["partial"]["group"], k["views"]["partial"]["lead"], k["origin"]), ("ORD", "G4b", "F3", "generated_in_it9"))
+
+    def test_it10_qualification_entries_follow_the_stated_states(self):
+        q = rk.load_qualification_it10()
+        self.assertEqual({q["P22-04"]["state"], q["P22-05"]["state"], q["P22-06"]["state"], q["P22-02"]["state"]}, {"DROP", "REFERENCE", "CONDITIONAL"})
+        self.assertTrue(set(q).isdisjoint(rk.load_qualification()))
+        units = {u["unit_id"]: u for u in state()["uni"]["units"]}
+        self.assertEqual((units["U60"]["class"], units["U60"]["origin"], units["U60"]["era"]), ("EXCL", "generated_in_it10", "IT10"))
+        for uid in ("U61", "U62"):
+            self.assertEqual((units[uid]["class"], units[uid]["origin"]), ("EXCL", "reference_or_control"))
+            self.assertFalse(units[uid]["views"]["partial"].get("member"))
+            self.assertTrue(units[uid]["class_reason"])
+        recs = {r["cand_id"]: r for r in state()["uni"]["it10_records"]}
+        self.assertEqual({k: recs[k]["unit_id"] for k in ("P22-01", "P22-02", "P22-03", "P22-04", "P22-05", "P22-06")}, {"P22-01": "U59", "P22-02": "U59", "P22-03": "U59", "P22-04": "U60", "P22-05": "U61", "P22-06": "U62"})
+        self.assertEqual(len(state()["uni"]["it9_records"]), 32)                             # the IT9 list is unchanged
+
+    def test_mutation_it10_map_must_name_a_known_record_and_a_carded_unit(self):
+        import unittest.mock as mock
+        ctx = state()["ctx"]
+        q = rk.load_qualification_it10()
+        gone = {k: v for k, v in q.items() if k != "P22-04"}
+        with mock.patch.object(rk, "load_qualification_it10", return_value=gone):
+            with self.assertRaises(SystemExit):
+                rk.proposal_units(ctx)
+        flipped = {k: dict(v, state="KEEP") if k == "P22-04" else v for k, v in q.items()}
+        with mock.patch.object(rk, "load_qualification_it10", return_value=flipped):
+            units, _ = rk.proposal_units(ctx)
+        self.assertEqual(next(u for u in units if u["unit_id"] == "U60")["views"]["partial"]["group"], "G4b")      # voclosporin would be ordered only if its state changed
+
+    def test_qualification_correction_is_an_overlay_and_the_original_is_untouched(self):
+        e02 = rk.load_qualification()["E-02"]
+        self.assertIn("WITHDRAWN", e02["datum"])
+        self.assertNotIn("by construction", e02["datum"].split("[Corrected")[0])
+        self.assertEqual(e02["corrected_fields"], ["datum"])
+        orig = [r for r in rk.read_tsv(rk.DR / "qualification_it9_p4c_e_20261030/qualification_E.tsv") if r["cand_id"] == "E-02"][0]
+        self.assertIn("by construction", orig["decisive_datum"])                              # the stored record is never rewritten
+        self.assertEqual(e02["state"], "DROP")                                                # the DROP stands
+        with self.assertRaises(SystemExit):                                                   # a correction naming a field the record does not have is refused
+            rk._apply_qual_corrections({"E-02": {"nope": "x"}})
+
+    def test_ack1_is_an_uncarded_item_with_its_counter_evidence_and_reopenable_searches(self):
+        unc = {r["item_id"]: r for r in state()["ctx"]["uncarded"]}
+        n12 = unc["N12"]
+        self.assertEqual((n12["class"], n12["provenance"], n12["related_unit"]), ("INSUFF", "own_search", ""))
+        for needle in ("NOT counter-evidence for lowering ACK1", "supports ONLY the direction", "not replicates", "main-text sentence", "CONDITIONAL on WWOX protein"):
+            self.assertIn(needle, n12["reason"])
+        self.assertFalse(any("N12" in u["label"] for u in state()["uni"]["units"]))             # no card, no unit
+        trig = {r["trigger"]: r for r in rk.triggers_rows()}
+        for i in range(1, 8):
+            self.assertIn(f"R{i}_q1_complement", trig)
+        self.assertIn("N12", trig["R3_q1_complement"]["re_evaluates"])
+        self.assertEqual(len(trig), 8 + 7)
+        import unittest.mock as mock
+        with mock.patch.object(rk, "REOPEN_SEARCHES", rk.HERE / "absent.tsv"):
+            self.assertEqual(len(rk.triggers_rows()), 8)
+
+    def test_every_pilot_case_answers_the_mandate_questions(self):
+        cases = json.loads((HERE / "matching_pilot_cases.json").read_text())
+        out = rk.matching_pilot(state()["uni"]["units"], cases)
+        for c in out:
+            for k in rk.PILOT_NARRATIVE:
+                self.assertTrue(c[k].strip(), (c["case_id"], k))
+        broken = copy.deepcopy(cases)
+        del broken[0]["refutation"]
+        with self.assertRaises(ValueError):
+            rk.matching_pilot(state()["uni"]["units"], broken)
+
+    def test_nrf2_probe_verdict_and_development_verdict_are_separate(self):
+        f = self.fixture("nrf2_probe_vs_development")
+        inputs = json.loads((HERE / "matching_pilot_cases.json").read_text())
+        out = {c["case_id"]: c for c in rk.matching_pilot(state()["uni"]["units"], inputs)}[f["case_id"]]
+        self.assertIn("NFE2L2 -T(-)-> IL1B", out["generating_path"])
+        self.assertIn(f["question"], out["development_status"][f["state"]])
+        self.assertIn(f["research_question_contains"], out["research_question"])
+        self.assertEqual(out["evidence_of_this_member"]["tested_in_wwox_system"], "no")        # no WWOX-system result is attributed to the molecule
+        # an unfavourable or unknown development requirement removes neither the research question nor the unit's group
+        alt = copy.deepcopy(inputs)
+        c = next(c for c in alt if c["case_id"] == f["case_id"])
+        for r in c["development_requirements"]:
+            r["state"] = "unfavorable"
+        changed = {c["case_id"]: c for c in rk.matching_pilot(state()["uni"]["units"], alt)}[f["case_id"]]
+        self.assertEqual((changed["research_question"], changed["research_priority"], changed["evidence_of_this_member"]), (out["research_question"], out["research_priority"], out["evidence_of_this_member"]))
+        self.assertEqual(by_id(state()["uni"], out["unit_id"])["views"]["partial"]["group"], "G4b")
+        self.assertEqual(out["development_status"]["favorable"], [])
+
+    def test_ack1_case_is_conditional_on_protein_and_attributes_nothing(self):
+        f = self.fixture("ack1_conditional_on_protein")
+        inputs = json.loads((HERE / "matching_pilot_cases.json").read_text())
+        out = {c["case_id"]: c for c in rk.matching_pilot(state()["uni"]["units"], inputs)}[f["case_id"]]
+        self.assertIn(f["question"], out["development_status"][f["state"]])               # unknown, not negative
+        self.assertNotIn(f["question"], out["development_status"]["unfavorable"])
+        self.assertIn(f["research_question_contains"], out["research_question"])
+        self.assertEqual(out["evidence_of_this_member"], {"tested_in_wwox_system": "no", "assertion_ids": [], "signs": {}, "source_pmids": [], "depth": "", "outside_wwox_assertions": 0})
+        self.assertIn("Non si applica a Q230P".lower(), out["context"].lower())
+        alt = copy.deepcopy(inputs)
+        c = next(c for c in alt if c["case_id"] == f["case_id"])
+        next(r for r in c["development_requirements"] if r["question"] == f["question"])["state"] = f["alternative_state"]
+        changed = {c["case_id"]: c for c in rk.matching_pilot(state()["uni"]["units"], alt)}[f["case_id"]]
+        self.assertIn(f["question"], changed["development_status"]["unfavorable"])
+        self.assertEqual(changed["research_question"], out["research_question"])
+        # the item must exist as an uncarded row: without it the case cannot be projected
+        with self.assertRaises(KeyError):
+            rk.matching_pilot(state()["uni"]["units"], inputs, [r for r in state()["ctx"]["uncarded"] if r["item_id"] != f["item_id"]])
 
 
 if __name__ == "__main__":
