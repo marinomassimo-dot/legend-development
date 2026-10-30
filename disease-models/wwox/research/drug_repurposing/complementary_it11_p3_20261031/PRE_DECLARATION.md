@@ -1,0 +1,57 @@
+# Pre-declaration, IT11 P3 (scientist-e), written 2026-10-30 (UTC) BEFORE any cosine, rank or hit rate of the new trial was computed
+
+Exploratory, computational, class level (a WWOX-DEE genotype class; no individual-level record). Not medical advice. Not blind: see section 1.
+
+## 1. What had been read or seen before writing (so the comparison is not called blind)
+
+* IT10 P2.4 package in full (README, PRE_DECLARATION, the four scripts, results/ JSON and TSV headers). Therefore known: the IT10 gate numbers (WWOX mean pair cosine 0.631 vs null p95 0.627; PLK1 0.380, percentile 74.8), the failed declared PLK1 control, the post-hoc PLK1-inhibitor ranks (55 to 333 of 115,788, TAK-960 14,139), the WWOX mean-profile norm (2.99, 88th percentile of random knockouts), the source concentration of the most-opposed compounds (sources 9, 5, 11), the 2.9 percent catalogue mapping. PLK1 and the five phenotype leads are development inputs, not validation.
+* Metadata only, no profile value: JUMP `plate.csv.gz`, `well.csv.gz`, `crispr.csv.gz`, `compound.csv.gz`, `compound_source.csv.gz`, `perturbation_control.csv`, `microscope_config.csv`; JUMP-Target README and metadata tables; the `load_data.csv` of two source_13 plates (CP-CC9-R1-12 and CP-CC9-R1-29: plate metadata columns and tags only, no profile); the DepMap-derived U2OS expression and CRISPR-effect tables published in the Morphmap repository (WWOX log2(TPM+1) 4.22; gene effect +0.075; PLK1 -2.08); the Repurposing Hub annotation file of the compound-annotator repository; CPJUMP1 full text (Nat Methods 2024, PMC11166567); the abstracts of the cpg0016 preprint and of the Nat Methods 2025 gene map paper.
+* Counts that shaped the design (no similarity computed): source_13 holds all CRISPR plates and also six compound plates (plate number 29, runs 1, 2, 3, 5, 6, 7) carrying the JUMP-Target-2 compounds, tagged `LandmarkCpd#5uM` with `U2OS-311` cells, in the same batches as the CRISPR plates; 144 of the 161 JUMP-Target CRISPR genes have a knockout profile in cpg0016; 289 JUMP-Target-2 compounds list at least one of those genes in their target list (431 pairs, 139 genes with two or more compounds); WWOX is in none of them.
+* NOT seen: any cosine, rank, hit rate, mAP or norm from the data file used below, other than the IT10 numbers listed above.
+
+## 2. Choice of the one trial (P3.2) and what was not chosen
+
+The IT10 trial compared knockout wells of one source with compound wells of other sources, selected the control after the fact, scored by a null-normalised z, and read negative cosine as "opposition". The diagnosis (README section 3) found that the instrument was never calibrated: PLK1 mean pair cosine sat at the 74.8th percentile of random knockouts, so the declared gate does not measure phenotype strength, and no designed pair in JUMP predicts a negative similarity.
+Chosen: a calibration of the instrument on designed gene-compound pairs available inside source_13, then the position of WWOX on the calibrated curve. Reason: it answers, with data already public, whether any gene-to-compound inference from this resource is possible at WWOX's signal strength, and it cannot be misread as evidence of benefit.
+Not chosen, with cause: (a) fixing only the z-score or the compound mapping (the mapping is not the limit, README section 3.6); (b) restricting to catalogue-mapped compounds (172 of 302 JUMP-Target-2 compounds map by skeleton; this is a reporting filter, not a trial); (c) a neural or other Cell Painting dataset with a WWOX perturbation (none found; RxRx3 is licence-barred for neuroscience use, README section 4); (d) a different genomic WWOX-loss signature (the GEO search found no human neural source not already in the repository census; the mouse brain sets are already worked in mouse_wwox_p17_it6_p4); (e) a seed-based approach (barred by the brief).
+
+## 3. Trial T1: matched-design calibration in JUMP cpg0016, and WWOX on the calibrated curve
+
+Data: `ALL/v1.0c/profiles_wellpos_cc_var_mad_outlier_featselect_sphering_harmony_PCA_corrected.parquet` (232 PCs, CC0 per the AWS registry yaml), downloaded once, 1.03 GB, in the scratchpad outside the repository. Reason for downloading again: the question is new (calibration on designed pairs), the IT10 file was deleted, and no metadata, extract or per-gene slice carries the profiles (the 80 MB CRISPR-only file has no compounds). CRISPR-only v1.0a and v1.0b (80 and 90 MB, same bucket) are used for the processing-stability check of the WWOX detectability only.
+
+Definitions (fixed now).
+* Knockout (KO) profile of gene g: mean over its wells in source_13 CRISPR plates (JCP2022 ids starting 8, excluding ids 800001 and 800002 which are the negative controls no-guide and non-targeting). Genes with fewer than 3 wells are excluded. Cosine is computed on the unit-normalised mean.
+* Compound profile (primary): mean over the wells of the compound on source_13 plates of type TARGET2, at least 4 wells. Universe C13: the JUMP-Target-2 compounds present there (negative-control DMSO excluded), identified by full InChIKey from `JUMP-Target-2_compound_metadata.tsv` against `compound.csv.gz`.
+* Designed pair (g, c): g in G, where G = genes of `JUMP-Target-1_crispr_metadata.tsv` that have a KO profile (144 expected), and c lists g in the `target_list` column of the JUMP-Target-2 metadata. Compounds with no listed gene in G contribute only as background.
+* Direction of the declared expectation: an inhibitor-like compound and the knockout of its target are expected to be positively similar (CPJUMP1: compound-CRISPR pairs "more positively correlated than negatively correlated"; the directionality is itself weak there). No designed pair predicts a negative similarity.
+
+Primary statistic (gene to compound, the direction in which WWOX would be queried). For each g in G with at least one designed compound: p_g = rank of the best-ranked designed compound among all N compounds of C13 by descending cosine to KO_g, divided by N. Hit_g = (p_g <= 0.10). H = mean of Hit_g. Null: 10,000 permutations that reassign each gene's set of designed compounds (same set sizes) to a KO profile drawn at random from all KO profiles; null mean and one-sided p reported. The same is reported for the negative tail (best designed compound within the 10 percent most negative), for transparency only.
+Secondary statistic (compound to gene): for each compound with a designed gene, percentile of the best-ranked designed gene KO among all KO profiles; Hit if <= 0.05; null by random reassignment of the designed gene sets.
+
+Strata by KO strength: percentile of the L2 norm of the mean KO profile among all KO profiles. S_low <50, S_mid 50-80, S_high >=80, S_near 80-95. WWOX is expected in S_high (IT10 diagnostic: 88th percentile; reported again from the new data). Expression stratum: U2OS DepMap log2(TPM+1) >= 1.
+
+Declared outcomes.
+* CALIBRATED-OVERALL: H >= 2 times the null mean and p < 0.01.
+* USABLE-AT-WWOX-STRENGTH: CALIBRATED-OVERALL, and S_high has H >= 2 times its null mean with p < 0.05, and S_near has H >= 1.5 times its null mean (S_near n >= 15; otherwise the outcome cannot be declared and is reported as UNDERPOWERED).
+* NOT-DEMONSTRATED-AT-WWOX-STRENGTH: anything else. Power is modest (about 144 genes; null hit rate near 0.19; the S_high stratum has about 29 genes), and this limit is part of the result.
+* PLK1 (a development control seen in IT10) and the 5 phenotype leads are not used to set any threshold above; PLK1 is reported inside G and with G minus PLK1.
+
+Cross-source arm (what batch costs). The primary statistic is repeated with compound profiles built from TARGET2 plates of (i) source_7 alone (same microscope model, objective, filter configuration and pixel size as source_13 per `microscope_config.csv`), (ii) every other source separately, (iii) the mean over all sources except source_13. Also: for each compound, the rank of its source_13 profile among 302 when queried with its own profile from another source (identity retrieval, top 5 percent). Expectation written now: H falls when the compound comes from another source; the size of the fall is the result.
+
+Broad panel (secondary, cross-source). Universe U_rh = JUMP compounds with at least 2 plates, annotated in the compound-annotator Repurposing Hub file with a target list, profile = mean over all COMPOUND plates of all sources. Pairs: gene in target list with a KO profile and mechanism text matching inhibitor, antagonist, blocker or depleting. Hit if the best designed compound is within the top 5 percent of U_rh. Null: random reassignment as above. Reported only as a second calibration, never to select a compound.
+
+Stability under reasonable analytical choices: variants V1 first 50 PCs; V2 each modality centred on its own mean (removes a modality offset); V3 median instead of mean over wells; V4 cross-source compounds (the arm above). The result is called stable if the classification of S_high (above or not above 1.5 times null) is the same in at least 3 of the 4 variants and the primary.
+
+WWOX arm.
+* Detectability (replaces the IT10 gate, which compared mean pairwise cosine with a null of random knockouts). For every gene, average precision of retrieving its own wells against all negative-control wells (no-guide and non-targeting) of source_13 CRISPR plates, query by cosine to each own well, permutation p from 10,000 label shuffles, Benjamini-Hochberg q across all genes. WWOX is DETECTED if q < 0.05. Also: KO norm percentile, and the mean cosine of each WWOX well to the mean of the other four (leave-one-run-out). Same on the CRISPR-only v1.0a and v1.0b files as a processing check.
+* Query lists: for WWOX, the 30 most positive and 30 most negative compounds of C13, stored for transparency. They are read only if the outcome is USABLE-AT-WWOX-STRENGTH and WWOX is DETECTED. Otherwise they are not interpreted and no candidate is reported.
+* Generic-activity checks (reported for any outcome): correlation between a compound's cosine to WWOX KO and the compound profile norm; mean overlap of the WWOX top-30 with the top-30 of 200 random genes.
+* General toxicity and proliferation: DepMap U2OS gene effect for WWOX is +0.075 (non-essential), noted; a proliferation phenotype is therefore not expected as the explanation of a WWOX profile, whereas it is a likely explanation of a profile shared with PLK1-like knockouts.
+
+Exposure and context, as read (UNVERIFIED where not): cells `U2OS-311` (plate tags); compounds on source_13 TARGET2 plates tagged 5 uM; compound concentration and duration on other sources, and CRISPR duration, are not read (production protocol text not accessed).
+
+Concrete expected value. Stated prior before computing: probability about 0.2 that USABLE-AT-WWOX-STRENGTH holds; about 0.6 that the instrument is above null overall but not at WWOX strength; about 0.2 that it is not above null at all. Whichever outcome, the result fixes the JUMP route for WWOX: USABLE would justify extending to cross-source compounds with the measured loss from the cross-source arm; the others close it with a quantified cause and a reopening condition. No outcome is evidence of compound benefit.
+
+## 4. Licences and handling
+
+Downloads go to the scratchpad, are read with `python -I`, and are not committed. Only derived tables of at most a few hundred rows and the scripts are committed. Nothing is sent to any service except key-less GET requests for public files; no e-mail address or personal data is sent.
