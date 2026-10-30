@@ -1502,7 +1502,7 @@ class LoopPropagationIT8P5(unittest.TestCase):
 
 class PerimeterOfThePredictiveResultIT8(unittest.TestCase):
     """Iteration 8, P0: the IT7 comparison result is carried with its perimeter. Positive checks only.
-    (1) the WWOX-enriched condition is four added HIF1A relations, not a test of WWOX knowledge in general;
+    (1) the condition labelled WWOX-enriched duplicated four HIF1A edges already in the external network: it tests nothing about WWOX knowledge in general;
     (2) the signature route is a positive difference from the reference that misses the registered criteria;
     (3) the verdict label reads 'no advantage demonstrated under the pre-registered criteria'."""
 
@@ -1513,14 +1513,14 @@ class PerimeterOfThePredictiveResultIT8(unittest.TestCase):
 
     def test_cards_and_needs_carry_the_four_relation_perimeter(self):
         for f in ("cards/E02_ldh_inhibition.card.json", "cards/I01_pdk_inhibition_dca_premise_seizure_glycaemia.card.json"):
-            self.assertIn("four HIF1A relations added", self.read(self.D + f), f)
+            self.assertIn("four duplicated HIF1A edges, already in the external network", self.read(self.D + f), f)
         needs = self.read(self.D + "needs/needs.json")
-        self.assertIn("the signed network and the network with four HIF1A edges added showed no added value", needs)
+        self.assertIn("the signed network and the network with four duplicated HIF1A edges, already in the external network", needs)
 
     def test_the_view_labels_say_what_the_condition_is(self):
         pt = self.read(self.D + "view/predictive_test.json")
-        self.assertIn("quattro archi HIF1A curati aggiunti contro rete solo esterna", pt)
-        self.assertIn("non è un test della conoscenza WWOX in generale", pt)
+        self.assertIn("quattro archi HIF1A duplicati (già presenti nella rete esterna) contro rete solo esterna", pt)
+        self.assertIn("non verifica la conoscenza WWOX", pt)
         src = self.read("framework/scripts/repurposing_view.py")
         self.assertIn('"pred_v_no_added_value": "nessun vantaggio dimostrato secondo i criteri preregistrati"', src)
 
