@@ -14,9 +14,9 @@
    "steps": [
     {
      "step": "P0 baseline; reconcile P3/P4 dependency, IT7 formulations, ranking counts (8 general-view items)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "P4 README section 9: condition 4 evaluated (P3 verified, 9 cases not the 256 universe, no change), 2b = IT9 P2; ranking counts general 8/partial 8/broad 1; it8-p0b reconciled (superseded by P0c, patch kept in scratchpad) and removed"
     }
    ]
   },
