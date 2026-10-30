@@ -1,0 +1,36 @@
+{
+ "event_id": "FTR-20261029-37804316-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "37804316",
+  "doi": "10.1093/brain/awad340"
+ },
+ "event_at": "2026-10-29T21:40:00Z",
+ "analysis_at": "2026-10-29T00:00:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-b, IT8 package P5. Full JATS text read end to end (Introduction, Methods, Results, Discussion); main Figures 1, 4 and 5 opened as images (files/supplement/PMID37804316/awad340f1.jpg, f4, f5). Question: which eIF2 kinase, which endpoints and which window for a protective ISR in a human CNS disease with myoclonic epilepsy; supplementary PDF and videos not opened. Staged as JSON for the integrator. Coverage vocabulary is closed: sections read only in part are recorded as not_read (understated), figures opened as images but not exhaustively are recorded as captions_only (understated).",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMC10907083_PMID37804316_europepmc_fulltext_2026-10-29.xml",
+ "source_fingerprint": "cd1bf1a7c1f6203e2727891bb57fd4a3e13fcdfc566a87d7cc7c6055519fb525",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "captions_only",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advance_it8_p5_20261029/loop1_partial_benefit/README.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "No work manifest and no verbatim_locators exist for this reading; the decisive claims are described in the loop README with section and figure references, not as locator triples. Coverage understated rather than overstated."
+ ],
+ "reread_reason": "first_read",
+ "prior_receipt": null
+}

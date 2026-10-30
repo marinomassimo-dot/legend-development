@@ -31,8 +31,9 @@
     },
     {
      "step": "P2 licences: from census to practicable corrections (primary terms, attribution fixes, reserved alternatives)",
-     "status": "TODO",
-     "owner": "scientist-d"
+     "status": "DONE",
+     "owner": "scientist-d",
+     "evidence": "f47b2802 merged; verifier defects repaired; reserved R1-R7 listed"
     }
    ]
   },
@@ -41,8 +42,9 @@
    "steps": [
     {
      "step": "P3 pharmacological qualification for a contained set of cases (both objectives)",
-     "status": "TODO",
-     "owner": "scientist-a"
+     "status": "DONE",
+     "owner": "scientist-a",
+     "evidence": "merged at 76a05c47; verifier M1-M4 repaired"
     },
     {
      "step": "P4 marginal contribution of WWOX inputs; new computational experiment only if justified",
@@ -52,8 +54,9 @@
     },
     {
      "step": "P5 scientific advance: complete loop on selected open questions (partial benefit; broad recovery)",
-     "status": "TODO",
-     "owner": "scientist-a"
+     "status": "DONE",
+     "owner": "scientist-a",
+     "evidence": "merged; two loops; verifier H1+M1-M6 repaired; 5 receipts recorded (925 chained)"
     }
    ]
   },
@@ -67,8 +70,9 @@
     },
     {
      "step": "P7 scouting and continuity without duplication (radar and hourly executions, two complementary searches)",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "scout merged + independently verified + corrected; no new monitor; radar/hourly read-only"
     }
    ]
   },

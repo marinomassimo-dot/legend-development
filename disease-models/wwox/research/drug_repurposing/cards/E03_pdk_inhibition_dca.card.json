@@ -1,301 +1,301 @@
 {
- "schema_version": 1,
- "input_sha256": "d7566600bfaf849ec233fe1c9db99f739071c222aad4bb2f394b90430fb10cc1",
- "epistemic_status": "IPOTESI",
- "canonical": false,
- "assessment": "REQUIRES_QUALIFICATION",
- "directional_summary": "UNRESOLVED",
- "endpoint_outcomes": [],
- "comparisons": [
-  {
-   "assertion_id": "DR-E03-001",
-   "status": "UNRESOLVED",
-   "reasons": [
-    "no disease assertion on this target and endpoint"
-   ]
-  },
-  {
-   "assertion_id": "DR-E03-002",
-   "status": "UNRESOLVED",
-   "reasons": [
-    "no disease assertion on this target and endpoint"
-   ]
-  }
- ],
- "abstention": null,
- "label_lookup": {
-  "status": "NOT_ATTEMPTED",
-  "coverage": "UNKNOWN",
-  "method": "UNKNOWN",
-  "queries": [],
-  "source": "UNKNOWN",
-  "retrieved_at": "UNKNOWN",
-  "client_version": "UNKNOWN",
-  "product_name": "UNKNOWN",
-  "active_ingredient": "UNKNOWN",
-  "formulation": "UNKNOWN",
-  "spl_id": "UNKNOWN",
-  "error": "UNKNOWN",
-  "coverage_limit": "UNKNOWN"
- },
- "p4_fields": {
-  "endpoint_pursued": "A WWOX-linked PDH readout that a PDK inhibitor moves: PDH activity (or PDHA1 serine phosphorylation) and pyruvate fate (labelled glucose into acetyl-CoA, citrate, lactate) in WWOX-deficient versus isogenic human neural cells; only then a functional endpoint.",
-  "functional_evidence_available": "None for WWOX at the activity level. The Lucas-Clarke study measured no pyruvate, PDH, PDK or flux. In the human knockout organoid PDK1 is lower in sign only (inside the single-gene null, p about 0.30; not a demonstrated decrease), the PDK/PDH set is not different from chance and the LDH-to-PDH ratio is not shifted (transcripts).",
-  "temporal_or_model_limit": "Fly study with no measurement in this branch; transcripts from one organoid deposit; compound statements are database rows.",
-  "cellular_context": {
-   "target_expression": "PDK isoforms are expressed in brain; the WWOX-dependent level is UNKNOWN.",
-   "cells_tissue_stage": "none measured in WWOX-deficient human neurons at the activity level.",
-   "coverage": "UNKNOWN.",
-   "limits": "The transcript negatives are exploratory and do not show PDH activity or lactate are normal; the HIF1A-to-PDK-to-PDH step is unmeasured in any WWOX-deficient human neural system."
-  }
- },
- "input": {
   "schema_version": 1,
-  "axis": "E / Lucas-Clarke follow-up: pyruvate dehydrogenase kinase",
-  "route": "BENEFICIO_PRECOCE",
-  "mission_dimensions": {
-   "track": "A",
-   "track_definition": "mission.md section 5: Track A = variant-independent WWOX loss of function; Track B = variant or allele-class specific (e.g. the Q230P missense class); Track C = repurposing, which is a method of reaching A or B, not a third lesion class",
-   "route": "BENEFICIO_PRECOCE",
-   "route_definition": "RECUPERO_PROFONDO = deep recovery of the lost function; BENEFICIO_PRECOCE = concrete partial benefit, symptomatic control or protection of function, with paediatric feasibility and time in view",
-   "route_note": "A bypass of a postulated bottleneck: partial benefit at best, and only if the bottleneck exists. Not deep recovery. Track B: none.",
-   "the_two_dimensions_are_independent": "a card keeps both: a variant-independent lever can be a partial-benefit lever, and a lesion-specific one can aim at deep recovery"
-  },
-  "candidate": {
-   "id": "P4-E-03",
-   "name": "PDK inhibition (dichloroacetate and research PDK inhibitors) as the pyruvate-oxidation branch, kept separate from what the study measured"
-  },
-  "disease_assertions": [
-   {
-    "id": "DA-LC-PDH-001",
-    "target_id": "fly PDH, PDK, pyruvate or pyruvate-to-TCA flux",
-    "endpoint": "any measurement",
-    "direction": "UNKNOWN",
-    "source": "PAPER 567 (published Lucas-Clarke 2026 article; Drosophila Alzheimer's-amyloid model; NOT WWOX EVIDENCE: a fly amyloid model, not WWOX-DEE)",
-    "locator": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json verbatim_locators.entries[44], [49]; dossier section 3 (pyruvate not reported; Fig 5D draws a TCA node with no data attached)",
-    "epistemic_status": "DATO",
-    "reading_depth": "complete_fulltext_read",
-    "context": {
-     "disease_id": "Drosophila model of Alzheimer's amyloid pathology (not WWOX-DEE)",
-     "genotype": "neuronal Wwox RNAi plus neuronal Abeta42 (Arctic) versus control RNAi plus Abeta42",
-     "species": "Drosophila melanogaster",
-     "cell_type": "adult fly head or brain (whole head for metabolomics and RNA-seq)",
-     "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
+  "input_sha256": "fc0977b331c4ea625461850c775c2d928f843e6f92c65b8de6df2db1f25ff533",
+  "epistemic_status": "IPOTESI",
+  "canonical": false,
+  "assessment": "REQUIRES_QUALIFICATION",
+  "directional_summary": "UNRESOLVED",
+  "endpoint_outcomes": [],
+  "comparisons": [
+    {
+      "assertion_id": "DR-E03-001",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "no disease assertion on this target and endpoint"
+      ]
     },
-    "measured_result_note": "The study measured no pyruvate, PDH, PDK, flux, oxygen consumption or NAD/NADH. Whether pyruvate was tested is unknown; the MetaboLights deposit is not publicly retrievable (mtbls12344.md). Pdk, Pdha, Pdhb are absent from the significant gene lists, which is not a test. The paper's own heading and abstract speak of pyruvate metabolism, but that rests on transcript pathway over-representation (KEGG, including Ldh itself; Pepck2, CG11052 and Adh lower), not on a pyruvate, PDH or PDK measurement.",
-    "receipt": "FTR-20261026-42909904-01",
-    "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
-   },
-   {
-    "id": "DA-GSE-PDK-003",
-    "target_id": "human PDK1 transcript and the PDK/PDH transcript set",
-    "endpoint": "log2 shift, knockout minus wild type",
-    "direction": "DECREASE",
-    "source": "GSE156243, the deposit of the 2021 organoid paper (PMID 34268881); exploratory set-level analysis by scientist-c",
-    "locator": "disease-models/wwox/research/drug_repurposing/gse156243/prediction_hif1a_pdk_chain_20261025.md and prediction_pyruvate_fate_20261026.md",
-    "epistemic_status": "INFERENZA",
-    "reading_depth": "queried_not_full_read",
-    "context": {
-     "disease_id": "WWOX-deficient human cerebral organoid model (engineered knockout; NOT a patient allele; no amyloid)",
-     "genotype": "WWOX knockout versus wild type (4 versus 2 libraries, one laboratory)",
-     "species": "human",
-     "cell_type": "cerebral organoid, bulk RNA",
-     "developmental_stage": "organoid, culture week 15"
-    },
-    "measured_result_note": "PDK1 -0.34, lower in sign only (the IT5 same-sets re-analysis gives -0.39, inside the single-gene null, p about 0.30; the datum is the absence of support for a raised PDK1, not a demonstrated decrease; see card I01); the PDK/PDH set +0.17 (P 0.22, not different from chance); LDH-to-PDH ratio not shifted (inside the spread of the two wild-type libraries). EXPLORATORY NEGATIVES: transcripts are not PDH activity, flux or metabolite, and do not show that PDH or lactate are normal.",
-    "evidence_scope": "COMPUTATIONAL_RESULT"
-   },
-   {
-    "id": "DA-GSE-LDH-002",
-    "target_id": "human LDHA transcript",
-    "endpoint": "log2 shift, knockout minus wild type",
-    "direction": "INCREASE",
-    "source": "GSE156243, the deposit of the 2021 organoid paper (PMID 34268881); exploratory set-level analysis by scientist-c",
-    "locator": "disease-models/wwox/research/drug_repurposing/gse156243/prediction_isr_ldh_chain_20261026.md, RESULT",
-    "epistemic_status": "INFERENZA",
-    "reading_depth": "queried_not_full_read",
-    "context": {
-     "disease_id": "WWOX-deficient human cerebral organoid model (engineered knockout; NOT a patient allele; no amyloid)",
-     "genotype": "WWOX knockout versus wild type (4 versus 2 libraries, one laboratory)",
-     "species": "human",
-     "cell_type": "cerebral organoid, bulk RNA",
-     "developmental_stage": "organoid, culture week 15"
-    },
-    "measured_result_note": "LDHA +0.75 by the script's shift (+0.91 on the authors' list, padj 5e-6). LDHA also falls with elapsed culture time in WWOX-unperturbed spheroids, so the rise is as consistent with a less advanced tissue as with a WWOX effect. Transcript, not activity.",
-    "evidence_scope": "COMPUTATIONAL_RESULT"
-   }
+    {
+      "assertion_id": "DR-E03-002",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "no disease assertion on this target and endpoint"
+      ]
+    }
   ],
-  "drug_assertions": [
-   {
-    "id": "DR-E03-001",
-    "target_id": "PDK activity (family target; rat enzyme assay) and lactate oxidation in human fibroblasts",
-    "endpoint": "pyruvate dehydrogenase kinase inhibition by dichloroacetate",
-    "direction": "DECREASE",
-    "source": "ChEMBL curated mechanism and activity rows of CHEMBL306823; Open Targets (phase 3, congenital lactic acidosis); NOT WWOX EVIDENCE",
-    "locator": "lucas_clarke_followup_20261026/chembl_mechanisms.tsv and chembl_named_activities.tsv",
-    "epistemic_status": "DATO",
-    "reading_depth": "queried_not_full_read",
-    "context": {
-     "disease_id": "enzyme assays and a congenital lactic acidosis indication (not WWOX)",
-     "genotype": "UNKNOWN",
-     "species": "rat enzyme and human fibroblast",
-     "cell_type": "enzyme and fibroblast",
-     "developmental_stage": "UNKNOWN"
-    },
-    "measured_result_note": "Curated PDK inhibitor. In the measurements retrieved the enzyme assay shows no half-maximal inhibition at the highest concentration tested and a fibroblast lactate-oxidation effect appears at a high micromolar concentration: weak in vitro. The repository's existing safety position (peripheral neuropathy, BLOCK-1) is unchanged by this card.",
-    "evidence_scope": "EXTERNAL_DATABASE_RECORD"
-   },
-   {
-    "id": "DR-E03-002",
-    "target_id": "human PDK2 enzyme activity",
-    "endpoint": "PDK2 inhibition by AZD7545 or VER-246608",
-    "direction": "DECREASE",
-    "source": "DGIdb (Drug Repurposing Hub, Guide to Pharmacology) and ChEMBL activity rows of CHEMBL3392645; NOT WWOX EVIDENCE",
-    "locator": "lucas_clarke_followup_20261026/dgidb_interactions.tsv",
-    "epistemic_status": "DATO",
-    "reading_depth": "queried_not_full_read",
-    "context": {
-     "disease_id": "enzyme assay, not a disease",
-     "genotype": "recombinant human enzymes",
-     "species": "human",
-     "cell_type": "cell-free",
-     "developmental_stage": "not applicable"
-    },
-    "measured_result_note": "Research tool compounds; no CNS, paediatric or clinical datum retrieved. The symbol PDK1 in DGIdb returns PDPK1 agents (collision documented in target_resolution.tsv); only PDK2-4 rows and UniProt-keyed ChEMBL rows are used.",
-    "evidence_scope": "EXTERNAL_DATABASE_RECORD"
-   }
-  ],
-  "p4_fields": {
-   "endpoint_pursued": "A WWOX-linked PDH readout that a PDK inhibitor moves: PDH activity (or PDHA1 serine phosphorylation) and pyruvate fate (labelled glucose into acetyl-CoA, citrate, lactate) in WWOX-deficient versus isogenic human neural cells; only then a functional endpoint.",
-   "functional_evidence_available": "None for WWOX at the activity level. The Lucas-Clarke study measured no pyruvate, PDH, PDK or flux. In the human knockout organoid PDK1 is lower in sign only (inside the single-gene null, p about 0.30; not a demonstrated decrease), the PDK/PDH set is not different from chance and the LDH-to-PDH ratio is not shifted (transcripts).",
-   "temporal_or_model_limit": "Fly study with no measurement in this branch; transcripts from one organoid deposit; compound statements are database rows.",
-   "cellular_context": {
-    "target_expression": "PDK isoforms are expressed in brain; the WWOX-dependent level is UNKNOWN.",
-    "cells_tissue_stage": "none measured in WWOX-deficient human neurons at the activity level.",
-    "coverage": "UNKNOWN.",
-    "limits": "The transcript negatives are exploratory and do not show PDH activity or lactate are normal; the HIF1A-to-PDK-to-PDH step is unmeasured in any WWOX-deficient human neural system."
-   }
-  },
-  "p4_card": {
-   "identity": "Dichloroacetate (PDK inhibitor, phase 3 per Open Targets for congenital lactic acidosis, no US label found) and research PDK inhibitors (AZD7545, VER-246608). Devimistat is NOT counted: DGIdb gives it no action type on PDK2-4.",
-   "indication_and_transfer": "WWOX-DEE only IF a pyruvate-oxidation block exists in WWOX-deficient neural cells. Nothing in the Lucas-Clarke study tests that; the branch logic (a raised Ldh pulls pyruvate away from oxidation) is indirect by two steps.",
-   "novelty_for_woree": "NOT NEW: HYP-20260709-05 and N-08 already hold this candidate (parked; dominated by the ketogenic hypothesis; peripheral-neuropathy flag).",
-   "state_of_known_roads": "HYP-20260709-05, N-08, DL-MECH-020 (HIF1A to PDK to PDH chain).",
-   "pathway_and_objective": "BENEFICIO_PRECOCE; Track A.",
-   "expected_contribution": "UNKNOWN.",
-   "mechanism": "Target: PDK1-4 (HGNC:8809-8812; UniProt Q15118, Q15119, Q15120, Q16654), NOT PDPK1 (HGNC:8816); direction: release PDH from inhibitory phosphorylation; context: no WWOX system.",
-   "sources": {
-    "internal": [
-     "HYP-20260709-05",
-     "HYP-20260709-01",
-     "N-08",
-     "DL-MECH-020",
-     "PAPER 567",
-     "gse156243/prediction_hif1a_pdk_chain_20261025.md",
-     "gse156243/prediction_pyruvate_fate_20261026.md",
-     "lucas_clarke_followup_20261026/biological_needs.md S3"
-    ],
-    "external_not_wwox_evidence": [
-     "ChEMBL curated mechanism and activity rows for dichloroacetate",
-     "DGIdb PDK2-4 rows",
-     "Open Targets phase 3 candidate"
-    ]
-   },
-   "evidence_for_and_against": {
-    "for": [
-     "The Lucas-Clarke Ldh rise is the kind of change that could draw pyruvate away from oxidation (logic only)."
-    ],
-    "against": [
-     "The study measured nothing in this branch.",
-     "PDK1 transcript is down and the PDK/PDH set is not different from chance in the human knockout organoid (exploratory transcripts).",
-     "The sima:GFP reporter (the authors' HIF1alpha homologue) is unchanged in one genotype pair; the authors name Atf4 rather than sima as primarily responsible.",
-     "Known neurotoxicity concern for the main compound; the ketogenic hypothesis dominates it on safety.",
-     "IT7 P3/P1 (exploratory, independently verified): the six-gene glycolysis/lactate module was inconclusive in an independent WWOX-loss contrast (P47T hippocampus, p 0.060, inside its null; PDK1 lower by -0.08) and the network routes showed no added value for ranking compounds (signature route: not detected, not excluded); this card's compound was outside that comparison by design. A computational result, not efficacy data."
-    ],
-    "transfer_limits": "No datum from any WWOX system at the activity or flux level."
-   },
-   "time_to_access": "UNKNOWN.",
-   "time_to_benefit": "UNKNOWN.",
-   "pharmacology": "Dichloroacetate: weak in the retrieved enzyme and cell assays; no label found; spontaneous-report counts exist but are not rates. Research PDK inhibitors: enzyme tools only.",
-   "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
-   "scope_of_checks": {
-    "support_and_replication": "No independent replication of any fly row is held; the organoid rows are one laboratory's deposit.",
-    "formal_checks": "Disease-side fly rows carry verbatim locators in the manifest (104 entries; entries 31, 49, 89, 94 SUPPORTED by a blind audit, entry 95 narrowed after an OVERSHOOT finding); the compound statements are abstract-level and unaudited.",
-    "card_inferences_owed_audit": "Statements marked INFERENZA, including every statement about what a compound would do in WWOX-deficient tissue, are OWED a blind audit by another actor."
-   },
-   "question_history": [
-    "HYP-20260709-05",
-    "mandate 2026-10-26 (Lucas-Clarke follow-up)",
-    "IT7 P6 (2026-10-29): the six-gene module did not transfer decisively to an independent WWOX-loss contrast and the network routes showed no added value and the signature route was not detected, not excluded (loop_demonstration_it7_p6_20261029/README.md; P3 numbers independently verified). Status, F/C/P position and the premise are unchanged."
-   ],
-   "predictions": "None; no engine, no score.",
-   "next_measurement": "IT7 P6 2026-10-29: the decisive measurement is unchanged and is specified in card I01 (PDHA1 Ser293 phosphorylation, activity and tracer, genotype by inhibitor); read PDK1, LDHA, LDHB, HK2, SLC2A1 and BNIP3 transcripts beside it; no computational ranking selects the compound arm. The same discriminating assay as the ketogenic hypothesis, one step finer: PDH activity and labelled-glucose fate in WWOX-deficient versus isogenic human neural cells. If PDH activity and pyruvate fate are normal, HYP-20260709-05 stays parked with a stronger negative; if pyruvate oxidation is blocked, this card and the ketogenic hypothesis are both reopened.",
-   "status": "deferred with reason",
-   "value_added": "Keeps the pyruvate branch SEPARATE from what the paper measured and records that three exploratory transcript tests are negatives that do not show normal PDH or lactate.",
-   "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven queries returned no registered WOREE interventional study; it answers seven queries against one registry on one date and a missing hit does not prove that no study exists. Not re-run for this card."
-  },
-  "not_known": [
-   "Whether PDH activity or pyruvate oxidation is altered in any WWOX-deficient human neural system.",
-   "Whether pyruvate was tested in the fly metabolomics (MTBLS12344 not publicly retrievable).",
-   "Whether the Ldh rise diverts pyruvate from oxidation at all."
-  ],
-  "evidence_against": [
-   "Three exploratory transcript tests in the one knockout organoid dataset are negative for the chain.",
-   "The paper does not name dichloroacetate or any PDH/PDK element.",
-   "IT7 P3/P1 (exploratory, independently verified): the six-gene glycolysis/lactate module was inconclusive in an independent WWOX-loss contrast (P47T hippocampus, p 0.060, inside its null; PDK1 lower by -0.08) and the network routes showed no added value for ranking compounds (signature route: not detected, not excluded); this card's compound was outside that comparison by design. A computational result, not efficacy data."
-  ],
-  "bridge_gaps_exposed": [
-   "The fly row has direction UNKNOWN by design: the study did not measure this branch, so no comparison is formed."
-  ],
-  "translation": {
-   "pediatric_suitability": "UNKNOWN",
-   "cns_exposure": "UNKNOWN",
-   "interactions": "UNKNOWN",
-   "access": "UNKNOWN",
-   "time_to_benefit": "UNKNOWN",
-   "functional_rescue": "UNKNOWN"
-  },
-  "p4_roadmap_fields": {
-   "indication_and_transfer": "WWOX-DEE only IF a pyruvate-oxidation block exists in WWOX-deficient neural cells. Nothing in the Lucas-Clarke study tests that; the branch logic (a raised Ldh pulls pyruvate away from oxidation) is indirect by two steps.",
-   "verification_scope": "{\"support_and_replication\": \"No independent replication of any fly row is held; the organoid rows are one laboratory's deposit.\", \"formal_checks\": \"Disease-side fly rows carry verbatim locators in the manifest (104 entries; entries 31, 49, 89, 94 SUPPORTED by a blind audit, entry 95 narrowed after an OVERSHOOT finding); the compound statements are abstract-level and unaudited.\", \"card_inferences_owed_audit\": \"Statements marked INFERENZA, including every statement about what a compound would do in WWOX-deficient tissue, are OWED a blind audit by another actor.\"}"
-  },
+  "abstention": null,
   "label_lookup": {
-   "status": "NOT_ATTEMPTED"
+    "status": "NOT_ATTEMPTED",
+    "coverage": "UNKNOWN",
+    "method": "UNKNOWN",
+    "queries": [],
+    "source": "UNKNOWN",
+    "retrieved_at": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "active_ingredient": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "error": "UNKNOWN",
+    "coverage_limit": "UNKNOWN"
   },
-  "card_conventions": [
-   "IPOTESI throughout; the bridge forces it. No score, rank, probability or blended index is carried.",
-   "directional_summary compares signs only where target, endpoint and every context dimension match; UNRESOLVED is a statement about the record, not about the biology.",
-   "Every disease-side row from the Drosophila article is NOT WWOX-DEE EVIDENCE; the organoid rows are exploratory transcript analyses of one deposit.",
-   "Abstract-level statements from PubMed are labelled abstract_only; none carries a receipt.",
-   "label_lookup is NOT_ATTEMPTED in the bridge: the bridge has no network. The openFDA adapter was run separately and is recorded in lucas_clarke_followup_20261026/compounds_and_sources.md.",
-   "No dose, route, schedule or paediatric suitability appears; assay concentrations of the sources are deliberately not reproduced."
-  ],
-  "no_new_reading": "No paper was newly read in full for these cards. The Lucas-Clarke reading is scientist-a's (receipt FTR-20261026-42909904-01); the compound statements are abstract-level PubMed reads and registry-database retrievals (lucas_clarke_followup_20261026/).",
-  "target_census": {
-   "dir": "disease-models/wwox/research/drug_repurposing/lucas_clarke_followup_20261026",
-   "symbols": [
-    "PDK1",
-    "PDK2",
-    "PDK3",
-    "PDK4",
-    "PDPK1",
-    "PDHA1"
-   ]
-  }
- },
- "translation": {
-  "pediatric_suitability": "UNKNOWN",
-  "cns_exposure": "UNKNOWN",
-  "interactions": "UNKNOWN",
-  "access": "UNKNOWN",
-  "time_to_benefit": "UNKNOWN",
-  "functional_rescue": "UNKNOWN"
- },
- "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
- "limits": [
-  "Technical comparison is not efficacy, safety or experimental validation.",
-  "Sources and receipt references are retained, not independently verified.",
-  "Shared sources are not independent confirmations; scores are not pooled.",
-  "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
- ]
+  "p4_fields": {
+    "endpoint_pursued": "A WWOX-linked PDH readout that a PDK inhibitor moves: PDH activity (or PDHA1 serine phosphorylation) and pyruvate fate (labelled glucose into acetyl-CoA, citrate, lactate) in WWOX-deficient versus isogenic human neural cells; only then a functional endpoint.",
+    "functional_evidence_available": "None for WWOX at the activity level. The Lucas-Clarke study measured no pyruvate, PDH, PDK or flux. In the human knockout organoid PDK1 is lower in sign only (inside the single-gene null, p about 0.30; not a demonstrated decrease), the PDK/PDH set is not different from chance and the LDH-to-PDH ratio is not shifted (transcripts).",
+    "temporal_or_model_limit": "Fly study with no measurement in this branch; transcripts from one organoid deposit; compound statements are database rows.",
+    "cellular_context": {
+      "target_expression": "PDK isoforms are expressed in brain; the WWOX-dependent level is UNKNOWN.",
+      "cells_tissue_stage": "none measured in WWOX-deficient human neurons at the activity level.",
+      "coverage": "UNKNOWN.",
+      "limits": "The transcript negatives are exploratory and do not show PDH activity or lactate are normal; the HIF1A-to-PDK-to-PDH step is unmeasured in any WWOX-deficient human neural system."
+    }
+  },
+  "input": {
+    "schema_version": 1,
+    "axis": "E / Lucas-Clarke follow-up: pyruvate dehydrogenase kinase",
+    "route": "BENEFICIO_PRECOCE",
+    "mission_dimensions": {
+      "track": "A",
+      "track_definition": "mission.md section 5: Track A = variant-independent WWOX loss of function; Track B = variant or allele-class specific (e.g. the Q230P missense class); Track C = repurposing, which is a method of reaching A or B, not a third lesion class",
+      "route": "BENEFICIO_PRECOCE",
+      "route_definition": "RECUPERO_PROFONDO = deep recovery of the lost function; BENEFICIO_PRECOCE = concrete partial benefit, symptomatic control or protection of function, with paediatric feasibility and time in view",
+      "route_note": "A bypass of a postulated bottleneck: partial benefit at best, and only if the bottleneck exists. Not deep recovery. Track B: none.",
+      "the_two_dimensions_are_independent": "a card keeps both: a variant-independent lever can be a partial-benefit lever, and a lesion-specific one can aim at deep recovery"
+    },
+    "candidate": {
+      "id": "P4-E-03",
+      "name": "PDK inhibition (dichloroacetate and research PDK inhibitors) as the pyruvate-oxidation branch, kept separate from what the study measured"
+    },
+    "disease_assertions": [
+      {
+        "id": "DA-LC-PDH-001",
+        "target_id": "fly PDH, PDK, pyruvate or pyruvate-to-TCA flux",
+        "endpoint": "any measurement",
+        "direction": "UNKNOWN",
+        "source": "PAPER 567 (published Lucas-Clarke 2026 article; Drosophila Alzheimer's-amyloid model; NOT WWOX EVIDENCE: a fly amyloid model, not WWOX-DEE)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json verbatim_locators.entries[44], [49]; dossier section 3 (pyruvate not reported; Fig 5D draws a TCA node with no data attached)",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Drosophila model of Alzheimer's amyloid pathology (not WWOX-DEE)",
+          "genotype": "neuronal Wwox RNAi plus neuronal Abeta42 (Arctic) versus control RNAi plus Abeta42",
+          "species": "Drosophila melanogaster",
+          "cell_type": "adult fly head or brain (whole head for metabolomics and RNA-seq)",
+          "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
+        },
+        "measured_result_note": "The study measured no pyruvate, PDH, PDK, flux, oxygen consumption or NAD/NADH. Whether pyruvate was tested is unknown; the MetaboLights deposit is not publicly retrievable (mtbls12344.md). Pdk, Pdha, Pdhb are absent from the significant gene lists, which is not a test. The paper's own heading and abstract speak of pyruvate metabolism, but that rests on transcript pathway over-representation (KEGG, including Ldh itself; Pepck2, CG11052 and Adh lower), not on a pyruvate, PDH or PDK measurement.",
+        "receipt": "FTR-20261026-42909904-01",
+        "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
+      },
+      {
+        "id": "DA-GSE-PDK-003",
+        "target_id": "human PDK1 transcript and the PDK/PDH transcript set",
+        "endpoint": "log2 shift, knockout minus wild type",
+        "direction": "DECREASE",
+        "source": "GSE156243, the deposit of the 2021 organoid paper (PMID 34268881); exploratory set-level analysis by scientist-c",
+        "locator": "disease-models/wwox/research/drug_repurposing/gse156243/prediction_hif1a_pdk_chain_20261025.md and prediction_pyruvate_fate_20261026.md",
+        "epistemic_status": "INFERENZA",
+        "reading_depth": "queried_not_full_read",
+        "context": {
+          "disease_id": "WWOX-deficient human cerebral organoid model (engineered knockout; NOT a patient allele; no amyloid)",
+          "genotype": "WWOX knockout versus wild type (4 versus 2 libraries, one laboratory)",
+          "species": "human",
+          "cell_type": "cerebral organoid, bulk RNA",
+          "developmental_stage": "organoid, culture week 15"
+        },
+        "measured_result_note": "PDK1 -0.34, lower in sign only (the IT5 same-sets re-analysis gives -0.39, inside the single-gene null, p about 0.30; the datum is the absence of support for a raised PDK1, not a demonstrated decrease; see card I01); the PDK/PDH set +0.17 (P 0.22, not different from chance); LDH-to-PDH ratio not shifted (inside the spread of the two wild-type libraries). EXPLORATORY NEGATIVES: transcripts are not PDH activity, flux or metabolite, and do not show that PDH or lactate are normal.",
+        "evidence_scope": "COMPUTATIONAL_RESULT"
+      },
+      {
+        "id": "DA-GSE-LDH-002",
+        "target_id": "human LDHA transcript",
+        "endpoint": "log2 shift, knockout minus wild type",
+        "direction": "INCREASE",
+        "source": "GSE156243, the deposit of the 2021 organoid paper (PMID 34268881); exploratory set-level analysis by scientist-c",
+        "locator": "disease-models/wwox/research/drug_repurposing/gse156243/prediction_isr_ldh_chain_20261026.md, RESULT",
+        "epistemic_status": "INFERENZA",
+        "reading_depth": "queried_not_full_read",
+        "context": {
+          "disease_id": "WWOX-deficient human cerebral organoid model (engineered knockout; NOT a patient allele; no amyloid)",
+          "genotype": "WWOX knockout versus wild type (4 versus 2 libraries, one laboratory)",
+          "species": "human",
+          "cell_type": "cerebral organoid, bulk RNA",
+          "developmental_stage": "organoid, culture week 15"
+        },
+        "measured_result_note": "LDHA +0.75 by the script's shift (+0.91 on the authors' list, padj 5e-6). LDHA also falls with elapsed culture time in WWOX-unperturbed spheroids, so the rise is as consistent with a less advanced tissue as with a WWOX effect. Transcript, not activity.",
+        "evidence_scope": "COMPUTATIONAL_RESULT"
+      }
+    ],
+    "drug_assertions": [
+      {
+        "id": "DR-E03-001",
+        "target_id": "PDK activity (family target; rat enzyme assay) and lactate oxidation in human fibroblasts",
+        "endpoint": "pyruvate dehydrogenase kinase inhibition by dichloroacetate",
+        "direction": "DECREASE",
+        "source": "ChEMBL curated mechanism and activity rows of CHEMBL306823; Open Targets (phase 3, congenital lactic acidosis); NOT WWOX EVIDENCE",
+        "locator": "lucas_clarke_followup_20261026/chembl_mechanisms.tsv and chembl_named_activities.tsv",
+        "epistemic_status": "DATO",
+        "reading_depth": "queried_not_full_read",
+        "context": {
+          "disease_id": "enzyme assays and a congenital lactic acidosis indication (not WWOX)",
+          "genotype": "UNKNOWN",
+          "species": "rat enzyme and human fibroblast",
+          "cell_type": "enzyme and fibroblast",
+          "developmental_stage": "UNKNOWN"
+        },
+        "measured_result_note": "Curated PDK inhibitor. In the measurements retrieved the enzyme assay shows no half-maximal inhibition at the highest concentration tested and a fibroblast lactate-oxidation effect appears at a high micromolar concentration: weak in vitro. The repository's existing safety position (peripheral neuropathy, BLOCK-1) is unchanged by this card.",
+        "evidence_scope": "EXTERNAL_DATABASE_RECORD"
+      },
+      {
+        "id": "DR-E03-002",
+        "target_id": "human PDK2 enzyme activity",
+        "endpoint": "PDK2 inhibition by AZD7545 or VER-246608",
+        "direction": "DECREASE",
+        "source": "DGIdb (Drug Repurposing Hub, Guide to Pharmacology) and ChEMBL activity rows of CHEMBL3392645; NOT WWOX EVIDENCE",
+        "locator": "lucas_clarke_followup_20261026/dgidb_interactions.tsv",
+        "epistemic_status": "DATO",
+        "reading_depth": "queried_not_full_read",
+        "context": {
+          "disease_id": "enzyme assay, not a disease",
+          "genotype": "recombinant human enzymes",
+          "species": "human",
+          "cell_type": "cell-free",
+          "developmental_stage": "not applicable"
+        },
+        "measured_result_note": "Research tool compounds; no CNS, paediatric or clinical datum retrieved. The symbol PDK1 in DGIdb returns PDPK1 agents (collision documented in target_resolution.tsv); only PDK2-4 rows and UniProt-keyed ChEMBL rows are used.",
+        "evidence_scope": "EXTERNAL_DATABASE_RECORD"
+      }
+    ],
+    "p4_fields": {
+      "endpoint_pursued": "A WWOX-linked PDH readout that a PDK inhibitor moves: PDH activity (or PDHA1 serine phosphorylation) and pyruvate fate (labelled glucose into acetyl-CoA, citrate, lactate) in WWOX-deficient versus isogenic human neural cells; only then a functional endpoint.",
+      "functional_evidence_available": "None for WWOX at the activity level. The Lucas-Clarke study measured no pyruvate, PDH, PDK or flux. In the human knockout organoid PDK1 is lower in sign only (inside the single-gene null, p about 0.30; not a demonstrated decrease), the PDK/PDH set is not different from chance and the LDH-to-PDH ratio is not shifted (transcripts).",
+      "temporal_or_model_limit": "Fly study with no measurement in this branch; transcripts from one organoid deposit; compound statements are database rows.",
+      "cellular_context": {
+        "target_expression": "PDK isoforms are expressed in brain; the WWOX-dependent level is UNKNOWN.",
+        "cells_tissue_stage": "none measured in WWOX-deficient human neurons at the activity level.",
+        "coverage": "UNKNOWN.",
+        "limits": "The transcript negatives are exploratory and do not show PDH activity or lactate are normal; the HIF1A-to-PDK-to-PDH step is unmeasured in any WWOX-deficient human neural system."
+      }
+    },
+    "p4_card": {
+      "identity": "Dichloroacetate (PDK inhibitor, phase 3 per Open Targets for congenital lactic acidosis, no US label found) and research PDK inhibitors (AZD7545, VER-246608). Devimistat is NOT counted: DGIdb gives it no action type on PDK2-4.",
+      "indication_and_transfer": "WWOX-DEE only IF a pyruvate-oxidation block exists in WWOX-deficient neural cells. Nothing in the Lucas-Clarke study tests that; the branch logic (a raised Ldh pulls pyruvate away from oxidation) is indirect by two steps.",
+      "novelty_for_woree": "NOT NEW: HYP-20260709-05 and N-08 already hold this candidate (parked; dominated by the ketogenic hypothesis; peripheral-neuropathy flag).",
+      "state_of_known_roads": "HYP-20260709-05, N-08, DL-MECH-020 (HIF1A to PDK to PDH chain).",
+      "pathway_and_objective": "BENEFICIO_PRECOCE; Track A.",
+      "expected_contribution": "UNKNOWN.",
+      "mechanism": "Target: PDK1-4 (HGNC:8809-8812; UniProt Q15118, Q15119, Q15120, Q16654), NOT PDPK1 (HGNC:8816); direction: release PDH from inhibitory phosphorylation; context: no WWOX system.",
+      "sources": {
+        "internal": [
+          "HYP-20260709-05",
+          "HYP-20260709-01",
+          "N-08",
+          "DL-MECH-020",
+          "PAPER 567",
+          "gse156243/prediction_hif1a_pdk_chain_20261025.md",
+          "gse156243/prediction_pyruvate_fate_20261026.md",
+          "lucas_clarke_followup_20261026/biological_needs.md S3"
+        ],
+        "external_not_wwox_evidence": [
+          "ChEMBL curated mechanism and activity rows for dichloroacetate",
+          "DGIdb PDK2-4 rows",
+          "Open Targets phase 3 candidate"
+        ]
+      },
+      "evidence_for_and_against": {
+        "for": [
+          "The Lucas-Clarke Ldh rise is the kind of change that could draw pyruvate away from oxidation (logic only)."
+        ],
+        "against": [
+          "The study measured nothing in this branch.",
+          "PDK1 transcript is down and the PDK/PDH set is not different from chance in the human knockout organoid (exploratory transcripts).",
+          "The sima:GFP reporter (the authors' HIF1alpha homologue) is unchanged in one genotype pair; the authors name Atf4 rather than sima as primarily responsible.",
+          "Known neurotoxicity concern for the main compound; the ketogenic hypothesis dominates it on safety.",
+          "IT7 P3/P1 (exploratory, independently verified): the six-gene glycolysis/lactate module was inconclusive in an independent WWOX-loss contrast (P47T hippocampus, p 0.060, inside its null; PDK1 lower by -0.08) and the network routes showed no added value for ranking compounds (signature route: not detected, not excluded); this card's compound was outside that comparison by design. A computational result, not efficacy data."
+        ],
+        "transfer_limits": "No datum from any WWOX system at the activity or flux level."
+      },
+      "time_to_access": "UNKNOWN.",
+      "time_to_benefit": "UNKNOWN.",
+      "pharmacology": "Dichloroacetate: weak in the retrieved enzyme and cell assays; no label found; spontaneous-report counts exist but are not rates. Research PDK inhibitors: enzyme tools only.",
+      "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+      "scope_of_checks": {
+        "support_and_replication": "No independent replication of any fly row is held; the organoid rows are one laboratory's deposit.",
+        "formal_checks": "Disease-side fly rows carry verbatim locators in the manifest (104 entries; entries 31, 49, 89, 94 SUPPORTED by a blind audit, entry 95 narrowed after an OVERSHOOT finding); the compound statements are abstract-level and unaudited.",
+        "card_inferences_owed_audit": "Statements marked INFERENZA, including every statement about what a compound would do in WWOX-deficient tissue, are OWED a blind audit by another actor."
+      },
+      "question_history": [
+        "HYP-20260709-05",
+        "mandate 2026-10-26 (Lucas-Clarke follow-up)",
+        "IT7 P6 (2026-10-29): the six-gene module did not transfer decisively to an independent WWOX-loss contrast and the network routes showed no added value and the signature route was not detected, not excluded (loop_demonstration_it7_p6_20261029/README.md; P3 numbers independently verified). Status, F/C/P position and the premise are unchanged."
+      ],
+      "predictions": "None; no engine, no score.",
+      "next_measurement": "IT7 P6 2026-10-29: the decisive measurement is unchanged and is specified in card I01 (PDHA1 Ser293 phosphorylation, activity and tracer, genotype by inhibitor); read PDK1, LDHA, LDHB, HK2, SLC2A1 and BNIP3 transcripts beside it; no computational ranking selects the compound arm. IT8 P3 2026-10-29: the probe of the genotype-by-inhibitor arm is a PDK inhibitor of nanomolar potency, not dichloroacetate (see card I01). The same discriminating assay as the ketogenic hypothesis, one step finer: PDH activity and labelled-glucose fate in WWOX-deficient versus isogenic human neural cells. If PDH activity and pyruvate fate are normal, HYP-20260709-05 stays parked with a stronger negative; if pyruvate oxidation is blocked, this card and the ketogenic hypothesis are both reopened.",
+      "status": "deferred with reason",
+      "value_added": "Keeps the pyruvate branch SEPARATE from what the paper measured and records that three exploratory transcript tests are negatives that do not show normal PDH or lactate.",
+      "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven queries returned no registered WOREE interventional study; it answers seven queries against one registry on one date and a missing hit does not prove that no study exists. Not re-run for this card."
+    },
+    "not_known": [
+      "Whether PDH activity or pyruvate oxidation is altered in any WWOX-deficient human neural system.",
+      "Whether pyruvate was tested in the fly metabolomics (MTBLS12344 not publicly retrievable).",
+      "Whether the Ldh rise diverts pyruvate from oxidation at all."
+    ],
+    "evidence_against": [
+      "Three exploratory transcript tests in the one knockout organoid dataset are negative for the chain.",
+      "The paper does not name dichloroacetate or any PDH/PDK element.",
+      "IT7 P3/P1 (exploratory, independently verified): the six-gene glycolysis/lactate module was inconclusive in an independent WWOX-loss contrast (P47T hippocampus, p 0.060, inside its null; PDK1 lower by -0.08) and the network routes showed no added value for ranking compounds (signature route: not detected, not excluded); this card's compound was outside that comparison by design. A computational result, not efficacy data."
+    ],
+    "bridge_gaps_exposed": [
+      "The fly row has direction UNKNOWN by design: the study did not measure this branch, so no comparison is formed."
+    ],
+    "translation": {
+      "pediatric_suitability": "UNKNOWN",
+      "cns_exposure": "UNKNOWN",
+      "interactions": "UNKNOWN",
+      "access": "UNKNOWN",
+      "time_to_benefit": "UNKNOWN",
+      "functional_rescue": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+      "indication_and_transfer": "WWOX-DEE only IF a pyruvate-oxidation block exists in WWOX-deficient neural cells. Nothing in the Lucas-Clarke study tests that; the branch logic (a raised Ldh pulls pyruvate away from oxidation) is indirect by two steps.",
+      "verification_scope": "{\"support_and_replication\": \"No independent replication of any fly row is held; the organoid rows are one laboratory's deposit.\", \"formal_checks\": \"Disease-side fly rows carry verbatim locators in the manifest (104 entries; entries 31, 49, 89, 94 SUPPORTED by a blind audit, entry 95 narrowed after an OVERSHOOT finding); the compound statements are abstract-level and unaudited.\", \"card_inferences_owed_audit\": \"Statements marked INFERENZA, including every statement about what a compound would do in WWOX-deficient tissue, are OWED a blind audit by another actor.\"}"
+    },
+    "label_lookup": {
+      "status": "NOT_ATTEMPTED"
+    },
+    "card_conventions": [
+      "IPOTESI throughout; the bridge forces it. No score, rank, probability or blended index is carried.",
+      "directional_summary compares signs only where target, endpoint and every context dimension match; UNRESOLVED is a statement about the record, not about the biology.",
+      "Every disease-side row from the Drosophila article is NOT WWOX-DEE EVIDENCE; the organoid rows are exploratory transcript analyses of one deposit.",
+      "Abstract-level statements from PubMed are labelled abstract_only; none carries a receipt.",
+      "label_lookup is NOT_ATTEMPTED in the bridge: the bridge has no network. The openFDA adapter was run separately and is recorded in lucas_clarke_followup_20261026/compounds_and_sources.md.",
+      "No dose, route, schedule or paediatric suitability appears; assay concentrations of the sources are deliberately not reproduced."
+    ],
+    "no_new_reading": "No paper was newly read in full for these cards. The Lucas-Clarke reading is scientist-a's (receipt FTR-20261026-42909904-01); the compound statements are abstract-level PubMed reads and registry-database retrievals (lucas_clarke_followup_20261026/).",
+    "target_census": {
+      "dir": "disease-models/wwox/research/drug_repurposing/lucas_clarke_followup_20261026",
+      "symbols": [
+        "PDK1",
+        "PDK2",
+        "PDK3",
+        "PDK4",
+        "PDPK1",
+        "PDHA1"
+      ]
+    }
+  },
+  "translation": {
+    "pediatric_suitability": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "access": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN",
+    "functional_rescue": "UNKNOWN"
+  },
+  "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+  "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+  ]
 }

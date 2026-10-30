@@ -1004,7 +1004,7 @@
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "already at the top group; it holds while no null, unfavourable or mixed WWOX-system result appears beside it | further questions: an overexpression or ceiling endpoint and a tumour-surveillance endpoint (none exists); whether the organoid radial-glia and SATB2 findings (same-laboratory human-system results, PMID 34268881 and 42397075, context only, not separate positions) hold | stored work-order statement: Quantified myelination would add a controlled row on the same need; a failure would move the card to C2 by rule; a treated-after-onset arm would show whether the word recovery may be used for that endpoint.",
    "counter_evidence_statements": "Rescue is not normalisation: unmyelinated axons per field remain about 52 versus about 26 in wild type. | The neuron-promoter vector corrected neuronal function without correcting radial-glia abnormalities (organoid arm); SATB2 mRNA overshoots wild type up to about eleven-fold in treated organoids. | No ceiling is measured and no tumour-surveillance or overexpression-toxicity endpoint exists in the mouse study; applied recombinant WWOX lowered viability of human ESC-derived cortical neurons in a preprint. More is not safer.",
-   "evaluated_on": "2026-10-29",
+   "evaluated_on": "2026-10-30",
    "evaluation_depth": "E4 card reviewed, 12 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "group": "G1",
    "intervention": "AAV9-delivered human WWOX (gene addition)",
@@ -1017,8 +1017,11 @@
    "position_in_list": 1,
    "sources_pmids": [
     "33914858",
+    "34253921",
     "36537114",
-    "42422765"
+    "42190665",
+    "42422765",
+    "42587157"
    ],
    "unit_id": "U07",
    "view": "general"
@@ -1033,7 +1036,7 @@
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no reading-limit flag (found: graphical_reading); a favourable WWOX readout carries no design-limit flag (found: one_experiment); one and the same readout meets all four | stored work-order statement: A direct measurement would turn the F2 into a row with a mechanism; a negative would add a null to the need.",
    "counter_evidence_statements": "none stated beyond the counts",
-   "evaluated_on": "2026-10-29",
+   "evaluated_on": "2026-10-30",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
    "group": "G2b",
    "intervention": "Ethosuximide",
@@ -1062,7 +1065,7 @@
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no design-limit flag (found: nonspecific_also_in_wild_type, one_experiment_N6_arm); one and the same readout meets all four | further questions: GSK3beta/IMPase engagement at the exposure reached at tolerated levels (no activity row exists for lithium) | stored work-order statement: A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays.",
    "counter_evidence_statements": "none stated beyond the counts",
-   "evaluated_on": "2026-10-29",
+   "evaluated_on": "2026-10-30",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
    "group": "G2b",
    "intervention": "Lithium",
@@ -1092,7 +1095,7 @@
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no design-limit flag (found: one_experiment_n5_slices, tool_compound_d-APV); one and the same readout meets all four | further questions: gap-junction dependence (carbenoxolone, 87 percent reduction) and bursting in heterozygote slices as rival explanations of the d-APV result | stored work-order statement: E1 decides whether an NMDAR gain is present or the dependence is permissive; a partial blocker is read only after E1, and without E1 a memantine result cannot be attributed to pyramidal receptors. A titration that cannot lower bursts inside a reachable range closes the magnesium strand.",
    "counter_evidence_statements": "none stated beyond the counts",
-   "evaluated_on": "2026-10-29",
+   "evaluated_on": "2026-10-30",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "group": "G2b",
    "intervention": "d-APV (a tool compound; the only agent with a WWOX readout) and the NMDAR/AMPAR class (memantine, perampanel, radiprodil and others are untested siblings)",
@@ -1134,7 +1137,7 @@
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: A treated wild-type arm and independent differentiations remove design limits from the favourable row (toward F1 if the other flags are absent); a layer-neuron recovery would remove the counter row; a persistent absence keeps C2.",
    "counter_evidence_statements": "none stated beyond the counts",
-   "evaluated_on": "2026-10-29",
+   "evaluated_on": "2026-10-30",
    "evaluation_depth": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract",
    "group": "G3",
    "intervention": "A51, a multi-kinase inhibitor (experimental)",
@@ -1163,7 +1166,7 @@
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays.",
    "counter_evidence_statements": "none stated beyond the counts",
-   "evaluated_on": "2026-10-29",
+   "evaluated_on": "2026-10-30",
    "evaluation_depth": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "group": "G3",
    "intervention": "Ketogenic diet (complex dietary intervention)",
@@ -1197,7 +1200,7 @@
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays.",
    "counter_evidence_statements": "none stated beyond the counts",
-   "evaluated_on": "2026-10-29",
+   "evaluated_on": "2026-10-30",
    "evaluation_depth": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
    "group": "G3",
    "intervention": "Vigabatrin and GABA-aminotransferase inactivators",
@@ -1241,7 +1244,7 @@
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise to F2/F1 with a first signed result of the intervention in a WWOX system against an untreated same-genotype comparator; criteria not met now: a signed result of the intervention in a WWOX system exists; an outside-WWOX harm or null signal stands without a favourable outside signal; the signed rows behind this position were read beyond abstract, query or unknown depth (found: 2 row(s)) | further questions: a T-type measurement in the Wwox model, to test whether the ethosuximide sensitivity is T-type mediated at all | stored work-order statement: A direct measurement would turn the F2 into a row with a mechanism; a negative would add a null to the need.",
    "counter_evidence_statements": "none stated beyond the counts",
-   "evaluated_on": "2026-10-29",
+   "evaluated_on": "2026-10-30",
    "evaluation_depth": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
    "group": "G4a",
    "intervention": "Apinocaltamide (T-type calcium channel blocker, clinical-stage)",
@@ -1271,7 +1274,7 @@
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "already at the top group; it holds while no null, unfavourable or mixed WWOX-system result appears beside it | further questions: an overexpression or ceiling endpoint and a tumour-surveillance endpoint (none exists); whether the organoid radial-glia and SATB2 findings (same-laboratory human-system results, PMID 34268881 and 42397075, context only, not separate positions) hold | stored work-order statement: Quantified myelination would add a controlled row on the same need; a failure would move the card to C2 by rule; a treated-after-onset arm would show whether the word recovery may be used for that endpoint.",
    "counter_evidence_statements": "Rescue is not normalisation: unmyelinated axons per field remain about 52 versus about 26 in wild type. | The neuron-promoter vector corrected neuronal function without correcting radial-glia abnormalities (organoid arm); SATB2 mRNA overshoots wild type up to about eleven-fold in treated organoids. | No ceiling is measured and no tumour-surveillance or overexpression-toxicity endpoint exists in the mouse study; applied recombinant WWOX lowered viability of human ESC-derived cortical neurons in a preprint. More is not safer.",
-   "evaluated_on": "2026-10-29",
+   "evaluated_on": "2026-10-30",
    "evaluation_depth": "E4 card reviewed, 12 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "group": "G1",
    "intervention": "AAV9-delivered human WWOX (gene addition)",
@@ -1284,8 +1287,11 @@
    "position_in_list": 1,
    "sources_pmids": [
     "33914858",
+    "34253921",
     "36537114",
-    "42422765"
+    "42190665",
+    "42422765",
+    "42587157"
    ],
    "unit_id": "U07",
    "view": "broad"
@@ -1300,7 +1306,7 @@
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no reading-limit flag (found: graphical_reading); a favourable WWOX readout carries no design-limit flag (found: one_experiment); one and the same readout meets all four | stored work-order statement: A direct measurement would turn the F2 into a row with a mechanism; a negative would add a null to the need.",
    "counter_evidence_statements": "none stated beyond the counts",
-   "evaluated_on": "2026-10-29",
+   "evaluated_on": "2026-10-30",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
    "group": "G2b",
    "intervention": "Ethosuximide",
@@ -1329,7 +1335,7 @@
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no design-limit flag (found: nonspecific_also_in_wild_type, one_experiment_N6_arm); one and the same readout meets all four | further questions: GSK3beta/IMPase engagement at the exposure reached at tolerated levels (no activity row exists for lithium) | stored work-order statement: A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays.",
    "counter_evidence_statements": "none stated beyond the counts",
-   "evaluated_on": "2026-10-29",
+   "evaluated_on": "2026-10-30",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
    "group": "G2b",
    "intervention": "Lithium",
@@ -1359,7 +1365,7 @@
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no design-limit flag (found: one_experiment_n5_slices, tool_compound_d-APV); one and the same readout meets all four | further questions: gap-junction dependence (carbenoxolone, 87 percent reduction) and bursting in heterozygote slices as rival explanations of the d-APV result | stored work-order statement: E1 decides whether an NMDAR gain is present or the dependence is permissive; a partial blocker is read only after E1, and without E1 a memantine result cannot be attributed to pyramidal receptors. A titration that cannot lower bursts inside a reachable range closes the magnesium strand.",
    "counter_evidence_statements": "none stated beyond the counts",
-   "evaluated_on": "2026-10-29",
+   "evaluated_on": "2026-10-30",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "group": "G2b",
    "intervention": "d-APV (a tool compound; the only agent with a WWOX readout) and the NMDAR/AMPAR class (memantine, perampanel, radiprodil and others are untested siblings)",
@@ -1401,7 +1407,7 @@
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: A treated wild-type arm and independent differentiations remove design limits from the favourable row (toward F1 if the other flags are absent); a layer-neuron recovery would remove the counter row; a persistent absence keeps C2.",
    "counter_evidence_statements": "none stated beyond the counts",
-   "evaluated_on": "2026-10-29",
+   "evaluated_on": "2026-10-30",
    "evaluation_depth": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract",
    "group": "G3",
    "intervention": "A51, a multi-kinase inhibitor (experimental)",
@@ -1430,7 +1436,7 @@
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | further questions: an overexpression or ceiling endpoint and a tumour-surveillance endpoint (none exists); whether the organoid radial-glia and SATB2 findings (same-laboratory human-system results, PMID 34268881 and 42397075, context only, not separate positions) hold | stored work-order statement: It would resolve the two glucose rows and either remove the C2 or make it a C1.",
    "counter_evidence_statements": "Rescue is not normalisation: unmyelinated axons per field remain about 52 versus about 26 in wild type. | The neuron-promoter vector corrected neuronal function without correcting radial-glia abnormalities (organoid arm); SATB2 mRNA overshoots wild type up to about eleven-fold in treated organoids. | No ceiling is measured and no tumour-surveillance or overexpression-toxicity endpoint exists in the mouse study; applied recombinant WWOX lowered viability of human ESC-derived cortical neurons in a preprint. More is not safer.",
-   "evaluated_on": "2026-10-29",
+   "evaluated_on": "2026-10-30",
    "evaluation_depth": "E4 card reviewed, 12 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "group": "G3",
    "intervention": "AAV9-delivered human WWOX (gene addition)",
@@ -1443,8 +1449,11 @@
    "position_in_list": 5,
    "sources_pmids": [
     "33914858",
+    "34253921",
     "36537114",
-    "42422765"
+    "42190665",
+    "42422765",
+    "42587157"
    ],
    "unit_id": "U07",
    "view": "partial"
@@ -1459,7 +1468,7 @@
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays.",
    "counter_evidence_statements": "none stated beyond the counts",
-   "evaluated_on": "2026-10-29",
+   "evaluated_on": "2026-10-30",
    "evaluation_depth": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "group": "G3",
    "intervention": "Ketogenic diet (complex dietary intervention)",
@@ -1493,7 +1502,7 @@
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays.",
    "counter_evidence_statements": "none stated beyond the counts",
-   "evaluated_on": "2026-10-29",
+   "evaluated_on": "2026-10-30",
    "evaluation_depth": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
    "group": "G3",
    "intervention": "Vigabatrin and GABA-aminotransferase inactivators",
@@ -1537,7 +1546,7 @@
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise to F2/F1 with a first signed result of the intervention in a WWOX system against an untreated same-genotype comparator; criteria not met now: a signed result of the intervention in a WWOX system exists; an outside-WWOX harm or null signal stands without a favourable outside signal; the signed rows behind this position were read beyond abstract, query or unknown depth (found: 2 row(s)) | further questions: a T-type measurement in the Wwox model, to test whether the ethosuximide sensitivity is T-type mediated at all | stored work-order statement: A direct measurement would turn the F2 into a row with a mechanism; a negative would add a null to the need.",
    "counter_evidence_statements": "none stated beyond the counts",
-   "evaluated_on": "2026-10-29",
+   "evaluated_on": "2026-10-30",
    "evaluation_depth": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
    "group": "G4a",
    "intervention": "Apinocaltamide (T-type calcium channel blocker, clinical-stage)",
@@ -1559,7 +1568,7 @@
   }
  ],
  "summary": {
-  "as_of": "2026-10-29",
+  "as_of": "2026-10-30",
   "classes": {
    "EXCL": "EXCLUDED FROM A SPECIFIC COMPARISON WITH REASON",
    "INSUFF": "STILL INSUFFICIENTLY EVALUATED",
@@ -1606,15 +1615,15 @@
    "coverage_generated_from": {
     "assertion_pertinence.tsv": "80d6ae7fd913c4e8",
     "card_links.json": "e29c0c4d9b416d30",
-    "cards_and_packets": "ee274724a5187afc",
+    "cards_and_packets": "87b4314f716b1c67",
     "catalog.jsonl.gz": "75652786013b931d",
     "catalog_stats.json": "da000965ec8cc051",
     "measure_next.json": "bca46967510475c5",
-    "needs.json": "d93f4b30bee5a30d",
+    "needs.json": "db48ea11415cc4ba",
     "source_artefacts.tsv": "222f20137c020b58",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
-   "receipt_ledger_lines": 920
+   "receipt_ledger_lines": 925
   },
   "inventory": {
    "all_families_by_access_category": {
@@ -2267,11 +2276,11 @@
    ],
    "exploratory_it7": "None. Not in the P3 universe (card-linked families were firewalled out of every method) and P3 tested a transcript module, not protein fate. P2: a class with a catalogued target row only for HDAC at enzyme level; no chaperone target row in ChEMBL, GtoPdb or DGIdb.",
    "inputs": {
-    "T1_cards": "bc5e747d62fcd261",
+    "T1_cards": "5c29eaf3ba8afed8",
     "T2_pertinence": "91e62b924fe30a2a",
     "T3_receipts": "52149a4b03e76932",
     "T4_needs": "9ae567485b16c45c",
-    "T5_pharmacology": "9ee43c761f1adac5",
+    "T5_pharmacology": "be0a401756e3e8c1",
     "T6_identity": "37847be0f29d1700"
    },
    "kind": "drug_class",
@@ -2517,11 +2526,11 @@
    ],
    "exploratory_it7": "None; outside the P3 universe and not a transcript question.",
    "inputs": {
-    "T1_cards": "5b1859ea6e294371",
+    "T1_cards": "761a91c40d38ddca",
     "T2_pertinence": "a99cbab9e0538513",
     "T3_receipts": "f65f2005fcac34e1",
     "T4_needs": "9ae567485b16c45c",
-    "T5_pharmacology": "03946b4a9f47c949",
+    "T5_pharmacology": "895b485de4f247a9",
     "T6_identity": "7c588eecdff99806"
    },
    "kind": "drug_class",
@@ -2735,7 +2744,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "cb8b3f84be717622",
+    "T1_cards": "cbe12546d624cc42",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "51d892749172e3bd",
     "T4_needs": "9ae567485b16c45c",
@@ -2932,7 +2941,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "89245f1b1269d0f0",
+    "T1_cards": "dc4bc9b0f062e8a7",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d1a40a526bc95810",
     "T4_needs": "9ae567485b16c45c",
@@ -3128,7 +3137,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "dc809219fc017632",
+    "T1_cards": "4d6956729b737d33",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d1a40a526bc95810",
     "T4_needs": "9ae567485b16c45c",
@@ -3357,7 +3366,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "d8d33b6cfc263f75",
+    "T1_cards": "f2cbbd5fb3f7d6a4",
     "T2_pertinence": "e8ab801c472fdfe7",
     "T3_receipts": "0efa01184c6ba643",
     "T4_needs": "aa528d3f09f497b0",
@@ -3626,7 +3635,7 @@
      "wwox_assertions": 12
     },
     "X_counter_evidence": {
-     "need_level_counter_items": 5,
+     "need_level_counter_items": 6,
      "need_level_counter_items_note": "over 2 linked need(s); items of the need record, not of the intervention",
      "opposed_action_needs": [],
      "outside_wwox_null_or_harm": 0,
@@ -3648,10 +3657,10 @@
    ],
    "exploratory_it7": "None. Gene addition is not a compound question; P2 counts it as direction-evaluable by target only (zero signed records on the need target) and P3 did not touch it.",
    "inputs": {
-    "T1_cards": "3b067085dc1ccb99",
+    "T1_cards": "8878927098965adc",
     "T2_pertinence": "59d15d3c06233d6c",
-    "T3_receipts": "57c8e74b8843e319",
-    "T4_needs": "ee27021690bd7025",
+    "T3_receipts": "cd21840b2a4e584e",
+    "T4_needs": "82b439e35fc80b6c",
     "T5_pharmacology": "c8ec35a5f404ccca",
     "T6_identity": "186bd57e16d4aa8b"
    },
@@ -3723,10 +3732,13 @@
    ],
    "pmids": [
     "33914858",
+    "34253921",
     "36537114",
-    "42422765"
+    "42190665",
+    "42422765",
+    "42587157"
    ],
-   "receipts_on_cited_pmids": 25,
+   "receipts_on_cited_pmids": 28,
    "research_objective": "broad_durable_recovery",
    "tracks": [
     "A"
@@ -3963,7 +3975,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "4db2751bd34ac04d",
+    "T1_cards": "2cfcab77bc237a82",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "4c5d7ee4b7cf4a15",
     "T4_needs": "66cebf15a40b040e",
@@ -4160,7 +4172,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "3a8a94052c670201",
+    "T1_cards": "b44f4020b5a1bd01",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "ad1b95286f64b04c",
     "T4_needs": "10a1be2af4314710",
@@ -4365,7 +4377,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "b3367b6aea2cab88",
+    "T1_cards": "5e7e37d002dbaef3",
     "T2_pertinence": "8e52657c67b7cf9d",
     "T3_receipts": "df6435097ce89f97",
     "T4_needs": "610a2835cdde8e39",
@@ -4658,7 +4670,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "3f2c724fd69ffe97",
+    "T1_cards": "f4be09fb448a4753",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "12d5e35d4ec54521",
     "T4_needs": "55ff62f47762bab4",
@@ -4877,7 +4889,7 @@
      "wwox_assertions": 0
     },
     "X_counter_evidence": {
-     "need_level_counter_items": 3,
+     "need_level_counter_items": 4,
      "need_level_counter_items_note": "over 1 linked need(s); items of the need record, not of the intervention",
      "opposed_action_needs": [],
      "outside_wwox_null_or_harm": 1,
@@ -4896,10 +4908,10 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "6b5ac63b3e9b2bcb",
+    "T1_cards": "6aa4a88ac6fcccc7",
     "T2_pertinence": "079230f81c69cb2e",
-    "T3_receipts": "057cca65f5901b9a",
-    "T4_needs": "a9ed52f13ed70b58",
+    "T3_receipts": "293d407faa57bb47",
+    "T4_needs": "932744721b4c9f86",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "57198814e915cf0b"
    },
@@ -4939,16 +4951,19 @@
     }
    ],
    "pmids": [
+    "28447936",
     "31543760",
     "34268881",
+    "37804316",
     "40825784",
     "41380592",
+    "41706892",
     "42179084",
     "42586097",
     "42771346",
     "42909904"
    ],
-   "receipts_on_cited_pmids": 24,
+   "receipts_on_cited_pmids": 26,
    "research_objective": "",
    "tracks": [
     "A"
@@ -5008,7 +5023,7 @@
       "feasibility": "No suitable dataset is held (the progenitor deposit failed its pre-declared gates; the mouse deposits hold transcripts only); availability of isogenic lines: not known.",
       "kind": "verificare un'ipotesi",
       "need": "NEED-ISR-ATTENUATION",
-      "question": "Is the ISR kinase arm active at all in WWOX-deficient neural cells? After the mouse P17 transcripts the sign is still unresolved: lower in the organoid, higher in one library per arm of the progenitor line, flat in the mouse.",
+      "question": "Is the ISR kinase arm active at all in WWOX-deficient neural cells, and is it compensatory or harmful? After the mouse P17 transcripts the sign is unresolved, and two mitochondrial-lesion precedents have opposite signs (protective in one, harmful in the other); neuronal activity alone also raises ATF4 protein without an mRNA change.",
       "would_change": "A measured elevation would give the need its first controlled WWOX-system row on the pathway; a flat result removes the premise of F3 for card E01. Transcripts alone cannot do either: the mouse analysis found no resolvable sign at about 0.3."
      },
      "notes": [],
@@ -5072,11 +5087,11 @@
      "qualification": [
       {
        "case": "Q03",
-       "contrary": "Two independent human-enzyme assays give 7 to 9.9 percent inhibition at 0.5 to 2 mM (no fitted IC50); no ChEMBL row of 28 for stiripentol shows an LDH potency; the label itself does not name LDH.",
+       "contrary": "Two readable human-enzyme assays give 7 percent at 2 mM (ChEMBL, '=') and about 10 percent at 0.5 mM (independent report), with 'Not active' at 0.5 mM in the ChEMBL document; no fitted LDH potency among the 28 filtered rows or the 58 other-type rows read (2 further rows not read); the label itself…",
        "human_exposure": "Total plasma 17 to 106 uM at about 50 mg/kg/day and free brain 0.2 to 1 uM are from a manufacturer-authored review (secondary, card E02). The US prescription label (see sources) gives no Cmax and states that protein binding is 99 percent and that the anticonvulsant mechanism in humans is unknown, n…",
        "nervous_system_data": "Brain LDH engagement is asserted by secondary sources citing Sada 2015 (abstract only here); no primary brain datum retrieved.",
-       "new_decision": "CHANGED (pertinence of the compound). Stiripentol is not carried forward as an LDH-engagement probe: the second half of the question is closed negative on primary data (two independent human-enzyme a…",
-       "quantitative": "stiripentol (racemate): GABA-A receptor; alpha-1/beta-2/gamma- [Homo sapiens; assay type B; CHEMBL1983350] EC50 = 46000 nM (n=1) | Unchecked [NA; assay type B; CHEMBL1983350] % inhibition at stated conc. (n=4; see assay text in detail) | Unchecked [NA; assay type B; CHEMBL1983350] Potency = 28183.8 nM (n=1) ## target-first human LDHA single-protein target (accession P00338): ROWS_RETRIEVED_TRUNCATED, 1000 of 1428 rows, 134 molecules with an '=' value at or below 100 nM",
+       "new_decision": "CHANGED (pertinence of the compound), worded as no enzyme-level support, not as a proof of absence. Stiripentol is not carried forward as the LDH-engagement probe of the need: the readable enzyme dat…",
+       "quantitative": "stiripentol (racemate): GABA-A receptor; alpha-1/beta-2/gamma- [Homo sapiens; assay type B; CHEMBL1983350] EC50 = 46000 nM (n=1) | Unchecked [NA; ASSAY ORGANISM Homo sapiens; assay type B; CHEMBL1983350] % inhibition at stated conc. (n=4; see assay text in detail) | Unchecked [NA; assay type B; CHEMBL1983350] Potency = 28183.8 nM (n=1) | OTHER TYPE Unchecked [NA; assay type F; CHEMBL1983350] AC50 = 630.96-631 nM (n=2) | OTHER TYPE Unchecked [NA; ASSAY ORGANISM Mus musculus; assay type B; CHEMBL…",
        "status": "changed",
        "unknown": "Primary brain concentration; LDH inhibition at tolerated exposure by any readable primary source; lactate in WWOX-deficient neural cells."
       }
@@ -5144,11 +5159,11 @@
    ],
    "exploratory_it7": "P3 (IT7, exploratory, minimum detectable effect about rho 0.15, independently verified): NO ADDED VALUE of a signed external network (rho 0.047) or a WWOX-enriched network (difference -0.0015) for ranking compounds by opposition of the six-gene module; the signature route is effect not detected, not excluded (rho 0.143, 0.007 under the 0.15 threshold, 90 pe…",
    "inputs": {
-    "T1_cards": "ac21ce5a8ff79c99",
+    "T1_cards": "9599e2da45bf9ad5",
     "T2_pertinence": "1959a04e90dbf178",
     "T3_receipts": "5c83e6a18e12f4d3",
-    "T4_needs": "47a027c08947a4d8",
-    "T5_pharmacology": "c3f4225b4fcf9c96",
+    "T4_needs": "a3face7aa0d2e275",
+    "T5_pharmacology": "07a3719a2976ec86",
     "T6_identity": "b95d3d12430d688c"
    },
    "kind": "drug_class",
@@ -5330,8 +5345,8 @@
       "feasibility": "Cell lines and fly stocks: not known. A public request draft exists in this directory, but registration or contact is not performed from here.",
       "kind": "verificare un'ipotesi",
       "need": "NEED-LACTATE-LDH",
-      "question": "Is LDH activity or lactate raised in WWOX-deficient neural cells, and does the candidate reach an inhibitory level at all?",
-      "would_change": "If lactate is not raised, the need loses its WWOX observation and E02 moves to P3 by rule; if raised and the candidate cannot reach the range, the counter tags stand and a tool-grade inhibitor would be the only way to test the node. A computational ranking of compounds does not change this: the IT7 P3 comparison found no added value for the network routes a…"
+      "question": "Is LDH activity or lactate raised in WWOX-deficient neural cells? (IT8 P3 2026-10-29: the former second half of this question, whether stiripentol reaches an inhibitory level at all, is answered without enzyme-level support on primary data and is no longer asked of it.)",
+      "would_change": "If lactate is not raised, the need loses its WWOX observation and E02 moves to P3 by rule; if raised, the node is tested with a nanomolar human-LDHA inhibitor, not with stiripentol (IT8 P3), and a stiripentol effect would be read as complex I or GABA-A pharmacology. A computational ranking of compounds does not change this: the IT7 P3 comparison found no ad…"
      },
      "notes": [],
      "objective": "partial",
@@ -5473,11 +5488,11 @@
    ],
    "exploratory_it7": "P3 (IT7, exploratory, independently verified): the same result as CMP-04 - network routes NO ADDED VALUE, signature route not detected and not excluded (weak positive counter-evidence: lower bound 0.039, top-decile hit rate 15 percent); module transfer inconclusive (null 95th percentile 0.389 and p 0.060 on the producer's draw, 0.396 and 0.0595 on the verif…",
    "inputs": {
-    "T1_cards": "a7546275cd9ce504",
+    "T1_cards": "814ba887e5d01936",
     "T2_pertinence": "4f588d870d868008",
     "T3_receipts": "b410a77ea4345508",
-    "T4_needs": "1f3ff21f143b1bc1",
-    "T5_pharmacology": "fd25db81e9dfec2f",
+    "T4_needs": "9a9cf8177df2ee44",
+    "T5_pharmacology": "dd38ed70d7c73b56",
     "T6_identity": "5947102b41b2b474"
    },
    "kind": "drug_class",
@@ -5705,8 +5720,8 @@
       "feasibility": "Cell lines and fly stocks: not known. A public request draft exists in this directory, but registration or contact is not performed from here.",
       "kind": "verificare un'ipotesi",
       "need": "NEED-LACTATE-LDH",
-      "question": "Is LDH activity or lactate raised in WWOX-deficient neural cells, and does the candidate reach an inhibitory level at all?",
-      "would_change": "If lactate is not raised, the need loses its WWOX observation and E02 moves to P3 by rule; if raised and the candidate cannot reach the range, the counter tags stand and a tool-grade inhibitor would be the only way to test the node. A computational ranking of compounds does not change this: the IT7 P3 comparison found no added value for the network routes a…"
+      "question": "Is LDH activity or lactate raised in WWOX-deficient neural cells? (IT8 P3 2026-10-29: the former second half of this question, whether stiripentol reaches an inhibitory level at all, is answered without enzyme-level support on primary data and is no longer asked of it.)",
+      "would_change": "If lactate is not raised, the need loses its WWOX observation and E02 moves to P3 by rule; if raised, the node is tested with a nanomolar human-LDHA inhibitor, not with stiripentol (IT8 P3), and a stiripentol effect would be read as complex I or GABA-A pharmacology. A computational ranking of compounds does not change this: the IT7 P3 comparison found no ad…"
      },
      "notes": [],
      "objective": "partial",
@@ -5820,10 +5835,10 @@
    ],
    "exploratory_it7": "None. A diet has no compound target row, so neither P2 method applies, and the P3 negative says nothing about it.",
    "inputs": {
-    "T1_cards": "d9856725aebab8c1",
+    "T1_cards": "5261ec5bcdec8dc6",
     "T2_pertinence": "d95f7e8dcd00a63d",
     "T3_receipts": "892bcad601ce6d84",
-    "T4_needs": "f8f8ba2014833e01",
+    "T4_needs": "5686b13c4b6923b9",
     "T5_pharmacology": "ab6539460fdd860d",
     "T6_identity": "67350028339e1f89"
    },
@@ -6097,7 +6112,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "fd16930b5bc2d7fe",
+    "T1_cards": "c0772f24c765812e",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d2e53556d365e6a4",
     "T4_needs": "77086341166ba9e5",
@@ -6289,7 +6304,7 @@
        "human_exposure": "Ethosuximide US label (excerpt appended): average plasma levels within the accepted therapeutic range of 40 to 100 mcg/mL, i.e. about 283 to 708 uM (arithmetic with molecular weight 141.2 g/mol), which brackets the only fitted ChEMBL T-type value (600 uM, target unspecified) and sits far below the…",
        "nervous_system_data": "Ethosuximide suppressed PTZ-induced seizure in Wwox-/- mice, not in wild type or heterozygote (Cheng 2020, one experiment, graphical reading, card EB-ETX-01; no drug-by-genotype test).",
        "new_decision": "UNCHANGED as to kind and position. The data add a quantitative reason why a potent tool is needed: at the labelled therapeutic range ethosuximide sits at about the one fitted T-type value (600 uM, un…",
-       "quantitative": "ethosuximide: Unchecked [NA; assay type B; CHEMBL696] IC50 = 600000 nM (n=1) | Voltage-dependent T-type calcium chann [Homo sapiens; assay type B; CHEMBL696] IC50 > 5e+06 nM (n=1) ## apinocaltamide (ACT-709478): T-type calcium channel alpha 1G subuni [Mus musculus; assay type B; CHEMBL4217292] IC50 = 6.4 nM (n=1) | Unchecked [NA; assay type B; CHEMBL4217292] IC50 = 3.4-33 nM (n=4) | Voltage-dependent L-type calcium chann [Homo sapiens; assay type B; CHEMBL4217292] IC50 = 2410 nM (n=1) | Voltage…",
+       "quantitative": "ethosuximide: Unchecked [NA; ASSAY ORGANISM Homo sapiens; assay type B; CHEMBL696] IC50 = 600000 nM (n=1) | Voltage-dependent T-type calcium chann [Homo sapiens; assay type B; CHEMBL696] IC50 > 5e+06 nM (n=1) | OTHER TYPE Voltage-dependent L-type calcium chann [Rattus norve; assay type F; CHEMBL696] AC50 > 10000 nM (n=1) | OTHER TYPE Voltage-dependent T-type calcium chann [Homo sapiens; assay type B; CHEMBL696] Activity = no value NA (n=1) ## apinocaltamide (ACT-709478): T-type calcium channel…",
        "status": "no_change_data_cannot_change",
        "unknown": "Whether the ethosuximide sensitivity is T-type mediated; ethosuximide Cav3 potency by patch clamp (the PubMed query for it returned no hit on 2026-10-29; not exhaustive)."
       }
@@ -6360,11 +6375,11 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "d681ec5ed494daad",
+    "T1_cards": "568549e75b246acf",
     "T2_pertinence": "8b0a047e9ce40434",
     "T3_receipts": "fb3ea4bd5ed30c08",
     "T4_needs": "3093063f37ac6ad7",
-    "T5_pharmacology": "c029923cc600faf0",
+    "T5_pharmacology": "5da5f03bb1490bdc",
     "T6_identity": "589dd4de63446384"
    },
    "kind": "single_compound",
@@ -6650,7 +6665,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "d9283bba4121b049",
+    "T1_cards": "5e3cc83e4ffe6f2a",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d2e53556d365e6a4",
     "T4_needs": "77086341166ba9e5",
@@ -6862,7 +6877,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "45e2c95aa2c0974f",
+    "T1_cards": "04960628f6ba4e0f",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "004bf101de3feb3f",
     "T4_needs": "e47c99263fff82cc",
@@ -7128,7 +7143,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "83be9420aec9ada2",
+    "T1_cards": "75e6f6ad0ed621da",
     "T2_pertinence": "094cb2bb03ecb864",
     "T3_receipts": "c18ac8a3f3c46677",
     "T4_needs": "89705b05a4222975",
@@ -7479,7 +7494,7 @@
        "human_exposure": "Memantine US labels (excerpt in sources): paediatric safety and effectiveness not established. Radiprodil: clinical-stage, paediatric trials selected by gain-of-function variants (IT6 P9). Brain/CSF values UNKNOWN in the label excerpts. || US label MEMANTINE HYDROCHLORIDE (HUMAN PRESCRIPTION DRUG;…",
        "nervous_system_data": "d-APV (a tool, not memantine) eliminates spontaneous bursting in the knockout slice (n=5 slices from 3 animals, card F01).",
        "new_decision": "UNCHANGED as a decision; the UNVERIFIED flag is narrowed. Both values are ChEMBL rows of ONE document (CHEMBL6083260, 2024; human GluN1/GluN2A in HEK293, whole-cell patch clamp, glutamate-induced res…",
-       "quantitative": "memantine (free base; hydrochloride is a child record): Glutamate NMDA receptor [Rattus norve; assay type F; CHEMBL807] IC50 = 1500-55000 nM (n=5) | Glutamate NMDA receptor [Rattus norve; assay type B; CHEMBL807] IC50 = 1090-55400 nM (n=5) | Glutamate NMDA receptor [Rattus norve; assay type B; CHEMBL807] % inhibition at stated conc. (n=1; see assay text in detail) | Glutamate NMDA receptor; GRIN1/GRIN2A [Homo sapiens; assay type F; CHEMBL807] IC50 = 911 nM (n=1) | Glutamate NMDA receptor; GRIN1…",
+       "quantitative": "memantine (free base; hydrochloride is a child record): Glutamate NMDA receptor [Rattus norve; ASSAY ORGANISM NA/Rattus norvegicus; assay type F; CHEMBL807] IC50 = 1500-55000 nM (n=5) | Glutamate NMDA receptor [Rattus norve; assay type B; CHEMBL807] IC50 = 1090-55400 nM (n=5) | Glutamate NMDA receptor [Rattus norve; assay type B; CHEMBL807] % inhibition at stated conc. (n=1; see assay text in detail) | Glutamate NMDA receptor; GRIN1/GRIN2A [Homo sapiens; assay type F; CHEMBL807] IC50 = 911 nM (…",
        "status": "no_change_data_cannot_change",
        "unknown": "Isolated NMDAR current in knockout slices; Mg2+- and voltage-matched potency in cortex."
       }
@@ -7561,11 +7576,11 @@
    ],
    "exploratory_it7": "None from P3 (a receptor-physiology question, not a transcript module; memantine and perampanel are card-linked and firewalled). P2: memantine and perampanel are usable by the network method (signed antagonist actions on GRIN and GRIA targets) and have no neural LINCS signature, so the signature method does not apply; the need has 179 linked records by targ…",
    "inputs": {
-    "T1_cards": "ea72e4b0dd813d4f",
+    "T1_cards": "333f6081a234722b",
     "T2_pertinence": "4744af9e5e721d31",
     "T3_receipts": "533fe34f5749cb80",
     "T4_needs": "ce38af3ca4f76c07",
-    "T5_pharmacology": "a4d2122b741a2503",
+    "T5_pharmacology": "83e16cf80f0d93c6",
     "T6_identity": "d72dab466f7f0934"
    },
    "kind": "drug_class_with_tool_evidence",
@@ -7902,7 +7917,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "0cd4a44a9906c806",
+    "T1_cards": "61f19d10c30f9d70",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "e9b6db25ee60845f",
     "T4_needs": "69a0fc27d793904a",
@@ -8043,15 +8058,15 @@
     "P_pharmacology": {
      "brain_penetration": "UNKNOWN",
      "human_exposure": "UNKNOWN",
-     "potency_with_assay_context": "NKCC1 activity: one fitted value and two single-concentration readings in ChEMBL (values in the README). Brain exposure not verified here.",
+     "potency_with_assay_context": "NKCC1 activity: one fitted value and two single-concentration readings in ChEMBL (values in the README). IT8 P3 2026-10-29: GtoPdb (human, one document) gives pIC50 5.60 for NKCC1 and 6.48 for the kidney transporter, so the drug is about 7.6 fold more potent on the renal target;",
      "qualification": [
       {
        "case": "Q08",
        "contrary": "Poor brain penetration with active efflux; renal transporter more sensitive than NKCC1; no E_GABA measurement in any Wwox system; no transcript hint of a raised NKCC1:KCC2 ratio (card).",
        "human_exposure": "Mouse: brain:plasma ratio about 0.015 to 0.02 (PMID 25449033); free brain concentrations reach the NKCC1-inhibitory range only at 10 mg/kg i.v. in mice (PMID 33279441); doses in the human diuretic range do not reach the concentrations needed to inhibit NKCC1 in hippocampal and neocortical neurons (…",
        "nervous_system_data": "A close derivative that does not inhibit NKCC1 reproduces some CNS effects (PMID 30248303), so CNS effects of bumetanide are not by themselves evidence of NKCC1 action.",
-       "new_decision": "CHANGED (feasibility of the in-vivo arm). The unknown is partly closed from primary mouse pharmacokinetics (brain:plasma about 0.015 to 0.02; free brain in range only at an i.v. dose far above the hu…",
-       "quantitative": "bumetanide: Solute carrier family 12 member 2 [Homo sapiens; assay type B; CHEMBL1072] IC50 = 1540 nM (n=1) | Solute carrier family 12 member 2 [Homo sapiens; assay type B; CHEMBL1072] % inhibition at stated conc. (n=2; see assay text in detail) | Unchecked [NA; assay type B; CHEMBL1072] % inhibition at stated conc. (n=2; see assay text in detail)",
+       "new_decision": "CHANGED (feasibility of the in-vivo arm), worded to what the abstracts support. The brain-exposure unknown is partly closed from primary mouse pharmacokinetics (brain:plasma about 0.015 to 0.02; at t…",
+       "quantitative": "bumetanide: Solute carrier family 12 member 2 [Homo sapiens; assay type B; CHEMBL1072] IC50 = 1540 nM (n=1) | Solute carrier family 12 member 2 [Homo sapiens; assay type B; CHEMBL1072] % inhibition at stated conc. (n=2; see assay text in detail) | Unchecked [NA; ASSAY ORGANISM Mus musculus; assay type B; CHEMBL1072] % inhibition at stated conc. (n=2; see assay text in detail) | OTHER TYPE Hepatic sodium/bile acid cotransporter [Homo sapiens; ASSAY ORGANISM Xenopus laevis; assay type F; CHEMBL10…",
        "status": "changed",
        "unknown": "E_GABA in Wwox-deficient neurons; human CSF bumetanide."
       }
@@ -8115,11 +8130,11 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "e2f4e463af663d23",
+    "T1_cards": "02463643b39c3c28",
     "T2_pertinence": "c124efeb8d5edb82",
-    "T3_receipts": "656792fce5356ec0",
+    "T3_receipts": "a729e52b13cb13ec",
     "T4_needs": "5f3af372617a911f",
-    "T5_pharmacology": "81ad6b8790b48e35",
+    "T5_pharmacology": "4cfc018740c85d41",
     "T6_identity": "c8a9075059e82981"
    },
    "kind": "single_compound_class_level",
@@ -8186,10 +8201,13 @@
     }
    ],
    "pmids": [
+    "25449033",
     "25765333",
+    "30248303",
     "30290271",
     "30361190",
     "32730977",
+    "33279441",
     "34268881",
     "34634460",
     "35292925",
@@ -8400,11 +8418,11 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "f9dea9f9375869ef",
+    "T1_cards": "10fa7d561d72130d",
     "T2_pertinence": "db0343ccb25dda32",
     "T3_receipts": "1e81e393df77743b",
     "T4_needs": "99f7c86d7134370b",
-    "T5_pharmacology": "362d4af0bdcf8250",
+    "T5_pharmacology": "8e5ccb8ab12853d1",
     "T6_identity": "c599af8bf00c008f"
    },
    "kind": "single_compound",
@@ -8639,7 +8657,7 @@
        "human_exposure": "Ethosuximide US label (excerpt appended): average plasma levels within the accepted therapeutic range of 40 to 100 mcg/mL, i.e. about 283 to 708 uM (arithmetic with molecular weight 141.2 g/mol), which brackets the only fitted ChEMBL T-type value (600 uM, target unspecified) and sits far below the…",
        "nervous_system_data": "Ethosuximide suppressed PTZ-induced seizure in Wwox-/- mice, not in wild type or heterozygote (Cheng 2020, one experiment, graphical reading, card EB-ETX-01; no drug-by-genotype test).",
        "new_decision": "UNCHANGED as to kind and position. The data add a quantitative reason why a potent tool is needed: at the labelled therapeutic range ethosuximide sits at about the one fitted T-type value (600 uM, un…",
-       "quantitative": "ethosuximide: Unchecked [NA; assay type B; CHEMBL696] IC50 = 600000 nM (n=1) | Voltage-dependent T-type calcium chann [Homo sapiens; assay type B; CHEMBL696] IC50 > 5e+06 nM (n=1) ## apinocaltamide (ACT-709478): T-type calcium channel alpha 1G subuni [Mus musculus; assay type B; CHEMBL4217292] IC50 = 6.4 nM (n=1) | Unchecked [NA; assay type B; CHEMBL4217292] IC50 = 3.4-33 nM (n=4) | Voltage-dependent L-type calcium chann [Homo sapiens; assay type B; CHEMBL4217292] IC50 = 2410 nM (n=1) | Voltage…",
+       "quantitative": "ethosuximide: Unchecked [NA; ASSAY ORGANISM Homo sapiens; assay type B; CHEMBL696] IC50 = 600000 nM (n=1) | Voltage-dependent T-type calcium chann [Homo sapiens; assay type B; CHEMBL696] IC50 > 5e+06 nM (n=1) | OTHER TYPE Voltage-dependent L-type calcium chann [Rattus norve; assay type F; CHEMBL696] AC50 > 10000 nM (n=1) | OTHER TYPE Voltage-dependent T-type calcium chann [Homo sapiens; assay type B; CHEMBL696] Activity = no value NA (n=1) ## apinocaltamide (ACT-709478): T-type calcium channel…",
        "status": "no_change_data_cannot_change",
        "unknown": "Whether the ethosuximide sensitivity is T-type mediated; ethosuximide Cav3 potency by patch clamp (the PubMed query for it returned no hit on 2026-10-29; not exhaustive)."
       }
@@ -8706,11 +8724,11 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "ebf2fcda715211b3",
+    "T1_cards": "14c7074920d00613",
     "T2_pertinence": "904f40dca9a2c7f5",
     "T3_receipts": "e631cecfdfb7956c",
     "T4_needs": "3093063f37ac6ad7",
-    "T5_pharmacology": "c029923cc600faf0",
+    "T5_pharmacology": "5da5f03bb1490bdc",
     "T6_identity": "61b1f388d5aca48f"
    },
    "kind": "single_compound",
@@ -8992,7 +9010,7 @@
    ],
    "exploratory_it7": "None from P3 (not the glycolysis module). P2: the need is exploration-only (direction uncertain) with 521 linked records by target association, 331 usable by the network method and 4 neural-signature records among them; association only, no direction toward a need, nothing evaluated.",
    "inputs": {
-    "T1_cards": "31357c81307022e3",
+    "T1_cards": "1ea52e1f46b78cde",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "137600edf412817c",
     "T4_needs": "a270c9373e572187",
@@ -9217,11 +9235,11 @@
    ],
    "exploratory_it7": "None. An ion has no signed target row for the network method and no neural LINCS perturbation; the P3 negative does not apply.",
    "inputs": {
-    "T1_cards": "d4d0cd99f35147d4",
+    "T1_cards": "5ea661da25d758aa",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "679405f21efb5aa3",
     "T4_needs": "ce38af3ca4f76c07",
-    "T5_pharmacology": "00596d699f5b60cd",
+    "T5_pharmacology": "219331179cc8894b",
     "T6_identity": "cb21395e2104ff08"
    },
    "kind": "nutrient_ion",
@@ -9427,7 +9445,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "97035f0ee1e2e06f",
+    "T1_cards": "c4f0da4ad25607c6",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d2e53556d365e6a4",
     "T4_needs": "77086341166ba9e5",
@@ -9564,7 +9582,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "29f1296850c18a5e",
+    "T1_cards": "dc967c932c46970b",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "c3c30203aefa55c6",
     "T4_needs": "c156cede56e9ac9b",
@@ -9699,7 +9717,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "c59e6e0b60d47497",
+    "T1_cards": "b0ff95a84e979531",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "c124efeb8d5edb82",
     "T4_needs": "97e5657152aa720b",

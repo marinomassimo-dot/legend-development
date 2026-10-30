@@ -6,7 +6,7 @@
    "words": 22
   }
  ],
- "bibliographic_title_runs": 129,
+ "bibliographic_title_runs": 142,
  "corpus_by_extension": {
   "html": 42,
   "json": 4,
@@ -52,5 +52,5 @@
    "words": 7
   }
  ],
- "unquoted_runs_within_limit": 25
+ "unquoted_runs_within_limit": 28
 }

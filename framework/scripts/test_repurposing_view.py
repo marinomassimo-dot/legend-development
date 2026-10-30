@@ -1188,6 +1188,37 @@ class RulesUntouched(unittest.TestCase):
         self.assertEqual(h, "56e4bfd5f4023311", "the F/C/P rules changed: this view only displays them (IT5 P11 verified revision; re-pinned by IT6 P2 twice: engagement nulls are counter rows, C3 and F3 share one support, reading-limit and design-limit split, partial benefit never carries F1; the pin now also covers the constants that decide positions)")
 
 
+class WaitPolls(unittest.TestCase):
+    """IT8: the browser-driven checks poll for a ready marker instead of sleeping a fixed time after the load event (a fixed 350 ms crashed the audit on a loaded host)."""
+
+    def _cdp(self, answers):
+        c = rv.Cdp.__new__(rv.Cdp)
+        calls = []
+
+        def evaluate(expr):
+            calls.append(expr)
+            return answers[min(len(calls) - 1, len(answers) - 1)]
+        c.evaluate = evaluate
+        return c, calls
+
+    def test_wait_for_polls_until_true(self):
+        c, calls = self._cdp([None, False, 0, "1"])
+        self.assertTrue(c.wait_for("x", timeout=5, interval=0.01))
+        self.assertEqual(len(calls), 4)
+
+    def test_wait_for_times_out_and_reports_it(self):
+        c, calls = self._cdp([False])
+        self.assertFalse(c.wait_for("x", timeout=0.05, interval=0.01))
+        self.assertGreater(len(calls), 1)
+
+    def test_no_fixed_sleep_left_in_the_drivers(self):
+        for name in ("repurposing_view.py", "repurposing_shareable_audit.py"):
+            src = (Path(__file__).parent / name).read_text(encoding="utf-8")
+            self.assertNotIn("setTimeout(r,350)", src, name)
+            self.assertNotIn("setTimeout(r,500)", src, name)
+        self.assertIn("wait_for(rv.CUR_READY_JS)", (Path(__file__).parent / "repurposing_shareable_audit.py").read_text(encoding="utf-8"))
+
+
 @unittest.skipUnless(HAVE_DATA, "module data absent")
 class RealViewports(unittest.TestCase):
     """Device-metrics emulation over the DevTools protocol (no sandbox flag): the page's own innerWidth and scrollWidth are measured at 360 and 390 px."""
@@ -2000,6 +2031,21 @@ class It7P7Deployment(unittest.TestCase):
             self.assertIn(needle, self.text.replace("\n", " ").replace("  ", " "))
         self.assertNotRegex(self.text, r"[Àèéìòù]")      # English, as the repository's other files
 
+
+class JournalNameIsNotACompoundName(unittest.TestCase):
+    """IT8 P5: a cited journal may share a name with a catalogue record ("Nature"). The shareable audit exempts a journal field only when
+    the exact string is a journal of the title cache; any other field or any other string still counts as a forbidden name."""
+
+    def test_exemption_covers_only_the_journal_fields_and_only_cached_journals(self):
+        import repurposing_shareable_audit as au
+        paths = {where: why for rx, why in au.EXEMPT_RE for where in [".cur.cands[].pmids[].journal", ".cur.cands[].brief.sources[].journal", ".cur.cands[].name"] if rx.search(where)}
+        self.assertIn(".cur.cands[].pmids[].journal", paths)
+        self.assertIn(".cur.cands[].brief.sources[].journal", paths)
+        self.assertNotIn(".cur.cands[].name", paths)                                  # a compound name field is never exempt
+        self.assertTrue(all("title" not in why for why in paths.values()))             # routed to the journal branch, not the title branch
+        ref = au.Reference(rv.DEFAULT_DR)
+        self.assertIn("Nature", ref.journals)                                          # the Meis2 record (PMID 42587157) is cited
+        self.assertNotIn("Nature Compound", ref.journals)                              # mutation: a string that is not a cached journal is not exempt
 
 if __name__ == "__main__":
     unittest.main(verbosity=1)

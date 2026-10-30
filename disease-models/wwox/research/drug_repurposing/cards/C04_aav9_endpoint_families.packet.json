@@ -518,7 +518,7 @@
       "TX-007"
     ],
     "predictions": "None; no engine, no score.",
-    "next_measurement": "An intermediate-level arm, defined as a fraction of the primary's higher level (never in absolute quantity), carried to 300 days with survival, weight, glucose, ECoG and quantified myelin and gliosis with an untreated-knockout arm in the same panel; and an independent replication.",
+    "next_measurement": "An intermediate-level arm, defined as a fraction of the primary's higher level (never in absolute quantity), carried to 300 days with survival, weight, glucose, ECoG and quantified myelin and gliosis with an untreated-knockout arm in the same panel; and an independent replication. IT8 P5 addition (design only): a post-onset arm in patient or isogenic organoids, recording the same organoids at week 7 or 8, giving AAV9-WWOX or an AAV9 vector control at week 10 and re-recording at weeks 12, 16 and 24, severe and milder variant classes side by side, which supplies the missing same-organoid baseline, vector control and persistence.",
     "status": "hypothesis",
     "status_reason": "Transfer to the reference genotype not established; no replication; several endpoint families are not dose-graded or not quantified.",
     "value_added": "Puts the study's other endpoint families into assertion rows, with the comparator actually run, so the join reads them and so a partial or non-graded endpoint is not collapsed into 'rescue'. The prose of P4-C-01 held them only as text.",

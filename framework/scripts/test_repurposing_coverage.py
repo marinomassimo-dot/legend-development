@@ -855,5 +855,85 @@ class LoopPropagationIT7P6(unittest.TestCase):
         self.assertEqual(res["summary"]["needs"]["per_need"][nid]["wwox_system_observations"], before + 1)
 
 
+class LoopPropagationIT8P5(unittest.TestCase):
+    """IT8 P5: two literature loops (ISR sign and kinase; recovery after onset) entered in the needs as OTHER_DISEASE_PRECEDENT.
+
+    Positive checks on the real needs file by identifier, plus two mutation tests on a COPY: removing the recorded counter-evidence
+    lowers `need_counter_evidence_items` by one in every row of that need and moves nothing else; relabelling a precedent as a WWOX
+    experiment raises `wwox_system_observations` by one (so the real value does not count it)."""
+
+    OBS = {"NEED-ISR-ATTENUATION": ("O9", "O10"), "NEED-WWOX-GENE-ADDITION": ("O4", "O5", "O6")}
+    MARK = {"NEED-ISR-ATTENUATION": "In the AFG3L2 precedent", "NEED-WWOX-GENE-ADDITION": "The post-onset precedents"}
+
+    @classmethod
+    def setUpClass(cls):
+        cls.doc = json.loads(Path(rs.DEFAULT_NEEDS).read_text(encoding="utf-8"))
+        cls.need = {n["id"]: n for n in cls.doc["needs"]}
+        cls.base = cov.build()
+        cls.tmp = tempfile.TemporaryDirectory()
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.tmp.cleanup()
+
+    def test_precedents_are_recorded_as_other_disease_precedent_and_not_counted_as_wwox_experiments(self):
+        per = self.base["summary"]["needs"]["per_need"]
+        for nid, ids in self.OBS.items():
+            obs = [o for o in self.need[nid]["observed"] if o["id"] in ids]
+            self.assertEqual(len(obs), len(ids), nid)
+            for o in obs:
+                self.assertEqual(o["evidence_scope"], "OTHER_DISEASE_PRECEDENT", (nid, o["id"]))
+                self.assertRegex(o["limits"], r"Not WWOX evidence|not WWOX evidence", (nid, o["id"]))
+            exp = sum(1 for o in self.need[nid]["observed"] if o["evidence_scope"] == "WWOX_EXPERIMENT_IN_DEE_SYSTEM")
+            self.assertEqual(per[nid]["wwox_system_observations"], exp, nid)
+            self.assertTrue(any(c.startswith(self.MARK[nid]) for c in self.need[nid]["counter_evidence"]), nid)
+            self.assertIn("advance_it8_p5_20261029", " ".join(self.need[nid]["sources"]["documents"]), nid)
+
+    def test_counter_evidence_count_in_every_priority_row_follows_the_needs_file(self):
+        rows = self.base["priorities"]["priorities"]
+        for nid in self.OBS:
+            mine = [r for r in rows if r["need"] == nid]
+            self.assertTrue(mine, nid)
+            for r in mine:
+                self.assertEqual(r["criteria"]["counter_evidence"]["need_counter_evidence_items"], len(self.need[nid]["counter_evidence"]), (nid, r["row_id"]))
+
+    def _build_copy(self, name, mutate):
+        doc = copy.deepcopy(self.doc)
+        mutate({n["id"]: n for n in doc["needs"]})
+        path = Path(self.tmp.name) / name
+        path.write_text(json.dumps(doc), encoding="utf-8")
+        return cov.build(needs_path=path)
+
+    def test_mutation_removing_the_recorded_counter_evidence_lowers_the_count_by_one_and_moves_nothing_else(self):
+        nid = "NEED-ISR-ATTENUATION"
+        res = self._build_copy("no_counter_it8.json", lambda m: m[nid].__setitem__("counter_evidence", [c for c in m[nid]["counter_evidence"] if not c.startswith(self.MARK[nid])]))
+        base = {(r["row_id"], r["need"]): r for r in self.base["priorities"]["priorities"]}
+        mut = {(r["row_id"], r["need"]): r for r in res["priorities"]["priorities"]}
+        self.assertEqual(set(base), set(mut))
+        moved = 0
+        for k, r in base.items():
+            if k[1] != nid:
+                self.assertEqual(mut[k], r, k)
+                continue
+            self.assertEqual(r["criteria"]["counter_evidence"]["need_counter_evidence_items"] - 1, mut[k]["criteria"]["counter_evidence"]["need_counter_evidence_items"], k)
+            a, b = copy.deepcopy(r), copy.deepcopy(mut[k])
+            a["criteria"]["counter_evidence"].pop("need_counter_evidence_items")
+            b["criteria"]["counter_evidence"].pop("need_counter_evidence_items")
+            self.assertEqual(a, b, k)
+            moved += 1
+        self.assertGreater(moved, 0)
+
+    def test_mutation_relabelling_a_precedent_as_an_experiment_is_visible(self):
+        nid = "NEED-WWOX-GENE-ADDITION"
+        before = self.base["summary"]["needs"]["per_need"][nid]["wwox_system_observations"]
+
+        def relabel(m):
+            for o in m[nid]["observed"]:
+                if o["id"] == "O4":
+                    o["evidence_scope"] = "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+        res = self._build_copy("relabel_it8.json", relabel)
+        self.assertEqual(res["summary"]["needs"]["per_need"][nid]["wwox_system_observations"], before + 1)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=1)

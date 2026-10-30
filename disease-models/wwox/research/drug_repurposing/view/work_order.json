@@ -43,6 +43,14 @@
     "IT7-P6": {
       "path": "loop_demonstration_it7_p6_20261029/README.md",
       "label": "IT7 P6 record: a null result through the research loop"
+    },
+    "IT8-P5": {
+      "path": "advance_it8_p5_20261029/README.md",
+      "label": "IT8 P5 record: two completed loops (ISR sign and kinase; recovery after onset)"
+    },
+    "IT8-P3": {
+      "path": "pharmacological_qualification_it8_p3_20261029/README.md",
+      "label": "IT8 P3 record: pharmacological qualification, three decisions changed"
     }
   },
   "entries": [
@@ -50,12 +58,13 @@
       "need": "NEED-WWOX-GENE-ADDITION",
       "kind": "verificare un'ipotesi",
       "question": "Does an intermediate vector level separate a threshold from a gradient, and is the benefit only prevented inside the first days of life or also recovered when treatment follows onset? No study has measured the phenotype at the day of injection.",
-      "data": "The cards' own next measurement: an intermediate arm defined as a fraction of the higher level, carried to 300 days with survival, weight, glucose, ECoG and quantified myelination; plus a pre-treatment baseline in the same animals or an age-matched cohort, and treated-after-onset arms with a same-age untreated comparator (organoids or a slower-onset model).",
+      "data": "The cards' own next measurement: an intermediate arm defined as a fraction of the higher level, carried to 300 days with survival, weight, glucose, ECoG and quantified myelination; plus a pre-treatment baseline in the same animals or an age-matched cohort, and treated-after-onset arms with a same-age untreated comparator (organoids or a slower-onset model). Added in IT8: a post-onset arm in organoids with a same-organoid baseline and an AAV9 vector control, severe and milder variant classes side by side.",
       "would_change": "Quantified myelination would add a controlled row on the same need; a failure would move the card to C2 by rule; a treated-after-onset arm would show whether the word recovery may be used for that endpoint.",
       "feasibility": "Wet-lab work in a Wwox-null mouse by a laboratory that has the vector; none known in this repository; the source laboratory is one group (the two papers share a senior author). Whether the vector is obtainable: not known.",
       "date": "2026-10-29",
       "updated_by": [
-        "P7"
+        "P7",
+        "IT8-P5"
       ],
       "cards": [
         "C01_aav9_wwox",
@@ -63,7 +72,8 @@
       ],
       "docs": [
         "P7",
-        "REVIEW"
+        "REVIEW",
+        "IT8-P5"
       ],
       "window_state": [
         {
@@ -108,13 +118,14 @@
     {
       "need": "NEED-ISR-ATTENUATION",
       "kind": "verificare un'ipotesi",
-      "question": "Is the ISR kinase arm active at all in WWOX-deficient neural cells? After the mouse P17 transcripts the sign is still unresolved: lower in the organoid, higher in one library per arm of the progenitor line, flat in the mouse.",
-      "data": "Protein and phosphorylation readouts (phospho-eIF2alpha against total, ATF4 protein, targets, translation) in isogenic WWOX-null against corrected neural lines at matched maturity, with challenge arms and kinase attribution by genetics; the decision table is fixed before the run.",
+      "question": "Is the ISR kinase arm active at all in WWOX-deficient neural cells, and is it compensatory or harmful? After the mouse P17 transcripts the sign is unresolved, and two mitochondrial-lesion precedents have opposite signs (protective in one, harmful in the other); neuronal activity alone also raises ATF4 protein without an mRNA change.",
+      "data": "Protein and phosphorylation readouts (phospho-eIF2alpha against total, ATF4 protein, targets, translation) in isogenic WWOX-null against corrected neural lines at matched maturity, with and without activity silencing, sampled before, at and after the first hyperexcitability, with challenge arms and kinase attribution by genetics; the decision table is fixed before the run.",
       "would_change": "A measured elevation would give the need its first controlled WWOX-system row on the pathway; a flat result removes the premise of F3 for card E01. Transcripts alone cannot do either: the mouse analysis found no resolvable sign at about 0.3.",
       "feasibility": "No suitable dataset is held (the progenitor deposit failed its pre-declared gates; the mouse deposits hold transcripts only); availability of isogenic lines: not known.",
       "date": "2026-10-29",
       "updated_by": [
-        "P4"
+        "P4",
+        "IT8-P5"
       ],
       "cards": [
         "E01_isr_modulators"
@@ -122,21 +133,23 @@
       "docs": [
         "P4",
         "ISR-DESIGN",
-        "REVIEW"
+        "REVIEW",
+        "IT8-P5"
       ],
-      "summary_it": "Capire se la risposta integrata allo stress è davvero attiva nelle cellule neurali prive di WWOX: oggi il segno dei trascritti è discordante.",
+      "summary_it": "Capire se la risposta integrata allo stress è attiva nelle cellule neurali prive di WWOX, se compensa o danneggia e quanto dipende dall'attività di rete: oggi il segno è discordante.",
       "feasibility_it": "Nessun insieme di dati adatto in mano; disponibilità di linee isogeniche: non nota."
     },
     {
       "need": "NEED-PDH-PYRUVATE-AXIS",
       "kind": "verificare un'ipotesi",
       "question": "Is PDH phosphorylation higher in WWOX-deficient neural cells, and does a PDK inhibitor change it in a genotype-dependent way without lowering glucose in a hypoglycaemic model?",
-      "data": "The closing condition of card I01: PDHA1 Ser293 phosphorylation, total PDH, activity and a tracer experiment, genotype by inhibitor; a glycaemia arm in the constitutive knockout, where glucose at P10 is already about 95 against about 130. IT7 P6 2026-10-29: decisive measurement unchanged; read PDK1, LDHA, LDHB, HK2, SLC2A1 and BNIP3 transcripts beside it in the same cells, so the replicated WWOX-deficient human neural contrast that the P3 comparison named as missing is also a second transfer test; no computational ranking selects the compound arm. (IT7 P6: the network routes added no value and the signature route was not detected, not excluded.)",
-      "would_change": "A genotype-by-inhibitor interaction would give the first WWOX-system row for DCA on this need; the known glucose-lowering and neuropathy signals would remain as tags. A computational ranking of compounds does not change this: the IT7 P3 comparison found no added value for the network routes and an effect not detected, not excluded for the signature route, so the kind of study and the position of the need are unchanged.",
+      "data": "The closing condition of card I01: PDHA1 Ser293 phosphorylation, total PDH, activity and a tracer experiment, genotype by inhibitor; a glycaemia arm in the constitutive knockout, where glucose at P10 is already about 95 against about 130. IT7 P6 2026-10-29: decisive measurement unchanged; read PDK1, LDHA, LDHB, HK2, SLC2A1 and BNIP3 transcripts beside it in the same cells, so the replicated WWOX-deficient human neural contrast that the P3 comparison named as missing is also a second transfer test; no computational ranking selects the compound arm. (IT7 P6: the network routes added no value and the signature route was not detected, not excluded.) IT8 P3 2026-10-29: the probe of the genotype-by-inhibitor arm is an inhibitor of nanomolar potency (curated target rows; qualifying retrieved molecules listed by id in the cycle record, not ranked, kinase pulls truncated), with dichloroacetate as the clinically known comparator, because dichloroacetate inhibits the recombinant human kinase isoforms only at about 0.1 to above 5 millimolar in curated database rows and a null at cell-attainable concentrations would be uninterpretable.",
+      "would_change": "A genotype-by-inhibitor interaction would give the first WWOX-system row for DCA on this need; the known glucose-lowering and neuropathy signals would remain as tags. A computational ranking of compounds does not change this: the IT7 P3 comparison found no added value for the network routes and an effect not detected, not excluded for the signature route, so the kind of study and the position of the need are unchanged. A null with dichloroacetate alone is not read as absence of a PDK effect.",
       "feasibility": "Human fibroblast precedent exists at abstract level; the WWOX-deficient cells (organoids from a public deposit) need an access request that exists as a draft only and is not to be filed from here.",
       "date": "2026-10-29",
       "updated_by": [
-        "IT7-P6"
+        "IT7-P6",
+        "IT8-P3"
       ],
       "cards": [
         "E03_pdk_inhibition_dca",
@@ -144,30 +157,33 @@
       ],
       "docs": [
         "REVIEW",
-        "IT7-P6"
+        "IT7-P6",
+        "IT8-P3"
       ],
-      "summary_it": "Capire se la fosforilazione di PDH è più alta nelle cellule neurali prive di WWOX e se un inibitore di PDK la modifica in modo dipendente dal genotipo.",
+      "summary_it": "Capire se la fosforilazione di PDH è più alta nelle cellule neurali prive di WWOX e se un inibitore di PDK la modifica in modo dipendente dal genotipo, usando come sonda un inibitore nanomolare e il dicloroacetato come confronto.",
       "feasibility_it": "Precedente in fibroblasti umani a livello di abstract; le cellule WWOX-deficienti richiedono una richiesta di accesso solo in bozza, non inoltrata da qui."
     },
     {
       "need": "NEED-LACTATE-LDH",
       "kind": "verificare un'ipotesi",
-      "question": "Is LDH activity or lactate raised in WWOX-deficient neural cells, and does the candidate reach an inhibitory level at all?",
-      "data": "Card E02 next measurement: lactate and LDH activity in WWOX-deficient human neural cells, the fly Ldh-alone arm and Wwox mRNA in the double line; exposure against the 42 to 500 micromolar LDH range. IT7 P6 2026-10-29: read LDHA and LDHB activity separately (LDHB was the discordant gene in the P47T transfer test); no computational ranking selects the compound arm. (IT7 P6: the network routes added no value and the signature route was not detected, not excluded.)",
-      "would_change": "If lactate is not raised, the need loses its WWOX observation and E02 moves to P3 by rule; if raised and the candidate cannot reach the range, the counter tags stand and a tool-grade inhibitor would be the only way to test the node. A computational ranking of compounds does not change this: the IT7 P3 comparison found no added value for the network routes and an effect not detected, not excluded for the signature route, so the kind of study and the position of the need are unchanged.",
+      "question": "Is LDH activity or lactate raised in WWOX-deficient neural cells? (IT8 P3 2026-10-29: the former second half of this question, whether stiripentol reaches an inhibitory level at all, is answered without enzyme-level support on primary data and is no longer asked of it.)",
+      "data": "Card E02 next measurement: lactate and LDH activity in WWOX-deficient human neural cells, the fly Ldh-alone arm and Wwox mRNA in the double line; the 42 to 500 micromolar LDH range is withdrawn as an exposure target for stiripentol (IT8 P3, below). IT7 P6 2026-10-29: read LDHA and LDHB activity separately (LDHB was the discordant gene in the P47T transfer test); no computational ranking selects the compound arm. (IT7 P6: the network routes added no value and the signature route was not detected, not excluded.) IT8 P3 2026-10-29: the compound arm is a nanomolar human-LDHA inhibitor chosen from the curated target rows (selectivity over LDHB to be established per compound); stiripentol stays only as a complex I and GABA-A comparator. Datum: enzyme data giving 7 percent inhibition at 2 millimolar and about 10 percent at 0.5 millimolar, no fitted LDH potency among its 28 filtered rows (88 unfiltered; one 2022 cell-level mouse-hepatocyte oxalate-output signal weighed, not decisive), a US label that names no LDH mechanism; the 42 to 500 micromolar figure is a secondary range.",
+      "would_change": "If lactate is not raised, the need loses its WWOX observation and E02 moves to P3 by rule; if raised, the node is tested with a nanomolar human-LDHA inhibitor, not with stiripentol (IT8 P3), and a stiripentol effect would be read as complex I or GABA-A pharmacology. A computational ranking of compounds does not change this: the IT7 P3 comparison found no added value for the network routes and an effect not detected, not excluded for the signature route, so the kind of study and the position of the need are unchanged.",
       "feasibility": "Cell lines and fly stocks: not known. A public request draft exists in this directory, but registration or contact is not performed from here.",
       "date": "2026-10-29",
       "updated_by": [
-        "IT7-P6"
+        "IT7-P6",
+        "IT8-P3"
       ],
       "cards": [
         "E02_ldh_inhibition"
       ],
       "docs": [
         "REVIEW",
-        "IT7-P6"
+        "IT7-P6",
+        "IT8-P3"
       ],
-      "summary_it": "Capire se lattato o attività LDH sono aumentati nelle cellule neurali prive di WWOX e se il candidato raggiunge un livello inibitorio.",
+      "summary_it": "Capire se lattato o attività LDH sono aumentati nelle cellule neurali prive di WWOX; per lo stiripentolo non c'è sostegno a livello enzimatico da dati primari, e il test del nodo usa un inibitore nanomolare di LDHA umana la cui selettività su LDHB è da stabilire.",
       "feasibility_it": "Linee cellulari e stock di mosca: non nota; nessuna richiesta o contatto eseguiti da qui."
     },
     {
