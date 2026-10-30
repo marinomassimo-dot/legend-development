@@ -31,7 +31,7 @@ rows = []
 def add(q, ent, et, level, d, ctx, use, res, rc, reason, loc, sp, tier, oc, guard="", proc=False):
     rows.append(dict(question_id=q, entity=ent, entity_type=et, level=level, direction=d, context=ctx,
                      usable_for_generation=use, reserved_for_evaluation=res, reason=reason, source_locator=loc,
-                     species_observed=sp, context_tier=tier, observation_class=oc, reason_class=rc, evaluation_guard=guard))
+                     species_observed=sp, context_tier=tier, observation_class=oc, reason_class=rc, evaluation_guard=guard, guard_tag="", change_ref=""))
 
 U, RI, RE = "USABLE", "RESERVED_INTERVENTION_RESPONSE", "RESERVED_ENDPOINT"
 # tiers: A human neural WWOX-loss system; B non-human neural WWOX-loss (mouse/rat); C non-neural WWOX-loss (cells, blood);
@@ -341,10 +341,148 @@ unusable("D6", "SOD1", "gene", "function", "uncertain", "Drosophila wing mitocho
          "sign runs counter-directionally in two independent non-DEE systems; no neural WWOX-loss redox measurement; target SOD1 is a need-table pathway member, not an observation", "NEED-REDOX-OXIDATIVE-STRESS:O1,O2", "fly", "D", "functional_effect")
 
 # ======================================================================================================================
+# v2 REPAIR BLOCK (verifier report 2026-10-30, H1-H4, M1-M11, L1-L9). Row ids S001..S111 are POSITIONAL AND STABLE: rows are
+# patched in place and new rows are appended (S112 onward). One rule is applied throughout (README section 3):
+#   a USABLE row encodes the PRESENCE and DIRECTION of a state (or a level-typed measurement that no reserved row is scored on);
+#   magnitudes of the endpoints that reserved rows are scored on, and every intervention-arm sentence, live in RESERVED rows.
+# ======================================================================================================================
+CH = "v2"
+def patch(sid, **kw):
+    r = rows[int(sid[1:]) - 1]
+    for k, v in kw.items():
+        assert k in r, k
+        r[k] = v
+    r["change_ref"] = (r["change_ref"] + ";" if r["change_ref"] else "") + CH
+def to_unusable(sid, rc, reason, **kw):
+    patch(sid, usable_for_generation="no", reserved_for_evaluation="no", reason_class=rc, reason=reason, **kw)
+def new(kind, *a, tag="", **kw):
+    {"u": usable, "r": reserved, "x": unusable}[kind](*a, **kw)
+    rows[-1]["guard_tag"] = tag
+    rows[-1]["change_ref"] = CH + "+new"
+SOURCE_V = "verifier 2026-10-30"
+IT7TAG, ISRTAG, HELD = "IT7_READOUT6", "ISR_SIGN_UNRESOLVED", "HELD_OUT_ENDPOINT"
+
+# ---- L1, L2, L3 --------------------------------------------------------------------------------------------------------
+patch("S001", context="human; skin fibroblast line, one donor, non-neural; p.Gln230Pro homozygote (destabilising SDR missense class); 2D culture; comparator = three reference lines (no matched control fibroblast lane)")
+patch("S003", direction="uncertain", reason="splicing outcome, not an abundance measurement: the full-length exon-6-containing product was not found and only the shorter product (504 bp, interpreted as an 89 bp exon-6 deletion) was sequenced, whereas another genotype class shows two products; no quantification, and the fate (NMD or not) of the shorter product is unknown")
+patch("S062", reason=rows[61]["reason"] + "; the three membrane-potential values are in Table 1 of the paper (not in the extracted text), direction confirmed in the text")
+# ---- M4: S004/S005 premise unread ----------------------------------------------------------------------------------------
+to_unusable("S004", "UNUSABLE_UNVERIFIED_CARRIED", "'very low WWOX by immunoblot' in both patient-line classes is carried from the IT6 P5 reading of a paper available here at abstract level only; the amount relative to wild type was not seen in the text passage; unusable until the immunoblot is read")
+to_unusable("S005", "UNUSABLE_UNVERIFIED_CARRIED", "an inference (residual function per molecule as the unmeasured variable), not an observation: it rests on 'similarly low' immunoblot signal that is itself unread (S004); the observed fact is only that the two patient-line classes differ in severity", direction="uncertain")
+# ---- H4 / P47T seizure presence -----------------------------------------------------------------------------------------
+patch("S006", reason="a partial-loss missense with residual function produces disease-level phenotype: progressive astrogliosis and chronic spontaneous generalised seizures in adults (presence only; frequency and counts are endpoints and are not carried); a different residue and domain from the reference class's SDR lesions, transfer not established")
+# ---- S007/S008/S010 (verifier section 4: assignment is structurally unambiguous; the real limit is context) -------------------
+patch("S007", reason_class="UNUSABLE_OTHER_CONTEXT", reason="protein much lower than wild type with mRNA not decreased; variant assignment re-read at full text by the verifier (structure unambiguous: P252A unstable, P282A stable); unusable because the context is stable over-expression in cancer lines (tier D), not because of the assignment")
+patch("S008", reason_class="UNUSABLE_OTHER_CONTEXT", reason="faster turnover of the unstable P252A protein by cycloheximide chase in over-expressing cancer lines (tier D); abundance and function confounded in that study")
+patch("S010", reason_class="UNUSABLE_OTHER_CONTEXT", reason="stable P282A loses tumour-suppressive function; its POLE4 interaction loss is the authors' 'appeared to', not quantified; cancer-assay-dead is not neurologically null; a carrier homozygous for both variants had no WWOX-related nervous-system disease (published single-case statement); context tier D")
+patch("S009", reason="chloroquine and ammonium chloride restore the unstable P252A protein, 3-MA does not; MG-132 raised none of the three proteins including wild type, so the proteasome negative is uninformative; the abstract names HSC70-mediated chaperone-mediated autophagy, read by the manifest as the authors' speculation. Intervention-response datum on another allele in another cell type, held out so the generator is not handed the route (GO:0061684 is a search hint, not a claim that CMA acts on Q230P). The plain state (protein lower, mRNA not decreased, faster turnover) is carried by S007 and S008")
+# ---- H2: remove intervention sentences from usable rows --------------------------------------------------------------------
+patch("S081", reason="IBA1 is the protein name of AIF1; much smaller than GFAP in the null mouse (qualitatively); presence and direction only", source_locator="NEED-NEUROINFLAMMATION-GLIA:O1,O6 (PMID 30290271, 42422765)")
+# ---- H4: strip endpoint magnitudes from usable rows ------------------------------------------------------------------------
+patch("S058", reason="presence of the phenotype only: spontaneous slice bursting in knockout slices, rare in heterozygote slices, absent in wild-type slices; hyperexcitability is also reported in the other systems of S059 and the seizure state S075; proportions and burst frequency are endpoints and are held out in S119",
+      evaluation_guard="burst frequency, seizure stage and SWD rate are held-out endpoints (see guards.tsv HELD_OUT_ENDPOINT)", guard_tag=HELD)
+patch("S059", reason="knockout organoid network activity higher than wild type at the first recording and then falling over time; patient-derived lines higher than wild type at both ages recorded, the severe class above the milder class; one laboratory; organoid-age dependent; magnitudes are endpoints and are held out in S120",
+      evaluation_guard="firing-rate and LFP magnitudes are held-out endpoints (see guards.tsv HELD_OUT_ENDPOINT)", guard_tag=HELD)
+patch("S077", reason="myelin deficit (fewer myelinated axons in corpus callosum and optic nerve at P17) arises from neuron-specific deletion; the state (hypomyelination caused by loss in neurons) is the seed; the count is an endpoint and is held out in S122",
+      evaluation_guard="myelinated-axon count, g-ratio and CC1+/PDGFRA+ counts are held-out endpoints (see guards.tsv HELD_OUT_ENDPOINT)", guard_tag=HELD)
+patch("S080", reason="GFAP-positive astrocyte reactivity higher in the Wwox-null hippocampus at two weeks and in the null brain at P20 (region not stated at P20); the earliest spike activity in the same paper starts about P14, so no glial read exists before that age; magnitudes are endpoints and are held out in S123",
+      level="pathology", observation_class="histology_area_or_count", evaluation_guard="GFAP/IBA1 area and counts are held-out endpoints (see guards.tsv HELD_OUT_ENDPOINT)", guard_tag=HELD)
+patch("S081", level="pathology", observation_class="histology_area_or_count")
+patch("S082", level="pathology", observation_class="histology_area_or_count")
+patch("S083", level="pathology", observation_class="histology_area_or_count",
+      reason="GFAP-positive and Iba1-positive cell counts per mm2 LOWER than wild type in lde/lde cortex from PND 5 (Iba1 equal at PND 5, lower after), the opposite sign from mouse null and P47T; counts are held out in S125",
+      evaluation_guard="GFAP/IBA1 area and counts are held-out endpoints (see guards.tsv HELD_OUT_ENDPOINT)", guard_tag=HELD)
+patch("S063", level="pathology", observation_class="cell_count", reason="PV-positive interneuron counts reduced in the hippocampus (dentate and CA1 marked, CA3 not); a cell count, not a protein amount; systemic null, so systemic illness is a confound")
+patch("S066", level="pathology", observation_class="cell_count", entity_type="gene", reason="NPY-positive interneuron counts reduced in the dentate gyrus only (CA1 and CA3 no obvious difference); a cell count, not a protein amount; the organoid NPY transcript is S116 (own level)")
+# ---- H1: Il6/Tnf-a ----------------------------------------------------------------------------------------------------------
+patch("S085", direction="up", context="mouse; Wwox constitutive null hippocampus two weeks, qRT-PCR n 4 v 4; and P47T knock-in cerebellum n 6 per group",
+      reason="Tnf-a transcript >1.5-fold up in the null hippocampus (p<0.05, paper section 3.3, re-read in full text 2026-10-30) and at least two-fold up in P47T cerebellum (distributions overlap the wild-type range); the registry reading 'Il6, not Tnf-a' in the needs table is wrong (see CHANGES.md); the rat is the only opposing system (glial readouts, not cytokines)",
+      source_locator="NEED-NEUROINFLAMMATION-GLIA:O1,O2 (PMID 30290271 section 3.3, 36828035)")
+patch("S086", reason="Il6 transcript >1.5-fold up in the null hippocampus (p<0.05, n 4 v 4; paper section 3.3, re-read in full text), together with Tnf-a (S085)", source_locator="NEED-NEUROINFLAMMATION-GLIA:O1 (PMID 30290271 section 3.3)")
+# ---- M1: human fibroblast PDK / PDH (35328751 re-read) --------------------------------------------------------------------------------
+FIB = "human; fibroblast line (1BR.3.N) with WWOX sgRNA CRISPR/Cas9 lentivirus, non-neural (the paper calls it knockout and also a 'downregulation' line; knockout versus knockdown depth not stated); normoxia/hypoxia x normo-/hyperglycaemia"
+patch("S030", context=FIB, reason="pyruvate dehydrogenase activity: no knockout-versus-control difference in the conditions reported (n unstated); the paper's text is ambiguous about which enzyme the kit measures in one passage; see S112 and S113 for PDK",
+      source_locator="NEED-PDH-PYRUVATE-AXIS:O2 (PMID 35328751 Results, re-read 2026-10-30)")
+patch("S031", context=FIB, source_locator="NEED-PDH-PYRUVATE-AXIS:O2 (PMID 35328751 Results, re-read 2026-10-30)")
+new("u", "Q2", "SET:PDK_FAMILY_4", "process", "activity", "unchanged", FIB, "PDK activity not changed in the knockout line (normoxia normoglycaemia), whereas hexokinase and LDH activities and lactate were higher; corrects the earlier statement 'no PDK activity measured'",
+    "PMID 35328751 Results (activity of PDK and citrate synthase not changed); NEED-PDH-PYRUVATE-AXIS:O2 statement must be corrected (CHANGES.md)", "human", "C", "protein_or_phospho")
+new("u", "Q2", "SET:PDK_FAMILY_4", "process", "expression", "up", FIB, "PDK transcript (isoform not stated in the text passage) significantly higher in the knockout line in normoxia normoglycaemia (p<0.05), with SLC2A1, SLC2A4, ENO1 and PKM2; a third human system with PDK transcript up, opposite to the lower-in-sign PDK1 in the two human neural systems (S022); non-neural",
+    "PMID 35328751 qPCR section (re-read 2026-10-30); NEED-PDH-PYRUVATE-AXIS:O2", "human", "C", "expression")
+# ---- M9: ovarian cancer paper ---------------------------------------------------------------------------------------------------------
+to_unusable("S056", "UNUSABLE_OTHER_CONTEXT", "stressor-induced context (paclitaxel, tunicamycin, thapsigargin): p-eIF2A is induced by the drugs and no WWOX-status comparison of p-eIF2A is stated; the thapsigargin-induced p-IRE-1 band was less intense in WWOX-null Vector-9 than in WWOX-overexpressing WWOX-8 cells (authors: higher ER stress with WWOX); PERK activation (band shift, total-PERK antibody) is stated not to change with WWOX status. Non-neural cancer cells; any IRE-1/PERK inhibitor result of that paper is an intervention response and would be reserved",
+            context="human; WWOX-null versus WWOX-overexpressing ovarian cancer lines (non-neural), drug-induced ER stress; full text re-read 2026-10-30", source_locator="PMID 28749468 Results (re-read 2026-10-30); DC-IT6P3:section 0.1")
+# ---- M8: excitatory amplitude -----------------------------------------------------------------------------------------------------------
+patch("S061", direction="unchanged", reason="MEAN spontaneous excitatory amplitude 23.3 v 24.7 pA: essentially unchanged; the amplitude DISTRIBUTION is shifted (S114); the means are kept apart from the distribution so that neither hides the other")
+new("u", "Q4", "STATE:EXCITATORY_SYNAPTIC_AMPLITUDE_DISTRIBUTION", "state", "function", "up", NS, "authors report an increased mEPSC amplitude distribution in knockout (KS test, large effect size on cumulative probability) and more large-amplitude sEPSCs (leftward shift) with unchanged frequency; they conclude excitation is favoured over inhibition 'primarily through an impairment in the amplitude of the inhibitory currents' (S060); full text re-read 2026-10-30",
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR:O3 (PMID 34634460 Results, Figure 4)", "mouse", "B", "functional_effect")
+# ---- M2, M5: organoid GABAergic rows, one standard -------------------------------------------------------------------------------------------
+STD = "STANDARD (README 3a): a transcript row from the 4v2 organoid contrast is usable only if a second, independent system agrees in sign or the row is at protein/function level; single-system composition-confounded organoid rows are demoted. "
+to_unusable("S067", "UNUSABLE_MATURITY_OR_COMPOSITION", STD + "GAD1 transcript about 8.5 v 1: opposite to the mouse protein, single system, composition (neurons lost, radial glia gained in the engineered knockout); wild-type GAD1 values are 3.46 and 0.20 (two libraries)", level="expression", evaluation_guard="", guard_tag="")
+to_unusable("S068", "UNUSABLE_MATURITY_OR_COMPOSITION", STD + "GABRB2 about a quarter of wild type; no second system", evaluation_guard="")
+to_unusable("S069", "UNUSABLE_MATURITY_OR_COMPOSITION", STD + "GABRB3 about half of wild type; no second system", evaluation_guard="")
+new("x", "Q4", "GAD1", "protein", "protein", "up", "human; WWOX-knockout cerebral organoids week 8-15; GAD67 surface area per nucleus (immunostaining)", "UNUSABLE_MATURITY_OR_COMPOSITION",
+    STD + "GAD67 area higher in knockout, opposite to the mouse western (S064); single system, composition-confounded; protein level kept apart from the GAD1 transcript (S067)", "NEED-INHIBITORY-HYPOFUNCTION:O3 (PMID 34268881)", "human", "A", "protein_or_phospho")
+new("u", "Q4", "NPY", "gene", "expression", "down", "human; WWOX-knockout cerebral organoids week 8-15, deposited differential-expression table", "NPY transcript strongly down (log2 -6.24); agrees in sign with the mouse NPY-positive cell count (S066), so the cross-system rule of README 3a admits it; the value is in the deposited table, not in the paper text",
+    "NEED-INHIBITORY-HYPOFUNCTION:O3 (PMID 34268881 deposited table)", "human", "A", "expression")
+# ---- M2 (Q2 organoid): rule stated, cross-system sign agreement note on module genes --------------------------------------------------------
+for sid in ("S017","S018","S019","S020","S021"):
+    patch(sid, reason=rows[int(sid[1:])-1]["reason"] + "; admitted under README 3a because the hNPC system agrees in sign (a maturity rival is still stated in the question)")
+# ---- M11 / guards: machine tags ------------------------------------------------------------------------------------------------------------
+for sid in ("S017","S018","S019","S020","S021","S022","S025","S026","S027","S029"):
+    patch(sid, guard_tag=IT7TAG)
+patch("S027", reason="six-gene module +0.329, inside its null (95th percentile 0.389; exact one-sided p 0.060); registered IT7 verdict INCONCLUSIVE; LDHA +0.48, HK2 +0.66, SLC2A1 +0.18 in the build direction, LDHB -0.10 against")
+for sid in ("S040","S041","S042","S043","S044","S046","S047"):
+    patch(sid, guard_tag=ISRTAG)
+patch("S045", guard_tag=ISRTAG)
+# ---- M3 / H3: GSK3B -> Q7, MYC -> Q6 -------------------------------------------------------------------------------------------------------------
+patch("S104", question_id="Q7", usable_for_generation="yes", reserved_for_evaluation="no", reason_class="USABLE",
+      reason="inhibitory Ser9 phosphorylation lower with total GSK3B unchanged in all three regions (cerebellum, hippocampus, cortex) at P20; western images, n=3, one laboratory; kinase activity not measured; any pharmacological response of this readout is an intervention response and is held out (not carried here). WWOX docking inhibition of GSK3B in SH-SY5Y is S9-independent (NEED-GSK3B-DEREPRESSION:O2), so pSer9 down does not by itself mean more kinase activity",
+      source_locator="NEED-GSK3B-DEREPRESSION:O1 (PMID 32000863; IT6 P3 row 12, blot images)")
+patch("S100", question_id="Q6", usable_for_generation="yes", reserved_for_evaluation="no", reason_class="USABLE",
+      reason="MYC the top significantly upregulated gene in WWOX-deficient radial glia (single-cell RNA-seq, within-cell-type contrast) and up in radial-glia pseudobulk in the engineered knockout and both patient-derived lines (logFC about 1.8, 1.65, 1.6); abstract-level confirmation only here; the radial-glia cell-cycle panel has no error bars and organoid numbers are small, so maturity within radial glia is not excluded",
+      source_locator="NEED-MYC-PROGENITOR-PROLIFERATION:O1,O2 (PMID 42397075)")
+patch("S101", question_id="Q6", usable_for_generation="yes", reserved_for_evaluation="no", reason_class="USABLE",
+      reason="MYC-positive fraction of SOX2-positive cells higher than wild type in the engineered knockout and in both patient-derived lines at week 16 (direction in all three); the fractions are endpoints of a reserved intervention row and are held out in S118; patient lines sit close to wild type in composition, which is why it is read differently from the bulk Wnt rows",
+      source_locator="NEED-MYC-PROGENITOR-PROLIFERATION:O2 (PMID 42397075)")
+patch("S102", question_id="Q6")
+new("x", "Q6", "STATE:RADIAL_GLIA_CELL_CYCLE_SHIFT", "state", "pathology", "uncertain", "human; WWOX-deficient radial glia, organoid single-cell RNA-seq", "UNUSABLE_NOT_EVALUABLE",
+    "radial glia shifted toward S and G2M (log2 fold-change about +0.77 and +0.52; M about -0.39) without error bars or significance markers, and the pseudotime density curves are near-superimposed", "NEED-MYC-PROGENITOR-PROLIFERATION:O1 (PMID 42397075)", "human", "A", "expression")
+new("r", "Q6", "STATE:RADIAL_GLIA_MYC_FRACTION_MAGNITUDES", "state", "pathology", "up", "human; engineered knockout and two patient-derived organoid lines, week 16", "magnitudes of the MYC+ fraction of SOX2+ cells (about 60, 50 and 55 percent v about 20 percent in wild type) that the A51 arm is scored on; held out as endpoint baseline",
+    "NEED-MYC-PROGENITOR-PROLIFERATION:O2 (PMID 42397075)", "human", "A", "protein_or_phospho", rc=RE)
+# ---- baseline magnitude rows (reserved) ---------------------------------------------------------------------------------------------------------
+new("r", "Q4", "STATE:NETWORK_HYPEREXCITABILITY", "state", "pathology", "up", NS, "slice bursting proportions (36 of 42 knockout, 4 of 23 heterozygote, 0 of 11 wild-type slices) and burst frequency: endpoint baseline of the Q4 pharmacology rows", "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR:O1 (PMID 34634460)", "mouse", "B", "functional_effect", rc=RE, tag=HELD)
+new("r", "Q4", "STATE:NETWORK_HYPEREXCITABILITY", "state", "pathology", "up", "human; WOREE and SCAR12 patient organoids and knockout organoids", "network-activity magnitudes: WOREE about 3-fold above SCAR12 at week 16, both above wild type; add-back brings them to wild-type-like (see S015); endpoint baseline", "CM-IT7P4:Q14:ORG_KO,ORG_PW,ORG_PS", "human", "A", "functional_effect", rc=RE, tag=HELD)
+new("r", "Q4", "STATE:SEIZURE_BURDEN", "state", "pathology", "up", "mouse; Wwox-null spike-wave discharges about 0.635 per hour v about 0.03 in wild type (about 2-3 weeks); AAV9 high dose about 0.13 (S014)", "SWD rate baseline and untreated-versus-wild-type magnitude: the endpoint that S014 and the Q4 pharmacology rows are scored on (source paper not opened by the verifier)", "NEED-WWOX-GENE-ADDITION:O2 (PMID 42422765)", "mouse", "B", "functional_effect", rc=RE, tag=HELD)
+new("r", "Q5", "GO:0042552", "process", "pathology", "down", "mouse; Synapsin-Cre neuron-specific deletion, corpus callosum P17", "about 3.3 times fewer myelinated axons (authors' counts; abstract-level): endpoint magnitude held out", "NEED-MYELINATION:O1 (PMID 33914858)", "mouse", "B", "functional_effect", rc=RE, tag=HELD)
+new("r", "Q5", "GFAP", "protein", "pathology", "up", "mouse; Wwox-null hippocampus two weeks (area fraction up about 30 percent whole hippocampus; 36 and 53 percent in CA1 and CA3) and null brain P20 (GFAP area about 3.7 v 23.7 percent; Iba1 about 4.5 v 7.6 percent)", "GFAP/Iba1 area magnitudes: endpoint baseline of the add-back gliosis row S092", "NEED-NEUROINFLAMMATION-GLIA:O1,O6 (PMID 30290271, 42422765)", "mouse", "B", "histology_area_or_count", rc=RE, tag=HELD)
+new("r", "Q5", "AIF1", "protein", "pathology", "uncertain", "mouse; Wwox-null, neuron-restricted AAV9-WWOX arms (supplement S7F)", "the Iba1 panel shows no significant difference among arms: add-back arm result, held out (moved out of the usable AIF1 row S081)", "NEED-NEUROINFLAMMATION-GLIA:O3 (PMID 42422765)", "mouse", "B", "histology_area_or_count", rc=RI, tag=HELD)
+new("r", "Q5", "GFAP", "protein", "pathology", "down", "rat; lde/lde cortex PND 5-21", "GFAP-positive cells per mm2 about 470 v 255 (PND 5) to 1570 v 850 as printed; Iba1 equal at PND 5 then lower: endpoint-type magnitudes held out for consistency with S092", "NEED-NEUROINFLAMMATION-GLIA:O4 (PMID 31340538)", "rat", "B", "histology_area_or_count", rc=RE, tag=HELD)
+new("r", "Q4", "GAD1", "protein", "protein", "down", "human; WWOX-knockout organoids, AAV-WWOX add-back", "the rescue normalises GAD67 area per nucleus (about 1.0 knockout v 0.2 wild type v about 0.1 after rescue) but not the GAD1 transcript: add-back response, held out (moved out of S067's guard)", "NEED-INHIBITORY-HYPOFUNCTION:O3 (PMID 34268881)", "human", "A", "protein_or_phospho", rc=RI, tag=HELD)
+# ---- M7 seizure presence usable; S075 split --------------------------------------------------------------------------------------------------------
+patch("S075", source_locator="NEED-NEUROINFLAMMATION-GLIA:O10 (PMID 33914858, seizures from P9); CM-IT7P4:Q14:MS_HIP,MNULL_HIP,MS_CTX", usable_for_generation="yes", reserved_for_evaluation="no", reason_class="USABLE",
+      reason="presence only: spontaneous tonic-clonic seizures from P9 in the neuron-specific deletion and spike-wave discharges in the null (versus rare in wild type); rates and counts are endpoints and are held out (see S121)",
+      evaluation_guard="seizure rate and SWD rate are held-out endpoints (see guards.tsv HELD_OUT_ENDPOINT)", guard_tag=HELD, context="mouse; neuron-specific deletion (spontaneous seizures from P9) and Wwox-null (spike-wave discharges)")
+patch("S014", reason="AAV9-WWOX high dose lowers SWD to a level not different from wild type (single dose, n 5 per group); intervention response, held out. Baseline magnitudes: see the SWD baseline row")
+# ---- L6 D5 split -----------------------------------------------------------------------------------------------------------------------------------
+patch("S110", context="mouse null P10-P30 (glucose about 95 v 130; weight lower from birth)", species_observed="mouse")
+new("r", "D5", "STATE:SYSTEMIC_GLYCAEMIA_AND_GROWTH", "state", "function", "down", "human; five patients of one WOREE series (failure to thrive)", "endpoint and confounder, separate system from the mouse row", "NEED-SYSTEMIC-GLYCAEMIA-GROWTH:O2 (PMID 36537114)", "human", "C", "functional_effect", rc=RE)
+# ---- L4, L5 D3 ------------------------------------------------------------------------------------------------------------------------------------------
+patch("S071", entity="STATE:NKCC1_KCC2_TRANSCRIPT_RATIO", entity_type="state", reason="transcript ratio SLC12A2/SLC12A5 0.24-0.29-0.13-0.14 in four knockouts v 0.29-0.30 in two wild types (not higher); E_GABA, intracellular chloride and an exogenous GABA response were not found in the sources read (sIPSCs are measured, S060, with a high-chloride internal solution, so they do not report E_GABA)")
+# ---- D6 (M10) ---------------------------------------------------------------------------------------------------------------------------------------------
+patch("S111", reason="no ROS or oxidative-damage readout in a neural WWOX-loss system was found in the sources read (2026-10-30); the redox-named readout that exists, resazurin reduction in WWOX-silenced neural progenitors, is a metabolic-activity dye reading and is carried as S033; the oxidative-stress gene-set PCA of that paper gives no sign. Fly wing H2O2 reporter up, diabetic mouse photoreceptors and fly CM-H2DCFDA run counter-directionally; SOD1 is a need-table pathway member, not an observation")
+# ---- L9: hallmark glycolysis in P47T, and mouse null qPCR channel genes ------------------------------------------------------------------------------------------
+new("u", "Q2", "GO:0006096", "process", "expression", "up", "mouse; P47T knock-in homozygote, forebrain regions and cerebellum, hallmark gene-set enrichment", "hypoxia, apoptosis and glycolysis hallmark sets enriched in all three brain regions (and in cerebellum); set-level, favours the human direction, whereas the six-gene module is inconclusive (S027); enrichment direction as stated by the authors",
+    "PMID 36828035 Results (re-read 2026-10-30)", "mouse", "B", "expression", tag=IT7TAG)
+for g, nm in (("GRIN2C", "NMDA receptor subunit"), ("KCNA2", "voltage-gated potassium channel"), ("GRM3", "metabotropic glutamate receptor")):
+    new("u", "Q4", g, "gene", "expression", "down", "mouse; Wwox constitutive null hippocampal tissue (qRT-PCR/RNA-seq, n 4 v 4) and hippocampal neurosphere NSC RNA-seq", "%s transcript down in both neural stem cell neurospheres and whole hippocampus (the paper's most consistent changes); symbol identity taken from the Discussion text of the paper (gene names are partly stripped in the extracted Results)" % nm,
+        "PMID 30290271 section 3.5 and Discussion (re-read 2026-10-30)", "mouse", "B", "expression")
+
+# ======================================================================================================================
 PROCESSES = [
  ("SET:GLYCOLYSIS_LACTATE_10", "HIF-type glycolysis and lactate set (10 declared genes)", "gene_set", "SLC2A1,HK2,PFKP,ALDOA,PGK1,ENO1,LDHA,PKM,BNIP3,LDHB", "subnetwork_it7_p1_20261029/subnetwork.py GLY10"),
  ("SET:ISR_TARGETS_12", "canonical ATF4/ISR target set (12 declared; 11 measurable in the CAGE systems)", "gene_set", "ASNS,ATF5,CHAC1,DDIT3,GADD45A,PCK2,PHGDH,PSAT1,PSPH,SESN2,TRIB3,SLC7A11", "hnpc_gse126075_it5_20261029/per_gene_in_sets.tsv set=ISR_targets + p4_mouse_same_sets.py extra SLC7A11"),
  ("SET:MITO_TRANSLATION_MRP", "mitochondrial translation set (MRPL/MRPS and translation factors; 78 genes in the hNPC table)", "gene_set", "MRPL*,MRPS*,GFM1,GFM2 (members in hnpc_gse126075_it5_20261029/per_gene_in_sets.tsv set=Mito_translation)", "hnpc_gse126075_it5_20261029/per_gene_in_sets.tsv"),
+ ("SET:PDK_FAMILY_4", "PDK family (4 genes)", "gene_set", "PDK1,PDK2,PDK3,PDK4", "subnetwork_it7_p1_20261029/subnetwork.py PDKF"),
  ("SET:MYELIN_OL_10", "myelin/oligodendrocyte set (10 declared genes; UGT8A in the declaration is mouse Ugt8a = HGNC UGT8)", "gene_set", "MBP,PLP1,MOG,MAG,MOBP,CLDN11,CNP,MAL,OPALIN,UGT8", "mouse_wwox_p17_it6_p4_20261029/p4_mouse_same_sets.py sets_h['Myelin_OL']"),
  ("SET:OXPHOS_NUCLEAR_73", "nuclear OXPHOS transcript set (73 genes)", "gene_set", "(members in hnpc_gse126075_it5_20261029/per_gene_in_sets.tsv set=OXPHOS_nuclear)", "hnpc_gse126075_it5_20261029/per_gene_in_sets.tsv"),
  ("GO:0004739", "pyruvate dehydrogenase (acetyl-transferring) activity", "go_mf", "PDHA1,PDHB (activity, not expression)", "QuickGO 2026-10-30; current"),
@@ -374,7 +512,7 @@ def hgnc_fetch(sym):
                 time.sleep(1.5); docs = None
         if docs:
             d = docs[0]
-            return dict(symbol=d["symbol"], hgnc_id=d["hgnc_id"], name=d["name"], status=d["status"], mgd_id=";".join(d.get("mgd_id", [])),
+            return dict(symbol=d["symbol"], hgnc_id=d["hgnc_id"], name=d["name"], status=d["status"], mgd_id=";".join(d.get("mgd_id", [])), rgd_id=";".join(d.get("rgd_id", [])),
                         via="symbol" if "fetch/symbol" in url else "alias_symbol")
         time.sleep(0.4)
     return None
@@ -390,10 +528,10 @@ def main():
     if a.check_hgnc:
         with open(chk_path, "w", newline="") as f:
             w = csv.writer(f, delimiter="\t", lineterminator="\n")
-            w.writerow(["symbol", "hgnc_id", "approved_symbol", "approved_name", "status", "matched_via", "mgd_id_ortholog_link"])
+            w.writerow(["symbol", "hgnc_id", "approved_symbol", "approved_name", "status", "matched_via", "mgd_id_ortholog_link", "rgd_id_ortholog_link"])
             for g in genes:
                 d = hgnc_fetch(g); chk[g] = d
-                w.writerow([g] + ([d["hgnc_id"], d["symbol"], d["name"], d["status"], d["via"], d["mgd_id"]] if d else ["", "", "", "NOT_FOUND", "", ""]))
+                w.writerow([g] + ([d["hgnc_id"], d["symbol"], d["name"], d["status"], d["via"], d["mgd_id"], d["rgd_id"]] if d else ["", "", "", "NOT_FOUND", "", "", ""]))
     elif os.path.exists(chk_path):
         for r in csv.DictReader(open(chk_path), delimiter="\t"):
             chk[r["symbol"]] = dict(hgnc_id=r["hgnc_id"], symbol=r["approved_symbol"], status=r["status"], via=r["matched_via"]) if r["hgnc_id"] else None
@@ -401,7 +539,7 @@ def main():
     if bad: print("HGNC PROBLEM:", bad, file=sys.stderr)
     # validate and write seeds
     cols = ["seed_id", "question_id", "entity_symbol", "process_id", "entity_type", "level", "direction", "context", "usable_for_generation",
-            "reserved_for_evaluation", "reason", "source_locator", "hgnc_id", "species_observed", "context_tier", "observation_class", "reason_class", "evaluation_guard"]
+            "reserved_for_evaluation", "reason", "source_locator", "hgnc_id", "species_observed", "context_tier", "observation_class", "reason_class", "evaluation_guard", "guard_tag", "change_ref"]
     out = []
     for i, r in enumerate(rows, 1):
         assert r["entity_type"] in ETYPE and r["level"] in LEVEL and r["direction"] in DIRN, r
@@ -412,13 +550,18 @@ def main():
         sym, pid = (r["entity"], "") if isgene else ("", r["entity"])
         hid = chk[r["entity"]]["hgnc_id"] if isgene and chk.get(r["entity"]) else ""
         out.append([("S%03d" % i), r["question_id"], sym, pid, r["entity_type"], r["level"], r["direction"], r["context"], r["usable_for_generation"],
-                    r["reserved_for_evaluation"], r["reason"], r["source_locator"], hid, r["species_observed"], r["context_tier"], r["observation_class"], r["reason_class"], r["evaluation_guard"]])
+                    r["reserved_for_evaluation"], r["reason"], r["source_locator"], hid, r["species_observed"], r["context_tier"], r["observation_class"], r["reason_class"], r["evaluation_guard"], r["guard_tag"], r["change_ref"]])
     for row in out:
         for c in row: assert "\t" not in c and "\n" not in c
     with open(os.path.join(a.out, "seeds.tsv"), "w", newline="") as f:
         w = csv.writer(f, delimiter="\t", lineterminator="\n"); w.writerow(cols); w.writerows(out)
     with open(os.path.join(a.out, "process_ids.tsv"), "w", newline="") as f:
         w = csv.writer(f, delimiter="\t", lineterminator="\n"); w.writerow(["process_id", "label", "kind", "members_hgnc", "definition_source"]); w.writerows(PROCESSES)
+    GUARDS = [("IT7_READOUT6", "Do not score candidates seeded from these rows by signature reversal / opposition of the IT7 P3 readout (SLC2A1, HK2, LDHA, LDHB, BNIP3 up; PDK1 down) or any set containing it: the readout was opened in IT7 and is the seed itself", "SLC2A1,HK2,LDHA,LDHB,BNIP3,PDK1,SET:GLYCOLYSIS_LACTATE_10", "Q2"),
+              ("ISR_SIGN_UNRESOLVED", "Do not score candidates by reversal of an ISR transcript set (SET:ISR_TARGETS_12, CHAC1, TRIB3, SESN2, PSAT1, ATF5, ATF4 mRNA) until the human ISR sign is resolved", "SET:ISR_TARGETS_12,CHAC1,TRIB3,SESN2,PSAT1,ATF5,ATF4", "Q3"),
+              ("HELD_OUT_ENDPOINT", "The row is a state whose magnitude/rate is an evaluation endpoint of reserved rows: the generator may use the presence and direction, evaluation must use the reserved magnitude rows, and a candidate must not be scored on the quantity this row's seed came from without a fresh measurement", "burst frequency, seizure/SWD rate, firing rate, myelinated-axon count, GFAP/IBA1 area and counts", "Q4,Q5")]
+    with open(os.path.join(a.out, "guards.tsv"), "w", newline="") as f:
+        w = csv.writer(f, delimiter="\t", lineterminator="\n"); w.writerow(["guard_tag", "forbidden_use", "scope_members", "questions"]); w.writerows(GUARDS)
     print("seeds:", len(out), "genes checked:", len(genes))
 
 if __name__ == "__main__":

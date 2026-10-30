@@ -53,7 +53,37 @@ def main():
         if s["question_id"] == "Q3" and g in ("CHAC1", "TRIB3", "SESN2", "PSAT1", "ATF5"):
             m = re.search(r"centred log2 ratio organoid ([+-][0-9.]+), hNPC ([+-][0-9.]+)", s["reason"])
             if abs(key[g] - float(m.group(1))) > 0.0006 or abs(hn[(g, "C_hNPC")] - float(m.group(2))) > 0.0006: bad.append("%s %s ISR values differ from source" % (i, g))
-    n_gene = sum(1 for s in seeds if s["entity_symbol"])
+    # ---- v2 rules (verifier H2, H4, M5, M6, M11) -------------------------------------------------------------------------
+    guards = {r["guard_tag"]: r for r in csv.DictReader(open(os.path.join(a.dir, "guards.tsv")), delimiter="\t")}
+    IT7 = {"SLC2A1", "HK2", "LDHA", "LDHB", "BNIP3", "PDK1", "SET:GLYCOLYSIS_LACTATE_10"}
+    ISR = {"CHAC1", "TRIB3", "SESN2", "PSAT1", "ATF5", "ATF4", "SET:ISR_TARGETS_12"}
+    RESP_TOK = re.compile(r"(?i)\b(AAV\w*|rescue\w*|add-back|d-APV|ethosuximide|vigabatrin|lithium|A51|chloroquine|treated|dose|CRISPRa)\b")
+    RESP_LOC = {("NEED-WWOX-GENE-ADDITION", o) for o in ("O1", "O2", "O4", "O5", "O6")} | {("NEED-WWOX-ENDOGENOUS-BOOST", "O1"), ("NEED-MYELINATION", "O2"),
+        ("NEED-NEUROINFLAMMATION-GLIA", "O3"), ("NEED-WNT-BETA-CATENIN", "O2"), ("NEED-LACTATE-LDH", "O2"), ("NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR", "O2"),
+        ("NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR", "O4"), ("NEED-T-TYPE-CALCIUM", "O1"), ("NEED-MYC-PROGENITOR-PROLIFERATION", "O3")} | {("NEED-SEIZURE-CONTROL-SYMPTOMATIC", o) for o in ("O1", "O2", "O3")}
+    ENDPOINT_ENT = {"STATE:NETWORK_HYPEREXCITABILITY", "GO:0042552", "STATE:SEIZURE_BURDEN", "GFAP", "AIF1"}
+    MAGN = re.compile(r"(?i)\d+(\.\d+)?\s*(%|percent|-?fold|times|per hour|/mm2| per mm2)|\b\d+ of \d+\b|\babout \d")
+    for s in seeds:
+        i = s["seed_id"]; ent = s["entity_symbol"] or s["process_id"]; use = s["usable_for_generation"] == "yes"
+        if s["guard_tag"] and s["guard_tag"] not in guards: bad.append(i + " unknown guard_tag")
+        if use and s["evaluation_guard"] and not s["guard_tag"]: bad.append(i + " guard text without machine guard_tag")
+        if use and s["question_id"] == "Q2" and ent in IT7 and s["guard_tag"] != "IT7_READOUT6": bad.append(i + " IT7 readout row lacks IT7_READOUT6")
+        if use and s["question_id"] == "Q3" and ent in ISR and s["guard_tag"] != "ISR_SIGN_UNRESOLVED": bad.append(i + " ISR row lacks ISR_SIGN_UNRESOLVED")
+        if use:
+            if not s["question_id"].startswith("Q"): bad.append(i + " usable row outside a retained question")
+            for fld in ("reason", "context", "evaluation_guard"):
+                m = RESP_TOK.search(s[fld])
+                if m: bad.append("%s usable row %s names an intervention term: %r" % (i, fld, m.group(0)))
+            for m in re.finditer(r"(NEED-[A-Z0-9-]+):([O0-9,]+)", s["source_locator"]):
+                for oid in m.group(2).split(","):
+                    if (m.group(1), oid) in RESP_LOC: bad.append("%s usable row cites response statement %s:%s" % (i, m.group(1), oid))
+            if ent in ENDPOINT_ENT or s["guard_tag"] == "HELD_OUT_ENDPOINT":
+                m = MAGN.search(s["reason"])
+                if m: bad.append("%s usable endpoint-state row carries a magnitude: %r" % (i, m.group(0)))
+            if s["level"] == "expression" and re.search(r"(?i)surface area|cell counts|immunostain|western", s["reason"]) and "other level" not in s["reason"]:
+                bad.append(i + " expression row mentions another level in its reason")
+        if s["observation_class"] in ("cell_count", "histology_area_or_count") and s["level"] != "pathology": bad.append(i + " counts/areas must be typed pathology")
+        n_gene = sum(1 for s in seeds if s["entity_symbol"])
     print("rows:", len(seeds), "gene/protein rows with HGNC id:", n_gene, "needs locators resolved")
     print("PASS" if not bad else "FAIL\n" + "\n".join(bad))
     return 1 if bad else 0
