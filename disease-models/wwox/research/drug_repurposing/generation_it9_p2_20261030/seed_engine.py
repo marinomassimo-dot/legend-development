@@ -223,7 +223,25 @@ class Seeds:
         return S
 
 
-def load_seeds(path, allow_mixed=False, human_only=True):
+GUARD_SIGNATURE_EXCLUDED = {"IT7_READOUT6", "ISR_SIGN_UNRESOLVED", "HELD_OUT_ENDPOINT"}   # tags whose units never enter the signature arm
+GUARD_FORCE_UNCERTAIN = {"ISR_SIGN_UNRESOLVED"}                                          # tags whose units enter only as conditional arms
+
+
+def apply_guard(tags, sign, ignore=False):
+    """guard_tag handling for the direction of one unit (ISR_SIGN_UNRESOLVED -> uncertain direction); ignore=True is the mutation used by the tests."""
+    if not ignore and set(tags) & GUARD_FORCE_UNCERTAIN:
+        return 0
+    return sign
+
+
+def sig_eligible(units, ignore=False):
+    """units allowed into the signature arm: those carrying none of the guard tags."""
+    if ignore:
+        return list(units)
+    return [u for u in units if not (set(u.get("guard_tags", ())) & GUARD_SIGNATURE_EXCLUDED)]
+
+
+def load_seeds(path, allow_mixed=False, human_only=True, ignore_guards=False):
     rows = read_tsv(path)
     need = {"seed_id", "gene", "direction", "level", "direction_status", "readout_level", "evidence_class", "species"}
     if rows and not need <= set(rows[0]):
@@ -246,6 +264,9 @@ def load_seeds(path, allow_mixed=False, human_only=True):
         sign = {"up": 1, "down": -1}.get(d, 0) if st == "defined" else 0
         if st == "defined" and d not in ("up", "down"):
             raise SystemExit(f"seed {r['seed_id']}: defined status needs direction up|down")
+        tags = tuple(sorted(t for t in (r.get("guard_tag") or "").replace(",", ";").split(";") if t.strip()))
+        tags = tuple(t.strip() for t in tags)
+        sign = apply_guard(tags, sign, ignore_guards)
         kind = (r.get("kind") or "gene").strip() or "gene"
         genes = [x.strip().upper() for x in (r.get("members") or "").split(";") if x.strip()] if kind == "process" else [r["gene"].strip().upper()]
         if not genes:
@@ -253,8 +274,8 @@ def load_seeds(path, allow_mixed=False, human_only=True):
         w = lvl / math.sqrt(len(genes)) if kind == "process" else lvl
         levels.add(r["readout_level"])
         for g in genes:
-            units.append(dict(unit_id=f"{r['seed_id']}:{g}", seed_id=r["seed_id"], gene=g, sign=sign, level=w, status=st,
-                              readout_level=r["readout_level"], evidence_class=cls))
+            units.append(dict(unit_id=f"{r['seed_id']}:{g}", seed_id=r["seed_id"], gene=g, sign=sign, level=w, status=("uncertain" if sign == 0 else st),
+                              readout_level=r["readout_level"], evidence_class=cls, guard_tags=tags))
     if len(levels) > 1 and not allow_mixed:
         raise SystemExit(f"mixed readout levels {sorted(levels)}: expression, protein and function are not merged; run per level or pass --allow-mixed-levels")
     return Seeds(units)
@@ -490,7 +511,7 @@ def seed_contrib_table(eng, fam_ids, seeds=None):
             note = "uncertain_direction(+arm shown)" if u["sign"] == 0 else "defined"
             rows.append(dict(family_id=f, unit_id=u["unit_id"], seed_id=u["seed_id"], gene=u["gene"], seed_direction={1: "up", -1: "down", 0: "uncertain"}[u["sign"]],
                              level=f"{u['level']:.4f}", readout_level=u["readout_level"], direction_status=note, contrib_hop0=f"{c0:.6g}", contrib_hops1to3=f"{ck:.6g}",
-                             contrib_total=f"{c0 + ck:.6g}", main_target_hop0=best0[0] if best0 and best0[1] else "", main_target_hops1to3=bestk[0] if bestk and bestk[1] else ""))
+                             contrib_total=f"{c0 + ck:.6g}", guard_tag=";".join(u.get("guard_tags", ())), main_target_hop0=best0[0] if best0 and best0[1] else "", main_target_hops1to3=bestk[0] if bestk and bestk[1] else ""))
     return rows
 
 
@@ -547,7 +568,8 @@ def cmd_run(a):
     order = np.lexsort((np.arange(eng.F), -arms["full"], -zf_r, -zi_r))
     cols = ["family_id", "name", "n_signed_targets", "n_targets_in_graph", "Z_full_robust", "Z_ind_robust", "Q_net_full", "Q_net_ind", "Q_direct", "compatible_action",
             "Q_Uplus", "Q_Uminus", "Z_full_Uplus", "Z_full_Uminus", "uncertain_seed_mass", "direct_hit_any_action_on_seed_gene", "wwox_regulator_target",
-            "prox_mean_dist", "prox_z_degree_matched", "prox_min_dist"]
+            "prox_mean_dist", "prox_z_degree_matched", "prox_min_dist", "evaluation_forbidden_on"]
+    forb = ";".join(sorted({t for u in eng.seeds.units for t in u.get("guard_tags", ())})) or "none"
     tmpl = "{:.6g}".format
     with gzip.open(out / f"proposals_{a.label}.tsv.gz", "wt", encoding="utf-8", newline="") as fh:
         w = csv.writer(fh, delimiter="\t", lineterminator="\n")
@@ -558,12 +580,12 @@ def cmd_run(a):
             w.writerow([f, meta.get(f, {}).get("name", ""), len(comp.targets[i]), int(eng.in_graph[i]), tmpl(zf_r[i]), tmpl(zi_r[i]), tmpl(arms["full"][i]), tmpl(arms["ind"][i]),
                         tmpl(arms["dir"][i]), call_label(arms["full"][i], arms["unc_mass"][i]), tmpl(arms["full_Uplus"][i]), tmpl(arms["full_Uminus"][i]),
                         tmpl(zf_p[i]), tmpl(zf_m[i]), tmpl(arms["unc_mass"][i]), int(direct_any[i]), int(inter[i]),
-                        tmpl(prox_mean[i]) if np.isfinite(prox_mean[i]) else "", tmpl(prox_z[i]) if np.isfinite(prox_z[i]) else "", prox_min[i] if prox_min[i] >= 0 else ""])
+                        tmpl(prox_mean[i]) if np.isfinite(prox_mean[i]) else "", tmpl(prox_z[i]) if np.isfinite(prox_z[i]) else "", prox_min[i] if prox_min[i] >= 0 else "", forb])
         top_fams = [comp.fams[i] for i in keep[:a.top]] + [comp.fams[i] for i in keep[-a.top:]]
         top_fams += [comp.fams[i] for i in keep if direct_any[i]][:a.top]
     ct = seed_contrib_table(eng, list(dict.fromkeys(top_fams)))
     with open(out / f"contributions_{a.label}.tsv", "w", encoding="utf-8", newline="") as fh:
-        cols2 = ["family_id", "unit_id", "seed_id", "gene", "seed_direction", "level", "readout_level", "direction_status", "contrib_hop0", "contrib_hops1to3", "contrib_total",
+        cols2 = ["family_id", "unit_id", "seed_id", "gene", "seed_direction", "level", "readout_level", "direction_status", "contrib_hop0", "contrib_hops1to3", "contrib_total", "guard_tag",
                  "main_target_hop0", "main_target_hops1to3"]
         w = csv.DictWriter(fh, fieldnames=cols2, delimiter="\t", lineterminator="\n")
         w.writeheader()
@@ -948,6 +970,30 @@ def cmd_tests(a):
     reach = score(eng.A, g.influence_ind(ones), eng.F)[:, 0]
     t5["reach_baseline_spearman_abs_with_abs_real"] = spearman(np.abs(reach[E]), np.abs(real_q[E]))
     res["T5"] = t5
+    # ---------------- T6 guards read mechanically from guard_tag (Amendment 4)
+    t6 = {}
+    unguarded = load_seeds(a.seeds, allow_mixed=getattr(a, "allow_mixed_levels", False), ignore_guards=True)
+    tags = sorted({t for u in seeds.units for t in u.get("guard_tags", ())})
+    t6["tags_present"] = tags
+    t6["units_total"] = len(seeds)
+    t6["units_sign_changed_by_guard"] = sum(1 for u, v in zip(seeds.units, unguarded.units) if u["sign"] != v["sign"])
+    t6["units_excluded_from_signature_arm"] = len(seeds) - len(sig_eligible(seeds.units))
+    t6["units_would_enter_signature_arm_if_guard_ignored"] = len(sig_eligible(unguarded.units, ignore=True))
+    ok = True
+    if "ISR_SIGN_UNRESOLVED" in tags:
+        isr_def = [v for u, v in zip(seeds.units, unguarded.units) if "ISR_SIGN_UNRESOLVED" in u.get("guard_tags", ()) and v["sign"] != 0]
+        ok = ok and all(u["sign"] == 0 for u in seeds.units if "ISR_SIGN_UNRESOLVED" in u.get("guard_tags", ()))
+        if isr_def:
+            ok = ok and t6["units_sign_changed_by_guard"] > 0
+            # compare the arms that carry the sign (defined-only and the U- arm); the U+ arm is identical by construction when only the sign of a unit changes to uncertain
+            aa, ab = eng.arms(seeds), eng.arms(unguarded)
+            t6["scores_differ_when_guard_ignored_max_abs"] = float(max(np.abs(aa["full"] - ab["full"]).max(), np.abs(aa["full_Uminus"] - ab["full_Uminus"]).max()))
+            ok = ok and t6["scores_differ_when_guard_ignored_max_abs"] > 0
+    if tags:
+        ok = ok and t6["units_excluded_from_signature_arm"] == sum(1 for u in seeds.units if set(u.get("guard_tags", ())) & GUARD_SIGNATURE_EXCLUDED)
+        ok = ok and all(not (set(u.get("guard_tags", ())) & GUARD_SIGNATURE_EXCLUDED) for u in sig_eligible(seeds.units))
+    t6["PASS"] = bool(ok)
+    res["T6"] = t6
     (out / f"tests_{a.label}.json").write_text(json.dumps(res, indent=1, default=lambda o: o.tolist() if hasattr(o, "tolist") else str(o)) + "\n")
     with open(out / f"tests_{a.label}_null_summary.tsv", "w", encoding="utf-8", newline="") as fh:
         w = csv.writer(fh, delimiter="\t", lineterminator="\n")

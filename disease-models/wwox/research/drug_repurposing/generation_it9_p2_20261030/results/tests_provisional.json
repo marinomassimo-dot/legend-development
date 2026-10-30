@@ -336,5 +336,13 @@
   "f_zero_level_equals_removal_max_abs": 0.0,
   "PASS": true,
   "reach_baseline_spearman_abs_with_abs_real": 0.45830763603679625
+ },
+ "T6": {
+  "tags_present": [],
+  "units_total": 15,
+  "units_sign_changed_by_guard": 0,
+  "units_excluded_from_signature_arm": 0,
+  "units_would_enter_signature_arm_if_guard_ignored": 15,
+  "PASS": true
  }
 }

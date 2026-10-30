@@ -1,0 +1,126 @@
+question	seed_set	arm	rank	family_id	name	Z_ind_robust_total_null	Z_ind_robust_indeg_null	seed_specific_both_nulls	Q_net_ind	compatible_action	conditional_on_uncertain_seeds	also_found_by_direct_search	contributing_seed_1	contributing_seed_2	evaluation_forbidden_on
+Q5	Q5_expression_tiersAB	opposes	1	FAM:CAT:DGIDB:3101efe09ce6	L6H21	41.31	1.025	0	0.1	opposes	0	0	IL1B|IL1B|up|hops1-3|LY96|0.05	TNF|TNF|up|hops1-3|LY96|0.05	none
+Q5	Q5_expression_tiersAB	opposes	2	FAM:CAT:DGIDB:e5c93569503a	Bifonazole	38.01	19.65	1	0.200448	opposes	0	0	TNF|TNF|up|hops1-3|HMGB1|0.1	IL1B|IL1B|up|hops1-3|HMGB1|0.1	none
+Q5	Q5_expression_tiersAB	opposes	3	FAM:CAT:CHEMBL3545357	JTE-151	17.94	20.88	1	0.125283	opposes	0	0	IL6|IL6|up|hops1-3|RORC|0.0628	TNF|TNF|up|hops1-3|RORC|0.0625	none
+Q5	Q5_expression_tiersAB	opposes	4	FAM:CAT:CHEMBL3301672	ERITORAN TETRASODIUM	17.61	1.019	0	0.0708501	opposes	0	0	TNF|TNF|up|hops1-3|LY96|0.0355	IL1B|IL1B|up|hops1-3|LY96|0.0354	none
+Q5	Q5_expression_tiersAB	opposes	5	FAM:CAT:DGIDB:69731c2f59bb	Eritoran Tetrasodium	17.61	1.019	0	0.0708501	opposes	0	0	TNF|TNF|up|hops1-3|LY96|0.0355	IL1B|IL1B|up|hops1-3|LY96|0.0354	none
+Q5	Q5_expression_tiersAB	opposes	6	FAM:CAT:DGIDB:d23a0b307aad	Cromakalim	15.91	0.3664	0	0.05	opposes	0	0	IL1B|IL1B|up|hops1-3|KCNJ8|0.05		none
+Q5	Q5_expression_tiersAB	opposes	7	FAM:CAT:CHEMBL181	DIAZOXIDE	15.91	0.3664	0	0.0353553	opposes	0	0	IL1B|IL1B|up|hops1-3|KCNJ8|0.0354		none
+Q5	Q5_expression_tiersAB	opposes	8	FAM:CAT:DGIDB:9a1848b2e12a	Diazoxide	15.91	0.3664	0	0.0353553	opposes	0	0	IL1B|IL1B|up|hops1-3|KCNJ8|0.0354		none
+Q5	Q5_expression_tiersAB	opposes	9	FAM:CAT:CHEMBL3183703	Mcc950	15.86	1.528	0	0.1	opposes	0	0	IL1B|IL1B|up|hops1-3|NLRP3|0.1		none
+Q5	Q5_expression_tiersAB	opposes	10	FAM:CAT:CHEMBL3989943	DAPANSUTRILE	15.86	1.528	0	0.1	opposes	0	0	IL1B|IL1B|up|hops1-3|NLRP3|0.1		none
+Q5	Q5_expression_tiersAB	opposes	11	FAM:CAT:CHEMBL4650350	INZOMELID	15.86	1.528	0	0.1	opposes	0	0	IL1B|IL1B|up|hops1-3|NLRP3|0.1		none
+Q5	Q5_expression_tiersAB	opposes	12	FAM:CAT:DGIDB:3b46a0ff2a88	Cp-424,174	15.86	1.528	0	0.1	opposes	0	0	IL1B|IL1B|up|hops1-3|NLRP3|0.1		none
+Q5	Q5_expression_tiersAB	opposes	13	FAM:CAT:DGIDB:987ef71eeeb1	Nt-0796	15.86	1.528	0	0.1	opposes	0	0	IL1B|IL1B|up|hops1-3|NLRP3|0.1		none
+Q5	Q5_expression_tiersAB	opposes	14	FAM:CAT:DGIDB:e837e4cfafd7	Dapansutrile	15.86	1.528	0	0.1	opposes	0	0	IL1B|IL1B|up|hops1-3|NLRP3|0.1		none
+Q5	Q5_expression_tiersAB	opposes	15	FAM:CAT:DGIDB:f0320db1e9f6	Selnoflast	15.86	1.528	0	0.1	opposes	0	0	IL1B|IL1B|up|hops1-3|NLRP3|0.1		none
+Q5	Q5_expression_tiersAB	opposes	16	FAM:CAT:DGIDB:f9861012416f	Ndt-19795	15.86	1.528	0	0.1	opposes	0	0	IL1B|IL1B|up|hops1-3|NLRP3|0.1		none
+Q5	Q5_expression_tiersAB	opposes	17	FAM:CAT:DGIDB:fc83e79dea8e	Cy-09	15.86	1.528	0	0.1	opposes	0	0	IL1B|IL1B|up|hops1-3|NLRP3|0.1		none
+Q5	Q5_expression_tiersAB	opposes	18	FAM:CAT:DGIDB:2e60899cccf5	Uracil 20	15.84	15.81	1	0.140537	opposes	0	0	IL1B|IL1B|up|hops1-3|CASP1|0.141		none
+Q5	Q5_expression_tiersAB	opposes	19	FAM:CAT:DGIDB:871f044a9f90	Vrt-043198	15.84	15.81	1	0.140537	opposes	0	0	IL1B|IL1B|up|hops1-3|CASP1|0.141		none
+Q5	Q5_expression_tiersAB	opposes	20	FAM:CAT:CHEMBL2107819	BELNACASAN	15.84	15.81	1	0.19875	opposes	0	0	IL1B|IL1B|up|hops1-3|CASP1|0.199		none
+Q5	Q5_expression_tiersAB	opposes	21	FAM:CAT:DGIDB:045ff335316a	Belnacasan	15.84	15.81	1	0.19875	opposes	0	0	IL1B|IL1B|up|hops1-3|CASP1|0.199		none
+Q5	Q5_expression_tiersAB	opposes	22	FAM:CAT:DGIDB:1a5439bf05e1	Z-Yvad-Fmk	15.84	15.81	1	0.19875	opposes	0	0	IL1B|IL1B|up|hops1-3|CASP1|0.199		none
+Q5	Q5_expression_tiersAB	opposes	23	FAM:CAT:DGIDB:329179d638e2	Pralnacasan	15.84	15.81	1	0.19875	opposes	0	0	IL1B|IL1B|up|hops1-3|CASP1|0.199		none
+Q5	Q5_expression_tiersAB	opposes	24	FAM:CAT:DGIDB:fb1b27cbf8a6	Minoxidil	13.41	0.3664	0	0.0288675	opposes	0	0	IL1B|IL1B|up|hops1-3|KCNJ8|0.0289		none
+Q5	Q5_expression_tiersAB	opposes	25	FAM:CAT:DGIDB:6ed5607e5b5e	Gsk4112	12.6	6.962	1	0.0526928	opposes	0	0	IL6|IL6|up|hops1-3|NR1D1|0.0527	TNF|TNF|up|hops1-3|NR1D1|3.06e-05	none
+Q5	Q5_expression_tiersAB	opposes	26	FAM:CAT:CHEMBL2431768	LCL-161	12.57	1.452	0	0.0450822	opposes	0	0	IL1B|IL1B|up|hops1-3|NAIP|0.0451	IL6|IL6|up|hops1-3|BIRC6|-5.81e-06	none
+Q5	Q5_expression_tiersAB	opposes	27	FAM:CAT:DGIDB:648262c833d9	Birinapant	12.57	1.452	0	0.0450822	opposes	0	0	IL1B|IL1B|up|hops1-3|NAIP|0.0451	IL6|IL6|up|hops1-3|BIRC6|-5.81e-06	none
+Q5	Q5_expression_tiersAB	opposes	28	FAM:CAT:CHEMBL2104449	SARAKALIM	11.61	0.3664	0	0.025	opposes	0	0	IL1B|IL1B|up|hops1-3|KCNJ8|0.025		none
+Q5	Q5_expression_tiersAB	opposes	29	FAM:CAT:CHEMBL2105160	NAMINIDIL	11.61	0.3664	0	0.025	opposes	0	0	IL1B|IL1B|up|hops1-3|KCNJ8|0.025		none
+Q5	Q5_expression_tiersAB	opposes	30	FAM:CAT:DGIDB:342d6428af28	Naminidil	11.61	0.3664	0	0.025	opposes	0	0	IL1B|IL1B|up|hops1-3|KCNJ8|0.025		none
+Q5	Q5_expression_tiersAB	opposes	31	FAM:CAT:DGIDB:da429e38def8	Sarakalim	11.61	0.3664	0	0.025	opposes	0	0	IL1B|IL1B|up|hops1-3|KCNJ8|0.025		none
+Q5	Q5_expression_tiersAB	opposes	32	FAM:CAT:DGIDB:0323631b6138	M826	11.37	13.76	1	0.0888936	opposes	0	0	IL1B|IL1B|up|hops1-3|CASP1|0.0889	TNF|TNF|up|hops1-3|CASP3|1.14e-05	none
+Q5	Q5_expression_tiersAB	opposes	33	FAM:CAT:DGIDB:dd19391662d3	Alrt 1550	10.35	20.69	1	0.0885178	opposes	0	0	IL6|IL6|up|hops1-3|RORC|0.0444	TNF|TNF|up|hops1-3|RORC|0.0441	none
+Q5	Q5_expression_tiersAB	opposes	34	FAM:CAT:DGIDB:caf143670019	Pkr Inhibitor	10.25	1.386	0	0.0333223	opposes	0	0	IL1B|IL1B|up|hops1-3|EIF2AK2|0.0333	TNF|TNF|up|hops1-3|EIF2AK2|1.8e-05	none
+Q5	Q5_expression_tiersAB	opposes	35	FAM:CAT:DGIDB:d2d2a13c770a	Indirubin Derivative E804	10.25	1.386	0	0.0333223	opposes	0	0	IL1B|IL1B|up|hops1-3|EIF2AK2|0.0333	TNF|TNF|up|hops1-3|EIF2AK2|1.8e-05	none
+Q5	Q5_expression_tiersAB	opposes	36	FAM:CAT:CHEMBL1957266	(+)-Jq1	9.989	9.11	1	0.0481273	opposes	0	0	TNF|TNF|up|hops1-3|BRD4|0.0479	IL6|IL6|up|hops1-3|BRD4|0.000236	none
+Q5	Q5_expression_tiersAB	opposes	37	FAM:CAT:CHEMBL1522313	Compound 3 [Pmid: 25408830]	9.989	9.11	1	0.0680622	opposes	0	0	TNF|TNF|up|hops1-3|BRD4|0.0677	IL6|IL6|up|hops1-3|BRD4|0.000334	none
+Q5	Q5_expression_tiersAB	opposes	38	FAM:CAT:CHEMBL2179387	Pfi-1	9.989	9.11	1	0.0680622	opposes	0	0	TNF|TNF|up|hops1-3|BRD4|0.0677	IL6|IL6|up|hops1-3|BRD4|0.000334	none
+Q5	Q5_expression_tiersAB	opposes	39	FAM:CAT:CHEMBL3086883	Ms436	9.989	9.11	1	0.0680622	opposes	0	0	TNF|TNF|up|hops1-3|BRD4|0.0677	IL6|IL6|up|hops1-3|BRD4|0.000334	none
+Q5	Q5_expression_tiersAB	opposes	40	FAM:CAT:CHEMBL3919831	AMREDOBRESIB	9.989	9.11	1	0.0680622	opposes	0	0	TNF|TNF|up|hops1-3|BRD4|0.0677	IL6|IL6|up|hops1-3|BRD4|0.000334	none
+Q5	Q5_expression_tiersAB	opposes	41	FAM:CAT:CHEMBL4226570	Mz1	9.989	9.11	1	0.0680622	opposes	0	0	TNF|TNF|up|hops1-3|BRD4|0.0677	IL6|IL6|up|hops1-3|BRD4|0.000334	none
+Q5	Q5_expression_tiersAB	opposes	42	FAM:CAT:DGIDB:09afa1e9db65	N-Methyl-2-Pyrrolidone	9.989	9.11	1	0.0680622	opposes	0	0	TNF|TNF|up|hops1-3|BRD4|0.0677	IL6|IL6|up|hops1-3|BRD4|0.000334	none
+Q5	Q5_expression_tiersAB	opposes	43	FAM:CAT:DGIDB:2e8ec2410b6f	I-Bet282	9.989	9.11	1	0.0680622	opposes	0	0	TNF|TNF|up|hops1-3|BRD4|0.0677	IL6|IL6|up|hops1-3|BRD4|0.000334	none
+Q5	Q5_expression_tiersAB	opposes	44	FAM:CAT:DGIDB:4729f05af735	Dbet6	9.989	9.11	1	0.0680622	opposes	0	0	TNF|TNF|up|hops1-3|BRD4|0.0677	IL6|IL6|up|hops1-3|BRD4|0.000334	none
+Q5	Q5_expression_tiersAB	opposes	45	FAM:CAT:DGIDB:4d6bb6aa868e	Compound 11H [Pmid: 29808961]	9.989	9.11	1	0.0680622	opposes	0	0	TNF|TNF|up|hops1-3|BRD4|0.0677	IL6|IL6|up|hops1-3|BRD4|0.000334	none
+Q5	Q5_expression_tiersAB	opposes	46	FAM:CAT:DGIDB:4ee060cc6aaf	Compound 9 [Pmid: 23517011]	9.989	9.11	1	0.0680622	opposes	0	0	TNF|TNF|up|hops1-3|BRD4|0.0677	IL6|IL6|up|hops1-3|BRD4|0.000334	none
+Q5	Q5_expression_tiersAB	opposes	47	FAM:CAT:DGIDB:5939058f5e3e	Cpi-203	9.989	9.11	1	0.0680622	opposes	0	0	TNF|TNF|up|hops1-3|BRD4|0.0677	IL6|IL6|up|hops1-3|BRD4|0.000334	none
+Q5	Q5_expression_tiersAB	opposes	48	FAM:CAT:DGIDB:5dcbc0337c66	Bzt-7	9.989	9.11	1	0.0680622	opposes	0	0	TNF|TNF|up|hops1-3|BRD4|0.0677	IL6|IL6|up|hops1-3|BRD4|0.000334	none
+Q5	Q5_expression_tiersAB	opposes	49	FAM:CAT:DGIDB:89c5118fd77d	Compound 15 [Hay Et Al., 2013]	9.989	9.11	1	0.0680622	opposes	0	0	TNF|TNF|up|hops1-3|BRD4|0.0677	IL6|IL6|up|hops1-3|BRD4|0.000334	none
+Q5	Q5_expression_tiersAB	opposes	50	FAM:CAT:DGIDB:943f948ed754	Isoxazole Azepine Compound 3	9.989	9.11	1	0.0680622	opposes	0	0	TNF|TNF|up|hops1-3|BRD4|0.0677	IL6|IL6|up|hops1-3|BRD4|0.000334	none
+Q5	Q5_expression_tiersAB	mimics	1	FAM:CAT:DGIDB:f724688ff44c	Xy101	-17.94	-20.88	0	-0.125283	mimics	0	0	IL6|IL6|up|hops1-3|RORC|-0.0628	TNF|TNF|up|hops1-3|RORC|-0.0625	none
+Q5	Q5_expression_tiersAB	mimics	2	FAM:CAT:DGIDB:e67ba0b4647f	Cintirorgon	-17.94	-20.88	0	-0.125283	mimics	0	0	IL6|IL6|up|hops1-3|RORC|-0.0628	TNF|TNF|up|hops1-3|RORC|-0.0625	none
+Q5	Q5_expression_tiersAB	mimics	3	FAM:CAT:DGIDB:bc63160f00e3	Gsk2981278	-17.94	-20.88	0	-0.125283	mimics	0	0	IL6|IL6|up|hops1-3|RORC|-0.0628	TNF|TNF|up|hops1-3|RORC|-0.0625	none
+Q5	Q5_expression_tiersAB	mimics	4	FAM:CAT:DGIDB:b7551f23273b	Sr1555	-17.94	-20.88	0	-0.125283	mimics	0	0	IL6|IL6|up|hops1-3|RORC|-0.0628	TNF|TNF|up|hops1-3|RORC|-0.0625	none
+Q5	Q5_expression_tiersAB	mimics	5	FAM:CAT:DGIDB:632fc450b83a	Compound 14 [Schnute Et Al., 2023]	-17.94	-20.88	0	-0.125283	mimics	0	0	IL6|IL6|up|hops1-3|RORC|-0.0628	TNF|TNF|up|hops1-3|RORC|-0.0625	none
+Q5	Q5_expression_tiersAB	mimics	6	FAM:CAT:DGIDB:5d003de6e684	Mrl-871	-17.94	-20.88	0	-0.125283	mimics	0	0	IL6|IL6|up|hops1-3|RORC|-0.0628	TNF|TNF|up|hops1-3|RORC|-0.0625	none
+Q5	Q5_expression_tiersAB	mimics	7	FAM:CAT:DGIDB:586632d51798	Rorc2 Inverse Agonist 66 [Pmid: 30130103]	-17.94	-20.88	0	-0.125283	mimics	0	0	IL6|IL6|up|hops1-3|RORC|-0.0628	TNF|TNF|up|hops1-3|RORC|-0.0625	none
+Q5	Q5_expression_tiersAB	mimics	8	FAM:CAT:DGIDB:57a4bd222504	Azd0284	-17.94	-20.88	0	-0.125283	mimics	0	0	IL6|IL6|up|hops1-3|RORC|-0.0628	TNF|TNF|up|hops1-3|RORC|-0.0625	none
+Q5	Q5_expression_tiersAB	mimics	9	FAM:CAT:DGIDB:56e259d3663f	Tak-828F	-17.94	-20.88	0	-0.125283	mimics	0	0	IL6|IL6|up|hops1-3|RORC|-0.0628	TNF|TNF|up|hops1-3|RORC|-0.0625	none
+Q5	Q5_expression_tiersAB	mimics	10	FAM:CAT:DGIDB:35cc5266a85c	Compound 32 [Pmid: 31638797]	-17.94	-20.88	0	-0.125283	mimics	0	0	IL6|IL6|up|hops1-3|RORC|-0.0628	TNF|TNF|up|hops1-3|RORC|-0.0625	none
+Q5	Q5_expression_tiersAB	mimics	11	FAM:CAT:DGIDB:2f6772132a7d	Sr2211	-17.94	-20.88	0	-0.125283	mimics	0	0	IL6|IL6|up|hops1-3|RORC|-0.0628	TNF|TNF|up|hops1-3|RORC|-0.0625	none
+Q5	Q5_expression_tiersAB	mimics	12	FAM:CAT:DGIDB:29913e103f10	Gne-3500	-17.94	-20.88	0	-0.125283	mimics	0	0	IL6|IL6|up|hops1-3|RORC|-0.0628	TNF|TNF|up|hops1-3|RORC|-0.0625	none
+Q5	Q5_expression_tiersAB	mimics	13	FAM:CAT:DGIDB:8ccabe53a647	Neoceptin-3	-17.61	-1.019	0	-0.0708501	mimics	0	0	TNF|TNF|up|hops1-3|LY96|-0.0355	IL1B|IL1B|up|hops1-3|LY96|-0.0354	none
+Q5	Q5_expression_tiersAB	mimics	14	FAM:CAT:DGIDB:87abb4e16d54	Muramyl Dipeptide	-15.86	-1.528	0	-0.0707107	mimics	0	0	IL1B|IL1B|up|hops1-3|NLRP1|-0.0707		none
+Q5	Q5_expression_tiersAB	mimics	15	FAM:CAT:DGIDB:2293d5222177	Sr1001	-15.01	-13.88	0	-0.0764203	mimics	0	0	TNF|TNF|up|hops1-3|RORC|-0.0442	IL6|IL6|up|hops1-3|RORC|-0.0322	none
+Q5	Q5_expression_tiersAB	mimics	16	FAM:CAT:DGIDB:8f7292fc60ff	Tolbutamide	-13.41	-0.3664	0	-0.0288675	mimics	0	0	IL1B|IL1B|up|hops1-3|KCNJ8|-0.0289		none
+Q5	Q5_expression_tiersAB	mimics	17	FAM:CAT:DGIDB:c7a13951be3c	Sr8278	-12.6	-6.962	0	-0.0526928	mimics	0	0	IL6|IL6|up|hops1-3|NR1D1|-0.0527	TNF|TNF|up|hops1-3|NR1D1|-3.06e-05	none
+Q5	Q5_expression_tiersAB	mimics	18	FAM:CAT:DGIDB:8662f470cb85	To-901317	-10.69	-10.24	0	-0.0486067	mimics	0	0	TNF|TNF|up|hops1-3|RORC|-0.026	IL6|IL6|up|hops1-3|RORC|-0.0226	none
+Q5	Q5_expression_tiersAB	mimics	19	FAM:CAT:DGIDB:7acb9175bd51	Glyburide	-10.39	-0.3664	0	-0.0223607	mimics	0	0	IL1B|IL1B|up|hops1-3|KCNJ8|-0.0224		none
+Q5	Q5_expression_tiersAB	mimics	20	FAM:CAT:DGIDB:46811ae27751	Bcl3 Inhibitor Js6	-10.3	-9.386	0	-0.100158	mimics	0	0	TNF|TNF|up|hops1-3|BCL3|-0.0501	IL6|IL6|up|hops1-3|BCL3|-0.05	none
+Q5	Q5_expression_tiersAB	mimics	21	FAM:CAT:DGIDB:a3d03ae2ef6c	Ml385	-9.973	-8.731	0	-0.021706	mimics	0	0	IL1B|IL1B|up|hops1-3|NFE2L2|-0.00782	IL6|IL6|up|hops1-3|NFE2L2|-0.00704	none
+Q5	Q5_expression_tiersAB	mimics	22	FAM:CAT:DGIDB:63f7075aecd7	Vitamin A	-6.799	-7.866	0	-0.041512	mimics	0	0	IL6|IL6|up|hops1-3|NR2C2|-0.021	TNF|TNF|up|hops1-3|NR2C2|-0.0208	none
+Q5	Q5_expression_tiersAB	mimics	23	FAM:CAT:CHEMBL25202	TAMIBAROTENE	-5.528	-5.466	0	-0.023594	mimics	0	0	IL1B|IL1B|up|hops1-3|RARB|-0.0234	TNF|TNF|up|hops1-3|RARA|-0.000106	none
+Q5	Q5_expression_tiersAB	mimics	24	FAM:CAT:DGIDB:1a864fb4552a	Splitomicin	-5.364	-6.121	0	-0.0287047	mimics	0	0	IL1B|IL1B|up|hops1-3|SIRT1|-0.0147	TNF|TNF|up|hops1-3|SIRT1|-0.0145	none
+Q5	Q5_expression_tiersAB	mimics	25	FAM:CAT:DGIDB:1721f8d286e9	Selisistat	-5.364	-6.121	0	-0.0287047	mimics	0	0	IL1B|IL1B|up|hops1-3|SIRT1|-0.0147	TNF|TNF|up|hops1-3|SIRT1|-0.0145	none
+Q5	Q5_expression_tiersAB	direct_search	1	FAM:CAT:CHEMBL1201572	ETANERCEPT				1	opposes		1	targets:TNF		none
+Q5	Q5_expression_tiersAB	direct_search	2	FAM:CAT:CHEMBL1201580	ADALIMUMAB				1	opposes		1	targets:TNF		none
+Q5	Q5_expression_tiersAB	direct_search	3	FAM:CAT:CHEMBL1201581	INFLIXIMAB				1	opposes		1	targets:TNF		none
+Q5	Q5_expression_tiersAB	direct_search	4	FAM:CAT:CHEMBL1201830	RILONACEPT				1	opposes		1	targets:IL1B		none
+Q5	Q5_expression_tiersAB	direct_search	5	FAM:CAT:CHEMBL1201831	CERTOLIZUMAB PEGOL				1	opposes		1	targets:TNF		none
+Q5	Q5_expression_tiersAB	direct_search	6	FAM:CAT:CHEMBL1201833	GOLIMUMAB				1	opposes		1	targets:TNF		none
+Q5	Q5_expression_tiersAB	direct_search	7	FAM:CAT:CHEMBL1201834	CANAKINUMAB				1	opposes		1	targets:IL1B		none
+Q5	Q5_expression_tiersAB	direct_search	8	FAM:CAT:CHEMBL1743026	GEVOKIZUMAB				1	opposes		1	targets:IL1B		none
+Q5	Q5_expression_tiersAB	direct_search	9	FAM:CAT:CHEMBL1743050	OLOKIZUMAB				1	opposes		1	targets:IL6		none
+Q5	Q5_expression_tiersAB	direct_search	10	FAM:CAT:CHEMBL1743054	OZORALIZUMAB				1	opposes		1	targets:TNF		none
+Q5	Q5_expression_tiersAB	direct_search	11	FAM:CAT:CHEMBL1743057	PEGSUNERCEPT				1	opposes		1	targets:TNF		none
+Q5	Q5_expression_tiersAB	direct_search	12	FAM:CAT:CHEMBL1743070	SILTUXIMAB				1	opposes		1	targets:IL6		none
+Q5	Q5_expression_tiersAB	direct_search	13	FAM:CAT:CHEMBL1743071	SIRUKUMAB				1	opposes		1	targets:IL6		none
+Q5	Q5_expression_tiersAB	direct_search	14	FAM:CAT:CHEMBL2107911	ONERCEPT				1	opposes		1	targets:TNF		none
+Q5	Q5_expression_tiersAB	direct_search	15	FAM:CAT:CHEMBL2108208	LENERCEPT				1	opposes		1	targets:TNF		none
+Q5	Q5_expression_tiersAB	direct_search	16	FAM:CAT:CHEMBL2108566	NERELIMOMAB				1	opposes		1	targets:TNF		none
+Q5	Q5_expression_tiersAB	direct_search	17	FAM:CAT:CHEMBL2108589	CLAZAKIZUMAB				1	opposes		1	targets:IL6		none
+Q5	Q5_expression_tiersAB	direct_search	18	FAM:CAT:CHEMBL2108591	ELSILIMOMAB				1	opposes		1	targets:IL6		none
+Q5	Q5_expression_tiersAB	direct_search	19	FAM:CAT:CHEMBL2108739	PLACULUMAB				1	opposes		1	targets:TNF		none
+Q5	Q5_expression_tiersAB	direct_search	20	FAM:CAT:CHEMBL2108887	AFELIMOMAB				1	opposes		1	targets:TNF		none
+Q5	Q5_expression_tiersAB	direct_search	21	FAM:CAT:CHEMBL2109459	CDP-484				1	opposes		1	targets:IL1B		none
+Q5	Q5_expression_tiersAB	direct_search	22	FAM:CAT:CHEMBL2109587	AZ9773				1	opposes		1	targets:TNF		none
+Q5	Q5_expression_tiersAB	direct_search	23	FAM:CAT:CHEMBL2109615	MRA 003 US				1	opposes		1	targets:IL6		none
+Q5	Q5_expression_tiersAB	direct_search	24	FAM:CAT:CHEMBL4297732	ZILTIVEKIMAB				1	opposes		1	targets:IL6		none
+Q5	Q5_expression_tiersAB	direct_search	25	FAM:CAT:CHEMBL6068160	PACIBEKITUG				1	opposes		1	targets:IL6		none
+Q5	Q5_expression_tiersAB	direct_search	26	FAM:CAT:DGIDB:08083da7c335	Canakinumab				1	opposes		1	targets:IL1B		none
+Q5	Q5_expression_tiersAB	direct_search	27	FAM:CAT:DGIDB:19a0fdd3e919	Ozoralizumab				1	opposes		1	targets:TNF		none
+Q5	Q5_expression_tiersAB	direct_search	28	FAM:CAT:DGIDB:336d2d2229a4	Siltuximab				1	opposes		1	targets:IL6		none
+Q5	Q5_expression_tiersAB	direct_search	29	FAM:CAT:DGIDB:33a3b87b284e	Rilonacept				1	opposes		1	targets:IL1B		none
+Q5	Q5_expression_tiersAB	direct_search	30	FAM:CAT:DGIDB:450658fc3be8	Sirukumab				1	opposes		1	targets:IL6		none
+Q5	Q5_expression_tiersAB	direct_search	31	FAM:CAT:DGIDB:575cca50ddbe	Nerelimomab				1	opposes		1	targets:TNF		none
+Q5	Q5_expression_tiersAB	direct_search	32	FAM:CAT:DGIDB:62054f51e80a	Pegsunercept				1	opposes		1	targets:TNF		none
+Q5	Q5_expression_tiersAB	direct_search	33	FAM:CAT:DGIDB:6a659f488bd0	Medi-5117				1	opposes		1	targets:IL6		none
+Q5	Q5_expression_tiersAB	direct_search	34	FAM:CAT:DGIDB:73a27f326b59	Etanercept-Szzs				1	opposes		1	targets:IL6,TNF		none
+Q5	Q5_expression_tiersAB	direct_search	35	FAM:CAT:DGIDB:76afb86af839	Adalimumab-Adbm				1	opposes		1	targets:IL6,TNF		none
+Q5	Q5_expression_tiersAB	direct_search	36	FAM:CAT:DGIDB:816d882e19f6	Clazakizumab				1	opposes		1	targets:IL6		none
+Q5	Q5_expression_tiersAB	direct_search	37	FAM:CAT:DGIDB:8b25aca585c2	Onercept				1	opposes		1	targets:TNF		none
+Q5	Q5_expression_tiersAB	direct_search	38	FAM:CAT:DGIDB:c8221b11292d	Pf-04236921				1	opposes		1	targets:IL6,TNF		none
+Q5	Q5_expression_tiersAB	direct_search	39	FAM:CAT:DGIDB:ca7c06af9bf8	Infliximab-Dyyb				1	opposes		1	targets:IL1B,IL6,TNF		none
+Q5	Q5_expression_tiersAB	direct_search	40	FAM:CAT:DGIDB:d6a52820b985	Gevokizumab				1	opposes		1	targets:IL1B		none
+Q5	Q5_expression_tiersAB	direct_search	41	FAM:CAT:DGIDB:e94243bde99c	Golimumab				1	opposes		1	targets:TNF		none
+Q5	Q5_expression_tiersAB	direct_search	42	FAM:CAT:DGIDB:efb24703a281	Certolizumab Pegol				1	opposes		1	targets:TNF		none
+Q5	Q5_expression_tiersAB	direct_search	43	FAM:CAT:DGIDB:f00a4deba5e2	Lenercept				1	opposes		1	targets:TNF		none
+Q5	Q5_expression_tiersAB	direct_search	44	FAM:CAT:DGIDB:f6ce53ab1f6a	Elsilimomab				1	opposes		1	targets:IL6		none
+Q5	Q5_expression_tiersAB	direct_search	45	FAM:CAT:DGIDB:f836f65a1f20	Olokizumab				1	opposes		1	targets:IL6		none
+Q5	Q5_expression_tiersAB	direct_search	46	FAM:CAT:DGIDB:ffd34c9a95e6	Afelimomab				1	opposes		1	targets:TNF		none
+Q5	Q5_expression_tiersAB	direct_search	47	FAM:CAT:CHEMBL4297863	REMTOLUMAB				0.707107	opposes		1	targets:TNF		none
+Q5	Q5_expression_tiersAB	direct_search	48	FAM:CAT:CHEMBL4594518	LUTIKIZUMAB				0.707107	opposes		1	targets:IL1B		none
+Q5	Q5_expression_tiersAB	direct_search	49	FAM:CAT:DGIDB:1b066b3df1ff	Lutikizumab				0.707107	opposes		1	targets:IL1B		none
+Q5	Q5_expression_tiersAB	direct_search	50	FAM:CAT:DGIDB:3ad59977f4b3	Remtolumab				0.707107	opposes		1	targets:TNF		none

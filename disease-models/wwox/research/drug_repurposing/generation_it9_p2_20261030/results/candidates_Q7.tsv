@@ -1,0 +1,51 @@
+question	seed_set	arm	rank	family_id	name	Z_ind_robust_total_null	Z_ind_robust_indeg_null	seed_specific_both_nulls	Q_net_ind	compatible_action	conditional_on_uncertain_seeds	also_found_by_direct_search	contributing_seed_1	contributing_seed_2	evaluation_forbidden_on
+Q7	Q7_phospho_tiersAB	direct_search	1	FAM:CAT:CHEMBL102714	SB-216763				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	2	FAM:CAT:CHEMBL1084546	PF-00562271				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	3	FAM:CAT:CHEMBL1200826	LITHIUM CARBONATE				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	4	FAM:CAT:CHEMBL1201170	LITHIUM CITRATE ANHYDROUS				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	5	FAM:CAT:CHEMBL1969664	AZD-1080				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	6	FAM:CAT:CHEMBL1980391	RG-1530				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	7	FAM:CAT:CHEMBL2010872	CEP-11981				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	8	FAM:CAT:CHEMBL2177161	Azd2858				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	9	FAM:CAT:CHEMBL245030	SR-13668				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	10	FAM:CAT:CHEMBL296468	BMS-387032				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	11	FAM:CAT:CHEMBL3545157	TIDEGLUSIB				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	12	FAM:CAT:CHEMBL362558	LY-2090314				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	13	FAM:CAT:CHEMBL482967	CYC-116				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	14	FAM:CAT:CHEMBL483465	ELRAGLUSIB				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	15	FAM:CAT:CHEMBL506678	SITOGLUSIDE					unsigned_or_no_signed_direct_action		1	targets:GSK3B		
+Q7	Q7_phospho_tiersAB	direct_search	16	FAM:CAT:DGIDB:0385c199ba54	Ar-Ao-14418				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	17	FAM:CAT:DGIDB:07ddcc364600	Gsk2646264				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	18	FAM:CAT:DGIDB:10931b92d076	Ursolic Acid					unsigned_or_no_signed_direct_action		1	targets:GSK3B		
+Q7	Q7_phospho_tiersAB	direct_search	19	FAM:CAT:DGIDB:24c4530c1d09	Cdk/Crk Inhibitor				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	20	FAM:CAT:DGIDB:24d93ed90cd4	Chembl:Chembl379975					unsigned_or_no_signed_direct_action		1	targets:GSK3B		
+Q7	Q7_phospho_tiersAB	direct_search	21	FAM:CAT:DGIDB:26429cd8d013	Chembl:Chembl546797					unsigned_or_no_signed_direct_action		1	targets:GSK3B		
+Q7	Q7_phospho_tiersAB	direct_search	22	FAM:CAT:DGIDB:2b38dde5779c	Bx-912				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	23	FAM:CAT:DGIDB:2e071dcf8a76	Sp-600125					unsigned_or_no_signed_direct_action		1	targets:GSK3B		
+Q7	Q7_phospho_tiersAB	direct_search	24	FAM:CAT:DGIDB:361e0a6b6737	Palinurin					unsigned_or_no_signed_direct_action		1	targets:GSK3B		
+Q7	Q7_phospho_tiersAB	direct_search	25	FAM:CAT:DGIDB:37e234e791af	Azd1080				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	26	FAM:CAT:DGIDB:3b2aceac7055	Gnf4877				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	27	FAM:CAT:DGIDB:4581d3df3b09	2-({6-[(3-Chlorophenyl)Amino]-9-Isopropyl-9H-Purin-2-Yl}Amino)Ethanol				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	28	FAM:CAT:DGIDB:4b04c94a20c7	Chir-98014				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	29	FAM:CAT:DGIDB:4dc960f61af0	Chembl:Chembl588859					unsigned_or_no_signed_direct_action		1	targets:GSK3B		
+Q7	Q7_phospho_tiersAB	direct_search	30	FAM:CAT:DGIDB:50ccc7b5c33e	Lithium Carbonate				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	31	FAM:CAT:DGIDB:538de3546c06	Elraglusib				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	32	FAM:CAT:DGIDB:580d69afd7ca	Compound 5B [Pmid: 24900464]				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	33	FAM:CAT:DGIDB:5a2846b1461c	Compound 4G [Pmid: 2680437]				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	34	FAM:CAT:DGIDB:5c478c270209	Palbinone					unsigned_or_no_signed_direct_action		1	targets:GSK3B		
+Q7	Q7_phospho_tiersAB	direct_search	35	FAM:CAT:DGIDB:633c645744ec	Alsterpaullone				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	36	FAM:CAT:DGIDB:672d3a5ad699	Indirubin-3'-Monoxime				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	37	FAM:CAT:DGIDB:6be795e95c1c	Manzamine A					unsigned_or_no_signed_direct_action		1	targets:GSK3B		
+Q7	Q7_phospho_tiersAB	direct_search	38	FAM:CAT:DGIDB:6cd003bb430b	Gw843682X					unsigned_or_no_signed_direct_action		1	targets:GSK3B		
+Q7	Q7_phospho_tiersAB	direct_search	39	FAM:CAT:DGIDB:6cdebf56bf1b	1-Azakenpaullone				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	40	FAM:CAT:DGIDB:744c4344e9aa	Tws119				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	41	FAM:CAT:DGIDB:768abbeca460	Tideglusib				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	42	FAM:CAT:DGIDB:7c3a4af58c15	Chembl:Chembl449063					unsigned_or_no_signed_direct_action		1	targets:GSK3B		
+Q7	Q7_phospho_tiersAB	direct_search	43	FAM:CAT:DGIDB:7dc2020cce4d	Citalopram					unsigned_or_no_signed_direct_action		1	targets:GSK3B		
+Q7	Q7_phospho_tiersAB	direct_search	44	FAM:CAT:DGIDB:8232c3359ea9	Chembl:Chembl1276446					unsigned_or_no_signed_direct_action		1	targets:GSK3B		
+Q7	Q7_phospho_tiersAB	direct_search	45	FAM:CAT:DGIDB:82cc7f4ce1af	Gsk-3Beta Inhibitor I				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	46	FAM:CAT:DGIDB:846313cfd6a0	Sotrastaurin				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	47	FAM:CAT:DGIDB:853465a5cf67	Bay 61-3606				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	48	FAM:CAT:DGIDB:8c4c0b05a467	Pha-767491					unsigned_or_no_signed_direct_action		1	targets:GSK3B		
+Q7	Q7_phospho_tiersAB	direct_search	49	FAM:CAT:DGIDB:8dc27d963f06	Voruciclib				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none
+Q7	Q7_phospho_tiersAB	direct_search	50	FAM:CAT:DGIDB:905ea4953db1	Im-12				0	unsigned_or_no_signed_direct_action		1	targets:GSK3B		none

@@ -32,6 +32,12 @@ a = ap.parse_args()
 BC, EC = {"NPC", "NPC.CAS9", "NPC.TAK"}, {"NEU", "NEU.KCL", "MNEU.E"}
 rd = lambda p: csv.DictReader(gzip.open(p, "rt", encoding="utf-8"), delimiter="\t")
 seeds = se.load_seeds(a.seeds)
+n_all = len(seeds)
+seeds = se.Seeds(se.sig_eligible(seeds.units))     # guard_tag exclusion (Amendment 4): IT7_READOUT6, ISR_SIGN_UNRESOLVED, HELD_OUT_ENDPOINT units never enter the signature arm
+if len(seeds) == 0:
+    out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
+    (out / f"sig_{a.label}.json").write_text(json.dumps(dict(label=a.label, seed_units_total=n_all, seed_units_excluded_by_guard=n_all, error="no eligible seed units after guard_tag exclusion"), indent=1) + "\n")
+    print("no eligible seed units after guard exclusion"); raise SystemExit(0)
 # family of each perturbagen via the catalogue skeleton key
 sys.path.insert(0, str(se.REPO / "framework/scripts"))
 import compound_catalog as cc, repurposing_search as rs
@@ -87,7 +93,7 @@ def fam_scores(W):
             if len(sel): m[f] = np.median(O[sel], axis=0)
         out[c] = m
     return out
-res = dict(label=a.label, signatures=len(sigs), families=len(famlist), signatures_B=int((cls == "B").sum()), signatures_E=int((cls == "E").sum()))
+res = dict(label=a.label, seed_units_total=n_all, seed_units_excluded_by_guard=n_all - len(seeds), signatures=len(sigs), families=len(famlist), signatures_B=int((cls == "B").sum()), signatures_E=int((cls == "E").sum()))
 arms = {}
 for nm, unc in (("Uplus", 1.0), ("Uminus", -1.0)):
     w, miss = wvec(unc)

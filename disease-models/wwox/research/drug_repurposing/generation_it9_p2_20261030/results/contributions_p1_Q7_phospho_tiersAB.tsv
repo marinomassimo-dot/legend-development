@@ -1,0 +1,256 @@
+family_id	unit_id	seed_id	gene	seed_direction	level	readout_level	direction_status	contrib_hop0	contrib_hops1to3	contrib_total	guard_tag	main_target_hop0	main_target_hops1to3
+FAM:CAT:CHEMBL1000	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00925926	0.00925926			HRH1
+FAM:CAT:CHEMBL1004	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00925926	0.00925926			HRH1
+FAM:CAT:CHEMBL101253	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0262255	-0.0262255			KDR
+FAM:CAT:CHEMBL101740	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00654729	0.00654729			HRH1
+FAM:CAT:CHEMBL1018	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00140552	0.00140552			ESR1
+FAM:CAT:CHEMBL10188	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00925926	0.00925926			TACR3
+FAM:CAT:CHEMBL1023	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	7.38124e-05	7.38124e-05			RXRB
+FAM:CAT:CHEMBL102714	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.707107	0.00175938	0.708866		GSK3B	GSK3B
+FAM:CAT:CHEMBL103	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-7.15716e-05	-7.15716e-05			PGR
+FAM:CAT:CHEMBL103667	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-7.35126e-05	-7.35126e-05			MAPK14
+FAM:CAT:CHEMBL1040	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.000467351	0.000467351			VDR
+FAM:CAT:CHEMBL1042	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.000467351	0.000467351			VDR
+FAM:CAT:CHEMBL107	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	4.68639e-06	4.68639e-06			TUBB
+FAM:CAT:CHEMBL107367	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.000207397	-0.000207397			PPARG
+FAM:CAT:CHEMBL107430	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	7.66594e-06	7.66594e-06			RARA
+FAM:CAT:CHEMBL1078178	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.000432725	-0.000432725			JAK1
+FAM:CAT:CHEMBL1079175	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.000894282	0.000894282			AKT3
+FAM:CAT:CHEMBL1079742	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.00766982	-0.00766982			EGFR
+FAM:CAT:CHEMBL1082407	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.00193204	-0.00193204			AR
+FAM:CAT:CHEMBL1084546	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0569767	-0.0569767			AURKA
+FAM:CAT:CHEMBL1088750	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-7.35126e-05	-7.35126e-05			MAPK14
+FAM:CAT:CHEMBL1088751	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-7.20189e-05	-7.20189e-05			MAPK14
+FAM:CAT:CHEMBL1088752	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-7.20189e-05	-7.20189e-05			MAPK14
+FAM:CAT:CHEMBL1089636	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	4.68639e-06	4.68639e-06			TUBB
+FAM:CAT:CHEMBL1090089	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-7.35126e-05	-7.35126e-05			MAPK14
+FAM:CAT:CHEMBL1090090	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-7.20189e-05	-7.20189e-05			MAPK14
+FAM:CAT:CHEMBL1090173	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-7.35126e-05	-7.35126e-05			MAPK14
+FAM:CAT:CHEMBL1090479	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0536912	-0.0536912			AURKA
+FAM:CAT:CHEMBL1091	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	1.36306e-05	1.36306e-05			NR3C1
+FAM:CAT:CHEMBL1091644	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0491046	-0.0491046			INSR
+FAM:CAT:CHEMBL1093266	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	3.2767e-05	3.2767e-05			NR1H2
+FAM:CAT:CHEMBL1093458	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.000993852	-0.000993852			ESR1
+FAM:CAT:CHEMBL1095097	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.000599563	0.000599563			NR3C2
+FAM:CAT:CHEMBL1096380	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	4.68639e-06	4.68639e-06			TUBB
+FAM:CAT:CHEMBL1106	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00925926	0.00925926			HRH1
+FAM:CAT:CHEMBL110739	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.000599563	-0.000599563			NR3C2
+FAM:CAT:CHEMBL1111	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.0130946	0.0130946			EDNRB
+FAM:CAT:CHEMBL1131	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	5.55258e-05	5.55258e-05			RXRB
+FAM:CAT:CHEMBL113313	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.00793651	-0.00793651			GHSR
+FAM:CAT:CHEMBL1152	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	1.36306e-05	1.36306e-05			NR3C1
+FAM:CAT:CHEMBL1159650	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	1.36306e-05	1.36306e-05			NR3C1
+FAM:CAT:CHEMBL1161	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	1.36306e-05	1.36306e-05			NR3C1
+FAM:CAT:CHEMBL1162	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-7.15716e-05	-7.15716e-05			PGR
+FAM:CAT:CHEMBL1170	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00193204	0.00193204			AR
+FAM:CAT:CHEMBL1171837	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0036337	-0.0036337			ABL1
+FAM:CAT:CHEMBL1172	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00925926	0.00925926			HRH1
+FAM:CAT:CHEMBL1173655	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0284844	-0.0284844			ERBB4
+FAM:CAT:CHEMBL1181829	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.000406274	-0.000406274			CHKA
+FAM:CAT:CHEMBL1182777	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.000309544	0.000309544			CAMKK2
+FAM:CAT:CHEMBL1189432	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00925926	0.00925926			HRH1
+FAM:CAT:CHEMBL1193	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00925926	0.00925926			HRH1
+FAM:CAT:CHEMBL119385	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-7.35126e-05	-7.35126e-05			MAPK14
+FAM:CAT:CHEMBL1197051	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.037037	0.037037			ADRA1B
+FAM:CAT:CHEMBL1200323	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.0260092	0.0260092			ADRA1B
+FAM:CAT:CHEMBL1200335	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00193204	0.00193204			AR
+FAM:CAT:CHEMBL1200339	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0427667	-0.0427667			ADRA1B
+FAM:CAT:CHEMBL1200342	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	1.36306e-05	1.36306e-05			NR3C1
+FAM:CAT:CHEMBL1200376	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	1.36306e-05	1.36306e-05			NR3C1
+FAM:CAT:CHEMBL1200384	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	1.36306e-05	1.36306e-05			NR3C1
+FAM:CAT:CHEMBL1200386	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	1.36306e-05	1.36306e-05			NR3C1
+FAM:CAT:CHEMBL1200395	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00212422	0.00212422			HRH1
+FAM:CAT:CHEMBL1200406	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00925926	0.00925926			HRH1
+FAM:CAT:CHEMBL1200412	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00193204	0.00193204			AR
+FAM:CAT:CHEMBL1200413	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0302406	-0.0302406			ADRA1B
+FAM:CAT:CHEMBL1200430	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00140552	0.00140552			ESR1
+FAM:CAT:CHEMBL1200436	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00193204	0.00193204			AR
+FAM:CAT:CHEMBL1200446	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00925926	0.00925926			HRH1
+FAM:CAT:CHEMBL1200449	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	1.36306e-05	1.36306e-05			NR3C1
+FAM:CAT:CHEMBL1200461	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0427667	-0.0427667			ADRA1B
+FAM:CAT:CHEMBL1200467	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00925926	0.00925926			HRH1
+FAM:CAT:CHEMBL1200485	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.022878	-0.022878			KDR
+FAM:CAT:CHEMBL1200495	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	1.36306e-05	1.36306e-05			NR3C1
+FAM:CAT:CHEMBL1200497	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00925926	0.00925926			HRH1
+FAM:CAT:CHEMBL1200500	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	1.36306e-05	1.36306e-05			NR3C1
+FAM:CAT:CHEMBL1200532	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00925926	0.00925926			HRH1
+FAM:CAT:CHEMBL1200538	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	1.36306e-05	1.36306e-05			NR3C1
+FAM:CAT:CHEMBL1200542	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.000599563	-0.000599563			NR3C2
+FAM:CAT:CHEMBL1200545	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	1.36306e-05	1.36306e-05			NR3C1
+FAM:CAT:CHEMBL1200550	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00925926	0.00925926			HRH1
+FAM:CAT:CHEMBL1200556	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0240563	-0.0240563			AVPR1A
+FAM:CAT:CHEMBL1200561	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.0427667	0.0427667			ADRA1B
+FAM:CAT:CHEMBL1200562	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	1.36306e-05	1.36306e-05			NR3C1
+FAM:CAT:CHEMBL1200585	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00193204	0.00193204			AR
+FAM:CAT:CHEMBL1200592	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.000599563	-0.000599563			NR3C2
+FAM:CAT:CHEMBL1200598	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.000317722	-0.000317722			ESR2
+FAM:CAT:CHEMBL1200600	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	1.36306e-05	1.36306e-05			NR3C1
+FAM:CAT:CHEMBL1200617	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	1.36306e-05	1.36306e-05			NR3C1
+FAM:CAT:CHEMBL1200618	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00925926	0.00925926			HRH1
+FAM:CAT:CHEMBL1200622	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.000467351	0.000467351			VDR
+FAM:CAT:CHEMBL1200623	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00193204	0.00193204			AR
+FAM:CAT:CHEMBL1200624	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-7.15716e-05	-7.15716e-05			PGR
+FAM:CAT:CHEMBL1200635	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	1.36306e-05	1.36306e-05			NR3C1
+FAM:CAT:CHEMBL1200638	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00925926	0.00925926			HRH1
+FAM:CAT:CHEMBL1200666	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.000467351	0.000467351			VDR
+FAM:CAT:CHEMBL1200690	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0240563	-0.0240563			AVPR1A
+FAM:CAT:CHEMBL1200695	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0185185	-0.0185185			ADRA1A
+FAM:CAT:CHEMBL1200705	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0246914	-0.0246914			ADRA1B
+FAM:CAT:CHEMBL1200724	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0246914	-0.0246914			ADRA1B
+FAM:CAT:CHEMBL1200732	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	1.36306e-05	1.36306e-05			NR3C1
+FAM:CAT:CHEMBL1200750	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00925926	0.00925926			HRH1
+FAM:CAT:DGIDB:f8e146856d12	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.0138889	0.0138889			BDKRB1
+FAM:CAT:DGIDB:f8e669a79b20	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.000687625	-0.000687625			ROCK2
+FAM:CAT:DGIDB:f8f3f39bb558	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.000414317	-0.000414317			NR3C2
+FAM:CAT:DGIDB:f8f8a78bd93d	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.00140552	-0.00140552			ESR1
+FAM:CAT:DGIDB:f90a0d527366	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.00766982	-0.00766982			EGFR
+FAM:CAT:DGIDB:f91ba77a0fb8	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00140552	0.00140552			ESR1
+FAM:CAT:DGIDB:f94bf5c6798e	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-2.87519e-05	-2.87519e-05			PIM1
+FAM:CAT:DGIDB:f94d877faa8b	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-4.09086e-06	-4.09086e-06			BTK
+FAM:CAT:DGIDB:f95314ab4700	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0427667	-0.0427667			ADRA1B
+FAM:CAT:DGIDB:f9901a7990eb	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00925926	0.00925926			HRH1
+FAM:CAT:DGIDB:f998c6d0477b	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.0555556	0.0555556			GRM5
+FAM:CAT:DGIDB:f9a01c7dc76e	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0415742	-0.0415742			PIK3CA
+FAM:CAT:DGIDB:f9a2eef3ab77	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.0589256	0.0589256			PTH1R
+FAM:CAT:DGIDB:f9a45c21346a	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.0111111	0.0111111			F2RL3
+FAM:CAT:DGIDB:f9b302428243	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.000207397	-0.000207397			PPARG
+FAM:CAT:DGIDB:f9b9b60d77a5	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00140552	0.00140552			ESR1
+FAM:CAT:DGIDB:f9b9f2f7dd93	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.00227273	-0.00227273			PIK3C3
+FAM:CAT:DGIDB:f9c53acf385d	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00925926	0.00925926			MCHR1
+FAM:CAT:DGIDB:f9c6abfa87bc	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0658308	-0.0658308			AURKA
+FAM:CAT:DGIDB:f9d728d9d2b7	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	6.15321e-05	6.15321e-05			CDKL1
+FAM:CAT:DGIDB:f9fcd77ba527	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-7.35126e-05	-7.35126e-05			MAPK14
+FAM:CAT:DGIDB:fa2c565df7e0	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.000467351	0.000467351			VDR
+FAM:CAT:DGIDB:fa40380e81e3	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.0001231	0.0001231			STAT6
+FAM:CAT:DGIDB:fa4336143a13	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.0138889	0.0138889			PTAFR
+FAM:CAT:DGIDB:fa4d7b68c029	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.0589256	0.0589256			PTH1R
+FAM:CAT:DGIDB:fa9c685013c5	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.000577598	0.000577598			MAPK9
+FAM:CAT:DGIDB:faaab86f1187	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-5.6768e-06	-5.6768e-06			RPSA
+FAM:CAT:DGIDB:faade68d48cb	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.00954033	-0.00954033			GRPR
+FAM:CAT:DGIDB:faced950617b	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.000599563	0.000599563			NR3C2
+FAM:CAT:DGIDB:fb197a69a54e	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00235818	0.00235818			ATM
+FAM:CAT:DGIDB:fb3dfb5bcc3b	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00925926	0.00925926			HRH1
+FAM:CAT:DGIDB:fb4e43ca4531	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.00766982	-0.00766982			EGFR
+FAM:CAT:DGIDB:fb6f93ab5130	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.0277778	0.0277778			AVPR1A
+FAM:CAT:DGIDB:fb77282c2057	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.065758	-0.065758			AURKA
+FAM:CAT:DGIDB:fb92d02b5da3	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.000687439	-0.000687439			HDAC6
+FAM:CAT:DGIDB:fb9a6166ce48	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0536912	-0.0536912			AURKA
+FAM:CAT:DGIDB:fbc3219a83c4	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00378008	0.00378008			HRH1
+FAM:CAT:DGIDB:fbc53c1e00c4	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.000189157	-0.000189157			MAP3K7
+FAM:CAT:DGIDB:fc044774d5b4	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.000467019	0.000467019			BRAF
+FAM:CAT:DGIDB:fc15a4446d23	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	6.68514e-06	6.68514e-06			PSMB1
+FAM:CAT:DGIDB:fc1c285d3273	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00011182	0.00011182			NR1D2
+FAM:CAT:DGIDB:fc21e9bc1aba	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0555556	-0.0555556			GRM6
+FAM:CAT:DGIDB:fc25ca3f4ba3	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-4.09086e-06	-4.09086e-06			BTK
+FAM:CAT:DGIDB:fc2ad4997b00	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-1.8323e-05	-1.8323e-05			PIN1
+FAM:CAT:DGIDB:fc35f5860db2	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.000158137	-0.000158137			NR1D2
+FAM:CAT:DGIDB:fc399e5b2877	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.0833333	0.0833333			PTH1R
+FAM:CAT:DGIDB:fc3b30ce2707	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.000104734	-0.000104734			SIRT1
+FAM:CAT:DGIDB:fc42e0eade97	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.00793651	-0.00793651			GRPR
+FAM:CAT:DGIDB:fc4cd6c3249c	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.00034855	-0.00034855			CDK2
+FAM:CAT:DGIDB:fc4ce48c992e	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.000729349	-0.000729349			JAK1
+FAM:CAT:DGIDB:fc50f9800d1a	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00925926	0.00925926			MCHR1
+FAM:CAT:DGIDB:fc702a6f51b6	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.001178	0.001178			RIPK1
+FAM:CAT:DGIDB:fc70ef085c19	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.000128832	-0.000128832			PPARG
+FAM:CAT:DGIDB:fc7963521618	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0416667	-0.0416667			ERBB3
+FAM:CAT:DGIDB:fc91589972e5	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.000164264	0.000164264			PLK1
+FAM:CAT:DGIDB:fc960306fdc6	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0357143	-0.0357143			RIPK2
+FAM:CAT:DGIDB:fcb4f0321fed	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	4.68639e-06	4.68639e-06			TUBB
+FAM:CAT:DGIDB:fcb6e74032d9	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00193204	0.00193204			AR
+FAM:CAT:DGIDB:fce988cbe99e	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0416667	-0.0416667			KDR
+FAM:CAT:DGIDB:fd210ae000ce	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00925926	0.00925926			HRH1
+FAM:CAT:DGIDB:fd310066a390	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	9.63832e-06	9.63832e-06			NR3C1
+FAM:CAT:DGIDB:fd35aea9ef55	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.54246	-0.54246			PIK3CB
+FAM:CAT:DGIDB:fd44a391b5ea	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.00766982	-0.00766982			EGFR
+FAM:CAT:DGIDB:fd628e474df6	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.000414317	-0.000414317			NR3C2
+FAM:CAT:DGIDB:fd6a0428f3a8	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00925926	0.00925926			HRH1
+FAM:CAT:DGIDB:fd90a2ccc728	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0262255	-0.0262255			KDR
+FAM:CAT:DGIDB:fd925f0e36eb	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0010712	-0.0010712			EP300
+FAM:CAT:DGIDB:fda7acb60b31	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.000451336	0.000451336			BRAF
+FAM:CAT:DGIDB:fdb0d0b91128	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-2.87519e-05	-2.87519e-05			PIM1
+FAM:CAT:DGIDB:fdb9bc89977c	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00453144	0.00453144			ATM
+FAM:CAT:DGIDB:fdbc39c12eb8	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.00766982	-0.00766982			EGFR
+FAM:CAT:DGIDB:fdbc65169a5f	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.0416667	0.0416667			INSR
+FAM:CAT:DGIDB:fdc1e054590d	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.0111111	0.0111111			F2RL3
+FAM:CAT:DGIDB:fdcc0099db8a	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00925926	0.00925926			HRH1
+FAM:CAT:DGIDB:fdebf3159ec6	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0174217	-0.0174217			CDK14
+FAM:CAT:DGIDB:fe0246cf2f9d	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.000864034	-0.000864034			AR
+FAM:CAT:DGIDB:fe09ba11fb57	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0160039	-0.0160039			KIT
+FAM:CAT:DGIDB:fe1e7a63fe85	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00694444	0.00694444			MET
+FAM:CAT:DGIDB:fe4f3991af9e	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.000445486	-0.000445486			MC5R
+FAM:CAT:DGIDB:fe74ec4f20ba	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.000531904	0.000531904			BRAF
+FAM:CAT:DGIDB:fe7ff1e03907	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.0294628	0.0294628			IFNAR1
+FAM:CAT:DGIDB:fe94219bb66c	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.2571	-0.2571			TNKS
+FAM:CAT:DGIDB:fe9f155ff25c	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0103338	-0.0103338			EGFR
+FAM:CAT:DGIDB:fea95527d588	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.000467351	0.000467351			VDR
+FAM:CAT:DGIDB:febfc346566e	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	4.68639e-06	4.68639e-06			TUBB
+FAM:CAT:DGIDB:fed5565d72e2	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00793651	0.00793651			GHSR
+FAM:CAT:DGIDB:fed8659c0649	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00925926	0.00925926			TACR3
+FAM:CAT:DGIDB:fed888ac49b0	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	4.9781e-06	4.9781e-06			RARG
+FAM:CAT:DGIDB:ff02550ef866	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0138889	-0.0138889			PTAFR
+FAM:CAT:DGIDB:ff06e01b6051	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	5.92585e-05	5.92585e-05			TEAD1
+FAM:CAT:DGIDB:ff14fa84130d	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.000655447	-0.000655447			HDAC6
+FAM:CAT:DGIDB:ff17b6cf4ea7	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.0111111	0.0111111			OXTR
+FAM:CAT:DGIDB:ff3143aefdb6	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-4.09086e-06	-4.09086e-06			BTK
+FAM:CAT:DGIDB:ff5254029216	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.398603	-0.398603			PIK3CB
+FAM:CAT:DGIDB:ff54f2004380	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.00140552	0.00140552			ESR1
+FAM:CAT:DGIDB:ff5fa06a3e50	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0589256	-0.0589256			PIK3CA
+FAM:CAT:DGIDB:ffb06af17457	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.0555556	0.0555556			MC2R
+FAM:CAT:DGIDB:ffe87e6cdcc6	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.0111111	0.0111111			CCKBR
+FAM:CAT:DGIDB:fff5ad314cbd	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0138889	-0.0138889			FFAR1
+FAM:CAT:DGIDB:fffb4f600170	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.00925926	-0.00925926			MCHR1
+FAM:CAT:CHEMBL1200826	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.57735	0.00143653	0.578787		GSK3B	GSK3B
+FAM:CAT:CHEMBL1201170	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.57735	0.00143653	0.578787		GSK3B	GSK3B
+FAM:CAT:CHEMBL1969664	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.707107	0.00175938	0.708866		GSK3B	GSK3B
+FAM:CAT:CHEMBL1980391	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.046917	-0.046917			AURKA
+FAM:CAT:CHEMBL2010872	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0148199	-0.0148199			KDR
+FAM:CAT:CHEMBL2177161	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	1	0.0025131	1.00251		GSK3B	GSK3B
+FAM:CAT:CHEMBL245030	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	0.000141159	0.000141159			AKT1
+FAM:CAT:CHEMBL296468	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.000508815	-0.000508815			CDK2
+FAM:CAT:CHEMBL3545157	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	1	0.0025131	1.00251		GSK3B	GSK3B
+FAM:CAT:CHEMBL362558	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.707107	0.00175938	0.708866		GSK3B	GSK3B
+FAM:CAT:CHEMBL482967	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0673312	-0.0673312			AURKA
+FAM:CAT:CHEMBL483465	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	1	0.0025131	1.00251		GSK3B	GSK3B
+FAM:CAT:DGIDB:0385c199ba54	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	1	0.0025131	1.00251		GSK3B	GSK3B
+FAM:CAT:DGIDB:07ddcc364600	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.353553	-0.0443644	0.309189		GSK3B	AURKA
+FAM:CAT:DGIDB:24c4530c1d09	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.57735	0.00167145	0.579022		GSK3B	GSK3B
+FAM:CAT:DGIDB:2b38dde5779c	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.447214	-0.0189302	0.428283		GSK3B	KDR
+FAM:CAT:DGIDB:37e234e791af	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.707107	0.00175938	0.708866		GSK3B	GSK3B
+FAM:CAT:DGIDB:3b2aceac7055	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.707107	0.00189636	0.709003		GSK3B	GSK3B
+FAM:CAT:DGIDB:4581d3df3b09	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.707107	0.00156962	0.708676		GSK3B	GSK3B
+FAM:CAT:DGIDB:4b04c94a20c7	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.707107	0.00175938	0.708866		GSK3B	GSK3B
+FAM:CAT:DGIDB:50ccc7b5c33e	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.57735	0.00143653	0.578787		GSK3B	GSK3B
+FAM:CAT:DGIDB:538de3546c06	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	1	0.0025131	1.00251		GSK3B	GSK3B
+FAM:CAT:DGIDB:580d69afd7ca	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.57735	0.00131177	0.578662		GSK3B	GSK3B
+FAM:CAT:DGIDB:5a2846b1461c	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	1	0.0025131	1.00251		GSK3B	GSK3B
+FAM:CAT:DGIDB:633c645744ec	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.707107	0.00156962	0.708676		GSK3B	GSK3B
+FAM:CAT:DGIDB:672d3a5ad699	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	1	0.0025131	1.00251		GSK3B	GSK3B
+FAM:CAT:DGIDB:6cdebf56bf1b	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.57735	0.00140605	0.578756		GSK3B	GSK3B
+FAM:CAT:DGIDB:744c4344e9aa	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	1	0.0025131	1.00251		GSK3B	GSK3B
+FAM:CAT:DGIDB:768abbeca460	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	1	0.0025131	1.00251		GSK3B	GSK3B
+FAM:CAT:DGIDB:82cc7f4ce1af	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	1	0.0025131	1.00251		GSK3B	GSK3B
+FAM:CAT:DGIDB:846313cfd6a0	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.000378891	-0.000378891			PRKCD
+FAM:CAT:DGIDB:853465a5cf67	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.000238732	-0.000238732			CHUK
+FAM:CAT:DGIDB:8dc27d963f06	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.267261	0.000541877	0.267803		GSK3B	GSK3B
+FAM:CAT:DGIDB:905ea4953db1	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	1	0.0025131	1.00251		GSK3B	GSK3B
+FAM:CAT:DGIDB:97131bfa199e	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.57735	-0.000423575	0.576927		GSK3B	CHEK1
+FAM:CAT:DGIDB:97dbd5c7acb5	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	1	0.0025131	1.00251		GSK3B	GSK3B
+FAM:CAT:DGIDB:9bb3918a4eac	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.707107	0.00175938	0.708866		GSK3B	GSK3B
+FAM:CAT:DGIDB:9bc633afd268	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-0.0421944	-0.0421944			AURKA
+FAM:CAT:DGIDB:9e056646b4e6	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.5	-0.0354855	0.464515		GSK3B	MAPK1
+FAM:CAT:DGIDB:a4210a19f0f8	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.707107	0.00177703	0.708884		GSK3B	GSK3B
+FAM:CAT:DGIDB:a84b2cff6470	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.707107	0.00156962	0.708676		GSK3B	GSK3B
+FAM:CAT:DGIDB:a8747d37038c	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	1	0.0025131	1.00251		GSK3B	GSK3B
+FAM:CAT:DGIDB:af77ef270fd6	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.353553	-0.0148415	0.338712		GSK3B	KDR
+FAM:CAT:DGIDB:b039e5705d4c	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0	-5.88032e-05	-5.88032e-05			MAPK14
+FAM:CAT:DGIDB:b4ced63a88ce	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.57735	0.00140605	0.578756		GSK3B	GSK3B
+FAM:CAT:DGIDB:b600b74b4aa0	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.27735	-2.26753e-06	0.277348		GSK3B	CDK3
+FAM:CAT:DGIDB:c19d6354ef11	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	1	0.0025131	1.00251		GSK3B	GSK3B
+FAM:CAT:DGIDB:c1e88abda777	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.57735	-0.047447	0.529903		GSK3B	AURKA
+FAM:CAT:DGIDB:c87c8a936b47	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.707107	0.00175938	0.708866		GSK3B	GSK3B
+FAM:CAT:DGIDB:cfa5bd0a6c8c	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.57735	0.00143653	0.578787		GSK3B	GSK3B
+FAM:CAT:DGIDB:d19da49811f6	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.5	-0.0404245	0.459576		GSK3B	CDC7
+FAM:CAT:DGIDB:d336b62ae754	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.27735	0.00225849	0.279609		GSK3B	LCK
+FAM:CAT:DGIDB:d5d99a0cf60f	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	1	0.0025131	1.00251		GSK3B	GSK3B
+FAM:CAT:DGIDB:e9fb50530879	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	0.377964	-0.0310499	0.346915		GSK3B	CDC7
+FAM:CAT:DGIDB:f52178ee0027	Q7_phospho_tiersAB:GSK3B:GSK3B	Q7_phospho_tiersAB:GSK3B	GSK3B	uncertain	1.0000	phospho	uncertain_direction(+arm shown)	1	0.0025131	1.00251		GSK3B	GSK3B

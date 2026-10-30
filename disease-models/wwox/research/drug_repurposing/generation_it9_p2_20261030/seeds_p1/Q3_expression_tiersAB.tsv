@@ -1,7 +1,7 @@
-seed_id	gene	kind	members	direction	level	direction_status	readout_level	evidence_class	species	ortholog_map	source_ref	note
-Q3_expression_tiersAB:ATF5	ATF5	gene		uncertain	1.0	uncertain	expression	transcript_contrast	human		S044	directions seen: ['uncertain']; tiers ['A']; P1 gives no magnitude (equal weight)
-Q3_expression_tiersAB:CHAC1	CHAC1	gene		uncertain	1.0	uncertain	expression	transcript_contrast	human		S040	directions seen: ['uncertain']; tiers ['A']; P1 gives no magnitude (equal weight)
-Q3_expression_tiersAB:PSAT1	PSAT1	gene		up	1.0	defined	expression	transcript_contrast	human		S043	directions seen: ['up']; tiers ['A']; P1 gives no magnitude (equal weight)
-Q3_expression_tiersAB:SESN2	SESN2	gene		uncertain	1.0	uncertain	expression	transcript_contrast	human		S042	directions seen: ['uncertain']; tiers ['A']; P1 gives no magnitude (equal weight)
-Q3_expression_tiersAB:TRIB3	TRIB3	gene		uncertain	1.0	uncertain	expression	transcript_contrast	human		S041	directions seen: ['uncertain']; tiers ['A']; P1 gives no magnitude (equal weight)
-Q3_expression_tiersAB:SET:ISR_TARGETS_12	SET:ISR_TARGETS_12	process	ASNS;ATF5;CHAC1;DDIT3;GADD45A;PCK2;PHGDH;PSAT1;PSPH;SESN2;TRIB3;SLC7A11	uncertain	1.0	uncertain	expression	transcript_contrast	human		S046	directions seen: ['uncertain']; tiers ['A']; P1 gives no magnitude (equal weight)
+seed_id	gene	kind	members	direction	level	direction_status	readout_level	evidence_class	species	ortholog_map	source_ref	note	guard_tag
+Q3_expression_tiersAB:ATF5	ATF5	gene		uncertain	1.0	uncertain	expression	transcript_contrast	human		S044	directions seen: ['uncertain']; tiers ['A']; P1 gives no magnitude (equal weight)	ISR_SIGN_UNRESOLVED
+Q3_expression_tiersAB:CHAC1	CHAC1	gene		uncertain	1.0	uncertain	expression	transcript_contrast	human		S040	directions seen: ['uncertain']; tiers ['A']; P1 gives no magnitude (equal weight)	ISR_SIGN_UNRESOLVED
+Q3_expression_tiersAB:PSAT1	PSAT1	gene		up	1.0	defined	expression	transcript_contrast	human		S043	directions seen: ['up']; tiers ['A']; P1 gives no magnitude (equal weight)	ISR_SIGN_UNRESOLVED
+Q3_expression_tiersAB:SESN2	SESN2	gene		uncertain	1.0	uncertain	expression	transcript_contrast	human		S042	directions seen: ['uncertain']; tiers ['A']; P1 gives no magnitude (equal weight)	ISR_SIGN_UNRESOLVED
+Q3_expression_tiersAB:TRIB3	TRIB3	gene		uncertain	1.0	uncertain	expression	transcript_contrast	human		S041	directions seen: ['uncertain']; tiers ['A']; P1 gives no magnitude (equal weight)	ISR_SIGN_UNRESOLVED
+Q3_expression_tiersAB:SET:ISR_TARGETS_12	SET:ISR_TARGETS_12	process	ASNS;ATF5;CHAC1;DDIT3;GADD45A;PCK2;PHGDH;PSAT1;PSPH;SESN2;TRIB3;SLC7A11	uncertain	1.0	uncertain	expression	transcript_contrast	human		S046	directions seen: ['uncertain']; tiers ['A']; P1 gives no magnitude (equal weight)	ISR_SIGN_UNRESOLVED

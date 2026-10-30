@@ -1,9 +1,9 @@
-seed_id	gene	kind	members	direction	level	direction_status	readout_level	evidence_class	species	ortholog_map	source_ref	note
-Q2_expression_tiersAB:BNIP3	BNIP3	gene		up	1.0	defined	expression	transcript_contrast	human		S021	directions seen: ['up']; tiers ['A']; P1 gives no magnitude (equal weight)
-Q2_expression_tiersAB:HK2	HK2	gene		up	1.0	defined	expression	transcript_contrast	human		S018	directions seen: ['up']; tiers ['A']; P1 gives no magnitude (equal weight)
-Q2_expression_tiersAB:LDHA	LDHA	gene		up	1.0	defined	expression	transcript_contrast	human		S019	directions seen: ['up']; tiers ['A']; P1 gives no magnitude (equal weight)
-Q2_expression_tiersAB:LDHB	LDHB	gene		up	1.0	defined	expression	transcript_contrast	human		S020	directions seen: ['up']; tiers ['A']; P1 gives no magnitude (equal weight)
-Q2_expression_tiersAB:PDHA1	PDHA1	gene		uncertain	1.0	uncertain	expression	transcript_contrast	human		S024	directions seen: ['uncertain']; tiers ['A']; P1 gives no magnitude (equal weight)
-Q2_expression_tiersAB:PDK1	PDK1	gene		uncertain	1.0	uncertain	expression	transcript_contrast	human		S022	directions seen: ['uncertain']; tiers ['A']; P1 gives no magnitude (equal weight)
-Q2_expression_tiersAB:SLC2A1	SLC2A1	gene		up	1.0	defined	expression	transcript_contrast	human		S017	directions seen: ['up']; tiers ['A']; P1 gives no magnitude (equal weight)
-Q2_expression_tiersAB:SET:GLYCOLYSIS_LACTATE_10	SET:GLYCOLYSIS_LACTATE_10	process	SLC2A1;HK2;PFKP;ALDOA;PGK1;ENO1;LDHA;PKM;BNIP3;LDHB	up	1.0	defined	expression	transcript_contrast	human		S025	directions seen: ['up']; tiers ['A']; P1 gives no magnitude (equal weight)
+seed_id	gene	kind	members	direction	level	direction_status	readout_level	evidence_class	species	ortholog_map	source_ref	note	guard_tag
+Q2_expression_tiersAB:BNIP3	BNIP3	gene		up	1.0	defined	expression	transcript_contrast	human		S021	directions seen: ['up']; tiers ['A']; P1 gives no magnitude (equal weight)	IT7_READOUT6
+Q2_expression_tiersAB:HK2	HK2	gene		up	1.0	defined	expression	transcript_contrast	human		S018	directions seen: ['up']; tiers ['A']; P1 gives no magnitude (equal weight)	IT7_READOUT6
+Q2_expression_tiersAB:LDHA	LDHA	gene		up	1.0	defined	expression	transcript_contrast	human		S019	directions seen: ['up']; tiers ['A']; P1 gives no magnitude (equal weight)	IT7_READOUT6
+Q2_expression_tiersAB:LDHB	LDHB	gene		up	1.0	defined	expression	transcript_contrast	human		S020	directions seen: ['up']; tiers ['A']; P1 gives no magnitude (equal weight)	IT7_READOUT6
+Q2_expression_tiersAB:PDHA1	PDHA1	gene		uncertain	1.0	uncertain	expression	transcript_contrast	human		S024	directions seen: ['uncertain']; tiers ['A']; P1 gives no magnitude (equal weight)	
+Q2_expression_tiersAB:PDK1	PDK1	gene		uncertain	1.0	uncertain	expression	transcript_contrast	human		S022	directions seen: ['uncertain']; tiers ['A']; P1 gives no magnitude (equal weight)	IT7_READOUT6
+Q2_expression_tiersAB:SLC2A1	SLC2A1	gene		up	1.0	defined	expression	transcript_contrast	human		S017	directions seen: ['up']; tiers ['A']; P1 gives no magnitude (equal weight)	IT7_READOUT6
+Q2_expression_tiersAB:SET:GLYCOLYSIS_LACTATE_10	SET:GLYCOLYSIS_LACTATE_10	process	SLC2A1;HK2;PFKP;ALDOA;PGK1;ENO1;LDHA;PKM;BNIP3;LDHB	up	1.0	defined	expression	transcript_contrast	human		S025	directions seen: ['up']; tiers ['A']; P1 gives no magnitude (equal weight)	IT7_READOUT6

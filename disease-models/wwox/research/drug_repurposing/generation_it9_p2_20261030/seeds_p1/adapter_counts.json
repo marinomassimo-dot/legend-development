@@ -1,39 +1,38 @@
 {
- "p1_seeds_sha256": "726dd2a192c71f560eaf870b0ec579a6d648e4265cfbec3d34b33264b95f162b",
+ "p1_seeds_sha256": "769523339e0256f37974f25e845ddc094e5919a509d7bd073a097d7878a026f4",
  "tiers": [
   "A",
   "B"
  ],
  "per_question": {
   "D1": {
-   "not_usable_or_reserved": 10
+   "not_usable_or_reserved": 7
   },
   "D2": {
-   "not_usable_or_reserved": 5
+   "not_usable_or_reserved": 4
   },
   "D3": {
    "not_usable_or_reserved": 2
   },
   "D5": {
-   "not_usable_or_reserved": 1
+   "not_usable_or_reserved": 2
   },
   "D6": {
    "not_usable_or_reserved": 1
   },
   "Q1": {
-   "usable_rows": 6,
+   "usable_rows": 4,
    "tier_not_selected": 3,
-   "rows_placed": 1,
-   "process_or_state_without_gene_members_not_representable": 2,
-   "not_usable_or_reserved": 10
+   "not_usable_or_reserved": 12,
+   "process_or_state_without_gene_members_not_representable": 1
   },
   "Q2": {
-   "usable_rows": 17,
+   "usable_rows": 20,
    "rows_placed": 8,
    "unchanged_null_observation_not_a_seed": 2,
    "no_hgnc_ortholog_link_dropped": 1,
-   "tier_not_selected": 5,
-   "process_or_state_without_gene_members_not_representable": 1,
+   "tier_not_selected": 7,
+   "process_or_state_without_gene_members_not_representable": 2,
    "not_usable_or_reserved": 6
   },
   "Q3": {
@@ -44,18 +43,30 @@
    "not_usable_or_reserved": 5
   },
   "Q4": {
-   "usable_rows": 12,
-   "process_or_state_without_gene_members_not_representable": 5,
-   "rows_placed": 7,
-   "not_usable_or_reserved": 6
+   "usable_rows": 15,
+   "process_or_state_without_gene_members_not_representable": 6,
+   "unchanged_null_observation_not_a_seed": 1,
+   "pathology_level_gene_row_not_a_gene_seed": 2,
+   "rows_placed": 6,
+   "not_usable_or_reserved": 13
   },
   "Q5": {
    "usable_rows": 10,
    "process_or_state_without_gene_members_not_representable": 1,
    "unchanged_null_observation_not_a_seed": 1,
    "no_hgnc_ortholog_link_dropped": 1,
-   "rows_placed": 7,
-   "not_usable_or_reserved": 7
+   "pathology_level_gene_row_not_a_gene_seed": 4,
+   "rows_placed": 3,
+   "not_usable_or_reserved": 11
+  },
+  "Q6": {
+   "usable_rows": 2,
+   "rows_placed": 2,
+   "not_usable_or_reserved": 3
+  },
+  "Q7": {
+   "usable_rows": 1,
+   "rows_placed": 1
   }
  }
 }

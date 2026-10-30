@@ -1,65 +1,53 @@
 {
  "label": "p1_Q4_protein_tiersAB",
  "seeds": "seeds_p1/Q4_protein_tiersAB.tsv",
- "n_seed_units": 4,
- "n_defined": 4,
+ "n_seed_units": 2,
+ "n_defined": 2,
  "n_uncertain": 0,
  "examined_families": 12560,
  "T1": {
   "a_zero_seeds_max_abs_Q": 0.0,
   "b_scale_max_abs_err": 3.469446951953614e-18,
   "c_decomposition_max_abs_err": 8.673617379884035e-19,
-  "d_defined_seeds_with_effect": 3,
-  "d_inert_defined_seeds": [
-   "Q4_protein_tiersAB:PVALB:PVALB"
-  ],
-  "d_inert_units_any_direction": [
-   "Q4_protein_tiersAB:PVALB:PVALB"
-  ],
+  "d_defined_seeds_with_effect": 2,
+  "d_inert_defined_seeds": [],
+  "d_inert_units_any_direction": [],
   "PASS": true
  },
  "T2": {
   "a_n_null": 1000,
-  "a_spearman_real_vs_null_median": 0.16351810257228283,
+  "a_spearman_real_vs_null_median": 0.1276715967272418,
   "a_spearman_p5_p95": [
-   -0.15461189976348624,
-   0.41486578580518085
+   -0.1648436063339988,
+   0.39569770507575125
   ],
   "a_top100_overlap_median": 1.0,
   "a_top100_overlap_p5_p95": [
    0.0,
-   44.0
+   45.0
   ],
-  "a_effect_size_1_minus_rho_median": 0.8364818974277172,
-  "a_families_abs_z_gt3": 100,
-  "a_families_nonzero": 2927,
-  "z_spearman_real_vs_null_median": 0.8523990515093769,
+  "a_effect_size_1_minus_rho_median": 0.8723284032727582,
+  "a_families_abs_z_gt3": 61,
+  "a_families_nonzero": 2828,
+  "z_spearman_real_vs_null_median": 0.8792096253921524,
   "z_top100_overlap_median": 0.0,
   "z_top100_overlap_p5_p95": [
    0.0,
-   50.049999999999955
+   44.0
   ],
-  "b_sign_shuffle_median_spearman": 1.0,
-  "b_sign_shuffle_p5_p95": [
-   1.0,
-   1.0
-  ],
-  "b_sign_shuffle_identical_to_real": 1000,
-  "b_defined_seed_signs_up_down": [
-   0,
-   4
-  ],
+  "b_sign_shuffle_median_spearman": null,
+  "b_note": "fewer than 4 defined-direction seeds: not testable",
   "c_decoy_n_genes": 10,
   "c_decoy_genes_in_graph": 9,
-  "c_decoy_spearman_with_real": -0.001390146070550708,
+  "c_decoy_spearman_with_real": 0.06173936094375189,
   "c_decoy_top100_overlap_with_real": 0,
   "criteria_met_a_rho_a_top100_b_shuffle_c_decoy": [
    true,
    true,
-   false,
+   true,
    true
   ],
-  "PASS": false,
+  "PASS": true,
   "z_arm_criteria_met_rho_top100": [
    false,
    true
@@ -68,22 +56,20 @@
  "T3": {
   "a_firewall": "seed classes checked at load (evidence_class in ['activity_state', 'phenotype_state', 'protein_state', 'transcript_contrast']); none refused",
   "a_seed_gene_equals_probe_name": [],
-  "b_seed_units_total": 4,
-  "b_seed_units_in_graph": 3,
-  "b_seed_genes_missing_from_graph": [
-   "PVALB"
-  ],
+  "b_seed_units_total": 2,
+  "b_seed_units_in_graph": 2,
+  "b_seed_genes_missing_from_graph": [],
   "b_distinct_signed_target_symbols": 2381,
   "b_target_symbols_in_graph": 1887,
   "b_mnet_usable_families_without_gene_symbol": 72,
   "b_restricted_universe_families": 11085,
   "b_restricted_vs_all_spearman": 1.0,
   "b_restricted_check_note": "near-tautological by construction (a family whose every target is in the graph has the same score in any engine); the informative diagnostics are the next lines",
-  "b_norm_all_targets_vs_ingraph_only_spearman": 0.9999973154255831,
+  "b_norm_all_targets_vs_ingraph_only_spearman": 0.9999979617784012,
   "b_rows_chembl_only_families": 2965,
-  "b_rows_chembl_only_spearman_with_all_rows": 0.9961355312833232,
+  "b_rows_chembl_only_spearman_with_all_rows": 0.9963069182562649,
   "b_rows_nonchembl_only_families": 9698,
-  "b_rows_nonchembl_only_spearman_with_all_rows": 0.9940786209872957,
+  "b_rows_nonchembl_only_spearman_with_all_rows": 0.9909252472287495,
   "c_probes": [
    {
     "family_id": "FAM:CAT:CHEMBL1072",
@@ -92,9 +78,9 @@
     "Q_defined": 0.0,
     "Q_Uplus": 0.0,
     "Q_Uminus": 0.0,
-    "percentile_defined_arm": 0.5068869426751592,
-    "percentile_Uplus": 0.5068869426751592,
-    "percentile_Uminus": 0.5068869426751592,
+    "percentile_defined_arm": 0.49880573248407645,
+    "percentile_Uplus": 0.49880573248407645,
+    "percentile_Uminus": 0.49880573248407645,
     "own_target_seeds": [],
     "hop0_share_of_abs_Q_defined": 0.0,
     "flag": ""
@@ -106,9 +92,9 @@
     "Q_defined": 0.0,
     "Q_Uplus": 0.0,
     "Q_Uminus": 0.0,
-    "percentile_defined_arm": 0.5068869426751592,
-    "percentile_Uplus": 0.5068869426751592,
-    "percentile_Uminus": 0.5068869426751592,
+    "percentile_defined_arm": 0.49880573248407645,
+    "percentile_Uplus": 0.49880573248407645,
+    "percentile_Uminus": 0.49880573248407645,
     "own_target_seeds": [],
     "hop0_share_of_abs_Q_defined": 0.0,
     "flag": ""
@@ -125,9 +111,9 @@
     "Q_defined": 0.0,
     "Q_Uplus": 0.0,
     "Q_Uminus": 0.0,
-    "percentile_defined_arm": 0.5068869426751592,
-    "percentile_Uplus": 0.5068869426751592,
-    "percentile_Uminus": 0.5068869426751592,
+    "percentile_defined_arm": 0.49880573248407645,
+    "percentile_Uplus": 0.49880573248407645,
+    "percentile_Uminus": 0.49880573248407645,
     "own_target_seeds": [],
     "hop0_share_of_abs_Q_defined": 0.0,
     "flag": ""
@@ -149,9 +135,9 @@
     "Q_defined": 0.0,
     "Q_Uplus": 0.0,
     "Q_Uminus": 0.0,
-    "percentile_defined_arm": 0.5068869426751592,
-    "percentile_Uplus": 0.5068869426751592,
-    "percentile_Uminus": 0.5068869426751592,
+    "percentile_defined_arm": 0.49880573248407645,
+    "percentile_Uplus": 0.49880573248407645,
+    "percentile_Uminus": 0.49880573248407645,
     "own_target_seeds": [],
     "hop0_share_of_abs_Q_defined": 0.0,
     "flag": ""
@@ -163,9 +149,9 @@
     "Q_defined": 0.0,
     "Q_Uplus": 0.0,
     "Q_Uminus": 0.0,
-    "percentile_defined_arm": 0.5068869426751592,
-    "percentile_Uplus": 0.5068869426751592,
-    "percentile_Uminus": 0.5068869426751592,
+    "percentile_defined_arm": 0.49880573248407645,
+    "percentile_Uplus": 0.49880573248407645,
+    "percentile_Uminus": 0.49880573248407645,
     "own_target_seeds": [],
     "hop0_share_of_abs_Q_defined": 0.0,
     "flag": ""
@@ -177,9 +163,9 @@
     "Q_defined": 0.0,
     "Q_Uplus": 0.0,
     "Q_Uminus": 0.0,
-    "percentile_defined_arm": 0.5068869426751592,
-    "percentile_Uplus": 0.5068869426751592,
-    "percentile_Uminus": 0.5068869426751592,
+    "percentile_defined_arm": 0.49880573248407645,
+    "percentile_Uplus": 0.49880573248407645,
+    "percentile_Uminus": 0.49880573248407645,
     "own_target_seeds": [],
     "hop0_share_of_abs_Q_defined": 0.0,
     "flag": ""
@@ -201,9 +187,9 @@
     "Q_defined": 0.0,
     "Q_Uplus": 0.0,
     "Q_Uminus": 0.0,
-    "percentile_defined_arm": 0.5068869426751592,
-    "percentile_Uplus": 0.5068869426751592,
-    "percentile_Uminus": 0.5068869426751592,
+    "percentile_defined_arm": 0.49880573248407645,
+    "percentile_Uplus": 0.49880573248407645,
+    "percentile_Uminus": 0.49880573248407645,
     "own_target_seeds": [],
     "hop0_share_of_abs_Q_defined": 0.0,
     "flag": ""
@@ -220,9 +206,9 @@
     "Q_defined": 0.0,
     "Q_Uplus": 0.0,
     "Q_Uminus": 0.0,
-    "percentile_defined_arm": 0.5068869426751592,
-    "percentile_Uplus": 0.5068869426751592,
-    "percentile_Uminus": 0.5068869426751592,
+    "percentile_defined_arm": 0.49880573248407645,
+    "percentile_Uplus": 0.49880573248407645,
+    "percentile_Uminus": 0.49880573248407645,
     "own_target_seeds": [],
     "hop0_share_of_abs_Q_defined": 0.0,
     "flag": ""
@@ -234,9 +220,9 @@
     "Q_defined": 0.0,
     "Q_Uplus": 0.0,
     "Q_Uminus": 0.0,
-    "percentile_defined_arm": 0.5068869426751592,
-    "percentile_Uplus": 0.5068869426751592,
-    "percentile_Uminus": 0.5068869426751592,
+    "percentile_defined_arm": 0.49880573248407645,
+    "percentile_Uplus": 0.49880573248407645,
+    "percentile_Uminus": 0.49880573248407645,
     "own_target_seeds": [],
     "hop0_share_of_abs_Q_defined": 0.0,
     "flag": ""
@@ -250,12 +236,12 @@
     "family_id": "FAM:CAT:CHEMBL574737",
     "name": "UCN-01",
     "status": "examined",
-    "Q_defined": 8.45986145553797e-05,
-    "Q_Uplus": 8.45986145553797e-05,
-    "Q_Uminus": 8.45986145553797e-05,
-    "percentile_defined_arm": 0.9742436305732484,
-    "percentile_Uplus": 0.9742436305732484,
-    "percentile_Uminus": 0.9742436305732484,
+    "Q_defined": 7.932383139839803e-05,
+    "Q_Uplus": 7.932383139839803e-05,
+    "Q_Uminus": 7.932383139839803e-05,
+    "percentile_defined_arm": 0.9839570063694267,
+    "percentile_Uplus": 0.9839570063694267,
+    "percentile_Uminus": 0.9839570063694267,
     "own_target_seeds": [],
     "hop0_share_of_abs_Q_defined": 0.0,
     "flag": ""
@@ -267,9 +253,9 @@
     "Q_defined": 0.0,
     "Q_Uplus": 0.0,
     "Q_Uminus": 0.0,
-    "percentile_defined_arm": 0.5068869426751592,
-    "percentile_Uplus": 0.5068869426751592,
-    "percentile_Uminus": 0.5068869426751592,
+    "percentile_defined_arm": 0.49880573248407645,
+    "percentile_Uplus": 0.49880573248407645,
+    "percentile_Uminus": 0.49880573248407645,
     "own_target_seeds": [],
     "hop0_share_of_abs_Q_defined": 0.0,
     "flag": ""
@@ -286,25 +272,25 @@
   "PASS_identity": true
  },
  "T4": {
-  "spearman_NETIND_vs_DIRECT_examined": -0.0002857258940145143,
-  "spearman_NETFULL_vs_DIRECT_examined": 0.020860303070348203,
+  "spearman_NETIND_vs_DIRECT_examined": 5.2169632183283534e-05,
+  "spearman_NETFULL_vs_DIRECT_examined": 0.021132598466906703,
   "n_direct_signed_nonzero_families": 1,
-  "n_direct_any_action_families": 6,
-  "n_direct_any_action_that_also_have_nonzero_netind": 1,
+  "n_direct_any_action_families": 2,
+  "n_direct_any_action_that_also_have_nonzero_netind": 0,
   "top50_overlap_NETIND_DIRECT": 0,
   "top100_overlap_NETIND_DIRECT": 1,
   "raw_Q_top100": {
    "n_new": 100,
-   "n_new_and_seed_specific_z_gt3": 38
+   "n_new_and_seed_specific_z_gt3": 44
   },
   "raw_Q_outcome": "ADDS",
   "Z_top100": {
    "n_new": 100,
-   "n_new_and_seed_specific_z_gt3": 88,
+   "n_new_and_seed_specific_z_gt3": 53,
    "n_with_positive_Z": 100
   },
   "Z_outcome": "ADDS",
-  "Z_top100_overlap_with_raw_Q_top100": 44,
+  "Z_top100_overlap_with_raw_Q_top100": 70,
   "wwox_regulators_in_network": [
    "E2F1",
    "NFKB1",
@@ -315,20 +301,28 @@
    "TFAP2C"
   ],
   "n_families_with_regulator_target": 6,
-  "note": "a top-k list of a method that fails T2 is not seed-specific whatever T4 says"
+  "note": ""
  },
  "T5": {
   "a_empty_seeds_equal_zero_baseline_max_abs": 0.0,
   "b_flip_all_max_abs_err": 0.0,
   "b_flip_all_spearman_with_real": -1.0,
   "b_flip_all_top100_overlap_real_vs_flipped": 0,
-  "c_one_sign_flip_max_abs_err": 1.734723475976807e-18,
+  "c_one_sign_flip_max_abs_err": 2.6020852139652106e-18,
   "c_changed_set_equals_influenced_set": true,
   "d_note": "no uncertain-direction seeds in this set",
-  "e_network_sign_randomized_median_spearman": 0.017387277302733112,
+  "e_network_sign_randomized_median_spearman": 0.006119656493218779,
   "e_n": 200,
   "f_zero_level_equals_removal_max_abs": 0.0,
   "PASS": true,
-  "reach_baseline_spearman_abs_with_abs_real": 0.14051763481637963
+  "reach_baseline_spearman_abs_with_abs_real": 0.12664746908616326
+ },
+ "T6": {
+  "tags_present": [],
+  "units_total": 2,
+  "units_sign_changed_by_guard": 0,
+  "units_excluded_from_signature_arm": 0,
+  "units_would_enter_signature_arm_if_guard_ignored": 2,
+  "PASS": true
  }
 }

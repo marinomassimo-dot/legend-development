@@ -1,740 +1,388 @@
-family_id	unit_id	seed_id	gene	seed_direction	level	readout_level	direction_status	contrib_hop0	contrib_hops1to3	contrib_total	main_target_hop0	main_target_hops1to3
-FAM:CAT:CHEMBL4650241	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	0.07	0.07		DMD
-FAM:CAT:CHEMBL4650241	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	0.07	0.07		DMD
-FAM:CAT:DGIDB:c2cc6146166d	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	0.0249998	0.0249998		NR1I3
-FAM:CAT:DGIDB:c2cc6146166d	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-6.6064e-08	-6.6064e-08		NR1I3
-FAM:CAT:DGIDB:f2356402f4c0	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	9.47196e-06	9.47196e-06		NR1I2
-FAM:CAT:DGIDB:f2356402f4c0	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	0.0176873	0.0176873		NR1I3
-FAM:CAT:DGIDB:f2356402f4c0	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.25543e-06	-1.25543e-06		NR1I2
-FAM:CAT:CHEMBL3786673	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-6.92065e-05	-6.92065e-05		NFKB2
-FAM:CAT:CHEMBL3786673	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-7.48532e-05	-7.48532e-05		NFKB2
-FAM:CAT:CHEMBL3786673	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-6.12344e-06	-6.12344e-06		NFKB1
-FAM:CAT:CHEMBL123292	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	2.01874e-07	2.01874e-07		RPL10
-FAM:CAT:CHEMBL123292	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-7.87237e-06	-7.87237e-06		RPS27A
-FAM:CAT:CHEMBL1743000	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	2.01874e-07	2.01874e-07		RPL10
-FAM:CAT:CHEMBL1743000	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-7.87237e-06	-7.87237e-06		RPS27A
-FAM:CAT:CHEMBL2107890	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	2.01874e-07	2.01874e-07		RPL10
-FAM:CAT:CHEMBL2107890	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-7.87237e-06	-7.87237e-06		RPS27A
-FAM:CAT:CHEMBL2108785	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	2.01874e-07	2.01874e-07		RPL10
-FAM:CAT:CHEMBL2108785	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-7.87237e-06	-7.87237e-06		RPS27A
-FAM:CAT:CHEMBL2108790	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	2.01874e-07	2.01874e-07		RPL10
-FAM:CAT:CHEMBL2108790	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-7.87237e-06	-7.87237e-06		RPS27A
-FAM:CAT:CHEMBL2109124	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	2.01874e-07	2.01874e-07		RPL10
-FAM:CAT:CHEMBL2109124	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-7.87237e-06	-7.87237e-06		RPS27A
-FAM:CAT:CHEMBL4297789	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	2.01874e-07	2.01874e-07		RPL10
-FAM:CAT:CHEMBL4297789	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-7.87237e-06	-7.87237e-06		RPS27A
-FAM:CAT:DGIDB:c005a9838d09	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	2.01874e-07	2.01874e-07		RPL10
-FAM:CAT:DGIDB:c005a9838d09	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-7.87237e-06	-7.87237e-06		RPS27A
-FAM:CAT:DGIDB:a3d03ae2ef6c	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-1.80742e-06	-1.80742e-06		NFE2L2
-FAM:CAT:DGIDB:a3d03ae2ef6c	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-1.33987e-06	-1.33987e-06		NFE2L2
-FAM:CAT:DGIDB:a3d03ae2ef6c	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.96092e-06	1.96092e-06		NFE2L2
-FAM:CAT:CHEMBL3392776	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-5.65652e-07	-5.65652e-07		STAT3
-FAM:CAT:CHEMBL3392776	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-1.76523e-05	-1.76523e-05		STAT3
-FAM:CAT:CHEMBL3392776	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	4.17318e-05	4.17318e-05		STAT3
-FAM:CAT:CHEMBL4452527	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-5.65652e-07	-5.65652e-07		STAT3
-FAM:CAT:CHEMBL4452527	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-1.76523e-05	-1.76523e-05		STAT3
-FAM:CAT:CHEMBL4452527	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	4.17318e-05	4.17318e-05		STAT3
-FAM:CAT:DGIDB:0dfe60cde8de	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-5.65652e-07	-5.65652e-07		STAT3
-FAM:CAT:DGIDB:0dfe60cde8de	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-1.76523e-05	-1.76523e-05		STAT3
-FAM:CAT:DGIDB:0dfe60cde8de	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	4.17318e-05	4.17318e-05		STAT3
-FAM:CAT:DGIDB:5af3dd6c5c76	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-5.65652e-07	-5.65652e-07		STAT3
-FAM:CAT:DGIDB:5af3dd6c5c76	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-1.76523e-05	-1.76523e-05		STAT3
-FAM:CAT:DGIDB:5af3dd6c5c76	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	4.17318e-05	4.17318e-05		STAT3
-FAM:CAT:DGIDB:830f4ec04842	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-5.65652e-07	-5.65652e-07		STAT3
-FAM:CAT:DGIDB:830f4ec04842	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-1.76523e-05	-1.76523e-05		STAT3
-FAM:CAT:DGIDB:830f4ec04842	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	4.17318e-05	4.17318e-05		STAT3
-FAM:CAT:DGIDB:ce496ff00491	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-5.65652e-07	-5.65652e-07		STAT3
-FAM:CAT:DGIDB:ce496ff00491	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-1.76523e-05	-1.76523e-05		STAT3
-FAM:CAT:DGIDB:ce496ff00491	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	4.17318e-05	4.17318e-05		STAT3
-FAM:CAT:DGIDB:b63eeea56658	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-2.10507e-05	-2.10507e-05		HNF4A
-FAM:CAT:DGIDB:b63eeea56658	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-4.15239e-05	-4.15239e-05		HNF4A
-FAM:CAT:DGIDB:b63eeea56658	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.38182e-05	1.38182e-05		HNF4A
-FAM:CAT:CHEMBL1923234	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-3.99976e-07	-3.99976e-07		STAT3
-FAM:CAT:CHEMBL1923234	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-1.24821e-05	-1.24821e-05		STAT3
-FAM:CAT:CHEMBL1923234	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.95088e-05	2.95088e-05		STAT3
-FAM:CAT:DGIDB:0ecbcd6c2a17	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-3.99976e-07	-3.99976e-07		STAT3
-FAM:CAT:DGIDB:0ecbcd6c2a17	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-1.24821e-05	-1.24821e-05		STAT3
-FAM:CAT:DGIDB:0ecbcd6c2a17	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.95088e-05	2.95088e-05		STAT3
-FAM:CAT:DGIDB:7b1b402689c3	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-2.02962e-06	-2.02962e-06		AHR
-FAM:CAT:DGIDB:7b1b402689c3	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-2.66302e-07	-2.66302e-07		AHR
-FAM:CAT:DGIDB:7b1b402689c3	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	7.38481e-05	7.38481e-05		AHR
-FAM:CAT:DGIDB:ff06e01b6051	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	1.62703e-06	1.62703e-06		TEAD1
-FAM:CAT:DGIDB:ff06e01b6051	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	2.43468e-06	2.43468e-06		TEAD1
-FAM:CAT:DGIDB:ff06e01b6051	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-2.51424e-07	-2.51424e-07		TEAD1
-FAM:CAT:CHEMBL53418	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-5.53138e-07	-5.53138e-07		RXRA
-FAM:CAT:CHEMBL53418	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.74788e-07	1.74788e-07		RXRA
-FAM:CAT:DGIDB:4193f8f3ff21	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-5.53138e-07	-5.53138e-07		RXRA
-FAM:CAT:DGIDB:4193f8f3ff21	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.74788e-07	1.74788e-07		RXRA
-FAM:CAT:DGIDB:9bb23bc68779	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-5.53138e-07	-5.53138e-07		RXRA
-FAM:CAT:DGIDB:9bb23bc68779	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.74788e-07	1.74788e-07		RXRA
-FAM:CAT:DGIDB:b4030fbc0fbf	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-5.53138e-07	-5.53138e-07		RXRA
-FAM:CAT:DGIDB:b4030fbc0fbf	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.74788e-07	1.74788e-07		RXRA
-FAM:CAT:DGIDB:c2f6d7907d82	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-5.53138e-07	-5.53138e-07		RXRA
-FAM:CAT:DGIDB:c2f6d7907d82	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.74788e-07	1.74788e-07		RXRA
-FAM:CAT:DGIDB:da8d4a132c5e	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-5.53138e-07	-5.53138e-07		RXRA
-FAM:CAT:DGIDB:da8d4a132c5e	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.74788e-07	1.74788e-07		RXRA
-FAM:CAT:DGIDB:7c4f01068fac	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-1.73419e-06	-1.73419e-06		MAPK8
-FAM:CAT:DGIDB:7c4f01068fac	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-1.86745e-06	-1.86745e-06		MAPK8
-FAM:CAT:DGIDB:7c4f01068fac	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	4.33214e-07	4.33214e-07		MAPK8
-FAM:CAT:CHEMBL4297228	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.000119517	-0.000119517		EGR1
-FAM:CAT:CHEMBL4297228	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.000117317	-0.000117317		EGR1
-FAM:CAT:CHEMBL4297228	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.55056e-05	1.55056e-05		EGR1
-FAM:CAT:CHEMBL245030	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-1.56452e-05	-1.56452e-05		AKT1
-FAM:CAT:CHEMBL245030	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-1.91116e-05	-1.91116e-05		AKT1
-FAM:CAT:CHEMBL245030	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.1874e-05	-1.1874e-05		AKT1
-FAM:CAT:DGIDB:7bfb0ab8cf2a	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-1.56452e-05	-1.56452e-05		AKT1
-FAM:CAT:DGIDB:7bfb0ab8cf2a	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-1.91116e-05	-1.91116e-05		AKT1
-FAM:CAT:DGIDB:7bfb0ab8cf2a	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.1874e-05	-1.1874e-05		AKT1
-FAM:CAT:DGIDB:bacd0399167e	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-1.56452e-05	-1.56452e-05		AKT1
-FAM:CAT:DGIDB:bacd0399167e	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-1.91116e-05	-1.91116e-05		AKT1
-FAM:CAT:DGIDB:bacd0399167e	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.1874e-05	-1.1874e-05		AKT1
-FAM:CAT:DGIDB:d09b47782159	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-1.56452e-05	-1.56452e-05		AKT1
-FAM:CAT:DGIDB:d09b47782159	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-1.91116e-05	-1.91116e-05		AKT1
-FAM:CAT:DGIDB:d09b47782159	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.1874e-05	-1.1874e-05		AKT1
-FAM:CAT:CHEMBL4751394	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-2.43382e-05	-2.43382e-05		AKT2
-FAM:CAT:CHEMBL4751394	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-2.94266e-05	-2.94266e-05		AKT2
-FAM:CAT:CHEMBL4751394	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-3.54042e-05	-3.54042e-05		AKT2
-FAM:CAT:DGIDB:7f42c746571d	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-2.43382e-05	-2.43382e-05		AKT2
-FAM:CAT:DGIDB:7f42c746571d	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-2.94266e-05	-2.94266e-05		AKT2
-FAM:CAT:DGIDB:7f42c746571d	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-3.54042e-05	-3.54042e-05		AKT2
-FAM:CAT:CHEMBL3545261	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-1.08354e-06	-1.08354e-06		NOTCH1
-FAM:CAT:CHEMBL3545261	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	0.000238579	0.000238579		NOTCH1
-FAM:CAT:CHEMBL3545261	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000209373	-0.000209373		NOTCH1
-FAM:CAT:DGIDB:0c0ee87f0d3f	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-1.08354e-06	-1.08354e-06		NOTCH1
-FAM:CAT:DGIDB:0c0ee87f0d3f	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	0.000238579	0.000238579		NOTCH1
-FAM:CAT:DGIDB:0c0ee87f0d3f	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000209373	-0.000209373		NOTCH1
-FAM:CAT:DGIDB:b91725253b11	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-1.08354e-06	-1.08354e-06		NOTCH1
-FAM:CAT:DGIDB:b91725253b11	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	0.000238579	0.000238579		NOTCH1
-FAM:CAT:DGIDB:b91725253b11	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000209373	-0.000209373		NOTCH1
-FAM:CAT:CHEMBL213100	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-1.68167e-06	-1.68167e-06		SRC
-FAM:CAT:CHEMBL213100	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-2.47604e-06	-2.47604e-06		SRC
-FAM:CAT:CHEMBL213100	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-2.18276e-05	-2.18276e-05		SRC
-FAM:CAT:DGIDB:b771b7f96970	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-1.28534e-05	-1.28534e-05		RPS6KA4
-FAM:CAT:DGIDB:b771b7f96970	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-1.10972e-05	-1.10972e-05		RPS6KA4
-FAM:CAT:DGIDB:b771b7f96970	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.84433e-06	-1.84433e-06		RPS6KA4
-FAM:CAT:DGIDB:e9db30defc1e	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	0.000183893	0.000183893		CLK2
-FAM:CAT:DGIDB:e9db30defc1e	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	0.000185692	0.000185692		CLK2
-FAM:CAT:DGIDB:e9db30defc1e	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-4.58657e-06	-4.58657e-06		DYRK3
-FAM:CAT:CHEMBL2035874	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	0.000833333	0.000833333		THRB
-FAM:CAT:CHEMBL2035874	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	0.000832423	0.000832423		THRB
-FAM:CAT:CHEMBL2035874	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	4.00608e-05	4.00608e-05		THRB
-FAM:CAT:CHEMBL3261331	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	0.000833333	0.000833333		THRB
-FAM:CAT:CHEMBL3261331	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	0.000832423	0.000832423		THRB
-FAM:CAT:CHEMBL3261331	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	4.00608e-05	4.00608e-05		THRB
-FAM:CAT:CHEMBL471897	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	0.000833333	0.000833333		THRB
-FAM:CAT:CHEMBL471897	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	0.000832423	0.000832423		THRB
-FAM:CAT:CHEMBL471897	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	4.00608e-05	4.00608e-05		THRB
-FAM:CAT:DGIDB:1b3b36e56949	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	0.000833333	0.000833333		THRB
-FAM:CAT:DGIDB:1b3b36e56949	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	0.000832423	0.000832423		THRB
-FAM:CAT:DGIDB:1b3b36e56949	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	4.00608e-05	4.00608e-05		THRB
-FAM:CAT:DGIDB:8248f1c3ead2	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	0.000833333	0.000833333		THRB
-FAM:CAT:DGIDB:8248f1c3ead2	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	0.000832423	0.000832423		THRB
-FAM:CAT:DGIDB:8248f1c3ead2	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	4.00608e-05	4.00608e-05		THRB
-FAM:CAT:DGIDB:f787a63d74a9	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	0.000833333	0.000833333		THRB
-FAM:CAT:DGIDB:f787a63d74a9	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	0.000832423	0.000832423		THRB
-FAM:CAT:DGIDB:f787a63d74a9	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	4.00608e-05	4.00608e-05		THRB
-FAM:CAT:DGIDB:45a111f589c1	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-1.32754e-05	-1.32754e-05		AKT2
-FAM:CAT:DGIDB:45a111f589c1	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-1.59127e-05	-1.59127e-05		AKT2
-FAM:CAT:DGIDB:45a111f589c1	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-2.7008e-05	-2.7008e-05		AKT2
-FAM:CAT:DGIDB:c62f0c834f74	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-1.29874e-06	-1.29874e-06		CHEK1
-FAM:CAT:DGIDB:e7bc2b6dd850	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-1.37307e-06	-1.37307e-06		SRC
-FAM:CAT:DGIDB:e7bc2b6dd850	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	3.26035e-07	3.26035e-07		BTK
-FAM:CAT:DGIDB:e7bc2b6dd850	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-2.38919e-05	-2.38919e-05		SRC
-FAM:CAT:DGIDB:5885aa3e5acd	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-8.23834e-06	-8.23834e-06		YES1
-FAM:CAT:DGIDB:5885aa3e5acd	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-2.54035e-05	-2.54035e-05		YES1
-FAM:CAT:DGIDB:5885aa3e5acd	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.32928e-05	-1.32928e-05		SRC
-FAM:CAT:DGIDB:b6b7a5cf0322	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	2.19392e-06	2.19392e-06		PPARG
-FAM:CAT:DGIDB:b6b7a5cf0322	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	1.39344e-06	1.39344e-06		PPARG
-FAM:CAT:DGIDB:b6b7a5cf0322	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.42451e-05	-5.42451e-05		RXRB
-FAM:CAT:CHEMBL1082407	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-8.81028e-06	-8.81028e-06		AR
-FAM:CAT:CHEMBL1082407	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-3.40737e-05	-3.40737e-05		AR
-FAM:CAT:CHEMBL1082407	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.89721e-07	2.89721e-07		AR
-FAM:CAT:CHEMBL1274	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-8.81028e-06	-8.81028e-06		AR
-FAM:CAT:CHEMBL1274	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-3.40737e-05	-3.40737e-05		AR
-FAM:CAT:CHEMBL1274	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.89721e-07	2.89721e-07		AR
-FAM:CAT:CHEMBL128748	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-8.81028e-06	-8.81028e-06		AR
-FAM:CAT:CHEMBL128748	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-3.40737e-05	-3.40737e-05		AR
-FAM:CAT:CHEMBL128748	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.89721e-07	2.89721e-07		AR
-FAM:CAT:CHEMBL3183409	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-8.81028e-06	-8.81028e-06		AR
-FAM:CAT:CHEMBL3183409	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-3.40737e-05	-3.40737e-05		AR
-FAM:CAT:CHEMBL3183409	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.89721e-07	2.89721e-07		AR
-FAM:CAT:CHEMBL3590187	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-8.81028e-06	-8.81028e-06		AR
-FAM:CAT:CHEMBL3590187	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-3.40737e-05	-3.40737e-05		AR
-FAM:CAT:CHEMBL3590187	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.89721e-07	2.89721e-07		AR
-FAM:CAT:CHEMBL37676	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-8.81028e-06	-8.81028e-06		AR
-FAM:CAT:CHEMBL37676	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-3.40737e-05	-3.40737e-05		AR
-FAM:CAT:CHEMBL37676	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.89721e-07	2.89721e-07		AR
-FAM:CAT:CHEMBL409	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-8.81028e-06	-8.81028e-06		AR
-FAM:CAT:CHEMBL409	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-3.40737e-05	-3.40737e-05		AR
-FAM:CAT:CHEMBL409	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.89721e-07	2.89721e-07		AR
-FAM:CAT:CHEMBL4297185	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-8.81028e-06	-8.81028e-06		AR
-FAM:CAT:CHEMBL4297185	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-3.40737e-05	-3.40737e-05		AR
-FAM:CAT:CHEMBL4297185	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.89721e-07	2.89721e-07		AR
-FAM:CAT:CHEMBL4594417	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-8.81028e-06	-8.81028e-06		AR
-FAM:CAT:CHEMBL4594417	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-3.40737e-05	-3.40737e-05		AR
-FAM:CAT:CHEMBL4594417	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.89721e-07	2.89721e-07		AR
-FAM:CAT:CHEMBL4650276	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-8.81028e-06	-8.81028e-06		AR
-FAM:CAT:CHEMBL4650276	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-3.40737e-05	-3.40737e-05		AR
-FAM:CAT:CHEMBL4650276	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.89721e-07	2.89721e-07		AR
-FAM:CAT:CHEMBL4858811	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-8.81028e-06	-8.81028e-06		AR
-FAM:CAT:CHEMBL4858811	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-3.40737e-05	-3.40737e-05		AR
-FAM:CAT:CHEMBL4858811	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.89721e-07	2.89721e-07		AR
-FAM:CAT:CHEMBL491	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-8.81028e-06	-8.81028e-06		AR
-FAM:CAT:CHEMBL491	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-3.40737e-05	-3.40737e-05		AR
-FAM:CAT:CHEMBL491	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.89721e-07	2.89721e-07		AR
-FAM:CAT:CHEMBL806	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-8.81028e-06	-8.81028e-06		AR
-FAM:CAT:CHEMBL806	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-3.40737e-05	-3.40737e-05		AR
-FAM:CAT:CHEMBL806	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.89721e-07	2.89721e-07		AR
-FAM:CAT:DGIDB:171bd5b16921	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-8.81028e-06	-8.81028e-06		AR
-FAM:CAT:DGIDB:171bd5b16921	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-3.40737e-05	-3.40737e-05		AR
-FAM:CAT:DGIDB:171bd5b16921	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.89721e-07	2.89721e-07		AR
-FAM:CAT:DGIDB:3a59bd642ca0	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-8.81028e-06	-8.81028e-06		AR
-FAM:CAT:DGIDB:3a59bd642ca0	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-3.40737e-05	-3.40737e-05		AR
-FAM:CAT:DGIDB:3a59bd642ca0	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.89721e-07	2.89721e-07		AR
-FAM:CAT:DGIDB:48cee98fb72f	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-8.81028e-06	-8.81028e-06		AR
-FAM:CAT:DGIDB:48cee98fb72f	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-3.40737e-05	-3.40737e-05		AR
-FAM:CAT:DGIDB:48cee98fb72f	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.89721e-07	2.89721e-07		AR
-FAM:CAT:DGIDB:5de5a4921a59	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-8.81028e-06	-8.81028e-06		AR
-FAM:CAT:DGIDB:5de5a4921a59	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-3.40737e-05	-3.40737e-05		AR
-FAM:CAT:DGIDB:5de5a4921a59	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.89721e-07	2.89721e-07		AR
-FAM:CAT:DGIDB:822588ad5387	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-8.81028e-06	-8.81028e-06		AR
-FAM:CAT:DGIDB:822588ad5387	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-3.40737e-05	-3.40737e-05		AR
-FAM:CAT:DGIDB:822588ad5387	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.89721e-07	2.89721e-07		AR
-FAM:CAT:DGIDB:a2dc5518a040	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-8.81028e-06	-8.81028e-06		AR
-FAM:CAT:DGIDB:a2dc5518a040	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-3.40737e-05	-3.40737e-05		AR
-FAM:CAT:DGIDB:a2dc5518a040	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.89721e-07	2.89721e-07		AR
-FAM:CAT:DGIDB:a987a36a17e3	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-8.81028e-06	-8.81028e-06		AR
-FAM:CAT:DGIDB:a987a36a17e3	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-3.40737e-05	-3.40737e-05		AR
-FAM:CAT:DGIDB:a987a36a17e3	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.89721e-07	2.89721e-07		AR
-FAM:CAT:DGIDB:b25450e2af1b	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-8.81028e-06	-8.81028e-06		AR
-FAM:CAT:DGIDB:b25450e2af1b	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-3.40737e-05	-3.40737e-05		AR
-FAM:CAT:DGIDB:b25450e2af1b	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.89721e-07	2.89721e-07		AR
-FAM:CAT:DGIDB:e2d8b7c02633	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-8.81028e-06	-8.81028e-06		AR
-FAM:CAT:DGIDB:e2d8b7c02633	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-3.40737e-05	-3.40737e-05		AR
-FAM:CAT:DGIDB:e2d8b7c02633	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.89721e-07	2.89721e-07		AR
-FAM:CAT:DGIDB:ebce87d0e62c	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-8.81028e-06	-8.81028e-06		AR
-FAM:CAT:DGIDB:ebce87d0e62c	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-3.40737e-05	-3.40737e-05		AR
-FAM:CAT:DGIDB:ebce87d0e62c	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.89721e-07	2.89721e-07		AR
-FAM:CAT:DGIDB:5eff2bcee9f7	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	1.65721e-05	1.65721e-05		CDK4
-FAM:CAT:DGIDB:5eff2bcee9f7	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	0.000332947	0.000332947		CDK4
-FAM:CAT:DGIDB:5eff2bcee9f7	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.87745e-06	-5.87745e-06		CSNK1D
-FAM:CAT:CHEMBL2105677	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-2.2633e-06	-2.2633e-06		SRC
-FAM:CAT:CHEMBL2105677	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-2.88883e-06	-2.88883e-06		SRC
-FAM:CAT:CHEMBL2105677	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.93184e-05	-1.93184e-05		SRC
-FAM:CAT:CHEMBL426161	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-2.2633e-06	-2.2633e-06		SRC
-FAM:CAT:CHEMBL426161	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-2.88883e-06	-2.88883e-06		SRC
-FAM:CAT:CHEMBL426161	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.93184e-05	-1.93184e-05		SRC
-FAM:CAT:CHEMBL5314408	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-2.2633e-06	-2.2633e-06		SRC
-FAM:CAT:CHEMBL5314408	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-2.88883e-06	-2.88883e-06		SRC
-FAM:CAT:CHEMBL5314408	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.93184e-05	-1.93184e-05		SRC
-FAM:CAT:DGIDB:31eb8fc0f810	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-2.2633e-06	-2.2633e-06		SRC
-FAM:CAT:DGIDB:31eb8fc0f810	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-2.88883e-06	-2.88883e-06		SRC
-FAM:CAT:DGIDB:31eb8fc0f810	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.93184e-05	-1.93184e-05		SRC
-FAM:CAT:DGIDB:bbedde8be990	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-2.2633e-06	-2.2633e-06		SRC
-FAM:CAT:DGIDB:bbedde8be990	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-2.88883e-06	-2.88883e-06		SRC
-FAM:CAT:DGIDB:bbedde8be990	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.93184e-05	-1.93184e-05		SRC
-FAM:CAT:DGIDB:53966fed4cc3	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.65298e-05	1.65298e-05		AURKA
-FAM:CAT:DGIDB:fa40380e81e3	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-5.81218e-06	-5.81218e-06		STAT6
-FAM:CAT:DGIDB:fa40380e81e3	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-2.58014e-05	-2.58014e-05		STAT6
-FAM:CAT:DGIDB:fa40380e81e3	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.4035e-07	9.4035e-07		STAT6
-FAM:CAT:CHEMBL2431768	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-4.56713e-06	-4.56713e-06		XIAP
-FAM:CAT:CHEMBL2431768	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-4.26944e-06	-4.26944e-06		XIAP
-FAM:CAT:CHEMBL2431768	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-3.86882e-05	-3.86882e-05		BIRC6
-FAM:CAT:DGIDB:648262c833d9	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-4.56713e-06	-4.56713e-06		XIAP
-FAM:CAT:DGIDB:648262c833d9	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-4.26944e-06	-4.26944e-06		XIAP
-FAM:CAT:DGIDB:648262c833d9	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-3.86882e-05	-3.86882e-05		BIRC6
-FAM:CAT:DGIDB:ec7f7d35898a	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-1.89593e-06	-1.89593e-06		TAF1
-FAM:CAT:DGIDB:ec7f7d35898a	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-2.83163e-06	-2.83163e-06		TAF1
-FAM:CAT:DGIDB:ec7f7d35898a	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	4.58783e-07	4.58783e-07		TAF1
-FAM:CAT:DGIDB:6bd67578d6ae	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-2.28136e-07	-2.28136e-07		ABL1
-FAM:CAT:DGIDB:6bd67578d6ae	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-1.61909e-07	-1.61909e-07		ABL1
-FAM:CAT:DGIDB:6bd67578d6ae	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.84195e-07	9.84195e-07		ABL1
-FAM:CAT:DGIDB:98eb1084a0ed	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	0.000277778	0.000277778		CLK2
-FAM:CAT:DGIDB:98eb1084a0ed	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	0.000277778	0.000277778		CLK2
-FAM:CAT:DGIDB:98eb1084a0ed	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-2.05761e-05	-2.05761e-05		MAP3K7
-FAM:CAT:DGIDB:c15d9585ad2b	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-5.23425e-05	-5.23425e-05		NCOA1
-FAM:CAT:DGIDB:c15d9585ad2b	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-5.53373e-05	-5.53373e-05		NCOA1
-FAM:CAT:DGIDB:c15d9585ad2b	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-7.22222e-06	-7.22222e-06		NCOA1
-FAM:CAT:DGIDB:5a130973549c	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-1.6771e-06	-1.6771e-06		ESRRA
-FAM:CAT:DGIDB:5a130973549c	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-1.4542e-05	-1.4542e-05		ESRRA
-FAM:CAT:DGIDB:5a130973549c	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.32936e-06	1.32936e-06		ESRRA
-FAM:CAT:DGIDB:e4afa445a7e0	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-1.6771e-06	-1.6771e-06		ESRRA
-FAM:CAT:DGIDB:e4afa445a7e0	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-1.4542e-05	-1.4542e-05		ESRRA
-FAM:CAT:DGIDB:e4afa445a7e0	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.32936e-06	1.32936e-06		ESRRA
-FAM:CAT:CHEMBL4650277	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	0.000113688	0.000113688		RPS6KA6
-FAM:CAT:CHEMBL4650277	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	0.000120431	0.000120431		RPS6KA6
-FAM:CAT:CHEMBL4650277	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-6.5015e-05	-6.5015e-05		AKT3
-FAM:CAT:DGIDB:f50a7e17e9df	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.69616e-06	1.69616e-06		SYK
-FAM:CAT:DGIDB:0f9e15880dbb	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-1.53928e-05	-1.53928e-05		AKT2
-FAM:CAT:DGIDB:0f9e15880dbb	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-1.8611e-05	-1.8611e-05		AKT2
-FAM:CAT:DGIDB:0f9e15880dbb	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.55185e-05	-5.55185e-05		AKT3
-FAM:CAT:CHEMBL1079175	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-1.98721e-05	-1.98721e-05		AKT2
-FAM:CAT:CHEMBL1079175	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-2.40268e-05	-2.40268e-05		AKT2
-FAM:CAT:CHEMBL1079175	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-7.16741e-05	-7.16741e-05		AKT3
-FAM:CAT:CHEMBL2177390	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-1.98721e-05	-1.98721e-05		AKT2
-FAM:CAT:CHEMBL2177390	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-2.40268e-05	-2.40268e-05		AKT2
-FAM:CAT:CHEMBL2177390	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-7.16741e-05	-7.16741e-05		AKT3
-FAM:CAT:CHEMBL2219422	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-1.98721e-05	-1.98721e-05		AKT2
-FAM:CAT:CHEMBL2219422	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-2.40268e-05	-2.40268e-05		AKT2
-FAM:CAT:CHEMBL2219422	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-7.16741e-05	-7.16741e-05		AKT3
-FAM:CAT:DGIDB:70ce494df19e	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	8.81028e-06	8.81028e-06		AR
-FAM:CAT:DGIDB:70ce494df19e	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	3.40737e-05	3.40737e-05		AR
-FAM:CAT:DGIDB:70ce494df19e	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-2.89721e-07	-2.89721e-07		AR
-FAM:CAT:DGIDB:83eaea166871	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	8.81028e-06	8.81028e-06		AR
-FAM:CAT:DGIDB:83eaea166871	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	3.40737e-05	3.40737e-05		AR
-FAM:CAT:DGIDB:83eaea166871	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-2.89721e-07	-2.89721e-07		AR
-FAM:CAT:DGIDB:8e52eead3994	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	8.81028e-06	8.81028e-06		AR
-FAM:CAT:DGIDB:8e52eead3994	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	3.40737e-05	3.40737e-05		AR
-FAM:CAT:DGIDB:8e52eead3994	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-2.89721e-07	-2.89721e-07		AR
-FAM:CAT:DGIDB:97738670fe63	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	8.81028e-06	8.81028e-06		AR
-FAM:CAT:DGIDB:97738670fe63	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	3.40737e-05	3.40737e-05		AR
-FAM:CAT:DGIDB:97738670fe63	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-2.89721e-07	-2.89721e-07		AR
-FAM:CAT:DGIDB:a9c0c1246334	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	8.81028e-06	8.81028e-06		AR
-FAM:CAT:DGIDB:a9c0c1246334	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	3.40737e-05	3.40737e-05		AR
-FAM:CAT:DGIDB:a9c0c1246334	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-2.89721e-07	-2.89721e-07		AR
-FAM:CAT:DGIDB:ace28a052219	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	8.81028e-06	8.81028e-06		AR
-FAM:CAT:DGIDB:ace28a052219	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	3.40737e-05	3.40737e-05		AR
-FAM:CAT:DGIDB:ace28a052219	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-2.89721e-07	-2.89721e-07		AR
-FAM:CAT:DGIDB:af54f618bd1a	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	8.81028e-06	8.81028e-06		AR
-FAM:CAT:DGIDB:af54f618bd1a	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	3.40737e-05	3.40737e-05		AR
-FAM:CAT:DGIDB:af54f618bd1a	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-2.89721e-07	-2.89721e-07		AR
-FAM:CAT:DGIDB:b3c5641e9214	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	8.81028e-06	8.81028e-06		AR
-FAM:CAT:DGIDB:b3c5641e9214	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	3.40737e-05	3.40737e-05		AR
-FAM:CAT:DGIDB:b3c5641e9214	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-2.89721e-07	-2.89721e-07		AR
-FAM:CAT:DGIDB:ccf0411ed98e	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	8.81028e-06	8.81028e-06		AR
-FAM:CAT:DGIDB:ccf0411ed98e	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	3.40737e-05	3.40737e-05		AR
-FAM:CAT:DGIDB:ccf0411ed98e	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-2.89721e-07	-2.89721e-07		AR
-FAM:CAT:DGIDB:d22a611bb50d	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	8.81028e-06	8.81028e-06		AR
-FAM:CAT:DGIDB:d22a611bb50d	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	3.40737e-05	3.40737e-05		AR
-FAM:CAT:DGIDB:d22a611bb50d	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-2.89721e-07	-2.89721e-07		AR
-FAM:CAT:DGIDB:e78bc88ee9d4	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	8.81028e-06	8.81028e-06		AR
-FAM:CAT:DGIDB:e78bc88ee9d4	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	3.40737e-05	3.40737e-05		AR
-FAM:CAT:DGIDB:e78bc88ee9d4	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-2.89721e-07	-2.89721e-07		AR
-FAM:CAT:DGIDB:e8fc14d39448	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	8.81028e-06	8.81028e-06		AR
-FAM:CAT:DGIDB:e8fc14d39448	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	3.40737e-05	3.40737e-05		AR
-FAM:CAT:DGIDB:e8fc14d39448	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-2.89721e-07	-2.89721e-07		AR
-FAM:CAT:DGIDB:fcb6e74032d9	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	8.81028e-06	8.81028e-06		AR
-FAM:CAT:DGIDB:fcb6e74032d9	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	3.40737e-05	3.40737e-05		AR
-FAM:CAT:DGIDB:fcb6e74032d9	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-2.89721e-07	-2.89721e-07		AR
-FAM:CAT:DGIDB:3fdfb273d456	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.00225527	-0.00225527		PRKD1
-FAM:CAT:DGIDB:3fdfb273d456	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.00221577	-0.00221577		PRKD1
-FAM:CAT:DGIDB:3fdfb273d456	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	5.41604e-05	5.41604e-05		PRKD2
-FAM:CAT:DGIDB:a8b66bf6455a	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.00225527	-0.00225527		PRKD1
-FAM:CAT:DGIDB:a8b66bf6455a	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.00221577	-0.00221577		PRKD1
-FAM:CAT:DGIDB:a8b66bf6455a	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	5.41604e-05	5.41604e-05		PRKD2
-FAM:CAT:CHEMBL3545092	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	8.7664e-06	8.7664e-06		AR
-FAM:CAT:CHEMBL3545092	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	2.89345e-05	2.89345e-05		AR
-FAM:CAT:CHEMBL3545092	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.20021e-06	1.20021e-06		ESR2
-FAM:CAT:CHEMBL1479	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	6.22981e-06	6.22981e-06		AR
-FAM:CAT:CHEMBL1479	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	2.3225e-05	2.3225e-05		AR
-FAM:CAT:CHEMBL1479	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	4.47926e-08	4.47926e-08		PGR
-FAM:CAT:DGIDB:ede1773aae0e	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	6.22981e-06	6.22981e-06		AR
-FAM:CAT:DGIDB:ede1773aae0e	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	2.3225e-05	2.3225e-05		AR
-FAM:CAT:DGIDB:ede1773aae0e	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	4.47926e-08	4.47926e-08		PGR
-FAM:CAT:DGIDB:3c9cdbc4042c	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.000265508	-0.000265508		BRD3
-FAM:CAT:DGIDB:3c9cdbc4042c	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.0002849	-0.0002849		BRD3
-FAM:CAT:DGIDB:3c9cdbc4042c	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	5.01352e-05	5.01352e-05		BRD3
-FAM:CAT:DGIDB:009be0cf8100	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	9.47196e-06	9.47196e-06		NR1I2
-FAM:CAT:DGIDB:009be0cf8100	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	9.81178e-06	9.81178e-06		NR1I2
-FAM:CAT:DGIDB:009be0cf8100	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.20872e-06	-1.20872e-06		NR1I2
-FAM:CAT:DGIDB:e11b540091be	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	9.47196e-06	9.47196e-06		NR1I2
-FAM:CAT:DGIDB:e11b540091be	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	9.81178e-06	9.81178e-06		NR1I2
-FAM:CAT:DGIDB:e11b540091be	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.20872e-06	-1.20872e-06		NR1I2
-FAM:CAT:CHEMBL574737	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.000909488	-0.000909488		PRKD1
-FAM:CAT:CHEMBL574737	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.00119182	-0.00119182		PRKD1
-FAM:CAT:CHEMBL574737	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-7.69585e-05	-7.69585e-05		PRKCA
-FAM:CAT:DGIDB:d2ee34d32ea5	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.00195312	-0.00195312		PRKD1
-FAM:CAT:DGIDB:d2ee34d32ea5	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.00195312	-0.00195312		PRKD1
-FAM:CAT:DGIDB:d2ee34d32ea5	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.35723e-05	2.35723e-05		MAP4K5
-FAM:CAT:DGIDB:4c2cf667869f	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	5.53138e-07	5.53138e-07		RXRA
-FAM:CAT:DGIDB:4c2cf667869f	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.74788e-07	-1.74788e-07		RXRA
-FAM:CAT:DGIDB:5f86ff9caa5e	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	5.53138e-07	5.53138e-07		RXRA
-FAM:CAT:DGIDB:5f86ff9caa5e	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.74788e-07	-1.74788e-07		RXRA
-FAM:CAT:DGIDB:af4fdb745275	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	5.53138e-07	5.53138e-07		RXRA
-FAM:CAT:DGIDB:af4fdb745275	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.74788e-07	-1.74788e-07		RXRA
-FAM:CAT:DGIDB:ed36cffb673a	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	5.53138e-07	5.53138e-07		RXRA
-FAM:CAT:DGIDB:ed36cffb673a	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.74788e-07	-1.74788e-07		RXRA
-FAM:CAT:DGIDB:7f061bf749aa	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	8.12224e-07	8.12224e-07		RARB
-FAM:CAT:DGIDB:7f061bf749aa	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	2.4986e-05	2.4986e-05		RARA
-FAM:CAT:DGIDB:7f061bf749aa	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.49685e-05	1.49685e-05		RARA
-FAM:CAT:DGIDB:05253b7008d0	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-8.60434e-05	-8.60434e-05		CDK19
-FAM:CAT:DGIDB:05253b7008d0	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	5.50393e-05	5.50393e-05		CDK19
-FAM:CAT:DGIDB:195539416cb7	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-8.60434e-05	-8.60434e-05		CDK19
-FAM:CAT:DGIDB:195539416cb7	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	5.50393e-05	5.50393e-05		CDK19
-FAM:CAT:DGIDB:9a32814fc352	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-8.60434e-05	-8.60434e-05		CDK19
-FAM:CAT:DGIDB:9a32814fc352	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	5.50393e-05	5.50393e-05		CDK19
-FAM:CAT:CHEMBL259571	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	2.02962e-06	2.02962e-06		AHR
-FAM:CAT:CHEMBL259571	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	2.66302e-07	2.66302e-07		AHR
-FAM:CAT:CHEMBL259571	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-7.38481e-05	-7.38481e-05		AHR
-FAM:CAT:DGIDB:004e12ec02db	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	2.02962e-06	2.02962e-06		AHR
-FAM:CAT:DGIDB:004e12ec02db	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	2.66302e-07	2.66302e-07		AHR
-FAM:CAT:DGIDB:004e12ec02db	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-7.38481e-05	-7.38481e-05		AHR
-FAM:CAT:DGIDB:b63d26abc373	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	2.02962e-06	2.02962e-06		AHR
-FAM:CAT:DGIDB:b63d26abc373	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	2.66302e-07	2.66302e-07		AHR
-FAM:CAT:DGIDB:b63d26abc373	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-7.38481e-05	-7.38481e-05		AHR
-FAM:CAT:DGIDB:6802569a3c41	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	7.5963e-06	7.5963e-06		NR1I2
-FAM:CAT:DGIDB:6802569a3c41	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	7.12649e-06	7.12649e-06		NR1I2
-FAM:CAT:DGIDB:6802569a3c41	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-9.86602e-07	-9.86602e-07		NR1I2
-FAM:CAT:DGIDB:88f4aeb726f1	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	9.30353e-06	9.30353e-06		NR1I2
-FAM:CAT:DGIDB:88f4aeb726f1	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	8.72813e-06	8.72813e-06		NR1I2
-FAM:CAT:DGIDB:88f4aeb726f1	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.20834e-06	-1.20834e-06		NR1I2
-FAM:CAT:CHEMBL2105655	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.00111018	-0.00111018		PRKD1
-FAM:CAT:CHEMBL2105655	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.00167878	-0.00167878		PRKD1
-FAM:CAT:CHEMBL2105655	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-4.51583e-05	-4.51583e-05		PRKCA
-FAM:CAT:DGIDB:846313cfd6a0	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.00111018	-0.00111018		PRKD1
-FAM:CAT:DGIDB:846313cfd6a0	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.00167878	-0.00167878		PRKD1
-FAM:CAT:DGIDB:846313cfd6a0	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-4.51583e-05	-4.51583e-05		PRKCA
-FAM:CAT:CHEMBL295316	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.000529397	-0.000529397		EP300
-FAM:CAT:CHEMBL295316	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.000574409	-0.000574409		EP300
-FAM:CAT:CHEMBL295316	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.000101393	0.000101393		EP300
-FAM:CAT:DGIDB:27edccd6f62f	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.000529397	-0.000529397		EP300
-FAM:CAT:DGIDB:27edccd6f62f	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.000574409	-0.000574409		EP300
-FAM:CAT:DGIDB:27edccd6f62f	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.000101393	0.000101393		EP300
-FAM:CAT:DGIDB:93383746b4c8	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.000529397	-0.000529397		EP300
-FAM:CAT:DGIDB:93383746b4c8	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.000574409	-0.000574409		EP300
-FAM:CAT:DGIDB:93383746b4c8	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.000101393	0.000101393		EP300
-FAM:CAT:DGIDB:bde3fe52265e	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.000529397	-0.000529397		EP300
-FAM:CAT:DGIDB:bde3fe52265e	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.000574409	-0.000574409		EP300
-FAM:CAT:DGIDB:bde3fe52265e	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.000101393	0.000101393		EP300
-FAM:CAT:DGIDB:d0474184e29d	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.000529397	-0.000529397		EP300
-FAM:CAT:DGIDB:d0474184e29d	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.000574409	-0.000574409		EP300
-FAM:CAT:DGIDB:d0474184e29d	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.000101393	0.000101393		EP300
-FAM:CAT:DGIDB:580106533cd1	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.000216786	-0.000216786		ROCK2
-FAM:CAT:DGIDB:580106533cd1	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.00023262	-0.00023262		ROCK2
-FAM:CAT:DGIDB:580106533cd1	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	4.09352e-05	4.09352e-05		ROCK2
-FAM:CAT:CHEMBL608533	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.00092051	-0.00092051		PRKD1
-FAM:CAT:CHEMBL608533	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.00139215	-0.00139215		PRKD1
-FAM:CAT:CHEMBL608533	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	8.84557e-05	8.84557e-05		KIT
-FAM:CAT:DGIDB:c2a460232249	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	2.6345e-07	2.6345e-07		NR4A1
-FAM:CAT:DGIDB:c2a460232249	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-2.04698e-06	-2.04698e-06		NR4A1
-FAM:CAT:DGIDB:c2a460232249	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	3.43027e-07	3.43027e-07		NR4A1
-FAM:CAT:DGIDB:14b72549cc15	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	1.33954e-05	1.33954e-05		NR1I2
-FAM:CAT:DGIDB:14b72549cc15	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	1.38759e-05	1.38759e-05		NR1I2
-FAM:CAT:DGIDB:14b72549cc15	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.70938e-06	-1.70938e-06		NR1I2
-FAM:CAT:DGIDB:1e85142c32f0	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	1.33954e-05	1.33954e-05		NR1I2
-FAM:CAT:DGIDB:1e85142c32f0	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	1.38759e-05	1.38759e-05		NR1I2
-FAM:CAT:DGIDB:1e85142c32f0	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.70938e-06	-1.70938e-06		NR1I2
-FAM:CAT:DGIDB:7fe88089df07	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	1.33954e-05	1.33954e-05		NR1I2
-FAM:CAT:DGIDB:7fe88089df07	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	1.38759e-05	1.38759e-05		NR1I2
-FAM:CAT:DGIDB:7fe88089df07	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.70938e-06	-1.70938e-06		NR1I2
-FAM:CAT:DGIDB:d7dcea8fd543	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	1.33954e-05	1.33954e-05		NR1I2
-FAM:CAT:DGIDB:d7dcea8fd543	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	1.38759e-05	1.38759e-05		NR1I2
-FAM:CAT:DGIDB:d7dcea8fd543	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.70938e-06	-1.70938e-06		NR1I2
-FAM:CAT:DGIDB:ed8aff037348	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	1.33954e-05	1.33954e-05		NR1I2
-FAM:CAT:DGIDB:ed8aff037348	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	1.38759e-05	1.38759e-05		NR1I2
-FAM:CAT:DGIDB:ed8aff037348	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.70938e-06	-1.70938e-06		NR1I2
-FAM:CAT:DGIDB:efcbf167d54c	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	1.33954e-05	1.33954e-05		NR1I2
-FAM:CAT:DGIDB:efcbf167d54c	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	1.38759e-05	1.38759e-05		NR1I2
-FAM:CAT:DGIDB:efcbf167d54c	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.70938e-06	-1.70938e-06		NR1I2
-FAM:CAT:DGIDB:f767081f7a34	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	1.33954e-05	1.33954e-05		NR1I2
-FAM:CAT:DGIDB:f767081f7a34	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	1.38759e-05	1.38759e-05		NR1I2
-FAM:CAT:DGIDB:f767081f7a34	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.70938e-06	-1.70938e-06		NR1I2
-FAM:CAT:DGIDB:a7e9700b4098	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.000867865	-0.000867865		PRKD1
-FAM:CAT:DGIDB:a7e9700b4098	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.00131253	-0.00131253		PRKD1
-FAM:CAT:DGIDB:a7e9700b4098	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	8.33968e-05	8.33968e-05		KIT
-FAM:CAT:CHEMBL4303525	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	1.80742e-06	1.80742e-06		NFE2L2
-FAM:CAT:CHEMBL4303525	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	1.33987e-06	1.33987e-06		NFE2L2
-FAM:CAT:CHEMBL4303525	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.96092e-06	-1.96092e-06		NFE2L2
-FAM:CAT:DGIDB:300a1f119a63	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	1.80742e-06	1.80742e-06		NFE2L2
-FAM:CAT:DGIDB:300a1f119a63	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	1.33987e-06	1.33987e-06		NFE2L2
-FAM:CAT:DGIDB:300a1f119a63	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.96092e-06	-1.96092e-06		NFE2L2
-FAM:CAT:DGIDB:7af5e7d86044	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.00212163	-0.00212163		PRKD1
-FAM:CAT:DGIDB:7af5e7d86044	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.00213992	-0.00213992		PRKD1
-FAM:CAT:DGIDB:7af5e7d86044	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-9.69171e-05	-9.69171e-05		PRKCA
-FAM:CAT:DGIDB:f8e669a79b20	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.000265508	-0.000265508		ROCK2
-FAM:CAT:DGIDB:f8e669a79b20	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.0002849	-0.0002849		ROCK2
-FAM:CAT:DGIDB:f8e669a79b20	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	5.01352e-05	5.01352e-05		ROCK2
-FAM:CAT:CHEMBL4297717	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.00372678	-0.00372678		HMGB1
-FAM:CAT:CHEMBL371405	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	3.10042e-07	3.10042e-07		PSMA1
-FAM:CAT:CHEMBL371405	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000558808	-0.000558808		PSMA5
-FAM:CAT:DGIDB:4eb387f65144	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	3.23972e-07	3.23972e-07		PSMA1
-FAM:CAT:DGIDB:4eb387f65144	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000559347	-0.000559347		PSMA5
-FAM:CAT:DGIDB:da7ba9011d52	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.000375484	-0.000375484		ROCK2
-FAM:CAT:DGIDB:da7ba9011d52	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.000402909	-0.000402909		ROCK2
-FAM:CAT:DGIDB:da7ba9011d52	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	7.09019e-05	7.09019e-05		ROCK2
-FAM:CAT:DGIDB:e1af618e1e50	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.000375484	-0.000375484		ROCK2
-FAM:CAT:DGIDB:e1af618e1e50	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.000402909	-0.000402909		ROCK2
-FAM:CAT:DGIDB:e1af618e1e50	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	7.09019e-05	7.09019e-05		ROCK2
-FAM:CAT:DGIDB:e976fa1e6bc6	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-6.21067e-06	-6.21067e-06		NFKB1
-FAM:CAT:DGIDB:e976fa1e6bc6	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-5.91995e-06	-5.91995e-06		NFKB1
-FAM:CAT:DGIDB:e976fa1e6bc6	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000583211	-0.000583211		PSMA5
-FAM:CAT:DGIDB:51081bd5ca15	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.0007542	-0.0007542		EP300
-FAM:CAT:DGIDB:51081bd5ca15	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.000823844	-0.000823844		EP300
-FAM:CAT:DGIDB:51081bd5ca15	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.000139455	0.000139455		EP300
-FAM:CAT:CHEMBL140	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.0005333	-0.0005333		EP300
-FAM:CAT:CHEMBL140	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.000582546	-0.000582546		EP300
-FAM:CAT:CHEMBL140	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.86093e-05	9.86093e-05		EP300
-FAM:CAT:CHEMBL2103884	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	5.19444e-07	5.19444e-07		ADRM1
-FAM:CAT:CHEMBL2103884	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000597596	-0.000597596		PSMA5
-FAM:CAT:CHEMBL2141296	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	5.19444e-07	5.19444e-07		ADRM1
-FAM:CAT:CHEMBL2141296	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000597596	-0.000597596		PSMA5
-FAM:CAT:CHEMBL325041	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	5.19444e-07	5.19444e-07		ADRM1
-FAM:CAT:CHEMBL325041	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000597596	-0.000597596		PSMA5
-FAM:CAT:CHEMBL3545432	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	5.19444e-07	5.19444e-07		ADRM1
-FAM:CAT:CHEMBL3545432	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000597596	-0.000597596		PSMA5
-FAM:CAT:CHEMBL451887	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	5.19444e-07	5.19444e-07		ADRM1
-FAM:CAT:CHEMBL451887	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000597596	-0.000597596		PSMA5
-FAM:CAT:DGIDB:06e4f96e142b	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	5.19444e-07	5.19444e-07		ADRM1
-FAM:CAT:DGIDB:06e4f96e142b	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000597596	-0.000597596		PSMA5
-FAM:CAT:DGIDB:499332f24a2a	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	5.19444e-07	5.19444e-07		ADRM1
-FAM:CAT:DGIDB:499332f24a2a	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000597596	-0.000597596		PSMA5
-FAM:CAT:DGIDB:8093000b995f	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	5.19444e-07	5.19444e-07		ADRM1
-FAM:CAT:DGIDB:8093000b995f	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000597596	-0.000597596		PSMA5
-FAM:CAT:DGIDB:9057d20cf6ca	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	5.19444e-07	5.19444e-07		ADRM1
-FAM:CAT:DGIDB:9057d20cf6ca	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000597596	-0.000597596		PSMA5
-FAM:CAT:CHEMBL4297468	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	9.74013e-08	9.74013e-08		PSMB2
-FAM:CAT:CHEMBL4297468	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-6.56864e-05	-6.56864e-05		PSMB2
-FAM:CAT:DGIDB:34a1bb05f56c	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	9.74013e-08	9.74013e-08		PSMB5
-FAM:CAT:DGIDB:34a1bb05f56c	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-6.56864e-05	-6.56864e-05		PSMB5
-FAM:CAT:DGIDB:5bcaaa81c653	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	9.74013e-08	9.74013e-08		PSMB5
-FAM:CAT:DGIDB:5bcaaa81c653	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-6.56864e-05	-6.56864e-05		PSMB5
-FAM:CAT:DGIDB:882bacb2daac	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	9.74013e-08	9.74013e-08		PSMB5
-FAM:CAT:DGIDB:882bacb2daac	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-6.56864e-05	-6.56864e-05		PSMB5
-FAM:CAT:DGIDB:fc15a4446d23	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	9.74013e-08	9.74013e-08		PSMB1
-FAM:CAT:DGIDB:fc15a4446d23	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-6.56864e-05	-6.56864e-05		PSMB1
-FAM:CAT:DGIDB:b6e51ff3bf9f	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.00328704	-0.00328704		MAPK12
-FAM:CAT:DGIDB:b6e51ff3bf9f	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.00326016	-0.00326016		MAPK12
-FAM:CAT:DGIDB:b6e51ff3bf9f	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.72569e-06	1.72569e-06		MAPK11
-FAM:CAT:DGIDB:bfc65df5bc7f	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.00328704	-0.00328704		MAPK12
-FAM:CAT:DGIDB:bfc65df5bc7f	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.00326016	-0.00326016		MAPK12
-FAM:CAT:DGIDB:bfc65df5bc7f	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.72569e-06	1.72569e-06		MAPK11
-FAM:CAT:CHEMBL467399	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.0032075	-0.0032075		CARM1
-FAM:CAT:CHEMBL467399	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.00375934	-0.00375934		CARM1
-FAM:CAT:CHEMBL467399	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.74013e-06	1.74013e-06		CARM1
-FAM:CAT:DGIDB:da654d483d8e	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.0032075	-0.0032075		CARM1
-FAM:CAT:DGIDB:da654d483d8e	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.00375934	-0.00375934		CARM1
-FAM:CAT:DGIDB:da654d483d8e	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.74013e-06	1.74013e-06		CARM1
-FAM:CAT:DGIDB:b833bac6b0a8	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.00248452	-0.00248452		CARM1
-FAM:CAT:DGIDB:b833bac6b0a8	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.00291197	-0.00291197		CARM1
-FAM:CAT:DGIDB:b833bac6b0a8	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.3479e-06	1.3479e-06		CARM1
-FAM:CAT:DGIDB:3fa642318705	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.00390625	-0.00390625		PRKD1
-FAM:CAT:DGIDB:3fa642318705	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.00390625	-0.00390625		PRKD1
-FAM:CAT:DGIDB:e952decec717	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.00390625	-0.00390625		PRKD1
-FAM:CAT:DGIDB:e952decec717	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.00390625	-0.00390625		PRKD1
-FAM:CAT:DGIDB:342c1be926ea	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.00555556	-0.00555556		CARM1
-FAM:CAT:DGIDB:342c1be926ea	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.00651137	-0.00651137		CARM1
-FAM:CAT:DGIDB:342c1be926ea	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	3.01399e-06	3.01399e-06		CARM1
-FAM:CAT:DGIDB:62b634bbdb5f	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.00555556	-0.00555556		CARM1
-FAM:CAT:DGIDB:62b634bbdb5f	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.00651137	-0.00651137		CARM1
-FAM:CAT:DGIDB:62b634bbdb5f	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	3.01399e-06	3.01399e-06		CARM1
-FAM:CAT:DGIDB:c322b08cc74d	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.00555556	-0.00555556		CARM1
-FAM:CAT:DGIDB:c322b08cc74d	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.00651137	-0.00651137		CARM1
-FAM:CAT:DGIDB:c322b08cc74d	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	3.01399e-06	3.01399e-06		CARM1
-FAM:CAT:DGIDB:e5c93569503a	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.00833333	-0.00833333		HMGB1
-FAM:CAT:DGIDB:b52fd29203f7	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	5.46864e-06	5.46864e-06		NR1I2
-FAM:CAT:DGIDB:b52fd29203f7	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.0102004	-0.0102004		NR1I3
-FAM:CAT:DGIDB:b52fd29203f7	Q4_expression_tiersAB:GAD1:GAD1	Q4_expression_tiersAB:GAD1	GAD1	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-6.70882e-07	-6.70882e-07		NR1I2
-FAM:CAT:DGIDB:2b14ed6e567c	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.065625	-0.065625		NOS1
-FAM:CAT:DGIDB:2b14ed6e567c	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.065625	-0.065625		NOS1
-FAM:CAT:DGIDB:55e7b51731f5	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.065625	-0.065625		NOS1
-FAM:CAT:DGIDB:55e7b51731f5	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.065625	-0.065625		NOS1
-FAM:CAT:DGIDB:b79bf159cc5a	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.065625	-0.065625		NOS1
-FAM:CAT:DGIDB:b79bf159cc5a	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.065625	-0.065625		NOS1
-FAM:CAT:CHEMBL114551	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.0378886	-0.0378886		NOS1
-FAM:CAT:CHEMBL114551	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.0378886	-0.0378886		NOS1
-FAM:CAT:CHEMBL1256175	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.0378886	-0.0378886		NOS1
-FAM:CAT:CHEMBL1256175	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.0378886	-0.0378886		NOS1
-FAM:CAT:CHEMBL227744	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.0378886	-0.0378886		NOS1
-FAM:CAT:CHEMBL227744	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.0378886	-0.0378886		NOS1
-FAM:CAT:DGIDB:a43c745bf773	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.0378886	-0.0378886		NOS1
-FAM:CAT:DGIDB:a43c745bf773	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.0378886	-0.0378886		NOS1
-FAM:CAT:DGIDB:a82358e28caf	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0	-0.0378886	-0.0378886		NOS1
-FAM:CAT:DGIDB:a82358e28caf	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0	-0.0378886	-0.0378886		NOS1
-FAM:CAT:CHEMBL1201293	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.208514	0	0.208514	GABRB2	
-FAM:CAT:CHEMBL1201293	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.208514	0	0.208514	GABRB3	
-FAM:CAT:DGIDB:d4a136aae03c	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.208514	0	0.208514	GABRB2	
-FAM:CAT:DGIDB:d4a136aae03c	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.208514	0	0.208514	GABRB3	
-FAM:CAT:CHEMBL1256671	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	1	0	1	GABRB3	
-FAM:CAT:DGIDB:f4b0d8f06af4	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	1	0	1	GABRB3	
-FAM:CAT:DGIDB:d57d07bdfb3d	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.333333	0	0.333333	GABRB2	
-FAM:CAT:DGIDB:d57d07bdfb3d	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.333333	0	0.333333	GABRB3	
-FAM:CAT:DGIDB:fdf3d53f34ea	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.27735	0	0.27735	GABRB2	
-FAM:CAT:DGIDB:fdf3d53f34ea	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.27735	0	0.27735	GABRB3	
-FAM:CAT:CHEMBL1102	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL1102	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL12	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL12	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL1200420	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL1200420	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL1200472	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL1200472	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL1200703	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL1200703	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL1200789	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL1200789	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL1200790	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL1200790	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL1200802	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL1200802	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL1200903	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL1200903	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL1200982	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL1200982	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL1201065	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL1201065	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL1213252	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL1213252	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL13280	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL13280	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL135400	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL135400	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL1568698	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL1568698	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL1697737	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL1697737	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL2057301	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL2057301	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL2103791	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL2103791	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL2104745	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL2104745	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL2105527	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL2105527	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL2106829	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL2106829	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL279678	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL279678	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL285674	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL285674	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL30219	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL30219	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL315795	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL315795	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL3647536	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL3647536	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL3989724	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL3989724	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL4094894	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL4094894	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL4105630	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL4105630	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL4297255	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL4297255	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL4297324	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL4297324	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL4297521	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL4297521	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL4303403	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL4303403	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL441	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL441	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL448	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL448	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL450	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL450	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL452	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL452	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL454	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL454	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL526	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL526	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL568	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL568	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL580	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL580	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL591	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL591	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL646	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL646	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL661	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL661	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL70418	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL70418	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL967	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL967	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL969	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL969	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL970	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL970	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:CHEMBL979	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:CHEMBL979	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:07f7ffed5c14	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:07f7ffed5c14	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:1867a818d0c9	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:1867a818d0c9	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:18ce2be293d1	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:18ce2be293d1	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:19bfa508f12a	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:19bfa508f12a	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:1b246c981b29	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:1b246c981b29	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:2a635a663c63	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:2a635a663c63	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:38133ea3071f	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:38133ea3071f	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:3954a8a6c8af	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:3954a8a6c8af	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:3cea358d0358	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:3cea358d0358	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:3ef68c684b8e	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:3ef68c684b8e	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:45bd0291098c	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:45bd0291098c	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:4dcc619f7d50	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:4dcc619f7d50	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:4e45eb50d755	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:4e45eb50d755	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:4f30f307722b	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:4f30f307722b	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:51ae637fee40	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:51ae637fee40	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:585c49983a88	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:585c49983a88	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:5faff729ebb4	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:5faff729ebb4	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:600d1c85a48f	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:600d1c85a48f	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:632811da8760	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:632811da8760	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:637e3f4b484e	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:637e3f4b484e	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:63e6d61ac862	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:63e6d61ac862	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:6b028688a43e	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:6b028688a43e	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:6d5225f8b68f	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:6d5225f8b68f	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:7f101d609a03	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:7f101d609a03	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:877df07eed78	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:877df07eed78	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:8adfd064ebc9	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:8adfd064ebc9	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:8bb6b56f524f	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:8bb6b56f524f	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:8ed30075a911	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:8ed30075a911	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:8f8ded118ae3	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:8f8ded118ae3	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:9216f9efeef5	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:9216f9efeef5	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:92c665e1abb0	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:92c665e1abb0	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:996f31d4e439	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:996f31d4e439	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:9a47ea18cfdb	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:9a47ea18cfdb	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:9d9798a1a617	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:9d9798a1a617	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:a639469ea54f	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:a639469ea54f	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:a73623945c9f	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:a73623945c9f	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:abdab7404732	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:abdab7404732	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:adede9649d72	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:adede9649d72	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:c07f3d3c35ae	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:c07f3d3c35ae	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:e45587558ad4	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:e45587558ad4	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:e6b64e923896	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:e6b64e923896	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:e9afdecf0f8f	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:e9afdecf0f8f	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:eaee9aca889d	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:eaee9aca889d	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:eeba3e4cf07b	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:eeba3e4cf07b	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
-FAM:CAT:DGIDB:efd6ad714725	Q4_expression_tiersAB:GABRB2:GABRB2	Q4_expression_tiersAB:GABRB2	GABRB2	down	1.0000	expression	defined	0.25	0	0.25	GABRB2	
-FAM:CAT:DGIDB:efd6ad714725	Q4_expression_tiersAB:GABRB3:GABRB3	Q4_expression_tiersAB:GABRB3	GABRB3	down	1.0000	expression	defined	0.25	0	0.25	GABRB3	
+family_id	unit_id	seed_id	gene	seed_direction	level	readout_level	direction_status	contrib_hop0	contrib_hops1to3	contrib_total	guard_tag	main_target_hop0	main_target_hops1to3
+FAM:CAT:DGIDB:738dec9ffd44	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.00121618	0.00121618			PTPRM
+FAM:CAT:CHEMBL1230541	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:CHEMBL1873475	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:CHEMBL2057915	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:CHEMBL3301600	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:CHEMBL3545193	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:CHEMBL3702854	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:CHEMBL3707348	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:CHEMBL3900554	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:CHEMBL3936761	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:CHEMBL4065122	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:CHEMBL4071161	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:CHEMBL4072833	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:CHEMBL4114766	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:CHEMBL4163691	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:CHEMBL4297640	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:CHEMBL4297674	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:CHEMBL4594348	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:CHEMBL4650321	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:CHEMBL4650323	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:CHEMBL4650338	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:CHEMBL4650485	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:068aeaf22a50	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:0b2061b656a2	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:12653e8e06c7	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:13728e6ab6dc	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:1bf6ba392558	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:2f4526341239	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:341d112e662e	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:38f888d51ca7	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:3c77e3ac5b84	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:40bbcacf0388	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:4476f5c496e4	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:44b0c65b08e2	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:5fc231a5b885	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:634453a6965e	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:6d03c34fa1e7	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:6e77ca1bf303	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:7394eaefe42e	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:7bae3d659dec	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:805c90c7cd8b	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:834ea90dfe54	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:b7b428289af4	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:ba348e1c7077	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:bc4993a39378	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:c2ba047bad82	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:c5616f14da5c	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:ec2005879bc4	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:f94d877faa8b	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:fc25ca3f4ba3	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:ff3143aefdb6	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000859966	0.000859966			BTK
+FAM:CAT:DGIDB:1f3af2b5a4cd	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000608088	0.000608088			BTK
+FAM:CAT:DGIDB:d129aa92cf8d	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000608217	0.000608217			BTK
+FAM:CAT:DGIDB:b85859071378	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	0.00721538	0.00721538			NR5A1
+FAM:CAT:DGIDB:b85859071378	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-7.62176e-05	-7.62176e-05			NR5A1
+FAM:CAT:DGIDB:49211c0a1f32	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000496502	0.000496502			BTK
+FAM:CAT:DGIDB:061c87e371eb	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000608669	0.000608669			BTK
+FAM:CAT:DGIDB:3fc2d11f8afb	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000384589	0.000384589			BTK
+FAM:CAT:DGIDB:5e7f13aa82d4	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000496502	0.000496502			BTK
+FAM:CAT:DGIDB:01cdeae8ce34	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000429983	0.000429983			BTK
+FAM:CAT:DGIDB:de6278c3ec26	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000384956	0.000384956			BTK
+FAM:CAT:DGIDB:56e15389c4ef	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000406418	0.000406418			BTK
+FAM:CAT:CHEMBL4297865	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000497758	0.000497758			BTK
+FAM:CAT:DGIDB:3155b4d20f53	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000497758	0.000497758			BTK
+FAM:CAT:DGIDB:9f4c371accfd	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000497758	0.000497758			BTK
+FAM:CAT:DGIDB:0144213450e7	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-2.55122e-06	-2.55122e-06			RPS6KA5
+FAM:CAT:DGIDB:0144213450e7	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.78401e-06	-1.78401e-06			RPS6KA5
+FAM:CAT:DGIDB:188c864b6592	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-2.55122e-06	-2.55122e-06			RPS6KA5
+FAM:CAT:DGIDB:188c864b6592	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.78401e-06	-1.78401e-06			RPS6KA5
+FAM:CAT:CHEMBL3786673	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-1.44459e-05	-1.44459e-05			NFKB2
+FAM:CAT:CHEMBL3786673	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-3.00124e-06	-3.00124e-06			RELA
+FAM:CAT:DGIDB:4886535a03e8	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000325037	0.000325037			BTK
+FAM:CAT:CHEMBL4085457	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.00035108	0.00035108			BTK
+FAM:CAT:DGIDB:e7bc2b6dd850	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000496948	0.000496948			BTK
+FAM:CAT:DGIDB:49353b3755a5	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	0.00145476	0.00145476			PRKAB1
+FAM:CAT:DGIDB:49353b3755a5	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	2.46816e-05	2.46816e-05			PRKAB1
+FAM:CAT:CHEMBL1551724	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	0.00386275	0.00386275			PRKAA1
+FAM:CAT:CHEMBL1551724	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	6.55994e-05	6.55994e-05			PRKAA1
+FAM:CAT:DGIDB:88e24a354c2a	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	0.00386275	0.00386275			PRKAA1
+FAM:CAT:DGIDB:88e24a354c2a	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	6.55994e-05	6.55994e-05			PRKAA1
+FAM:CAT:DGIDB:a7a4ff0bc69b	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	0.000589561	0.000589561			PRKAA1
+FAM:CAT:DGIDB:a7a4ff0bc69b	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	1.00255e-05	1.00255e-05			PRKAA1
+FAM:CAT:DGIDB:e118d95b7967	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000492683	0.000492683			MELK
+FAM:CAT:DGIDB:b771b7f96970	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-2.70598e-06	-2.70598e-06			RPS6KA4
+FAM:CAT:DGIDB:b771b7f96970	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	4.69411e-05	4.69411e-05			MAPKAPK2
+FAM:CAT:DGIDB:198741f77ba6	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	8.62069e-05	8.62069e-05			PSEN1
+FAM:CAT:DGIDB:28a63164639a	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	8.62069e-05	8.62069e-05			PSEN1
+FAM:CAT:DGIDB:62c594195bd0	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	8.62069e-05	8.62069e-05			PSEN1
+FAM:CAT:DGIDB:f571f2fbfdf4	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	8.62069e-05	8.62069e-05			PSEN1
+FAM:CAT:DGIDB:310b1705a307	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	8.70821e-05	8.70821e-05			APH1A
+FAM:CAT:DGIDB:e05afc012259	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	8.70821e-05	8.70821e-05			APH1A
+FAM:CAT:CHEMBL1090771	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.00017974	0.00017974			APH1A
+FAM:CAT:CHEMBL1770916	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.00017974	0.00017974			APH1A
+FAM:CAT:CHEMBL4297422	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.00017974	0.00017974			APH1A
+FAM:CAT:CHEMBL463981	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.00017974	0.00017974			APH1A
+FAM:CAT:CHEMBL520733	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.00017974	0.00017974			APH1A
+FAM:CAT:DGIDB:2551da72c2b7	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.00017974	0.00017974			APH1A
+FAM:CAT:DGIDB:93e5438541e3	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.00017974	0.00017974			APH1A
+FAM:CAT:DGIDB:e2a06e37dae6	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.00017974	0.00017974			APH1A
+FAM:CAT:DGIDB:233bcd39aee9	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000604428	0.000604428			STK3
+FAM:CAT:DGIDB:d9b7293ca3c3	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.000604428	0.000604428			STK3
+FAM:CAT:DGIDB:59f2e13deadd	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-2.82009e-05	-2.82009e-05			ESR2
+FAM:CAT:DGIDB:59f2e13deadd	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	5.66331e-05	5.66331e-05			ESR2
+FAM:CAT:DGIDB:60c4300ad86b	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-2.82009e-05	-2.82009e-05			ESR2
+FAM:CAT:DGIDB:60c4300ad86b	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	5.66331e-05	5.66331e-05			ESR2
+FAM:CAT:DGIDB:d9bd36c453d6	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	0.00035108	0.00035108			BTK
+FAM:CAT:CHEMBL1358	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.26949e-06	2.26949e-06			ESR1
+FAM:CAT:CHEMBL1358	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	1.42922e-05	1.42922e-05			ESR1
+FAM:CAT:CHEMBL3545210	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.26949e-06	2.26949e-06			ESR1
+FAM:CAT:CHEMBL3545210	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	1.42922e-05	1.42922e-05			ESR1
+FAM:CAT:CHEMBL3581693	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.26949e-06	2.26949e-06			ESR1
+FAM:CAT:CHEMBL3581693	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	1.42922e-05	1.42922e-05			ESR1
+FAM:CAT:CHEMBL4297509	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.26949e-06	2.26949e-06			ESR1
+FAM:CAT:CHEMBL4297509	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	1.42922e-05	1.42922e-05			ESR1
+FAM:CAT:CHEMBL4475463	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.26949e-06	2.26949e-06			ESR1
+FAM:CAT:CHEMBL4475463	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	1.42922e-05	1.42922e-05			ESR1
+FAM:CAT:DGIDB:864a49d67c17	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	4.21515e-05	4.21515e-05			ESR2
+FAM:CAT:DGIDB:864a49d67c17	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-6.5799e-05	-6.5799e-05			ESR2
+FAM:CAT:DGIDB:f2356402f4c0	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	4.33137e-07	4.33137e-07			NR1I2
+FAM:CAT:DGIDB:f2356402f4c0	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-4.39689e-05	-4.39689e-05			NR1I3
+FAM:CAT:DGIDB:6802569a3c41	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	4.55698e-06	4.55698e-06			VDR
+FAM:CAT:DGIDB:6802569a3c41	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.07478e-06	-1.07478e-06			NR1I2
+FAM:CAT:DGIDB:88f4aeb726f1	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	5.58114e-06	5.58114e-06			VDR
+FAM:CAT:DGIDB:88f4aeb726f1	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.31633e-06	-1.31633e-06			NR1I2
+FAM:CAT:CHEMBL371405	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	3.62639e-07	3.62639e-07			PSMA1
+FAM:CAT:CHEMBL3545092	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	9.18707e-05	9.18707e-05			AR
+FAM:CAT:CHEMBL3545092	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-4.85174e-05	-4.85174e-05			ESR2
+FAM:CAT:DGIDB:2ca2a83f60d6	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	3.06274e-07	3.06274e-07			NR1I2
+FAM:CAT:DGIDB:2ca2a83f60d6	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-4.77352e-07	-4.77352e-07			NR1I2
+FAM:CAT:DGIDB:14b72549cc15	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	6.12548e-07	6.12548e-07			NR1I2
+FAM:CAT:DGIDB:14b72549cc15	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-9.54703e-07	-9.54703e-07			NR1I2
+FAM:CAT:DGIDB:1e85142c32f0	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	6.12548e-07	6.12548e-07			NR1I2
+FAM:CAT:DGIDB:1e85142c32f0	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-9.54703e-07	-9.54703e-07			NR1I2
+FAM:CAT:DGIDB:7fe88089df07	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	6.12548e-07	6.12548e-07			NR1I2
+FAM:CAT:DGIDB:7fe88089df07	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-9.54703e-07	-9.54703e-07			NR1I2
+FAM:CAT:DGIDB:d7dcea8fd543	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	6.12548e-07	6.12548e-07			NR1I2
+FAM:CAT:DGIDB:d7dcea8fd543	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-9.54703e-07	-9.54703e-07			NR1I2
+FAM:CAT:DGIDB:ed8aff037348	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	6.12548e-07	6.12548e-07			NR1I2
+FAM:CAT:DGIDB:ed8aff037348	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-9.54703e-07	-9.54703e-07			NR1I2
+FAM:CAT:DGIDB:efcbf167d54c	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	6.12548e-07	6.12548e-07			NR1I2
+FAM:CAT:DGIDB:efcbf167d54c	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-9.54703e-07	-9.54703e-07			NR1I2
+FAM:CAT:DGIDB:f767081f7a34	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	6.12548e-07	6.12548e-07			NR1I2
+FAM:CAT:DGIDB:f767081f7a34	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-9.54703e-07	-9.54703e-07			NR1I2
+FAM:CAT:DGIDB:bba2534bfcbc	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	1.93705e-07	1.93705e-07			NR1I2
+FAM:CAT:DGIDB:bba2534bfcbc	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-3.01904e-07	-3.01904e-07			NR1I2
+FAM:CAT:DGIDB:009be0cf8100	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	4.33137e-07	4.33137e-07			NR1I2
+FAM:CAT:DGIDB:009be0cf8100	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-6.75077e-07	-6.75077e-07			NR1I2
+FAM:CAT:DGIDB:e11b540091be	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	4.33137e-07	4.33137e-07			NR1I2
+FAM:CAT:DGIDB:e11b540091be	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-6.75077e-07	-6.75077e-07			NR1I2
+FAM:CAT:DGIDB:4eb387f65144	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	3.78931e-07	3.78931e-07			PSMA1
+FAM:CAT:DGIDB:fb197a69a54e	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-0.00198413	-0.00198413			ATR
+FAM:CAT:DGIDB:fb197a69a54e	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-6.82266e-07	-6.82266e-07			MTOR
+FAM:CAT:DGIDB:996dd1f823ba	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-3.64192e-07	-3.64192e-07			HDAC8
+FAM:CAT:CHEMBL2108585	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	6.1074e-07	6.1074e-07			TP53
+FAM:CAT:CHEMBL2108585	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.11695e-07	-1.11695e-07			TP53
+FAM:CAT:DGIDB:32c374e89497	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	6.1074e-07	6.1074e-07			TP53
+FAM:CAT:DGIDB:32c374e89497	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.11695e-07	-1.11695e-07			TP53
+FAM:CAT:DGIDB:edd83e20c927	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	4.31858e-07	4.31858e-07			TP53
+FAM:CAT:DGIDB:edd83e20c927	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-7.89802e-08	-7.89802e-08			TP53
+FAM:CAT:DGIDB:4f314feed015	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-1.60477e-06	-1.60477e-06			ESR1
+FAM:CAT:DGIDB:4f314feed015	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.01061e-05	-1.01061e-05			ESR1
+FAM:CAT:CHEMBL1018	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-2.26949e-06	-2.26949e-06			ESR1
+FAM:CAT:CHEMBL1018	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.42922e-05	-1.42922e-05			ESR1
+FAM:CAT:CHEMBL1200430	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-2.26949e-06	-2.26949e-06			ESR1
+FAM:CAT:CHEMBL1200430	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.42922e-05	-1.42922e-05			ESR1
+FAM:CAT:CHEMBL1200973	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-2.26949e-06	-2.26949e-06			ESR1
+FAM:CAT:CHEMBL1200973	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.42922e-05	-1.42922e-05			ESR1
+FAM:CAT:CHEMBL1200980	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-2.26949e-06	-2.26949e-06			ESR1
+FAM:CAT:CHEMBL1200980	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.42922e-05	-1.42922e-05			ESR1
+FAM:CAT:CHEMBL1201151	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-2.26949e-06	-2.26949e-06			ESR1
+FAM:CAT:CHEMBL1201151	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.42922e-05	-1.42922e-05			ESR1
+FAM:CAT:CHEMBL1201477	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-2.26949e-06	-2.26949e-06			ESR1
+FAM:CAT:CHEMBL1201477	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.42922e-05	-1.42922e-05			ESR1
+FAM:CAT:CHEMBL135	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-2.26949e-06	-2.26949e-06			ESR1
+FAM:CAT:CHEMBL135	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.42922e-05	-1.42922e-05			ESR1
+FAM:CAT:CHEMBL1405	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-2.26949e-06	-2.26949e-06			ESR1
+FAM:CAT:CHEMBL1405	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.42922e-05	-1.42922e-05			ESR1
+FAM:CAT:CHEMBL1511	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-2.26949e-06	-2.26949e-06			ESR1
+FAM:CAT:CHEMBL1511	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.42922e-05	-1.42922e-05			ESR1
+FAM:CAT:CHEMBL3545017	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-2.26949e-06	-2.26949e-06			ESR1
+FAM:CAT:CHEMBL3545017	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.42922e-05	-1.42922e-05			ESR1
+FAM:CAT:CHEMBL411	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-2.26949e-06	-2.26949e-06			ESR1
+FAM:CAT:CHEMBL411	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.42922e-05	-1.42922e-05			ESR1
+FAM:CAT:CHEMBL691	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-2.26949e-06	-2.26949e-06			ESR1
+FAM:CAT:CHEMBL691	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.42922e-05	-1.42922e-05			ESR1
+FAM:CAT:DGIDB:1ec94dc07392	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-2.26949e-06	-2.26949e-06			ESR1
+FAM:CAT:DGIDB:1ec94dc07392	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.42922e-05	-1.42922e-05			ESR1
+FAM:CAT:DGIDB:36116c9094bc	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-2.26949e-06	-2.26949e-06			ESR1
+FAM:CAT:DGIDB:36116c9094bc	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.42922e-05	-1.42922e-05			ESR1
+FAM:CAT:DGIDB:7daf0ba1a43c	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-2.26949e-06	-2.26949e-06			ESR1
+FAM:CAT:DGIDB:7daf0ba1a43c	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.42922e-05	-1.42922e-05			ESR1
+FAM:CAT:DGIDB:9e65758dbf1b	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-2.26949e-06	-2.26949e-06			ESR1
+FAM:CAT:DGIDB:9e65758dbf1b	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.42922e-05	-1.42922e-05			ESR1
+FAM:CAT:DGIDB:ba5036c420f1	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-2.26949e-06	-2.26949e-06			ESR1
+FAM:CAT:DGIDB:ba5036c420f1	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.42922e-05	-1.42922e-05			ESR1
+FAM:CAT:DGIDB:f91ba77a0fb8	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-2.26949e-06	-2.26949e-06			ESR1
+FAM:CAT:DGIDB:f91ba77a0fb8	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.42922e-05	-1.42922e-05			ESR1
+FAM:CAT:DGIDB:f9b9b60d77a5	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-2.26949e-06	-2.26949e-06			ESR1
+FAM:CAT:DGIDB:f9b9b60d77a5	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.42922e-05	-1.42922e-05			ESR1
+FAM:CAT:DGIDB:ff54f2004380	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-2.26949e-06	-2.26949e-06			ESR1
+FAM:CAT:DGIDB:ff54f2004380	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.42922e-05	-1.42922e-05			ESR1
+FAM:CAT:DGIDB:d1fc53fdb24f	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.30259e-05	2.30259e-05			ESR2
+FAM:CAT:DGIDB:d1fc53fdb24f	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-4.62407e-05	-4.62407e-05			ESR2
+FAM:CAT:CHEMBL1200598	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.82009e-05	2.82009e-05			ESR2
+FAM:CAT:CHEMBL1200598	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-5.66331e-05	-5.66331e-05			ESR2
+FAM:CAT:CHEMBL1201165	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.82009e-05	2.82009e-05			ESR2
+FAM:CAT:CHEMBL1201165	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-5.66331e-05	-5.66331e-05			ESR2
+FAM:CAT:CHEMBL1201466	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.82009e-05	2.82009e-05			ESR2
+FAM:CAT:CHEMBL1201466	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-5.66331e-05	-5.66331e-05			ESR2
+FAM:CAT:CHEMBL1201467	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.82009e-05	2.82009e-05			ESR2
+FAM:CAT:CHEMBL1201467	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-5.66331e-05	-5.66331e-05			ESR2
+FAM:CAT:CHEMBL1201468	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.82009e-05	2.82009e-05			ESR2
+FAM:CAT:CHEMBL1201468	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-5.66331e-05	-5.66331e-05			ESR2
+FAM:CAT:CHEMBL1201649	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.82009e-05	2.82009e-05			ESR2
+FAM:CAT:CHEMBL1201649	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-5.66331e-05	-5.66331e-05			ESR2
+FAM:CAT:CHEMBL1230314	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.82009e-05	2.82009e-05			ESR2
+FAM:CAT:CHEMBL1230314	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-5.66331e-05	-5.66331e-05			ESR2
+FAM:CAT:CHEMBL3545274	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.82009e-05	2.82009e-05			ESR2
+FAM:CAT:CHEMBL3545274	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-5.66331e-05	-5.66331e-05			ESR2
+FAM:CAT:DGIDB:006565434e24	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.82009e-05	2.82009e-05			ESR2
+FAM:CAT:DGIDB:006565434e24	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-5.66331e-05	-5.66331e-05			ESR2
+FAM:CAT:DGIDB:486419346510	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.82009e-05	2.82009e-05			ESR2
+FAM:CAT:DGIDB:486419346510	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-5.66331e-05	-5.66331e-05			ESR2
+FAM:CAT:DGIDB:79d6fb3c3c09	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.82009e-05	2.82009e-05			ESR2
+FAM:CAT:DGIDB:79d6fb3c3c09	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-5.66331e-05	-5.66331e-05			ESR2
+FAM:CAT:DGIDB:7a317b0e9875	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.82009e-05	2.82009e-05			ESR2
+FAM:CAT:DGIDB:7a317b0e9875	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-5.66331e-05	-5.66331e-05			ESR2
+FAM:CAT:DGIDB:8a3e93a80c06	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.82009e-05	2.82009e-05			ESR2
+FAM:CAT:DGIDB:8a3e93a80c06	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-5.66331e-05	-5.66331e-05			ESR2
+FAM:CAT:DGIDB:9a65594663e8	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.82009e-05	2.82009e-05			ESR2
+FAM:CAT:DGIDB:9a65594663e8	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-5.66331e-05	-5.66331e-05			ESR2
+FAM:CAT:DGIDB:a34729bed515	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.82009e-05	2.82009e-05			ESR2
+FAM:CAT:DGIDB:a34729bed515	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-5.66331e-05	-5.66331e-05			ESR2
+FAM:CAT:DGIDB:b81c4f7f2883	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.82009e-05	2.82009e-05			ESR2
+FAM:CAT:DGIDB:b81c4f7f2883	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-5.66331e-05	-5.66331e-05			ESR2
+FAM:CAT:DGIDB:bae9868a4fcf	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.82009e-05	2.82009e-05			ESR2
+FAM:CAT:DGIDB:bae9868a4fcf	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-5.66331e-05	-5.66331e-05			ESR2
+FAM:CAT:DGIDB:cff341dde758	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.82009e-05	2.82009e-05			ESR2
+FAM:CAT:DGIDB:cff341dde758	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-5.66331e-05	-5.66331e-05			ESR2
+FAM:CAT:DGIDB:e1171258c805	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.82009e-05	2.82009e-05			ESR2
+FAM:CAT:DGIDB:e1171258c805	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-5.66331e-05	-5.66331e-05			ESR2
+FAM:CAT:DGIDB:f38a1a97065e	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.82009e-05	2.82009e-05			ESR2
+FAM:CAT:DGIDB:f38a1a97065e	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-5.66331e-05	-5.66331e-05			ESR2
+FAM:CAT:DGIDB:09a08406c920	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-0.00197042	-0.00197042			ATR
+FAM:CAT:DGIDB:09a08406c920	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	9.09234e-07	9.09234e-07			PRKDC
+FAM:CAT:CHEMBL3185133	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.45093e-05	2.45093e-05			ESR2
+FAM:CAT:CHEMBL3185133	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-4.39793e-05	-4.39793e-05			ESR2
+FAM:CAT:DGIDB:5f1a59b0ce87	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	2.45093e-05	2.45093e-05			ESR2
+FAM:CAT:DGIDB:5f1a59b0ce87	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-4.39793e-05	-4.39793e-05			ESR2
+FAM:CAT:DGIDB:92b410ffb4a4	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	6.04603e-05	6.04603e-05			AR
+FAM:CAT:DGIDB:92b410ffb4a4	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.20966e-05	-1.20966e-05			ESR1
+FAM:CAT:DGIDB:eb8e22b47937	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-0.000701495	-0.000701495			NEK1
+FAM:CAT:DGIDB:6cba84a955cf	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-1.98559e-06	-1.98559e-06			TRIM24
+FAM:CAT:CHEMBL2103884	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	6.07564e-07	6.07564e-07			ADRM1
+FAM:CAT:CHEMBL2141296	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	6.07564e-07	6.07564e-07			ADRM1
+FAM:CAT:CHEMBL325041	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	6.07564e-07	6.07564e-07			ADRM1
+FAM:CAT:CHEMBL3545432	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	6.07564e-07	6.07564e-07			ADRM1
+FAM:CAT:CHEMBL451887	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	6.07564e-07	6.07564e-07			ADRM1
+FAM:CAT:DGIDB:06e4f96e142b	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	6.07564e-07	6.07564e-07			ADRM1
+FAM:CAT:DGIDB:499332f24a2a	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	6.07564e-07	6.07564e-07			ADRM1
+FAM:CAT:DGIDB:8093000b995f	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	6.07564e-07	6.07564e-07			ADRM1
+FAM:CAT:DGIDB:9057d20cf6ca	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	6.07564e-07	6.07564e-07			ADRM1
+FAM:CAT:DGIDB:6505fa3daab7	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	1.48565e-07	1.48565e-07			NR1I2
+FAM:CAT:DGIDB:6505fa3daab7	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	6.48425e-07	6.48425e-07			TUBB
+FAM:CAT:CHEMBL1766779	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-0.00396825	-0.00396825			ATR
+FAM:CAT:CHEMBL3989870	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-0.00396825	-0.00396825			ATR
+FAM:CAT:CHEMBL4285417	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-0.00396825	-0.00396825			ATR
+FAM:CAT:CHEMBL4647810	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-0.00396825	-0.00396825			ATR
+FAM:CAT:CHEMBL4650286	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-0.00396825	-0.00396825			ATR
+FAM:CAT:DGIDB:014f815d97af	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-0.00396825	-0.00396825			ATR
+FAM:CAT:DGIDB:12376451c30a	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-0.00396825	-0.00396825			ATR
+FAM:CAT:DGIDB:3d80de713937	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-0.00396825	-0.00396825			ATR
+FAM:CAT:DGIDB:54f69a6d1b4b	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-0.00396825	-0.00396825			ATR
+FAM:CAT:DGIDB:a07c7735e4d0	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-0.00396825	-0.00396825			ATR
+FAM:CAT:DGIDB:b0d90f466877	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-0.00396825	-0.00396825			ATR
+FAM:CAT:CHEMBL3392776	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-1.34611e-06	-1.34611e-06			STAT3
+FAM:CAT:CHEMBL3392776	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-0.00344048	-0.00344048			STAT3
+FAM:CAT:CHEMBL4452527	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-1.34611e-06	-1.34611e-06			STAT3
+FAM:CAT:CHEMBL4452527	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-0.00344048	-0.00344048			STAT3
+FAM:CAT:DGIDB:0dfe60cde8de	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-1.34611e-06	-1.34611e-06			STAT3
+FAM:CAT:DGIDB:0dfe60cde8de	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-0.00344048	-0.00344048			STAT3
+FAM:CAT:DGIDB:5af3dd6c5c76	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-1.34611e-06	-1.34611e-06			STAT3
+FAM:CAT:DGIDB:5af3dd6c5c76	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-0.00344048	-0.00344048			STAT3
+FAM:CAT:DGIDB:830f4ec04842	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-1.34611e-06	-1.34611e-06			STAT3
+FAM:CAT:DGIDB:830f4ec04842	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-0.00344048	-0.00344048			STAT3
+FAM:CAT:DGIDB:ce496ff00491	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-1.34611e-06	-1.34611e-06			STAT3
+FAM:CAT:DGIDB:ce496ff00491	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-0.00344048	-0.00344048			STAT3
+FAM:CAT:CHEMBL1923234	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-9.51845e-07	-9.51845e-07			STAT3
+FAM:CAT:CHEMBL1923234	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-0.00243279	-0.00243279			STAT3
+FAM:CAT:DGIDB:0ecbcd6c2a17	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	-9.51845e-07	-9.51845e-07			STAT3
+FAM:CAT:DGIDB:0ecbcd6c2a17	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	-0.00243279	-0.00243279			STAT3
+FAM:CAT:CHEMBL2106798	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.333333	0	-0.333333		GRIN2C	
+FAM:CAT:DGIDB:bc4c80984e38	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.333333	0	-0.333333		GRIN2C	
+FAM:CAT:CHEMBL3707400	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.353553	0	-0.353553		GRIN2C	
+FAM:CAT:DGIDB:42d5d5465a4d	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.408248	0	-0.408248		GRIN2C	
+FAM:CAT:DGIDB:3e00b590c5a1	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.288675	0	-0.288675		GRIN2C	
+FAM:CAT:DGIDB:2062f50d5e38	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.447214	0	-0.447214		GRIN2C	
+FAM:CAT:DGIDB:2c655dcafeea	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.447214	0	-0.447214		GRIN2C	
+FAM:CAT:DGIDB:648084fa2168	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.447214	0	-0.447214		GRIN2C	
+FAM:CAT:DGIDB:8007dbf268ec	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.447214	0	-0.447214		GRIN2C	
+FAM:CAT:DGIDB:8a52a55f3a98	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.447214	0	-0.447214		GRIN2C	
+FAM:CAT:DGIDB:b98350579779	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.447214	0	-0.447214		GRIN2C	
+FAM:CAT:DGIDB:11dcd9a41857	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.5	0	-0.5		GRIN2C	
+FAM:CAT:DGIDB:3af0766b5a01	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.5	0	-0.5		GRIN2C	
+FAM:CAT:DGIDB:4b8e1694eb56	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.5	0	-0.5		GRIN2C	
+FAM:CAT:DGIDB:52d01b8327f7	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.5	0	-0.5		GRIN2C	
+FAM:CAT:DGIDB:71c5708d2fca	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.5	0	-0.5		GRIN2C	
+FAM:CAT:DGIDB:79d9fde1e294	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.5	0	-0.5		GRIN2C	
+FAM:CAT:DGIDB:7a0554580c65	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.5	0	-0.5		GRIN2C	
+FAM:CAT:DGIDB:7eb00d275f22	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.5	0	-0.5		GRIN2C	
+FAM:CAT:DGIDB:b0ca5cf2303c	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.5	0	-0.5		GRIN2C	
+FAM:CAT:DGIDB:c074cb76e927	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.5	0	-0.5		GRIN2C	
+FAM:CAT:DGIDB:ca0cbcf4f1e9	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.5	0	-0.5		GRIN2C	
+FAM:CAT:DGIDB:e1b85a54dc9c	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.5	0	-0.5		GRIN2C	
+FAM:CAT:DGIDB:f5aacf22df23	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.5	0	-0.5		GRIN2C	
+FAM:CAT:DGIDB:f9ecb57f1990	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.5	0	-0.5		GRIN2C	
+FAM:CAT:DGIDB:255ce6a4a3eb	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.5	0	-0.5		GRIN2C	
+FAM:CAT:CHEMBL1254766	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.707107	0	-0.707107		GRIN2C	
+FAM:CAT:DGIDB:f9c35a07bf9f	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.707107	0	-0.707107		GRIN2C	
+FAM:CAT:CHEMBL2107771	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.229416	0	-0.229416		GRIN2C	
+FAM:CAT:CHEMBL1201293	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.208514	0	-0.208514		GRIN2C	
+FAM:CAT:DGIDB:d4a136aae03c	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.208514	0	-0.208514		GRIN2C	
+FAM:CAT:CHEMBL1094	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.377964	0	-0.377964		GRIN2C	
+FAM:CAT:CHEMBL1207366	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.377964	0	-0.377964		GRIN2C	
+FAM:CAT:CHEMBL1569	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.377964	0	-0.377964		GRIN2C	
+FAM:CAT:CHEMBL1699	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.377964	0	-0.377964		GRIN2C	
+FAM:CAT:CHEMBL1714	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.377964	0	-0.377964		GRIN2C	
+FAM:CAT:CHEMBL2106165	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.377964	0	-0.377964		GRIN2C	
+FAM:CAT:CHEMBL3545351	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.377964	0	-0.377964		GRIN2C	
+FAM:CAT:CHEMBL3707355	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.377964	0	-0.377964		GRIN2C	
+FAM:CAT:CHEMBL41306	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.377964	0	-0.377964		GRIN2C	
+FAM:CAT:CHEMBL452461	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.377964	0	-0.377964		GRIN2C	
+FAM:CAT:CHEMBL467084	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.377964	0	-0.377964		GRIN2C	
+FAM:CAT:DGIDB:0c06b5be21bb	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.377964	0	-0.377964		GRIN2C	
+FAM:CAT:DGIDB:16efa988f8ef	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.377964	0	-0.377964		GRIN2C	
+FAM:CAT:DGIDB:50a16e084956	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.377964	0	-0.377964		GRIN2C	
+FAM:CAT:DGIDB:80196c332448	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.377964	0	-0.377964		GRIN2C	
+FAM:CAT:DGIDB:9c85048f5868	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.377964	0	-0.377964		GRIN2C	
+FAM:CAT:DGIDB:ad3e4f19b28e	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.377964	0	-0.377964		GRIN2C	
+FAM:CAT:DGIDB:c3bb8a601e8c	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.377964	0	-0.377964		GRIN2C	
+FAM:CAT:DGIDB:d34fc2e86617	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.377964	0	-0.377964		GRIN2C	
+FAM:CAT:DGIDB:d87959cfb914	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.377964	0	-0.377964		GRIN2C	
+FAM:CAT:DGIDB:eab00dc4a194	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.377964	0	-0.377964		GRIN2C	
+FAM:CAT:CHEMBL1200395	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.229416	0	-0.229416		GRIN2C	
+FAM:CAT:DGIDB:49ec8aa9cde9	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	-0.229416	0	-0.229416		GRIN2C	
+FAM:CAT:DGIDB:26101f2e95f9	Q4_expression_tiersAB:KCNA2:KCNA2	Q4_expression_tiersAB:KCNA2	KCNA2	down	1.0000	expression	defined	-0.288675	0	-0.288675		KCNA2	
+FAM:CAT:CHEMBL2105707	Q4_expression_tiersAB:GRM3:GRM3	Q4_expression_tiersAB:GRM3	GRM3	down	1.0000	expression	defined	0.707107	0	0.707107		GRM3	
+FAM:CAT:CHEMBL3545270	Q4_expression_tiersAB:GRM3:GRM3	Q4_expression_tiersAB:GRM3	GRM3	down	1.0000	expression	defined	0.707107	0	0.707107		GRM3	
+FAM:CAT:CHEMBL375611	Q4_expression_tiersAB:GRM3:GRM3	Q4_expression_tiersAB:GRM3	GRM3	down	1.0000	expression	defined	0.707107	0	0.707107		GRM3	
+FAM:CAT:DGIDB:5effa7381e1e	Q4_expression_tiersAB:GRM3:GRM3	Q4_expression_tiersAB:GRM3	GRM3	down	1.0000	expression	defined	0.707107	0	0.707107		GRM3	
+FAM:CAT:DGIDB:ce63378d51cd	Q4_expression_tiersAB:GRM3:GRM3	Q4_expression_tiersAB:GRM3	GRM3	down	1.0000	expression	defined	0.707107	0	0.707107		GRM3	
+FAM:CAT:DGIDB:043f52a79646	Q4_expression_tiersAB:GRM3:GRM3	Q4_expression_tiersAB:GRM3	GRM3	down	1.0000	expression	defined	0.447214	0	0.447214		GRM3	
+FAM:CAT:DGIDB:143cc91f37a7	Q4_expression_tiersAB:GRM3:GRM3	Q4_expression_tiersAB:GRM3	GRM3	down	1.0000	expression	defined	0.447214	0	0.447214		GRM3	
+FAM:CAT:DGIDB:016f2611d9b6	Q4_expression_tiersAB:GRM3:GRM3	Q4_expression_tiersAB:GRM3	GRM3	down	1.0000	expression	defined	0.353553	0	0.353553		GRM3	
+FAM:CAT:DGIDB:db51bba9e470	Q4_expression_tiersAB:GRM3:GRM3	Q4_expression_tiersAB:GRM3	GRM3	down	1.0000	expression	defined	1	0	1		GRM3	
+FAM:CAT:DGIDB:6548482cdfa6	Q4_expression_tiersAB:GRM3:GRM3	Q4_expression_tiersAB:GRM3	GRM3	down	1.0000	expression	defined	0.57735	0	0.57735		GRM3	
+FAM:CAT:CHEMBL8759	Q4_expression_tiersAB:GRM3:GRM3	Q4_expression_tiersAB:GRM3	GRM3	down	1.0000	expression	defined	0.5	0	0.5		GRM3	
+FAM:CAT:DGIDB:2a8f29507705	Q4_expression_tiersAB:GRM3:GRM3	Q4_expression_tiersAB:GRM3	GRM3	down	1.0000	expression	defined	0.5	0	0.5		GRM3	
+FAM:CAT:CHEMBL2107762	Q4_expression_tiersAB:KCNA2:KCNA2	Q4_expression_tiersAB:KCNA2	KCNA2	down	1.0000	expression	defined	-0.141421	0	-0.141421		KCNA2	
+FAM:CAT:DGIDB:4345f63fa149	Q4_expression_tiersAB:KCNA2:KCNA2	Q4_expression_tiersAB:KCNA2	KCNA2	down	1.0000	expression	defined	-0.141421	0	-0.141421		KCNA2	
+FAM:CAT:DGIDB:7a5c20934d25	Q4_expression_tiersAB:KCNA2:KCNA2	Q4_expression_tiersAB:KCNA2	KCNA2	down	1.0000	expression	defined	-0.156174	0	-0.156174		KCNA2	
+FAM:CAT:CHEMBL113461	Q4_expression_tiersAB:KCNA2:KCNA2	Q4_expression_tiersAB:KCNA2	KCNA2	down	1.0000	expression	defined	-0.158114	0	-0.158114		KCNA2	
+FAM:CAT:CHEMBL1200728	Q4_expression_tiersAB:KCNA2:KCNA2	Q4_expression_tiersAB:KCNA2	KCNA2	down	1.0000	expression	defined	-0.158114	0	-0.158114		KCNA2	
+FAM:CAT:CHEMBL284348	Q4_expression_tiersAB:KCNA2:KCNA2	Q4_expression_tiersAB:KCNA2	KCNA2	down	1.0000	expression	defined	-0.158114	0	-0.158114		KCNA2	
+FAM:CAT:CHEMBL3301611	Q4_expression_tiersAB:KCNA2:KCNA2	Q4_expression_tiersAB:KCNA2	KCNA2	down	1.0000	expression	defined	-0.158114	0	-0.158114		KCNA2	
+FAM:CAT:DGIDB:0a4d43587a81	Q4_expression_tiersAB:KCNA2:KCNA2	Q4_expression_tiersAB:KCNA2	KCNA2	down	1.0000	expression	defined	-0.158114	0	-0.158114		KCNA2	
+FAM:CAT:DGIDB:6dfea9534845	Q4_expression_tiersAB:KCNA2:KCNA2	Q4_expression_tiersAB:KCNA2	KCNA2	down	1.0000	expression	defined	-0.158114	0	-0.158114		KCNA2	
+FAM:CAT:DGIDB:738768ce3fc1	Q4_expression_tiersAB:KCNA2:KCNA2	Q4_expression_tiersAB:KCNA2	KCNA2	down	1.0000	expression	defined	-0.158114	0	-0.158114		KCNA2	
+FAM:CAT:DGIDB:dd641fe5928e	Q4_expression_tiersAB:KCNA2:KCNA2	Q4_expression_tiersAB:KCNA2	KCNA2	down	1.0000	expression	defined	-0.158114	0	-0.158114		KCNA2	
+FAM:CAT:DGIDB:f1465322f2a2	Q4_expression_tiersAB:KCNA2:KCNA2	Q4_expression_tiersAB:KCNA2	KCNA2	down	1.0000	expression	defined	-0.57735	0	-0.57735		KCNA2	
+FAM:CAT:DGIDB:d0aabe6a6f00	Q4_expression_tiersAB:GRM3:GRM3	Q4_expression_tiersAB:GRM3	GRM3	down	1.0000	expression	defined	-0.707107	0	-0.707107		GRM3	
+FAM:CAT:DGIDB:c4bdb6c8b262	Q4_expression_tiersAB:GRM3:GRM3	Q4_expression_tiersAB:GRM3	GRM3	down	1.0000	expression	defined	-0.57735	0	-0.57735		GRM3	
+FAM:CAT:DGIDB:102666ee0893	Q4_expression_tiersAB:GRM3:GRM3	Q4_expression_tiersAB:GRM3	GRM3	down	1.0000	expression	defined	-0.377964	0	-0.377964		GRM3	
+FAM:CAT:DGIDB:c8511f5afd4f	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0	3.97279e-07	3.97279e-07			PPARG
+FAM:CAT:DGIDB:c8511f5afd4f	Q4_expression_tiersAB:NPY:NPY	Q4_expression_tiersAB:NPY	NPY	down	1.0000	expression	defined	0	2.583e-07	2.583e-07			PPARG
+FAM:CAT:CHEMBL1255840	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0.377964	0	0.377964		GRIN2C	
+FAM:CAT:CHEMBL3544917	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0.377964	0	0.377964		GRIN2C	
+FAM:CAT:CHEMBL3989872	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0.377964	0	0.377964		GRIN2C	
+FAM:CAT:DGIDB:435e0b231ae6	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0.377964	0	0.377964		GRIN2C	
+FAM:CAT:DGIDB:98e9b0689fe4	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0.377964	0	0.377964		GRIN2C	
+FAM:CAT:CHEMBL291278	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0.447214	0	0.447214		GRIN2C	
+FAM:CAT:DGIDB:0cb76630431d	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0.447214	0	0.447214		GRIN2C	
+FAM:CAT:DGIDB:34eebcba2b28	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0.447214	0	0.447214		GRIN2C	
+FAM:CAT:DGIDB:3aa598685369	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0.447214	0	0.447214		GRIN2C	
+FAM:CAT:DGIDB:50b9c763a7f1	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0.447214	0	0.447214		GRIN2C	
+FAM:CAT:DGIDB:9ec52dbec023	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0.447214	0	0.447214		GRIN2C	
+FAM:CAT:DGIDB:cc0e62936d06	Q4_expression_tiersAB:GRIN2C:GRIN2C	Q4_expression_tiersAB:GRIN2C	GRIN2C	down	1.0000	expression	defined	0.408248	0	0.408248		GRIN2C	

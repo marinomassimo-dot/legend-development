@@ -1,53 +1,61 @@
 {
  "label": "p1_Q4_expression_tiersAB",
  "seeds": "seeds_p1/Q4_expression_tiersAB.tsv",
- "n_seed_units": 3,
- "n_defined": 2,
- "n_uncertain": 1,
+ "n_seed_units": 4,
+ "n_defined": 4,
+ "n_uncertain": 0,
  "examined_families": 12560,
  "T1": {
   "a_zero_seeds_max_abs_Q": 0.0,
-  "b_scale_max_abs_err": 2.7755575615628914e-17,
-  "c_decomposition_max_abs_err": 3.469446951953614e-18,
-  "d_defined_seeds_with_effect": 2,
+  "b_scale_max_abs_err": 6.938893903907228e-18,
+  "c_decomposition_max_abs_err": 8.673617379884035e-19,
+  "d_defined_seeds_with_effect": 4,
   "d_inert_defined_seeds": [],
   "d_inert_units_any_direction": [],
   "PASS": true
  },
  "T2": {
   "a_n_null": 1000,
-  "a_spearman_real_vs_null_median": -0.005590454438592417,
+  "a_spearman_real_vs_null_median": 0.1474476004732573,
   "a_spearman_p5_p95": [
-   -0.23019681704520836,
-   0.23147479031583104
+   -0.19519268170841284,
+   0.4125384376322363
   ],
   "a_top100_overlap_median": 0.0,
   "a_top100_overlap_p5_p95": [
    0.0,
-   0.0
+   6.0
   ],
-  "a_effect_size_1_minus_rho_median": 1.0055904544385925,
-  "a_families_abs_z_gt3": 179,
-  "a_families_nonzero": 2859,
-  "z_spearman_real_vs_null_median": 0.8215758974621077,
-  "z_top100_overlap_median": 0.0,
+  "a_effect_size_1_minus_rho_median": 0.8525523995267427,
+  "a_families_abs_z_gt3": 151,
+  "a_families_nonzero": 2701,
+  "z_spearman_real_vs_null_median": 0.8673994950933249,
+  "z_top100_overlap_median": 7.0,
   "z_top100_overlap_p5_p95": [
    0.0,
-   0.0
+   14.0
   ],
-  "b_sign_shuffle_median_spearman": null,
-  "b_note": "fewer than 4 defined-direction seeds: not testable",
+  "b_sign_shuffle_median_spearman": 1.0,
+  "b_sign_shuffle_p5_p95": [
+   1.0,
+   1.0
+  ],
+  "b_sign_shuffle_identical_to_real": 1000,
+  "b_defined_seed_signs_up_down": [
+   0,
+   4
+  ],
   "c_decoy_n_genes": 10,
   "c_decoy_genes_in_graph": 9,
-  "c_decoy_spearman_with_real": -0.026126708306369727,
+  "c_decoy_spearman_with_real": 0.08878197007752033,
   "c_decoy_top100_overlap_with_real": 0,
   "criteria_met_a_rho_a_top100_b_shuffle_c_decoy": [
    true,
    true,
-   true,
+   false,
    true
   ],
-  "PASS": true,
+  "PASS": false,
   "z_arm_criteria_met_rho_top100": [
    false,
    true
@@ -56,20 +64,22 @@
  "T3": {
   "a_firewall": "seed classes checked at load (evidence_class in ['activity_state', 'phenotype_state', 'protein_state', 'transcript_contrast']); none refused",
   "a_seed_gene_equals_probe_name": [],
-  "b_seed_units_total": 3,
+  "b_seed_units_total": 4,
   "b_seed_units_in_graph": 3,
-  "b_seed_genes_missing_from_graph": [],
+  "b_seed_genes_missing_from_graph": [
+   "KCNA2"
+  ],
   "b_distinct_signed_target_symbols": 2381,
   "b_target_symbols_in_graph": 1887,
   "b_mnet_usable_families_without_gene_symbol": 72,
   "b_restricted_universe_families": 11085,
   "b_restricted_vs_all_spearman": 1.0,
   "b_restricted_check_note": "near-tautological by construction (a family whose every target is in the graph has the same score in any engine); the informative diagnostics are the next lines",
-  "b_norm_all_targets_vs_ingraph_only_spearman": 0.9999978525680271,
+  "b_norm_all_targets_vs_ingraph_only_spearman": 0.9970078430525481,
   "b_rows_chembl_only_families": 2965,
-  "b_rows_chembl_only_spearman_with_all_rows": 0.9924737474033052,
+  "b_rows_chembl_only_spearman_with_all_rows": 0.9954366045246771,
   "b_rows_nonchembl_only_families": 9698,
-  "b_rows_nonchembl_only_spearman_with_all_rows": 0.9893815872307175,
+  "b_rows_nonchembl_only_spearman_with_all_rows": 0.9896444609498444,
   "c_probes": [
    {
     "family_id": "FAM:CAT:CHEMBL1072",
@@ -78,9 +88,9 @@
     "Q_defined": 0.0,
     "Q_Uplus": 0.0,
     "Q_Uminus": 0.0,
-    "percentile_defined_arm": 0.521297770700637,
-    "percentile_Uplus": 0.4966162420382166,
-    "percentile_Uminus": 0.5281847133757962,
+    "percentile_defined_arm": 0.5031449044585987,
+    "percentile_Uplus": 0.5031449044585987,
+    "percentile_Uminus": 0.5031449044585987,
     "own_target_seeds": [],
     "hop0_share_of_abs_Q_defined": 0.0,
     "flag": ""
@@ -92,9 +102,9 @@
     "Q_defined": 0.0,
     "Q_Uplus": 0.0,
     "Q_Uminus": 0.0,
-    "percentile_defined_arm": 0.521297770700637,
-    "percentile_Uplus": 0.4966162420382166,
-    "percentile_Uminus": 0.5281847133757962,
+    "percentile_defined_arm": 0.5031449044585987,
+    "percentile_Uplus": 0.5031449044585987,
+    "percentile_Uminus": 0.5031449044585987,
     "own_target_seeds": [],
     "hop0_share_of_abs_Q_defined": 0.0,
     "flag": ""
@@ -111,9 +121,9 @@
     "Q_defined": 0.0,
     "Q_Uplus": 0.0,
     "Q_Uminus": 0.0,
-    "percentile_defined_arm": 0.521297770700637,
-    "percentile_Uplus": 0.4966162420382166,
-    "percentile_Uminus": 0.5281847133757962,
+    "percentile_defined_arm": 0.5031449044585987,
+    "percentile_Uplus": 0.5031449044585987,
+    "percentile_Uminus": 0.5031449044585987,
     "own_target_seeds": [],
     "hop0_share_of_abs_Q_defined": 0.0,
     "flag": ""
@@ -135,9 +145,9 @@
     "Q_defined": 0.0,
     "Q_Uplus": 0.0,
     "Q_Uminus": 0.0,
-    "percentile_defined_arm": 0.521297770700637,
-    "percentile_Uplus": 0.4966162420382166,
-    "percentile_Uminus": 0.5281847133757962,
+    "percentile_defined_arm": 0.5031449044585987,
+    "percentile_Uplus": 0.5031449044585987,
+    "percentile_Uminus": 0.5031449044585987,
     "own_target_seeds": [],
     "hop0_share_of_abs_Q_defined": 0.0,
     "flag": ""
@@ -146,14 +156,19 @@
     "family_id": "FAM:CAT:CHEMBL1699",
     "name": "MEMANTINE HYDROCHLORIDE",
     "status": "examined",
-    "Q_defined": 0.0,
-    "Q_Uplus": 0.0,
-    "Q_Uminus": 0.0,
-    "percentile_defined_arm": 0.521297770700637,
-    "percentile_Uplus": 0.4966162420382166,
-    "percentile_Uminus": 0.5281847133757962,
-    "own_target_seeds": [],
-    "hop0_share_of_abs_Q_defined": 0.0,
+    "Q_defined": -0.3779644730092272,
+    "Q_Uplus": -0.3779644730092272,
+    "Q_Uminus": -0.3779644730092272,
+    "percentile_defined_arm": 0.0030254777070063696,
+    "percentile_Uplus": 0.0030254777070063696,
+    "percentile_Uminus": 0.0030254777070063696,
+    "own_target_seeds": [
+     "GRIN2C"
+    ],
+    "hop0_share_of_abs_Q_defined": 1.0,
+    "percentile_defined_after_leave_own_target_out": 0.502468152866242,
+    "percentile_Uplus_after": 0.502468152866242,
+    "percentile_Uminus_after": 0.502468152866242,
     "flag": ""
    },
    {
@@ -163,9 +178,9 @@
     "Q_defined": 0.0,
     "Q_Uplus": 0.0,
     "Q_Uminus": 0.0,
-    "percentile_defined_arm": 0.521297770700637,
-    "percentile_Uplus": 0.4966162420382166,
-    "percentile_Uminus": 0.5281847133757962,
+    "percentile_defined_arm": 0.5031449044585987,
+    "percentile_Uplus": 0.5031449044585987,
+    "percentile_Uminus": 0.5031449044585987,
     "own_target_seeds": [],
     "hop0_share_of_abs_Q_defined": 0.0,
     "flag": ""
@@ -187,9 +202,9 @@
     "Q_defined": 0.0,
     "Q_Uplus": 0.0,
     "Q_Uminus": 0.0,
-    "percentile_defined_arm": 0.521297770700637,
-    "percentile_Uplus": 0.4966162420382166,
-    "percentile_Uminus": 0.5281847133757962,
+    "percentile_defined_arm": 0.5031449044585987,
+    "percentile_Uplus": 0.5031449044585987,
+    "percentile_Uminus": 0.5031449044585987,
     "own_target_seeds": [],
     "hop0_share_of_abs_Q_defined": 0.0,
     "flag": ""
@@ -206,9 +221,9 @@
     "Q_defined": 0.0,
     "Q_Uplus": 0.0,
     "Q_Uminus": 0.0,
-    "percentile_defined_arm": 0.521297770700637,
-    "percentile_Uplus": 0.4966162420382166,
-    "percentile_Uminus": 0.5281847133757962,
+    "percentile_defined_arm": 0.5031449044585987,
+    "percentile_Uplus": 0.5031449044585987,
+    "percentile_Uminus": 0.5031449044585987,
     "own_target_seeds": [],
     "hop0_share_of_abs_Q_defined": 0.0,
     "flag": ""
@@ -220,9 +235,9 @@
     "Q_defined": 0.0,
     "Q_Uplus": 0.0,
     "Q_Uminus": 0.0,
-    "percentile_defined_arm": 0.521297770700637,
-    "percentile_Uplus": 0.4966162420382166,
-    "percentile_Uminus": 0.5281847133757962,
+    "percentile_defined_arm": 0.5031449044585987,
+    "percentile_Uplus": 0.5031449044585987,
+    "percentile_Uminus": 0.5031449044585987,
     "own_target_seeds": [],
     "hop0_share_of_abs_Q_defined": 0.0,
     "flag": ""
@@ -236,12 +251,12 @@
     "family_id": "FAM:CAT:CHEMBL574737",
     "name": "UCN-01",
     "status": "examined",
-    "Q_defined": -0.002101308316611974,
-    "Q_Uplus": -0.0021782668260613507,
-    "Q_Uminus": -0.0020243498071625976,
-    "percentile_defined_arm": 0.005851910828025477,
-    "percentile_Uplus": 0.010151273885350318,
-    "percentile_Uminus": 0.006170382165605096,
+    "Q_defined": 3.0294844301860567e-06,
+    "Q_Uplus": 3.0294844301860567e-06,
+    "Q_Uminus": 3.0294844301860567e-06,
+    "percentile_defined_arm": 0.939609872611465,
+    "percentile_Uplus": 0.939609872611465,
+    "percentile_Uminus": 0.939609872611465,
     "own_target_seeds": [],
     "hop0_share_of_abs_Q_defined": 0.0,
     "flag": ""
@@ -253,9 +268,9 @@
     "Q_defined": 0.0,
     "Q_Uplus": 0.0,
     "Q_Uminus": 0.0,
-    "percentile_defined_arm": 0.521297770700637,
-    "percentile_Uplus": 0.4966162420382166,
-    "percentile_Uminus": 0.5281847133757962,
+    "percentile_defined_arm": 0.5031449044585987,
+    "percentile_Uplus": 0.5031449044585987,
+    "percentile_Uminus": 0.5031449044585987,
     "own_target_seeds": [],
     "hop0_share_of_abs_Q_defined": 0.0,
     "flag": ""
@@ -267,30 +282,30 @@
    }
   ],
   "c_probes_examined": 11,
-  "c_probes_with_own_target_seed": 0,
+  "c_probes_with_own_target_seed": 1,
   "c_probes_flagged": 0,
   "PASS_identity": true
  },
  "T4": {
-  "spearman_NETIND_vs_DIRECT_examined": 0.0115717881557656,
-  "spearman_NETFULL_vs_DIRECT_examined": 0.24299096572187412,
-  "n_direct_signed_nonzero_families": 130,
-  "n_direct_any_action_families": 133,
-  "n_direct_any_action_that_also_have_nonzero_netind": 0,
+  "spearman_NETIND_vs_DIRECT_examined": -0.0002728311121176466,
+  "spearman_NETFULL_vs_DIRECT_examined": 0.2077451066031004,
+  "n_direct_signed_nonzero_families": 94,
+  "n_direct_any_action_families": 100,
+  "n_direct_any_action_that_also_have_nonzero_netind": 1,
   "top50_overlap_NETIND_DIRECT": 0,
   "top100_overlap_NETIND_DIRECT": 0,
   "raw_Q_top100": {
    "n_new": 100,
-   "n_new_and_seed_specific_z_gt3": 5
+   "n_new_and_seed_specific_z_gt3": 53
   },
-  "raw_Q_outcome": "NONE",
+  "raw_Q_outcome": "ADDS",
   "Z_top100": {
-   "n_new": 65,
-   "n_new_and_seed_specific_z_gt3": 5,
+   "n_new": 91,
+   "n_new_and_seed_specific_z_gt3": 55,
    "n_with_positive_Z": 100
   },
-  "Z_outcome": "NONE",
-  "Z_top100_overlap_with_raw_Q_top100": 42,
+  "Z_outcome": "ADDS",
+  "Z_top100_overlap_with_raw_Q_top100": 70,
   "wwox_regulators_in_network": [
    "E2F1",
    "NFKB1",
@@ -301,21 +316,28 @@
    "TFAP2C"
   ],
   "n_families_with_regulator_target": 6,
-  "note": ""
+  "note": "a top-k list of a method that fails T2 is not seed-specific whatever T4 says"
  },
  "T5": {
   "a_empty_seeds_equal_zero_baseline_max_abs": 0.0,
   "b_flip_all_max_abs_err": 0.0,
   "b_flip_all_spearman_with_real": -1.0,
   "b_flip_all_top100_overlap_real_vs_flipped": 0,
-  "c_one_sign_flip_max_abs_err": 3.469446951953614e-18,
+  "c_one_sign_flip_max_abs_err": 2.168404344971009e-18,
   "c_changed_set_equals_influenced_set": true,
-  "d_arm_difference_max_abs_err": 3.071341466744093e-18,
-  "d_range_brackets_arms": true,
-  "e_network_sign_randomized_median_spearman": 0.08021089926214936,
+  "d_note": "no uncertain-direction seeds in this set",
+  "e_network_sign_randomized_median_spearman": 0.04810483299039374,
   "e_n": 200,
   "f_zero_level_equals_removal_max_abs": 0.0,
   "PASS": true,
-  "reach_baseline_spearman_abs_with_abs_real": 0.07902173226783535
+  "reach_baseline_spearman_abs_with_abs_real": 0.1465385616185164
+ },
+ "T6": {
+  "tags_present": [],
+  "units_total": 4,
+  "units_sign_changed_by_guard": 0,
+  "units_excluded_from_signature_arm": 0,
+  "units_would_enter_signature_arm_if_guard_ignored": 4,
+  "PASS": true
  }
 }

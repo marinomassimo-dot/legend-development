@@ -1,0 +1,251 @@
+question	seed_set	arm	rank	family_id	name	Z_ind_robust_total_null	Z_ind_robust_indeg_null	seed_specific_both_nulls	Q_net_ind	compatible_action	conditional_on_uncertain_seeds	also_found_by_direct_search	contributing_seed_1	contributing_seed_2	evaluation_forbidden_on
+Q6	Q6_expression_tiersAB	opposes	1	FAM:CAT:DGIDB:207317c1b624	Stm2457	154.6	98.86	1	0.0833333	opposes	0	0	MYC|MYC|up|hops1-3|METTL3|0.0833		none
+Q6	Q6_expression_tiersAB	opposes	2	FAM:CAT:DGIDB:38b6db5eff01	Stc-15	154.6	98.86	1	0.0833333	opposes	0	0	MYC|MYC|up|hops1-3|METTL3|0.0833		none
+Q6	Q6_expression_tiersAB	opposes	3	FAM:CAT:CHEMBL215152	DEFOSBARASERTIB	20.14	22.46	1	0.111314	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.111		none
+Q6	Q6_expression_tiersAB	opposes	4	FAM:CAT:CHEMBL3544932	TAK-901	20.14	22.46	1	0.111314	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.111		none
+Q6	Q6_expression_tiersAB	opposes	5	FAM:CAT:CHEMBL3545395	BI-811283	20.14	22.46	1	0.111314	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.111		none
+Q6	Q6_expression_tiersAB	opposes	6	FAM:CAT:CHEMBL415049	BARASERTIB	20.14	22.46	1	0.111314	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.111		none
+Q6	Q6_expression_tiersAB	opposes	7	FAM:CAT:DGIDB:c50058647863	Tak-901	20.14	22.46	1	0.111314	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.111		none
+Q6	Q6_expression_tiersAB	opposes	8	FAM:CAT:DGIDB:4172adf3398a	Compound 1 [Pmid: 21742770]	20	6.676	1	0.0787321	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0787		none
+Q6	Q6_expression_tiersAB	opposes	9	FAM:CAT:DGIDB:9bc633afd268	Jnj-7706621	17.3	21.54	1	0.0835957	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0836		none
+Q6	Q6_expression_tiersAB	opposes	10	FAM:CAT:CHEMBL3301588	TAREXTUMAB	15.66	12.54	1	0.143264	opposes	0	0	MYC|MYC|up|hops1-3|NOTCH3|0.143		none
+Q6	Q6_expression_tiersAB	opposes	11	FAM:CAT:DGIDB:222da6a76f85	Tarextumab	15.66	12.54	1	0.143264	opposes	0	0	MYC|MYC|up|hops1-3|NOTCH3|0.143		none
+Q6	Q6_expression_tiersAB	opposes	12	FAM:CAT:DGIDB:198741f77ba6	Elnd006	15.56	4.951	1	0.0200651	opposes	0	0	MYC|MYC|up|hops1-3|PSEN1|0.0201		none
+Q6	Q6_expression_tiersAB	opposes	13	FAM:CAT:DGIDB:28a63164639a	Chf-5074	15.56	4.951	1	0.0200651	opposes	0	0	MYC|MYC|up|hops1-3|PSEN1|0.0201		none
+Q6	Q6_expression_tiersAB	opposes	14	FAM:CAT:DGIDB:62c594195bd0	Az4800	15.56	4.951	1	0.0200651	opposes	0	0	MYC|MYC|up|hops1-3|PSEN1|0.0201		none
+Q6	Q6_expression_tiersAB	opposes	15	FAM:CAT:DGIDB:f571f2fbfdf4	Sch-900229	15.56	4.951	1	0.0200651	opposes	0	0	MYC|MYC|up|hops1-3|PSEN1|0.0201		none
+Q6	Q6_expression_tiersAB	opposes	16	FAM:CAT:DGIDB:310b1705a307	Osugacestat	15.49	4.965	1	0.0168638	opposes	0	0	MYC|MYC|up|hops1-3|APH1A|0.0169		none
+Q6	Q6_expression_tiersAB	opposes	17	FAM:CAT:DGIDB:e05afc012259	Mk-0752	15.49	4.965	1	0.0168638	opposes	0	0	MYC|MYC|up|hops1-3|APH1A|0.0169		none
+Q6	Q6_expression_tiersAB	opposes	18	FAM:CAT:CHEMBL1090771	AVAGACESTAT	15.49	4.962	1	0.0361834	opposes	0	0	MYC|MYC|up|hops1-3|APH1A|0.0362		none
+Q6	Q6_expression_tiersAB	opposes	19	FAM:CAT:CHEMBL1770916	NIROGACESTAT	15.49	4.962	1	0.0361834	opposes	0	0	MYC|MYC|up|hops1-3|APH1A|0.0362		none
+Q6	Q6_expression_tiersAB	opposes	20	FAM:CAT:CHEMBL4297422	RG-4733	15.49	4.962	1	0.0361834	opposes	0	0	MYC|MYC|up|hops1-3|APH1A|0.0362		none
+Q6	Q6_expression_tiersAB	opposes	21	FAM:CAT:CHEMBL463981	BEGACESTAT	15.49	4.962	1	0.0361834	opposes	0	0	MYC|MYC|up|hops1-3|APH1A|0.0362		none
+Q6	Q6_expression_tiersAB	opposes	22	FAM:CAT:CHEMBL520733	SEMAGACESTAT	15.49	4.962	1	0.0361834	opposes	0	0	MYC|MYC|up|hops1-3|APH1A|0.0362		none
+Q6	Q6_expression_tiersAB	opposes	23	FAM:CAT:DGIDB:2551da72c2b7	Begacestat	15.49	4.962	1	0.0361834	opposes	0	0	MYC|MYC|up|hops1-3|APH1A|0.0362		none
+Q6	Q6_expression_tiersAB	opposes	24	FAM:CAT:DGIDB:93e5438541e3	Avagacestat	15.49	4.962	1	0.0361834	opposes	0	0	MYC|MYC|up|hops1-3|APH1A|0.0362		none
+Q6	Q6_expression_tiersAB	opposes	25	FAM:CAT:DGIDB:e2a06e37dae6	Nirogacestat	15.49	4.962	1	0.0361834	opposes	0	0	MYC|MYC|up|hops1-3|APH1A|0.0362		none
+Q6	Q6_expression_tiersAB	opposes	26	FAM:CAT:CHEMBL2170016	Hg-10-102-01	13.13	9.493	1	0.0526912	opposes	0	0	MYC|MYC|up|hops1-3|JAK2|0.0527		none
+Q6	Q6_expression_tiersAB	opposes	27	FAM:CAT:DGIDB:0e119ae547a0	Ro4929097	12.81	6.951	1	0.0273325	opposes	0	0	MYC|MYC|up|hops1-3|PSEN1|0.0273		none
+Q6	Q6_expression_tiersAB	opposes	28	FAM:CAT:DGIDB:de26e608f305	3 Alpha-Aminocholestane	12.68	0.8466	0	0.0119867	opposes	0	0	MYC|MYC|up|hops1-3|INPP5D|0.012		none
+Q6	Q6_expression_tiersAB	opposes	29	FAM:CAT:CHEMBL2169919	Epz004777	12.53	26.56	1	0.125653	opposes	0	0	MYC|MYC|up|hops1-3|DOT1L|0.126		none
+Q6	Q6_expression_tiersAB	opposes	30	FAM:CAT:CHEMBL3087498	Sgc0946	12.53	26.56	1	0.125653	opposes	0	0	MYC|MYC|up|hops1-3|DOT1L|0.126		none
+Q6	Q6_expression_tiersAB	opposes	31	FAM:CAT:DGIDB:31c2ebae4775	Pinometostat	12.53	26.56	1	0.125653	opposes	0	0	MYC|MYC|up|hops1-3|DOT1L|0.126		none
+Q6	Q6_expression_tiersAB	opposes	32	FAM:CAT:DGIDB:5431327e2708	Compound 13 [Chen Et Al., 2016]	12.53	26.56	1	0.125653	opposes	0	0	MYC|MYC|up|hops1-3|DOT1L|0.126		none
+Q6	Q6_expression_tiersAB	opposes	33	FAM:CAT:DGIDB:8df5f32bdf3b	Danusertib	12.45	17.21	1	0.0564471	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0564		none
+Q6	Q6_expression_tiersAB	opposes	34	FAM:CAT:DGIDB:c273df15d763	Compound 25 [Pmid: 20855207]	12.43	14.5	1	0.0651535	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0652		none
+Q6	Q6_expression_tiersAB	opposes	35	FAM:CAT:CHEMBL259084	MLN-8054	12.43	17.2	1	0.0797613	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0798		none
+Q6	Q6_expression_tiersAB	opposes	36	FAM:CAT:CHEMBL3692206	TAS-119	12.43	17.2	1	0.0797613	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0798		none
+Q6	Q6_expression_tiersAB	opposes	37	FAM:CAT:CHEMBL4289017	PF-03814735	12.43	17.2	1	0.0797613	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0798		none
+Q6	Q6_expression_tiersAB	opposes	38	FAM:CAT:DGIDB:1d5e6550c667	Aurora Kinase Inhibitor Ii	12.43	17.2	1	0.0797613	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0798		none
+Q6	Q6_expression_tiersAB	opposes	39	FAM:CAT:DGIDB:42027b00475f	Compound 46 [Pmid: 16451062]	12.43	17.2	1	0.0797613	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0798		none
+Q6	Q6_expression_tiersAB	opposes	40	FAM:CAT:DGIDB:a5ef2958c633	Zm447439	12.43	17.2	1	0.0797613	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0798		none
+Q6	Q6_expression_tiersAB	opposes	41	FAM:CAT:DGIDB:c7cc08beb018	Pf-03814735	12.43	17.2	1	0.0797613	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0798		none
+Q6	Q6_expression_tiersAB	opposes	42	FAM:CAT:DGIDB:d7fe3d6d9e92	Barasertib	12.43	17.2	1	0.0797613	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0798		none
+Q6	Q6_expression_tiersAB	opposes	43	FAM:CAT:DGIDB:fb77282c2057	Compound 10 [Pmid: 19402633]	12.43	17.2	1	0.0797613	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0798		none
+Q6	Q6_expression_tiersAB	opposes	44	FAM:CAT:CHEMBL1090479	GSK-1070916	12.43	17.2	1	0.0651249	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0651		none
+Q6	Q6_expression_tiersAB	opposes	45	FAM:CAT:CHEMBL1967878	CENISERTIB	12.43	17.2	1	0.0651249	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0651		none
+Q6	Q6_expression_tiersAB	opposes	46	FAM:CAT:CHEMBL2105657	TOZASERTIB LACTATE	12.43	17.2	1	0.0651249	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0651		none
+Q6	Q6_expression_tiersAB	opposes	47	FAM:CAT:CHEMBL2140408	AMG-900	12.43	17.2	1	0.0651249	opposes	0	1	MYC|MYC|up|hops1-3|AURKB|0.0651		none
+Q6	Q6_expression_tiersAB	opposes	48	FAM:CAT:CHEMBL3545327	TTP-607	12.43	17.2	1	0.0651249	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0651		none
+Q6	Q6_expression_tiersAB	opposes	49	FAM:CAT:CHEMBL3545378	MK-6592	12.43	17.2	1	0.0651249	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0651		none
+Q6	Q6_expression_tiersAB	opposes	50	FAM:CAT:CHEMBL402548	DANUSERTIB	12.43	17.2	1	0.0651249	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0651		none
+Q6	Q6_expression_tiersAB	mimics	1	FAM:CAT:DGIDB:e70b1b244ec2	Mivebresib	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_expression_tiersAB	mimics	2	FAM:CAT:DGIDB:d2f0b45182ac	Ms417	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_expression_tiersAB	mimics	3	FAM:CAT:DGIDB:c0761d5c7905	Compound 2 [Pmid: 25408830]	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_expression_tiersAB	mimics	4	FAM:CAT:DGIDB:b92b8b1ce56b	Nhwd-870	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_expression_tiersAB	mimics	5	FAM:CAT:DGIDB:b6ab3af5c7a4	Compound 7D [Pmid: 25703523]	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_expression_tiersAB	mimics	6	FAM:CAT:DGIDB:ad0ad93f2d5c	Compound 1 [Pmid: 25408830]	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_expression_tiersAB	mimics	7	FAM:CAT:DGIDB:aac12c557a5b	Xd1	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_expression_tiersAB	mimics	8	FAM:CAT:DGIDB:943f948ed754	Isoxazole Azepine Compound 3	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_expression_tiersAB	mimics	9	FAM:CAT:DGIDB:89c5118fd77d	Compound 15 [Hay Et Al., 2013]	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_expression_tiersAB	mimics	10	FAM:CAT:DGIDB:5dcbc0337c66	Bzt-7	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_expression_tiersAB	mimics	11	FAM:CAT:DGIDB:5939058f5e3e	Cpi-203	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_expression_tiersAB	mimics	12	FAM:CAT:DGIDB:4ee060cc6aaf	Compound 9 [Pmid: 23517011]	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_expression_tiersAB	mimics	13	FAM:CAT:DGIDB:4d6bb6aa868e	Compound 11H [Pmid: 29808961]	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_expression_tiersAB	mimics	14	FAM:CAT:DGIDB:4729f05af735	Dbet6	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_expression_tiersAB	mimics	15	FAM:CAT:DGIDB:2e8ec2410b6f	I-Bet282	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_expression_tiersAB	mimics	16	FAM:CAT:DGIDB:09afa1e9db65	N-Methyl-2-Pyrrolidone	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_expression_tiersAB	mimics	17	FAM:CAT:CHEMBL4226570	Mz1	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_expression_tiersAB	mimics	18	FAM:CAT:CHEMBL3919831	AMREDOBRESIB	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_expression_tiersAB	mimics	19	FAM:CAT:CHEMBL3086883	Ms436	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_expression_tiersAB	mimics	20	FAM:CAT:CHEMBL2179387	Pfi-1	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_expression_tiersAB	mimics	21	FAM:CAT:CHEMBL1522313	Compound 3 [Pmid: 25408830]	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_expression_tiersAB	mimics	22	FAM:CAT:CHEMBL1957266	(+)-Jq1	-87.88	-21.49	0	-0.0473534	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.0474		none
+Q6	Q6_expression_tiersAB	mimics	23	FAM:CAT:DGIDB:3be2fd1c4ca1	Gsk852	-38.07	-2.955	0	-0.0391794	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.0392		none
+Q6	Q6_expression_tiersAB	mimics	24	FAM:CAT:DGIDB:a4c5aa722407	Compound 4D [Pmid: 21851057]	-38.07	-2.955	0	-0.0479847	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.048		none
+Q6	Q6_expression_tiersAB	mimics	25	FAM:CAT:DGIDB:f225f8272b71	Compound 38 [Pmid: 24000170]	-28.49	-1.24	0	-0.0359366	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.0359		none
+Q6	Q6_expression_tiersAB	direct_search	1	FAM:CAT:CHEMBL2108438	MILODISTIM					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	2	FAM:CAT:CHEMBL2140408	AMG-900				0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_expression_tiersAB	direct_search	3	FAM:CAT:CHEMBL3301582	POLATUZUMAB VEDOTIN				0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_expression_tiersAB	direct_search	4	FAM:CAT:DGIDB:036dd311b713	Thrombin					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	5	FAM:CAT:DGIDB:047a127d44b4	Bizelesin					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	6	FAM:CAT:DGIDB:069bdff57cba	Sulindac				0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_expression_tiersAB	direct_search	7	FAM:CAT:DGIDB:073beac86e8f	Azacitidine				0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_expression_tiersAB	direct_search	8	FAM:CAT:DGIDB:0788c7732488	Tetradecanoylphorbol Acetate					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	9	FAM:CAT:DGIDB:093981c89886	Somatropin (Recombinant Dna Origin)					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	10	FAM:CAT:DGIDB:0f3551cb29e3	Acivicin					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	11	FAM:CAT:DGIDB:11a31110f6d5	Ornithine Decarboxylase Inhibitor					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	12	FAM:CAT:DGIDB:14a13c156b7f	Recombinant Macrophage Colony-Stimulating Factor					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	13	FAM:CAT:DGIDB:14f043b6196c	Cobalt Co-60					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	14	FAM:CAT:DGIDB:237760772630	Lif					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	15	FAM:CAT:DGIDB:2ae5596b26cf	Imatinib				0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_expression_tiersAB	direct_search	16	FAM:CAT:DGIDB:2b027f4e02da	Antibiotic					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	17	FAM:CAT:DGIDB:2f1af45b9391	Lobaplatin					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	18	FAM:CAT:DGIDB:316b73312895	Vorinostat				0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_expression_tiersAB	direct_search	19	FAM:CAT:DGIDB:37cee0f0671a	Recombinant Interferon					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	20	FAM:CAT:DGIDB:3cde66ae5af7	Recombinant Interferon Alfa					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	21	FAM:CAT:DGIDB:4b603061c382	Drugsatfda.Nda:008378					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	22	FAM:CAT:DGIDB:4ba65fd13821	Alisertib				0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_expression_tiersAB	direct_search	23	FAM:CAT:DGIDB:4bbf11b55536	Elsamitrucin					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	24	FAM:CAT:DGIDB:4ff67bfa66c8	Prednisone				-0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_expression_tiersAB	direct_search	25	FAM:CAT:DGIDB:53902220f25f	Verapamil					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	26	FAM:CAT:DGIDB:56648a1e28b6	Afimoxifene				-0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_expression_tiersAB	direct_search	27	FAM:CAT:DGIDB:58f04d27e75b	Ubenimex					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	28	FAM:CAT:DGIDB:590757460269	Perillyl Alcohol					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	29	FAM:CAT:DGIDB:5ad1ed401021	Olaparib				0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_expression_tiersAB	direct_search	30	FAM:CAT:DGIDB:5ba35e7a459e	Cisplatin					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	31	FAM:CAT:DGIDB:5ca5f91c1152	Warfarin					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	32	FAM:CAT:DGIDB:6558ef7e085f	Phosphorodiamidate Morpholino Oligomer Avi-4126					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	33	FAM:CAT:DGIDB:663ba3b527e5	Il-5				-0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_expression_tiersAB	direct_search	34	FAM:CAT:DGIDB:66cccc44ca60	Trail					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	35	FAM:CAT:DGIDB:68bfd480bfcc	Protoporphyrin					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	36	FAM:CAT:DGIDB:7276cc0a1091	Il-9					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	37	FAM:CAT:DGIDB:741b1f2cf3cb	Amifostine Anhydrous					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	38	FAM:CAT:DGIDB:7af209a4b8a8	Mitoguazone					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	39	FAM:CAT:DGIDB:7c1c470d3c7e	Aminopterin					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	40	FAM:CAT:DGIDB:7c261e183d98	Adozelesin					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	41	FAM:CAT:DGIDB:8355ca849495	Thioguanine					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	42	FAM:CAT:DGIDB:86c5cdcdadbc	Dinaciclib				0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_expression_tiersAB	direct_search	43	FAM:CAT:DGIDB:8b6ac88a5720	Prexasertib				0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_expression_tiersAB	direct_search	44	FAM:CAT:DGIDB:901fc9ed9b89	Thyrotropin					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	45	FAM:CAT:DGIDB:933a2a41e968	Ibrutinib				0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_expression_tiersAB	direct_search	46	FAM:CAT:DGIDB:9761f418a0f4	Hypoxanthine					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	47	FAM:CAT:DGIDB:9790d724878b	Pregnant Mare Serum Gonadotropin					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	48	FAM:CAT:DGIDB:a06a80b52836	Folic Acid					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	49	FAM:CAT:DGIDB:a351bc099fa6	Novobiocin					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_expression_tiersAB	direct_search	50	FAM:CAT:DGIDB:a922f34d6abc	Bromocriptine					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	opposes	1	FAM:CAT:DGIDB:207317c1b624	Stm2457	154.6	98.86	1	0.0833333	opposes	0	0	MYC|MYC|up|hops1-3|METTL3|0.0833		none
+Q6	Q6_protein_tiersAB	opposes	2	FAM:CAT:DGIDB:38b6db5eff01	Stc-15	154.6	98.86	1	0.0833333	opposes	0	0	MYC|MYC|up|hops1-3|METTL3|0.0833		none
+Q6	Q6_protein_tiersAB	opposes	3	FAM:CAT:CHEMBL215152	DEFOSBARASERTIB	20.14	22.46	1	0.111314	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.111		none
+Q6	Q6_protein_tiersAB	opposes	4	FAM:CAT:CHEMBL3544932	TAK-901	20.14	22.46	1	0.111314	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.111		none
+Q6	Q6_protein_tiersAB	opposes	5	FAM:CAT:CHEMBL3545395	BI-811283	20.14	22.46	1	0.111314	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.111		none
+Q6	Q6_protein_tiersAB	opposes	6	FAM:CAT:CHEMBL415049	BARASERTIB	20.14	22.46	1	0.111314	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.111		none
+Q6	Q6_protein_tiersAB	opposes	7	FAM:CAT:DGIDB:c50058647863	Tak-901	20.14	22.46	1	0.111314	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.111		none
+Q6	Q6_protein_tiersAB	opposes	8	FAM:CAT:DGIDB:4172adf3398a	Compound 1 [Pmid: 21742770]	20	6.676	1	0.0787321	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0787		none
+Q6	Q6_protein_tiersAB	opposes	9	FAM:CAT:DGIDB:9bc633afd268	Jnj-7706621	17.3	21.54	1	0.0835957	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0836		none
+Q6	Q6_protein_tiersAB	opposes	10	FAM:CAT:CHEMBL3301588	TAREXTUMAB	15.66	12.54	1	0.143264	opposes	0	0	MYC|MYC|up|hops1-3|NOTCH3|0.143		none
+Q6	Q6_protein_tiersAB	opposes	11	FAM:CAT:DGIDB:222da6a76f85	Tarextumab	15.66	12.54	1	0.143264	opposes	0	0	MYC|MYC|up|hops1-3|NOTCH3|0.143		none
+Q6	Q6_protein_tiersAB	opposes	12	FAM:CAT:DGIDB:198741f77ba6	Elnd006	15.56	4.951	1	0.0200651	opposes	0	0	MYC|MYC|up|hops1-3|PSEN1|0.0201		none
+Q6	Q6_protein_tiersAB	opposes	13	FAM:CAT:DGIDB:28a63164639a	Chf-5074	15.56	4.951	1	0.0200651	opposes	0	0	MYC|MYC|up|hops1-3|PSEN1|0.0201		none
+Q6	Q6_protein_tiersAB	opposes	14	FAM:CAT:DGIDB:62c594195bd0	Az4800	15.56	4.951	1	0.0200651	opposes	0	0	MYC|MYC|up|hops1-3|PSEN1|0.0201		none
+Q6	Q6_protein_tiersAB	opposes	15	FAM:CAT:DGIDB:f571f2fbfdf4	Sch-900229	15.56	4.951	1	0.0200651	opposes	0	0	MYC|MYC|up|hops1-3|PSEN1|0.0201		none
+Q6	Q6_protein_tiersAB	opposes	16	FAM:CAT:DGIDB:310b1705a307	Osugacestat	15.49	4.965	1	0.0168638	opposes	0	0	MYC|MYC|up|hops1-3|APH1A|0.0169		none
+Q6	Q6_protein_tiersAB	opposes	17	FAM:CAT:DGIDB:e05afc012259	Mk-0752	15.49	4.965	1	0.0168638	opposes	0	0	MYC|MYC|up|hops1-3|APH1A|0.0169		none
+Q6	Q6_protein_tiersAB	opposes	18	FAM:CAT:CHEMBL1090771	AVAGACESTAT	15.49	4.962	1	0.0361834	opposes	0	0	MYC|MYC|up|hops1-3|APH1A|0.0362		none
+Q6	Q6_protein_tiersAB	opposes	19	FAM:CAT:CHEMBL1770916	NIROGACESTAT	15.49	4.962	1	0.0361834	opposes	0	0	MYC|MYC|up|hops1-3|APH1A|0.0362		none
+Q6	Q6_protein_tiersAB	opposes	20	FAM:CAT:CHEMBL4297422	RG-4733	15.49	4.962	1	0.0361834	opposes	0	0	MYC|MYC|up|hops1-3|APH1A|0.0362		none
+Q6	Q6_protein_tiersAB	opposes	21	FAM:CAT:CHEMBL463981	BEGACESTAT	15.49	4.962	1	0.0361834	opposes	0	0	MYC|MYC|up|hops1-3|APH1A|0.0362		none
+Q6	Q6_protein_tiersAB	opposes	22	FAM:CAT:CHEMBL520733	SEMAGACESTAT	15.49	4.962	1	0.0361834	opposes	0	0	MYC|MYC|up|hops1-3|APH1A|0.0362		none
+Q6	Q6_protein_tiersAB	opposes	23	FAM:CAT:DGIDB:2551da72c2b7	Begacestat	15.49	4.962	1	0.0361834	opposes	0	0	MYC|MYC|up|hops1-3|APH1A|0.0362		none
+Q6	Q6_protein_tiersAB	opposes	24	FAM:CAT:DGIDB:93e5438541e3	Avagacestat	15.49	4.962	1	0.0361834	opposes	0	0	MYC|MYC|up|hops1-3|APH1A|0.0362		none
+Q6	Q6_protein_tiersAB	opposes	25	FAM:CAT:DGIDB:e2a06e37dae6	Nirogacestat	15.49	4.962	1	0.0361834	opposes	0	0	MYC|MYC|up|hops1-3|APH1A|0.0362		none
+Q6	Q6_protein_tiersAB	opposes	26	FAM:CAT:CHEMBL2170016	Hg-10-102-01	13.13	9.493	1	0.0526912	opposes	0	0	MYC|MYC|up|hops1-3|JAK2|0.0527		none
+Q6	Q6_protein_tiersAB	opposes	27	FAM:CAT:DGIDB:0e119ae547a0	Ro4929097	12.81	6.951	1	0.0273325	opposes	0	0	MYC|MYC|up|hops1-3|PSEN1|0.0273		none
+Q6	Q6_protein_tiersAB	opposes	28	FAM:CAT:DGIDB:de26e608f305	3 Alpha-Aminocholestane	12.68	0.8466	0	0.0119867	opposes	0	0	MYC|MYC|up|hops1-3|INPP5D|0.012		none
+Q6	Q6_protein_tiersAB	opposes	29	FAM:CAT:CHEMBL2169919	Epz004777	12.53	26.56	1	0.125653	opposes	0	0	MYC|MYC|up|hops1-3|DOT1L|0.126		none
+Q6	Q6_protein_tiersAB	opposes	30	FAM:CAT:CHEMBL3087498	Sgc0946	12.53	26.56	1	0.125653	opposes	0	0	MYC|MYC|up|hops1-3|DOT1L|0.126		none
+Q6	Q6_protein_tiersAB	opposes	31	FAM:CAT:DGIDB:31c2ebae4775	Pinometostat	12.53	26.56	1	0.125653	opposes	0	0	MYC|MYC|up|hops1-3|DOT1L|0.126		none
+Q6	Q6_protein_tiersAB	opposes	32	FAM:CAT:DGIDB:5431327e2708	Compound 13 [Chen Et Al., 2016]	12.53	26.56	1	0.125653	opposes	0	0	MYC|MYC|up|hops1-3|DOT1L|0.126		none
+Q6	Q6_protein_tiersAB	opposes	33	FAM:CAT:DGIDB:8df5f32bdf3b	Danusertib	12.45	17.21	1	0.0564471	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0564		none
+Q6	Q6_protein_tiersAB	opposes	34	FAM:CAT:DGIDB:c273df15d763	Compound 25 [Pmid: 20855207]	12.43	14.5	1	0.0651535	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0652		none
+Q6	Q6_protein_tiersAB	opposes	35	FAM:CAT:CHEMBL259084	MLN-8054	12.43	17.2	1	0.0797613	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0798		none
+Q6	Q6_protein_tiersAB	opposes	36	FAM:CAT:CHEMBL3692206	TAS-119	12.43	17.2	1	0.0797613	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0798		none
+Q6	Q6_protein_tiersAB	opposes	37	FAM:CAT:CHEMBL4289017	PF-03814735	12.43	17.2	1	0.0797613	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0798		none
+Q6	Q6_protein_tiersAB	opposes	38	FAM:CAT:DGIDB:1d5e6550c667	Aurora Kinase Inhibitor Ii	12.43	17.2	1	0.0797613	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0798		none
+Q6	Q6_protein_tiersAB	opposes	39	FAM:CAT:DGIDB:42027b00475f	Compound 46 [Pmid: 16451062]	12.43	17.2	1	0.0797613	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0798		none
+Q6	Q6_protein_tiersAB	opposes	40	FAM:CAT:DGIDB:a5ef2958c633	Zm447439	12.43	17.2	1	0.0797613	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0798		none
+Q6	Q6_protein_tiersAB	opposes	41	FAM:CAT:DGIDB:c7cc08beb018	Pf-03814735	12.43	17.2	1	0.0797613	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0798		none
+Q6	Q6_protein_tiersAB	opposes	42	FAM:CAT:DGIDB:d7fe3d6d9e92	Barasertib	12.43	17.2	1	0.0797613	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0798		none
+Q6	Q6_protein_tiersAB	opposes	43	FAM:CAT:DGIDB:fb77282c2057	Compound 10 [Pmid: 19402633]	12.43	17.2	1	0.0797613	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0798		none
+Q6	Q6_protein_tiersAB	opposes	44	FAM:CAT:CHEMBL1090479	GSK-1070916	12.43	17.2	1	0.0651249	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0651		none
+Q6	Q6_protein_tiersAB	opposes	45	FAM:CAT:CHEMBL1967878	CENISERTIB	12.43	17.2	1	0.0651249	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0651		none
+Q6	Q6_protein_tiersAB	opposes	46	FAM:CAT:CHEMBL2105657	TOZASERTIB LACTATE	12.43	17.2	1	0.0651249	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0651		none
+Q6	Q6_protein_tiersAB	opposes	47	FAM:CAT:CHEMBL2140408	AMG-900	12.43	17.2	1	0.0651249	opposes	0	1	MYC|MYC|up|hops1-3|AURKB|0.0651		none
+Q6	Q6_protein_tiersAB	opposes	48	FAM:CAT:CHEMBL3545327	TTP-607	12.43	17.2	1	0.0651249	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0651		none
+Q6	Q6_protein_tiersAB	opposes	49	FAM:CAT:CHEMBL3545378	MK-6592	12.43	17.2	1	0.0651249	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0651		none
+Q6	Q6_protein_tiersAB	opposes	50	FAM:CAT:CHEMBL402548	DANUSERTIB	12.43	17.2	1	0.0651249	opposes	0	0	MYC|MYC|up|hops1-3|AURKB|0.0651		none
+Q6	Q6_protein_tiersAB	mimics	1	FAM:CAT:DGIDB:e70b1b244ec2	Mivebresib	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_protein_tiersAB	mimics	2	FAM:CAT:DGIDB:d2f0b45182ac	Ms417	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_protein_tiersAB	mimics	3	FAM:CAT:DGIDB:c0761d5c7905	Compound 2 [Pmid: 25408830]	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_protein_tiersAB	mimics	4	FAM:CAT:DGIDB:b92b8b1ce56b	Nhwd-870	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_protein_tiersAB	mimics	5	FAM:CAT:DGIDB:b6ab3af5c7a4	Compound 7D [Pmid: 25703523]	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_protein_tiersAB	mimics	6	FAM:CAT:DGIDB:ad0ad93f2d5c	Compound 1 [Pmid: 25408830]	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_protein_tiersAB	mimics	7	FAM:CAT:DGIDB:aac12c557a5b	Xd1	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_protein_tiersAB	mimics	8	FAM:CAT:DGIDB:943f948ed754	Isoxazole Azepine Compound 3	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_protein_tiersAB	mimics	9	FAM:CAT:DGIDB:89c5118fd77d	Compound 15 [Hay Et Al., 2013]	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_protein_tiersAB	mimics	10	FAM:CAT:DGIDB:5dcbc0337c66	Bzt-7	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_protein_tiersAB	mimics	11	FAM:CAT:DGIDB:5939058f5e3e	Cpi-203	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_protein_tiersAB	mimics	12	FAM:CAT:DGIDB:4ee060cc6aaf	Compound 9 [Pmid: 23517011]	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_protein_tiersAB	mimics	13	FAM:CAT:DGIDB:4d6bb6aa868e	Compound 11H [Pmid: 29808961]	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_protein_tiersAB	mimics	14	FAM:CAT:DGIDB:4729f05af735	Dbet6	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_protein_tiersAB	mimics	15	FAM:CAT:DGIDB:2e8ec2410b6f	I-Bet282	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_protein_tiersAB	mimics	16	FAM:CAT:DGIDB:09afa1e9db65	N-Methyl-2-Pyrrolidone	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_protein_tiersAB	mimics	17	FAM:CAT:CHEMBL4226570	Mz1	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_protein_tiersAB	mimics	18	FAM:CAT:CHEMBL3919831	AMREDOBRESIB	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_protein_tiersAB	mimics	19	FAM:CAT:CHEMBL3086883	Ms436	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_protein_tiersAB	mimics	20	FAM:CAT:CHEMBL2179387	Pfi-1	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_protein_tiersAB	mimics	21	FAM:CAT:CHEMBL1522313	Compound 3 [Pmid: 25408830]	-124.3	-21.49	0	-0.0669678	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.067		none
+Q6	Q6_protein_tiersAB	mimics	22	FAM:CAT:CHEMBL1957266	(+)-Jq1	-87.88	-21.49	0	-0.0473534	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.0474		none
+Q6	Q6_protein_tiersAB	mimics	23	FAM:CAT:DGIDB:3be2fd1c4ca1	Gsk852	-38.07	-2.955	0	-0.0391794	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.0392		none
+Q6	Q6_protein_tiersAB	mimics	24	FAM:CAT:DGIDB:a4c5aa722407	Compound 4D [Pmid: 21851057]	-38.07	-2.955	0	-0.0479847	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.048		none
+Q6	Q6_protein_tiersAB	mimics	25	FAM:CAT:DGIDB:f225f8272b71	Compound 38 [Pmid: 24000170]	-28.49	-1.24	0	-0.0359366	mimics	0	0	MYC|MYC|up|hops1-3|BRD4|-0.0359		none
+Q6	Q6_protein_tiersAB	direct_search	1	FAM:CAT:CHEMBL2108438	MILODISTIM					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	2	FAM:CAT:CHEMBL2140408	AMG-900				0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_protein_tiersAB	direct_search	3	FAM:CAT:CHEMBL3301582	POLATUZUMAB VEDOTIN				0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_protein_tiersAB	direct_search	4	FAM:CAT:DGIDB:036dd311b713	Thrombin					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	5	FAM:CAT:DGIDB:047a127d44b4	Bizelesin					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	6	FAM:CAT:DGIDB:069bdff57cba	Sulindac				0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_protein_tiersAB	direct_search	7	FAM:CAT:DGIDB:073beac86e8f	Azacitidine				0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_protein_tiersAB	direct_search	8	FAM:CAT:DGIDB:0788c7732488	Tetradecanoylphorbol Acetate					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	9	FAM:CAT:DGIDB:093981c89886	Somatropin (Recombinant Dna Origin)					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	10	FAM:CAT:DGIDB:0f3551cb29e3	Acivicin					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	11	FAM:CAT:DGIDB:11a31110f6d5	Ornithine Decarboxylase Inhibitor					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	12	FAM:CAT:DGIDB:14a13c156b7f	Recombinant Macrophage Colony-Stimulating Factor					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	13	FAM:CAT:DGIDB:14f043b6196c	Cobalt Co-60					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	14	FAM:CAT:DGIDB:237760772630	Lif					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	15	FAM:CAT:DGIDB:2ae5596b26cf	Imatinib				0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_protein_tiersAB	direct_search	16	FAM:CAT:DGIDB:2b027f4e02da	Antibiotic					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	17	FAM:CAT:DGIDB:2f1af45b9391	Lobaplatin					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	18	FAM:CAT:DGIDB:316b73312895	Vorinostat				0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_protein_tiersAB	direct_search	19	FAM:CAT:DGIDB:37cee0f0671a	Recombinant Interferon					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	20	FAM:CAT:DGIDB:3cde66ae5af7	Recombinant Interferon Alfa					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	21	FAM:CAT:DGIDB:4b603061c382	Drugsatfda.Nda:008378					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	22	FAM:CAT:DGIDB:4ba65fd13821	Alisertib				0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_protein_tiersAB	direct_search	23	FAM:CAT:DGIDB:4bbf11b55536	Elsamitrucin					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	24	FAM:CAT:DGIDB:4ff67bfa66c8	Prednisone				-0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_protein_tiersAB	direct_search	25	FAM:CAT:DGIDB:53902220f25f	Verapamil					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	26	FAM:CAT:DGIDB:56648a1e28b6	Afimoxifene				-0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_protein_tiersAB	direct_search	27	FAM:CAT:DGIDB:58f04d27e75b	Ubenimex					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	28	FAM:CAT:DGIDB:590757460269	Perillyl Alcohol					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	29	FAM:CAT:DGIDB:5ad1ed401021	Olaparib				0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_protein_tiersAB	direct_search	30	FAM:CAT:DGIDB:5ba35e7a459e	Cisplatin					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	31	FAM:CAT:DGIDB:5ca5f91c1152	Warfarin					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	32	FAM:CAT:DGIDB:6558ef7e085f	Phosphorodiamidate Morpholino Oligomer Avi-4126					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	33	FAM:CAT:DGIDB:663ba3b527e5	Il-5				-0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_protein_tiersAB	direct_search	34	FAM:CAT:DGIDB:66cccc44ca60	Trail					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	35	FAM:CAT:DGIDB:68bfd480bfcc	Protoporphyrin					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	36	FAM:CAT:DGIDB:7276cc0a1091	Il-9					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	37	FAM:CAT:DGIDB:741b1f2cf3cb	Amifostine Anhydrous					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	38	FAM:CAT:DGIDB:7af209a4b8a8	Mitoguazone					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	39	FAM:CAT:DGIDB:7c1c470d3c7e	Aminopterin					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	40	FAM:CAT:DGIDB:7c261e183d98	Adozelesin					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	41	FAM:CAT:DGIDB:8355ca849495	Thioguanine					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	42	FAM:CAT:DGIDB:86c5cdcdadbc	Dinaciclib				0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_protein_tiersAB	direct_search	43	FAM:CAT:DGIDB:8b6ac88a5720	Prexasertib				0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_protein_tiersAB	direct_search	44	FAM:CAT:DGIDB:901fc9ed9b89	Thyrotropin					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	45	FAM:CAT:DGIDB:933a2a41e968	Ibrutinib				0	unsigned_or_no_signed_direct_action		1	targets:MYC		none
+Q6	Q6_protein_tiersAB	direct_search	46	FAM:CAT:DGIDB:9761f418a0f4	Hypoxanthine					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	47	FAM:CAT:DGIDB:9790d724878b	Pregnant Mare Serum Gonadotropin					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	48	FAM:CAT:DGIDB:a06a80b52836	Folic Acid					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	49	FAM:CAT:DGIDB:a351bc099fa6	Novobiocin					unsigned_or_no_signed_direct_action		1	targets:MYC		
+Q6	Q6_protein_tiersAB	direct_search	50	FAM:CAT:DGIDB:a922f34d6abc	Bromocriptine					unsigned_or_no_signed_direct_action		1	targets:MYC		
