@@ -1,0 +1,4 @@
+seed_id	gene	kind	members	direction	level	direction_status	readout_level	evidence_class	species	ortholog_map	source_ref	note
+Q5_expression_tiersAB:IL1B	IL1B	gene		up	1.0	defined	expression	transcript_contrast	mouse	HGNC approved symbol with HGNC mgd ortholog link (MGI:96543); 1:1 assumed from a single link	S084	directions seen: ['up']; tiers ['B']; P1 gives no magnitude (equal weight)
+Q5_expression_tiersAB:IL6	IL6	gene		up	1.0	defined	expression	transcript_contrast	mouse	HGNC approved symbol with HGNC mgd ortholog link (MGI:96559); 1:1 assumed from a single link	S086	directions seen: ['up']; tiers ['B']; P1 gives no magnitude (equal weight)
+Q5_expression_tiersAB:TNF	TNF	gene		uncertain	1.0	uncertain	expression	transcript_contrast	mouse	HGNC approved symbol with HGNC mgd ortholog link (MGI:104798); 1:1 assumed from a single link	S085	directions seen: ['uncertain']; tiers ['B']; P1 gives no magnitude (equal weight)

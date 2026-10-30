@@ -154,6 +154,43 @@ class GateTests(unittest.TestCase):
         self.assertIn("DIRECT_IDENTIFIER", self.scan_text("n.md", f"{uuid} {name}\n"))
         self.assertIn("DIRECT_IDENTIFIER", self.scan_text("o.md", f"{inside} {name}\n"))
 
+    def test_privacy_scan_reads_html_js_css_patch_diff_cff_example_but_not_gz(self) -> None:
+        """IT9: the blind spot measured in IT8. Each added suffix is read by the privacy scan; the
+        existing rules fire on it unchanged; a compressed file stays outside by decision."""
+        name = "".join(map(chr, (77, 97, 115, 115, 105, 109, 111)))
+        for suffix in (".html", ".js", ".css", ".patch", ".diff", ".cff", ".example"):
+            self.assertIn("DIRECT_IDENTIFIER", self.scan_text("f" + suffix, f"x {name} y\n"), suffix)
+            self.assertIn("EMAIL_ADDRESS", self.scan_text("g" + suffix, "write to real.person@clinic.org\n"), suffix)
+            self.assertIn("REIDENTIFYING_VARIANT_COMBINATION", self.scan_text(
+                "h" + suffix, "compound heterozygous Q230P and c.1057-2A>G\n"), suffix)
+        root = self.make_repo()
+        import gzip
+        (root / "z.json.gz").write_bytes(gzip.compress(f"x {name} y".encode()))
+        findings: list = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        self.assertEqual([], [f for f in findings if f.severity == "BLOCK"])
+
+    def test_one_line_page_is_judged_in_windows_not_as_one_block(self) -> None:
+        """A page that embeds its data as one very long line must not turn a linkage word anywhere
+        and both alleles anywhere into a linked genotype; near each other they still block."""
+        filler = " lorem ipsum" * 400                      # about 4,800 characters
+        far = "biallelic" + filler + " Q230P" + filler + " c.1057-2A>G"
+        self.assertNotIn("REIDENTIFYING_VARIANT_COMBINATION", self.scan_text("p.html", far))
+        near = filler + " same patient: Q230P with c.1057-2A>G" + filler
+        self.assertIn("REIDENTIFYING_VARIANT_COMBINATION", self.scan_text("q.html", near))
+        # the same far text in a markdown file keeps its old whole-paragraph behaviour
+        self.assertIn("REIDENTIFYING_VARIANT_COMBINATION", self.scan_text("r.md", far))
+        # a window boundary does not hide a link: slide the near pair across many offsets
+        for pad in range(0, 1400, 97):
+            text = "x" * pad + " biallelic Q230P c.1057-2A>G " + "y" * 3000
+            self.assertIn("REIDENTIFYING_VARIANT_COMBINATION", self.scan_text("s.html", text), pad)
+
+    def test_added_suffixes_do_not_widen_the_link_or_corpus_checks(self) -> None:
+        root = self.make_repo()
+        (root / "a.html").write_text("[x](missing.md)\n", encoding="utf-8")
+        self.assertNotIn("a.html", [f.path for f in GATE.run_checks(root)] if hasattr(GATE, "run_checks") else [])
+        self.assertNotIn(".html", GATE.TEXT_SUFFIXES)
+
     def messages(self, name: str, text: str) -> list[str]:
         root = self.make_repo()
         (root / name).write_text(text, encoding="utf-8")

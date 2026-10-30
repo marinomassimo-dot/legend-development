@@ -217,3 +217,15 @@ Added 2026-10-29 (IT8 P2 licence corrections; evidence and open items in
   that list a resource with a GPL, LGPL, ND, DSL, NAR or informal label: 139 and 7,545; whether those rows
   can stay under any common label is open and is recorded in the corrections file. Attribution:
   "SIGNOR (CC BY 4.0) and the resources in resource_licences.tsv, via OmniPath (Turei et al.)".
+- **Adapter cache of the join step** (`disease-models/wwox/research/drug_repurposing/join/adapter_cache/`, 68
+  small query responses, 680 KB: 12 ChEMBL, 12 openFDA, 1 Open Targets, 43 PubTator3; each file carries its own
+  `licence`, `citation` and `retrieved_at` fields), and `lucas_clarke_followup_20261026/opentargets_*`.
+  Open Targets: terms read at <https://platform-docs.opentargets.org/licence> on 2026-10-30, "Open Targets
+  Platform is marked with CC0 1.0", with a request to cite the latest publication; no obligation, the
+  citation is a courtesy (Open Targets Platform, <https://platform.opentargets.org>, public GraphQL service).
+  openFDA: CC0 (see the entry above). ChEMBL: the 12 files are small extracts (identifiers and preferred
+  names of nearest molecules) of ChEMBL under CC BY-SA 3.0; they stay under that licence, not under MIT, and the
+  credit is the one given for the raw ChEMBL responses above. PubTator3: the file field says "NCBI public
+  domain"; the PubTator3 page itself returned only its title on 2026-10-30 (script-rendered), so that
+  statement is UNVERIFIED at source; NCBI's general policy (read 2026-10-29) places no restriction on data it
+  holds and asks for acknowledgement of the NLM.

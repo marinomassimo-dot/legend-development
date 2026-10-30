@@ -36,6 +36,16 @@ TEXT_SUFFIXES = {
     ".md", ".txt", ".json", ".jsonl", ".csv", ".tsv", ".yaml", ".yml", ".toml",
     ".py", ".sh", ".rst",
 }
+# Text-like suffixes the PRIVACY scan also opens (IT9, closing the blind spot measured in IT8:
+# 24 tracked files and 184 history-only files were never read). They are NOT added to
+# TEXT_SUFFIXES: the link, wikilink and corpus checks keep their old perimeter, and only
+# `scan_privacy_and_secrets` reads these. Compressed files (.gz) stay outside on purpose:
+# reading them needs decompression limits and carve-outs for substance codes and for a
+# public registry's investigator names that are not a small, safe change (see the IT9 P7 record).
+PRIVACY_EXTRA_SUFFIXES = {".html", ".js", ".css", ".patch", ".diff", ".cff", ".example"}
+# Pages and bundles of these kinds embed data as one line of megabytes; a block-scoped rule over
+# such a line degenerates to file scope. They are therefore evaluated in overlapping windows.
+EXTRA_WINDOW = 1400
 # `backup/` is the BATCH_COMMIT Phase-3 snapshot root: gitignored, never part of a release
 # copy, and a byte-identical duplicate of the canonical files. Scanning it made the mandatory
 # pre-commit backup itself raise BROKEN_MARKDOWN_LINK on the copies' relative links.
@@ -315,6 +325,17 @@ def iter_text_files(root: Path) -> Iterable[Path]:
             yield path
 
 
+def iter_privacy_files(root: Path) -> Iterable[Path]:
+    """Every file the privacy scan reads: the text suffixes plus PRIVACY_EXTRA_SUFFIXES."""
+    for path in iter_files(root):
+        if (
+            path.suffix.lower() in TEXT_SUFFIXES
+            or path.suffix.lower() in PRIVACY_EXTRA_SUFFIXES
+            or path.name in {"LICENSE", ".gitignore"}
+        ):
+            yield path
+
+
 def read_text(path: Path) -> str:
     return path.read_text(encoding="utf-8", errors="replace")
 
@@ -408,6 +429,17 @@ def record_blocks(text: str, rel: str) -> Iterable[tuple[int, str]]:
             if line.strip():
                 yield offset, line
             offset += len(raw)
+        return
+    if Path(rel).suffix.lower() in PRIVACY_EXTRA_SUFFIXES:
+        for offset, block in semantic_blocks(text):
+            if len(block) <= EXTRA_WINDOW:
+                yield offset, block
+                continue
+            step = EXTRA_WINDOW // 2
+            for start in range(0, len(block), step):
+                yield offset + start, block[start:start + EXTRA_WINDOW]
+                if start + EXTRA_WINDOW >= len(block):
+                    break
         return
     yield from semantic_blocks(text)
 
@@ -651,7 +683,7 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
             in casefold_identifier_digests
         )
 
-    for path in iter_text_files(root):
+    for path in iter_privacy_files(root):
         text = read_text(path)
         rel = str(path.relative_to(root))
         if rel in GATE_INTERNAL_FILES:

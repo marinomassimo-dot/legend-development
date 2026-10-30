@@ -1,0 +1,4 @@
+seed_id	gene	kind	members	direction	level	direction_status	readout_level	evidence_class	species	ortholog_map	source_ref	note
+Q4_expression_tiersAB:GABRB2	GABRB2	gene		down	1.0	defined	expression	transcript_contrast	human		S068	directions seen: ['down']; tiers ['A']; P1 gives no magnitude (equal weight)
+Q4_expression_tiersAB:GABRB3	GABRB3	gene		down	1.0	defined	expression	transcript_contrast	human		S069	directions seen: ['down']; tiers ['A']; P1 gives no magnitude (equal weight)
+Q4_expression_tiersAB:GAD1	GAD1	gene		uncertain	1.0	uncertain	expression	transcript_contrast	human		S067	directions seen: ['uncertain']; tiers ['A']; P1 gives no magnitude (equal weight)
