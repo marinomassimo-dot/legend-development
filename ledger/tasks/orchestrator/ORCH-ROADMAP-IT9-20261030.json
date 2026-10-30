@@ -31,9 +31,9 @@
     },
     {
      "step": "P2 generation path that embeds WWOX (altered genes/processes as seeds), sensitivity proof, comparison with direct target-to-compound and signatures; external models only if verifiable by a contained trial",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "scientist-b",
-     "evidence": ""
+     "evidence": "seed engine (signed K=3 propagation, conditional arms, mechanical guards, T1-T6; adds info over direct search for Q2,Q4 protein,Q5,Q6; none for Q1,Q3,Q7); TxGNN/MATRIX not reusable; Open Targets already in substance"
     }
    ]
   },
