@@ -4,20 +4,36 @@ Scientist-b, 2026-10-30. **Exploratory, computational. Not medical advice. Prove
 compound would help anyone** (no compound-response measurement in a WWOX-deficient system exists to test that against; IT6 P3, IT7 P0a, IT8 P4). Reference genotype class: a WWOX-DEE genotype class; no individual-level record.
 Nothing here edits a registry, ledger, current file, card or need. Pre-registration: `PRE_REGISTRATION.md` (committed before any run; Amendments 1 and 2 are disclosed there with what had been seen).
 
-## 1. Decision (first)
+## 1. Decision (first) - results on P1 v2 (seeds.tsv sha256 76952333..., 131 rows, 65 usable)
 
 | Question | Answer |
 |---|---|
-| Is there a simplest method that really uses the selected WWOX inputs to propose compounds? | **Yes: signed K-hop propagation of the seed vector over the IT7 signed network, scored against each compound family's signed target actions** (`seed_engine.py`). Seeds keep level and direction; uncertain direction runs as two conditional arms with an exact range. Output per compound: compatible action (opposes or mimics), conditional flag, and per-seed contribution. |
-| Do the seeds enter the computation (T1) and does the direction logic behave (T5)? | **Yes.** T1 passed on 7 of 8 seed sets, T5 on 8 of 8 (the failure of T1 is one set whose only defined seed is inert, section 4). Zero seeds gives exactly zero; scores scale linearly; per-seed contributions sum to the score to 1e-17; flipping all signs negates every score (Spearman -1.0); flipping one seed changes exactly the compounds it influences. |
-| Is the result seed-specific (T2)? | **Mostly yes against random seeds, not demonstrated for signs.** Against 1000 degree-matched random seed sets the median Spearman with the real ranking is 0.03 to 0.17 and the top-100 overlap median 0 to 2 (criterion: 0.50 and 20) in every set under both null variants. The registered sign-shuffle criterion is **not met** in 3 sets (all defined seeds share one direction, the shuffle is the identity). Registered T2 verdict: PASS in 5 of 8 sets, FAIL in 3 (section 4). |
-| Identity or answer-in-construction (T3)? | **No identity driver found; one leakage case caught.** Firewall enforced at load (tested). Rankings are stable across catalogue source groups (ChEMBL-only vs all rows rho 0.995; non-ChEMBL vs all 0.994) and across the normalisation choice (0.99998). The leakage test flagged dichloroacetate in the Q2 and provisional sets (RECOVERED_ONLY_VIA_OWN_TARGET): its position is entirely its own target PDK1 being a seed, and flips from the 99.98th to the 0.02nd percentile with the assumed PDK1 direction. |
-| Does it add information relative to the direct target search (T4)? | **Depends on the seed set, and mostly yes where the seeds are not themselves drug targets.** Net-only proposals that the direct search cannot give and that exceed degree-matched chance (z > 3): Q5 expression 82/100 (52 under the in-degree null), Q4 protein 88/100 (30 under the in-degree null), Q2 expression 66/100 (86 by the z-ranking in the in-degree null, 22 by raw Q, so raw-Q ranking depends on the null); **none** (NONE) for Q1, Q3 and Q4 expression, and for the provisional set. Rank correlation with the direct search is about 0 (-0.0003 to 0.012) because the direct search is almost empty (4 to 133 families per set). |
-| Is the signature route informative? | **Only for Q3** (rho progenitor-like vs neuron-like 0.275 and 0.25 against random-readout p95 0.23; the ISR direction is unresolved so both arms are conditional, and this is a shared transcriptional axis, not WWOX evidence). Not informative for Q1, Q2, Q4, Q5 and the provisional set. |
-| External resources? | Trial results in section 6: nothing to adopt; Open Targets reproduces what the catalogue already holds; MATRIX scores still carry no licence. |
+| Is there a simplest method that really uses the selected WWOX inputs to propose compounds? | **Yes: signed K-hop propagation of the seed vector over the IT7 signed network, scored against each compound family's signed target actions** (`seed_engine.py`). Seeds keep level and direction; uncertain direction (and every guard-forced uncertain seed) runs as two conditional arms with an exact range. Output: compatible action (opposes or mimics, never benefit), the contributing seed, hop and target. |
+| Do the seeds enter (T1) and does direction logic behave (T5)? | **Yes.** T1 and T5 pass in all 10 v2 seed sets and the provisional set (T1(d) is vacuous for sets with no defined seed: Q1 expression, Q3, Q7; reported as vacuous). Zero seeds gives exactly 0; linear in level; contributions sum to the score (1e-17); all-sign flip negates; one-seed flip changes exactly the compounds it influences. |
+| Guards (T6, new) | **Pass in all sets.** `guard_tag` is read mechanically: ISR_SIGN_UNRESOLVED units are forced to uncertain direction (Q3: 0 defined seeds; the one ISR gene with a stated direction, PSAT1, now enters only as a conditional arm; ignoring the guard changes the scores, max |diff| 0.0053); IT7_READOUT6, ISR_SIGN_UNRESOLVED and HELD_OUT_ENDPOINT units never enter the signature arm (Q2: 16 of 17 units excluded; Q3: all excluded, no signature run). Unit tests `test_seed_engine.py` fail if a guard is ignored. |
+| Seed-specific (T2)? | **Against random seeds yes everywhere** (median Spearman with the real ranking -0.10 to 0.15, top-100 overlap median 0 to 5 vs criteria 0.50 and 20). The registered T2 verdict is PASS in 7 of 10 v2 sets and FAIL in 3: Q2 and Q4 expression fail the sign-shuffle criterion (all defined seeds share one direction; the shuffle is the identity), Q7 fails the decoy criterion by a hair (0.504 vs 0.50); the provisional set also fails the shuffle. Reported as registered. |
+| Identity / answer-in-construction (T3)? | **No identity driver found**; dichloroacetate is again flagged in Q2 (RECOVERED_ONLY_VIA_OWN_TARGET: PDK1 is a seed and its target; the result flips with the assumed PDK1 direction). Reserved rows: none is a seed row (section 7a). |
+| Adds information over the direct search (T4)? | **Where the seeds are not themselves drug targets, mostly yes**, but several outcomes depend on the null: Q5 expression ADDS in both; Q6 ADDS in both; Q4 protein ADDS in both; Q2 ADDS by z-ranking in both nulls (raw Q: ADDS total / LIMITED in-degree); Q4 expression ADDS under the total-degree null and NONE under the in-degree null (depends on the null); NONE for Q1, Q3, Q7 and the provisional set. |
+| Signature route | **Not informative in any v2 set** (Q3 was informative in v1 only through the ISR rows, now excluded by the guard; no eligible seeds). |
+| P3 hand-over | `results/candidates_Q1..Q7.tsv` (section 7b), `results/per_question_counts.tsv`, command in section 7. |
 
-What this means for the mandate: the grammar problem named by IT8 P4 (condition 2b) is solved in the narrow sense that the WWOX data now enter as seeds and demonstrably move the scores. Whether the
-resulting proposals are of any use is **not** established and cannot be from these tests.
+Per-question counts (families; `results/per_question_counts.tsv`; examined = M-net-usable families with a target in the graph, 12,560 in every set):
+
+| Seed set | Seed units (defined) | Non-zero in some arm | Seed-specific, raw-Q z>3 (total / in-degree null) | Z_ind_robust >3 in both nulls (opposes) | Z_ind_robust <-3 in both (mimics) |
+|---|---|---:|---|---:|---:|
+| Q1 expression, tier A,B,C | 1 (0) | 2,190 | 0 / 0 | 0 | 0 |
+| Q1 protein, tier A,B,C | 1 (1) | 2,190 | 0 / 0 | 0 | 0 |
+| Q2 expression | 17 (15) | 4,935 | 158 / 85 | 53 | 71 |
+| Q3 expression | 17 (0) | 4,962 | 0 / 2 | 0 | 0 |
+| Q4 expression | 4 (4) | 2,701 | 151 / 92 | 0 | 0 |
+| Q4 protein | 2 (2) | 2,828 | 61 / 2 | 47 | 5 |
+| Q5 expression | 3 (3) | 5,187 | 84 / 92 | 115 | 45 |
+| Q6 (expression and protein: the same MYC seed) | 1 (1) | 3,219 | 188 / 245 | 332 | 159 |
+| Q7 phospho | 1 (0) | 4,235 | 359 / 501 | 0 | 0 |
+
+(Q5 protein of v1 no longer exists: its rows are cell-count or area `pathology` rows, which are not gene-level seeds; the Q1 sets exist only with tier C, because v2 has no tier A or B gene-level Q1 row. Q7 raw-Q z counts are large because GSK3B is a hub; with 0 defined seeds there is no robust proposal.)
+
+What this means: the WWOX data enter as seeds and move the scores with exact attribution. The proposals are direction compatibilities from a context-free regulatory network; whether any is useful is not established and cannot be from these tests.
 
 ## 2. Method (what the engine does)
 
@@ -36,31 +52,22 @@ resulting proposals are of any use is **not** established and cannot be from the
 | Usable by the method (documented signed action on a human target with stable id) | 13,379 |
 | ... of which with a gene symbol (72 have none, e.g. RNAi agents) | 13,307 |
 | ... of which with at least one target in the network graph (**examined**) | 12,560 |
-| Examined with a non-zero score in some arm (per set) | 2,190 (Q1) / 4,935 (Q2) / 4,962 (Q3) / 2,859 (Q4 expr) / 2,927 (Q4 prot) / 5,187 (Q5 expr) / 2,979 (Q5 prot) / 5,709 (provisional) |
+| Examined with a non-zero score in some arm | per set in section 1 (2,190 to 5,187; provisional 5,709) |
 | Signature route: families with a neural-lineage LINCS signature (phase I, via catalogue structure key) | 848 (421 with both context classes) |
 
 2,381 distinct signed target symbols; 1,887 (79 percent) are in the graph. The unmapped list is `results/unmapped_targets_*.tsv` (alias errors can be checked there; not audited against HGNC here: UNVERIFIED).
 
-## 4. Test results (criteria fixed in `PRE_REGISTRATION.md`; `results/tests_summary.tsv`, one row per set and null variant; `results/tests_<set>[_indeg].json`)
+## 4. Test results (criteria fixed in `PRE_REGISTRATION.md` incl. Amendments 1-4; `results/tests_summary.tsv`, one row per set and null variant; `results/tests_<set>[_indeg].json`)
 
-Eight seed sets: the PROVISIONAL set (15 units from the IT7 P1 subnetwork, used to build the engine before P1 existed) and seven P1 sets. Two null variants: registered total-degree matching and the Amendment 2 in-degree matching. 1000 nulls per test.
+Eleven seed sets (ten v2 sets and the provisional one) under two nulls (registered total-degree; Amendment 2 in-degree), 1000 nulls per test. Verdict columns are in `results/per_question_counts.tsv` (T1, T2, T4 under both nulls, T5, T6). Honest points:
+* T2(b) is applied as registered. It is degenerate or failing when the defined seeds share one sign (Q2 expression 15 up; Q4 expression 4 down) and the provisional set (5 up, 1 down). Q7 fails T2(c) with Spearman 0.504 against the decoy (limit 0.50).
+* T1(d) is vacuous where no seed is defined (Q1 expression, Q3, Q7); stated, not counted as support.
+* The NET-Z arm fails the registered Spearman criterion in most sets under the total-degree null and passes the top-100 criterion; the bulk ordering of unconnected families is a deterministic artefact (-mean/SD).
+* T4 outcomes that differ between the two nulls are reported as "depends on the null" (Q2 raw Q; Q4 expression).
+* T6 was first coded to compare the U+ arm only, which cannot differ when a unit changes from defined-up to uncertain; the test bug was found on the first Q3 run, fixed (compare the defined-only and U- arms), and Q3 was re-run. No criterion was changed.
+* v1 results (superseded by v2; kept in git history of this folder at commit 8a49d2a3): T1/T5 8 of 8 passed; T4 ADDS for Q2, Q4 protein, Q5 expression.
 
-| Set (units, defined) | T1 | T2 (a,b,c) | T3 identity | T4 (raw Q / Z) | T5 |
-|---|---|---|---|---|---|
-| provisional (15, 6) | pass | **FAIL**: (b) shuffle 0.92 (5 up, 1 down) | pass | NONE / NONE | pass |
-| Q1 protein (1, 1) | pass | pass (b not testable, 1 seed) | pass | NONE / NONE | pass |
-| Q2 expression (17, 15) | pass | **FAIL**: (b) degenerate, all defined seeds up | pass | ADDS / ADDS (in-degree null: LIMITED / ADDS) | pass |
-| Q3 expression (17, 1) | pass | pass (b not testable) | pass | NONE / NONE | pass |
-| Q4 expression (3, 2) | pass | pass | pass | NONE / NONE | pass |
-| Q4 protein (4, 4) | pass | **FAIL**: (b) degenerate, all down | pass | ADDS / ADDS | pass |
-| Q5 expression (3, 2) | pass | pass | pass | ADDS / ADDS | pass |
-| Q5 protein (2, 1) | **fail (d)**: the only defined seed (AIF1) is not in the network and is no compound's target | pass | pass | NONE (0 proposals) | pass |
-
-Reading the failures as registered, not rescued (Amendment 2.2 and 2.3): a set whose defined seeds all share one direction cannot show that the sign matters through the shuffle; T5(b) (all-sign flip, exactly negated) is the sign test that remains and passes everywhere. The provisional set fails T2(b) with 5 up and 1 down because the single down seed (PDK1, level 0.10) hardly moves the ranking (flipping it keeps the top-100 identical). Q5 protein has nothing to propose.
-
-Other numbers: seed-specific (|z| > 3 against the random seed sets) families per set 0 (Q1), 158 (Q2), 0 (Q3), 179 (Q4 expr), 100 (Q4 prot), 84 (Q5 expr), 33 (Q5 prot), 54 (provisional) of the non-zero families. The NET-Z arm fails the registered Spearman criterion in every set under the total-degree null (median 0.65 to 0.95) and passes the top-100 criterion in nearly all: its bulk is ordered by -mean/SD for the unconnected families, a deterministic structure shared by real and null; the top end is what matters and is specific. Seed-free baseline: the Spearman between |Q| and the reach of an all-ones seed is 0.09 to 0.39, i.e. network position explains part, not most, of the ranking.
-
-Reproduce: `python3 run_battery.py --seeds-dir seeds_p1 --extra seeds_provisional.tsv --actions results --out results` (about 9 min on 4 shared cores).
+Reproduce: `python3 run_battery.py --seeds-dir seeds_p1 --extra seeds_provisional.tsv --actions results --out results` (about 17 min on 4 shared cores), then the `seed_sig_arm.py`, `reserved_check.py` and `make_candidates.py` commands of section 7.
 
 ## 5. What the engine can and cannot do
 
@@ -76,7 +83,7 @@ Cannot: say that a compound helps (every score is a direction compatibility; PRE
 | Every Cure MATRIX scores | HuggingFace dataset metadata read 2026-10-30 | revision d6b121bf... unchanged since the 2026-10-26 trial, `license` still absent. Not reusable or redistributable until stated; the 2026-10-26 trial found the WOREE node statistically close to sibling nodes. **Verdict: NOT AVAILABLE for reuse (no licence); nothing re-run.** |
 | TxGNN | no new trial | the 2026-10-26 outcome stands (legacy stack, explorer 503, no deployment checkpoint). Not repeated: a trial would need the Python 3.8 + DGL 0.5.2 stack and the graph build, which is installing a framework to emulate a brand. **Verdict: NOT RUN (cost out of proportion; reason on record, not a WATCH).** |
 | DGIdb / ChEMBL / GtoPdb | already the compound input | used. |
-| LINCS (GSE92742 level 5) | `seed_sig_arm.py` | run on all 8 sets (section 1, signature row). SigCom LINCS metadata API answered HTTP 200; not queried further (the local level 5 extract is the complete form of the same data). |
+| LINCS (GSE92742 level 5) | `seed_sig_arm.py` | run on the v2 sets (section 1, signature row). SigCom LINCS metadata API answered HTTP 200; not queried further (the local level 5 extract is the complete form of the same data). |
 
 ## 7. Running it on a declared universe (for P3)
 
@@ -87,25 +94,32 @@ python3 p1_adapter.py --p1 <P1 folder> --out seeds_p1                    # seed 
 python3 seed_engine.py run --seeds seeds_p1/Q2_expression_tiersAB.tsv --actions results --label q2 --out results --universe universe.tsv
 python3 seed_engine.py tests --seeds seeds_p1/Q2_expression_tiersAB.tsv --actions results --label q2 --out results [--match indeg]
 python3 seed_engine.py explain --seeds ... --actions results --family FAM:CAT:CHEMBL306823
+python3 reserved_check.py --p1 <P1 folder> --seeds-dir seeds_p1 --actions results --results results --out results/reserved_check.tsv
+python3 make_candidates.py --seeds-dir seeds_p1 --results results --actions results --out results      # candidate tables (needs run for each set, total and indeg)
 python3 seed_sig_arm.py --seeds ... --geo <GSE92742 dir> --cache <dir with extract.npy> --catalog ../catalog/catalog.jsonl.gz --label q2 --out results
 ```
 `--universe` takes family ids (one per line, or a TSV with a `family_id` column). `funnel_<label>.json` reports catalogued, resolved-identity, usable, in-graph, declared-universe, examined and non-zero counts. `proposals_<label>.tsv.gz` holds, per examined family with a non-zero score, Z_ind_robust, Z_full_robust, Q (full, indirect, direct, both conditional arms), the compatible action, the uncertain-seed mass, direct-hit and WWOX-regulator flags and proximity. `contributions_<label>.tsv` names, per family and seed, the direction of the seed, the hop-0 and hop 1-3 contribution and the target carrying most of it (shown for the top and bottom 100 families by Z and for direct hits; use `explain` for any other family). Uncertain-direction seeds are shown in their + arm; the sign of their contribution flips in the - arm.
 
-## 7a. Reserved-row check (Amendment 3; `reserved_check.py`, `results/reserved_check.tsv`)
+## 7a. Reserved-row check (Amendment 3; `reserved_check.py`, `results/reserved_check.tsv`; rerun on v2)
 
-Of the 17 reserved P1 rows, 7 are gene-level (WWOX, LDHA, CACNA1G, PANX1, GFAP, MYC, CTNNB1); the other 10 (GO, STATE:) have no gene representation and cannot be checked. **No reserved row is in any seed table.** Shared genes (a reserved response on a gene that is also an observed seed): WWOX (Q1), LDHA (Q2), GFAP (Q5 protein); these are different observations (loss state vs intervention response), reported, not leakage. The ethosuximide/T-type gene CACNA1G is a seed in no set; the 4 or fewer examined families acting on it rank 328 to 2,837 (of 2,892 to 5,187 proposals): the held-out answer is not recovered and is not claimed to be. Nothing is fed back.
+26 reserved rows in v2; the gene-level ones name WWOX, LDHA, CACNA1G, PANX1, GFAP, AIF1, GAD1, MYC, CTNNB1 (others are GO or STATE rows with no gene representation and cannot be checked). **No reserved row is in any seed table.** Genes shared between a reserved response and an observed seed: WWOX (Q1), LDHA (Q2), GAD1 (Q4 protein), MYC (Q6; reserved MYC is a drug response, the Q6 seed is the loss state, direction by presence only). CACNA1G (ethosuximide target) is a seed in no set; the 4 or fewer examined families on it rank 285 to 3,059 of 2,701 to 5,187 proposals: the held-out answer is not recovered and is not claimed. MYC-targeting families (21 in the Q6 proposals) rank from 47: non-independent of the MYC seed. Nothing is fed back.
+
+## 7b. Candidate tables for P3 (`make_candidates.py`, `results/candidates_Q1.tsv` ... `Q7.tsv`)
+
+Per question and set: arm `opposes` (top 50 by Z_ind_robust, Z > 0), `mimics` (25 most negative), `direct_search` (families with any catalogue action on a seed gene, up to 50). Columns: family, name, Z under the total and the in-degree null, `seed_specific_both_nulls` (z > 3 in both), Q_net_ind (a score, not a ranking key), compatible action (direction compatibility only), conditional flag, also found by the direct search, the top two contributing seeds as `seed|gene|seed direction|hop|main target|contribution`, and `evaluation_forbidden_on` (guard tags). Q1 expression, Q3 and Q7 have no robust (Z) proposals because their seeds are all uncertain; only the direct-search arm is filled. Rows are families, not distinct drugs (salts and duplicates appear as separate families).
 
 ## 8. Files
 
-`PRE_REGISTRATION.md` (with Amendments 1 and 2) · `seed_engine.py` · `p1_adapter.py` · `provisional_seeds.py` · `seed_sig_arm.py` · `run_battery.py` · `summarize_tests.py` · `external_trials.py` · `reserved_check.py` · `test_seed_engine.py` (positive checks on a hand-computed graph) · `seeds_provisional.tsv` · `seeds_p1/` (7 sets, manifest, adapter counts) · `results/` (family tables, proposals, contributions, funnels, tests JSON and summary, null summaries, unmapped targets, signature arm, external trial).
+`PRE_REGISTRATION.md` (with Amendments 1 and 2) · `seed_engine.py` · `p1_adapter.py` · `provisional_seeds.py` · `seed_sig_arm.py` · `run_battery.py` · `summarize_tests.py` · `external_trials.py` · `reserved_check.py` · `make_candidates.py` · `test_seed_engine.py` (positive checks on a hand-computed graph) · `seeds_provisional.tsv` · `seeds_p1/` (10 sets, manifest, adapter counts for tiers A,B and A,B,C) · `results/` (family tables, proposals, contributions, funnels, tests JSON and summary, null summaries, unmapped targets, signature arm, external trial).
 
 ## 9. UNVERIFIED and honest limits
 
-* P1 was merged final after the runs; regenerated seed tables are identical (checked by diff). If P1 changes again, rerun `p1_adapter.py` and `run_battery.py`.
+* P1 v2 (sha256 76952333...) is the version used. If P1 changes again, rerun `p1_adapter.py` and `run_battery.py`.
 * Target symbols were not audited against HGNC (21 percent are not in the network: absent genes or alias mismatches, not distinguished). Mouse seeds rely on HGNC's single-link ortholog field.
 * Equal level weights; tier A and B seeds mixed (human neural and non-human neural); a set (e.g. Q2 expression) contains both a gene seed and a process seed that includes it, which double-counts that gene.
-* Tests prove function and sensitivity on 7 small seed sets (1 to 17 units) and one provisional set; with so few seeds the sign shuffle has no power in 4 of 8 sets.
-* The provisional-set results were seen before Amendments 1 and 2; the P1-set runs used the amended criteria but the amendments were motivated by the first P1 run (disclosed in Amendment 2).
+* Tests prove function and sensitivity on 10 small seed sets (1 to 17 units) and one provisional set; with so few seeds the sign shuffle has no power in most sets.
+* The provisional-set results were seen before Amendments 1 and 2; Amendment 4 (guards, level rules for pathology and phospho rows, Q1 tier C) was written before the v2 run, after seeing only the adapter's set list.
+* Phospho and pathology-count rows are not turned into gene activity (conditional or excluded); this loses the Q7 GSK3B direction and the cell-count rows by design.
 * No paper was read; no read receipt is staged. Registry, ledger and current files untouched.
 
 ## 10. For the batch path

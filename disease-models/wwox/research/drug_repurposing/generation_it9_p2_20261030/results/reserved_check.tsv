@@ -1,50 +1,91 @@
 seed_set	reserved_gene	gene_is_a_seed_in_this_set	reserved_row_ids_in_seed_table	families_with_any_action_on_gene	families_in_proposals	best_rank_by_Z_ind_robust	of_proposals	families_that_are_direct_hits
-Q1_protein_tiersAB	CACNA1G	False	none	50	0		2190	0
-Q1_protein_tiersAB	CTNNB1	False	none	38	15	86	2190	0
-Q1_protein_tiersAB	GFAP	False	none	43	10	15	2190	0
-Q1_protein_tiersAB	LDHA	False	none	2	0		2190	0
-Q1_protein_tiersAB	MYC	False	none	71	18	170	2190	0
-Q1_protein_tiersAB	PANX1	False	none	2	0		2190	0
-Q1_protein_tiersAB	WWOX	True	none	4	1	891	2190	0
+Q1_expression_tiersABC	AIF1	False	none	0	0		2190	0
+Q1_expression_tiersABC	CACNA1G	False	none	50	0		2190	0
+Q1_expression_tiersABC	CTNNB1	False	none	38	15	595	2190	0
+Q1_expression_tiersABC	GAD1	False	none	1	0		2190	0
+Q1_expression_tiersABC	GFAP	False	none	43	10	858	2190	0
+Q1_expression_tiersABC	LDHA	False	none	2	0		2190	0
+Q1_expression_tiersABC	MYC	False	none	71	18	293	2190	0
+Q1_expression_tiersABC	PANX1	False	none	2	0		2190	0
+Q1_expression_tiersABC	WWOX	True	none	4	1	801	2190	0
+Q1_protein_tiersABC	AIF1	False	none	0	0		2190	0
+Q1_protein_tiersABC	CACNA1G	False	none	50	0		2190	0
+Q1_protein_tiersABC	CTNNB1	False	none	38	15	86	2190	0
+Q1_protein_tiersABC	GAD1	False	none	1	0		2190	0
+Q1_protein_tiersABC	GFAP	False	none	43	10	15	2190	0
+Q1_protein_tiersABC	LDHA	False	none	2	0		2190	0
+Q1_protein_tiersABC	MYC	False	none	71	18	170	2190	0
+Q1_protein_tiersABC	PANX1	False	none	2	0		2190	0
+Q1_protein_tiersABC	WWOX	True	none	4	1	891	2190	0
+Q2_expression_tiersAB	AIF1	False	none	0	0		4935	0
 Q2_expression_tiersAB	CACNA1G	False	none	50	4	1199	4935	0
 Q2_expression_tiersAB	CTNNB1	False	none	38	22	1486	4935	0
+Q2_expression_tiersAB	GAD1	False	none	1	0		4935	0
 Q2_expression_tiersAB	GFAP	False	none	43	14	52	4935	0
 Q2_expression_tiersAB	LDHA	True	none	2	0		4935	0
 Q2_expression_tiersAB	MYC	False	none	71	22	41	4935	0
 Q2_expression_tiersAB	PANX1	False	none	2	0		4935	0
 Q2_expression_tiersAB	WWOX	False	none	4	1	4483	4935	0
-Q3_expression_tiersAB	CACNA1G	False	none	50	4	1580	4962	0
-Q3_expression_tiersAB	CTNNB1	False	none	38	17	215	4962	0
-Q3_expression_tiersAB	GFAP	False	none	43	14	383	4962	0
+Q3_expression_tiersAB	AIF1	False	none	0	0		4962	0
+Q3_expression_tiersAB	CACNA1G	False	none	50	4	990	4962	0
+Q3_expression_tiersAB	CTNNB1	False	none	38	17	1180	4962	0
+Q3_expression_tiersAB	GAD1	False	none	1	0		4962	0
+Q3_expression_tiersAB	GFAP	False	none	43	14	1716	4962	0
 Q3_expression_tiersAB	LDHA	False	none	2	0		4962	0
-Q3_expression_tiersAB	MYC	False	none	71	23	39	4962	0
+Q3_expression_tiersAB	MYC	False	none	71	23	661	4962	0
 Q3_expression_tiersAB	PANX1	False	none	2	0		4962	0
-Q3_expression_tiersAB	WWOX	False	none	4	1	647	4962	0
-Q4_expression_tiersAB	CACNA1G	False	none	50	1	2837	2892	0
-Q4_expression_tiersAB	CTNNB1	False	none	38	16	311	2892	0
-Q4_expression_tiersAB	GFAP	False	none	43	9	140	2892	0
-Q4_expression_tiersAB	LDHA	False	none	2	0		2892	0
-Q4_expression_tiersAB	MYC	False	none	71	20	125	2892	0
-Q4_expression_tiersAB	PANX1	False	none	2	0		2892	0
-Q4_expression_tiersAB	WWOX	False	none	4	1	873	2892	0
-Q4_protein_tiersAB	CACNA1G	False	none	50	1	328	2927	0
-Q4_protein_tiersAB	CTNNB1	False	none	38	17	328	2927	0
-Q4_protein_tiersAB	GFAP	False	none	43	10	147	2927	0
-Q4_protein_tiersAB	LDHA	False	none	2	0		2927	0
-Q4_protein_tiersAB	MYC	False	none	71	20	30	2927	0
-Q4_protein_tiersAB	PANX1	False	none	2	0		2927	0
-Q4_protein_tiersAB	WWOX	False	none	4	1	1595	2927	0
-Q5_expression_tiersAB	CACNA1G	False	none	50	4	2341	5187	0
-Q5_expression_tiersAB	CTNNB1	False	none	38	22	292	5187	0
-Q5_expression_tiersAB	GFAP	False	none	43	14	437	5187	0
+Q3_expression_tiersAB	WWOX	False	none	4	1	1603	4962	0
+Q4_expression_tiersAB	AIF1	False	none	0	0		2701	0
+Q4_expression_tiersAB	CACNA1G	False	none	50	2	350	2701	1
+Q4_expression_tiersAB	CTNNB1	False	none	38	16	350	2701	0
+Q4_expression_tiersAB	GAD1	False	none	1	0		2701	0
+Q4_expression_tiersAB	GFAP	False	none	43	9	477	2701	0
+Q4_expression_tiersAB	LDHA	False	none	2	0		2701	0
+Q4_expression_tiersAB	MYC	False	none	71	19	268	2701	0
+Q4_expression_tiersAB	PANX1	False	none	2	0		2701	0
+Q4_expression_tiersAB	WWOX	False	none	4	1	692	2701	0
+Q4_protein_tiersAB	AIF1	False	none	0	0		2828	0
+Q4_protein_tiersAB	CACNA1G	False	none	50	1	285	2828	0
+Q4_protein_tiersAB	CTNNB1	False	none	38	17	285	2828	0
+Q4_protein_tiersAB	GAD1	True	none	1	1	1601	2828	1
+Q4_protein_tiersAB	GFAP	False	none	43	9	129	2828	0
+Q4_protein_tiersAB	LDHA	False	none	2	0		2828	0
+Q4_protein_tiersAB	MYC	False	none	71	20	29	2828	0
+Q4_protein_tiersAB	PANX1	False	none	2	0		2828	0
+Q4_protein_tiersAB	WWOX	False	none	4	1	2000	2828	0
+Q5_expression_tiersAB	AIF1	False	none	0	0		5187	0
+Q5_expression_tiersAB	CACNA1G	False	none	50	4	3059	5187	0
+Q5_expression_tiersAB	CTNNB1	False	none	38	22	412	5187	1
+Q5_expression_tiersAB	GAD1	False	none	1	0		5187	0
+Q5_expression_tiersAB	GFAP	False	none	43	14	69	5187	0
 Q5_expression_tiersAB	LDHA	False	none	2	0		5187	0
-Q5_expression_tiersAB	MYC	False	none	71	23	69	5187	0
+Q5_expression_tiersAB	MYC	False	none	71	23	136	5187	0
 Q5_expression_tiersAB	PANX1	False	none	2	0		5187	0
-Q5_expression_tiersAB	WWOX	False	none	4	1	4242	5187	0
-Q5_protein_tiersAB	CACNA1G	False	none	50	1	2676	2979	0
-Q5_protein_tiersAB	CTNNB1	False	none	38	17	786	2979	0
-Q5_protein_tiersAB	GFAP	True	none	43	11	4	2979	0
-Q5_protein_tiersAB	LDHA	False	none	2	0		2979	0
-Q5_protein_tiersAB	MYC	False	none	71	20	408	2979	0
-Q5_protein_tiersAB	PANX1	False	none	2	0		2979	0
-Q5_protein_tiersAB	WWOX	False	none	4	1	1048	2979	0
+Q5_expression_tiersAB	WWOX	False	none	4	1	3462	5187	0
+Q6_expression_tiersAB	AIF1	False	none	0	0		3219	0
+Q6_expression_tiersAB	CACNA1G	False	none	50	1	1580	3219	0
+Q6_expression_tiersAB	CTNNB1	False	none	38	23	16	3219	0
+Q6_expression_tiersAB	GAD1	False	none	1	0		3219	0
+Q6_expression_tiersAB	GFAP	False	none	43	11	641	3219	0
+Q6_expression_tiersAB	LDHA	False	none	2	0		3219	0
+Q6_expression_tiersAB	MYC	True	none	71	21	47	3219	0
+Q6_expression_tiersAB	PANX1	False	none	2	0		3219	0
+Q6_expression_tiersAB	WWOX	False	none	4	1	2634	3219	0
+Q6_protein_tiersAB	AIF1	False	none	0	0		3219	0
+Q6_protein_tiersAB	CACNA1G	False	none	50	1	1580	3219	0
+Q6_protein_tiersAB	CTNNB1	False	none	38	23	16	3219	0
+Q6_protein_tiersAB	GAD1	False	none	1	0		3219	0
+Q6_protein_tiersAB	GFAP	False	none	43	11	641	3219	0
+Q6_protein_tiersAB	LDHA	False	none	2	0		3219	0
+Q6_protein_tiersAB	MYC	True	none	71	21	47	3219	0
+Q6_protein_tiersAB	PANX1	False	none	2	0		3219	0
+Q6_protein_tiersAB	WWOX	False	none	4	1	2634	3219	0
+Q7_phospho_tiersAB	AIF1	False	none	0	0		4235	0
+Q7_phospho_tiersAB	CACNA1G	False	none	50	0		4235	0
+Q7_phospho_tiersAB	CTNNB1	False	none	38	19	236	4235	0
+Q7_phospho_tiersAB	GAD1	False	none	1	0		4235	0
+Q7_phospho_tiersAB	GFAP	False	none	43	11	1567	4235	0
+Q7_phospho_tiersAB	LDHA	False	none	2	0		4235	0
+Q7_phospho_tiersAB	MYC	False	none	71	20	589	4235	0
+Q7_phospho_tiersAB	PANX1	False	none	2	0		4235	0
+Q7_phospho_tiersAB	WWOX	False	none	4	1	1467	4235	0

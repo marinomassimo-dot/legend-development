@@ -1,0 +1,6 @@
+{
+ "label": "p1_Q3_expression_tiersAB",
+ "seed_units_total": 17,
+ "seed_units_excluded_by_guard": 17,
+ "error": "no eligible seed units after guard_tag exclusion"
+}

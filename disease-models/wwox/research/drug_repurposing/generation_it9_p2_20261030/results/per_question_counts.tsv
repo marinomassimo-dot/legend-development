@@ -1,0 +1,11 @@
+seed_set	examined	nonzero_any_arm	absQz_gt3_total_null	absQz_gt3_indeg_null	Zind_robust_gt3_both_nulls_opposes	Zind_robust_lt_minus3_both_nulls_mimics	T1	T2	T4_total	T4_indeg	T5	T6	guard_tags	sig_state
+Q1_expression_tiersABC	12560	2190	0	0	0	0	True	True	NONE/NONE	NONE/NONE	True	True	none	not informative
+Q1_protein_tiersABC	12560	2190	0	0	0	0	True	True	NONE/NONE	NONE/NONE	True	True	none	not informative
+Q2_expression_tiersAB	12560	4935	158	85	53	71	True	False	ADDS/ADDS	LIMITED/ADDS	True	True	IT7_READOUT6	not informative
+Q3_expression_tiersAB	12560	4962	0	2	0	0	True	True	NONE/NONE	NONE/NONE	True	True	ISR_SIGN_UNRESOLVED	no eligible seeds
+Q4_expression_tiersAB	12560	2701	151	92	0	0	True	False	ADDS/ADDS	NONE/NONE	True	True	none	not informative
+Q4_protein_tiersAB	12560	2828	61	2	47	5	True	True	ADDS/ADDS	ADDS/ADDS	True	True	none	not informative
+Q5_expression_tiersAB	12560	5187	84	92	115	45	True	True	ADDS/ADDS	ADDS/ADDS	True	True	none	not informative
+Q6_expression_tiersAB	12560	3219	188	245	332	159	True	True	ADDS/ADDS	ADDS/ADDS	True	True	none	not informative
+Q6_protein_tiersAB	12560	3219	188	245	332	159	True	True	ADDS/ADDS	ADDS/ADDS	True	True	none	not informative
+Q7_phospho_tiersAB	12560	4235	359	501	0	0	True	False	NONE/NONE	NONE/NONE	True	True	none	not informative

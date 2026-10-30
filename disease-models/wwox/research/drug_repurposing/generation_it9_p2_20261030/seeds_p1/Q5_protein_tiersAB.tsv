@@ -1,3 +1,0 @@
-seed_id	gene	kind	members	direction	level	direction_status	readout_level	evidence_class	species	ortholog_map	source_ref	note
-Q5_protein_tiersAB:AIF1	AIF1	gene		up	1.0	defined	protein	protein_state	mouse	HGNC approved symbol with HGNC mgd ortholog link (MGI:1343098); 1:1 assumed from a single link	S081	directions seen: ['up']; tiers ['B']; P1 gives no magnitude (equal weight)
-Q5_protein_tiersAB:GFAP	GFAP	gene		uncertain	1.0	uncertain	protein	protein_state	mouse/rat	HGNC approved symbol with HGNC mgd ortholog link (MGI:95697); 1:1 assumed from a single link	S080;S082;S083	directions seen: ['down', 'up']; tiers ['B']; P1 gives no magnitude (equal weight)

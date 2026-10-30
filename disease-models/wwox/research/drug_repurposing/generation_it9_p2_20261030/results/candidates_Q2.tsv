@@ -1,0 +1,126 @@
+question	seed_set	arm	rank	family_id	name	Z_ind_robust_total_null	Z_ind_robust_indeg_null	seed_specific_both_nulls	Q_net_ind	compatible_action	conditional_on_uncertain_seeds	also_found_by_direct_search	contributing_seed_1	contributing_seed_2	evaluation_forbidden_on
+Q2	Q2_expression_tiersAB	opposes	1	FAM:CAT:DGIDB:849d8cc9a128	Compound 2 [Maurer Et Al., 2012]	15.94	9.661	1	0.164528	opposes	0	0	LDHB|LDHB|up|hops1-3|SIRT5|0.125	SET:GLYCOLYSIS_LACTATE_10|LDHB|up|hops1-3|SIRT5|0.0395	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	2	FAM:CAT:DGIDB:8fbc25f7f5e3	Pracinostat	10.54	7.833	1	0.0586667	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0447	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.0141	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	3	FAM:CAT:DGIDB:b459313a7710	Anti-Hif-1Alpha Lna Antisense Oligonucleotide Ezn-2968	8.884	8.878	1	0.0257493	opposes	0	0	LDHA|LDHA|up|hops1-3|HIF1A|0.00328	LDHB|LDHB|up|hops1-3|HIF1A|0.00326	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	4	FAM:CAT:DGIDB:b884da5f3057	Px-478	8.884	8.878	1	0.0257493	opposes	0	0	LDHA|LDHA|up|hops1-3|HIF1A|0.00328	LDHB|LDHB|up|hops1-3|HIF1A|0.00326	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	5	FAM:CAT:DGIDB:2ac8d6cafa76	Tmp269	8.67	5.187	1	0.066067	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.05	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.0158	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	6	FAM:CAT:DGIDB:1c6ef38ed6e3	Ly3372689	6.42	4.749	1	0.0790569	opposes	0	0	SET:GLYCOLYSIS_LACTATE_10|PFKP|up|hops1-3|OGA|0.0791		IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	7	FAM:CAT:DGIDB:545b1db929ec	Mk-8719	6.42	4.749	1	0.0790569	opposes	0	0	SET:GLYCOLYSIS_LACTATE_10|PFKP|up|hops1-3|OGA|0.0791		IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	8	FAM:CAT:DGIDB:f562bb034a33	Thiamet-G	6.42	4.749	1	0.0790569	opposes	0	0	SET:GLYCOLYSIS_LACTATE_10|PFKP|up|hops1-3|OGA|0.0791		IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	9	FAM:CAT:DGIDB:c976c1379de3	Pivaloyloxymethylbutyrate	6.258	5.081	1	0.0463423	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0353	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.0112	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	10	FAM:CAT:DGIDB:edfa16086b89	4-Phenylbutyric Acid	6.258	5.081	1	0.0463423	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0353	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.0112	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	11	FAM:CAT:DGIDB:8d33802a6c2b	Valproic Acid	6.258	5.081	1	0.0436919	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0333	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.0105	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	12	FAM:CAT:DGIDB:ec7f7d35898a	Bay-299	6.056	4.669	1	0.0252047	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|TAF1|0.0191	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|TAF1|0.00605	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	13	FAM:CAT:CHEMBL1801250	NANATINOSTAT	4.761	4.538	1	0.0533024	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0408	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.0129	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	14	FAM:CAT:DGIDB:0d35c5f6363b	Ss-208	4.62	4.206	1	0.0540971	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0409	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.0129	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	15	FAM:CAT:DGIDB:ec1f021cf6ea	Martinostat	4.484	4.29	1	0.0532595	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0408	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.0129	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	16	FAM:CAT:DGIDB:ccce741a959d	Dacinostat	4.442	3.617	1	0.0414498	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0316	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.00999	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	17	FAM:CAT:DGIDB:fb92d02b5da3	Givinostat	4.442	3.617	1	0.0414498	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0316	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.00999	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	18	FAM:CAT:DGIDB:01aa410e818f	Trichostatin A	4.442	3.617	1	0.0436919	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0333	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.0105	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	19	FAM:CAT:DGIDB:ec16120922f2	Scriptaid	4.442	3.617	1	0.0436919	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0333	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.0105	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	20	FAM:CAT:DGIDB:02771b72fbcc	4P-Pdot	4.257	3.756	1	0.00332398	opposes	0	0	BNIP3|BNIP3|up|hops1-3|MTNR1A|0.00253	SET:GLYCOLYSIS_LACTATE_10|BNIP3|up|hops1-3|MTNR1A|0.000799	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	21	FAM:CAT:DGIDB:6ca3531f5299	S26131	4.257	3.756	1	0.00332398	opposes	0	0	BNIP3|BNIP3|up|hops1-3|MTNR1A|0.00253	SET:GLYCOLYSIS_LACTATE_10|BNIP3|up|hops1-3|MTNR1A|0.000799	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	22	FAM:CAT:DGIDB:857e941dfc98	S20928	4.257	3.756	1	0.00332398	opposes	0	0	BNIP3|BNIP3|up|hops1-3|MTNR1A|0.00253	SET:GLYCOLYSIS_LACTATE_10|BNIP3|up|hops1-3|MTNR1A|0.000799	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	23	FAM:CAT:DGIDB:882c2f78eeba	Ucm 724	4.257	3.756	1	0.00332398	opposes	0	0	BNIP3|BNIP3|up|hops1-3|MTNR1A|0.00253	SET:GLYCOLYSIS_LACTATE_10|BNIP3|up|hops1-3|MTNR1A|0.000799	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	24	FAM:CAT:DGIDB:9b487b8ecfb8	K185	4.257	3.756	1	0.00332398	opposes	0	0	BNIP3|BNIP3|up|hops1-3|MTNR1A|0.00253	SET:GLYCOLYSIS_LACTATE_10|BNIP3|up|hops1-3|MTNR1A|0.000799	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	25	FAM:CAT:DGIDB:cb2d773a310b	Ucm 549	4.257	3.756	1	0.00332398	opposes	0	0	BNIP3|BNIP3|up|hops1-3|MTNR1A|0.00253	SET:GLYCOLYSIS_LACTATE_10|BNIP3|up|hops1-3|MTNR1A|0.000799	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	26	FAM:CAT:DGIDB:d9f9f1b8c197	Luzindole	4.257	3.756	1	0.00332398	opposes	0	0	BNIP3|BNIP3|up|hops1-3|MTNR1A|0.00253	SET:GLYCOLYSIS_LACTATE_10|BNIP3|up|hops1-3|MTNR1A|0.000799	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	27	FAM:CAT:DGIDB:bce553ea6196	Fimepinostat	4.019	3.389	1	0.0338651	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0258	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.00816	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	28	FAM:CAT:CHEMBL3622533	FIMEPINOSTAT	4.019	3.389	1	0.0350538	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0267	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.00845	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	29	FAM:CAT:CHEMBL1213492	GIVINOSTAT	4.015	3.618	1	0.0395208	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0301	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.00953	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	30	FAM:CAT:CHEMBL2103863	ABEXINOSTAT	4.015	3.618	1	0.0395208	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0301	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.00953	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	31	FAM:CAT:CHEMBL2105763	QUISINOSTAT	4.015	3.618	1	0.0395208	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0301	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.00953	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	32	FAM:CAT:CHEMBL235191	TACEDINALINE	4.015	3.618	1	0.0395208	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0301	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.00953	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	33	FAM:CAT:CHEMBL27759	ENTINOSTAT	4.015	3.618	1	0.0395208	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0301	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.00953	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	34	FAM:CAT:CHEMBL343448	ROMIDEPSIN	4.015	3.618	1	0.0395208	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0301	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.00953	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	35	FAM:CAT:CHEMBL3545368	PANOBINOSTAT LACTATE	4.015	3.618	1	0.0395208	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0301	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.00953	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	36	FAM:CAT:CHEMBL408513	BELINOSTAT	4.015	3.618	1	0.0395208	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0301	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.00953	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	37	FAM:CAT:DGIDB:1e650c95ffff	Panobinostat Lactate	4.015	3.618	1	0.0395208	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0301	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.00953	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	38	FAM:CAT:DGIDB:25b0801d9bba	Quisinostat	4.015	3.618	1	0.0395208	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0301	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.00953	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	39	FAM:CAT:DGIDB:2ac80472f050	Romidepsin	4.015	3.618	1	0.0395208	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0301	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.00953	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	40	FAM:CAT:DGIDB:2f02c290e2e5	Belinostat	4.015	3.618	1	0.0395208	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0301	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.00953	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	41	FAM:CAT:DGIDB:316b73312895	Vorinostat	4.015	3.618	1	0.0395208	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0301	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.00953	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	42	FAM:CAT:DGIDB:882d6b9e69bd	Entinostat	4.015	3.618	1	0.0395208	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0301	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.00953	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	43	FAM:CAT:DGIDB:a01b90413a8a	Ka1010	4.015	3.618	1	0.0395208	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0301	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.00953	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	44	FAM:CAT:DGIDB:de8663614b90	Abexinostat	4.015	3.618	1	0.0395208	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0301	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.00953	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	45	FAM:CAT:DGIDB:ff14fa84130d	Tacedinaline	4.015	3.618	1	0.0395208	opposes	0	0	SLC2A1|SLC2A1|up|hops1-3|HDAC5|0.0301	SET:GLYCOLYSIS_LACTATE_10|SLC2A1|up|hops1-3|HDAC5|0.00953	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	46	FAM:CAT:DGIDB:866ba4c88735	Biochanin A	3.836	1.422	0	0.021667	opposes	0	0	LDHB|LDHB|up|hops1-3|ESRRA|0.0165	SET:GLYCOLYSIS_LACTATE_10|LDHB|up|hops1-3|ESRRA|0.00522	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	47	FAM:CAT:CHEMBL8145	DAIDZEIN	3.836	1.422	0	0.0187641	opposes	0	0	LDHB|LDHB|up|hops1-3|ESRRA|0.0143	SET:GLYCOLYSIS_LACTATE_10|LDHB|up|hops1-3|ESRRA|0.00452	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	48	FAM:CAT:DGIDB:a2a8a04e6517	(Hydroxymethylphenyl)Agomelatine	3.752	3.282	1	0.00235041	opposes	0	0	BNIP3|BNIP3|up|hops1-3|MTNR1B|0.00179	SET:GLYCOLYSIS_LACTATE_10|BNIP3|up|hops1-3|MTNR1B|0.000565	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	49	FAM:CAT:DGIDB:db6e9db6b9d8	Ucm 454	3.752	3.282	1	0.00235041	opposes	0	0	BNIP3|BNIP3|up|hops1-3|MTNR1B|0.00179	SET:GLYCOLYSIS_LACTATE_10|BNIP3|up|hops1-3|MTNR1B|0.000565	IT7_READOUT6
+Q2	Q2_expression_tiersAB	opposes	50	FAM:CAT:DGIDB:f7102e5728c8	2-(Indolin-1Yl)-Melatonin	3.752	3.282	1	0.00235041	opposes	0	0	BNIP3|BNIP3|up|hops1-3|MTNR1B|0.00179	SET:GLYCOLYSIS_LACTATE_10|BNIP3|up|hops1-3|MTNR1B|0.000565	IT7_READOUT6
+Q2	Q2_expression_tiersAB	mimics	1	FAM:CAT:DGIDB:2bb4f084b3c0	Fmk	-10.44	-8.65	0	-0.0471405	mimics	0	0	HK2|HK2|up|hops1-3|RPS6KA3|-0.0358	SET:GLYCOLYSIS_LACTATE_10|HK2|up|hops1-3|RPS6KA3|-0.0113	IT7_READOUT6
+Q2	Q2_expression_tiersAB	mimics	2	FAM:CAT:CHEMBL1933288	Bix 02565	-10.44	-8.65	0	-0.0471405	mimics	0	0	HK2|HK2|up|hops1-3|RPS6KA3|-0.0358	SET:GLYCOLYSIS_LACTATE_10|HK2|up|hops1-3|RPS6KA3|-0.0113	IT7_READOUT6
+Q2	Q2_expression_tiersAB	mimics	3	FAM:CAT:DGIDB:e4afa445a7e0	Xct790	-6.462	-4.984	0	-0.0375419	mimics	0	0	LDHB|LDHB|up|hops1-3|ESRRA|-0.0286	SET:GLYCOLYSIS_LACTATE_10|LDHB|up|hops1-3|ESRRA|-0.00903	IT7_READOUT6
+Q2	Q2_expression_tiersAB	mimics	4	FAM:CAT:DGIDB:5a130973549c	1-Cyclohexyl-N-{[1-(4-Methylphenyl)-1H-Indol-3-Yl]Methyl}Methanamine	-6.462	-4.984	0	-0.0375419	mimics	0	0	LDHB|LDHB|up|hops1-3|ESRRA|-0.0286	SET:GLYCOLYSIS_LACTATE_10|LDHB|up|hops1-3|ESRRA|-0.00903	IT7_READOUT6
+Q2	Q2_expression_tiersAB	mimics	5	FAM:CAT:DGIDB:24c4530c1d09	Cdk/Crk Inhibitor	-5.257	-4.798	0	-0.036516	mimics	0	0	SET:GLYCOLYSIS_LACTATE_10|PKM|up|hops1-3|CDK6|-0.0183	SET:GLYCOLYSIS_LACTATE_10|PFKP|up|hops1-3|CDK6|-0.0183	IT7_READOUT6
+Q2	Q2_expression_tiersAB	mimics	6	FAM:CAT:DGIDB:3b5bdd7ae5b5	Desidustat	-5.099	-0.4919	0	-0.00470828	mimics	0	0	SLC2A1|SLC2A1|up|hops1-3|EGLN2|-0.0018	BNIP3|BNIP3|up|hops1-3|EGLN2|-0.0018	IT7_READOUT6
+Q2	Q2_expression_tiersAB	mimics	7	FAM:CAT:CHEMBL3115681	NARAZACICLIB	-4.262	-4.995	0	-0.0359649	mimics	0	0	SET:GLYCOLYSIS_LACTATE_10|PFKP|up|hops1-3|CDK6|-0.0183	SET:GLYCOLYSIS_LACTATE_10|PKM|up|hops1-3|CDK6|-0.0182	IT7_READOUT6
+Q2	Q2_expression_tiersAB	mimics	8	FAM:CAT:DGIDB:f2ef4d444789	Cp-10	-4.262	-4.995	0	-0.0440478	mimics	0	0	SET:GLYCOLYSIS_LACTATE_10|PFKP|up|hops1-3|CDK6|-0.0224	SET:GLYCOLYSIS_LACTATE_10|PKM|up|hops1-3|CDK6|-0.0224	IT7_READOUT6
+Q2	Q2_expression_tiersAB	mimics	9	FAM:CAT:DGIDB:e245e65e1ab2	Tibremciclib	-4.262	-4.995	0	-0.0440478	mimics	0	0	SET:GLYCOLYSIS_LACTATE_10|PFKP|up|hops1-3|CDK6|-0.0224	SET:GLYCOLYSIS_LACTATE_10|PKM|up|hops1-3|CDK6|-0.0224	IT7_READOUT6
+Q2	Q2_expression_tiersAB	mimics	10	FAM:CAT:DGIDB:c4fcb2b92e53	Cimpuciclib	-4.262	-4.995	0	-0.0440478	mimics	0	0	SET:GLYCOLYSIS_LACTATE_10|PFKP|up|hops1-3|CDK6|-0.0224	SET:GLYCOLYSIS_LACTATE_10|PKM|up|hops1-3|CDK6|-0.0224	IT7_READOUT6
+Q2	Q2_expression_tiersAB	mimics	11	FAM:CAT:DGIDB:bfa3a8018a80	Abemaciclib	-4.262	-4.995	0	-0.0440478	mimics	0	0	SET:GLYCOLYSIS_LACTATE_10|PFKP|up|hops1-3|CDK6|-0.0224	SET:GLYCOLYSIS_LACTATE_10|PKM|up|hops1-3|CDK6|-0.0224	IT7_READOUT6
+Q2	Q2_expression_tiersAB	mimics	12	FAM:CAT:DGIDB:bdcfd01a577e	Lerociclib	-4.262	-4.995	0	-0.0440478	mimics	0	0	SET:GLYCOLYSIS_LACTATE_10|PFKP|up|hops1-3|CDK6|-0.0224	SET:GLYCOLYSIS_LACTATE_10|PKM|up|hops1-3|CDK6|-0.0224	IT7_READOUT6
+Q2	Q2_expression_tiersAB	mimics	13	FAM:CAT:DGIDB:b1b490291831	Trilaciclib Dihydrochloride	-4.262	-4.995	0	-0.0440478	mimics	0	0	SET:GLYCOLYSIS_LACTATE_10|PFKP|up|hops1-3|CDK6|-0.0224	SET:GLYCOLYSIS_LACTATE_10|PKM|up|hops1-3|CDK6|-0.0224	IT7_READOUT6
+Q2	Q2_expression_tiersAB	mimics	14	FAM:CAT:DGIDB:b0e127475c4d	Ribociclib	-4.262	-4.995	0	-0.0440478	mimics	0	0	SET:GLYCOLYSIS_LACTATE_10|PFKP|up|hops1-3|CDK6|-0.0224	SET:GLYCOLYSIS_LACTATE_10|PKM|up|hops1-3|CDK6|-0.0224	IT7_READOUT6
+Q2	Q2_expression_tiersAB	mimics	15	FAM:CAT:DGIDB:5d4cc0399c79	Dalpiciclib	-4.262	-4.995	0	-0.0440478	mimics	0	0	SET:GLYCOLYSIS_LACTATE_10|PFKP|up|hops1-3|CDK6|-0.0224	SET:GLYCOLYSIS_LACTATE_10|PKM|up|hops1-3|CDK6|-0.0224	IT7_READOUT6
+Q2	Q2_expression_tiersAB	mimics	16	FAM:CAT:DGIDB:427f7bb98d58	Ribociclib Succinate	-4.262	-4.995	0	-0.0440478	mimics	0	0	SET:GLYCOLYSIS_LACTATE_10|PFKP|up|hops1-3|CDK6|-0.0224	SET:GLYCOLYSIS_LACTATE_10|PKM|up|hops1-3|CDK6|-0.0224	IT7_READOUT6
+Q2	Q2_expression_tiersAB	mimics	17	FAM:CAT:DGIDB:1f69c0c22540	Bsj-03-123	-4.262	-4.995	0	-0.0440478	mimics	0	0	SET:GLYCOLYSIS_LACTATE_10|PFKP|up|hops1-3|CDK6|-0.0224	SET:GLYCOLYSIS_LACTATE_10|PKM|up|hops1-3|CDK6|-0.0224	IT7_READOUT6
+Q2	Q2_expression_tiersAB	mimics	18	FAM:CAT:DGIDB:192cf2264058	Bsj-04-132	-4.262	-4.995	0	-0.0440478	mimics	0	0	SET:GLYCOLYSIS_LACTATE_10|PFKP|up|hops1-3|CDK6|-0.0224	SET:GLYCOLYSIS_LACTATE_10|PKM|up|hops1-3|CDK6|-0.0224	IT7_READOUT6
+Q2	Q2_expression_tiersAB	mimics	19	FAM:CAT:DGIDB:0e5293e56c62	Inixaciclib	-4.262	-4.995	0	-0.0440478	mimics	0	0	SET:GLYCOLYSIS_LACTATE_10|PFKP|up|hops1-3|CDK6|-0.0224	SET:GLYCOLYSIS_LACTATE_10|PKM|up|hops1-3|CDK6|-0.0224	IT7_READOUT6
+Q2	Q2_expression_tiersAB	mimics	20	FAM:CAT:DGIDB:06dd0185c305	Bsj-03-204	-4.262	-4.995	0	-0.0440478	mimics	0	0	SET:GLYCOLYSIS_LACTATE_10|PFKP|up|hops1-3|CDK6|-0.0224	SET:GLYCOLYSIS_LACTATE_10|PKM|up|hops1-3|CDK6|-0.0224	IT7_READOUT6
+Q2	Q2_expression_tiersAB	mimics	21	FAM:CAT:CHEMBL4277900	CROZBACICLIB	-4.262	-4.995	0	-0.0440478	mimics	0	0	SET:GLYCOLYSIS_LACTATE_10|PFKP|up|hops1-3|CDK6|-0.0224	SET:GLYCOLYSIS_LACTATE_10|PKM|up|hops1-3|CDK6|-0.0224	IT7_READOUT6
+Q2	Q2_expression_tiersAB	mimics	22	FAM:CAT:CHEMBL4067549	ULECACICLIB	-4.262	-4.995	0	-0.0440478	mimics	0	0	SET:GLYCOLYSIS_LACTATE_10|PFKP|up|hops1-3|CDK6|-0.0224	SET:GLYCOLYSIS_LACTATE_10|PKM|up|hops1-3|CDK6|-0.0224	IT7_READOUT6
+Q2	Q2_expression_tiersAB	mimics	23	FAM:CAT:CHEMBL3545110	RIBOCICLIB	-4.262	-4.995	0	-0.0440478	mimics	0	0	SET:GLYCOLYSIS_LACTATE_10|PFKP|up|hops1-3|CDK6|-0.0224	SET:GLYCOLYSIS_LACTATE_10|PKM|up|hops1-3|CDK6|-0.0224	IT7_READOUT6
+Q2	Q2_expression_tiersAB	mimics	24	FAM:CAT:CHEMBL3301610	ABEMACICLIB	-4.262	-4.995	0	-0.0440478	mimics	0	0	SET:GLYCOLYSIS_LACTATE_10|PFKP|up|hops1-3|CDK6|-0.0224	SET:GLYCOLYSIS_LACTATE_10|PKM|up|hops1-3|CDK6|-0.0224	IT7_READOUT6
+Q2	Q2_expression_tiersAB	mimics	25	FAM:CAT:DGIDB:ff7fa5d89505	Gr 128107	-4.257	-3.756	0	-0.00332398	mimics	0	0	BNIP3|BNIP3|up|hops1-3|MTNR1A|-0.00253	SET:GLYCOLYSIS_LACTATE_10|BNIP3|up|hops1-3|MTNR1A|-0.000799	IT7_READOUT6
+Q2	Q2_expression_tiersAB	direct_search	1	FAM:CAT:DGIDB:2ffeff2ec274	Compound 1 [Pmid: 31465224]				0.316228	opposes		1	targets:PKM		IT7_READOUT6
+Q2	Q2_expression_tiersAB	direct_search	2	FAM:CAT:DGIDB:4c7cf4c9d55a	Dmamcl				-0.316228	mimics		1	targets:PKM		IT7_READOUT6
+Q2	Q2_expression_tiersAB	direct_search	3	FAM:CAT:DGIDB:6be98d9edc6d	Tepp-46				-0.316228	mimics		1	targets:PKM		IT7_READOUT6
+Q2	Q2_expression_tiersAB	direct_search	4	FAM:CAT:DGIDB:8c80f6243eca	Dasa-58				-0.316228	mimics		1	targets:PKM		IT7_READOUT6
+Q2	Q2_expression_tiersAB	direct_search	5	FAM:CAT:DGIDB:c33be91c5af5	Compound 16 [Pmid: 31977207]				-0.316228	mimics		1	targets:PKM		IT7_READOUT6
+Q2	Q2_expression_tiersAB	direct_search	6	FAM:CAT:CHEMBL1650595	AR-12				0	unsigned_or_no_signed_direct_action		1	targets:PDK1		IT7_READOUT6
+Q2	Q2_expression_tiersAB	direct_search	7	FAM:CAT:CHEMBL306823	SODIUM DICHLOROACETATE				0	unsigned_or_no_signed_direct_action		1	targets:PDK1		IT7_READOUT6
+Q2	Q2_expression_tiersAB	direct_search	8	FAM:CAT:CHEMBL539934	TT-232					unsigned_or_no_signed_direct_action		1	targets:PKM		
+Q2	Q2_expression_tiersAB	direct_search	9	FAM:CAT:DGIDB:0308adece3fd	Platinum					unsigned_or_no_signed_direct_action		1	targets:SLC2A1		
+Q2	Q2_expression_tiersAB	direct_search	10	FAM:CAT:DGIDB:0a09153dc3eb	Ebselen					unsigned_or_no_signed_direct_action		1	targets:PKM		
+Q2	Q2_expression_tiersAB	direct_search	11	FAM:CAT:DGIDB:0d9b57ae6bd5	Chembl:Chembl1091502					unsigned_or_no_signed_direct_action		1	targets:PKM		
+Q2	Q2_expression_tiersAB	direct_search	12	FAM:CAT:DGIDB:0f6897a3cba4	Compound 30 [Pmid: 22468970]					unsigned_or_no_signed_direct_action		1	targets:SLC2A1		
+Q2	Q2_expression_tiersAB	direct_search	13	FAM:CAT:DGIDB:111f25d9cc39	Ver-246608				0	unsigned_or_no_signed_direct_action		1	targets:PDK1		IT7_READOUT6
+Q2	Q2_expression_tiersAB	direct_search	14	FAM:CAT:DGIDB:13a0efd314f3	Chembl:Chembl584458					unsigned_or_no_signed_direct_action		1	targets:PKM		
+Q2	Q2_expression_tiersAB	direct_search	15	FAM:CAT:DGIDB:16ec5368e34c	Chembl:Chembl429335					unsigned_or_no_signed_direct_action		1	targets:PKM		
+Q2	Q2_expression_tiersAB	direct_search	16	FAM:CAT:DGIDB:1946c1e0d282	Chembl:Chembl261693					unsigned_or_no_signed_direct_action		1	targets:PKM		
+Q2	Q2_expression_tiersAB	direct_search	17	FAM:CAT:DGIDB:26952b0465d0	Il-7					unsigned_or_no_signed_direct_action		1	targets:SLC2A1		
+Q2	Q2_expression_tiersAB	direct_search	18	FAM:CAT:DGIDB:276e3560fbd5	Estradiol Valerate				-0	unsigned_or_no_signed_direct_action		1	targets:SLC2A1		IT7_READOUT6
+Q2	Q2_expression_tiersAB	direct_search	19	FAM:CAT:DGIDB:27db363a1b3c	Tranilast					unsigned_or_no_signed_direct_action		1	targets:PKM		
+Q2	Q2_expression_tiersAB	direct_search	20	FAM:CAT:DGIDB:2b9938ad915a	Erbstatin					unsigned_or_no_signed_direct_action		1	targets:PKM		
+Q2	Q2_expression_tiersAB	direct_search	21	FAM:CAT:DGIDB:2bf054b78a68	Basic Fibroblast Growth Factor					unsigned_or_no_signed_direct_action		1	targets:SLC2A1		
+Q2	Q2_expression_tiersAB	direct_search	22	FAM:CAT:DGIDB:2cc583f0b993	Recombinant Fibroblast Growth Factor 2					unsigned_or_no_signed_direct_action		1	targets:SLC2A1		
+Q2	Q2_expression_tiersAB	direct_search	23	FAM:CAT:DGIDB:30277a03dc85	Triamcinolone				-0	unsigned_or_no_signed_direct_action		1	targets:SLC2A1		IT7_READOUT6
+Q2	Q2_expression_tiersAB	direct_search	24	FAM:CAT:DGIDB:30c9c30bd4a3	Lamivudine					unsigned_or_no_signed_direct_action		1	targets:PGK1		
+Q2	Q2_expression_tiersAB	direct_search	25	FAM:CAT:DGIDB:42788f518ac3	Genistein				-0	unsigned_or_no_signed_direct_action		1	targets:SLC2A1		IT7_READOUT6
+Q2	Q2_expression_tiersAB	direct_search	26	FAM:CAT:DGIDB:4312e76e7a6b	Therapeutic Glucocorticoid					unsigned_or_no_signed_direct_action		1	targets:SLC2A1		
+Q2	Q2_expression_tiersAB	direct_search	27	FAM:CAT:DGIDB:457a07d382fd	Thymidine					unsigned_or_no_signed_direct_action		1	targets:SLC2A1		
+Q2	Q2_expression_tiersAB	direct_search	28	FAM:CAT:DGIDB:4679eaf4a822	Pseudoephedrine					unsigned_or_no_signed_direct_action		1	targets:PKM		
+Q2	Q2_expression_tiersAB	direct_search	29	FAM:CAT:DGIDB:4d8ae89da94a	Mitapivat					unsigned_or_no_signed_direct_action		1	targets:PKM		
+Q2	Q2_expression_tiersAB	direct_search	30	FAM:CAT:DGIDB:4dcc619f7d50	Diazepam					unsigned_or_no_signed_direct_action		1	targets:SLC2A1		
+Q2	Q2_expression_tiersAB	direct_search	31	FAM:CAT:DGIDB:563ad6bab442	Chembl:Chembl1214407					unsigned_or_no_signed_direct_action		1	targets:PKM		
+Q2	Q2_expression_tiersAB	direct_search	32	FAM:CAT:DGIDB:6102045491fa	Chembl:Chembl257158					unsigned_or_no_signed_direct_action		1	targets:PDK1		
+Q2	Q2_expression_tiersAB	direct_search	33	FAM:CAT:DGIDB:610ddcf467ed	[3H]2-Deoxyglucose					unsigned_or_no_signed_direct_action		1	targets:SLC2A1		
+Q2	Q2_expression_tiersAB	direct_search	34	FAM:CAT:DGIDB:6396e14ba67c	3-Hydroxyanthranilic Acid					unsigned_or_no_signed_direct_action		1	targets:PDK1		
+Q2	Q2_expression_tiersAB	direct_search	35	FAM:CAT:DGIDB:66ec3312b309	4-Chloromercuribenzoic Acid					unsigned_or_no_signed_direct_action		1	targets:PKM		
+Q2	Q2_expression_tiersAB	direct_search	36	FAM:CAT:DGIDB:672d3a5ad699	Indirubin-3'-Monoxime				0	unsigned_or_no_signed_direct_action		1	targets:PKM		IT7_READOUT6
+Q2	Q2_expression_tiersAB	direct_search	37	FAM:CAT:DGIDB:6b518066e3b8	Anthracycline Antineoplastic Antibiotic					unsigned_or_no_signed_direct_action		1	targets:LDHA		
+Q2	Q2_expression_tiersAB	direct_search	38	FAM:CAT:DGIDB:6d6a447c8103	Chembl:Chembl125044					unsigned_or_no_signed_direct_action		1	targets:PKM		
+Q2	Q2_expression_tiersAB	direct_search	39	FAM:CAT:DGIDB:6dce3f58cbc3	Azd7545				0	unsigned_or_no_signed_direct_action		1	targets:PDK1		IT7_READOUT6
+Q2	Q2_expression_tiersAB	direct_search	40	FAM:CAT:DGIDB:72b05cf197be	Hydralazine					unsigned_or_no_signed_direct_action		1	targets:PKM		
+Q2	Q2_expression_tiersAB	direct_search	41	FAM:CAT:DGIDB:74274cbb9dad	Chembl:Chembl154580					unsigned_or_no_signed_direct_action		1	targets:PKM		
+Q2	Q2_expression_tiersAB	direct_search	42	FAM:CAT:DGIDB:7da8e82db38f	Silver Sulfadiazine					unsigned_or_no_signed_direct_action		1	targets:PKM		
+Q2	Q2_expression_tiersAB	direct_search	43	FAM:CAT:DGIDB:7f061bf749aa	Tretinoin				-0	unsigned_or_no_signed_direct_action		1	targets:SLC2A1		IT7_READOUT6
+Q2	Q2_expression_tiersAB	direct_search	44	FAM:CAT:DGIDB:801bc201b3a1	3-Hydroxybenzylhydrazine					unsigned_or_no_signed_direct_action		1	targets:PKM		
+Q2	Q2_expression_tiersAB	direct_search	45	FAM:CAT:DGIDB:8629a7fc04cf	Chembl:Chembl1333049					unsigned_or_no_signed_direct_action		1	targets:PKM		
+Q2	Q2_expression_tiersAB	direct_search	46	FAM:CAT:DGIDB:89a55208d4e5	Sanguinarium					unsigned_or_no_signed_direct_action		1	targets:PKM		
+Q2	Q2_expression_tiersAB	direct_search	47	FAM:CAT:DGIDB:8a3171b5484b	Chembl:Chembl599013					unsigned_or_no_signed_direct_action		1	targets:PKM		
+Q2	Q2_expression_tiersAB	direct_search	48	FAM:CAT:DGIDB:8ddd1e9e1ab7	Phenytoin Sodium					unsigned_or_no_signed_direct_action		1	targets:SLC2A1		
+Q2	Q2_expression_tiersAB	direct_search	49	FAM:CAT:DGIDB:8f95e41c6aa9	Chembl:Chembl473721					unsigned_or_no_signed_direct_action		1	targets:PKM		
+Q2	Q2_expression_tiersAB	direct_search	50	FAM:CAT:DGIDB:901979e6ba30	Sodium Dichloroacetate				0	unsigned_or_no_signed_direct_action		1	targets:PDK1		IT7_READOUT6

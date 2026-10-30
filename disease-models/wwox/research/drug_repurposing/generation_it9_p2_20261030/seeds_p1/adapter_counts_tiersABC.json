@@ -1,0 +1,73 @@
+{
+ "p1_seeds_sha256": "769523339e0256f37974f25e845ddc094e5919a509d7bd073a097d7878a026f4",
+ "tiers": [
+  "A",
+  "B",
+  "C"
+ ],
+ "per_question": {
+  "D1": {
+   "not_usable_or_reserved": 7
+  },
+  "D2": {
+   "not_usable_or_reserved": 4
+  },
+  "D3": {
+   "not_usable_or_reserved": 2
+  },
+  "D5": {
+   "not_usable_or_reserved": 2
+  },
+  "D6": {
+   "not_usable_or_reserved": 1
+  },
+  "Q1": {
+   "usable_rows": 4,
+   "rows_placed": 2,
+   "unchanged_null_observation_not_a_seed": 1,
+   "not_usable_or_reserved": 12,
+   "process_or_state_without_gene_members_not_representable": 1
+  },
+  "Q2": {
+   "usable_rows": 20,
+   "rows_placed": 11,
+   "unchanged_null_observation_not_a_seed": 4,
+   "no_hgnc_ortholog_link_dropped": 1,
+   "process_or_state_without_gene_members_not_representable": 4,
+   "not_usable_or_reserved": 6
+  },
+  "Q3": {
+   "usable_rows": 13,
+   "rows_placed": 6,
+   "unchanged_null_observation_not_a_seed": 2,
+   "process_or_state_without_gene_members_not_representable": 5,
+   "not_usable_or_reserved": 5
+  },
+  "Q4": {
+   "usable_rows": 15,
+   "process_or_state_without_gene_members_not_representable": 6,
+   "unchanged_null_observation_not_a_seed": 1,
+   "pathology_level_gene_row_not_a_gene_seed": 2,
+   "rows_placed": 6,
+   "not_usable_or_reserved": 13
+  },
+  "Q5": {
+   "usable_rows": 10,
+   "process_or_state_without_gene_members_not_representable": 1,
+   "unchanged_null_observation_not_a_seed": 1,
+   "no_hgnc_ortholog_link_dropped": 1,
+   "pathology_level_gene_row_not_a_gene_seed": 4,
+   "rows_placed": 3,
+   "not_usable_or_reserved": 11
+  },
+  "Q6": {
+   "usable_rows": 2,
+   "rows_placed": 2,
+   "not_usable_or_reserved": 3
+  },
+  "Q7": {
+   "usable_rows": 1,
+   "rows_placed": 1
+  }
+ }
+}

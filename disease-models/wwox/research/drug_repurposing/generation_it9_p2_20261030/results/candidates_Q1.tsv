@@ -1,0 +1,84 @@
+question	seed_set	arm	rank	family_id	name	Z_ind_robust_total_null	Z_ind_robust_indeg_null	seed_specific_both_nulls	Q_net_ind	compatible_action	conditional_on_uncertain_seeds	also_found_by_direct_search	contributing_seed_1	contributing_seed_2	evaluation_forbidden_on
+Q1	Q1_expression_tiersABC	direct_search	1	FAM:CAT:DGIDB:0bc1cf72f3bb	Sorafenib				0	unsigned_or_no_signed_direct_action		1	targets:WWOX		none
+Q1	Q1_expression_tiersABC	direct_search	2	FAM:CAT:DGIDB:925ab80c64cb	Gemcitabine					unsigned_or_no_signed_direct_action		1	targets:WWOX		
+Q1	Q1_expression_tiersABC	direct_search	3	FAM:CAT:DGIDB:eef19c54306d	Null					unsigned_or_no_signed_direct_action		1	targets:WWOX		
+Q1	Q1_expression_tiersABC	direct_search	4	FAM:CAT:DGIDB:f5e262598b4f	Recombinant Tumor Necrosis Factor Family Protein					unsigned_or_no_signed_direct_action		1	targets:WWOX		
+Q1	Q1_protein_tiersABC	opposes	1	FAM:CAT:CHEMBL2108316	EDIFOLIGIDE	0.6857	1.091	0	0.00117343	opposes	0	0	WWOX|WWOX|down|hops1-3|E2F1|0.00117		none
+Q1	Q1_protein_tiersABC	opposes	2	FAM:CAT:CHEMBL2109058	EDIFOLIGIDE SODIUM	0.6857	1.091	0	0.00117343	opposes	0	0	WWOX|WWOX|down|hops1-3|E2F1|0.00117		none
+Q1	Q1_protein_tiersABC	opposes	3	FAM:CAT:DGIDB:165aa4303ed0	Edifoligide	0.6857	1.091	0	0.00117343	opposes	0	0	WWOX|WWOX|down|hops1-3|E2F1|0.00117		none
+Q1	Q1_protein_tiersABC	opposes	4	FAM:CAT:DGIDB:25c86c6df239	Edifoligide Sodium	0.6857	1.091	0	0.00117343	opposes	0	0	WWOX|WWOX|down|hops1-3|E2F1|0.00117		none
+Q1	Q1_protein_tiersABC	opposes	5	FAM:CAT:DGIDB:b5db37404a51	Arachidonic Acid	0.5551	0.6502	0	7.36949e-05	opposes	0	0	WWOX|WWOX|down|hops1-3|PRKCZ|7.37e-05		none
+Q1	Q1_protein_tiersABC	opposes	6	FAM:CAT:CHEMBL4650278	REVUMENIB SESQUIFUMARATE	0.317	0.4986	0	0.000277432	opposes	0	0	WWOX|WWOX|down|hops1-3|MEN1|0.000277		none
+Q1	Q1_protein_tiersABC	opposes	7	FAM:CAT:DGIDB:b459313a7710	Anti-Hif-1Alpha Lna Antisense Oligonucleotide Ezn-2968	0.1969	0.1719	0	5.31993e-07	opposes	0	0	WWOX|WWOX|down|hops1-3|HIF1A|5.32e-07		none
+Q1	Q1_protein_tiersABC	opposes	8	FAM:CAT:DGIDB:b884da5f3057	Px-478	0.1969	0.1719	0	5.31993e-07	opposes	0	0	WWOX|WWOX|down|hops1-3|HIF1A|5.32e-07		none
+Q1	Q1_protein_tiersABC	opposes	9	FAM:CAT:DGIDB:7cf9c39c9e58	Nitroglycerin	0.1969	0.1719	0	2.37915e-07	opposes	0	0	WWOX|WWOX|down|hops1-3|HIF1A|2.38e-07		none
+Q1	Q1_protein_tiersABC	opposes	10	FAM:CAT:DGIDB:b63eeea56658	Bi6015	0.1937	0.2167	0	-4.11086e-07	mimics	0	0	WWOX|WWOX|down|hops1-3|HNF4A|-4.11e-07		none
+Q1	Q1_protein_tiersABC	opposes	11	FAM:CAT:DGIDB:15b56108e84d	Onapristone	0.1928	0.1269	0	3.2766e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|PGR|3.28e-06		none
+Q1	Q1_protein_tiersABC	opposes	12	FAM:CAT:DGIDB:c38fb95dbaa5	Zk112993	0.1928	0.1269	0	3.2766e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|PGR|3.28e-06		none
+Q1	Q1_protein_tiersABC	opposes	13	FAM:CAT:CHEMBL1276308	MIFEPRISTONE	0.1712	0.126	0	4.013e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|PGR|4.01e-06		none
+Q1	Q1_protein_tiersABC	opposes	14	FAM:CAT:CHEMBL1215331	PF-03882845	0.1686	0.1523	0	1.83311e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|PGR|1.83e-06		none
+Q1	Q1_protein_tiersABC	opposes	15	FAM:CAT:DGIDB:ec3ecdc40c41	Aspirin	0.1589	0.09578	0	5.59721e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|PDE2A|5.6e-06		none
+Q1	Q1_protein_tiersABC	opposes	16	FAM:CAT:DGIDB:59f2e13deadd	Ospemifene	0.1561	0.1634	0	1.9007e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|ESR1|1.9e-06		none
+Q1	Q1_protein_tiersABC	opposes	17	FAM:CAT:DGIDB:60c4300ad86b	Bazedoxifene	0.1561	0.1634	0	1.9007e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|ESR1|1.9e-06		none
+Q1	Q1_protein_tiersABC	opposes	18	FAM:CAT:CHEMBL1358	FULVESTRANT	0.1543	0.1633	0	3.28383e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|ESR1|3.28e-06		none
+Q1	Q1_protein_tiersABC	opposes	19	FAM:CAT:CHEMBL3545210	TAS-108	0.1543	0.1633	0	3.28383e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|ESR1|3.28e-06		none
+Q1	Q1_protein_tiersABC	opposes	20	FAM:CAT:CHEMBL3581693	BRILANESTRANT	0.1543	0.1633	0	3.28383e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|ESR1|3.28e-06		none
+Q1	Q1_protein_tiersABC	opposes	21	FAM:CAT:CHEMBL4297509	ELACESTRANT	0.1543	0.1633	0	3.28383e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|ESR1|3.28e-06		none
+Q1	Q1_protein_tiersABC	opposes	22	FAM:CAT:CHEMBL4475463	AMCENESTRANT	0.1543	0.1633	0	3.28383e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|ESR1|3.28e-06		none
+Q1	Q1_protein_tiersABC	opposes	23	FAM:CAT:CHEMBL4650316	GIREDESTRANT	0.1543	0.1633	0	3.28383e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|ESR1|3.28e-06		none
+Q1	Q1_protein_tiersABC	opposes	24	FAM:CAT:CHEMBL4650365	CAMIZESTRANT	0.1543	0.1633	0	3.28383e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|ESR1|3.28e-06		none
+Q1	Q1_protein_tiersABC	opposes	25	FAM:CAT:DGIDB:4a2b31fc1086	Camizestrant	0.1543	0.1633	0	3.28383e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|ESR1|3.28e-06		none
+Q1	Q1_protein_tiersABC	opposes	26	FAM:CAT:DGIDB:51ca711129b9	Clomiphene	0.1543	0.1633	0	3.28383e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|ESR1|3.28e-06		none
+Q1	Q1_protein_tiersABC	opposes	27	FAM:CAT:DGIDB:7ce9007760d4	Amcenestrant	0.1543	0.1633	0	3.28383e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|ESR1|3.28e-06		none
+Q1	Q1_protein_tiersABC	opposes	28	FAM:CAT:DGIDB:8072505249c7	Imlunestrant	0.1543	0.1633	0	3.28383e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|ESR1|3.28e-06		none
+Q1	Q1_protein_tiersABC	opposes	29	FAM:CAT:DGIDB:9286266ea33c	Brilanestrant	0.1543	0.1633	0	3.28383e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|ESR1|3.28e-06		none
+Q1	Q1_protein_tiersABC	opposes	30	FAM:CAT:DGIDB:a4349a0e6c97	Erd-308	0.1543	0.1633	0	3.28383e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|ESR1|3.28e-06		none
+Q1	Q1_protein_tiersABC	opposes	31	FAM:CAT:DGIDB:bc21325ec143	Vintafolide	0.1543	0.1633	0	3.28383e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|ESR1|3.28e-06		none
+Q1	Q1_protein_tiersABC	opposes	32	FAM:CAT:DGIDB:bf4508b20cd0	Methyl-Piperidino-Pyrazole	0.1543	0.1633	0	3.28383e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|ESR1|3.28e-06		none
+Q1	Q1_protein_tiersABC	opposes	33	FAM:CAT:DGIDB:c3756a4bd6c7	Lsz102	0.1543	0.1633	0	3.28383e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|ESR1|3.28e-06		none
+Q1	Q1_protein_tiersABC	opposes	34	FAM:CAT:DGIDB:f8f8a78bd93d	Hexestrol	0.1543	0.1633	0	3.28383e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|ESR1|3.28e-06		none
+Q1	Q1_protein_tiersABC	opposes	35	FAM:CAT:CHEMBL1093458	ENDOXIFEN	0.1543	0.1633	0	2.32202e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|ESR1|2.32e-06		none
+Q1	Q1_protein_tiersABC	opposes	36	FAM:CAT:DGIDB:0be6484eb827	Ro 41-5253	0.1452	0.1654	0	-2.56651e-07	mimics	0	0	WWOX|WWOX|down|hops1-3|RARA|-2.57e-07		none
+Q1	Q1_protein_tiersABC	opposes	37	FAM:CAT:DGIDB:89ce230eac69	Bms-189532	0.1452	0.1654	0	-2.56651e-07	mimics	0	0	WWOX|WWOX|down|hops1-3|RARA|-2.57e-07		none
+Q1	Q1_protein_tiersABC	opposes	38	FAM:CAT:DGIDB:9e339adae01c	Bms614	0.1452	0.1654	0	-2.56651e-07	mimics	0	0	WWOX|WWOX|down|hops1-3|RARA|-2.57e-07		none
+Q1	Q1_protein_tiersABC	opposes	39	FAM:CAT:CHEMBL271220	CORT 108297	0.1451	0.07214	0	1.52039e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|NR3C1|1.52e-06		none
+Q1	Q1_protein_tiersABC	opposes	40	FAM:CAT:CHEMBL3545391	ORG-34517	0.1451	0.07214	0	1.52039e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|NR3C1|1.52e-06		none
+Q1	Q1_protein_tiersABC	opposes	41	FAM:CAT:CHEMBL4068611	RELACORILANT	0.1451	0.07214	0	1.52039e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|NR3C1|1.52e-06		none
+Q1	Q1_protein_tiersABC	opposes	42	FAM:CAT:DGIDB:2ea4defd66a7	Miricorilant	0.1451	0.07214	0	1.52039e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|NR3C1|1.52e-06		none
+Q1	Q1_protein_tiersABC	opposes	43	FAM:CAT:DGIDB:50c2a146d931	Relacorilant	0.1451	0.07214	0	1.52039e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|NR3C1|1.52e-06		none
+Q1	Q1_protein_tiersABC	opposes	44	FAM:CAT:DGIDB:7b1c6df417ac	Org-34517	0.1451	0.07214	0	1.52039e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|NR3C1|1.52e-06		none
+Q1	Q1_protein_tiersABC	opposes	45	FAM:CAT:CHEMBL4297228	BRIVOLIGIDE	0.1448	0.1149	0	-1.13279e-06	mimics	0	0	WWOX|WWOX|down|hops1-3|EGR1|-1.13e-06		none
+Q1	Q1_protein_tiersABC	opposes	46	FAM:CAT:DGIDB:ae888d8dc593	Azd-5423	0.1417	0.06819	0	1.07508e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|NR3C1|1.08e-06		none
+Q1	Q1_protein_tiersABC	opposes	47	FAM:CAT:DGIDB:7b1b402689c3	Ezutromid	0.1395	0.1469	0	2.86187e-07	opposes	0	0	WWOX|WWOX|down|hops1-3|AHR|2.86e-07		none
+Q1	Q1_protein_tiersABC	opposes	48	FAM:CAT:DGIDB:7045a30c53de	Pf-9363	0.1394	0.1419	0	-6.27646e-06	mimics	0	0	WWOX|WWOX|down|hops1-3|KAT7|-6.28e-06		none
+Q1	Q1_protein_tiersABC	opposes	49	FAM:CAT:CHEMBL146032	LONAPRISAN	0.1361	0.1101	0	4.15485e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|PGR|4.15e-06		none
+Q1	Q1_protein_tiersABC	opposes	50	FAM:CAT:CHEMBL1908373	ONAPRISTONE	0.1361	0.1101	0	4.15485e-06	opposes	0	0	WWOX|WWOX|down|hops1-3|PGR|4.15e-06		none
+Q1	Q1_protein_tiersABC	mimics	1	FAM:CAT:CHEMBL3786673	EDASALONEXENT	-2.668	-2.196	0	-0.00210056	mimics	0	0	WWOX|WWOX|down|hops1-3|NFKB2|-0.0021		none
+Q1	Q1_protein_tiersABC	mimics	2	FAM:CAT:DGIDB:188c864b6592	Sb-747651A	-1.773	-1.47	0	-0.000388406	mimics	0	0	WWOX|WWOX|down|hops1-3|RPS6KA5|-0.000388		none
+Q1	Q1_protein_tiersABC	mimics	3	FAM:CAT:DGIDB:0144213450e7	Compound 24 [Pmid: 15955699]	-1.773	-1.47	0	-0.000388406	mimics	0	0	WWOX|WWOX|down|hops1-3|RPS6KA5|-0.000388		none
+Q1	Q1_protein_tiersABC	mimics	4	FAM:CAT:DGIDB:96bd6bd79082	Ly3405105	-1.753	0.004193	0	-0.000197314	mimics	0	0	WWOX|WWOX|down|hops1-3|CDK7|-0.000197		none
+Q1	Q1_protein_tiersABC	mimics	5	FAM:CAT:DGIDB:6b48651747ab	Mevociclib	-1.753	0.004193	0	-0.000197314	mimics	0	0	WWOX|WWOX|down|hops1-3|CDK7|-0.000197		none
+Q1	Q1_protein_tiersABC	mimics	6	FAM:CAT:DGIDB:2c4e6b034ad4	Thz1	-1.753	0.004193	0	-0.000197314	mimics	0	0	WWOX|WWOX|down|hops1-3|CDK7|-0.000197		none
+Q1	Q1_protein_tiersABC	mimics	7	FAM:CAT:DGIDB:f0ae7b99b80d	Halicin	-1.316	-0.08967	0	-0.000307646	mimics	0	0	WWOX|WWOX|down|hops1-3|MAPK8|-0.000308		none
+Q1	Q1_protein_tiersABC	mimics	8	FAM:CAT:DGIDB:b2ce55e5e71f	Compound 35 [Pmid: 23916259]	-1.316	-0.08967	0	-0.000217538	mimics	0	0	WWOX|WWOX|down|hops1-3|MAPK8|-0.000218		none
+Q1	Q1_protein_tiersABC	mimics	9	FAM:CAT:DGIDB:497cc58d16e0	Jnk Inhibitor 9L	-1.316	-0.08967	0	-0.000217538	mimics	0	0	WWOX|WWOX|down|hops1-3|MAPK8|-0.000218		none
+Q1	Q1_protein_tiersABC	mimics	10	FAM:CAT:DGIDB:445db364fa47	Compound 14I [Pmid: 37204466]	-1.189	-0.1072	0	-0.000121286	mimics	0	0	WWOX|WWOX|down|hops1-3|SKP2|-0.000121		none
+Q1	Q1_protein_tiersABC	mimics	11	FAM:CAT:DGIDB:7e973eb600c9	Compound 11 [Pmid: 26431428]	-1.167	-0.08967	0	-0.000137583	mimics	0	0	WWOX|WWOX|down|hops1-3|MAPK8|-0.000138		none
+Q1	Q1_protein_tiersABC	mimics	12	FAM:CAT:DGIDB:b771b7f96970	Compound 8 [Pmid: 17480064]	-1.099	-0.9344	0	-0.000411967	mimics	0	0	WWOX|WWOX|down|hops1-3|RPS6KA4|-0.000412		none
+Q1	Q1_protein_tiersABC	mimics	13	FAM:CAT:CHEMBL3393333	Gne-3511	-1.064	-0.0984	0	-0.000125596	mimics	0	0	WWOX|WWOX|down|hops1-3|MAPK8|-0.000126		none
+Q1	Q1_protein_tiersABC	mimics	14	FAM:CAT:DGIDB:74cc419c7176	Sy-5609	-1	0.002279	0	-0.000113919	mimics	0	0	WWOX|WWOX|down|hops1-3|CDK7|-0.000114		none
+Q1	Q1_protein_tiersABC	mimics	15	FAM:CAT:DGIDB:df5cf988ec5f	Cdk12 Inhibitor 2	-0.9688	-0.04329	0	-0.000109937	mimics	0	0	WWOX|WWOX|down|hops1-3|CDK7|-0.00011		none
+Q1	Q1_protein_tiersABC	mimics	16	FAM:CAT:DGIDB:3c05ad4af58c	Yl5084	-0.9216	-0.09181	0	-0.000217538	mimics	0	0	WWOX|WWOX|down|hops1-3|MAPK8|-0.000218		none
+Q1	Q1_protein_tiersABC	mimics	17	FAM:CAT:DGIDB:7ef0adfec698	Sp600125	-0.9216	-0.09181	0	-0.000177619	mimics	0	0	WWOX|WWOX|down|hops1-3|MAPK8|-0.000178		none
+Q1	Q1_protein_tiersABC	mimics	18	FAM:CAT:DGIDB:7991e75635a2	Bentamapimod	-0.9216	-0.09181	0	-0.000177619	mimics	0	0	WWOX|WWOX|down|hops1-3|MAPK8|-0.000178		none
+Q1	Q1_protein_tiersABC	mimics	19	FAM:CAT:DGIDB:5c43c5064b70	Tanzisertib	-0.9216	-0.09181	0	-0.000177619	mimics	0	0	WWOX|WWOX|down|hops1-3|MAPK8|-0.000178		none
+Q1	Q1_protein_tiersABC	mimics	20	FAM:CAT:DGIDB:5c2b9a9c2e70	Jnk Inhibitor Viii	-0.9216	-0.09181	0	-0.000177619	mimics	0	0	WWOX|WWOX|down|hops1-3|MAPK8|-0.000178		none
+Q1	Q1_protein_tiersABC	mimics	21	FAM:CAT:CHEMBL3545213	BENTAMAPIMOD	-0.9216	-0.09181	0	-0.000177619	mimics	0	0	WWOX|WWOX|down|hops1-3|MAPK8|-0.000178		none
+Q1	Q1_protein_tiersABC	mimics	22	FAM:CAT:CHEMBL2216824	Jnk-In-8	-0.9216	-0.09181	0	-0.000177619	mimics	0	0	WWOX|WWOX|down|hops1-3|MAPK8|-0.000178		none
+Q1	Q1_protein_tiersABC	mimics	23	FAM:CAT:CHEMBL1950289	TANZISERTIB	-0.9216	-0.09181	0	-0.000177619	mimics	0	0	WWOX|WWOX|down|hops1-3|MAPK8|-0.000178		none
+Q1	Q1_protein_tiersABC	mimics	24	FAM:CAT:DGIDB:ad931472df14	Compound 25C [Pmid: 36649216]	-0.9216	0.04116	0	-0.000137583	mimics	0	0	WWOX|WWOX|down|hops1-3|MAPK8|-0.000138		none
+Q1	Q1_protein_tiersABC	mimics	25	FAM:CAT:DGIDB:8a6c80403023	Ds96432529	-0.4338	-0.1018	0	-4.85127e-05	mimics	0	0	WWOX|WWOX|down|hops1-3|CDK8|-4.85e-05		none
+Q1	Q1_protein_tiersABC	direct_search	1	FAM:CAT:DGIDB:0bc1cf72f3bb	Sorafenib				0	unsigned_or_no_signed_direct_action		1	targets:WWOX		none
+Q1	Q1_protein_tiersABC	direct_search	2	FAM:CAT:DGIDB:925ab80c64cb	Gemcitabine					unsigned_or_no_signed_direct_action		1	targets:WWOX		
+Q1	Q1_protein_tiersABC	direct_search	3	FAM:CAT:DGIDB:eef19c54306d	Null					unsigned_or_no_signed_direct_action		1	targets:WWOX		
+Q1	Q1_protein_tiersABC	direct_search	4	FAM:CAT:DGIDB:f5e262598b4f	Recombinant Tumor Necrosis Factor Family Protein					unsigned_or_no_signed_direct_action		1	targets:WWOX		

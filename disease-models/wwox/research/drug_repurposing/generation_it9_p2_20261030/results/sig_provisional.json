@@ -1,5 +1,7 @@
 {
  "label": "provisional",
+ "seed_units_total": 15,
+ "seed_units_excluded_by_guard": 0,
  "signatures": 2069,
  "families": 848,
  "signatures_B": 1304,

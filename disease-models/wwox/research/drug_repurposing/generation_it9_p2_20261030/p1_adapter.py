@@ -7,6 +7,7 @@ Rules (all counted in the manifest; nothing is dropped silently):
     GO terms, ChEBI, STATE: and wildcard sets without a member list have no gene-level representation and are COUNTED, not used;
   * direction 'unchanged' is not a seed (a null observation) and is counted; 'uncertain' stays uncertain (conditional arms); P1 gives no magnitude, so level = 1.0 for every
     gene (a process spreads 1/sqrt(n) over its members) - equal weights, stated, not a finding;
+  * gene rows typed 'pathology' (cell counts, area fractions) are not gene-level seeds and are counted; phospho-site rows are written with direction uncertain (a phospho site is not kinase activity); guard_tag is carried per set (a tag may not be lost: asserted);
   * several rows on one gene in one set: all same direction -> defined; opposing or any uncertain -> uncertain (a conflict is never resolved by summing);
   * readout levels are never merged: expression, protein and phospho rows go to separate sets; function/pathology/activity rows on genes are separate sets too;
   * non-human rows (gene or every member of a set) need an HGNC ortholog link in hgnc_check.tsv (mgd_id_ortholog_link) and are written with that mapping; rows without it are dropped and counted; fly rows (tier D) are dropped.
@@ -28,7 +29,7 @@ seeds = rd(P1 / "seeds.tsv")
 proc = {r["process_id"]: r for r in rd(P1 / "process_ids.tsv")}
 hg = {r["symbol"].upper(): r for r in rd(P1 / "hgnc_check.tsv")}
 sha = hashlib.sha256((P1 / "seeds.tsv").read_bytes()).hexdigest()
-COLS = ["seed_id", "gene", "kind", "members", "direction", "level", "direction_status", "readout_level", "evidence_class", "species", "ortholog_map", "source_ref", "note"]
+COLS = ["seed_id", "gene", "kind", "members", "direction", "level", "direction_status", "readout_level", "evidence_class", "species", "ortholog_map", "source_ref", "note", "guard_tag"]
 EVCLASS = {"expression": "transcript_contrast", "protein": "protein_state", "phospho": "protein_state", "activity": "activity_state", "function": "phenotype_state", "pathology": "phenotype_state"}
 counts = collections.defaultdict(collections.Counter)
 groups = collections.defaultdict(lambda: collections.defaultdict(list))   # set -> key -> rows
@@ -41,6 +42,8 @@ for r in seeds:
         counts[q]["tier_not_selected"] += 1; continue
     if r["direction"] == "unchanged":
         counts[q]["unchanged_null_observation_not_a_seed"] += 1; continue
+    if r["level"] == "pathology" and r["entity_type"] in ("gene", "protein") and not r["process_id"]:
+        counts[q]["pathology_level_gene_row_not_a_gene_seed"] += 1; continue
     sp = r["species_observed"]
     sym = r["entity_symbol"].strip().upper() if r["entity_symbol"] else ""
     pid = r["process_id"].strip()
@@ -79,14 +82,21 @@ for sn, g in sorted(groups.items()):
     for (kind, key), lst in sorted(g.items()):
         dirs = {r["direction"] for r, *_ in lst}
         status = "defined" if len(dirs) == 1 and dirs <= {"up", "down"} else "uncertain"
+        phospho = any(r["level"] == "phospho" for r, *_ in lst)
+        if phospho:
+            status = "uncertain"   # a phospho-site change is not a change in kinase activity (Amendment 4)
+        tags = sorted({t for r, *_ in lst for t in (r.get("guard_tag") or "").split(";") if t})
         d = dirs.pop() if status == "defined" else "uncertain"
         r0, sp0, orth0, names0 = lst[0]
         sps = sorted({x[1] for x in lst})
         orth = orth0 if any(x[2] for x in lst) else ""
         rows.append(dict(seed_id=f"{sn}:{key}", gene=key if kind == "gene" else key, kind=kind, members=";".join(names0) if kind == "process" else "", direction=d, level="1.0",
-                         direction_status=status, readout_level=r0["level"] if r0["level"] in ("expression", "protein") else r0["level"],
+                         direction_status=status, readout_level=r0["level"],
                          evidence_class=EVCLASS[r0["level"]], species="human" if sps == ["human"] else "/".join(sps), ortholog_map=orth,
-                         source_ref=";".join(sorted({x[0]["seed_id"] for x in lst})), note=f"directions seen: {sorted({x[0]['direction'] for x in lst})}; tiers {sorted({x[0]['context_tier'] for x in lst})}; P1 gives no magnitude (equal weight)"))
+                         source_ref=";".join(sorted({x[0]["seed_id"] for x in lst})), note=f"directions seen: {sorted({x[0]['direction'] for x in lst})}; tiers {sorted({x[0]['context_tier'] for x in lst})}; P1 gives no magnitude (equal weight)" + ("; phospho-site row: direction treated as uncertain for activity" if phospho else ""), guard_tag=";".join(tags)))
+    placed_tags = {t for (_, _), lst in g.items() for r, *_ in lst for t in (r.get("guard_tag") or "").split(";") if t}
+    out_tags = {t for x in rows for t in x["guard_tag"].split(";") if t}
+    assert placed_tags == out_tags, ("guard tag lost", sn, placed_tags, out_tags)
     with open(OUT / f"{sn}.tsv", "w", encoding="utf-8", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=COLS, delimiter="\t", lineterminator="\n"); w.writeheader(); [w.writerow(x) for x in rows]
     manifest.append(dict(set=sn, seed_rows=len(rows), defined=sum(1 for x in rows if x["direction_status"] == "defined"), uncertain=sum(1 for x in rows if x["direction_status"] == "uncertain"),

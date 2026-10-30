@@ -1,0 +1,204 @@
+question	seed_set	arm	rank	family_id	name	Z_ind_robust_total_null	Z_ind_robust_indeg_null	seed_specific_both_nulls	Q_net_ind	compatible_action	conditional_on_uncertain_seeds	also_found_by_direct_search	contributing_seed_1	contributing_seed_2	evaluation_forbidden_on
+Q4	Q4_expression_tiersAB	opposes	1	FAM:CAT:DGIDB:738dec9ffd44	Compound 8A [Pmid: 23713581]	3.682	2.754	0	0.00121618	opposes	0	0	NPY|NPY|down|hops1-3|PTPRM|0.00122		none
+Q4	Q4_expression_tiersAB	opposes	2	FAM:CAT:CHEMBL1230541	Cgi1746	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	3	FAM:CAT:CHEMBL1873475	IBRUTINIB	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	4	FAM:CAT:CHEMBL2057915	Gdc-0834	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	5	FAM:CAT:CHEMBL3301600	SPEBRUTINIB BESYLATE	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	6	FAM:CAT:CHEMBL3545193	MSC-2364447	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	7	FAM:CAT:CHEMBL3702854	RILZABRUTINIB	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	8	FAM:CAT:CHEMBL3707348	ACALABRUTINIB	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	9	FAM:CAT:CHEMBL3900554	BMS-986142	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	10	FAM:CAT:CHEMBL3936761	ZANUBRUTINIB	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	11	FAM:CAT:CHEMBL4065122	FENEBRUTINIB	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	12	FAM:CAT:CHEMBL4071161	TIRABRUTINIB	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	13	FAM:CAT:CHEMBL4072833	EVOBRUTINIB	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	14	FAM:CAT:CHEMBL4114766	ATUZABRUTINIB	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	15	FAM:CAT:CHEMBL4163691	POSELTINIB	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	16	FAM:CAT:CHEMBL4297640	VECABRUTINIB	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	17	FAM:CAT:CHEMBL4297674	BRANEBRUTINIB	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	18	FAM:CAT:CHEMBL4594348	ELSUBRUTINIB	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	19	FAM:CAT:CHEMBL4650321	ORELABRUTINIB	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	20	FAM:CAT:CHEMBL4650323	TOLEBRUTINIB	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	21	FAM:CAT:CHEMBL4650338	EDRALBRUTINIB	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	22	FAM:CAT:CHEMBL4650485	PIRTOBRUTINIB	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	23	FAM:CAT:DGIDB:068aeaf22a50	Cinsebrutinib	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	24	FAM:CAT:DGIDB:0b2061b656a2	Zanubrutinib	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	25	FAM:CAT:DGIDB:12653e8e06c7	Sofnobrutinib	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	26	FAM:CAT:DGIDB:13728e6ab6dc	Pirtobrutinib	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	27	FAM:CAT:DGIDB:1bf6ba392558	Btk Inhibitor 16 [Pmid: 30122225]	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	28	FAM:CAT:DGIDB:2f4526341239	Spebrutinib Besylate	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	29	FAM:CAT:DGIDB:341d112e662e	Fenebrutinib	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	30	FAM:CAT:DGIDB:38f888d51ca7	Elsubrutinib	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	31	FAM:CAT:DGIDB:3c77e3ac5b84	Dd-03-171	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	32	FAM:CAT:DGIDB:40bbcacf0388	Tolebrutinib	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	33	FAM:CAT:DGIDB:4476f5c496e4	Bms-986142	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	34	FAM:CAT:DGIDB:44b0c65b08e2	Cnx-774	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	35	FAM:CAT:DGIDB:5fc231a5b885	Cgi560	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	36	FAM:CAT:DGIDB:634453a6965e	Compound 4G [Pmid: 30893553]	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	37	FAM:CAT:DGIDB:6d03c34fa1e7	Example A225 [Wo2012170976A2]	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	38	FAM:CAT:DGIDB:6e77ca1bf303	Vecabrutinib	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	39	FAM:CAT:DGIDB:7394eaefe42e	Tirabrutinib	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	40	FAM:CAT:DGIDB:7bae3d659dec	Remibrutinib	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	41	FAM:CAT:DGIDB:805c90c7cd8b	Compound 71 [Wo2018191577A1]	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	42	FAM:CAT:DGIDB:834ea90dfe54	Acalabrutinib Maleate	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	43	FAM:CAT:DGIDB:b7b428289af4	Luxeptinib	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	44	FAM:CAT:DGIDB:ba348e1c7077	Orelabrutinib	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	45	FAM:CAT:DGIDB:bc4993a39378	Evobrutinib	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	46	FAM:CAT:DGIDB:c2ba047bad82	Milrebrutinib	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	47	FAM:CAT:DGIDB:c5616f14da5c	Ptd10	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	48	FAM:CAT:DGIDB:ec2005879bc4	Chmfl-Btk-11	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	49	FAM:CAT:DGIDB:f94d877faa8b	Lfm-A13	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	opposes	50	FAM:CAT:DGIDB:fc25ca3f4ba3	Branebrutinib	3.682	2.754	0	0.000859966	opposes	0	0	NPY|NPY|down|hops1-3|BTK|0.00086		none
+Q4	Q4_expression_tiersAB	mimics	1	FAM:CAT:DGIDB:d9a35f76b751	Tomivosertib	-4.611	-0.01742	0	-0.000841837	mimics	0	0	GRIN2C|GRIN2C|down|hops1-3|CLK4|-0.00085	NPY|NPY|down|hops1-3|CLK4|8.5e-06	none
+Q4	Q4_expression_tiersAB	mimics	2	FAM:CAT:DGIDB:ce496ff00491	Stat3 Inhibitor 8Q	-3.685	-2.75	0	-0.00344183	mimics	0	0	NPY|NPY|down|hops1-3|STAT3|-0.00344	GRIN2C|GRIN2C|down|hops1-3|STAT3|-1.35e-06	none
+Q4	Q4_expression_tiersAB	mimics	3	FAM:CAT:DGIDB:830f4ec04842	Compound 6F [Pmid: 35476936]	-3.685	-2.75	0	-0.00344183	mimics	0	0	NPY|NPY|down|hops1-3|STAT3|-0.00344	GRIN2C|GRIN2C|down|hops1-3|STAT3|-1.35e-06	none
+Q4	Q4_expression_tiersAB	mimics	4	FAM:CAT:DGIDB:5af3dd6c5c76	Lll12	-3.685	-2.75	0	-0.00344183	mimics	0	0	NPY|NPY|down|hops1-3|STAT3|-0.00344	GRIN2C|GRIN2C|down|hops1-3|STAT3|-1.35e-06	none
+Q4	Q4_expression_tiersAB	mimics	5	FAM:CAT:DGIDB:0dfe60cde8de	Sd-91	-3.685	-2.75	0	-0.00344183	mimics	0	0	NPY|NPY|down|hops1-3|STAT3|-0.00344	GRIN2C|GRIN2C|down|hops1-3|STAT3|-1.35e-06	none
+Q4	Q4_expression_tiersAB	mimics	6	FAM:CAT:CHEMBL4452527	Sd-36	-3.685	-2.75	0	-0.00344183	mimics	0	0	NPY|NPY|down|hops1-3|STAT3|-0.00344	GRIN2C|GRIN2C|down|hops1-3|STAT3|-1.35e-06	none
+Q4	Q4_expression_tiersAB	mimics	7	FAM:CAT:CHEMBL3392776	C-188-9	-3.685	-2.75	0	-0.00344183	mimics	0	0	NPY|NPY|down|hops1-3|STAT3|-0.00344	GRIN2C|GRIN2C|down|hops1-3|STAT3|-1.35e-06	none
+Q4	Q4_expression_tiersAB	mimics	8	FAM:CAT:DGIDB:0ecbcd6c2a17	Compound 8U [Pmid: 31999451]	-3.685	-2.75	0	-0.00243374	mimics	0	0	NPY|NPY|down|hops1-3|STAT3|-0.00243	GRIN2C|GRIN2C|down|hops1-3|STAT3|-9.52e-07	none
+Q4	Q4_expression_tiersAB	mimics	9	FAM:CAT:CHEMBL1923234	WP 1066	-3.685	-2.75	0	-0.00243374	mimics	0	0	NPY|NPY|down|hops1-3|STAT3|-0.00243	GRIN2C|GRIN2C|down|hops1-3|STAT3|-9.52e-07	none
+Q4	Q4_expression_tiersAB	mimics	10	FAM:CAT:DGIDB:cad2b10535df	Mw01	-1.945	-0.02346	0	-0.000908763	mimics	0	0	GRIN2C|GRIN2C|down|hops1-3|CLK4|-0.000919	NPY|NPY|down|hops1-3|CLK4|9.82e-06	none
+Q4	Q4_expression_tiersAB	mimics	11	FAM:CAT:DGIDB:66ed9e130102	Mw05	-1.945	-0.02346	0	-0.000908763	mimics	0	0	GRIN2C|GRIN2C|down|hops1-3|CLK4|-0.000919	NPY|NPY|down|hops1-3|CLK4|9.82e-06	none
+Q4	Q4_expression_tiersAB	mimics	12	FAM:CAT:DGIDB:b0d90f466877	Camonsertib	-0.5768	-0.3778	0	-0.00396825	mimics	0	0	GRIN2C|GRIN2C|down|hops1-3|ATR|-0.00397		none
+Q4	Q4_expression_tiersAB	mimics	13	FAM:CAT:DGIDB:a07c7735e4d0	Az20	-0.5768	-0.3778	0	-0.00396825	mimics	0	0	GRIN2C|GRIN2C|down|hops1-3|ATR|-0.00397		none
+Q4	Q4_expression_tiersAB	mimics	14	FAM:CAT:DGIDB:54f69a6d1b4b	Elimusertib	-0.5768	-0.3778	0	-0.00396825	mimics	0	0	GRIN2C|GRIN2C|down|hops1-3|ATR|-0.00397		none
+Q4	Q4_expression_tiersAB	mimics	15	FAM:CAT:DGIDB:3d80de713937	Gartisertib	-0.5768	-0.3778	0	-0.00396825	mimics	0	0	GRIN2C|GRIN2C|down|hops1-3|ATR|-0.00397		none
+Q4	Q4_expression_tiersAB	mimics	16	FAM:CAT:DGIDB:12376451c30a	Tuvusertib	-0.5768	-0.3778	0	-0.00396825	mimics	0	0	GRIN2C|GRIN2C|down|hops1-3|ATR|-0.00397		none
+Q4	Q4_expression_tiersAB	mimics	17	FAM:CAT:DGIDB:014f815d97af	Ceralasertib	-0.5768	-0.3778	0	-0.00396825	mimics	0	0	GRIN2C|GRIN2C|down|hops1-3|ATR|-0.00397		none
+Q4	Q4_expression_tiersAB	mimics	18	FAM:CAT:CHEMBL4650286	M4344	-0.5768	-0.3778	0	-0.00396825	mimics	0	0	GRIN2C|GRIN2C|down|hops1-3|ATR|-0.00397		none
+Q4	Q4_expression_tiersAB	mimics	19	FAM:CAT:CHEMBL4647810	ELIMUSERTIB	-0.5768	-0.3778	0	-0.00396825	mimics	0	0	GRIN2C|GRIN2C|down|hops1-3|ATR|-0.00397		none
+Q4	Q4_expression_tiersAB	mimics	20	FAM:CAT:CHEMBL4285417	CERALASERTIB	-0.5768	-0.3778	0	-0.00396825	mimics	0	0	GRIN2C|GRIN2C|down|hops1-3|ATR|-0.00397		none
+Q4	Q4_expression_tiersAB	mimics	21	FAM:CAT:CHEMBL3989870	BERZOSERTIB	-0.5768	-0.3778	0	-0.00396825	mimics	0	0	GRIN2C|GRIN2C|down|hops1-3|ATR|-0.00397		none
+Q4	Q4_expression_tiersAB	mimics	22	FAM:CAT:CHEMBL1766779	Ve-821	-0.5768	-0.3778	0	-0.00396825	mimics	0	0	GRIN2C|GRIN2C|down|hops1-3|ATR|-0.00397		none
+Q4	Q4_expression_tiersAB	mimics	23	FAM:CAT:DGIDB:09a08406c920	Bay-8400	-0.3941	-0.3013	0	-0.00196951	mimics	0	0	GRIN2C|GRIN2C|down|hops1-3|ATR|-0.00197	NPY|NPY|down|hops1-3|PRKDC|9.09e-07	none
+Q4	Q4_expression_tiersAB	mimics	24	FAM:CAT:DGIDB:fb197a69a54e	Berzosertib	-0.3821	-0.2724	0	-0.00198481	mimics	0	0	GRIN2C|GRIN2C|down|hops1-3|ATR|-0.00198	NPY|NPY|down|hops1-3|MTOR|-6.82e-07	none
+Q4	Q4_expression_tiersAB	mimics	25	FAM:CAT:DGIDB:6505fa3daab7	Paclitaxel	-0.3297	-0.3209	0	7.96989e-07	opposes	0	0	NPY|NPY|down|hops1-3|TUBB|6.48e-07	GRIN2C|GRIN2C|down|hops1-3|NR1I2|1.49e-07	none
+Q4	Q4_expression_tiersAB	direct_search	1	FAM:CAT:DGIDB:db51bba9e470	Isospaglumic Acid				1	opposes		1	targets:GRM3		none
+Q4	Q4_expression_tiersAB	direct_search	2	FAM:CAT:CHEMBL1254766	DEXTRORPHAN				-0.707107	mimics		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	3	FAM:CAT:CHEMBL2105707	POMAGLUMETAD METHIONIL				0.707107	opposes		1	targets:GRM3		none
+Q4	Q4_expression_tiersAB	direct_search	4	FAM:CAT:CHEMBL3545270	LY2969822				0.707107	opposes		1	targets:GRM3		none
+Q4	Q4_expression_tiersAB	direct_search	5	FAM:CAT:CHEMBL375611	LY404039				0.707107	opposes		1	targets:GRM3		none
+Q4	Q4_expression_tiersAB	direct_search	6	FAM:CAT:DGIDB:5effa7381e1e	Pomaglumetad Methionil				0.707107	opposes		1	targets:GRM3		none
+Q4	Q4_expression_tiersAB	direct_search	7	FAM:CAT:DGIDB:ce63378d51cd	(2R,3R)-Apdc				0.707107	opposes		1	targets:GRM3		none
+Q4	Q4_expression_tiersAB	direct_search	8	FAM:CAT:DGIDB:d0aabe6a6f00	Ly395756				-0.707107	mimics		1	targets:GRM3		none
+Q4	Q4_expression_tiersAB	direct_search	9	FAM:CAT:DGIDB:f9c35a07bf9f	Levorphanol				-0.707107	mimics		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	10	FAM:CAT:DGIDB:6548482cdfa6	Ly379268				0.57735	opposes		1	targets:GRM3		none
+Q4	Q4_expression_tiersAB	direct_search	11	FAM:CAT:DGIDB:c4bdb6c8b262	(+)-Mcpg				-0.57735	mimics		1	targets:GRM3		none
+Q4	Q4_expression_tiersAB	direct_search	12	FAM:CAT:DGIDB:f1465322f2a2	Margatoxin				-0.57735	mimics		1	targets:KCNA2		none
+Q4	Q4_expression_tiersAB	direct_search	13	FAM:CAT:CHEMBL8759	EGLUMETAD				0.5	opposes		1	targets:GRM3		none
+Q4	Q4_expression_tiersAB	direct_search	14	FAM:CAT:DGIDB:11dcd9a41857	D-Ccpene				-0.5	mimics		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	15	FAM:CAT:DGIDB:255ce6a4a3eb	Dextromethorphan Polistirex				-0.5	mimics		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	16	FAM:CAT:DGIDB:2a8f29507705	Dcg-Iv				0.5	opposes		1	targets:GRM3		none
+Q4	Q4_expression_tiersAB	direct_search	17	FAM:CAT:DGIDB:3af0766b5a01	[3H]Mdl105519				-0.5	mimics		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	18	FAM:CAT:DGIDB:4b8e1694eb56	Dizocilpine				-0.5	mimics		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	19	FAM:CAT:DGIDB:52d01b8327f7	Cgp37849				-0.5	mimics		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	20	FAM:CAT:DGIDB:71c5708d2fca	L689560				-0.5	mimics		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	21	FAM:CAT:DGIDB:79d9fde1e294	Ubp141				-0.5	mimics		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	22	FAM:CAT:DGIDB:7a0554580c65	Selfotel				-0.5	mimics		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	23	FAM:CAT:DGIDB:7eb00d275f22	N1-Dansyl-Spermine				-0.5	mimics		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	24	FAM:CAT:DGIDB:b0ca5cf2303c	D-Ap5				-0.5	mimics		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	25	FAM:CAT:DGIDB:c074cb76e927	Conantokin-G				-0.5	mimics		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	26	FAM:CAT:DGIDB:ca0cbcf4f1e9	Gv196771A				-0.5	mimics		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	27	FAM:CAT:DGIDB:e1b85a54dc9c	Phencyclidine				-0.5	mimics		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	28	FAM:CAT:DGIDB:f5aacf22df23	Ly233053				-0.5	mimics		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	29	FAM:CAT:DGIDB:f9ecb57f1990	L701324				-0.5	mimics		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	30	FAM:CAT:CHEMBL291278	N-METHYL-D-ASPARTIC ACID (NMDA)				0.447214	opposes		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	31	FAM:CAT:DGIDB:043f52a79646	L-Ccg-I				0.447214	opposes		1	targets:GRM3		none
+Q4	Q4_expression_tiersAB	direct_search	32	FAM:CAT:DGIDB:0cb76630431d	Serine, D-				0.447214	opposes		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	33	FAM:CAT:DGIDB:143cc91f37a7	(1S,3R)-Acpd				0.447214	opposes		1	targets:GRM3		none
+Q4	Q4_expression_tiersAB	direct_search	34	FAM:CAT:DGIDB:2062f50d5e38	[3H]Cgp39653				-0.447214	mimics		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	35	FAM:CAT:DGIDB:2c655dcafeea	[3H]Dizocilpine				-0.447214	mimics		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	36	FAM:CAT:DGIDB:34eebcba2b28	Aspartic Acid				0.447214	opposes		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	37	FAM:CAT:DGIDB:3aa598685369	Homoquinolinic Acid				0.447214	opposes		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	38	FAM:CAT:DGIDB:50b9c763a7f1	(Rs)-(Tetrazol-5-Yl)Glycine				0.447214	opposes		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	39	FAM:CAT:DGIDB:648084fa2168	[3H]Cpp				-0.447214	mimics		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	40	FAM:CAT:DGIDB:8007dbf268ec	[3H]Cgp61594				-0.447214	mimics		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	41	FAM:CAT:DGIDB:8a52a55f3a98	[3H]L689560				-0.447214	mimics		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	42	FAM:CAT:DGIDB:9ec52dbec023	[3H]D-Aspartic Acid				0.447214	opposes		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	43	FAM:CAT:DGIDB:b98350579779	[3H]Cgs19755				-0.447214	mimics		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	44	FAM:CAT:DGIDB:42d5d5465a4d	5,7-Dichlorokynurenic Acid				-0.408248	mimics		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	45	FAM:CAT:DGIDB:cc0e62936d06	Glycine				0.408248	opposes		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	46	FAM:CAT:CHEMBL1094	FELBAMATE				-0.377964	mimics		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	47	FAM:CAT:CHEMBL1207366	GW468816				-0.377964	mimics		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	48	FAM:CAT:CHEMBL1255840	NEBOGLAMINE				0.377964	opposes		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	49	FAM:CAT:CHEMBL1569	AMANTADINE HYDROCHLORIDE				-0.377964	mimics		1	targets:GRIN2C		none
+Q4	Q4_expression_tiersAB	direct_search	50	FAM:CAT:CHEMBL1699	MEMANTINE HYDROCHLORIDE				-0.377964	mimics		1	targets:GRIN2C		none
+Q4	Q4_protein_tiersAB	opposes	1	FAM:CAT:CHEMBL2105662	LOMITAPIDE MESYLATE	8.392	7.39	1	0.00431163	opposes	0	0	GAD1|GAD1|down|hops1-3|P4HB|0.00431		none
+Q4	Q4_protein_tiersAB	opposes	2	FAM:CAT:CHEMBL2105804	IMPLITAPIDE	8.392	7.39	1	0.00431163	opposes	0	0	GAD1|GAD1|down|hops1-3|P4HB|0.00431		none
+Q4	Q4_protein_tiersAB	opposes	3	FAM:CAT:CHEMBL4297326	SLX-4090	8.392	7.39	1	0.00431163	opposes	0	0	GAD1|GAD1|down|hops1-3|P4HB|0.00431		none
+Q4	Q4_protein_tiersAB	opposes	4	FAM:CAT:DGIDB:3b44d33b9351	Slx-4090	8.392	7.39	1	0.00431163	opposes	0	0	GAD1|GAD1|down|hops1-3|P4HB|0.00431		none
+Q4	Q4_protein_tiersAB	opposes	5	FAM:CAT:DGIDB:71634dc5ca10	Implitapide	8.392	7.39	1	0.00431163	opposes	0	0	GAD1|GAD1|down|hops1-3|P4HB|0.00431		none
+Q4	Q4_protein_tiersAB	opposes	6	FAM:CAT:DGIDB:d0c15660ccb8	Lomitapide Mesylate	8.392	7.39	1	0.00431163	opposes	0	0	GAD1|GAD1|down|hops1-3|P4HB|0.00431		none
+Q4	Q4_protein_tiersAB	opposes	7	FAM:CAT:DGIDB:a0ae8af82104	Tucidinostat	6.385	6.012	1	0.0105495	opposes	0	0	GAD1|GAD1|down|hops1-3|HDAC1|0.0105	GAD2|GAD2|down|hops1-3|HDAC1|2.43e-05	none
+Q4	Q4_protein_tiersAB	opposes	8	FAM:CAT:DGIDB:1b57e9fae79e	Ots964	6.086	5.275	1	0.0026376	opposes	0	0	GAD1|GAD1|down|hops1-3|PBK|0.00263	GAD2|GAD2|down|hops1-3|PBK|6.02e-06	none
+Q4	Q4_protein_tiersAB	opposes	9	FAM:CAT:DGIDB:2fe3ff7e7633	Apicidin	4.565	3.653	1	0.00576879	opposes	0	0	GAD1|GAD1|down|hops1-3|HDAC1|0.00535	GAD2|GAD2|down|hops1-3|HDAC8|0.000419	none
+Q4	Q4_protein_tiersAB	opposes	10	FAM:CAT:CHEMBL1200598	DIETHYLSTILBESTROL DIPHOSPHATE	4.475	4.088	1	0.00610354	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.0061	GAD1|GAD1|down|hops1-3|ESR1|1.64e-06	none
+Q4	Q4_protein_tiersAB	opposes	11	FAM:CAT:CHEMBL1201165	QUINESTROL	4.475	4.088	1	0.00610354	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.0061	GAD1|GAD1|down|hops1-3|ESR1|1.64e-06	none
+Q4	Q4_protein_tiersAB	opposes	12	FAM:CAT:CHEMBL1201466	ESTROGENS, CONJUGATED SYNTHETIC A	4.475	4.088	1	0.00610354	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.0061	GAD1|GAD1|down|hops1-3|ESR1|1.64e-06	none
+Q4	Q4_protein_tiersAB	opposes	13	FAM:CAT:CHEMBL1201467	SYNTHETIC CONJUGATED ESTROGENS, B	4.475	4.088	1	0.00610354	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.0061	GAD1|GAD1|down|hops1-3|ESR1|1.64e-06	none
+Q4	Q4_protein_tiersAB	opposes	14	FAM:CAT:CHEMBL1201468	ESTROGENS, ESTERIFIED	4.475	4.088	1	0.00610354	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.0061	GAD1|GAD1|down|hops1-3|ESR1|1.64e-06	none
+Q4	Q4_protein_tiersAB	opposes	15	FAM:CAT:CHEMBL1201649	ESTROGENS, CONJUGATED	4.475	4.088	1	0.00610354	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.0061	GAD1|GAD1|down|hops1-3|ESR1|1.64e-06	none
+Q4	Q4_protein_tiersAB	opposes	16	FAM:CAT:CHEMBL1230314	ESTETROL ANHYDROUS	4.475	4.088	1	0.00610354	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.0061	GAD1|GAD1|down|hops1-3|ESR1|1.64e-06	none
+Q4	Q4_protein_tiersAB	opposes	17	FAM:CAT:CHEMBL3545274	MK-6913	4.475	4.088	1	0.00610354	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.0061	GAD1|GAD1|down|hops1-3|ESR1|1.64e-06	none
+Q4	Q4_protein_tiersAB	opposes	18	FAM:CAT:DGIDB:006565434e24	Diarylpropionitrile	4.475	4.088	1	0.00610354	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.0061	GAD1|GAD1|down|hops1-3|ESR1|1.64e-06	none
+Q4	Q4_protein_tiersAB	opposes	19	FAM:CAT:DGIDB:486419346510	Ac-186	4.475	4.088	1	0.00610354	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.0061	GAD1|GAD1|down|hops1-3|ESR1|1.64e-06	none
+Q4	Q4_protein_tiersAB	opposes	20	FAM:CAT:DGIDB:79d6fb3c3c09	Estetrol	4.475	4.088	1	0.00610354	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.0061	GAD1|GAD1|down|hops1-3|ESR1|1.64e-06	none
+Q4	Q4_protein_tiersAB	opposes	21	FAM:CAT:DGIDB:7a317b0e9875	Estrogens, Conjugated (Usp)	4.475	4.088	1	0.00610354	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.0061	GAD1|GAD1|down|hops1-3|ESR1|1.64e-06	none
+Q4	Q4_protein_tiersAB	opposes	22	FAM:CAT:DGIDB:8a3e93a80c06	Way200070	4.475	4.088	1	0.00610354	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.0061	GAD1|GAD1|down|hops1-3|ESR1|1.64e-06	none
+Q4	Q4_protein_tiersAB	opposes	23	FAM:CAT:DGIDB:9a65594663e8	Synthetic Conjugated Estrogens, B	4.475	4.088	1	0.00610354	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.0061	GAD1|GAD1|down|hops1-3|ESR1|1.64e-06	none
+Q4	Q4_protein_tiersAB	opposes	24	FAM:CAT:DGIDB:a34729bed515	Prinaberel	4.475	4.088	1	0.00610354	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.0061	GAD1|GAD1|down|hops1-3|ESR1|1.64e-06	none
+Q4	Q4_protein_tiersAB	opposes	25	FAM:CAT:DGIDB:b81c4f7f2883	Quinestrol	4.475	4.088	1	0.00610354	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.0061	GAD1|GAD1|down|hops1-3|ESR1|1.64e-06	none
+Q4	Q4_protein_tiersAB	opposes	26	FAM:CAT:DGIDB:bae9868a4fcf	Estrogens, Esterified (Usp)	4.475	4.088	1	0.00610354	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.0061	GAD1|GAD1|down|hops1-3|ESR1|1.64e-06	none
+Q4	Q4_protein_tiersAB	opposes	27	FAM:CAT:DGIDB:cff341dde758	Estriol	4.475	4.088	1	0.00610354	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.0061	GAD1|GAD1|down|hops1-3|ESR1|1.64e-06	none
+Q4	Q4_protein_tiersAB	opposes	28	FAM:CAT:DGIDB:e1171258c805	Lasofoxifene	4.475	4.088	1	0.00610354	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.0061	GAD1|GAD1|down|hops1-3|ESR1|1.64e-06	none
+Q4	Q4_protein_tiersAB	opposes	29	FAM:CAT:DGIDB:f38a1a97065e	Estrone	4.475	4.088	1	0.00610354	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.0061	GAD1|GAD1|down|hops1-3|ESR1|1.64e-06	none
+Q4	Q4_protein_tiersAB	opposes	30	FAM:CAT:DGIDB:d1fc53fdb24f	Ethinyl Estradiol	4.475	4.088	1	0.00498352	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.00498	GAD1|GAD1|down|hops1-3|ESR1|1.34e-06	none
+Q4	Q4_protein_tiersAB	opposes	31	FAM:CAT:DGIDB:0c081e7c3bfe	Rgfp109	4.412	3.627	1	0.00758906	opposes	0	0	GAD1|GAD1|down|hops1-3|HDAC1|0.00757	GAD2|GAD2|down|hops1-3|HDAC1|1.76e-05	none
+Q4	Q4_protein_tiersAB	opposes	32	FAM:CAT:CHEMBL272980	MOCETINOSTAT	4.391	3.653	1	0.00515976	opposes	0	0	GAD1|GAD1|down|hops1-3|HDAC1|0.00478	GAD2|GAD2|down|hops1-3|HDAC8|0.000375	none
+Q4	Q4_protein_tiersAB	opposes	33	FAM:CAT:DGIDB:1caf8c518b16	Mocetinostat	4.391	3.653	1	0.00515976	opposes	0	0	GAD1|GAD1|down|hops1-3|HDAC1|0.00478	GAD2|GAD2|down|hops1-3|HDAC8|0.000375	none
+Q4	Q4_protein_tiersAB	opposes	34	FAM:CAT:CHEMBL198877	AUS-131	4.083	3.866	1	0.00657694	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.00658	GAD1|GAD1|down|hops1-3|ESR2|-1.99e-06	none
+Q4	Q4_protein_tiersAB	opposes	35	FAM:CAT:CHEMBL278703	ERTEBEREL	4.083	3.866	1	0.00657694	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.00658	GAD1|GAD1|down|hops1-3|ESR2|-1.99e-06	none
+Q4	Q4_protein_tiersAB	opposes	36	FAM:CAT:CHEMBL3545411	MF101	4.083	3.866	1	0.00657694	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.00658	GAD1|GAD1|down|hops1-3|ESR2|-1.99e-06	none
+Q4	Q4_protein_tiersAB	opposes	37	FAM:CAT:CHEMBL450940	PRINABEREL	4.083	3.866	1	0.00657694	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.00658	GAD1|GAD1|down|hops1-3|ESR2|-1.99e-06	none
+Q4	Q4_protein_tiersAB	opposes	38	FAM:CAT:DGIDB:4f028718b81f	Mf101	4.083	3.866	1	0.00657694	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.00658	GAD1|GAD1|down|hops1-3|ESR2|-1.99e-06	none
+Q4	Q4_protein_tiersAB	opposes	39	FAM:CAT:DGIDB:680142496473	Ferb 033	4.083	3.866	1	0.00657694	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.00658	GAD1|GAD1|down|hops1-3|ESR2|-1.99e-06	none
+Q4	Q4_protein_tiersAB	opposes	40	FAM:CAT:DGIDB:864a49d67c17	Erteberel	4.083	3.866	1	0.00657694	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.00658	GAD1|GAD1|down|hops1-3|ESR2|-1.99e-06	none
+Q4	Q4_protein_tiersAB	opposes	41	FAM:CAT:DGIDB:566b9f3d3b22	(S)-Liquiritigenin	4.083	3.866	1	0.0046506	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.00465	GAD1|GAD1|down|hops1-3|ESR2|-1.41e-06	none
+Q4	Q4_protein_tiersAB	opposes	42	FAM:CAT:CHEMBL2018302	TUBASTATIN A	3.898	3.882	1	0.00656073	opposes	0	0	GAD1|GAD1|down|hops1-3|HDAC1|0.00608	GAD2|GAD2|down|hops1-3|HDAC8|0.000484	none
+Q4	Q4_protein_tiersAB	opposes	43	FAM:CAT:DGIDB:1fc017f04da4	J27644	3.898	3.882	1	0.00656073	opposes	0	0	GAD1|GAD1|down|hops1-3|HDAC1|0.00608	GAD2|GAD2|down|hops1-3|HDAC8|0.000484	none
+Q4	Q4_protein_tiersAB	opposes	44	FAM:CAT:DGIDB:78cf90272935	Bisphenol A	3.776	3.485	1	0.00465029	opposes	0	0	GAD2|GAD2|down|hops1-3|ESR2|0.00465	GAD1|GAD1|down|hops1-3|ESR2|-1.61e-06	none
+Q4	Q4_protein_tiersAB	opposes	45	FAM:CAT:DGIDB:bc1ae3ae5cc3	Nexturastat A	3.672	3.68	1	0.00745966	opposes	0	0	GAD1|GAD1|down|hops1-3|HDAC1|0.00744	GAD2|GAD2|down|hops1-3|HDAC1|1.72e-05	none
+Q4	Q4_protein_tiersAB	opposes	46	FAM:CAT:DGIDB:9613cb9314a2	Resminostat	3.399	3.08	1	0.00577326	opposes	0	0	GAD1|GAD1|down|hops1-3|HDAC1|0.00535	GAD2|GAD2|down|hops1-3|HDAC8|0.000419	none
+Q4	Q4_protein_tiersAB	opposes	47	FAM:CAT:DGIDB:222c75ca1d6e	Suprastat	3.352	2.981	0	0.00515976	opposes	0	0	GAD1|GAD1|down|hops1-3|HDAC1|0.00478	GAD2|GAD2|down|hops1-3|HDAC8|0.000375	none
+Q4	Q4_protein_tiersAB	opposes	48	FAM:CAT:DGIDB:2b0652397469	Ricolinostat	3.352	2.981	0	0.00515976	opposes	0	0	GAD1|GAD1|down|hops1-3|HDAC1|0.00478	GAD2|GAD2|down|hops1-3|HDAC8|0.000375	none
+Q4	Q4_protein_tiersAB	opposes	49	FAM:CAT:DGIDB:c62597f0cb64	Citarinostat	3.352	2.981	0	0.00515976	opposes	0	0	GAD1|GAD1|down|hops1-3|HDAC1|0.00478	GAD2|GAD2|down|hops1-3|HDAC8|0.000375	none
+Q4	Q4_protein_tiersAB	opposes	50	FAM:CAT:DGIDB:3d764f7fdf0b	Bml-281	3.352	2.981	0	0.00471019	opposes	0	0	GAD1|GAD1|down|hops1-3|HDAC1|0.00437	GAD2|GAD2|down|hops1-3|HDAC8|0.000342	none
+Q4	Q4_protein_tiersAB	mimics	1	FAM:CAT:DGIDB:7d52ffd3bf7c	Compound 34 [Pmid: 24749861]	-8.38	-7.371	0	-0.0121951	mimics	0	0	GAD1|GAD1|down|hops1-3|ERN1|-0.0122		none
+Q4	Q4_protein_tiersAB	mimics	2	FAM:CAT:DGIDB:60c4300ad86b	Bazedoxifene	-4.475	-4.088	0	-0.00610354	mimics	0	0	GAD2|GAD2|down|hops1-3|ESR2|-0.0061	GAD1|GAD1|down|hops1-3|ESR1|-1.64e-06	none
+Q4	Q4_protein_tiersAB	mimics	3	FAM:CAT:DGIDB:59f2e13deadd	Ospemifene	-4.475	-4.088	0	-0.00610354	mimics	0	0	GAD2|GAD2|down|hops1-3|ESR2|-0.0061	GAD1|GAD1|down|hops1-3|ESR1|-1.64e-06	none
+Q4	Q4_protein_tiersAB	mimics	4	FAM:CAT:DGIDB:f1529f916473	Phtpp	-4.083	-3.866	0	-0.00657694	mimics	0	0	GAD2|GAD2|down|hops1-3|ESR2|-0.00658	GAD1|GAD1|down|hops1-3|ESR2|1.99e-06	none
+Q4	Q4_protein_tiersAB	mimics	5	FAM:CAT:DGIDB:2f5204af23a0	Hpte	-4.083	-3.866	0	-0.00657694	mimics	0	0	GAD2|GAD2|down|hops1-3|ESR2|-0.00658	GAD1|GAD1|down|hops1-3|ESR2|1.99e-06	none
+Q4	Q4_protein_tiersAB	mimics	6	FAM:CAT:DGIDB:d8934932f587	R,R-Thc	-2.647	-2.661	0	-0.00319766	mimics	0	0	GAD2|GAD2|down|hops1-3|ESR2|-0.0032	GAD1|GAD1|down|hops1-3|ESR1|4.45e-06	none
+Q4	Q4_protein_tiersAB	mimics	7	FAM:CAT:DGIDB:f8f8a78bd93d	Hexestrol	-2.207	-2.014	0	-0.00205477	mimics	0	0	GAD2|GAD2|down|hops1-3|ESR1|-0.00205	GAD1|GAD1|down|hops1-3|ESR1|-4.31e-06	none
+Q4	Q4_protein_tiersAB	mimics	8	FAM:CAT:DGIDB:c3756a4bd6c7	Lsz102	-2.207	-2.014	0	-0.00205477	mimics	0	0	GAD2|GAD2|down|hops1-3|ESR1|-0.00205	GAD1|GAD1|down|hops1-3|ESR1|-4.31e-06	none
+Q4	Q4_protein_tiersAB	mimics	9	FAM:CAT:DGIDB:bf4508b20cd0	Methyl-Piperidino-Pyrazole	-2.207	-2.014	0	-0.00205477	mimics	0	0	GAD2|GAD2|down|hops1-3|ESR1|-0.00205	GAD1|GAD1|down|hops1-3|ESR1|-4.31e-06	none
+Q4	Q4_protein_tiersAB	mimics	10	FAM:CAT:DGIDB:bc21325ec143	Vintafolide	-2.207	-2.014	0	-0.00205477	mimics	0	0	GAD2|GAD2|down|hops1-3|ESR1|-0.00205	GAD1|GAD1|down|hops1-3|ESR1|-4.31e-06	none
+Q4	Q4_protein_tiersAB	mimics	11	FAM:CAT:DGIDB:a4349a0e6c97	Erd-308	-2.207	-2.014	0	-0.00205477	mimics	0	0	GAD2|GAD2|down|hops1-3|ESR1|-0.00205	GAD1|GAD1|down|hops1-3|ESR1|-4.31e-06	none
+Q4	Q4_protein_tiersAB	mimics	12	FAM:CAT:DGIDB:9286266ea33c	Brilanestrant	-2.207	-2.014	0	-0.00205477	mimics	0	0	GAD2|GAD2|down|hops1-3|ESR1|-0.00205	GAD1|GAD1|down|hops1-3|ESR1|-4.31e-06	none
+Q4	Q4_protein_tiersAB	mimics	13	FAM:CAT:DGIDB:8072505249c7	Imlunestrant	-2.207	-2.014	0	-0.00205477	mimics	0	0	GAD2|GAD2|down|hops1-3|ESR1|-0.00205	GAD1|GAD1|down|hops1-3|ESR1|-4.31e-06	none
+Q4	Q4_protein_tiersAB	mimics	14	FAM:CAT:DGIDB:7ce9007760d4	Amcenestrant	-2.207	-2.014	0	-0.00205477	mimics	0	0	GAD2|GAD2|down|hops1-3|ESR1|-0.00205	GAD1|GAD1|down|hops1-3|ESR1|-4.31e-06	none
+Q4	Q4_protein_tiersAB	mimics	15	FAM:CAT:DGIDB:51ca711129b9	Clomiphene	-2.207	-2.014	0	-0.00205477	mimics	0	0	GAD2|GAD2|down|hops1-3|ESR1|-0.00205	GAD1|GAD1|down|hops1-3|ESR1|-4.31e-06	none
+Q4	Q4_protein_tiersAB	mimics	16	FAM:CAT:DGIDB:4a2b31fc1086	Camizestrant	-2.207	-2.014	0	-0.00205477	mimics	0	0	GAD2|GAD2|down|hops1-3|ESR1|-0.00205	GAD1|GAD1|down|hops1-3|ESR1|-4.31e-06	none
+Q4	Q4_protein_tiersAB	mimics	17	FAM:CAT:CHEMBL4650365	CAMIZESTRANT	-2.207	-2.014	0	-0.00205477	mimics	0	0	GAD2|GAD2|down|hops1-3|ESR1|-0.00205	GAD1|GAD1|down|hops1-3|ESR1|-4.31e-06	none
+Q4	Q4_protein_tiersAB	mimics	18	FAM:CAT:CHEMBL4650316	GIREDESTRANT	-2.207	-2.014	0	-0.00205477	mimics	0	0	GAD2|GAD2|down|hops1-3|ESR1|-0.00205	GAD1|GAD1|down|hops1-3|ESR1|-4.31e-06	none
+Q4	Q4_protein_tiersAB	mimics	19	FAM:CAT:CHEMBL4475463	AMCENESTRANT	-2.207	-2.014	0	-0.00205477	mimics	0	0	GAD2|GAD2|down|hops1-3|ESR1|-0.00205	GAD1|GAD1|down|hops1-3|ESR1|-4.31e-06	none
+Q4	Q4_protein_tiersAB	mimics	20	FAM:CAT:CHEMBL4297509	ELACESTRANT	-2.207	-2.014	0	-0.00205477	mimics	0	0	GAD2|GAD2|down|hops1-3|ESR1|-0.00205	GAD1|GAD1|down|hops1-3|ESR1|-4.31e-06	none
+Q4	Q4_protein_tiersAB	mimics	21	FAM:CAT:CHEMBL3581693	BRILANESTRANT	-2.207	-2.014	0	-0.00205477	mimics	0	0	GAD2|GAD2|down|hops1-3|ESR1|-0.00205	GAD1|GAD1|down|hops1-3|ESR1|-4.31e-06	none
+Q4	Q4_protein_tiersAB	mimics	22	FAM:CAT:CHEMBL3545210	TAS-108	-2.207	-2.014	0	-0.00205477	mimics	0	0	GAD2|GAD2|down|hops1-3|ESR1|-0.00205	GAD1|GAD1|down|hops1-3|ESR1|-4.31e-06	none
+Q4	Q4_protein_tiersAB	mimics	23	FAM:CAT:CHEMBL1358	FULVESTRANT	-2.207	-2.014	0	-0.00205477	mimics	0	0	GAD2|GAD2|down|hops1-3|ESR1|-0.00205	GAD1|GAD1|down|hops1-3|ESR1|-4.31e-06	none
+Q4	Q4_protein_tiersAB	mimics	24	FAM:CAT:CHEMBL1093458	ENDOXIFEN	-2.207	-2.014	0	-0.00145294	mimics	0	0	GAD2|GAD2|down|hops1-3|ESR1|-0.00145	GAD1|GAD1|down|hops1-3|ESR1|-3.05e-06	none
+Q4	Q4_protein_tiersAB	mimics	25	FAM:CAT:DGIDB:6492cf06b2ee	Mizoribine	-1.916	-1.789	0	-0.000469945	mimics	0	0	GAD2|GAD2|down|hops1-3|GMPS|-0.00047		none
+Q4	Q4_protein_tiersAB	direct_search	1	FAM:CAT:DGIDB:b78f2077f6f4	S-Allylglycine				-1.41421	mimics		1	targets:GAD1,GAD2		none
+Q4	Q4_protein_tiersAB	direct_search	2	FAM:CAT:DGIDB:48b09bf11952	Methamphetamine					unsigned_or_no_signed_direct_action		1	targets:GAD2		
+Q4	Q4_protein_tiersAB	direct_search	3	FAM:CAT:DGIDB:eef19c54306d	Null					unsigned_or_no_signed_direct_action		1	targets:GAD2		

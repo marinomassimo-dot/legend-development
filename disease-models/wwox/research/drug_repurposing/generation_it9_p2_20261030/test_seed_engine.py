@@ -63,4 +63,15 @@ ps = se.load_seeds(p); assert len(ps) == 4 and abs(ps.units[0]["level"] - 0.5) <
 s2 = se.Seeds([unit("C", 1), unit("D", -1, 0.5)]); e2 = mk(s2.units)
 S = s2.unit_matrix(e2.g.idx, e2.g.N); C = se.score(e2.A, S, e2.F) + se.score(e2.A, e2.g.influence_ind(S), e2.F)
 tot = q(e2, s2); assert all(abs(C[e2.comp.fidx[f]].sum() - tot[f]) < 1e-12 for f in tot)
+# guards: mutation tests (they FAIL if the guard is ignored)
+hdr2 = hdr.rstrip("\n") + "\tguard_tag\n"
+def gl(row, ignore):
+    pth = os.path.join(d, "g.tsv"); open(pth, "w").write(hdr2 + row + "\n"); return se.load_seeds(pth, ignore_guards=ignore)
+isr = "S1\tCHAC1\tgene\t\tdown\t1\tdefined\ttranscript\ttranscript_contrast\thuman\t\tx\t\tISR_SIGN_UNRESOLVED"
+assert gl(isr, False).units[0]["sign"] == 0 and gl(isr, True).units[0]["sign"] == -1          # ISR row enters only as a conditional arm
+plain = "S1\tCHAC1\tgene\t\tdown\t1\tdefined\ttranscript\ttranscript_contrast\thuman\t\tx\t\t"
+assert gl(plain, False).units[0]["sign"] == -1                                                  # untagged rows keep their direction
+tagged = [dict(unit("A", 1), guard_tags=(t,)) for t in ("IT7_READOUT6", "ISR_SIGN_UNRESOLVED", "HELD_OUT_ENDPOINT")] + [dict(unit("B", 1), guard_tags=())]
+assert [u["gene"] for u in se.sig_eligible(tagged)] == ["B"]                                    # signature arm keeps only untagged units
+assert len(se.sig_eligible(tagged, ignore=True)) == 4                                           # mutation: ignoring the guard lets all four in
 print("test_seed_engine: all checks passed")
