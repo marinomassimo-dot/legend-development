@@ -25,9 +25,9 @@
    "steps": [
     {
      "step": "P1 usable WWOX questions (residual function/protein fate, metabolism/stress, excitability/glia): measured alteration, direction, generating vs reserved inputs, falsifiers",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "scientist-a",
-     "evidence": ""
+     "evidence": "questions Q1-Q5 + secondary Q6,Q7; 131 seed rows (65 usable/26 reserved/35 unusable); independent verifier 4 HIGH+11 MEDIUM repaired"
     },
     {
      "step": "P2 generation path that embeds WWOX (altered genes/processes as seeds), sensitivity proof, comparison with direct target-to-compound and signatures; external models only if verifiable by a contained trial",
