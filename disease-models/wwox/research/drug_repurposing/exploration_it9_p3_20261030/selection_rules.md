@@ -109,3 +109,15 @@ as well, so a hub target is not by itself a failure of seed-specificity. Changes
   targets) are flagged `promiscuous`; a promiscuous family can be selected only as an `artefact_control` (still at most 2 in total).
 * Step 1 of section 5 now reads: C = pool families not excluded by section 3, not seed-own-target, not `promiscuous`, and not in a hub-artefact cluster (new definition).
 The comparison 'which clusters are artefacts of hubs' is kept in `clusters.tsv` under both the original definition (hub target alone, column `hub_target_share`) and the amended one (column `hub_artefact_cluster`).
+
+---
+
+## AMENDMENT 2 (2026-10-30, after discovering from aggregate catalogue statistics that 'identity resolved' (16,475) and 'usable by the method' (13,379) are NOT nested; before any family name was used)
+
+Seen (aggregate): of the 13,379 usable families only 4,038 are ChEMBL-resolved; 9,341 are DGIdb-only (origin `dgidb_only`). Of the 1,222 distinct families that appear in any P2 table (pool plus candidate tables) 843 are
+DGIdb-only; 382 of those carry a GtoPdb ligand id, 26 a DGIdb ChEMBL concept id. The P2 funnel line 'resolved 16,475 -> usable 13,379' therefore reads as a nested funnel but is an intersection of 4,038. Rule F4 as
+written (no ChEMBL parent = excluded) would exclude about two thirds of the pool for a catalogue-linkage reason, not a pharmacological one. Change to F4, replacing section 3 F4:
+* **Identity route** assigned to every pool family, in this order, and recorded in a column: (1) `catalogue_chembl` (family id is a ChEMBL id); (2) `reconciliation_chembl` (`catalog/ligand_reconciliation.tsv` `chembl_ref` with a recorded `structure_check`, decision `merged` or `out_of_selection`, never `rejected_conflict`/`unresolved`);
+  (3) `dgidb_concept_chembl` (ChEMBL id in the DGIdb concept ids); (4) `name_exact_unique` (the DGIdb/catalogue name equals exactly one ChEMBL `pref_name` or one synonym, case-insensitive; NO structure check: `identity UNVERIFIED`, listed as such); (5) `unresolved`.
+* **F4 now excludes only route (5)**. Routes (2) to (4) keep the family eligible and carry the route as a flag; a family selected through route (4) is marked identity UNVERIFIED in `selected.tsv` and the P4b order starts with identity confirmation.
+* Other rules unchanged. The number of families per route and per outcome is reported in the funnel.
