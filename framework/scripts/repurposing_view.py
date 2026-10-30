@@ -834,6 +834,7 @@ NEED_IT = {
     "NEED-MYC-PROGENITOR-PROLIFERATION": "Aumento di MYC e spostamento dello stato dei progenitori nella glia radiale priva di WWOX",
     "NEED-MTOR-AUTOPHAGY": "Segnalazione mTOR e autofagia",
     "NEED-NEUROINFLAMMATION-GLIA": "Neuroinfiammazione e gliosi",
+    "NEED-REDOX-NRF2": "Stato redox e tono di NRF2 (ROS, citochine Il6/Il1b)",
     "NEED-REDOX-OXIDATIVE-STRESS": "Equilibrio redox e specie reattive dell'ossigeno",
     "NEED-SYSTEMIC-GLYCAEMIA-GROWTH": "Scompenso metabolico sistemico",
 }

@@ -193,7 +193,7 @@
    },
    "^\\.ui\\.": {
     "class": "UI",
-    "values": 1069,
+    "values": 1070,
     "why": "Italian orientation text (builder data UI_IT and siblings)"
    }
   },
@@ -463,7 +463,7 @@
   "ROWNAME": 2247,
   "SRC_A": 179,
   "SRC_META": 256,
-  "UI": 1069
+  "UI": 1070
  },
  "embedded_sources": [
   {
@@ -526,7 +526,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 1999,
-   "sha256": "4263780ed1151a8507694b4fb36f3fdeab48a1b65804c2ed4eb79b7069ef1546"
+   "sha256": "a328162a7ff1d5a3f4bd1519e98ca9adf32d63f7391c5f3fdd2e12acd23e628c"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1636,
@@ -541,8 +541,8 @@
    "sha256": "36389f215e11e4fde0914fb8b94316e4eda1bac11239b15894bf1db719cba5a5"
   },
   "index.html": {
-   "bytes": 4002107,
-   "sha256": "e4835d7cc0a020af78b7ed47cf26be12d1feefb89333dc172d4adaf8826c9a60"
+   "bytes": 4003956,
+   "sha256": "6c55a78219de4ddd1390cde9e703bb5a6151737e85d96d009f014db4065de6a2"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",

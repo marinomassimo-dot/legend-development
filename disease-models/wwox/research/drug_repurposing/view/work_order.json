@@ -1,6 +1,6 @@
 {
   "schema": "legend.wwox.work_order/1",
-  "research_update": "2026-10-31",
+  "research_update": "2026-10-29",
   "authoring": "Hand-authored from the work order of the priority review (section 6) and updated by the iteration-6 cycles. Validated at build time by repurposing_view.py: every need id must exist in the needs register, the entries follow the order of the needs register (no ranking), the kind must agree with the F/C/P positions the view assigns to that need, and the dates are ISO dates. The research-update date is shown apart from the catalogue build date. No score, no probability, no ranking of treatments or of needs. Window states (P7, rescue-window record section 5) are a closed vocabulary; for cards the build checks that the card wording itself carries the early-window statement.",
   "kinds": [
     "verificare un'ipotesi",

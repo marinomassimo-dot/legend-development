@@ -23,6 +23,11 @@
    "title": "An opposing view on WWOX protein function as a tumor suppressor.",
    "year": "2003"
   },
+  "15843612": {
+   "journal": "J Neurosci",
+   "title": "Brain-specific knock-out of hypoxia-inducible factor-1alpha reduces rather than increases hypoxic-ischemic damage.",
+   "year": "2005"
+  },
   "16476929": {
    "journal": "Neurology",
    "title": "Dichloroacetate causes toxic neuropathy in MELAS: a randomized, controlled clinical trial.",
@@ -37,6 +42,11 @@
    "journal": "Mol Genet Metab",
    "title": "Magnetic resonance spectroscopic investigation of mitochondrial fuel metabolism and energetics in cultured human fibroblasts: effects of pyruvate dehydrogenase complex deficiency and dichloroacetate.",
    "year": "2006"
+  },
+  "17554006": {
+   "journal": "J Neurosci",
+   "title": "Neuron-specific inactivation of the hypoxia inducible factor 1 alpha increases brain injury in a mouse model of transient focal cerebral ischemia.",
+   "year": "2007"
   },
   "18411236": {
    "journal": "Pediatrics",
@@ -148,6 +158,11 @@
    "title": "Inhibition of Signal Transducer and Activator of Transcription 3 (STAT3) reduces neonatal hypoxic-ischaemic brain damage.",
    "year": "2016"
   },
+  "27211851": {
+   "journal": "Nat Commun",
+   "title": "Nrf2 suppresses macrophage inflammatory response by blocking proinflammatory cytokine transcription.",
+   "year": "2016"
+  },
   "27292539": {
    "journal": "Neuron",
    "title": "Oligodendroglial NMDA Receptors Regulate Glucose Import and Axonal Energy Metabolism.",
@@ -206,6 +221,11 @@
   "30853297": {
    "journal": "Eur J Paediatr Neurol",
    "title": "Novel WWOX deleterious variants cause early infantile epileptic encephalopathy, severe developmental delay and dysmorphism among Yemenite Jews.",
+   "year": "2019"
+  },
+  "31118567": {
+   "journal": "Drug Des Devel Ther",
+   "title": "Pharmacokinetics and pharmacodynamics of the novel Nrf2 activator omaveloxolone in primates.",
    "year": "2019"
   },
   "31340538": {
@@ -328,6 +348,11 @@
    "title": "Expansion of the clinical and molecular spectrum of WWOX-related epileptic encephalopathy.",
    "year": "2023"
   },
+  "36655171": {
+   "journal": "Brain Commun",
+   "title": "Chronic neuronal activation leads to elevated lactate dehydrogenase A through the AMP-activated protein kinase/hypoxia-inducible factor-1α hypoxia pathway.",
+   "year": "2023"
+  },
   "36828035": {
    "journal": "Prog Neurobiol",
    "title": "WWOX P47T partial loss-of-function mutation induces epilepsy, progressive neuroinflammation, and cerebellar degeneration in mice phenocopying human SCAR12.",
@@ -347,6 +372,11 @@
    "journal": "Brain",
    "title": "Sustained OMA1-mediated integrated stress response is beneficial for spastic ataxia type 5.",
    "year": "2024"
+  },
+  "37897534": {
+   "journal": "Cell Mol Life Sci",
+   "title": "Loss of fragile WWOX gene leads to senescence escape and genome instability.",
+   "year": "2023"
   },
   "38051092": {
    "journal": "Mol Cell Biol",
@@ -483,6 +513,11 @@
    "title": "Pyroptosis in epilepsy: from pathophysiological mechanisms to therapeutic strategies.",
    "year": "2026"
   },
+  "42150425": {
+   "journal": "Redox Biol",
+   "title": "Clinically approved HIF-PHIs modulate redox metabolism, cell growth, and angiogenesis independent of HIF-1α/HIF-2α.",
+   "year": "2026"
+  },
   "42179084": {
    "journal": "J Alzheimers Dis",
    "title": "Pharmacological targeting of the integrated stress response by 2BAct improves object recognition memory and reduces neuroinflammation in the 5xFAD model of Alzheimer's disease.",
@@ -541,6 +576,11 @@
   "42909904": {
    "journal": "Brain Commun",
    "title": "Alzheimer's disease risk gene Wwox controls amyloid pathology through metabolic reprogramming.",
+   "year": "2026"
+  },
+  "42939870": {
+   "journal": "Antioxidants (Basel)",
+   "title": "CDDO-EA Attenuates Acute Seizures and Suppresses Post-Status Epilepticus Epileptogenesis.",
    "year": "2026"
   },
   "625308": {
