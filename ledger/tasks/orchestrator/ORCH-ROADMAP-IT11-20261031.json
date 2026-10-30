@@ -1,0 +1,124 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT11-20261031",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Iteration 11 (ten-hour horizon): raise the quality of the engine's decisions, deepen one new functional question, interpret or close the complementary-logic trial, and propagate results to cards, queue, ranking and view. Recovery of WWOX function, compensation of its loss and partial benefit stay open. IT10 did not show new compound activity in a WWOX system; this does not erase the pre-existing WWOX results that feed phenotype-first entry. A computational result is not therapeutic efficacy.",
+ "START_UTC": "2026-10-30T22:37:00Z",
+ "BASELINE": "cc4d629b021ff33b82c88a8359fcaccc53bf8e6d = development/main (verified equal after fetch; CI success on that SHA)",
+ "AUTHORISED_QUEUE_20261031B": {
+  "MANDATE_STATE": "OPEN",
+  "P1_ENGINE": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P1.1 score vs shown chain: does the displayed chain represent the deciding contribution; show signed contributions and unshown share",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    },
+    {
+     "step": "P1.2 F5 vs proximity and null models: meaning and consumption of each measure; effect size vs threshold sensitivity",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    },
+    {
+     "step": "P1.3 origins: sensitivity of the two-deposit fold and of level handling to priority and selection",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    },
+    {
+     "step": "P1.4 selftest on 3-tuple toy edges: classify then repair minimally",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "P2_SCIENCE": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "P2.1 reconstruct the zero-of-five phenotype leads (out-of-universe, identity, action, path, null contribution, low rank)",
+     "status": "TODO",
+     "owner": "scientist",
+     "evidence": ""
+    },
+    {
+     "step": "P2.2 new functional question and cycle observation-to-discriminating-test",
+     "status": "TODO",
+     "owner": "scientist",
+     "evidence": ""
+    },
+    {
+     "step": "P2.3 NRF2: independent verification of a used dataset and only the decisive points",
+     "status": "TODO",
+     "owner": "scientist",
+     "evidence": ""
+    },
+    {
+     "step": "P2.4 Q1 ACK1/TNK2: which steps support product presence, amount, localisation, function, specificity; minimal discriminating measure",
+     "status": "TODO",
+     "owner": "scientist",
+     "evidence": ""
+    },
+    {
+     "step": "P2.5 HIF stays closed unless new input; minimal lab design for the referent",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "P3_COMPLEMENTARY": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "P3.1-3.3 JUMP/Enrichr diagnosis from sources; next most informative trial or precise closure",
+     "status": "TODO",
+     "owner": "scientist",
+     "evidence": ""
+    }
+   ]
+  },
+  "P4_PROPAGATION": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "P4 at least one IT11 result through candidate, qualification, card, queue, ranking, view; comparison with IT10 on a declared perimeter",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "P5_OPERATIONS": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "P5 web publication preparation, ORCH-REPURPOSING-10H reconciliation, licences affecting new content, radar and hourly monitor, targeted scouting",
+     "status": "TODO",
+     "owner": "scientist",
+     "evidence": ""
+    }
+   ]
+  },
+  "CLOSE": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "hostile review, integration, final battery in clean clone, push, CI, cleanup",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  }
+ },
+ "DECISIONS_TAKEN": [],
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
+}
