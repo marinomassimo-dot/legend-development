@@ -998,21 +998,32 @@
    "access": "not a product listing (gene-based modality); access UNKNOWN",
    "applicability_track": "A",
    "best_relevant_evidence": "carrier of the position, DR-AAV-SURV-HD: proportion of animals alive over time: increase [PMID 42422765] (+6 other favourable WWOX-system assertion(s) on the unit)",
+   "biological_promise_group": "G1",
    "contested_elsewhere": "no",
    "context": "mouse; constitutive Wwox deletion (targeted-deletion allele, FVB); depth complete_fulltext_read",
    "could_fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "already at the top group; it holds while no null, unfavourable or mixed WWOX-system result appears beside it | further questions: an overexpression or ceiling endpoint and a tumour-surveillance endpoint (none exists); whether the organoid radial-glia and SATB2 findings (same-laboratory human-system results, PMID 34268881 and 42397075, context only, not separate positions) hold | stored work-order statement: Quantified myelination would add a controlled row on the same need; a failure would move the card to C2 by rule; a treated-after-onset arm would show whether the word recovery may be used for that endpoint.",
    "counter_evidence_statements": "Rescue is not normalisation: unmyelinated axons per field remain about 52 versus about 26 in wild type. | The neuron-promoter vector corrected neuronal function without correcting radial-glia abnormalities (organoid arm); SATB2 mRNA overshoots wild type up to about eleven-fold in treated organoids. | No ceiling is measured and no tumour-surveillance or overexpression-toxicity endpoint exists in the mouse study; applied recombinant WWOX lowered viability of human ESC-derived cortical neurons in a preprint. More is not safer.",
+   "depth_of_evidence": "E4 card reviewed, 12 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "evaluated_on": "2026-10-30",
    "evaluation_depth": "E4 card reviewed, 12 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
+   "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
+   "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+   "feasibility_flags": [
+    "access_or_material_not_known",
+    "new_wet_lab_work_needed"
+   ],
    "group": "G1",
    "intervention": "AAV9-delivered human WWOX (gene addition)",
    "main_limit": "audit_repair_not_rejudged; high_dose_arm; n=30_vs_KO_n=10 | G1 rests on a single pertinence row: high-dose survival, n=30 vs untreated knockout n=10, flag audit_repair_not_rejudged; the audit repair on that row is still to be adjudicated before any claim-level use. Prevention or early-window result in a null mouse (injection P0 to P5; later intervention not explored); one laboratory (two papers, shared senior author).",
    "main_reason": "Strongest WWOX-specific case today (in the mouse null): lead position F1 on 'Restore WWOX protein in neurons by gene addition' (NEED-WWOX-GENE-ADDITION). On that need: 4 benefit, 2 partial_benefit, 2 unquantified; outside WWOX 0 favourable and 0 null or harm row(s) (some may be class-level rows from other compounds, see the limits). Mechanism: modality acting on WWOX dosage or transcript itself: no drug-target identity applies (not a compound question); coherence with the need is by design, not by a catalogue action. ",
    "next_experiment_or_control": "Does an intermediate vector level separate a threshold from a gradient, and is the benefit only prevented inside the first days of life or also recovered when treatment follows onset? No study has measured the phenotype at the day of injection.",
+   "next_experiment_priority": "NX2: informative: the next experiment resolves one limit, the decision moves one step at most",
+   "next_experiment_stake": "whether the strongest case holds beyond its single row and its window",
    "notes": "broad recovery lists one item because only gene addition has been tested in a WWOX system: this is a statement about test coverage, not about the field",
    "objective": "Broad, durable functional recovery (the evidence is prevention or early-window in a null mouse; recovery after onset is not shown)",
+   "origin": "known track from before IT9",
    "pathways_needs": "Systemic metabolic decompensation [C2; effect_observed_in_wwox_system]; Restore WWOX protein in neurons by gene addition [F1; effect_observed_in_wwox_system] -- 2 of 22 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 1,
    "sources_pmids": [
@@ -1024,27 +1035,38 @@
     "42587157"
    ],
    "unit_id": "U07",
+   "unit_type": "gene therapy / gene-based modality",
    "view": "general"
   },
   {
    "access": "Ethosuximide: prescription (US; openFDA NDC export_date 2026-10-27; identifier_match; 2026-10-27) -- descriptive listing evidence, not efficacy or safety",
    "applicability_track": "A",
    "best_relevant_evidence": "A-ETX-1: PTZ-provoked behavioural seizure score, late phase of the hour (graphical reading): decrease [PMID 32000863]",
+   "biological_promise_group": "G2b",
    "contested_elsewhere": "no",
    "context": "mouse; Wwox -/- constitutive null; depth complete_fulltext_read",
    "could_fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no reading-limit flag (found: graphical_reading); a favourable WWOX readout carries no design-limit flag (found: one_experiment); one and the same readout meets all four | stored work-order statement: A direct measurement would turn the F2 into a row with a mechanism; a negative would add a null to the need.",
    "counter_evidence_statements": "none stated beyond the counts",
+   "depth_of_evidence": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
    "evaluated_on": "2026-10-30",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
+   "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
+   "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+   "feasibility_flags": [
+    "access_or_material_not_known"
+   ],
    "group": "G2b",
    "intervention": "Ethosuximide",
    "main_limit": "control_variability_comparable_to_effect; endpoint_downstream_of_need; graphical_reading; late_phase_only; no_T_type_measurement; no_drug_by_genotype_test | same paper and laboratory as lithium (PMID 32000863), one experiment, i.p., one PTZ dose, effect confined to the late phase; no wild-type or drug-by-genotype test and the wild-type arm is floor-limited, so absence of a wild-type effect is unknown, not clean; the paper reports lithium better than ethosuximide | ethosuximide T-type potency in ChEMBL is above 5 mM (screening bound) or 600 uM with target unspecified, against a labelled plasma range of about 283 to 708 uM: T-type mediation of the observed effect is not measured",
    "main_reason": "Favourable but thin, specificity uncertain or untested: lead position F2 on 'Ethosuximide sensitivity of provoked seizure in Wwox loss' (NEED-T-TYPE-CALCIUM). On that need: 1 benefit; outside WWOX 0 favourable and 1 null or harm row(s) (some may be class-level rows from other compounds, see the limits). Mechanism: 1 catalogue family(ies); L2 over 2 (family, need) cell(s): 1 coherent, 1 direction_unresolved. ",
    "next_experiment_or_control": "Does the ethosuximide sensitivity reflect T-type involvement, given that no T-type measurement exists and a class-level progenitor-viability harm signal is recorded?",
+   "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
+   "next_experiment_stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)",
    "notes": "the one outside-WWOX harm row is class-level (other T-type blockers lowered progenitor viability; ethosuximide was not tested), not ethosuximide data",
    "objective": "Partial or bridge benefit",
+   "origin": "known track from before IT9",
    "pathways_needs": "Seizure and spasm control as a symptom-level need [F2; effect_observed_in_wwox_system]; Ethosuximide sensitivity of provoked seizure in Wwox loss [F2; effect_observed_in_wwox_system] -- 2 of 22 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 2,
    "sources_pmids": [
@@ -1053,27 +1075,39 @@
     "36537114"
    ],
    "unit_id": "U17",
+   "unit_type": "molecule",
    "view": "general"
   },
   {
    "access": "Lithium: experimental (jurisdiction not stated; ChEMBL ChEMBL_37 2026-05-01; source_statement; 2026-05-01) | Lithium: supplement (US; NIH ODS DSLD v9; name_only; 2026-10-28) -- descriptive listing evidence, not efficacy or safety",
    "applicability_track": "A",
    "best_relevant_evidence": "DR-LI-001: behavioural seizure stage after one provoking injection, preweaning mice: decrease [PMID 32000863]",
+   "biological_promise_group": "G2b",
    "contested_elsewhere": "no",
    "context": "mouse; Wwox-/- (homozygous null) versus Wwox+/+ littermates; depth complete_fulltext_read",
    "could_fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no design-limit flag (found: nonspecific_also_in_wild_type, one_experiment_N6_arm); one and the same readout meets all four | further questions: GSK3beta/IMPase engagement at the exposure reached at tolerated levels (no activity row exists for lithium) | stored work-order statement: A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays.",
    "counter_evidence_statements": "none stated beyond the counts",
+   "depth_of_evidence": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
    "evaluated_on": "2026-10-30",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
+   "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
+   "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+   "feasibility_flags": [
+    "access_or_material_not_known",
+    "new_wet_lab_work_needed"
+   ],
    "group": "G2b",
    "intervention": "Lithium",
    "main_limit": "nonspecific_also_in_wild_type; one_experiment_N6_arm | same paper and laboratory as ethosuximide (PMID 32000863): one experiment, i.p. LiCl; the effect also occurs in wild type and heterozygote; the GSK3beta link is a same-university cell study and ChEMBL holds no lithium GSK3/IMPase activity row",
    "main_reason": "Favourable but thin, specificity uncertain or untested: lead position F2 on 'Seizure and spasm control as a symptom-level need' (NEED-SEIZURE-CONTROL-SYMPTOMATIC). On that need: 1 benefit; outside WWOX 0 favourable and 0 null or harm row(s) (some may be class-level rows from other compounds, see the limits). Mechanism: 1 catalogue family(ies); L2 over 2 (family, need) cell(s): 1 none, 1 not_evaluable. ",
    "next_experiment_or_control": "Is the ethosuximide late-phase effect reproducible with a drug-by-genotype test and a same-day control, is the lithium effect genotype-specific, and do the denominators of the ketogenic-diet and vigabatrin case series keep their C2?",
+   "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
+   "next_experiment_stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)",
    "notes": "none",
    "objective": "Partial or bridge benefit",
+   "origin": "known track from before IT9",
    "pathways_needs": "GSK3beta de-repression [P3; card_inference_by_mechanism_no_catalogue_row]; Seizure and spasm control as a symptom-level need [F2; effect_observed_in_wwox_system] -- 2 of 22 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 3,
    "sources_pmids": [
@@ -1083,27 +1117,39 @@
     "36537114"
    ],
    "unit_id": "U24",
+   "unit_type": "molecule",
    "view": "general"
   },
   {
    "access": "Radiprodil: experimental (jurisdiction not stated; ChEMBL ChEMBL_37 2026-05-01; source_statement; 2026-05-01) | Selfotel: experimental (jurisdiction not stated; ChEMBL ChEMBL_37 2026-05-01; source_statement; 2026-05-01) | Perampanel: prescription (US; openFDA NDC export_date 2026-10-27; identifier_match; 2026-10-27) | Memantine: unknown/unverified (jurisdiction not stated; approval stated by a source but no US NDC listing matched b…; none; date not stated) -- descriptive listing evidence, not efficacy or safety",
    "applicability_track": "A",
    "best_relevant_evidence": "DR-W2-001: burst frequency: decrease [PMID 34634460]",
+   "biological_promise_group": "G2b",
    "contested_elsewhere": "no",
    "context": "mouse; Synapsin-Cre Wwox knockout versus wild type and heterozygote; depth complete_fulltext_read",
    "could_fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no design-limit flag (found: one_experiment_n5_slices, tool_compound_d-APV); one and the same readout meets all four | further questions: gap-junction dependence (carbenoxolone, 87 percent reduction) and bursting in heterozygote slices as rival explanations of the d-APV result | stored work-order statement: E1 decides whether an NMDAR gain is present or the dependence is permissive; a partial blocker is read only after E1, and without E1 a memantine result cannot be attributed to pyramidal receptors. A titration that cannot lower bursts inside a reachable range closes the magnesium strand.",
    "counter_evidence_statements": "none stated beyond the counts",
+   "depth_of_evidence": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "evaluated_on": "2026-10-30",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
+   "evidence_of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level; a tool-compound result supports the evaluation of the MECHANISM only, not of any clinical agent",
+   "evidence_of_molecule": "d-APV (competitive NMDAR block; a tool compound, not a candidate drug): tested in a WWOX system (1 assertion(s): 1 benefit)",
+   "feasibility_flags": [
+    "access_or_material_not_known",
+    "new_wet_lab_work_needed"
+   ],
    "group": "G2b",
    "intervention": "d-APV (a tool compound; the only agent with a WWOX readout) and the NMDAR/AMPAR class (memantine, perampanel, radiprodil and others are untested siblings)",
    "main_limit": "AMPAR_untested; full_competitive_block_only; n=5_slices_3_animals; one_experiment_n5_slices; tool_compound_d-APV | the only WWOX readout is d-APV (competitive NMDAR block, a tool compound) in neuron-specific knockout cortical slices from one laboratory; memantine, perampanel, radiprodil and the other class members have no WWOX data; rivals not excluded: carbenoxolone (a gap-junction blocker that may also block NMDAR) reduced bursts by 87 percent, heterozygote slices also burst (4 of 23) without behavioural seizures, and the mEPSC data show no overt change in the NMDAR:AMPA proportion",
    "main_reason": "Favourable but thin, specificity uncertain or untested: lead position F2 on 'Excitatory network gain and bursting' (NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR). On that need: 1 benefit; outside WWOX 6 favourable and 6 null or harm row(s) (some may be class-level rows from other compounds, see the limits). Mechanism: 4 catalogue family(ies); L2 over 6 (family, need) cell(s): 3 coherent, 2 direction_unresolved, 1 none. ",
    "next_experiment_or_control": "Which of three readings (NMDAR gain, permissive necessity, AMPAR-led drive) explains the d-APV-sensitive bursting, and does the bursting depend on the magnesium block? The d-APV result alone does not separate them.",
+   "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
+   "next_experiment_stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)",
    "notes": "none",
    "objective": "Partial or bridge benefit",
+   "origin": "known track from before IT9",
    "pathways_needs": "Excitatory network gain and bursting [F2; effect_observed_in_wwox_system] -- 1 of 22 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 4,
    "sources_pmids": [
@@ -1125,27 +1171,39 @@
     "9872743"
    ],
    "unit_id": "U21",
+   "unit_type": "tool compound + class of molecules",
    "view": "general"
   },
   {
    "access": "class level, no named catalogue identity; access categories from the cards: UNKNOWN",
    "applicability_track": "A",
    "best_relevant_evidence": "DR-D01-001: fraction of SOX2+MYC+ progenitors in organoid sections: decrease",
+   "biological_promise_group": "G3",
    "contested_elsewhere": "no",
    "context": "human; WWOX knockout (constitutive engineered null); depth complete_fulltext_read",
    "could_fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: A treated wild-type arm and independent differentiations remove design limits from the favourable row (toward F1 if the other flags are absent); a layer-neuron recovery would remove the counter row; a persistent absence keeps C2.",
    "counter_evidence_statements": "none stated beyond the counts",
+   "depth_of_evidence": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract",
    "evaluated_on": "2026-10-30",
    "evaluation_depth": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract",
+   "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
+   "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+   "feasibility_flags": [
+    "access_or_material_not_known",
+    "new_wet_lab_work_needed"
+   ],
    "group": "G3",
    "intervention": "A51, a multi-kinase inhibitor (experimental)",
    "main_limit": "SOX2_is_a_readout_marker; multi_kinase_inhibitor; no_blinding; no_treated_wt_arm; one_experiment_not_independent_differentiations | identity with the clinical agent BTX A51 is not verified (the organoid source calls it a multi-kinase inhibitor suppressing Wnt and MYC); the clinical agent's adult-oncology toxicity is in the card; no treated wild-type arm; same laboratory as the AAV9 work",
    "main_reason": "Tried in a WWOX system: results mixed, null or case-level: lead position C2 on 'MYC elevation and progenitor-state shift in WWOX-deficient radial glia' (NEED-MYC-PROGENITOR-PROLIFERATION). On that need: 1 benefit, 1 null; outside WWOX 0 favourable and 0 null or harm row(s) (some may be class-level rows from other compounds, see the limits). Mechanism: no catalogue identity: target identity, direction of action and link to the need are NOT EVALUABLE here (UNKNOWN, not zero). ",
    "next_experiment_or_control": "Does the fall in progenitors with A51 hold with a treated wild-type arm and independent differentiations, and is the lack of layer-neuron recovery real or a timing effect?",
+   "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
+   "next_experiment_stake": "which of the favourable and null WWOX-system results holds: the outcomes lead to opposite decisions (lift or stop)",
    "notes": "none",
    "objective": "Partial or bridge benefit",
+   "origin": "known track from before IT9",
    "pathways_needs": "MYC elevation and progenitor-state shift in WWOX-deficient radial glia [C2; effect_observed_in_wwox_system]; Wnt/beta-catenin readout elevated in WWOX-deficient organoids [P3; card_inference_by_mechanism_no_catalogue_row] -- 2 of 22 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 5,
    "sources_pmids": [
@@ -1154,27 +1212,39 @@
     "42397075"
    ],
    "unit_id": "U10",
+   "unit_type": "molecule",
    "view": "general"
   },
   {
    "access": "dietary regimen; no product register applies; access not assessed",
    "applicability_track": "A",
    "best_relevant_evidence": "A-KD-1: clinician-reported seizure control: decrease",
+   "biological_promise_group": "G3",
    "contested_elsewhere": "no",
    "context": "human; biallelic WWOX, series class (the three responders carry sp…; depth partial_fulltext_read",
    "could_fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays.",
    "counter_evidence_statements": "none stated beyond the counts",
+   "depth_of_evidence": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "evaluated_on": "2026-10-30",
    "evaluation_depth": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
+   "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
+   "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+   "feasibility_flags": [
+    "access_or_material_not_known",
+    "new_wet_lab_work_needed"
+   ],
    "group": "G3",
    "intervention": "Ketogenic diet (complex dietary intervention)",
    "main_limit": "case_level; denominator_unknown; no_instrument; partial_read; retrospective; uncontrolled",
    "main_reason": "Tried in a WWOX system: results mixed, null or case-level: lead position C2 on 'Seizure and spasm control as a symptom-level need' (NEED-SEIZURE-CONTROL-SYMPTOMATIC). On that need: 1 benefit, 1 null; outside WWOX 0 favourable and 0 null or harm row(s) (some may be class-level rows from other compounds, see the limits). Mechanism: no catalogue identity: target identity, direction of action and link to the need are NOT EVALUABLE here (UNKNOWN, not zero). ",
    "next_experiment_or_control": "Is the ethosuximide late-phase effect reproducible with a drug-by-genotype test and a same-day control, is the lithium effect genotype-specific, and do the denominators of the ketogenic-diet and vigabatrin case series keep their C2?",
+   "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
+   "next_experiment_stake": "which of the favourable and null WWOX-system results holds: the outcomes lead to opposite decisions (lift or stop)",
    "notes": "none",
    "objective": "Partial or bridge benefit",
+   "origin": "known track from before IT9",
    "pathways_needs": "Pyruvate entry into the TCA cycle [P3; card_inference_by_mechanism_no_catalogue_row]; Seizure and spasm control as a symptom-level need [C2; effect_observed_in_wwox_system] -- 2 of 22 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 6,
    "sources_pmids": [
@@ -1188,27 +1258,39 @@
     "42909904"
    ],
    "unit_id": "U15",
+   "unit_type": "diet",
    "view": "general"
   },
   {
    "access": "Cpp-115 Free Base: experimental (jurisdiction not stated; ChEMBL ChEMBL_37 2026-05-01; source_statement; 2026-05-01) | Vigabatrin: prescription (US; openFDA NDC export_date 2026-10-27; identifier_match; 2026-10-27) -- descriptive listing evidence, not efficacy or safety",
    "applicability_track": "A",
    "best_relevant_evidence": "A-VGB-3: clinical cessation of epileptic spasms: decrease (+2 other favourable WWOX-system assertion(s) on the unit)",
+   "biological_promise_group": "G3",
    "contested_elsewhere": "NEED-MYELINATION",
    "context": "human; WWOX-null class (predicted null/null); depth queried_not_full_read",
    "could_fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays.",
    "counter_evidence_statements": "none stated beyond the counts",
+   "depth_of_evidence": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
    "evaluated_on": "2026-10-30",
    "evaluation_depth": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
+   "evidence_of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level",
+   "evidence_of_molecule": "Vigabatrin: tested in a WWOX system (7 assertion(s): 2 benefit, 3 null, 1 partial_benefit, 1 unresolved)",
+   "feasibility_flags": [
+    "access_or_material_not_known",
+    "new_wet_lab_work_needed"
+   ],
    "group": "G3",
    "intervention": "Vigabatrin and GABA-aminotransferase inactivators",
    "main_limit": "case_level; concomitant_drugs_possible; reading_depth_queried_not_full_read | reading depth: queried, not full read, for the favourable case reports (concomitant drugs; vigabatrin added after a partial response); a WWOX-DEE case-level safety signal exists (two children with new pallidal and thalamic signal change on vigabatrin, abstract only, no denominator)",
    "main_reason": "Tried in a WWOX system: results mixed, null or case-level: lead position C2 on 'Seizure and spasm control as a symptom-level need' (NEED-SEIZURE-CONTROL-SYMPTOMATIC). On that need: 2 benefit, 3 null, 1 partial_benefit, 1 unresolved; outside WWOX 2 favourable and 2 null or harm row(s) (some may be class-level rows from other compounds, see the limits). Mechanism: 2 catalogue family(ies); L2 over 13 (family, need) cell(s): 5 coherent, 3 none, 5 not_evaluable. Reading depth of the evidence row: queried or abstract only, not a full read. Counter-evidence on other needs of this objective: NEED-MYELINATION. ",
    "next_experiment_or_control": "Is the ethosuximide late-phase effect reproducible with a drug-by-genotype test and a same-day control, is the lithium effect genotype-specific, and do the denominators of the ketogenic-diet and vigabatrin case series keep their C2?",
+   "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
+   "next_experiment_stake": "which of the favourable and null WWOX-system results holds: the outcomes lead to opposite decisions (lift or stop)",
    "notes": "none",
    "objective": "Partial or bridge benefit",
+   "origin": "known track from before IT9",
    "pathways_needs": "Inhibitory drive [P3; documented_association_target_listed]; Hypomyelination [C3; other_disease_precedent_plus_wwox_case_level_signal]; Seizure and spasm control as a symptom-level need [C2; effect_observed_in_wwox_system] -- 3 of 22 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 7,
    "sources_pmids": [
@@ -1232,27 +1314,38 @@
     "42397075"
    ],
    "unit_id": "U20",
+   "unit_type": "class of molecules",
    "view": "general"
   },
   {
    "access": "Apinocaltamide: experimental (jurisdiction not stated; ChEMBL ChEMBL_37 2026-05-01; source_statement; 2026-05-01) -- descriptive listing evidence, not efficacy or safety",
    "applicability_track": "A",
    "best_relevant_evidence": "DR-H01-002: convulsive seizure severity / threshold: decrease [PMID 40165594]",
+   "biological_promise_group": "G4a",
    "contested_elsewhere": "no",
    "context": "no WWOX-system result of the intervention; best signal is outside WWOX (OTHER_DISEASE_PRECEDENT; mouse)",
    "could_fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise to F2/F1 with a first signed result of the intervention in a WWOX system against an untreated same-genotype comparator; criteria not met now: a signed result of the intervention in a WWOX system exists; an outside-WWOX harm or null signal stands without a favourable outside signal; the signed rows behind this position were read beyond abstract, query or unknown depth (found: 2 row(s)) | further questions: a T-type measurement in the Wwox model, to test whether the ethosuximide sensitivity is T-type mediated at all | stored work-order statement: A direct measurement would turn the F2 into a row with a mechanism; a negative would add a null to the need.",
    "counter_evidence_statements": "none stated beyond the counts",
+   "depth_of_evidence": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
    "evaluated_on": "2026-10-30",
    "evaluation_depth": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
+   "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
+   "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+   "feasibility_flags": [
+    "access_or_material_not_known"
+   ],
    "group": "G4a",
    "intervention": "Apinocaltamide (T-type calcium channel blocker, clinical-stage)",
    "main_limit": "abstract_only; audiogenic_mouse_and_MEST; higher_concentration_than_for_absence; not_WWOX | the only WWOX link of this intervention is the ethosuximide result: the need is defined by it and T-type mediation is NOT measured; ethosuximide T-type potency (ChEMBL) is above 5 mM or 600 uM with no target against a labelled plasma range of about 283 to 708 uM; apinocaltamide is nanomolar at Cav3.1/3.2/3.3, so the documented action is coherent with the need's direction but does not itself support WWOX relevance; outside WWOX its benefit is in absence-type models, convulsive models only at higher concentration",
    "main_reason": "Target-based hypothesis, direction-consistent action documented: lead position F3 on 'Ethosuximide sensitivity of provoked seizure in Wwox loss' (NEED-T-TYPE-CALCIUM). On that need: no signed WWOX-system assertion; outside WWOX 2 favourable and 2 null or harm row(s) (some may be class-level rows from other compounds, see the limits). Mechanism: 1 catalogue family(ies); L2 over 2 (family, need) cell(s): 1 coherent, 1 direction_unresolved. Reading depth of the evidence row: queried or abstract only, not a full read. ",
    "next_experiment_or_control": "Does the ethosuximide sensitivity reflect T-type involvement, given that no T-type measurement exists and a class-level progenitor-viability harm signal is recorded?",
+   "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
+   "next_experiment_stake": "first WWOX-system test of a coherent, selected target hypothesis: the outcomes lead to opposite decisions (continue or stop)",
    "notes": "none",
    "objective": "Partial or bridge benefit",
+   "origin": "known track from before IT9",
    "pathways_needs": "Seizure and spasm control as a symptom-level need [F3; documented_association_target_listed]; Ethosuximide sensitivity of provoked seizure in Wwox loss [F3; directionally_compatible_documented_action] -- 2 of 22 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 8,
    "sources_pmids": [
@@ -1262,27 +1355,39 @@
     "40165594"
    ],
    "unit_id": "U25",
+   "unit_type": "molecule",
    "view": "general"
   },
   {
    "access": "not a product listing (gene-based modality); access UNKNOWN",
    "applicability_track": "A",
    "best_relevant_evidence": "carrier of the position, DR-AAV-SURV-HD: proportion of animals alive over time: increase [PMID 42422765] (+6 other favourable WWOX-system assertion(s) on the unit)",
+   "biological_promise_group": "G1",
    "contested_elsewhere": "no",
    "context": "mouse; constitutive Wwox deletion (targeted-deletion allele, FVB); depth complete_fulltext_read",
    "could_fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "already at the top group; it holds while no null, unfavourable or mixed WWOX-system result appears beside it | further questions: an overexpression or ceiling endpoint and a tumour-surveillance endpoint (none exists); whether the organoid radial-glia and SATB2 findings (same-laboratory human-system results, PMID 34268881 and 42397075, context only, not separate positions) hold | stored work-order statement: Quantified myelination would add a controlled row on the same need; a failure would move the card to C2 by rule; a treated-after-onset arm would show whether the word recovery may be used for that endpoint.",
    "counter_evidence_statements": "Rescue is not normalisation: unmyelinated axons per field remain about 52 versus about 26 in wild type. | The neuron-promoter vector corrected neuronal function without correcting radial-glia abnormalities (organoid arm); SATB2 mRNA overshoots wild type up to about eleven-fold in treated organoids. | No ceiling is measured and no tumour-surveillance or overexpression-toxicity endpoint exists in the mouse study; applied recombinant WWOX lowered viability of human ESC-derived cortical neurons in a preprint. More is not safer.",
+   "depth_of_evidence": "E4 card reviewed, 12 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "evaluated_on": "2026-10-30",
    "evaluation_depth": "E4 card reviewed, 12 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
+   "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
+   "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+   "feasibility_flags": [
+    "access_or_material_not_known",
+    "new_wet_lab_work_needed"
+   ],
    "group": "G1",
    "intervention": "AAV9-delivered human WWOX (gene addition)",
    "main_limit": "audit_repair_not_rejudged; high_dose_arm; n=30_vs_KO_n=10 | G1 rests on a single pertinence row: high-dose survival, n=30 vs untreated knockout n=10, flag audit_repair_not_rejudged; the audit repair on that row is still to be adjudicated before any claim-level use. Prevention or early-window result in a null mouse (injection P0 to P5; later intervention not explored); one laboratory (two papers, shared senior author).",
    "main_reason": "Strongest WWOX-specific case today (in the mouse null): lead position F1 on 'Restore WWOX protein in neurons by gene addition' (NEED-WWOX-GENE-ADDITION). On that need: 4 benefit, 2 partial_benefit, 2 unquantified; outside WWOX 0 favourable and 0 null or harm row(s) (some may be class-level rows from other compounds, see the limits). Mechanism: modality acting on WWOX dosage or transcript itself: no drug-target identity applies (not a compound question); coherence with the need is by design, not by a catalogue action. ",
    "next_experiment_or_control": "Does an intermediate vector level separate a threshold from a gradient, and is the benefit only prevented inside the first days of life or also recovered when treatment follows onset? No study has measured the phenotype at the day of injection.",
+   "next_experiment_priority": "NX2: informative: the next experiment resolves one limit, the decision moves one step at most",
+   "next_experiment_stake": "whether the strongest case holds beyond its single row and its window",
    "notes": "broad recovery lists one item because only gene addition has been tested in a WWOX system: this is a statement about test coverage, not about the field",
    "objective": "Broad, durable functional recovery (the evidence is prevention or early-window in a null mouse; recovery after onset is not shown)",
+   "origin": "known track from before IT9",
    "pathways_needs": "Systemic metabolic decompensation [C2; effect_observed_in_wwox_system]; Restore WWOX protein in neurons by gene addition [F1; effect_observed_in_wwox_system] -- 2 of 22 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 1,
    "sources_pmids": [
@@ -1294,27 +1399,38 @@
     "42587157"
    ],
    "unit_id": "U07",
+   "unit_type": "gene therapy / gene-based modality",
    "view": "broad"
   },
   {
    "access": "Ethosuximide: prescription (US; openFDA NDC export_date 2026-10-27; identifier_match; 2026-10-27) -- descriptive listing evidence, not efficacy or safety",
    "applicability_track": "A",
    "best_relevant_evidence": "A-ETX-1: PTZ-provoked behavioural seizure score, late phase of the hour (graphical reading): decrease [PMID 32000863]",
+   "biological_promise_group": "G2b",
    "contested_elsewhere": "no",
    "context": "mouse; Wwox -/- constitutive null; depth complete_fulltext_read",
    "could_fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no reading-limit flag (found: graphical_reading); a favourable WWOX readout carries no design-limit flag (found: one_experiment); one and the same readout meets all four | stored work-order statement: A direct measurement would turn the F2 into a row with a mechanism; a negative would add a null to the need.",
    "counter_evidence_statements": "none stated beyond the counts",
+   "depth_of_evidence": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
    "evaluated_on": "2026-10-30",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
+   "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
+   "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+   "feasibility_flags": [
+    "access_or_material_not_known"
+   ],
    "group": "G2b",
    "intervention": "Ethosuximide",
    "main_limit": "control_variability_comparable_to_effect; endpoint_downstream_of_need; graphical_reading; late_phase_only; no_T_type_measurement; no_drug_by_genotype_test | same paper and laboratory as lithium (PMID 32000863), one experiment, i.p., one PTZ dose, effect confined to the late phase; no wild-type or drug-by-genotype test and the wild-type arm is floor-limited, so absence of a wild-type effect is unknown, not clean; the paper reports lithium better than ethosuximide | ethosuximide T-type potency in ChEMBL is above 5 mM (screening bound) or 600 uM with target unspecified, against a labelled plasma range of about 283 to 708 uM: T-type mediation of the observed effect is not measured",
    "main_reason": "Favourable but thin, specificity uncertain or untested: lead position F2 on 'Ethosuximide sensitivity of provoked seizure in Wwox loss' (NEED-T-TYPE-CALCIUM). On that need: 1 benefit; outside WWOX 0 favourable and 1 null or harm row(s) (some may be class-level rows from other compounds, see the limits). Mechanism: 1 catalogue family(ies); L2 over 2 (family, need) cell(s): 1 coherent, 1 direction_unresolved. ",
    "next_experiment_or_control": "Does the ethosuximide sensitivity reflect T-type involvement, given that no T-type measurement exists and a class-level progenitor-viability harm signal is recorded?",
+   "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
+   "next_experiment_stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)",
    "notes": "the one outside-WWOX harm row is class-level (other T-type blockers lowered progenitor viability; ethosuximide was not tested), not ethosuximide data",
    "objective": "Partial or bridge benefit",
+   "origin": "known track from before IT9",
    "pathways_needs": "Seizure and spasm control as a symptom-level need [F2; effect_observed_in_wwox_system]; Ethosuximide sensitivity of provoked seizure in Wwox loss [F2; effect_observed_in_wwox_system] -- 2 of 22 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 1,
    "sources_pmids": [
@@ -1323,27 +1439,39 @@
     "36537114"
    ],
    "unit_id": "U17",
+   "unit_type": "molecule",
    "view": "partial"
   },
   {
    "access": "Lithium: experimental (jurisdiction not stated; ChEMBL ChEMBL_37 2026-05-01; source_statement; 2026-05-01) | Lithium: supplement (US; NIH ODS DSLD v9; name_only; 2026-10-28) -- descriptive listing evidence, not efficacy or safety",
    "applicability_track": "A",
    "best_relevant_evidence": "DR-LI-001: behavioural seizure stage after one provoking injection, preweaning mice: decrease [PMID 32000863]",
+   "biological_promise_group": "G2b",
    "contested_elsewhere": "no",
    "context": "mouse; Wwox-/- (homozygous null) versus Wwox+/+ littermates; depth complete_fulltext_read",
    "could_fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no design-limit flag (found: nonspecific_also_in_wild_type, one_experiment_N6_arm); one and the same readout meets all four | further questions: GSK3beta/IMPase engagement at the exposure reached at tolerated levels (no activity row exists for lithium) | stored work-order statement: A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays.",
    "counter_evidence_statements": "none stated beyond the counts",
+   "depth_of_evidence": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
    "evaluated_on": "2026-10-30",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
+   "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
+   "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+   "feasibility_flags": [
+    "access_or_material_not_known",
+    "new_wet_lab_work_needed"
+   ],
    "group": "G2b",
    "intervention": "Lithium",
    "main_limit": "nonspecific_also_in_wild_type; one_experiment_N6_arm | same paper and laboratory as ethosuximide (PMID 32000863): one experiment, i.p. LiCl; the effect also occurs in wild type and heterozygote; the GSK3beta link is a same-university cell study and ChEMBL holds no lithium GSK3/IMPase activity row",
    "main_reason": "Favourable but thin, specificity uncertain or untested: lead position F2 on 'Seizure and spasm control as a symptom-level need' (NEED-SEIZURE-CONTROL-SYMPTOMATIC). On that need: 1 benefit; outside WWOX 0 favourable and 0 null or harm row(s) (some may be class-level rows from other compounds, see the limits). Mechanism: 1 catalogue family(ies); L2 over 2 (family, need) cell(s): 1 none, 1 not_evaluable. ",
    "next_experiment_or_control": "Is the ethosuximide late-phase effect reproducible with a drug-by-genotype test and a same-day control, is the lithium effect genotype-specific, and do the denominators of the ketogenic-diet and vigabatrin case series keep their C2?",
+   "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
+   "next_experiment_stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)",
    "notes": "none",
    "objective": "Partial or bridge benefit",
+   "origin": "known track from before IT9",
    "pathways_needs": "GSK3beta de-repression [P3; card_inference_by_mechanism_no_catalogue_row]; Seizure and spasm control as a symptom-level need [F2; effect_observed_in_wwox_system] -- 2 of 22 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 2,
    "sources_pmids": [
@@ -1353,27 +1481,39 @@
     "36537114"
    ],
    "unit_id": "U24",
+   "unit_type": "molecule",
    "view": "partial"
   },
   {
    "access": "Radiprodil: experimental (jurisdiction not stated; ChEMBL ChEMBL_37 2026-05-01; source_statement; 2026-05-01) | Selfotel: experimental (jurisdiction not stated; ChEMBL ChEMBL_37 2026-05-01; source_statement; 2026-05-01) | Perampanel: prescription (US; openFDA NDC export_date 2026-10-27; identifier_match; 2026-10-27) | Memantine: unknown/unverified (jurisdiction not stated; approval stated by a source but no US NDC listing matched b…; none; date not stated) -- descriptive listing evidence, not efficacy or safety",
    "applicability_track": "A",
    "best_relevant_evidence": "DR-W2-001: burst frequency: decrease [PMID 34634460]",
+   "biological_promise_group": "G2b",
    "contested_elsewhere": "no",
    "context": "mouse; Synapsin-Cre Wwox knockout versus wild type and heterozygote; depth complete_fulltext_read",
    "could_fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no design-limit flag (found: one_experiment_n5_slices, tool_compound_d-APV); one and the same readout meets all four | further questions: gap-junction dependence (carbenoxolone, 87 percent reduction) and bursting in heterozygote slices as rival explanations of the d-APV result | stored work-order statement: E1 decides whether an NMDAR gain is present or the dependence is permissive; a partial blocker is read only after E1, and without E1 a memantine result cannot be attributed to pyramidal receptors. A titration that cannot lower bursts inside a reachable range closes the magnesium strand.",
    "counter_evidence_statements": "none stated beyond the counts",
+   "depth_of_evidence": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "evaluated_on": "2026-10-30",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
+   "evidence_of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level; a tool-compound result supports the evaluation of the MECHANISM only, not of any clinical agent",
+   "evidence_of_molecule": "d-APV (competitive NMDAR block; a tool compound, not a candidate drug): tested in a WWOX system (1 assertion(s): 1 benefit)",
+   "feasibility_flags": [
+    "access_or_material_not_known",
+    "new_wet_lab_work_needed"
+   ],
    "group": "G2b",
    "intervention": "d-APV (a tool compound; the only agent with a WWOX readout) and the NMDAR/AMPAR class (memantine, perampanel, radiprodil and others are untested siblings)",
    "main_limit": "AMPAR_untested; full_competitive_block_only; n=5_slices_3_animals; one_experiment_n5_slices; tool_compound_d-APV | the only WWOX readout is d-APV (competitive NMDAR block, a tool compound) in neuron-specific knockout cortical slices from one laboratory; memantine, perampanel, radiprodil and the other class members have no WWOX data; rivals not excluded: carbenoxolone (a gap-junction blocker that may also block NMDAR) reduced bursts by 87 percent, heterozygote slices also burst (4 of 23) without behavioural seizures, and the mEPSC data show no overt change in the NMDAR:AMPA proportion",
    "main_reason": "Favourable but thin, specificity uncertain or untested: lead position F2 on 'Excitatory network gain and bursting' (NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR). On that need: 1 benefit; outside WWOX 6 favourable and 6 null or harm row(s) (some may be class-level rows from other compounds, see the limits). Mechanism: 4 catalogue family(ies); L2 over 6 (family, need) cell(s): 3 coherent, 2 direction_unresolved, 1 none. ",
    "next_experiment_or_control": "Which of three readings (NMDAR gain, permissive necessity, AMPAR-led drive) explains the d-APV-sensitive bursting, and does the bursting depend on the magnesium block? The d-APV result alone does not separate them.",
+   "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
+   "next_experiment_stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)",
    "notes": "none",
    "objective": "Partial or bridge benefit",
+   "origin": "known track from before IT9",
    "pathways_needs": "Excitatory network gain and bursting [F2; effect_observed_in_wwox_system] -- 1 of 22 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 3,
    "sources_pmids": [
@@ -1395,27 +1535,39 @@
     "9872743"
    ],
    "unit_id": "U21",
+   "unit_type": "tool compound + class of molecules",
    "view": "partial"
   },
   {
    "access": "class level, no named catalogue identity; access categories from the cards: UNKNOWN",
    "applicability_track": "A",
    "best_relevant_evidence": "DR-D01-001: fraction of SOX2+MYC+ progenitors in organoid sections: decrease",
+   "biological_promise_group": "G3",
    "contested_elsewhere": "no",
    "context": "human; WWOX knockout (constitutive engineered null); depth complete_fulltext_read",
    "could_fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: A treated wild-type arm and independent differentiations remove design limits from the favourable row (toward F1 if the other flags are absent); a layer-neuron recovery would remove the counter row; a persistent absence keeps C2.",
    "counter_evidence_statements": "none stated beyond the counts",
+   "depth_of_evidence": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract",
    "evaluated_on": "2026-10-30",
    "evaluation_depth": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract",
+   "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
+   "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+   "feasibility_flags": [
+    "access_or_material_not_known",
+    "new_wet_lab_work_needed"
+   ],
    "group": "G3",
    "intervention": "A51, a multi-kinase inhibitor (experimental)",
    "main_limit": "SOX2_is_a_readout_marker; multi_kinase_inhibitor; no_blinding; no_treated_wt_arm; one_experiment_not_independent_differentiations | identity with the clinical agent BTX A51 is not verified (the organoid source calls it a multi-kinase inhibitor suppressing Wnt and MYC); the clinical agent's adult-oncology toxicity is in the card; no treated wild-type arm; same laboratory as the AAV9 work",
    "main_reason": "Tried in a WWOX system: results mixed, null or case-level: lead position C2 on 'MYC elevation and progenitor-state shift in WWOX-deficient radial glia' (NEED-MYC-PROGENITOR-PROLIFERATION). On that need: 1 benefit, 1 null; outside WWOX 0 favourable and 0 null or harm row(s) (some may be class-level rows from other compounds, see the limits). Mechanism: no catalogue identity: target identity, direction of action and link to the need are NOT EVALUABLE here (UNKNOWN, not zero). ",
    "next_experiment_or_control": "Does the fall in progenitors with A51 hold with a treated wild-type arm and independent differentiations, and is the lack of layer-neuron recovery real or a timing effect?",
+   "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
+   "next_experiment_stake": "which of the favourable and null WWOX-system results holds: the outcomes lead to opposite decisions (lift or stop)",
    "notes": "none",
    "objective": "Partial or bridge benefit",
+   "origin": "known track from before IT9",
    "pathways_needs": "MYC elevation and progenitor-state shift in WWOX-deficient radial glia [C2; effect_observed_in_wwox_system]; Wnt/beta-catenin readout elevated in WWOX-deficient organoids [P3; card_inference_by_mechanism_no_catalogue_row] -- 2 of 22 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 4,
    "sources_pmids": [
@@ -1424,27 +1576,39 @@
     "42397075"
    ],
    "unit_id": "U10",
+   "unit_type": "molecule",
    "view": "partial"
   },
   {
    "access": "not a product listing (gene-based modality); access UNKNOWN",
    "applicability_track": "A",
    "best_relevant_evidence": "DR-AAV-WT-HD: body weight series from birth: increase [PMID 42422765] (+6 other favourable WWOX-system assertion(s) on the unit)",
+   "biological_promise_group": "G3",
    "contested_elsewhere": "no",
    "context": "mouse; constitutive Wwox deletion (targeted-deletion allele, FVB); depth complete_fulltext_read",
    "could_fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | further questions: an overexpression or ceiling endpoint and a tumour-surveillance endpoint (none exists); whether the organoid radial-glia and SATB2 findings (same-laboratory human-system results, PMID 34268881 and 42397075, context only, not separate positions) hold | stored work-order statement: It would resolve the two glucose rows and either remove the C2 or make it a C1.",
    "counter_evidence_statements": "Rescue is not normalisation: unmyelinated axons per field remain about 52 versus about 26 in wild type. | The neuron-promoter vector corrected neuronal function without correcting radial-glia abnormalities (organoid arm); SATB2 mRNA overshoots wild type up to about eleven-fold in treated organoids. | No ceiling is measured and no tumour-surveillance or overexpression-toxicity endpoint exists in the mouse study; applied recombinant WWOX lowered viability of human ESC-derived cortical neurons in a preprint. More is not safer.",
+   "depth_of_evidence": "E4 card reviewed, 12 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "evaluated_on": "2026-10-30",
    "evaluation_depth": "E4 card reviewed, 12 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
+   "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
+   "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+   "feasibility_flags": [
+    "access_or_material_not_known",
+    "new_wet_lab_work_needed"
+   ],
    "group": "G3",
    "intervention": "AAV9-delivered human WWOX (gene addition)",
    "main_limit": "growth=body_weight_only; high_dose_arm; no_significance_marker | G1 rests on a single pertinence row: high-dose survival, n=30 vs untreated knockout n=10, flag audit_repair_not_rejudged; the audit repair on that row is still to be adjudicated before any claim-level use. Prevention or early-window result in a null mouse (injection P0 to P5; later intervention not explored); one laboratory (two papers, shared senior author).",
    "main_reason": "Tried in a WWOX system: results mixed, null or case-level: lead position C2 on 'Systemic metabolic decompensation' (NEED-SYSTEMIC-GLYCAEMIA-GROWTH). On that need: 1 benefit, 1 mixed, 2 null; outside WWOX 0 favourable and 0 null or harm row(s) (some may be class-level rows from other compounds, see the limits). Mechanism: modality acting on WWOX dosage or transcript itself: no drug-target identity applies (not a compound question); coherence with the need is by design, not by a catalogue action. ",
    "next_experiment_or_control": "Is the P10 glucose difference real (knockout about 95, wild type about 130), and does any dose of the vector correct it?",
+   "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
+   "next_experiment_stake": "which of the favourable and null WWOX-system results holds: the outcomes lead to opposite decisions (lift or stop)",
    "notes": "none",
    "objective": "Partial or bridge benefit (the evidence is prevention or early-window in a null mouse; recovery after onset is not shown)",
+   "origin": "known track from before IT9",
    "pathways_needs": "Systemic metabolic decompensation [C2; effect_observed_in_wwox_system]; Restore WWOX protein in neurons by gene addition [F1; effect_observed_in_wwox_system] -- 2 of 22 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 5,
    "sources_pmids": [
@@ -1456,27 +1620,39 @@
     "42587157"
    ],
    "unit_id": "U07",
+   "unit_type": "gene therapy / gene-based modality",
    "view": "partial"
   },
   {
    "access": "dietary regimen; no product register applies; access not assessed",
    "applicability_track": "A",
    "best_relevant_evidence": "A-KD-1: clinician-reported seizure control: decrease",
+   "biological_promise_group": "G3",
    "contested_elsewhere": "no",
    "context": "human; biallelic WWOX, series class (the three responders carry sp…; depth partial_fulltext_read",
    "could_fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays.",
    "counter_evidence_statements": "none stated beyond the counts",
+   "depth_of_evidence": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "evaluated_on": "2026-10-30",
    "evaluation_depth": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
+   "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
+   "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+   "feasibility_flags": [
+    "access_or_material_not_known",
+    "new_wet_lab_work_needed"
+   ],
    "group": "G3",
    "intervention": "Ketogenic diet (complex dietary intervention)",
    "main_limit": "case_level; denominator_unknown; no_instrument; partial_read; retrospective; uncontrolled",
    "main_reason": "Tried in a WWOX system: results mixed, null or case-level: lead position C2 on 'Seizure and spasm control as a symptom-level need' (NEED-SEIZURE-CONTROL-SYMPTOMATIC). On that need: 1 benefit, 1 null; outside WWOX 0 favourable and 0 null or harm row(s) (some may be class-level rows from other compounds, see the limits). Mechanism: no catalogue identity: target identity, direction of action and link to the need are NOT EVALUABLE here (UNKNOWN, not zero). ",
    "next_experiment_or_control": "Is the ethosuximide late-phase effect reproducible with a drug-by-genotype test and a same-day control, is the lithium effect genotype-specific, and do the denominators of the ketogenic-diet and vigabatrin case series keep their C2?",
+   "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
+   "next_experiment_stake": "which of the favourable and null WWOX-system results holds: the outcomes lead to opposite decisions (lift or stop)",
    "notes": "none",
    "objective": "Partial or bridge benefit",
+   "origin": "known track from before IT9",
    "pathways_needs": "Pyruvate entry into the TCA cycle [P3; card_inference_by_mechanism_no_catalogue_row]; Seizure and spasm control as a symptom-level need [C2; effect_observed_in_wwox_system] -- 2 of 22 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 6,
    "sources_pmids": [
@@ -1490,27 +1666,39 @@
     "42909904"
    ],
    "unit_id": "U15",
+   "unit_type": "diet",
    "view": "partial"
   },
   {
    "access": "Cpp-115 Free Base: experimental (jurisdiction not stated; ChEMBL ChEMBL_37 2026-05-01; source_statement; 2026-05-01) | Vigabatrin: prescription (US; openFDA NDC export_date 2026-10-27; identifier_match; 2026-10-27) -- descriptive listing evidence, not efficacy or safety",
    "applicability_track": "A",
    "best_relevant_evidence": "A-VGB-3: clinical cessation of epileptic spasms: decrease (+2 other favourable WWOX-system assertion(s) on the unit)",
+   "biological_promise_group": "G3",
    "contested_elsewhere": "NEED-MYELINATION",
    "context": "human; WWOX-null class (predicted null/null); depth queried_not_full_read",
    "could_fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays.",
    "counter_evidence_statements": "none stated beyond the counts",
+   "depth_of_evidence": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
    "evaluated_on": "2026-10-30",
    "evaluation_depth": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
+   "evidence_of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level",
+   "evidence_of_molecule": "Vigabatrin: tested in a WWOX system (7 assertion(s): 2 benefit, 3 null, 1 partial_benefit, 1 unresolved)",
+   "feasibility_flags": [
+    "access_or_material_not_known",
+    "new_wet_lab_work_needed"
+   ],
    "group": "G3",
    "intervention": "Vigabatrin and GABA-aminotransferase inactivators",
    "main_limit": "case_level; concomitant_drugs_possible; reading_depth_queried_not_full_read | reading depth: queried, not full read, for the favourable case reports (concomitant drugs; vigabatrin added after a partial response); a WWOX-DEE case-level safety signal exists (two children with new pallidal and thalamic signal change on vigabatrin, abstract only, no denominator)",
    "main_reason": "Tried in a WWOX system: results mixed, null or case-level: lead position C2 on 'Seizure and spasm control as a symptom-level need' (NEED-SEIZURE-CONTROL-SYMPTOMATIC). On that need: 2 benefit, 3 null, 1 partial_benefit, 1 unresolved; outside WWOX 2 favourable and 2 null or harm row(s) (some may be class-level rows from other compounds, see the limits). Mechanism: 2 catalogue family(ies); L2 over 13 (family, need) cell(s): 5 coherent, 3 none, 5 not_evaluable. Reading depth of the evidence row: queried or abstract only, not a full read. Counter-evidence on other needs of this objective: NEED-MYELINATION. ",
    "next_experiment_or_control": "Is the ethosuximide late-phase effect reproducible with a drug-by-genotype test and a same-day control, is the lithium effect genotype-specific, and do the denominators of the ketogenic-diet and vigabatrin case series keep their C2?",
+   "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
+   "next_experiment_stake": "which of the favourable and null WWOX-system results holds: the outcomes lead to opposite decisions (lift or stop)",
    "notes": "none",
    "objective": "Partial or bridge benefit",
+   "origin": "known track from before IT9",
    "pathways_needs": "Inhibitory drive [P3; documented_association_target_listed]; Hypomyelination [C3; other_disease_precedent_plus_wwox_case_level_signal]; Seizure and spasm control as a symptom-level need [C2; effect_observed_in_wwox_system] -- 3 of 22 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 7,
    "sources_pmids": [
@@ -1534,27 +1722,38 @@
     "42397075"
    ],
    "unit_id": "U20",
+   "unit_type": "class of molecules",
    "view": "partial"
   },
   {
    "access": "Apinocaltamide: experimental (jurisdiction not stated; ChEMBL ChEMBL_37 2026-05-01; source_statement; 2026-05-01) -- descriptive listing evidence, not efficacy or safety",
    "applicability_track": "A",
    "best_relevant_evidence": "DR-H01-002: convulsive seizure severity / threshold: decrease [PMID 40165594]",
+   "biological_promise_group": "G4a",
    "contested_elsewhere": "no",
    "context": "no WWOX-system result of the intervention; best signal is outside WWOX (OTHER_DISEASE_PRECEDENT; mouse)",
    "could_fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise to F2/F1 with a first signed result of the intervention in a WWOX system against an untreated same-genotype comparator; criteria not met now: a signed result of the intervention in a WWOX system exists; an outside-WWOX harm or null signal stands without a favourable outside signal; the signed rows behind this position were read beyond abstract, query or unknown depth (found: 2 row(s)) | further questions: a T-type measurement in the Wwox model, to test whether the ethosuximide sensitivity is T-type mediated at all | stored work-order statement: A direct measurement would turn the F2 into a row with a mechanism; a negative would add a null to the need.",
    "counter_evidence_statements": "none stated beyond the counts",
+   "depth_of_evidence": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
    "evaluated_on": "2026-10-30",
    "evaluation_depth": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
+   "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
+   "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+   "feasibility_flags": [
+    "access_or_material_not_known"
+   ],
    "group": "G4a",
    "intervention": "Apinocaltamide (T-type calcium channel blocker, clinical-stage)",
    "main_limit": "abstract_only; audiogenic_mouse_and_MEST; higher_concentration_than_for_absence; not_WWOX | the only WWOX link of this intervention is the ethosuximide result: the need is defined by it and T-type mediation is NOT measured; ethosuximide T-type potency (ChEMBL) is above 5 mM or 600 uM with no target against a labelled plasma range of about 283 to 708 uM; apinocaltamide is nanomolar at Cav3.1/3.2/3.3, so the documented action is coherent with the need's direction but does not itself support WWOX relevance; outside WWOX its benefit is in absence-type models, convulsive models only at higher concentration",
    "main_reason": "Target-based hypothesis, direction-consistent action documented: lead position F3 on 'Ethosuximide sensitivity of provoked seizure in Wwox loss' (NEED-T-TYPE-CALCIUM). On that need: no signed WWOX-system assertion; outside WWOX 2 favourable and 2 null or harm row(s) (some may be class-level rows from other compounds, see the limits). Mechanism: 1 catalogue family(ies); L2 over 2 (family, need) cell(s): 1 coherent, 1 direction_unresolved. Reading depth of the evidence row: queried or abstract only, not a full read. ",
    "next_experiment_or_control": "Does the ethosuximide sensitivity reflect T-type involvement, given that no T-type measurement exists and a class-level progenitor-viability harm signal is recorded?",
+   "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
+   "next_experiment_stake": "first WWOX-system test of a coherent, selected target hypothesis: the outcomes lead to opposite decisions (continue or stop)",
    "notes": "none",
    "objective": "Partial or bridge benefit",
+   "origin": "known track from before IT9",
    "pathways_needs": "Seizure and spasm control as a symptom-level need [F3; documented_association_target_listed]; Ethosuximide sensitivity of provoked seizure in Wwox loss [F3; directionally_compatible_documented_action] -- 2 of 22 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 8,
    "sources_pmids": [
@@ -1564,6 +1763,7 @@
     "40165594"
    ],
    "unit_id": "U25",
+   "unit_type": "molecule",
    "view": "partial"
   }
  ],
@@ -1687,7 +1887,7 @@
    "context_change",
    "method_revision"
   ],
-  "rules_version": "R2",
+  "rules_version": "R3",
   "schema": "legend.wwox.ranking/1",
   "selections": {
    "broad": {
@@ -2270,6 +2470,14 @@
    "depth_of_benefit_sought": "deep: function per molecule of the rescued protein; a larger amount of protein is not function and is not read as rescue",
    "evaluation_depth": "E3",
    "evaluation_depth_text": "card reviewed with assertions; no WWOX-side result read beyond abstract; class pharmacology table (IT7 P5)",
+   "evidence_level_note": {
+    "attribution_rule": "a result for a tool compound or one member is not a result for the other members; the unit group describes the mechanism/class evaluation",
+    "of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level",
+    "of_molecule": "no named member has a WWOX-system result",
+    "untested_members": [
+     "Phenylbutanoic Acid"
+    ]
+   },
    "excluded_from_comparisons": [
     "firewalled",
     "outside_question"
@@ -2285,6 +2493,34 @@
    },
    "kind": "drug_class",
    "label": "4-phenylbutyrate and bile-acid chemical chaperones (class)",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "Phenylbutanoic Acid",
+     "member_key": "FAM:CAT:CHEMBL1469",
+     "member_type": "molecule",
+     "outside_wwox_assertions": 0,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member",
+     "wwox_assertions": 0
+    },
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "class or mechanism level (card-level assertions and unnamed members)",
+     "member_key": "CLASS",
+     "member_type": "class_level",
+     "outside_wwox_assertions": 10,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member; 10 outside-WWOX assertion(s) attributed",
+     "wwox_assertions": 0
+    }
+   ],
    "members": [
     {
      "access_categories": [
@@ -2312,6 +2548,8 @@
     "firewalled",
     "outside_question"
    ],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -2354,6 +2592,8 @@
     "B"
    ],
    "unit_id": "U01",
+   "unit_type": "class_of_molecules",
+   "unit_type_label": "class of molecules",
    "views": {
     "broad": {
      "caveat_limits": [],
@@ -2404,6 +2644,16 @@
       "need": "NEED-WWOX-MISSENSE-PROTEIN-RESCUE",
       "question": "Is the Q230P-class protein made and then cleared, by which route (proteasome, lysosome), and does any protein that returns carry function per molecule? The favourable support is outside WWOX only and the abstaining cards wait on the same unmeasured branch.",
       "would_change": "No protein with synthesis present closes A02 and A05 for this allele; soluble native protein on the ruler would give the first WWOX-system row on the need; protein without function would give C1; a lysosome-only effect would show the proteasome lever is wrong for this lesion class."
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "access_or_material_not_known",
+       "new_wet_lab_work_needed"
+      ],
+      "feasibility_text": "A cell line expressing the variant is not held; the design is complete, but the function ruler it depends on is a design and not yet validated.",
+      "level": "NX2",
+      "level_text": "informative: the next experiment resolves one limit, the decision moves one step at most",
+      "stake": "first WWOX-system test of a target hypothesis"
      },
      "notes": [],
      "objective": "broad",
@@ -2521,6 +2771,12 @@
    "depth_of_benefit_sought": "deep only if stabilisation suffices; stabilisation without refolding is expected to raise inactive or insoluble protein for catalytic or folding lesions",
    "evaluation_depth": "E3",
    "evaluation_depth_text": "card reviewed with assertions; no WWOX-side result read beyond abstract; class pharmacology table (IT7 P5)",
+   "evidence_level_note": {
+    "attribution_rule": "a result for a tool compound or one member is not a result for the other members; the unit group describes the mechanism/class evaluation",
+    "of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level",
+    "of_molecule": "no named member has a WWOX-system result",
+    "untested_members": []
+   },
    "excluded_from_comparisons": [
     "outside_question"
    ],
@@ -2535,11 +2791,28 @@
    },
    "kind": "drug_class",
    "label": "Proteasome-inhibitor class (degradation blockade)",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "class or mechanism level (card-level assertions and unnamed members)",
+     "member_key": "CLASS",
+     "member_type": "class_level",
+     "outside_wwox_assertions": 10,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member; 10 outside-WWOX assertion(s) attributed",
+     "wwox_assertions": 0
+    }
+   ],
    "members": [],
    "merge_reason": "",
    "model_exclusions": [
     "outside_question"
    ],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -2584,6 +2857,8 @@
     "B"
    ],
    "unit_id": "U02",
+   "unit_type": "class_of_molecules",
+   "unit_type_label": "class of molecules",
    "views": {
     "broad": {
      "caveat_limits": [],
@@ -2636,6 +2911,16 @@
       "need": "NEED-WWOX-MISSENSE-PROTEIN-RESCUE",
       "question": "Is the Q230P-class protein made and then cleared, by which route (proteasome, lysosome), and does any protein that returns carry function per molecule? The favourable support is outside WWOX only and the abstaining cards wait on the same unmeasured branch.",
       "would_change": "No protein with synthesis present closes A02 and A05 for this allele; soluble native protein on the ruler would give the first WWOX-system row on the need; protein without function would give C1; a lysosome-only effect would show the proteasome lever is wrong for this lesion class."
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "access_or_material_not_known",
+       "new_wet_lab_work_needed"
+      ],
+      "feasibility_text": "A cell line expressing the variant is not held; the design is complete, but the function ruler it depends on is a design and not yet validated.",
+      "level": "NX2",
+      "level_text": "informative: the next experiment resolves one limit, the decision moves one step at most",
+      "stake": "first WWOX-system test of a target hypothesis"
      },
      "notes": [],
      "objective": "broad",
@@ -2741,6 +3026,12 @@
    "depth_of_benefit_sought": "",
    "evaluation_depth": "E2",
    "evaluation_depth_text": "card reviewed, abstention (premise named, no test designed)",
+   "evidence_level_note": {
+    "attribution_rule": "a result for a tool compound or one member is not a result for the other members; the unit group describes the mechanism/class evaluation",
+    "of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level",
+    "of_molecule": "no named member has a WWOX-system result",
+    "untested_members": []
+   },
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
@@ -2753,9 +3044,26 @@
    },
    "kind": "mechanism_class",
    "label": "Client-binding pharmacological chaperone (SDR-domain ligand)",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "class or mechanism level (card-level assertions and unnamed members)",
+     "member_key": "CLASS",
+     "member_type": "class_level",
+     "outside_wwox_assertions": 0,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member",
+     "wwox_assertions": 0
+    }
+   ],
    "members": [],
    "merge_reason": "",
    "model_exclusions": [],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -2797,6 +3105,8 @@
     "B"
    ],
    "unit_id": "U03",
+   "unit_type": "class_of_molecules",
+   "unit_type_label": "class of molecules",
    "views": {
     "broad": {
      "caveat_limits": [],
@@ -2833,6 +3143,15 @@
       "need": "",
       "question": "A measured thermal-stability or binding assay of the exact variant and a candidate-ligand screen; each would turn this abstention into a card.",
       "would_change": ""
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "unclear"
+      ],
+      "feasibility_text": "not stated",
+      "level": "NX3",
+      "level_text": "low or none today: no discriminating next step is named, or the outcome could not change the decision before a premise exists",
+      "stake": "no discriminating next step named"
      },
      "notes": [],
      "objective": "broad",
@@ -2938,6 +3257,12 @@
    "depth_of_benefit_sought": "",
    "evaluation_depth": "E2",
    "evaluation_depth_text": "card reviewed, abstention (premise named, no test designed)",
+   "evidence_level_note": {
+    "attribution_rule": "a result for a tool compound or one member is not a result for the other members; the unit group describes the mechanism/class evaluation",
+    "of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level",
+    "of_molecule": "no named member has a WWOX-system result",
+    "untested_members": []
+   },
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
@@ -2950,9 +3275,26 @@
    },
    "kind": "mechanism_class",
    "label": "ER-proteostasis regulators (IRE1/XBP1s, ERAD)",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "class or mechanism level (card-level assertions and unnamed members)",
+     "member_key": "CLASS",
+     "member_type": "class_level",
+     "outside_wwox_assertions": 0,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member",
+     "wwox_assertions": 0
+    }
+   ],
    "members": [],
    "merge_reason": "",
    "model_exclusions": [],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -2993,6 +3335,8 @@
     "B"
    ],
    "unit_id": "U04",
+   "unit_type": "class_of_molecules",
+   "unit_type_label": "class of molecules",
    "views": {
     "broad": {
      "caveat_limits": [],
@@ -3029,6 +3373,15 @@
       "need": "",
       "question": "The three-fraction plus inhibitor design on the exact variant would place it; the answer decides whether this axis exists for a cytosolic enzyme.",
       "would_change": ""
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "unclear"
+      ],
+      "feasibility_text": "not stated",
+      "level": "NX3",
+      "level_text": "low or none today: no discriminating next step is named, or the outcome could not change the decision before a premise exists",
+      "stake": "no discriminating next step named"
      },
      "notes": [],
      "objective": "broad",
@@ -3134,6 +3487,12 @@
    "depth_of_benefit_sought": "",
    "evaluation_depth": "E2",
    "evaluation_depth_text": "card reviewed, abstention (premise named, no test designed)",
+   "evidence_level_note": {
+    "attribution_rule": "a result for a tool compound or one member is not a result for the other members; the unit group describes the mechanism/class evaluation",
+    "of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level",
+    "of_molecule": "no named member has a WWOX-system result",
+    "untested_members": []
+   },
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
@@ -3146,9 +3505,26 @@
    },
    "kind": "mechanism_class",
    "label": "HSP70-axis modulation",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "class or mechanism level (card-level assertions and unnamed members)",
+     "member_key": "CLASS",
+     "member_type": "class_level",
+     "outside_wwox_assertions": 0,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member",
+     "wwox_assertions": 0
+    }
+   ],
    "members": [],
    "merge_reason": "",
    "model_exclusions": [],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -3189,6 +3565,8 @@
     "B"
    ],
    "unit_id": "U05",
+   "unit_type": "class_of_molecules",
+   "unit_type_label": "class of molecules",
    "views": {
     "broad": {
      "caveat_limits": [],
@@ -3225,6 +3603,15 @@
       "need": "",
       "question": "A chase paired with a chaperone-function perturbation on the exact variant from a detectable baseline.",
       "would_change": ""
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "unclear"
+      ],
+      "feasibility_text": "not stated",
+      "level": "NX3",
+      "level_text": "low or none today: no discriminating next step is named, or the outcome could not change the decision before a premise exists",
+      "stake": "no discriminating next step named"
      },
      "notes": [],
      "objective": "broad",
@@ -3363,6 +3750,15 @@
    "depth_of_benefit_sought": "",
    "evaluation_depth": "E3",
    "evaluation_depth_text": "card reviewed with assertions; no WWOX-side result read beyond abstract",
+   "evidence_level_note": {
+    "attribution_rule": "a result for a tool compound or one member is not a result for the other members; the unit group describes the mechanism/class evaluation",
+    "of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level",
+    "of_molecule": "no named member has a WWOX-system result",
+    "untested_members": [
+     "Amlexanox",
+     "Ataluren"
+    ]
+   },
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
@@ -3375,6 +3771,47 @@
    },
    "kind": "drug_class",
    "label": "PTC read-through agents, amlexanox and class",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "Amlexanox",
+     "member_key": "FAM:CAT:CHEMBL1096",
+     "member_type": "molecule",
+     "outside_wwox_assertions": 2,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member; 2 outside-WWOX assertion(s) attributed",
+     "wwox_assertions": 0
+    },
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "Ataluren",
+     "member_key": "FAM:CAT:CHEMBL256997",
+     "member_type": "molecule",
+     "outside_wwox_assertions": 0,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member",
+     "wwox_assertions": 0
+    },
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "class or mechanism level (card-level assertions and unnamed members)",
+     "member_key": "CLASS",
+     "member_type": "class_level",
+     "outside_wwox_assertions": 0,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member",
+     "wwox_assertions": 0
+    }
+   ],
    "members": [
     {
      "access_categories": [
@@ -3423,6 +3860,8 @@
    ],
    "merge_reason": "amlexanox (B01) is a named member of the read-through class (B02); one intervention, counted once",
    "model_exclusions": [],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -3464,6 +3903,8 @@
     "B"
    ],
    "unit_id": "U06",
+   "unit_type": "class_of_molecules",
+   "unit_type_label": "class of molecules",
    "views": {
     "broad": {
      "caveat_limits": [],
@@ -3511,6 +3952,15 @@
       "need": "NEED-WWOX-PTC-READTHROUGH",
       "question": "For PTC alleles: a transcript-level NMD measurement on a recorded nonsense allele (the sequence-based enumeration exists since 2026-10-28 as a prediction only), then a function measurement on any protein produced. For the missense class: none, the mechanism does not apply.",
       "would_change": ""
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "unclear"
+      ],
+      "feasibility_text": "not stated",
+      "level": "NX3",
+      "level_text": "low or none today: no discriminating next step is named, or the outcome could not change the decision before a premise exists",
+      "stake": "a mechanism-only link: the outcome could not change the decision before a premise exists"
      },
      "notes": [],
      "objective": "broad",
@@ -3652,6 +4102,12 @@
    "depth_of_benefit_sought": "deep: multi-endpoint restoration; shown for prevention in an early window, not for recovery after onset (one organoid endpoint aside)",
    "evaluation_depth": "E4",
    "evaluation_depth_text": "card reviewed, 12 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
+   "evidence_level_note": {
+    "attribution_rule": "single intervention: its group is its own",
+    "of_mechanism_or_class": "not applicable: a single intervention, not a class",
+    "of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+    "untested_members": []
+   },
    "excluded_from_comparisons": [
     "not_compound"
    ],
@@ -3666,11 +4122,49 @@
    },
    "kind": "modality_gene_addition",
    "label": "AAV9-delivered human WWOX (gene addition)",
+   "member_evidence": [
+    {
+     "assertion_ids": [
+      "DR-AAV-GFAP-P5HD",
+      "DR-AAV-GLU10-HD",
+      "DR-AAV-GLU10-LD",
+      "DR-AAV-MBP-HD",
+      "DR-AAV-MBP-LD",
+      "DR-AAV-MOTOR-HD",
+      "DR-AAV-MOTOR-LD",
+      "DR-AAV-SURV-HD",
+      "DR-AAV-SURV-LD",
+      "DR-AAV-WT-HD",
+      "DR-AAV-WT-LD",
+      "DR-C01-001"
+     ],
+     "depth": "complete_fulltext_read",
+     "member": "AAV9-delivered human WWOX (gene addition)",
+     "member_key": "UNIT",
+     "member_type": "gene_therapy",
+     "outside_wwox_assertions": 4,
+     "signs": {
+      "benefit": 5,
+      "mixed": 1,
+      "null": 2,
+      "partial_benefit": 2,
+      "unquantified": 2
+     },
+     "source_pmids": [
+      "42422765"
+     ],
+     "tested_in_wwox_system": "yes",
+     "what": "spike-wave discharge rate per hour on continuous ECoG: decrease",
+     "wwox_assertions": 12
+    }
+   ],
    "members": [],
    "merge_reason": "C01 and C04 carry endpoint families of the same dose-study experiments; the two papers share a senior author; counted once",
    "model_exclusions": [
     "not_compound"
    ],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -3744,6 +4238,8 @@
     "A"
    ],
    "unit_id": "U07",
+   "unit_type": "gene_therapy",
+   "unit_type_label": "gene therapy / gene-based modality",
    "views": {
     "broad": {
      "caveat_limits": [
@@ -3801,6 +4297,16 @@
       "need": "NEED-WWOX-GENE-ADDITION",
       "question": "Does an intermediate vector level separate a threshold from a gradient, and is the benefit only prevented inside the first days of life or also recovered when treatment follows onset? No study has measured the phenotype at the day of injection.",
       "would_change": "Quantified myelination would add a controlled row on the same need; a failure would move the card to C2 by rule; a treated-after-onset arm would show whether the word recovery may be used for that endpoint."
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "access_or_material_not_known",
+       "new_wet_lab_work_needed"
+      ],
+      "feasibility_text": "Wet-lab work in a Wwox-null mouse by a laboratory that has the vector; none known in this repository; the source laboratory is one group (the two papers share a senior author). Whether the vector is…",
+      "level": "NX2",
+      "level_text": "informative: the next experiment resolves one limit, the decision moves one step at most",
+      "stake": "whether the strongest case holds beyond its single row and its window"
      },
      "notes": [],
      "objective": "broad",
@@ -3873,6 +4379,16 @@
       "need": "NEED-SYSTEMIC-GLYCAEMIA-GROWTH",
       "question": "Is the P10 glucose difference real (knockout about 95, wild type about 130), and does any dose of the vector correct it?",
       "would_change": "It would resolve the two glucose rows and either remove the C2 or make it a C1."
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "access_or_material_not_known",
+       "new_wet_lab_work_needed"
+      ],
+      "feasibility_text": "Same laboratory and mouse as for gene addition; availability not known.",
+      "level": "NX1",
+      "level_text": "decisive: the discriminating next experiment would change a decision (lift or stop)",
+      "stake": "which of the favourable and null WWOX-system results holds: the outcomes lead to opposite decisions (lift or stop)"
      },
      "notes": [],
      "objective": "partial",
@@ -3972,6 +4488,12 @@
    "depth_of_benefit_sought": "",
    "evaluation_depth": "E2",
    "evaluation_depth_text": "card reviewed, abstention (premise named, no test designed)",
+   "evidence_level_note": {
+    "attribution_rule": "single intervention: its group is its own",
+    "of_mechanism_or_class": "not applicable: a single intervention, not a class",
+    "of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+    "untested_members": []
+   },
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
@@ -3984,9 +4506,26 @@
    },
    "kind": "modality_oligonucleotide",
    "label": "Splice-correcting antisense oligonucleotide / editing (splice-acceptor allele)",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "Splice-correcting antisense oligonucleotide / editing (splice-acceptor allele)",
+     "member_key": "UNIT",
+     "member_type": "gene_therapy",
+     "outside_wwox_assertions": 0,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member",
+     "wwox_assertions": 0
+    }
+   ],
    "members": [],
    "merge_reason": "",
    "model_exclusions": [],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -4028,6 +4567,8 @@
     "B"
    ],
    "unit_id": "U08",
+   "unit_type": "gene_therapy",
+   "unit_type_label": "gene therapy / gene-based modality",
    "views": {
     "broad": {
      "caveat_limits": [],
@@ -4064,6 +4605,15 @@
       "need": "",
       "question": "Junction-spanning RT-PCR with and without an NMD block on material carrying a canonical splice allele.",
       "would_change": ""
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "unclear"
+      ],
+      "feasibility_text": "not stated",
+      "level": "NX3",
+      "level_text": "low or none today: no discriminating next step is named, or the outcome could not change the decision before a premise exists",
+      "stake": "no discriminating next step named"
      },
      "notes": [],
      "objective": "broad",
@@ -4169,6 +4719,12 @@
    "depth_of_benefit_sought": "",
    "evaluation_depth": "E2",
    "evaluation_depth_text": "card reviewed, abstention (premise named, no test designed)",
+   "evidence_level_note": {
+    "attribution_rule": "single intervention: its group is its own",
+    "of_mechanism_or_class": "not applicable: a single intervention, not a class",
+    "of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+    "untested_members": []
+   },
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
@@ -4181,9 +4737,26 @@
    },
    "kind": "modality_gene_regulation",
    "label": "Endogenous boost (CRISPRa or equivalent)",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "Endogenous boost (CRISPRa or equivalent)",
+     "member_key": "UNIT",
+     "member_type": "gene_therapy",
+     "outside_wwox_assertions": 0,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member",
+     "wwox_assertions": 0
+    }
+   ],
    "members": [],
    "merge_reason": "",
    "model_exclusions": [],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -4224,6 +4797,8 @@
     "B"
    ],
    "unit_id": "U09",
+   "unit_type": "gene_therapy",
+   "unit_type_label": "gene therapy / gene-based modality",
    "views": {
     "broad": {
      "caveat_limits": [],
@@ -4260,6 +4835,15 @@
       "need": "",
       "question": "Synthesis and fate of the exact variant (the same fractionation-and-inhibitor design) decides whether raising its expression can help.",
       "would_change": ""
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "unclear"
+      ],
+      "feasibility_text": "not stated",
+      "level": "NX3",
+      "level_text": "low or none today: no discriminating next step is named, or the outcome could not change the decision before a premise exists",
+      "stake": "no discriminating next step named"
      },
      "notes": [],
      "objective": "broad",
@@ -4374,6 +4958,12 @@
    "depth_of_benefit_sought": "",
    "evaluation_depth": "E4",
    "evaluation_depth_text": "card reviewed, 2 WWOX-side assertion(s) read beyond abstract",
+   "evidence_level_note": {
+    "attribution_rule": "single intervention: its group is its own",
+    "of_mechanism_or_class": "not applicable: a single intervention, not a class",
+    "of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+    "untested_members": []
+   },
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
@@ -4386,9 +4976,32 @@
    },
    "kind": "experimental_compound",
    "label": "A51, a multi-kinase inhibitor (experimental)",
+   "member_evidence": [
+    {
+     "assertion_ids": [
+      "DR-D01-001",
+      "DR-D01-002"
+     ],
+     "depth": "complete_fulltext_read",
+     "member": "A51, a multi-kinase inhibitor (experimental)",
+     "member_key": "UNIT",
+     "member_type": "molecule",
+     "outside_wwox_assertions": 0,
+     "signs": {
+      "benefit": 1,
+      "null": 1
+     },
+     "source_pmids": [],
+     "tested_in_wwox_system": "yes",
+     "what": "fraction of layer neurons (SATB2+, CTIP2+): no_change",
+     "wwox_assertions": 2
+    }
+   ],
    "members": [],
    "merge_reason": "",
    "model_exclusions": [],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -4458,6 +5071,8 @@
     "A"
    ],
    "unit_id": "U10",
+   "unit_type": "molecule",
+   "unit_type_label": "molecule",
    "views": {
     "broad": {
      "caveat_limits": [
@@ -4502,6 +5117,15 @@
       "need": "",
       "question": "A dose-by-timing series in a developing-cortex model with a treated wild-type arm, progenitor and layer-neuron endpoints and an electrographic endpoint; a selective MYC inhibitor to separate Wnt from MYC; and a brain-region exposure level in a young animal.",
       "would_change": ""
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "unclear"
+      ],
+      "feasibility_text": "not stated",
+      "level": "NX3",
+      "level_text": "low or none today: no discriminating next step is named, or the outcome could not change the decision before a premise exists",
+      "stake": "no discriminating next step named"
      },
      "notes": [],
      "objective": "broad",
@@ -4567,6 +5191,16 @@
       "need": "NEED-MYC-PROGENITOR-PROLIFERATION",
       "question": "Does the fall in progenitors with A51 hold with a treated wild-type arm and independent differentiations, and is the lack of layer-neuron recovery real or a timing effect?",
       "would_change": "A treated wild-type arm and independent differentiations remove design limits from the favourable row (toward F1 if the other flags are absent); a layer-neuron recovery would remove the counter row; a persistent absence keeps C2."
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "access_or_material_not_known",
+       "new_wet_lab_work_needed"
+      ],
+      "feasibility_text": "A51 is a multi-kinase inhibitor with the safety gate open (card); the organoid line is not held (not known).",
+      "level": "NX1",
+      "level_text": "decisive: the discriminating next experiment would change a decision (lift or stop)",
+      "stake": "which of the favourable and null WWOX-system results holds: the outcomes lead to opposite decisions (lift or stop)"
      },
      "notes": [],
      "objective": "partial",
@@ -4667,6 +5301,12 @@
    "depth_of_benefit_sought": "",
    "evaluation_depth": "E2",
    "evaluation_depth_text": "card reviewed, abstention (premise named, no test designed)",
+   "evidence_level_note": {
+    "attribution_rule": "a result for a tool compound or one member is not a result for the other members; the unit group describes the mechanism/class evaluation",
+    "of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level",
+    "of_molecule": "no named member has a WWOX-system result",
+    "untested_members": []
+   },
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
@@ -4679,9 +5319,26 @@
    },
    "kind": "mechanism_class",
    "label": "Wnt-lowering (tankyrase-type) agents",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "class or mechanism level (card-level assertions and unnamed members)",
+     "member_key": "CLASS",
+     "member_type": "class_level",
+     "outside_wwox_assertions": 0,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member",
+     "wwox_assertions": 0
+    }
+   ],
    "members": [],
    "merge_reason": "",
    "model_exclusions": [],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -4723,6 +5380,8 @@
     "A"
    ],
    "unit_id": "U11",
+   "unit_type": "class_of_molecules",
+   "unit_type_label": "class of molecules",
    "views": {
     "broad": {
      "caveat_limits": [],
@@ -4759,6 +5418,15 @@
       "need": "",
       "question": "Activation-step measurement (reporter, nuclear beta-catenin) in a WWOX-deficient neural system, then the dose-by-timing series.",
       "would_change": ""
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "unclear"
+      ],
+      "feasibility_text": "not stated",
+      "level": "NX3",
+      "level_text": "low or none today: no discriminating next step is named, or the outcome could not change the decision before a premise exists",
+      "stake": "no discriminating next step named"
      },
      "notes": [],
      "objective": "broad",
@@ -4806,6 +5474,15 @@
       "need": "",
       "question": "Activation-step measurement (reporter, nuclear beta-catenin) in a WWOX-deficient neural system, then the dose-by-timing series.",
       "would_change": ""
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "unclear"
+      ],
+      "feasibility_text": "not stated",
+      "level": "NX3",
+      "level_text": "low or none today: no discriminating next step is named, or the outcome could not change the decision before a premise exists",
+      "stake": "no discriminating next step named"
      },
      "notes": [],
      "objective": "partial",
@@ -4905,6 +5582,12 @@
    "depth_of_benefit_sought": "",
    "evaluation_depth": "E3",
    "evaluation_depth_text": "card reviewed with assertions; no WWOX-side result read beyond abstract",
+   "evidence_level_note": {
+    "attribution_rule": "a result for a tool compound or one member is not a result for the other members; the unit group describes the mechanism/class evaluation",
+    "of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level",
+    "of_molecule": "no named member has a WWOX-system result",
+    "untested_members": []
+   },
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
@@ -4917,9 +5600,26 @@
    },
    "kind": "mechanism_class",
    "label": "Integrated-stress-response modulators (class)",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "class or mechanism level (card-level assertions and unnamed members)",
+     "member_key": "CLASS",
+     "member_type": "class_level",
+     "outside_wwox_assertions": 4,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member; 4 outside-WWOX assertion(s) attributed",
+     "wwox_assertions": 0
+    }
+   ],
    "members": [],
    "merge_reason": "",
    "model_exclusions": [],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -4969,6 +5669,8 @@
     "A"
    ],
    "unit_id": "U12",
+   "unit_type": "class_of_molecules",
+   "unit_type_label": "class of molecules",
    "views": {
     "broad": {
      "declared": false,
@@ -5025,6 +5727,16 @@
       "need": "NEED-ISR-ATTENUATION",
       "question": "Is the ISR kinase arm active at all in WWOX-deficient neural cells, and is it compensatory or harmful? After the mouse P17 transcripts the sign is unresolved, and two mitochondrial-lesion precedents have opposite signs (protective in one, harmful in the other); neuronal activity alone also raises ATF4 protein without an mRNA change.",
       "would_change": "A measured elevation would give the need its first controlled WWOX-system row on the pathway; a flat result removes the premise of F3 for card E01. Transcripts alone cannot do either: the mouse analysis found no resolvable sign at about 0.3."
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "access_or_material_not_known",
+       "new_wet_lab_work_needed"
+      ],
+      "feasibility_text": "No suitable dataset is held (the progenitor deposit failed its pre-declared gates; the mouse deposits hold transcripts only); availability of isogenic lines: not known.",
+      "level": "NX2",
+      "level_text": "informative: the next experiment resolves one limit, the decision moves one step at most",
+      "stake": "first WWOX-system test of a target hypothesis"
      },
      "notes": [],
      "objective": "partial",
@@ -5154,6 +5866,15 @@
    "depth_of_benefit_sought": "partial: a metabolic consequence, not restoration of WWOX; no endpoint benefit is claimed",
    "evaluation_depth": "E3",
    "evaluation_depth_text": "card reviewed with assertions; no WWOX-side result read beyond abstract; class pharmacology table (IT7 P5)",
+   "evidence_level_note": {
+    "attribution_rule": "a result for a tool compound or one member is not a result for the other members; the unit group describes the mechanism/class evaluation",
+    "of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level",
+    "of_molecule": "no named member has a WWOX-system result",
+    "untested_members": [
+     "Stiripentol",
+     "tool compound(s) or precedent named in card E02_ldh_inhibition"
+    ]
+   },
    "excluded_from_comparisons": [
     "firewalled"
    ],
@@ -5168,6 +5889,47 @@
    },
    "kind": "drug_class",
    "label": "LDH inhibition or lowering (stiripentol, LDHA tool compounds, oligonucleotide)",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "Stiripentol",
+     "member_key": "FAM:CAT:CHEMBL1983350",
+     "member_type": "molecule",
+     "outside_wwox_assertions": 5,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member; 5 outside-WWOX assertion(s) attributed",
+     "wwox_assertions": 0
+    },
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "tool compound(s) or precedent named in card E02_ldh_inhibition",
+     "member_key": "INT:E02_ldh_inhibition:tool",
+     "member_type": "tool_compound",
+     "outside_wwox_assertions": 3,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member; 3 outside-WWOX assertion(s) attributed",
+     "wwox_assertions": 0
+    },
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "class or mechanism level (card-level assertions and unnamed members)",
+     "member_key": "CLASS",
+     "member_type": "class_level",
+     "outside_wwox_assertions": 0,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member",
+     "wwox_assertions": 0
+    }
+   ],
    "members": [
     {
      "access_categories": [
@@ -5211,6 +5973,8 @@
    "model_exclusions": [
     "firewalled"
    ],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -5292,6 +6056,8 @@
     "A"
    ],
    "unit_id": "U13",
+   "unit_type": "class_of_molecules",
+   "unit_type_label": "class of molecules",
    "views": {
     "broad": {
      "declared": false,
@@ -5347,6 +6113,16 @@
       "need": "NEED-LACTATE-LDH",
       "question": "Is LDH activity or lactate raised in WWOX-deficient neural cells? (IT8 P3 2026-10-29: the former second half of this question, whether stiripentol reaches an inhibitory level at all, is answered without enzyme-level support on primary data and is no longer asked of it.)",
       "would_change": "If lactate is not raised, the need loses its WWOX observation and E02 moves to P3 by rule; if raised, the node is tested with a nanomolar human-LDHA inhibitor, not with stiripentol (IT8 P3), and a stiripentol effect would be read as complex I or GABA-A pharmacology. A computational ranking of compounds does not change this: the IT7 P3 comparison found no ad…"
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "access_or_material_not_known",
+       "new_wet_lab_work_needed"
+      ],
+      "feasibility_text": "Cell lines and fly stocks: not known. A public request draft exists in this directory, but registration or contact is not performed from here.",
+      "level": "NX2",
+      "level_text": "informative: the next experiment resolves one limit, the decision moves one step at most",
+      "stake": "first WWOX-system test of a target hypothesis"
      },
      "notes": [],
      "objective": "partial",
@@ -5483,6 +6259,15 @@
    "depth_of_benefit_sought": "partial: a metabolic and possibly symptomatic effect; the card pursues no benefit endpoint and sharpens a decision",
    "evaluation_depth": "E3",
    "evaluation_depth_text": "card reviewed with assertions; no WWOX-side result read beyond abstract; class pharmacology table (IT7 P5)",
+   "evidence_level_note": {
+    "attribution_rule": "a result for a tool compound or one member is not a result for the other members; the unit group describes the mechanism/class evaluation",
+    "of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level",
+    "of_molecule": "no named member has a WWOX-system result",
+    "untested_members": [
+     "Sodium Dichloroacetate",
+     "tool compound(s) or precedent named in card E03_pdk_inhibition_dca"
+    ]
+   },
    "excluded_from_comparisons": [
     "firewalled"
    ],
@@ -5497,6 +6282,47 @@
    },
    "kind": "drug_class",
    "label": "Dichloroacetate and PDK inhibition",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "Sodium Dichloroacetate",
+     "member_key": "FAM:CAT:CHEMBL306823",
+     "member_type": "molecule",
+     "outside_wwox_assertions": 15,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member; 15 outside-WWOX assertion(s) attributed",
+     "wwox_assertions": 0
+    },
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "tool compound(s) or precedent named in card E03_pdk_inhibition_dca",
+     "member_key": "INT:E03_pdk_inhibition_dca:tool",
+     "member_type": "tool_compound",
+     "outside_wwox_assertions": 1,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member; 1 outside-WWOX assertion(s) attributed",
+     "wwox_assertions": 0
+    },
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "class or mechanism level (card-level assertions and unnamed members)",
+     "member_key": "CLASS",
+     "member_type": "class_level",
+     "outside_wwox_assertions": 0,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member",
+     "wwox_assertions": 0
+    }
+   ],
    "members": [
     {
      "access_categories": [
@@ -5541,6 +6367,8 @@
    "model_exclusions": [
     "firewalled"
    ],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -5660,6 +6488,8 @@
     "A"
    ],
    "unit_id": "U14",
+   "unit_type": "class_of_molecules",
+   "unit_type_label": "class of molecules",
    "views": {
     "broad": {
      "declared": false,
@@ -5722,6 +6552,16 @@
       "need": "NEED-LACTATE-LDH",
       "question": "Is LDH activity or lactate raised in WWOX-deficient neural cells? (IT8 P3 2026-10-29: the former second half of this question, whether stiripentol reaches an inhibitory level at all, is answered without enzyme-level support on primary data and is no longer asked of it.)",
       "would_change": "If lactate is not raised, the need loses its WWOX observation and E02 moves to P3 by rule; if raised, the node is tested with a nanomolar human-LDHA inhibitor, not with stiripentol (IT8 P3), and a stiripentol effect would be read as complex I or GABA-A pharmacology. A computational ranking of compounds does not change this: the IT7 P3 comparison found no ad…"
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "access_or_material_not_known",
+       "new_wet_lab_work_needed"
+      ],
+      "feasibility_text": "Cell lines and fly stocks: not known. A public request draft exists in this directory, but registration or contact is not performed from here.",
+      "level": "NX2",
+      "level_text": "informative: the next experiment resolves one limit, the decision moves one step at most",
+      "stake": "first WWOX-system test of a target hypothesis"
      },
      "notes": [],
      "objective": "partial",
@@ -5830,6 +6670,12 @@
    "depth_of_benefit_sought": "partial: empirical seizure control; any bypass of a bioenergetic defect is hypothetical",
    "evaluation_depth": "E4",
    "evaluation_depth_text": "card reviewed, 2 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
+   "evidence_level_note": {
+    "attribution_rule": "single intervention: its group is its own",
+    "of_mechanism_or_class": "not applicable: a single intervention, not a class",
+    "of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+    "untested_members": []
+   },
    "excluded_from_comparisons": [
     "not_compound"
    ],
@@ -5844,11 +6690,36 @@
    },
    "kind": "diet",
    "label": "Ketogenic diet (complex dietary intervention)",
+   "member_evidence": [
+    {
+     "assertion_ids": [
+      "A-KD-1",
+      "A-KD-4"
+     ],
+     "depth": "complete_fulltext_read",
+     "member": "Ketogenic diet (complex dietary intervention)",
+     "member_key": "UNIT",
+     "member_type": "diet",
+     "outside_wwox_assertions": 2,
+     "signs": {
+      "benefit": 1,
+      "null": 1
+     },
+     "source_pmids": [
+      "35573960"
+     ],
+     "tested_in_wwox_system": "yes",
+     "what": "clinician-reported seizure control on the ketogenic diet: no_change",
+     "wwox_assertions": 2
+    }
+   ],
    "members": [],
    "merge_reason": "E04 (lactate-axis card, abstention) and EB-KD-01 (case reports) concern the same diet; the comparison record CMP-06 treats them together; counted once",
    "model_exclusions": [
     "not_compound"
    ],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -5924,6 +6795,8 @@
     "A"
    ],
    "unit_id": "U15",
+   "unit_type": "diet",
+   "unit_type_label": "diet",
    "views": {
     "broad": {
      "declared": false,
@@ -5983,6 +6856,16 @@
       "need": "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
       "question": "Is the ethosuximide late-phase effect reproducible with a drug-by-genotype test and a same-day control, is the lithium effect genotype-specific, and do the denominators of the ketogenic-diet and vigabatrin case series keep their C2?",
       "would_change": "A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays."
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "access_or_material_not_known",
+       "new_wet_lab_work_needed"
+      ],
+      "feasibility_text": "The mouse experiment is the one already published by one laboratory; animals and the Wwox-null line are not available here (not known). Denominators: with the case-series authors; contact is out of s…",
+      "level": "NX1",
+      "level_text": "decisive: the discriminating next experiment would change a decision (lift or stop)",
+      "stake": "which of the favourable and null WWOX-system results holds: the outcomes lead to opposite decisions (lift or stop)"
      },
      "notes": [],
      "objective": "partial",
@@ -6109,6 +6992,12 @@
    "depth_of_benefit_sought": "",
    "evaluation_depth": "E2",
    "evaluation_depth_text": "card reviewed, abstention (premise named, no test designed)",
+   "evidence_level_note": {
+    "attribution_rule": "single intervention: its group is its own",
+    "of_mechanism_or_class": "not applicable: a single intervention, not a class",
+    "of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+    "untested_members": []
+   },
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
@@ -6121,6 +7010,21 @@
    },
    "kind": "single_compound_class_level",
    "label": "Cannabidiol (class level)",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "Cannabidiol",
+     "member_key": "FAM:CAT:CHEMBL190461",
+     "member_type": "molecule",
+     "outside_wwox_assertions": 0,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member",
+     "wwox_assertions": 0
+    }
+   ],
    "members": [
     {
      "access_categories": [
@@ -6147,6 +7051,8 @@
    ],
    "merge_reason": "",
    "model_exclusions": [],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -6187,6 +7093,8 @@
     "A"
    ],
    "unit_id": "U16",
+   "unit_type": "molecule",
+   "unit_type_label": "molecule",
    "views": {
     "broad": {
      "declared": false,
@@ -6229,6 +7137,15 @@
       "need": "",
       "question": "Did any WWOX organoid or animal paper test cannabidiol? One registry query answers it.",
       "would_change": ""
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "unclear"
+      ],
+      "feasibility_text": "not stated",
+      "level": "NX3",
+      "level_text": "low or none today: no discriminating next step is named, or the outcome could not change the decision before a premise exists",
+      "stake": "no discriminating next step named"
      },
      "notes": [],
      "objective": "partial",
@@ -6372,6 +7289,12 @@
    "depth_of_benefit_sought": "",
    "evaluation_depth": "E4",
    "evaluation_depth_text": "card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
+   "evidence_level_note": {
+    "attribution_rule": "single intervention: its group is its own",
+    "of_mechanism_or_class": "not applicable: a single intervention, not a class",
+    "of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+    "untested_members": []
+   },
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
@@ -6384,6 +7307,40 @@
    },
    "kind": "single_compound",
    "label": "Ethosuximide",
+   "member_evidence": [
+    {
+     "assertion_ids": [
+      "A-ETX-1"
+     ],
+     "depth": "complete_fulltext_read",
+     "member": "Ethosuximide",
+     "member_key": "FAM:CAT:CHEMBL696",
+     "member_type": "molecule",
+     "outside_wwox_assertions": 0,
+     "signs": {
+      "benefit": 1
+     },
+     "source_pmids": [
+      "32000863"
+     ],
+     "tested_in_wwox_system": "yes",
+     "what": "PTZ-provoked behavioural seizure score, late phase of the hour (graphical reading): decrease",
+     "wwox_assertions": 1
+    },
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "tool compound(s) or precedent named in card EB-ETX-01",
+     "member_key": "INT:EB-ETX-01:tool",
+     "member_type": "tool_compound",
+     "outside_wwox_assertions": 1,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member; 1 outside-WWOX assertion(s) attributed",
+     "wwox_assertions": 0
+    }
+   ],
    "members": [
     {
      "access_categories": [
@@ -6424,6 +7381,8 @@
    ],
    "merge_reason": "",
    "model_exclusions": [],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -6496,6 +7455,8 @@
     "A"
    ],
    "unit_id": "U17",
+   "unit_type": "molecule",
+   "unit_type_label": "molecule",
    "views": {
     "broad": {
      "declared": false,
@@ -6562,6 +7523,15 @@
       "need": "NEED-T-TYPE-CALCIUM",
       "question": "Does the ethosuximide sensitivity reflect T-type involvement, given that no T-type measurement exists and a class-level progenitor-viability harm signal is recorded?",
       "would_change": "A direct measurement would turn the F2 into a row with a mechanism; a negative would add a null to the need."
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "access_or_material_not_known"
+      ],
+      "feasibility_text": "not known (apinocaltamide is a sponsor compound with no access evidence obtained here).",
+      "level": "NX1",
+      "level_text": "decisive: the discriminating next experiment would change a decision (lift or stop)",
+      "stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)"
      },
      "notes": [
       "the one outside-WWOX harm row is class-level (other T-type blockers lowered progenitor viability; ethosuximide was not tested), not ethosuximide data"
@@ -6662,6 +7632,12 @@
    "depth_of_benefit_sought": "",
    "evaluation_depth": "E2",
    "evaluation_depth_text": "card reviewed, abstention (premise named, no test designed)",
+   "evidence_level_note": {
+    "attribution_rule": "a result for a tool compound or one member is not a result for the other members; the unit group describes the mechanism/class evaluation",
+    "of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level",
+    "of_molecule": "no named member has a WWOX-system result",
+    "untested_members": []
+   },
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
@@ -6674,9 +7650,26 @@
    },
    "kind": "drug_class",
    "label": "ACTH, corticosteroids and phenobarbital-containing regimens (class level)",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "class or mechanism level (card-level assertions and unnamed members)",
+     "member_key": "CLASS",
+     "member_type": "class_level",
+     "outside_wwox_assertions": 0,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member",
+     "wwox_assertions": 0
+    }
+   ],
    "members": [],
    "merge_reason": "",
    "model_exclusions": [],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -6717,6 +7710,8 @@
     "A"
    ],
    "unit_id": "U18",
+   "unit_type": "class_of_molecules",
+   "unit_type_label": "class of molecules",
    "views": {
     "broad": {
      "declared": false,
@@ -6759,6 +7754,15 @@
       "need": "",
       "question": "In a matched non-WWOX West-syndrome series, what fraction responds to hormonal therapy, and how many WWOX responders would that fraction already explain?",
       "would_change": ""
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "unclear"
+      ],
+      "feasibility_text": "not stated",
+      "level": "NX3",
+      "level_text": "low or none today: no discriminating next step is named, or the outcome could not change the decision before a premise exists",
+      "stake": "no discriminating next step named"
      },
      "notes": [],
      "objective": "partial",
@@ -6874,6 +7878,14 @@
    "depth_of_benefit_sought": "",
    "evaluation_depth": "E2",
    "evaluation_depth_text": "card reviewed, abstention (premise named, no test designed)",
+   "evidence_level_note": {
+    "attribution_rule": "a result for a tool compound or one member is not a result for the other members; the unit group describes the mechanism/class evaluation",
+    "of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level",
+    "of_molecule": "no named member has a WWOX-system result",
+    "untested_members": [
+     "Sirolimus"
+    ]
+   },
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
@@ -6886,6 +7898,34 @@
    },
    "kind": "drug_class",
    "label": "mTOR-inhibitor class (sirolimus)",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "Sirolimus",
+     "member_key": "FAM:CAT:CHEMBL413",
+     "member_type": "molecule",
+     "outside_wwox_assertions": 0,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member",
+     "wwox_assertions": 0
+    },
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "class or mechanism level (card-level assertions and unnamed members)",
+     "member_key": "CLASS",
+     "member_type": "class_level",
+     "outside_wwox_assertions": 0,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member",
+     "wwox_assertions": 0
+    }
+   ],
    "members": [
     {
      "access_categories": [
@@ -6911,6 +7951,8 @@
    ],
    "merge_reason": "",
    "model_exclusions": [],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -6950,6 +7992,8 @@
     "A"
    ],
    "unit_id": "U19",
+   "unit_type": "class_of_molecules",
+   "unit_type_label": "class of molecules",
    "views": {
     "broad": {
      "declared": false,
@@ -6992,6 +8036,15 @@
       "need": "",
       "question": "Does the blocked WWOX/mTOR paper (full text unread) report a direction of mTOR activity in a WWOX-deficient system?",
       "would_change": ""
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "unclear"
+      ],
+      "feasibility_text": "not stated",
+      "level": "NX3",
+      "level_text": "low or none today: no discriminating next step is named, or the outcome could not change the decision before a premise exists",
+      "stake": "no discriminating next step named"
      },
      "notes": [],
      "objective": "partial",
@@ -7140,6 +8193,14 @@
    "depth_of_benefit_sought": "",
    "evaluation_depth": "E3",
    "evaluation_depth_text": "card reviewed with assertions; no WWOX-side result read beyond abstract",
+   "evidence_level_note": {
+    "attribution_rule": "a result for a tool compound or one member is not a result for the other members; the unit group describes the mechanism/class evaluation",
+    "of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level",
+    "of_molecule": "Vigabatrin: tested in a WWOX system (7 assertion(s): 2 benefit, 3 null, 1 partial_benefit, 1 unresolved)",
+    "untested_members": [
+     "Cpp-115 Free Base"
+    ]
+   },
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
@@ -7152,6 +8213,60 @@
    },
    "kind": "single_compound_and_class",
    "label": "Vigabatrin and GABA-aminotransferase inactivators",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "Cpp-115 Free Base",
+     "member_key": "FAM:CAT:CHEMBL146927",
+     "member_type": "molecule",
+     "outside_wwox_assertions": 4,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member; 4 outside-WWOX assertion(s) attributed",
+     "wwox_assertions": 0
+    },
+    {
+     "assertion_ids": [
+      "A-VGB-1",
+      "A-VGB-10",
+      "A-VGB-2",
+      "A-VGB-3",
+      "A-VGB-4",
+      "A-VGB-5",
+      "A-VGB-6"
+     ],
+     "depth": "queried_not_full_read",
+     "member": "Vigabatrin",
+     "member_key": "FAM:CAT:CHEMBL89598",
+     "member_type": "molecule",
+     "outside_wwox_assertions": 11,
+     "signs": {
+      "benefit": 2,
+      "null": 3,
+      "partial_benefit": 1,
+      "unresolved": 1
+     },
+     "source_pmids": [],
+     "tested_in_wwox_system": "yes",
+     "what": "clinical cessation of epileptic spasms: unknown",
+     "wwox_assertions": 7
+    },
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "class or mechanism level (card-level assertions and unnamed members)",
+     "member_key": "CLASS",
+     "member_type": "class_level",
+     "outside_wwox_assertions": 0,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member",
+     "wwox_assertions": 0
+    }
+   ],
    "members": [
     {
      "access_categories": [
@@ -7202,6 +8317,8 @@
    ],
    "merge_reason": "EB-VGB-01 (WWOX case reports, seizure) and H02 (myelin exposure limit; same compound plus its sibling CPP-115) are one compound's evidence on different needs; counted once, per-need positions kept",
    "model_exclusions": [],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -7320,6 +8437,8 @@
     "A"
    ],
    "unit_id": "U20",
+   "unit_type": "class_of_molecules",
+   "unit_type_label": "class of molecules",
    "views": {
     "broad": {
      "declared": false,
@@ -7383,6 +8502,16 @@
       "need": "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
       "question": "Is the ethosuximide late-phase effect reproducible with a drug-by-genotype test and a same-day control, is the lithium effect genotype-specific, and do the denominators of the ketogenic-diet and vigabatrin case series keep their C2?",
       "would_change": "A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays."
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "access_or_material_not_known",
+       "new_wet_lab_work_needed"
+      ],
+      "feasibility_text": "The mouse experiment is the one already published by one laboratory; animals and the Wwox-null line are not available here (not known). Denominators: with the case-series authors; contact is out of s…",
+      "level": "NX1",
+      "level_text": "decisive: the discriminating next experiment would change a decision (lift or stop)",
+      "stake": "which of the favourable and null WWOX-system results holds: the outcomes lead to opposite decisions (lift or stop)"
      },
      "notes": [],
      "objective": "partial",
@@ -7457,6 +8586,9 @@
     ],
     "question": [
      "gap-junction dependence (carbenoxolone, 87 percent reduction) and bursting in heterozygote slices as rival explanations of the d-APV result"
+    ],
+    "tool_name": [
+     "F01_glutamate_receptor_node=d-APV (competitive NMDAR block; a tool compound, not a candidate drug)"
     ]
    },
    "class": "ORD",
@@ -7570,13 +8702,24 @@
    "depth_of_benefit_sought": "partial: reduction of a network state (bursting); the card says no developmental benefit is implied",
    "evaluation_depth": "E4",
    "evaluation_depth_text": "card reviewed, 1 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
+   "evidence_level_note": {
+    "attribution_rule": "a result for a tool compound or one member is not a result for the other members; the unit group describes the mechanism/class evaluation",
+    "of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level; a tool-compound result supports the evaluation of the MECHANISM only, not of any clinical agent",
+    "of_molecule": "d-APV (competitive NMDAR block; a tool compound, not a candidate drug): tested in a WWOX system (1 assertion(s): 1 benefit)",
+    "untested_members": [
+     "Perampanel",
+     "Memantine",
+     "Radiprodil",
+     "Selfotel"
+    ]
+   },
    "excluded_from_comparisons": [
     "firewalled",
     "outside_question"
    ],
    "exploratory_it7": "None from P3 (a receptor-physiology question, not a transcript module; memantine and perampanel are card-linked and firewalled). P2: memantine and perampanel are usable by the network method (signed antagonist actions on GRIN and GRIA targets) and have no neural LINCS signature, so the signature method does not apply; the need has 179 linked records by targ…",
    "inputs": {
-    "T1_cards": "e962c587a17dc4ed",
+    "T1_cards": "83338996997a2c1d",
     "T2_pertinence": "4744af9e5e721d31",
     "T3_receipts": "533fe34f5749cb80",
     "T4_needs": "ce38af3ca4f76c07",
@@ -7585,6 +8728,92 @@
    },
    "kind": "drug_class_with_tool_evidence",
    "label": "d-APV (a tool compound; the only agent with a WWOX readout) and the NMDAR/AMPAR class (memantine, perampanel, radiprodil and others are untested siblings)",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "Perampanel",
+     "member_key": "FAM:CAT:CHEMBL1214124",
+     "member_type": "molecule",
+     "outside_wwox_assertions": 3,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member; 3 outside-WWOX assertion(s) attributed",
+     "wwox_assertions": 0
+    },
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "Memantine",
+     "member_key": "FAM:CAT:CHEMBL1699",
+     "member_type": "molecule",
+     "outside_wwox_assertions": 9,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member; 9 outside-WWOX assertion(s) attributed",
+     "wwox_assertions": 0
+    },
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "Radiprodil",
+     "member_key": "FAM:CAT:CHEMBL182066",
+     "member_type": "molecule",
+     "outside_wwox_assertions": 3,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member; 3 outside-WWOX assertion(s) attributed",
+     "wwox_assertions": 0
+    },
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "Selfotel",
+     "member_key": "FAM:CAT:CHEMBL39664",
+     "member_type": "molecule",
+     "outside_wwox_assertions": 1,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member; 1 outside-WWOX assertion(s) attributed",
+     "wwox_assertions": 0
+    },
+    {
+     "assertion_ids": [
+      "DR-W2-001"
+     ],
+     "depth": "complete_fulltext_read",
+     "member": "d-APV (competitive NMDAR block; a tool compound, not a candidate drug)",
+     "member_key": "INT:F01_glutamate_receptor_node:tool",
+     "member_type": "tool_compound",
+     "outside_wwox_assertions": 0,
+     "signs": {
+      "benefit": 1
+     },
+     "source_pmids": [
+      "34634460"
+     ],
+     "tested_in_wwox_system": "yes",
+     "what": "burst frequency: decrease",
+     "wwox_assertions": 1
+    },
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "class or mechanism level (card-level assertions and unnamed members)",
+     "member_key": "CLASS",
+     "member_type": "class_level",
+     "outside_wwox_assertions": 3,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member; 3 outside-WWOX assertion(s) attributed",
+     "wwox_assertions": 0
+    }
+   ],
    "members": [
     {
      "access_categories": [
@@ -7690,6 +8919,8 @@
     "firewalled",
     "outside_question"
    ],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -7753,6 +8984,8 @@
     "A"
    ],
    "unit_id": "U21",
+   "unit_type": "tool_compound_and_class",
+   "unit_type_label": "tool compound + class of molecules",
    "views": {
     "broad": {
      "declared": false,
@@ -7815,6 +9048,16 @@
       "need": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
       "question": "Which of three readings (NMDAR gain, permissive necessity, AMPAR-led drive) explains the d-APV-sensitive bursting, and does the bursting depend on the magnesium block? The d-APV result alone does not separate them.",
       "would_change": "E1 decides whether an NMDAR gain is present or the dependence is permissive; a partial blocker is read only after E1, and without E1 a memantine result cannot be attributed to pyramidal receptors. A titration that cannot lower bursts inside a reachable range closes the magnesium strand."
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "access_or_material_not_known",
+       "new_wet_lab_work_needed"
+      ],
+      "feasibility_text": "Slice electrophysiology in the neuron-specific knockout of the original paper; the line is not held here and whether it is obtainable is not known. Magnesium products have US label evidence by name o…",
+      "level": "NX1",
+      "level_text": "decisive: the discriminating next experiment would change a decision (lift or stop)",
+      "stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)"
      },
      "notes": [],
      "objective": "partial",
@@ -7914,6 +9157,12 @@
    "depth_of_benefit_sought": "",
    "evaluation_depth": "E2",
    "evaluation_depth_text": "card reviewed, abstention (premise named, no test designed)",
+   "evidence_level_note": {
+    "attribution_rule": "a result for a tool compound or one member is not a result for the other members; the unit group describes the mechanism/class evaluation",
+    "of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level",
+    "of_molecule": "no named member has a WWOX-system result",
+    "untested_members": []
+   },
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
@@ -7926,9 +9175,26 @@
    },
    "kind": "mechanism_class",
    "label": "Pro-myelinating agents (activity-dependent myelination sign problem)",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "class or mechanism level (card-level assertions and unnamed members)",
+     "member_key": "CLASS",
+     "member_type": "class_level",
+     "outside_wwox_assertions": 0,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member",
+     "wwox_assertions": 0
+    }
+   ],
    "members": [],
    "merge_reason": "",
    "model_exclusions": [],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -7974,6 +9240,8 @@
     "A"
    ],
    "unit_id": "U22",
+   "unit_type": "class_of_molecules",
+   "unit_type_label": "class of molecules",
    "views": {
     "broad": {
      "declared": false,
@@ -8016,6 +9284,15 @@
       "need": "",
       "question": "Wet-lab, not done: Wwox-null (or conditional neuronal) mice or co-cultures; arms: vehicle, chronic activity suppression, activity-raising manipulation, one pro-myelinating agent; controls: wild type with the same arms, neuronal-restoration positive control; endpoints: quantified MBP and g-ratio by electron microscopy, oligodendrocyte counts;",
       "would_change": ""
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "unclear"
+      ],
+      "feasibility_text": "not stated",
+      "level": "NX3",
+      "level_text": "low or none today: no discriminating next step is named, or the outcome could not change the decision before a premise exists",
+      "stake": "no discriminating next step named"
      },
      "notes": [],
      "objective": "partial",
@@ -8127,6 +9404,12 @@
    "depth_of_benefit_sought": "",
    "evaluation_depth": "E2",
    "evaluation_depth_text": "card reviewed, abstention (premise named, no test designed)",
+   "evidence_level_note": {
+    "attribution_rule": "single intervention: its group is its own",
+    "of_mechanism_or_class": "not applicable: a single intervention, not a class",
+    "of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+    "untested_members": []
+   },
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
@@ -8139,9 +9422,26 @@
    },
    "kind": "single_compound_class_level",
    "label": "Bumetanide and the chloride gradient",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "Bumetanide and the chloride gradient",
+     "member_key": "UNIT",
+     "member_type": "molecule",
+     "outside_wwox_assertions": 0,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member",
+     "wwox_assertions": 0
+    }
+   ],
    "members": [],
    "merge_reason": "",
    "model_exclusions": [],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -8219,6 +9519,8 @@
     "A"
    ],
    "unit_id": "U23",
+   "unit_type": "molecule",
+   "unit_type_label": "molecule",
    "views": {
     "broad": {
      "declared": false,
@@ -8261,6 +9563,15 @@
       "need": "",
       "question": "Gramicidin perforated-patch E_GABA in Wwox-deficient versus parental neurons or slices at three ages (including the earliest culturable), NKCC1 and KCC2 protein by immunoblot or immunostaining, GABA puff response; controls: wild type and heterozygote, bicuculline or gabazine sensitivity, an NKCC1 knockdown arm in place of the drug;",
       "would_change": ""
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "unclear"
+      ],
+      "feasibility_text": "not stated",
+      "level": "NX3",
+      "level_text": "low or none today: no discriminating next step is named, or the outcome could not change the decision before a premise exists",
+      "stake": "no discriminating next step named"
      },
      "notes": [],
      "objective": "partial",
@@ -8415,6 +9726,12 @@
    "depth_of_benefit_sought": "",
    "evaluation_depth": "E4",
    "evaluation_depth_text": "card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
+   "evidence_level_note": {
+    "attribution_rule": "single intervention: its group is its own",
+    "of_mechanism_or_class": "not applicable: a single intervention, not a class",
+    "of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+    "untested_members": []
+   },
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
@@ -8427,6 +9744,27 @@
    },
    "kind": "single_compound",
    "label": "Lithium",
+   "member_evidence": [
+    {
+     "assertion_ids": [
+      "DR-LI-001"
+     ],
+     "depth": "complete_fulltext_read",
+     "member": "Lithium",
+     "member_key": "FAM:CAT:CHEMBL1201333",
+     "member_type": "molecule",
+     "outside_wwox_assertions": 2,
+     "signs": {
+      "benefit": 1
+     },
+     "source_pmids": [
+      "32000863"
+     ],
+     "tested_in_wwox_system": "yes",
+     "what": "behavioural seizure stage after one provoking injection, preweaning mice: decrease",
+     "wwox_assertions": 1
+    }
+   ],
    "members": [
     {
      "access_categories": [
@@ -8453,6 +9791,8 @@
    ],
    "merge_reason": "",
    "model_exclusions": [],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -8523,6 +9863,8 @@
     "A"
    ],
    "unit_id": "U24",
+   "unit_type": "molecule",
+   "unit_type_label": "molecule",
    "views": {
     "broad": {
      "declared": false,
@@ -8582,6 +9924,16 @@
       "need": "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
       "question": "Is the ethosuximide late-phase effect reproducible with a drug-by-genotype test and a same-day control, is the lithium effect genotype-specific, and do the denominators of the ketogenic-diet and vigabatrin case series keep their C2?",
       "would_change": "A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays."
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "access_or_material_not_known",
+       "new_wet_lab_work_needed"
+      ],
+      "feasibility_text": "The mouse experiment is the one already published by one laboratory; animals and the Wwox-null line are not available here (not known). Denominators: with the case-series authors; contact is out of s…",
+      "level": "NX1",
+      "level_text": "decisive: the discriminating next experiment would change a decision (lift or stop)",
+      "stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)"
      },
      "notes": [],
      "objective": "partial",
@@ -8721,6 +10073,12 @@
    "depth_of_benefit_sought": "",
    "evaluation_depth": "E3",
    "evaluation_depth_text": "card reviewed with assertions; no WWOX-side result read beyond abstract",
+   "evidence_level_note": {
+    "attribution_rule": "single intervention: its group is its own",
+    "of_mechanism_or_class": "not applicable: a single intervention, not a class",
+    "of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+    "untested_members": []
+   },
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
@@ -8733,6 +10091,34 @@
    },
    "kind": "single_compound",
    "label": "Apinocaltamide (T-type calcium channel blocker, clinical-stage)",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "Apinocaltamide",
+     "member_key": "FAM:CAT:CHEMBL4217292",
+     "member_type": "molecule",
+     "outside_wwox_assertions": 3,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member; 3 outside-WWOX assertion(s) attributed",
+     "wwox_assertions": 0
+    },
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "tool compound(s) or precedent named in card H01_apinocaltamide_ttype",
+     "member_key": "INT:H01_apinocaltamide_ttype:tool",
+     "member_type": "tool_compound",
+     "outside_wwox_assertions": 1,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member; 1 outside-WWOX assertion(s) attributed",
+     "wwox_assertions": 0
+    }
+   ],
    "members": [
     {
      "access_categories": [
@@ -8773,6 +10159,8 @@
    ],
    "merge_reason": "",
    "model_exclusions": [],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -8845,6 +10233,8 @@
     "A"
    ],
    "unit_id": "U25",
+   "unit_type": "molecule",
+   "unit_type_label": "molecule",
    "views": {
     "broad": {
      "declared": false,
@@ -8905,6 +10295,15 @@
       "need": "NEED-T-TYPE-CALCIUM",
       "question": "Does the ethosuximide sensitivity reflect T-type involvement, given that no T-type measurement exists and a class-level progenitor-viability harm signal is recorded?",
       "would_change": "A direct measurement would turn the F2 into a row with a mechanism; a negative would add a null to the need."
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "access_or_material_not_known"
+      ],
+      "feasibility_text": "not known (apinocaltamide is a sponsor compound with no access evidence obtained here).",
+      "level": "NX1",
+      "level_text": "decisive: the discriminating next experiment would change a decision (lift or stop)",
+      "stake": "first WWOX-system test of a coherent, selected target hypothesis: the outcomes lead to opposite decisions (continue or stop)"
      },
      "notes": [],
      "objective": "partial",
@@ -9005,6 +10404,12 @@
    "depth_of_benefit_sought": "partial: protection or symptom relief downstream of neuronal loss; the causal compartment is neuronal, so a glial drug is not expected to touch the cause",
    "evaluation_depth": "E2",
    "evaluation_depth_text": "card reviewed, abstention (premise named, no test designed); class pharmacology table (IT7 P5)",
+   "evidence_level_note": {
+    "attribution_rule": "a result for a tool compound or one member is not a result for the other members; the unit group describes the mechanism/class evaluation",
+    "of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level",
+    "of_molecule": "no named member has a WWOX-system result",
+    "untested_members": []
+   },
    "excluded_from_comparisons": [
     "outside_question"
    ],
@@ -9019,11 +10424,28 @@
    },
    "kind": "mechanism_class",
    "label": "Glial-reactivity modulators (class)",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "class or mechanism level (card-level assertions and unnamed members)",
+     "member_key": "CLASS",
+     "member_type": "class_level",
+     "outside_wwox_assertions": 0,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member",
+     "wwox_assertions": 0
+    }
+   ],
    "members": [],
    "merge_reason": "",
    "model_exclusions": [
     "outside_question"
    ],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -9077,6 +10499,8 @@
     "A"
    ],
    "unit_id": "U26",
+   "unit_type": "class_of_molecules",
+   "unit_type_label": "class of molecules",
    "views": {
     "broad": {
      "declared": false,
@@ -9119,6 +10543,15 @@
       "need": "",
       "question": "Wet-lab, not done: Wwox-null (or neuron-restricted deletion) pups with wild-type littermates; GFAP and Iba1 density and area fraction in cortex and in hippocampus at P5, P8, P11, P14 and P17 on the same sections for both species-comparable readouts, with continuous cortical recording from the earliest age at which an electrode can be placed, each animal …",
       "would_change": ""
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "unclear"
+      ],
+      "feasibility_text": "not stated",
+      "level": "NX3",
+      "level_text": "low or none today: no discriminating next step is named, or the outcome could not change the decision before a premise exists",
+      "stake": "no discriminating next step named"
      },
      "notes": [],
      "objective": "partial",
@@ -9230,6 +10663,12 @@
    "depth_of_benefit_sought": "partial at best: a reduction of a network state; no developmental benefit implied",
    "evaluation_depth": "E3",
    "evaluation_depth_text": "card reviewed with assertions; no WWOX-side result read beyond abstract; class pharmacology table (IT7 P5)",
+   "evidence_level_note": {
+    "attribution_rule": "single intervention: its group is its own",
+    "of_mechanism_or_class": "not applicable: a single intervention, not a class",
+    "of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+    "untested_members": []
+   },
    "excluded_from_comparisons": [
     "not_compound"
    ],
@@ -9244,11 +10683,28 @@
    },
    "kind": "nutrient_ion",
    "label": "Extracellular magnesium (nutrient / supplement)",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "Extracellular magnesium (nutrient / supplement)",
+     "member_key": "UNIT",
+     "member_type": "molecule",
+     "outside_wwox_assertions": 0,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member",
+     "wwox_assertions": 0
+    }
+   ],
    "members": [],
    "merge_reason": "",
    "model_exclusions": [
     "not_compound"
    ],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -9296,6 +10752,8 @@
     "A"
    ],
    "unit_id": "U27",
+   "unit_type": "molecule",
+   "unit_type_label": "molecule",
    "views": {
     "broad": {
      "declared": false,
@@ -9347,6 +10805,16 @@
       "need": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
       "question": "Which of three readings (NMDAR gain, permissive necessity, AMPAR-led drive) explains the d-APV-sensitive bursting, and does the bursting depend on the magnesium block? The d-APV result alone does not separate them.",
       "would_change": "E1 decides whether an NMDAR gain is present or the dependence is permissive; a partial blocker is read only after E1, and without E1 a memantine result cannot be attributed to pyramidal receptors. A titration that cannot lower bursts inside a reachable range closes the magnesium strand."
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "access_or_material_not_known",
+       "new_wet_lab_work_needed"
+      ],
+      "feasibility_text": "Slice electrophysiology in the neuron-specific knockout of the original paper; the line is not held here and whether it is obtainable is not known. Magnesium products have US label evidence by name o…",
+      "level": "NX3",
+      "level_text": "low or none today: no discriminating next step is named, or the outcome could not change the decision before a premise exists",
+      "stake": "a mechanism-only link: the outcome could not change the decision before a premise exists"
      },
      "notes": [],
      "objective": "partial",
@@ -9442,6 +10910,12 @@
    "depth_of_benefit_sought": "",
    "evaluation_depth": "n/a",
    "evaluation_depth_text": "not an intervention",
+   "evidence_level_note": {
+    "attribution_rule": "single intervention: its group is its own",
+    "of_mechanism_or_class": "not applicable: a single intervention, not a class",
+    "of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+    "untested_members": []
+   },
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
@@ -9454,9 +10928,26 @@
    },
    "kind": "axis_not_an_intervention",
    "label": "Developmental benefit or disease modification (axis)",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "class or mechanism level (card-level assertions and unnamed members)",
+     "member_key": "CLASS",
+     "member_type": "class_level",
+     "outside_wwox_assertions": 0,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member",
+     "wwox_assertions": 0
+    }
+   ],
    "members": [],
    "merge_reason": "",
    "model_exclusions": [],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -9489,6 +10980,8 @@
     "A"
    ],
    "unit_id": "X01",
+   "unit_type": "not_an_intervention",
+   "unit_type_label": "not an intervention (axis)",
    "views": {
     "broad": {
      "member": false,
@@ -9579,6 +11072,12 @@
    "depth_of_benefit_sought": "",
    "evaluation_depth": "n/a",
    "evaluation_depth_text": "not an intervention",
+   "evidence_level_note": {
+    "attribution_rule": "single intervention: its group is its own",
+    "of_mechanism_or_class": "not applicable: a single intervention, not a class",
+    "of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+    "untested_members": []
+   },
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
@@ -9591,9 +11090,26 @@
    },
    "kind": "axis_not_an_intervention",
    "label": "Growth endpoint (axis)",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "class or mechanism level (card-level assertions and unnamed members)",
+     "member_key": "CLASS",
+     "member_type": "class_level",
+     "outside_wwox_assertions": 0,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member",
+     "wwox_assertions": 0
+    }
+   ],
    "members": [],
    "merge_reason": "",
    "model_exclusions": [],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -9626,6 +11142,8 @@
     "A"
    ],
    "unit_id": "X02",
+   "unit_type": "not_an_intervention",
+   "unit_type_label": "not an intervention (axis)",
    "views": {
     "broad": {
      "member": false,
@@ -9714,6 +11232,12 @@
    "depth_of_benefit_sought": "",
    "evaluation_depth": "n/a",
    "evaluation_depth_text": "not an intervention",
+   "evidence_level_note": {
+    "attribution_rule": "single intervention: its group is its own",
+    "of_mechanism_or_class": "not applicable: a single intervention, not a class",
+    "of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+    "untested_members": []
+   },
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
@@ -9726,15 +11250,34 @@
    },
    "kind": "axis_not_an_intervention",
    "label": "Pharmacodynamic anchor (axis)",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "class or mechanism level (card-level assertions and unnamed members)",
+     "member_key": "CLASS",
+     "member_type": "class_level",
+     "outside_wwox_assertions": 0,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member",
+     "wwox_assertions": 0
+    }
+   ],
    "members": [],
    "merge_reason": "",
    "model_exclusions": [],
+   "origin": "known_track_before_it9",
+   "origin_label": "known track from before IT9",
    "pathways": [],
    "pmids": [],
    "receipts_on_cited_pmids": 0,
    "research_objective": "",
    "tracks": [],
    "unit_id": "X03",
+   "unit_type": "not_an_intervention",
+   "unit_type_label": "not an intervention (axis)",
    "views": {
     "broad": {
      "member": false,

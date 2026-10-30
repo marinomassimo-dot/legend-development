@@ -426,8 +426,8 @@ document.addEventListener('click', function (e) { var a = e.target.closest ? e.t
   var UB = {}; R.units.forEach(function (u) { UB[u.id] = u; });
   var rows = Array.prototype.slice.call(document.querySelectorAll('#rk-table tr.rk-row'));
   var dets = {}; Array.prototype.forEach.call(document.querySelectorAll('#rk-table tr.rk-row-detail'), function (r) { dets[r.getAttribute('data-unit')] = r; });
-  var IDS = { view: 'rk-view', cls: 'rk-class', group: 'rk-group', track: 'rk-track', need: 'rk-need', access: 'rk-access', evq: 'rk-evq', q: 'rk-q' };
-  var F = { view: 'general', cls: '', group: '', track: '', need: '', access: '', evq: '', q: '' };
+  var IDS = { view: 'rk-view', cls: 'rk-class', group: 'rk-group', track: 'rk-track', need: 'rk-need', access: 'rk-access', evq: 'rk-evq', type: 'rk-type', origin: 'rk-origin', nx: 'rk-nx', q: 'rk-q' };
+  var F = { view: 'general', cls: '', group: '', track: '', need: '', access: '', evq: '', type: '', origin: '', nx: '', q: '' };
   function has(attr, v) { return (' ' + attr + ' ').indexOf(' ' + v + ' ') >= 0; }
   function ok(r) {
     var a = function (n) { return r.getAttribute('data-' + n) || ''; };
@@ -438,6 +438,9 @@ document.addEventListener('click', function (e) { var a = e.target.closest ? e.t
     if (F.need && !has(a('needs'), F.need)) return false;
     if (F.access && !has(a('access'), F.access)) return false;
     if (F.evq && !has(a('evq'), F.evq)) return false;
+    if (F.type && a('type') !== F.type) return false;
+    if (F.origin && a('origin') !== F.origin) return false;
+    if (F.nx && !has(a('nx'), F.nx)) return false;
     if (F.q) { var w = F.q.toLowerCase().split(/\s+/); for (var i = 0; i < w.length; i++) if (w[i] && a('text').indexOf(w[i]) < 0) return false; }
     return true;
   }
@@ -453,11 +456,11 @@ document.addEventListener('click', function (e) { var a = e.target.closest ? e.t
   function cell(v) { return String(v == null ? '' : v).replace(/[\t\r\n]+/g, ' '); }
   function grp(u, v) { var x = u.views[v]; return x && x.member ? x.group : ''; }
   $('rk-tsv').onclick = function () {
-    var cols = ['unit_id', 'label', 'class', 'group_broad', 'group_partial', 'lead_broad', 'lead_partial', 'tracks', 'access', 'depth', 'cards', 'wwox_evidence', 'mechanism', 'uncertainty'];
+    var cols = ['unit_id', 'label', 'unit_type', 'origin', 'class', 'group_broad', 'group_partial', 'lead_broad', 'lead_partial', 'tracks', 'access', 'depth', 'cards', 'wwox_evidence', 'mechanism', 'uncertainty', 'next_priority_broad', 'next_priority_partial', 'evidence_of_molecule', 'evidence_of_mechanism_or_class'];
     var out = [cols.join('\t')];
     rows.filter(function (r) { return !r.classList.contains('rk-hide'); }).forEach(function (r) {
       var u = UB[r.getAttribute('data-unit')];
-      out.push([u.id, u.label, u.class, grp(u, 'broad'), grp(u, 'partial'), (u.views.broad.lead || ''), (u.views.partial.lead || ''), u.tracks.join(','), u.access, u.depth + ' ' + u.depth_text, u.cards.join(';'), u.comp.W.text, u.comp.M.text, u.comp.U.text].map(cell).join('\t'));
+      out.push([u.id, u.label, u.unit_type, u.origin, u.class, grp(u, 'broad'), grp(u, 'partial'), (u.views.broad.lead || ''), (u.views.partial.lead || ''), u.tracks.join(','), u.access, u.depth + ' ' + u.depth_text, u.cards.join(';'), u.comp.W.text, u.comp.M.text, u.comp.U.text, (u.views.broad.next_priority || {}).level || '', (u.views.partial.next_priority || {}).level || '', u.evidence_level.of_molecule, u.evidence_level.of_mechanism_or_class].map(cell).join('\t'));
     });
     download('wwox_graduatoria_' + R.meta.as_of + '.tsv', 'text/tab-separated-values', out.join('\n') + '\n');
   };

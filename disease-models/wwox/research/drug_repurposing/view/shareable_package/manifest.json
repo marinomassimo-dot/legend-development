@@ -18,7 +18,7 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 6794,
+    "values": 7564,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -193,7 +193,7 @@
    },
    "^\\.ui\\.": {
     "class": "UI",
-    "values": 998,
+    "values": 1046,
     "why": "Italian orientation text (builder data UI_IT and siblings)"
    }
   },
@@ -223,7 +223,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 2400,
+    "forbidden-name": 2439,
     "forbidden-wording": 12
    },
    "co_attested_wording": [
@@ -248,7 +248,7 @@
    "forbidden_names": 126046,
    "forbidden_wordings": 2888,
    "pair_unmarked_attested_or_unchecked": {
-    "count": 107,
+    "count": 109,
     "names": [
      "act 709478",
      "apinocaltamide",
@@ -260,7 +260,7 @@
      "phenylbutyrate",
      "proteasome inhibitor"
     ],
-    "unchecked_without_corpus": 107
+    "unchecked_without_corpus": 109
    },
    "suppressed_by_exemption": {
     "bibliographic journal name (validated against the journals of the cache)": 4,
@@ -450,11 +450,11 @@
   "BIBLIO": 2139,
   "COUNT": 7757,
   "ID": 3048,
-  "OWN": 57421,
+  "OWN": 58191,
   "ROWNAME": 1506,
   "SRC_A": 127,
   "SRC_META": 256,
-  "UI": 998
+  "UI": 1046
  },
  "embedded_sources": [
   {
@@ -532,8 +532,8 @@
    "sha256": "d8fe6a3455466783564803428b6318c1c442db6a16dfb97de8a6b7dcf944cc9d"
   },
   "index.html": {
-   "bytes": 3013899,
-   "sha256": "9ae4dc3741acd2ab0f819c96dc92c5d591780466b3d3d38d267d5a0fa0cb8a09"
+   "bytes": 3130108,
+   "sha256": "26c6446478793c94962b278d474036158c9137b42b91ae2e268733a1a9d21827"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
