@@ -1,0 +1,3 @@
+case	attempt	status	seconds	url	error
+omnipath_complex	1	200	0.14	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&targets=NFKBIB	
+omnipath_complex	1	200	0.09	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=KEAP1	

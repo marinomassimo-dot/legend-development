@@ -1,0 +1,15 @@
+{
+ "attempts": 186,
+ "edge_rows": 36,
+ "hpa_rows": 0,
+ "identity": 8,
+ "label_sections": 124,
+ "measure_groups": 1070,
+ "measure_rows": 1681,
+ "mechanism_rows": 7,
+ "non200_attempts": 0,
+ "raw_gz_bytes": 3283152,
+ "raw_kept": false,
+ "retrieved_on": "2026-10-30",
+ "trial_slices": 49
+}

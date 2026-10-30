@@ -1,0 +1,42 @@
+2026-10-30	A1	apabetalone AND (microglia OR astrocyte OR brain OR neuro* OR cerebrospinal)	200	241	6
+2026-10-30	A2	apabetalone AND (TNF OR cytokine OR inflammat* OR monocyte OR macrophage)	200	372	6
+2026-10-30	A3	(BET OR bromodomain) AND inhibitor AND (brain penetrat* OR blood-brain OR CSF OR central nervous system) AND (JQ1 OR I-BET)	200	3874	6
+2026-10-30	A4	(JQ1 OR "I-BET" OR BET inhibitor) AND microglia AND (TNF OR cytokine)	200	58316	6
+2026-10-30	A5	(BET inhibitor OR bromodomain inhibitor) AND thrombocytopenia AND (clinical trial OR phase)	200	1827	6
+2026-10-30	A6	(BRD4 OR "BET inhibitor" OR JQ1) AND (neurodevelopment* OR "radial glia" OR "neural progenitor" OR seizure OR epilepsy)	200	1366	6
+2026-10-30	A7	apabetalone AND (BD2 OR selective OR pharmacokinetic*)	200	295	6
+2026-10-30	B1	TITLE_ABS:"JTE-151"	200	5	5
+2026-10-30	B2	TITLE_ABS:("RORgamma" OR "RORγ" OR "RORC") AND TITLE_ABS:(microglia OR astrocyte) AND TITLE_ABS:(IL-6 OR cytokine)	200	5	5
+2026-10-30	B3	TITLE_ABS:("RORγt" OR "RORgammat") AND TITLE_ABS:("inverse agonist") AND TITLE_ABS:(clinical OR phase OR safety)	200	24	5
+2026-10-30	A8	TITLE_ABS:(JQ1 OR "BET inhibitor") AND TITLE_ABS:(microglia) AND TITLE_ABS:(TNF OR IL-6 OR inflammat*)	200	22	5
+2026-10-30	A9	TITLE_ABS:(JQ1 OR "I-BET") AND TITLE_ABS:(brain OR "central nervous") AND TITLE_ABS:("blood-brain" OR penetrat* OR "brain levels")	200	18	5
+2026-10-30	A10	TITLE_ABS:("BET inhibitor" OR bromodomain) AND TITLE_ABS:("intellectual disability" OR "neurodevelopmental" OR "cortical development")	200	38	5
+2026-10-30	A11	TITLE_ABS:(molibresib OR birabresib OR OTX015 OR pelabresib) AND TITLE_ABS:(thrombocytopenia)	200	14	5
+2026-10-30	C1	TITLE_ABS:(infigratinib) AND TITLE_ABS:(achondroplasia)	200	31	5
+2026-10-30	C2	TITLE_ABS:(infigratinib OR BGJ398) AND TITLE_ABS:(brain OR "central nervous" OR cerebrospinal OR "blood-brain")	200	8	5
+2026-10-30	C3	TITLE_ABS:(FGFR3) AND TITLE_ABS:(astrocyte* OR microglia) AND TITLE_ABS:(inflammat* OR NF-κB OR NF-kB OR cytokine)	200	8	5
+2026-10-30	C4	TITLE_ABS:(FGFR OR FGFR3) AND TITLE_ABS:(TAK1 OR MAP3K7) AND TITLE_ABS:(astrocyte* OR neuron* OR microglia)	200	0	0
+2026-10-30	D1	TITLE_ABS:("dimethyl fumarate") AND TITLE_ABS:(microglia) AND TITLE_ABS:(TNF OR IL-1β OR IL-6 OR cytokine)	200	20	5
+2026-10-30	D2	TITLE_ABS:("dimethyl fumarate") AND TITLE_ABS:(pediatric OR paediatric OR children)	200	49	5
+2026-10-30	D3	TITLE_ABS:("monomethyl fumarate" OR "dimethyl fumarate") AND TITLE_ABS:(cerebrospinal OR "brain concentration" OR "CSF")	200	70	5
+2026-10-30	D4	TITLE_ABS:("dimethyl fumarate") AND TITLE_ABS:(seizure OR epilep*)	200	15	5
+2026-10-30	D5	TITLE_ABS:("dimethyl fumarate" OR "monomethyl fumarate") AND TITLE_ABS:(HCAR2 OR GPR109A) AND TITLE_ABS:(microglia OR neuro*)	200	10	5
+2026-10-30	E1	TITLE_ABS:(gamcemetinib OR "CC-99677")	200	3	3
+2026-10-30	E2	TITLE_ABS:("MK2" OR MAPKAPK2) AND TITLE_ABS:(microglia OR astrocyte*) AND TITLE_ABS:(TNF OR cytokine OR inflammat*)	200	22	5
+2026-10-30	E3	TITLE_ABS:(MAPKAPK2 OR MK2) AND TITLE_ABS:(NPY OR "neuropeptide Y")	200	0	0
+2026-10-30	E4	TITLE_ABS:(FoxO1 OR FOXO1) AND TITLE_ABS:(NPY OR "neuropeptide Y") AND TITLE_ABS:(hypothalam* OR neuron*)	200	42	5
+2026-10-30	E5	TITLE_ABS:(MK2 OR MAPKAPK2) AND TITLE_ABS:(inhibitor) AND TITLE_ABS:(brain OR CNS OR "central nervous")	200	17	5
+2026-10-30	F1	TITLE_ABS:(ceralasertib OR AZD6738) AND TITLE_ABS:(brain OR glioma OR neuro* OR CNS)	200	22	5
+2026-10-30	F2	TITLE_ABS:(ATR) AND TITLE_ABS:(Seckel OR microcephaly) AND TITLE_ABS:(neural progenitor* OR cortex OR neurogenesis)	200	10	5
+2026-10-30	F3	TITLE_ABS:(ceralasertib) AND TITLE_ABS:(phase OR pharmacokinetic* OR neutropenia OR thrombocytopenia)	200	37	5
+2026-10-30	F4	TITLE_ABS:(ETV1) AND TITLE_ABS:(GRIN2C OR NR2C OR "NMDA receptor")	200	2	2
+2026-10-30	H1	TITLE_ABS:(HMGB1) AND TITLE_ABS:("IL-1β" OR IL1B) AND TITLE_ABS:(microglia OR astrocyte*) AND TITLE_ABS:(transcription OR mRNA)	200	22	5
+2026-10-30	SZ1	TITLE_ABS:(apabetalone OR RVX-208) AND TITLE_ABS:(seizure OR convulsion OR epilep*)	200	0	0
+2026-10-30	SZ2	TITLE_ABS:("JTE-151") AND TITLE_ABS:(seizure OR convulsion OR epilep*)	200	0	0
+2026-10-30	SZ3	TITLE_ABS:(infigratinib OR BGJ398) AND TITLE_ABS:(seizure OR convulsion OR epilep*)	200	0	0
+2026-10-30	SZ4	TITLE_ABS:("dimethyl fumarate") AND TITLE_ABS:(seizure OR convulsion OR epilep*)	200	15	3
+2026-10-30	SZ5	TITLE_ABS:(gamcemetinib OR "CC-99677" OR "MK2 inhibitor") AND TITLE_ABS:(seizure OR convulsion OR epilep*)	200	0	0
+2026-10-30	SZ6	TITLE_ABS:(ceralasertib OR AZD6738 OR "ATR inhibitor") AND TITLE_ABS:(seizure OR convulsion OR epilep*)	200	1	1
+2026-10-30	SZ7	TITLE_ABS:(JQ1 OR "BET inhibitor") AND TITLE_ABS:(seizure OR epilep*)	200	2	2
+2026-10-30	W1	(apabetalone OR "JTE-151" OR infigratinib OR "dimethyl fumarate" OR gamcemetinib OR ceralasertib) AND (WWOX OR WOREE)	200	15	3
+2026-10-30	W1b	(apabetalone OR "JTE-151" OR infigratinib OR "dimethyl fumarate" OR gamcemetinib OR ceralasertib) AND (WWOX OR WOREE)	200	15	15

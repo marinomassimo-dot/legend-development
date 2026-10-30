@@ -1,0 +1,37 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261030-40305227-01",
+ "study_id": {
+  "pmid": "40305227",
+  "doi": "10.3390/biom15040528"
+ },
+ "analysis_at": "2026-10-30T13:00:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a4, IT9 P4c-D, candidate apabetalone (BET axis). Question: does the BRD4 -> TNF network edge (and BET inhibition of IL1B/IL6/TNF transcripts) have a reading in microglia, and what are the stated limits? Main text read from the Introduction through the Conclusions via the PubMed Central full-text service (text only); the Europe PMC JATS copy of the same article (CC BY) was then saved locally and its figure legends 1 to 6 read; figure images and the Supplementary material were NOT opened. Every statement is class level (JQ1, a tool pan-BET inhibitor, in a mouse BV2 line) and is not evidence about apabetalone or about WWOX.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "disease-models/wwox/research/drug_repurposing/qualification_it9_p4c_d_20261030/fulltext_cache/PMC12025334_PMID40305227_europepmc_fulltext_2026-10-30.xml",
+ "source_fingerprint": "de847db6dba40f9aba363cb66a84f0f48a8e673552ebefc877c476b20d83db6e",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it9_p4c_d_20261030/candidates/P4CD-01_apabetalone.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "Figure legends read from the saved JATS copy; figure images not opened; the text was read through the PubMed Central service and the saved copy is the same article but not the same byte stream."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "event_at": "2026-10-30T13:00:00Z"
+}

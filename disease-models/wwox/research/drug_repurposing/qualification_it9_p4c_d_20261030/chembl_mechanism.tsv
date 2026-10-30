@@ -1,0 +1,8 @@
+work_id	name	action_type	mechanism	target_chembl_id	target_name	direct_interaction	disease_efficacy
+P4CD-01	apabetalone	INHIBITOR	Bromodomain and extra-terminal motif (BET) inhibitor	CHEMBL4296614		1	1
+P4CD-02	JTE-151	ANTAGONIST	Nuclear receptor ROR-gamma antagonist	CHEMBL1741186		1	1
+P4CD-03	infigratinib	INHIBITOR	Fibroblast growth factor receptor inhibitor	CHEMBL2095217		1	1
+P4CD-04	dimethyl fumarate	INHIBITOR	Kelch-like ECH-associated protein 1 inhibitor	CHEMBL2069156		1	1
+P4CD-04b	monomethyl fumarate	INHIBITOR	Kelch-like ECH-associated protein 1 inhibitor	CHEMBL2069156		1	1
+P4CD-06	ceralasertib	INHIBITOR	Serine-protein kinase ATR inhibitor	CHEMBL5024	Serine/threonine-protein kinase ATR	1	1
+P4CD-01b	molibresib (BET class reference)	INHIBITOR	Bromodomain and extra-terminal motif (BET) inhibitor	CHEMBL4296614		1	1

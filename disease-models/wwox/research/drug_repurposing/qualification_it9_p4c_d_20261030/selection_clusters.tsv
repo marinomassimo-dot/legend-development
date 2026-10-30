@@ -1,0 +1,65 @@
+main_target	arm	question	seed	mech_group	n_parents	n_eligible	exclusion_counts	best_min_abs_z
+ALDH2	opposes	Q5	TNF	Aldehyde dehydrogenases	2	1	E6=1	4.91
+ATR	mimics	Q4	GRIN2C	Armadillo like helical domain containing	10	6	E5=1;E6=3;E8=1	4.58
+BCL3	mimics	Q5	IL6	Ankyrin repeat domain containing	1	0	E5=1;E6=1	8.44
+BRD3	opposes	Q5	TNF	Bromodomain and extra-terminal domain family	1	0	E5=1;E6=1	4.77
+BRD4	opposes	Q5	TNF	Bromodomain and extra-terminal domain family	45	9	E5=25;E6=34;E8=5	13.1
+BTK	opposes	Q4	NPY	Pleckstrin homology domain containing	39	26	E5=11;E6=13;E8=1	3.05
+CALM1	opposes	Q5	TNF	Receptor ligands	2	0	E7=2	6.79
+CLK4	mimics	Q4	GRIN2C	CDC like kinases	2	1	E5=1;E6=1;E8=1	3.57
+CRBN	mimics	Q5	TNF	NO_GROUP:CRBN	4	0	E1=3;E5=1;E6=1;E7=1	3.16
+EIF2AK3	mimics	Q5	IL1B	Eukaryotic translation initiation factor 2 alpha kinases	2	0	E6=2	8.85
+EP300	opposes	Q5	TNF	Zinc fingers ZZ-type	2	0	E1=1;E5=1;E6=1	4.77
+ESR2	opposes	Q5	TNF	Estrogen receptors	1	0	E8=1	3.75
+EZH2	opposes	Q5	IL6	Histone lysine methyltransferases	14	6	E5=2;E6=8	4.65
+FGFR3	mimics	Q5	IL1B	CD molecules	28	11	E4=1;E5=3;E6=6;E8=13	7.09
+GRK2	opposes	Q4	NPY	Pleckstrin homology domain containing	2	0	E5=2;E6=2	3.05
+HDAC3	opposes	Q5	TNF	Histone deacetylases, class I	5	1	E5=3;E6=4;E8=1	4.91
+HMGB1	opposes	Q5	IL1B	Canonical high mobility group	2	0	E3=1;E8=1	14.61
+HNF4A	mimics	Q5	IL1B	MicroRNA protein coding host genes	1	1		3.06
+HNF4A	opposes	Q5	IL1B	MicroRNA protein coding host genes	1	0	E5=1;E6=1	3.06
+IFNGR1	mimics	Q5	IL1B	CD molecules	1	0	E4=1	3.11
+IL33R	mimics	Q5	IL1B	I-set domain containing	1	0	E4=1	6.12
+INPP5D	mimics	Q5	TNF	SH2 domain containing	1	1		3.91
+INPP5D	opposes	Q5	TNF	SH2 domain containing	1	0	E5=1;E6=1	3.91
+JAK2	opposes	Q5	IL1B	SH2 domain containing	19	13	E5=3;E6=6	4.47
+KEAP1	mimics	Q5	TNF	Kelch like	4	3	E5=1;E6=1	8.92
+LY96	mimics	Q5	TNF	MD-2 related lipid recognition domain containing	1	0	E5=1;E6=1	14.13
+LY96	opposes	Q5	IL1B	MD-2 related lipid recognition domain containing	1	0	E5=1;E6=1	14.61
+MAP3K7	mimics	Q5	TNF	Mitogen-activated protein kinase kinase kinases	7	0	E5=6;E6=6;E8=2	7.42
+MAPK1	mimics	Q5	TNF	Mitogen-activated protein kinase 3 and 1 (ERK1/2) family	8	3	E5=4;E6=5	4.32
+MAPK3	mimics	Q5	TNF	Mitogen-activated protein kinase 3 and 1 (ERK1/2) family	7	6	E5=1;E6=1	6.17
+MAPKAPK2	opposes	Q4	NPY	MAPK activated protein kinases	3	1	E5=2;E6=2	3.36
+NFE2L2	mimics	Q5	IL1B	MicroRNA protein coding host genes	1	0	E5=1;E6=1	6.6
+NFE2L2	opposes	Q5	IL1B	MicroRNA protein coding host genes	1	1		6.6
+NR1D1	mimics	Q5	IL6	Nuclear receptor subfamily 1 group D	1	0	E5=1;E6=1	5.34
+NR1D1	opposes	Q5	IL6	Nuclear receptor subfamily 1 group D	1	0	E5=1;E6=1	5.34
+NR1I2	opposes	Q5	TNF	Nuclear receptor subfamily 1 group I	11	2	E5=6;E6=7;E7=1;E8=1	3.33
+NR1I3	mimics	Q5	IL1B	Nuclear receptor subfamily 1 group I	1	0	E5=1;E6=1	3.86
+NR1I3	opposes	Q5	IL1B	Nuclear receptor subfamily 1 group I	1	0	E8=1	4.66
+NR2C2	mimics	Q5	IL6	Nuclear receptor subfamily 2 group C	1	1		5.19
+PAK2	mimics	Q5	TNF	p21 (RAC1) activated kinase family	2	0	E5=2;E6=2	4.35
+PAK4	opposes	Q5	IL1B	p21 (RAC1) activated kinase family	1	1		6.6
+PIM2	opposes	Q5	IL6	PIM kinase family	10	2	E5=7;E6=7;E8=2	4.18
+PINK1	opposes	Q5	TNF	MicroRNA protein coding host genes	1	0	E5=1;E6=1	4.65
+PPP3CA	opposes	Q5	TNF	Protein phosphatase catalytic subunits	1	0	E4=1	6.75
+PTPRB	opposes	Q5	TNF	Fibronectin type III domain containing	2	1	E5=1;E6=1	4.42
+PTPRG	opposes	Q5	IL6	Fibronectin type III domain containing	1	0	E5=1;E6=1	4.45
+PTPRM	opposes	Q4	NPY	Fibronectin type III domain containing	1	0	E5=1;E6=1	3.05
+RARB	mimics	Q5	IL1B	Retinoic acid receptors	6	1	E5=4;E6=4;E8=1	3.72
+RIPK2	mimics	Q5	TNF	Caspase recruitment domain containing	6	0	E5=5;E6=6	5.56
+ROCK2	opposes	Q5	TNF	Pleckstrin homology domain containing	23	9	E3=2;E5=12;E6=12;E8=1	4.78
+RORA	opposes	Q5	IL6	RAR related orphan receptors	3	1	E5=2;E6=2	3.19
+RORC	mimics	Q5	IL6	RAR related orphan receptors	15	3	E5=11;E6=12	15.78
+RORC	opposes	Q5	IL6	RAR related orphan receptors	2	1	E5=1;E6=1	15.78
+RPS6KA3	opposes	Q5	TNF	MAPK activated protein kinases	2	0	E5=1;E6=2	3.9
+RPS6KA6	mimics	Q5	TNF	MAPK activated protein kinases	1	0	E6=1;E8=1	4.62
+SIRT1	mimics	Q5	IL1B	Sirtuins	4	1	E5=2;E6=3	5.89
+SIRT1	opposes	Q5	IL1B	Sirtuins	3	1	E5=2;E6=2	5.89
+STAT3	mimics	Q4	NPY	SH2 domain containing	8	2	E5=5;E6=6	3.05
+SYK	mimics	Q5	TNF	SH2 domain containing	24	11	E5=10;E6=12;E8=2	5.09
+TEK	opposes	Q5	IL1B	CD molecules	2	0	E8=2	3.72
+TGFB1	mimics	Q5	TNF	Transforming growth factor beta family	4	1	E4=3	4.11
+ULK2	mimics	Q5	IL6	Autophagy related	1	0	E5=1;E6=1	3.74
+VDR	opposes	Q5	IL6	Protein phosphatase 1 regulatory subunits	2	0	E5=1;E6=2	3.11
+hop0 (target is the seed gene)	mimics	Q5	TNF	UNKNOWN	1	0	E1=1;E8=1	3.16
