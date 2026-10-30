@@ -1,0 +1,100 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT9-20261030",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Iteration 9: from collected links to generating new WWOX-compound hypotheses. Both goals stay open (broad durable recovery; partial/bridge). A computational result is not therapeutic efficacy; an abstention with the search run is valid.",
+ "START_UTC": "2026-10-30T07:50:00Z",
+ "BASELINE": "90f268047f800a456d0ba4e7bb948e93f45c5a26 = development/main (verified equal after fetch)",
+ "AUTHORISED_QUEUE_20261030A": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_A_RECONCILIATION": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P0 baseline; reconcile P3/P4 dependency, IT7 formulations, ranking counts (8 general-view items)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_B_QUESTIONS_METHOD": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "P1 usable WWOX questions (residual function/protein fate, metabolism/stress, excitability/glia): measured alteration, direction, generating vs reserved inputs, falsifiers",
+     "status": "TODO",
+     "owner": "scientist-a",
+     "evidence": ""
+    },
+    {
+     "step": "P2 generation path that embeds WWOX (altered genes/processes as seeds), sensitivity proof, comparison with direct target-to-compound and signatures; external models only if verifiable by a contained trial",
+     "status": "TODO",
+     "owner": "scientist-b",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_C_DISCOVERY": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "P3 exploration beyond current cards over a declared universe (catalogued/resolved/usable/examined/deepened), novelty and WWOX contribution per proposal",
+     "status": "TODO",
+     "owner": "scientist-b",
+     "evidence": ""
+    },
+    {
+     "step": "P4 qualification of decision-changing candidates; complete truncated LDHA/PDK pulls, LDHB; restate the three IT8 decisions",
+     "status": "TODO",
+     "owner": "scientist-a",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_D_RANKING_CASE": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "P5 ranking: unit-type visibility, molecule-level evidence vs class, new-vs-known filter, separate promise/depth/next-experiment",
+     "status": "TODO",
+     "owner": "scientist-c",
+     "evidence": ""
+    },
+    {
+     "step": "P6 close at least one new case to the queue and the view, with independent verification",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_E_SHARING_CONTINUITY": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "P7 sharing, licences, privacy residuals, Internet view delivery preparation, radar and hourly control verification",
+     "status": "TODO",
+     "owner": "scientist-d",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_F_CLOSE": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "P8 it8-p0b reconciliation and removal, full battery in a clean clone on the final SHA, integration, push, final report",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  }
+ },
+ "DECISIONS_TAKEN": [],
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
+}
