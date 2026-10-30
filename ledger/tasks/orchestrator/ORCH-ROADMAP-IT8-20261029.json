@@ -8,7 +8,7 @@
  "START_UTC": "2026-10-29T22:30:00Z",
  "BASELINE": "101188866f391be0fbfc8e552b9640865454e37e = development/main (verified equal after fetch)",
  "AUTHORISED_QUEUE_20261029D": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_A_RECONCILIATION": {
    "order": 1,
    "steps": [
