@@ -1,0 +1,89 @@
+compound	intervention_term	condition_term	http_status	hits	nct_ids_if_any	query_date
+balsalazide	balsalazide	(any condition)	200	9		2026-10-30
+balsalazide	balsalazide	epilepsy	200	0		2026-10-30
+balsalazide	balsalazide	seizure	200	0		2026-10-30
+balsalazide	balsalazide	developmental and epileptic encephalopathy	200	0		2026-10-30
+balsalazide	balsalazide	hypomyelination	200	0		2026-10-30
+balsalazide	balsalazide	neurodevelopmental disorder	200	0		2026-10-30
+balsalazide	balsalazide	intellectual disability	200	0		2026-10-30
+balsalazide	balsalazide	cerebral palsy	200	0		2026-10-30
+ramelteon	ramelteon	(any condition)	200	80		2026-10-30
+ramelteon	ramelteon	epilepsy	200	0		2026-10-30
+ramelteon	ramelteon	seizure	200	0		2026-10-30
+ramelteon	ramelteon	developmental and epileptic encephalopathy	200	0		2026-10-30
+ramelteon	ramelteon	hypomyelination	200	0		2026-10-30
+ramelteon	ramelteon	neurodevelopmental disorder	200	0		2026-10-30
+ramelteon	ramelteon	intellectual disability	200	0		2026-10-30
+ramelteon	ramelteon	cerebral palsy	200	0		2026-10-30
+belzutifan	belzutifan	(any condition)	200	47		2026-10-30
+belzutifan	belzutifan	epilepsy	200	0		2026-10-30
+belzutifan	belzutifan	seizure	200	0		2026-10-30
+belzutifan	belzutifan	developmental and epileptic encephalopathy	200	0		2026-10-30
+belzutifan	belzutifan	hypomyelination	200	0		2026-10-30
+belzutifan	belzutifan	neurodevelopmental disorder	200	0		2026-10-30
+belzutifan	belzutifan	intellectual disability	200	0		2026-10-30
+belzutifan	belzutifan	cerebral palsy	200	0		2026-10-30
+belzutifan	MK-6482	(any condition)	200	33		2026-10-30
+belzutifan	MK-6482	epilepsy	200	0		2026-10-30
+belzutifan	MK-6482	seizure	200	0		2026-10-30
+belzutifan	MK-6482	developmental and epileptic encephalopathy	200	0		2026-10-30
+belzutifan	MK-6482	hypomyelination	200	0		2026-10-30
+belzutifan	MK-6482	neurodevelopmental disorder	200	0		2026-10-30
+belzutifan	MK-6482	intellectual disability	200	0		2026-10-30
+belzutifan	MK-6482	cerebral palsy	200	0		2026-10-30
+belzutifan	PT2977	(any condition)	200	25		2026-10-30
+belzutifan	PT2977	epilepsy	200	0		2026-10-30
+belzutifan	PT2977	seizure	200	0		2026-10-30
+belzutifan	PT2977	developmental and epileptic encephalopathy	200	0		2026-10-30
+belzutifan	PT2977	hypomyelination	200	0		2026-10-30
+belzutifan	PT2977	neurodevelopmental disorder	200	0		2026-10-30
+belzutifan	PT2977	intellectual disability	200	0		2026-10-30
+belzutifan	PT2977	cerebral palsy	200	0		2026-10-30
+ceperognastat	ceperognastat	(any condition)	200	0		2026-10-30
+ceperognastat	ceperognastat	epilepsy	200	0		2026-10-30
+ceperognastat	ceperognastat	seizure	200	0		2026-10-30
+ceperognastat	ceperognastat	developmental and epileptic encephalopathy	200	0		2026-10-30
+ceperognastat	ceperognastat	hypomyelination	200	0		2026-10-30
+ceperognastat	ceperognastat	neurodevelopmental disorder	200	0		2026-10-30
+ceperognastat	ceperognastat	intellectual disability	200	0		2026-10-30
+ceperognastat	ceperognastat	cerebral palsy	200	0		2026-10-30
+ceperognastat	LY3372689	(any condition)	200	6		2026-10-30
+ceperognastat	LY3372689	epilepsy	200	0		2026-10-30
+ceperognastat	LY3372689	seizure	200	0		2026-10-30
+ceperognastat	LY3372689	developmental and epileptic encephalopathy	200	0		2026-10-30
+ceperognastat	LY3372689	hypomyelination	200	0		2026-10-30
+ceperognastat	LY3372689	neurodevelopmental disorder	200	0		2026-10-30
+ceperognastat	LY3372689	intellectual disability	200	0		2026-10-30
+ceperognastat	LY3372689	cerebral palsy	200	0		2026-10-30
+AR-12	AR-12	(any condition)	200	4		2026-10-30
+AR-12	AR-12	epilepsy	200	1	NCT03602378	2026-10-30
+AR-12	AR-12	seizure	200	0		2026-10-30
+AR-12	AR-12	developmental and epileptic encephalopathy	200	0		2026-10-30
+AR-12	AR-12	hypomyelination	200	0		2026-10-30
+AR-12	AR-12	neurodevelopmental disorder	200	1	NCT03602378	2026-10-30
+AR-12	AR-12	intellectual disability	200	1	NCT03602378	2026-10-30
+AR-12	AR-12	cerebral palsy	200	1	NCT03602378	2026-10-30
+AR-12	OSU-03012	(any condition)	200	1		2026-10-30
+AR-12	OSU-03012	epilepsy	200	0		2026-10-30
+AR-12	OSU-03012	seizure	200	0		2026-10-30
+AR-12	OSU-03012	developmental and epileptic encephalopathy	200	0		2026-10-30
+AR-12	OSU-03012	hypomyelination	200	0		2026-10-30
+AR-12	OSU-03012	neurodevelopmental disorder	200	0		2026-10-30
+AR-12	OSU-03012	intellectual disability	200	0		2026-10-30
+AR-12	OSU-03012	cerebral palsy	200	0		2026-10-30
+dichloroacetate	dichloroacetate	(any condition)	200	27		2026-10-30
+dichloroacetate	dichloroacetate	epilepsy	200	0		2026-10-30
+dichloroacetate	dichloroacetate	seizure	200	1	NCT00068913	2026-10-30
+dichloroacetate	dichloroacetate	developmental and epileptic encephalopathy	200	0		2026-10-30
+dichloroacetate	dichloroacetate	hypomyelination	200	0		2026-10-30
+dichloroacetate	dichloroacetate	neurodevelopmental disorder	200	0		2026-10-30
+dichloroacetate	dichloroacetate	intellectual disability	200	2	NCT06931262;NCT02616484	2026-10-30
+dichloroacetate	dichloroacetate	cerebral palsy	200	0		2026-10-30
+dichloroacetate	dichloroacetic acid	(any condition)	200	27		2026-10-30
+dichloroacetate	dichloroacetic acid	epilepsy	200	0		2026-10-30
+dichloroacetate	dichloroacetic acid	seizure	200	1	NCT00068913	2026-10-30
+dichloroacetate	dichloroacetic acid	developmental and epileptic encephalopathy	200	0		2026-10-30
+dichloroacetate	dichloroacetic acid	hypomyelination	200	0		2026-10-30
+dichloroacetate	dichloroacetic acid	neurodevelopmental disorder	200	0		2026-10-30
+dichloroacetate	dichloroacetic acid	intellectual disability	200	2	NCT06931262;NCT02616484	2026-10-30
+dichloroacetate	dichloroacetic acid	cerebral palsy	200	0		2026-10-30

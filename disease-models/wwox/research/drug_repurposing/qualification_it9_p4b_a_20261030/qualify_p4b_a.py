@@ -2,6 +2,7 @@
 """IT9 P4b group A (Q2 metabolism/glycolysis + PDK reference): live acquisition of the public records behind the qualification.
 
   qualify_p4b_a.py --help          this text, no network
+  qualify_p4b_a.py supp [--out DIR]  second pass: belzutifan label by indication text; seizure-term report counts (no API key, no count endpoint)
   qualify_p4b_a.py run [--out DIR] live: ChEMBL (molecule, structure, mechanism, all activity rows), PubChem (identity by InChIKey and by name),
                                    openFDA (label, adverse-event counts), ClinicalTrials.gov v2 (counts and hits), OmniPath (edge records with
                                    references), PubMed E-utilities (counts, titles), Human Protein Atlas (per-gene JSON). Writes raw_store.json.gz,
@@ -81,7 +82,7 @@ class Net:
                 status, payload = 0, f"{type(e).__name__}: {e}"[:300]
             self.last = time.time()
             self.log.append({"case": self.case, "attempt": i + 1, "status": status, "seconds": round(time.time() - t0, 2), "url": url[:220],
-                             "error": "" if status == 200 else str(payload)[:120]})
+                             "error": "" if status == 200 else " ".join(str(payload).split())[:120]})
             if status == 200 or status == 404:
                 break
             if status in (400, 401, 403) :
@@ -218,13 +219,73 @@ def run(out):
     print(len(net.log), "attempts;", sum(1 for l in net.log if l["status"] not in (200, 404)), "non-200/404")
 
 
+SEIZ_TERMS = ["Convulsion", "Seizure", "Epilepsy", "Status epilepticus", "Generalised tonic-clonic seizure", "Partial seizure", "Febrile convulsion"]
+
+
+def supplement(out):
+    """Second pass after the first read: (a) the belzutifan label is not indexed by generic or brand name in openFDA, only by the indication text;
+    (b) the openFDA count endpoint requires a key (HTTP 403, and a key needs a contact address, which is never sent), so seizure terms are counted
+    one by one with the plain search endpoint (meta.results.total)."""
+    net = Net()
+    S = {"label_belzutifan": None, "faers_seizure": {}, "faers_total": {}}
+    net.case = "openfda_label:belzutifan_by_indication"
+    s, p = net.get("https://api.fda.gov/drug/label.json?search=indications_and_usage:%22belzutifan%22&limit=3")
+    S["label_belzutifan"] = {"status": s, "payload": p}
+    net.case = "dailymed:welireg"
+    s_, p_ = net.get("https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?drug_name=welireg")
+    S["dailymed_welireg_list"] = {"status": s_, "payload": p_}
+    if s_ == 200 and p_.get("data"):
+        sid = p_["data"][0]["setid"]
+        s2_, x_ = net.get(f"https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/{sid}.xml", kind="text", timeout=90)
+        S["dailymed_welireg_xml"] = {"status": s2_, "setid": sid, "xml": x_ if s2_ == 200 else None}
+    for name, g in (("balsalazide", "balsalazide"), ("ramelteon", "ramelteon"), ("belzutifan", "belzutifan")):
+        net.case = f"openfda_faers_terms:{name}"
+        base = f"patient.drug.medicinalproduct:%22{q(g)}%22" if name == "belzutifan" else f"patient.drug.openfda.generic_name:%22{q(g)}%22"
+        s0, p0 = net.get(f"https://api.fda.gov/drug/event.json?search={base}&limit=1")
+        S["faers_total"][name] = [s0, (p0.get("meta", {}).get("results") if isinstance(p0, dict) else p0)]
+        for t in SEIZ_TERMS:
+            s1, p1 = net.get(f"https://api.fda.gov/drug/event.json?search={base}+AND+patient.reaction.reactionmeddrapt:%22{q(t)}%22&limit=1")
+            S["faers_seizure"][f"{name}|{t}"] = [s1, (p1.get("meta", {}).get("results", {}).get("total") if isinstance(p1, dict) and s1 == 200 else (p1 if s1 != 404 else 0))]
+    net.case = "identity_pdk1_symbol"
+    S["targets"] = {}
+    for t in ("CHEMBL2534", "CHEMBL4766"):
+        s4, p4 = net.get(f"https://www.ebi.ac.uk/chembl/api/data/target/{t}.json")
+        S["targets"][t] = {"status": s4, "payload": ({"pref_name": p4.get("pref_name"), "organism": p4.get("organism"), "target_type": p4.get("target_type"), "components": [{"accession": c.get("accession"), "synonyms": [x.get("component_synonym") for x in c.get("target_component_synonyms", []) ]} for c in p4.get("target_components", [])]} if s4 == 200 else p4)}
+    S["hgnc"] = {}
+    for sym in ("PDPK1", "PDK1"):
+        s5, p5 = net.get(f"https://rest.genenames.org/fetch/symbol/{sym}")
+        d5 = (p5 or {}).get("response", {}).get("docs", [{}])[0] if s5 == 200 and isinstance(p5, dict) else {}
+        S["hgnc"][sym] = {"status": s5, "doc": {k: d5.get(k) for k in ("symbol", "name", "hgnc_id", "alias_symbol", "prev_symbol", "uniprot_ids", "alias_name", "prev_name")}}
+    net.case = "pubmed:edge_references"
+    refs = ["31160049", "39580518", "24402046", "26399441", "22028710", "23455393", "28720051", "9808320", "17389706", "27353463", "30420298", "35765985", "36856189",
+            "35380292", "12149506", "29946188", "9746763", "21984395", "34329568", "28193910", "25218350", "28467929", "15824083", "18077625", "18544567", "15205346",
+            "11858817", "21499153"]
+    s3, p3 = net.get(f"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&retmode=json&id={','.join(refs)}")
+    S["edge_refs"] = {}
+    if s3 == 200 and isinstance(p3, dict):
+        for i in refs:
+            r = (p3.get("result") or {}).get(i) or {}
+            S["edge_refs"][i] = [r.get("pubdate"), r.get("source"), r.get("title")]
+    with gzip.open(out / "collected_supp.json.gz", "wt") as f:
+        json.dump(S, f)
+    with open(out / "service_log_supp.tsv", "w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=["case", "attempt", "status", "seconds", "url", "error"], delimiter="\t")
+        w.writeheader(); w.writerows(net.log)
+    with gzip.open(out / "raw_store_supp.json.gz", "wt") as f:
+        json.dump(net.raw, f)
+    print(len(net.log), "attempts")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd")
     r = sub.add_parser("run"); r.add_argument("--out", default=str(HERE))
+    r2 = sub.add_parser("supp"); r2.add_argument("--out", default=str(HERE))
     a = ap.parse_args()
     if a.cmd == "run":
         run(Path(a.out))
+    elif a.cmd == "supp":
+        supplement(Path(a.out))
     else:
         ap.print_help()
 

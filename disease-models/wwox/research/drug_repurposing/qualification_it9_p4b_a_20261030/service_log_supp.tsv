@@ -1,0 +1,33 @@
+case	attempt	status	seconds	url	error
+openfda_label:belzutifan_by_indication	1	200	2.06	https://api.fda.gov/drug/label.json?search=indications_and_usage:%22belzutifan%22&limit=3	
+dailymed:welireg	1	200	0.4	https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?drug_name=welireg	
+dailymed:welireg	1	200	0.8	https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/13e15ee0-d679-4fa9-9430-e2e2170474da.xml	
+openfda_faers_terms:balsalazide	1	200	0.98	https://api.fda.gov/drug/event.json?search=patient.drug.openfda.generic_name:%22balsalazide%22&limit=1	
+openfda_faers_terms:balsalazide	1	200	0.75	https://api.fda.gov/drug/event.json?search=patient.drug.openfda.generic_name:%22balsalazide%22+AND+patient.reaction.reactionmeddrapt:%22Convulsion%22&limit=1	
+openfda_faers_terms:balsalazide	1	200	1.13	https://api.fda.gov/drug/event.json?search=patient.drug.openfda.generic_name:%22balsalazide%22+AND+patient.reaction.reactionmeddrapt:%22Seizure%22&limit=1	
+openfda_faers_terms:balsalazide	1	404	0.82	https://api.fda.gov/drug/event.json?search=patient.drug.openfda.generic_name:%22balsalazide%22+AND+patient.reaction.reactionmeddrapt:%22Epilepsy%22&limit=1	"{ ""error"": { ""code"": ""NOT_FOUND"", ""message"": ""No matches found!"" } }"
+openfda_faers_terms:balsalazide	1	404	0.8	https://api.fda.gov/drug/event.json?search=patient.drug.openfda.generic_name:%22balsalazide%22+AND+patient.reaction.reactionmeddrapt:%22Status%20epilepticus%22&limit=1	"{ ""error"": { ""code"": ""NOT_FOUND"", ""message"": ""No matches found!"" } }"
+openfda_faers_terms:balsalazide	1	200	1.09	https://api.fda.gov/drug/event.json?search=patient.drug.openfda.generic_name:%22balsalazide%22+AND+patient.reaction.reactionmeddrapt:%22Generalised%20tonic-clonic%20seizure%22&limit=1	
+openfda_faers_terms:balsalazide	1	404	0.76	https://api.fda.gov/drug/event.json?search=patient.drug.openfda.generic_name:%22balsalazide%22+AND+patient.reaction.reactionmeddrapt:%22Partial%20seizure%22&limit=1	"{ ""error"": { ""code"": ""NOT_FOUND"", ""message"": ""No matches found!"" } }"
+openfda_faers_terms:balsalazide	1	404	0.9	https://api.fda.gov/drug/event.json?search=patient.drug.openfda.generic_name:%22balsalazide%22+AND+patient.reaction.reactionmeddrapt:%22Febrile%20convulsion%22&limit=1	"{ ""error"": { ""code"": ""NOT_FOUND"", ""message"": ""No matches found!"" } }"
+openfda_faers_terms:ramelteon	1	200	0.84	https://api.fda.gov/drug/event.json?search=patient.drug.openfda.generic_name:%22ramelteon%22&limit=1	
+openfda_faers_terms:ramelteon	1	200	1.18	https://api.fda.gov/drug/event.json?search=patient.drug.openfda.generic_name:%22ramelteon%22+AND+patient.reaction.reactionmeddrapt:%22Convulsion%22&limit=1	
+openfda_faers_terms:ramelteon	1	200	1.17	https://api.fda.gov/drug/event.json?search=patient.drug.openfda.generic_name:%22ramelteon%22+AND+patient.reaction.reactionmeddrapt:%22Seizure%22&limit=1	
+openfda_faers_terms:ramelteon	1	200	0.95	https://api.fda.gov/drug/event.json?search=patient.drug.openfda.generic_name:%22ramelteon%22+AND+patient.reaction.reactionmeddrapt:%22Epilepsy%22&limit=1	
+openfda_faers_terms:ramelteon	1	200	1.31	https://api.fda.gov/drug/event.json?search=patient.drug.openfda.generic_name:%22ramelteon%22+AND+patient.reaction.reactionmeddrapt:%22Status%20epilepticus%22&limit=1	
+openfda_faers_terms:ramelteon	1	200	1.03	https://api.fda.gov/drug/event.json?search=patient.drug.openfda.generic_name:%22ramelteon%22+AND+patient.reaction.reactionmeddrapt:%22Generalised%20tonic-clonic%20seizure%22&limit=1	
+openfda_faers_terms:ramelteon	1	404	0.82	https://api.fda.gov/drug/event.json?search=patient.drug.openfda.generic_name:%22ramelteon%22+AND+patient.reaction.reactionmeddrapt:%22Partial%20seizure%22&limit=1	"{ ""error"": { ""code"": ""NOT_FOUND"", ""message"": ""No matches found!"" } }"
+openfda_faers_terms:ramelteon	1	404	0.85	https://api.fda.gov/drug/event.json?search=patient.drug.openfda.generic_name:%22ramelteon%22+AND+patient.reaction.reactionmeddrapt:%22Febrile%20convulsion%22&limit=1	"{ ""error"": { ""code"": ""NOT_FOUND"", ""message"": ""No matches found!"" } }"
+openfda_faers_terms:belzutifan	1	200	1.44	https://api.fda.gov/drug/event.json?search=patient.drug.medicinalproduct:%22belzutifan%22&limit=1	
+openfda_faers_terms:belzutifan	1	404	0.78	https://api.fda.gov/drug/event.json?search=patient.drug.medicinalproduct:%22belzutifan%22+AND+patient.reaction.reactionmeddrapt:%22Convulsion%22&limit=1	"{ ""error"": { ""code"": ""NOT_FOUND"", ""message"": ""No matches found!"" } }"
+openfda_faers_terms:belzutifan	1	404	0.89	https://api.fda.gov/drug/event.json?search=patient.drug.medicinalproduct:%22belzutifan%22+AND+patient.reaction.reactionmeddrapt:%22Seizure%22&limit=1	"{ ""error"": { ""code"": ""NOT_FOUND"", ""message"": ""No matches found!"" } }"
+openfda_faers_terms:belzutifan	1	200	1.27	https://api.fda.gov/drug/event.json?search=patient.drug.medicinalproduct:%22belzutifan%22+AND+patient.reaction.reactionmeddrapt:%22Epilepsy%22&limit=1	
+openfda_faers_terms:belzutifan	1	404	0.78	https://api.fda.gov/drug/event.json?search=patient.drug.medicinalproduct:%22belzutifan%22+AND+patient.reaction.reactionmeddrapt:%22Status%20epilepticus%22&limit=1	"{ ""error"": { ""code"": ""NOT_FOUND"", ""message"": ""No matches found!"" } }"
+openfda_faers_terms:belzutifan	1	404	0.78	https://api.fda.gov/drug/event.json?search=patient.drug.medicinalproduct:%22belzutifan%22+AND+patient.reaction.reactionmeddrapt:%22Generalised%20tonic-clonic%20seizure%22&limit=1	"{ ""error"": { ""code"": ""NOT_FOUND"", ""message"": ""No matches found!"" } }"
+openfda_faers_terms:belzutifan	1	404	0.77	https://api.fda.gov/drug/event.json?search=patient.drug.medicinalproduct:%22belzutifan%22+AND+patient.reaction.reactionmeddrapt:%22Partial%20seizure%22&limit=1	"{ ""error"": { ""code"": ""NOT_FOUND"", ""message"": ""No matches found!"" } }"
+openfda_faers_terms:belzutifan	1	404	0.78	https://api.fda.gov/drug/event.json?search=patient.drug.medicinalproduct:%22belzutifan%22+AND+patient.reaction.reactionmeddrapt:%22Febrile%20convulsion%22&limit=1	"{ ""error"": { ""code"": ""NOT_FOUND"", ""message"": ""No matches found!"" } }"
+identity_pdk1_symbol	1	200	0.11	https://www.ebi.ac.uk/chembl/api/data/target/CHEMBL2534.json	
+identity_pdk1_symbol	1	200	4.15	https://www.ebi.ac.uk/chembl/api/data/target/CHEMBL4766.json	
+identity_pdk1_symbol	1	200	0.07	https://rest.genenames.org/fetch/symbol/PDPK1	
+identity_pdk1_symbol	1	200	0.05	https://rest.genenames.org/fetch/symbol/PDK1	
+pubmed:edge_references	1	200	0.54	https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&retmode=json&id=31160049,39580518,24402046,26399441,22028710,23455393,28720051,9808320,17389706,27353463,30420298,35765985,36856189,35380292,12149506,	
