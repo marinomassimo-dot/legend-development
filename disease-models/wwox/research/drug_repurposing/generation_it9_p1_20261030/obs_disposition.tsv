@@ -1,0 +1,109 @@
+item_id	source_kind	item	readout_level	species	assigned_to	class	n_seed_rows_citing	note
+O001	needs	NEED-WWOX-GENE-ADDITION:O1#1	functional	mouse	Q1	reserved	1	
+O002	needs	NEED-WWOX-GENE-ADDITION:O2#2	functional	mouse	Q1	reserved	2	
+O003	needs	NEED-WWOX-GENE-ADDITION:O3#3	functional	mouse	Q5	usable	1	
+O004	needs	NEED-WWOX-GENE-ADDITION:O4#4	functional	mouse	XOD	excluded	0	Shank3 adult restoration, other disease
+O005	needs	NEED-WWOX-GENE-ADDITION:O5#5	functional	mouse	XOD	excluded	0	Meis2 in Cntnap2-null, other disease
+O006	needs	NEED-WWOX-GENE-ADDITION:O6#6	functional	mouse	XOD	excluded	0	Csnk2b haploinsufficiency AAV, other disease
+O007	needs	NEED-WWOX-SPLICE-CORRECTION:O1#1	transcript	human	Q1	usable	1	
+O008	needs	NEED-WWOX-SPLICE-CORRECTION:O2#2	computational	human	Q1	unusable	1	
+O009	needs	NEED-WWOX-PTC-READTHROUGH:O1#1	none	UNKNOWN	Q1	unusable	1	
+O010	needs	NEED-WWOX-MISSENSE-PROTEIN-RESCUE:O1#1	protein	human	Q1	usable	1	
+O011	needs	NEED-WWOX-MISSENSE-PROTEIN-RESCUE:O2#2	protein	human	Q1	reserved	4	
+O012	needs	NEED-WWOX-ENDOGENOUS-BOOST:O1#1	functional	Drosophila melanogaster	Q1	reserved	1	
+O013	needs	NEED-WWOX-ENDOGENOUS-BOOST:O2#2	protein	human	Q1	usable	1	
+O014	needs	NEED-ISR-ATTENUATION:O1#1	protein	Drosophila melanogaster	Q3	unusable	1	
+O015	needs	NEED-ISR-ATTENUATION:O2#2	transcript	human	Q3	usable	1	
+O016	needs	NEED-ISR-ATTENUATION:O3#3	clinical	human	XOD	excluded	0	DNL343 in ALS
+O017	needs	NEED-ISR-ATTENUATION:O4#4	clinical	human	XOD	excluded	0	vanishing white matter, eIF2B
+O018	needs	NEED-ISR-ATTENUATION:O5#5	functional	mouse	XOD	excluded	0	5xFAD eIF2B activator
+O019	needs	NEED-ISR-ATTENUATION:O6#6	functional	Drosophila melanogaster	XOD	excluded	0	PARS2 fly, GCN2/ATF4 RNAi
+O020	needs	NEED-ISR-ATTENUATION:O5#7	functional	Drosophila melanogaster	XOD	excluded	0	PARS2 fly, second statement of the same experiment
+O021	needs	NEED-ISR-ATTENUATION:O7#8	transcript	human	Q3	usable	5	
+O022	needs	NEED-ISR-ATTENUATION:O8#9	transcript	human	Q3	usable	1	
+O023	needs	NEED-ISR-ATTENUATION:O9#10	functional	mouse and human	XOD	excluded	0	AFG3L2 loss, Sephin-1
+O024	needs	NEED-ISR-ATTENUATION:O10#11	protein	mouse	XOD	excluded	0	normal mouse mGluR-ATF4
+O025	needs	NEED-PDH-PYRUVATE-AXIS:O1#1	protein	mouse	Q2	usable	2	
+O026	needs	NEED-PDH-PYRUVATE-AXIS:O2#2	activity	human	Q2	usable	2	
+O027	needs	NEED-PDH-PYRUVATE-AXIS:O3#3	transcript	human	Q2	usable	1	
+O028	needs	NEED-PDH-PYRUVATE-AXIS:O4#4	transcript	human	Q2	usable	1	
+O029	needs	NEED-PDH-PYRUVATE-AXIS:O5#5	transcript	mouse	Q2	usable	1	
+O030	needs	NEED-PDH-PYRUVATE-AXIS:O6#6	computational	human cell lines (LINCS neural contexts)	XSELF	excluded	0	IT7 P3 method comparison result
+O031	needs	NEED-LACTATE-LDH:O1#1	transcript	Drosophila melanogaster	Q2	unusable	1	
+O032	needs	NEED-LACTATE-LDH:O2#2	functional	Drosophila melanogaster	Q2	reserved	1	
+O033	needs	NEED-LACTATE-LDH:O3#3	transcript	human	Q2	usable	1	
+O034	needs	NEED-LACTATE-LDH:O4#4	functional	human	Q2	unusable	1	
+O035	needs	NEED-LACTATE-LDH:O5#5	transcript	human	Q2	usable	1	
+O036	needs	NEED-LACTATE-LDH:O6#6	transcript	mouse	Q2	usable	1	
+O037	needs	NEED-LACTATE-LDH:O7#7	computational	human cell lines (LINCS neural contexts)	XSELF	excluded	0	IT7 P3 method comparison result
+O038	needs	NEED-MITOCHONDRIAL-RESPIRATION:O1#1	flux	mouse	Q2	usable	1	
+O039	needs	NEED-MITOCHONDRIAL-RESPIRATION:O2#2	transcript	human	Q2	unusable	0	unusable
+O040	needs	NEED-MITOCHONDRIAL-RESPIRATION:O3#3	flux	Drosophila melanogaster	Q2	unusable	1	
+O041	needs	NEED-MITOCHONDRIAL-RESPIRATION:O4#4	clinical	human	Q2	unusable	1	
+O042	needs	NEED-MITOCHONDRIAL-RESPIRATION:O5#5	functional	human	Q2	usable	1	
+O043	needs	NEED-MITOCHONDRIAL-RESPIRATION:O6#6	transcript	human	Q3	usable	5	
+O044	needs	NEED-MITOCHONDRIAL-RESPIRATION:O7#7	transcript	human	Q2	usable	2	
+O045	needs	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR:O1#1	functional	mouse	Q4	usable	1	
+O046	needs	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR:O2#2	functional	mouse	Q4	reserved	1	
+O047	needs	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR:O3#3	functional	mouse	Q4	usable	1	
+O048	needs	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR:O4#4	functional	mouse	Q4	reserved	1	
+O049	needs	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR:O5#5	clinical	human	XOD	excluded	0	memantine in GRIN variants, other disease
+O050	needs	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR:O6#6	functional	mouse	Q4	usable	1	
+O051	needs	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR:O7#7	functional	mouse	XDES	excluded	0	magnesium in incubation ACSF: design detail, bears on the bursting threshold; no seed
+O052	needs	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR:O8#8	functional	mouse	XDES	reserved	1	d-APV arm design and baseline-frequency discrepancy; merged into the reserved NMDAR-dependence row
+O053	needs	NEED-INHIBITORY-HYPOFUNCTION:O1#1	functional	mouse	Q4	usable	1	
+O054	needs	NEED-INHIBITORY-HYPOFUNCTION:O2#2	protein	mouse	Q4	usable	4	
+O055	needs	NEED-INHIBITORY-HYPOFUNCTION:O3#3	transcript	human	Q4	usable	2	
+O056	needs	NEED-INHIBITORY-HYPOFUNCTION:O4#4	transcript	mouse	Q4	unusable	1	
+O057	needs	NEED-INHIBITORY-HYPOFUNCTION:O5#5	transcript	human	Q4	usable	2	
+O058	needs	NEED-GABA-CHLORIDE-GRADIENT:O1#1	none	UNKNOWN	D3	unusable	2	
+O059	needs	NEED-GABA-CHLORIDE-GRADIENT:O2#2	transcript	human	D3	unusable	3	
+O060	needs	NEED-SEIZURE-CONTROL-SYMPTOMATIC:O1#1	clinical	human	Q4	reserved	2	
+O061	needs	NEED-SEIZURE-CONTROL-SYMPTOMATIC:O2#2	clinical	human	Q4	reserved	1	
+O062	needs	NEED-SEIZURE-CONTROL-SYMPTOMATIC:O3#3	clinical	human	Q4	reserved	1	
+O063	needs	NEED-T-TYPE-CALCIUM:O1#1	functional	mouse	Q4	reserved	1	
+O064	needs	NEED-MYELINATION:O1#1	functional	mouse	Q5	usable	2	
+O065	needs	NEED-MYELINATION:O2#2	functional	mouse	Q5	reserved	1	
+O066	needs	NEED-MYELINATION:O3#3	transcript	human	Q5	unusable	2	
+O067	needs	NEED-GSK3B-DEREPRESSION:O1#1	phospho	mouse	D2	unusable	1	
+O068	needs	NEED-GSK3B-DEREPRESSION:O2#2	phospho	human	D2	unusable	1	SH-SY5Y overexpression mechanism, other context; cited inside the D2 row, no separate seed
+O069	needs	NEED-WNT-BETA-CATENIN:O1#1	transcript	human	D1	unusable	6	
+O070	needs	NEED-WNT-BETA-CATENIN:O2#2	transcript	human	D1	reserved	1	
+O071	needs	NEED-WNT-BETA-CATENIN:O3#3	transcript	human	D1	unusable	0	unusable
+O072	needs	NEED-WNT-BETA-CATENIN:O4#4	transcript	human	D1	unusable	6	unusable
+O073	needs	NEED-MYC-PROGENITOR-PROLIFERATION:O1#1	transcript	human	D1	unusable	1	
+O074	needs	NEED-MYC-PROGENITOR-PROLIFERATION:O2#2	protein	human	D1	unusable	1	
+O075	needs	NEED-MYC-PROGENITOR-PROLIFERATION:O3#3	cellular (immunostained cell fractions)	human	D1	reserved	1	
+O076	needs	NEED-MTOR-AUTOPHAGY:O1#1	transcript	human	D2	unusable	4	
+O077	needs	NEED-NEUROINFLAMMATION-GLIA:O1#1	protein	mouse	Q5	usable	4	
+O078	needs	NEED-NEUROINFLAMMATION-GLIA:O2#2	protein	mouse	Q5	usable	4	
+O079	needs	NEED-NEUROINFLAMMATION-GLIA:O3#3	protein	mouse	Q5	usable	2	
+O080	needs	NEED-NEUROINFLAMMATION-GLIA:O4#4	protein	rat	Q5	usable	1	
+O081	needs	NEED-NEUROINFLAMMATION-GLIA:O5#5	protein	rat; mouse	Q5	usable	1	
+O082	needs	NEED-NEUROINFLAMMATION-GLIA:O6#6	protein	mouse	Q5	usable	2	
+O083	needs	NEED-NEUROINFLAMMATION-GLIA:O7#7	transcript	human	Q5	unusable	1	
+O084	needs	NEED-NEUROINFLAMMATION-GLIA:O8#8	transcript	mouse	Q5	unusable	1	
+O085	needs	NEED-NEUROINFLAMMATION-GLIA:O9#9	protein	mouse	Q5	unusable	1	
+O086	needs	NEED-NEUROINFLAMMATION-GLIA:O10#10	transcript	mouse	Q5	unusable	1	
+O087	needs	NEED-REDOX-OXIDATIVE-STRESS:O1#1	functional	Drosophila melanogaster	D6	unusable	1	
+O088	needs	NEED-REDOX-OXIDATIVE-STRESS:O2#2	functional	mouse / Drosophila	D6	unusable	1	
+O089	needs	NEED-SYSTEMIC-GLYCAEMIA-GROWTH:O1#1	functional	mouse	D5	reserved	1	
+O090	needs	NEED-SYSTEMIC-GLYCAEMIA-GROWTH:O2#2	clinical	human	D5	reserved	1	
+O091	context_matrix_it7_p4	Q01	see matrix	13 contexts	Q3	seeded	1	
+O092	context_matrix_it7_p4	Q02	see matrix	13 contexts	Q3	seeded	2	
+O093	context_matrix_it7_p4	Q03	see matrix	13 contexts	Q3	no seed (no resolvable sign or confounded)	0	
+O094	context_matrix_it7_p4	Q04	see matrix	13 contexts	Q3	no seed (no resolvable sign or confounded)	0	
+O095	context_matrix_it7_p4	Q05	see matrix	13 contexts	Q2	seeded	2	
+O096	context_matrix_it7_p4	Q06	see matrix	13 contexts	Q2	no seed (no resolvable sign or confounded)	0	
+O097	context_matrix_it7_p4	Q07	see matrix	13 contexts	Q2	no seed (no resolvable sign or confounded)	0	
+O098	context_matrix_it7_p4	Q08	see matrix	13 contexts	Q2	seeded	1	
+O099	context_matrix_it7_p4	Q09	see matrix	13 contexts	Q3	seeded	1	
+O100	context_matrix_it7_p4	Q10	see matrix	13 contexts	D1	no seed (no resolvable sign or confounded)	0	
+O101	context_matrix_it7_p4	Q11	see matrix	13 contexts	D1	no seed (no resolvable sign or confounded)	0	
+O102	context_matrix_it7_p4	Q12	see matrix	13 contexts	Q5	seeded	1	
+O103	context_matrix_it7_p4	Q13	see matrix	13 contexts	Q5	no seed (no resolvable sign or confounded)	0	
+O104	context_matrix_it7_p4	Q14	see matrix	13 contexts	Q4	seeded	6	
+O105	earlier_cycle_item	E01 FR-IT6P5:W13 patient organoid add-back design, low WWOX by immunoblot, WOREE v SCAR12 (PMID 42397075)			Q1	seeded	0	
+O106	earlier_cycle_item	E02 DC-IT6P3:section 0.1 phospho-eIF2A / phospho-IRE-1 blots in WWOX-null ovarian cells (PMID 28749468), carried not opened			Q3	seeded	0	
+O107	earlier_cycle_item	E03 DC-IT6P3:section 0.1 WWOX-silenced endothelial TMT proteome table (PMID 38563965), figshare supplement, NOT opened here			NONE	unusable	0	
+O108	earlier_cycle_item	E04 DC-IT6P3:section 1 row 4 P47T knock-in partial-loss missense (PMID 36828035)			Q1	seeded	0	

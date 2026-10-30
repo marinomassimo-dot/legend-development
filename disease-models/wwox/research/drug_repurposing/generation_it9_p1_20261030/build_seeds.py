@@ -69,7 +69,7 @@ usable("Q1", "STATE:ALLELE_SEVERITY_NOT_TRACKED_BY_PROTEIN_AMOUNT", "state", "fu
        "FR-IT6P5:W13 + section 5; CM-IT7P4:Q14:ORG_PW,ORG_PS", "human", "A", "functional_effect")
 usable("Q1", "STATE:WW1_PARTIAL_LOSS_MISSENSE_WITH_PHENOTYPE", "state", "pathology", "up",
        "mouse; P47T knock-in homozygote (WW1 PPxY-binding impaired, partial loss), hippocampus/cortex/cerebellum; 80 to 250 days",
-       "a partial-loss missense with residual function produces disease-level phenotype (progressive astrogliosis, network hyperexcitability): a different residue and domain from the reference class's SDR lesions, transfer not established",
+       "a partial-loss missense with residual function produces disease-level phenotype (progressive astrogliosis; chronic spontaneous generalised seizures in adults older than 6 weeks, video EEG, 3 per genotype): a different residue and domain from the reference class's SDR lesions, transfer not established",
        "DC-IT6P3:section 1 row 4; CM-IT7P4:Q14:P47T; NEED-NEUROINFLAMMATION-GLIA:O2 (PMID 36828035)", "mouse", "B", "functional_effect")
 unusable("Q1", "WWOX", "protein", "protein", "down", "human; thyroid-carcinoma lines CAL-62 and BCPAP, stable over-expression, non-neural; p.Pro252Ala (a different SDR missense)",
          "UNUSABLE_UNVERIFIED_CARRIED",
@@ -114,7 +114,7 @@ def g2(sym, od, hd, extra, guard=""):
            "%s gene=%s;system_id=organoid_ko_w15,hnpc_shwwox_cage; DC-IT5P6/P7 matrix" % (SN, sym), "human", "A", "expression", guard)
 IT7G = "The same six genes (SLC2A1, HK2, LDHA, LDHB, BNIP3 up; PDK1 down) were the IT7 P3 evaluation readout (signature reversal in wild-type LINCS cells, outcome opened in IT7): a generator seeded with them must not be scored by reversal of this readout; score on a different level (see questions.tsv Q2)"
 g2("SLC2A1", 1.371, 0.524, "neuron d14 library disagrees (-0.348); single-gene value inside noise at n=1/4v2, module-level outside matched null", IT7G)
-g2("HK2", 2.169, 0.614, "neuron d14 not measurable; organoid HK2 count driven (3,094 v 583)", IT7G)
+g2("HK2", 2.169, 0.614, "neuron d14 not measurable; mean counts 3,094 v 583 in organoid", IT7G)
 g2("LDHA", 0.717, 1.258, "also +0.698 in neuron d14; falls with culture time in an unrelated spheroid series (maturity confound)", IT7G)
 g2("LDHB", 0.327, 0.443, "neuron d14 flat (-0.076); mouse P17 argues against LDHA/LDHB", IT7G)
 g2("BNIP3", 0.420, 0.546, "also +0.398 in neuron d14; the only readout gene that is a measured L1000 landmark", IT7G)
@@ -129,7 +129,7 @@ usable("Q2", "PDHA1", "gene", "expression", "uncertain", "two human neural syste
 usable("Q2", "SET:GLYCOLYSIS_LACTATE_10", "process", "expression", "up",
        "two human neural systems: organoid KO week 15 (centred +0.53) | shWWOX hNPC (+0.46), both outside their own decile-matched random-set null; a broader 19-gene glycolysis panel is NOT distinguishable from chance in hNPC (+0.24, rank 0.20)",
        "HIF-type glycolysis/lactate set (members in process_ids.tsv) higher at transcript level; transcript is not flux; neuron d14 +0.20 at the null edge",
-       "CM-IT7P4:Q05:ORG_KO,HNPC_KD,NEUR_KD; NEED-PDH-PYRUVATE-AXIS:O4; NEED-LACTATE-LDH:O5", "human", "A", "expression", IT7G)
+       "CM-IT7P4:Q05:ORG_KO,HNPC_KD,NEUR_KD; NEED-PDH-PYRUVATE-AXIS:O3,O4; NEED-LACTATE-LDH:O3,O5", "human", "A", "expression", IT7G)
 usable("Q2", "SET:GLYCOLYSIS_LACTATE_10", "process", "expression", "unchanged",
        "mouse; P17 hippocampus (neuron-targeted S 3v2, progenitor-targeted N 2v2, null 2v3) and cortex S 3v4 (GSE158681/2)",
        "NOT MOVED in all four contrasts (centred -0.09, -0.19, -0.18, +0.11; none outside null); this is the third-system disagreement the human module has to survive",
@@ -166,7 +166,7 @@ unusable("Q2", "STATE:HUMAN_SYSTEMIC_METABOLIC_SCREENS_NORMAL", "state", "functi
          "reported normal in the cases tested (count disputed in the map: one complete screen plus one MRS case in the opposite direction); peripheral, not neural", "NEED-MITOCHONDRIAL-RESPIRATION:O4", "human", "C", "functional_effect")
 reserved("Q2", "LDHA", "gene", "function", "down", "Drosophila; Ldh RNAi in Wwox-knockdown + Abeta42 flies; climbing days 14-28", "partial rescue by Ldh knockdown in the fly amyloid model: intervention response, held out",
          "NEED-LACTATE-LDH:O2 (PMID 42909904)", "fly", "D", "functional_effect", rc=RI)
-reserved("Q2", "GO:0004739", "process", "function", "uncertain", "human; ketogenic diet in 3 of 5 patients (clinician-reported seizure control), series", "dietary response, case-level, no instrument: held out; also the main reason the lactate axis was explored",
+reserved("Q2", "STATE:SEIZURE_BURDEN", "state", "pathology", "uncertain", "human; ketogenic diet in 3 of 5 patients (clinician-reported seizure control), series", "dietary response, case-level, no instrument: held out; also the main reason the lactate axis was explored",
          "NEED-SEIZURE-CONTROL-SYMPTOMATIC:O1 (PMID 36537114)", "human", "C", "clinical_response", rc=RI)
 
 # ======================================================================================================================
@@ -222,8 +222,8 @@ usable("Q4", "STATE:NETWORK_HYPEREXCITABILITY", "state", "pathology", "up", NS +
        "presence of the phenotype only: spontaneous slice bursting in 36 of 42 knockout, 4 of 23 heterozygote, 0 of 11 wild-type slices; replicated as higher hyperexcitability across systems (organoid, mouse deposits, P47T, patient organoids) at function level",
        "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR:O1 (PMID 34634460); CM-IT7P4:Q14", "mouse", "B", "functional_effect",
        "burst frequency, seizure stage, SWD rate are held-out endpoints: never use their change under a compound as the evaluation of a seed that came from the same slices")
-usable("Q4", "STATE:NETWORK_HYPEREXCITABILITY", "state", "pathology", "up", "human; WWOX-knockout cerebral organoids (week 15) and WOREE/SCAR12 patient-derived organoids (week 16), Ca2+ firing",
-       "higher hyperexcitability in all three human organoid lines; one laboratory; firing-rate difference between WOREE and SCAR12 changes with organoid age",
+usable("Q4", "STATE:NETWORK_HYPEREXCITABILITY", "state", "pathology", "up", "human; WWOX-knockout cerebral organoids (LFP, week 7) and WOREE/SCAR12 patient-derived organoids (Ca2+ imaging, weeks 7 and 16)",
+       "knockout organoid LFP spectral power higher at week 7 (the first recording) and then falling over time; patient lines firing higher than wild type at weeks 7 and 16 (WOREE about 3-fold above SCAR12 at week 16); one laboratory; organoid-age dependent",
        "CM-IT7P4:Q14:ORG_KO,ORG_PW,ORG_PS; FR-IT6P5:W13", "human", "A", "functional_effect")
 usable("Q4", "STATE:INHIBITORY_SYNAPTIC_DRIVE", "state", "function", "down", NS + "; layer II/III pyramidal neurons",
        "spontaneous inhibitory current amplitude more than halved (control 57.3 pA, pooled WT+het, v knockout 27.5 pA); the largest separation of the synaptic readouts",
@@ -253,7 +253,7 @@ usable("Q4", "GABRB3", "gene", "expression", "down", "human; WWOX-knockout organ
        "about half of wild type (18.5 v 37.7 CPM); composition cannot be excluded", "NEED-INHIBITORY-HYPOFUNCTION:O5", "human", "A", "expression")
 unusable("Q4", "STATE:INHIBITORY_POSTSYNAPTIC_POTENTIAL", "state", "expression", "uncertain", "mouse; P47T knock-in hippocampus/cortex enrichment analyses (80-250 days)", "UNUSABLE_NOT_EVALUABLE",
          "GO inhibitory postsynaptic potential in the ACTIVATED column while KEGG of the same tissue is read as suppression; cortex GABAergic and glutamatergic terms both suppressed: mixed, no signed reading", "NEED-INHIBITORY-HYPOFUNCTION:O4 (PMID 36828035)", "mouse", "B", "expression")
-unusable("Q4", "SLC12A5", "gene", "expression", "unchanged", "human; WWOX-knockout organoid week 15, NKCC1/KCC2 transcript ratio", "GAP_NOT_MEASURED",
+unusable("D3", "SLC12A5", "gene", "expression", "unchanged", "human; WWOX-knockout organoid week 15, NKCC1/KCC2 transcript ratio", "GAP_NOT_MEASURED",
          "ratio 0.24-0.29-0.13-0.14 in four knockouts v 0.29-0.30 in two wild types (not higher); E_GABA, intracellular chloride and GABA response are unmeasured in any WWOX system", "NEED-GABA-CHLORIDE-GRADIENT:O1,O2", "human", "A", "expression")
 reserved("Q4", "STATE:NMDAR_DEPENDENCE_OF_BURSTING", "state", "function", "down", NS, "d-APV (competitive NMDAR antagonist) abolishes bursting (n 5 slices from 3 animals; no variance); this is the pharmacological answer for the glutamate-receptor node, held out",
          "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR:O2,O8 (PMID 34634460)", "mouse", "B", "functional_effect", rc=RI)
@@ -301,6 +301,8 @@ unusable("Q5", "STATE:REACTIVE_GLIAL_PROGRAMME", "state", "expression", "unchang
          "no reactive programme (only VIM, CD44 raised, progenitor-associated); the system has no microglia and no annotated oligodendrocyte cluster, so it cannot test glial reactivity or myelination", "NEED-NEUROINFLAMMATION-GLIA:O7; NEED-MYELINATION:O3 (PMID 42397075)", "human", "A", "expression")
 unusable("Q5", "MBP", "gene", "expression", "up", "human; WWOX-knockout organoid week 15 (MBP +0.625, PLP1 +0.863); shWWOX hNPC PLP1 -1.67 on 25-32 tags", "UNUSABLE_NOT_EVALUABLE",
          "oligodendrocyte genes are not expressed meaningfully in these systems; unplanned look; no oligodendrocyte population", "SN-IT7P1:derived_gene_values.tsv gene=MBP,PLP1; NEED-MYELINATION:O3", "human", "A", "expression")
+unusable("Q5", "STATE:HETEROZYGOUS_UNCHALLENGED_GLIA_NORMAL", "state", "protein", "unchanged", "mouse; P47T heterozygote, unchallenged; Iba1 and Gfap immunostaining", "UNUSABLE_UNVERIFIED_CARRIED",
+         "reported as no difference from wild type, declared 'data not shown': an unverifiable negative that may not be cited as heterozygote normality", "NEED-NEUROINFLAMMATION-GLIA:O9 (PMID 36828035)", "mouse", "B", "protein_or_phospho")
 unusable("Q5", "STATE:ASTROCYTE_ACTIVATION_GENES_IN_DEG_LIST", "state", "expression", "uncertain", "mouse; neuron-specific deletion P17 cortex 4v3 and hippocampus 2v3", "UNUSABLE_DIRECTION_NOT_TABULATED",
          "genes elicited during epileptic insults 'including activation of astrocytes' among top differentially expressed genes; individual genes and direction not tabulated", "NEED-NEUROINFLAMMATION-GLIA:O10 (PMID 33914858)", "mouse", "B", "expression")
 unusable("Q5", "GFAP", "gene", "expression", "unchanged", "mouse; P47T homozygote thresholded differential-expression sheets (two-fold, forebrain regions)", "UNUSABLE_NOT_EVALUABLE",
@@ -325,6 +327,8 @@ unusable("D1", "MYC", "protein", "protein", "up", "human; engineered knockout an
          "NEED-MYC-PROGENITOR-PROLIFERATION:O2 (PMID 42397075)", "human", "A", "protein_or_phospho")
 reserved("D1", "MYC", "protein", "function", "down", "human; knockout organoids with A51 (multi-kinase inhibitor)", "SOX2+ 60 to 33 percent, NEUN+ 6 to 18 percent: drug response, held out", "NEED-MYC-PROGENITOR-PROLIFERATION:O3 (PMID 42397075)", "human", "A", "functional_effect", rc=RI)
 DD = "UNUSABLE_DROPPED_QUESTION"
+reserved("D1", "CTNNB1", "gene", "expression", "uncertain", "human; WWOX-knockout organoids, AAV-WWOX add-back, qPCR bar heights read from Figure 4D", "Wnt ligands WNT1/WNT3/WNT5A/ROR2 toward wild type, WNT3A below, WNT2B/WNT8B and effectors LEF1/TCF7/TCF4-plotted further from wild type under add-back: add-back response, held out",
+         "NEED-WNT-BETA-CATENIN:O2 (PMID 34268881)", "human", "A", "expression", rc=RI)
 unusable("D2", "GSK3B", "protein", "phospho", "down", "mouse; Wwox-null cerebellum, hippocampus, cortex lysates, P20; western (images), n=3", DD,
          "inhibitory Ser9 phosphorylation lower with total GSK3B unchanged; the only phospho measurement in neural WWOX-loss tissue, but one laboratory, n=3, images only, kinase activity not measured, and WWOX docking inhibition of GSK3B is S9-independent in SH-SY5Y",
          "NEED-GSK3B-DEREPRESSION:O1,O2 (PMID 32000863, 22193544)", "mouse", "B", "protein_or_phospho")

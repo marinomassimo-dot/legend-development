@@ -17,6 +17,7 @@ STATE:ALLELE_SEVERITY_NOT_TRACKED_BY_PROTEIN_AMOUNT	allele severity not tracked 
 STATE:ASTROCYTE_ACTIVATION_GENES_IN_DEG_LIST	astrocyte activation genes in deg list	local_state		defined by the rows that use it in seeds.tsv
 STATE:EXCITATORY_SYNAPTIC_AMPLITUDE	excitatory synaptic amplitude	local_state		defined by the rows that use it in seeds.tsv
 STATE:FASTER_TURNOVER_OF_DESTABILISED_MISSENSE	faster turnover of destabilised missense	local_state		defined by the rows that use it in seeds.tsv
+STATE:HETEROZYGOUS_UNCHALLENGED_GLIA_NORMAL	heterozygous unchallenged glia normal	local_state		defined by the rows that use it in seeds.tsv
 STATE:HUMAN_SYSTEMIC_METABOLIC_SCREENS_NORMAL	human systemic metabolic screens normal	local_state		defined by the rows that use it in seeds.tsv
 STATE:INHIBITORY_POSTSYNAPTIC_POTENTIAL	inhibitory postsynaptic potential	local_state		defined by the rows that use it in seeds.tsv
 STATE:INHIBITORY_SYNAPTIC_DRIVE	inhibitory synaptic drive	local_state		defined by the rows that use it in seeds.tsv
