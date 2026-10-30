@@ -19,7 +19,7 @@ P3-12	U44	Defosbarasertib (Aurora B inhibitor)	molecule	generated_in_it9	NEED-MY
 P3-13	U45	Pinometostat (DOT1L inhibitor)	molecule	generated_in_it9	NEED-MYC-PROGENITOR-PROLIFERATION	U10
 P4CD-04	U46	Dimethyl fumarate	molecule	generated_in_it9	NEED-NEUROINFLAMMATION-GLIA	U26
 P4CD-06	U47	Ceralasertib (ATR inhibitor)	molecule	generated_in_it9	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	
-E-02	U48	Roxadustat (HIF prolyl-hydroxylase inhibitor): dropped as a lever, kept as a direction control of the HIF case	molecule	generated_in_it9	NEED-PDH-PYRUVATE-AXIS	U28
+E-02	U48	Roxadustat (HIF prolyl-hydroxylase inhibitor): dropped as a lever on label and pharmacology grounds (seizures, thyromimetic action, rat brain necrosis, no paediatric data), not on direction	molecule	generated_in_it9	NEED-PDH-PYRUVATE-AXIS	U28
 E-03	U49	Nirogacestat (gamma-secretase inhibitor)	molecule	generated_in_it9	NEED-MYC-PROGENITOR-PROLIFERATION	U10
 E-04	U50	STM2457 (METTL3 inhibitor, tool compound)	mechanism_probe	generated_in_it9	NEED-MYC-PROGENITOR-PROLIFERATION	U10
 E-05	U51	D4476 (casein kinase 1 inhibitor, tool compound)	mechanism_probe	generated_in_it9	NEED-MYC-PROGENITOR-PROLIFERATION	U10

@@ -41,6 +41,10 @@ U28	FAM:CAT:CHEMBL4061538	PX-478 FREE BASE	K01_hif_axis_glycolytic_shift	asserti
 X01		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)	EB-DEV-AX-01						axis_not_an_intervention
 X02		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)	EB-GROWTH-AX-01						axis_not_an_intervention
 X03		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)	EB-PDANCHOR-AX-01						axis_not_an_intervention
+U59	FAM:CAT:CHEMBL2107333	DIMETHYL FUMARATE	L01_nrf2_axis	named_member	1	approved_any_source	prescription	FAM:CAT:DGIDB:383151119697	molecule_family
+U59	FAM:CAT:CHEMBL4303525	OMAVELOXOLONE	L01_nrf2_axis	assertion_subject; named_member	1	approved_any_source	prescription	FAM:CAT:DGIDB:300a1f119a63	molecule_family
+U59	FAM:CAT:CHEMBL589586	MONOMETHYL FUMARATE	L01_nrf2_axis	named_member	1	approved_any_source	prescription	FAM:CAT:DGIDB:ae0d6efd8da4	molecule_family
+U59	INT:L01_nrf2_axis:tool	NRF2 activation (genetic KEAP1 knockdown; omaveloxolone and monomethyl fumarate as two chemotypes) in WWOX-deficient neural cells: a role-resolving mechanism experiment, not a treatment [tool or genetic subject]	L01_nrf2_axis	tool_subject					tool_compound_or_genetic_precedent_not_in_catalogue
 U29		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
 U30		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
 U31		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
@@ -71,3 +75,6 @@ U55		(no catalogue identity: class, modality or axis named in the card text; a n
 U56		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
 U57		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
 U58		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U60		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U61		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U62		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal

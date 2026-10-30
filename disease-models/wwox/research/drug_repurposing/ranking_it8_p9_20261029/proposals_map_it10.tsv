@@ -1,0 +1,7 @@
+cand_id	unit_id	label	unit_type	origin	need	related_unit	how
+P22-01	U59	Omaveloxolone (NRF2 activator): ex vivo probe and systemic development judged apart; belongs to the NRF2 axis unit	mechanism_probe	generated_in_it10	NEED-REDOX-NRF2		card_unit
+P22-02	U59	Monomethyl fumarate / dimethyl fumarate as a second NRF2-activating chemotype (conditional comparator; the IT9 drop of the generated chain is not reversed)	mechanism_probe	generated_in_it10	NEED-REDOX-NRF2		card_unit
+P22-03	U59	KEAP1/NFE2L2 genetic arm (the simplest alternative to any compound)	mechanism_probe	generated_in_it10	NEED-REDOX-NRF2		card_unit
+P22-04	U60	Voclosporin (calcineurin inhibitor): dropped; label names seizure and PRES, and its TNF seed is the non-significant one	molecule	generated_in_it10	NEED-NEUROINFLAMMATION-GLIA	U26	own_unit
+P22-05	U61	PF-03758309 (pan-PAK inhibitor; reference: dominated by the direct NRF2 arm)	molecule	reference_or_control	NEED-REDOX-NRF2	U59	own_unit
+P22-06	U62	CDDO-EA (NRF2-activator analogue; class precedent in adult rat seizure models, not transferable to omaveloxolone)	molecule	reference_or_control	NEED-REDOX-NRF2	U59	own_unit

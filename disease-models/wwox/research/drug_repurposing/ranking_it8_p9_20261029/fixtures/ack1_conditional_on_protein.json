@@ -1,0 +1,8 @@
+{
+  "case_id": "ACK1-dasatinib",
+  "item_id": "N12",
+  "question": "Proteina WWOX presente nel sistema di interesse",
+  "state": "unknown",
+  "research_question_contains": "Tyr287Phe",
+  "alternative_state": "unfavorable"
+}

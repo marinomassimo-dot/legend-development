@@ -3316,7 +3316,7 @@ RK_GROUP_IDS = ["G1", "G2a", "G2b", "G3", "G4a", "G4b", "G5", "GU"]
 RK_CLASSES = ["ORD", "WEAK", "INSUFF", "EXCL"]
 RK_VIEWS = ["general", "broad", "partial"]
 RK_TYPES = ["molecule", "class_of_molecules", "diet", "gene_therapy", "tool_compound", "tool_compound_and_class", "mechanism_probe"]
-RK_ORIGINS = ["known_track_before_it9", "generated_in_it9", "reference_or_control"]
+RK_ORIGINS = ["known_track_before_it9", "generated_in_it9", "generated_in_it10", "reference_or_control"]
 RK_NX = ["NX1", "NX2", "NX3"]
 RK_LINKS = ["effect_observed_in_wwox_system", "directionally_compatible_documented_action", "documented_association_target_listed", "other_disease_precedent_only", "other_disease_precedent_plus_wwox_case_level_signal", "card_inference_by_mechanism_no_catalogue_row", "computational_prediction_generated_in_it9"]
 RK_EVQ = ["favourable_with_comparator_may_rest_on_one_row", "favourable_thin", "favourable_thin_specificity_uncertain", "contested", "no_wwox_test_target_supported", "no_wwox_test_target_hypothesis", "weak_pertinence_or_outside_counter", "premise_missing"]
@@ -3326,7 +3326,7 @@ def rk_proposal_skeleton(u: dict) -> dict:
     """Shareable edition: a generated proposal is known from catalogue rows and qualification text that carry third-party names and values; only its state, type, origin, class and group stay."""
     w = "withheld in this edition (names and values of generated proposals are in the full edition)"
     u = json.loads(json.dumps(u))
-    u["label"] = f"IT9 {u['class_label'].lower()} ({u['unit_id']}): name withheld in this edition"
+    u["label"] = f"{u.get('era', 'IT9')} {u['class_label'].lower()} ({u['unit_id']}): name withheld in this edition"
     for v in u["views"].values():
         if v.get("member"):
             v["evidence"]["text"] = w
@@ -3337,13 +3337,13 @@ def rk_proposal_skeleton(u: dict) -> dict:
     c = u["components"]
     c["M_mechanism"]["text"] = w
     c["T_transferability"]["transfer_limits"] = []
-    c["P_pharmacology"] = {"state": "qualified in IT9; " + w, "potency_with_assay_context": w, "human_exposure": w, "brain_penetration": w, "record": c["P_pharmacology"]["record"]}
+    c["P_pharmacology"] = {"state": "qualified in " + u.get("era", "IT9") + "; " + w, "potency_with_assay_context": w, "human_exposure": w, "brain_penetration": w, "record": c["P_pharmacology"]["record"]}
     c["X_counter_evidence"]["tags"] = []
     c["U_uncertainty"]["unknown"] = [w]
     c["U_uncertainty"]["text"] = "no WWOX-system result of the compound"
     u["member_evidence"] = [dict(m, member="proposal (name withheld)", what="no WWOX-system assertion attributed to this member") for m in u["member_evidence"]]
     u["evidence_level_note"] = {"of_molecule": "no WWOX-system result of the compound (proposed, not performed)", "of_mechanism_or_class": "the WWOX-side link is a seed observation", "untested_members": [], "attribution_rule": u["evidence_level_note"]["attribution_rule"]}
-    u["evaluation_depth_text"] = "IT9 qualification record, no card"
+    u["evaluation_depth_text"] = u.get("era", "IT9") + " qualification record, no card"
     u["access"] = w
     u["merge_reason"] = ""
     return u
@@ -3509,6 +3509,7 @@ def build_ranking(dr: Path, cur: dict, source: str):
                                           "q1_with_opposed_action_elsewhere", "mnet_usable_families", "msig_neural_families", "need_linked_by_access_category", "all_families_by_access_category")},
         "queue": {"compounds": S["deepening_queue_compounds"]},
         "it9": {"summary": S["it9"], "records": [dict(r) if full else {k: ("withheld" if k in ("compound", "decision") else v) for k, v in r.items()} for r in J.get("it9_records") or []]},
+        "it10": {"summary": S.get("it10"), "records": [dict(r) if full else {k: ("withheld" if k in ("compound", "decision") else v) for k, v in r.items()} for r in J.get("it10_records") or []]},
         "uncarded": [({k: r[k] for k in ("item_id", "item", "kind", "class", "evaluation_depth", "provenance", "related_unit", "reason", "what_would_reopen", "source_pointers")} if full else
                       {"item_id": r["item_id"], "item": "item without a card (name withheld in this edition)", "kind": r["kind"], "class": r["class"], "evaluation_depth": r["evaluation_depth"], "provenance": r["provenance"],
                        "related_unit": r["related_unit"], "reason": "withheld in this edition (names and reasons of items without a card are in the full edition)", "what_would_reopen": "", "source_pointers": ""}) for r in J.get("uncarded") or []],
@@ -3608,10 +3609,12 @@ UI_IT8 = {
     "rk_ty_tool_compound_and_class": "composto-strumento + classe", "rk_ty_mechanism_probe": "sonda di meccanismo (esperimento, non trattamento)",
     "rk_le_computational_prediction_generated_in_it9": "previsione computazionale generata in IT9 (motore a semi), non un'osservazione",
     "rk_it9_h": "Candidati qualificati in IT9: proposte generate, riferimenti e scarti", "rk_it9_lead": "Le proposte generate in IT9 sono distinte dalle piste note prima di IT9 (filtro «Origine»). Un record qualificato ha uno stato: PROPOSTA MANTENUTA (ordinata come proposta, mai come risultato), NON CONCLUSIVO (ancora insufficientemente valutato: non è in fondo e non è un giudizio di scarsa promessa), SCARTATO (escluso da questo confronto, con il motivo: supporto insufficiente per la catena o per il passo composto-bersaglio, mai «inattivo»), SOLO RIFERIMENTO (controllo o riferimento).",
+    "rk_it10_h": "Candidati qualificati in IT10 (assi NRF2): proposte generate, riferimenti e scarti", "rk_it10_lead": "Stessi stati e stessa regola dei candidati IT9; «CONDIZIONALE» indica un membro di una voce con scheda (la voce, non il record, ha la propria classe). Nessun candidato IT10 è un risultato in un sistema WWOX.", "rk_it10_n": "{n} record qualificati in {d} voci",
+    "rk_it9_s_CONDITIONAL": "condizionale (membro di una voce con scheda)",
     "rk_it9_n": "{n} record qualificati, {d} composti distinti (JTE-151 ha due record)", "rk_it9_state": "Stato", "rk_it9_count": "Record", "rk_it9_cls": "Classe nella graduatoria",
     "rk_it9_s_KEEP": "proposta mantenuta", "rk_it9_s_INCONCLUSIVE": "non conclusivo", "rk_it9_s_DROP": "scartato", "rk_it9_s_REFERENCE": "solo riferimento",
     "rk_it9_org": "Voci per origine", "rk_it9_rec_h": "Elenco dei record", "rk_it9_rec_withheld": "I nomi dei composti dei record con origine solo di catalogo sono nell'edizione completa.",
-    "rk_it9_c_id": "Record", "rk_it9_c_c": "Composto", "rk_it9_c_u": "Voce", "rk_or_h": "Origine", "rk_or_known_track_before_it9": "pista nota prima di IT9", "rk_or_generated_in_it9": "generato in IT9", "rk_or_reference_or_control": "riferimento o controllo",
+    "rk_it9_c_id": "Record", "rk_it9_c_c": "Composto", "rk_it9_c_u": "Voce", "rk_or_h": "Origine", "rk_or_known_track_before_it9": "pista nota prima di IT9", "rk_or_generated_in_it9": "generato in IT9", "rk_or_generated_in_it10": "generato in IT10", "rk_or_reference_or_control": "riferimento o controllo",
     "rk_nx_h": "Priorità del prossimo esperimento", "rk_nx_NX1": "NX1 · decisivo", "rk_nx_NX2": "NX2 · informativo", "rk_nx_NX3": "NX3 · basso o nullo oggi",
     "rk_nxp_NX1": "Il prossimo esperimento discriminante cambierebbe una decisione (alzare o fermare).", "rk_nxp_NX2": "Il prossimo esperimento scioglie un limite; la decisione si sposta di un passo al massimo.",
     "rk_nxp_NX3": "Nessun passo discriminante indicato, oppure l'esito non potrebbe cambiare la decisione prima che esista una premessa.",
@@ -3779,10 +3782,14 @@ def render_matching_pilot(cases: list[dict]) -> str:
         rows.append(f'<tr><th scope="row">{E(c["compound"])}<br><span class="mini">{E(c["action"])}</span></th>'
                     f'<td>{E(c["context"])}<br><b>Beneficio ipotizzato:</b> {E(c["benefit_hypothesis"])}'
                     f'<br><span class="mini">{E(direct)}. {E(c["evidence_limit"])}</span>'
+                    f'<dl class="mini pilot-why"><dt>Perché è emerso</dt><dd>{E(c["generating_path"])}</dd>'
+                    f'<dt>Evidenza a sostegno</dt><dd>{E(c["supporting_evidence"])}</dd>'
+                    f'<dt>Che cosa potrebbe confutarlo</dt><dd>{E(c["refutation"])}</dd></dl>'
                     f'<details><summary>Fonti e logica</summary><p class="mini">{E(sources)}</p>'
                     f'<p class="mini">{E(", ".join(c["discovery_logic"]))}</p></details></td>'
                     f'<td>{E(c["research_priority"])}<br>{E(c["research_question"])}</td>'
-                    f'<td>{E(c["development_scope"])}<ul class="mini">{requirements}</ul></td></tr>')
+                    f'<td>{E(c["development_scope"])}<ul class="mini">{requirements}</ul>'
+                    f'<p class="mini"><b>Perché merita ricerca nonostante i requisiti irrisolti:</b> {E(c["research_despite_requirements"])}</p></td></tr>')
     return ('<details class="inl" id="matching-v3"><summary>Matching v3: composto, azione, contesto e beneficio — pilota</summary>'
             '<p class="mini">Interpretazioni delle schede esistenti. Priorità di ricerca e requisiti di sviluppo restano separati. '
             'Sconosciuto non significa negativo; un risultato di classe non è una prova sulla singola molecola. Nessun punteggio di efficacia.</p>'
@@ -3875,6 +3882,14 @@ def render_ranking(P: dict) -> str:
                     f'<p class="mini"><b>{E(U["rk_it9_org"])}:</b></p><ul class="mini">{org_rows}</ul>'
                     f'<details class="inl"><summary>{E(U["rk_it9_rec_h"])}</summary>' + ("" if full else f'<p class="mini mut">{E(U["rk_it9_rec_withheld"])}</p>')
                     + f'<div class="scrollx"><table class="tbl stk"><thead><tr><th>{E(U["rk_it9_c_id"])}</th><th>{E(U["rk_it9_c_c"])}</th><th>{E(U["rk_it9_state"])}</th><th>{E(U["rk_it9_cls"])}</th><th>{E(U["rk_it9_c_u"])}</th></tr></thead><tbody>{rec_rows}</tbody></table></div></details>')
+    it10 = R.get("it10") or {}
+    it10_html = ""
+    if it10.get("records"):
+        r10 = "".join(f'<tr><th scope="row" data-label="{E(U["rk_it9_c_id"])}">{E(r["cand_id"])}</th><td data-label="{E(U["rk_it9_c_c"])}">{E(r["compound"])}</td><td data-label="{E(U["rk_it9_state"])}">{E(U["rk_it9_s_" + r["state"]])}</td>'
+                      f'<td data-label="{E(U["rk_it9_cls"])}">{E(U["rk_cl_" + r["class"]])}</td><td data-label="{E(U["rk_it9_c_u"])}">{E(r["unit_id"])}</td></tr>' for r in it10["records"])
+        it10_html = (f'<h4>{E(U["rk_it10_h"])}</h4><p class="mini">{E(U["rk_it10_lead"])}</p><p class="mini">{E(U["rk_it10_n"].format(n=len(it10["records"]), d=len({r["unit_id"] for r in it10["records"]})))}</p>'
+                     + ("" if full else f'<p class="mini mut">{E(U["rk_it9_rec_withheld"])}</p>')
+                     + f'<div class="scrollx"><table class="tbl stk"><thead><tr><th>{E(U["rk_it9_c_id"])}</th><th>{E(U["rk_it9_c_c"])}</th><th>{E(U["rk_it9_state"])}</th><th>{E(U["rk_it9_cls"])}</th><th>{E(U["rk_it9_c_u"])}</th></tr></thead><tbody>{r10}</tbody></table></div>')
     inv = (f'<h3>{E(U["rk_inv_h"])}</h3><p class="mini">{E(U["rk_inv_lead"])}</p>'
            f'<table class="tbl rk-plain"><thead><tr><th>{E(U["rk_t_class"])}</th><th>{E(U["rk_inv_units"])}</th><th></th></tr></thead><tbody>{cl_rows}</tbody></table>'
            f'<p class="mini">{E(U["rk_inv_units_n"].format(u=len(units), r=M["units_ranked"], x=M["by_class"]["EXCL"], c=len(P["cur"]["cands"])))}</p>'
@@ -3883,7 +3898,7 @@ def render_ranking(P: dict) -> str:
            f'<p class="mini">{E(U["rk_inv_names"].format(n=I["distinct_display_names_in_q1"]))}. {E(U["rk_inv_opp"])}: {numit("rk.inv.opp", I["q1_with_opposed_action_elsewhere"])}.</p>'
            f'<p class="mini"><b>{E(U["rk_inv_access"])}:</b> {acc_rows}.</p>'
            f'<p class="mini">{E(U["rk_inv_queue"].format(n=R["queue"]["compounds"]))}</p>'
-           f'<p class="mini"><b>{E(U["rk_inv_depth_h"])}:</b> {E(U["rk_inv_depth"])}</p>' + unc + it9_html)
+           f'<p class="mini"><b>{E(U["rk_inv_depth_h"])}:</b> {E(U["rk_inv_depth"])}</p>' + unc + it9_html + it10_html)
     # evolution
     hist = R["history"]
     hrows = "".join(f'<li><code>{E(h["snapshot"])}</code> · {h["n"]} · ' + ", ".join(f'{E(U.get("rk_r_" + k, k))} {v}' for k, v in h["reasons"].items()) + '</li>' for h in hist) or f'<li class="mut">{E(U["rk_ev_none"])}</li>'

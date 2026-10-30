@@ -93,3 +93,14 @@ No step was blind. Searches were run by me and screened by title for the large r
 ## 10. Files
 
 `README.md` · `paths_verdicts.tsv` · `candidates_it10_p23.tsv` · `evidence_locators.tsv` · `compound_identity.tsv` · `tnk2_chembl_activities_selected.tsv` · `novelty_check.tsv` · `search_log.tsv` · `reopen_searches.tsv` · `proposed_ptm_edges.tsv`
+
+## 11. Corrections after independent verification (2026-10-31, added by IT10 P5; sections 1 to 10 above are unchanged)
+
+Four wording corrections found by an independent verifier; three were checked again against PubMed abstracts and the open full text (PMID 25738261, 23686771, 41124647). The same text is in the new column `correction_20261031` of `candidates_it10_p23.tsv` (rows T1 to T3).
+
+1. **The TNK2/NEDD4 family finding is NOT counter-evidence for lowering ACK1** (section 3, "Counter-evidence that binds", first item, and the UNVERIFIED speculation that follows it). PMID 23686771 (abstract): the homozygous missense variant "abolishes NEDD4 binding to TNK2, preventing its degradation after epidermal growth factor stimulation"; the abstract gives no kinase-activity direction; one small family; "definitive proof of pathogenicity will require confirmation in unrelated patients". It is an observation about ACK1 abundance in one family, and it is recorded as such, not as evidence against an ACK1 inhibitor.
+2. **The chloroquine/cycloheximide sentence is in the main text** (section 4, section 6, last bullet): PMID 41124647 Results state "CQ prevented the degradation of WWOX P252A mutant protein in the presence of CHX (Figure S4)" and conclude that the P252A mutation causes rapid degradation "through a lysosome-dependent pathway". It supports the lysosomal route (T3). Only the supplementary figure itself was not opened.
+3. **PMID 25738261 supports only ACK1 knockdown raising WWOX** (section 3, "The WWOX observation"): its abstract reports that knockdown of ACK1 "resulted in upregulation of WWOX" and an inverse correlation of ACK1 with WWOX expression in 150 paired tissues; it does not address Tyr287 phosphorylation or ubiquitination. That route rests on PMID 16288044 (abstract only).
+4. **The repeated ChEMBL values are not replicates** (section 3 table, T1 and T2): dasatinib Kd 5.6 and 6.0 nM (and IC50 1.0 nM) and bosutinib IC50 2.7 nM appear under several ChEMBL documents, several of them "unknown origin" records (`tnk2_chembl_activities_selected.tsv`): they are literature values carried between papers, not independent measurements.
+
+Consequence for the batch path (section 9, item 2): the unit is still not carded; the item is entered in the ranking as an uncarded item (N12, STILL INSUFFICIENTLY EVALUATED) with these corrections in its reason text, and R1 to R7 are entered in `triggers.tsv` as `R1_q1_complement` to `R7_q1_complement` (IT10 P5).

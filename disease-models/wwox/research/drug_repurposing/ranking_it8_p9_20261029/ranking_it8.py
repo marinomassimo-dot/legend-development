@@ -80,7 +80,7 @@ def is_spec_flag(f: str) -> bool:
 
 UNIT_TYPES = {"molecule": "molecule", "class_of_molecules": "class of molecules", "diet": "diet", "gene_therapy": "gene therapy / gene-based modality", "tool_compound": "tool compound",
               "tool_compound_and_class": "tool compound + class of molecules", "mechanism_probe": "mechanism probe (a compound or genetic tool used for a mechanism experiment, not a treatment)", "not_an_intervention": "not an intervention (axis)"}
-ORIGINS = {"known_track_before_it9": "known track from before IT9", "generated_in_it9": "generated in IT9", "reference_or_control": "reference or control"}
+ORIGINS = {"known_track_before_it9": "known track from before IT9", "generated_in_it9": "generated in IT9", "generated_in_it10": "generated in IT10", "reference_or_control": "reference or control"}
 CLASS_LEVEL_TYPES = ("class_of_molecules", "tool_compound_and_class")      # a result for a member or a tool is not a result for the other members
 NX_LEVELS = {"NX1": "decisive: the discriminating next experiment would change a decision (lift or stop)", "NX2": "informative: the next experiment resolves one limit, the decision moves one step at most",
              "NX3": "low or none today: no discriminating next step is named, or the outcome could not change the decision before a premise exists"}
@@ -707,7 +707,10 @@ def member_evidence(u: dict) -> list[dict]:
     return res
 
 
-def matching_pilot(units: list[dict], cases: list[dict] | None = None) -> list[dict]:
+PILOT_NARRATIVE = ("generating_path", "supporting_evidence", "refutation", "research_despite_requirements")      # the five questions of the mandate that the view answers per candidate (why it emerged, benefit sought, support, refutation, why research despite unresolved requirements)
+
+
+def matching_pilot(units: list[dict], cases: list[dict] | None = None, uncarded: list[dict] | None = None) -> list[dict]:
     """Small v3 pilot, projected by this ranking's existing generator. No score or
     compound promotion: statements remain attributed to the actual member; development
     requirements do not change the biological group or the research question.
@@ -716,16 +719,30 @@ def matching_pilot(units: list[dict], cases: list[dict] | None = None) -> list[d
     if cases is None:
         cases = jload(HERE / "matching_pilot_cases.json")
     by_id = {u["unit_id"]: u for u in units}
+    if uncarded is None:
+        uncarded = read_tsv(HERE / "uncarded_items.tsv")
+    unc_by_id = {r["item_id"]: r for r in uncarded}
     out = []
     for case in cases:
-        u = by_id[case["unit_id"]]
-        member = next(m for m in u["member_evidence"] if m["member_key"] == case["member_key"])
         requirements = case["development_requirements"]
         if any(r["state"] not in ("favorable", "unfavorable", "unknown") for r in requirements):
             raise ValueError(f"unknown requirement state in {case['case_id']}")
-        out.append({**case, "evidence_of_this_member": {
-            k: member[k] for k in ("tested_in_wwox_system", "assertion_ids", "signs", "source_pmids", "depth", "outside_wwox_assertions")
-        }, "mechanism_context": u["evidence_level_note"]["of_mechanism_or_class"],
+        missing = [k for k in PILOT_NARRATIVE if not str(case.get(k, "")).strip()]
+        if missing:
+            raise ValueError(f"{case['case_id']}: the pilot answers the mandate's questions in every case; missing {missing}")
+        if case["unit_id"] in unc_by_id and case["unit_id"] not in by_id:
+            # an uncarded item (no card, no unit): no WWOX-system assertion can be attributed, and none is invented
+            item = unc_by_id[case["unit_id"]]
+            if case["member_key"] != "UNCARDED":
+                raise ValueError(f"{case['case_id']}: an uncarded item has member_key UNCARDED")
+            ev = {"tested_in_wwox_system": "no", "assertion_ids": [], "signs": {}, "source_pmids": [], "depth": "", "outside_wwox_assertions": 0}
+            ctx_txt = "uncarded item " + item["item_id"] + " (no card, no unit; class " + CLASSES[item["class"]] + "): " + clip(item["reason"], 300)
+        else:
+            u = by_id[case["unit_id"]]
+            member = next(m for m in u["member_evidence"] if m["member_key"] == case["member_key"])
+            ev = {k: member[k] for k in ("tested_in_wwox_system", "assertion_ids", "signs", "source_pmids", "depth", "outside_wwox_assertions")}
+            ctx_txt = u["evidence_level_note"]["of_mechanism_or_class"]
+        out.append({**case, "evidence_of_this_member": ev, "mechanism_context": ctx_txt,
             # These are scoped obstacles/questions, never a compound inactivity verdict.
             "development_status": {state: [r["question"] for r in requirements if r["state"] == state]
                                    for state in ("favorable", "unfavorable", "unknown")}})
@@ -810,33 +827,86 @@ QUAL_SOURCES = [
     ("P4c-e", "qualification_it9_p4c_e_20261030/qualification_E.tsv", {"promise": "biological_promise", "depth": "depth_of_evidence", "feas": "feasibility", "prio": "priority_next_experiment", "nxt": "next_experiment", "fals": "falsifier", "datum": "decisive_datum", "unv": "unverified"}),
 ]
 STATE_CLASS = {"KEEP": "ORD", "INCONCLUSIVE": "INSUFF", "DROP": "EXCL", "REFERENCE": "EXCL"}
+# IT10 P2.2 candidates (axis_it10_p22_20261031/candidates.tsv): a table of another shape, mapped column by column (id -> cand_id, compound_or_lever -> name, state -> decision). Fields the table
+# does not carry (biological promise, depth, priority) stay empty rather than being invented. CONDITIONAL is a record-level state of a member of a carded unit (it has no unit of its own).
+QUAL_SOURCES_IT10 = [
+    ("P2.2", "axis_it10_p22_20261031/candidates.tsv", {"cand_id": "id", "name": "compound_or_lever", "decision": "state"},
+     {"promise": "", "depth": "", "feas": "development_verdict_systemic", "prio": "", "nxt": "discriminating_test", "fals": "counter_evidence", "datum": "decisive_datum", "unv": "missing_data"}),
+]
+# dated corrections to a stored qualification field, applied when the table is read; the original record is never rewritten (cand_id, field, text, source)
+QUAL_CORRECTIONS = HERE / "qualification_corrections.tsv"
+
+
+def _qual_state(decision: str) -> str:
+    d = decision.upper()
+    return "KEEP" if d.startswith("KEEP") else "INCONCLUSIVE" if d.startswith("INCONCLUSIVE") else "DROP" if d.startswith("DROP") else "REFERENCE" if d.startswith("REFERENCE") else "CONDITIONAL" if d.startswith("CONDITIONAL") else "UNKNOWN"
+
+
+def _apply_qual_corrections(out: dict) -> dict:
+    """Overlay of the dated corrections on the stored fields (the field name is a key of the record, e.g. datum); a correction naming an unknown record or field is refused."""
+    if QUAL_CORRECTIONS.exists():
+        for r in read_tsv(QUAL_CORRECTIONS):
+            if r["cand_id"] in out:
+                if r["field"] not in out[r["cand_id"]]:
+                    raise SystemExit(f"qualification_corrections.tsv: unknown field {r['field']!r} for {r['cand_id']}")
+                out[r["cand_id"]][r["field"]] = r["text"]
+                out[r["cand_id"]].setdefault("corrected_fields", []).append(r["field"])
+    return out
 
 
 def load_qualification() -> dict:
-    """The five IT9 P4 qualification tables, read as stored: one record per candidate id (32 records)."""
+    """The five IT9 P4 qualification tables, read as stored: one record per candidate id (32 records), with the dated corrections of qualification_corrections.tsv overlaid."""
     out: dict[str, dict] = {}
     for pk, rel, m in QUAL_SOURCES:
         p = DR / rel
         if not p.exists():
             continue
         for r in read_tsv(p):
-            d = r["decision"].upper()
-            state = "KEEP" if d.startswith("KEEP") else "INCONCLUSIVE" if d.startswith("INCONCLUSIVE") else "DROP" if d.startswith("DROP") else "REFERENCE" if d.startswith("REFERENCE") else "UNKNOWN"
-            out[r["cand_id"]] = {"cand_id": r["cand_id"], "package": pk, "name": r["name"], "decision": r["decision"], "state": state, **{k: r.get(v, "") for k, v in m.items()}}
-    return out
+            out[r["cand_id"]] = {"cand_id": r["cand_id"], "package": pk, "name": r["name"], "decision": r["decision"], "state": _qual_state(r["decision"]), **{k: r.get(v, "") for k, v in m.items()}}
+    return _apply_qual_corrections(out)
+
+
+def load_qualification_it10() -> dict:
+    """The IT10 P2.2 candidate table, mapped column by column (QUAL_SOURCES_IT10); records are the same shape as the IT9 ones."""
+    out: dict[str, dict] = {}
+    for pk, rel, ren, m in QUAL_SOURCES_IT10:
+        p = DR / rel
+        if not p.exists():
+            continue
+        for r in read_tsv(p):
+            cid, name, dec = r[ren["cand_id"]], r[ren["name"]], r[ren["decision"]]
+            out[cid] = {"cand_id": cid, "era": "IT10", "package": pk, "name": name, "decision": dec, "state": _qual_state(dec), **{k: (r.get(v, "") if v else "") for k, v in m.items()}}
+    return _apply_qual_corrections(out)
 
 
 def proposal_units(ctx: dict) -> tuple[list[dict], list[dict]]:
     """Units for the IT9-qualified candidates that have no card (KEEP -> ordered as a proposal, INCONCLUSIVE -> still insufficiently evaluated, DROP and REFERENCE -> excluded from
     this comparison with the reason). No WWOX-system result of any compound exists, so the documented PROPOSAL RULE gives a KEEP proposal the position F3 (target-based hypothesis,
     nothing tested in WWOX) and the group G4b, and an INCONCLUSIVE one no position (GU, premise missing). Promise, depth and next-experiment priority stay separate."""
-    qual = load_qualification()
+    qual = dict(load_qualification())
     pm = read_tsv(HERE / "proposals_map.tsv")
     for r in pm:
         if r["cand_id"] not in qual:
             raise SystemExit(f"proposals_map.tsv: {r['cand_id']} is not in a qualification table")
         if r["unit_type"] not in UNIT_TYPES or r["origin"] not in ORIGINS:
             raise SystemExit(f"proposals_map.tsv: {r['cand_id']} has an invalid type or origin")
+    # IT10: the same rule, another map and another qualification table (a candidate id is never in both)
+    pm10_all = read_tsv(HERE / "proposals_map_it10.tsv") if (HERE / "proposals_map_it10.tsv").exists() else []
+    q10 = load_qualification_it10()
+    for r in pm10_all:
+        if r["how"] not in ("own_unit", "card_unit"):
+            raise SystemExit(f"proposals_map_it10.tsv: {r['cand_id']} has an invalid 'how' (own_unit or card_unit)")
+    pm10 = [r for r in pm10_all if r["how"] == "own_unit"]          # a card_unit row only records that the candidate belongs to a carded unit (see assemble)
+    for r in pm10:
+        if r["cand_id"] not in q10 or r["cand_id"] in qual:
+            raise SystemExit(f"proposals_map_it10.tsv: {r['cand_id']} is not in the IT10 qualification table or collides with an IT9 id")
+        if r["unit_type"] not in UNIT_TYPES or r["origin"] not in ORIGINS:
+            raise SystemExit(f"proposals_map_it10.tsv: {r['cand_id']} has an invalid type or origin")
+    for r in pm10_all:
+        if r["cand_id"] not in q10 or r["cand_id"] in qual:
+            raise SystemExit(f"proposals_map_it10.tsv: {r['cand_id']} is not in the IT10 qualification table or collides with an IT9 id")
+    qual.update(q10)
+    pm = pm + pm10
     by_unit: dict[str, list[dict]] = defaultdict(list)
     for r in pm:
         by_unit[r["unit_id"]].append(r)
@@ -846,6 +916,7 @@ def proposal_units(ctx: dict) -> tuple[list[dict], list[dict]]:
         rs = by_unit[uid]
         qs = [qual[r["cand_id"]] for r in rs]
         m0 = rs[0]
+        era = qs[0].get("era", "IT9")
         state = qs[0]["state"]
         cls = STATE_CLASS[state]
         nd = needs[m0["need"]]
@@ -879,9 +950,9 @@ def proposal_units(ctx: dict) -> tuple[list[dict], list[dict]]:
         tx = f"decisive datum: {join('datum', 300)}"
         comp = {"W_wwox_evidence": {"wwox_assertions": 0, "signs": {}, "wild_type_only_assertions": 0, "favourable_distinct_pmids": [], "read_beyond_abstract": 0, "l4_states": {},
                                     "text": "none: no result of the compound in a WWOX system; the link to WWOX is a seed observation and a context-free network edge", "replication": "not applicable (no result)"},
-                "M_mechanism": {"families": [], "l1": {}, "l2": {}, "opposed_needs": [], "text": "generated proposal (IT9 seed-based engine): " + tx},
+                "M_mechanism": {"families": [], "l1": {}, "l2": {}, "opposed_needs": [], "text": f"generated proposal ({era} seed-based engine): " + tx},
                 "T_transferability": {"track": ["A"], "species_of_wwox_assertions": ["none (no result in a WWOX system)"], "genotypes": [], "transfer_limits": [join("unv", 300)], "window_note": []},
-                "P_pharmacology": {"state": f"qualified in IT9 {qs[0]['package']} ({', '.join(cand_ids)}); promise {join('promise', 60)}; depth {join('depth', 80)}; potency in a WWOX system UNKNOWN",
+                "P_pharmacology": {"state": f"qualified in {era} {qs[0]['package']} ({', '.join(cand_ids)}); promise {join('promise', 60)}; depth {join('depth', 80)}; potency in a WWOX system UNKNOWN",
                                    "potency_with_assay_context": join("feas", 300), "human_exposure": "see the qualification record", "brain_penetration": "see the qualification record", "record": ", ".join(cand_ids)},
                 "X_counter_evidence": {"wwox_null_harm_mixed": 0, "outside_wwox_null_or_harm": 0, "need_level_counter_items": 0, "need_level_counter_items_note": "proposal without a card: counter-evidence is in the decisive datum",
                                        "opposed_action_needs": [], "tags": [join("datum", 200)] if cls != "ORD" else []},
@@ -891,23 +962,23 @@ def proposal_units(ctx: dict) -> tuple[list[dict], list[dict]]:
         if member:
             pathways = [{"need": m0["need"], "need_short": nd["short"], "thread": nd["thread"], "objective": obj, "need_direction": nd["dir"], "position": lead or "P1", "position_by_card": {}, "same_need_conflict": False,
                          "link_evidence": "computational_prediction_generated_in_it9", "l1": {}, "l2": {}, "l3": {}, "l4": {}, "opposed_action": False,
-                         "computational_prediction": "seed-based engine (IT9 P2 v2/v3): a compatible-action prediction on a context-free network, not an effect", "wwox_observations_on_need": nd["n_wwox_obs"]}]
+                         "computational_prediction": ("seed-based engine (IT10 P1 v4, member junction): " if era == "IT10" else "seed-based engine (IT9 P2 v2/v3): ") + "a compatible-action prediction on a context-free network, not an effect", "wwox_observations_on_need": nd["n_wwox_obs"]}]
         mt = "tool_compound" if m0["unit_type"] == "mechanism_probe" else "molecule"
         mev = [{"member": m0["label"], "member_type": mt, "member_key": uid, "tested_in_wwox_system": "no", "wwox_assertions": 0, "signs": {}, "what": "no WWOX-system assertion: the compound has not been tested in any WWOX system; the entry is a generated, qualified hypothesis",
                 "source_pmids": [], "depth": "", "assertion_ids": [], "outside_wwox_assertions": 0}]
-        units.append({"unit_id": uid, "label": m0["label"], "kind": "it9_proposal", "unit_type": m0["unit_type"], "unit_type_label": UNIT_TYPES[m0["unit_type"]], "origin": m0["origin"], "origin_label": ORIGINS[m0["origin"]],
+        units.append({"unit_id": uid, "era": era, "label": m0["label"], "kind": "it9_proposal", "unit_type": m0["unit_type"], "unit_type_label": UNIT_TYPES[m0["unit_type"]], "origin": m0["origin"], "origin_label": ORIGINS[m0["origin"]],
                       "member_evidence": mev, "evidence_level_note": {"of_molecule": "no WWOX-system result of the compound (proposed, not performed)", "of_mechanism_or_class": "the WWOX-side link is a seed observation on " + nd["short"] + "; no mechanism-level WWOX result for the compound",
                                                                        "untested_members": [m0["label"]], "attribution_rule": "single qualified candidate: no result is attributed to it from another compound or class"},
                       "cards": [], "merge_reason": ("two qualification records of the same compound (" + ", ".join(cand_ids) + ") are one entry" if len(qs) > 1 else ""), "class": cls, "class_label": CLASSES[cls], "class_reason": reason_cls,
-                      "declared_goals": [nd["goal"]], "tracks": ["A"], "views": views, "components": comp, "evaluation_depth": "E3q", "evaluation_depth_text": f"IT9 {qs[0]['package']} qualification record ({', '.join(cand_ids)}), no card; depth as stated there: {join('depth', 160)}",
+                      "declared_goals": [nd["goal"]], "tracks": ["A"], "views": views, "components": comp, "evaluation_depth": "E3q", "evaluation_depth_text": f"{era} {qs[0]['package']} qualification record ({', '.join(cand_ids)}), no card; depth as stated there: {join('depth', 160)}",
                       "access": "not assessed here; the qualification record's feasibility field says: " + join("feas", 200), "access_categories": [], "access_items": [],
-                      "exploratory_it7": "generated in IT9 (seed-based engine); the IT7 P3 comparison is not used", "pathways": pathways, "members": [], "pmids": [], "receipts_on_cited_pmids": 0, "model_exclusions": [], "comparison_record": "",
+                      "exploratory_it7": f"generated in {era} (seed-based engine); the IT7 P3 comparison is not used", "pathways": pathways, "members": [], "pmids": [], "receipts_on_cited_pmids": 0, "model_exclusions": [], "comparison_record": "",
                       "depth_of_benefit_sought": "", "research_objective": "", "excluded_from_comparisons": [],
                       "inputs": {"T1_cards": sha16([(q["cand_id"], q["decision"], q["datum"]) for q in qs]), "T2_pertinence": sha16([]), "T3_receipts": sha16([]), "T4_needs": sha16(nd["n_wwox_obs"], nd["dir"]),
                                  "T5_pharmacology": sha16([(q["promise"], q["depth"], q["feas"], q["prio"]) for q in qs]), "T6_identity": sha16(cand_ids)},
                       "caveats": {}, "abstention_cards": []})
         for r, q in zip(rs, qs):
-            records.append({"cand_id": q["cand_id"], "package": q["package"], "compound": q["name"], "state": state, "decision": q["decision"], "unit_id": uid, "class": cls, "origin": m0["origin"], "need": m0["need"]})
+            records.append({"era": era, "cand_id": q["cand_id"], "package": q["package"], "compound": q["name"], "state": state, "decision": q["decision"], "unit_id": uid, "class": cls, "origin": m0["origin"], "need": m0["need"]})
     return units, records
 
 
@@ -982,7 +1053,21 @@ def assemble(ctx: dict, cat: dict) -> dict:
         })
     pu, precs = proposal_units(ctx)
     keep_card = [{"cand_id": "E-01", "package": "P4c-e", "compound": "PX-478", "state": "KEEP", "decision": ctx["qualification_all"].get("E-01", {}).get("decision", ""), "unit_id": "U28", "class": "ORD", "origin": "generated_in_it9", "need": "NEED-PDH-PYRUVATE-AXIS"}]
-    return {"units": out_units + pu, "it9_records": sorted(precs + keep_card, key=lambda r: r["cand_id"])}
+    # IT10 records: the own-unit proposals plus the candidates that belong to a carded unit (proposals_map_it10.tsv, how = card_unit); the IT9 list is unchanged
+    q10 = load_qualification_it10()
+    units_all = {u["unit_id"]: u for u in out_units + pu}
+    card10 = []
+    pm10 = read_tsv(HERE / "proposals_map_it10.tsv") if (HERE / "proposals_map_it10.tsv").exists() else []
+    for r in pm10:
+        if r["how"] == "card_unit":
+            if r["unit_id"] not in units_all or not units_all[r["unit_id"]]["cards"]:
+                raise SystemExit(f"proposals_map_it10.tsv: card_unit {r['unit_id']} of {r['cand_id']} is not a carded unit")
+            u_ = units_all[r["unit_id"]]
+            card10.append({"cand_id": r["cand_id"], "package": q10[r["cand_id"]]["package"], "compound": q10[r["cand_id"]]["name"], "state": q10[r["cand_id"]]["state"], "decision": q10[r["cand_id"]]["decision"],
+                           "unit_id": r["unit_id"], "class": u_["class"], "origin": u_["origin"], "need": r["need"]})
+    precs9 = [{k: v for k, v in r.items() if k != "era"} for r in precs if r["era"] == "IT9"]
+    precs10 = [{k: v for k, v in r.items() if k != "era"} for r in precs if r["era"] == "IT10"]
+    return {"units": out_units + pu, "it9_records": sorted(precs9 + keep_card, key=lambda r: r["cand_id"]), "it10_records": sorted(precs10 + card10, key=lambda r: r["cand_id"])}
 
 
 # ------------------------------------------------------------------------------------------------------------------------ catalogue inventory
@@ -1241,7 +1326,25 @@ def as_of_date(ctx: dict) -> str:
     return max(dates) if dates else "UNKNOWN"
 
 
+REOPEN_SEARCHES = DR / "recovery_it10_p23_20261031" / "reopen_searches.tsv"      # IT10 P2.3: the reopenable searches of the Q1 complement (R1 to R7), read as stored
+
+
+def reopen_trigger_rows() -> list[dict]:
+    """The reopenable searches of the Q1 complement in the format of the triggers above: a novelty that makes the uncarded ACK1/ITCH slice (and any stability lever that waits for the datum) be re-evaluated."""
+    if not REOPEN_SEARCHES.exists():
+        return []
+    # the free text of the source table names compounds and reagents; the trigger rows are shown in the shareable edition too, so they carry the item title and a pointer, not the decisive datum or the query strings
+    ptr = REOPEN_SEARCHES.relative_to(DR)
+    return [{"trigger": f"{r['id']}_q1_complement", "what": f"{r['item']} (the decisive datum is stated in {ptr}, row {r['id']})", "detected_by": f"the searches and sources listed in {ptr}, row {r['id']}",
+             "re_evaluates": f"uncarded item N12 (ACK1/ITCH slice of the Q1 complement; no card, no unit) and any stability lever that waits for this datum; reopen when: {r['trigger_to_reopen']} (owner or route: {r['owner_or_route']}; verdict today: {r['verdict']})",
+             "reason_class_when_order_moves": "new_evidence or counter_evidence (no card exists, so no group can move before a card does)"} for r in read_tsv(REOPEN_SEARCHES)]
+
+
 def triggers_rows() -> list[dict]:
+    return _base_triggers() + reopen_trigger_rows()
+
+
+def _base_triggers() -> list[dict]:
     return [
         {"trigger": "T1_cards", "what": "a card or packet of a ranked unit changes (assertion added, sign or depth corrected, abstention lifted, next step named)", "detected_by": "digest of the unit's cards, assertions, signs, scopes, depths",
          "re_evaluates": "positions of the unit (coverage + view regenerate first), then group, class, reasons", "reason_class_when_order_moves": "new_evidence, counter_evidence or identity_correction (declare with snapshot --reason)"},
@@ -1301,6 +1404,8 @@ def build_all() -> dict[str, bytes]:
                 "units_by_origin": dict(sorted(Counter(u["origin"] for u in uni["units"] if u["class"] != "EXCL" or u["origin"] != "known_track_before_it9").items())),
                 "all_units_by_origin": dict(sorted(Counter(u["origin"] for u in uni["units"]).items())),
                 "ranked_by_origin": dict(sorted(Counter(u["origin"] for u in non_excl).items()))},
+        "it10": {"records_qualified": len(uni["it10_records"]), "distinct_entries": len({r["unit_id"] for r in uni["it10_records"]}),
+                 "by_state": dict(sorted(Counter(r["state"] for r in uni["it10_records"]).items())), "by_class": {CLASSES[k]: sum(1 for r in uni["it10_records"] if r["class"] == k) for k in CLASSES if any(r["class"] == k for r in uni["it10_records"])}},
         "inventory": inv_sum, "deepening_queue_compounds": len(queue),
         "uncarded": {"items": len(unc), "by_class": {CLASSES[k]: sum(1 for r in unc if r["class"] == k) for k in CLASSES}, "by_provenance": dict(sorted(Counter(r["provenance"] for r in unc).items()))}, "selections": sel,
         "needs_total": need_total, "p3_note": "IT7 P3 results (network and signature comparison on 256 families) are exploratory, may not drive the ranking, and card-linked families were firewalled out of that comparison: no unit is ranked or re-ranked by them.",
@@ -1319,6 +1424,7 @@ def build_all() -> dict[str, bytes]:
               "outside_wwox_assertions": m["outside_wwox_assertions"]} for u in uni["units"] if u["class"] != "EXCL" for m in u["member_evidence"]]
     files["member_evidence.tsv"] = tsv_bytes(mrows, ["unit_id", "unit_type", "member", "member_type", "tested_in_wwox_system", "wwox_assertions", "signs", "what", "source_pmids", "depth", "assertion_ids", "outside_wwox_assertions"])
     files["it9_records.tsv"] = tsv_bytes(uni["it9_records"], ["cand_id", "package", "compound", "state", "decision", "unit_id", "class", "origin", "need"])
+    files["it10_records.tsv"] = tsv_bytes(uni["it10_records"], ["cand_id", "package", "compound", "state", "decision", "unit_id", "class", "origin", "need"])
     files["triggers.tsv"] = tsv_bytes(triggers_rows(), ["trigger", "what", "detected_by", "re_evaluates", "reason_class_when_order_moves"])
     inv_cols = ["family_id", "name", "records", "origin", "modality", "status_class", "access_categories", "class", "evaluation_depth", "first_order", "needs_documented_target_link", "needs_pathway_member_only",
                 "needs_direction_consistent", "needs_opposed", "mnet_usable", "msig_neural_strict", "msig_any_context", "units", "name_twins_not_merged", "display_group", "display_group_size", "reason"]
@@ -1326,8 +1432,8 @@ def build_all() -> dict[str, bytes]:
     qrows = [{"display_group": q["display_group"], "names": q["names"], "family_ids": q["family_ids"], "needs": q["needs"], "wwox_observations_on_best_need": q["wwox_observations_on_best_need"],
               "status_class": q["status_class"], "access_categories": q["access_categories"], "mnet_usable": q["mnet_usable"], "msig_neural": q["msig_neural"], "units": q["units"], "shares_need_with_units": q["shares_need_with_units"], "why": q["why"]} for q in queue]
     files["deepening_queue.tsv"] = tsv_bytes(qrows, ["display_group", "names", "family_ids", "needs", "wwox_observations_on_best_need", "status_class", "access_categories", "mnet_usable", "msig_neural", "units", "shares_need_with_units", "why"])
-    ing = {"summary": summary, "units": uni["units"], "selection_table": srows, "deepening_queue_head": queue[:40], "uncarded": unc, "it9_records": uni["it9_records"],
-           "matching_pilot": matching_pilot(uni["units"])}
+    ing = {"summary": summary, "units": uni["units"], "selection_table": srows, "deepening_queue_head": queue[:40], "uncarded": unc, "it9_records": uni["it9_records"], "it10_records": uni["it10_records"],
+           "matching_pilot": matching_pilot(uni["units"], None, unc)}
     files["ranking.json"] = json_bytes(ing)
     # per-unit input digests (for the snapshot / diff mechanism)
     drows = [{"unit_id": u["unit_id"], **u["inputs"]} for u in uni["units"]]

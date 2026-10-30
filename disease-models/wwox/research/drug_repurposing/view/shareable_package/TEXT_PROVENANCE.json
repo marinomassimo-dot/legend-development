@@ -6,7 +6,7 @@
    "words": 22
   }
  ],
- "bibliographic_title_runs": 142,
+ "bibliographic_title_runs": 141,
  "corpus_by_extension": {
   "html": 42,
   "json": 4,
@@ -25,6 +25,11 @@
    "path": ".cur.cands[].identity",
    "run": "a multi kinase inhibitor a51 established to suppress wnt and myc",
    "words": 11
+  },
+  {
+   "path": ".cur.needs[].obs[].full",
+   "run": "overexpression of inflammatory cytokines tnf a and il6",
+   "words": 8
   },
   {
    "path": ".cur.cands[].asserts[].note",
@@ -52,5 +57,5 @@
    "words": 7
   }
  ],
- "unquoted_runs_within_limit": 28
+ "unquoted_runs_within_limit": 29
 }
