@@ -1,0 +1,21 @@
+parent	name	main_target	top_seed	n_shortest_paths	path_length	paths_(target_to_seed_gene)	chembl_curated_mechanism_live
+CHEMBL495727	AT-9283	AURKB	MYC	1	1	AURKB->MYC (net sign +1)	INHIBITOR: Serine/threonine-protein kinase Aurora-A inhibitor | INHIBITOR: Serine/threonine-protein kinase Aurora-B inhibitor | INHIBITOR: Tyrosine-protein kinase ABL inhibitor | INHIBITOR: Tyrosine-protein kinase JAK2 inhibitor | INHIBITOR: Tyrosine-protein kinase JAK3 inhibitor | INHIBITOR: Tyrosine-protein kinase receptor FLT3 inhibitor
+CHEMBL848	LENALIDOMIDE	CUL4A	MYC	1	1	CUL4A->MYC (net sign -1)	INHIBITOR: CRL4(CRBN) E3 ubiquitin ligase inhibitor
+CHEMBL3414626	PINOMETOSTAT	DOT1L	MYC	1	1	DOT1L->MYC (net sign +1)	none curated
+CHEMBL4585668	BELZUTIFAN	EPAS1	LDHA	1	1	EPAS1->LDHA (net sign +1)	INHIBITOR: Endothelial PAS domain-containing protein 1 inhibitor
+CHEMBL1094	FELBAMATE	GRIN2C	GRIN2C	0			ANTAGONIST: Glutamate [NMDA] receptor antagonist
+CHEMBL1650595	AR-12			0			INHIBITOR: 3-phosphoinositide dependent protein kinase-1 inhibitor
+CHEMBL306823	SODIUM DICHLOROACETATE	PDK1	PDK1	0			INHIBITOR: Pyruvate dehydrogenase kinase inhibitor
+CHEMBL413	SIROLIMUS			0			INHIBITOR: FK506-binding protein 1A inhibitor
+CHEMBL807	MEMANTINE	GRIN2C	GRIN2C	0			none curated
+CHEMBL1218	RAMELTEON	MTNR1A	BNIP3	1	3	MTNR1A->GNAO1->HES1->BNIP3 (net sign +1)	AGONIST: Melatonin receptor agonist
+CHEMBL5095251	CEPEROGNASTAT	OGA	PFKP	1	1	OGA->PFKP (net sign +1)	none curated
+CHEMBL1200598	DIETHYLSTILBESTROL DIPHOSPHATE	ESR2	GAD2	1	1	ESR2->GAD2 (net sign +1)	AGONIST: Estrogen receptor agonist
+CHEMBL2105804	IMPLITAPIDE	P4HB	GAD1	1	3	P4HB->ERN1->XBP1->GAD1 (net sign -1)	INHIBITOR: Microsomal triglyceride transfer protein inhibitor
+CHEMBL140	CURCUMIN	EP300	TNF	1	1	EP300->TNF (net sign +1)	none curated
+CHEMBL2107819	BELNACASAN	CASP1	IL1B	1	1	CASP1->IL1B (net sign +1)	INHIBITOR: Caspase-1 inhibitor
+CHEMBL3545357	JTE-151	RORC	IL6	1	1	RORC->IL6 (net sign +1)	ANTAGONIST: Nuclear receptor ROR-gamma antagonist
+CHEMBL215152	DEFOSBARASERTIB	AURKB	MYC	1	1	AURKB->MYC (net sign +1)	none curated
+CHEMBL43452	POMALIDOMIDE	CUL4A	MYC	1	1	CUL4A->MYC (net sign -1)	INHIBITOR: CRL4(CRBN) E3 ubiquitin ligase inhibitor
+CHEMBL1201346	BALSALAZIDE	PPARG	SLC2A1	1	1	PPARG->SLC2A1 (net sign +1)	none curated
+CHEMBL269538	HARMINE	DYRK1A	MYC	1	1	DYRK1A->MYC (net sign -1)	none curated

@@ -4,7 +4,7 @@ Only compound names and phenotype words are sent (no operator identity, no e-mai
 import argparse, csv, datetime, json, sys, time, urllib.parse, urllib.request
 ap = argparse.ArgumentParser(description=__doc__); ap.add_argument("--selected", required=True); ap.add_argument("--out", required=True); ap.add_argument("--hits", required=True); a = ap.parse_args()
 TODAY = datetime.date.today().isoformat()
-PHEN = {"Q2": '(glycolysis OR lactate OR "pyruvate dehydrogenase")', "Q4": '(interneuron OR "excitation inhibition" OR GABAergic)', "Q5": '(myelin* OR oligodendrocyte* OR microglia* OR astrocyte*)', "Q6": '("radial glia" OR "neural progenitor" OR MYC)'}
+PHEN = {"Q2": '(glycolysis OR lactate OR "pyruvate dehydrogenase")', "Q4": '(interneuron OR "excitation inhibition" OR GABAergic)', "Q5": '(myelin* OR oligodendrocyte* OR microglia* OR astrocyte*)', "Q6": '("radial glia" OR "neural progenitor" OR MYC)', "Q3": '("integrated stress response" OR "unfolded protein response" OR ATF4)'}
 EPI = '(epilep* OR seizure* OR "developmental and epileptic encephalopathy")'
 def get(url):
     for t in range(4):
@@ -28,9 +28,8 @@ def run(parent, name, qid, label, pq, eq, ph, want_ids=False):
     return n, ids
 run("CONTROL", "WWOX", "-", "positive control (the search tools return counts)", "WWOX[Title/Abstract]", 'TITLE:"WWOX" OR ABSTRACT:"WWOX"', "")
 for s in sel:
-    names = [x for x in {s["name"].strip(), (s.get("chembl_name") or "").strip()} if x and x.upper() != "NA"]
-    nm = names[0] if names else s["name"]
-    alt = [x for x in names if x.upper() != nm.upper()]
+    nm = s["name"].strip()
+    alt = [x.strip() for x in (s.get("chembl_name") or "").split("|") if x.strip() and x.strip().upper() != nm.upper()]
     def p(n): return '"%s"[Title/Abstract]' % n
     def e(n): return '(TITLE:"%s" OR ABSTRACT:"%s")' % (n, n)
     pn = "(" + " OR ".join(p(x) for x in [nm] + alt) + ")"; en = "(" + " OR ".join(e(x) for x in [nm] + alt) + ")"

@@ -1,0 +1,21 @@
+parent	name	cards_or_packets_naming_it	needs_files_naming_it	ranking_tables_naming_it	hypothesis_ledger_heading_match	registry_records_theme_hits	registry_records_headings	error
+CHEMBL495727	AT9283					0		registry_records exit 1
+CHEMBL848	lenalidomide					0		registry_records exit 1
+CHEMBL3414626	pinometostat					0		registry_records exit 1
+CHEMBL4585668	belzutifan					0		registry_records exit 1
+CHEMBL1094	felbamate	F04_nmdar_intervention_class.card.json;F04_nmdar_intervention_class.packet.json		deepening_queue.tsv		0		registry_records exit 1
+CHEMBL1650595	AR-12	cards.json				0		registry_records exit 1
+CHEMBL306823	dichloroacetate	E03_pdk_inhibition_dca.card.json;E03_pdk_inhibition_dca.packet.json;I01_pdk_inhibition_dca_premise_seizure_glycaemia.card.json;I01_pdk_inhibition_dca_premise_seizure_glycaemia.packet.json;cards.json	needs.json	unit_map.tsv;unit_members.tsv;units.tsv		6	DL-MECH-020	
+CHEMBL413	sirolimus	EB-MTOR-AX-01.card.json;EB-MTOR-AX-01.packet.json;cards.json	needs.json	unit_map.tsv;unit_members.tsv;units.tsv		13	DIS-031	
+CHEMBL807	memantine	F01_glutamate_receptor_node.card.json;F01_glutamate_receptor_node.packet.json;F04_nmdar_intervention_class.card.json;F04_nmdar_intervention_class.packet.json;P11_magnesium_nmdar_gate.card.json;P11_magnesium_nmdar_gate.packet.json;cards.json	needs.json	deepening_queue.tsv;selections.tsv;unit_caveats.tsv;unit_map.tsv;unit_members.tsv;units.tsv		1	DL-MOL-001	
+CHEMBL1218	ramelteon					0		registry_records exit 1
+CHEMBL5095251	ceperognastat					0		registry_records exit 1
+CHEMBL1200598	fosfestrol					0		registry_records exit 1
+CHEMBL2105804	implitapide					0		registry_records exit 1
+CHEMBL140	curcumin					0		registry_records exit 1
+CHEMBL2107819	belnacasan	J01_glial_reactivity_modulation.card.json;J01_glial_reactivity_modulation.packet.json	needs.json			0		registry_records exit 1
+CHEMBL3545357	jte-151					0		registry_records exit 1
+CHEMBL215152	defosbarasertib					0		registry_records exit 1
+CHEMBL43452	pomalidomide					0		registry_records exit 1
+CHEMBL1201346	balsalazide					0		registry_records exit 1
+CHEMBL269538	harmine					0		registry_records exit 1

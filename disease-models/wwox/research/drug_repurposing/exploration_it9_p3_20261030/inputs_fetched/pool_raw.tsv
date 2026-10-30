@@ -1,0 +1,1319 @@
+set	arm	family_id	name	Z_total	Z_indeg	n_signed_targets	n_targets_in_graph	top_seed_gene	top_seed_direction	hop	main_target	main_target_degree	hub_threshold	hub_target	seed_own_target	seeds_contributing	conditional	guard
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:849d8cc9a128	Compound 2 [Maurer Et Al., 2012]	15.936	9.661	1	1	LDHB	up	hops1-3	SIRT5	8	60	0	0	LDHB:up	0	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:8fbc25f7f5e3	Pracinostat	10.539	7.833	5	4	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:b459313a7710	Anti-Hif-1Alpha Lna Antisense Oligonucleotide Ezn-2968	8.884	8.878	1	1	LDHA	up	hops1-3	HIF1A	348	60	1	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:b884da5f3057	Px-478	8.884	8.878	1	1	LDHA	up	hops1-3	HIF1A	348	60	1	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:2ac8d6cafa76	Tmp269	8.67	5.187	4	4	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:1c6ef38ed6e3	Ly3372689	6.42	4.749	1	1	PFKP	up	hops1-3	OGA	36	60	0	0	PFKP:up	0	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:545b1db929ec	Mk-8719	6.42	4.749	1	1	PFKP	up	hops1-3	OGA	36	60	0	0	PFKP:up	0	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:f562bb034a33	Thiamet-G	6.42	4.749	1	1	PFKP	up	hops1-3	OGA	36	60	0	0	PFKP:up	0	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:c976c1379de3	Pivaloyloxymethylbutyrate	6.258	5.081	8	8	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:edfa16086b89	4-Phenylbutyric Acid	6.258	5.081	8	8	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:8d33802a6c2b	Valproic Acid	6.258	5.081	9	9	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:ec7f7d35898a	Bay-299	6.056	4.669	2	2	SLC2A1	up	hops1-3	TAF1	38	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:CHEMBL1801250	NANATINOSTAT	4.761	4.538	6	6	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:0d35c5f6363b	Ss-208	4.62	4.206	6	6	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:ec1f021cf6ea	Martinostat	4.484	4.29	6	6	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:ccce741a959d	Dacinostat	4.442	3.617	10	9	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:fb92d02b5da3	Givinostat	4.442	3.617	10	9	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:01aa410e818f	Trichostatin A	4.442	3.617	9	9	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:ec16120922f2	Scriptaid	4.442	3.617	9	9	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:02771b72fbcc	4P-Pdot	4.257	3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:6ca3531f5299	S26131	4.257	3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:857e941dfc98	S20928	4.257	3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:882c2f78eeba	Ucm 724	4.257	3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:9b487b8ecfb8	K185	4.257	3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:cb2d773a310b	Ucm 549	4.257	3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:d9f9f1b8c197	Luzindole	4.257	3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:bce553ea6196	Fimepinostat	4.019	3.389	15	14	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:CHEMBL3622533	FIMEPINOSTAT	4.019	3.389	14	13	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:CHEMBL1213492	GIVINOSTAT	4.015	3.618	11	10	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:CHEMBL2103863	ABEXINOSTAT	4.015	3.618	11	10	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:CHEMBL2105763	QUISINOSTAT	4.015	3.618	11	10	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:CHEMBL235191	TACEDINALINE	4.015	3.618	11	10	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:CHEMBL27759	ENTINOSTAT	4.015	3.618	11	10	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:CHEMBL343448	ROMIDEPSIN	4.015	3.618	11	10	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:CHEMBL3545368	PANOBINOSTAT LACTATE	4.015	3.618	11	10	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:CHEMBL408513	BELINOSTAT	4.015	3.618	11	10	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:1e650c95ffff	Panobinostat Lactate	4.015	3.618	11	10	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:25b0801d9bba	Quisinostat	4.015	3.618	11	10	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:2ac80472f050	Romidepsin	4.015	3.618	11	10	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:2f02c290e2e5	Belinostat	4.015	3.618	11	10	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:316b73312895	Vorinostat	4.015	3.618	11	10	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:882d6b9e69bd	Entinostat	4.015	3.618	11	10	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:a01b90413a8a	Ka1010	4.015	3.618	11	10	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:de8663614b90	Abexinostat	4.015	3.618	11	10	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:ff14fa84130d	Tacedinaline	4.015	3.618	11	10	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:a2a8a04e6517	(Hydroxymethylphenyl)Agomelatine	3.752	3.282	1	1	BNIP3	up	hops1-3	MTNR1B	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:db6e9db6b9d8	Ucm 454	3.752	3.282	1	1	BNIP3	up	hops1-3	MTNR1B	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:f7102e5728c8	2-(Indolin-1Yl)-Melatonin	3.752	3.282	1	1	BNIP3	up	hops1-3	MTNR1B	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:fa02013892b7	Dh97	3.752	3.282	1	1	BNIP3	up	hops1-3	MTNR1B	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:CHEMBL4173075	Pt2385	3.507	3.06	1	1	LDHA	up	hops1-3	EPAS1	73	60	1	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:CHEMBL4585668	BELZUTIFAN	3.507	3.06	1	1	LDHA	up	hops1-3	EPAS1	73	60	1	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:DGIDB:2b6b69a912a3	Belzutifan	3.507	3.06	1	1	LDHA	up	hops1-3	EPAS1	73	60	1	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	opposes	FAM:CAT:CHEMBL598797	CUDC-101	3.018	3.334	13	12	SLC2A1	up	hops1-3	HDAC5	20	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:554550d33afa	Tanuxiciclib	-3.219	-3.617	5	5	PFKP	up	hops1-3	CDK6	36	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:CHEMBL1200760	BALSALAZIDE DISODIUM	-3.3	-3.026	4	4	SLC2A1	up	hops1-3	PPARG	209	60	1	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:CHEMBL1201013	OLSALAZINE SODIUM	-3.3	-3.026	4	4	SLC2A1	up	hops1-3	PPARG	209	60	1	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:CHEMBL704	MESALAMINE	-3.3	-3.026	4	4	SLC2A1	up	hops1-3	PPARG	209	60	1	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:39fedf622b2c	Balsalazide Disodium	-3.3	-3.026	4	4	SLC2A1	up	hops1-3	PPARG	209	60	1	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:4436cf2b661e	Olsalazine Sodium	-3.3	-3.026	4	4	SLC2A1	up	hops1-3	PPARG	209	60	1	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:9e792c232ac1	Mesalamine	-3.3	-3.026	4	4	SLC2A1	up	hops1-3	PPARG	209	60	1	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:aaedf4c249a8	Indomethacin	-3.3	-3.026	5	5	SLC2A1	up	hops1-3	PPARG	209	60	1	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:c8511f5afd4f	Rosiglitazone	-3.377	-3.11	4	3	SLC2A1	up	hops1-3	PPARG	209	60	1	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:ba122a75ebe4	Ebvaciclib	-3.694	-4.361	3	3	PFKP	up	hops1-3	CDK6	36	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:027780b88744	Cbobnea	-3.752	-3.282	1	1	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:0735d41c558e	[125I]Div880	-3.752	-3.282	1	1	BNIP3	up	hops1-3	MTNR1B	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:39e20f55f729	2-Methoxy-&Alpha;,&Beta;-Didehydro-Agomelatine	-3.752	-3.282	1	1	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:5d37247d86ec	5-Methoxy-Luzindole	-3.752	-3.282	1	1	BNIP3	up	hops1-3	MTNR1B	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:6fa918c594c4	Aae-M-Pbp-Amine	-3.752	-3.282	1	1	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:b9d0b1d05dd5	Isoamyl-Agomelatine	-3.752	-3.282	1	1	BNIP3	up	hops1-3	MTNR1B	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:c0bfb32ed518	Ucm 765	-3.752	-3.282	1	1	BNIP3	up	hops1-3	MTNR1B	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:cb078136028d	Ucm1014	-3.752	-3.282	1	1	BNIP3	up	hops1-3	MTNR1B	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:cf301d2ea69b	Difluoroagomelatine	-3.752	-3.282	1	1	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:d2991102be6b	Bomppa	-3.752	-3.282	1	1	BNIP3	up	hops1-3	MTNR1B	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:d2a215815825	Cifea	-3.752	-3.282	1	1	BNIP3	up	hops1-3	MTNR1B	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:e1cab85af880	Ucsf7447	-3.752	-3.282	1	1	BNIP3	up	hops1-3	MTNR1B	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:ec17368be03c	[125I]S70254	-3.752	-3.282	1	1	BNIP3	up	hops1-3	MTNR1B	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:CHEMBL573107	Bi-D1870	-4.21	-3.545	4	4	HK2	up	hops1-3	RPS6KA3	4	60	0	0	BNIP3:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:CHEMBL1218	RAMELTEON	-4.257	-3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:CHEMBL2103822	TASIMELTEON	-4.257	-3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:CHEMBL4297523	PIROMELATINE	-4.257	-3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:CHEMBL45	MELATONIN	-4.257	-3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:02d3870f3f63	[125I]Sd6	-4.257	-3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:0dcaafc84cd6	N-[2-(2-Iodo-5-Methoxy-1H-Indol-3-Yl)Ethyl]Acetamide	-4.257	-3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:11d8309893ad	Gr 196429	-4.257	-3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:15f1d1e7f58e	Icoa-13	-4.257	-3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:1e67452430e9	6-Hydroxymelatonin	-4.257	-3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:45bad1162976	S24014	-4.257	-3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:48760995c299	S24773	-4.257	-3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:5e7d484ce8f9	Iik7	-4.257	-3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:5f024309405e	Ramelteon	-4.257	-3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:73d1ef181e48	Ly 156735	-4.257	-3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:9bed2c5562cc	Ucsf4226	-4.257	-3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:9d211fca1157	2-[125I]Melatonin	-4.257	-3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:a48768eaeb46	S26284	-4.257	-3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:ae6953d74009	Ucm 793	-4.257	-3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:b5a7b746b17d	Tasimelteon	-4.257	-3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:b95e2f18106b	Ucsf3384	-4.257	-3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:ccfe1fc77752	Efppea	-4.257	-3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:e9025ffbd637	Ucm1341	-4.257	-3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:f346181a3d91	6-Cl-Mlt	-4.257	-3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:ff7fa5d89505	Gr 128107	-4.257	-3.756	2	2	BNIP3	up	hops1-3	MTNR1A	2	60	0	0	BNIP3:up	0	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:CHEMBL3301610	ABEMACICLIB	-4.262	-4.995	2	2	PFKP	up	hops1-3	CDK6	36	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:CHEMBL3545110	RIBOCICLIB	-4.262	-4.995	2	2	PFKP	up	hops1-3	CDK6	36	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:CHEMBL4067549	ULECACICLIB	-4.262	-4.995	2	2	PFKP	up	hops1-3	CDK6	36	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:CHEMBL4277900	CROZBACICLIB	-4.262	-4.995	2	2	PFKP	up	hops1-3	CDK6	36	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:06dd0185c305	Bsj-03-204	-4.262	-4.995	2	2	PFKP	up	hops1-3	CDK6	36	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:0e5293e56c62	Inixaciclib	-4.262	-4.995	2	2	PFKP	up	hops1-3	CDK6	36	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:192cf2264058	Bsj-04-132	-4.262	-4.995	2	2	PFKP	up	hops1-3	CDK6	36	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:1f69c0c22540	Bsj-03-123	-4.262	-4.995	2	2	PFKP	up	hops1-3	CDK6	36	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:427f7bb98d58	Ribociclib Succinate	-4.262	-4.995	2	2	PFKP	up	hops1-3	CDK6	36	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:5d4cc0399c79	Dalpiciclib	-4.262	-4.995	2	2	PFKP	up	hops1-3	CDK6	36	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:b0e127475c4d	Ribociclib	-4.262	-4.995	2	2	PFKP	up	hops1-3	CDK6	36	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:b1b490291831	Trilaciclib Dihydrochloride	-4.262	-4.995	2	2	PFKP	up	hops1-3	CDK6	36	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:bdcfd01a577e	Lerociclib	-4.262	-4.995	2	2	PFKP	up	hops1-3	CDK6	36	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:bfa3a8018a80	Abemaciclib	-4.262	-4.995	2	2	PFKP	up	hops1-3	CDK6	36	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:c4fcb2b92e53	Cimpuciclib	-4.262	-4.995	2	2	PFKP	up	hops1-3	CDK6	36	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:e245e65e1ab2	Tibremciclib	-4.262	-4.995	2	2	PFKP	up	hops1-3	CDK6	36	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:f2ef4d444789	Cp-10	-4.262	-4.995	2	2	PFKP	up	hops1-3	CDK6	36	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:CHEMBL3115681	NARAZACICLIB	-4.262	-4.995	3	3	PFKP	up	hops1-3	CDK6	36	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:24c4530c1d09	Cdk/Crk Inhibitor	-5.257	-4.798	3	3	PKM	up	hops1-3	CDK6	36	60	0	0	ALDOA:up;BNIP3:up;ENO1:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:5a130973549c	1-Cyclohexyl-N-{[1-(4-Methylphenyl)-1H-Indol-3-Yl]Methyl}Methanamine	-6.462	-4.984	1	1	LDHB	up	hops1-3	ESRRA	38	60	0	0	ALDOA:up;BNIP3:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:e4afa445a7e0	Xct790	-6.462	-4.984	1	1	LDHB	up	hops1-3	ESRRA	38	60	0	0	ALDOA:up;BNIP3:up;HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up;PKM:up;SLC2A1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:CHEMBL1933288	Bix 02565	-10.445	-8.65	1	1	HK2	up	hops1-3	RPS6KA3	4	60	0	0	HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up	1	IT7_READOUT6
+Q2_expression_tiersAB	mimics	FAM:CAT:DGIDB:2bb4f084b3c0	Fmk	-10.445	-8.65	1	1	HK2	up	hops1-3	RPS6KA3	4	60	0	0	HK2:up;LDHA:up;LDHB:up;PDHA1:uncertain;PDK1:uncertain;PFKP:up;PGK1:up	1	IT7_READOUT6
+Q4_protein_tiersAB	opposes	FAM:CAT:CHEMBL2105662	LOMITAPIDE MESYLATE	8.392	7.39	2	2	GAD1	down	hops1-3	P4HB	1	60	0	0	GAD1:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:CHEMBL2105804	IMPLITAPIDE	8.392	7.39	2	2	GAD1	down	hops1-3	P4HB	1	60	0	0	GAD1:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:CHEMBL4297326	SLX-4090	8.392	7.39	2	2	GAD1	down	hops1-3	P4HB	1	60	0	0	GAD1:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:3b44d33b9351	Slx-4090	8.392	7.39	2	2	GAD1	down	hops1-3	P4HB	1	60	0	0	GAD1:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:71634dc5ca10	Implitapide	8.392	7.39	2	2	GAD1	down	hops1-3	P4HB	1	60	0	0	GAD1:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:d0c15660ccb8	Lomitapide Mesylate	8.392	7.39	2	2	GAD1	down	hops1-3	P4HB	1	60	0	0	GAD1:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:a0ae8af82104	Tucidinostat	6.385	6.012	1	1	GAD1	down	hops1-3	HDAC1	113	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:1b57e9fae79e	Ots964	6.086	5.275	1	1	GAD1	down	hops1-3	PBK	8	60	0	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:2fe3ff7e7633	Apicidin	4.565	3.653	4	4	GAD1	down	hops1-3	HDAC1	113	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200598	DIETHYLSTILBESTROL DIPHOSPHATE	4.475	4.088	2	2	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:CHEMBL1201165	QUINESTROL	4.475	4.088	2	2	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:CHEMBL1201466	ESTROGENS, CONJUGATED SYNTHETIC A	4.475	4.088	2	2	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:CHEMBL1201467	SYNTHETIC CONJUGATED ESTROGENS, B	4.475	4.088	2	2	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:CHEMBL1201468	ESTROGENS, ESTERIFIED	4.475	4.088	2	2	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:CHEMBL1201649	ESTROGENS, CONJUGATED	4.475	4.088	2	2	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:CHEMBL1230314	ESTETROL ANHYDROUS	4.475	4.088	2	2	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:CHEMBL3545274	MK-6913	4.475	4.088	2	2	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:006565434e24	Diarylpropionitrile	4.475	4.088	2	2	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:486419346510	Ac-186	4.475	4.088	2	2	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:79d6fb3c3c09	Estetrol	4.475	4.088	2	2	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:7a317b0e9875	Estrogens, Conjugated (Usp)	4.475	4.088	2	2	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:8a3e93a80c06	Way200070	4.475	4.088	2	2	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:9a65594663e8	Synthetic Conjugated Estrogens, B	4.475	4.088	2	2	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:a34729bed515	Prinaberel	4.475	4.088	2	2	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:b81c4f7f2883	Quinestrol	4.475	4.088	2	2	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:bae9868a4fcf	Estrogens, Esterified (Usp)	4.475	4.088	2	2	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:cff341dde758	Estriol	4.475	4.088	2	2	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:e1171258c805	Lasofoxifene	4.475	4.088	2	2	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:f38a1a97065e	Estrone	4.475	4.088	2	2	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:d1fc53fdb24f	Ethinyl Estradiol	4.475	4.088	3	2	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:0c081e7c3bfe	Rgfp109	4.412	3.627	2	2	GAD1	down	hops1-3	HDAC1	113	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:CHEMBL272980	MOCETINOSTAT	4.391	3.653	5	5	GAD1	down	hops1-3	HDAC1	113	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:1caf8c518b16	Mocetinostat	4.391	3.653	5	5	GAD1	down	hops1-3	HDAC1	113	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:CHEMBL198877	AUS-131	4.083	3.866	1	1	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:CHEMBL278703	ERTEBEREL	4.083	3.866	1	1	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:CHEMBL3545411	MF101	4.083	3.866	1	1	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:CHEMBL450940	PRINABEREL	4.083	3.866	1	1	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:4f028718b81f	Mf101	4.083	3.866	1	1	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:680142496473	Ferb 033	4.083	3.866	1	1	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:864a49d67c17	Erteberel	4.083	3.866	1	1	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:566b9f3d3b22	(S)-Liquiritigenin	4.083	3.866	2	2	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:CHEMBL2018302	TUBASTATIN A	3.898	3.882	3	3	GAD1	down	hops1-3	HDAC1	113	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:1fc017f04da4	J27644	3.898	3.882	3	3	GAD1	down	hops1-3	HDAC1	113	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:78cf90272935	Bisphenol A	3.776	3.485	2	2	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:bc1ae3ae5cc3	Nexturastat A	3.672	3.68	2	2	GAD1	down	hops1-3	HDAC1	113	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:DGIDB:9613cb9314a2	Resminostat	3.399	3.08	4	4	GAD1	down	hops1-3	HDAC1	113	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	opposes	FAM:CAT:CHEMBL3545092	CR 1447	3.255	3.03	2	2	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	mimics	FAM:CAT:DGIDB:2f5204af23a0	Hpte	-4.083	-3.866	1	1	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	mimics	FAM:CAT:DGIDB:f1529f916473	Phtpp	-4.083	-3.866	1	1	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	mimics	FAM:CAT:DGIDB:59f2e13deadd	Ospemifene	-4.475	-4.088	2	2	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	mimics	FAM:CAT:DGIDB:60c4300ad86b	Bazedoxifene	-4.475	-4.088	2	2	GAD2	down	hops1-3	ESR2	170	60	1	0	GAD1:down;GAD2:down	0	none
+Q4_protein_tiersAB	mimics	FAM:CAT:DGIDB:7d52ffd3bf7c	Compound 34 [Pmid: 24749861]	-8.38	-7.371	1	1	GAD1	down	hops1-3	ERN1	8	60	0	0	GAD1:down	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:e5c93569503a	Bifonazole	38.011	19.645	1	1	TNF	up	hops1-3	HMGB1	34	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL3545357	JTE-151	17.936	20.884	1	1	IL6	up	hops1-3	RORC	25	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:2e60899cccf5	Uracil 20	15.841	15.808	2	2	IL1B	up	hops1-3	CASP1	31	60	0	0	IL1B:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:871f044a9f90	Vrt-043198	15.841	15.808	2	2	IL1B	up	hops1-3	CASP1	31	60	0	0	IL1B:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL2107819	BELNACASAN	15.841	15.808	1	1	IL1B	up	hops1-3	CASP1	31	60	0	0	IL1B:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:045ff335316a	Belnacasan	15.841	15.808	1	1	IL1B	up	hops1-3	CASP1	31	60	0	0	IL1B:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:1a5439bf05e1	Z-Yvad-Fmk	15.841	15.808	1	1	IL1B	up	hops1-3	CASP1	31	60	0	0	IL1B:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:329179d638e2	Pralnacasan	15.841	15.808	1	1	IL1B	up	hops1-3	CASP1	31	60	0	0	IL1B:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:6ed5607e5b5e	Gsk4112	12.596	6.962	1	1	IL6	up	hops1-3	NR1D1	28	60	0	0	IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:0323631b6138	M826	11.369	13.76	5	5	IL1B	up	hops1-3	CASP1	31	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:dd19391662d3	Alrt 1550	10.345	20.691	2	2	IL6	up	hops1-3	RORC	25	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL1957266	(+)-Jq1	9.989	9.11	2	2	TNF	up	hops1-3	BRD4	19	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL1522313	Compound 3 [Pmid: 25408830]	9.989	9.11	1	1	TNF	up	hops1-3	BRD4	19	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL2179387	Pfi-1	9.989	9.11	1	1	TNF	up	hops1-3	BRD4	19	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL3086883	Ms436	9.989	9.11	1	1	TNF	up	hops1-3	BRD4	19	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL3919831	AMREDOBRESIB	9.989	9.11	1	1	TNF	up	hops1-3	BRD4	19	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL4226570	Mz1	9.989	9.11	1	1	TNF	up	hops1-3	BRD4	19	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:09afa1e9db65	N-Methyl-2-Pyrrolidone	9.989	9.11	1	1	TNF	up	hops1-3	BRD4	19	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:2e8ec2410b6f	I-Bet282	9.989	9.11	1	1	TNF	up	hops1-3	BRD4	19	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:4729f05af735	Dbet6	9.989	9.11	1	1	TNF	up	hops1-3	BRD4	19	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:4d6bb6aa868e	Compound 11H [Pmid: 29808961]	9.989	9.11	1	1	TNF	up	hops1-3	BRD4	19	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:4ee060cc6aaf	Compound 9 [Pmid: 23517011]	9.989	9.11	1	1	TNF	up	hops1-3	BRD4	19	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:5939058f5e3e	Cpi-203	9.989	9.11	1	1	TNF	up	hops1-3	BRD4	19	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:5dcbc0337c66	Bzt-7	9.989	9.11	1	1	TNF	up	hops1-3	BRD4	19	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:89c5118fd77d	Compound 15 [Hay Et Al., 2013]	9.989	9.11	1	1	TNF	up	hops1-3	BRD4	19	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:943f948ed754	Isoxazole Azepine Compound 3	9.989	9.11	1	1	TNF	up	hops1-3	BRD4	19	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:aac12c557a5b	Xd1	9.989	9.11	1	1	TNF	up	hops1-3	BRD4	19	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:ad0ad93f2d5c	Compound 1 [Pmid: 25408830]	9.989	9.11	1	1	TNF	up	hops1-3	BRD4	19	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:b6ab3af5c7a4	Compound 7D [Pmid: 25703523]	9.989	9.11	1	1	TNF	up	hops1-3	BRD4	19	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:b92b8b1ce56b	Nhwd-870	9.989	9.11	1	1	TNF	up	hops1-3	BRD4	19	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:c0761d5c7905	Compound 2 [Pmid: 25408830]	9.989	9.11	1	1	TNF	up	hops1-3	BRD4	19	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:d2f0b45182ac	Ms417	9.989	9.11	1	1	TNF	up	hops1-3	BRD4	19	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:e70b1b244ec2	Mivebresib	9.989	9.11	1	1	TNF	up	hops1-3	BRD4	19	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL4303525	OMAVELOXOLONE	9.973	8.731	1	1	IL1B	up	hops1-3	NFE2L2	154	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:300a1f119a63	Omaveloxolone	9.973	8.731	1	1	IL1B	up	hops1-3	NFE2L2	154	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL4297717	CD24FC	8.216	7.069	5	5	TNF	up	hops1-3	HMGB1	34	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:0addb0a44032	Cholesterol	8.011	4.757	1	1	IL6	up	hops1-3	RORA	67	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:45b2405f8f75	7-Hydroxycholesterol	8.011	4.757	1	1	IL6	up	hops1-3	RORA	67	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:75ad8857ad10	Cholesterol Sulphate	8.011	4.757	1	1	IL6	up	hops1-3	RORA	67	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:e8e1abfdb80d	Akk(Thioac)Lm21	7.886	9.936	1	1	TNF	up	hops1-3	SIRT6	11	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:806b78a03d44	As101	7.277	7.2	2	2	IL1B	up	hops1-3	CASP1	31	60	0	0	IL1B:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL964	DISULFIRAM	6.275	5.106	1	1	TNF	up	hops1-3	ALDH2	17	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:5c9c898449fc	Disulfiram	6.275	5.106	1	1	TNF	up	hops1-3	ALDH2	17	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:a9f5f87a8baa	Prunetin	6.275	5.106	1	1	TNF	up	hops1-3	ALDH2	17	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:8b135ee93a22	Rgfp966	6.251	5.092	1	1	TNF	up	hops1-3	HDAC3	36	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL140	CURCUMIN	5.73	5.347	2	2	TNF	up	hops1-3	EP300	125	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:51081bd5ca15	C646	5.73	5.347	1	1	TNF	up	hops1-3	EP300	125	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:b52fd29203f7	Clotrimazole	5.611	4.831	6	4	IL1B	up	hops1-3	NR1I3	45	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:3d009ed50fe9	Dual Brd4/Plk1 Inhibitor 23	5.596	6.684	2	2	TNF	up	hops1-3	BRD4	19	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:752009d1c0e8	Compound 6 [Pmid: 30125504]	5.596	6.684	2	2	TNF	up	hops1-3	BRD4	19	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:a5d52bc79d17	Xy-06-007	5.596	6.684	2	2	TNF	up	hops1-3	BRD4	19	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL4297436	SRT-2104	5.364	6.121	1	1	IL1B	up	hops1-3	SIRT1	107	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:0e0fcb16e612	Srt2104	5.364	6.121	1	1	IL1B	up	hops1-3	SIRT1	107	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:1f8a9f49030d	Srt-2104	5.364	6.121	1	1	IL1B	up	hops1-3	SIRT1	107	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:a81c1f2c4eee	Sirt1 Activator 3	5.364	6.121	1	1	IL1B	up	hops1-3	SIRT1	107	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:fc3b30ce2707	Srt1720	5.364	6.121	1	1	IL1B	up	hops1-3	SIRT1	107	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL3287735	GSK2816126	5.28	5.022	1	1	TNF	up	hops1-3	EZH2	149	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL3414621	TAZEMETOSTAT	5.28	5.022	1	1	TNF	up	hops1-3	EZH2	149	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL4080228	MEVROMETOSTAT	5.28	5.022	1	1	TNF	up	hops1-3	EZH2	149	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:095622567d60	Unc1999	5.28	5.022	1	1	TNF	up	hops1-3	EZH2	149	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:142731870a52	Ebi-2511	5.28	5.022	1	1	TNF	up	hops1-3	EZH2	149	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:18b66ef6beee	Cpi-1205	5.28	5.022	1	1	TNF	up	hops1-3	EZH2	149	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:36423f3f5bff	Ei1	5.28	5.022	1	1	TNF	up	hops1-3	EZH2	149	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:64e56ec1058b	Jqez5	5.28	5.022	1	1	TNF	up	hops1-3	EZH2	149	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:67d3092e5959	Epz005687	5.28	5.022	1	1	TNF	up	hops1-3	EZH2	149	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:85ce88c948e1	Epz011989	5.28	5.022	1	1	TNF	up	hops1-3	EZH2	149	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:8b7f3a930682	Sklb-03220	5.28	5.022	1	1	TNF	up	hops1-3	EZH2	149	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:a3d8ccc77935	Tazemetostat Hydrobromide	5.28	5.022	1	1	TNF	up	hops1-3	EZH2	149	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:f20362268b9d	Tazemetostat	5.28	5.022	1	1	TNF	up	hops1-3	EZH2	149	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL2204995	Gsk343	5.261	4.54	2	1	TNF	up	hops1-3	EZH2	149	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:1234619c0645	Tulmimetostat	5.261	4.54	2	1	TNF	up	hops1-3	EZH2	149	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:72580f43d84e	Valemetostat	5.261	4.54	2	1	TNF	up	hops1-3	EZH2	149	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:0c081e7c3bfe	Rgfp109	5.081	4.335	2	2	TNF	up	hops1-3	HDAC3	36	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:88f4aeb726f1	3-Keto-Lithocholic Acid	4.597	4.037	2	2	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:6802569a3c41	Lithocholic Acid	4.594	3.914	3	2	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:b9586dbf6a66	Paxilline	4.083	3.375	1	1	TNF	up	hops1-3	NR1H3	106	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:b63eeea56658	Bi6015	4.027	3.256	1	1	IL1B	up	hops1-3	HNF4A	250	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL1040	CALCIFEDIOL ANHYDROUS	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL1042	CHOLECALCIFEROL	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200622	PARICALCITOL	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200666	CALCIPOTRIENE	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200810	DOXERCALCIFEROL	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL1536	ERGOCALCIFEROL	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL1601669	ALFACALCIDOL	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL1908376	SEOCALCITOL	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL2104955	BECOCALCIDIOL	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL2105107	INECALCITOL	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL2356023	DIHYDROTACHYSTEROL	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL284121	ILX23-7553	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL3545094	ELOCALCITOL	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL3989862	PEFCALCITOL	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL4297608	ELDECALCITOL	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL605525	DP001	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL846	CALCITRIOL	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:0cc2ae469263	Eldecalcitol	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:1c4444d46e12	Calcipotriene	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:1f6977ce50ed	Ergocalciferol	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:44d5c33be04e	Calcifediol Anhydrous	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:56e892e86e90	Inecalcitol	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:69354161595e	Tacalcitol	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:751d166e1e52	Elocalcitol	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:80986b1aeb4f	Doxercalciferol	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:8ed0f4cd93e2	Lexacalcitol	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:90b640e2134f	Paricalcitol	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:a59747178c82	Calcitriol-26,23-Lactone	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:a61a8b72fd3f	Cholecalciferol	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:b28d52919b48	Becocalcidiol	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:d0097bbd6c63	Calcitriol	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:f00011e958ea	Dihydrotachysterol	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:f6366d581009	Seocalcitol	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:fa2c565df7e0	Lg190178	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:fea95527d588	Alfacalcidol	3.627	3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL2105705	LUNACALCIPOL	3.627	3.196	2	2	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:CHEMBL3545173	IRX4310	3.61	4.15	3	3	IL1B	up	hops1-3	RARB	66	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	opposes	FAM:CAT:DGIDB:6abfb05ed0d9	Agn193109	3.61	4.15	3	3	IL1B	up	hops1-3	RARB	66	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:CHEMBL1265	ADAPALENE	-3.61	-4.15	3	3	IL1B	up	hops1-3	RARB	66	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:CHEMBL1657	TAZAROTENE	-3.61	-4.15	3	3	IL1B	up	hops1-3	RARB	66	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:1777537b2599	Isotretinoin	-3.61	-4.15	3	3	IL1B	up	hops1-3	RARB	66	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:5a5e52082feb	Tamibarotene	-3.61	-4.15	3	3	IL1B	up	hops1-3	RARB	66	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:96958e9a8723	Trifarotene	-3.61	-4.15	3	3	IL1B	up	hops1-3	RARB	66	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:99960e67dd34	Ro 40-6055	-3.61	-4.15	3	3	IL1B	up	hops1-3	RARB	66	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:a2252eb573a8	Tazarotene	-3.61	-4.15	3	3	IL1B	up	hops1-3	RARB	66	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:c567743ed0f6	Cd666	-3.61	-4.15	3	3	IL1B	up	hops1-3	RARB	66	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:cde9d0752901	Adapalene	-3.61	-4.15	3	3	IL1B	up	hops1-3	RARB	66	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:ef1566b62f47	Arotinoid Acid	-3.61	-4.15	3	3	IL1B	up	hops1-3	RARB	66	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:0dd69e5d8d89	Zk159222	-3.627	-3.196	1	1	IL6	up	hops1-3	VDR	112	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:f2356402f4c0	5&Beta;-Pregnane-3,20-Dione	-3.87	-3.885	2	2	IL1B	up	hops1-3	NR1I3	45	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:7f061bf749aa	Tretinoin	-4.072	-3.644	6	6	IL1B	up	hops1-3	RARB	66	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:03b1f671920b	Jnj-65234637	-4.385	-3.186	1	1	IL1B	up	hops1-3	BCL6	83	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:5834235c36ff	Fx1	-4.385	-3.186	1	1	IL1B	up	hops1-3	BCL6	83	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:5be9fe4f2f42	Compound 8C [Pmid: 28760529]	-4.385	-3.186	1	1	IL1B	up	hops1-3	BCL6	83	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:e4331b8a099b	Bcl6 Protac 15	-4.385	-3.186	1	1	IL1B	up	hops1-3	BCL6	83	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:0359d7a68db2	25-Hydroxycholesterol	-5.102	-3.906	2	2	IL6	up	hops1-3	RORC	25	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:2c4cc7dddb4a	Bms641	-5.274	-5.244	1	1	IL1B	up	hops1-3	RARB	66	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:74f98eb23a87	Ac261066	-5.274	-5.244	1	1	IL1B	up	hops1-3	RARB	66	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:8023244b2afd	Kcl-286	-5.274	-5.244	1	1	IL1B	up	hops1-3	RARB	66	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:c68191de754a	Ac55649	-5.274	-5.244	1	1	IL1B	up	hops1-3	RARB	66	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:c2cc6146166d	Citco	-5.295	-5.314	1	1	IL1B	up	hops1-3	NR1I3	45	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:CHEMBL382277	EX-527	-5.364	-6.121	1	1	IL1B	up	hops1-3	SIRT1	107	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:1721f8d286e9	Selisistat	-5.364	-6.121	1	1	IL1B	up	hops1-3	SIRT1	107	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:1a864fb4552a	Splitomicin	-5.364	-6.121	1	1	IL1B	up	hops1-3	SIRT1	107	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:CHEMBL25202	TAMIBAROTENE	-5.528	-5.466	2	2	IL1B	up	hops1-3	RARB	66	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:63f7075aecd7	Vitamin A	-6.799	-7.866	1	1	IL6	up	hops1-3	NR2C2	61	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:a3d03ae2ef6c	Ml385	-9.973	-8.731	1	1	IL1B	up	hops1-3	NFE2L2	154	60	1	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:46811ae27751	Bcl3 Inhibitor Js6	-10.302	-9.386	1	1	TNF	up	hops1-3	BCL3	41	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:8662f470cb85	To-901317	-10.688	-10.237	4	4	TNF	up	hops1-3	RORC	25	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:c7a13951be3c	Sr8278	-12.596	-6.962	1	1	IL6	up	hops1-3	NR1D1	28	60	0	0	IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:2293d5222177	Sr1001	-15.014	-13.876	2	2	TNF	up	hops1-3	RORC	25	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:29913e103f10	Gne-3500	-17.936	-20.884	1	1	IL6	up	hops1-3	RORC	25	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:2f6772132a7d	Sr2211	-17.936	-20.884	1	1	IL6	up	hops1-3	RORC	25	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:35cc5266a85c	Compound 32 [Pmid: 31638797]	-17.936	-20.884	1	1	IL6	up	hops1-3	RORC	25	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:56e259d3663f	Tak-828F	-17.936	-20.884	1	1	IL6	up	hops1-3	RORC	25	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:57a4bd222504	Azd0284	-17.936	-20.884	1	1	IL6	up	hops1-3	RORC	25	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:586632d51798	Rorc2 Inverse Agonist 66 [Pmid: 30130103]	-17.936	-20.884	1	1	IL6	up	hops1-3	RORC	25	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:5d003de6e684	Mrl-871	-17.936	-20.884	1	1	IL6	up	hops1-3	RORC	25	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:632fc450b83a	Compound 14 [Schnute Et Al., 2023]	-17.936	-20.884	1	1	IL6	up	hops1-3	RORC	25	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:b7551f23273b	Sr1555	-17.936	-20.884	1	1	IL6	up	hops1-3	RORC	25	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:bc63160f00e3	Gsk2981278	-17.936	-20.884	1	1	IL6	up	hops1-3	RORC	25	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:e67ba0b4647f	Cintirorgon	-17.936	-20.884	1	1	IL6	up	hops1-3	RORC	25	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q5_expression_tiersAB	mimics	FAM:CAT:DGIDB:f724688ff44c	Xy101	-17.936	-20.884	1	1	IL6	up	hops1-3	RORC	25	60	0	0	IL1B:up;IL6:up;TNF:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:207317c1b624	Stm2457	154.584	98.86	1	1	MYC	up	hops1-3	METTL3	4	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:38b6db5eff01	Stc-15	154.584	98.86	1	1	MYC	up	hops1-3	METTL3	4	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL215152	DEFOSBARASERTIB	20.143	22.456	1	1	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL3544932	TAK-901	20.143	22.456	1	1	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL3545395	BI-811283	20.143	22.456	1	1	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL415049	BARASERTIB	20.143	22.456	1	1	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:c50058647863	Tak-901	20.143	22.456	1	1	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:4172adf3398a	Compound 1 [Pmid: 21742770]	19.996	6.676	2	2	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:9bc633afd268	Jnj-7706621	17.302	21.537	5	5	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL3301588	TAREXTUMAB	15.664	12.536	2	2	MYC	up	hops1-3	NOTCH3	27	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:222da6a76f85	Tarextumab	15.664	12.536	2	2	MYC	up	hops1-3	NOTCH3	27	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:198741f77ba6	Elnd006	15.563	4.951	1	1	MYC	up	hops1-3	PSEN1	33	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:28a63164639a	Chf-5074	15.563	4.951	1	1	MYC	up	hops1-3	PSEN1	33	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:62c594195bd0	Az4800	15.563	4.951	1	1	MYC	up	hops1-3	PSEN1	33	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:f571f2fbfdf4	Sch-900229	15.563	4.951	1	1	MYC	up	hops1-3	PSEN1	33	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:310b1705a307	Osugacestat	15.495	4.965	2	1	MYC	up	hops1-3	APH1A	10	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:e05afc012259	Mk-0752	15.495	4.965	2	1	MYC	up	hops1-3	APH1A	10	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1090771	AVAGACESTAT	15.492	4.962	6	5	MYC	up	hops1-3	APH1A	10	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1770916	NIROGACESTAT	15.492	4.962	6	5	MYC	up	hops1-3	APH1A	10	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL4297422	RG-4733	15.492	4.962	6	5	MYC	up	hops1-3	APH1A	10	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL463981	BEGACESTAT	15.492	4.962	6	5	MYC	up	hops1-3	APH1A	10	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL520733	SEMAGACESTAT	15.492	4.962	6	5	MYC	up	hops1-3	APH1A	10	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:2551da72c2b7	Begacestat	15.492	4.962	6	5	MYC	up	hops1-3	APH1A	10	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:93e5438541e3	Avagacestat	15.492	4.962	6	5	MYC	up	hops1-3	APH1A	10	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:e2a06e37dae6	Nirogacestat	15.492	4.962	6	5	MYC	up	hops1-3	APH1A	10	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL2170016	Hg-10-102-01	13.127	9.493	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:0e119ae547a0	Ro4929097	12.815	6.951	2	2	MYC	up	hops1-3	PSEN1	33	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL2169919	Epz004777	12.525	26.563	1	1	MYC	up	hops1-3	DOT1L	13	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL3087498	Sgc0946	12.525	26.563	1	1	MYC	up	hops1-3	DOT1L	13	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:31c2ebae4775	Pinometostat	12.525	26.563	1	1	MYC	up	hops1-3	DOT1L	13	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:5431327e2708	Compound 13 [Chen Et Al., 2016]	12.525	26.563	1	1	MYC	up	hops1-3	DOT1L	13	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:8df5f32bdf3b	Danusertib	12.451	17.21	4	4	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:c273df15d763	Compound 25 [Pmid: 20855207]	12.435	14.498	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL259084	MLN-8054	12.425	17.204	2	2	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL3692206	TAS-119	12.425	17.204	2	2	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL4289017	PF-03814735	12.425	17.204	2	2	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:1d5e6550c667	Aurora Kinase Inhibitor Ii	12.425	17.204	2	2	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:42027b00475f	Compound 46 [Pmid: 16451062]	12.425	17.204	2	2	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:a5ef2958c633	Zm447439	12.425	17.204	2	2	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:c7cc08beb018	Pf-03814735	12.425	17.204	2	2	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:d7fe3d6d9e92	Barasertib	12.425	17.204	2	2	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:fb77282c2057	Compound 10 [Pmid: 19402633]	12.425	17.204	2	2	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1090479	GSK-1070916	12.425	17.204	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1967878	CENISERTIB	12.425	17.204	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL2105657	TOZASERTIB LACTATE	12.425	17.204	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL2140408	AMG-900	12.425	17.204	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL3545327	TTP-607	12.425	17.204	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL3545378	MK-6592	12.425	17.204	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL402548	DANUSERTIB	12.425	17.204	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL482767	SNS-314	12.425	17.204	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:46cf880ffb75	Mk-5108	12.425	17.204	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:4aa00b4cfaf5	Dubermatinib	12.425	17.204	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:5c8842c6a811	Cyc116	12.425	17.204	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:fb9a6166ce48	Sns-314	12.425	17.204	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1774055	Az960	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL2107823	GANDOTINIB	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL2208034	XL-019	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL3545215	BMS-911543	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL3545241	AC-430	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL4303389	NS-018	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL5095023	LS-104	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:333fca0f84c8	Ns-018	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:45fd8e7b05d8	Compound 11 [Pmid: 35653642]	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:4d0a432f5e1d	Compound 13 [Pmid: 35653642]	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:4f4ff54b0d7f	Rovadicitinib	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:953f482b0bbc	Ac430	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:aae3d057d8a6	Azd-1480	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:bf9eed7017e8	Ac-430	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:4ae9a1c1ace4	Safimaltib	12.42	13.479	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:51e647d14317	Cep-33779	12.42	13.479	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:a92aa9fd2add	Gandotinib	12.42	13.479	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:50c4eb727873	Emzeltrectinib	12.42	13.479	4	4	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:19c30bba559e	Bromo-Deaza-Sah	12.399	25.041	2	2	MYC	up	hops1-3	DOT1L	13	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:bdac90835dc9	Xmd-12	12.166	13.01	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:1dd805aec05e	Bi-847325	11.206	12.916	6	6	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:e8aa067dbc00	Compound 38 [Pmid: 20817473]	10.997	17.74	4	4	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL495727	AT-9283	10.979	17.847	6	6	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:d44a1d6d8ac6	At-9283	10.657	4.011	8	7	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:1f73d158c3ff	Ag-17724	9.993	11.193	1	1	MYC	up	hops1-3	PIN1	17	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:856abb7634dd	Bjp-06-005-3	9.993	11.193	1	1	MYC	up	hops1-3	PIN1	17	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:b0aa912369e0	Compound 20 [Pmid: 25091930]	9.993	11.193	1	1	MYC	up	hops1-3	PIN1	17	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:e629de192426	Sulfopin	9.993	11.193	1	1	MYC	up	hops1-3	PIN1	17	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:fc2ad4997b00	Ag-122018	9.993	11.193	1	1	MYC	up	hops1-3	PIN1	17	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:a3c14c38917f	Itacnosertib	9.859	9.327	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:e684c32844c8	Repotrectinib	9.263	13.134	6	6	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL146032	LONAPRISAN	9.259	7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1908373	ONAPRISTONE	9.259	7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL3545239	PF-05019702	9.259	7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:2998e18efe34	Asoprisnil	9.259	7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:3e3f0c949351	Way-255348	9.259	7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:8f7bcfa0abc6	Lonaprisan	9.259	7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:ef3c374f0fc6	Apr19	9.259	7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL3545261	BRONTICTUZUMAB	8.794	5.992	1	1	MYC	up	hops1-3	NOTCH1	148	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:0c0ee87f0d3f	Imr-1	8.794	5.992	1	1	MYC	up	hops1-3	NOTCH1	148	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:b91725253b11	Brontictuzumab	8.794	5.992	1	1	MYC	up	hops1-3	NOTCH1	148	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1765740	Gsk2334470	8.726	16.459	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:1d49dc0cf8d3	Cdk2 Inhibitor Iv	8.607	5.408	8	8	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1908397	KW-2449	7.712	14.543	4	4	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:7b1b402689c3	Ezutromid	7.518	5.379	1	1	MYC	up	hops1-3	AHR	131	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:b9586dbf6a66	Paxilline	7.192	7.594	1	1	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:87b0f270569b	Sgc-Cbp30	6.68	5.582	2	2	MYC	up	hops1-3	CREBBP	138	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:fd925f0e36eb	I-Cbp112	6.68	5.582	2	2	MYC	up	hops1-3	CREBBP	138	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL4297813	PRI-724	6.595	5.463	2	2	MYC	up	hops1-3	CREBBP	138	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:c2152db1c108	Pri-724	6.595	5.463	2	2	MYC	up	hops1-3	CREBBP	138	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:07ddcc364600	Gsk2646264	6.371	10.915	8	8	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL4297436	SRT-2104	6.206	5.135	1	1	MYC	up	hops1-3	SIRT1	107	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:0e0fcb16e612	Srt2104	6.206	5.135	1	1	MYC	up	hops1-3	SIRT1	107	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:1f8a9f49030d	Srt-2104	6.206	5.135	1	1	MYC	up	hops1-3	SIRT1	107	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:a81c1f2c4eee	Sirt1 Activator 3	6.206	5.135	1	1	MYC	up	hops1-3	SIRT1	107	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:fc3b30ce2707	Srt1720	6.206	5.135	1	1	MYC	up	hops1-3	SIRT1	107	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:acc5d1aa754e	Ischemin	5.948	4.921	1	1	MYC	up	hops1-3	CREBBP	138	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:c81601c2f829	Compound 50 [Pmid: 24313754]	5.948	4.921	3	2	MYC	up	hops1-3	CREBBP	138	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:89aec13d0c52	Compound 1D [Pmid: 21493067]	5.89	7.793	6	6	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL2035185	CT-1578	5.536	13.482	3	3	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1287853	FEDRATINIB	5.536	13.482	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:402fdd0a4fd9	Fedratinib Hydrochloride	5.536	13.482	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:f2d429879845	Pacritinib Citrate	5.536	13.482	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:0be6484eb827	Ro 41-5253	5.475	4.576	1	1	MYC	up	hops1-3	RARA	144	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:89ce230eac69	Bms-189532	5.475	4.576	1	1	MYC	up	hops1-3	RARA	144	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:9e339adae01c	Bms614	5.475	4.576	1	1	MYC	up	hops1-3	RARA	144	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL2035187	PACRITINIB	5.211	9.586	4	4	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:ab103883bd98	(3Z)-N,N-Dimethyl-2-Oxo-3-(4,5,6,7-Tetrahydro-1H-Indol-2-Ylmethylidene)-2,3-Dihydro-1H-Indole-5-Sulfonamide	5.2	4.722	7	7	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1276308	MIFEPRISTONE	5.083	3.828	2	2	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:51081bd5ca15	C646	4.651	4.303	1	1	MYC	up	hops1-3	EP300	125	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL140	CURCUMIN	4.651	4.303	2	2	MYC	up	hops1-3	EP300	125	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1091	HYDROCORTISONE ACETATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1152	PREDNISOLONE ACETATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1159650	CLOBETASOL PROPIONATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1161	MOMETASONE FUROATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200342	PARAMETHASONE ACETATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200376	BETAMETHASONE BENZOATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200384	BETAMETHASONE DIPROPIONATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200386	PREDNICARBATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200449	TRIAMCINOLONE DIACETATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200495	HYDROCORTISONE SODIUM SUCCINATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200500	BECLOMETHASONE DIPROPIONATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200538	BETAMETHASONE ACETATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200545	DIFLORASONE DIACETATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200562	HYDROCORTISONE VALERATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200600	FLUOROMETHOLONE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200617	RIMEXOLONE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200635	HYDROCORTAMATE HYDROCHLORIDE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200732	AMCINONIDE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200762	BETAMETHASONE SODIUM PHOSPHATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200774	FLUPREDNISOLONE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200845	HALCINONIDE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200865	LOTEPREDNOL ETABONATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200877	FLUMETHASONE PIVALATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200878	TRIAMCINOLONE HEXACETONIDE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200908	HALOBETASOL PROPIONATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200909	PREDNISOLONE TEBUTATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200953	HYDROCORTISONE PROBUTATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200968	HYDROCORTISONE SODIUM PHOSPHATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200975	CLOCORTOLONE PIVALATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200989	ALCLOMETASONE DIPROPIONATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1201012	FLURANDRENOLIDE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1201014	PREDNISOLONE SODIUM PHOSPHATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1201064	FLUOROMETHOLONE ACETATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1201081	METHYLPREDNISOLONE SODIUM SUCCINATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1201109	DESONIDE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1201148	MEPREDNISONE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1201173	MEDRYSONE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1201749	DIFLUPREDNATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1201891	DEFLAZACORT	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL131	PREDNISOLONE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1364144	METHYLPREDNISOLONE ACETATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1370	BUDESONIDE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1451	TRIAMCINOLONE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1473	FLUTICASONE PROPIONATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1497	BETAMETHASONE VALERATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1501	FLUOCINONIDE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1504	TRIAMCINOLONE ACETONIDE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1512	FLUNISOLIDE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1549	HYDROCORTISONE CYPIONATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1650	CORTISONE ACETATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1676	FLUTICASONE FUROATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1683	HYDROCORTISONE BUTYRATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1766	DESOXIMETASONE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL2040682	CICLESONIDE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL2103876	MAPRACORAT	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL2105842	CORTIVAZOL	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL3358954	BI 653048	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL384467	DEXAMETHASONE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL389621	HYDROCORTISONE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL635	PREDNISONE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL650	METHYLPREDNISOLONE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL989	FLUOCINOLONE ACETONIDE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:0a31a3ff2d4c	Prednisolone Acetate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:0cde89492d21	Rimexolone	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:16dd2349fef4	Org 214007-0	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:17722ce88cc0	Hydrocortisone Cypionate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:1b6645831580	Hydrocortisone Probutate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:1d92cdc13351	Triamcinolone Hexacetonide	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:1f5adc54c6df	Halobetasol	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:20c2cdc765d0	Cortisone Acetate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:26bcaee63324	Dexamethasone Acetate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:2791163ab0ec	Prednisolone Tebutate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:2bfd17a5789f	Diflorasone Diacetate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:2c661a452b1f	Flumethasone Pivalate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:2fa5b995fa48	Velsecorat	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:30277a03dc85	Triamcinolone	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:34a373fd03c6	Meprednisone	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:34eff248d0d0	Mapracorat	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:39c1057d9351	Flunisolide Anhydrous	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:3c56953da57a	Betamethasone	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:4803fdd0a90d	Flurandrenolide	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:4dc249d67a55	Betamethasone Benzoate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:4ff67bfa66c8	Prednisone	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:515c66228b9f	C108297	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:556409ed0f0c	Alclometasone	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:59dd73e95fbc	Fluprednisolone	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:5b596b82de07	Hydrocortisone Valerate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:5c557afd4483	Fluorometholone Acetate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:60000138e703	Cortivazol	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:6081d8079492	Prednicarbate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:64d60f1c88fb	Fosdagrocorat	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:6592b6195ab6	Difluprednate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:6d1ada936653	Fluticasone Furoate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:6f787e5d07a8	Deflazacort	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:80ffd9194985	Betamethasone Acetate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:823281ba7c1c	Methylprednisolone Sodium Succinate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:8378c30e01d0	Azd2906	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:89e6d66f8457	Medrysone	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:8c16382b2c45	Hydrocortisone Acetate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:9453a175b05e	Dexamethasone Sodium Phosphate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:99bf739a540e	Triamcinolone Diacetate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:a0075ef476f9	Abbv-3373	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:a05c307ca0ce	Fluocinonide	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:a0a5402dc5cd	Dagrocorat	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:a35f493386a5	Paramethasone Acetate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:a78328242880	Gsk866	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:aa465c989153	Desoximetasone	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:ae55a2b9b882	Zk216348	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:afb3a2efa45e	Halcinonide	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:b0e7c0202f3d	Hydrocortisone Sodium Succinate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:b386878b887a	Amcinonide	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:b40a8358fec5	Prednisolone Sodium Phosphate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:b8e22b29ae74	Ru28362	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:bc207c1db0d0	Fluorometholone	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:bc3921481ef1	Loteprednol	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:be66bf676885	Ciclesonide	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:c18d221d1a61	Leo 134310	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:c19dd34c9850	Fluocinolone Acetonide	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:c589f0e64dc4	Clocortolone	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:cac503e8d6b7	Clobetasol Propionate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:d29f613e2f52	Hydrocortisone Sodium Phosphate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:de8412f5a163	Hydrocortamate Hydrochloride	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:e8009722f9bc	Betamethasone Sodium Phosphate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:e8e72b8b40a8	Betamethasone Valerate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:f0a2b29421af	Mometasone	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:f53f4b5e65a6	Desonide	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:f7d3ab00ba4d	Compound 17 [Pmid: 29741897]	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:b7b1e7e5089f	Beclomethasone Dipropionate	4.534	4.396	2	2	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:fd310066a390	Methylprednisolone	4.534	4.396	2	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:0154bd5bb36c	At9283	4.491	3.054	11	9	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL603469	LESTAURTINIB	4.282	7.957	6	6	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:0775f5cbbcf5	Lestaurtinib	4.278	7.932	8	8	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:b63eeea56658	Bi6015	4.118	3.025	1	1	MYC	up	hops1-3	HNF4A	250	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:d3f00fec5ac5	Tinengotinib	3.833	19.84	7	7	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL3392776	C-188-9	3.762	3.348	1	1	MYC	up	hops1-3	STAT3	340	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL4452527	Sd-36	3.762	3.348	1	1	MYC	up	hops1-3	STAT3	340	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:0dfe60cde8de	Sd-91	3.762	3.348	1	1	MYC	up	hops1-3	STAT3	340	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:5af3dd6c5c76	Lll12	3.762	3.348	1	1	MYC	up	hops1-3	STAT3	340	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:830f4ec04842	Compound 6F [Pmid: 35476936]	3.762	3.348	1	1	MYC	up	hops1-3	STAT3	340	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:ce496ff00491	Stat3 Inhibitor 8Q	3.762	3.348	1	1	MYC	up	hops1-3	STAT3	340	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1923234	WP 1066	3.762	3.067	2	2	MYC	up	hops1-3	STAT3	340	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:0ecbcd6c2a17	Compound 8U [Pmid: 31999451]	3.762	3.067	2	2	MYC	up	hops1-3	STAT3	340	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1170	TESTOSTERONE PROPIONATE	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200335	TESTOSTERONE ENANTHATE	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200412	NANDROLONE PHENPROPIONATE	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200436	OXANDROLONE	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200585	OXYMETHOLONE	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200623	ETHYLESTRENOL	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1200946	NANDROLONE DECANOATE	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1201048	DROMOSTANOLONE PROPIONATE	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1201101	TESTOSTERONE CYPIONATE	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1395	METHYLTESTOSTERONE	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1418176	METHANDROSTENOLONE	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1445	FLUOXYMESTERONE	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL2079587	STANOZOLOL	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL2107067	TESTOSTERONE UNDECANOATE	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL386630	TESTOSTERONE	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:24f41c19eaf2	Oxymetholone	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:3fe53c3a24b2	Mibolerone	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:5f120f5a5ec0	Methyltestosterone	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:6f290929d303	Testosterone Cypionate	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:70ce494df19e	Stanolone	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:83eaea166871	Metribolone	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:8e52eead3994	Andarine	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:97738670fe63	Ethylestrenol	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:a9c0c1246334	Testosterone	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:ace28a052219	Gsk2881078	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:af54f618bd1a	Testosterone Propionate	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:b3c5641e9214	Methandrostenolone	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:ccf0411ed98e	Dromostanolone	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:d22a611bb50d	Fluoxymesterone	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:e78bc88ee9d4	Testosterone Enanthate	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:e8fc14d39448	Nandrolone Decanoate	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:fcb6e74032d9	Oxandrolone	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1215331	PF-03882845	3.502	3.924	3	3	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:b600b74b4aa0	Rgb-286638	3.392	4.103	13	13	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL482967	CYC-116	3.364	14.245	4	4	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL272621	HYODEOXYCHOLIC_ACID	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL3545238	CS-8080	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL4297218	ROVAZOLAC	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL456237	LXR-623	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL5095408	ABEQUOLIXRON ZINC	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL59030	Gw3965	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:06abd23310e8	24(S), 25-Epoxycholesterol	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:29764904c696	Desmosterol	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:7e5db75ee534	Acetyl-Podocarpic Dimer	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:8beed913fd32	Imb-808	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:96fa32c54567	24(S)-Hydroxycholesterol	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:9c14025a223e	Az12260493	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:9d25141c6f73	Rovazolac	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:b55163862f85	Abequolixron	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:2e26dd734f99	22R-Hydroxycholesterol	3.089	3.157	3	3	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:f1a832eb015a	Tyk2 Inhibitor 14L	3.068	13.274	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:d9244bf60923	2-Tert-Butyl-9-Fluoro-1,6-Dihydrobenzo[H]Imidazo[4,5-F]Isoquinolin-7-One	3.068	13.274	3	3	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL1231124	AZD-1480	3.053	12.815	3	3	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:0313a310a905	Compound 19A [Pmid: 24359159]	3.053	12.815	3	3	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:075216d6a4c7	Decernotinib	3.053	12.815	3	3	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:0876735cc5fb	Compound 8L [Pmid: 36053746]	3.053	12.815	3	3	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:40aa5a5b0ce2	Xl019	3.053	12.815	3	3	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL2105759	BARICITINIB	3.053	12.815	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:CHEMBL4447181	LONDAMOCITINIB	3.053	12.815	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:200fb4682f11	Abrocitinib	3.053	12.815	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:5fe3f07f70bf	Deuruxolitinib	3.053	12.815	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:6abd8a09f576	Ruxolitinib Phosphate	3.053	12.815	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:73e4caa94c28	Wxfl10203614	3.053	12.815	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:80292bbfb538	Ivarmacitinib	3.053	12.815	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	opposes	FAM:CAT:DGIDB:94d582bb690f	Itacitinib	3.053	12.815	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL1509	DROSPIRENONE	-3.16	-3.69	2	2	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:0662a550799f	Drospirenone	-3.16	-3.69	2	2	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:b8ad886b94a3	Progesterone	-3.16	-3.69	7	3	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL1093266	Gsk2033	-3.242	-3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL1082407	ENZALUTAMIDE	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL1274	NILUTAMIDE	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL128748	DIMETHYLCURCUMIN	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL3183409	APALUTAMIDE	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL3590187	CLASCOTERONE	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL37676	APC-100	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL409	BICALUTAMIDE	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL4297185	DAROLUTAMIDE	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL4594417	PRUXELUTAMIDE	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL4650276	REZVILUTAMIDE	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL4858811	TRC-253	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL491	HYDROXYFLUTAMIDE	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL806	FLUTAMIDE	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:171bd5b16921	Darolutamide	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:3a59bd642ca0	Bicalutamide	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:48cee98fb72f	Nilutamide	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:5de5a4921a59	Enzalutamide	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:822588ad5387	Apalutamide	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:a2dc5518a040	Flutamide	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:a987a36a17e3	Pf0998425	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:b25450e2af1b	Ard-69	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:e2d8b7c02633	Ard-266	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:ebce87d0e62c	Clascoterone	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL2108316	EDIFOLIGIDE	-3.851	-6.706	8	8	MYC	up	hops1-3	E2F5	15	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL2109058	EDIFOLIGIDE SODIUM	-3.851	-6.706	8	8	MYC	up	hops1-3	E2F5	15	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:165aa4303ed0	Edifoligide	-3.851	-6.706	8	8	MYC	up	hops1-3	E2F5	15	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:25c86c6df239	Edifoligide Sodium	-3.851	-6.706	8	8	MYC	up	hops1-3	E2F5	15	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:aac02b952823	Compound 3B [Pmid: 23454515]	-4.317	-5.267	4	4	MYC	up	hops1-3	DYRK1A	17	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL271220	CORT 108297	-4.534	-4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL3545391	ORG-34517	-4.534	-4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL4068611	RELACORILANT	-4.534	-4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:2ea4defd66a7	Miricorilant	-4.534	-4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:50c2a146d931	Relacorilant	-4.534	-4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:7b1c6df417ac	Org-34517	-4.534	-4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL2108594	EPTOTERMIN ALFA	-4.604	-3.775	4	4	MYC	up	hops1-3	BMPR1A	11	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL107430	NRX195183	-5.475	-4.576	1	1	MYC	up	hops1-3	RARA	144	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:2cab023d9d78	Bms753	-5.475	-4.576	1	1	MYC	up	hops1-3	RARA	144	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:8ade50e369ea	Agn193836	-5.475	-4.576	1	1	MYC	up	hops1-3	RARA	144	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL382277	EX-527	-6.206	-5.135	1	1	MYC	up	hops1-3	SIRT1	107	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:1721f8d286e9	Selisistat	-6.206	-5.135	1	1	MYC	up	hops1-3	SIRT1	107	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:1a864fb4552a	Splitomicin	-6.206	-5.135	1	1	MYC	up	hops1-3	SIRT1	107	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:8f49db9bfa79	Ttk21	-6.68	-5.582	2	2	MYC	up	hops1-3	CREBBP	138	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL1479	DANAZOL	-6.718	-5.687	2	2	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:ede1773aae0e	Danazol	-6.718	-5.687	2	2	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:9613cb9314a2	Resminostat	-7.148	-5.332	4	4	MYC	up	hops1-3	HDAC3	36	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:03b1f671920b	Jnj-65234637	-7.5	-6.585	1	1	MYC	up	hops1-3	BCL6	83	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:5834235c36ff	Fx1	-7.5	-6.585	1	1	MYC	up	hops1-3	BCL6	83	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:5be9fe4f2f42	Compound 8C [Pmid: 28760529]	-7.5	-6.585	1	1	MYC	up	hops1-3	BCL6	83	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:e4331b8a099b	Bcl6 Protac 15	-7.5	-6.585	1	1	MYC	up	hops1-3	BCL6	83	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL259571	TAPINAROF	-7.518	-5.379	1	1	MYC	up	hops1-3	AHR	131	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:004e12ec02db	Tapinarof	-7.518	-5.379	1	1	MYC	up	hops1-3	AHR	131	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:b63d26abc373	Tcdd	-7.518	-5.379	1	1	MYC	up	hops1-3	AHR	131	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL3185133	ALLYLESTRENOL	-7.625	-6.018	3	3	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:5f1a59b0ce87	Allylestrenol	-7.625	-6.018	3	3	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:b6b070da5ccc	Droxinostat	-8.276	-6.297	3	3	MYC	up	hops1-3	HDAC3	36	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL3655950	Acy-738	-9.056	-3.303	4	4	MYC	up	hops1-3	HDAC3	36	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL98	VORINOSTAT	-9.056	-3.303	4	4	MYC	up	hops1-3	HDAC3	36	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:3d764f7fdf0b	Bml-281	-9.064	-3.307	6	5	MYC	up	hops1-3	HDAC3	36	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:222c75ca1d6e	Suprastat	-9.064	-3.307	5	5	MYC	up	hops1-3	HDAC3	36	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:2b0652397469	Ricolinostat	-9.064	-3.307	5	5	MYC	up	hops1-3	HDAC3	36	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:c62597f0cb64	Citarinostat	-9.064	-3.307	5	5	MYC	up	hops1-3	HDAC3	36	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:0c081e7c3bfe	Rgfp109	-9.1	-6.34	2	2	MYC	up	hops1-3	HDAC3	36	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL297453	EPIGALOCATECHIN GALLATE	-9.135	-12.205	4	3	MYC	up	hops1-3	DYRK1A	17	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:ef3920a517ae	Norgestimate	-9.259	-7.038	3	2	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL103	PROGESTERONE	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL1162	NORETHINDRONE	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL1200624	ETHYNODIOL DIACETATE	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL1200807	NORELGESTROMIN	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL1200848	HYDROXYPROGESTERONE CAPROATE	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL1200853	DYDROGESTERONE	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL1200934	NORGESTIMATE	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL1201139	MEGESTROL ACETATE	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL1201146	NORETHINDRONE ACETATE	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL1213583	GESTODENE	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL1387	NORETHYNODREL	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL1389	LEVONORGESTREL	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL1476022	NOMEGESTROL ACETATE	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL1531	ETONOGESTREL	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL1533	DESOGESTREL	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL2104765	TRIMEGESTONE	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL3707377	SEGESTERONE ACETATE	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL717	MEDROXYPROGESTERONE ACETATE	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:26acdfbd2199	Tanaproget	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:3076a7e09188	Ethynodiol Diacetate	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:3e2332f9877b	Norethindrone Acetate	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:469b27f0fb57	Medroxyprogesterone Acetate	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:4adb0ecadd25	Norethynodrel	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:4c53fdbd3f0a	Nomegestrol Acetate	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:4eb06a9000b0	Hydroxyprogesterone Caproate (Usp)	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:4ee7280b4d26	Dydrogesterone	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:6e5b745e54eb	Trimegestone	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:7e35747fdcf3	Org2058	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:83e5f9790a96	Desogestrel	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:8b55393c704d	Promegestone	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:9136df9c9bbf	Norgestrel	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:9197858e6b95	Nomegestrol	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:944f7457d2bd	Megestrol Acetate	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:9a8b449e52a7	Etonogestrel	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:a2553ceb6557	Norelgestromin	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:aa0e15795ab3	Norethindrone	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:b4b6948be1b7	Levonorgestrel	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:b52b7a02faa9	Segesterone Acetate	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:dae6cfceb22a	Gestodene	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:445db364fa47	Compound 14I [Pmid: 37204466]	-9.989	-15.423	1	1	MYC	up	hops1-3	SKP2	50	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL139835	CYPROTERONE ACETATE	-10.778	-8.734	3	3	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:7e3c67305ca1	Cyproterone Acetate	-10.778	-8.734	3	3	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:8b135ee93a22	Rgfp966	-11.198	-7.753	1	1	MYC	up	hops1-3	HDAC3	36	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL964	DISULFIRAM	-11.205	-7.754	1	1	MYC	up	hops1-3	ALDH2	17	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:5c9c898449fc	Disulfiram	-11.205	-7.754	1	1	MYC	up	hops1-3	ALDH2	17	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:a9f5f87a8baa	Prunetin	-11.205	-7.754	1	1	MYC	up	hops1-3	ALDH2	17	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:2fe3ff7e7633	Apicidin	-11.22	-3.589	4	4	MYC	up	hops1-3	HDAC3	36	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL513909	BI-2536	-11.987	-11.858	4	4	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:3d009ed50fe9	Dual Brd4/Plk1 Inhibitor 23	-11.996	-11.868	2	2	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:752009d1c0e8	Compound 6 [Pmid: 30125504]	-11.996	-11.868	2	2	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:a5d52bc79d17	Xy-06-007	-11.996	-11.868	2	2	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:3b2aceac7055	Gnf4877	-14.527	-31.483	2	2	MYC	up	hops1-3	DYRK1A	17	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:38ff5b0e0f26	Sj995973	-15.385	-58.195	1	1	MYC	up	hops1-3	CRBN	32	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:f71dfdc36426	(S)-Cr8	-16.094	-24.886	3	3	MYC	up	hops1-3	DYRK1A	17	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:137f51f9a945	Compound 72 [Wo2013026806]	-16.507	-45.57	2	2	MYC	up	hops1-3	DYRK1A	17	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:46ad0bbbecb2	Harmine	-16.507	-45.57	2	2	MYC	up	hops1-3	DYRK1A	17	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:e5c74740dfc2	Compound 68 [Pmid: 24900699]	-16.507	-45.57	2	2	MYC	up	hops1-3	DYRK1A	17	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:2c575c362357	Ethyl 3-[(E)-2-Amino-1-Cyanoethenyl]-6,7-Dichloro-1-Methyl-1H-Indole-2-Carboxylate	-17.125	-54.454	3	3	MYC	up	hops1-3	DYRK1A	17	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:7a16d90d7d6c	Compound 2-2C [Pmid: 32003560]	-17.125	-94.317	1	1	MYC	up	hops1-3	DYRK1A	17	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:b184058fefa4	Gnf2133	-17.125	-94.317	1	1	MYC	up	hops1-3	DYRK1A	17	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:4ef11159ec1f	Oicr-8268	-22.531	-14.414	1	1	MYC	up	hops1-3	DCAF1	9	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:5fafe52fef26	Compound 13 [Pmid: 37465299]	-22.531	-14.414	1	1	MYC	up	hops1-3	DCAF1	9	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:75514db0fe61	Yt47R	-22.531	-14.414	1	1	MYC	up	hops1-3	DCAF1	9	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:5e51ae58bbe1	Lenalidomide	-24.053	-41.118	8	8	MYC	up	hops1-3	CUL4A	41	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL43452	POMALIDOMIDE	-24.053	-41.118	4	4	MYC	up	hops1-3	CUL4A	41	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL468	THALIDOMIDE	-24.053	-41.118	4	4	MYC	up	hops1-3	CUL4A	41	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL6068337	LENALIDOMIDE HYDROCHLORIDE MONOHYDRATE	-24.053	-41.118	4	4	MYC	up	hops1-3	CUL4A	41	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:722ab907edd0	Thalidomide	-24.053	-41.118	4	4	MYC	up	hops1-3	CUL4A	41	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:b864887635c8	Pomalidomide	-24.053	-41.118	4	4	MYC	up	hops1-3	CUL4A	41	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL1957266	(+)-Jq1	-87.875	-21.486	2	2	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL1522313	Compound 3 [Pmid: 25408830]	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL2179387	Pfi-1	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL3086883	Ms436	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL3919831	AMREDOBRESIB	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:CHEMBL4226570	Mz1	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:09afa1e9db65	N-Methyl-2-Pyrrolidone	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:2e8ec2410b6f	I-Bet282	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:4729f05af735	Dbet6	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:4d6bb6aa868e	Compound 11H [Pmid: 29808961]	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:4ee060cc6aaf	Compound 9 [Pmid: 23517011]	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:5939058f5e3e	Cpi-203	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:5dcbc0337c66	Bzt-7	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:89c5118fd77d	Compound 15 [Hay Et Al., 2013]	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:943f948ed754	Isoxazole Azepine Compound 3	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:aac12c557a5b	Xd1	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:ad0ad93f2d5c	Compound 1 [Pmid: 25408830]	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:b6ab3af5c7a4	Compound 7D [Pmid: 25703523]	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:b92b8b1ce56b	Nhwd-870	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:c0761d5c7905	Compound 2 [Pmid: 25408830]	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:d2f0b45182ac	Ms417	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_expression_tiersAB	mimics	FAM:CAT:DGIDB:e70b1b244ec2	Mivebresib	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:207317c1b624	Stm2457	154.584	98.86	1	1	MYC	up	hops1-3	METTL3	4	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:38b6db5eff01	Stc-15	154.584	98.86	1	1	MYC	up	hops1-3	METTL3	4	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL215152	DEFOSBARASERTIB	20.143	22.456	1	1	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL3544932	TAK-901	20.143	22.456	1	1	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL3545395	BI-811283	20.143	22.456	1	1	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL415049	BARASERTIB	20.143	22.456	1	1	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:c50058647863	Tak-901	20.143	22.456	1	1	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:4172adf3398a	Compound 1 [Pmid: 21742770]	19.996	6.676	2	2	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:9bc633afd268	Jnj-7706621	17.302	21.537	5	5	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL3301588	TAREXTUMAB	15.664	12.536	2	2	MYC	up	hops1-3	NOTCH3	27	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:222da6a76f85	Tarextumab	15.664	12.536	2	2	MYC	up	hops1-3	NOTCH3	27	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:198741f77ba6	Elnd006	15.563	4.951	1	1	MYC	up	hops1-3	PSEN1	33	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:28a63164639a	Chf-5074	15.563	4.951	1	1	MYC	up	hops1-3	PSEN1	33	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:62c594195bd0	Az4800	15.563	4.951	1	1	MYC	up	hops1-3	PSEN1	33	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:f571f2fbfdf4	Sch-900229	15.563	4.951	1	1	MYC	up	hops1-3	PSEN1	33	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:310b1705a307	Osugacestat	15.495	4.965	2	1	MYC	up	hops1-3	APH1A	10	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:e05afc012259	Mk-0752	15.495	4.965	2	1	MYC	up	hops1-3	APH1A	10	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1090771	AVAGACESTAT	15.492	4.962	6	5	MYC	up	hops1-3	APH1A	10	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1770916	NIROGACESTAT	15.492	4.962	6	5	MYC	up	hops1-3	APH1A	10	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL4297422	RG-4733	15.492	4.962	6	5	MYC	up	hops1-3	APH1A	10	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL463981	BEGACESTAT	15.492	4.962	6	5	MYC	up	hops1-3	APH1A	10	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL520733	SEMAGACESTAT	15.492	4.962	6	5	MYC	up	hops1-3	APH1A	10	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:2551da72c2b7	Begacestat	15.492	4.962	6	5	MYC	up	hops1-3	APH1A	10	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:93e5438541e3	Avagacestat	15.492	4.962	6	5	MYC	up	hops1-3	APH1A	10	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:e2a06e37dae6	Nirogacestat	15.492	4.962	6	5	MYC	up	hops1-3	APH1A	10	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL2170016	Hg-10-102-01	13.127	9.493	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:0e119ae547a0	Ro4929097	12.815	6.951	2	2	MYC	up	hops1-3	PSEN1	33	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL2169919	Epz004777	12.525	26.563	1	1	MYC	up	hops1-3	DOT1L	13	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL3087498	Sgc0946	12.525	26.563	1	1	MYC	up	hops1-3	DOT1L	13	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:31c2ebae4775	Pinometostat	12.525	26.563	1	1	MYC	up	hops1-3	DOT1L	13	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:5431327e2708	Compound 13 [Chen Et Al., 2016]	12.525	26.563	1	1	MYC	up	hops1-3	DOT1L	13	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:8df5f32bdf3b	Danusertib	12.451	17.21	4	4	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:c273df15d763	Compound 25 [Pmid: 20855207]	12.435	14.498	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL259084	MLN-8054	12.425	17.204	2	2	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL3692206	TAS-119	12.425	17.204	2	2	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL4289017	PF-03814735	12.425	17.204	2	2	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:1d5e6550c667	Aurora Kinase Inhibitor Ii	12.425	17.204	2	2	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:42027b00475f	Compound 46 [Pmid: 16451062]	12.425	17.204	2	2	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:a5ef2958c633	Zm447439	12.425	17.204	2	2	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:c7cc08beb018	Pf-03814735	12.425	17.204	2	2	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:d7fe3d6d9e92	Barasertib	12.425	17.204	2	2	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:fb77282c2057	Compound 10 [Pmid: 19402633]	12.425	17.204	2	2	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1090479	GSK-1070916	12.425	17.204	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1967878	CENISERTIB	12.425	17.204	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL2105657	TOZASERTIB LACTATE	12.425	17.204	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL2140408	AMG-900	12.425	17.204	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL3545327	TTP-607	12.425	17.204	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL3545378	MK-6592	12.425	17.204	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL402548	DANUSERTIB	12.425	17.204	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL482767	SNS-314	12.425	17.204	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:46cf880ffb75	Mk-5108	12.425	17.204	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:4aa00b4cfaf5	Dubermatinib	12.425	17.204	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:5c8842c6a811	Cyc116	12.425	17.204	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:fb9a6166ce48	Sns-314	12.425	17.204	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1774055	Az960	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL2107823	GANDOTINIB	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL2208034	XL-019	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL3545215	BMS-911543	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL3545241	AC-430	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL4303389	NS-018	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL5095023	LS-104	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:333fca0f84c8	Ns-018	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:45fd8e7b05d8	Compound 11 [Pmid: 35653642]	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:4d0a432f5e1d	Compound 13 [Pmid: 35653642]	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:4f4ff54b0d7f	Rovadicitinib	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:953f482b0bbc	Ac430	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:aae3d057d8a6	Azd-1480	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:bf9eed7017e8	Ac-430	12.42	13.479	1	1	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:4ae9a1c1ace4	Safimaltib	12.42	13.479	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:51e647d14317	Cep-33779	12.42	13.479	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:a92aa9fd2add	Gandotinib	12.42	13.479	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:50c4eb727873	Emzeltrectinib	12.42	13.479	4	4	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:19c30bba559e	Bromo-Deaza-Sah	12.399	25.041	2	2	MYC	up	hops1-3	DOT1L	13	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:bdac90835dc9	Xmd-12	12.166	13.01	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:1dd805aec05e	Bi-847325	11.206	12.916	6	6	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:e8aa067dbc00	Compound 38 [Pmid: 20817473]	10.997	17.74	4	4	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL495727	AT-9283	10.979	17.847	6	6	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:d44a1d6d8ac6	At-9283	10.657	4.011	8	7	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:1f73d158c3ff	Ag-17724	9.993	11.193	1	1	MYC	up	hops1-3	PIN1	17	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:856abb7634dd	Bjp-06-005-3	9.993	11.193	1	1	MYC	up	hops1-3	PIN1	17	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:b0aa912369e0	Compound 20 [Pmid: 25091930]	9.993	11.193	1	1	MYC	up	hops1-3	PIN1	17	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:e629de192426	Sulfopin	9.993	11.193	1	1	MYC	up	hops1-3	PIN1	17	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:fc2ad4997b00	Ag-122018	9.993	11.193	1	1	MYC	up	hops1-3	PIN1	17	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:a3c14c38917f	Itacnosertib	9.859	9.327	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:e684c32844c8	Repotrectinib	9.263	13.134	6	6	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL146032	LONAPRISAN	9.259	7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1908373	ONAPRISTONE	9.259	7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL3545239	PF-05019702	9.259	7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:2998e18efe34	Asoprisnil	9.259	7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:3e3f0c949351	Way-255348	9.259	7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:8f7bcfa0abc6	Lonaprisan	9.259	7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:ef3c374f0fc6	Apr19	9.259	7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL3545261	BRONTICTUZUMAB	8.794	5.992	1	1	MYC	up	hops1-3	NOTCH1	148	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:0c0ee87f0d3f	Imr-1	8.794	5.992	1	1	MYC	up	hops1-3	NOTCH1	148	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:b91725253b11	Brontictuzumab	8.794	5.992	1	1	MYC	up	hops1-3	NOTCH1	148	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1765740	Gsk2334470	8.726	16.459	3	3	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:1d49dc0cf8d3	Cdk2 Inhibitor Iv	8.607	5.408	8	8	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1908397	KW-2449	7.712	14.543	4	4	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:7b1b402689c3	Ezutromid	7.518	5.379	1	1	MYC	up	hops1-3	AHR	131	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:b9586dbf6a66	Paxilline	7.192	7.594	1	1	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:87b0f270569b	Sgc-Cbp30	6.68	5.582	2	2	MYC	up	hops1-3	CREBBP	138	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:fd925f0e36eb	I-Cbp112	6.68	5.582	2	2	MYC	up	hops1-3	CREBBP	138	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL4297813	PRI-724	6.595	5.463	2	2	MYC	up	hops1-3	CREBBP	138	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:c2152db1c108	Pri-724	6.595	5.463	2	2	MYC	up	hops1-3	CREBBP	138	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:07ddcc364600	Gsk2646264	6.371	10.915	8	8	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL4297436	SRT-2104	6.206	5.135	1	1	MYC	up	hops1-3	SIRT1	107	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:0e0fcb16e612	Srt2104	6.206	5.135	1	1	MYC	up	hops1-3	SIRT1	107	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:1f8a9f49030d	Srt-2104	6.206	5.135	1	1	MYC	up	hops1-3	SIRT1	107	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:a81c1f2c4eee	Sirt1 Activator 3	6.206	5.135	1	1	MYC	up	hops1-3	SIRT1	107	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:fc3b30ce2707	Srt1720	6.206	5.135	1	1	MYC	up	hops1-3	SIRT1	107	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:acc5d1aa754e	Ischemin	5.948	4.921	1	1	MYC	up	hops1-3	CREBBP	138	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:c81601c2f829	Compound 50 [Pmid: 24313754]	5.948	4.921	3	2	MYC	up	hops1-3	CREBBP	138	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:89aec13d0c52	Compound 1D [Pmid: 21493067]	5.89	7.793	6	6	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL2035185	CT-1578	5.536	13.482	3	3	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1287853	FEDRATINIB	5.536	13.482	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:402fdd0a4fd9	Fedratinib Hydrochloride	5.536	13.482	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:f2d429879845	Pacritinib Citrate	5.536	13.482	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:0be6484eb827	Ro 41-5253	5.475	4.576	1	1	MYC	up	hops1-3	RARA	144	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:89ce230eac69	Bms-189532	5.475	4.576	1	1	MYC	up	hops1-3	RARA	144	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:9e339adae01c	Bms614	5.475	4.576	1	1	MYC	up	hops1-3	RARA	144	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL2035187	PACRITINIB	5.211	9.586	4	4	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:ab103883bd98	(3Z)-N,N-Dimethyl-2-Oxo-3-(4,5,6,7-Tetrahydro-1H-Indol-2-Ylmethylidene)-2,3-Dihydro-1H-Indole-5-Sulfonamide	5.2	4.722	7	7	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1276308	MIFEPRISTONE	5.083	3.828	2	2	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:51081bd5ca15	C646	4.651	4.303	1	1	MYC	up	hops1-3	EP300	125	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL140	CURCUMIN	4.651	4.303	2	2	MYC	up	hops1-3	EP300	125	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1091	HYDROCORTISONE ACETATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1152	PREDNISOLONE ACETATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1159650	CLOBETASOL PROPIONATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1161	MOMETASONE FUROATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200342	PARAMETHASONE ACETATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200376	BETAMETHASONE BENZOATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200384	BETAMETHASONE DIPROPIONATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200386	PREDNICARBATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200449	TRIAMCINOLONE DIACETATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200495	HYDROCORTISONE SODIUM SUCCINATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200500	BECLOMETHASONE DIPROPIONATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200538	BETAMETHASONE ACETATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200545	DIFLORASONE DIACETATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200562	HYDROCORTISONE VALERATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200600	FLUOROMETHOLONE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200617	RIMEXOLONE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200635	HYDROCORTAMATE HYDROCHLORIDE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200732	AMCINONIDE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200762	BETAMETHASONE SODIUM PHOSPHATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200774	FLUPREDNISOLONE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200845	HALCINONIDE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200865	LOTEPREDNOL ETABONATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200877	FLUMETHASONE PIVALATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200878	TRIAMCINOLONE HEXACETONIDE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200908	HALOBETASOL PROPIONATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200909	PREDNISOLONE TEBUTATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200953	HYDROCORTISONE PROBUTATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200968	HYDROCORTISONE SODIUM PHOSPHATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200975	CLOCORTOLONE PIVALATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200989	ALCLOMETASONE DIPROPIONATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1201012	FLURANDRENOLIDE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1201014	PREDNISOLONE SODIUM PHOSPHATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1201064	FLUOROMETHOLONE ACETATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1201081	METHYLPREDNISOLONE SODIUM SUCCINATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1201109	DESONIDE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1201148	MEPREDNISONE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1201173	MEDRYSONE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1201749	DIFLUPREDNATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1201891	DEFLAZACORT	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL131	PREDNISOLONE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1364144	METHYLPREDNISOLONE ACETATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1370	BUDESONIDE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1451	TRIAMCINOLONE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1473	FLUTICASONE PROPIONATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1497	BETAMETHASONE VALERATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1501	FLUOCINONIDE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1504	TRIAMCINOLONE ACETONIDE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1512	FLUNISOLIDE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1549	HYDROCORTISONE CYPIONATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1650	CORTISONE ACETATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1676	FLUTICASONE FUROATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1683	HYDROCORTISONE BUTYRATE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1766	DESOXIMETASONE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL2040682	CICLESONIDE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL2103876	MAPRACORAT	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL2105842	CORTIVAZOL	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL3358954	BI 653048	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL384467	DEXAMETHASONE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL389621	HYDROCORTISONE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL635	PREDNISONE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL650	METHYLPREDNISOLONE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL989	FLUOCINOLONE ACETONIDE	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:0a31a3ff2d4c	Prednisolone Acetate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:0cde89492d21	Rimexolone	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:16dd2349fef4	Org 214007-0	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:17722ce88cc0	Hydrocortisone Cypionate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:1b6645831580	Hydrocortisone Probutate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:1d92cdc13351	Triamcinolone Hexacetonide	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:1f5adc54c6df	Halobetasol	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:20c2cdc765d0	Cortisone Acetate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:26bcaee63324	Dexamethasone Acetate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:2791163ab0ec	Prednisolone Tebutate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:2bfd17a5789f	Diflorasone Diacetate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:2c661a452b1f	Flumethasone Pivalate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:2fa5b995fa48	Velsecorat	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:30277a03dc85	Triamcinolone	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:34a373fd03c6	Meprednisone	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:34eff248d0d0	Mapracorat	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:39c1057d9351	Flunisolide Anhydrous	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:3c56953da57a	Betamethasone	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:4803fdd0a90d	Flurandrenolide	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:4dc249d67a55	Betamethasone Benzoate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:4ff67bfa66c8	Prednisone	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:515c66228b9f	C108297	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:556409ed0f0c	Alclometasone	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:59dd73e95fbc	Fluprednisolone	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:5b596b82de07	Hydrocortisone Valerate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:5c557afd4483	Fluorometholone Acetate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:60000138e703	Cortivazol	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:6081d8079492	Prednicarbate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:64d60f1c88fb	Fosdagrocorat	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:6592b6195ab6	Difluprednate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:6d1ada936653	Fluticasone Furoate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:6f787e5d07a8	Deflazacort	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:80ffd9194985	Betamethasone Acetate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:823281ba7c1c	Methylprednisolone Sodium Succinate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:8378c30e01d0	Azd2906	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:89e6d66f8457	Medrysone	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:8c16382b2c45	Hydrocortisone Acetate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:9453a175b05e	Dexamethasone Sodium Phosphate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:99bf739a540e	Triamcinolone Diacetate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:a0075ef476f9	Abbv-3373	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:a05c307ca0ce	Fluocinonide	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:a0a5402dc5cd	Dagrocorat	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:a35f493386a5	Paramethasone Acetate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:a78328242880	Gsk866	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:aa465c989153	Desoximetasone	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:ae55a2b9b882	Zk216348	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:afb3a2efa45e	Halcinonide	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:b0e7c0202f3d	Hydrocortisone Sodium Succinate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:b386878b887a	Amcinonide	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:b40a8358fec5	Prednisolone Sodium Phosphate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:b8e22b29ae74	Ru28362	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:bc207c1db0d0	Fluorometholone	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:bc3921481ef1	Loteprednol	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:be66bf676885	Ciclesonide	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:c18d221d1a61	Leo 134310	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:c19dd34c9850	Fluocinolone Acetonide	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:c589f0e64dc4	Clocortolone	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:cac503e8d6b7	Clobetasol Propionate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:d29f613e2f52	Hydrocortisone Sodium Phosphate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:de8412f5a163	Hydrocortamate Hydrochloride	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:e8009722f9bc	Betamethasone Sodium Phosphate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:e8e72b8b40a8	Betamethasone Valerate	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:f0a2b29421af	Mometasone	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:f53f4b5e65a6	Desonide	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:f7d3ab00ba4d	Compound 17 [Pmid: 29741897]	4.534	4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:b7b1e7e5089f	Beclomethasone Dipropionate	4.534	4.396	2	2	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:fd310066a390	Methylprednisolone	4.534	4.396	2	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:0154bd5bb36c	At9283	4.491	3.054	11	9	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL603469	LESTAURTINIB	4.282	7.957	6	6	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:0775f5cbbcf5	Lestaurtinib	4.278	7.932	8	8	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:b63eeea56658	Bi6015	4.118	3.025	1	1	MYC	up	hops1-3	HNF4A	250	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:d3f00fec5ac5	Tinengotinib	3.833	19.84	7	7	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL3392776	C-188-9	3.762	3.348	1	1	MYC	up	hops1-3	STAT3	340	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL4452527	Sd-36	3.762	3.348	1	1	MYC	up	hops1-3	STAT3	340	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:0dfe60cde8de	Sd-91	3.762	3.348	1	1	MYC	up	hops1-3	STAT3	340	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:5af3dd6c5c76	Lll12	3.762	3.348	1	1	MYC	up	hops1-3	STAT3	340	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:830f4ec04842	Compound 6F [Pmid: 35476936]	3.762	3.348	1	1	MYC	up	hops1-3	STAT3	340	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:ce496ff00491	Stat3 Inhibitor 8Q	3.762	3.348	1	1	MYC	up	hops1-3	STAT3	340	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1923234	WP 1066	3.762	3.067	2	2	MYC	up	hops1-3	STAT3	340	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:0ecbcd6c2a17	Compound 8U [Pmid: 31999451]	3.762	3.067	2	2	MYC	up	hops1-3	STAT3	340	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1170	TESTOSTERONE PROPIONATE	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200335	TESTOSTERONE ENANTHATE	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200412	NANDROLONE PHENPROPIONATE	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200436	OXANDROLONE	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200585	OXYMETHOLONE	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200623	ETHYLESTRENOL	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1200946	NANDROLONE DECANOATE	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1201048	DROMOSTANOLONE PROPIONATE	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1201101	TESTOSTERONE CYPIONATE	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1395	METHYLTESTOSTERONE	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1418176	METHANDROSTENOLONE	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1445	FLUOXYMESTERONE	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL2079587	STANOZOLOL	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL2107067	TESTOSTERONE UNDECANOATE	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL386630	TESTOSTERONE	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:24f41c19eaf2	Oxymetholone	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:3fe53c3a24b2	Mibolerone	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:5f120f5a5ec0	Methyltestosterone	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:6f290929d303	Testosterone Cypionate	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:70ce494df19e	Stanolone	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:83eaea166871	Metribolone	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:8e52eead3994	Andarine	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:97738670fe63	Ethylestrenol	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:a9c0c1246334	Testosterone	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:ace28a052219	Gsk2881078	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:af54f618bd1a	Testosterone Propionate	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:b3c5641e9214	Methandrostenolone	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:ccf0411ed98e	Dromostanolone	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:d22a611bb50d	Fluoxymesterone	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:e78bc88ee9d4	Testosterone Enanthate	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:e8fc14d39448	Nandrolone Decanoate	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:fcb6e74032d9	Oxandrolone	3.631	3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1215331	PF-03882845	3.502	3.924	3	3	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:b600b74b4aa0	Rgb-286638	3.392	4.103	13	13	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL482967	CYC-116	3.364	14.245	4	4	MYC	up	hops1-3	AURKB	21	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL272621	HYODEOXYCHOLIC_ACID	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL3545238	CS-8080	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL4297218	ROVAZOLAC	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL456237	LXR-623	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL5095408	ABEQUOLIXRON ZINC	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL59030	Gw3965	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:06abd23310e8	24(S), 25-Epoxycholesterol	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:29764904c696	Desmosterol	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:7e5db75ee534	Acetyl-Podocarpic Dimer	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:8beed913fd32	Imb-808	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:96fa32c54567	24(S)-Hydroxycholesterol	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:9c14025a223e	Az12260493	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:9d25141c6f73	Rovazolac	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:b55163862f85	Abequolixron	3.242	3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:2e26dd734f99	22R-Hydroxycholesterol	3.089	3.157	3	3	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:f1a832eb015a	Tyk2 Inhibitor 14L	3.068	13.274	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:d9244bf60923	2-Tert-Butyl-9-Fluoro-1,6-Dihydrobenzo[H]Imidazo[4,5-F]Isoquinolin-7-One	3.068	13.274	3	3	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL1231124	AZD-1480	3.053	12.815	3	3	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:0313a310a905	Compound 19A [Pmid: 24359159]	3.053	12.815	3	3	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:075216d6a4c7	Decernotinib	3.053	12.815	3	3	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:0876735cc5fb	Compound 8L [Pmid: 36053746]	3.053	12.815	3	3	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:40aa5a5b0ce2	Xl019	3.053	12.815	3	3	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL2105759	BARICITINIB	3.053	12.815	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:CHEMBL4447181	LONDAMOCITINIB	3.053	12.815	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:200fb4682f11	Abrocitinib	3.053	12.815	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:5fe3f07f70bf	Deuruxolitinib	3.053	12.815	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:6abd8a09f576	Ruxolitinib Phosphate	3.053	12.815	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:73e4caa94c28	Wxfl10203614	3.053	12.815	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:80292bbfb538	Ivarmacitinib	3.053	12.815	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	opposes	FAM:CAT:DGIDB:94d582bb690f	Itacitinib	3.053	12.815	2	2	MYC	up	hops1-3	JAK2	28	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL1509	DROSPIRENONE	-3.16	-3.69	2	2	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:0662a550799f	Drospirenone	-3.16	-3.69	2	2	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:b8ad886b94a3	Progesterone	-3.16	-3.69	7	3	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL1093266	Gsk2033	-3.242	-3.642	2	2	MYC	up	hops1-3	NR1H3	106	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL1082407	ENZALUTAMIDE	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL1274	NILUTAMIDE	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL128748	DIMETHYLCURCUMIN	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL3183409	APALUTAMIDE	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL3590187	CLASCOTERONE	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL37676	APC-100	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL409	BICALUTAMIDE	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL4297185	DAROLUTAMIDE	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL4594417	PRUXELUTAMIDE	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL4650276	REZVILUTAMIDE	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL4858811	TRC-253	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL491	HYDROXYFLUTAMIDE	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL806	FLUTAMIDE	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:171bd5b16921	Darolutamide	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:3a59bd642ca0	Bicalutamide	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:48cee98fb72f	Nilutamide	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:5de5a4921a59	Enzalutamide	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:822588ad5387	Apalutamide	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:a2dc5518a040	Flutamide	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:a987a36a17e3	Pf0998425	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:b25450e2af1b	Ard-69	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:e2d8b7c02633	Ard-266	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:ebce87d0e62c	Clascoterone	-3.631	-3.027	1	1	MYC	up	hops1-3	AR	463	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL2108316	EDIFOLIGIDE	-3.851	-6.706	8	8	MYC	up	hops1-3	E2F5	15	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL2109058	EDIFOLIGIDE SODIUM	-3.851	-6.706	8	8	MYC	up	hops1-3	E2F5	15	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:165aa4303ed0	Edifoligide	-3.851	-6.706	8	8	MYC	up	hops1-3	E2F5	15	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:25c86c6df239	Edifoligide Sodium	-3.851	-6.706	8	8	MYC	up	hops1-3	E2F5	15	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:aac02b952823	Compound 3B [Pmid: 23454515]	-4.317	-5.267	4	4	MYC	up	hops1-3	DYRK1A	17	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL271220	CORT 108297	-4.534	-4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL3545391	ORG-34517	-4.534	-4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL4068611	RELACORILANT	-4.534	-4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:2ea4defd66a7	Miricorilant	-4.534	-4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:50c2a146d931	Relacorilant	-4.534	-4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:7b1c6df417ac	Org-34517	-4.534	-4.396	1	1	MYC	up	hops1-3	NR3C1	195	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL2108594	EPTOTERMIN ALFA	-4.604	-3.775	4	4	MYC	up	hops1-3	BMPR1A	11	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL107430	NRX195183	-5.475	-4.576	1	1	MYC	up	hops1-3	RARA	144	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:2cab023d9d78	Bms753	-5.475	-4.576	1	1	MYC	up	hops1-3	RARA	144	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:8ade50e369ea	Agn193836	-5.475	-4.576	1	1	MYC	up	hops1-3	RARA	144	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL382277	EX-527	-6.206	-5.135	1	1	MYC	up	hops1-3	SIRT1	107	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:1721f8d286e9	Selisistat	-6.206	-5.135	1	1	MYC	up	hops1-3	SIRT1	107	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:1a864fb4552a	Splitomicin	-6.206	-5.135	1	1	MYC	up	hops1-3	SIRT1	107	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:8f49db9bfa79	Ttk21	-6.68	-5.582	2	2	MYC	up	hops1-3	CREBBP	138	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL1479	DANAZOL	-6.718	-5.687	2	2	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:ede1773aae0e	Danazol	-6.718	-5.687	2	2	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:9613cb9314a2	Resminostat	-7.148	-5.332	4	4	MYC	up	hops1-3	HDAC3	36	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:03b1f671920b	Jnj-65234637	-7.5	-6.585	1	1	MYC	up	hops1-3	BCL6	83	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:5834235c36ff	Fx1	-7.5	-6.585	1	1	MYC	up	hops1-3	BCL6	83	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:5be9fe4f2f42	Compound 8C [Pmid: 28760529]	-7.5	-6.585	1	1	MYC	up	hops1-3	BCL6	83	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:e4331b8a099b	Bcl6 Protac 15	-7.5	-6.585	1	1	MYC	up	hops1-3	BCL6	83	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL259571	TAPINAROF	-7.518	-5.379	1	1	MYC	up	hops1-3	AHR	131	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:004e12ec02db	Tapinarof	-7.518	-5.379	1	1	MYC	up	hops1-3	AHR	131	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:b63d26abc373	Tcdd	-7.518	-5.379	1	1	MYC	up	hops1-3	AHR	131	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL3185133	ALLYLESTRENOL	-7.625	-6.018	3	3	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:5f1a59b0ce87	Allylestrenol	-7.625	-6.018	3	3	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:b6b070da5ccc	Droxinostat	-8.276	-6.297	3	3	MYC	up	hops1-3	HDAC3	36	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL3655950	Acy-738	-9.056	-3.303	4	4	MYC	up	hops1-3	HDAC3	36	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL98	VORINOSTAT	-9.056	-3.303	4	4	MYC	up	hops1-3	HDAC3	36	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:3d764f7fdf0b	Bml-281	-9.064	-3.307	6	5	MYC	up	hops1-3	HDAC3	36	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:222c75ca1d6e	Suprastat	-9.064	-3.307	5	5	MYC	up	hops1-3	HDAC3	36	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:2b0652397469	Ricolinostat	-9.064	-3.307	5	5	MYC	up	hops1-3	HDAC3	36	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:c62597f0cb64	Citarinostat	-9.064	-3.307	5	5	MYC	up	hops1-3	HDAC3	36	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:0c081e7c3bfe	Rgfp109	-9.1	-6.34	2	2	MYC	up	hops1-3	HDAC3	36	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL297453	EPIGALOCATECHIN GALLATE	-9.135	-12.205	4	3	MYC	up	hops1-3	DYRK1A	17	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:ef3920a517ae	Norgestimate	-9.259	-7.038	3	2	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL103	PROGESTERONE	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL1162	NORETHINDRONE	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL1200624	ETHYNODIOL DIACETATE	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL1200807	NORELGESTROMIN	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL1200848	HYDROXYPROGESTERONE CAPROATE	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL1200853	DYDROGESTERONE	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL1200934	NORGESTIMATE	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL1201139	MEGESTROL ACETATE	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL1201146	NORETHINDRONE ACETATE	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL1213583	GESTODENE	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL1387	NORETHYNODREL	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL1389	LEVONORGESTREL	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL1476022	NOMEGESTROL ACETATE	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL1531	ETONOGESTREL	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL1533	DESOGESTREL	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL2104765	TRIMEGESTONE	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL3707377	SEGESTERONE ACETATE	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL717	MEDROXYPROGESTERONE ACETATE	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:26acdfbd2199	Tanaproget	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:3076a7e09188	Ethynodiol Diacetate	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:3e2332f9877b	Norethindrone Acetate	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:469b27f0fb57	Medroxyprogesterone Acetate	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:4adb0ecadd25	Norethynodrel	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:4c53fdbd3f0a	Nomegestrol Acetate	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:4eb06a9000b0	Hydroxyprogesterone Caproate (Usp)	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:4ee7280b4d26	Dydrogesterone	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:6e5b745e54eb	Trimegestone	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:7e35747fdcf3	Org2058	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:83e5f9790a96	Desogestrel	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:8b55393c704d	Promegestone	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:9136df9c9bbf	Norgestrel	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:9197858e6b95	Nomegestrol	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:944f7457d2bd	Megestrol Acetate	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:9a8b449e52a7	Etonogestrel	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:a2553ceb6557	Norelgestromin	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:aa0e15795ab3	Norethindrone	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:b4b6948be1b7	Levonorgestrel	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:b52b7a02faa9	Segesterone Acetate	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:dae6cfceb22a	Gestodene	-9.259	-7.038	1	1	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:445db364fa47	Compound 14I [Pmid: 37204466]	-9.989	-15.423	1	1	MYC	up	hops1-3	SKP2	50	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL139835	CYPROTERONE ACETATE	-10.778	-8.734	3	3	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:7e3c67305ca1	Cyproterone Acetate	-10.778	-8.734	3	3	MYC	up	hops1-3	PGR	94	60	1	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:8b135ee93a22	Rgfp966	-11.198	-7.753	1	1	MYC	up	hops1-3	HDAC3	36	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL964	DISULFIRAM	-11.205	-7.754	1	1	MYC	up	hops1-3	ALDH2	17	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:5c9c898449fc	Disulfiram	-11.205	-7.754	1	1	MYC	up	hops1-3	ALDH2	17	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:a9f5f87a8baa	Prunetin	-11.205	-7.754	1	1	MYC	up	hops1-3	ALDH2	17	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:2fe3ff7e7633	Apicidin	-11.22	-3.589	4	4	MYC	up	hops1-3	HDAC3	36	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL513909	BI-2536	-11.987	-11.858	4	4	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:3d009ed50fe9	Dual Brd4/Plk1 Inhibitor 23	-11.996	-11.868	2	2	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:752009d1c0e8	Compound 6 [Pmid: 30125504]	-11.996	-11.868	2	2	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:a5d52bc79d17	Xy-06-007	-11.996	-11.868	2	2	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:3b2aceac7055	Gnf4877	-14.527	-31.483	2	2	MYC	up	hops1-3	DYRK1A	17	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:38ff5b0e0f26	Sj995973	-15.385	-58.195	1	1	MYC	up	hops1-3	CRBN	32	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:f71dfdc36426	(S)-Cr8	-16.094	-24.886	3	3	MYC	up	hops1-3	DYRK1A	17	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:137f51f9a945	Compound 72 [Wo2013026806]	-16.507	-45.57	2	2	MYC	up	hops1-3	DYRK1A	17	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:46ad0bbbecb2	Harmine	-16.507	-45.57	2	2	MYC	up	hops1-3	DYRK1A	17	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:e5c74740dfc2	Compound 68 [Pmid: 24900699]	-16.507	-45.57	2	2	MYC	up	hops1-3	DYRK1A	17	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:2c575c362357	Ethyl 3-[(E)-2-Amino-1-Cyanoethenyl]-6,7-Dichloro-1-Methyl-1H-Indole-2-Carboxylate	-17.125	-54.454	3	3	MYC	up	hops1-3	DYRK1A	17	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:7a16d90d7d6c	Compound 2-2C [Pmid: 32003560]	-17.125	-94.317	1	1	MYC	up	hops1-3	DYRK1A	17	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:b184058fefa4	Gnf2133	-17.125	-94.317	1	1	MYC	up	hops1-3	DYRK1A	17	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:4ef11159ec1f	Oicr-8268	-22.531	-14.414	1	1	MYC	up	hops1-3	DCAF1	9	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:5fafe52fef26	Compound 13 [Pmid: 37465299]	-22.531	-14.414	1	1	MYC	up	hops1-3	DCAF1	9	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:75514db0fe61	Yt47R	-22.531	-14.414	1	1	MYC	up	hops1-3	DCAF1	9	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:5e51ae58bbe1	Lenalidomide	-24.053	-41.118	8	8	MYC	up	hops1-3	CUL4A	41	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL43452	POMALIDOMIDE	-24.053	-41.118	4	4	MYC	up	hops1-3	CUL4A	41	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL468	THALIDOMIDE	-24.053	-41.118	4	4	MYC	up	hops1-3	CUL4A	41	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL6068337	LENALIDOMIDE HYDROCHLORIDE MONOHYDRATE	-24.053	-41.118	4	4	MYC	up	hops1-3	CUL4A	41	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:722ab907edd0	Thalidomide	-24.053	-41.118	4	4	MYC	up	hops1-3	CUL4A	41	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:b864887635c8	Pomalidomide	-24.053	-41.118	4	4	MYC	up	hops1-3	CUL4A	41	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL1957266	(+)-Jq1	-87.875	-21.486	2	2	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL1522313	Compound 3 [Pmid: 25408830]	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL2179387	Pfi-1	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL3086883	Ms436	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL3919831	AMREDOBRESIB	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:CHEMBL4226570	Mz1	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:09afa1e9db65	N-Methyl-2-Pyrrolidone	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:2e8ec2410b6f	I-Bet282	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:4729f05af735	Dbet6	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:4d6bb6aa868e	Compound 11H [Pmid: 29808961]	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:4ee060cc6aaf	Compound 9 [Pmid: 23517011]	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:5939058f5e3e	Cpi-203	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:5dcbc0337c66	Bzt-7	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:89c5118fd77d	Compound 15 [Hay Et Al., 2013]	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:943f948ed754	Isoxazole Azepine Compound 3	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:aac12c557a5b	Xd1	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:ad0ad93f2d5c	Compound 1 [Pmid: 25408830]	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:b6ab3af5c7a4	Compound 7D [Pmid: 25703523]	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:b92b8b1ce56b	Nhwd-870	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:c0761d5c7905	Compound 2 [Pmid: 25408830]	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:d2f0b45182ac	Ms417	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none
+Q6_protein_tiersAB	mimics	FAM:CAT:DGIDB:e70b1b244ec2	Mivebresib	-124.274	-21.486	1	1	MYC	up	hops1-3	BRD4	19	60	0	0	MYC:up	0	none

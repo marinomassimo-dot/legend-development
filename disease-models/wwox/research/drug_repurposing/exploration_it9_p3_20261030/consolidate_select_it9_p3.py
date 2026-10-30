@@ -130,7 +130,7 @@ for parent, rs in rows_by_parent.items():
     nm = nm or rs[0]["name"]
     sp = [x for x in rs if x["specific"]]
     best = sorted(sp, key=lambda x: -min(abs(x["zt"]), abs(x["zi"])))[0] if sp else None
-    arms = sorted({(x["q"] + ":" + x["arm"]) for x in rs}); spq = sorted({(x["q"] + ":" + x["arm"]) for x in sp})
+    arms = sorted({(x["q"] + ":" + x["arm"]) for x in rs}); setarms = sorted({(x["set"] + ":" + x["arm"]) for x in rs}); spq = sorted({(x["q"] + ":" + x["arm"]) for x in sp})
     dirs = {x["arm"] for x in sp if x["arm"] in ("opposes", "mimics")}
     ntg = len({t["target_symbol"] for f in fids for t in fam_t.get(f, [])})
     tg = (best or rs[0])["tg"]; tdeg = (best or rs[0])["tdeg"]
@@ -140,7 +140,7 @@ for parent, rs in rows_by_parent.items():
     unitsk = {k.split(":", 1)[1] for k in kn if k.startswith("unit_member:")}
     cls = int(atc.startswith("N03") or ";N03" in atc or bool(allt & CLASS_TARGETS) or bool(unitsk & CLASS_UNITS))
     out.append(dict(parent=parent, name=nm, family_ids=";".join(fids), n_families=len(fids), identity_route=route, chembl_parent=(p.get("parent_chembl_id") if p else ""), max_phase=(p.get("max_phase") if p else ""), atc=atc, status_class=stat,
-                    questions=";".join(sorted({x["q"] for x in rs})), q_arms=";".join(arms), seed_specific_q_arms=";".join(spq), seed_specific=int(bool(sp)), direction=("opposes" if dirs == {"opposes"} else "mimics" if dirs == {"mimics"} else "CONFLICT" if dirs else "none(direct_search/top-list only)"),
+                    questions=";".join(sorted({x["q"] for x in rs})), q_arms=";".join(arms), sets_arms=";".join(setarms), seed_specific_q_arms=";".join(spq), seed_specific=int(bool(sp)), direction=("opposes" if dirs == {"opposes"} else "mimics" if dirs == {"mimics"} else "CONFLICT" if dirs else "none(direct_search/top-list only)"),
                     best_set=best["set"] if best else "", best_Z_total=round(best["zt"], 2) if best else "", best_Z_indeg=round(best["zi"], 2) if best else "", min_absZ=round(min(abs(best["zt"]), abs(best["zi"])), 2) if best else "",
                     top_seed=(best or rs[0])["seed"], top_seed_direction=(best or rs[0])["sd"], seeds_contributing=(best or {}).get("seeds", ""), conditional=int(any(x["cond"] for x in sp)), hop=(best or rs[0])["hop"], main_target=tg, main_target_degree=tdeg,
                     hub_target=int(tdeg >= HUB), n_signed_targets=ntg, promiscuous=int(ntg >= 5), seed_own_target=int(any(x["own"] for x in rs)), direct_search_hit=int(any(x["arm"] == "direct_search" for x in rs)),
@@ -156,7 +156,7 @@ for t, rs in sorted(cl.items(), key=lambda kv: -len(kv[1])):
     med = statistics.median(int(x["n_signed_targets"]) for x in rs); hubshare = sum(int(x["hub_target"]) for x in rs) / len(rs)
     ha = int(int(rs[0]["hub_target"]) == 1 and med >= 5)
     if ha: hubart.add(t)
-    clrows.append(dict(cluster_main_target=t, mech_group=rs[0]["mech_group"], n_parents=len(rs), questions=";".join(sorted({q for x in rs for q in x["questions"].split(";")})), n_opposes=sum(x["direction"] == "opposes" for x in rs), n_mimics=sum(x["direction"] == "mimics" for x in rs),
+    clrows.append(dict(cluster_main_target=t, mech_group=rs[0]["mech_group"], n_parents=len(rs), questions=";".join(sorted({qa.split(":")[0] for x in rs for qa in x["seed_specific_q_arms"].split(";") if qa})), n_opposes=sum(x["direction"] == "opposes" for x in rs), n_mimics=sum(x["direction"] == "mimics" for x in rs),
                        target_degree=rs[0]["main_target_degree"], hub_target_share=round(hubshare, 2), median_promiscuity=med, hub_artefact_cluster=ha, n_known_to_legend=sum(bool(x["known_to_legend"]) for x in rs), n_feasible=sum(not x["feasibility_exclusions"] for x in rs)))
 for r in out: r["hub_artefact_cluster"] = int(r["main_target"] in hubart)
 # ---- selection

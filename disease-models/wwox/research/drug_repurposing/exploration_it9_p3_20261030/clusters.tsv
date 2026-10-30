@@ -1,0 +1,62 @@
+cluster_main_target	mech_group	n_parents	questions	n_opposes	n_mimics	target_degree	hub_target_share	median_promiscuity	hub_artefact_cluster	n_known_to_legend	n_feasible
+NR3C1	Nuclear receptor subfamily 3 group C	86	Q6	82	4	195	1.0	1.0	0	0	43
+AR	Nuclear receptor subfamily 3 group C	38	Q6	21	17	463	1.0	1.0	0	0	31
+JAK2	SH2 domain containing	37	Q6	37	0	28	0.0	2	0	0	22
+AURKB	Protein phosphatase 1 regulatory subunits	36	Q6	36	0	21	0.0	3.0	0	0	21
+PGR	Nuclear receptor subfamily 3 group C	35	Q6	8	27	94	1.0	1	0	0	28
+MTNR1A	Melatonin receptors	33	Q2	7	26	2	0.0	2	0	0	4
+ESR2	Estrogen receptors	29	Q4	25	4	170	1.0	2	0	0	18
+BRD4	Bromodomain and extra-terminal domain family	26	Q5;Q6	0	1	19	0.0	1.0	0	0	3
+VDR	Protein phosphatase 1 regulatory subunits	25	Q5	24	1	112	1.0	1	0	0	18
+HDAC5	Histone deacetylases, class IIA	23	Q2;Q6	22	0	20	0.0	11	0	0	14
+CDK6	Cyclin dependent kinases	18	Q2	0	18	36	0.0	2.0	0	0	12
+RORC	RAR related orphan receptors	17	Q5	2	15	25	0.0	1	0	0	4
+NR1H3	Nuclear receptor subfamily 1 group H	15	Q5;Q6	14	1	106	1.0	2	0	0	5
+RARB	Retinoic acid receptors	15	Q5	2	13	66	1.0	3	0	0	3
+EZH2	Histone lysine methyltransferases	14	Q5	14	0	149	1.0	1.0	0	0	6
+MTNR1B	Melatonin receptors	13	Q2	4	9	2	0.0	1	0	0	0
+DYRK1A	Dual-specificity tyrosine-regulated kinase family	10	Q6	0	10	17	0.0	2.0	0	0	2
+HDAC3	Histone deacetylases, class I	9	Q4;Q5;Q6	0	6	36	0.0	4	0	0	3
+STAT3	SH2 domain containing	8	Q6	8	0	340	1.0	1.0	0	0	2
+CASP1	Caspases	7	Q5	7	0	31	0.0	2	0	0	3
+HDAC1	Histone deacetylases, class I	6	Q4;Q6	5	0	113	1.0	3.0	0	0	2
+SIRT1	Sirtuins	6	Q5;Q6	3	3	107	1.0	1.0	0	0	2
+APH1A	Gamma-secretase complex subunits	6	Q6	6	0	10	0.0	6.0	0	0	6
+CREBBP	Zinc fingers ZZ-type	6	Q6	5	1	138	1.0	2.0	0	0	1
+RARA	Retinoic acid receptors	6	Q6	3	3	144	1.0	1.0	0	0	1
+PPARG	Peroxisome proliferator activated receptors	5	Q2	0	5	209	1.0	4	0	0	4
+PSEN1	Presenilin family	5	Q6	5	0	33	0.0	1	0	0	1
+DOT1L	Histone lysine methyltransferases	5	Q6	5	0	13	0.0	1	0	0	1
+PIN1	Parvulins	5	Q6	5	0	17	0.0	1	0	0	0
+BCL6	Zinc fingers C2H2-type	4	Q5;Q6	0	4	83	1.0	1.0	0	0	0
+OGA	Hexosaminidases	3	Q2	3	0	36	0.0	1	0	0	1
+RPS6KA3	MAPK activated protein kinases	3	Q2	0	3	4	0.0	1	0	0	0
+P4HB	Protein disulfide isomerases	3	Q4	3	0	1	0.0	2	0	0	3
+RORA	RAR related orphan receptors	3	Q5	3	0	67	1.0	1	0	0	1
+NR1I3	Nuclear receptor subfamily 1 group I	3	Q5	1	2	45	0.0	2	0	0	1
+AHR	Basic helix-loop-helix proteins	3	Q6	1	2	131	1.0	1	0	0	1
+DCAF1	DDB1 and CUL4 associated factors	3	Q6	0	3	9	0.0	1	0	0	0
+CUL4A	Cullins	3	Q6	0	3	41	0.0	4	0	0	2
+HIF1A	Basic helix-loop-helix proteins	2	Q2	2	0	348	1.0	1.0	0	0	0
+EPAS1	Basic helix-loop-helix proteins	2	Q2	2	0	73	1.0	1.0	0	0	1
+ESRRA	Estrogen related receptors	2	Q2	0	2	38	0.0	1.0	0	0	0
+HMGB1	Canonical high mobility group	2	Q5	2	0	34	0.0	3.0	0	0	1
+NR1D1	Nuclear receptor subfamily 1 group D	2	Q5	1	1	28	0.0	1.0	0	0	0
+NFE2L2	MicroRNA protein coding host genes	2	Q5	1	1	154	1.0	1.0	0	0	1
+ALDH2	Aldehyde dehydrogenases	2	Q5;Q6	0	0	17	0.0	1.0	0	0	1
+EP300	Zinc fingers ZZ-type	2	Q5;Q6	2	0	125	1.0	1.5	0	0	1
+METTL3	m6A methyltransferase complex	2	Q6	2	0	4	0.0	1.0	0	0	0
+NOTCH1	Notch receptors	2	Q6	2	0	148	1.0	1.0	0	0	0
+E2F5	E2F transcription factors	2	Q6	0	2	15	0.0	8.0	0	0	2
+SIRT5	Sirtuins	1	Q2	1	0	8	0.0	1	0	0	0
+TAF1	Lysine acetyltransferases	1	Q2	1	0	38	0.0	2	0	0	0
+PBK	PDZ binding kinase family	1	Q4	1	0	8	0.0	1	0	0	0
+ERN1	Endoribonucleases	1	Q4	0	1	8	0.0	1	0	0	0
+SIRT6	Sirtuins	1	Q5	1	0	11	0.0	1	0	0	0
+HNF4A	MicroRNA protein coding host genes	1	Q5;Q6	1	0	250	1.0	1	0	0	0
+NR2C2	Nuclear receptor subfamily 2 group C	1	Q5	0	1	61	1.0	1	0	0	1
+BCL3	Ankyrin repeat domain containing	1	Q5	0	1	41	0.0	1	0	0	0
+NOTCH3	Notch receptors	1	Q6	1	0	27	0.0	2	0	0	0
+BMPR1A	Type 1 receptor serine/threonine kinases	1	Q6	0	1	11	0.0	4	0	0	0
+SKP2	F-box and leucine rich repeat proteins	1	Q6	0	1	50	0.0	1	0	0	0
+CRBN	NO_GROUP	1	Q6	0	1	32	0.0	1	0	0	0
