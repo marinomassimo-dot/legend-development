@@ -1,0 +1,19 @@
+seed_set	regime	target	out_edges	influence	chain
+Q6_expression_tiersAB	all	CSNK1A1	8	-0.0125873	CSNK1A1 -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curated_CollecTRI;DoRothEA;IntAct_DoRothEA;ExTRI2_Coll]
+Q6_expression_tiersAB	all	CDK7	11	0.000129363	CDK7 -P(-)-> E2F1 [SIGNOR]; E2F1 -T(+)-> MYC [HTRIdb;HTRIdb_DoRothEA;TRRUST_CollecTRI;TfactS_CollecTRI2;NTNU.Curated_CollecTRI;DoRothEA-A_CollecTRI2;HTRI_CollecTRI;Ex]
+Q6_expression_tiersAB	all	CDK9	6	-0.000152026	CDK9 -P(+)-> ACTL6A [SIGNOR]; ACTL6A -P(+)-> RUNX1 [SIGNOR]; RUNX1 -T(+)-> MYC [SIGNOR;CollecTRI;CollecTRI2;SIGNOR_CollecTRI;ExTRI2_CollecTRI2;SIGNOR_CollecTRI2]
+Q6_expression_tiersAB	v3	CSNK1A1	8	-0.0125873	CSNK1A1 -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curated_CollecTRI;DoRothEA;IntAct_DoRothEA;ExTRI2_Coll]
+Q6_expression_tiersAB	v3	CDK7	11	6.98245e-05	CDK7 -P(-)-> E2F1 [SIGNOR]; E2F1 -T(+)-> MYC [HTRIdb;HTRIdb_DoRothEA;TRRUST_CollecTRI;TfactS_CollecTRI2;NTNU.Curated_CollecTRI;DoRothEA-A_CollecTRI2;HTRI_CollecTRI;Ex]
+Q6_expression_tiersAB	v3	CDK9	6	6.1464e-05	CDK9 -P(+)-> ACTL6A [SIGNOR]; ACTL6A -P(+)-> RUNX1 [SIGNOR]; RUNX1 -T(+)-> MYC [SIGNOR;CollecTRI;CollecTRI2;SIGNOR_CollecTRI;ExTRI2_CollecTRI2;SIGNOR_CollecTRI2]
+Q6_expression_tiersAB	v4	CSNK1A1	8	-0.0125	CSNK1A1 -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curated_CollecTRI;DoRothEA;IntAct_DoRothEA;ExTRI2_Coll]
+Q6_expression_tiersAB	v4	CDK7	11	2.12704e-05	CDK7 -P(-)-> E2F1 [SIGNOR]; E2F1 -T(+)-> MYC [HTRIdb;HTRIdb_DoRothEA;TRRUST_CollecTRI;TfactS_CollecTRI2;NTNU.Curated_CollecTRI;DoRothEA-A_CollecTRI2;HTRI_CollecTRI;Ex]
+Q6_expression_tiersAB	v4	CDK9	6	0	
+Q6_protein_tiersAB	all	CSNK1A1	8	-0.0125873	CSNK1A1 -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curated_CollecTRI;DoRothEA;IntAct_DoRothEA;ExTRI2_Coll]
+Q6_protein_tiersAB	all	CDK7	11	0.000129363	CDK7 -P(-)-> E2F1 [SIGNOR]; E2F1 -T(+)-> MYC [HTRIdb;HTRIdb_DoRothEA;TRRUST_CollecTRI;TfactS_CollecTRI2;NTNU.Curated_CollecTRI;DoRothEA-A_CollecTRI2;HTRI_CollecTRI;Ex]
+Q6_protein_tiersAB	all	CDK9	6	-0.000152026	CDK9 -P(+)-> ACTL6A [SIGNOR]; ACTL6A -P(+)-> RUNX1 [SIGNOR]; RUNX1 -T(+)-> MYC [SIGNOR;CollecTRI;CollecTRI2;SIGNOR_CollecTRI;ExTRI2_CollecTRI2;SIGNOR_CollecTRI2]
+Q6_protein_tiersAB	v3	CSNK1A1	8	0	
+Q6_protein_tiersAB	v3	CDK7	11	2.3382e-05	CDK7 -P(+)-> CDK2 [SIGNOR]; CDK2 -P(+)-> SF3B1 [SIGNOR]; SF3B1 -P(+)-> MYC [SIGNOR]
+Q6_protein_tiersAB	v3	CDK9	6	-0.00021349	CDK9 -P(+)-> UBE2A [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;RLIMS-P_ProtMapper]; UBE2A -P(+)-> HECTD4 [SIGNOR]; HECTD4 -P(-)-> MYC [SIGNOR]
+Q6_protein_tiersAB	v4	CSNK1A1	8	0	
+Q6_protein_tiersAB	v4	CDK7	11	0	
+Q6_protein_tiersAB	v4	CDK9	6	0	

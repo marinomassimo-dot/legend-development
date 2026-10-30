@@ -1,0 +1,27 @@
+--- a/generation_it10_p1_20261031/dispose_it10.py	2026-10-30 22:38:27.619461346 +0000
++++ b/generation_it10_p1_20261031/dispose_it10.py	2026-10-30 22:51:04.979524725 +0000
+@@ -206,10 +206,9 @@
+     reported, not required: a salt or name twin that has a row is labelled NAME_TWIN_*, because twins are not merged."""
+     me = rd(dr / "ranking_it8_p9_20261029" / "member_evidence.tsv")
+     specific = {}
+-    for f in glob.glob(str(v3_dir / "candidates_Q*.tsv")):
+-        for r in rd(f):
+-            if r["arm"] in ("opposes", "mimics") and r["seed_specific_all_three_nulls"] == "1":
+-                specific.setdefault(norm(r["name"]), []).append((r["question"], r["arm"]))
++    # IT11 P2.1: read the FULL seed-specific list; the candidate tables keep only the top 50 opposes / 25 mimics per set (lithium sat at mimics rank 67 to 70 of 232 in Q6)
++    for r in rd(v3_dir / "v3_seed_specific_all_nulls.tsv"):
++        specific.setdefault(norm(r["name"]), []).append((r["question"], r["arm"]))
+     rows = collections.defaultdict(list)       # token-matchable proposal rows: (question, name, nonzero Q, direct hit)
+     for f in glob.glob(str(v3_dir / "proposals_p1_*tiers*.tsv.gz")):
+         if f.endswith(("_indeg.tsv.gz", "_adm.tsv.gz")):
+--- a/generation_it10_p1_20261031/test_it10_p1.py	2026-10-30 22:38:27.784461821 +0000
++++ b/generation_it10_p1_20261031/test_it10_p1.py	2026-10-30 22:51:41.370618167 +0000
+@@ -225,7 +225,7 @@
+         v3 = DR / "generation_it9_p2_20261030" / "v3" / "results"
+         pf = {r["intervention"].split(",")[0].split(" (")[0]: r for r in dz.phenotype_first(v3, DR, None)}
+         self.assertTrue(pf["Ethosuximide"]["graph_status"].startswith("NO_GRAPH_ROW"))
+-        self.assertTrue(pf["Lithium"]["graph_status"].startswith("NAME_TWIN_SCORED_NOT_SPECIFIC"))     # salts are separate rows, scored, none seed-specific
++        self.assertTrue(pf["Lithium"]["graph_status"].startswith("IN_SEED_SPECIFIC_ARM:Q6"))      # IT11: salts are separate rows; the full list holds them as Q6 mimics
+         self.assertTrue(pf["d-APV"]["graph_status"].startswith("DIRECT_HIT_ZERO_SCORE"))                 # its own molecule, not memantine's score
+         self.assertNotIn("SCORED_NOT_SPECIFIC", pf["Vigabatrin"]["graph_status"])
+         self.assertEqual(pf["Ethosuximide"]["entry"], "PHENOTYPE_FIRST")

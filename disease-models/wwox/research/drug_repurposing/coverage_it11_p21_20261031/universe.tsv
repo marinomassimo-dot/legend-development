@@ -1,0 +1,151 @@
+molecule	family_id	seed_set	question	seed_level	seed_genes	n_signed_targets	n_signed_targets_in_network	direct_any_action_on_seed_gene	in_proposals_table	Q_net_full	Q_net_ind	Q_direct	Z_full_robust	Z_ind_robust	compatible_action
+ethosuximide	FAM:CAT:CHEMBL696	Q1_expression_tiersABC	Q1	expression	WWOX	3	2	0	0						
+ethosuximide	FAM:CAT:DGIDB:6998a1a2d947	Q1_expression_tiersABC	Q1	expression	WWOX	3	2	0	0						
+lithium	FAM:CAT:CHEMBL1201333	Q1_expression_tiersABC	Q1	expression	WWOX	0	0	0	0						
+lithium	FAM:CAT:CHEMBL1200826	Q1_expression_tiersABC	Q1	expression	WWOX	3	2	0	1	0	0	0	0	0	none
+lithium	FAM:CAT:CHEMBL1201170	Q1_expression_tiersABC	Q1	expression	WWOX	3	2	0	1	0	0	0	0	0	none
+lithium	FAM:CAT:CHEMBL3707288	Q1_expression_tiersABC	Q1	expression	WWOX	0	0	0	0						
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Q1_expression_tiersABC	Q1	expression	WWOX	0	0	0	0						
+lithium	FAM:CAT:DGIDB:50ccc7b5c33e	Q1_expression_tiersABC	Q1	expression	WWOX	3	2	0	1	0	0	0	0	0	none
+lithium	FAM:CAT:DGIDB:cfa5bd0a6c8c	Q1_expression_tiersABC	Q1	expression	WWOX	3	2	0	1	0	0	0	0	0	none
+lithium	FAM:CAT:DGIDB:0408436e6031	Q1_expression_tiersABC	Q1	expression	WWOX	0	0	0	0						
+lithium	FAM:CAT:DGIDB:bc9225cea0c7	Q1_expression_tiersABC	Q1	expression	WWOX	0	0	0	0						
+vigabatrin	FAM:CAT:CHEMBL89598	Q1_expression_tiersABC	Q1	expression	WWOX	1	0	0	0						
+vigabatrin	FAM:CAT:DGIDB:358b8a817686	Q1_expression_tiersABC	Q1	expression	WWOX	2	0	0	0						
+d-APV	FAM:CAT:DGIDB:b0ca5cf2303c	Q1_expression_tiersABC	Q1	expression	WWOX	4	4	0	0						
+A51	FAM:CAT:CHEMBL4754493	Q1_expression_tiersABC	Q1	expression	WWOX	0	0	0	0						
+ethosuximide	FAM:CAT:CHEMBL696	Q1_protein_tiersABC	Q1	protein	WWOX	3	2	0	0						
+ethosuximide	FAM:CAT:DGIDB:6998a1a2d947	Q1_protein_tiersABC	Q1	protein	WWOX	3	2	0	0						
+lithium	FAM:CAT:CHEMBL1201333	Q1_protein_tiersABC	Q1	protein	WWOX	0	0	0	0						
+lithium	FAM:CAT:CHEMBL1200826	Q1_protein_tiersABC	Q1	protein	WWOX	3	2	0	0						
+lithium	FAM:CAT:CHEMBL1201170	Q1_protein_tiersABC	Q1	protein	WWOX	3	2	0	0						
+lithium	FAM:CAT:CHEMBL3707288	Q1_protein_tiersABC	Q1	protein	WWOX	0	0	0	0						
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Q1_protein_tiersABC	Q1	protein	WWOX	0	0	0	0						
+lithium	FAM:CAT:DGIDB:50ccc7b5c33e	Q1_protein_tiersABC	Q1	protein	WWOX	3	2	0	0						
+lithium	FAM:CAT:DGIDB:cfa5bd0a6c8c	Q1_protein_tiersABC	Q1	protein	WWOX	3	2	0	0						
+lithium	FAM:CAT:DGIDB:0408436e6031	Q1_protein_tiersABC	Q1	protein	WWOX	0	0	0	0						
+lithium	FAM:CAT:DGIDB:bc9225cea0c7	Q1_protein_tiersABC	Q1	protein	WWOX	0	0	0	0						
+vigabatrin	FAM:CAT:CHEMBL89598	Q1_protein_tiersABC	Q1	protein	WWOX	1	0	0	0						
+vigabatrin	FAM:CAT:DGIDB:358b8a817686	Q1_protein_tiersABC	Q1	protein	WWOX	2	0	0	0						
+d-APV	FAM:CAT:DGIDB:b0ca5cf2303c	Q1_protein_tiersABC	Q1	protein	WWOX	4	4	0	0						
+A51	FAM:CAT:CHEMBL4754493	Q1_protein_tiersABC	Q1	protein	WWOX	0	0	0	0						
+ethosuximide	FAM:CAT:CHEMBL696	Q2_expression_tiersAB	Q2	expression	ALDOA;BNIP3;ENO1;HK2;LDHA;LDHB;PDHA1;PDK1;PFKP;PGK1;PKM;SLC2A1	3	2	0	0						
+ethosuximide	FAM:CAT:DGIDB:6998a1a2d947	Q2_expression_tiersAB	Q2	expression	ALDOA;BNIP3;ENO1;HK2;LDHA;LDHB;PDHA1;PDK1;PFKP;PGK1;PKM;SLC2A1	3	2	0	0						
+lithium	FAM:CAT:CHEMBL1201333	Q2_expression_tiersAB	Q2	expression	ALDOA;BNIP3;ENO1;HK2;LDHA;LDHB;PDHA1;PDK1;PFKP;PGK1;PKM;SLC2A1	0	0	0	0						
+lithium	FAM:CAT:CHEMBL1200826	Q2_expression_tiersAB	Q2	expression	ALDOA;BNIP3;ENO1;HK2;LDHA;LDHB;PDHA1;PDK1;PFKP;PGK1;PKM;SLC2A1	3	2	0	1	-0.000125301	-0.000125301	0	-0.0740236	-0.364285	mimics
+lithium	FAM:CAT:CHEMBL1201170	Q2_expression_tiersAB	Q2	expression	ALDOA;BNIP3;ENO1;HK2;LDHA;LDHB;PDHA1;PDK1;PFKP;PGK1;PKM;SLC2A1	3	2	0	1	-0.000125301	-0.000125301	0	-0.0740236	-0.364285	mimics
+lithium	FAM:CAT:CHEMBL3707288	Q2_expression_tiersAB	Q2	expression	ALDOA;BNIP3;ENO1;HK2;LDHA;LDHB;PDHA1;PDK1;PFKP;PGK1;PKM;SLC2A1	0	0	0	0						
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Q2_expression_tiersAB	Q2	expression	ALDOA;BNIP3;ENO1;HK2;LDHA;LDHB;PDHA1;PDK1;PFKP;PGK1;PKM;SLC2A1	0	0	0	0						
+lithium	FAM:CAT:DGIDB:50ccc7b5c33e	Q2_expression_tiersAB	Q2	expression	ALDOA;BNIP3;ENO1;HK2;LDHA;LDHB;PDHA1;PDK1;PFKP;PGK1;PKM;SLC2A1	3	2	0	1	-0.000125301	-0.000125301	0	-0.0740236	-0.364285	mimics
+lithium	FAM:CAT:DGIDB:cfa5bd0a6c8c	Q2_expression_tiersAB	Q2	expression	ALDOA;BNIP3;ENO1;HK2;LDHA;LDHB;PDHA1;PDK1;PFKP;PGK1;PKM;SLC2A1	3	2	0	1	-0.000125301	-0.000125301	0	-0.0740236	-0.364285	mimics
+lithium	FAM:CAT:DGIDB:0408436e6031	Q2_expression_tiersAB	Q2	expression	ALDOA;BNIP3;ENO1;HK2;LDHA;LDHB;PDHA1;PDK1;PFKP;PGK1;PKM;SLC2A1	0	0	0	0						
+lithium	FAM:CAT:DGIDB:bc9225cea0c7	Q2_expression_tiersAB	Q2	expression	ALDOA;BNIP3;ENO1;HK2;LDHA;LDHB;PDHA1;PDK1;PFKP;PGK1;PKM;SLC2A1	0	0	0	0						
+vigabatrin	FAM:CAT:CHEMBL89598	Q2_expression_tiersAB	Q2	expression	ALDOA;BNIP3;ENO1;HK2;LDHA;LDHB;PDHA1;PDK1;PFKP;PGK1;PKM;SLC2A1	1	0	0	0						
+vigabatrin	FAM:CAT:DGIDB:358b8a817686	Q2_expression_tiersAB	Q2	expression	ALDOA;BNIP3;ENO1;HK2;LDHA;LDHB;PDHA1;PDK1;PFKP;PGK1;PKM;SLC2A1	2	0	0	0						
+d-APV	FAM:CAT:DGIDB:b0ca5cf2303c	Q2_expression_tiersAB	Q2	expression	ALDOA;BNIP3;ENO1;HK2;LDHA;LDHB;PDHA1;PDK1;PFKP;PGK1;PKM;SLC2A1	4	4	0	0						
+A51	FAM:CAT:CHEMBL4754493	Q2_expression_tiersAB	Q2	expression	ALDOA;BNIP3;ENO1;HK2;LDHA;LDHB;PDHA1;PDK1;PFKP;PGK1;PKM;SLC2A1	0	0	0	0						
+ethosuximide	FAM:CAT:CHEMBL696	Q3_expression_tiersAB	Q3	expression	ASNS;ATF5;CHAC1;DDIT3;GADD45A;PCK2;PHGDH;PSAT1;PSPH;SESN2;SLC7A11;TRIB3	3	2	0	0						
+ethosuximide	FAM:CAT:DGIDB:6998a1a2d947	Q3_expression_tiersAB	Q3	expression	ASNS;ATF5;CHAC1;DDIT3;GADD45A;PCK2;PHGDH;PSAT1;PSPH;SESN2;SLC7A11;TRIB3	3	2	0	0						
+lithium	FAM:CAT:CHEMBL1201333	Q3_expression_tiersAB	Q3	expression	ASNS;ATF5;CHAC1;DDIT3;GADD45A;PCK2;PHGDH;PSAT1;PSPH;SESN2;SLC7A11;TRIB3	0	0	0	0						
+lithium	FAM:CAT:CHEMBL1200826	Q3_expression_tiersAB	Q3	expression	ASNS;ATF5;CHAC1;DDIT3;GADD45A;PCK2;PHGDH;PSAT1;PSPH;SESN2;SLC7A11;TRIB3	3	2	0	1	0	0	0	0	0	none
+lithium	FAM:CAT:CHEMBL1201170	Q3_expression_tiersAB	Q3	expression	ASNS;ATF5;CHAC1;DDIT3;GADD45A;PCK2;PHGDH;PSAT1;PSPH;SESN2;SLC7A11;TRIB3	3	2	0	1	0	0	0	0	0	none
+lithium	FAM:CAT:CHEMBL3707288	Q3_expression_tiersAB	Q3	expression	ASNS;ATF5;CHAC1;DDIT3;GADD45A;PCK2;PHGDH;PSAT1;PSPH;SESN2;SLC7A11;TRIB3	0	0	0	0						
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Q3_expression_tiersAB	Q3	expression	ASNS;ATF5;CHAC1;DDIT3;GADD45A;PCK2;PHGDH;PSAT1;PSPH;SESN2;SLC7A11;TRIB3	0	0	0	0						
+lithium	FAM:CAT:DGIDB:50ccc7b5c33e	Q3_expression_tiersAB	Q3	expression	ASNS;ATF5;CHAC1;DDIT3;GADD45A;PCK2;PHGDH;PSAT1;PSPH;SESN2;SLC7A11;TRIB3	3	2	0	1	0	0	0	0	0	none
+lithium	FAM:CAT:DGIDB:cfa5bd0a6c8c	Q3_expression_tiersAB	Q3	expression	ASNS;ATF5;CHAC1;DDIT3;GADD45A;PCK2;PHGDH;PSAT1;PSPH;SESN2;SLC7A11;TRIB3	3	2	0	1	0	0	0	0	0	none
+lithium	FAM:CAT:DGIDB:0408436e6031	Q3_expression_tiersAB	Q3	expression	ASNS;ATF5;CHAC1;DDIT3;GADD45A;PCK2;PHGDH;PSAT1;PSPH;SESN2;SLC7A11;TRIB3	0	0	0	0						
+lithium	FAM:CAT:DGIDB:bc9225cea0c7	Q3_expression_tiersAB	Q3	expression	ASNS;ATF5;CHAC1;DDIT3;GADD45A;PCK2;PHGDH;PSAT1;PSPH;SESN2;SLC7A11;TRIB3	0	0	0	0						
+vigabatrin	FAM:CAT:CHEMBL89598	Q3_expression_tiersAB	Q3	expression	ASNS;ATF5;CHAC1;DDIT3;GADD45A;PCK2;PHGDH;PSAT1;PSPH;SESN2;SLC7A11;TRIB3	1	0	0	0						
+vigabatrin	FAM:CAT:DGIDB:358b8a817686	Q3_expression_tiersAB	Q3	expression	ASNS;ATF5;CHAC1;DDIT3;GADD45A;PCK2;PHGDH;PSAT1;PSPH;SESN2;SLC7A11;TRIB3	2	0	0	0						
+d-APV	FAM:CAT:DGIDB:b0ca5cf2303c	Q3_expression_tiersAB	Q3	expression	ASNS;ATF5;CHAC1;DDIT3;GADD45A;PCK2;PHGDH;PSAT1;PSPH;SESN2;SLC7A11;TRIB3	4	4	0	0						
+A51	FAM:CAT:CHEMBL4754493	Q3_expression_tiersAB	Q3	expression	ASNS;ATF5;CHAC1;DDIT3;GADD45A;PCK2;PHGDH;PSAT1;PSPH;SESN2;SLC7A11;TRIB3	0	0	0	0						
+ethosuximide	FAM:CAT:CHEMBL696	Q4_expression_tiersAB	Q4	expression	GRIN2C;GRM3;KCNA2;NPY	3	2	0	0						
+ethosuximide	FAM:CAT:DGIDB:6998a1a2d947	Q4_expression_tiersAB	Q4	expression	GRIN2C;GRM3;KCNA2;NPY	3	2	0	0						
+lithium	FAM:CAT:CHEMBL1201333	Q4_expression_tiersAB	Q4	expression	GRIN2C;GRM3;KCNA2;NPY	0	0	0	0						
+lithium	FAM:CAT:CHEMBL1200826	Q4_expression_tiersAB	Q4	expression	GRIN2C;GRM3;KCNA2;NPY	3	2	0	0						
+lithium	FAM:CAT:CHEMBL1201170	Q4_expression_tiersAB	Q4	expression	GRIN2C;GRM3;KCNA2;NPY	3	2	0	0						
+lithium	FAM:CAT:CHEMBL3707288	Q4_expression_tiersAB	Q4	expression	GRIN2C;GRM3;KCNA2;NPY	0	0	0	0						
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Q4_expression_tiersAB	Q4	expression	GRIN2C;GRM3;KCNA2;NPY	0	0	0	0						
+lithium	FAM:CAT:DGIDB:50ccc7b5c33e	Q4_expression_tiersAB	Q4	expression	GRIN2C;GRM3;KCNA2;NPY	3	2	0	0						
+lithium	FAM:CAT:DGIDB:cfa5bd0a6c8c	Q4_expression_tiersAB	Q4	expression	GRIN2C;GRM3;KCNA2;NPY	3	2	0	0						
+lithium	FAM:CAT:DGIDB:0408436e6031	Q4_expression_tiersAB	Q4	expression	GRIN2C;GRM3;KCNA2;NPY	0	0	0	0						
+lithium	FAM:CAT:DGIDB:bc9225cea0c7	Q4_expression_tiersAB	Q4	expression	GRIN2C;GRM3;KCNA2;NPY	0	0	0	0						
+vigabatrin	FAM:CAT:CHEMBL89598	Q4_expression_tiersAB	Q4	expression	GRIN2C;GRM3;KCNA2;NPY	1	0	0	0						
+vigabatrin	FAM:CAT:DGIDB:358b8a817686	Q4_expression_tiersAB	Q4	expression	GRIN2C;GRM3;KCNA2;NPY	2	0	0	0						
+d-APV	FAM:CAT:DGIDB:b0ca5cf2303c	Q4_expression_tiersAB	Q4	expression	GRIN2C;GRM3;KCNA2;NPY	4	4	1	1	-0.5	0	-0.5	-15.7797	0	mimics
+A51	FAM:CAT:CHEMBL4754493	Q4_expression_tiersAB	Q4	expression	GRIN2C;GRM3;KCNA2;NPY	0	0	0	0						
+ethosuximide	FAM:CAT:CHEMBL696	Q4_protein_tiersAB	Q4	protein	GAD1;GAD2	3	2	0	0						
+ethosuximide	FAM:CAT:DGIDB:6998a1a2d947	Q4_protein_tiersAB	Q4	protein	GAD1;GAD2	3	2	0	0						
+lithium	FAM:CAT:CHEMBL1201333	Q4_protein_tiersAB	Q4	protein	GAD1;GAD2	0	0	0	0						
+lithium	FAM:CAT:CHEMBL1200826	Q4_protein_tiersAB	Q4	protein	GAD1;GAD2	3	2	0	0						
+lithium	FAM:CAT:CHEMBL1201170	Q4_protein_tiersAB	Q4	protein	GAD1;GAD2	3	2	0	0						
+lithium	FAM:CAT:CHEMBL3707288	Q4_protein_tiersAB	Q4	protein	GAD1;GAD2	0	0	0	0						
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Q4_protein_tiersAB	Q4	protein	GAD1;GAD2	0	0	0	0						
+lithium	FAM:CAT:DGIDB:50ccc7b5c33e	Q4_protein_tiersAB	Q4	protein	GAD1;GAD2	3	2	0	0						
+lithium	FAM:CAT:DGIDB:cfa5bd0a6c8c	Q4_protein_tiersAB	Q4	protein	GAD1;GAD2	3	2	0	0						
+lithium	FAM:CAT:DGIDB:0408436e6031	Q4_protein_tiersAB	Q4	protein	GAD1;GAD2	0	0	0	0						
+lithium	FAM:CAT:DGIDB:bc9225cea0c7	Q4_protein_tiersAB	Q4	protein	GAD1;GAD2	0	0	0	0						
+vigabatrin	FAM:CAT:CHEMBL89598	Q4_protein_tiersAB	Q4	protein	GAD1;GAD2	1	0	0	0						
+vigabatrin	FAM:CAT:DGIDB:358b8a817686	Q4_protein_tiersAB	Q4	protein	GAD1;GAD2	2	0	0	0						
+d-APV	FAM:CAT:DGIDB:b0ca5cf2303c	Q4_protein_tiersAB	Q4	protein	GAD1;GAD2	4	4	0	0						
+A51	FAM:CAT:CHEMBL4754493	Q4_protein_tiersAB	Q4	protein	GAD1;GAD2	0	0	0	0						
+ethosuximide	FAM:CAT:CHEMBL696	Q5_expression_tiersAB	Q5	expression	IL1B;IL6;TNF	3	2	0	0						
+ethosuximide	FAM:CAT:DGIDB:6998a1a2d947	Q5_expression_tiersAB	Q5	expression	IL1B;IL6;TNF	3	2	0	0						
+lithium	FAM:CAT:CHEMBL1201333	Q5_expression_tiersAB	Q5	expression	IL1B;IL6;TNF	0	0	0	0						
+lithium	FAM:CAT:CHEMBL1200826	Q5_expression_tiersAB	Q5	expression	IL1B;IL6;TNF	3	2	0	1	0.000204803	0.000204803	0	-0.0359941	1.07561	opposes
+lithium	FAM:CAT:CHEMBL1201170	Q5_expression_tiersAB	Q5	expression	IL1B;IL6;TNF	3	2	0	1	0.000204803	0.000204803	0	-0.0359941	1.07561	opposes
+lithium	FAM:CAT:CHEMBL3707288	Q5_expression_tiersAB	Q5	expression	IL1B;IL6;TNF	0	0	0	0						
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Q5_expression_tiersAB	Q5	expression	IL1B;IL6;TNF	0	0	1	0						
+lithium	FAM:CAT:DGIDB:50ccc7b5c33e	Q5_expression_tiersAB	Q5	expression	IL1B;IL6;TNF	3	2	0	1	0.000204803	0.000204803	0	-0.0359941	1.07561	opposes
+lithium	FAM:CAT:DGIDB:cfa5bd0a6c8c	Q5_expression_tiersAB	Q5	expression	IL1B;IL6;TNF	3	2	0	1	0.000204803	0.000204803	0	-0.0359941	1.07561	opposes
+lithium	FAM:CAT:DGIDB:0408436e6031	Q5_expression_tiersAB	Q5	expression	IL1B;IL6;TNF	0	0	0	0						
+lithium	FAM:CAT:DGIDB:bc9225cea0c7	Q5_expression_tiersAB	Q5	expression	IL1B;IL6;TNF	0	0	0	0						
+vigabatrin	FAM:CAT:CHEMBL89598	Q5_expression_tiersAB	Q5	expression	IL1B;IL6;TNF	1	0	0	0						
+vigabatrin	FAM:CAT:DGIDB:358b8a817686	Q5_expression_tiersAB	Q5	expression	IL1B;IL6;TNF	2	0	0	0						
+d-APV	FAM:CAT:DGIDB:b0ca5cf2303c	Q5_expression_tiersAB	Q5	expression	IL1B;IL6;TNF	4	4	0	0						
+A51	FAM:CAT:CHEMBL4754493	Q5_expression_tiersAB	Q5	expression	IL1B;IL6;TNF	0	0	0	0						
+ethosuximide	FAM:CAT:CHEMBL696	Q6_expression_tiersAB	Q6	expression	MYC	3	2	0	0						
+ethosuximide	FAM:CAT:DGIDB:6998a1a2d947	Q6_expression_tiersAB	Q6	expression	MYC	3	2	0	0						
+lithium	FAM:CAT:CHEMBL1201333	Q6_expression_tiersAB	Q6	expression	MYC	0	0	0	0						
+lithium	FAM:CAT:CHEMBL1200826	Q6_expression_tiersAB	Q6	expression	MYC	3	2	0	1	-0.00121816	-0.00121816	0	-0.0915983	-12.1246	mimics
+lithium	FAM:CAT:CHEMBL1201170	Q6_expression_tiersAB	Q6	expression	MYC	3	2	0	1	-0.00121816	-0.00121816	0	-0.0915983	-12.1246	mimics
+lithium	FAM:CAT:CHEMBL3707288	Q6_expression_tiersAB	Q6	expression	MYC	0	0	0	0						
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Q6_expression_tiersAB	Q6	expression	MYC	0	0	1	0						
+lithium	FAM:CAT:DGIDB:50ccc7b5c33e	Q6_expression_tiersAB	Q6	expression	MYC	3	2	0	1	-0.00121816	-0.00121816	0	-0.0915983	-12.1246	mimics
+lithium	FAM:CAT:DGIDB:cfa5bd0a6c8c	Q6_expression_tiersAB	Q6	expression	MYC	3	2	0	1	-0.00121816	-0.00121816	0	-0.0915983	-12.1246	mimics
+lithium	FAM:CAT:DGIDB:0408436e6031	Q6_expression_tiersAB	Q6	expression	MYC	0	0	0	0						
+lithium	FAM:CAT:DGIDB:bc9225cea0c7	Q6_expression_tiersAB	Q6	expression	MYC	0	0	0	0						
+vigabatrin	FAM:CAT:CHEMBL89598	Q6_expression_tiersAB	Q6	expression	MYC	1	0	0	0						
+vigabatrin	FAM:CAT:DGIDB:358b8a817686	Q6_expression_tiersAB	Q6	expression	MYC	2	0	0	0						
+d-APV	FAM:CAT:DGIDB:b0ca5cf2303c	Q6_expression_tiersAB	Q6	expression	MYC	4	4	0	0						
+A51	FAM:CAT:CHEMBL4754493	Q6_expression_tiersAB	Q6	expression	MYC	0	0	0	0						
+ethosuximide	FAM:CAT:CHEMBL696	Q6_protein_tiersAB	Q6	protein	MYC	3	2	0	0						
+ethosuximide	FAM:CAT:DGIDB:6998a1a2d947	Q6_protein_tiersAB	Q6	protein	MYC	3	2	0	0						
+lithium	FAM:CAT:CHEMBL1201333	Q6_protein_tiersAB	Q6	protein	MYC	0	0	0	0						
+lithium	FAM:CAT:CHEMBL1200826	Q6_protein_tiersAB	Q6	protein	MYC	3	2	0	0						
+lithium	FAM:CAT:CHEMBL1201170	Q6_protein_tiersAB	Q6	protein	MYC	3	2	0	0						
+lithium	FAM:CAT:CHEMBL3707288	Q6_protein_tiersAB	Q6	protein	MYC	0	0	0	0						
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Q6_protein_tiersAB	Q6	protein	MYC	0	0	1	0						
+lithium	FAM:CAT:DGIDB:50ccc7b5c33e	Q6_protein_tiersAB	Q6	protein	MYC	3	2	0	0						
+lithium	FAM:CAT:DGIDB:cfa5bd0a6c8c	Q6_protein_tiersAB	Q6	protein	MYC	3	2	0	0						
+lithium	FAM:CAT:DGIDB:0408436e6031	Q6_protein_tiersAB	Q6	protein	MYC	0	0	0	0						
+lithium	FAM:CAT:DGIDB:bc9225cea0c7	Q6_protein_tiersAB	Q6	protein	MYC	0	0	0	0						
+vigabatrin	FAM:CAT:CHEMBL89598	Q6_protein_tiersAB	Q6	protein	MYC	1	0	0	0						
+vigabatrin	FAM:CAT:DGIDB:358b8a817686	Q6_protein_tiersAB	Q6	protein	MYC	2	0	0	0						
+d-APV	FAM:CAT:DGIDB:b0ca5cf2303c	Q6_protein_tiersAB	Q6	protein	MYC	4	4	0	0						
+A51	FAM:CAT:CHEMBL4754493	Q6_protein_tiersAB	Q6	protein	MYC	0	0	0	0						
+ethosuximide	FAM:CAT:CHEMBL696	Q7_phospho_tiersAB	Q7	protein	GSK3B	3	2	0	0						
+ethosuximide	FAM:CAT:DGIDB:6998a1a2d947	Q7_phospho_tiersAB	Q7	protein	GSK3B	3	2	0	0						
+lithium	FAM:CAT:CHEMBL1201333	Q7_phospho_tiersAB	Q7	protein	GSK3B	0	0	0	0						
+lithium	FAM:CAT:CHEMBL1200826	Q7_phospho_tiersAB	Q7	protein	GSK3B	3	2	1	1	0	0	0	0	0	none
+lithium	FAM:CAT:CHEMBL1201170	Q7_phospho_tiersAB	Q7	protein	GSK3B	3	2	1	1	0	0	0	0	0	none
+lithium	FAM:CAT:CHEMBL3707288	Q7_phospho_tiersAB	Q7	protein	GSK3B	0	0	0	0						
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Q7_phospho_tiersAB	Q7	protein	GSK3B	0	0	0	0						
+lithium	FAM:CAT:DGIDB:50ccc7b5c33e	Q7_phospho_tiersAB	Q7	protein	GSK3B	3	2	1	1	0	0	0	0	0	none
+lithium	FAM:CAT:DGIDB:cfa5bd0a6c8c	Q7_phospho_tiersAB	Q7	protein	GSK3B	3	2	1	1	0	0	0	0	0	none
+lithium	FAM:CAT:DGIDB:0408436e6031	Q7_phospho_tiersAB	Q7	protein	GSK3B	0	0	0	0						
+lithium	FAM:CAT:DGIDB:bc9225cea0c7	Q7_phospho_tiersAB	Q7	protein	GSK3B	0	0	0	0						
+vigabatrin	FAM:CAT:CHEMBL89598	Q7_phospho_tiersAB	Q7	protein	GSK3B	1	0	0	0						
+vigabatrin	FAM:CAT:DGIDB:358b8a817686	Q7_phospho_tiersAB	Q7	protein	GSK3B	2	0	0	0						
+d-APV	FAM:CAT:DGIDB:b0ca5cf2303c	Q7_phospho_tiersAB	Q7	protein	GSK3B	4	4	0	0						
+A51	FAM:CAT:CHEMBL4754493	Q7_phospho_tiersAB	Q7	protein	GSK3B	0	0	0	0						
