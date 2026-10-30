@@ -9,7 +9,7 @@
  "BASELINE": "cc4d629b021ff33b82c88a8359fcaccc53bf8e6d = development/main (verified equal after fetch; CI success on that SHA)",
  "AUTHORISED_QUEUE_20261031B": {
   "MANDATE_STATE": "OPEN",
-  "P1_ENGINE": {
+  "OBJ_P1_ENGINE": {
    "order": 1,
    "steps": [
     {
@@ -38,7 +38,7 @@
     }
    ]
   },
-  "P2_SCIENCE": {
+  "OBJ_P2_SCIENCE": {
    "order": 2,
    "steps": [
     {
@@ -73,7 +73,7 @@
     }
    ]
   },
-  "P3_COMPLEMENTARY": {
+  "OBJ_P3_COMPLEMENTARY": {
    "order": 3,
    "steps": [
     {
@@ -84,7 +84,7 @@
     }
    ]
   },
-  "P4_PROPAGATION": {
+  "OBJ_P4_PROPAGATION": {
    "order": 4,
    "steps": [
     {
@@ -95,7 +95,7 @@
     }
    ]
   },
-  "P5_OPERATIONS": {
+  "OBJ_P5_OPERATIONS": {
    "order": 5,
    "steps": [
     {
@@ -106,7 +106,7 @@
     }
    ]
   },
-  "CLOSE": {
+  "OBJ_CLOSE": {
    "order": 6,
    "steps": [
     {
