@@ -5,8 +5,8 @@
   "pmid": "16847353",
   "doi": "10.1101/gad.1450406"
  },
- "event_at": "2026-10-30T13:00:00Z",
- "analysis_at": "2026-10-30T13:00:00Z",
+ "event_at": "2026-10-30T12:15:10Z",
+ "analysis_at": "2026-10-30T00:00:00Z",
  "analysis_time_precision": "minute",
  "workflow": "scientist-b4, IT9 P4c-e. Palomero et al. 2006 (c-Myc is a direct target of Notch1 in T-ALL). Question: what does the SIGNOR record NOTCH1_NOTCH3_RBPJ -> MYC (sign +) describe, does it test NOTCH3, and does a gamma-secretase inhibitor change the MYC transcript? The PMC article page (HTML) rendered to plain text (a derived surface); Abstract, Introduction, all Results and the Discussion were read; Methods and references were not read; supplementary tables were not held.",
  "evidence_depth": "partial_fulltext_read",

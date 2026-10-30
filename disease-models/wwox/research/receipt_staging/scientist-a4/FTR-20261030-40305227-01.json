@@ -5,7 +5,7 @@
   "pmid": "40305227",
   "doi": "10.3390/biom15040528"
  },
- "analysis_at": "2026-10-30T13:00:00Z",
+ "analysis_at": "2026-10-30T00:00:00Z",
  "analysis_time_precision": "minute",
  "workflow": "scientist-a4, IT9 P4c-D, candidate apabetalone (BET axis). Question: does the BRD4 -> TNF network edge (and BET inhibition of IL1B/IL6/TNF transcripts) have a reading in microglia, and what are the stated limits? Main text read from the Introduction through the Conclusions via the PubMed Central full-text service (text only); the Europe PMC JATS copy of the same article (CC BY) was then saved locally and its figure legends 1 to 6 read; figure images and the Supplementary material were NOT opened. Every statement is class level (JQ1, a tool pan-BET inhibitor, in a mouse BV2 line) and is not evidence about apabetalone or about WWOX.",
  "evidence_depth": "partial_fulltext_read",
@@ -33,5 +33,5 @@
  ],
  "prior_receipt": null,
  "reread_reason": "first_read",
- "event_at": "2026-10-30T13:00:00Z"
+ "event_at": "2026-10-30T12:15:10Z"
 }

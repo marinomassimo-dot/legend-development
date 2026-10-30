@@ -5,8 +5,8 @@
   "pmid": "10922063",
   "doi": "10.1073/pnas.97.16.9082"
  },
- "event_at": "2026-10-30T13:00:00Z",
- "analysis_at": "2026-10-30T13:00:00Z",
+ "event_at": "2026-10-30T12:15:10Z",
+ "analysis_at": "2026-10-30T00:00:00Z",
  "analysis_time_precision": "minute",
  "workflow": "scientist-b4, IT9 P4c-e. Bruick 2000 (Nip3/BNIP3 is induced by hypoxia through HIF-1). Question: what does the primary record behind HIF1A -> BNIP3 describe (cells, level, sign), and do hypoxia mimetics reach BNIP3 and GLUT-1 transcripts? The PMC article page (HTML) rendered to plain text (a derived surface); the whole body (Abstract, Experimental Procedures, Results, Discussion) was read; figures were read as captions only; the reference list was not read.",
  "evidence_depth": "partial_fulltext_read",

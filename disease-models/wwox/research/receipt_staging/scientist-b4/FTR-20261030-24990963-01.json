@@ -5,8 +5,8 @@
   "pmid": "24990963",
   "doi": "10.1101/gad.242131.114"
  },
- "event_at": "2026-10-30T13:00:00Z",
- "analysis_at": "2026-10-30T13:00:00Z",
+ "event_at": "2026-10-30T12:15:10Z",
+ "analysis_at": "2026-10-30T00:00:00Z",
  "analysis_time_precision": "minute",
  "workflow": "scientist-b4, IT9 P4c-e. Zheng et al. 2014 (EglN2 hydroxylates FOXO3a). Question: what does the SIGNOR record EGLN2 -> FOXO3 (sign -) describe, in which cells and at which level, and does it bear on a transcript seed (SLC2A1, BNIP3) and on a prolyl hydroxylase inhibitor (roxadustat)? Europe PMC full-text XML rendered to plain text (a derived surface); Abstract, Introduction, all Results and the Discussion were read; the Methods were read in part (plasmids, cell lines); references and the Supplemental figures were not read.",
  "evidence_depth": "partial_fulltext_read",
