@@ -1,0 +1,10 @@
+seed_set	non_zero_v2	non_zero_v3	specific_opposes_v2	specific_opposes_v3	v2_opposes_surviving_in_v3	lost_by_edge_mode_F1	lost_by_identity_F2_only	lost_other_or_both	moved_to_flagged_F3	specific_mimics_v2	specific_mimics_v3	v2_mimics_surviving_in_v3	new_in_v3_opposes	new_in_v3_mimics	specific_opposes_v3_all_three_nulls	specific_mimics_v3_all_three_nulls	v2_opposes_surviving_all_three	v2_mimics_surviving_all_three
+Q1_expression_tiersABC	2190	1305	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Q2_expression_tiersAB	4935	2454	53	62	37	11	0	4	1	71	71	8	25	63	46	20	34	2
+Q3_expression_tiersAB	4962	2599	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Q4_expression_tiersAB	2701	1502	0	72	0	0	0	0	0	0	25	0	72	25	60	24	0	0
+Q4_protein_tiersAB	2828	1	47	0	0	35	0	12	0	5	0	0	0	0	0	0	0	0
+Q5_expression_tiersAB	5187	2867	115	274	104	9	0	0	2	45	244	43	170	201	189	166	67	29
+Q6_expression_tiersAB	3219	2628	332	431	205	102	0	2	23	159	309	116	226	193	296	247	163	79
+Q6_protein_tiersAB	3219	1005	332	122	92	237	0	2	1	159	67	43	30	24	118	59	90	40
+Q7_phospho_tiersAB	4235	2017	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0

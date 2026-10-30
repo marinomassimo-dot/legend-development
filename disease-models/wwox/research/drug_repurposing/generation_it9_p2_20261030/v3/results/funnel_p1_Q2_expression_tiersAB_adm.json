@@ -1,0 +1,19 @@
+{
+ "catalogued_families": 40268,
+ "resolved_identity_families": 16475,
+ "mnet_usable_families": 13308,
+ "mnet_usable_with_a_gene_symbol": 13306,
+ "mnet_usable_with_target_in_graph": 12560,
+ "declared_universe_families": null,
+ "declared_universe_in_mnet_usable_with_symbol": null,
+ "examined": 12560,
+ "examined_with_nonzero_net_full": 2351,
+ "examined_with_nonzero_in_any_arm": 2454,
+ "examined_hit_a_seed_gene_with_any_action": 28,
+ "conflicting_target_actions_dropped": 5,
+ "seed_units": 17,
+ "seed_units_in_graph": 17,
+ "null_sets_for_z": 500,
+ "z_sd_floor_full_Uplus": 0.009989994994993739,
+ "units": "families (catalogue records joined by parent/InChIKey block; NOT distinct drugs)"
+}

@@ -1,0 +1,344 @@
+{
+ "label": "p1_Q2_expression_tiersAB_adm",
+ "seeds": "../seeds_p1/Q2_expression_tiersAB.tsv",
+ "n_seed_units": 17,
+ "n_defined": 15,
+ "n_uncertain": 2,
+ "examined_families": 12560,
+ "T1": {
+  "a_zero_seeds_max_abs_Q": 0.0,
+  "b_scale_max_abs_err": 5.551115123125783e-17,
+  "c_decomposition_max_abs_err": 1.3877787807814457e-17,
+  "d_defined_seeds_with_effect": 15,
+  "d_inert_defined_seeds": [],
+  "d_inert_units_any_direction": [],
+  "PASS": true
+ },
+ "T2": {
+  "a_n_null": 1000,
+  "a_spearman_real_vs_null_median": 0.21326909746760286,
+  "a_spearman_p5_p95": [
+   -0.04248176634536466,
+   0.4035499185663941
+  ],
+  "a_top100_overlap_median": 0.0,
+  "a_top100_overlap_p5_p95": [
+   0.0,
+   26.0
+  ],
+  "a_effect_size_1_minus_rho_median": 0.7867309025323972,
+  "a_families_abs_z_gt3": 10,
+  "a_families_nonzero": 2454,
+  "z_spearman_real_vs_null_median": 0.8589457294456467,
+  "z_top100_overlap_median": 9.0,
+  "z_top100_overlap_p5_p95": [
+   0.0,
+   46.0
+  ],
+  "b_sign_shuffle_median_spearman": 1.0,
+  "b_sign_shuffle_p5_p95": [
+   1.0,
+   1.0
+  ],
+  "b_sign_shuffle_identical_to_real": 1000,
+  "b_defined_seed_signs_up_down": [
+   15,
+   0
+  ],
+  "c_decoy_n_genes": 10,
+  "c_decoy_genes_in_graph": 9,
+  "c_decoy_spearman_with_real": -0.09302209158913502,
+  "c_decoy_top100_overlap_with_real": 0,
+  "criteria_met_a_rho_a_top100_b_shuffle_c_decoy": [
+   true,
+   true,
+   false,
+   true
+  ],
+  "PASS": false,
+  "z_arm_criteria_met_rho_top100": [
+   false,
+   true
+  ]
+ },
+ "T3": {
+  "a_firewall": "seed classes checked at load (evidence_class in ['activity_state', 'phenotype_state', 'protein_state', 'transcript_contrast']); none refused",
+  "a_seed_gene_equals_probe_name": [],
+  "b_seed_units_total": 17,
+  "b_seed_units_in_graph": 17,
+  "b_seed_genes_missing_from_graph": [],
+  "b_distinct_signed_target_symbols": 2373,
+  "b_target_symbols_in_graph": 1882,
+  "b_mnet_usable_families_without_gene_symbol": 2,
+  "b_restricted_universe_families": 11091,
+  "b_restricted_vs_all_spearman": 1.0,
+  "b_restricted_check_note": "near-tautological by construction (a family whose every target is in the graph has the same score in any engine); the informative diagnostics are the next lines",
+  "b_norm_all_targets_vs_ingraph_only_spearman": 0.9999973306245012,
+  "b_rows_chembl_only_families": 2961,
+  "b_rows_chembl_only_spearman_with_all_rows": 0.9941339287817592,
+  "b_rows_nonchembl_only_families": 9699,
+  "b_rows_nonchembl_only_spearman_with_all_rows": 0.9888654589348966,
+  "c_probes": [
+   {
+    "family_id": "FAM:CAT:CHEMBL1072",
+    "name": "BUMETANIDE",
+    "status": "examined",
+    "Q_defined": 0.0,
+    "Q_Uplus": 0.0,
+    "Q_Uminus": 0.0,
+    "percentile_defined_arm": 0.5136544585987262,
+    "percentile_Uplus": 0.5097929936305733,
+    "percentile_Uminus": 0.5020700636942675,
+    "own_target_seeds": [],
+    "hop0_share_of_abs_Q_defined": 0.0,
+    "flag": ""
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL1096",
+    "name": "AMLEXANOX",
+    "status": "examined",
+    "Q_defined": 0.0,
+    "Q_Uplus": 0.0,
+    "Q_Uminus": 0.0,
+    "percentile_defined_arm": 0.5136544585987262,
+    "percentile_Uplus": 0.5097929936305733,
+    "percentile_Uminus": 0.5020700636942675,
+    "own_target_seeds": [],
+    "hop0_share_of_abs_Q_defined": 0.0,
+    "flag": ""
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL1201333",
+    "name": "LITHIUM",
+    "status": "not_examined (no signed target with a gene symbol in the graph)"
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL1214124",
+    "name": "PERAMPANEL",
+    "status": "examined",
+    "Q_defined": 0.0,
+    "Q_Uplus": 0.0,
+    "Q_Uminus": 0.0,
+    "percentile_defined_arm": 0.5136544585987262,
+    "percentile_Uplus": 0.5097929936305733,
+    "percentile_Uminus": 0.5020700636942675,
+    "own_target_seeds": [],
+    "hop0_share_of_abs_Q_defined": 0.0,
+    "flag": ""
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL1469",
+    "name": "PHENYLBUTANOIC ACID",
+    "status": "not_examined (no signed target with a gene symbol in the graph)"
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL146927",
+    "name": "CPP-115 FREE BASE",
+    "status": "not_examined (no signed target with a gene symbol in the graph)"
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL1650595",
+    "name": "AR-12",
+    "status": "examined",
+    "Q_defined": -5.2607025020657e-05,
+    "Q_Uplus": -5.2607025020657e-05,
+    "Q_Uminus": -5.2607025020657e-05,
+    "percentile_defined_arm": 0.05943471337579618,
+    "percentile_Uplus": 0.05760350318471338,
+    "percentile_Uminus": 0.06349522292993631,
+    "own_target_seeds": [],
+    "hop0_share_of_abs_Q_defined": 0.0,
+    "flag": ""
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL1699",
+    "name": "MEMANTINE HYDROCHLORIDE",
+    "status": "examined",
+    "Q_defined": 0.0,
+    "Q_Uplus": 0.0,
+    "Q_Uminus": 0.0,
+    "percentile_defined_arm": 0.5136544585987262,
+    "percentile_Uplus": 0.5097929936305733,
+    "percentile_Uminus": 0.5020700636942675,
+    "own_target_seeds": [],
+    "hop0_share_of_abs_Q_defined": 0.0,
+    "flag": ""
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL190461",
+    "name": "CANNABIDIOL",
+    "status": "examined",
+    "Q_defined": 0.0,
+    "Q_Uplus": 0.0,
+    "Q_Uminus": 0.0,
+    "percentile_defined_arm": 0.5136544585987262,
+    "percentile_Uplus": 0.5097929936305733,
+    "percentile_Uminus": 0.5020700636942675,
+    "own_target_seeds": [],
+    "hop0_share_of_abs_Q_defined": 0.0,
+    "flag": ""
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL1983350",
+    "name": "STIRIPENTOL",
+    "status": "not_examined (no signed target with a gene symbol in the graph)"
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL256997",
+    "name": "ATALUREN",
+    "status": "not_examined (no signed target with a gene symbol in the graph)"
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL306823",
+    "name": "SODIUM DICHLOROACETATE",
+    "status": "examined",
+    "Q_defined": 0.0,
+    "Q_Uplus": 0.5,
+    "Q_Uminus": -0.5,
+    "percentile_defined_arm": 0.5136544585987262,
+    "percentile_Uplus": 0.9998009554140127,
+    "percentile_Uminus": 0.00019904458598726116,
+    "own_target_seeds": [
+     "PDK1"
+    ],
+    "hop0_share_of_abs_Q_defined": 0.0,
+    "percentile_defined_after_leave_own_target_out": 0.5136544585987262,
+    "percentile_Uplus_after": 0.5132563694267516,
+    "percentile_Uminus_after": 0.5119824840764331,
+    "flag": "RECOVERED_ONLY_VIA_OWN_TARGET"
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL3407862",
+    "name": "None",
+    "status": "not_examined (no signed target with a gene symbol in the graph)"
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL413",
+    "name": "SIROLIMUS",
+    "status": "examined",
+    "Q_defined": 0.0,
+    "Q_Uplus": 0.0,
+    "Q_Uminus": 0.0,
+    "percentile_defined_arm": 0.5136544585987262,
+    "percentile_Uplus": 0.5097929936305733,
+    "percentile_Uminus": 0.5020700636942675,
+    "own_target_seeds": [],
+    "hop0_share_of_abs_Q_defined": 0.0,
+    "flag": ""
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL4217292",
+    "name": "APINOCALTAMIDE",
+    "status": "examined",
+    "Q_defined": 0.0,
+    "Q_Uplus": 0.0,
+    "Q_Uminus": 0.0,
+    "percentile_defined_arm": 0.5136544585987262,
+    "percentile_Uplus": 0.5097929936305733,
+    "percentile_Uminus": 0.5020700636942675,
+    "own_target_seeds": [],
+    "hop0_share_of_abs_Q_defined": 0.0,
+    "flag": ""
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL4594338",
+    "name": "NEDOSIRAN SODIUM",
+    "status": "not_examined (no signed target with a gene symbol in the graph)"
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL574737",
+    "name": "UCN-01",
+    "status": "examined",
+    "Q_defined": -0.0008602697726905783,
+    "Q_Uplus": -0.0007938946629227358,
+    "Q_Uminus": -0.0009266448824584208,
+    "percentile_defined_arm": 0.030453821656050956,
+    "percentile_Uplus": 0.031011146496815287,
+    "percentile_Uminus": 0.03355891719745223,
+    "own_target_seeds": [],
+    "hop0_share_of_abs_Q_defined": 0.0,
+    "flag": ""
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL696",
+    "name": "ETHOSUXIMIDE",
+    "status": "examined",
+    "Q_defined": 0.0,
+    "Q_Uplus": 0.0,
+    "Q_Uminus": 0.0,
+    "percentile_defined_arm": 0.5136544585987262,
+    "percentile_Uplus": 0.5097929936305733,
+    "percentile_Uminus": 0.5020700636942675,
+    "own_target_seeds": [],
+    "hop0_share_of_abs_Q_defined": 0.0,
+    "flag": ""
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL89598",
+    "name": "VIGABATRIN",
+    "status": "not_examined (no signed target with a gene symbol in the graph)"
+   }
+  ],
+  "c_probes_examined": 11,
+  "c_probes_with_own_target_seed": 1,
+  "c_probes_flagged": 1,
+  "PASS_identity": true
+ },
+ "T4": {
+  "spearman_NETIND_vs_DIRECT_examined": -0.0008257767918091679,
+  "spearman_NETFULL_vs_DIRECT_examined": 0.05077836076062436,
+  "n_direct_signed_nonzero_families": 5,
+  "n_direct_any_action_families": 28,
+  "n_direct_any_action_that_also_have_nonzero_netind": 7,
+  "top50_overlap_NETIND_DIRECT": 0,
+  "top100_overlap_NETIND_DIRECT": 2,
+  "raw_Q_top100": {
+   "n_new": 99,
+   "n_new_and_seed_specific_z_gt3": 37
+  },
+  "raw_Q_outcome": "ADDS",
+  "Z_top100": {
+   "n_new": 100,
+   "n_new_and_seed_specific_z_gt3": 49,
+   "n_with_positive_Z": 100
+  },
+  "Z_outcome": "ADDS",
+  "Z_top100_overlap_with_raw_Q_top100": 76,
+  "wwox_regulators_in_network": [
+   "E2F1",
+   "NFKB1",
+   "NFKB2",
+   "REL",
+   "RELA",
+   "RELB",
+   "TFAP2C"
+  ],
+  "n_families_with_regulator_target": 6,
+  "note": "a top-k list of a method that fails T2 is not seed-specific whatever T4 says"
+ },
+ "T5": {
+  "a_empty_seeds_equal_zero_baseline_max_abs": 0.0,
+  "b_flip_all_max_abs_err": 0.0,
+  "b_flip_all_spearman_with_real": -1.0,
+  "b_flip_all_top100_overlap_real_vs_flipped": 0,
+  "c_one_sign_flip_max_abs_err": 1.3877787807814457e-17,
+  "c_changed_set_equals_influenced_set": true,
+  "d_arm_difference_max_abs_err": 6.342582709040201e-18,
+  "d_range_brackets_arms": true,
+  "e_network_sign_randomized_median_spearman": 0.02201129030230473,
+  "e_n": 200,
+  "f_zero_level_equals_removal_max_abs": 0.0,
+  "PASS": true,
+  "reach_baseline_spearman_abs_with_abs_real": 0.7737148491086502
+ },
+ "T6": {
+  "tags_present": [
+   "IT7_READOUT6"
+  ],
+  "units_total": 17,
+  "units_sign_changed_by_guard": 0,
+  "units_excluded_from_signature_arm": 16,
+  "units_would_enter_signature_arm_if_guard_ignored": 17,
+  "PASS": true
+ }
+}

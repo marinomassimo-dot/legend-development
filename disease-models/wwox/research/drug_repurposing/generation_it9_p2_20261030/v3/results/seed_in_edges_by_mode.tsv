@@ -1,0 +1,11 @@
+seed_set	readout_level	seed_genes	seed_genes_in_network	in_edges_T	in_edges_P	in_edges_C	genes_with_no_admissible_final_edge	admissible_final_mode
+Q1_expression_tiersABC	expression	1	1	7	0	0	0	T
+Q1_protein_tiersABC	protein	1	1	7	0	0	1	P
+Q2_expression_tiersAB	expression	12	12	110	24	0	0	T
+Q3_expression_tiersAB	expression	12	11	123	14	0	1	T
+Q4_expression_tiersAB	expression	4	2	10	2	0	2	T
+Q4_protein_tiersAB	protein	2	2	23	0	0	2	P
+Q5_expression_tiersAB	expression	3	3	282	4	0	0	T
+Q6_expression_tiersAB	expression	1	1	109	40	0	0	T
+Q6_protein_tiersAB	protein	1	1	109	40	0	0	P
+Q7_phospho_tiersAB	phospho	1	1	24	34	0	0	P

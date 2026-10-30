@@ -1,0 +1,328 @@
+{
+ "label": "p1_Q1_expression_tiersABC_indeg",
+ "seeds": "../seeds_p1/Q1_expression_tiersABC.tsv",
+ "n_seed_units": 1,
+ "n_defined": 0,
+ "n_uncertain": 1,
+ "examined_families": 12560,
+ "T1": {
+  "a_zero_seeds_max_abs_Q": 0.0,
+  "b_scale_max_abs_err": 0.0,
+  "c_decomposition_max_abs_err": 0.0,
+  "d_defined_seeds_with_effect": 0,
+  "d_inert_defined_seeds": [],
+  "d_inert_units_any_direction": [],
+  "PASS": true
+ },
+ "T2": {
+  "a_n_null": 1000,
+  "a_spearman_real_vs_null_median": 0.1052599862282252,
+  "a_spearman_p5_p95": [
+   -0.2727516096794855,
+   0.8723189919289008
+  ],
+  "a_top100_overlap_median": 8.0,
+  "a_top100_overlap_p5_p95": [
+   0.0,
+   48.0
+  ],
+  "a_effect_size_1_minus_rho_median": 0.8947400137717748,
+  "a_families_abs_z_gt3": 14,
+  "a_families_nonzero": 1305,
+  "z_spearman_real_vs_null_median": 0.8661353704483867,
+  "z_top100_overlap_median": 6.0,
+  "z_top100_overlap_p5_p95": [
+   0.0,
+   50.0
+  ],
+  "b_sign_shuffle_median_spearman": null,
+  "b_note": "fewer than 4 defined-direction seeds: not testable",
+  "c_decoy_n_genes": 10,
+  "c_decoy_genes_in_graph": 9,
+  "c_decoy_spearman_with_real": 0.1362742426135864,
+  "c_decoy_top100_overlap_with_real": 0,
+  "criteria_met_a_rho_a_top100_b_shuffle_c_decoy": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "PASS": true,
+  "z_arm_criteria_met_rho_top100": [
+   false,
+   true
+  ]
+ },
+ "T3": {
+  "a_firewall": "seed classes checked at load (evidence_class in ['activity_state', 'phenotype_state', 'protein_state', 'transcript_contrast']); none refused",
+  "a_seed_gene_equals_probe_name": [],
+  "b_seed_units_total": 1,
+  "b_seed_units_in_graph": 1,
+  "b_seed_genes_missing_from_graph": [],
+  "b_distinct_signed_target_symbols": 2373,
+  "b_target_symbols_in_graph": 1882,
+  "b_mnet_usable_families_without_gene_symbol": 2,
+  "b_restricted_universe_families": 11091,
+  "b_restricted_vs_all_spearman": 1.0,
+  "b_restricted_check_note": "near-tautological by construction (a family whose every target is in the graph has the same score in any engine); the informative diagnostics are the next lines",
+  "b_norm_all_targets_vs_ingraph_only_spearman": 0.9999997298700366,
+  "b_rows_chembl_only_families": 2961,
+  "b_rows_chembl_only_spearman_with_all_rows": 0.9840107435037748,
+  "b_rows_nonchembl_only_families": 9699,
+  "b_rows_nonchembl_only_spearman_with_all_rows": 0.9878304735009628,
+  "c_probes": [
+   {
+    "family_id": "FAM:CAT:CHEMBL1072",
+    "name": "BUMETANIDE",
+    "status": "examined",
+    "Q_defined": 0.0,
+    "Q_Uplus": 0.0,
+    "Q_Uminus": 0.0,
+    "percentile_defined_arm": 0.5,
+    "percentile_Uplus": 0.5015525477707007,
+    "percentile_Uminus": 0.49844745222929937,
+    "own_target_seeds": [],
+    "hop0_share_of_abs_Q_defined": 0.0,
+    "flag": ""
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL1096",
+    "name": "AMLEXANOX",
+    "status": "examined",
+    "Q_defined": 0.0,
+    "Q_Uplus": 0.0,
+    "Q_Uminus": 0.0,
+    "percentile_defined_arm": 0.5,
+    "percentile_Uplus": 0.5015525477707007,
+    "percentile_Uminus": 0.49844745222929937,
+    "own_target_seeds": [],
+    "hop0_share_of_abs_Q_defined": 0.0,
+    "flag": ""
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL1201333",
+    "name": "LITHIUM",
+    "status": "not_examined (no signed target with a gene symbol in the graph)"
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL1214124",
+    "name": "PERAMPANEL",
+    "status": "examined",
+    "Q_defined": 0.0,
+    "Q_Uplus": 0.0,
+    "Q_Uminus": 0.0,
+    "percentile_defined_arm": 0.5,
+    "percentile_Uplus": 0.5015525477707007,
+    "percentile_Uminus": 0.49844745222929937,
+    "own_target_seeds": [],
+    "hop0_share_of_abs_Q_defined": 0.0,
+    "flag": ""
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL1469",
+    "name": "PHENYLBUTANOIC ACID",
+    "status": "not_examined (no signed target with a gene symbol in the graph)"
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL146927",
+    "name": "CPP-115 FREE BASE",
+    "status": "not_examined (no signed target with a gene symbol in the graph)"
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL1650595",
+    "name": "AR-12",
+    "status": "examined",
+    "Q_defined": 0.0,
+    "Q_Uplus": 0.0,
+    "Q_Uminus": 0.0,
+    "percentile_defined_arm": 0.5,
+    "percentile_Uplus": 0.5015525477707007,
+    "percentile_Uminus": 0.49844745222929937,
+    "own_target_seeds": [],
+    "hop0_share_of_abs_Q_defined": 0.0,
+    "flag": ""
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL1699",
+    "name": "MEMANTINE HYDROCHLORIDE",
+    "status": "examined",
+    "Q_defined": 0.0,
+    "Q_Uplus": 0.0,
+    "Q_Uminus": 0.0,
+    "percentile_defined_arm": 0.5,
+    "percentile_Uplus": 0.5015525477707007,
+    "percentile_Uminus": 0.49844745222929937,
+    "own_target_seeds": [],
+    "hop0_share_of_abs_Q_defined": 0.0,
+    "flag": ""
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL190461",
+    "name": "CANNABIDIOL",
+    "status": "examined",
+    "Q_defined": 0.0,
+    "Q_Uplus": 0.0,
+    "Q_Uminus": 0.0,
+    "percentile_defined_arm": 0.5,
+    "percentile_Uplus": 0.5015525477707007,
+    "percentile_Uminus": 0.49844745222929937,
+    "own_target_seeds": [],
+    "hop0_share_of_abs_Q_defined": 0.0,
+    "flag": ""
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL1983350",
+    "name": "STIRIPENTOL",
+    "status": "not_examined (no signed target with a gene symbol in the graph)"
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL256997",
+    "name": "ATALUREN",
+    "status": "not_examined (no signed target with a gene symbol in the graph)"
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL306823",
+    "name": "SODIUM DICHLOROACETATE",
+    "status": "examined",
+    "Q_defined": 0.0,
+    "Q_Uplus": 0.0,
+    "Q_Uminus": 0.0,
+    "percentile_defined_arm": 0.5,
+    "percentile_Uplus": 0.5015525477707007,
+    "percentile_Uminus": 0.49844745222929937,
+    "own_target_seeds": [],
+    "hop0_share_of_abs_Q_defined": 0.0,
+    "flag": ""
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL3407862",
+    "name": "None",
+    "status": "not_examined (no signed target with a gene symbol in the graph)"
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL413",
+    "name": "SIROLIMUS",
+    "status": "examined",
+    "Q_defined": 0.0,
+    "Q_Uplus": 0.0,
+    "Q_Uminus": 0.0,
+    "percentile_defined_arm": 0.5,
+    "percentile_Uplus": 0.5015525477707007,
+    "percentile_Uminus": 0.49844745222929937,
+    "own_target_seeds": [],
+    "hop0_share_of_abs_Q_defined": 0.0,
+    "flag": ""
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL4217292",
+    "name": "APINOCALTAMIDE",
+    "status": "examined",
+    "Q_defined": 0.0,
+    "Q_Uplus": 0.0,
+    "Q_Uminus": 0.0,
+    "percentile_defined_arm": 0.5,
+    "percentile_Uplus": 0.5015525477707007,
+    "percentile_Uminus": 0.49844745222929937,
+    "own_target_seeds": [],
+    "hop0_share_of_abs_Q_defined": 0.0,
+    "flag": ""
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL4594338",
+    "name": "NEDOSIRAN SODIUM",
+    "status": "not_examined (no signed target with a gene symbol in the graph)"
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL574737",
+    "name": "UCN-01",
+    "status": "examined",
+    "Q_defined": 0.0,
+    "Q_Uplus": 5.825849273656237e-05,
+    "Q_Uminus": -5.825849273656237e-05,
+    "percentile_defined_arm": 0.5,
+    "percentile_Uplus": 0.9934315286624203,
+    "percentile_Uminus": 0.006568471337579618,
+    "own_target_seeds": [],
+    "hop0_share_of_abs_Q_defined": 0.0,
+    "flag": ""
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL696",
+    "name": "ETHOSUXIMIDE",
+    "status": "examined",
+    "Q_defined": 0.0,
+    "Q_Uplus": 0.0,
+    "Q_Uminus": 0.0,
+    "percentile_defined_arm": 0.5,
+    "percentile_Uplus": 0.5015525477707007,
+    "percentile_Uminus": 0.49844745222929937,
+    "own_target_seeds": [],
+    "hop0_share_of_abs_Q_defined": 0.0,
+    "flag": ""
+   },
+   {
+    "family_id": "FAM:CAT:CHEMBL89598",
+    "name": "VIGABATRIN",
+    "status": "not_examined (no signed target with a gene symbol in the graph)"
+   }
+  ],
+  "c_probes_examined": 11,
+  "c_probes_with_own_target_seed": 0,
+  "c_probes_flagged": 0,
+  "PASS_identity": true
+ },
+ "T4": {
+  "spearman_NETIND_vs_DIRECT_examined": NaN,
+  "spearman_NETFULL_vs_DIRECT_examined": NaN,
+  "n_direct_signed_nonzero_families": 0,
+  "n_direct_any_action_families": 2,
+  "n_direct_any_action_that_also_have_nonzero_netind": 0,
+  "top50_overlap_NETIND_DIRECT": 50,
+  "top100_overlap_NETIND_DIRECT": 100,
+  "raw_Q_top100": {
+   "n_new": 0,
+   "n_new_and_seed_specific_z_gt3": 0
+  },
+  "raw_Q_outcome": "NONE",
+  "Z_top100": {
+   "n_new": 0,
+   "n_new_and_seed_specific_z_gt3": 0,
+   "n_with_positive_Z": 0
+  },
+  "Z_outcome": "NONE",
+  "Z_top100_overlap_with_raw_Q_top100": 100,
+  "wwox_regulators_in_network": [
+   "E2F1",
+   "NFKB1",
+   "NFKB2",
+   "REL",
+   "RELA",
+   "RELB",
+   "TFAP2C"
+  ],
+  "n_families_with_regulator_target": 6,
+  "note": ""
+ },
+ "T5": {
+  "a_empty_seeds_equal_zero_baseline_max_abs": 0.0,
+  "b_flip_all_max_abs_err": 0.0,
+  "b_flip_all_spearman_with_real": NaN,
+  "b_flip_all_top100_overlap_real_vs_flipped": 100,
+  "c_one_sign_flip_max_abs_err": 0.0,
+  "c_changed_set_equals_influenced_set": true,
+  "d_arm_difference_max_abs_err": 0.0,
+  "d_range_brackets_arms": true,
+  "e_network_sign_randomized_median_spearman": 0.010501666221692019,
+  "e_n": 200,
+  "PASS": true,
+  "reach_baseline_spearman_abs_with_abs_real": 0.5273909943513813
+ },
+ "T6": {
+  "tags_present": [],
+  "units_total": 1,
+  "units_sign_changed_by_guard": 0,
+  "units_excluded_from_signature_arm": 0,
+  "units_would_enter_signature_arm_if_guard_ignored": 1,
+  "PASS": true
+ }
+}

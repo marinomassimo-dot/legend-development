@@ -44,3 +44,21 @@ S5 (honest comparison): a v2-vs-v3 table per seed set: examined, non-zero, seed-
 ## 4. What is not changed
 
 Seed tables (P1 v2, sha256 76952333...) and the adapter; the guard handling; the null (degree-matched, both variants); the criteria T1-T6; the Z definitions. The v2 NET-IND remains available as `--mode v2` of the v3 engine for the comparison and for the filter-off half of the mutation tests.
+
+---
+
+## AMENDMENT 5b (same day, before any v3 score; after building the compound-side table and seeing only row counts)
+
+The first build of F2(iii) as worded (any PROTEIN COMPLEX or PROTEIN COMPLEX GROUP member credited only if named) removed 3,921 usable rows, including class-level groups where every member legitimately carries the action (voltage-gated calcium channel groups, NMDA receptor groups). That overreaches the failure it was written for (a defined heteromer with a non-catalytic partner). The rule is narrowed, and this is the rule the v3 runs use:
+* Named-member rule applies to ChEMBL target types **PROTEIN COMPLEX** and **PROTEIN-PROTEIN INTERACTION** only. If at least one member's approved symbol (as a whole token) or approved name occurs in the ChEMBL target name or mechanism text, only the named members are credited and the others are listed (`COMPLEX_MEMBER_NOT_CREDITED`). If no member is named, all members are credited and the row is flagged `COMPLEX_MEMBERS_UNRESOLVED` (member roles unknown; such families cannot be called seed-specific without the flag being shown, and they appear with the flag in the candidate tables).
+* PROTEIN COMPLEX GROUP, PROTEIN FAMILY, SELECTIVITY GROUP and the remaining types credit all members, as in v2.
+* The S2 criterion (felbamate and memantine stay in the direct-search arm) is unchanged. Expected effect: implitapide keeps MTTP only (P4HB not credited).
+**5b addendum (before any v3 score).** DGIdb-only records are separate families without structure ids, and DGIdb carries no complex information; their `ChEMBL`-claim rows are copies of ChEMBL mechanism rows expanded to genes (implitapide: MTTP and P4HB as two rows). To stop the removal of a non-credited complex member from being undone by such a duplicate, a DGIdb row with claim source ChEMBL is dropped (`DGIDB_COPY_OF_UNCREDITED_COMPLEX_MEMBER`) when a ChEMBL record of the same normalised compound name (upper case, alphanumerics only) had the same gene as a non-credited member. Names are used only to propagate a removal, never to merge or to add credit.
+
+---
+
+## AMENDMENT 5c (after the first full v3 battery; disclosure of what had been seen)
+
+Seen: the v3 battery ran under the two registered nulls (total-degree, in-degree). Counts of seed-specific families (Z_ind_robust beyond 3 in both nulls), v2 -> v3: Q2 opposes 53 -> 62 (37 of the 53 survive), Q5 expression 115 -> 274 (104 survive), Q6 expression 332 -> 431 (205 survive), Q4 expression 0 -> 72, Q6 protein 332 -> 122, Q4 protein 47 -> 0, Q1 protein: every score zero (no admissible edge reaches a WWOX protein seed). This contradicts the expectation in section 2 (a net loss of a quarter to a half in the expression sets): the lost families are as predicted (see S1), but the NUMBER of seed-specific families rose.
+Hypothesis (not yet tested): the z is taken against nulls whose genes are matched on total or in-degree over ALL edges; under the filter the relevant degree is the number of admissible regulators (transcriptional in-edges for an expression seed; post-translational in-edges for a protein seed). A random gene with few admissible regulators has a null mean and SD near zero, so any family reaching the real seed's regulators gets an inflated z.
+**Added null variant M3 (`--match adm`)**: null genes matched on the decile of the admissible in-degree (T in-edges for expression seeds, P in-edges for protein seeds, unique quantile edges, real seed genes excluded). The robust v3 candidate arms require z > 3 in all three nulls (total, in-degree, admissible); the two-null result is kept as reported, as the comparison with v2 (which only has two nulls). The tests run again under M3 with identical criteria. Nothing else changes.
