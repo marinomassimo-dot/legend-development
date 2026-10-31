@@ -38,3 +38,10 @@ Sex-adjusted model (genotype + sex) beside the unadjusted one. In the deposit ti
 
 ## Not done / not possible here
 Protein, HIF compartment, oxygen condition, lactate, flux, seizure timing per animal, age per animal (Methods give 150 to 280 days as a range), batch: none is in the deposit.
+
+## Addendum written after the first run (disclosed deviations and post hoc steps)
+1. Correction of Q-D: for the 3 v 4 cerebellar design the minimum exact two-sided permutation p is 1/35 = 0.029 (the mirror split has different group sizes), not 0.057. My expectation that no CB gene-level result would reach exact p <= 0.05 was WRONG: several named CB genes do (Ankrd37, Hmox1, Srxn1, Nfe2l2, Ldhb, Arnt, plus Gfap, Mbp, Mobp, Nptx2). These are nominal, uncorrected over about 120 named-gene tests.
+2. Added after seeing the first set-level table (all post hoc, exploratory, labelled so in the README): leave-one-animal-out ranges; an expression-matched random-gene null for set means; per-animal pivot with Nptx2/Bdnf; sample-identity and genotype-separation check (`sample_identity_check_it12.py`); hallmark variants without the IT7 six and without declared glia/IEG genes; pixel measurement of the Fig 8b / 9c bars; a cross-check of my log2FC against the authors' DEG sheets (declared as Q-H beforehand).
+3. The "high-activity animals" (P47T M6 and F8) are a post hoc designation from the Nptx2/Bdnf values; they are not a pre-declared stratum.
+4. Q-H outcome: the authors' DEG sheets are reproduced from the deposit for CTX, PFC and CB (r 0.97 to 0.999) and NOT for HPC (r about 0.5); see README section 3.
+5. Rule outcome (declared thresholds): no region meets "HIF_SEL_UP6 up" (>= +0.30 with p <= 0.05); no region meets "organoid-like selective"; HPC meets "NRF2_5 up" (+0.33, p 0.024); CTX HIF_FLAT6 (+0.25, p 0.008) is below the declared magnitude threshold and is reported as a sub-threshold observation.
