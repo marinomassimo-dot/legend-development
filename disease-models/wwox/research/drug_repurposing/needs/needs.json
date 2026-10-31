@@ -2987,7 +2987,8 @@
     "In the one randomised open-label infant trial read with an oral phase (West syndrome, 48 analysed; three days of intramuscular magnesium sulfate then oral, ACTH and antiseizure drugs in both arms) magnesium did not change seizure control (p 0.69); the positive randomised signal used intravenous magnesium sulfate with ACTH and is abstract-level.",
     "The magnesium arithmetic gives a modest reduction for a modest rise in extracellular Mg2+, against the complete block of d-APV.",
     "A competitive full-block NMDAR antagonist (selfotel) failed in adult stroke and head-injury trials (stroke: early mortality imbalance; head injury: stopped for concern about deaths and futility, later analysis without a significant mortality difference); NMDAR blockade in the developing rat brain triggers apoptotic neurodegeneration (abstract level); memantine failed two controlled paediatric studies in another disorder and has no paediatric effectiveness on its label (F04).",
-    "The d-APV arm carries no significance marker in Fig 3D, the tests are on bursts not animals, and the baseline burst frequency is printed twice with different values (O8)."
+    "The d-APV arm carries no significance marker in Fig 3D, the tests are on bursts not animals, and the baseline burst frequency is printed twice with different values (O8).",
+    "IT13 P3b (2026-10-31): the only human firing recovery (neuron-promoter AAV9-WWOX at week 10, read at week 16, PMID 42397075 Fig 6, independently re-read) has five arms and no wild-type + WWOX arm and no dead-mutant arm, so the recovery is not shown to be WWOX-function-specific; the 'similar to wild type' statement holds for event rate only (active ROIs 70 versus 45 percent and amplitude 0.044 versus 0.023 stay above wild type, partial recovery); unit of testing unclear for the CTIP2/SATB2 panels; no randomisation or blinding. No intervention of any kind has a firing readout in a human WWOX-deficient neural system, and d-APV (acute, mouse slice) measures necessity in a different system and measure, not the recovered readout."
    ],
    "sources": {
     "cards": [
@@ -3532,7 +3533,8 @@
    },
    "counter_evidence": [
     "Premise unmeasured; the one functional inhibitory measurement is amplitude hypofunction, a competing account (working model, 2026-09-27).",
-    "Marker-level data cut both ways (see NEED-INHIBITORY-HYPOFUNCTION)."
+    "Marker-level data cut both ways (see NEED-INHIBITORY-HYPOFUNCTION).",
+    "IT13 P3a (2026-10-31; transcript level only, independently recomputed): in the P17 Wwox-deletion deposits the NKCC1:KCC2 transcript ratio is not raised (Slc12a2 lower in 4 of 4 contrasts, -0.45 to -1.09 log2; Slc12a5 lower in 3 of 4 and higher in the stem-cell-targeted hippocampus contrast; log2 ratio change -0.54, -1.10, -0.23 in hippocampus and +0.20 in cortex); n of 2 to 4 animals and a control-line background that is not negligible. This gives no transcript support for the chloride-gradient premise; the chloride gradient (E_GABA) itself is unmeasured."
    ],
    "sources": {
     "cards": [
@@ -3877,7 +3879,8 @@
    },
    "counter_evidence": [
     "Lithium also suppressed in wild-type mice, so a drug effect in a seizing animal is not a WWOX-specific rescue.",
-    "No drug-by-genotype interaction test and no concurrent same-day PTZ-alone control in the card's reading."
+    "No drug-by-genotype interaction test and no concurrent same-day PTZ-alone control in the card's reading.",
+    "IT13 P3a (2026-10-31; transcript level only, independently recomputed): in the P17 Wwox-deletion mouse deposits (GSE158681 hippocampus, GSE158682 cortex; 2 to 4 animals per arm) Cacna1g and Cacna1h mRNA are lower or flat (Cacna1h -0.15 to -0.68 log2; Cacna1g +0.08 to -1.01) and Kcnj6 is flat, all inside the control-line background at this n, so they neither support nor refute a T-type node. The catalogue mechanism record of ethosuximide lists T-type block only, while the source paper's own oocyte data show a GIRK block at exposures near the labelled band (a GIRK route would predict the opposite sign; prior knowledge, not checked here): the attribution of the late-phase effect to T-type channels is not supported by any measurement in Wwox tissue."
    ],
    "sources": {
     "cards": [

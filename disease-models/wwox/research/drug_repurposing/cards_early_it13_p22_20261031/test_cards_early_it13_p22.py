@@ -24,13 +24,10 @@ class RegeneratedCards(unittest.TestCase):
         for name, card in NEW.items():
             self.assertEqual(card, bridge.build_card(load(EARLY / name.replace(".card", ".packet"))), name)
 
-    def test_only_endpoint_outcomes_and_sha_differ(self):
+    def test_applied_cards_equal_the_regenerated_copies(self):
+        # the patch was applied to cards_early in IT13; the package keeps the copies so the before/after stays reviewable
         for name, card in NEW.items():
-            old = load(EARLY / name)
-            diff = {k for k in set(old) | set(card) if old.get(k) != card.get(k)}
-            self.assertLessEqual(diff, {"endpoint_outcomes", "input_sha256"}, name)
-            if name != "EB-VGB-01.card.json":
-                self.assertEqual(diff, {"endpoint_outcomes"}, name)
+            self.assertEqual(load(EARLY / name), card, name)
 
     def test_abstentions_have_empty_outcomes_and_unresolved(self):
         for name, card in NEW.items():
@@ -48,14 +45,14 @@ class RegeneratedCards(unittest.TestCase):
         st = [c["status"] for c in NEW["EB-VGB-01.card.json"]["comparisons"]]
         self.assertEqual(st.count("UNRESOLVED"), 9)
 
-    def test_vgb_stored_sha_was_stale_regenerated_matches_packet(self):
-        old = load(EARLY / "EB-VGB-01.card.json")
-        self.assertEqual(old["input"], NEW["EB-VGB-01.card.json"]["input"])   # same content ...
-        self.assertNotEqual(old["input_sha256"], NEW["EB-VGB-01.card.json"]["input_sha256"])  # ... stale digest
+    def test_vgb_digest_is_the_digest_of_its_packet(self):
+        card = load(EARLY / "EB-VGB-01.card.json")
+        self.assertEqual(card["input"], load(EARLY / "EB-VGB-01.packet.json"))
+        self.assertEqual(card["input_sha256"], bridge.build_card(load(EARLY / "EB-VGB-01.packet.json"))["input_sha256"])
 
     def test_no_prebaked_field(self):
         for name, card in NEW.items():
-            self.assertEqual(set(card), set(load(EARLY / name)) | {"endpoint_outcomes"}, name)
+            self.assertEqual(set(card), set(bridge.build_card(load(EARLY / name.replace(".card", ".packet")))), name)
 
     def test_unchanged_cards_untouched(self):
         for n in ("EB-KD-01", "EB-ETX-01"):
@@ -63,4 +60,4 @@ class RegeneratedCards(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(verbosity=2)

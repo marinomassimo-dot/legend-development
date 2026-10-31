@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "0d5170c8fa758b6701e96f64bab23f7188d5cb9eb7d8e6362b22a368b9872709",
+  "input_sha256": "2b50bbeebfdeb6150d10e17cb49833e5b704c1c9f5e93e9c0a8d21a2b4bd6560",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -129,7 +129,8 @@
           "No transcript-level hint of a raised NKCC1:KCC2 ratio in the knockout organoid.",
           "Poor CNS penetration is a known limitation.",
           "Window may be closed.",
-          "No measurement of the premise."
+          "No measurement of the premise.",
+          "IT13 P3a (2026-10-31): also no transcript support in the P17 Wwox-deletion mouse deposits (NKCC1:KCC2 ratio not raised in the three hippocampal contrasts, Slc12a5 higher in one; transcript only, 2 to 4 animals per arm; E_GABA unmeasured)."
         ],
         "transfer_limits": "Bulk organoid transcripts; juvenile slice."
       },
@@ -161,7 +162,8 @@
       "No transcript-level hint of a raised NKCC1:KCC2 ratio in the knockout organoid.",
       "Poor CNS penetration is a known limitation.",
       "Window may be closed.",
-      "No measurement of the premise."
+      "No measurement of the premise.",
+      "IT13 P3a (2026-10-31): also no transcript support in the P17 Wwox-deletion mouse deposits (NKCC1:KCC2 ratio not raised in the three hippocampal contrasts, Slc12a5 higher in one; transcript only, 2 to 4 animals per arm; E_GABA unmeasured)."
     ],
     "bridge_gaps_exposed": [
       "No drug assertion exists, so no comparison is formed."

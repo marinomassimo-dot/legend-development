@@ -235,8 +235,8 @@
       "need": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
       "kind": "verificare un'ipotesi",
       "question": "Which of three readings (NMDAR gain, permissive necessity, AMPAR-led drive) explains the d-APV-sensitive bursting, and does the bursting depend on the magnesium block? The d-APV result alone does not separate them.",
-      "data": "Card F04, step E1: the isolated NMDAR current under voltage control (AMPAR and GABA-A blocked) in knockout, heterozygote and wild-type slices: amplitude, decay, NMDA:AMPA ratio, GluN2B and GluN2A shares, resting potential and input resistance; then concentration-response of d-APV and of a GluN2B-selective tool, and a use-dependent pore blocker (memantine as a translation probe, with Mg2+ and holding potential stated). Card P11: a graded bath-Mg2+ titration in the source medium with d-APV as ceiling, the composition of the recording bath, and serum and cerebrospinal-fluid Mg in the knockout mouse. The graded memantine against perampanel design of card F01 is superseded as discriminator by F04.",
-      "would_change": "E1 decides whether an NMDAR gain is present or the dependence is permissive; a partial blocker is read only after E1, and without E1 a memantine result cannot be attributed to pyramidal receptors. A titration that cannot lower bursts inside a reachable range closes the magnesium strand.",
+      "data": "Card F04, step E1: the isolated NMDAR current under voltage control (AMPAR and GABA-A blocked) in knockout, heterozygote and wild-type slices: amplitude, decay, NMDA:AMPA ratio, GluN2B and GluN2A shares, resting potential and input resistance; then concentration-response of d-APV and of a GluN2B-selective tool, and a use-dependent pore blocker (memantine as a translation probe, with Mg2+ and holding potential stated). Card P11: a graded bath-Mg2+ titration in the source medium with d-APV as ceiling, the composition of the recording bath, and serum and cerebrospinal-fluid Mg in the knockout mouse. The graded memantine against perampanel design of card F01 is superseded as discriminator by F04. Added in IT13 (P3b): the only human firing recovery (PMID 42397075 Fig 6) needs a wild-type + WWOX arm and a dead-mutant WWOX arm (WW1-dead and an SDR-region mutant) to separate recovery from a transgene effect, the organoid as the unit of testing (not ROIs or fields), at least two differentiations, a scorer blind to arm, and two independent silencers (a sodium-channel blocker and an NMDAR antagonist, with a 2-week washout) read on firing and on the CTIP2/SATB2 fraction together: a compound earns the word bypass only if it moves firing, persists after washout and matches the add-back profile on the paired readout; firing alone is symptomatic (recoverable_it13_p3b_20261031, section 7). Added in IT13 (P3a): in the same neuron-deleted slices, resting potential and the M-current (Kv7) component, the isolated NMDAR current and sIPSC, littermate controls and animals as units, matched-trigger wild-type slices, a GluN2B negative allosteric modulator concentration-response beside d-APV and a Kv7 opener with reversal by an M-current blocker (prediction per reading in functional_it13_p3a_20261031/README.md): a state that is secondary to illness, myelin or maturation would predict no lever.",
+      "would_change": "E1 decides whether an NMDAR gain is present or the dependence is permissive; a partial blocker is read only after E1, and without E1 a memantine result cannot be attributed to pyramidal receptors. A titration that cannot lower bursts inside a reachable range closes the magnesium strand. A silencer that lowers firing without raising CTIP2/SATB2 would separate the two readouts; one that raises the markers would show an activity-dependent bypass of the marker readout; a lowered firing in wild type + WWOX would show the add-back effect is not recovery.",
       "feasibility": "Slice electrophysiology in the neuron-specific knockout of the original paper; the line is not held here and whether it is obtainable is not known. Magnesium products have US label evidence by name only; Italy was not checked.",
       "date": "2026-10-29",
       "updated_by": [
@@ -253,14 +253,14 @@
         "P11",
         "REVIEW"
       ],
-      "summary_it": "Capire quale di tre letture spiega lo scoppio di attività nelle fette (guadagno NMDAR, dipendenza permissiva, spinta AMPAR) e se dipende dal blocco da magnesio; serve prima la corrente NMDAR isolata (E1).",
+      "summary_it": "Capire quale di tre letture spiega lo scoppio di attività nelle fette (guadagno NMDAR, dipendenza permissiva, spinta AMPAR) e se dipende dal blocco da magnesio; serve prima la corrente NMDAR isolata (E1). IT13: servono bracci WT+WWOX e WWOX mutato (morto), l'organoide come unità, cieco, e due silenziatori indipendenti con lavaggio; la scarica da sola resta sintomatica.",
       "feasibility_it": "Elettrofisiologia su fette del knockout neurone-specifico dell'articolo originale: la linea non è disponibile qui, se sia ottenibile non nota; magnesio: etichette USA per nome, Italia non verificata."
     },
     {
       "need": "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
       "kind": "chiarire una controevidenza",
       "question": "Is the ethosuximide late-phase effect reproducible with a drug-by-genotype test and a same-day control, is the lithium effect genotype-specific, and do the denominators of the ketogenic-diet and vigabatrin case series keep their C2?",
-      "data": "Next measurements of cards EB-ETX-01, G01 and H01: a concurrent same-day PTZ-alone control in all genotypes, an interaction test, plasma and brain exposure; for the case-level drugs, the denominators (children placed on the diet; hormonal therapy during MRI changes).",
+      "data": "Next measurements of cards EB-ETX-01, G01 and H01: a concurrent same-day PTZ-alone control in all genotypes, an interaction test, plasma and brain exposure; for the case-level drugs, the denominators (children placed on the diet; hormonal therapy during MRI changes). IT13 (P3a): the two PTZ-alone null cohorts in the published figure differ by about the size of the ethosuximide effect, which is why a concurrent same-day control is the first requirement.",
       "would_change": "A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays.",
       "feasibility": "The mouse experiment is the one already published by one laboratory; animals and the Wwox-null line are not available here (not known). Denominators: with the case-series authors; contact is out of scope for this repository and not attempted.",
       "date": "2026-10-29",
@@ -281,7 +281,7 @@
       "need": "NEED-T-TYPE-CALCIUM",
       "kind": "verificare un'ipotesi",
       "question": "Does the ethosuximide sensitivity reflect T-type involvement, given that no T-type measurement exists and a class-level progenitor-viability harm signal is recorded?",
-      "data": "A T-type channel measurement in the Wwox-null preparation, and the apinocaltamide arm of the same design (card H01 next measurement).",
+      "data": "A T-type channel measurement in the Wwox-null preparation, and the apinocaltamide arm of the same design (card H01 next measurement). Added in IT13 (P3a): the catalogue lists ethosuximide as a T-type blocker only while the source paper's own oocyte data show GIRK block at near-label exposure, so the measurement must separate T-type current from GIRK current in null neurons; P17 transcripts (Cacna1g/h lower or flat, Kcnj6 flat, n of 2 to 4) do not decide it.",
       "would_change": "A direct measurement would turn the F2 into a row with a mechanism; a negative would add a null to the need.",
       "feasibility": "not known (apinocaltamide is a sponsor compound with no access evidence obtained here).",
       "date": "2026-10-29",
@@ -293,7 +293,7 @@
       "docs": [
         "REVIEW"
       ],
-      "summary_it": "Capire se la sensibilità all'etosuccimide riflette il canale T, dato che non esiste alcuna misura del canale T.",
+      "summary_it": "Capire se la sensibilità all'etosuccimide riflette il canale T, dato che non esiste alcuna misura del canale T. IT13: il catalogo elenca solo il canale T, ma i dati dello stesso articolo mostrano anche blocco GIRK; i trascritti P17 non decidono.",
       "feasibility_it": "non nota (composto di uno sponsor, nessuna evidenza di accesso ottenuta qui)."
     },
     {

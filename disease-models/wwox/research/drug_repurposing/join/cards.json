@@ -39800,7 +39800,8 @@
      "No transcript-level hint of a raised NKCC1:KCC2 ratio in the knockout organoid.",
      "Poor CNS penetration is a known limitation.",
      "Window may be closed.",
-     "No measurement of the premise."
+     "No measurement of the premise.",
+     "IT13 P3a (2026-10-31): also no transcript support in the P17 Wwox-deletion mouse deposits (NKCC1:KCC2 ratio not raised in the three hippocampal contrasts, Slc12a5 higher in one; transcript only, 2 to 4 animals per arm; E_GABA unmeasured)."
     ],
     "external_sources": [
      {
@@ -40212,7 +40213,8 @@
        "No transcript-level hint of a raised NKCC1:KCC2 ratio in the knockout organoid.",
        "Poor CNS penetration is a known limitation.",
        "Window may be closed.",
-       "No measurement of the premise."
+       "No measurement of the premise.",
+       "IT13 P3a (2026-10-31): also no transcript support in the P17 Wwox-deletion mouse deposits (NKCC1:KCC2 ratio not raised in the three hippocampal contrasts, Slc12a5 higher in one; transcript only, 2 to 4 animals per arm; E_GABA unmeasured)."
       ],
       "for": [
        "GABAergic-lineage and receptor-subunit transcripts differ in the knockout organoid."
@@ -40292,7 +40294,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "4f0f6d4066d25c7bf8135db3c0bb2e927d44496b8c1f1f41fcc058b6114f337f",
+   "input_sha256": "29fe581ca49ad2d26a2bdc7b267eab7f584a632b62656e3db5039a90ce2fe46f",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",

@@ -1953,7 +1953,7 @@
    "could_fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no reading-limit flag (found: graphical_reading); a favourable WWOX readout carries no design-limit flag (found: one_experiment); one and the same readout meets all four | stored work-order statement: A direct measurement would turn the F2 into a row with a mechanism; a negative would add a null to the need.",
-   "counter_evidence_statements": "IT12 P2.2 figure audit (dated 2026-10-31, PMID 37275776 Fig 7B, image viewed): the stored statement that the GIRK2 crossings lie inside the therapeutic band is wrong on one clause. In oocytes the GIRK2 homomer activated by Gbeta-gamma is half-maximally inhibited at about 0.03 to 0.06 mM, about 4 to 8 times BELOW the shaded band (about 0.25 to 0.9 mM), while the brain-predominant GIRK1/2 plus Gbeta-gamma channel crosses at about 0.4 to 1 mM, inside it (partial block, about 20 to 60 percent). So a measured non-T-type target exists at labelled exposure, and the wording 'T-type potency is weak against the labelled range' is not the whole story: the ethosuximide result in the WWOX mouse (PTZ seizure score) cannot be attributed to T-type mediation. An oocyte datum, not a WWOX mechanism; the authors say neuronal GIRK2 homomer abundance is unknown. In a genetic absence model the relay-neuron T-type current is smaller than control and the burst-threshold difference follows Ih (PMID 24953239 Figs 5 and 6). No group or member evidence changes.",
+   "counter_evidence_statements": "IT12 P2.2 figure audit (dated 2026-10-31, PMID 37275776 Fig 7B, image viewed): the stored statement that the GIRK2 crossings lie inside the therapeutic band is wrong on one clause. In oocytes the GIRK2 homomer activated by Gbeta-gamma is half-maximally inhibited at about 0.03 to 0.06 mM, about 4 to 8 times BELOW the shaded band (about 0.25 to 0.9 mM), while the brain-predominant GIRK1/2 plus Gbeta-gamma channel crosses at about 0.4 to 1 mM, inside it (partial block, about 20 to 60 percent). So a measured non-T-type target exists at labelled exposure, and the wording 'T-type potency is weak against the labelled range' is not the whole story: the ethosuximide result in the WWOX mouse (PTZ seizure score) cannot be attributed to T-type mediation. An oocyte datum, not a WWOX mechanism; the authors say neuronal GIRK2 homomer abundance is unknown. In a genetic absence model the relay-neuron T-type current is smaller than control and the burst-threshold difference follows Ih (PMID 24953239 Figs 5 and 6). No group or member evidence changes. | IT13 P3a (2026-10-31): ethosuximide's attribution to T-type channels is not supported by any measurement in Wwox tissue: the catalogue mechanism record lists T-type only, the source paper's own oocyte data show GIRK block near the labelled band (a GIRK route would predict the opposite sign; prior knowledge), the two PTZ-alone null cohorts of the figure differ by about the size of the drug effect, no interaction test, and P17 Cacna1g/h/Kcnj6 transcripts are inside the control-line background. The late-phase effect stays one experiment in one laboratory; the group is unchanged.",
    "depth_of_evidence": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
    "evaluated_on": "2026-10-31",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
@@ -2036,7 +2036,7 @@
    "context": "mouse; Synapsin-Cre Wwox knockout versus wild type and heterozygote; depth complete_fulltext_read",
    "could_fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
-   "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no design-limit flag (found: one_experiment_n5_slices, tool_compound_d-APV); one and the same readout meets all four | further questions: gap-junction dependence (carbenoxolone, 87 percent reduction) and bursting in heterozygote slices as rival explanations of the d-APV result | stored work-order statement: E1 decides whether an NMDAR gain is present or the dependence is permissive; a partial blocker is read only after E1, and without E1 a memantine result cannot be attributed to pyramidal receptors. A titration that cannot lower bursts inside a reachable range closes the magnesium strand.",
+   "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no design-limit flag (found: one_experiment_n5_slices, tool_compound_d-APV); one and the same readout meets all four | further questions: gap-junction dependence (carbenoxolone, 87 percent reduction) and bursting in heterozygote slices as rival explanations of the d-APV result | stored work-order statement: E1 decides whether an NMDAR gain is present or the dependence is permissive; a partial blocker is read only after E1, and without E1 a memantine result cannot be attributed to pyramidal receptors. A titration that cannot lower bursts inside a reachable range closes the magnesium strand. A silencer that lowers firing without raising CTIP2/SATB2 would separat…",
    "counter_evidence_statements": "none stated beyond the counts",
    "depth_of_evidence": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "evaluated_on": "2026-10-31",
@@ -2054,7 +2054,7 @@
    "next_experiment_or_control": "Which of three readings (NMDAR gain, permissive necessity, AMPAR-led drive) explains the d-APV-sensitive bursting, and does the bursting depend on the magnesium block? The d-APV result alone does not separate them.",
    "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
    "next_experiment_stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)",
-   "notes": "Graph coverage (IT11 P2.1): the graph returns d-APV only as a direct hit on the GRIN2C transcript in the Q4 direct-search arm (the earlier 'zero score' was the indirect part only); the GRIN2A, GRIN2B and GRIN2D subunits have outgoing edges but no chain reaches a Q4 seed. The hit concerns a mouse transcript, the lead's result is a bursting readout in slices: a level mismatch, not a confirmation. A development input, not an independent validation.",
+   "notes": "Graph coverage (IT11 P2.1): the graph returns d-APV only as a direct hit on the GRIN2C transcript in the Q4 direct-search arm (the earlier 'zero score' was the indirect part only); the GRIN2A, GRIN2B and GRIN2D subunits have outgoing edges but no chain reaches a Q4 seed. The hit concerns a mouse transcript, the lead's result is a bursting readout in slices: a level mismatch, not a confirmation. A development input, not an independent validation. | IT13 P3b (2026-10-31): d-APV measured necessity of NMDAR activity for bursting in a neuron-deleted mouse slice (acute, reversible, no wild-type burst control); it is a different system and measure from the only human firing recovery (WWOX add-back in organoids, PMID 42397075), which has no compound arm. No intervention of any kind has a firing readout in a human WWOX-deficient neural system.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
    "pathways_needs": "Excitatory network gain and bursting [F2; effect_observed_in_wwox_system] -- 1 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
@@ -2319,7 +2319,7 @@
    "could_fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no reading-limit flag (found: graphical_reading); a favourable WWOX readout carries no design-limit flag (found: one_experiment); one and the same readout meets all four | stored work-order statement: A direct measurement would turn the F2 into a row with a mechanism; a negative would add a null to the need.",
-   "counter_evidence_statements": "IT12 P2.2 figure audit (dated 2026-10-31, PMID 37275776 Fig 7B, image viewed): the stored statement that the GIRK2 crossings lie inside the therapeutic band is wrong on one clause. In oocytes the GIRK2 homomer activated by Gbeta-gamma is half-maximally inhibited at about 0.03 to 0.06 mM, about 4 to 8 times BELOW the shaded band (about 0.25 to 0.9 mM), while the brain-predominant GIRK1/2 plus Gbeta-gamma channel crosses at about 0.4 to 1 mM, inside it (partial block, about 20 to 60 percent). So a measured non-T-type target exists at labelled exposure, and the wording 'T-type potency is weak against the labelled range' is not the whole story: the ethosuximide result in the WWOX mouse (PTZ seizure score) cannot be attributed to T-type mediation. An oocyte datum, not a WWOX mechanism; the authors say neuronal GIRK2 homomer abundance is unknown. In a genetic absence model the relay-neuron T-type current is smaller than control and the burst-threshold difference follows Ih (PMID 24953239 Figs 5 and 6). No group or member evidence changes.",
+   "counter_evidence_statements": "IT12 P2.2 figure audit (dated 2026-10-31, PMID 37275776 Fig 7B, image viewed): the stored statement that the GIRK2 crossings lie inside the therapeutic band is wrong on one clause. In oocytes the GIRK2 homomer activated by Gbeta-gamma is half-maximally inhibited at about 0.03 to 0.06 mM, about 4 to 8 times BELOW the shaded band (about 0.25 to 0.9 mM), while the brain-predominant GIRK1/2 plus Gbeta-gamma channel crosses at about 0.4 to 1 mM, inside it (partial block, about 20 to 60 percent). So a measured non-T-type target exists at labelled exposure, and the wording 'T-type potency is weak against the labelled range' is not the whole story: the ethosuximide result in the WWOX mouse (PTZ seizure score) cannot be attributed to T-type mediation. An oocyte datum, not a WWOX mechanism; the authors say neuronal GIRK2 homomer abundance is unknown. In a genetic absence model the relay-neuron T-type current is smaller than control and the burst-threshold difference follows Ih (PMID 24953239 Figs 5 and 6). No group or member evidence changes. | IT13 P3a (2026-10-31): ethosuximide's attribution to T-type channels is not supported by any measurement in Wwox tissue: the catalogue mechanism record lists T-type only, the source paper's own oocyte data show GIRK block near the labelled band (a GIRK route would predict the opposite sign; prior knowledge), the two PTZ-alone null cohorts of the figure differ by about the size of the drug effect, no interaction test, and P17 Cacna1g/h/Kcnj6 transcripts are inside the control-line background. The late-phase effect stays one experiment in one laboratory; the group is unchanged.",
    "depth_of_evidence": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
    "evaluated_on": "2026-10-31",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
@@ -2402,7 +2402,7 @@
    "context": "mouse; Synapsin-Cre Wwox knockout versus wild type and heterozygote; depth complete_fulltext_read",
    "could_fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
-   "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no design-limit flag (found: one_experiment_n5_slices, tool_compound_d-APV); one and the same readout meets all four | further questions: gap-junction dependence (carbenoxolone, 87 percent reduction) and bursting in heterozygote slices as rival explanations of the d-APV result | stored work-order statement: E1 decides whether an NMDAR gain is present or the dependence is permissive; a partial blocker is read only after E1, and without E1 a memantine result cannot be attributed to pyramidal receptors. A titration that cannot lower bursts inside a reachable range closes the magnesium strand.",
+   "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no design-limit flag (found: one_experiment_n5_slices, tool_compound_d-APV); one and the same readout meets all four | further questions: gap-junction dependence (carbenoxolone, 87 percent reduction) and bursting in heterozygote slices as rival explanations of the d-APV result | stored work-order statement: E1 decides whether an NMDAR gain is present or the dependence is permissive; a partial blocker is read only after E1, and without E1 a memantine result cannot be attributed to pyramidal receptors. A titration that cannot lower bursts inside a reachable range closes the magnesium strand. A silencer that lowers firing without raising CTIP2/SATB2 would separat…",
    "counter_evidence_statements": "none stated beyond the counts",
    "depth_of_evidence": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "evaluated_on": "2026-10-31",
@@ -2420,7 +2420,7 @@
    "next_experiment_or_control": "Which of three readings (NMDAR gain, permissive necessity, AMPAR-led drive) explains the d-APV-sensitive bursting, and does the bursting depend on the magnesium block? The d-APV result alone does not separate them.",
    "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
    "next_experiment_stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)",
-   "notes": "Graph coverage (IT11 P2.1): the graph returns d-APV only as a direct hit on the GRIN2C transcript in the Q4 direct-search arm (the earlier 'zero score' was the indirect part only); the GRIN2A, GRIN2B and GRIN2D subunits have outgoing edges but no chain reaches a Q4 seed. The hit concerns a mouse transcript, the lead's result is a bursting readout in slices: a level mismatch, not a confirmation. A development input, not an independent validation.",
+   "notes": "Graph coverage (IT11 P2.1): the graph returns d-APV only as a direct hit on the GRIN2C transcript in the Q4 direct-search arm (the earlier 'zero score' was the indirect part only); the GRIN2A, GRIN2B and GRIN2D subunits have outgoing edges but no chain reaches a Q4 seed. The hit concerns a mouse transcript, the lead's result is a bursting readout in slices: a level mismatch, not a confirmation. A development input, not an independent validation. | IT13 P3b (2026-10-31): d-APV measured necessity of NMDAR activity for bursting in a neuron-deleted mouse slice (acute, reversible, no wild-type burst control); it is a different system and measure from the only human firing recovery (WWOX add-back in organoids, PMID 42397075), which has no compound arm. No intervention of any kind has a firing readout in a human WWOX-deficient neural system.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
    "pathways_needs": "Excitatory network gain and bursting [F2; effect_observed_in_wwox_system] -- 1 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
@@ -2724,11 +2724,11 @@
    "coverage_generated_from": {
     "assertion_pertinence.tsv": "9d699d1c6e9b73ee",
     "card_links.json": "2aac19ca3b0b7686",
-    "cards_and_packets": "a5dc4636e6649d1a",
+    "cards_and_packets": "663070f73dbd60f9",
     "catalog.jsonl.gz": "75652786013b931d",
     "catalog_stats.json": "87ac308ce3ab9b3f",
     "measure_next.json": "bca46967510475c5",
-    "needs.json": "b36c4e5e3db17645",
+    "needs.json": "4e37b7897080337c",
     "source_artefacts.tsv": "222f20137c020b58",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
@@ -3254,13 +3254,13 @@
     "EVALUATED AND ORDERABLE": 0,
     "EVALUATED WITH WEAK PERTINENCE OR COUNTER-EVIDENCE": 1,
     "EXCLUDED FROM A SPECIFIC COMPARISON WITH REASON": 1,
-    "STILL INSUFFICIENTLY EVALUATED": 10
+    "STILL INSUFFICIENTLY EVALUATED": 13
    },
    "by_provenance": {
     "catalogue_only": 3,
-    "own_search": 9
+    "own_search": 12
    },
-   "items": 12
+   "items": 15
   },
   "units": {
    "by_class": {
@@ -3437,6 +3437,42 @@
    "related_unit": "",
    "source_pointers": "recovery_it10_p23_20261031/README.md sections 1-3 and 11; recovery_it10_p23_20261031/candidates_it10_p23.tsv T1, T2 (correction_20261031 column); evidence_locators.tsv; tnk2_chembl_activities_selected.tsv; reopen_searches.tsv",
    "what_would_reopen": "the reopenable searches R1 to R7 in triggers.tsv (rows R*_q1_complement): above all R3 (full text of Mahajan 2005 and the HCC paper), R2 (WWOX protein or half-life after ACK1 inhibition or TNK2 loss in a neural or variant-allele cell) and R1 (whether the Q230P protein is made and cleared); a card and a mechanism-probe unit would be created only after R3 or R2"
+  },
+  {
+   "class": "INSUFF",
+   "evaluation_depth": "E1",
+   "item": "BMP pathway ligands (recombinant BMP-7 eptotermin alfa and BMP-2 dibotermin alfa) as a layer-identity lever",
+   "item_id": "N14",
+   "kind": "target_class",
+   "provenance": "own_search",
+   "reason": "Engine output on a recovery-defined seed pair (BCL11B down, SATB2 down; the two layer-identity readouts that neuron-stage WWOX add-back restored in WOREE organoids, PMID 42397075 Fig 6): 127 of 12,560 examined families reach the two seeds, the top two (Z 4.9 and 4.4) are recombinant ligands, with 500 null draws on 2 seeds. This is an engine statement, not evidence of an effect; the layer markers are one readout and firing a separate one (they dissociate in SCAR12). A title-level counter-datum: WWOX loss raises TGF-beta/BMP2 signalling in a pancreatic cancer line (PMID 36572673, title only). Recombinant protein ligands are systemic-development poor candidates. Not advanced; no card.",
+   "related_unit": "",
+   "source_pointers": "recoverable_it13_p3b_20261031/candidacies_it13_p3b.tsv C4; engine_runs/",
+   "what_would_reopen": "a gene-level add-back or knockout contrast that moves BMP-pathway genes in WWOX-deficient neural cells (E-MTAB-14792 if released), or a BMP arm with a layer-marker read-out in a WWOX organoid"
+  },
+  {
+   "class": "INSUFF",
+   "evaluation_depth": "E1",
+   "item": "Digoxin (cardiac glycoside; HIF1A-axis inhibitor in cells) on the null-mouse glycaemia readout",
+   "item_id": "N15",
+   "kind": "target_class",
+   "provenance": "own_search",
+   "reason": "A candidate gap in the phenotype-first list: in the Wwox-null mouse digoxin raised blood glucose within 40 minutes (n=3, no wild-type arm attested; the printed dose of 100 mg/kg i.p. is flagged implausible), a readout the vector add-back also recovers longitudinally (glycaemia normal from P20, PMID 42422765). Same endpoint class, a different measure (acute versus longitudinal), systemic not neural, one source relayed from the repository census (PMC body empty on 2026-09-22), and digoxin acts through Na/K-ATPase with HIF1A inhibition as a side pharmacology. A cardiac glycoside is generally understood to have a narrow therapeutic window (general pharmacology, not checked here). Not a neural benefit and not a candidate; recorded so the gap in the phenotype-first list is visible.",
+   "related_unit": "",
+   "source_pointers": "recoverable_it13_p3b_20261031/bypass_on_recoverable_readouts_it13_p3b.tsv (digoxin row)",
+   "what_would_reopen": "a replicated null-mouse glycaemia arm with a wild-type comparator and a verified dose, or a neural or neuron-level readout for the HIF1A axis in WWOX-deficient cells"
+  },
+  {
+   "class": "INSUFF",
+   "evaluation_depth": "E1",
+   "item": "Kv7 (KCNQ2/3) openers: ezogabine as an ex vivo probe, azetukalner as the clinical-stage member",
+   "item_id": "N13",
+   "kind": "target_class",
+   "provenance": "own_search",
+   "reason": "A proposal of IT13 P3a, not carded: the basis is a depolarised resting potential reported in a neuron-deleted slice study (about 5 mV, Breton 2021, relayed) and, weakly, Kcnq2/Kcnq3 transcripts lower in the P17 deposits; the Kcnq2 difference sits inside the control-line background (not interpretable at n of 2 to 4) and direction of a channel mRNA is not benefit. A reduced channel number lowers the ceiling of an opener. Identity from ChEMBL only (ezogabine CHEMBL41355 phase 4, KCNQ opener; azetukalner CHEMBL5095264 phase 3, no mechanism record in ChEMBL); ezogabine withdrawal and metabolite statements are prior knowledge and not verified here; paediatric exposure, label and safety were not searched. Ex vivo probe use only, development not assessed; no WWOX result exists for any Kv7 agent.",
+   "related_unit": "U21",
+   "source_pointers": "functional_it13_p3a_20261031/candidacies.tsv C2",
+   "what_would_reopen": "resting potential and the XE991-sensitive current in knockout versus control neurons, then an opener effect on bursts with the bath composition stated (reopen trigger NP3A3)"
   }
  ],
  "units": [
@@ -3567,7 +3603,7 @@
    ],
    "exploratory_it7": "None. Not in the P3 universe (card-linked families were firewalled out of every method) and P3 tested a transcript module, not protein fate. P2: a class with a catalogued target row only for HDAC at enzyme level; no chaperone target row in ChEMBL, GtoPdb or DGIdb.",
    "inputs": {
-    "T1_cards": "4e97ae2faddbb1b6",
+    "T1_cards": "8541e7b22b1cec18",
     "T2_pertinence": "91e62b924fe30a2a",
     "T3_receipts": "52149a4b03e76932",
     "T4_needs": "9ae567485b16c45c",
@@ -3865,7 +3901,7 @@
    ],
    "exploratory_it7": "None; outside the P3 universe and not a transcript question.",
    "inputs": {
-    "T1_cards": "101d9b1ab38011fa",
+    "T1_cards": "fe071a6d17c5c17b",
     "T2_pertinence": "a99cbab9e0538513",
     "T3_receipts": "f65f2005fcac34e1",
     "T4_needs": "9ae567485b16c45c",
@@ -4118,7 +4154,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "d34e6ce35ba4dde9",
+    "T1_cards": "06d55cc330051297",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "51d892749172e3bd",
     "T4_needs": "9ae567485b16c45c",
@@ -4349,7 +4385,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "60977bd55a648073",
+    "T1_cards": "e3b4861cb0226b29",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d1a40a526bc95810",
     "T4_needs": "9ae567485b16c45c",
@@ -4579,7 +4615,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "9d51c52022ea63ee",
+    "T1_cards": "98d3c80e30c59488",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d1a40a526bc95810",
     "T4_needs": "9ae567485b16c45c",
@@ -4845,7 +4881,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "959b214e808884b8",
+    "T1_cards": "3111aea8bf695a8d",
     "T2_pertinence": "e8ab801c472fdfe7",
     "T3_receipts": "0efa01184c6ba643",
     "T4_needs": "aa528d3f09f497b0",
@@ -5199,7 +5235,7 @@
    ],
    "exploratory_it7": "None. Gene addition is not a compound question; P2 counts it as direction-evaluable by target only (zero signed records on the need target) and P3 did not touch it.",
    "inputs": {
-    "T1_cards": "f8559846deca6692",
+    "T1_cards": "91f58196b653a920",
     "T2_pertinence": "59d15d3c06233d6c",
     "T3_receipts": "cd21840b2a4e584e",
     "T4_needs": "82b439e35fc80b6c",
@@ -5587,7 +5623,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "7938da738960a993",
+    "T1_cards": "08060659a38d013f",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "4c5d7ee4b7cf4a15",
     "T4_needs": "66cebf15a40b040e",
@@ -5818,7 +5854,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "9db7f0f38ba778b2",
+    "T1_cards": "7b7d3f72e2c2247a",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "ad1b95286f64b04c",
     "T4_needs": "10a1be2af4314710",
@@ -6060,7 +6096,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "48d8691e36c18803",
+    "T1_cards": "90fb71f7c602a1e6",
     "T2_pertinence": "8e52657c67b7cf9d",
     "T3_receipts": "9704e0c37800b5d7",
     "T4_needs": "b1224f7ee3d5a2f3",
@@ -6407,7 +6443,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "2b086682b62e83b3",
+    "T1_cards": "f43829eec47c9e21",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "dc01c05508dcbf56",
     "T4_needs": "55ff62f47762bab4",
@@ -6688,7 +6724,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "a8e201f8538e8a98",
+    "T1_cards": "d68d3f7d5920698f",
     "T2_pertinence": "079230f81c69cb2e",
     "T3_receipts": "293d407faa57bb47",
     "T4_needs": "932744721b4c9f86",
@@ -6977,7 +7013,7 @@
    ],
    "exploratory_it7": "P3 (IT7, exploratory, minimum detectable effect about rho 0.15, independently verified): NO ADDED VALUE of a signed external network (rho 0.047) or a WWOX-enriched network (difference -0.0015) for ranking compounds by opposition of the six-gene module; the signature route is effect not detected, not excluded (rho 0.143, 0.007 under the 0.15 threshold, 90 pe…",
    "inputs": {
-    "T1_cards": "3d06a6e645123c2c",
+    "T1_cards": "4dbf10f59ac5cbf7",
     "T2_pertinence": "1959a04e90dbf178",
     "T3_receipts": "5c83e6a18e12f4d3",
     "T4_needs": "a3face7aa0d2e275",
@@ -7374,7 +7410,7 @@
    ],
    "exploratory_it7": "P3 (IT7, exploratory, independently verified): the same result as CMP-04 - network routes NO ADDED VALUE, signature route not detected and not excluded (weak positive counter-evidence: lower bound 0.039, top-decile hit rate 15 percent); module transfer inconclusive (null 95th percentile 0.389 and p 0.060 on the producer's draw, 0.396 and 0.0595 on the verif…",
    "inputs": {
-    "T1_cards": "2c62310a49d43521",
+    "T1_cards": "6928bffd216a9458",
     "T2_pertinence": "4f588d870d868008",
     "T3_receipts": "b410a77ea4345508",
     "T4_needs": "709e9155ba014a61",
@@ -7789,7 +7825,7 @@
    ],
    "exploratory_it7": "None. A diet has no compound target row, so neither P2 method applies, and the P3 negative says nothing about it.",
    "inputs": {
-    "T1_cards": "63a46b950beb3a06",
+    "T1_cards": "82c78bb0faf496fd",
     "T2_pertinence": "d95f7e8dcd00a63d",
     "T3_receipts": "892bcad601ce6d84",
     "T4_needs": "e7b1a58338e49f76",
@@ -8112,7 +8148,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "68b02febfc90206b",
+    "T1_cards": "127c78ef30be1e16",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d2e53556d365e6a4",
     "T4_needs": "77086341166ba9e5",
@@ -8295,7 +8331,8 @@
    ],
    "caveats": {
     "counter": [
-     "IT12 P2.2 figure audit (dated 2026-10-31, PMID 37275776 Fig 7B, image viewed): the stored statement that the GIRK2 crossings lie inside the therapeutic band is wrong on one clause. In oocytes the GIRK2 homomer activated by Gbeta-gamma is half-maximally inhibited at about 0.03 to 0.06 mM, about 4 to 8 times BELOW the shaded band (about 0.25 to 0.9 mM), while the brain-predominant GIRK1/2 plus Gbeta-gamma channel crosses at about 0.4 to 1 mM, inside it (partial block, about 20 to 60 percent). So a measured non-T-type target exists at labelled exposure, and the wording 'T-type potency is weak against the labelled range' is not the whole story: the ethosuximide result in the WWOX mouse (PTZ seizure score) cannot be attributed to T-type mediation. An oocyte datum, not a WWOX mechanism; the authors say neuronal GIRK2 homomer abundance is unknown. In a genetic absence model the relay-neuron T-type current is smaller than control and the burst-threshold difference follows Ih (PMID 24953239 Figs 5 and 6). No group or member evidence changes."
+     "IT12 P2.2 figure audit (dated 2026-10-31, PMID 37275776 Fig 7B, image viewed): the stored statement that the GIRK2 crossings lie inside the therapeutic band is wrong on one clause. In oocytes the GIRK2 homomer activated by Gbeta-gamma is half-maximally inhibited at about 0.03 to 0.06 mM, about 4 to 8 times BELOW the shaded band (about 0.25 to 0.9 mM), while the brain-predominant GIRK1/2 plus Gbeta-gamma channel crosses at about 0.4 to 1 mM, inside it (partial block, about 20 to 60 percent). So a measured non-T-type target exists at labelled exposure, and the wording 'T-type potency is weak against the labelled range' is not the whole story: the ethosuximide result in the WWOX mouse (PTZ seizure score) cannot be attributed to T-type mediation. An oocyte datum, not a WWOX mechanism; the authors say neuronal GIRK2 homomer abundance is unknown. In a genetic absence model the relay-neuron T-type current is smaller than control and the burst-threshold difference follows Ih (PMID 24953239 Figs 5 and 6). No group or member evidence changes.",
+     "IT13 P3a (2026-10-31): ethosuximide's attribution to T-type channels is not supported by any measurement in Wwox tissue: the catalogue mechanism record lists T-type only, the source paper's own oocyte data show GIRK block near the labelled band (a GIRK route would predict the opposite sign; prior knowledge), the two PTZ-alone null cohorts of the figure differ by about the size of the drug effect, no interaction test, and P17 Cacna1g/h/Kcnj6 transcripts are inside the control-line background. The late-phase effect stays one experiment in one laboratory; the group is unchanged."
     ],
     "limit": [
      "same paper and laboratory as lithium (PMID 32000863), one experiment, i.p., one PTZ dose, effect confined to the late phase; no wild-type or drug-by-genotype test and the wild-type arm is floor-limited, so absence of a wild-type effect is unknown, not clean; the paper reports lithium better than ethosuximide",
@@ -8387,7 +8424,7 @@
      "wwox_assertions": 1
     },
     "X_counter_evidence": {
-     "need_level_counter_items": 5,
+     "need_level_counter_items": 6,
      "need_level_counter_items_note": "over 2 linked need(s); items of the need record, not of the intervention",
      "opposed_action_needs": [],
      "outside_wwox_null_or_harm": 1,
@@ -8413,10 +8450,10 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "90c95889b77b8bfe",
+    "T1_cards": "d93b50061267cece",
     "T2_pertinence": "8b0a047e9ce40434",
     "T3_receipts": "fed069ad0e0c5861",
-    "T4_needs": "3093063f37ac6ad7",
+    "T4_needs": "70142e30938ab222",
     "T5_pharmacology": "5da5f03bb1490bdc",
     "T6_identity": "589dd4de63446384"
    },
@@ -8589,7 +8626,8 @@
      "contested": false,
      "counter_needs": [],
      "counter_statements": [
-      "IT12 P2.2 figure audit (dated 2026-10-31, PMID 37275776 Fig 7B, image viewed): the stored statement that the GIRK2 crossings lie inside the therapeutic band is wrong on one clause. In oocytes the GIRK2 homomer activated by Gbeta-gamma is half-maximally inhibited at about 0.03 to 0.06 mM, about 4 to 8 times BELOW the shaded band (about 0.25 to 0.9 mM), while the brain-predominant GIRK1/2 plus Gbeta-gamma channel crosses at about 0.4 to 1 mM, inside it (partial block, about 20 to 60 percent). So a measured non-T-type target exists at labelled exposure, and the wording 'T-type potency is weak against the labelled range' is not the whole story: the ethosuximide result in the WWOX mouse (PTZ seizure score) cannot be attributed to T-type mediation. An oocyte datum, not a WWOX mechanism; the authors say neuronal GIRK2 homomer abundance is unknown. In a genetic absence model the relay-neuron T-type current is smaller than control and the burst-threshold difference follows Ih (PMID 24953239 Figs 5 and 6). No group or member evidence changes."
+      "IT12 P2.2 figure audit (dated 2026-10-31, PMID 37275776 Fig 7B, image viewed): the stored statement that the GIRK2 crossings lie inside the therapeutic band is wrong on one clause. In oocytes the GIRK2 homomer activated by Gbeta-gamma is half-maximally inhibited at about 0.03 to 0.06 mM, about 4 to 8 times BELOW the shaded band (about 0.25 to 0.9 mM), while the brain-predominant GIRK1/2 plus Gbeta-gamma channel crosses at about 0.4 to 1 mM, inside it (partial block, about 20 to 60 percent). So a measured non-T-type target exists at labelled exposure, and the wording 'T-type potency is weak against the labelled range' is not the whole story: the ethosuximide result in the WWOX mouse (PTZ seizure score) cannot be attributed to T-type mediation. An oocyte datum, not a WWOX mechanism; the authors say neuronal GIRK2 homomer abundance is unknown. In a genetic absence model the relay-neuron T-type current is smaller than control and the burst-threshold difference follows Ih (PMID 24953239 Figs 5 and 6). No group or member evidence changes.",
+      "IT13 P3a (2026-10-31): ethosuximide's attribution to T-type channels is not supported by any measurement in Wwox tissue: the catalogue mechanism record lists T-type only, the source paper's own oocyte data show GIRK block near the labelled band (a GIRK route would predict the opposite sign; prior knowledge), the two PTZ-alone null cohorts of the figure differ by about the size of the drug effect, no interaction test, and P17 Cacna1g/h/Kcnj6 transcripts are inside the control-line background. The late-phase effect stays one experiment in one laboratory; the group is unchanged."
      ],
      "criteria_not_met": [
       "a favourable WWOX readout carries no reading-limit flag (found: graphical_reading)",
@@ -8761,7 +8799,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "cd66dbeab3582be3",
+    "T1_cards": "8b1aa5b1844cb51b",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d2e53556d365e6a4",
     "T4_needs": "77086341166ba9e5",
@@ -9009,7 +9047,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "0a226fd87fb8e7ff",
+    "T1_cards": "d26742b32c3a46e7",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "004bf101de3feb3f",
     "T4_needs": "e47c99263fff82cc",
@@ -9327,7 +9365,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "c441428839c4a074",
+    "T1_cards": "2012c1a2b2483cb8",
     "T2_pertinence": "094cb2bb03ecb864",
     "T3_receipts": "212be31947637493",
     "T4_needs": "89705b05a4222975",
@@ -9710,7 +9748,8 @@
      "the only WWOX readout is d-APV (competitive NMDAR block, a tool compound) in neuron-specific knockout cortical slices from one laboratory; memantine, perampanel, radiprodil and the other class members have no WWOX data; rivals not excluded: carbenoxolone (a gap-junction blocker that may also block NMDAR) reduced bursts by 87 percent, heterozygote slices also burst (4 of 23) without behavioural seizures, and the mEPSC data show no overt change in the NMDAR:AMPA proportion"
     ],
     "note": [
-     "Graph coverage (IT11 P2.1): the graph returns d-APV only as a direct hit on the GRIN2C transcript in the Q4 direct-search arm (the earlier 'zero score' was the indirect part only); the GRIN2A, GRIN2B and GRIN2D subunits have outgoing edges but no chain reaches a Q4 seed. The hit concerns a mouse transcript, the lead's result is a bursting readout in slices: a level mismatch, not a confirmation. A development input, not an independent validation."
+     "Graph coverage (IT11 P2.1): the graph returns d-APV only as a direct hit on the GRIN2C transcript in the Q4 direct-search arm (the earlier 'zero score' was the indirect part only); the GRIN2A, GRIN2B and GRIN2D subunits have outgoing edges but no chain reaches a Q4 seed. The hit concerns a mouse transcript, the lead's result is a bursting readout in slices: a level mismatch, not a confirmation. A development input, not an independent validation.",
+     "IT13 P3b (2026-10-31): d-APV measured necessity of NMDAR activity for bursting in a neuron-deleted mouse slice (acute, reversible, no wild-type burst control); it is a different system and measure from the only human firing recovery (WWOX add-back in organoids, PMID 42397075), which has no compound arm. No intervention of any kind has a firing readout in a human WWOX-deficient neural system."
     ],
     "question": [
      "gap-junction dependence (carbenoxolone, 87 percent reduction) and bursting in heterozygote slices as rival explanations of the d-APV result"
@@ -9810,7 +9849,7 @@
      "wwox_assertions": 1
     },
     "X_counter_evidence": {
-     "need_level_counter_items": 8,
+     "need_level_counter_items": 9,
      "need_level_counter_items_note": "over 1 linked need(s); items of the need record, not of the intervention",
      "opposed_action_needs": [],
      "outside_wwox_null_or_harm": 6,
@@ -9847,10 +9886,10 @@
    ],
    "exploratory_it7": "None from P3 (a receptor-physiology question, not a transcript module; memantine and perampanel are card-linked and firewalled). P2: memantine and perampanel are usable by the network method (signed antagonist actions on GRIN and GRIA targets) and have no neural LINCS signature, so the signature method does not apply; the need has 179 linked records by targ…",
    "inputs": {
-    "T1_cards": "c6c90d68851ae82b",
+    "T1_cards": "5cfb38d69dc1cef6",
     "T2_pertinence": "4744af9e5e721d31",
     "T3_receipts": "533fe34f5749cb80",
-    "T4_needs": "ce38af3ca4f76c07",
+    "T4_needs": "80f3953815932b9b",
     "T5_pharmacology": "83e16cf80f0d93c6",
     "T6_identity": "d72dab466f7f0934"
    },
@@ -10175,7 +10214,7 @@
       "kind": "verificare un'ipotesi",
       "need": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
       "question": "Which of three readings (NMDAR gain, permissive necessity, AMPAR-led drive) explains the d-APV-sensitive bursting, and does the bursting depend on the magnesium block? The d-APV result alone does not separate them.",
-      "would_change": "E1 decides whether an NMDAR gain is present or the dependence is permissive; a partial blocker is read only after E1, and without E1 a memantine result cannot be attributed to pyramidal receptors. A titration that cannot lower bursts inside a reachable range closes the magnesium strand."
+      "would_change": "E1 decides whether an NMDAR gain is present or the dependence is permissive; a partial blocker is read only after E1, and without E1 a memantine result cannot be attributed to pyramidal receptors. A titration that cannot lower bursts inside a reachable range closes the magnesium strand. A silencer that lowers firing without raising CTIP2/SATB2 would separat…"
      },
      "next_priority": {
       "feasibility_flags": [
@@ -10188,7 +10227,8 @@
       "stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)"
      },
      "notes": [
-      "Graph coverage (IT11 P2.1): the graph returns d-APV only as a direct hit on the GRIN2C transcript in the Q4 direct-search arm (the earlier 'zero score' was the indirect part only); the GRIN2A, GRIN2B and GRIN2D subunits have outgoing edges but no chain reaches a Q4 seed. The hit concerns a mouse transcript, the lead's result is a bursting readout in slices: a level mismatch, not a confirmation. A development input, not an independent validation."
+      "Graph coverage (IT11 P2.1): the graph returns d-APV only as a direct hit on the GRIN2C transcript in the Q4 direct-search arm (the earlier 'zero score' was the indirect part only); the GRIN2A, GRIN2B and GRIN2D subunits have outgoing edges but no chain reaches a Q4 seed. The hit concerns a mouse transcript, the lead's result is a bursting readout in slices: a level mismatch, not a confirmation. A development input, not an independent validation.",
+      "IT13 P3b (2026-10-31): d-APV measured necessity of NMDAR activity for bursting in a neuron-deleted mouse slice (acute, reversible, no wild-type burst control); it is a different system and measure from the only human firing recovery (WWOX add-back in organoids, PMID 42397075), which has no compound arm. No intervention of any kind has a firing readout in a human WWOX-deficient neural system."
      ],
      "objective": "partial",
      "objective_note": "",
@@ -10296,7 +10336,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "a8b4ba5c29eaadfa",
+    "T1_cards": "d3ea4063f1daef25",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "5931d09e617ead46",
     "T4_needs": "69a0fc27d793904a",
@@ -10449,7 +10489,11 @@
    "cards": [
     "F03_bumetanide_chloride_gradient"
    ],
-   "caveats": {},
+   "caveats": {
+    "counter": [
+     "IT13 P3a (2026-10-31): P17 Wwox-deletion transcripts give no support for the chloride-gradient premise (NKCC1:KCC2 ratio not raised in the three hippocampal contrasts; Slc12a5 higher in one; transcript only, n of 2 to 4); E_GABA is unmeasured. The abstention stands."
+    ]
+   },
    "class": "INSUFF",
    "class_label": "STILL INSUFFICIENTLY EVALUATED",
    "class_reason": "every card of the unit is an abstention or names no step: a datum is missing before a test can be designed; not placed at the bottom",
@@ -10520,7 +10564,7 @@
      "wwox_assertions": 0
     },
     "X_counter_evidence": {
-     "need_level_counter_items": 5,
+     "need_level_counter_items": 6,
      "need_level_counter_items_note": "over 2 linked need(s); items of the need record, not of the intervention",
      "opposed_action_needs": [],
      "outside_wwox_null_or_harm": 0,
@@ -10543,10 +10587,10 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "d1a609caf940f1b8",
+    "T1_cards": "42eb8415fd75b5d1",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "a729e52b13cb13ec",
-    "T4_needs": "5f3af372617a911f",
+    "T4_needs": "c83c6ba0ebdee7ec",
     "T5_pharmacology": "4cfc018740c85d41",
     "T6_identity": "c8a9075059e82981"
    },
@@ -10662,7 +10706,9 @@
      "caveat_limits": [],
      "contested": false,
      "counter_needs": [],
-     "counter_statements": [],
+     "counter_statements": [
+      "IT13 P3a (2026-10-31): P17 Wwox-deletion transcripts give no support for the chloride-gradient premise (NKCC1:KCC2 ratio not raised in the three hippocampal contrasts; Slc12a5 higher in one; transcript only, n of 2 to 4); E_GABA is unmeasured. The abstention stands."
+     ],
      "criteria_not_met": [],
      "declared": true,
      "evidence": {
@@ -10868,7 +10914,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "61bbc696d4161843",
+    "T1_cards": "0a7f60ca8eaacc19",
     "T2_pertinence": "db0343ccb25dda32",
     "T3_receipts": "1e81e393df77743b",
     "T4_needs": "99f7c86d7134370b",
@@ -11194,7 +11240,7 @@
      "wwox_assertions": 0
     },
     "X_counter_evidence": {
-     "need_level_counter_items": 5,
+     "need_level_counter_items": 6,
      "need_level_counter_items_note": "over 2 linked need(s); items of the need record, not of the intervention",
      "opposed_action_needs": [],
      "outside_wwox_null_or_harm": 2,
@@ -11220,10 +11266,10 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "a8bbcfc7d7e78407",
+    "T1_cards": "73fc4bba6de209eb",
     "T2_pertinence": "904f40dca9a2c7f5",
     "T3_receipts": "e631cecfdfb7956c",
-    "T4_needs": "3093063f37ac6ad7",
+    "T4_needs": "70142e30938ab222",
     "T5_pharmacology": "5da5f03bb1490bdc",
     "T6_identity": "61b1f388d5aca48f"
    },
@@ -11555,7 +11601,7 @@
    ],
    "exploratory_it7": "None from P3 (not the glycolysis module). P2: the need is exploration-only (direction uncertain) with 521 linked records by target association, 331 usable by the network method and 4 neural-signature records among them; association only, no direction toward a need, nothing evaluated.",
    "inputs": {
-    "T1_cards": "6ca76a59deddb9ca",
+    "T1_cards": "b10a1a02a0f1734c",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "137600edf412817c",
     "T4_needs": "34001ad580d89a15",
@@ -11827,7 +11873,7 @@
      "wwox_assertions": 0
     },
     "X_counter_evidence": {
-     "need_level_counter_items": 8,
+     "need_level_counter_items": 9,
      "need_level_counter_items_note": "over 1 linked need(s); items of the need record, not of the intervention",
      "opposed_action_needs": [],
      "outside_wwox_null_or_harm": 0,
@@ -11852,10 +11898,10 @@
    ],
    "exploratory_it7": "None. An ion has no signed target row for the network method and no neural LINCS perturbation; the P3 negative does not apply.",
    "inputs": {
-    "T1_cards": "167e5530609a4f61",
+    "T1_cards": "dab53d9b98846ee4",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "679405f21efb5aa3",
-    "T4_needs": "ce38af3ca4f76c07",
+    "T4_needs": "80f3953815932b9b",
     "T5_pharmacology": "219331179cc8894b",
     "T6_identity": "bafc117d5dd84908"
    },
@@ -12006,7 +12052,7 @@
       "kind": "verificare un'ipotesi",
       "need": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
       "question": "Which of three readings (NMDAR gain, permissive necessity, AMPAR-led drive) explains the d-APV-sensitive bursting, and does the bursting depend on the magnesium block? The d-APV result alone does not separate them.",
-      "would_change": "E1 decides whether an NMDAR gain is present or the dependence is permissive; a partial blocker is read only after E1, and without E1 a memantine result cannot be attributed to pyramidal receptors. A titration that cannot lower bursts inside a reachable range closes the magnesium strand."
+      "would_change": "E1 decides whether an NMDAR gain is present or the dependence is permissive; a partial blocker is read only after E1, and without E1 a memantine result cannot be attributed to pyramidal receptors. A titration that cannot lower bursts inside a reachable range closes the magnesium strand. A silencer that lowers firing without raising CTIP2/SATB2 would separat…"
      },
      "next_priority": {
       "feasibility_flags": [
@@ -12181,7 +12227,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "af8607029101a438",
+    "T1_cards": "e0390963f60516fd",
     "T2_pertinence": "419afd58578b735f",
     "T3_receipts": "426c49feed3ec7e7",
     "T4_needs": "bbaa10de8747dfa1",
@@ -12510,7 +12556,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "41f105c4d1d90656",
+    "T1_cards": "730659484b2be591",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d2e53556d365e6a4",
     "T4_needs": "77086341166ba9e5",
@@ -12672,7 +12718,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "8e7fb7dfd1abada4",
+    "T1_cards": "496c8eb68a497fef",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "c3c30203aefa55c6",
     "T4_needs": "c156cede56e9ac9b",
@@ -12832,7 +12878,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "aa69087b7c0f09fc",
+    "T1_cards": "3b7e5abab5ca3a2f",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "c124efeb8d5edb82",
     "T4_needs": "97e5657152aa720b",
@@ -13024,7 +13070,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "333a93ebae32156b",
+    "T1_cards": "eacd1a3d0adb25db",
     "T2_pertinence": "1d8e37b50e10f4e0",
     "T3_receipts": "2d4c21c2c119e3b6",
     "T4_needs": "2fa442aa63e75191",
@@ -13479,7 +13525,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "db25eb878bc4cb92",
+    "T1_cards": "1d5bc727676adb99",
     "T2_pertinence": "403956ddfaf8ef49",
     "T3_receipts": "3ab40f90f4842fdd",
     "T4_needs": "e3d9478eddf1541c",
