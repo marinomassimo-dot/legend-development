@@ -8,7 +8,7 @@
  "START_UTC": "2026-10-30T22:37:00Z",
  "BASELINE": "cc4d629b021ff33b82c88a8359fcaccc53bf8e6d = development/main (verified equal after fetch; CI success on that SHA)",
  "AUTHORISED_QUEUE_20261031B": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P1_ENGINE": {
    "order": 1,
    "steps": [
@@ -111,9 +111,9 @@
    "steps": [
     {
      "step": "hostile review, integration, final battery in clean clone, push, CI, cleanup",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "review of P1 repaired; verifier of Q6 and NRF2; final battery see closing entry"
+     "evidence": "final battery in a clean no-hardlink clone on code 2e73215e8365461bb48211d394dbb578a222bd51: PASS WITH SKIPS (171 targets, 7 skipped: case-sensitive filesystem, absent local corpus artefacts, Stop hook not installed), 2590 s. Two earlier runs FAILED and were repaired: (1) TSV ellipsis row and unittest verbosity of two new files, (2) a P2.1 test asserting the pre-patch IT10 lithium label. Hostile reviews: engine P1 (repaired), verifiers for Q6 and NRF2. Worktrees removed after verifying 0 unmerged and 0 dirty. Records added after the battery: mandate record, closing notes."
     }
    ]
   }
