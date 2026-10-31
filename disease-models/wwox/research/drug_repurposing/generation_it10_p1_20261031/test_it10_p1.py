@@ -318,8 +318,20 @@ class Origins(unittest.TestCase):
         self.assertEqual({k for k, _ in dz.canonical_origins_checked(self.seeds["S085"])}, {"PMID:36828035|expression"})
         self.assertEqual({k for k, _ in dz.canonical_origins_checked(self.seeds["S086"])}, {"PMID:30290271|expression"})
 
-    def test_hnpc_and_organoid_locators_fold_in_any_letter_case(self):
-        self.assertEqual({dz.canonical_origins(self.seeds[s])[0][0] for s in ("S040", "S044", "S017")}, {"DEPOSITS:GSE156243+GSE126075(+neurons)"})
+    def test_hnpc_and_organoid_locators_keep_their_own_origin_in_any_letter_case(self):
+        keys = {s: {k for k, _ in dz.canonical_origins(self.seeds[s])} for s in ("S040", "S044", "S017")}
+        for ks in keys.values():
+            self.assertTrue(ks <= {dz.DEPOSIT_ORGANOID, dz.DEPOSIT_HNPC} and ks)
+        self.assertEqual(set().union(*keys.values()) & {"DEPOSITS:GSE156243+GSE126075(+neurons)"}, set())
+
+    def test_two_deposits_count_once_by_default_and_twice_when_ungrouped(self):
+        self.assertEqual({dz.origin_group(dz.DEPOSIT_ORGANOID), dz.origin_group(dz.DEPOSIT_HNPC)}, {dz.SHARED_DERIVATION})
+        dz.GROUP_BY_DERIVATION = False
+        try:
+            self.assertEqual({dz.origin_group(dz.DEPOSIT_ORGANOID), dz.origin_group(dz.DEPOSIT_HNPC)}, {dz.DEPOSIT_ORGANOID, dz.DEPOSIT_HNPC})
+        finally:
+            dz.GROUP_BY_DERIVATION = True
+        self.assertEqual(dz.origin_group("PMID:36828035|expression"), "PMID:36828035|expression")
 
     def test_unreconstructable_origin_stays_its_own_and_is_flagged(self):
         fake = dict(seed_id="SX1", source_locator="", context="", level="expression")

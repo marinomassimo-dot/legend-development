@@ -16,14 +16,9 @@ spec = importlib.util.spec_from_file_location("dz", HERE / "dispose_it10.py"); d
 V4 = HERE / "results_v4"; DR = dz.DR
 orig_c = dz.canonical_origins_checked; orig_cont = dz.contributing_origins
 def variant(name):
-    dz.canonical_origins_checked = orig_c; dz.contributing_origins = orig_cont
+    dz.canonical_origins_checked = orig_c; dz.contributing_origins = orig_cont; dz.GROUP_BY_DERIVATION = True
     if name == "A_deposits_two":
-        def f(seed):
-            out = []
-            for k, ok in dz.origin_keys(seed):
-                out.append((k, ok))
-            return [(k, ok) for k, ok in out if k not in dz._OVR.get(seed["seed_id"], ())] or out
-        dz.canonical_origins_checked = f
+        dz.GROUP_BY_DERIVATION = False   # the two deposits keep their own keys and count as two origins
     elif name == "B_levels_merged":
         def f(seed):
             return [(re.sub(r"\|[a-z_]+$", "", k), ok) for k, ok in orig_c(seed)]

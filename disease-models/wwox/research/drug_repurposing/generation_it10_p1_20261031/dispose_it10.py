@@ -105,14 +105,30 @@ def origin_keys(seed):
     return [("SEED:" + seed["seed_id"], False)]
 
 
+DEPOSIT_ORGANOID = "DEPOSIT:GSE156243(organoid)"
+DEPOSIT_HNPC = "DEPOSIT:GSE126075(hNPC,neurons)"
+SHARED_DERIVATION = "DERIVATION:IT7_ONE_METHOD"
+GROUP_BY_DERIVATION = True   # origin_sensitivity_it11.py variant A switches this off: the two deposits then count as two origins
+
+
+def origin_group(key):
+    """The unit that counts as ONE origin for convergence. The two human deposits stay two recognisable experiments (own keys, own labels); their IT7 derived tables
+    were read with one method and one derivation, so by default they count once. This is a judgement, declared in the README and measured in origin_sensitivity.tsv.
+    Not a second strong confirmation: the hNPC deposit is a single-shRNA H9 line with n=1 and a WWOX reduction that was not demonstrated in the library examined."""
+    return SHARED_DERIVATION if GROUP_BY_DERIVATION and key in (DEPOSIT_ORGANOID, DEPOSIT_HNPC) else key
+
+
 def canonical_origins(seed):
-    """Fold the IT7 derived tables of the two human deposits (GSE156243 organoid, GSE126075 hNPC, neurons) to one origin. This is a judgement: two deposits read
-    with one method and one derivation count once, which makes 'no change' true for Q2 by construction; the fold is declared in the README and tested as intended."""
+    """The two human deposits (GSE156243 organoid; GSE126075 hNPC and neurons) are kept as two origin keys; a key that names both is split."""
     out = []
     for k, ok in origin_keys(seed):
-        if re.search(r"organoid_ko_w15|hnpc_shwwox|org_ko|hnpc_kd|neur_kd|gse156243|gse126075", k.lower()):
-            k, ok = "DEPOSITS:GSE156243+GSE126075(+neurons)", True
-        out.append((k, ok))
+        kl = k.lower()
+        org = re.search(r"organoid_ko_w15|org_ko|gse156243", kl)
+        hnp = re.search(r"hnpc_shwwox|hnpc_kd|neur_kd|gse126075", kl)
+        if org or hnp:
+            out += [(key, True) for key, hit in ((DEPOSIT_ORGANOID, org), (DEPOSIT_HNPC, hnp)) if hit]
+        else:
+            out.append((k, ok))
     return out
 
 
@@ -167,8 +183,10 @@ def contributing_origins(contrib_rows, seed_index, set_name, frac=0.10):
                 continue
             origins.setdefault(k, ok)
     unrec = sum(1 for ok in origins.values() if not ok)
-    note = ("origins: " + "; ".join(sorted(origins))[:160]) + (f"; {unrec} origin(s) not reconstructable" if unrec else "")
-    return len(keep), len(origins), note
+    counted = {origin_group(k) for k in origins}
+    shared = " [shared IT7 derivation, counted once]" if len(counted) < len(origins) else ""
+    note = ("origins: " + "; ".join(sorted(origins))[:160]) + shared + (f"; {unrec} origin(s) not reconstructable" if unrec else "")
+    return len(keep), len(counted), note
 
 
 def dev_scope(name, dev):
