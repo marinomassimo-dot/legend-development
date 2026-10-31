@@ -1,0 +1,407 @@
+{
+ "schema_version": 2,
+ "pmid": "16288044",
+ "doi": "10.1158/0008-5472.CAN-05-1127",
+ "receipt": "FTR-20261031-16288044-01",
+ "landing": [
+  "ack1_it12_mahajan_20261031",
+  "ack1_it13_mahajan_20261031"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "The operator supplied the AACR PDF directly after the CiteSeerX route returned 403 in IT11; no acquisition cascade was run and no access control was circumvented."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not run by the producer by design: the producer of a reading is not its verifier. The triples are available for a blind audit; the Mahajan verdicts table lists locators M1-M8."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 91,
+  "publications_on_gene": 2,
+  "counts_measured": "PubMed esearch 2026-10-31: 'Mahajan NP[au]' 91; 'Mahajan NP[au] AND WWOX' 2; 'Mahajan NP[au] AND (ACK1 OR TNK2)' 31. Author-name ambiguity is possible (initials search); the senior author's identity was not disambiguated beyond the initials.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A kinase-signalling group in prostate cancer (ACK1 is the group's main subject); WWOX is a substrate they found by mass spectrometry. Their ACK1 measurements carry full weight; their WWOX conclusions are weighted as overexpression observations in non-neural cells, with the degradation step carried by one blot.",
+  "note": "WWOX is not the group's field; the senior ACK1 literature is cited by later WWOX reviews as the source of the ACK1 -> WWOX mechanism."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX AND (ACK1 OR TNK2), Europe PMC REST hitCount 2026-10-31",
+    "route": "Europe PMC REST",
+    "count": 103
+   }
+  ],
+  "note": "Low direct WWOX density: one paper of an ACK1 programme; later WWOX papers that restate the mechanism cite this paper rather than replicate it (citation is not replication)."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 54,
+  "gene_direct_refs_in_source": [
+   "33",
+   "34",
+   "35",
+   "38",
+   "39",
+   "43",
+   "53"
+  ],
+  "enumeration_method": "Numbered reference list in the extracted text: 54 entries. Gene-direct entries identified from the text passages that discuss Wwox (refs 33-35, 38, 39, 43, 53); not each opened.",
+  "resolved": [
+   {
+    "pmid": "15070730",
+    "state": "complete receipt in the ledger (FTR-20260909-15070730-02)"
+   },
+   {
+    "pmid": "11572989",
+    "state": "partial receipt in the ledger (FTR-20260927-11572989-01); not complete"
+   }
+  ],
+  "queued": [
+   {
+    "pmid": "11719429",
+    "queue": "FT-202"
+   },
+   {
+    "pmid": "11058590",
+    "queue": "FT-203"
+   },
+   {
+    "pmid": "10786676",
+    "queue": "FT-204"
+   },
+   {
+    "pmid": "12514174",
+    "queue": "FT-205"
+   },
+   {
+    "pmid": "14695174",
+    "queue": "FT-206"
+   }
+  ],
+  "note": "Refs 39 and 34 already have receipts (39 complete, 34 partial); refs 33, 35, 38, 43 and 53 are queued as FT-202 to FT-206 and not read. Ref 53 (Watanabe) bears on the proteasomal-route inference. Later ACK1 follow-ups are in ack1_it12_mahajan_20261031/README.md and the IT13 P1.5 package."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Which repository consumers carry the ACK1 -> Tyr287 -> ubiquitination/degradation chain, and at what depth did they read the source?",
+  "hits": 0,
+  "finding": "Earlier manifests (PMID 21115974, 21476439, 26499798) record this paper as a queued or unread hop with 'NO RECEIPT'; the IT10/IT11 N12 text rested on the abstract and an indexed copy. Consumer reconciliation is done in the IT13 package, not by this manifest."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-31",
+  "route": "PubMed esummary 2026-10-31 (publication types) plus dependency_integrity.py screen (Retraction Watch snapshot 2026-10-21)",
+  "result": "PubMed publication types: Journal Article; Research Support, N.I.H., Extramural. No retraction notice, expression of concern or erratum type listed. Reference screening clean on 45 of 54 references with DOI; 9 references have no DOI and are unscreenable.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 54,
+   "references_screened": 45,
+   "references_with_doi": 45,
+   "schema": "retraction_check.dependencies/1",
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 10,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "screened": true,
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 9
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID16288044_Mahajan2005_CancerRes.pdf",
+   "sha256": "6339ef854e09cce65625eba8ce3a57a65993c181a7a1a9d85de5ed6936d9fd35",
+   "kind": "article_binary",
+   "note": "AACR journal PDF, 10 pages (Cancer Res 2005;65:10514-23), supplied by the operator; stamp 'downloaded ... by guest on 31 October 2026'. Read, not redistributed; it lives in the gitignored files/ tree and is not in the public repository.",
+   "acquisition_recipe": {
+    "no_recipe": "The file was supplied by the operator after the CiteSeerX route returned 403 in IT11; no automated route to the AACR PDF was tried or is claimed, and no access control was circumvented."
+   }
+  },
+  {
+   "path": "files/figures/PMID16288044/page5-05.png",
+   "sha256": "7ae823cb099040f4829e9b5b19b88fd5c9a7c7bd40635a9d997f62868a0c7e84",
+   "kind": "figure",
+   "note": "PDF page 5 rendered at 130 dpi with pdftoppm and inspected (journal page 10518).",
+   "acquisition_recipe": {
+    "derived_from": "files/fulltext/PMID16288044_Mahajan2005_CancerRes.pdf",
+    "derived": true,
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -f 5 -l 5 -r 130 -png"
+    },
+    "acquired_on": "2026-10-31",
+    "result_sha256": "7ae823cb099040f4829e9b5b19b88fd5c9a7c7bd40635a9d997f62868a0c7e84"
+   }
+  },
+  {
+   "path": "files/figures/PMID16288044/page6-06.png",
+   "sha256": "3b72debea6343aa403e39e879b3459fc67ab807b6d74a34bac59382c8488225a",
+   "kind": "figure",
+   "note": "PDF page 6 rendered at 130 dpi with pdftoppm and inspected (journal page 10519).",
+   "acquisition_recipe": {
+    "derived_from": "files/fulltext/PMID16288044_Mahajan2005_CancerRes.pdf",
+    "derived": true,
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -f 6 -l 6 -r 130 -png"
+    },
+    "acquired_on": "2026-10-31",
+    "result_sha256": "3b72debea6343aa403e39e879b3459fc67ab807b6d74a34bac59382c8488225a"
+   }
+  },
+  {
+   "path": "files/figures/PMID16288044/page7-07.png",
+   "sha256": "e087b10d8a113de39d822c3091170e52269e81c9e58ff06b221c117871d12f8c",
+   "kind": "figure",
+   "note": "PDF page 7 rendered at 130 dpi with pdftoppm and inspected (journal page 10520).",
+   "acquisition_recipe": {
+    "derived_from": "files/fulltext/PMID16288044_Mahajan2005_CancerRes.pdf",
+    "derived": true,
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -f 7 -l 7 -r 130 -png"
+    },
+    "acquired_on": "2026-10-31",
+    "result_sha256": "e087b10d8a113de39d822c3091170e52269e81c9e58ff06b221c117871d12f8c"
+   }
+  },
+  {
+   "path": "files/figures/PMID16288044/page8-08.png",
+   "sha256": "43d487fd27073a4db82cbafbe0ed35e167e55a899bda041216f203e60edbf40a",
+   "kind": "figure",
+   "note": "PDF page 8 rendered at 130 dpi with pdftoppm and inspected (journal page 10521).",
+   "acquisition_recipe": {
+    "derived_from": "files/fulltext/PMID16288044_Mahajan2005_CancerRes.pdf",
+    "derived": true,
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -f 8 -l 8 -r 130 -png"
+    },
+    "acquired_on": "2026-10-31",
+    "result_sha256": "43d487fd27073a4db82cbafbe0ed35e167e55a899bda041216f203e60edbf40a"
+   }
+  },
+  {
+   "path": "files/figures/PMID16288044/page3-03.png",
+   "sha256": "994e0e972e0a48c370205e652a5fcd1b5289e4612ac9be13ef3b8626670f89d2",
+   "kind": "figure",
+   "note": "PDF page 3 rendered at 110 dpi with pdftoppm and inspected (journal page 10516).",
+   "acquisition_recipe": {
+    "derived_from": "files/fulltext/PMID16288044_Mahajan2005_CancerRes.pdf",
+    "derived": true,
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -f 3 -l 3 -r 110 -png"
+    },
+    "acquired_on": "2026-10-31",
+    "result_sha256": "994e0e972e0a48c370205e652a5fcd1b5289e4612ac9be13ef3b8626670f89d2"
+   }
+  },
+  {
+   "path": "files/figures/PMID16288044/page4-04.png",
+   "sha256": "85e4faf92b78ccde6502c116a3b349151d62cc1f537fb000984063f912d05280",
+   "kind": "figure",
+   "note": "PDF page 4 rendered at 110 dpi with pdftoppm and inspected (journal page 10517).",
+   "acquisition_recipe": {
+    "derived_from": "files/fulltext/PMID16288044_Mahajan2005_CancerRes.pdf",
+    "derived": true,
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -f 4 -l 4 -r 110 -png"
+    },
+    "acquired_on": "2026-10-31",
+    "result_sha256": "85e4faf92b78ccde6502c116a3b349151d62cc1f537fb000984063f912d05280"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": false,
+  "abstract_anchoring_waived": "No locator is taken from the abstract; every entry is attested from a rendered page of the article body or a figure.",
+  "note": "COVERAGE: full text of the 10-page PDF read, including figure legends 1-8, from the extracted text layer and from rendered pages. The text layer of this PDF carries six C0 control characters where the multiplication sign of Methods cell counts should be, so it is not used as an evidentiary surface (rule 5d/5e): every locator is a rendered-page attestation of pages 5-8. FIGURES INSPECTED AS IMAGES: every numbered figure (Figs 1-3 at 110 dpi, Figs 4-8 at 130 dpi); panel-level attestation is recorded for Fig 4D-F, 5, 6B, 7B, 8 and, as context, Figs 1-3. SUPPLEMENT: Supplementary Figs S1-S2 are cited and are not part of the PDF (unavailable). Linearity of the Wwox bands in Fig 5E and Fig 8A was not assessed. The Greek capital delta of Wwox-delta5-8 is quoted as printed.",
+  "entries": [
+   {
+    "proposition": "M1a: in overexpressed HEK293T a constitutively active Ack1 (caAck) tyrosine-phosphorylates Flag-Wwox far more than wild-type Ack1 does; the system is overexpression, non-neural.",
+    "snippet": "Kinase-competent wAck1 minimally increased Wwox tyrosine phosphorylation, but caAck1 was far more effective",
+    "surface": "rendered_text",
+    "artifact": "files/figures/PMID16288044/page6-06.png",
+    "anchor": "Results, 'Ack1 associates with the tumor suppressor Wwox', Fig 5D 2 lane 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "M1b: Wwox polyubiquitination is seen with caAck in the same overexpression system.",
+    "snippet": "Substantial Wwox polyubiquitination was observed in cells cotransfected with caAck",
+    "surface": "rendered_text",
+    "artifact": "files/figures/PMID16288044/page6-06.png",
+    "anchor": "Results, 'Activated Ack1 promotes Wwox polyubiquitination and degradation', first paragraph, Fig 5D 6",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "M6: the isoform lacking exons 5-8 is neither phosphorylated nor polyubiquitinated; site and ADH domain are confounded in this isoform.",
+    "snippet": "In contrast, Wwox∆5-8 was neither tyrosine phosphorylated nor polyubiquitinated when coexpressed with caAck",
+    "surface": "rendered_text",
+    "artifact": "files/figures/PMID16288044/page7-07.png",
+    "anchor": "Results, same section, Fig 5D 6 lane 7 (the text derivation renders the Greek delta as D)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "M2 (text side): the reduction in Wwox protein is stated for full-length Wwox with caAck in a 3 h cycloheximide experiment; the sentence draws the degradation conclusion.",
+    "snippet": "Coexpression of caAck1 resulted in reduction in Wwox protein (Fig. 5E, 1, lane 2)",
+    "surface": "rendered_text",
+    "artifact": "files/figures/PMID16288044/page7-07.png",
+    "anchor": "Results, 'Activated Ack1 promotes Wwox polyubiquitination and degradation', third paragraph, Fig 5E",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "M2 (panel side): Fig 5E has four lanes, all headed +caAck; Wwox and WwoxD5-8 each without and with CHX (3 h). Full-length Wwox signal drops in lane 2; the D5-8 band is similar in lanes 3-4; actin below. One blot, no quantification, no lane without activated Ack1.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 5E read at 130 dpi; header '+caAck' spans all lanes; lanes 1-4 = Wwox -/+ CHX, WwoxD5-8 -/+ CHX.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID16288044/page6-06.png",
+    "anchor": "Figure 5E, page 10519",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "M3 (text side): the only route evidence on endogenous Wwox is ubiquitination revealed after MG-132; no level rescue is stated.",
+    "snippet": "MG-132 treatment resulted in detection of polyubiquitinated endogenous Wwox (Fig. 5F, lanes 2 and 4)",
+    "surface": "rendered_text",
+    "artifact": "files/figures/PMID16288044/page7-07.png",
+    "anchor": "Results, same section, Fig 5F",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "M3 (panel side): Fig 5F header '+caAck' over LNCaP and 293T, lanes - + - + MG132, IP Wwox, IB Ub with a smear in the + MG132 lanes (2 and 4); no vector or kinase-dead lane; no Wwox level blot besides actin.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 5F read at 130 dpi.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID16288044/page6-06.png",
+    "anchor": "Figure 5F, page 10519",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "M3 (external): the manuscript cites a different group for proteasome-dependent accumulation of a truncated Wwox with MG-132; this is a citation inside the paper, not data of the paper.",
+    "snippet": "Watanabe et al. (53) showed accumulation of a truncated Wwox protein of approximate molecular weight of 26 kDa by inhibiting proteasomal degradation with MG-132 treatment",
+    "surface": "rendered_text",
+    "artifact": "files/figures/PMID16288044/page8-08.png",
+    "anchor": "Discussion, last paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "M5: Y33F Wwox is still phosphorylated and polyubiquitinated by caAck, so the ubiquitination-targeting site differs from the Tyr33 stress site.",
+    "snippet": "The Y33F mutant was tyrosine phosphorylated and polyubiquitinated by caAck1",
+    "surface": "rendered_text",
+    "artifact": "files/figures/PMID16288044/page7-07.png",
+    "anchor": "Results, 'Ack1 tyrosine phosphorylates Wwox predominantly at Tyr287 and not Tyr33', Fig 6B 1",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "M5 (panel side): Fig 6B lanes 1-2 (+caAck, Wwox and Y33F) show p-Wwox and a Ub-Wwox smear; lanes 3-4 (+kdAck) show weak Ub signal. The legend title speaks of degradation but no level or chase panel is shown for Y33F.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 6B read at 130 dpi.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID16288044/page7-07.png",
+    "anchor": "Figure 6B, page 10520",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "M4a: Tyr287 is named predominant, not the only, site, from phosphotyrosine signal of single-site Tyr-to-Phe mutants.",
+    "snippet": "This indicates that Tyr287 is the predominant but perhaps not the only phosphorylation site",
+    "surface": "rendered_text",
+    "artifact": "files/figures/PMID16288044/page7-07.png",
+    "anchor": "Results, 'Ack1 tyrosine phosphorylates Wwox predominantly at Tyr287', Fig 7B",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "M4b (panel side): Fig 7B, seven Tyr-to-Phe mutants plus wild type, all +caAck, IP Flag, IB pTyr: Y287F (lane 2) has the faintest p-Wwox but a trace remains; Y375F (lane 7) is also weaker than wild type. Only p-Wwox, total Wwox and p-Ack1 are blotted; no ubiquitin or chase panel for any mutant.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 7B read at 130 dpi; no quantification printed.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID16288044/page7-07.png",
+    "anchor": "Figure 7B, page 10520",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "M4c: the authors infer the role of Tyr287 in degradation in the Discussion ('second hit'); it is stated as speculation.",
+    "snippet": "diminishing functional Wwox protein is COOH-terminal Wwox tyrosine phosphorylation at Tyr287, targeting Wwox for polyubiquitination and degradation",
+    "surface": "rendered_text",
+    "artifact": "files/figures/PMID16288044/page8-08.png",
+    "anchor": "Discussion, 'second hit' passage",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "M7a: correlation in human prostate samples is a difference of total Ack1 versus phospho-Ack1 between groups; Fig 8 images were not inspected.",
+    "snippet": "AICaP and benign prostate samples had similar total Ack1",
+    "surface": "rendered_text",
+    "artifact": "files/figures/PMID16288044/page7-07.png",
+    "anchor": "Results, 'Androgen-independent prostate tumor specimens exhibit increased tyrosine-phosphorylated Ack1 and decreased Wwox', Fig 8B",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "M7b: Wwox is lower in the tumour group; the authors word it as suggesting, not demonstrating.",
+    "snippet": "compared with benign prostate samples, Wwox levels were reduced significantly in AICaP",
+    "surface": "rendered_text",
+    "artifact": "files/figures/PMID16288044/page7-07.png",
+    "anchor": "Results, same section, Fig 8A 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "M8: the only inhibitor used on Ack1 activity is geldanamycin (Hsp90); the experiment measures Ack1 kinase activity and tumour growth, not Wwox level.",
+    "snippet": "The caAck kinase activity was reduced to basal level on geldanamycin treatment (Fig. 4D)",
+    "surface": "rendered_text",
+    "artifact": "files/figures/PMID16288044/page5-05.png",
+    "anchor": "Results, Hsp90 section, Fig 4D",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "M8 (panel side): Fig 4D/E: geldanamycin 5 uM for 8 h reduces caAck kinase activity to near vector level (D) and removes the p-Ack band (E); Fig 4F: tumour growth delayed (n=10). No Wwox level is blotted in any Fig 4 panel.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 4D, 4E, 4F read at 130 dpi.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID16288044/page5-05.png",
+    "anchor": "Figure 4D-F, page 10518",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "M7c (panel side): Fig 8A/B, AICaP versus benign prostate, n=16 per group: Wwox band weak in AICaP lanes and strong in BP lanes in the printed blot; bar chart phospho-Ack1 higher (p<0.02), total Ack1 similar (p=0.67), Wwox lower (p=0.02). Between-group correlation of band intensity; no per-sample pairing printed.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 8A-B read at 130 dpi.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID16288044/page8-08.png",
+    "anchor": "Figure 8A-B, page 10521",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "C1: the activated kinase construct is a point mutant (caAck = L487F) of a C-terminally truncated Ack1; kinase-dead is K158R; truncated constructs lack residues 788-1036. All Wwox work therefore uses a truncated, engineered activated kinase, not endogenous full-length Ack1.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2A domain scheme: Ack1, wAck, kdAck(K158R), caAck(L487F); Fig 2D kinase assay: caAck about 7-fold higher than kdAck. Figs 1-2 contain no Wwox panel.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID16288044/page3-03.png",
+    "anchor": "Figures 1-2, page 10516",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "C2: caAck-expressing LNCaP cells form tumours in nude mice (n=10) and grow in soft agar; this is the tumorigenesis context the Wwox mechanism is offered to explain. No Wwox panel in Fig 3.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3A growth curves modest difference; 3B soft agar colonies caAck; 3C tumour volume caAck rises by day 23, others near zero.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID16288044/page4-04.png",
+    "anchor": "Figure 3, page 10517",
+    "panel_text_relation": "text_confirmed_by_panel"
+   }
+  ],
+  "source_fulltext_indexed_evidence": "Europe PMC REST search EXT_ID:16288044 SRC:MED on 2026-10-31: inEPMC=N, inPMC=N, no PMCID, isOpenAccess=N, hasPDF=N; the only full-text surface is the operator-supplied PDF, whose text layer is not used as an evidentiary surface."
+ }
+}

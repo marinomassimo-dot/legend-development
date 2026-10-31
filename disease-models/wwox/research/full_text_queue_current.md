@@ -8574,3 +8574,48 @@ every reference is now either read, queued under a named `FT-` entry, or named h
 so nothing is invisible to the reading plan. It does **not** read anything, promote anything or claim that an
 unread reference supports any statement. **Nothing here is evidence.** Whoever next holds this file can mint
 `FT-` entries for the eleven 🔴 rows from this section without re-resolving a single identifier.
+
+## FT-202
+**Paper:** PMID 11719429 — Bednarek 2001, WWOX (FRA16D) as a suppressor of tumour growth (ref 33 of Mahajan 2005)
+**Priority:** LOW
+**Why:** gene-direct reference of PMID 16288044, whose complete read (IT13) enumerated it and did not read it; recorded as reading debt so the hop is visible, not because a decision waits on it. PMID identity checked by title in Europe PMC on 2026-10-31.
+**Current status:** ⬜ open — queued by the Orchestrator under task `ORCH-ROADMAP-IT13-20261031`; no copy fetched, retrievability untested.
+**Next action:** read only if a question needs it (for FT-206: when the proteasome versus lysosome route of WWOX turnover is tested).
+
+---
+
+## FT-203
+**Paper:** PMID 11058590 — Chang 2001, hyaluronidase induction of WOX1 enhancing TNF cytotoxicity (ref 35 of Mahajan 2005)
+**Priority:** LOW
+**Why:** gene-direct reference of PMID 16288044, whose complete read (IT13) enumerated it and did not read it; recorded as reading debt so the hop is visible, not because a decision waits on it. PMID identity checked by title in Europe PMC on 2026-10-31.
+**Current status:** ⬜ open — queued by the Orchestrator under task `ORCH-ROADMAP-IT13-20261031`; no copy fetched, retrievability untested.
+**Next action:** read only if a question needs it (for FT-206: when the proteasome versus lysosome route of WWOX turnover is tested).
+
+---
+
+## FT-204
+**Paper:** PMID 10786676 — Bednarek 2000, WWOX mapping to 16q23.3-24.1 (ref 38 of Mahajan 2005)
+**Priority:** LOW
+**Why:** gene-direct reference of PMID 16288044, whose complete read (IT13) enumerated it and did not read it; recorded as reading debt so the hop is visible, not because a decision waits on it. PMID identity checked by title in Europe PMC on 2026-10-31.
+**Current status:** ⬜ open — queued by the Orchestrator under task `ORCH-ROADMAP-IT13-20261031`; no copy fetched, retrievability untested.
+**Next action:** read only if a question needs it (for FT-206: when the proteasome versus lysosome route of WWOX turnover is tested).
+
+---
+
+## FT-205
+**Paper:** PMID 12514174 — Chang 2003, JNK1 interacts with WOX1 and inhibits WOX1-mediated apoptosis (ref 43 of Mahajan 2005)
+**Priority:** LOW
+**Why:** gene-direct reference of PMID 16288044, whose complete read (IT13) enumerated it and did not read it; recorded as reading debt so the hop is visible, not because a decision waits on it. PMID identity checked by title in Europe PMC on 2026-10-31.
+**Current status:** ⬜ open — queued by the Orchestrator under task `ORCH-ROADMAP-IT13-20261031`; no copy fetched, retrievability untested.
+**Next action:** read only if a question needs it (for FT-206: when the proteasome versus lysosome route of WWOX turnover is tested).
+
+---
+
+## FT-206
+**Paper:** PMID 14695174 — Watanabe 2003, an opposing view on WWOX as a tumour suppressor (ref 53 of Mahajan 2005; cited for MG-132 accumulation of a truncated Wwox, bears on the proteasomal-route inference)
+**Priority:** LOW
+**Why:** gene-direct reference of PMID 16288044, whose complete read (IT13) enumerated it and did not read it; recorded as reading debt so the hop is visible, not because a decision waits on it. PMID identity checked by title in Europe PMC on 2026-10-31.
+**Current status:** ⬜ open — queued by the Orchestrator under task `ORCH-ROADMAP-IT13-20261031`; no copy fetched, retrievability untested.
+**Next action:** read only if a question needs it (for FT-206: when the proteasome versus lysosome route of WWOX turnover is tested).
+
+---
