@@ -1472,8 +1472,8 @@
    "effect_in_wild_type_arm": 2,
    "genotype_comparison_vs_wild_type": 4,
    "label_statement": 5,
-   "out_of_scope_endpoint": 5,
-   "readout_in_wwox_system": 19,
+   "out_of_scope_endpoint": 6,
+   "readout_in_wwox_system": 18,
    "readout_other_disease": 60,
    "safety_signal": 13,
    "target_engagement_assay": 26

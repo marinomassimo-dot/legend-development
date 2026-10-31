@@ -18,7 +18,7 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 10842,
+    "values": 10837,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -223,7 +223,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 2808,
+    "forbidden-name": 2805,
     "forbidden-wording": 12
    },
    "co_attested_wording": [
@@ -462,7 +462,7 @@
   "BIBLIO": 2385,
   "COUNT": 11599,
   "ID": 4547,
-  "OWN": 82447,
+  "OWN": 82442,
   "ROWNAME": 2251,
   "SRC_A": 189,
   "SRC_META": 256,
@@ -529,7 +529,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 1999,
-   "sha256": "9ccc437b721673e0ada9ccff031617f0d8fc29c2b06582701b4ce7846a17115b"
+   "sha256": "8c794da3a3f93d2ca20066cc15ee7b4145588bc85ce7a43cd8f65565719064c0"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1636,
@@ -544,8 +544,8 @@
    "sha256": "240723d6c86c13fc8f19ff2a5bbe7eec5e64da0f3769ea25e49d8d7b7e5784d0"
   },
   "index.html": {
-   "bytes": 4105022,
-   "sha256": "d1790d59bd3e392602afea63acec8f1f60e3b314e1d4bcd957787e66f980d2b5"
+   "bytes": 4105474,
+   "sha256": "746dcd92a9bef6272841a4202cac6f8dd4307320545157bbf485e9d902ac9035"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",

@@ -1040,10 +1040,10 @@ class ItalianFix(unittest.TestCase):
     def test_goal_tiles_count_every_position_link(self):
         cur = self.P["cur"]
         n_links = sum(len(c["links"]) for c in cur["cands"])
-        self.assertEqual(n_links, 53)      # 52 + the link of card L01 (IT10 P5)
+        self.assertEqual(n_links, 54)      # 52 + the link of card L01 (IT10 P5) + the link of card M01 (IT11 P4)
         goals = re.findall(r'<div class="goal (?:deep|partial)".*?<span class="mini mut">\((\d+)\)</span></div></div>', self.page, re.S)
         self.assertEqual(sum(map(int, goals)), n_links)
-        self.assertIn("I 53 legami candidato-bisogno sono contati tutti", self.page)
+        self.assertIn("I 54 legami candidato-bisogno sono contati tutti", self.page)
 
     def test_no_raw_status_code_in_the_header_and_italian_labels(self):
         head = self.page[:self.page.index('<nav ')]

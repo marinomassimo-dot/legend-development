@@ -2010,7 +2010,7 @@
    "next_experiment_or_control": "Is the ethosuximide late-phase effect reproducible with a drug-by-genotype test and a same-day control, is the lithium effect genotype-specific, and do the denominators of the ketogenic-diet and vigabatrin case series keep their C2?",
    "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
    "next_experiment_stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)",
-   "notes": "Graph coverage (IT11 P2.1, correcting IT10): lithium IS a seed-specific 'mimics' hit in Q6 (MYC expression, a human seed; chain GSK3A to NOTCH1 to MYC; rank 67 to 70 of 232), which IT10 missed because it read a truncated candidate list. That hit is about MYC expression in a human seed and not about the lead's seizure readout: the seizure lowering also occurs in wild-type mice, and the chain rests on NOTCH1 and HDAC3 edges whose neural meaning is unverified. It is not support for lithium. For the neurogenic window lithium is a risk flag (Wnt activation in the same direction as the knockout MYC rise; IT11 P2.2, candidate M07); the G01 seizure lead is untouched. A development input, not an independent validation.",
+   "notes": "Graph coverage (IT11 P2.1, correcting IT10): lithium IS a seed-specific 'mimics' hit in the Q6 set (a gene-expression seed in a human system, rank 67 to 70 of 232), which IT10 missed because it read a truncated candidate list. That hit is about an expression seed and not about the lead's seizure readout: the seizure lowering also occurs in wild-type mice, and the chain rests on two network edges whose neural meaning is unverified (named in the IT11 P2.1 package). It is not support for lithium. For the neurogenic window lithium is a risk flag (Wnt activation in the same direction as the knockout MYC rise; IT11 P2.2, candidate M07); the G01 seizure lead is untouched. A development input, not an independent validation.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
    "pathways_needs": "GSK3beta de-repression [P3; card_inference_by_mechanism_no_catalogue_row]; Seizure and spasm control as a symptom-level need [F2; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
@@ -2374,7 +2374,7 @@
    "next_experiment_or_control": "Is the ethosuximide late-phase effect reproducible with a drug-by-genotype test and a same-day control, is the lithium effect genotype-specific, and do the denominators of the ketogenic-diet and vigabatrin case series keep their C2?",
    "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
    "next_experiment_stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)",
-   "notes": "Graph coverage (IT11 P2.1, correcting IT10): lithium IS a seed-specific 'mimics' hit in Q6 (MYC expression, a human seed; chain GSK3A to NOTCH1 to MYC; rank 67 to 70 of 232), which IT10 missed because it read a truncated candidate list. That hit is about MYC expression in a human seed and not about the lead's seizure readout: the seizure lowering also occurs in wild-type mice, and the chain rests on NOTCH1 and HDAC3 edges whose neural meaning is unverified. It is not support for lithium. For the neurogenic window lithium is a risk flag (Wnt activation in the same direction as the knockout MYC rise; IT11 P2.2, candidate M07); the G01 seizure lead is untouched. A development input, not an independent validation.",
+   "notes": "Graph coverage (IT11 P2.1, correcting IT10): lithium IS a seed-specific 'mimics' hit in the Q6 set (a gene-expression seed in a human system, rank 67 to 70 of 232), which IT10 missed because it read a truncated candidate list. That hit is about an expression seed and not about the lead's seizure readout: the seizure lowering also occurs in wild-type mice, and the chain rests on two network edges whose neural meaning is unverified (named in the IT11 P2.1 package). It is not support for lithium. For the neurogenic window lithium is a risk flag (Wnt activation in the same direction as the knockout MYC rise; IT11 P2.2, candidate M07); the G01 seizure lead is untouched. A development input, not an independent validation.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
    "pathways_needs": "GSK3beta de-repression [P3; card_inference_by_mechanism_no_catalogue_row]; Seizure and spasm control as a symptom-level need [F2; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
@@ -2718,7 +2718,7 @@
   "inputs": {
    "comparison_rows": 9,
    "coverage_generated_from": {
-    "assertion_pertinence.tsv": "0d0ab40ade7f9092",
+    "assertion_pertinence.tsv": "9d699d1c6e9b73ee",
     "card_links.json": "2aac19ca3b0b7686",
     "cards_and_packets": "30bfbc58e2d2d764",
     "catalog.jsonl.gz": "75652786013b931d",
@@ -10732,7 +10732,7 @@
      "same paper and laboratory as ethosuximide (PMID 32000863): one experiment, i.p. LiCl; the effect also occurs in wild type and heterozygote; the GSK3beta link is a same-university cell study and ChEMBL holds no lithium GSK3/IMPase activity row"
     ],
     "note": [
-     "Graph coverage (IT11 P2.1, correcting IT10): lithium IS a seed-specific 'mimics' hit in Q6 (MYC expression, a human seed; chain GSK3A to NOTCH1 to MYC; rank 67 to 70 of 232), which IT10 missed because it read a truncated candidate list. That hit is about MYC expression in a human seed and not about the lead's seizure readout: the seizure lowering also occurs in wild-type mice, and the chain rests on NOTCH1 and HDAC3 edges whose neural meaning is unverified. It is not support for lithium. For the neurogenic window lithium is a risk flag (Wnt activation in the same direction as the knockout MYC rise; IT11 P2.2, candidate M07); the G01 seizure lead is untouched. A development input, not an independent validation."
+     "Graph coverage (IT11 P2.1, correcting IT10): lithium IS a seed-specific 'mimics' hit in the Q6 set (a gene-expression seed in a human system, rank 67 to 70 of 232), which IT10 missed because it read a truncated candidate list. That hit is about an expression seed and not about the lead's seizure readout: the seizure lowering also occurs in wild-type mice, and the chain rests on two network edges whose neural meaning is unverified (named in the IT11 P2.1 package). It is not support for lithium. For the neurogenic window lithium is a risk flag (Wnt activation in the same direction as the knockout MYC rise; IT11 P2.2, candidate M07); the G01 seizure lead is untouched. A development input, not an independent validation."
     ],
     "question": [
      "GSK3beta/IMPase engagement at the exposure reached at tolerated levels (no activity row exists for lithium)"
@@ -10846,7 +10846,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "da109a32d3c5791d",
+    "T1_cards": "5ac377cfdbb1141b",
     "T2_pertinence": "db0343ccb25dda32",
     "T3_receipts": "1e81e393df77743b",
     "T4_needs": "99f7c86d7134370b",
@@ -11047,7 +11047,7 @@
       "stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)"
      },
      "notes": [
-      "Graph coverage (IT11 P2.1, correcting IT10): lithium IS a seed-specific 'mimics' hit in Q6 (MYC expression, a human seed; chain GSK3A to NOTCH1 to MYC; rank 67 to 70 of 232), which IT10 missed because it read a truncated candidate list. That hit is about MYC expression in a human seed and not about the lead's seizure readout: the seizure lowering also occurs in wild-type mice, and the chain rests on NOTCH1 and HDAC3 edges whose neural meaning is unverified. It is not support for lithium. For the neurogenic window lithium is a risk flag (Wnt activation in the same direction as the knockout MYC rise; IT11 P2.2, candidate M07); the G01 seizure lead is untouched. A development input, not an independent validation."
+      "Graph coverage (IT11 P2.1, correcting IT10): lithium IS a seed-specific 'mimics' hit in the Q6 set (a gene-expression seed in a human system, rank 67 to 70 of 232), which IT10 missed because it read a truncated candidate list. That hit is about an expression seed and not about the lead's seizure readout: the seizure lowering also occurs in wild-type mice, and the chain rests on two network edges whose neural meaning is unverified (named in the IT11 P2.1 package). It is not support for lithium. For the neurogenic window lithium is a risk flag (Wnt activation in the same direction as the knockout MYC rise; IT11 P2.2, candidate M07); the G01 seizure lead is untouched. A development input, not an independent validation."
      ],
      "objective": "partial",
      "objective_note": "",
@@ -13407,14 +13407,12 @@
      "l4_states": {
       "none_in_record": 7
      },
-     "read_beyond_abstract": 1,
-     "replication": "none recorded: one source paper",
-     "signs": {
-      "unresolved": 1
-     },
-     "text": "1 WWOX-system or WWOX case-report assertion(s): 1 unresolved",
+     "read_beyond_abstract": 0,
+     "replication": "not applicable (no result)",
+     "signs": {},
+     "text": "none: no result of the intervention in a WWOX system recorded",
      "wild_type_only_assertions": 0,
-     "wwox_assertions": 1
+     "wwox_assertions": 0
     },
     "X_counter_evidence": {
      "need_level_counter_items": 6,
@@ -13431,8 +13429,8 @@
     "partial_benefit"
    ],
    "depth_of_benefit_sought": "",
-   "evaluation_depth": "E4",
-   "evaluation_depth_text": "card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
+   "evaluation_depth": "E3",
+   "evaluation_depth_text": "card reviewed with assertions; no WWOX-side result read beyond abstract",
    "evidence_level_note": {
     "attribution_rule": "single intervention: its group is its own",
     "of_mechanism_or_class": "not applicable: a single intervention, not a class",
@@ -13443,7 +13441,7 @@
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
     "T1_cards": "ea9ad14fffd9a171",
-    "T2_pertinence": "6c8bd1c809c2f5a9",
+    "T2_pertinence": "403956ddfaf8ef49",
     "T3_receipts": "3ab40f90f4842fdd",
     "T4_needs": "e3d9478eddf1541c",
     "T5_pharmacology": "177f2f40ad8ae91b",
@@ -13492,23 +13490,17 @@
      "wwox_assertions": 0
     },
     {
-     "assertion_ids": [
-      "DR-M01-001"
-     ],
-     "depth": "partial_fulltext_read",
+     "assertion_ids": [],
+     "depth": "",
      "member": "tool compound(s) or precedent named in card M01_neurogenic_output_myc_window",
      "member_key": "INT:M01_neurogenic_output_myc_window:tool",
      "member_type": "tool_compound",
-     "outside_wwox_assertions": 6,
-     "signs": {
-      "unresolved": 1
-     },
-     "source_pmids": [
-      "42397075"
-     ],
-     "tested_in_wwox_system": "yes",
-     "what": "fraction of SOX2-positive MYC-positive cells after A51: decrease",
-     "wwox_assertions": 1
+     "outside_wwox_assertions": 7,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member; 7 outside-WWOX assertion(s) attributed",
+     "wwox_assertions": 0
     },
     {
      "assertion_ids": [],
@@ -13710,9 +13702,7 @@
       "outside_favourable": 1,
       "outside_null_or_harm": 2,
       "wwox_null_harm_mixed": 0,
-      "wwox_signs": {
-       "unresolved": 1
-      }
+      "wwox_signs": {}
      },
      "main_limit": "MYCN_neuroblastoma_and_cancer_models; engine_edge_mode_mislabel; mechanism_probe; no_neural_progenitor_exposure; not_WWOX | Origin vocabulary: this entry was named in IT11 and carries the origin value generated_in_it10 only because the view validates a closed origin list that has no IT11 value yet; its era field is IT11. | The experiment discriminates driver, marker and consequence readings of the radial-glia MYC rise; no compound has a result on this axis except the non-selective A51 arm (one laboratory, knockout organoids only). The authors read A51 as MYC-driven impairment of differentiation; 'no candidate strengthened' rests on the non-selectivity of A51 and on design gaps, not on a contradicting result.",
      "member": true,
