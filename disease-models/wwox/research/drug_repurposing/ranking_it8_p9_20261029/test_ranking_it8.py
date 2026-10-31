@@ -722,13 +722,13 @@ class It10Integration(unittest.TestCase):
         for i in range(1, 5):      # N-P1B-1 to N-P1B-4 added by IT12 P6 (genetic-interaction slice, caveats only)
             self.assertIn(f"NP1B{i}_modifiers", trig)
         self.assertIn("E03", trig["NP1B1_modifiers"]["re_evaluates"])
-        self.assertEqual(len(trig), 8 + 9 + 4 + 7)      # 8 + 7 before IT11 P4 (R8), +1 R9 and +4 modifiers in IT12 P6, +3 NP3B and +4 NP3A in IT13
+        self.assertEqual(len(trig), 8 + 9 + 4 + 8)      # 8 + 7 before IT11 P4 (R8), +1 R9 and +4 modifiers in IT12 P6, +3 NP3B and +5 NP3A in IT13/IT14 (NP3A5 added by IT14)
         import unittest.mock as mock
         with mock.patch.object(rk, "REOPEN_SEARCHES", rk.HERE / "absent.tsv"), mock.patch.object(rk, "REOPEN_SEARCHES_P1B", rk.HERE / "absent.tsv"), mock.patch.object(rk, "REOPEN_SEARCHES_IT13", [rk.HERE / "absent.tsv"]):
             self.assertEqual(len(rk.triggers_rows()), 8)
         for i in range(1, 4):      # NP3B1 to NP3B3 and NP3A1 to NP3A4 added by IT13 (recoverable readout and E/I transcript question)
             self.assertIn(f"NP3B{i}_it13", trig)
-        for i in range(1, 5):
+        for i in range(1, 6):
             self.assertIn(f"NP3A{i}_it13", trig)
         self.assertIn("substrate for a stability lever is UNCONFIRMED", n12["reason"])
         self.assertIn("not shown above the assay floor", n12["reason"])
