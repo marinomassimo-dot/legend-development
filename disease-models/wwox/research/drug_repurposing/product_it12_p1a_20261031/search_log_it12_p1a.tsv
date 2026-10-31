@@ -1,0 +1,15 @@
+id	date	source	query	hits	outcome
+S1	2026-10-31	Europe PMC REST key-less	TITLE_ABS (WWOX OR WOX1) AND (iPSC OR pluripotent OR hESC OR organoid* OR neural progenitor* OR neural stem)	11	all known; new: 31543760 (shWWOX hNPC), 32581702; 42128308 review closed
+S2	2026-10-31	Europe PMC	TITLE_ABS (WWOX OR WOX1) AND (lymphoblast* OR fibroblast* OR patient-derived OR patient cells)	40	no new patient-cell protein datum beyond 29808465 and 24369382
+S3	2026-10-31	Europe PMC	TITLE_ABS WWOX AND (residual protein OR reduced protein OR absence of WWOX protein OR loss of WWOX protein)	12	nothing new
+S4	2026-10-31	Europe PMC	TITLE_ABS WWOX AND (Gly372Arg OR G372R OR c.1114G OR Pro47Thr OR P47T OR Gly137Val OR Ser200Arg OR Gln230Pro)	3	P47T paper plus two P47T preprints (PPR968110 abstract only; no protein datum)
+S5	2026-10-31	Europe PMC	TITLE_ABS (WWOX OR Wwox) AND (rat OR zebrafish OR Drosophila OR knock-in OR hypomorph*) AND (protein OR western OR immunoblot)	13	hypomorph 17823927 abstract
+S6	2026-10-31	Europe PMC	TITLE_ABS WWOX AND (autopsy OR fetus OR fetal OR postmortem OR brain tissue) AND (WOREE OR SCAR12 OR epilep* OR encephalopath*)	3	32581702 fetal histology, no WWOX protein stain
+S7	2026-10-31	Europe PMC	TITLE_ABS WWOX AND (hypomorph* OR knockdown OR shRNA OR siRNA) AND (neuron* OR neural OR brain OR cortex OR epilep*)	8	nothing new for protein
+S8	2026-10-31	Europe PMC	TITLE_ABS WWOX AND (variant* OR mutation* OR allele*) AND (western blot OR immunoblot* OR protein expression OR protein stability) AND (patient* OR proband* OR family)	6	nothing
+S9	2026-10-31	Europe PMC	TITLE_ABS WWOX AND (minigene OR splice OR exon skipping OR cDNA) AND (WOREE OR SCAR12 OR epileptic encephalopathy)	6	39101447 minigene (RNA only, no protein); others closed
+S10	2026-10-31	Europe PMC	BODY WWOX AND (immunoblot OR western blot) AND (WOREE OR SCAR12) AND (fibroblast OR lymphoblast OR iPSC OR patient-derived)	7	no new primary
+S11	2026-10-31	Europe PMC	BODY WWOX AND (undetectable OR no detectable OR residual) AND (WOREE OR SCAR12) AND (western OR immunoblot)	12	no new primary
+S12	2026-10-31	Europe PMC supplementaryFiles	PMC8350905 (2021 supplement)	1 zip	read: Table EV4, review file
+S13	2026-10-31	Europe PMC	PMID 42397075 PMCID / supplement	0	no PMC copy; Brain supplement not reachable; reopening: operator/library or PMC release after embargo
+S14	2026-10-31	Europe PMC fullTextXML	PPR968110, PPR554801	error 500	not retried; abstract only
