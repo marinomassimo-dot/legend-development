@@ -1,33 +1,25 @@
 question	hypothesis	variant	shared_with_default_of_8	entering	leaving
 Q2	H_HARM	A_deposits_two	8		
-Q2	H_HARM	B_levels_merged	8		
 Q2	H_HARM	C_thr005	8		
 Q2	H_HARM	D_thr025	8		
 Q2	H_PROTECT	A_deposits_two	8		
-Q2	H_PROTECT	B_levels_merged	8		
 Q2	H_PROTECT	C_thr005	8		
 Q2	H_PROTECT	D_thr025	8		
 Q4	H_HARM	A_deposits_two	8		
-Q4	H_HARM	B_levels_merged	8		
 Q4	H_HARM	C_thr005	8		
 Q4	H_HARM	D_thr025	8		
 Q4	H_PROTECT	A_deposits_two	8		
-Q4	H_PROTECT	B_levels_merged	8		
 Q4	H_PROTECT	C_thr005	8		
 Q4	H_PROTECT	D_thr025	7	Az20	Dactolisib
 Q5	H_HARM	A_deposits_two	8		
-Q5	H_HARM	B_levels_merged	8		
 Q5	H_HARM	C_thr005	5	Arv-771; I-Bet151; Wny0824	Bifonazole; CD24FC; L6H21
 Q5	H_HARM	D_thr025	8		
 Q5	H_PROTECT	A_deposits_two	8		
-Q5	H_PROTECT	B_levels_merged	8		
 Q5	H_PROTECT	C_thr005	8		
 Q5	H_PROTECT	D_thr025	8		
 Q6	H_HARM	A_deposits_two	8		
-Q6	H_HARM	B_levels_merged	8		
 Q6	H_HARM	C_thr005	8		
 Q6	H_HARM	D_thr025	8		
 Q6	H_PROTECT	A_deposits_two	8		
-Q6	H_PROTECT	B_levels_merged	8		
 Q6	H_PROTECT	C_thr005	8		
 Q6	H_PROTECT	D_thr025	8		

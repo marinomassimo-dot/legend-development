@@ -200,6 +200,16 @@ def selftest3():
     q = {f: (ar["ind"][comp.fidx[f]], ar["dir"][comp.fidx[f]]) for f in comp.fams}
     ok = (abs(q["X"][0] + 0.5) < 1e-12 and abs(q["Y"][0] - 0.5) < 1e-12 and abs(q["W"][0] - 1.0) < 1e-12 and abs(q["V"][1] - 1.0) < 1e-12 and q["U"] == (0.0, 0.0)
           and q["P_last"][0] == 0.0 and q["T_first"][0] == 0.0)
+    # protein-level controls (IT11 review): a protein seed accepts chains of P edges only; a T edge into it, or a T edge inside the chain, must score 0
+    edges2 = [("A", "B", 1, "P"), ("B", "C", -1, "P"), ("E", "C", 1, "T"), ("F", "A", 1, "T")]
+    g2 = Graph3(edges2, extras=[]); g2.level = "protein"
+    rows2 = [dict(family_id=f, target_symbol=t, mean_sign=str(sg), groups="ChEMBL", scopes="single_protein") for f, t, sg in [("X", "A", -1), ("T_last", "E", -1), ("T_first", "F", -1)]]
+    comp2 = se.Compounds(rows2)
+    seeds2 = se.Seeds([dict(unit_id="s2:C", seed_id="s2", gene="C", sign=1, level=1.0, status="defined", readout_level="protein", evidence_class="protein_contrast")])
+    ar2 = se.Engine(g2, comp2, seeds2).arms()
+    q2 = {f: (ar2["ind"][comp2.fidx[f]], ar2["dir"][comp2.fidx[f]]) for f in comp2.fams}
+    ok = ok and abs(q2["X"][0] + 0.5) < 1e-12 and q2["T_last"][0] == 0.0 and q2["T_first"][0] == 0.0
+    q.update({"protein_" + k: v for k, v in q2.items()})
     return ok, q
 
 

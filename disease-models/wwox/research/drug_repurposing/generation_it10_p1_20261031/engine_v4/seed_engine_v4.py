@@ -153,7 +153,7 @@ _REACH = {}
 def reach_counts(g, chunk=400):
     """admissible reach of every graph gene used as a seed: the number of nodes with a non-zero influence on it (same walks, same F5 rule, K hops).
     This is what the null seed's score depends on; the in-degree or total degree is a proxy for it."""
-    key = (id(g), g.level, JUNCTION)
+    key = (id(g), g.level, JUNCTION, m3.MODE)
     if key in _REACH:
         return _REACH[key]
     out = np.zeros(g.Ng)
@@ -204,10 +204,8 @@ def _walks(self, target, seed, max_hops=se.K, gamma=se.GAMMA):
             return seq[-1] == "T" and all(x == "P" for x in seq[:-1])
         return all(x == "P" for x in seq)
     def dfs(node, path, modes, flags, wp):
-        if node == g_i and path:
-            if ok(modes):
-                out.append((list(path), wp * (gamma ** (len(path) - 1))))
-            return
+        if node == g_i and path and ok(modes):          # a walk that ends at the seed is recorded; it may also pass through the seed and return (the matrix power counts those)
+            out.append((list(path), wp * (gamma ** (len(path) - 1))))
         if len(path) == max_hops:
             return
         for b, w, mo, ss, ts in succ.get(node, ()):
