@@ -18370,7 +18370,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Source type:** primary research — cell biology, xenograft and human tissue immunoblots
 **Journal/source:** *Cancer Research* 2005;65(22):10514-23
 **Identifier:** PMID 16288044 / DOI 10.1158/0008-5472.CAN-05-1127
-**Status:** processed — read (`FTR-20261031-16288044-01`, `complete_fulltext_read`, **full text**)
+**Status:** processed
 **Record provenance:** created by `CC-20261031-ORCHESTRATOR-IT13-BATCH-01` (`BATCH_20261019_032`, IT13, Orchestrator) as the PAPER identity record of receipt `FTR-20261031-16288044-01`, which was in the ledger with no registry identity; reading by the Orchestrator from the operator-supplied PDF (kept in the local gitignored corpus, not in the repository); identity from the artefact's own front matter.
 **Evidence depth:** `complete_fulltext_read` (**full text**) — receipt `FTR-20261031-16288044-01`; manifest `deepdive_manifests/PMID16288044.json` (schema v2; locators are rendered-page attestations because the PDF text layer carries control characters; Figs 1-8 inspected as images; supplement unavailable); per-experiment table `drug_repurposing/ack1_it13_mahajan_20261031/experiments_mahajan2005.tsv`.
 **Primary pathway:** tyrosine kinase signalling (ACK1/TNK2) and the ubiquitin system acting on WWOX

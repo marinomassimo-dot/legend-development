@@ -27,7 +27,7 @@ the whole known corpus, not the part already processed.
 | Catalogued only | 324 | 34% | known, deduplicated, never analytically processed — **the debt** |
 | Filtered / superseded | 10 | 1% | explicitly set aside, with the reason preserved |
 
-- **558** promoted `PAPER` records · **382** `CORPUS` placeholders
+- **559** promoted `PAPER` records · **381** `CORPUS` placeholders
 - **825** lifecycle entries in the literature tracking log
 - **825** unique PMIDs known across the registries
 

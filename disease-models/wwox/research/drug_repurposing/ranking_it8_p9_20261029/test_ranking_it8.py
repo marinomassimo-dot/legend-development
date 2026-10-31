@@ -722,10 +722,14 @@ class It10Integration(unittest.TestCase):
         for i in range(1, 5):      # N-P1B-1 to N-P1B-4 added by IT12 P6 (genetic-interaction slice, caveats only)
             self.assertIn(f"NP1B{i}_modifiers", trig)
         self.assertIn("E03", trig["NP1B1_modifiers"]["re_evaluates"])
-        self.assertEqual(len(trig), 8 + 9 + 4)      # 8 + 7 before IT11 P4 (R8), +1 R9 and +4 modifiers in IT12 P6
+        self.assertEqual(len(trig), 8 + 9 + 4 + 7)      # 8 + 7 before IT11 P4 (R8), +1 R9 and +4 modifiers in IT12 P6, +3 NP3B and +4 NP3A in IT13
         import unittest.mock as mock
-        with mock.patch.object(rk, "REOPEN_SEARCHES", rk.HERE / "absent.tsv"), mock.patch.object(rk, "REOPEN_SEARCHES_P1B", rk.HERE / "absent.tsv"):
+        with mock.patch.object(rk, "REOPEN_SEARCHES", rk.HERE / "absent.tsv"), mock.patch.object(rk, "REOPEN_SEARCHES_P1B", rk.HERE / "absent.tsv"), mock.patch.object(rk, "REOPEN_SEARCHES_IT13", [rk.HERE / "absent.tsv"]):
             self.assertEqual(len(rk.triggers_rows()), 8)
+        for i in range(1, 4):      # NP3B1 to NP3B3 and NP3A1 to NP3A4 added by IT13 (recoverable readout and E/I transcript question)
+            self.assertIn(f"NP3B{i}_it13", trig)
+        for i in range(1, 5):
+            self.assertIn(f"NP3A{i}_it13", trig)
         self.assertIn("substrate for a stability lever is UNCONFIRMED", n12["reason"])
         self.assertIn("not shown above the assay floor", n12["reason"])
 
@@ -818,7 +822,7 @@ class It12Integration(unittest.TestCase):
         self.assertIn("BELOW", txt["U17"])
         self.assertIn("T-type evidence", txt["U25"])
         self.assertIn("narrow and separate", txt["U28"])
-        self.assertIn("ONE allele", txt["U63"])
+        self.assertIn("ONE variant", txt["U63"])      # IT13: zygosity wording ("each homozygous for ONE variant")
         for u in ("U28", "U59", "U63"):
             self.assertIn("although development is unresolved", txt[u])
         groups = {x["unit_id"]: (x["general_group"], x["partial_group"]) for x in rk.read_tsv(HERE / "units.tsv")}
