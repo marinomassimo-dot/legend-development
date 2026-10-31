@@ -18,7 +18,7 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 10977,
+    "values": 11052,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -118,7 +118,7 @@
    },
    "^\\.needs\\[\\]\\.": {
     "class": "OWN",
-    "values": 1756,
+    "values": 1760,
     "why": "needs records written in this repository"
    },
    "^\\.pairs\\[\\]\\.(l2|l3|l4|x|n|r)(\\.|\\[\\]|$)": {
@@ -223,7 +223,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 2885,
+    "forbidden-name": 2939,
     "forbidden-wording": 12
    },
    "co_attested_wording": [
@@ -454,7 +454,7 @@
  ],
  "data": {
   "catalogue_generated": "2026-10-31T07:28:37Z",
-  "data_date": "2026-10-31",
+  "data_date": "2026-11-01",
   "dgidb_export": "2024-06-10",
   "view_schema": "legend.wwox.repurposing_view/2"
  },
@@ -462,7 +462,7 @@
   "BIBLIO": 2397,
   "COUNT": 11599,
   "ID": 4547,
-  "OWN": 82591,
+  "OWN": 82670,
   "ROWNAME": 2251,
   "SRC_A": 189,
   "SRC_META": 256,
@@ -501,7 +501,7 @@
  "files": {
   "COMPARISON.md": {
    "bytes": 6436,
-   "sha256": "f40467dad20b2fcc34027063d95599a13b5f486164b4736a3bc48f0699ed638d"
+   "sha256": "0bce54e618f5fd6e2684ef02d6d581d43359841d7dd1ca3b7b25637353a5076a"
   },
   "LICENSES/CC-BY-4.0.txt": {
    "bytes": 18657,
@@ -521,11 +521,11 @@
   },
   "NOTICE.md": {
    "bytes": 12774,
-   "sha256": "66ff4d679e49e4a4c5cad0e736ab40bf2dc0fa74574f5eb10ecdaa1d0b32ed87"
+   "sha256": "9a781c98b3fe6a18854181e47523c12d9923be447bc98c4450be2bc0d6b317b1"
   },
   "README.md": {
    "bytes": 4906,
-   "sha256": "fa45a2035369908713677fc506918dc9cf7e5f86556be10f8f464844136ca994"
+   "sha256": "31c8de374179ffd58392839354d72f4cd17d00b2baee319660c89d34e90471bb"
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 1999,
@@ -544,8 +544,8 @@
    "sha256": "240723d6c86c13fc8f19ff2a5bbe7eec5e64da0f3769ea25e49d8d7b7e5784d0"
   },
   "index.html": {
-   "bytes": 4166155,
-   "sha256": "987b39c889eb0dcb40b240a8734068a6ebdf6e996e7553cca10e90b202fa6c18"
+   "bytes": 4198611,
+   "sha256": "96521d18eca337e5bcd791e805da40d206a1236deccbe0b69ddbaf2e9725c08d"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
@@ -605,7 +605,7 @@
   "lead_field_redactions": 11,
   "pair_status_rule": "pairs[].p.cr.pha[1] (status classes of the row) is dropped in the shareable build: a status class derives from ChEMBL max_phase, DGIdb approved flags, MATRIX and openFDA together, and the build does not re-derive a class-A-only status per row.",
   "pairs_status_class_dropped": 923,
-  "repository_file_names_described": 145,
+  "repository_file_names_described": 177,
   "rule": "IT5 P13 fix. Own analysis stays in the shareable build: a conclusion at the level of a need, a class or a card subject, in our own words, short, attributed to a published work. Withheld: (1) a sentence that states a compound-target(-action) pair together with its database of origin when the pair is asserted only by a class-B/C catalogue source; (2) a compound named in prose whose only provenance in the repository is a class-B/C catalogue row (it appears in no cited full text and is not a card subject); (3) a per-compound status, phase, approval or access statement attributed to a class-B/C source; (4) repository file names, which cannot be used outside the repository. The replacement keeps the research conclusion and names the withheld source class with the phrase in withheld_phrase. The FULL build keeps everything. The audit enforces (1) and (2) by derivation from the catalogue, (3) and (4) by pattern, and every redaction below must match exactly once or more: a stale redaction fails the build.",
   "withheld_phrase": "dato di una fonte non inclusa in questa versione"
  },
