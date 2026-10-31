@@ -518,7 +518,9 @@
     "cards/L01_nrf2_axis.packet.json"
    ],
    "compound_ids_outside_catalogue": [
-    "CHEMBL4303525"
+    "CHEMBL2107333",
+    "CHEMBL4303525",
+    "CHEMBL589586"
    ],
    "links": [
     {
@@ -531,17 +533,53 @@
      "catalogue_id": "CAT:CHEMBL589586",
      "chembl_id": "CHEMBL589586",
      "role": "named_member",
-     "rule": "curator_declared_identifier (card_identity_declarations.tsv); curator (scientist-e, 2026-10-31) took the ChEMBL id of monomethyl fumarate (the active moiety) from the IT9 P4c-D identity table via the IT10 P2.2 candidates table and confirmed it in catalog.jsonl.gz [CAT:CHEMBL589586]; named as a second NRF2-activating chemotype, a different rationale from the dropped IT9 DMF chain; ChEMBL id of the record, not a name-similarity score"
+     "rule": "curator_declared_identifier (card_identity_declarations.tsv); curator (scientist-e, 2026-10-31) took the ChEMBL id of monomethyl fumarate (the active moiety) from the IT9 P4c-D identity table via the IT10 P2.2 candidates table and confirmed it in catalog.jsonl.gz [CAT:CHEMBL589586]; named as a separate comparator, not as a second NRF2-activating chemotype (IT11 P2.3: monomethyl fumarate did not activate NRF2 in primary neurons where dimethyl fumarate did, PMID 39684792; the systemic moiety and an HCAR2 agonist, a different compound with a different rationale); ChEMBL id of the record, not a name-similarity score"
     },
     {
      "catalogue_id": "CAT:CHEMBL2107333",
      "chembl_id": "CHEMBL2107333",
      "role": "named_member",
-     "rule": "curator_declared_identifier (card_identity_declarations.tsv); curator (scientist-e, 2026-10-31) took the ChEMBL id of dimethyl fumarate (the prodrug of monomethyl fumarate) from the IT9 P4c-D identity table via the IT10 P2.2 candidates table and confirmed it in catalog.jsonl.gz [CAT:CHEMBL2107333]; evidence is not transferred between the two fumarates or to omaveloxolone; ChEMBL id of the record, not a name-similarity score"
+     "rule": "curator_declared_identifier (card_identity_declarations.tsv); curator (scientist-e, 2026-10-31) took the ChEMBL id of dimethyl fumarate (a separate compound, the NRF2-active ex vivo form; it is the prodrug of monomethyl fumarate but evidence is not transferred between them) from the IT9 P4c-D identity table via the IT10 P2.2 candidates table and confirmed it in catalog.jsonl.gz [CAT:CHEMBL2107333]; evidence is not transferred between the two fumarates or to omaveloxolone; ChEMBL id of the record, not a name-similarity score"
     }
    ],
    "non_compound_ids_ignored": [
-    "CHEMBL4303525"
+    "CHEMBL2107333",
+    "CHEMBL4303525",
+    "CHEMBL589586"
+   ]
+  },
+  "M01_neurogenic_output_myc_window": {
+   "card_files": [
+    "cards/M01_neurogenic_output_myc_window.card.json",
+    "cards/M01_neurogenic_output_myc_window.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [
+    "CHEMBL189963",
+    "CHEMBL3301610"
+   ],
+   "links": [
+    {
+     "catalogue_id": "CAT:CHEMBL189963",
+     "chembl_id": "CHEMBL189963",
+     "role": "named_member",
+     "rule": "curator_declared_identifier (card_identity_declarations.tsv); curator (scientist-g, 2026-10-30) took the ChEMBL id of palbociclib from the IT11 P2.2 candidates table M05 and premises PR15 (ChEMBL REST, 2026-10-30) and confirmed it in catalog.jsonl.gz [CAT:CHEMBL189963, name PALBOCICLIB]; named as a cell-cycle reference arm, not a lever; REFERENCE-ONLY; ChEMBL id of the record, not a name-similarity score"
+    },
+    {
+     "catalogue_id": "CAT:CHEMBL3301610",
+     "chembl_id": "CHEMBL3301610",
+     "role": "named_member",
+     "rule": "curator_declared_identifier (card_identity_declarations.tsv); curator (scientist-g, 2026-10-30) took the ChEMBL id of abemaciclib from the IT11 P2.2 candidates table M05 and premises PR15 (ChEMBL REST, 2026-10-30) and confirmed it in catalog.jsonl.gz [CAT:CHEMBL3301610, name ABEMACICLIB]; named as a cell-cycle reference arm, not a lever; REFERENCE-ONLY; evidence is not transferred to palbociclib; ChEMBL id of the record, not a name-similarity score"
+    },
+    {
+     "catalogue_id": "CAT:CHEMBL1064",
+     "chembl_id": "CHEMBL1064",
+     "role": "named_member",
+     "rule": "curator_declared_identifier (card_identity_declarations.tsv); curator (scientist-g, 2026-10-30) took the ChEMBL id of simvastatin from the IT11 P2.2 candidates table M06 and premises PR15 (ChEMBL REST, 2026-10-30) and confirmed it in catalog.jsonl.gz [CAT:CHEMBL1064, name SIMVASTATIN]; named because of a non-neural WWOX-context paper; DROP; ChEMBL id of the record, not a name-similarity score"
+    }
+   ],
+   "non_compound_ids_ignored": [
+    "CHEMBL189963",
+    "CHEMBL3301610"
    ]
   },
   "P11_magnesium_nmdar_gate": {
@@ -895,9 +933,9 @@
    ]
   }
  },
- "cards_considered": 66,
- "cards_with_at_least_one_link": 24,
- "generated_utc": "2026-10-30T18:41:47Z",
+ "cards_considered": 67,
+ "cards_with_at_least_one_link": 25,
+ "generated_utc": "2026-10-31T07:28:38Z",
  "unmatched_cards": [
   "A02_proteasome_inhibitor_class",
   "A03_client_binding_chaperone",

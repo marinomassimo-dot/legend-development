@@ -44,7 +44,11 @@ X03		(no catalogue identity: class, modality or axis named in the card text; a n
 U59	FAM:CAT:CHEMBL2107333	DIMETHYL FUMARATE	L01_nrf2_axis	named_member	1	approved_any_source	prescription	FAM:CAT:DGIDB:383151119697	molecule_family
 U59	FAM:CAT:CHEMBL4303525	OMAVELOXOLONE	L01_nrf2_axis	assertion_subject; named_member	1	approved_any_source	prescription	FAM:CAT:DGIDB:300a1f119a63	molecule_family
 U59	FAM:CAT:CHEMBL589586	MONOMETHYL FUMARATE	L01_nrf2_axis	named_member	1	approved_any_source	prescription	FAM:CAT:DGIDB:ae0d6efd8da4	molecule_family
-U59	INT:L01_nrf2_axis:tool	NRF2 activation (genetic KEAP1 knockdown; omaveloxolone and monomethyl fumarate as two chemotypes) in WWOX-deficient neural cells: a role-resolving mechanism experiment, not a treatment [tool or genetic subject]	L01_nrf2_axis	tool_subject					tool_compound_or_genetic_precedent_not_in_catalogue
+U59	INT:L01_nrf2_axis:tool	NRF2 activation (genetic KEAP1 knockdown; omaveloxolone and dimethyl fumarate as two cysteine-reactive electrophiles, monomethyl fumarate as a separate comparator) in WWOX-deficient neural cells, with NFE2L2 loss as the dependence control: a role-resolving mechanism experiment, not a treatment [tool or genetic subject]	L01_nrf2_axis	tool_subject					tool_compound_or_genetic_precedent_not_in_catalogue
+U63	FAM:CAT:CHEMBL1064	SIMVASTATIN	M01_neurogenic_output_myc_window	assertion_subject; named_member	1	approved_any_source	prescription	FAM:CAT:DGIDB:69bf70938387	molecule_family
+U63	FAM:CAT:CHEMBL189963	PALBOCICLIB	M01_neurogenic_output_myc_window	assertion_subject; named_member	2	approved_any_source; clinical_candidate	experimental; prescription	FAM:CAT:DGIDB:5999e76b0fdc	molecule_family
+U63	FAM:CAT:CHEMBL3301610	ABEMACICLIB	M01_neurogenic_output_myc_window	assertion_subject; named_member	1	approved_any_source	unknown/unverified	FAM:CAT:DGIDB:bfa3a8018a80	molecule_family
+U63	INT:M01_neurogenic_output_myc_window:tool	MYC-axis and cell-cycle comparison arms (A51, a PIN1 probe, a CDK4/6 class arm) beside genetic MYC lowering and stage-specific WWOX add-back in WWOX-deficient neural progenitors: a discriminating experiment about driver, marker or consequence, not a treatment [tool or genetic subject]	M01_neurogenic_output_myc_window	tool_subject					tool_compound_or_genetic_precedent_not_in_catalogue
 U29		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
 U30		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
 U31		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
@@ -78,3 +82,6 @@ U58		(no catalogue identity: class, modality or axis named in the card text; a n
 U60		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
 U61		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
 U62		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U64		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U65		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U66		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal

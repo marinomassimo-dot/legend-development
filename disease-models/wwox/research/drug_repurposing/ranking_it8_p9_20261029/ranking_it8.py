@@ -833,6 +833,11 @@ QUAL_SOURCES_IT10 = [
     ("P2.2", "axis_it10_p22_20261031/candidates.tsv", {"cand_id": "id", "name": "compound_or_lever", "decision": "state"},
      {"promise": "", "depth": "", "feas": "development_verdict_systemic", "prio": "", "nxt": "discriminating_test", "fals": "counter_evidence", "datum": "decisive_datum", "unv": "missing_data"}),
 ]
+# IT11 P2.2 candidates (question_it11_p22_20261031/candidates.tsv): another shape again (cand_id, lever, state); the same column-by-column mapping, era IT11.
+QUAL_SOURCES_IT11 = [
+    ("P2.2-IT11", "question_it11_p22_20261031/candidates.tsv", {"cand_id": "cand_id", "name": "lever", "decision": "state"},
+     {"promise": "", "depth": "", "feas": "development_verdict", "prio": "", "nxt": "discriminating_test", "fals": "counter_evidence", "datum": "decisive_datum", "unv": "missing_data"}),
+]
 # dated corrections to a stored qualification field, applied when the table is read; the original record is never rewritten (cand_id, field, text, source)
 QUAL_CORRECTIONS = HERE / "qualification_corrections.tsv"
 
@@ -879,6 +884,19 @@ def load_qualification_it10() -> dict:
     return _apply_qual_corrections(out)
 
 
+def load_qualification_it11() -> dict:
+    """The IT11 P2.2 candidate table, mapped column by column (QUAL_SOURCES_IT11); records are the same shape as the IT10 ones, era IT11."""
+    out: dict[str, dict] = {}
+    for pk, rel, ren, m in QUAL_SOURCES_IT11:
+        p = DR / rel
+        if not p.exists():
+            continue
+        for r in read_tsv(p):
+            cid, name, dec = r[ren["cand_id"]], r[ren["name"]], r[ren["decision"]]
+            out[cid] = {"cand_id": cid, "era": "IT11", "package": pk, "name": name, "decision": dec, "state": _qual_state(dec), **{k: (r.get(v, "") if v else "") for k, v in m.items()}}
+    return _apply_qual_corrections(out)
+
+
 def proposal_units(ctx: dict) -> tuple[list[dict], list[dict]]:
     """Units for the IT9-qualified candidates that have no card (KEEP -> ordered as a proposal, INCONCLUSIVE -> still insufficiently evaluated, DROP and REFERENCE -> excluded from
     this comparison with the reason). No WWOX-system result of any compound exists, so the documented PROPOSAL RULE gives a KEEP proposal the position F3 (target-based hypothesis,
@@ -907,6 +925,16 @@ def proposal_units(ctx: dict) -> tuple[list[dict], list[dict]]:
             raise SystemExit(f"proposals_map_it10.tsv: {r['cand_id']} is not in the IT10 qualification table or collides with an IT9 id")
     qual.update(q10)
     pm = pm + pm10
+    # IT11: the same rule again (proposals_map_it11.tsv, how = own_unit or card_unit); an id is never in two tables
+    pm11_all = read_tsv(HERE / "proposals_map_it11.tsv") if (HERE / "proposals_map_it11.tsv").exists() else []
+    q11 = load_qualification_it11()
+    for r in pm11_all:
+        if r["how"] not in ("own_unit", "card_unit") or r["cand_id"] not in q11 or r["cand_id"] in qual:
+            raise SystemExit(f"proposals_map_it11.tsv: {r['cand_id']} has an invalid 'how', is not in the IT11 qualification table or collides with an earlier id")
+        if r["unit_type"] not in UNIT_TYPES or r["origin"] not in ORIGINS:
+            raise SystemExit(f"proposals_map_it11.tsv: {r['cand_id']} has an invalid type or origin")
+    qual.update(q11)
+    pm = pm + [r for r in pm11_all if r["how"] == "own_unit"]
     by_unit: dict[str, list[dict]] = defaultdict(list)
     for r in pm:
         by_unit[r["unit_id"]].append(r)
@@ -950,7 +978,7 @@ def proposal_units(ctx: dict) -> tuple[list[dict], list[dict]]:
         tx = f"decisive datum: {join('datum', 300)}"
         comp = {"W_wwox_evidence": {"wwox_assertions": 0, "signs": {}, "wild_type_only_assertions": 0, "favourable_distinct_pmids": [], "read_beyond_abstract": 0, "l4_states": {},
                                     "text": "none: no result of the compound in a WWOX system; the link to WWOX is a seed observation and a context-free network edge", "replication": "not applicable (no result)"},
-                "M_mechanism": {"families": [], "l1": {}, "l2": {}, "opposed_needs": [], "text": f"generated proposal ({era} seed-based engine): " + tx},
+                "M_mechanism": {"families": [], "l1": {}, "l2": {}, "opposed_needs": [], "text": (f"named by an IT11 case package from the literature (not by the engine): " if era == "IT11" else f"generated proposal ({era} seed-based engine): ") + tx},
                 "T_transferability": {"track": ["A"], "species_of_wwox_assertions": ["none (no result in a WWOX system)"], "genotypes": [], "transfer_limits": [join("unv", 300)], "window_note": []},
                 "P_pharmacology": {"state": f"qualified in {era} {qs[0]['package']} ({', '.join(cand_ids)}); promise {join('promise', 60)}; depth {join('depth', 80)}; potency in a WWOX system UNKNOWN",
                                    "potency_with_assay_context": join("feas", 300), "human_exposure": "see the qualification record", "brain_penetration": "see the qualification record", "record": ", ".join(cand_ids)},
@@ -962,7 +990,7 @@ def proposal_units(ctx: dict) -> tuple[list[dict], list[dict]]:
         if member:
             pathways = [{"need": m0["need"], "need_short": nd["short"], "thread": nd["thread"], "objective": obj, "need_direction": nd["dir"], "position": lead or "P1", "position_by_card": {}, "same_need_conflict": False,
                          "link_evidence": "computational_prediction_generated_in_it9", "l1": {}, "l2": {}, "l3": {}, "l4": {}, "opposed_action": False,
-                         "computational_prediction": ("seed-based engine (IT10 P1 v4, member junction): " if era == "IT10" else "seed-based engine (IT9 P2 v2/v3): ") + "a compatible-action prediction on a context-free network, not an effect", "wwox_observations_on_need": nd["n_wwox_obs"]}]
+                         "computational_prediction": ("none: named by an IT11 case package from the literature, not by the engine; no compatible-action prediction is claimed" if era == "IT11" else ("seed-based engine (IT10 P1 v4, member junction): " if era == "IT10" else "seed-based engine (IT9 P2 v2/v3): ") + "a compatible-action prediction on a context-free network, not an effect"), "wwox_observations_on_need": nd["n_wwox_obs"]}]
         mt = "tool_compound" if m0["unit_type"] == "mechanism_probe" else "molecule"
         mev = [{"member": m0["label"], "member_type": mt, "member_key": uid, "tested_in_wwox_system": "no", "wwox_assertions": 0, "signs": {}, "what": "no WWOX-system assertion: the compound has not been tested in any WWOX system; the entry is a generated, qualified hypothesis",
                 "source_pmids": [], "depth": "", "assertion_ids": [], "outside_wwox_assertions": 0}]
@@ -972,7 +1000,7 @@ def proposal_units(ctx: dict) -> tuple[list[dict], list[dict]]:
                       "cards": [], "merge_reason": ("two qualification records of the same compound (" + ", ".join(cand_ids) + ") are one entry" if len(qs) > 1 else ""), "class": cls, "class_label": CLASSES[cls], "class_reason": reason_cls,
                       "declared_goals": [nd["goal"]], "tracks": ["A"], "views": views, "components": comp, "evaluation_depth": "E3q", "evaluation_depth_text": f"{era} {qs[0]['package']} qualification record ({', '.join(cand_ids)}), no card; depth as stated there: {join('depth', 160)}",
                       "access": "not assessed here; the qualification record's feasibility field says: " + join("feas", 200), "access_categories": [], "access_items": [],
-                      "exploratory_it7": f"generated in {era} (seed-based engine); the IT7 P3 comparison is not used", "pathways": pathways, "members": [], "pmids": [], "receipts_on_cited_pmids": 0, "model_exclusions": [], "comparison_record": "",
+                      "exploratory_it7": (f"named in {era} by a case package (literature); the IT7 P3 comparison is not used" if era == "IT11" else f"generated in {era} (seed-based engine); the IT7 P3 comparison is not used"), "pathways": pathways, "members": [], "pmids": [], "receipts_on_cited_pmids": 0, "model_exclusions": [], "comparison_record": "",
                       "depth_of_benefit_sought": "", "research_objective": "", "excluded_from_comparisons": [],
                       "inputs": {"T1_cards": sha16([(q["cand_id"], q["decision"], q["datum"]) for q in qs]), "T2_pertinence": sha16([]), "T3_receipts": sha16([]), "T4_needs": sha16(nd["n_wwox_obs"], nd["dir"]),
                                  "T5_pharmacology": sha16([(q["promise"], q["depth"], q["feas"], q["prio"]) for q in qs]), "T6_identity": sha16(cand_ids)},
@@ -1067,7 +1095,17 @@ def assemble(ctx: dict, cat: dict) -> dict:
                            "unit_id": r["unit_id"], "class": u_["class"], "origin": u_["origin"], "need": r["need"]})
     precs9 = [{k: v for k, v in r.items() if k != "era"} for r in precs if r["era"] == "IT9"]
     precs10 = [{k: v for k, v in r.items() if k != "era"} for r in precs if r["era"] == "IT10"]
-    return {"units": out_units + pu, "it9_records": sorted(precs9 + keep_card, key=lambda r: r["cand_id"]), "it10_records": sorted(precs10 + card10, key=lambda r: r["cand_id"])}
+    precs11 = [{k: v for k, v in r.items() if k != "era"} for r in precs if r["era"] == "IT11"]
+    q11 = load_qualification_it11()
+    card11 = []
+    for r in (read_tsv(HERE / "proposals_map_it11.tsv") if (HERE / "proposals_map_it11.tsv").exists() else []):
+        if r["how"] == "card_unit":
+            if r["unit_id"] not in units_all or not units_all[r["unit_id"]]["cards"]:
+                raise SystemExit(f"proposals_map_it11.tsv: card_unit {r['unit_id']} of {r['cand_id']} is not a carded unit")
+            u_ = units_all[r["unit_id"]]
+            card11.append({"cand_id": r["cand_id"], "package": q11[r["cand_id"]]["package"], "compound": q11[r["cand_id"]]["name"], "state": q11[r["cand_id"]]["state"], "decision": q11[r["cand_id"]]["decision"],
+                           "unit_id": r["unit_id"], "class": u_["class"], "origin": u_["origin"], "need": r["need"]})
+    return {"units": out_units + pu, "it9_records": sorted(precs9 + keep_card, key=lambda r: r["cand_id"]), "it10_records": sorted(precs10 + card10, key=lambda r: r["cand_id"]), "it11_records": sorted(precs11 + card11, key=lambda r: r["cand_id"])}
 
 
 # ------------------------------------------------------------------------------------------------------------------------ catalogue inventory
@@ -1406,6 +1444,8 @@ def build_all() -> dict[str, bytes]:
                 "ranked_by_origin": dict(sorted(Counter(u["origin"] for u in non_excl).items()))},
         "it10": {"records_qualified": len(uni["it10_records"]), "distinct_entries": len({r["unit_id"] for r in uni["it10_records"]}),
                  "by_state": dict(sorted(Counter(r["state"] for r in uni["it10_records"]).items())), "by_class": {CLASSES[k]: sum(1 for r in uni["it10_records"] if r["class"] == k) for k in CLASSES if any(r["class"] == k for r in uni["it10_records"])}},
+        "it11": {"records_qualified": len(uni["it11_records"]), "distinct_entries": len({r["unit_id"] for r in uni["it11_records"]}),
+                 "by_state": dict(sorted(Counter(r["state"] for r in uni["it11_records"]).items())), "by_class": {CLASSES[k]: sum(1 for r in uni["it11_records"] if r["class"] == k) for k in CLASSES if any(r["class"] == k for r in uni["it11_records"])}},
         "inventory": inv_sum, "deepening_queue_compounds": len(queue),
         "uncarded": {"items": len(unc), "by_class": {CLASSES[k]: sum(1 for r in unc if r["class"] == k) for k in CLASSES}, "by_provenance": dict(sorted(Counter(r["provenance"] for r in unc).items()))}, "selections": sel,
         "needs_total": need_total, "p3_note": "IT7 P3 results (network and signature comparison on 256 families) are exploratory, may not drive the ranking, and card-linked families were firewalled out of that comparison: no unit is ranked or re-ranked by them.",
@@ -1425,6 +1465,7 @@ def build_all() -> dict[str, bytes]:
     files["member_evidence.tsv"] = tsv_bytes(mrows, ["unit_id", "unit_type", "member", "member_type", "tested_in_wwox_system", "wwox_assertions", "signs", "what", "source_pmids", "depth", "assertion_ids", "outside_wwox_assertions"])
     files["it9_records.tsv"] = tsv_bytes(uni["it9_records"], ["cand_id", "package", "compound", "state", "decision", "unit_id", "class", "origin", "need"])
     files["it10_records.tsv"] = tsv_bytes(uni["it10_records"], ["cand_id", "package", "compound", "state", "decision", "unit_id", "class", "origin", "need"])
+    files["it11_records.tsv"] = tsv_bytes(uni["it11_records"], ["cand_id", "package", "compound", "state", "decision", "unit_id", "class", "origin", "need"])
     files["triggers.tsv"] = tsv_bytes(triggers_rows(), ["trigger", "what", "detected_by", "re_evaluates", "reason_class_when_order_moves"])
     inv_cols = ["family_id", "name", "records", "origin", "modality", "status_class", "access_categories", "class", "evaluation_depth", "first_order", "needs_documented_target_link", "needs_pathway_member_only",
                 "needs_direction_consistent", "needs_opposed", "mnet_usable", "msig_neural_strict", "msig_any_context", "units", "name_twins_not_merged", "display_group", "display_group_size", "reason"]
@@ -1432,7 +1473,7 @@ def build_all() -> dict[str, bytes]:
     qrows = [{"display_group": q["display_group"], "names": q["names"], "family_ids": q["family_ids"], "needs": q["needs"], "wwox_observations_on_best_need": q["wwox_observations_on_best_need"],
               "status_class": q["status_class"], "access_categories": q["access_categories"], "mnet_usable": q["mnet_usable"], "msig_neural": q["msig_neural"], "units": q["units"], "shares_need_with_units": q["shares_need_with_units"], "why": q["why"]} for q in queue]
     files["deepening_queue.tsv"] = tsv_bytes(qrows, ["display_group", "names", "family_ids", "needs", "wwox_observations_on_best_need", "status_class", "access_categories", "mnet_usable", "msig_neural", "units", "shares_need_with_units", "why"])
-    ing = {"summary": summary, "units": uni["units"], "selection_table": srows, "deepening_queue_head": queue[:40], "uncarded": unc, "it9_records": uni["it9_records"], "it10_records": uni["it10_records"],
+    ing = {"summary": summary, "units": uni["units"], "selection_table": srows, "deepening_queue_head": queue[:40], "uncarded": unc, "it9_records": uni["it9_records"], "it10_records": uni["it10_records"], "it11_records": uni["it11_records"],
            "matching_pilot": matching_pilot(uni["units"], None, unc)}
     files["ranking.json"] = json_bytes(ing)
     # per-unit input digests (for the snapshot / diff mechanism)

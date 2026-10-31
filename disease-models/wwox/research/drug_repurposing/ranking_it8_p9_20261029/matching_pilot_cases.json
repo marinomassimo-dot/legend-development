@@ -256,7 +256,7 @@
       "mechanistic_context_transfer"
     ],
     "research_priority": "Prima il testo completo di Mahajan 2005 e il dato sul destino della proteina; poi, se c'è proteina, il confronto dasatinib, bosutinib e knockdown di TNK2.",
-    "research_question": "Emivita (cicloesimide) e livello stazionario di WWOX con composto, knockdown di TNK2 come comparatore genetico, WWOX Tyr287Phe come controllo insensibile; regola di concordanza fra i due inibitori e il knockdown; lettura di funzione separata dalla quantità.",
+    "research_question": "Emivita (cicloesimide) e livello stazionario di WWOX con composto, knockdown di TNK2 come comparatore genetico, WWOX Tyr287Phe come controllo insensibile; regola di concordanza fra i due inibitori e il knockdown; lettura di funzione separata dalla quantità. Bracci distinti per chemotipo e bracci genetici (Tnk2-null, un secondo shRNA con mRNA di WWOX) come primo passo.",
     "development_scope": "Uso di un chinasi-inibitore antineoplastico multi-bersaglio in un contesto neurale pediatrico, distinto dalla sonda in cellule.",
     "development_requirements": [
       {
@@ -275,7 +275,7 @@
         "reason": "Solo RNA da atlante, in tutti i tessuti; la proteina non è stata controllata."
       }
     ],
-    "evidence_limit": "Nessun composto è stato dato a un sistema WWOX; le osservazioni ACK1-WWOX vengono da cancro (prostata, fegato) a livello di abstract; i valori ChEMBL ripetuti sono valori di letteratura riportati fra articoli, non repliche. Nessuna scheda e nessuna voce ordinata: la voce N12 non ha scheda.",
+    "evidence_limit": "Nessun composto è stato dato a un sistema WWOX; le osservazioni ACK1-WWOX vengono da cancro (prostata, fegato) a livello di abstract; i valori ChEMBL ripetuti sono valori di letteratura riportati fra articoli, non repliche. Nessuna scheda e nessuna voce ordinata: la voce N12 non ha scheda. Dasatinib non è selettivo per ACK1 (34 bersagli più forti in un documento di profilazione) e bosutinib non è un chemotipo indipendente; il dato di knockdown è una linea di carcinoma epatocellulare, un costrutto, stato stazionario (IT11 P2.4).",
     "source_pointers": [
       "recovery_it10_p23_20261031/README.md sections 1-3, 11",
       "recovery_it10_p23_20261031/candidates_it10_p23.tsv:T1,T2",
