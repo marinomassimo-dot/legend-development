@@ -1,0 +1,112 @@
+diff --git a/disease-models/wwox/research/drug_repurposing/cards_early/EB-CBD-AX-01.card.json b/disease-models/wwox/research/drug_repurposing/cards_early/EB-CBD-AX-01.card.json
+index c03b4e0a..b5206e5b 100644
+--- a/disease-models/wwox/research/drug_repurposing/cards_early/EB-CBD-AX-01.card.json
++++ b/disease-models/wwox/research/drug_repurposing/cards_early/EB-CBD-AX-01.card.json
+@@ -5,6 +5,7 @@
+   "canonical": false,
+   "assessment": "REQUIRES_QUALIFICATION",
+   "directional_summary": "UNRESOLVED",
++  "endpoint_outcomes": [],
+   "comparisons": [],
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "label_lookup": {
+diff --git a/disease-models/wwox/research/drug_repurposing/cards_early/EB-DEV-AX-01.card.json b/disease-models/wwox/research/drug_repurposing/cards_early/EB-DEV-AX-01.card.json
+index 663b9af7..fe637ed1 100644
+--- a/disease-models/wwox/research/drug_repurposing/cards_early/EB-DEV-AX-01.card.json
++++ b/disease-models/wwox/research/drug_repurposing/cards_early/EB-DEV-AX-01.card.json
+@@ -5,6 +5,7 @@
+   "canonical": false,
+   "assessment": "REQUIRES_QUALIFICATION",
+   "directional_summary": "UNRESOLVED",
++  "endpoint_outcomes": [],
+   "comparisons": [],
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "label_lookup": {
+diff --git a/disease-models/wwox/research/drug_repurposing/cards_early/EB-GROWTH-AX-01.card.json b/disease-models/wwox/research/drug_repurposing/cards_early/EB-GROWTH-AX-01.card.json
+index 84f8a27a..623a0a8d 100644
+--- a/disease-models/wwox/research/drug_repurposing/cards_early/EB-GROWTH-AX-01.card.json
++++ b/disease-models/wwox/research/drug_repurposing/cards_early/EB-GROWTH-AX-01.card.json
+@@ -5,6 +5,7 @@
+   "canonical": false,
+   "assessment": "REQUIRES_QUALIFICATION",
+   "directional_summary": "UNRESOLVED",
++  "endpoint_outcomes": [],
+   "comparisons": [],
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "label_lookup": {
+diff --git a/disease-models/wwox/research/drug_repurposing/cards_early/EB-HORM-AX-01.card.json b/disease-models/wwox/research/drug_repurposing/cards_early/EB-HORM-AX-01.card.json
+index c6afca86..63ec6251 100644
+--- a/disease-models/wwox/research/drug_repurposing/cards_early/EB-HORM-AX-01.card.json
++++ b/disease-models/wwox/research/drug_repurposing/cards_early/EB-HORM-AX-01.card.json
+@@ -5,6 +5,7 @@
+   "canonical": false,
+   "assessment": "REQUIRES_QUALIFICATION",
+   "directional_summary": "UNRESOLVED",
++  "endpoint_outcomes": [],
+   "comparisons": [],
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "label_lookup": {
+diff --git a/disease-models/wwox/research/drug_repurposing/cards_early/EB-MTOR-AX-01.card.json b/disease-models/wwox/research/drug_repurposing/cards_early/EB-MTOR-AX-01.card.json
+index 8d3877bb..3bdd8395 100644
+--- a/disease-models/wwox/research/drug_repurposing/cards_early/EB-MTOR-AX-01.card.json
++++ b/disease-models/wwox/research/drug_repurposing/cards_early/EB-MTOR-AX-01.card.json
+@@ -5,6 +5,7 @@
+   "canonical": false,
+   "assessment": "REQUIRES_QUALIFICATION",
+   "directional_summary": "UNRESOLVED",
++  "endpoint_outcomes": [],
+   "comparisons": [],
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "label_lookup": {
+diff --git a/disease-models/wwox/research/drug_repurposing/cards_early/EB-PDANCHOR-AX-01.card.json b/disease-models/wwox/research/drug_repurposing/cards_early/EB-PDANCHOR-AX-01.card.json
+index 0a200506..9f368001 100644
+--- a/disease-models/wwox/research/drug_repurposing/cards_early/EB-PDANCHOR-AX-01.card.json
++++ b/disease-models/wwox/research/drug_repurposing/cards_early/EB-PDANCHOR-AX-01.card.json
+@@ -5,6 +5,7 @@
+   "canonical": false,
+   "assessment": "REQUIRES_QUALIFICATION",
+   "directional_summary": "UNRESOLVED",
++  "endpoint_outcomes": [],
+   "comparisons": [],
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "label_lookup": {
+diff --git a/disease-models/wwox/research/drug_repurposing/cards_early/EB-VGB-01.card.json b/disease-models/wwox/research/drug_repurposing/cards_early/EB-VGB-01.card.json
+index ccf7b010..b66a7ee4 100644
+--- a/disease-models/wwox/research/drug_repurposing/cards_early/EB-VGB-01.card.json
++++ b/disease-models/wwox/research/drug_repurposing/cards_early/EB-VGB-01.card.json
+@@ -1,10 +1,34 @@
+ {
+   "schema_version": 1,
+-  "input_sha256": "500f44286a9485412e2fe0ca7d826ba96c306cd28d8f2f87cf6f5000a9346573",
++  "input_sha256": "0bc17dd98325a5b3d7a9f300de476405f0e01e3aa6fae79ee44e6bf6f26fcdf4",
+   "epistemic_status": "IPOTESI",
+   "canonical": false,
+   "assessment": "REQUIRES_QUALIFICATION",
+   "directional_summary": "UNRESOLVED",
++  "endpoint_outcomes": [
++    {
++      "question": [
++        "epileptic_spasms",
++        "clinical cessation of epileptic spasms",
++        "WWOX-DEE with West syndrome or infantile spasms",
++        "WWOX-null class (predicted null/null)",
++        "human",
++        "NOT_APPLICABLE_WHOLE_ORGANISM",
++        "infancy",
++        "",
++        "",
++        ""
++      ],
++      "statuses": [
++        "OPPOSES_DISEASE_CHANGE"
++      ],
++      "discriminators_declared": false,
++      "assertion_ids": [
++        "A-VGB-1",
++        "A-VGB-3"
++      ]
++    }
++  ],
+   "comparisons": [
+     {
+       "assertion_id": "A-VGB-1",
