@@ -1,0 +1,100 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT12-20261031",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Iteration 12 (ten-hour horizon): obtain at least one new piece of scientific information or a substantive reconciliation that changes a research decision motivatedly, and propagate it to card, queue, ranking and view. Recovery of WWOX function, compensation of the loss and partial benefit stay open. IT11 improved reliability, explanations and qualification; its generated lists stayed those of IT10 and no candidacy was strengthened. A computational result is not therapeutic efficacy.",
+ "START_UTC": "2026-10-31T11:48:00Z",
+ "BASELINE": "4cab6cf4b4c4f00ef6a7d6dd81816fdff0064938 = development/main (verified equal after fetch; CI success on that SHA)",
+ "AUTHORISED_QUEUE_20261031C": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P0_OPERATIONS": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P0 ChEMBL attribution: three entries in THIRD_PARTY_NOTICES, release vs query date vs cache reconciled from the service log",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P1_QUESTIONS": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "P1 main question: residual WWOX product in patient-derived neural models (Q1): which model retains protein, how much, which allele; model for a product-dependent lever; concrete request to the human referent",
+     "status": "TODO",
+     "owner": "scientist",
+     "evidence": ""
+    },
+    {
+     "step": "P1 alternative question: genetic modifier or suppressor of the WWOX defect (GSE298081 HAP1 screen and literature): usability check first, then qualification of druggable suppressors",
+     "status": "TODO",
+     "owner": "scientist",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P2_VERIFICATION": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "P2.2 selective audit of the 28 unverifiable figure triples that support decisive premises; public routes only",
+     "status": "TODO",
+     "owner": "scientist",
+     "evidence": ""
+    },
+    {
+     "step": "P2 P47T hallmark enrichment direction (Fig 8b/9c) and HIF/ROS reopening condition for K01/L01",
+     "status": "TODO",
+     "owner": "scientist",
+     "evidence": ""
+    },
+    {
+     "step": "P2.1 independent verification of the datum that most determines the main conclusion",
+     "status": "TODO",
+     "owner": "scientist (different from producer)",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P3_QUALIFICATION": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "P3 qualification of the few comparable candidacies produced by the new information",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P6_PROPAGATION": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "P6 card, queue, ranking, view regenerated with one cycle; denominators recomputed; web publication prepared, final action named",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_CLOSE": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "hostile review, integration, final battery in clean clone, push, CI to its outcome, cleanup",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  }
+ },
+ "DECISIONS_TAKEN": [],
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
+}
