@@ -1,0 +1,8 @@
+[    2s] loaded profiles
+[    6s] profiles per source ready; primary
+[    7s] primary + c2g done; cross-source
+[   10s] cross-source done; sensitivity
+[   11s] sensitivity done; broad panel
+[   42s] broad panel done; WWOX arm
+[  117s] detect ALL done
+[  181s] detectability done; lists
