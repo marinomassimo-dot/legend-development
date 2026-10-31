@@ -1391,7 +1391,7 @@ def reopen_trigger_rows_p1b() -> list[dict]:
              "reason_class_when_order_moves": "new_evidence or counter_evidence (the notes are caveats; no group can move on an association table)"} for r in read_tsv(REOPEN_SEARCHES_P1B)]
 
 
-REOPEN_SEARCHES_IT13 = [DR / "recoverable_it13_p3b_20261031" / "reopen_searches_it13_p3b.tsv", DR / "functional_it13_p3a_20261031" / "reopen_searches_it13_p3a.tsv"]      # IT13 P3b/P3a: reopenable searches on the recoverable readout and the excitation/inhibition transcript question, read as stored
+REOPEN_SEARCHES_IT13 = [DR / "recoverable_it13_p3b_20261031" / "reopen_searches_it13_p3b.tsv", DR / "functional_it13_p3a_20261031" / "reopen_searches_it13_p3a.tsv", DR / "glia_maturation_it14_p4_20261101" / "reopen_searches_it14_p4.tsv"]      # IT13 P3b/P3a: reopenable searches on the recoverable readout and the excitation/inhibition transcript question, read as stored
 
 
 def reopen_trigger_rows_it13() -> list[dict]:
@@ -1402,7 +1402,7 @@ def reopen_trigger_rows_it13() -> list[dict]:
             continue
         ptr = path.relative_to(DR)
         rows += [{"trigger": f"{r['id']}_it13", "what": f"{r['item']} (the decisive datum is stated in {ptr}, row {r['id']})", "detected_by": f"the searches and sources listed in {ptr}, row {r['id']}",
-                  "re_evaluates": f"the excitability notes and next-measurement text of the needs NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR, NEED-T-TYPE-CALCIUM, NEED-GABA-CHLORIDE-GRADIENT and NEED-SEIZURE-CONTROL-SYMPTOMATIC, and the uncarded items N13 to N15 (no group moves on a caveat); reopen when: {r['trigger_to_reopen']} (owner or route: {r['owner_or_route']}; verdict today: {r['verdict']})",
+                  "re_evaluates": f"the excitability notes and next-measurement text of the needs NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR, NEED-T-TYPE-CALCIUM, NEED-GABA-CHLORIDE-GRADIENT and NEED-SEIZURE-CONTROL-SYMPTOMATIC, and the uncarded items N13 to N15 and the needs NEED-MYELINATION and the glia line (no group moves on a caveat); reopen when: {r['trigger_to_reopen']} (owner or route: {r['owner_or_route']}; verdict today: {r['verdict']})",
                   "reason_class_when_order_moves": "new_evidence or counter_evidence (the notes are caveats; no group can move before a card carries the datum)"} for r in read_tsv(path)]
     return rows
 

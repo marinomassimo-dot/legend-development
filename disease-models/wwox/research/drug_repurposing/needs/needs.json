@@ -4077,7 +4077,8 @@
    },
    "counter_evidence": [
     "N-13: the target is not causally downstream of WWOX in the cell targeted; window closing.",
-    "Oligodendrocyte arm of the AAV experiment produced no benefit and no detectable protein, so it is not a negative result about oligodendrocytes (entry 45)."
+    "Oligodendrocyte arm of the AAV experiment produced no benefit and no detectable protein, so it is not a negative result about oligodendrocytes (entry 45).",
+    "IT14 P4 (2026-11-01): the developmental myelin deficit is measured beyond transcripts (EM counts and g-ratio, CC1/PDGFRa counts, a callosal conduction-latency proxy, OPC differentiation assays), almost all by one laboratory; it follows neuron-restricted deletion and is restored by neuronal add-back while oligodendrocytes stay WWOX-null, so it is secondary to the neuron for development; whether the neuron-intrinsic signal or seizures and illness carry it is unresolved (every in vivo manipulation also changes seizures, survival and glycaemia). A primary oligodendroglial role appears only under challenge in an unreviewed same-laboratory preprint (PPR1124524, whose remyelination text and bars disagree). No myelin-directed compound has been given to any WWOX system, no post-onset arm exists (all add-back is P0 to P5), and nothing links a myelin gain to function in WWOX. The glia and maturation line is restricted to a role-resolving question; the snRNA deposit GSE158684 supports nothing here (oligodendrocyte-class composition differs between two pools whose cause the data cannot separate)."
    ],
    "sources": {
     "cards": [
