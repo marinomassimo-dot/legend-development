@@ -1,0 +1,8 @@
+seed_id	gene	kind	members	direction	level	direction_status	readout_level	evidence_class	species	ortholog_map	source_ref	note	guard_tag
+Q4_p3a_mouse_deposit:PVALB	PVALB	gene		down	1.0	defined	expression	transcript_contrast	mouse	HGNC approved symbol, 1:1 assumed	P3A-Pvalb	mouse deposit GSE158681/2: Pvalb mRNA lower in 4 of 4 within-line contrasts, animal-separated in 3	
+Q4_p3a_mouse_deposit:GAD1	GAD1	gene		down	1.0	defined	expression	transcript_contrast	mouse	HGNC approved symbol, 1:1 assumed	P3A-Gad1	Gad1 mRNA lower in H_S, H_null, C_S; flat H_N (weak)	
+Q4_p3a_mouse_deposit:NPY	NPY	gene		up	1.0	defined	expression	transcript_contrast	mouse	HGNC approved symbol, 1:1 assumed	P3A-Npy	mouse deposit: Npy mRNA higher in 4 of 4 within-line contrasts; OPPOSITE to the organoid seed (S116, down) and to IHC counts (S066)	
+Q4_p3a_mouse_deposit:GRIN2C	GRIN2C	gene		down	1.0	defined	expression	transcript_contrast	mouse	HGNC approved symbol, 1:1 assumed	P3A-Grin2c	Grin2c lower in 4 of 4 contrasts	
+Q4_p3a_mouse_deposit:GRM3	GRM3	gene		down	1.0	defined	expression	transcript_contrast	mouse	HGNC approved symbol, 1:1 assumed	P3A-Grm3	Grm3 lower in 4 of 4	
+Q4_p3a_mouse_deposit:KCNA2	KCNA2	gene		down	1.0	defined	expression	transcript_contrast	mouse	HGNC approved symbol, 1:1 assumed	P3A-Kcna2	Kcna2 lower in 4 of 4 (small)	
+Q4_p3a_mouse_deposit:KCNJ9	KCNJ9	gene		down	1.0	defined	expression	transcript_contrast	mouse	HGNC approved symbol, 1:1 assumed	P3A-Kcnj9	Kcnj9 (GIRK3) lower in 4 of 4, clean control band	

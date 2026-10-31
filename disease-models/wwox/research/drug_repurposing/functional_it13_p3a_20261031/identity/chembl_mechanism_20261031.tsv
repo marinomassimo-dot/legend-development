@@ -1,0 +1,5 @@
+chembl_id	name	withdrawn_flag	max_phase	mechanism
+CHEMBL696	ETHOSUXIMIDE	False	4.0	Voltage-gated T-type calcium channel blocker [BLOCKER]
+CHEMBL41355	EZOGABINE	False	4.0	KCNQ (Kv7) potassium channel opener [OPENER]
+CHEMBL5095264	AZETUKALNER	False	3.0	
+CHEMBL182066	RADIPRODIL	False	2.0	Glutamate NMDA receptor; GRIN1/GRIN2B antagonist [ANTAGONIST]
