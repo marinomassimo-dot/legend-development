@@ -1,0 +1,14 @@
+{
+ "screens_with_calls": 298,
+ "median_calls": 391,
+ "min": 22,
+ "max": 1673,
+ "wwox_calls": 88,
+ "wwox_rank_ascending": 18,
+ "wwox_negative": 46,
+ "wwox_positive": 42,
+ "wwox_stringent": 5,
+ "wwox_wt_lfc_mean": 0.15784615384615386,
+ "wwox_wt_lfc_sd": 0.1854020632282976,
+ "wwox_wt_n": 39
+}
