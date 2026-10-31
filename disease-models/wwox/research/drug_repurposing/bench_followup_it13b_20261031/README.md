@@ -21,7 +21,7 @@ Orchestrator, 2026-10-31 (Europe/Rome night), after the IT13 close (`main` 68f28
 | NP3B3 WT + AAV9-WWOX or dead-mutant arm | none found; the neuron-specific gene-therapy paper is the already known PMID 42422765 / preprint PPR1220099 |
 | R1/R9 G372R or Q230P protein in a neural model | no new paper (one hit, PMID 41124647, already in the module) |
 | R3/R8 pharmacological ACK1 intervention measuring WWOX | none (the 2025 hits are reviews or other cancers; 41677633 concerns WWOX-induced degradation of BCL-XL/MCL-1 through a lysosomal route in cancer cells and does not measure WWOX after ACK1 inhibition) |
-| NP3A1 nucleus-resolved PV composition | **files now readable** (separate package) |
+| NP3A1 nucleus-resolved PV composition | **files now readable and analysed** (`snrna_it13b_pv_20261031`): undecidable at one pooled library per genotype; the trigger moves to PARTIAL with a narrowed condition (per-library counts or PV immunostaining) |
 
 ## Sheet A: bench protocol for the recovery-versus-transgene question (action 1)
 

@@ -1,3 +1,5 @@
+> **Correction note, IT13 follow-up (2026-10-31 evening).** The nucleus-level deposit GSE158684 became readable and was analysed (`../snrna_it13b_pv_20261031/`). It does not support 'PV-selective deficit' as a cell-level statement: read this finding as 'lower Pvalb transcript (about 0.59 of the control UMI share in the snRNA pool against log2 -1.7 in bulk), not localisable to fewer PV cells versus less Pvalb per cell at one pooled library per genotype; the larger shift in the same animals is oligodendrocyte-lineage composition (Mbp UMI share ratio 0.30)'. Body below untouched.
+
 # IT13 P3a: the excitation/inhibition axis (Q4) without any variant WWOX protein
 
 Scientist, task `ORCH-ROADMAP-IT13-20261031`, package P3a, branch `task/it13-p3a` (from main `dbc8e7c3`), 2026-10-31. Exploratory, non-canonical, **not medical advice**.
