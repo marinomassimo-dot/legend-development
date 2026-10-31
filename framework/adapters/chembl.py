@@ -75,6 +75,28 @@ def _targets_for_accession(accession: str, out: dict, fetch) -> bool:
     return True
 
 
+def _target_genes(rows: list, out: dict, fetch) -> dict:
+    """target_chembl_id -> {target_type, gene_symbols, non_gene_target}, from the target endpoint in batches of 40 (the pattern used for assays).
+    A function-to-compound query across heteromeric or complex targets needs the gene symbols of the components; a placeholder target ('Unchecked',
+    'NON-PROTEIN TARGET') or a failed lookup stays null and says so in the note, it is never read as 'no gene'."""
+    found = {}
+    ids = sorted({r.get("target_chembl_id") for r in rows if r.get("target_chembl_id")})
+    for i in range(0, len(ids), 40):
+        url = f"{BASE}/target.json?target_chembl_id__in={quote(','.join(ids[i:i+40]))}&limit=100"
+        out["requests_sent"].append(url)
+        status, payload = fetch(url)
+        if status != 200 or not isinstance(payload, dict):
+            out["note"] = (out.get("note", "") + f" target genes incomplete: HTTP {status} for target batch {i // 40 + 1}; rows carry target_gene_symbols=null where missing.").strip()
+            continue
+        for t in payload.get("targets") or []:
+            syms = sorted({syn.get("component_synonym") for c in (t.get("target_components") or []) for syn in (c.get("target_component_synonyms") or [])
+                           if syn.get("syn_type") == "GENE_SYMBOL" and syn.get("component_synonym")})
+            ttype = t.get("target_type")
+            found[t.get("target_chembl_id")] = {"target_type": ttype, "gene_symbols": syms or None,
+                                                "non_gene_target": not syms}
+    return found
+
+
 def _activities(request: dict, out: dict, fetch) -> dict:
     target = str(request.get("target", "")).strip()
     types = request.get("types") or list(ACTIVITY_TYPES)
@@ -111,7 +133,9 @@ def _activities(request: dict, out: dict, fetch) -> dict:
             continue
         for a in payload.get("assays") or []:
             assays[a.get("assay_chembl_id")] = {k: a.get(k) for k in ASSAY_FIELDS}
+    genes = _target_genes(rows, out, fetch)
     for r in rows:
+        tg = genes.get(r.get("target_chembl_id"))
         out["hits"].append({"kind": "activity", "activity_id": r.get("activity_id"), "molecule_chembl_id": r.get("molecule_chembl_id"),
                             "parent_molecule_chembl_id": r.get("parent_molecule_chembl_id"), "molecule_pref_name": r.get("molecule_pref_name"),
                             "standard_type": r.get("standard_type"), "standard_relation": r.get("standard_relation"),
@@ -120,7 +144,9 @@ def _activities(request: dict, out: dict, fetch) -> dict:
                             "target_organism": r.get("target_organism"), "target_pref_name": r.get("target_pref_name"), "assay_chembl_id": r.get("assay_chembl_id"),
                             "assay_description": r.get("assay_description"), "assay_context": assays.get(r.get("assay_chembl_id")),
                             "document_chembl_id": r.get("document_chembl_id"), "document_year": r.get("document_year"),
-                            "data_validity_comment": r.get("data_validity_comment"), "potential_duplicate": r.get("potential_duplicate")})
+                            "data_validity_comment": r.get("data_validity_comment"), "potential_duplicate": r.get("potential_duplicate"),
+                            "target_type": tg["target_type"] if tg else None, "target_gene_symbols": tg["gene_symbols"] if tg else None,
+                            "non_gene_target": tg["non_gene_target"] if tg else None})
     out["total_count"], out["retrieved"] = total, len(rows)
     out["truncated"] = bool(total is not None and len(rows) < total)
     out["scope"] = {"target": target or None, "types": types, "molecule": request.get("molecule")}
