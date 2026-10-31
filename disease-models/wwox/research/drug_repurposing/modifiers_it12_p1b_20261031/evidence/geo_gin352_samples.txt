@@ -1,0 +1,67 @@
+^SAMPLE = GSM9006656
+GSM9006656
+!Sample_title = GIN352_T0
+!Sample_geo_accession = GSM9006656
+!Sample_source_name_ch1 = cell line
+!Sample_characteristics_ch1 = tissue: cell line
+!Sample_characteristics_ch1 = cell line: HAP1
+!Sample_characteristics_ch1 = cell type: chronic myelogenous leukemia
+!Sample_characteristics_ch1 = genotype: WWOX 1 bp del, 55 bp del (HAP1) (c2.2)
+!Sample_characteristics_ch1 = treatment: TKOv3 (lentiCRISPRv2)
+!Sample_characteristics_ch1 = growth media: IMDM + 25mM glucose/1mM pyruvate (Rich)
+!Sample_description = Library name: Moffat_2163
+!Sample_library_strategy = OTHER
+!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN48749326
+!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX28933368
+!Sample_supplementary_file_1 = ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9006nnn/GSM9006656/suppl/GSM9006656_Moffat_2163_readCounts.txt.gz
+
+^SAMPLE = GSM9006851
+GSM9006851
+!Sample_title = GIN352_T13A
+!Sample_geo_accession = GSM9006851
+!Sample_source_name_ch1 = cell line
+!Sample_characteristics_ch1 = tissue: cell line
+!Sample_characteristics_ch1 = cell line: HAP1
+!Sample_characteristics_ch1 = cell type: chronic myelogenous leukemia
+!Sample_characteristics_ch1 = genotype: WWOX 1 bp del, 55 bp del (HAP1) (c2.2)
+!Sample_characteristics_ch1 = treatment: TKOv3 (lentiCRISPRv2)
+!Sample_characteristics_ch1 = growth media: IMDM + 25mM glucose/1mM pyruvate (Rich)
+!Sample_description = Library name: Moffat_2164
+!Sample_library_strategy = OTHER
+!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN48749131
+!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX28933220
+!Sample_supplementary_file_1 = ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9006nnn/GSM9006851/suppl/GSM9006851_Moffat_2164_readCounts.txt.gz
+
+^SAMPLE = GSM9007046
+GSM9007046
+!Sample_title = GIN352_T13B
+!Sample_geo_accession = GSM9007046
+!Sample_source_name_ch1 = cell line
+!Sample_characteristics_ch1 = tissue: cell line
+!Sample_characteristics_ch1 = cell line: HAP1
+!Sample_characteristics_ch1 = cell type: chronic myelogenous leukemia
+!Sample_characteristics_ch1 = genotype: WWOX 1 bp del, 55 bp del (HAP1) (c2.2)
+!Sample_characteristics_ch1 = treatment: TKOv3 (lentiCRISPRv2)
+!Sample_characteristics_ch1 = growth media: IMDM + 25mM glucose/1mM pyruvate (Rich)
+!Sample_description = Library name: Moffat_2165
+!Sample_library_strategy = OTHER
+!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN48748936
+!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX28932911
+!Sample_supplementary_file_1 = ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9007nnn/GSM9007046/suppl/GSM9007046_Moffat_2165_readCounts.txt.gz
+
+^SAMPLE = GSM9007241
+GSM9007241
+!Sample_title = GIN352_T13C
+!Sample_geo_accession = GSM9007241
+!Sample_source_name_ch1 = cell line
+!Sample_characteristics_ch1 = tissue: cell line
+!Sample_characteristics_ch1 = cell line: HAP1
+!Sample_characteristics_ch1 = cell type: chronic myelogenous leukemia
+!Sample_characteristics_ch1 = genotype: WWOX 1 bp del, 55 bp del (HAP1) (c2.2)
+!Sample_characteristics_ch1 = treatment: TKOv3 (lentiCRISPRv2)
+!Sample_characteristics_ch1 = growth media: IMDM + 25mM glucose/1mM pyruvate (Rich)
+!Sample_description = Library name: Moffat_2166
+!Sample_library_strategy = OTHER
+!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN48748741
+!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX28932962
+!Sample_supplementary_file_1 = ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9007nnn/GSM9007241/suppl/GSM9007241_Moffat_2166_readCounts.txt.gz
