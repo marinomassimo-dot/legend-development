@@ -182,6 +182,20 @@ Added 2026-10-29 (IT8 P2 licence corrections; evidence and open items in
   <https://creativecommons.org/licenses/by-sa/3.0/legalcode>; a copy is in
   `disease-models/wwox/research/drug_repurposing/view/shareable_package/LICENSES/CC-BY-SA-3.0.txt`.
   Anyone redistributing these files, or an adaptation, must keep that licence on them.
+- **ChEMBL-derived tables of IT10** (`disease-models/wwox/research/drug_repurposing/hif_it10_p21_20261031/chembl_potency_rows_it10_p21.tsv`
+  (955 rows), `chembl_mechanism_it10_p21.tsv` (11) and `recovery_it10_p23_20261031/tnk2_chembl_activities_selected.tsv` (29)). Rows and
+  per-compound-target aggregates adapted from the ChEMBL web service, CC BY-SA 3.0 Unported
+  (<https://chembl.gitbook.io/chembl-interface-documentation/about>, read 2026-10-30); they stay under that licence, not under the MIT licence of the
+  repository. Credit line required by ChEMBL: "ChEMBL data is from https://www.ebi.ac.uk/chembl/ - the version of ChEMBL is" ... **the release of these
+  responses was NOT recorded**: the service log (`service_log_identity_it10_p21.tsv`) holds URL, date (2026-10-30), HTTP code and a hash, no release field.
+  Three things are kept apart: (1) the live queries of 2026-10-30; (2) the service status read on 2026-10-31 11:50Z, which reported ChEMBL_37 (2026-05-01),
+  a context observation and not an attribution; (3) the catalogue cache of `catalog/cache_manifest.json`, ChEMBL_37 (2026-05-01) retrieved
+  2026-10-27, a different artefact. The release of the 2026-10-30 responses is therefore expected but not demonstrated to be ChEMBL_37; the credit line
+  names no release for them.
+- **Cell Painting Gallery / JUMP** (`complementary_it10_p24_20261031/results/jump_*.tsv`): values computed from data released under CC0 1.0 (AWS Open Data
+  registry entry, read 2026-10-30); the registry asks to cite Chandrasekaran et al., Nat Methods 2024 (CPJUMP1). No JUMP profile is redistributed.
+- **openFDA label sentences** (`hif_it10_p21_20261031/labels_us_*.tsv`): openFDA content, CC0 1.0 per <https://open.fda.gov/terms/> (read 2026-10-31), with the
+  site's reservation that some data may not be public domain.
 - **Raw DGIdb and Monarch KG responses** (`gse156243/kg_lookup/`, `lucas_clarke_followup_20261026/dgidb_raw/`).
   DGIdb is a container: its service reports a licence per source and none for itself (read 2026-10-29).
   The responses therefore carry rows under non-commercial or unclear terms (DTC CC BY-NC-SA 3.0, CKB-CORE
