@@ -650,7 +650,7 @@ UI_IT = {
     "ws_prevented_early_window": "prevenzione (finestra precoce)", "ws_recovered_post_onset_model": "recupero dopo l'esordio (solo in un modello)",
     "ws_symptom_suppression_reversible": "soppressione sintomatica reversibile", "ws_unmeasured": "non misurato",
     "wo_window": "Finestra di intervento", "bf_window": "Finestra di intervento",
-    "wo_see": "piano di verifiche di questo bisogno", "wo_text_en": "Testo scientifico in inglese, come memorizzato.", "wo_more": "Dettagli: dati, effetto, fattibilità",
+    "wo_fig_unit": "Unità di conteggio", "wo_fig_src": "Fonte", "wo_fig_tab": "Tabella dei valori della figura", "wo_fig_ev": "eventi", "wo_fig_tot": "totale", "wo_fig_n": "n", "wo_fig_val": "valore", "wo_fig_spr": "dispersione", "wo_fig_axis": "scala", "wo_see": "piano di verifiche di questo bisogno", "wo_text_en": "Testo scientifico in inglese, come memorizzato.", "wo_more": "Dettagli: dati, effetto, fattibilità",
     # technical drill-down
     "td_sum": "Dettagli tecnici",
     "td_note": "Versioni, impronte digitali, comando di rigenerazione, stati delle fonti e lo screening completo del catalogo. Sono separati dall'esplorazione sopra, in inglese tecnico, esaustivi e non ordinati: non sono elenchi di candidati.",
@@ -1054,7 +1054,12 @@ NODE_SCOPES = ("wwox", "wwox_other", "non_wwox", "computational", "proposed", "n
 CHAIN_STATES = ("astensione", "ipotesi", "non risolto")
 WO_KINDS = ["verificare un'ipotesi", "chiarire una controevidenza", "risolvere una premessa"]
 KIND_OF_FAMILY = {"F": WO_KINDS[0], "C": WO_KINDS[1], "P": WO_KINDS[2]}
-WO_KEYS = {"need", "kind", "question", "data", "would_change", "feasibility", "date", "updated_by", "cards", "docs", "window_state", "summary_it", "feasibility_it"}
+WO_KEYS = {"need", "kind", "question", "data", "would_change", "feasibility", "date", "updated_by", "cards", "docs", "window_state", "summary_it", "feasibility_it", "figure"}
+FIG_KINDS = ("incidence", "values")
+FIG_KEYS = {"title", "kind", "unit", "caption", "source", "rows", "value_unit", "spread_label"}
+FIG_ROW_KEYS = {"incidence": {"label", "events", "total"}, "values": {"label", "n", "mean", "spread"}}
+FIG_FORBIDDEN_RE = re.compile(r"score|rank|probab|p_?value|trend", re.I)
+FIG_LABEL_MAX = 44
 WINDOW_STATES = ("prevented_early_window", "recovered_post_onset_model", "symptom_suppression_reversible", "unmeasured")   # P7, rescue_window_it6 section 5: the 'window state' column
 WINDOW_WORDING_RE = re.compile(r"early-window", re.I)   # a prevented/early-window state must be stated in the card or need wording itself
 ISO_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -1193,6 +1198,66 @@ def validate_evidence_graph(doc: dict, card_ids, need_ids, titles: dict, dr: Pat
     return errs
 
 
+def _is_int(v) -> bool:
+    return isinstance(v, int) and not isinstance(v, bool)
+
+
+def _is_num(v) -> bool:
+    return isinstance(v, (int, float)) and not isinstance(v, bool) and v == v and abs(v) != float("inf")
+
+
+def validate_figure(fig, w: str) -> list[str]:
+    """Problems of the optional small comparison figure of a work-order entry (counts or values given in the data; no score, rank, probability, p-value or trend)."""
+    if not isinstance(fig, dict):
+        return [f"{w}: figure must be an object"]
+    errs: list[str] = []
+    for k in sorted(set(fig) - FIG_KEYS):
+        errs.append(f"{w}: figure has unknown field {k!r}")
+    kind = fig.get("kind")
+    if kind not in FIG_KINDS:
+        errs.append(f"{w}: figure kind {kind!r} is not one of {FIG_KINDS}")
+    for k in ("title", "unit", "caption", "source"):
+        if not str(fig.get(k) or "").strip():
+            errs.append(f"{w}: figure {k} is empty")
+    if not re.search(r"independent", str(fig.get("caption") or ""), re.I):
+        errs.append(f"{w}: figure caption must state that units from one animal are not independent")
+    if kind == "values":
+        for k in ("value_unit", "spread_label"):
+            if not str(fig.get(k) or "").strip():
+                errs.append(f"{w}: figure of kind values needs {k}")
+    rows = fig.get("rows")
+    if not isinstance(rows, list) or not rows:
+        return errs + [f"{w}: figure rows must be a non-empty list"]
+    allowed = FIG_ROW_KEYS.get(kind, set())
+    for i, r in enumerate(rows):
+        rw = f"{w}: figure row {i + 1}"
+        if not isinstance(r, dict):
+            errs.append(f"{rw} must be an object")
+            continue
+        for k in sorted(r):
+            if FIG_FORBIDDEN_RE.search(str(k)):
+                errs.append(f"{rw}: field {k!r} is forbidden (no score, rank, probability, p-value or trend field exists)")
+            elif k not in allowed:
+                errs.append(f"{rw}: unknown field {k!r}")
+        lab = str(r.get("label") or "").strip()
+        if not lab:
+            errs.append(f"{rw}: label is empty")
+        elif len(lab) > FIG_LABEL_MAX:
+            errs.append(f"{rw}: label longer than {FIG_LABEL_MAX} characters")
+        if kind == "incidence":
+            ev, tot = r.get("events"), r.get("total")
+            if not (_is_int(ev) and _is_int(tot)):
+                errs.append(f"{rw}: events and total must be integers")
+            elif tot < 1 or ev < 0 or ev > tot:
+                errs.append(f"{rw}: need 0 <= events <= total and total >= 1")
+        elif kind == "values":
+            if not (_is_int(r.get("n")) and r["n"] >= 1):
+                errs.append(f"{rw}: n must be a positive integer")
+            if not (_is_num(r.get("mean")) and _is_num(r.get("spread")) and r["spread"] >= 0):
+                errs.append(f"{rw}: mean and spread must be finite numbers, spread >= 0")
+    return errs
+
+
 def validate_work_order(doc: dict, need_ids: list, groups_by_need: dict, card_ids, dr: Path | None = None, texts: dict | None = None) -> list[str]:
     """Problems of the hand-authored work order. Entries follow the order of the needs register (no ranking), the kind agrees with the F/C/P positions of that need, no score or rank field exists."""
     errs: list[str] = []
@@ -1257,6 +1322,12 @@ def validate_work_order(doc: dict, need_ids: list, groups_by_need: dict, card_id
             errs.append(f"{w}: kind {e.get('kind')!r} is not one of {WO_KINDS}")
         elif e["kind"] not in allowed_kinds(groups_by_need.get(nid) or ()):
             errs.append(f"{w}: kind {e['kind']!r} does not agree with the positions of the need {sorted(groups_by_need.get(nid) or [])}")
+        if "figure" in e:
+            figs = e["figure"] if isinstance(e["figure"], list) else [e["figure"]]
+            if not figs:
+                errs.append(f"{w}: figure list is empty")
+            for fi, fg in enumerate(figs):
+                errs += validate_figure(fg, w + (f" figure {fi + 1}" if len(figs) > 1 else ""))
         errs += win_problems(e.get("window_state"), nid, w)
         for it in e.get("window_state") or []:
             if not str(it.get("note") or "").strip():
@@ -1291,7 +1362,7 @@ def resolve_work_order(doc: dict, groups_by_need: dict) -> dict:
     entries = [{"need": e["need"], "kind": e["kind"], "question": e["question"], "data": e["data"], "would_change": e["would_change"], "feasibility": e["feasibility"], "date": e["date"],
                 "updated_by": list(e.get("updated_by") or []), "cards": list(e.get("cards") or []), "docs": [{"id": d, "label": docs[d]} for d in e.get("docs") or []],
                 "window_state": [dict(x) for x in e.get("window_state") or []], "summary_it": e["summary_it"], "feasibility_it": e["feasibility_it"],
-                "positions": sorted(groups_by_need.get(e["need"]) or [])} for e in doc["entries"]]
+                "positions": sorted(groups_by_need.get(e["need"]) or []), **({"figure": json.loads(json.dumps(e["figure"] if isinstance(e["figure"], list) else [e["figure"]]))} if e.get("figure") else {})} for e in doc["entries"]]
     return {"research_update": doc["research_update"], "kinds": list(WO_KINDS), "entries": entries, "window_states": list(WINDOW_STATES),
             "card_windows": {k: {"states": list(v["states"]), "note": v["note"]} for k, v in sorted((doc.get("card_windows") or {}).items())}}
 
@@ -2576,6 +2647,7 @@ def render_static(P: dict) -> dict[str, str]:
 # ------------------------------------------------------------------ page template
 CSS = r"""
 :root{--bg:#fbfaf7;--fg:#1d2127;--mut:#5d6672;--card:#fff;--line:#d9dde3;--acc:#1f5f8b;--accbg:#e6f0f7;--warn:#8a4b00;--warnbg:#fff1dc;--bad:#9b1c1c;--badbg:#fde8e8;--ok:#1d6b3a;--okbg:#e4f4ea;--bar:#2f7cab}
+.wo-fig{margin:10px 0;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--card)}.wo-fig svg{display:block;max-width:420px;height:auto}.wo-fig figcaption{margin-bottom:4px}.fg-l{fill:var(--fg);font:13px system-ui,sans-serif}.fg-v{fill:var(--fg);font:600 13px system-ui,sans-serif}.fg-n{fill:var(--mut);font:11px system-ui,sans-serif}.fg-track{fill:var(--bg);stroke:var(--line)}.fg-bar{fill:var(--bar)}.fg-wh{stroke:var(--fg);stroke-width:1.5}.fg-dot{fill:var(--acc)}.wo-fig-tab{width:100%;table-layout:fixed;border-collapse:collapse;font-size:.82em;margin-top:6px}.wo-fig-tab caption{text-align:left;color:var(--mut);padding-bottom:2px}.wo-fig-tab th,.wo-fig-tab td{border-top:1px solid var(--line);padding:2px 4px;text-align:left;overflow-wrap:anywhere;font-weight:400}.wo-fig-tab thead th{font-weight:600}
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#14171b;--fg:#e6e8eb;--mut:#a0a8b3;--card:#1c2026;--line:#333a43;--acc:#7fb8e0;--accbg:#1f3342;--warn:#f0b36a;--warnbg:#3b2a12;--bad:#f09a9a;--badbg:#3d1a1a;--ok:#7fd29b;--okbg:#17321f;--bar:#5a9fcc}}
 :root[data-theme=dark]{--bg:#14171b;--fg:#e6e8eb;--mut:#a0a8b3;--card:#1c2026;--line:#333a43;--acc:#7fb8e0;--accbg:#1f3342;--warn:#f0b36a;--warnbg:#3b2a12;--bad:#f09a9a;--badbg:#3d1a1a;--ok:#7fd29b;--okbg:#17321f;--bar:#5a9fcc}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
@@ -3013,6 +3085,56 @@ def render_evidence_graph(P: dict) -> str:
     return "".join(out)
 
 
+def fmt_fig(v) -> str:
+    return f"{v:g}".replace("-", "\u2212") if isinstance(v, float) else str(v).replace("-", "\u2212")
+
+
+def render_figure(fig: dict, key: str) -> str:
+    """Inline-SVG comparison figure of a work-order entry plus a visually hidden table that repeats every number. No script, no external resource; colours from the page tokens."""
+    U = UI_IT
+    rows = fig["rows"]
+    W, RH = 360, 46
+    H = RH * len(rows) + 6
+    tid = f"fig-{key}"
+    parts = []
+    if fig["kind"] == "incidence":
+        x0, wbar = 4, 252
+        for i, r in enumerate(rows):
+            y = 4 + i * RH
+            fw = wbar * r["events"] / r["total"]
+            parts.append(f'<text x="{x0}" y="{y + 13}" class="fg-l">{E(r["label"])}</text>'
+                         f'<rect x="{x0}" y="{y + 19}" width="{wbar}" height="14" class="fg-track"/>'
+                         + (f'<rect x="{x0}" y="{y + 19}" width="{fw:.1f}" height="14" class="fg-bar"/>' if r["events"] else "")
+                         + f'<text x="{x0 + wbar + 8}" y="{y + 31}" class="fg-v">{r["events"]}/{r["total"]}</text>')
+        cols = [U["wo_fig_ev"], U["wo_fig_tot"]]
+        body = "".join(f'<tr><th scope="row">{E(r["label"])}</th><td>{r["events"]}</td><td>{r["total"]}</td></tr>' for r in rows)
+    else:
+        lo = min(r["mean"] - r["spread"] for r in rows)
+        hi = max(r["mean"] + r["spread"] for r in rows)
+        span = (hi - lo) or 1.0
+        x0, wbar = 14, 200
+        sx = lambda v: x0 + wbar * (v - lo) / span
+        for i, r in enumerate(rows):
+            y = 4 + i * RH
+            cy = y + 26
+            parts.append(f'<text x="4" y="{y + 13}" class="fg-l">{E(r["label"])}</text>'
+                         f'<line x1="{sx(r["mean"] - r["spread"]):.1f}" x2="{sx(r["mean"] + r["spread"]):.1f}" y1="{cy}" y2="{cy}" class="fg-wh"/>'
+                         f'<line x1="{sx(r["mean"] - r["spread"]):.1f}" x2="{sx(r["mean"] - r["spread"]):.1f}" y1="{cy - 5}" y2="{cy + 5}" class="fg-wh"/>'
+                         f'<line x1="{sx(r["mean"] + r["spread"]):.1f}" x2="{sx(r["mean"] + r["spread"]):.1f}" y1="{cy - 5}" y2="{cy + 5}" class="fg-wh"/>'
+                         f'<circle cx="{sx(r["mean"]):.1f}" cy="{cy}" r="4.5" class="fg-dot"/>'
+                         f'<text x="{x0 + wbar + 12}" y="{cy + 4}" class="fg-v">{fmt_fig(r["mean"])} \u00b1 {fmt_fig(r["spread"])}</text>'
+                         f'<text x="{x0 + wbar + 12}" y="{cy + 17}" class="fg-n">n = {r["n"]}</text>')
+        cols = [f'{U["wo_fig_val"]} ({fig["value_unit"]})', f'{U["wo_fig_spr"]} ({fig["spread_label"]})', U["wo_fig_n"]]
+        body = "".join(f'<tr><th scope="row">{E(r["label"])}</th><td>{E(fmt_fig(r["mean"]))}</td><td>{E(fmt_fig(r["spread"]))}</td><td>{r["n"]}</td></tr>' for r in rows)
+    head = "".join(f"<th scope=\"col\">{E(c)}</th>" for c in cols)
+    unitline = f'<p class="mini fg-unit"><b>{E(U["wo_fig_unit"])}:</b> {E(fig["unit"])}' + (f' · <b>{E(fig["value_unit"])}</b>, \u00b1 = {E(fig["spread_label"])}' if fig["kind"] == "values" else "") + "</p>"
+    return (f'<figure class="wo-fig" data-fig-kind="{E(fig["kind"])}"><figcaption><b>{E(fig["title"])}</b></figcaption>'
+            f'<svg viewBox="0 0 {W} {H}" width="100%" role="img" aria-labelledby="{tid}-t {tid}-d" focusable="false"><title id="{tid}-t">{E(fig["title"])}</title>'
+            f'<desc id="{tid}-d">{E(fig["caption"])}</desc>{"".join(parts)}</svg>'
+            f'{unitline}<p class="mini">{E(fig["caption"])}</p><p class="mini mut">{E(U["wo_fig_src"])}: {E(fig["source"])}</p>'
+            f'<table class="wo-fig-tab"><caption>{E(U["wo_fig_tab"])}: {E(fig["title"])}</caption><thead><tr><th scope="col">{E(U["wo_fig_unit"])}: {E(fig["unit"])}</th>{head}</tr></thead><tbody>{body}</tbody></table></figure>')
+
+
 def render_work_order(P: dict) -> str:
     """Work order per need, server-rendered inside the priorities section: the reason for the next study, the question, and (one click further) the data, the effect and the feasibility actually known."""
     U = UI_IT
@@ -3029,10 +3151,11 @@ def render_work_order(P: dict) -> str:
         win = f'<div class="wo-win"><b class="mini">{E(U["wo_window"])}:</b><ul class="mini">{ws}</ul></div>' if ws else ""
         upd = (f'<dt>{E(U["wo_upd"])}</dt><dd>{E(", ".join(e["updated_by"]))}</dd>') if e["updated_by"] else ""
         cards = ", ".join(E(c) for c in e["cards"])
+        fig = "".join(render_figure(f, re.sub(r"[^A-Za-z0-9]+", "-", e["need"]) + f"-{i + 1}") for i, f in enumerate(e.get("figure") or []))
         items.append(
             f'<article class="wo-item" id="wo-{E(e["need"])}" data-need="{E(e["need"])}" data-kind="{E(e["kind"])}"><h4>{E(NEED_IT.get(e["need"], n["short"]))} <span class="mut">{E(e["need"])}</span></h4>'
             f'<div class="wo-meta"><span class="chip wo-k wo-k-{kcls[e["kind"]]}" title="{E(U["wo_kind"])}">{E(U["wo_kind"])}: <b>{E(e["kind"])}</b></span> <span class="mini mut">{E(U["wo_pos"])}:</span> {pos}</div>'
-            f'<p class="wo-sum"><b>{E(U["wo_brief"])}.</b> {E(e["summary_it"])}</p><p class="wo-q"><b>{E(U["wo_q"])}.</b> {E(e["question"])}</p>{win}'
+            f'<p class="wo-sum"><b>{E(U["wo_brief"])}.</b> {E(e["summary_it"])}</p><p class="wo-q"><b>{E(U["wo_q"])}.</b> {E(e["question"])}</p>{fig}{win}'
             f'<details class="inl"><summary>{E(U["wo_more"])}</summary><dl class="wo-dl"><dt>{E(U["wo_data"])}</dt><dd>{E(e["data"])}</dd><dt>{E(U["wo_change"])}</dt><dd>{E(e["would_change"])}</dd>'
             f'<dt>{E(U["wo_feas"])}</dt><dd class="wo-feas"><b>{E(e["feasibility_it"])}</b><br>{E(e["feasibility"])}</dd><dt>{E(U["wo_date"])}</dt><dd>{E(e["date"])}</dd>{upd}<dt>{E(U["wo_cards"])}</dt><dd>{cards}</dd></dl>'
             f'<p class="mini mut">{E(U["wo_text_en"])}</p></details></article>')

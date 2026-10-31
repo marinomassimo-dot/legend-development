@@ -1392,12 +1392,12 @@ class It6P13Data(unittest.TestCase):
         eleven = {"NEED-WWOX-GENE-ADDITION", "NEED-SEIZURE-CONTROL-SYMPTOMATIC", "NEED-T-TYPE-CALCIUM", "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR", "NEED-LACTATE-LDH", "NEED-PDH-PYRUVATE-AXIS",
                   "NEED-ISR-ATTENUATION", "NEED-MYC-PROGENITOR-PROLIFERATION", "NEED-SYSTEMIC-GLYCAEMIA-GROWTH", "NEED-MYELINATION", "NEED-WWOX-MISSENSE-PROTEIN-RESCUE"}
         self.assertEqual(len([l for l in sec.splitlines() if l.startswith("| ")]), 12)       # header and the eleven rows of the review's table
-        self.assertEqual(set(ids), eleven | {"NEED-NEUROINFLAMMATION-GLIA", "NEED-REDOX-NRF2"})      # NEED-REDOX-NRF2 added by IT10 P5
+        self.assertEqual(set(ids), eleven | {"NEED-NEUROINFLAMMATION-GLIA", "NEED-REDOX-NRF2", "NEED-INHIBITORY-HYPOFUNCTION"})      # NEED-REDOX-NRF2 added by IT10 P5; NEED-INHIBITORY-HYPOFUNCTION by IT14 P7
         self.assertEqual(self.mutated_wo(lambda d: None), [])
         by = {e["need"]: e for e in self.wo_doc["entries"]}
         for nid, upd in (("NEED-NEUROINFLAMMATION-GLIA", "P10"), ("NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR", "P11"), ("NEED-ISR-ATTENUATION", "P4"), ("NEED-WWOX-MISSENSE-PROTEIN-RESCUE", "P6"), ("NEED-WWOX-GENE-ADDITION", "P7")):
             self.assertIn(upd, by[nid]["updated_by"], nid)
-        self.assertEqual(self.wo_doc["research_update"], "2026-10-29")
+        self.assertEqual(self.wo_doc["research_update"], "2026-10-29")      # unchanged by pview
 
     def mutated_wo(self, fn):
         d = json.loads(json.dumps(self.wo_doc))
@@ -1625,6 +1625,110 @@ class It6P13Data(unittest.TestCase):
             rep, _ = au.audit_html(mut(fn), DR, ref)
             self.assertIn("forbidden-name", {v["kind"] for v in rep.violations})
         rep, _ = au.audit_html(share, DR, ref)
+        self.assertEqual(rep.violations, [])
+
+
+@unittest.skipUnless(HAVE_DATA, "module data absent")
+class WorkOrderFigure(unittest.TestCase):
+    """IT14 pview: the optional data-driven comparison figure of a work-order entry (counts or values printed from the data, a hidden table repeats every number)."""
+    NEED = "NEED-INHIBITORY-HYPOFUNCTION"
+
+    @classmethod
+    def setUpClass(cls):
+        cls.doc = json.loads((DR / "view/work_order.json").read_text())
+        cls.entry = next(e for e in cls.doc["entries"] if e["need"] == cls.NEED)
+        cls.figs = cls.entry["figure"]
+        cls.full = rv.build(DR, "full")
+        cls.share = rv.build(DR, "shareable")
+        cls.P = rv.build_payload(DR)
+
+    def block(self, page):
+        h = re.sub(r"<script\b.*?</script>", "", page, flags=re.S)
+        art = re.search(r'<article class="wo-item" id="wo-%s".*?</article>' % self.NEED, h, re.S).group(0)
+        return re.findall(r'<figure class="wo-fig".*?</figure>', art, re.S)
+
+
+    def validate(self, fn):
+        figs = json.loads(json.dumps(self.figs))
+        fn(figs)
+        return rv.validate_figure(figs[0], "w")
+
+    def test_every_displayed_count_equals_the_source_json_and_the_text_table_matches(self):
+        for page in (self.full, self.share):
+            blocks = self.block(page)
+            self.assertEqual(len(blocks), len(self.figs))
+            for fig, b in zip(self.figs, blocks):
+                self.assertIn("<svg", b)
+                self.assertNotIn("<script", b)
+                self.assertNotRegex(b, r"https?://|<image|<img|@import|font-face")
+                svg, tab = re.search(r"<svg.*?</svg>", b, re.S).group(0), re.search(r"<table.*?</table>", b, re.S).group(0)
+                rows = re.findall(r"<tr><th scope=\"row\">(.*?)</th>(.*?)</tr>", tab, re.S)
+                self.assertEqual(len(rows), len(fig["rows"]))
+                for r, (lab, cells) in zip(fig["rows"], rows):
+                    cells = re.findall(r"<td>(.*?)</td>", cells)
+                    self.assertEqual(lab, html_escape(r["label"]))
+                    if fig["kind"] == "incidence":
+                        self.assertEqual(cells, [str(r["events"]), str(r["total"])])
+                        self.assertIn(f">{r['events']}/{r['total']}</text>", svg)
+                    else:
+                        self.assertEqual(cells, [rv.fmt_fig(r["mean"]), rv.fmt_fig(r["spread"]), str(r["n"])])
+                        self.assertIn(f"{rv.fmt_fig(r['mean'])} \u00b1 {rv.fmt_fig(r['spread'])}", svg)
+                        self.assertIn(f"n = {r['n']}", svg)
+                self.assertIn('role="img"', svg)
+                self.assertIn(html_escape(fig["unit"]), b)
+                self.assertIn(html_escape(fig["caption"]), b)
+                self.assertIn("independent", fig["caption"])
+                self.assertNotRegex(b.lower(), r"p\s*[=<]|trend|probab")
+
+    def test_published_numbers_are_the_verified_ones(self):
+        inc = next(f for f in self.figs if f["kind"] == "incidence")
+        self.assertEqual([(r["label"], r["events"], r["total"]) for r in inc["rows"]], [("Wild type", 0, 11), ("Heterozygote", 4, 23), ("Knockout", 36, 42)])
+        val = next(f for f in self.figs if f["kind"] == "values")
+        self.assertEqual([(r["n"], r["mean"], r["spread"]) for r in val["rows"]], [(13, -79.25, 1.99), (15, -75.51, 1.81), (40, -73.62, 1.36)])
+
+    def test_bar_width_is_the_proportion(self):
+        b = self.block(self.full)[0]
+        inc = self.figs[0]
+        widths = [float(x) for x in re.findall(r'class="fg-bar"', b) and re.findall(r'width="([\d.]+)" height="14" class="fg-bar"', b)]
+        self.assertEqual(len(widths), 2)      # the 0/11 row draws no filled bar
+        self.assertAlmostEqual(widths[0] / 252, 4 / 23, places=2)
+        self.assertAlmostEqual(widths[1] / 252, 36 / 42, places=2)
+
+    def test_invalid_figures_are_rejected(self):
+        self.assertEqual(self.validate(lambda f: None), [])
+        cases = {
+            "events above total": lambda f: f[0]["rows"][0].__setitem__("events", 12),
+            "float count": lambda f: f[0]["rows"][0].__setitem__("total", 11.5),
+            "no rows": lambda f: f[0].__setitem__("rows", []),
+            "empty label": lambda f: f[0]["rows"][0].__setitem__("label", " "),
+            "score field": lambda f: f[0]["rows"][0].__setitem__("score", 1),
+            "probability field": lambda f: f[0]["rows"][0].__setitem__("probability", 0.5),
+            "p-value field": lambda f: f[0]["rows"][0].__setitem__("p_value", 0.01),
+            "unknown figure field": lambda f: f[0].__setitem__("rank", 1),
+            "no independence statement": lambda f: f[0].__setitem__("caption", "Counts only."),
+            "no unit": lambda f: f[0].__setitem__("unit", ""),
+            "bad kind": lambda f: f[0].__setitem__("kind", "trend"),
+        }
+        for name, fn in cases.items():
+            self.assertTrue(self.validate(fn), name)
+        fig = json.loads(json.dumps(next(f for f in self.figs if f["kind"] == "values")))
+        fig["rows"][0]["spread"] = -1
+        self.assertTrue(rv.validate_figure(fig, "w"))
+
+    def test_work_order_validator_accepts_the_figure_and_rejects_a_bad_one(self):
+        needs = [e["need"] for e in self.doc["entries"]]
+        cards = []
+        d = json.loads(json.dumps(self.doc))
+        errs = rv.validate_work_order(d, needs, {n: set(["F", "C", "P"]) for n in needs}, cards, DR)
+        self.assertFalse([e for e in errs if "figure" in e], errs)
+        next(e for e in d["entries"] if e["need"] == self.NEED)["figure"][0]["rows"][1]["events"] = 99
+        errs = rv.validate_work_order(d, needs, {n: set(["F", "C", "P"]) for n in needs}, cards, DR)
+        self.assertTrue([e for e in errs if "figure" in e])
+
+    def test_shareable_carries_the_same_figure_and_the_audit_passes(self):
+        import repurposing_shareable_audit as au
+        self.assertEqual(embedded(self.share)["cur"]["work_order"]["entries"], embedded(self.full)["cur"]["work_order"]["entries"])
+        rep, _ = au.audit_html(self.share, DR, au.Reference(DR))
         self.assertEqual(rep.violations, [])
 
 

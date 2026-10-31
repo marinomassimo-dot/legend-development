@@ -270,7 +270,62 @@
         "REVIEW"
       ],
       "summary_it": "Capire se la perdita di inibizione GABA-A veloce è il passo che produce le scariche nella fetta del knockout neuronale, o se spiegano meglio un guadagno eccitatorio, una depolarizzazione graduata condivisa o uno stato secondario; l'eterozigote condivide la depolarizzazione ma scarica molto meno.",
-      "feasibility_it": "Elettrofisiologia su fette del knockout neurone-specifico del laboratorio d'origine: la linea non è disponibile qui, se sia ottenibile non nota."
+      "feasibility_it": "Elettrofisiologia su fette del knockout neurone-specifico del laboratorio d'origine: la linea non è disponibile qui, se sia ottenibile non nota.",
+      "figure": [
+        {
+          "title": "Spontaneous bursts by genotype: slices with bursts / slices recorded",
+          "kind": "incidence",
+          "unit": "slices (one slice counted once; animals per genotype not stated for the slice counts)",
+          "caption": "Counts only. Slices from one animal are not independent, so the slice counts do not equal independent observations; no test is drawn here. The heterozygote bursts in 4 of 23 slices and the knockout in 36 of 42; wild type (Cre-positive) 0 of 11.",
+          "source": "Breton 2021 (PMID 34634460), Table 1 and Results; neuron-specific (Synapsin-Cre) deletion, neocortical slices, P13-P17; counts re-checked by an independent verifier (IT14 P3 verification)",
+          "rows": [
+            {
+              "label": "Wild type",
+              "events": 0,
+              "total": 11
+            },
+            {
+              "label": "Heterozygote",
+              "events": 4,
+              "total": 23
+            },
+            {
+              "label": "Knockout",
+              "events": 36,
+              "total": 42
+            }
+          ]
+        },
+        {
+          "title": "Pyramidal resting potential by genotype (Table 1 of the source)",
+          "kind": "values",
+          "unit": "cells (13, 15 and 40 cells, recorded from 5, 6 and 15 animals); the source tests treat cells as independent",
+          "value_unit": "mV",
+          "spread_label": "spread as printed in the source table (its type is not restated here)",
+          "caption": "Cells from one animal are not independent, so the cell counts overstate the independent units. Heterozygote and knockout both differ from wild type in the source; heterozygote versus knockout was not tested there (gap 1.9 mV by subtraction).",
+          "source": "Breton 2021 (PMID 34634460), Table 1 and Results; neuron-specific (Synapsin-Cre) deletion, neocortical slices, P13-P17; counts re-checked by an independent verifier (IT14 P3 verification)",
+          "rows": [
+            {
+              "label": "Wild type",
+              "n": 13,
+              "mean": -79.25,
+              "spread": 1.99
+            },
+            {
+              "label": "Heterozygote",
+              "n": 15,
+              "mean": -75.51,
+              "spread": 1.81
+            },
+            {
+              "label": "Knockout",
+              "n": 40,
+              "mean": -73.62,
+              "spread": 1.36
+            }
+          ]
+        }
+      ]
     },
     {
       "need": "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
