@@ -8,15 +8,15 @@
  "START_UTC": "2026-10-31T11:48:00Z",
  "BASELINE": "4cab6cf4b4c4f00ef6a7d6dd81816fdff0064938 = development/main (verified equal after fetch; CI success on that SHA)",
  "AUTHORISED_QUEUE_20261031C": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P0_OPERATIONS": {
    "order": 1,
    "steps": [
     {
      "step": "P0 ChEMBL attribution: three entries in THIRD_PARTY_NOTICES, release vs query date vs cache reconciled from the service log",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "THIRD_PARTY_NOTICES: ChEMBL (release not recorded for the 2026-10-30 responses; service status 2026-10-31 and the cache ChEMBL_37 kept apart), JUMP and openFDA entries; test_provenance_coverage OK"
     }
    ]
   },
@@ -25,15 +25,15 @@
    "steps": [
     {
      "step": "P1 main question: residual WWOX product in patient-derived neural models (Q1): which model retains protein, how much, which allele; model for a product-dependent lever; concrete request to the human referent",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "scientist",
-     "evidence": ""
+     "evidence": "product_it12_p1a + independent verifier: no neural model has a variant protein shown above the assay floor (unconfirmed, not excluded); SCAR12 = one allele G372R; N12 narrowed, trigger R9"
     },
     {
      "step": "P1 alternative question: genetic modifier or suppressor of the WWOX defect (GSE298081 HAP1 screen and literature): usability check first, then qualification of druggable suppressors",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "scientist",
-     "evidence": ""
+     "evidence": "modifiers_it12_p1b: GSE298081 closed as association-table-only (one clone, no replicate or rescue arm, no fitness phenotype); three candidacies qualified, none advanced"
     }
    ]
   },
@@ -42,21 +42,21 @@
    "steps": [
     {
      "step": "P2.2 selective audit of the 28 unverifiable figure triples that support decisive premises; public routes only",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "scientist",
-     "evidence": ""
+     "evidence": "figure_audit_it12_p22: 28 located, 8 re-read at the image (6 supported, 1 wrong in a clause, 1 overstated); ethosuximide GIRK2 wording corrected; 20 left with reopening condition"
     },
     {
      "step": "P2 P47T hallmark enrichment direction (Fig 8b/9c) and HIF/ROS reopening condition for K01/L01",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "scientist",
-     "evidence": ""
+     "evidence": "p47t_it12 + independent verifier: organoid selective hypoxia pattern not reproduced in P47T; K01 narrowed into three separate hypotheses, not strengthened"
     },
     {
      "step": "P2.1 independent verification of the datum that most determines the main conclusion",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "scientist (different from producer)",
-     "evidence": ""
+     "evidence": "independent verification of the residual-product datum and the P47T reanalysis (different actors from the producers)"
     }
    ]
   },
@@ -65,9 +65,9 @@
    "steps": [
     {
      "step": "P3 qualification of the few comparable candidacies produced by the new information",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "qualification: no new compound advanced; probe/development verdicts kept apart in the packages"
     }
    ]
   },
@@ -76,9 +76,9 @@
    "steps": [
     {
      "step": "P6 card, queue, ranking, view regenerated with one cycle; denominators recomputed; web publication prepared, final action named",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "IT12 integration: ranking 69 entries (37 ranked, ORD 16, WEAK 5, INSUFF 16, EXCL 32), 0 group moves, caveats and reason classes per unit; view, shareable edition and package regenerated; publication prepared, final action named (no token, no recorded authorisation)"
     }
    ]
   },
@@ -87,9 +87,9 @@
    "steps": [
     {
      "step": "hostile review, integration, final battery in clean clone, push, CI to its outcome, cleanup",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "final battery in a clean no-hardlink clone on code fba9e7369c9916e7e71d679156de02c568f24062: PASS WITH SKIPS (171 targets, 7 skipped: case-sensitive filesystem, absent local corpus artefacts, Stop hook not installed), 2580 s; independent verifiers for the residual-product datum and the P47T reanalysis; five worktrees removed after verifying 0 unmerged and 0 dirty; records added after the battery"
     }
    ]
   }
