@@ -14,27 +14,27 @@
    "steps": [
     {
      "step": "P1.1 score vs shown chain: does the displayed chain represent the deciding contribution; show signed contributions and unshown share",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "walks/walk_summary/explain columns; signed walk sum equals influence (both levels, filter on/off, 240 random pairs); 51 of 375 rows PARTIAL_EXAMPLE; review repaired walks through the seed and direct-hit mislabel"
     },
     {
      "step": "P1.2 F5 vs proximity and null models: meaning and consumption of each measure; effect size vs threshold sensitivity",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "proximity is reference topology (shorter than the admissible chain in 13 of 365 rows, kept and named); reach-matched null agrees (rho 0.912-0.985), removes 6-14 per expression set and 44 of 180 for Q6 protein; --junction off reproduces v3 (rechecked)"
     },
     {
      "step": "P1.3 origins: sensitivity of the two-deposit fold and of level handling to priority and selection",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "origin variants A/C/D: 22 of 24 top-8 lists identical; variant B dropped as not applicable (vacuous in the first version)"
     },
     {
      "step": "P1.4 selftest on 3-tuple toy edges: classify then repair minimally",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "selftest: fixture incompatibility (untyped toy edges), repaired with typed controls at expression and protein level; fails with --mode all; mutation caught"
     }
    ]
   },
@@ -43,33 +43,33 @@
    "steps": [
     {
      "step": "P2.1 reconstruct the zero-of-five phenotype leads (out-of-universe, identity, action, path, null contribution, low rank)",
-     "status": "TODO",
-     "owner": "scientist",
-     "evidence": ""
+     "status": "DONE",
+     "owner": "scientist-a",
+     "evidence": "coverage_it11_p21: zero-of-five wrong as written; lithium is a seed-specific Q6 mimics hit via MYC expression; ethosuximide/vigabatrin no path; d-APV direct hit; IT10 README corrected, phenotype_first reads the full list"
     },
     {
      "step": "P2.2 new functional question and cycle observation-to-discriminating-test",
-     "status": "TODO",
-     "owner": "scientist",
-     "evidence": ""
+     "status": "DONE",
+     "owner": "scientist-b",
+     "evidence": "question_it11_p22 Q6 MYC window: no candidate strengthened, role unknown; verifier corrections applied; card M01 (U63)"
     },
     {
      "step": "P2.3 NRF2: independent verification of a used dataset and only the decisive points",
-     "status": "TODO",
-     "owner": "scientist",
-     "evidence": ""
+     "status": "DONE",
+     "owner": "scientist-c",
+     "evidence": "nrf2_it11_p23 verifier: organoid numbers hold, contrast descriptive, two chemotypes withdrawn; 12 L01 corrections applied"
     },
     {
      "step": "P2.4 Q1 ACK1/TNK2: which steps support product presence, amount, localisation, function, specificity; minimal discriminating measure",
-     "status": "TODO",
-     "owner": "scientist",
-     "evidence": ""
+     "status": "DONE",
+     "owner": "scientist-d",
+     "evidence": "ack1_it11_p24: only steps 1a and 2a/2b supported in cancer cells; HCC primary read in full; Mahajan 2005 not read (bot check, not circumvented); design not executed; R8 added"
     },
     {
      "step": "P2.5 HIF stays closed unless new input; minimal lab design for the referent",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "HIF stays closed: no new deposit or source; K01 step 0 additions already in IT10 corrections"
     }
    ]
   },
@@ -78,9 +78,9 @@
    "steps": [
     {
      "step": "P3.1-3.3 JUMP/Enrichr diagnosis from sources; next most informative trial or precise closure",
-     "status": "TODO",
-     "owner": "scientist",
-     "evidence": ""
+     "status": "DONE",
+     "owner": "scientist-e",
+     "evidence": "complementary_it11_p3: JUMP calibrated once on 144 designed pairs, not above chance within source (1.03, p 0.44); closed with reopening condition; Enrichr/RummaGEO/RxRx3 licence verdicts"
     }
    ]
   },
@@ -89,9 +89,9 @@
    "steps": [
     {
      "step": "P4 at least one IT11 result through candidate, qualification, card, queue, ranking, view; comparison with IT10 on a declared perimeter",
-     "status": "TODO",
-     "owner": "orchestrator",
-     "evidence": ""
+     "status": "DONE",
+     "owner": "orchestrator + scientist-g",
+     "evidence": "M01, L01, N12 corrections; ranking 69 entries, 37 ranked, 0 group moves; view/shareable/package regenerated once; checks recorded in the final report"
     }
    ]
   },
@@ -100,9 +100,9 @@
    "steps": [
     {
      "step": "P5 web publication preparation, ORCH-REPURPOSING-10H reconciliation, licences affecting new content, radar and hourly monitor, targeted scouting",
-     "status": "TODO",
-     "owner": "scientist",
-     "evidence": ""
+     "status": "DONE",
+     "owner": "scientist-f",
+     "evidence": "ops_it11_p5: publication prepared and not executed (no authorisation recorded, no token); ORCH-REPURPOSING-10H concluded; radar/hourly verified; licence gap noted"
     }
    ]
   },
@@ -113,7 +113,7 @@
      "step": "hostile review, integration, final battery in clean clone, push, CI, cleanup",
      "status": "TODO",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "review of P1 repaired; verifier of Q6 and NRF2; final battery see closing entry"
     }
    ]
   }
