@@ -14,9 +14,9 @@
    "steps": [
     {
      "step": "P0 baseline and IT13 battery ownership (pid 2996802, clone battery_it13d)",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "battery running; IT14 worktree it14 from 5a88442d; the earlier partial report's clock estimate corrected (23:37 CET, not 00:30)"
+     "evidence": "IT13 battery pid 2996802 (clone, 5a88442d): PASS WITH SKIPS (172 targets, 7 skipped, same six reasons); IT13 pushed 5a88442d, gate PASS, ls-remote verified; CI Public release gate in progress at last check (single checks, no polling loop); IT14 worktree it14 from 5a88442d"
     }
    ]
   },
@@ -25,15 +25,15 @@
    "steps": [
     {
      "step": "P1.1 model identity and design (Cre driver, controls, age, series relations, animals, libraries, bulk overlap) and P1.4 SRA feasibility",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "scientist",
-     "evidence": "pending"
+     "evidence": "gse158684_identity_it14_p1a: identity (Synapsin-Cre against Cre-only), series structure, SRA hup, feasibility closed; receipt FTR-20261101-33914858-01 (targeted passages); NP3A1 narrowed, NP3A5 added"
     },
     {
      "step": "P1.2-P1.3 independent recompute of classes, duplicates, sensitivities, explanations",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "verifier",
-     "evidence": "pending"
+     "evidence": "gse158684_verify_it14_p1b: independent recompute; totals and undecidability confirmed; PV-A and PV-B numbers not confirmed; oligodendrocyte fractions rule-dependent; duplicates irrelevant (35 symbols, none decisive); correction note on the snRNA package"
     }
    ]
   },
@@ -42,9 +42,9 @@
    "steps": [
     {
      "step": "P2 corrections to bench sheets A and B and their consumers",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "pending"
+     "evidence": "bench sheets A and B corrected; work-order and p3b note aligned"
     }
    ]
   },
@@ -53,15 +53,15 @@
    "steps": [
     {
      "step": "P3 choose functional question and contrast; target-action-compound ladder; contrasting cases",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "scientist",
-     "evidence": "pending"
+     "evidence": "function_pharm_it14_p3: question fixed before the search (PRE_REGISTRATION), 12-relation ladder, 6 cases; no candidate supported; probe-level hypothesis H1; Kv7 demoted to counter-hypothesis"
     },
     {
      "step": "P3 independent verification of pharmacological identity and action",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "verifier",
-     "evidence": "pending"
+     "evidence": "function_pharm_verify_it14_p3v: premise confirmed with corrections; selectivity-gap claim NOT confirmed (three primary papers); producer revised; verifier knew the claim"
     }
    ]
   },
@@ -70,9 +70,9 @@
    "steps": [
     {
      "step": "P4 glia and maturation evidence recon",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "scientist",
-     "evidence": "pending"
+     "evidence": "glia_maturation_it14_p4: RESTRICT; F02 manifest citation corrected; NEED-MYELINATION limits; triggers NP4G1-4"
     }
    ]
   },
@@ -81,9 +81,9 @@
    "steps": [
     {
      "step": "P5 minimal matching improvement measured on the real cases",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "pending"
+     "evidence": "ChEMBL adapter target gene symbols (framework/adapters/chembl.py, 2 regressions); measured 306/437 rows with symbols, 11/15 declared genes; matching_it14_p5"
     }
    ]
   },
@@ -92,9 +92,9 @@
    "steps": [
     {
      "step": "P6 scouting from the documented gap",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "scientist",
-     "evidence": "pending"
+     "evidence": "scout_it14_p6: 8 resources tried, none adopted (KEEP existing, WATCH DrugCentral, DISCARD Pharos, BindingDB, PDSP, IUPHAR REST, PubChem bioassay); gap is a join"
     }
    ]
   },
@@ -103,9 +103,9 @@
    "steps": [
     {
      "step": "P7 needs, cards, triggers, work order, ranking, view and shareable edition",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": "pending"
+     "evidence": "needs, work order, uncarded N13/N16, triggers, ranking snapshot, view regenerated and shareable audit PASS; view figure block delegated (pview)"
     }
    ]
   },

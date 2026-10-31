@@ -419,6 +419,18 @@ Order digest after: 6a5538289e83deb9. Counts: 65 entries in the map (61 before: 
 
 **Not a result.** Nothing here is evidence of benefit: a transcript difference is not a channel current, a recovery contrast with no wild-type + WWOX arm is not shown to be WWOX-specific, and a candidacy listed is not a recommendation.
 
+## 17. IT14: the inhibition question and the glia restriction enter as caveats, one probe-level hypothesis and triggers (2026-11-01)
+
+**Entries.** No new unit. One new uncarded item, **N16** (benzodiazepine-site positive modulation of fast GABA-A inhibition, clobazam and its metabolite as ex vivo probes: a function-first, probe-level hypothesis, STILL INSUFFICIENTLY EVALUATED, not carded); **N13** (Kv7 openers) is re-labelled as the counter-hypothesis arm of the inhibition question. A new work-order entry for `NEED-INHIBITORY-HYPOFUNCTION` carries the discriminating slice design. No pro-myelinating compound entered: the glia line is restricted to a role-resolving question (`NEED-MYELINATION` limits and triggers NP4G1 to NP4G4).
+
+**Denominators recomputed** (from `ranking.json`; different quantities): units in the map 69; excluded from a specific comparison 32; not excluded and ranked 37 (ORDERABLE 16, WEAK PERTINENCE 5, STILL INSUFFICIENT 16); orderable in a group of the selection 8; uncarded items 16 (INSUFF 14, WEAK 1, EXCL 1), which are not units. Order digest `ff38fcaa61295a5a`, unchanged: **0 group moves**.
+
+**Reasons** (`changes.tsv`, snapshots `units_2026-11-01_d4fe844c8c5bc106` and `units_2026-11-01_638b859cd2d29980`): U21 and U27 context_change (the excitatory-gain reading is knockout-specific at the same evidence level as the inhibitory loss; need text); U23 context_change (the KCl internal solution of the source makes sIPSC amplitude uninformative on E_GABA); U22, U26 and U63 context_change (a receipt cited by the unit changed; no change of assessment).
+
+**Triggers** added: NP3A5 (cause of the fall of glial Wwox UMI in the neuron-deletion snRNA pool), NP3P1 to NP3P3 (heterozygote sIPSC, locus of the lost current, same-system subtype comparison), NP4G1 to NP4G4 (glia); NP3A1 narrowed (raw reads are not public). All read from package files by `ranking_it8.py`.
+
+**What the verification changed.** The first P3 report concluded a 'selectivity gap' for the benzodiazepine-site agents and treated inhibition as the only knockout-specific deficit; an independent verifier showed that three open primary papers give subtype data (and disagree) and that excitatory measures also differ between heterozygote and knockout. Both statements were corrected before integration, so what enters the module is a hypothesis conditional on a measurement that has not been made.
+
 ## Matching v3 pilot — 30 October 2026
 
 The [operator-supplied guidance](../matching_guidance_v3.md) is preserved verbatim.
