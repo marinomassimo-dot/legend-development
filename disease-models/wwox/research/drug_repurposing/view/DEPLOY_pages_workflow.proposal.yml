@@ -1,5 +1,6 @@
-# PROPOSAL ONLY. This file is NOT active: it lives under view/, not under .github/workflows/.
-# Activating it is an operator act (see DEPLOY.md, sections 6 and 9; section 8 is the rollback): copy it to .github/workflows/, enable
+# Status of this text depends on where it lives. Under view/ (this path) it is a PROPOSAL: it does nothing. The same content under
+# .github/workflows/publish-shareable-view.yml is the active manual workflow (see DEPLOY.md, sections 6 and 9; section 8 is the rollback).
+# Activating it is an operator act (or the operator's explicit instruction to the Orchestrator): copy it there, enable
 # "GitHub Actions" as the Pages source in the repository settings, and run it by hand.
 #
 # What it does: verifies that every file of the shareable package, manifest.json included, equals the digest
@@ -64,6 +65,8 @@ jobs:
       contents: read
       pages: write
       id-token: write
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -75,3 +78,31 @@ jobs:
           path: ${{ env.PACKAGE_DIR }}
       - id: deployment
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
+
+  smoke:
+    # IT11 P5: after the deployment, fetch the live page and compare it with the package digest. A failure means the site is not what the table says
+    # (cache, wrong source, wrong branch); it changes nothing and has no permission beyond read.
+    needs: deploy
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: The live index.html equals the package file, answers 200 and carries the robots meta tag
+        env:
+          PAGE_URL: ${{ needs.deploy.outputs.page_url }}
+        run: |
+          set -eu
+          url="${PAGE_URL:-https://${GITHUB_REPOSITORY_OWNER}.github.io/${GITHUB_REPOSITORY#*/}/}"
+          for i in 1 2 3 4 5 6; do
+            code=$(curl -s -o live.html -w "%{http_code}" "$url" || true)
+            [ "$code" = "200" ] && break
+            sleep 20
+          done
+          echo "live status: $code at $url"
+          [ "$code" = "200" ]
+          want=$(sha256sum "$PACKAGE_DIR/index.html" | cut -d' ' -f1)
+          have=$(sha256sum live.html | cut -d' ' -f1)
+          echo "package $want"; echo "live    $have"
+          [ "$want" = "$have" ]
+          grep -c 'name="robots"' live.html || echo "no robots meta tag (indexing accepted)"

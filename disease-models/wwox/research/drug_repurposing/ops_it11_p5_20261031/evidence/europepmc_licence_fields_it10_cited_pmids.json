@@ -1,0 +1,665 @@
+{
+"14983893": {
+"journal": "Cancer research",
+"year": "2004",
+"oa": "N",
+"license": null,
+"pmcid": null,
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"15843612": {
+"journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
+"year": "2005",
+"oa": "N",
+"license": "cc by-nc-sa",
+"pmcid": "PMC6724950",
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"16288044": {
+"journal": "Cancer research",
+"year": "2005",
+"oa": "N",
+"license": null,
+"pmcid": null,
+"where": [
+"recovery_it10_p23_20261031"
+]
+},
+"17554006": {
+"journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
+"year": "2007",
+"oa": "N",
+"license": null,
+"pmcid": "PMC6672155",
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"19672073": {
+"journal": "Developmental neuroscience",
+"year": "2009",
+"oa": "N",
+"license": null,
+"pmcid": "PMC2820335",
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"21075834": {
+"journal": "Human molecular genetics",
+"year": "2011",
+"oa": "Y",
+"license": "cc by-nc",
+"pmcid": "PMC3016910",
+"where": [
+"axis_it10_p22_20261031",
+"recovery_it10_p23_20261031"
+]
+},
+"21673063": {
+"journal": "Clinical cancer research : an official journal of the American Association for Cancer Research",
+"year": "2011",
+"oa": "N",
+"license": null,
+"pmcid": "PMC3149769",
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"23065181": {
+"journal": "Neurochemical research",
+"year": "2013",
+"oa": "N",
+"license": null,
+"pmcid": null,
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"23686771": {
+"journal": "Annals of neurology",
+"year": "2013",
+"oa": "N",
+"license": null,
+"pmcid": "PMC4527160",
+"where": [
+"recovery_it10_p23_20261031"
+]
+},
+"24550385": {
+"journal": "The Journal of biological chemistry",
+"year": "2014",
+"oa": "N",
+"license": "cc by",
+"pmcid": "PMC3979411",
+"where": [
+"recovery_it10_p23_20261031"
+]
+},
+"24713818": {
+"journal": "Pediatric research",
+"year": "2014",
+"oa": "Y",
+"license": null,
+"pmcid": "PMC4167022",
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"24889205": {
+"journal": "Synapse (New York, N.Y.)",
+"year": "2014",
+"oa": "N",
+"license": null,
+"pmcid": null,
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"25012504": {
+"journal": "Cell death and differentiation",
+"year": "2014",
+"oa": "N",
+"license": null,
+"pmcid": "PMC4211377",
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"25738261": {
+"journal": "International journal of oncology",
+"year": "2015",
+"oa": "N",
+"license": null,
+"pmcid": null,
+"where": [
+"recovery_it10_p23_20261031"
+]
+},
+"26143176": {
+"journal": "Biochimica et biophysica acta",
+"year": "2015",
+"oa": "N",
+"license": null,
+"pmcid": null,
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"26500770": {
+"journal": "Cancer & metabolism",
+"year": "2015",
+"oa": "Y",
+"license": "cc by",
+"pmcid": "PMC4615872",
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"26592150": {
+"journal": "FEBS letters",
+"year": "2015",
+"oa": "N",
+"license": null,
+"pmcid": null,
+"where": [
+"recovery_it10_p23_20261031"
+]
+},
+"27211851": {
+"journal": "Nature communications",
+"year": "2016",
+"oa": "Y",
+"license": "cc by",
+"pmcid": "PMC4879264",
+"where": [
+"axis_it10_p22_20261031"
+]
+},
+"27551470": {
+"journal": "Cell death discovery",
+"year": "2015",
+"oa": "Y",
+"license": "cc by",
+"pmcid": "PMC4979517",
+"where": [
+"recovery_it10_p23_20261031"
+]
+},
+"28708106": {
+"journal": "Molecules (Basel, Switzerland)",
+"year": "2017",
+"oa": "Y",
+"license": "cc by",
+"pmcid": "PMC6152263",
+"where": [
+"recovery_it10_p23_20261031"
+]
+},
+"29724996": {
+"journal": "Cell death & disease",
+"year": "2018",
+"oa": "Y",
+"license": "cc by",
+"pmcid": "PMC5938702",
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"29808465": {
+"journal": "Neurogenetics",
+"year": "2018",
+"oa": "N",
+"license": null,
+"pmcid": null,
+"where": [
+"recovery_it10_p23_20261031"
+]
+},
+"30290271": {
+"journal": "Neurobiology of disease",
+"year": "2019",
+"oa": "N",
+"license": "cc by-nc-nd",
+"pmcid": "PMC7104842",
+"where": [
+"axis_it10_p22_20261031"
+]
+},
+"30297875": {
+"journal": "Nature chemical biology",
+"year": "2018",
+"oa": "Y",
+"license": null,
+"pmcid": "PMC6298574",
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"30755385": {
+"journal": "Molecular metabolism",
+"year": "2019",
+"oa": "Y",
+"license": "cc by-nc-nd",
+"pmcid": "PMC6437662",
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"31118567": {
+"journal": "Drug design, development and therapy",
+"year": "2019",
+"oa": "Y",
+"license": "cc by-nc",
+"pmcid": "PMC6475100",
+"where": [
+"axis_it10_p22_20261031"
+]
+},
+"31340538": {
+"journal": "International journal of molecular sciences",
+"year": "2019",
+"oa": "Y",
+"license": "cc by",
+"pmcid": "PMC6678113",
+"where": [
+"axis_it10_p22_20261031"
+]
+},
+"31543760": {
+"journal": "Frontiers in cellular neuroscience",
+"year": "2019",
+"oa": "Y",
+"license": "cc by",
+"pmcid": "PMC6730490",
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"31727677": {
+"journal": "Clinical cancer research : an official journal of the American Association for Cancer Research",
+"year": "2020",
+"oa": "N",
+"license": null,
+"pmcid": "PMC7024660",
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"31996853": {
+"journal": "Nature",
+"year": "2020",
+"oa": "Y",
+"license": null,
+"pmcid": "PMC7433012",
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"32000863": {
+"journal": "Acta neuropathologica communications",
+"year": "2020",
+"oa": "Y",
+"license": "cc by",
+"pmcid": "PMC6990504",
+"where": [
+"recovery_it10_p23_20261031"
+]
+},
+"33515534": {
+"journal": "Brain research",
+"year": "2021",
+"oa": "N",
+"license": null,
+"pmcid": null,
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"33966229": {
+"journal": "Advances in experimental medicine and biology",
+"year": "2021",
+"oa": "N",
+"license": null,
+"pmcid": null,
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"34015398": {
+"journal": "Cancer letters",
+"year": "2021",
+"oa": "N",
+"license": null,
+"pmcid": null,
+"where": [
+"recovery_it10_p23_20261031"
+]
+},
+"34021541": {
+"journal": "Aging",
+"year": "2021",
+"oa": "Y",
+"license": "cc by",
+"pmcid": "PMC8202868",
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"34268881": {
+"journal": "EMBO molecular medicine",
+"year": "2021",
+"oa": "Y",
+"license": "cc by",
+"pmcid": "PMC8350905",
+"where": [
+"axis_it10_p22_20261031",
+"hif_it10_p21_20261031"
+]
+},
+"34487578": {
+"journal": "Journal of neuroscience research",
+"year": "2021",
+"oa": "N",
+"license": null,
+"pmcid": "PMC8671177",
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"34747138": {
+"journal": "EMBO molecular medicine",
+"year": "2021",
+"oa": "Y",
+"license": "cc by",
+"pmcid": "PMC8649866",
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"34927784": {
+"journal": "EMBO reports",
+"year": "2022",
+"oa": "Y",
+"license": "cc by",
+"pmcid": "PMC8811627",
+"where": [
+"recovery_it10_p23_20261031"
+]
+},
+"35279653": {
+"journal": "Developmental neuroscience",
+"year": "2022",
+"oa": "N",
+"license": null,
+"pmcid": "PMC9464267",
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"35328751": {
+"journal": "International journal of molecular sciences",
+"year": "2022",
+"oa": "Y",
+"license": "cc by",
+"pmcid": "PMC8955937",
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"35883580": {
+"journal": "Cells",
+"year": "2022",
+"oa": "Y",
+"license": "cc by",
+"pmcid": "PMC9323965",
+"where": [
+"recovery_it10_p23_20261031"
+]
+},
+"35919947": {
+"journal": "The EMBO journal",
+"year": "2022",
+"oa": "Y",
+"license": "cc by",
+"pmcid": "PMC9433936",
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"36257459": {
+"journal": "Life sciences",
+"year": "2022",
+"oa": "N",
+"license": null,
+"pmcid": null,
+"where": [
+"recovery_it10_p23_20261031"
+]
+},
+"36450714": {
+"journal": "Cell death discovery",
+"year": "2022",
+"oa": "Y",
+"license": "cc by",
+"pmcid": "PMC9712431",
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"36655171": {
+"journal": "Brain communications",
+"year": "2023",
+"oa": "N",
+"license": null,
+"pmcid": "PMC9838803",
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"36828035": {
+"journal": "Progress in neurobiology",
+"year": "2023",
+"oa": "Y",
+"license": "cc by-nc-nd",
+"pmcid": "PMC10835625",
+"where": [
+"axis_it10_p22_20261031"
+]
+},
+"37194323": {
+"journal": "Small GTPases",
+"year": "2023",
+"oa": "Y",
+"license": "cc by",
+"pmcid": "PMC10193877",
+"where": [
+"recovery_it10_p23_20261031"
+]
+},
+"37263460": {
+"journal": "Molecular and cellular neurosciences",
+"year": "2023",
+"oa": "N",
+"license": "cc by",
+"pmcid": null,
+"where": [
+"recovery_it10_p23_20261031"
+]
+},
+"37864646": {
+"journal": "Journal of neuro-oncology",
+"year": "2023",
+"oa": "N",
+"license": null,
+"pmcid": "PMC10863646",
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"37897534": {
+"journal": "Cellular and molecular life sciences : CMLS",
+"year": "2023",
+"oa": "Y",
+"license": "cc by",
+"pmcid": "PMC10613160",
+"where": [
+"axis_it10_p22_20261031"
+]
+},
+"37984622": {
+"journal": "Brain research bulletin",
+"year": "2023",
+"oa": "N",
+"license": "cc by",
+"pmcid": null,
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"38418113": {
+"journal": "In vivo (Athens, Greece)",
+"year": "2024",
+"oa": "N",
+"license": null,
+"pmcid": "PMC10905430",
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"38789798": {
+"journal": "Nature metabolism",
+"year": "2024",
+"oa": "Y",
+"license": "cc by",
+"pmcid": "PMC11272580",
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"40159309": {
+"journal": "Developmental neuroscience",
+"year": "2026",
+"oa": "Y",
+"license": "cc by-nc",
+"pmcid": "PMC12353030",
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"41124647": {
+"journal": "Advanced science (Weinheim, Baden-Wurttemberg, Germany)",
+"year": "2026",
+"oa": "Y",
+"license": "cc by",
+"pmcid": "PMC12767083",
+"where": [
+"recovery_it10_p23_20261031"
+]
+},
+"41677633": {
+"journal": "Cells",
+"year": "2026",
+"oa": "Y",
+"license": "cc by",
+"pmcid": "PMC12897155",
+"where": [
+"recovery_it10_p23_20261031"
+]
+},
+"42068294": {
+"journal": "Journal of medicinal chemistry",
+"year": "2026",
+"oa": "N",
+"license": null,
+"pmcid": null,
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"42150425": {
+"journal": "Redox biology",
+"year": "2026",
+"oa": "Y",
+"license": "cc by",
+"pmcid": "PMC13208096",
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"42275215": {
+"journal": "Cell reports",
+"year": "2026",
+"oa": "N",
+"license": "cc by",
+"pmcid": null,
+"where": [
+"recovery_it10_p23_20261031"
+]
+},
+"42276303": {
+"journal": "Neurobiology of disease",
+"year": "2026",
+"oa": "N",
+"license": "cc by",
+"pmcid": null,
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"42397075": {
+"journal": "Brain : a journal of neurology",
+"year": "2026",
+"oa": "N",
+"license": "cc by-nc",
+"pmcid": null,
+"where": [
+"axis_it10_p22_20261031",
+"hif_it10_p21_20261031"
+]
+},
+"42422765": {
+"journal": "Molecular therapy. Advances",
+"year": "2026",
+"oa": "Y",
+"license": "cc by-nc-nd",
+"pmcid": "PMC13343157",
+"where": [
+"axis_it10_p22_20261031"
+]
+},
+"42873777": {
+"journal": "PloS one",
+"year": "2026",
+"oa": "N",
+"license": "cc by",
+"pmcid": null,
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"42909904": {
+"journal": "Brain communications",
+"year": "2026",
+"oa": "Y",
+"license": "cc by",
+"pmcid": "PMC13684411",
+"where": [
+"hif_it10_p21_20261031"
+]
+},
+"42939870": {
+"journal": "Antioxidants (Basel, Switzerland)",
+"year": "2026",
+"oa": "Y",
+"license": "cc by",
+"pmcid": "PMC13701765",
+"where": [
+"axis_it10_p22_20261031"
+]
+}
+}

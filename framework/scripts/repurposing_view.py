@@ -13,7 +13,7 @@ or medical advice. Public disease and reference-genotype level only.
   python3 -B framework/scripts/repurposing_view.py check    # exit 1 if the file differs from a fresh build
   python3 -B framework/scripts/repurposing_view.py run --source shareable   # the shareable view (allowlisted rows only)
   python3 -B framework/scripts/repurposing_view.py audit-shareable          # proof: no non-allowlisted value is in the shareable bytes
-  python3 -B framework/scripts/repurposing_view.py package [--zip PATH]     # view/shareable_package/ (local preview, not published)
+  python3 -B framework/scripts/repurposing_view.py package [--zip PATH]     # view/shareable_package/ (distributable edition; publication is the operator's act)
   python3 -B framework/scripts/repurposing_view.py --help
 """
 from __future__ import annotations
@@ -38,6 +38,10 @@ REGEN_CMD = "python3 -B framework/scripts/repurposing_coverage.py run && python3
 SCHEMA = "legend.wwox.repurposing_view/2"
 MAX_BYTES = 6_000_000
 SOURCES = ("full", "shareable")
+# IT11 P5: indexing choice of the shareable page. DEFAULT = not indexed (decision proposed in IT9, operator confirmation pending). Set to "" to accept indexing,
+# then regenerate: it changes index.html and its digests. A project Pages site cannot serve a host-root robots.txt, so the meta tag is the only lever.
+SHAREABLE_ROBOTS_META = '<meta name="robots" content="noindex,nofollow">'
+
 OUT_NAME = {"full": "index.html", "shareable": "index_shareable.html"}
 
 LEVELS = ["L1_documented_link", "L2_mechanistic_coherence", "L3_observed_effect", "L4_observed_recovery_in_wwox_system"]
@@ -2745,7 +2749,7 @@ document.body.setAttribute('data-ready','1');
 
 TEMPLATE = """<!doctype html>
 <html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>__TITLE__</title>
+<title>__TITLE__</title>__ROBOTS__
 <style>__CSS__</style></head><body>
 <a class="skip" href="#main">__SKIP__</a>
 <header><div class="in"><h1>__H1__</h1>
@@ -3988,6 +3992,7 @@ def render(P: dict, dr: Path = DEFAULT_DR) -> str:
                    ("N_CA", "nav_cards"), ("N_PR", "nav_priority"), ("N_CP", "nav_compare"), ("N_TD", "nav_tech"), ("TD_SUM", "td_sum"), ("TD_NOTE", "td_note")):
         page = page.replace(f"__{k}__", E(U[key]))
     page = page.replace("__BANNER__", render_banner(P))
+    page = page.replace("__ROBOTS__", SHAREABLE_ROBOTS_META if P["source"] == "shareable" else "")
     st = dict(st)
     st.pop("BANNER", None)
     for k, v in st.items():
