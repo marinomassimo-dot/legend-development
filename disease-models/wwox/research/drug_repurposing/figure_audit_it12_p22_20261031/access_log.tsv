@@ -1,0 +1,10 @@
+route	url_or_endpoint	result	used_for
+PMC article page (default agent)	https://pmc.ncbi.nlm.nih.gov/articles/PMC10232839/	200, figure links to cdn.ncbi.nlm.nih.gov/pmc/blobs/	37275776 legends and image links
+PMC figure CDN	https://cdn.ncbi.nlm.nih.gov/pmc/blobs/4a88/10232839/aad5f111d416/fncel-17-1175895-g0007.jpg (and g0002, g0004)	200 image/jpeg; sha256 identical to corpus copy (g0002 b2ab4081, g0004 e2c2de73, g0007 0985e7f8)	Fig 2, 4, 7 of 37275776
+PMC article page + CDN	PMC4435665 (24953239), Fig5 d90a812f, Fig6 18d75258	200; sha256 identical to corpus copies	Fig 5, 6 of 24953239
+PMC article page + CDN	PMC13426438 (42536722), f2 d344db99, f3 bcff12e9	200; sha256 identical to corpus copies	Fig 2, 3 of 42536722
+Europe PMC REST supplementaryFiles	https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7385104/supplementaryFiles	200, zip 5.0 MB (slow, about 3 min); contains MOESM1 PDF (sha256 4fc0b2cf...)	S7-S9 of 32719346
+Europe PMC REST supplementaryFiles	.../PMC10232839/supplementaryFiles	200, zip with Data_Sheet_1.PDF; not opened (no audited triple needs it)	none
+Europe PMC REST search	https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:<pmid>	200	PMID to PMCID mapping
+BLOCKED: europepmc.org article bin	https://europepmc.org/articles/PMC10232839/bin/fncel-17-1175895-g0007.jpg	403 HTML interstitial "Just a moment..." (bot check); not circumvented	nothing; reopen if the endpoint answers with the default agent
+BLOCKED: PMC supplement bin	https://pmc.ncbi.nlm.nih.gov/articles/instance/7385104/bin/41467_2020_17560_MOESM1_ESM.pdf	200 but body is a reCAPTCHA challenge page; not circumvented; file deleted from use	nothing; the Europe PMC REST zip supplied the same PDF

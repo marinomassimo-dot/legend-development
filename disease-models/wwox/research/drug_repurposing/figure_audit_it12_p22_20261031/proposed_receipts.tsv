@@ -1,0 +1,5 @@
+proposed_event	study	record_kind	what_was_read	coverage_delta	locator_files	note
+FTR-<next>-37275776-03	37275776	contemporaneous_receipt	Fig 2, Fig 4A, Fig 7B as PMC images (public CDN, byte-identical to files/figures/PMID37275776_r2/*), legends and Discussion text, 2026-10-31	figures: image-read for Figs 2, 4, 7 (Figs 1, 3, 5, 6 remain as in FTR-20261022-37275776-02); supplementary Data Sheet still captions_only	verdicts_top8.tsv rows 1-3	not appended; integrator to record in event order after trial
+FTR-<next>-24953239-03	24953239	contemporaneous_receipt	Fig 5, Fig 6 as PMC images, legends and Results text	figures: image-read Figs 5, 6; Figs 1-4 not re-read here	rows 4-5	
+FTR-<next>-42536722-03	42536722	contemporaneous_receipt	Fig 2, Fig 3 as PMC images, legends and Results text	figures: image-read Figs 2, 3; Figs 1, 4, 5 and supplement not read here	rows 6-7	
+FTR-<next>-32719346-03	32719346	contemporaneous_receipt	Supplementary Figs 7-9: S7 from the public supplement PDF (Europe PMC REST zip), S8 and S9 from corpus page rasters of that PDF; legends from the PDF text	supplementary: S7-S9 image-read	row 8	closes the one open S7 clause of the R2 rerun
