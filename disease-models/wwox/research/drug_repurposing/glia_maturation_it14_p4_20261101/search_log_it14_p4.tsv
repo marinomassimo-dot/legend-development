@@ -1,0 +1,8 @@
+search_id	route	query	date_rome	hits	used_for	result_note
+S1	Europe PMC REST (public)	(WWOX OR Wwox) AND (oligodendrocyte* OR myelin* OR hypomyelinat* OR white matter OR OPC) [all fields]	2026-10-31	346	screening	too broad; superseded by S2
+S2	Europe PMC REST (public)	(TITLE_ABS:WWOX OR Wwox OR WOX1) AND (oligodendro* OR myelin* OR hypomyelin* OR white matter OR glia* OR astrocyt* OR microglia*)	2026-10-31	30	Q1 Q2	new item relative to the module: none; PPR1124524 already receipted by the module; 42909904 is a Drosophila AD paper without myelin readout
+S3	Europe PMC REST (public)	(TITLE_ABS:WWOX OR Wwox) AND (iPSC OR organoid* OR spheroid* OR stem cell*)	2026-10-31	13	Q1 (iPSC-oligodendrocyte)	no iPSC-oligodendrocyte or neuron-OPC co-culture from WWOX patient lines; 34268881 and 42397075 are neuron-focused organoids
+S4	Europe PMC REST (public)	(TITLE_ABS:WWOX OR Wwox) AND (Schwann OR sciatic OR peripheral nerv* OR zebrafish OR drosophila)	2026-10-31	16	Q1	only Cheng 2020 (mouse sciatic) is a myelin readout
+S5	Europe PMC REST (public)	AUTH:Abudiab B AND (WWOX OR myelin); DOI:10.1101/2025.11.22.689900	2026-10-31	3	publication status of the preprint	still a preprint (PPR1124524) on 2026-10-31; no journal version indexed
+S6	Europe PMC REST (public)	TITLE searches for ReBUILD, Cree 2018 hypoxic injury, Deshmukh 2013, Brown 2021 bexarotene, Neumann 2019, Odell 2024, Fancy 2011	2026-10-31	1 each	Q5 precedents	abstracts read via EXT_ID core records; full texts not read
+S7	ChEMBL REST (public)	molecule search clemastine, benztropine, metformin, bexarotene, XAV939; mechanism for CHEMBL1626 and CHEMBL1200383	2026-10-31	-	Q5 identity	identities confirmed; mechanism row returned for CHEMBL1626 (M1 antagonist), none for the benztropine mesylate id
