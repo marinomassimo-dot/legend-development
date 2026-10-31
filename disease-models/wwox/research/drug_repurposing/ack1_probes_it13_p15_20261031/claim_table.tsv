@@ -1,0 +1,18 @@
+id	claim	source_id	locator	what_it_states	verified	depth_read
+A1	2022 Nat Commun paper on ACK1 and CSK exists	PMID 36376335 / PMC9663509	title, abstract	ACK1 phosphorylates CSK Tyr18 enhancing CSK function; Tnk2-deficient mice show T-cell activation and reduced growth of ICB-resistant tumours; (R)-9b recapitulates tumour inhibition	yes (identified by Europe PMC search, authors Sridaran, Mahajan et al.)	full text, keyword passages
+A2	(R)-9b dosing in that paper	PMC9663509	Methods; Fig 1f legend	24 mg/kg and 20 mg/kg sc five times per week for about 4 weeks; 3 uM in Jurkat cells	yes	passages read
+A3	That paper addresses WWOX	PMC9663509	whole text search	zero occurrences of WWOX	yes (text search only)	keyword search
+B1	2024 independent report attributes effects of (R)-9bMS to Aurora B	PMID 39639371 (Cell Biochem Funct 42:e70022, doi 10.1002/cbf.70022)	abstract	(R)-9bMS and XMD16-5 cause multinucleation and polyploidy via mitotic failure; Aurora B phosphorylation reduced by compound but not by TNK2 knockdown; authors conclude Aurora B rather than TNK2 is responsible at high concentration; promotes colony formation	yes at abstract level (authors Murata, Nakayama; not shown independent of Mahajan group beyond authorship)	abstract only
+B2	XMD16-5 inhibits cytokinesis at higher concentrations via Aurora B	PMID 39639371	abstract	stated as prior background; primary source not located	no (primary not found)	abstract only
+C1	Panel profile of (R)-9b	PMID 25699576 / PMC4605435	Results, Table 3	34 kinases, 1 uM, ATP 10 uM, single point: ACK1 99.8, TYK2 98.9, JAK2 98.6	yes	table read
+C2	Other kinases above 80 percent	PMC4605435	Results text	FGFR1 86.4 ALK 86.0 LCK 87.7 CHK1 84.8 ROS1 84.2 ABL1 82.8; IC50 JAK2 6 nM TYK2 5 nM ROS1 124 LCK 136 ALK 143 CHK1 154 FGFR1 160 ABL1 206 nM	yes	passage read
+C3	Src, TBK1, AXL, KDR, TRKA, CSK on panel	PMC4605435	Table 3	c-Src 71.3 (estimated from dose response), TBK1 71.8, AXL 75.9, KDR 67.3, TRKA 63.2, CSK 26.3	yes	table read
+C4	Aurora kinases tested for (R)-9b	PMC4605435	Table 3	not on the 34-kinase list	yes (absence from table)	table read
+C5	Bosutinib inhibits ACK1	PMC4605435	Introduction	IC50 2.7 nM, cited to another source; bosutinib is a Src/Abl inhibitor	secondary citation	passage read
+C6	Dasatinib inhibits ACK1	PMC4605435	Introduction	Kd 6 nM, cited to another source; BCR/Abl and Src family inhibitor	secondary citation	passage read
+C7	AIM-100 potency	PMC12935007 (review)	AIM-100 section	IC50 21.58 nM; first preclinical ACK1 inhibitor; kinome selectivity not given in passage read	review statement only	passage read
+C8	KRCA-0008 as an ACK1 chemotype	PMID 24095090	title only	title: potent selective ALK inhibitors; ACK1 data not seen	no	title only
+C9	Review calls (R)-9b ACK1-specific	PMC12935007	section on immune activation	authors characterise (R)-9b as ACK1-specific, avoiding off-target toxicity; stands against Table 3	statement verified, claim not supported by panel	passage read
+D1	Pharmacologic ACK1 inhibition measured on WWOX	Europe PMC searches (4 query variants)	n/a	no paper found	not located (perimeter: Europe PMC, 2015-2026)	titles/abstracts
+D2	ACK1 knockdown raises WWOX in HCC cells	PMID 25738261	abstract	knockdown of ACK1 resulted in upregulation of WWOX; ACK1 inversely correlated with WWOX in 150 HCC pairs by IHC	yes at abstract level; genetic not pharmacologic	abstract only
+D3	Later reviews restate ACK1 phosphorylates WWOX Tyr287 causing degradation	PMC12610808	ACK1 passage	restatement citing earlier work; ubiquitination site and E3 stated as unclear there	yes; citation not replication	passage read
