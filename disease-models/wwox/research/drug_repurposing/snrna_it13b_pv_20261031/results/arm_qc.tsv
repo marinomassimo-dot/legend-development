@@ -1,0 +1,3 @@
+arm	nuclei	duplicate_feature_names	median_UMI	mean_UMI	median_genes	doublet_flagged	other_unclassified	Wwox_UMI_total
+ctrl	3182	36	4770	5809	2186	955	101	2041
+ko	2920	36	4342	5705	2030	510	129	204

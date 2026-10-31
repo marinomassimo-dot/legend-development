@@ -1,0 +1,17 @@
+arm	class	n	median_UMI	mean_UMI	median_genes
+ctrl	inhibitory	80	5794	6483	2478
+ctrl	excitatory	970	5954	6640	2510
+ctrl	oligo	382	2740	2880	1462
+ctrl	astro	281	2323	2481	1342
+ctrl	opc	91	2329	2473	1367
+ctrl	micro	118	1102	1145	842
+ctrl	PV_B	12	8177	8016	3156
+ctrl	doublet	955	8236	9061	3009
+ko	inhibitory	125	6537	6561	2614
+ko	excitatory	1057	6376	7184	2508
+ko	oligo	70	3084	3195	1553
+ko	astro	275	2578	2872	1527
+ko	opc	182	2478	2513	1412
+ko	micro	146	1261	1406	964
+ko	PV_B	15	8390	9121	3050
+ko	doublet	510	9301	10237	3064

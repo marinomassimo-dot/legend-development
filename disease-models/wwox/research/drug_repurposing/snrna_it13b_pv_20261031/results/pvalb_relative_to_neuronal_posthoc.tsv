@@ -1,0 +1,3 @@
+denominator	pvalb_ctrl	pvalb_ko	den_ctrl	den_ko	ratio	log2	exact_lo	exact_hi
+Snap25	70	37	15329	15462	0.524	-0.93	0.342	0.791
+Gad1+Gad2	70	37	1727	1878	0.486	-1.04	0.317	0.734
