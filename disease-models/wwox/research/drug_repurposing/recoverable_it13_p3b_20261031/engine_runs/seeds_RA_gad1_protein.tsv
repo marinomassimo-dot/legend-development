@@ -1,0 +1,2 @@
+seed_id	gene	kind	members	direction	level	direction_status	readout_level	evidence_class	species	ortholog_map	source_ref	note	guard_tag
+RA:GAD1	GAD1	gene		up	1.0	defined	protein	protein_state	human		PMID34268881 (seed S115/S126)	GAD67 area per nucleus ~1.0 KO vs 0.2 WT; add-back ~0.1; transcript not normalised	

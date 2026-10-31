@@ -1,0 +1,9 @@
+id	date	route	query_or_action	result	use
+S1	2026-10-31	local	read census it6, function reference it6, recovery_it10_p23, coverage_it11_p21, question_it11_p22, product_it12_p1a, modifiers_it12_p1b READMEs and tables; analysis/downstream rescue census; loop2_recovery; seeds.tsv add-back rows	inventory RC1-RC7	step 1
+S2	2026-10-31	EBI BioStudies	GET api/v1/studies/E-MTAB-14792 and /info; FTP files path	HTTP 403, 403, 404 (no access-control bypass attempted)	gene-level add-back data remain locked
+S3	2026-10-31	Europe PMC REST	(WWOX OR Wwox) AND (rescue OR add-back OR re-expression OR gene therapy OR gene replacement OR AAV9 OR isogenic) AND (neuron* OR brain OR organoid* OR seizure* OR epilep*) AND FIRST_PDATE:[2025-06-01 TO 2026-10-31]	32 hits; titles screened: new WWOX recovery contrasts beyond 42422765, 42397075 and fly 42909904: none	completeness floor for the inventory (title screen only)
+S4	2026-10-31	Europe PMC REST	(WWOX OR Wwox) AND organoid/iPSC AND calcium imaging/firing/hyperexcit* AND NMDA/APV/memantine/TTX/silenc*	149 hits, none a WWOX-organoid compound arm on firing by title	supports 'none found' (not shown absent)
+S5	2026-10-31	Europe PMC REST	(WWOX OR Wwox) AND (BMP OR bone morphogenetic)	192 hits; 36572673 title: WWOX loss promotes TGFb/BMP2 signalling in pancreatic cancer	counter-evidence to C4 at title level
+S6	2026-10-31	Europe PMC REST	(WWOX OR Wwox) AND (memantine OR magnesium sulfate OR dextromethorphan OR ketamine)	57 hits; none an NMDAR drug in a WWOX system by title	C1 clinical-class analogue has no WWOX datum
+S7	2026-10-31	local engine	seed_engine_v4.py run on seeds_RA_gad1_protein.tsv and seeds_RB_layer_identity.tsv (--match total --junction on --nnull 500 --allow-mixed-levels)	RA 1 row; RB 127 rows; see README section 5	step 3
+S8	2026-10-31	local read	files/fulltext: 42397075 text layer + Fig 6 image; 42422765 XML; 34268881 XML	passages quoted in tables	step 2
