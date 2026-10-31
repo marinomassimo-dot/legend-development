@@ -1,6 +1,6 @@
 # NOTICE: sources, terms and credit lines
 
-Package of the LEGEND WWOX repurposing view, shareable edition. LOCAL PREVIEW for review: nothing in it has been published, and publication on any external surface is a decision of the operator.
+Package of the LEGEND WWOX repurposing view, shareable edition. Distributable edition. This file set is not itself a publication: a copy is public only where the operator has put it, and publication on any external surface is a decision of the operator. A reader who obtained these files from a web address is reading the operator's publication of them.
 Research material about a disease-level genotype class, not medical advice, not a ranking of treatments. Not legal advice: the terms below are the licence reading recorded in the repository (`catalog/README.md`, section Licence reconciliation, IT5 P1) as corrected by its independent verification of 2026-10-29.
 
 ## 1. Own text and computations

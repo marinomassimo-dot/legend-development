@@ -1,8 +1,8 @@
-# WWOX repurposing view: shareable package (local preview)
+# WWOX repurposing view: shareable package
 
 Research material at disease and reference-genotype level: what to study for WWOX-related epileptic encephalopathy, and on what evidence. Not medical advice, not a ranking of treatments, not a probability of benefit. The page is in Italian for the physician; scientific citations keep their original form.
 
-**Perimeter: this folder is a local preview. It has not been published anywhere, and publication on any external surface (a website, a repository change, an e-mail attachment to third parties) requires the operator's decision.**
+**Perimeter: this folder is the distributable edition. Its existence does not mean it is published: a copy is public only where the operator has put it, and publication on any external surface (a website, a repository change, an e-mail attachment to third parties) requires the operator's decision. A reader who obtained these files from a web address is reading the operator's publication of them. The page asks search engines not to index it (a robots meta tag); that is a request, not an access control.**
 
 ## Open it
 

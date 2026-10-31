@@ -4,7 +4,7 @@
   python3 -B framework/scripts/repurposing_view.py package [--zip PATH]     # (re)generate the folder, optionally a deterministic zip
   python3 -B framework/scripts/repurposing_view.py package --check          # exit 1 if the folder differs from a fresh build
 
-The folder is a LOCAL PREVIEW for review. Nothing here publishes anything: putting it on any external surface
+The folder is the distributable edition. Nothing here publishes anything: putting it on any external surface
 is a decision of the operator. Contents (all deterministic, no clock is read):
 
   index.html            the shareable view (same bytes as view/index_shareable.html)
@@ -163,7 +163,7 @@ def compare_payloads(F: dict, S: dict) -> dict:
 def notice_md(allow: dict, S: dict, man: dict) -> str:
     foot = S["cur"]["footer"]
     L = ["# NOTICE: sources, terms and credit lines", "",
-         "Package of the LEGEND WWOX repurposing view, shareable edition. LOCAL PREVIEW for review: nothing in it has been published, and publication on any external surface is a decision of the operator.",
+         "Package of the LEGEND WWOX repurposing view, shareable edition. Distributable edition. This file set is not itself a publication: a copy is public only where the operator has put it, and publication on any external surface is a decision of the operator. A reader who obtained these files from a web address is reading the operator's publication of them.",
          "Research material about a disease-level genotype class, not medical advice, not a ranking of treatments. Not legal advice: the terms below are the licence reading recorded in the repository (`catalog/README.md`, section Licence reconciliation, IT5 P1) as corrected by its independent verification of 2026-10-29.", "",
          "## 1. Own text and computations", "",
          "Cards, needs, priorities, positions (F/C/P), dispositions, counts and the Italian orientation texts were written or computed in this repository. Licence: the repository `LICENSE` (MIT), copied as `LICENSES/LEGEND-MIT.txt`. Credit: LEGEND WWOX repurposing module (this repository). The licence of the repository covers original text only; it does not cover third-party rows.", ""]
@@ -208,9 +208,9 @@ def notice_md(allow: dict, S: dict, man: dict) -> str:
 
 def readme_md(man: dict) -> str:
     return "\n".join([
-        "# WWOX repurposing view: shareable package (local preview)", "",
+        "# WWOX repurposing view: shareable package", "",
         "Research material at disease and reference-genotype level: what to study for WWOX-related epileptic encephalopathy, and on what evidence. Not medical advice, not a ranking of treatments, not a probability of benefit. The page is in Italian for the physician; scientific citations keep their original form.", "",
-        "**Perimeter: this folder is a local preview. It has not been published anywhere, and publication on any external surface (a website, a repository change, an e-mail attachment to third parties) requires the operator's decision.**", "",
+        "**Perimeter: this folder is the distributable edition. Its existence does not mean it is published: a copy is public only where the operator has put it, and publication on any external surface (a website, a repository change, an e-mail attachment to third parties) requires the operator's decision. A reader who obtained these files from a web address is reading the operator's publication of them. The page asks search engines not to index it (a robots meta tag); that is a request, not an access control.**", "",
         "## Open it", "",
         "Open `index.html` by double-click or from `file://`. It is one self-contained file (inline CSS and JavaScript, data embedded as JSON); it needs no server, loads nothing from the network and opens identically from any folder or from the unzipped archive. Links inside it go to the same page (`#...` anchors) or to public identifiers (PubMed, DOI, ChEMBL, source licence pages); none is a repository-relative path.", "",
         "Card export (print / PDF, standalone HTML download) and the comparison view work offline: use the buttons on a card profile, or the URL fragments `#export=<card id>`, `#brief=<card id>` (one A4 page per card) and `#compare=<id>,<id>`; the sections on selection, hypotheses and predictive test print on their own through `#section=selection`, `#section=hypotheses` and `#section=predictive`.", "",
@@ -304,7 +304,7 @@ def build_files(dr: Path, corpus_dirs: list[Path] | None = None, recompute_text:
     class_counts = Counter(r["class"] for r in rep.rules.values())
     embedded_sources = [dict(e) for e in PS["cur"]["footer"]["embedded"]]
     man = {
-        "schema": SCHEMA, "generator": COMMAND, "perimeter": "local preview; not published; publication on any external surface needs the operator's decision",
+        "schema": SCHEMA, "generator": COMMAND, "perimeter": "distributable edition; publication on any external surface needs the operator's decision; the page carries a noindex,nofollow robots meta tag",
         "data": {"data_date": meta["data_date"], "catalogue_generated": meta["catalogue_generated"], "dgidb_export": meta["dgidb_export"], "view_schema": rv.SCHEMA},
         "embedded_sources": embedded_sources,
         "embedded_field_classes": {k: sum(r["values"] for r in rep.rules.values() if r["class"] == k) for k in sorted(class_counts)},

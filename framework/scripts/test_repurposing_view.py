@@ -888,7 +888,16 @@ class ShareableAudit(unittest.TestCase):
         for rel, spec in man["files"].items():
             self.assertEqual(spec["sha256"], self.pk.sha(files[rel]), rel)
         notice = files["NOTICE.md"].decode()
-        self.assertIn("LOCAL PREVIEW", notice)
+        # IT11 P5: the package must be true both before and after the operator publishes it, so it carries no "local preview / not published" claim.
+        self.assertIn("is not itself a publication", notice)
+        for name in ("NOTICE.md", "README.md"):
+            low = files[name].decode().lower()
+            self.assertNotIn("local preview", low, name)
+            self.assertNotIn("has not been published", low, name)
+        self.assertNotIn("local preview", man["perimeter"].lower())
+        # the indexing choice is explicit: the shareable page asks crawlers not to index it; the full local view says nothing
+        self.assertEqual(files["index.html"].decode().count('<meta name="robots" content="noindex,nofollow">'), 1)
+        self.assertNotIn('name="robots"', (DR / "view/index.html").read_text(encoding="utf-8")[:4000])
         self.assertIn("not legal advice", notice.lower())
         for lab in ("CIViC", "DoCM", "openFDA"):
             self.assertIn(lab, notice)
@@ -2003,7 +2012,7 @@ class It7P7Deployment(unittest.TestCase):
         self.assertNotEqual(self.pk.deploy_text(DR, files), self.text)    # mutation: a changed byte makes the table stale
 
     def test_workflow_is_a_manual_only_proposal_outside_github_dir(self):
-        self.assertIn("PROPOSAL ONLY", self.wf)
+        self.assertIn("it is a PROPOSAL", self.wf)      # IT11 P5: the header is true at both paths
         on = re.search(r"^on:\n((?:  .*\n)+)", self.wf, re.M).group(1)
         self.assertEqual([l.strip() for l in on.splitlines() if l.strip()], ["workflow_dispatch:"])
         for bad in ("push", "schedule", "pull_request", "workflow_run"):
@@ -2019,6 +2028,16 @@ class It7P7Deployment(unittest.TestCase):
         self.assertIn("DEPLOY_DOC", self.wf)      # the verify job also checks manifest.json, against the table of DEPLOY.md
         tracked = subprocess.run(["git", "-C", str(DR), "ls-files", "--full-name", "../../../../.github"], capture_output=True, text=True).stdout.split()
         self.assertEqual(tracked, [".github/workflows/public-release-gate.yml"])      # nothing was added under .github
+
+    def test_smoke_job_is_read_only_runs_after_deploy_and_compares_the_live_digest(self):
+        """IT11 P5: after the deployment the live page is fetched and compared with the package file; the job holds no write permission."""
+        sm = self.wf[self.wf.index("  smoke:"):]
+        self.assertIn("needs: deploy", sm)
+        self.assertNotIn("pages: write", sm)
+        self.assertNotIn("id-token", sm)
+        self.assertIn("sha256sum", sm)
+        self.assertIn("needs.deploy.outputs.page_url", sm)
+        self.assertIn("page_url: ${{ steps.deployment.outputs.page_url }}", self.wf)
 
     def test_document_states_destinations_rollback_preconditions_and_the_reserved_decision(self):
         for h in ("## 1. What is deployed", "## 2. Proposed destinations", "## 4. The exact file set and hashes", "## 5. Reproducible build and check", "## 6. Modifications needed",
