@@ -8,7 +8,7 @@
  "START_UTC": "2026-10-31T17:40:00Z",
  "BASELINE": "dbc8e7c3e7586187aeb827abeb7eb59cc01ae0a5 = development/main (verified equal after fetch; CI success on that SHA)",
  "AUTHORISED_QUEUE_20261031D": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P0_BASELINE": {
    "order": 1,
    "steps": [
@@ -40,6 +40,12 @@
      "status": "DONE",
      "owner": "scientist",
      "evidence": "ack1_probes_it13_p15_20261031; the 2024 Aurora B report read at abstract level only"
+    },
+    {
+     "step": "P1 registry identity of the Mahajan read (BATCH_COMMIT)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "PAPER 569 appended and status-normalised through record_scoped_edit.py; BATCH_20261019_032; growth anchors recorded; test_batch_queue identity check green"
     }
    ]
   },
@@ -87,10 +93,22 @@
    "order": 5,
    "steps": [
     {
-     "step": "Hostile review, battery on an immutable tree, landing, push, CI, cleanup",
-     "status": "TODO",
+     "step": "Hostile review by a different agent",
+     "status": "DONE",
+     "owner": "scientist",
+     "evidence": "review_it13_20261031: no blocking defect; medium findings corrected before the final battery"
+    },
+    {
+     "step": "Final battery on an immutable tree",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "pending"
+     "evidence": "clone --no-hardlinks of 6bced924e113086e131ab2df8c09644352b8e430; REGRESSION VERDICT: PASS WITH SKIPS (172 targets, 7 skipped: case-sensitive filesystem, absent corpus artefacts x3, derive_dismech corpus, Stop hook not installed). Two earlier batteries failed and were repaired (view not regenerated after a reason-class edit; READ_NOT_REGISTERED for PMID 16288044; trigger-count and zygosity assertions; pathograph drift; work-order text with a repository path and the word scorer)."
+    },
+    {
+     "step": "Landing, push, CI, cleanup",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "main fast-forwarded in the root checkout; agent worktrees and integrated branches removed (rev13 only after its unique report was preserved in main); push and CI recorded in the final report"
     }
    ]
   }

@@ -1,6 +1,6 @@
 # Session self-evaluation: iteration 13 (ORCH-ROADMAP-IT13-20261031), 2026-10-31
 
-Part 1 (executable): `session_self_eval.py` (VERDICT PASS; the declared gaps and ratchets listed are pre-existing manifests, none from this iteration), `fulltext_receipts.py verify` (931 chained receipts, tail anchored), `deepdive_manifest.py` strict on PMID 16288044 (PASS), `legend_lint.py` (WARN, no BLOCK), `public_release_gate.py` (PASS, 0 BLOCK), `growth_anchors.py check` (PASS), `ranking_it8.py check`, `needs/check_needs.py`, both `check_cards.py`, `repurposing_view.py check`, `package --check` and `audit-shareable --dynamic` (all current / PASS). The full release battery on the final tree is in the closing record and the final report.
+Part 1 (executable): `session_self_eval.py` (VERDICT PASS; the declared gaps and ratchets listed are pre-existing manifests, none from this iteration), `fulltext_receipts.py verify` (931 chained receipts, tail anchored), `deepdive_manifest.py` strict on PMID 16288044 (PASS), `legend_lint.py` (WARN, no BLOCK), `public_release_gate.py` (PASS, 0 BLOCK), `growth_anchors.py check` (PASS), `ranking_it8.py check`, `needs/check_needs.py`, both `check_cards.py`, `repurposing_view.py check`, `package --check` and `audit-shareable --dynamic` (all current / PASS). The full release battery on the final tree: clone of 6bced924, PASS WITH SKIPS (172 targets, 7 skipped); two earlier batteries failed and were repaired (see the mandate record).
 
 Part 2 (judgement; process graded apart from outcome):
 
