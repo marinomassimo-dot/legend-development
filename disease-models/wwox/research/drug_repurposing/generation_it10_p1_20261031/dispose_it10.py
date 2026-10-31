@@ -325,6 +325,10 @@ def explain_columns(contrib_rows, level):
     if t and float(top["contrib_hops1to3"] or 0) != 0:
         g = _graph(level)
         nw, bsh, cw = _ENG.walk_summary(g.walks(t, top["gene"]))
+    h0 = abs(float(top["contrib_hop0"] or 0)); h13 = abs(float(top["contrib_hops1to3"] or 0))
+    if h0 >= h13 and h0 > 0:                      # the strongest seed is reached mostly by the compound's own target: there is no chain to show
+        return (f"DIRECT_OR_MIXED: hop-0 (the compound's own target is the seed gene) carries {h0 / (h0 + h13):.0%} of the strongest seed's contribution; walk columns describe only the indirect part",
+                f"{top_share:.3f}", f"{contrary:.3f}", "", "", "")
     reasons = []
     if top_share < 0.5:
         reasons.append(f"strongest seed carries {top_share:.0%} of the gross contribution")

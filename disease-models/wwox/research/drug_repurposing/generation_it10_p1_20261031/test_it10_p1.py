@@ -177,7 +177,44 @@ class ExplainsTheCalculation(unittest.TestCase):
             v4.JUNCTION = old
 
     def contrib(self, vals):
-        return [dict(contrib_total=str(v), main_target_hops1to3="", main_target_hop0="", contrib_hops1to3="0", gene="G%d" % i) for i, v in enumerate(vals)]
+        return [dict(contrib_total=str(v), main_target_hops1to3="", main_target_hop0="", contrib_hop0="0", contrib_hops1to3=str(v), gene="G%d" % i) for i, v in enumerate(vals)]
+
+    def test_a_direct_hit_is_not_called_a_dominant_chain(self):
+        rows = [dict(contrib_total="1.0", main_target_hops1to3="", main_target_hop0="MYC", contrib_hop0="1.0", contrib_hops1to3="0", gene="MYC")]
+        note = dz.explain_columns(rows, "expression")[0]
+        self.assertTrue(note.startswith("DIRECT_OR_MIXED"), note)
+        mixed = [dict(contrib_total="1.0", main_target_hops1to3="X", main_target_hop0="MYC", contrib_hop0="0.7", contrib_hops1to3="0.3", gene="MYC")]
+        self.assertTrue(dz.explain_columns(mixed, "expression")[0].startswith("DIRECT_OR_MIXED"))
+
+    def test_walk_sum_equals_influence_on_random_pairs_every_regime(self):
+        """review finding: a walk may pass through the seed and return; the matrix power counts it, so must walks()."""
+        import random
+        rng = random.Random(5)
+        for lvl in ("expression", "protein"):
+            for junction in (True, False):
+                g = v4.Graph4(v4.read_edges4(), extras=[]); g.level = lvl
+                old = v4.JUNCTION; v4.JUNCTION = junction
+                try:
+                    genes = [x for x in g.syms[:g.Ng]]
+                    S = np.zeros((1, g.N)); bad = 0; n = 0
+                    for _ in range(60):
+                        t, sd = rng.choice(genes), rng.choice(genes)
+                        S[:] = 0; S[0, g.idx[sd]] = 1.0
+                        inf = float(g.influence_ind(S)[0, g.idx[t]])
+                        w = sum(v for _, v in g.walks(t, sd))
+                        n += 1
+                        if abs(inf - w) > 1e-12:
+                            bad += 1
+                    self.assertEqual(bad, 0, f"{lvl} junction={junction}: {bad} of {n} pairs differ")
+                finally:
+                    v4.JUNCTION = old
+
+    def test_a_walk_that_passes_through_the_seed_is_counted(self):
+        e = [("T", "S", 1, "T", True, True), ("S", "S2", 1, "P", True, True), ("S2", "S", 1, "T", True, True)]
+        g = v4.Graph4(e, extras=[]); g.level = "expression"
+        S = np.zeros((1, g.N)); S[0, g.idx["S"]] = 1.0
+        w = g.walks("T", "S")
+        self.assertAlmostEqual(sum(v for _, v in w), float(g.influence_ind(S)[0, g.idx["T"]]))
 
     def test_one_dominant_seed_is_a_dominant_chain(self):
         self.assertEqual(dz.explain_columns(self.contrib([1.0, 0.01]), "expression")[0], "DOMINANT_CHAIN")
