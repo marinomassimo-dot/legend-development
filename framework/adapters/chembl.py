@@ -75,6 +75,9 @@ def _targets_for_accession(accession: str, out: dict, fetch) -> bool:
     return True
 
 
+PROTEIN_TYPES = ("SINGLE PROTEIN", "PROTEIN COMPLEX", "PROTEIN COMPLEX GROUP", "PROTEIN FAMILY", "SELECTIVITY GROUP", "PROTEIN-PROTEIN INTERACTION", "CHIMERIC PROTEIN")      # a protein-type target with no component symbol is UNKNOWN (null), not 'non-gene'
+
+
 def _target_genes(rows: list, out: dict, fetch) -> dict:
     """target_chembl_id -> {target_type, gene_symbols, non_gene_target}, from the target endpoint in batches of 40 (the pattern used for assays).
     A function-to-compound query across heteromeric or complex targets needs the gene symbols of the components; a placeholder target ('Unchecked',
@@ -93,7 +96,7 @@ def _target_genes(rows: list, out: dict, fetch) -> dict:
                            if syn.get("syn_type") == "GENE_SYMBOL" and syn.get("component_synonym")})
             ttype = t.get("target_type")
             found[t.get("target_chembl_id")] = {"target_type": ttype, "gene_symbols": syms or None,
-                                                "non_gene_target": not syms}
+                                                "non_gene_target": (False if syms else (None if str(ttype or "").upper() in PROTEIN_TYPES else True))}
     return found
 
 

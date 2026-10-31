@@ -8,7 +8,7 @@ The limit that slowed IT13 and IT14 was a **join**, not a source: ChEMBL activit
 
 ## What was changed
 
-* `framework/adapters/chembl.py`: `_target_genes` and three added fields; a failed target lookup is declared in `note` and keeps the fields null (never read as 'no gene'); a target without a gene symbol (a placeholder 'Unchecked', a cell line, an organism) is flagged `non_gene_target` with null symbols.
+* `framework/adapters/chembl.py`: `_target_genes` and three added fields; a failed target lookup is declared in `note` and keeps the fields null (never read as 'no gene'); a target without a gene symbol that is not a protein type (a placeholder 'Unchecked', a cell line, an organism) is flagged `non_gene_target=true` with null symbols; a protein-type target with no component symbol (for example a protein family) stays null (unknown). IT14 review correction: a complex target copies every component symbol onto the row, so '11 of 15 declared genes reached' counts potency measured on a complex as reached for each member, which is a coverage statement and not a per-member potency.
 * `framework/scripts/test_repurposing_adapter.py`: two regressions on behaviour actually introduced (component gene symbols and flagged placeholder; failed lookup declared, rows keep null genes) and the fixture extended. 30 tests, OK. The adapter selftest is green offline. The three protected behaviours are untouched: nothing here transfers evidence between molecules, counts one origin twice or turns an unknown into a negative (an unresolved target stays null).
 
 ## Measured value (declared set of IT14 P6; live ChEMBL REST, 2026-11-01; the five compounds with a ChEMBL identity in `declared_set.tsv`)

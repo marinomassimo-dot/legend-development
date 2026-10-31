@@ -286,7 +286,8 @@ class ChemblActivities(unittest.TestCase):
                 return 200, {"targets": [{"target_chembl_id": "CHEMBL1904", "target_type": "PROTEIN COMPLEX", "pref_name": "Glutamate NMDA receptor",
                                           "target_components": [{"target_component_synonyms": [{"syn_type": "GENE_SYMBOL", "component_synonym": "GRIN1"}]},
                                                                 {"target_component_synonyms": [{"syn_type": "GENE_SYMBOL", "component_synonym": "GRIN2A"}]}]},
-                                         {"target_chembl_id": "CHEMBL612545", "target_type": "UNCHECKED", "pref_name": "Unchecked", "target_components": []}]}
+                                         {"target_chembl_id": "CHEMBL612545", "target_type": "UNCHECKED", "pref_name": "Unchecked", "target_components": []},
+                                         {"target_chembl_id": "CHEMBL2093872", "target_type": "PROTEIN FAMILY", "pref_name": "GABA-A receptor", "target_components": []}]}
             if "target.json" in url:
                 return 200, {"targets": [{"target_chembl_id": "CHEMBL1904", "target_type": "SINGLE PROTEIN", "organism": "Homo sapiens",
                                           "target_components": [{"accession": "Q13224"}]},
@@ -330,6 +331,14 @@ class ChemblActivities(unittest.TestCase):
             return status, payload
         h = ra.load("chembl", ADAPTERS).query({"target": "CHEMBL1904"}, fetch=fetch)["hits"][0]
         self.assertEqual((h["target_gene_symbols"], h["non_gene_target"]), (None, True))      # a placeholder target is flagged, not read as 'no gene'
+        def fetch_family(url, params=None, body=None, timeout=20):
+            status, payload = base(url, params, body, timeout)
+            if "activity.json" in url and status == 200:
+                payload = dict(payload, activities=[dict(a, target_chembl_id="CHEMBL2093872") for a in payload["activities"]])
+            return status, payload
+        h = ra.load("chembl", ADAPTERS).query({"target": "CHEMBL1904"}, fetch=fetch_family)["hits"][0]
+        self.assertEqual((h["target_type"], h["target_gene_symbols"], h["non_gene_target"]), ("PROTEIN FAMILY", None, None))      # a protein family without component symbols is unknown, not 'non-gene'
+
 
     def test_target_lookup_failure_is_declared_and_rows_keep_null_genes(self):
         base = self._fetch()
