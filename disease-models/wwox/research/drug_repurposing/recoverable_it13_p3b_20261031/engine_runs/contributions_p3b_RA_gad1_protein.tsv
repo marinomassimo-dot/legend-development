@@ -1,0 +1,2 @@
+family_id	unit_id	seed_id	gene	seed_direction	level	readout_level	direction_status	contrib_hop0	contrib_hops1to3	contrib_total	guard_tag	main_target_hop0	main_target_hops1to3
+FAM:CAT:DGIDB:b78f2077f6f4	RA:GAD1:GAD1	RA:GAD1	GAD1	up	1.0000	protein	defined	0.707107	0	0.707107		GAD1	

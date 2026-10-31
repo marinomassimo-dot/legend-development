@@ -1,0 +1,3 @@
+cd disease-models/wwox/research/drug_repurposing
+python3 generation_it10_p1_20261031/engine_v4/seed_engine_v4.py run --seeds recoverable_it13_p3b_20261031/engine_runs/seeds_RB_layer_identity.tsv --actions generation_it9_p2_20261030/v3/results/actions --label p3b_RB_layer_identity --out recoverable_it13_p3b_20261031/engine_runs --match total --mode v3 --junction on --nnull 500 --top 3500 --allow-mixed-levels
+(same with seeds_RA_gad1_protein.tsv, label p3b_RA_gad1_protein). Single-seed and two-seed sets: z-scores are null-floor artefacts, see README section 5.

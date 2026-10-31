@@ -1,0 +1,3 @@
+seed_id	gene	kind	members	direction	level	direction_status	readout_level	evidence_class	species	ortholog_map	source_ref	note	guard_tag
+RB:BCL11B	BCL11B	gene		down	1.0	defined	expression	transcript_contrast	human		PMID42397075 Fig6B/S10A-B	CTIP2 fraction and qPCR lower in WOREE than WT; add-back raises (WOREE only)	
+RB:SATB2	SATB2	gene		down	1.0	defined	expression	transcript_contrast	human		PMID42397075 Fig6B/S10A-B	SATB2 fraction/qPCR lower in WOREE; add-back raises, above WT by fraction (overshoot)	
