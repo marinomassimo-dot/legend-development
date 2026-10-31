@@ -1,0 +1,850 @@
+{
+ "ctrl": {
+  "n_dup_symbols": 35,
+  "dups": {
+   "Sept2": {
+    "ids": [
+     "ENSMUSG00000026276",
+     "ENSMUSG00000116048"
+    ],
+    "umi": [
+     9,
+     0
+    ],
+    "decisive": false
+   },
+   "Kiss1": {
+    "ids": [
+     "ENSMUSG00000115958",
+     "ENSMUSG00000116158"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Zc3h11a": {
+    "ids": [
+     "ENSMUSG00000102976",
+     "ENSMUSG00000116275"
+    ],
+    "umi": [
+     2,
+     0
+    ],
+    "decisive": false
+   },
+   "Gm16701": {
+    "ids": [
+     "ENSMUSG00000102548",
+     "ENSMUSG00000097823"
+    ],
+    "umi": [
+     73,
+     2
+    ],
+    "decisive": false
+   },
+   "Hoxd4": {
+    "ids": [
+     "ENSMUSG00000101174",
+     "ENSMUSG00000115956"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Gm2464": {
+    "ids": [
+     "ENSMUSG00000102215",
+     "ENSMUSG00000097338"
+    ],
+    "umi": [
+     14,
+     16
+    ],
+    "decisive": false
+   },
+   "Vmn2r7": {
+    "ids": [
+     "ENSMUSG00000116028",
+     "ENSMUSG00000062200"
+    ],
+    "umi": [
+     0,
+     45
+    ],
+    "decisive": false
+   },
+   "Ccl21b": {
+    "ids": [
+     "ENSMUSG00000095675",
+     "ENSMUSG00000094121"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Il11ra2": {
+    "ids": [
+     "ENSMUSG00000078735",
+     "ENSMUSG00000095456",
+     "ENSMUSG00000095623"
+    ],
+    "umi": [
+     0,
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Ccl19": {
+    "ids": [
+     "ENSMUSG00000071005",
+     "ENSMUSG00000094661"
+    ],
+    "umi": [
+     1,
+     0
+    ],
+    "decisive": false
+   },
+   "Ccl21a": {
+    "ids": [
+     "ENSMUSG00000094686",
+     "ENSMUSG00000095320"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Gm28710": {
+    "ids": [
+     "ENSMUSG00000109903",
+     "ENSMUSG00000099854"
+    ],
+    "umi": [
+     5,
+     0
+    ],
+    "decisive": false
+   },
+   "Jakmip1": {
+    "ids": [
+     "ENSMUSG00000063646",
+     "ENSMUSG00000113373"
+    ],
+    "umi": [
+     3226,
+     0
+    ],
+    "decisive": false
+   },
+   "Gm3286": {
+    "ids": [
+     "ENSMUSG00000079423",
+     "ENSMUSG00000094337"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Gm16499": {
+    "ids": [
+     "ENSMUSG00000108175",
+     "ENSMUSG00000108255"
+    ],
+    "umi": [
+     71,
+     0
+    ],
+    "decisive": false
+   },
+   "Zfp865": {
+    "ids": [
+     "ENSMUSG00000074405",
+     "ENSMUSG00000116184"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Olfr290": {
+    "ids": [
+     "ENSMUSG00000070459",
+     "ENSMUSG00000116179"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Aldoa": {
+    "ids": [
+     "ENSMUSG00000030695",
+     "ENSMUSG00000114515"
+    ],
+    "umi": [
+     1377,
+     8
+    ],
+    "decisive": false
+   },
+   "Dpep2": {
+    "ids": [
+     "ENSMUSG00000053687",
+     "ENSMUSG00000115067"
+    ],
+    "umi": [
+     0,
+     8
+    ],
+    "decisive": false
+   },
+   "St6galnac2": {
+    "ids": [
+     "ENSMUSG00000057286",
+     "ENSMUSG00000110170"
+    ],
+    "umi": [
+     44,
+     0
+    ],
+    "decisive": false
+   },
+   "Hgs": {
+    "ids": [
+     "ENSMUSG00000116045",
+     "ENSMUSG00000025793"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Vmn1r216": {
+    "ids": [
+     "ENSMUSG00000115697",
+     "ENSMUSG00000116057"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Nnt": {
+    "ids": [
+     "ENSMUSG00000025453",
+     "ENSMUSG00000116207"
+    ],
+    "umi": [
+     1,
+     0
+    ],
+    "decisive": false
+   },
+   "Gm35558": {
+    "ids": [
+     "ENSMUSG00000113702",
+     "ENSMUSG00000113781"
+    ],
+    "umi": [
+     3,
+     20
+    ],
+    "decisive": false
+   },
+   "Ighv5-8": {
+    "ids": [
+     "ENSMUSG00000103262",
+     "ENSMUSG00000090395"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Ighv1-13": {
+    "ids": [
+     "ENSMUSG00000090765",
+     "ENSMUSG00000102587"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Gcat": {
+    "ids": [
+     "ENSMUSG00000006378",
+     "ENSMUSG00000116378"
+    ],
+    "umi": [
+     0,
+     2
+    ],
+    "decisive": false
+   },
+   "Pick1": {
+    "ids": [
+     "ENSMUSG00000068206",
+     "ENSMUSG00000116121"
+    ],
+    "umi": [
+     1,
+     23
+    ],
+    "decisive": false
+   },
+   "Atp5o": {
+    "ids": [
+     "ENSMUSG00000116933",
+     "ENSMUSG00000022956"
+    ],
+    "umi": [
+     1348,
+     64
+    ],
+    "decisive": false
+   },
+   "Pcdha11": {
+    "ids": [
+     "ENSMUSG00000007440",
+     "ENSMUSG00000102206"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Nudt8": {
+    "ids": [
+     "ENSMUSG00000110949",
+     "ENSMUSG00000024869"
+    ],
+    "umi": [
+     0,
+     152
+    ],
+    "decisive": false
+   },
+   "Lbhd1": {
+    "ids": [
+     "ENSMUSG00000096740",
+     "ENSMUSG00000116166"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Ints5": {
+    "ids": [
+     "ENSMUSG00000116347",
+     "ENSMUSG00000071652"
+    ],
+    "umi": [
+     0,
+     53
+    ],
+    "decisive": false
+   },
+   "Ccl21c": {
+    "ids": [
+     "ENSMUSG00000096271",
+     "ENSMUSG00000096873"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Ccl27": {
+    "ids": [
+     "ENSMUSG00000095247",
+     "ENSMUSG00000093828"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   }
+  },
+  "decisive_dups": [],
+  "decisive_genes_absent": [],
+  "decisive_idinfo": {},
+  "pseudobulk_per10k": {
+   "Pvalb": 0.03787319092616778,
+   "Sst": 0.12011211979441783,
+   "Vip": 0.03787319092616778,
+   "Lhx6": 0.0422015556034441,
+   "Wwox": 1.1042740382901206,
+   "Mbp": 6.64187559728051,
+   "Plp1": 3.924203625535642,
+   "Pdgfra": 0.14662335344273528,
+   "Cspg4": 0.08873147588416451,
+   "Gad1": 0.4636760660532256,
+   "Gad2": 0.4707096586537996,
+   "Snap25": 8.293687767246086,
+   "Slc17a7": 1.383453559974443,
+   "Aqp4": 0.2537503792053241,
+   "Csf1r": 0.16393681215184056,
+   "Nnat": 1.5425209618643478,
+   "Dcx": 0.5870344593556006,
+   "Sox11": 0.3376124448275528,
+   "OLG_panel_noMbpPlp1": 7.458854430116415,
+   "OPC_panel": 3.67965102126953,
+   "newOL_post_hoc": 4.652450982487382,
+   "matureOL_post_hoc": 4.274260118810364
+  },
+  "sens_first": {},
+  "sens_sum": {},
+  "sens_last": {},
+  "sens_max": {},
+  "sens_lowid": {}
+ },
+ "ko": {
+  "n_dup_symbols": 35,
+  "dups": {
+   "Sept2": {
+    "ids": [
+     "ENSMUSG00000026276",
+     "ENSMUSG00000116048"
+    ],
+    "umi": [
+     14,
+     0
+    ],
+    "decisive": false
+   },
+   "Kiss1": {
+    "ids": [
+     "ENSMUSG00000115958",
+     "ENSMUSG00000116158"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Zc3h11a": {
+    "ids": [
+     "ENSMUSG00000102976",
+     "ENSMUSG00000116275"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Gm16701": {
+    "ids": [
+     "ENSMUSG00000102548",
+     "ENSMUSG00000097823"
+    ],
+    "umi": [
+     62,
+     1
+    ],
+    "decisive": false
+   },
+   "Hoxd4": {
+    "ids": [
+     "ENSMUSG00000101174",
+     "ENSMUSG00000115956"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Gm2464": {
+    "ids": [
+     "ENSMUSG00000102215",
+     "ENSMUSG00000097338"
+    ],
+    "umi": [
+     16,
+     19
+    ],
+    "decisive": false
+   },
+   "Vmn2r7": {
+    "ids": [
+     "ENSMUSG00000116028",
+     "ENSMUSG00000062200"
+    ],
+    "umi": [
+     0,
+     33
+    ],
+    "decisive": false
+   },
+   "Ccl21b": {
+    "ids": [
+     "ENSMUSG00000095675",
+     "ENSMUSG00000094121"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Il11ra2": {
+    "ids": [
+     "ENSMUSG00000078735",
+     "ENSMUSG00000095456",
+     "ENSMUSG00000095623"
+    ],
+    "umi": [
+     0,
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Ccl19": {
+    "ids": [
+     "ENSMUSG00000071005",
+     "ENSMUSG00000094661"
+    ],
+    "umi": [
+     2,
+     0
+    ],
+    "decisive": false
+   },
+   "Ccl21a": {
+    "ids": [
+     "ENSMUSG00000094686",
+     "ENSMUSG00000095320"
+    ],
+    "umi": [
+     1,
+     0
+    ],
+    "decisive": false
+   },
+   "Gm28710": {
+    "ids": [
+     "ENSMUSG00000109903",
+     "ENSMUSG00000099854"
+    ],
+    "umi": [
+     4,
+     0
+    ],
+    "decisive": false
+   },
+   "Jakmip1": {
+    "ids": [
+     "ENSMUSG00000063646",
+     "ENSMUSG00000113373"
+    ],
+    "umi": [
+     2186,
+     0
+    ],
+    "decisive": false
+   },
+   "Gm3286": {
+    "ids": [
+     "ENSMUSG00000079423",
+     "ENSMUSG00000094337"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Gm16499": {
+    "ids": [
+     "ENSMUSG00000108175",
+     "ENSMUSG00000108255"
+    ],
+    "umi": [
+     45,
+     0
+    ],
+    "decisive": false
+   },
+   "Zfp865": {
+    "ids": [
+     "ENSMUSG00000074405",
+     "ENSMUSG00000116184"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Olfr290": {
+    "ids": [
+     "ENSMUSG00000070459",
+     "ENSMUSG00000116179"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Aldoa": {
+    "ids": [
+     "ENSMUSG00000030695",
+     "ENSMUSG00000114515"
+    ],
+    "umi": [
+     1810,
+     5
+    ],
+    "decisive": false
+   },
+   "Dpep2": {
+    "ids": [
+     "ENSMUSG00000053687",
+     "ENSMUSG00000115067"
+    ],
+    "umi": [
+     0,
+     3
+    ],
+    "decisive": false
+   },
+   "St6galnac2": {
+    "ids": [
+     "ENSMUSG00000057286",
+     "ENSMUSG00000110170"
+    ],
+    "umi": [
+     43,
+     0
+    ],
+    "decisive": false
+   },
+   "Hgs": {
+    "ids": [
+     "ENSMUSG00000116045",
+     "ENSMUSG00000025793"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Vmn1r216": {
+    "ids": [
+     "ENSMUSG00000115697",
+     "ENSMUSG00000116057"
+    ],
+    "umi": [
+     2,
+     0
+    ],
+    "decisive": false
+   },
+   "Nnt": {
+    "ids": [
+     "ENSMUSG00000025453",
+     "ENSMUSG00000116207"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Gm35558": {
+    "ids": [
+     "ENSMUSG00000113702",
+     "ENSMUSG00000113781"
+    ],
+    "umi": [
+     5,
+     11
+    ],
+    "decisive": false
+   },
+   "Ighv5-8": {
+    "ids": [
+     "ENSMUSG00000103262",
+     "ENSMUSG00000090395"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Ighv1-13": {
+    "ids": [
+     "ENSMUSG00000090765",
+     "ENSMUSG00000102587"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Gcat": {
+    "ids": [
+     "ENSMUSG00000006378",
+     "ENSMUSG00000116378"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Pick1": {
+    "ids": [
+     "ENSMUSG00000068206",
+     "ENSMUSG00000116121"
+    ],
+    "umi": [
+     1,
+     11
+    ],
+    "decisive": false
+   },
+   "Atp5o": {
+    "ids": [
+     "ENSMUSG00000116933",
+     "ENSMUSG00000022956"
+    ],
+    "umi": [
+     778,
+     26
+    ],
+    "decisive": false
+   },
+   "Pcdha11": {
+    "ids": [
+     "ENSMUSG00000007440",
+     "ENSMUSG00000102206"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Nudt8": {
+    "ids": [
+     "ENSMUSG00000110949",
+     "ENSMUSG00000024869"
+    ],
+    "umi": [
+     0,
+     158
+    ],
+    "decisive": false
+   },
+   "Lbhd1": {
+    "ids": [
+     "ENSMUSG00000096740",
+     "ENSMUSG00000116166"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Ints5": {
+    "ids": [
+     "ENSMUSG00000116347",
+     "ENSMUSG00000071652"
+    ],
+    "umi": [
+     0,
+     65
+    ],
+    "decisive": false
+   },
+   "Ccl21c": {
+    "ids": [
+     "ENSMUSG00000096271",
+     "ENSMUSG00000096873"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   },
+   "Ccl27": {
+    "ids": [
+     "ENSMUSG00000095247",
+     "ENSMUSG00000093828"
+    ],
+    "umi": [
+     0,
+     0
+    ],
+    "decisive": false
+   }
+  },
+  "decisive_dups": [],
+  "decisive_genes_absent": [],
+  "decisive_idinfo": {},
+  "pseudobulk_per10k": {
+   "Pvalb": 0.02221230606180436,
+   "Sst": 0.21551940205912878,
+   "Vip": 0.08164523309203765,
+   "Lhx6": 0.037820953564693914,
+   "Wwox": 0.12246784963805647,
+   "Mbp": 2.014716193065282,
+   "Plp1": 1.356751667558861,
+   "Pdgfra": 0.2959639699586365,
+   "Cspg4": 0.2059140805188891,
+   "Gad1": 0.5655133056816137,
+   "Gad2": 0.5619113101040238,
+   "Snap25": 9.282342603449163,
+   "Slc17a7": 1.0830000036620289,
+   "Aqp4": 0.16629212916540023,
+   "Csf1r": 0.17829878109069985,
+   "Nnat": 2.5430088777784667,
+   "Dcx": 0.8488702911186856,
+   "Sox11": 0.6849794923383452,
+   "OLG_panel_noMbpPlp1": 2.648667414721104,
+   "OPC_panel": 5.289530505690762,
+   "newOL_post_hoc": 4.3746236289829294,
+   "matureOL_post_hoc": 1.5710704044254598
+  },
+  "sens_first": {},
+  "sens_sum": {},
+  "sens_last": {},
+  "sens_max": {},
+  "sens_lowid": {}
+ }
+}
