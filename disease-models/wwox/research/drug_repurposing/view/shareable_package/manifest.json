@@ -18,7 +18,7 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 10972,
+    "values": 10976,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -223,7 +223,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 2883,
+    "forbidden-name": 2885,
     "forbidden-wording": 12
    },
    "co_attested_wording": [
@@ -462,7 +462,7 @@
   "BIBLIO": 2397,
   "COUNT": 11599,
   "ID": 4547,
-  "OWN": 82586,
+  "OWN": 82590,
   "ROWNAME": 2251,
   "SRC_A": 189,
   "SRC_META": 256,
@@ -544,8 +544,8 @@
    "sha256": "240723d6c86c13fc8f19ff2a5bbe7eec5e64da0f3769ea25e49d8d7b7e5784d0"
   },
   "index.html": {
-   "bytes": 4165063,
-   "sha256": "5765a1e56045f66d71c252c03379893e884e9e13fb73832939b6addf8b2fa2b8"
+   "bytes": 4166016,
+   "sha256": "076593de448a4d7a6ff3bce060977d740c4e25b046400064d5aba51e31aa45a0"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",

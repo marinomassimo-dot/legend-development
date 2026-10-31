@@ -247,7 +247,7 @@
     "surface": "rendered_text",
     "artifact": "files/figures/PMID16288044/page6-06.png",
     "anchor": "Results, 'Ack1 associates with the tumor suppressor Wwox', Fig 5D 2 lane 3",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_confirmed_by_panel"
    },
    {
     "proposition": "M1b: Wwox polyubiquitination is seen with caAck in the same overexpression system.",
@@ -270,7 +270,7 @@
     "snippet": "Coexpression of caAck1 resulted in reduction in Wwox protein (Fig. 5E, 1, lane 2)",
     "surface": "rendered_text",
     "artifact": "files/figures/PMID16288044/page7-07.png",
-    "anchor": "Results, 'Activated Ack1 promotes Wwox polyubiquitination and degradation', third paragraph, Fig 5E",
+    "anchor": "Results, 'Activated Ack1 promotes Wwox polyubiquitination and degradation', second paragraph, Fig 5E",
     "panel_text_relation": "text_only"
    },
    {
@@ -346,7 +346,7 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "M7a: correlation in human prostate samples is a difference of total Ack1 versus phospho-Ack1 between groups; Fig 8 images were not inspected.",
+    "proposition": "M7a: correlation in human prostate samples is a difference of total Ack1 versus phospho-Ack1 between groups; the Fig 8 panels were inspected and are attested in entry M7c.",
     "snippet": "AICaP and benign prostate samples had similar total Ack1",
     "surface": "rendered_text",
     "artifact": "files/figures/PMID16288044/page7-07.png",
