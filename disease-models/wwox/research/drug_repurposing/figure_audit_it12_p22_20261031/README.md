@@ -37,7 +37,7 @@ Source-internal discrepancies found (not the proposition's fault): 24953239 Fig 
 
 ## Ranked table of all 28
 
-See `ranked_28.tsv` (rank, PMID, entry, figure, decisions fed, weight, group, justification, whether audited here). Summary: group A (8, audited): 37275776 #7, #2, #17; 24953239 #4, #12; 42536722 #18, #19; 32719346 #17. Group B (weight 2 to 3, 8): 42536722 #21, #7, #6; 37275776 #16, #15; 24953239 #10, #9, and #14 of 37275776. Group C (weight 1 to 2, 12): the remaining.
+See `ranked_28.tsv` (rank, PMID, entry, figure, decisions fed, weight, group, justification, whether audited here). Summary: group A (8, audited): 37275776 #7, #2, #17; 24953239 #4, #12; 42536722 #18, #19; 32719346 #17. Group B (weight 2 to 3, 7): 42536722 #21, #7, #6; 37275776 #16, #15; 24953239 #10, #9. Group C (weight 1 to 2, 13): the remaining.
 
 ## Left for later (20) and why
 
