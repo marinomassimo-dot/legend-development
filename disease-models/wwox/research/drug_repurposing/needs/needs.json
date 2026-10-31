@@ -4688,7 +4688,7 @@
      "readout_level": "protein",
      "direction_observed": "up in all three mutant lines",
      "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-     "limits": "n is organoids, single-digit in three of four arms; the composition clause is qualified in entry 2 (the unqualified headline was withdrawn).",
+     "limits": "n is organoids, single-digit in three of four arms; the composition clause is qualified in entry 2 (the unqualified headline was withdrawn). Within the same paper SCAR12 organoids show the MYC-positive fraction up while the radial-glia fraction is wild-type-like and the single-cell neuron-cluster fraction is not reduced (text lines 577 and 585-586; WOREE shows reduced CTIP2/SATB2 in Fig 6B, SCAR12 is the clean case), so MYC elevation alone does not give the composition phenotype; the box medians read by eye from Fig 3K are about 18 (wild type), 68 (knockout), 45 (SCAR12) and 55 (WOREE) percent with wide scatter and overlap.",
      "pmid": "42397075",
      "locators": [
       {
@@ -4742,6 +4742,30 @@
       }
      ],
      "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O4",
+     "statement": "Neuron-promoter AAV9-WWOX added at week 10 and read at week 16 raises the CTIP2-positive and SATB2-positive fractions of nuclei in WOREE-derived organoids to wild-type level (SCAR12 is already near wild type) and lowers hyperexcitability, without differentially expressed genes or cell-cycle change in radial glia. The layer-marker deficit therefore has a reversible neuron-stage component after the radial-glia phase.",
+     "model_type": "human_cerebral_organoid_knockout",
+     "species": "human",
+     "genotype": "WOREE-derived line, neuron-promoter WWOX add-back versus control vector",
+     "tissue_or_cells": "cerebral organoid cells",
+     "age_stage": "organoid, add-back week 10 to week 16",
+     "comparison": "add-back against control vector, and against wild type",
+     "readout": "CTIP2 and SATB2 fractions of nuclei (Fig 6B); radial-glia differential expression",
+     "readout_level": "protein",
+     "direction_observed": "increased toward wild type",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Fractions of nuclei, not neuron numbers; one laboratory; no untreated WOREE group for the control vector in the shown panel; the authors state neuronal WWOX was not detected in neural organoids at this stage; an intervention response (held out for compound evaluation); overlaps the gene-addition need and must not be counted twice across needs.",
+     "pmid": "42397075",
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/question_it11_p22_20261031/premises.tsv",
+       "anchor": "PR4"
+      }
+     ],
+     "locator_status": "DOCUMENT"
     }
    ],
    "inferred": [
@@ -4753,15 +4777,20 @@
     "on": "MYC activity / progenitor cycling",
     "rationale": "A raised MYC with a progenitor shift suggests lowering it; the only compound used is non-selective, and a developing brain is the setting.",
     "certainty": "context_dependent",
-    "do_not_assume": "Restoring checkpoint competence or suppressing proliferation pharmacologically in a developing compartment has no safe formulation in the record (map section 2.2)."
+    "do_not_assume": "Restoring checkpoint competence or suppressing proliferation pharmacologically in a developing compartment has no safe formulation in the record (map section 2.2). A MYC-lowering lever is not assumed beneficial: MYC-family dose is two-sided in cortex, SCAR12 shows MYC elevation without the composition phenotype, and lithium (a Wnt activator) is a risk flag for this window, not a candidate."
    },
    "counter_evidence": [
     "Composition phenotype is largely an engineered-knockout feature while the MYC lesion is shared; A51 is not MYC-selective.",
-    "Refused admission in the map for the DNA-damage/checkpoint framing."
+    "Refused admission in the map for the DNA-damage/checkpoint framing.",
+    "POU5F1 is as prominent as MYC in the knockout radial-glia contrast (Fig 3F: capped significance for both), which fits retained progenitor state without a MYC-specific driver.",
+    "The inverse WWOX-MYC relation in the reference datasets is a developmental time course (Fig 3H-I), and MYC is phase-coupled in the knockout only (Fig 4D): maturity and cell-cycle state can explain a MYC rise without a driver role.",
+    "MYCN dosage sets cortical size in both directions (loss: microcephaly; gain: megalencephaly; abstracts of PMIDs 15821734 and 37710961), and progressive microcephaly is part of the WOREE picture (4 of 5 in one cohort, PMID 36537114): lowering MYC-family output could shrink the progenitor pool. Not WWOX evidence.",
+    "In mouse, neuron-stage (Synapsin-Cre) deletion reproduces the null phenotype as progenitor-stage (nestin-Cre) deletion does (PMID 33914858), and neuron-stage add-back rescues without correcting radial glia: a radial-glia MYC state is not shown to be needed for the severe mouse endpoints."
    ],
    "sources": {
     "cards": [
-     "D01_a51"
+     "D01_a51",
+     "M01_neurogenic_output_myc_window"
     ],
     "hypotheses": [],
     "hypotheses_note": "No hypothesis; lead DL-THER-089 (A51).",
@@ -4986,7 +5015,7 @@
      "readout_level": "protein",
      "direction_observed": "increased",
      "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-     "limits": "Area fraction, not cell number; qPCR at n 4 per group (paper Results 3.3, full text re-read 2026-10-30; the registry/map R-06 reading 'Il6 not Tnf-a' is superseded); A systemic null is expected to be metabolically compromised (CLAIM 036), but that was measured in another knockout at P18 (a different Cre); it was not measured in this paper's knockout. Il6 is about 1.48-fold, not strictly above 1.5; Tnf-a is a non-significant increase (figure values read by eye, not digitised). The earlier wording of this field ('both significant') is superseded; the registry/map R-06 reading 'Il6 not Tnf-a' was right on significance.",
+     "limits": "Area fraction, not cell number; qPCR at n 4 per group (paper Results 3.3, full text re-read 2026-10-30; the registry/map R-06 reading 'Il6 not Tnf-a' is superseded); A systemic null is expected to be metabolically compromised (CLAIM 036), but that was measured in another knockout at P18 (a different Cre); it was not measured in this paper's knockout. Il6 is about 1.48-fold, not strictly above 1.5; Tnf-a is a non-significant increase (figure values read by eye, not digitised). The earlier wording of this field ('both significant') is superseded; the registry/map R-06 reading 'Il6 not Tnf-a' was right on significance. IT11 P2.3 re-read: the authors' abstract and Discussion state that both cytokines are increased; Student's two-tailed unpaired t-test, Gapdh, 2-week-old knockout versus Cre-positive littermates, n 4 v 4; absence of a significance mark is not absence of an effect.",
      "pmid": "30290271",
      "locators": [
       {
@@ -5032,7 +5061,7 @@
      "readout_level": "protein",
      "direction_observed": "increased and progressive",
      "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-     "limits": "P47T is a different allele and a longer-lived model; the microglial abundance is not shown to change with age.",
+     "limits": "P47T is a different allele and a longer-lived model; the microglial abundance is not shown to change with age. IT11 P2.3: the n 6 v 6 two-fold claim is qPCR only (3 M + 3 F, unpaired Student's t, 18S, exact p not stated, qPCR-mouse age not stated), not RNA-seq (the cerebellar RNA-seq figure shows 4 v 3); by the figure, read by eye, IL1b is about 1.9x and TNF about 3.3x, overlap with wild type marginal for IL1b and absent for TNF; the cerebellum is atrophic with Purkinje loss, so composition is not excluded.",
      "pmid": "36828035",
      "locators": [
       {
@@ -5854,7 +5883,7 @@
      "readout_level": "transcript",
      "direction_observed": "mixed",
      "evidence_scope": "COMPUTATIONAL_RESULT",
-     "limits": "Unplanned descriptive reading; 4 v 2 libraries; transcripts are not NRF2 activity; no microglia.",
+     "limits": "Unplanned descriptive reading; 4 v 2 libraries; transcripts are not NRF2 activity; no microglia. IT11 P2.3 verification (deposit recomputed, 0 mismatches against the IT10 counts): WT is one parental line and the 2 WT libraries are the survivors of a post hoc exclusion (one low-quality, one non-clustering); KO clone and batch are not assigned in the deposit; only NFE2L2 is in the authors' DE list (padj 1.43E-02, log2FC -0.58, above the stated alpha 0.01); NFE2L2 and NQO1 are lower in all four KO libraries while HMOX1, SRXN1 and GSR are higher, so the contrast stays descriptive. The week-15 organoid has radial glia and astrocytes, no stimulus and bulk poly-A RNA; IL6 and TNF were removed by the authors' count filter, so the deposit cannot test a microglial cytokine arm or a stimulated response and does not exclude an astrocytic route under challenge.",
      "pmid": "",
      "locators": [
       {
@@ -5880,12 +5909,13 @@
     "on": "NRF2 pathway activity",
     "rationale": "Raise NRF2 only IF ROS is harmful and NRF2 tone insufficient (arm R) or IF a cytokine-expressing compartment exists and its Il6/Il1b output is harmful (arm C); both conditional, none established.",
     "certainty": "unknown",
-    "do_not_assume": "That raising NRF2 is beneficial because ROS is raised in a fly or in late-passage fibroblasts; that a macrophage mechanism (Il6, Il1b lowered, Tnf unchanged) operates in microglia; that omaveloxolone or any compound acts in a WWOX-deficient neural cell."
+    "do_not_assume": "That raising NRF2 is beneficial because ROS is raised in a fly or in late-passage fibroblasts; that a macrophage mechanism (Il6, Il1b lowered, Tnf unchanged) operates in microglia; that omaveloxolone or any compound acts in a WWOX-deficient neural cell. That monomethyl fumarate is a second NRF2-activating chemotype, or that agreement between two electrophiles shows NRF2 dependence (IT11 P2.3)."
    },
    "counter_evidence": [
     "Human organoid shows no cytokine-expressing cells and no coherent NRF2 signature.",
     "Early-passage redox transcripts are already higher in Wwox-null MEFs (possible ceiling).",
-    "Rat lde/lde glia are lower than wild type; null-hippocampus Tnf-a is not significant."
+    "Rat lde/lde glia are lower than wild type; null-hippocampus Tnf-a is not significant.",
+    "The omaveloxolone and fumarate arms do not separate NRF2 dependence from electrophile-class actions: omaveloxolone and dimethyl fumarate are both cysteine-reactive electrophiles, monomethyl fumarate is a different compound with an HCAR2 rationale and did not activate NRF2 in primary neurons in one source (PMID 39684792), and omaveloxolone has an in-vitro concentration window (low-nM NRF2-linked suppression; NF-kB, JNK and growth effects at hundreds of nM). Only NFE2L2 loss controls for this; 'Tnf unchanged' was observed only with genetic Keap1 deletion, so TNF is a discriminator (IT11 P2.3)."
    ],
    "sources": {
     "cards": [

@@ -11,7 +11,7 @@ Cards, needs, priorities, positions (F/C/P), dispositions, counts and the Italia
 
 - **CIViC (via DGIdb)** (20 rows or attributes embedded). Terms: CC0 1.0 Universal (licence field reported by the DGIdb service on 2026-10-28). Credit: CIViC, obtained through DGIdb (export of 2024-06-10); credit given as a courtesy https://civicdb.org/
 - **DoCM (via DGIdb)** (3 rows or attributes embedded). Terms: CC BY 4.0 (licence field reported by the DGIdb service on 2026-10-28). Credit: Database of Curated Mutations (DoCM), CC BY 4.0, obtained through DGIdb (export of 2024-06-10) http://www.docm.info/
-- **openFDA NDC (access categories)** (13 rows or attributes embedded). Terms: Public domain (openFDA licence page). Credit: Data provided by the U.S. Food and Drug Administration. Do not rely on openFDA to make decisions regarding medical care. No FDA endorsement is implied. https://open.fda.gov/license/
+- **openFDA NDC (access categories)** (15 rows or attributes embedded). Terms: Public domain (openFDA licence page). Credit: Data provided by the U.S. Food and Drug Administration. Do not rely on openFDA to make decisions regarding medical care. No FDA endorsement is implied. https://open.fda.gov/license/
 
 How the conditions are met:
 
@@ -31,7 +31,7 @@ How the conditions are met:
 - **Record names shown in the page (1,506 values in the row table)**: 1,464 are catalogue identifiers (ChEMBL accession numbers and DGIDB: hashes of DGIdb drug names, no name text); 42 are card names written in this repository (16 molecule families, 26 interventions or classes). A card name that coincides with a ChEMBL preferred name is used as the compound's name, a fact, not as a copied ChEMBL field; ChEMBL names as data travel only in the separate class-B file. LEGEND WWOX repurposing module (this repository); ChEMBL identifiers: EMBL-EBI, https://www.ebi.ac.uk/chembl/
 - **Catalogue record identifiers**: opaque identifiers of this repository's catalogue (CAT:...), no source content. LEGEND WWOX repurposing module (this repository)
 
-Identifier census of `index.html` (distinct values): {"CAT": 2226, "CHEMBL": 299, "DOI": 5, "HGNC": 11, "NCT": 0, "PMID": 90}. No abstract and no passage of an article is embedded. Short quotations are marked by quotation marks and attributed (section 6).
+Identifier census of `index.html` (distinct values): {"CAT": 2229, "CHEMBL": 302, "DOI": 5, "HGNC": 12, "NCT": 0, "PMID": 91}. No abstract and no passage of an article is embedded. Short quotations are marked by quotation marks and attributed (section 6).
 
 ## 4. Class B (share-alike): shipped as a separate file, never merged into the page
 
@@ -65,7 +65,7 @@ Every output string was compared with the full texts, abstracts and openFDA labe
 
 IT5 P13 fix. Own analysis stays in the shareable build: a conclusion at the level of a need, a class or a card subject, in our own words, short, attributed to a published work. Withheld: (1) a sentence that states a compound-target(-action) pair together with its database of origin when the pair is asserted only by a class-B/C catalogue source; (2) a compound named in prose whose only provenance in the repository is a class-B/C catalogue row (it appears in no cited full text and is not a card subject); (3) a per-compound status, phase, approval or access statement attributed to a class-B/C source; (4) repository file names, which cannot be used outside the repository. The replacement keeps the research conclusion and names the withheld source class with the phrase in withheld_phrase. The FULL build keeps everything. The audit enforces (1) and (2) by derivation from the catalogue, (3) and (4) by pattern, and every redaction below must match exactly once or more: a stale redaction fails the build.
 
-Applied in this build: 12 card sentence redactions, 11 lead-field redactions, 920 pair objects stripped of a status class (pairs[].p.cr.pha[1] (status classes of the row) is dropped in the shareable build: a status class derives from ChEMBL max_phase, DGIdb approved flags, MATRIX and openFDA together, and the build does not re-derive a class-A-only status per row.), 90 repository file names replaced by a plain description. The replacement phrase is `dato di una fonte non inclusa in questa versione`.
+Applied in this build: 12 card sentence redactions, 11 lead-field redactions, 923 pair objects stripped of a status class (pairs[].p.cr.pha[1] (status classes of the row) is dropped in the shareable build: a status class derives from ChEMBL max_phase, DGIdb approved flags, MATRIX and openFDA together, and the build does not re-derive a class-A-only status per row.), 95 repository file names replaced by a plain description. The replacement phrase is `dato di una fonte non inclusa in questa versione`.
 
 Short third-party labels that card text also contains (checked against ChEMBL's curated-mechanism and target wording; none longer than 8 words, otherwise the audit fails): `caspase 1 inhibitor`; `gaba a receptor`; `pyruvate dehydrogenase kinase`; `reactive oxygen species`. They are generic scientific terms that the cards use in their own sentences; they are listed, not hidden.
 

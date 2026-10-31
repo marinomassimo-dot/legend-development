@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "d986c3da4526b7b2a3d980915f49377c758e07785114f432d347341ad6ab2b5c",
+  "input_sha256": "6640ad5d787172b459f0de2fd69da1ba13f213c4a9c98c3d145aca90c71fc8c2",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -34,6 +34,13 @@
       "reasons": [
         "no disease assertion on this target and endpoint"
       ]
+    },
+    {
+      "assertion_id": "DR-L01-005",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "no disease assertion on this target and endpoint"
+      ]
     }
   ],
   "abstention": null,
@@ -53,9 +60,9 @@
     "coverage_limit": "UNKNOWN"
   },
   "p4_fields": {
-    "endpoint_pursued": "Step 0 (gate): in WWOX-deficient versus isogenic corrected human neural cultures that contain microglia or CNS-macrophage-like cells (and, as a second system, Wwox-null mouse primary neuron-glia co-culture): nuclear NRF2 and KEAP1 protein, NQO1 enzyme activity and the transcripts NQO1, HMOX1, GCLM, SRXN1, ROS (roGFP/CellROX/MitoSOX) at baseline and after an oxidative challenge, and IL-6 and IL-1beta PROTEIN (and caspase-1 p20 if an inflammasome readout is used) after LPS (with and without ATP). Step 1: NFE2L2-dependence-controlled activation (KEAP1 knockdown; omaveloxolone; monomethyl fumarate) and NFE2L2 knockdown, in both genotypes, reading viability, lipid peroxidation, network activity (MEA), SOX2/NEUN fractions, and cytokine protein. Decided by: ROS, viability, network activity and cytokine protein. Not decided by: GFAP/IBA1 counts (held-out endpoints) or the six IT7 readout genes (guard IT7_READOUT6).",
-    "functional_evidence_available": "None for NRF2 pathway state, ROS, cytokine protein or inflammasome in a WWOX-deficient mammalian neural system. Transcripts: Il6 up in null hippocampus (Tnf-a not significant), IL1B/TNF up in P47T cerebellum; rat glia lower; human organoid without cytokine expression.",
-    "temporal_or_model_limit": "Mouse transcripts at 2 weeks (null) and adult (P47T); organoid week 15 has no microglia; the NRF2-cytokine edge is from bone-marrow macrophages.",
+    "endpoint_pursued": "Step 0 (gate): in WWOX-deficient versus isogenic corrected human neural cultures that contain microglia or CNS-macrophage-like cells (and, as a second system, Wwox-null mouse primary neuron-glia co-culture): nuclear NRF2 and KEAP1 protein, NQO1 enzyme activity and the transcripts NQO1, HMOX1, GCLM, SRXN1, ROS (roGFP/CellROX/MitoSOX) at baseline and after an oxidative challenge, and IL-6 and IL-1beta PROTEIN (and caspase-1 p20 if an inflammasome readout is used) after LPS (with and without ATP). Step 1: NFE2L2-dependence-controlled activation (KEAP1 knockdown; omaveloxolone; dimethyl fumarate and monomethyl fumarate as separate arms, never one row) with NFE2L2 knockdown or loss as the dependence control for every compound, in both genotypes, reading viability, lipid peroxidation, network activity (MEA), SOX2/NEUN fractions, and cytokine protein. Off-NRF2 readouts for the fumarates: NF-kB p65 nuclear translocation, HCAR2 dependence (HCAR2 knockdown or an antagonist) and GAPDH activity. Omaveloxolone is read over a concentration series that spans the low-nM NRF2-linked window and the hundreds-of-nM window in which IKK/NF-kB, JNK and growth effects were reported, reading NQO1 at each point (in-vitro facts of the source, not a dose recommendation), with free (unbound) exposure reported where serum is present. The system for step 0 also includes an astrocyte-containing challenged arm (LPS with and without ATP) and records the clone and batch of every sample, keeping both clones. Decided by: ROS, viability, network activity and cytokine protein. Not decided by: GFAP/IBA1 counts (held-out endpoints) or the six IT7 readout genes (guard IT7_READOUT6).",
+    "functional_evidence_available": "None for NRF2 pathway state, ROS, cytokine protein or inflammasome in a WWOX-deficient mammalian neural system. In the P47T cerebellum the hallmark set REACTIVE_OXYGEN_SPECIES_PATHWAY is among the top enriched sets (PMID 36828035 Fig 9c; the direction of enrichment is not stated in the text read; a transcript set containing NRF2 targets, so it cannot separate raised ROS from a raised NRF2 response). Transcripts: Il6 up in null hippocampus (Tnf-a not significant), IL1B/TNF up in P47T cerebellum; rat glia lower; human organoid without cytokine expression.",
+    "temporal_or_model_limit": "Mouse transcripts at 2 weeks (null) and adult (P47T); the week-15 organoid has no microglia but has radial glia and astrocytes (an astrocyte increase by immunofluorescence is reported in the source paper), no stimulus and bulk poly-A RNA; IL6 and TNF were removed by the authors' own count filter, so no test exists: the deposit cannot test the microglial cytokine arm or any stimulated response and does not exclude an astrocytic cytokine route under challenge (whole-organoid GFAP transcript 0.88x against the astrocyte increase by immunofluorescence: transcript, protein and composition discordance); the NRF2-cytokine edge is from bone-marrow macrophages.",
     "cellular_context": {
       "target_expression": "NFE2L2 adult HPA: astrocytes 153, CNS macrophage 260, microglia 197 (cell-type table), neurons 30-51 nCPM; KEAP1 7-28 nCPM (IT9 P4c-D file). Adult atlas only.",
       "cells_tissue_stage": "WWOX-deficient neural cells: not measured at protein level.",
@@ -77,7 +84,7 @@
     },
     "candidate": {
       "id": "P22-L-01",
-      "name": "NRF2 activation (genetic KEAP1 knockdown; omaveloxolone and monomethyl fumarate as two chemotypes) in WWOX-deficient neural cells: a role-resolving mechanism experiment, not a treatment"
+      "name": "NRF2 activation (genetic KEAP1 knockdown; omaveloxolone and dimethyl fumarate as two cysteine-reactive electrophiles, monomethyl fumarate as a separate comparator) in WWOX-deficient neural cells, with NFE2L2 loss as the dependence control: a role-resolving mechanism experiment, not a treatment"
     },
     "disease_assertions": [
       {
@@ -96,7 +103,7 @@
           "cell_type": "hippocampal tissue",
           "developmental_stage": "2 weeks"
         },
-        "measured_result_note": "'We observed > 1.5 fold upregulation of both cytokines ( Il6 significant at p < .05)': significance is attached to Il6 only; the figure shows Il6 about 1.48x with one asterisk and Tnf-a about 1.85x with a large error bar and no mark. Il6 is the only significant cytokine; Tnf-a is a non-significant increase. This corrects the IT9 P1 'correction' that dropped the word Il6.",
+        "measured_result_note": "'We observed > 1.5 fold upregulation of both cytokines ( Il6 significant at p < .05)': significance is attached to Il6 only; the figure shows Il6 about 1.48x with one asterisk and Tnf-a about 1.85x with a large error bar and no mark. Il6 is the only significant cytokine; Tnf-a is a non-significant increase. This corrects the IT9 P1 'correction' that dropped the word Il6. The authors' abstract and Discussion state that both cytokines are increased; the method is a two-tailed unpaired Student's t, Gapdh, 2-week-old KO versus Cre-positive littermates, n 4 v 4; absence of a significance mark is not absence of an effect.",
         "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
       },
       {
@@ -115,7 +122,7 @@
           "cell_type": "cerebellar tissue",
           "developmental_stage": "adult"
         },
-        "measured_result_note": "'a significant >= 2-fold upregulation of mRNA of both cytokines (p-value < 0.05)' (transcript). Forebrain pathway enrichments (inflammatory response, TNFA signalling via NFkB, IL6-JAK-STAT3) are RNA-seq regulator inferences, not cytokine measurements. No NRF2/NFE2L2 string in the text.",
+        "measured_result_note": "'a significant >= 2-fold upregulation of mRNA of both cytokines (p-value < 0.05)' (transcript). Forebrain pathway enrichments (inflammatory response, TNFA signalling via NFkB, IL6-JAK-STAT3) are RNA-seq regulator inferences, not cytokine measurements. No NRF2/NFE2L2 string in the text. Verification (IT11 P2.3): the significant 2-fold claim is qPCR only, n 6 versus 6 (3 M + 3 F), unpaired Student's t, 18S, exact p not stated, age of the qPCR mice not stated; by the figure (read by eye, not digitised) IL1b is about 1.9x and TNF about 3.3x of the plotted means, overlap with WT is marginal for IL1b and absent for TNF; the cerebellar RNA-seq in the figure is 4 v 3 (Methods say 5 per group), so n 6 is not an RNA-seq n; the cerebellum is atrophic with Purkinje loss, so composition is not excluded. The best-supported cerebellar cytokine signal is TNF, the one NRF2 activation is predicted not to change.",
         "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
       },
       {
@@ -134,7 +141,7 @@
           "cell_type": "cerebral organoid, bulk RNA",
           "developmental_stage": "culture week 15"
         },
-        "measured_result_note": "IL6 0 counts in all six libraries; IL1B 0-11; TNF 0-1; P2RY12 0: no cytokine-expressing compartment. NFE2L2 0.75x, KEAP1 0.93x, NQO1 0.73x, G6PD 0.75x, SLC7A11 0.65x, BACH1 0.73x; HMOX1 1.67x, SRXN1 1.33x, GSR 1.20x: no coherent NRF2 signature. Unplanned look at a deposit used by other packages; 4 v 2 libraries, one laboratory; transcripts are not NRF2 activity.",
+        "measured_result_note": "IL6 0 counts in all six libraries; IL1B 0-11; TNF 0-1; P2RY12 0: no cytokine-expressing compartment. NFE2L2 0.75x, KEAP1 0.93x, NQO1 0.73x, G6PD 0.75x, SLC7A11 0.65x, BACH1 0.73x; HMOX1 1.67x, SRXN1 1.33x, GSR 1.20x: no coherent NRF2 signature. Unplanned look at a deposit used by other packages; 4 v 2 libraries, one laboratory; transcripts are not NRF2 activity. Design (IT11 P2.3 verification, deposit and paper read): WT is one parental line; the 2 WT libraries are the survivors of a post hoc exclusion (one low-quality, one non-clustering); KO clone and batch are not assigned in the deposit; only NFE2L2 is in the authors' DE list (padj 1.43E-02, log2FC -0.58, above the stated alpha 0.01); NQO1 0.73x and HMOX1 1.67x are in neither list. NFE2L2 and NQO1 transcripts are lower in all four KO libraries (the arm-R-compatible direction) while HMOX1, SRXN1 and GSR are higher (the adaptive direction): descriptive, not a test.",
         "evidence_scope": "COMPUTATIONAL_RESULT"
       },
       {
@@ -188,12 +195,12 @@
         "reading_depth": "partial_fulltext_read",
         "context": {
           "disease_id": "not WWOX",
-          "genotype": "Keap1 flox x LysM-Cre; Nrf2 KO",
+          "genotype": "Keap1 flox x LysM-Cre genetic activation (Il6, Il1b, Il1a, Nos2 and Il12b down; Tnf and Irf1 unchanged); NRF2-knockout control used with the electrophiles diethyl maleate and 15d-PGJ2",
           "species": "mouse",
           "cell_type": "bone-marrow-derived macrophages",
           "developmental_stage": "adult cells, LPS stimulated"
         },
-        "measured_result_note": "NRF2 binds near Il6/Il1b and blocks Pol II recruitment, independently of ROS and the NRF2 motif; Tnf is not changed. Macrophages, not microglia. NOT WWOX EVIDENCE.",
+        "measured_result_note": "NRF2 binds near Il6/Il1b and blocks Pol II recruitment, independently of ROS and the NRF2 motif; Tnf is not changed. Macrophages, not microglia. NOT WWOX EVIDENCE. Which experiment used which: the Keap1-cKO genetics gave the Tnf-unchanged result; the NRF2-knockout control was a pharmacological activation (DEM, 15d-PGJ2; 6 h M1 stimulation, n 3-4 mice) that removed the inhibition of IL6, IL1b and IL1a; THP-1 (human) DEM lowered IL6, IL1B and IL1A. No NRF2-loss control exists in that paper for omaveloxolone, dimethyl fumarate or monomethyl fumarate.",
         "evidence_scope": "OTHER_DISEASE_PRECEDENT"
       },
       {
@@ -252,12 +259,31 @@
         },
         "measured_result_note": "No seizure/convulsion/epilepsy string in the omaveloxolone label; rat perinatal exposure impaired offspring neurobehaviour at all doses; voclosporin label 5.5 names seizure and PRES.",
         "evidence_scope": "EXTERNAL_DATABASE_RECORD"
+      },
+      {
+        "id": "DR-L01-005",
+        "target_id": "NRF2-linked and NF-kB/JNK/growth effects of omaveloxolone (RTA 408) in macrophage and tumour cell lines",
+        "endpoint": "nitric oxide and pro-inflammatory mediators in interferon-gamma-stimulated RAW 264.7 cells; NF-kB signalling, JNK phosphorylation and growth in tumour and MEF lines",
+        "direction": "UNKNOWN",
+        "source": "Probst 2015 (PMID 25897966), PMC4405374; NOT WWOX EVIDENCE",
+        "locator": "nrf2_it11_p23_20261031/premises_verified.tsv V14; PMC4405374 full text, keyword windows over the whole text",
+        "epistemic_status": "DATO",
+        "reading_depth": "partial_fulltext_read",
+        "context": {
+          "disease_id": "mouse macrophage cell line and tumour cell lines (not WWOX)",
+          "genotype": "wild type and Keap1-null MEFs",
+          "species": "mouse and human cells",
+          "cell_type": "RAW 264.7 macrophages, tumour cells, MEFs",
+          "developmental_stage": "in vitro"
+        },
+        "measured_result_note": "At low nM concentrations RTA 408 activated NRF2 and lowered NO, Nos2, Ptgs2, Ccl2 and Ccl5 in interferon-gamma-stimulated RAW 264.7 cells; at hundreds of nM it inhibited NF-kB signalling (IkB-alpha phosphorylation, NF-kB luciferase), raised JNK phosphorylation and inhibited growth of wild-type and Keap1-null MEFs. The NRF2-siRNA control in that paper was done with bardoxolone methyl, not RTA 408; IL-6 and IL-1b were not measured. Direction UNKNOWN for the L01 endpoints: NRF2-dependent and NRF2-independent actions overlap in a concentration window. No NRF2-loss control for omaveloxolone on IL-6/IL-1b was found in the searches run (not found is not absent).",
+        "evidence_scope": "OTHER_DISEASE_PRECEDENT"
       }
     ],
     "p4_fields": {
-      "endpoint_pursued": "Step 0 (gate): in WWOX-deficient versus isogenic corrected human neural cultures that contain microglia or CNS-macrophage-like cells (and, as a second system, Wwox-null mouse primary neuron-glia co-culture): nuclear NRF2 and KEAP1 protein, NQO1 enzyme activity and the transcripts NQO1, HMOX1, GCLM, SRXN1, ROS (roGFP/CellROX/MitoSOX) at baseline and after an oxidative challenge, and IL-6 and IL-1beta PROTEIN (and caspase-1 p20 if an inflammasome readout is used) after LPS (with and without ATP). Step 1: NFE2L2-dependence-controlled activation (KEAP1 knockdown; omaveloxolone; monomethyl fumarate) and NFE2L2 knockdown, in both genotypes, reading viability, lipid peroxidation, network activity (MEA), SOX2/NEUN fractions, and cytokine protein. Decided by: ROS, viability, network activity and cytokine protein. Not decided by: GFAP/IBA1 counts (held-out endpoints) or the six IT7 readout genes (guard IT7_READOUT6).",
-      "functional_evidence_available": "None for NRF2 pathway state, ROS, cytokine protein or inflammasome in a WWOX-deficient mammalian neural system. Transcripts: Il6 up in null hippocampus (Tnf-a not significant), IL1B/TNF up in P47T cerebellum; rat glia lower; human organoid without cytokine expression.",
-      "temporal_or_model_limit": "Mouse transcripts at 2 weeks (null) and adult (P47T); organoid week 15 has no microglia; the NRF2-cytokine edge is from bone-marrow macrophages.",
+      "endpoint_pursued": "Step 0 (gate): in WWOX-deficient versus isogenic corrected human neural cultures that contain microglia or CNS-macrophage-like cells (and, as a second system, Wwox-null mouse primary neuron-glia co-culture): nuclear NRF2 and KEAP1 protein, NQO1 enzyme activity and the transcripts NQO1, HMOX1, GCLM, SRXN1, ROS (roGFP/CellROX/MitoSOX) at baseline and after an oxidative challenge, and IL-6 and IL-1beta PROTEIN (and caspase-1 p20 if an inflammasome readout is used) after LPS (with and without ATP). Step 1: NFE2L2-dependence-controlled activation (KEAP1 knockdown; omaveloxolone; dimethyl fumarate and monomethyl fumarate as separate arms, never one row) with NFE2L2 knockdown or loss as the dependence control for every compound, in both genotypes, reading viability, lipid peroxidation, network activity (MEA), SOX2/NEUN fractions, and cytokine protein. Off-NRF2 readouts for the fumarates: NF-kB p65 nuclear translocation, HCAR2 dependence (HCAR2 knockdown or an antagonist) and GAPDH activity. Omaveloxolone is read over a concentration series that spans the low-nM NRF2-linked window and the hundreds-of-nM window in which IKK/NF-kB, JNK and growth effects were reported, reading NQO1 at each point (in-vitro facts of the source, not a dose recommendation), with free (unbound) exposure reported where serum is present. The system for step 0 also includes an astrocyte-containing challenged arm (LPS with and without ATP) and records the clone and batch of every sample, keeping both clones. Decided by: ROS, viability, network activity and cytokine protein. Not decided by: GFAP/IBA1 counts (held-out endpoints) or the six IT7 readout genes (guard IT7_READOUT6).",
+      "functional_evidence_available": "None for NRF2 pathway state, ROS, cytokine protein or inflammasome in a WWOX-deficient mammalian neural system. In the P47T cerebellum the hallmark set REACTIVE_OXYGEN_SPECIES_PATHWAY is among the top enriched sets (PMID 36828035 Fig 9c; the direction of enrichment is not stated in the text read; a transcript set containing NRF2 targets, so it cannot separate raised ROS from a raised NRF2 response). Transcripts: Il6 up in null hippocampus (Tnf-a not significant), IL1B/TNF up in P47T cerebellum; rat glia lower; human organoid without cytokine expression.",
+      "temporal_or_model_limit": "Mouse transcripts at 2 weeks (null) and adult (P47T); the week-15 organoid has no microglia but has radial glia and astrocytes (an astrocyte increase by immunofluorescence is reported in the source paper), no stimulus and bulk poly-A RNA; IL6 and TNF were removed by the authors' own count filter, so no test exists: the deposit cannot test the microglial cytokine arm or any stimulated response and does not exclude an astrocytic cytokine route under challenge (whole-organoid GFAP transcript 0.88x against the astrocyte increase by immunofluorescence: transcript, protein and composition discordance); the NRF2-cytokine edge is from bone-marrow macrophages.",
       "cellular_context": {
         "target_expression": "NFE2L2 adult HPA: astrocytes 153, CNS macrophage 260, microglia 197 (cell-type table), neurons 30-51 nCPM; KEAP1 7-28 nCPM (IT9 P4c-D file). Adult atlas only.",
         "cells_tissue_stage": "WWOX-deficient neural cells: not measured at protein level.",
@@ -266,9 +292,9 @@
       }
     },
     "p4_card": {
-      "identity": "A pathway, not one compound: NRF2/KEAP1. Genetic arm primary; omaveloxolone (CHEMBL4303525, approved 2023, indication 16 y and older) and monomethyl fumarate (active moiety of dimethyl fumarate) as two chemotypes. Voclosporin, PF-03758309 and the HMGB1-axis names are not carried (see candidates.tsv).",
+      "identity": "A pathway, not one compound: NRF2/KEAP1. Genetic arm primary; omaveloxolone (CHEMBL4303525, approved 2023, indication 16 y and older) and dimethyl fumarate (CHEMBL2107333; the NRF2-active ex vivo form) as two cysteine-reactive electrophiles, and monomethyl fumarate (CHEMBL589586) as a separate comparator, a different compound with an HCAR2 rationale whose NRF2 activity in neural cells is not shown (and is shown absent in one source, PMID 39684792). Omaveloxolone and dimethyl fumarate are both electrophiles, so agreement between them does not separate NRF2 dependence from electrophile-class actions; only NFE2L2 loss does. 'Second electrophile' is not a claim of independence. Voclosporin, PF-03758309 and the HMGB1-axis names are not carried (see candidates.tsv).",
       "indication_and_transfer": "WWOX-DEE only IF (arm R) ROS is raised and harmful in WWOX-deficient neural cells and NRF2 tone is not already maximal, OR (arm C) a cytokine-expressing compartment exists in WWOX-deficient brain and its Il6/Il1b output is harmful. Role of reactivity and of NRF2 tone: unknown; no arm is withdrawn. Nothing here is a treatment proposal.",
-      "novelty_for_woree": "NEW as a card axis (NRF2 absent from needs and cards; DL-MECH-153 holds only the G6PD/NFE2L2 co-occurrence). NEW compound name: omaveloxolone (named, not qualified, in IT9 P4c-D). Dimethyl fumarate is KNOWN: its generated chain was dropped in IT9 P4c-D and that drop is not reversed; this rationale is a different one and is declared.",
+      "novelty_for_woree": "NEW as a card axis (NRF2 absent from needs and cards; DL-MECH-153 holds only the G6PD/NFE2L2 co-occurrence). NEW compound name: omaveloxolone (named, not qualified, in IT9 P4c-D). Dimethyl fumarate and monomethyl fumarate are separate compounds; dimethyl fumarate is KNOWN: its generated chain was dropped in IT9 P4c-D and that drop is not reversed; this rationale is a different one and is declared.",
       "state_of_known_roads": "J01 (IL-1 axis, JAK-STAT, tetracyclines; protein-level agents with epilepsy exposure), DL-MECH-153, IT9 P4c-D P4CD-04.",
       "pathway_and_objective": "BENEFICIO_PRECOCE; Track A.",
       "expected_contribution": "UNKNOWN. Step 0 resolves, for any Q5 lever, whether a cytokine protein and a harmful compartment exist, and resolves the NRF2 tone and ROS question whatever the compound.",
@@ -305,7 +331,7 @@
       },
       "time_to_access": "UNKNOWN.",
       "time_to_benefit": "UNKNOWN.",
-      "pharmacology": "Omaveloxolone: NRF2 activator (ChEMBL mechanism row; no potency row), monkey brain content similar to plasma, 97% protein bound, CYP3A4 substrate, half-life 57 h (label). MMF: KEAP1 covalent modifier, micromolar cell EC50 (ChEMBL, IT9). Genetic arm: none.",
+      "pharmacology": "Omaveloxolone: NRF2 activator (ChEMBL mechanism row; no potency row), monkey brain content similar to plasma, 97% protein bound, CYP3A4 substrate, half-life 57 h (label). DMF: covalent KEAP1 modifier, micromolar cell EC50 (ChEMBL, IT9). MMF: the systemic and CSF moiety on the label and an HCAR2 agonist; NRF2 nuclear translocation was not seen with MMF in primary neurons where DMF gave it (PMID 39684792, one source); evidence is not transferred between the two. Omaveloxolone concentration window in vitro (PMID 25897966): low-nM NRF2-linked suppression, and NF-kB inhibition, JNK phosphorylation and growth inhibition at hundreds of nM; label protein binding 97 percent, so free exposure must be reported where serum is present (source facts, not a dose recommendation). Genetic arm: none.",
       "paediatrics_and_interactions": "Omaveloxolone label: safety and effectiveness not established below 16 y; a paediatric phase 3 and a PK study from age 2 y are registered for Friedreich ataxia (NCT06953583, NCT06054893). Strong/moderate CYP3A4 inducers to be avoided. No paediatric suitability is presumed by this card.",
       "scope_of_checks": {
         "support_and_replication": "One laboratory per WWOX mouse transcript datum; one deposit for organoid transcripts; macrophage mechanism from one paper; label statements from openFDA JSON.",
@@ -318,8 +344,8 @@
         "IT10 P1: v4 deepening list, omaveloxolone rank 5 (H_HARM)",
         "IT10 P2.2 (this packet)"
       ],
-      "predictions": "None as scores. Qualitative, fixed before the experiment: if arm C is real, NRF2 activation lowers IL-6 and IL-1beta protein and leaves TNF unchanged in a microglia-containing system; if arm R is real, NRF2 activation lowers ROS and improves viability in KO cells more than in corrected cells.",
-      "next_measurement": "Step 0 then step 1 as in p4_fields.endpoint_pursued. Falsifiers: no ROS or NRF2-tone difference between KO and corrected cells and no cytokine protein above the assay floor (both arms fail); or activation changes nothing in KO cells while NFE2L2 knockdown also changes nothing (the axis is inert); or the effect of a compound survives NFE2L2 knockdown (off-target).",
+      "predictions": "None as scores. Qualitative, fixed before the experiment: if arm C is real, NRF2 activation lowers IL-6 and IL-1beta protein and leaves TNF unchanged in a microglia-containing system (TNF is the discriminator: 'Tnf unchanged' was observed only with genetic Keap1 deletion, PMID 27211851 Fig 1j; the NRF2-knockout control for pharmacological activation covers Nqo1, IL6, IL1b and IL1a only, so a TNF fall under a compound points to NF-kB/IKK-type action, documented for AIMs and for DMF independently of NRF2); if arm R is real, NRF2 activation lowers ROS and improves viability in KO cells more than in corrected cells.",
+      "next_measurement": "Step 0 then step 1 as in p4_fields.endpoint_pursued. Falsifiers: no ROS or NRF2-tone difference between KO and corrected cells and no cytokine protein above the assay floor (both arms fail); or activation changes nothing in KO cells while NFE2L2 knockdown also changes nothing (the axis is inert); or the effect of a compound survives NFE2L2 knockdown (off-target), or a TNF fall is seen under a compound (NF-kB/IKK-type action rather than NRF2-only action).",
       "status": "hypothesis",
       "value_added": "Opens an axis independent of HIF/glycolysis and of antiseizure/NMDAR drugs; separates an engine arm (cytokine) from a redox arm; carries a corrected reading of the null-hippocampus cytokine datum; removes voclosporin (seizure label) and PF-03758309 (dominated) from the Q5 H_HARM list with the deciding datum for each.",
       "clinical_census": "ClinicalTrials.gov API v2, 2026-10-31 (this package): omaveloxolone x (epilepsy OR seizure OR DEE OR neurodevelopmental OR leukodystrophy) returned no studies; paediatric studies from age 2 y exist for Friedreich ataxia (NCT06953583, NCT06054893). A zero is no hits for the query string on that date, not proof that no study exists."
@@ -362,7 +388,7 @@
       "label_lookup is NOT_ATTEMPTED in the bridge (the bridge has no network; check_cards requires it). The two openFDA label reads (omaveloxolone, voclosporin; keyword windows, not whole labels) are documented in the IT10 P2.2 package (axis_it10_p22_20261031/premises.tsv PR7 and PR8), and the packet as authored there carried the non-bridge value 'PARTIAL'; normalised at integration (IT10 P5).",
       "No dose, route, schedule or paediatric suitability appears."
     ],
-    "no_new_reading": "NOT TRUE for this packet: passages of PMC7104842, PMC10835625, PMC6678113, PMC4879264, PMC6475100, PMC13701765, PMC13684411, PMC10613160 and two openFDA labels were read in this package (partial full-text depth); no receipt staged.",
+    "no_new_reading": "NOT TRUE for this packet: passages of PMC7104842, PMC10835625, PMC6678113, PMC4879264, PMC6475100, PMC13701765, PMC13684411, PMC10613160 and two openFDA labels were read in this package (partial full-text depth); no receipt staged. IT11 P2.3 verification added readings of the GSE156243 deposit, PMC8350905, PMC10835625 Fig 9, PMC4405374, PMC11642486 and abstracts (see nrf2_it11_p23_20261031/premises_verified.tsv); receipts are proposed there, not recorded.",
     "target_census": {
       "dir": "disease-models/wwox/research/drug_repurposing/axis_it10_p22_20261031",
       "symbols": [

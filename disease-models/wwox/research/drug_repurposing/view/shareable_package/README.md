@@ -45,4 +45,4 @@ See `COMPARISON.md`. In short: every card, need, position (F/C/P), priority grou
 - Names shorter than four characters cannot be traced by string and are covered only by the structural checks (rows carry card names or identifiers).
 - The audit proves conformity with the policy file; the policy file is a licence reading that is not legal advice and has components marked uncertain in `NOTICE.md` (not widened).
 
-Data date: 2026-10-31; catalogue built 2026-10-30T18:41:46Z; DGIdb export 2024-06-10.
+Data date: 2026-10-31; catalogue built 2026-10-31T07:28:37Z; DGIdb export 2024-06-10.

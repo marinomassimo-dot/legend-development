@@ -1008,7 +1008,7 @@
   {
    "cand_id": "P22-02",
    "class": "ORD",
-   "compound": "dimethyl fumarate / monomethyl fumarate (MMF is the active moiety)",
+   "compound": "dimethyl fumarate (the NRF2-active ex vivo form) and monomethyl fumarate (a separate comparator with an HCAR2 rationale); not one active moiety",
    "decision": "CONDITIONAL",
    "need": "NEED-REDOX-NRF2",
    "origin": "generated_in_it10",
@@ -1059,6 +1059,74 @@
    "package": "P2.2",
    "state": "REFERENCE",
    "unit_id": "U62"
+  }
+ ],
+ "it11_records": [
+  {
+   "cand_id": "M01",
+   "class": "ORD",
+   "compound": "A51 (multi-kinase inhibitor, experimental)",
+   "decision": "CONDITIONAL",
+   "need": "NEED-MYC-PROGENITOR-PROLIFERATION",
+   "origin": "generated_in_it10",
+   "package": "P2.2-IT11",
+   "state": "CONDITIONAL",
+   "unit_id": "U63"
+  },
+  {
+   "cand_id": "M02",
+   "class": "ORD",
+   "compound": "sulfopin",
+   "decision": "CONDITIONAL",
+   "need": "NEED-MYC-PROGENITOR-PROLIFERATION",
+   "origin": "generated_in_it10",
+   "package": "P2.2-IT11",
+   "state": "CONDITIONAL",
+   "unit_id": "U63"
+  },
+  {
+   "cand_id": "M05",
+   "class": "EXCL",
+   "compound": "palbociclib; abemaciclib (CDK4/6 inhibitor class)",
+   "decision": "REFERENCE-ONLY",
+   "need": "NEED-MYC-PROGENITOR-PROLIFERATION",
+   "origin": "reference_or_control",
+   "package": "P2.2-IT11",
+   "state": "REFERENCE",
+   "unit_id": "U64"
+  },
+  {
+   "cand_id": "M06",
+   "class": "EXCL",
+   "compound": "simvastatin",
+   "decision": "DROP",
+   "need": "NEED-MYC-PROGENITOR-PROLIFERATION",
+   "origin": "generated_in_it10",
+   "package": "P2.2-IT11",
+   "state": "DROP",
+   "unit_id": "U65"
+  },
+  {
+   "cand_id": "M07",
+   "class": "ORD",
+   "compound": "lithium (carbonate; Li+)",
+   "decision": "CONDITIONAL (narrowed: not a Q6-axis benefit candidate)",
+   "need": "NEED-MYC-PROGENITOR-PROLIFERATION",
+   "origin": "known_track_before_it9",
+   "package": "P2.2-IT11",
+   "state": "CONDITIONAL",
+   "unit_id": "U24"
+  },
+  {
+   "cand_id": "M08",
+   "class": "EXCL",
+   "compound": "Omomyc / OMO-103 (MYC dimerisation-interface mini-protein)",
+   "decision": "REFERENCE-ONLY",
+   "need": "NEED-MYC-PROGENITOR-PROLIFERATION",
+   "origin": "reference_or_control",
+   "package": "P2.2-IT11",
+   "state": "REFERENCE",
+   "unit_id": "U66"
   }
  ],
  "it9_records": [
@@ -1741,7 +1809,7 @@
    "evidence_of_this_member": {
     "assertion_ids": [],
     "depth": "",
-    "outside_wwox_assertions": 2,
+    "outside_wwox_assertions": 3,
     "signs": {},
     "source_pmids": [],
     "tested_in_wwox_system": "no"
@@ -1802,7 +1870,7 @@
     "residual_product_rescue",
     "mechanistic_context_transfer"
    ],
-   "evidence_limit": "Nessun composto è stato dato a un sistema WWOX; le osservazioni ACK1-WWOX vengono da cancro (prostata, fegato) a livello di abstract; i valori ChEMBL ripetuti sono valori di letteratura riportati fra articoli, non repliche. Nessuna scheda e nessuna voce ordinata: la voce N12 non ha scheda.",
+   "evidence_limit": "Nessun composto è stato dato a un sistema WWOX; le osservazioni ACK1-WWOX vengono da cancro (prostata, fegato) a livello di abstract; i valori ChEMBL ripetuti sono valori di letteratura riportati fra articoli, non repliche. Nessuna scheda e nessuna voce ordinata: la voce N12 non ha scheda. Dasatinib non è selettivo per ACK1 (34 bersagli più forti in un documento di profilazione) e bosutinib non è un chemotipo indipendente; il dato di knockdown è una linea di carcinoma epatocellulare, un costrutto, stato stazionario (IT11 P2.4).",
    "evidence_of_this_member": {
     "assertion_ids": [],
     "depth": "",
@@ -1820,7 +1888,7 @@
    "refutation": "Nessuna variazione di emivita o di livello di WWOX con l'inibitore o con il knockdown di TNK2 in cellule neurali o con variante; risposta a un solo inibitore (fuori bersaglio); nessuna proteina in Q230P; ACK1 non attivo nei neuroni; sensibilizzazione all'apoptosi con ACK1 inibita nei neuroni granulari cerebellari di ratto.",
    "research_despite_requirements": "Presenza di proteina, esposizione nel SNC e tollerabilità sono sconosciute: non tolgono la domanda su cosa limiti l'emivita di WWOX in una cellula che ha una banda, misurabile in vitro con la regola di concordanza. La voce resta senza scheda finché non c'è il testo completo di Mahajan 2005.",
    "research_priority": "Prima il testo completo di Mahajan 2005 e il dato sul destino della proteina; poi, se c'è proteina, il confronto dasatinib, bosutinib e knockdown di TNK2.",
-   "research_question": "Emivita (cicloesimide) e livello stazionario di WWOX con composto, knockdown di TNK2 come comparatore genetico, WWOX Tyr287Phe come controllo insensibile; regola di concordanza fra i due inibitori e il knockdown; lettura di funzione separata dalla quantità.",
+   "research_question": "Emivita (cicloesimide) e livello stazionario di WWOX con composto, knockdown di TNK2 come comparatore genetico, WWOX Tyr287Phe come controllo insensibile; regola di concordanza fra i due inibitori e il knockdown; lettura di funzione separata dalla quantità. Bracci distinti per chemotipo e bracci genetici (Tnk2-null, un secondo shRNA con mRNA di WWOX) come primo passo.",
    "source_pointers": [
     "recovery_it10_p23_20261031/README.md sections 1-3, 11",
     "recovery_it10_p23_20261031/candidates_it10_p23.tsv:T1,T2",
@@ -1858,7 +1926,7 @@
    "next_experiment_or_control": "Does an intermediate vector level separate a threshold from a gradient, and is the benefit only prevented inside the first days of life or also recovered when treatment follows onset? No study has measured the phenotype at the day of injection.",
    "next_experiment_priority": "NX2: informative: the next experiment resolves one limit, the decision moves one step at most",
    "next_experiment_stake": "whether the strongest case holds beyond its single row and its window",
-   "notes": "broad recovery lists one item because only gene addition has been tested in a WWOX system: this is a statement about test coverage, not about the field",
+   "notes": "broad recovery lists one item because only gene addition has been tested in a WWOX system: this is a statement about test coverage, not about the field | Graph coverage (IT11 P2.1): gene addition is out of the method (a modality, not a molecule), so the graph is silent on it by construction; its WWOX-system result is not a graph result. The five phenotype leads are development inputs, not an independent validation.",
    "objective": "Broad, durable functional recovery (the evidence is prevention or early-window in a null mouse; recovery after onset is not shown)",
    "origin": "known track from before IT9",
    "pathways_needs": "Systemic metabolic decompensation [C2; effect_observed_in_wwox_system]; Restore WWOX protein in neurons by gene addition [F1; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
@@ -1901,7 +1969,7 @@
    "next_experiment_or_control": "Does the ethosuximide sensitivity reflect T-type involvement, given that no T-type measurement exists and a class-level progenitor-viability harm signal is recorded?",
    "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
    "next_experiment_stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)",
-   "notes": "the one outside-WWOX harm row is class-level (other T-type blockers lowered progenitor viability; ethosuximide was not tested), not ethosuximide data",
+   "notes": "the one outside-WWOX harm row is class-level (other T-type blockers lowered progenitor viability; ethosuximide was not tested), not ethosuximide data | Graph coverage (IT11 P2.1): the generation graph has no way to speak about this molecule: its signed targets (the T-type channel genes CACNA1G, CACNA1H, CACNA1I) are sink or isolated nodes of the signed network, so no seed set can reach them. The absence of a graph row is not evidence about ethosuximide, and the lead was a development input of the phenotype-first path, not an independent validation of the graph.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
    "pathways_needs": "Seizure and spasm control as a symptom-level need [F2; effect_observed_in_wwox_system]; Ethosuximide sensitivity of provoked seizure in Wwox loss [F2; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
@@ -1942,7 +2010,7 @@
    "next_experiment_or_control": "Is the ethosuximide late-phase effect reproducible with a drug-by-genotype test and a same-day control, is the lithium effect genotype-specific, and do the denominators of the ketogenic-diet and vigabatrin case series keep their C2?",
    "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
    "next_experiment_stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)",
-   "notes": "none",
+   "notes": "Graph coverage (IT11 P2.1, correcting IT10): lithium IS a seed-specific 'mimics' hit in the Q6 set (a gene-expression seed in a human system, rank 67 to 70 of 232), which IT10 missed because it read a truncated candidate list. That hit is about an expression seed and not about the lead's seizure readout: the seizure lowering also occurs in wild-type mice, and the chain rests on two network edges whose neural meaning is unverified (named in the IT11 P2.1 package). It is not support for lithium. For the neurogenic window lithium is a risk flag (Wnt activation in the same direction as the knockout MYC rise; IT11 P2.2, candidate M07); the G01 seizure lead is untouched. A development input, not an independent validation.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
    "pathways_needs": "GSK3beta de-repression [P3; card_inference_by_mechanism_no_catalogue_row]; Seizure and spasm control as a symptom-level need [F2; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
@@ -1984,7 +2052,7 @@
    "next_experiment_or_control": "Which of three readings (NMDAR gain, permissive necessity, AMPAR-led drive) explains the d-APV-sensitive bursting, and does the bursting depend on the magnesium block? The d-APV result alone does not separate them.",
    "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
    "next_experiment_stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)",
-   "notes": "none",
+   "notes": "Graph coverage (IT11 P2.1): the graph returns d-APV only as a direct hit on the GRIN2C transcript in the Q4 direct-search arm (the earlier 'zero score' was the indirect part only); the GRIN2A, GRIN2B and GRIN2D subunits have outgoing edges but no chain reaches a Q4 seed. The hit concerns a mouse transcript, the lead's result is a bursting readout in slices: a level mismatch, not a confirmation. A development input, not an independent validation.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
    "pathways_needs": "Excitatory network gain and bursting [F2; effect_observed_in_wwox_system] -- 1 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
@@ -2020,7 +2088,7 @@
    "context": "human; WWOX knockout (constitutive engineered null); depth complete_fulltext_read",
    "could_fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
-   "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: A treated wild-type arm and independent differentiations remove design limits from the favourable row (toward F1 if the other flags are absent); a layer-neuron recovery would remove the counter row; a persistent absence keeps C2.",
+   "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: If MYC difference vanishes within cell-cycle and potency strata, MYC is a marker and the need moves to inert for lever purposes. If genetic MYC lowering moves neuronal fractions in knockout beyond corrected cells and cell counts hold, the driver reading advances to a second model and the development question (a prenatal window) becomes the limit. If progeni…",
    "counter_evidence_statements": "none stated beyond the counts",
    "depth_of_evidence": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract",
    "evaluated_on": "2026-10-31",
@@ -2035,10 +2103,10 @@
    "intervention": "A51, a multi-kinase inhibitor (experimental)",
    "main_limit": "SOX2_is_a_readout_marker; multi_kinase_inhibitor; no_blinding; no_treated_wt_arm; one_experiment_not_independent_differentiations | identity with the clinical agent BTX A51 is not verified (the organoid source calls it a multi-kinase inhibitor suppressing Wnt and MYC); the clinical agent's adult-oncology toxicity is in the card; no treated wild-type arm; same laboratory as the AAV9 work",
    "main_reason": "Tried in a WWOX system: results mixed, null or case-level: lead position C2 on 'MYC elevation and progenitor-state shift in WWOX-deficient radial glia' (NEED-MYC-PROGENITOR-PROLIFERATION). On that need: 1 benefit, 1 null; outside WWOX 0 favourable and 0 null or harm row(s) (some may be class-level rows from other compounds, see the limits). Mechanism: no catalogue identity: target identity, direction of action and link to the need are NOT EVALUABLE here (UNKNOWN, not zero). ",
-   "next_experiment_or_control": "Does the fall in progenitors with A51 hold with a treated wild-type arm and independent differentiations, and is the lack of layer-neuron recovery real or a timing effect?",
+   "next_experiment_or_control": "Is the MYC rise in WWOX-deficient radial glia a driver, a marker of retained progenitor state or a consequence of the cell-cycle shift, and does the layer-marker deficit that neuron-stage add-back restores define a compartment a postnatal lever could reach?",
    "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
    "next_experiment_stake": "which of the favourable and null WWOX-system results holds: the outcomes lead to opposite decisions (lift or stop)",
-   "notes": "none",
+   "notes": "Graph coverage (IT11 P2.1): the graph cannot return A51 because the name has no catalogue identity (it exists only in the paper); the lookalike BTX-A51 is not attached. A development input, not an independent validation. IT11 P2.2 restatement: the authors read the A51 result as MYC-driven impairment of differentiation (NEUN-positive up, SATB2 mildly up, CTIP2 unchanged); the arm is thin (multi-kinase compound, knockout organoids only, no wild-type-plus-compound group, supplement not available locally), so no candidate is strengthened by it; role of the MYC change stays unknown.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
    "pathways_needs": "MYC elevation and progenitor-state shift in WWOX-deficient radial glia [C2; effect_observed_in_wwox_system]; Wnt/beta-catenin readout elevated in WWOX-deficient organoids [P3; card_inference_by_mechanism_no_catalogue_row] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
@@ -2079,7 +2147,7 @@
    "next_experiment_or_control": "Is the ethosuximide late-phase effect reproducible with a drug-by-genotype test and a same-day control, is the lithium effect genotype-specific, and do the denominators of the ketogenic-diet and vigabatrin case series keep their C2?",
    "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
    "next_experiment_stake": "which of the favourable and null WWOX-system results holds: the outcomes lead to opposite decisions (lift or stop)",
-   "notes": "none",
+   "notes": "Graph coverage (IT11 P2.1): the ketogenic diet is out of the method (a modality, not a molecule), so the graph is silent on it by construction. The five phenotype leads are development inputs, not an independent validation.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
    "pathways_needs": "Pyruvate entry into the TCA cycle [P3; card_inference_by_mechanism_no_catalogue_row]; Seizure and spasm control as a symptom-level need [C2; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
@@ -2125,7 +2193,7 @@
    "next_experiment_or_control": "Is the ethosuximide late-phase effect reproducible with a drug-by-genotype test and a same-day control, is the lithium effect genotype-specific, and do the denominators of the ketogenic-diet and vigabatrin case series keep their C2?",
    "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
    "next_experiment_stake": "which of the favourable and null WWOX-system results holds: the outcomes lead to opposite decisions (lift or stop)",
-   "notes": "none",
+   "notes": "Graph coverage (IT11 P2.1): the generation graph has no path to this molecule: its signed targets (ABAT, SLC32A1) are not nodes of the network, and its action runs through a metabolite (GABA) that the network cannot express. The absence of a graph row is not evidence about vigabatrin; the lead was a development input, not an independent validation.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
    "pathways_needs": "Inhibitory drive [P3; documented_association_target_listed]; Hypomyelination [C3; other_disease_precedent_plus_wwox_case_level_signal]; Seizure and spasm control as a symptom-level need [C2; effect_observed_in_wwox_system] -- 3 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
@@ -2222,7 +2290,7 @@
    "next_experiment_or_control": "Does an intermediate vector level separate a threshold from a gradient, and is the benefit only prevented inside the first days of life or also recovered when treatment follows onset? No study has measured the phenotype at the day of injection.",
    "next_experiment_priority": "NX2: informative: the next experiment resolves one limit, the decision moves one step at most",
    "next_experiment_stake": "whether the strongest case holds beyond its single row and its window",
-   "notes": "broad recovery lists one item because only gene addition has been tested in a WWOX system: this is a statement about test coverage, not about the field",
+   "notes": "broad recovery lists one item because only gene addition has been tested in a WWOX system: this is a statement about test coverage, not about the field | Graph coverage (IT11 P2.1): gene addition is out of the method (a modality, not a molecule), so the graph is silent on it by construction; its WWOX-system result is not a graph result. The five phenotype leads are development inputs, not an independent validation.",
    "objective": "Broad, durable functional recovery (the evidence is prevention or early-window in a null mouse; recovery after onset is not shown)",
    "origin": "known track from before IT9",
    "pathways_needs": "Systemic metabolic decompensation [C2; effect_observed_in_wwox_system]; Restore WWOX protein in neurons by gene addition [F1; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
@@ -2265,7 +2333,7 @@
    "next_experiment_or_control": "Does the ethosuximide sensitivity reflect T-type involvement, given that no T-type measurement exists and a class-level progenitor-viability harm signal is recorded?",
    "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
    "next_experiment_stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)",
-   "notes": "the one outside-WWOX harm row is class-level (other T-type blockers lowered progenitor viability; ethosuximide was not tested), not ethosuximide data",
+   "notes": "the one outside-WWOX harm row is class-level (other T-type blockers lowered progenitor viability; ethosuximide was not tested), not ethosuximide data | Graph coverage (IT11 P2.1): the generation graph has no way to speak about this molecule: its signed targets (the T-type channel genes CACNA1G, CACNA1H, CACNA1I) are sink or isolated nodes of the signed network, so no seed set can reach them. The absence of a graph row is not evidence about ethosuximide, and the lead was a development input of the phenotype-first path, not an independent validation of the graph.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
    "pathways_needs": "Seizure and spasm control as a symptom-level need [F2; effect_observed_in_wwox_system]; Ethosuximide sensitivity of provoked seizure in Wwox loss [F2; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
@@ -2306,7 +2374,7 @@
    "next_experiment_or_control": "Is the ethosuximide late-phase effect reproducible with a drug-by-genotype test and a same-day control, is the lithium effect genotype-specific, and do the denominators of the ketogenic-diet and vigabatrin case series keep their C2?",
    "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
    "next_experiment_stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)",
-   "notes": "none",
+   "notes": "Graph coverage (IT11 P2.1, correcting IT10): lithium IS a seed-specific 'mimics' hit in the Q6 set (a gene-expression seed in a human system, rank 67 to 70 of 232), which IT10 missed because it read a truncated candidate list. That hit is about an expression seed and not about the lead's seizure readout: the seizure lowering also occurs in wild-type mice, and the chain rests on two network edges whose neural meaning is unverified (named in the IT11 P2.1 package). It is not support for lithium. For the neurogenic window lithium is a risk flag (Wnt activation in the same direction as the knockout MYC rise; IT11 P2.2, candidate M07); the G01 seizure lead is untouched. A development input, not an independent validation.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
    "pathways_needs": "GSK3beta de-repression [P3; card_inference_by_mechanism_no_catalogue_row]; Seizure and spasm control as a symptom-level need [F2; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
@@ -2348,7 +2416,7 @@
    "next_experiment_or_control": "Which of three readings (NMDAR gain, permissive necessity, AMPAR-led drive) explains the d-APV-sensitive bursting, and does the bursting depend on the magnesium block? The d-APV result alone does not separate them.",
    "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
    "next_experiment_stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)",
-   "notes": "none",
+   "notes": "Graph coverage (IT11 P2.1): the graph returns d-APV only as a direct hit on the GRIN2C transcript in the Q4 direct-search arm (the earlier 'zero score' was the indirect part only); the GRIN2A, GRIN2B and GRIN2D subunits have outgoing edges but no chain reaches a Q4 seed. The hit concerns a mouse transcript, the lead's result is a bursting readout in slices: a level mismatch, not a confirmation. A development input, not an independent validation.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
    "pathways_needs": "Excitatory network gain and bursting [F2; effect_observed_in_wwox_system] -- 1 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
@@ -2384,7 +2452,7 @@
    "context": "human; WWOX knockout (constitutive engineered null); depth complete_fulltext_read",
    "could_fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
-   "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: A treated wild-type arm and independent differentiations remove design limits from the favourable row (toward F1 if the other flags are absent); a layer-neuron recovery would remove the counter row; a persistent absence keeps C2.",
+   "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: If MYC difference vanishes within cell-cycle and potency strata, MYC is a marker and the need moves to inert for lever purposes. If genetic MYC lowering moves neuronal fractions in knockout beyond corrected cells and cell counts hold, the driver reading advances to a second model and the development question (a prenatal window) becomes the limit. If progeni…",
    "counter_evidence_statements": "none stated beyond the counts",
    "depth_of_evidence": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract",
    "evaluated_on": "2026-10-31",
@@ -2399,10 +2467,10 @@
    "intervention": "A51, a multi-kinase inhibitor (experimental)",
    "main_limit": "SOX2_is_a_readout_marker; multi_kinase_inhibitor; no_blinding; no_treated_wt_arm; one_experiment_not_independent_differentiations | identity with the clinical agent BTX A51 is not verified (the organoid source calls it a multi-kinase inhibitor suppressing Wnt and MYC); the clinical agent's adult-oncology toxicity is in the card; no treated wild-type arm; same laboratory as the AAV9 work",
    "main_reason": "Tried in a WWOX system: results mixed, null or case-level: lead position C2 on 'MYC elevation and progenitor-state shift in WWOX-deficient radial glia' (NEED-MYC-PROGENITOR-PROLIFERATION). On that need: 1 benefit, 1 null; outside WWOX 0 favourable and 0 null or harm row(s) (some may be class-level rows from other compounds, see the limits). Mechanism: no catalogue identity: target identity, direction of action and link to the need are NOT EVALUABLE here (UNKNOWN, not zero). ",
-   "next_experiment_or_control": "Does the fall in progenitors with A51 hold with a treated wild-type arm and independent differentiations, and is the lack of layer-neuron recovery real or a timing effect?",
+   "next_experiment_or_control": "Is the MYC rise in WWOX-deficient radial glia a driver, a marker of retained progenitor state or a consequence of the cell-cycle shift, and does the layer-marker deficit that neuron-stage add-back restores define a compartment a postnatal lever could reach?",
    "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
    "next_experiment_stake": "which of the favourable and null WWOX-system results holds: the outcomes lead to opposite decisions (lift or stop)",
-   "notes": "none",
+   "notes": "Graph coverage (IT11 P2.1): the graph cannot return A51 because the name has no catalogue identity (it exists only in the paper); the lookalike BTX-A51 is not attached. A development input, not an independent validation. IT11 P2.2 restatement: the authors read the A51 result as MYC-driven impairment of differentiation (NEUN-positive up, SATB2 mildly up, CTIP2 unchanged); the arm is thin (multi-kinase compound, knockout organoids only, no wild-type-plus-compound group, supplement not available locally), so no candidate is strengthened by it; role of the MYC change stays unknown.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
    "pathways_needs": "MYC elevation and progenitor-state shift in WWOX-deficient radial glia [C2; effect_observed_in_wwox_system]; Wnt/beta-catenin readout elevated in WWOX-deficient organoids [P3; card_inference_by_mechanism_no_catalogue_row] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
@@ -2443,7 +2511,7 @@
    "next_experiment_or_control": "Is the P10 glucose difference real (knockout about 95, wild type about 130), and does any dose of the vector correct it?",
    "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
    "next_experiment_stake": "which of the favourable and null WWOX-system results holds: the outcomes lead to opposite decisions (lift or stop)",
-   "notes": "none",
+   "notes": "Graph coverage (IT11 P2.1): gene addition is out of the method (a modality, not a molecule), so the graph is silent on it by construction; its WWOX-system result is not a graph result. The five phenotype leads are development inputs, not an independent validation.",
    "objective": "Partial or bridge benefit (the evidence is prevention or early-window in a null mouse; recovery after onset is not shown)",
    "origin": "known track from before IT9",
    "pathways_needs": "Systemic metabolic decompensation [C2; effect_observed_in_wwox_system]; Restore WWOX protein in neurons by gene addition [F1; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
@@ -2487,7 +2555,7 @@
    "next_experiment_or_control": "Is the ethosuximide late-phase effect reproducible with a drug-by-genotype test and a same-day control, is the lithium effect genotype-specific, and do the denominators of the ketogenic-diet and vigabatrin case series keep their C2?",
    "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
    "next_experiment_stake": "which of the favourable and null WWOX-system results holds: the outcomes lead to opposite decisions (lift or stop)",
-   "notes": "none",
+   "notes": "Graph coverage (IT11 P2.1): the ketogenic diet is out of the method (a modality, not a molecule), so the graph is silent on it by construction. The five phenotype leads are development inputs, not an independent validation.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
    "pathways_needs": "Pyruvate entry into the TCA cycle [P3; card_inference_by_mechanism_no_catalogue_row]; Seizure and spasm control as a symptom-level need [C2; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
@@ -2533,7 +2601,7 @@
    "next_experiment_or_control": "Is the ethosuximide late-phase effect reproducible with a drug-by-genotype test and a same-day control, is the lithium effect genotype-specific, and do the denominators of the ketogenic-diet and vigabatrin case series keep their C2?",
    "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
    "next_experiment_stake": "which of the favourable and null WWOX-system results holds: the outcomes lead to opposite decisions (lift or stop)",
-   "notes": "none",
+   "notes": "Graph coverage (IT11 P2.1): the generation graph has no path to this molecule: its signed targets (ABAT, SLC32A1) are not nodes of the network, and its action runs through a metabolite (GABA) that the network cannot express. The absence of a graph row is not evidence about vigabatrin; the lead was a development input, not an independent validation.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
    "pathways_needs": "Inhibitory drive [P3; documented_association_target_listed]; Hypomyelination [C3; other_disease_precedent_plus_wwox_case_level_signal]; Seizure and spasm control as a symptom-level need [C2; effect_observed_in_wwox_system] -- 3 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
@@ -2650,13 +2718,13 @@
   "inputs": {
    "comparison_rows": 9,
    "coverage_generated_from": {
-    "assertion_pertinence.tsv": "1423d4da7cf0b4e1",
-    "card_links.json": "1f8ebd4b6816fb93",
-    "cards_and_packets": "d6919082e3ff1034",
+    "assertion_pertinence.tsv": "9d699d1c6e9b73ee",
+    "card_links.json": "2aac19ca3b0b7686",
+    "cards_and_packets": "30bfbc58e2d2d764",
     "catalog.jsonl.gz": "75652786013b931d",
-    "catalog_stats.json": "5abbad4cba89c312",
+    "catalog_stats.json": "87ac308ce3ab9b3f",
     "measure_next.json": "bca46967510475c5",
-    "needs.json": "73729c9c6a29d034",
+    "needs.json": "97f994c83ffd4d36",
     "source_artefacts.tsv": "222f20137c020b58",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
@@ -2671,16 +2739,16 @@
     "unknown/unverified": 27364
    },
    "by_class": {
-    "INSUFF": 40246,
-    "UNIT": 22
+    "INSUFF": 40243,
+    "UNIT": 25
    },
    "by_first_order": {
     "Q1": 97,
     "Q2": 1894,
     "Q3": 208,
-    "Q4": 14239,
+    "Q4": 14236,
     "Q5": 23808,
-    "UNIT": 22
+    "UNIT": 25
    },
    "distinct_display_names_in_q1": 71,
    "distinct_display_names_total": 32276,
@@ -2689,12 +2757,12 @@
    "msig_neural_families": 931,
    "need_linked_by_access_category": {
     "OTC": 6,
-    "experimental": 191,
-    "prescription": 52,
+    "experimental": 192,
+    "prescription": 54,
     "supplement": 22,
-    "unknown/unverified": 2061
+    "unknown/unverified": 2062
    },
-   "need_linked_families_plus_units": 2221,
+   "need_linked_families_plus_units": 2224,
    "need_linked_families_q1_q2_q3": 2199,
    "q1_by_status": {
     "approved_any_source": 33,
@@ -2722,12 +2790,25 @@
    "distinct_entries": 4,
    "records_qualified": 6
   },
+  "it11": {
+   "by_class": {
+    "EVALUATED AND ORDERABLE": 3,
+    "EXCLUDED FROM A SPECIFIC COMPARISON WITH REASON": 3
+   },
+   "by_state": {
+    "CONDITIONAL": 3,
+    "DROP": 1,
+    "REFERENCE": 2
+   },
+   "distinct_entries": 5,
+   "records_qualified": 6
+  },
   "it9": {
    "all_units_by_origin": {
-    "generated_in_it10": 2,
+    "generated_in_it10": 4,
     "generated_in_it9": 24,
     "known_track_before_it9": 30,
-    "reference_or_control": 9
+    "reference_or_control": 11
    },
    "by_class": {
     "EVALUATED AND ORDERABLE": 4,
@@ -2742,16 +2823,16 @@
    },
    "distinct_compounds": 31,
    "ranked_by_origin": {
-    "generated_in_it10": 1,
+    "generated_in_it10": 2,
     "generated_in_it9": 8,
     "known_track_before_it9": 27
    },
    "records_qualified": 32,
    "units_by_origin": {
-    "generated_in_it10": 2,
+    "generated_in_it10": 4,
     "generated_in_it9": 24,
     "known_track_before_it9": 27,
-    "reference_or_control": 9
+    "reference_or_control": 11
    }
   },
   "needs_total": 23,
@@ -2759,7 +2840,7 @@
    "new_entry",
    "tie_resolution"
   ],
-  "order_digest": "6a5538289e83deb9",
+  "order_digest": "ff38fcaa61295a5a",
   "p3_note": "IT7 P3 results (network and signature comparison on 256 families) are exploratory, may not drive the ranking, and card-linked families were firewalled out of that comparison: no unit is ranked or re-ranked by them.",
   "plain_statement": "A provisional research priority for verification. It is not a validated prediction of clinical benefit, not a probability and not a therapeutic recommendation; nothing here is medical advice. An ordinal group is the strength of the case for the NEXT STUDY, with visible components; it is not a score.",
   "reason_classes": [
@@ -2840,7 +2921,7 @@
    },
    "general": {
     "cut_rule": "groups G1, G2a, G2b, G3, G4a are listed (at most ten); lower groups are listed apart, not padded in; ties are kept whole",
-    "n_listed": 36,
+    "n_listed": 37,
     "not_in_top_listed_apart": [
      {
       "group": "G4b",
@@ -2891,6 +2972,11 @@
       "group": "G4b",
       "objective": "partial",
       "unit_id": "U59"
+     },
+     {
+      "group": "G4b",
+      "objective": "partial",
+      "unit_id": "U63"
      },
      {
       "group": "G5",
@@ -3016,7 +3102,7 @@
    },
    "partial": {
     "cut_rule": "groups G1, G2a, G2b, G3, G4a are listed (at most ten); lower groups are listed apart, not padded in; ties are kept whole",
-    "n_listed": 28,
+    "n_listed": 29,
     "not_in_top_listed_apart": [
      {
       "group": "G4b",
@@ -3057,6 +3143,11 @@
       "group": "G4b",
       "objective": "partial",
       "unit_id": "U59"
+     },
+     {
+      "group": "G4b",
+      "objective": "partial",
+      "unit_id": "U63"
      },
      {
       "group": "G5",
@@ -3166,14 +3257,14 @@
   },
   "units": {
    "by_class": {
-    "EVALUATED AND ORDERABLE": 15,
+    "EVALUATED AND ORDERABLE": 16,
     "EVALUATED WITH WEAK PERTINENCE OR COUNTER-EVIDENCE": 5,
-    "EXCLUDED FROM A SPECIFIC COMPARISON WITH REASON": 29,
+    "EXCLUDED FROM A SPECIFIC COMPARISON WITH REASON": 32,
     "STILL INSUFFICIENTLY EVALUATED": 16
    },
-   "cards_covered": 38,
-   "cards_total": 38,
-   "excluded_axes": 29,
+   "cards_covered": 39,
+   "cards_total": 39,
+   "excluded_axes": 32,
    "groups_by_objective": {
     "broad": {
      "G1": 1,
@@ -3185,14 +3276,14 @@
      "G2b": 3,
      "G3": 4,
      "G4a": 1,
-     "G4b": 8,
+     "G4b": 9,
      "G5": 1,
      "GU": 11
     }
    },
    "orderable_in_a_group_of_the_selection": 8,
-   "ranked_interventions": 36,
-   "total_in_map": 65
+   "ranked_interventions": 37,
+   "total_in_map": 69
   }
  },
  "uncarded": [
@@ -3335,7 +3426,7 @@
    "item_id": "N12",
    "kind": "target_class",
    "provenance": "own_search",
-   "reason": "Q1 complement (IT10 P2.3): Q1 has no graph route, and a complementary search for regulators of WWOX protein stability yields one usable slice, a mechanism experiment on protein level only. ACK1 over-expression phosphorylates WWOX at Tyr287 followed by polyubiquitination and degradation in LNCaP cells (PMID 16288044, abstract only; full text not obtained); ACK1 knockdown raises WWOX in liver-cancer lines (PMID 25738261, abstract only; it supports ONLY the direction 'knockdown raises WWOX', not the Tyr287 or ubiquitin route). Two catalogued ATP-site inhibitors with measured TNK2 potency (dasatinib, bosutinib; multi-target SRC/ABL kinase inhibitors) would be paired probes with the concordance rule (agreement with TNK2 knockdown, a response to one only is off-target); the repeated ChEMBL values (bosutinib 2.7 nM, dasatinib Kd 5.6 and 6.0 nM) are literature values carried between papers, not replicates. CONDITIONAL on WWOX protein being present: it does not apply to the Q230P system as the single datum stands (no band). Nothing predicts function; ITCH raises WWOX half-life but has no compound. COUNTER-EVIDENCE: the ACK1 observation is cancer-cell over-expression (prostate, liver); no Tyr287 change in serum-starved MEFs; MG-132 raised neither wild type nor the P252A or P282A constructs, so a proteasomal route is not shown in the only variant system, whereas chloroquine and NH4Cl restored P252A and chloroquine also prevented its degradation under cycloheximide (a main-text sentence of PMID 41124647), which supports a lysosomal route; ACK1 inhibition sensitised rat cerebellar granule neurons to apoptotic stress (PMID 37263460, abstract); broad kinase inhibitors shift WWOX phospho-forms in cancer cells. The TNK2 missense that abolishes NEDD4 binding in a family with infantile-onset epilepsy (PMID 23686771, abstract) is NOT counter-evidence for lowering ACK1: the abstract gives no kinase-activity direction and it is one family. CNS exposure and tolerability of both agents were not assessed. Not carded: the unit waits for the full text of Mahajan 2005 (R3).",
+   "reason": "Q1 complement (IT10 P2.3): Q1 has no graph route, and a complementary search for regulators of WWOX protein stability yields one usable slice, a mechanism experiment on protein level only. ACK1 over-expression phosphorylates WWOX at Tyr287 followed by polyubiquitination and degradation in LNCaP cells (PMID 16288044, abstract only; full text not obtained); ACK1 shRNA raised WWOX in one HCC line (MHCC-97H), one construct versus scrambled, steady state only (PMID 25738261, full text read 2026-10-30 in IT11 P2.4; it supports ONLY the direction 'knockdown raises WWOX', not the Tyr287 or ubiquitin route). Two catalogued ATP-site inhibitors with measured TNK2 potency (dasatinib, bosutinib; multi-target SRC/ABL kinase inhibitors that share SRC/ABL targets and bind SRC tighter than ACK1: concordance of the two does not identify ACK1 and bosutinib is not an independent chemotype; IT11 P2.4) would be paired probes with the concordance rule (agreement with TNK2 knockdown, a response to one only is off-target); the repeated ChEMBL values (bosutinib 2.7 nM, dasatinib Kd 5.6 and 6.0 nM) are literature values carried between papers, not replicates. CONDITIONAL on WWOX protein being present: it does not apply to the Q230P system as the single datum stands (no band). Nothing predicts function; ITCH raises WWOX half-life but has no compound. COUNTER-EVIDENCE: the ACK1 observation is cancer-cell over-expression (prostate, liver); no Tyr287 change in serum-starved MEFs; MG-132 raised neither wild type nor the P252A or P282A constructs, so a proteasomal route is not shown in the only variant system, whereas chloroquine and NH4Cl restored P252A and chloroquine also prevented its degradation under cycloheximide (a main-text sentence of PMID 41124647), which supports a lysosomal route; ACK1 inhibition sensitised rat cerebellar granule neurons to apoptotic stress (PMID 37263460, abstract); broad kinase inhibitors shift WWOX phospho-forms in cancer cells. The TNK2 missense that abolishes NEDD4 binding in a family with infantile-onset epilepsy (PMID 23686771, abstract) is NOT counter-evidence for lowering ACK1: the abstract gives no kinase-activity direction and it is one family. CNS exposure and tolerability of both agents were not assessed. Not carded: the unit waits for the full text of Mahajan 2005 (R3).",
    "related_unit": "",
    "source_pointers": "recovery_it10_p23_20261031/README.md sections 1-3 and 11; recovery_it10_p23_20261031/candidates_it10_p23.tsv T1, T2 (correction_20261031 column); evidence_locators.tsv; tnk2_chembl_activities_selected.tsv; reopen_searches.tsv",
    "what_would_reopen": "the reopenable searches R1 to R7 in triggers.tsv (rows R*_q1_complement): above all R3 (full text of Mahajan 2005 and the HCC paper), R2 (WWOX protein or half-life after ACK1 inhibition or TNK2 loss in a neural or variant-allele cell) and R1 (whether the Q230P protein is made and cleared); a card and a mechanism-probe unit would be created only after R3 or R2"
@@ -3469,7 +3560,7 @@
    ],
    "exploratory_it7": "None. Not in the P3 universe (card-linked families were firewalled out of every method) and P3 tested a transcript module, not protein fate. P2: a class with a catalogued target row only for HDAC at enzyme level; no chaperone target row in ChEMBL, GtoPdb or DGIdb.",
    "inputs": {
-    "T1_cards": "22c8934aef9e9366",
+    "T1_cards": "936bb1ecaa0cab09",
     "T2_pertinence": "91e62b924fe30a2a",
     "T3_receipts": "52149a4b03e76932",
     "T4_needs": "9ae567485b16c45c",
@@ -3767,7 +3858,7 @@
    ],
    "exploratory_it7": "None; outside the P3 universe and not a transcript question.",
    "inputs": {
-    "T1_cards": "4654f33b54392755",
+    "T1_cards": "4a2993f65b13313b",
     "T2_pertinence": "a99cbab9e0538513",
     "T3_receipts": "f65f2005fcac34e1",
     "T4_needs": "9ae567485b16c45c",
@@ -4020,7 +4111,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "39521ead067bdb83",
+    "T1_cards": "c58a41c2b43cc110",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "51d892749172e3bd",
     "T4_needs": "9ae567485b16c45c",
@@ -4251,7 +4342,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "5d9d1037d1c124e2",
+    "T1_cards": "24b72dd3461bf450",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d1a40a526bc95810",
     "T4_needs": "9ae567485b16c45c",
@@ -4481,7 +4572,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "a42f12259db9d570",
+    "T1_cards": "2983ef599c03a01a",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d1a40a526bc95810",
     "T4_needs": "9ae567485b16c45c",
@@ -4747,7 +4838,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "f20c17d22f440f0d",
+    "T1_cards": "1e0a648c9dec08ab",
     "T2_pertinence": "e8ab801c472fdfe7",
     "T3_receipts": "0efa01184c6ba643",
     "T4_needs": "aa528d3f09f497b0",
@@ -4986,6 +5077,9 @@
     "limit": [
      "G1 rests on a single pertinence row: high-dose survival, n=30 vs untreated knockout n=10, flag audit_repair_not_rejudged; the audit repair on that row is still to be adjudicated before any claim-level use. Prevention or early-window result in a null mouse (injection P0 to P5; later intervention not explored); one laboratory (two papers, shared senior author)."
     ],
+    "note": [
+     "Graph coverage (IT11 P2.1): gene addition is out of the method (a modality, not a molecule), so the graph is silent on it by construction; its WWOX-system result is not a graph result. The five phenotype leads are development inputs, not an independent validation."
+    ],
     "objective_note": [
      "the evidence is prevention or early-window in a null mouse; recovery after onset is not shown"
     ],
@@ -5098,7 +5192,7 @@
    ],
    "exploratory_it7": "None. Gene addition is not a compound question; P2 counts it as direction-evaluable by target only (zero signed records on the need target) and P3 did not touch it.",
    "inputs": {
-    "T1_cards": "392d056b83d06a8f",
+    "T1_cards": "45da07ad539a0392",
     "T2_pertinence": "59d15d3c06233d6c",
     "T3_receipts": "cd21840b2a4e584e",
     "T4_needs": "82b439e35fc80b6c",
@@ -5293,7 +5387,9 @@
       "level_text": "informative: the next experiment resolves one limit, the decision moves one step at most",
       "stake": "whether the strongest case holds beyond its single row and its window"
      },
-     "notes": [],
+     "notes": [
+      "Graph coverage (IT11 P2.1): gene addition is out of the method (a modality, not a molecule), so the graph is silent on it by construction; its WWOX-system result is not a graph result. The five phenotype leads are development inputs, not an independent validation."
+     ],
      "objective": "broad",
      "objective_note": "the evidence is prevention or early-window in a null mouse; recovery after onset is not shown",
      "positions": {
@@ -5375,7 +5471,9 @@
       "level_text": "decisive: the discriminating next experiment would change a decision (lift or stop)",
       "stake": "which of the favourable and null WWOX-system results holds: the outcomes lead to opposite decisions (lift or stop)"
      },
-     "notes": [],
+     "notes": [
+      "Graph coverage (IT11 P2.1): gene addition is out of the method (a modality, not a molecule), so the graph is silent on it by construction; its WWOX-system result is not a graph result. The five phenotype leads are development inputs, not an independent validation."
+     ],
      "objective": "partial",
      "objective_note": "the evidence is prevention or early-window in a null mouse; recovery after onset is not shown",
      "positions": {
@@ -5482,7 +5580,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "bc710db8040c1029",
+    "T1_cards": "5a45cee0c7881ed8",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "4c5d7ee4b7cf4a15",
     "T4_needs": "66cebf15a40b040e",
@@ -5713,7 +5811,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "d82f834c2edb98c0",
+    "T1_cards": "0baf02f642977cdf",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "ad1b95286f64b04c",
     "T4_needs": "10a1be2af4314710",
@@ -5862,6 +5960,9 @@
    "caveats": {
     "limit": [
      "identity with the clinical agent BTX A51 is not verified (the organoid source calls it a multi-kinase inhibitor suppressing Wnt and MYC); the clinical agent's adult-oncology toxicity is in the card; no treated wild-type arm; same laboratory as the AAV9 work"
+    ],
+    "note": [
+     "Graph coverage (IT11 P2.1): the graph cannot return A51 because the name has no catalogue identity (it exists only in the paper); the lookalike BTX-A51 is not attached. A development input, not an independent validation. IT11 P2.2 restatement: the authors read the A51 result as MYC-driven impairment of differentiation (NEUN-positive up, SATB2 mildly up, CTIP2 unchanged); the arm is thin (multi-kinase compound, knockout organoids only, no wild-type-plus-compound group, supplement not available locally), so no candidate is strengthened by it; role of the MYC change stays unknown."
     ]
    },
    "class": "WEAK",
@@ -5927,7 +6028,7 @@
      "wwox_assertions": 2
     },
     "X_counter_evidence": {
-     "need_level_counter_items": 5,
+     "need_level_counter_items": 9,
      "need_level_counter_items_note": "over 2 linked need(s); items of the need record, not of the intervention",
      "opposed_action_needs": [],
      "outside_wwox_null_or_harm": 0,
@@ -5952,10 +6053,10 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "b6056d3b33398fe9",
+    "T1_cards": "1fc203d78a997256",
     "T2_pertinence": "8e52657c67b7cf9d",
     "T3_receipts": "9704e0c37800b5d7",
-    "T4_needs": "610a2835cdde8e39",
+    "T4_needs": "b1224f7ee3d5a2f3",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "2302f3b36a077aa0"
    },
@@ -6014,7 +6115,7 @@
      },
      "same_need_conflict": false,
      "thread": "Development and glia",
-     "wwox_observations_on_need": 3
+     "wwox_observations_on_need": 4
     },
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -6112,7 +6213,9 @@
       "level_text": "low or none today: no discriminating next step is named, or the outcome could not change the decision before a premise exists",
       "stake": "no discriminating next step named"
      },
-     "notes": [],
+     "notes": [
+      "Graph coverage (IT11 P2.1): the graph cannot return A51 because the name has no catalogue identity (it exists only in the paper); the lookalike BTX-A51 is not attached. A development input, not an independent validation. IT11 P2.2 restatement: the authors read the A51 result as MYC-driven impairment of differentiation (NEUN-positive up, SATB2 mildly up, CTIP2 unchanged); the arm is thin (multi-kinase compound, knockout organoids only, no wild-type-plus-compound group, supplement not available locally), so no candidate is strengthened by it; role of the MYC change stays unknown."
+     ],
      "objective": "broad",
      "objective_note": "",
      "positions": {},
@@ -6170,24 +6273,26 @@
      "main_limit": "SOX2_is_a_readout_marker; multi_kinase_inhibitor; no_blinding; no_treated_wt_arm; one_experiment_not_independent_differentiations | identity with the clinical agent BTX A51 is not verified (the organoid source calls it a multi-kinase inhibitor suppressing Wnt and MYC); the clinical agent's adult-oncology toxicity is in the card; no treated wild-type arm; same laboratory as the AAV9 work",
      "member": true,
      "next": {
-      "date": "2026-10-29",
-      "feasibility": "A51 is a multi-kinase inhibitor with the safety gate open (card); the organoid line is not held (not known).",
+      "date": "2026-10-31",
+      "feasibility": "Wet lab with isogenic human organoid lines and an inducible MYC lever; the lines are not held (not known); the deposited single-cell data may need an access request.",
       "kind": "chiarire una controevidenza",
       "need": "NEED-MYC-PROGENITOR-PROLIFERATION",
-      "question": "Does the fall in progenitors with A51 hold with a treated wild-type arm and independent differentiations, and is the lack of layer-neuron recovery real or a timing effect?",
-      "would_change": "A treated wild-type arm and independent differentiations remove design limits from the favourable row (toward F1 if the other flags are absent); a layer-neuron recovery would remove the counter row; a persistent absence keeps C2."
+      "question": "Is the MYC rise in WWOX-deficient radial glia a driver, a marker of retained progenitor state or a consequence of the cell-cycle shift, and does the layer-marker deficit that neuron-stage add-back restores define a compartment a postnatal lever could reach?",
+      "would_change": "If MYC difference vanishes within cell-cycle and potency strata, MYC is a marker and the need moves to inert for lever purposes. If genetic MYC lowering moves neuronal fractions in knockout beyond corrected cells and cell counts hold, the driver reading advances to a second model and the development question (a prenatal window) becomes the limit. If progeni…"
      },
      "next_priority": {
       "feasibility_flags": [
        "access_or_material_not_known",
        "new_wet_lab_work_needed"
       ],
-      "feasibility_text": "A51 is a multi-kinase inhibitor with the safety gate open (card); the organoid line is not held (not known).",
+      "feasibility_text": "Wet lab with isogenic human organoid lines and an inducible MYC lever; the lines are not held (not known); the deposited single-cell data may need an access request.",
       "level": "NX1",
       "level_text": "decisive: the discriminating next experiment would change a decision (lift or stop)",
       "stake": "which of the favourable and null WWOX-system results holds: the outcomes lead to opposite decisions (lift or stop)"
      },
-     "notes": [],
+     "notes": [
+      "Graph coverage (IT11 P2.1): the graph cannot return A51 because the name has no catalogue identity (it exists only in the paper); the lookalike BTX-A51 is not attached. A development input, not an independent validation. IT11 P2.2 restatement: the authors read the A51 result as MYC-driven impairment of differentiation (NEUN-positive up, SATB2 mildly up, CTIP2 unchanged); the arm is thin (multi-kinase compound, knockout organoids only, no wild-type-plus-compound group, supplement not available locally), so no candidate is strengthened by it; role of the MYC change stays unknown."
+     ],
      "objective": "partial",
      "objective_note": "",
      "positions": {
@@ -6295,7 +6400,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "0cd600d695049368",
+    "T1_cards": "4ac378c45081a63f",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "dc01c05508dcbf56",
     "T4_needs": "55ff62f47762bab4",
@@ -6576,7 +6681,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "5d36ec0082b8bd88",
+    "T1_cards": "d753addeef9ace10",
     "T2_pertinence": "079230f81c69cb2e",
     "T3_receipts": "293d407faa57bb47",
     "T4_needs": "932744721b4c9f86",
@@ -6865,7 +6970,7 @@
    ],
    "exploratory_it7": "P3 (IT7, exploratory, minimum detectable effect about rho 0.15, independently verified): NO ADDED VALUE of a signed external network (rho 0.047) or a WWOX-enriched network (difference -0.0015) for ranking compounds by opposition of the six-gene module; the signature route is effect not detected, not excluded (rho 0.143, 0.007 under the 0.15 threshold, 90 pe…",
    "inputs": {
-    "T1_cards": "1fefef97c8702548",
+    "T1_cards": "dac4cd9ddc46bb1b",
     "T2_pertinence": "1959a04e90dbf178",
     "T3_receipts": "5c83e6a18e12f4d3",
     "T4_needs": "a3face7aa0d2e275",
@@ -7258,7 +7363,7 @@
    ],
    "exploratory_it7": "P3 (IT7, exploratory, independently verified): the same result as CMP-04 - network routes NO ADDED VALUE, signature route not detected and not excluded (weak positive counter-evidence: lower bound 0.039, top-decile hit rate 15 percent); module transfer inconclusive (null 95th percentile 0.389 and p 0.060 on the producer's draw, 0.396 and 0.0595 on the verif…",
    "inputs": {
-    "T1_cards": "f438010701f72c62",
+    "T1_cards": "82515f1319803bff",
     "T2_pertinence": "4f588d870d868008",
     "T3_receipts": "b410a77ea4345508",
     "T4_needs": "1765d18f6fbe6723",
@@ -7576,7 +7681,11 @@
     "E04_ketogenic_lactate_axis",
     "EB-KD-01"
    ],
-   "caveats": {},
+   "caveats": {
+    "note": [
+     "Graph coverage (IT11 P2.1): the ketogenic diet is out of the method (a modality, not a molecule), so the graph is silent on it by construction. The five phenotype leads are development inputs, not an independent validation."
+    ]
+   },
    "class": "WEAK",
    "class_label": "EVALUATED WITH WEAK PERTINENCE OR COUNTER-EVIDENCE",
    "class_reason": "evaluated at card level; every position is counter-evidence (C1-C3) or a mechanism-only link (P3), none favourable",
@@ -7666,7 +7775,7 @@
    ],
    "exploratory_it7": "None. A diet has no compound target row, so neither P2 method applies, and the P3 negative says nothing about it.",
    "inputs": {
-    "T1_cards": "c75216ece849182e",
+    "T1_cards": "87796b412b2903fc",
     "T2_pertinence": "d95f7e8dcd00a63d",
     "T3_receipts": "892bcad601ce6d84",
     "T4_needs": "7a6072fa49c3e9d7",
@@ -7852,7 +7961,9 @@
       "level_text": "decisive: the discriminating next experiment would change a decision (lift or stop)",
       "stake": "which of the favourable and null WWOX-system results holds: the outcomes lead to opposite decisions (lift or stop)"
      },
-     "notes": [],
+     "notes": [
+      "Graph coverage (IT11 P2.1): the ketogenic diet is out of the method (a modality, not a molecule), so the graph is silent on it by construction. The five phenotype leads are development inputs, not an independent validation."
+     ],
      "objective": "partial",
      "objective_note": "",
      "positions": {
@@ -7986,7 +8097,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "1b08636a914892ed",
+    "T1_cards": "8798336cd05e2830",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d2e53556d365e6a4",
     "T4_needs": "77086341166ba9e5",
@@ -8173,7 +8284,8 @@
      "ethosuximide T-type potency in ChEMBL is above 5 mM (screening bound) or 600 uM with target unspecified, against a labelled plasma range of about 283 to 708 uM: T-type mediation of the observed effect is not measured"
     ],
     "note": [
-     "the one outside-WWOX harm row is class-level (other T-type blockers lowered progenitor viability; ethosuximide was not tested), not ethosuximide data"
+     "the one outside-WWOX harm row is class-level (other T-type blockers lowered progenitor viability; ethosuximide was not tested), not ethosuximide data",
+     "Graph coverage (IT11 P2.1): the generation graph has no way to speak about this molecule: its signed targets (the T-type channel genes CACNA1G, CACNA1H, CACNA1I) are sink or isolated nodes of the signed network, so no seed set can reach them. The absence of a graph row is not evidence about ethosuximide, and the lead was a development input of the phenotype-first path, not an independent validation of the graph."
     ]
    },
    "class": "ORD",
@@ -8283,7 +8395,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "cd3bae02617d3e1a",
+    "T1_cards": "786b7e4b4878d13b",
     "T2_pertinence": "8b0a047e9ce40434",
     "T3_receipts": "fb3ea4bd5ed30c08",
     "T4_needs": "3093063f37ac6ad7",
@@ -8519,7 +8631,8 @@
       "stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)"
      },
      "notes": [
-      "the one outside-WWOX harm row is class-level (other T-type blockers lowered progenitor viability; ethosuximide was not tested), not ethosuximide data"
+      "the one outside-WWOX harm row is class-level (other T-type blockers lowered progenitor viability; ethosuximide was not tested), not ethosuximide data",
+      "Graph coverage (IT11 P2.1): the generation graph has no way to speak about this molecule: its signed targets (the T-type channel genes CACNA1G, CACNA1H, CACNA1I) are sink or isolated nodes of the signed network, so no seed set can reach them. The absence of a graph row is not evidence about ethosuximide, and the lead was a development input of the phenotype-first path, not an independent validation of the graph."
      ],
      "objective": "partial",
      "objective_note": "",
@@ -8626,7 +8739,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "6c3c12c2d3f8cad8",
+    "T1_cards": "10590d07e4c63c7b",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d2e53556d365e6a4",
     "T4_needs": "77086341166ba9e5",
@@ -8874,7 +8987,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "4ff97f4bdc0d8ca8",
+    "T1_cards": "cb99cd5035408ec4",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "004bf101de3feb3f",
     "T4_needs": "e47c99263fff82cc",
@@ -9080,6 +9193,9 @@
    "caveats": {
     "limit": [
      "reading depth: queried, not full read, for the favourable case reports (concomitant drugs; vigabatrin added after a partial response); a WWOX-DEE case-level safety signal exists (two children with new pallidal and thalamic signal change on vigabatrin, abstract only, no denominator)"
+    ],
+    "note": [
+     "Graph coverage (IT11 P2.1): the generation graph has no path to this molecule: its signed targets (ABAT, SLC32A1) are not nodes of the network, and its action runs through a metabolite (GABA) that the network cannot express. The absence of a graph row is not evidence about vigabatrin; the lead was a development input, not an independent validation."
     ]
    },
    "class": "WEAK",
@@ -9189,7 +9305,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "6475ee72a45317d5",
+    "T1_cards": "2076f477831f72dd",
     "T2_pertinence": "094cb2bb03ecb864",
     "T3_receipts": "212be31947637493",
     "T4_needs": "89705b05a4222975",
@@ -9498,7 +9614,9 @@
       "level_text": "decisive: the discriminating next experiment would change a decision (lift or stop)",
       "stake": "which of the favourable and null WWOX-system results holds: the outcomes lead to opposite decisions (lift or stop)"
      },
-     "notes": [],
+     "notes": [
+      "Graph coverage (IT11 P2.1): the generation graph has no path to this molecule: its signed targets (ABAT, SLC32A1) are not nodes of the network, and its action runs through a metabolite (GABA) that the network cannot express. The absence of a graph row is not evidence about vigabatrin; the lead was a development input, not an independent validation."
+     ],
      "objective": "partial",
      "objective_note": "",
      "positions": {
@@ -9568,6 +9686,9 @@
    "caveats": {
     "limit": [
      "the only WWOX readout is d-APV (competitive NMDAR block, a tool compound) in neuron-specific knockout cortical slices from one laboratory; memantine, perampanel, radiprodil and the other class members have no WWOX data; rivals not excluded: carbenoxolone (a gap-junction blocker that may also block NMDAR) reduced bursts by 87 percent, heterozygote slices also burst (4 of 23) without behavioural seizures, and the mEPSC data show no overt change in the NMDAR:AMPA proportion"
+    ],
+    "note": [
+     "Graph coverage (IT11 P2.1): the graph returns d-APV only as a direct hit on the GRIN2C transcript in the Q4 direct-search arm (the earlier 'zero score' was the indirect part only); the GRIN2A, GRIN2B and GRIN2D subunits have outgoing edges but no chain reaches a Q4 seed. The hit concerns a mouse transcript, the lead's result is a bursting readout in slices: a level mismatch, not a confirmation. A development input, not an independent validation."
     ],
     "question": [
      "gap-junction dependence (carbenoxolone, 87 percent reduction) and bursting in heterozygote slices as rival explanations of the d-APV result"
@@ -9704,7 +9825,7 @@
    ],
    "exploratory_it7": "None from P3 (a receptor-physiology question, not a transcript module; memantine and perampanel are card-linked and firewalled). P2: memantine and perampanel are usable by the network method (signed antagonist actions on GRIN and GRIA targets) and have no neural LINCS signature, so the signature method does not apply; the need has 179 linked records by targ…",
    "inputs": {
-    "T1_cards": "de86d6440b87bab2",
+    "T1_cards": "0cfdae92394d433f",
     "T2_pertinence": "4744af9e5e721d31",
     "T3_receipts": "533fe34f5749cb80",
     "T4_needs": "ce38af3ca4f76c07",
@@ -10044,7 +10165,9 @@
       "level_text": "decisive: the discriminating next experiment would change a decision (lift or stop)",
       "stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)"
      },
-     "notes": [],
+     "notes": [
+      "Graph coverage (IT11 P2.1): the graph returns d-APV only as a direct hit on the GRIN2C transcript in the Q4 direct-search arm (the earlier 'zero score' was the indirect part only); the GRIN2A, GRIN2B and GRIN2D subunits have outgoing edges but no chain reaches a Q4 seed. The hit concerns a mouse transcript, the lead's result is a bursting readout in slices: a level mismatch, not a confirmation. A development input, not an independent validation."
+     ],
      "objective": "partial",
      "objective_note": "",
      "positions": {
@@ -10151,7 +10274,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "21b1ac87d2026a29",
+    "T1_cards": "e50a173a43d02ab9",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "5931d09e617ead46",
     "T4_needs": "69a0fc27d793904a",
@@ -10398,7 +10521,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "96fb574fdf7401f6",
+    "T1_cards": "0b0d5612d7c32c32",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "a729e52b13cb13ec",
     "T4_needs": "5f3af372617a911f",
@@ -10608,6 +10731,9 @@
     "limit": [
      "same paper and laboratory as ethosuximide (PMID 32000863): one experiment, i.p. LiCl; the effect also occurs in wild type and heterozygote; the GSK3beta link is a same-university cell study and ChEMBL holds no lithium GSK3/IMPase activity row"
     ],
+    "note": [
+     "Graph coverage (IT11 P2.1, correcting IT10): lithium IS a seed-specific 'mimics' hit in the Q6 set (a gene-expression seed in a human system, rank 67 to 70 of 232), which IT10 missed because it read a truncated candidate list. That hit is about an expression seed and not about the lead's seizure readout: the seizure lowering also occurs in wild-type mice, and the chain rests on two network edges whose neural meaning is unverified (named in the IT11 P2.1 package). It is not support for lithium. For the neurogenic window lithium is a risk flag (Wnt activation in the same direction as the knockout MYC rise; IT11 P2.2, candidate M07); the G01 seizure lead is untouched. A development input, not an independent validation."
+    ],
     "question": [
      "GSK3beta/IMPase engagement at the exposure reached at tolerated levels (no activity row exists for lithium)"
     ]
@@ -10720,7 +10846,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "a37102e9aac0fcae",
+    "T1_cards": "5ac377cfdbb1141b",
     "T2_pertinence": "db0343ccb25dda32",
     "T3_receipts": "1e81e393df77743b",
     "T4_needs": "99f7c86d7134370b",
@@ -10920,7 +11046,9 @@
       "level_text": "decisive: the discriminating next experiment would change a decision (lift or stop)",
       "stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)"
      },
-     "notes": [],
+     "notes": [
+      "Graph coverage (IT11 P2.1, correcting IT10): lithium IS a seed-specific 'mimics' hit in the Q6 set (a gene-expression seed in a human system, rank 67 to 70 of 232), which IT10 missed because it read a truncated candidate list. That hit is about an expression seed and not about the lead's seizure readout: the seizure lowering also occurs in wild-type mice, and the chain rests on two network edges whose neural meaning is unverified (named in the IT11 P2.1 package). It is not support for lithium. For the neurogenic window lithium is a risk flag (Wnt activation in the same direction as the knockout MYC rise; IT11 P2.2, candidate M07); the G01 seizure lead is untouched. A development input, not an independent validation."
+     ],
      "objective": "partial",
      "objective_note": "",
      "positions": {
@@ -11067,7 +11195,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "ea61617d55c61ad3",
+    "T1_cards": "8ddaba2de1f5d7a9",
     "T2_pertinence": "904f40dca9a2c7f5",
     "T3_receipts": "e631cecfdfb7956c",
     "T4_needs": "3093063f37ac6ad7",
@@ -11400,7 +11528,7 @@
    ],
    "exploratory_it7": "None from P3 (not the glycolysis module). P2: the need is exploration-only (direction uncertain) with 521 linked records by target association, 331 usable by the network method and 4 neural-signature records among them; association only, no direction toward a need, nothing evaluated.",
    "inputs": {
-    "T1_cards": "45d54d764c573e8f",
+    "T1_cards": "955e3f475904e415",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "137600edf412817c",
     "T4_needs": "34001ad580d89a15",
@@ -11697,7 +11825,7 @@
    ],
    "exploratory_it7": "None. An ion has no signed target row for the network method and no neural LINCS perturbation; the P3 negative does not apply.",
    "inputs": {
-    "T1_cards": "00457c0acf26bbf6",
+    "T1_cards": "3595d5f8707c322c",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "679405f21efb5aa3",
     "T4_needs": "ce38af3ca4f76c07",
@@ -12023,7 +12151,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "21042a590bea62f3",
+    "T1_cards": "e722fe0723b9c295",
     "T2_pertinence": "419afd58578b735f",
     "T3_receipts": "426c49feed3ec7e7",
     "T4_needs": "d5fed19300b7559a",
@@ -12349,7 +12477,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "8086cada4e8d08a7",
+    "T1_cards": "1f83f236e715e087",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d2e53556d365e6a4",
     "T4_needs": "77086341166ba9e5",
@@ -12511,7 +12639,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "64e2c4a47f7bd86d",
+    "T1_cards": "a485c4623737cdfd",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "c3c30203aefa55c6",
     "T4_needs": "c156cede56e9ac9b",
@@ -12671,7 +12799,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "40d0ac4b5bded2f8",
+    "T1_cards": "2dccc1f79a3d351f",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "c124efeb8d5edb82",
     "T4_needs": "97e5657152aa720b",
@@ -12765,7 +12893,8 @@
      "proposed, not performed. No NRF2 pathway, ROS or cytokine-protein datum exists in any WWOX-deficient mammalian neural cell; every WWOX cytokine datum is a transcript (null hippocampus Il6 significant, Tnf-a not; P47T cerebellum IL1B and TNF; rat lde/lde glia lower; the human KO organoid has no cytokine-expressing cells). The probe verdict (ex vivo) and the development verdict (systemic) are kept apart: omaveloxolone is a CONDITIONAL-GO ex vivo probe, systemic development is NOT SUPPORTED at present (label from 16 years, perinatal rat neurobehavioural findings at all doses, CYP3A4 inducer avoidance, transaminase rise); neither verdict is an efficacy statement and a label without a seizure string is not efficacy."
     ],
     "note": [
-     "Added hypothesis arm R (redox) is not in the P1 H_HARM / H_PROTECT vocabulary and is declared as an addition; the genetic KEAP1/NFE2L2 arm is the primary arm, omaveloxolone and monomethyl/dimethyl fumarate are two chemotypes that are not interchangeable; the IT9 drop of the dimethyl fumarate chain is not reversed."
+     "Added hypothesis arm R (redox) is not in the P1 H_HARM / H_PROTECT vocabulary and is declared as an addition; the genetic KEAP1/NFE2L2 arm is the primary arm, omaveloxolone and monomethyl/dimethyl fumarate are two chemotypes that are not interchangeable; the IT9 drop of the dimethyl fumarate chain is not reversed.",
+     "IT11 P2.3 corrections applied (12 items, l01_corrections_proposal.md): omaveloxolone and dimethyl fumarate are both cysteine-reactive electrophiles, so agreement between them does not separate NRF2 dependence from electrophile-class actions and only NFE2L2 loss does; dimethyl and monomethyl fumarate are separate compounds (monomethyl fumarate did not activate NRF2 in primary neurons in one source and has an HCAR2 rationale); omaveloxolone has an in-vitro concentration window; TNF is a discriminator; the organoid contrast is 4 v 2 with a post hoc exclusion and stays descriptive. No class is promoted."
     ],
     "question": [
      "step 0 gate: are NRF2 target activity, ROS or IL-6/IL-1beta protein different in isogenic WWOX-deficient versus corrected human neural cultures that include microglia or CNS-macrophage-like cells; if none differs and activation changes nothing the axis moves to inert; if ROS is raised and activation corrects it NFE2L2-dependently, arm R advances"
@@ -12794,7 +12923,7 @@
     "P_pharmacology": {
      "brain_penetration": "UNKNOWN",
      "human_exposure": "UNKNOWN",
-     "potency_with_assay_context": "Omaveloxolone: NRF2 activator (ChEMBL mechanism row; no potency row), monkey brain content similar to plasma, 97% protein bound, CYP3A4 substrate, half-life 57 h (label). MMF: KEAP1 covalent modifier, micromolar cell EC50 (ChEMBL, IT9). Genetic arm: none.",
+     "potency_with_assay_context": "Omaveloxolone: NRF2 activator (ChEMBL mechanism row; no potency row), monkey brain content similar to plasma, 97% protein bound, CYP3A4 substrate, half-life 57 h (label). DMF: covalent KEAP1 modifier, micromolar cell EC50 (ChEMBL, IT9). MMF: the systemic and CSF moiety on the label and an HCAR2 ago…",
      "record": "",
      "state": "not in the pharmacological comparison table; card text only (potency, exposure and nervous-system data UNKNOWN unless the card says otherwise)"
     },
@@ -12837,7 +12966,7 @@
      "wwox_assertions": 0
     },
     "X_counter_evidence": {
-     "need_level_counter_items": 3,
+     "need_level_counter_items": 4,
      "need_level_counter_items_note": "over 1 linked need(s); items of the need record, not of the intervention",
      "opposed_action_needs": [],
      "outside_wwox_null_or_harm": 0,
@@ -12860,15 +12989,15 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "4d81da6be93d75aa",
-    "T2_pertinence": "1257bf7b3d191f8b",
-    "T3_receipts": "cad190d1a7423e8d",
-    "T4_needs": "9b169b45ac44353a",
+    "T1_cards": "9962a9e4da3f1423",
+    "T2_pertinence": "1d8e37b50e10f4e0",
+    "T3_receipts": "2d4c21c2c119e3b6",
+    "T4_needs": "2fa442aa63e75191",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "af32521d73bf653e"
    },
    "kind": "mechanism_experiment",
-   "label": "The NRF2 (KEAP1) axis in WWOX-deficient neural cells: a genetic KEAP1/NFE2L2 arm, omaveloxolone and monomethyl/dimethyl fumarate as two chemotypes (a role-resolving mechanism experiment, not a treatment)",
+   "label": "The NRF2 (KEAP1) axis in WWOX-deficient neural cells: a genetic KEAP1/NFE2L2 arm, omaveloxolone and dimethyl fumarate as two cysteine-reactive electrophiles, monomethyl fumarate as a separate comparator with an HCAR2 rationale, each against NFE2L2 loss (a role-resolving mechanism experiment, not a treatment; IT11 P2.3 correction)",
    "member_evidence": [
     {
      "assertion_ids": [],
@@ -12889,11 +13018,11 @@
      "member": "Omaveloxolone",
      "member_key": "FAM:CAT:CHEMBL4303525",
      "member_type": "molecule",
-     "outside_wwox_assertions": 2,
+     "outside_wwox_assertions": 3,
      "signs": {},
      "source_pmids": [],
      "tested_in_wwox_system": "no",
-     "what": "no WWOX-system assertion attributed to this member; 2 outside-WWOX assertion(s) attributed",
+     "what": "no WWOX-system assertion attributed to this member; 3 outside-WWOX assertion(s) attributed",
      "wwox_assertions": 0
     },
     {
@@ -13008,7 +13137,7 @@
      ],
      "family_id": "INT:L01_nrf2_axis:tool",
      "kind": "tool_compound_or_genetic_precedent_not_in_catalogue",
-     "name": "NRF2 activation (genetic KEAP1 knockdown; omaveloxolone and monomethyl fumarate as two chemotypes) in WWOX-deficient neural cells: a role-resolving mechanism experiment, not a treatment [tool or genetic subject]",
+     "name": "NRF2 activation (genetic KEAP1 knockdown; omaveloxolone and dimethyl fumarate as two cysteine-reactive electrophiles, monomethyl fumarate as a separate comparator) in WWOX-deficient neural cells, with NFE2L2 loss as the dependence control: a role-resolving mechanism experiment, not a treatment [tool or genetic subject]",
      "name_twins_not_merged": [],
      "records": null,
      "roles": [
@@ -13055,12 +13184,14 @@
     }
    ],
    "pmids": [
+    "25897966",
     "27211851",
     "30290271",
     "31118567",
     "34268881",
     "36828035",
     "37897534",
+    "39684792",
     "42939870"
    ],
    "receipts_on_cited_pmids": 24,
@@ -13131,7 +13262,7 @@
       "feasibility": "Wet-lab with isogenic human neural cells and a microglia source; two commercial research compounds (availability UNVERIFIED); step 0 is a one-to-two-week assay set; whether a laboratory with the isogenic lines will run it: not known. (Kind…",
       "kind": "verificare un'ipotesi",
       "need": "NEED-REDOX-NRF2",
-      "question": "In WWOX-deficient versus isogenic corrected human neural cells that include microglia or CNS-macrophage-like cells, are NRF2 target activity, ROS and IL-6/IL-1beta protein different, and does NFE2L2-dependent activation (KEAP1 knockdown, omaveloxolone, monomethyl fumarate) change viability, lipid peroxidation, network activity or cytokine protein more in kn…",
+      "question": "In WWOX-deficient versus isogenic corrected human neural cells that include microglia or CNS-macrophage-like cells, are NRF2 target activity, ROS and IL-6/IL-1beta protein different, and does NFE2L2-dependent activation (KEAP1 knockdown, omaveloxolone, dimethyl fumarate, with monomethyl fumarate as a separate comparator, each against NFE2L2 loss) change via…",
       "would_change": "If neither ROS nor NRF2 tone nor cytokine protein differs and activation changes nothing: the axis moves to inert and the card is closed. If ROS is raised and activation corrects it in knockout cells more than in corrected cells (NFE2L2-dependent): arm R advances to a second model; omaveloxolone paediatric limits then become the development question."
      },
      "next_priority": {
@@ -13145,7 +13276,8 @@
       "stake": "first WWOX-system test of a target hypothesis"
      },
      "notes": [
-      "Added hypothesis arm R (redox) is not in the P1 H_HARM / H_PROTECT vocabulary and is declared as an addition; the genetic KEAP1/NFE2L2 arm is the primary arm, omaveloxolone and monomethyl/dimethyl fumarate are two chemotypes that are not interchangeable; the IT9 drop of the dimethyl fumarate chain is not reversed."
+      "Added hypothesis arm R (redox) is not in the P1 H_HARM / H_PROTECT vocabulary and is declared as an addition; the genetic KEAP1/NFE2L2 arm is the primary arm, omaveloxolone and monomethyl/dimethyl fumarate are two chemotypes that are not interchangeable; the IT9 drop of the dimethyl fumarate chain is not reversed.",
+      "IT11 P2.3 corrections applied (12 items, l01_corrections_proposal.md): omaveloxolone and dimethyl fumarate are both cysteine-reactive electrophiles, so agreement between them does not separate NRF2 dependence from electrophile-class actions and only NFE2L2 loss does; dimethyl and monomethyl fumarate are separate compounds (monomethyl fumarate did not activate NRF2 in primary neurons in one source and has an HCAR2 rationale); omaveloxolone has an in-vitro concentration window; TNF is a discriminator; the organoid contrast is 4 v 2 with a post hoc exclusion and stays descriptive. No class is promoted."
      ],
      "objective": "partial",
      "objective_note": "",
@@ -13156,6 +13288,454 @@
       "fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
       "leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
       "rise": "would rise to F2/F1 with a first signed result of the intervention in a WWOX system against an untreated same-genotype comparator; criteria not met now: a signed result of the intervention in a WWOX system exists; an outside-WWOX harm or null signal stands without a favourable outside signal | further questions: step 0 gate: are NRF2 target activity, ROS or IL-6/IL-1beta protein different in isogenic WWOX-deficient versus corrected human neural cultures that include microglia or CNS-macrophage-like cells; if none differs and activation changes nothing the axis moves to inert; if ROS is raised and activation corrects it NFE2L2-dependently, arm R advances"
+     },
+     "view_note": ""
+    }
+   }
+  },
+  {
+   "abstention_cards": [],
+   "access": "Palbociclib: prescription (US; openFDA NDC export_date 2026-10-27; identifier_match; 2026-10-27) | Simvastatin: prescription (US; openFDA NDC export_date 2026-10-27; identifier_match; 2026-10-27) | Abemaciclib: unknown/unverified (jurisdiction not stated; approval stated by a source but no US NDC listing matched b…; none; date not stated) -- descriptive listing evidence, not efficacy or safety",
+   "access_categories": [
+    "prescription",
+    "unknown/unverified"
+   ],
+   "access_items": [
+    {
+     "category": "prescription",
+     "date": "2026-10-27",
+     "jurisdiction": "US",
+     "licence_class": "A",
+     "member": "Palbociclib",
+     "source": "openFDA NDC export_date 2026-10-27",
+     "strength": "identifier_match"
+    },
+    {
+     "category": "prescription",
+     "date": "2026-10-27",
+     "jurisdiction": "US",
+     "licence_class": "A",
+     "member": "Simvastatin",
+     "source": "openFDA NDC export_date 2026-10-27",
+     "strength": "identifier_match"
+    },
+    {
+     "category": "unknown/unverified",
+     "date": "date not stated",
+     "jurisdiction": "jurisdiction not stated",
+     "licence_class": "unclassified",
+     "member": "Abemaciclib",
+     "source": "approval stated by a source but no US NDC listing matched b…",
+     "strength": "none"
+    }
+   ],
+   "cards": [
+    "M01_neurogenic_output_myc_window"
+   ],
+   "caveats": {
+    "counter": [
+     "SCAR12 shows MYC elevation without radial-glia expansion or a reduced neuron-cluster fraction (WOREE shows reduced CTIP2 and SATB2, Fig 6B, and a text/figure mismatch on its radial-glia increase, Fig 2F); POU5F1 is as prominent as MYC; the WWOX-MYC inverse relation in reference data is a developmental time course; mouse neuron-stage deletion reproduces the null phenotype (the Synapsin-Cre progenitor status is an inference) and neuron-stage add-back restores layer markers without changing radial glia; MYC-family dose is two-sided in cortex."
+    ],
+    "limit": [
+     "Origin vocabulary: this entry was named in IT11 and carries the origin value generated_in_it10 only because the view validates a closed origin list that has no IT11 value yet; its era field is IT11.",
+     "The experiment discriminates driver, marker and consequence readings of the radial-glia MYC rise; no compound has a result on this axis except the non-selective A51 arm (one laboratory, knockout organoids only). The authors read A51 as MYC-driven impairment of differentiation; 'no candidate strengthened' rests on the non-selectivity of A51 and on design gaps, not on a contradicting result."
+    ],
+    "note": [
+     "IT11 P2.2 restatement of the sulfopin comparison arm (the IT9 proposal unit U31 stays unchanged): sulfopin stays a conditional ex vivo probe beside genetic MYC lowering (card M01); a PIN1 probe cannot settle driver versus marker by itself (SCAR12 shows MYC elevation without the composition phenotype; mouse neuron-stage deletion reproduces the null phenotype); no human exposure; development NOT SUPPORTED."
+    ],
+    "question": [
+     "whether the MYC difference between knockout and wild-type radial glia survives within G1/G0 and matched potency strata (T1, needs the deposited single-cell data); genetic MYC lowering against a cytostatic control with absolute cell counts and wild-type-plus-compound groups (T2); the same strata in SCAR12 (T3)"
+    ]
+   },
+   "class": "ORD",
+   "class_label": "EVALUATED AND ORDERABLE",
+   "class_reason": "at least one linked need has a favourable position (F1, F2 or F3) after the merge of the unit's cards; the group says how strong",
+   "comparison_record": "",
+   "components": {
+    "M_mechanism": {
+     "families": [
+      "FAM:CAT:CHEMBL1064",
+      "FAM:CAT:CHEMBL189963",
+      "FAM:CAT:CHEMBL3301610"
+     ],
+     "l1": {
+      "none_found": 6
+     },
+     "l2": {
+      "not_evaluable": 6
+     },
+     "opposed_needs": [],
+     "text": "3 catalogue family(ies); L2 over 6 (family, need) cell(s): 6 not_evaluable"
+    },
+    "P_pharmacology": {
+     "brain_penetration": "UNKNOWN",
+     "human_exposure": "UNKNOWN",
+     "potency_with_assay_context": "A51: no catalogue identity, targets and exposure unknown. Sulfopin: research probe, no human exposure (IT9 E-06). Palbociclib and abemaciclib: oral small molecules with nanomolar aggregated potency on CDK4 and CDK6 in the compound database; label, paediatric and neural-progenitor data not searched.",
+     "record": "",
+     "state": "not in the pharmacological comparison table; card text only (potency, exposure and nervous-system data UNKNOWN unless the card says otherwise)"
+    },
+    "T_transferability": {
+     "genotypes": [
+      "WWOX knockout, treated versus untreated"
+     ],
+     "species_of_wwox_assertions": [
+      "human"
+     ],
+     "track": [
+      "A"
+     ],
+     "transfer_limits": [
+      "No datum from a WWOX-deficient neural cell at G1 duration, at MYC after add-back at the progenitor stage, or with a selective MYC lever; all compound rows other than A51 are NOT WWOX EVIDENCE."
+     ],
+     "window_note": []
+    },
+    "U_uncertainty": {
+     "hypothesised_from_target": 1,
+     "linked_needs": 1,
+     "measured_in_wwox_system": 0,
+     "mechanism_only_or_outside_counter": 0,
+     "premise_missing": 0,
+     "text": "of 1 linked need(s): 0 with a measured WWOX-system result, 1 hypothesised from the target, 0 mechanism-only or counter-signal, 0 premise missing",
+     "unknown": [
+      "potency in a WWOX system",
+      "exposure in a WWOX-deficient nervous system",
+      "dose-response in a WWOX system"
+     ]
+    },
+    "W_wwox_evidence": {
+     "favourable_distinct_pmids": [],
+     "l4_states": {
+      "none_in_record": 7
+     },
+     "read_beyond_abstract": 0,
+     "replication": "not applicable (no result)",
+     "signs": {},
+     "text": "none: no result of the intervention in a WWOX system recorded",
+     "wild_type_only_assertions": 0,
+     "wwox_assertions": 0
+    },
+    "X_counter_evidence": {
+     "need_level_counter_items": 6,
+     "need_level_counter_items_note": "over 1 linked need(s); items of the need record, not of the intervention",
+     "opposed_action_needs": [],
+     "outside_wwox_null_or_harm": 2,
+     "tags": [
+      "counter-evidence outside WWOX in rows (2)"
+     ],
+     "wwox_null_harm_mixed": 0
+    }
+   },
+   "declared_goals": [
+    "partial_benefit"
+   ],
+   "depth_of_benefit_sought": "",
+   "evaluation_depth": "E3",
+   "evaluation_depth_text": "card reviewed with assertions; no WWOX-side result read beyond abstract",
+   "evidence_level_note": {
+    "attribution_rule": "single intervention: its group is its own",
+    "of_mechanism_or_class": "not applicable: a single intervention, not a class",
+    "of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
+    "untested_members": []
+   },
+   "excluded_from_comparisons": [],
+   "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
+   "inputs": {
+    "T1_cards": "ea9ad14fffd9a171",
+    "T2_pertinence": "403956ddfaf8ef49",
+    "T3_receipts": "3ab40f90f4842fdd",
+    "T4_needs": "e3d9478eddf1541c",
+    "T5_pharmacology": "177f2f40ad8ae91b",
+    "T6_identity": "7de12fe35682551b"
+   },
+   "kind": "mechanism_experiment",
+   "label": "The neurogenic output and the MYC-high radial-glia state (Q6): genetic MYC lowering and stage-specific WWOX add-back, with A51, a PIN1 probe and a CDK4/6 class arm as comparison arms only (a driver, marker or consequence discrimination, not a treatment)",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "Simvastatin",
+     "member_key": "FAM:CAT:CHEMBL1064",
+     "member_type": "molecule",
+     "outside_wwox_assertions": 1,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member; 1 outside-WWOX assertion(s) attributed",
+     "wwox_assertions": 0
+    },
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "Palbociclib",
+     "member_key": "FAM:CAT:CHEMBL189963",
+     "member_type": "molecule",
+     "outside_wwox_assertions": 1,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member; 1 outside-WWOX assertion(s) attributed",
+     "wwox_assertions": 0
+    },
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "Abemaciclib",
+     "member_key": "FAM:CAT:CHEMBL3301610",
+     "member_type": "molecule",
+     "outside_wwox_assertions": 1,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member; 1 outside-WWOX assertion(s) attributed",
+     "wwox_assertions": 0
+    },
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "tool compound(s) or precedent named in card M01_neurogenic_output_myc_window",
+     "member_key": "INT:M01_neurogenic_output_myc_window:tool",
+     "member_type": "tool_compound",
+     "outside_wwox_assertions": 7,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member; 7 outside-WWOX assertion(s) attributed",
+     "wwox_assertions": 0
+    },
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "class or mechanism level (card-level assertions and unnamed members)",
+     "member_key": "CLASS",
+     "member_type": "class_level",
+     "outside_wwox_assertions": 0,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion attributed to this member",
+     "wwox_assertions": 0
+    }
+   ],
+   "members": [
+    {
+     "access_categories": [
+      "prescription"
+     ],
+     "cards": [
+      "M01_neurogenic_output_myc_window"
+     ],
+     "family_id": "FAM:CAT:CHEMBL1064",
+     "kind": "molecule_family",
+     "name": "SIMVASTATIN",
+     "name_twins_not_merged": [
+      "FAM:CAT:DGIDB:69bf70938387"
+     ],
+     "records": 1,
+     "roles": [
+      "assertion_subject",
+      "named_member"
+     ],
+     "status_class": [
+      "approved_any_source"
+     ]
+    },
+    {
+     "access_categories": [
+      "experimental",
+      "prescription"
+     ],
+     "cards": [
+      "M01_neurogenic_output_myc_window"
+     ],
+     "family_id": "FAM:CAT:CHEMBL189963",
+     "kind": "molecule_family",
+     "name": "PALBOCICLIB",
+     "name_twins_not_merged": [
+      "FAM:CAT:DGIDB:5999e76b0fdc"
+     ],
+     "records": 2,
+     "roles": [
+      "assertion_subject",
+      "named_member"
+     ],
+     "status_class": [
+      "approved_any_source",
+      "clinical_candidate"
+     ]
+    },
+    {
+     "access_categories": [
+      "unknown/unverified"
+     ],
+     "cards": [
+      "M01_neurogenic_output_myc_window"
+     ],
+     "family_id": "FAM:CAT:CHEMBL3301610",
+     "kind": "molecule_family",
+     "name": "ABEMACICLIB",
+     "name_twins_not_merged": [
+      "FAM:CAT:DGIDB:bfa3a8018a80"
+     ],
+     "records": 1,
+     "roles": [
+      "assertion_subject",
+      "named_member"
+     ],
+     "status_class": [
+      "approved_any_source"
+     ]
+    },
+    {
+     "access_categories": null,
+     "cards": [
+      "M01_neurogenic_output_myc_window"
+     ],
+     "family_id": "INT:M01_neurogenic_output_myc_window:tool",
+     "kind": "tool_compound_or_genetic_precedent_not_in_catalogue",
+     "name": "MYC-axis and cell-cycle comparison arms (A51, a PIN1 probe, a CDK4/6 class arm) beside genetic MYC lowering and stage-specific WWOX add-back in WWOX-deficient neural progenitors: a discriminating experiment about driver, marker or consequence, not a treatment [tool or genetic subject]",
+     "name_twins_not_merged": [],
+     "records": null,
+     "roles": [
+      "tool_subject"
+     ],
+     "status_class": null
+    }
+   ],
+   "merge_reason": "",
+   "model_exclusions": [],
+   "origin": "generated_in_it10",
+   "origin_label": "generated in IT10",
+   "pathways": [
+    {
+     "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
+     "l1": {
+      "none_found": 6,
+      "not_evaluable": 1
+     },
+     "l2": {
+      "not_evaluable": 7
+     },
+     "l3": {
+      "precedent_other_disease_only": 3,
+      "target_engagement_only": 4
+     },
+     "l4": {
+      "none_in_record": 7
+     },
+     "link_evidence": "other_disease_precedent_only",
+     "need": "NEED-MYC-PROGENITOR-PROLIFERATION",
+     "need_direction": "uncertain",
+     "need_short": "MYC elevation and progenitor-state shift in WWOX-deficient radial glia",
+     "objective": "partial",
+     "opposed_action": false,
+     "position": "F3",
+     "position_by_card": {
+      "M01_neurogenic_output_myc_window": "F3"
+     },
+     "same_need_conflict": false,
+     "thread": "Development and glia",
+     "wwox_observations_on_need": 4
+    }
+   ],
+   "pmids": [
+    "28100400",
+    "33914858",
+    "38182577",
+    "40092791",
+    "42397075"
+   ],
+   "receipts_on_cited_pmids": 18,
+   "research_objective": "",
+   "tracks": [
+    "A"
+   ],
+   "unit_id": "U63",
+   "unit_type": "mechanism_probe",
+   "unit_type_label": "mechanism probe (a compound or genetic tool used for a mechanism experiment, not a treatment)",
+   "views": {
+    "broad": {
+     "declared": false,
+     "member": false,
+     "objective": "broad",
+     "positions": {}
+    },
+    "partial": {
+     "caveat_limits": [
+      "Origin vocabulary: this entry was named in IT11 and carries the origin value generated_in_it10 only because the view validates a closed origin list that has no IT11 value yet; its era field is IT11.",
+      "The experiment discriminates driver, marker and consequence readings of the radial-glia MYC rise; no compound has a result on this axis except the non-selective A51 arm (one laboratory, knockout organoids only). The authors read A51 as MYC-driven impairment of differentiation; 'no candidate strengthened' rests on the non-selectivity of A51 and on design gaps, not on a contradicting result."
+     ],
+     "contested": false,
+     "counter_needs": [],
+     "counter_statements": [
+      "SCAR12 shows MYC elevation without radial-glia expansion or a reduced neuron-cluster fraction (WOREE shows reduced CTIP2 and SATB2, Fig 6B, and a text/figure mismatch on its radial-glia increase, Fig 2F); POU5F1 is as prominent as MYC; the WWOX-MYC inverse relation in reference data is a developmental time course; mouse neuron-stage deletion reproduces the null phenotype (the Synapsin-Cre progenitor status is an inference) and neuron-stage add-back restores layer markers without changing radial glia; MYC-family dose is two-sided in cortex."
+     ],
+     "criteria_not_met": [
+      "a signed result of the intervention in a WWOX system exists",
+      "an outside-WWOX harm or null signal stands without a favourable outside signal"
+     ],
+     "declared": true,
+     "evidence": {
+      "carrier_of_position": false,
+      "depth": "partial_fulltext_read",
+      "flags": [
+       "MYCN_neuroblastoma_and_cancer_models",
+       "engine_edge_mode_mislabel",
+       "mechanism_probe",
+       "no_neural_progenitor_exposure",
+       "not_WWOX"
+      ],
+      "genotype": "UNKNOWN",
+      "id": "DR-M01-002",
+      "in_wwox": false,
+      "other_favourable_wwox_assertions": 0,
+      "pmids": [],
+      "scope": "OTHER_DISEASE_PRECEDENT",
+      "species": "mouse and human cells",
+      "text": "MYC target-gene expression and tumour growth after sulfopin: decrease"
+     },
+     "evidence_quality": "no_wwox_test_target_hypothesis",
+     "group": "G4b",
+     "group_reason": "as G4a but no documented direction-consistent action: the need's direction is uncertain, the action is unresolved, or the unit has no catalogue identity (position F3)",
+     "lead": "F3",
+     "lead_need": "NEED-MYC-PROGENITOR-PROLIFERATION",
+     "lead_summary": {
+      "outside_favourable": 1,
+      "outside_null_or_harm": 2,
+      "wwox_null_harm_mixed": 0,
+      "wwox_signs": {}
+     },
+     "main_limit": "MYCN_neuroblastoma_and_cancer_models; engine_edge_mode_mislabel; mechanism_probe; no_neural_progenitor_exposure; not_WWOX | Origin vocabulary: this entry was named in IT11 and carries the origin value generated_in_it10 only because the view validates a closed origin list that has no IT11 value yet; its era field is IT11. | The experiment discriminates driver, marker and consequence readings of the radial-glia MYC rise; no compound has a result on this axis except the non-selective A51 arm (one laboratory, knockout organoids only). The authors read A51 as MYC-driven impairment of differentiation; 'no candidate strengthened' rests on the non-selectivity of A51 and on design gaps, not on a contradicting result.",
+     "member": true,
+     "next": {
+      "date": "2026-10-31",
+      "feasibility": "Wet lab with isogenic human organoid lines and an inducible MYC lever; the lines are not held (not known); the deposited single-cell data may need an access request.",
+      "kind": "chiarire una controevidenza",
+      "need": "NEED-MYC-PROGENITOR-PROLIFERATION",
+      "question": "Is the MYC rise in WWOX-deficient radial glia a driver, a marker of retained progenitor state or a consequence of the cell-cycle shift, and does the layer-marker deficit that neuron-stage add-back restores define a compartment a postnatal lever could reach?",
+      "would_change": "If MYC difference vanishes within cell-cycle and potency strata, MYC is a marker and the need moves to inert for lever purposes. If genetic MYC lowering moves neuronal fractions in knockout beyond corrected cells and cell counts hold, the driver reading advances to a second model and the development question (a prenatal window) becomes the limit. If progeni…"
+     },
+     "next_priority": {
+      "feasibility_flags": [
+       "access_or_material_not_known",
+       "new_wet_lab_work_needed"
+      ],
+      "feasibility_text": "Wet lab with isogenic human organoid lines and an inducible MYC lever; the lines are not held (not known); the deposited single-cell data may need an access request.",
+      "level": "NX2",
+      "level_text": "informative: the next experiment resolves one limit, the decision moves one step at most",
+      "stake": "first WWOX-system test of a target hypothesis"
+     },
+     "notes": [
+      "IT11 P2.2 restatement of the sulfopin comparison arm (the IT9 proposal unit U31 stays unchanged): sulfopin stays a conditional ex vivo probe beside genetic MYC lowering (card M01); a PIN1 probe cannot settle driver versus marker by itself (SCAR12 shows MYC elevation without the composition phenotype; mouse neuron-stage deletion reproduces the null phenotype); no human exposure; development NOT SUPPORTED."
+     ],
+     "objective": "partial",
+     "objective_note": "",
+     "positions": {
+      "NEED-MYC-PROGENITOR-PROLIFERATION": "F3"
+     },
+     "triggers": {
+      "fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
+      "leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
+      "rise": "would rise to F2/F1 with a first signed result of the intervention in a WWOX system against an untreated same-genotype comparator; criteria not met now: a signed result of the intervention in a WWOX system exists; an outside-WWOX harm or null signal stands without a favourable outside signal | further questions: whether the MYC difference between knockout and wild-type radial glia survives within G1/G0 and matched potency strata (T1, needs the deposited single-cell data); genetic MYC lowering against a cytostatic control with absolute cell counts and wild-type-plus-compound groups (T2); the same strata in SCAR12 (T3)"
      },
      "view_note": ""
     }
@@ -13683,7 +14263,7 @@
     "T1_cards": "db50cbd92eb1efe2",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "c124efeb8d5edb82",
-    "T4_needs": "92a8fbeb46cd903e",
+    "T4_needs": "db813bd537bb2db9",
     "T5_pharmacology": "4ea6c7d72e892aa3",
     "T6_identity": "b197002e034db15f"
    },
@@ -13726,7 +14306,7 @@
      "position_by_card": {},
      "same_need_conflict": false,
      "thread": "Development and glia",
-     "wwox_observations_on_need": 3
+     "wwox_observations_on_need": 4
     }
    ],
    "pmids": [],
@@ -15587,7 +16167,7 @@
     "T1_cards": "d6e1c87faba10060",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "c124efeb8d5edb82",
-    "T4_needs": "92a8fbeb46cd903e",
+    "T4_needs": "db813bd537bb2db9",
     "T5_pharmacology": "55e16f920b43545e",
     "T6_identity": "7e02781efe5979b8"
    },
@@ -15724,7 +16304,7 @@
     "T1_cards": "dd332504019bdba6",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "c124efeb8d5edb82",
-    "T4_needs": "92a8fbeb46cd903e",
+    "T4_needs": "db813bd537bb2db9",
     "T5_pharmacology": "f3ce233dceeff213",
     "T6_identity": "f4fae1c5dd3ffc74"
    },
@@ -15861,7 +16441,7 @@
     "T1_cards": "8b6d2d8461822cdd",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "c124efeb8d5edb82",
-    "T4_needs": "92a8fbeb46cd903e",
+    "T4_needs": "db813bd537bb2db9",
     "T5_pharmacology": "1c689f6f89a5dd06",
     "T6_identity": "5507329a01f07700"
    },
@@ -15998,7 +16578,7 @@
     "T1_cards": "85fd7a42673eec00",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "c124efeb8d5edb82",
-    "T4_needs": "92a8fbeb46cd903e",
+    "T4_needs": "db813bd537bb2db9",
     "T5_pharmacology": "2451cb9e9a1d21bf",
     "T6_identity": "578bb6d20047e0cf"
    },
@@ -16546,7 +17126,7 @@
     "T1_cards": "399f4349dc7b22a9",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "c124efeb8d5edb82",
-    "T4_needs": "92a8fbeb46cd903e",
+    "T4_needs": "db813bd537bb2db9",
     "T5_pharmacology": "23dfc7994b74f679",
     "T6_identity": "3b1486d8b9bbcec3"
    },
@@ -16683,7 +17263,7 @@
     "T1_cards": "9fce94a7d1fd8986",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "c124efeb8d5edb82",
-    "T4_needs": "92a8fbeb46cd903e",
+    "T4_needs": "db813bd537bb2db9",
     "T5_pharmacology": "5f12e6e504c32e3d",
     "T6_identity": "fbf1b42d3cc9bcbf"
    },
@@ -16820,7 +17400,7 @@
     "T1_cards": "31e24e78d0f380a5",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "c124efeb8d5edb82",
-    "T4_needs": "92a8fbeb46cd903e",
+    "T4_needs": "db813bd537bb2db9",
     "T5_pharmacology": "cf771d8287bd4815",
     "T6_identity": "a299815a088d3c28"
    },
@@ -17642,7 +18222,7 @@
     "T1_cards": "8a44c69ebfbfa682",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "c124efeb8d5edb82",
-    "T4_needs": "92a8fbeb46cd903e",
+    "T4_needs": "db813bd537bb2db9",
     "T5_pharmacology": "e0134423ff0354df",
     "T6_identity": "02c704ca5566ad09"
    },
@@ -17779,7 +18359,7 @@
     "T1_cards": "5840d3397c685519",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "c124efeb8d5edb82",
-    "T4_needs": "92a8fbeb46cd903e",
+    "T4_needs": "db813bd537bb2db9",
     "T5_pharmacology": "e0fd11feb54abf5a",
     "T6_identity": "148c6e4ab22bbc80"
    },
@@ -18224,6 +18804,417 @@
     "A"
    ],
    "unit_id": "U62",
+   "unit_type": "molecule",
+   "unit_type_label": "molecule",
+   "views": {
+    "broad": {
+     "member": false
+    },
+    "partial": {
+     "member": false
+    }
+   }
+  },
+  {
+   "abstention_cards": [],
+   "access": "not assessed here; the qualification record's feasibility field says: NOT SUPPORTED: cytostatic, no paediatric or neural-progenitor datum, window is prenatal",
+   "access_categories": [],
+   "access_items": [],
+   "cards": [],
+   "caveats": {},
+   "class": "EXCL",
+   "class_label": "EXCLUDED FROM A SPECIFIC COMPARISON WITH REASON",
+   "class_reason": "REFERENCE-ONLY: a reference or control record, not a candidate; excluded from this comparison",
+   "comparison_record": "",
+   "components": {
+    "M_mechanism": {
+     "families": [],
+     "l1": {},
+     "l2": {},
+     "opposed_needs": [],
+     "text": "named by an IT11 case package from the literature (not by the engine): decisive datum: The only evidence linking G1 length to the neurogenic switch is genetic and murine; no WWOX datum measures G1 duration (PR7, PR11)"
+    },
+    "P_pharmacology": {
+     "brain_penetration": "see the qualification record",
+     "human_exposure": "see the qualification record",
+     "potency_with_assay_context": "NOT SUPPORTED: cytostatic, no paediatric or neural-progenitor datum, window is prenatal",
+     "record": "M05",
+     "state": "qualified in IT11 P2.2-IT11 (M05); promise ; depth ; potency in a WWOX system UNKNOWN"
+    },
+    "T_transferability": {
+     "genotypes": [],
+     "species_of_wwox_assertions": [
+      "none (no result in a WWOX system)"
+     ],
+     "track": [
+      "A"
+     ],
+     "transfer_limits": [
+      "G1 duration; any pharmacology in neural progenitors; abemaciclib intracranial model is oncology (abstract)"
+     ],
+     "window_note": []
+    },
+    "U_uncertainty": {
+     "hypothesised_from_target": 0,
+     "linked_needs": 0,
+     "measured_in_wwox_system": 0,
+     "mechanism_only_or_outside_counter": 0,
+     "premise_missing": 0,
+     "text": "no WWOX-system result of the compound; what is unknown: G1 duration; any pharmacology in neural progenitors; abemaciclib intracranial model is oncology (abstract)",
+     "unknown": [
+      "G1 duration; any pharmacology in neural progenitors; abemaciclib intracranial model is oncology (abstract)"
+     ]
+    },
+    "W_wwox_evidence": {
+     "favourable_distinct_pmids": [],
+     "l4_states": {},
+     "read_beyond_abstract": 0,
+     "replication": "not applicable (no result)",
+     "signs": {},
+     "text": "none: no result of the compound in a WWOX system; the link to WWOX is a seed observation and a context-free network edge",
+     "wild_type_only_assertions": 0,
+     "wwox_assertions": 0
+    },
+    "X_counter_evidence": {
+     "need_level_counter_items": 0,
+     "need_level_counter_items_note": "proposal without a card: counter-evidence is in the decisive datum",
+     "opposed_action_needs": [],
+     "outside_wwox_null_or_harm": 0,
+     "tags": [
+      "The only evidence linking G1 length to the neurogenic switch is genetic and murine; no WWOX datum measures G1 duration (PR7, PR11)"
+     ],
+     "wwox_null_harm_mixed": 0
+    }
+   },
+   "declared_goals": [
+    "partial_benefit"
+   ],
+   "depth_of_benefit_sought": "",
+   "era": "IT11",
+   "evaluation_depth": "E3q",
+   "evaluation_depth_text": "IT11 P2.2-IT11 qualification record (M05), no card; depth as stated there: ",
+   "evidence_level_note": {
+    "attribution_rule": "single qualified candidate: no result is attributed to it from another compound or class",
+    "of_mechanism_or_class": "the WWOX-side link is a seed observation on MYC elevation and progenitor-state shift in WWOX-deficient radial glia; no mechanism-level WWOX result for the compound",
+    "of_molecule": "no WWOX-system result of the compound (proposed, not performed)",
+    "untested_members": [
+     "Palbociclib and abemaciclib (CDK4/6 inhibitors): reference cell-cycle arm, no go decision; evidence not transferred between them"
+    ]
+   },
+   "excluded_from_comparisons": [],
+   "exploratory_it7": "named in IT11 by a case package (literature); the IT7 P3 comparison is not used",
+   "inputs": {
+    "T1_cards": "c596a77a2ad6aa2e",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "db813bd537bb2db9",
+    "T5_pharmacology": "425c837f84e1588e",
+    "T6_identity": "a7e254ee893b7844"
+   },
+   "kind": "it9_proposal",
+   "label": "Palbociclib and abemaciclib (CDK4/6 inhibitors): reference cell-cycle arm, no go decision; evidence not transferred between them",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "Palbociclib and abemaciclib (CDK4/6 inhibitors): reference cell-cycle arm, no go decision; evidence not transferred between them",
+     "member_key": "U64",
+     "member_type": "molecule",
+     "outside_wwox_assertions": 0,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion: the compound has not been tested in any WWOX system; the entry is a generated, qualified hypothesis",
+     "wwox_assertions": 0
+    }
+   ],
+   "members": [],
+   "merge_reason": "",
+   "model_exclusions": [],
+   "origin": "reference_or_control",
+   "origin_label": "reference or control",
+   "pathways": [],
+   "pmids": [],
+   "receipts_on_cited_pmids": 0,
+   "research_objective": "",
+   "tracks": [
+    "A"
+   ],
+   "unit_id": "U64",
+   "unit_type": "class_of_molecules",
+   "unit_type_label": "class of molecules",
+   "views": {
+    "broad": {
+     "member": false
+    },
+    "partial": {
+     "member": false
+    }
+   }
+  },
+  {
+   "abstention_cards": [],
+   "access": "not assessed here; the qualification record's feasibility field says: not supported (no neural link)",
+   "access_categories": [],
+   "access_items": [],
+   "cards": [],
+   "caveats": {},
+   "class": "EXCL",
+   "class_label": "EXCLUDED FROM A SPECIFIC COMPARISON WITH REASON",
+   "class_reason": "DROP: excluded from this comparison with the reason in the decisive datum (insufficient support for the proposal chain or the compound-to-target step; none is a finding that the compound is inactive)",
+   "comparison_record": "",
+   "components": {
+    "M_mechanism": {
+     "families": [],
+     "l1": {},
+     "l2": {},
+     "opposed_needs": [],
+     "text": "named by an IT11 case package from the literature (not by the engine): decisive datum: Evidence is a cancer proliferation endpoint in a p53-null context; no step connects it to radial glia (PR8)"
+    },
+    "P_pharmacology": {
+     "brain_penetration": "see the qualification record",
+     "human_exposure": "see the qualification record",
+     "potency_with_assay_context": "not supported (no neural link)",
+     "record": "M06",
+     "state": "qualified in IT11 P2.2-IT11 (M06); promise ; depth ; potency in a WWOX system UNKNOWN"
+    },
+    "T_transferability": {
+     "genotypes": [],
+     "species_of_wwox_assertions": [
+      "none (no result in a WWOX system)"
+     ],
+     "track": [
+      "A"
+     ],
+     "transfer_limits": [
+      "any neural datum; MCM7 in neural KO"
+     ],
+     "window_note": []
+    },
+    "U_uncertainty": {
+     "hypothesised_from_target": 0,
+     "linked_needs": 0,
+     "measured_in_wwox_system": 0,
+     "mechanism_only_or_outside_counter": 0,
+     "premise_missing": 0,
+     "text": "no WWOX-system result of the compound; what is unknown: any neural datum; MCM7 in neural KO",
+     "unknown": [
+      "any neural datum; MCM7 in neural KO"
+     ]
+    },
+    "W_wwox_evidence": {
+     "favourable_distinct_pmids": [],
+     "l4_states": {},
+     "read_beyond_abstract": 0,
+     "replication": "not applicable (no result)",
+     "signs": {},
+     "text": "none: no result of the compound in a WWOX system; the link to WWOX is a seed observation and a context-free network edge",
+     "wild_type_only_assertions": 0,
+     "wwox_assertions": 0
+    },
+    "X_counter_evidence": {
+     "need_level_counter_items": 0,
+     "need_level_counter_items_note": "proposal without a card: counter-evidence is in the decisive datum",
+     "opposed_action_needs": [],
+     "outside_wwox_null_or_harm": 0,
+     "tags": [
+      "Evidence is a cancer proliferation endpoint in a p53-null context; no step connects it to radial glia (PR8)"
+     ],
+     "wwox_null_harm_mixed": 0
+    }
+   },
+   "declared_goals": [
+    "partial_benefit"
+   ],
+   "depth_of_benefit_sought": "",
+   "era": "IT11",
+   "evaluation_depth": "E3q",
+   "evaluation_depth_text": "IT11 P2.2-IT11 qualification record (M06), no card; depth as stated there: ",
+   "evidence_level_note": {
+    "attribution_rule": "single qualified candidate: no result is attributed to it from another compound or class",
+    "of_mechanism_or_class": "the WWOX-side link is a seed observation on MYC elevation and progenitor-state shift in WWOX-deficient radial glia; no mechanism-level WWOX result for the compound",
+    "of_molecule": "no WWOX-system result of the compound (proposed, not performed)",
+    "untested_members": [
+     "Simvastatin: dropped; a cancer proliferation endpoint in a p53-null non-neural cell, no step to radial glia"
+    ]
+   },
+   "excluded_from_comparisons": [],
+   "exploratory_it7": "named in IT11 by a case package (literature); the IT7 P3 comparison is not used",
+   "inputs": {
+    "T1_cards": "d4eaa83d40b90876",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "db813bd537bb2db9",
+    "T5_pharmacology": "91a93e961df3ba88",
+    "T6_identity": "766ed1ef5df3a1df"
+   },
+   "kind": "it9_proposal",
+   "label": "Simvastatin: dropped; a cancer proliferation endpoint in a p53-null non-neural cell, no step to radial glia",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "Simvastatin: dropped; a cancer proliferation endpoint in a p53-null non-neural cell, no step to radial glia",
+     "member_key": "U65",
+     "member_type": "molecule",
+     "outside_wwox_assertions": 0,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion: the compound has not been tested in any WWOX system; the entry is a generated, qualified hypothesis",
+     "wwox_assertions": 0
+    }
+   ],
+   "members": [],
+   "merge_reason": "",
+   "model_exclusions": [],
+   "origin": "generated_in_it10",
+   "origin_label": "generated in IT10",
+   "pathways": [],
+   "pmids": [],
+   "receipts_on_cited_pmids": 0,
+   "research_objective": "",
+   "tracks": [
+    "A"
+   ],
+   "unit_id": "U65",
+   "unit_type": "molecule",
+   "unit_type_label": "molecule",
+   "views": {
+    "broad": {
+     "member": false
+    },
+    "partial": {
+     "member": false
+    }
+   }
+  },
+  {
+   "abstention_cards": [],
+   "access": "not assessed here; the qualification record's feasibility field says: NOT SUPPORTED",
+   "access_categories": [],
+   "access_items": [],
+   "cards": [],
+   "caveats": {},
+   "class": "EXCL",
+   "class_label": "EXCLUDED FROM A SPECIFIC COMPARISON WITH REASON",
+   "class_reason": "REFERENCE-ONLY: a reference or control record, not a candidate; excluded from this comparison",
+   "comparison_record": "",
+   "components": {
+    "M_mechanism": {
+     "families": [],
+     "l1": {},
+     "l2": {},
+     "opposed_needs": [],
+     "text": "named by an IT11 case package from the literature (not by the engine): decisive datum: Genetic MYC lowering (inducible degron or CRISPRi) is the cleaner reference than a peptide with no neural datum"
+    },
+    "P_pharmacology": {
+     "brain_penetration": "see the qualification record",
+     "human_exposure": "see the qualification record",
+     "potency_with_assay_context": "NOT SUPPORTED",
+     "record": "M08",
+     "state": "qualified in IT11 P2.2-IT11 (M08); promise ; depth ; potency in a WWOX system UNKNOWN"
+    },
+    "T_transferability": {
+     "genotypes": [],
+     "species_of_wwox_assertions": [
+      "none (no result in a WWOX system)"
+     ],
+     "track": [
+      "A"
+     ],
+     "transfer_limits": [
+      "identity in a catalogue; neural exposure"
+     ],
+     "window_note": []
+    },
+    "U_uncertainty": {
+     "hypothesised_from_target": 0,
+     "linked_needs": 0,
+     "measured_in_wwox_system": 0,
+     "mechanism_only_or_outside_counter": 0,
+     "premise_missing": 0,
+     "text": "no WWOX-system result of the compound; what is unknown: identity in a catalogue; neural exposure",
+     "unknown": [
+      "identity in a catalogue; neural exposure"
+     ]
+    },
+    "W_wwox_evidence": {
+     "favourable_distinct_pmids": [],
+     "l4_states": {},
+     "read_beyond_abstract": 0,
+     "replication": "not applicable (no result)",
+     "signs": {},
+     "text": "none: no result of the compound in a WWOX system; the link to WWOX is a seed observation and a context-free network edge",
+     "wild_type_only_assertions": 0,
+     "wwox_assertions": 0
+    },
+    "X_counter_evidence": {
+     "need_level_counter_items": 0,
+     "need_level_counter_items_note": "proposal without a card: counter-evidence is in the decisive datum",
+     "opposed_action_needs": [],
+     "outside_wwox_null_or_harm": 0,
+     "tags": [
+      "Genetic MYC lowering (inducible degron or CRISPRi) is the cleaner reference than a peptide with no neural datum"
+     ],
+     "wwox_null_harm_mixed": 0
+    }
+   },
+   "declared_goals": [
+    "partial_benefit"
+   ],
+   "depth_of_benefit_sought": "",
+   "era": "IT11",
+   "evaluation_depth": "E3q",
+   "evaluation_depth_text": "IT11 P2.2-IT11 qualification record (M08), no card; depth as stated there: ",
+   "evidence_level_note": {
+    "attribution_rule": "single qualified candidate: no result is attributed to it from another compound or class",
+    "of_mechanism_or_class": "the WWOX-side link is a seed observation on MYC elevation and progenitor-state shift in WWOX-deficient radial glia; no mechanism-level WWOX result for the compound",
+    "of_molecule": "no WWOX-system result of the compound (proposed, not performed)",
+    "untested_members": [
+     "Omomyc / OMO-103 (MYC dimerisation-interface mini-protein): reference arm only, no catalogue identity"
+    ]
+   },
+   "excluded_from_comparisons": [],
+   "exploratory_it7": "named in IT11 by a case package (literature); the IT7 P3 comparison is not used",
+   "inputs": {
+    "T1_cards": "4daa7dde021f2291",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "db813bd537bb2db9",
+    "T5_pharmacology": "54d2f84092e11204",
+    "T6_identity": "2b5a30e9aed48581"
+   },
+   "kind": "it9_proposal",
+   "label": "Omomyc / OMO-103 (MYC dimerisation-interface mini-protein): reference arm only, no catalogue identity",
+   "member_evidence": [
+    {
+     "assertion_ids": [],
+     "depth": "",
+     "member": "Omomyc / OMO-103 (MYC dimerisation-interface mini-protein): reference arm only, no catalogue identity",
+     "member_key": "U66",
+     "member_type": "molecule",
+     "outside_wwox_assertions": 0,
+     "signs": {},
+     "source_pmids": [],
+     "tested_in_wwox_system": "no",
+     "what": "no WWOX-system assertion: the compound has not been tested in any WWOX system; the entry is a generated, qualified hypothesis",
+     "wwox_assertions": 0
+    }
+   ],
+   "members": [],
+   "merge_reason": "",
+   "model_exclusions": [],
+   "origin": "reference_or_control",
+   "origin_label": "reference or control",
+   "pathways": [],
+   "pmids": [],
+   "receipts_on_cited_pmids": 0,
+   "research_objective": "",
+   "tracks": [
+    "A"
+   ],
+   "unit_id": "U66",
    "unit_type": "molecule",
    "unit_type_label": "molecule",
    "views": {

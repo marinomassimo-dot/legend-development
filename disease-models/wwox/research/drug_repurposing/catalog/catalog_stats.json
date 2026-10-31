@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_utc": "2026-10-30T18:41:46Z",
+ "generated_utc": "2026-10-31T07:28:37Z",
  "unit": "one catalogue entry = one source-level substance record (ChEMBL molecule record incl. salts and stereoisomers; or one source-only substance); NOT a unique chemical entity",
  "sources": {
   "chembl": {
@@ -453,8 +453,8 @@
   "bytes": 8765091
  },
  "card_links": {
-  "cards_considered": 66,
-  "cards_with_at_least_one_link": 24,
+  "cards_considered": 67,
+  "cards_with_at_least_one_link": 25,
   "unmatched": 42
  },
  "non_molecule_modalities_listed_separately": 6

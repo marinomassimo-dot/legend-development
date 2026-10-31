@@ -314,7 +314,7 @@ class RealData(unittest.TestCase):
         self.assertEqual(unit_by_label(self.uni, "Ketogenic")["unit_type"], "diet")
         self.assertEqual(unit_by_label(self.uni, "Ethosuximide")["unit_type"], "molecule")
         self.assertEqual(unit_by_label(self.uni, "d-APV")["unit_type"], "tool_compound_and_class")
-        self.assertEqual({u["origin"] for u in self.uni["units"] if u["cards"] and u["unit_id"] not in ("U28", "U59")}, {"known_track_before_it9"})
+        self.assertEqual({u["origin"] for u in self.uni["units"] if u["cards"] and u["unit_id"] not in ("U28", "U59", "U63")}, {"known_track_before_it9"})      # U63: the IT11 card unit (M01)
         self.assertEqual({u["origin"] for u in self.uni["units"] if u["unit_id"] in ("U28", "U29")}, {"generated_in_it9"})
         self.assertEqual(by_id(self.uni, "U59")["origin"], "generated_in_it10")       # the NRF2 card unit (IT10 P2.2): a mechanism probe generated in IT10
 
@@ -716,10 +716,10 @@ class It10Integration(unittest.TestCase):
             self.assertIn(needle, n12["reason"])
         self.assertFalse(any("N12" in u["label"] for u in state()["uni"]["units"]))             # no card, no unit
         trig = {r["trigger"]: r for r in rk.triggers_rows()}
-        for i in range(1, 8):
+        for i in range(1, 9):      # R8 added by IT11 P4 (Tnk2-null material or a second shRNA with WWOX mRNA)
             self.assertIn(f"R{i}_q1_complement", trig)
         self.assertIn("N12", trig["R3_q1_complement"]["re_evaluates"])
-        self.assertEqual(len(trig), 8 + 7)
+        self.assertEqual(len(trig), 8 + 8)      # 8 + 7 before IT11 P4 (R8)
         import unittest.mock as mock
         with mock.patch.object(rk, "REOPEN_SEARCHES", rk.HERE / "absent.tsv"):
             self.assertEqual(len(rk.triggers_rows()), 8)
@@ -771,6 +771,37 @@ class It10Integration(unittest.TestCase):
         # the item must exist as an uncarded row: without it the case cannot be projected
         with self.assertRaises(KeyError):
             rk.matching_pilot(state()["uni"]["units"], inputs, [r for r in state()["ctx"]["uncarded"] if r["item_id"] != f["item_id"]])
+
+
+
+
+class It11Integration(unittest.TestCase):
+    """IT11 P4: the M01 card unit, the IT11 reference and drop entries, and the mapping mechanism."""
+
+    def test_m01_card_unit_enters_by_the_rule_and_is_not_selectable(self):
+        u = by_id(state()["uni"], "U63")
+        self.assertEqual((u["unit_type"], u["cards"], u["class"]), ("mechanism_probe", ["M01_neurogenic_output_myc_window"], "ORD"))
+        self.assertEqual(u["views"]["partial"]["group"], "G4b")
+        self.assertEqual(u["views"]["partial"]["lead"], "F3")
+        import json as _j
+        sel = _j.load(open(rk.HERE / "ranking.json"))["summary"]["selections"]
+        self.assertFalse(any("U63" in v["top"] for v in sel.values()))
+
+    def test_it11_entries_follow_the_stated_states_and_no_group_moves_by_text(self):
+        recs = {r["cand_id"]: r for r in state()["uni"]["it11_records"]}
+        self.assertEqual({k: (v["state"], v["class"]) for k, v in recs.items()},
+                         {"M01": ("CONDITIONAL", "ORD"), "M02": ("CONDITIONAL", "ORD"), "M05": ("REFERENCE", "EXCL"), "M06": ("DROP", "EXCL"), "M07": ("CONDITIONAL", "ORD"), "M08": ("REFERENCE", "EXCL")})
+        units = {u["unit_id"]: u for u in state()["uni"]["units"]}
+        for uid in ("U64", "U65", "U66"):
+            self.assertEqual((units[uid]["class"], units[uid]["era"]), ("EXCL", "IT11"))
+
+    def test_mutation_it11_map_must_name_a_known_record(self):
+        import unittest.mock as mock
+        q = rk.load_qualification_it11()
+        gone = {k: v for k, v in q.items() if k != "M06"}
+        with mock.patch.object(rk, "load_qualification_it11", return_value=gone):
+            with self.assertRaises(SystemExit):
+                rk.proposal_units(state()["ctx"])
 
 
 if __name__ == "__main__":

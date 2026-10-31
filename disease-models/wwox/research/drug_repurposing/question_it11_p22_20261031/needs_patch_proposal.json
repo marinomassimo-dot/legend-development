@@ -6,7 +6,7 @@
    "op": "append_observation_limits",
    "need": "NEED-MYC-PROGENITOR-PROLIFERATION",
    "observation": "O2",
-   "append": " Within the same paper SCAR12 organoids show the MYC-positive fraction up while the radial-glia fraction is wild-type-like and neurons are not reduced (text lines 577 and 585-586), so MYC elevation alone does not give the composition phenotype; the box medians read by eye from Fig 3K are about 18 (wild type), 68 (knockout), 45 (SCAR12) and 55 (WOREE) percent with wide scatter and overlap.",
+   "append": " Within the same paper SCAR12 organoids show the MYC-positive fraction up while the radial-glia fraction is wild-type-like and the single-cell neuron-cluster fraction is not reduced (text lines 577 and 585-586; WOREE shows reduced CTIP2/SATB2 in Fig 6B, SCAR12 is the clean case), so MYC elevation alone does not give the composition phenotype; the box medians read by eye from Fig 3K are about 18 (wild type), 68 (knockout), 45 (SCAR12) and 55 (WOREE) percent with wide scatter and overlap.",
    "reason": "the existing O2 limits say the composition phenotype is a knockout feature but do not state the consequence for the driver reading"
   },
   {

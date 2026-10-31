@@ -1,0 +1,7 @@
+cand_id	unit_id	label	unit_type	origin	need	related_unit	how
+M01	U63	A51 (multi-kinase inhibitor): the one compound with a result in a WWOX system on this axis, a comparison arm of the M01 experiment; not strengthened	mechanism_probe	generated_in_it10	NEED-MYC-PROGENITOR-PROLIFERATION	U10	card_unit
+M02	U63	Sulfopin (covalent PIN1 probe): conditional ex vivo comparison arm beside genetic MYC lowering; the IT9 unit stays	mechanism_probe	generated_in_it10	NEED-MYC-PROGENITOR-PROLIFERATION	U31	card_unit
+M07	U24	Lithium: narrowed for the neurogenic window (risk flag, Wnt activation in the same direction as the knockout rise); the G01 seizure lead is untouched	molecule	known_track_before_it9	NEED-MYC-PROGENITOR-PROLIFERATION	U24	card_unit
+M05	U64	Palbociclib and abemaciclib (CDK4/6 inhibitors): reference cell-cycle arm, no go decision; evidence not transferred between them	class_of_molecules	reference_or_control	NEED-MYC-PROGENITOR-PROLIFERATION	U63	own_unit
+M06	U65	Simvastatin: dropped; a cancer proliferation endpoint in a p53-null non-neural cell, no step to radial glia	molecule	generated_in_it10	NEED-MYC-PROGENITOR-PROLIFERATION	U63	own_unit
+M08	U66	Omomyc / OMO-103 (MYC dimerisation-interface mini-protein): reference arm only, no catalogue identity	molecule	reference_or_control	NEED-MYC-PROGENITOR-PROLIFERATION	U63	own_unit
