@@ -1,0 +1,101 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT13-20261031",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Iteration 13 (ten-hour horizon): close the Mahajan 2005 reading in the module (receipt, interpretation, N12, trigger R3, design controls, ranking and view) and advance research on compensation or partial benefit that does not depend on a variant WWOX protein; keep residual-function recovery open with its stated prerequisites. A computational result is not therapeutic efficacy.",
+ "START_UTC": "2026-10-31T17:40:00Z",
+ "BASELINE": "dbc8e7c3e7586187aeb827abeb7eb59cc01ae0a5 = development/main (verified equal after fetch; CI success on that SHA)",
+ "AUTHORISED_QUEUE_20261031D": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P0_BASELINE": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P0 baseline: fetch, checkouts, CI of dbc8e7c3, record state",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "main == development/main == dbc8e7c3; CI Public release gate success; one task worktree and agent worktrees; no other actor active"
+    }
+   ]
+  },
+  "OBJ_P1_MAHAJAN": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "P1.1 receipt and manifest for PMID 16288044",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "FTR-20261031-16288044-01 complete_fulltext_read; manifest strict PASS; PDF kept in the local files/ tree; FT-202 to FT-206 for gene-direct references"
+    },
+    {
+     "step": "P1.2-P1.4 interpretation, N12, R3, design controls",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "ack1_it13_mahajan_20261031 experiments and controls tables; N12 and R3 amended; ranking order unchanged"
+    },
+    {
+     "step": "P1.5 probe literature check",
+     "status": "DONE",
+     "owner": "scientist",
+     "evidence": "ack1_probes_it13_p15_20261031; the 2024 Aurora B report read at abstract level only"
+    }
+   ]
+  },
+  "OBJ_P2_SMALL": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "P2.1 origin labels",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "two deposits keep their own keys, shared derivation counted once; sensitivity unchanged; 44 tests"
+    },
+    {
+     "step": "P2.2 early cards",
+     "status": "DONE",
+     "owner": "scientist",
+     "evidence": "seven (not eight) cards ACTIVE and DERIVED, regenerated through the bridge, checker PASS"
+    },
+    {
+     "step": "P2.3 substrate wording",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "zygosity wording; A02 premise reworded"
+    }
+   ]
+  },
+  "OBJ_P3_RESEARCH": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "P3 main question (Q4 excitation/inhibition) and alternative (recoverable readouts)",
+     "status": "DONE",
+     "owner": "scientist",
+     "evidence": "functional_it13_p3a and recoverable_it13_p3b; both independently verified with corrections"
+    },
+    {
+     "step": "P3 integration to needs, work order, caveats, uncarded items, triggers, ranking, view",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "e70164bf; 0 group moves; shareable audit PASS"
+    }
+   ]
+  },
+  "OBJ_CLOSE": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "Hostile review, battery on an immutable tree, landing, push, CI, cleanup",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": "pending"
+    }
+   ]
+  }
+ },
+ "DECISIONS_TAKEN": [],
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
+}
