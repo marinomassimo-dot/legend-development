@@ -112,7 +112,7 @@ last_batch_commit_date: 2026-10-31
 last_batch_commit_type: MANUAL
 commit_candidates_propagated: 1
 target_wm_version: WM_v7.29
-trigger: MANUAL (ACTOR_ID orchestrator, mandate IT13). MINOR, registry registration of one complete read; WM_v7.29 preserved, no bump, no claim created or promoted: one paper-registry record CORPUS-STUB-195 (PMID 16288044, Mahajan 2005) appended by record_scoped_edit.py append, closing the READ_NOT_REGISTERED identity check; no other registry or ledger touched.
+trigger: MANUAL (ACTOR_ID orchestrator, mandate IT13). MINOR, registry registration of one complete read; WM_v7.29 preserved, no bump, no claim created or promoted: one paper-registry record PAPER 569 (PMID 16288044, Mahajan 2005) appended by record_scoped_edit.py append, closing the READ_NOT_REGISTERED identity check; no other registry or ledger touched.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -213,8 +213,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 64
-growth_anchor_head: 77f7fd9d6a0019d499fb5fb4e3fab840e35cf194ae3030bd98e77d6f841d7140
+growth_anchor_events: 65
+growth_anchor_head: 7a914ca8f6499aaaeff767103f983ece6833c66bc221d2b3645efec9dc40c339
 ```
 
 ```bash

@@ -18362,18 +18362,24 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 
 ---
 
-## CORPUS-STUB-195
-**Corpus paper no:** 195
+## PAPER 569
+**Short title:** Mahajan 2005 — ACK1 phosphorylates and polyubiquitinates overexpressed WWOX (Tyr287 predominant site); overexpression in non-neural cells, NOT a measurement in a WWOX-deficient neural system
 **Full title:** Activated tyrosine kinase Ack1 promotes prostate tumorigenesis: role of Ack1 in polyubiquitination of tumor suppressor Wwox
 **Authors:** Mahajan NP, Whang YE, Mohler JL, Earp HS
 **Year:** 2005
+**Source type:** primary research — cell biology, xenograft and human tissue immunoblots
 **Journal/source:** *Cancer Research* 2005;65(22):10514-23
 **Identifier:** PMID 16288044 / DOI 10.1158/0008-5472.CAN-05-1127
 **Status:** processed — read (`FTR-20261031-16288044-01`, `complete_fulltext_read`, **full text**)
-**Record provenance:** created by `CC-20261031-ORCHESTRATOR-IT13-BATCH-01` (`BATCH_20261019_032`, IT13, Orchestrator); reading by the Orchestrator from the operator-supplied PDF (kept in the local gitignored corpus, not in the repository); identity from the artefact's own front matter. Work manifest `deepdive_manifests/PMID16288044.json`.
-**Registry role:** 🔵 **WWOX BIOLOGY, OTHER CONTEXT — overexpression in non-neural cells; NOT a measurement in a WWOX-deficient neural system.** Read in full; Figs 1-8 inspected as images; supplement unavailable. Shown: an engineered activated Ack1 (L487F, truncated) phosphorylates Wwox (predominantly at Tyr287 by pTyr signal of Tyr-to-Phe mutants) and a polyubiquitin smear appears in HEK293T (ubiquitination assays under MG-132 pretreatment); endogenous Wwox ubiquitination is revealed in LNCaP only after MG-132; lower Wwox with higher phospho-Ack1 in 16 tumours against 16 benign prostates (correlation). Not shown: that Y287F resists ubiquitination or degradation, that activated Ack1 shortens Wwox half-life (Fig 5E has no arm without activated Ack1), a proteasomal route, any ACK1 inhibitor measured against WWOX, anything in neurons, Q230P or G372R.
-**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261031-16288044-01`; locators `drug_repurposing/ack1_it13_mahajan_20261031/experiments_mahajan2005.tsv` (rendered-page attestations because the PDF text layer carries control characters).
+**Record provenance:** created by `CC-20261031-ORCHESTRATOR-IT13-BATCH-01` (`BATCH_20261019_032`, IT13, Orchestrator) as the PAPER identity record of receipt `FTR-20261031-16288044-01`, which was in the ledger with no registry identity; reading by the Orchestrator from the operator-supplied PDF (kept in the local gitignored corpus, not in the repository); identity from the artefact's own front matter.
+**Evidence depth:** `complete_fulltext_read` (**full text**) — receipt `FTR-20261031-16288044-01`; manifest `deepdive_manifests/PMID16288044.json` (schema v2; locators are rendered-page attestations because the PDF text layer carries control characters; Figs 1-8 inspected as images; supplement unavailable); per-experiment table `drug_repurposing/ack1_it13_mahajan_20261031/experiments_mahajan2005.tsv`.
+**Primary pathway:** tyrosine kinase signalling (ACK1/TNK2) and the ubiquitin system acting on WWOX
+**Model/species:** HEK293T and LNCaP cells with an engineered activated Ack1 (L487F, C-terminally truncated); nude-mouse xenografts; human prostate tissue (16 androgen-independent cancers against 16 benign)
+**Genotype/model:** no WWOX-deficient system; overexpressed Wwox and Tyr-to-Phe mutants; no neuron, no Q230P or G372R
+**Transferability:** T4 — shown: phosphorylation (predominantly Tyr287 by pTyr signal) and a polyubiquitin smear under MG-132 pretreatment in overexpressing HEK293T cells; endogenous Wwox ubiquitination in LNCaP revealed only after MG-132; lower Wwox with higher phospho-Ack1 across tumours (correlation). NOT shown: that Y287F resists ubiquitination or degradation, that activated Ack1 shortens Wwox half-life (Fig 5E has no arm without activated Ack1), a proteasomal route, any ACK1 inhibitor measured against WWOX, anything neural.
+**clinical relevance:** BACKGROUND (non-neural mechanism). Not medical advice.
 **Claim links:** none
-**Next action:** none owed by this record; it feeds uncarded item N12 and trigger R3 of the repurposing ranking. Transfer to WWOX neural cells is UNVERIFIED.
+**Role:** the primary source of the ACK1 to WWOX stability mechanism behind uncarded item N12 and trigger R3 of the repurposing ranking; its findings and limits live in the manifest and the experiments table and are not restated further here.
+**Next action:** none owed by this record; transfer to WWOX neural cells is UNVERIFIED.
 **LIT link:** none
-**Note:** class-level record; not medical advice.
+**Note:** class-level record; no individual-level detail. Not medical advice.

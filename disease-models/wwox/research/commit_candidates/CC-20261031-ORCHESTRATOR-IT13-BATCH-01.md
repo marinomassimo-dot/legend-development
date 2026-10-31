@@ -4,7 +4,7 @@
 - **Source material:** receipt `FTR-20261031-16288044-01` and `deepdive_manifests/PMID16288044.json`; interpretation in `drug_repurposing/ack1_it13_mahajan_20261031/`.
 
 ## What changes and why
-1. **One paper-registry record, `CORPUS-STUB-195` (PMID 16288044, Mahajan 2005), appended by `record_scoped_edit.py append`.** A complete read of this study existed in the receipt ledger and no registry record carried its PMID; `test_batch_queue.py` (IDENTITY) fails on exactly that, and only a BATCH_COMMIT closes it. The record states the coverage as the receipt does (full text; Figs 1-8 inspected; supplement unavailable) and what the paper does not show.
+1. **One paper-registry record, `PAPER 569` (PMID 16288044, Mahajan 2005), appended by `record_scoped_edit.py append` and renamed to the countable PAPER shape by `replace`.** A complete read of this study existed in the receipt ledger and no registry record carried its PMID; `test_batch_queue.py` (IDENTITY) fails on exactly that, and only a BATCH_COMMIT closes it. The record states the coverage as the receipt does (full text; Figs 1-8 inspected; supplement unavailable) and what the paper does not show.
 
 ## What was deliberately NOT done
 - No working-model, claim, discovery-ledger or hypothesis edit; no LIT record (the literature log was not touched: `LIT link: none`); the receipt ledger is untouched here (the receipt was recorded earlier through its validated writer).
