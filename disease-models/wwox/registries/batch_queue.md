@@ -82,11 +82,11 @@ time; it does not redistribute or license the article text.
 | Status | Records | Share |
 |---|---:|---:|
 | **Not found by identifier** — run the intake gate | 261 | 37% |
-| **Catalogued, never processed** — the reading debt | 125 | 18% |
+| **Catalogued, never processed** — the reading debt | 124 | 18% |
 | Known to the tracking log only | 83 | 12% |
 | Processed from the abstract | 3 | 0% |
 | Partial full text read | 69 | 10% |
-| Full text read | 165 | 23% |
+| Full text read | 166 | 24% |
 
 ⚠️ This second table combines registry state with the authoritative append-only
 `fulltext_read_receipts.jsonl`. Historical registry-only full-text declarations remain
@@ -273,7 +273,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [15674328](https://pubmed.ncbi.nlm.nih.gov/15674328/) | 2005 | — | Journal Article; Research Support, U.S. Gov't, P.H.S. | catalogued only | Fragile genes as biomarkers: epigenetic control of WWOX and FHIT in lung, breast and bladder cancer. |
 | [16007179](https://pubmed.ncbi.nlm.nih.gov/16007179/) | 2005 | — | Journal Article; Research Support, Non-U.S. Gov't | catalogued only | ✎ corrected — FRA16D common chromosomal fragile site oxido-reductase (FOR/WWOX) protects against the effects of ionizing radiation in Drosophila. |
 | [16116962](https://pubmed.ncbi.nlm.nih.gov/16116962/) | 2005 | — | Journal Article | catalogued only | Deletion and mutation of WWOX exons 6-8 in human non-small cell lung cancer. |
-| [16288044](https://pubmed.ncbi.nlm.nih.gov/16288044/) | 2005 | — | Journal Article; Research Support, N.I.H., Extramural | catalogued only | Activated tyrosine kinase Ack1 promotes prostate tumorigenesis: role of Ack1 in polyubiquitination of tumor suppressor Wwox. |
 | [15548692](https://pubmed.ncbi.nlm.nih.gov/15548692/) | 2004 | — | Journal Article | catalogued only | Physical and functional interactions between the Wwox tumor suppressor protein and the AP-2gamma transcription factor. |
 | [14638866](https://pubmed.ncbi.nlm.nih.gov/14638866/) | 2003 | — | Journal Article; Research Support, Non-U.S. Gov't; Research Support, U.S. Gov't, P.H.S. | catalogued only | Expression of FRA16D/WWOX and FRA3B/FHIT genes in hematopoietic malignancies. |
 | [14695174](https://pubmed.ncbi.nlm.nih.gov/14695174/) | 2003 | — | Journal Article; Research Support, Non-U.S. Gov't | catalogued only | An opposing view on WWOX protein function as a tumor suppressor. |
@@ -574,7 +573,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [41776383](https://pubmed.ncbi.nlm.nih.gov/41776383/) | 2026 | — | Journal Article; Multicenter Study | screened | Pharmacogenomics of response to interferon-beta and glatiramer acetate in Multiple Sclerosis: A multi-centric study. |
 | [28151481](https://pubmed.ncbi.nlm.nih.gov/28151481/) | 2017 | ✅ | Journal Article; Retracted Publication | screened | 🛑 RETRACTED — Epigenetic regulation of HGF/Met receptor axis is critical for the outgrowth of bone metastasis from breast carcinoma. |
 
-*(showing all 469 outstanding records)*
+*(showing all 468 outstanding records)*
 
 ## Already processed from this seed
 
@@ -624,6 +623,7 @@ for an entirely unprocessed record.
 | [15870886](https://pubmed.ncbi.nlm.nih.gov/15870886/) | 2005 | ✅ | full text | CORPUS P337 | WWOX mRNA expression profile in epithelial ovarian cancer supports the role of WWOX variant 1 as a tumour suppressor, although the role of variant 4 remains unclear. |
 | [15692750](https://pubmed.ncbi.nlm.nih.gov/15692750/) | 2005 | ✅ | full text | CORPUS P324 | Frequent loss of WWOX expression in breast cancer: correlation with estrogen receptor status. |
 | [15266310](https://pubmed.ncbi.nlm.nih.gov/15266310/) | 2004 | ✅ | full text | CORPUS P244 | Frequent downregulation and loss of WWOX gene expression in human hepatocellular carcinoma. |
+| [16288044](https://pubmed.ncbi.nlm.nih.gov/16288044/) | 2005 | — | full text | receipt FTR-20261031-16288044-01 | Activated tyrosine kinase Ack1 promotes prostate tumorigenesis: role of Ack1 in polyubiquitination of tumor suppressor Wwox. |
 | [30470736](https://pubmed.ncbi.nlm.nih.gov/30470736/) | 2018 | ✅ | full text | receipt FTR-20260909-30470736-01 | ℹ️ CORRECTION NOTICE — Author Correction: WWOX controls hepatic HIF1α to suppress hepatocyte proliferation and neoplasia. |
 | [30783266](https://pubmed.ncbi.nlm.nih.gov/30783266/) | 2019 | ✅ | partial full text | receipt FTR-20260921-30783266-01 | ℹ️ CORRECTION NOTICE — Correction: The phenotypic spectrum of WWOX-related disorders: 20 additional cases of WOREE syndrome and review of the literature. |
 | [41442931](https://pubmed.ncbi.nlm.nih.gov/41442931/) | 2026 | — | abstract only | PAPER 003 | Vigabatrin-Associated Brain Magnetic Resonance Imaging Abnormalities in Two Children With WW domain-containing oxidoreductase-Related Epileptic Encephalopathy Syndrome. |
@@ -822,7 +822,7 @@ for an entirely unprocessed record.
 | [22484428](https://pubmed.ncbi.nlm.nih.gov/22484428/) | 2012 | — | full text | PAPER 367 | WWOX-mediated apoptosis in A549 cells mainly involves the mitochondrial pathway. |
 | [21476439](https://pubmed.ncbi.nlm.nih.gov/21476439/) | 2011 | — | full text | PAPER 244 | WWOX oxidoreductase--substrate and enzymatic characterization. |
 
-*(showing all 237 processed records from the seed)*
+*(showing all 238 processed records from the seed)*
 
 ## How to work one
 
