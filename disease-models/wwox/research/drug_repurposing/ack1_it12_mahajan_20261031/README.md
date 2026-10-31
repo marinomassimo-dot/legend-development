@@ -34,3 +34,5 @@ The Ack1 site Tyr287 lies in the C-terminal region that the exon 5-8 deletion is
 4. Query for the next step: a second chemotype whose ACK1 selectivity is shown at source ((R)-9b attribution to be resolved).
 
 UNVERIFIED: Fig 8, Supplementary Figs; whether Wwox bands in Fig 5E are in the linear range; the 2022 and 2024 papers named above.
+
+> **IT13 note (2026-10-31).** Proposal 3 above is executed: receipt `FTR-20261031-16288044-01` (complete_fulltext_read; Figs 1-8 inspected; supplement unavailable). Interpretation and consumers: `../ack1_it13_mahajan_20261031/`. Figure 8 is now inspected (it was not at the time of this README).
