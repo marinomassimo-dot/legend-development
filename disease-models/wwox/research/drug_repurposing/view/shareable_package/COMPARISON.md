@@ -7,7 +7,7 @@ The full version (`view/index.html` in the repository, local use) and this packa
 - 39 candidate cards with their six answers, evidence by scope, counter-evidence, next step, public identifiers and F/C/P positions: card text and positions are identical (the only card fields that differ are listed under 'Different').
 - 23 needs and their observations, the threads, groups, goals, funnel, access chart (catalogue-wide counts), matrix summary, dispositions, observations, lead dispositions and the Italian orientation texts.
 - Sections of the data object that are byte-identical: access, dispositions, exploration_flagged, has_distinct, matrix_summary, no_probability, observations, orphan_priorities, pair_unit, ranking_note, schema, strings.
-- Curated sections identical: contexts, evidence_graph, gaps, goals, group_note, groups, hypotheses, predictive, scopes, selection, threads, tracks.
+- Curated sections identical: contexts, evidence_graph, gaps, goals, group_note, groups, hypotheses, predictive, scopes, selection, threads, tracks, work_order.
 
 ## Different (withheld here, present in the full version)
 
@@ -25,7 +25,7 @@ The full version (`view/index.html` in the repository, local use) and this packa
 
 ## Prose redactions (shareable only)
 
-12 card sentences and 11 lead fields that stated a compound-target pair, a catalogue-only compound or a per-compound status from a class-B/C source are rewritten at the level of the need or class and name the withheld source class (`dato di una fonte non inclusa in questa versione`); 147 repository file names are described instead of printed. The conclusion of each lead and card is kept. The rule is in `view/shareable_sources.json` (`prose_policy`) and the audit enforces it.
+12 card sentences and 11 lead fields that stated a compound-target pair, a catalogue-only compound or a per-compound status from a class-B/C source are rewritten at the level of the need or class and name the withheld source class (`dato di una fonte non inclusa in questa versione`); 145 repository file names are described instead of printed. The conclusion of each lead and card is kept. The rule is in `view/shareable_sources.json` (`prose_policy`) and the audit enforces it.
 
 ## Why: counts of catalogue target rows by class
 

@@ -351,7 +351,7 @@
    "selection": "identical",
    "threads": "identical",
    "tracks": "identical",
-   "work_order": "differs"
+   "work_order": "identical"
   },
   "excluded_rows_with_names_full": 3,
   "excluded_rows_with_names_shareable": 0,
@@ -500,8 +500,8 @@
  ],
  "files": {
   "COMPARISON.md": {
-   "bytes": 6424,
-   "sha256": "30ff130a96ddd95c6f7fcb41eb448fd2f5d90daade52ee76c00bb6a0caee7ac4"
+   "bytes": 6436,
+   "sha256": "f40467dad20b2fcc34027063d95599a13b5f486164b4736a3bc48f0699ed638d"
   },
   "LICENSES/CC-BY-4.0.txt": {
    "bytes": 18657,
@@ -521,7 +521,7 @@
   },
   "NOTICE.md": {
    "bytes": 12774,
-   "sha256": "5e2d8fa74c35f431d0519f7388ac24c54b747a0c916520b88f250024a90ee8a8"
+   "sha256": "66ff4d679e49e4a4c5cad0e736ab40bf2dc0fa74574f5eb10ecdaa1d0b32ed87"
   },
   "README.md": {
    "bytes": 4906,
@@ -544,8 +544,8 @@
    "sha256": "240723d6c86c13fc8f19ff2a5bbe7eec5e64da0f3769ea25e49d8d7b7e5784d0"
   },
   "index.html": {
-   "bytes": 4166057,
-   "sha256": "9b9d321b42fb700a01d7e0df8bc046c713e78a5215504052ca89e9a8454a4226"
+   "bytes": 4165973,
+   "sha256": "df9c772cb0c2700b88e6167bc49092d2dcf955e34a541d248415dfa532b82f10"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
@@ -605,7 +605,7 @@
   "lead_field_redactions": 11,
   "pair_status_rule": "pairs[].p.cr.pha[1] (status classes of the row) is dropped in the shareable build: a status class derives from ChEMBL max_phase, DGIdb approved flags, MATRIX and openFDA together, and the build does not re-derive a class-A-only status per row.",
   "pairs_status_class_dropped": 923,
-  "repository_file_names_described": 147,
+  "repository_file_names_described": 145,
   "rule": "IT5 P13 fix. Own analysis stays in the shareable build: a conclusion at the level of a need, a class or a card subject, in our own words, short, attributed to a published work. Withheld: (1) a sentence that states a compound-target(-action) pair together with its database of origin when the pair is asserted only by a class-B/C catalogue source; (2) a compound named in prose whose only provenance in the repository is a class-B/C catalogue row (it appears in no cited full text and is not a card subject); (3) a per-compound status, phase, approval or access statement attributed to a class-B/C source; (4) repository file names, which cannot be used outside the repository. The replacement keeps the research conclusion and names the withheld source class with the phrase in withheld_phrase. The FULL build keeps everything. The audit enforces (1) and (2) by derivation from the catalogue, (3) and (4) by pattern, and every redaction below must match exactly once or more: a stale redaction fails the build.",
   "withheld_phrase": "dato di una fonte non inclusa in questa versione"
  },
