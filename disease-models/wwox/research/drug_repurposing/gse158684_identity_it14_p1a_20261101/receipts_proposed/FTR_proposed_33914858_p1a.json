@@ -1,0 +1,29 @@
+{
+  "analysis_at": "2026-10-31T00:00:00Z",
+  "analysis_time_precision": "date_only",
+  "coverage": {
+    "abstract": "not_read",
+    "discussion": "not_read",
+    "figures": "captions_only",
+    "introduction": "not_read",
+    "limitations": "not_present",
+    "methods": "read",
+    "references": "not_read",
+    "results": "read",
+    "supplementary": "read",
+    "tables": "not_read"
+  },
+  "evidence_depth": "queried_not_full_read",
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/gse158684_identity_it14_p1a_20261101/README.md"
+  ],
+  "prior_receipt": "FTR-20261029-33914858-01",
+  "record_kind": "contemporaneous_receipt",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "source_fingerprint": "de91c590783a38916f12b8a127813ef2d0f26c14be6f00e67aa0b23b342aa12d",
+  "source_kind": "fulltext_local",
+  "source_locator": "files/fulltext/PMID33914858_Repudi2021_OUP_browserprint_pdftotext.txt",
+  "study_id": {"doi": null, "pmid": "33914858"},
+  "supplement_fingerprint_File009_txt": "76f82dc286cf7c49c6624ab76bf9fa8fce9217bb0b8e814a6bac9cbf8db0a7f1",
+  "workflow": "scientist p1a, mandate IT14, task branch task/it14-p1a; prepared as a staged JSON for the integrator, not appended. Question: Cre drivers, control and experimental genotype, sample structure and snRNA processing behind GSE158681/2/4. Targeted passages only: Methods Mice and Electrophysiology, Results (neuronal deletion, RNA-seq, snRNA-seq), Fig 3 and Supp Fig 1/4 legends, Data availability, supplementary methods RNA-seq and nuclei/snRNA (File009). Not read: abstract, introduction, discussion (one passage), references, xlsx tables, figures. Fields ledger_prev_hash, event_id and event_at to be filled by the integrator."
+}

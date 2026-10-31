@@ -1,0 +1,3 @@
+arm	nuclei	genes_min	genes_median	genes_max	n_genes_lt200	n_genes_gt2500	umi_min	umi_median	umi_max	n_umi_gt15000	mt_frac_max	n_mt_gt3pct
+ctrl	3182	386	2186	8446	0	1281	506	4770	46276	122	0.0726	10
+ko	2920	390	2030	11352	0	1067	501	4342	107544	118	0.0447	3

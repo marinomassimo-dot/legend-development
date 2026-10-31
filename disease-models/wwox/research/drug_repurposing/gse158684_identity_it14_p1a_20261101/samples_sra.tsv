@@ -1,0 +1,30 @@
+gsm	series	title	genotype_label	srx	biosample	assay	deposited_processed_data	sra_status_2026-10-31	sra_runs_listed
+GSM4805477	GSE158681	S_Ctrl_1	S-Control	SRX9206251	SAMN16282781	bulk RNA-seq (KAPA stranded mRNA, NextSeq 500 75nt SE, per supplement)	TPM table (transcript level Salmon); no per-sample counts	hup	0
+GSM4805478	GSE158681	S_Ctrl_2	S-Control	SRX9206252	SAMN16282780	bulk RNA-seq (KAPA stranded mRNA, NextSeq 500 75nt SE, per supplement)	TPM table (transcript level Salmon); no per-sample counts	hup	0
+GSM4805479	GSE158681	S_KO_1	Wwox deletion in neurons	SRX9206253	SAMN16282827	bulk RNA-seq (KAPA stranded mRNA, NextSeq 500 75nt SE, per supplement)	TPM table (transcript level Salmon); no per-sample counts	hup	0
+GSM4805480	GSE158681	S_KO_2	Wwox deletion in neurons	SRX9206254	SAMN16282826	bulk RNA-seq (KAPA stranded mRNA, NextSeq 500 75nt SE, per supplement)	TPM table (transcript level Salmon); no per-sample counts	hup	0
+GSM4805481	GSE158681	S_KO_3	Wwox deletion in neurons	SRX9206255	SAMN16282824	bulk RNA-seq (KAPA stranded mRNA, NextSeq 500 75nt SE, per supplement)	TPM table (transcript level Salmon); no per-sample counts	hup	0
+GSM4805482	GSE158681	N_Ctrl_1	N-Control	SRX9206256	SAMN16282821	bulk RNA-seq (KAPA stranded mRNA, NextSeq 500 75nt SE, per supplement)	TPM table (transcript level Salmon); no per-sample counts	hup	0
+GSM4805483	GSE158681	N_Ctrl_2	N-Control	SRX9206257	SAMN16282820	bulk RNA-seq (KAPA stranded mRNA, NextSeq 500 75nt SE, per supplement)	TPM table (transcript level Salmon); no per-sample counts	hup	0
+GSM4805484	GSE158681	N_KO_1	Wwox deletion in Neural Stem and Progenitors	SRX9206258	SAMN16282818	bulk RNA-seq (KAPA stranded mRNA, NextSeq 500 75nt SE, per supplement)	TPM table (transcript level Salmon); no per-sample counts	hup	0
+GSM4805485	GSE158681	N_KO_2	Wwox deletion in Neural Stem and Progenitors	SRX9206259	SAMN16282816	bulk RNA-seq (KAPA stranded mRNA, NextSeq 500 75nt SE, per supplement)	TPM table (transcript level Salmon); no per-sample counts	hup	0
+GSM4805486	GSE158681	KO_1	Wwox- null	SRX9206260	SAMN16282814	bulk RNA-seq (KAPA stranded mRNA, NextSeq 500 75nt SE, per supplement)	TPM table (transcript level Salmon); no per-sample counts	hup	0
+GSM4805487	GSE158681	KO_2	Wwox- null	SRX9206261	SAMN16282807	bulk RNA-seq (KAPA stranded mRNA, NextSeq 500 75nt SE, per supplement)	TPM table (transcript level Salmon); no per-sample counts	hup	0
+GSM4805488	GSE158681	WT_1	Wild type	SRX9206262	SAMN16282806	bulk RNA-seq (KAPA stranded mRNA, NextSeq 500 75nt SE, per supplement)	TPM table (transcript level Salmon); no per-sample counts	hup	0
+GSM4805489	GSE158681	WT_2	Wild type	SRX9206263	SAMN16282805	bulk RNA-seq (KAPA stranded mRNA, NextSeq 500 75nt SE, per supplement)	TPM table (transcript level Salmon); no per-sample counts	hup	0
+GSM4805490	GSE158681	WT_3	Wild type	SRX9206264	SAMN16282804	bulk RNA-seq (KAPA stranded mRNA, NextSeq 500 75nt SE, per supplement)	TPM table (transcript level Salmon); no per-sample counts	hup	0
+GSM4805491	GSE158682	CRTX_S_Ctrl_1	S-Control	SRX9206265	SAMN16282803	bulk RNA-seq (KAPA stranded mRNA, NextSeq 500 75nt SE, per supplement)	TPM table (transcript level Salmon); no per-sample counts	hup	0
+GSM4805492	GSE158682	CRTX_S_Ctrl_2	S-Control	SRX9206266	SAMN16282802	bulk RNA-seq (KAPA stranded mRNA, NextSeq 500 75nt SE, per supplement)	TPM table (transcript level Salmon); no per-sample counts	hup	0
+GSM4805493	GSE158682	CRTX_S_Ctrl_3	S-Control	SRX9206267	SAMN16282801	bulk RNA-seq (KAPA stranded mRNA, NextSeq 500 75nt SE, per supplement)	TPM table (transcript level Salmon); no per-sample counts	hup	0
+GSM4805494	GSE158682	CRTX_S_Ctrl_4	S-Control	SRX9206268	SAMN16282800	bulk RNA-seq (KAPA stranded mRNA, NextSeq 500 75nt SE, per supplement)	TPM table (transcript level Salmon); no per-sample counts	hup	0
+GSM4805495	GSE158682	CRTX_S_KO_1	Wwox deletion in neurons	SRX9206269	SAMN16282799	bulk RNA-seq (KAPA stranded mRNA, NextSeq 500 75nt SE, per supplement)	TPM table (transcript level Salmon); no per-sample counts	hup	0
+GSM4805496	GSE158682	CRTX_S_KO_2	Wwox deletion in neurons	SRX9206270	SAMN16282797	bulk RNA-seq (KAPA stranded mRNA, NextSeq 500 75nt SE, per supplement)	TPM table (transcript level Salmon); no per-sample counts	hup	0
+GSM4805497	GSE158682	CRTX_S_KO_3	Wwox deletion in neurons	SRX9206271	SAMN16282796	bulk RNA-seq (KAPA stranded mRNA, NextSeq 500 75nt SE, per supplement)	TPM table (transcript level Salmon); no per-sample counts	hup	0
+GSM4805504	GSE158684	S_Ctrl1	S-Control	SRX9206272	SAMN16282794	snRNA-seq 10x Chromium 3prime v3 NextSeq 500	none per GSM; one matrix per arm GSE158684_ctrl_filtered	hup	0
+GSM4805505	GSE158684	S_Ctrl2	S-Control	SRX9206273	SAMN16282793	snRNA-seq 10x Chromium 3prime v3 NextSeq 500	none per GSM; one matrix per arm GSE158684_ctrl_filtered	hup	0
+GSM4805506	GSE158684	S_Ctrl3	S-Control	SRX9206274	SAMN16282791	snRNA-seq 10x Chromium 3prime v3 NextSeq 500	none per GSM; one matrix per arm GSE158684_ctrl_filtered	hup	0
+GSM4805507	GSE158684	S_Ctrl4	S-Control	SRX9206275	SAMN16282789	snRNA-seq 10x Chromium 3prime v3 NextSeq 500	none per GSM; one matrix per arm GSE158684_ctrl_filtered	hup	0
+GSM4805508	GSE158684	S_KO1	Wwox deletion in neurons	SRX9206276	SAMN16282788	snRNA-seq 10x Chromium 3prime v3 NextSeq 500	none per GSM; one matrix per arm GSE158684_ko_filtered	hup	0
+GSM4805509	GSE158684	S_KO2	Wwox deletion in neurons	SRX9206277	SAMN16282786	snRNA-seq 10x Chromium 3prime v3 NextSeq 500	none per GSM; one matrix per arm GSE158684_ko_filtered	hup	0
+GSM4805510	GSE158684	S_KO3	Wwox deletion in neurons	SRX9206278	SAMN16282784	snRNA-seq 10x Chromium 3prime v3 NextSeq 500	none per GSM; one matrix per arm GSE158684_ko_filtered	hup	0
+GSM4805511	GSE158684	S_KO4	Wwox deletion in neurons	SRX9206279	SAMN16282783	snRNA-seq 10x Chromium 3prime v3 NextSeq 500	none per GSM; one matrix per arm GSE158684_ko_filtered	hup	0
