@@ -19,7 +19,8 @@ R4 = pf.IT10 / "results_v4"
 class TruncationArtefact(unittest.TestCase):
     def test_lithium_is_seed_specific_in_the_full_list_and_missing_from_the_truncated_tables(self):
         orig = {r["intervention"].split(",")[0].split(" (")[0]: r for r in pf.dz.phenotype_first(R4, pf.DR, None)}
-        self.assertTrue(orig["Lithium"]["graph_status"].startswith("NAME_TWIN_SCORED_NOT_SPECIFIC"))        # the IT10 label
+        # after the IT11 patch dispose_it10.phenotype_first reads the full list too, so it agrees with the extension; the IT10 label came from the truncated tables (the inverse below)
+        self.assertEqual(orig["Lithium"]["graph_status"], "IN_SEED_SPECIFIC_ARM:Q6/mimics")
         ext = {r["intervention"].split(",")[0].split(" (")[0]: r for r in pf.extended(R4)}
         self.assertEqual(ext["Lithium"]["graph_status_it11"], "IN_SEED_SPECIFIC_ARM:Q6/mimics")
         # inverse: the truncated candidate tables (the IT10 source) hold no seed-specific lithium row, which is the artefact
