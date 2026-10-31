@@ -1,0 +1,25 @@
+query	chembl_id	pref_name	max_phase	full_mwt	molecule_type	chirality	parent	mechanisms	search_sha12
+vigabatrin	CHEMBL89598	VIGABATRIN	4.0	129.16	Small molecule	0	CHEMBL89598	INHIBITOR | Gamma-amino-N-butyrate transaminase inhibitor | CHEMBL2044	314212613cde
+vigabatrin	CHEMBL1361446	None	None	129.16	Small molecule	-1	CHEMBL1361446		314212613cde
+vigabatrin	CHEMBL4303352	None	None	165.62	Small molecule	-1	CHEMBL89598		314212613cde
+clobazam	CHEMBL70418	CLOBAZAM	4.0	300.75	Small molecule	2	CHEMBL70418	POSITIVE ALLOSTERIC MODULATOR | GABA-A receptor; anion channel positive allosteric modulator | CHEMBL2093872	eb864217693a
+clobazam	CHEMBL2260842	NOR-CLOBAZAM	None	286.72	Small molecule	-1	CHEMBL2260842		eb864217693a
+tiagabine	CHEMBL1027	TIAGABINE	4.0	375.56	Small molecule	1	CHEMBL1027		629d14e947fc
+tiagabine	CHEMBL1695	TIAGABINE HYDROCHLORIDE	4.0	412.02	Small molecule	1	CHEMBL1027	INHIBITOR | GABA transporter 1 inhibitor | CHEMBL1903	629d14e947fc
+retigabine	CHEMBL41355	EZOGABINE	4.0	303.34	Small molecule	2	CHEMBL41355	OPENER | KCNQ (Kv7) potassium channel opener | CHEMBL2363063	352e14f6f344
+retigabine	CHEMBL5174234	None	None	341.39	None	-1	CHEMBL5174234		352e14f6f344
+retigabine	CHEMBL255044	FLUPIRTINE	4.0	304.32	Small molecule	2	CHEMBL255044		352e14f6f344
+azetukalner	CHEMBL5095264	AZETUKALNER	3.0	368.50	Small molecule	2	CHEMBL5095264		b860bda9176a
+ganaxolone	CHEMBL1568698	GANAXOLONE	4.0	332.53	Small molecule	1	CHEMBL1568698	POSITIVE ALLOSTERIC MODULATOR | GABA-A receptor; anion channel positive allosteric modulator | CHEMBL2093872	d9b4ee5a5343
+radiprodil	CHEMBL182066	RADIPRODIL	2.0	397.41	Small molecule	2	CHEMBL182066	ANTAGONIST | Glutamate NMDA receptor; GRIN1/GRIN2B antagonist | CHEMBL1907603	0d7e380d5dcd
+radiprodil	CHEMBL1802037	None	None	396.41	Small molecule	-1	CHEMBL182066		0d7e380d5dcd
+gabazine	CHEMBL32503	GABAZINE	None	287.32	Small molecule	-1	CHEMBL32503		b16a887aa1bc
+gabazine	CHEMBL303580	GABAZINE BROMIDE	None	368.23	Small molecule	-1	CHEMBL32503		b16a887aa1bc
+xe-991	CHEMBL342375	None	None	376.46	Small molecule	-1	CHEMBL342375		35adbba4163e
+xe-991	CHEMBL1200685	XENON XE 133	4.0	132.91	Small molecule	2	CHEMBL1236802	None | Diagnostic agent | None	35adbba4163e
+xe-991	CHEMBL5787424	None	None	515.54	None	-1	CHEMBL5787424		35adbba4163e
+ethosuximide	CHEMBL696	ETHOSUXIMIDE	4.0	141.17	Small molecule	0	CHEMBL696	BLOCKER | Voltage-gated T-type calcium channel blocker | CHEMBL2362995	009e5ca61988
+N-desmethylclobazam	CHEMBL45455	None	None	330.45	Small molecule	-1	CHEMBL45455		28f9be55807d
+N-desmethylclobazam	CHEMBL306098	None	None	710.92	Small molecule	-1	CHEMBL306098		28f9be55807d
+N-desmethylclobazam	CHEMBL315271	None	None	453.65	Small molecule	-1	CHEMBL315271		28f9be55807d
+norclobazam	CHEMBL2260842	NOR-CLOBAZAM	None	286.72	Small molecule	-1	CHEMBL2260842		681a885238fd

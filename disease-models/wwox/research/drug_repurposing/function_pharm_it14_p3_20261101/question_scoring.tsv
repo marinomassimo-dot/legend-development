@@ -1,0 +1,10 @@
+question	R_wwox_relevance	M_functional_measure	D_discriminates_rivals	P_interrogable_pharmacology	V_verification_feasibility	sum_of_15	chosen	basis_in_one_line
+Q-inh synaptic GABA-A inhibition onto L2/3 pyramidal cells	3	3	3	2	2	13	yes	KO-specific by incidence; sIPSC numeric (57.3 v 27.5 pA, pooled controls); titratable in WT and HT; PAM pharmacology subunit and state dependent
+Q-NMDAR contribution and Mg2+ gate	3	2	2	3	2	12	no (kept as rival and as the second measurement)	d-APV abolishes bursts but cannot separate gain from permissive necessity; no NMDAR current measured; designs exist (IT6 P9, F04, P11)
+Q-intrinsic resting potential and input resistance	2	3	1	3	2	11	no	numeric (-79.25/-75.51/-73.62 mV) but graded and shared with the rarely bursting heterozygote
+Q-HCN Ih (sag, rebound)	2	2	1	2	2	9	no	sag in mV at fixed current scales with input resistance (102.9 v 143.0 MOhm); authors cite worsening with ZD7288
+Q-PVfire PV interneuron firing / Kv3	2	2	2	2	1	9	no (sub-branch of Q-inh)	interneuron AP amplitude 60.8 to 45.0 mV (n 5 and 6 cells); Pvalb mRNA lower 4 of 4; thin Kv3 public pharmacology
+Q-Kv7 specifically	1	1	1	3	2	8	no (becomes the counter-hypothesis arm)	no Kv7 datum; Kcnq2 mRNA inside the control-line band; an opener hyperpolarises any neuron
+Q-gap-junction/pannexin	2	2	1	0	1	6	no	carbenoxolone 100 uM lowered burst frequency 87 percent, non-selective; no selective agent to ladder
+Q-T-type/GIRK	1	1	1	2	1	6	no	one behavioural PTZ result; Cacna1g/h and Kcnj6 mRNA flat
+Q-chloride gradient NKCC1/KCC2	1	0	1	2	1	5	no	sIPSC recorded with KCl internal so amplitude says nothing on E_GABA; NKCC1:KCC2 transcript ratio not raised in 3 of 4 hippocampal contrasts
