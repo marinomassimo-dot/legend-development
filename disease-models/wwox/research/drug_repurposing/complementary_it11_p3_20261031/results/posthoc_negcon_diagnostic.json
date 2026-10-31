@@ -1,0 +1,32 @@
+{
+ "n_noguide": 4724,
+ "n_nontargeting": 2754,
+ "norm_mean_noguide": 0.924686074256897,
+ "norm_mean_nontargeting": 0.7011064887046814,
+ "cos_means_noguide_vs_nontargeting": 0.6182574033737183,
+ "norm_mean_of_all_KO_profiles": 0.16417159140110016,
+ "cos_meanKO_vs_(nontargeting-noguide)": 0.20488689839839935,
+ "mean_cos_between_random_knockout_profiles": 0.0012688693823292851,
+ "mean_cos_between_random_knockout_profiles_after_nontargeting_rereference": 0.11060640960931778,
+ "declared_statistic_original_KO": {
+  "n": 144,
+  "H": 0.25,
+  "null": 0.2416732903837572,
+  "ratio": 1.0344544057931295,
+  "p": 0.43932803359832007
+ },
+ "POSTHOC_statistic_KO_minus_nontargeting_mean": {
+  "n": 144,
+  "H": 0.2708333333333333,
+  "null": 0.2313873549754574,
+  "ratio": 1.1704759465445285,
+  "p": 0.1345932703364832
+ },
+ "POSTHOC_statistic_KO_minus_nontargeting_mean_compounds_minus_their_mean": {
+  "n": 144,
+  "H": 0.25,
+  "null": 0.22451176232708614,
+  "ratio": 1.1135274045721517,
+  "p": 0.22783860806959652
+ }
+}
