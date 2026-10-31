@@ -18,42 +18,42 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 10483,
+    "values": 10842,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
     "class": "OWN",
-    "values": 6287,
+    "values": 6545,
     "why": "card text and computed positions (provenance of the prose: see text audit)"
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
     "class": "BIBLIO",
-    "values": 463,
+    "values": 477,
     "why": "PMID / DOI of a cited work"
    },
    "^\\.cur\\.cands\\[\\]\\.access\\[\\]$": {
     "class": "SRC_A",
-    "values": 19,
+    "values": 21,
     "why": "access category stated from openFDA NDC or an absence statement"
    },
    "^\\.cur\\.cands\\[\\]\\.brief\\.sources\\[\\]\\.(kind|id)$": {
     "class": "BIBLIO",
-    "values": 238,
+    "values": 248,
     "why": "PMID / ChEMBL identifier of an essential source of the one-page synthesis"
    },
    "^\\.cur\\.cands\\[\\]\\.brief\\.sources\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 357,
+    "values": 372,
     "why": "title, journal, year of an essential source (bibliographic facts)"
    },
    "^\\.cur\\.cands\\[\\]\\.chembl\\[\\]$": {
     "class": "ID",
-    "values": 20,
+    "values": 23,
     "why": "ChEMBL identifier of a compound named by a card"
    },
    "^\\.cur\\.cands\\[\\]\\.pmids\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 687,
+    "values": 708,
     "why": "title, journal, year of a cited work (bibliographic facts)"
    },
    "^\\.cur\\.evidence_graph\\.chains\\[\\]\\.(nodes\\[\\]\\.pmids\\[\\]|edges\\[\\]\\.src\\.id)$": {
@@ -73,22 +73,22 @@
    },
    "^\\.cur\\.needs\\[\\]\\.obs\\[\\]\\.(cite)$": {
     "class": "BIBLIO",
-    "values": 97,
+    "values": 98,
     "why": "title, journal, year of a cited work"
    },
    "^\\.cur\\.needs\\[\\]\\.obs\\[\\]\\.pmid$": {
     "class": "BIBLIO",
-    "values": 97,
+    "values": 98,
     "why": "PMID of the observation source"
    },
    "^\\.cur\\.ranking\\.units\\[\\]\\.(access|access_cats\\[\\])$": {
     "class": "SRC_A",
-    "values": 74,
+    "values": 79,
     "why": "access statement of a ranked intervention: class-A sources (openFDA NDC, MATRIX) only in the shareable edition; other categories are withheld"
    },
    "^\\.cur\\.ranking\\.units\\[\\]\\.(pmids\\[\\]|views\\.(broad|partial)\\.evidence\\.pmids\\[\\])$": {
     "class": "BIBLIO",
-    "values": 212,
+    "values": 219,
     "why": "PMID of a cited work (ranking)"
    },
    "^\\.excluded_detail\\[\\]\\.(id|name|src)$": {
@@ -118,17 +118,17 @@
    },
    "^\\.needs\\[\\]\\.": {
     "class": "OWN",
-    "values": 1741,
+    "values": 1751,
     "why": "needs records written in this repository"
    },
    "^\\.pairs\\[\\]\\.(l2|l3|l4|x|n|r)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 33859,
+    "values": 33918,
     "why": "levels 2-4, indices: computed from cards and needs"
    },
    "^\\.pairs\\[\\]\\.l1\\.(state|n_assoc|readout_only|why|stale)$": {
     "class": "OWN",
-    "values": 12900,
+    "values": 12920,
     "why": "level-1 state, association count and note computed by the coverage tool"
    },
    "^\\.pairs\\[\\]\\.l1\\.(targets|pathway)\\[\\]$": {
@@ -143,12 +143,12 @@
    },
    "^\\.pairs\\[\\]\\.l1\\.withheld$": {
     "class": "COUNT",
-    "values": 2580,
+    "values": 2584,
     "why": "number of association rows withheld by the allowlist"
    },
    "^\\.pairs\\[\\]\\.p\\.": {
     "class": "OWN",
-    "values": 15698,
+    "values": 15801,
     "why": "priority criteria computed by the coverage tool"
    },
    "^\\.pairs\\[\\]\\.p\\.cr\\.dir\\[\\]\\[\\]$": {
@@ -158,32 +158,32 @@
    },
    "^\\.rows\\[\\]\\.(dup|rec|tr|w)$": {
     "class": "COUNT",
-    "values": 8940,
+    "values": 8952,
     "why": "record counts of a catalogue row"
    },
    "^\\.rows\\[\\]\\.(id|kind)$": {
     "class": "ID",
-    "values": 4494,
+    "values": 4502,
     "why": "catalogue row identifier and row kind"
    },
    "^\\.rows\\[\\]\\.acc\\[\\]$": {
     "class": "SRC_A",
-    "values": 19,
+    "values": 22,
     "why": "access category stated from openFDA NDC (class A) or an absence statement"
    },
    "^\\.rows\\[\\]\\.cards\\[\\]\\.(id|att|path)$": {
     "class": "OWN",
-    "values": 180,
+    "values": 201,
     "why": "card attachment (in-page anchor)"
    },
    "^\\.rows\\[\\]\\.name$": {
     "class": "ROWNAME",
-    "values": 2247,
+    "values": 2251,
     "why": "card name (own text), opaque identifier, or a class-A name source"
    },
    "^\\.strings\\[\\]$": {
     "class": "OWN",
-    "values": 51,
+    "values": 52,
     "why": "string table of repeated coverage-tool sentences"
    },
    "^\\.tech\\.": {
@@ -198,15 +198,15 @@
    }
   },
   "identifiers": {
-   "CAT": 2226,
-   "CHEMBL": 299,
+   "CAT": 2229,
+   "CHEMBL": 302,
    "DOI": 5,
-   "HGNC": 11,
+   "HGNC": 12,
    "NCT": 0,
-   "PMID": 90
+   "PMID": 91
   },
   "links": {
-   "distinct_hrefs": 109,
+   "distinct_hrefs": 110,
    "external_public": 52,
    "hosts": [
     "civicdb.org",
@@ -218,12 +218,12 @@
     "www.ncbi.nlm.nih.gov",
     "www.nlm.nih.gov"
    ],
-   "internal_anchors": 57
+   "internal_anchors": 58
   },
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 2721,
+    "forbidden-name": 2808,
     "forbidden-wording": 12
    },
    "co_attested_wording": [
@@ -248,10 +248,9 @@
    "forbidden_names": 126046,
    "forbidden_wordings": 2888,
    "pair_unmarked_attested_or_unchecked": {
-    "count": 132,
+    "count": 141,
     "names": [
      "act 709478",
-     "amlexanox",
      "apinocaltamide",
      "cpp 115",
      "dimethyl fumarate",
@@ -261,14 +260,15 @@
      "null",
      "phenylbutyrate",
      "proteasome inhibitor",
-     "px 478"
+     "px 478",
+     "sulfopin"
     ],
-    "unchecked_without_corpus": 132
+    "unchecked_without_corpus": 141
    },
    "suppressed_by_exemption": {
     "bibliographic journal name (validated against the journals of the cache)": 4,
     "category labels of catalogue-wide counts": 1,
-    "inside a bibliographic title (line-broken text layer)": 3
+    "inside a bibliographic title (line-broken text layer)": 5
    }
   },
   "text_provenance_file": "TEXT_PROVENANCE.json",
@@ -276,17 +276,20 @@
  },
  "class_b_content": {
   "chembl_ids": [
+   "CHEMBL1064",
    "CHEMBL1096",
    "CHEMBL1201230",
    "CHEMBL1201333",
    "CHEMBL146927",
    "CHEMBL1746",
+   "CHEMBL189963",
    "CHEMBL190461",
    "CHEMBL1983350",
    "CHEMBL2107333",
    "CHEMBL2338329",
    "CHEMBL256997",
    "CHEMBL306823",
+   "CHEMBL3301610",
    "CHEMBL4117516",
    "CHEMBL413",
    "CHEMBL4217292",
@@ -296,8 +299,8 @@
    "CHEMBL89598"
   ],
   "file": "class_b/chembl_cc-by-sa-3.0/chembl_cc-by-sa-3.0.jsonl",
-  "mechanism_rows": 14,
-  "records": 18,
+  "mechanism_rows": 19,
+  "records": 21,
   "release": "ChEMBL_37 2026-05-01"
  },
  "class_b_files": [
@@ -313,23 +316,23 @@
   "card_actions_listed_full": 41,
   "card_actions_listed_shareable": 0,
   "card_fields_that_differ_count_of_cards": {
-   "access": 9,
+   "access": 10,
    "access_text": 7,
    "actions": 9,
    "asserts": 2,
    "brief": 1,
-   "card_path": 38,
+   "card_path": 39,
    "country": 5,
    "for": 2,
-   "identity": 8,
-   "links": 9,
-   "mechanism": 1,
+   "identity": 7,
+   "links": 10,
+   "mechanism": 2,
    "next_full": 2,
    "novelty": 2,
    "pharm": 2,
    "reopen": 1
   },
-  "cards": 38,
+  "cards": 39,
   "curated_sections": {
    "cands": "differs",
    "contexts": "identical",
@@ -353,8 +356,8 @@
   "excluded_rows_with_names_full": 3,
   "excluded_rows_with_names_shareable": 0,
   "needs": 23,
-  "pairs_total": 2580,
-  "pairs_with_status_class_full": 920,
+  "pairs_total": 2584,
+  "pairs_with_status_class_full": 923,
   "pairs_with_status_class_shareable": 0,
   "pairs_with_target_list_full": 2204,
   "pairs_with_target_list_shareable": 13,
@@ -383,12 +386,12 @@
    "strings": "identical",
    "tech": "differs"
   },
-  "rows_named_full": 2233,
-  "rows_named_shareable_card_names_only": 48,
-  "rows_total": 2247,
-  "rows_with_access_categories_full": 2221,
-  "rows_with_access_categories_shareable": 16,
-  "rows_with_per_row_status_or_modality_full": 2247,
+  "rows_named_full": 2237,
+  "rows_named_shareable_card_names_only": 52,
+  "rows_total": 2251,
+  "rows_with_access_categories_full": 2224,
+  "rows_with_access_categories_shareable": 19,
+  "rows_with_per_row_status_or_modality_full": 2251,
   "rows_with_per_row_status_or_modality_shareable": 0,
   "target_symbols_listed_full": 2727,
   "target_symbols_listed_shareable": 13
@@ -450,18 +453,18 @@
   }
  ],
  "data": {
-  "catalogue_generated": "2026-10-30T18:41:46Z",
+  "catalogue_generated": "2026-10-31T07:28:37Z",
   "data_date": "2026-10-31",
   "dgidb_export": "2024-06-10",
   "view_schema": "legend.wwox.repurposing_view/2"
  },
  "embedded_field_classes": {
-  "BIBLIO": 2316,
-  "COUNT": 11583,
-  "ID": 4536,
-  "OWN": 81616,
-  "ROWNAME": 2247,
-  "SRC_A": 179,
+  "BIBLIO": 2385,
+  "COUNT": 11599,
+  "ID": 4547,
+  "OWN": 82447,
+  "ROWNAME": 2251,
+  "SRC_A": 189,
   "SRC_META": 256,
   "UI": 1070
  },
@@ -491,14 +494,14 @@
    "attribution": "Data provided by the U.S. Food and Drug Administration. Do not rely on openFDA to make decisions regarding medical care. No FDA endorsement is implied.",
    "label": "openFDA NDC (access categories)",
    "licence": "Public domain (openFDA licence page)",
-   "rows": 13,
+   "rows": 15,
    "url": "https://open.fda.gov/license/"
   }
  ],
  "files": {
   "COMPARISON.md": {
-   "bytes": 6433,
-   "sha256": "bd95256e21c69589437968acb6436c0bb128310f5a8977a8347eac70613956a7"
+   "bytes": 6435,
+   "sha256": "bfdfced146b3fc51567ecf1d304d95146a1ab066960c17cbdc62662438577917"
   },
   "LICENSES/CC-BY-4.0.txt": {
    "bytes": 18657,
@@ -518,31 +521,31 @@
   },
   "NOTICE.md": {
    "bytes": 12614,
-   "sha256": "92035f9ce0cd3c1596b93bbbbbee850e86f71241eea9865a0972fce97c0867d7"
+   "sha256": "66fd7d09fe82e569111be0153be88a3949584d8d9125809b82e19b4261fd3729"
   },
   "README.md": {
    "bytes": 4642,
-   "sha256": "a742928fa4c66ea2078a1810929875380613c751e1ea72053c204c84f3d15e7a"
+   "sha256": "f7f9ec9bcb1c022f957f3b73da6e7c5852e1966e16074f1dd624cf5e999a4510"
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 1999,
-   "sha256": "a328162a7ff1d5a3f4bd1519e98ca9adf32d63f7391c5f3fdd2e12acd23e628c"
+   "sha256": "9ccc437b721673e0ada9ccff031617f0d8fc29c2b06582701b4ce7846a17115b"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1636,
-   "sha256": "3c2cdc062b671e8e91beb811f275803a619b0a7e86bbe38d4cc969ef73d8bf40"
+   "sha256": "f34de9644251ef08ef2c72cf1cdcdce634723850f3c804fb3815592db17b0a1f"
   },
   "class_b/chembl_cc-by-sa-3.0/LICENSE_CC-BY-SA-3.0.txt": {
    "bytes": 22240,
    "sha256": "3f941b3b89cf7b8370ceb83cc76d2120d471b58735d8ca60238a751a48d7f72f"
   },
   "class_b/chembl_cc-by-sa-3.0/chembl_cc-by-sa-3.0.jsonl": {
-   "bytes": 9539,
-   "sha256": "36389f215e11e4fde0914fb8b94316e4eda1bac11239b15894bf1db719cba5a5"
+   "bytes": 11589,
+   "sha256": "240723d6c86c13fc8f19ff2a5bbe7eec5e64da0f3769ea25e49d8d7b7e5784d0"
   },
   "index.html": {
-   "bytes": 4003956,
-   "sha256": "6c55a78219de4ddd1390cde9e703bb5a6151737e85d96d009f014db4065de6a2"
+   "bytes": 4105022,
+   "sha256": "d1790d59bd3e392602afea63acec8f1f60e3b314e1d4bcd957787e66f980d2b5"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
@@ -601,8 +604,8 @@
   "card_sentence_redactions": 12,
   "lead_field_redactions": 11,
   "pair_status_rule": "pairs[].p.cr.pha[1] (status classes of the row) is dropped in the shareable build: a status class derives from ChEMBL max_phase, DGIdb approved flags, MATRIX and openFDA together, and the build does not re-derive a class-A-only status per row.",
-  "pairs_status_class_dropped": 920,
-  "repository_file_names_described": 90,
+  "pairs_status_class_dropped": 923,
+  "repository_file_names_described": 95,
   "rule": "IT5 P13 fix. Own analysis stays in the shareable build: a conclusion at the level of a need, a class or a card subject, in our own words, short, attributed to a published work. Withheld: (1) a sentence that states a compound-target(-action) pair together with its database of origin when the pair is asserted only by a class-B/C catalogue source; (2) a compound named in prose whose only provenance in the repository is a class-B/C catalogue row (it appears in no cited full text and is not a card subject); (3) a per-compound status, phase, approval or access statement attributed to a class-B/C source; (4) repository file names, which cannot be used outside the repository. The replacement keeps the research conclusion and names the withheld source class with the phrase in withheld_phrase. The FULL build keeps everything. The audit enforces (1) and (2) by derivation from the catalogue, (3) and (4) by pattern, and every redaction below must match exactly once or more: a stale redaction fails the build.",
   "withheld_phrase": "dato di una fonte non inclusa in questa versione"
  },

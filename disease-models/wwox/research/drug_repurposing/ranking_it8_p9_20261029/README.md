@@ -377,6 +377,24 @@ Order digest after: 6a5538289e83deb9. Counts: 65 entries in the map (61 before: 
 
 **Tests added** (`It10Integration`, 8 tests, and 3 fixtures: `nrf2_probe_vs_development.json`, `ack1_conditional_on_protein.json`): the L01 unit enters by the rule with G4b/F3/NX2 and is never selectable; the IT10 entries follow the stated states (DROP and REFERENCE are excluded) and mutating the map or a state changes the result; a correction overlay changes the reason and not the stored record and refuses an unknown field; N12, its corrections and R1 to R7 are present and the searches disappear with their source; every pilot case answers the mandate questions and a missing field is refused; the NRF2 case keeps research question, priority and evidence unchanged when every development requirement becomes unfavourable; the ACK1 case stays unknown-not-negative, attributes nothing and needs its uncarded row. Two existing tests were extended for the new origin and the new case count (5 to 7), not weakened.
 
+## 14. IT11 P4: the IT11 cases enter the ranking (2026-10-31)
+
+**Mechanism.** The same documented rules as sections 11 and 13, with a third table: `proposals_map_it11.tsv` (`how` = `own_unit` or `card_unit`) maps the IT11 P2.2 candidates (`question_it11_p22_20261031/candidates.tsv`, read column by column: `lever`, `state`, `development_verdict`, `discriminating_test`, `counter_evidence`, `decisive_datum`, `missing_data`); records are written to `it11_records.tsv` and `ranking.json` (`it11_records`, summary `it11`), era `IT11`. The view does not yet display the IT11 records table.
+
+| Candidate (IT11 P2.2 state) | Entry | Class, position, group |
+|---|---|---|
+| card **M01_neurogenic_output_myc_window** (A51 restated M01 and sulfopin M02 as comparison arms, CONDITIONAL records) | **U63**, mechanism probe, a card unit through `unit_map.tsv` | EVALUATED AND ORDERABLE; position **F3** on `NEED-MYC-PROGENITOR-PROLIFERATION`; group **G4b** (partial-benefit objective); never selectable (no WWOX-system result of a selective lever) |
+| palbociclib and abemaciclib (M05, REFERENCE-ONLY; one candidate row, so one entry) | **U64**, class of molecules, reference or control | EXCLUDED |
+| simvastatin (M06, DROP) | **U65**, molecule | EXCLUDED |
+| Omomyc / OMO-103 (M08, REFERENCE-ONLY) | **U66**, molecule, reference or control | EXCLUDED |
+| lithium (M07, CONDITIONAL, narrowed) | record in the existing unit **U24** (text only) | unchanged |
+
+**Origin vocabulary (disclosed limit).** The view validates a closed origin list with no IT11 value, and the brief forbids editing the view generator, so U63 and U65 carry the origin value `generated_in_it10` with `era` = IT11 (the references carry `reference_or_control`). Adding `generated_in_it11` to `RK_ORIGINS` and its Italian label in `repurposing_view.py`, to `ORIGINS` here, and an IT11 records table, is a three-line change for the orchestrator.
+
+**Diff (`changes.tsv`, snapshot `units_2026-10-31_18cbbddce8e3ebcd`, 46 rows).** 4 new entries (U63 G4b, U64, U65, U66); **0 group moves**; 42 rows `inputs_changed_group_unchanged`: U59 (L01 corrected: `counter_evidence`), U10 (A51 restated; MYC need gained observations and counter-evidence: `counter_evidence`), U24 (graph-coverage correction and neurogenic-window risk flag: `counter_evidence`), the 39 others `context_change` (shared card digest, need text, graph-coverage caveat). Per-unit reason classes were set by the integrator after the snapshot was written (the tool writes one reason per snapshot). Counts: 69 entries (65 before), 37 ranked (36), EXCLUDED 32 (29), EVALUATED AND ORDERABLE 16 (15), STILL INSUFFICIENTLY EVALUATED 16 (unchanged). Order digest after: ff38fcaa61295a5a.
+
+**Caveats added (`unit_caveats.tsv`).** Graph-coverage notes for U07, U10, U15, U17, U20, U21, U24 from IT11 P2.1 (cause class in plain words; lithium is a seed-specific Q6 `mimics` hit through MYC expression in a human seed, not the lead's seizure readout and not support for lithium; ethosuximide and vigabatrin have no path; the five leads are development inputs, not independent validation); U63 limits, counter-evidence, question and the sulfopin restatement; U59 note for the 12 IT11 P2.3 corrections. `qualification_corrections.tsv` gained two overlay rows for P22-02 (the fumarates are two compounds; HCAR2). Item N12: the HCC datum (one line, one construct, steady state) and the non-independence of bosutinib are in the reason text; trigger R8 (Tnk2-null material or a second shRNA with WWOX mRNA) is the 16th trigger row; the pilot case ACK1-dasatinib gained its evidence limit; AIM-100 and (R)-9b identity rows replace the IT10 unresolved row in `recovery_it10_p23_20261031/compound_identity.tsv`.
+
 ## Matching v3 pilot — 30 October 2026
 
 The [operator-supplied guidance](../matching_guidance_v3.md) is preserved verbatim.

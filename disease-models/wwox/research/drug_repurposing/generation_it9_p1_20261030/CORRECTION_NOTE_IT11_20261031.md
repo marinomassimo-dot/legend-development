@@ -1,0 +1,7 @@
+# Correction note (2026-10-31), added by IT11 P4; the original files are not rewritten
+
+Source: IT11 P2.2 (`question_it11_p22_20261031/README.md` sections 2 and 11, `premises.tsv`) and IT11 P2.3 (`nrf2_it11_p23_20261031/l01_corrections_proposal.md`).
+
+1. `questions.tsv` Q6, `data_quality_note` ("abstract-level confirmation only"): out of date. The main text and Figures 3, 4 and 6 of PMID 42397075 were read in IT11 P2.2 (partial full text; supplement not available locally), with verbatim locators in the premises table. Read the note as: "main text and three figures read; supplementary panels not read". Seed S117 ("no error bars") is confirmed from Fig 4C. After the verifier corrections: MYC elevation is present in SCAR12 without a reduced neuron-cluster fraction (WOREE shows reduced CTIP2 and SATB2, Fig 6B; its radial-glia increase in the text is not seen in Fig 2F, a text/figure mismatch), so the role of the MYC change in `question_roles` stays `unknown`.
+2. `seeds.tsv` S084 ("qPCR/RNA-seq n 6 per group; distributions overlap the wild-type range"): the n 6 v 6 is qPCR only (the cerebellar RNA-seq figure shows 4 v 3 leaves; Methods say 5 per group); by the figure the overlap with wild type is marginal for IL1b and absent for TNF.
+3. The IT10 `phenotype_first` statement that lithium was "scored, never seed-specific" was corrected in IT11 P2.1 (lithium is a seed-specific Q6 `mimics` hit through MYC expression in a human seed; this is not support for lithium and not about the seizure readout).

@@ -143,3 +143,5 @@ Counts, kept apart:
 | e | headline | 'No candidate is strengthened' | the authors read the A51 result as MYC-driven impairment of differentiation (NEUN+ up, SATB2 mild up, CTIP2 unchanged; L980-983). 'No candidate strengthened' rests on non-selectivity (multi-kinase A51, two pathways) and on design gaps (no WT+A51 arm, supplement unavailable), not on a contradicting result. |
 
 Edited in place: `premises.tsv` (PR2, PR3, PR5, PR9), `M01_neurogenic_output_myc_window.packet.json` (measured-result notes), `needs_patch_proposal.json` (O2 sentence), this README. `candidates.tsv` holds no affected sentence. The supplement remains unavailable.
+
+Integration edits that are not verifier corrections (IT11 P4): assertion `DR-M01-008` of the packet was split into `DR-M01-008` (palbociclib) and `DR-M01-010` (abemaciclib, with the intracranial-model abstract) so that each assertion has one catalogue subject and evidence is not transferred between the two; the packet was placed in `cards/` and the card built with the bridge; the needs and work-order patches were applied (O4 added, the `NEED-MYC-PROGENITOR-PROLIFERATION` work-order entry replaced).
