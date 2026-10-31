@@ -1,7 +1,7 @@
 cand_id	package	compound	state	decision	unit_id	class	origin	need
-M01	P2.2-IT11	A51 (multi-kinase inhibitor, experimental)	CONDITIONAL	CONDITIONAL	U63	ORD	generated_in_it10	NEED-MYC-PROGENITOR-PROLIFERATION
-M02	P2.2-IT11	sulfopin	CONDITIONAL	CONDITIONAL	U63	ORD	generated_in_it10	NEED-MYC-PROGENITOR-PROLIFERATION
+M01	P2.2-IT11	A51 (multi-kinase inhibitor, experimental)	CONDITIONAL	CONDITIONAL	U63	ORD	generated_in_it11	NEED-MYC-PROGENITOR-PROLIFERATION
+M02	P2.2-IT11	sulfopin	CONDITIONAL	CONDITIONAL	U63	ORD	generated_in_it11	NEED-MYC-PROGENITOR-PROLIFERATION
 M05	P2.2-IT11	palbociclib; abemaciclib (CDK4/6 inhibitor class)	REFERENCE	REFERENCE-ONLY	U64	EXCL	reference_or_control	NEED-MYC-PROGENITOR-PROLIFERATION
-M06	P2.2-IT11	simvastatin	DROP	DROP	U65	EXCL	generated_in_it10	NEED-MYC-PROGENITOR-PROLIFERATION
+M06	P2.2-IT11	simvastatin	DROP	DROP	U65	EXCL	generated_in_it11	NEED-MYC-PROGENITOR-PROLIFERATION
 M07	P2.2-IT11	lithium (carbonate; Li+)	CONDITIONAL	CONDITIONAL (narrowed: not a Q6-axis benefit candidate)	U24	ORD	known_track_before_it9	NEED-MYC-PROGENITOR-PROLIFERATION
 M08	P2.2-IT11	Omomyc / OMO-103 (MYC dimerisation-interface mini-protein)	REFERENCE	REFERENCE-ONLY	U66	EXCL	reference_or_control	NEED-MYC-PROGENITOR-PROLIFERATION

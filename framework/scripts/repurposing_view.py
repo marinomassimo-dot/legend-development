@@ -3321,7 +3321,7 @@ RK_GROUP_IDS = ["G1", "G2a", "G2b", "G3", "G4a", "G4b", "G5", "GU"]
 RK_CLASSES = ["ORD", "WEAK", "INSUFF", "EXCL"]
 RK_VIEWS = ["general", "broad", "partial"]
 RK_TYPES = ["molecule", "class_of_molecules", "diet", "gene_therapy", "tool_compound", "tool_compound_and_class", "mechanism_probe"]
-RK_ORIGINS = ["known_track_before_it9", "generated_in_it9", "generated_in_it10", "reference_or_control"]
+RK_ORIGINS = ["known_track_before_it9", "generated_in_it9", "generated_in_it10", "generated_in_it11", "reference_or_control"]
 RK_NX = ["NX1", "NX2", "NX3"]
 RK_LINKS = ["effect_observed_in_wwox_system", "directionally_compatible_documented_action", "documented_association_target_listed", "other_disease_precedent_only", "other_disease_precedent_plus_wwox_case_level_signal", "card_inference_by_mechanism_no_catalogue_row", "computational_prediction_generated_in_it9"]
 RK_EVQ = ["favourable_with_comparator_may_rest_on_one_row", "favourable_thin", "favourable_thin_specificity_uncertain", "contested", "no_wwox_test_target_supported", "no_wwox_test_target_hypothesis", "weak_pertinence_or_outside_counter", "premise_missing"]
@@ -3619,7 +3619,7 @@ UI_IT8 = {
     "rk_it9_n": "{n} record qualificati, {d} composti distinti (JTE-151 ha due record)", "rk_it9_state": "Stato", "rk_it9_count": "Record", "rk_it9_cls": "Classe nella graduatoria",
     "rk_it9_s_KEEP": "proposta mantenuta", "rk_it9_s_INCONCLUSIVE": "non conclusivo", "rk_it9_s_DROP": "scartato", "rk_it9_s_REFERENCE": "solo riferimento",
     "rk_it9_org": "Voci per origine", "rk_it9_rec_h": "Elenco dei record", "rk_it9_rec_withheld": "I nomi dei composti dei record con origine solo di catalogo sono nell'edizione completa.",
-    "rk_it9_c_id": "Record", "rk_it9_c_c": "Composto", "rk_it9_c_u": "Voce", "rk_or_h": "Origine", "rk_or_known_track_before_it9": "pista nota prima di IT9", "rk_or_generated_in_it9": "generato in IT9", "rk_or_generated_in_it10": "generato in IT10", "rk_or_reference_or_control": "riferimento o controllo",
+    "rk_it9_c_id": "Record", "rk_it9_c_c": "Composto", "rk_it9_c_u": "Voce", "rk_or_h": "Origine", "rk_or_known_track_before_it9": "pista nota prima di IT9", "rk_or_generated_in_it9": "generato in IT9", "rk_or_generated_in_it10": "generato in IT10", "rk_or_generated_in_it11": "generato in IT11", "rk_or_reference_or_control": "riferimento o controllo",
     "rk_nx_h": "Priorità del prossimo esperimento", "rk_nx_NX1": "NX1 · decisivo", "rk_nx_NX2": "NX2 · informativo", "rk_nx_NX3": "NX3 · basso o nullo oggi",
     "rk_nxp_NX1": "Il prossimo esperimento discriminante cambierebbe una decisione (alzare o fermare).", "rk_nxp_NX2": "Il prossimo esperimento scioglie un limite; la decisione si sposta di un passo al massimo.",
     "rk_nxp_NX3": "Nessun passo discriminante indicato, oppure l'esito non potrebbe cambiare la decisione prima che esista una premessa.",

@@ -1068,7 +1068,7 @@
    "compound": "A51 (multi-kinase inhibitor, experimental)",
    "decision": "CONDITIONAL",
    "need": "NEED-MYC-PROGENITOR-PROLIFERATION",
-   "origin": "generated_in_it10",
+   "origin": "generated_in_it11",
    "package": "P2.2-IT11",
    "state": "CONDITIONAL",
    "unit_id": "U63"
@@ -1079,7 +1079,7 @@
    "compound": "sulfopin",
    "decision": "CONDITIONAL",
    "need": "NEED-MYC-PROGENITOR-PROLIFERATION",
-   "origin": "generated_in_it10",
+   "origin": "generated_in_it11",
    "package": "P2.2-IT11",
    "state": "CONDITIONAL",
    "unit_id": "U63"
@@ -1101,7 +1101,7 @@
    "compound": "simvastatin",
    "decision": "DROP",
    "need": "NEED-MYC-PROGENITOR-PROLIFERATION",
-   "origin": "generated_in_it10",
+   "origin": "generated_in_it11",
    "package": "P2.2-IT11",
    "state": "DROP",
    "unit_id": "U65"
@@ -2805,7 +2805,8 @@
   },
   "it9": {
    "all_units_by_origin": {
-    "generated_in_it10": 4,
+    "generated_in_it10": 2,
+    "generated_in_it11": 2,
     "generated_in_it9": 24,
     "known_track_before_it9": 30,
     "reference_or_control": 11
@@ -2823,13 +2824,15 @@
    },
    "distinct_compounds": 31,
    "ranked_by_origin": {
-    "generated_in_it10": 2,
+    "generated_in_it10": 1,
+    "generated_in_it11": 1,
     "generated_in_it9": 8,
     "known_track_before_it9": 27
    },
    "records_qualified": 32,
    "units_by_origin": {
-    "generated_in_it10": 4,
+    "generated_in_it10": 2,
+    "generated_in_it11": 2,
     "generated_in_it9": 24,
     "known_track_before_it9": 27,
     "reference_or_control": 11
@@ -13603,8 +13606,8 @@
    ],
    "merge_reason": "",
    "model_exclusions": [],
-   "origin": "generated_in_it10",
-   "origin_label": "generated in IT10",
+   "origin": "generated_in_it11",
+   "origin_label": "generated in IT11",
    "pathways": [
     {
      "computational_prediction": "none: card-linked families were firewalled out of the IT7 P3 comparison (exploratory, minimum detectable effect about 0.157)",
@@ -19068,8 +19071,8 @@
    "members": [],
    "merge_reason": "",
    "model_exclusions": [],
-   "origin": "generated_in_it10",
-   "origin_label": "generated in IT10",
+   "origin": "generated_in_it11",
+   "origin_label": "generated in IT11",
    "pathways": [],
    "pmids": [],
    "receipts_on_cited_pmids": 0,

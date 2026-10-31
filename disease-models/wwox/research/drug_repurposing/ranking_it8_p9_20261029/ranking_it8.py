@@ -80,7 +80,7 @@ def is_spec_flag(f: str) -> bool:
 
 UNIT_TYPES = {"molecule": "molecule", "class_of_molecules": "class of molecules", "diet": "diet", "gene_therapy": "gene therapy / gene-based modality", "tool_compound": "tool compound",
               "tool_compound_and_class": "tool compound + class of molecules", "mechanism_probe": "mechanism probe (a compound or genetic tool used for a mechanism experiment, not a treatment)", "not_an_intervention": "not an intervention (axis)"}
-ORIGINS = {"known_track_before_it9": "known track from before IT9", "generated_in_it9": "generated in IT9", "generated_in_it10": "generated in IT10", "reference_or_control": "reference or control"}
+ORIGINS = {"known_track_before_it9": "known track from before IT9", "generated_in_it9": "generated in IT9", "generated_in_it10": "generated in IT10", "generated_in_it11": "generated in IT11", "reference_or_control": "reference or control"}
 CLASS_LEVEL_TYPES = ("class_of_molecules", "tool_compound_and_class")      # a result for a member or a tool is not a result for the other members
 NX_LEVELS = {"NX1": "decisive: the discriminating next experiment would change a decision (lift or stop)", "NX2": "informative: the next experiment resolves one limit, the decision moves one step at most",
              "NX3": "low or none today: no discriminating next step is named, or the outcome could not change the decision before a premise exists"}
