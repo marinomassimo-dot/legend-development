@@ -1,0 +1,25 @@
+region	metric_or_gene	n_or_gene	value1	value2	value3	note
+HPC	1508	979	0.521	0.21	0.771	authors' logFC sign convention checked as P47T over WT by sign agreement; slope is mine on theirs
+HPC	named_gene_on_authors_DEG_list	Adm	1.972	0.000369		
+HPC	named_gene_on_authors_DEG_list	Bdnf	2.268	8.63e-05		
+HPC	named_gene_on_authors_DEG_list	Camk2a	-1.339	2.12e-12		
+HPC	named_gene_on_authors_DEG_list	Cd44	1.207	0.0263		
+HPC	named_gene_on_authors_DEG_list	Egr1	1.453	0.028		
+HPC	named_gene_on_authors_DEG_list	Fosb	2.326	0.0183		
+HPC	named_gene_on_authors_DEG_list	Gad2	1.103	1.2e-12		
+HPC	named_gene_on_authors_DEG_list	Nptx2	4.046	2.84e-07		
+CTX	363	231	0.972	0.95	1.000	authors' logFC sign convention checked as P47T over WT by sign agreement; slope is mine on theirs
+CTX	named_gene_on_authors_DEG_list	Adm	1.612	0.0158		
+CTX	named_gene_on_authors_DEG_list	Bdnf	3.159	5.82e-07		
+CTX	named_gene_on_authors_DEG_list	Nptx2	3.210	0.000244		
+PFC	425	283	0.970	0.92	0.996	authors' logFC sign convention checked as P47T over WT by sign agreement; slope is mine on theirs
+PFC	named_gene_on_authors_DEG_list	Bdnf	2.861	5.5e-06		
+PFC	named_gene_on_authors_DEG_list	Nptx2	3.400	8e-05		
+CB	1059	992	0.999	0.98	1.000	authors' logFC sign convention checked as P47T over WT by sign agreement; slope is mine on theirs
+CB	named_gene_on_authors_DEG_list	Arnt	-0.318	0.00916		
+CB	named_gene_on_authors_DEG_list	Gfap	0.879	0.000135		
+CB	named_gene_on_authors_DEG_list	Hexb	0.383	0.00679		
+CB	named_gene_on_authors_DEG_list	Mbp	0.790	6.11e-05		
+CB	named_gene_on_authors_DEG_list	Mobp	0.890	2.49e-06		
+CB	named_gene_on_authors_DEG_list	Nptx2	1.424	6.68e-06		
+CB	named_gene_on_authors_DEG_list	Vegfa	-0.405	0.00123		

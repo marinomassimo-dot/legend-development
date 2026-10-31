@@ -1,0 +1,13 @@
+file	sha256	source_or_role
+GSE215425_processed_data.csv.gz	d654f6bdd2a4ac5b3e24741f16962503a711575c72aa92a2c729a7a0cf04c18c	downloaded 2026-10-31 (GEO FTP / MSigDB 2023.2.Mm / Europe PMC fullTextXML PMC10835625), scratch dir
+GSE215425_series_matrix.txt.gz	73aa99a6b2a7e5f4018726cb7145fea6be5873d5d3bc77d9550fb9bd03980052	downloaded 2026-10-31 (GEO FTP / MSigDB 2023.2.Mm / Europe PMC fullTextXML PMC10835625), scratch dir
+GSE215425_family.soft.gz	977f364d01b4cce32e382cdeb1292ad094afe4b4995067128fa595c6e6e777ad	downloaded 2026-10-31 (GEO FTP / MSigDB 2023.2.Mm / Europe PMC fullTextXML PMC10835625), scratch dir
+mh.gmt	1d4c72ee59fc84565760b7c4b26db6730b95d6072853862cfa6027eeaa089c40	downloaded 2026-10-31 (GEO FTP / MSigDB 2023.2.Mm / Europe PMC fullTextXML PMC10835625), scratch dir
+fulltext.xml	bd08f4a28132600f4848a03c467da5a343ef8fcb42a5eb3ad58957c7b331c148	downloaded 2026-10-31 (GEO FTP / MSigDB 2023.2.Mm / Europe PMC fullTextXML PMC10835625), scratch dir
+nihms-1957654-f0008.jpg	864bd48b66a595317b86e65fc2d9b0c93ab179702bf125c19dbe9d5648b3b6ca	shared corpus file read-only (files/); md5 of the four NIHMS supplements equals the md5 declared in the PMC10835625 Europe PMC XML
+nihms-1957654-f0009.jpg	5c26c5c02ced2f5e0c8b06a1314a00a228e9b3afadaff267d2624ebe7bad9644	shared corpus file read-only (files/); md5 of the four NIHMS supplements equals the md5 declared in the PMC10835625 Europe PMC XML
+NIHMS1957654-supplement-Supplementary_data.xlsx	34486b446a116ae219925c46896a8fb2408b223f934484e6df09fed40567adb3	shared corpus file read-only (files/); md5 of the four NIHMS supplements equals the md5 declared in the PMC10835625 Europe PMC XML
+NIHMS1957654-supplement-Supplementary_gene_data.xlsx	8221d68dd64a5137a51384d8ba45feab9af7c2d8507e362d60a23ca0f4e62462	shared corpus file read-only (files/); md5 of the four NIHMS supplements equals the md5 declared in the PMC10835625 Europe PMC XML
+NIHMS1957654-supplement-Supplementary_tables.docx	fd5b3926a5cf0c331aa9e5aae8a580c952449728a302b1dc91527a2bb784486a	shared corpus file read-only (files/); md5 of the four NIHMS supplements equals the md5 declared in the PMC10835625 Europe PMC XML
+NIHMS1957654-supplement-Supplementary_figures.pdf	6d48816e9281645409cb8e0ab0e77262f1cdd696368450b9be5788da51d4d021	shared corpus file read-only (files/); md5 of the four NIHMS supplements equals the md5 declared in the PMC10835625 Europe PMC XML
+Supplementary_data_all_sheets_derived.txt	1ac2a8701d842b124ca686303bb1873142d6114727ab821be8e6191129c5b05d	shared corpus file read-only (files/); md5 of the four NIHMS supplements equals the md5 declared in the PMC10835625 Europe PMC XML
