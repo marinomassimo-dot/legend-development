@@ -50,3 +50,6 @@ Crude check of GSE298081 (`gse298081_wwox_ko_screen_check.py`, output rows in `e
 ## 6. Adopted / not adopted
 
 Adopted: nothing external. Proposed internal: the explanation convention in section 2. Spend: none. Personal data and e-mail sent: none (Europe PMC, NCBI, GEO FTP, Zenodo, BioStudies, GitHub and Hugging Face GETs carried queries and identifiers only).
+
+
+> **Closed 2026-10-31 (IT12 P6).** The WATCH on GSE298081 is closed: the authors' Data S4 was read in IT12 P1-alt (`modifiers_it12_p1b_20261031/`); one WWOX-null HAP1 clone, no replicate or rescue arm, WWOX loss has no fitness phenotype there and the paper never mentions WWOX. No WWOX-specific suppressor or sensitiser claim is possible: association table only. The IT11 crude check and the authors' scores agree that the profile is sparse (88 calls). Reopening: a second clone or a rescue arm (triggers NP1B1 to NP1B4).

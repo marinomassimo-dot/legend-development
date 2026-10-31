@@ -11811,7 +11811,8 @@
     "evidence_against": [
      "Three exploratory transcript tests in the one knockout organoid dataset are negative for the chain.",
      "The paper does not name dichloroacetate or any PDH/PDK element.",
-     "IT7 P3/P1 (exploratory, independently verified): the six-gene glycolysis/lactate module was inconclusive in an independent WWOX-loss contrast (P47T hippocampus, p 0.060, inside its null; PDK1 lower by -0.08) and the network routes showed no added value for ranking compounds (signature route: not detected, not excluded); this card's compound was outside that comparison by design. A computational result, not efficacy data."
+     "IT7 P3/P1 (exploratory, independently verified): the six-gene glycolysis/lactate module was inconclusive in an independent WWOX-loss contrast (P47T hippocampus, p 0.060, inside its null; PDK1 lower by -0.08) and the network routes showed no added value for ranking compounds (signature route: not detected, not excluded); this card's compound was outside that comparison by design. A computational result, not efficacy data.",
+     "IT12 P1-alt (dated 2026-10-31; GSE298081, the authors' Data S4 read at the source; one WWOX-null HAP1 clone, no replicate or rescue arm, WWOX loss has no fitness phenotype in that line, the paper never mentions WWOX; association table only, not developed): loss of PDHA1 (qGI +0.567, FDR 0.020), CS (+0.566, 0.036), LIPT1 (+0.345, 0.075) and NDUFAF1 (+0.318, 0.051) is better tolerated by the null clone than expected, the opposite sign to a PDH-activation rationale. The four genes are common positive-interaction hubs (same-sign calls in 30 to 40 of 298 query screens), the system is a leukaemia-derived line and the endpoint is proliferation. Counter-evidence of low weight; the assessment does not change. Suggested probe: a PDHA1 knockdown arm in the isogenic PDH-activity experiment already specified."
     ],
     "external_sources": [
      {
@@ -13140,7 +13141,8 @@
        "PDK1 transcript is down and the PDK/PDH set is not different from chance in the human knockout organoid (exploratory transcripts).",
        "The sima:GFP reporter (the authors' HIF1alpha homologue) is unchanged in one genotype pair; the authors name Atf4 rather than sima as primarily responsible.",
        "Known neurotoxicity concern for the main compound; the ketogenic hypothesis dominates it on safety.",
-       "IT7 P3/P1 (exploratory, independently verified): the six-gene glycolysis/lactate module was inconclusive in an independent WWOX-loss contrast (P47T hippocampus, p 0.060, inside its null; PDK1 lower by -0.08) and the network routes showed no added value for ranking compounds (signature route: not detected, not excluded); this card's compound was outside that comparison by design. A computational result, not efficacy data."
+       "IT7 P3/P1 (exploratory, independently verified): the six-gene glycolysis/lactate module was inconclusive in an independent WWOX-loss contrast (P47T hippocampus, p 0.060, inside its null; PDK1 lower by -0.08) and the network routes showed no added value for ranking compounds (signature route: not detected, not excluded); this card's compound was outside that comparison by design. A computational result, not efficacy data.",
+       "IT12 P1-alt (dated 2026-10-31; GSE298081, the authors' Data S4 read at the source; one WWOX-null HAP1 clone, no replicate or rescue arm, WWOX loss has no fitness phenotype in that line, the paper never mentions WWOX; association table only, not developed): loss of PDHA1 (qGI +0.567, FDR 0.020), CS (+0.566, 0.036), LIPT1 (+0.345, 0.075) and NDUFAF1 (+0.318, 0.051) is better tolerated by the null clone than expected, the opposite sign to a PDH-activation rationale. The four genes are common positive-interaction hubs (same-sign calls in 30 to 40 of 298 query screens), the system is a leukaemia-derived line and the endpoint is proliferation. Counter-evidence of low weight; the assessment does not change. Suggested probe: a PDHA1 knockdown arm in the isogenic PDH-activity experiment already specified."
       ],
       "for": [
        "The Lucas-Clarke Ldh rise is the kind of change that could draw pyruvate away from oxidation (logic only)."
@@ -13906,7 +13908,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "0ab66d2b2dfb9edf14e77505ad7eb10cf93c6876f654cb0e534d28a3a7160683",
+   "input_sha256": "9c44afcab2db7fb6c5b04ae866b16247973823b859a1a9a3adcabe0f697c9f3d",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -34439,7 +34441,8 @@
      }
     ],
     "evidence_against": [
-     "Four sources report normal human metabolism in WWOX deficiency (DL-BIO-009); one MRS report has lactate extremely low (DL-BIO-008)."
+     "Four sources report normal human metabolism in WWOX deficiency (DL-BIO-009); one MRS report has lactate extremely low (DL-BIO-008).",
+     "IT12 P1-alt caution (dated 2026-10-31; same screen, GSE298081, one unreplicated WWOX-null HAP1 clone, non-neural, proliferation endpoint, association only): loss of SLC2A1 (qGI -0.593, FDR 0.050) and HK2 (-0.464, 0.040) is worse tolerated by the null clone. A caution on direction for any glucose-restriction or 2-deoxyglucose-class idea, not evidence of harm in neurons."
     ],
     "external_sources": [
      {
@@ -35788,7 +35791,9 @@
     "p4_card": {
      "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven queries returned no registered WOREE interventional study; it answers seven queries against one registry on one date and a missing hit does not prove that no study exists. Not re-run for this card.",
      "evidence_for_and_against": {
-      "against": [],
+      "against": [
+       "IT12 P1-alt caution (dated 2026-10-31; same screen, GSE298081, one unreplicated WWOX-null HAP1 clone, non-neural, proliferation endpoint, association only): loss of SLC2A1 (qGI -0.593, FDR 0.050) and HK2 (-0.464, 0.040) is worse tolerated by the null clone. A caution on direction for any glucose-restriction or 2-deoxyglucose-class idea, not evidence of harm in neurons."
+      ],
       "for": [],
       "transfer_limits": "The fly lactate result is conditional on amyloid and cannot be used for or against the Warburg direction in WWOX-null neurons."
      },
@@ -35968,7 +35973,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "1dbbc9cf509b91825f92c81ce224c046328b53b3fb63f5fbc0f795e897918aeb",
+   "input_sha256": "ffb67be259285bb43433912e98e6c7b8b8e4239c5788c6811decddf550dcf470",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",

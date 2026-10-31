@@ -1953,7 +1953,7 @@
    "could_fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no reading-limit flag (found: graphical_reading); a favourable WWOX readout carries no design-limit flag (found: one_experiment); one and the same readout meets all four | stored work-order statement: A direct measurement would turn the F2 into a row with a mechanism; a negative would add a null to the need.",
-   "counter_evidence_statements": "none stated beyond the counts",
+   "counter_evidence_statements": "IT12 P2.2 figure audit (dated 2026-10-31, PMID 37275776 Fig 7B, image viewed): the stored statement that the GIRK2 crossings lie inside the therapeutic band is wrong on one clause. In oocytes the GIRK2 homomer activated by Gbeta-gamma is half-maximally inhibited at about 0.03 to 0.06 mM, about 4 to 8 times BELOW the shaded band (about 0.25 to 0.9 mM), while the brain-predominant GIRK1/2 plus Gbeta-gamma channel crosses at about 0.4 to 1 mM, inside it (partial block, about 20 to 60 percent). So a measured non-T-type target exists at labelled exposure, and the wording 'T-type potency is weak against the labelled range' is not the whole story: the ethosuximide result in the WWOX mouse (PTZ seizure score) cannot be attributed to T-type mediation. An oocyte datum, not a WWOX mechanism; the authors say neuronal GIRK2 homomer abundance is unknown. In a genetic absence model the relay-neuron T-type current is smaller than control and the burst-threshold difference follows Ih (PMID 24953239 Figs 5 and 6). No group or member evidence changes.",
    "depth_of_evidence": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
    "evaluated_on": "2026-10-31",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
@@ -1975,9 +1975,11 @@
    "pathways_needs": "Seizure and spasm control as a symptom-level need [F2; effect_observed_in_wwox_system]; Ethosuximide sensitivity of provoked seizure in Wwox loss [F2; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 2,
    "sources_pmids": [
+    "24953239",
     "30361190",
     "32000863",
-    "36537114"
+    "36537114",
+    "37275776"
    ],
    "unit_id": "U17",
    "unit_type": "molecule",
@@ -2147,7 +2149,7 @@
    "next_experiment_or_control": "Is the ethosuximide late-phase effect reproducible with a drug-by-genotype test and a same-day control, is the lithium effect genotype-specific, and do the denominators of the ketogenic-diet and vigabatrin case series keep their C2?",
    "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
    "next_experiment_stake": "which of the favourable and null WWOX-system results holds: the outcomes lead to opposite decisions (lift or stop)",
-   "notes": "Graph coverage (IT11 P2.1): the ketogenic diet is out of the method (a modality, not a molecule), so the graph is silent on it by construction. The five phenotype leads are development inputs, not an independent validation.",
+   "notes": "Graph coverage (IT11 P2.1): the ketogenic diet is out of the method (a modality, not a molecule), so the graph is silent on it by construction. The five phenotype leads are development inputs, not an independent validation. | IT12 P1-alt caution (dated 2026-10-31): in the same screen SLC2A1 and HK2 loss is worse tolerated by the WWOX-null clone; a caution on direction for glucose-restriction ideas, non-neural and unreplicated, not evidence of harm in neurons.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
    "pathways_needs": "Pyruvate entry into the TCA cycle [P3; card_inference_by_mechanism_no_catalogue_row]; Seizure and spasm control as a symptom-level need [C2; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
@@ -2232,7 +2234,7 @@
    "could_fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise to F2/F1 with a first signed result of the intervention in a WWOX system against an untreated same-genotype comparator; criteria not met now: a signed result of the intervention in a WWOX system exists; an outside-WWOX harm or null signal stands without a favourable outside signal; the signed rows behind this position were read beyond abstract, query or unknown depth (found: 2 row(s)) | further questions: a T-type measurement in the Wwox model, to test whether the ethosuximide sensitivity is T-type mediated at all | stored work-order statement: A direct measurement would turn the F2 into a row with a mechanism; a negative would add a null to the need.",
-   "counter_evidence_statements": "none stated beyond the counts",
+   "counter_evidence_statements": "IT12 P2.2 (dated 2026-10-31): the only WWOX link of apinocaltamide is the ethosuximide result, and that result should not be carried to apinocaltamide as T-type evidence: ethosuximide has a measured non-T-type target (GIRK) inside or below the labelled plasma range in oocytes (PMID 37275776 Fig 7B), and T-type mediation is not measured in any Wwox system. Group G4a is unchanged.",
    "depth_of_evidence": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
    "evaluated_on": "2026-10-31",
    "evaluation_depth": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
@@ -2317,7 +2319,7 @@
    "could_fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no reading-limit flag (found: graphical_reading); a favourable WWOX readout carries no design-limit flag (found: one_experiment); one and the same readout meets all four | stored work-order statement: A direct measurement would turn the F2 into a row with a mechanism; a negative would add a null to the need.",
-   "counter_evidence_statements": "none stated beyond the counts",
+   "counter_evidence_statements": "IT12 P2.2 figure audit (dated 2026-10-31, PMID 37275776 Fig 7B, image viewed): the stored statement that the GIRK2 crossings lie inside the therapeutic band is wrong on one clause. In oocytes the GIRK2 homomer activated by Gbeta-gamma is half-maximally inhibited at about 0.03 to 0.06 mM, about 4 to 8 times BELOW the shaded band (about 0.25 to 0.9 mM), while the brain-predominant GIRK1/2 plus Gbeta-gamma channel crosses at about 0.4 to 1 mM, inside it (partial block, about 20 to 60 percent). So a measured non-T-type target exists at labelled exposure, and the wording 'T-type potency is weak against the labelled range' is not the whole story: the ethosuximide result in the WWOX mouse (PTZ seizure score) cannot be attributed to T-type mediation. An oocyte datum, not a WWOX mechanism; the authors say neuronal GIRK2 homomer abundance is unknown. In a genetic absence model the relay-neuron T-type current is smaller than control and the burst-threshold difference follows Ih (PMID 24953239 Figs 5 and 6). No group or member evidence changes.",
    "depth_of_evidence": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
    "evaluated_on": "2026-10-31",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
@@ -2339,9 +2341,11 @@
    "pathways_needs": "Seizure and spasm control as a symptom-level need [F2; effect_observed_in_wwox_system]; Ethosuximide sensitivity of provoked seizure in Wwox loss [F2; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 1,
    "sources_pmids": [
+    "24953239",
     "30361190",
     "32000863",
-    "36537114"
+    "36537114",
+    "37275776"
    ],
    "unit_id": "U17",
    "unit_type": "molecule",
@@ -2555,7 +2559,7 @@
    "next_experiment_or_control": "Is the ethosuximide late-phase effect reproducible with a drug-by-genotype test and a same-day control, is the lithium effect genotype-specific, and do the denominators of the ketogenic-diet and vigabatrin case series keep their C2?",
    "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
    "next_experiment_stake": "which of the favourable and null WWOX-system results holds: the outcomes lead to opposite decisions (lift or stop)",
-   "notes": "Graph coverage (IT11 P2.1): the ketogenic diet is out of the method (a modality, not a molecule), so the graph is silent on it by construction. The five phenotype leads are development inputs, not an independent validation.",
+   "notes": "Graph coverage (IT11 P2.1): the ketogenic diet is out of the method (a modality, not a molecule), so the graph is silent on it by construction. The five phenotype leads are development inputs, not an independent validation. | IT12 P1-alt caution (dated 2026-10-31): in the same screen SLC2A1 and HK2 loss is worse tolerated by the WWOX-null clone; a caution on direction for glucose-restriction ideas, non-neural and unreplicated, not evidence of harm in neurons.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
    "pathways_needs": "Pyruvate entry into the TCA cycle [P3; card_inference_by_mechanism_no_catalogue_row]; Seizure and spasm control as a symptom-level need [C2; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
@@ -2640,7 +2644,7 @@
    "could_fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
    "could_leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
    "could_rise": "would rise to F2/F1 with a first signed result of the intervention in a WWOX system against an untreated same-genotype comparator; criteria not met now: a signed result of the intervention in a WWOX system exists; an outside-WWOX harm or null signal stands without a favourable outside signal; the signed rows behind this position were read beyond abstract, query or unknown depth (found: 2 row(s)) | further questions: a T-type measurement in the Wwox model, to test whether the ethosuximide sensitivity is T-type mediated at all | stored work-order statement: A direct measurement would turn the F2 into a row with a mechanism; a negative would add a null to the need.",
-   "counter_evidence_statements": "none stated beyond the counts",
+   "counter_evidence_statements": "IT12 P2.2 (dated 2026-10-31): the only WWOX link of apinocaltamide is the ethosuximide result, and that result should not be carried to apinocaltamide as T-type evidence: ethosuximide has a measured non-T-type target (GIRK) inside or below the labelled plasma range in oocytes (PMID 37275776 Fig 7B), and T-type mediation is not measured in any Wwox system. Group G4a is unchanged.",
    "depth_of_evidence": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
    "evaluated_on": "2026-10-31",
    "evaluation_depth": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
@@ -2720,11 +2724,11 @@
    "coverage_generated_from": {
     "assertion_pertinence.tsv": "9d699d1c6e9b73ee",
     "card_links.json": "2aac19ca3b0b7686",
-    "cards_and_packets": "30bfbc58e2d2d764",
+    "cards_and_packets": "a5dc4636e6649d1a",
     "catalog.jsonl.gz": "75652786013b931d",
     "catalog_stats.json": "87ac308ce3ab9b3f",
     "measure_next.json": "bca46967510475c5",
-    "needs.json": "97f994c83ffd4d36",
+    "needs.json": "b36c4e5e3db17645",
     "source_artefacts.tsv": "222f20137c020b58",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
@@ -3429,7 +3433,7 @@
    "item_id": "N12",
    "kind": "target_class",
    "provenance": "own_search",
-   "reason": "Q1 complement (IT10 P2.3): Q1 has no graph route, and a complementary search for regulators of WWOX protein stability yields one usable slice, a mechanism experiment on protein level only. ACK1 over-expression phosphorylates WWOX at Tyr287 followed by polyubiquitination and degradation in LNCaP cells (PMID 16288044, abstract only; full text not obtained); ACK1 shRNA raised WWOX in one HCC line (MHCC-97H), one construct versus scrambled, steady state only (PMID 25738261, full text read 2026-10-30 in IT11 P2.4; it supports ONLY the direction 'knockdown raises WWOX', not the Tyr287 or ubiquitin route). Two catalogued ATP-site inhibitors with measured TNK2 potency (dasatinib, bosutinib; multi-target SRC/ABL kinase inhibitors that share SRC/ABL targets and bind SRC tighter than ACK1: concordance of the two does not identify ACK1 and bosutinib is not an independent chemotype; IT11 P2.4) would be paired probes with the concordance rule (agreement with TNK2 knockdown, a response to one only is off-target); the repeated ChEMBL values (bosutinib 2.7 nM, dasatinib Kd 5.6 and 6.0 nM) are literature values carried between papers, not replicates. CONDITIONAL on WWOX protein being present: it does not apply to the Q230P system as the single datum stands (no band). Nothing predicts function; ITCH raises WWOX half-life but has no compound. COUNTER-EVIDENCE: the ACK1 observation is cancer-cell over-expression (prostate, liver); no Tyr287 change in serum-starved MEFs; MG-132 raised neither wild type nor the P252A or P282A constructs, so a proteasomal route is not shown in the only variant system, whereas chloroquine and NH4Cl restored P252A and chloroquine also prevented its degradation under cycloheximide (a main-text sentence of PMID 41124647), which supports a lysosomal route; ACK1 inhibition sensitised rat cerebellar granule neurons to apoptotic stress (PMID 37263460, abstract); broad kinase inhibitors shift WWOX phospho-forms in cancer cells. The TNK2 missense that abolishes NEDD4 binding in a family with infantile-onset epilepsy (PMID 23686771, abstract) is NOT counter-evidence for lowering ACK1: the abstract gives no kinase-activity direction and it is one family. CNS exposure and tolerability of both agents were not assessed. Not carded: the unit waits for the full text of Mahajan 2005 (R3).",
+   "reason": "Q1 complement (IT10 P2.3): Q1 has no graph route, and a complementary search for regulators of WWOX protein stability yields one usable slice, a mechanism experiment on protein level only. ACK1 over-expression phosphorylates WWOX at Tyr287 followed by polyubiquitination and degradation in LNCaP cells (PMID 16288044, abstract only; full text not obtained); ACK1 shRNA raised WWOX in one HCC line (MHCC-97H), one construct versus scrambled, steady state only (PMID 25738261, full text read 2026-10-30 in IT11 P2.4; it supports ONLY the direction 'knockdown raises WWOX', not the Tyr287 or ubiquitin route). Two catalogued ATP-site inhibitors with measured TNK2 potency (dasatinib, bosutinib; multi-target SRC/ABL kinase inhibitors that share SRC/ABL targets and bind SRC tighter than ACK1: concordance of the two does not identify ACK1 and bosutinib is not an independent chemotype; IT11 P2.4) would be paired probes with the concordance rule (agreement with TNK2 knockdown, a response to one only is off-target); the repeated ChEMBL values (bosutinib 2.7 nM, dasatinib Kd 5.6 and 6.0 nM) are literature values carried between papers, not replicates. CONDITIONAL on WWOX protein being present: it does not apply to the Q230P system as the single datum stands (no band). Nothing predicts function; ITCH raises WWOX half-life but has no compound. COUNTER-EVIDENCE: the ACK1 observation is cancer-cell over-expression (prostate, liver); no Tyr287 change in serum-starved MEFs; MG-132 raised neither wild type nor the P252A or P282A constructs, so a proteasomal route is not shown in the only variant system, whereas chloroquine and NH4Cl restored P252A and chloroquine also prevented its degradation under cycloheximide (a main-text sentence of PMID 41124647), which supports a lysosomal route; ACK1 inhibition sensitised rat cerebellar granule neurons to apoptotic stress (PMID 37263460, abstract); broad kinase inhibitors shift WWOX phospho-forms in cancer cells. The TNK2 missense that abolishes NEDD4 binding in a family with infantile-onset epilepsy (PMID 23686771, abstract) is NOT counter-evidence for lowering ACK1: the abstract gives no kinase-activity direction and it is one family. CNS exposure and tolerability of both agents were not assessed. Not carded: the unit waits for the full text of Mahajan 2005 (R3). Substrate census (IT12 P1-main, 2026-10-31; priority NOT raised, scope narrowed): in published neural WWOX models only wild-type cells (hESC/iPSC neural stem cells and organoids), AAV add-back (wild-type sequence) and one SCAR12 line (two siblings, ONE allele c.1114G>C p.Gly372Arg, a C-terminal missense) show any band; the SCAR12 band is faint (0.1 to 0.3 of an unrelated wild type, one membrane) and on a second blot (EV6F, GAPDH loading control; the first blot EV1N uses HSP90) it is similar to the knockout lanes, so it is not shown above the assay floor; the WOREE lines show no visible band (EV1M, where wild-type band saturation is clear; it is mild in EV1N and EV6F). Q230P fibroblast blot: there is a negative control (CRISPR knockout clones) and three positive cancer/HEK lines, but no healthy fibroblast control and no heterozygote lane, and the epitope of the antibody sc-20528 is not stated. lde/lde rat: a trace frameshift product with a newer antibody (HPA050992, aa 32 to 110); that the earlier 'null' call depended on the antibody is the authors' hypothesis, not a demonstrated fact, and the paper gives 'lower mobility' in the Results but 'slightly heavier' in Discussion and legend (46.2 kDa; frameshift product predicted +0.8 kDa). Conclusion: no model has a protein level shown above the assay floor; the substrate for a stability lever is UNCONFIRMED, not excluded; the G372R line is the one model to retest first, after gate G0 (two antibodies, knockout floor). Q1 unit text: the reference class allele Q230P has no band in one non-neural line, no matched control, antibody sc-20528; made-and-cleared versus not made is open; the only neural lines with a missense allele are G372R (SCAR12) and G137V (WCH, iPSC only).",
    "related_unit": "",
    "source_pointers": "recovery_it10_p23_20261031/README.md sections 1-3 and 11; recovery_it10_p23_20261031/candidates_it10_p23.tsv T1, T2 (correction_20261031 column); evidence_locators.tsv; tnk2_chembl_activities_selected.tsv; reopen_searches.tsv",
    "what_would_reopen": "the reopenable searches R1 to R7 in triggers.tsv (rows R*_q1_complement): above all R3 (full text of Mahajan 2005 and the HCC paper), R2 (WWOX protein or half-life after ACK1 inhibition or TNK2 loss in a neural or variant-allele cell) and R1 (whether the Q230P protein is made and cleared); a card and a mechanism-probe unit would be created only after R3 or R2"
@@ -3563,7 +3567,7 @@
    ],
    "exploratory_it7": "None. Not in the P3 universe (card-linked families were firewalled out of every method) and P3 tested a transcript module, not protein fate. P2: a class with a catalogued target row only for HDAC at enzyme level; no chaperone target row in ChEMBL, GtoPdb or DGIdb.",
    "inputs": {
-    "T1_cards": "936bb1ecaa0cab09",
+    "T1_cards": "4e97ae2faddbb1b6",
     "T2_pertinence": "91e62b924fe30a2a",
     "T3_receipts": "52149a4b03e76932",
     "T4_needs": "9ae567485b16c45c",
@@ -3861,7 +3865,7 @@
    ],
    "exploratory_it7": "None; outside the P3 universe and not a transcript question.",
    "inputs": {
-    "T1_cards": "4a2993f65b13313b",
+    "T1_cards": "101d9b1ab38011fa",
     "T2_pertinence": "a99cbab9e0538513",
     "T3_receipts": "f65f2005fcac34e1",
     "T4_needs": "9ae567485b16c45c",
@@ -4114,7 +4118,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "c58a41c2b43cc110",
+    "T1_cards": "d34e6ce35ba4dde9",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "51d892749172e3bd",
     "T4_needs": "9ae567485b16c45c",
@@ -4345,7 +4349,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "24b72dd3461bf450",
+    "T1_cards": "60977bd55a648073",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d1a40a526bc95810",
     "T4_needs": "9ae567485b16c45c",
@@ -4575,7 +4579,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "2983ef599c03a01a",
+    "T1_cards": "9d51c52022ea63ee",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d1a40a526bc95810",
     "T4_needs": "9ae567485b16c45c",
@@ -4841,7 +4845,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "1e0a648c9dec08ab",
+    "T1_cards": "959b214e808884b8",
     "T2_pertinence": "e8ab801c472fdfe7",
     "T3_receipts": "0efa01184c6ba643",
     "T4_needs": "aa528d3f09f497b0",
@@ -5195,7 +5199,7 @@
    ],
    "exploratory_it7": "None. Gene addition is not a compound question; P2 counts it as direction-evaluable by target only (zero signed records on the need target) and P3 did not touch it.",
    "inputs": {
-    "T1_cards": "45da07ad539a0392",
+    "T1_cards": "f8559846deca6692",
     "T2_pertinence": "59d15d3c06233d6c",
     "T3_receipts": "cd21840b2a4e584e",
     "T4_needs": "82b439e35fc80b6c",
@@ -5583,7 +5587,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "5a45cee0c7881ed8",
+    "T1_cards": "7938da738960a993",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "4c5d7ee4b7cf4a15",
     "T4_needs": "66cebf15a40b040e",
@@ -5814,7 +5818,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "0baf02f642977cdf",
+    "T1_cards": "9db7f0f38ba778b2",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "ad1b95286f64b04c",
     "T4_needs": "10a1be2af4314710",
@@ -6056,7 +6060,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "1fc203d78a997256",
+    "T1_cards": "48d8691e36c18803",
     "T2_pertinence": "8e52657c67b7cf9d",
     "T3_receipts": "9704e0c37800b5d7",
     "T4_needs": "b1224f7ee3d5a2f3",
@@ -6403,7 +6407,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "4ac378c45081a63f",
+    "T1_cards": "2b086682b62e83b3",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "dc01c05508dcbf56",
     "T4_needs": "55ff62f47762bab4",
@@ -6684,7 +6688,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "d753addeef9ace10",
+    "T1_cards": "a8e201f8538e8a98",
     "T2_pertinence": "079230f81c69cb2e",
     "T3_receipts": "293d407faa57bb47",
     "T4_needs": "932744721b4c9f86",
@@ -6973,7 +6977,7 @@
    ],
    "exploratory_it7": "P3 (IT7, exploratory, minimum detectable effect about rho 0.15, independently verified): NO ADDED VALUE of a signed external network (rho 0.047) or a WWOX-enriched network (difference -0.0015) for ranking compounds by opposition of the six-gene module; the signature route is effect not detected, not excluded (rho 0.143, 0.007 under the 0.15 threshold, 90 pe…",
    "inputs": {
-    "T1_cards": "dac4cd9ddc46bb1b",
+    "T1_cards": "3d06a6e645123c2c",
     "T2_pertinence": "1959a04e90dbf178",
     "T3_receipts": "5c83e6a18e12f4d3",
     "T4_needs": "a3face7aa0d2e275",
@@ -7254,7 +7258,11 @@
     "E03_pdk_inhibition_dca",
     "I01_pdk_inhibition_dca_premise_seizure_glycaemia"
    ],
-   "caveats": {},
+   "caveats": {
+    "note": [
+     "IT12 P1-alt (dated 2026-10-31): in the one genetic-interaction screen of a WWOX-null line (GSE298081, HAP1, one unreplicated clone; association table only) loss of PDHA1, CS, LIPT1 and NDUFAF1 is better tolerated, the opposite sign to a PDH-activation rationale: counter-evidence of low weight, non-neural."
+    ]
+   },
    "class": "ORD",
    "class_label": "EVALUATED AND ORDERABLE",
    "class_reason": "at least one linked need has a favourable position (F1, F2 or F3) after the merge of the unit's cards; the group says how strong",
@@ -7333,7 +7341,7 @@
      "wwox_assertions": 0
     },
     "X_counter_evidence": {
-     "need_level_counter_items": 16,
+     "need_level_counter_items": 18,
      "need_level_counter_items_note": "over 3 linked need(s); items of the need record, not of the intervention",
      "opposed_action_needs": [],
      "outside_wwox_null_or_harm": 6,
@@ -7366,10 +7374,10 @@
    ],
    "exploratory_it7": "P3 (IT7, exploratory, independently verified): the same result as CMP-04 - network routes NO ADDED VALUE, signature route not detected and not excluded (weak positive counter-evidence: lower bound 0.039, top-decile hit rate 15 percent); module transfer inconclusive (null 95th percentile 0.389 and p 0.060 on the producer's draw, 0.396 and 0.0595 on the verif…",
    "inputs": {
-    "T1_cards": "82515f1319803bff",
+    "T1_cards": "2c62310a49d43521",
     "T2_pertinence": "4f588d870d868008",
     "T3_receipts": "b410a77ea4345508",
-    "T4_needs": "1765d18f6fbe6723",
+    "T4_needs": "709e9155ba014a61",
     "T5_pharmacology": "dd38ed70d7c73b56",
     "T6_identity": "5947102b41b2b474"
    },
@@ -7656,7 +7664,9 @@
       "level_text": "informative: the next experiment resolves one limit, the decision moves one step at most",
       "stake": "first WWOX-system test of a target hypothesis"
      },
-     "notes": [],
+     "notes": [
+      "IT12 P1-alt (dated 2026-10-31): in the one genetic-interaction screen of a WWOX-null line (GSE298081, HAP1, one unreplicated clone; association table only) loss of PDHA1, CS, LIPT1 and NDUFAF1 is better tolerated, the opposite sign to a PDH-activation rationale: counter-evidence of low weight, non-neural."
+     ],
      "objective": "partial",
      "objective_note": "",
      "positions": {
@@ -7686,7 +7696,8 @@
    ],
    "caveats": {
     "note": [
-     "Graph coverage (IT11 P2.1): the ketogenic diet is out of the method (a modality, not a molecule), so the graph is silent on it by construction. The five phenotype leads are development inputs, not an independent validation."
+     "Graph coverage (IT11 P2.1): the ketogenic diet is out of the method (a modality, not a molecule), so the graph is silent on it by construction. The five phenotype leads are development inputs, not an independent validation.",
+     "IT12 P1-alt caution (dated 2026-10-31): in the same screen SLC2A1 and HK2 loss is worse tolerated by the WWOX-null clone; a caution on direction for glucose-restriction ideas, non-neural and unreplicated, not evidence of harm in neurons."
     ]
    },
    "class": "WEAK",
@@ -7753,7 +7764,7 @@
      "wwox_assertions": 2
     },
     "X_counter_evidence": {
-     "need_level_counter_items": 12,
+     "need_level_counter_items": 14,
      "need_level_counter_items_note": "over 2 linked need(s); items of the need record, not of the intervention",
      "opposed_action_needs": [],
      "outside_wwox_null_or_harm": 0,
@@ -7778,10 +7789,10 @@
    ],
    "exploratory_it7": "None. A diet has no compound target row, so neither P2 method applies, and the P3 negative says nothing about it.",
    "inputs": {
-    "T1_cards": "87796b412b2903fc",
+    "T1_cards": "63a46b950beb3a06",
     "T2_pertinence": "d95f7e8dcd00a63d",
     "T3_receipts": "892bcad601ce6d84",
-    "T4_needs": "7a6072fa49c3e9d7",
+    "T4_needs": "e7b1a58338e49f76",
     "T5_pharmacology": "ab6539460fdd860d",
     "T6_identity": "67350028339e1f89"
    },
@@ -7965,7 +7976,8 @@
       "stake": "which of the favourable and null WWOX-system results holds: the outcomes lead to opposite decisions (lift or stop)"
      },
      "notes": [
-      "Graph coverage (IT11 P2.1): the ketogenic diet is out of the method (a modality, not a molecule), so the graph is silent on it by construction. The five phenotype leads are development inputs, not an independent validation."
+      "Graph coverage (IT11 P2.1): the ketogenic diet is out of the method (a modality, not a molecule), so the graph is silent on it by construction. The five phenotype leads are development inputs, not an independent validation.",
+      "IT12 P1-alt caution (dated 2026-10-31): in the same screen SLC2A1 and HK2 loss is worse tolerated by the WWOX-null clone; a caution on direction for glucose-restriction ideas, non-neural and unreplicated, not evidence of harm in neurons."
      ],
      "objective": "partial",
      "objective_note": "",
@@ -8100,7 +8112,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "8798336cd05e2830",
+    "T1_cards": "68b02febfc90206b",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d2e53556d365e6a4",
     "T4_needs": "77086341166ba9e5",
@@ -8282,6 +8294,9 @@
     "EB-ETX-01"
    ],
    "caveats": {
+    "counter": [
+     "IT12 P2.2 figure audit (dated 2026-10-31, PMID 37275776 Fig 7B, image viewed): the stored statement that the GIRK2 crossings lie inside the therapeutic band is wrong on one clause. In oocytes the GIRK2 homomer activated by Gbeta-gamma is half-maximally inhibited at about 0.03 to 0.06 mM, about 4 to 8 times BELOW the shaded band (about 0.25 to 0.9 mM), while the brain-predominant GIRK1/2 plus Gbeta-gamma channel crosses at about 0.4 to 1 mM, inside it (partial block, about 20 to 60 percent). So a measured non-T-type target exists at labelled exposure, and the wording 'T-type potency is weak against the labelled range' is not the whole story: the ethosuximide result in the WWOX mouse (PTZ seizure score) cannot be attributed to T-type mediation. An oocyte datum, not a WWOX mechanism; the authors say neuronal GIRK2 homomer abundance is unknown. In a genetic absence model the relay-neuron T-type current is smaller than control and the burst-threshold difference follows Ih (PMID 24953239 Figs 5 and 6). No group or member evidence changes."
+    ],
     "limit": [
      "same paper and laboratory as lithium (PMID 32000863), one experiment, i.p., one PTZ dose, effect confined to the late phase; no wild-type or drug-by-genotype test and the wild-type arm is floor-limited, so absence of a wild-type effect is unknown, not clean; the paper reports lithium better than ethosuximide",
      "ethosuximide T-type potency in ChEMBL is above 5 mM (screening bound) or 600 uM with target unspecified, against a labelled plasma range of about 283 to 708 uM: T-type mediation of the observed effect is not measured"
@@ -8398,9 +8413,9 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "786b7e4b4878d13b",
+    "T1_cards": "90c95889b77b8bfe",
     "T2_pertinence": "8b0a047e9ce40434",
-    "T3_receipts": "fb3ea4bd5ed30c08",
+    "T3_receipts": "fed069ad0e0c5861",
     "T4_needs": "3093063f37ac6ad7",
     "T5_pharmacology": "5da5f03bb1490bdc",
     "T6_identity": "589dd4de63446384"
@@ -8545,11 +8560,13 @@
     }
    ],
    "pmids": [
+    "24953239",
     "30361190",
     "32000863",
-    "36537114"
+    "36537114",
+    "37275776"
    ],
-   "receipts_on_cited_pmids": 10,
+   "receipts_on_cited_pmids": 14,
    "research_objective": "",
    "tracks": [
     "A"
@@ -8571,7 +8588,9 @@
      ],
      "contested": false,
      "counter_needs": [],
-     "counter_statements": [],
+     "counter_statements": [
+      "IT12 P2.2 figure audit (dated 2026-10-31, PMID 37275776 Fig 7B, image viewed): the stored statement that the GIRK2 crossings lie inside the therapeutic band is wrong on one clause. In oocytes the GIRK2 homomer activated by Gbeta-gamma is half-maximally inhibited at about 0.03 to 0.06 mM, about 4 to 8 times BELOW the shaded band (about 0.25 to 0.9 mM), while the brain-predominant GIRK1/2 plus Gbeta-gamma channel crosses at about 0.4 to 1 mM, inside it (partial block, about 20 to 60 percent). So a measured non-T-type target exists at labelled exposure, and the wording 'T-type potency is weak against the labelled range' is not the whole story: the ethosuximide result in the WWOX mouse (PTZ seizure score) cannot be attributed to T-type mediation. An oocyte datum, not a WWOX mechanism; the authors say neuronal GIRK2 homomer abundance is unknown. In a genetic absence model the relay-neuron T-type current is smaller than control and the burst-threshold difference follows Ih (PMID 24953239 Figs 5 and 6). No group or member evidence changes."
+     ],
      "criteria_not_met": [
       "a favourable WWOX readout carries no reading-limit flag (found: graphical_reading)",
       "a favourable WWOX readout carries no design-limit flag (found: one_experiment)",
@@ -8742,7 +8761,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "10590d07e4c63c7b",
+    "T1_cards": "cd66dbeab3582be3",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d2e53556d365e6a4",
     "T4_needs": "77086341166ba9e5",
@@ -8990,7 +9009,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "cb99cd5035408ec4",
+    "T1_cards": "0a226fd87fb8e7ff",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "004bf101de3feb3f",
     "T4_needs": "e47c99263fff82cc",
@@ -9308,7 +9327,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "2076f477831f72dd",
+    "T1_cards": "c441428839c4a074",
     "T2_pertinence": "094cb2bb03ecb864",
     "T3_receipts": "212be31947637493",
     "T4_needs": "89705b05a4222975",
@@ -9828,7 +9847,7 @@
    ],
    "exploratory_it7": "None from P3 (a receptor-physiology question, not a transcript module; memantine and perampanel are card-linked and firewalled). P2: memantine and perampanel are usable by the network method (signed antagonist actions on GRIN and GRIA targets) and have no neural LINCS signature, so the signature method does not apply; the need has 179 linked records by targ…",
    "inputs": {
-    "T1_cards": "0cfdae92394d433f",
+    "T1_cards": "c6c90d68851ae82b",
     "T2_pertinence": "4744af9e5e721d31",
     "T3_receipts": "533fe34f5749cb80",
     "T4_needs": "ce38af3ca4f76c07",
@@ -10277,7 +10296,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "e50a173a43d02ab9",
+    "T1_cards": "a8b4ba5c29eaadfa",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "5931d09e617ead46",
     "T4_needs": "69a0fc27d793904a",
@@ -10524,7 +10543,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "0b0d5612d7c32c32",
+    "T1_cards": "d1a609caf940f1b8",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "a729e52b13cb13ec",
     "T4_needs": "5f3af372617a911f",
@@ -10849,7 +10868,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "5ac377cfdbb1141b",
+    "T1_cards": "61bbc696d4161843",
     "T2_pertinence": "db0343ccb25dda32",
     "T3_receipts": "1e81e393df77743b",
     "T4_needs": "99f7c86d7134370b",
@@ -11088,6 +11107,9 @@
     "H01_apinocaltamide_ttype"
    ],
    "caveats": {
+    "counter": [
+     "IT12 P2.2 (dated 2026-10-31): the only WWOX link of apinocaltamide is the ethosuximide result, and that result should not be carried to apinocaltamide as T-type evidence: ethosuximide has a measured non-T-type target (GIRK) inside or below the labelled plasma range in oocytes (PMID 37275776 Fig 7B), and T-type mediation is not measured in any Wwox system. Group G4a is unchanged."
+    ],
     "limit": [
      "the only WWOX link of this intervention is the ethosuximide result: the need is defined by it and T-type mediation is NOT measured; ethosuximide T-type potency (ChEMBL) is above 5 mM or 600 uM with no target against a labelled plasma range of about 283 to 708 uM; apinocaltamide is nanomolar at Cav3.1/3.2/3.3, so the documented action is coherent with the need's direction but does not itself support WWOX relevance; outside WWOX its benefit is in absence-type models, convulsive models only at higher concentration"
     ],
@@ -11198,7 +11220,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "8ddaba2de1f5d7a9",
+    "T1_cards": "a8bbcfc7d7e78407",
     "T2_pertinence": "904f40dca9a2c7f5",
     "T3_receipts": "e631cecfdfb7956c",
     "T4_needs": "3093063f37ac6ad7",
@@ -11364,7 +11386,9 @@
      ],
      "contested": false,
      "counter_needs": [],
-     "counter_statements": [],
+     "counter_statements": [
+      "IT12 P2.2 (dated 2026-10-31): the only WWOX link of apinocaltamide is the ethosuximide result, and that result should not be carried to apinocaltamide as T-type evidence: ethosuximide has a measured non-T-type target (GIRK) inside or below the labelled plasma range in oocytes (PMID 37275776 Fig 7B), and T-type mediation is not measured in any Wwox system. Group G4a is unchanged."
+     ],
      "criteria_not_met": [
       "a signed result of the intervention in a WWOX system exists",
       "an outside-WWOX harm or null signal stands without a favourable outside signal",
@@ -11531,7 +11555,7 @@
    ],
    "exploratory_it7": "None from P3 (not the glycolysis module). P2: the need is exploration-only (direction uncertain) with 521 linked records by target association, 331 usable by the network method and 4 neural-signature records among them; association only, no direction toward a need, nothing evaluated.",
    "inputs": {
-    "T1_cards": "955e3f475904e415",
+    "T1_cards": "6ca76a59deddb9ca",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "137600edf412817c",
     "T4_needs": "34001ad580d89a15",
@@ -11828,7 +11852,7 @@
    ],
    "exploratory_it7": "None. An ion has no signed target row for the network method and no neural LINCS perturbation; the P3 negative does not apply.",
    "inputs": {
-    "T1_cards": "3595d5f8707c322c",
+    "T1_cards": "167e5530609a4f61",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "679405f21efb5aa3",
     "T4_needs": "ce38af3ca4f76c07",
@@ -12043,7 +12067,8 @@
     "counter": [
      "A polyclonal human fibroblast WWOX pool shows LOWER cytoplasmic HIF-1alpha in two of four conditions and no nuclear difference on its own blot (one blot repetition shown; a different compartment from the mouse nuclear increase), although its HRE reporter, HIF1A mRNA, total HIF-1alpha and lactate go up; HIF1A mRNA is flat in both human neural transcript systems; mouse P17 brain shows no elevation of HIF-axis transcripts.",
      "The engine edge HIF1A to BNIP3 is a review-sourced SIGNOR record on a complex; the primary record (Bruick 2000) is in non-neural cell lines; the HIF-prolyl-hydroxylase inhibitor roxadustat raises HIF (whether that is the disease direction is open: direction conditional, H-protect) and its label lists seizures and secondary hypothyroidism, and thyromimetic action is from a 2025 paper, not the label.",
-     "Mouse P17 brain with Wwox deletion shows no elevation of HIF-axis or glycolysis transcripts in four contrasts (Hif1a flat, Epas1 and Slc2a1 lower): the in-vivo brain does not side with the organoid (bulk transcripts, epileptic lines, post hoc computation); the P47T knock-in brain reports hypoxia, apoptosis and glycolysis hallmark gene-set enrichment with no direction stated in the text."
+     "Mouse P17 brain with Wwox deletion shows no elevation of HIF-axis or glycolysis transcripts in four contrasts (Hif1a flat, Epas1 and Slc2a1 lower): the in-vivo brain does not side with the organoid (bulk transcripts, epileptic lines, post hoc computation); the P47T knock-in brain reports hypoxia, apoptosis and glycolysis hallmark gene-set enrichment with no direction stated in the text.",
+     "IT12 P2-P47T (dated 2026-10-31; the set means were recomputed independently from the GEO counts): the adult P47T knock-in brain (partial loss, seizures, gliosis; 5 v 5 animals, transcripts only) shows a broad modest shift led by glycolytic enzyme transcripts and NOT the organoid's selective hypoxia-response pattern (selective six-gene set +0.22, +0.11, -0.07, +0.19 log2 in hippocampus, cortex, PFC, cerebellum; exact p 0.32, 0.70, 0.67, 0.057; the Adm rise is a two-animal effect). The K01 reopening condition is not met in substance (no HIF protein, activity or lactate datum). Decision: narrow and separate three hypotheses (H-org, H-act, H-glia); no strengthening, no change of step 0 or arms A to C, no priority change. The authors' hippocampal differential-expression sheet does not follow the deposit (cause unverifiable); the GSEA re-run is the producer's only."
     ],
     "limit": [
      "proposed, not performed. The WWOX-side HIF-1alpha protein data are non-neural (mouse embryonic fibroblasts; a polyclonal human fibroblast pool shows HRE-luciferase up in 3 of 4 conditions, HIF1A mRNA 1.5-1.9-fold up, total HIF-1alpha up in 2 and lactate up in 4, while its cytoplasmic blot is lower in 2 of 4 and its nuclear blot shows no difference - compartments that differ from the MEF nuclear increase); the organoid data are transcripts of one deposit (4 v 2 libraries, EPAS1 3.80x, HK2 4.73x, SLC2A1 2.67x, HIF1A mRNA flat); HIF-1alpha and HIF-2alpha protein in any WWOX-deficient mammalian neural cell have never been measured (one fly neuronal reporter, sima:GFP, is unchanged; mouse P17 brain shows no elevation of HIF-axis transcripts; P47T brain gene-set enrichment for hypoxia is unresolved in direction). The six IT7 readout genes (SLC2A1, HK2, LDHA, LDHB, BNIP3, PDK1) cannot be used to evaluate any lever (guard IT7_READOUT6). PX-478: no activity annotation in the compound database, a nitrogen-mustard alert, adult intravenous phase 1 only, no CNS datum"
@@ -12058,7 +12083,9 @@
      "In WWOX-deficient versus corrected (isogenic, two independent clones) human neural cells measure HIF-1alpha and HIF-2alpha protein first (premise), nuclear and cytoplasmic fractions separately, at 5 percent oxygen (physioxia, primary) and at 21 and 1 percent (organoid cores are hypoxic: co-stain a hypoxia marker and match sizes). Rival arms: activity silencing and MYC loss-of-function. If raised: genetic HIF1A and EPAS1 knockdown (singly and together) and a PX-478-class lever, with a genetic-first arm C (VHL or EGLN1 loss; a prolyl-hydroxylase inhibitor only beside HIF-null and prolyl-hydroxylase-null controls, direction conditional) in both knockout and corrected cells. Deciding readout: lactate or extracellular acidification and glucose uptake plus PGK1, ALDOA, ENO1, PFKP and PKM reported individually (guard-scope members of the 10-gene set: a change confirms the seed and does not validate a lever; the six IT7 genes cannot decide); network activity on a multielectrode array, viability and SOX2/NEUN fractions give the valence; a mixed outcome leaves it unresolved"
     ],
     "note": [
-     "IT10 restatement (text only; no group moved): the direction of the HIF change is open and two-sided (loss of neuronal HIF-alpha worsens neonatal hypoxic-ischaemic injury in mice; seizure models give both signs), so the prolyl-hydroxylase inhibitor is a conditional arm, not a 'mimic' of a disease direction; three rivals that need no HIF role (culture state or composition, neuronal activity, MYC) have their own arms; the mechanism text of this unit should be read with these."
+     "IT10 restatement (text only; no group moved): the direction of the HIF change is open and two-sided (loss of neuronal HIF-alpha worsens neonatal hypoxic-ischaemic injury in mice; seizure models give both signs), so the prolyl-hydroxylase inhibitor is a conditional arm, not a 'mimic' of a disease direction; three rivals that need no HIF role (culture state or composition, neuronal activity, MYC) have their own arms; the mechanism text of this unit should be read with these.",
+     "IT12 P1-alt (dated 2026-10-31): the one genetic-interaction screen of a WWOX-null line (GSE298081, HAP1, one clone, no replicate or rescue arm, WWOX loss without a fitness phenotype, WWOX never mentioned in the paper) is sign-compatible only with a glycolysis-weighted clone; HIF1A, EGLN1 and VHL are not significant; no convergence is claimed.",
+     "Why this candidacy is listed although development is unresolved (IT12 P6): it is a research question about the biology of the premise, not a recommendation; the development requirements (exposure, tolerability, access) are unknown or unfavourable and are kept apart from the research priority, and the entry is a mechanism experiment with conditional arms, proposed and not performed, in group G4b (never selectable)."
     ],
     "question": [
      "conditional arms: if HIF protein is raised in WWOX-deficient neural cells and lowering the axis lowers lactate AND worsens viability or differentiation, the shift is adaptive (lever dropped); if it improves them, the shift is harmful (lever kept); if protein is not raised in the relevant compartment and oxygen condition, the axis is dropped for neural cells; if lactate falls but viability, network activity and differentiation are unchanged or discordant, the shift is HIF-dependent but its valence is unresolved"
@@ -12099,7 +12126,7 @@
       "A"
      ],
      "transfer_limits": [
-      "No datum from a WWOX-deficient neural cell at the HIF protein or flux level; non-neural cells and cancer models only."
+      "No datum from a WWOX-deficient neural cell at the HIF protein or flux level; non-neural cells and cancer models only. IT12 P1-alt (dated 2026-10-31): the one genetic-interaction screen of a WWOX-null line (GSE298081, HAP1, one clone, no replicate or rescue ar…"
      ],
      "window_note": []
     },
@@ -12129,7 +12156,7 @@
      "wwox_assertions": 0
     },
     "X_counter_evidence": {
-     "need_level_counter_items": 9,
+     "need_level_counter_items": 11,
      "need_level_counter_items_note": "over 1 linked need(s); items of the need record, not of the intervention",
      "opposed_action_needs": [],
      "outside_wwox_null_or_harm": 1,
@@ -12154,10 +12181,10 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "e722fe0723b9c295",
+    "T1_cards": "af8607029101a438",
     "T2_pertinence": "419afd58578b735f",
     "T3_receipts": "426c49feed3ec7e7",
-    "T4_needs": "d5fed19300b7559a",
+    "T4_needs": "bbaa10de8747dfa1",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "8e6731310b854960"
    },
@@ -12319,7 +12346,8 @@
      "counter_statements": [
       "A polyclonal human fibroblast WWOX pool shows LOWER cytoplasmic HIF-1alpha in two of four conditions and no nuclear difference on its own blot (one blot repetition shown; a different compartment from the mouse nuclear increase), although its HRE reporter, HIF1A mRNA, total HIF-1alpha and lactate go up; HIF1A mRNA is flat in both human neural transcript systems; mouse P17 brain shows no elevation of HIF-axis transcripts.",
       "The engine edge HIF1A to BNIP3 is a review-sourced SIGNOR record on a complex; the primary record (Bruick 2000) is in non-neural cell lines; the HIF-prolyl-hydroxylase inhibitor roxadustat raises HIF (whether that is the disease direction is open: direction conditional, H-protect) and its label lists seizures and secondary hypothyroidism, and thyromimetic action is from a 2025 paper, not the label.",
-      "Mouse P17 brain with Wwox deletion shows no elevation of HIF-axis or glycolysis transcripts in four contrasts (Hif1a flat, Epas1 and Slc2a1 lower): the in-vivo brain does not side with the organoid (bulk transcripts, epileptic lines, post hoc computation); the P47T knock-in brain reports hypoxia, apoptosis and glycolysis hallmark gene-set enrichment with no direction stated in the text."
+      "Mouse P17 brain with Wwox deletion shows no elevation of HIF-axis or glycolysis transcripts in four contrasts (Hif1a flat, Epas1 and Slc2a1 lower): the in-vivo brain does not side with the organoid (bulk transcripts, epileptic lines, post hoc computation); the P47T knock-in brain reports hypoxia, apoptosis and glycolysis hallmark gene-set enrichment with no direction stated in the text.",
+      "IT12 P2-P47T (dated 2026-10-31; the set means were recomputed independently from the GEO counts): the adult P47T knock-in brain (partial loss, seizures, gliosis; 5 v 5 animals, transcripts only) shows a broad modest shift led by glycolytic enzyme transcripts and NOT the organoid's selective hypoxia-response pattern (selective six-gene set +0.22, +0.11, -0.07, +0.19 log2 in hippocampus, cortex, PFC, cerebellum; exact p 0.32, 0.70, 0.67, 0.057; the Adm rise is a two-animal effect). The K01 reopening condition is not met in substance (no HIF protein, activity or lactate datum). Decision: narrow and separate three hypotheses (H-org, H-act, H-glia); no strengthening, no change of step 0 or arms A to C, no priority change. The authors' hippocampal differential-expression sheet does not follow the deposit (cause unverifiable); the GSEA re-run is the producer's only."
      ],
      "criteria_not_met": [
       "a signed result of the intervention in a WWOX system exists",
@@ -12376,7 +12404,9 @@
       "stake": "first WWOX-system test of a target hypothesis"
      },
      "notes": [
-      "IT10 restatement (text only; no group moved): the direction of the HIF change is open and two-sided (loss of neuronal HIF-alpha worsens neonatal hypoxic-ischaemic injury in mice; seizure models give both signs), so the prolyl-hydroxylase inhibitor is a conditional arm, not a 'mimic' of a disease direction; three rivals that need no HIF role (culture state or composition, neuronal activity, MYC) have their own arms; the mechanism text of this unit should be read with these."
+      "IT10 restatement (text only; no group moved): the direction of the HIF change is open and two-sided (loss of neuronal HIF-alpha worsens neonatal hypoxic-ischaemic injury in mice; seizure models give both signs), so the prolyl-hydroxylase inhibitor is a conditional arm, not a 'mimic' of a disease direction; three rivals that need no HIF role (culture state or composition, neuronal activity, MYC) have their own arms; the mechanism text of this unit should be read with these.",
+      "IT12 P1-alt (dated 2026-10-31): the one genetic-interaction screen of a WWOX-null line (GSE298081, HAP1, one clone, no replicate or rescue arm, WWOX loss without a fitness phenotype, WWOX never mentioned in the paper) is sign-compatible only with a glycolysis-weighted clone; HIF1A, EGLN1 and VHL are not significant; no convergence is claimed.",
+      "Why this candidacy is listed although development is unresolved (IT12 P6): it is a research question about the biology of the premise, not a recommendation; the development requirements (exposure, tolerability, access) are unknown or unfavourable and are kept apart from the research priority, and the entry is a mechanism experiment with conditional arms, proposed and not performed, in group G4b (never selectable)."
      ],
      "objective": "partial",
      "objective_note": "",
@@ -12480,7 +12510,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "1f83f236e715e087",
+    "T1_cards": "41f105c4d1d90656",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d2e53556d365e6a4",
     "T4_needs": "77086341166ba9e5",
@@ -12642,7 +12672,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "a485c4623737cdfd",
+    "T1_cards": "8e7fb7dfd1abada4",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "c3c30203aefa55c6",
     "T4_needs": "c156cede56e9ac9b",
@@ -12802,7 +12832,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "2dccc1f79a3d351f",
+    "T1_cards": "aa69087b7c0f09fc",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "c124efeb8d5edb82",
     "T4_needs": "97e5657152aa720b",
@@ -12897,7 +12927,9 @@
     ],
     "note": [
      "Added hypothesis arm R (redox) is not in the P1 H_HARM / H_PROTECT vocabulary and is declared as an addition; the genetic KEAP1/NFE2L2 arm is the primary arm, omaveloxolone and monomethyl/dimethyl fumarate are two chemotypes that are not interchangeable; the IT9 drop of the dimethyl fumarate chain is not reversed.",
-     "IT11 P2.3 corrections applied (12 items, l01_corrections_proposal.md): omaveloxolone and dimethyl fumarate are both cysteine-reactive electrophiles, so agreement between them does not separate NRF2 dependence from electrophile-class actions and only NFE2L2 loss does; dimethyl and monomethyl fumarate are separate compounds (monomethyl fumarate did not activate NRF2 in primary neurons in one source and has an HCAR2 rationale); omaveloxolone has an in-vitro concentration window; TNF is a discriminator; the organoid contrast is 4 v 2 with a post hoc exclusion and stays descriptive. No class is promoted."
+     "IT11 P2.3 corrections applied (12 items, l01_corrections_proposal.md): omaveloxolone and dimethyl fumarate are both cysteine-reactive electrophiles, so agreement between them does not separate NRF2 dependence from electrophile-class actions and only NFE2L2 loss does; dimethyl and monomethyl fumarate are separate compounds (monomethyl fumarate did not activate NRF2 in primary neurons in one source and has an HCAR2 rationale); omaveloxolone has an in-vitro concentration window; TNF is a discriminator; the organoid contrast is 4 v 2 with a post hoc exclusion and stays descriptive. No class is promoted.",
+     "IT12 P2-P47T datum (dated 2026-10-31; no change of selection or priority): in the adult P47T brain the NRF2 target transcripts Hmox1 and Srxn1 are modestly higher in all four regions, Nqo1 mixed; the target score tracks the astrocyte score; composition is not excluded and transcripts are not NRF2 activity.",
+     "Why this candidacy is listed although development is unresolved (IT12 P6): it is a research question about the biology of the premise, not a recommendation; the development requirements (exposure, tolerability, access) are unknown or unfavourable and are kept apart from the research priority, and the entry is a mechanism experiment with conditional arms, proposed and not performed, in group G4b (never selectable)."
     ],
     "question": [
      "step 0 gate: are NRF2 target activity, ROS or IL-6/IL-1beta protein different in isogenic WWOX-deficient versus corrected human neural cultures that include microglia or CNS-macrophage-like cells; if none differs and activation changes nothing the axis moves to inert; if ROS is raised and activation corrects it NFE2L2-dependently, arm R advances"
@@ -12992,7 +13024,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "9962a9e4da3f1423",
+    "T1_cards": "333a93ebae32156b",
     "T2_pertinence": "1d8e37b50e10f4e0",
     "T3_receipts": "2d4c21c2c119e3b6",
     "T4_needs": "2fa442aa63e75191",
@@ -13280,7 +13312,9 @@
      },
      "notes": [
       "Added hypothesis arm R (redox) is not in the P1 H_HARM / H_PROTECT vocabulary and is declared as an addition; the genetic KEAP1/NFE2L2 arm is the primary arm, omaveloxolone and monomethyl/dimethyl fumarate are two chemotypes that are not interchangeable; the IT9 drop of the dimethyl fumarate chain is not reversed.",
-      "IT11 P2.3 corrections applied (12 items, l01_corrections_proposal.md): omaveloxolone and dimethyl fumarate are both cysteine-reactive electrophiles, so agreement between them does not separate NRF2 dependence from electrophile-class actions and only NFE2L2 loss does; dimethyl and monomethyl fumarate are separate compounds (monomethyl fumarate did not activate NRF2 in primary neurons in one source and has an HCAR2 rationale); omaveloxolone has an in-vitro concentration window; TNF is a discriminator; the organoid contrast is 4 v 2 with a post hoc exclusion and stays descriptive. No class is promoted."
+      "IT11 P2.3 corrections applied (12 items, l01_corrections_proposal.md): omaveloxolone and dimethyl fumarate are both cysteine-reactive electrophiles, so agreement between them does not separate NRF2 dependence from electrophile-class actions and only NFE2L2 loss does; dimethyl and monomethyl fumarate are separate compounds (monomethyl fumarate did not activate NRF2 in primary neurons in one source and has an HCAR2 rationale); omaveloxolone has an in-vitro concentration window; TNF is a discriminator; the organoid contrast is 4 v 2 with a post hoc exclusion and stays descriptive. No class is promoted.",
+      "IT12 P2-P47T datum (dated 2026-10-31; no change of selection or priority): in the adult P47T brain the NRF2 target transcripts Hmox1 and Srxn1 are modestly higher in all four regions, Nqo1 mixed; the target score tracks the astrocyte score; composition is not excluded and transcripts are not NRF2 activity.",
+      "Why this candidacy is listed although development is unresolved (IT12 P6): it is a research question about the biology of the premise, not a recommendation; the development requirements (exposure, tolerability, access) are unknown or unfavourable and are kept apart from the research priority, and the entry is a mechanism experiment with conditional arms, proposed and not performed, in group G4b (never selectable)."
      ],
      "objective": "partial",
      "objective_note": "",
@@ -13344,7 +13378,9 @@
      "The experiment discriminates driver, marker and consequence readings of the radial-glia MYC rise; no compound has a result on this axis except the non-selective A51 arm (one laboratory, knockout organoids only). The authors read A51 as MYC-driven impairment of differentiation; 'no candidate strengthened' rests on the non-selectivity of A51 and on design gaps, not on a contradicting result."
     ],
     "note": [
-     "IT11 P2.2 restatement of the sulfopin comparison arm (the IT9 proposal unit U31 stays unchanged): sulfopin stays a conditional ex vivo probe beside genetic MYC lowering (card M01); a PIN1 probe cannot settle driver versus marker by itself (SCAR12 shows MYC elevation without the composition phenotype; mouse neuron-stage deletion reproduces the null phenotype); no human exposure; development NOT SUPPORTED."
+     "IT11 P2.2 restatement of the sulfopin comparison arm (the IT9 proposal unit U31 stays unchanged): sulfopin stays a conditional ex vivo probe beside genetic MYC lowering (card M01); a PIN1 probe cannot settle driver versus marker by itself (SCAR12 shows MYC elevation without the composition phenotype; mouse neuron-stage deletion reproduces the null phenotype); no human exposure; development NOT SUPPORTED.",
+     "IT12 P1-main correction (dated 2026-10-31): the SCAR12 organoid lines cited here are two siblings with ONE allele (c.1114G>C p.Gly372Arg, a C-terminal missense); they are not the reference class (Q230P) and not 'SCAR12 missense lines' in general. The MYC observation therefore stands for that allele only.",
+     "Why this candidacy is listed although development is unresolved (IT12 P6): it is a research question about the biology of the premise, not a recommendation; the development requirements (exposure, tolerability, access) are unknown or unfavourable and are kept apart from the research priority, and the entry is a mechanism experiment with conditional arms, proposed and not performed, in group G4b (never selectable)."
     ],
     "question": [
      "whether the MYC difference between knockout and wild-type radial glia survives within G1/G0 and matched potency strata (T1, needs the deposited single-cell data); genetic MYC lowering against a cytostatic control with absolute cell counts and wild-type-plus-compound groups (T2); the same strata in SCAR12 (T3)"
@@ -13443,7 +13479,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "ea9ad14fffd9a171",
+    "T1_cards": "a88583b2ac769370",
     "T2_pertinence": "403956ddfaf8ef49",
     "T3_receipts": "3ab40f90f4842fdd",
     "T4_needs": "e3d9478eddf1541c",
@@ -13728,7 +13764,9 @@
       "stake": "first WWOX-system test of a target hypothesis"
      },
      "notes": [
-      "IT11 P2.2 restatement of the sulfopin comparison arm (the IT9 proposal unit U31 stays unchanged): sulfopin stays a conditional ex vivo probe beside genetic MYC lowering (card M01); a PIN1 probe cannot settle driver versus marker by itself (SCAR12 shows MYC elevation without the composition phenotype; mouse neuron-stage deletion reproduces the null phenotype); no human exposure; development NOT SUPPORTED."
+      "IT11 P2.2 restatement of the sulfopin comparison arm (the IT9 proposal unit U31 stays unchanged): sulfopin stays a conditional ex vivo probe beside genetic MYC lowering (card M01); a PIN1 probe cannot settle driver versus marker by itself (SCAR12 shows MYC elevation without the composition phenotype; mouse neuron-stage deletion reproduces the null phenotype); no human exposure; development NOT SUPPORTED.",
+      "IT12 P1-main correction (dated 2026-10-31): the SCAR12 organoid lines cited here are two siblings with ONE allele (c.1114G>C p.Gly372Arg, a C-terminal missense); they are not the reference class (Q230P) and not 'SCAR12 missense lines' in general. The MYC observation therefore stands for that allele only.",
+      "Why this candidacy is listed although development is unresolved (IT12 P6): it is a research question about the biology of the premise, not a recommendation; the development requirements (exposure, tolerability, access) are unknown or unfavourable and are kept apart from the research priority, and the entry is a mechanism experiment with conditional arms, proposed and not performed, in group G4b (never selectable)."
      ],
      "objective": "partial",
      "objective_note": "",

@@ -1378,8 +1378,21 @@ def reopen_trigger_rows() -> list[dict]:
              "reason_class_when_order_moves": "new_evidence or counter_evidence (no card exists, so no group can move before a card does)"} for r in read_tsv(REOPEN_SEARCHES)]
 
 
+REOPEN_SEARCHES_P1B = DR / "modifiers_it12_p1b_20261031" / "reopen_searches_it12_p1b.tsv"      # IT12 P1-alt: the reopenable searches N-P1B-1 to N-P1B-4 (genetic-interaction slice), read as stored
+
+
+def reopen_trigger_rows_p1b() -> list[dict]:
+    """The IT12 P1-alt reopenable searches in the format of the triggers above: a novelty that makes the cards E03, E04 and K01 (genetic-interaction slice, GSE298081 association only) be re-read."""
+    if not REOPEN_SEARCHES_P1B.exists():
+        return []
+    ptr = REOPEN_SEARCHES_P1B.relative_to(DR)
+    return [{"trigger": f"{r['id']}_modifiers", "what": f"{r['item']} (the decisive datum is stated in {ptr}, row {r['id']})", "detected_by": f"the searches and sources listed in {ptr}, row {r['id']}",
+             "re_evaluates": f"the genetic-interaction notes of cards E03, E04 and K01 (low-weight counter-evidence, caution and sign-compatibility; no group moves on them); reopen when: {r['trigger_to_reopen']} (owner or route: {r['owner_or_route']}; verdict today: {r['verdict']})",
+             "reason_class_when_order_moves": "new_evidence or counter_evidence (the notes are caveats; no group can move on an association table)"} for r in read_tsv(REOPEN_SEARCHES_P1B)]
+
+
 def triggers_rows() -> list[dict]:
-    return _base_triggers() + reopen_trigger_rows()
+    return _base_triggers() + reopen_trigger_rows() + reopen_trigger_rows_p1b()
 
 
 def _base_triggers() -> list[dict]:
