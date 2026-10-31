@@ -1,0 +1,74 @@
+# GitHub repository search (no disease terms), host date 2026-10-31 run; fields: stars, licence spdx, pushed, description
+
+## guide to pharmacology iuphar api client
+  {'total_count': 0, 'incomplete_results': False, 'items': []} None None  
+
+## target ligand selectivity database bindingdb chembl python
+  {'total_count': 0, 'incomplete_results': False, 'items': []} None None  
+
+## drugcentral target action
+  {'total_count': 0, 'incomplete_results': False, 'items': []} None None  
+
+## ion channel pharmacology selectivity compound database
+  {'total_count': 0, 'incomplete_results': False, 'items': []} None None  
+
+## chemical probes portal api
+  {'total_count': 0, 'incomplete_results': False, 'items': []} None None  
+
+## ChEMBL mechanism action target query tool
+  Sarib13/RNAseq_Pipeline 0 MIT 2026-06-11 A command-line Python tool that queries the ChEMBL database to discover drugs targeting sp
+
+## pharos graphql client
+  grype/Ethel 22 MIT 2024-06-11 Lightweight framework for composing web service clients in Pharo Smalltalk
+
+# Hugging Face dataset search
+
+## bindingdb
+  williamTLmiller/matrixnorm-bindingdb-chembl-ccbysa 471 ['license:cc-by-sa-3.0'] 2026-09-23
+  amirhallaji/bindingdb 409 [] 2025-11-10
+  ibm-research/otter_uniprot_bindingdb_chembl 111 ['license:mit'] 2023-06-26
+  vladak/bindingdb 94 [] 2025-03-20
+  amirhallaji/bindingdb_kd 85 [] 2025-11-10
+  ibm-research/otter_uniprot_bindingdb 68 ['license:mit'] 2023-06-26
+
+## drugcentral
+
+## chembl activity
+  jiahborcn/chembl_multiassay_activity 115 ['license:cc-by-sa-3.0'] 2025-04-14
+
+## iuphar
+  adamfbs/mechai-kb-iuphar 2 [] 2026-05-05
+
+## pharmacology target ligand
+
+## pdsp ki
+
+# GitHub short-keyword repository search (second pass)
+
+## iuphar 8
+  samirelanduk/pygtop 10 MIT 2023-08-25 A Python wrapper for the IUPHAR/BPS Guide to PHARMACOLOGY API
+  gtopdb/guidetopharmacology 2 None 2021-03-24 IUPHAR / BPS Guide to Pharmacology
+  omnaest/IUPHAR4J 0 Apache-2.0 2021-01-31 Utils for IUPHAR database
+  pipeworx-io/mcp-guidetopharmacology 0 MIT 2026-10-29 IUPHAR/BPS Guide to PHARMACOLOGY (GtoPdb) MCP — keyless.
+
+## guidetopharmacology None
+
+## bindingdb 73
+  dhimmel/bindingdb 10 None 2015-11-19 Process BindingDB
+  MukhamejanKaratayev/Custom-GraphDTA-with-BindingDB 6 None 2022-04-06 
+  bscpnu/DenovoGAN-BindingDB 4 None 2021-09-16 Drug Denovo Design using GAN for Daewoong Project
+  Scigantic/scigantic-pubchem 4 MIT-0 2026-10-05 A PubChemPy-inspired PUG REST client with throttle-aware retry, caching, BioAssay/gene/pro
+
+## drugcentral 20
+  dhimmel/drugcentral 4 None 2017-03-09 Converting DrugCentral data to Rephetio identifiers 
+  MaastrichtU-IDS/incontext-indications-analysis 3 Apache-2.0 2019-07-21 Relevant datasets and material for a preliminary analysis of the overlap in drug indicatio
+  BioITHackathons/DrugCentral-Based-Review-and-Profiles-of-Targets-for-Approved-Drugs 2 MIT 2025-04-09 
+  MuhammadMuneeb007/drug-disease-mapping 2 NOASSERTION 2026-10-24 A reproducible source-aware pipeline for integrating, harmonising, deduplicating, and anal
+
+## chembl webresource 4
+  chembl/chembl_webresource_client 453 NOASSERTION 2026-03-24 Official Python client for accessing ChEMBL API
+  conda-forge/chembl_webresource_client-feedstock 0 BSD-3-Clause 2026-04-23 A conda-smithy repository for chembl_webresource_client.
+  aur-archive/chembl_webresource_client 0 None 2015-08-15 
+  toxindex/fork-gh-chembl-SLASH-chembl_webresource_client 0 NOASSERTION 2025-12-18 Official Python client for accessing ChEMBL API
+
+## opentargets mechanism 0

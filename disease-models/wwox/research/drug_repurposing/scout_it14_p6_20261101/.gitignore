@@ -1,0 +1,3 @@
+raw/*
+!raw/fetch_log.tsv
+!raw/SHA256SUMS

@@ -1,0 +1,20 @@
+aligned rows 65193 rows on NMDA-named receptors 310
+{'memantine': 22, 'ap5': 5}
+[(('memantine', 'Glutamate-NMDA'), 8), (('ap5', 'Glutamate-NMDA'), 3), (('memantine', 'NMDA'), 3), (('ap5', 'Glutamate-NMDA-MK801'), 2), (('memantine', '5-HT2B'), 1), (('memantine', '5-HT5'), 1), (('memantine', 'adrenergic Alpha2C'), 1), (('memantine', 'Cholinergic, muscarinic M1'), 1), (('memantine', 'Dopamine Transporter'), 1), (('memantine', 'GABA A alpha1'), 1), (('memantine', 'HISTAMINE H1'), 1), (('memantine', 'OPIATE Delta'), 1), (('memantine', 'OPIATE Kappa'), 1), (('memantine', 'Sigma-1'), 1), (('memantine', 'VASOPRESSIN V1B'), 1)]
+PDSP NMDA rows for memantine/AP5 (cells: receptor | test ligand | Ki nM | species | tissue | reference):
+Glutamate-NMDA | Memantine | N/A | RAT | CORTEX | Bresink I, et al., 1995
+Glutamate-NMDA | Memantine | N/A | RAT | STRIATUM | Bresink I, et al., 1995
+Glutamate-NMDA | Memantine | N/A | RAT | STRIATUM | Bresink I, et al., 1995
+Glutamate-NMDA | Memantine | N/A | RAT | CEREBELLUM | Bresink I, et al., 1995
+Glutamate-NMDA | Memantine | N/A | RAT | parietal cortex | Bresink I, et al., 1995
+Glutamate-NMDA | Memantine | N/A | RAT | HIPPOCAMPUS CA1 | Bresink I, et al., 1995
+Glutamate-NMDA | Memantine | N/A | RAT | HIPPOCAMPUS CA3 | Bresink I, et al., 1995
+Glutamate-NMDA | Memantine | N/A | RAT | HIPPOCAMPUS DG | Bresink I, et al., 1995
+Glutamate-NMDA | (+/-)-AP5 | N/A | RAT | CORTICAL MEMBRANES | Conti P, et al., 2003
+Glutamate-NMDA | (R)-AP5 | N/A | RAT | CORTICAL MEMBRANES | Conti P, et al., 2003
+Glutamate-NMDA | (S)-AP5 | N/A | RAT | CORTICAL MEMBRANES | Conti P, et al., 2003
+Glutamate-NMDA-MK801 | D-AP5 | N/A | RAT | BRAIN | Murphy DE, et al., 1988
+Glutamate-NMDA-MK801 | D-AP5 | N/A | RAT | BRAIN | Murphy DE, et al., 1988
+NMDA | Memantine | N/A | RAT | FOREBRAIN | Wallach, Jason, et. al. 2016
+NMDA | Memantine | N/A | RAT | FOREBRAIN | Wallach, Jason, et. al. 2016
+NMDA | Memantine | N/A | RAT | FOREBRAIN | Wallach J et al 2019

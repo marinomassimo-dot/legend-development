@@ -1,0 +1,185 @@
+compound	expected_gene	source	rows	actions	n_quantitative	value_nM_range
+ethosuximide	CACNA1G	chembl_mechanism	1	BLOCKER	0	
+ethosuximide	CACNA1G	chembl_activity	0		0	
+ethosuximide	CACNA1G	gtopdb	0		0	
+ethosuximide	CACNA1G	dgidb	4	NULL;blocker	0	
+ethosuximide	CACNA1G	drugcentral	1	BLOCKER	0	
+ethosuximide	CACNA1G	opentargets_mechanism	1	BLOCKER	0	
+ethosuximide	CACNA1G	pharos_ligand	1	BLOCKER	0	
+ethosuximide	CACNA1G	bindingdb_compound	0		0	
+ethosuximide	CACNA1H	chembl_mechanism	1	BLOCKER	0	
+ethosuximide	CACNA1H	chembl_activity	0		0	
+ethosuximide	CACNA1H	gtopdb	0		0	
+ethosuximide	CACNA1H	dgidb	2	NULL;blocker	0	
+ethosuximide	CACNA1H	drugcentral	0		0	
+ethosuximide	CACNA1H	opentargets_mechanism	1	BLOCKER	0	
+ethosuximide	CACNA1H	pharos_ligand	0		0	
+ethosuximide	CACNA1H	bindingdb_compound	0		0	
+ethosuximide	CACNA1I	chembl_mechanism	1	BLOCKER	0	
+ethosuximide	CACNA1I	chembl_activity	1		1	5e+06-5e+06
+ethosuximide	CACNA1I	gtopdb	0		0	
+ethosuximide	CACNA1I	dgidb	2	NULL;blocker	0	
+ethosuximide	CACNA1I	drugcentral	0		0	
+ethosuximide	CACNA1I	opentargets_mechanism	1	BLOCKER	0	
+ethosuximide	CACNA1I	pharos_ligand	0		0	
+ethosuximide	CACNA1I	bindingdb_compound	0		0	
+ethosuximide	KCNJ6	chembl_mechanism	0		0	
+ethosuximide	KCNJ6	chembl_activity	0		0	
+ethosuximide	KCNJ6	gtopdb	0		0	
+ethosuximide	KCNJ6	dgidb	0		0	
+ethosuximide	KCNJ6	drugcentral	0		0	
+ethosuximide	KCNJ6	opentargets_mechanism	0		0	
+ethosuximide	KCNJ6	pharos_ligand	0		0	
+ethosuximide	KCNJ6	bindingdb_compound	0		0	
+d-AP5	GRIN1	chembl_mechanism	0		0	
+d-AP5	GRIN1	chembl_activity	2		2	177-3.7e+03
+d-AP5	GRIN1	gtopdb	0		0	
+d-AP5	GRIN1	dgidb	0		0	
+d-AP5	GRIN1	drugcentral	0		0	
+d-AP5	GRIN1	opentargets_mechanism	0		0	
+d-AP5	GRIN1	pharos_ligand	0		0	
+d-AP5	GRIN1	bindingdb_compound	2		2	390-2.1e+04
+d-AP5	GRIN2A	chembl_mechanism	0		0	
+d-AP5	GRIN2A	chembl_activity	2		2	177-3.7e+03
+d-AP5	GRIN2A	gtopdb	1	Antagonist	0	
+d-AP5	GRIN2A	dgidb	1	inhibitor	0	
+d-AP5	GRIN2A	drugcentral	0		0	
+d-AP5	GRIN2A	opentargets_mechanism	0		0	
+d-AP5	GRIN2A	pharos_ligand	0		0	
+d-AP5	GRIN2A	bindingdb_compound	2		2	290-390
+d-AP5	GRIN2B	chembl_mechanism	0		0	
+d-AP5	GRIN2B	chembl_activity	2		2	177-3.7e+03
+d-AP5	GRIN2B	gtopdb	1	Antagonist	0	
+d-AP5	GRIN2B	dgidb	1	inhibitor	0	
+d-AP5	GRIN2B	drugcentral	0		0	
+d-AP5	GRIN2B	opentargets_mechanism	0		0	
+d-AP5	GRIN2B	pharos_ligand	0		0	
+d-AP5	GRIN2B	bindingdb_compound	0		0	
+d-AP5	GRIN2C	chembl_mechanism	0		0	
+d-AP5	GRIN2C	chembl_activity	2		2	177-3.7e+03
+d-AP5	GRIN2C	gtopdb	1	Antagonist	0	
+d-AP5	GRIN2C	dgidb	1	inhibitor	0	
+d-AP5	GRIN2C	drugcentral	0		0	
+d-AP5	GRIN2C	opentargets_mechanism	0		0	
+d-AP5	GRIN2C	pharos_ligand	0		0	
+d-AP5	GRIN2C	bindingdb_compound	0		0	
+d-AP5	GRIN2D	chembl_mechanism	0		0	
+d-AP5	GRIN2D	chembl_activity	2		2	177-3.7e+03
+d-AP5	GRIN2D	gtopdb	1	Antagonist	0	
+d-AP5	GRIN2D	dgidb	0		0	
+d-AP5	GRIN2D	drugcentral	0		0	
+d-AP5	GRIN2D	opentargets_mechanism	0		0	
+d-AP5	GRIN2D	pharos_ligand	0		0	
+d-AP5	GRIN2D	bindingdb_compound	1		1	2.1e+04-2.1e+04
+ezogabine	KCNQ2	chembl_mechanism	1	OPENER	0	
+ezogabine	KCNQ2	chembl_activity	12		12	150-1.12e+04
+ezogabine	KCNQ2	gtopdb	1	Activation	1	2.51e+03-2.51e+03
+ezogabine	KCNQ2	dgidb	3	NULL;potentiator	0	
+ezogabine	KCNQ2	drugcentral	1	ACTIVATOR	1	2.51e+03-2.51e+03
+ezogabine	KCNQ2	opentargets_mechanism	1	OPENER	0	
+ezogabine	KCNQ2	pharos_ligand	5	ACTIVATOR	5	347-2.51e+03
+ezogabine	KCNQ2	bindingdb_compound	2		2	150-4.15e+03
+ezogabine	KCNQ3	chembl_mechanism	1	OPENER	0	
+ezogabine	KCNQ3	chembl_activity	7		7	430-1.12e+04
+ezogabine	KCNQ3	gtopdb	1	None	1	631-631
+ezogabine	KCNQ3	dgidb	4	NULL;activator;potentiator	0	
+ezogabine	KCNQ3	drugcentral	1	ACTIVATOR	1	631-631
+ezogabine	KCNQ3	opentargets_mechanism	1	OPENER	0	
+ezogabine	KCNQ3	pharos_ligand	3	ACTIVATOR	3	631-3.89e+03
+ezogabine	KCNQ3	bindingdb_compound	1		1	4.15e+03-4.15e+03
+bumetanide	SLC12A1	chembl_mechanism	1	INHIBITOR	0	
+bumetanide	SLC12A1	chembl_activity	0		0	
+bumetanide	SLC12A1	gtopdb	1	Inhibition	1	331-331
+bumetanide	SLC12A1	dgidb	4	NULL;inhibitor	0	
+bumetanide	SLC12A1	drugcentral	1	INHIBITOR	1	25.1-25.1
+bumetanide	SLC12A1	opentargets_mechanism	1	INHIBITOR	0	
+bumetanide	SLC12A1	pharos_ligand	2	INHIBITOR	2	25.1-331
+bumetanide	SLC12A1	bindingdb_compound	0		0	
+bumetanide	SLC12A2	chembl_mechanism	0		0	
+bumetanide	SLC12A2	chembl_activity	1		1	1.54e+03-1.54e+03
+bumetanide	SLC12A2	gtopdb	1	Inhibition	1	2.51e+03-2.51e+03
+bumetanide	SLC12A2	dgidb	2	NULL	0	
+bumetanide	SLC12A2	drugcentral	1	INHIBITOR	1	2.51e+03-2.51e+03
+bumetanide	SLC12A2	opentargets_mechanism	0		0	
+bumetanide	SLC12A2	pharos_ligand	1		1	2.51e+03-2.51e+03
+bumetanide	SLC12A2	bindingdb_compound	1		1	1.54e+03-1.54e+03
+radiprodil	GRIN2B	chembl_mechanism	1	ANTAGONIST	0	
+radiprodil	GRIN2B	chembl_activity	5		5	4-69.9
+radiprodil	GRIN2B	gtopdb	0		0	
+radiprodil	GRIN2B	dgidb	2	NULL;inhibitor	0	
+radiprodil	GRIN2B	drugcentral	0		0	
+radiprodil	GRIN2B	opentargets_mechanism	1	ANTAGONIST	0	
+radiprodil	GRIN2B	pharos_ligand	0		0	
+radiprodil	GRIN2B	bindingdb_compound	0		0	
+Ro 25-6981	GRIN2B	chembl_mechanism	0		0	
+Ro 25-6981	GRIN2B	chembl_activity	12		12	5.6-173
+Ro 25-6981	GRIN2B	gtopdb	0		0	
+Ro 25-6981	GRIN2B	dgidb	0		0	
+Ro 25-6981	GRIN2B	drugcentral	0		0	
+Ro 25-6981	GRIN2B	opentargets_mechanism	0		0	
+Ro 25-6981	GRIN2B	pharos_ligand	0		0	
+Ro 25-6981	GRIN2B	bindingdb_compound	3		3	6-10
+apinocaltamide	CACNA1G	chembl_mechanism	1	BLOCKER	0	
+apinocaltamide	CACNA1G	chembl_activity	1		1	6.4-6.4
+apinocaltamide	CACNA1G	gtopdb	0		0	
+apinocaltamide	CACNA1G	dgidb	1	blocker	0	
+apinocaltamide	CACNA1G	drugcentral	0		0	
+apinocaltamide	CACNA1G	opentargets_mechanism	1	BLOCKER	0	
+apinocaltamide	CACNA1G	pharos_ligand	0		0	
+apinocaltamide	CACNA1G	bindingdb_compound	0		0	
+apinocaltamide	CACNA1H	chembl_mechanism	1	BLOCKER	0	
+apinocaltamide	CACNA1H	chembl_activity	1		1	18-18
+apinocaltamide	CACNA1H	gtopdb	0		0	
+apinocaltamide	CACNA1H	dgidb	1	blocker	0	
+apinocaltamide	CACNA1H	drugcentral	0		0	
+apinocaltamide	CACNA1H	opentargets_mechanism	1	BLOCKER	0	
+apinocaltamide	CACNA1H	pharos_ligand	0		0	
+apinocaltamide	CACNA1H	bindingdb_compound	1		1	13-13
+apinocaltamide	CACNA1I	chembl_mechanism	1	BLOCKER	0	
+apinocaltamide	CACNA1I	chembl_activity	2		2	7.5-20
+apinocaltamide	CACNA1I	gtopdb	0		0	
+apinocaltamide	CACNA1I	dgidb	1	blocker	0	
+apinocaltamide	CACNA1I	drugcentral	0		0	
+apinocaltamide	CACNA1I	opentargets_mechanism	1	BLOCKER	0	
+apinocaltamide	CACNA1I	pharos_ligand	0		0	
+apinocaltamide	CACNA1I	bindingdb_compound	1		1	7.5-7.5
+memantine	GRIN1	chembl_mechanism	1	NEGATIVE ALLOSTERIC MODULATOR	0	
+memantine	GRIN1	chembl_activity	22		22	0.95-3.16e+04
+memantine	GRIN1	gtopdb	0		0	
+memantine	GRIN1	dgidb	1	NULL	0	
+memantine	GRIN1	drugcentral	3	NEGATIVE ALLOSTERIC MODULATOR	3	0.955-9.55e+03
+memantine	GRIN1	opentargets_mechanism	1	NEGATIVE ALLOSTERIC MODULATOR	0	
+memantine	GRIN1	pharos_ligand	3	NEGATIVE ALLOSTERIC MODULATOR	3	0.955-9.55e+03
+memantine	GRIN1	bindingdb_compound	2		2	0.95-1e+03
+memantine	GRIN2A	chembl_mechanism	1	NEGATIVE ALLOSTERIC MODULATOR	0	
+memantine	GRIN2A	chembl_activity	12		12	0.95-3.16e+04
+memantine	GRIN2A	gtopdb	0		0	
+memantine	GRIN2A	dgidb	3	NULL	0	
+memantine	GRIN2A	drugcentral	1	NEGATIVE ALLOSTERIC MODULATOR	1	0.955-0.955
+memantine	GRIN2A	opentargets_mechanism	1	NEGATIVE ALLOSTERIC MODULATOR	0	
+memantine	GRIN2A	pharos_ligand	1	NEGATIVE ALLOSTERIC MODULATOR	1	0.955-0.955
+memantine	GRIN2A	bindingdb_compound	1		1	0.95-0.95
+memantine	GRIN2B	chembl_mechanism	1	NEGATIVE ALLOSTERIC MODULATOR	0	
+memantine	GRIN2B	chembl_activity	11		11	540-2.56e+04
+memantine	GRIN2B	gtopdb	0		0	
+memantine	GRIN2B	dgidb	2	NULL	0	
+memantine	GRIN2B	drugcentral	1	NEGATIVE ALLOSTERIC MODULATOR	1	5.5e+03-5.5e+03
+memantine	GRIN2B	opentargets_mechanism	1	NEGATIVE ALLOSTERIC MODULATOR	0	
+memantine	GRIN2B	pharos_ligand	1	NEGATIVE ALLOSTERIC MODULATOR	1	5.5e+03-5.5e+03
+memantine	GRIN2B	bindingdb_compound	2		2	1e+03-1e+05
+memantine	GRIN2C	chembl_mechanism	1	NEGATIVE ALLOSTERIC MODULATOR	0	
+memantine	GRIN2C	chembl_activity	4		4	540-3.16e+03
+memantine	GRIN2C	gtopdb	0		0	
+memantine	GRIN2C	dgidb	0		0	
+memantine	GRIN2C	drugcentral	0		0	
+memantine	GRIN2C	opentargets_mechanism	1	NEGATIVE ALLOSTERIC MODULATOR	0	
+memantine	GRIN2C	pharos_ligand	0		0	
+memantine	GRIN2C	bindingdb_compound	0		0	
+memantine	GRIN2D	chembl_mechanism	1	NEGATIVE ALLOSTERIC MODULATOR	0	
+memantine	GRIN2D	chembl_activity	4		4	540-1e+04
+memantine	GRIN2D	gtopdb	0		0	
+memantine	GRIN2D	dgidb	0		0	
+memantine	GRIN2D	drugcentral	0		0	
+memantine	GRIN2D	opentargets_mechanism	1	NEGATIVE ALLOSTERIC MODULATOR	0	
+memantine	GRIN2D	pharos_ligand	0		0	
+memantine	GRIN2D	bindingdb_compound	0		0	

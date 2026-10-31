@@ -1,0 +1,27 @@
+compound	document	measure	species	n_targets	targets_values_nM	ratio_max_over_min
+Ro 25-6981	chembl:CHEMBL1132364	IC50	Rattus norvegicus	2	Grin1|Grin2a=5.2e+04; Grin1|Grin2b=9	5.78e+03
+Ro 25-6981	chembl:CHEMBL1133913	Ki	Homo sapiens	2	ADRA1A|ADRA1B|ADRA1D=180; GRIN1|GRIN2A|GRIN2B|GRIN2C|GRIN2D|GRIN3A|GRIN3B=5.6	32.1
+Ro 25-6981	chembl:CHEMBL1136340	IC50	Homo sapiens	2	GRIN1|GRIN2A|GRIN2B|GRIN2C|GRIN2D|GRIN3A|GRIN3B=6; GRIN1|GRIN2B=57	9.5
+Ro 25-6981	chembl:CHEMBL1137121	IC50	Homo sapiens	2	GRIN1|GRIN2A|GRIN2B|GRIN2C|GRIN2D|GRIN3A|GRIN3B=6; GRIN1|GRIN2B=57	9.5
+Ro 25-6981	chembl:CHEMBL1148684	IC50	Rattus norvegicus	2	Grin1|Grin2a|Grin2b|Grin2c|Grin2d|Grin3a|Grin3b=159; Grin2b=6	26.5
+Ro 25-6981	chembl:CHEMBL4308825	IC50	Homo sapiens	2	GRIN2A=5.2e+04; GRIN2B=9	5.78e+03
+apinocaltamide	chembl:CHEMBL4177680	IC50	Homo sapiens	11	CACNA1C=2.41e+03; CACNA1G=6.4; CACNA1H=18; CACNA1I=7.5; CYP2B6=5.2e+04; CYP2C19=2.5e+04; CYP2C8=1.4e+04; CYP2C9=2.2e+04; CYP2D6=1.5e+04; CYP3A4=4.6e+04; KCNH2=5.5e+03	8.12e+03
+apinocaltamide	chembl:CHEMBL4177680	IC50	Mus musculus	2	Cacna1g=6.4; Cacna1h=40	6.25
+apinocaltamide	chembl:CHEMBL4177680	IC50	Rattus norvegicus	3	Cacna1g=16; Cacna1h=13; Cacna1i=1.8	8.89
+bumetanide	chembl:CHEMBL5584335	Ki	Homo sapiens	2	CA2=6.98e+03; CA3=3.4e+06	487
+bumetanide	gtopdb:PMID:11882915	pIC50	Human	2	SLC12A1=331; SLC12A2=2.51e+03	7.59
+d-AP5	chembl:CHEMBL1143579	Ki	Rattus norvegicus	3	Grin1|Grin2a=280; Grin1|Grin2b=460; Grin1|Grin2c=1.64e+03	5.86
+d-AP5	chembl:CHEMBL4024770	Ki	Rattus norvegicus	4	Grin1|Grin2a=390; Grin1|Grin2b=2.8e+03; Grin1|Grin2c=5.9e+03; Grin1|Grin2d=2.1e+04	53.8
+ezogabine	chembl:CHEMBL4382285	EC50	Homo sapiens	2	KCNQ4=5.9e+03; KCNQ5=3.45e+03	1.71
+ezogabine	chembl:CHEMBL4402547	EC50	Homo sapiens	5	KCNQ2=930; KCNQ2|KCNQ3=1.72e+03; KCNQ3=3.9e+03; KCNQ4=1.98e+03; KCNQ5=800	4.88
+ezogabine	chembl:CHEMBL5149984	EC50	Rattus norvegicus	2	Kcnq2=2.04e+03; Kcnq2|Kcnq3=4.15e+03	2.03
+ezogabine	chembl:CHEMBL5380849	EC50	Homo sapiens	2	KCNQ2=2.04e+03; KCNQ2|KCNQ3=1.84e+03	1.11
+ezogabine	gtopdb:PMID:11466425	pEC50	Human	2	KCNQ3=631; KCNQ4=6.31e+03	10
+memantine	chembl:CHEMBL1146243	IC50	Homo sapiens	2	GRIN1|GRIN2A=911; GRIN1|GRIN2B=1.02e+03	1.12
+memantine	chembl:CHEMBL1157915	IC50	Homo sapiens	2	GRIN1|GRIN2A=5.6e+03; GRIN1|GRIN2B=5.5e+03	1.02
+memantine	chembl:CHEMBL3603740	IC50	Homo sapiens	2	GRIN1|GRIN2A=4.4e+03; GRIN1|GRIN2B=5.2e+03	1.18
+memantine	chembl:CHEMBL4823302	IC50	Homo sapiens	2	ACHE=4.9; GRIN1|GRIN2A=6.7e+03	1.37e+03
+memantine	chembl:CHEMBL5634114	IC50	Rattus norvegicus	2	Grin1|Grin2a=2.66e+03; Grin1|Grin2b=5.57e+03	2.09
+memantine	chembl:CHEMBL6083260	IC50	Homo sapiens	2	GRIN1|GRIN2A=840; GRIN1|GRIN2B=780	1.08
+memantine	chembl:CHEMBL6115009	IC50	Homo sapiens	4	GRIN1|GRIN2A=3.16e+04; GRIN1|GRIN2B=1e+04; GRIN1|GRIN2C=3.16e+03; GRIN1|GRIN2D=1e+04	10
+radiprodil	chembl:CHEMBL1137121	IC50	Homo sapiens	2	GRIN1|GRIN2A|GRIN2B|GRIN2C|GRIN2D|GRIN3A|GRIN3B=6; GRIN1|GRIN2B=4	1.5

@@ -1,0 +1,59 @@
+file	url	http	bytes	sha256_or_note
+chembl_status.json	https://www.ebi.ac.uk/chembl/api/data/status.json	200	212	29dc1fb09487a8d2962253a4d0d92c4ded0aa0d831effab42445d0c3483d4740
+chembl_mech_CHEMBL696.json	https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL696&limit=50	200	952	45872d99810b26bb9cad85e615cbad8c92e43677c3065b4db16e0b55b2e534e7
+chembl_act_CHEMBL696.json	adapter chembl molecule=CHEMBL696	200	292	total=292 truncated=False
+chembl_mech_CHEMBL84612.json	https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL84612&limit=50	200	109	65be784b05e968205ad37aad50b473339e706f43bef8efb13a1d5c80443cdece
+chembl_mech_CHEMBL84612.json	https://www.ebi.ac.uk/chembl/api/data/mechanism.json?parent_molecule_chembl_id=CHEMBL84612&limit=50	200	109	65be784b05e968205ad37aad50b473339e706f43bef8efb13a1d5c80443cdece
+chembl_act_CHEMBL84612.json	adapter chembl molecule=CHEMBL84612	200	21	total=21 truncated=False
+chembl_mech_CHEMBL41355.json	https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL41355&limit=50	200	846	27a8554909aa79ed1515adbaf41c071d13950711ee81a4e2d742efd5a19c6ddf
+chembl_act_CHEMBL41355.json	adapter chembl molecule=CHEMBL41355	200	32	total=32 truncated=False
+chembl_mech_CHEMBL1072.json	https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL1072&limit=50	200	1095	276d14e6ef7ecb92818c21496933b4369d8cfeac497899cb104f3b17ea70f2e5
+chembl_act_CHEMBL1072.json	adapter chembl molecule=CHEMBL1072	200	28	total=28 truncated=False
+chembl_mech_CHEMBL182066.json	https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL182066&limit=50	200	716	48a2fba13a41f7b5b9ee9823bbf22cbac8e78c08d105fdc7967426fd1317dd30
+chembl_act_CHEMBL182066.json	adapter chembl molecule=CHEMBL182066	200	9	total=9 truncated=False
+chembl_mech_CHEMBL305195.json	https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL305195&limit=50	200	109	65be784b05e968205ad37aad50b473339e706f43bef8efb13a1d5c80443cdece
+chembl_mech_CHEMBL305195.json	https://www.ebi.ac.uk/chembl/api/data/mechanism.json?parent_molecule_chembl_id=CHEMBL305195&limit=50	200	109	65be784b05e968205ad37aad50b473339e706f43bef8efb13a1d5c80443cdece
+chembl_act_CHEMBL305195.json	adapter chembl molecule=CHEMBL305195	200	27	total=27 truncated=False
+chembl_mech_CHEMBL4217292.json	https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL4217292&limit=50	200	991	481948155dc443da506df58ba501e4b3979dbf469c6eb134cfc4fdb1a6ef5b7b
+chembl_act_CHEMBL4217292.json	adapter chembl molecule=CHEMBL4217292	200	24	total=24 truncated=False
+chembl_mech_CHEMBL807.json	https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL807&limit=50	200	109	65be784b05e968205ad37aad50b473339e706f43bef8efb13a1d5c80443cdece
+chembl_mech_CHEMBL807.json	https://www.ebi.ac.uk/chembl/api/data/mechanism.json?parent_molecule_chembl_id=CHEMBL807&limit=50	200	878	f05ddb027f9a95a9392c9afb59a2258d8bb695a3b08150ddc6ca4432196038d8
+chembl_act_CHEMBL807.json	adapter chembl molecule=CHEMBL807	200	84	total=84 truncated=False
+chembl_targets_0.json	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL1615383,CHEMBL1743128,CHEMBL1777665,CHEMBL1795168,CHEMBL1798,CHEMBL1821,CHEMBL1824,CHEMBL1827,CHEMBL1832,CHEMBL1833,CHEMBL1835,CHEMBL1841,CHEMBL1859,CHEMBL1867,CHEMBL1868,CHEMBL1874,CHEMBL1889,CHEMBL1901,CHEMBL1904,CHEMBL1907603,CHEMBL1907604,CHEMBL1907608,CHEMBL1909043,CHEMBL1909044,CHEMBL1914,CHEMBL1916,CHEMBL1940,CHEMBL1941,CHEMBL1942,CHEMBL1951,CHEMBL1972,CHEMBL203,CHEMBL2034,CHEMBL2035,CHEMBL2039,CHEMBL205,CHEMBL2056,CHEMBL206,CHEMBL2094124,CHEMBL2094251&limit=100	200	824340	3e94f44b1f103de66abec1fb515208efe3cf31262ce08363e5f6f90834525468
+chembl_targets_1.json	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL2096666,CHEMBL2096680,CHEMBL2096911,CHEMBL210,CHEMBL211,CHEMBL213,CHEMBL216,CHEMBL217,CHEMBL218,CHEMBL219,CHEMBL220,CHEMBL221,CHEMBL222,CHEMBL2221348,CHEMBL223,CHEMBL224,CHEMBL225,CHEMBL226,CHEMBL228,CHEMBL230,CHEMBL231,CHEMBL2327,CHEMBL233,CHEMBL234,CHEMBL236,CHEMBL2362995,CHEMBL2363063,CHEMBL2366686,CHEMBL237,CHEMBL238,CHEMBL240,CHEMBL2414,CHEMBL242,CHEMBL2434,CHEMBL245,CHEMBL246,CHEMBL2476,CHEMBL248,CHEMBL249,CHEMBL250&limit=100	200	482880	c003fa52cbea7aca52b7d8274d8ead4324eec3f124d0e2ff09f4fc8c41b4027f
+chembl_targets_2.json	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL251,CHEMBL252,CHEMBL256,CHEMBL258,CHEMBL259,CHEMBL260,CHEMBL2622,CHEMBL2684,CHEMBL273,CHEMBL274,CHEMBL287,CHEMBL2885,CHEMBL289,CHEMBL2925,CHEMBL2985,CHEMBL299,CHEMBL3038504,CHEMBL3038505,CHEMBL3038506,CHEMBL3048,CHEMBL3072,CHEMBL311,CHEMBL3137276,CHEMBL315,CHEMBL3157,CHEMBL319,CHEMBL321,CHEMBL3243,CHEMBL330,CHEMBL332,CHEMBL3356,CHEMBL3371,CHEMBL3385,CHEMBL3392921,CHEMBL3397,CHEMBL340,CHEMBL3442,CHEMBL3459,CHEMBL3464,CHEMBL3576&limit=100	200	557252	1e6c363da39fc49485d3d40d61eae4aff7da45f8c884ba623c623daa02d6a902
+chembl_targets_3.json	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL3600280,CHEMBL3622,CHEMBL364,CHEMBL367,CHEMBL368,CHEMBL3721,CHEMBL375,CHEMBL3879801,CHEMBL3885622,CHEMBL395,CHEMBL401,CHEMBL4015,CHEMBL4018,CHEMBL402,CHEMBL4029,CHEMBL4040,CHEMBL4071,CHEMBL4074,CHEMBL4078,CHEMBL4257,CHEMBL4295836,CHEMBL4303835,CHEMBL4358,CHEMBL4445,CHEMBL4607,CHEMBL4608,CHEMBL4641,CHEMBL4644,CHEMBL4729,CHEMBL4777,CHEMBL4801,CHEMBL5017,CHEMBL5134,CHEMBL5144,CHEMBL5281,CHEMBL5282,CHEMBL5291512,CHEMBL5459,CHEMBL5486,CHEMBL5530&limit=100	200	271791	c24b3acf6a02c5a3c89039b78133fabf08cdb6a658a2de10ff3e7ad58d49d2a2
+chembl_targets_4.json	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL5558,CHEMBL5685,CHEMBL5748,CHEMBL5763,CHEMBL5918,CHEMBL6020,CHEMBL612348,CHEMBL612545,CHEMBL612558,CHEMBL612848,CHEMBL612849,CHEMBL612851,CHEMBL612853,CHEMBL612855,CHEMBL612877,CHEMBL612879,CHEMBL612880,CHEMBL612884,CHEMBL612888,CHEMBL613064,CHEMBL613564,CHEMBL614297,CHEMBL614452,CHEMBL614818,CHEMBL614910&limit=100	200	45939	0a268bc127c5b39af6b55c6c64b1cc5fb15982d3df9a59f4724fea29750786cc
+ot_CHEMBL696.json	https://api.platform.opentargets.org/api/v4/graphql	200	264	b6e5a08239189a4238884886f63c7c8a167f8755d16e0823a802db2716f12e39
+ot_CHEMBL84612.json	https://api.platform.opentargets.org/api/v4/graphql	200	22	5a146b7fb509270af90b7710ec35e18085e097e151f462c33f2fdffaaeb9e0de
+ot_CHEMBL41355.json	https://api.platform.opentargets.org/api/v4/graphql	200	299	76c25ace8c485526ef3b314b4f69aa8fcb4c4372f288d2ebfd2616fea5cdae7d
+ot_CHEMBL1072.json	https://api.platform.opentargets.org/api/v4/graphql	200	215	eb3021d872c77172d31fc451772532b4ef8cf5f9ea1ebae0d7f917b76a91391b
+ot_CHEMBL182066.json	https://api.platform.opentargets.org/api/v4/graphql	200	237	b2edf320c340342c2a4f43784357888956e31a706cd96c5604a46689fb0e00ab
+ot_CHEMBL305195.json	https://api.platform.opentargets.org/api/v4/graphql	200	22	5a146b7fb509270af90b7710ec35e18085e097e151f462c33f2fdffaaeb9e0de
+ot_CHEMBL4217292.json	https://api.platform.opentargets.org/api/v4/graphql	200	266	f60e49f10107879767b5767f50a81bcf1eb661ba65b501fa8854debf2428f2ed
+ot_CHEMBL807.json	https://api.platform.opentargets.org/api/v4/graphql	200	402	9cc8909d6369b961ee3fb698dfa11004b9f9644e304b2370ef41aed4823be871
+pharos_ethosuximide.json	https://pharos-api.ncats.io/graphql	200	210	6b15c940fcbedadfd581e4d22e4cbc9e1505218daaf666ceb88a56789f88456f
+pharos_d_AP5.json	https://pharos-api.ncats.io/graphql	200	25	fcd6bc4803a4b3e521a84dee3e3493df53998553394701925e5e294e2731e0ae
+pharos_retigabine.json	https://pharos-api.ncats.io/graphql	200	2169	c2716512717078ac765fa261cb089449fa5eb2cc4569e5375731f71c8c9bf70a
+pharos_bumetanide.json	https://pharos-api.ncats.io/graphql	200	410	5e595ff58969aee379ad08ef7bbbb54bc2d052c5d930c8ed87837fe6fc339d31
+pharos_radiprodil.json	https://pharos-api.ncats.io/graphql	200	25	fcd6bc4803a4b3e521a84dee3e3493df53998553394701925e5e294e2731e0ae
+pharos_Ro_25_6981.json	https://pharos-api.ncats.io/graphql	200	25	fcd6bc4803a4b3e521a84dee3e3493df53998553394701925e5e294e2731e0ae
+pharos_apinocaltamide.json	https://pharos-api.ncats.io/graphql	200	25	fcd6bc4803a4b3e521a84dee3e3493df53998553394701925e5e294e2731e0ae
+pharos_memantine.json	https://pharos-api.ncats.io/graphql	200	1002	f17b34bd6d7de49b9f8407740ae22371937fe7707c4f504102de970a99ef85a6
+pharos_target_GRIN2B.json	https://pharos-api.ncats.io/graphql	200	34259	e0f76bf83e75ecd7713a75e3cbbf0c71521deebf1b2cfb9cda9884b3005ec542
+pharos_target_KCNQ2.json	https://pharos-api.ncats.io/graphql	200	10835	8679469646668b79b11b1633c342e149d86a71dcd7ac8a46ac0ddc7ab18dbd0c
+pharos_target_CACNA1G.json	https://pharos-api.ncats.io/graphql	200	73212	b0ffe692f4137d86fdf4b2374b5af4c73297525486185a310e8f30956b14ef4b
+pharos_target_SLC12A2.json	https://pharos-api.ncats.io/graphql	200	163	0957a91f8f3e3f09ec1401fc61750c0cbe52a126744225cc4f9cdc89d3a313ba
+bdb_cmpd_CHEMBL696.json	https://www.bindingdb.org/rest/getTargetByCompound?smiles=CCC1%28C%29CC%28%3DO%29NC1%3DO&cutoff=0.99	200	443	742a95b923551ace53e68e2781ae4016b017a5b5c91ff0489c6d910a60206918
+bdb_cmpd_CHEMBL84612.json	https://www.bindingdb.org/rest/getTargetByCompound?smiles=N%5BC%40H%5D%28CCCP%28%3DO%29%28O%29O%29C%28%3DO%29O&cutoff=0.99	200	1032	8e9b7e64e634e340784e50bc1b4a5419e61169c4cfb9c081b0298994a61c4f18
+bdb_cmpd_CHEMBL41355.json	https://www.bindingdb.org/rest/getTargetByCompound?smiles=CCOC%28%3DO%29Nc1ccc%28NCc2ccc%28F%29cc2%29cc1N&cutoff=0.99	200	1120	cedf6d326878edf84d38c6a63eb4ec4b4b91f47c08a38eef5c50988805855a0f
+bdb_cmpd_CHEMBL1072.json	https://www.bindingdb.org/rest/getTargetByCompound?smiles=CCCCNc1cc%28C%28%3DO%29O%29cc%28S%28N%29%28%3DO%29%3DO%29c1Oc1ccccc1&cutoff=0.99	200	1640	cbb987a5ac148a98c201fae1a63da1e01c8a2a041588c369e96f133a42a57663
+bdb_cmpd_CHEMBL182066.json	https://www.bindingdb.org/rest/getTargetByCompound?smiles=O%3DC%28Nc1ccc2nc%28O%29oc2c1%29C%28%3DO%29N1CCC%28Cc2ccc%28F%29cc2%29CC1&cutoff=0.99	200	184	b5344f315884c33e4d09259659f85fc73ed3573632341cf7d105eb59de991076
+bdb_cmpd_CHEMBL305195.json	https://www.bindingdb.org/rest/getTargetByCompound?smiles=C%5BC%40%40H%5D%28CN1CCC%28Cc2ccccc2%29CC1%29%5BC%40%40H%5D%28O%29c1ccc%28O%29cc1&cutoff=0.99	200	1135	cb8844c99a5b9d85d0a7c93ad6efabf95f4666f6aa24dfa84d98bd1b39fcfc33
+bdb_cmpd_CHEMBL4217292.json	https://www.bindingdb.org/rest/getTargetByCompound?smiles=N%23Cc1ccc%28Cn2ccc%28NC%28%3DO%29Cc3ccc%28C4%28C%28F%29%28F%29F%29CC4%29cc3%29n2%29nc1&cutoff=0.99	200	1207	5cc6c486f3426056d00f6a5fbdfa2e5d899a4de0af6f2d2905888fc0218c90ce
+bdb_cmpd_CHEMBL807.json	https://www.bindingdb.org/rest/getTargetByCompound?smiles=CC12CC3CC%28C%29%28C1%29CC%28N%29%28C3%29C2&cutoff=0.99	200	1318	3eda6eabd9b47b97eb48c8f4fb3e0135eef10afd6da6ced9e63f13e7023bc6ee
+bdb_target_GRIN2B.json	https://www.bindingdb.org/rest/getLigandsByUniprots?uniprot=Q13224&cutoff=10000&code=0&response=application/json	200	667816	b7b5c4f63219a4ddd7d9513332e648b2f487d3fefbff44e2f594a468efb3de49
+bdb_target_KCNQ2.json	https://www.bindingdb.org/rest/getLigandsByUniprots?uniprot=O43526&cutoff=10000&code=0&response=application/json	200	227128	906208894a0b454233c4a50902cfa436bd97d93640425a4156b601fa32d33554
+bdb_target_CACNA1G.json	https://www.bindingdb.org/rest/getLigandsByUniprots?uniprot=O43497&cutoff=10000&code=0&response=application/json	200	294192	e16b0752f8f61d93106034b141dba95f4728cee89e3d2aa04816471682d52617
+bdb_target_SLC12A2.json	https://www.bindingdb.org/rest/getLigandsByUniprots?uniprot=P55011&cutoff=10000&code=0&response=application/json	200	914	7396b1dddb3352a1cb26234bfca6ea060bf0caef74184227d1ea2e772ddf86ea
+dc_drug.target.interaction.tsv.gz	https://unmtid-dbs.net/download/DrugCentral/2027/drug.target.interaction.tsv.gz	200	956583	1908684983a79a067a44da952e1f6fd26b0f34cc36560cd9be0f0843bbfee1e1
