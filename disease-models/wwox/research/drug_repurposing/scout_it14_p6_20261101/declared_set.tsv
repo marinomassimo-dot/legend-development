@@ -1,0 +1,10 @@
+compound	chembl_id_expected	expected_gene	expected_action	expected_quantitative_note	basis_known_before_looking
+ethosuximide	CHEMBL696	CACNA1G;CACNA1H;CACNA1I	blocker (T-type)	weak, high-micromolar to millimolar	module knowledge (IT8 Q07) and literature memory
+ethosuximide	CHEMBL696	KCNJ6	blocker (GIRK2)	about millimolar	literature memory, not checked in module
+d-AP5	CHEMBL?	GRIN1;GRIN2A;GRIN2B;GRIN2C;GRIN2D	antagonist (glutamate site)	micromolar, GluN2A>GluN2D affinity	literature memory
+ezogabine/retigabine	CHEMBL?	KCNQ2;KCNQ3	positive modulator (opener)	EC50 about 1 uM	literature memory
+bumetanide	CHEMBL1072	SLC12A2;SLC12A1	inhibitor	sub-micromolar both, NKCC2 somewhat more potent	module IT8 Q08 plus memory
+radiprodil	CHEMBL182066	GRIN2B	negative allosteric modulator	nanomolar-range GluN2B	module IT8 Q05
+Ro 25-6981	CHEMBL?	GRIN2B	negative allosteric modulator	nanomolar GluN2B, >1000x over GluN2A	literature memory
+apinocaltamide	CHEMBL4217292	CACNA1G;CACNA1H;CACNA1I	blocker (T-type)	Cav3.1/3.2/3.3 6.4/18/7.5 nM (IT8)	module IT8 Q07
+memantine	CHEMBL807	GRIN1;GRIN2A;GRIN2B;GRIN2C;GRIN2D	uncompetitive pore blocker	about 0.5-1 uM, voltage-dependent	module IT8 Q05

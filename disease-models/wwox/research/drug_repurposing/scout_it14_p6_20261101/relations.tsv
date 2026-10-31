@@ -1,0 +1,683 @@
+source	compound	gene	target_label	action	measure_type	relation	value_nM	species	ref
+chembl_mechanism	ethosuximide	CACNA1G|CACNA1H|CACNA1I	Voltage-gated T-type calcium channel	BLOCKER				Homo sapiens	CHEMBL2362995;PubMed:11641441,PubMed:17291698,Wikipedia:Ethosuximide#Mechanism_of_action
+chembl_activity	ethosuximide	CACNA1I	Voltage-dependent T-type calcium channel subunit alpha-1I		IC50	>	5000000.0	Homo sapiens	CHEMBL5558;CHEMBL1140166;CHEMBL1033088
+chembl_activity	ethosuximide		Trypanosoma cruzi		IC50			Trypanosoma cruzi	CHEMBL368;CHEMBL1212812;CHEMBL1216998
+chembl_activity	ethosuximide		Trypanosoma brucei rhodesiense		IC50			Trypanosoma brucei rhodesiense	CHEMBL612348;CHEMBL1212812;CHEMBL1217013
+chembl_activity	ethosuximide		Trypanosoma brucei brucei		IC50			Trypanosoma brucei brucei	CHEMBL612851;CHEMBL1212812;CHEMBL1216999
+chembl_activity	ethosuximide		Trypanosoma brucei		IC50			Trypanosoma brucei	CHEMBL612849;CHEMBL1212812;CHEMBL1217001
+chembl_activity	ethosuximide		Trichomonas vaginalis		IC50			Trichomonas vaginalis	CHEMBL612884;CHEMBL1212812;CHEMBL1217004
+chembl_activity	ethosuximide		Toxoplasma gondii		IC50			Toxoplasma gondii	CHEMBL612888;CHEMBL1212812;CHEMBL1217005
+chembl_activity	ethosuximide		Pneumocystis carinii		IC50			Pneumocystis carinii	CHEMBL613064;CHEMBL1212812;CHEMBL1217186
+chembl_activity	ethosuximide		Plasmodium falciparum		IC50			Plasmodium falciparum	CHEMBL364;CHEMBL1212812;CHEMBL1217000
+chembl_activity	ethosuximide		Leishmania		IC50			Leishmania	CHEMBL2366686;CHEMBL1212812;CHEMBL1217002
+chembl_activity	ethosuximide		Leishmania mexicana		IC50			Leishmania mexicana	CHEMBL612880;CHEMBL1212812;CHEMBL1217006
+chembl_activity	ethosuximide		Leishmania major		IC50			Leishmania major	CHEMBL612879;CHEMBL1212812;CHEMBL1217011
+chembl_activity	ethosuximide		Leishmania infantum		IC50			Leishmania infantum	CHEMBL612848;CHEMBL1212812;CHEMBL1217010
+chembl_activity	ethosuximide		Leishmania donovani		IC50			Leishmania donovani	CHEMBL367;CHEMBL1212812;CHEMBL1217009
+chembl_activity	ethosuximide		Leishmania amazonensis		IC50			Leishmania amazonensis	CHEMBL612877;CHEMBL1212812;CHEMBL1217008
+chembl_activity	ethosuximide		Entamoeba histolytica		IC50			Entamoeba histolytica	CHEMBL612853;CHEMBL1212812;CHEMBL1217007
+chembl_activity	ethosuximide		Cryptosporidium parvum		IC50			Cryptosporidium parvum	CHEMBL612855;CHEMBL1212812;CHEMBL1217012
+chembl_activity	ethosuximide	ACHE	Acetylcholinesterase		IC50			Homo sapiens	CHEMBL220;CHEMBL1909046;CHEMBL1909212
+chembl_activity	ethosuximide	ACHE	Acetylcholinesterase		Ki			Homo sapiens	CHEMBL220;CHEMBL1909046;CHEMBL1909212
+chembl_activity	ethosuximide	ADORA1	Adenosine receptor A1		IC50			Homo sapiens	CHEMBL226;CHEMBL1909046;CHEMBL1909213
+chembl_activity	ethosuximide	ADORA1	Adenosine receptor A1		Ki			Homo sapiens	CHEMBL226;CHEMBL1909046;CHEMBL1909213
+chembl_activity	ethosuximide	ADORA2A	Adenosine receptor A2a		IC50			Homo sapiens	CHEMBL251;CHEMBL1909046;CHEMBL1909214
+chembl_activity	ethosuximide	ADORA2A	Adenosine receptor A2a		Ki			Homo sapiens	CHEMBL251;CHEMBL1909046;CHEMBL1909214
+chembl_activity	ethosuximide	ADORA3	Adenosine receptor A3		IC50			Homo sapiens	CHEMBL256;CHEMBL1909046;CHEMBL1909215
+chembl_activity	ethosuximide	ADORA3	Adenosine receptor A3		Ki			Homo sapiens	CHEMBL256;CHEMBL1909046;CHEMBL1909215
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909084
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909084
+chembl_activity	ethosuximide	Adra1a	Alpha-1A adrenergic receptor		IC50			Rattus norvegicus	CHEMBL319;CHEMBL1909046;CHEMBL1909085
+chembl_activity	ethosuximide	Adra1a	Alpha-1A adrenergic receptor		Ki			Rattus norvegicus	CHEMBL319;CHEMBL1909046;CHEMBL1909085
+chembl_activity	ethosuximide	Adra1b	Alpha-1B adrenergic receptor		IC50			Rattus norvegicus	CHEMBL315;CHEMBL1909046;CHEMBL1909086
+chembl_activity	ethosuximide	Adra1b	Alpha-1B adrenergic receptor		Ki			Rattus norvegicus	CHEMBL315;CHEMBL1909046;CHEMBL1909086
+chembl_activity	ethosuximide	ADRA1D	Alpha-1D adrenergic receptor		IC50			Homo sapiens	CHEMBL223;CHEMBL1909046;CHEMBL1909087
+chembl_activity	ethosuximide	ADRA1D	Alpha-1D adrenergic receptor		Ki			Homo sapiens	CHEMBL223;CHEMBL1909046;CHEMBL1909087
+chembl_activity	ethosuximide	ADRA2A	Alpha-2A adrenergic receptor		IC50			Homo sapiens	CHEMBL1867;CHEMBL1909046;CHEMBL1909088
+chembl_activity	ethosuximide	ADRA2A	Alpha-2A adrenergic receptor		Ki			Homo sapiens	CHEMBL1867;CHEMBL1909046;CHEMBL1909088
+chembl_activity	ethosuximide	ADRA2B	Alpha-2B adrenergic receptor		IC50			Homo sapiens	CHEMBL1942;CHEMBL1909046;CHEMBL1909089
+chembl_activity	ethosuximide	ADRA2B	Alpha-2B adrenergic receptor		Ki			Homo sapiens	CHEMBL1942;CHEMBL1909046;CHEMBL1909089
+chembl_activity	ethosuximide	ADRA2C	Alpha-2C adrenergic receptor		IC50			Homo sapiens	CHEMBL1916;CHEMBL1909046;CHEMBL1909090
+chembl_activity	ethosuximide	ADRA2C	Alpha-2C adrenergic receptor		Ki			Homo sapiens	CHEMBL1916;CHEMBL1909046;CHEMBL1909090
+chembl_activity	ethosuximide	ADRB1	Beta-1 adrenergic receptor		IC50			Homo sapiens	CHEMBL213;CHEMBL1909046;CHEMBL1909091
+chembl_activity	ethosuximide	ADRB1	Beta-1 adrenergic receptor		Ki			Homo sapiens	CHEMBL213;CHEMBL1909046;CHEMBL1909091
+chembl_activity	ethosuximide	ADRB2	Beta-2 adrenergic receptor		IC50			Homo sapiens	CHEMBL210;CHEMBL1909046;CHEMBL1909092
+chembl_activity	ethosuximide	ADRB2	Beta-2 adrenergic receptor		Ki			Homo sapiens	CHEMBL210;CHEMBL1909046;CHEMBL1909092
+chembl_activity	ethosuximide	ADRB3	Beta-3 adrenergic receptor		IC50			Homo sapiens	CHEMBL246;CHEMBL1909046;CHEMBL1909093
+chembl_activity	ethosuximide	ADRB3	Beta-3 adrenergic receptor		Ki			Homo sapiens	CHEMBL246;CHEMBL1909046;CHEMBL1909093
+chembl_activity	ethosuximide	SLC6A2	Sodium-dependent noradrenaline transporter		IC50			Homo sapiens	CHEMBL222;CHEMBL1909046;CHEMBL1909094
+chembl_activity	ethosuximide	SLC6A2	Sodium-dependent noradrenaline transporter		Ki			Homo sapiens	CHEMBL222;CHEMBL1909046;CHEMBL1909094
+chembl_activity	ethosuximide	Akr1b1	Aldo-keto reductase family 1 member B1		IC50			Rattus norvegicus	CHEMBL2622;CHEMBL1909046;CHEMBL1909095
+chembl_activity	ethosuximide	Akr1b1	Aldo-keto reductase family 1 member B1		Ki			Rattus norvegicus	CHEMBL2622;CHEMBL1909046;CHEMBL1909095
+chembl_activity	ethosuximide	AGTR2	Type-2 angiotensin II receptor		IC50			Homo sapiens	CHEMBL4607;CHEMBL1909046;CHEMBL1909096
+chembl_activity	ethosuximide	AGTR2	Type-2 angiotensin II receptor		Ki			Homo sapiens	CHEMBL4607;CHEMBL1909046;CHEMBL1909096
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909097
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909097
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909098
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909098
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909099
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909099
+chembl_activity	ethosuximide	BDKRB2	B2 bradykinin receptor		IC50			Homo sapiens	CHEMBL3157;CHEMBL1909046;CHEMBL1909100
+chembl_activity	ethosuximide	BDKRB2	B2 bradykinin receptor		Ki			Homo sapiens	CHEMBL3157;CHEMBL1909046;CHEMBL1909100
+chembl_activity	ethosuximide	CALCR	Calcitonin receptor		IC50			Homo sapiens	CHEMBL1832;CHEMBL1909046;CHEMBL1909101
+chembl_activity	ethosuximide	CALCR	Calcitonin receptor		Ki			Homo sapiens	CHEMBL1832;CHEMBL1909046;CHEMBL1909101
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909102
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909102
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909103
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909103
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909121
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909121
+chembl_activity	ethosuximide	CNR1	Cannabinoid receptor 1		IC50			Homo sapiens	CHEMBL218;CHEMBL1909046;CHEMBL1909122
+chembl_activity	ethosuximide	CNR1	Cannabinoid receptor 1		Ki			Homo sapiens	CHEMBL218;CHEMBL1909046;CHEMBL1909122
+chembl_activity	ethosuximide	CA2	Carbonic anhydrase 2		IC50			Homo sapiens	CHEMBL205;CHEMBL1909046;CHEMBL1909123
+chembl_activity	ethosuximide	CA2	Carbonic anhydrase 2		Ki			Homo sapiens	CHEMBL205;CHEMBL1909046;CHEMBL1909123
+chembl_activity	ethosuximide	CCR2	C-C chemokine receptor type 2		IC50			Homo sapiens	CHEMBL4015;CHEMBL1909046;CHEMBL1909124
+chembl_activity	ethosuximide	CCR2	C-C chemokine receptor type 2		Ki			Homo sapiens	CHEMBL4015;CHEMBL1909046;CHEMBL1909124
+chembl_activity	ethosuximide	CCR4	C-C chemokine receptor type 4		IC50			Homo sapiens	CHEMBL2414;CHEMBL1909046;CHEMBL1909125
+chembl_activity	ethosuximide	CCR4	C-C chemokine receptor type 4		Ki			Homo sapiens	CHEMBL2414;CHEMBL1909046;CHEMBL1909125
+chembl_activity	ethosuximide	CCR5	C-C chemokine receptor type 5		IC50			Homo sapiens	CHEMBL274;CHEMBL1909046;CHEMBL1909126
+chembl_activity	ethosuximide	CCR5	C-C chemokine receptor type 5		Ki			Homo sapiens	CHEMBL274;CHEMBL1909046;CHEMBL1909126
+chembl_activity	ethosuximide	CXCR1	C-X-C chemokine receptor type 1		IC50			Homo sapiens	CHEMBL4029;CHEMBL1909046;CHEMBL1909127
+chembl_activity	ethosuximide	CXCR1	C-X-C chemokine receptor type 1		Ki			Homo sapiens	CHEMBL4029;CHEMBL1909046;CHEMBL1909127
+chembl_activity	ethosuximide	CXCR2	C-X-C chemokine receptor type 2		IC50			Homo sapiens	CHEMBL2434;CHEMBL1909046;CHEMBL1909128
+chembl_activity	ethosuximide	CXCR2	C-X-C chemokine receptor type 2		Ki			Homo sapiens	CHEMBL2434;CHEMBL1909046;CHEMBL1909128
+chembl_activity	ethosuximide	CCKAR	Cholecystokinin receptor type A		IC50			Homo sapiens	CHEMBL1901;CHEMBL1909046;CHEMBL1909129
+chembl_activity	ethosuximide	CCKAR	Cholecystokinin receptor type A		Ki			Homo sapiens	CHEMBL1901;CHEMBL1909046;CHEMBL1909129
+chembl_activity	ethosuximide	PTGS1	Prostaglandin G/H synthase 1		IC50			Homo sapiens	CHEMBL221;CHEMBL1909046;CHEMBL1909130
+chembl_activity	ethosuximide	PTGS1	Prostaglandin G/H synthase 1		Ki			Homo sapiens	CHEMBL221;CHEMBL1909046;CHEMBL1909130
+chembl_activity	ethosuximide	PTGS2	Prostaglandin G/H synthase 2		IC50			Homo sapiens	CHEMBL230;CHEMBL1909046;CHEMBL1909131
+chembl_activity	ethosuximide	PTGS2	Prostaglandin G/H synthase 2		Ki			Homo sapiens	CHEMBL230;CHEMBL1909046;CHEMBL1909131
+chembl_activity	ethosuximide	CYP1A2	Cytochrome P450 1A2		IC50			Homo sapiens	CHEMBL3356;CHEMBL1909046;CHEMBL1909132
+chembl_activity	ethosuximide	CYP1A2	Cytochrome P450 1A2		Ki			Homo sapiens	CHEMBL3356;CHEMBL1909046;CHEMBL1909132
+chembl_activity	ethosuximide	CYP2A6	Cytochrome P450 2A6		IC50			Homo sapiens	CHEMBL5282;CHEMBL1909046;CHEMBL1909133
+chembl_activity	ethosuximide	CYP2A6	Cytochrome P450 2A6		Ki			Homo sapiens	CHEMBL5282;CHEMBL1909046;CHEMBL1909133
+chembl_activity	ethosuximide	CYP2C19	Cytochrome P450 2C19		IC50			Homo sapiens	CHEMBL3622;CHEMBL1909046;CHEMBL1909134
+chembl_activity	ethosuximide	CYP2C19	Cytochrome P450 2C19		Ki			Homo sapiens	CHEMBL3622;CHEMBL1909046;CHEMBL1909134
+chembl_activity	ethosuximide	CYP2C9	Cytochrome P450 2C9		IC50			Homo sapiens	CHEMBL3397;CHEMBL1909046;CHEMBL1909135
+chembl_activity	ethosuximide	CYP2C9	Cytochrome P450 2C9		Ki			Homo sapiens	CHEMBL3397;CHEMBL1909046;CHEMBL1909135
+chembl_activity	ethosuximide	CYP2D6	Cytochrome P450 2D6		IC50			Homo sapiens	CHEMBL289;CHEMBL1909046;CHEMBL1909136
+chembl_activity	ethosuximide	CYP2D6	Cytochrome P450 2D6		Ki			Homo sapiens	CHEMBL289;CHEMBL1909046;CHEMBL1909136
+chembl_activity	ethosuximide	CYP2E1	Cytochrome P450 2E1		IC50			Homo sapiens	CHEMBL5281;CHEMBL1909046;CHEMBL1909137
+chembl_activity	ethosuximide	CYP2E1	Cytochrome P450 2E1		Ki			Homo sapiens	CHEMBL5281;CHEMBL1909046;CHEMBL1909137
+chembl_activity	ethosuximide	CYP3A4	Cytochrome P450 3A4		IC50			Homo sapiens	CHEMBL340;CHEMBL1909046;CHEMBL1909138
+chembl_activity	ethosuximide	CYP3A4	Cytochrome P450 3A4		Ki			Homo sapiens	CHEMBL340;CHEMBL1909046;CHEMBL1909138
+chembl_activity	ethosuximide	DRD1	D(1A) dopamine receptor		IC50			Homo sapiens	CHEMBL2056;CHEMBL1909046;CHEMBL1909139
+chembl_activity	ethosuximide	DRD1	D(1A) dopamine receptor		Ki			Homo sapiens	CHEMBL2056;CHEMBL1909046;CHEMBL1909139
+chembl_activity	ethosuximide	DRD2	D(2) dopamine receptor		IC50			Homo sapiens	CHEMBL217;CHEMBL1909046;CHEMBL1909140
+chembl_activity	ethosuximide	DRD2	D(2) dopamine receptor		Ki			Homo sapiens	CHEMBL217;CHEMBL1909046;CHEMBL1909140
+chembl_activity	ethosuximide	DRD3	D(3) dopamine receptor		IC50			Homo sapiens	CHEMBL234;CHEMBL1909046;CHEMBL1909141
+chembl_activity	ethosuximide	DRD3	D(3) dopamine receptor		Ki			Homo sapiens	CHEMBL234;CHEMBL1909046;CHEMBL1909141
+chembl_activity	ethosuximide	DRD4	D(4) dopamine receptor		IC50			Homo sapiens	CHEMBL219;CHEMBL1909046;CHEMBL1909142
+chembl_activity	ethosuximide	DRD4	D(4) dopamine receptor		Ki			Homo sapiens	CHEMBL219;CHEMBL1909046;CHEMBL1909142
+chembl_activity	ethosuximide	SLC6A3	Sodium-dependent dopamine transporter		IC50			Homo sapiens	CHEMBL238;CHEMBL1909046;CHEMBL1909143
+chembl_activity	ethosuximide	SLC6A3	Sodium-dependent dopamine transporter		Ki			Homo sapiens	CHEMBL238;CHEMBL1909046;CHEMBL1909143
+chembl_activity	ethosuximide	EDNRA	Endothelin-1 receptor		IC50			Homo sapiens	CHEMBL252;CHEMBL1909046;CHEMBL1909144
+chembl_activity	ethosuximide	EDNRA	Endothelin-1 receptor		Ki			Homo sapiens	CHEMBL252;CHEMBL1909046;CHEMBL1909144
+chembl_activity	ethosuximide	ESR1	Estrogen receptor		IC50			Homo sapiens	CHEMBL206;CHEMBL1909046;CHEMBL1909145
+chembl_activity	ethosuximide	ESR1	Estrogen receptor		Ki			Homo sapiens	CHEMBL206;CHEMBL1909046;CHEMBL1909145
+chembl_activity	ethosuximide	ESR2	Estrogen receptor beta		IC50			Homo sapiens	CHEMBL242;CHEMBL1909046;CHEMBL1909146
+chembl_activity	ethosuximide	ESR2	Estrogen receptor beta		Ki			Homo sapiens	CHEMBL242;CHEMBL1909046;CHEMBL1909146
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909147
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909147
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909148
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909148
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909149
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909149
+chembl_activity	ethosuximide	NR3C1	Glucocorticoid receptor		IC50			Homo sapiens	CHEMBL2034;CHEMBL1909046;CHEMBL1909150
+chembl_activity	ethosuximide	NR3C1	Glucocorticoid receptor		Ki			Homo sapiens	CHEMBL2034;CHEMBL1909046;CHEMBL1909150
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909151
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909151
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909152
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909152
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909153
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909153
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909154
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909154
+chembl_activity	ethosuximide	Glra1|Glra2|Glra3|Glrb	Glycine receptor		IC50			Rattus norvegicus	CHEMBL3392921;CHEMBL1909046;CHEMBL1909155
+chembl_activity	ethosuximide	Glra1|Glra2|Glra3|Glrb	Glycine receptor		Ki			Rattus norvegicus	CHEMBL3392921;CHEMBL1909046;CHEMBL1909155
+chembl_activity	ethosuximide	HRH1	Histamine H1 receptor		IC50			Homo sapiens	CHEMBL231;CHEMBL1909046;CHEMBL1909156
+chembl_activity	ethosuximide	HRH1	Histamine H1 receptor		Ki			Homo sapiens	CHEMBL231;CHEMBL1909046;CHEMBL1909156
+chembl_activity	ethosuximide	HRH2	Histamine H2 receptor		IC50			Homo sapiens	CHEMBL1941;CHEMBL1909046;CHEMBL1909157
+chembl_activity	ethosuximide	HRH2	Histamine H2 receptor		Ki			Homo sapiens	CHEMBL1941;CHEMBL1909046;CHEMBL1909157
+chembl_activity	ethosuximide	HMGCR	3-hydroxy-3-methylglutaryl-coenzyme A reductase		IC50			Homo sapiens	CHEMBL402;CHEMBL1909046;CHEMBL1909158
+chembl_activity	ethosuximide	HMGCR	3-hydroxy-3-methylglutaryl-coenzyme A reductase		Ki			Homo sapiens	CHEMBL402;CHEMBL1909046;CHEMBL1909158
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909159
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909159
+chembl_activity	ethosuximide	Insr	Insulin receptor		IC50			Rattus norvegicus	CHEMBL5486;CHEMBL1909046;CHEMBL1909160
+chembl_activity	ethosuximide	Insr	Insulin receptor		Ki			Rattus norvegicus	CHEMBL5486;CHEMBL1909046;CHEMBL1909160
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909161
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909161
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909162
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909162
+chembl_activity	ethosuximide	LTC4S	Leukotriene C4 synthase		IC50			Cavia porcellus	CHEMBL1909043;CHEMBL1909046;CHEMBL1909163
+chembl_activity	ethosuximide	LTC4S	Leukotriene C4 synthase		Ki			Cavia porcellus	CHEMBL1909043;CHEMBL1909046;CHEMBL1909163
+chembl_activity	ethosuximide	CYSLTR1	Cysteinyl leukotriene receptor 1		IC50			Homo sapiens	CHEMBL1798;CHEMBL1909046;CHEMBL1909164
+chembl_activity	ethosuximide	CYSLTR1	Cysteinyl leukotriene receptor 1		Ki			Homo sapiens	CHEMBL1798;CHEMBL1909046;CHEMBL1909164
+chembl_activity	ethosuximide	ALOX15	Polyunsaturated fatty acid lipoxygenase ALOX15		IC50			Oryctolagus cuniculus	CHEMBL4358;CHEMBL1909046;CHEMBL1909165
+chembl_activity	ethosuximide	ALOX15	Polyunsaturated fatty acid lipoxygenase ALOX15		Ki			Oryctolagus cuniculus	CHEMBL4358;CHEMBL1909046;CHEMBL1909165
+chembl_activity	ethosuximide	MC3R	Melanocortin receptor 3		IC50			Homo sapiens	CHEMBL4644;CHEMBL1909046;CHEMBL1909166
+chembl_activity	ethosuximide	MC3R	Melanocortin receptor 3		Ki			Homo sapiens	CHEMBL4644;CHEMBL1909046;CHEMBL1909166
+chembl_activity	ethosuximide	MC4R	Melanocortin receptor 4		IC50			Homo sapiens	CHEMBL259;CHEMBL1909046;CHEMBL1909167
+chembl_activity	ethosuximide	MC4R	Melanocortin receptor 4		Ki			Homo sapiens	CHEMBL259;CHEMBL1909046;CHEMBL1909167
+chembl_activity	ethosuximide	MC5R	Melanocortin receptor 5		IC50			Homo sapiens	CHEMBL4608;CHEMBL1909046;CHEMBL1909168
+chembl_activity	ethosuximide	MC5R	Melanocortin receptor 5		Ki			Homo sapiens	CHEMBL4608;CHEMBL1909046;CHEMBL1909168
+chembl_activity	ethosuximide	MAOA	Amine oxidase [flavin-containing] A		IC50			Homo sapiens	CHEMBL1951;CHEMBL1909046;CHEMBL1909169
+chembl_activity	ethosuximide	MAOA	Amine oxidase [flavin-containing] A		Ki			Homo sapiens	CHEMBL1951;CHEMBL1909046;CHEMBL1909169
+chembl_activity	ethosuximide	CHRM1	Muscarinic acetylcholine receptor M1		IC50			Homo sapiens	CHEMBL216;CHEMBL1909046;CHEMBL1909170
+chembl_activity	ethosuximide	CHRM1	Muscarinic acetylcholine receptor M1		Ki			Homo sapiens	CHEMBL216;CHEMBL1909046;CHEMBL1909170
+chembl_activity	ethosuximide	CHRM2	Muscarinic acetylcholine receptor M2		IC50			Homo sapiens	CHEMBL211;CHEMBL1909046;CHEMBL1909171
+chembl_activity	ethosuximide	CHRM2	Muscarinic acetylcholine receptor M2		Ki			Homo sapiens	CHEMBL211;CHEMBL1909046;CHEMBL1909171
+chembl_activity	ethosuximide	CHRM3	Muscarinic acetylcholine receptor M3		IC50			Homo sapiens	CHEMBL245;CHEMBL1909046;CHEMBL1909172
+chembl_activity	ethosuximide	CHRM3	Muscarinic acetylcholine receptor M3		Ki			Homo sapiens	CHEMBL245;CHEMBL1909046;CHEMBL1909172
+chembl_activity	ethosuximide	CHRM4	Muscarinic acetylcholine receptor M4		IC50			Homo sapiens	CHEMBL1821;CHEMBL1909046;CHEMBL1909173
+chembl_activity	ethosuximide	CHRM4	Muscarinic acetylcholine receptor M4		Ki			Homo sapiens	CHEMBL1821;CHEMBL1909046;CHEMBL1909173
+chembl_activity	ethosuximide	CHRM5	Muscarinic acetylcholine receptor M5		IC50			Homo sapiens	CHEMBL2035;CHEMBL1909046;CHEMBL1909174
+chembl_activity	ethosuximide	CHRM5	Muscarinic acetylcholine receptor M5		Ki			Homo sapiens	CHEMBL2035;CHEMBL1909046;CHEMBL1909174
+chembl_activity	ethosuximide	NPY1R	Neuropeptide Y receptor type 1		IC50			Homo sapiens	CHEMBL4777;CHEMBL1909046;CHEMBL1909175
+chembl_activity	ethosuximide	NPY1R	Neuropeptide Y receptor type 1		Ki			Homo sapiens	CHEMBL4777;CHEMBL1909046;CHEMBL1909175
+chembl_activity	ethosuximide	NPY2R	Neuropeptide Y receptor type 2		IC50			Homo sapiens	CHEMBL4018;CHEMBL1909046;CHEMBL1909176
+chembl_activity	ethosuximide	NPY2R	Neuropeptide Y receptor type 2		Ki			Homo sapiens	CHEMBL4018;CHEMBL1909046;CHEMBL1909176
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909177
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909177
+chembl_activity	ethosuximide	Nos1	Nitric oxide synthase 1		IC50			Rattus norvegicus	CHEMBL3048;CHEMBL1909046;CHEMBL1909178
+chembl_activity	ethosuximide	Nos1	Nitric oxide synthase 1		Ki			Rattus norvegicus	CHEMBL3048;CHEMBL1909046;CHEMBL1909178
+chembl_activity	ethosuximide	Nos2	Nitric oxide synthase, inducible		IC50			Mus musculus	CHEMBL3464;CHEMBL1909046;CHEMBL1909179
+chembl_activity	ethosuximide	Nos2	Nitric oxide synthase, inducible		Ki			Mus musculus	CHEMBL3464;CHEMBL1909046;CHEMBL1909179
+chembl_activity	ethosuximide	OPRD1	Delta-type opioid receptor		IC50			Homo sapiens	CHEMBL236;CHEMBL1909046;CHEMBL1909180
+chembl_activity	ethosuximide	OPRD1	Delta-type opioid receptor		Ki			Homo sapiens	CHEMBL236;CHEMBL1909046;CHEMBL1909180
+chembl_activity	ethosuximide	OPRK1	Kappa-type opioid receptor		IC50			Homo sapiens	CHEMBL237;CHEMBL1909046;CHEMBL1909181
+chembl_activity	ethosuximide	OPRK1	Kappa-type opioid receptor		Ki			Homo sapiens	CHEMBL237;CHEMBL1909046;CHEMBL1909181
+chembl_activity	ethosuximide	OPRM1	Mu-type opioid receptor		IC50			Homo sapiens	CHEMBL233;CHEMBL1909046;CHEMBL1909182
+chembl_activity	ethosuximide	OPRM1	Mu-type opioid receptor		Ki			Homo sapiens	CHEMBL233;CHEMBL1909046;CHEMBL1909182
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909183
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909183
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909184
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909184
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909185
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909185
+chembl_activity	ethosuximide	PDE5A	cGMP-specific 3',5'-cyclic phosphodiesterase		IC50			Homo sapiens	CHEMBL1827;CHEMBL1909046;CHEMBL1909186
+chembl_activity	ethosuximide	PDE5A	cGMP-specific 3',5'-cyclic phosphodiesterase		Ki			Homo sapiens	CHEMBL1827;CHEMBL1909046;CHEMBL1909186
+chembl_activity	ethosuximide	PTAFR	Platelet-activating factor receptor		IC50			Homo sapiens	CHEMBL250;CHEMBL1909046;CHEMBL1909187
+chembl_activity	ethosuximide	PTAFR	Platelet-activating factor receptor		Ki			Homo sapiens	CHEMBL250;CHEMBL1909046;CHEMBL1909187
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909188
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909188
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909189
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909189
+chembl_activity	ethosuximide	KCNH2	Voltage-gated inwardly rectifying potassium channel KCNH2		IC50			Homo sapiens	CHEMBL240;CHEMBL1909046;CHEMBL1909190
+chembl_activity	ethosuximide	KCNH2	Voltage-gated inwardly rectifying potassium channel KCNH2		Ki			Homo sapiens	CHEMBL240;CHEMBL1909046;CHEMBL1909190
+chembl_activity	ethosuximide	PGR	Progesterone receptor		IC50			Bos taurus	CHEMBL1909044;CHEMBL1909046;CHEMBL1909191
+chembl_activity	ethosuximide	PGR	Progesterone receptor		Ki			Bos taurus	CHEMBL1909044;CHEMBL1909046;CHEMBL1909191
+chembl_activity	ethosuximide	ACE	Angiotensin-converting enzyme		IC50			Oryctolagus cuniculus	CHEMBL4074;CHEMBL1909046;CHEMBL1909192
+chembl_activity	ethosuximide	ACE	Angiotensin-converting enzyme		Ki			Oryctolagus cuniculus	CHEMBL4074;CHEMBL1909046;CHEMBL1909192
+chembl_activity	ethosuximide	CASP1	Caspase-1		IC50			Homo sapiens	CHEMBL4801;CHEMBL1909046;CHEMBL1909193
+chembl_activity	ethosuximide	CASP1	Caspase-1		Ki			Homo sapiens	CHEMBL4801;CHEMBL1909046;CHEMBL1909193
+chembl_activity	ethosuximide	CTSG	Cathepsin G		IC50			Homo sapiens	CHEMBL4071;CHEMBL1909046;CHEMBL1909194
+chembl_activity	ethosuximide	CTSG	Cathepsin G		Ki			Homo sapiens	CHEMBL4071;CHEMBL1909046;CHEMBL1909194
+chembl_activity	ethosuximide	ELANE	Neutrophil elastase		IC50			Homo sapiens	CHEMBL248;CHEMBL1909046;CHEMBL1909195
+chembl_activity	ethosuximide	ELANE	Neutrophil elastase		Ki			Homo sapiens	CHEMBL248;CHEMBL1909046;CHEMBL1909195
+chembl_activity	ethosuximide	MMP1	Interstitial collagenase		IC50			Homo sapiens	CHEMBL332;CHEMBL1909046;CHEMBL1909196
+chembl_activity	ethosuximide	MMP1	Interstitial collagenase		Ki			Homo sapiens	CHEMBL332;CHEMBL1909046;CHEMBL1909196
+chembl_activity	ethosuximide	MMP9	Matrix metalloproteinase-9		IC50			Homo sapiens	CHEMBL321;CHEMBL1909046;CHEMBL1909197
+chembl_activity	ethosuximide	MMP9	Matrix metalloproteinase-9		Ki			Homo sapiens	CHEMBL321;CHEMBL1909046;CHEMBL1909197
+chembl_activity	ethosuximide	PRKCA	Protein kinase C alpha type		IC50			Homo sapiens	CHEMBL299;CHEMBL1909046;CHEMBL1909198
+chembl_activity	ethosuximide	PRKCA	Protein kinase C alpha type		Ki			Homo sapiens	CHEMBL299;CHEMBL1909046;CHEMBL1909198
+chembl_activity	ethosuximide	MAPK3	Mitogen-activated protein kinase 3		IC50			Homo sapiens	CHEMBL3385;CHEMBL1909046;CHEMBL1909199
+chembl_activity	ethosuximide	MAPK3	Mitogen-activated protein kinase 3		Ki			Homo sapiens	CHEMBL3385;CHEMBL1909046;CHEMBL1909199
+chembl_activity	ethosuximide	MAPK1	Mitogen-activated protein kinase 1		IC50			Homo sapiens	CHEMBL4040;CHEMBL1909046;CHEMBL1909200
+chembl_activity	ethosuximide	MAPK1	Mitogen-activated protein kinase 1		Ki			Homo sapiens	CHEMBL4040;CHEMBL1909046;CHEMBL1909200
+chembl_activity	ethosuximide	MAPK14	Mitogen-activated protein kinase 14		IC50			Homo sapiens	CHEMBL260;CHEMBL1909046;CHEMBL1909201
+chembl_activity	ethosuximide	MAPK14	Mitogen-activated protein kinase 14		Ki			Homo sapiens	CHEMBL260;CHEMBL1909046;CHEMBL1909201
+chembl_activity	ethosuximide	PPP3CA	Protein phosphatase 3 catalytic subunit alpha		IC50			Homo sapiens	CHEMBL4445;CHEMBL1909046;CHEMBL1909202
+chembl_activity	ethosuximide	PPP3CA	Protein phosphatase 3 catalytic subunit alpha		Ki			Homo sapiens	CHEMBL4445;CHEMBL1909046;CHEMBL1909202
+chembl_activity	ethosuximide	EGFR	Epidermal growth factor receptor		IC50			Homo sapiens	CHEMBL203;CHEMBL1909046;CHEMBL1909203
+chembl_activity	ethosuximide	EGFR	Epidermal growth factor receptor		Ki			Homo sapiens	CHEMBL203;CHEMBL1909046;CHEMBL1909203
+chembl_activity	ethosuximide	FYN	Tyrosine-protein kinase Fyn		IC50			Homo sapiens	CHEMBL1841;CHEMBL1909046;CHEMBL1909204
+chembl_activity	ethosuximide	FYN	Tyrosine-protein kinase Fyn		Ki			Homo sapiens	CHEMBL1841;CHEMBL1909046;CHEMBL1909204
+chembl_activity	ethosuximide	ERBB2	Receptor tyrosine-protein kinase erbB-2		IC50			Homo sapiens	CHEMBL1824;CHEMBL1909046;CHEMBL1909205
+chembl_activity	ethosuximide	ERBB2	Receptor tyrosine-protein kinase erbB-2		Ki			Homo sapiens	CHEMBL1824;CHEMBL1909046;CHEMBL1909205
+chembl_activity	ethosuximide	LCK	Tyrosine-protein kinase Lck		IC50			Homo sapiens	CHEMBL258;CHEMBL1909046;CHEMBL1909206
+chembl_activity	ethosuximide	LCK	Tyrosine-protein kinase Lck		Ki			Homo sapiens	CHEMBL258;CHEMBL1909046;CHEMBL1909206
+chembl_activity	ethosuximide	PTPRC	Receptor-type tyrosine-protein phosphatase C		IC50			Homo sapiens	CHEMBL3243;CHEMBL1909046;CHEMBL1909207
+chembl_activity	ethosuximide	PTPRC	Receptor-type tyrosine-protein phosphatase C		Ki			Homo sapiens	CHEMBL3243;CHEMBL1909046;CHEMBL1909207
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909208
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909208
+chembl_activity	ethosuximide	Htr1a	5-hydroxytryptamine receptor 1A		IC50			Rattus norvegicus	CHEMBL273;CHEMBL1909046;CHEMBL1909209
+chembl_activity	ethosuximide	Htr1a	5-hydroxytryptamine receptor 1A		Ki			Rattus norvegicus	CHEMBL273;CHEMBL1909046;CHEMBL1909209
+chembl_activity	ethosuximide	Htr1b	5-hydroxytryptamine receptor 1B		IC50			Rattus norvegicus	CHEMBL3459;CHEMBL1909046;CHEMBL1909210
+chembl_activity	ethosuximide	Htr1b	5-hydroxytryptamine receptor 1B		Ki			Rattus norvegicus	CHEMBL3459;CHEMBL1909046;CHEMBL1909210
+chembl_activity	ethosuximide	HTR2A	5-hydroxytryptamine receptor 2A		IC50			Homo sapiens	CHEMBL224;CHEMBL1909046;CHEMBL1909211
+chembl_activity	ethosuximide	HTR2A	5-hydroxytryptamine receptor 2A		Ki			Homo sapiens	CHEMBL224;CHEMBL1909046;CHEMBL1909211
+chembl_activity	ethosuximide	HTR2B	5-hydroxytryptamine receptor 2B		IC50			Homo sapiens	CHEMBL1833;CHEMBL1909046;CHEMBL1909104
+chembl_activity	ethosuximide	HTR2B	5-hydroxytryptamine receptor 2B		Ki			Homo sapiens	CHEMBL1833;CHEMBL1909046;CHEMBL1909104
+chembl_activity	ethosuximide	HTR2C	5-hydroxytryptamine receptor 2C		IC50			Homo sapiens	CHEMBL225;CHEMBL1909046;CHEMBL1909105
+chembl_activity	ethosuximide	HTR2C	5-hydroxytryptamine receptor 2C		Ki			Homo sapiens	CHEMBL225;CHEMBL1909046;CHEMBL1909105
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909106
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909106
+chembl_activity	ethosuximide	HTR4	5-hydroxytryptamine receptor 4		IC50			Cavia porcellus	CHEMBL5017;CHEMBL1909046;CHEMBL1909107
+chembl_activity	ethosuximide	HTR4	5-hydroxytryptamine receptor 4		Ki			Cavia porcellus	CHEMBL5017;CHEMBL1909046;CHEMBL1909107
+chembl_activity	ethosuximide	HTR6	5-hydroxytryptamine receptor 6		IC50			Homo sapiens	CHEMBL3371;CHEMBL1909046;CHEMBL1909108
+chembl_activity	ethosuximide	HTR6	5-hydroxytryptamine receptor 6		Ki			Homo sapiens	CHEMBL3371;CHEMBL1909046;CHEMBL1909108
+chembl_activity	ethosuximide	SLC6A4	Sodium-dependent serotonin transporter		IC50			Homo sapiens	CHEMBL228;CHEMBL1909046;CHEMBL1909109
+chembl_activity	ethosuximide	SLC6A4	Sodium-dependent serotonin transporter		Ki			Homo sapiens	CHEMBL228;CHEMBL1909046;CHEMBL1909109
+chembl_activity	ethosuximide	SIGMAR1	Sigma non-opioid intracellular receptor 1		IC50			Homo sapiens	CHEMBL287;CHEMBL1909046;CHEMBL1909110
+chembl_activity	ethosuximide	SIGMAR1	Sigma non-opioid intracellular receptor 1		Ki			Homo sapiens	CHEMBL287;CHEMBL1909046;CHEMBL1909110
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909111
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909111
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909112
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909112
+chembl_activity	ethosuximide	TACR1	Substance-P receptor		IC50			Homo sapiens	CHEMBL249;CHEMBL1909046;CHEMBL1909113
+chembl_activity	ethosuximide	TACR1	Substance-P receptor		Ki			Homo sapiens	CHEMBL249;CHEMBL1909046;CHEMBL1909113
+chembl_activity	ethosuximide	TACR2	Substance-K receptor		IC50			Homo sapiens	CHEMBL2327;CHEMBL1909046;CHEMBL1909114
+chembl_activity	ethosuximide	TACR2	Substance-K receptor		Ki			Homo sapiens	CHEMBL2327;CHEMBL1909046;CHEMBL1909114
+chembl_activity	ethosuximide	Ar	Androgen receptor		IC50			Rattus norvegicus	CHEMBL3072;CHEMBL1909046;CHEMBL1909115
+chembl_activity	ethosuximide	Ar	Androgen receptor		Ki			Rattus norvegicus	CHEMBL3072;CHEMBL1909046;CHEMBL1909115
+chembl_activity	ethosuximide	TBXAS1	Thromboxane-A synthase		IC50			Homo sapiens	CHEMBL1835;CHEMBL1909046;CHEMBL1909116
+chembl_activity	ethosuximide	TBXAS1	Thromboxane-A synthase		Ki			Homo sapiens	CHEMBL1835;CHEMBL1909046;CHEMBL1909116
+chembl_activity	ethosuximide		Unchecked		IC50				CHEMBL612545;CHEMBL1909046;CHEMBL1909117
+chembl_activity	ethosuximide		Unchecked		Ki				CHEMBL612545;CHEMBL1909046;CHEMBL1909117
+chembl_activity	ethosuximide	FLT1	Vascular endothelial growth factor receptor 1		IC50			Homo sapiens	CHEMBL1868;CHEMBL1909046;CHEMBL1909118
+chembl_activity	ethosuximide	FLT1	Vascular endothelial growth factor receptor 1		Ki			Homo sapiens	CHEMBL1868;CHEMBL1909046;CHEMBL1909118
+chembl_activity	ethosuximide	VIPR1	Vasoactive intestinal polypeptide receptor 1		IC50			Homo sapiens	CHEMBL5144;CHEMBL1909046;CHEMBL1909119
+chembl_activity	ethosuximide	VIPR1	Vasoactive intestinal polypeptide receptor 1		Ki			Homo sapiens	CHEMBL5144;CHEMBL1909046;CHEMBL1909119
+chembl_activity	ethosuximide	AVPR1A	Vasopressin V1a receptor		IC50			Homo sapiens	CHEMBL1889;CHEMBL1909046;CHEMBL1909120
+chembl_activity	ethosuximide	AVPR1A	Vasopressin V1a receptor		Ki			Homo sapiens	CHEMBL1889;CHEMBL1909046;CHEMBL1909120
+chembl_activity	ethosuximide	ABCB11	Bile salt export pump		IC50	>	1000000.0	Homo sapiens	CHEMBL6020;CHEMBL4017441;CHEMBL4017550
+chembl_activity	ethosuximide	ABCB11	Bile salt export pump		IC50	>	133000.0	Homo sapiens	CHEMBL6020;CHEMBL4028801;CHEMBL4028921
+chembl_activity	ethosuximide	ABCC2	ATP-binding cassette sub-family C member 2		IC50	>	133000.0	Homo sapiens	CHEMBL5748;CHEMBL4028801;CHEMBL4028922
+chembl_activity	ethosuximide	ABCC3	ATP-binding cassette sub-family C member 3		IC50	>	133000.0	Homo sapiens	CHEMBL5918;CHEMBL4028801;CHEMBL4028923
+chembl_activity	ethosuximide	ABCC4	ATP-binding cassette sub-family C member 4		IC50	>	133000.0	Homo sapiens	CHEMBL1743128;CHEMBL4028801;CHEMBL4028924
+chembl_activity	ethosuximide		Unchecked		IC50	=	600000.0		CHEMBL612545;CHEMBL4229462;CHEMBL4234582
+chembl_activity	ethosuximide		SARS-CoV-2		IC50	>	20000.0	Severe acute respiratory syndrome coronavirus 2	CHEMBL4303835;CHEMBL4651402;CHEMBL4651403
+chembl_activity	ethosuximide		SARS-CoV-2		IC50	>	19952.62	Severe acute respiratory syndrome coronavirus 2	CHEMBL4303835;CHEMBL4651402;CHEMBL4651403
+chembl_activity	ethosuximide		Mus musculus		EC50			Mus musculus	CHEMBL375;CHEMBL5113514;CHEMBL5119046
+chembl_activity	ethosuximide		Mus musculus		EC50	>		Mus musculus	CHEMBL375;CHEMBL5113514;CHEMBL5119049
+chembl_activity	ethosuximide		Mus musculus		EC50	=		Mus musculus	CHEMBL375;CHEMBL5113514;CHEMBL5119052
+opentargets_mechanism	ethosuximide	CACNA1H|CACNA1G|CACNA1I	Voltage-gated T-type calcium channel blocker	BLOCKER					CHEMBL696
+pharos_ligand	ethosuximide	CACNA1G	Voltage-dependent T-type calcium channel subunit alpha-1G	BLOCKER					pX=None
+chembl_activity	d-AP5		Unchecked		EC50	=	280.0		CHEMBL612545;CHEMBL1133464;CHEMBL753005
+chembl_activity	d-AP5		Unchecked		EC50	=	460.0		CHEMBL612545;CHEMBL1133464;CHEMBL753007
+chembl_activity	d-AP5		Unchecked		EC50	=	1640.0		CHEMBL612545;CHEMBL1133464;CHEMBL884516
+chembl_activity	d-AP5		Unchecked		EC50	=	3710.0		CHEMBL612545;CHEMBL1133464;CHEMBL753010
+chembl_activity	d-AP5	Grin1|Grin2a|Grin2b|Grin2c|Grin2d|Grin3a|Grin3b	Glutamate NMDA receptor		IC50	=	880.0	Rattus norvegicus	CHEMBL1907608;CHEMBL1144895;CHEMBL873448
+chembl_activity	d-AP5	GRIN1|GRIN2A|GRIN2B|GRIN2C|GRIN2D|GRIN3A|GRIN3B	Glutamate [NMDA] receptor		IC50	=	177.0	Homo sapiens	CHEMBL2094124;CHEMBL1127097;CHEMBL748787
+chembl_activity	d-AP5	GRIN1|GRIN2A|GRIN2B|GRIN2C|GRIN2D|GRIN3A|GRIN3B	Glutamate [NMDA] receptor		IC50	=	3700.0	Homo sapiens	CHEMBL2094124;CHEMBL1127097;CHEMBL748788
+chembl_activity	d-AP5	Grin1|Grin2a	Glutamate NMDA receptor; Grin1/Grin2a		Ki	=	280.0	Rattus norvegicus	CHEMBL2096680;CHEMBL1143579;CHEMBL829801
+chembl_activity	d-AP5		Unchecked		Ki	=	170.0		CHEMBL612545;CHEMBL1143579;CHEMBL827073
+chembl_activity	d-AP5	Grin1|Grin2b	Glutamate NMDA receptor; Grin1/Grin2b		Ki	=	460.0	Rattus norvegicus	CHEMBL2096666;CHEMBL1143579;CHEMBL828982
+chembl_activity	d-AP5		Unchecked		Ki	=	280.0		CHEMBL612545;CHEMBL1143579;CHEMBL827074
+chembl_activity	d-AP5	Grin1|Grin2c	Glutamate NMDA receptor; Grin1/Grin2c		Ki	=	1640.0	Rattus norvegicus	CHEMBL2096911;CHEMBL1143579;CHEMBL828983
+chembl_activity	d-AP5		Unchecked		Ki	=	3710.0		CHEMBL612545;CHEMBL1143579;CHEMBL828984
+chembl_activity	d-AP5		Unchecked		Ki	=	2260.0		CHEMBL612545;CHEMBL1143579;CHEMBL827075
+chembl_activity	d-AP5	Grin1|Grin2a|Grin2b|Grin2c|Grin2d|Grin3a|Grin3b	Glutamate NMDA receptor		Ki	=	3830.0	Rattus norvegicus	CHEMBL1907608;CHEMBL1144378;CHEMBL829838
+chembl_activity	d-AP5		Unchecked		IC50	>	100000.0		CHEMBL612545;CHEMBL1147886;CHEMBL892162
+chembl_activity	d-AP5		Unchecked		IC50	>	100000.0		CHEMBL612545;CHEMBL1147886;CHEMBL892161
+chembl_activity	d-AP5	Grin1|Grin2a	Glutamate NMDA receptor; Grin1/Grin2a		Ki	=	390.0	Rattus norvegicus	CHEMBL2096680;CHEMBL4024770;CHEMBL4027355
+chembl_activity	d-AP5	Grin1|Grin2b	Glutamate NMDA receptor; Grin1/Grin2b		Ki	=	2800.0	Rattus norvegicus	CHEMBL2096666;CHEMBL4024770;CHEMBL4027356
+chembl_activity	d-AP5	Grin1|Grin2c	Glutamate NMDA receptor; Grin1/Grin2c		Ki	=	5900.0	Rattus norvegicus	CHEMBL2096911;CHEMBL4024770;CHEMBL4027357
+chembl_activity	d-AP5	Grin1|Grin2d	Ionotropic glutamate receptor NMDA 1/2D		Ki	=	21000.0	Rattus norvegicus	CHEMBL3038506;CHEMBL4024770;CHEMBL4027358
+gtopdb	d-AP5	GRIN2A	GluN2A	Antagonist	-	=		Human	PMID:;sel=Selective;primary=false
+gtopdb	d-AP5	GRIN2B	GluN2B	Antagonist	-	=		Human	PMID:;sel=Selective;primary=false
+gtopdb	d-AP5	GRIN2C	GluN2C	Antagonist	-	=		Human	PMID:;sel=Selective;primary=false
+gtopdb	d-AP5	GRIN2D	GluN2D	Antagonist	-	=		Human	PMID:;sel=Selective;primary=false
+chembl_mechanism	ezogabine	KCNQ1|KCNQ2|KCNQ3|KCNQ4|KCNQ5	KCNQ (Kv7) potassium channel	OPENER				Homo sapiens	CHEMBL2363063;FDA:label/2012/022345s001lbl.pdf,PubMed:18590620
+chembl_activity	ezogabine	Kcnq2	Potassium voltage-gated channel subfamily KQT member 2		EC50	=	1300.0	Mus musculus	CHEMBL2985;CHEMBL1147528;CHEMBL700530
+chembl_activity	ezogabine	Kcnq2	Potassium voltage-gated channel subfamily KQT member 2		EC50	=	1300.0	Mus musculus	CHEMBL2985;CHEMBL1142835;CHEMBL838011
+chembl_activity	ezogabine		HEK293		EC50	=	1300.0	Homo sapiens	CHEMBL614818;CHEMBL1137190;CHEMBL833121
+chembl_activity	ezogabine		Unchecked		EC50	=	1000.0		CHEMBL612545;CHEMBL1141459;CHEMBL926130
+chembl_activity	ezogabine	KCNQ2	Potassium voltage-gated channel subfamily KQT member 2		EC50	<	150.0	Homo sapiens	CHEMBL2476;CHEMBL1141459;CHEMBL926131
+chembl_activity	ezogabine	KCNQ2|KCNQ3	Voltage-gated potassium channel, KQT; KCNQ2(Kv7.2)/KCNQ3(Kv7.3)		EC50	=	430.0	Homo sapiens	CHEMBL2221348;CHEMBL1687897;CHEMBL1693395
+chembl_activity	ezogabine	Kcnq2	Potassium voltage-gated channel subfamily KQT member 2		EC50	=	1300.0	Mus musculus	CHEMBL2985;CHEMBL2439980;CHEMBL2444337
+chembl_activity	ezogabine		ADMET		IC50	=	213000.0		CHEMBL612558;CHEMBL3621090;CHEMBL3626778
+chembl_activity	ezogabine	CISD1	CDGSH iron-sulfur domain-containing protein 1		IC50			Homo sapiens	CHEMBL1795168;CHEMBL3862005;CHEMBL3863230
+chembl_activity	ezogabine	CISD1	CDGSH iron-sulfur domain-containing protein 1		Ki			Homo sapiens	CHEMBL1795168;CHEMBL3862005;CHEMBL3863231
+chembl_activity	ezogabine	KCNQ2	Potassium voltage-gated channel subfamily KQT member 2		EC50	=	350.0	Homo sapiens	CHEMBL2476;CHEMBL4118146;CHEMBL4122315
+chembl_activity	ezogabine	KCNQ2	Potassium voltage-gated channel subfamily KQT member 2		EC50	=	350.0	Homo sapiens	CHEMBL2476;CHEMBL4229491;CHEMBL4235019
+chembl_activity	ezogabine	KCNQ2|KCNQ3	Voltage-gated potassium channel, KQT; KCNQ2(Kv7.2)/KCNQ3(Kv7.3)		EC50	=	4380.0	Homo sapiens	CHEMBL2221348;CHEMBL4351029;CHEMBL4354740
+chembl_activity	ezogabine	KCNQ4	Potassium voltage-gated channel subfamily KQT member 4		EC50	=	5900.0	Homo sapiens	CHEMBL3576;CHEMBL4382285;CHEMBL4385396
+chembl_activity	ezogabine	KCNQ5	Potassium voltage-gated channel subfamily KQT member 5		EC50	=	3450.0	Homo sapiens	CHEMBL2925;CHEMBL4382285;CHEMBL4385397
+chembl_activity	ezogabine	Kcnq2	Potassium voltage-gated channel subfamily KQT member 2		EC50	=	2170.0	Rattus norvegicus	CHEMBL5530;CHEMBL4382285;CHEMBL4385398
+chembl_activity	ezogabine	KCNQ2|KCNQ3	Voltage-gated potassium channel, KQT; KCNQ2(Kv7.2)/KCNQ3(Kv7.3)		EC50	=	1720.0	Homo sapiens	CHEMBL2221348;CHEMBL4402547;CHEMBL4403823
+chembl_activity	ezogabine	KCNQ2	Potassium voltage-gated channel subfamily KQT member 2		EC50	=	930.0	Homo sapiens	CHEMBL2476;CHEMBL4402547;CHEMBL4403829
+chembl_activity	ezogabine	KCNQ3	Potassium voltage-gated channel subfamily KQT member 3		EC50	=	3900.0	Homo sapiens	CHEMBL2684;CHEMBL4402547;CHEMBL4403830
+chembl_activity	ezogabine	KCNQ4	Potassium voltage-gated channel subfamily KQT member 4		EC50	=	1980.0	Homo sapiens	CHEMBL3576;CHEMBL4402547;CHEMBL4403831
+chembl_activity	ezogabine	KCNQ5	Potassium voltage-gated channel subfamily KQT member 5		EC50	=	800.0	Homo sapiens	CHEMBL2925;CHEMBL4402547;CHEMBL4403832
+chembl_activity	ezogabine	KCNQ2	Potassium voltage-gated channel subfamily KQT member 2		EC50	=	4210.0	Homo sapiens	CHEMBL2476;CHEMBL5113435;CHEMBL5116577
+chembl_activity	ezogabine	KCNQ2|KCNQ3	Voltage-gated potassium channel, KQT; KCNQ2(Kv7.2)/KCNQ3(Kv7.3)		EC50	=	11200.0	Homo sapiens	CHEMBL2221348;CHEMBL5126610;CHEMBL5130123
+chembl_activity	ezogabine	KCNQ2|KCNQ3	Voltage-gated potassium channel, KQT; KCNQ2(Kv7.2)/KCNQ3(Kv7.3)		EC50	=	2500.0	Homo sapiens	CHEMBL2221348;CHEMBL5126610;CHEMBL5130131
+chembl_activity	ezogabine	Kcnq2	Potassium voltage-gated channel subfamily KQT member 2		EC50	=	2040.0	Rattus norvegicus	CHEMBL5530;CHEMBL5149984;CHEMBL5151184
+chembl_activity	ezogabine	Kcnq2|Kcnq3	Potassium voltage-gated channel subfamily KQT member 2/member 3		EC50	=	4150.0	Rattus norvegicus	CHEMBL3885622;CHEMBL5149984;CHEMBL5151185
+chembl_activity	ezogabine		Brain		EC50	=	2230.0	Mus musculus	CHEMBL613564;CHEMBL5149984;CHEMBL5151200
+chembl_activity	ezogabine		Mus musculus		EC50	=	20040.0	Mus musculus	CHEMBL375;CHEMBL5149984;CHEMBL5151201
+chembl_activity	ezogabine		Brain		EC50	=	27320.0	Mus musculus	CHEMBL613564;CHEMBL5149984;CHEMBL5151204
+chembl_activity	ezogabine		Mus musculus		EC50	=	141330.0	Mus musculus	CHEMBL375;CHEMBL5149984;CHEMBL5151205
+chembl_activity	ezogabine	KCNQ2	Potassium voltage-gated channel subfamily KQT member 2		EC50	=	2040.0	Homo sapiens	CHEMBL2476;CHEMBL5380849;CHEMBL5384403
+chembl_activity	ezogabine	KCNQ2|KCNQ3	Voltage-gated potassium channel, KQT; KCNQ2(Kv7.2)/KCNQ3(Kv7.3)		EC50	=	1837.0	Homo sapiens	CHEMBL2221348;CHEMBL5380849;CHEMBL5384404
+opentargets_mechanism	ezogabine	KCNQ1|KCNQ2|KCNQ3|KCNQ5|KCNQ4	KCNQ (Kv7) potassium channel opener	OPENER					CHEMBL41355
+pharos_ligand	ezogabine	KCNQ2	Potassium voltage-gated channel subfamily KQT member 2		EC50		2511.8870098928705		pX=5.5999999
+pharos_ligand	ezogabine	KCNQ3	Potassium voltage-gated channel subfamily KQT member 3		EC50		630.9576205185197		pX=6.19999981
+pharos_ligand	ezogabine	KCNQ4	Potassium voltage-gated channel subfamily KQT member 4		EC50		6309.576205185197		pX=5.19999981
+pharos_ligand	ezogabine	KCNQ5	Potassium voltage-gated channel subfamily KQT member 5		EC50		10000.0		pX=5
+pharos_ligand	ezogabine	KCNQ3	Potassium voltage-gated channel subfamily KQT member 3		EC50		3890.4514499428046		pX=5.41
+pharos_ligand	ezogabine	KCNQ5	Potassium voltage-gated channel subfamily KQT member 5		EC50		794.3282347242822		pX=6.1
+pharos_ligand	ezogabine	KCNQ5	Potassium voltage-gated channel subfamily KQT member 5		EC50		3467.368504525317		pX=5.46
+pharos_ligand	ezogabine	KCNQ4	Potassium voltage-gated channel subfamily KQT member 4		EC50		1995.2623149688789		pX=5.7
+pharos_ligand	ezogabine	KCNQ4	Potassium voltage-gated channel subfamily KQT member 4		EC50		5888.436553555884		pX=5.23
+pharos_ligand	ezogabine	KCNQ2	Potassium voltage-gated channel subfamily KQT member 2		EC50		346.73685045253166		pX=6.46
+pharos_ligand	ezogabine	KCNQ2	Potassium voltage-gated channel subfamily KQT member 2		EC50		346.73685045253166		pX=6.46
+pharos_ligand	ezogabine	KCNQ2	Potassium voltage-gated channel subfamily KQT member 2		EC50		933.2543007969905		pX=6.03
+pharos_ligand	ezogabine	KCNQ2	Potassium voltage-gated channel subfamily KQT member 2	ACTIVATOR	EC50		2511.886431509582		pX=5.6
+pharos_ligand	ezogabine	KCNQ3	Potassium voltage-gated channel subfamily KQT member 3	ACTIVATOR	EC50		630.957344480193		pX=6.2
+pharos_ligand	ezogabine	KCNQ5	Potassium voltage-gated channel subfamily KQT member 5	ACTIVATOR	EC50		10000.0		pX=5
+pharos_ligand	ezogabine	KCNQ4	Potassium voltage-gated channel subfamily KQT member 4	ACTIVATOR	EC50		6309.57344480193		pX=5.2
+gtopdb	ezogabine	KCNQ2	K<SUB>v</SUB>7.2	Activation	pEC50	=	2511.886983098868	Human	PMID:11466425|32884139;sel=Non-selective;primary=true
+gtopdb	ezogabine	KCNQ3	K<SUB>v</SUB>7.3	None	pEC50	=	630.9576215861531	Human	PMID:11466425;sel=Non-selective;primary=true
+gtopdb	ezogabine	KCNQ4	K<SUB>v</SUB>7.4	None	pEC50	=	6309.576215861531	Human	PMID:11466425;sel=Non-selective;primary=true
+gtopdb	ezogabine	KCNQ5	K<SUB>v</SUB>7.5	None	pEC50	=	10000.0	Human	PMID:11890900;sel=Non-selective;primary=true
+chembl_mechanism	bumetanide	SLC12A1	Solute carrier family 12 member 1	INHIBITOR				Homo sapiens	CHEMBL1874;DOI:10.1056/NEJMra0907219,FDA:label/2010/018225s024lbl.pdf,Wikipedia:Bumetanide,Wikipedia:Loop_diuretic
+chembl_activity	bumetanide		Trypanosoma cruzi		IC50			Trypanosoma cruzi	CHEMBL368;CHEMBL1212812;CHEMBL1216998
+chembl_activity	bumetanide		Trypanosoma brucei rhodesiense		IC50			Trypanosoma brucei rhodesiense	CHEMBL612348;CHEMBL1212812;CHEMBL1217013
+chembl_activity	bumetanide		Trypanosoma brucei brucei		IC50			Trypanosoma brucei brucei	CHEMBL612851;CHEMBL1212812;CHEMBL1216999
+chembl_activity	bumetanide		Trypanosoma brucei		IC50			Trypanosoma brucei	CHEMBL612849;CHEMBL1212812;CHEMBL1217001
+chembl_activity	bumetanide		Trichomonas vaginalis		IC50			Trichomonas vaginalis	CHEMBL612884;CHEMBL1212812;CHEMBL1217004
+chembl_activity	bumetanide		Toxoplasma gondii		IC50			Toxoplasma gondii	CHEMBL612888;CHEMBL1212812;CHEMBL1217005
+chembl_activity	bumetanide		Pneumocystis carinii		IC50			Pneumocystis carinii	CHEMBL613064;CHEMBL1212812;CHEMBL1217186
+chembl_activity	bumetanide		Plasmodium falciparum		IC50			Plasmodium falciparum	CHEMBL364;CHEMBL1212812;CHEMBL1217000
+chembl_activity	bumetanide		Leishmania		IC50			Leishmania	CHEMBL2366686;CHEMBL1212812;CHEMBL1217002
+chembl_activity	bumetanide		Leishmania mexicana		IC50			Leishmania mexicana	CHEMBL612880;CHEMBL1212812;CHEMBL1217006
+chembl_activity	bumetanide		Leishmania major		IC50			Leishmania major	CHEMBL612879;CHEMBL1212812;CHEMBL1217011
+chembl_activity	bumetanide		Leishmania infantum		IC50			Leishmania infantum	CHEMBL612848;CHEMBL1212812;CHEMBL1217010
+chembl_activity	bumetanide		Leishmania donovani		IC50			Leishmania donovani	CHEMBL367;CHEMBL1212812;CHEMBL1217009
+chembl_activity	bumetanide		Leishmania amazonensis		IC50			Leishmania amazonensis	CHEMBL612877;CHEMBL1212812;CHEMBL1217008
+chembl_activity	bumetanide		Entamoeba histolytica		IC50			Entamoeba histolytica	CHEMBL612853;CHEMBL1212812;CHEMBL1217007
+chembl_activity	bumetanide		Cryptosporidium parvum		IC50			Cryptosporidium parvum	CHEMBL612855;CHEMBL1212812;CHEMBL1217012
+chembl_activity	bumetanide	Slc22a6	Solute carrier family 22 member 6		Ki	=	5500.0	Rattus norvegicus	CHEMBL1777665;CHEMBL2074230;CHEMBL2078155
+chembl_activity	bumetanide	ABCB11	Bile salt export pump		IC50	>	135000.0	Homo sapiens	CHEMBL6020;CHEMBL4011581;CHEMBL4011663
+chembl_activity	bumetanide	ABCB11	Bile salt export pump		IC50	=	526400.0	Homo sapiens	CHEMBL6020;CHEMBL4017441;CHEMBL4017550
+chembl_activity	bumetanide	ABCB11	Bile salt export pump		IC50	>	133000.0	Homo sapiens	CHEMBL6020;CHEMBL4028801;CHEMBL4028921
+chembl_activity	bumetanide	ABCC3	ATP-binding cassette sub-family C member 3		IC50	>	133000.0	Homo sapiens	CHEMBL5918;CHEMBL4028801;CHEMBL4028923
+chembl_activity	bumetanide	ABCC4	ATP-binding cassette sub-family C member 4		IC50	>	133000.0	Homo sapiens	CHEMBL1743128;CHEMBL4028801;CHEMBL4028924
+chembl_activity	bumetanide		SARS-CoV-2		IC50	>	20000.0	Severe acute respiratory syndrome coronavirus 2	CHEMBL4303835;CHEMBL4651402;CHEMBL4651403
+chembl_activity	bumetanide		SARS-CoV-2		IC50	>	19952.62	Severe acute respiratory syndrome coronavirus 2	CHEMBL4303835;CHEMBL4651402;CHEMBL4651403
+chembl_activity	bumetanide	SLC12A2	Solute carrier family 12 member 2		IC50	=	1540.0	Homo sapiens	CHEMBL1615383;CHEMBL5230131;CHEMBL5231873
+chembl_activity	bumetanide	Aqp4	Aquaporin-4		IC50	=	100000.0	Rattus norvegicus	CHEMBL5291512;CHEMBL5230131;CHEMBL5231884
+chembl_activity	bumetanide	CA2	Carbonic anhydrase 2		Ki	=	6980.0	Homo sapiens	CHEMBL205;CHEMBL5584335;CHEMBL5587980
+chembl_activity	bumetanide	CA3	Carbonic anhydrase 3		Ki	=	3400000.0	Homo sapiens	CHEMBL2885;CHEMBL5584335;CHEMBL5587981
+opentargets_mechanism	bumetanide	SLC12A1	Sodium-(potassium)-chloride cotransporter 2 inhibitor	INHIBITOR					CHEMBL1072
+pharos_ligand	bumetanide	SLC12A2	Solute carrier family 12 member 2		-		2511.8870098928705		pX=5.5999999
+pharos_ligand	bumetanide	SLC12A1	Solute carrier family 12 member 1		-		331.13110623343954		pX=6.48000002
+pharos_ligand	bumetanide	SLC12A1	Solute carrier family 12 member 1	INHIBITOR	Ki		25.11886431509582		pX=7.6
+gtopdb	bumetanide	SLC12A2	Basolateral Na-K-Cl symporter	Inhibition	pIC50	=	2511.886983098868	Human	PMID:11882915;sel=Non-selective;primary=false
+gtopdb	bumetanide	GPR35	<i>GPR35</i>	Agonist	pEC50	=		Human	PMID:22236570;sel=Not Determined;primary=false
+gtopdb	bumetanide	SLC12A1	Kidney-specific Na-K-Cl symporter	Inhibition	pIC50	=	331.1311069398671	Human	PMID:11882915;sel=Non-selective;primary=true
+chembl_mechanism	radiprodil	GRIN1|GRIN2B	Glutamate NMDA receptor; GRIN1/GRIN2B	ANTAGONIST				Homo sapiens	CHEMBL1907603;
+chembl_activity	radiprodil	GRIN1|GRIN2A|GRIN2B|GRIN2C|GRIN2D|GRIN3A|GRIN3B	Glutamate [NMDA] receptor		IC50	=	6.0	Homo sapiens	CHEMBL2094124;CHEMBL1137121;CHEMBL832427
+chembl_activity	radiprodil	GRIN1|GRIN2B	Glutamate NMDA receptor; GRIN1/GRIN2B		IC50	=	4.0	Homo sapiens	CHEMBL1907603;CHEMBL1137121;CHEMBL828708
+chembl_activity	radiprodil	GRIN1|GRIN2B	Glutamate NMDA receptor; GRIN1/GRIN2B		IC50	=	6.0	Homo sapiens	CHEMBL1907603;CHEMBL1799931;CHEMBL1805121
+chembl_activity	radiprodil	GRIN1|GRIN2B	Glutamate NMDA receptor; GRIN1/GRIN2B		IC50	=	69.91	Homo sapiens	CHEMBL1907603;CHEMBL1799931;CHEMBL1805126
+chembl_activity	radiprodil	GRIN1|GRIN2B	Glutamate NMDA receptor; GRIN1/GRIN2B		IC50	=	4.0	Homo sapiens	CHEMBL1907603;CHEMBL1799931;CHEMBL1803133
+chembl_activity	radiprodil	Grin2b	Glutamate receptor ionotropic, NMDA 2B		IC50	=	31.62	Rattus norvegicus	CHEMBL311;CHEMBL4052799;CHEMBL4058410
+chembl_activity	radiprodil	Grin2b	Glutamate receptor ionotropic, NMDA 2B		IC50	=	3.162	Mus musculus	CHEMBL3442;CHEMBL4052799;CHEMBL4058411
+chembl_activity	radiprodil	Grin2b	Glutamate receptor ionotropic, NMDA 2B		IC50	=	31.62	Rattus norvegicus	CHEMBL311;CHEMBL4316607;CHEMBL4321002
+chembl_activity	radiprodil	Grin2b	Glutamate receptor ionotropic, NMDA 2B		IC50	=	3.162	Mus musculus	CHEMBL3442;CHEMBL4316607;CHEMBL4321003
+opentargets_mechanism	radiprodil	GRIN1|GRIN2B	Glutamate NMDA receptor; GRIN1/GRIN2B antagonist	ANTAGONIST					CHEMBL182066
+chembl_activity	Ro 25-6981	GRIN1|GRIN2A|GRIN2B|GRIN2C|GRIN2D|GRIN3A|GRIN3B	Glutamate [NMDA] receptor		Ki	=	5.6	Homo sapiens	CHEMBL2094124;CHEMBL1133913;CHEMBL751686
+chembl_activity	Ro 25-6981	ADRA1A|ADRA1B|ADRA1D	Adrenergic receptor alpha-1		Ki	=	180.0	Homo sapiens	CHEMBL2094251;CHEMBL1133913;CHEMBL648825
+chembl_activity	Ro 25-6981	Grin1|Grin2b	Glutamate NMDA receptor; Grin1/Grin2b		IC50	=	9.0	Rattus norvegicus	CHEMBL2096666;CHEMBL1131743;CHEMBL746994
+chembl_activity	Ro 25-6981	Grin1|Grin2a	Glutamate NMDA receptor; Grin1/Grin2a		IC50	=	52000.0	Rattus norvegicus	CHEMBL2096680;CHEMBL1132364;CHEMBL747509
+chembl_activity	Ro 25-6981	Grin1|Grin2b	Glutamate NMDA receptor; Grin1/Grin2b		IC50	=	9.0	Rattus norvegicus	CHEMBL2096666;CHEMBL1132364;CHEMBL748097
+chembl_activity	Ro 25-6981	GRIN1|GRIN2A|GRIN2B|GRIN2C|GRIN2D|GRIN3A|GRIN3B	Glutamate [NMDA] receptor		Ki	=	6.0	Homo sapiens	CHEMBL2094124;CHEMBL1136613;CHEMBL751683
+chembl_activity	Ro 25-6981	GRIN1|GRIN2A|GRIN2B|GRIN2C|GRIN2D|GRIN3A|GRIN3B	Glutamate [NMDA] receptor		IC50	=	6.0	Homo sapiens	CHEMBL2094124;CHEMBL1136340;CHEMBL857544
+chembl_activity	Ro 25-6981	GRIN1|GRIN2B	Glutamate NMDA receptor; GRIN1/GRIN2B		IC50	=	57.0	Homo sapiens	CHEMBL1907603;CHEMBL1136340;CHEMBL752265
+chembl_activity	Ro 25-6981	GRIN1|GRIN2B	Glutamate NMDA receptor; GRIN1/GRIN2B		Ki	=	10.0	Homo sapiens	CHEMBL1907603;CHEMBL1136591;CHEMBL747358
+chembl_activity	Ro 25-6981	GRIN1|GRIN2A|GRIN2B|GRIN2C|GRIN2D|GRIN3A|GRIN3B	Glutamate [NMDA] receptor		IC50	=	6.0	Homo sapiens	CHEMBL2094124;CHEMBL1137121;CHEMBL832427
+chembl_activity	Ro 25-6981	GRIN1|GRIN2B	Glutamate NMDA receptor; GRIN1/GRIN2B		IC50	=	57.0	Homo sapiens	CHEMBL1907603;CHEMBL1137121;CHEMBL828708
+chembl_activity	Ro 25-6981	Grin2b	Glutamate receptor ionotropic, NMDA 2B		IC50	=	6.0	Rattus norvegicus	CHEMBL311;CHEMBL1148684;CHEMBL909221
+chembl_activity	Ro 25-6981	Grin1|Grin2a|Grin2b|Grin2c|Grin2d|Grin3a|Grin3b	Glutamate NMDA receptor		IC50	=	159.0	Rattus norvegicus	CHEMBL1907608;CHEMBL1148684;CHEMBL909225
+chembl_activity	Ro 25-6981	Grin2b	Glutamate receptor ionotropic, NMDA 2B		IC50	=	159.0	Rattus norvegicus	CHEMBL311;CHEMBL1142862;CHEMBL914283
+chembl_activity	Ro 25-6981	Grin2b	Glutamate receptor ionotropic, NMDA 2B		IC50	=	6.0	Rattus norvegicus	CHEMBL311;CHEMBL1142862;CHEMBL914284
+chembl_activity	Ro 25-6981	Grin1|Grin2b	Glutamate NMDA receptor; Grin1/Grin2b		IC50	=	17.0	Rattus norvegicus	CHEMBL2096666;CHEMBL2176878;CHEMBL2185923
+chembl_activity	Ro 25-6981	Grin1|Grin2b	Glutamate NMDA receptor; Grin1/Grin2b		IC50	=	9.0	Rattus norvegicus	CHEMBL2096666;CHEMBL2176878;CHEMBL2186393
+chembl_activity	Ro 25-6981		NON-PROTEIN TARGET		IC50	=	400.0		CHEMBL3879801;CHEMBL2331315;CHEMBL2343348
+chembl_activity	Ro 25-6981	GRIN2B	Glutamate receptor ionotropic, NMDA 2B		Ki	=	173.0	Homo sapiens	CHEMBL1904;CHEMBL4251630;CHEMBL4254519
+chembl_activity	Ro 25-6981		Unchecked		IC50	=	18.0		CHEMBL612545;CHEMBL4251630;CHEMBL4254527
+chembl_activity	Ro 25-6981	GRIN2B	Glutamate receptor ionotropic, NMDA 2B		IC50	=	9.0	Homo sapiens	CHEMBL1904;CHEMBL4308825;CHEMBL4309004
+chembl_activity	Ro 25-6981	GRIN2A	Glutamate receptor ionotropic, NMDA 2A		IC50	=	52000.0	Homo sapiens	CHEMBL1972;CHEMBL4308825;CHEMBL4309003
+chembl_activity	Ro 25-6981		Unchecked		IC50	=	13.0		CHEMBL612545;CHEMBL4312002;CHEMBL4315426
+chembl_activity	Ro 25-6981		Unchecked		Ki	=	170.0		CHEMBL612545;CHEMBL4312002;CHEMBL4315422
+chembl_activity	Ro 25-6981	GRIN2B	Glutamate receptor ionotropic, NMDA 2B		IC50	=	9.0	Homo sapiens	CHEMBL1904;CHEMBL4480375;CHEMBL4480646
+chembl_activity	Ro 25-6981	GRIN2B	Glutamate receptor ionotropic, NMDA 2B		IC50	=	9.0	Homo sapiens	CHEMBL1904;CHEMBL5252602;CHEMBL5255361
+chembl_activity	Ro 25-6981	GRIN2B	Glutamate receptor ionotropic, NMDA 2B		Ki	=	135.0	Homo sapiens	CHEMBL1904;CHEMBL6092187;CHEMBL6094234
+chembl_mechanism	apinocaltamide	CACNA1G|CACNA1H|CACNA1I	Voltage-gated T-type calcium channel	BLOCKER				Homo sapiens	CHEMBL2362995;Other:https://www.idorsia.com/about-idorsia/idorsia-today/our-pipeline,PubMed:29116786,PubMed:31004346
+chembl_activity	apinocaltamide	CACNA1H	Voltage-dependent T-type calcium channel subunit alpha-1H		IC50	=	18.0	Homo sapiens	CHEMBL1859;CHEMBL4177680;CHEMBL4181720
+chembl_activity	apinocaltamide	CACNA1I	Voltage-dependent T-type calcium channel subunit alpha-1I		IC50	=	7.5	Homo sapiens	CHEMBL5558;CHEMBL4177680;CHEMBL4181721
+chembl_activity	apinocaltamide	CACNA1G	Voltage-dependent T-type calcium channel subunit alpha-1G		IC50	=	6.4	Homo sapiens	CHEMBL4641;CHEMBL4177680;CHEMBL4181719
+chembl_activity	apinocaltamide	CACNA1C	Voltage-dependent L-type calcium channel subunit alpha-1C		IC50	=	2410.0	Homo sapiens	CHEMBL1940;CHEMBL4177680;CHEMBL4181722
+chembl_activity	apinocaltamide	CYP3A4	Cytochrome P450 3A4		IC50	=	46000.0	Homo sapiens	CHEMBL340;CHEMBL4177680;CHEMBL4181762
+chembl_activity	apinocaltamide	Cacna1g	Voltage-dependent T-type calcium channel subunit alpha-1G		IC50	=	16.0	Rattus norvegicus	CHEMBL4257;CHEMBL4177680;CHEMBL4181763
+chembl_activity	apinocaltamide	Cacna1h	Voltage-dependent T-type calcium channel subunit alpha-1H		IC50	=	13.0	Rattus norvegicus	CHEMBL5134;CHEMBL4177680;CHEMBL4181764
+chembl_activity	apinocaltamide	Cacna1i	Voltage-dependent T-type calcium channel subunit alpha-1I		IC50	=	1.8	Rattus norvegicus	CHEMBL5459;CHEMBL4177680;CHEMBL4181765
+chembl_activity	apinocaltamide	Cacna1g	T-type calcium channel alpha 1G subunit		IC50	=	6.4	Mus musculus	CHEMBL4295836;CHEMBL4177680;CHEMBL4181766
+chembl_activity	apinocaltamide	Cacna1h	Voltage-dependent T-type calcium channel subunit alpha-1H		IC50	=	40.0	Mus musculus	CHEMBL3600280;CHEMBL4177680;CHEMBL4181767
+chembl_activity	apinocaltamide		Unchecked		IC50	=	20.0		CHEMBL612545;CHEMBL4177680;CHEMBL4181768
+chembl_activity	apinocaltamide		Unchecked		IC50	=	33.0		CHEMBL612545;CHEMBL4177680;CHEMBL4181769
+chembl_activity	apinocaltamide		Unchecked		IC50	=	3.4		CHEMBL612545;CHEMBL4177680;CHEMBL4181770
+chembl_activity	apinocaltamide		Unchecked		IC50	=	19.0		CHEMBL612545;CHEMBL4177680;CHEMBL4181771
+chembl_activity	apinocaltamide	CACNA1I	Voltage-dependent T-type calcium channel subunit alpha-1I		Ki	=	20.0	Homo sapiens	CHEMBL5558;CHEMBL4177680;CHEMBL4181776
+chembl_activity	apinocaltamide	KCNH2	Voltage-gated inwardly rectifying potassium channel KCNH2		IC50	=	5500.0	Homo sapiens	CHEMBL240;CHEMBL4177680;CHEMBL4181782
+chembl_activity	apinocaltamide	CYP1A2	Cytochrome P450 1A2		IC50	>	100000.0	Homo sapiens	CHEMBL3356;CHEMBL4177680;CHEMBL4181827
+chembl_activity	apinocaltamide	CYP2A6	Cytochrome P450 2A6		IC50	>	100000.0	Homo sapiens	CHEMBL5282;CHEMBL4177680;CHEMBL4181828
+chembl_activity	apinocaltamide	CYP2B6	Cytochrome P450 2B6		IC50	=	52000.0	Homo sapiens	CHEMBL4729;CHEMBL4177680;CHEMBL4181829
+chembl_activity	apinocaltamide	CYP2C8	Cytochrome P450 2C8		IC50	=	14000.0	Homo sapiens	CHEMBL3721;CHEMBL4177680;CHEMBL4181830
+chembl_activity	apinocaltamide	CYP2C9	Cytochrome P450 2C9		IC50	=	22000.0	Homo sapiens	CHEMBL3397;CHEMBL4177680;CHEMBL4181831
+chembl_activity	apinocaltamide	CYP2C19	Cytochrome P450 2C19		IC50	=	25000.0	Homo sapiens	CHEMBL3622;CHEMBL4177680;CHEMBL4181832
+chembl_activity	apinocaltamide	CYP2D6	Cytochrome P450 2D6		IC50	=	15000.0	Homo sapiens	CHEMBL289;CHEMBL4177680;CHEMBL4181833
+chembl_activity	apinocaltamide	CYP3A4	Cytochrome P450 3A4		IC50	=	51000.0	Homo sapiens	CHEMBL340;CHEMBL4177680;CHEMBL4181834
+opentargets_mechanism	apinocaltamide	CACNA1H|CACNA1G|CACNA1I	Voltage-gated T-type calcium channel blocker	BLOCKER					CHEMBL4217292
+chembl_mechanism	memantine	GRIN1|GRIN2A|GRIN2B|GRIN2C|GRIN2D|GRIN3A|GRIN3B	Glutamate [NMDA] receptor	NEGATIVE ALLOSTERIC MODULATOR				Homo sapiens	CHEMBL2094124;FDA:label/2003/021487lbl.pdf,Wikipedia:Memantine
+chembl_activity	memantine	Grin2c	Glutamate receptor ionotropic, NMDA 2C		Ki	=	700.0	Rattus norvegicus	CHEMBL401;CHEMBL1132713;CHEMBL751722
+chembl_activity	memantine	GRIN1|GRIN2A|GRIN2B|GRIN2C|GRIN2D|GRIN3A|GRIN3B	Glutamate [NMDA] receptor		Ki	=	540.0	Homo sapiens	CHEMBL2094124;CHEMBL1131462;CHEMBL761030
+chembl_activity	memantine	GRIN1|GRIN2B	Glutamate NMDA receptor; GRIN1/GRIN2B		IC50	=	1020.0	Homo sapiens	CHEMBL1907603;CHEMBL1146243;CHEMBL889737
+chembl_activity	memantine	GRIN1|GRIN2A	Glutamate NMDA receptor; GRIN1/GRIN2A		IC50	=	911.0	Homo sapiens	CHEMBL1907604;CHEMBL1146243;CHEMBL889736
+chembl_activity	memantine		FM3A		IC50	=	147000.0	Mus musculus	CHEMBL614297;CHEMBL1146243;CHEMBL889738
+chembl_activity	memantine		Unchecked		IC50	=	3050.0		CHEMBL612545;CHEMBL1139055;CHEMBL885694
+chembl_activity	memantine	SLC22A1	Solute carrier family 22 member 1		IC50	=	27200.0	Homo sapiens	CHEMBL5685;CHEMBL1140113;CHEMBL994103
+chembl_activity	memantine		Unchecked		IC50	=	55000.0		CHEMBL612545;CHEMBL1153936;CHEMBL962391
+chembl_activity	memantine	Grin1|Grin2a|Grin2b|Grin2c|Grin2d|Grin3a|Grin3b	Glutamate NMDA receptor		IC50	=	1500.0	Rattus norvegicus	CHEMBL1907608;CHEMBL1153936;CHEMBL962392
+chembl_activity	memantine	Grin1|Grin2a|Grin2b|Grin2c|Grin2d|Grin3a|Grin3b	Glutamate NMDA receptor		IC50	=	1500.0	Rattus norvegicus	CHEMBL1907608;CHEMBL1151696;CHEMBL985339
+chembl_activity	memantine	Grin1|Grin2a|Grin2b|Grin2c|Grin2d|Grin3a|Grin3b	Glutamate NMDA receptor		IC50	=	55000.0	Rattus norvegicus	CHEMBL1907608;CHEMBL1151696;CHEMBL985337
+chembl_activity	memantine	GRIN1|GRIN2B	Glutamate NMDA receptor; GRIN1/GRIN2B		IC50	=	9520.0	Homo sapiens	CHEMBL1907603;CHEMBL1155822;CHEMBL982936
+chembl_activity	memantine	Grin1|Grin2a|Grin2b|Grin2c|Grin2d|Grin3a|Grin3b	Glutamate NMDA receptor		IC50	=	55400.0	Rattus norvegicus	CHEMBL1907608;CHEMBL1152149;CHEMBL959083
+chembl_activity	memantine	Grin1|Grin2a|Grin2b|Grin2c|Grin2d|Grin3a|Grin3b	Glutamate NMDA receptor		IC50	=	1500.0	Rattus norvegicus	CHEMBL1907608;CHEMBL1152149;CHEMBL959084
+chembl_activity	memantine		Trypanosoma brucei		IC50	=	13750.0	Trypanosoma brucei	CHEMBL612849;CHEMBL1157696;CHEMBL1070804
+chembl_activity	memantine	Grin1|Grin2a|Grin2b|Grin2c|Grin2d|Grin3a|Grin3b	Glutamate NMDA receptor		IC50	=	1500.0	Rattus norvegicus	CHEMBL1907608;CHEMBL1157696;CHEMBL1070801
+chembl_activity	memantine	Grin1|Grin2a|Grin2b|Grin2c|Grin2d|Grin3a|Grin3b	Glutamate NMDA receptor		IC50	=	55000.0	Rattus norvegicus	CHEMBL1907608;CHEMBL1157696;CHEMBL1070800
+chembl_activity	memantine	GRIN1|GRIN2B	Glutamate NMDA receptor; GRIN1/GRIN2B		IC50	=	5500.0	Homo sapiens	CHEMBL1907603;CHEMBL1157915;CHEMBL1105655
+chembl_activity	memantine	GRIN1|GRIN2A	Glutamate NMDA receptor; GRIN1/GRIN2A		IC50	=	5600.0	Homo sapiens	CHEMBL1907604;CHEMBL1157915;CHEMBL1105653
+chembl_activity	memantine	ache	Acetylcholinesterase		IC50	>	10000.0	Electrophorus electricus	CHEMBL4078;CHEMBL1157915;CHEMBL1103849
+chembl_activity	memantine	BCHE	Cholinesterase		IC50	>	10000.0	Equus caballus	CHEMBL5763;CHEMBL1157915;CHEMBL1105649
+chembl_activity	memantine		Unchecked		Ki	=	1200.0		CHEMBL612545;CHEMBL1165917;CHEMBL1167596
+chembl_activity	memantine		Unchecked		Ki	=	1200.0		CHEMBL612545;CHEMBL1275382;CHEMBL1286019
+chembl_activity	memantine		Unchecked		IC50	=	55000.0		CHEMBL612545;CHEMBL1933044;CHEMBL1936755
+chembl_activity	memantine		Unchecked		IC50	=	1500.0		CHEMBL612545;CHEMBL1933044;CHEMBL1936756
+chembl_activity	memantine		Trypanosoma brucei		IC50	=	13750.0	Trypanosoma brucei	CHEMBL612849;CHEMBL1933044;CHEMBL1936757
+chembl_activity	memantine		Unchecked		Ki	=	429.0		CHEMBL612545;CHEMBL2169843;CHEMBL2175143
+chembl_activity	memantine		SH-SY5Y		IC50	=	718.0	Homo sapiens	CHEMBL614910;CHEMBL2177014;CHEMBL2188405
+chembl_activity	memantine	Grin2b	Glutamate receptor ionotropic, NMDA 2B		Ki	>	100000.0	Rattus norvegicus	CHEMBL311;CHEMBL2177014;CHEMBL2188839
+chembl_activity	memantine		Unchecked		Ki	=	1160.0		CHEMBL612545;CHEMBL2177014;CHEMBL2188840
+chembl_activity	memantine		Unchecked		Ki	=	1140.0		CHEMBL612545;CHEMBL3045367;CHEMBL3077360
+chembl_activity	memantine		Unchecked		IC50	=	1560.0		CHEMBL612545;CHEMBL3045367;CHEMBL3077360
+chembl_activity	memantine	GRIN1|GRIN2A	Glutamate NMDA receptor; GRIN1/GRIN2A		IC50	=	0.95	Homo sapiens	CHEMBL1907604;CHEMBL2396530;CHEMBL2399396
+chembl_activity	memantine	GRIN1|GRIN2A|GRIN2B|GRIN2C|GRIN2D|GRIN3A|GRIN3B	Glutamate [NMDA] receptor		Ki	=	1200.0	Homo sapiens	CHEMBL2094124;CHEMBL3217603;CHEMBL3227349
+chembl_activity	memantine	GRIN1|GRIN2A	Glutamate NMDA receptor; GRIN1/GRIN2A		IC50	=	4360.0	Homo sapiens	CHEMBL1907604;CHEMBL3232957;CHEMBL3242673
+chembl_activity	memantine		Unchecked		Ki	=	9740.0		CHEMBL612545;CHEMBL3596097;CHEMBL3598768
+chembl_activity	memantine	ache	Acetylcholinesterase		IC50			Electrophorus electricus	CHEMBL4078;CHEMBL3603740;CHEMBL3608117
+chembl_activity	memantine	BCHE	Cholinesterase		IC50			Equus caballus	CHEMBL5763;CHEMBL3603740;CHEMBL3608118
+chembl_activity	memantine	MAOA	Amine oxidase [flavin-containing] A		IC50			Homo sapiens	CHEMBL1951;CHEMBL3603740;CHEMBL3606165
+chembl_activity	memantine	MAOB	Amine oxidase [flavin-containing] B		IC50			Homo sapiens	CHEMBL2039;CHEMBL3603740;CHEMBL3606166
+chembl_activity	memantine	GRIN1|GRIN2A	Glutamate NMDA receptor; GRIN1/GRIN2A		IC50	=	4400.0	Homo sapiens	CHEMBL1907604;CHEMBL3603740;CHEMBL3608120
+chembl_activity	memantine	GRIN1|GRIN2B	Glutamate NMDA receptor; GRIN1/GRIN2B		IC50	=	5200.0	Homo sapiens	CHEMBL1907603;CHEMBL3603740;CHEMBL3608122
+chembl_activity	memantine	Grin1|Grin2a|Grin2b|Grin2c|Grin2d|Grin3a|Grin3b	Glutamate NMDA receptor		IC50	=	1090.0	Rattus norvegicus	CHEMBL1907608;CHEMBL3616463;CHEMBL3619813
+chembl_activity	memantine	ABCB11	Bile salt export pump		IC50	>	1000000.0	Homo sapiens	CHEMBL6020;CHEMBL4017441;CHEMBL4017550
+chembl_activity	memantine		Unchecked		Ki	=	740.0		CHEMBL612545;CHEMBL4177745;CHEMBL4182987
+chembl_activity	memantine		Cerebellar granule neurone		EC50	=	2480.0		CHEMBL614452;CHEMBL4261483;CHEMBL4261731
+chembl_activity	memantine	ACHE	Acetylcholinesterase		IC50			Homo sapiens	CHEMBL220;CHEMBL4304786;CHEMBL4307302
+chembl_activity	memantine	GRIN1|GRIN2B	Glutamate NMDA receptor; GRIN1/GRIN2B		Ki	=	1000.0	Homo sapiens	CHEMBL1907603;CHEMBL4304786;CHEMBL4307305
+chembl_activity	memantine	Grin1|Grin2a|Grin2b|Grin2c|Grin2d|Grin3a|Grin3b	Glutamate NMDA receptor		IC50	=	1500.0	Rattus norvegicus	CHEMBL1907608;CHEMBL4304786;CHEMBL4307304
+chembl_activity	memantine	BCHE	Cholinesterase		IC50			Homo sapiens	CHEMBL1914;CHEMBL4304786;CHEMBL4307303
+chembl_activity	memantine		SARS-CoV-2		IC50	>	20000.0	Severe acute respiratory syndrome coronavirus 2	CHEMBL4303835;CHEMBL4651402;CHEMBL4651403
+chembl_activity	memantine		SARS-CoV-2		IC50	>	19952.62	Severe acute respiratory syndrome coronavirus 2	CHEMBL4303835;CHEMBL4651402;CHEMBL4651403
+chembl_activity	memantine	Grin1|Grin2a|Grin2b|Grin2c|Grin2d|Grin3a|Grin3b	Glutamate NMDA receptor		IC50	=	30000.0	Rattus norvegicus	CHEMBL1907608;CHEMBL4680250;CHEMBL4686909
+chembl_activity	memantine		HEK293		IC50			Homo sapiens	CHEMBL614818;CHEMBL4680250;CHEMBL4686910
+chembl_activity	memantine		HepG2		IC50			Homo sapiens	CHEMBL395;CHEMBL4680250;CHEMBL4686911
+chembl_activity	memantine	GRIN1|GRIN2A|GRIN2B|GRIN2C|GRIN2D|GRIN3A|GRIN3B	Glutamate [NMDA] receptor		Ki	=	540.0	Homo sapiens	CHEMBL2094124;CHEMBL4680250;CHEMBL4686913
+chembl_activity	memantine		Unchecked		Ki	=	540.0		CHEMBL612545;CHEMBL4765400;CHEMBL4772963
+chembl_activity	memantine	GRIN1|GRIN2A	Glutamate NMDA receptor; GRIN1/GRIN2A		IC50	=	6700.0	Homo sapiens	CHEMBL1907604;CHEMBL4823302;CHEMBL4825138
+chembl_activity	memantine	Chrna3|Chrna6|Chrnb4	Nicotinic acetylcholine receptor alpha6/alpha3/beta4		IC50	=	6000.0	Rattus norvegicus	CHEMBL3137276;CHEMBL4823302;CHEMBL4825140
+chembl_activity	memantine	ACHE	Acetylcholinesterase		IC50	=	4.9	Homo sapiens	CHEMBL220;CHEMBL4823302;CHEMBL4825142
+chembl_activity	memantine	Grin1|Grin2a	Glutamate NMDA receptor; Grin1/Grin2a		IC50	=	1000.0	Rattus norvegicus	CHEMBL2096680;CHEMBL5154888;CHEMBL5166010
+chembl_activity	memantine		Unchecked		IC50	=	778.0		CHEMBL612545;CHEMBL5625199;CHEMBL5626981
+chembl_activity	memantine		Unchecked		IC50	=	3474.0		CHEMBL612545;CHEMBL5625199;CHEMBL5626982
+chembl_activity	memantine		Unchecked		IC50	=	3393.0		CHEMBL612545;CHEMBL5625199;CHEMBL5626983
+chembl_activity	memantine		Unchecked		IC50	=	1273.0		CHEMBL612545;CHEMBL5625199;CHEMBL5626984
+chembl_activity	memantine		Unchecked		IC50	=	222.0		CHEMBL612545;CHEMBL5625199;CHEMBL5626985
+chembl_activity	memantine		Unchecked		IC50	=	318.0		CHEMBL612545;CHEMBL5625199;CHEMBL5626986
+chembl_activity	memantine		Unchecked		IC50	=	367.0		CHEMBL612545;CHEMBL5625199;CHEMBL5626987
+chembl_activity	memantine		Unchecked		IC50	=	592.0		CHEMBL612545;CHEMBL5625199;CHEMBL5626988
+chembl_activity	memantine	ACHE	Acetylcholinesterase		IC50	=	780.0	Homo sapiens	CHEMBL220;CHEMBL5625199;CHEMBL5627005
+chembl_activity	memantine	ACHE	Acetylcholinesterase		IC50			Homo sapiens	CHEMBL220;CHEMBL5634114;CHEMBL5635997
+chembl_activity	memantine	BCHE	Cholinesterase		IC50			Homo sapiens	CHEMBL1914;CHEMBL5634114;CHEMBL5635998
+chembl_activity	memantine	Grin1|Grin2a	Glutamate NMDA receptor; Grin1/Grin2a		IC50	=	2660.0	Rattus norvegicus	CHEMBL2096680;CHEMBL5634114;CHEMBL5636000
+chembl_activity	memantine	Grin1|Grin2b	Glutamate NMDA receptor; Grin1/Grin2b		IC50	=	5570.0	Rattus norvegicus	CHEMBL2096666;CHEMBL5634114;CHEMBL5636001
+chembl_activity	memantine	Grin1	Glutamate receptor ionotropic, NMDA 1		EC50	=	2720.0	Rattus norvegicus	CHEMBL330;CHEMBL5726606;CHEMBL5732983
+chembl_activity	memantine	GRIN1|GRIN2A	Glutamate NMDA receptor; GRIN1/GRIN2A		IC50	=	840.0	Homo sapiens	CHEMBL1907604;CHEMBL6083260;CHEMBL6085756
+chembl_activity	memantine	GRIN1|GRIN2B	Glutamate NMDA receptor; GRIN1/GRIN2B		IC50	=	780.0	Homo sapiens	CHEMBL1907603;CHEMBL6083260;CHEMBL6085757
+chembl_activity	memantine	GRIN1|GRIN2A	Glutamate NMDA receptor; GRIN1/GRIN2A		IC50	=	28070.0	Homo sapiens	CHEMBL1907604;CHEMBL6083260;CHEMBL6085758
+chembl_activity	memantine	GRIN1|GRIN2B	Glutamate NMDA receptor; GRIN1/GRIN2B		IC50	=	25630.0	Homo sapiens	CHEMBL1907603;CHEMBL6083260;CHEMBL6085759
+chembl_activity	memantine	GRIN1|GRIN2A	Glutamate NMDA receptor; GRIN1/GRIN2A		IC50	=	31622.78	Homo sapiens	CHEMBL1907604;CHEMBL6115009;CHEMBL6118020
+chembl_activity	memantine	GRIN1|GRIN2B	Glutamate NMDA receptor; GRIN1/GRIN2B		IC50	=	10000.0	Homo sapiens	CHEMBL1907603;CHEMBL6115009;CHEMBL6118021
+chembl_activity	memantine	GRIN1|GRIN2C	Ionotropic glutamate receptor NMDA 1/2C		IC50	=	3162.28	Homo sapiens	CHEMBL3038504;CHEMBL6115009;CHEMBL6118022
+chembl_activity	memantine	GRIN1|GRIN2D	Ionotropic glutamate receptor NMDA 1/2D		IC50	=	10000.0	Homo sapiens	CHEMBL3038505;CHEMBL6115009;CHEMBL6118023
+chembl_activity	memantine		ADMET		IC50	=	272440.0		CHEMBL612558;CHEMBL6182836;CHEMBL6183228
+opentargets_mechanism	memantine	GRIN1|GRIN2A|GRIN2B|GRIN2D|GRIN3B|GRIN2C|GRIN3A	Glutamate [NMDA] receptor negative allosteric modulator	NEGATIVE ALLOSTERIC MODULATOR					CHEMBL807
+pharos_ligand	memantine	ACHE	Acetylcholinesterase		IC50		4.897788193684456		pX=8.31
+pharos_ligand	memantine	GRIN3A	Glutamate receptor ionotropic, NMDA 3A	NEGATIVE ALLOSTERIC MODULATOR					pX=None
+pharos_ligand	memantine	GRIN1	Glutamate receptor ionotropic, NMDA 1	NEGATIVE ALLOSTERIC MODULATOR	IC50		9549.92586021437		pX=5.02
+pharos_ligand	memantine	GRIN1	Glutamate receptor ionotropic, NMDA 1	NEGATIVE ALLOSTERIC MODULATOR	IC50		5495.408738576249		pX=5.26
+pharos_ligand	memantine	GRIN2B	Glutamate receptor ionotropic, NMDA 2B	NEGATIVE ALLOSTERIC MODULATOR	IC50		5495.408738576249		pX=5.26
+pharos_ligand	memantine	GRIN1	Glutamate receptor ionotropic, NMDA 1	NEGATIVE ALLOSTERIC MODULATOR	IC50		0.9549925860214369		pX=9.02
+pharos_ligand	memantine	GRIN2A	Glutamate receptor ionotropic, NMDA 2A	NEGATIVE ALLOSTERIC MODULATOR	IC50		0.9549925860214369		pX=9.02
+gtopdb	memantine	Grin2c	GluN2C	Antagonist	pKi	=	707.9456289251888	Rat	PMID:10229619;sel=Not Determined;primary=false
+drugcentral	ethosuximide	CACNA1G	Voltage-dependent T-type calcium channel subunit alpha-1G	BLOCKER				Homo sapiens	WOMBAT-PK;CHEMBL
+drugcentral	ezogabine	KCNQ2	Potassium voltage-gated channel subfamily KQT member 2	ACTIVATOR	EC50	=	2511.886431509582	Homo sapiens	IUPHAR;CHEMBL
+drugcentral	ezogabine	KCNQ3	Potassium voltage-gated channel subfamily KQT member 3	ACTIVATOR	EC50	=	630.957344480193	Homo sapiens	IUPHAR;CHEMBL
+drugcentral	ezogabine	KCNQ5	Potassium voltage-gated channel subfamily KQT member 5	ACTIVATOR	EC50	=	10000.0	Homo sapiens	IUPHAR;CHEMBL
+drugcentral	ezogabine	KCNQ4	Potassium voltage-gated channel subfamily KQT member 4	ACTIVATOR	EC50	=	6309.57344480193	Homo sapiens	IUPHAR;CHEMBL
+drugcentral	ezogabine	Kcnq2	Potassium voltage-gated channel subfamily KQT member 2		EC50	=	1288.249551693135	Mus musculus	CHEMBL;
+drugcentral	bumetanide	SLC12A1	Solute carrier family 12 member 1	INHIBITOR	Ki	=	25.11886431509582	Homo sapiens	WOMBAT-PK;CHEMBL
+drugcentral	bumetanide	ATP1A1	Sodium/potassium-transporting ATPase subunit alpha-1		Kd	=	30.199517204020193	Homo sapiens	WOMBAT-PK;
+drugcentral	bumetanide	CA2	Carbonic anhydrase 2		Ki	=	6918.309709189362	Homo sapiens	CHEMBL;
+drugcentral	bumetanide	SLC12A2	Solute carrier family 12 member 2	INHIBITOR	IC50	=	2511.886431509582	Homo sapiens	IUPHAR;
+drugcentral	bumetanide	GPR35	G-protein coupled receptor 35	AGONIST	EC50	=	2884.031503126606	Homo sapiens	IUPHAR;
+drugcentral	memantine	HTR3A	5-hydroxytryptamine receptor 3A					Homo sapiens	WOMBAT-PK;
+drugcentral	memantine	GRIN3A	Glutamate receptor ionotropic, NMDA 3A	NEGATIVE ALLOSTERIC MODULATOR				Homo sapiens	WOMBAT-PK;CHEMBL
+drugcentral	memantine	ACHE	Acetylcholinesterase		IC50	=	4.897788193684456	Homo sapiens	CHEMBL;
+drugcentral	memantine	GRIN1	Glutamate receptor ionotropic, NMDA 1	NEGATIVE ALLOSTERIC MODULATOR	IC50	=	9549.92586021437	Homo sapiens	CHEMBL;CHEMBL
+drugcentral	memantine	SLC22A1	Solute carrier family 22 member 1		IC50	=	26915.348039269138	Homo sapiens	CHEMBL;
+drugcentral	memantine	Grin1	Glutamate receptor ionotropic, NMDA 1		EC50	=	2691.534803926914	Rattus norvegicus	CHEMBL;
+drugcentral	memantine	Grin2c	Glutamate receptor ionotropic, NMDA 2C		Ki	=	707.9457843841374	Rattus norvegicus	CHEMBL;
+drugcentral	memantine	GRIN1|GRIN2B	Glutamate NMDA receptor; GRIN1/GRIN2B	NEGATIVE ALLOSTERIC MODULATOR	IC50	=	5495.408738576249	Homo sapiens	CHEMBL;CHEMBL
+drugcentral	memantine	GRIN1|GRIN2A	Glutamate NMDA receptor; GRIN1/GRIN2A	NEGATIVE ALLOSTERIC MODULATOR	IC50	=	0.9549925860214369	Homo sapiens	CHEMBL;CHEMBL
+dgidb	ethosuximide	CACNA1H		NULL					PharmGKB
+dgidb	bumetanide	GNB3		NULL					PharmGKB
+dgidb	ezogabine	KCNQ5		NULL					TdgClinicalTrial
+dgidb	memantine	NULL		NULL					TTD
+dgidb	ethosuximide	CYP3A4		NULL					PharmGKB
+dgidb	radiprodil	GRIN1		inhibitor					ChEMBL
+dgidb	bumetanide	SLC12A3		NULL					PharmGKB
+dgidb	bumetanide	ADD1		NULL					PharmGKB
+dgidb	radiprodil	GRIN2B		NULL					TTD
+dgidb	bumetanide	SLC12A5		NULL					TdgClinicalTrial
+dgidb	memantine	GRIN2A		NULL					TEND
+dgidb	memantine	GRIN3A		NULL					TEND
+dgidb	ezogabine	KCNQ4		NULL					TdgClinicalTrial
+dgidb	ezogabine	KCNQ2		NULL					TdgClinicalTrial
+dgidb	d-AP5	GRIN2A		inhibitor					GuideToPharmacology
+dgidb	bumetanide	SCNN1G		NULL					PharmGKB
+dgidb	ethosuximide	CACNA1I		NULL					PharmGKB
+dgidb	ezogabine	KCNQ3		NULL					TdgClinicalTrial
+dgidb	bumetanide	NPPA-AS1		NULL					PharmGKB
+dgidb	apinocaltamide	CACNA1G		blocker					ChEMBL
+dgidb	radiprodil	GRIN2B		inhibitor					ChEMBL
+dgidb	apinocaltamide	CACNA1H		blocker					ChEMBL
+dgidb	bumetanide	ACE		NULL					PharmGKB
+dgidb	apinocaltamide	CACNA1I		blocker					ChEMBL
+dgidb	ezogabine	KCNQ1		NULL					TdgClinicalTrial
+dgidb	bumetanide	SLC12A4		NULL					TEND
+dgidb	bumetanide	SLC12A4		NULL					TdgClinicalTrial
+dgidb	ethosuximide	SCN1A		NULL					PharmGKB
+dgidb	ethosuximide	CACNA1I		blocker					ChEMBL
+dgidb	ethosuximide	CACNA1G		blocker					ChEMBL
+dgidb	bumetanide	SLC17A3		NULL					PharmGKB
+dgidb	ezogabine	KCNQ3		NULL					DTC
+dgidb	ethosuximide	CACNA1G		NULL					TdgClinicalTrial
+dgidb	bumetanide	SLC12A5		NULL					TEND
+dgidb	radiprodil	NULL		NULL					TTD
+dgidb	ezogabine	KCNQ3		activator					GuideToPharmacology
+dgidb	bumetanide	SLC12A1		NULL					TTD
+dgidb	bumetanide	SLC12A1		inhibitor					ChEMBL
+dgidb	memantine	NR1I2		NULL					PharmGKB
+dgidb	memantine	BCHE		NULL					PharmGKB
+dgidb	memantine	GRIN2A		NULL					TdgClinicalTrial
+dgidb	memantine	GRIN3A		NULL					TdgClinicalTrial
+dgidb	ethosuximide	CACNA1G		NULL					TTD
+dgidb	memantine	GRIN2B		NULL					TdgClinicalTrial
+dgidb	memantine	GRIN2B		NULL					TEND
+dgidb	bumetanide	SLC12A2		NULL					TEND
+dgidb	bumetanide	ADAM10		agonist					GuideToPharmacology
+dgidb	ezogabine	KCNQ5		potentiator					ChEMBL
+dgidb	bumetanide	CD68		inhibitor					GuideToPharmacology
+dgidb	ezogabine	KCNQ2		potentiator					ChEMBL
+dgidb	ezogabine	KCNQ4		potentiator					ChEMBL
+dgidb	ezogabine	KCNQ3		potentiator					ChEMBL
+dgidb	ethosuximide	CACNA1G		NULL					TEND
+dgidb	memantine	GRIN2A		NULL					DTC
+dgidb	memantine	GRIN1		NULL					DTC
+dgidb	bumetanide	CD69		inhibitor					GuideToPharmacology
+dgidb	bumetanide	MAPK1		NULL					NCI
+dgidb	ezogabine	KCNQ1		potentiator					ChEMBL
+dgidb	ethosuximide	CACNA1H		blocker					ChEMBL
+dgidb	bumetanide	KDM4E		NULL					DTC
+dgidb	d-AP5	GRIN2C		inhibitor					GuideToPharmacology
+dgidb	ezogabine	KCNQ5		activator					GuideToPharmacology
+dgidb	ezogabine	AZGP1		activator					GuideToPharmacology
+dgidb	bumetanide	HSD17B10		NULL					DTC
+dgidb	bumetanide	NFE2L2		NULL					DTC
+dgidb	ezogabine	KCNQ2		NULL					DTC
+dgidb	ezogabine	AZF2		modulator					GuideToPharmacology
+dgidb	d-AP5	ASS1P14		inhibitor					GuideToPharmacology
+dgidb	bumetanide	SLC12A2		NULL					TdgClinicalTrial
+dgidb	bumetanide	SLC12A1		NULL					TEND
+dgidb	d-AP5	GRIN2B		inhibitor					GuideToPharmacology
+dgidb	bumetanide	SLC12A1		NULL					TdgClinicalTrial
+bindingdb_compound	ethosuximide		ATP-binding cassette sub-family C member 4		IC50	>	133000.0	Human	monomer=50240424;smiles_string_equal=True
+bindingdb_compound	d-AP5		Glutamate receptor ionotropic, NMDA 2A		IC50		290.0	Rat	monomer=50017229;smiles_string_equal=False
+bindingdb_compound	d-AP5		Glutamate receptor ionotropic, NMDA 1/2A		Ki		390.0	Rat	monomer=81977;smiles_string_equal=False
+bindingdb_compound	d-AP5		Ionotropic glutamate receptor NMDA 1/2D		Ki		21000.0	Rat	monomer=81977;smiles_string_equal=False
+bindingdb_compound	ezogabine		Potassium voltage-gated channel subfamily KQT member 2		EC50	<	150.0	Human	monomer=50143558;smiles_string_equal=False
+bindingdb_compound	ezogabine		Potassium voltage-gated channel subfamily KQT member 2/member 3		EC50		4150.0	Rat	monomer=50143558;smiles_string_equal=False
+bindingdb_compound	ezogabine		Potassium voltage-gated channel subfamily KQT member 5		EC50		800.0	Human	monomer=50143558;smiles_string_equal=False
+bindingdb_compound	bumetanide		Aquaporin-4		IC50		100000.0	Rat	monomer=25903;smiles_string_equal=False
+bindingdb_compound	bumetanide		ATP-binding cassette sub-family C member 3		IC50	>	133000.0	Human	monomer=25903;smiles_string_equal=False
+bindingdb_compound	bumetanide		Carbonic anhydrase 14		Ki		250.0	Human	monomer=25903;smiles_string_equal=False
+bindingdb_compound	bumetanide		Carbonic anhydrase 9		Ki		25.8	Human	monomer=25903;smiles_string_equal=False
+bindingdb_compound	bumetanide		Solute carrier family 12 member 2		IC50		1540.0	Human	monomer=25903;smiles_string_equal=False
+bindingdb_compound	Ro 25-6981		Glutamate receptor ionotropic, NMDA 1/2B		Ki		10.0	Human	monomer=50080029;smiles_string_equal=True
+bindingdb_compound	Ro 25-6981		Glutamate receptor ionotropic, NMDA 2B		IC50		9.0	Human	monomer=50080029;smiles_string_equal=True
+bindingdb_compound	Ro 25-6981		Glutamate receptor ionotropic, NMDA 2B		IC50		6.0	Rat	monomer=50080029;smiles_string_equal=True
+bindingdb_compound	apinocaltamide		Voltage-dependent L-type calcium channel subunit alpha-1C		IC50		2410.0	Human	monomer=50452245;smiles_string_equal=False
+bindingdb_compound	apinocaltamide		Voltage-dependent T-type calcium channel subunit alpha-1H		IC50		13.0	Rat	monomer=50452245;smiles_string_equal=False
+bindingdb_compound	apinocaltamide		Voltage-dependent T-type calcium channel subunit alpha-1I		IC50		7.5	Human	monomer=50452245;smiles_string_equal=False
+bindingdb_compound	memantine		Cholinesterase		IC50	>	10000.0	Horse	monomer=50062599;smiles_string_equal=True
+bindingdb_compound	memantine		Glutamate receptor ionotropic, NMDA 1/2A		IC50		0.95	Human	monomer=50062599;smiles_string_equal=True
+bindingdb_compound	memantine		Glutamate receptor ionotropic, NMDA 1/2B		Ki		1000.0	Human	monomer=50062599;smiles_string_equal=True
+bindingdb_compound	memantine		Glutamate receptor ionotropic, NMDA 2B		Ki	>	100000.0	Rat	monomer=50062599;smiles_string_equal=True
