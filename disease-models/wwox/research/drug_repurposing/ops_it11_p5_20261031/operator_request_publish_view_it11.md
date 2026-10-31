@@ -51,3 +51,7 @@ own text and one licensed ChEMBL class-B file with credit. Not medical advice; r
 ## 6. If you decline or defer
 
 Nothing is lost: the package and the patch stay in the repository, and the roadmap item R10 stays "prepared, awaiting the reserved decision".
+
+## IT12 refresh (2026-10-31, Orchestrator)
+
+State re-verified on 2026-10-31 11:50-13:00 UTC: no GitHub token on this host (`GET /repos/.../pages` answers 404, no `gh`), the expected URL `https://marinomassimo-dot.github.io/legend-development/` answers 404, no authorisation for a web surface is recorded. Unchanged from the section above, so the minimum human acts are the same. What IT12 changed: the package and view were regenerated from the IT12 integration (card and ranking text for the residual-product substrate, the ethosuximide GIRK2 wording, the P47T narrowing of K01), `package --check` is current and `audit-shareable` (static and dynamic) passes with 0 violations; the activation patch and the workflow proposal are unchanged and still not applied. After you enable Pages and run the workflow, check: (1) `index.html` answers 200 at the expected URL and carries `noindex,nofollow`; (2) its SHA-256 equals the digest in `view/DEPLOY.md`; (3) `NOTICE.md`, the licence file and the ChEMBL credit file answer 200. The package must be on remote `main` before the workflow runs (the IT12 closing push does that; its SHA is in the IT12 report).
