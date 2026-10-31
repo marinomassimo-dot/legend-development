@@ -195,3 +195,6 @@ No claim, WM block or the four current files carries the census absence statemen
 `FTR-20261029-38563965-02`, `FTR-20261029-28749468-02`, `FTR-20261029-42397075-06`, `FTR-20261029-42397075-07` (the preprint v2 methods), `FTR-20261029-33914858-04`,
 `FTR-20261029-34268881-12`, `FTR-20261029-42909904-04`. All `partial_fulltext_read`, coverage understated, `new_question_outside_prior_coverage`. The integrator records them in event-ID order after
 its scratch-clone trial. PMID 25012504 was read at abstract level only (no receipt); PMID 35984507 not reopened.
+
+
+> **Dated correction (2026-10-31, IT12 P6).** Row 14 (GSE215425, P47T knock-in): read "counts accessible; reanalysed for HIF and NRF2 target sets in IT12 (`p47t_it12_20261031/`); the authors' hippocampal differential-expression list is not reproducible from the deposit (cause unverifiable)" in place of "transcript only; not adequate".

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "1286b1c44cb113ed6a2814e6dcbd41039be5bf12ec1bb53fc38a1d66693b8227",
+  "input_sha256": "e509b9cdeae6c17f720ec5c5e33d3eff86f813631858e3c3d2aa2de00c4d9e51",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -528,7 +528,7 @@
           "A non-selective compound moved progenitor and pan-neuron fractions toward wild type in the knockout."
         ],
         "against": [
-          "MYC is elevated in SCAR12 organoids whose radial-glia fraction is wild-type-like and whose neurons are not reduced, so elevation alone does not give the composition phenotype.",
+          "MYC is elevated in SCAR12 organoids whose radial-glia fraction is wild-type-like and whose neurons are not reduced, so elevation alone does not give the composition phenotype. (IT12 P1-main correction, 2026-10-31: the SCAR12 organoid lines are two siblings carrying ONE allele, c.1114G>C p.Gly372Arg, a C-terminal missense; this is neither the reference class (Q230P) nor 'SCAR12 missense lines' in general)",
           "POU5F1 is as prominent as MYC in the knockout radial-glia contrast, which fits retained progenitor state without a MYC-specific driver.",
           "The WWOX-MYC inverse relation in reference data is a developmental time course.",
           "Neuron-stage deletion in mouse reproduces the null phenotype, and neuron-stage add-back restores layer markers and firing without correcting radial glia, so the radial-glia MYC state is not shown to be needed for those endpoints.",
@@ -568,7 +568,7 @@
       "Whether any compound reaches or acts in human radial glia at tolerable exposure."
     ],
     "evidence_against": [
-      "MYC is raised in SCAR12 organoids without radial-glia expansion or neuron loss.",
+      "MYC is raised in SCAR12 organoids without radial-glia expansion or neuron loss. (IT12 P1-main correction, 2026-10-31: the SCAR12 organoid lines are two siblings carrying ONE allele, c.1114G>C p.Gly372Arg, a C-terminal missense; this is neither the reference class (Q230P) nor 'SCAR12 missense lines' in general)",
       "POU5F1 is as prominent as MYC in the knockout radial-glia contrast.",
       "The WWOX-MYC inverse relation in reference datasets is a developmental time course.",
       "Neuron-stage deletion in mouse reproduces the null phenotype and neuron-stage add-back restores layer markers and firing without changing radial glia.",

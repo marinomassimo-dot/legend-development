@@ -1,0 +1,972 @@
+{
+ "as_of": "2026-10-31",
+ "rules_version": "R4",
+ "units": {
+  "U01": {
+   "broad": "G4b",
+   "class": "ORD",
+   "inputs": {
+    "T1_cards": "4e97ae2faddbb1b6",
+    "T2_pertinence": "91e62b924fe30a2a",
+    "T3_receipts": "52149a4b03e76932",
+    "T4_needs": "9ae567485b16c45c",
+    "T5_pharmacology": "be0a401756e3e8c1",
+    "T6_identity": "37847be0f29d1700"
+   },
+   "label": "4-phenylbutyrate and bile-acid chemical chaperones (class)",
+   "partial": "-"
+  },
+  "U02": {
+   "broad": "G4b",
+   "class": "ORD",
+   "inputs": {
+    "T1_cards": "101d9b1ab38011fa",
+    "T2_pertinence": "a99cbab9e0538513",
+    "T3_receipts": "f65f2005fcac34e1",
+    "T4_needs": "9ae567485b16c45c",
+    "T5_pharmacology": "895b485de4f247a9",
+    "T6_identity": "7c588eecdff99806"
+   },
+   "label": "Proteasome-inhibitor class (degradation blockade)",
+   "partial": "-"
+  },
+  "U03": {
+   "broad": "GU",
+   "class": "INSUFF",
+   "inputs": {
+    "T1_cards": "d34e6ce35ba4dde9",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "51d892749172e3bd",
+    "T4_needs": "9ae567485b16c45c",
+    "T5_pharmacology": "177f2f40ad8ae91b",
+    "T6_identity": "1736f240aa99dc64"
+   },
+   "label": "Client-binding pharmacological chaperone (SDR-domain ligand)",
+   "partial": "-"
+  },
+  "U04": {
+   "broad": "GU",
+   "class": "INSUFF",
+   "inputs": {
+    "T1_cards": "60977bd55a648073",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "d1a40a526bc95810",
+    "T4_needs": "9ae567485b16c45c",
+    "T5_pharmacology": "177f2f40ad8ae91b",
+    "T6_identity": "e6f2c75717c7735a"
+   },
+   "label": "ER-proteostasis regulators (IRE1/XBP1s, ERAD)",
+   "partial": "-"
+  },
+  "U05": {
+   "broad": "GU",
+   "class": "INSUFF",
+   "inputs": {
+    "T1_cards": "9d51c52022ea63ee",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "d1a40a526bc95810",
+    "T4_needs": "9ae567485b16c45c",
+    "T5_pharmacology": "177f2f40ad8ae91b",
+    "T6_identity": "0978e8cf6b505ee6"
+   },
+   "label": "HSP70-axis modulation",
+   "partial": "-"
+  },
+  "U06": {
+   "broad": "G5",
+   "class": "WEAK",
+   "inputs": {
+    "T1_cards": "959b214e808884b8",
+    "T2_pertinence": "e8ab801c472fdfe7",
+    "T3_receipts": "0efa01184c6ba643",
+    "T4_needs": "aa528d3f09f497b0",
+    "T5_pharmacology": "177f2f40ad8ae91b",
+    "T6_identity": "8de4553275efa6a8"
+   },
+   "label": "PTC read-through agents, amlexanox and class",
+   "partial": "-"
+  },
+  "U07": {
+   "broad": "G1",
+   "class": "ORD",
+   "inputs": {
+    "T1_cards": "f8559846deca6692",
+    "T2_pertinence": "59d15d3c06233d6c",
+    "T3_receipts": "cd21840b2a4e584e",
+    "T4_needs": "82b439e35fc80b6c",
+    "T5_pharmacology": "c8ec35a5f404ccca",
+    "T6_identity": "186bd57e16d4aa8b"
+   },
+   "label": "AAV9-delivered human WWOX (gene addition)",
+   "partial": "G3"
+  },
+  "U08": {
+   "broad": "GU",
+   "class": "INSUFF",
+   "inputs": {
+    "T1_cards": "7938da738960a993",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "4c5d7ee4b7cf4a15",
+    "T4_needs": "66cebf15a40b040e",
+    "T5_pharmacology": "177f2f40ad8ae91b",
+    "T6_identity": "6e4d2856f932376a"
+   },
+   "label": "Splice-correcting antisense oligonucleotide / editing (splice-acceptor allele)",
+   "partial": "-"
+  },
+  "U09": {
+   "broad": "GU",
+   "class": "INSUFF",
+   "inputs": {
+    "T1_cards": "9db7f0f38ba778b2",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "ad1b95286f64b04c",
+    "T4_needs": "10a1be2af4314710",
+    "T5_pharmacology": "177f2f40ad8ae91b",
+    "T6_identity": "5470a642a45c7869"
+   },
+   "label": "Endogenous boost (CRISPRa or equivalent)",
+   "partial": "-"
+  },
+  "U10": {
+   "broad": "GU",
+   "class": "WEAK",
+   "inputs": {
+    "T1_cards": "48d8691e36c18803",
+    "T2_pertinence": "8e52657c67b7cf9d",
+    "T3_receipts": "9704e0c37800b5d7",
+    "T4_needs": "b1224f7ee3d5a2f3",
+    "T5_pharmacology": "177f2f40ad8ae91b",
+    "T6_identity": "2302f3b36a077aa0"
+   },
+   "label": "A51, a multi-kinase inhibitor (experimental)",
+   "partial": "G3"
+  },
+  "U11": {
+   "broad": "GU",
+   "class": "INSUFF",
+   "inputs": {
+    "T1_cards": "2b086682b62e83b3",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "dc01c05508dcbf56",
+    "T4_needs": "55ff62f47762bab4",
+    "T5_pharmacology": "177f2f40ad8ae91b",
+    "T6_identity": "a51c161c63ba11d3"
+   },
+   "label": "Wnt-lowering (tankyrase-type) agents",
+   "partial": "GU"
+  },
+  "U12": {
+   "broad": "-",
+   "class": "ORD",
+   "inputs": {
+    "T1_cards": "a8e201f8538e8a98",
+    "T2_pertinence": "079230f81c69cb2e",
+    "T3_receipts": "293d407faa57bb47",
+    "T4_needs": "932744721b4c9f86",
+    "T5_pharmacology": "177f2f40ad8ae91b",
+    "T6_identity": "57198814e915cf0b"
+   },
+   "label": "Integrated-stress-response modulators (class)",
+   "partial": "G4b"
+  },
+  "U13": {
+   "broad": "-",
+   "class": "ORD",
+   "inputs": {
+    "T1_cards": "3d06a6e645123c2c",
+    "T2_pertinence": "1959a04e90dbf178",
+    "T3_receipts": "5c83e6a18e12f4d3",
+    "T4_needs": "a3face7aa0d2e275",
+    "T5_pharmacology": "07a3719a2976ec86",
+    "T6_identity": "b95d3d12430d688c"
+   },
+   "label": "LDH inhibition or lowering (stiripentol, LDHA tool compounds, oligonucleotide)",
+   "partial": "G4b"
+  },
+  "U14": {
+   "broad": "-",
+   "class": "ORD",
+   "inputs": {
+    "T1_cards": "2c62310a49d43521",
+    "T2_pertinence": "4f588d870d868008",
+    "T3_receipts": "b410a77ea4345508",
+    "T4_needs": "709e9155ba014a61",
+    "T5_pharmacology": "dd38ed70d7c73b56",
+    "T6_identity": "5947102b41b2b474"
+   },
+   "label": "Dichloroacetate and PDK inhibition",
+   "partial": "G4b"
+  },
+  "U15": {
+   "broad": "-",
+   "class": "WEAK",
+   "inputs": {
+    "T1_cards": "63a46b950beb3a06",
+    "T2_pertinence": "d95f7e8dcd00a63d",
+    "T3_receipts": "892bcad601ce6d84",
+    "T4_needs": "e7b1a58338e49f76",
+    "T5_pharmacology": "ab6539460fdd860d",
+    "T6_identity": "67350028339e1f89"
+   },
+   "label": "Ketogenic diet (complex dietary intervention)",
+   "partial": "G3"
+  },
+  "U16": {
+   "broad": "-",
+   "class": "INSUFF",
+   "inputs": {
+    "T1_cards": "68b02febfc90206b",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "d2e53556d365e6a4",
+    "T4_needs": "77086341166ba9e5",
+    "T5_pharmacology": "177f2f40ad8ae91b",
+    "T6_identity": "c9cae65ddbc78cd7"
+   },
+   "label": "Cannabidiol (class level)",
+   "partial": "GU"
+  },
+  "U17": {
+   "broad": "-",
+   "class": "ORD",
+   "inputs": {
+    "T1_cards": "90c95889b77b8bfe",
+    "T2_pertinence": "8b0a047e9ce40434",
+    "T3_receipts": "fed069ad0e0c5861",
+    "T4_needs": "3093063f37ac6ad7",
+    "T5_pharmacology": "5da5f03bb1490bdc",
+    "T6_identity": "589dd4de63446384"
+   },
+   "label": "Ethosuximide",
+   "partial": "G2b"
+  },
+  "U18": {
+   "broad": "-",
+   "class": "INSUFF",
+   "inputs": {
+    "T1_cards": "cd66dbeab3582be3",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "d2e53556d365e6a4",
+    "T4_needs": "77086341166ba9e5",
+    "T5_pharmacology": "177f2f40ad8ae91b",
+    "T6_identity": "6f87a8c79f33f858"
+   },
+   "label": "ACTH, corticosteroids and phenobarbital-containing regimens (class level)",
+   "partial": "GU"
+  },
+  "U19": {
+   "broad": "-",
+   "class": "INSUFF",
+   "inputs": {
+    "T1_cards": "0a226fd87fb8e7ff",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "004bf101de3feb3f",
+    "T4_needs": "e47c99263fff82cc",
+    "T5_pharmacology": "177f2f40ad8ae91b",
+    "T6_identity": "6bb7feb0f8155010"
+   },
+   "label": "mTOR-inhibitor class (sirolimus)",
+   "partial": "GU"
+  },
+  "U20": {
+   "broad": "-",
+   "class": "WEAK",
+   "inputs": {
+    "T1_cards": "c441428839c4a074",
+    "T2_pertinence": "094cb2bb03ecb864",
+    "T3_receipts": "212be31947637493",
+    "T4_needs": "89705b05a4222975",
+    "T5_pharmacology": "177f2f40ad8ae91b",
+    "T6_identity": "a9588c1dc45cb77c"
+   },
+   "label": "Vigabatrin and GABA-aminotransferase inactivators",
+   "partial": "G3"
+  },
+  "U21": {
+   "broad": "-",
+   "class": "ORD",
+   "inputs": {
+    "T1_cards": "c6c90d68851ae82b",
+    "T2_pertinence": "4744af9e5e721d31",
+    "T3_receipts": "533fe34f5749cb80",
+    "T4_needs": "ce38af3ca4f76c07",
+    "T5_pharmacology": "83e16cf80f0d93c6",
+    "T6_identity": "d72dab466f7f0934"
+   },
+   "label": "d-APV (a tool compound; the only agent with a WWOX readout) and the NMDAR/AMPAR class (memantine, perampanel, radiprodil and others are untested siblings)",
+   "partial": "G2b"
+  },
+  "U22": {
+   "broad": "-",
+   "class": "INSUFF",
+   "inputs": {
+    "T1_cards": "a8b4ba5c29eaadfa",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "5931d09e617ead46",
+    "T4_needs": "69a0fc27d793904a",
+    "T5_pharmacology": "177f2f40ad8ae91b",
+    "T6_identity": "1b6967b150a8ef31"
+   },
+   "label": "Pro-myelinating agents (activity-dependent myelination sign problem)",
+   "partial": "GU"
+  },
+  "U23": {
+   "broad": "-",
+   "class": "INSUFF",
+   "inputs": {
+    "T1_cards": "d1a609caf940f1b8",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "a729e52b13cb13ec",
+    "T4_needs": "5f3af372617a911f",
+    "T5_pharmacology": "4cfc018740c85d41",
+    "T6_identity": "c8a9075059e82981"
+   },
+   "label": "Bumetanide and the chloride gradient",
+   "partial": "GU"
+  },
+  "U24": {
+   "broad": "-",
+   "class": "ORD",
+   "inputs": {
+    "T1_cards": "61bbc696d4161843",
+    "T2_pertinence": "db0343ccb25dda32",
+    "T3_receipts": "1e81e393df77743b",
+    "T4_needs": "99f7c86d7134370b",
+    "T5_pharmacology": "8e5ccb8ab12853d1",
+    "T6_identity": "c599af8bf00c008f"
+   },
+   "label": "Lithium",
+   "partial": "G2b"
+  },
+  "U25": {
+   "broad": "-",
+   "class": "ORD",
+   "inputs": {
+    "T1_cards": "a8bbcfc7d7e78407",
+    "T2_pertinence": "904f40dca9a2c7f5",
+    "T3_receipts": "e631cecfdfb7956c",
+    "T4_needs": "3093063f37ac6ad7",
+    "T5_pharmacology": "5da5f03bb1490bdc",
+    "T6_identity": "61b1f388d5aca48f"
+   },
+   "label": "Apinocaltamide (T-type calcium channel blocker, clinical-stage)",
+   "partial": "G4a"
+  },
+  "U26": {
+   "broad": "-",
+   "class": "INSUFF",
+   "inputs": {
+    "T1_cards": "6ca76a59deddb9ca",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "137600edf412817c",
+    "T4_needs": "34001ad580d89a15",
+    "T5_pharmacology": "39d3e6c4d9daea9a",
+    "T6_identity": "b9cf666861d789c0"
+   },
+   "label": "Glial-reactivity modulators (class)",
+   "partial": "GU"
+  },
+  "U27": {
+   "broad": "-",
+   "class": "WEAK",
+   "inputs": {
+    "T1_cards": "167e5530609a4f61",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "679405f21efb5aa3",
+    "T4_needs": "ce38af3ca4f76c07",
+    "T5_pharmacology": "219331179cc8894b",
+    "T6_identity": "bafc117d5dd84908"
+   },
+   "label": "Extracellular magnesium (nutrient / supplement)",
+   "partial": "G5"
+  },
+  "U28": {
+   "broad": "-",
+   "class": "ORD",
+   "inputs": {
+    "T1_cards": "af8607029101a438",
+    "T2_pertinence": "419afd58578b735f",
+    "T3_receipts": "426c49feed3ec7e7",
+    "T4_needs": "bbaa10de8747dfa1",
+    "T5_pharmacology": "177f2f40ad8ae91b",
+    "T6_identity": "8e6731310b854960"
+   },
+   "label": "The HIF axis in the glycolytic shift: genetic HIF1A and EPAS1 knockdown and a PX-478-class lever, with a prolyl-hydroxylase inhibitor as a conditional arm (direction conditional, not established as the disease direction; a mechanism experiment, not a treatment)",
+   "partial": "G4b"
+  },
+  "U29": {
+   "broad": "-",
+   "class": "ORD",
+   "inputs": {
+    "T1_cards": "e3b5b6adde7e5dee",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "ff77533a6e4fdeff",
+    "T5_pharmacology": "f7f4ca7b7eba51e5",
+    "T6_identity": "6c281631d2acbfd9"
+   },
+   "label": "Belnacasan (caspase-1 inhibitor prodrug; active acid VRT-043198): gated proposal for the IL-1 axis",
+   "partial": "G4b"
+  },
+  "U30": {
+   "broad": "-",
+   "class": "ORD",
+   "inputs": {
+    "T1_cards": "8e8c7d13347800b4",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "ff77533a6e4fdeff",
+    "T5_pharmacology": "e181f5f32f367ba6",
+    "T6_identity": "a6b570078a6cf8e5"
+   },
+   "label": "Apabetalone (BET inhibitor): conditional proposal for the microglial cytokine axis",
+   "partial": "G4b"
+  },
+  "U31": {
+   "broad": "-",
+   "class": "ORD",
+   "inputs": {
+    "T1_cards": "db50cbd92eb1efe2",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "db813bd537bb2db9",
+    "T5_pharmacology": "4ea6c7d72e892aa3",
+    "T6_identity": "b197002e034db15f"
+   },
+   "label": "Sulfopin (covalent PIN1 probe): mechanism experiment on MYC, after a MYC-specific lever",
+   "partial": "G4b"
+  },
+  "U32": {
+   "broad": "-",
+   "class": "INSUFF",
+   "inputs": {
+    "T1_cards": "69111aff408ea14c",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "92a8fbeb46cd903e",
+    "T5_pharmacology": "7e5d603493b7e914",
+    "T6_identity": "37dec869977d9f9f"
+   },
+   "label": "Belzutifan (HIF-2alpha inhibitor)",
+   "partial": "GU"
+  },
+  "U33": {
+   "broad": "-",
+   "class": "INSUFF",
+   "inputs": {
+    "T1_cards": "23d94b51f5dc9f0d",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "ff77533a6e4fdeff",
+    "T5_pharmacology": "fe9ca16edda3aaa8",
+    "T6_identity": "413313feccb13bc0"
+   },
+   "label": "JTE-151 (RORgamma inverse agonist)",
+   "partial": "GU"
+  },
+  "U34": {
+   "broad": "-",
+   "class": "INSUFF",
+   "inputs": {
+    "T1_cards": "9295d2aaee275490",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "ff77533a6e4fdeff",
+    "T5_pharmacology": "f3949c65842d3e00",
+    "T6_identity": "e147dbc3dad3a95f"
+   },
+   "label": "Infigratinib (FGFR inhibitor)",
+   "partial": "GU"
+  },
+  "U35": {
+   "broad": "-",
+   "class": "INSUFF",
+   "inputs": {
+    "T1_cards": "7d320af92b210ced",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "db813bd537bb2db9",
+    "T5_pharmacology": "68d686f35ebb1463",
+    "T6_identity": "75e91521e910ff15"
+   },
+   "label": "Gamcemetinib (MAPKAPK2 inhibitor)",
+   "partial": "GU"
+  },
+  "U36": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "10a44f95194cde28",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "92a8fbeb46cd903e",
+    "T5_pharmacology": "a2cf8e5c34ce4917",
+    "T6_identity": "dddd11fe37f43643"
+   },
+   "label": "Balsalazide",
+   "partial": "-"
+  },
+  "U37": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "678ddb3879c1e91d",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "92a8fbeb46cd903e",
+    "T5_pharmacology": "0ec2010da9e2bf9c",
+    "T6_identity": "6741b36e25cf1849"
+   },
+   "label": "Ramelteon",
+   "partial": "-"
+  },
+  "U38": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "6a5fb1f869d40002",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "92a8fbeb46cd903e",
+    "T5_pharmacology": "ebb74d557dbb7749",
+    "T6_identity": "3fd4ac31ec299350"
+   },
+   "label": "Ceperognastat (OGA inhibitor)",
+   "partial": "-"
+  },
+  "U39": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "3ffd8b74a8abe330",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "db813bd537bb2db9",
+    "T5_pharmacology": "eb16d2c3a8acf972",
+    "T6_identity": "0e3dd88444dc1d4c"
+   },
+   "label": "Fosfestrol (prodrug of diethylstilbestrol)",
+   "partial": "-"
+  },
+  "U40": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "d494c5d2886fd1a2",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "db813bd537bb2db9",
+    "T5_pharmacology": "99a293f4ad3d8786",
+    "T6_identity": "76315fb1a7c90379"
+   },
+   "label": "Implitapide",
+   "partial": "-"
+  },
+  "U41": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "641caac64cf5fa48",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "ff77533a6e4fdeff",
+    "T5_pharmacology": "c915ab2dff3bc9c7",
+    "T6_identity": "c13eeaa1fe353fdb"
+   },
+   "label": "Curcumin",
+   "partial": "-"
+  },
+  "U42": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "d6e1c87faba10060",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "db813bd537bb2db9",
+    "T5_pharmacology": "55e16f920b43545e",
+    "T6_identity": "7e02781efe5979b8"
+   },
+   "label": "Harmine",
+   "partial": "-"
+  },
+  "U43": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "dd332504019bdba6",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "db813bd537bb2db9",
+    "T5_pharmacology": "f3ce233dceeff213",
+    "T6_identity": "f4fae1c5dd3ffc74"
+   },
+   "label": "Pomalidomide",
+   "partial": "-"
+  },
+  "U44": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "8b6d2d8461822cdd",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "db813bd537bb2db9",
+    "T5_pharmacology": "1c689f6f89a5dd06",
+    "T6_identity": "5507329a01f07700"
+   },
+   "label": "Defosbarasertib (Aurora B inhibitor)",
+   "partial": "-"
+  },
+  "U45": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "85fd7a42673eec00",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "db813bd537bb2db9",
+    "T5_pharmacology": "2451cb9e9a1d21bf",
+    "T6_identity": "578bb6d20047e0cf"
+   },
+   "label": "Pinometostat (DOT1L inhibitor)",
+   "partial": "-"
+  },
+  "U46": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "c0687c3ce73cf3e4",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "ff77533a6e4fdeff",
+    "T5_pharmacology": "dc928a89d4d81c25",
+    "T6_identity": "ce74cb1e9e762134"
+   },
+   "label": "Dimethyl fumarate",
+   "partial": "-"
+  },
+  "U47": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "f086ca8052729736",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "ced0b52c6aad1f15",
+    "T5_pharmacology": "ab8a58ad9bf176ad",
+    "T6_identity": "a2b3c39085c2ca06"
+   },
+   "label": "Ceralasertib (ATR inhibitor)",
+   "partial": "-"
+  },
+  "U48": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "342af842f3dea577",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "92a8fbeb46cd903e",
+    "T5_pharmacology": "0a8b2e44b882a8cc",
+    "T6_identity": "9e36ea52765fa11e"
+   },
+   "label": "Roxadustat (HIF prolyl-hydroxylase inhibitor): dropped as a lever on label and pharmacology grounds (seizures, thyromimetic action, rat brain necrosis, no paediatric data), not on direction",
+   "partial": "-"
+  },
+  "U49": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "399f4349dc7b22a9",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "db813bd537bb2db9",
+    "T5_pharmacology": "23dfc7994b74f679",
+    "T6_identity": "3b1486d8b9bbcec3"
+   },
+   "label": "Nirogacestat (gamma-secretase inhibitor)",
+   "partial": "-"
+  },
+  "U50": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "9fce94a7d1fd8986",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "db813bd537bb2db9",
+    "T5_pharmacology": "5f12e6e504c32e3d",
+    "T6_identity": "fbf1b42d3cc9bcbf"
+   },
+   "label": "STM2457 (METTL3 inhibitor, tool compound)",
+   "partial": "-"
+  },
+  "U51": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "31e24e78d0f380a5",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "db813bd537bb2db9",
+    "T5_pharmacology": "cf771d8287bd4815",
+    "T6_identity": "a299815a088d3c28"
+   },
+   "label": "D4476 (casein kinase 1 inhibitor, tool compound)",
+   "partial": "-"
+  },
+  "U52": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "85e17efeec701414",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "92a8fbeb46cd903e",
+    "T5_pharmacology": "59620008b3d571c7",
+    "T6_identity": "97a1bc6dd16a88b7"
+   },
+   "label": "AR-12 (reference: PDPK1, not a PDH-kinase hit)",
+   "partial": "-"
+  },
+  "U53": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "43efaf7c69104aa1",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "92a8fbeb46cd903e",
+    "T5_pharmacology": "4b7dbeae6dc8d8ee",
+    "T6_identity": "95708e733f3bc048"
+   },
+   "label": "Dichloroacetate (reference for the Q2 engine)",
+   "partial": "-"
+  },
+  "U54": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "923cc626105a459a",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "ced0b52c6aad1f15",
+    "T5_pharmacology": "15fd4fc979100aa7",
+    "T6_identity": "97ecfdbed5f85bf2"
+   },
+   "label": "Felbamate (reference)",
+   "partial": "-"
+  },
+  "U55": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "237391f05fa4a56b",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "ced0b52c6aad1f15",
+    "T5_pharmacology": "e50674c0f941d8a8",
+    "T6_identity": "7f621325fd189cee"
+   },
+   "label": "Memantine (reference, IT8 P3 qualification reused)",
+   "partial": "-"
+  },
+  "U56": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "d3ea511404bfd11b",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "77b7dea4f627056b",
+    "T5_pharmacology": "3fc09de623ed0d0a",
+    "T6_identity": "890e1336b1b9ec29"
+   },
+   "label": "Sirolimus (reference; card EB-MTOR-AX-01 unchanged)",
+   "partial": "-"
+  },
+  "U57": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "8a44c69ebfbfa682",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "db813bd537bb2db9",
+    "T5_pharmacology": "e0134423ff0354df",
+    "T6_identity": "02c704ca5566ad09"
+   },
+   "label": "Lenalidomide (artefact control)",
+   "partial": "-"
+  },
+  "U58": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "5840d3397c685519",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "db813bd537bb2db9",
+    "T5_pharmacology": "e0fd11feb54abf5a",
+    "T6_identity": "148c6e4ab22bbc80"
+   },
+   "label": "AT9283 (artefact control)",
+   "partial": "-"
+  },
+  "U59": {
+   "broad": "-",
+   "class": "ORD",
+   "inputs": {
+    "T1_cards": "333a93ebae32156b",
+    "T2_pertinence": "1d8e37b50e10f4e0",
+    "T3_receipts": "2d4c21c2c119e3b6",
+    "T4_needs": "2fa442aa63e75191",
+    "T5_pharmacology": "177f2f40ad8ae91b",
+    "T6_identity": "af32521d73bf653e"
+   },
+   "label": "The NRF2 (KEAP1) axis in WWOX-deficient neural cells: a genetic KEAP1/NFE2L2 arm, omaveloxolone and dimethyl fumarate as two cysteine-reactive electrophiles, monomethyl fumarate as a separate comparator with an HCAR2 rationale, each against NFE2L2 loss (a role-resolving mechanism experiment, not a treatment; IT11 P2.3 correction)",
+   "partial": "G4b"
+  },
+  "U60": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "830cabd61269f547",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "ff77533a6e4fdeff",
+    "T5_pharmacology": "b2c130ba62eb08c5",
+    "T6_identity": "dceb29da8b53d6e7"
+   },
+   "label": "Voclosporin (calcineurin inhibitor): dropped; label names seizure and PRES, and its TNF seed is the non-significant one",
+   "partial": "-"
+  },
+  "U61": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "aa516ab09eec9557",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "77b7dea4f627056b",
+    "T5_pharmacology": "61c048874e686602",
+    "T6_identity": "972127ff41b2101e"
+   },
+   "label": "PF-03758309 (pan-PAK inhibitor; reference: dominated by the direct NRF2 arm)",
+   "partial": "-"
+  },
+  "U62": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "ed0a1ffe4ad2d27a",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "77b7dea4f627056b",
+    "T5_pharmacology": "1ecac81625ec3941",
+    "T6_identity": "ed2906fcb1df6900"
+   },
+   "label": "CDDO-EA (NRF2-activator analogue; class precedent in adult rat seizure models, not transferable to omaveloxolone)",
+   "partial": "-"
+  },
+  "U63": {
+   "broad": "-",
+   "class": "ORD",
+   "inputs": {
+    "T1_cards": "a88583b2ac769370",
+    "T2_pertinence": "403956ddfaf8ef49",
+    "T3_receipts": "3ab40f90f4842fdd",
+    "T4_needs": "e3d9478eddf1541c",
+    "T5_pharmacology": "177f2f40ad8ae91b",
+    "T6_identity": "7de12fe35682551b"
+   },
+   "label": "The neurogenic output and the MYC-high radial-glia state (Q6): genetic MYC lowering and stage-specific WWOX add-back, with A51, a PIN1 probe and a CDK4/6 class arm as comparison arms only (a driver, marker or consequence discrimination, not a treatment)",
+   "partial": "G4b"
+  },
+  "U64": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "c596a77a2ad6aa2e",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "db813bd537bb2db9",
+    "T5_pharmacology": "425c837f84e1588e",
+    "T6_identity": "a7e254ee893b7844"
+   },
+   "label": "Palbociclib and abemaciclib (CDK4/6 inhibitors): reference cell-cycle arm, no go decision; evidence not transferred between them",
+   "partial": "-"
+  },
+  "U65": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "d4eaa83d40b90876",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "db813bd537bb2db9",
+    "T5_pharmacology": "91a93e961df3ba88",
+    "T6_identity": "766ed1ef5df3a1df"
+   },
+   "label": "Simvastatin: dropped; a cancer proliferation endpoint in a p53-null non-neural cell, no step to radial glia",
+   "partial": "-"
+  },
+  "U66": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "4daa7dde021f2291",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "db813bd537bb2db9",
+    "T5_pharmacology": "54d2f84092e11204",
+    "T6_identity": "2b5a30e9aed48581"
+   },
+   "label": "Omomyc / OMO-103 (MYC dimerisation-interface mini-protein): reference arm only, no catalogue identity",
+   "partial": "-"
+  },
+  "X01": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "41f105c4d1d90656",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "d2e53556d365e6a4",
+    "T4_needs": "77086341166ba9e5",
+    "T5_pharmacology": "177f2f40ad8ae91b",
+    "T6_identity": "c3a4ef400bf4e089"
+   },
+   "label": "Developmental benefit or disease modification (axis)",
+   "partial": "-"
+  },
+  "X02": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "8e7fb7dfd1abada4",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c3c30203aefa55c6",
+    "T4_needs": "c156cede56e9ac9b",
+    "T5_pharmacology": "177f2f40ad8ae91b",
+    "T6_identity": "c3a4ef400bf4e089"
+   },
+   "label": "Growth endpoint (axis)",
+   "partial": "-"
+  },
+  "X03": {
+   "broad": "-",
+   "class": "EXCL",
+   "inputs": {
+    "T1_cards": "aa69087b7c0f09fc",
+    "T2_pertinence": "c124efeb8d5edb82",
+    "T3_receipts": "c124efeb8d5edb82",
+    "T4_needs": "97e5657152aa720b",
+    "T5_pharmacology": "177f2f40ad8ae91b",
+    "T6_identity": "c3a4ef400bf4e089"
+   },
+   "label": "Pharmacodynamic anchor (axis)",
+   "partial": "-"
+  }
+ }
+}

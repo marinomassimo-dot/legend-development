@@ -716,13 +716,18 @@ class It10Integration(unittest.TestCase):
             self.assertIn(needle, n12["reason"])
         self.assertFalse(any("N12" in u["label"] for u in state()["uni"]["units"]))             # no card, no unit
         trig = {r["trigger"]: r for r in rk.triggers_rows()}
-        for i in range(1, 9):      # R8 added by IT11 P4 (Tnk2-null material or a second shRNA with WWOX mRNA)
+        for i in range(1, 10):      # R8 added by IT11 P4 (Tnk2-null material or a second shRNA with WWOX mRNA); R9 by IT12 P6 (G372R band above the knockout floor)
             self.assertIn(f"R{i}_q1_complement", trig)
         self.assertIn("N12", trig["R3_q1_complement"]["re_evaluates"])
-        self.assertEqual(len(trig), 8 + 8)      # 8 + 7 before IT11 P4 (R8)
+        for i in range(1, 5):      # N-P1B-1 to N-P1B-4 added by IT12 P6 (genetic-interaction slice, caveats only)
+            self.assertIn(f"NP1B{i}_modifiers", trig)
+        self.assertIn("E03", trig["NP1B1_modifiers"]["re_evaluates"])
+        self.assertEqual(len(trig), 8 + 9 + 4)      # 8 + 7 before IT11 P4 (R8), +1 R9 and +4 modifiers in IT12 P6
         import unittest.mock as mock
-        with mock.patch.object(rk, "REOPEN_SEARCHES", rk.HERE / "absent.tsv"):
+        with mock.patch.object(rk, "REOPEN_SEARCHES", rk.HERE / "absent.tsv"), mock.patch.object(rk, "REOPEN_SEARCHES_P1B", rk.HERE / "absent.tsv"):
             self.assertEqual(len(rk.triggers_rows()), 8)
+        self.assertIn("substrate for a stability lever is UNCONFIRMED", n12["reason"])
+        self.assertIn("not shown above the assay floor", n12["reason"])
 
     def test_every_pilot_case_answers_the_mandate_questions(self):
         cases = json.loads((HERE / "matching_pilot_cases.json").read_text())
@@ -803,6 +808,28 @@ class It11Integration(unittest.TestCase):
             with self.assertRaises(SystemExit):
                 rk.proposal_units(state()["ctx"])
 
+class It12Integration(unittest.TestCase):
+    """IT12 P6: the IT12 packages enter as caveats and corrections; no entry is added and no group moves."""
+
+    def test_caveats_are_present_and_no_group_changed(self):
+        cav = rk.read_tsv(HERE / "unit_caveats.tsv")
+        txt = {u: " ".join(r["text"] for r in cav if r["unit_id"] == u) for u in ("U17", "U25", "U28", "U59", "U63")}
+        self.assertIn("GIRK", txt["U17"])
+        self.assertIn("BELOW", txt["U17"])
+        self.assertIn("T-type evidence", txt["U25"])
+        self.assertIn("narrow and separate", txt["U28"])
+        self.assertIn("ONE allele", txt["U63"])
+        for u in ("U28", "U59", "U63"):
+            self.assertIn("although development is unresolved", txt[u])
+        groups = {x["unit_id"]: (x["general_group"], x["partial_group"]) for x in rk.read_tsv(HERE / "units.tsv")}
+        self.assertEqual(groups["U17"][0], "G2b")
+        self.assertEqual(groups["U25"][0], "G4a")
+
+    def test_changes_carry_a_reason_class_per_unit(self):
+        rows = [r for r in rk.read_tsv(HERE / "changes.tsv") if r["note"].startswith(("figure audit", "ethosuximide result", "P47T reanalysis"))]
+        self.assertTrue(rows)
+        self.assertTrue(all(r["reason_class"] == "counter_evidence" for r in rows))
+
 
 if __name__ == "__main__":
-    unittest.main(verbosity=1)
+    unittest.main(verbosity=2)

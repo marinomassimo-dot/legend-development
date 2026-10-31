@@ -1825,7 +1825,7 @@
     },
     {
      "id": "O10",
-     "statement": "P47T knock-in mouse (first WW domain missense), bulk RNA-seq: the text reports hallmark gene-set enrichment of hypoxia, apoptosis and glycolysis in all three forebrain regions (Fig 8b) and, in the cerebellum, glycolysis and hypoxia among matching sets (Fig 9c); the DIRECTION is not stated in the text and the figures were not viewed in IT10 P5. An earlier manifest figure attestation records positive normalised enrichment scores of about 1.3 to 2.3 for these sets in all three regions (carried, not re-verified). An unresolved in-vivo observation beside the P17 counter-observation (O8); omitted by the HIF package of IT10 P2.1.",
+     "statement": "P47T knock-in mouse (first WW domain missense, partial loss, chronic seizures and gliosis), bulk RNA-seq, 5 v 5 animals (cerebellum 4 v 3; Methods say 5): the text reports hallmark gene-set enrichment of hypoxia, apoptosis and glycolysis in all three forebrain regions (Fig 8b). Restated 2026-10-31 (IT12 P2-P47T, figures viewed and measured, deposit GSE215425 reanalysed; set means recomputed independently): all hallmark bars are positive (NES HYPOXIA 2.01, 1.53, 1.50 and GLYCOLYSIS 1.48, 1.27, 1.36 in hippocampus, cortex, PFC; cerebellum HYPOXIA 1.21, GLYCOLYSIS 1.27; the sign rests on the wording of the text, axes start at zero, adjusted p is not reported). The enrichment is a broad modest shift of many hallmark members led by glycolytic enzyme transcripts (Aldoa, Pgk1, Pfkp, Pkm, Tpi1, Hk2, Ldha, +0.1 to +0.6 log2), and the organoid's selective hypoxia-response pattern is NOT reproduced: the selective six-gene set changes by +0.22, +0.11, -0.07 and +0.19 log2 (hippocampus, cortex, PFC, cerebellum; exact permutation p 0.32, 0.70, 0.67, 0.057); Bhlhe40 and Ndrg1 fall; Hif1a, Epas1 transcripts flat or lower; the Adm rise is a two-animal effect (M6, F8). Two of five mutants show an elevated activity-regulated programme (Nptx2, Bdnf); that it reflects seizure or activity is an inference (no per-animal seizure record) and the designation is post hoc. The authors' hippocampal differential-expression sheet does not follow the deposit (r about 0.4 to 0.5; cause unverifiable); GSEA re-run: producer only.",
      "model_type": "mouse_knock_in",
      "species": "mouse",
      "genotype": "Wwox P47T/P47T versus wild type",
@@ -1834,9 +1834,9 @@
      "comparison": "mutant against wild type",
      "readout": "hallmark gene-set enrichment (GSEA)",
      "readout_level": "transcript",
-     "direction_observed": "enrichment reported; direction not stated in the text",
+     "direction_observed": "enrichment (positive normalised enrichment score); glycolytic-enzyme transcripts modestly higher; selective hypoxia-response genes not higher",
      "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-     "limits": "Gene-set enrichment is not HIF protein or activity; a missense knock-in is not a null; the NES values are an earlier figure attestation, not re-viewed here; adult, not the P17 stage of O8.",
+     "limits": "Transcripts only: no HIF protein, hydroxylation, oxygen condition or lactate; gene-set enrichment is not HIF activity; a partial-loss missense knock-in with seizures and gliosis is not a null and does not separate WWOX-specific HIF effects from activity or composition; the NES values are pixel measurements of a raster figure (about 0.03); adult, not the P17 stage of O8; one dataset reached through the figures, the DEG sheets and the deposit.",
      "pmid": "36828035",
      "locators": [
       {
@@ -1877,7 +1877,9 @@
     "IT5 P9 (card I01): the one primary seizure-endpoint test found of dichloroacetate in a PDH-restrained epilepsy model (mouse, abstract level) showed no anticonvulsant effect and a slight pro-convulsant signal in one test; a randomized paediatric trial (congenital lactic acidosis) lowered post-meal lactate without moving the clinical outcomes measured; the Wwox-null mouse is hypoglycaemic and three of four glucose datasets point to lowering with a PDK inhibitor (diabetic adults, cirrhotic and healthy adults, endotoxaemic minipigs) and one septic-mouse study shows reversal alongside anorexia reversal; the sign in a Wwox-deficient animal is unmeasured.",
     "IT7 P3/P1 (exploratory, verified): the six-gene module on which the glycolytic end of the chain rests did not transfer decisively to an independent WWOX-loss contrast (P47T hippocampus, p 0.060, inside its null; PDK1 lower by -0.08, not raised), and the signed network and the network with four duplicated HIF1A edges, already in the external network; the comparison therefore tests nothing about WWOX knowledge in general, and no added value was measurable showed no added value over a reference for ranking compounds on it while the signature route's effect was not detected and not excluded (rho 0.143, interval 0.039 to 0.243, minimum detectable effect about 0.157; weak positive counter-evidence: lower bound 0.039, top-decile hit rate 15 percent). The module is not shown to be a reproducible WWOX-loss feature, and the computational methods give no reason to prefer a PDK-directed compound over any other.",
     "IT10 P2.1 (O8): mouse P17 brain with Wwox deletion shows no elevation of HIF-axis or glycolysis transcripts (Hif1a flat, Epas1 and Slc2a1 lower in the contrasts read); the in-vivo brain does not side with the organoid. Bulk transcripts, epileptic lines, post hoc computation.",
-    "IT10 P2.1/P5 (direction): loss of neuronal HIF-1alpha or HIF-2alpha worsens neonatal hypoxic-ischaemic injury in mice (abstract level for most reports; the HIF-1alpha reports come from one research group), so lowering the HIF axis may be harmful; the 'disease direction by construction' argument is withdrawn."
+    "IT10 P2.1/P5 (direction): loss of neuronal HIF-1alpha or HIF-2alpha worsens neonatal hypoxic-ischaemic injury in mice (abstract level for most reports; the HIF-1alpha reports come from one research group), so lowering the HIF axis may be harmful; the 'disease direction by construction' argument is withdrawn.",
+    "IT12 P2-P47T (2026-10-31): the selective hypoxia-response pattern of the human organoid (ADM, HK2, P4HA1, SLC2A1, BHLHE40, ANKRD37, EGLN3, DDIT4 up; PGK1, ALDOA, ENO1, PKM, PFKP, NDRG1 flat) is not reproduced in adult P47T forebrain or in the four P17 deletion contrasts; the glycolytic enzyme genes that are flat in the organoid are modestly higher in P47T. The pattern therefore rests for now on one human organoid dataset (4 v 2 libraries).",
+    "IT12 P1-alt (2026-10-31): in the one genome-wide genetic-interaction screen of a WWOX-null line (GSE298081, HAP1, one clone, no replicate or rescue arm; association table only) loss of PDHA1, CS, LIPT1 and NDUFAF1 is better tolerated, the opposite sign to PDH activation; low weight, non-neural, proliferation endpoint."
    ],
    "sources": {
     "cards": [
@@ -2042,7 +2044,7 @@
     "status": "NOT_ASSESSED",
     "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
    },
-   "notes": "Collision flagged: PDK1 vs PDPK1 (see targets). The need is the PDH node, not any one compound class (DCA, ketogenic diet, HIF1A inhibitors are routes). Restated 2026-10-31 (IT10 P5 integrating IT10 P2.1 and an independent verification): O2, O4, O7 extended; O8 to O10 added; rival explanations added as inferences; direction stays uncertain.",
+   "notes": "Collision flagged: PDK1 vs PDPK1 (see targets). The need is the PDH node, not any one compound class (DCA, ketogenic diet, HIF1A inhibitors are routes). Restated 2026-10-31 (IT10 P5 integrating IT10 P2.1 and an independent verification): O2, O4, O7 extended; O8 to O10 added; rival explanations added as inferences; direction stays uncertain. IT12 (2026-10-31): O10 restated after the P47T reanalysis; no HIF protein, activity, lactate or oxygen-condition datum exists for any mammalian WWOX-deficient neural tissue, and the P47T datum is a transcript observation in a seizing, gliotic, partial-loss brain that cannot separate a WWOX-specific HIF effect from activity or composition. Counter-evidence added from IT12 P1-alt (GSE298081).",
    "basis": "observed"
   },
   {
@@ -2366,7 +2368,7 @@
     "status": "NOT_ASSESSED",
     "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
    },
-   "notes": "",
+   "notes": " IT12 P2-P47T (2026-10-31): P47T forebrain Ldha +0.4 to +0.6 log2, Ldhb -0.1 to -0.2 (guard-scope readout genes, observation only, transcripts); the intervention direction is unchanged. IT12 P1-alt: HAP1 shows no LDHA/LDHB interaction (qGI +0.016 and -0.113, FDR 0.88 and 0.79) in the one unreplicated WWOX-null screen.",
    "basis": "observed"
   },
   {

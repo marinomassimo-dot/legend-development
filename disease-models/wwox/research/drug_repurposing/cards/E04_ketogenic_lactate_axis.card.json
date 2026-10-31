@@ -1,261 +1,264 @@
 {
- "schema_version": 1,
- "input_sha256": "317331552ccf6a3c12dfbc968bd686d3d88938c89a4fdfb9dec9558b71f26636",
- "epistemic_status": "IPOTESI",
- "canonical": false,
- "assessment": "REQUIRES_QUALIFICATION",
- "directional_summary": "UNRESOLVED",
- "endpoint_outcomes": [],
- "comparisons": [],
- "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
- "label_lookup": {
-  "status": "NOT_ATTEMPTED",
-  "coverage": "UNKNOWN",
-  "method": "UNKNOWN",
-  "queries": [],
-  "source": "UNKNOWN",
-  "retrieved_at": "UNKNOWN",
-  "client_version": "UNKNOWN",
-  "product_name": "UNKNOWN",
-  "active_ingredient": "UNKNOWN",
-  "formulation": "UNKNOWN",
-  "spl_id": "UNKNOWN",
-  "error": "UNKNOWN",
-  "coverage_limit": "UNKNOWN"
- },
- "p4_fields": {
-  "endpoint_pursued": "The existing minimal falsifier of HYP-20260709-01: Seahorse OCR/ECAR on donor-derived cells or the existing organoids; this card adds no new endpoint.",
-  "functional_evidence_available": "The ketogenic diet in WWOX-DEE: tried in 3 patients in one cohort and continued in 1; a null-genotype report where it was suspended. The Lucas-Clarke study contains no diet, ketone, PDH or pyruvate arm.",
-  "temporal_or_model_limit": "n of 3 and n of 1 clinical reports; fly lactate is amyloid-conditional.",
-  "cellular_context": {
-   "target_expression": "UNKNOWN.",
-   "cells_tissue_stage": "UNKNOWN.",
-   "coverage": "UNKNOWN.",
-   "limits": "No metabolic readout of the lever exists in a WWOX-deficient human neural system; the lactate rows have opposite signs in the fly (with and without amyloid) and in one human MRS report."
-  }
- },
- "input": {
   "schema_version": 1,
-  "axis": "E / Lucas-Clarke follow-up: ketogenic and lactate axis",
-  "route": "BENEFICIO_PRECOCE",
-  "mission_dimensions": {
-   "track": "A",
-   "track_definition": "mission.md section 5: Track A = variant-independent WWOX loss of function; Track B = variant or allele-class specific (e.g. the Q230P missense class); Track C = repurposing, which is a method of reaching A or B, not a third lesion class",
-   "route": "BENEFICIO_PRECOCE",
-   "route_definition": "RECUPERO_PROFONDO = deep recovery of the lost function; BENEFICIO_PRECOCE = concrete partial benefit, symptomatic control or protection of function, with paediatric feasibility and time in view",
-   "route_note": "Empirically used in developmental and epileptic encephalopathies for seizure control (partial benefit); a WWOX-specific rationale is unresolved. Not deep recovery. Track B: no allele-specific datum; the single null-genotype report is n = 1 and not a refutation for a protein-retaining allele.",
-   "the_two_dimensions_are_independent": "a card keeps both: a variant-independent lever can be a partial-benefit lever, and a lesion-specific one can aim at deep recovery"
-  },
-  "candidate": {
-   "id": "P4-E-04",
-   "name": "Ketogenic and lactate-transport interventions (the ketogenic diet; MCT1 blockade as a direction control)"
-  },
-  "disease_assertions": [
-   {
-    "id": "DA-LC-LAC-001",
-    "target_id": "fly L-lactate (whole-head HILIC LC-MS)",
-    "endpoint": "relative lactate abundance",
-    "direction": "INCREASE",
-    "source": "PAPER 567 (published Lucas-Clarke 2026 article; Drosophila Alzheimer's-amyloid model; NOT WWOX EVIDENCE: a fly amyloid model, not WWOX-DEE)",
-    "locator": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json verbatim_locators.entries[39], [40], [43]; Supplementary Table 4; Fig 5C",
-    "epistemic_status": "DATO",
-    "reading_depth": "complete_fulltext_read",
-    "context": {
-     "disease_id": "Drosophila model of Alzheimer's amyloid pathology (not WWOX-DEE)",
-     "genotype": "neuronal Wwox RNAi plus neuronal Abeta42 (Arctic) versus control RNAi plus Abeta42",
-     "species": "Drosophila melanogaster",
-     "cell_type": "adult fly head or brain (whole head for metabolomics and RNA-seq)",
-     "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
-    },
-    "measured_result_note": "Interaction F 23.606, adjusted P 0.0174; knockdown effect +1.30 log2 under Abeta42. 5 pools of 10 heads, two-way ANOVA on the top 200 features by variance, 10 percent FDR. No flux, no isotope tracing, no NAD/NADH.",
-    "receipt": "FTR-20261026-42909904-01",
-    "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
-   },
-   {
-    "id": "DA-LC-LAC-002",
-    "target_id": "fly L-lactate (whole-head HILIC LC-MS)",
-    "endpoint": "relative lactate abundance",
-    "direction": "DECREASE",
-    "source": "PAPER 567 (published Lucas-Clarke 2026 article; Drosophila Alzheimer's-amyloid model; NOT WWOX EVIDENCE: a fly amyloid model, not WWOX-DEE)",
-    "locator": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json verbatim_locators.entries[40]; Supplementary Fig 5A",
-    "epistemic_status": "DATO",
-    "reading_depth": "complete_fulltext_read",
-    "context": {
-     "disease_id": "Drosophila model of Alzheimer's amyloid pathology (not WWOX-DEE)",
-     "genotype": "neuronal Wwox RNAi versus control RNAi in a LacZ (no amyloid) background",
-     "species": "Drosophila melanogaster",
-     "cell_type": "adult fly head or brain (whole head for metabolomics and RNA-seq)",
-     "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
-    },
-    "measured_result_note": "Nominal -0.43 log2 without amyloid (simple effect not tested for significance). The lactate rise is conditional on amyloid.",
-    "receipt": "FTR-20261026-42909904-01",
-    "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
-   },
-   {
-    "id": "DA-BIO008-001",
-    "target_id": "human brain lactate (MRS)",
-    "endpoint": "brain lactate level in one WWOX patient",
-    "direction": "DECREASE",
-    "source": "discovery_ledger_current DL-BIO-008 (one patient; reading depth not re-verified by this card)",
-    "locator": "DL-BIO-008",
-    "epistemic_status": "INFERENZA",
-    "reading_depth": "UNKNOWN",
-    "context": {
-     "disease_id": "WWOX-DEE, one reported patient (class level)",
-     "genotype": "UNKNOWN",
-     "species": "human",
-     "cell_type": "brain MRS voxel",
-     "developmental_stage": "child"
-    },
-    "measured_result_note": "Reported extremely low in one patient; the same entry records raised mouse serum lactate. Not combined with the fly rows: different species, tissue and context.",
-    "sign_vs_contrast": {
-     "DA-LC-LAC-001": "OPPOSITE (DECREASE against INCREASE under Abeta42)",
-     "DA-LC-LAC-002": "SAME SIGN (DECREASE, nominal, without Abeta42); not a replication: other species, tissue and context"
-    },
-    "evidence_scope": "UNQUALIFIED"
-   },
-   {
-    "id": "DA-LC-PDH-001",
-    "target_id": "fly PDH, PDK, pyruvate or pyruvate-to-TCA flux",
-    "endpoint": "any measurement",
-    "direction": "UNKNOWN",
-    "source": "PAPER 567 (published Lucas-Clarke 2026 article; Drosophila Alzheimer's-amyloid model; NOT WWOX EVIDENCE: a fly amyloid model, not WWOX-DEE)",
-    "locator": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json verbatim_locators.entries[44], [49]; dossier section 3 (pyruvate not reported; Fig 5D draws a TCA node with no data attached)",
-    "epistemic_status": "DATO",
-    "reading_depth": "complete_fulltext_read",
-    "context": {
-     "disease_id": "Drosophila model of Alzheimer's amyloid pathology (not WWOX-DEE)",
-     "genotype": "neuronal Wwox RNAi plus neuronal Abeta42 (Arctic) versus control RNAi plus Abeta42",
-     "species": "Drosophila melanogaster",
-     "cell_type": "adult fly head or brain (whole head for metabolomics and RNA-seq)",
-     "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
-    },
-    "measured_result_note": "The study measured no pyruvate, PDH, PDK, flux, oxygen consumption or NAD/NADH. Whether pyruvate was tested is unknown; the MetaboLights deposit is not publicly retrievable (mtbls12344.md). Pdk, Pdha, Pdhb are absent from the significant gene lists, which is not a test. The paper's own heading and abstract speak of pyruvate metabolism, but that rests on transcript pathway over-representation (KEGG, including Ldh itself; Pepck2, CG11052 and Adh lower), not on a pyruvate, PDH or PDK measurement.",
-    "receipt": "FTR-20261026-42909904-01",
-    "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
-   }
-  ],
-  "drug_assertions": [],
-  "p4_fields": {
-   "endpoint_pursued": "The existing minimal falsifier of HYP-20260709-01: Seahorse OCR/ECAR on donor-derived cells or the existing organoids; this card adds no new endpoint.",
-   "functional_evidence_available": "The ketogenic diet in WWOX-DEE: tried in 3 patients in one cohort and continued in 1; a null-genotype report where it was suspended. The Lucas-Clarke study contains no diet, ketone, PDH or pyruvate arm.",
-   "temporal_or_model_limit": "n of 3 and n of 1 clinical reports; fly lactate is amyloid-conditional.",
-   "cellular_context": {
-    "target_expression": "UNKNOWN.",
-    "cells_tissue_stage": "UNKNOWN.",
-    "coverage": "UNKNOWN.",
-    "limits": "No metabolic readout of the lever exists in a WWOX-deficient human neural system; the lactate rows have opposite signs in the fly (with and without amyloid) and in one human MRS report."
-   }
-  },
-  "p4_card": {
-   "identity": "Ketogenic diet (HYP-20260709-01, map record R-05) and, as a direction control only, MCT1 blockade (AZD3965 in DGIdb). No new compound.",
-   "indication_and_transfer": "A decision for the treating clinical team, not for this system; this card only records the consequence of the Lucas-Clarke reading: no direct support and no refutation.",
-   "novelty_for_woree": "NOT NEW: existing hypothesis, updated with a consequence note on 2026-10-26.",
-   "state_of_known_roads": "HYP-20260709-01 (ranked, proposed-to-L9), R-05, DL-MECH-020, DL-BIO-008, DL-BIO-009.",
-   "pathway_and_objective": "BENEFICIO_PRECOCE; Track A.",
-   "expected_contribution": "UNKNOWN beyond the empirical seizure-control use.",
-   "mechanism": "UNKNOWN for WWOX.",
-   "sources": {
-    "internal": [
-     "HYP-20260709-01",
-     "R-05",
-     "N-06",
-     "DL-MECH-020",
-     "DL-BIO-008",
-     "DL-BIO-009",
-     "PAPER 567"
-    ],
-    "external_not_wwox_evidence": [
-     "DGIdb SLC16A1 rows: AZD3965 (inhibitor), valproic acid and sodium butyrate (no action type)"
-    ]
-   },
-   "evidence_for_and_against": {
-    "for": [],
-    "against": [],
-    "transfer_limits": "The fly lactate result is conditional on amyloid and cannot be used for or against the Warburg direction in WWOX-null neurons."
-   },
-   "time_to_access": "UNKNOWN.",
-   "time_to_benefit": "UNKNOWN.",
-   "pharmacology": "UNKNOWN.",
-   "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
-   "scope_of_checks": {
-    "support_and_replication": "No independent replication of any fly row is held; the organoid rows are one laboratory's deposit.",
-    "formal_checks": "Disease-side fly rows carry verbatim locators in the manifest (104 entries; entries 31, 49, 89, 94 SUPPORTED by a blind audit, entry 95 narrowed after an OVERSHOOT finding); the compound statements are abstract-level and unaudited.",
-    "card_inferences_owed_audit": "Statements marked INFERENZA, including every statement about what a compound would do in WWOX-deficient tissue, are OWED a blind audit by another actor."
-   },
-   "question_history": [
-    "HYP-20260709-01",
-    "mandate 2026-10-26 (Lucas-Clarke follow-up)"
-   ],
-   "predictions": "None; no engine, no score.",
-   "next_measurement": "PDH-specific readouts in donor-derived WWOX-deficient cells or the existing knockout organoids against isogenic controls: PDH activity in a lysate that preserves phosphorylation, phospho-PDHA1 (Ser293, UniProt P08559 precursor numbering; Ser232 and Ser300 are also PDK sites), 13C-glucose or ketone tracing, pyruvate-to-lactate ratio, NADH/NAD+. Seahorse OCR/ECAR is a general screen of respiration and acidification, not a PDH measure, and a normal result in non-neural cells is non-significance, not equivalence; it is useful but not the only discriminating test (HYP-20260709-01, verification 2026-10-27).",
-   "status": "abstention",
-   "value_added": "Records that this paper changes nothing for the ketogenic hypothesis and names the one measurement that still decides it.",
-   "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven queries returned no registered WOREE interventional study; it answers seven queries against one registry on one date and a missing hit does not prove that no study exists. Not re-run for this card."
-  },
-  "not_known": [
-   "Whether a WWOX-deficient human neural cell has a measurable bioenergetic defect that a ketone substrate would bypass.",
-   "Whether lactate is raised, normal or low in WWOX-deficient human brain across ages and contexts."
-  ],
-  "evidence_against": [
-   "Four sources report normal human metabolism in WWOX deficiency (DL-BIO-009); one MRS report has lactate extremely low (DL-BIO-008)."
-  ],
-  "bridge_gaps_exposed": [
-   "No drug assertion is supplied: the candidate is a diet."
-  ],
-  "translation": {
-   "pediatric_suitability": "UNKNOWN",
-   "cns_exposure": "UNKNOWN",
-   "interactions": "UNKNOWN",
-   "access": "UNKNOWN",
-   "time_to_benefit": "UNKNOWN",
-   "functional_rescue": "UNKNOWN"
-  },
-  "p4_roadmap_fields": {
-   "indication_and_transfer": "A decision for the treating clinical team, not for this system; this card only records the consequence of the Lucas-Clarke reading: no direct support and no refutation.",
-   "verification_scope": "{\"support_and_replication\": \"No independent replication of any fly row is held; the organoid rows are one laboratory's deposit.\", \"formal_checks\": \"Disease-side fly rows carry verbatim locators in the manifest (104 entries; entries 31, 49, 89, 94 SUPPORTED by a blind audit, entry 95 narrowed after an OVERSHOOT finding); the compound statements are abstract-level and unaudited.\", \"card_inferences_owed_audit\": \"Statements marked INFERENZA, including every statement about what a compound would do in WWOX-deficient tissue, are OWED a blind audit by another actor.\"}"
-  },
+  "input_sha256": "d5a483768d287f068043b0bec9778b8549ff09d7db7ad530e4c8bce03b0497be",
+  "epistemic_status": "IPOTESI",
+  "canonical": false,
+  "assessment": "REQUIRES_QUALIFICATION",
+  "directional_summary": "UNRESOLVED",
+  "endpoint_outcomes": [],
+  "comparisons": [],
+  "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
   "label_lookup": {
-   "status": "NOT_ATTEMPTED"
+    "status": "NOT_ATTEMPTED",
+    "coverage": "UNKNOWN",
+    "method": "UNKNOWN",
+    "queries": [],
+    "source": "UNKNOWN",
+    "retrieved_at": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "active_ingredient": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "error": "UNKNOWN",
+    "coverage_limit": "UNKNOWN"
   },
-  "card_conventions": [
-   "IPOTESI throughout; the bridge forces it. No score, rank, probability or blended index is carried.",
-   "directional_summary compares signs only where target, endpoint and every context dimension match; UNRESOLVED is a statement about the record, not about the biology.",
-   "Every disease-side row from the Drosophila article is NOT WWOX-DEE EVIDENCE; the organoid rows are exploratory transcript analyses of one deposit.",
-   "Abstract-level statements from PubMed are labelled abstract_only; none carries a receipt.",
-   "label_lookup is NOT_ATTEMPTED in the bridge: the bridge has no network. The openFDA adapter was run separately and is recorded in lucas_clarke_followup_20261026/compounds_and_sources.md.",
-   "No dose, route, schedule or paediatric suitability appears; assay concentrations of the sources are deliberately not reproduced."
-  ],
-  "no_new_reading": "No paper was newly read in full for these cards. The Lucas-Clarke reading is scientist-a's (receipt FTR-20261026-42909904-01); the compound statements are abstract-level PubMed reads and registry-database retrievals (lucas_clarke_followup_20261026/).",
-  "abstention_card": {
-   "kind": "ABSTENTION",
-   "missing_datum": "A bioenergetic flux measurement (oxygen consumption and extracellular acidification) in WWOX-deficient versus isogenic human neural or donor-derived cells; never done in any WWOX human system (HYP-20260709-01, recalibration of 2026-09-21).",
-   "search_record": "Lucas-Clarke 2026 read in full (receipt FTR-20261026-42909904-01): no diet, ketone, PDH or pyruvate arm. Six database sources and ten PubMed abstracts on 2026-10-26 added no WWOX ketone datum. Reopening condition: a flux measurement in a WWOX human system, or the pyruvate rows of MTBLS12344 if released.",
-   "adjacent_context_not_wwox_evidence": [
-    "fly lactate rows: up with Wwox reduction plus amyloid, nominally down without amyloid"
-   ],
-   "an_abstention_is_a_result": "The candidate stays where HYP-20260709-01 holds it; this card names what would end the abstention."
+  "p4_fields": {
+    "endpoint_pursued": "The existing minimal falsifier of HYP-20260709-01: Seahorse OCR/ECAR on donor-derived cells or the existing organoids; this card adds no new endpoint.",
+    "functional_evidence_available": "The ketogenic diet in WWOX-DEE: tried in 3 patients in one cohort and continued in 1; a null-genotype report where it was suspended. The Lucas-Clarke study contains no diet, ketone, PDH or pyruvate arm.",
+    "temporal_or_model_limit": "n of 3 and n of 1 clinical reports; fly lactate is amyloid-conditional.",
+    "cellular_context": {
+      "target_expression": "UNKNOWN.",
+      "cells_tissue_stage": "UNKNOWN.",
+      "coverage": "UNKNOWN.",
+      "limits": "No metabolic readout of the lever exists in a WWOX-deficient human neural system; the lactate rows have opposite signs in the fly (with and without amyloid) and in one human MRS report."
+    }
   },
-  "target_census": {
-   "dir": "disease-models/wwox/research/drug_repurposing/lucas_clarke_followup_20261026",
-   "symbols": [
-    "SLC16A1"
-   ]
-  }
- },
- "translation": {
-  "pediatric_suitability": "UNKNOWN",
-  "cns_exposure": "UNKNOWN",
-  "interactions": "UNKNOWN",
-  "access": "UNKNOWN",
-  "time_to_benefit": "UNKNOWN",
-  "functional_rescue": "UNKNOWN"
- },
- "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
- "limits": [
-  "Technical comparison is not efficacy, safety or experimental validation.",
-  "Sources and receipt references are retained, not independently verified.",
-  "Shared sources are not independent confirmations; scores are not pooled.",
-  "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
- ]
+  "input": {
+    "schema_version": 1,
+    "axis": "E / Lucas-Clarke follow-up: ketogenic and lactate axis",
+    "route": "BENEFICIO_PRECOCE",
+    "mission_dimensions": {
+      "track": "A",
+      "track_definition": "mission.md section 5: Track A = variant-independent WWOX loss of function; Track B = variant or allele-class specific (e.g. the Q230P missense class); Track C = repurposing, which is a method of reaching A or B, not a third lesion class",
+      "route": "BENEFICIO_PRECOCE",
+      "route_definition": "RECUPERO_PROFONDO = deep recovery of the lost function; BENEFICIO_PRECOCE = concrete partial benefit, symptomatic control or protection of function, with paediatric feasibility and time in view",
+      "route_note": "Empirically used in developmental and epileptic encephalopathies for seizure control (partial benefit); a WWOX-specific rationale is unresolved. Not deep recovery. Track B: no allele-specific datum; the single null-genotype report is n = 1 and not a refutation for a protein-retaining allele.",
+      "the_two_dimensions_are_independent": "a card keeps both: a variant-independent lever can be a partial-benefit lever, and a lesion-specific one can aim at deep recovery"
+    },
+    "candidate": {
+      "id": "P4-E-04",
+      "name": "Ketogenic and lactate-transport interventions (the ketogenic diet; MCT1 blockade as a direction control)"
+    },
+    "disease_assertions": [
+      {
+        "id": "DA-LC-LAC-001",
+        "target_id": "fly L-lactate (whole-head HILIC LC-MS)",
+        "endpoint": "relative lactate abundance",
+        "direction": "INCREASE",
+        "source": "PAPER 567 (published Lucas-Clarke 2026 article; Drosophila Alzheimer's-amyloid model; NOT WWOX EVIDENCE: a fly amyloid model, not WWOX-DEE)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json verbatim_locators.entries[39], [40], [43]; Supplementary Table 4; Fig 5C",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Drosophila model of Alzheimer's amyloid pathology (not WWOX-DEE)",
+          "genotype": "neuronal Wwox RNAi plus neuronal Abeta42 (Arctic) versus control RNAi plus Abeta42",
+          "species": "Drosophila melanogaster",
+          "cell_type": "adult fly head or brain (whole head for metabolomics and RNA-seq)",
+          "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
+        },
+        "measured_result_note": "Interaction F 23.606, adjusted P 0.0174; knockdown effect +1.30 log2 under Abeta42. 5 pools of 10 heads, two-way ANOVA on the top 200 features by variance, 10 percent FDR. No flux, no isotope tracing, no NAD/NADH.",
+        "receipt": "FTR-20261026-42909904-01",
+        "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
+      },
+      {
+        "id": "DA-LC-LAC-002",
+        "target_id": "fly L-lactate (whole-head HILIC LC-MS)",
+        "endpoint": "relative lactate abundance",
+        "direction": "DECREASE",
+        "source": "PAPER 567 (published Lucas-Clarke 2026 article; Drosophila Alzheimer's-amyloid model; NOT WWOX EVIDENCE: a fly amyloid model, not WWOX-DEE)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json verbatim_locators.entries[40]; Supplementary Fig 5A",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Drosophila model of Alzheimer's amyloid pathology (not WWOX-DEE)",
+          "genotype": "neuronal Wwox RNAi versus control RNAi in a LacZ (no amyloid) background",
+          "species": "Drosophila melanogaster",
+          "cell_type": "adult fly head or brain (whole head for metabolomics and RNA-seq)",
+          "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
+        },
+        "measured_result_note": "Nominal -0.43 log2 without amyloid (simple effect not tested for significance). The lactate rise is conditional on amyloid.",
+        "receipt": "FTR-20261026-42909904-01",
+        "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
+      },
+      {
+        "id": "DA-BIO008-001",
+        "target_id": "human brain lactate (MRS)",
+        "endpoint": "brain lactate level in one WWOX patient",
+        "direction": "DECREASE",
+        "source": "discovery_ledger_current DL-BIO-008 (one patient; reading depth not re-verified by this card)",
+        "locator": "DL-BIO-008",
+        "epistemic_status": "INFERENZA",
+        "reading_depth": "UNKNOWN",
+        "context": {
+          "disease_id": "WWOX-DEE, one reported patient (class level)",
+          "genotype": "UNKNOWN",
+          "species": "human",
+          "cell_type": "brain MRS voxel",
+          "developmental_stage": "child"
+        },
+        "measured_result_note": "Reported extremely low in one patient; the same entry records raised mouse serum lactate. Not combined with the fly rows: different species, tissue and context.",
+        "sign_vs_contrast": {
+          "DA-LC-LAC-001": "OPPOSITE (DECREASE against INCREASE under Abeta42)",
+          "DA-LC-LAC-002": "SAME SIGN (DECREASE, nominal, without Abeta42); not a replication: other species, tissue and context"
+        },
+        "evidence_scope": "UNQUALIFIED"
+      },
+      {
+        "id": "DA-LC-PDH-001",
+        "target_id": "fly PDH, PDK, pyruvate or pyruvate-to-TCA flux",
+        "endpoint": "any measurement",
+        "direction": "UNKNOWN",
+        "source": "PAPER 567 (published Lucas-Clarke 2026 article; Drosophila Alzheimer's-amyloid model; NOT WWOX EVIDENCE: a fly amyloid model, not WWOX-DEE)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json verbatim_locators.entries[44], [49]; dossier section 3 (pyruvate not reported; Fig 5D draws a TCA node with no data attached)",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Drosophila model of Alzheimer's amyloid pathology (not WWOX-DEE)",
+          "genotype": "neuronal Wwox RNAi plus neuronal Abeta42 (Arctic) versus control RNAi plus Abeta42",
+          "species": "Drosophila melanogaster",
+          "cell_type": "adult fly head or brain (whole head for metabolomics and RNA-seq)",
+          "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
+        },
+        "measured_result_note": "The study measured no pyruvate, PDH, PDK, flux, oxygen consumption or NAD/NADH. Whether pyruvate was tested is unknown; the MetaboLights deposit is not publicly retrievable (mtbls12344.md). Pdk, Pdha, Pdhb are absent from the significant gene lists, which is not a test. The paper's own heading and abstract speak of pyruvate metabolism, but that rests on transcript pathway over-representation (KEGG, including Ldh itself; Pepck2, CG11052 and Adh lower), not on a pyruvate, PDH or PDK measurement.",
+        "receipt": "FTR-20261026-42909904-01",
+        "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
+      }
+    ],
+    "drug_assertions": [],
+    "p4_fields": {
+      "endpoint_pursued": "The existing minimal falsifier of HYP-20260709-01: Seahorse OCR/ECAR on donor-derived cells or the existing organoids; this card adds no new endpoint.",
+      "functional_evidence_available": "The ketogenic diet in WWOX-DEE: tried in 3 patients in one cohort and continued in 1; a null-genotype report where it was suspended. The Lucas-Clarke study contains no diet, ketone, PDH or pyruvate arm.",
+      "temporal_or_model_limit": "n of 3 and n of 1 clinical reports; fly lactate is amyloid-conditional.",
+      "cellular_context": {
+        "target_expression": "UNKNOWN.",
+        "cells_tissue_stage": "UNKNOWN.",
+        "coverage": "UNKNOWN.",
+        "limits": "No metabolic readout of the lever exists in a WWOX-deficient human neural system; the lactate rows have opposite signs in the fly (with and without amyloid) and in one human MRS report."
+      }
+    },
+    "p4_card": {
+      "identity": "Ketogenic diet (HYP-20260709-01, map record R-05) and, as a direction control only, MCT1 blockade (AZD3965 in DGIdb). No new compound.",
+      "indication_and_transfer": "A decision for the treating clinical team, not for this system; this card only records the consequence of the Lucas-Clarke reading: no direct support and no refutation.",
+      "novelty_for_woree": "NOT NEW: existing hypothesis, updated with a consequence note on 2026-10-26.",
+      "state_of_known_roads": "HYP-20260709-01 (ranked, proposed-to-L9), R-05, DL-MECH-020, DL-BIO-008, DL-BIO-009.",
+      "pathway_and_objective": "BENEFICIO_PRECOCE; Track A.",
+      "expected_contribution": "UNKNOWN beyond the empirical seizure-control use.",
+      "mechanism": "UNKNOWN for WWOX.",
+      "sources": {
+        "internal": [
+          "HYP-20260709-01",
+          "R-05",
+          "N-06",
+          "DL-MECH-020",
+          "DL-BIO-008",
+          "DL-BIO-009",
+          "PAPER 567"
+        ],
+        "external_not_wwox_evidence": [
+          "DGIdb SLC16A1 rows: AZD3965 (inhibitor), valproic acid and sodium butyrate (no action type)"
+        ]
+      },
+      "evidence_for_and_against": {
+        "for": [],
+        "against": [
+          "IT12 P1-alt caution (dated 2026-10-31; same screen, GSE298081, one unreplicated WWOX-null HAP1 clone, non-neural, proliferation endpoint, association only): loss of SLC2A1 (qGI -0.593, FDR 0.050) and HK2 (-0.464, 0.040) is worse tolerated by the null clone. A caution on direction for any glucose-restriction or 2-deoxyglucose-class idea, not evidence of harm in neurons."
+        ],
+        "transfer_limits": "The fly lactate result is conditional on amyloid and cannot be used for or against the Warburg direction in WWOX-null neurons."
+      },
+      "time_to_access": "UNKNOWN.",
+      "time_to_benefit": "UNKNOWN.",
+      "pharmacology": "UNKNOWN.",
+      "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+      "scope_of_checks": {
+        "support_and_replication": "No independent replication of any fly row is held; the organoid rows are one laboratory's deposit.",
+        "formal_checks": "Disease-side fly rows carry verbatim locators in the manifest (104 entries; entries 31, 49, 89, 94 SUPPORTED by a blind audit, entry 95 narrowed after an OVERSHOOT finding); the compound statements are abstract-level and unaudited.",
+        "card_inferences_owed_audit": "Statements marked INFERENZA, including every statement about what a compound would do in WWOX-deficient tissue, are OWED a blind audit by another actor."
+      },
+      "question_history": [
+        "HYP-20260709-01",
+        "mandate 2026-10-26 (Lucas-Clarke follow-up)"
+      ],
+      "predictions": "None; no engine, no score.",
+      "next_measurement": "PDH-specific readouts in donor-derived WWOX-deficient cells or the existing knockout organoids against isogenic controls: PDH activity in a lysate that preserves phosphorylation, phospho-PDHA1 (Ser293, UniProt P08559 precursor numbering; Ser232 and Ser300 are also PDK sites), 13C-glucose or ketone tracing, pyruvate-to-lactate ratio, NADH/NAD+. Seahorse OCR/ECAR is a general screen of respiration and acidification, not a PDH measure, and a normal result in non-neural cells is non-significance, not equivalence; it is useful but not the only discriminating test (HYP-20260709-01, verification 2026-10-27).",
+      "status": "abstention",
+      "value_added": "Records that this paper changes nothing for the ketogenic hypothesis and names the one measurement that still decides it.",
+      "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven queries returned no registered WOREE interventional study; it answers seven queries against one registry on one date and a missing hit does not prove that no study exists. Not re-run for this card."
+    },
+    "not_known": [
+      "Whether a WWOX-deficient human neural cell has a measurable bioenergetic defect that a ketone substrate would bypass.",
+      "Whether lactate is raised, normal or low in WWOX-deficient human brain across ages and contexts."
+    ],
+    "evidence_against": [
+      "Four sources report normal human metabolism in WWOX deficiency (DL-BIO-009); one MRS report has lactate extremely low (DL-BIO-008).",
+      "IT12 P1-alt caution (dated 2026-10-31; same screen, GSE298081, one unreplicated WWOX-null HAP1 clone, non-neural, proliferation endpoint, association only): loss of SLC2A1 (qGI -0.593, FDR 0.050) and HK2 (-0.464, 0.040) is worse tolerated by the null clone. A caution on direction for any glucose-restriction or 2-deoxyglucose-class idea, not evidence of harm in neurons."
+    ],
+    "bridge_gaps_exposed": [
+      "No drug assertion is supplied: the candidate is a diet."
+    ],
+    "translation": {
+      "pediatric_suitability": "UNKNOWN",
+      "cns_exposure": "UNKNOWN",
+      "interactions": "UNKNOWN",
+      "access": "UNKNOWN",
+      "time_to_benefit": "UNKNOWN",
+      "functional_rescue": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+      "indication_and_transfer": "A decision for the treating clinical team, not for this system; this card only records the consequence of the Lucas-Clarke reading: no direct support and no refutation.",
+      "verification_scope": "{\"support_and_replication\": \"No independent replication of any fly row is held; the organoid rows are one laboratory's deposit.\", \"formal_checks\": \"Disease-side fly rows carry verbatim locators in the manifest (104 entries; entries 31, 49, 89, 94 SUPPORTED by a blind audit, entry 95 narrowed after an OVERSHOOT finding); the compound statements are abstract-level and unaudited.\", \"card_inferences_owed_audit\": \"Statements marked INFERENZA, including every statement about what a compound would do in WWOX-deficient tissue, are OWED a blind audit by another actor.\"}"
+    },
+    "label_lookup": {
+      "status": "NOT_ATTEMPTED"
+    },
+    "card_conventions": [
+      "IPOTESI throughout; the bridge forces it. No score, rank, probability or blended index is carried.",
+      "directional_summary compares signs only where target, endpoint and every context dimension match; UNRESOLVED is a statement about the record, not about the biology.",
+      "Every disease-side row from the Drosophila article is NOT WWOX-DEE EVIDENCE; the organoid rows are exploratory transcript analyses of one deposit.",
+      "Abstract-level statements from PubMed are labelled abstract_only; none carries a receipt.",
+      "label_lookup is NOT_ATTEMPTED in the bridge: the bridge has no network. The openFDA adapter was run separately and is recorded in lucas_clarke_followup_20261026/compounds_and_sources.md.",
+      "No dose, route, schedule or paediatric suitability appears; assay concentrations of the sources are deliberately not reproduced."
+    ],
+    "no_new_reading": "No paper was newly read in full for these cards. The Lucas-Clarke reading is scientist-a's (receipt FTR-20261026-42909904-01); the compound statements are abstract-level PubMed reads and registry-database retrievals (lucas_clarke_followup_20261026/).",
+    "abstention_card": {
+      "kind": "ABSTENTION",
+      "missing_datum": "A bioenergetic flux measurement (oxygen consumption and extracellular acidification) in WWOX-deficient versus isogenic human neural or donor-derived cells; never done in any WWOX human system (HYP-20260709-01, recalibration of 2026-09-21).",
+      "search_record": "Lucas-Clarke 2026 read in full (receipt FTR-20261026-42909904-01): no diet, ketone, PDH or pyruvate arm. Six database sources and ten PubMed abstracts on 2026-10-26 added no WWOX ketone datum. Reopening condition: a flux measurement in a WWOX human system, or the pyruvate rows of MTBLS12344 if released.",
+      "adjacent_context_not_wwox_evidence": [
+        "fly lactate rows: up with Wwox reduction plus amyloid, nominally down without amyloid"
+      ],
+      "an_abstention_is_a_result": "The candidate stays where HYP-20260709-01 holds it; this card names what would end the abstention."
+    },
+    "target_census": {
+      "dir": "disease-models/wwox/research/drug_repurposing/lucas_clarke_followup_20261026",
+      "symbols": [
+        "SLC16A1"
+      ]
+    }
+  },
+  "translation": {
+    "pediatric_suitability": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "access": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN",
+    "functional_rescue": "UNKNOWN"
+  },
+  "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+  "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+  ]
 }
