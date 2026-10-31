@@ -257,6 +257,22 @@
       "feasibility_it": "Elettrofisiologia su fette del knockout neurone-specifico dell'articolo originale: la linea non è disponibile qui, se sia ottenibile non nota; magnesio: etichette USA per nome, Italia non verificata."
     },
     {
+      "need": "NEED-INHIBITORY-HYPOFUNCTION",
+      "kind": "risolvere una premessa",
+      "question": "In the Wwox neuron-deleted neocortical slice, is the lost fast GABA-A inhibition the step that makes bursting (rather than a graded shared change of resting potential and input resistance, an excitatory gain, or a secondary state)? The heterozygote shares the resting-potential and input-resistance changes but bursts far less, and the source does not report heterozygote inhibition.",
+      "data": "Same-cell triad in knockout, heterozygote and Cre-positive wild-type slices: isolated NMDAR current, sIPSC charge with physiological chloride (the source used a KCl internal solution) and resting potential with input resistance; then, in wild-type and heterozygote slices, a sufficiency matrix (titrate one deficit at a time to its knockout-measured size and ask which gives NMDAR-dependent bursts), then single-mechanism corrections in knockout slices with controls against generalised suppression (suppression index, firing-current curve, viability, washout). The animal is the unit; slices from one animal are not independent, and no sample size is fixed here because the variance is not known (IT14 P3 package, section 6).",
+      "would_change": "A heterozygote with inhibition like the knockout would put the NMDAR/excitatory-gain readings first; a knockout-specific receptor-limited loss would make positive modulation of the benzodiazepine site a probe-level compensation hypothesis (subtype selectivity of the candidate agents is disputed across three primary papers); a release-limited loss would favour GABA reuptake inhibition as the contrast; a secondary state would predict no lever. None of these outcomes is a treatment claim.",
+      "feasibility": "Slice electrophysiology in the neuron-specific knockout of the source laboratory; the line is not held here and whether it is obtainable is not known; source data of the published recordings would settle part of it.",
+      "date": "2026-11-01",
+      "updated_by": [],
+      "cards": [],
+      "docs": [
+        "REVIEW"
+      ],
+      "summary_it": "Capire se la perdita di inibizione GABA-A veloce è il passo che produce le scariche nella fetta del knockout neuronale, o se spiegano meglio un guadagno eccitatorio, una depolarizzazione graduata condivisa o uno stato secondario; l'eterozigote condivide la depolarizzazione ma scarica molto meno.",
+      "feasibility_it": "Elettrofisiologia su fette del knockout neurone-specifico del laboratorio d'origine: la linea non è disponibile qui, se sia ottenibile non nota."
+    },
+    {
       "need": "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
       "kind": "chiarire una controevidenza",
       "question": "Is the ethosuximide late-phase effect reproducible with a drug-by-genotype test and a same-day control, is the lithium effect genotype-specific, and do the denominators of the ketogenic-diet and vigabatrin case series keep their C2?",
