@@ -1,0 +1,6 @@
+item	original	corrected
+PR2	neurons are not reduced in the patient-derived lines	single-cell neuron-cluster fraction not reduced; WOREE reduced CTIP2/SATB2 (Fig 6B); text/figure mismatch on WOREE RG (Fig 2F ~+0.05)
+PR3	leaves progenitors largely WWOX-intact; death by 4 weeks	inference; 4 weeks is nestin-Cre N-KO (L347); S-KO premature death age not stated
+PR5	no randomisation or blinding	authors' clause 'using multiple biological replicates'; no randomization or blinding is study-wide (L417)
+PR9	both directions	Mycn-null also raised neuronal differentiation (two-sided)
+headline	No candidate is strengthened	authors read A51 as MYC-driven impairment of differentiation; no-strengthening rests on non-selectivity and design gaps

@@ -1,0 +1,506 @@
+{
+ "schema_version": 1,
+ "axis": "M / IT11 P2.2 case: neurogenic output and neuronal maturation state, the MYC-high radial-glia substrate (Q6)",
+ "route": "BENEFICIO_PRECOCE",
+ "mission_dimensions": {
+  "track": "A",
+  "track_definition": "mission.md section 5: Track A = variant-independent WWOX loss of function; Track B = variant or allele-class specific (e.g. the Q230P missense class); Track C = repurposing, which is a method of reaching A or B, not a third lesion class",
+  "route": "BENEFICIO_PRECOCE",
+  "route_definition": "RECUPERO_PROFONDO = deep recovery of the lost function; BENEFICIO_PRECOCE = concrete partial benefit, symptomatic control or protection of function, with paediatric feasibility and time in view",
+  "route_note": "A window and compartment question: whether the radial-glia MYC state is a driver, a marker or a consequence, and whether the layer-marker deficit has a reversible neuron-stage component. Partial benefit at best, protection of development and not restoration of WWOX. Track B: none.",
+  "the_two_dimensions_are_independent": "a card keeps both: a variant-independent lever can be a partial-benefit lever, and a lesion-specific one can aim at deep recovery"
+ },
+ "candidate": {
+  "id": "P22-M-01",
+  "name": "MYC-axis and cell-cycle comparison arms (A51, a PIN1 probe, a CDK4/6 class arm) beside genetic MYC lowering and stage-specific WWOX add-back in WWOX-deficient neural progenitors: a discriminating experiment about driver, marker or consequence, not a treatment"
+ },
+ "disease_assertions": [
+  {
+   "id": "DA-M01-001",
+   "target_id": "MYC transcript in radial glia",
+   "endpoint": "differential expression, knockout over wild type, within the radial-glia cluster",
+   "direction": "INCREASE",
+   "source": "PMID 42397075 (Brain 2026, accepted manuscript), Results; single-cell RNA-seq of organoids at week 16; one deposit (E-MTAB-14792) not opened here",
+   "locator": "disease-models/wwox/research/drug_repurposing/question_it11_p22_20261031/premises.tsv PR1 (text lines 647-649; Fig 3F image)",
+   "epistemic_status": "DATO",
+   "reading_depth": "partial_fulltext_read",
+   "context": {
+    "disease_id": "WWOX-deficient human cerebral organoid model (engineered knockout; NOT a patient allele)",
+    "genotype": "WWOX knockout versus wild type",
+    "species": "human",
+    "cell_type": "cerebral organoid radial glia",
+    "developmental_stage": "organoid, culture week 15 to 16"
+   },
+   "measured_result_note": "MYC has the largest fold change among the labelled genes (about 2 on the log scale); POU5F1, EEF1B2, SFRP1 and TPM2 sit at the same capped significance ceiling, so 'top' is a fold-change ranking. A pluripotency-programme gene is as prominent as MYC. Transcript level, one laboratory, no independent differentiation for the single-cell experiment.",
+   "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+  },
+  {
+   "id": "DA-M01-002",
+   "target_id": "MYC-positive fraction of SOX2-positive cells",
+   "endpoint": "fraction of SOX2-positive cells that are MYC-positive by immunostaining",
+   "direction": "INCREASE",
+   "source": "PMID 42397075, Results and Fig 3J-K; knockout, WOREE-derived and SCAR12-derived organoids",
+   "locator": "disease-models/wwox/research/drug_repurposing/question_it11_p22_20261031/premises.tsv PR2 (text lines 691-692; Fig 3K image)",
+   "epistemic_status": "DATO",
+   "reading_depth": "partial_fulltext_read",
+   "context": {
+    "disease_id": "WWOX-deficient human cerebral organoids (engineered knockout and patient-derived WOREE and SCAR12 lines)",
+    "genotype": "knockout, WOREE-derived and SCAR12-derived lines versus wild type",
+    "species": "human",
+    "cell_type": "cerebral organoid SOX2-positive cells",
+    "developmental_stage": "organoid, culture week 10 to 16"
+   },
+   "measured_result_note": "Higher in all three mutant lines (box medians read by eye: wild type about 18, knockout about 68, SCAR12 about 45, WOREE about 55 percent, wide scatter). SCAR12 overlaps the wild-type lower tail. Protein-level, small organoid numbers, one laboratory. In SCAR12 the radial-glia fraction is wild-type-like and the single-cell neuron-cluster fraction is not reduced (DA-M01-003; WOREE shows reduced CTIP2 and SATB2, Fig 6B, so SCAR12 is the clean dissociation case), so the MYC rise is present without that composition phenotype.",
+   "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+  },
+  {
+   "id": "DA-M01-003",
+   "target_id": "radial-glia and neuron fractions of the single-cell dataset",
+   "endpoint": "relative number of radial-glia cells and of neurons by single-cell clustering",
+   "direction": "INCREASE",
+   "source": "PMID 42397075, Results (Fig 2D-F); text: SCAR12 radial glia 'similar to WT'; neuron decrease 'not the case in our patient-derived organoids'",
+   "locator": "disease-models/wwox/research/drug_repurposing/question_it11_p22_20261031/premises.tsv PR2 (text lines 577 and 585-586)",
+   "epistemic_status": "DATO",
+   "reading_depth": "partial_fulltext_read",
+   "context": {
+    "disease_id": "WWOX-deficient human cerebral organoid model (engineered knockout; NOT a patient allele)",
+    "genotype": "WWOX knockout versus wild type",
+    "species": "human",
+    "cell_type": "cerebral organoid radial glia",
+    "developmental_stage": "organoid, culture week 15 to 16"
+   },
+   "measured_result_note": "Radial glia are increased and neurons decreased in the engineered knockout; radial glia increased in WOREE-derived organoids according to the text, but Fig 2F shows WOREE radial-glia log2 fold change of about +0.05 against about +0.9 in the knockout (a text/figure mismatch, flagged, not resolved), wild-type-like in SCAR12; neuron decrease is a knockout feature in this dataset. Direction INCREASE refers to radial glia in the knockout. Clusters from unguided organoids; the authors abstain from finer subsets.",
+   "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+  },
+  {
+   "id": "DA-M01-004",
+   "target_id": "early versus late neuron transcriptional signature",
+   "endpoint": "fraction of neurons carrying an early-stage signature (patient-derived organoids)",
+   "direction": "INCREASE",
+   "source": "PMID 42397075, Results (Fig 5F-G); the shift reproduces in WOREE-derived and SCAR12-derived neurons",
+   "locator": "disease-models/wwox/research/drug_repurposing/question_it11_p22_20261031/premises.tsv PR4 context; earlier locator file disease-models/wwox/research/fulltext_dossiers/PMID42397075_partial_locators.md (Figure 5 entry)",
+   "epistemic_status": "DATO",
+   "reading_depth": "partial_fulltext_read",
+   "context": {
+    "disease_id": "WWOX-deficient human cerebral organoids, patient-derived",
+    "genotype": "WOREE-derived and SCAR12-derived lines versus wild type",
+    "species": "human",
+    "cell_type": "cerebral organoid neurons",
+    "developmental_stage": "organoid, culture week 16"
+   },
+   "measured_result_note": "Early-signature neurons are enriched and late-signature neurons depleted in both patient-derived lines (about 65 versus 35 percent early, wild type about 35 versus 65, by figure reading in the earlier dossier). Transcript-level, 9094 cells, one laboratory; the authors read it as a consequence of earlier radial-glia changes, an interpretation the data do not test.",
+   "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+  },
+  {
+   "id": "DA-M01-005",
+   "target_id": "CTIP2 and SATB2 fractions of nuclei after neuron-stage WWOX add-back",
+   "endpoint": "fraction of nuclei positive for CTIP2 and for SATB2, WOREE-derived organoids, add-back versus control vector",
+   "direction": "INCREASE",
+   "source": "PMID 42397075, Results (Fig 6B); add-back from week 10, read at week 16; SCAR12 already near wild type; radial glia unchanged by transcript comparison",
+   "locator": "disease-models/wwox/research/drug_repurposing/question_it11_p22_20261031/premises.tsv PR4 (text lines 1108-1109, 1153-1155, 1174-1179; Fig 6B image)",
+   "epistemic_status": "DATO",
+   "reading_depth": "partial_fulltext_read",
+   "context": {
+    "disease_id": "WWOX-deficient human cerebral organoid, patient-derived WOREE line (gene add-back arm)",
+    "genotype": "WOREE-derived line with neuron-promoter WWOX add-back versus control vector",
+    "species": "human",
+    "cell_type": "cerebral organoid cells",
+    "developmental_stage": "organoid, add-back from week 10 to week 16"
+   },
+   "measured_result_note": "Layer-marker fractions are lower in WOREE with the control vector and reach wild-type level with add-back; firing falls toward wild type. A reversible neuron-stage component of the layer-marker deficit exists after the radial-glia phase. This is gene add-back, an intervention response (guard: held out for compound evaluation), not a drug result; fractions are of nuclei, not neuron numbers.",
+   "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+  },
+  {
+   "id": "DA-M01-006",
+   "target_id": "WWOX-to-MYC relation in reference human datasets over development",
+   "endpoint": "expression time course of WWOX and MYC in fetal and organoid reference data",
+   "direction": "UNKNOWN",
+   "source": "PMID 42397075, Results (Fig 3G-I): third-party reference datasets, analysed by the authors",
+   "locator": "disease-models/wwox/research/drug_repurposing/question_it11_p22_20261031/premises.tsv PR6 (text lines 664-667; Fig 3H-I images)",
+   "epistemic_status": "DATO",
+   "reading_depth": "partial_fulltext_read",
+   "context": {
+    "disease_id": "human fetal brain and organoid reference datasets (not WWOX-deficient)",
+    "genotype": "wild type (reference)",
+    "species": "human",
+    "cell_type": "tissue zones, forebrain samples, organoid time course",
+    "developmental_stage": "fetal weeks to senior; organoid days 25 to 463"
+   },
+   "measured_result_note": "WWOX and MYC move in opposite directions across age and cortical zone. Both curves follow developmental time (MYC falls around birth while WWOX rises), so the relation cannot separate WWOX control of MYC from co-maturation. Direction UNKNOWN because no deficiency contrast is made.",
+   "evidence_scope": "COMPUTATIONAL_RESULT"
+  },
+  {
+   "id": "DA-M01-007",
+   "target_id": "survival and seizures after conditional Wwox deletion by cell compartment",
+   "endpoint": "survival to four weeks, seizures, growth, nestin-Cre versus Synapsin-Cre versus Olig2-Cre and GFAP-Cre",
+   "direction": "DECREASE",
+   "source": "PMID 33914858 (Repudi 2021, Brain), Results and Fig 1; text read in the operator-supplied copy",
+   "locator": "disease-models/wwox/research/drug_repurposing/question_it11_p22_20261031/premises.tsv PR3 (text lines 347, 379, 659-662)",
+   "epistemic_status": "DATO",
+   "reading_depth": "partial_fulltext_read",
+   "context": {
+    "disease_id": "Wwox conditional knockout mouse (nestin-Cre and Synapsin-Cre)",
+    "genotype": "homozygous floxed with Cre versus controls",
+    "species": "mouse",
+    "cell_type": "neural stem and progenitor cells; post-mitotic neurons",
+    "developmental_stage": "postnatal pups to four weeks"
+   },
+   "measured_result_note": "Both progenitor-stage (nestin-Cre) and neuron-stage (Synapsin-Cre) deletion reproduce growth retardation, seizures and premature death (death by four weeks is stated for nestin-Cre; the Synapsin-Cre survival age is not stated); that progenitors are largely WWOX-intact under Synapsin-Cre is an inference, not a measurement; oligodendrocyte and astrocyte deletion do not. Radial-glia state and MYC were not measured in these mice, and the mouse cortex is not the human outer-radial-glia system.",
+   "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+  },
+  {
+   "id": "DA-M01-008",
+   "target_id": "Myc protein after WWOX loss and restoration in bone-marrow-derived cells",
+   "endpoint": "Myc protein and Myc-target expression, Wwox and Trp53 double knockout versus Trp53 single knockout; WWOX restoration",
+   "direction": "INCREASE",
+   "source": "PMID 38182577 (Akkawi 2024, Cell Death and Disease), Results and abstract; same laboratory as the organoid paper",
+   "locator": "disease-models/wwox/research/drug_repurposing/question_it11_p22_20261031/premises.tsv PR8",
+   "epistemic_status": "DATO",
+   "reading_depth": "partial_fulltext_read",
+   "context": {
+    "disease_id": "Wwox and Trp53 double-knockout mouse bone-marrow mesenchymal cells (osteosarcoma initiation model; non-neural)",
+    "genotype": "Wwox and Trp53 deleted versus Trp53 deleted",
+    "species": "mouse",
+    "cell_type": "bone-marrow mesenchymal cells",
+    "developmental_stage": "young adult mice"
+   },
+   "measured_result_note": "Myc and Myc targets are higher with Wwox deleted on a Trp53-null background and WWOX restoration lowers Myc protein. Not neural, p53-null, one laboratory; the article title wording is the reverse of its data.",
+   "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
+  },
+  {
+   "id": "DA-M01-009",
+   "target_id": "Wnt readout transcripts versus a radial-glia score in knockout organoid libraries",
+   "endpoint": "correlation of a Wnt-readout score with a radial-glia and a neuronal score across six libraries",
+   "direction": "INCREASE",
+   "source": "disease-models/wwox/research/drug_repurposing/gse156243/prediction_wnt_sign_20261025.md (earlier package, cited, not re-run); deposit GSE156243, four knockout against two wild-type libraries",
+   "locator": "disease-models/wwox/research/drug_repurposing/gse156243/prediction_wnt_sign_20261025.md section RESULT",
+   "epistemic_status": "INFERENZA",
+   "reading_depth": "queried_not_full_read",
+   "context": {
+    "disease_id": "WWOX-deficient human cerebral organoid model (engineered knockout; NOT a patient allele)",
+    "genotype": "WWOX knockout versus wild type (4 versus 2 libraries, one laboratory)",
+    "species": "human",
+    "cell_type": "cerebral organoid, bulk RNA",
+    "developmental_stage": "organoid, culture week 15"
+   },
+   "measured_result_note": "Seven of seven canonical Wnt readouts are up, and the Wnt score correlates about +0.99 with a radial-glia score and about -0.97 with a neuronal score across the six libraries, so bulk Wnt and MYC readouts are not separable from composition in this deposit.",
+   "evidence_scope": "COMPUTATIONAL_RESULT"
+  }
+ ],
+ "drug_assertions": [
+  {
+   "id": "DR-M01-001",
+   "target_id": "SOX2-positive and SOX2-positive MYC-positive progenitor fractions",
+   "endpoint": "fraction of SOX2-positive MYC-positive cells after A51",
+   "direction": "DECREASE",
+   "source": "PMID 42397075, Results and Supplementary Fig 7F-G (panel values are prior-session attestations; the supplement is not available locally); the compound arm was run in the knockout line only",
+   "locator": "disease-models/wwox/research/drug_repurposing/question_it11_p22_20261031/premises.tsv PR5; disease-models/wwox/analysis/a51_antiproliferative_confound_20260921.md",
+   "epistemic_status": "DATO",
+   "reading_depth": "partial_fulltext_read",
+   "context": {
+    "disease_id": "WWOX-deficient human cerebral organoid model (engineered knockout; NOT a patient allele)",
+    "genotype": "WWOX knockout, treated versus untreated",
+    "species": "human",
+    "cell_type": "cerebral organoid progenitors",
+    "developmental_stage": "organoid, culture weeks 8 to 15"
+   },
+   "measured_result_note": "Progenitor fractions fall, the pan-neuron fraction rises, the deep-layer marker is unchanged and the upper-layer marker mildly rises (main text). The compound lowers two pathways and is not MYC-selective; percentages carry no denominators; one of three experiments without independent differentiations; no randomisation or blinding is stated for the whole study (not specific to this arm); the authors' clause is 'using multiple biological replicates' for the experiments without independent differentiations.",
+   "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+  },
+  {
+   "id": "DR-M01-002",
+   "target_id": "PIN1 and MYC protein and target genes after a covalent PIN1 probe",
+   "endpoint": "MYC target-gene expression and tumour growth after sulfopin",
+   "direction": "DECREASE",
+   "source": "IT9 P4c-e record E-06 (primary paper passages read there; not re-read here); NOT WWOX EVIDENCE",
+   "locator": "disease-models/wwox/research/drug_repurposing/qualification_it9_p4c_e_20261030/qualification_E.tsv row E-06",
+   "epistemic_status": "DATO",
+   "reading_depth": "partial_fulltext_read",
+   "context": {
+    "disease_id": "MYCN-driven neuroblastoma and cancer cell models (not WWOX)",
+    "genotype": "UNKNOWN",
+    "species": "mouse and human cells",
+    "cell_type": "cancer cells",
+    "developmental_stage": "adult mouse and cell culture"
+   },
+   "measured_result_note": "Selective covalent PIN1 probe lowers Myc target genes with in vivo activity in MYCN-driven neuroblastoma models; no neural-progenitor exposure datum and no human exposure; the engine edge label is a mode mislabel for a transcript seed.",
+   "evidence_scope": "OTHER_DISEASE_PRECEDENT"
+  },
+  {
+   "id": "DR-M01-003",
+   "target_id": "neuronal differentiation of neural progenitors after METTL3 or METTL14 loss",
+   "endpoint": "generation of neural progenitors and neuronal differentiation; radial-glia cell-cycle length",
+   "direction": "DECREASE",
+   "source": "IT9 P4c-e record E-04 (2025 human neural-fate paper and Yoon 2017 as read there); NOT WWOX EVIDENCE",
+   "locator": "disease-models/wwox/research/drug_repurposing/qualification_it9_p4c_e_20261030/qualification_E.tsv row E-04",
+   "epistemic_status": "DATO",
+   "reading_depth": "partial_fulltext_read",
+   "context": {
+    "disease_id": "human neural progenitors and mouse cortex (not WWOX)",
+    "genotype": "genetic METTL3 or METTL14 loss",
+    "species": "human and mouse",
+    "cell_type": "neural progenitors, radial glia",
+    "developmental_stage": "embryonic"
+   },
+   "measured_result_note": "Genetic loss impairs generation of human neural progenitors and prevents neuronal differentiation; m6A depletion prolongs the radial-glia cell cycle in mouse cortex. The opposite of the differentiation the MYC-lowering reading wants; the IT9 decision for the probe compound is DROP.",
+   "evidence_scope": "OTHER_DISEASE_PRECEDENT"
+  },
+  {
+   "id": "DR-M01-004",
+   "target_id": "G1 length and neurogenic switch in cortical progenitors",
+   "endpoint": "neurogenesis and basal-progenitor expansion after genetic CDK4 and cyclin D1 manipulation; progenitor proliferation after Cdk4 and Cdk6 loss",
+   "direction": "UNKNOWN",
+   "source": "PMIDs 19733543, 19959663 and 29570951, abstracts; NOT WWOX EVIDENCE",
+   "locator": "disease-models/wwox/research/drug_repurposing/question_it11_p22_20261031/premises.tsv PR11",
+   "epistemic_status": "DATO",
+   "reading_depth": "abstract_only",
+   "context": {
+    "disease_id": "mouse embryonic cortex, in utero genetic manipulation (not WWOX)",
+    "genotype": "gene transfer or knockout",
+    "species": "mouse",
+    "cell_type": "cortical progenitors",
+    "developmental_stage": "embryonic day 13 and later"
+   },
+   "measured_result_note": "Lengthening G1 switches progenitors toward neurogenesis and shortening it expands basal progenitors; combined loss of Cdk4 and Cdk6 reduces basal-progenitor proliferation. No pharmacological CDK4/6 study in cortical progenitors was found (four hits, all oncology); absent from the search is not absent from the literature. Direction UNKNOWN: opposite outcomes by manipulation.",
+   "evidence_scope": "OTHER_DISEASE_PRECEDENT"
+  },
+  {
+   "id": "DR-M01-005",
+   "target_id": "brain size and progenitor proliferation with MYCN dosage",
+   "endpoint": "head size and neurogenesis after loss or gain of MYCN function",
+   "direction": "UNKNOWN",
+   "source": "PMIDs 15821734, 37710961, 30573562 and 12381668, abstracts; NOT WWOX EVIDENCE",
+   "locator": "disease-models/wwox/research/drug_repurposing/question_it11_p22_20261031/premises.tsv PR9",
+   "epistemic_status": "DATO",
+   "reading_depth": "abstract_only",
+   "context": {
+    "disease_id": "human MYCN syndromes and mouse conditional models (not WWOX)",
+    "genotype": "MYCN loss of function or gain of function",
+    "species": "human and mouse",
+    "cell_type": "neural progenitors",
+    "developmental_stage": "embryonic"
+   },
+   "measured_result_note": "Loss of function gives microcephaly (Feingold syndrome) and a halved brain mass, and the Mycn-null progenitor cultures show more neuronal differentiation (two-sided); gain of function gives megalencephaly through excess intermediate-progenitor proliferation. MYCN is not MYC. The dose sensitivity runs both ways; direction UNKNOWN.",
+   "evidence_scope": "OTHER_DISEASE_PRECEDENT"
+  },
+  {
+   "id": "DR-M01-006",
+   "target_id": "neural stem cell proliferation and differentiation after lithium",
+   "endpoint": "proliferation and neuronal differentiation of neural progenitors with lithium, Wnt dependence",
+   "direction": "INCREASE",
+   "source": "PMIDs 17968353, 30834157 and 21931595, abstracts; NOT WWOX EVIDENCE",
+   "locator": "disease-models/wwox/research/drug_repurposing/question_it11_p22_20261031/premises.tsv PR12",
+   "epistemic_status": "DATO",
+   "reading_depth": "abstract_only",
+   "context": {
+    "disease_id": "adult hippocampal progenitors and rat neural stem cells in culture (not WWOX)",
+    "genotype": "UNKNOWN",
+    "species": "rat",
+    "cell_type": "neural stem and progenitor cells",
+    "developmental_stage": "adult or neonatal source, in vitro"
+   },
+   "measured_result_note": "Lithium expands progenitor pools through canonical Wnt in vitro; the effect on differentiation is reported in both directions; lithium also inhibits STAT3 independently of GSK3 in one report. Not a statement about WWOX or about the seizure lead.",
+   "evidence_scope": "OTHER_DISEASE_PRECEDENT"
+  },
+  {
+   "id": "DR-M01-007",
+   "target_id": "MYC transcription after BET bromodomain inhibition",
+   "endpoint": "MYC transcript in multiple myeloma cells after a BET inhibitor",
+   "direction": "DECREASE",
+   "source": "PMID 28100400 (replication study), abstract; NOT WWOX EVIDENCE",
+   "locator": "disease-models/wwox/research/drug_repurposing/question_it11_p22_20261031/premises.tsv PR13",
+   "epistemic_status": "DATO",
+   "reading_depth": "abstract_only",
+   "context": {
+    "disease_id": "human multiple myeloma cells (not WWOX)",
+    "genotype": "UNKNOWN",
+    "species": "human",
+    "cell_type": "multiple myeloma cell line",
+    "developmental_stage": "in vitro"
+   },
+   "measured_result_note": "The inhibitor selectively lowered MYC transcription. The IT10 Q6 table lists 22 BRD4-family rows as mimics of the MYC rise; the cell pharmacology runs the other way on the transcript.",
+   "evidence_scope": "OTHER_DISEASE_PRECEDENT"
+  },
+  {
+   "id": "DR-M01-008",
+   "target_id": "CDK4 and CDK6 inhibition by palbociclib",
+   "endpoint": "compound-database mechanism and aggregated potency on CDK4 and CDK6 (palbociclib)",
+   "direction": "UNKNOWN",
+   "source": "compound-database retrieval (ChEMBL REST, 2026-10-30); NOT WWOX EVIDENCE",
+   "locator": "disease-models/wwox/research/drug_repurposing/question_it11_p22_20261031/premises.tsv PR15",
+   "epistemic_status": "DATO",
+   "reading_depth": "queried_not_full_read",
+   "context": {
+    "disease_id": "not applicable (enzyme records) and adult brain-metastasis modelling (not WWOX)",
+    "genotype": "not applicable",
+    "species": "human",
+    "cell_type": "enzyme and whole organism",
+    "developmental_stage": "adult"
+   },
+   "measured_result_note": "A small molecule, oral, with CDK4 and CDK6 as mechanism targets; aggregated potency is in the nanomolar range. No paediatric, neural-progenitor or label datum was searched. Evidence is not transferred to abemaciclib (DR-M01-010).",
+   "evidence_scope": "EXTERNAL_DATABASE_RECORD"
+  },
+  {
+   "id": "DR-M01-010",
+   "target_id": "CDK4 and CDK6 inhibition by abemaciclib; intracranial exposure model",
+   "endpoint": "compound-database mechanism and aggregated potency (abemaciclib); abemaciclib intracranial pharmacokinetic model",
+   "direction": "UNKNOWN",
+   "source": "compound-database retrieval (ChEMBL REST, 2026-10-30) and PMID 40092791 abstract; NOT WWOX EVIDENCE",
+   "locator": "disease-models/wwox/research/drug_repurposing/question_it11_p22_20261031/premises.tsv PR15",
+   "epistemic_status": "DATO",
+   "reading_depth": "queried_not_full_read",
+   "context": {
+    "disease_id": "not applicable (enzyme records) and adult brain-metastasis modelling (not WWOX)",
+    "genotype": "not applicable",
+    "species": "human",
+    "cell_type": "enzyme and whole organism",
+    "developmental_stage": "adult"
+   },
+   "measured_result_note": "A small molecule, oral, with CDK4 and CDK6 as mechanism targets; aggregated potency is in the nanomolar range, lower for abemaciclib than for palbociclib. The intracranial model is an adult oncology model. No paediatric, neural-progenitor or label datum was searched. Evidence is not transferred to palbociclib (DR-M01-008).",
+   "evidence_scope": "EXTERNAL_DATABASE_RECORD"
+  },
+  {
+   "id": "DR-M01-009",
+   "target_id": "MCM7 expression and proliferation after simvastatin in Wwox and Trp53 double-knockout cells",
+   "endpoint": "proliferation and tumour cell growth after simvastatin",
+   "direction": "DECREASE",
+   "source": "PMID 38182577, abstract and Results; same laboratory as the organoid paper; NOT WWOX EVIDENCE for neural cells",
+   "locator": "disease-models/wwox/research/drug_repurposing/question_it11_p22_20261031/premises.tsv PR8",
+   "epistemic_status": "DATO",
+   "reading_depth": "partial_fulltext_read",
+   "context": {
+    "disease_id": "osteosarcoma-initiation bone-marrow cells (non-neural)",
+    "genotype": "Wwox and Trp53 double knockout",
+    "species": "mouse",
+    "cell_type": "bone-marrow mesenchymal cells",
+    "developmental_stage": "young adult mice"
+   },
+   "measured_result_note": "A cancer proliferation endpoint in a p53-null cell; no step connects it to radial glia; statin identity and database values were retrieved but no label or neural datum was searched.",
+   "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
+  }
+ ],
+ "p4_fields": {
+  "endpoint_pursued": "In WWOX-deficient versus isogenic corrected human neural progenitors and organoids over the neurogenic window: whether MYC in radial glia is a driver, a marker of retained state or a consequence of the cell-cycle shift, by MYC within matched cell-cycle phase and potency, by genetic MYC lowering against compounds, and by add-back at several stages; then which compartment is reachable after birth. Readouts: SOX2-positive MYC-positive, pH3-positive and NEUN-positive fractions with absolute cell counts per organoid, CTIP2 and SATB2 fractions, early and late neuron signatures.",
+  "functional_evidence_available": "Human organoids only: MYC transcript and protein up in three lines (DA-M01-001, 002), a radial-glia expansion and neuron loss in the knockout but not in SCAR12 (003), early-neuron signatures in both patient lines (004), a pharmacological arm with a non-selective compound in the knockout only (DR-M01-001), and a neuron-stage add-back that restores layer markers in WOREE without touching radial glia (005). Mouse: neuron-stage and progenitor-stage deletion both reproduce the null phenotype (007). No functional rescue by a selective MYC lever in any WWOX system.",
+  "temporal_or_model_limit": "The radial-glia phase is prenatal in humans; one laboratory; three of the experiments carrying the thesis have no independent differentiations; the supplementary figures of the main paper are not available locally; MYC was not measured in any mouse model; MYCN and MYCL were not examined.",
+  "cellular_context": {
+   "target_expression": "WWOX is highest in radial glia in fetal single-cell and sorted data (paper Fig 3A-D); MYC falls with developmental age in the reference datasets.",
+   "cells_tissue_stage": "Radial glia, intermediate progenitors and early neurons of organoids at week 7 to 16; postnatal neuron-stage rescue at week 10 to 16.",
+   "coverage": "UNKNOWN.",
+   "limits": "MYC, cell-cycle and potency are transcript-level or computational estimates; maturity within radial glia is not excluded; absence of a pharmacological CDK4/6 study in neural progenitors is 'not found'."
+  }
+ },
+ "p4_card": {
+  "identity": "A mechanism and a question, not one compound: the MYC-high radial-glia state in WWOX deficiency. Compounds named only as ex vivo comparison arms beside genetic MYC lowering: A51 (the one compound already used in a WWOX system; no catalogue identity), a covalent PIN1 probe (sulfopin; IT9 E-06), CDK4/6 inhibitors as a cell-cycle arm (palbociclib and abemaciclib; ChEMBL CHEMBL189963 and CHEMBL3301610). Lithium is a risk flag for this window, not a candidate.",
+  "indication_and_transfer": "WWOX-DEE only IF MYC elevation in radial glia is a driver of retained progenitor state AND a compartment reachable after birth exists. The radial-glia phase is prenatal in humans, so a postnatal use is not supported by any datum; the card concerns what to measure and what the neuron-stage add-back result already shows.",
+  "novelty_for_woree": "NOT NEW as a pathway (need NEED-MYC-PROGENITOR-PROLIFERATION; cards D01 and D02). NEW as a framing: driver versus marker versus consequence, with the SCAR12 dissociation, the mouse conditional-deletion reading and the neuron-stage reversible component as discriminating inputs.",
+  "state_of_known_roads": "D01 (A51, abstention-level), D02 (Wnt-lowering, abstention), G01 (lithium), IT9 P4c-e records E-03 to E-06, IT10 v4 Q6 dispositions.",
+  "pathway_and_objective": "BENEFICIO_PRECOCE; Track A; window protection at best.",
+  "expected_contribution": "UNKNOWN. The experiment decides whether radial-glia MYC lowering is worth any further lever, and whether the layer-marker deficit that neuron-stage add-back restores should be the endpoint for the neuron compartment instead.",
+  "mechanism": "Targets named only as arms: MYC (HGNC:7553), PIN1, CDK4 and CDK6. Direction wanted: lower MYC activity only IF it is a harmful driver; lengthen G1 only IF cycle shortening is causal. Guards in generation_it9_p1_20261030/guards.tsv bind: the MYC-positive fraction magnitudes and the A51 arm values are endpoint baselines and cannot evaluate a compound.",
+  "sources": {
+   "internal": [
+    "PMID 42397075 accepted manuscript and figure images (files/fulltext)",
+    "needs NEED-MYC-PROGENITOR-PROLIFERATION O1 to O3",
+    "cards D01, D02, G01",
+    "qualification_it9_p4c_e_20261030 records E-03 to E-06",
+    "generation_it10_p1_20261031 dispositions_Q6.tsv and question_roles.tsv",
+    "a51_antiproliferative_confound_20260921.md",
+    "gse156243/prediction_wnt_sign_20261025.md"
+   ],
+   "external_not_wwox_evidence": [
+    "PMIDs 38182577, 15821734, 37710961, 30573562, 12381668, 19733543, 19959663, 29570951, 17968353, 30834157, 21931595, 28100400, 40092791 (abstracts or passages as labelled)",
+    "ChEMBL molecule, mechanism and activity records"
+   ]
+  },
+  "evidence_for_and_against": {
+   "for": [
+    "MYC protein fraction and transcript are up in radial glia of three mutant lines (one laboratory).",
+    "WWOX loss raises Myc and WWOX restoration lowers Myc protein in a non-neural p53-null system (same laboratory).",
+    "MYCN dosage shows the progenitor pool and cortical size respond to MYC-family level in both directions.",
+    "A non-selective compound moved progenitor and pan-neuron fractions toward wild type in the knockout."
+   ],
+   "against": [
+    "MYC is elevated in SCAR12 organoids whose radial-glia fraction is wild-type-like and whose neurons are not reduced, so elevation alone does not give the composition phenotype.",
+    "POU5F1 is as prominent as MYC in the knockout radial-glia contrast, which fits retained progenitor state without a MYC-specific driver.",
+    "The WWOX-MYC inverse relation in reference data is a developmental time course.",
+    "Neuron-stage deletion in mouse reproduces the null phenotype, and neuron-stage add-back restores layer markers and firing without correcting radial glia, so the radial-glia MYC state is not shown to be needed for those endpoints.",
+    "Progressive microcephaly is part of the clinical picture (4 of 5 in one cohort), and MYCN loss gives microcephaly: lowering MYC-family output could shrink the progenitor pool.",
+    "The one compound used lowers two pathways, the arm has no wild-type-plus-compound group, no absolute counts and no independent differentiation.",
+    "No pharmacological CDK4/6 study in cortical progenitors was found; lithium expands progenitor pools in vitro through Wnt."
+   ],
+   "transfer_limits": "No datum from a WWOX-deficient neural cell at G1 duration, at MYC after add-back at the progenitor stage, or with a selective MYC lever; all compound rows other than A51 are NOT WWOX EVIDENCE."
+  },
+  "time_to_access": "UNKNOWN.",
+  "time_to_benefit": "UNKNOWN.",
+  "pharmacology": "A51: no catalogue identity, targets and exposure unknown. Sulfopin: research probe, no human exposure (IT9 E-06). Palbociclib and abemaciclib: oral small molecules with nanomolar aggregated potency on CDK4 and CDK6 in the compound database; label, paediatric and neural-progenitor data not searched. Omomyc is a mini-protein with no catalogue identity and was not carried. Lithium: GSK-3 and inositol monophosphatase inhibition in the database; risk flag only.",
+  "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for any candidate or for any historical authorisation of it for another use.",
+  "scope_of_checks": {
+   "support_and_replication": "One laboratory for the organoid and the bone-marrow data; mouse conditional genetics from a second paper of the same laboratory; abstract-level compound statements.",
+   "formal_checks": "The organoid main text, three figure images and the mouse conditional-deletion text were read in this package (no receipt staged); a same-actor fragment re-read is in selfaudit_reread_output.txt and is not a blind audit.",
+   "card_inferences_owed_audit": "Statements marked INFERENZA, and every statement about what a lever would do in WWOX-deficient neural tissue, are OWED a blind audit by another actor."
+  },
+  "question_history": [
+   "IT9 P1 question Q6 and seeds S100, S101, S102, S117, S118",
+   "IT9 P4c-e records E-03 to E-06 (Q6 proposals)",
+   "IT10 P1 v4 Q6 dispositions (292 rows, one origin)",
+   "IT11 P2.2: this card, with new external precedent and the within-paper dissociation"
+  ],
+  "predictions": "None; no engine, no score. The experiment is proposed, not performed.",
+  "next_measurement": "Test T1 (computational, on the deposited single-cell data if access is obtained): MYC difference between knockout and wild-type radial glia within the G1/G0 phase alone and within matched potency strata, and the same for POU5F1; if the difference vanishes, MYC is a marker of cycle or state. Test T2 (wet-lab): in knockout and corrected cells from two independent clones, genetic MYC lowering (inducible degron or CRISPRi) against a cytostatic control and against the compound arms, with SOX2-positive MYC-positive, pH3-positive and NEUN-positive fractions and absolute cell counts per organoid, wild-type plus compound groups included; add-back at progenitor stage (before week 4) and at neuron stage (week 10) with MYC and layer-marker readouts. Test T3: MYC in the SCAR12 line stratified by the same strata, to ask whether MYC elevation without composition change is a stage effect. Falsifier: MYC lowering by a specific lever does not move neuronal fractions or the progenitor fraction in knockout cells beyond what it does in corrected cells.",
+  "status": "hypothesis",
+  "value_added": "Separates the driver, marker and consequence readings of the radial-glia MYC rise with within-paper discriminators (SCAR12, POU5F1, developmental co-variation, cell-cycle coupling), adds the mouse conditional-deletion and neuron-stage add-back readings that bound what a radial-glia lever can matter for, and records that the engine's Q6 rows are one origin and cannot decide. Reading of the one compound result: the authors read A51 as MYC-driven impairment of differentiation (NEUN-positive up, SATB2 mildly up, CTIP2 unchanged); that no candidate is strengthened here rests on the non-selectivity of the multi-kinase compound and on design gaps (no wild-type-plus-compound arm, supplement unavailable), not on a contradicting result.",
+  "clinical_census": "UNKNOWN: ClinicalTrials.gov was not queried in this package."
+ },
+ "not_known": [
+  "MYC protein in any WWOX-deficient neural cell stratified by cell-cycle phase or potency.",
+  "Whether the radial-glia MYC rise is a driver, a marker of retained state or a consequence of the cell-cycle shift.",
+  "G1 duration in WWOX-deficient radial glia.",
+  "Whether progenitor-stage WWOX add-back lowers MYC in neural cells.",
+  "Whether any selective MYC lever moves neuronal fractions in a WWOX-deficient system.",
+  "Whether any compound reaches or acts in human radial glia at tolerable exposure."
+ ],
+ "evidence_against": [
+  "MYC is raised in SCAR12 organoids without radial-glia expansion or neuron loss.",
+  "POU5F1 is as prominent as MYC in the knockout radial-glia contrast.",
+  "The WWOX-MYC inverse relation in reference datasets is a developmental time course.",
+  "Neuron-stage deletion in mouse reproduces the null phenotype and neuron-stage add-back restores layer markers and firing without changing radial glia.",
+  "The compound used lowers two pathways and its arm lacks a wild-type-plus-compound group and cell counts."
+ ],
+ "bridge_gaps_exposed": [
+  "The WWOX-side rows are organoid transcript or fraction readouts and the compound rows are other-context abstracts or database rows: no comparison forms where target, endpoint and every context dimension must match."
+ ],
+ "translation": {
+  "pediatric_suitability": "UNKNOWN",
+  "cns_exposure": "UNKNOWN",
+  "interactions": "UNKNOWN",
+  "access": "UNKNOWN",
+  "time_to_benefit": "UNKNOWN",
+  "functional_rescue": "UNKNOWN for a drug; a neuron-stage gene add-back restores layer-marker fractions and firing in WOREE organoids"
+ },
+ "p4_roadmap_fields": {
+  "indication_and_transfer": "WWOX-DEE only IF MYC elevation in radial glia is a harmful driver and a compartment reachable after birth exists; the radial-glia phase is prenatal.",
+  "verification_scope": "{\"support_and_replication\": \"One laboratory for the organoid and bone-marrow data; abstract-level compound statements.\", \"formal_checks\": \"Main text and three figure images read; same-actor fragment re-read; no receipt staged.\", \"card_inferences_owed_audit\": \"INFERENZA statements are owed a blind audit by another actor.\"}"
+ },
+ "label_lookup": {
+  "status": "NOT_ATTEMPTED"
+ },
+ "card_conventions": [
+  "IPOTESI throughout; the bridge forces it. No score, rank, probability or blended index is carried.",
+  "directional_summary compares signs only where target, endpoint and every context dimension match; UNRESOLVED is a statement about the record, not about the biology.",
+  "Every compound row other than the A51 arm is NOT WWOX EVIDENCE; the WWOX-side rows are organoid-level or other-context.",
+  "Abstract-level PubMed statements are labelled abstract_only; none carries a receipt (no receipt was staged for this package).",
+  "label_lookup is NOT_ATTEMPTED in the bridge: the bridge has no network.",
+  "No dose, route, schedule or paediatric suitability appears."
+ ],
+ "no_new_reading": "Readings newly made for this packet (not staged as receipts): PMID 42397075 accepted-manuscript main text and Figures 3, 4 and 6; PMID 33914858 conditional-deletion text; PMID 38182577 Results passages; abstracts of the PMIDs named in the sources; ChEMBL records. The supplementary figures of PMID 42397075 were not available.",
+ "target_census": {
+  "dir": "disease-models/wwox/research/drug_repurposing/qualification_it9_p4c_e_20261030",
+  "symbols": [
+   "MYC",
+   "PIN1",
+   "CDK4",
+   "CDK6"
+  ]
+ }
+}

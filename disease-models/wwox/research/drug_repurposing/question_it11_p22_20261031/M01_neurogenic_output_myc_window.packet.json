@@ -50,7 +50,7 @@
     "cell_type": "cerebral organoid SOX2-positive cells",
     "developmental_stage": "organoid, culture week 10 to 16"
    },
-   "measured_result_note": "Higher in all three mutant lines (box medians read by eye: wild type about 18, knockout about 68, SCAR12 about 45, WOREE about 55 percent, wide scatter). SCAR12 overlaps the wild-type lower tail. Protein-level, small organoid numbers, one laboratory. In SCAR12 the radial-glia fraction is wild-type-like and neurons are not reduced (DA-M01-003), so the MYC rise is present without that composition phenotype.",
+   "measured_result_note": "Higher in all three mutant lines (box medians read by eye: wild type about 18, knockout about 68, SCAR12 about 45, WOREE about 55 percent, wide scatter). SCAR12 overlaps the wild-type lower tail. Protein-level, small organoid numbers, one laboratory. In SCAR12 the radial-glia fraction is wild-type-like and the single-cell neuron-cluster fraction is not reduced (DA-M01-003; WOREE shows reduced CTIP2 and SATB2, Fig 6B, so SCAR12 is the clean dissociation case), so the MYC rise is present without that composition phenotype.",
    "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
   },
   {
@@ -69,7 +69,7 @@
     "cell_type": "cerebral organoid radial glia",
     "developmental_stage": "organoid, culture week 15 to 16"
    },
-   "measured_result_note": "Radial glia are increased and neurons decreased in the engineered knockout; radial glia increased in WOREE-derived organoids, wild-type-like in SCAR12; neuron decrease is a knockout feature in this dataset. Direction INCREASE refers to radial glia in the knockout. Clusters from unguided organoids; the authors abstain from finer subsets.",
+   "measured_result_note": "Radial glia are increased and neurons decreased in the engineered knockout; radial glia increased in WOREE-derived organoids according to the text, but Fig 2F shows WOREE radial-glia log2 fold change of about +0.05 against about +0.9 in the knockout (a text/figure mismatch, flagged, not resolved), wild-type-like in SCAR12; neuron decrease is a knockout feature in this dataset. Direction INCREASE refers to radial glia in the knockout. Clusters from unguided organoids; the authors abstain from finer subsets.",
    "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
   },
   {
@@ -145,7 +145,7 @@
     "cell_type": "neural stem and progenitor cells; post-mitotic neurons",
     "developmental_stage": "postnatal pups to four weeks"
    },
-   "measured_result_note": "Both progenitor-stage (nestin-Cre) and neuron-stage (Synapsin-Cre) deletion reproduce growth retardation, seizures and death by four weeks; oligodendrocyte and astrocyte deletion do not. Radial-glia state and MYC were not measured in these mice, and the mouse cortex is not the human outer-radial-glia system.",
+   "measured_result_note": "Both progenitor-stage (nestin-Cre) and neuron-stage (Synapsin-Cre) deletion reproduce growth retardation, seizures and premature death (death by four weeks is stated for nestin-Cre; the Synapsin-Cre survival age is not stated); that progenitors are largely WWOX-intact under Synapsin-Cre is an inference, not a measurement; oligodendrocyte and astrocyte deletion do not. Radial-glia state and MYC were not measured in these mice, and the mouse cortex is not the human outer-radial-glia system.",
    "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
   },
   {
@@ -204,7 +204,7 @@
     "cell_type": "cerebral organoid progenitors",
     "developmental_stage": "organoid, culture weeks 8 to 15"
    },
-   "measured_result_note": "Progenitor fractions fall, the pan-neuron fraction rises, the deep-layer marker is unchanged and the upper-layer marker mildly rises (main text). The compound lowers two pathways and is not MYC-selective; percentages carry no denominators; one of three experiments without independent differentiations; no randomisation or blinding.",
+   "measured_result_note": "Progenitor fractions fall, the pan-neuron fraction rises, the deep-layer marker is unchanged and the upper-layer marker mildly rises (main text). The compound lowers two pathways and is not MYC-selective; percentages carry no denominators; one of three experiments without independent differentiations; no randomisation or blinding is stated for the whole study (not specific to this arm); the authors' clause is 'using multiple biological replicates' for the experiments without independent differentiations.",
    "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
   },
   {
@@ -280,7 +280,7 @@
     "cell_type": "neural progenitors",
     "developmental_stage": "embryonic"
    },
-   "measured_result_note": "Loss of function gives microcephaly (Feingold syndrome) and a halved brain mass with progenitor-cultures differentiating more; gain of function gives megalencephaly through excess intermediate-progenitor proliferation. MYCN is not MYC. The dose sensitivity runs both ways; direction UNKNOWN.",
+   "measured_result_note": "Loss of function gives microcephaly (Feingold syndrome) and a halved brain mass, and the Mycn-null progenitor cultures show more neuronal differentiation (two-sided); gain of function gives megalencephaly through excess intermediate-progenitor proliferation. MYCN is not MYC. The dose sensitivity runs both ways; direction UNKNOWN.",
    "evidence_scope": "OTHER_DISEASE_PRECEDENT"
   },
   {
@@ -323,8 +323,27 @@
   },
   {
    "id": "DR-M01-008",
-   "target_id": "CDK4 and CDK6 inhibition by palbociclib and abemaciclib; intracranial exposure model",
-   "endpoint": "compound-database mechanism and aggregated potency; abemaciclib intracranial pharmacokinetic model",
+   "target_id": "CDK4 and CDK6 inhibition by palbociclib",
+   "endpoint": "compound-database mechanism and aggregated potency on CDK4 and CDK6 (palbociclib)",
+   "direction": "UNKNOWN",
+   "source": "compound-database retrieval (ChEMBL REST, 2026-10-30); NOT WWOX EVIDENCE",
+   "locator": "disease-models/wwox/research/drug_repurposing/question_it11_p22_20261031/premises.tsv PR15",
+   "epistemic_status": "DATO",
+   "reading_depth": "queried_not_full_read",
+   "context": {
+    "disease_id": "not applicable (enzyme records) and adult brain-metastasis modelling (not WWOX)",
+    "genotype": "not applicable",
+    "species": "human",
+    "cell_type": "enzyme and whole organism",
+    "developmental_stage": "adult"
+   },
+   "measured_result_note": "A small molecule, oral, with CDK4 and CDK6 as mechanism targets; aggregated potency is in the nanomolar range. No paediatric, neural-progenitor or label datum was searched. Evidence is not transferred to abemaciclib (DR-M01-010).",
+   "evidence_scope": "EXTERNAL_DATABASE_RECORD"
+  },
+  {
+   "id": "DR-M01-010",
+   "target_id": "CDK4 and CDK6 inhibition by abemaciclib; intracranial exposure model",
+   "endpoint": "compound-database mechanism and aggregated potency (abemaciclib); abemaciclib intracranial pharmacokinetic model",
    "direction": "UNKNOWN",
    "source": "compound-database retrieval (ChEMBL REST, 2026-10-30) and PMID 40092791 abstract; NOT WWOX EVIDENCE",
    "locator": "disease-models/wwox/research/drug_repurposing/question_it11_p22_20261031/premises.tsv PR15",
@@ -337,7 +356,7 @@
     "cell_type": "enzyme and whole organism",
     "developmental_stage": "adult"
    },
-   "measured_result_note": "Both are small molecules and oral, with CDK4 and CDK6 as mechanism targets; aggregated potency is in the nanomolar range, lower for abemaciclib. The intracranial model is an adult oncology model. No paediatric, neural-progenitor or label datum was searched.",
+   "measured_result_note": "A small molecule, oral, with CDK4 and CDK6 as mechanism targets; aggregated potency is in the nanomolar range, lower for abemaciclib than for palbociclib. The intracranial model is an adult oncology model. No paediatric, neural-progenitor or label datum was searched. Evidence is not transferred to palbociclib (DR-M01-008).",
    "evidence_scope": "EXTERNAL_DATABASE_RECORD"
   },
   {
@@ -430,7 +449,7 @@
   "predictions": "None; no engine, no score. The experiment is proposed, not performed.",
   "next_measurement": "Test T1 (computational, on the deposited single-cell data if access is obtained): MYC difference between knockout and wild-type radial glia within the G1/G0 phase alone and within matched potency strata, and the same for POU5F1; if the difference vanishes, MYC is a marker of cycle or state. Test T2 (wet-lab): in knockout and corrected cells from two independent clones, genetic MYC lowering (inducible degron or CRISPRi) against a cytostatic control and against the compound arms, with SOX2-positive MYC-positive, pH3-positive and NEUN-positive fractions and absolute cell counts per organoid, wild-type plus compound groups included; add-back at progenitor stage (before week 4) and at neuron stage (week 10) with MYC and layer-marker readouts. Test T3: MYC in the SCAR12 line stratified by the same strata, to ask whether MYC elevation without composition change is a stage effect. Falsifier: MYC lowering by a specific lever does not move neuronal fractions or the progenitor fraction in knockout cells beyond what it does in corrected cells.",
   "status": "hypothesis",
-  "value_added": "Separates the driver, marker and consequence readings of the radial-glia MYC rise with within-paper discriminators (SCAR12, POU5F1, developmental co-variation, cell-cycle coupling), adds the mouse conditional-deletion and neuron-stage add-back readings that bound what a radial-glia lever can matter for, and records that the engine's Q6 rows are one origin and cannot decide.",
+  "value_added": "Separates the driver, marker and consequence readings of the radial-glia MYC rise with within-paper discriminators (SCAR12, POU5F1, developmental co-variation, cell-cycle coupling), adds the mouse conditional-deletion and neuron-stage add-back readings that bound what a radial-glia lever can matter for, and records that the engine's Q6 rows are one origin and cannot decide. Reading of the one compound result: the authors read A51 as MYC-driven impairment of differentiation (NEUN-positive up, SATB2 mildly up, CTIP2 unchanged); that no candidate is strengthened here rests on the non-selectivity of the multi-kinase compound and on design gaps (no wild-type-plus-compound arm, supplement unavailable), not on a contradicting result.",
   "clinical_census": "UNKNOWN: ClinicalTrials.gov was not queried in this package."
  },
  "not_known": [
