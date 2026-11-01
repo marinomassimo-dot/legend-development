@@ -1,0 +1,741 @@
+{
+ "check_bd": {
+  "expected": {
+   "Alfacalcidol": 102,
+   "Calcitriol": 114,
+   "Cholecalciferol": 16
+  },
+  "observed": {
+   "Alfacalcidol": 102,
+   "Calcitriol": 114,
+   "Cholecalciferol": 16
+  },
+  "reproduced": true
+ },
+ "check_order": {
+  "canonical_from_edges": 94,
+  "edge_types": 94,
+  "equal_to_sorted_canonical": true
+ },
+ "check_sanity_auroc_in_graph": {
+  "auroc": 0.7233,
+  "neg": 622,
+  "pos": 622
+ },
+ "inputs": {
+  "decoder_sha256": "eda13520906f968c1ca6c8131b5491f8a798e226d53a17af0ce3cb2661d32c47",
+  "decoder_shape": [
+   94,
+   512
+  ],
+  "edge_types_sha256": "39600af074270d6cc960b0d4e1cab5eb24c96c5a76e0fb003b275a82f4bfbda4",
+  "edges_rows": 14733490,
+  "embeddings_sha256": "e4fadfb7ddc7dec28f609085d5b3277e686b3f2fec4c9057a613b90a9abb25e1",
+  "embeddings_shape": [
+   147020,
+   512
+  ],
+  "nodes_sha256": "16a4b018e03d0ee4e12842b1cff3c930338c21b21b5128e2c8be719c8dd8aa88"
+ },
+ "p_top_concentration": {
+  "distinct_drugs": 33,
+  "median_degree_P_top": 5,
+  "median_degree_all_drugs": 1,
+  "rows": 225
+ },
+ "trial_a": {
+  "all": {
+   "B1": {
+    "median_pct": 0.2528,
+    "recall_at_1pct": 0.0,
+    "recall_at_5pct": 0.0
+   },
+   "B2": {
+    "median_pct": 0.21101,
+    "recall_at_1pct": 0.2222222222222222,
+    "recall_at_5pct": 0.2222222222222222
+   },
+   "P": {
+    "median_pct": 0.19944,
+    "recall_at_1pct": 0.05555555555555555,
+    "recall_at_5pct": 0.2777777777777778
+   },
+   "genes": 12,
+   "pairs": 18
+  },
+  "catalogue_drugbank_ids_not_in_neurokg": 58,
+  "decision": {
+   "statement": "fewer than 20 SINGLE PROTEIN pairs over 5 genes: figures only, no statement"
+  },
+  "group_level": {
+   "B1": {
+    "median_pct": 0.2528,
+    "recall_at_1pct": 0.0,
+    "recall_at_5pct": 0.0
+   },
+   "B2": {
+    "median_pct": 0.20638,
+    "recall_at_1pct": 0.23529411764705882,
+    "recall_at_5pct": 0.23529411764705882
+   },
+   "P": {
+    "median_pct": 0.19065,
+    "recall_at_1pct": 0.058823529411764705,
+    "recall_at_5pct": 0.29411764705882354
+   },
+   "genes": 11,
+   "pairs": 17
+  },
+  "per_gene": {
+   "ABAT": {
+    "candidates": 8152,
+    "in_graph_drugs": 8,
+    "max_P_unknown": 0.9984,
+    "node_index": 1739,
+    "ref_in_graph": 1,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 1.0,
+    "share_candidates_P_gt_0_9": 0.9995
+   },
+   "CACNA1G": {
+    "candidates": 8133,
+    "in_graph_drugs": 27,
+    "max_P_unknown": 0.9997,
+    "node_index": 8746,
+    "ref_in_graph": 6,
+    "ref_not_in_graph": 3,
+    "share_candidates_P_gt_0_5": 1.0,
+    "share_candidates_P_gt_0_9": 0.8574
+   },
+   "CACNA1H": {
+    "candidates": 8130,
+    "in_graph_drugs": 30,
+    "max_P_unknown": 0.9998,
+    "node_index": 9814,
+    "ref_in_graph": 6,
+    "ref_not_in_graph": 3,
+    "share_candidates_P_gt_0_5": 1.0,
+    "share_candidates_P_gt_0_9": 0.9957
+   },
+   "CACNA1I": {
+    "candidates": 8129,
+    "in_graph_drugs": 31,
+    "max_P_unknown": 0.9991,
+    "node_index": 12086,
+    "ref_in_graph": 6,
+    "ref_not_in_graph": 3,
+    "share_candidates_P_gt_0_5": 1.0,
+    "share_candidates_P_gt_0_9": 0.5966
+   },
+   "CASP1": {
+    "candidates": 8151,
+    "in_graph_drugs": 9,
+    "max_P_unknown": 0.9968,
+    "node_index": 2786,
+    "ref_in_graph": 1,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 1.0,
+    "share_candidates_P_gt_0_9": 0.8331
+   },
+   "CHRM1": {
+    "candidates": 8056,
+    "in_graph_drugs": 104,
+    "max_P_unknown": 0.9999,
+    "node_index": 10107,
+    "ref_in_graph": 7,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 1.0,
+    "share_candidates_P_gt_0_9": 0.9939
+   },
+   "EIF2AK3": {
+    "candidates": 8160,
+    "in_graph_drugs": 0,
+    "max_P_unknown": 0.9775,
+    "node_index": 8153,
+    "ref_in_graph": 0,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 0.5495,
+    "share_candidates_P_gt_0_9": 0.0058
+   },
+   "EIF2AK4": {
+    "candidates": 8159,
+    "in_graph_drugs": 1,
+    "max_P_unknown": 0.9797,
+    "node_index": 11340,
+    "ref_in_graph": 0,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 0.4688,
+    "share_candidates_P_gt_0_9": 0.0063
+   },
+   "EIF2B1": {
+    "candidates": 8160,
+    "in_graph_drugs": 0,
+    "max_P_unknown": 0.8658,
+    "node_index": 722,
+    "ref_in_graph": 0,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 0.0028,
+    "share_candidates_P_gt_0_9": 0.0
+   },
+   "EIF2B2": {
+    "candidates": 8160,
+    "in_graph_drugs": 0,
+    "max_P_unknown": 0.9201,
+    "node_index": 8762,
+    "ref_in_graph": 0,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 0.0349,
+    "share_candidates_P_gt_0_9": 0.0002
+   },
+   "EIF2B3": {
+    "candidates": 8160,
+    "in_graph_drugs": 0,
+    "max_P_unknown": 0.7659,
+    "node_index": 12269,
+    "ref_in_graph": 0,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 0.0016,
+    "share_candidates_P_gt_0_9": 0.0
+   },
+   "EIF2B4": {
+    "candidates": 8160,
+    "in_graph_drugs": 0,
+    "max_P_unknown": 0.9261,
+    "node_index": 759,
+    "ref_in_graph": 0,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 0.0175,
+    "share_candidates_P_gt_0_9": 0.0002
+   },
+   "EIF2B5": {
+    "candidates": 8160,
+    "in_graph_drugs": 0,
+    "max_P_unknown": 0.9781,
+    "node_index": 8310,
+    "ref_in_graph": 0,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 0.2523,
+    "share_candidates_P_gt_0_9": 0.0049
+   },
+   "GRIA1": {
+    "candidates": 8144,
+    "in_graph_drugs": 16,
+    "max_P_unknown": 0.9966,
+    "node_index": 1926,
+    "ref_in_graph": 3,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 1.0,
+    "share_candidates_P_gt_0_9": 0.5494
+   },
+   "GRIA2": {
+    "candidates": 8115,
+    "in_graph_drugs": 45,
+    "max_P_unknown": 0.9991,
+    "node_index": 1245,
+    "ref_in_graph": 3,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 1.0,
+    "share_candidates_P_gt_0_9": 0.974
+   },
+   "GRIA3": {
+    "candidates": 8146,
+    "in_graph_drugs": 14,
+    "max_P_unknown": 0.9921,
+    "node_index": 6780,
+    "ref_in_graph": 2,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 0.6273,
+    "share_candidates_P_gt_0_9": 0.2541
+   },
+   "GRIA4": {
+    "candidates": 8151,
+    "in_graph_drugs": 9,
+    "max_P_unknown": 0.9926,
+    "node_index": 6677,
+    "ref_in_graph": 2,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 0.5759,
+    "share_candidates_P_gt_0_9": 0.2319
+   },
+   "GRIN1": {
+    "candidates": 8125,
+    "in_graph_drugs": 35,
+    "max_P_unknown": 0.9998,
+    "node_index": 8464,
+    "ref_in_graph": 4,
+    "ref_not_in_graph": 1,
+    "share_candidates_P_gt_0_5": 1.0,
+    "share_candidates_P_gt_0_9": 0.8921
+   },
+   "GRIN2A": {
+    "candidates": 8127,
+    "in_graph_drugs": 33,
+    "max_P_unknown": 0.9993,
+    "node_index": 10094,
+    "ref_in_graph": 3,
+    "ref_not_in_graph": 1,
+    "share_candidates_P_gt_0_5": 1.0,
+    "share_candidates_P_gt_0_9": 0.6413
+   },
+   "GRIN2B": {
+    "candidates": 8125,
+    "in_graph_drugs": 35,
+    "max_P_unknown": 0.9998,
+    "node_index": 2451,
+    "ref_in_graph": 4,
+    "ref_not_in_graph": 1,
+    "share_candidates_P_gt_0_5": 1.0,
+    "share_candidates_P_gt_0_9": 1.0
+   },
+   "GRIN2D": {
+    "candidates": 8130,
+    "in_graph_drugs": 30,
+    "max_P_unknown": 0.9998,
+    "node_index": 10460,
+    "ref_in_graph": 3,
+    "ref_not_in_graph": 1,
+    "share_candidates_P_gt_0_5": 1.0,
+    "share_candidates_P_gt_0_9": 0.9947
+   },
+   "GSK3B": {
+    "candidates": 8136,
+    "in_graph_drugs": 24,
+    "max_P_unknown": 0.9926,
+    "node_index": 33,
+    "ref_in_graph": 2,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 1.0,
+    "share_candidates_P_gt_0_9": 0.6284
+   },
+   "IL1B": {
+    "candidates": 8145,
+    "in_graph_drugs": 15,
+    "max_P_unknown": 0.9986,
+    "node_index": 1003,
+    "ref_in_graph": 0,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 1.0,
+    "share_candidates_P_gt_0_9": 0.9999
+   },
+   "IL1R1": {
+    "candidates": 8156,
+    "in_graph_drugs": 4,
+    "max_P_unknown": 0.9979,
+    "node_index": 227,
+    "ref_in_graph": 0,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 0.9998,
+    "share_candidates_P_gt_0_9": 0.7197
+   },
+   "JAK2": {
+    "candidates": 8143,
+    "in_graph_drugs": 17,
+    "max_P_unknown": 0.9987,
+    "node_index": 1617,
+    "ref_in_graph": 5,
+    "ref_not_in_graph": 1,
+    "share_candidates_P_gt_0_5": 1.0,
+    "share_candidates_P_gt_0_9": 0.9942
+   },
+   "KEAP1": {
+    "candidates": 8156,
+    "in_graph_drugs": 4,
+    "max_P_unknown": 0.9802,
+    "node_index": 1071,
+    "ref_in_graph": 4,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 0.2905,
+    "share_candidates_P_gt_0_9": 0.0045
+   },
+   "LDHA": {
+    "candidates": 8153,
+    "in_graph_drugs": 7,
+    "max_P_unknown": 0.9731,
+    "node_index": 2584,
+    "ref_in_graph": 0,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 0.5426,
+    "share_candidates_P_gt_0_9": 0.0056
+   },
+   "LDHB": {
+    "candidates": 8155,
+    "in_graph_drugs": 5,
+    "max_P_unknown": 0.9898,
+    "node_index": 4811,
+    "ref_in_graph": 0,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 0.9991,
+    "share_candidates_P_gt_0_9": 0.1452
+   },
+   "MTOR": {
+    "candidates": 8149,
+    "in_graph_drugs": 11,
+    "max_P_unknown": 0.9941,
+    "node_index": 1557,
+    "ref_in_graph": 2,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 0.9678,
+    "share_candidates_P_gt_0_9": 0.4976
+   },
+   "NFE2L2": {
+    "candidates": 8159,
+    "in_graph_drugs": 1,
+    "max_P_unknown": 0.9821,
+    "node_index": 8481,
+    "ref_in_graph": 1,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 0.855,
+    "share_candidates_P_gt_0_9": 0.0396
+   },
+   "NFKB1": {
+    "candidates": 8145,
+    "in_graph_drugs": 15,
+    "max_P_unknown": 0.998,
+    "node_index": 1150,
+    "ref_in_graph": 0,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 1.0,
+    "share_candidates_P_gt_0_9": 1.0
+   },
+   "NLRP3": {
+    "candidates": 8160,
+    "in_graph_drugs": 0,
+    "max_P_unknown": 0.9731,
+    "node_index": 12304,
+    "ref_in_graph": 0,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 0.2978,
+    "share_candidates_P_gt_0_9": 0.0037
+   },
+   "PANX1": {
+    "candidates": 8159,
+    "in_graph_drugs": 1,
+    "max_P_unknown": 0.987,
+    "node_index": 8470,
+    "ref_in_graph": 0,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 0.7109,
+    "share_candidates_P_gt_0_9": 0.1555
+   },
+   "PDK1": {
+    "candidates": 8158,
+    "in_graph_drugs": 2,
+    "max_P_unknown": 0.9823,
+    "node_index": 1080,
+    "ref_in_graph": 0,
+    "ref_not_in_graph": 1,
+    "share_candidates_P_gt_0_5": 0.6807,
+    "share_candidates_P_gt_0_9": 0.0141
+   },
+   "PDK2": {
+    "candidates": 8157,
+    "in_graph_drugs": 3,
+    "max_P_unknown": 0.9916,
+    "node_index": 2164,
+    "ref_in_graph": 0,
+    "ref_not_in_graph": 1,
+    "share_candidates_P_gt_0_5": 0.9903,
+    "share_candidates_P_gt_0_9": 0.0863
+   },
+   "PDK3": {
+    "candidates": 8158,
+    "in_graph_drugs": 2,
+    "max_P_unknown": 0.9829,
+    "node_index": 552,
+    "ref_in_graph": 0,
+    "ref_not_in_graph": 1,
+    "share_candidates_P_gt_0_5": 0.4425,
+    "share_candidates_P_gt_0_9": 0.0086
+   },
+   "PDK4": {
+    "candidates": 8158,
+    "in_graph_drugs": 2,
+    "max_P_unknown": 0.9419,
+    "node_index": 9468,
+    "ref_in_graph": 0,
+    "ref_not_in_graph": 1,
+    "share_candidates_P_gt_0_5": 0.0483,
+    "share_candidates_P_gt_0_9": 0.0006
+   },
+   "RELA": {
+    "candidates": 8158,
+    "in_graph_drugs": 2,
+    "max_P_unknown": 0.9976,
+    "node_index": 772,
+    "ref_in_graph": 0,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 1.0,
+    "share_candidates_P_gt_0_9": 0.6668
+   },
+   "SLC12A2": {
+    "candidates": 8155,
+    "in_graph_drugs": 5,
+    "max_P_unknown": 0.9998,
+    "node_index": 1968,
+    "ref_in_graph": 0,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 1.0,
+    "share_candidates_P_gt_0_9": 0.8422
+   },
+   "SLC16A1": {
+    "candidates": 8134,
+    "in_graph_drugs": 26,
+    "max_P_unknown": 0.9993,
+    "node_index": 1992,
+    "ref_in_graph": 0,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 1.0,
+    "share_candidates_P_gt_0_9": 1.0
+   },
+   "SLC16A7": {
+    "candidates": 8150,
+    "in_graph_drugs": 10,
+    "max_P_unknown": 0.9994,
+    "node_index": 11638,
+    "ref_in_graph": 0,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 1.0,
+    "share_candidates_P_gt_0_9": 0.8802
+   },
+   "STAT3": {
+    "candidates": 8159,
+    "in_graph_drugs": 1,
+    "max_P_unknown": 0.9971,
+    "node_index": 729,
+    "ref_in_graph": 0,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 0.9765,
+    "share_candidates_P_gt_0_9": 0.3841
+   },
+   "TNF": {
+    "candidates": 8122,
+    "in_graph_drugs": 38,
+    "max_P_unknown": 0.999,
+    "node_index": 2328,
+    "ref_in_graph": 0,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 1.0,
+    "share_candidates_P_gt_0_9": 1.0
+   },
+   "TNKS": {
+    "candidates": 8160,
+    "in_graph_drugs": 0,
+    "max_P_unknown": 0.9697,
+    "node_index": 3213,
+    "ref_in_graph": 0,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 0.3816,
+    "share_candidates_P_gt_0_9": 0.0044
+   },
+   "TNKS2": {
+    "candidates": 8160,
+    "in_graph_drugs": 0,
+    "max_P_unknown": 0.7746,
+    "node_index": 7009,
+    "ref_in_graph": 0,
+    "ref_not_in_graph": 0,
+    "share_candidates_P_gt_0_5": 0.0025,
+    "share_candidates_P_gt_0_9": 0.0
+   }
+  },
+  "single_protein": {
+   "B1": {
+    "median_pct": 0.20772,
+    "recall_at_1pct": 0.0,
+    "recall_at_5pct": 0.0
+   },
+   "B2": {
+    "median_pct": 0.25064,
+    "recall_at_1pct": 0.0,
+    "recall_at_5pct": 0.0
+   },
+   "P": {
+    "median_pct": 0.19944,
+    "recall_at_1pct": 0.0,
+    "recall_at_5pct": 0.0
+   },
+   "genes": 1,
+   "pairs": 1
+  },
+  "single_protein_no_sibling": {
+   "B1": {
+    "median_pct": 0.20772,
+    "recall_at_1pct": 0.0,
+    "recall_at_5pct": 0.0
+   },
+   "B2": {
+    "median_pct": 0.25064,
+    "recall_at_1pct": 0.0,
+    "recall_at_5pct": 0.0
+   },
+   "P": {
+    "median_pct": 0.19944,
+    "recall_at_1pct": 0.0,
+    "recall_at_5pct": 0.0
+   },
+   "genes": 1,
+   "pairs": 1
+  },
+  "single_protein_sibling_in_graph": {
+   "B1": {
+    "median_pct": null,
+    "recall_at_1pct": null,
+    "recall_at_5pct": null
+   },
+   "B2": {
+    "median_pct": null,
+    "recall_at_1pct": null,
+    "recall_at_5pct": null
+   },
+   "P": {
+    "median_pct": null,
+    "recall_at_1pct": null,
+    "recall_at_5pct": null
+   },
+   "genes": 0,
+   "pairs": 0
+  }
+ },
+ "trial_c": {
+  "dee28_top_indication": [
+   {
+    "drug_name": "Benzylpenicillin",
+    "drugbank": "DB01053",
+    "rank": 1,
+    "score": 0.9312
+   },
+   {
+    "drug_name": "Prednisolone",
+    "drugbank": "DB00860",
+    "rank": 2,
+    "score": 0.9209
+   },
+   {
+    "drug_name": "Triheptanoin",
+    "drugbank": "DB11677",
+    "rank": 3,
+    "score": 0.9199
+   },
+   {
+    "drug_name": "Bevacizumab",
+    "drugbank": "DB00112",
+    "rank": 4,
+    "score": 0.9188
+   },
+   {
+    "drug_name": "Imiquimod",
+    "drugbank": "DB00724",
+    "rank": 5,
+    "score": 0.9187
+   },
+   {
+    "drug_name": "Mitoxantrone",
+    "drugbank": "DB01204",
+    "rank": 6,
+    "score": 0.9177
+   },
+   {
+    "drug_name": "Dexamethasone",
+    "drugbank": "DB01234",
+    "rank": 7,
+    "score": 0.9142
+   },
+   {
+    "drug_name": "Cortisone acetate",
+    "drugbank": "DB01380",
+    "rank": 8,
+    "score": 0.9117
+   },
+   {
+    "drug_name": "Loteprednol etabonate",
+    "drugbank": "DB14596",
+    "rank": 9,
+    "score": 0.9107
+   },
+   {
+    "drug_name": "Sirolimus",
+    "drugbank": "DB00877",
+    "rank": 10,
+    "score": 0.9104
+   }
+  ],
+  "siblings": 87,
+  "spearman_epilepsy": 0.8119,
+  "spearman_max": 0.9968,
+  "spearman_median": 0.9733,
+  "spearman_min": 0.8941,
+  "statement": "DEE28 ranking not shown to be WOREE-specific"
+ },
+ "wwox_drug_protein_top": [
+  {
+   "degree": 2,
+   "drug_name": "Obinepitide",
+   "drugbank": "DB05045",
+   "rank": 1,
+   "score": 0.9649
+  },
+  {
+   "degree": 1,
+   "drug_name": "Encenicline",
+   "drugbank": "DB11726",
+   "rank": 2,
+   "score": 0.9397
+  },
+  {
+   "degree": 128,
+   "drug_name": "Zinc acetate",
+   "drugbank": "DB14487",
+   "rank": 3,
+   "score": 0.9368
+  },
+  {
+   "degree": 1,
+   "drug_name": "Adenosine-5'-ditungstate",
+   "drugbank": "DB02183",
+   "rank": 4,
+   "score": 0.9362
+  },
+  {
+   "degree": 2,
+   "drug_name": "N-cyclohexyltaurine",
+   "drugbank": "DB03309",
+   "rank": 5,
+   "score": 0.9313
+  },
+  {
+   "degree": 4,
+   "drug_name": "Peptide YY (3-36)",
+   "drugbank": "DB05004",
+   "rank": 6,
+   "score": 0.9308
+  },
+  {
+   "degree": 1,
+   "drug_name": "(5R)-2-sulfanyl-5-[4-(trifluoromethyl)benzyl]-1,3-thiazol-4(5H)-one",
+   "drugbank": "DB08574",
+   "rank": 7,
+   "score": 0.9302
+  },
+  {
+   "degree": 20,
+   "drug_name": "Tosedostat",
+   "drugbank": "DB11781",
+   "rank": 8,
+   "score": 0.9283
+  },
+  {
+   "degree": 4,
+   "drug_name": "3-Indolebutyric Acid",
+   "drugbank": "DB02740",
+   "rank": 9,
+   "score": 0.9278
+  },
+  {
+   "degree": 7,
+   "drug_name": "Beta carotene",
+   "drugbank": "DB06755",
+   "rank": 10,
+   "score": 0.9263
+  }
+ ]
+}

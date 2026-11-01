@@ -1,0 +1,19 @@
+gene	drug	drug_name	stratum	action	sibling_in_graph	pct_P	pct_B1	pct_B2
+CACNA1G	DB00230	Pregabalin	group_level	MODULATOR	False	0.03861	0.2528	0.2528
+CACNA1G	DB08872	Gabapentin enacarbil	group_level	MODULATOR	False	0.00885	0.20638	0.20638
+CACNA1G	DB00996	Gabapentin	group_level	MODULATOR	False	0.16759	0.11429	0.11429
+CACNA1H	DB00230	Pregabalin	group_level	MODULATOR	False	0.05461	0.25252	0.25683
+CACNA1H	DB08872	Gabapentin enacarbil	group_level	MODULATOR	False	0.01058	0.20609	0.21101
+CACNA1H	DB00996	Gabapentin	group_level	MODULATOR	False	0.19065	0.11396	0.11968
+CACNA1I	DB00230	Pregabalin	group_level	MODULATOR	False	0.01931	0.25249	0.25249
+CACNA1I	DB08872	Gabapentin enacarbil	group_level	MODULATOR	False	0.031	0.20624	0.20624
+CACNA1I	DB00996	Gabapentin	group_level	MODULATOR	False	0.14196	0.11422	0.11422
+GRIN1	DB05956	EVT-101	group_level	ANTAGONIST	True	0.85674	0.33108	0.00806
+GRIN2A	DB05824	CNS-5161	group_level	BLOCKER	True	0.44444	0.58921	0.00861
+GRIN2B	DB05824	CNS-5161	group_level	BLOCKER	True	0.37969	0.58911	0.00788
+GRIN2D	DB05824	CNS-5161	group_level	BLOCKER	True	0.40135	0.58936	0.00916
+JAK2	DB14845	Filgotinib	single_protein	INHIBITOR	False	0.19944	0.20772	0.25064
+PDK1	DB16929	Sodium dichloroacetate	group_level	INHIBITOR	False	0.9913	0.89838	0.89838
+PDK2	DB16929	Sodium dichloroacetate	group_level	INHIBITOR	False	0.87373	0.89837	0.89837
+PDK3	DB16929	Sodium dichloroacetate	group_level	INHIBITOR	False	0.924	0.89838	0.89838
+PDK4	DB16929	Sodium dichloroacetate	group_level	INHIBITOR	False	0.95979	0.89838	0.89838
