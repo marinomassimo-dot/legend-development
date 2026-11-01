@@ -1,7 +1,8 @@
 # Drug repurposing — current development roadmap
 
-Updated 2026-10-29 by `orchestrator`, runtime Codex, following the operator's request to
-consolidate the Unravel/BioNAV/rareSHIFT and ALS discussion into this roadmap.
+Updated 2026-11-01 by `orchestrator`, runtime Codex, following the operator's requests to
+consolidate the Unravel/BioNAV/rareSHIFT and ALS discussion, state the guiding principle
+explicitly and define balanced, priority-driven external discovery in this roadmap.
 
 **Planning, not an implementation or efficacy report.** This is the home of the next
 increments. The newest measured iteration in [README.md](README.md) describes what actually
@@ -9,6 +10,15 @@ works. The [operator-supplied v4/r14](roadmap_v4_r14_20261020.md) stays verbatim
 provenance. Before executing an increment, fetch remote `main`, reconcile the latest measured
 iteration and reuse any work already delivered. This update authorises recording the plan;
 it does not claim that its research experiments, deployments or integrations have run.
+
+## Guiding principle
+
+> **Rendere durevole la capacità di lavorare e migliorarsi, mantenendo semplice cambiare direzione.**
+
+Keep improvements lean, flexible, modular and reversible. Reuse existing mechanisms;
+keep tools, plugins, scripts and patterns easy to adopt, replace or remove. Preserve
+reusable guidance at its canonical home, without duplicating prompts in role contracts
+or adding rigid gates and approval layers.
 
 ## Research objectives
 
@@ -93,21 +103,71 @@ rollback. Respect existing publication authority and any operator approval alrea
 prepare the reviewable deployment before requesting only a genuinely missing reserved
 decision. Keep private communications and individual-level information out of public outputs.
 
-## Daily discovery: two complementary searches
+## Daily discovery and bounded follow-up
 
-1. **Scientific needs:** WWOX plus mechanism-specific searches when useful, including
-   pathways, metabolism, stress responses, excitability, glia and assay methods even when
-   the paper never mentions WWOX. Reread for a new question or a decisive missing detail.
-2. **Capabilities and benchmarks:** GitHub, Hugging Face, primary publications and official
-   documentation for repurposing, compound matching, predictive methods and useful
-   Scientist/Orchestrator patterns. Do not require WWOX as a keyword. Prefer inspectable
-   methods, independent evaluation, maintained assets and usable terms over popularity.
+**Target behaviour, not a claim that the current radar implements every item below.**
+Reuse the existing radar, scheduler, scout log and roadmap; verify delivered behaviour
+against these requirements before reporting it as operational.
 
-Use the existing daily rotation and triage only material changes. Install or retain a tool
-when its measured gain pays for its dependencies and operational cost; remove duplicative
-components. External spend remains zero, with no account creation, email contact or transfer
-of private data implied. Monitor Unravel for public methods/data, not repeated promotional
-counts.
+At each run, resolve and record the latest remote `main` SHA of `legend-development`.
+Read the relevant state, latest measured iteration, task diagnosis, roadmap, integrations,
+code and tests at that revision, without switching or modifying an active worktree.
+Cache unchanged inputs by revision rather than rereading the whole repository. An old
+"current" heading is not authoritative over later verified work. If freshness cannot be
+verified, disclose it rather than silently treating cached context as current.
+
+Choose two or three priority questions from actual work, failures, missing inputs and
+opportunities: what decision would change if a finding were confirmed? Reconcile previous
+proposals and open tasks first; completed work is not a new assignment. Keep both searches:
+
+1. **Scientific needs:** WWOX and mechanism-specific questions, including pathways,
+   metabolism, stress, excitability, glia and assays even when WWOX is never mentioned.
+2. **Capabilities and benchmarks:** daily new discovery across **GitHub, Hugging Face and
+   Nature**, for tools, compound databases, predictive methods, matching, evaluation and
+   useful Scientist/Orchestrator patterns. These are three explicit discovery channels,
+   not merely probes of known resources. Do not require WWOX as a keyword. Other primary
+   literature, official project sites and preprints complement them. Distinguish primary
+   research, commentary, promotional claims, preprints and corrections; prestige is not
+   evidence of performance or benefit.
+
+For an important project, inspect its public team/organisation's other relevant work.
+Use a weekly follow-up by default, while keeping new discovery daily. Starting adjustable
+limits: **6 active teams and 18 active repositories across the follow-up list, at most 3
+repositories per team**. Do not fill slots for their own sake. Rotate or pause entries when
+their relevance falls or a better opportunity appears; preserve sources and reopening
+conditions. Most discovery effort remains available for new projects. Reuse one scheduler;
+cheap version/availability probes of operational data sources remain distinct from team
+exploration. Following means internal monitoring, not social-account actions or contact.
+
+Before making a recommendation, inspect the external repository's latest default-branch
+commit and relevant code/tests, recording its SHA and release separately. For Hub assets,
+record the revision, card and actual files; for papers, the version, corrections and
+relevant supplementary material. Deduplicate a project's paper, code, data and mirrors.
+Select a matching method using the existing [matching guidance](matching_guidance_v3.md),
+not a mandatory graph or a count of pathways, hits or agreeing engines.
+
+Keep IMPLEMENTED, PARTIAL, PLANNED, MISSING and UNKNOWN scoped to evidence: author-declared
+tests, inspected code, generated artefacts, independently reproduced results and checks
+actually run are different observations. Seek counter-evidence, leakage, shared origins,
+missing controls and context limits. A missing result is distinct from a failed or partial
+query. Preserve the research objectives and evidence boundaries above.
+
+Report material deltas: source/team, version/date, verified fact and limit, priority question,
+decision affected, proposed use, smallest reversible trial and decisive cost/licence terms.
+Keep at most one leading action in the daily brief; other useful signals stay in the log.
+No useful change is a valid one-line outcome. Record findings in the existing scout log and
+update this roadmap only when a decision changes; claim persistence only after a successful
+write and preserve concurrent edits. A proposal or adoption into the plan is not a verified
+implementation. Keep sightings, examination, trials and decisions traceable through the
+existing records, without another register.
+
+The scheduled scout researches and stages findings; authorised operational sessions perform
+runtime trials, integrations and scientific updates. Install or retain a tool when its
+measured gain pays for its dependencies and cost; remove duplicative components. No external
+code execution or installation is implied by a discovery. External spend remains zero, with
+no account creation, email contact or private-data transfer implied. Check code, data,
+weights and service terms separately and retain attribution. Monitor Unravel for public
+methods/data, not repeated promotional counts.
 
 ## Delivery sequence and stop condition
 
