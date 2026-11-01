@@ -21,3 +21,7 @@ See `decisions.tsv` (6 rows). Summary: ChEMBL offline dump WATCH (strongest, con
 VGSC-DB (cadd.zju.edu.cn) unreachable (HTTP 502), not assessed; Chemical Probes Portal licence not found; PR 824 file list read only to the first 100 files; Papyrus handling of heteromeric complexes; unpacked size of the ChEMBL SQLite; UniChem and EMBL-EBI terms; web-search summaries for rare-disease methods were not checked against the papers.
 
 Files: README.md, decisions.tsv, tooluniverse_delta.tsv, licences.tsv, raw/ (copies), raw_sha256.txt. Two scratch files outside the package (release JSON etc.) are duplicated in raw/.
+
+## Where the raw third-party files are (integrator note)
+
+The downloaded release bodies, READMEs and tool sources (third-party text and code, some containing contributors' addresses) are not tracked in the repository. Their SHA-256 digests are in `raw_SHA256SUMS.txt` and a copy is kept in the shared corpus at `files/drug_repurposing_it15/scout_it15_p5_20261101/raw/` (ignored by git). Paths named `raw/...` in this README refer to that copy.
