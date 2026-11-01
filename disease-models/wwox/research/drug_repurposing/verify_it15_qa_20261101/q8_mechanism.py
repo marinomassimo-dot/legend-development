@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Verifier item 8: ChEMBL mechanism records for NMDAR drugs (public GET, 2 retries)."""
 import json, time, urllib.request, os
 OUT=os.path.dirname(os.path.abspath(__file__))

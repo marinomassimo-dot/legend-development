@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """IT15 Q-B step 1: target-first ChEMBL retrieval for GSK3B/GSK3A (human and rodent single-protein targets).
 Uses framework/adapters/_http.get_json (the adapter's own door). Retries: at most 2 per request, 8 s pause; every request is logged to perimeter_log.tsv.
 Raw bodies go to the scratchpad given by --raw (CC BY-SA 3.0 copies are not committed). Usage: retrieve_qb.py --raw DIR --stage targets|acts"""

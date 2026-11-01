@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """IT15 Q-B step 5: target-first MECHANISM lists (ChEMBL mechanism endpoint) for the GSK3 targets, and the Axin-1/GSK3B PPI target activity census."""
 import sys, os, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))

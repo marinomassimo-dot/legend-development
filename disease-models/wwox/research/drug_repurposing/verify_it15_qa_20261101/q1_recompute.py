@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Verifier items 1 and 2: recompute ratios from the producer's raw ChEMBL rows (relations_qa.tsv, chembl_activity only)
 and the occupancy arithmetic. Writes q1_ratios.tsv and q2_occupancy.tsv. Read-only on the producer's files."""
 import csv, os

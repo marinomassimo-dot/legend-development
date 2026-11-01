@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """IT15 Q-B step 2: build relations_qb.tsv rows (selectivity_p6 format) for the target-first census, and the per-compound census.
 Reads raw JSON from --raw (scratchpad). Units normalised to nM only for nM/uM/mM/pM; others kept without value."""
 import json, glob, os, sys, collections, csv, argparse

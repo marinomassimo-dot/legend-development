@@ -171,9 +171,9 @@
         },
         {
           "step": "P8 freeze candidate, battery on exact SHA in a no-hardlink clone, gate, remote recheck, push, CI, cleanup [depends on: P8 review]",
-          "status": "TODO",
+          "status": "IN_PROGRESS",
           "owner": "orchestrator",
-          "evidence": ""
+          "evidence": "frozen SHA 0b0846641b4250aae667dbc035db5f1c039dd88f; gate PASS on it; battery pid 3175937 in a no-hardlink clone (scratchpad/battery_it15), log scratchpad/battery_it15.log, started 10:15 UTC (11:15 Europe/Rome); remote development/main 7528750e at freeze; local main 01f5f053 (docs merged into the branch)"
         },
         {
           "step": "Final report (four opening answers, A-J, stop criterion) [depends on: P8 close]",

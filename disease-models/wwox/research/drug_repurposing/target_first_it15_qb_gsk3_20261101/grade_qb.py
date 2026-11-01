@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """IT15 Q-B step 4: relations_qb.tsv + assay_context_qb.tsv from the raw pulls, then same-document grading with the P6 logic
 (imported, not copied: collect / grade_group / emit from ../scout_it14_p6_20261101/selectivity_p6.py). Writes graded_comparisons_qb.tsv."""
 import sys, os, json, csv, glob, argparse, statistics, collections

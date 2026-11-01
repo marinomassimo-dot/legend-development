@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Verifier item 5: regrade EVERY group of the producer's relations_qa.tsv with the unchanged imported grader and the producer's
 assay_context_qa.tsv; compare with the shipped graded_comparisons_qa.tsv grade column. Writes q5_regrade_all_diff.tsv."""
 import csv, importlib.util, os, collections, io

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Fallback target discovery by gene-symbol search (different request form than the failed accession query) via framework/adapters/chembl.py. Same retry policy (2 retries, 6 s). --help is safe."""
 import json, os, sys, time, argparse
 argparse.ArgumentParser(description=__doc__).parse_args()

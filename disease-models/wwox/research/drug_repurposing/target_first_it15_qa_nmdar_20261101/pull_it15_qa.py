@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """IT15 Q-A target-first pull. Uses framework/adapters/chembl.py (uniprot -> targets; target -> activities per standard_type).
 Retry policy: at most 2 retries (pause 6 s) on HTTP 5xx / transport failure; every failed request is logged, never looped.
 --help is safe. Stage A (default): accession -> targets. --activities: per target and type. --molecules IDS: molecule-first pull.

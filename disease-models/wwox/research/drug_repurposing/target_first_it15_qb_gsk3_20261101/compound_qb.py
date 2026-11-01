@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """IT15 Q-B step 3: compound-level pulls through framework/adapters/chembl.py (mechanism + molecule activities), with the retry rule and perimeter log.
 Usage: compound_qb.py --raw DIR --names "tideglusib,TDZD-8,..."   (identity search)   |   --mols CHEMBL..,CHEMBL..  (activities, mechanism)"""
 import sys, os, json, argparse

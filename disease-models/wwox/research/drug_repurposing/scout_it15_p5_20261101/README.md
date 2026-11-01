@@ -24,4 +24,4 @@ Files: README.md, decisions.tsv, tooluniverse_delta.tsv, licences.tsv, raw/ (cop
 
 ## Where the raw third-party files are (integrator note)
 
-The downloaded release bodies, READMEs and tool sources (third-party text and code, some containing contributors' addresses) are not tracked in the repository. Their SHA-256 digests are in `raw_SHA256SUMS.txt` and a copy is kept in the shared corpus at `files/drug_repurposing_it15/scout_it15_p5_20261101/raw/` (ignored by git). Paths named `raw/...` in this README refer to that copy.
+The downloaded release bodies, READMEs and tool sources (third-party text and code, some containing contributors' addresses) are not tracked in the repository. Their SHA-256 digests are in `raw_SHA256SUMS.txt` and a copy is kept in the shared corpus at `files/drug_repurposing_it15/scout_it15_p5_20261101/raw/` (ignored by git). Paths named `raw/...` in this README refer to that copy (markdown files there carry a `.txt` suffix so that link checks do not walk them).

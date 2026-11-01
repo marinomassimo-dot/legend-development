@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Verifier IT15 Q-A item 4: for the queue compounds the producer called 'not found', look them up in ChEMBL by
 molecule_chembl_id taken from deepening_queue.tsv, then pull mechanism records and NMDAR-target activities.
 Public GET only, no e-mail, at most 2 retries per request. Output: q4_chembl_queue.tsv and raw/q4_*.json"""

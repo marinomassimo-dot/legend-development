@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Verifier item 5: re-run the imported grader on the producer's relations/assay tables for the four documents under
 review and report the technique sets per assay, to find what actually triggered 'assay techniques differ'.
 Read-only import of scout_it14_p6_20261101/selectivity_p6.py via importlib (not executed as main)."""

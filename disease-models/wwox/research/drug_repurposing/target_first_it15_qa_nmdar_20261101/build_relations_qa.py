@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Offline: raw/act_*.json (framework/adapters/chembl.py output) + GtoPdb + DGIdb + DrugCentral file -> relations_qa.tsv, assay_context_qa.tsv,
 perimeter_log.tsv. Then grades with scout_it14_p6_20261101/selectivity_p6.py (collect/grade_group imported, unchanged) -> graded_comparisons_qa.tsv.
 Reads only; --help is safe. Paths: DR cache is the main checkout cache (untracked data)."""

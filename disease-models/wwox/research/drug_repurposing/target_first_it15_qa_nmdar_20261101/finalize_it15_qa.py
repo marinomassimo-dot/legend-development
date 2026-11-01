@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Offline: adds compound names/phase and a reviewer note to graded_comparisons_qa.tsv (the imported grade column is left untouched), appends source/identity rows
 to perimeter_log.tsv, and writes identity_qa.tsv. Reads relations_qa.tsv, raw/molecules_all.json, raw/failures_*.json. --help is safe."""
 import argparse, csv, glob, json, os, re, collections

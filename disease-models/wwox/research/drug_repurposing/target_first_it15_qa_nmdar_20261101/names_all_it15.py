@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Identity lookup for every parent compound id in relations_qa.tsv (ChEMBL molecule endpoint, batches of 100, <=2 retries per request via pull_it15_qa.fetch). Writes raw/molecules_all.json. --help safe."""
 import argparse, csv, json, os, sys
 argparse.ArgumentParser(description=__doc__).parse_args()

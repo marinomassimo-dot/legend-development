@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Verifier item 6: read the rows beyond the 2000-row cap for the three truncated queries.
 Public ChEMBL GET only. Retries: at most 2 per request. Outputs q6_tail_rows.tsv and q6_tail_summary.tsv"""
 import json, time, urllib.request, os, collections

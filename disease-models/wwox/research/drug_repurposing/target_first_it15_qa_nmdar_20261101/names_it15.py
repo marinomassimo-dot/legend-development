@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Identity lookup: ChEMBL molecule endpoint (batches of 40, <=2 retries) for the compound ids that appear in a GluN2B/GluN2A graded comparison, plus the anchor ids. Writes raw/molecules_names.json. --help safe."""
 import argparse, csv, json, os, re, sys, time
 argparse.ArgumentParser(description=__doc__).parse_args()
