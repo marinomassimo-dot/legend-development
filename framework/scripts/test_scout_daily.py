@@ -1064,5 +1064,73 @@ class VerifierRound2(unittest.TestCase):
         self.assertEqual("", sd.current_section(readme_text())[1])
 
 
+TABLE_P = sd.MODULE + "/pkg_it14_p3_20261101/reopen_searches_it14_p3.tsv"
+TABLE_TEXT = ("id\titem\tverdict\tdecisive_datum\tqueries_and_sources\ttrigger_to_reopen\towner_or_route\n"
+              "NP1\tGluN2B share of the isolated NMDAR current in layer II/III\tNEEDS-DATUM\tnone\tq\tan electrophysiology report with ifenprodil on the isolated current\tx\n"
+              "NP2\tAnswered item about GSK3\tANSWERED\tyes\tq\ta report that is already here\tx\n"
+              "NP3\tItem without a condition\tNEEDS-DATUM\tnone\tq\t\tx\n")
+
+
+def derive_tables(table_text=TABLE_TEXT, extra=None):
+    files = plan_files(**{TABLE_P: table_text, **(extra or {})})
+    inner = plan_git(files)
+
+    def runner(args):
+        if args[:2] == ["ls-tree", "-r"]:
+            return 0, "".join(f"{p}\n" for p in sorted(files))
+        return inner(args)
+    return sd.resolve_plan(None, None, CTX, runner, T0)
+
+
+class ReopenTables(unittest.TestCase):
+    """IT18 P1.1: the open conditions the module keeps as tables reach the plan; closed ones do not."""
+
+    def test_an_open_row_becomes_a_question_and_an_answered_or_conditionless_row_does_not(self):
+        plan, _ = derive_tables()
+        ids = [k for k in by_id(plan) if k.startswith("reopen:pkg_it14")]
+        self.assertEqual(["reopen:pkg_it14_p3_20261101/NP1"], ids)
+        q = by_id(plan)[ids[0]]
+        self.assertIn("reopen condition met?", q["decision"])
+        self.assertIn("table row NP1", q["origin"]["locator"])
+
+    def test_a_row_answered_in_a_later_revision_stops_generating(self):
+        plan, _ = derive_tables(TABLE_TEXT.replace("NEEDS-DATUM\tnone\tq\tan electro", "ANSWERED\tnone\tq\tan electro"))
+        self.assertFalse([k for k in by_id(plan) if k.startswith("reopen:pkg_it14")])
+
+    def test_a_table_without_the_expected_columns_is_ignored_not_misread(self):
+        plan, _ = derive_tables("a\tb\n1\t2\n")
+        self.assertFalse([k for k in by_id(plan) if k.startswith("reopen:pkg_it14")])
+
+    def test_decisions_table_reads_watch_rows_only(self):
+        dec = sd.MODULE + "/scout_it15_p5_20261101/decisions.tsv"
+        txt = ("name\turl\tverdict\treopen_condition\nChEMBL dump\tu\tWATCH\tReopen when a task needs gene per subunit\n"
+               "Papyrus\tu\tDISCARD for now\tReopen if a newer release appears\n")
+        plan, _ = derive_tables(extra={dec: txt})
+        keys = [k for k in by_id(plan) if k.startswith("reopen:scout_it15")]
+        self.assertEqual(1, len(keys))
+        self.assertIn("ChEMBL dump", by_id(plan)[keys[0]]["gap"])
+
+
+class QueryObjects(unittest.TestCase):
+    """IT18 P1.2: a question names the objects of its priority, not the commonest words of its prose."""
+
+    def test_objects_methods_and_local_labels(self):
+        objs, methods = sd.entities("GluN2B-sensitive share in layer II/III with ifenprodil; patch-clamp of P10 and C2 (H02) in Ca2 medium, GSK3 and ATP")
+        self.assertEqual(["glun2b", "gsk3", "ifenprodil"], sorted(objs))
+        self.assertEqual(["patch clamp"], methods)
+
+    def test_the_question_leads_with_the_object_and_drops_the_generic_anchor(self):
+        plan, _ = derive_tables()
+        q = by_id(plan)["reopen:pkg_it14_p3_20261101/NP1"]
+        self.assertTrue(q["kw"].startswith("glun2b nmdar"), q["kw"])
+        self.assertNotIn("epilepsy", q["kw"])
+        self.assertEqual("glun2b", q["hf"])
+
+    def test_a_text_without_objects_keeps_the_old_frequency_terms(self):
+        self.assertEqual(([], []), sd.entities("independent evaluation of predictive outcomes"))
+        plan, _ = derive()
+        self.assertIn("diagnosis:evaluation", by_id(plan))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

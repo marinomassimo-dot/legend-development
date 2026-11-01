@@ -666,6 +666,39 @@ def parse_reopen(text: str, path: str) -> list[dict]:
     return out
 
 
+OPEN_VERDICT = re.compile(r"^(NEEDS-DATUM|PARTIAL|PARTLY|WATCH)", re.I)
+TABLE_NAME = re.compile(r"/(reopen_searches[^/]*|decisions)\.tsv$")
+TABLE_LIMIT = 12  # newest package tables read; each is blob-cached, so an unchanged table costs no read
+
+
+def parse_reopen_table(text: str, path: str) -> list[dict]:
+    """Reopen conditions kept as a TABLE: `reopen_searches*.tsv` (id, item, verdict, trigger_to_reopen) or `decisions.tsv`
+    (name, verdict, reopen_condition). A row is open only while its verdict is still NEEDS-DATUM, PARTIAL(LY) or WATCH;
+    an answered, discarded or condition-less row generates nothing. Read as columns, not matched as prose."""
+    rows = [line.split("\t") for line in text.splitlines() if line.strip()]
+    if len(rows) < 2:
+        return []
+    head = [c.strip().lower() for c in rows[0]]
+    col = {name: head.index(name) for name in ("id", "name", "item", "verdict", "trigger_to_reopen", "reopen_condition") if name in head}
+    cond_col = col.get("trigger_to_reopen", col.get("reopen_condition"))
+    label_col = col.get("item", col.get("name"))
+    if "verdict" not in col or cond_col is None or label_col is None:
+        return []
+    pkg = path.rsplit("/", 2)[-2]
+    out = []
+    for n, row in enumerate(rows[1:]):
+        if len(row) <= max(col["verdict"], cond_col, label_col):
+            continue
+        verdict, cond, label = _plain(row[col["verdict"]]), _plain(row[cond_col]), _plain(row[label_col])
+        if not OPEN_VERDICT.match(verdict) or not cond:
+            continue
+        rid = _plain(row[col["id"]]) if "id" in col and len(row) > col["id"] else str(n)
+        out.append({"surface": "reopen", "lid": f"{pkg}/{rid or n}", "locator": f"{pkg} table row {rid or n} [{verdict[:24]}]",
+                    "weight": WEIGHT["reopen"], "text": f"{label[:160]} {cond[:200]}", "external": True,
+                    "decision": f"reopen condition met? {cond[:140]}"})
+    return out
+
+
 def hook(text: str):
     """(category, hf word, anchor) of the first matching hook, or (None, None, anchor of the default)."""
     for pattern, category, hf, anchor in HOOKS:
@@ -674,13 +707,39 @@ def hook(text: str):
     return None, None, "epilepsy" if NEURO.search(text) else "biomedical"
 
 
+# Technical objects of a priority: what a search should be about. Symbols and acronyms (GSK3, GluN2B, PDHA1, NMDAR),
+# drug names by their international stems, and a short list of assay/method words. Read from the text of ONE item.
+ENTITY = re.compile(r"\b(?:[A-Z][A-Za-z]*\d[A-Za-z0-9]*|[A-Z]{3,6}[a-z]?)\b")
+# Our own labels (P10, C2, H02, A05, IT12, PPR..., E-MTAB..., Ca2) and ions are not searchable objects.
+LOCAL_ID = re.compile(r"[A-Za-z]{1,2}\d{1,2}[A-Za-z]?|IT\d+|PPR\d+|MTAB\d*|Ca2|Mg2|Na1|I{2,3}|IV|VI{0,3}", re.I)
+NOT_ENTITY = frozenset("WWOX WOREE SCAR DEE WATCH NEEDS DATUM PARTIAL PARTLY DONE TODO PMID DOI UMI CPP NAM HIF NOT ONLY AND THE FOR ATP ROS CNS SRA DNA RNA REST EMBL EBI".split())
+DRUG = re.compile(r"\b[a-z]{2,}(?:prodil|mide|pril|tinib|ciclib|setron|zolam|barbital|oxetine|vastatin|gliptin|parib|olol|dipine|azole|"
+                  r"idone|triptan|caine|profen|gabatrin|zepam|sartan|lukast|mab)\b", re.I)
+METHODS = re.compile(r"\b(patch[- ]clamp|perforated patch|gramicidin|sIPSC|mIPSC|snRNA-?seq|single[- ]nucle\w+|western blot|SPR|DepMap|"
+                     r"electrophysiolog\w+|phosphorylation|knockout|isogenic|organoid|proteomic\w*|crystal structure)\b", re.I)
+
+
+def entities(text: str, n: int = 3) -> tuple[list[str], list[str]]:
+    """(objects, methods) named in one text, in order of first appearance, lower-case, no duplicates."""
+    seen: dict[str, None] = {}
+    for m in ENTITY.finditer(text):
+        if m.group(0) not in NOT_ENTITY and not LOCAL_ID.fullmatch(m.group(0)):
+            seen.setdefault(m.group(0).lower(), None)
+    for m in DRUG.finditer(text):
+        seen.setdefault(m.group(0).lower(), None)
+    methods: dict[str, None] = {}
+    for m in METHODS.finditer(text):
+        methods.setdefault(re.sub(r"\s+", " ", m.group(0).lower().replace("-", " ")).strip(), None)
+    return list(seen)[:n], list(methods)[:1]
+
+
 def build_questions(items: list[dict]) -> tuple[list[dict], int]:
     """Items -> search questions in the shape of THEMES, each with its origin. Returns (questions, skipped)."""
     best: dict[str, dict] = {}
     skipped = 0
     for it in items:
         category, hf, anchor = hook(it["text"])
-        if INTERNAL.search(it["text"]) and not EXTERNAL.search(it["text"]):
+        if INTERNAL.search(it["text"]) and not EXTERNAL.search(it["text"]) and not it.get("external"):
             skipped += 1  # process about our own work: nothing outside can answer it
             continue
         if category == "scientific inputs":
@@ -690,6 +749,14 @@ def build_questions(items: list[dict]) -> tuple[list[dict], int]:
             skipped += 1
             continue
         plain = [t for t in terms if re.fullmatch(r"[a-z]{4,14}", t)]  # no hyphenated or rare tokens in a search string
+        objs, methods = entities(it["text"])
+        if objs and not hf:
+            hf = objs[0]
+        if objs or methods:  # named objects lead; frequency words only fill what the text did not name
+            plain = list(dict.fromkeys(objs + methods + [t for t in plain if t not in GENERIC]))[:3]
+            # a category word ("compound database", "epilepsy") drowned the object; only a lone short acronym keeps a context word
+            if objs:
+                anchor = "neuron" if len(objs) == 1 and len(objs[0]) <= 4 and NEURO.search(it["text"]) else ""
         kw = " ".join(([anchor] if anchor else []) + (plain or terms))
         q = {"id": f"{it['surface']}:{it['lid']}", "category": category or "scientific inputs",
              "gap": it["text"][:140], "decision": it["decision"], "weight": it["weight"], "kw": kw,
@@ -717,7 +784,18 @@ def _extract(path: str, text: str):
         return parse_readme(text, path)
     if path.startswith(f"{MODULE}/diagnosis_it"):
         return parse_diagnosis(text, path), [], []
+    if path.endswith(".tsv"):
+        return parse_reopen_table(text, path), [], []
     return parse_reopen(text, path), [], []
+
+
+def _tables(runner, sha: str) -> list[str]:
+    """Reopen/decision tables of the module at `sha`: one listing call, newest packages first, bounded."""
+    code, out = runner(["ls-tree", "-r", "--name-only", sha, MODULE + "/"])
+    if code != 0:
+        return []
+    names = [p for p in out.split("\n") if TABLE_NAME.search(p)]
+    return sorted(names, key=lambda p: (-int(m.group(1)) if (m := re.search(r"_it(\d+)", p)) else 0, p))[:TABLE_LIMIT]
 
 
 def _latest(runner, sha: str, directory: str, pattern: str):
@@ -752,7 +830,7 @@ def resolve_plan(cached: dict | None, extracts: dict | None, ctx: dict, runner=g
     else:
         reasons.append("no diagnosis_it* directory at this revision")
     inputs, items, reread = {}, [], 0
-    todo = list(paths.items())
+    todo = list(paths.items()) + [("reopen", t) for t in _tables(runner, sha)]
     seen_paths = set()
     while todo:
         kind, path = todo.pop(0)
