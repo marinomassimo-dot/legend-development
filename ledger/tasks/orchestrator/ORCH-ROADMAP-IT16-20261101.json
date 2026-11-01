@@ -1,0 +1,150 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT16-20261101",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Iteration 16 (ten-hour horizon): predictive capability, reusable tools, adaptive radar on three channels, durable guidance and autonomy. Keep LEGEND lean, modular, reversible; removal of complexity counts as growth. Computational capability is not biological plausibility is not therapeutic benefit.",
+ "START_UTC": "2026-11-01T13:30:00Z",
+ "BASELINE": "development/main = local main = 1cda3d2ac952628a1ebb85b62d7fce9c42ff9df6 (fetched 2026-11-01 13:32 UTC); IT15 CI success; one worktree; site unpublished.",
+ "DECISIONS_TAKEN": [],
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": [],
+ "AUTHORISED_QUEUE_20261101C": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P0 baseline: fetch, SHA, CI, worktrees, continuity, radar, IT15 artefacts; diagnosis capability ladder (declared/implemented/executed/measured/missing)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "P1.1 grader: decisive conditions absent -> LIMITED, observation kept, missing field shown; origin wording (document is not one origin); 4 regressions; regenerate affected consumers",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    },
+    {
+     "step": "P1.2 reconcile receipt for PMID 42941930 under fulltext_read_receipt protocol (actual coverage only)",
+     "status": "TODO",
+     "owner": "scientist",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "P2 pick one verifiable predictive task with simple baseline, dev/eval split, shared-origin control, WWOX contribution; or motivated exclusion",
+     "status": "TODO",
+     "owner": "scientist",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "P3 catalogue identity/resilience: ChEMBL reopen condition check, cache of successful responses, truncation/error visibility, README/report search in queue reconciliation, short names",
+     "status": "TODO",
+     "owner": "scientist",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "P4.1 import hygiene (third-party e-mail, relative links) with 2 regressions",
+     "status": "TODO",
+     "owner": "scientist",
+     "evidence": ""
+    },
+    {
+     "step": "P4.2 --help/import safety for reusable tools (vfetch_activities.py first); classify scripts",
+     "status": "TODO",
+     "owner": "scientist",
+     "evidence": ""
+    },
+    {
+     "step": "P4.3 runner distinguishes executed / skipped / expected-but-empty / startup error; regression on temp copy",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "P5.1 durable guidance consolidated in its canonical home, entry points link, Orchestrator and Scientist reach it",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    },
+    {
+     "step": "P5.2 report-verify-next-package handoff proven; checkpoint resume proven; stop on no useful work",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "P6 radar: three channels (GitHub, Hugging Face, Nature), main-revision context, watchlist limits (6 teams/18 repos/3 per team), dedup, decision states, tests, one bounded real run",
+     "status": "TODO",
+     "owner": "scientist",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "P7 dashboard: shareable edition exposure review without bypassing the audit; publication state; update cycle",
+     "status": "TODO",
+     "owner": "scientist",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P8": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "P8 selective science follow-up only if a premise or next experiment can change; else motivated abstention",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P9": {
+   "order": 10,
+   "steps": [
+    {
+     "step": "P9 different-actor verification, frozen battery on exact SHA, safe_push, CI, cleanup, final report",
+     "status": "TODO",
+     "owner": "verifier",
+     "evidence": ""
+    }
+   ]
+  }
+ }
+}
