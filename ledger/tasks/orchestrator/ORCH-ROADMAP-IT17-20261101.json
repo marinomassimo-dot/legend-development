@@ -1,0 +1,105 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT17-20261101",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Iteration 17 (ten-hour horizon): priority-driven radar, corrected evaluation, demonstrated autonomy and use of standing guidance. Lean, modular, reversible. Computational capability is not biological plausibility is not therapeutic benefit.",
+ "START_UTC": "2026-11-01T16:45:00Z",
+ "BASELINE": "development/main = local main = 3e167e250fd60439bf179b9a542011625809d74a (fetched 2026-11-01 16:46 UTC); IT16 CI Public release gate success (created 16:16:43Z, completed 16:44:45Z, run 41325499562); one worktree; site unpublished.",
+ "DECISIONS_TAKEN": [],
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": [],
+ "AUTHORISED_QUEUE_20261101D": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P0.1 CI of IT16 head 3e167e25 acquired; reconcile IT16 record statements (P5.2, P9) by correction note, history kept",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    },
+    {
+     "step": "P0.2 classify first-battery failures of IT16 (derived surfaces drifted after receipt) and check if a small fix to regeneration/dependency map prevents recurrence; no new gate",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "P1.1 cache read-side validation (shared validator, invalid entry = miss, discard observable) + regressions",
+     "status": "TODO",
+     "owner": "scientist",
+     "evidence": ""
+    },
+    {
+     "step": "P1.2 public_extract vs licences/notices: reconcile code, convention, tests; consumers",
+     "status": "TODO",
+     "owner": "scientist",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "P2 radar questions derived from current priority surfaces (diagnosis, roadmap, work order, needs, verified results, open items, reopen conditions); team one-level exploration; proofs 1-5; bounded real run",
+     "status": "TODO",
+     "owner": "scientist",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "P3 prospective evaluation: immutable freeze, outcome semantics (tested != effect), one useful task measured now, IT16 stays descriptive",
+     "status": "TODO",
+     "owner": "scientist",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "P4 dedicated continuity proof: fresh actor applies canonical guidance to a small real package; fresh verifier; orchestrator reconciles and picks next package; checkpoint resume from record",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "P5 science (only decision-changing reads) and dashboard state/preparation for the single reserved act",
+     "status": "TODO",
+     "owner": "scientist",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "P6 independent verification of decisive changes, frozen battery, safe_push, CI acquired autonomously, cleanup, final report",
+     "status": "TODO",
+     "owner": "verifier",
+     "evidence": ""
+    }
+   ]
+  }
+ }
+}
