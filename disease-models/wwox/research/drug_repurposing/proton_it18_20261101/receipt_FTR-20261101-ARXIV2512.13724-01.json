@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261101-ARXIV2512.13724-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {"doi": "10.48550/arXiv.2512.13724"},
+ "event_at": "2026-11-01T22:46:31Z",
+ "analysis_at": "2026-11-01T22:44:00Z",
+ "workflow": "scientist IT18 P-PROTON targeted reading (question-driven: data, graph construction, leakage, splits, BD example, limitations, availability); pdftotext -layout per page with quote-to-page location; staged in the package for the integrator to record",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/ARXIV2512.13724v1_Noori2025_PROTON.pdf",
+ "source_fingerprint": "22fcbbfa715d242b313b00de71e91f148feeb93e711f2e47aed7aa6e16159bd5",
+ "source_kind": "fulltext_local",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/proton_it18_20261101/README.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "PREPRINT (arXiv 2512.13724v1, 2025-12-13), NOT PEER REVIEWED; NOT WWOX EVIDENCE: the paper contains no WWOX or WOREE analysis.",
+  "Sections read in full: Abstract (p1-2); Main introduction (p2-3); Results subsection on forecasting approvals for 17 diseases and the BD calcitriol subsection to the organoid treatment paragraph (p8-11); Discussion including its limitations paragraph (p13-14); Data and Code availability (p16); Methods 1.1 KG definition (p23), 1.2 the 20 original and 16 Open Targets sources with the version statement (p24-29), the closing paragraph of 1.3 (p33), 2.x pre-training split and leakage paragraphs (p37-39), 4.2 disease-centric splits (p47-48), 4.3 BD candidate selection (p48-49). Not read: the PD alpha-synuclein, essentiality-GWAS, pesticide and AD EHR results and methods, the architecture equations, all figures and tables, and the supplementary PDF (scanned for its contents list and Supplementary Table 5 only).",
+  "Locators (page = PDF page, quote located by text search on that page alone): p3 'a knowledge graph contextualized to the adult human brain'; p4 'comprising 3,756,702 cells from the adult human brain'; p23 'connected to each other by an undirected edge of type'; p33 'As NeuroKG is undirected, reverse edges were added to ensure that relationships in NeuroKG were bidirectional.'; p25 'DrugBank pharmaceutical data (version 5.1.10) yielded 2,867,056 synergistic drug-drug interactions and 27,250 drug-protein associations, including carrier, enzyme, target, and transporter relationships.'; p26 'ChEMBL (for both drug-disease and drug-gene edges)'; p29 'the July 2023 versions of all databases were used, with the exception of Open Targets Platform, for which version 23.09 was used'; p37 'To prevent information leakage, for any edge in the batch, its reverse edge was excluded from the MFG.'; p9 'For each disease in the evaluation set, we removed all drug-disease edges involving that disease as well as its related diseases from NeuroKG before training'; p48 'After applying this criterion, 17 neurological diseases remained and constituted the final evaluation set.'; p48 'Proton first performed an in silico screen to rank all 8,160 drugs in NeuroKG by the likelihood of indication for BD.'; p10 'including the three sequential vitamin D metabolites cholecalciferol (#16), alfacalcidol (#102), and calcitriol (#114).'; p13 'Many conditions, particularly rare and understudied diseases, are sparsely represented in datasets, which limits the scope of current predictions.'; p13 'can be sensitive to node degree and may assign higher confidence to well-connected nodes'; p13 'yet predictions may still favor high-degree nodes.'; p16 'NeuroKG is available via Harvard Dataverse at https://doi.org/10.7910/DVN/ZDLS3K.'; p16 'under an open-source MIT license.'; p16 'Model weights are released at https://huggingface.co/mims-harvard/PROTON.'; p15 'the author has applied a CC BY 4.0 public copyright license to this manuscript.'",
+  "Used for: availability and terms rows, graph lineage (DrugBank 5.1.10 and ChEMBL via Open Targets 23.09 feed the drug-gene edges, so LEGEND's ChEMBL catalogue is not an independent source), undirected design, adult-brain atlases, split perimeter (17 named diseases), the BD ranks reproduced locally from the released embeddings, and the degree-bias limitation the authors state.",
+  "Supplementary PDF (sha256 96fb0619a1bb9e3b224599fa2de023ca9475b1f3df7317a18227b6bd3984e336, files/fulltext/ARXIV2512.13724v1_Noori2025_PROTON_SI.pdf, the copy in the code repository at 7d2bae9feeca) not read beyond its contents page and Supplementary Table 5; per-edge-type test AUROC is shown only in Supplementary Figure 7a, which was not opened."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
