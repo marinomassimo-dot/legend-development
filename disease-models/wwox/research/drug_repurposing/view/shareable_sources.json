@@ -386,5 +386,37 @@
         "replace": "(dato di una fonte non inclusa in questa versione)"
       }
     ]
+  },
+  "deepened_cases_shareable": {
+    "policy": "IT16 P7. The deepened cases (ranking_it8_p9_20261029/deepened_cases.json) are exposed in the shareable edition as own text: the biological question, the level, the system, the WWOX evidence, the counter-evidence and the next experiment, with the compound-and-action field replaced by the class label below (written here, not copied from any catalogue). Always withheld: external_precedent and the pharmacology pair (they carry values and wording graded from ChEMBL, CC BY-SA 3.0, and from third-party papers), and the source file paths. A listed override replaces one field when the audit finds a compound name the shareable edition does not carry. The audit still decides: a name outside the carded set fails it. Levels describe the kind of support, never efficacy; a functional measure may be non-specific.",
+    "withheld_fields": [
+      "external_precedent",
+      "pharmacology",
+      "pharmacology_limits",
+      "sources"
+    ],
+    "class_labels": {
+      "DC01": "competitive glutamate-site NMDAR antagonist, used as a tool compound",
+      "DC02": "GluN2B-selective negative allosteric modulators (a class acting at the receptor N-terminal domain): two research tools and one clinical-stage comparator",
+      "DC03": "NMDAR pore (channel) blockers, a class approved in adults for other uses",
+      "DC04": "NMDAR co-agonist or positive-modulator direction, with a GluN2A-selective negative modulator as subunit-assignment control",
+      "DC05": "irreversible GABA-transaminase inactivator (vigabatrin class; see its card)",
+      "DC06": "positive modulators of GABA-A receptors at the high-affinity modulatory site, with two further agents to attribute the subunit",
+      "DC07": "GABA transporter 1 (GAT1) inhibitor, with a research tool",
+      "DC08": "Kv7 (KCNQ) channel opener, reversed by a Kv7 blocker",
+      "DC09": "lithium (see its card), a GSK3-pathway intervention",
+      "DC10": "GSK3 inhibitor classes (ATP-site, non-ATP-competitive, lithium) and an Axin-pathway control that itself needs GSK3"
+    },
+    "overrides": {
+      "DC01": {
+        "wwox_evidence": "Observed: bursts in 36 of 42 knockout slices vanish with the NMDAR antagonist (51 bursts, 5 slices, 3 animals; Breton 2021). Not observed: that the NMDAR current is raised."
+      },
+      "DC02": {
+        "next_experiment": "Measure f with a saturating GluN2B NAM; then titrate the NAM, an equal-current NMDAR antagonist and a low-trapping pore blocker, with a GluN2A NAM and two unrelated GluN2B NAMs as controls."
+      },
+      "DC06": {
+        "question": "Does a positive modulator at the high-affinity GABA-A modulatory site compensate the lost fast GABA-A inhibition during exposure?"
+      }
+    }
   }
 }

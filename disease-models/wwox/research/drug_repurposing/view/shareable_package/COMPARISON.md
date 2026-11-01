@@ -22,6 +22,7 @@ The full version (`view/index.html` in the repository, local use) and this packa
 | Pair objects carrying a status class | 923 | 0 |
 | Excluded rows listed with compound name and gene | 3 | 0 |
 | Card fields that differ (count of cards) | n/a | {"access": 10, "access_text": 7, "actions": 9, "asserts": 2, "brief": 1, "card_path": 39, "country": 5, "for": 2, "identity": 7, "links": 10, "mechanism": 2, "next_full": 2, "novelty": 2, "pharm": 2, "reopen": 1} |
+| Deepened cases (question, level, system, WWOX evidence, counter-evidence, next experiment) | all fields, with compound names | the same own-text fields with a class label instead of compound names; precedent, pharmacology, its limits and source paths withheld (ChEMBL-graded values are CC BY-SA 3.0, third-party text is not copied) |
 
 ## Prose redactions (shareable only)
 
