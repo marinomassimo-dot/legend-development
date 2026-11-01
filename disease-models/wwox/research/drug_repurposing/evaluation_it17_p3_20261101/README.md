@@ -61,3 +61,7 @@ Decision rules as registered: the accuracy lower bound (0.990) exceeds 0.90 on w
 ## 5. Files
 
 `prospective_eval.py`, `test_prospective_eval.py` (14 tests: freeze record, digest refusal, contrary/null/off-objective/unknown handling, origin counted once, pre-freeze exclusion, no write on `--help`), `freeze_20261101/`, `outcomes_it16_recoded.tsv`, `PRE_REGISTRATION_DIRECTION.md`, `direction_task.py`, `test_direction_task.py`, `results_direction.json`, `discordant_pairs.tsv`. ChEMBL-derived (CC BY-SA 3.0) and GtoPdb-derived (CC BY-SA 4.0) labels in `discordant_pairs.tsv` and the results keep those terms; the raw third-party files stay in the gitignored cache.
+
+## Sources and terms
+
+The direction task compares labels derived from ChEMBL (EMBL-EBI, CC BY-SA 3.0, release as recorded in the pre-registration) and the IUPHAR/BPS Guide to PHARMACOLOGY (CC BY-SA 4.0, release 2026.3.1). Only identifiers and coarse direction classes are tracked here; the downloaded third-party files stay in the ignored corpus with their digests. Credit lines for the sources are in `ACKNOWLEDGEMENTS.md`.
