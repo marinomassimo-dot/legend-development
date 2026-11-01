@@ -1,0 +1,86 @@
+step	reason	category	unit	count	note
+S0	origin chembl_parent_added	composition	catalogue record	7	
+S0	origin chembl_selected	composition	catalogue record	19926	
+S0	origin dgidb_only	composition	catalogue record	22557	
+S0	origin matrix_only	composition	catalogue record	502	
+S0	origin openfda_unii_only	composition	catalogue record	1219	
+S0	source chembl (ChEMBL_37 2026-05-01): fetch OK, complete_and_coherent True	source_state	source	1	
+S0	source dgidb (latest as served; Last-Modified Mon, 10 Jun 2024 16:04:52 GMT): fetch OK, complete_and_coherent True	source_state	source	1	
+S0	source dsld (API v9.4.0): fetch OK, complete_and_coherent True	source_state	source	1	
+S0	source gtopdb (GtoPdb Version: 2026.3.1 - published: 2026-10-12): fetch OK, complete_and_coherent True	source_state	source	1	
+S0	source matrix (HF commit dc75f85084baf6f014bb8242cacf14e2b301715d): fetch OK, complete_and_coherent True	source_state	source	1	
+S0	source openfda_ndc (export_date 2026-10-27): fetch OK, complete_and_coherent True	source_state	source	1	
+S0	source unichem (Last-Modified src1src14.txt.gz=Sat, 24 Oct 2026 21:16:36 GMT; src1src2.txt.gz=Sat, 24 Oct 2026 21:16:01 GMT; src1src7.txt.gz=Sat, 24 Oct 2026 21:16:11 GMT): fetch OK, complete_and_coherent True	source_state	source	1	
+S0	DGIdb rows come from the export of 2024-06-10 (ChEMBL 33 claims) beside ChEMBL_37: newer DGIdb content not queried	incomplete_query	source	1	catalog_stats.json dgidb_age
+S0	DSLD bulk supplement probe interrupted: planned names not probed (access field only, no effect on S1-S4)	incomplete_query	name string	3726	probe errors 0
+S1	source-only records joined to a ChEMBL family by the GtoPdb ligand chain (counted inside S1)	reconciled	catalogue record	485	
+S1	identity unresolved: source-only dgidb_only record, no identifier or structure tying it to a ChEMBL record	missing_data	family	22072	
+S1	identity unresolved: source-only matrix_only record, no identifier or structure tying it to a ChEMBL record	missing_data	family	502	
+S1	identity unresolved: source-only openfda_unii_only record, no identifier or structure tying it to a ChEMBL record	missing_data	family	1219	
+S1	of the unresolved: name equals a ChEMBL name or synonym (possible duplicate, never merged on name)	missing_data	family	8701	the same drug can therefore sit in S1 and among these; S1 plus unresolved is an upper bound of distinct compounds
+S1	GtoPdb ligand reconciliation merged: full_inchikey_equal	reconciled	record-ligand pair	485	ligand_reconciliation.tsv
+S1	GtoPdb ligand reconciliation out_of_selection: chembl_id_active_but_not_in_catalogue_selection	no_result	record-ligand pair	2472	ligand_reconciliation.tsv
+S1	GtoPdb ligand reconciliation rejected_conflict: inchikey_connectivity_differs	abstention_rule	record-ligand pair	4	ligand_reconciliation.tsv
+S1	GtoPdb ligand reconciliation related_not_merged: labelled_or_radioactive_form_of_the_ligand	abstention_rule	record-ligand pair	7	ligand_reconciliation.tsv
+S1	GtoPdb ligand reconciliation related_not_merged: ligand_structure_is_the_parent_form_but_chembl_ref_is_a_salt_or_derived_form	abstention_rule	record-ligand pair	1	ligand_reconciliation.tsv
+S1	GtoPdb ligand reconciliation related_not_merged: stereo_or_isotopes_undefined_in_gtopdb_defined_in_chembl	abstention_rule	record-ligand pair	3	ligand_reconciliation.tsv
+S1	GtoPdb ligand reconciliation related_not_merged: stereoisomers_or_isotopologues_differ	abstention_rule	record-ligand pair	3	ligand_reconciliation.tsv
+S1	GtoPdb ligand reconciliation unresolved: chembl_id_is_not_a_compound_record	missing_data	record-ligand pair	1	ligand_reconciliation.tsv
+S1	GtoPdb ligand reconciliation unresolved: chembl_id_obsolete_or_inactive	missing_data	record-ligand pair	44	ligand_reconciliation.tsv
+S1	GtoPdb ligand reconciliation unresolved: chembl_id_unknown_to_chembl_lookup	no_result	record-ligand pair	1	ligand_reconciliation.tsv
+S1	GtoPdb ligand reconciliation unresolved: drugbank_ids_disjoint_between_dgidb_and_chembl_unichem	missing_data	record-ligand pair	1	ligand_reconciliation.tsv
+S1	GtoPdb ligand reconciliation unresolved: ligand_id_absent_from_gtopdb_release	no_result	record-ligand pair	2	ligand_reconciliation.tsv
+S1	GtoPdb ligand reconciliation unresolved: structure_unavailable_both_sides	missing_data	record-ligand pair	4	ligand_reconciliation.tsv
+S1	GtoPdb ligand reconciliation unresolved: structure_unavailable_chembl_side	missing_data	record-ligand pair	1	ligand_reconciliation.tsv
+S1	GtoPdb ligand reconciliation unresolved: structure_unavailable_gtopdb_side	missing_data	record-ligand pair	1	ligand_reconciliation.tsv
+S2	no target row from any source	missing_data	family	10371	
+S2	target rows only from DGIdb (no ChEMBL curated mechanism)	missing_data	family	561	
+S2	ChEMBL mechanism only on non-human targets	out_of_scope	family	1223	
+S2	human ChEMBL mechanism excluded by a source rule: source_artefact: ChEMBL action AGONIST on CHEMBL1723 is contradicted by the reference the mechanism cites	abstention_rule	family	1	
+S2	human ChEMBL mechanism without a determinate direction: BINDING AGENT	abstention_rule	family	169	
+S2	human ChEMBL mechanism without a determinate direction: MODULATOR	abstention_rule	family	83	
+S2	human ChEMBL mechanism without a determinate direction: HYDROLYTIC ENZYME	abstention_rule	family	54	
+S2	human ChEMBL mechanism without a determinate direction: EXOGENOUS PROTEIN	abstention_rule	family	44	
+S2	human ChEMBL mechanism without a determinate direction: PARTIAL AGONIST	abstention_rule	family	36	
+S2	human ChEMBL mechanism without a determinate direction: OTHER	abstention_rule	family	35	
+S2	human ChEMBL mechanism without a determinate direction: CROSS-LINKING AGENT	abstention_rule	family	30	
+S2	human ChEMBL mechanism without a determinate direction: DISRUPTING AGENT	abstention_rule	family	21	
+S2	human ChEMBL mechanism without a determinate direction: SEQUESTERING AGENT	abstention_rule	family	20	
+S2	human ChEMBL mechanism without a determinate direction: STABILISER	abstention_rule	family	19	
+S2	human ChEMBL mechanism without a determinate direction: EXOGENOUS GENE	abstention_rule	family	14	
+S2	human ChEMBL mechanism without a determinate direction: VACCINE ANTIGEN	abstention_rule	family	12	
+S2	human ChEMBL mechanism without a determinate direction: PROTEOLYTIC ENZYME	abstention_rule	family	7	
+S2	human ChEMBL mechanism without a determinate direction: SUBSTRATE	abstention_rule	family	7	
+S2	human ChEMBL mechanism without a determinate direction: DEGRADER	abstention_rule	family	6	
+S2	human ChEMBL mechanism without a determinate direction: OXIDATIVE ENZYME	abstention_rule	family	3	
+S2	human ChEMBL mechanism without a determinate direction: RELEASING AGENT	abstention_rule	family	2	
+S2	human ChEMBL mechanism without a determinate direction: REDUCING AGENT	abstention_rule	family	1	
+S2	provenance: S2 families that also carry a signed GtoPdb row (a second curator; shares literature with ChEMBL)	provenance	family	188	
+S2	provenance: S2 families whose direction rests on ChEMBL alone (no signed GtoPdb row)	provenance	family	3568	
+S2	provenance: S2 families that also carry DGIdb rows whose claim source is ChEMBL (v33): a copy of the same curation, not a second vote	provenance	family	695	
+S2	families outside S1 (identity unresolved) that the wider M-net rule would use: not counted, identity first	abstention_rule	family	9341	
+S3	evaluated families in total (any stage), the union of the two consumers	composition	family	30	
+S3	evaluated families that are ranking-unit members	composition	family	25	
+S3	evaluated families that are card-linked	composition	family	28	
+S3	evaluated but identity unresolved (source-only family)	missing_data	family	0	
+S3	evaluated, identity resolved, but not usable by the matching method	abstention_rule	family	9	ATALUREN:no determinate direction; CPP-115 FREE BASE:target rows only from DGIdb (no ChEMBL curated mechanism); FAM:CAT:CHEMBL3407862:no target row from any source; LITHIUM:no target row from any source; MAGNESIUM:no target row from any source; PHENYLBUTANOIC ACID:no determinate direction; PX-478:no target row from any source; SELFOTEL:no target row from any source; STIRIPENTOL:ChEMBL mechanism only on non-human targets
+S3	unit member that is a tool compound or precedent kept outside the catalogue by design (INT: id)	out_of_scope	unit member id	7	INT:E02_ldh_inhibition:tool; INT:E03_pdk_inhibition_dca:tool; INT:EB-ETX-01:tool; INT:F01_glutamate_receptor_node:tool; INT:H01_apinocaltamide_ttype:tool; INT:L01_nrf2_axis:tool; INT:M01_neurogenic_output_myc_window:tool
+S3	family id cited by a consumer but absent from the current catalogue	error	family	0	
+S3	ranking unit with no catalogue identity, kind axis_not_an_intervention	out_of_scope	ranking unit	3	class, axis, modality, diet or tool not in the catalogue: no compound to count
+S3	ranking unit with no catalogue identity, kind diet	out_of_scope	ranking unit	1	class, axis, modality, diet or tool not in the catalogue: no compound to count
+S3	ranking unit with no catalogue identity, kind drug_class	out_of_scope	ranking unit	2	class, axis, modality, diet or tool not in the catalogue: no compound to count
+S3	ranking unit with no catalogue identity, kind experimental_compound	out_of_scope	ranking unit	1	class, axis, modality, diet or tool not in the catalogue: no compound to count
+S3	ranking unit with no catalogue identity, kind it9_proposal	out_of_scope	ranking unit	36	class, axis, modality, diet or tool not in the catalogue: no compound to count
+S3	ranking unit with no catalogue identity, kind mechanism_class	out_of_scope	ranking unit	7	class, axis, modality, diet or tool not in the catalogue: no compound to count
+S3	ranking unit with no catalogue identity, kind modality_gene_addition	out_of_scope	ranking unit	1	class, axis, modality, diet or tool not in the catalogue: no compound to count
+S3	ranking unit with no catalogue identity, kind modality_gene_regulation	out_of_scope	ranking unit	1	class, axis, modality, diet or tool not in the catalogue: no compound to count
+S3	ranking unit with no catalogue identity, kind modality_oligonucleotide	out_of_scope	ranking unit	1	class, axis, modality, diet or tool not in the catalogue: no compound to count
+S3	ranking unit with no catalogue identity, kind single_compound_class_level	out_of_scope	ranking unit	1	class, axis, modality, diet or tool not in the catalogue: no compound to count
+S4	unit-need pairs whose need direction is uncertain	abstention_rule	unit-need pair	25	
+S4	direction determinate, L2 never coherent/opposed: direction_unresolved	abstention_rule	unit-need pair	2	
+S4	direction determinate, L2 never coherent/opposed: no catalogue family in the cell	missing_data	unit-need pair	2	
+S4	direction determinate, L2 never coherent/opposed: none	abstention_rule	unit-need pair	7	
+S4	direction determinate, L2 never coherent/opposed: not_evaluable	abstention_rule	unit-need pair	11	
+S4m	needs with a determinate direction	composition	need	10	of 23
+S4m	family-need pairs on a determinate-direction need	composition	family-need pair	121	
+S4m	of the comparable pairs, family also in S2	composition	family-need pair	35	
