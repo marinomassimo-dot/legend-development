@@ -8619,3 +8619,12 @@ unread reference supports any statement. **Nothing here is evidence.** Whoever n
 **Next action:** read only if a question needs it (for FT-206: when the proteasome versus lysosome route of WWOX turnover is tested).
 
 ---
+
+## FT-207
+**Paper:** PMID 42941930 — Li and Baykal 2026, positional 13C-NMR of SH-SY5Y cells after five respiratory-chain inhibitors (Int J Mol Sci 27(20):9160, CC BY; not a WWOX study)
+**Priority:** LOW
+**Why:** radar signal of IT15 P4, closed as an external methodological precedent (assay design for PDH-route versus PC-route glucose entry); its full text had been read at triage without a receipt, and the reading was reconciled in IT16 P1.2. Recorded here so the complete read has a structured landing, not as a paper promotion: no PAPER record, claim or commit candidate follows from it.
+**Current status:** ✅ complete read — receipt `FTR-20261101-42941930-01` (2026-11-01, task IT16 P1.2); work manifest `deepdive_manifests/PMID42941930.json`; package `drug_repurposing/radar_p4_it15_20261101/README.md` section 8.
+**Next action:** none; reopen only if a WWOX-deficient neural culture isotope-tracing design is drafted and needs the assay precedent.
+
+---

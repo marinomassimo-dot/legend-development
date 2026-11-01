@@ -4,7 +4,7 @@ Scientist package P4, task IT15, 2026-11-01 (Europe/Rome). Research layer, explo
 
 ## 1. Verdict in one paragraph
 
-PMID 42941930 is a genuine, open-access (CC BY), peer-reviewed paper, but an SH-SY5Y respiratory-inhibitor study; it is NOT a WWOX model and not WWOX evidence by analogy. It adds no datum to any open WWOX question. Its only reusable element is an assay-design precedent (positional 13C-glucose NMR plus PC/PDH capacity assays on the same extracts). CLOSED as "context only, no decision change". No full-text receipt prepared (no decision rests on it). Strand B: no documented reopen condition has changed on a public-data basis today; motivated exclusion (section 5).
+PMID 42941930 is a genuine, open-access (CC BY), peer-reviewed paper, but an SH-SY5Y respiratory-inhibitor study; it is NOT a WWOX model and not WWOX evidence by analogy. It adds no datum to any open WWOX question. Its only reusable element is an assay-design precedent (positional 13C-glucose NMR plus PC/PDH capacity assays on the same extracts). CLOSED as "context only, no decision change". The read receipt was reconciled on 2026-11-01 (IT16 P1.2, section 8): event `FTR-20261101-42941930-01`, `complete_fulltext_read`; the label below stays a scientific classification and the paper is not promoted. Strand B: no documented reopen condition has changed on a public-data basis today; motivated exclusion (section 5).
 
 ## 2. Identity (PubMed via the PubMed tool; Europe PMC REST core record)
 
@@ -23,7 +23,7 @@ The radar flagged it only because a search for a PDH-specific measure matched "p
 
 * Europe PMC: `isOpenAccess=Y`, `license=cc by`, `inEPMC=Y`; the XML front matter states "Creative Commons Attribution (CC BY) license", copyright 2026 by the authors, MDPI (full-text XML, fetched key-less from Europe PMC REST, locator: article-meta licence block). Reuse with attribution is allowed.
 * Data availability (XML section "Data Availability Statement", verbatim): "The per-replicate 13C integral table underlying Table 1, Figure 2 and Supplementary Table S1, together with the analysis script that reproduces the ANOVA, Dunnett contrasts, effect sizes, principal component analysis and PERMANOVA reported here, are provided as Supplementary Data. Raw NMR free induction decays are available from the corresponding author on reasonable request. No other datasets were generated or analysed." No repository accession (no MetaboLights/Metabolomics Workbench deposit); raw FIDs only on request (not requested: contact barred).
-* Supplementary file sizes: NOT verified. The publisher URL (mdpi.com `/s1`) returned HTTP 403; the Europe PMC `supplementaryFiles` endpoint returned a truncated or non-zip stream within the time limits in two attempts (528,384 and 53,248 bytes, neither a valid zip). Nothing was added to the shared corpus.
+* Supplementary files: at IT15 P4 time NOT verified. The publisher URL (mdpi.com `/s1`) returned HTTP 403; the Europe PMC `supplementaryFiles` endpoint returned a truncated or non-zip stream within the time limits in two attempts (528,384 and 53,248 bytes, neither a valid zip). On 2026-11-01 (IT16 P1.2) a third attempt returned a valid 580,531-byte zip (five figure images and a 3-page supplementary PDF with Tables S1 and S2; section 8). The per-replicate integral table and the analysis script named in the Data Availability Statement are still not in that package.
 * Funding: "received no external funding"; conflicts: none declared.
 
 ## 4. What it measures (from the open full text; all numbers from the PubMed abstract unless a section is named)
@@ -55,6 +55,24 @@ Decision (strand B): NO trigger is reopened. This is a motivated exclusion, not 
 
 ## 7. For the integrator
 
-* No receipt JSON prepared: the full text is open and was read for this triage, but no module decision depends on it; recording a read would add a countable PAPER with no decision behind it. If the integrator wants it on file, it is a "triage read, not a reading of record".
+* Receipt: the IT15 P4 triage read the open full text and persisted no receipt, so the ledger held no event for the PMID (`fulltext_receipts.py status --pmid 42941930`). That is a reading-trace gap, not a coverage claim: the triage left no coverage map, no locators and no artefact fingerprint, so it is not reconstructed. The receipt was written in IT16 P1.2 from a fresh reading (section 8). A receipt attests reading only; it creates no PAPER record, claim or promotion, and none was prepared.
 * Triggers: no change. Optional: add a row to the radar disposition (PMID 42941930: CLOSED, context only) and a note on the `pdh-assay` radar theme that an Europe PMC hit on "pyruvate dehydrogenase" finds non-WWOX metabolic papers.
-* Could not verify: supplementary file sizes and content; preprint relation beyond the Europe PMC record; whether any SRA read data exist beyond the `hup` status; raw FIDs.
+* Could not verify: the per-replicate integral table and analysis script (not in the Europe PMC package); preprint relation beyond the Europe PMC record; whether any SRA read data exist beyond the `hup` status; raw FIDs.
+
+## 8. Read receipt reconciliation (IT16 P1.2, 2026-11-01)
+
+Three things are kept apart here. Receipt of reading: `FTR-20261101-42941930-01`, `complete_fulltext_read`, `first_read` (no earlier ledger event existed, so no `prior_receipt`), `QUESTION_DRIVEN` because the reader held this package's verdict. Scientific classification: unchanged, "external methodological precedent, not WWOX". Promotion: none and not wanted (no PAPER record, claim or commit candidate).
+
+What the IT15 P4 triage actually showed it had read (from this README and `signal_triage.tsv`): the abstract, the Methods subsections 4.2 to 4.8, Table 2 and Section 3.11, the Data Availability Statement and licence block, the identity record. What is not evidenced: the figures (no figure value is cited as read from an image), the supplement (never opened), the reference list, any locator, any artefact digest. The receipt therefore could not be written from the triage, and it was not reconstructed from it.
+
+Why a fresh reading: first contact with the text under the protocol's own rule (no receipt, coverage inadequate to prove a read, and a supplement that had failed twice now retrievable). Source: Europe PMC `fullTextXML` and `supplementaryFiles` for PMC13705396, key-less, no e-mail parameter, CC BY; copies under `files/fulltext/PMID42941930_*` (gitignored, digests in the manifest).
+
+Coverage read on 2026-11-01: abstract, introduction, Methods 4.1 to 4.8, Results 2.1 to 2.4, Discussion 3.1 to 3.11 (limitations are 3.11), Conclusions, Tables 1 to 5 (as XML text), all 77 references, Figures 1 to 5 opened as images, supplementary PDF Tables S1 and S2. Not available: the per-replicate integral table and analysis script (not in the package), raw FIDs (on request only, not requested). Work manifest with 19 verbatim locators (17 text, supplement and table, 2 figure): `disease-models/wwox/research/deepdive_manifests/PMID42941930.json`.
+
+Findings of the reading that correct or qualify section 4 above (hypothesis-grade, for the file, not for promotion):
+
+* Figure 4C,D as drawn, read off the axes (approximate): PDH capacity bars are significantly below control only for azide (about 65 percent) and oligomycin (about 65 percent); PC capacity bars are above control in all five exposures (MPTP about 147, 3-NP about 131, antimycin A about 120, azide about 111, oligomycin about 133). The text and abstract give about 138 percent PC and about 60 percent PDH for oligomycin. So the PC-capacity rise is not specific to oligomycin and the "two independent classes of measurement" argument rests on the glutamate C3 and the PDH fall, not on a PC-capacity contrast between conditions. Section 4 quoted the text figures; read them with this correction.
+* Figure 2A prints succinate as detected under antimycin A and oligomycin as well (1.0x, 0.9x), not only under 3-NP (28.0x); consistent with Table 1 "trace 3/3".
+* Reference 77 carries a stated Correction (Mol. Neurobiol. 2024, 61, 6453); it is a correction, not a retraction, and is cited only for concordance of bioenergetic endpoints. The Retraction Watch screen (snapshot 2026-10-21) of the 77-reference list was clean (74 with DOI screened, 3 without DOI unscreenable).
+
+No exception and no new gate were used; the receipt passed the writer's own validators, including strict manifest verification.
