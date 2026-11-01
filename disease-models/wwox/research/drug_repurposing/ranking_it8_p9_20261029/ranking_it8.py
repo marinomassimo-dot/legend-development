@@ -413,7 +413,21 @@ def component_wwox(u: dict) -> dict:
             state += "; L4 technical comparison (opposes the disease change, not efficacy): " + ", ".join(f"{k} in {v} cell(s)" for k, v in sorted(l4n.items()))
     return {"wwox_assertions": len(wr), "signs": dict(sorted(signs.items())), "wild_type_only_assertions": wt_only, "favourable_distinct_pmids": fav_pm,
             "read_beyond_abstract": depth_known, "l4_states": dict(sorted(l4.items())), "text": state,
-            "replication": ("none recorded: one source paper" if len(fav_pm) <= 1 else f"{len(fav_pm)} papers; independence of the groups is not established by this table (shared authors are not excluded)") if wr else "not applicable (no result)"}
+            "replication": replication_text(wr, fav_pm)}
+
+
+def replication_text(wr: list, fav_pm: list) -> str:
+    """Replication of the favourable WWOX-system results, counted by distinct source PMID (one origin counts once).
+    Zero resolved PMIDs is not one paper (IT18 P5): the count is then not computable from the assertions."""
+    if not wr:
+        return "not applicable (no result)"
+    if not any(r["sign"] in ("benefit", "partial_benefit") for r in wr):
+        return "not applicable (no favourable result)"
+    if not fav_pm:
+        return "not computable: no source PMID in the assertions"
+    if len(fav_pm) == 1:
+        return "none recorded: one source paper"
+    return f"{len(fav_pm)} papers; independence of the groups is not established by this table (shared authors are not excluded)"
 
 
 def component_mechanism(u: dict) -> dict:

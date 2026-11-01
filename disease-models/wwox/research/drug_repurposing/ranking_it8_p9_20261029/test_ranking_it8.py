@@ -114,6 +114,29 @@ class SyntheticRule(unittest.TestCase):
         self.assertNotEqual(k("Ketamine"), k("Esketamine"))     # stereoisomers are pharmacologically different and are not merged by this display key
 
 
+class ReplicationText(unittest.TestCase):
+    """IT18 P5: zero resolved source PMIDs is 'not computable', never 'one source paper'; one origin counts once."""
+
+    def test_zero_one_two_pmids(self):
+        fav = [{"sign": "benefit"}, {"sign": "null"}]
+        self.assertEqual(rk.replication_text(fav, []), "not computable: no source PMID in the assertions")
+        self.assertEqual(rk.replication_text(fav, ["30361190"]), "none recorded: one source paper")
+        self.assertTrue(rk.replication_text(fav, ["30361190", "37583270"]).startswith("2 papers"))
+        self.assertEqual(rk.replication_text([{"sign": "null"}], []), "not applicable (no favourable result)")
+        self.assertEqual(rk.replication_text([], []), "not applicable (no result)")
+
+    def test_real_units_after_source_resolution(self):
+        units = {r["unit_id"]: r for r in csv.DictReader(io.StringIO((HERE / "units.tsv").read_text(encoding="utf-8")), delimiter="\t")}
+        self.assertIn("replication: 2 papers", units["U20"]["W_wwox_evidence"])          # Shaukat + Nagarajan; Shaukat's two children count once
+        self.assertIn("replication: none recorded: one source paper", units["U10"]["W_wwox_evidence"])
+        me = {(r["unit_id"], r["member"]): r for r in csv.DictReader(io.StringIO((HERE / "member_evidence.tsv").read_text(encoding="utf-8")), delimiter="\t")}
+        self.assertEqual(me[("U10", "A51, a multi-kinase inhibitor (experimental)")]["source_pmids"], "42397075")
+        self.assertIn("30361190", me[("U20", "Vigabatrin")]["source_pmids"])
+        packet = json.loads((HERE.parent / "cards_early/EB-VGB-01.packet.json").read_text(encoding="utf-8"))
+        a11 = next(a for a in packet["drug_assertions"] if a["id"] == "A-VGB-11")
+        self.assertIn("NOT LOCATED", a11["note"])                                       # Chong 2023 caveat stays visible
+
+
 class NextPriorityRule(unittest.TestCase):
     def va(self, lead, group, question="a named discriminating step", kind="verificare un'ipotesi", feas="Animal work; access not known"):
         return {"lead": lead, "group": group, "next": {"question": question, "kind": kind, "feasibility": feas}}
