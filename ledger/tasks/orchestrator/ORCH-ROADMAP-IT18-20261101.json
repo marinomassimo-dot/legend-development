@@ -1,0 +1,96 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT18-20261101",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Iteration 18: from catalogue to capability - contextual matching compared with target-only search, radar driven by real reopen conditions, one capability trial, consumers regenerated, applied continuity. Computational capability is not biological benefit.",
+ "START_UTC": "2026-11-01T20:50:00Z",
+ "BASELINE": "development/main = local main = 82e795d4f8e7 (fetched 2026-11-01 20:50 UTC); CI of 82e795d4 and 10a3d746 success; one worktree; IT17 COMPLETE.",
+ "DECISIONS_TAKEN": [],
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": [],
+ "AUTHORISED_QUEUE_20261101E": {
+  "MANDATE_STATE": "ACTIVE",
+  "OBJ_P0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P0 diagnosis and three questions (diagnosis_it18_20261101); P4 pre-registration written before any label",
+     "status": "DONE",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "P1 reopen tables reach the radar; object-named queries compared blind on 10 declared questions",
+     "status": "DONE",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "P2 catalogue funnel, six discordances, vigabatrin references",
+     "status": "IN_PROGRESS",
+     "owner": "scientist"
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "P3 one capability trial vs current path",
+     "status": "IN_PROGRESS",
+     "owner": "scientist"
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "P4 matching comparison T/X/L, contrast cases, emergent-hypothesis check; independent verifier",
+     "status": "IN_PROGRESS",
+     "owner": "scientist"
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "P5 outcomes into cards/needs/queue/view by regeneration",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "P6 applied continuity: fresh actor package, verifier, follow-up on a module gap; hourly monitor on real state; radar 05:20 UTC observation",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "P7 freshness check, battery on frozen SHA, safe_push, CI to verdict, cleanup, final report",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}
