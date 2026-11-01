@@ -2,6 +2,8 @@
 
 Non-canonical research material; not medical advice; computational, no benefit claim. Design: `PRE_REGISTRATION.md` (written before the run). Tool: `predictive_it16_p2.py report|evaluate` (offline; numbers in `results_report.json`, input SHA-256 inside). Dated outcomes: `outcomes_it16.tsv` (7 rows, PubMed publication dates).
 
+> **IT17 P3 status note (2026-11-01): this IT16 analysis is a DESCRIPTIVE result, not a prospective test.** The pre-registration above is unchanged. Two defects of the scorer were verified: (a) it reads the live ranking tables, not an immutable snapshot (the 2026-10-29 commit held 30 units, rules R1 and no `member_evidence.tsv`; only the order of the 8 selected units is exact, the 69-unit pool, B1/B2 and tested flags are later); (b) it counts any published perturbation as a hit without separating result (favourable, null, contrary, undeterminable), endpoint and direction. Freeze, outcome semantics and a measured task: `../evaluation_it17_p3_20261101/README.md`.
+
 ## Result (denominators stated)
 
 | Measure | Value |

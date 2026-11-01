@@ -1,0 +1,100 @@
+{
+ "card_linked_compounds_in_catalogue": 28,
+ "card_linked_descriptive": {
+  "B0_acc": 1.0,
+  "B0_ci95": [
+   0.7412,
+   1.0
+  ],
+  "B0_correct": 11,
+  "B0_majority_label": "DECREASE",
+  "B1_acc": 1.0,
+  "B1_ci95": [
+   0.7412,
+   1.0
+  ],
+  "B1_per_target_correct": 11,
+  "B1_right_module_wrong": 0,
+  "discordant_module_vs_gtopdb": 0,
+  "module_acc": 1.0,
+  "module_ci95": [
+   0.7412,
+   1.0
+  ],
+  "module_correct": 11,
+  "module_right_B1_wrong": 0,
+  "n_determinate": 11,
+  "paired_sign_p_module_vs_B1": 1.0
+ },
+ "card_linked_discordant": [],
+ "card_linked_pairs_with_counterpart_determinate_dev_plus_eval": 11,
+ "catalog_sha256": "75652786013b931d2482ae40b2b563a02ef3e05eff43832722cc002e3ccf72fb",
+ "dev_module_pairs": 5924,
+ "eval_determinate_all": {
+  "B0_acc": 0.7624,
+  "B0_ci95": [
+   0.734,
+   0.7887
+  ],
+  "B0_correct": 706,
+  "B0_majority_label": "DECREASE",
+  "B1_acc": 0.8661,
+  "B1_ci95": [
+   0.8426,
+   0.8865
+  ],
+  "B1_per_target_correct": 802,
+  "B1_right_module_wrong": 3,
+  "discordant_module_vs_gtopdb": 3,
+  "module_acc": 0.9968,
+  "module_ci95": [
+   0.9905,
+   0.9989
+  ],
+  "module_correct": 923,
+  "module_right_B1_wrong": 124,
+  "n_determinate": 926,
+  "paired_sign_p_module_vs_B1": 0.0
+ },
+ "eval_determinate_independent_reference_only": {
+  "B0_acc": 0.7422,
+  "B0_ci95": [
+   0.7101,
+   0.7719
+  ],
+  "B0_correct": 570,
+  "B0_majority_label": "DECREASE",
+  "B1_acc": 0.8581,
+  "B1_ci95": [
+   0.8316,
+   0.881
+  ],
+  "B1_per_target_correct": 659,
+  "B1_right_module_wrong": 3,
+  "discordant_module_vs_gtopdb": 3,
+  "module_acc": 0.9961,
+  "module_ci95": [
+   0.9886,
+   0.9987
+  ],
+  "module_correct": 765,
+  "module_right_B1_wrong": 109,
+  "n_determinate": 768,
+  "paired_sign_p_module_vs_B1": 0.0
+ },
+ "eval_module_pairs": 5993,
+ "eval_shared_reference_pairs": 158,
+ "eval_unresolved_by_reason": {
+  "gtopdb_conflict": 2,
+  "gtopdb_no_direction": 32,
+  "module_conflict": 0,
+  "module_no_direction": 32,
+  "no_gtopdb_counterpart": 5001
+ },
+ "gtopdb_files_sha256": {
+  "interactions.csv": "cdbd18c66cf99d1adba9a60c807e256204221ff74756b70344822fd6642b244b",
+  "ligands.csv": "f8e9f6959d563e49ccc2fb65652c17c3d93e345997e26f99a1a7924361d6d8b7"
+ },
+ "module_pairs_total": 11917,
+ "script_sha256": "e814abbfc91274439e361393e1babc167e5f32ae776594dfed61eaa638c02c46"
+}

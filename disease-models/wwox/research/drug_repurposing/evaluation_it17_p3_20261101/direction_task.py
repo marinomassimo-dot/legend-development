@@ -241,7 +241,7 @@ def main(argv=None):
     det_dev, _ = classify(dev)
     det, unres = classify(ev)
     links = json.loads(Path(a.card_links).read_text(encoding="utf-8"))
-    card_chembl = {l["chembl_id"] for c in links["cards"].values() for l in c.get("links", [])}
+    card_chembl = {(l.get("chembl_id") or l.get("catalogue_id", "").replace("CAT:", "")) for c in links["cards"].values() for l in c.get("links", [])} - {""}
     card_parents = {pmap.get(c, c) for c in card_chembl}
     res = {"script_sha256": sha256(__file__), "catalog_sha256": sha256(a.catalog),
            "gtopdb_files_sha256": {f: sha256(Path(a.gtopdb_dir) / f) for f in ("interactions.csv", "ligands.csv")},

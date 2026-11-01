@@ -35,3 +35,6 @@ On EVAL determinate pairs: accuracy of module, B0, B1 with Wilson 95% interval; 
 
 ## Lock before evaluation
 Locked 2026-11-01 before the EVAL command: `direction_task.py` sha256 09b2ab6ac74900ac029bed3b399bc0189ed45dcaa8ab9462f38a8cd8f80753fe (after amendment 1); this file and the script are committed on the task branch before EVAL is run, and `results_direction.json` records the script and input digests actually used. Any later change to the script or the mapping invalidates the EVAL result and must be reported as a new, separate analysis.
+
+## Post-lock note (2026-11-01)
+The first EVAL command stopped on a parsing error in the card-link subset only (some `card_links.json` link entries carry `catalogue_id` and no `chembl_id`) before printing or writing anything. The parser line was fixed (use `catalogue_id` when `chembl_id` is absent); the mapping tables, split, baselines and metric code were not touched. The executed script therefore has sha256 e814abbfc91274439e361393e1babc167e5f32ae776594dfed61eaa638c02c46 (recorded in `results_direction.json`), not the locked digest above; the difference is that one line.
