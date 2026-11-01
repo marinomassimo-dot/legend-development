@@ -1,0 +1,8 @@
+unit_id	intervention	pmid	pub_date	system	kind_of_result	note
+U24	Lithium	32000863	2020-01-30	Wwox knockout mouse, PTZ seizure, preweaning	controlled perturbation	same paper as U17
+U17	Ethosuximide	32000863	2020-01-30	Wwox knockout mouse, PTZ seizure, preweaning	controlled perturbation	same paper as U24
+U21	d-APV	34634460	2021-10-09	neuron-deleted Wwox mouse neocortical slices	controlled perturbation	tool compound
+U15	Ketogenic diet	35573960	2022-04-29	single patient report	case report	paper is a diagnosis report; the diet outcome is incidental
+U20	Vigabatrin	41442931	2025-12-06	two children with WWOX-DEE	case report	adverse MRI finding, not a controlled perturbation; PMID taken from card H02, member_evidence cites none
+U07	AAV9-hSynI-WWOX	42422765	2026-06-18	severe-null mouse	controlled perturbation	gene addition, not a small molecule
+U10	A51	42397075	2026-07-03	WWOX-deficient organoid	controlled perturbation	paper attributed by the card family (DL-THER-089); presence of the A51 arm in that paper not re-verified here

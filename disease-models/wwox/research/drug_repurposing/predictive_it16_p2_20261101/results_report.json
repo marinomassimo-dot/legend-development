@@ -1,0 +1,100 @@
+{
+ "inputs_sha256": {
+  "member_evidence.tsv": "063efa4c2ce122fa6833d9ed5fbcdb88315acd77b6875c5a6c80c244d4ca7d75",
+  "selections.tsv": "3b75e54e9c53762294eadbc6b5df8e3579709609852f41f7af7ac8cf5d2bd8c5",
+  "units.tsv": "7fc048c5c74202e72be8107f6246a324fc0b407a32efa3e90cde1908a1102785"
+ },
+ "m1_b1_not_in_module": [
+  [
+   "U01",
+   "4-phenylbutyrate and bile-acid chemical chaperones (class)"
+  ]
+ ],
+ "m1_b1_ties_at_cut": 62,
+ "m1_b1_top": [
+  "U07",
+  "U20",
+  "U10",
+  "U15",
+  "U17",
+  "U21",
+  "U24",
+  "U01"
+ ],
+ "m1_b2_top": [
+  "U21",
+  "U14",
+  "U20",
+  "U01",
+  "U02",
+  "U63",
+  "U13",
+  "U59"
+ ],
+ "m1_hypergeom_p_ge": 7.414978594884691e-09,
+ "m1_kendall_module_vs_b1": 0.14285714285714285,
+ "m1_module_not_in_b1": [
+  [
+   "U25",
+   "Apinocaltamide (T-type calcium channel blocker, clinical-stage)"
+  ]
+ ],
+ "m1_overlap_module_b1": 7,
+ "m1_overlap_module_b2": 2,
+ "m1_top_in_tested": "7/8",
+ "m2_after_freeze": 0,
+ "m2_controlled_origins": 4,
+ "m2_dates": [
+  "2020-01-30",
+  "2020-01-30",
+  "2021-10-09",
+  "2022-04-29",
+  "2025-12-06",
+  "2026-06-18",
+  "2026-07-03"
+ ],
+ "m2_distinct_origins": 6,
+ "m2_outcome_rows": 7,
+ "m3_pool_defined_by_outcomes": true,
+ "m3_tested_units": 7,
+ "m4_class_level_only_units": 9,
+ "m4_units_with_wwox_null_harm": 4,
+ "m4_units_without_member_rows": 32,
+ "m4_untested_units": 62,
+ "m5_generated_in_top": 0,
+ "m5_generated_proposal_units": 33,
+ "m5_generated_with_wwox_system_result": 0,
+ "module_top": [
+  "U07",
+  "U17",
+  "U24",
+  "U21",
+  "U10",
+  "U15",
+  "U20",
+  "U25"
+ ],
+ "pool_units": 69,
+ "retro_dev_units": [
+  "U17",
+  "U21",
+  "U24"
+ ],
+ "retro_eval_controlled_origins": 2,
+ "retro_eval_units": [
+  "U07",
+  "U10",
+  "U15",
+  "U20"
+ ],
+ "tested_units": [
+  "U07",
+  "U10",
+  "U15",
+  "U17",
+  "U20",
+  "U21",
+  "U24"
+ ],
+ "units_with_member_rows": 37
+}
