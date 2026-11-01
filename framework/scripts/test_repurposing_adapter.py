@@ -434,5 +434,30 @@ class KeepingAFetchedDocument(unittest.TestCase):
         self.assertNotIn("(#usage)", out)
 
 
+class ReusableToolsAnswerHelpOffline(unittest.TestCase):
+    """IT16: `--help` of a reusable fetch tool must not touch the network or write a file. The
+    shebang was never the safety: vfetch_activities.py made three network attempts on `--help`."""
+
+    GUARD = ("import runpy, socket, sys\n"
+             "def deny(*a, **k):\n"
+             "    sys.stderr.write('NETWORK_ATTEMPT'); raise OSError('network denied')\n"
+             "socket.socket.connect = deny; socket.create_connection = deny; socket.getaddrinfo = deny\n"
+             "script = sys.argv[1]; sys.argv = [script, '--help']\n"
+             "runpy.run_path(script, run_name='__main__')\n")
+    TOOLS = (
+        "framework/scripts/repurposing_adapter.py",
+        "disease-models/wwox/research/drug_repurposing/verify_it15_qb_20261101/vfetch_activities.py",
+    )
+
+    def test_help_makes_no_network_attempt_and_writes_nothing(self):
+        for tool in self.TOOLS:
+            with self.subTest(tool=tool), tempfile.TemporaryDirectory() as scratch:
+                done = subprocess.run([sys.executable, "-c", self.GUARD, str(ROOT / tool)],
+                                      capture_output=True, text=True, cwd=scratch, timeout=60)
+                self.assertEqual(0, done.returncode, done.stderr)
+                self.assertNotIn("NETWORK_ATTEMPT", done.stdout + done.stderr)
+                self.assertEqual([], list(Path(scratch).iterdir()))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

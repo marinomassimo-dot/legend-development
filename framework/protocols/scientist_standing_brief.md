@@ -221,3 +221,11 @@ agent never ran them. Before the last commit of a task, in your worktree:
   ignored corpus (`files/<package>/`) and track only its digest, origin and revision, plus a public extract made with
   `framework/adapters/_http.py` (`keep_original`, `public_extract`): addresses withheld, licence wording untouched,
   relative links and anchors resolved against the source. If the licence forbids redistribution, keep it local only.
+- Scripts that fetch from the network are one of three kinds, and only the first is a product: a reusable tool
+  (`framework/scripts/**`, `framework/adapters/`, `drug_repurposing/catalog/`: `--help` and import touch no
+  network and write nothing, acquisition starts from `main()`, explicit `--raw-dir`/paths); a reproducible package
+  analysis (re-runnable with its arguments, outputs inside its own package); a historical executable note (kept as
+  the record of what was run, not re-run, may name old session paths). Removing a shebang is not a safety property:
+  measured 2026-11-01 with a network-denying socket guard, `--help` of every `framework/scripts` fetcher was
+  clean; in the research packages `vfetch_activities.py`, `labels_it10_p21.py`, `pull_toolcompounds_p9.py`,
+  `q4_chembl_queue.py`, `q8_mechanism.py` and three `sigcom_*` scripts act on `--help`, two of them emptying tracked TSVs (historical notes except the first, now a tool; do not run them to see what they do).
