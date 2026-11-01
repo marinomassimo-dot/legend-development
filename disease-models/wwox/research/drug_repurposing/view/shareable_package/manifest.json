@@ -18,17 +18,17 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 11236,
+    "values": 11246,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
     "class": "OWN",
-    "values": 6549,
+    "values": 6561,
     "why": "card text and computed positions (provenance of the prose: see text audit)"
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
     "class": "BIBLIO",
-    "values": 481,
+    "values": 491,
     "why": "PMID / DOI of a cited work"
    },
    "^\\.cur\\.cands\\[\\]\\.access\\[\\]$": {
@@ -53,7 +53,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.pmids\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 714,
+    "values": 729,
     "why": "title, journal, year of a cited work (bibliographic facts)"
    },
    "^\\.cur\\.evidence_graph\\.chains\\[\\]\\.(nodes\\[\\]\\.pmids\\[\\]|edges\\[\\]\\.src\\.id)$": {
@@ -88,7 +88,7 @@
    },
    "^\\.cur\\.ranking\\.units\\[\\]\\.(pmids\\[\\]|views\\.(broad|partial)\\.evidence\\.pmids\\[\\])$": {
     "class": "BIBLIO",
-    "values": 221,
+    "values": 228,
     "why": "PMID of a cited work (ranking)"
    },
    "^\\.excluded_detail\\[\\]\\.(id|name|src)$": {
@@ -203,11 +203,11 @@
    "DOI": 5,
    "HGNC": 12,
    "NCT": 0,
-   "PMID": 93
+   "PMID": 96
   },
   "links": {
-   "distinct_hrefs": 112,
-   "external_public": 54,
+   "distinct_hrefs": 115,
+   "external_public": 57,
    "hosts": [
     "civicdb.org",
     "open.fda.gov",
@@ -223,7 +223,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3010,
+    "forbidden-name": 3008,
     "forbidden-wording": 12
    },
    "co_attested_wording": [
@@ -459,10 +459,10 @@
   "view_schema": "legend.wwox.repurposing_view/2"
  },
  "embedded_field_classes": {
-  "BIBLIO": 2397,
+  "BIBLIO": 2429,
   "COUNT": 11599,
   "ID": 4547,
-  "OWN": 82856,
+  "OWN": 82878,
   "ROWNAME": 2251,
   "SRC_A": 189,
   "SRC_META": 256,
@@ -521,7 +521,7 @@
   },
   "NOTICE.md": {
    "bytes": 12774,
-   "sha256": "bc4a5e137490d1142e2c0d222123229aa212ef43e6601a437c81036a43dc4b33"
+   "sha256": "c1561c78264ceebd18d0fc435fe1dfa57e97ef1acee079a91f8f1c25b77b32c8"
   },
   "README.md": {
    "bytes": 4906,
@@ -529,7 +529,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 1999,
-   "sha256": "ce82241db13b058d88be913719f6b5013d15900e60091690d5fea92c5b9ed656"
+   "sha256": "17eebe2152a1e0f8a2e3b74304854caf783ebd69f6f993f68470340bbfd1f65c"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1636,
@@ -544,8 +544,8 @@
    "sha256": "240723d6c86c13fc8f19ff2a5bbe7eec5e64da0f3769ea25e49d8d7b7e5784d0"
   },
   "index.html": {
-   "bytes": 4248029,
-   "sha256": "1b1230069e12ee9a0b66bacc3b50a39d97c1ea8a84ace8f801ae34a72bf0ba58"
+   "bytes": 4250898,
+   "sha256": "15cf189a25cbed2d733373019fef914738b8208ef35a224fb819ad3216bb624f"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
