@@ -1,0 +1,8 @@
+unit_id	intervention	system_context	endpoint	comparator	result	objective_match	origin_group	pub_date	provenance
+U24	Lithium	Wwox knockout mouse, preweaning, PTZ	PTZ seizure score	untreated KO	favourable	yes	PMID:32000863	2020-01-30	recoded from outcomes_it16.tsv and the ranking caveats; paper not re-read here; ranking notes the effect also occurs in wild type
+U17	Ethosuximide	Wwox knockout mouse, preweaning, PTZ	PTZ seizure score, late phase	untreated KO	favourable	yes	PMID:32000863	2020-01-30	same paper as U24 (one origin); T-type mediation not measured; one experiment
+U21	d-APV	neuron-deleted Wwox mouse neocortical slices	network bursting in slices	untreated slices	favourable	unknown	PMID:34634460	2021-10-09	tool compound; slice electrophysiology is not a stated partial-benefit endpoint; objective match left unknown
+U15	Ketogenic diet	single patient, WWOX-DEE	seizure outcome	none	undeterminable	unknown	PMID:35573960	2022-04-29	paper is a diagnosis report; the diet outcome is incidental, no comparator
+U20	Vigabatrin	two children with WWOX-DEE	new pallidal/thalamic MRI signal change	none	contrary	no	PMID:41442931	2025-12-06	safety endpoint, not the seizure objective; kept visible as off-objective; PMID taken from card H02
+U07	AAV9-hSynI-WWOX	severe-null mouse, injection P0 to P5	survival	untreated KO	favourable	unknown	PMID:42422765	2026-06-18	prevention or early-window result, the unit objective is recovery after onset; gene addition, not a small molecule
+U10	A51	WWOX-deficient organoid	not verified	not verified	undeterminable	unknown	PMID:42397075	2026-07-03	A51 arm in the paper not re-verified in IT16
