@@ -63,17 +63,23 @@ def get_json(url: str, params: dict | None = None, body: dict | None = None,
 
 EMAIL_REPLACEMENT = "[address withheld]"
 _EMAIL = re.compile(r"(?i)(?<![A-Z0-9._%+-])[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}(?![A-Z0-9_%+-])")
-_MD_LINK = re.compile(r"(?<!!)(\[[^\]]*\]\()([^)\s]+)((?:\s+\"[^\"]*\")?\))")
+_INLINE_LINK = re.compile(r"(!?\[[^\]]*\]\()(<[^>\n]*>|[^)\s]+)((?:\s+(?:\"[^\"]*\"|'[^']*'))?\))")
+_REF_DEF = re.compile(r"(?m)^(\s{0,3}\[[^\]\n]+\]:[ \t]*)(<[^>\n]*>|\S+)")
+_HTML_ATTR = re.compile(r"(?i)(\b(?:href|src)\s*=\s*)([\"'])(.*?)\2")
 
 
 def keep_original(corpus_dir, name: str, data: bytes, origin: str, revision: str) -> dict:
     """Write `data` unchanged under `corpus_dir/name` and return its manifest record.
 
-    Never silently alters an original: if `name` exists with different bytes it raises. The
-    record (`sha256`, `bytes`, `origin`, `revision`) is what the tracked package keeps, as a
-    digest line, in place of the third-party bytes.
+    Never silently alters an original: if `name` exists with different bytes it raises, and a
+    `name` that resolves outside `corpus_dir` raises ValueError. The record (`sha256`, `bytes`,
+    `origin`, `revision`) is what the tracked package keeps, as a digest line, in place of the
+    third-party bytes.
     """
-    path = Path(corpus_dir) / name
+    root = Path(corpus_dir).resolve()
+    path = (root / name).resolve()
+    if path == root or root not in path.parents:
+        raise ValueError(f"{name!r} resolves outside the corpus directory {root}")
     if path.exists() and path.read_bytes() != data:
         raise FileExistsError(f"{path} exists with different bytes; keep the old original and name the new one")
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -84,20 +90,30 @@ def keep_original(corpus_dir, name: str, data: bytes, origin: str, revision: str
 
 
 def public_extract(text: str, origin_url: str) -> str:
-    """The publishable form of a fetched Markdown text.
+    """The publishable form of a fetched Markdown/HTML text.
 
-    E-mail addresses are withheld (personal data in third-party text). Licence and attribution
-    wording is NOT touched: a text that cannot be redistributed is kept local and not extracted.
-    Relative links and bare anchors are resolved against `origin_url`, the place they were
-    written for, so no link points at content the extract does not contain.
+    E-mail addresses are withheld everywhere, including inside licence or copyright lines and
+    `mailto:` targets (they must not enter git); all other licence and attribution wording is
+    left as written. A text that cannot be redistributed is kept local and not extracted.
+    Relative link targets (inline links, images, reference definitions, `<angle>` targets, HTML
+    href/src) and bare anchors are resolved against `origin_url`, the place they were written
+    for, so no link points at content the extract does not contain. Absolute URLs and other
+    schemes are left alone.
     """
-    def resolve(match: "re.Match[str]") -> str:
-        target = match.group(2)
-        if re.match(r"(?i)[a-z][a-z0-9+.-]*:", target):
-            return match.group(0)
-        return match.group(1) + urljoin(origin_url, target) + match.group(3)
+    def absolute(target: str) -> str:
+        if not target or re.match(r"(?i)[a-z][a-z0-9+.-]*:", target):
+            return target
+        return urljoin(origin_url, target)
 
-    return _MD_LINK.sub(resolve, _EMAIL.sub(EMAIL_REPLACEMENT, text))
+    def angle(target: str) -> str:
+        return "<" + absolute(target[1:-1]) + ">" if target.startswith("<") else absolute(target)
+
+    text = _EMAIL.sub(EMAIL_REPLACEMENT, text)
+    text = _INLINE_LINK.sub(lambda m: m.group(1) + angle(m.group(2)) + m.group(3), text)
+    text = _REF_DEF.sub(lambda m: m.group(1) + angle(m.group(2)), text)
+    return _HTML_ATTR.sub(lambda m: m.group(1) + m.group(2) + absolute(m.group(3)) + m.group(2), text)
+
+
 def make_fetch(cache_dir: str | None = None, retries: int = 2, pause: float = 6.0, get=None, sleep=time.sleep):
     """A `fetch` for the adapters with a bounded retry and an optional response cache; the adapters take it through `query(request, fetch=...)`.
 

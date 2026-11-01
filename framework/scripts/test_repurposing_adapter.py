@@ -600,5 +600,31 @@ class StandingMethodIsReachable(unittest.TestCase):
         self.assertIn("repurposing_adapter_convention.md", conv)
 
 
+class KeepingAFetchedDocumentEdges(unittest.TestCase):
+    ORIGIN = "https://example.invalid/tool/blob/v1.2/README.md"
+
+    def test_keep_original_refuses_a_name_outside_the_corpus(self):
+        http = load_http()
+        with tempfile.TemporaryDirectory() as tmp:
+            corpus = Path(tmp) / "files"
+            for bad in ("../esc.txt", "/abs/esc.txt", "a/../../esc.txt", "."):
+                with self.assertRaises(ValueError, msg=bad):
+                    http.keep_original(corpus, bad, b"x", self.ORIGIN, "v1")
+            self.assertFalse((Path(tmp) / "esc.txt").exists())
+
+    def test_every_link_form_is_resolved_and_addresses_are_withheld_even_in_licence_lines(self):
+        http = load_http()
+        out = http.public_extract(
+            "![logo](img/pic.png) [a](<docs/my file.md>) [ref]\n\n[ref]: guide.md\n"
+            '<a href="x/y.html">h</a> <img src=\'z.png\'> [abs](https://e.invalid/q) [m](mailto:a@b.org)\n'
+            "Copyright 2026 Jane <jane@lab.org>, Apache-2.0\n", self.ORIGIN)
+        base = "https://example.invalid/tool/blob/v1.2/"
+        for expected in (f"({base}img/pic.png)", f"(<{base}docs/my file.md>)", f"[ref]: {base}guide.md",
+                         f'href="{base}x/y.html"', f"src='{base}z.png'", "(https://e.invalid/q)",
+                         "(mailto:[address withheld])", "Copyright 2026 Jane <[address withheld]>, Apache-2.0"):
+            self.assertIn(expected, out)
+        self.assertNotIn("@", out)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
