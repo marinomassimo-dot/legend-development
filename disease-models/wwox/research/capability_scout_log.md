@@ -1542,3 +1542,31 @@ PubChem data-usage policy page (browser-check shell); UniChem and ChEBI data lic
 - **Gap with evidence:** agent-written regression tests repeatedly trip repository-wide guards that the writing agent never ran (closed-world absence pins; shebang mode) and a corpus-dependent test with a typed status value: three suites failed in the first final battery.
 - **Change shipped:** the three tests/modes fixed; no new gate. Proportionate follow-up: add the two guard scripts to the briefs of test-writing agents (done in the next briefs).
 - **Capabilities gained this iteration (real status):** reproducible catalogue rebuild with refusal on missing inputs; GtoPdb ligand identity reconciliation; DevTools-protocol viewport measurement from the stdlib; shareable package with a mutation-tested audit; `mandate_watch.py` jobs with process identity. Not operational: restart of a dead session (trust), publication outside the development repository (operator).
+
+## 2026-11-01 · scientist · Radar IT16-P6 (gap table, extension of scout_daily.py, one bounded real run)
+
+Target behaviour: roadmap_current.md section "Daily discovery and bounded follow-up" as read at remote main (the
+local task branch lags it). No new scheduler, log or register: `scout_daily.py`, its test, this log and the
+existing WATCH list were extended.
+
+| # | Required | Before this package | Now | Executed |
+|---|---|---|---|---|
+| 1 | Resolve remote main SHA, read context at that revision, cache by SHA/blob, freshness limit, old CURRENT heading not authoritative | not implemented (no revision read) | `resolve_context` (ls-remote, show, blob cache, `freshness_limit`, `outranked_by`) | yes: SHA 1cda3d2a, second run a cache hit |
+| 2 | Three explicit channels with error / no_news / delta; probes of known resources are not discoveries | GitHub + Europe PMC only; probes mixed into one verdict | GitHub, Hugging Face (models, datasets, Spaces), Nature portfolio via Crossref; Europe PMC complement; known resources counted apart | yes; Crossref first returned HTTP 400 (invalid `select`), reported as error, fixed, second run delta |
+| 3 | Two or three priority questions with a decision each; room for the unexpected; no WWOX keyword needed | one theme a day, gap only | 11 questions with category + decision + roadmap row; 2 per run plus one open slot | yes |
+| 4 | Followed teams/repos 6/18/3, configurable, no filling, replace-or-suspend with reason, weekly deep check, discovery unaffected | absent | `follow_add`, `follow_due`, seed of 3 repos from existing WATCH decisions, `scout_daily_config.json` | partly: 3 repos active, deep check ran once, no replacement ever needed |
+| 5 | Versions per source type, dedup, claim labels, counter-evidence, no popularity as quality | latest commit only, ranking by stars | default-branch head and release kept apart, HF revision/card/files, paper status; dedup by DOI/title/name; 6 claim labels (all `unknown` but `declared`); recency ranking | yes for repositories; HF/papers only metadata |
+| 6 | Signal to decision to integration states; log line is not evaluation | absent | `trace_event` / `--trace`: evidence kinds exclude log lines; adopted_in_plan distinct from verified | tested; no real adoption traced yet |
+| 7 | Briefing with deltas only, one next step, errors visible, save claimed after read-back, concurrent edits kept | silent cron lines | `briefing`, `save_text` / `save_state` with read-back, locked merge, append-only pending log | yes |
+| 8 | Licences per part, no spend / e-mail / registration | licence of repos only | per-part `licences` (code, data, weights, service, article) | yes |
+
+Bounded real run (public unauthenticated endpoints, no token, no contact address, scratch state directory so the cron
+cache was not touched): run 1 = 53 HTTP calls, 80 s (50 s of it one timeout on txgnn.org, an existing probe); run 2 =
+about 55 calls, 80 s. Limits met: unauthenticated GitHub search needs a pause (7 s between questions kept); Hugging
+Face search matches names and tags only, so multi-word capability phrases return nothing and a single short term is
+used; Crossref cannot filter by journal, so Nature-portfolio titles are filtered client-side from the 10.1038 prefix.
+Outcome: run 1 = GitHub no_news, Hugging Face no_news, Nature error (HTTP 400, an invalid field of mine), Europe PMC
+delta; run 2 = delta on all four. Run-2 hits were not read: they are discovery, not evidence, and the Hugging Face
+hits were mostly marketing "content repurposing" spaces, i.e. noise. Nothing was adopted, installed or traced.
+Remaining only planned: weekly follow cycle over several weeks, trace entries from real examinations, an
+independent-reproduction label for any candidate, supplements and corrections lookup for papers.
