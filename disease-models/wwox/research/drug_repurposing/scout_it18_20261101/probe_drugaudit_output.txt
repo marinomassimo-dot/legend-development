@@ -1,0 +1,9 @@
+columns: ['#', 'Source', 'Question', 'Answer', 'Evidence', 'Verdict(Yes/No/Partial/Skip)', 'Notes']
+items: 3961
+by source: {'FAERS': 520, 'Orange Book': 512, 'ChEMBL': 508, 'DrugCentral': 501, 'LiverTox': 409, 'PharmGKB': 396, 'Multi-source': 386, 'FDA label': 381, 'SIDER': 348}
+module compounds: matching 186 cards 21 named 200
+[matching] items naming a module compound: 99; distinct compounds: 4; of which with action/mechanism wording: 2; by source: {'FDA label': 1, 'Multi-source': 1}
+[matching] compounds named: ['gabapentin', 'lithium carbonate', 'pregabalin', 'ruxolitinib']
+[cards] items naming a module compound: 62; distinct compounds: 2; of which with action/mechanism wording: 2; by source: {'Multi-source': 2}
+[cards] compounds named: ['lithium', 'simvastatin']
+ChEMBL-source items with action wording: 8 of 508
