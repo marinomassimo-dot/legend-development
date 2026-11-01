@@ -108,9 +108,9 @@
    "steps": [
     {
      "step": "P6 independent verification of decisive changes, frozen battery, safe_push, CI acquired autonomously, cleanup, final report",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "verifier",
-     "evidence": ""
+     "evidence": "fresh-context verifiers on P1, P2, P3, P4 (findings fixed); candidate_tree_freshness FRESH before freezing; battery on 9816453e: PASS WITH SKIPS (177 targets, 7 skipped, same reasons as IT16); push and CI pending -> DONE only after the CI verdict"
     }
    ]
   }
