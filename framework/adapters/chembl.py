@@ -15,7 +15,16 @@ confidence, relationship type) fetched from the assay endpoint. Each row keeps t
 the source states it (standard_relation/value/units, pchembl_value, document), flags
 data_validity_comment and potential_duplicate, and the output states `total_count`, `retrieved`
 and `truncated`: a page cap that is hit is reported, never hidden. Optional: `types`
-(default IC50, Ki, Kd, EC50), `max_rows` (default 400, at most 2000), `molecule` (a ChEMBL id).
+(default IC50, Ki, Kd, EC50), `max_rows` (default 400, at most MAX_ROWS = 20000; a query that still hits the cap says so), `molecule` (a ChEMBL id).
+Every activity answer states `coverage`: COMPLETE, TRUNCATED (cap hit, rest unread), PARTIAL_ERROR (a page failed; the rows read are kept, `retrieved` of
+`total_count`), NOT_READ (the first page failed) or, for a complete set of rows, COMPLETE_ASSAY_CONTEXT_MISSING / COMPLETE_TARGET_GENES_MISSING when a
+batch of the assay or target lookup failed (rows carry null, never an empty string). These are states of one answer, never merged with NO_MATCH_FOUND.
+Passing `fetch=_http.make_fetch(cache_dir)` adds a bounded retry and a cache of successful responses only; the answer then carries `transport` (hits, requests, failures).
+Name lookup (`drug`): MATCH_FOUND needs a molecule whose name or synonym equals the queried name. A compound ChEMBL stores without any name or synonym
+(Ro 25-6981 is CHEMBL305195 with none) or under another name (dizocilpine is stored as MK-801) cannot be found by name: the answer is NO_MATCH_FOUND with the
+nearest hits (their synonyms and parent), a statement about the name, not about the compound. Declare the identity with `molecule_id` (a ChEMBL id): the molecule is
+then read by id, `identity_basis` is `declared_chembl_id` and the queried name is kept for the record. A salt or child record (hierarchy parent differs) is reported with its
+parent; its mechanism rows may be read from the parent and are then marked `mechanism_found_via` = parent_filter (the parent_molecule_chembl_id filter); activity rows of salt, parent, stereoisomer and metabolite are never merged.
 An empty answer means "no row under these filters on this date", not that no activity exists. `max_phase` is carried as the source states it (a development stage,
 not a score).
 """
@@ -47,6 +56,7 @@ INFO = {
 }
 
 BASE = "https://www.ebi.ac.uk/chembl/api/data"
+MAX_ROWS = 20000
 
 
 def _new(request: dict) -> dict:
@@ -103,7 +113,7 @@ def _target_genes(rows: list, out: dict, fetch) -> dict:
 def _activities(request: dict, out: dict, fetch) -> dict:
     target = str(request.get("target", "")).strip()
     types = request.get("types") or list(ACTIVITY_TYPES)
-    cap = max(1, min(int(request.get("max_rows") or 400), 2000))
+    cap = max(1, min(int(request.get("max_rows") or 400), MAX_ROWS))
     params = f"standard_type__in={quote(','.join(types))}"
     if target:
         params = f"target_chembl_id={quote(target)}&{params}"
@@ -118,6 +128,11 @@ def _activities(request: dict, out: dict, fetch) -> dict:
             out["error"] = f"HTTP {status}: {str(payload)[:300]}"
             out["hits"] = [dict(h) for h in rows]
             out["retrieved"] = len(rows)
+            out["total_count"] = total
+            out["coverage"] = "PARTIAL_ERROR" if rows else "NOT_READ"
+            out["next_offset"] = offset
+            out["scope"] = {"target": target or None, "types": types, "molecule": request.get("molecule")}
+            out["note"] = (out.get("note", "") + f" PARTIAL: the page at offset {offset} failed; {len(rows)} of {total} rows read. A rerun through a caching fetch reads only what is missing.").strip()
             return out
         total = (payload.get("page_meta") or {}).get("total_count", total)
         page = payload.get("activities") or []
@@ -125,18 +140,20 @@ def _activities(request: dict, out: dict, fetch) -> dict:
         offset += len(page)
         if not page or not (payload.get("page_meta") or {}).get("next"):
             break
-    assays = {}
+    assays, assay_failed = {}, 0
     ids = sorted({r.get("assay_chembl_id") for r in rows if r.get("assay_chembl_id")})
     for i in range(0, len(ids), 40):
         url = f"{BASE}/assay.json?assay_chembl_id__in={quote(','.join(ids[i:i+40]))}&limit=100"
         out["requests_sent"].append(url)
         status, payload = fetch(url)
         if status != 200 or not isinstance(payload, dict):
-            out["note"] = f"assay context incomplete: HTTP {status} for assay batch {i // 40 + 1}; rows below carry assay_context=null where missing"
+            out["note"] = (out.get("note", "") + f" assay context incomplete: HTTP {status} for assay batch {i // 40 + 1}; rows carry assay_context=null where missing").strip()
+            assay_failed += 1
             continue
         for a in payload.get("assays") or []:
             assays[a.get("assay_chembl_id")] = {k: a.get(k) for k in ASSAY_FIELDS}
     genes = _target_genes(rows, out, fetch)
+    genes_failed = "target genes incomplete" in out.get("note", "")
     for r in rows:
         tg = genes.get(r.get("target_chembl_id"))
         out["hits"].append({"kind": "activity", "activity_id": r.get("activity_id"), "molecule_chembl_id": r.get("molecule_chembl_id"),
@@ -154,12 +171,31 @@ def _activities(request: dict, out: dict, fetch) -> dict:
     out["truncated"] = bool(total is not None and len(rows) < total)
     out["scope"] = {"target": target or None, "types": types, "molecule": request.get("molecule")}
     out["status"] = "MATCH_FOUND" if rows else "NO_MATCH_FOUND"
+    out["coverage"] = ("TRUNCATED" if out["truncated"] else "COMPLETE_ASSAY_CONTEXT_MISSING" if assay_failed else
+                       "COMPLETE_TARGET_GENES_MISSING" if genes_failed else "COMPLETE")
+    out["assay_batches_failed"] = assay_failed
     if out["truncated"]:
         out["note"] = (out.get("note", "") + f" TRUNCATED: {len(rows)} of {total} rows retrieved under these filters; the rest were not read.").strip()
     return out
 
 
 def query(request: dict, fetch=_http.get_json) -> dict:
+    out = _query(request, fetch)
+    stats = getattr(fetch, "stats", None)
+    if stats is not None:
+        out["transport"] = dict(stats)
+    return out
+
+
+def _molecule_view(mol: dict) -> dict:
+    h = mol.get("molecule_hierarchy") or {}
+    return {"molecule_chembl_id": mol.get("molecule_chembl_id"), "pref_name": mol.get("pref_name"), "max_phase": mol.get("max_phase"),
+            "parent_molecule_chembl_id": h.get("parent_chembl_id") or mol.get("molecule_chembl_id"),
+            "synonyms": sorted({str(x.get("molecule_synonym")) for x in mol.get("molecule_synonyms") or [] if x.get("molecule_synonym")})[:12],
+            "inchikey": (mol.get("molecule_structures") or {}).get("standard_inchi_key")}
+
+
+def _query(request: dict, fetch) -> dict:
     out = _new(request)
     drug = str(request.get("drug", "")).strip()
     gene = str(request.get("gene", "")).strip()
@@ -192,34 +228,52 @@ def query(request: dict, fetch=_http.get_json) -> dict:
                                 "target_type": t.get("target_type")})
         out["status"] = "MATCH_FOUND" if out["hits"] else "NO_MATCH_FOUND"
         return out
-    url = f"{BASE}/molecule/search.json?q={quote(drug)}&limit=5"  # a name with spaces is a valid query
-    out["requests_sent"].append(url)
-    status, payload = fetch(url)
-    if status != 200 or not isinstance(payload, dict):
-        out["error"] = f"HTTP {status}: {str(payload)[:300]}"
-        return out
-    molecules = payload.get("molecules") or []
-    if not molecules:
-        out["status"] = "NO_MATCH_FOUND"
-        return out
-    # A free-text search returns the nearest molecule, which for a sentence or a class name is some
-    # unrelated entry (8 of 10 cached MATCH_FOUND answers of the join were not the named substance).
-    # MATCH_FOUND therefore needs a molecule whose pref_name or synonym IS the queried name; the
-    # nearest hit is recorded in `nearest` so a reader sees what the search returned instead.
-    wanted = " ".join(drug.casefold().split())
-    def names_of(mol):
-        names = [mol.get("pref_name")] + [syn.get("molecule_synonym") for syn in mol.get("molecule_synonyms") or []]
-        return {" ".join(str(n).casefold().split()) for n in names if n}
-    exact = [mol for mol in molecules if wanted in names_of(mol)]
-    if not exact:
-        out["status"] = "NO_MATCH_FOUND"
-        out["nearest"] = [{"molecule_chembl_id": m.get("molecule_chembl_id"), "pref_name": m.get("pref_name")}
-                          for m in molecules[:3]]
-        out["note"] = ("NO_MATCH_FOUND is an answer about this query on this date, never absence: no molecule's name or synonym equals the queried name; the nearest "
-                       "search hits are in `nearest` and are NOT the named substance")
-        return out
+    declared = str(request.get("molecule_id", "")).strip()
+    if declared:
+        url = f"{BASE}/molecule/{quote(declared)}.json"
+        out["requests_sent"].append(url)
+        status, payload = fetch(url)
+        if status == 404:
+            out["status"] = "NO_MATCH_FOUND"
+            out["note"] = f"the declared id {declared} does not exist in this release"
+            return out
+        if status != 200 or not isinstance(payload, dict) or payload.get("molecule_chembl_id") != declared:
+            out["error"] = f"HTTP {status}: {str(payload)[:300]}"
+            return out
+        exact = [payload]
+        out["identity_basis"] = "declared_chembl_id"
+        out["queried_name"] = drug
+    else:
+        url = f"{BASE}/molecule/search.json?q={quote(drug)}&limit=5"  # a name with spaces is a valid query
+        out["requests_sent"].append(url)
+        status, payload = fetch(url)
+        if status != 200 or not isinstance(payload, dict):
+            out["error"] = f"HTTP {status}: {str(payload)[:300]}"
+            return out
+        molecules = payload.get("molecules") or []
+        if not molecules:
+            out["status"] = "NO_MATCH_FOUND"
+            return out
+        # A free-text search returns the nearest molecule, which for a sentence or a class name is some
+        # unrelated entry (8 of 10 cached MATCH_FOUND answers of the join were not the named substance).
+        # MATCH_FOUND therefore needs a molecule whose pref_name or synonym IS the queried name; the
+        # nearest hit is recorded in `nearest` so a reader sees what the search returned instead.
+        wanted = " ".join(drug.casefold().split())
+
+        def names_of(mol):
+            names = [mol.get("pref_name")] + [syn.get("molecule_synonym") for syn in mol.get("molecule_synonyms") or []]
+            return {" ".join(str(n).casefold().split()) for n in names if n}
+        exact = [mol for mol in molecules if wanted in names_of(mol)]
+        if not exact:
+            out["status"] = "NO_MATCH_FOUND"
+            out["nearest"] = [_molecule_view(m) for m in molecules[:3]]
+            out["note"] = ("NO_MATCH_FOUND is an answer about this query on this date, never absence: no molecule's name or synonym equals the queried name; the nearest "
+                           "search hits are in `nearest` and are NOT the named substance (a compound stored under another name or without any name needs `molecule_id`)")
+            return out
     for mol in exact[:1]:
         mid = mol.get("molecule_chembl_id")
+        parent = (mol.get("molecule_hierarchy") or {}).get("parent_chembl_id") or mid
+        via = "molecule"
         url = f"{BASE}/mechanism.json?molecule_chembl_id={mid}&limit=20"
         out["requests_sent"].append(url)
         status, payload = fetch(url)
@@ -231,7 +285,8 @@ def query(request: dict, fetch=_http.get_json) -> dict:
             # Measured 2026-10-27: for some molecules (e.g. CHEMBL192, sildenafil) `molecule_chembl_id=` returns 0 rows while
             # `parent_molecule_chembl_id=` returns the curated mechanism; without this second request such a drug was reported as
             # `molecule_without_mechanism`, a false negative of the lookup.
-            url = f"{BASE}/mechanism.json?parent_molecule_chembl_id={mid}&limit=20"
+            via = "parent_filter"
+            url = f"{BASE}/mechanism.json?parent_molecule_chembl_id={parent}&limit=20"
             out["requests_sent"].append(url)
             status, payload = fetch(url)
             if status != 200 or not isinstance(payload, dict):
@@ -241,13 +296,15 @@ def query(request: dict, fetch=_http.get_json) -> dict:
         for m in mechanisms:
             out["hits"].append({"kind": "mechanism", "molecule_chembl_id": mid,
                                 "pref_name": mol.get("pref_name"), "max_phase": mol.get("max_phase"),
+                                "parent_molecule_chembl_id": parent, "queried_is_salt_or_child": parent != mid, "mechanism_found_via": via,
                                 "action_type": m.get("action_type"),
                                 "mechanism_of_action": m.get("mechanism_of_action"),
                                 "target_chembl_id": m.get("target_chembl_id"),
                                 "references": [f"{r.get('ref_type')}:{r.get('ref_id')}" for r in m.get("mechanism_refs") or []]})
         if not out["hits"]:
             out["hits"].append({"kind": "molecule_without_mechanism", "molecule_chembl_id": mid,
-                                "pref_name": mol.get("pref_name"), "max_phase": mol.get("max_phase")})
+                                "pref_name": mol.get("pref_name"), "max_phase": mol.get("max_phase"),
+                                "parent_molecule_chembl_id": parent, "queried_is_salt_or_child": parent != mid})
     out["status"] = "MATCH_FOUND"
     return out
 

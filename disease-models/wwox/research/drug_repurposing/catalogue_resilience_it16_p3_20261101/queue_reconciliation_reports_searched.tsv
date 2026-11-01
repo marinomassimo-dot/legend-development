@@ -1,0 +1,35 @@
+display_group	reconciliation_now	reconciliation_if_reports_searched	change	n_report_documents	first_documents	names_shorter_than_6_chars
+acamprosate	NO_CARD_OR_RECORD_FOUND	NO_CARD_OR_RECORD_FOUND	same	0		
+amantadine	MENTIONED_ONLY	MENTIONED_ONLY	same	1	drug_repurposing/pharmacology_it6_20261029/P8_capability_trial.md	
+av 101	NO_CARD_OR_RECORD_FOUND	NO_CARD_OR_RECORD_FOUND	same	0		
+azd8108	NO_CARD_OR_RECORD_FOUND	NO_CARD_OR_RECORD_FOUND	same	0		
+delucemine	NO_CARD_OR_RECORD_FOUND	NO_CARD_OR_RECORD_FOUND	same	0		
+dextromethorphan	MENTIONED_ONLY	MENTIONED_ONLY	same	1	drug_repurposing/pharmacology_it6_20261029/P8_capability_trial.md	
+evt 101	NO_CARD_OR_RECORD_FOUND	NO_CARD_OR_RECORD_FOUND	same	0		
+felbamate	ASSESSED_ELSEWHERE	ASSESSED_ELSEWHERE	same	13	commit_candidates/CC-20261030-INTEGRATOR-IT9-BATCH-01.md; discovery_ledger_current.md; drug_repurposing/generation_it9_p2_20261030/v3/PRE_REGISTRATION_V3.md; drug_repurposing/generation_it9_p2_20261030/v3/README.md; drug_repurposing/nmdar_pharmacology_it6_p9_20261029/README.md	
+gw468816	NO_CARD_OR_RECORD_FOUND	NO_CARD_OR_RECORD_FOUND	same	0		
+indantadol	NO_CARD_OR_RECORD_FOUND	NO_CARD_OR_RECORD_FOUND	same	0		
+ketamine	MENTIONED_ONLY	MENTIONED_ONLY	same	14	commit_candidates/CC-20260825-ADVERSARIAL-FALSIFICATION-01.md; commit_candidates/CC-20260826-AAV9-ENDPOINT-SPLIT-01.md; commit_candidates/CC-20260826-NMDAR-CONJUNCTION-01.md; drug_repurposing/coverage/README.md; drug_repurposing/gse156243/prediction_lincs_context_stratification_20261026.md	
+lanicemine	NO_CARD_OR_RECORD_FOUND	NO_CARD_OR_RECORD_FOUND	same	0		
+neramexane	NO_CARD_OR_RECORD_FOUND	NO_CARD_OR_RECORD_FOUND	same	0		
+orphenadrine	NO_CARD_OR_RECORD_FOUND	NO_CARD_OR_RECORD_FOUND	same	0		
+perzinfotel	NO_CARD_OR_RECORD_FOUND	NO_CARD_OR_RECORD_FOUND	same	0		
+ralfinamide	NO_CARD_OR_RECORD_FOUND	NO_CARD_OR_RECORD_FOUND	same	0		
+rislenemdaz	NO_CARD_OR_RECORD_FOUND	NO_CARD_OR_RECORD_FOUND	same	0		
+traxoprodil	MENTIONED_ONLY	MENTIONED_ONLY	same	1	drug_repurposing/nmdar_pharmacology_it6_p9_20261029/README.md	
+esketamine	NO_CARD_OR_RECORD_FOUND	MENTIONED_ONLY	CHANGES	2	drug_repurposing/nmdar_pharmacology_it6_p9_20261029/README.md; locator_audits/2026-10-29_it6_p9_verifier.md	
+memantine	ASSESSED_ELSEWHERE	ASSESSED_ELSEWHERE	same	60	commit_candidates/CC-20260826-NMDAR-CONJUNCTION-01.md; commit_candidates/CC-20260928-WM-HISTORY-SPLIT-01.md; commit_candidates/CC-20261027-SCIENTIST-C-W2-THERAPEUTIC-01.md; commit_candidates/CC-20261029-INTEGRATOR-IT6-REGISTRIES-01.md; commit_candidates/CC-20261030-INTEGRATOR-IT8-BATCH-01.md	
+vigabatrin	ASSESSED_ELSEWHERE	ASSESSED_ELSEWHERE	same	109	commit_candidates/CC-20260825-ADVERSARIAL-FALSIFICATION-01.md; commit_candidates/CC-20260826-CLAIM002-01.md; commit_candidates/CC-20260826-CROSS-CLAIM-CENSUS-03.md; commit_candidates/CC-20260909-33916893-01.md; commit_candidates/CC-20260922-EXON7-NATURAL-EXPERIMENT-01.md	
+abt 639	NO_CARD_OR_RECORD_FOUND	MENTIONED_ONLY	CHANGES	1	drug_repurposing/closed_loop_it3_20261028/README.md	
+methsuximide	MENTIONED_ONLY	MENTIONED_ONLY	same	4	commit_candidates/CC-20261029-INTEGRATOR-IT5-BATCH2-01.md; discovery_ledger_current.md; drug_repurposing/pharmacology_it5_20261029/README.md; locator_audits/2026-10-29_it5_p5_independent_verification.md	
+phloroglucinol	NO_CARD_OR_RECORD_FOUND	NO_CARD_OR_RECORD_FOUND	same	0		
+ulixacaltamide	NO_CARD_OR_RECORD_FOUND	MENTIONED_ONLY	CHANGES	4	drug_repurposing/closed_loop_it3_20261028/README.md; drug_repurposing/locator_audits/2026-10-28_it3_closed_loop_independent_verification.md; drug_repurposing/pharmacology_it5_20261029/README.md; repurposing_10h_scientist-b_20261021.md	
+bepridil	NO_CARD_OR_RECORD_FOUND	MENTIONED_ONLY	CHANGES	2	drug_repurposing/locator_audits/2026-10-28_it3_coverage_independent_verification.md; drug_repurposing/network_comparison_it7_p3_20261029/README.md	
+ethosuximide	ASSESSED_ELSEWHERE	ASSESSED_ELSEWHERE	same	93	capability_scout_log.md; commit_candidates/CC-20260825-32000863-POINTER-01.md; commit_candidates/CC-20260826-GSK3B-S9-AXIS-01.md; commit_candidates/CC-20260826-LITHIUM-BOUNDARY-01.md; commit_candidates/CC-20261021-SCIENTIST-B-R2-DLMECH170-01.md	
+mibefradil	NO_CARD_OR_RECORD_FOUND	MENTIONED_ONLY	CHANGES	3	drug_repurposing/closed_loop_it3_20261028/README.md; drug_repurposing/module_blindspots_20261023.md; repurposing_10h_scientist-b_20261021.md	
+paramethadione	NO_CARD_OR_RECORD_FOUND	NO_CARD_OR_RECORD_FOUND	same	0		
+phensuximide	NO_CARD_OR_RECORD_FOUND	NO_CARD_OR_RECORD_FOUND	same	0		
+pimozide	NO_CARD_OR_RECORD_FOUND	NO_CARD_OR_RECORD_FOUND	same	0		
+suloctidil	NO_CARD_OR_RECORD_FOUND	NO_CARD_OR_RECORD_FOUND	same	0		
+terodiline	NO_CARD_OR_RECORD_FOUND	NO_CARD_OR_RECORD_FOUND	same	0		
+trimethadione	NO_CARD_OR_RECORD_FOUND	MENTIONED_ONLY	CHANGES	9	batch_report_BATCH_20261019_012.md; commit_candidates/CC-20261021-SCIENTIST-B-R2-DLMECH170-01.md; discovery_ledger_current.md; page_adjudications/locator_audit_R2d_figures_20261022.md; page_adjudications/locator_audit_R4b_R2b_20261022.md	
