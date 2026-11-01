@@ -1,0 +1,2 @@
+target	type	max_rows	status	coverage	retrieved	total_count	truncated	transport	error
+CHEMBL1904	IC50	3000	MATCH_FOUND	COMPLETE	2021	2021	False	"{""cache_hits"": 28, ""network_requests"": 67, ""failed_attempts"": 0, ""requests_ended_in_error"": 0}"	

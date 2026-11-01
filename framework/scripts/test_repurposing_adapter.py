@@ -382,5 +382,135 @@ class ChemblActivities(unittest.TestCase):
         self.assertIn("never absence", out["note"])
 
 
+class ResilientTransport(ChemblActivities):
+    """IT16 P3: a bounded retry and a cache of successful responses only; coverage states stay distinct; declared identity and salt/parent stay apart."""
+
+    def setUp(self):
+        sys.path.insert(0, str(ROOT))
+        from framework.adapters import _http
+        self.H = _http
+        self.tmp = tempfile.mkdtemp()
+        self.addCleanup(shutil.rmtree, self.tmp, True)
+
+    def _counting(self, inner, fail_if=None):
+        calls = []
+        def get(url, params=None, body=None, timeout=20):
+            calls.append(url)
+            if fail_if and fail_if(url, len(calls)):
+                return 500, "boom"
+            return inner(url, params, body, timeout)
+        get.calls = calls
+        return get
+
+    def test_retry_is_bounded_logged_and_a_4xx_is_not_retried(self):
+        seq = [500, 0, 200]
+        def inner(url, params=None, body=None, timeout=20):
+            st = seq.pop(0)
+            return st, ({"ok": 1} if st == 200 else "x")
+        f = self.H.make_fetch(None, retries=2, pause=0, get=inner, sleep=lambda s: None)
+        self.assertEqual(f("u")[0], 200)
+        self.assertEqual([x["http"] for x in f.failures], [500, 0])
+        self.assertEqual(f.stats["requests_ended_in_error"], 0)
+        g = self.H.make_fetch(None, retries=2, pause=0, get=lambda *a: (500, "b"), sleep=lambda s: None)
+        self.assertEqual(g("u")[0], 500)
+        self.assertEqual((len(g.failures), g.stats["requests_ended_in_error"]), (3, 1))
+        h = self.H.make_fetch(None, retries=2, pause=0, get=lambda *a: (404, {}), sleep=lambda s: None)
+        h("u"); self.assertEqual(h.stats["network_requests"], 1)
+
+    def test_only_success_is_cached_and_nothing_is_written_without_a_directory(self):
+        d = Path(self.tmp) / "cache"
+        st = {"n": 0}
+        def inner(url, params=None, body=None, timeout=20):
+            st["n"] += 1
+            return (500, "e") if st["n"] <= 3 else (200, {"v": 1})
+        f = self.H.make_fetch(str(d), retries=0, pause=0, get=inner, sleep=lambda s: None)
+        self.assertEqual(f("u")[0], 500)
+        self.assertFalse(d.exists())
+        self.assertEqual((f("u")[0], f("u")[0]), (500, 500))
+        self.assertEqual(f("u")[0], 200)
+        n = st["n"]
+        self.assertEqual(f("u"), (200, {"v": 1}))
+        self.assertEqual(st["n"], n)
+        self.assertEqual(f.stats["cache_hits"], 1)
+        (next(d.glob("*.json"))).write_text("{damaged")
+        self.assertEqual(f("u")[0], 200)  # a damaged file is a miss
+        before = sorted(Path(self.tmp).rglob("*"))
+        self.H.make_fetch(None, get=lambda *a: (200, {"v": 2}))("u")
+        self.assertEqual(sorted(Path(self.tmp).rglob("*")), before)
+
+    def test_failed_page_is_partial_not_no_match_and_a_rerun_reads_only_the_missing_page(self):
+        inner = self._fetch(total=450)
+        bad = {"on": True}
+        get = self._counting(inner, fail_if=lambda url, n: bad["on"] and "activity.json" in url and "offset=200" in url)
+        f1 = self.H.make_fetch(self.tmp, retries=0, pause=0, get=get, sleep=lambda s: None)
+        out = ra.load("chembl", ADAPTERS).query({"target": "CHEMBL1904", "max_rows": 450}, fetch=f1)
+        self.assertEqual((out["status"], out["coverage"], out["retrieved"], out["total_count"], out["next_offset"]), ("QUERY_ERROR", "PARTIAL_ERROR", 200, 450, 200))
+        self.assertEqual(len(out["hits"]), 200)
+        bad["on"] = False
+        before = len(get.calls)
+        f2 = self.H.make_fetch(self.tmp, retries=0, pause=0, get=get, sleep=lambda s: None)
+        out2 = ra.load("chembl", ADAPTERS).query({"target": "CHEMBL1904", "max_rows": 450}, fetch=f2)
+        self.assertEqual((out2["status"], out2["coverage"], out2["retrieved"]), ("MATCH_FOUND", "COMPLETE", 450))
+        new_urls = get.calls[before:]
+        self.assertFalse(any("offset=0" in u for u in new_urls), "page 1 must come from the cache")
+        self.assertTrue(any("offset=200" in u for u in new_urls) and any("offset=400" in u for u in new_urls))
+        self.assertGreaterEqual(out2["transport"]["cache_hits"], 1)
+
+    def test_first_page_failure_is_not_read_and_cap_above_2000_is_honoured_and_reported(self):
+        out = ra.load("chembl", ADAPTERS).query({"target": "CHEMBL1904"}, fetch=self._fetch(activity_status=500))
+        self.assertEqual(out["coverage"], "NOT_READ")
+        big = ra.load("chembl", ADAPTERS).query({"target": "CHEMBL1904", "max_rows": 2300}, fetch=self._fetch(total=2300))
+        self.assertEqual((big["retrieved"], big["coverage"], big["truncated"]), (2300, "COMPLETE", False))
+        cut = ra.load("chembl", ADAPTERS).query({"target": "CHEMBL1904", "max_rows": 2}, fetch=self._fetch(total=5))
+        self.assertEqual(cut["coverage"], "TRUNCATED")
+        self.assertEqual(ra.load("chembl", ADAPTERS).query({"target": "CHEMBL1904"}, fetch=self._fetch(total=0))["status"], "NO_MATCH_FOUND")
+
+    def test_missing_assay_context_is_a_coverage_state_of_a_complete_row_set(self):
+        out = ra.load("chembl", ADAPTERS).query({"target": "CHEMBL1904"}, fetch=self._fetch(assay_status=503))
+        self.assertEqual((out["coverage"], out["assay_batches_failed"], out["retrieved"]), ("COMPLETE_ASSAY_CONTEXT_MISSING", 1, 3))
+
+    def _identity_fetch(self):
+        salt = {"molecule_chembl_id": "CHEMBL2", "pref_name": "DRUG HYDROCHLORIDE", "max_phase": -1.0, "molecule_synonyms": [{"molecule_synonym": "Drug hcl"}],
+                "molecule_hierarchy": {"parent_chembl_id": "CHEMBL1", "molecule_chembl_id": "CHEMBL2"}}
+        noname = {"molecule_chembl_id": "CHEMBL9", "pref_name": None, "molecule_synonyms": [], "molecule_hierarchy": {"parent_chembl_id": "CHEMBL9"}}
+        def fetch(url, params=None, body=None, timeout=20):
+            if "status.json" in url:
+                return 200, {"chembl_db_version": "ChEMBL_T"}
+            if "molecule/search" in url:
+                return 200, {"molecules": [noname]}
+            if "molecule/CHEMBL2.json" in url:
+                return 200, salt
+            if "molecule/CHEMBL9.json" in url:
+                return 200, noname
+            if "molecule/CHEMBL404.json" in url:
+                return 404, {}
+            if "mechanism.json?molecule_chembl_id=CHEMBL2" in url:
+                return 200, {"mechanisms": []}
+            if "mechanism.json?parent_molecule_chembl_id=CHEMBL1" in url:
+                return 200, {"mechanisms": [{"action_type": "ANTAGONIST", "mechanism_of_action": "x antagonist", "target_chembl_id": "CHEMBLT", "mechanism_refs": []}]}
+            if "mechanism.json" in url:
+                return 200, {"mechanisms": []}
+            return 404, {}
+        return fetch
+
+    def test_a_name_ChEMBL_does_not_store_is_no_match_with_candidates_and_a_declared_id_resolves_it(self):
+        mod = ra.load("chembl", ADAPTERS)
+        byname = mod.query({"drug": "Ro 25-6981"}, fetch=self._identity_fetch())
+        self.assertEqual(byname["status"], "NO_MATCH_FOUND")
+        self.assertEqual(byname["nearest"][0]["parent_molecule_chembl_id"], "CHEMBL9")
+        declared = mod.query({"drug": "Ro 25-6981", "molecule_id": "CHEMBL9"}, fetch=self._identity_fetch())
+        self.assertEqual((declared["status"], declared["identity_basis"], declared["queried_name"]), ("MATCH_FOUND", "declared_chembl_id", "Ro 25-6981"))
+        self.assertEqual(declared["hits"][0]["kind"], "molecule_without_mechanism")
+        gone = mod.query({"drug": "x", "molecule_id": "CHEMBL404"}, fetch=self._identity_fetch())
+        self.assertEqual(gone["status"], "NO_MATCH_FOUND")
+
+    def test_salt_id_reads_the_mechanism_from_its_parent_and_says_so(self):
+        out = ra.load("chembl", ADAPTERS).query({"drug": "delucemine", "molecule_id": "CHEMBL2"}, fetch=self._identity_fetch())
+        h = out["hits"][0]
+        self.assertEqual((h["molecule_chembl_id"], h["parent_molecule_chembl_id"], h["queried_is_salt_or_child"], h["mechanism_found_via"]), ("CHEMBL2", "CHEMBL1", True, "parent_filter"))
+        self.assertTrue(any("parent_molecule_chembl_id=CHEMBL1" in u for u in out["requests_sent"]))
+        self.assertFalse(any("activity.json" in u for u in out["requests_sent"]), "no activity row is borrowed from another molecule")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

@@ -1,0 +1,3 @@
+compound	molecule	status	coverage	retrieved	total_count	assay_batches_failed	error	note
+Ro 25-6981	CHEMBL305195	MATCH_FOUND	COMPLETE	27	27	0		NO_MATCH_FOUND is an answer about this query on this date, never absence
+ethosuximide	CHEMBL696	MATCH_FOUND	COMPLETE	292	292	0		NO_MATCH_FOUND is an answer about this query on this date, never absence
