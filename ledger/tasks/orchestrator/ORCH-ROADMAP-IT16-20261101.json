@@ -28,9 +28,9 @@
    "steps": [
     {
      "step": "P1.1 grader: decisive conditions absent -> LIMITED, observation kept, missing field shown; origin wording (document is not one origin); 4 regressions; regenerate affected consumers",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "selectivity_p6.missing_decisive + document_kind; 4 regressions (20 tests OK); regraded same-document 3->2 INTERPRETABLE, Q-A 492->0 INTERPRETABLE/153->645 LIMITED, Q-B unchanged; notes in 3 READMEs; comparison_p6.tsv regenerated; commit b3b5c8cd+"
     },
     {
      "step": "P1.2 reconcile receipt for PMID 42941930 under fulltext_read_receipt protocol (actual coverage only)",

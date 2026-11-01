@@ -3,8 +3,8 @@ Q-A	1 simple target-action	activity rows retrieved	14835
 Q-A	1 simple target-action	parent compounds with a row	9143	
 Q-A	1 simple target-action	named compounds	159	
 Q-A	1 simple target-action	censored rows kept apart	1901	
-Q-A	1 simple target-action	same-document groups graded INTERPRETABLE	492	grade assigned by selectivity_p6.py; counts are derived
-Q-A	1 simple target-action	same-document groups graded LIMITED	153	grade assigned by selectivity_p6.py; counts are derived
+Q-A	1 simple target-action	same-document groups graded INTERPRETABLE	0	grade assigned by selectivity_p6.py; counts are derived
+Q-A	1 simple target-action	same-document groups graded LIMITED	645	grade assigned by selectivity_p6.py; counts are derived
 Q-A	1 simple target-action	same-document groups graded NOT_DETERMINABLE	392	grade assigned by selectivity_p6.py; counts are derived
 Q-A	1 simple target-action	same-document groups graded PANEL_NOT_SELECTIVITY	0	grade assigned by selectivity_p6.py; counts are derived
 Q-A	3 earlier queue	NMDAR entries in the deepening queue (rule: documented direction-consistent action on a need with WWOX observations)	20	
