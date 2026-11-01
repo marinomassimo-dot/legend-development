@@ -169,6 +169,17 @@ no account creation, email contact or private-data transfer implied. Check code,
 weights and service terms separately and retain attribution. Monitor Unravel for public
 methods/data, not repeated promotional counts.
 
+## Standing method
+
+Reusable guidance for any drug-repurposing package lives in these places only; roles and briefs point here and do not copy it.
+
+- Generic engine rules (retrieval, cache, coverage states, imported documents, tool kinds, graded comparisons, suite outcomes): [`repurposing_adapter_convention.md`](../../../../framework/protocols/repurposing_adapter_convention.md).
+- Matching method: the operator's [matching guidance v3](matching_guidance_v3.md). Pick the method that fits the question; no method is imposed on every question.
+- Autonomy, handoff and stopping: [cross-session transport section 12](../../../../framework/protocols/cross_session_transport.md#12--autonomous-mandate-continuity).
+- Reading receipts and complete reads: [`fulltext_read_receipt.md`](../../../../framework/protocols/fulltext_read_receipt.md).
+- WWOX-specific knowledge stays in the module records (needs, cards, working model), not in these generic pages.
+- Dated measurements and decisions are in the iteration section of the [module README](README.md) marked CURRENT.
+
 ## Delivery sequence and stop condition
 
 Start with R1–R3 after reconciling the latest delivered iteration. R8/R9/R11 use existing

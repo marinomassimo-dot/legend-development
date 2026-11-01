@@ -83,3 +83,15 @@ No abstract base class, no registry file, no schema or validator layer, no versi
 plugin framework, no dependency injection, no configuration language, no retry policy, no cache.
 An adapter that needs any of these is the wrong adapter. Licence, retrieval date and query travel
 as values in the output, which is where a reader of a card finds them.
+
+## Transport, coverage and imported documents (IT16, 2026-11-01)
+
+Measured on the ChEMBL REST adapter and kept deliberately small; generic engine, no disease content.
+
+- **Retry and cache** are opt-in in the one fetch seam: `_http.make_fetch(cache_dir, retries, pause)` retries only 5xx and transport failures, logs every failed attempt, and caches only HTTP 200 answers keyed by URL, parameters and body. Errors, 404s and damaged cache files are never served as answers. The key carries no database release: one cache directory per release.
+- **Coverage is its own state**, never folded into `status`: an activity answer says COMPLETE, TRUNCATED, PARTIAL_ERROR (rows kept, `next_offset`), NOT_READ, or complete-but-context-missing. A truncated or failed pull is not a negative result and a retry fetches only what is missing.
+- **Identity stays at the level asked**: parent, salt, stereoisomer and metabolite are not interchangeable; a mechanism found through the parent says so (`mechanism_found_via`) and no activity row is borrowed across them. `molecule_id` declares an identity and reads it by id.
+- **Imported third-party documents**: original byte-identical in the ignored corpus with digest, origin and revision (`keep_original`); only a `public_extract` (addresses withheld, licence wording untouched, relative links and anchors resolved against the source) goes into git; if the licence forbids redistribution the document stays local.
+- **Three kinds of fetching script**: reusable tool (help and import touch no network and write nothing, acquisition starts from `main()`, explicit paths), reproducible package analysis, historical executable note. See the Scientist standing brief for the measured list.
+- **Quantitative comparisons** are graded by `scout_it14_p6_20261101/selectivity_p6.py`: a missing decisive condition limits the comparison that depends on it and never reads as "equivalent"; a review or compilation is not one origin. A ChEMBL document id is a unit of retrieval, not a unit of independence.
+- **A suite that ran zero tests fails the release battery** (`scripts/run_release_regressions.py`, `classify_suite`): executed, executed with skips, zero tests, startup error and failed are different outcomes.
