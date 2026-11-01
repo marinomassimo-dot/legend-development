@@ -114,6 +114,17 @@ class MissingConditions(unittest.TestCase):
         self.assertTrue(any("not one origin" in w for w in why), why)
 
 
+class ConditionForms(unittest.TestCase):
+    def test_written_forms_are_recognised_and_voltage_gated_channels_need_no_agonist(self):
+        m = sp.missing_decisive
+        self.assertEqual(m("glutamate (100 uM) patch clamp at -70 mV"), [])
+        self.assertEqual(m("patch clamp -70mV 10 \u03bcM L-glutamate receptor"), [])
+        self.assertEqual(m("Nav1.7 patch clamp at -90 mV"), [])
+        self.assertEqual(m("dispatch of the drug"), [])
+        self.assertEqual(m("GSK3 kinase radiometric assay"), ["ATP concentration"])
+        self.assertEqual(m("GSK3 kinase at 10 uM ATP"), [])
+
+
 class RealDescriptions(unittest.TestCase):
     """The apinocaltamide Cav1.2 and Cav3.x assays (ChEMBL CHEMBL4181722 and CHEMBL4181719) differ in stimulus: KCl against CaCl2 re-addition."""
 

@@ -13,8 +13,8 @@ Q-A	3 earlier queue	reconciliation MENTIONED_ONLY: whole queue / NMDAR entries	5
 Q-A	3 earlier queue	reconciliation NO_CARD_OR_RECORD_FOUND: whole queue / NMDAR entries	25 / 14	derived at run time from cards, qualification records and uncarded items (READMEs not searched)
 Q-A	2 WWOX-informed	cases deepened	4	known reference, hypothesis, different mechanism, discriminating control
 Q-B	1 simple target-action	activity rows retrieved (census table)	2384	
-Q-B	1 simple target-action	same-document groups graded INTERPRETABLE	3	
-Q-B	1 simple target-action	same-document groups graded LIMITED	28	
+Q-B	1 simple target-action	same-document groups graded INTERPRETABLE	0	
+Q-B	1 simple target-action	same-document groups graded LIMITED	31	
 Q-B	1 simple target-action	same-document groups graded NOT_DETERMINABLE	15	
 Q-B	1 simple target-action	same-document groups graded PANEL_NOT_SELECTIVITY	14	
 Q-B	3 earlier generator	Q7 rows (direct search on GSK3B)	50	dispositions: {'DIAGNOSTIC_ONLY': 50}

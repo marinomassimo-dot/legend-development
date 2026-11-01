@@ -62,7 +62,7 @@ def composition(gene, ttype=""):
 
 def techniques(desc):
     d = (desc or "").lower()
-    return {t for t in TECH if t in d}
+    return {t for t in TECH if re.search(r"\b" + t, d)}
 
 
 def conditions(desc):
@@ -81,20 +81,26 @@ FUNCTIONAL = ELECTRO + ("flipr", "flux", "efflux", "thallium")
 SECONDARY = ("review", "compilation", "secondary")
 
 
-def missing_decisive(desc):
-    """Decisive conditions the description does not state, by technique: voltage-clamp work needs the holding voltage and the agonist concentration, flux assays the stimulus, enzyme assays the ATP concentration. Absence is not incompatibility: the comparison is kept and limited, never promoted to 'equivalent'."""
+AGONISTS = r"(?:l-|d-)?(?:glycine|glutamate|nmda|gaba|d-serine|aspartate|acetylcholine|agonist)"
+UNIT = r"[um\u00b5\u03bc]m"
+LIGAND_GENES = ("GRI", "GABR", "CHRN", "GLR", "HTR3", "P2RX")
+LIGAND_GATED = re.compile(r"receptor|nr1|nr2|grin|nmda|ampa|glutamate|glycine|gaba|nicotinic|acetylcholine|agonist")
+
+
+def missing_decisive(desc, genes=()):
+    """Decisive conditions the description does not state, by technique: voltage-clamp work needs the holding voltage (and, for ligand-gated targets, the agonist concentration), flux assays the stimulus, enzyme/kinase assays the ATP concentration. Absence is not incompatibility: the comparison is kept and limited, never promoted to 'equivalent'."""
     d = (desc or "").lower()
     t = techniques(d)
     miss = []
     if t & set(ELECTRO):
         if not re.search(r"-?\d+\s*mv", d):
             miss.append("holding voltage")
-        if not re.search(r"\d+(?:\.\d+)?\s*[um\u00b5]?m\s+(glycine|glutamate|nmda|gaba|d-serine|aspartate|agonist)|(glycine|glutamate|nmda|gaba|d-serine|aspartate|agonist)\s*(?:at|of|=)?\s*\d", d):
+        if (LIGAND_GATED.search(d) or any(g.startswith(LIGAND_GENES) for g in genes)) and not re.search(r"\d+(?:\.\d+)?\s*" + UNIT + r"\s+(?:of\s+)?" + AGONISTS + r"|" + AGONISTS + r"\s*\(?(?:at|of|=)?\s*\d", d):
             miss.append("agonist concentration")
     elif t & {"flipr", "flux", "efflux", "thallium"}:
         if not re.search(r"(?:followed by|following|upon|after)\s+[a-z0-9]+\s+(?:addition|application)|stimulat|depolari", d):
             miss.append("stimulus")
-    elif "enzyme" in t and not re.search(r"\d+(?:\.\d+)?\s*[um\u00b5]?m\s+atp|atp\s*(?:at|of|=)?\s*\d", d):
+    elif (t & {"enzyme", "substrate"} or re.search(r"kinase|radiometric|caliper|gsk3", d)) and not re.search(r"\d+(?:\.\d+)?\s*" + UNIT + r"\s+atp|atp\s*(?:at|of|=)?\s*\d", d):
         miss.append("ATP concentration")
     return miss
 
@@ -172,7 +178,7 @@ def grade_group(obs, ctx):
         known = [c for c in cset if c]
         if known and (len(known) < len(cset) or any(c != known[0] for c in known)):
             limited.append("stimulus or holding voltage differs or is stated for only some of the assays")
-        gaps = sorted({m for a in assays for m in missing_decisive(ctx[a]["description"])})
+        gaps = sorted({m for a in assays for m in missing_decisive(ctx[a]["description"], attributable)})
         if gaps:
             limited.append("decisive condition(s) not reported in the assay text: " + ", ".join(gaps) + " (no difference found in the fields available is not equivalence shown)")
         if any(ctx[a].get("document_kind", "").lower() in SECONDARY for a in assays):
