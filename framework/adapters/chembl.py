@@ -189,6 +189,8 @@ def query(request: dict, fetch=_http.get_json) -> dict:
     stats = getattr(fetch, "stats", None)
     if stats is not None:
         out["transport"] = dict(stats)
+        if getattr(fetch, "discarded", None):
+            out["transport"]["discarded_entries"] = list(fetch.discarded)
     return out
 
 

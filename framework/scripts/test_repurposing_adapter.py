@@ -615,6 +615,28 @@ class CacheRefusesEmptyAnd200Errors(unittest.TestCase):
                 self.assertEqual([], os.listdir(d))
 
 
+class ExtractAndDiscardHardening(unittest.TestCase):
+    def test_obfuscated_addresses_are_refused(self):
+        h = load_http()
+        for line in ("mailto:jane.roe%40lab.example.org", "jane&#64;lab.example.org", "jane [at] lab.example.org", "jane(at)lab.example.org", "jane\uff20lab.example.org"):
+            with self.subTest(line=line):
+                self.assertTrue(h.addresses_in(line), line)
+        self.assertEqual([], h.addresses_in("see [guide](docs/a.md) at https://example.invalid/x"))
+
+    def test_second_discard_keeps_the_first(self):
+        h = load_http()
+        url = "http://x/a"
+        with tempfile.TemporaryDirectory() as d:
+            f = h.make_fetch(cache_dir=d, get=lambda *a, **k: (200, {"molecules": [1]}), retries=0)
+            path = os.path.join(d, h.hashlib.sha256(json.dumps([url, None, None], sort_keys=True, default=str).encode()).hexdigest() + ".json")
+            for _ in range(2):
+                with open(path, "w", encoding="utf-8") as fh:
+                    fh.write(json.dumps({"url": url, "http": 200, "retrieved_at": "t", "payload": {"error": "x"}}))
+                f(url, expect="molecules")
+            self.assertEqual(2, len(f.discarded), f.discarded)
+            self.assertEqual(2, len({x["kept_as"] for x in f.discarded}), "the first discarded entry must survive the second")
+
+
 class StandingMethodIsReachable(unittest.TestCase):
     """IT16 P5: the roles and the Scientist brief reach the repurposing standing method by link, and the target section exists."""
     def test_links_and_anchor(self):

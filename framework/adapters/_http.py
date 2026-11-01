@@ -97,9 +97,15 @@ def keep_original(corpus_dir, name: str, data: bytes, origin: str, revision: str
             "origin": origin, "revision": revision}
 
 
+def _unobfuscated(line: str) -> str:
+    """Fold the common ways an address is written to dodge a scanner (percent- or entity-encoded at sign, full-width at sign, '[at]'/'(at)') so that they are refused like a plain one."""
+    out = line.replace("%40", "@").replace("&#64;", "@").replace("&#x40;", "@").replace("\uff20", "@")
+    return re.sub(r"\s*[\[(]\s*at\s*[\])]\s*", "@", out, flags=re.I)
+
+
 def addresses_in(text: str) -> list[int]:
     """Line numbers (1-based) of the lines that contain an e-mail address, including `mailto:` targets."""
-    return [n for n, line in enumerate(text.splitlines(), 1) if _EMAIL.search(line)]
+    return [n for n, line in enumerate(text.splitlines(), 1) if _EMAIL.search(_unobfuscated(line))]
 
 
 def reference_record(record: dict, licence_id: str, own_notes: str = "") -> str:
@@ -199,6 +205,10 @@ def make_fetch(cache_dir: str | None = None, retries: int = 2, pause: float = 6.
                 return 200, stored["payload"]
             stats["cache_discarded"] += 1  # a bad entry is a miss, never an answer; kept aside, not deleted
             kept = path + ".discarded"
+            n = 1
+            while os.path.exists(kept):  # an earlier discarded entry is evidence too: never overwrite it
+                n += 1
+                kept = f"{path}.discarded.{n}"
             try:
                 os.replace(path, kept)
             except OSError:
