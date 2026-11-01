@@ -7,11 +7,18 @@
   "OBJECTIVE": "Iteration 15 (ten-hour horizon): systematic discovery from need to catalogue, comparable quantitative pharmacology, measured growth of the module. Keep open recovery of WWOX function, compensation of its loss, and functionally useful partial benefit. Distinguish retrieved / verified / generated / WWOX-specific contribution / demonstrated capability / conditional on physical experiments. A computational result is not therapeutic efficacy.",
   "START_UTC": "2026-11-01T07:25:00Z",
   "BASELINE": "development/main = local main = 7528750ecf17644c8951b53bdd8cede303e83552 (fetched 2026-11-01 08:25 Europe/Rome); IT14 CI success; one worktree; radar run 05:20 UTC without errors (ToolUniverse v1.5.7->v1.5.8; PMID 42941930 signal); hourly mandate watch and daily push check in crontab (no new automation).",
-  "DECISIONS_TAKEN": [],
-  "DEFAULTS_TAKEN": [],
+  "DECISIONS_TAKEN": [
+    "Third-party raw responses (ChEMBL JSON, review full text, scouting downloads) are not tracked: digests tracked, copy in the shared corpus (public gate found contributors' addresses and a large third-party text).",
+    "Producer scripts of one-off packages lose their shebang instead of gaining exec mode: their --help would otherwise re-run network pulls.",
+    "Queue reconciliation value renamed NO_CARD_OR_RECORD_FOUND (absence claim limited to the inputs searched).",
+    "Deepened cases shown in the full edition only; the shareable edition carries a count (names of non-carded compounds stay out)."
+  ],
+  "DEFAULTS_TAKEN": [
+    "GSK3 and NMDAR questions chosen by IT14 scoring logic and module needs; P4 second strand closed as a motivated exclusion (no trigger changed at source)."
+  ],
   "STOP_LOG": [],
   "AUTHORISED_QUEUE_20261101B": {
-    "MANDATE_STATE": "OPEN",
+    "MANDATE_STATE": "COMPLETE",
     "OBJ_P0_BASELINE": {
       "order": 1,
       "steps": [
@@ -167,19 +174,19 @@
           "step": "P8 early targeted checks; different-actor review of decisive conclusions [depends on: P7]",
           "status": "DONE",
           "owner": "verifier",
-          "evidence": "hostile review review_it15 (0 blocking, 8 medium all corrected); verifications Q-A and Q-B changed results; targeted suites: view 160, join 91, coverage 64, adapter 30, selectivity 16, ranking 63, tool routing 7, section refs 13 all OK; lint WARN no BLOCK; growth anchors PASS"
+          "evidence": "hostile review review_it15 (0 blocking, 8 medium corrected); verifications Q-A and Q-B changed results; targeted suites passed; lint WARN no BLOCK; growth anchors PASS"
         },
         {
           "step": "P8 freeze candidate, battery on exact SHA in a no-hardlink clone, gate, remote recheck, push, CI, cleanup [depends on: P8 review]",
-          "status": "IN_PROGRESS",
+          "status": "DONE",
           "owner": "orchestrator",
-          "evidence": "frozen SHA 0b0846641b4250aae667dbc035db5f1c039dd88f; gate PASS on it; battery pid 3175937 in a no-hardlink clone (scratchpad/battery_it15), log scratchpad/battery_it15.log, started 10:15 UTC (11:15 Europe/Rome); remote development/main 7528750e at freeze; local main 01f5f053 (docs merged into the branch)"
+          "evidence": "battery on frozen SHA 16cb4bae0c378b5ca6f437c981940a7e70e0dacc (no-hardlink clone, pid 3197000): REGRESSION VERDICT PASS WITH SKIPS (173 targets, 7 skipped; skips: case-sensitive filesystem, pinned corpus artefacts absent, derive_dismech corpus, Stop hook not installed). A first battery on 0b084664 was stopped after three real failures (shebang exec mode of 17 one-off scripts, 4 TSV row widths, markdown copies in files/ walked by the link test), all fixed. Public release gate PASS. Post-battery change: this record only."
         },
         {
           "step": "Final report (four opening answers, A-J, stop criterion) [depends on: P8 close]",
-          "status": "TODO",
+          "status": "DONE",
           "owner": "orchestrator",
-          "evidence": ""
+          "evidence": "delivered in the closing message of the session"
         }
       ]
     }
