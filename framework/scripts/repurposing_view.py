@@ -3546,6 +3546,32 @@ def validate_ranking(R: dict, cands: dict, need_ids: set) -> list[str]:
     return errs
 
 
+def shareable_deepened_cases(cases: list[dict], allow: dict) -> list[dict]:
+    """Shareable projection of the deepened cases (IT16 P7): own-text fields only, compound-and-action replaced by a class label written in the allowlist.
+    A case without a class label is not exposed; a label or override for an unknown case, or a withheld field that is still listed, is a build error."""
+    pol = allow.get("deepened_cases_shareable") or {}
+    if not pol:
+        return []
+    withheld = set(pol.get("withheld_fields") or [])
+    ids = {c["case_id"] for c in cases}
+    for k in list(pol.get("class_labels") or {}) + list(pol.get("overrides") or {}):
+        if k not in ids:
+            raise SystemExit(f"stale deepened_cases_shareable entry (no such case): {k}")
+    out = []
+    for c in cases:
+        lab = (pol.get("class_labels") or {}).get(c["case_id"])
+        if not lab:
+            continue
+        ov = (pol.get("overrides") or {}).get(c["case_id"]) or {}
+        for f in ov:
+            if f in withheld or f not in c:
+                raise SystemExit(f"deepened_cases_shareable override of a withheld or unknown field: {c['case_id']}.{f}")
+        e = {k: ov.get(k, c[k]) for k in ("case_id", "level", "question", "system", "wwox_evidence", "counter_evidence", "next_experiment")}
+        e["compound_action"] = lab
+        out.append(e)
+    return out
+
+
 def build_ranking(dr: Path, cur: dict, source: str):
     """Projection of ranking_it8_p9_20261029/ranking.json into the page. Full edition: everything. Shareable edition: no catalogue member names, no status classes, no
     potency or exposure text from the pharmacological table, and only class-A access statements (openFDA NDC, MATRIX) per compound; the other access categories survive as counts."""
@@ -3631,8 +3657,9 @@ def build_ranking(dr: Path, cur: dict, source: str):
         # Curated pilot has full-edition member identities. Preserve the existing
         # shareable projection boundary rather than exporting catalogue-derived names.
         "matching_pilot": J.get("matching_pilot", []) if full else [],
-        # IT15 P7: the deepened cases name compounds, so the shareable edition carries only how many there are.
-        "deepened_cases": J.get("deepened_cases", []) if full else [],
+        # IT16 P7: the full edition carries every field; the shareable edition carries the own-text fields with a class label instead of compound names
+        # (allowlist key deepened_cases_shareable) and never external_precedent, pharmacology, its limits or the source paths.
+        "deepened_cases": J.get("deepened_cases", []) if full else shareable_deepened_cases(J.get("deepened_cases", []), load_allowlist(dr)),
         "deepened_cases_n": len(J.get("deepened_cases", [])),
         "selections": {v: {"top": s["top"], "groups": s["top_groups"], "objective": s["top_objective"], "apart": [{"id": a["unit_id"], "group": a["group"], "objective": a["objective"]} for a in s["not_in_top_listed_apart"]], "n_listed": s["n_listed"], "cut_rule": s["cut_rule"]}
                        for v, s in S["selections"].items()},
@@ -3938,27 +3965,40 @@ DEEPENED_LEVEL_IT = {
 
 
 def render_deepened_cases(cases: list[dict], n_shareable: int = 0) -> str:
-    """Deepened cases side by side (IT15 P7). Full edition only: the cases name compounds. The level is shown as text and a symbol, never by colour alone."""
+    """Deepened cases side by side (IT15 P7, shareable projection IT16 P7). The level is shown as text and a symbol, never by colour alone.
+    A case without external_precedent is the shareable projection: those two columns are replaced by one note and no source path is printed."""
     if not cases:
         if n_shareable:
             return (f'<details class="inl" id="deepened-cases"><summary>Casi approfonditi</summary><p class="mini">{n_shareable} casi approfonditi sono consultabili '
                     'nell\'edizione completa locale; questa edizione non riporta i nomi dei composti.</p></details>')
         return ""
+    short = all("external_precedent" not in c for c in cases)
     legend = "".join(f'<li><span class="lvl lvl-{k}">{v[1]} {E(v[0])}</span> {E(v[2])}</li>' for k, v in DEEPENED_LEVEL_IT.items())
     rows = []
     for c in cases:
         lab, sym, _ = DEEPENED_LEVEL_IT[c["level"]]
+        head = f'<tr id="dc-{E(c["case_id"])}"><th scope="row"><span class="lvl lvl-{E(c["level"])}">{sym} {E(lab)}</span><br>{E(c["question"])}</th>'
+        if short:
+            rows.append(head + f'<td>{E(c["compound_action"])}</td><td>{E(c["system"])}</td><td>{E(c["wwox_evidence"])}</td><td>{E(c["counter_evidence"])}</td><td>{E(c["next_experiment"])}</td></tr>')
+            continue
         src = "; ".join(c["sources"])
-        rows.append(f'<tr id="dc-{E(c["case_id"])}"><th scope="row"><span class="lvl lvl-{E(c["level"])}">{sym} {E(lab)}</span><br>{E(c["question"])}</th>'
-                    f'<td>{E(c["compound_action"])}</td><td>{E(c["system"])}</td><td>{E(c["wwox_evidence"])}</td><td>{E(c["external_precedent"])}</td>'
+        rows.append(head + f'<td>{E(c["compound_action"])}</td><td>{E(c["system"])}</td><td>{E(c["wwox_evidence"])}</td><td>{E(c["external_precedent"])}</td>'
                     f'<td>{E(c["pharmacology"])}<br><span class="mini"><b>Limiti:</b> {E(c["pharmacology_limits"])}</span></td><td>{E(c["counter_evidence"])}</td>'
                     f'<td>{E(c["next_experiment"])}<details><summary class="mini">Fonti</summary><p class="mini">{E(src)}</p></details></td></tr>')
+    if short:
+        th = '<th>Domanda biologica e livello</th><th>Classe di composti e azione</th><th>Sistema</th><th>Evidenza WWOX</th><th>Controevidenza</th><th>Prossimo esperimento</th>'
+        note = ('<p class="mini">In questa edizione i casi riportano la classe di composti e non i singoli nomi. Il precedente esterno e le misure farmacologiche (valori e testi derivati '
+                'da ChEMBL, CC BY-SA 3.0, e da lavori di terzi) restano nell\'edizione completa locale: nessun valore di potenza è riportato qui.</p>')
+    else:
+        th = ('<th>Domanda biologica e livello</th><th>Composto e azione</th><th>Sistema</th><th>Evidenza WWOX</th>'
+              '<th>Precedente esterno</th><th>Misura farmacologica e suoi limiti</th><th>Controevidenza</th><th>Prossimo esperimento</th>')
+        note = ""
     return ('<details class="inl" id="deepened-cases"><summary>Casi approfonditi a confronto</summary>'
-            '<p class="mini">Ogni caso risponde alle stesse otto domande. Il livello dice che tipo di sostegno esiste, non quanto il composto sia promettente: '
+            '<p class="mini">Ogni caso risponde alle stesse domande. Il livello dice che tipo di sostegno esiste, non quanto il composto sia promettente: '
             'nessun livello è un punteggio di efficacia e la copertura di un percorso descrive collegamenti, non una quota di malattia trattata. '
-            'Sconosciuto non significa negativo.</p><ul class="lvl-legend mini">' + legend + '</ul>'
-            '<div class="tblwrap"><table class="tbl"><thead><tr><th>Domanda biologica e livello</th><th>Composto e azione</th><th>Sistema</th><th>Evidenza WWOX</th>'
-            '<th>Precedente esterno</th><th>Misura farmacologica e suoi limiti</th><th>Controevidenza</th><th>Prossimo esperimento</th></tr></thead><tbody>'
+            'Una misura funzionale può essere non specifica (per esempio ridurre le crisi anche nel tipo selvatico). Sconosciuto non significa negativo.</p>' + note
+            + '<ul class="lvl-legend mini">' + legend + '</ul>'
+            '<div class="tblwrap"><table class="tbl"><thead><tr>' + th + '</tr></thead><tbody>'
             + "".join(rows) + '</tbody></table></div></details>')
 
 
@@ -4346,7 +4386,7 @@ def scenarios(P: dict) -> list[tuple[str, str]]:
             ("brief", "#brief=" + longest), ("evidence_graph", "#chains"), ("work_order", "#work-order"),
             ("selection", "#selection"), ("hypotheses", "#hypotheses"), ("predictive", "#predictive"), ("contexts", "#contexts"),
             ("section_selection", "#section=selection"), ("section_predictive", "#section=predictive"),
-            ("ranking", "#ranking"), ("section_rankingprint", "#section=rankingprint")]
+            ("ranking", "#ranking"), ("section_rankingprint", "#section=rankingprint"), ("deepened_cases", "#deepened-cases")]
 
 
 CUR_READY_JS = "document.body.getAttribute('data-cur-ready')==='1'"   # set by assets/curated.js when the curated part has rendered
@@ -4380,7 +4420,7 @@ def measure_viewports(html_path: Path, shots: Path | None = None, widths: list |
                     m.update({"requested": w, "scenario": name, "mobile": mobile, "overflow": m["scrollWidth"] > w or m["innerWidth"] > w})
                     if shots and (mobile or w > 390):
                         shots.mkdir(parents=True, exist_ok=True)
-                        anchor = {"comparison": "#compare", "filtered_thread": "#navigate", "technical_open": "#tech-versions", "export_card": "body", "evidence_graph": "#chains", "work_order": "#work-order", "selection": "#selection", "ranking": "#ranking", "section_rankingprint": "body", "hypotheses": "#hypotheses", "predictive": "#predictive", "contexts": "#contexts"}.get(name, "body")
+                        anchor = {"comparison": "#compare", "filtered_thread": "#navigate", "technical_open": "#tech-versions", "export_card": "body", "evidence_graph": "#chains", "work_order": "#work-order", "selection": "#selection", "ranking": "#ranking", "section_rankingprint": "body", "hypotheses": "#hypotheses", "predictive": "#predictive", "contexts": "#contexts", "deepened_cases": "#deepened-cases"}.get(name, "body")
                         y = cdp.evaluate("(function(){var e=document.querySelector(%s);return e?Math.max(0,Math.round(e.getBoundingClientRect().top+scrollY)-8):0})()" % json.dumps(anchor))
                         lm = cdp.call("Page.getLayoutMetrics")["cssContentSize"]
                         tall = name in ("export_card", "comparison", "brief", "evidence_graph", "selection", "hypotheses", "predictive", "contexts", "ranking") and w <= 390

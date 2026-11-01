@@ -57,6 +57,10 @@ Each profile has "Export this card (print / PDF)"; the URL `#export=<card id>` (
 
 No attribution is removed to make data look distributable. The licence analysis behind the allowlist is a separate record; this mechanism does not change its conclusions and is not legal advice. The full file is already tracked in the repository.
 
+### Deepened cases in the shareable edition (IT16 P7)
+
+The ten deepened cases (`../ranking_it8_p9_20261029/deepened_cases.json`; levels catalogued / linked / deepened / functional measure / hypothetical, shown as text and symbol) appear in the shareable page with the own-text fields only: question, level, system, WWOX evidence, counter-evidence, next experiment. The compound-and-action field is replaced by a class label written in `shareable_sources.json` (`deepened_cases_shareable.class_labels`; four `overrides` replace a name the audit rejects: a non-carded tool compound and a catalogue record name). Withheld in every case: external precedent, the pharmacology measure and its limits (values and wording graded from ChEMBL, CC BY-SA 3.0, and from third-party papers: shipping them needs the class-B route with its own credit line and a text-overlap check, not the single page), and the source paths. A functional measure may be non-specific and is not evidence of benefit; pathway coverage is never a share of the disease treated. A case without a class label is not exposed; a stale entry fails the build; the audit stays the judge (`DeepenedCasesShareable` tests, including a mutation that injects a non-carded name).
+
 ### Proof, not just a mechanism (IT5 P13)
 
 ```bash

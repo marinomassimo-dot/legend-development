@@ -113,8 +113,6 @@ index 00000000..54fd5d88
 +          [ "$want" = "$have" ]
 +          grep -c 'name="robots"' live.html || echo "no robots meta tag (indexing accepted)"
 diff --git a/framework/scripts/test_repurposing_view.py b/framework/scripts/test_repurposing_view.py
-old mode 100755
-new mode 100644
 index 8772683e..bf53a162
 --- a/framework/scripts/test_repurposing_view.py
 +++ b/framework/scripts/test_repurposing_view.py

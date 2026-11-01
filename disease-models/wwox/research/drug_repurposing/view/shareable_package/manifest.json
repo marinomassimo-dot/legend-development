@@ -18,7 +18,7 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 11156,
+    "values": 11236,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -223,7 +223,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 2987,
+    "forbidden-name": 3010,
     "forbidden-wording": 12
    },
    "co_attested_wording": [
@@ -248,7 +248,7 @@
    "forbidden_names": 126046,
    "forbidden_wordings": 2888,
    "pair_unmarked_attested_or_unchecked": {
-    "count": 150,
+    "count": 152,
     "names": [
      "act 709478",
      "apinocaltamide",
@@ -263,7 +263,7 @@
      "px 478",
      "sulfopin"
     ],
-    "unchecked_without_corpus": 150
+    "unchecked_without_corpus": 152
    },
    "suppressed_by_exemption": {
     "bibliographic journal name (validated against the journals of the cache)": 4,
@@ -462,7 +462,7 @@
   "BIBLIO": 2397,
   "COUNT": 11599,
   "ID": 4547,
-  "OWN": 82776,
+  "OWN": 82856,
   "ROWNAME": 2251,
   "SRC_A": 189,
   "SRC_META": 256,
@@ -500,8 +500,8 @@
  ],
  "files": {
   "COMPARISON.md": {
-   "bytes": 6436,
-   "sha256": "cc9648f37da0cb1b69801528c5d678782422d21ec460b9e1be185473a9f79888"
+   "bytes": 6772,
+   "sha256": "682498d3c60bbdaa86e21a1b647c46934d70a00bf37a5ea05d20b5c95a6d46e9"
   },
   "LICENSES/CC-BY-4.0.txt": {
    "bytes": 18657,
@@ -529,7 +529,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 1999,
-   "sha256": "33e157891e27cb5d2473183f3180bad737b4a4a87f83b52bfeb5d658ec904c8f"
+   "sha256": "ce82241db13b058d88be913719f6b5013d15900e60091690d5fea92c5b9ed656"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1636,
@@ -544,8 +544,8 @@
    "sha256": "240723d6c86c13fc8f19ff2a5bbe7eec5e64da0f3769ea25e49d8d7b7e5784d0"
   },
   "index.html": {
-   "bytes": 4232363,
-   "sha256": "c792017d3d85804b4b968982d45bbed5079b2ff21d8d4b213b2a151f6436509a"
+   "bytes": 4248089,
+   "sha256": "ac723c2e64400b67b8d8d29b07ba63a0125ec7e03a2d4e5698c71702e1fe3607"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",

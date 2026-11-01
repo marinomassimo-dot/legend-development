@@ -2198,5 +2198,83 @@ class DeepenedCases(unittest.TestCase):
 
 
 
+@unittest.skipUnless(HAVE_DATA, "module data absent")
+class DeepenedCasesShareable(unittest.TestCase):
+    """IT16 P7: the shareable edition exposes the own-text fields of the deepened cases with a class label, never the compound names that are not carded,
+    never the ChEMBL-graded precedent or pharmacology; the audit stays the judge."""
+
+    WITHHELD = ("external_precedent", "pharmacology", "pharmacology_limits", "sources")
+
+    @classmethod
+    def setUpClass(cls):
+        cls.full = rv.jload(DR / "ranking_it8_p9_20261029/deepened_cases.json")
+        cls.allow = rv.load_allowlist(DR)
+        cls.proj = rv.shareable_deepened_cases(cls.full, cls.allow)
+        cls.page = rv.build(DR, "shareable")
+
+    def test_every_case_is_exposed_with_its_level_and_the_withheld_fields_are_absent(self):
+        self.assertEqual([c["case_id"] for c in self.proj], [c["case_id"] for c in self.full])
+        self.assertEqual({c["level"] for c in self.proj}, {"functional_measure", "deepened", "hypothetical", "linked"})
+        for c in self.proj:
+            for f in self.WITHHELD:
+                self.assertNotIn(f, c)
+            self.assertEqual(c["level"], next(x for x in self.full if x["case_id"] == c["case_id"])["level"])
+
+    def test_compound_field_is_a_class_label_not_the_catalogue_text(self):
+        for c in self.proj:
+            orig = next(x for x in self.full if x["case_id"] == c["case_id"])
+            self.assertNotEqual(c["compound_action"], orig["compound_action"])
+        block = json.dumps(embedded(self.page)["cur"]["ranking"]["deepened_cases"]).lower()      # other own text (cards, hypotheses) may name a tool; the case projection must not
+        for name in ("d-ap5", "dalzanemdor", "tiagabine", "ezogabine", "ly-2090314", "tideglusib", "tcn-201", "nnc-711", "ifenprodil", "clobazam", "memantine"):
+            self.assertNotIn(name, block, name)
+
+    def test_withheld_values_do_not_reach_the_shareable_page(self):
+        for c in self.full:
+            for f in ("external_precedent", "pharmacology", "pharmacology_limits"):
+                self.assertNotIn(c[f], self.page, (c["case_id"], f))
+        self.assertNotIn("cases_it14_p3.tsv", self.page)
+
+    def test_page_renders_the_short_table_and_the_licence_note(self):
+        html = rv.render_deepened_cases(self.proj)
+        self.assertIn("Classe di composti e azione", html)
+        self.assertNotIn("Precedente esterno", html.split("</p><ul")[1])
+        self.assertIn("CC BY-SA 3.0", html)
+        self.assertIn("non una quota di malattia trattata", html)
+        self.assertIn("non specifica", html)
+        self.assertIn('id="dc-DC01"', self.page)
+
+    def test_a_stale_or_widening_policy_entry_is_a_build_error(self):
+        import copy
+        a = copy.deepcopy(self.allow)
+        a["deepened_cases_shareable"]["class_labels"]["DC99"] = "x"
+        with self.assertRaises(SystemExit):
+            rv.shareable_deepened_cases(self.full, a)
+        a = copy.deepcopy(self.allow)
+        a["deepened_cases_shareable"]["overrides"] = {"DC01": {"external_precedent": "x"}}
+        with self.assertRaises(SystemExit):
+            rv.shareable_deepened_cases(self.full, a)
+
+    def test_a_case_without_a_class_label_is_not_exposed(self):
+        import copy
+        a = copy.deepcopy(self.allow)
+        del a["deepened_cases_shareable"]["class_labels"]["DC04"]
+        self.assertNotIn("DC04", [c["case_id"] for c in rv.shareable_deepened_cases(self.full, a)])
+        self.assertEqual(rv.shareable_deepened_cases(self.full, {}), [])
+
+    def test_audit_fails_when_a_non_carded_name_is_injected_into_a_case(self):
+        import repurposing_shareable_audit as au
+        P = embedded(self.page)
+        P["cur"]["ranking"]["deepened_cases"][0]["next_experiment"] = "Run d-AP5 at the end."
+        data = json.dumps(P, ensure_ascii=False, sort_keys=True, separators=(",", ":")).replace("</", "<\\/").replace("<!--", "<\\!--")
+        text = re.sub(r'(<script id="data" type="application/json">).*?(</script>)', lambda m: m.group(1) + data + m.group(2), self.page, count=1, flags=re.S)
+        rep, _ = au.audit_html(text, DR, None)
+        self.assertIn("forbidden-name", {v["kind"] for v in rep.violations})
+
+    def test_the_unmutated_page_passes_the_static_audit(self):
+        import repurposing_shareable_audit as au
+        rep, _ = au.audit_html(self.page, DR, None)
+        self.assertEqual(rep.violations, [], rep.violations[:5])
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=1)
