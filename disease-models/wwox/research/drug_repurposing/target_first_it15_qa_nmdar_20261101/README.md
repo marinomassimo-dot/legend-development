@@ -104,3 +104,7 @@ Logged in `PRE_REGISTRATION.md`. Files: `PRE_REGISTRATION.md`, `perimeter_log.ts
 ## Note by the integrator after the hostile review (2026-11-01)
 
 The grader was tightened after this package was finalised (stimulus, holding voltage and agonist concentration stated in the assay description must agree or the group is LIMITED and offers no ratio; SLC/CYP-type symbols are families by their first digit run; a family row identical to its panel row is not repeated). `graded_comparisons_qa.tsv` was regraded with the current grader: 1,037 groups = 492 INTERPRETABLE / 153 LIMITED / 392 NOT_DETERMINABLE. These are the counts that replace the earlier ones in this package. INTERPRETABLE means compatible on the fields examined (most groups are series from one paper in one format); assay descriptions rarely state agonist concentrations, so the label does not mean the conditions were checked, and the INTERPRETABLE groups were not individually reviewed. The H1 and A1 statements above do not rest on that count.
+
+## Where the raw responses are (integrator note)
+
+The raw ChEMBL, GtoPdb, DGIdb and DrugCentral responses of this package (35 MB) are not tracked in the repository: they are third-party data, large, and re-fetchable. Their SHA-256 digests are in `raw_SHA256SUMS.txt`; a local copy is kept in the shared corpus at `files/drug_repurposing_it15/target_first_it15_qa_nmdar_20261101/raw/` (ignored by git). ChEMBL data are CC BY-SA 3.0 (EMBL-EBI); the derived tables in this directory carry the same attribution.

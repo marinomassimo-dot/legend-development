@@ -32,3 +32,7 @@ Primary-paper holding voltages and agonist concentrations (CHEMBL1146243, CHEMBL
 ## Files
 
 `verdicts_qa.tsv` (master), `q1_ratios.tsv`, `q2_occupancy.tsv`, `q3_sources.tsv`, `q4_chembl_queue.tsv`, `q5_regrade.tsv`, `q5_regrade_all_diff.tsv`, `q5_proposal.txt`, `q6_tail_rows.tsv`, `q6_tail_summary.tsv`, `q8_mechanism.tsv`, `q8_note.txt`; scripts `q1_recompute.py`, `q4_chembl_queue.py`, `q5_regrade.py`, `q5_regrade_all.py`, `q6_truncated_tail.py`, `q8_mechanism.py`; `raw/` (ChEMBL document/molecule/mechanism JSON, Burnell PMC XML, Mierau PMC stub). ChEMBL data: Data from ChEMBL, EMBL-EBI (CC BY-SA 3.0).
+
+## Where the raw source files are (integrator note)
+
+The downloaded source files used by the verifier (a PMC XML and a text extract of a review article, ChEMBL responses) are not tracked: the article text is third-party and may not be redistributable. Digests are in `raw_SHA256SUMS.txt`; a local copy is in the shared corpus at `files/drug_repurposing_it15/verify_it15_qa_20261101/raw/` (ignored by git).
