@@ -400,7 +400,7 @@ class KeepingAFetchedDocument(unittest.TestCase):
               "See [install](docs/install.md) and [usage](#usage) and [site](https://example.invalid/x).\n"
               "Licensed under Apache-2.0; copyright the authors.\n")
 
-    def test_public_extract_has_no_address_and_the_original_stays_tracked_by_digest(self):
+    def test_address_bearing_text_is_refused_the_original_stays_and_a_reference_replaces_it(self):
         from importlib import util
         gate_path = ROOT / "scripts" / "public_release_gate.py"
         spec = util.spec_from_file_location("public_release_gate", gate_path)
@@ -412,22 +412,33 @@ class KeepingAFetchedDocument(unittest.TestCase):
             corpus, repo = Path(tmp) / "files", Path(tmp) / "repo"
             repo.mkdir()
             record = http.keep_original(corpus, "tool/README.md", self.SOURCE.encode(), self.ORIGIN, "v1.2")
-            (repo / "extract.md").write_text(http.public_extract(self.SOURCE, self.ORIGIN), encoding="utf-8")
+            with self.assertRaises(http.NoticeContainsAddress) as caught:
+                http.public_extract(self.SOURCE, self.ORIGIN)
+            self.assertIn("lines [2]", str(caught.exception))
+            self.assertNotIn("lab.example.org", str(caught.exception), "the refusal reports lines, never the address")
+            (repo / "reference.md").write_text(http.reference_record(record, "Apache-2.0", "install steps read; no claim"), encoding="utf-8")
             findings: list = []
             gate.scan_privacy_and_secrets(repo, findings)
             self.assertNotIn("EMAIL_ADDRESS", {f.code for f in findings})
+            ref = (repo / "reference.md").read_text(encoding="utf-8")
+            for needle in (record["sha256"], self.ORIGIN, "v1.2", "Apache-2.0"):
+                self.assertIn(needle, ref)
             # the original is byte-identical, addressed by digest, and refuses silent replacement
             self.assertEqual(self.SOURCE.encode(), (corpus / "tool/README.md").read_bytes())
             self.assertEqual(http.hashlib.sha256(self.SOURCE.encode()).hexdigest(), record["sha256"])
-            self.assertEqual("v1.2", record["revision"])
             with self.assertRaises(FileExistsError):
                 http.keep_original(corpus, "tool/README.md", b"changed", self.ORIGIN, "v1.3")
-            # licence wording survives the extraction
-            self.assertIn("Apache-2.0", (repo / "extract.md").read_text(encoding="utf-8"))
+
+    def test_a_text_without_address_keeps_every_licence_byte(self):
+        http = load_http()
+        clean = "# Tool\nCopyright 2026 The Tool Authors\nLicensed under Apache-2.0; see [LICENSE](LICENSE).\n"
+        out = http.public_extract(clean, self.ORIGIN)
+        self.assertEqual(clean.replace("(LICENSE)", "(https://example.invalid/tool/blob/v1.2/LICENSE)"), out)
+        self.assertIn("Copyright 2026 The Tool Authors\nLicensed under Apache-2.0;", out)
 
     def test_relative_paths_and_anchors_resolve_against_the_source(self):
         http = load_http()
-        out = http.public_extract(self.SOURCE, self.ORIGIN)
+        out = http.public_extract(self.SOURCE.replace("Maintainer: jane.roe" + "@lab.example.org\n", ""), self.ORIGIN)
         self.assertIn("(https://example.invalid/tool/blob/v1.2/docs/install.md)", out)
         self.assertIn("(https://example.invalid/tool/blob/v1.2/README.md#usage)", out)
         self.assertIn("(https://example.invalid/x)", out)
@@ -627,18 +638,104 @@ class KeepingAFetchedDocumentEdges(unittest.TestCase):
                     http.keep_original(corpus, bad, b"x", self.ORIGIN, "v1")
             self.assertFalse((Path(tmp) / "esc.txt").exists())
 
-    def test_every_link_form_is_resolved_and_addresses_are_withheld_even_in_licence_lines(self):
+    def test_every_link_form_is_resolved(self):
         http = load_http()
         out = http.public_extract(
             "![logo](img/pic.png) [a](<docs/my file.md>) [ref]\n\n[ref]: guide.md\n"
-            '<a href="x/y.html">h</a> <img src=\'z.png\'> [abs](https://e.invalid/q) [m](mailto:a' '@b.org)\n'
-            "Copyright 2026 Jane <jane" + "@lab.org>, Apache-2.0\n", self.ORIGIN)
+            '<a href="x/y.html">h</a> <img src=\'z.png\'> [abs](https://e.invalid/q)\n'
+            "Copyright 2026 The Authors, Apache-2.0\n", self.ORIGIN)
         base = "https://example.invalid/tool/blob/v1.2/"
         for expected in (f"({base}img/pic.png)", f"(<{base}docs/my file.md>)", f"[ref]: {base}guide.md",
                          f'href="{base}x/y.html"', f"src='{base}z.png'", "(https://e.invalid/q)",
-                         "(mailto:[address withheld])", "Copyright 2026 Jane <[address withheld]>, Apache-2.0"):
+                         "Copyright 2026 The Authors, Apache-2.0"):
             self.assertIn(expected, out)
-        self.assertNotIn("@", out)
+
+    def test_an_address_is_refused_in_a_copyright_line_and_in_a_mailto_target_never_masked(self):
+        http = load_http()
+        for text in ("Copyright 2026 Jane <jane" + "@lab.org>, Apache-2.0\n", "[mail](mailto:a" + "@b.org)\n"):
+            with self.subTest(text=text):
+                with self.assertRaises(http.NoticeContainsAddress):
+                    http.public_extract(text, self.ORIGIN)
+        self.assertFalse(hasattr(http, "EMAIL_REPLACEMENT"), "no text is rewritten into a masked variant")
+
+
+class CacheValidatesOnRead(unittest.TestCase):
+    """IT17 P1.1: the write-side guard does not protect against entries written before it or damaged since; one test serves both sides."""
+    URL = "http://x/molecule/search.json?q=a"
+
+    def _seed(self, d, h, payload, raw=None):
+        f = h.make_fetch(cache_dir=d, get=lambda *a: (200, {"molecules": [1]}))
+        path = os.path.join(d, h.hashlib.sha256(json.dumps([self.URL, None, None], sort_keys=True, default=str).encode()).hexdigest() + ".json")
+        os.makedirs(d, exist_ok=True)
+        with open(path, "w", encoding="utf-8") as fh:
+            fh.write(raw if raw is not None else json.dumps({"url": self.URL, "http": 200, "retrieved_at": "t", "payload": payload}))
+        return path
+
+    def _run(self, payload, expect="molecules", raw=None, retries=2, get_replies=None):
+        h = load_http()
+        calls, replies = [], list(get_replies or [(200, {"molecules": [{"id": 1}], "page_meta": {}})])
+        def get(url, params=None, body=None, timeout=20):
+            calls.append(url); return replies.pop(0) if len(replies) > 1 else replies[0]
+        with tempfile.TemporaryDirectory() as d:
+            path = self._seed(d, h, payload, raw)
+            f = h.make_fetch(cache_dir=d, retries=retries, pause=0, get=get, sleep=lambda s: None)
+            out = f(self.URL, expect=expect)
+            return out, f, calls, sorted(os.listdir(d)), path
+
+    def test_old_error_only_entry_is_a_miss_refetched_and_kept_aside(self):
+        out, f, calls, files, path = self._run({"error": "rate limited"})
+        self.assertEqual(200, out[0]); self.assertIn("molecules", out[1])
+        self.assertEqual(1, len(calls))
+        self.assertEqual(1, f.stats["cache_discarded"]); self.assertEqual(0, f.stats["cache_hits"])
+        self.assertEqual("bare error envelope", f.discarded[0]["reason"])
+        self.assertTrue(any(n.endswith(".json.discarded") for n in files), files)
+        self.assertEqual(2, len(files), "the good answer replaced the entry; the bad one is kept")
+
+    def test_legitimate_empty_page_is_a_hit(self):
+        empty = {"molecules": [], "page_meta": {"total_count": 0, "next": None}}
+        out, f, calls, files, _ = self._run(empty)
+        self.assertEqual((200, empty), out)
+        self.assertEqual([], calls); self.assertEqual(0, f.stats["cache_discarded"]); self.assertEqual(1, f.stats["cache_hits"])
+
+    def test_entry_missing_the_expected_key_is_a_miss_but_without_expectation_it_is_a_hit(self):
+        out, f, calls, _, _ = self._run({"page_meta": {}, "other": []})
+        self.assertEqual(1, len(calls)); self.assertEqual(1, f.stats["cache_discarded"])
+        self.assertIn("'molecules'", f.discarded[0]["reason"])
+        out, f, calls, _, _ = self._run({"page_meta": {}, "other": []}, expect=None)
+        self.assertEqual([], calls); self.assertEqual(1, f.stats["cache_hits"])
+
+    def test_damaged_json_is_a_miss_and_counted(self):
+        out, f, calls, files, _ = self._run(None, raw="{not json")
+        self.assertEqual(1, len(calls)); self.assertEqual(1, f.stats["cache_discarded"])
+        self.assertEqual("damaged JSON", f.discarded[0]["reason"])
+
+    def test_retry_stays_bounded_after_a_discard(self):
+        out, f, calls, files, _ = self._run({"error": "x"}, retries=2, get_replies=[(503, "down")])
+        self.assertEqual(503, out[0]); self.assertEqual(3, len(calls))
+        self.assertEqual(1, f.stats["cache_discarded"]); self.assertEqual(3, f.stats["failed_attempts"])
+
+    def test_a_refetched_answer_still_lacking_the_key_is_not_cached(self):
+        out, f, calls, files, _ = self._run({"error": "x"}, get_replies=[(200, {"unexpected": 1})])
+        self.assertEqual(1, len(calls))
+        self.assertEqual(files, [n for n in files if n.endswith(".discarded")], "only the kept-aside entry remains")
+
+    def test_chembl_adapter_tells_a_caching_fetch_which_key_it_needs(self):
+        h = load_http()
+        seen = []
+        def get(url, params=None, body=None, timeout=20):
+            seen.append(url)
+            if "status.json" in url:
+                return 200, {"chembl_db_version": "ChEMBL_X", "chembl_release_date": "d"}
+            return 200, {"molecules": [], "page_meta": {}}
+        with tempfile.TemporaryDirectory() as d:
+            f = h.make_fetch(cache_dir=d, get=get, retries=0)
+            out = ra.load("chembl", ADAPTERS).query({"drug": "nothing"}, fetch=f)
+            self.assertEqual("NO_MATCH_FOUND", out["status"])
+            n = len(seen)
+            out2 = ra.load("chembl", ADAPTERS).query({"drug": "nothing"}, fetch=f)
+            self.assertEqual(n, len(seen), "the legitimate empty page was a cache hit")
+            self.assertEqual("NO_MATCH_FOUND", out2["status"])
+            self.assertEqual(0, out2["transport"]["cache_discarded"])
 
 
 if __name__ == "__main__":

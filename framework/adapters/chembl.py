@@ -70,10 +70,15 @@ ACTIVITY_TYPES = ("IC50", "Ki", "Kd", "EC50")
 ASSAY_FIELDS = ("assay_organism", "assay_cell_type", "assay_tissue", "assay_type", "assay_test_type", "confidence_score", "relationship_type", "description")
 
 
+def _get(fetch, url: str, expect: str):
+    """Call `fetch`; a caching fetch (`fetch.validates`) is also told which key a good answer carries, so a cached entry without it is a miss."""
+    return fetch(url, expect=expect) if getattr(fetch, "validates", False) else fetch(url)
+
+
 def _targets_for_accession(accession: str, out: dict, fetch) -> bool:
     url = f"{BASE}/target.json?target_components__accession={quote(accession)}&limit=50"
     out["requests_sent"].append(url)
-    status, payload = fetch(url)
+    status, payload = _get(fetch, url, "targets")
     if status != 200 or not isinstance(payload, dict):
         out["error"] = f"HTTP {status}: {str(payload)[:300]}"
         return False
@@ -97,7 +102,7 @@ def _target_genes(rows: list, out: dict, fetch) -> dict:
     for i in range(0, len(ids), 40):
         url = f"{BASE}/target.json?target_chembl_id__in={quote(','.join(ids[i:i+40]))}&limit=100"
         out["requests_sent"].append(url)
-        status, payload = fetch(url)
+        status, payload = _get(fetch, url, "targets")
         if status != 200 or not isinstance(payload, dict):
             out["note"] = (out.get("note", "") + f" target genes incomplete: HTTP {status} for target batch {i // 40 + 1}; rows carry target_gene_symbols=null where missing.").strip()
             continue
@@ -123,7 +128,7 @@ def _activities(request: dict, out: dict, fetch) -> dict:
     while len(rows) < cap:
         url = f"{BASE}/activity.json?{params}&limit={min(200, cap - len(rows))}&offset={offset}"
         out["requests_sent"].append(url)
-        status, payload = fetch(url)
+        status, payload = _get(fetch, url, "activities")
         if status != 200 or not isinstance(payload, dict):
             out["error"] = f"HTTP {status}: {str(payload)[:300]}"
             out["hits"] = [dict(h) for h in rows]
@@ -145,7 +150,7 @@ def _activities(request: dict, out: dict, fetch) -> dict:
     for i in range(0, len(ids), 40):
         url = f"{BASE}/assay.json?assay_chembl_id__in={quote(','.join(ids[i:i+40]))}&limit=100"
         out["requests_sent"].append(url)
-        status, payload = fetch(url)
+        status, payload = _get(fetch, url, "assays")
         if status != 200 or not isinstance(payload, dict):
             out["note"] = (out.get("note", "") + f" assay context incomplete: HTTP {status} for assay batch {i // 40 + 1}; rows carry assay_context=null where missing").strip()
             assay_failed += 1
@@ -207,7 +212,7 @@ def _query(request: dict, fetch) -> dict:
         return out
     url = f"{BASE}/status.json"
     out["requests_sent"].append(url)
-    status, payload = fetch(url)
+    status, payload = _get(fetch, url, "chembl_db_version")
     if status == 200 and isinstance(payload, dict):
         out["source_version"] = f"{payload.get('chembl_db_version')} {payload.get('chembl_release_date')}"
     if uniprot:
@@ -218,7 +223,7 @@ def _query(request: dict, fetch) -> dict:
     if gene:
         url = f"{BASE}/target/search.json?q={quote(gene)}&limit=20"
         out["requests_sent"].append(url)
-        status, payload = fetch(url)
+        status, payload = _get(fetch, url, "targets")
         if status != 200 or not isinstance(payload, dict):
             out["error"] = f"HTTP {status}: {str(payload)[:300]}"
             return out
@@ -232,7 +237,7 @@ def _query(request: dict, fetch) -> dict:
     if declared:
         url = f"{BASE}/molecule/{quote(declared)}.json"
         out["requests_sent"].append(url)
-        status, payload = fetch(url)
+        status, payload = _get(fetch, url, "molecule_chembl_id")
         if status == 404:
             out["status"] = "NO_MATCH_FOUND"
             out["note"] = f"the declared id {declared} does not exist in this release"
@@ -246,7 +251,7 @@ def _query(request: dict, fetch) -> dict:
     else:
         url = f"{BASE}/molecule/search.json?q={quote(drug)}&limit=5"  # a name with spaces is a valid query
         out["requests_sent"].append(url)
-        status, payload = fetch(url)
+        status, payload = _get(fetch, url, "molecules")
         if status != 200 or not isinstance(payload, dict):
             out["error"] = f"HTTP {status}: {str(payload)[:300]}"
             return out
@@ -276,7 +281,7 @@ def _query(request: dict, fetch) -> dict:
         via = "molecule"
         url = f"{BASE}/mechanism.json?molecule_chembl_id={mid}&limit=20"
         out["requests_sent"].append(url)
-        status, payload = fetch(url)
+        status, payload = _get(fetch, url, "mechanisms")
         if status != 200 or not isinstance(payload, dict):
             out["error"] = f"HTTP {status}: {str(payload)[:300]}"
             return out
@@ -288,7 +293,7 @@ def _query(request: dict, fetch) -> dict:
             via = "parent_filter"
             url = f"{BASE}/mechanism.json?parent_molecule_chembl_id={parent}&limit=20"
             out["requests_sent"].append(url)
-            status, payload = fetch(url)
+            status, payload = _get(fetch, url, "mechanisms")
             if status != 200 or not isinstance(payload, dict):
                 out["error"] = f"HTTP {status}: {str(payload)[:300]}"
                 return out
