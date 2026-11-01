@@ -1,0 +1,13 @@
+{
+ "baseline_B1_top_definition_change": "FREEZE.json records baseline_B1_top with the id-tie filler U01 (8 units); the scorer now derives B1 top as the units with at least one WWOX-system assertion (7 units), from the frozen copies",
+ "pool_id_col": "unit_id",
+ "real_anchor": "the repository commit 3e167e250fd60439bf179b9a542011625809d74a plus the sha256 digests in FREEZE.json; the clock value is the tool's own claim",
+ "scorer_versions": [
+  {
+   "reason": "IT17 P3 verifier repairs: seal, derivation from frozen copies, ISO dates, unknown unit ids rejected, B1 top without id-tie filler",
+   "sha256": "36a6609f1b7c051f90a299bdf0433d346678dfe2bd191afb9d0c5344d41da8eb"
+  }
+ ],
+ "top_n": 8,
+ "written": "2026-11-01, after the freeze; FREEZE.json is NOT rewritten and frozen_at_utc 2026-11-01T16:54:06Z stands"
+}

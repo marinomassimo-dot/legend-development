@@ -130,6 +130,64 @@ class T(unittest.TestCase):
                      "--rules", str(self.r / "rules.py")])
 
 
+class Integrity(T):
+    def _reseal(self):
+        (self.out / "FREEZE.sha256").write_text("%s  FREEZE.json\n" % pe.sha256(self.fz))
+
+    def _edit(self, **kw):
+        rec = json.loads(Path(self.fz).read_text())
+        rec.update(kw)
+        Path(self.fz).write_text(json.dumps(rec, indent=1, sort_keys=True))
+
+    def _outcomes(self, body):
+        p = self.r / "o.tsv"
+        p.write_text(HDR + body)
+        return str(p)
+
+    def test_tampered_selection_or_instant_refused_by_seal(self):
+        self._edit(selection=["C", "A"], frozen_at_utc="2026-01-01T00:00:00Z")
+        self.assertEqual(pe.main(["evaluate", "--freeze", self.fz, "--outcomes", self._outcomes(row("A", "favourable"))]), 3)
+
+    def test_resealed_tamper_still_caught_against_frozen_copies(self):
+        self._edit(selection=["C", "A"])
+        self._reseal()
+        self.assertEqual(pe.main(["evaluate", "--freeze", self.fz, "--outcomes", self._outcomes(row("A", "favourable"))]), 3)
+
+    def test_scorer_digest_checked(self):
+        self._edit(scorer_sha256="0" * 64)
+        self._reseal()
+        self.assertTrue(any("scorer" in b for b in pe.verify(self.fz)[1]))
+
+    def test_sealed_addendum_may_list_a_later_scorer(self):
+        self._edit(scorer_sha256="0" * 64)
+        (self.out / "ADDENDUM.json").write_text(json.dumps({"scorer_versions": [{"sha256": pe.sha256(pe.__file__), "reason": "fix"}]}))
+        (self.out / "FREEZE.sha256").write_text("%s  FREEZE.json\n%s  ADDENDUM.json\n" % (pe.sha256(self.fz), pe.sha256(self.out / "ADDENDUM.json")))
+        self.assertEqual(pe.verify(self.fz)[1], [])
+
+    def test_rules_digest_checked_against_git(self):
+        rec = json.loads(Path(self.fz).read_text())
+        rec["inputs"]["rules"]["sha256"] = "1" * 64
+        Path(self.fz).write_text(json.dumps(rec, indent=1, sort_keys=True))
+        self._reseal()
+        self.assertTrue(any("rules" in b for b in pe.verify(self.fz, self.r)[1]))
+
+    def test_b1_top_has_no_id_tie_filler(self):
+        (self.r / "mem.tsv").write_text("unit_id\twwox_assertions\nC\t5\n")
+        self.assertEqual(pe.b1_top_units(pe.tsv(self.r / "units.tsv"), pe.tsv(self.r / "mem.tsv"), "unit_id", 3), ["C"])
+
+    def test_unknown_unit_id_is_an_error_not_a_count(self):
+        body = row("U30", "favourable", grp="O1") + row("Z99", "favourable", grp="O2") + row("A", "favourable", grp="O3")
+        self.assertEqual(pe.main(["evaluate", "--freeze", self.fz, "--outcomes", self._outcomes(body)]), 4)
+
+    def test_dates_must_be_iso(self):
+        for bad in ("Nov 2026", "2026-11-1", "2026-13-01", "20261101"):
+            self.assertEqual(pe.main(["evaluate", "--freeze", self.fz, "--outcomes", self._outcomes(row("A", "favourable", date=bad))]), 4, bad)
+
+    def test_seal_refuses_to_overwrite(self):
+        with self.assertRaises(SystemExit):
+            pe.seal(self.fz, None)
+
+
 class Help(unittest.TestCase):
     def test_help_writes_nothing(self):
         with tempfile.TemporaryDirectory() as d:

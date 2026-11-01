@@ -38,3 +38,6 @@ Locked 2026-11-01 before the EVAL command: `direction_task.py` sha256 09b2ab6ac7
 
 ## Post-lock note (2026-11-01)
 The first EVAL command stopped on a parsing error in the card-link subset only (some `card_links.json` link entries carry `catalogue_id` and no `chembl_id`) before printing or writing anything. The parser line was fixed (use `catalogue_id` when `chembl_id` is absent); the mapping tables, split, baselines and metric code were not touched. The executed script therefore has sha256 e814abbfc91274439e361393e1babc167e5f32ae776594dfed61eaa638c02c46 (recorded in `results_direction.json`), not the locked digest above; the difference is that one line.
+
+## Dated correction (2026-11-01, added after independent verification; registered numbers above are not changed)
+Amendment 1 text says 7 of the 15 dev discordances involved a partial agonist. Reverting the amendment gives 15 discordant DEV pairs of which 12 involve partial agonists and 3 remain (the amendment text undercounted). Without the amendment EVAL would be 949/961 = 98.8% correct, against 923/926 = 99.7% with it, so the amendment does not drive the result. Separately: the discordant pairs cluster by compound (6 pairs, 4 compounds), and 339 of 926 EVAL determinate pairs have no module PubMed reference, so the shared-reference split is a partial independence check only.
