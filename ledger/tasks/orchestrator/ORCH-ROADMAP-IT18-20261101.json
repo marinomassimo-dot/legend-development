@@ -37,8 +37,9 @@
    "steps": [
     {
      "step": "P2 catalogue funnel, six discordances, vigabatrin references",
-     "status": "IN_PROGRESS",
-     "owner": "scientist"
+     "status": "DONE",
+     "owner": "scientist",
+     "evidence": "verified by an independent actor; funnel, six discordances, vigabatrin sources"
     }
    ]
   },
@@ -47,8 +48,9 @@
    "steps": [
     {
      "step": "P3 one capability trial vs current path",
-     "status": "IN_PROGRESS",
-     "owner": "scientist"
+     "status": "DONE",
+     "owner": "scientist",
+     "evidence": "DrugCentral adopted for direction check only; ToolUniverse discarded; verified"
     }
    ]
   },
@@ -57,8 +59,9 @@
    "steps": [
     {
      "step": "P4 matching comparison T/X/L, contrast cases, emergent-hypothesis check; independent verifier",
-     "status": "IN_PROGRESS",
-     "owner": "scientist"
+     "status": "DONE",
+     "owner": "scientist",
+     "evidence": "no advantage measured, none excluded (2/2 determinate rows); verified; run 3 follow-up executed by the same fresh actor"
     }
    ]
   },
@@ -67,8 +70,9 @@
    "steps": [
     {
      "step": "P5 outcomes into cards/needs/queue/view by regeneration",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "ranking text fix and regeneration; freshness FRESH"
     }
    ]
   },
