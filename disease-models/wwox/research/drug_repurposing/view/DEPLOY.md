@@ -111,7 +111,7 @@ Everything else in this document is prepared. Reserved:
 * **Any history or visibility remedy** for the findings of `licence_inventory_it7_20261029.md` (rewrite, force-push, removal request, moving
   material, who confirms the current visibility).
 
-Operator approval already granted elsewhere is not extended by this document; it does not authorise either act.
+**Authorisation (2026-11-01, IT18 mandate integration).** The operator authorised the first publication of the shareable view and its later updates, only while free initially and in steady state; this covers the workflow, Pages and the dispatch, and is not to be asked again within that perimeter. It does not cover the history/visibility remedy of the second bullet, which stays reserved, nor any spend (a change of the provider's terms authorises none). Rollback: section 8.
 
 ## 10. After publication (for a verifier)
 

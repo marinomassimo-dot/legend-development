@@ -1,5 +1,8 @@
 # Request to the operator: one bundled act, publication of the shareable repurposing view
 
+> **STATUS UPDATE, 2026-11-01 (IT18): AUTHORISED by the operator in the IT18 mandate integration.** First publication of the shareable view and its later updates are authorised **only while free, initially and in steady state** (no paid service, purchased domain, backend or commercial dependency; a change of the provider's terms does not authorise any spend). This standing authorisation covers the four steps below and later updates of the package; it is not to be requested again within that perimeter. The "reserved act" wording that follows is kept as history. Residual items, if any, are recorded in `view/DEPLOY.md` section 9.
+
+
 Prepared 2026-11-01 (IT17, phase 2). This text asks; it applies, enables and dispatches nothing. Nothing in it is medical advice; the page is research material about a disease-level genotype class. The act is reserved to the operator (`LEGEND_CORE.md` section 21d, publication to any public surface other than a development-repository push; `view/DEPLOY.md` section 9). A Pages site is a second public surface. No operator answer to the earlier requests (`ops_it11_p5_20261031/operator_request_publish_view_it11.md`) is recorded.
 
 ## The decision asked

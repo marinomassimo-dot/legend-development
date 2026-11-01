@@ -2131,7 +2131,7 @@ class It7P7Deployment(unittest.TestCase):
         self.assertIn("sections 6 and 9", self.wf)
         self.assertIn("DEPLOY_DOC", self.wf)      # the verify job also checks manifest.json, against the table of DEPLOY.md
         tracked = subprocess.run(["git", "-C", str(DR), "ls-files", "--full-name", "../../../../.github"], capture_output=True, text=True).stdout.split()
-        self.assertEqual(tracked, [".github/workflows/public-release-gate.yml"])      # nothing was added under .github
+        self.assertEqual(sorted(tracked), [".github/workflows/public-release-gate.yml", ".github/workflows/publish-shareable-view.yml"])      # IT11 P5: the activated copy of the proposal
 
     def test_smoke_job_is_read_only_runs_after_deploy_and_compares_the_live_digest(self):
         """IT11 P5: after the deployment the live page is fetched and compared with the package file; the job holds no write permission."""
