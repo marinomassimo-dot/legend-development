@@ -76,6 +76,29 @@ def conditions(desc):
     return out
 
 
+ELECTRO = ("patch", "clamp", "oocyte")
+FUNCTIONAL = ELECTRO + ("flipr", "flux", "efflux", "thallium")
+SECONDARY = ("review", "compilation", "secondary")
+
+
+def missing_decisive(desc):
+    """Decisive conditions the description does not state, by technique: voltage-clamp work needs the holding voltage and the agonist concentration, flux assays the stimulus, enzyme assays the ATP concentration. Absence is not incompatibility: the comparison is kept and limited, never promoted to 'equivalent'."""
+    d = (desc or "").lower()
+    t = techniques(d)
+    miss = []
+    if t & set(ELECTRO):
+        if not re.search(r"-?\d+\s*mv", d):
+            miss.append("holding voltage")
+        if not re.search(r"\d+(?:\.\d+)?\s*[um\u00b5]?m\s+(glycine|glutamate|nmda|gaba|d-serine|aspartate|agonist)|(glycine|glutamate|nmda|gaba|d-serine|aspartate|agonist)\s*(?:at|of|=)?\s*\d", d):
+            miss.append("agonist concentration")
+    elif t & {"flipr", "flux", "efflux", "thallium"}:
+        if not re.search(r"(?:followed by|following|upon|after)\s+[a-z0-9]+\s+(?:addition|application)|stimulat|depolari", d):
+            miss.append("stimulus")
+    elif "enzyme" in t and not re.search(r"\d+(?:\.\d+)?\s*[um\u00b5]?m\s+atp|atp\s*(?:at|of|=)?\s*\d", d):
+        miss.append("ATP concentration")
+    return miss
+
+
 NO_RATIO_IF = ("techniques differ", "cell systems differ", "stimulus or holding voltage differs")
 
 
@@ -149,6 +172,11 @@ def grade_group(obs, ctx):
         known = [c for c in cset if c]
         if known and (len(known) < len(cset) or any(c != known[0] for c in known)):
             limited.append("stimulus or holding voltage differs or is stated for only some of the assays")
+        gaps = sorted({m for a in assays for m in missing_decisive(ctx[a]["description"])})
+        if gaps:
+            limited.append("decisive condition(s) not reported in the assay text: " + ", ".join(gaps) + " (no difference found in the fields available is not equivalence shown)")
+        if any(ctx[a].get("document_kind", "").lower() in SECONDARY for a in assays):
+            limited.append("the document is a review or compilation: its values may come from distinct experiments and papers, so it is not one origin")
         if any(ctx[a]["data_validity_comment"] for a in assays):
             limited.append("a validity comment is attached to at least one assay")
     elif not assays:

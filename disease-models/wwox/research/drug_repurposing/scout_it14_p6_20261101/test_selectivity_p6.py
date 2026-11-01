@@ -28,7 +28,8 @@ def grade(rows, c):
 class Grades(unittest.TestCase):
     def test_informative_same_system_pair_is_interpretable(self):
         r = [row("CACNA1G", 6.4, assay="A1"), row("CACNA1C", 2410, assay="A2")]
-        gr, why, by, comp, attr = grade(r, ctx(A1={}, A2={}))
+        d = {"description": "inhibition of recombinant channel in HEK293 cells by FLIPR followed by KCl addition"}
+        gr, why, by, comp, attr = grade(r, ctx(A1=d, A2=d))
         self.assertEqual(gr, "INTERPRETABLE", why)
 
     def test_same_document_but_different_families_is_a_panel_not_selectivity(self):
@@ -79,6 +80,38 @@ class Grades(unittest.TestCase):
         r = [row("CACNA1G", 6.4, assay="A1"), row("CACNA1C", 2410, assay="A2")]
         gr, why, *_ = grade(r, ctx(A1={}, A2={"data_validity_comment": "Outside typical range"}))
         self.assertEqual(gr, "LIMITED")
+
+
+class MissingConditions(unittest.TestCase):
+    """IT16 P1.1: a decisive condition absent from every description used to leave the comparison INTERPRETABLE with no limit shown."""
+    PATCH = "Inhibition measured by patch clamp"
+
+    def pair(self, d1, d2):
+        r = [row("GRIN1|GRIN2A", 100, assay="A1"), row("GRIN1|GRIN2B", 10, assay="A2")]
+        return grade(r, ctx(A1={"description": d1}, A2={"description": d2}))
+
+    def test_absent_voltage_and_agonist_limit_but_keep_the_observation(self):
+        gr, why, by, comp, attr = self.pair(self.PATCH, self.PATCH)
+        self.assertEqual(gr, "LIMITED")
+        self.assertTrue(any("holding voltage" in w and "agonist concentration" in w and "not equivalence" in w for w in why), why)
+        self.assertEqual(sorted(attr), ["GRIN1|GRIN2A", "GRIN1|GRIN2B"])     # both values are still attributable and kept
+
+    def test_incompatible_conditions_are_limited_without_a_ratio(self):
+        gr, why, *_ = self.pair("patch clamp at -40 mV, 3 uM glycine", "patch clamp at -70 mV, 3 uM glycine")
+        self.assertEqual(gr, "LIMITED")
+        self.assertTrue(any("differs" in w for w in why), why)
+
+    def test_informative_comparison_with_all_conditions_stated_is_interpretable(self):
+        d = "patch clamp at -70 mV, 10 uM glutamate"
+        gr, why, *_ = self.pair(d, d)
+        self.assertEqual(gr, "INTERPRETABLE", why)
+
+    def test_review_or_compilation_is_not_one_origin(self):
+        d = "patch clamp at -70 mV, 10 uM glutamate"
+        r = [row("GRIN1|GRIN2A", 100, assay="A1"), row("GRIN1|GRIN2B", 10, assay="A2")]
+        gr, why, *_ = grade(r, ctx(A1={"description": d, "document_kind": "review"}, A2={"description": d, "document_kind": "review"}))
+        self.assertEqual(gr, "LIMITED")
+        self.assertTrue(any("not one origin" in w for w in why), why)
 
 
 class RealDescriptions(unittest.TestCase):
