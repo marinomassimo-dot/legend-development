@@ -73,9 +73,9 @@
    "steps": [
     {
      "step": "P4 dedicated continuity proof: fresh actor applies canonical guidance to a small real package; fresh verifier; orchestrator reconciles and picks next package; checkpoint resume from record",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "proof package: publication readiness of the shareable view. Phase 1 actor (fresh context, brief + canonical entries only) gathers state and writes CHECKPOINT.md on its own branch; phase 2 actor resumes from the record only; verifier with separate context; orchestrator reconciles and picks next package. Live trace in disease-models/wwox/research/drug_repurposing/continuity_proof_it17_20261101/ (created at close)."
     }
    ]
   },
