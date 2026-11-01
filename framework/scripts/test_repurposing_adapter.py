@@ -589,5 +589,16 @@ class ResilientTransport(ChemblActivities):
         self.assertFalse(any("activity.json" in u for u in out["requests_sent"]), "no activity row is borrowed from another molecule")
 
 
+class StandingMethodIsReachable(unittest.TestCase):
+    """IT16 P5: the roles and the Scientist brief reach the repurposing standing method by link, and the target section exists."""
+    def test_links_and_anchor(self):
+        road = (ROOT / "disease-models/wwox/research/drug_repurposing/roadmap_current.md").read_text(encoding="utf-8")
+        self.assertIn("\n## Standing method\n", road)
+        for f in ("roles/orchestrator.md", "roles/scientist.md", "framework/protocols/scientist_standing_brief.md"):
+            self.assertIn("roadmap_current.md#standing-method", (ROOT / f).read_text(encoding="utf-8"), f)
+        conv = road.split("## Standing method")[1].split("\n## ")[0]
+        self.assertIn("repurposing_adapter_convention.md", conv)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

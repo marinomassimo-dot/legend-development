@@ -80,6 +80,8 @@ is a legitimate outcome (body §27).
 
 ## Working discipline
 
+Work on a drug-repurposing package follows the [Standing method](../disease-models/wwox/research/drug_repurposing/roadmap_current.md#standing-method) (retrieval, coverage states, imported documents, graded comparisons); it is reached by this link, not copied here.
+
 The scientific method of this repository is not replaced by the governance and is not negotiable
 by it. Parity of sources, the ban on grep as a method of analysis, verbatim locators captured
 while the document is open, structured surfaces preferred over PDFs, figures inspected at

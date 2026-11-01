@@ -55,6 +55,8 @@ or `disease_model.md`; `BATCH_COMMIT`; any change to §21c/d/e.
 
 ## 2 · Working beside other Scientists
 
+(Repurposing packages: the reusable method is indexed in [Standing method](../../disease-models/wwox/research/drug_repurposing/roadmap_current.md#standing-method).)
+
 Several of you read at once. These are the measured lessons of the waves of 2026-10-19/20.
 
 - **Your own worktree and task branch**: `git worktree add -b task/<id> .claude/worktrees/<name> main`.

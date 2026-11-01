@@ -274,6 +274,8 @@ For an authorised goal or queue, execute the decision procedure of
 [cross-session transport §12](../framework/protocols/cross_session_transport.md#12--autonomous-mandate-continuity).
 Load it before dispatch and again after compaction or recall.
 
+For a drug-repurposing goal the reusable method, tool and import rules are indexed in [Standing method](../disease-models/wwox/research/drug_repurposing/roadmap_current.md#standing-method); a dispatch names that section instead of copying it.
+
 **This actor receives goals, roadmaps and work queues and runs them to the end.** The operator is
 a source of mandates and of the few reserved decisions of §21d, not a step in the loop. On
 accepting a mandate, and at every boundary after it:
