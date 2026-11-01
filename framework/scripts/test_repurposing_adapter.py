@@ -382,5 +382,82 @@ class ChemblActivities(unittest.TestCase):
         self.assertIn("never absence", out["note"])
 
 
+def load_http():
+    from importlib import util
+    spec = util.spec_from_file_location("adapters_http", ADAPTERS / "_http.py")
+    module = util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+class KeepingAFetchedDocument(unittest.TestCase):
+    """IT15: third-party READMEs saved verbatim into a tracked package leaked contributor
+    e-mail addresses to the release gate and left relative links that dangled in the copy."""
+
+    ORIGIN = "https://example.invalid/tool/blob/v1.2/README.md"
+    SOURCE = ("# Tool\nMaintainer: jane.roe@lab.example.org\n"
+              "See [install](docs/install.md) and [usage](#usage) and [site](https://example.invalid/x).\n"
+              "Licensed under Apache-2.0; copyright the authors.\n")
+
+    def test_public_extract_has_no_address_and_the_original_stays_tracked_by_digest(self):
+        from importlib import util
+        gate_path = ROOT / "scripts" / "public_release_gate.py"
+        spec = util.spec_from_file_location("public_release_gate", gate_path)
+        gate = util.module_from_spec(spec)
+        sys.modules[spec.name] = gate
+        spec.loader.exec_module(gate)
+        http = load_http()
+        with tempfile.TemporaryDirectory() as tmp:
+            corpus, repo = Path(tmp) / "files", Path(tmp) / "repo"
+            repo.mkdir()
+            record = http.keep_original(corpus, "tool/README.md", self.SOURCE.encode(), self.ORIGIN, "v1.2")
+            (repo / "extract.md").write_text(http.public_extract(self.SOURCE, self.ORIGIN), encoding="utf-8")
+            findings: list = []
+            gate.scan_privacy_and_secrets(repo, findings)
+            self.assertNotIn("EMAIL_ADDRESS", {f.code for f in findings})
+            # the original is byte-identical, addressed by digest, and refuses silent replacement
+            self.assertEqual(self.SOURCE.encode(), (corpus / "tool/README.md").read_bytes())
+            self.assertEqual(http.hashlib.sha256(self.SOURCE.encode()).hexdigest(), record["sha256"])
+            self.assertEqual("v1.2", record["revision"])
+            with self.assertRaises(FileExistsError):
+                http.keep_original(corpus, "tool/README.md", b"changed", self.ORIGIN, "v1.3")
+            # licence wording survives the extraction
+            self.assertIn("Apache-2.0", (repo / "extract.md").read_text(encoding="utf-8"))
+
+    def test_relative_paths_and_anchors_resolve_against_the_source(self):
+        http = load_http()
+        out = http.public_extract(self.SOURCE, self.ORIGIN)
+        self.assertIn("(https://example.invalid/tool/blob/v1.2/docs/install.md)", out)
+        self.assertIn("(https://example.invalid/tool/blob/v1.2/README.md#usage)", out)
+        self.assertIn("(https://example.invalid/x)", out)
+        self.assertNotIn("(docs/install.md)", out)
+        self.assertNotIn("(#usage)", out)
+
+
+class ReusableToolsAnswerHelpOffline(unittest.TestCase):
+    """IT16: `--help` of a reusable fetch tool must not touch the network or write a file. The
+    shebang was never the safety: vfetch_activities.py made three network attempts on `--help`."""
+
+    GUARD = ("import runpy, socket, sys\n"
+             "def deny(*a, **k):\n"
+             "    sys.stderr.write('NETWORK_ATTEMPT'); raise OSError('network denied')\n"
+             "socket.socket.connect = deny; socket.create_connection = deny; socket.getaddrinfo = deny\n"
+             "script = sys.argv[1]; sys.argv = [script, '--help']\n"
+             "runpy.run_path(script, run_name='__main__')\n")
+    TOOLS = (
+        "framework/scripts/repurposing_adapter.py",
+        "disease-models/wwox/research/drug_repurposing/verify_it15_qb_20261101/vfetch_activities.py",
+    )
+
+    def test_help_makes_no_network_attempt_and_writes_nothing(self):
+        for tool in self.TOOLS:
+            with self.subTest(tool=tool), tempfile.TemporaryDirectory() as scratch:
+                done = subprocess.run([sys.executable, "-c", self.GUARD, str(ROOT / tool)],
+                                      capture_output=True, text=True, cwd=scratch, timeout=60)
+                self.assertEqual(0, done.returncode, done.stderr)
+                self.assertNotIn("NETWORK_ATTEMPT", done.stdout + done.stderr)
+                self.assertEqual([], list(Path(scratch).iterdir()))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

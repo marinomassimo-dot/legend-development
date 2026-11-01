@@ -144,13 +144,30 @@ class ExitCodeMatchesTheVerdict(unittest.TestCase):
 
     def test_a_failing_suite_exits_non_zero_and_says_fail(self) -> None:
         done = self.run_runner({"test_fails.py": "raise SystemExit(1)\n",
-                                "test_passes.py": "pass\n"})
+                                "test_passes.py": "print('ok')\n"})
         self.assertNotEqual(0, done.returncode, done.stdout + done.stderr)
         self.assertIn("REGRESSION VERDICT: FAIL", done.stderr)
         self.assertIn("test_fails.py: exit 1", done.stderr)
 
+    def test_expected_but_nothing_ran_is_not_a_pass_and_an_import_error_is_a_startup_error(self) -> None:
+        """🔴 A test file silently emptied exited 0 and the battery said PASS (IT15)."""
+        cases = {
+            "test_emptied.py": ("", "ZERO_TESTS"),
+            "test_no_cases.py": ("import unittest\nunittest.main()\n", "ZERO_TESTS"),
+            "test_bad_import.py": ("import no_such_module_for_this_test\n", "STARTUP_ERROR"),
+        }
+        for name, (body, status) in cases.items():
+            with self.subTest(name=name):
+                done = self.run_runner({name: body, "test_real.py": "print('ok')\n"})
+                self.assertNotEqual(0, done.returncode, done.stdout + done.stderr)
+                self.assertIn(f"{name}: exit", done.stderr)
+                self.assertIn(f"({status})", done.stderr)
+        self.assertEqual("EXECUTED", runner.classify_suite(0, "Ran 2 tests in 0.1s\n\nOK\n"))
+        self.assertEqual("EXECUTED_WITH_SKIPS", runner.classify_suite(
+            0, "x ... skipped 'why'\nRan 1 test in 0.1s\n\nOK (skipped=1)\n"))
+
     def test_a_passing_battery_exits_zero_and_says_pass(self) -> None:
-        done = self.run_runner({"test_passes.py": "pass\n"})
+        done = self.run_runner({"test_passes.py": "print('ok')\n"})
         self.assertEqual(0, done.returncode, done.stdout + done.stderr)
         self.assertIn("REGRESSION VERDICT: PASS (1 targets)", done.stdout)
 

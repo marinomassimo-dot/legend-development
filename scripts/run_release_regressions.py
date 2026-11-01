@@ -267,6 +267,30 @@ def extract_skip_reasons(output: str) -> list[str]:
     return reasons
 
 
+STARTUP_ERROR_RE = re.compile(r"^(?:ImportError|ModuleNotFoundError|SyntaxError|IndentationError|TabError)\b", re.MULTILINE)
+RAN_RE = re.compile(r"^Ran (\d+) tests? in ", re.MULTILINE)
+
+
+def classify_suite(returncode: int, output: str) -> str:
+    """Name what a suite run was, so "exit 0" is never read as "tests passed".
+
+    EXECUTED, EXECUTED_WITH_SKIPS, ZERO_TESTS (expected but nothing ran: an emptied file prints
+    nothing, a discovery that found no case prints "Ran 0 tests"), STARTUP_ERROR (non-zero
+    a module-level import or syntax error before any "Ran N tests" summary) and FAILED. Suites that
+    are plain scripts are not forced into the unittest format: any output at all counts as
+    having run something.
+    """
+    ran = RAN_RE.search(output)
+    if ran and int(ran.group(1)) == 0:
+        return "ZERO_TESTS"
+    if returncode:
+        tail = "\n".join(output.strip().splitlines()[-3:])
+        return "STARTUP_ERROR" if not ran and STARTUP_ERROR_RE.search(tail) else "FAILED"
+    if not output.strip():
+        return "ZERO_TESTS"
+    return "EXECUTED_WITH_SKIPS" if extract_skip_reasons(output) else "EXECUTED"
+
+
 def format_success_verdict(target_count: int,
                            skips: list[tuple[str, str]]) -> list[str]:
     if not skips:
@@ -520,8 +544,11 @@ def main() -> int:
                 print(f"  wrote {path}  {verdicts[path]}", flush=True)
             baseline = after
         skips.extend((relative, reason) for reason in extract_skip_reasons(result.stdout))
-        if result.returncode:
-            failures.append((relative, result.returncode))
+        status = classify_suite(result.returncode, result.stdout)
+        if status in ("ZERO_TESTS", "STARTUP_ERROR"):
+            print(f"SUITE_STATUS {relative}: {status}", flush=True)
+        if result.returncode or status == "ZERO_TESTS":
+            failures.append((relative, result.returncode, status))
 
     for line in format_timing_summary(durations):
         print(line)
@@ -553,8 +580,8 @@ def main() -> int:
                       "attributed to this one)", file=sys.stderr)
             for path in paths[:20]:
                 print(f"    {path}: {verdicts.get(path, 'no mtime verdict')}", file=sys.stderr)
-        for relative, returncode in failures:
-            print(f"- {relative}: exit {returncode}", file=sys.stderr)
+        for relative, returncode, status in failures:
+            print(f"- {relative}: exit {returncode} ({status})", file=sys.stderr)
         # 🔴 SKIPS ARE PRINTED ON THIS PATH TOO. Until 2026-09-18 they were printed only when
         # the battery passed, so a run with one failure reported nothing about the suites that
         # skipped every case they own — and "skipped, never passed" is a promise that depends

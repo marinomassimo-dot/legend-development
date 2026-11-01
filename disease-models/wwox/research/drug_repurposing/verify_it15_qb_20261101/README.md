@@ -53,4 +53,4 @@ GtoPdb values (AZD-1080, voruciclib, CHIR-98014, SB-415286, lithium pIC50 2.6): 
 
 ## Files
 
-`verdicts` are above; tables: `ratio_recompute_named_qb_verify.tsv`, `isoform_pairs_gt10x_exact_qb_verify.tsv`, `tau_catenin_documents_qb_verify.tsv`, `structure_search_substrate_nonATP_qb_verify.tsv`; scripts `vfetch_activities.py` (arg: target id), `vpairs_isoform.py`, `vassay_scan.py`, `vchembl_get.py` (they read/write a scratchpad `raw/` directory; paths are absolute to this session).
+`verdicts` are above; tables: `ratio_recompute_named_qb_verify.tsv`, `isoform_pairs_gt10x_exact_qb_verify.tsv`, `tau_catenin_documents_qb_verify.tsv`, `structure_search_substrate_nonATP_qb_verify.tsv`; scripts `vfetch_activities.py` (arg: target id and `--raw-dir`; a reusable tool, help and import touch no network), `vpairs_isoform.py`, `vassay_scan.py`, `vchembl_get.py` (they read/write a scratchpad `raw/` directory; paths are absolute to this session).
