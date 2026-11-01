@@ -1,0 +1,186 @@
+[
+ {
+  "case_id": "DC01",
+  "level": "functional_measure",
+  "question": "Does the slice burst need NMDAR activity? (readout control)",
+  "compound_action": "d-AP5 (50 uM as used by the source); competitive glutamate-site NMDAR antagonist, tool compound",
+  "system": "Synapsin-Cre Wwox neuron-deleted neocortical slices, layer II/III, P13-P17, mouse",
+  "wwox_evidence": "Observed: bursts in 36 of 42 knockout slices vanish with d-AP5 (51 bursts, 5 slices, 3 animals; Breton 2021). Not observed: that the NMDAR current is raised.",
+  "external_precedent": "Rat oocyte functional Ki, GluN2A 390 vs GluN2B 2,800 nM (7.2x) in one document and 280 vs 460 nM (1.6x) in another: no strong subunit preference.",
+  "pharmacology": "Subunit values graded; no compound-specific value in the WWOX preparation.",
+  "pharmacology_limits": "Oocyte values are not slice values; a surmountable block; the catalogue gives no potency in a WWOX preparation.",
+  "counter_evidence": "Cannot separate raised gain from permissive necessity; wild-type matched-trigger slices may lose bursts equally (then the block is generic).",
+  "next_experiment": "Run as the last step in every slice (positive control and ceiling).",
+  "sources": [
+   "function_pharm_it14_p3_20261101/README.md",
+   "function_pharm_it14_p3_20261101/cases_it14_p3.tsv",
+   "function_pharm_it14_p3_20261101/experiment_arms_it14_p3.tsv",
+   "target_first_it15_qa_nmdar_20261101/cases_qa.tsv"
+  ]
+ },
+ {
+  "case_id": "DC02",
+  "level": "deepened",
+  "question": "Which share of the slice NMDAR current is carried by GluN2B-containing receptors, and do bursts follow it?",
+  "compound_action": "GluN2B negative allosteric modulators at the ifenprodil site: ifenprodil and Ro 25-6981 as tools, radiprodil as clinical-stage comparator",
+  "system": "Same slice preparation; potencies from human or rat recombinant receptors in oocytes",
+  "wwox_evidence": "Bursts are d-APV-sensitive; NMDAR current not measured (so the GluN2B share f at this age is unknown).",
+  "external_precedent": "Two independent papers compiled in one review: ifenprodil 110 vs 39,500 nM (359x, human, 3 uM glycine, -40 mV) and Ro 25-6981 9 vs 52,000 nM (5,778x, rat context); one source for the mouse layer II/III ifenprodil sensitivity exists at abstract level only.",
+  "pharmacology": "Class-level window of about 10^2 to 10^3 for GluN2B over GluN2A; the stated reduction of the isolated current is an UPPER BOUND, sum of f_i x Emax_i x occupancy_i.",
+  "pharmacology_limits": "Ifenprodil inhibition is incomplete and triheteromers are partly inhibited; conditions differ between the two compounds; radiprodil has only complex-level values (not determinable).",
+  "counter_evidence": "A steeper-than-linear burst fall is not a valid discriminator alone (burst generation is threshold-like).",
+  "next_experiment": "Measure f with a saturating GluN2B NAM; then titrate the NAM, an equal-current d-AP5 and a low-trapping pore blocker, with a GluN2A NAM and two unrelated GluN2B NAMs as controls.",
+  "sources": [
+   "target_first_it15_qa_nmdar_20261101/README.md",
+   "target_first_it15_qa_nmdar_20261101/cases_qa.tsv",
+   "target_first_it15_qa_nmdar_20261101/chain_qa.tsv",
+   "verify_it15_qa_20261101/README.md"
+  ]
+ },
+ {
+  "case_id": "DC03",
+  "level": "deepened",
+  "question": "Is subunit selectivity needed at all to reduce NMDAR-dependent bursting?",
+  "compound_action": "Pore blockers: memantine, ketamine (esketamine separate), dizocilpine",
+  "system": "Recombinant receptors in U2OS, CHO and HEK293 cells (flux), oocytes elsewhere",
+  "wwox_evidence": "No result of these compounds in a WWOX system; the class is carded as an NMDAR intervention class.",
+  "external_precedent": "Approved in adults for other uses; ChEMBL labels the generic NMDA-receptor group with 'negative allosteric modulator' on the salt records, which means non-competitive and not subunit- or site-resolved.",
+  "pharmacology": "GluN2A-versus-GluN2B ratios of 4x or less; no subunit selectivity detected.",
+  "pharmacology_limits": "Flux formats have no holding voltage (the controlling variable for use-dependent blockers); one arm spans 30-fold.",
+  "counter_evidence": "Direction of the small ratios is not resolved between documents.",
+  "next_experiment": "Use as the subunit-indifferent comparator at matched fractional current.",
+  "sources": [
+   "target_first_it15_qa_nmdar_20261101/README.md",
+   "target_first_it15_qa_nmdar_20261101/cases_qa.tsv",
+   "verify_it15_qa_20261101/README.md"
+  ]
+ },
+ {
+  "case_id": "DC04",
+  "level": "hypothetical",
+  "question": "If NMDAR gain were limiting, would an opposed action worsen bursting?",
+  "compound_action": "Co-agonist or positive-modulator direction: dalzanemdor (SAGE-718), D-cycloserine, glycine; GluN2A NAM TCN-201 as a subunit-assignment control",
+  "system": "Heterozygous and wild-type slices",
+  "wwox_evidence": "None; excitatory-gain readings are one of several live rivals.",
+  "external_precedent": "Dalzanemdor EC50 79 vs 86 nM (GluN2B vs GluN2A; one origin, Hill 2022).",
+  "pharmacology": "No subunit preference detected.",
+  "pharmacology_limits": "Reference values from one system; not transferred to the slice.",
+  "counter_evidence": "If bursts do not increase, permissive necessity is favoured over raised gain.",
+  "next_experiment": "Apply a positive modulator to heterozygous and wild-type slices and score bursts.",
+  "sources": [
+   "target_first_it15_qa_nmdar_20261101/cases_qa.tsv",
+   "target_first_it15_qa_nmdar_20261101/README.md"
+  ]
+ },
+ {
+  "case_id": "DC05",
+  "level": "linked",
+  "question": "Does raising ambient GABA offset the inhibitory deficit?",
+  "compound_action": "Vigabatrin (irreversible GABA-transaminase inactivator)",
+  "system": "Human infants (case reports); no WWOX slice or mouse arm",
+  "wwox_evidence": "Case reports of WWOX-related epilepsy: 2 benefit, 3 null, 1 partial, 1 unresolved (queried, not read in full).",
+  "external_precedent": "Labelled for infantile spasms and refractory partial seizures; boxed warning for visual field loss.",
+  "pharmacology": "Time-dependent inactivation constant only; no brain potency stated.",
+  "pharmacology_limits": "Not testable in acute slice; spasms are a different seizure type from slice bursts.",
+  "counter_evidence": "Cannot be read as a test of the phasic IPSC deficit.",
+  "next_experiment": "Tonic holding current and phasic IPSC charge in the same cells; a chronic mouse arm would be needed.",
+  "sources": [
+   "function_pharm_it14_p3_20261101/README.md",
+   "function_pharm_it14_p3_20261101/cases_it14_p3.tsv",
+   "function_pharm_it14_p3_20261101/experiment_arms_it14_p3.tsv"
+  ]
+ },
+ {
+  "case_id": "DC06",
+  "level": "hypothetical",
+  "question": "Does a benzodiazepine-site potentiator compensate the lost fast GABA-A inhibition during exposure?",
+  "compound_action": "Clobazam and N-desmethylclobazam (benzodiazepine-site positive modulators); zolpidem and clonazepam to attribute the subunit",
+  "system": "Same slice preparation",
+  "wwox_evidence": "sIPSC amplitude 57.3 to 27.5 pA (about -52 percent; KCl internal solution, pooled events); heterozygote against wild type not reported.",
+  "external_precedent": "Subtype data in three primary papers; selectivity disputed. Potentiation of a few-fold at low GABA in recombinant receptors.",
+  "pharmacology": "Emax 100 to 317 percent at EC10 (rat HEK293) and 203 to 270 percent at EC20 (human oocytes); conditions differ.",
+  "pharmacology_limits": "Restoration of a roughly halved amplitude to control is not guaranteed; locus of the loss unmeasured (it changes interpretation, not whether the arm can be run).",
+  "counter_evidence": "Burst reduction equal in wild-type matched-trigger slices would show network state, not knockout specificity.",
+  "next_experiment": "Same-cell triad (with miniature IPSCs in TTX), then graded potentiator with measured IPSC charge.",
+  "sources": [
+   "function_pharm_it14_p3_20261101/README.md",
+   "function_pharm_it14_p3_20261101/cases_it14_p3.tsv",
+   "function_pharm_it14_p3_20261101/experiment_arms_it14_p3.tsv"
+  ]
+ },
+ {
+  "case_id": "DC07",
+  "level": "hypothetical",
+  "question": "Is the inhibitory loss release- or clearance-limited rather than receptor-limited?",
+  "compound_action": "Tiagabine (GAT1 inhibitor); NNC-711 as tool",
+  "system": "Same slice preparation",
+  "wwox_evidence": "Same sIPSC deficit.",
+  "external_precedent": "GAT1 IC50 70 nM (human) against micromolar GAT2, GAT3 and BGT-1 (mixed species).",
+  "pharmacology": "Human GAT1 potency from the catalogue.",
+  "pharmacology_limits": "Selectivity values mix species.",
+  "counter_evidence": "No effect on bursts despite a longer IPSC decay, or a paradoxical increase, would weaken it.",
+  "next_experiment": "IPSC decay and tonic current against burst frequency, at matched IPSC charge with the previous case.",
+  "sources": [
+   "function_pharm_it14_p3_20261101/README.md",
+   "function_pharm_it14_p3_20261101/cases_it14_p3.tsv",
+   "function_pharm_it14_p3_20261101/experiment_arms_it14_p3.tsv"
+  ]
+ },
+ {
+  "case_id": "DC08",
+  "level": "hypothetical",
+  "question": "Is an intrinsic depolarisation (Kv7) sufficient to explain bursting? (counter-hypothesis)",
+  "compound_action": "Ezogabine (retigabine), Kv7 opener, reversed by XE991",
+  "system": "Same slice preparation",
+  "wwox_evidence": "Resting potential -79.25 / -75.51 / -73.62 mV (wild type / heterozygote / knockout); input resistance shared by heterozygote and knockout.",
+  "external_precedent": "A serious adverse-event history is recorded for the compound (not verified here); another Kv7 opener is in late clinical development (one assay, not transferred).",
+  "pharmacology": "EC50 spread up to about 9-fold across assays and isoforms; Kv7.2 homomer 930 against Kv7.2/7.3 heteromer 1,720 nM in one document is a limited comparison.",
+  "pharmacology_limits": "Opening Kv7 hyperpolarises any neuron.",
+  "counter_evidence": "If Vm-matched wild-type slices burst while the opener stops knockout bursts, the intrinsic reading is weakened.",
+  "next_experiment": "Opener titrated to the 5.6 mV shift, with Vm-matched wild-type slices.",
+  "sources": [
+   "function_pharm_it14_p3_20261101/README.md",
+   "function_pharm_it14_p3_20261101/cases_it14_p3.tsv",
+   "function_pharm_it14_p3_20261101/experiment_arms_it14_p3.tsv",
+   "pharmacology_compare_it15_p2_20261101/README.md"
+  ]
+ },
+ {
+  "case_id": "DC09",
+  "level": "functional_measure",
+  "question": "Does lithium act through GSK3 de-repression in WWOX loss?",
+  "compound_action": "Lithium (the activity sits on the Li+ ion record; salts carry none); ion- and Mg2+-competitive at GSK3, second curated target IMPase",
+  "system": "Wwox-null preweaning mouse, provoked-seizure scoring (whole animal)",
+  "wwox_evidence": "Seizure severity after a provoking injection fell in all three genotypes including wild type: non-specific. pSer9 of GSK3beta is lower in the null brain on a single blot (one lane per genotype per region, no statistics).",
+  "external_precedent": "Approved for other indications; narrow therapeutic index.",
+  "pharmacology": "About 2 mM, two review-sourced rows flagged outside the typical range.",
+  "pharmacology_limits": "Primary origin of the figure not established; GtoPdb value not re-verified.",
+  "counter_evidence": "Many other lithium actions; Wnt direction possibly adverse.",
+  "next_experiment": "Kinase-activity or substrate-phosphorylation readout in a Wwox-null system with a differently acting GSK3 inhibitor.",
+  "sources": [
+   "target_first_it15_qb_gsk3_20261101/README.md",
+   "target_first_it15_qb_gsk3_20261101/cases_qb.tsv",
+   "verify_it15_qb_20261101/README.md",
+   "cards/G01_lithium_gsk3.card.json"
+  ]
+ },
+ {
+  "case_id": "DC10",
+  "level": "hypothetical",
+  "question": "Does GSK3 kinase activity, not only pSer9, change in WWOX loss, and in which direction does each inhibitor class move the Wnt readout?",
+  "compound_action": "Tool experiment: an ATP-site inhibitor (LY-2090314), lithium, tideglusib (irreversible, non-ATP-competitive) and an Axin-pathway control that itself needs GSK3",
+  "system": "Wwox-null cells or tissue; human knockout organoids for the Wnt readout",
+  "wwox_evidence": "pSer9 decreased with total GSK3beta unchanged (single blot); Axin-like docking motif at WWOX 388-407; Wnt target genes up in knockout organoids (confounded by maturity).",
+  "external_precedent": "Tau Ser396 down and beta-catenin up under a GSK3beta inhibitor in SH-SY5Y (one document, qualitative, not WWOX).",
+  "pharmacology": "GSK3A/GSK3B ratio about 1 for the named compounds; 86 same-document pairs above 10-fold exist for other compounds; tideglusib potency spans 5 nM to above 10 uM with a 12.8-fold shift on 3 h pre-incubation.",
+  "pharmacology_limits": "No isoform lever for the named compounds; wild-type pair 1.67; GtoPdb figures not re-verified.",
+  "counter_evidence": "Wnt signalling does not use Ser9, so the pSer9 versus Wnt conflict is weaker than first stated.",
+  "next_experiment": "Measure kinase activity and Tau pS396/S404 with beta-catenin phospho and AXIN2/LEF1 in Wwox-null cells, comparing the classes.",
+  "sources": [
+   "target_first_it15_qb_gsk3_20261101/README.md",
+   "target_first_it15_qb_gsk3_20261101/cases_qb.tsv",
+   "target_first_it15_qb_gsk3_20261101/chain_qb.tsv",
+   "verify_it15_qb_20261101/README.md"
+  ]
+ }
+]

@@ -1,0 +1,12 @@
+chembl_id	pref_name	max_phase	molecule_type	parent_chembl_id	salt_form	therapeutic_flag	first_approval	syn_sample	canonical_smiles
+CHEMBL296586	KENPAULLONE		Small molecule	CHEMBL296586	False	False			O=C1Cc2c([nH]c3ccc(Br)cc23)-c2ccccc2N1
+CHEMBL102714	SB-216763		Small molecule	CHEMBL102714	False	False		SB 216763; SB-216763; SB216763	Cn1cc(C2=C(c3ccc(Cl)cc3Cl)C(=O)NC2=O)c2ccccc21
+CHEMBL336961	AZAKENPAULLONE		Small molecule	CHEMBL336961	False	False			O=C1Cc2c([nH]c3ccc(Br)cc23)-c2ncccc2N1
+CHEMBL362558	LY-2090314	2.0	Small molecule	CHEMBL362558	False	False		LY 2090314; LY-2090314; LY2090314; Ly 2090314; Ly-2090314	O=C1NC(=O)C(c2cnc3ccccn23)=C1c1cn2c3c(cc(F)cc13)CN(C(=O)N1CCCCC1)CC2
+CHEMBL412142	LADUVIGLUSIB	1.0	Small molecule	CHEMBL412142	False	False		CHIR 99021; CHIR-911; CHIR-99021; CHIR99021; CHR-00921; CHR00921; CT 99021; CT-99021; CT99021; FX03; GSK-3 INHIBITOR XVI; KIN001-157; LADUVIGLUSIB; LADUVIGLUSIB (CHIR-99021); Laduviglusib	Cc1cnc(-c2cnc(NCCNc3ccc(C#N)cn3)nc2-c2ccc(Cl)cc2Cl)[nH]1
+CHEMBL483465	ELRAGLUSIB	2.0	Small molecule	CHEMBL483465	False	False		9 ing 41; 9-ING-41; 9-ing-41; Elraglusib	Cn1cc(C2=C(c3coc4ccc(F)cc34)C(=O)NC2=O)c2cc3c(cc21)OCO3
+CHEMBL1200826	LITHIUM CARBONATE	4.0	Small molecule	CHEMBL1200826	False	True	1970	CP-15,467-61; CP-15467-61; CP-1546761; Camcolit 250; Camcolit 400; Carbonic acid, dilithium salt; Eskalith; Eskalith cr; Liskonum; Lithane; Lithii carbonas; Lithium carbonate; Lithium carbonicum; Lith	O=C([O-])[O-].[Li+].[Li+]
+CHEMBL1234004	LITHIUM ION		Small molecule	CHEMBL1234004	False	False			[Li+]
+CHEMBL1969664	AZD-1080	1.0	Small molecule	CHEMBL1969664	False	False		AZ-11548415; AZD1080; Azd-1080	N#Cc1ccc2[nH]c(O)c(-c3ccc(CN4CCOCC4)cn3)c2c1
+CHEMBL2103738	LITHIUM CITRATE	4.0	Small molecule	CHEMBL1201170	True	True	1980	Li-liquid; Litarex; Lithium (as citrate); Lithium citrate; Lithium citrate tetrahydrate; Lithonate s; NSC-758700	O.O.O.O.O=C([O-])CC(O)(CC(=O)[O-])C(=O)[O-].[Li+].[Li+].[Li+]
+CHEMBL3545157	TIDEGLUSIB	2.0	Small molecule	CHEMBL3545157	False	False		NP-031112; NP-12; NP031112; Np-031112; TIDEGLUSIB; TIDEGLUSIB (NP031112); Tideglusib; ZENTYLOR NYPTA; Zentylor nypta	O=c1sn(-c2cccc3ccccc23)c(=O)n1Cc1ccccc1

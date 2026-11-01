@@ -25,7 +25,7 @@ selectivity_same_document.tsv."""
 import argparse, csv, os, re, statistics, collections
 
 H = os.path.dirname(os.path.abspath(__file__))
-TECH = ("patch", "flipr", "efflux", "thallium", "flux", "binding", "displacement", "enzyme", "substrate")
+TECH = ("patch", "clamp", "oocyte", "flipr", "efflux", "thallium", "flux", "binding", "displacement", "enzyme", "substrate")
 
 
 def family(gene):
@@ -33,11 +33,26 @@ def family(gene):
     return m.group(0).upper() if m else ""
 
 
-def composition(gene):
+def composition(gene, ttype=""):
+    """Composition class of one target. The ChEMBL target type decides when the row carries it (SINGLE PROTEIN; PROTEIN COMPLEX is a defined complex;
+    PROTEIN COMPLEX GROUP and PROTEIN FAMILY are groups whose value belongs to no one member). Without a type the symbol list decides: one gene is
+    single; two genes that differ only in the last letter (GSK3A|GSK3B, CACNA1G|CACNA1H) are isoforms of one gene family, a group; any other pair is a
+    defined complex (GRIN1|GRIN2B, KCNQ2|KCNQ3); three or more are a generic complex. IT15: the first rule set called GSK3A|GSK3B a complex."""
     g = [x for x in (gene or "").split("|") if x]
     if not g:
         return "no_gene"
-    return "single" if len(g) == 1 else "defined_complex" if len(g) == 2 else "generic_complex"
+    t = (ttype or "").upper()
+    if t == "SINGLE PROTEIN" and len(g) == 1:
+        return "single"
+    if t in ("PROTEIN COMPLEX GROUP", "PROTEIN FAMILY"):
+        return "generic_complex"
+    if t in ("PROTEIN COMPLEX", "PROTEIN-PROTEIN INTERACTION") and len(g) == 2:
+        return "defined_complex"
+    if len(g) == 1:
+        return "single"
+    if len(g) == 2 and g[0][:-1] == g[1][:-1] and g[0][-1:].isalpha() and g[1][-1:].isalpha():
+        return "generic_complex"
+    return "defined_complex" if len(g) == 2 else "generic_complex"
 
 
 def techniques(desc):
@@ -69,13 +84,13 @@ def collect(rows):
         if not r["gene"]:
             continue
         v = float(r["value_nM"]) if r["value_nM"] != "" else None
-        g[key].append((r["gene"], r["target_label"], r["relation"] or "=", v, assay))
+        g[key].append((r["gene"], r["target_label"], r["relation"] or "=", v, assay, r.get("target_type", "")))
     return g
 
 
 def grade_group(obs, ctx):
     by = collections.defaultdict(lambda: {"vals": [], "cens": [], "novalue": 0, "assays": set()})
-    for gene, lab, rel, v, assay in obs:
+    for gene, lab, rel, v, assay, *_t in obs:
         d = by[gene]
         if assay:
             d["assays"].add(assay)
@@ -85,13 +100,14 @@ def grade_group(obs, ctx):
             d["vals"].append(v)
         else:
             d["cens"].append(f"{rel}{v:.3g}")
-    comp = {g: composition(g) for g in by}
+    ttypes = {o[0]: (o[5] if len(o) > 5 else "") for o in obs}
+    comp = {g: composition(g, ttypes.get(g, "")) for g in by}
     reasons = []
     generic = sorted(g for g, c in comp.items() if c == "generic_complex")
     attributable = [g for g in by if comp[g] in ("single", "defined_complex") and by[g]["vals"]]
     fams = {family(g.split("|")[0]) for g in attributable}
     if generic:
-        reasons.append("complex of three or more subunits cannot be attributed to one subunit: " + "; ".join(generic))
+        reasons.append("a group, family or complex of three or more members cannot be attributed to one member: " + "; ".join(generic))
     if len(fams) > 1:
         return "PANEL_NOT_SELECTIVITY", reasons + ["gene families differ (" + ", ".join(sorted(fams)) + "): a panel of activities, not a selectivity ratio"], by, comp, attributable
     if len(attributable) < 2:

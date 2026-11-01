@@ -1,0 +1,11 @@
+compound	document	measure	GSK3A_nM	GSK3B_nM	ratio	exact	producer_value	match
+laduviglusib	CHEMBL1201862	Ki	10.0	3.981	2.51	True	2.51	YES
+kenpaullone	CHEMBL1201862	Ki	7.943	19.95	2.51	True	2.51	YES
+1-azakenpaullone	CHEMBL1201862	Ki	5.012	10.0	2.0	True	2.0	YES
+LY-2090314	CHEMBL5653620	IC50	1500.0	900.0	1.67	True	1.67	YES
+LY-2090314	CHEMBL3526091	IC50	1.5	0.9	1.67	True	1.67	YES
+laduviglusib	CHEMBL4020814	IC50	7.8	4.9	1.59	True	1.59	YES
+laduviglusib	CHEMBL1240296	IC50	10.0	7.0	1.43	True	1.43	YES
+LY-2090314	CHEMBL4334438	IC50	1.26	1.095	1.15	True	1.15	YES
+laduviglusib	CHEMBL5728885	IC50	2.0	2.0	1.0	True	1.0	YES
+tideglusib	CHEMBL3991601	Kd	30000.0	30000.0	1.0	False	tideglusib Kd censored both >30000	

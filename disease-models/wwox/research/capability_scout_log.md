@@ -1618,3 +1618,59 @@ Perimeter: zero spend, key-less reads, no account, no contact, nothing installed
 - **Gap with evidence:** a function-to-compound question across complex targets needed hand mapping because ChEMBL activity rows named no genes; CHANGE = tools (`framework/adapters/chembl.py`: `target_type`, `target_gene_symbols`, `non_gene_target`; regressions). Eight external resources were tried on a declared set of 8 compounds and 23 relations with known answers (coverage only, not validation): the existing union recovered 22 of 23; DrugCentral, Pharos and BindingDB added no pair, action or potency.
 - **Decisions:** KEEP ChEMBL mechanism and activity, GtoPdb release files, DGIdb file, Open Targets mechanism; WATCH DrugCentral file (CC BY-SA 4.0 by link; approved drugs only; some rows from a source with unstated terms); DISCARD Pharos (one origin with DrugCentral), BindingDB REST (no licence text on the pages read; structure identity unverified), PDSP Ki (204 MB table without a gene column), IUPHAR REST (key required), PubChem bioassay (an outcome is not an action). GitHub and Hugging Face scans: nothing adoptable.
 - **Access:** the GSE158684 matrices became readable on 2026-10-31 evening; the SRA reads behind them are not public (status `hup`); E-MTAB-14792 stays 'Study not accessible'; the 2024 Aurora B paper is closed access (publisher bot check not circumvented). The daily radar last ran 2026-10-31 05:20 UTC with NO_USEFUL_CHANGE.
+
+## 2026-10-29 · scout_daily · openFDA-NDC
+
+**WWOX question.** Date of the last openFDA NDC refresh (drug product / marketed-status catalogue)
+
+**Contribution vs existing.** access-category and product lookups; one call, key-less, far below the 1,000/day limit
+
+**Detected.** version: '2026-10-27' -> '2026-10-28'
+
+**Cost / licence.** reading the change: minutes; any adoption: unestimated until triaged; see source.
+
+**Proof.** https://api.fda.gov/drug/ndc.json?limit=1
+
+**Outcome.** TO_TRIAGE (a detected change is not a reading)
+
+## 2026-10-30 · scout_daily · Discovery:residual-function-chaperone
+
+**WWOX question.** residual-function / chaperone rescue of missense alleles
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper] A Mild Neurodevelopmental Phenotype Associated with a Novel BRAT1 Variant: Expanding Genotype-Phenotype Correlations. (2026-10-06) https://europepmc.org/article/MED/42930560; [repository] ykshim2013/rosetta-ddg-protocol (2025-12-19, MIT) https://github.com/ykshim2013/rosetta-ddg-protocol
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item (shown where a repository states one).
+
+**Proof.** Europe PMC / GitHub search, public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-01 · scout_daily · ToolUniverse
+
+**WWOX question.** Can one live-lookup layer (MCP) answer gene-level WWOX queries?
+
+**Contribution vs existing.** optional isolated tool; see tooluniverse_capability_test_20261026.md (work saved) and tool_survey row 12
+
+**Detected.** release: 'v1.5.7' -> 'v1.5.8'
+
+**Cost / licence.** reading the change: minutes; any adoption: unestimated until triaged; Apache-2.0.
+
+**Proof.** https://github.com/mims-harvard/ToolUniverse/releases
+
+**Outcome.** TRIAGED, KEEP as optional isolated tool, no re-run (IT15 P5, 2026-11-01): v1.5.7->v1.5.8 touches protein design, model providers and label fixes, no ChEMBL/GtoPdb/IUPHAR/BindingDB/PubChem change; no new question. See disease-models/wwox/research/drug_repurposing/scout_it15_p5_20261101/.
+
+## 2026-11-01 · scout_daily · Discovery:pdh-assay
+
+**WWOX question.** a PDH-specific measure (activity, phosphorylation or flux) is missing
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper] Distinct Post-Exposure Metabolic States Following Pharmacological Perturbation of Mitochondrial Respiratory Complexes I-V in SH-SY5Y Cells:  (2026-10-15) https://europepmc.org/article/MED/42941930
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item (shown where a repository states one).
+
+**Proof.** Europe PMC / GitHub search, public endpoints, no key
+
+**Outcome.** CLOSED, context only (IT15 P4, 2026-11-01): PMID 42941930 = Int J Mol Sci 27(20):9160, CC BY, SH-SY5Y 13C-glucose NMR after respiratory-chain inhibitors, no WWOX perturbation; no method adopted, no receipt. See disease-models/wwox/research/drug_repurposing/radar_p4_it15_20261101/.

@@ -1,0 +1,22 @@
+quantity	value	note
+ifenprodil 1 uM occupancy GluN2B (IC50 110 nM, Hill 1)	0.9009	matches 90%
+ifenprodil 1 uM occupancy GluN2A (IC50 39,500 nM, Hill 1)	0.0247	matches 2.5%
+Ro 25-6981 100 nM GluN2B (9 nM)	0.9174	matches 92%
+Ro 25-6981 100 nM GluN2A (52,000 nM)	0.0019	matches 0.2%
+--- producer prediction: dI/I = 0.90 f + 0.025 (1-f) (implicitly Emax = 1 on every GluN2B receptor, no triheteromers)
+producer formula f=0.2	0.200	upper bound only
+producer formula f=0.5	0.463	upper bound only
+producer formula f=0.8	0.725	upper bound only
+--- restated: dI/I = sum_i f_i * Emax_i * occ_i ; Emax values below are ILLUSTRATIVE (GENERATED), not sourced
+Emax_2B=1.0 f=0.2 (all GluN2B share as diheteromer)	0.200	illustrative
+Emax_2B=1.0 f=0.5 (all GluN2B share as diheteromer)	0.463	illustrative
+Emax_2B=1.0 f=0.8 (all GluN2B share as diheteromer)	0.725	illustrative
+Emax_2B=0.8 f=0.2 (all GluN2B share as diheteromer)	0.164	illustrative
+Emax_2B=0.8 f=0.5 (all GluN2B share as diheteromer)	0.373	illustrative
+Emax_2B=0.8 f=0.8 (all GluN2B share as diheteromer)	0.581	illustrative
+Emax_2B=0.6 f=0.2 (all GluN2B share as diheteromer)	0.128	illustrative
+Emax_2B=0.6 f=0.5 (all GluN2B share as diheteromer)	0.283	illustrative
+Emax_2B=0.6 f=0.8 (all GluN2B share as diheteromer)	0.437	illustrative
+Emax_2B=0.4 f=0.2 (all GluN2B share as diheteromer)	0.092	illustrative
+Emax_2B=0.4 f=0.5 (all GluN2B share as diheteromer)	0.193	illustrative
+Emax_2B=0.4 f=0.8 (all GluN2B share as diheteromer)	0.293	illustrative

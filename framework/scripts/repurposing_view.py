@@ -2647,7 +2647,7 @@ def render_static(P: dict) -> dict[str, str]:
 # ------------------------------------------------------------------ page template
 CSS = r"""
 :root{--bg:#fbfaf7;--fg:#1d2127;--mut:#5d6672;--card:#fff;--line:#d9dde3;--acc:#1f5f8b;--accbg:#e6f0f7;--warn:#8a4b00;--warnbg:#fff1dc;--bad:#9b1c1c;--badbg:#fde8e8;--ok:#1d6b3a;--okbg:#e4f4ea;--bar:#2f7cab}
-.wo-fig{margin:10px 0;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--card)}.wo-fig svg{display:block;max-width:420px;height:auto}.wo-fig figcaption{margin-bottom:4px}.fg-l{fill:var(--fg);font:13px system-ui,sans-serif}.fg-v{fill:var(--fg);font:600 13px system-ui,sans-serif}.fg-n{fill:var(--mut);font:11px system-ui,sans-serif}.fg-track{fill:var(--bg);stroke:var(--line)}.fg-bar{fill:var(--bar)}.fg-wh{stroke:var(--fg);stroke-width:1.5}.fg-dot{fill:var(--acc)}.wo-fig-tab{width:100%;table-layout:fixed;border-collapse:collapse;font-size:.82em;margin-top:6px}.wo-fig-tab caption{text-align:left;color:var(--mut);padding-bottom:2px}.wo-fig-tab th,.wo-fig-tab td{border-top:1px solid var(--line);padding:2px 4px;text-align:left;overflow-wrap:anywhere;font-weight:400}.wo-fig-tab thead th{font-weight:600}
+.lvl{display:inline-block;padding:1px 7px;border:1px solid var(--line);border-radius:10px;font-size:.85em;font-weight:600;white-space:nowrap}.lvl-catalogued{border-style:dotted}.lvl-linked{border-style:dashed}.lvl-deepened{border-style:solid}.lvl-functional_measure{border-width:2px;border-style:solid;border-color:var(--acc)}.lvl-hypothetical{border-style:double;border-width:3px}.lvl-legend{list-style:none;padding-left:0;display:grid;gap:4px}.tblwrap{overflow-x:auto;max-width:100%}.wo-fig{margin:10px 0;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--card)}.wo-fig svg{display:block;max-width:420px;height:auto}.wo-fig figcaption{margin-bottom:4px}.fg-l{fill:var(--fg);font:13px system-ui,sans-serif}.fg-v{fill:var(--fg);font:600 13px system-ui,sans-serif}.fg-n{fill:var(--mut);font:11px system-ui,sans-serif}.fg-track{fill:var(--bg);stroke:var(--line)}.fg-bar{fill:var(--bar)}.fg-wh{stroke:var(--fg);stroke-width:1.5}.fg-dot{fill:var(--acc)}.wo-fig-tab{width:100%;table-layout:fixed;border-collapse:collapse;font-size:.82em;margin-top:6px}.wo-fig-tab caption{text-align:left;color:var(--mut);padding-bottom:2px}.wo-fig-tab th,.wo-fig-tab td{border-top:1px solid var(--line);padding:2px 4px;text-align:left;overflow-wrap:anywhere;font-weight:400}.wo-fig-tab thead th{font-weight:600}
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#14171b;--fg:#e6e8eb;--mut:#a0a8b3;--card:#1c2026;--line:#333a43;--acc:#7fb8e0;--accbg:#1f3342;--warn:#f0b36a;--warnbg:#3b2a12;--bad:#f09a9a;--badbg:#3d1a1a;--ok:#7fd29b;--okbg:#17321f;--bar:#5a9fcc}}
 :root[data-theme=dark]{--bg:#14171b;--fg:#e6e8eb;--mut:#a0a8b3;--card:#1c2026;--line:#333a43;--acc:#7fb8e0;--accbg:#1f3342;--warn:#f0b36a;--warnbg:#3b2a12;--bad:#f09a9a;--badbg:#3d1a1a;--ok:#7fd29b;--okbg:#17321f;--bar:#5a9fcc}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
@@ -3631,6 +3631,9 @@ def build_ranking(dr: Path, cur: dict, source: str):
         # Curated pilot has full-edition member identities. Preserve the existing
         # shareable projection boundary rather than exporting catalogue-derived names.
         "matching_pilot": J.get("matching_pilot", []) if full else [],
+        # IT15 P7: the deepened cases name compounds, so the shareable edition carries only how many there are.
+        "deepened_cases": J.get("deepened_cases", []) if full else [],
+        "deepened_cases_n": len(J.get("deepened_cases", [])),
         "selections": {v: {"top": s["top"], "groups": s["top_groups"], "objective": s["top_objective"], "apart": [{"id": a["unit_id"], "group": a["group"], "objective": a["objective"]} for a in s["not_in_top_listed_apart"]], "n_listed": s["n_listed"], "cut_rule": s["cut_rule"]}
                        for v, s in S["selections"].items()},
         "inventory": {k: inv[k] for k in ("families", "records", "by_class", "by_first_order", "need_linked_families_q1_q2_q3", "need_linked_families_plus_units", "distinct_display_names_total", "distinct_display_names_in_q1",
@@ -3925,6 +3928,40 @@ def render_matching_pilot(cases: list[dict]) -> str:
             '<th>Prossima ricerca</th><th>Requisiti per lo sviluppo</th></tr></thead><tbody>' + "".join(rows) + '</tbody></table></details>')
 
 
+DEEPENED_LEVEL_IT = {
+    "catalogued": ("Catalogato", "○", "il composto è solo nel catalogo, senza un legame documentato con un bisogno"),
+    "linked": ("Collegato", "◔", "azione documentata su un bersaglio legato a un bisogno; nessuna lettura quantitativa"),
+    "deepened": ("Approfondito", "◑", "identità, azione e potenza quantitativa lette e graduate; nessuna misura funzionale in un sistema pertinente"),
+    "functional_measure": ("Sostenuto da una misura funzionale", "●", "esiste una misura funzionale in un sistema pertinente, indicato nel caso; non è una prova di beneficio"),
+    "hypothetical": ("Ancora ipotetico", "◇", "ipotesi senza una misura per il passo specifico"),
+}
+
+
+def render_deepened_cases(cases: list[dict], n_shareable: int = 0) -> str:
+    """Deepened cases side by side (IT15 P7). Full edition only: the cases name compounds. The level is shown as text and a symbol, never by colour alone."""
+    if not cases:
+        if n_shareable:
+            return (f'<details class="inl" id="deepened-cases"><summary>Casi approfonditi</summary><p class="mini">{n_shareable} casi approfonditi sono consultabili '
+                    'nell\'edizione completa locale; questa edizione non riporta i nomi dei composti.</p></details>')
+        return ""
+    legend = "".join(f'<li><span class="lvl lvl-{k}">{v[1]} {E(v[0])}</span> {E(v[2])}</li>' for k, v in DEEPENED_LEVEL_IT.items())
+    rows = []
+    for c in cases:
+        lab, sym, _ = DEEPENED_LEVEL_IT[c["level"]]
+        src = "; ".join(c["sources"])
+        rows.append(f'<tr id="dc-{E(c["case_id"])}"><th scope="row"><span class="lvl lvl-{E(c["level"])}">{sym} {E(lab)}</span><br>{E(c["question"])}</th>'
+                    f'<td>{E(c["compound_action"])}</td><td>{E(c["system"])}</td><td>{E(c["wwox_evidence"])}</td><td>{E(c["external_precedent"])}</td>'
+                    f'<td>{E(c["pharmacology"])}<br><span class="mini"><b>Limiti:</b> {E(c["pharmacology_limits"])}</span></td><td>{E(c["counter_evidence"])}</td>'
+                    f'<td>{E(c["next_experiment"])}<details><summary class="mini">Fonti</summary><p class="mini">{E(src)}</p></details></td></tr>')
+    return ('<details class="inl" id="deepened-cases"><summary>Casi approfonditi a confronto</summary>'
+            '<p class="mini">Ogni caso risponde alle stesse otto domande. Il livello dice che tipo di sostegno esiste, non quanto il composto sia promettente: '
+            'nessun livello è un punteggio di efficacia e la copertura di un percorso descrive collegamenti, non una quota di malattia trattata. '
+            'Sconosciuto non significa negativo.</p><ul class="lvl-legend mini">' + legend + '</ul>'
+            '<div class="tblwrap"><table class="tbl"><thead><tr><th>Domanda biologica e livello</th><th>Composto e azione</th><th>Sistema</th><th>Evidenza WWOX</th>'
+            '<th>Precedente esterno</th><th>Misura farmacologica e suoi limiti</th><th>Controevidenza</th><th>Prossimo esperimento</th></tr></thead><tbody>'
+            + "".join(rows) + '</tbody></table></div></details>')
+
+
 def render_ranking(P: dict) -> str:
     R = P["cur"].get("ranking")
     if not R:
@@ -4040,7 +4077,7 @@ def render_ranking(P: dict) -> str:
             f'<div class="note"><b>{E(U["rk_not_h"])}.</b><ul class="mini"><li>{E(U["rk_not_1"])}</li><li>{E(U["rk_not_2"])}</li><li>{E(U["rk_not_3"])}</li><li>{E(U["rk_not_4"])}</li></ul></div>'
             f'<details class="inl howto" open><summary>{E(U["rk_how_h"])}</summary><ol class="mini"><li>{E(U["rk_how_1"])}</li><li>{E(U["rk_how_2"])}</li><li>{E(U["rk_how_3"])}</li><li>{E(U["rk_how_4"])}</li></ol><h4>{E(U["rk_three_h"])}</h4><ol class="mini"><li>{E(U["rk_three_1"])}</li><li>{E(U["rk_three_2"])}</li><li>{E(U["rk_three_3"])}</li></ol>'
             f'<h4>{E(U["rk_groups_h"])}</h4><ul class="poslist rk-groups">{groups_legend}</ul><p class="mini">{E(U["rk_sel_note"])}</p><p class="mini mut">{E(U["rk_p3"])}</p></details>'
-            + render_matching_pilot(R.get("matching_pilot", [])) + controls + "".join(blocks) + f'<h3>{E(U["rk_t_h"])} (<span id="rk-n">{len(units)}</span>)</h3><p class="mini mut">{E(U["rk_t_note"])}</p>' + table + inv + evo
+            + render_matching_pilot(R.get("matching_pilot", [])) + render_deepened_cases(R.get("deepened_cases", []), R.get("deepened_cases_n", 0)) + controls + "".join(blocks) + f'<h3>{E(U["rk_t_h"])} (<span id="rk-n">{len(units)}</span>)</h3><p class="mini mut">{E(U["rk_t_note"])}</p>' + table + inv + evo
             + f'<p class="noprint"><a class="btnlink" href="#section=ranking">{E(U["sec_print"])}</a></p></section>')
 
 

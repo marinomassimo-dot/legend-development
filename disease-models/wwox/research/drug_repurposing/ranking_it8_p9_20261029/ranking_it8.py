@@ -710,6 +710,36 @@ def member_evidence(u: dict) -> list[dict]:
 PILOT_NARRATIVE = ("generating_path", "supporting_evidence", "refutation", "research_despite_requirements")      # the five questions of the mandate that the view answers per candidate (why it emerged, benefit sought, support, refutation, why research despite unresolved requirements)
 
 
+DEEPENED_LEVELS = ("catalogued", "linked", "deepened", "functional_measure", "hypothetical")
+DEEPENED_FIELDS = ("case_id", "level", "question", "compound_action", "system", "wwox_evidence", "external_precedent", "pharmacology", "pharmacology_limits",
+                   "counter_evidence", "next_experiment", "sources")
+
+
+def deepened_cases(cases: list[dict] | None = None) -> list[dict]:
+    """IT15 P7: the deepened cases laid side by side. One row per case with the same eight questions answered, and ONE level that says how far
+    the case has got: catalogued (the compound is only in the catalogue), linked (a documented target-action link to a need), deepened (identity,
+    action and quantitative pharmacology were read and graded), functional_measure (a functional measurement in a relevant system exists; the system
+    is named in `system`) or hypothetical (a hypothesis with no measurement behind the specific step). A level is a statement about the kind of
+    support and never a ranking or an efficacy score. Every `sources` path must exist; unknown levels or empty fields are errors."""
+    if cases is None:
+        f = HERE / "deepened_cases.json"
+        cases = jload(f) if f.exists() else []
+    seen = set()
+    for c in cases:
+        miss = [k for k in DEEPENED_FIELDS if not (c.get(k) if k != "sources" else c.get("sources"))]
+        if miss:
+            raise ValueError(f"deepened case {c.get('case_id')}: empty or missing {miss}")
+        if c["level"] not in DEEPENED_LEVELS:
+            raise ValueError(f"deepened case {c['case_id']}: unknown level {c['level']}")
+        if c["case_id"] in seen:
+            raise ValueError(f"duplicate deepened case {c['case_id']}")
+        seen.add(c["case_id"])
+        for src in c["sources"]:
+            if not (DR / src).exists():
+                raise ValueError(f"deepened case {c['case_id']}: source not found {src}")
+    return cases
+
+
 def matching_pilot(units: list[dict], cases: list[dict] | None = None, uncarded: list[dict] | None = None) -> list[dict]:
     """Small v3 pilot, projected by this ranking's existing generator. No score or
     compound promotion: statements remain attributed to the actual member; development
@@ -1441,7 +1471,7 @@ def reopen_trigger_rows_p1b() -> list[dict]:
              "reason_class_when_order_moves": "new_evidence or counter_evidence (the notes are caveats; no group can move on an association table)"} for r in read_tsv(REOPEN_SEARCHES_P1B)]
 
 
-REOPEN_SEARCHES_IT13 = [DR / "recoverable_it13_p3b_20261031" / "reopen_searches_it13_p3b.tsv", DR / "functional_it13_p3a_20261031" / "reopen_searches_it13_p3a.tsv", DR / "glia_maturation_it14_p4_20261101" / "reopen_searches_it14_p4.tsv", DR / "function_pharm_it14_p3_20261101" / "reopen_searches_it14_p3.tsv"]      # IT13 P3b/P3a: reopenable searches on the recoverable readout and the excitation/inhibition transcript question, read as stored
+REOPEN_SEARCHES_IT13 = [DR / "recoverable_it13_p3b_20261031" / "reopen_searches_it13_p3b.tsv", DR / "functional_it13_p3a_20261031" / "reopen_searches_it13_p3a.tsv", DR / "glia_maturation_it14_p4_20261101" / "reopen_searches_it14_p4.tsv", DR / "function_pharm_it14_p3_20261101" / "reopen_searches_it14_p3.tsv", DR / "target_first_it15_qa_nmdar_20261101" / "reopen_searches_it15_qa.tsv", DR / "target_first_it15_qb_gsk3_20261101" / "reopen_searches_it15_qb.tsv"]      # IT13 P3b/P3a: reopenable searches on the recoverable readout and the excitation/inhibition transcript question, read as stored
 
 
 def reopen_trigger_rows_it13() -> list[dict]:
@@ -1452,7 +1482,7 @@ def reopen_trigger_rows_it13() -> list[dict]:
             continue
         ptr = path.relative_to(DR)
         rows += [{"trigger": f"{r['id']}_it13", "what": f"{r['item']} (the decisive datum is stated in {ptr}, row {r['id']})", "detected_by": f"the searches and sources listed in {ptr}, row {r['id']}",
-                  "re_evaluates": f"the excitability notes and next-measurement text of the needs NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR, NEED-T-TYPE-CALCIUM, NEED-GABA-CHLORIDE-GRADIENT and NEED-SEIZURE-CONTROL-SYMPTOMATIC, NEED-INHIBITORY-HYPOFUNCTION, and the uncarded items N13 to N16 and the needs NEED-MYELINATION and the glia line (no group moves on a caveat); reopen when: {r['trigger_to_reopen']} (owner or route: {r['owner_or_route']}; verdict today: {r['verdict']})",
+                  "re_evaluates": f"the excitability notes and next-measurement text of the needs NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR, NEED-T-TYPE-CALCIUM, NEED-GABA-CHLORIDE-GRADIENT and NEED-SEIZURE-CONTROL-SYMPTOMATIC, NEED-INHIBITORY-HYPOFUNCTION, and the uncarded items N13 to N18 and the needs NEED-MYELINATION and the glia line (no group moves on a caveat); reopen when: {r['trigger_to_reopen']} (owner or route: {r['owner_or_route']}; verdict today: {r['verdict']})",
                   "reason_class_when_order_moves": "new_evidence or counter_evidence (the notes are caveats; no group can move before a card carries the datum)"} for r in read_tsv(path)]
     return rows
 
@@ -1553,7 +1583,7 @@ def build_all() -> dict[str, bytes]:
               "status_class": q["status_class"], "access_categories": q["access_categories"], "mnet_usable": q["mnet_usable"], "msig_neural": q["msig_neural"], "units": q["units"], "shares_need_with_units": q["shares_need_with_units"], "reconciliation": q["reconciliation"], "assessed_in": q["assessed_in"], "mentioned_in": q["mentioned_in"], "why": q["why"]} for q in queue]
     files["deepening_queue.tsv"] = tsv_bytes(qrows, ["display_group", "names", "family_ids", "needs", "wwox_observations_on_best_need", "status_class", "access_categories", "mnet_usable", "msig_neural", "units", "shares_need_with_units", "reconciliation", "assessed_in", "mentioned_in", "why"])
     ing = {"summary": summary, "units": uni["units"], "selection_table": srows, "deepening_queue_head": queue[:40], "uncarded": unc, "it9_records": uni["it9_records"], "it10_records": uni["it10_records"], "it11_records": uni["it11_records"],
-           "matching_pilot": matching_pilot(uni["units"], None, unc)}
+           "matching_pilot": matching_pilot(uni["units"], None, unc), "deepened_cases": deepened_cases()}
     files["ranking.json"] = json_bytes(ing)
     # per-unit input digests (for the snapshot / diff mechanism)
     drows = [{"unit_id": u["unit_id"], **u["inputs"]} for u in uni["units"]]

@@ -1,0 +1,1 @@
+ChEMBL mechanism records for memantine and ketamine sit on the salt records (CHEMBL1699 memantine hydrochloride, parent CHEMBL807; CHEMBL1714 ketamine hydrochloride, parent CHEMBL742): querying the parent CHEMBL807/CHEMBL742 by molecule_chembl_id returns none.

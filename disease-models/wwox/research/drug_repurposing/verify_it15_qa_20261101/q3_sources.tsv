@@ -1,0 +1,6 @@
+pmid	first_author_year	system	relevance_to_L2/3_P13-P17_GluN2B_share	read_level
+15492224	Mierau 2004 PNAS	mouse C57BL/6 barrel cortex, L2/3 pyramidal cells, P7 vs P14 (+ whisker deprivation), L4-evoked NMDA EPSC, ifenprodil sensitivity	closest primary source (P14 inside P13-P17; synaptic, evoked, not the isolated spontaneous-burst context); percent inhibition not in abstract	abstract only; PMC full text returned empty
+21722211	Kim and Robinson 2011 Eur J Neurosci	mouse neocortical L2/3 pyramidal nucleated patches (extrasynaptic-rich)	ifenprodil reduces the slower fraction of Mg unblock: an ifenprodil-sensitive component exists in native L2/3 receptors; no age in abstract	abstract only
+22153375	Wang 2011 Neuron	mouse cortex, GluN2B replaced by GluN2A	developmental NR2B->NR2A switch statement; no L2/3 P13-17 number in abstract	abstract only
+26013955	Lee 2015 J Neurosci Res	RAT visual cortex L2/3, 3 vs 5 weeks	decay time falls as GluN2B-mediated proportion falls; different species and ages	abstract only
+15470155	Liu 2004 J Neurosci	mouse S1 layer IV and VPN, P2-P15, immuno-EM	synaptic NR2B->NR2A switch in layer IV, not L2/3	abstract only

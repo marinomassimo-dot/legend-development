@@ -80,27 +80,27 @@
         },
         {
           "step": "P3.2 two complementary questions pre-declared before extraction (partial benefit; broader recovery/compensation) [depends on: P3.1]",
-          "status": "TODO",
+          "status": "DONE",
           "owner": "scientist",
-          "evidence": ""
+          "evidence": "PRE_REGISTRATION.md written before extraction in both target_first_it15 packages (Q-A NMDAR partial benefit; Q-B GSK3 broader compensation); IT14 question scoring reused"
         },
         {
           "step": "P3.3 target-first search with effective perimeter, chains, parent/metabolite/stereoisomer, counter-evidence [depends on: P3.2]",
-          "status": "TODO",
+          "status": "DONE",
           "owner": "scientist",
-          "evidence": ""
+          "evidence": "target-first ChEMBL perimeters logged: Q-A 112 queries 15,276 vs 14,156 (3 truncated, tail read by verifier); Q-B 10,881 rows; failures logged"
         },
         {
           "step": "P3.4 contrasting cases; what each adds over known literature; emergent hypothesis and why neighbours were left [depends on: P3.3]",
-          "status": "TODO",
+          "status": "DONE",
           "owner": "scientist",
-          "evidence": ""
+          "evidence": "ten deepened cases (deepened_cases.json); Q-A hypothesis probe-level; Q-B partial abstention; neighbours and failed steps documented"
         },
         {
           "step": "P3 independent verification (premises, quantitative reading, identity/action, candidate, negatives that change the queue) [depends on: P3.4]",
-          "status": "TODO",
+          "status": "DONE",
           "owner": "verifier",
-          "evidence": ""
+          "evidence": "verify_it15_qa and verify_it15_qb by separate agents; both changed the packages (provenance, upper bound, absence claims, identity); corrections applied by the producers and checked"
         }
       ]
     },
@@ -143,9 +143,9 @@
       "steps": [
         {
           "step": "P6 comparable inputs: simple target-action vs WWOX-enriched (vs network generator if it represents the question); what is and is not shown [depends on: P3.4]",
-          "status": "TODO",
+          "status": "DONE",
           "owner": "orchestrator",
-          "evidence": ""
+          "evidence": "wwox_contribution_it15_p6: counts by path, errors avoided and caught; predictive accuracy and benefit not measured"
         }
       ]
     },

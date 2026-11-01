@@ -722,7 +722,7 @@ class It10Integration(unittest.TestCase):
         for i in range(1, 5):      # N-P1B-1 to N-P1B-4 added by IT12 P6 (genetic-interaction slice, caveats only)
             self.assertIn(f"NP1B{i}_modifiers", trig)
         self.assertIn("E03", trig["NP1B1_modifiers"]["re_evaluates"])
-        self.assertEqual(len(trig), 8 + 9 + 4 + 15)      # 8 + 7 before IT11 P4 (R8), +1 R9 and +4 modifiers in IT12 P6, +3 NP3B and +5 NP3A in IT13/IT14 (NP3A5 and NP4G1 to NP4G4 and NP3P1 to NP3P3 added by IT14)
+        self.assertEqual(len(trig), 8 + 9 + 4 + sum(len(rk.read_tsv(p)) for p in rk.REOPEN_SEARCHES_IT13 if p.exists()))   # derived from the stored reopen-search files, not pinned (IT15)      # 8 + 7 before IT11 P4 (R8), +1 R9 and +4 modifiers in IT12 P6, +3 NP3B and +5 NP3A in IT13/IT14 (NP3A5 and NP4G1 to NP4G4 and NP3P1 to NP3P3 added by IT14)
         import unittest.mock as mock
         with mock.patch.object(rk, "REOPEN_SEARCHES", rk.HERE / "absent.tsv"), mock.patch.object(rk, "REOPEN_SEARCHES_P1B", rk.HERE / "absent.tsv"), mock.patch.object(rk, "REOPEN_SEARCHES_IT13", [rk.HERE / "absent.tsv"]):
             self.assertEqual(len(rk.triggers_rows()), 8)
@@ -871,6 +871,24 @@ class It15Integration(unittest.TestCase):
         sent = v.UI_IT["rk_inv_units_n"] if hasattr(v, "UI_IT") else ""
         if sent:
             self.assertNotIn("interventi ordinabili o no", sent)
+
+
+class DeepenedCasesLoader(unittest.TestCase):
+    OK = {"case_id": "X1", "level": "hypothetical", "question": "q", "compound_action": "c", "system": "s", "wwox_evidence": "w", "external_precedent": "e",
+          "pharmacology": "p", "pharmacology_limits": "l", "counter_evidence": "x", "next_experiment": "n", "sources": ["README.md"]}
+
+    def test_valid_case_passes(self):
+        self.assertEqual(len(rk.deepened_cases([dict(self.OK)])), 1)
+
+    def test_unknown_level_empty_field_missing_source_and_duplicate_are_errors(self):
+        for bad in (dict(self.OK, level="promising"), dict(self.OK, next_experiment=""), dict(self.OK, sources=["no/such/file.md"]), dict(self.OK, sources=[])):
+            with self.assertRaises(ValueError):
+                rk.deepened_cases([bad])
+        with self.assertRaises(ValueError):
+            rk.deepened_cases([dict(self.OK), dict(self.OK)])
+
+    def test_committed_cases_validate(self):
+        rk.deepened_cases()
 
 
 if __name__ == "__main__":

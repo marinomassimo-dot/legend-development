@@ -1,0 +1,102 @@
+document	category	activity_id	molecule	molecule_name	target	type	relation	value	units	assay_chembl_id	assay_description
+CHEMBL1138659	tau	1462030	CHEMBL363058		CHEMBL262	IC50	=	15.0	nM	CHEMBL830848	Inhibition of Glycogen synthase kinase-3 beta dependent Tau protein serine-396 phosphorylation in human SY5Y cells
+CHEMBL1138659	tau	1462146	CHEMBL362588		CHEMBL262	IC50	=	1.6	nM	CHEMBL830848	Inhibition of Glycogen synthase kinase-3 beta dependent Tau protein serine-396 phosphorylation in human SY5Y cells
+CHEMBL1138659	tau	1462165	CHEMBL186290		CHEMBL262	IC50	=	41.0	nM	CHEMBL830848	Inhibition of Glycogen synthase kinase-3 beta dependent Tau protein serine-396 phosphorylation in human SY5Y cells
+CHEMBL1138659	tau	1462281	CHEMBL178737		CHEMBL262	IC50	=	2.6	nM	CHEMBL830848	Inhibition of Glycogen synthase kinase-3 beta dependent Tau protein serine-396 phosphorylation in human SY5Y cells
+CHEMBL1138659	tau	1462297	CHEMBL362814		CHEMBL262	IC50	=	12.0	nM	CHEMBL830848	Inhibition of Glycogen synthase kinase-3 beta dependent Tau protein serine-396 phosphorylation in human SY5Y cells
+CHEMBL1138659	tau	1462316	CHEMBL362558	LY-2090314	CHEMBL262	IC50	=	0.7	nM	CHEMBL830848	Inhibition of Glycogen synthase kinase-3 beta dependent Tau protein serine-396 phosphorylation in human SY5Y cells
+CHEMBL1138659	tau	1473194	CHEMBL388978	STAUROSPORINE	CHEMBL262	IC50			nM	CHEMBL832375	Inhibition of Glycogen synthase kinase-3 beta dependent Tau protein serine-396 phosphorylation in human SY5Y cells; NT= not tested
+CHEMBL1141975	tau	1423083	CHEMBL362814		CHEMBL262	IC50	=	12.0	nM	CHEMBL833438	Inhibitory concentration to inhibit Ser396 phosphorylation of tau, a natural substrate of GSK-3 in SY5Y cells
+CHEMBL1141975	tau	1423088	CHEMBL181464		CHEMBL262	IC50	=	38.0	nM	CHEMBL833438	Inhibitory concentration to inhibit Ser396 phosphorylation of tau, a natural substrate of GSK-3 in SY5Y cells
+CHEMBL1141975	tau	1423209	CHEMBL178737		CHEMBL262	IC50	=	2.6	nM	CHEMBL833438	Inhibitory concentration to inhibit Ser396 phosphorylation of tau, a natural substrate of GSK-3 in SY5Y cells
+CHEMBL1141975	tau	1423214	CHEMBL361204		CHEMBL262	IC50			nM	CHEMBL827478	Inhibitory concentration to inhibit Ser396 phosphorylation of tau, a natural substrate of GSK-3 in SY5Y cells; nd=Not Determined
+CHEMBL1141975	tau	1423219	CHEMBL361007		CHEMBL262	IC50	=	11.0	nM	CHEMBL833438	Inhibitory concentration to inhibit Ser396 phosphorylation of tau, a natural substrate of GSK-3 in SY5Y cells
+CHEMBL1141975	tau	1423224	CHEMBL369316		CHEMBL262	IC50	=	297.0	nM	CHEMBL833438	Inhibitory concentration to inhibit Ser396 phosphorylation of tau, a natural substrate of GSK-3 in SY5Y cells
+CHEMBL1141975	tau	1423649	CHEMBL362588		CHEMBL262	IC50	=	1.6	nM	CHEMBL833438	Inhibitory concentration to inhibit Ser396 phosphorylation of tau, a natural substrate of GSK-3 in SY5Y cells
+CHEMBL1141975	tau	1423760	CHEMBL181031	BISARYLMALEIMIDE 1	CHEMBL262	IC50	=	0.3	nM	CHEMBL833438	Inhibitory concentration to inhibit Ser396 phosphorylation of tau, a natural substrate of GSK-3 in SY5Y cells
+CHEMBL1141975	tau	1423765	CHEMBL178851		CHEMBL262	IC50	=	8.7	nM	CHEMBL833438	Inhibitory concentration to inhibit Ser396 phosphorylation of tau, a natural substrate of GSK-3 in SY5Y cells
+CHEMBL1141975	tau	1423770	CHEMBL369572		CHEMBL262	IC50	=	53.0	nM	CHEMBL833438	Inhibitory concentration to inhibit Ser396 phosphorylation of tau, a natural substrate of GSK-3 in SY5Y cells
+CHEMBL1141975	tau	1423775	CHEMBL361948		CHEMBL262	IC50	=	111.0	nM	CHEMBL833438	Inhibitory concentration to inhibit Ser396 phosphorylation of tau, a natural substrate of GSK-3 in SY5Y cells
+CHEMBL1141975	tau	1424190	CHEMBL368246		CHEMBL262	IC50	=	5.0	nM	CHEMBL833438	Inhibitory concentration to inhibit Ser396 phosphorylation of tau, a natural substrate of GSK-3 in SY5Y cells
+CHEMBL1141975	tau	1424195	CHEMBL181339		CHEMBL262	IC50	=	7.7	nM	CHEMBL833438	Inhibitory concentration to inhibit Ser396 phosphorylation of tau, a natural substrate of GSK-3 in SY5Y cells
+CHEMBL1141975	tau	1424200	CHEMBL179725		CHEMBL262	IC50	=	13.0	nM	CHEMBL833438	Inhibitory concentration to inhibit Ser396 phosphorylation of tau, a natural substrate of GSK-3 in SY5Y cells
+CHEMBL1156291	tau	3253947	CHEMBL1092134		CHEMBL262	IC50	=	270.0	nM	CHEMBL1111593	Inhibition of GSK3-beta assessed as tau phosphorylation
+CHEMBL1681660	tau	5248936	CHEMBL501724		CHEMBL262	IC50	>	5280.0	nM	CHEMBL1685187	Inhibition of human GSK3-beta expressed in CHO AA8 cells co-expressing human tau protein after 2 hrs
+CHEMBL1681660	tau	5248937	CHEMBL1682837		CHEMBL262	IC50	>	10000.0	nM	CHEMBL1685187	Inhibition of human GSK3-beta expressed in CHO AA8 cells co-expressing human tau protein after 2 hrs
+CHEMBL1681660	tau	5248938	CHEMBL1682838		CHEMBL262	IC50	=	2210.0	nM	CHEMBL1685187	Inhibition of human GSK3-beta expressed in CHO AA8 cells co-expressing human tau protein after 2 hrs
+CHEMBL1681660	tau	5248939	CHEMBL1682839		CHEMBL262	IC50	>	910.0	nM	CHEMBL1685187	Inhibition of human GSK3-beta expressed in CHO AA8 cells co-expressing human tau protein after 2 hrs
+CHEMBL1681660	tau	5248940	CHEMBL1682840		CHEMBL262	IC50	>	5040.0	nM	CHEMBL1685187	Inhibition of human GSK3-beta expressed in CHO AA8 cells co-expressing human tau protein after 2 hrs
+CHEMBL1681660	tau	5248941	CHEMBL1682841		CHEMBL262	IC50	>	10000.0	nM	CHEMBL1685187	Inhibition of human GSK3-beta expressed in CHO AA8 cells co-expressing human tau protein after 2 hrs
+CHEMBL1681660	tau	5248942	CHEMBL1682842		CHEMBL262	IC50	=	800.0	nM	CHEMBL1685187	Inhibition of human GSK3-beta expressed in CHO AA8 cells co-expressing human tau protein after 2 hrs
+CHEMBL1681660	tau	5248943	CHEMBL1682843		CHEMBL262	IC50	>	9000.0	nM	CHEMBL1685187	Inhibition of human GSK3-beta expressed in CHO AA8 cells co-expressing human tau protein after 2 hrs
+CHEMBL1681660	tau	5248944	CHEMBL1682844		CHEMBL262	IC50	>	10000.0	nM	CHEMBL1685187	Inhibition of human GSK3-beta expressed in CHO AA8 cells co-expressing human tau protein after 2 hrs
+CHEMBL1681660	tau	5248945	CHEMBL1682845		CHEMBL262	IC50	>	9000.0	nM	CHEMBL1685187	Inhibition of human GSK3-beta expressed in CHO AA8 cells co-expressing human tau protein after 2 hrs
+CHEMBL1681660	tau	5248946	CHEMBL1682846		CHEMBL262	IC50	>	10000.0	nM	CHEMBL1685187	Inhibition of human GSK3-beta expressed in CHO AA8 cells co-expressing human tau protein after 2 hrs
+CHEMBL1681660	tau	5248947	CHEMBL1682847		CHEMBL262	IC50	=	1690.0	nM	CHEMBL1685187	Inhibition of human GSK3-beta expressed in CHO AA8 cells co-expressing human tau protein after 2 hrs
+CHEMBL1681660	tau	5248948	CHEMBL1682848		CHEMBL262	IC50	=	2320.0	nM	CHEMBL1685187	Inhibition of human GSK3-beta expressed in CHO AA8 cells co-expressing human tau protein after 2 hrs
+CHEMBL1681660	tau	5248949	CHEMBL1682849		CHEMBL262	IC50	=	3210.0	nM	CHEMBL1685187	Inhibition of human GSK3-beta expressed in CHO AA8 cells co-expressing human tau protein after 2 hrs
+CHEMBL1681660	tau	5248950	CHEMBL1682850		CHEMBL262	IC50	=	610.0	nM	CHEMBL1685187	Inhibition of human GSK3-beta expressed in CHO AA8 cells co-expressing human tau protein after 2 hrs
+CHEMBL1681660	tau	5248951	CHEMBL1682851		CHEMBL262	IC50	=	840.0	nM	CHEMBL1685187	Inhibition of human GSK3-beta expressed in CHO AA8 cells co-expressing human tau protein after 2 hrs
+CHEMBL1681660	tau	5248952	CHEMBL1682852		CHEMBL262	IC50	=	1530.0	nM	CHEMBL1685187	Inhibition of human GSK3-beta expressed in CHO AA8 cells co-expressing human tau protein after 2 hrs
+CHEMBL1681660	tau	5248966	CHEMBL1682853		CHEMBL262	IC50	=	4640.0	nM	CHEMBL1685187	Inhibition of human GSK3-beta expressed in CHO AA8 cells co-expressing human tau protein after 2 hrs
+CHEMBL2177055	tau	12141133	CHEMBL2177167		CHEMBL1075321	IC50	=	47.0	nM	CHEMBL2182243	Inhibition of GSK3beta-mediated Tau phosphorylation in mouse 3T3 cells after 4 hrs by Western blot analysis
+CHEMBL2177055	tau	12141134	CHEMBL2177166		CHEMBL1075321	IC50	=	37.0	nM	CHEMBL2182243	Inhibition of GSK3beta-mediated Tau phosphorylation in mouse 3T3 cells after 4 hrs by Western blot analysis
+CHEMBL2177055	tau	12141135	CHEMBL2177165		CHEMBL1075321	IC50	=	10.0	nM	CHEMBL2182243	Inhibition of GSK3beta-mediated Tau phosphorylation in mouse 3T3 cells after 4 hrs by Western blot analysis
+CHEMBL2177055	tau	12141136	CHEMBL2177163		CHEMBL1075321	IC50	=	87.0	nM	CHEMBL2182243	Inhibition of GSK3beta-mediated Tau phosphorylation in mouse 3T3 cells after 4 hrs by Western blot analysis
+CHEMBL2177055	tau	12141137	CHEMBL2177161		CHEMBL1075321	IC50	=	76.0	nM	CHEMBL2182243	Inhibition of GSK3beta-mediated Tau phosphorylation in mouse 3T3 cells after 4 hrs by Western blot analysis
+CHEMBL2177055	tau	12141138	CHEMBL2177159		CHEMBL1075321	IC50	=	79.0	nM	CHEMBL2182243	Inhibition of GSK3beta-mediated Tau phosphorylation in mouse 3T3 cells after 4 hrs by Western blot analysis
+CHEMBL2177055	tau	12141139	CHEMBL2177157		CHEMBL1075321	IC50	=	49.0	nM	CHEMBL2182243	Inhibition of GSK3beta-mediated Tau phosphorylation in mouse 3T3 cells after 4 hrs by Western blot analysis
+CHEMBL2177055	tau	12141140	CHEMBL2177155		CHEMBL1075321	IC50	=	5.0	nM	CHEMBL2182243	Inhibition of GSK3beta-mediated Tau phosphorylation in mouse 3T3 cells after 4 hrs by Western blot analysis
+CHEMBL2177055	tau	12141141	CHEMBL2182002		CHEMBL1075321	IC50	=	11.0	nM	CHEMBL2182243	Inhibition of GSK3beta-mediated Tau phosphorylation in mouse 3T3 cells after 4 hrs by Western blot analysis
+CHEMBL3580635	catenin	15617885	CHEMBL444160		CHEMBL262	IC50	=	6800.0	nM	CHEMBL3584608	Activation of GSK-3beta in HEK293 cells assessed as suppression of TCF/beta-catenin transcriptional activity after 24 hrs by SuperTOPFlash reporter gene assay
+CHEMBL3580635	catenin	15617886	CHEMBL1774404		CHEMBL262	IC50	=	3000.0	nM	CHEMBL3584608	Activation of GSK-3beta in HEK293 cells assessed as suppression of TCF/beta-catenin transcriptional activity after 24 hrs by SuperTOPFlash reporter gene assay
+CHEMBL3580635	catenin	15617887	CHEMBL3120496		CHEMBL262	IC50	=	11600.0	nM	CHEMBL3584608	Activation of GSK-3beta in HEK293 cells assessed as suppression of TCF/beta-catenin transcriptional activity after 24 hrs by SuperTOPFlash reporter gene assay
+CHEMBL3580635	wnt	15617885	CHEMBL444160		CHEMBL262	IC50	=	6800.0	nM	CHEMBL3584608	Activation of GSK-3beta in HEK293 cells assessed as suppression of TCF/beta-catenin transcriptional activity after 24 hrs by SuperTOPFlash reporter gene assay
+CHEMBL3580635	wnt	15617886	CHEMBL1774404		CHEMBL262	IC50	=	3000.0	nM	CHEMBL3584608	Activation of GSK-3beta in HEK293 cells assessed as suppression of TCF/beta-catenin transcriptional activity after 24 hrs by SuperTOPFlash reporter gene assay
+CHEMBL3580635	wnt	15617887	CHEMBL3120496		CHEMBL262	IC50	=	11600.0	nM	CHEMBL3584608	Activation of GSK-3beta in HEK293 cells assessed as suppression of TCF/beta-catenin transcriptional activity after 24 hrs by SuperTOPFlash reporter gene assay
+CHEMBL3734740	tau	16381009	CHEMBL3734985		CHEMBL262	IC50	=	1390.0	nM	CHEMBL3736788	Inhibition of GSK-3beta (unknown origin) expressed in CHO cells assessed as Tau phosphorylation after 2 hrs
+CHEMBL3734740	tau	16381010	CHEMBL3735500		CHEMBL262	IC50	=	5170.0	nM	CHEMBL3736788	Inhibition of GSK-3beta (unknown origin) expressed in CHO cells assessed as Tau phosphorylation after 2 hrs
+CHEMBL3734740	tau	16381011	CHEMBL3735579		CHEMBL262	IC50	=	2130.0	nM	CHEMBL3736788	Inhibition of GSK-3beta (unknown origin) expressed in CHO cells assessed as Tau phosphorylation after 2 hrs
+CHEMBL3734740	tau	16381012	CHEMBL3735291		CHEMBL262	IC50	=	820.0	nM	CHEMBL3736788	Inhibition of GSK-3beta (unknown origin) expressed in CHO cells assessed as Tau phosphorylation after 2 hrs
+CHEMBL3734740	tau	16381013	CHEMBL3735506		CHEMBL262	IC50	=	240.0	nM	CHEMBL3736788	Inhibition of GSK-3beta (unknown origin) expressed in CHO cells assessed as Tau phosphorylation after 2 hrs
+CHEMBL3734740	tau	16381014	CHEMBL3735522		CHEMBL262	IC50	=	800.0	nM	CHEMBL3736788	Inhibition of GSK-3beta (unknown origin) expressed in CHO cells assessed as Tau phosphorylation after 2 hrs
+CHEMBL3734740	tau	16381015	CHEMBL3735627		CHEMBL262	IC50	=	790.0	nM	CHEMBL3736788	Inhibition of GSK-3beta (unknown origin) expressed in CHO cells assessed as Tau phosphorylation after 2 hrs
+CHEMBL3734740	tau	16381016	CHEMBL3736035		CHEMBL262	IC50	=	70800.0	nM	CHEMBL3736788	Inhibition of GSK-3beta (unknown origin) expressed in CHO cells assessed as Tau phosphorylation after 2 hrs
+CHEMBL3734740	tau	16381017	CHEMBL3735986		CHEMBL262	IC50	>	100000.0	nM	CHEMBL3736788	Inhibition of GSK-3beta (unknown origin) expressed in CHO cells assessed as Tau phosphorylation after 2 hrs
+CHEMBL4007395	tau	18033959	CHEMBL140	CURCUMIN	CHEMBL3669	IC50	=	66.0	nM	CHEMBL4008099	Inhibition of recombinant rat N-terminal GST-tagged GSK3beta expressed in Escherichia coli assessed as reduction in tau phosphorylation preincubated for 30 mins followed by tau protein addition measured after 1 hr by ELISA
+CHEMBL4177729	tau	18471318	CHEMBL259850		CHEMBL1075321	IC50	=	100.0	nM	CHEMBL4182668	Inhibition of human GSK-3beta in mouse 3T3 fibroblasts stably expressing four-repeat tau protein assessed as reduction in tau S396 phosphorylation after 4 hrs post dose by Western blot
+CHEMBL4613299	tau	20651749	CHEMBL4640019		CHEMBL262	IC50	=	3400.0	nM	CHEMBL4615930	Inhibition of GSK3beta (unknown origin) transfected in HEK cells co-transfected with tau assessed as reduction in tau phosphorylation incubated for 18 hrs in presence of 1ug/ml doxycycline
+CHEMBL5149994	tau	24865906	CHEMBL216543		CHEMBL262	IC50	=	22.0	nM	CHEMBL5151566	Inhibition of GSK3beta (unknown origin) assessed as decrease in tau phosphorylation at Ser214 residue incubated for 30 mins by Western blot assay
+CHEMBL5252511	tau	25070892	CHEMBL5277187		CHEMBL262	IC50	=	1400.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070893	CHEMBL5291070		CHEMBL262	IC50	=	1600.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070894	CHEMBL5274110		CHEMBL262	IC50	=	10000.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070895	CHEMBL4213175		CHEMBL262	IC50	=	240.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070896	CHEMBL5274152		CHEMBL262	IC50	=	260.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070897	CHEMBL5267631		CHEMBL262	IC50	=	960.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070898	CHEMBL5270581		CHEMBL262	IC50	=	320.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070899	CHEMBL5276348		CHEMBL262	IC50	=	260.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070900	CHEMBL5286900		CHEMBL262	IC50	=	170.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070901	CHEMBL5284458		CHEMBL262	IC50	=	200.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070902	CHEMBL5270885		CHEMBL262	IC50	=	36.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070903	CHEMBL5271618		CHEMBL262	IC50	=	65.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070904	CHEMBL5273478		CHEMBL262	IC50	=	270.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070905	CHEMBL5288364		CHEMBL262	IC50	=	290.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070906	CHEMBL5280305		CHEMBL262	IC50	=	480.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070907	CHEMBL5288565		CHEMBL262	IC50	=	180.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070908	CHEMBL5269649		CHEMBL262	IC50	=	77.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070909	CHEMBL5278701		CHEMBL262	IC50	=	270.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070910	CHEMBL5272425		CHEMBL262	IC50	=	96.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070911	CHEMBL5278465		CHEMBL262	IC50	=	200.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070912	CHEMBL5289893		CHEMBL262	IC50	=	180.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070913	CHEMBL5287898		CHEMBL262	IC50	=	120.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070914	CHEMBL5278847		CHEMBL262	IC50	=	800.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070915	CHEMBL5265990		CHEMBL262	IC50	=	28.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070916	CHEMBL5280241		CHEMBL262	IC50	=	61.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070917	CHEMBL5273872		CHEMBL262	IC50	=	62.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070918	CHEMBL5280368		CHEMBL262	IC50	=	47.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070919	CHEMBL5290300		CHEMBL262	IC50	=	29.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070920	CHEMBL5268185		CHEMBL262	IC50	=	14.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070921	CHEMBL5281592		CHEMBL262	IC50	=	75.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070922	CHEMBL5286049		CHEMBL262	IC50	=	770.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5252511	tau	25070923	CHEMBL5282961		CHEMBL262	IC50	=	230.0	nM	CHEMBL5252933	Inhibition of GSK-3beta (unknown origin) assessed as decrease in tau phosphorylation by high content cell based assay
+CHEMBL5634086	tau	26184477	CHEMBL259850		CHEMBL262	IC50	=	2700.0	nM	CHEMBL5634872	Inhibition of GSK3beta (unknown origin) expressed in 3T3 cells assessed as reduction in tau phosphorylation incubated 4 hrs by Western blotting analysis

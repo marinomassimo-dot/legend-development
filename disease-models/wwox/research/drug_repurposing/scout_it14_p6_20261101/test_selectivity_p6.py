@@ -46,7 +46,7 @@ class Grades(unittest.TestCase):
         r = [row("GRIN1|GRIN2A|GRIN2B|GRIN2C|GRIN2D|GRIN3A|GRIN3B", 5.6), row("ADRA1A|ADRA1B|ADRA1D", 180)]
         gr, why, *_ = grade(r, {})
         self.assertEqual(gr, "NOT_DETERMINABLE")
-        self.assertTrue(any("three or more subunits" in w for w in why))
+        self.assertTrue(any("cannot be attributed to one member" in w for w in why))
 
     def test_missing_assay_context_limits_never_drops(self):
         r = [row("GRIN1|GRIN2A", 911), row("GRIN1|GRIN2B", 1020)]
@@ -81,6 +81,21 @@ class Grades(unittest.TestCase):
         self.assertEqual(gr, "LIMITED")
 
 
+class Composition(unittest.TestCase):
+    def test_isoform_pair_is_a_group_not_a_complex(self):
+        self.assertEqual(sp.composition("GSK3A|GSK3B"), "generic_complex")
+        self.assertEqual(sp.composition("CACNA1G|CACNA1H"), "generic_complex")
+
+    def test_true_heteromers_stay_defined(self):
+        self.assertEqual(sp.composition("GRIN1|GRIN2B"), "defined_complex")
+        self.assertEqual(sp.composition("KCNQ2|KCNQ3"), "defined_complex")
+
+    def test_chembl_target_type_decides_when_present(self):
+        self.assertEqual(sp.composition("GRIN1|GRIN2B", "PROTEIN COMPLEX GROUP"), "generic_complex")
+        self.assertEqual(sp.composition("CDK5|CDK5R1", "PROTEIN COMPLEX"), "defined_complex")
+        self.assertEqual(sp.composition("GSK3B", "SINGLE PROTEIN"), "single")
+
+
 class CommittedOutput(unittest.TestCase):
     def test_every_ratio_has_a_grade_that_allows_it(self):
         rows = list(csv.DictReader(open(os.path.join(H, "selectivity_same_document.tsv")), delimiter="\t"))
@@ -94,7 +109,7 @@ class CommittedOutput(unittest.TestCase):
 
     def test_no_generic_complex_row_carries_a_ratio(self):
         for r in csv.DictReader(open(os.path.join(H, "selectivity_same_document.tsv")), delimiter="\t"):
-            if "three or more subunits" in r["limits"] and r["grade"] == "NOT_DETERMINABLE":
+            if "cannot be attributed to one member" in r["limits"] and r["grade"] == "NOT_DETERMINABLE":
                 self.assertEqual(r["ratio_extreme_target_medians"], "")
 
 

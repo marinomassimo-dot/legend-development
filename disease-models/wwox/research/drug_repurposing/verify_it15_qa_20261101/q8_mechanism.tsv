@@ -1,0 +1,11 @@
+drug	chembl_id	action_type	mechanism_of_action	target_chembl_id	direct_interaction	mechanism_comment	selectivity_comment	binding_site_comment	mech_refs
+memantine	CHEMBL807	NO_MECHANISM_RECORD
+ketamine	CHEMBL742	NO_MECHANISM_RECORD
+esketamine	CHEMBL395091	NEGATIVE ALLOSTERIC MODULATOR	Glutamate [NMDA] receptor negative allosteric modulator	CHEMBL2094124	1	Noncompetitive binding to NMDA glutamate receptors	NMDA subtype non-selective 	None	PubMed:26707087
+dextromethorphan	CHEMBL52440	NO_MECHANISM_RECORD
+amantadine	CHEMBL660	NO_MECHANISM_RECORD
+dizocilpine	CHEMBL284237	NO_MECHANISM_RECORD
+ifenprodil	CHEMBL305187	NO_MECHANISM_RECORD
+traxoprodil	CHEMBL17350	ANTAGONIST	Glutamate NMDA receptor; GRIN1/GRIN2B antagonist	CHEMBL1907603	1	Development discontinued due to QT prolongation.	Selective for the NR2B subunit.	None	DOI:10.1111/j.1527-3458.1998.tb00073.x;PubMed:11897110;PubMed:21699507
+radiprodil	CHEMBL182066	ANTAGONIST	Glutamate NMDA receptor; GRIN1/GRIN2B antagonist	CHEMBL1907603	1	Non-competitive antagonist, negative modulator.	GRIN2B selective.	Binds to ifenprodil site on N-terminal domain.	
+rislenemdaz	CHEMBL3545350	NO_MECHANISM_RECORD

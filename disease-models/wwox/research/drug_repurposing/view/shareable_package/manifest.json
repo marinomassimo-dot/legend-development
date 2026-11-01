@@ -18,7 +18,7 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 11085,
+    "values": 11156,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -118,7 +118,7 @@
    },
    "^\\.needs\\[\\]\\.": {
     "class": "OWN",
-    "values": 1760,
+    "values": 1762,
     "why": "needs records written in this repository"
    },
    "^\\.pairs\\[\\]\\.(l2|l3|l4|x|n|r)(\\.|\\[\\]|$)": {
@@ -223,7 +223,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 2941,
+    "forbidden-name": 2987,
     "forbidden-wording": 12
    },
    "co_attested_wording": [
@@ -248,7 +248,7 @@
    "forbidden_names": 126046,
    "forbidden_wordings": 2888,
    "pair_unmarked_attested_or_unchecked": {
-    "count": 148,
+    "count": 150,
     "names": [
      "act 709478",
      "apinocaltamide",
@@ -263,7 +263,7 @@
      "px 478",
      "sulfopin"
     ],
-    "unchecked_without_corpus": 148
+    "unchecked_without_corpus": 150
    },
    "suppressed_by_exemption": {
     "bibliographic journal name (validated against the journals of the cache)": 4,
@@ -462,7 +462,7 @@
   "BIBLIO": 2397,
   "COUNT": 11599,
   "ID": 4547,
-  "OWN": 82703,
+  "OWN": 82776,
   "ROWNAME": 2251,
   "SRC_A": 189,
   "SRC_META": 256,
@@ -501,7 +501,7 @@
  "files": {
   "COMPARISON.md": {
    "bytes": 6436,
-   "sha256": "0bce54e618f5fd6e2684ef02d6d581d43359841d7dd1ca3b7b25637353a5076a"
+   "sha256": "cc9648f37da0cb1b69801528c5d678782422d21ec460b9e1be185473a9f79888"
   },
   "LICENSES/CC-BY-4.0.txt": {
    "bytes": 18657,
@@ -521,7 +521,7 @@
   },
   "NOTICE.md": {
    "bytes": 12774,
-   "sha256": "9a781c98b3fe6a18854181e47523c12d9923be447bc98c4450be2bc0d6b317b1"
+   "sha256": "bc4a5e137490d1142e2c0d222123229aa212ef43e6601a437c81036a43dc4b33"
   },
   "README.md": {
    "bytes": 4906,
@@ -544,8 +544,8 @@
    "sha256": "240723d6c86c13fc8f19ff2a5bbe7eec5e64da0f3769ea25e49d8d7b7e5784d0"
   },
   "index.html": {
-   "bytes": 4208107,
-   "sha256": "2df5676c3f7da9bcb012135433aff5a2b7347e46ca2b21a57736049a89a22db4"
+   "bytes": 4232363,
+   "sha256": "c792017d3d85804b4b968982d45bbed5079b2ff21d8d4b213b2a151f6436509a"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
@@ -605,7 +605,7 @@
   "lead_field_redactions": 11,
   "pair_status_rule": "pairs[].p.cr.pha[1] (status classes of the row) is dropped in the shareable build: a status class derives from ChEMBL max_phase, DGIdb approved flags, MATRIX and openFDA together, and the build does not re-derive a class-A-only status per row.",
   "pairs_status_class_dropped": 923,
-  "repository_file_names_described": 177,
+  "repository_file_names_described": 201,
   "rule": "IT5 P13 fix. Own analysis stays in the shareable build: a conclusion at the level of a need, a class or a card subject, in our own words, short, attributed to a published work. Withheld: (1) a sentence that states a compound-target(-action) pair together with its database of origin when the pair is asserted only by a class-B/C catalogue source; (2) a compound named in prose whose only provenance in the repository is a class-B/C catalogue row (it appears in no cited full text and is not a card subject); (3) a per-compound status, phase, approval or access statement attributed to a class-B/C source; (4) repository file names, which cannot be used outside the repository. The replacement keeps the research conclusion and names the withheld source class with the phrase in withheld_phrase. The FULL build keeps everything. The audit enforces (1) and (2) by derivation from the catalogue, (3) and (4) by pattern, and every redaction below must match exactly once or more: a stale redaction fails the build.",
   "withheld_phrase": "dato di una fonte non inclusa in questa versione"
  },

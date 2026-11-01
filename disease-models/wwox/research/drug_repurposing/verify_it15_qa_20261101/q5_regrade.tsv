@@ -1,0 +1,8 @@
+compound	document	measure	species	grade	limits	assay_technique_sets
+CHEMBL284237	chembl:CHEMBL6115009	IC50	Homo sapiens	INTERPRETABLE		{'CHEMBL6118020': ['flipr', 'flux'], 'CHEMBL6118021': ['flipr', 'flux'], 'CHEMBL6118022': ['flipr', 'flux'], 'CHEMBL6118023': ['flipr', 'flux']}
+CHEMBL305187	chembl:CHEMBL4308825	IC50	Homo sapiens	INTERPRETABLE		{'CHEMBL4308998': ['clamp', 'oocyte'], 'CHEMBL4308999': ['clamp', 'oocyte'], 'CHEMBL4309000': ['clamp', 'oocyte'], 'CHEMBL4309001': ['clamp', 'oocyte']}
+CHEMBL305195	chembl:CHEMBL4308825	IC50	Homo sapiens	INTERPRETABLE		{'CHEMBL4309003': ['clamp', 'oocyte'], 'CHEMBL4309004': ['clamp', 'oocyte']}
+CHEMBL742	chembl:CHEMBL1759939	IC50	Homo sapiens	INTERPRETABLE		{'CHEMBL1764159': ['flipr'], 'CHEMBL1764160': ['flipr']}
+CHEMBL742	chembl:CHEMBL6115009	IC50	Homo sapiens	INTERPRETABLE		{'CHEMBL6118020': ['flipr', 'flux'], 'CHEMBL6118021': ['flipr', 'flux'], 'CHEMBL6118022': ['flipr', 'flux'], 'CHEMBL6118023': ['flipr', 'flux']}
+CHEMBL807	chembl:CHEMBL1146243	IC50	Homo sapiens	INTERPRETABLE		{'CHEMBL889736': ['oocyte'], 'CHEMBL889737': ['oocyte']}
+CHEMBL807	chembl:CHEMBL6115009	IC50	Homo sapiens	INTERPRETABLE		{'CHEMBL6118020': ['flipr', 'flux'], 'CHEMBL6118021': ['flipr', 'flux'], 'CHEMBL6118022': ['flipr', 'flux'], 'CHEMBL6118023': ['flipr', 'flux']}

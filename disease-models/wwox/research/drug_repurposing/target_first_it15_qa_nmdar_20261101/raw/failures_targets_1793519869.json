@@ -1,0 +1,104 @@
+[
+{
+"url": "https://www.ebi.ac.uk/chembl/api/data/status.json",
+"http": 500,
+"attempt": 1,
+"text": "<!doctype html>\n<html lang=\"en\" class=\"vf-no-js\">\n  <head>\n    <script>\n// Detect if JS is on and swap vf-no-js for vf-j"
+},
+{
+"url": "https://www.ebi.ac.uk/chembl/api/data/target.json?target_components__accession=Q12879&limit=50",
+"http": 500,
+"attempt": 1,
+"text": "<!doctype html>\n<html lang=\"en\" class=\"vf-no-js\">\n  <head>\n    <script>\n// Detect if JS is on and swap vf-no-js for vf-j"
+},
+{
+"url": "https://www.ebi.ac.uk/chembl/api/data/target.json?target_components__accession=Q12879&limit=50",
+"http": 500,
+"attempt": 2,
+"text": "<!doctype html>\n<html lang=\"en\" class=\"vf-no-js\">\n  <head>\n    <script>\n// Detect if JS is on and swap vf-no-js for vf-j"
+},
+{
+"url": "https://www.ebi.ac.uk/chembl/api/data/target.json?target_components__accession=Q12879&limit=50",
+"http": 0,
+"attempt": 3,
+"text": "TimeoutError: The read operation timed out"
+},
+{
+"url": "https://www.ebi.ac.uk/chembl/api/data/status.json",
+"http": 500,
+"attempt": 1,
+"text": "<!doctype html>\n<html lang=\"en\" class=\"vf-no-js\">\n  <head>\n    <script>\n// Detect if JS is on and swap vf-no-js for vf-j"
+},
+{
+"url": "https://www.ebi.ac.uk/chembl/api/data/status.json",
+"http": 500,
+"attempt": 2,
+"text": "<!doctype html>\n<html lang=\"en\" class=\"vf-no-js\">\n  <head>\n    <script>\n// Detect if JS is on and swap vf-no-js for vf-j"
+},
+{
+"url": "https://www.ebi.ac.uk/chembl/api/data/status.json",
+"http": 500,
+"attempt": 3,
+"text": "<!doctype html>\n<html lang=\"en\" class=\"vf-no-js\">\n  <head>\n    <script>\n// Detect if JS is on and swap vf-no-js for vf-j"
+},
+{
+"url": "https://www.ebi.ac.uk/chembl/api/data/target.json?target_components__accession=Q13224&limit=50",
+"http": 500,
+"attempt": 1,
+"text": "<!doctype html>\n<html lang=\"en\" class=\"vf-no-js\">\n  <head>\n    <script>\n// Detect if JS is on and swap vf-no-js for vf-j"
+},
+{
+"url": "https://www.ebi.ac.uk/chembl/api/data/target.json?target_components__accession=Q13224&limit=50",
+"http": 500,
+"attempt": 2,
+"text": "<!doctype html>\n<html lang=\"en\" class=\"vf-no-js\">\n  <head>\n    <script>\n// Detect if JS is on and swap vf-no-js for vf-j"
+},
+{
+"url": "https://www.ebi.ac.uk/chembl/api/data/target.json?target_components__accession=Q13224&limit=50",
+"http": 500,
+"attempt": 3,
+"text": "<!doctype html>\n<html lang=\"en\" class=\"vf-no-js\">\n  <head>\n    <script>\n// Detect if JS is on and swap vf-no-js for vf-j"
+},
+{
+"url": "https://www.ebi.ac.uk/chembl/api/data/status.json",
+"http": 0,
+"attempt": 1,
+"text": "TimeoutError: The read operation timed out"
+},
+{
+"url": "https://www.ebi.ac.uk/chembl/api/data/status.json",
+"http": 500,
+"attempt": 2,
+"text": "<!doctype html>\n<html lang=\"en\" class=\"vf-no-js\">\n  <head>\n    <script>\n// Detect if JS is on and swap vf-no-js for vf-j"
+},
+{
+"url": "https://www.ebi.ac.uk/chembl/api/data/target.json?target_components__accession=Q14957&limit=50",
+"http": 500,
+"attempt": 1,
+"text": "<!doctype html>\n<html lang=\"en\" class=\"vf-no-js\">\n  <head>\n    <script>\n// Detect if JS is on and swap vf-no-js for vf-j"
+},
+{
+"url": "https://www.ebi.ac.uk/chembl/api/data/target.json?target_components__accession=Q14957&limit=50",
+"http": 500,
+"attempt": 2,
+"text": "<!doctype html>\n<html lang=\"en\" class=\"vf-no-js\">\n  <head>\n    <script>\n// Detect if JS is on and swap vf-no-js for vf-j"
+},
+{
+"url": "https://www.ebi.ac.uk/chembl/api/data/status.json",
+"http": 500,
+"attempt": 1,
+"text": "<!doctype html>\n<html lang=\"en\" class=\"vf-no-js\">\n  <head>\n    <script>\n// Detect if JS is on and swap vf-no-js for vf-j"
+},
+{
+"url": "https://www.ebi.ac.uk/chembl/api/data/status.json",
+"http": 500,
+"attempt": 2,
+"text": "<!doctype html>\n<html lang=\"en\" class=\"vf-no-js\">\n  <head>\n    <script>\n// Detect if JS is on and swap vf-no-js for vf-j"
+},
+{
+"url": "https://www.ebi.ac.uk/chembl/api/data/target.json?target_components__accession=O15399&limit=50",
+"http": 500,
+"attempt": 1,
+"text": "<!doctype html>\n<html lang=\"en\" class=\"vf-no-js\">\n  <head>\n    <script>\n// Detect if JS is on and swap vf-no-js for vf-j"
+}
+]

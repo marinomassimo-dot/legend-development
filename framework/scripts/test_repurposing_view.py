@@ -2170,5 +2170,33 @@ class JournalNameIsNotACompoundName(unittest.TestCase):
         self.assertIn("Nature", ref.journals)                                          # the Meis2 record (PMID 42587157) is cited
         self.assertNotIn("Nature Compound", ref.journals)                              # mutation: a string that is not a cached journal is not exempt
 
+
+class DeepenedCases(unittest.TestCase):
+    """IT15 P7: deepened cases side by side; five levels shown as text and symbol; names only in the full edition."""
+
+    CASE = {"case_id": "X1", "level": "functional_measure", "question": "Q <b>", "compound_action": "c, a", "system": "s", "wwox_evidence": "w",
+            "external_precedent": "e", "pharmacology": "p", "pharmacology_limits": "l", "counter_evidence": "x", "next_experiment": "n", "sources": ["README.md"]}
+
+    def test_every_case_shows_the_eight_questions_and_its_level_as_text(self):
+        html = rv.render_deepened_cases([self.CASE])
+        for lab in ("Composto e azione", "Sistema", "Evidenza WWOX", "Precedente esterno", "Misura farmacologica e suoi limiti", "Controevidenza", "Prossimo esperimento"):
+            self.assertIn(lab, html)
+        self.assertIn("Sostenuto da una misura funzionale", html)
+        self.assertIn("Q &lt;b&gt;", html)            # escaped, never raw markup
+        self.assertNotIn("<b>Q", html)
+
+    def test_legend_lists_all_five_levels(self):
+        html = rv.render_deepened_cases([self.CASE])
+        for k in ("catalogued", "linked", "deepened", "functional_measure", "hypothetical"):
+            self.assertIn(f"lvl-{k}", html)
+
+    def test_shareable_edition_carries_a_count_and_no_case_text(self):
+        html = rv.render_deepened_cases([], 3)
+        self.assertIn("3 casi approfonditi", html)
+        self.assertNotIn("Composto e azione", html)
+        self.assertEqual(rv.render_deepened_cases([], 0), "")
+
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=1)
