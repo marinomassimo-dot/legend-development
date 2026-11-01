@@ -34,15 +34,15 @@
    "steps": [
     {
      "step": "P1.1 cache read-side validation (shared validator, invalid entry = miss, discard observable) + regressions",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "scientist",
-     "evidence": ""
+     "evidence": "payload_problem shared by read and write; invalid entry = miss kept as .discarded[.n], counted and listed; expect= key; 64 adapter tests; fresh verifier: integrate, follow-ups applied (obfuscated addresses, no overwrite of discards, discard list in transport)"
     },
     {
      "step": "P1.2 public_extract vs licences/notices: reconcile code, convention, tests; consumers",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "scientist",
-     "evidence": ""
+     "evidence": "public_extract no longer masks: refuses address-bearing notices (NoticeContainsAddress, line numbers only, obfuscated forms included), reference_record for local-only originals; convention/brief/tests consistent; consumers: none tracked needed correction"
     }
    ]
   },
@@ -62,9 +62,9 @@
    "steps": [
     {
      "step": "P3 prospective evaluation: immutable freeze, outcome semantics (tested != effect), one useful task measured now, IT16 stays descriptive",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "scientist",
-     "evidence": ""
+     "evidence": "evaluation_it17_p3: IT16 stays descriptive; audit of the 2026-10-29 freeze (selection ids exact, pool/rules/flags later); sealed freeze 2026-11-01T16:54:06Z on 3e167e25 with FREEZE.sha256; outcome semantics; direction task vs GtoPdb 923/926 (B0 0.762, B1 0.866) = technical correctness of the stored ChEMBL field only; fresh verifier reproduced numbers, defects fixed"
     }
    ]
   },
@@ -93,9 +93,9 @@
    "steps": [
     {
      "step": "P5 science (only decision-changing reads) and dashboard state/preparation for the single reserved act",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "scientist",
-     "evidence": ""
+     "evidence": "dashboard: state checked (URL 404, Pages off, workflow absent, patch applies), checker for DEPLOY.md 12 a-f with 17 offline tests, single-act request prepared and corrected after verification; site NOT online. Science: motivated abstention, no read that would change a comparison in use; no biological result added"
     }
    ]
   },
