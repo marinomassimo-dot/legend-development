@@ -397,8 +397,8 @@ def git(args: list[str], cwd: Path = ROOT, timeout: int = 40):
     """(returncode, stdout). Read-only use only: ls-remote, rev-parse, cat-file, show, and an object-only fetch."""
     env = dict(os.environ, GIT_TERMINAL_PROMPT="0", GIT_SSH_COMMAND="ssh -o BatchMode=yes -o ConnectTimeout=10")
     try:
-        done = subprocess.run(["git", *args], cwd=cwd, capture_output=True, text=True, timeout=timeout, env=env)
-        return done.returncode, done.stdout
+        done = subprocess.run(["git", *args], cwd=cwd, capture_output=True, timeout=timeout, env=env)
+        return done.returncode, done.stdout.decode("utf-8", "replace")  # a stray byte must not end the daily run
     except (OSError, subprocess.SubprocessError):
         return 127, ""
 
@@ -513,8 +513,19 @@ HOOKS = [(re.compile(r"evaluat|benchmark|gold set|outcome|prospective|predict", 
          (re.compile(r"cache|retry|rest api|retriev|endpoint|extract|fragil", re.I), "tools/capabilities", None, "biomedical"),
          (re.compile(r"continuity|handoff|autonom|mandate|checkpoint|agent|resum", re.I), "Scientist/Orchestrator patterns", "agent", "agent"),
          (re.compile(r"compound|catalogue|identity|drug", re.I), "databases", "compound", "compound database"),
-         (re.compile(r"network|pathway|context|tissue|species|assay|biolog", re.I), "scientific inputs", None, "neuronal")]
-DEFAULT_HOOK = ("scientific inputs", None, "neuronal")  # anchor: a word that keeps a lexical query inside biomedicine
+         (re.compile(r"network|pathway|context|tissue|species|assay|biolog", re.I), "scientific inputs", None, "biomedical")]
+DEFAULT_HOOK = ("scientific inputs", None, "")
+NEURO = re.compile(r"neuron|neural|seizure|epilep|glia|brain|synap|cortex|slice|wwox|myelin|excitab", re.I)
+# Purely internal process (how we work, not what exists outside) is not an external search question unless the
+# same text carries an explicit external hook.
+INTERNAL = re.compile(r"presentation|shareable|dashboard|continuity|autonom|agent|report|checkpoint|handoff|mandate|resum|"
+                      r"verification|battery|cleanup|reconcil|canonical|fresh actor|scouting|radar|follow cycle|traced|channels", re.I)
+EXTERNAL = re.compile(r"benchmark|evaluat|licen[cs]e|dataset|database|repurpos|pharmacolog|signature|perturb|compound|assay|"
+                      r"predict|leakage|retriev|cache|rest api", re.I)
+# Words too generic to prove that another repository is about the same subject.
+GENERIC = frozenset("""agent agents neuronal evaluation independent predictive benchmark data model models method methods tool tools
+source sources system systems analysis dataset database open public research tests test validation framework pipeline
+workflow platform network networks outcome outcomes""".split())
 
 
 def _words(text: str) -> list[str]:
@@ -600,42 +611,58 @@ def parse_task(text: str, path: str) -> list[dict]:
     return out
 
 
-def current_section(text: str) -> str:
+def current_section(text: str):
+    """(section text, note). The LAST heading marked CURRENT wins; two marked headings are flagged as ambiguous."""
     lines = text.splitlines()
-    for i, line in enumerate(lines):
-        if re.match(r"#{2,4} .*\bCURRENT\b", line):
-            j = next((k for k in range(i + 1, len(lines)) if re.match(r"#{2,4} Roadmap iteration", lines[k])), len(lines))
-            return "\n".join(lines[i:j])
-    return ""
+    marked = [i for i, line in enumerate(lines) if re.match(r"#{2,4} .*\bCURRENT\b", line)]
+    if not marked:
+        return "", "no heading marked CURRENT in the module README"
+    i = marked[-1]
+    j = next((k for k in range(i + 1, len(lines)) if re.match(r"#{2,4} Roadmap iteration", lines[k])), len(lines))
+    note = f"{len(marked)} headings are marked CURRENT; the last one is used" if len(marked) > 1 else ""
+    return "\n".join(lines[i:j]), note
 
 
-def parse_readme(text: str, path: str) -> list[dict]:
-    """Open items the CURRENT iteration section declares (`Only planned:` / `Next:` sentences) and the package READMEs it links."""
-    section = current_section(text)
+def parse_readme(text: str, path: str):
+    """Open items the CURRENT iteration section declares (`Only planned:` / `Next:` sentences), the package READMEs it
+    links, and a note when the section is missing or ambiguous."""
+    section, note = current_section(text)
     out = []
     for m in re.finditer(r"(?:Only planned|Next step|Next|Remaining|Not yet)\s*:\s*([^\n]+?)(?:\.\s|\.$|\n|$)", section):
         sentence = _plain(m.group(1))
         out.append({"surface": "open_item", "lid": digest(sentence), "locator": f"CURRENT section: '{sentence[:60]}'",
                     "weight": WEIGHT["open_item"], "text": sentence, "decision": f"still open per the CURRENT section: {sentence[:130]}"})
     links = sorted({m for m in re.findall(r"\]\(([\w./-]+/README\.md)\)", section)})[:8]
-    return out, [f"{MODULE}/{p}" for p in links]
+    return out, [f"{MODULE}/{p}" for p in links], ([note] if note else [])
 
 
 def parse_reopen(text: str, path: str) -> list[dict]:
-    """WATCH rows of a package README that carry a reopen condition. A row that is no longer WATCH, or lost its
-    condition, generates nothing."""
+    """Reopen conditions of a package README: WATCH table rows that state `reopen if/when ...`, and, when the README
+    names a WATCH decision anywhere, prose or heading lines such as `Reopen if ...` / `Reopens when ...` (the name is the
+    nearest heading above). A row no longer WATCH, or a line that lost its condition, generates nothing."""
     out = []
     pkg = path.rsplit("/", 2)[-2]
+    cond_re = re.compile(r"\breopens?(?:ed)?\s+(?:if|when|on|once)\s+(.+?)(?:[;]|\.\s|\.$|$)", re.I)
+    has_watch = bool(re.search(r"\bWATCH\b", text))
+    heading = pkg
     for line in text.splitlines():
-        cells = [_plain(c) for c in line.strip().strip("|").split("|")]
-        if len(cells) < 3 or not any(c.upper() == "WATCH" for c in cells[1:3]):
+        if line.startswith("#"):
+            heading = _plain(line.lstrip("# "))[:40]
             continue
-        m = re.search(r"reopen(?:ed)?\s+(?:if|when|on|once)\s+(.+?)(?:[;]|\.\s|\.$|$)", cells[-1], re.I)
+        cells = [_plain(c) for c in line.strip().strip("|").split("|")]
+        if line.lstrip().startswith("|"):
+            if len(cells) >= 3 and any(c.upper() == "WATCH" for c in cells[1:3]):
+                m = cond_re.search(cells[-1])
+                if m:
+                    out.append({"surface": "reopen", "lid": f"{pkg}/{cells[0][:40]}", "locator": f"{pkg} row '{cells[0][:40]}'",
+                                "weight": WEIGHT["reopen"], "text": f"{cells[0]} {m.group(1)}",
+                                "decision": f"reopen condition met? {m.group(1)[:140]}"})
+            continue
+        m = cond_re.search(_plain(line)) if has_watch else None
         if m:
-            cond = m.group(1)
-            out.append({"surface": "reopen", "lid": f"{pkg}/{cells[0][:40]}", "locator": f"{pkg} row '{cells[0][:40]}'",
-                        "weight": WEIGHT["reopen"], "text": f"{cells[0]} {cond}",
-                        "decision": f"reopen condition met? {cond[:140]}"})
+            out.append({"surface": "reopen", "lid": f"{pkg}/{heading}/{digest(m.group(1))}",
+                        "locator": f"{pkg} '{heading}' line 'reopen {m.group(1)[:40]}'", "weight": WEIGHT["reopen"],
+                        "text": f"{heading} {m.group(1)}", "decision": f"reopen condition met? {m.group(1)[:140]}"})
     return out
 
 
@@ -644,7 +671,7 @@ def hook(text: str):
     for pattern, category, hf, anchor in HOOKS:
         if pattern.search(text):
             return category, hf, anchor
-    return None, None, DEFAULT_HOOK[2]
+    return None, None, "epilepsy" if NEURO.search(text) else "biomedical"
 
 
 def build_questions(items: list[dict]) -> tuple[list[dict], int]:
@@ -653,15 +680,24 @@ def build_questions(items: list[dict]) -> tuple[list[dict], int]:
     skipped = 0
     for it in items:
         category, hf, anchor = hook(it["text"])
+        if INTERNAL.search(it["text"]) and not EXTERNAL.search(it["text"]):
+            skipped += 1  # process about our own work: nothing outside can answer it
+            continue
+        if category == "scientific inputs":
+            anchor = "epilepsy" if NEURO.search(it["text"]) else "biomedical"
         terms = key_terms(it["text"])  # local to the item: editing one priority never moves another question
         if len(terms) < 2 or (it.get("hook_required") and category is None):
             skipped += 1
             continue
-        kw = " ".join([anchor] + terms)
+        plain = [t for t in terms if re.fullmatch(r"[a-z]{4,14}", t)]  # no hyphenated or rare tokens in a search string
+        kw = " ".join(([anchor] if anchor else []) + (plain or terms))
         q = {"id": f"{it['surface']}:{it['lid']}", "category": category or "scientific inputs",
              "gap": it["text"][:140], "decision": it["decision"], "weight": it["weight"], "kw": kw,
-             "gh": " ".join((anchor + " " + terms[0]).split()[:3]), "hf": hf or max(terms, key=len),
-             "epmc": f'TITLE_ABS:"{anchor}" AND TITLE_ABS:{terms[0]} AND TITLE_ABS:{terms[1]}', "terms": terms, "anchor": anchor,
+             "gh": " ".join(((anchor + " " if anchor else "") + (plain or terms)[0]).split()[:3]), "hf": hf or max(plain or terms, key=len),
+             "epmc": " AND ".join(f'TITLE_ABS:"{w}"' if " " in w else f"TITLE_ABS:{w}"
+                                  for w in (([anchor] if anchor else []) + plain)[:2]) if plain else None,
+             "terms": terms, "plain": plain, "anchor": anchor,
+             "domain": [t for t in plain if t not in GENERIC][:3],
              "origin": {k: it[k] for k in ("surface", "locator", "path", "blob", "sha")} | {"priority": it["text"][:200]}}
         if kw not in best or q["weight"] > best[kw]["weight"]:
             best[kw] = q
@@ -669,19 +705,19 @@ def build_questions(items: list[dict]) -> tuple[list[dict], int]:
 
 
 def _extract(path: str, text: str):
-    """(items, links) of one surface, by file kind."""
+    """(items, links, notes) of one surface, by file kind."""
     name = path.rsplit("/", 1)[-1]
     if name == "roadmap_current.md":
-        return parse_roadmap(text, path), []
+        return parse_roadmap(text, path), [], []
     if name == "work_order.json":
-        return parse_work_order(text, path), []
+        return parse_work_order(text, path), [], []
     if name.startswith("ORCH-ROADMAP"):
-        return parse_task(text, path), []
+        return parse_task(text, path), [], []
     if path == SURFACE_PATHS["readme"]:
         return parse_readme(text, path)
     if path.startswith(f"{MODULE}/diagnosis_it"):
-        return parse_diagnosis(text, path), []
-    return parse_reopen(text, path), []
+        return parse_diagnosis(text, path), [], []
+    return parse_reopen(text, path), [], []
 
 
 def _latest(runner, sha: str, directory: str, pattern: str):
@@ -694,7 +730,9 @@ def resolve_plan(cached: dict | None, extracts: dict | None, ctx: dict, runner=g
     """Derive the plan at ctx['main_sha'] -> (plan, extracts). Surfaces whose blob is unchanged are not re-read or re-parsed.
     Without a verified SHA the cached plan is returned marked provisional (never silently current)."""
     now = now or dt.datetime.now(dt.timezone.utc)
-    cached, extracts = cached or {}, dict(extracts or {})
+    cached = cached if isinstance(cached, dict) and isinstance(cached.get("questions", []), list) else {}
+    extracts = {k: v for k, v in (extracts if isinstance(extracts, dict) else {}).items()
+                if isinstance(v, dict) and isinstance(v.get("items"), list) and isinstance(v.get("blob"), str)}
     sha = ctx.get("main_sha")
     if not sha or ctx.get("cache") == "stale_reused":
         if cached.get("questions"):
@@ -732,13 +770,19 @@ def resolve_plan(cached: dict | None, extracts: dict | None, ctx: dict, runner=g
             try:
                 if code != 0:
                     raise ValueError("git show failed")
-                found, links = _extract(path, text)
+                found, links, notes = _extract(path, text)
+                notes = [f"{path}: {n}" for n in notes]
+                if "\ufffd" in text:
+                    notes.append(f"surface {path} held undecodable bytes (replaced): unreadable parts may be missing")
+                if not found and kind in ("roadmap", "work_order", "diagnosis"):
+                    notes.append(f"surface {path} parsed 0 items (format changed or table emptied?)")
             except (ValueError, KeyError, TypeError, AttributeError) as exc:
                 reasons.append(f"surface {path} unreadable: {exc}")
                 continue
-            extracts[path] = old = {"blob": blob, "items": found, "links": links}
+            extracts[path] = old = {"blob": blob, "items": found, "links": links, "notes": notes}
             reread += 1
         inputs[path] = {"surface": kind, "blob": blob}
+        reasons += old.get("notes", [])  # stored with the blob, so a cached surface keeps its warnings
         for it in old["items"]:
             items.append(dict(it, path=path, blob=blob, sha=sha))
         todo += [("reopen", link) for link in old.get("links", [])]
@@ -758,7 +802,10 @@ def pick_questions(questions: list[dict], asked: dict, now: dt.datetime, n: int)
 
     def score(q):
         last = asked.get(f"{q['id']}|{digest(q['kw'])}")
-        age = 30 if not last else min(30, (today - dt.date.fromisoformat(last)).days)
+        try:
+            age = min(30, (today - dt.date.fromisoformat(last)).days) if isinstance(last, str) else 30
+        except ValueError:
+            age = 30  # a damaged date counts as never asked
         return q["weight"] * age
     return sorted(questions, key=lambda q: (-score(q), q["id"]))[:n]
 
@@ -861,6 +908,15 @@ EVIDENCE = {"source_read", "test_run", "record_file", "session_check"}  # "log_l
 
 def _ref_exists(kind: str | None, ref: str | None, root: Path) -> bool:
     """record_file / test_run refs name a file under the repository root (`path[::test id]`); other kinds are not files."""
+    if kind in ("source_read", "session_check"):  # not a file kind, but it must still name something checkable
+        text = ref or ""
+        if re.search(r"https?://\S+", text):
+            return True
+        token = text.split()[0] if text.split() else ""
+        try:
+            return bool(token) and (root / token).resolve().is_file() and root.resolve() in (root / token).resolve().parents
+        except (OSError, ValueError):
+            return False
     if kind not in ("record_file", "test_run"):
         return True
     path = (ref or "").split("::")[0].strip()
@@ -1712,6 +1768,8 @@ def plan_step(state: dict, ctx: dict, cfg: dict, now: dt.datetime, runner=git):
     Returns (plan, extracts, themes, dstate, per_run)."""
     plan, extracts = resolve_plan(state.get("plan"), state.get("extracts"), ctx, runner, now)
     dstate = state.get("discovery", {})
+    if not isinstance(state.get("plan_asked"), dict):
+        state = dict(state, plan_asked={})
     if plan.get("questions"):
         picked = pick_questions(plan["questions"], state.get("plan_asked") or {}, now, cfg["questions_per_run"])
         return plan, extracts, picked, dict(dstate, cursor=0), len(picked)
@@ -1720,7 +1778,7 @@ def plan_step(state: dict, ctx: dict, cfg: dict, now: dt.datetime, runner=git):
 
 def record_asked(asked: dict, result: dict | None, themes: list[dict], today: str) -> dict:
     """Mark the questions actually searched today (a held rotation marks nothing). Keys carry the terms digest."""
-    asked = dict(asked)
+    asked = {k: v for k, v in (asked if isinstance(asked, dict) else {}).items() if isinstance(v, str) and DATE_RE.fullmatch(v)}
     if result and not result.get("rotation_held"):
         ran = {r["theme"] for r in result["themes"]}
         for q in themes:
@@ -1737,12 +1795,13 @@ def team_step(result: dict | None, follow: dict, explored: dict, themes: list[di
     (summary, selected items, new explored map, trace events)."""
     ecfg = cfg["explore"]
     items = [i for r in (result or {"themes": []})["themes"] for i in r["items"]]
-    terms_by_q = {q["id"]: q.get("terms", []) for q in themes if q.get("origin")}
+    terms_by_q = {q["id"]: q.get("domain", []) for q in themes if q.get("origin")}
     ran = [r for r in (result or {"themes": []})["themes"] if r.get("origin")]
-    terms = sorted({t for r in ran for t in terms_by_q.get(r["theme"], [])[:2]})  # the two leading terms: a weaker match is noise
+    terms = sorted({t for r in ran for t in terms_by_q.get(r["theme"], [])})  # DOMAIN terms only: generic words prove nothing
     known = set(known) | {i["ident"] for i in items if i.get("ident")}  # what this very run already shows is not "other work"
     summary = {"explored": [], "calls": 0, "errors": [], "candidates": 0}
     selected, events = [], []
+    explored = {k: v for k, v in explored.items() if isinstance(v, dict) and isinstance(v.get("last", ""), str)}
     new = {k: dict(v) for k, v in explored.items()}
     if not terms:
         return summary, selected, new, events

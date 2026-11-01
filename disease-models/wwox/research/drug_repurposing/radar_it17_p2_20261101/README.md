@@ -65,3 +65,29 @@ Trace recorded with `scout_daily.py --trace` (signal `via` question, examination
 - IT17 task-record steps as questions on remote main: they appear once the record is pushed.
 - Better terms: a deterministic text rule cannot judge relevance; a sharper query (phrases, controlled vocabulary) is a later, measured change.
 - The other hits of the run (Nature "Drug repurposing in hereditary ataxia", metadata only, no abstract in Crossref; the Europe PMC and Hub items) remain TO_TRIAGE; unexamined is not negative.
+
+## Verifier round 2 (changes after independent review)
+
+- **Robustness.** Undecodable bytes no longer crash a run (the subprocess wrapper decodes with replacement; a surface that contained them is flagged provisional). A surface expected to yield items (roadmap, work order, diagnosis) that parses to zero is flagged `parsed 0 items`, also when served from the blob cache (warnings are stored with the blob). Wrong-shaped or damaged state (plan, extracts, asked-dates, explored) is dropped or ignored per key instead of crashing. Two headings marked CURRENT: the last wins and the ambiguity is a provisional reason.
+- **Evidence for a trace.** `source_read` and `session_check` refs now need a URL or an existing repository path as first token, else the stage stays `claimed`.
+- **Reopen conditions: known gap.** `parse_reopen` now also reads prose or heading lines such as "Reopen if ..." / "Reopens when ..." beside a README that names a WATCH decision. Run on this repository (HEAD `e684f334c9ab`), the two package READMEs linked from the CURRENT section yield **0 reopen questions**: neither states a reopen condition in a WATCH row or a "Reopen if/when" line. The code path is tested on fixtures only; on the real repository it is a known gap, not a working source.
+- **Plan counts at HEAD:** 34 questions (work order 15, roadmap 11, diagnosis 8), 7 priorities skipped as internal or without a usable term, no provisional reason.
+- **Query quality.** Anchor per category ("drug repurposing", "pharmacology", "compound database", "perturbation signature", "biomedical"; "epilepsy" only when the text is neurological, never "neuronal"). Priorities about our own process (presentation, continuity, agent, autonomy, report, checkpoint, dashboard, scouting, verification) are not external questions unless the same text carries an explicit external hook (benchmark, evaluation, licence, dataset, pharmacology, ...). Search strings use plain alphabetic words of 4-14 letters, never hyphenated or rare tokens; Europe PMC gets at most 2 ANDed terms. A team lead must share a DOMAIN term (generic words such as agent, evaluation, independent, model are excluded); a question with no domain term triggers no team exploration (this is the case for the Evaluation row today).
+- **By design.** A priority that was delivered but is not yet reflected in the diagnosis table (or roadmap, work order) keeps generating questions: those surfaces are the source of truth, and the radar does not infer completion from other records. Only a DONE task step, a removed need or a resolved WATCH condition stops one.
+
+Ten live-plan queries (offline, derived from HEAD objects; GitHub / Hub / Nature keywords / Europe PMC):
+
+| Question | GitHub | Hub | Nature keywords | Europe PMC |
+|---|---|---|---|---|
+| diagnosis:evaluation | drug repurposing independent | benchmark | drug repurposing independent evaluation predictive outcomes | "drug repurposing" AND independent |
+| diagnosis:catalogue-and-identity | biomedical identity | catalogue | biomedical identity catalogue source turned | biomedical AND identity |
+| diagnosis:compound-target-action | compound database independent | compound | compound database independent direction | "compound database" AND independent |
+| diagnosis:contexts | biomedical separated | separated | biomedical separated contexts | biomedical AND separated |
+| diagnosis:hypothesis-generation | drug repurposing generation | benchmark | drug repurposing generation hypothesis outcome | "drug repurposing" AND generation |
+| diagnosis:networks-and-models | biomedical contrast | contrast | biomedical contrast networks models | biomedical AND contrast |
+| diagnosis:perturbations | perturbation signature perturbations | perturbation | perturbation signature perturbations independent contrast lincs | "perturbation signature" AND perturbations |
+| diagnosis:quantitative-pharmacology | pharmacology descriptions | bioactivity | pharmacology descriptions pharmacology quantitative accuracy | pharmacology AND descriptions |
+| work_order:NEED-EXCITATORY-GAIN | epilepsy attributed | attributed | epilepsy attributed permissive magnesium bursting | epilepsy AND attributed |
+| work_order:NEED-GSK3B-DEREPRESSION | drug repurposing class | benchmark | drug repurposing class inhibition readout | "drug repurposing" AND class |
+
+Honest reading: the evaluation, pharmacology, compound and perturbation queries are usable; the "biomedical X" and "epilepsy attributed" ones are weak because a lexical rule picks the most frequent words of a sentence, not its subject. The plan decides which priority is asked; it does not make the query precise. The real-run numbers above predate these changes.

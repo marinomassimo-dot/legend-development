@@ -446,7 +446,7 @@ class DedupTraceAndPersistence(unittest.TestCase):
         self.assertFalse(ok)
         self.assertIn("log line", why)
         self.assertFalse(sd.trace_event(tr, "k", "decision", "adopt")[0], "decision needs an examination")
-        self.assertTrue(sd.trace_event(tr, "k", "examination", "examined", "source_read", "paper section 2")[0])
+        self.assertTrue(sd.trace_event(tr, "k", "examination", "examined", "source_read", "https://example.org/paper section 2")[0])
         self.assertTrue(sd.trace_event(tr, "k", "decision", "adopt")[0])
         self.assertTrue(sd.trace_event(tr, "k", "integration", "adopted_in_plan")[0])
         summary = sd.trace_summary(tr)["k"]
@@ -518,7 +518,7 @@ class VerifierRegressions(unittest.TestCase):
     def test_trace_ref_must_exist_else_stays_claimed(self):
         tr = {}
         sd.trace_event(tr, "k", "signal", "signalled")
-        sd.trace_event(tr, "k", "examination", "examined", "source_read", "paper")
+        sd.trace_event(tr, "k", "examination", "examined", "source_read", "https://example.org/paper")
         sd.trace_event(tr, "k", "decision", "adopt")
         ok, why = sd.trace_event(tr, "k", "integration", "verified", "record_file", "no/such/record.md")
         self.assertFalse(ok)
@@ -632,7 +632,7 @@ def work_order_text(*needs):
     return json.dumps({"entries": [{"need": n, "question": q, "would_change": w} for n, q, w in needs]})
 
 
-def readme_text(planned="Only planned: the weekly follow cycle over several weeks.", link="pkg_it16_p3_20261101/README.md"):
+def readme_text(planned="Only planned: an independent benchmark of repurposing predictions.", link="pkg_it16_p3_20261101/README.md"):
     return (f"# Module\n\n### Roadmap iteration 16 (2026-11-01) - measured state, CURRENT, task `X`\n\nSee [p]({link}). {planned}\n\n"
             "### Roadmap iteration 15 (2026-11-01) - measured state, (previous state)\n\nNext: this must never be read.\n")
 
@@ -704,7 +704,7 @@ class PlanFromPriorities(unittest.TestCase):
         plan, _ = derive()
         items = [q for q in plan["questions"] if q["id"].startswith("open_item:")]
         self.assertEqual(1, len(items))
-        self.assertIn("weekly follow cycle", items[0]["gap"])
+        self.assertIn("independent benchmark", items[0]["gap"])
 
     def test_changing_a_relevant_priority_changes_the_question_and_only_that_one(self):
         plan, _ = derive()
@@ -883,8 +883,9 @@ class TeamExploration(unittest.TestCase):
 
     def test_team_step_explores_the_owner_of_a_find_and_traces_each_lead(self):
         plan, _ = derive()
-        picked = sd.pick_questions(plan["questions"], {}, T0, 2)
-        terms = sorted({t for q in picked for t in q["terms"][:2]})
+        picked = [by_id(plan)["work_order:NEED-A"]]
+        terms = picked[0]["domain"][:2]
+        self.assertEqual(2, len(terms))
         listing = [{"full_name": f"lab/{terms[0]}-kit", "fork": False, "archived": False, "pushed_at": "2026-10-20T00:00:00Z",
                     "description": "about " + terms[1], "license": None, "html_url": "https://github.com/lab/k", "topics": []}]
         found = {"themes": [{"theme": q["id"], "origin": q["origin"], "gap": q["gap"], "decision": q["decision"],
@@ -959,6 +960,108 @@ class WeeklyLogicWithControlledTime(unittest.TestCase):
         r1, st = sd.discover({}, T, op, NOW, per_run=1)
         r2, _ = sd.discover(st, T, channel_opener(gh_items=[gh_repo("c/three-tool")]), NOW + sd.dt.timedelta(days=1), per_run=1)
         self.assertTrue(r1["new_items"] and r2["new_items"], "each day brings its own discoveries")
+
+
+class VerifierRound2(unittest.TestCase):
+    def test_a_non_utf8_byte_does_not_end_the_run_and_is_flagged(self):
+        import subprocess
+        with tempfile.TemporaryDirectory() as tmp:
+            subprocess.run(["git", "init", "-q", tmp], check=True)
+            (Path(tmp) / "f.txt").write_bytes(b"ok \xff\xfe bytes\n")
+            subprocess.run(["git", "-C", tmp, "add", "f.txt"], check=True)
+            code, out = sd.git(["show", ":f.txt"], cwd=Path(tmp))
+            self.assertEqual(0, code)
+            self.assertIn("\ufffd", out)
+        plan, _ = derive(plan_files(**{WO_P: work_order_text(("NEED-A", "Does a chaperone restore the protein \ufffd?", "whether it runs")).replace("\\ufffd", "\ufffd")}))
+        self.assertTrue(any("undecodable" in r for r in plan["provisional"]))
+        self.assertIn("work_order:NEED-A", by_id(plan))
+
+    def test_a_surface_that_parses_to_nothing_is_flagged_even_from_cache(self):
+        files = plan_files(**{DIAG_P: "# Diagnosis\n\n| Stage | a | b | c | d | Validation missing |\n|---|---|---|---|---|---|\n"})
+        plan, ex = derive(files)
+        self.assertTrue(any("parsed 0 items" in r and "diagnosis" in r for r in plan["provisional"]))
+        again, _ = derive(files, plan, ex)
+        self.assertEqual("hit", again["cache"])
+        self.assertTrue(any("parsed 0 items" in r for r in again["provisional"]))
+
+    def test_prose_and_heading_reopen_conditions_are_read_only_beside_a_watch_decision(self):
+        prose = "# Pkg\n\n## Offline dump\n\nDecision: WATCH.\nReopens when the REST failures recur twice in a day. Other text.\n"
+        plan, _ = derive(plan_files(**{PKG_P: prose}))
+        keys = [k for k in by_id(plan) if k.startswith("reopen:")]
+        self.assertEqual(1, len(keys))
+        self.assertIn("Offline dump", keys[0])
+        none, _ = derive(plan_files(**{PKG_P: prose.replace("WATCH", "ADOPT")}))
+        self.assertFalse([k for k in by_id(none) if k.startswith("reopen:")])
+
+    def test_internal_process_is_not_an_external_question_and_anchors_follow_the_category(self):
+        files = plan_files(**{TASK_P: task_text().replace("P3 prospective evaluation", "P3 prospective evaluation"),
+                              DIAG_P: diag_text() + "| Presentation | R10 | view | yes | none | the dashboard shareable edition is not online yet |\n"})
+        plan, _ = derive(files)
+        ids = by_id(plan)
+        self.assertNotIn("diagnosis:presentation", ids)
+        ev = ids["diagnosis:evaluation"]
+        self.assertEqual("drug repurposing", ev["anchor"])
+        self.assertNotIn("neuronal", " ".join(q["kw"] for q in plan["questions"] if q["id"].startswith(("diagnosis", "task_step"))))
+        for q in plan["questions"]:
+            if q["epmc"]:
+                self.assertLessEqual(q["epmc"].count("TITLE_ABS"), 2, q["epmc"])
+                self.assertNotIn("-", q["epmc"].replace("TITLE_ABS", ""))
+            self.assertFalse([w for w in q["plain"] if "-" in w])
+        agent = task_text().replace("P4", "P4")
+        internal, _ = derive(plan_files(**{TASK_P: json.dumps({"TASK_ID": "T", "AUTHORISED_QUEUE_X": {"OBJ_P4": {"steps": [
+            {"step": "P4 fresh actor applies canonical guidance, autonomous checkpoint resume and verification", "status": "TODO", "owner": "o"}]}}})}))
+        self.assertFalse([k for k in by_id(internal) if k.startswith("task_step")])
+
+    def test_a_lead_must_share_a_domain_term_not_a_generic_word(self):
+        listing = [{"full_name": "lab/agent-evaluation-kit", "fork": False, "archived": False, "pushed_at": "2026-10-20T00:00:00Z",
+                    "description": "neuronal agent evaluation", "license": None, "html_url": "u", "topics": []}]
+        op = TeamExploration().opener({"lab": listing})
+        res = sd.explore_team("github", "lab", ["chaperone"], set(), (), op, now=NOW)
+        self.assertEqual([], res["candidates"])
+        plan, _ = derive()
+        generic = [q for q in plan["questions"] if q["id"] == "diagnosis:evaluation"][0]
+        self.assertFalse(set(generic["domain"]) & sd.GENERIC)
+
+    def test_source_read_and_session_check_must_name_something_checkable(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "a.md").write_text("x")
+            tr = {}
+            sd.trace_event(tr, "k", "signal", "signalled", root=root)
+            for kind in ("source_read", "session_check"):
+                ok, why = sd.trace_event(tr, "k", "examination", "examined", kind, "I looked at it", root=root)
+                self.assertFalse(ok, kind)
+            self.assertTrue(sd.trace_event(tr, "k", "examination", "examined", "source_read", "https://x.org/p sec 2", root=root)[0])
+            self.assertTrue(sd.trace_event(tr, "k", "examination", "examined", "session_check", "a.md checked", root=root)[0])
+            self.assertEqual("claimed", tr["k"]["history"][1]["state"])
+
+    def test_wrong_shaped_state_and_bad_dates_do_not_crash(self):
+        plan, ex = derive()
+        junk_plan = {"questions": "oops", "sha": 5}
+        again, _ = derive(cached=junk_plan, extracts={"p": "x", RM_P: {"blob": 3, "items": "no"}})
+        self.assertTrue(again["questions"])
+        asked = {f"{q['id']}|{sd.digest(q['kw'])}": "not-a-date" for q in plan["questions"]}
+        self.assertEqual(2, len(sd.pick_questions(plan["questions"], asked, T0, 2)))
+        self.assertEqual({}, sd.record_asked(asked, None, [], "2026-11-01"))
+        self.assertEqual({}, sd.record_asked("junk", None, [], "2026-11-01"))
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "s.json"
+            path.write_text(json.dumps({"plan": "a string", "plan_asked": ["x"], "explored": 3}))
+            data = sd.load_state_file(path)
+            self.assertNotIn("plan", data)
+            self.assertNotIn("plan_asked", data)
+        summary, sel, new, ev = sd.team_step(None, {"entries": []}, {"o": "junk"}, [], set(), sd.load_config(Path(tmp)), None, NOW)
+        self.assertEqual({}, new)
+
+    def test_the_last_current_heading_wins_and_two_are_flagged(self):
+        text = readme_text("Only planned: new item.") + "\n### Roadmap iteration 17 (2026-11-01) - CURRENT\n\nSee [q](pkg_it16_p3_20261101/README.md). Next: second item.\n"
+        section, note = sd.current_section(text)
+        self.assertIn("second item", section)
+        self.assertIn("2 headings", note)
+        plan, _ = derive(plan_files(**{RD_P: text}))
+        self.assertTrue(any("2 headings" in r for r in plan["provisional"]))
+        self.assertTrue([q for q in plan["questions"] if q["id"].startswith("open_item")])
+        self.assertEqual("", sd.current_section(readme_text())[1])
 
 
 if __name__ == "__main__":
