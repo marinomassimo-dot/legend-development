@@ -1,0 +1,466 @@
+{
+ "R3a_L": {
+  "L": {
+   "abstained_with_determinate_reference": 0,
+   "abstention_rate": 0.0909,
+   "abstention_reasons": {
+    "action_partial_or_unknown": 3
+   },
+   "compatible_determinate": 2,
+   "compatible_truly_compatible": 2,
+   "label_counts": {
+    "compatible": 24,
+    "indeterminable": 3,
+    "opposite": 6
+   },
+   "labelled_correct": 2,
+   "labelled_determinate": 2,
+   "precision_ci95": [
+    0.3424,
+    1.0
+   ],
+   "precision_compatible": 1.0,
+   "truly_compatible_labelled_opposite": [],
+   "truly_opposite_labelled_compatible": []
+  },
+  "T": {
+   "base_rate": 1.0,
+   "ci95": [
+    0.3424,
+    1.0
+   ],
+   "n_determinate": 2,
+   "truly_compatible": 2
+  },
+  "X": {
+   "abstained_with_determinate_reference": 0,
+   "abstention_rate": 0.0909,
+   "abstention_reasons": {
+    "action_partial_or_unknown": 3
+   },
+   "compatible_determinate": 2,
+   "compatible_truly_compatible": 2,
+   "label_counts": {
+    "compatible": 24,
+    "indeterminable": 3,
+    "opposite": 6
+   },
+   "labelled_correct": 2,
+   "labelled_determinate": 2,
+   "precision_ci95": [
+    0.3424,
+    1.0
+   ],
+   "precision_compatible": 1.0,
+   "truly_compatible_labelled_opposite": [],
+   "truly_opposite_labelled_compatible": []
+  },
+  "X_vs_L": {
+   "L_right_X_wrong": 0,
+   "X_right_L_wrong": 0,
+   "determinate_rows_labels_differ": 0,
+   "directed_rows_labels_differ_all": 0,
+   "paired_sign_p": 1.0
+  },
+  "absence_causes": {
+   "ligand_present_no_interaction_on_these_genes": 11,
+   "no_gtopdb_ligand_with_chembl_id": 20
+  },
+  "coverage_share_no_counterpart": 0.9394,
+  "decision": {
+   "L_vs_T": "fewer than 40 determinate EVAL compounds labelled compatible by L (n=2): figure reported with interval, no improvement statement",
+   "L_vs_X": "no measured WWOX contribution to accuracy on directed needs (L = X on every directed row)"
+  },
+  "determinate_only_through_non_human_rows": [],
+  "directed_unique_compounds": 29,
+  "directed_universe_need_compound": 33,
+  "reference_by_row": {
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL119625": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL1201293": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL1255840": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL1276138": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL1277001": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL14935": "compatible",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL17350": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL182066": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL2103869": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL2107771": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL29741": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL3545350": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL3707399": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL3707400": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL3707401": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL395091": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL3989682": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL3989872": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL41306": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL4594403": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL467084": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL52440": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL660": "compatible",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL807": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL900": "unknown_no_counterpart",
+   "NEED-SEIZURE-CONTROL-SYMPTOMATIC|CHEMBL1008": "unknown_no_counterpart",
+   "NEED-SEIZURE-CONTROL-SYMPTOMATIC|CHEMBL2103836": "unknown_no_counterpart",
+   "NEED-SEIZURE-CONTROL-SYMPTOMATIC|CHEMBL4217292": "unknown_no_counterpart",
+   "NEED-SEIZURE-CONTROL-SYMPTOMATIC|CHEMBL695": "unknown_no_counterpart",
+   "NEED-T-TYPE-CALCIUM|CHEMBL1008": "unknown_no_counterpart",
+   "NEED-T-TYPE-CALCIUM|CHEMBL2103836": "unknown_no_counterpart",
+   "NEED-T-TYPE-CALCIUM|CHEMBL4217292": "unknown_no_counterpart",
+   "NEED-T-TYPE-CALCIUM|CHEMBL695": "unknown_no_counterpart"
+  },
+  "reference_category_counts": {
+   "compatible": 2,
+   "unknown_no_counterpart": 31
+  }
+ },
+ "R3a_L_v2": {
+  "L": {
+   "abstained_with_determinate_reference": 0,
+   "abstention_rate": 0.1515,
+   "abstention_reasons": {
+    "action_partial_or_unknown": 1,
+    "group_record_mostly_outside_module_targets": 4
+   },
+   "compatible_determinate": 2,
+   "compatible_truly_compatible": 2,
+   "label_counts": {
+    "compatible": 22,
+    "indeterminable": 5,
+    "opposite": 6
+   },
+   "labelled_correct": 2,
+   "labelled_determinate": 2,
+   "precision_ci95": [
+    0.3424,
+    1.0
+   ],
+   "precision_compatible": 1.0,
+   "truly_compatible_labelled_opposite": [],
+   "truly_opposite_labelled_compatible": []
+  },
+  "T": {
+   "base_rate": 1.0,
+   "ci95": [
+    0.3424,
+    1.0
+   ],
+   "n_determinate": 2,
+   "truly_compatible": 2
+  },
+  "X": {
+   "abstained_with_determinate_reference": 0,
+   "abstention_rate": 0.0909,
+   "abstention_reasons": {
+    "action_partial_or_unknown": 3
+   },
+   "compatible_determinate": 2,
+   "compatible_truly_compatible": 2,
+   "label_counts": {
+    "compatible": 24,
+    "indeterminable": 3,
+    "opposite": 6
+   },
+   "labelled_correct": 2,
+   "labelled_determinate": 2,
+   "precision_ci95": [
+    0.3424,
+    1.0
+   ],
+   "precision_compatible": 1.0,
+   "truly_compatible_labelled_opposite": [],
+   "truly_opposite_labelled_compatible": []
+  },
+  "X_vs_L": {
+   "L_right_X_wrong": 0,
+   "X_right_L_wrong": 0,
+   "determinate_rows_labels_differ": 0,
+   "directed_rows_labels_differ_all": 2,
+   "paired_sign_p": 1.0
+  },
+  "absence_causes": {
+   "ligand_present_no_interaction_on_these_genes": 11,
+   "no_gtopdb_ligand_with_chembl_id": 20
+  },
+  "coverage_share_no_counterpart": 0.9394,
+  "determinate_only_through_non_human_rows": [],
+  "directed_unique_compounds": 29,
+  "directed_universe_need_compound": 33,
+  "reference_by_row": {
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL119625": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL1201293": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL1255840": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL1276138": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL1277001": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL14935": "compatible",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL17350": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL182066": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL2103869": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL2107771": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL29741": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL3545350": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL3707399": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL3707400": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL3707401": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL395091": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL3989682": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL3989872": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL41306": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL4594403": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL467084": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL52440": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL660": "compatible",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL807": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL900": "unknown_no_counterpart",
+   "NEED-SEIZURE-CONTROL-SYMPTOMATIC|CHEMBL1008": "unknown_no_counterpart",
+   "NEED-SEIZURE-CONTROL-SYMPTOMATIC|CHEMBL2103836": "unknown_no_counterpart",
+   "NEED-SEIZURE-CONTROL-SYMPTOMATIC|CHEMBL4217292": "unknown_no_counterpart",
+   "NEED-SEIZURE-CONTROL-SYMPTOMATIC|CHEMBL695": "unknown_no_counterpart",
+   "NEED-T-TYPE-CALCIUM|CHEMBL1008": "unknown_no_counterpart",
+   "NEED-T-TYPE-CALCIUM|CHEMBL2103836": "unknown_no_counterpart",
+   "NEED-T-TYPE-CALCIUM|CHEMBL4217292": "unknown_no_counterpart",
+   "NEED-T-TYPE-CALCIUM|CHEMBL695": "unknown_no_counterpart"
+  },
+  "reference_category_counts": {
+   "compatible": 2,
+   "unknown_no_counterpart": 31
+  }
+ },
+ "R3b_L": {
+  "L": {
+   "abstained_with_determinate_reference": 0,
+   "abstention_rate": 0.0909,
+   "abstention_reasons": {
+    "action_partial_or_unknown": 3
+   },
+   "compatible_determinate": 3,
+   "compatible_truly_compatible": 3,
+   "label_counts": {
+    "compatible": 24,
+    "indeterminable": 3,
+    "opposite": 6
+   },
+   "labelled_correct": 3,
+   "labelled_determinate": 3,
+   "precision_ci95": [
+    0.4385,
+    1.0
+   ],
+   "precision_compatible": 1.0,
+   "truly_compatible_labelled_opposite": [],
+   "truly_opposite_labelled_compatible": []
+  },
+  "T": {
+   "base_rate": 1.0,
+   "ci95": [
+    0.4385,
+    1.0
+   ],
+   "n_determinate": 3,
+   "truly_compatible": 3
+  },
+  "X": {
+   "abstained_with_determinate_reference": 0,
+   "abstention_rate": 0.0909,
+   "abstention_reasons": {
+    "action_partial_or_unknown": 3
+   },
+   "compatible_determinate": 3,
+   "compatible_truly_compatible": 3,
+   "label_counts": {
+    "compatible": 24,
+    "indeterminable": 3,
+    "opposite": 6
+   },
+   "labelled_correct": 3,
+   "labelled_determinate": 3,
+   "precision_ci95": [
+    0.4385,
+    1.0
+   ],
+   "precision_compatible": 1.0,
+   "truly_compatible_labelled_opposite": [],
+   "truly_opposite_labelled_compatible": []
+  },
+  "X_vs_L": {
+   "L_right_X_wrong": 0,
+   "X_right_L_wrong": 0,
+   "determinate_rows_labels_differ": 0,
+   "directed_rows_labels_differ_all": 0,
+   "paired_sign_p": 1.0
+  },
+  "absence_causes": {
+   "ligand_present_no_interaction_on_these_genes": 10,
+   "no_gtopdb_ligand_with_chembl_id": 20
+  },
+  "coverage_share_no_counterpart": 0.9091,
+  "determinate_only_through_non_human_rows": [
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL807"
+  ],
+  "directed_unique_compounds": 29,
+  "directed_universe_need_compound": 33,
+  "reference_by_row": {
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL119625": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL1201293": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL1255840": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL1276138": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL1277001": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL14935": "compatible",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL17350": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL182066": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL2103869": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL2107771": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL29741": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL3545350": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL3707399": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL3707400": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL3707401": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL395091": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL3989682": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL3989872": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL41306": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL4594403": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL467084": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL52440": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL660": "compatible",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL807": "compatible",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL900": "unknown_no_counterpart",
+   "NEED-SEIZURE-CONTROL-SYMPTOMATIC|CHEMBL1008": "unknown_no_counterpart",
+   "NEED-SEIZURE-CONTROL-SYMPTOMATIC|CHEMBL2103836": "unknown_no_counterpart",
+   "NEED-SEIZURE-CONTROL-SYMPTOMATIC|CHEMBL4217292": "unknown_no_counterpart",
+   "NEED-SEIZURE-CONTROL-SYMPTOMATIC|CHEMBL695": "unknown_no_counterpart",
+   "NEED-T-TYPE-CALCIUM|CHEMBL1008": "unknown_no_counterpart",
+   "NEED-T-TYPE-CALCIUM|CHEMBL2103836": "unknown_no_counterpart",
+   "NEED-T-TYPE-CALCIUM|CHEMBL4217292": "unknown_no_counterpart",
+   "NEED-T-TYPE-CALCIUM|CHEMBL695": "unknown_no_counterpart"
+  },
+  "reference_category_counts": {
+   "compatible": 3,
+   "unknown_no_counterpart": 30
+  }
+ },
+ "R3b_L_v2": {
+  "L": {
+   "abstained_with_determinate_reference": 0,
+   "abstention_rate": 0.1515,
+   "abstention_reasons": {
+    "action_partial_or_unknown": 1,
+    "group_record_mostly_outside_module_targets": 4
+   },
+   "compatible_determinate": 3,
+   "compatible_truly_compatible": 3,
+   "label_counts": {
+    "compatible": 22,
+    "indeterminable": 5,
+    "opposite": 6
+   },
+   "labelled_correct": 3,
+   "labelled_determinate": 3,
+   "precision_ci95": [
+    0.4385,
+    1.0
+   ],
+   "precision_compatible": 1.0,
+   "truly_compatible_labelled_opposite": [],
+   "truly_opposite_labelled_compatible": []
+  },
+  "T": {
+   "base_rate": 1.0,
+   "ci95": [
+    0.4385,
+    1.0
+   ],
+   "n_determinate": 3,
+   "truly_compatible": 3
+  },
+  "X": {
+   "abstained_with_determinate_reference": 0,
+   "abstention_rate": 0.0909,
+   "abstention_reasons": {
+    "action_partial_or_unknown": 3
+   },
+   "compatible_determinate": 3,
+   "compatible_truly_compatible": 3,
+   "label_counts": {
+    "compatible": 24,
+    "indeterminable": 3,
+    "opposite": 6
+   },
+   "labelled_correct": 3,
+   "labelled_determinate": 3,
+   "precision_ci95": [
+    0.4385,
+    1.0
+   ],
+   "precision_compatible": 1.0,
+   "truly_compatible_labelled_opposite": [],
+   "truly_opposite_labelled_compatible": []
+  },
+  "X_vs_L": {
+   "L_right_X_wrong": 0,
+   "X_right_L_wrong": 0,
+   "determinate_rows_labels_differ": 0,
+   "directed_rows_labels_differ_all": 2,
+   "paired_sign_p": 1.0
+  },
+  "absence_causes": {
+   "ligand_present_no_interaction_on_these_genes": 10,
+   "no_gtopdb_ligand_with_chembl_id": 20
+  },
+  "coverage_share_no_counterpart": 0.9091,
+  "determinate_only_through_non_human_rows": [
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL807"
+  ],
+  "directed_unique_compounds": 29,
+  "directed_universe_need_compound": 33,
+  "reference_by_row": {
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL119625": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL1201293": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL1255840": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL1276138": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL1277001": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL14935": "compatible",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL17350": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL182066": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL2103869": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL2107771": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL29741": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL3545350": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL3707399": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL3707400": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL3707401": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL395091": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL3989682": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL3989872": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL41306": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL4594403": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL467084": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL52440": "unknown_no_counterpart",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL660": "compatible",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL807": "compatible",
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR|CHEMBL900": "unknown_no_counterpart",
+   "NEED-SEIZURE-CONTROL-SYMPTOMATIC|CHEMBL1008": "unknown_no_counterpart",
+   "NEED-SEIZURE-CONTROL-SYMPTOMATIC|CHEMBL2103836": "unknown_no_counterpart",
+   "NEED-SEIZURE-CONTROL-SYMPTOMATIC|CHEMBL4217292": "unknown_no_counterpart",
+   "NEED-SEIZURE-CONTROL-SYMPTOMATIC|CHEMBL695": "unknown_no_counterpart",
+   "NEED-T-TYPE-CALCIUM|CHEMBL1008": "unknown_no_counterpart",
+   "NEED-T-TYPE-CALCIUM|CHEMBL2103836": "unknown_no_counterpart",
+   "NEED-T-TYPE-CALCIUM|CHEMBL4217292": "unknown_no_counterpart",
+   "NEED-T-TYPE-CALCIUM|CHEMBL695": "unknown_no_counterpart"
+  },
+  "reference_category_counts": {
+   "compatible": 3,
+   "unknown_no_counterpart": 30
+  }
+ },
+ "answers_lock_sha256": "5b9314d277cafa2b233ec00aca61ed7da2b1faff13884c35a088e4f83b5a1b7d",
+ "gtopdb_files_sha256": {
+  "interactions.csv": "cdbd18c66cf99d1adba9a60c807e256204221ff74756b70344822fd6642b244b",
+  "ligands.csv": "f8e9f6959d563e49ccc2fb65652c17c3d93e345997e26f99a1a7924361d6d8b7",
+  "targets_and_families.csv": "9e91ae4eed1e147f0c5b01dd2e0645c2d57edb39442114d3128c70232b0d39fb"
+ },
+ "preregistration_sha256": "b5fc99854341386e8116ae278f9d05533908eafadabe4824db83c8975910ccab",
+ "run_label": "run3_reference_join_20261101",
+ "script_sha256": "67146bb8f3976529c4bd9c7d81fccdeec5038f320f51c2cda6c0f96904ae090d",
+ "split": "eval"
+}

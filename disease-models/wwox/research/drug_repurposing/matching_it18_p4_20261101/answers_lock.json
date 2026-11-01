@@ -1,0 +1,113 @@
+{
+ "answers_tsv_sha256": "ca390c95ce0eccd95a9c8aba1697c6a7c505747807f61bbf3d7d7000e7e2f155",
+ "catalog_sha256": "75652786013b931d2482ae40b2b563a02ef3e05eff43832722cc002e3ccf72fb",
+ "chembl_targets_sha256": "6a2321fcfb4995aa6471d98ed876b62cf019a7649df665031853af3999f97980",
+ "direction_task_sha256": "e814abbfc91274439e361393e1babc167e5f32ae776594dfed61eaa638c02c46",
+ "needs_sha256": "7678b986106b07e9a1cab0c5a4397df8a708fa46d9b459ddaf61fac0831c3f0f",
+ "prior_info": {
+  "dev_DEC": 768,
+  "dev_INC": 202,
+  "dev_determinate_pairs": 970,
+  "global_dev_majority": "DECREASE"
+ },
+ "priors_tsv_sha256": "e89ccec1c01fddafb853899f014003151400abb568b00b360338cb9eb31dce58",
+ "script_sha256": "87f267add35e6ca888be021d682e8d6763ed1587d2ae546584a9bbfb417cb1b6",
+ "symbol_to_uniprot": {
+  "ABAT": [
+   "P80404"
+  ],
+  "CACNA1G": [
+   "O43497"
+  ],
+  "CACNA1H": [
+   "O95180"
+  ],
+  "CACNA1I": [
+   "Q9P0X4"
+  ],
+  "CASP1": [
+   "P29466"
+  ],
+  "CHRM1": [
+   "P11229"
+  ],
+  "GRIA1": [
+   "P42261"
+  ],
+  "GRIA2": [
+   "P42262"
+  ],
+  "GRIA3": [
+   "P42263"
+  ],
+  "GRIA4": [
+   "P48058"
+  ],
+  "GRIN1": [
+   "Q05586"
+  ],
+  "GRIN2A": [
+   "Q12879"
+  ],
+  "GRIN2B": [
+   "Q13224"
+  ],
+  "GRIN2D": [
+   "O15399"
+  ],
+  "GSK3B": [
+   "P49841"
+  ],
+  "IL1B": [
+   "P01584"
+  ],
+  "IL1R1": [
+   "P14778"
+  ],
+  "JAK2": [
+   "O60674"
+  ],
+  "KEAP1": [
+   "Q14145"
+  ],
+  "MTOR": [
+   "P42345"
+  ],
+  "NFE2L2": [
+   "Q16236"
+  ],
+  "NFKB1": [
+   "P19838"
+  ],
+  "NLRP3": [
+   "Q96P20"
+  ],
+  "PDK1": [
+   "Q15118"
+  ],
+  "PDK2": [
+   "Q15119"
+  ],
+  "PDK3": [
+   "Q15120"
+  ],
+  "PDK4": [
+   "Q16654"
+  ],
+  "RELA": [
+   "Q04206"
+  ],
+  "TNF": [
+   "P01375"
+  ],
+  "TNKS": [
+   "O95271"
+  ],
+  "TNKS2": [
+   "Q9H2K2"
+  ]
+ },
+ "universe_rows": 205,
+ "universe_unique_compounds": 186,
+ "written_utc_note": "written before the GtoPdb reference of EVAL compounds was read"
+}
