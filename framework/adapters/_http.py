@@ -60,8 +60,16 @@ def get_json(url: str, params: dict | None = None, body: dict | None = None,
 # files the copy did not contain broke the link test. The rule is the one the corpus already
 # follows: the ORIGINAL stays byte-identical in the local ignored corpus (`files/<package>/`)
 # with its SHA-256, origin and revision; the repository gets an extract that is safe to publish.
+# Third-party text is never "cleaned" into a different text: licence wording and notices are not
+# altered automatically, and a modified text is not called licence-intact. When a document carries
+# an e-mail address (typically in a copyright or contact notice) `public_extract` REFUSES it; the
+# asset stays local and the repository gets `reference_record` (own structured data plus origin,
+# digest and licence identifier) instead of the third-party bytes.
 
-EMAIL_REPLACEMENT = "[address withheld]"
+
+class NoticeContainsAddress(ValueError):
+    """The text holds e-mail addresses (count and line numbers are reported, never the addresses)."""
+
 _EMAIL = re.compile(r"(?i)(?<![A-Z0-9._%+-])[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}(?![A-Z0-9_%+-])")
 _INLINE_LINK = re.compile(r"(!?\[[^\]]*\]\()(<[^>\n]*>|[^)\s]+)((?:\s+(?:\"[^\"]*\"|'[^']*'))?\))")
 _REF_DEF = re.compile(r"(?m)^(\s{0,3}\[[^\]\n]+\]:[ \t]*)(<[^>\n]*>|\S+)")
@@ -89,17 +97,36 @@ def keep_original(corpus_dir, name: str, data: bytes, origin: str, revision: str
             "origin": origin, "revision": revision}
 
 
-def public_extract(text: str, origin_url: str) -> str:
-    """The publishable form of a fetched Markdown/HTML text.
+def addresses_in(text: str) -> list[int]:
+    """Line numbers (1-based) of the lines that contain an e-mail address, including `mailto:` targets."""
+    return [n for n, line in enumerate(text.splitlines(), 1) if _EMAIL.search(line)]
 
-    E-mail addresses are withheld everywhere, including inside licence or copyright lines and
-    `mailto:` targets (they must not enter git); all other licence and attribution wording is
-    left as written. A text that cannot be redistributed is kept local and not extracted.
-    Relative link targets (inline links, images, reference definitions, `<angle>` targets, HTML
-    href/src) and bare anchors are resolved against `origin_url`, the place they were written
-    for, so no link points at content the extract does not contain. Absolute URLs and other
+
+def reference_record(record: dict, licence_id: str, own_notes: str = "") -> str:
+    """The publishable stand-in for a third-party document that cannot be extracted: a reference by origin, revision, SHA-256 and licence
+    identifier (SPDX or the name the source gives), plus what WE concluded from it. `record` is what `keep_original` returned."""
+    lines = [f"- document: {record['name']}", f"- origin: {record['origin']}", f"- revision: {record['revision']}",
+             f"- sha256: {record['sha256']} ({record['bytes']} bytes, original kept in the local corpus)", f"- licence: {licence_id}"]
+    if own_notes:
+        lines.append(f"- our notes: {own_notes}")
+    return "\n".join(lines) + "\n"
+
+
+def public_extract(text: str, origin_url: str) -> str:
+    """The publishable form of a fetched Markdown/HTML text: THE TEXT UNCHANGED except that relative links are made absolute.
+
+    Licence wording, copyright lines and notices are never rewritten. If the text contains an e-mail address (including a `mailto:` target)
+    it raises `NoticeContainsAddress` with the line numbers: the address would enter the repository, and masking it would alter a notice the
+    licence may require. The caller then keeps the document local (`keep_original`) and tracks `reference_record(...)` instead, or extracts
+    only its own structured information. A text that cannot be redistributed is likewise kept local and not extracted.
+    Relative link targets (inline links, images, reference definitions, `<angle>` targets, HTML href/src) and bare anchors are resolved
+    against `origin_url`, the place they were written for, so no link points at content the extract does not contain. Absolute URLs and other
     schemes are left alone.
     """
+    lines = addresses_in(text)
+    if lines:
+        raise NoticeContainsAddress(f"{len(lines)} line(s) contain an e-mail address (lines {lines[:10]}); keep the document local and track reference_record() instead of rewriting it")
+
     def absolute(target: str) -> str:
         if not target or re.match(r"(?i)[a-z][a-z0-9+.-]*:", target):
             return target
@@ -108,10 +135,27 @@ def public_extract(text: str, origin_url: str) -> str:
     def angle(target: str) -> str:
         return "<" + absolute(target[1:-1]) + ">" if target.startswith("<") else absolute(target)
 
-    text = _EMAIL.sub(EMAIL_REPLACEMENT, text)
     text = _INLINE_LINK.sub(lambda m: m.group(1) + angle(m.group(2)) + m.group(3), text)
     text = _REF_DEF.sub(lambda m: m.group(1) + angle(m.group(2)), text)
     return _HTML_ATTR.sub(lambda m: m.group(1) + m.group(2) + absolute(m.group(3)) + m.group(2), text)
+
+
+ERROR_KEYS = {"error", "errors", "detail", "message"}
+
+
+def payload_problem(payload, expect: str | None = None) -> str | None:
+    """Why a 200 answer is not worth keeping, or None. ONE test, used when an entry is written and when it is read.
+
+    Not worth keeping: not JSON-structured, empty, a bare error envelope (only error/errors/detail/message keys), or, when the caller says
+    which key a good answer carries (`expect`), an object without it. An answer that has the expected key but an empty list (a ChEMBL page of
+    zero rows with its normal `page_meta`) is a legitimate empty answer and passes."""
+    if not isinstance(payload, (dict, list)) or not payload:
+        return "empty or not structured"
+    if isinstance(payload, dict) and set(payload) <= ERROR_KEYS:
+        return "bare error envelope"
+    if expect and not (isinstance(payload, dict) and expect in payload):
+        return f"expected key {expect!r} absent"
+    return None
 
 
 def make_fetch(cache_dir: str | None = None, retries: int = 2, pause: float = 6.0, get=None, sleep=time.sleep):
@@ -119,29 +163,47 @@ def make_fetch(cache_dir: str | None = None, retries: int = 2, pause: float = 6.
 
     * Retry: a transport failure (status 0) or an HTTP 5xx is tried again at most `retries` times (`pause` seconds apart); a 4xx is an answer and is not
       retried. Every failed attempt is appended to `fetch.failures` ({url, http, attempt, text}); nothing is retried silently and nothing loops.
-    * Cache (only when `cache_dir` is given, an explicit path; nothing is written otherwise): only a successful (HTTP 200) response with a non-empty payload that is not a bare error envelope is stored, one JSON file
+    * Cache (only when `cache_dir` is given, an explicit path; nothing is written otherwise): only a successful (HTTP 200) response that passes `payload_problem` is stored, one JSON file
       per request keyed by SHA-256 of the full URL, body and parameters, with its own `retrieved_at`. An error, a 404 or an empty 'no result' answer for a
       query that failed is never stored, so a cache hit can never turn an error into 'no result'. The key does not contain the database release: use one
       directory per release, or delete it, to refresh. Rerunning a query after a failure fetches only the requests (pages, batches) that are not yet cached.
-    * `fetch.stats` counts cache hits, network requests, failed attempts and requests that ended in an error."""
+    * The same `payload_problem` test runs on READ: an older, damaged or semantically invalid entry (error-only body, missing the key the caller
+      passes as `expect=`) is a miss, is renamed to `<key>.json.discarded` (kept, not deleted; one per key), counted in `stats["cache_discarded"]` and listed in `fetch.discarded`,
+      and the answer is fetched again under the same bounded retry. `fetch.validates` is True so an adapter may pass `expect=`.
+    * `fetch.stats` counts cache hits, discarded entries, network requests, failed attempts and requests that ended in an error."""
     inner = get or get_json
-    stats = {"cache_hits": 0, "network_requests": 0, "failed_attempts": 0, "requests_ended_in_error": 0}
+    stats = {"cache_hits": 0, "cache_discarded": 0, "network_requests": 0, "failed_attempts": 0, "requests_ended_in_error": 0}
     failures: list = []
+    discarded: list = []
 
     def key(url, params, body):
         return hashlib.sha256(json.dumps([url, params, body], sort_keys=True, default=str).encode("utf-8")).hexdigest()
 
-    def fetch(url, params=None, body=None, timeout=20.0):
+    def fetch(url, params=None, body=None, timeout=20.0, expect=None):
         path = os.path.join(cache_dir, key(url, params, body) + ".json") if cache_dir else None
         if path and os.path.isfile(path):
+            reason, stored = None, None
             try:
                 with open(path, encoding="utf-8") as fh:
                     stored = json.load(fh)
-                if stored.get("http") == 200 and stored.get("url") == url:
-                    stats["cache_hits"] += 1
-                    return 200, stored["payload"]
-            except (OSError, ValueError):
-                pass  # a damaged cache file is a miss, never an answer
+                if not (isinstance(stored, dict) and stored.get("http") == 200 and stored.get("url") == url):
+                    reason = "entry header does not match the request"
+                else:
+                    reason = payload_problem(stored.get("payload"), expect)
+            except OSError:
+                reason = "unreadable"
+            except ValueError:
+                reason = "damaged JSON"
+            if reason is None:
+                stats["cache_hits"] += 1
+                return 200, stored["payload"]
+            stats["cache_discarded"] += 1  # a bad entry is a miss, never an answer; kept aside, not deleted
+            kept = path + ".discarded"
+            try:
+                os.replace(path, kept)
+            except OSError:
+                kept = None
+            discarded.append({"url": url, "reason": reason, "kept_as": kept})
         status, payload = 0, ""
         for attempt in range(retries + 1):
             stats["network_requests"] += 1
@@ -154,7 +216,7 @@ def make_fetch(cache_dir: str | None = None, retries: int = 2, pause: float = 6.
                 sleep(pause)
         else:
             stats["requests_ended_in_error"] += 1
-        if status == 200 and path and isinstance(payload, (dict, list)) and payload and not (isinstance(payload, dict) and set(payload) <= {"error", "errors", "detail", "message"}):
+        if status == 200 and path and payload_problem(payload, expect) is None:
             os.makedirs(cache_dir, exist_ok=True)
             tmp = path + ".part"
             with open(tmp, "w", encoding="utf-8") as fh:
@@ -162,5 +224,5 @@ def make_fetch(cache_dir: str | None = None, retries: int = 2, pause: float = 6.
             os.replace(tmp, path)
         return status, payload
 
-    fetch.stats, fetch.failures = stats, failures
+    fetch.stats, fetch.failures, fetch.discarded, fetch.validates = stats, failures, discarded, True
     return fetch
