@@ -508,7 +508,7 @@ def follow_add(follow: dict, new: dict, limits: dict, today: str) -> tuple[str, 
     """Add a followed repo under the limits. Returns (added|replaced|refused, detail). When full, the least relevant
     entry is SUSPENDED (source, reason and reopen condition kept) only if the newcomer is more relevant."""
     for key in ("team", "repo", "source", "reason", "reopen"):
-        if not str(new.get(key, "")).strip():
+        if not new.get(key) or not str(new[key]).strip():  # falsy BEFORE str(): None must not become "None"
             return "refused", f"missing {key}"
     new = dict(new, status="active", added=today, last_deep=None, fp=None)
     new["relevance"] = int(new.get("relevance", 1))
@@ -566,12 +566,28 @@ STAGES = {"signal": {"signalled"}, "examination": {"examined"}, "trial": {"not_n
 EVIDENCE = {"source_read", "test_run", "record_file", "session_check"}  # "log_line" is deliberately absent
 
 
+def _ref_exists(kind: str | None, ref: str | None, root: Path) -> bool:
+    """record_file / test_run refs name a file under the repository root (`path[::test id]`); other kinds are not files."""
+    if kind not in ("record_file", "test_run"):
+        return True
+    path = (ref or "").split("::")[0].strip()
+    try:
+        target = (root / path).resolve()
+        return bool(path) and target.is_file() and root.resolve() in target.parents
+    except (OSError, ValueError):
+        return False
+
+
+def _done(rec: dict) -> dict:
+    return {h["stage"]: h["state"] for h in rec["history"] if h["state"] != "claimed"}
+
+
 def trace_event(trace: dict, key: str, stage: str, state: str, kind: str | None = None, ref: str | None = None,
-                at: str = "") -> tuple[bool, str]:
+                at: str = "", root: Path = ROOT) -> tuple[bool, str]:
     if stage not in STAGES or state not in STAGES[stage]:
         return False, f"unknown stage/state {stage}/{state}"
     rec = trace.setdefault(key, {"history": []})
-    done = {h["stage"]: h["state"] for h in rec["history"]}
+    done = _done(rec)
     if stage != "signal" and "signal" not in done:
         return False, "no signal recorded for this key"
     needs_evidence = (stage == "examination" or (stage == "trial" and state == "trialled")
@@ -587,6 +603,9 @@ def trace_event(trace: dict, key: str, stage: str, state: str, kind: str | None 
         return False, "no examination recorded"
     if stage == "integration" and done.get("decision") != "adopt":
         return False, "integration needs decision adopt"
+    if needs_evidence and not _ref_exists(kind, ref, root):
+        rec["history"].append({"stage": stage, "state": "claimed", "claimed": state, "kind": kind, "ref": ref, "at": at})
+        return False, f"evidence ref not found under the repository root: {ref}; stays 'claimed', not {state}"
     rec["history"].append({"stage": stage, "state": state, "kind": kind, "ref": ref, "at": at})
     return True, "recorded"
 
@@ -594,7 +613,7 @@ def trace_event(trace: dict, key: str, stage: str, state: str, kind: str | None 
 def trace_summary(trace: dict) -> dict:
     out = {}
     for key, rec in trace.items():
-        done = {h["stage"]: h["state"] for h in rec["history"]}
+        done = _done(rec)
         out[key] = {"furthest": next((s for s in reversed(list(STAGES)) if s in done), None), "states": done,
                     "verified_implementation": done.get("integration") == "verified"}
     return out
@@ -978,7 +997,12 @@ def discover(dstate: dict, themes=THEMES, opener=http, now: dt.datetime | None =
     if len(state["seen"]) > 3000:  # bounded cache: keep the newest 2000 keys
         for key in sorted(state["seen"], key=state["seen"].get)[:len(state["seen"]) - 2000]:
             del state["seen"][key]
-    return {"themes": results, "new_items": len(kept), "channels": channel_summary(results, duplicates),
+    summary = channel_summary(results, duplicates)
+    held = only is None and any(v["errors"] for v in summary.values()) and all(
+        v["outcome"] in ("error", "not_queried") for v in summary.values())
+    if held:  # every channel failed: the same questions and the same day stay open for the next run
+        state["cursor"], state["last_day"] = dstate.get("cursor", 0), dstate.get("last_day")
+    return {"themes": results, "new_items": len(kept), "channels": summary, "rotation_held": held,
             "questions": [{"id": r["theme"], "category": r["category"], "question": r["gap"], "decision": r["decision"]}
                           for r in results]}, state
 
@@ -1121,10 +1145,7 @@ def save_state(path: Path, own: dict, follow_fn=None, trace_fn=None) -> tuple[bo
         path.parent.mkdir(parents=True, exist_ok=True)
         with open(path.with_suffix(".lock"), "w") as lock:
             fcntl.flock(lock, fcntl.LOCK_EX)
-            try:
-                current = json.loads(path.read_text())
-            except (OSError, ValueError):
-                current = {}
+            current = load_state_file(path)
             current.update(own)
             if follow_fn:
                 current["follow"] = follow_fn(current.get("follow") or follow_seed())
@@ -1224,11 +1245,53 @@ def append_log(directory: Path, log: Path = LOG) -> int:
     return 0
 
 
-def read_state(path: Path) -> dict:
+def final_verdict(report: dict) -> str:
+    """Computed AFTER discovery and follow entries are appended, so a verdict never contradicts `selected`."""
+    return "SELECTED" if report["selected"] else ("BASELINE" if report["baseline"] else "NO_USEFUL_CHANGE")
+
+
+STATE_NOTES: list[str] = []  # what read_state/save_state had to do to a damaged state file; shown in the briefing
+
+
+def _aside(path: Path, why: str) -> None:
+    bad = path.with_name(path.name + ".bad")
     try:
-        return json.loads(path.read_text())
-    except (OSError, ValueError):
+        os.replace(path, bad)
+        STATE_NOTES.append(f"state file {path.name} was {why}; moved aside to {bad.name}, run continues from an empty state")
+    except OSError as exc:
+        STATE_NOTES.append(f"state file {path.name} was {why} and could not be moved aside ({exc})")
+
+
+def load_state_file(path: Path) -> dict:
+    """The stored state, or {} when absent. Unparseable or non-object content is moved to <name>.bad, never overwritten
+    silently; sub-keys of the wrong type are dropped (and noted)."""
+    try:
+        text = path.read_text()
+    except OSError:
         return {}
+    try:
+        data = json.loads(text)
+    except ValueError:
+        _aside(path, "not valid JSON (truncated?)")
+        return {}
+    if not isinstance(data, dict):
+        _aside(path, "valid JSON but not an object")
+        return {}
+    for key in ("watch", "pubmed", "discovery", "context", "follow", "trace"):
+        bad = key in data and (not isinstance(data[key], dict)
+                               or (key == "follow" and not isinstance(data[key].get("entries"), list)))
+        if bad:
+            STATE_NOTES.append(f"state key {key!r} had the wrong shape and was dropped (file kept as {path.name}.bad)")
+            try:
+                (path.with_name(path.name + ".bad")).write_text(text)
+            except OSError:
+                pass
+            del data[key]
+    return data
+
+
+def read_state(path: Path) -> dict:
+    return load_state_file(path)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -1279,8 +1342,17 @@ def main(argv: list[str] | None = None) -> int:
                                            args.evidence_ref, now.isoformat(timespec="seconds"))
             return trace
         ok, why = save_state(state_path, {}, follow_fn, trace_fn)
-        print(outcome.get("r") or outcome.get("t"), "saved" if ok else f"SAVE FAILED {why}")
-        return 0 if ok else 1
+        result = outcome.get("r") or outcome.get("t")
+        accepted = bool(result) and (result[0] in ("added", "replaced") if args.follow_add else result[0] is True)
+        for note in STATE_NOTES:
+            print("NOTE:", note)
+        if not accepted:
+            print("REFUSED (nothing recorded as accepted):", result)
+        elif not ok:
+            print("SAVE FAILED:", why, result)
+        else:
+            print("saved:", result)
+        return 0 if (ok and accepted) else 1
     state = read_state(state_path)
     follow = state.get("follow") or follow_seed()
     ctx = resolve_context(state.get("context"), now=now)
@@ -1339,6 +1411,7 @@ def main(argv: list[str] | None = None) -> int:
                     "proof": f"https://github.com/{entry['repo']}", "outcome": "TO_TRIAGE (a detected change is not a reading)"}
             report["selected"].append(item)
             trace_events.append((f"follow:{entry['repo']}:{fp['commit']}", "signal", "signalled"))
+    report["verdict"] = final_verdict(report)
     report["follow"] = {"active": sum(e["status"] == "active" for e in follow["entries"]), "deep_checked": deep_rows}
     report["http"] = counter.summary()
 
@@ -1357,6 +1430,7 @@ def main(argv: list[str] | None = None) -> int:
     ok, why = save_state(state_path, {"watch": new_state["watch"], "pubmed": new_state["pubmed"],
                                       "discovery": new_state["discovery"], "context": ctx}, follow_fn, trace_fn)
     persisted["state"] = "ok" if ok else why or "failed"
+    report["errors"] += STATE_NOTES
     ok, why = save_text(directory / "scout_daily.json", json.dumps(report, indent=2, ensure_ascii=False) + "\n")
     persisted["report"] = "ok" if ok else why or "failed"
     if report["selected"]:

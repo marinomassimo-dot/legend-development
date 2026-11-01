@@ -452,7 +452,7 @@ class DedupTraceAndPersistence(unittest.TestCase):
         summary = sd.trace_summary(tr)["k"]
         self.assertEqual(("integration", False), (summary["furthest"], summary["verified_implementation"]))
         self.assertFalse(sd.trace_event(tr, "k", "integration", "verified", "source_read", "x")[0])
-        self.assertTrue(sd.trace_event(tr, "k", "integration", "verified", "test_run", "test_x passed")[0])
+        self.assertTrue(sd.trace_event(tr, "k", "integration", "verified", "test_run", "framework/scripts/test_scout_daily.py::x")[0])
         self.assertTrue(sd.trace_summary(tr)["k"]["verified_implementation"])
         self.assertFalse(sd.trace_event(tr, "k2", "signal", "bogus")[0])
 
@@ -503,6 +503,92 @@ class DedupTraceAndPersistence(unittest.TestCase):
         self.assertEqual(1, sum(l.startswith("NEXT STEP") for l in lines))
         self.assertIn("FRESHNESS LIMIT", text)
         self.assertIn("-> d1", text)
+
+
+class VerifierRegressions(unittest.TestCase):
+    def test_follow_add_refuses_missing_text_not_the_string_none(self):
+        f = sd.follow_seed()
+        base = {"team": "t", "repo": "t/r", "relevance": 1}
+        for missing in ("source", "reason", "reopen"):
+            new = dict(base, source="s", reason="r", reopen="o")
+            new[missing] = None
+            self.assertEqual("refused", sd.follow_add(f, new, {"max_teams": 6, "max_repos": 18, "max_per_team": 3}, "2026-11-01")[0])
+        self.assertFalse(any(e["source"] == "None" or e["reopen"] == "None" for e in f["entries"]))
+
+    def test_trace_ref_must_exist_else_stays_claimed(self):
+        tr = {}
+        sd.trace_event(tr, "k", "signal", "signalled")
+        sd.trace_event(tr, "k", "examination", "examined", "source_read", "paper")
+        sd.trace_event(tr, "k", "decision", "adopt")
+        ok, why = sd.trace_event(tr, "k", "integration", "verified", "record_file", "no/such/record.md")
+        self.assertFalse(ok)
+        self.assertIn("claimed", why)
+        self.assertFalse(sd.trace_summary(tr)["k"]["verified_implementation"])
+        self.assertEqual("claimed", tr["k"]["history"][-1]["state"])
+        self.assertTrue(sd.trace_event(tr, "k", "integration", "verified", "record_file", "framework/scripts/scout_daily.py")[0])
+        self.assertFalse(sd.trace_event({"z": {"history": [{"stage": "signal", "state": "signalled"}]}}, "z", "integration",
+                                        "verified", "record_file", "../../etc/passwd")[0])
+
+    def test_damaged_state_is_moved_aside_not_replaced_or_crashing(self):
+        for content in ('{"follow": {"entries": [', "[1, 2]", '"text"', '{"follow": [], "trace": 3}'):
+            with tempfile.TemporaryDirectory() as tmp:
+                path = Path(tmp) / "scout_daily_state.json"
+                path.write_text(content)
+                del sd.STATE_NOTES[:]
+                state = sd.read_state(path)
+                self.assertIsInstance(state, dict)
+                self.assertTrue(sd.STATE_NOTES)
+                self.assertTrue((Path(tmp) / "scout_daily_state.json.bad").exists())
+                ok, _ = sd.save_state(path, {"watch": {}})
+                self.assertTrue(ok)
+                self.assertIsInstance(json.loads(path.read_text()), dict)
+
+    def test_save_state_keeps_a_damaged_file_as_bad(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "s.json"
+            path.write_text('{"trace": {"a": ')
+            del sd.STATE_NOTES[:]
+            self.assertTrue(sd.save_state(path, {"watch": {}})[0])
+            self.assertIn('"a"', (Path(tmp) / "s.json.bad").read_text())
+            self.assertTrue(sd.STATE_NOTES)
+
+    def test_total_search_failure_does_not_advance_rotation(self):
+        result, st = sd.discover({"cursor": 3, "last_day": "2026-10-31"}, T, channel_opener(gh=500, hf=500, nature=500), NOW)
+        self.assertTrue(result["rotation_held"])
+        self.assertEqual((3, "2026-10-31"), (st["cursor"], st["last_day"]))
+        ok, st2 = sd.discover({"cursor": 0}, T, channel_opener(gh=500), NOW)
+        self.assertFalse(ok["rotation_held"], "partial failure still consumes the day")
+        self.assertEqual("2026-11-01", st2["last_day"])
+
+    def test_cli_does_not_say_saved_for_a_refusal(self):
+        import contextlib
+        import io
+        import os
+        with tempfile.TemporaryDirectory() as tmp:
+            os.environ["LEGEND_SCOUT_DIR"] = tmp
+            try:
+                buf = io.StringIO()
+                with contextlib.redirect_stdout(buf):
+                    rc = sd.main(["--follow-add", "t/r"])
+                self.assertEqual(1, rc)
+                self.assertNotIn("saved:", buf.getvalue())
+                self.assertIn("REFUSED", buf.getvalue())
+                buf = io.StringIO()
+                with contextlib.redirect_stdout(buf):
+                    rc = sd.main(["--trace", "nokey", "--stage", "examination", "--state", "examined"])
+                self.assertEqual(1, rc)
+                self.assertNotIn("saved:", buf.getvalue())
+                buf = io.StringIO()
+                with contextlib.redirect_stdout(buf):
+                    rc = sd.main(["--follow-add", "t/r", "--source", "s", "--reason", "r", "--reopen", "o"])
+                self.assertEqual((0, True), (rc, "saved:" in buf.getvalue()))
+            finally:
+                del os.environ["LEGEND_SCOUT_DIR"]
+
+    def test_verdict_is_computed_from_the_final_selection(self):
+        self.assertEqual("SELECTED", sd.final_verdict({"selected": [{"id": "Discovery:x"}], "baseline": True}))
+        self.assertEqual("BASELINE", sd.final_verdict({"selected": [], "baseline": True}))
+        self.assertEqual("NO_USEFUL_CHANGE", sd.final_verdict({"selected": [], "baseline": False}))
 
 
 if __name__ == "__main__":
