@@ -75,7 +75,16 @@
      "step": "P4 dedicated continuity proof: fresh actor applies canonical guidance to a small real package; fresh verifier; orchestrator reconciles and picks next package; checkpoint resume from record",
      "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": "proof package: publication readiness of the shareable view. Phase 1 actor (fresh context, brief + canonical entries only) gathers state and writes CHECKPOINT.md on its own branch; phase 2 actor resumes from the record only; verifier with separate context; orchestrator reconciles and picks next package. Live trace in disease-models/wwox/research/drug_repurposing/continuity_proof_it17_20261101/ (created at close)."
+     "evidence": "proof package: publication readiness of the shareable view. Phase 1 actor (fresh context, brief + canonical entries only) gathers state and writes CHECKPOINT.md on its own branch; phase 2 actor resumes from the record only; verifier with separate context; orchestrator reconciles and picks next package. Live trace in disease-models/wwox/research/drug_repurposing/continuity_proof_it17_20261101/ (created at close).",
+     "checkpoint": {
+      "at_utc": "2026-11-01T16:55:00Z",
+      "phase": "1 done",
+      "branch": "worktree-agent-a2ff4314325568853",
+      "commit": "1ba726830a1c5cd71b987002e33f19b145b5482f",
+      "file": "disease-models/wwox/research/drug_repurposing/continuity_proof_it17_20261101/CHECKPOINT.md",
+      "next": "phase 2 by a NEW actor from this record only: offline-testable checker for DEPLOY.md section 12 + single-act request text; then fresh verifier; then orchestrator reconciles and picks next package",
+      "observed_in_phase1": "actor read CLAUDE.md, state manifest, LEGEND_CORE 21c-21e, DEPLOY.md, patch, workflow; did NOT open roadmap_current.md Standing method, roles/ or the adapter convention (router CLAUDE.md does not link them); applied reserved-act and stop-policy rules correctly; no reserved act performed"
+     }
     }
    ]
   },
