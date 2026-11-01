@@ -38,3 +38,7 @@ Note on the `smoke` job in the patch: it checks only 200, the `index.html` diges
 ## Canonical files read
 
 `CLAUDE.md` (router); `framework/state/state_manifest_current.md` (`current_state: READY`, line 139); `framework/instruction/LEGEND_CORE.md` sections 21c (lines 345-), 21d reserved list (lines 461-470) and 21e line 580-586 (read as excerpts, not in full); `disease-models/wwox/research/drug_repurposing/view/DEPLOY.md` (whole); `view/shareable_package/README.md` (whole); `ops_it11_p5_20261031/activate_workflow.patch` (whole); `ops_it11_p5_20261031/operator_request_publish_view_it11.md` (first 60 lines); `.github/workflows/public-release-gate.yml` (whole). Not read: `licence_inventory_it7_20261029.md`, `sharing_it9_20261030/`, the IT16 mandate record, `framework/scripts/README.md`, `repurposing_view.py` (phase 2 reads them as needed).
+
+## Phase 2 (2026-11-01, new actor from the record only)
+
+Built: `check_published_view.py` (conditions a to f of DEPLOY.md section 12; GET only; no default URL; exit 0/1/2/3), `test_check_published_view.py` (16 offline cases on a 127.0.0.1 server under `/legend-development/`: positive plus negative fixtures), `operator_request_single_act_it17.md` (the single-act request text). Patch, proposal and package untouched. No reserved act performed; no external request made. Not automated: g (viewports) and h (audit-shareable --dynamic) stay calls to `repurposing_view.py` on the package file. Next: fresh verifier, then the orchestrator reconciles.
