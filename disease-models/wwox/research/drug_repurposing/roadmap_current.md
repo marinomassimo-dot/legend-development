@@ -1,7 +1,8 @@
 # Drug repurposing — current development roadmap
 
-Updated 2026-10-29 by `orchestrator`, runtime Codex, following the operator's request to
-consolidate the Unravel/BioNAV/rareSHIFT and ALS discussion into this roadmap.
+Updated 2026-11-01 by `orchestrator`, runtime Codex, following the operator's requests to
+consolidate the Unravel/BioNAV/rareSHIFT and ALS discussion and state the guiding principle
+explicitly in this roadmap.
 
 **Planning, not an implementation or efficacy report.** This is the home of the next
 increments. The newest measured iteration in [README.md](README.md) describes what actually
@@ -9,6 +10,15 @@ works. The [operator-supplied v4/r14](roadmap_v4_r14_20261020.md) stays verbatim
 provenance. Before executing an increment, fetch remote `main`, reconcile the latest measured
 iteration and reuse any work already delivered. This update authorises recording the plan;
 it does not claim that its research experiments, deployments or integrations have run.
+
+## Guiding principle
+
+> **Rendere durevole la capacità di lavorare e migliorarsi, mantenendo semplice cambiare direzione.**
+
+Keep improvements lean, flexible, modular and reversible. Reuse existing mechanisms;
+keep tools, plugins, scripts and patterns easy to adopt, replace or remove. Preserve
+reusable guidance at its canonical home, without duplicating prompts in role contracts
+or adding rigid gates and approval layers.
 
 ## Research objectives
 
