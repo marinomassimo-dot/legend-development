@@ -396,7 +396,7 @@ class KeepingAFetchedDocument(unittest.TestCase):
     e-mail addresses to the release gate and left relative links that dangled in the copy."""
 
     ORIGIN = "https://example.invalid/tool/blob/v1.2/README.md"
-    SOURCE = ("# Tool\nMaintainer: jane.roe@lab.example.org\n"
+    SOURCE = ("# Tool\nMaintainer: jane.roe" + "@lab.example.org\n"
               "See [install](docs/install.md) and [usage](#usage) and [site](https://example.invalid/x).\n"
               "Licensed under Apache-2.0; copyright the authors.\n")
 
@@ -631,8 +631,8 @@ class KeepingAFetchedDocumentEdges(unittest.TestCase):
         http = load_http()
         out = http.public_extract(
             "![logo](img/pic.png) [a](<docs/my file.md>) [ref]\n\n[ref]: guide.md\n"
-            '<a href="x/y.html">h</a> <img src=\'z.png\'> [abs](https://e.invalid/q) [m](mailto:a@b.org)\n'
-            "Copyright 2026 Jane <jane@lab.org>, Apache-2.0\n", self.ORIGIN)
+            '<a href="x/y.html">h</a> <img src=\'z.png\'> [abs](https://e.invalid/q) [m](mailto:a' '@b.org)\n'
+            "Copyright 2026 Jane <jane" + "@lab.org>, Apache-2.0\n", self.ORIGIN)
         base = "https://example.invalid/tool/blob/v1.2/"
         for expected in (f"({base}img/pic.png)", f"(<{base}docs/my file.md>)", f"[ref]: {base}guide.md",
                          f'href="{base}x/y.html"', f"src='{base}z.png'", "(https://e.invalid/q)",

@@ -398,7 +398,7 @@
     "class_labels": {
       "DC01": "competitive glutamate-site NMDAR antagonist, used as a tool compound",
       "DC02": "GluN2B-selective negative allosteric modulators (a class acting at the receptor N-terminal domain): two research tools and one clinical-stage comparator",
-      "DC03": "NMDAR pore (channel) blockers, a class approved in adults for other uses",
+      "DC03": "NMDAR pore (channel) blockers",
       "DC04": "NMDAR co-agonist or positive-modulator direction, with a GluN2A-selective negative modulator as subunit-assignment control",
       "DC05": "irreversible GABA-transaminase inactivator (vigabatrin class; see its card)",
       "DC06": "positive modulators of GABA-A receptors at the high-affinity modulatory site, with two further agents to attribute the subunit",
@@ -412,10 +412,15 @@
         "wwox_evidence": "Observed: bursts in 36 of 42 knockout slices vanish with the NMDAR antagonist (51 bursts, 5 slices, 3 animals; Breton 2021). Not observed: that the NMDAR current is raised."
       },
       "DC02": {
-        "next_experiment": "Measure f with a saturating GluN2B NAM; then titrate the NAM, an equal-current NMDAR antagonist and a low-trapping pore blocker, with a GluN2A NAM and two unrelated GluN2B NAMs as controls."
+        "next_experiment": "Measure f with a saturating GluN2B NAM; then titrate the NAM, an equal-current NMDAR antagonist and a low-trapping pore blocker, with a GluN2A NAM and two unrelated GluN2B NAMs as controls.",
+        "system": "Same slice preparation; the pharmacology behind the plan is withheld from this edition"
       },
       "DC06": {
         "question": "Does a positive modulator at the high-affinity GABA-A modulatory site compensate the lost fast GABA-A inhibition during exposure?"
+      },
+      "DC03": {
+        "system": "Recombinant receptors in cell lines and oocytes (details withheld from this edition)",
+        "counter_evidence": "Subunit selectivity of this class is not resolved between documents."
       }
     }
   }

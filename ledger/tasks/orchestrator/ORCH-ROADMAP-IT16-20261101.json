@@ -100,9 +100,9 @@
     },
     {
      "step": "P5.2 report-verify-next-package handoff proven; checkpoint resume proven; stop on no useful work",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "report->verifier->fix->regrade traced twice in this session; verifier findings resumed to producing agents and merged; worktrees/processes listed before/after, no duplicate jobs; Stop hook not installed here so proof rests on record+commits (session_evaluations/2026-11-01_it16)"
     }
    ]
   },
@@ -122,9 +122,9 @@
    "steps": [
     {
      "step": "P7 dashboard: shareable edition exposure review without bypassing the audit; publication state; update cycle",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "scientist",
-     "evidence": ""
+     "evidence": "shareable edition shows 10 deepened cases with own-text fields (precedent/pharmacology withheld), audit unchanged and PASS, 168 view tests, Chromium viewports no overflow; fresh-context verifier: integrate as is, low wording items fixed; site NOT online (reserved act: apply activate_workflow.patch, Pages source, dispatch)"
     }
    ]
   },
@@ -133,9 +133,9 @@
    "steps": [
     {
      "step": "P8 selective science follow-up only if a premise or next experiment can change; else motivated abstention",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "motivated abstention: the one recoverable item (assay context Ro 25-6981/ethosuximide) recovered in P3; primary papers behind review values and unresolved identities do not change a premise or next experiment now"
     }
    ]
   },
