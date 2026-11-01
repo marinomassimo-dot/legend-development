@@ -1,0 +1,424 @@
+{
+ "schema_version": 2,
+ "pmid": "42941930",
+ "doi": "10.3390/ijms27209160",
+ "receipt": "FTR-20261101-42941930-01",
+ "landing": [
+  "disease-models/wwox/research/drug_repurposing/radar_p4_it15_20261101/README.md"
+ ],
+ "coverage_status": "complete_fulltext_read",
+ "declared_reading_gap": "Not available: the per-replicate 13C integral table and the analysis script that the Data Availability Statement names as Supplementary Data are not in the Europe PMC supplementaryFiles package (that package holds a 3-page PDF with Tables S1 and S2 only); raw NMR free induction decays exist only on request (not requested). The MDPI publisher supplement URL was not tried again (HTTP 403 on 2026-11-01 in IT15 P4). Not carried out: a typeset-PDF reading of the article (the structured Europe PMC XML and the five figure images were the surfaces). Figure values are read from bar axes and are approximate.",
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Reconciliation of a read receipt for a methodological precedent; no commit candidate and no promotion of the paper is wanted."
+  },
+  {
+   "skill": "pdf",
+   "used": true,
+   "reason": "The 3-page supplementary PDF was read page by page through its text layer; the figure images were opened as images."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 77,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-11-01, key-less GET: Baykal AT[Author] 77 records (name-only query, not disambiguated, so an upper bound); Baykal AT[Author] AND (NMR OR metabolomics) 14; Baykal AT[Author] AND WWOX 0.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Cell-culture NMR metabolomics laboratory (Rutgers / Acibadem authorship per the package triage); no WWOX or WWOX-DEE work. Weight for a methods precedent only; none for any WWOX statement.",
+  "note": "Group credibility is not used to lift any claim; the paper is an external methodological precedent and is not promoted."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "SH-SY5Y[Title/Abstract] AND (13C OR \"carbon-13\") AND (NMR OR isotope)",
+    "route": "PubMed esearch, 2026-11-01",
+    "count": 44
+   },
+   {
+    "query": "SH-SY5Y[Title/Abstract] AND (oligomycin OR antimycin) AND (glucose AND (13C OR isotope))",
+    "route": "PubMed esearch, 2026-11-01",
+    "count": 1
+   },
+   {
+    "query": "WWOX[Title/Abstract] AND SH-SY5Y[Title/Abstract]",
+    "route": "PubMed esearch, 2026-11-01",
+    "count": 3
+   }
+  ],
+  "note": "Thin literature for the exact design (one record for SH-SY5Y glucose isotope tracing with oligomycin or antimycin, which is presumably this paper); the paper is not WWOX-directed, and 3 WWOX-and-SH-SY5Y records exist independently of it."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 77,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "77 ref elements counted in the Europe PMC XML and the whole numbered list was read (items 1 to 77); no reference concerns WWOX (the XML contains no WWOX string).",
+  "resolved": [
+   {
+    "scope": "Zhang 2020 (RPE, piericidin/antimycin/oligomycin), Basu and Blair 2011 (rotenone, SH-SY5Y acetyl-CoA), Bakken 1997 (3-NP astrocytes), Lussey-Lepoutre 2015 and Cardaci 2015 (SDH-deficient cells)",
+    "status": "cited, not read in this reading",
+    "result": "Antecedents named by the authors for the oligomycin/PC contrast and the 3-NP succinate observation; not needed for the receipt."
+   }
+  ],
+  "queued": [],
+  "dedup_performed": "fulltext_receipts.py status --pmid 42941930 returned no event before this reading; registry_records.py get --pmid 42941930 --hops 1 returned no record; the IT15 P4 package triage (an unreceipted full-text read) was the only prior contact.",
+  "reason": "Methodological precedent only; no decision depends on the antecedents, so none is queued."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does LEGEND hold any record, receipt, manifest or claim for PMID 42941930 or for SH-SY5Y 13C-glucose NMR after respiratory inhibitors?",
+  "hits": 0,
+  "finding": "fulltext_receipts.py status --pmid 42941930 (no event) and registry_records.py get --pmid 42941930 --hops 1 (no record, preambles only) returned nothing; the package grep of the module (IT15 P4) found no SH-SY5Y or isotope-tracing work. Nothing existing is supported or contradicted."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-11-01",
+  "route": "PubMed ESummary (key-less GET): no CommentsCorrections entry, recordstatus PubMed - indexed for MEDLINE; dependency_integrity.py screen --doi --manifest-block",
+  "result": "No erratum, correction, retraction or expression of concern is listed for the paper. The 77-reference list screened clean against the Retraction Watch snapshot of 2026-10-21 (74 with DOI screened, 3 without DOI unscreenable). Reference 77 (Maya-Lopez 2024) itself states a Correction in Mol. Neurobiol. 2024, 61, 6453; it is a correction, not a retraction, and is cited only for concordance of bioenergetic endpoints.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 77,
+   "references_screened": 74,
+   "references_with_doi": 74,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 11,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42941930_PMC13705396.xml",
+   "sha256": "b631becf75ec2afc9fd5637e207b891c8edc0a9da065319dc586c8041430bef4",
+   "kind": "article_text",
+   "note": "Europe PMC full-text XML (JATS) of the CC BY article PMC13705396; body, table, caption and reference text.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13705396/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-01",
+    "result_sha256": "b631becf75ec2afc9fd5637e207b891c8edc0a9da065319dc586c8041430bef4"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42941930_supplement/PMC13705396_supplementaryFiles.zip",
+   "sha256": "d2bd92ed477b1c6d8c279118c6bd8c22d1c61e08c16f11243368f736cfafba2c",
+   "kind": "supplement_binary",
+   "note": "Europe PMC supplementaryFiles package for PMC13705396: five figure files (webp and gif) and ijms-27-09160-s001.zip holding the supplementary PDF. A valid zip on this retrieval; two earlier attempts on 2026-11-01 (IT15 P4) returned truncated streams.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13705396/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC supplementaryFiles",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-11-01",
+    "result_sha256": "d2bd92ed477b1c6d8c279118c6bd8c22d1c61e08c16f11243368f736cfafba2c"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42941930_supplement/pkg/s001/ijms-4557950-supplementary.pdf",
+   "sha256": "924caddd3101cac56daf688c313aa13ed6c6fde10304a37d80bf54d184769ca4",
+   "kind": "supplement_binary",
+   "note": "Supplementary PDF (3 pages): Table S1 effect sizes for every exposure-versus-control contrast and Table S2 annotation correspondence. The per-replicate integral table and analysis script named in the Data Availability Statement are NOT in the package.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID42941930_supplement/PMC13705396_supplementaryFiles.zip",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "python3 standard library, 2026-11-01",
+     "call": "zipfile extract of ijms-27-09160-s001.zip, then ijms-4557950-supplementary.pdf unchanged"
+    },
+    "acquired_on": "2026-11-01"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42941930_supplement/ijms-4557950-supplementary.txt",
+   "sha256": "d6961b95e320484003df39f6485e9759efbc23ab034920d91bd91755a97714c4",
+   "kind": "supplement_text",
+   "note": "Text layer of the supplementary PDF (PyMuPDF), used only to verify quotations of Tables S1 and S2; the PDF stays the evidentiary surface.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID42941930_supplement/pkg/s001/ijms-4557950-supplementary.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_text() default mode",
+     "join": "\n"
+    },
+    "acquired_on": "2026-11-01",
+    "result_sha256": "d6961b95e320484003df39f6485e9759efbc23ab034920d91bd91755a97714c4"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42941930_supplement/pkg/ijms-27-09160-g001.webp",
+   "sha256": "c5617c3a26dc6f327c59ee7fc9030b9fa9a9f9a8f144956c93e68ed6a367faae",
+   "kind": "figure",
+   "note": "Figure 1 image (webp) from the Europe PMC supplementaryFiles package, opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID42941930_supplement/PMC13705396_supplementaryFiles.zip",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "python3 standard library, 2026-11-01",
+     "call": "zipfile extract of ijms-27-09160-g001.webp from the supplementaryFiles package, unchanged"
+    },
+    "acquired_on": "2026-11-01"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42941930_supplement/pkg/ijms-27-09160-g002.webp",
+   "sha256": "3d91abfb3a2f2a70b4216e0a0a0764d834624d35ffe085849091b64dc0a51abf",
+   "kind": "figure",
+   "note": "Figure 2 image (webp) from the Europe PMC supplementaryFiles package, opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID42941930_supplement/PMC13705396_supplementaryFiles.zip",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "python3 standard library, 2026-11-01",
+     "call": "zipfile extract of ijms-27-09160-g002.webp from the supplementaryFiles package, unchanged"
+    },
+    "acquired_on": "2026-11-01"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42941930_supplement/pkg/ijms-27-09160-g003.webp",
+   "sha256": "d3ea6b46e5b81306c39744aea12ac29a0d3fe38e6ac4e560d2aef7f3ba90003a",
+   "kind": "figure",
+   "note": "Figure 3 image (webp) from the Europe PMC supplementaryFiles package, opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID42941930_supplement/PMC13705396_supplementaryFiles.zip",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "python3 standard library, 2026-11-01",
+     "call": "zipfile extract of ijms-27-09160-g003.webp from the supplementaryFiles package, unchanged"
+    },
+    "acquired_on": "2026-11-01"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42941930_supplement/pkg/ijms-27-09160-g004.webp",
+   "sha256": "1074313510c6c4ae3ef70d30290522eb9f7f631310d74ee9f99b332fcfa44f24",
+   "kind": "figure",
+   "note": "Figure 4 image (webp) from the Europe PMC supplementaryFiles package, opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID42941930_supplement/PMC13705396_supplementaryFiles.zip",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "python3 standard library, 2026-11-01",
+     "call": "zipfile extract of ijms-27-09160-g004.webp from the supplementaryFiles package, unchanged"
+    },
+    "acquired_on": "2026-11-01"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42941930_supplement/pkg/ijms-27-09160-g005.webp",
+   "sha256": "64731c90f5ee6fc17f57ee1d7ab0396b102db03318c67b7eb497664b06d4107e",
+   "kind": "figure",
+   "note": "Figure 5 image (webp) from the Europe PMC supplementaryFiles package, opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID42941930_supplement/PMC13705396_supplementaryFiles.zip",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "python3 standard library, 2026-11-01",
+     "call": "zipfile extract of ijms-27-09160-g005.webp from the supplementaryFiles package, unchanged"
+    },
+    "acquired_on": "2026-11-01"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Structured Europe PMC XML, the supplementary PDF with its text layer, and all five figure images are local and fingerprinted; Figures 2 and 4 were inspected as images and Figures 1, 3 and 5 were opened and viewed.",
+  "abstract_anchoring_waived": "No textual locator is anchored to the abstract; the abstract's enzyme-capacity figures are compared with the Results text and Figure 4 in the entries above.",
+  "note": "2026-11-01 reconciliation reading (QUESTION_DRIVEN: the reader held the IT15 P4 package verdict). Each proposition is labelled as an external methodological precedent statement, not WWOX evidence.",
+  "entries": [
+   {
+    "proposition": "EXTERNAL METHODOLOGICAL PRECEDENT, NOT WWOX EVIDENCE (SH-SY5Y, pharmacological respiratory inhibitors): The tracer was supplied after the inhibitor was removed, so the labelling reports a post-exposure state and not flux during inhibition.",
+    "snippet": "were not re-added to the serum-free, glucose-free DMEM",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42941930_PMC13705396.xml",
+    "anchor": "Methods 4.2, last sentences before the dosing paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EXTERNAL METHODOLOGICAL PRECEDENT, NOT WWOX EVIDENCE (SH-SY5Y, pharmacological respiratory inhibitors): All five exposures are compared with one shared vehicle-control triplicate; no separate ethanol-vehicle arm was run.",
+    "snippet": "all five exposure conditions are compared against that one control triplicate; separate vehicle-matched controls for the saline- and ethanol-dissolved compounds were not run",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42941930_PMC13705396.xml",
+    "anchor": "Methods 4.2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EXTERNAL METHODOLOGICAL PRECEDENT, NOT WWOX EVIDENCE (SH-SY5Y, pharmacological respiratory inhibitors): The route assignment of glutamate positions is first-turn only: PDH labels glutamate C4/C5 and PC labels C2/C3.",
+    "snippet": "carbon entering through pyruvate dehydrogenase labels glutamate C4 and C5, whereas carbon entering through pyruvate carboxylase labels glutamate C2 and C3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42941930_PMC13705396.xml",
+    "anchor": "Results 2.2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EXTERNAL METHODOLOGICAL PRECEDENT, NOT WWOX EVIDENCE (SH-SY5Y, pharmacological respiratory inhibitors): At the 24 h endpoint scrambling is assumed substantially complete and no correction was applied, so C4/C3 is an integrated indicator and not a route-specific measurement.",
+    "snippet": "At the 24 h labelling endpoint used here, the system has passed well beyond that point, so scrambling must be assumed to be substantially complete.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42941930_PMC13705396.xml",
+    "anchor": "Results 2.2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EXTERNAL METHODOLOGICAL PRECEDENT, NOT WWOX EVIDENCE (SH-SY5Y, pharmacological respiratory inhibitors): Oligomycin: glutamate C3 (PC-associated) rose to 197.7 percent of control while glutamate C4 (PDH-associated) stayed at 107.2 percent; n = 3 and the shared-control Dunnett contrast is the quoted p.",
+    "snippet": "The PC-associated glutamate C3 readout rose to 197.7 +/− 8.1% of control",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42941930_PMC13705396.xml",
+    "anchor": "Results 2.2, oligomycin paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EXTERNAL METHODOLOGICAL PRECEDENT, NOT WWOX EVIDENCE (SH-SY5Y, pharmacological respiratory inhibitors): The authors state that the PC and PDH assays report capacity under saturating cofactors, not in-cell flux (PDH assay, extract-level, relative to control).",
+    "snippet": "so the readout reports the decarboxylating capacity of the extract rather than in-cell flux",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42941930_PMC13705396.xml",
+    "anchor": "Methods 4.7",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EXTERNAL METHODOLOGICAL PRECEDENT, NOT WWOX EVIDENCE (SH-SY5Y, pharmacological respiratory inhibitors): PC and PDH assays were run on protein-preserving extracts prepared in parallel, not on the perchloric-acid metabolite extracts.",
+    "snippet": "the PC and PDH assays were therefore performed on protein-preserving extracts prepared in parallel from the same biological replicates",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42941930_PMC13705396.xml",
+    "anchor": "Methods 4.7",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EXTERNAL METHODOLOGICAL PRECEDENT, NOT WWOX EVIDENCE (SH-SY5Y, pharmacological respiratory inhibitors): Text value of the enzyme-capacity result under oligomycin (approximately 138 percent PC and 60 percent PDH); see the Figure 4C,D entry for what the bars show.",
+    "snippet": "Under oligomycin, PC activity rose to approximately 138% of control (p < 0.01), while PDH activity fell to approximately 60% (Figure 4C,D).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42941930_PMC13705396.xml",
+    "anchor": "Results 2.3, last paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EXTERNAL METHODOLOGICAL PRECEDENT, NOT WWOX EVIDENCE (SH-SY5Y, pharmacological respiratory inhibitors): The medium data are descriptive: normalisation and multiplicity handling are stated by the authors as not fully specified.",
+    "snippet": "the normalisation and the multiplicity treatment of the medium data are not fully specified",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42941930_PMC13705396.xml",
+    "anchor": "Results 2.4",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EXTERNAL METHODOLOGICAL PRECEDENT, NOT WWOX EVIDENCE (SH-SY5Y, pharmacological respiratory inhibitors): The authors state that respiratory inhibition is inferred, not demonstrated: no OCR, ATP, membrane potential, NAD+/NADH, ROS or complex activity was measured.",
+    "snippet": "so respiratory inhibition is inferred from the pharmacology of the compounds",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42941930_PMC13705396.xml",
+    "anchor": "Discussion 3.11 Limitations",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EXTERNAL METHODOLOGICAL PRECEDENT, NOT WWOX EVIDENCE (SH-SY5Y, pharmacological respiratory inhibitors): Sensitivity: at n = 3 per group the design detects only large standardised effects, so non-significant comparisons are uninformative, not evidence of no effect.",
+    "snippet": "this design detects standardised effects of approximately d = 3.1 or larger",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42941930_PMC13705396.xml",
+    "anchor": "Discussion 3.11 Limitations",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EXTERNAL METHODOLOGICAL PRECEDENT, NOT WWOX EVIDENCE (SH-SY5Y, pharmacological respiratory inhibitors): MPTP is the weakest condition: partial Complex I lesion in undifferentiated SH-SY5Y (low MAO-B) and most comparisons do not survive the shared-control analysis.",
+    "snippet": "MPTP is the weakest of the five exposures under this analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42941930_PMC13705396.xml",
+    "anchor": "Results 2.2, MPTP paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EXTERNAL METHODOLOGICAL PRECEDENT, NOT WWOX EVIDENCE (SH-SY5Y, pharmacological respiratory inhibitors): The authors place a design boundary on the result: undifferentiated SH-SY5Y is not a disease model, none of the compounds is a therapeutic agent.",
+    "snippet": "None of the five compounds is a therapeutic agent, and nothing in these data speaks to therapeutic benefit or risk in patients.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42941930_PMC13705396.xml",
+    "anchor": "Discussion 3.10",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EXTERNAL METHODOLOGICAL PRECEDENT, NOT WWOX EVIDENCE (SH-SY5Y, pharmacological respiratory inhibitors): Data availability: raw free induction decays only on request; no repository deposit is named.",
+    "snippet": "Raw NMR free induction decays are available from the corresponding author on reasonable request.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42941930_PMC13705396.xml",
+    "anchor": "Data Availability Statement",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EXTERNAL METHODOLOGICAL PRECEDENT, NOT WWOX EVIDENCE (SH-SY5Y, pharmacological respiratory inhibitors): Succinate was not detected in control extracts, so no ratio or test exists for that row; labelled succinate under 3-NP is qualitative.",
+    "snippet": "succinate was not detected in control extracts, so no ratio to control and no significance test can be computed for that row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42941930_PMC13705396.xml",
+    "anchor": "Table 1 legend (footnote a)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EXTERNAL METHODOLOGICAL PRECEDENT, NOT WWOX EVIDENCE (SH-SY5Y, pharmacological respiratory inhibitors): Supplementary Table S1 states the design's minimum detectable effect (d = 3.07 at n = 3 per group, alpha 0.05, 80 percent power).",
+    "snippet": "minimum detectable effect for this design is d = 3.07",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42941930_supplement/ijms-4557950-supplementary.txt",
+    "anchor": "Supplementary Table S1 header note, page 1 of the supplementary PDF",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EXTERNAL METHODOLOGICAL PRECEDENT, NOT WWOX EVIDENCE (SH-SY5Y, pharmacological respiratory inhibitors): Supplementary Table S2 documents a reassignment of the 34.6 ppm resonance from a GABA annotation to succinate C2/C3 in the primary integral file.",
+    "snippet": "The primary integral tables (13C_quantitation_.xls) annotate two resonances under a numbering convention that counts from the amine-bearing",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42941930_supplement/ijms-4557950-supplementary.txt",
+    "anchor": "Supplementary Table S2, row ~34.6 ppm, page 3 of the supplementary PDF",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EXTERNAL METHODOLOGICAL PRECEDENT, NOT WWOX EVIDENCE (SH-SY5Y, pharmacological respiratory inhibitors): Figure 4C,D as drawn: PDH capacity bars are significantly below control only for azide (about 65 percent, one asterisk) and oligomycin (about 65 percent, two asterisks); PC capacity bars are above control in all five exposures (MPTP about 147 and 3-NP about 131 with two asterisks, antimycin A about 120 and azide about 111 with one asterisk, oligomycin about 133 with two asterisks). So the PC-capacity rise is not specific to oligomycin, and the bar values (read off the axis, approximate) are lower than the text figures of about 138 percent PC and 60 percent PDH.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4C (change in PDH activity) and 4D (change in PC activity), bars with asterisks as printed: PDH azide about 65 one asterisk, oligomycin about 65 two asterisks, other groups not marked; PC MPTP about 147 two asterisks, 3-NP about 131 two, antimycin A about 120 one, azide about 111 one, oligomycin about 133 two. Values read from the axis, approximate.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42941930_supplement/pkg/ijms-27-09160-g004.webp",
+    "anchor": "Figure 4C and 4D, image ijms-27-09160-g004.webp",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "EXTERNAL METHODOLOGICAL PRECEDENT, NOT WWOX EVIDENCE (SH-SY5Y, pharmacological respiratory inhibitors): Figure 2A as drawn: the heatmap prints succinate as det. 28.0x under 3-NP, det. 1.0x under antimycin A, det. 0.9x under oligomycin and n.d. under MPTP and azide; the control is not detected, so these are not ratios to control. Figure 2B: control and MPTP replicates sit on the right of PC1, azide and antimycin A on the left, oligomycin lower on PC2.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2A succinate row cell labels: MPTP n.d., 3-NP det. 28.0x, AntiA det. 1.0x, Azide n.d., Oligo det. 0.9x; Figure 2B PCA, three replicate points per group, PERMANOVA pseudo-F = 18.77 p = 0.0001 printed on the panel.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42941930_supplement/pkg/ijms-27-09160-g002.webp",
+    "anchor": "Figure 2A and 2B, image ijms-27-09160-g002.webp",
+    "panel_text_relation": "panel_only"
+   }
+  ]
+ },
+ "reading_history": [
+  {
+   "receipt": "FTR-20261101-42941930-01",
+   "reader": "scientist, IT16 package P1.2 (read receipt reconciliation)",
+   "context_policy": "QUESTION_DRIVEN",
+   "what_changed": "First ledger receipt for this paper. The IT15 P4 triage had read the full text without a receipt; this reading re-opened the open-access XML, obtained the supplementary PDF and the five figure images (not opened at triage) and recorded coverage and locators. The reader held the IT15 P4 package README (identity, licence, verdict 'external methodological precedent') before reading.",
+   "outputs": [
+    "disease-models/wwox/research/deepdive_manifests/PMID42941930.json",
+    "disease-models/wwox/research/drug_repurposing/radar_p4_it15_20261101/README.md"
+   ]
+  }
+ ]
+}
