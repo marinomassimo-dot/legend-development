@@ -89,15 +89,17 @@ class _Scan(HTMLParser):
             self._in_style = True
         if tag == "footer":
             self._in_footer += 1
-        for k in ("src", "href", "data", "poster", "srcset"):
+        for k in ("src", "href", "xlink:href", "data", "poster", "srcset", "action"):
             v = a.get(k)
             if v is None:
                 continue
-            loads = (k != "href") or (tag == "link")      # <a href> is a link, not a load
+            loads = (k not in ("href", "xlink:href")) or tag in ("link", "use", "image")      # <a href> is a link, not a load; SVG <use>/<image> do load
             if loads and re.match(r"(?i)(https?:)?//", v.strip()):
                 self.loads.append("<%s %s=%s>" % (tag, k, v[:80]))
-            if k in ("src", "href") and v.startswith("/") and not v.startswith("//"):
+            if k in ("src", "href", "xlink:href", "action", "srcset") and v.startswith("/") and not v.startswith("//"):
                 self.rooted.append("<%s %s=%s>" % (tag, k, v[:80]))
+        if tag == "meta" and (a.get("http-equiv") or "").lower() == "refresh" and re.search(r"(?i)url=\s*(https?:)?//", a.get("content") or ""):
+            self.loads.append("<meta refresh %s>" % (a.get("content") or "")[:80])
         if a.get("style"):
             self.style.append(a["style"])
 

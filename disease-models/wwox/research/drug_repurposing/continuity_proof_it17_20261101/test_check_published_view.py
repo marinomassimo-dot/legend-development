@@ -141,6 +141,18 @@ class T(unittest.TestCase):
         code, out = self.run_case()
         self.assert_fail(code, out, "f", "another host")
 
+    def test_other_loading_forms_are_seen(self):
+        cases = [('<svg><use href="https://cdn.example.org/a.svg#i"/></svg>', "another host"),
+                 ('<svg><image xlink:href="https://cdn.example.org/a.png"/></svg>', "another host"),
+                 ('<img srcset="https://cdn.example.org/a.png 2x" src="x.png">', "another host"),
+                 ('<meta http-equiv="refresh" content="0; url=https://cdn.example.org/">', "another host"),
+                 ('<form action="/post"></form>', "root-absolute")]
+        for frag, word in cases:
+            with self.subTest(frag=frag):
+                self.edit_page(lambda h, f=frag: h.replace("</head>", f + "</head>", 1))
+                code, out = self.run_case()
+                self.assert_fail(code, out, "f", word)
+
     def test_root_absolute_reference(self):
         self.edit_page(lambda h: h.replace("</head>", '<link rel="stylesheet" href="/style.css"></head>', 1))
         code, out = self.run_case()
