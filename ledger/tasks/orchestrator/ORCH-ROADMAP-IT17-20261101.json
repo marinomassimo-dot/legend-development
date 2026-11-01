@@ -17,15 +17,15 @@
    "steps": [
     {
      "step": "P0.1 CI of IT16 head 3e167e25 acquired; reconcile IT16 record statements (P5.2, P9) by correction note, history kept",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "CI success run 41325499562 (16:16:43Z-16:44:45Z); IT16 record P5.2 and P9 corrected by addenda, history in git"
     },
     {
      "step": "P0.2 classify first-battery failures of IT16 (derived surfaces drifted after receipt) and check if a small fix to regeneration/dependency map prevents recurrence; no new gate",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "classified: stale derived surfaces after receipt; candidate_tree_freshness.py --candidate 7bba5755 --base 1cda3d2a reports coverage_report, reading_state, pathograph STALE = the 3 failed suites; no code change needed, one line in Standing method to run it before freezing"
     }
    ]
   },

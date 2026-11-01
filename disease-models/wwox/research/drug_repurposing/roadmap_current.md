@@ -178,6 +178,7 @@ Reusable guidance for any drug-repurposing package lives in these places only; r
 - Autonomy, handoff and stopping: [cross-session transport section 12](../../../../framework/protocols/cross_session_transport.md#12--autonomous-mandate-continuity).
 - Reading receipts and complete reads: [`fulltext_read_receipt.md`](../../../../framework/protocols/fulltext_read_receipt.md).
 - WWOX-specific knowledge stays in the module records (needs, cards, working model), not in these generic pages.
+- Before freezing a candidate for the release battery, run `python3 framework/scripts/candidate_tree_freshness.py --candidate HEAD --base main` (or land through `task_close.py`): measured on the IT16 candidate, it reports exactly the three surfaces that failed the first battery (coverage report, reading state, pathograph) as STALE after a new receipt; the failure came from bypassing that existing path, not from a missing check.
 - Dated measurements and decisions are in the iteration section of the [module README](README.md) marked CURRENT.
 
 ## Delivery sequence and stop condition

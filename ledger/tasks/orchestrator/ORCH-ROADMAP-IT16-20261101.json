@@ -102,7 +102,7 @@
      "step": "P5.2 report-verify-next-package handoff proven; checkpoint resume proven; stop on no useful work",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "report->verifier->fix->regrade traced twice in this session; verifier findings resumed to producing agents and merged; worktrees/processes listed before/after, no duplicate jobs; Stop hook not installed here so proof rests on record+commits (session_evaluations/2026-11-01_it16)"
+     "evidence": "report->verifier->fix->regrade traced twice in this session; verifier findings resumed to producing agents and merged; worktrees/processes listed before/after, no duplicate jobs; Stop hook not installed here so proof rests on record+commits (session_evaluations/2026-11-01_it16) [IT17 correction: the two report->verifier->fix passes happened inside one session; no dedicated fresh-context use test and no checkpoint-resume test were run in IT16 (the final report said so). Proof is a package of IT17 P4.]"
     }
    ]
   },
@@ -146,7 +146,7 @@
      "step": "P9 different-actor verification, frozen battery on exact SHA, safe_push, CI, cleanup, final report",
      "status": "DONE",
      "owner": "verifier",
-     "evidence": "fresh-context verifiers on P1.1, P2+P3, radar+P4, P7 (findings fixed); battery 1 on 7bba5755 FAIL (3 suites drifted after the new receipt: coverage_report, reading_state, pathograph, regenerated); battery 2 on daa71fe8: PASS WITH SKIPS (174 targets, 7 skipped, same reasons as IT15); post-battery change: this record only"
+     "evidence": "fresh-context verifiers on P1.1, P2+P3, radar+P4, P7 (findings fixed); battery 1 on 7bba5755 FAIL (3 suites drifted after the new receipt: coverage_report, reading_state, pathograph, regenerated); battery 2 on daa71fe8: PASS WITH SKIPS (174 targets, 7 skipped, same reasons as IT15); post-battery change: this record only [IT17 addendum: step was marked DONE before the CI verdict; CI of head 3e167e25 completed success at 2026-11-01T16:44:45Z (run 41325499562, started 16:16:43Z). First-battery failures classified: derived surfaces stale after the new receipt, a real incoherence found by the tests; candidate_tree_freshness.py --base 1cda3d2a reproduces the three STALE surfaces, so the cause was landing without that existing check.]"
     }
    ]
   }
