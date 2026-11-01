@@ -15,7 +15,7 @@
  ],
  "STOP_LOG": [],
  "AUTHORISED_QUEUE_20261101C": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P0": {
    "order": 1,
    "steps": [
@@ -144,9 +144,9 @@
    "steps": [
     {
      "step": "P9 different-actor verification, frozen battery on exact SHA, safe_push, CI, cleanup, final report",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "verifier",
-     "evidence": ""
+     "evidence": "fresh-context verifiers on P1.1, P2+P3, radar+P4, P7 (findings fixed); battery 1 on 7bba5755 FAIL (3 suites drifted after the new receipt: coverage_report, reading_state, pathograph, regenerated); battery 2 on daa71fe8: PASS WITH SKIPS (174 targets, 7 skipped, same reasons as IT15); post-battery change: this record only"
     }
    ]
   }
