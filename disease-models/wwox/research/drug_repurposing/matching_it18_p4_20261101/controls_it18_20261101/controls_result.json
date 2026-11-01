@@ -1,0 +1,179 @@
+{
+ "C1_popularity": {
+  "L_compatible_rows": 55,
+  "P_popularity_path": {
+   "jaccard_P_L_pooled": 0.5278,
+   "per_need": {
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR": {
+     "T_rows": 40,
+     "jaccard_P_L": 0.7222,
+     "k_L_compatible": 31
+    },
+    "NEED-SEIZURE-CONTROL-SYMPTOMATIC": {
+     "T_rows": 18,
+     "jaccard_P_L": 0.3333,
+     "k_L_compatible": 12
+    },
+    "NEED-T-TYPE-CALCIUM": {
+     "T_rows": 18,
+     "jaccard_P_L": 0.3333,
+     "k_L_compatible": 12
+    }
+   }
+  },
+  "decision_discrimination": "every determinate row is compatible: popularity and L cannot be discriminated by this reference; not a result for either",
+  "decision_reference_bias": "no popularity bias of the reference measured at this denominator (determinate rows 8, AUC 0.5515)",
+  "decision_selection": "L adds no popularity selection over T (median percentile difference 0.0)",
+  "directed_rows": 76,
+  "directed_rows_with_pop_zero": 1,
+  "median_atc5_codes": {
+   "L_compatible": 1,
+   "T": 0.0
+  },
+  "median_pop_percentile": {
+   "L_compatible": 79.46,
+   "L_not_compatible": 79.46,
+   "T": 79.46
+  },
+  "median_pop_raw": {
+   "L_compatible": 7,
+   "T": 7.0
+  },
+  "popularity_definition": "amended (PRE_REGISTRATION dated amendment): distinct DGIdb gene_name joined by chembl concept id or exact parent/child catalogue name; percentile among catalogue parents with >= 1 DGIdb gene",
+  "precision_on_determinate": {
+   "L": {
+    "determinate": 6,
+    "precision": 1.0,
+    "truly_compatible": 6
+   },
+   "P": {
+    "determinate": 7,
+    "precision": 1.0,
+    "truly_compatible": 7
+   },
+   "T": {
+    "determinate": 8,
+    "precision": 1.0,
+    "truly_compatible": 8
+   }
+  },
+  "reference_bias": {
+   "auc_pop_determinate_vs_rest": 0.5515,
+   "determinate": [
+    [
+     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+     "CHEMBL14935",
+     12,
+     87.5
+    ],
+    [
+     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+     "CHEMBL660",
+     10,
+     85.0
+    ],
+    [
+     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+     "CHEMBL742",
+     17,
+     92.2
+    ],
+    [
+     "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
+     "CHEMBL1684950",
+     5,
+     72.9
+    ],
+    [
+     "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
+     "CHEMBL45816",
+     22,
+     95.0
+    ],
+    [
+     "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
+     "CHEMBL89598",
+     4,
+     67.2
+    ],
+    [
+     "NEED-T-TYPE-CALCIUM",
+     "CHEMBL1684950",
+     5,
+     72.9
+    ],
+    [
+     "NEED-T-TYPE-CALCIUM",
+     "CHEMBL45816",
+     22,
+     95.0
+    ]
+   ],
+   "determinate_rows": 8
+  }
+ },
+ "C2_leakage_and_indication_shortcut": {
+  "L_compatible_not_N03": 41,
+  "L_precision_without_leaked": {
+   "determinate": 5,
+   "precision": 1.0,
+   "truly_compatible": 5
+  },
+  "N03_rows_L_compatible_per_need": {
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR": 3,
+   "NEED-SEIZURE-CONTROL-SYMPTOMATIC": 6,
+   "NEED-T-TYPE-CALCIUM": 5
+  },
+  "N03_rows_T": 14,
+  "decision": "the reference-scored figure contains a circular row; figure without it is L_precision_without_leaked",
+  "leaked_determinate": 1,
+  "leaked_row_count": 4,
+  "leaked_rows": [
+   [
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+    "CHEMBL1214124",
+    "dev",
+    "perampanel",
+    "compatible",
+    "unknown_no_counterpart"
+   ],
+   [
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+    "CHEMBL807",
+    "eval",
+    "memantine",
+    "compatible",
+    "unknown_no_counterpart"
+   ],
+   [
+    "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
+    "CHEMBL89598",
+    "dev",
+    "vigabatrin",
+    "compatible",
+    "compatible"
+   ],
+   [
+    "NEED-T-TYPE-CALCIUM",
+    "CHEMBL696",
+    "dev",
+    "ethosuximide",
+    "compatible",
+    "unknown_no_counterpart"
+   ]
+  ]
+ },
+ "answers_lock_sha256": "5b9314d277cafa2b233ec00aca61ed7da2b1faff13884c35a088e4f83b5a1b7d",
+ "catalog_sha256": "75652786013b931d2482ae40b2b563a02ef3e05eff43832722cc002e3ccf72fb",
+ "dgidb_interactions_sha256": "08af778126a4f22a10fddb7fe06745df07f068ce76c016fe22c59c524ef3de9c",
+ "l_rule": "v1 (registered)",
+ "needs_sha256": "7678b986106b07e9a1cab0c5a4397df8a708fa46d9b459ddaf61fac0831c3f0f",
+ "post_hoc_on_eval": true,
+ "preregistration_sha256": "e461ffa569da3534ac462c5a4e3451f3108339bbd757ab177d701f26c9f7baef",
+ "run_label": "controls_it18_20261101",
+ "script_sha256": "c453ceace052679ab54ed2bd97cffbbe73f42aa18bf1de5d808d5d27a8c69bb0",
+ "split_counts": {
+  "dev": 43,
+  "eval": 33
+ }
+}
