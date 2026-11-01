@@ -8,7 +8,7 @@
  "START_UTC": "2026-10-31T22:35:00Z",
  "BASELINE": "development/main 68f2820c (IT13 close, CI success); local main 5a88442d (IT13 follow-up, battery pid 2996802 on a clone, not yet published). DEPENDENCY: IT14 starts from 5a88442d; the IT13 close is owned by the IT13 battery job and its push, not by IT14.",
  "AUTHORISED_QUEUE_20261101A": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P0_BASELINE": {
    "order": 1,
    "steps": [
@@ -103,9 +103,9 @@
    "steps": [
     {
      "step": "P7 needs, cards, triggers, work order, ranking, view and shareable edition",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "needs, work order, uncarded N13/N16, triggers, ranking snapshot, view regenerated and shareable audit PASS; view figure block delegated (pview)"
+     "evidence": "needs (inhibition, excitatory gain, chloride, myelination), new work-order entry with two validated figures, uncarded N13/N16, triggers NP3A5/NP3P1-3/NP4G1-4, ranking snapshots with reasons (0 group moves), F02 citation corrected, view and shareable edition regenerated, audit-shareable PASS"
     }
    ]
   },
@@ -114,15 +114,15 @@
    "steps": [
     {
      "step": "IT13 close acquired and reconciled",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "pending"
+     "evidence": "IT13 closed: battery PASS WITH SKIPS on 5a88442d, pushed, gate PASS, CI Public release gate completed success (23:33 UTC)"
     },
     {
      "step": "review, battery on the exact state, push, CI, cleanup",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "pending"
+     "evidence": "hostile review rev14: no blocking defect, three medium findings corrected; battery on a clone --no-hardlinks of 4acc30c8e7535b68b8390165226eb65aa8a8bccf: REGRESSION VERDICT PASS WITH SKIPS (172 targets, 7 skipped, same reasons as IT13); worktrees and branches removed (review report preserved in main first); push and CI in the final report"
     }
    ]
   }
