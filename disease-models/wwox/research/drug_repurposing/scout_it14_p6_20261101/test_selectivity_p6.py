@@ -114,6 +114,14 @@ class MissingConditions(unittest.TestCase):
         self.assertTrue(any("not one origin" in w for w in why), why)
 
 
+class TechniqueNotStated(unittest.TestCase):
+    def test_description_without_technique_is_unknown_not_different(self):
+        r = [row("GRIN1|GRIN2A", 100, assay="A1"), row("GRIN1|GRIN2B", 10, assay="A2")]
+        gr, why, *_ = grade(r, ctx(A1={"description": "Antagonist activity at NR1/NR2A"}, A2={"description": "Antagonist activity at NR1/NR2B"}))
+        self.assertEqual(gr, "LIMITED")
+        self.assertTrue(any("not stated" in w for w in why) and not any("techniques differ" in w for w in why), why)
+
+
 class ConditionForms(unittest.TestCase):
     def test_written_forms_are_recognised_and_voltage_gated_channels_need_no_agonist(self):
         m = sp.missing_decisive

@@ -172,7 +172,9 @@ def grade_group(obs, ctx):
         tsets = [techniques(ctx[a]["description"]) for a in assays]
         if len(cells) > 1:
             limited.append("cell systems differ: " + ", ".join(sorted(cells)))
-        if tsets and not set.intersection(*tsets):
+        if tsets and any(not t for t in tsets):
+            limited.append("assay technique not stated in at least one description (comparability of the methods is unknown, not shown different)")
+        elif tsets and not set.intersection(*tsets):
             limited.append("assay techniques differ (no shared technique among the descriptions)")
         cset = [conditions(ctx[a]["description"]) for a in assays]
         known = [c for c in cset if c]
