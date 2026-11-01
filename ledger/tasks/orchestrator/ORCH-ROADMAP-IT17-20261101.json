@@ -7,7 +7,11 @@
  "OBJECTIVE": "Iteration 17 (ten-hour horizon): priority-driven radar, corrected evaluation, demonstrated autonomy and use of standing guidance. Lean, modular, reversible. Computational capability is not biological plausibility is not therapeutic benefit.",
  "START_UTC": "2026-11-01T16:45:00Z",
  "BASELINE": "development/main = local main = 3e167e250fd60439bf179b9a542011625809d74a (fetched 2026-11-01 16:46 UTC); IT16 CI Public release gate success (created 16:16:43Z, completed 16:44:45Z, run 41325499562); one worktree; site unpublished.",
- "DECISIONS_TAKEN": [],
+ "DECISIONS_TAKEN": [
+  "Router CLAUDE.md gets one row to the Standing method after a fresh actor did not reach it; no new text copied elsewhere.",
+  "IT16 analysis kept as descriptive; new freeze sealed at 2026-11-01T16:54:06Z; IT16 5-outcome threshold not generalised.",
+  "Science: abstention, no read decides a comparison in use."
+ ],
  "DEFAULTS_TAKEN": [],
  "STOP_LOG": [],
  "AUTHORISED_QUEUE_20261101D": {
@@ -51,9 +55,9 @@
    "steps": [
     {
      "step": "P2 radar questions derived from current priority surfaces (diagnosis, roadmap, work order, needs, verified results, open items, reopen conditions); team one-level exploration; proofs 1-5; bounded real run",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "scientist",
-     "evidence": ""
+     "evidence": "scout_daily plan derived from priority surfaces at SHA (62 tests); team exploration one level; one real run 59 requests, traced decision DISCARD; fresh verifier found 8 issues, fixed; known gaps stated (query noise, 0 live WATCH questions, weekly cycle not observed)"
     }
    ]
   },
