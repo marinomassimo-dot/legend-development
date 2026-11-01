@@ -620,7 +620,7 @@ class StandingMethodIsReachable(unittest.TestCase):
     def test_links_and_anchor(self):
         road = (ROOT / "disease-models/wwox/research/drug_repurposing/roadmap_current.md").read_text(encoding="utf-8")
         self.assertIn("\n## Standing method\n", road)
-        for f in ("roles/orchestrator.md", "roles/scientist.md", "framework/protocols/scientist_standing_brief.md"):
+        for f in ("CLAUDE.md", "roles/orchestrator.md", "roles/scientist.md", "framework/protocols/scientist_standing_brief.md"):
             self.assertIn("roadmap_current.md#standing-method", (ROOT / f).read_text(encoding="utf-8"), f)
         conv = road.split("## Standing method")[1].split("\n## ")[0]
         self.assertIn("repurposing_adapter_convention.md", conv)
