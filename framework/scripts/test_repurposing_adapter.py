@@ -601,6 +601,56 @@ class ResilientTransport(ChemblActivities):
         self.assertFalse(any("activity.json" in u for u in out["requests_sent"]), "no activity row is borrowed from another molecule")
 
 
+class DrugCentralActionOrigin(unittest.TestCase):
+    """IT18 P3: the third direction source keeps the origin of each action label and never turns a map miss into absence."""
+
+    MAP = b"From src:'1'\tTo src:'34'\nCHEMBL9\t403\n"
+
+    def setUp(self):
+        self.dc = ra.load("drugcentral", ADAPTERS)
+        hdr, row = self.dc._SAMPLE_TSV.splitlines()[:2]
+        label = row.replace('"SCIENTIFIC LITERATURE"\t"="\t1\t"DRUG LABEL"', '"CHEMBL"\t"="\t\t""')
+        self.tsv = (hdr + "\n" + row + "\n" + label.replace("P00000", "P11111").replace('"EXMPL"', '"OTHER1"') + "\n").encode()
+        self.sent = []
+
+    def fetch(self, url, params=None, body=None, timeout=60):
+        self.sent.append(url)
+        return (200, self.MAP) if url == self.dc.MAP_URL else (200, self.tsv)
+
+    def test_origin_is_moa_source_then_act_source_and_classed(self):
+        out = self.dc.query({"struct_id": "403"}, fetch=self.fetch)
+        got = sorted((h["GENE"], h["action_origin"], h["action_origin_class"]) for h in out["hits"])
+        self.assertEqual(got, [("EXMPL", "DRUG LABEL", "INDEPENDENT"), ("OTHER1", "CHEMBL", "SHARED")])
+        self.assertEqual(self.sent, [self.dc.TSV_URL], "a declared struct id needs no map")
+
+    def test_chembl_id_goes_through_the_map_and_a_miss_is_no_match_not_absence(self):
+        out = self.dc.query({"chembl_id": "chembl9"}, fetch=self.fetch)
+        self.assertEqual((out["status"], out["identity_basis"], len(out["hits"])), ("MATCH_FOUND", "unichem_src1src34", 2))
+        miss = self.dc.query({"chembl_id": "CHEMBL1"}, fetch=self.fetch)
+        self.assertEqual(miss["status"], "NO_MATCH_FOUND")
+        self.assertIn("not in the UniChem map", miss["identity_basis"])
+        self.assertIn("try struct_id", miss["note"])
+        self.assertEqual(ra.check_output(miss), [])
+
+    def test_gene_filter_and_a_foreign_table_is_an_error(self):
+        out = self.dc.query({"gene": "other1"}, fetch=self.fetch)
+        self.assertEqual([h["GENE"] for h in out["hits"]], ["OTHER1"])
+        bad = self.dc.query({"struct_id": "403"}, fetch=lambda *a, **k: (200, b"a\tb\n1\t2\n"))
+        self.assertEqual(bad["status"], "QUERY_ERROR")
+        self.assertIn("not the DrugCentral", bad["error"])
+
+    def test_the_json_door_is_swapped_for_the_bytes_door(self):
+        calls = []
+        orig = self.dc.get_bytes
+        self.dc.get_bytes = lambda url, **k: calls.append(url) or (200, self.tsv)
+        try:
+            out = self.dc.query({"struct_id": "403"}, fetch=self.dc._http.get_json)
+        finally:
+            self.dc.get_bytes = orig
+        self.assertEqual(out["status"], "MATCH_FOUND")
+        self.assertEqual(calls, [self.dc.TSV_URL])
+
+
 class CacheRefusesEmptyAnd200Errors(unittest.TestCase):
     def test_empty_or_error_envelope_200_is_not_cached(self):
         h = load_http()

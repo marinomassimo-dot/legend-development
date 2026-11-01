@@ -1,0 +1,21 @@
+chembl	seconds	status	error	route_a_action_pairs	route_b_action_pairs	both	only_a	only_b	route_b_origin_field	route_a_independent_origin_pairs	route_b_total_targets_reported
+CHEMBL1420	0.77	success		1	1	1	0	0	act_source only	0	1
+CHEMBL1614652	0.77	error	No DrugCentral data found for 'CHEMBL1614652'. Try using InChIKey format.	0	0	0	0	0	n/a	0	
+CHEMBL493	0.74	success		6	6	6	0	0	act_source only	0	35
+CHEMBL709	0.71	success		3	3	3	0	0	act_source only	0	7
+CHEMBL3545248	0.75	error	No DrugCentral data found for 'CHEMBL3545248'. Try using InChIKey format.	0	0	0	0	0	n/a	0	
+CHEMBL593430	0.71	error	No DrugCentral data found for 'CHEMBL593430'. Try using InChIKey format.	0	0	0	0	0	n/a	0	
+CHEMBL1495	0.75	success		2	2	2	0	0	act_source only	0	2
+CHEMBL404849	0.77	success		0	0	0	0	0	act_source only	0	21
+CHEMBL2107333	0.73	success		1	1	1	0	0	act_source only	0	2
+CHEMBL3707249	0.72	error	No DrugCentral data found for 'CHEMBL3707249'. Try using InChIKey format.	0	0	0	0	0	n/a	0	
+CHEMBL363295	0.71	success		0	0	0	0	0	act_source only	0	1
+CHEMBL2108887	0.74	error	No DrugCentral data found for 'CHEMBL2108887'. Try using InChIKey format.	0	0	0	0	0	n/a	0	
+CHEMBL372205	0.7	error	No DrugCentral data found for 'CHEMBL372205'. Try using InChIKey format.	0	0	0	0	0	n/a	0	
+CHEMBL4091801	0.76	error	No DrugCentral data found for 'CHEMBL4091801'. Try using InChIKey format.	0	0	0	0	0	n/a	0	
+CHEMBL3545413	0.72	error	No DrugCentral data found for 'CHEMBL3545413'. Try using InChIKey format.	0	0	0	0	0	n/a	0	
+CHEMBL4594254	0.74	error	No DrugCentral data found for 'CHEMBL4594254'. Try using InChIKey format.	0	0	0	0	0	n/a	0	
+CHEMBL2104745	0.71	error	No DrugCentral data found for 'CHEMBL2104745'. Try using InChIKey format.	0	0	0	0	0	n/a	0	
+CHEMBL1201192	0.72	success		1	1	1	0	0	act_source only	0	7
+CHEMBL4802254	0.72	error	No DrugCentral data found for 'CHEMBL4802254'. Try using InChIKey format.	0	0	0	0	0	n/a	0	
+CHEMBL1201621	0.74	error	No DrugCentral data found for 'CHEMBL1201621'. Try using InChIKey format.	0	0	0	0	0	n/a	0	

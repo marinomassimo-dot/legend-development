@@ -1,0 +1,188 @@
+{
+ "agreement": {
+  "all_three_agree_where_all_determinate": {
+   "k": 266,
+   "n": 267,
+   "rate": 0.9963,
+   "wilson95": [
+    0.9791,
+    0.9993
+   ]
+  },
+  "module_vs_dc_any": {
+   "k": 2723,
+   "n": 2732,
+   "rate": 0.9967,
+   "wilson95": [
+    0.9938,
+    0.9983
+   ]
+  },
+  "module_vs_dc_any_on_pairs_without_gtopdb_direction": {
+   "k": 1694,
+   "n": 1697,
+   "rate": 0.9982,
+   "wilson95": [
+    0.9948,
+    0.9994
+   ]
+  },
+  "module_vs_dc_independent": {
+   "k": 644,
+   "n": 646,
+   "rate": 0.9969,
+   "wilson95": [
+    0.9888,
+    0.9992
+   ]
+  },
+  "module_vs_dc_independent_on_pairs_without_gtopdb_direction": {
+   "k": 378,
+   "n": 379,
+   "rate": 0.9974,
+   "wilson95": [
+    0.9852,
+    0.9995
+   ]
+  },
+  "module_vs_dc_shared": {
+   "k": 2038,
+   "n": 2045,
+   "rate": 0.9966,
+   "wilson95": [
+    0.993,
+    0.9983
+   ]
+  },
+  "module_vs_gtopdb": {
+   "k": 1890,
+   "n": 1896,
+   "rate": 0.9968,
+   "wilson95": [
+    0.9931,
+    0.9985
+   ]
+  }
+ },
+ "counts": {
+  "dc_conflict_any": 0,
+  "dc_counterpart": 2843,
+  "dc_determinate_any": 2753,
+  "dc_determinate_independent": 656,
+  "gtopdb_counterpart": 2036,
+  "gtopdb_determinate": 1933,
+  "ma_agree": 2723,
+  "ma_n": 2732,
+  "ma_new_agree": 1694,
+  "ma_new_n": 1697,
+  "mg_agree": 1890,
+  "mg_n": 1896,
+  "mi_agree": 644,
+  "mi_n": 646,
+  "mi_new_agree": 378,
+  "mi_new_n": 379,
+  "mig_all_three_agree": 266,
+  "mig_n": 267,
+  "module_determinate": 10653,
+  "ms_agree": 2038,
+  "ms_n": 2045,
+  "pairs": 11917
+ },
+ "dc_origin_of_joined_entries": {
+  "CHEMBL": 2169,
+  "DRUG LABEL": 431,
+  "DRUG MATRIX": 8,
+  "DRUGBANK": 5,
+  "EXPERT CURATOR": 1,
+  "IUPHAR": 805,
+  "KEGG DRUG": 79,
+  "PDSP": 7,
+  "SCIENTIFIC LITERATURE": 697,
+  "WOMBAT-PK": 92
+ },
+ "drugcentral_load": {
+  "action_rows_struct_not_in_catalogue": 52,
+  "action_rows_struct_not_in_unichem": 575,
+  "human_rows": 16926,
+  "human_rows_with_action": 3913,
+  "inchikey_agrees_with_unichem": 3607,
+  "rows": 22364,
+  "structs_added_by_inchikey": 231,
+  "unichem_structs": 3783
+ },
+ "inputs_sha256": {
+  "catalog": "75652786013b931d2482ae40b2b563a02ef3e05eff43832722cc002e3ccf72fb",
+  "drugcentral": "1908684983a79a067a44da952e1f6fd26b0f34cc36560cd9be0f0843bbfee1e1",
+  "gtopdb_interactions": "cdbd18c66cf99d1adba9a60c807e256204221ff74756b70344822fd6642b244b",
+  "gtopdb_ligands": "f8e9f6959d563e49ccc2fb65652c17c3d93e345997e26f99a1a7924361d6d8b7",
+  "needs": "7678b986106b07e9a1cab0c5a4397df8a708fa46d9b459ddaf61fac0831c3f0f",
+  "unichem_src1src34": "e66ee14e0366869964f1c763d0492cda9ff76563603d26178b448eb677b70d49"
+ },
+ "it17_discordant_pairs": [
+  {
+   "dc_any": "INCREASE",
+   "dc_independent": "absent",
+   "dc_labels": "ACTIVATOR@CHEMBL",
+   "gtopdb_class": "DECREASE",
+   "module_class": "INCREASE",
+   "parent_chembl_id": "CHEMBL1420",
+   "uniprot": "P22303"
+  },
+  {
+   "dc_any": "absent",
+   "dc_independent": "absent",
+   "dc_labels": "none",
+   "gtopdb_class": "DECREASE",
+   "module_class": "INCREASE",
+   "parent_chembl_id": "CHEMBL1614652",
+   "uniprot": "P08908"
+  },
+  {
+   "dc_any": "DECREASE",
+   "dc_independent": "absent",
+   "dc_labels": "ANTAGONIST@IUPHAR",
+   "gtopdb_class": "DECREASE",
+   "module_class": "INCREASE",
+   "parent_chembl_id": "CHEMBL493",
+   "uniprot": "P21917"
+  },
+  {
+   "dc_any": "DECREASE",
+   "dc_independent": "absent",
+   "dc_labels": "ANTAGONIST@CHEMBL",
+   "gtopdb_class": "DECREASE",
+   "module_class": "INCREASE",
+   "parent_chembl_id": "CHEMBL709",
+   "uniprot": "P25100"
+  },
+  {
+   "dc_any": "DECREASE",
+   "dc_independent": "absent",
+   "dc_labels": "ANTAGONIST@CHEMBL",
+   "gtopdb_class": "DECREASE",
+   "module_class": "INCREASE",
+   "parent_chembl_id": "CHEMBL709",
+   "uniprot": "P35348"
+  },
+  {
+   "dc_any": "DECREASE",
+   "dc_independent": "absent",
+   "dc_labels": "ANTAGONIST@CHEMBL",
+   "gtopdb_class": "DECREASE",
+   "module_class": "INCREASE",
+   "parent_chembl_id": "CHEMBL709",
+   "uniprot": "P35368"
+  }
+ ],
+ "join": "unichem+inchikey",
+ "matching_universe_counts_only": {
+  "compounds": 186,
+  "directed_dc_any_determinate": 19,
+  "directed_dc_independent_determinate": 2,
+  "directed_units": 76,
+  "uncertain_dc_any_determinate": 39,
+  "uncertain_dc_independent_determinate": 12,
+  "uncertain_units": 129
+ },
+ "script_sha256": "0b8a88dd2b27bb0e96382ce59ed55e6fb642b141753e96d9a774813a47c68625"
+}

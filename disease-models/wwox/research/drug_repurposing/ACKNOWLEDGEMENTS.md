@@ -24,6 +24,16 @@ Nothing here is medical advice. Not one of these sources certifies efficacy, saf
 - **Citation requested:** Zdrazil B. et al. The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods. Nucleic Acids Res 2024;52(D1):D1180-D1192. https://doi.org/10.1093/nar/gkad1004; web services: Davies M. et al. 2015 (Nucleic Acids Res 43:W612)
 - **Attribution line printed with the data:** Data from ChEMBL (EMBL-EBI), CC BY-SA 3.0, https://www.ebi.ac.uk/chembl/
 
+## drugcentral
+
+- **What we use:** drug-target rows with action type and the origin of the action label (a third direction source beside ChEMBL and GtoPdb)
+- **Access:** GET https://unmtid-dbs.net/download/DrugCentral/2027/drug.target.interaction.tsv.gz ; GET https://ftp.ebi.ac.uk/pub/databases/chembl/UniChem/data/wholeSourceMapping/src_id1/src1src34.txt.gz (chembl_id requests only)
+- **Licence:** CC BY-SA 4.0 (DrugCentral); UniChem map under EMBL-EBI Terms of Use; key-less, no payment
+- **Licence source:** https://drugcentral.org/privacy — read on 2026-11-01
+- **Terms as read:** 'DrugCentral is available under Creative Commons license, download and use of this resource evidences your agreement to all the terms and conditions of license.' The link is the CC BY-SA 4.0 legal code: attribution, indicate changes, share-alike on any redistributed derived table. Rows whose ACT_SOURCE is WOMBAT-PK carry no separate terms on the page. The UniChem whole-source map is used under the EMBL-EBI Terms of Use (https://www.ebi.ac.uk/about/terms-of-use), as in the catalogue.
+- **Citation requested:** DrugCentral, https://drugcentral.org ; 'Citing DrugCentral' links https://doi.org/10.1093/nar/gkac1085 (About page) and https://doi.org/10.1093/nar/gkw993 (licence page), read 2026-11-01
+- **Attribution line printed with the data:** Drug-target action labels from DrugCentral (University of New Mexico), CC BY-SA 4.0, https://drugcentral.org; rows copied unchanged, origin class added by LEGEND
+
 ## ilincs
 
 - **What we use:** which LINCS signatures exist for a compound, cell line, dose and time (a census, not a concordance)
