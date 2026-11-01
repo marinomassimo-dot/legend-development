@@ -5,8 +5,8 @@ identity ChEMBL -> DrugCentral	UniChem src1src34 (registered); misses 530 action
 same sample, same labels	8 pairs (registered join), 14 (amended)	14 pairs	labels identical on every shared pair; 0 pairs only in route A
 absence vs error	file row absent = not in DrugCentral	12 of 20 calls return status "error" with "No DrugCentral data found"	route B reports absence as an error; the adapter convention keeps them apart
 truncation	whole table read (22364 rows)	no total for absent compounds; total_targets reported when found; no paging needed at this size	not a problem seen on this sample
-requests	2 downloads (0.98 MB) once; 1 more (1.41 MB SDF) for the amendment	1 per compound: 20 for the sample; about 4181 for the module's parents
+requests	2 downloads (0.98 MB) once; 1 more (1.41 MB SDF) for the amendment	1 per compound: 20 for the sample; about 4181 for the module's parents	
 time	1.3 s download; about 3 s offline join over 11917 pairs	about 0.73 s per compound (14.7 s for 20): about 51 min projected for 4181 parents	projection, not measured
 space and dependencies	standard library; amendment: RDKit 2024.09.6 in a throwaway venv (3 packages)	throwaway venv, 108 distributions, about 470-490 MB	both venvs deleted after the run
-removability	delete the adapter file and the gitignored cache	delete the venv
-licence	DrugCentral CC BY-SA 4.0 (privacy page read 2026-11-01); UniChem under EMBL-EBI Terms of Use	ToolUniverse Apache-2.0; data CC BY-SA 4.0 as stated by MyChem metadata
+removability	delete the adapter file and the gitignored cache	delete the venv	
+licence	DrugCentral CC BY-SA 4.0 (privacy page read 2026-11-01); UniChem under EMBL-EBI Terms of Use	ToolUniverse Apache-2.0; data CC BY-SA 4.0 as stated by MyChem metadata	
