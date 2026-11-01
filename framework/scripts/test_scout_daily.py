@@ -209,5 +209,301 @@ class CatalogueProbes(unittest.TestCase):
         self.assertEqual("ERROR", r["watch"][0]["result"])
 
 
+def fake_git(sha="a" * 40, blobs=None, texts=None, ls_fail=False, have_objects=True, calls=None):
+    blobs = blobs or {}
+    texts = texts or {}
+    calls = calls if calls is not None else []
+
+    def runner(args):
+        calls.append(list(args))
+        if args[0] == "ls-remote":
+            return (2, "") if ls_fail else (0, f"{sha}\trefs/heads/main\n")
+        if args[0] == "rev-parse" and args[1].startswith(f"{sha}:"):
+            return 0, blobs.get(args[1].split(":", 1)[1], "b0") + "\n"
+        if args[0] == "rev-parse":
+            return 1, ""
+        if args[0] == "cat-file":
+            return (0 if have_objects else 1), ""
+        if args[0] == "show":
+            return 0, texts.get(args[1].split(":", 1)[1], "# x\n")
+        return 0, ""
+    return runner, calls
+
+
+ROAD = sd.CONTEXT_FILES[0]
+LOGF = sd.CONTEXT_FILES[2]
+
+
+class ContextRefresh(unittest.TestCase):
+    TEXTS = {ROAD: "# Roadmap\n\nUpdated 2026-10-29 by x\n\nsee https://github.com/Old/Repo\n",
+             LOGF: "## 2026-10-30 · scout_daily · A\n"}
+
+    def test_cache_hit_refresh_on_advance_and_unchanged_blob_reuse(self):
+        runner, calls = fake_git(texts=self.TEXTS, blobs={ROAD: "r1", LOGF: "l1"})
+        ctx = sd.resolve_context({}, runner)
+        self.assertEqual(("refreshed", "a" * 40), (ctx["cache"], ctx["main_sha"]))
+        self.assertIn("old/repo", ctx["files"][ROAD]["repos"])
+        shows = sum(c[0] == "show" for c in calls)
+        self.assertEqual(3, shows)  # roadmap, readme, log read at the revision
+        runner2, calls2 = fake_git(texts=self.TEXTS, blobs={ROAD: "r1", LOGF: "l1"})
+        again = sd.resolve_context(ctx, runner2)
+        self.assertEqual("hit", again["cache"])
+        self.assertFalse([c for c in calls2 if c[0] in ("show", "rev-parse")], "same SHA: nothing re-read")
+        runner3, calls3 = fake_git(sha="b" * 40, texts=self.TEXTS, blobs={ROAD: "r1", LOGF: "l2"})
+        moved = sd.resolve_context(again, runner3)
+        self.assertEqual(("refreshed", "b" * 40), (moved["cache"], moved["main_sha"]))
+        self.assertEqual(1, sum(c[0] == "show" for c in calls3), "only the changed blob (log) is re-read")
+
+    def test_old_current_heading_does_not_outrank_later_evidence(self):
+        runner, _ = fake_git(texts=self.TEXTS)
+        ctx = sd.resolve_context({}, runner)
+        self.assertEqual("2026-10-29", ctx["roadmap_dated"])
+        self.assertTrue(any("2026-10-30" in x for x in ctx["outranked_by"]))
+
+    def test_unverifiable_remote_states_a_freshness_limit(self):
+        runner, _ = fake_git(texts=self.TEXTS)
+        ctx = sd.resolve_context({}, runner)
+        down, _ = fake_git(ls_fail=True)
+        stale = sd.resolve_context(ctx, down)
+        self.assertEqual("stale_reused", stale["cache"])
+        self.assertIn("NOT verified", stale["freshness_limit"])
+        none = sd.resolve_context({}, down)
+        self.assertIn("unavailable", none["freshness_limit"])
+        gone, _ = fake_git(sha="c" * 40, have_objects=False)
+        lag = sd.resolve_context(ctx, gone)
+        self.assertIn("not available locally", lag["freshness_limit"])
+
+
+def channel_opener(gh=200, hf=200, nature=200, hf_items=(), nature_items=(), gh_items=(), calls=None):
+    def opener(url, method="GET", body=None, etag=None):
+        if calls is not None:
+            calls.append(url)
+        if "api.github.com/search" in url:
+            return gh, {}, json.dumps({"items": list(gh_items)}).encode()
+        if "api.github.com/repos" in url and "/commits" in url:
+            return 200, {}, json.dumps([{"sha": "f" * 40, "commit": {"committer": {"date": "2026-10-30T00:00:00Z"}}}]).encode()
+        if "api.github.com/repos" in url and "/releases/latest" in url:
+            return 404, {}, b""
+        if "huggingface.co/api/models/" in url or "huggingface.co/api/datasets/" in url:
+            return 200, {}, json.dumps({"sha": "c" * 40, "lastModified": "2026-10-01T00:00:00Z",
+                                        "cardData": {"license": "mit"}, "siblings": [{"rfilename": "README.md"}]}).encode()
+        if "huggingface.co/api" in url:
+            return hf, {}, json.dumps(list(hf_items) if "/models?" in url else []).encode()
+        if "api.crossref.org" in url:
+            return nature, {}, json.dumps({"message": {"items": list(nature_items)}}).encode()
+        return 200, {}, json.dumps({"resultList": {"result": []}}).encode()
+    return opener
+
+
+def gh_repo(name, pushed="2026-10-20T00:00:00Z"):
+    return {"full_name": name, "stargazers_count": 9999, "html_url": "u/" + name, "pushed_at": pushed,
+            "license": {"spdx_id": "MIT"}, "default_branch": "main"}
+
+
+def hf_model(ident, modified="2026-10-20T00:00:00Z"):
+    return {"id": ident, "lastModified": modified, "downloads": 1, "likes": 0, "tags": ["license:apache-2.0"]}
+
+
+def nat(doi, title, venue="Nature Methods"):
+    return {"DOI": doi, "title": [title], "container-title": [venue], "issued": {"date-parts": [[2026, 10, 5]]},
+            "type": "journal-article", "license": [{"URL": "https://x/lic"}]}
+
+
+T = [{"id": "q1", "category": "prediction/evaluation", "gap": "gap one", "decision": "d1", "kw": "kw one", "epmc": None, "gh": "g"},
+     {"id": "q2", "category": "databases", "gap": "gap two", "decision": "d2", "kw": "kw two", "epmc": None, "gh": "g2"}]
+NOW = sd.dt.datetime(2026, 11, 1, tzinfo=sd.dt.timezone.utc)
+
+
+class Channels(unittest.TestCase):
+    def test_three_channels_each_with_its_own_outcome(self):
+        calls = []
+        op = channel_opener(gh_items=[gh_repo("a/tool-x")], hf_items=[hf_model("b/model-y")],
+                            nature_items=[nat("10.1038/s1", "A long enough title about a method")], calls=calls)
+        result, _ = sd.discover({}, T, op, NOW, per_run=1, deep=3)
+        ch = result["channels"]
+        self.assertEqual(["delta"] * 3, [ch[c]["outcome"] for c in ("github", "huggingface", "nature")])
+        self.assertEqual("not_queried", ch["europepmc"]["outcome"])
+        self.assertTrue(any("models?" in u for u in calls) and any("datasets?" in u for u in calls)
+                        and any("spaces?" in u for u in calls), "models, datasets and Spaces are all searched")
+        item = next(i for r in result["themes"] for i in r["items"] if i["channel"] == "github")
+        self.assertEqual("fffffffffff"[:11], item["versions"]["last_commit"]["sha"][:11])
+        self.assertEqual("none published", item["versions"]["latest_release"], "commit and release kept apart")
+        self.assertEqual("unknown", item["claims"]["independently_reproduced"])
+        self.assertIn("code", item["licences"])
+        hf = next(i for r in result["themes"] for i in r["items"] if i["channel"] == "huggingface")
+        self.assertEqual("mit", hf["versions"]["card_licence"])
+        self.assertIn("weights", hf["licences"])
+
+    def test_error_is_not_no_news_and_no_news_is_not_error(self):
+        result, _ = sd.discover({}, T, channel_opener(gh=403, hf=503), NOW)
+        ch = result["channels"]
+        self.assertEqual("error", ch["github"]["outcome"])
+        self.assertEqual("error", ch["huggingface"]["outcome"])
+        self.assertEqual("no_news", ch["nature"]["outcome"], "answered, nothing new: not an error")
+        self.assertTrue(ch["github"]["errors"] and "403" in ch["github"]["errors"][0])
+        rep = {"run_at": "2026-11-01T00:00:00+00:00", "selected": [], "errors": ["x"], "discovery": result, "context": {}}
+        text = sd.briefing(rep, {"state": "ok"})
+        self.assertIn("github error", text)
+        self.assertIn("nature no_news", text)
+        self.assertIn("NEXT STEP: inspect the errors", text)
+
+    def test_a_probe_of_a_known_resource_is_not_a_discovery(self):
+        op = channel_opener(gh_items=[gh_repo("Known/Repo")])
+        result, _ = sd.discover({}, T, op, NOW, known={"known/repo"})
+        self.assertEqual("no_news", result["channels"]["github"]["outcome"])
+        self.assertEqual(["known/repo"], result["channels"]["github"]["known_resources"])
+        self.assertEqual(0, result["new_items"])
+
+    def test_ranking_is_not_by_popularity(self):
+        op = channel_opener(gh_items=[dict(gh_repo("a/old-repo", "2025-01-01T00:00:00Z"), stargazers_count=99999),
+                                      dict(gh_repo("a/new-repo", "2026-10-30T00:00:00Z"), stargazers_count=1)])
+        result, _ = sd.discover({}, T, op, NOW)
+        first = [i for i in result["themes"][0]["items"] if i["channel"] == "github"][0]
+        self.assertEqual("a/new-repo", first["title"])
+        self.assertIn("stars", first["popularity"])
+
+
+class LimitsRotationAndFullWatchlist(unittest.TestCase):
+    LIM = {"max_teams": 6, "max_repos": 18, "max_per_team": 3}
+
+    def entry(self, team, n, rel=1):
+        return {"team": team, "repo": f"{team}/r{n}", "source": "s", "reason": "r", "reopen": "o", "relevance": rel}
+
+    def test_caps_are_enforced_and_replacement_keeps_the_reason(self):
+        f = {"entries": []}
+        for t in range(6):
+            for n in range(3):
+                self.assertEqual("added", sd.follow_add(f, self.entry(f"t{t}", n, rel=2), self.LIM, "2026-11-01")[0])
+        self.assertEqual(18, sum(e["status"] == "active" for e in f["entries"]))
+        self.assertEqual("refused", sd.follow_add(f, self.entry("t9", 0, rel=2), self.LIM, "2026-11-01")[0], "equal relevance does not displace")
+        self.assertEqual("refused", sd.follow_add(f, self.entry("t0", 9, rel=2), self.LIM, "2026-11-01")[0], "3 per team")
+        verdict, detail = sd.follow_add(f, self.entry("t0", 9, rel=5), self.LIM, "2026-11-01")
+        self.assertEqual("replaced", verdict)
+        sus = [e for e in f["entries"] if e["status"] == "suspended"]
+        self.assertEqual(1, len(sus))
+        self.assertTrue(sus[0]["source"] and sus[0]["reason"] and sus[0]["reopen"] and sus[0]["suspended_for"])
+        verdict, _ = sd.follow_add(f, self.entry("t9", 0, rel=9), self.LIM, "2026-11-01")
+        self.assertEqual("replaced", verdict)
+        self.assertLessEqual(len({e["team"] for e in f["entries"] if e["status"] == "active"}), 6)
+        self.assertLessEqual(sum(e["status"] == "active" for e in f["entries"]), 18)
+
+    def test_slots_are_not_filled_and_missing_reasons_are_refused(self):
+        f = sd.follow_seed()
+        self.assertLess(sum(e["status"] == "active" for e in f["entries"]), 18)
+        bad = self.entry("x", 1)
+        bad["reopen"] = ""
+        self.assertEqual("refused", sd.follow_add(f, bad, self.LIM, "2026-11-01")[0])
+
+    def test_weekly_deep_check_rotates_and_never_expands_collaborators(self):
+        f = sd.follow_seed()
+        now = sd.dt.datetime(2026, 11, 1, tzinfo=sd.dt.timezone.utc)
+        self.assertEqual(3, len(sd.follow_due(f, now, 7, 5)))
+        f["entries"][0]["last_deep"] = "2026-10-31T00:00:00+00:00"
+        f["entries"][1]["last_deep"] = "2026-10-01T00:00:00+00:00"
+        due = sd.follow_due(f, now, 7, 5)
+        self.assertEqual([f["entries"][2]["repo"], f["entries"][1]["repo"]], [e["repo"] for e in due], "never-checked first, then oldest")
+        calls = []
+        sd.repo_versions("a/b", channel_opener(calls=calls))
+        self.assertFalse([u for u in calls if "contributors" in u or "collaborators" in u or "/members" in u])
+
+    def test_discovery_keeps_running_with_a_full_watchlist(self):
+        full = {"entries": [dict(self.entry(f"t{t}", n), status="active", added="2026-11-01") for t in range(6) for n in range(3)]}
+        known = sd.known_idents([], full, {})
+        op = channel_opener(gh_items=[gh_repo("fresh/finding")])
+        result, st = sd.discover({}, T, op, NOW, per_run=2, open_slot=True, known=known)
+        self.assertEqual(["q1", "q2", "open-slot"], [r["theme"] for r in result["themes"]])
+        self.assertEqual("delta", result["channels"]["github"]["outcome"])
+        self.assertEqual(0, st["cursor"], "two questions of two asked: the cursor wrapped")
+        again, _ = sd.discover(st, T, op, NOW + sd.dt.timedelta(days=1), per_run=2)
+        self.assertEqual(["q1", "q2"], [r["theme"] for r in again["themes"]])
+
+    def test_configuration_overrides_the_limits_only_with_valid_types(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            (Path(tmp) / "scout_daily_config.json").write_text(json.dumps(
+                {"follow": {"max_teams": 2, "max_repos": "many", "bogus": 1}, "questions_per_run": 3}))
+            cfg = sd.load_config(Path(tmp))
+        self.assertEqual((2, 18, 3), (cfg["follow"]["max_teams"], cfg["follow"]["max_repos"], cfg["questions_per_run"]))
+
+
+class DedupTraceAndPersistence(unittest.TestCase):
+    def test_papers_and_mirrors_count_once(self):
+        a = {"key": "epmc:1", "kind": "paper", "title": "A Benchmark Of Repurposing Methods Across Cohorts", "doi": "10.1/x",
+             "channel": "europepmc", "url": "u1", "checks": {}}
+        b = {"key": "nature:1", "kind": "paper", "title": "A benchmark of repurposing methods across cohorts!", "doi": "10.1/x",
+             "channel": "nature", "url": "u2", "checks": {}}
+        c = {"key": "gh:1", "kind": "repository", "title": "o/repurposing-bench", "channel": "github", "url": "u3", "checks": {}}
+        d = {"key": "hf:1", "kind": "dataset", "title": "p/repurposing-bench", "channel": "huggingface", "url": "u4", "checks": {}}
+        kept = sd.dedup([a, b, c, d])
+        self.assertEqual(2, len(kept))
+        self.assertEqual({"nature", "huggingface"}, {m["channel"] for k in kept for m in k["mirrors"]})
+        self.assertIn("shared origin", kept[0]["checks"]["shared_origin"])
+
+    def test_decision_states_demand_evidence_and_keep_plan_apart_from_verified(self):
+        tr = {}
+        self.assertFalse(sd.trace_event(tr, "k", "examination", "examined", "source_read", "ref")[0], "no signal yet")
+        self.assertTrue(sd.trace_event(tr, "k", "signal", "signalled")[0])
+        ok, why = sd.trace_event(tr, "k", "examination", "examined", "log_line", "capability_scout_log.md")
+        self.assertFalse(ok)
+        self.assertIn("log line", why)
+        self.assertFalse(sd.trace_event(tr, "k", "decision", "adopt")[0], "decision needs an examination")
+        self.assertTrue(sd.trace_event(tr, "k", "examination", "examined", "source_read", "paper section 2")[0])
+        self.assertTrue(sd.trace_event(tr, "k", "decision", "adopt")[0])
+        self.assertTrue(sd.trace_event(tr, "k", "integration", "adopted_in_plan")[0])
+        summary = sd.trace_summary(tr)["k"]
+        self.assertEqual(("integration", False), (summary["furthest"], summary["verified_implementation"]))
+        self.assertFalse(sd.trace_event(tr, "k", "integration", "verified", "source_read", "x")[0])
+        self.assertTrue(sd.trace_event(tr, "k", "integration", "verified", "test_run", "test_x passed")[0])
+        self.assertTrue(sd.trace_summary(tr)["k"]["verified_implementation"])
+        self.assertFalse(sd.trace_event(tr, "k2", "signal", "bogus")[0])
+
+    def test_save_state_preserves_concurrent_edits_and_reports_failure(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "state.json"
+            path.write_text(json.dumps({"watch": {"old": 1}, "follow": {"entries": [{"repo": "added/by-hand", "status": "active"}]},
+                                        "trace": {"manual": {"history": []}}}))
+            ok, _ = sd.save_state(path, {"watch": {"new": 2}}, None, lambda t: dict(t, auto={"history": []}))
+            self.assertTrue(ok)
+            cur = json.loads(path.read_text())
+            self.assertEqual({"new": 2}, cur["watch"])
+            self.assertEqual("added/by-hand", cur["follow"]["entries"][0]["repo"], "concurrent follow edit kept")
+            self.assertEqual({"manual", "auto"}, set(cur["trace"]))
+            bad = Path(tmp) / "no" / "dir" / "x"
+            bad.parent.parent.write_text("a file, so mkdir must fail")
+            ok, why = sd.save_state(bad, {})
+            self.assertFalse(ok)
+            self.assertTrue(why)
+
+    def test_briefing_claims_a_save_only_after_success(self):
+        rep = {"run_at": "2026-11-01T00:00:00+00:00", "selected": [], "errors": [], "context": {"main_sha": "a" * 40, "cache": "hit"}}
+        quiet = sd.briefing(rep, {"state": "ok", "report": "ok"})
+        self.assertIn("NEXT STEP: none; nothing useful today", quiet)
+        self.assertIn("No material delta.", quiet)
+        self.assertIn("Saved: state", quiet)
+        failed = sd.briefing(rep, {"state": "ok", "report": "read-back differs"})
+        self.assertIn("SAVE FAILED: report", failed)
+        self.assertIn("inspect the errors", failed)
+        with tempfile.TemporaryDirectory() as tmp:
+            blocker = Path(tmp) / "f"
+            blocker.write_text("x")
+            ok, why = sd.save_text(blocker / "child.md", "t")
+            self.assertFalse(ok)
+            p = Path(tmp) / "log.md"
+            self.assertTrue(sd.save_text(p, "one\n", append=True)[0])
+            self.assertTrue(sd.save_text(p, "two\n", append=True)[0])
+            self.assertEqual("one\ntwo\n", p.read_text(), "append preserves earlier entries")
+
+    def test_briefing_puts_one_next_step_first_and_lists_deltas_with_decision(self):
+        item = {"id": "Discovery:q1", "wwox_question": "gap one", "decision": "d1", "roadmap": "R3", "detail": "[repository/github] a/b",
+                "estimated_cost": "minutes", "licence": "per part", "outcome": "TO_TRIAGE", "test": "reproduce one result"}
+        rep = {"run_at": "2026-11-01T00:00:00+00:00", "selected": [item, dict(item, id="Discovery:q2")], "errors": [],
+               "context": {"main_sha": "a" * 40, "freshness_limit": "remote main NOT verified"}}
+        text = sd.briefing(rep, {"state": "ok"})
+        lines = text.splitlines()
+        self.assertTrue(lines[1].startswith("NEXT STEP: examine Discovery:q1"))
+        self.assertEqual(1, sum(l.startswith("NEXT STEP") for l in lines))
+        self.assertIn("FRESHNESS LIMIT", text)
+        self.assertIn("-> d1", text)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
