@@ -1710,3 +1710,79 @@ delta; run 2 = delta on all four. Run-2 hits were not read: they are discovery, 
 hits were mostly marketing "content repurposing" spaces, i.e. noise. Nothing was adopted, installed or traced.
 Remaining only planned: weekly follow cycle over several weeks, trace entries from real examinations, an
 independent-reproduction label for any candidate, supplements and corrections lookup for papers.
+
+## 2026-11-01 · scout_daily · Discovery:diagnosis:evaluation
+
+**WWOX question.** Evaluation the principal bottleneck: without outcomes independent of the module no step above can be called predictive
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper/europepmc] Structure-based drug repurposing and in vitro evaluation of VAV2-associated candidates for suppression of macrophage foam-cell formation in  (2026-09-19, published record) https://europepmc.org/article/MED/42762289; [paper/europepmc] Contextual Representation Learning With ResNet Refinement and Deep Classification for Enhanced Drug Target Interaction Prediction. (2026-07-01, published record) https://europepmc.org/article/MED/42464502; [paper/europepmc] Structure-based multi-pocket virtual screening identifies FDA-approved candidate compounds targeting MPXV thymidylate kinase. (2026-09-14, published record) https://europepmc.org/article/MED/42807188; [repository/github] TakumiKen32/neuroblastoma-drug-repurposing-reconstruction-2 (2026-10-30, none stated, default-branch head be01a8a77218 2026-10-30, release none published) https://github.com/TakumiKen32/neuroblastoma-drug-repurposing-reconstruction-2; [repository/github] ahad21005-cloud/Brain_aneurysm (2026-10-20, none stated, default-branch head cad5f2c12277 2026-10-20, release none published) https://github.com/ahad21005-cloud/Brain_aneurysm; [repository/github] dr-ronak/Ontology-Bridged-Drug-Repurposing-Multi-Agent-GraphRAG (2026-10-04, none stated, default-branch head 3ad867e8c182 2026-10-04, release none published) https://github.com/dr-ronak/Ontology-Bridged-Drug-Repurposing-Multi-Agent-GraphRAG; [model/huggingface] Myric/apex-quant-benchmarks (2026-11-01, apache-2.0) https://huggingface.co/Myric/apex-quant-benchmarks; [dataset/huggingface] vedangfake/chess-slm-benchmark (2026-11-01, none stated) https://huggingface.co/datasets/vedangfake/chess-slm-benchmark; [dataset/huggingface] Agnuxo/P2PCLAW-Innovative-Benchmark (2026-11-01, mit) https://huggingface.co/datasets/Agnuxo/P2PCLAW-Innovative-Benchmark; [paper/nature] Drug repurposing in hereditary ataxia (2026-10-12, journal-article) https://doi.org/10.1038/s44386-026-00079-w; [paper/nature] An integrative single-cell genetic analysis prioritizes immune cell-specific genes and drug repurposing hypotheses in Alzheimer’s disease (2026-10-02, journal-article) https://doi.org/10.1038/s41514-026-00532-0
+
+**Why asked.** diagnosis row 'Evaluation' (R3/R7) [disease-models/wwox/research/drug_repurposing/diagnosis_it16_20261101/README.md @ blob e21ec10f05, main 3e167e250fd6]: "Evaluation the principal bottleneck: without outcomes independent of the module no step above can be called pr"
+
+**If confirmed (decision).** Evaluation: closing 'the principal bottleneck: without outcomes independent of the module no step above can be called predictive' Roadmap: R3.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-01 · scout_daily · Discovery:diagnosis:catalogue-and-identity
+
+**WWOX question.** Catalogue and identity no rate of wrong identity per source; 35+22 failed REST attempts in IT15 not yet turned into a cache
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [repository/github] Beimnet-Abdi/TenaEquip (2026-09-25, none stated) https://github.com/Beimnet-Abdi/TenaEquip; [repository/github] Beimnet-Abdi/MedEquip (2026-09-25, none stated) https://github.com/Beimnet-Abdi/MedEquip; [repository/github] aayambansal/CER-Bench (2026-09-10, Apache-2.0) https://github.com/aayambansal/CER-Bench; [dataset/huggingface] saadtaleb/tess-courbes-hors-catalogue (2026-10-28, cc-by-4.0) https://huggingface.co/datasets/saadtaleb/tess-courbes-hors-catalogue; [dataset/huggingface] edithatogo/global-medicines-atlas-catalogue (2026-10-28, apache-2.0) https://huggingface.co/datasets/edithatogo/global-medicines-atlas-catalogue; [space/huggingface] invariant-computing-lab/rari-estimator-catalogue (2026-10-27, none stated) https://huggingface.co/spaces/invariant-computing-lab/rari-estimator-catalogue
+
+**Why asked.** diagnosis row 'Catalogue and identity' (R2) [disease-models/wwox/research/drug_repurposing/diagnosis_it16_20261101/README.md @ blob e21ec10f05, main 3e167e250fd6]: "Catalogue and identity no rate of wrong identity per source; 35+22 failed REST attempts in IT15 not yet turned"
+
+**If confirmed (decision).** Catalogue and identity: closing 'no rate of wrong identity per source; 35+22 failed REST attempts in IT15 not yet turned into a cache' Roadmap: R9.
+
+**Minimal test.** read the source; reproduce one stated result on public inputs before any adoption
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item and per part (code / data / weights / service / article), shown where stated.
+
+**Proof.** GitHub, Hugging Face, Crossref (Nature portfolio), Europe PMC: public endpoints, no key
+
+**Outcome.** TO_TRIAGE (a search hit is discovery, not a reading; 'no useful opportunity' is valid)
+
+## 2026-11-01 · scout_daily · Team:aayambansal
+
+**WWOX question.** Evaluation the principal bottleneck: without outcomes independent of the module no step above can be called predictive
+
+**Contribution vs existing.** one-level exploration of aayambansal's public listing (19 scanned, 17 without a shared term); not recursive
+
+**Detected.** owner of discovered aayambansal/CER-Bench; other public work matching ['evaluation']: [github] aayambansal/delphi-benchmark (2026-09-09, none stated, matched ['evaluation']) https://github.com/aayambansal/delphi-benchmark
+
+**Why asked.** diagnosis row 'Evaluation' (R3/R7) [disease-models/wwox/research/drug_repurposing/diagnosis_it16_20261101/README.md @ blob e21ec10f05, main 3e167e250fd6]: "Evaluation the principal bottleneck: without outcomes independent of the module no step above can be called pr"
+
+**If confirmed (decision).** Evaluation: closing 'the principal bottleneck: without outcomes independent of the module no step above can be called predictive' Roadmap: R3.
+
+**Minimal test.** read the repository's README and latest default-branch commit; record the SHA and release apart
+
+**Cost / licence.** reading the listing entries: minutes; per item, shown where stated.
+
+**Proof.** public github listing of aayambansal, no key
+
+**Outcome.** TO_TRIAGE (a listing match is a lead, not a reading)
+
+## 2026-11-01 · scout_daily · Decision:dr-ronak/Ontology-Bridged-Drug-Repurposing-Multi-Agent-GraphRAG
+
+**WWOX question.** Evaluation: without outcomes independent of the module no step can be called predictive (diagnosis row Evaluation, diagnosis_it16_20261101/README.md blob e21ec10f05, main 3e167e250fd6)
+
+**Contribution vs existing.** signal -> examination -> trial -> decision traced in the run state (via question:diagnosis:evaluation); full record: disease-models/wwox/research/drug_repurposing/radar_it17_p2_20261101/README.md
+
+**Detected.** repository created and last pushed 2026-10-04, default-branch head 3ad867e8c182, no release, 0 stars; README (797 lines) holds unresolved merge markers at lines 1, 691, 797; links come from text matching of ChEBI definitions to Disease Ontology terms and are labelled hypotheses; a precision fixture is future work (line 666); one smoke test; README says MIT but the API reports no licence and the tree has no LICENSE file. Measures no outcome, so it cannot supply the independent outcome set the Evaluation row lacks. Declared yes, implemented not run, reproduced no; unknown is not negative.
+
+**If confirmed (decision).** Decision for that question: DISCARD (state reject). Reopen if a labelled drug-disease fixture with a reported precision and a LICENSE file appear. Roadmap: R3.
+
+**Cost / licence.** examination: 6 public API requests, no clone, nothing executed; stated MIT in text, none reported by the API (unresolved).
+
+**Proof.** https://api.github.com/repos/dr-ronak/Ontology-Bridged-Drug-Repurposing-Multi-Agent-GraphRAG/readme (README lines 1, 666, 674, 691, 797)
+
+**Outcome.** DISCARD for this question (examined, no trial needed); not integrated

@@ -140,7 +140,7 @@ class Discovery(unittest.TestCase):
             recs = [{"source": "MED", "id": str(n), "title": f"<i>t{n}</i> &amp; x", "firstPublicationDate": "2026-01-01"}
                     for n in range(6)]
             return 200, {}, json.dumps({"resultList": {"result": recs}}).encode()
-        items = [{"full_name": f"o/r{n}", "stargazers_count": n, "html_url": "u", "pushed_at": "2026-01-01T00:00:00Z",
+        items = [{"full_name": f"o{n}/r{n}", "stargazers_count": n, "html_url": "u", "pushed_at": "2026-01-01T00:00:00Z",
                   "license": None} for n in range(5)]
         return 200, {}, json.dumps({"items": items}).encode()
 
@@ -589,6 +589,376 @@ class VerifierRegressions(unittest.TestCase):
         self.assertEqual("SELECTED", sd.final_verdict({"selected": [{"id": "Discovery:x"}], "baseline": True}))
         self.assertEqual("BASELINE", sd.final_verdict({"selected": [], "baseline": True}))
         self.assertEqual("NO_USEFUL_CHANGE", sd.final_verdict({"selected": [], "baseline": False}))
+
+# ---------------------------------------------------------------------------------------------
+# IT17 P2: questions derived from the current priority surfaces; one level of team exploration.
+# Time is CONTROLLED (fixed datetimes passed in): these tests exercise the weekly/cooldown logic, they are NOT a
+# multi-week observation of the radar.
+import hashlib
+
+MOD = sd.MODULE
+TASK_P = f"{sd.TASK_DIR}/ORCH-ROADMAP-IT17-20261101.json"
+TASK_OLD = f"{sd.TASK_DIR}/ORCH-ROADMAP-IT16-20261101.json"
+DIAG_P = f"{MOD}/diagnosis_it16_20261101/README.md"
+PKG_P = f"{MOD}/pkg_it16_p3_20261101/README.md"
+WO_P = sd.SURFACE_PATHS["work_order"]
+RM_P = sd.SURFACE_PATHS["roadmap"]
+RD_P = sd.SURFACE_PATHS["readme"]
+
+
+def roadmap_text(extra=""):
+    return ("# Roadmap\n\nUpdated 2026-11-01 by x\n\n" + extra + "\n| ID | Inc | Out | Crit |\n|---|---|---|---|\n"
+            "| R3 / first | **Network prediction comparison.** Reuse LINCS. | A reproducible comparison of signature reversal "
+            "and a network method. | Establish added information. |\n")
+
+
+def diag_text(evaluation="no independent outcome set exists for the evaluation of predictions"):
+    return ("# Diagnosis\n\n| Stage | Declared | Implemented | Executed | Advantage | Validation missing |\n|---|---|---|---|---|---|\n"
+            f"| Evaluation | R3 | nothing | no | none | **principal bottleneck**: {evaluation} |\n"
+            "| Presentation | R10 | view | yes | none | - |\n"
+            "| Networks | R1 | typed | partly | not diagnosed | not diagnosed this session |\n")
+
+
+def task_text(p1="TODO", p3="TODO"):
+    steps = lambda *s: {"steps": [{"step": t, "status": st, "owner": "scientist", "evidence": ""} for t, st in s]}
+    return json.dumps({"TASK_ID": "ORCH-ROADMAP-IT17-20261101", "AUTHORISED_QUEUE_20261101D": {
+        "MANDATE_STATE": "OPEN",
+        "OBJ_P1": steps(("P1.1 cache read-side validation of the retrieval responses", p1)),
+        "OBJ_P3": steps(("P3 prospective evaluation with an immutable freeze of outcome semantics", p3)),
+        "OBJ_P5": steps(("P5 science: only the decision-changing reads", "TODO"))}})
+
+
+def work_order_text(*needs):
+    return json.dumps({"entries": [{"need": n, "question": q, "would_change": w} for n, q, w in needs]})
+
+
+def readme_text(planned="Only planned: the weekly follow cycle over several weeks.", link="pkg_it16_p3_20261101/README.md"):
+    return (f"# Module\n\n### Roadmap iteration 16 (2026-11-01) - measured state, CURRENT, task `X`\n\nSee [p]({link}). {planned}\n\n"
+            "### Roadmap iteration 15 (2026-11-01) - measured state, (previous state)\n\nNext: this must never be read.\n")
+
+
+def pkg_text(row="| ChEMBL offline dump | WATCH | 5.76 GB; reopen if the REST failures recur beyond a window |"):
+    return f"# Pkg\n\n| Resource | Verdict | Note |\n|---|---|---|\n{row}\n"
+
+
+def plan_files(**over):
+    files = {RM_P: roadmap_text(), DIAG_P: diag_text(), TASK_P: task_text(), WO_P: work_order_text(
+        ("NEED-A", "Does a pharmacological chaperone restore the missense protein?", "whether the chaperone arm is run")),
+        RD_P: readme_text(), PKG_P: pkg_text(), TASK_OLD: task_text()}
+    files.update(over)
+    return files
+
+
+def plan_git(files, sha="c" * 40, calls=None):
+    blob = lambda t: hashlib.sha1(t.encode()).hexdigest()
+
+    def runner(args):
+        if calls is not None:
+            calls.append(list(args))
+        if args[0] == "ls-tree":
+            d = args[3]
+            kids = sorted({p[len(d):].split("/")[0] for p in files if p.startswith(d)})
+            return 0, "".join(f"{d}{k}\n" for k in kids)
+        path = args[1].split(":", 1)[1] if len(args) > 1 and ":" in args[1] else None
+        if args[0] == "rev-parse":
+            return (0, blob(files[path]) + "\n") if path in files else (128, "")
+        if args[0] == "show":
+            return (0, files[path]) if path in files else (128, "")
+        return 0, ""
+    return runner
+
+
+CTX = {"main_sha": "c" * 40, "cache": "refreshed", "freshness_limit": None}
+T0 = sd.dt.datetime(2026, 11, 1, 5, 20, tzinfo=sd.dt.timezone.utc)
+
+
+def derive(files=None, cached=None, extracts=None, ctx=CTX, calls=None):
+    return sd.resolve_plan(cached, extracts, ctx, plan_git(files or plan_files(), calls=calls), T0)
+
+
+def by_id(plan):
+    return {q["id"]: q for q in plan["questions"]}
+
+
+class PlanFromPriorities(unittest.TestCase):
+    def test_each_surface_generates_a_question_with_a_traceable_origin(self):
+        plan, _ = derive()
+        ids = by_id(plan)
+        self.assertEqual({"diagnosis:evaluation", "task_step:OBJ_P1/P1.1", "task_step:OBJ_P3/P3", "work_order:NEED-A",
+                          "roadmap:R3", "reopen:pkg_it16_p3_20261101/ChEMBL offline dump"} | {k for k in ids if k.startswith("open_item:")},
+                         set(ids))
+        q = ids["diagnosis:evaluation"]
+        self.assertEqual((DIAG_P, "c" * 40), (q["origin"]["path"], q["origin"]["sha"]))
+        self.assertEqual(plan["inputs"][DIAG_P]["blob"], q["origin"]["blob"], "the blob that proves the question is recorded")
+        self.assertIn("closing", q["decision"])
+        self.assertIn("Evaluation", sd.origin_line(q["origin"]))
+        self.assertIn("principal bottleneck", ids["diagnosis:evaluation"]["origin"]["priority"])
+        self.assertEqual(4, q["weight"], "a principal bottleneck outweighs an ordinary row")
+        self.assertNotIn("task_step:OBJ_P5/P5", ids, "task text without a search hook is internal work, not a search question")
+        self.assertFalse([k for k in ids if "Presentation" in k or "Networks" in k], "no gap stated, nothing to ask")
+        self.assertEqual([], plan["provisional"])
+        self.assertIn("principal", " ".join(sd.key_terms(q["origin"]["priority"], 6)) + " principal")
+        self.assertFalse([k for k in ids if "must never" in ids[k]["gap"]], "the previous iteration section is not read")
+
+    def test_open_items_come_only_from_the_section_marked_current(self):
+        plan, _ = derive()
+        items = [q for q in plan["questions"] if q["id"].startswith("open_item:")]
+        self.assertEqual(1, len(items))
+        self.assertIn("weekly follow cycle", items[0]["gap"])
+
+    def test_changing_a_relevant_priority_changes_the_question_and_only_that_one(self):
+        plan, _ = derive()
+        changed, _ = derive(plan_files(**{DIAG_P: diag_text("no held-out chaperone benchmark exists for repurposing")}))
+        a, b = by_id(plan), by_id(changed)
+        self.assertEqual(set(a), set(b))
+        diff = {k for k in a if a[k]["kw"] != b[k]["kw"]}
+        self.assertEqual({"diagnosis:evaluation"}, diff)
+        self.assertNotEqual(plan["digest"], changed["digest"])
+        self.assertNotEqual(a["diagnosis:evaluation"]["origin"]["blob"], b["diagnosis:evaluation"]["origin"]["blob"])
+        asked = {f"{q['id']}|{sd.digest(q['kw'])}": "2026-11-01" for q in plan["questions"]}
+        first = sd.pick_questions(changed["questions"], asked, T0 + sd.dt.timedelta(days=1), 1)
+        self.assertEqual("diagnosis:evaluation", first[0]["id"], "a reworded priority is asked at once, ahead of answered ones")
+
+    def test_an_irrelevant_edit_changes_nothing(self):
+        plan, _ = derive()
+        same, _ = derive(plan_files(**{RM_P: roadmap_text("A new introductory paragraph about the dashboard layout."),
+                                       DIAG_P: diag_text() + "\nA closing remark.\n"}))
+        self.assertEqual(plan["digest"], same["digest"], "the questions are identical although two surface blobs changed")
+        self.assertNotEqual(plan["inputs"][RM_P]["blob"], same["inputs"][RM_P]["blob"])
+
+    def test_a_correction_marked_done_stops_generating(self):
+        plan, _ = derive()
+        done, _ = derive(plan_files(**{TASK_P: task_text(p1="DONE", p3="DONE")}))
+        self.assertIn("task_step:OBJ_P1/P1.1", by_id(plan))
+        self.assertNotIn("task_step:OBJ_P1/P1.1", by_id(done))
+        self.assertNotIn("task_step:OBJ_P3/P3", by_id(done))
+        self.assertIn("diagnosis:evaluation", by_id(done), "a DONE step does not silence a different surface")
+
+    def test_a_resolved_reopen_condition_or_removed_need_stops_generating(self):
+        key = "reopen:pkg_it16_p3_20261101/ChEMBL offline dump"
+        self.assertIn(key, by_id(derive()[0]))
+        for row in ("| ChEMBL offline dump | ADOPT | 5.76 GB; adopted after the REST failures recurred |",
+                    "| ChEMBL offline dump | WATCH | 5.76 GB; no condition stated |"):
+            plan, _ = derive(plan_files(**{PKG_P: pkg_text(row)}))
+            self.assertNotIn(key, by_id(plan), row)
+        gone, _ = derive(plan_files(**{WO_P: work_order_text()}))
+        self.assertNotIn("work_order:NEED-A", by_id(gone))
+
+    def test_unchanged_blobs_are_not_reread_and_a_changed_one_is(self):
+        files = plan_files()
+        plan, ex = derive(files)
+        calls = []
+        again, ex2 = derive(files, plan, ex, calls=calls)
+        self.assertEqual(("hit", 0), (again["cache"], again["reread"]))
+        self.assertFalse([c for c in calls if c[0] == "show"], "no surface text was fetched")
+        files[WO_P] = work_order_text(("NEED-B", "Is a glial reactivity assay available?", "whether the glia lever is run"))
+        third, _ = derive(files, again, ex2)
+        self.assertEqual(("re-derived", 1), (third["cache"], third["reread"]))
+        self.assertIn("work_order:NEED-B", by_id(third))
+
+    def test_an_unverified_sha_or_a_missing_surface_is_flagged_not_hidden(self):
+        plan, ex = derive()
+        stale, _ = derive(cached=plan, extracts=ex, ctx={"main_sha": None, "cache": "refreshed"})
+        self.assertTrue(any("STALE" in r for r in stale["provisional"]))
+        self.assertEqual(plan["digest"], stale["digest"], "the cached plan is used, labelled provisional")
+        none, _ = derive(ctx={"main_sha": None})
+        self.assertEqual([], none["questions"])
+        self.assertTrue(none["provisional"])
+        files = plan_files()
+        del files[DIAG_P]
+        partial, _ = derive(files)
+        self.assertTrue(any("diagnosis" in r for r in partial["provisional"]))
+        limited, _ = derive(ctx=dict(CTX, freshness_limit="remote main NOT verified"))
+        self.assertIn("remote main NOT verified", limited["provisional"])
+
+    def test_the_latest_record_wins_not_the_first(self):
+        old = task_text(p1="TODO")
+        plan, _ = derive(plan_files(**{TASK_OLD: old, TASK_P: task_text(p1="DONE")}))
+        self.assertNotIn("task_step:OBJ_P1/P1.1", by_id(plan), "IT16 is older than IT17: its open step is not read")
+
+    def test_selection_rotates_by_weight_and_age_and_the_entry_states_its_chain(self):
+        plan, _ = derive()
+        qs = plan["questions"]
+        first = sd.pick_questions(qs, {}, T0, 2)
+        self.assertEqual(4, first[0]["weight"])
+        asked = {f"{q['id']}|{sd.digest(q['kw'])}": "2026-11-01" for q in first}
+        second = sd.pick_questions(qs, asked, T0, 2)
+        self.assertFalse({q["id"] for q in first} & {q["id"] for q in second})
+        op = channel_opener(gh_items=[gh_repo("someone/tool-x")])
+        result, _ = sd.discover({}, first, op, NOW, per_run=2, open_slot=True)
+        entries = sd.discovery_entries(result, "2026-11-01")
+        text = sd.entry_markdown(entries[0], "2026-11-01T05:20:00")
+        self.assertIn("**Why asked.**", text)
+        self.assertIn(first[0]["origin"]["path"], text)
+        self.assertIn("blob " + first[0]["origin"]["blob"][:10], text)
+        self.assertIn("**If confirmed (decision).**", text)
+        report = {"run_at": "x", "selected": entries, "errors": [], "discovery": {"channels": result["channels"],
+                  "questions": result["questions"]}, "plan": {"sha": "c" * 40, "inputs": plan["inputs"], "cache": "hit", "reread": 0,
+                  "questions": len(qs), "digest": plan["digest"], "provisional": ["why"]}}
+        brief = sd.briefing(report)
+        self.assertIn("because: ", brief)
+        self.assertIn("PLAN PROVISIONAL: why", brief)
+        self.assertIn("open slot: no priority assumed", brief)
+
+
+class TeamExploration(unittest.TestCase):
+    TERMS = ["chaperone", "missense"]
+
+    @staticmethod
+    def listing(owner, n, matching=True, fork=False):
+        return [{"full_name": f"{owner}/chaperone-tool{i}" if matching else f"{owner}/other{i}", "fork": fork, "archived": False,
+                 "pushed_at": f"2026-10-{10 + i:02d}T00:00:00Z", "description": "missense stability" if matching else "web app",
+                 "license": {"spdx_id": "MIT"}, "html_url": f"https://github.com/{owner}/x{i}", "topics": []} for i in range(n)]
+
+    def opener(self, table, calls=None):
+        def op(url, method="GET", body=None, etag=None):
+            if calls is not None:
+                calls.append(url)
+            for owner, recs in table.items():
+                if f"/users/{owner}/repos" in url or f"author={owner}" in url:
+                    return 200, {}, json.dumps(recs if "datasets?" not in url else []).encode()
+            return 404, {}, b""
+        return op
+
+    def test_one_bounded_level_of_public_work_with_a_motive(self):
+        calls = []
+        res = sd.explore_team("github", "bigorg", self.TERMS, set(), (), self.opener({"bigorg": self.listing("bigorg", 15)}, calls),
+                              limit=3, now=NOW)
+        self.assertEqual(3, len(res["candidates"]), "a prolific team lists at most repos_per_team")
+        self.assertTrue(all(c["matched"] for c in res["candidates"]), "every lead names the shared term that motivates it")
+        self.assertEqual(15, res["scanned"])
+        self.assertEqual(1, len(calls), "one listing call, nothing recursive")
+        self.assertFalse([u for u in calls if "contributors" in u or "collaborators" in u or "followers" in u or "members" in u])
+
+    def test_unmotivated_forks_archived_known_and_already_listed_are_excluded(self):
+        table = {"o": self.listing("o", 3, matching=False) + self.listing("o", 2, fork=True) + self.listing("o", 1)}
+        res = sd.explore_team("github", "o", self.TERMS, {"o/chaperone-tool0"}, (), self.opener(table), now=NOW)
+        self.assertEqual([], res["candidates"])
+        self.assertEqual(3, res["no_match"])
+        again = sd.explore_team("github", "o", self.TERMS, set(), (), self.opener(table), now=NOW)
+        self.assertEqual(1, len(again["candidates"]))
+        later = sd.explore_team("github", "o", self.TERMS, set(), [again["candidates"][0]["ident"]], self.opener(table), now=NOW)
+        self.assertEqual([], later["candidates"], "an entry listed before is not listed again")
+
+    def test_an_error_is_reported_and_not_an_empty_result(self):
+        res = sd.explore_team("github", "ghost", self.TERMS, set(), (), self.opener({}), now=NOW)
+        self.assertEqual(1, len(res["errors"]))
+        self.assertEqual([], res["candidates"])
+
+    def test_hugging_face_owner_uses_models_and_datasets_listings(self):
+        calls = []
+
+        def op(url, method="GET", body=None, etag=None):
+            calls.append(url)
+            recs = [{"id": "lab/chaperone-model", "lastModified": "2026-10-10T00:00:00Z", "tags": ["license:mit"]}]
+            return 200, {}, json.dumps(recs if "/models?" in url else []).encode()
+        res = sd.explore_team("huggingface", "lab", self.TERMS, set(), (), op, now=NOW)
+        self.assertEqual(2, len(calls))
+        self.assertEqual(["lab/chaperone-model"], [c["title"] for c in res["candidates"]])
+
+    def test_a_prolific_team_does_not_monopolise_discovery_or_exploration(self):
+        flood = [gh_repo(f"bigorg/tool-{i}", pushed=f"2026-10-{10 + i:02d}T00:00:00Z") for i in range(12)]
+        other = [gh_repo("small/lonely-tool")]
+        op = channel_opener(gh_items=flood + other)
+        result, _ = sd.discover({}, T, op, NOW, per_run=2)
+        shown = [i["title"] for r in result["themes"] for i in r["items"] if i["channel"] == "github"]
+        self.assertLessEqual(sum(t.startswith("bigorg/") for t in shown), 2, "at most two items of one owner in a run")
+        self.assertIn("small/lonely-tool", shown, "the cap leaves room for a different team")
+        self.assertGreater(result["channels"]["github"]["owner_capped"], 0)
+        # exploration: one team a day, the longest-unexplored first, and a cooldown
+        items = [i for r in result["themes"] for i in r["items"]]
+        explored = {}
+        picked_days = []
+        for day in range(4):
+            now = NOW + sd.dt.timedelta(days=day)
+            pick = sd.pick_owners(items, None, explored, now, 14, 1)
+            self.assertLessEqual(len(pick), 1)
+            for _, owner, _ in pick:
+                explored[owner] = {"last": now.isoformat(timespec="seconds")}
+                picked_days.append(owner)
+        self.assertEqual(len(picked_days), len(set(picked_days)), "no team is explored twice inside the cooldown")
+        self.assertEqual({"bigorg", "small"}, set(picked_days), "both teams are reached; the prolific one does not repeat")
+        late = sd.pick_owners(items, None, explored, NOW + sd.dt.timedelta(days=15), 14, 1)
+        self.assertEqual(1, len(late), "after the cooldown a team is eligible again")
+
+    def test_team_step_explores_the_owner_of_a_find_and_traces_each_lead(self):
+        plan, _ = derive()
+        picked = sd.pick_questions(plan["questions"], {}, T0, 2)
+        terms = sorted({t for q in picked for t in q["terms"][:2]})
+        listing = [{"full_name": f"lab/{terms[0]}-kit", "fork": False, "archived": False, "pushed_at": "2026-10-20T00:00:00Z",
+                    "description": "about " + terms[1], "license": None, "html_url": "https://github.com/lab/k", "topics": []}]
+        found = {"themes": [{"theme": q["id"], "origin": q["origin"], "gap": q["gap"], "decision": q["decision"],
+                             "category": q["category"], "items": [{"channel": "github", "ident": "lab/first", "title": "lab/first"}
+                                                                  if n == 0 else {"channel": "nature", "title": "p"}]}
+                            for n, q in enumerate(picked)]}
+        cfg = sd.load_config(Path(tempfile.mkdtemp()))
+        summary, selected, explored, events = sd.team_step(found, {"entries": []}, {}, picked, set(), cfg,
+                                                           self.opener({"lab": listing}), NOW)
+        self.assertEqual(1, len(summary["explored"]))
+        self.assertEqual(["Team:lab"], [s["id"] for s in selected])
+        self.assertIn("owner of discovered lab/first", selected[0]["detail"])
+        self.assertIn("other public work matching", selected[0]["detail"])
+        self.assertTrue(selected[0]["origin"]["path"], "the lead carries the priority that motivated it")
+        self.assertEqual(f"team:lab/{terms[0]}-kit", events[0][0])
+        self.assertIn("lab", explored)
+        shown = [dict(i, ident="lab/%s-kit" % terms[0]) for i in found["themes"][0]["items"] if i["channel"] == "github"]
+        found2 = {"themes": [dict(found["themes"][0], items=shown)]}
+        none = sd.team_step(found2, {"entries": []}, {}, picked, set(), cfg, self.opener({"lab": listing}), NOW)
+        self.assertEqual([], none[1], "an entry the run already shows as a discovery is not offered again as other work")
+        again = sd.team_step(found, {"entries": []}, explored, picked, set(), cfg, self.opener({"lab": listing}), NOW)
+        self.assertEqual([], again[0]["explored"], "inside the cooldown nothing is requested")
+
+    def test_a_full_follow_list_does_not_block_new_discovery_or_exploration(self):
+        full = {"entries": [dict(team=f"t{t}", repo=f"t{t}/r{n}", status="active", relevance=3, source="s", reason="r", reopen="o",
+                                 added="2026-11-01", last_deep=None, fp=None) for t in range(6) for n in range(3)]}
+        known = sd.known_idents([], full, {})
+        op = channel_opener(gh_items=[gh_repo("fresh/finding")])
+        result, _ = sd.discover({}, T, op, NOW, per_run=2, known=known)
+        self.assertEqual("delta", result["channels"]["github"]["outcome"])
+        owners = sd.pick_owners([i for r in result["themes"] for i in r["items"]], full, {}, NOW, 14, 1)
+        self.assertEqual("fresh", owners[0][1], "the newly discovered owner is reachable although 18 repos are followed")
+
+
+class SignalToDecision(unittest.TestCase):
+    def test_a_real_signal_reaches_a_traced_decision_with_evidence_that_exists(self):
+        plan, _ = derive()
+        picked = sd.pick_questions(plan["questions"], {}, T0, 1)
+        op = channel_opener(gh_items=[gh_repo("lab/chaperone-kit")])
+        result, _ = sd.discover({}, picked, op, NOW, per_run=1)
+        item = result["themes"][0]["items"][0]
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "rec.md").write_text("examined: README and head commit read; licence MIT; no WWOX data\n")
+            trace = {}
+            key, at = item["key"], "2026-11-01T05:20:00"
+            self.assertTrue(sd.trace_event(trace, key, "signal", "signalled", at=at, via="question:" + picked[0]["id"], root=root)[0])
+            self.assertFalse(sd.trace_event(trace, key, "decision", "defer", at=at, root=root)[0], "no decision before an examination")
+            self.assertFalse(sd.trace_event(trace, key, "examination", "examined", "log_line", "rec.md", at, root)[0])
+            self.assertFalse(sd.trace_event(trace, key, "examination", "examined", "record_file", "missing.md", at, root)[0],
+                             "an evidence file that does not exist leaves the stage claimed")
+            self.assertTrue(sd.trace_event(trace, key, "examination", "examined", "record_file", "rec.md", at, root)[0])
+            self.assertTrue(sd.trace_event(trace, key, "trial", "not_needed", at=at, root=root)[0])
+            self.assertTrue(sd.trace_event(trace, key, "decision", "defer", at=at, root=root)[0])
+            summ = sd.trace_summary(trace)[key]
+            self.assertEqual("decision", summ["furthest"])
+            self.assertFalse(summ["verified_implementation"])
+            self.assertEqual("question:" + picked[0]["id"], trace[key]["history"][0]["via"], "the signal names the question that produced it")
+            self.assertFalse(sd.trace_event(trace, key, "integration", "adopted_in_plan", at=at, root=root)[0],
+                             "integration needs decision adopt; a deferral is not an adoption")
+
+
+class WeeklyLogicWithControlledTime(unittest.TestCase):
+    """The weekly deep check and the exploration cooldown, with injected clocks. NOT a multi-week observation."""
+
+    def test_known_projects_are_due_weekly_and_a_new_discovery_is_due_daily(self):
+        follow = {"entries": [dict(team="t", repo="t/r", status="active", relevance=3, source="s", reason="r", reopen="o",
+                                   added="2026-10-25", last_deep=T0.isoformat(), fp=None)]}
+        self.assertEqual([], sd.follow_due(follow, T0 + sd.dt.timedelta(days=6), 7, 3))
+        self.assertEqual(["t/r"], [e["repo"] for e in sd.follow_due(follow, T0 + sd.dt.timedelta(days=8), 7, 3)])
+        op = channel_opener(gh_items=[gh_repo("a/one-tool"), gh_repo("b/two-tool")])
+        r1, st = sd.discover({}, T, op, NOW, per_run=1)
+        r2, _ = sd.discover(st, T, channel_opener(gh_items=[gh_repo("c/three-tool")]), NOW + sd.dt.timedelta(days=1), per_run=1)
+        self.assertTrue(r1["new_items"] and r2["new_items"], "each day brings its own discoveries")
 
 
 if __name__ == "__main__":
