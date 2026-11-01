@@ -217,3 +217,7 @@ agent never ran them. Before the last commit of a task, in your worktree:
   tallies and notes in a sibling file or on stderr, never as trailing lines of the table.
 - Staged receipt ids: before staging `FTR-<date>-<pmid>-NN`, list the ledger and the other actors'
   staging directories and take the next free `NN`; `record_staged_receipts.py` now refuses on a collision.
+- Third-party documents you fetch (READMEs, release bodies, tool sources): keep the original byte-identical in the
+  ignored corpus (`files/<package>/`) and track only its digest, origin and revision, plus a public extract made with
+  `framework/adapters/_http.py` (`keep_original`, `public_extract`): addresses withheld, licence wording untouched,
+  relative links and anchors resolved against the source. If the licence forbids redistribution, keep it local only.
