@@ -34,3 +34,9 @@ Decision rules, fixed now:
 ## Outputs
 
 `controls.py` (stdlib, safe `--help`), `test_controls.py` (unittest, verbosity 2), `controls_result.json`. Zero network calls; raw third-party files stay in the gitignored cache.
+
+## Dated amendment (2026-11-01, after a first run, before any popularity value was available)
+
+The first run returned `pop = 0` for every directed row: in the catalogue, DGIdb interaction records hang only on DGIdb-only entries, never on ChEMBL-parent entries (memantine CHEMBL807 and ketamine CHEMBL742 carry no DGIdb target), so the registered definition measured the catalogue's record layout, not popularity. That run gave no popularity information at all (every percentile 0), so the amendment below is not chosen by outcome. C2 values from that run were seen; C2 is unchanged.
+
+Amended `pop`: distinct `gene_name` values in the cached DGIdb `interactions.tsv` (export of 2024-06-10) whose `drug_concept_id` is `chembl:<id>` for the parent or any catalogue child, or whose `drug_name` equals (case-insensitive) the catalogue `name` of the parent or of any child. Synonyms are not used (too loose for a count). Percentile population: every catalogue parent with at least one DGIdb gene under the same rule. Decision rules unchanged.
