@@ -1,0 +1,106 @@
+{
+ "sha": "82e795d4f8e7b981f6c443fb3fe4c9fa1b093b96",
+ "rule": "(declared before any hit was seen): all reopen: and work_order: questions of the plan at HEAD, sorted by\nid, every third one starting at the first, at most 10.",
+ "rows": [
+  {
+   "id": "reopen:function_pharm_it14_p3_20261101/NP3P3",
+   "need": "Same-system comparison of the subtype selectivity of the GABA-A positive modulators under discussion a head-to-head in one system with diaze",
+   "old_kw": "pharmacology selectivity comparator",
+   "new_kw": "gaba diazepam selectivity",
+   "old_gh": "pharmacology selectivity",
+   "new_gh": "gaba",
+   "old_epmc": "TITLE_ABS:pharmacology AND TITLE_ABS:selectivity",
+   "new_epmc": "TITLE_ABS:gaba AND TITLE_ABS:diazepam"
+  },
+  {
+   "id": "reopen:functional_it13_p3a_20261031/NP3A4",
+   "need": "E_GABA (gramicidin perforated patch) in Wwox-deficient neurons a chloride-gradient measurement in a WWOX-deficient neuron",
+   "old_kw": "epilepsy measurement gramicidin",
+   "new_kw": "epilepsy gramicidin measurement",
+   "old_gh": "epilepsy measurement",
+   "new_gh": "epilepsy gramicidin",
+   "old_epmc": "TITLE_ABS:epilepsy AND TITLE_ABS:measurement",
+   "new_epmc": "TITLE_ABS:epilepsy AND TITLE_ABS:gramicidin"
+  },
+  {
+   "id": "reopen:modifiers_it12_p1b_20261031/NP1B2",
+   "need": "Genetic-interaction readout in WWOX-null versus corrected human neural cells (N-P1B-2) a neural isogenic line becomes available or a deposit",
+   "old_kw": "epilepsy neural available corrected",
+   "new_kw": "epilepsy isogenic neural available",
+   "old_gh": "epilepsy neural",
+   "new_gh": "epilepsy isogenic",
+   "old_epmc": "TITLE_ABS:epilepsy AND TITLE_ABS:neural",
+   "new_epmc": "TITLE_ABS:epilepsy AND TITLE_ABS:isogenic"
+  },
+  {
+   "id": "reopen:recoverable_it13_p3b_20261031/NP3B1",
+   "need": "A compound arm with a Ca2+ or multi-electrode-array readout in a WWOX-deficient human organoid or neuron culture a publication or deposit re",
+   "old_kw": "compound database publication reporting",
+   "new_kw": "compound database organoid publication reporting",
+   "old_gh": "compound database publication",
+   "new_gh": "compound database organoid",
+   "old_epmc": "TITLE_ABS:\"compound database\" AND TITLE_ABS:publication",
+   "new_epmc": "TITLE_ABS:\"compound database\" AND TITLE_ABS:organoid"
+  },
+  {
+   "id": "reopen:recovery_it10_p23_20261031/R4",
+   "need": "Albendazole as a WWOX binder (SPR) full text obtained or an orthogonal binding paper appears; if binding is confirmed at the SDR domain it e",
+   "old_kw": "epilepsy binding destabiliser albendazole",
+   "new_kw": "spr sdr albendazole",
+   "old_gh": "epilepsy binding",
+   "new_gh": "spr",
+   "old_epmc": "TITLE_ABS:epilepsy AND TITLE_ABS:binding",
+   "new_epmc": "TITLE_ABS:spr AND TITLE_ABS:sdr"
+  },
+  {
+   "id": "reopen:recovery_it10_p23_20261031/R9",
+   "need": "Whether the faint G372R and G137V bands are WWOX above the knockout floor (IT12 P1-main, gate G0) a replicated blot with two antibodies and ",
+   "old_kw": "epilepsy knockout floor antibodies",
+   "new_kw": "g372r g137v down",
+   "old_gh": "epilepsy knockout",
+   "new_gh": "g372r",
+   "old_epmc": "TITLE_ABS:epilepsy AND TITLE_ABS:knockout",
+   "new_epmc": "TITLE_ABS:g372r AND TITLE_ABS:g137v"
+  },
+  {
+   "id": "reopen:scout_it15_p5_20261101/4",
+   "need": "DTA-GNN (leakage audits, scaffold/target splits on ChEMBL) Reopen if the module starts ranking compounds by a learned score; then reimplemen",
+   "old_kw": "drug repurposing audits reimplement installing thresholds",
+   "new_kw": "dta gnn audits",
+   "old_gh": "drug repurposing audits",
+   "new_gh": "dta",
+   "old_epmc": "TITLE_ABS:\"drug repurposing\" AND TITLE_ABS:audits",
+   "new_epmc": "TITLE_ABS:dta AND TITLE_ABS:gnn"
+  },
+  {
+   "id": "reopen:target_first_it15_qa_nmdar_20261101/NP5A3",
+   "need": "ChEMBL assay context for documents whose conditions were not retained (Ro 25-6981 and ethosuximide documents) and the 1,120 unread tail rows",
+   "old_kw": "biomedical documents chembl ethosuximide conditions",
+   "new_kw": "ethosuximide documents chembl",
+   "old_gh": "biomedical documents",
+   "new_gh": "ethosuximide",
+   "old_epmc": "TITLE_ABS:biomedical AND TITLE_ABS:documents",
+   "new_epmc": "TITLE_ABS:ethosuximide AND TITLE_ABS:documents"
+  },
+  {
+   "id": "reopen:target_first_it15_qb_gsk3_20261101/NP5B3",
+   "need": "A document pairing a Tau phospho readout with a beta-catenin readout under GSK3 inhibitors in a neural system a quantitative paired readout ",
+   "old_kw": "epilepsy readout inhibitor system",
+   "new_kw": "neuron gsk3 readout inhibitor",
+   "old_gh": "epilepsy readout",
+   "new_gh": "neuron gsk3",
+   "old_epmc": "TITLE_ABS:epilepsy AND TITLE_ABS:readout",
+   "new_epmc": "TITLE_ABS:neuron AND TITLE_ABS:gsk3"
+  },
+  {
+   "id": "work_order:NEED-INHIBITORY-HYPOFUNCTION",
+   "need": "In the Wwox neuron-deleted neocortical slice, is the lost fast GABA-A inhibition the step that makes bursting (rather than a graded change o",
+   "old_kw": "drug repurposing heterozygote inhibition potential secondary",
+   "new_kw": "gaba nmdar knockout",
+   "old_gh": "drug repurposing heterozygote",
+   "new_gh": "gaba",
+   "old_epmc": "TITLE_ABS:\"drug repurposing\" AND TITLE_ABS:heterozygote",
+   "new_epmc": "TITLE_ABS:gaba AND TITLE_ABS:nmdar"
+  }
+ ]
+}

@@ -1,0 +1,724 @@
+[
+ {
+  "hit_id": "261101/NP3P3-0",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261101/NP3P3-1",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261101/NP3P3-2",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "261101/NP3P3-3",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "261101/NP3P3-4",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261101/NP3P3-5",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "261101/NP3P3-6",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261101/NP3P3-7",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "261101/NP3P3-8",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261101/NP3P3-9",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "261101/NP3P3-10",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "261101/NP3P3-11",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261101/NP3P3-12",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "261101/NP3P3-13",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261101/NP3P3-14",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261101/NP3P3-15",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "261101/NP3P3-16",
+  "arms": [
+   "new",
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261101/NP3P3-17",
+  "arms": [
+   "new",
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261101/NP3P3-18",
+  "arms": [
+   "new",
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261031/NP3A4-0",
+  "arms": [
+   "new",
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261031/NP3A4-1",
+  "arms": [
+   "new",
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261031/NP3A4-2",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "261031/NP3A4-3",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261031/NP3A4-4",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261031/NP3A4-5",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261031/NP3A4-6",
+  "arms": [
+   "new",
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261031/NP3A4-7",
+  "arms": [
+   "new",
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261031/NP3A4-8",
+  "arms": [
+   "new",
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261031/NP1B2-0",
+  "arms": [
+   "new",
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261031/NP1B2-1",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261031/NP1B2-2",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "261031/NP1B2-3",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "261031/NP1B2-4",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "261031/NP1B2-5",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261031/NP1B2-6",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261031/NP1B2-7",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261031/NP1B2-8",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "261031/NP1B2-9",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261031/NP1B2-10",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261031/NP1B2-11",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261031/NP1B2-12",
+  "arms": [
+   "new",
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261031/NP1B2-13",
+  "arms": [
+   "new",
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261031/NP1B2-14",
+  "arms": [
+   "new",
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261031/NP3B1-0",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261031/NP3B1-1",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "261031/NP3B1-2",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "261031/NP3B1-3",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261031/NP3B1-4",
+  "arms": [
+   "new",
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261031/NP3B1-5",
+  "arms": [
+   "new",
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261031/NP3B1-6",
+  "arms": [
+   "new",
+   "old"
+  ]
+ },
+ {
+  "hit_id": "_20261031/R4-0",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "_20261031/R4-1",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "_20261031/R4-2",
+  "arms": [
+   "new",
+   "old"
+  ]
+ },
+ {
+  "hit_id": "_20261031/R4-3",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "_20261031/R4-4",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "_20261031/R4-5",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "_20261031/R4-6",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "_20261031/R4-7",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "_20261031/R4-8",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "_20261031/R4-9",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "_20261031/R4-10",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "_20261031/R4-11",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "_20261031/R9-0",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "_20261031/R9-1",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "_20261031/R9-2",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "_20261031/R9-3",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "_20261031/R9-4",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "_20261031/R9-5",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "_20261031/R9-6",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "_20261031/R9-7",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "_20261031/R9-8",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "_20261031/R9-9",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "_20261031/R9-10",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "5_20261101/4-0",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "5_20261101/4-1",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "5_20261101/4-2",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "5_20261101/4-3",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "5_20261101/4-4",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "5_20261101/4-5",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "5_20261101/4-6",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "5_20261101/4-7",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "5_20261101/4-8",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "5_20261101/4-9",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "5_20261101/4-10",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "5_20261101/4-11",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "5_20261101/4-12",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "5_20261101/4-13",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "261101/NP5A3-0",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261101/NP5A3-1",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261101/NP5A3-2",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "261101/NP5A3-3",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261101/NP5A3-4",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261101/NP5A3-5",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261101/NP5B3-0",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261101/NP5B3-1",
+  "arms": [
+   "new",
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261101/NP5B3-2",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "261101/NP5B3-3",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "261101/NP5B3-4",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261101/NP5B3-5",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261101/NP5B3-6",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "261101/NP5B3-7",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "261101/NP5B3-8",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261101/NP5B3-9",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "261101/NP5B3-10",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261101/NP5B3-11",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261101/NP5B3-12",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "261101/NP5B3-13",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "HYPOFUNCTION-0",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "HYPOFUNCTION-1",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "HYPOFUNCTION-2",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "HYPOFUNCTION-3",
+  "arms": [
+   "old"
+  ]
+ },
+ {
+  "hit_id": "HYPOFUNCTION-4",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "HYPOFUNCTION-5",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "HYPOFUNCTION-6",
+  "arms": [
+   "new"
+  ]
+ },
+ {
+  "hit_id": "HYPOFUNCTION-7",
+  "arms": [
+   "new",
+   "old"
+  ]
+ },
+ {
+  "hit_id": "HYPOFUNCTION-8",
+  "arms": [
+   "new",
+   "old"
+  ]
+ },
+ {
+  "hit_id": "HYPOFUNCTION-9",
+  "arms": [
+   "new",
+   "old"
+  ]
+ }
+]

@@ -1,0 +1,118 @@
+hit_id	pertinent	usable	duplicate_of_known	noise	insufficient	note
+261101/NP3P3-0	no	no	no	yes	no	
+261101/NP3P3-1	no	no	no	yes	no	
+261101/NP3P3-2	no	no	no	no	no	
+261101/NP3P3-3	no	no	no	yes	no	
+261101/NP3P3-4	no	no	no	yes	no	
+261101/NP3P3-5	partly	no	no	no	no	Chrysin vs diazepam GABA-A modulation, behavioural not subtype selectivity
+261101/NP3P3-6	no	no	no	no	no	
+261101/NP3P3-7	partly	no	no	no	no	alpha5 GABA-A subtype-selective modulator, but NAM, not head-to-head PAMs
+261101/NP3P3-8	no	no	no	yes	no	
+261101/NP3P3-9	no	no	no	no	no	
+261101/NP3P3-10	no	no	no	yes	no	
+261101/NP3P3-11	no	no	no	no	no	
+261101/NP3P3-12	no	no	no	yes	no	
+261101/NP3P3-13	no	no	no	no	no	
+261101/NP3P3-14	no	no	no	no	no	
+261101/NP3P3-15	no	no	no	yes	no	
+261101/NP3P3-16	no	no	yes	no	no	
+261101/NP3P3-17	no	no	no	no	no	
+261101/NP3P3-18	no	no	no	no	no	
+261031/NP3A4-0	no	no	no	no	no	
+261031/NP3A4-1	no	no	no	no	no	
+261031/NP3A4-2	partly	no	no	no	no	KCC2 variant with impaired chloride extrusion; not Wwox neurons, no E_GABA protocol
+261031/NP3A4-3	no	no	no	no	no	
+261031/NP3A4-4	no	no	no	no	no	
+261031/NP3A4-5	no	no	no	no	no	
+261031/NP3A4-6	no	no	no	yes	no	
+261031/NP3A4-7	no	no	no	yes	no	
+261031/NP3A4-8	no	no	no	yes	no	
+261031/NP1B2-0	no	no	no	no	no	
+261031/NP1B2-1	no	no	no	yes	no	
+261031/NP1B2-2	no	no	no	yes	no	
+261031/NP1B2-3	no	no	no	no	no	
+261031/NP1B2-4	no	no	no	no	no	
+261031/NP1B2-5	no	no	no	no	no	
+261031/NP1B2-6	no	no	no	no	no	
+261031/NP1B2-7	no	no	no	no	no	
+261031/NP1B2-8	no	no	no	no	no	
+261031/NP1B2-9	no	no	no	no	no	
+261031/NP1B2-10	no	no	no	no	no	
+261031/NP1B2-11	no	no	no	no	no	
+261031/NP1B2-12	no	no	no	yes	no	
+261031/NP1B2-13	no	no	no	yes	no	
+261031/NP1B2-14	no	no	no	yes	no	
+261031/NP3B1-0	no	no	no	yes	no	
+261031/NP3B1-1	no	no	no	no	no	
+261031/NP3B1-2	no	no	no	no	no	
+261031/NP3B1-3	no	no	no	yes	no	
+261031/NP3B1-4	no	no	no	yes	no	
+261031/NP3B1-5	no	no	no	yes	no	
+261031/NP3B1-6	no	no	no	yes	no	
+_20261031/R4-0	no	no	no	no	no	
+_20261031/R4-1	no	no	no	yes	no	
+_20261031/R4-2	no	no	no	no	no	
+_20261031/R4-3	no	no	no	no	no	
+_20261031/R4-4	no	no	no	no	no	
+_20261031/R4-5	no	no	no	no	no	
+_20261031/R4-6	no	no	no	yes	no	
+_20261031/R4-7	no	no	no	yes	no	
+_20261031/R4-8	no	no	no	yes	no	
+_20261031/R4-9	no	no	no	yes	no	
+_20261031/R4-10	no	no	no	yes	no	
+_20261031/R4-11	no	no	no	yes	no	
+_20261031/R9-0	no	no	no	no	no	
+_20261031/R9-1	no	no	no	no	no	
+_20261031/R9-2	no	no	no	no	no	
+_20261031/R9-3	no	no	no	no	no	
+_20261031/R9-4	no	no	no	no	no	
+_20261031/R9-5	no	no	no	no	no	
+_20261031/R9-6	no	no	no	no	no	
+_20261031/R9-7	no	no	no	no	yes	repo name only
+_20261031/R9-8	no	no	no	yes	no	
+_20261031/R9-9	no	no	no	yes	no	
+_20261031/R9-10	no	no	no	no	yes	repo name only
+5_20261101/4-0	partly	no	no	no	no	Learned DTA model; no leakage audit stated
+5_20261101/4-1	no	no	no	no	no	
+5_20261101/4-2	partly	no	no	no	no	Learned DTA model; no leakage audit stated
+5_20261101/4-3	no	no	no	no	no	
+5_20261101/4-4	partly	no	no	no	no	GNN DTA model; no leakage audit stated
+5_20261101/4-5	partly	no	no	no	no	GNN DTA model; split/leakage handling unknown
+5_20261101/4-6	partly	no	no	no	no	DTA model; no leakage audit stated
+5_20261101/4-7	no	no	no	no	no	
+5_20261101/4-8	no	no	no	no	yes	repo name only
+5_20261101/4-9	no	no	no	yes	no	
+5_20261101/4-10	no	no	no	yes	no	
+5_20261101/4-11	no	no	no	yes	no	
+5_20261101/4-12	no	no	no	yes	no	
+5_20261101/4-13	no	no	no	no	yes	repo name only
+261101/NP5A3-0	no	no	no	no	no	
+261101/NP5A3-1	no	no	no	yes	no	
+261101/NP5A3-2	no	no	no	no	no	
+261101/NP5A3-3	no	no	no	no	no	
+261101/NP5A3-4	no	no	yes	no	no	
+261101/NP5A3-5	no	no	no	no	no	
+261101/NP5B3-0	no	no	no	no	no	
+261101/NP5B3-1	no	no	no	yes	no	
+261101/NP5B3-2	no	no	no	yes	no	
+261101/NP5B3-3	partly	no	no	no	no	GSK3 inhibition in neurons; TDP-43 readout, not Tau/beta-catenin pair
+261101/NP5B3-4	no	no	no	no	no	
+261101/NP5B3-5	no	no	no	no	no	
+261101/NP5B3-6	partly	no	no	no	no	GSK3 inhibition in neurons; TDP-43 readout, not Tau/beta-catenin pair
+261101/NP5B3-7	partly	no	no	no	no	Human neuron tauopathy model; Tau phospho, no GSK3 beta-catenin pairing seen
+261101/NP5B3-8	no	no	no	no	no	
+261101/NP5B3-9	no	no	no	no	yes	repo name only
+261101/NP5B3-10	no	no	no	yes	no	
+261101/NP5B3-11	no	no	no	yes	no	
+261101/NP5B3-12	no	no	no	yes	no	
+261101/NP5B3-13	no	no	no	no	yes	repo name only
+HYPOFUNCTION-0	no	no	no	no	no	
+HYPOFUNCTION-1	no	no	no	no	no	
+HYPOFUNCTION-2	no	no	no	no	no	
+HYPOFUNCTION-3	no	no	no	no	no	
+HYPOFUNCTION-4	partly	no	no	no	no	GABA-A receptor loss effects on synaptic function; not Wwox or bursting
+HYPOFUNCTION-5	no	no	no	no	no	
+HYPOFUNCTION-6	no	no	no	no	no	
+HYPOFUNCTION-7	no	no	no	yes	no	
+HYPOFUNCTION-8	no	no	no	yes	no	
+HYPOFUNCTION-9	no	no	no	yes	no	
