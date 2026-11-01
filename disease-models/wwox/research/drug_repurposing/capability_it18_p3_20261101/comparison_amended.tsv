@@ -1,0 +1,11 @@
+measure	today_gtopdb	drugcentral_any_origin	drugcentral_independent_origin	note
+module pairs (human direct ChEMBL mechanisms)	11917	11917	11917	same universe for both routes
+pairs with a counterpart row	2036	2843		DrugCentral counts rows carrying ACTION_TYPE only
+pairs with a determinate direction	1933	2753	656	
+module determinate and source determinate	1896	2732	646	
+agreement with module direction	1890	2723	644	Wilson intervals in results.json
+new determinate pairs (no GtoPdb direction)		1697	379	coverage the current path lacks
+agreement on the new pairs		1694	378	
+IT17 discordant pairs with a determinate label	6 (by construction)	5	0	see results.json
+matching universe directed compound x need units	76	19	2	first column: units in the universe (no GtoPdb label read here)
+matching universe uncertain compound x need units	129	39	12	first column: units in the universe (no GtoPdb label read here)

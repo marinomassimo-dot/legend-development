@@ -1,0 +1,3 @@
+split	parent_chembl_id	uniprot	module_class	gtopdb_class	dc_independent_class	dc_independent_labels
+dev	CHEMBL4101807	P69905	INCREASE		DECREASE	INHIBITOR@DRUG LABEL
+eval	CHEMBL605846	P07550	INCREASE	INCREASE	DECREASE	ANTAGONIST@SCIENTIFIC LITERATURE
