@@ -32,11 +32,11 @@ annotations is reported below whatever it happens to be.
 | …undirected edges they collapse into | 46 |
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
-| Deep-dive manifests read | 593 |
+| Deep-dive manifests read | 594 |
 | …of which bound to at least one claim | 107 |
-| Propositions scanned | 9547 |
-| …carrying a relational connective | 2010 |
-| …locator-backed candidates | 1970 |
+| Propositions scanned | 9566 |
+| …carrying a relational connective | 2015 |
+| …locator-backed candidates | 1975 |
 | …locator-backed and bound to a claim | 458 |
 
 The scanned population is three declared surfaces and no others: every claim
@@ -321,12 +321,12 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 | Source | Candidates |
 |---|---|
 | claim_title | 21 |
-| locator_proposition | 1970 |
+| locator_proposition | 1975 |
 | working_model_mirror_title | 19 |
 
 | Connective class (lexical) | Candidates |
 |---|---|
-| AMBIGUOUS_LEXICAL_FORM | 1440 |
+| AMBIGUOUS_LEXICAL_FORM | 1445 |
 | ARROW | 18 |
 | ASSOCIATIVE | 89 |
 | CAUSAL | 359 |
@@ -376,7 +376,7 @@ carried no connective from the lexicon.
 
 ## Provenance
 
-Derived from 596 input files; digest
-`4a916e8146c56b2f`. Sources: the claim, paper and
+Derived from 597 input files; digest
+`f51fe6dbbe61bed3`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
