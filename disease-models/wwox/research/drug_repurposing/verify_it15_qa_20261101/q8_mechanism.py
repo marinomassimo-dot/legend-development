@@ -1,5 +1,7 @@
 """Verifier item 8: ChEMBL mechanism records for NMDAR drugs (public GET, 2 retries)."""
-import json, time, urllib.request, os
+import json, time, urllib.request, os, sys
+if sys.argv[1:2] in (["-h"], ["--help"]):   # historical script: --help must neither fetch nor overwrite tracked tables
+    print(__doc__); raise SystemExit(0)
 OUT=os.path.dirname(os.path.abspath(__file__))
 M={'memantine':'CHEMBL807','ketamine':'CHEMBL742','esketamine':'CHEMBL395091','dextromethorphan':'CHEMBL52440','amantadine':'CHEMBL660','dizocilpine':'CHEMBL284237','ifenprodil':'CHEMBL305187','traxoprodil':'CHEMBL17350','radiprodil':'CHEMBL182066','rislenemdaz':'CHEMBL3545350'}
 def get(u):

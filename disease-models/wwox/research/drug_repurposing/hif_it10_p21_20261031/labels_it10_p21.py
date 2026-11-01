@@ -3,6 +3,8 @@
 A zero is 'no hit for the pattern in the fetched sections on that date'. Usage: python3 -I labels_it10_p21.py <raw_dir>"""
 import csv, hashlib, json, re, sys, time, urllib.parse, urllib.request
 from pathlib import Path
+if sys.argv[1:2] in (["-h"], ["--help"]):   # historical script: --help must neither fetch nor overwrite tracked tables
+    print(__doc__); raise SystemExit(0)
 RAW = Path(sys.argv[1]); RAW.mkdir(parents=True, exist_ok=True); HERE = Path(__file__).resolve().parent
 NAMES = {"daprodustat": "daprodustat", "vadadustat": "vadadustat", "belzutifan": "belzutifan", "topotecan": "topotecan", "digoxin": "digoxin", "roxadustat": "roxadustat", "molidustat": "molidustat", "enarodustat": "enarodustat", "desidustat": "desidustat"}
 PAT = re.compile(r"seizure|convuls|epilep|encephalopath|brain|CNS|central nervous", re.I)
