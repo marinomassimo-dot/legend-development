@@ -1,0 +1,297 @@
+{
+ "card_linked_parents_in_universe": [
+  "CHEMBL1214124",
+  "CHEMBL2107333",
+  "CHEMBL306823",
+  "CHEMBL4217292",
+  "CHEMBL4303525",
+  "CHEMBL589586",
+  "CHEMBL696",
+  "CHEMBL807",
+  "CHEMBL89598"
+ ],
+ "decision": {
+  "L_vs_T": "fewer than 40 determinate EVAL compounds labelled compatible by L (n=2): figure reported with interval, no improvement statement",
+  "L_vs_X": "L and X differ on directed needs but no significant accuracy difference (sign p=1.0)"
+ },
+ "dev_directed_descriptive": {
+  "L": {
+   "abstained_with_determinate_reference": 2,
+   "abstention_rate": 0.3953,
+   "abstention_reasons": {
+    "action_partial_or_unknown": 3,
+    "group_record_mostly_outside_module_targets": 14
+   },
+   "compatible_determinate": 4,
+   "compatible_truly_compatible": 4,
+   "label_counts": {
+    "compatible": 25,
+    "indeterminable": 17,
+    "opposite": 1
+   },
+   "labelled_correct": 4,
+   "labelled_determinate": 4,
+   "precision_ci95": [
+    0.5101,
+    1.0
+   ],
+   "precision_compatible": 1.0,
+   "truly_compatible_labelled_opposite": [],
+   "truly_opposite_labelled_compatible": []
+  },
+  "T": {
+   "base_rate": 1.0,
+   "ci95": [
+    0.6097,
+    1.0
+   ],
+   "n_determinate": 6,
+   "truly_compatible": 6
+  },
+  "X": {
+   "abstained_with_determinate_reference": 2,
+   "abstention_rate": 0.2558,
+   "abstention_reasons": {
+    "action_partial_or_unknown": 11
+   },
+   "compatible_determinate": 4,
+   "compatible_truly_compatible": 4,
+   "label_counts": {
+    "compatible": 31,
+    "indeterminable": 11,
+    "opposite": 1
+   },
+   "labelled_correct": 4,
+   "labelled_determinate": 4,
+   "precision_ci95": [
+    0.5101,
+    1.0
+   ],
+   "precision_compatible": 1.0,
+   "truly_compatible_labelled_opposite": [],
+   "truly_opposite_labelled_compatible": []
+  },
+  "X_vs_L": {
+   "L_right_X_wrong": 0,
+   "X_right_L_wrong": 0,
+   "determinate_rows_labels_differ": 0,
+   "directed_rows_labels_differ_all": 6,
+   "paired_sign_p": 1.0
+  },
+  "coverage_share_no_counterpart": 0.8605,
+  "directed_unique_compounds": 30,
+  "directed_universe_need_compound": 43,
+  "reference_category_counts": {
+   "compatible": 6,
+   "unknown_no_counterpart": 37
+  }
+ },
+ "eval_directed": {
+  "L": {
+   "abstained_with_determinate_reference": 0,
+   "abstention_rate": 0.1515,
+   "abstention_reasons": {
+    "action_partial_or_unknown": 1,
+    "group_record_mostly_outside_module_targets": 4
+   },
+   "compatible_determinate": 2,
+   "compatible_truly_compatible": 2,
+   "label_counts": {
+    "compatible": 22,
+    "indeterminable": 5,
+    "opposite": 6
+   },
+   "labelled_correct": 2,
+   "labelled_determinate": 2,
+   "precision_ci95": [
+    0.3424,
+    1.0
+   ],
+   "precision_compatible": 1.0,
+   "truly_compatible_labelled_opposite": [],
+   "truly_opposite_labelled_compatible": []
+  },
+  "T": {
+   "base_rate": 1.0,
+   "ci95": [
+    0.3424,
+    1.0
+   ],
+   "n_determinate": 2,
+   "truly_compatible": 2
+  },
+  "X": {
+   "abstained_with_determinate_reference": 0,
+   "abstention_rate": 0.0909,
+   "abstention_reasons": {
+    "action_partial_or_unknown": 3
+   },
+   "compatible_determinate": 2,
+   "compatible_truly_compatible": 2,
+   "label_counts": {
+    "compatible": 24,
+    "indeterminable": 3,
+    "opposite": 6
+   },
+   "labelled_correct": 2,
+   "labelled_determinate": 2,
+   "precision_ci95": [
+    0.3424,
+    1.0
+   ],
+   "precision_compatible": 1.0,
+   "truly_compatible_labelled_opposite": [],
+   "truly_opposite_labelled_compatible": []
+  },
+  "X_vs_L": {
+   "L_right_X_wrong": 0,
+   "X_right_L_wrong": 0,
+   "determinate_rows_labels_differ": 0,
+   "directed_rows_labels_differ_all": 2,
+   "paired_sign_p": 1.0
+  },
+  "coverage_share_no_counterpart": 0.9394,
+  "directed_unique_compounds": 29,
+  "directed_universe_need_compound": 33,
+  "reference_category_counts": {
+   "compatible": 2,
+   "unknown_no_counterpart": 31
+  }
+ },
+ "eval_directed_rows_sharing_a_pmid_between_chembl_and_gtopdb": 0,
+ "gtopdb_files_sha256": {
+  "interactions.csv": "cdbd18c66cf99d1adba9a60c807e256204221ff74756b70344822fd6642b244b",
+  "ligands.csv": "f8e9f6959d563e49ccc2fb65652c17c3d93e345997e26f99a1a7924361d6d8b7"
+ },
+ "l_rule": "v2",
+ "lock_sha256": "5b9314d277cafa2b233ec00aca61ed7da2b1faff13884c35a088e4f83b5a1b7d",
+ "run_label": "run2_lv2_20261101",
+ "script_sha256": "87f267add35e6ca888be021d682e8d6763ed1587d2ae546584a9bbfb417cb1b6",
+ "universe_rows": 205,
+ "universe_rows_by_need": {
+  "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR": 40,
+  "NEED-GSK3B-DEREPRESSION": 6,
+  "NEED-INHIBITORY-HYPOFUNCTION": 1,
+  "NEED-MTOR-AUTOPHAGY": 27,
+  "NEED-MYELINATION": 36,
+  "NEED-NEUROINFLAMMATION-GLIA": 52,
+  "NEED-PDH-PYRUVATE-AXIS": 1,
+  "NEED-REDOX-NRF2": 5,
+  "NEED-SEIZURE-CONTROL-SYMPTOMATIC": 18,
+  "NEED-T-TYPE-CALCIUM": 18,
+  "NEED-WNT-BETA-CATENIN": 1
+ },
+ "universe_unique_compounds": 186,
+ "wwox_contribution_b_information_effect": {
+  "NEED-GABA-CHLORIDE-GRADIENT": {
+   "X_compatible": 0,
+   "X_labelled_L_abstains_on_need_direction": 0,
+   "X_opposite": 0,
+   "certainty": "unknown",
+   "counter_evidence_first": "Premise unmeasured; the one functional inhibitory measurement is amplitude hypofunction, a competing account (working model, 2026-09-27).",
+   "counter_evidence_items": 4,
+   "need_direction": "uncertain",
+   "universe_compounds": 0
+  },
+  "NEED-GSK3B-DEREPRESSION": {
+   "X_compatible": 6,
+   "X_labelled_L_abstains_on_need_direction": 6,
+   "X_opposite": 0,
+   "certainty": "context_dependent",
+   "counter_evidence_first": "Lithium suppressed PTZ-induced seizures in all three genotypes, wild type included: no WWOX-specific rescue (CLAIM 016 evidence boundary).",
+   "counter_evidence_items": 4,
+   "need_direction": "uncertain",
+   "universe_compounds": 6
+  },
+  "NEED-INHIBITORY-HYPOFUNCTION": {
+   "X_compatible": 1,
+   "X_labelled_L_abstains_on_need_direction": 1,
+   "X_opposite": 0,
+   "certainty": "unknown",
+   "counter_evidence_first": "Organoid GABAergic markers are up at protein level; a hippocampal GO term for inhibitory postsynaptic potential is ACTIVATED in a P47T dataset while KEGG reads suppression.",
+   "counter_evidence_items": 4,
+   "need_direction": "uncertain",
+   "universe_compounds": 1
+  },
+  "NEED-ISR-ATTENUATION": {
+   "X_compatible": 0,
+   "X_labelled_L_abstains_on_need_direction": 0,
+   "X_opposite": 0,
+   "certainty": "context_dependent",
+   "counter_evidence_first": "Without amyloid the fly Atf4 comparison was not significant (6 vs 6; an effect as large as the amyloid-arm one is not excluded, and no interaction test was run); the organoid ISR set is lower than chance.",
+   "counter_evidence_items": 4,
+   "need_direction": "uncertain",
+   "universe_compounds": 0
+  },
+  "NEED-LACTATE-LDH": {
+   "X_compatible": 0,
+   "X_labelled_L_abstains_on_need_direction": 0,
+   "X_opposite": 0,
+   "certainty": "context_dependent",
+   "counter_evidence_first": "Human lactate reported normal or extremely low; lactate falls nominally without amyloid; LDHA in the organoid is as consistent with immaturity as with WWOX loss (HYP-20261026-11).",
+   "counter_evidence_items": 4,
+   "need_direction": "uncertain",
+   "universe_compounds": 0
+  },
+  "NEED-MTOR-AUTOPHAGY": {
+   "X_compatible": 26,
+   "X_labelled_L_abstains_on_need_direction": 27,
+   "X_opposite": 1,
+   "certainty": "unknown",
+   "counter_evidence_first": "Map N-01 (INSUFFICIENT): mTORC1 signalling is not measured at protein level in the WWOX sources it read; its autophagy direction contradicts its mTOR direction.",
+   "counter_evidence_items": 2,
+   "need_direction": "uncertain",
+   "universe_compounds": 27
+  },
+  "NEED-MYELINATION": {
+   "X_compatible": 29,
+   "X_labelled_L_abstains_on_need_direction": 36,
+   "X_opposite": 7,
+   "certainty": "supported_in_WWOX_mouse_model for recovery after the causal rescue; unknown for any pharmacological route",
+   "counter_evidence_first": "N-13: the target is not causally downstream of WWOX in the cell targeted; window closing.",
+   "counter_evidence_items": 3,
+   "need_direction": "restore",
+   "universe_compounds": 36
+  },
+  "NEED-NEUROINFLAMMATION-GLIA": {
+   "X_compatible": 51,
+   "X_labelled_L_abstains_on_need_direction": 51,
+   "X_opposite": 0,
+   "certainty": "unknown",
+   "counter_evidence_first": "Treats an effect (neuron-restricted rescue reduces gliosis); paediatric immunosuppression concerns; class-level only.",
+   "counter_evidence_items": 6,
+   "need_direction": "uncertain",
+   "universe_compounds": 52
+  },
+  "NEED-PDH-PYRUVATE-AXIS": {
+   "X_compatible": 1,
+   "X_labelled_L_abstains_on_need_direction": 1,
+   "X_opposite": 0,
+   "certainty": "context_dependent",
+   "counter_evidence_first": "PDK1 lower in sign only in the human knockout organoid (inside the single-gene null) and not raised in the shRNA progenitor library either (n=1 per arm); PDH activity unchanged in a human cell line; human metabolic screens reported normal w",
+   "counter_evidence_items": 11,
+   "need_direction": "uncertain",
+   "universe_compounds": 1
+  },
+  "NEED-REDOX-NRF2": {
+   "X_compatible": 4,
+   "X_labelled_L_abstains_on_need_direction": 5,
+   "X_opposite": 1,
+   "certainty": "unknown",
+   "counter_evidence_first": "Human organoid shows no cytokine-expressing cells and no coherent NRF2 signature.",
+   "counter_evidence_items": 4,
+   "need_direction": "uncertain",
+   "universe_compounds": 5
+  },
+  "NEED-WNT-BETA-CATENIN": {
+   "X_compatible": 1,
+   "X_labelled_L_abstains_on_need_direction": 1,
+   "X_opposite": 0,
+   "certainty": "context_dependent",
+   "counter_evidence_first": "Four constraints on HYP-20261025-09 (maturity confound; blind reanalysis; signature reversal selects no axis; rescue arm cannot reach the compartment).",
+   "counter_evidence_items": 3,
+   "need_direction": "uncertain",
+   "universe_compounds": 1
+  }
+ }
+}
