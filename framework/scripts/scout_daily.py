@@ -36,6 +36,12 @@ Signal -> examination -> trial -> decision -> integration is a state record (`--
 examination, and adoption in a plan is not a verified implementation. The radar researches and plans; it installs
 nothing. Every run ends with a briefing (material deltas only, ONE next step first; a save is claimed only after
 read-back).
+The questions are not a fixed list: `resolve_plan` DERIVES them (deterministic text rules, no model call) from the
+current priority surfaces read at the remote-main SHA (diagnosis, roadmap work order, work_order.json, the open task
+record, the CURRENT iteration section, WATCH rows with a reopen condition), reuses unchanged blobs, and flags the plan
+provisional when the SHA or a surface cannot be verified. Each question carries priority -> source (path, blob, SHA) ->
+decision; a step marked DONE or a resolved condition stops generating. `--plan` prints it. One level of public team
+exploration (the owner's other repositories, term-matched, 3 per team, 1 team a day, 14-day cooldown) follows discovery.
 `--discover-only [--theme N|all]` runs just the search (not a second scheduler: the cron line is the
 only one). `--status` prints the compact line that `harness_session_start.py` shows at session start.
 
@@ -359,7 +365,8 @@ def run(state: dict, watch=WATCH, queries=PUBMED, opener=http, pm_opener=None, n
 # ---------------------------------------------------------------------------------------------
 # Configuration (overridable in <state dir>/scout_daily_config.json; unknown keys are ignored).
 CONFIG = {"questions_per_run": 2, "open_slot": True, "version_checks": 3,
-          "follow": {"max_teams": 6, "max_repos": 18, "max_per_team": 3, "deep_check_days": 7, "deep_per_run": 3}}
+          "follow": {"max_teams": 6, "max_repos": 18, "max_per_team": 3, "deep_check_days": 7, "deep_per_run": 3},
+          "explore": {"teams_per_run": 1, "repos_per_team": 3, "cooldown_days": 14, "max_per_owner": 2}}
 
 
 def load_config(directory: Path | None = None) -> dict:
@@ -478,6 +485,292 @@ def known_idents(watch, follow: dict | None, ctx: dict | None) -> set:
 
 
 # ---------------------------------------------------------------------------------------------
+# PRIORITY PLAN: the questions the search asks are DERIVED, by a deterministic function and without any model call,
+# from the surfaces that hold the current priorities, read at the remote-main SHA. Nothing here is a register: the
+# plan is recomputed whenever a surface blob changes and is never edited by hand. Each question carries its origin
+# (surface, locator, path, blob, SHA) so that "priority -> source -> decision" is readable from the report.
+MODULE = "disease-models/wwox/research/drug_repurposing"
+TASK_DIR = "ledger/tasks/orchestrator"
+SURFACE_PATHS = {"roadmap": f"{MODULE}/roadmap_current.md", "readme": f"{MODULE}/README.md",
+                 "work_order": f"{MODULE}/view/work_order.json"}
+DONE_STATES = {"DONE", "COMPLETE", "COMPLETED", "CLOSED"}
+WEIGHT = {"task_step": 4, "diagnosis": 3, "work_order": 3, "open_item": 3, "reopen": 2, "roadmap_first": 2, "roadmap": 1}
+STOP = frozenset("""about above after again against also among another because been before being below between both
+but can could did does done during each either else every first from further had has have having here how into its just
+less like may might more most much must new next not now off once one only other our out over own same should since some
+such than that the their them then there these they this those through too under until upon use used using very was were
+what when where whether which while who will with within without would yet iteration package record task step steps
+owner status todo wwox module roadmap current work orchestrator scientist verifier output outputs state states
+result results change changes position give gives read differences difference several systematically explicit online cases
+attempts failed produce resume behaviour visibility reuse regenerated operational comparison documented bottleneck principal called itself""".split())
+# Translation of priority text into a search category (and a Hugging Face search word). First match wins. These are
+# vocabulary, not priorities: a priority that matches nothing is skipped when it is task text, kept otherwise.
+HOOKS = [(re.compile(r"evaluat|benchmark|gold set|outcome|prospective|predict", re.I), "prediction/evaluation", "benchmark", "drug repurposing"),
+         (re.compile(r"leakage|confound|negative result|counter-?evidence", re.I), "negative results", None, "drug repurposing"),
+         (re.compile(r"pharmacolog|potency|selectiv|ic50|\bki\b|assay condition", re.I), "matching/pharmacology", "bioactivity", "pharmacology"),
+         (re.compile(r"licen[cs]e|redistribut|terms of|notice|attribution", re.I), "databases", "dataset", "compound database"),
+         (re.compile(r"signature|perturb|lincs|transcriptom", re.I), "databases", "perturbation", "perturbation signature"),
+         (re.compile(r"cache|retry|rest api|retriev|endpoint|extract|fragil", re.I), "tools/capabilities", None, "biomedical"),
+         (re.compile(r"continuity|handoff|autonom|mandate|checkpoint|agent|resum", re.I), "Scientist/Orchestrator patterns", "agent", "agent"),
+         (re.compile(r"compound|catalogue|identity|drug", re.I), "databases", "compound", "compound database"),
+         (re.compile(r"network|pathway|context|tissue|species|assay|biolog", re.I), "scientific inputs", None, "neuronal")]
+DEFAULT_HOOK = ("scientific inputs", None, "neuronal")  # anchor: a word that keeps a lexical query inside biomedicine
+
+
+def _words(text: str) -> list[str]:
+    out = []
+    for w in re.findall(r"[a-z][a-z0-9-]{3,}", re.sub(r"[`*_\[\]()|]", " ", text.lower())):
+        w = w.strip("-")
+        if len(w) >= 4 and w not in STOP and not re.fullmatch(r"(it|p|r)\d+\w*", w):
+            out.append(w)
+    return out
+
+
+def key_terms(text: str, n: int = 4) -> list[str]:
+    """Distinctive words of ONE text: most frequent, then longest, then alphabetical. A pure function of the text
+    (deterministic, no model, no network, and independent of every other priority)."""
+    counts: dict[str, int] = {}
+    for w in _words(text):
+        counts[w] = counts.get(w, 0) + 1
+    return sorted(counts, key=lambda w: (-counts[w], -len(w), w))[:n]
+
+
+def _plain(text: str) -> str:
+    return re.sub(r"\s+", " ", re.sub(r"[`*]", "", text)).strip()
+
+
+def parse_roadmap(text: str, path: str) -> list[dict]:
+    out = []
+    for line in text.splitlines():
+        m = re.match(r"\|\s*(R\d+)\s*/\s*([\w ]+?)\s*\|(.*)\|\s*$", line)
+        if not m:
+            continue
+        cells = [c.strip() for c in m.group(3).split("|")]
+        if len(cells) < 3:
+            continue
+        rid, prio = m.group(1), m.group(2).strip()
+        out.append({"surface": "roadmap", "lid": rid, "locator": f"{rid} ({prio})", "weight": WEIGHT["roadmap_first" if prio == "first" else "roadmap"],
+                    "text": _plain(f"{cells[0]} {cells[1]}"), "decision": f"{rid} completion: {_plain(cells[2])[:140]}"})
+    return out
+
+
+def parse_diagnosis(text: str, path: str) -> list[dict]:
+    out = []
+    for line in text.splitlines():
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        if len(cells) != 6 or cells[0] in ("Stage", "") or set(cells[0]) <= set("-: "):
+            continue
+        missing = _plain(cells[5])
+        if missing in ("-", "") or missing.lower().startswith("not diagnosed"):
+            continue
+        out.append({"surface": "diagnosis", "lid": _plain(cells[0]).lower().replace(" ", "-"),
+                    "locator": f"row '{_plain(cells[0])}' ({_plain(cells[1])})",
+                    "weight": WEIGHT["diagnosis"] + ("principal bottleneck" in cells[5].lower()),
+                    "text": f"{_plain(cells[0])} {missing}", "decision": f"{_plain(cells[0])}: closing '{missing[:130]}'"})
+    return out
+
+
+def parse_work_order(text: str, path: str) -> list[dict]:
+    out = []
+    for entry in json.loads(text).get("entries", []):
+        need = str(entry.get("need"))
+        out.append({"surface": "work_order", "lid": need, "locator": f"entry {need}", "weight": WEIGHT["work_order"],
+                    "text": _plain(f"{entry.get('question', '')} {entry.get('would_change', '')}"),
+                    "decision": _plain(str(entry.get("would_change") or entry.get("question") or ""))[:160]})
+    return out
+
+
+def parse_task(text: str, path: str) -> list[dict]:
+    """Open steps of the mandate record. A step whose status is DONE generates nothing; a step is search-relevant only
+    when its text matches a hook (most steps are internal work that no external search can inform)."""
+    rec = json.loads(text)
+    out = []
+    for key, queue in rec.items():
+        if not (key.startswith("AUTHORISED_QUEUE") and isinstance(queue, dict)):
+            continue
+        for okey, obj in queue.items():
+            for st in (obj.get("steps", []) if okey.startswith("OBJ_") and isinstance(obj, dict) else []):
+                if str(st.get("status", "")).upper() in DONE_STATES:
+                    continue
+                body = _plain(str(st.get("step", "")))
+                sid = body.split(" ", 1)[0]
+                out.append({"surface": "task_step", "lid": f"{okey}/{sid}", "locator": f"{rec.get('TASK_ID')} {okey} step {sid} [{st.get('status')}]",
+                            "weight": WEIGHT["task_step"], "text": body, "hook_required": True,
+                            "decision": f"step {sid} ({st.get('owner')}): whether a found method/resource changes how it is done"})
+    return out
+
+
+def current_section(text: str) -> str:
+    lines = text.splitlines()
+    for i, line in enumerate(lines):
+        if re.match(r"#{2,4} .*\bCURRENT\b", line):
+            j = next((k for k in range(i + 1, len(lines)) if re.match(r"#{2,4} Roadmap iteration", lines[k])), len(lines))
+            return "\n".join(lines[i:j])
+    return ""
+
+
+def parse_readme(text: str, path: str) -> list[dict]:
+    """Open items the CURRENT iteration section declares (`Only planned:` / `Next:` sentences) and the package READMEs it links."""
+    section = current_section(text)
+    out = []
+    for m in re.finditer(r"(?:Only planned|Next step|Next|Remaining|Not yet)\s*:\s*([^\n]+?)(?:\.\s|\.$|\n|$)", section):
+        sentence = _plain(m.group(1))
+        out.append({"surface": "open_item", "lid": digest(sentence), "locator": f"CURRENT section: '{sentence[:60]}'",
+                    "weight": WEIGHT["open_item"], "text": sentence, "decision": f"still open per the CURRENT section: {sentence[:130]}"})
+    links = sorted({m for m in re.findall(r"\]\(([\w./-]+/README\.md)\)", section)})[:8]
+    return out, [f"{MODULE}/{p}" for p in links]
+
+
+def parse_reopen(text: str, path: str) -> list[dict]:
+    """WATCH rows of a package README that carry a reopen condition. A row that is no longer WATCH, or lost its
+    condition, generates nothing."""
+    out = []
+    pkg = path.rsplit("/", 2)[-2]
+    for line in text.splitlines():
+        cells = [_plain(c) for c in line.strip().strip("|").split("|")]
+        if len(cells) < 3 or not any(c.upper() == "WATCH" for c in cells[1:3]):
+            continue
+        m = re.search(r"reopen(?:ed)?\s+(?:if|when|on|once)\s+(.+?)(?:[;]|\.\s|\.$|$)", cells[-1], re.I)
+        if m:
+            cond = m.group(1)
+            out.append({"surface": "reopen", "lid": f"{pkg}/{cells[0][:40]}", "locator": f"{pkg} row '{cells[0][:40]}'",
+                        "weight": WEIGHT["reopen"], "text": f"{cells[0]} {cond}",
+                        "decision": f"reopen condition met? {cond[:140]}"})
+    return out
+
+
+def hook(text: str):
+    """(category, hf word, anchor) of the first matching hook, or (None, None, anchor of the default)."""
+    for pattern, category, hf, anchor in HOOKS:
+        if pattern.search(text):
+            return category, hf, anchor
+    return None, None, DEFAULT_HOOK[2]
+
+
+def build_questions(items: list[dict]) -> tuple[list[dict], int]:
+    """Items -> search questions in the shape of THEMES, each with its origin. Returns (questions, skipped)."""
+    best: dict[str, dict] = {}
+    skipped = 0
+    for it in items:
+        category, hf, anchor = hook(it["text"])
+        terms = key_terms(it["text"])  # local to the item: editing one priority never moves another question
+        if len(terms) < 2 or (it.get("hook_required") and category is None):
+            skipped += 1
+            continue
+        kw = " ".join([anchor] + terms)
+        q = {"id": f"{it['surface']}:{it['lid']}", "category": category or "scientific inputs",
+             "gap": it["text"][:140], "decision": it["decision"], "weight": it["weight"], "kw": kw,
+             "gh": " ".join((anchor + " " + terms[0]).split()[:3]), "hf": hf or max(terms, key=len),
+             "epmc": f'TITLE_ABS:"{anchor}" AND TITLE_ABS:{terms[0]} AND TITLE_ABS:{terms[1]}', "terms": terms, "anchor": anchor,
+             "origin": {k: it[k] for k in ("surface", "locator", "path", "blob", "sha")} | {"priority": it["text"][:200]}}
+        if kw not in best or q["weight"] > best[kw]["weight"]:
+            best[kw] = q
+    return sorted(best.values(), key=lambda q: (-q["weight"], q["id"])), skipped
+
+
+def _extract(path: str, text: str):
+    """(items, links) of one surface, by file kind."""
+    name = path.rsplit("/", 1)[-1]
+    if name == "roadmap_current.md":
+        return parse_roadmap(text, path), []
+    if name == "work_order.json":
+        return parse_work_order(text, path), []
+    if name.startswith("ORCH-ROADMAP"):
+        return parse_task(text, path), []
+    if path == SURFACE_PATHS["readme"]:
+        return parse_readme(text, path)
+    if path.startswith(f"{MODULE}/diagnosis_it"):
+        return parse_diagnosis(text, path), []
+    return parse_reopen(text, path), []
+
+
+def _latest(runner, sha: str, directory: str, pattern: str):
+    code, out = runner(["ls-tree", "--name-only", sha, directory + "/"])
+    hits = [(int(m.group(1)), p) for p in out.split() for m in [re.search(pattern, p)] if m]
+    return max(hits)[1].rstrip("/") if code == 0 and hits else None
+
+
+def resolve_plan(cached: dict | None, extracts: dict | None, ctx: dict, runner=git, now: dt.datetime | None = None):
+    """Derive the plan at ctx['main_sha'] -> (plan, extracts). Surfaces whose blob is unchanged are not re-read or re-parsed.
+    Without a verified SHA the cached plan is returned marked provisional (never silently current)."""
+    now = now or dt.datetime.now(dt.timezone.utc)
+    cached, extracts = cached or {}, dict(extracts or {})
+    sha = ctx.get("main_sha")
+    if not sha or ctx.get("cache") == "stale_reused":
+        if cached.get("questions"):
+            return dict(cached, provisional=(cached.get("provisional") or []) + [
+                f"STALE: remote main not resolved or its objects unavailable; plan is the one derived at {str(cached.get('sha'))[:12]}"]), extracts
+        return {"sha": sha, "questions": [], "inputs": {}, "provisional": ["no plan: remote main unavailable and no cached plan"]}, extracts
+    reasons = [ctx["freshness_limit"]] if ctx.get("freshness_limit") else []
+    paths = dict(SURFACE_PATHS)
+    task = _latest(runner, sha, TASK_DIR, r"ORCH-ROADMAP-IT(\d+)-")
+    diag = _latest(runner, sha, MODULE, r"diagnosis_it(\d+)_")
+    if task:
+        paths["task"] = task
+    else:
+        reasons.append("no ORCH-ROADMAP task record at this revision")
+    if diag:
+        paths["diagnosis"] = f"{diag}/README.md"
+    else:
+        reasons.append("no diagnosis_it* directory at this revision")
+    inputs, items, reread = {}, [], 0
+    todo = list(paths.items())
+    seen_paths = set()
+    while todo:
+        kind, path = todo.pop(0)
+        if path in seen_paths:
+            continue
+        seen_paths.add(path)
+        code, blob = runner(["rev-parse", f"{sha}:{path}"])
+        blob = blob.strip()
+        if code != 0 or not blob:
+            reasons.append(f"surface {path} absent at this revision")
+            continue
+        old = extracts.get(path) or {}
+        if old.get("blob") != blob:
+            code, text = runner(["show", f"{sha}:{path}"])
+            try:
+                if code != 0:
+                    raise ValueError("git show failed")
+                found, links = _extract(path, text)
+            except (ValueError, KeyError, TypeError, AttributeError) as exc:
+                reasons.append(f"surface {path} unreadable: {exc}")
+                continue
+            extracts[path] = old = {"blob": blob, "items": found, "links": links}
+            reread += 1
+        inputs[path] = {"surface": kind, "blob": blob}
+        for it in old["items"]:
+            items.append(dict(it, path=path, blob=blob, sha=sha))
+        todo += [("reopen", link) for link in old.get("links", [])]
+    extracts = {p: v for p, v in extracts.items() if p in inputs}
+    questions, skipped = build_questions(items)
+    plan = {"sha": sha, "derived_at": now.isoformat(timespec="seconds"), "inputs": inputs, "questions": questions,
+            "skipped": skipped, "provisional": reasons, "reread": reread,
+            "cache": "hit" if reread == 0 else "re-derived"}
+    plan["digest"] = digest(json.dumps([[q["id"], q["kw"], q["weight"]] for q in questions]))
+    return plan, extracts
+
+
+def pick_questions(questions: list[dict], asked: dict, now: dt.datetime, n: int) -> list[dict]:
+    """Higher weight and longer since asked go first (a never-asked question counts as 30 days). A question whose terms
+    changed is a new question (the key includes the terms), so a changed priority is asked at once."""
+    today = now.date()
+
+    def score(q):
+        last = asked.get(f"{q['id']}|{digest(q['kw'])}")
+        age = 30 if not last else min(30, (today - dt.date.fromisoformat(last)).days)
+        return q["weight"] * age
+    return sorted(questions, key=lambda q: (-score(q), q["id"]))[:n]
+
+
+def origin_line(origin: dict | None) -> str:
+    if not origin:
+        return "open slot: no priority assumed"
+    return (f"{origin['surface']} {origin['locator']} [{origin['path']} @ blob {origin['blob'][:10]}, main {origin['sha'][:12]}]: "
+            f"\"{origin['priority'][:110]}\"")
+
+
+# ---------------------------------------------------------------------------------------------
 # Followed teams/repos: internal monitoring of PUBLIC projects only (no contact, no social action, no
 # collaborator expansion). Limits are configuration; slots are never filled to reach a number.
 FOLLOW_SEED = [
@@ -583,7 +876,7 @@ def _done(rec: dict) -> dict:
 
 
 def trace_event(trace: dict, key: str, stage: str, state: str, kind: str | None = None, ref: str | None = None,
-                at: str = "", root: Path = ROOT) -> tuple[bool, str]:
+                at: str = "", root: Path = ROOT, via: str = "") -> tuple[bool, str]:
     if stage not in STAGES or state not in STAGES[stage]:
         return False, f"unknown stage/state {stage}/{state}"
     rec = trace.setdefault(key, {"history": []})
@@ -606,7 +899,8 @@ def trace_event(trace: dict, key: str, stage: str, state: str, kind: str | None 
     if needs_evidence and not _ref_exists(kind, ref, root):
         rec["history"].append({"stage": stage, "state": "claimed", "claimed": state, "kind": kind, "ref": ref, "at": at})
         return False, f"evidence ref not found under the repository root: {ref}; stays 'claimed', not {state}"
-    rec["history"].append({"stage": stage, "state": state, "kind": kind, "ref": ref, "at": at})
+    rec["history"].append(dict({"stage": stage, "state": state, "kind": kind, "ref": ref, "at": at},
+                               **({"via": via} if via else {})))
     return True, "recorded"
 
 
@@ -703,6 +997,7 @@ GH_API = "https://api.github.com"
 GH_SEARCH = GH_API + "/search/repositories"
 HF_API = "https://huggingface.co/api"
 CROSSREF = "https://api.crossref.org/works"
+MAX_PER_OWNER = 2  # items one team/owner may contribute to a run
 SHOW = 3  # per source per run; only what is shown is marked seen, the rest waits for the next rotation
 NEW_WINDOW_DAYS = 730
 CLAIM_LABELS = ("declared", "implemented", "tested_by_authors", "independently_reproduced",
@@ -767,6 +1062,93 @@ def hf_versions(kind: str, ident: str, opener=http) -> dict:
         return {"errors": [f"{ident} card unparseable"]}
 
 
+def _tokens(text: str) -> set:
+    return set(re.findall(r"[a-z][a-z0-9]{3,}", (text or "").lower().replace("-", " ").replace("_", " ")))
+
+
+def item_owner(item: dict):
+    """(channel, owner) of a discovered GitHub repository or Hub asset; None for a paper or an owner-less asset."""
+    ident = (item.get("ident") or "")
+    if item.get("channel") in ("github", "huggingface") and "/" in ident:
+        return item["channel"], ident.split("/")[0]
+    return None
+
+
+def explore_team(channel: str, owner: str, terms: list[str], known, listed=(), opener=http, limit: int = 3,
+                 now: dt.datetime | None = None) -> dict:
+    """ONE level of bounded exploration: the owner's other public repositories (GitHub) or models/datasets (Hugging Face),
+    kept only when their name, description or tags share a term with a current priority question. No collaborator,
+    follower or contributor is ever requested, and nothing found here is explored in turn."""
+    now = now or dt.datetime.now(dt.timezone.utc)
+    since = _years_ago(now, NEW_WINDOW_DAYS)
+    out = {"owner": owner, "channel": channel, "calls": 0, "errors": [], "candidates": [], "scanned": 0, "no_match": 0}
+    q = urllib.parse.quote(owner)
+    urls = ([f"{GH_API}/users/{q}/repos?sort=pushed&per_page=30&type=owner"] if channel == "github" else
+            [f"{HF_API}/{k}?author={q}&sort=lastModified&direction=-1&limit=30" for k in ("models", "datasets")])
+    pool = []
+    for url in urls:
+        out["calls"] += 1
+        code, _, body = opener(url)
+        try:
+            if code != 200:
+                raise ValueError(f"HTTP {code}")
+            data = json.loads(body)
+            if not isinstance(data, list):
+                raise TypeError("not a list")
+        except (ValueError, TypeError) as exc:
+            out["errors"].append(f"explore {owner} {url.split('?')[0].rsplit('/', 1)[-1]}: {exc}")
+            continue
+        for rec in data:
+            if channel == "github":
+                if rec.get("fork") or rec.get("archived") or (rec.get("pushed_at") or "")[:10] < since:
+                    continue
+                pool.append({"ident": rec["full_name"].lower(), "title": rec["full_name"],
+                             "when": (rec.get("pushed_at") or "")[:10],
+                             "text": " ".join([rec["full_name"], rec.get("description") or "", " ".join(rec.get("topics") or [])]),
+                             "licence": (rec.get("license") or {}).get("spdx_id") or "none stated", "url": rec.get("html_url")})
+            else:
+                modified = (rec.get("lastModified") or "")[:10]
+                if modified and modified < since:
+                    continue
+                kind = "datasets/" if "/datasets?" in url else ""
+                lic = next((t.split(":", 1)[1] for t in rec.get("tags", []) if t.startswith("license:")), None)
+                pool.append({"ident": rec["id"].lower(), "title": rec["id"], "when": modified,
+                             "text": rec["id"] + " " + " ".join(rec.get("tags") or []), "licence": lic or "none stated",
+                             "url": f"https://huggingface.co/{kind}{rec['id']}"})
+    wanted = set(terms)
+    scored = []
+    for it in pool:
+        out["scanned"] += 1
+        if it["ident"] in known or it["ident"] in listed:
+            continue
+        matched = sorted(wanted & _tokens(it["text"]))
+        if not matched:
+            out["no_match"] += 1
+            continue
+        scored.append((-len(matched), it["when"], it["ident"], matched, it))
+    scored.sort(key=lambda t: (t[0], [-ord(c) for c in t[1]], t[2]))  # most matched terms, then most recent
+    for _, _, _, matched, it in scored[:limit]:
+        out["candidates"].append(dict(it, matched=matched, text=None))
+    return out
+
+
+def pick_owners(items: list[dict], follow: dict | None, explored: dict, now: dt.datetime, days: int, n: int) -> list[tuple]:
+    """Owners worth one exploration today: those of today's discovered items plus followed teams, never one explored
+    within `days`, the longest-unexplored first (so a prolific team cannot take every day), at most `n`."""
+    cand: dict[tuple, str] = {}
+    for it in items:
+        who = item_owner(it)
+        if who:
+            cand.setdefault((who[0], who[1].lower()), f"owner of discovered {it['title']}")
+    for e in (follow or {}).get("entries", []):
+        if e.get("status") == "active" and "/" in e["repo"]:
+            cand.setdefault(("github", e["team"].lower()), f"followed team (repo {e['repo']})")
+    cutoff = (now - dt.timedelta(days=days)).isoformat()
+    ok = [(k, why) for k, why in cand.items() if (explored.get(k[1]) or {}).get("last", "") < cutoff]
+    ok.sort(key=lambda kw: ((explored.get(kw[0][1]) or {}).get("last", ""), kw[0][1]))
+    return [(k[0], k[1], why) for k, why in ok[:n]]
+
+
 def discover_theme(theme: dict, seen: dict, opener=http, now: dt.datetime | None = None,
                    known=frozenset(), budget: dict | None = None) -> dict:
     """One question across the channels: GitHub, Hugging Face (models, datasets, Spaces), Nature portfolio (Crossref
@@ -791,8 +1173,14 @@ def discover_theme(theme: dict, seen: dict, opener=http, now: dt.datetime | None
             chans[chan]["errors"].append(f"{theme['id']} {label} unparseable answer")
             return None
 
+    owners = budget.setdefault("owners", {})
+    cap = budget.get("cap", MAX_PER_OWNER)
+
+    def owner_of(it):
+        return it["ident"].split("/")[0] if it.get("ident") and "/" in it["ident"] else None
+
     def take(chan: str, fresh: list[dict]) -> None:
-        keep = []
+        keep, local = [], {}
         for it in fresh:
             if it["key"] in seen:
                 continue
@@ -800,8 +1188,17 @@ def discover_theme(theme: dict, seen: dict, opener=http, now: dt.datetime | None
                 chans[chan]["known"] += 1
                 chans[chan]["known_names"].append(it["ident"])
                 continue
+            who = owner_of(it)  # a prolific team may show at most `cap` items per run; the rest stays unseen
+            if who and owners.get(who, 0) + local.get(who, 0) >= cap:
+                chans[chan]["capped"] = chans[chan].get("capped", 0) + 1
+                continue
+            if who:
+                local[who] = local.get(who, 0) + 1
             keep.append(it)
         keep = keep[:SHOW]
+        for it in keep:
+            if owner_of(it):
+                owners[owner_of(it)] = owners.get(owner_of(it), 0) + 1
         seen.update({i["key"]: now.date().isoformat() for i in keep})
         for it in keep:
             it["channel"] = chan
@@ -924,7 +1321,7 @@ def discover_theme(theme: dict, seen: dict, opener=http, now: dt.datetime | None
         it["checks"] = {"counter_evidence": "not searched", "leakage": "not assessed", "shared_origin": "not assessed",
                         "context_mismatch": "not assessed (a search hit says nothing about WWOX context)"}
     return {"theme": theme["id"], "gap": theme["gap"], "category": theme.get("category", "unexpected"),
-            "decision": theme.get("decision", "unstated"), "items": items, "channels": chans,
+            "decision": theme.get("decision", "unstated"), "origin": theme.get("origin"), "items": items, "channels": chans,
             "errors": [e for c in chans.values() for e in c["errors"]]}
 
 
@@ -961,7 +1358,8 @@ def dedup(items: list[dict]) -> list[dict]:
 
 
 def discover(dstate: dict, themes=THEMES, opener=http, now: dt.datetime | None = None, only: str | None = None,
-             pause: float = 0, per_run: int = 1, open_slot: bool = False, known=frozenset(), deep: int = 0):
+             pause: float = 0, per_run: int = 1, open_slot: bool = False, known=frozenset(), deep: int = 0,
+             owner_cap: int = MAX_PER_OWNER):
     """The daily search: the next `per_run` questions in rotation (plus an open slot), once per calendar day (`only`:
     one theme id or 'all'). The followed-repo watchlist never limits it. Returns (result | None, new_state)."""
     now = now or dt.datetime.now(dt.timezone.utc)
@@ -980,7 +1378,7 @@ def discover(dstate: dict, themes=THEMES, opener=http, now: dt.datetime | None =
                            "kw": OPEN_QUERIES[now.toordinal() % len(OPEN_QUERIES)], "epmc": None, "gh": None})
     else:
         chosen = [t for t in themes if only == "all" or t["id"] == only]
-    budget = {"n": deep}
+    budget = {"n": deep, "cap": owner_cap}
     results = []
     for number, t in enumerate(chosen):
         if number and pause:
@@ -1003,7 +1401,8 @@ def discover(dstate: dict, themes=THEMES, opener=http, now: dt.datetime | None =
     if held:  # every channel failed: the same questions and the same day stay open for the next run
         state["cursor"], state["last_day"] = dstate.get("cursor", 0), dstate.get("last_day")
     return {"themes": results, "new_items": len(kept), "channels": summary, "rotation_held": held,
-            "questions": [{"id": r["theme"], "category": r["category"], "question": r["gap"], "decision": r["decision"]}
+            "questions": [{"id": r["theme"], "category": r["category"], "question": r["gap"], "decision": r["decision"],
+                           "origin": r.get("origin")}
                           for r in results]}, state
 
 
@@ -1023,7 +1422,8 @@ def channel_summary(results: list[dict], duplicates: dict | None = None) -> dict
         else:
             outcome = "delta" if new else "no_news"
         summary[chan] = {"outcome": outcome, "calls": calls, "new": new, "errors": errors, "known_resources": known[:10],
-                         "duplicates": (duplicates or {}).get(chan, 0)}
+                         "duplicates": (duplicates or {}).get(chan, 0),
+                         "owner_capped": sum(r["channels"][chan].get("capped", 0) for r in results)}
     return summary
 
 
@@ -1050,7 +1450,7 @@ def discovery_entries(result: dict, when: str) -> list[dict]:
         if not res["items"]:
             continue
         out.append({"id": f"Discovery:{res['theme']}", "wwox_question": res["gap"],
-                    "question_category": res.get("category"), "decision": res.get("decision"),
+                    "question_category": res.get("category"), "decision": res.get("decision"), "origin": res.get("origin"),
                     "roadmap": CATEGORY_ROADMAP.get(res.get("category"), "R9"),
                     "contribution_vs_existing": "unchecked: a search hit is the first look (no relevance scoring)",
                     "estimated_cost": "screening: minutes; adoption: unestimated until read (licence, version, provenance)",
@@ -1177,6 +1577,16 @@ def briefing(report: dict, persisted: dict | None = None) -> str:
              f"(context {ctx.get('cache', '?')})", f"NEXT STEP: {nxt}"]
     if ctx.get("freshness_limit"):
         lines.append(f"FRESHNESS LIMIT: {ctx['freshness_limit']}")
+    pl = report.get("plan")
+    if pl:
+        lines.append(f"PLAN derived at main {(pl.get('sha') or 'UNRESOLVED')[:12]} from {len(pl['inputs'])} surfaces "
+                     f"({pl.get('cache')}, {pl.get('reread')} re-read), {pl['questions']} priority question(s), digest {pl.get('digest')}"
+                     + ("; FALLBACK to the fixed theme list (no plan)" if pl.get("fallback") else ""))
+        for why in pl.get("provisional", []):
+            lines.append(f"PLAN PROVISIONAL: {why}")
+    teams = report.get("teams") or {}
+    for t in teams.get("explored", []):
+        lines.append(f"Team explored: {t['owner']} ({t['channel']}; {t['why']}): {len(t['found'])} lead(s) of {t['scanned']} scanned")
     if ctx.get("outranked_by"):
         lines.append(f"CONTEXT: roadmap_current is dated {ctx.get('roadmap_dated')}; later dated evidence in "
                      f"{', '.join(ctx['outranked_by'])} outranks its CURRENT heading: read that first.")
@@ -1187,6 +1597,7 @@ def briefing(report: dict, persisted: dict | None = None) -> str:
             for c, v in channels.items()))
         for q in (report.get("discovery") or {}).get("questions", []):
             lines.append(f"  question [{q['category']}] {q['question']} -> if confirmed: {q['decision']}")
+            lines.append(f"    because: {origin_line(q.get('origin'))}")
     for n, item in enumerate(deltas, 1):
         lines += [f"Delta {n}: {item['id']}",
                   f"  source / version+date / fact+limit: {item['detail'][:600]}",
@@ -1213,6 +1624,8 @@ def entry_markdown(item: dict, when: str) -> str:
     extra = ""
     if item.get("decision"):
         extra += f"**If confirmed (decision).** {item['decision']} Roadmap: {item.get('roadmap', 'R9')}.\n\n"
+    if "origin" in item:
+        extra = f"**Why asked.** {origin_line(item['origin'])}\n\n" + extra
     if item.get("test"):
         extra += f"**Minimal test.** {item['test']}\n\n"
     return (f"\n## {when[:10]} · scout_daily · {item['id']}\n\n"
@@ -1277,7 +1690,7 @@ def load_state_file(path: Path) -> dict:
     if not isinstance(data, dict):
         _aside(path, "valid JSON but not an object")
         return {}
-    for key in ("watch", "pubmed", "discovery", "context", "follow", "trace"):
+    for key in ("watch", "pubmed", "discovery", "context", "follow", "trace", "plan", "extracts", "plan_asked", "explored"):
         bad = key in data and (not isinstance(data[key], dict)
                                or (key == "follow" and not isinstance(data[key].get("entries"), list)))
         if bad:
@@ -1294,6 +1707,77 @@ def read_state(path: Path) -> dict:
     return load_state_file(path)
 
 
+def plan_step(state: dict, ctx: dict, cfg: dict, now: dt.datetime, runner=git):
+    """The questions for today: from the derived plan when it has any, else the fixed theme list (said so in the report).
+    Returns (plan, extracts, themes, dstate, per_run)."""
+    plan, extracts = resolve_plan(state.get("plan"), state.get("extracts"), ctx, runner, now)
+    dstate = state.get("discovery", {})
+    if plan.get("questions"):
+        picked = pick_questions(plan["questions"], state.get("plan_asked") or {}, now, cfg["questions_per_run"])
+        return plan, extracts, picked, dict(dstate, cursor=0), len(picked)
+    return plan, extracts, THEMES, dstate, cfg["questions_per_run"]
+
+
+def record_asked(asked: dict, result: dict | None, themes: list[dict], today: str) -> dict:
+    """Mark the questions actually searched today (a held rotation marks nothing). Keys carry the terms digest."""
+    asked = dict(asked)
+    if result and not result.get("rotation_held"):
+        ran = {r["theme"] for r in result["themes"]}
+        for q in themes:
+            if q["id"] in ran and q.get("kw") is not None and q.get("origin"):
+                asked[f"{q['id']}|{digest(q['kw'])}"] = today
+    if len(asked) > 300:
+        for key in sorted(asked, key=asked.get)[:len(asked) - 200]:
+            del asked[key]
+    return asked
+
+
+def team_step(result: dict | None, follow: dict, explored: dict, themes: list[dict], known, cfg: dict, opener, now: dt.datetime):
+    """One level of public exploration for at most `teams_per_run` owners (see explore_team). Returns
+    (summary, selected items, new explored map, trace events)."""
+    ecfg = cfg["explore"]
+    items = [i for r in (result or {"themes": []})["themes"] for i in r["items"]]
+    terms_by_q = {q["id"]: q.get("terms", []) for q in themes if q.get("origin")}
+    ran = [r for r in (result or {"themes": []})["themes"] if r.get("origin")]
+    terms = sorted({t for r in ran for t in terms_by_q.get(r["theme"], [])[:2]})  # the two leading terms: a weaker match is noise
+    known = set(known) | {i["ident"] for i in items if i.get("ident")}  # what this very run already shows is not "other work"
+    summary = {"explored": [], "calls": 0, "errors": [], "candidates": 0}
+    selected, events = [], []
+    new = {k: dict(v) for k, v in explored.items()}
+    if not terms:
+        return summary, selected, new, events
+    for channel, owner, why in pick_owners(items, follow, explored, now, ecfg["cooldown_days"], ecfg["teams_per_run"]):
+        prior = (explored.get(owner) or {}).get("listed", [])
+        res = explore_team(channel, owner, terms, known, prior, opener, ecfg["repos_per_team"], now)
+        summary["calls"] += res["calls"]
+        summary["errors"] += res["errors"]
+        summary["candidates"] += len(res["candidates"])
+        summary["explored"].append({"owner": owner, "channel": channel, "why": why, "scanned": res["scanned"],
+                                    "no_match": res["no_match"], "found": [c["title"] for c in res["candidates"]]})
+        if res["errors"] and not res["calls"] - len(res["errors"]):
+            continue  # nothing answered: not explored, retried next run
+        new[owner] = {"last": now.isoformat(timespec="seconds"),
+                      "listed": (prior + [c["ident"] for c in res["candidates"]])[-30:]}
+        if res["candidates"]:
+            q = next((r for r in ran if set(terms_by_q[r["theme"]]) & {m for c in res["candidates"] for m in c["matched"]}), ran[0])
+            selected.append({
+                "id": f"Team:{owner}", "wwox_question": q["gap"], "decision": q["decision"], "origin": q["origin"],
+                "roadmap": CATEGORY_ROADMAP.get(q["category"], "R9"), "keys": [f"team:{c['ident']}" for c in res["candidates"]],
+                "detail": f"{why}; other public work matching {sorted({m for c in res['candidates'] for m in c['matched']})}: " + "; ".join(
+                    f"[{channel}] {c['title']} ({c['when']}, {c['licence']}, matched {c['matched']}) {c['url']}" for c in res["candidates"]),
+                "contribution_vs_existing": f"one-level exploration of {owner}'s public listing ({res['scanned']} scanned, "
+                                            f"{res['no_match']} without a shared term); not recursive",
+                "estimated_cost": "reading the listing entries: minutes", "licence": "per item, shown where stated",
+                "proof": f"public {channel} listing of {owner}, no key", "use": "none proposed until examined",
+                "test": "read the repository's README and latest default-branch commit; record the SHA and release apart",
+                "outcome": "TO_TRIAGE (a listing match is a lead, not a reading)"})
+            events += [(f"team:{c['ident']}", "signal", "signalled", f"team-explore:{owner}") for c in res["candidates"]]
+    if len(new) > 200:
+        for key in sorted(new, key=lambda k: new[k].get("last", ""))[:len(new) - 150]:
+            del new[key]
+    return summary, selected, new, events
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     parser.add_argument("--append-log", action="store_true", help="move pending entries into the scout log")
@@ -1303,6 +1787,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--theme", help="with --discover-only: one theme id or 'all' (default: next in rotation)")
     parser.add_argument("--dry-run", action="store_true", help="with --discover-only: print, write nothing")
     parser.add_argument("--briefing", action="store_true", help="always print the briefing (default: only if non-empty)")
+    parser.add_argument("--plan", action="store_true", help="print today's derived plan (questions with origin) and exit")
     parser.add_argument("--follow-list", action="store_true", help="print the followed teams/repos and exit")
     parser.add_argument("--follow-add", metavar="TEAM/REPO", help="follow a public repo (needs --source --reason --reopen)")
     parser.add_argument("--source"), parser.add_argument("--reason"), parser.add_argument("--reopen")
@@ -1358,14 +1843,26 @@ def main(argv: list[str] | None = None) -> int:
     ctx = resolve_context(state.get("context"), now=now)
     known = known_idents(WATCH, follow, ctx)
     counter = CountingOpener(http)
+    plan, extracts, themes, din, per_run = plan_step(state, ctx, cfg, now)
+    if args.plan:
+        print(f"plan at main {str(plan.get('sha'))[:12]} digest {plan.get('digest')} cache {plan.get('cache')} "
+              f"provisional: {plan.get('provisional') or 'no'}")
+        for q in plan.get("questions", []):
+            print(f"  w{q['weight']} {q['id']} [{q['category']}] terms {q['terms']}\n      because {origin_line(q['origin'])}"
+                  f"\n      decision: {q['decision']}")
+        return 0
     if args.discover_only:
-        result, dstate = discover(state.get("discovery", {}), now=now, only=args.theme, pause=7, opener=counter, known=known,
-                                  per_run=cfg["questions_per_run"], open_slot=cfg["open_slot"] and not args.theme,
-                                  deep=cfg["version_checks"])
+        result, dstate = discover(din, themes, now=now, only=args.theme, pause=7, opener=counter, known=known,
+                                  per_run=per_run, open_slot=cfg["open_slot"] and not args.theme,
+                                  deep=cfg["version_checks"], owner_cap=cfg["explore"]["max_per_owner"])
         print(json.dumps(result, indent=1, ensure_ascii=False) if result else "already searched today")
         if result and not args.dry_run:
             entries = discovery_entries(result, now.isoformat())
-            ok, why = save_state(state_path, {"discovery": dstate, "context": ctx})
+            asked = state.get("plan_asked") or {}
+            if args.theme is None:
+                asked = record_asked(asked, result, themes, today)
+            ok, why = save_state(state_path, {"discovery": dstate, "context": ctx, "plan": plan, "extracts": extracts,
+                                              "plan_asked": asked})
             print("state saved" if ok else f"STATE SAVE FAILED: {why}")
             if ok and entries:
                 ok, why = save_text(directory / "scout_daily_pending_log.md",
@@ -1378,9 +1875,9 @@ def main(argv: list[str] | None = None) -> int:
                                   for p, f in ctx["files"].items()}
     trace_events: list[tuple] = []
     try:  # the search is additive: its failure must never hide the probes
-        result, new_state["discovery"] = discover(state.get("discovery", {}), now=now, opener=counter, known=known, pause=7,
-                                                  per_run=cfg["questions_per_run"], open_slot=cfg["open_slot"],
-                                                  deep=cfg["version_checks"])
+        result, new_state["discovery"] = discover(din, themes, now=now, opener=counter, known=known, pause=7,
+                                                  per_run=per_run, open_slot=cfg["open_slot"],
+                                                  deep=cfg["version_checks"], owner_cap=cfg["explore"]["max_per_owner"])
     except (ValueError, KeyError, TypeError, OSError) as exc:
         result, new_state["discovery"] = None, state.get("discovery", {})
         report["errors"].append(f"discovery: {exc}")
@@ -1390,7 +1887,18 @@ def main(argv: list[str] | None = None) -> int:
                                "items": [i for r in result["themes"] for i in r["items"]]}
         report["errors"] += [f"{c}: {e}" for c, v in result["channels"].items() for e in v["errors"]]
         report["selected"] += discovery_entries(result, report["run_at"])  # the search keeps its own seen-cache: no baseline
-        trace_events += [(k, "signal", "signalled") for r in result["themes"] for k in (i["key"] for i in r["items"])]
+        trace_events += [(i["key"], "signal", "signalled", f"question:{r['theme']}") for r in result["themes"] for i in r["items"]]
+    asked = record_asked(state.get("plan_asked") or {}, result, themes, today)
+    tsum, tsel, explored, tev = team_step(result, follow, state.get("explored") or {}, themes, known, cfg, counter, now)
+    report["teams"] = tsum
+    report["errors"] += [f"teams: {e}" for e in tsum["errors"]]
+    report["selected"] += tsel  # like the search, exploration keeps its own cache: no baseline gate
+    trace_events += tev
+    report["plan"] = {"sha": plan.get("sha"), "digest": plan.get("digest"), "cache": plan.get("cache"), "reread": plan.get("reread"),
+                      "questions": len(plan.get("questions", [])), "skipped": plan.get("skipped"),
+                      "provisional": plan.get("provisional") or [],
+                      "inputs": {p: v["blob"][:10] for p, v in plan.get("inputs", {}).items()},
+                      "fallback": not plan.get("questions")}
     deep_updates, deep_rows = [], []
     fcfg = cfg["follow"]
     for entry in follow_due(follow, now, fcfg["deep_check_days"], fcfg["deep_per_run"]):  # known projects: weekly
@@ -1410,7 +1918,7 @@ def main(argv: list[str] | None = None) -> int:
                     "estimated_cost": "reading the change: minutes", "licence": "see source", "roadmap": "R9",
                     "proof": f"https://github.com/{entry['repo']}", "outcome": "TO_TRIAGE (a detected change is not a reading)"}
             report["selected"].append(item)
-            trace_events.append((f"follow:{entry['repo']}:{fp['commit']}", "signal", "signalled"))
+            trace_events.append((f"follow:{entry['repo']}:{fp['commit']}", "signal", "signalled", f"follow:{entry['repo']}"))
     report["verdict"] = final_verdict(report)
     report["follow"] = {"active": sum(e["status"] == "active" for e in follow["entries"]), "deep_checked": deep_rows}
     report["http"] = counter.summary()
@@ -1423,12 +1931,13 @@ def main(argv: list[str] | None = None) -> int:
         return cur
 
     def trace_fn(cur):
-        for key, stage, st in trace_events:
-            trace_event(cur, key, stage, st, at=now.isoformat(timespec="seconds"))
+        for key, stage, st, via in trace_events:
+            trace_event(cur, key, stage, st, at=now.isoformat(timespec="seconds"), via=via)
         return cur
     persisted = {}
     ok, why = save_state(state_path, {"watch": new_state["watch"], "pubmed": new_state["pubmed"],
-                                      "discovery": new_state["discovery"], "context": ctx}, follow_fn, trace_fn)
+                                      "discovery": new_state["discovery"], "context": ctx, "plan": plan, "extracts": extracts,
+                                      "plan_asked": asked, "explored": explored}, follow_fn, trace_fn)
     persisted["state"] = "ok" if ok else why or "failed"
     report["errors"] += STATE_NOTES
     ok, why = save_text(directory / "scout_daily.json", json.dumps(report, indent=2, ensure_ascii=False) + "\n")
