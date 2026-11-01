@@ -854,7 +854,7 @@ class It15Integration(unittest.TestCase):
         rows = rk.read_tsv(HERE / "deepening_queue.tsv")
         self.assertTrue(rows)
         for r in rows:
-            self.assertIn(r["reconciliation"], {"ASSESSED_ELSEWHERE", "MENTIONED_ONLY", "NOT_ASSESSED_BEFORE"})
+            self.assertIn(r["reconciliation"], {"ASSESSED_ELSEWHERE", "MENTIONED_ONLY", "NO_CARD_OR_RECORD_FOUND"})
             self.assertEqual(bool(r["assessed_in"]), r["reconciliation"] == "ASSESSED_ELSEWHERE", r["display_group"])
             if r["reconciliation"] == "MENTIONED_ONLY":
                 self.assertTrue(r["mentioned_in"])

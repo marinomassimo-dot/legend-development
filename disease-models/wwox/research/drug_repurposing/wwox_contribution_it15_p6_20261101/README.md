@@ -10,7 +10,7 @@ For each question three paths over the same inputs: (1) simple target-action ret
 
 | Question | Simple target-action | WWOX-informed | Earlier path |
 |---|---|---|---|
-| Q-A NMDAR (partial benefit) | thousands of activity rows and several thousand parent compounds, only a small fraction named; same-document groups graded; most subunit pairs cannot be compared without conditions | four cases; a stated prediction with its upper-bound formula; a list of controls; the premise that the NMDAR gain is unmeasured kept visible | queue of 20 catalogue compounds chosen by a documented direction-consistent action; 4 were already assessed elsewhere and 5 only mentioned (reconciliation, P3.1) |
+| Q-A NMDAR (partial benefit) | thousands of activity rows and several thousand parent compounds, only a small fraction named; same-document groups graded; most subunit pairs cannot be compared without conditions | four cases; a stated prediction with its upper-bound formula; a list of controls; the premise that the NMDAR gain is unmeasured kept visible | queue of 34 catalogue compounds, 20 of them on the NMDAR need, chosen by a documented direction-consistent action; reconciliation (P3.1) found some already assessed or mentioned elsewhere (counts for the 20 and for the whole queue in `comparison_p6.tsv`) |
 | Q-B GSK3 (broader compensation) | several thousand GSK3B and GSK3A rows; isoform pairs exist, kinase panels are panels | abstention for any compound; one tool experiment with falsifiers and a Wnt-direction control | IT10 Q7: 50 names, all DIAGNOSTIC_ONLY; target-first adds 2 names, no therapeutic candidate |
 
 ## What the WWOX knowledge specifically contributed (and what it did not)
@@ -30,7 +30,7 @@ Not contributed by WWOX knowledge (it came from the new quantitative grading or 
 ## What this does and does not show
 
 * Coverage: the target-first path recovers what the catalogue queue holds and more (the queue entries all resolve in ChEMBL once the queue IDs are used; the producer's "not found" was a naming miss).
-* Matching quality: the grade prevents specific false links; counted above.
+* Matching quality: the grade prevents specific false links (listed above; the counts of grades are in `comparison_p6.tsv`, the false links avoided are named cases, not a rate).
 * Hypothesis generation: the WWOX-informed path produced two comparable case sets, each with a falsifier; the simple path produced tables.
 * Predictive accuracy: **not measured**. No independent outcome set exists for either question (no GluN2B-NAM or GSK3-inhibitor result in a WWOX preparation), so this is not a benchmark of efficacy and no case is a prediction that has been tested.
 * Biological benefit: none demonstrated.

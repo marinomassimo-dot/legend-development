@@ -3,16 +3,19 @@ Q-A	1 simple target-action	activity rows retrieved	14835
 Q-A	1 simple target-action	parent compounds with a row	9143	
 Q-A	1 simple target-action	named compounds	159	
 Q-A	1 simple target-action	censored rows kept apart	1901	
-Q-A	1 simple target-action	same-document groups graded INTERPRETABLE	496	grade assigned by selectivity_p6.py; counts are derived
+Q-A	1 simple target-action	same-document groups graded INTERPRETABLE	492	grade assigned by selectivity_p6.py; counts are derived
 Q-A	1 simple target-action	same-document groups graded LIMITED	153	grade assigned by selectivity_p6.py; counts are derived
-Q-A	1 simple target-action	same-document groups graded NOT_DETERMINABLE	396	grade assigned by selectivity_p6.py; counts are derived
+Q-A	1 simple target-action	same-document groups graded NOT_DETERMINABLE	392	grade assigned by selectivity_p6.py; counts are derived
 Q-A	1 simple target-action	same-document groups graded PANEL_NOT_SELECTIVITY	0	grade assigned by selectivity_p6.py; counts are derived
 Q-A	3 earlier queue	NMDAR entries in the deepening queue (rule: documented direction-consistent action on a need with WWOX observations)	20	
+Q-A	3 earlier queue	reconciliation ASSESSED_ELSEWHERE: whole queue / NMDAR entries	4 / 2	derived at run time from cards, qualification records and uncarded items (READMEs not searched)
+Q-A	3 earlier queue	reconciliation MENTIONED_ONLY: whole queue / NMDAR entries	5 / 4	derived at run time from cards, qualification records and uncarded items (READMEs not searched)
+Q-A	3 earlier queue	reconciliation NO_CARD_OR_RECORD_FOUND: whole queue / NMDAR entries	25 / 14	derived at run time from cards, qualification records and uncarded items (READMEs not searched)
 Q-A	2 WWOX-informed	cases deepened	4	known reference, hypothesis, different mechanism, discriminating control
 Q-B	1 simple target-action	activity rows retrieved (census table)	2384	
 Q-B	1 simple target-action	same-document groups graded INTERPRETABLE	3	
-Q-B	1 simple target-action	same-document groups graded LIMITED	30	
-Q-B	1 simple target-action	same-document groups graded NOT_DETERMINABLE	12	
-Q-B	1 simple target-action	same-document groups graded PANEL_NOT_SELECTIVITY	17	
+Q-B	1 simple target-action	same-document groups graded LIMITED	28	
+Q-B	1 simple target-action	same-document groups graded NOT_DETERMINABLE	15	
+Q-B	1 simple target-action	same-document groups graded PANEL_NOT_SELECTIVITY	14	
 Q-B	3 earlier generator	Q7 rows (direct search on GSK3B)	50	dispositions: {'DIAGNOSTIC_ONLY': 50}
 Q-B	2 WWOX-informed	cases deepened	4	reference, tool hypothesis, different mechanism, control

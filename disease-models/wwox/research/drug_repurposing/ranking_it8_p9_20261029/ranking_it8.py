@@ -1276,7 +1276,7 @@ def deepening_queue(inv: list[dict], ctx: dict, uni: dict | None = None) -> list
             continue
         assessed, mentioned = prior_assessments(g, sorted({r["name"] for r in rs}), ctx)
         q.append({"display_group": g, "names": sorted({r["name"] for r in rs}), "family_ids": sorted(r["family_id"] for r in rs), "needs": needs, "wwox_observations_on_best_need": wobs,
-                  "reconciliation": "ASSESSED_ELSEWHERE" if assessed else ("MENTIONED_ONLY" if mentioned else "NOT_ASSESSED_BEFORE"),
+                  "reconciliation": "ASSESSED_ELSEWHERE" if assessed else ("MENTIONED_ONLY" if mentioned else "NO_CARD_OR_RECORD_FOUND"),
                   "assessed_in": assessed, "mentioned_in": mentioned,
                   "status_class": st, "access_categories": acc or ["unknown/unverified"], "mnet_usable": any(r["mnet_usable"] == "yes" for r in rs),
                   "msig_neural": any(r["msig_neural_strict"] == "yes" for r in rs), "units": sorted({u for r in rs for u in r["units"]}),
@@ -1284,7 +1284,7 @@ def deepening_queue(inv: list[dict], ctx: dict, uni: dict | None = None) -> list
                   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; " + (
                       "the compound is already the named subject of an assessment listed in assessed_in, which is read before any new work" if assessed else
                       "the compound is named in the text of an existing item (mentioned_in) but was not itself assessed" if mentioned else
-                      "no WWOX-system result for this compound is known and no existing assessment names it")})
+                      "no WWOX-system result for this compound is known and no card, qualification record or uncarded item names it (module READMEs and reports were not searched)")})
     q.sort(key=lambda r: (-r["wwox_observations_on_best_need"], 0 if r["access_categories"] != ["unknown/unverified"] else 1, r["display_group"]))
     return q
 

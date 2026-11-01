@@ -1392,7 +1392,7 @@ class It6P13Data(unittest.TestCase):
         eleven = {"NEED-WWOX-GENE-ADDITION", "NEED-SEIZURE-CONTROL-SYMPTOMATIC", "NEED-T-TYPE-CALCIUM", "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR", "NEED-LACTATE-LDH", "NEED-PDH-PYRUVATE-AXIS",
                   "NEED-ISR-ATTENUATION", "NEED-MYC-PROGENITOR-PROLIFERATION", "NEED-SYSTEMIC-GLYCAEMIA-GROWTH", "NEED-MYELINATION", "NEED-WWOX-MISSENSE-PROTEIN-RESCUE"}
         self.assertEqual(len([l for l in sec.splitlines() if l.startswith("| ")]), 12)       # header and the eleven rows of the review's table
-        self.assertEqual(set(ids), eleven | {"NEED-NEUROINFLAMMATION-GLIA", "NEED-REDOX-NRF2", "NEED-INHIBITORY-HYPOFUNCTION"})      # NEED-REDOX-NRF2 added by IT10 P5; NEED-INHIBITORY-HYPOFUNCTION by IT14 P7
+        self.assertEqual(set(ids), eleven | {"NEED-NEUROINFLAMMATION-GLIA", "NEED-REDOX-NRF2", "NEED-INHIBITORY-HYPOFUNCTION", "NEED-GSK3B-DEREPRESSION"})      # NEED-REDOX-NRF2 added by IT10 P5; NEED-INHIBITORY-HYPOFUNCTION by IT14 P7; NEED-GSK3B-DEREPRESSION by IT15 P7
         self.assertEqual(self.mutated_wo(lambda d: None), [])
         by = {e["need"]: e for e in self.wo_doc["entries"]}
         for nid, upd in (("NEED-NEUROINFLAMMATION-GLIA", "P10"), ("NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR", "P11"), ("NEED-ISR-ATTENUATION", "P4"), ("NEED-WWOX-MISSENSE-PROTEIN-RESCUE", "P6"), ("NEED-WWOX-GENE-ADDITION", "P7")):
@@ -2181,7 +2181,7 @@ class DeepenedCases(unittest.TestCase):
         html = rv.render_deepened_cases([self.CASE])
         for lab in ("Composto e azione", "Sistema", "Evidenza WWOX", "Precedente esterno", "Misura farmacologica e suoi limiti", "Controevidenza", "Prossimo esperimento"):
             self.assertIn(lab, html)
-        self.assertIn("Sostenuto da una misura funzionale", html)
+        self.assertIn("Misura funzionale esistente", html)
         self.assertIn("Q &lt;b&gt;", html)            # escaped, never raw markup
         self.assertNotIn("<b>Q", html)
 

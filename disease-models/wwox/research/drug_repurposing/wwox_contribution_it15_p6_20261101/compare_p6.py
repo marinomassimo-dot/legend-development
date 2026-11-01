@@ -20,6 +20,8 @@ def main():
     gc = collections.Counter(r["grade"] for r in ga)
     for k in ("INTERPRETABLE", "LIMITED", "NOT_DETERMINABLE", "PANEL_NOT_SELECTIVITY"): add("Q-A", "1 simple target-action", f"same-document groups graded {k}", gc.get(k, 0), "grade assigned by selectivity_p6.py; counts are derived")
     add("Q-A", "3 earlier queue", "NMDAR entries in the deepening queue (rule: documented direction-consistent action on a need with WWOX observations)", sum(1 for r in q if "EXCITATORY" in r["needs"]))
+    rc = collections.Counter(r["reconciliation"] for r in q); rn = collections.Counter(r["reconciliation"] for r in q if "EXCITATORY" in r["needs"])
+    for k in sorted(rc): add("Q-A", "3 earlier queue", f"reconciliation {k}: whole queue / NMDAR entries", f"{rc[k]} / {rn.get(k, 0)}", "derived at run time from cards, qualification records and uncarded items (READMEs not searched)")
     add("Q-A", "2 WWOX-informed", "cases deepened", len(ca), "known reference, hypothesis, different mechanism, discriminating control")
     # Q-B
     rb = rd("target_first_it15_qb_gsk3_20261101/relations_qb.tsv"); gb = rd("target_first_it15_qb_gsk3_20261101/graded_comparisons_qb.tsv"); cb = rd("target_first_it15_qb_gsk3_20261101/cases_qb.tsv")

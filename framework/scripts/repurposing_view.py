@@ -3930,9 +3930,9 @@ def render_matching_pilot(cases: list[dict]) -> str:
 
 DEEPENED_LEVEL_IT = {
     "catalogued": ("Catalogato", "○", "il composto è solo nel catalogo, senza un legame documentato con un bisogno"),
-    "linked": ("Collegato", "◔", "azione documentata su un bersaglio legato a un bisogno; nessuna lettura quantitativa"),
+    "linked": ("Collegato", "◔", "azione documentata su un bersaglio legato a un bisogno; nessuna lettura quantitativa, o solo osservazioni cliniche non quantitative"),
     "deepened": ("Approfondito", "◑", "identità, azione e potenza quantitativa lette e graduate; nessuna misura funzionale in un sistema pertinente"),
-    "functional_measure": ("Sostenuto da una misura funzionale", "●", "esiste una misura funzionale in un sistema pertinente, indicato nel caso; non è una prova di beneficio"),
+    "functional_measure": ("Misura funzionale esistente", "●", "esiste una misura funzionale in un sistema pertinente, indicato nel caso; può essere non specifica o non distinguere i genotipi; non è una prova di beneficio"),
     "hypothetical": ("Ancora ipotetico", "◇", "ipotesi senza una misura per il passo specifico"),
 }
 

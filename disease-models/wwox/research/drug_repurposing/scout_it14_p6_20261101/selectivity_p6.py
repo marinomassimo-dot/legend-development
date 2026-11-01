@@ -16,7 +16,7 @@ but no longer lets that ratio stand for selectivity unless the comparison earns 
     no validity comment, no discordance above 10x inside a target), LIMITED (the ratio is shown with the reason that limits it: assay
     context not retained, formats differ, complex against component, discordant values, censored value, species), NOT_DETERMINABLE
     (fewer than two attributable targets remain, or a generic complex is the only measurement of a target) and PANEL_NOT_SELECTIVITY.
-    A ratio is computed only for INTERPRETABLE and LIMITED groups.
+    A ratio is computed for INTERPRETABLE groups and for LIMITED groups, except those limited because the techniques, the cell systems or the stimulus/holding voltage differ (no number is offered when the conditions differ).
 
 Optional assay context (assay_context.tsv next to this file: assay id, cell type, assay type, organism, description, validity comment, as
 the adapter in framework/adapters/chembl.py returns them) refines the grade; a missing field limits the comparison that depends on it and
@@ -28,9 +28,14 @@ H = os.path.dirname(os.path.abspath(__file__))
 TECH = ("patch", "clamp", "oocyte", "flipr", "efflux", "thallium", "flux", "binding", "displacement", "enzyme", "substrate")
 
 
+SUPERFAMILIES = {"SLC", "CYP", "ABC", "SULT", "UGT", "ALDH", "ADH", "PDE"}      # symbols whose first digit run names the family (SLC12A5 and SLC1A2 are unrelated transporters)
+
+
 def family(gene):
-    m = re.match(r"[A-Za-z]+", gene or "")
-    return m.group(0).upper() if m else ""
+    m = re.match(r"([A-Za-z]+)(\d*)", gene or "")
+    if not m:
+        return ""
+    return (m.group(1) + m.group(2)).upper() if m.group(1).upper() in SUPERFAMILIES else m.group(1).upper()
 
 
 def composition(gene, ttype=""):
@@ -58,6 +63,20 @@ def composition(gene, ttype=""):
 def techniques(desc):
     d = (desc or "").lower()
     return {t for t in TECH if t in d}
+
+
+def conditions(desc):
+    """Stimulus, holding voltage and agonist concentration as written in the assay description: 'followed by CaCl2 addition' gives {'cacl2'}, 'at -40 mV' gives {'-40mv'}."""
+    d = (desc or "").lower()
+    out = {x.replace(" ", "") for x in re.findall(r"(?:followed by|following|upon|after)\s+([a-z0-9]+)\s+addition", d)}
+    out |= {m.replace(" ", "") + "mv" for m in re.findall(r"(-?\d+)\s*mv", d)}
+    agon = r"(glycine|glutamate|nmda|gaba|d-serine|aspartate|agonist)"
+    out |= {(m[1] + m[0]).replace(" ", "").replace("\u00b5", "u") for m in re.findall(r"(\d+(?:\.\d+)?\s*[um\u00b5]?m)\s+" + agon, d)}
+    out |= {(m[0] + m[1]).replace(" ", "").replace("\u00b5", "u") for m in re.findall(agon + r"\s*(?:at|of|=)?\s*(\d+(?:\.\d+)?\s*[um\u00b5]m)", d)}
+    return out
+
+
+NO_RATIO_IF = ("techniques differ", "cell systems differ", "stimulus or holding voltage differs")
 
 
 def load_context():
@@ -126,6 +145,10 @@ def grade_group(obs, ctx):
             limited.append("cell systems differ: " + ", ".join(sorted(cells)))
         if tsets and not set.intersection(*tsets):
             limited.append("assay techniques differ (no shared technique among the descriptions)")
+        cset = [conditions(ctx[a]["description"]) for a in assays]
+        known = [c for c in cset if c]
+        if known and (len(known) < len(cset) or any(c != known[0] for c in known)):
+            limited.append("stimulus or holding voltage differs or is stated for only some of the assays")
         if any(ctx[a]["data_validity_comment"] for a in assays):
             limited.append("a validity comment is attached to at least one assay")
     elif not assays:
@@ -160,6 +183,9 @@ def main():
                 emit(f, k, obs, ctx, skip_if_undeterminable=bool(fam))
 
 
+SEEN = {}
+
+
 def emit(f, k, obs, ctx, skip_if_undeterminable=False):
     grade, reasons, by, comp, attr = grade_group(obs, ctx)
     if skip_if_undeterminable and grade == "NOT_DETERMINABLE":
@@ -171,12 +197,19 @@ def emit(f, k, obs, ctx, skip_if_undeterminable=False):
         extra = (f"; censored {'/'.join(d['cens'])}" if d["cens"] else "") + (f"; {d['novalue']} row(s) without value" if d["novalue"] else "")
         cells.append(f"{g} [{comp[g]}]={med} [n={len(d['vals'])}; {span}{extra}]")
     ratio, why = "", ""
-    if grade in ("INTERPRETABLE", "LIMITED"):
+    if grade == "LIMITED" and any(any(k in r for k in NO_RATIO_IF) for r in reasons):
+        why = "LIMITED: " + "; ".join(r for r in reasons if any(k in r for k in NO_RATIO_IF))      # the conditions differ, so no number is offered
+    elif grade in ("INTERPRETABLE", "LIMITED"):
         meds = sorted(statistics.median(by[g]["vals"]) for g in attr)
         ratio = f"{meds[-1] / meds[0]:.3g}" if meds[0] > 0 else ""
     else:
         why = grade
-    f.write("\t".join([k[0], k[1], k[2], k[3], str(len(by)), grade, " | ".join(reasons), "; ".join(cells)[:900], ratio, why]) + "\n")
+    row = [k[0], k[1], k[2], k[3], str(len(by)), grade, " | ".join(reasons), "; ".join(cells)[:900], ratio, why]
+    sig = (k[0], k[2], k[3], row[7], grade)
+    if sig in SEEN.setdefault(id(f), set()):
+        return     # a family row identical to its panel row adds nothing
+    SEEN[id(f)].add(sig)
+    f.write("\t".join(row) + "\n")
 
 
 if __name__ == "__main__":

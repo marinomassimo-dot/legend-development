@@ -154,9 +154,9 @@
       "steps": [
         {
           "step": "P7 propagate to needs, cards, triggers, queue, ranking (with per-movement reasons), view and shareable edition; licence check of exposed assets [depends on: P3, P4, P6]",
-          "status": "TODO",
+          "status": "DONE",
           "owner": "orchestrator",
-          "evidence": ""
+          "evidence": "uncarded N17-N18, triggers NP5A1-NP5B3, needs notes, work-order GSK3 entry and excitatory refinement, deepened cases view (full edition; count in shareable), ranking snapshot units_2026-11-01_fcf26935dec95d53 0 group moves, README sections, derived surfaces regenerated, shareable audit PASS; no third-party asset added (ChEMBL-derived tables carry CC BY-SA attribution in package READMEs)"
         }
       ]
     },
@@ -165,9 +165,9 @@
       "steps": [
         {
           "step": "P8 early targeted checks; different-actor review of decisive conclusions [depends on: P7]",
-          "status": "TODO",
+          "status": "DONE",
           "owner": "verifier",
-          "evidence": ""
+          "evidence": "hostile review review_it15 (0 blocking, 8 medium all corrected); verifications Q-A and Q-B changed results; targeted suites: view 160, join 91, coverage 64, adapter 30, selectivity 16, ranking 63, tool routing 7, section refs 13 all OK; lint WARN no BLOCK; growth anchors PASS"
         },
         {
           "step": "P8 freeze candidate, battery on exact SHA in a no-hardlink clone, gate, remote recheck, push, CI, cleanup [depends on: P8 review]",

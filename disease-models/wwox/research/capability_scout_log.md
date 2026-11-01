@@ -1674,3 +1674,11 @@ Perimeter: zero spend, key-less reads, no account, no contact, nothing installed
 **Proof.** Europe PMC / GitHub search, public endpoints, no key
 
 **Outcome.** CLOSED, context only (IT15 P4, 2026-11-01): PMID 42941930 = Int J Mol Sci 27(20):9160, CC BY, SH-SY5Y 13C-glucose NMR after respiratory-chain inhibitors, no WWOX perturbation; no method adopted, no receipt. See disease-models/wwox/research/drug_repurposing/radar_p4_it15_20261101/.
+
+## 2026-11-01 · IT15 close · capability gap record
+
+**Gap observed.** Comparing potencies across ChEMBL documents needed assay context (cell system, stimulus, agonist concentration, validity comment), which the REST service returns but was not retained by earlier tables, and the service returned HTTP 500 repeatedly for some molecules. A ChEMBL review document is graded as a single experiment by any document-level rule.
+
+**Change made.** The existing comparison script now grades and refuses a ratio when conditions differ; the regrade tool and 16 regressions were added; the queue reconciles against existing assessments.
+
+**CHANGE = NONE for resources.** ToolUniverse v1.5.8 (KEEP optional, no re-run), ChEMBL offline dump (WATCH, reopen on a gene-per-subunit need or two 5xx on a task-critical query in a day), UniChem bulk files (WATCH, terms unread), Papyrus (DISCARD for now), DTA-GNN (WATCH), SIMPATHIC and rd-explainer (DISCARD). See `drug_repurposing/scout_it15_p5_20261101/`.

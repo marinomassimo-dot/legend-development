@@ -81,6 +81,21 @@ class Grades(unittest.TestCase):
         self.assertEqual(gr, "LIMITED")
 
 
+class RealDescriptions(unittest.TestCase):
+    """The apinocaltamide Cav1.2 and Cav3.x assays (ChEMBL CHEMBL4181722 and CHEMBL4181719) differ in stimulus: KCl against CaCl2 re-addition."""
+
+    def test_different_stimulus_limits_and_offers_no_ratio(self):
+        c = ctx(A1={"description": "Inhibition of recombinant Cav3.1 expressed in HEK293 cells assessed as decrease in calcium flux preincubated for 3 mins followed by CaCl2 addition by Fluo-4-AM dye-based FLIPR assay"},
+                A2={"description": "Inhibition of recombinant Cav1.2 expressed in HEK293 cells assessed as decrease in calcium flux preincubated for 3 mins followed by KCl addition by Fluo-4-AM dye-based FLIPR assay"})
+        gr, why, by, comp, attr = grade([row("CACNA1G", 6.4, assay="A1"), row("CACNA1C", 2410, assay="A2")], c)
+        self.assertEqual(gr, "LIMITED")
+        self.assertTrue(any("stimulus" in w for w in why))
+
+    def test_unrelated_transporters_are_not_one_family(self):
+        self.assertNotEqual(sp.family("SLC1A2"), sp.family("SLC12A5"))
+        self.assertEqual(sp.family("GRIN2A"), sp.family("GRIN1"))
+
+
 class Composition(unittest.TestCase):
     def test_isoform_pair_is_a_group_not_a_complex(self):
         self.assertEqual(sp.composition("GSK3A|GSK3B"), "generic_complex")

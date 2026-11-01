@@ -12,7 +12,7 @@ Verifier: a separate agent (not the producer), 2026-11-01. Recorded here by the 
 
 ## What the module may and may not say (verifier's wording)
 
-May: both compounds are benzodiazepine-site positive modulators of alpha1, 2, 3 and 5 beta gamma2 receptors, EC50 about 0.1 to 1 uM; subtype selectivity is disputed across three primary papers that differ in species, system and readout; clobazam is an approved benzodiazepine-site drug and N-desmethylclobazam its main active metabolite (label facts); no GABAergic drug has been tested in any WWOX preparation; as an ex vivo probe it is a hypothesis of compensation of a measured inhibitory loss, conditional on E0 locating the deficit as receptor-limited.
+May: both compounds are benzodiazepine-site positive modulators of alpha1, 2, 3 and 5 beta gamma2 receptors, EC50 about 0.1 to 1 uM; subtype selectivity is disputed across three primary papers that differ in species, system and readout; clobazam is an approved benzodiazepine-site drug and N-desmethylclobazam its main active metabolite (label facts); no GABAergic drug has been tested in any WWOX preparation; as an ex vivo probe it is a hypothesis of compensation of a measured inhibitory loss, where the locus of the deficit (E0) changes how a result is read and not whether the arm can run (IT15 P1.3).
 
 May not: that subtype potency is unquantified or a 'selectivity gap' exists; that N-desmethylclobazam is alpha2-selective as an established fact; that inhibitory loss is the only KO-specific deficit or that HT inhibition is near wild type; that compensation of any kind, clinical benefit or a dose is established.
 
