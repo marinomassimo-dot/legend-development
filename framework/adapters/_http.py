@@ -119,7 +119,7 @@ def make_fetch(cache_dir: str | None = None, retries: int = 2, pause: float = 6.
 
     * Retry: a transport failure (status 0) or an HTTP 5xx is tried again at most `retries` times (`pause` seconds apart); a 4xx is an answer and is not
       retried. Every failed attempt is appended to `fetch.failures` ({url, http, attempt, text}); nothing is retried silently and nothing loops.
-    * Cache (only when `cache_dir` is given, an explicit path; nothing is written otherwise): only a successful (HTTP 200) response is stored, one JSON file
+    * Cache (only when `cache_dir` is given, an explicit path; nothing is written otherwise): only a successful (HTTP 200) response with a non-empty payload that is not a bare error envelope is stored, one JSON file
       per request keyed by SHA-256 of the full URL, body and parameters, with its own `retrieved_at`. An error, a 404 or an empty 'no result' answer for a
       query that failed is never stored, so a cache hit can never turn an error into 'no result'. The key does not contain the database release: use one
       directory per release, or delete it, to refresh. Rerunning a query after a failure fetches only the requests (pages, batches) that are not yet cached.
@@ -154,7 +154,7 @@ def make_fetch(cache_dir: str | None = None, retries: int = 2, pause: float = 6.
                 sleep(pause)
         else:
             stats["requests_ended_in_error"] += 1
-        if status == 200 and path and isinstance(payload, (dict, list)):
+        if status == 200 and path and isinstance(payload, (dict, list)) and payload and not (isinstance(payload, dict) and set(payload) <= {"error", "errors", "detail", "message"}):
             os.makedirs(cache_dir, exist_ok=True)
             tmp = path + ".part"
             with open(tmp, "w", encoding="utf-8") as fh:

@@ -17,6 +17,7 @@ Properties pinned:
 from __future__ import annotations
 
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -587,6 +588,20 @@ class ResilientTransport(ChemblActivities):
         self.assertEqual((h["molecule_chembl_id"], h["parent_molecule_chembl_id"], h["queried_is_salt_or_child"], h["mechanism_found_via"]), ("CHEMBL2", "CHEMBL1", True, "parent_filter"))
         self.assertTrue(any("parent_molecule_chembl_id=CHEMBL1" in u for u in out["requests_sent"]))
         self.assertFalse(any("activity.json" in u for u in out["requests_sent"]), "no activity row is borrowed from another molecule")
+
+
+class CacheRefusesEmptyAnd200Errors(unittest.TestCase):
+    def test_empty_or_error_envelope_200_is_not_cached(self):
+        h = load_http()
+        for payload in ({}, [], {"error": "rate limited"}, {"detail": "x", "message": "y"}):
+            with self.subTest(payload=payload), tempfile.TemporaryDirectory() as d:
+                calls = []
+                def get(url, params=None, body=None, timeout=20, _p=payload):
+                    calls.append(url); return 200, _p
+                f = h.make_fetch(cache_dir=d, get=get)
+                f("http://x/a"); f("http://x/a")
+                self.assertEqual(2, len(calls), "must be re-fetched, not served from cache")
+                self.assertEqual([], os.listdir(d))
 
 
 class StandingMethodIsReachable(unittest.TestCase):

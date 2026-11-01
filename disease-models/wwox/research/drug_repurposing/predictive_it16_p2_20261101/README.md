@@ -33,3 +33,5 @@ Non-canonical research material; not medical advice; computational, no benefit c
 
 ## Limit that restricts the claim
 Outcomes independent of the module do not exist for this task. The freeze and the scorer are in place: when a dated third-party WWOX-system perturbation result appears, `python3 -I predictive_it16_p2.py evaluate --outcomes <tsv>` scores the frozen selection against B0/B1 and refuses a claim below 5 independent origins (exit 2).
+
+> IT16 verification note (independent verifier, fresh context): the 7 tested units reproduce; the "about 4 independent controlled origins" are about 3 groups (the AAV9 and organoid papers share a laboratory); the A51 attribution (U10) is not confirmed by the abstract and is treated as a non-outcome; the p-value restates the ranking rule together with tested status. A publication-date query from the freeze finds one WOREE case series (PMID 42721537, not a perturbation). The conclusion stands.
