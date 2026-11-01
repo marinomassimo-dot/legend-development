@@ -608,6 +608,27 @@ class TargetIdentityRegressions(unittest.TestCase):
 
 
 class Detector(Fixture):
+    def test_contradicted_chembl_action_is_flagged_only_for_its_molecule_and_action(self):
+        """IT18 P2: alfuzosin carried as AGONIST by ChEMBL (and by DGIdb's ChEMBL claims) while the cited label says antagonist."""
+        rules = [{"claim_source": "ChEMBL", "symbol": "*", "rule": "action_contradicted_by_cited_reference:CHEMBL1723:AGONIST", "evidence": "label 12.1"}]
+        salt = entry("CAT:CHEMBL1723", "ALFUZOSIN HYDROCHLORIDE", parent="CAT:CHEMBL709",
+                     targets=[chembl_t("ADRA1A", "AGONIST"), dg_t2("hgnc:277", "ADRA1A", "agonist", "ChEMBL"),
+                              dg_t2("hgnc:277", "ADRA1A", "inhibitor", "GuideToPharmacology")])
+        r = [rs.artefact_reason(salt, t, rules) for t in salt["targets"]]
+        self.assertTrue(r[0] and r[0].startswith("source_artefact") and "CHEMBL1723" in r[0])
+        self.assertTrue(r[1] and r[1].startswith("source_artefact"))
+        self.assertIsNone(r[2])                                                   # GtoPdb's antagonist row keeps its direction
+        self.assertEqual(rs.exclusion_class(r[0]), "source_artefact")
+        child = entry("CAT:CHEMBLX", "SALT", targets=[dict(chembl_t("ADRA1A", "AGONIST"), inherited_from_parent="CHEMBL1723")])
+        self.assertIsNotNone(rs.artefact_reason(child, child["targets"][0], rules))   # inherited mechanism: same row, same verdict
+        other = entry("CAT:CHEMBL1", "PHENYLEPHRINE", targets=[chembl_t("ADRA1A", "AGONIST")])
+        self.assertIsNone(rs.artefact_reason(other, other["targets"][0], rules))     # a genuine agonist is untouched
+        anta = entry("CAT:CHEMBL1723", "ALFUZOSIN HYDROCHLORIDE", targets=[chembl_t("ADRA1A", "ANTAGONIST")])
+        self.assertIsNone(rs.artefact_reason(anta, anta["targets"][0], rules))       # a corrected source stops matching the rule
+        real = [x for x in rs.load_artefacts() if x["rule"].startswith("action_contradicted_by_cited_reference:CHEMBL1723:")]
+        self.assertEqual(len(real), 1)
+        self.assertIsNotNone(rs.artefact_reason(salt, salt["targets"][0], real))
+
     def test_generic_alphabetical_prefix_expansion_is_flagged_and_a_lone_early_gene_is_not(self):
         idx, _ = self.idx()
         e = next(x for x in self.entries if x["id"] == "CAT:DGIDB:exp")
@@ -750,7 +771,8 @@ class RealFiles(unittest.TestCase):
                 if not a["excluded_from_counts"]:
                     self.assertIn(a["identity_state"], ("source_ids_checked_confirmed", "source_ids_checked_corrected"))
         art = rs.load_artefacts()
-        self.assertEqual({(a["claim_source"], a["rule"].split(":")[0]) for a in art}, {("*", "alias_risk")})   # symbol rules for GtoPdb are gone
+        self.assertEqual({(a["claim_source"], a["rule"].split(":")[0]) for a in art},
+                         {("*", "alias_risk"), ("ChEMBL", "action_contradicted_by_cited_reference")})   # symbol rules for GtoPdb are gone; IT18 P2 molecule rule
         per = self.base["summary"]["needs"]["per_need"]
         for nid, v in per.items():
             self.assertIn("excluded_records_by_reason", v, nid)

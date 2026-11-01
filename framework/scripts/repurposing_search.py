@@ -77,11 +77,34 @@ def early_alphabet_genes(entries: list[dict], top: float) -> set[str]:
     return set(syms[: int(len(syms) * top) + 1])
 
 
+def contradicted_action(e: dict, t: dict, rules: list[dict]) -> str | None:
+    """A ChEMBL-sourced action on this record that a source_artefacts.tsv rule marks as contradicted at its cited source, or None."""
+    chembl_row = t["source"] == "ChEMBL curated mechanism"
+    if not chembl_row and not (t["source"] == "DGIdb interaction" and t.get("claim_source") == "ChEMBL"):
+        return None
+    raw = (t.get("action_type") if chembl_row else t.get("interaction_type")) or ""
+    mols = {(e.get("ids") or {}).get("chembl"), t.get("inherited_from_parent")} - {None}
+    for r in rules:
+        if r["claim_source"] != "ChEMBL" or not r["rule"].startswith("action_contradicted_by_cited_reference:"):
+            continue
+        _, mol, act = r["rule"].split(":", 2)
+        if mol in mols and raw.strip().upper() == act.upper():
+            return (f"source_artefact: ChEMBL action {act} on {mol} is contradicted by the reference the mechanism cites "
+                    f"({r['evidence']}); direction not used (source_artefacts.tsv)")
+    return None
+
+
 def artefact_reason(e: dict, t: dict, rules: list[dict], early: dict | None = None) -> str | None:
     """Why a catalogue target row must not count as a link, or None.
     require_second_source: the DGIdb row from `claim_source` on `symbol` stands alone (no other source on that gene for this record).
     alias_risk:<PARTNER>: a DGIdb row on `symbol` while the same record carries PARTNER and no ChEMBL row on `symbol`
-    (upstream alias confusion such as PDK1/PDPK1); kept as an unresolved row, not a link."""
+    (upstream alias confusion such as PDK1/PDPK1); kept as an unresolved row, not a link.
+    action_contradicted_by_cited_reference:<CHEMBL_ID>:<ACTION> (claim_source ChEMBL): a ChEMBL action on that molecule, as the
+    curated mechanism or as a DGIdb claim from ChEMBL, that the reference the mechanism itself cites contradicts; the row stays
+    visible, its direction is not used (IT18 P2: alfuzosin carried as AGONIST, label section 12.1 says antagonist)."""
+    reason = contradicted_action(e, t, rules)
+    if reason:
+        return reason
     if t["source"] != "DGIdb interaction":
         return None
     ident = t.get("identity") or {}
