@@ -1181,6 +1181,50 @@ def inventory(ctx: dict, cat: dict, uni: dict) -> tuple[list[dict], dict]:
     return out, summary
 
 
+def _name_tokens(display_group: str, names: list[str]) -> list[str]:
+    """Aliases of one queue entry for a whole-word search: the display group and every member name with salt words removed; at least six characters."""
+    out = {display_group_key(display_group)} | {display_group_key(n) for n in names}
+    return sorted(t for t in out if len(t) >= 6)
+
+
+def _card_file_text(c: dict) -> str:
+    """The card file itself: the view payload keeps only some of its fields, and a class card names its member drugs in the ones it drops."""
+    for base in (DR / "view", DR):
+        f = (base / (c.get("card_path") or "x")).resolve()
+        if c.get("card_path") and f.is_file():
+            return f.read_text(encoding="utf-8", errors="ignore")
+    return ""
+
+
+def prior_assessments(display_group: str, names: list[str], ctx: dict) -> tuple[list[str], list[str]]:
+    """IT15 P3.1: has this compound already been the NAMED subject of an assessment (a card whose name or identity line carries it, a qualification record,
+    an iteration record, an uncarded item), or is it only mentioned in the text of one? The queue's own `units` column cannot say so, because a class
+    card or a record is not a unit member. Derived at run time from the inputs already loaded; there is no manual list. A name that is a substring of
+    another word does not count (whole-word search)."""
+    toks = _name_tokens(display_group, names)
+    if not toks:
+        return [], []
+    pats = [re.compile(r"(?<![a-z0-9])" + re.escape(t).replace(r"\ ", r"[\s-]?") + r"(?![a-z0-9])") for t in toks]
+    hit = lambda text: any(p.search((text or "").lower()) for p in pats)
+    named, text_only = [], []
+    for cid, c in sorted(ctx["cands"].items()):
+        if hit(c.get("name")) or hit(c.get("identity")):
+            named.append("card:" + cid)
+        elif hit(json.dumps({k: v for k, v in c.items() if k not in ("name", "identity")}, ensure_ascii=False, default=str)) or hit(_card_file_text(c)):
+            text_only.append("card:" + cid)
+    for cid, rec in sorted((ctx.get("qualification_all") or {}).items()):
+        if hit(rec.get("name")):
+            named.append("record:" + cid)
+        elif hit(rec.get("datum")):
+            text_only.append("record:" + cid)
+    for u in ctx.get("uncarded") or []:
+        if hit(u.get("item")):
+            named.append("uncarded:" + u["item_id"])
+        elif hit(u.get("reason")):
+            text_only.append("uncarded:" + u["item_id"])
+    return sorted(set(named)), sorted(set(text_only))
+
+
 def deepening_queue(inv: list[dict], ctx: dict, uni: dict | None = None) -> list[dict]:
     """Where to deepen first: Q1 families (target listed, direction-consistent action, no opposed action anywhere) that a person could in principle obtain
     (an approved or marketed status, or an access category that is not 'unknown/unverified'), on a need that has WWOX-system observations.
@@ -1200,11 +1244,17 @@ def deepening_queue(inv: list[dict], ctx: dict, uni: dict | None = None) -> list
         approved = "approved_any_source" in st
         if wobs == 0 or not (approved or acc):
             continue
+        assessed, mentioned = prior_assessments(g, sorted({r["name"] for r in rs}), ctx)
         q.append({"display_group": g, "names": sorted({r["name"] for r in rs}), "family_ids": sorted(r["family_id"] for r in rs), "needs": needs, "wwox_observations_on_best_need": wobs,
+                  "reconciliation": "ASSESSED_ELSEWHERE" if assessed else ("MENTIONED_ONLY" if mentioned else "NOT_ASSESSED_BEFORE"),
+                  "assessed_in": assessed, "mentioned_in": mentioned,
                   "status_class": st, "access_categories": acc or ["unknown/unverified"], "mnet_usable": any(r["mnet_usable"] == "yes" for r in rs),
                   "msig_neural": any(r["msig_neural_strict"] == "yes" for r in rs), "units": sorted({u for r in rs for u in r["units"]}),
                   "shares_need_with_units": sorted({u["unit_id"] for u in (uni or {"units": []})["units"] if u["class"] != "EXCL" for p in u["pathways"] if p["need"] in needs}),
-                  "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX"})
+                  "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; " + (
+                      "the compound is already the named subject of an assessment listed in assessed_in, which is read before any new work" if assessed else
+                      "the compound is named in the text of an existing item (mentioned_in) but was not itself assessed" if mentioned else
+                      "no WWOX-system result for this compound is known and no existing assessment names it")})
     q.sort(key=lambda r: (-r["wwox_observations_on_best_need"], 0 if r["access_categories"] != ["unknown/unverified"] else 1, r["display_group"]))
     return q
 
@@ -1500,8 +1550,8 @@ def build_all() -> dict[str, bytes]:
                 "needs_direction_consistent", "needs_opposed", "mnet_usable", "msig_neural_strict", "msig_any_context", "units", "name_twins_not_merged", "display_group", "display_group_size", "reason"]
     files["inventory_families.tsv.gz"] = gz_bytes(tsv_bytes(inv, inv_cols))
     qrows = [{"display_group": q["display_group"], "names": q["names"], "family_ids": q["family_ids"], "needs": q["needs"], "wwox_observations_on_best_need": q["wwox_observations_on_best_need"],
-              "status_class": q["status_class"], "access_categories": q["access_categories"], "mnet_usable": q["mnet_usable"], "msig_neural": q["msig_neural"], "units": q["units"], "shares_need_with_units": q["shares_need_with_units"], "why": q["why"]} for q in queue]
-    files["deepening_queue.tsv"] = tsv_bytes(qrows, ["display_group", "names", "family_ids", "needs", "wwox_observations_on_best_need", "status_class", "access_categories", "mnet_usable", "msig_neural", "units", "shares_need_with_units", "why"])
+              "status_class": q["status_class"], "access_categories": q["access_categories"], "mnet_usable": q["mnet_usable"], "msig_neural": q["msig_neural"], "units": q["units"], "shares_need_with_units": q["shares_need_with_units"], "reconciliation": q["reconciliation"], "assessed_in": q["assessed_in"], "mentioned_in": q["mentioned_in"], "why": q["why"]} for q in queue]
+    files["deepening_queue.tsv"] = tsv_bytes(qrows, ["display_group", "names", "family_ids", "needs", "wwox_observations_on_best_need", "status_class", "access_categories", "mnet_usable", "msig_neural", "units", "shares_need_with_units", "reconciliation", "assessed_in", "mentioned_in", "why"])
     ing = {"summary": summary, "units": uni["units"], "selection_table": srows, "deepening_queue_head": queue[:40], "uncarded": unc, "it9_records": uni["it9_records"], "it10_records": uni["it10_records"], "it11_records": uni["it11_records"],
            "matching_pilot": matching_pilot(uni["units"], None, unc)}
     files["ranking.json"] = json_bytes(ing)

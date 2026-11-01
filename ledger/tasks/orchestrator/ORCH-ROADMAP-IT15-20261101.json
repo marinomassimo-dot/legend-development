@@ -1,0 +1,187 @@
+{
+  "_schema": "task record, Annex A.1c",
+  "TASK_ID": "ORCH-ROADMAP-IT15-20261101",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "HIGH",
+  "OBJECTIVE": "Iteration 15 (ten-hour horizon): systematic discovery from need to catalogue, comparable quantitative pharmacology, measured growth of the module. Keep open recovery of WWOX function, compensation of its loss, and functionally useful partial benefit. Distinguish retrieved / verified / generated / WWOX-specific contribution / demonstrated capability / conditional on physical experiments. A computational result is not therapeutic efficacy.",
+  "START_UTC": "2026-11-01T07:25:00Z",
+  "BASELINE": "development/main = local main = 7528750ecf17644c8951b53bdd8cede303e83552 (fetched 2026-11-01 08:25 Europe/Rome); IT14 CI success; one worktree; radar run 05:20 UTC without errors (ToolUniverse v1.5.7->v1.5.8; PMID 42941930 signal); hourly mandate watch and daily push check in crontab (no new automation).",
+  "DECISIONS_TAKEN": [],
+  "DEFAULTS_TAKEN": [],
+  "STOP_LOG": [],
+  "AUTHORISED_QUEUE_20261101B": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_P0_BASELINE": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "P0 baseline: fetch, SHA, worktree, CI, radar and continuity check; IT15 worktree",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "fetch 2026-11-01 08:25 Europe/Rome: local=development/main=7528750e; clean; one worktree; CI success; radar and mandate watch present in crontab; worktree it15"
+        }
+      ]
+    },
+    "OBJ_P1_ACTIVE_CONSUMERS": {
+      "order": 2,
+      "steps": [
+        {
+          "step": "P1.1 README current-state pointer (derive, do not hard-code an iteration) and denominators reconciled from data",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "README pointer now says the section marked CURRENT (no iteration number); view denominator sentence reworded (entries, not drugs); regressions in test_ranking_it8 It15Integration"
+        },
+        {
+          "step": "P1.2 classify consumers of the '1.3-2.5x' value; correct active data at source; regenerate derivatives",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "stale 1.3-2.5 value replaced at source in ladder, cases, experiment_arms and README body of function_pharm_it14_p3; correction note kept; derivatives regenerated"
+        },
+        {
+          "step": "P1.3 weigh experimental-condition requirements against primary methods; correct only demonstrated over-inferences [depends on: P1.2]",
+          "status": "DONE",
+          "owner": "scientist",
+          "evidence": "README section 12 of function_pharm_it14_p3: six conditions re-weighed; locus/subtype no longer preconditions; F-I/Rin reported not excluded; E0 gains mIPSC in TTX; abstract-level methods support (PMID 1707966, 18691332)"
+        }
+      ]
+    },
+    "OBJ_P2_PHARMACOLOGY": {
+      "order": 3,
+      "steps": [
+        {
+          "step": "P2.1 targeted audit of quantitative comparisons used by consumers (assay/document/complex/condition/relation)",
+          "status": "DONE",
+          "owner": "scientist",
+          "evidence": "pharmacology_compare_it15_p2 field audit; assay context fetched for apinocaltamide and ezogabine; ChEMBL HTTP 500 for Ro 25-6981 and ethosuximide on three attempts"
+        },
+        {
+          "step": "P2.2 minimal change in the existing path (label, assay id, row separation) with before/after example [depends on: P2.1]",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "selectivity_p6.py extended in place: grades, medians, censored listed, panel vs selectivity, complex classes"
+        },
+        {
+          "step": "P2.3 four contrasting real cases + regressions, three existing fixtures preserved [depends on: P2.2]",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "test_selectivity_p6.py 11 tests; before_after.tsv four real cases"
+        }
+      ]
+    },
+    "OBJ_P3_TARGET_FIRST": {
+      "order": 4,
+      "steps": [
+        {
+          "step": "P3.1 reconcile the generated deep-dive queue (aliases, existing assessments, why-included) in the current path",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "deepening_queue gains reconciliation columns derived at run time: 4 ASSESSED_ELSEWHERE, 5 MENTIONED_ONLY, rest not assessed before (derived, not pinned)"
+        },
+        {
+          "step": "P3.2 two complementary questions pre-declared before extraction (partial benefit; broader recovery/compensation) [depends on: P3.1]",
+          "status": "TODO",
+          "owner": "scientist",
+          "evidence": ""
+        },
+        {
+          "step": "P3.3 target-first search with effective perimeter, chains, parent/metabolite/stereoisomer, counter-evidence [depends on: P3.2]",
+          "status": "TODO",
+          "owner": "scientist",
+          "evidence": ""
+        },
+        {
+          "step": "P3.4 contrasting cases; what each adds over known literature; emergent hypothesis and why neighbours were left [depends on: P3.3]",
+          "status": "TODO",
+          "owner": "scientist",
+          "evidence": ""
+        },
+        {
+          "step": "P3 independent verification (premises, quantitative reading, identity/action, candidate, negatives that change the queue) [depends on: P3.4]",
+          "status": "TODO",
+          "owner": "verifier",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_P4_RADAR_SIGNAL": {
+      "order": 5,
+      "steps": [
+        {
+          "step": "P4 identity/access/content of PMID 42941930 and usability check; read with receipt only if useful",
+          "status": "DONE",
+          "owner": "scientist",
+          "evidence": "radar_p4_it15: PMID 42941930 = IJMS 27(20):9160, CC BY, SH-SY5Y 13C-NMR after respiratory inhibitors, not WWOX; context only; no receipt"
+        },
+        {
+          "step": "P4 second executable strand from documented reopen conditions (public data decision) [depends on: P4 signal]",
+          "status": "DONE",
+          "owner": "scientist",
+          "evidence": "radar_p4_it15 strand B: all data-conditioned triggers re-tested at source, none changed; GEO scan 303 series none new; motivated exclusion"
+        }
+      ]
+    },
+    "OBJ_P5_SCOUT": {
+      "order": 6,
+      "steps": [
+        {
+          "step": "P5 ToolUniverse v1.5.7->v1.5.8 on primary source; isolated free trial only if a concrete question exists [depends on: P2-P4 gaps]",
+          "status": "DONE",
+          "owner": "scientist",
+          "evidence": "scout_it15_p5: v1.5.7->v1.5.8 delta is protein design/model providers/label fixes, no mapped gap; no trial justified"
+        },
+        {
+          "step": "P5 GitHub/HF/primary-literature scouting beyond the word WWOX; KEEP/WATCH/DISCARD with reopen conditions",
+          "status": "DONE",
+          "owner": "scientist",
+          "evidence": "scout_it15_p5 decisions: 6 candidates KEEP/WATCH/DISCARD with reopen conditions"
+        }
+      ]
+    },
+    "OBJ_P6_WWOX_CONTRIBUTION": {
+      "order": 7,
+      "steps": [
+        {
+          "step": "P6 comparable inputs: simple target-action vs WWOX-enriched (vs network generator if it represents the question); what is and is not shown [depends on: P3.4]",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_P7_PROPAGATION": {
+      "order": 8,
+      "steps": [
+        {
+          "step": "P7 propagate to needs, cards, triggers, queue, ranking (with per-movement reasons), view and shareable edition; licence check of exposed assets [depends on: P3, P4, P6]",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_P8_CLOSE": {
+      "order": 9,
+      "steps": [
+        {
+          "step": "P8 early targeted checks; different-actor review of decisive conclusions [depends on: P7]",
+          "status": "TODO",
+          "owner": "verifier",
+          "evidence": ""
+        },
+        {
+          "step": "P8 freeze candidate, battery on exact SHA in a no-hardlink clone, gate, remote recheck, push, CI, cleanup [depends on: P8 review]",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        },
+        {
+          "step": "Final report (four opening answers, A-J, stop criterion) [depends on: P8 close]",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    }
+  }
+}

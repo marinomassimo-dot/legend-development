@@ -4,11 +4,13 @@
    "access_categories": [
     "prescription"
    ],
+   "assessed_in": [],
    "display_group": "acamprosate",
    "family_ids": [
     "FAM:CAT:CHEMBL1201293",
     "FAM:CAT:DGIDB:d4a136aae03c"
    ],
+   "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": true,
    "names": [
@@ -18,6 +20,7 @@
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
    ],
+   "reconciliation": "NOT_ASSESSED_BEFORE",
    "shares_need_with_units": [
     "U21",
     "U27"
@@ -26,17 +29,21 @@
     "approved_any_source"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no existing assessment names it",
    "wwox_observations_on_best_need": 7
   },
   {
    "access_categories": [
     "prescription"
    ],
+   "assessed_in": [],
    "display_group": "amantadine",
    "family_ids": [
     "FAM:CAT:CHEMBL1569",
     "FAM:CAT:DGIDB:50a16e084956"
+   ],
+   "mentioned_in": [
+    "card:F04_nmdar_intervention_class"
    ],
    "mnet_usable": true,
    "msig_neural": true,
@@ -47,6 +54,7 @@
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
    ],
+   "reconciliation": "MENTIONED_ONLY",
    "shares_need_with_units": [
     "U21",
     "U27"
@@ -55,18 +63,20 @@
     "approved_any_source"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; the compound is named in the text of an existing item (mentioned_in) but was not itself assessed",
    "wwox_observations_on_best_need": 7
   },
   {
    "access_categories": [
     "experimental"
    ],
+   "assessed_in": [],
    "display_group": "av 101",
    "family_ids": [
     "FAM:CAT:CHEMBL3545351",
     "FAM:CAT:DGIDB:d34fc2e86617"
    ],
+   "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
@@ -76,6 +86,7 @@
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
    ],
+   "reconciliation": "NOT_ASSESSED_BEFORE",
    "shares_need_with_units": [
     "U21",
     "U27"
@@ -85,17 +96,19 @@
     "no_status_statement"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no existing assessment names it",
    "wwox_observations_on_best_need": 7
   },
   {
    "access_categories": [
     "experimental"
    ],
+   "assessed_in": [],
    "display_group": "azd8108",
    "family_ids": [
     "FAM:CAT:CHEMBL3707355"
    ],
+   "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
@@ -104,6 +117,7 @@
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
    ],
+   "reconciliation": "NOT_ASSESSED_BEFORE",
    "shares_need_with_units": [
     "U21",
     "U27"
@@ -112,18 +126,20 @@
     "clinical_candidate"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no existing assessment names it",
    "wwox_observations_on_best_need": 7
   },
   {
    "access_categories": [
     "experimental"
    ],
+   "assessed_in": [],
    "display_group": "delucemine",
    "family_ids": [
     "FAM:CAT:CHEMBL2106165",
     "FAM:CAT:DGIDB:c3bb8a601e8c"
    ],
+   "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
@@ -133,6 +149,7 @@
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
    ],
+   "reconciliation": "NOT_ASSESSED_BEFORE",
    "shares_need_with_units": [
     "U21",
     "U27"
@@ -143,7 +160,7 @@
     "phase_unknown"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no existing assessment names it",
    "wwox_observations_on_best_need": 7
   },
   {
@@ -152,10 +169,14 @@
     "experimental",
     "prescription"
    ],
+   "assessed_in": [],
    "display_group": "dextromethorphan",
    "family_ids": [
     "FAM:CAT:CHEMBL1201461",
     "FAM:CAT:DGIDB:255ce6a4a3eb"
+   ],
+   "mentioned_in": [
+    "card:F04_nmdar_intervention_class"
    ],
    "mnet_usable": true,
    "msig_neural": true,
@@ -166,6 +187,7 @@
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
    ],
+   "reconciliation": "MENTIONED_ONLY",
    "shares_need_with_units": [
     "U21",
     "U27"
@@ -176,18 +198,20 @@
     "phase_unknown"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; the compound is named in the text of an existing item (mentioned_in) but was not itself assessed",
    "wwox_observations_on_best_need": 7
   },
   {
    "access_categories": [
     "experimental"
    ],
+   "assessed_in": [],
    "display_group": "evt 101",
    "family_ids": [
     "FAM:CAT:CHEMBL3545349",
     "FAM:CAT:DGIDB:12763ab6f922"
    ],
+   "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
@@ -197,6 +221,7 @@
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
    ],
+   "reconciliation": "NOT_ASSESSED_BEFORE",
    "shares_need_with_units": [
     "U21",
     "U27"
@@ -206,17 +231,23 @@
     "no_status_statement"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no existing assessment names it",
    "wwox_observations_on_best_need": 7
   },
   {
    "access_categories": [
     "prescription"
    ],
+   "assessed_in": [
+    "record:P3-17"
+   ],
    "display_group": "felbamate",
    "family_ids": [
     "FAM:CAT:CHEMBL1094",
     "FAM:CAT:DGIDB:0c06b5be21bb"
+   ],
+   "mentioned_in": [
+    "card:F04_nmdar_intervention_class"
    ],
    "mnet_usable": true,
    "msig_neural": true,
@@ -227,6 +258,7 @@
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
    ],
+   "reconciliation": "ASSESSED_ELSEWHERE",
    "shares_need_with_units": [
     "U21",
     "U27"
@@ -235,17 +267,19 @@
     "approved_any_source"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; the compound is already the named subject of an assessment listed in assessed_in, which is read before any new work",
    "wwox_observations_on_best_need": 7
   },
   {
    "access_categories": [
     "experimental"
    ],
+   "assessed_in": [],
    "display_group": "gw468816",
    "family_ids": [
     "FAM:CAT:CHEMBL1207366"
    ],
+   "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
@@ -254,6 +288,7 @@
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
    ],
+   "reconciliation": "NOT_ASSESSED_BEFORE",
    "shares_need_with_units": [
     "U21",
     "U27"
@@ -262,17 +297,19 @@
     "clinical_candidate"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no existing assessment names it",
    "wwox_observations_on_best_need": 7
   },
   {
    "access_categories": [
     "experimental"
    ],
+   "assessed_in": [],
    "display_group": "indantadol",
    "family_ids": [
     "FAM:CAT:CHEMBL3707400"
    ],
+   "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
@@ -281,6 +318,7 @@
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
    ],
+   "reconciliation": "NOT_ASSESSED_BEFORE",
    "shares_need_with_units": [
     "U21",
     "U27"
@@ -289,17 +327,21 @@
     "clinical_candidate"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no existing assessment names it",
    "wwox_observations_on_best_need": 7
   },
   {
    "access_categories": [
     "prescription"
    ],
+   "assessed_in": [],
    "display_group": "ketamine",
    "family_ids": [
     "FAM:CAT:CHEMBL1714",
     "FAM:CAT:DGIDB:80196c332448"
+   ],
+   "mentioned_in": [
+    "card:F04_nmdar_intervention_class"
    ],
    "mnet_usable": true,
    "msig_neural": false,
@@ -310,6 +352,7 @@
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
    ],
+   "reconciliation": "MENTIONED_ONLY",
    "shares_need_with_units": [
     "U21",
     "U27"
@@ -318,18 +361,20 @@
     "approved_any_source"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; the compound is named in the text of an existing item (mentioned_in) but was not itself assessed",
    "wwox_observations_on_best_need": 7
   },
   {
    "access_categories": [
     "experimental"
    ],
+   "assessed_in": [],
    "display_group": "lanicemine",
    "family_ids": [
     "FAM:CAT:CHEMBL467084",
     "FAM:CAT:DGIDB:ad3e4f19b28e"
    ],
+   "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
@@ -339,6 +384,7 @@
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
    ],
+   "reconciliation": "NOT_ASSESSED_BEFORE",
    "shares_need_with_units": [
     "U21",
     "U27"
@@ -348,18 +394,20 @@
     "no_status_statement"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no existing assessment names it",
    "wwox_observations_on_best_need": 7
   },
   {
    "access_categories": [
     "experimental"
    ],
+   "assessed_in": [],
    "display_group": "neramexane",
    "family_ids": [
     "FAM:CAT:CHEMBL2106798",
     "FAM:CAT:DGIDB:bc4c80984e38"
    ],
+   "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
@@ -369,6 +417,7 @@
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
    ],
+   "reconciliation": "NOT_ASSESSED_BEFORE",
    "shares_need_with_units": [
     "U21",
     "U27"
@@ -378,18 +427,20 @@
     "no_status_statement"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no existing assessment names it",
    "wwox_observations_on_best_need": 7
   },
   {
    "access_categories": [
     "prescription"
    ],
+   "assessed_in": [],
    "display_group": "orphenadrine",
    "family_ids": [
     "FAM:CAT:CHEMBL1200395",
     "FAM:CAT:DGIDB:49ec8aa9cde9"
    ],
+   "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": true,
    "names": [
@@ -399,6 +450,7 @@
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
    ],
+   "reconciliation": "NOT_ASSESSED_BEFORE",
    "shares_need_with_units": [
     "U21",
     "U27"
@@ -407,18 +459,20 @@
     "approved_any_source"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no existing assessment names it",
    "wwox_observations_on_best_need": 7
   },
   {
    "access_categories": [
     "experimental"
    ],
+   "assessed_in": [],
    "display_group": "perzinfotel",
    "family_ids": [
     "FAM:CAT:CHEMBL452461",
     "FAM:CAT:DGIDB:16efa988f8ef"
    ],
+   "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
@@ -428,6 +482,7 @@
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
    ],
+   "reconciliation": "NOT_ASSESSED_BEFORE",
    "shares_need_with_units": [
     "U21",
     "U27"
@@ -437,17 +492,19 @@
     "no_status_statement"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no existing assessment names it",
    "wwox_observations_on_best_need": 7
   },
   {
    "access_categories": [
     "experimental"
    ],
+   "assessed_in": [],
    "display_group": "ralfinamide",
    "family_ids": [
     "FAM:CAT:CHEMBL2107771"
    ],
+   "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
@@ -456,6 +513,7 @@
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
    ],
+   "reconciliation": "NOT_ASSESSED_BEFORE",
    "shares_need_with_units": [
     "U21",
     "U27"
@@ -464,18 +522,20 @@
     "clinical_candidate"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no existing assessment names it",
    "wwox_observations_on_best_need": 7
   },
   {
    "access_categories": [
     "experimental"
    ],
+   "assessed_in": [],
    "display_group": "rislenemdaz",
    "family_ids": [
     "FAM:CAT:CHEMBL2068839",
     "FAM:CAT:DGIDB:f7b5eb49f754"
    ],
+   "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
@@ -485,6 +545,7 @@
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
    ],
+   "reconciliation": "NOT_ASSESSED_BEFORE",
    "shares_need_with_units": [
     "U21",
     "U27"
@@ -494,17 +555,21 @@
     "no_status_statement"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no existing assessment names it",
    "wwox_observations_on_best_need": 7
   },
   {
    "access_categories": [
     "experimental"
    ],
+   "assessed_in": [],
    "display_group": "traxoprodil",
    "family_ids": [
     "FAM:CAT:CHEMBL17350",
     "FAM:CAT:DGIDB:375a5f9081f2"
+   ],
+   "mentioned_in": [
+    "card:F04_nmdar_intervention_class"
    ],
    "mnet_usable": true,
    "msig_neural": false,
@@ -515,6 +580,7 @@
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
    ],
+   "reconciliation": "MENTIONED_ONLY",
    "shares_need_with_units": [
     "U21",
     "U27"
@@ -525,17 +591,19 @@
     "phase_unknown"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; the compound is named in the text of an existing item (mentioned_in) but was not itself assessed",
    "wwox_observations_on_best_need": 7
   },
   {
    "access_categories": [
     "unknown/unverified"
    ],
+   "assessed_in": [],
    "display_group": "esketamine",
    "family_ids": [
     "FAM:CAT:DGIDB:9c85048f5868"
    ],
+   "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
@@ -544,6 +612,7 @@
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
    ],
+   "reconciliation": "NOT_ASSESSED_BEFORE",
    "shares_need_with_units": [
     "U21",
     "U27"
@@ -552,16 +621,24 @@
     "approved_any_source"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no existing assessment names it",
    "wwox_observations_on_best_need": 7
   },
   {
    "access_categories": [
     "unknown/unverified"
    ],
+   "assessed_in": [
+    "card:F01_glutamate_receptor_node",
+    "record:P3-18"
+   ],
    "display_group": "memantine",
    "family_ids": [
     "FAM:CAT:DGIDB:d87959cfb914"
+   ],
+   "mentioned_in": [
+    "card:F04_nmdar_intervention_class",
+    "card:P11_magnesium_nmdar_gate"
    ],
    "mnet_usable": true,
    "msig_neural": false,
@@ -571,6 +648,7 @@
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
    ],
+   "reconciliation": "ASSESSED_ELSEWHERE",
    "shares_need_with_units": [
     "U21",
     "U27"
@@ -579,16 +657,26 @@
     "approved_any_source"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; the compound is already the named subject of an assessment listed in assessed_in, which is read before any new work",
    "wwox_observations_on_best_need": 7
   },
   {
    "access_categories": [
     "unknown/unverified"
    ],
+   "assessed_in": [
+    "card:EB-VGB-01",
+    "card:H02_gabaat_inactivator_myelin_exposure"
+   ],
    "display_group": "vigabatrin",
    "family_ids": [
     "FAM:CAT:DGIDB:358b8a817686"
+   ],
+   "mentioned_in": [
+    "card:EB-CBD-AX-01",
+    "card:EB-DEV-AX-01",
+    "card:EB-HORM-AX-01",
+    "card:I01_pdk_inhibition_dca_premise_seizure_glycaemia"
    ],
    "mnet_usable": true,
    "msig_neural": false,
@@ -598,6 +686,7 @@
    "needs": [
     "NEED-SEIZURE-CONTROL-SYMPTOMATIC"
    ],
+   "reconciliation": "ASSESSED_ELSEWHERE",
    "shares_need_with_units": [
     "U14",
     "U15",
@@ -612,18 +701,20 @@
     "approved_any_source"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; the compound is already the named subject of an assessment listed in assessed_in, which is read before any new work",
    "wwox_observations_on_best_need": 3
   },
   {
    "access_categories": [
     "experimental"
    ],
+   "assessed_in": [],
    "display_group": "abt 639",
    "family_ids": [
     "FAM:CAT:CHEMBL3590674",
     "FAM:CAT:DGIDB:651044756fbb"
    ],
+   "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
@@ -633,6 +724,7 @@
    "needs": [
     "NEED-T-TYPE-CALCIUM"
    ],
+   "reconciliation": "NOT_ASSESSED_BEFORE",
    "shares_need_with_units": [
     "U17",
     "U25"
@@ -642,17 +734,21 @@
     "no_status_statement"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no existing assessment names it",
    "wwox_observations_on_best_need": 1
   },
   {
    "access_categories": [
     "prescription"
    ],
+   "assessed_in": [],
    "display_group": "methsuximide",
    "family_ids": [
     "FAM:CAT:CHEMBL697",
     "FAM:CAT:DGIDB:82d11eef5cb3"
+   ],
+   "mentioned_in": [
+    "card:H01_apinocaltamide_ttype"
    ],
    "mnet_usable": true,
    "msig_neural": false,
@@ -663,6 +759,7 @@
    "needs": [
     "NEED-T-TYPE-CALCIUM"
    ],
+   "reconciliation": "MENTIONED_ONLY",
    "shares_need_with_units": [
     "U17",
     "U25"
@@ -671,18 +768,20 @@
     "approved_any_source"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; the compound is named in the text of an existing item (mentioned_in) but was not itself assessed",
    "wwox_observations_on_best_need": 1
   },
   {
    "access_categories": [
     "experimental"
    ],
+   "assessed_in": [],
    "display_group": "phloroglucinol",
    "family_ids": [
     "FAM:CAT:CHEMBL473159",
     "FAM:CAT:DGIDB:19749060be64"
    ],
+   "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
@@ -692,6 +791,7 @@
    "needs": [
     "NEED-T-TYPE-CALCIUM"
    ],
+   "reconciliation": "NOT_ASSESSED_BEFORE",
    "shares_need_with_units": [
     "U17",
     "U25"
@@ -701,17 +801,19 @@
     "clinical_candidate"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no existing assessment names it",
    "wwox_observations_on_best_need": 1
   },
   {
    "access_categories": [
     "experimental"
    ],
+   "assessed_in": [],
    "display_group": "ulixacaltamide",
    "family_ids": [
     "FAM:CAT:CHEMBL3934636"
    ],
+   "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
@@ -720,6 +822,7 @@
    "needs": [
     "NEED-T-TYPE-CALCIUM"
    ],
+   "reconciliation": "NOT_ASSESSED_BEFORE",
    "shares_need_with_units": [
     "U17",
     "U25"
@@ -729,18 +832,20 @@
     "no_status_statement"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no existing assessment names it",
    "wwox_observations_on_best_need": 1
   },
   {
    "access_categories": [
     "unknown/unverified"
    ],
+   "assessed_in": [],
    "display_group": "bepridil",
    "family_ids": [
     "FAM:CAT:CHEMBL1008",
     "FAM:CAT:DGIDB:df7564f65e1c"
    ],
+   "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": true,
    "names": [
@@ -750,6 +855,7 @@
    "needs": [
     "NEED-T-TYPE-CALCIUM"
    ],
+   "reconciliation": "NOT_ASSESSED_BEFORE",
    "shares_need_with_units": [
     "U17",
     "U25"
@@ -758,16 +864,23 @@
     "approved_any_source"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no existing assessment names it",
    "wwox_observations_on_best_need": 1
   },
   {
    "access_categories": [
     "unknown/unverified"
    ],
+   "assessed_in": [
+    "card:EB-ETX-01",
+    "card:H01_apinocaltamide_ttype"
+   ],
    "display_group": "ethosuximide",
    "family_ids": [
     "FAM:CAT:DGIDB:6998a1a2d947"
+   ],
+   "mentioned_in": [
+    "card:G01_lithium_gsk3"
    ],
    "mnet_usable": true,
    "msig_neural": false,
@@ -777,6 +890,7 @@
    "needs": [
     "NEED-T-TYPE-CALCIUM"
    ],
+   "reconciliation": "ASSESSED_ELSEWHERE",
    "shares_need_with_units": [
     "U17",
     "U25"
@@ -785,19 +899,21 @@
     "approved_any_source"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; the compound is already the named subject of an assessment listed in assessed_in, which is read before any new work",
    "wwox_observations_on_best_need": 1
   },
   {
    "access_categories": [
     "unknown/unverified"
    ],
+   "assessed_in": [],
    "display_group": "mibefradil",
    "family_ids": [
     "FAM:CAT:CHEMBL1534525",
     "FAM:CAT:DGIDB:21ee9b970f92",
     "FAM:CAT:DGIDB:2c9c9be867db"
    ],
+   "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": true,
    "names": [
@@ -808,6 +924,7 @@
    "needs": [
     "NEED-T-TYPE-CALCIUM"
    ],
+   "reconciliation": "NOT_ASSESSED_BEFORE",
    "shares_need_with_units": [
     "U17",
     "U25"
@@ -817,18 +934,20 @@
     "no_status_statement"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no existing assessment names it",
    "wwox_observations_on_best_need": 1
   },
   {
    "access_categories": [
     "unknown/unverified"
    ],
+   "assessed_in": [],
    "display_group": "paramethadione",
    "family_ids": [
     "FAM:CAT:CHEMBL1100",
     "FAM:CAT:DGIDB:389fa6870ff8"
    ],
+   "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
@@ -838,6 +957,7 @@
    "needs": [
     "NEED-T-TYPE-CALCIUM"
    ],
+   "reconciliation": "NOT_ASSESSED_BEFORE",
    "shares_need_with_units": [
     "U17",
     "U25"
@@ -846,18 +966,20 @@
     "approved_any_source"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no existing assessment names it",
    "wwox_observations_on_best_need": 1
   },
   {
    "access_categories": [
     "unknown/unverified"
    ],
+   "assessed_in": [],
    "display_group": "phensuximide",
    "family_ids": [
     "FAM:CAT:CHEMBL797",
     "FAM:CAT:DGIDB:e157e3677373"
    ],
+   "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
@@ -867,6 +989,7 @@
    "needs": [
     "NEED-T-TYPE-CALCIUM"
    ],
+   "reconciliation": "NOT_ASSESSED_BEFORE",
    "shares_need_with_units": [
     "U17",
     "U25"
@@ -875,17 +998,19 @@
     "approved_any_source"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no existing assessment names it",
    "wwox_observations_on_best_need": 1
   },
   {
    "access_categories": [
     "unknown/unverified"
    ],
+   "assessed_in": [],
    "display_group": "pimozide",
    "family_ids": [
     "FAM:CAT:DGIDB:be7af74855ee"
    ],
+   "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
@@ -894,6 +1019,7 @@
    "needs": [
     "NEED-T-TYPE-CALCIUM"
    ],
+   "reconciliation": "NOT_ASSESSED_BEFORE",
    "shares_need_with_units": [
     "U17",
     "U25"
@@ -902,18 +1028,20 @@
     "approved_any_source"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no existing assessment names it",
    "wwox_observations_on_best_need": 1
   },
   {
    "access_categories": [
     "unknown/unverified"
    ],
+   "assessed_in": [],
    "display_group": "suloctidil",
    "family_ids": [
     "FAM:CAT:CHEMBL404849",
     "FAM:CAT:DGIDB:6abc18fc4ac1"
    ],
+   "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": true,
    "names": [
@@ -923,6 +1051,7 @@
    "needs": [
     "NEED-T-TYPE-CALCIUM"
    ],
+   "reconciliation": "NOT_ASSESSED_BEFORE",
    "shares_need_with_units": [
     "U17",
     "U25"
@@ -931,18 +1060,20 @@
     "approved_any_source"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no existing assessment names it",
    "wwox_observations_on_best_need": 1
   },
   {
    "access_categories": [
     "unknown/unverified"
    ],
+   "assessed_in": [],
    "display_group": "terodiline",
    "family_ids": [
     "FAM:CAT:CHEMBL363295",
     "FAM:CAT:DGIDB:5626675dc6fe"
    ],
+   "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
@@ -952,6 +1083,7 @@
    "needs": [
     "NEED-T-TYPE-CALCIUM"
    ],
+   "reconciliation": "NOT_ASSESSED_BEFORE",
    "shares_need_with_units": [
     "U17",
     "U25"
@@ -960,18 +1092,20 @@
     "approved_any_source"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no existing assessment names it",
    "wwox_observations_on_best_need": 1
   },
   {
    "access_categories": [
     "unknown/unverified"
    ],
+   "assessed_in": [],
    "display_group": "trimethadione",
    "family_ids": [
     "FAM:CAT:CHEMBL695",
     "FAM:CAT:DGIDB:8e01cef4cadd"
    ],
+   "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
@@ -981,6 +1115,7 @@
    "needs": [
     "NEED-T-TYPE-CALCIUM"
    ],
+   "reconciliation": "NOT_ASSESSED_BEFORE",
    "shares_need_with_units": [
     "U17",
     "U25"
@@ -989,7 +1124,7 @@
     "approved_any_source"
    ],
    "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; nothing else is known about this compound in WWOX",
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no existing assessment names it",
    "wwox_observations_on_best_need": 1
   }
  ],
@@ -2724,11 +2859,11 @@
    "coverage_generated_from": {
     "assertion_pertinence.tsv": "9d699d1c6e9b73ee",
     "card_links.json": "2aac19ca3b0b7686",
-    "cards_and_packets": "663070f73dbd60f9",
+    "cards_and_packets": "5dc1ccc62d9a8b6a",
     "catalog.jsonl.gz": "75652786013b931d",
     "catalog_stats.json": "87ac308ce3ab9b3f",
     "measure_next.json": "bca46967510475c5",
-    "needs.json": "9bce3b95b5dc1fca",
+    "needs.json": "12287ec47895d0df",
     "source_artefacts.tsv": "222f20137c020b58",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
@@ -3484,7 +3619,7 @@
    "reason": "A function-first probe-level hypothesis of IT14 P3, not carded. Generated by the largest knockout-specific effect stated in Breton 2021 (sIPSC amplitude about -52 percent in layer II/III pyramidal cells of the neuron-deleted neocortical slice); inferred: that the loss is receptor-limited rather than release-limited and that a potentiator can restore enough charge (the knockout amplitude is about 48 percent of control and in recombinant receptors the metabolite's maximal potentiation is 143 to 253 percent of the GABA response at EC10 in rat HEK293 cells and 203 to 270 percent at EC20 in human oocytes, readouts that are not directly comparable). Counter-evidence and limits: heterozygote-versus-wild-type inhibition is not reported and the heterozygote bursts in 4 of 23 slices; excitatory-gain and intrinsic (input resistance, sag) readings stay live; sIPSC was recorded with a KCl internal solution; subtype selectivity of both agents is disputed across three primary papers (efficacy ratio alpha2/alpha1 of the metabolite 1.77 in rat HEK293 cells, a comparison that confounds the alpha subtype with the beta subunit (alpha1beta2gamma2 against alpha2beta3gamma2); non-selective in human oocytes, modest alpha2 affinity preference in binding); no GABAergic drug has been tested in any WWOX preparation. Identity: ChEMBL CHEMBL70418 (clobazam) and CHEMBL2260842 (N-desmethylclobazam, listed as NOR-CLOBAZAM); label and exposure facts are not carried here; ex vivo probe use only, no systemic or paediatric claim and no dose.",
    "related_unit": "",
    "source_pointers": "function_pharm_it14_p3_20261101/README.md and cases_it14_p3.tsv (H1); function_pharm_verify_it14_p3v_20261101/README.md",
-   "what_would_reopen": "E0 of the P3 design locating the deficit as receptor-limited, or heterozygote-versus-wild-type sIPSC data, or a same-system subtype comparison (reopen triggers NP3P1 to NP3P3)"
+   "what_would_reopen": "not a precondition for a class-level ex vivo arm; E0 locus data, heterozygote-versus-wild-type sIPSC data or a same-system subtype comparison change how a result is attributed (triggers NP3P1 to NP3P3)"
   }
  ],
  "units": [
@@ -3615,7 +3750,7 @@
    ],
    "exploratory_it7": "None. Not in the P3 universe (card-linked families were firewalled out of every method) and P3 tested a transcript module, not protein fate. P2: a class with a catalogued target row only for HDAC at enzyme level; no chaperone target row in ChEMBL, GtoPdb or DGIdb.",
    "inputs": {
-    "T1_cards": "8541e7b22b1cec18",
+    "T1_cards": "40fda56b2028b446",
     "T2_pertinence": "91e62b924fe30a2a",
     "T3_receipts": "52149a4b03e76932",
     "T4_needs": "9ae567485b16c45c",
@@ -3913,7 +4048,7 @@
    ],
    "exploratory_it7": "None; outside the P3 universe and not a transcript question.",
    "inputs": {
-    "T1_cards": "fe071a6d17c5c17b",
+    "T1_cards": "db6fb11b05fe1693",
     "T2_pertinence": "a99cbab9e0538513",
     "T3_receipts": "f65f2005fcac34e1",
     "T4_needs": "9ae567485b16c45c",
@@ -4166,7 +4301,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "06d55cc330051297",
+    "T1_cards": "a0052489a5352723",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "51d892749172e3bd",
     "T4_needs": "9ae567485b16c45c",
@@ -4397,7 +4532,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "e3b4861cb0226b29",
+    "T1_cards": "a6bdc598ad809f24",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d1a40a526bc95810",
     "T4_needs": "9ae567485b16c45c",
@@ -4627,7 +4762,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "98d3c80e30c59488",
+    "T1_cards": "bb397eaa5ce7f637",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d1a40a526bc95810",
     "T4_needs": "9ae567485b16c45c",
@@ -4893,7 +5028,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "3111aea8bf695a8d",
+    "T1_cards": "585019194ffb66b3",
     "T2_pertinence": "e8ab801c472fdfe7",
     "T3_receipts": "0efa01184c6ba643",
     "T4_needs": "aa528d3f09f497b0",
@@ -5247,7 +5382,7 @@
    ],
    "exploratory_it7": "None. Gene addition is not a compound question; P2 counts it as direction-evaluable by target only (zero signed records on the need target) and P3 did not touch it.",
    "inputs": {
-    "T1_cards": "91f58196b653a920",
+    "T1_cards": "7cb8c36472e4ebd6",
     "T2_pertinence": "59d15d3c06233d6c",
     "T3_receipts": "176ed80b5dd247b1",
     "T4_needs": "82b439e35fc80b6c",
@@ -5635,7 +5770,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "08060659a38d013f",
+    "T1_cards": "cbfba8def4fea2f5",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "4c5d7ee4b7cf4a15",
     "T4_needs": "66cebf15a40b040e",
@@ -5866,7 +6001,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "7b7d3f72e2c2247a",
+    "T1_cards": "b7eb3059e59565de",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "ad1b95286f64b04c",
     "T4_needs": "10a1be2af4314710",
@@ -6108,7 +6243,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "90fb71f7c602a1e6",
+    "T1_cards": "ab6aaa864e9edd17",
     "T2_pertinence": "8e52657c67b7cf9d",
     "T3_receipts": "9704e0c37800b5d7",
     "T4_needs": "b1224f7ee3d5a2f3",
@@ -6455,7 +6590,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "f43829eec47c9e21",
+    "T1_cards": "33716768ba7c27f5",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "dc01c05508dcbf56",
     "T4_needs": "55ff62f47762bab4",
@@ -6736,7 +6871,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "d68d3f7d5920698f",
+    "T1_cards": "128fb4bb5e43736e",
     "T2_pertinence": "079230f81c69cb2e",
     "T3_receipts": "293d407faa57bb47",
     "T4_needs": "932744721b4c9f86",
@@ -7025,7 +7160,7 @@
    ],
    "exploratory_it7": "P3 (IT7, exploratory, minimum detectable effect about rho 0.15, independently verified): NO ADDED VALUE of a signed external network (rho 0.047) or a WWOX-enriched network (difference -0.0015) for ranking compounds by opposition of the six-gene module; the signature route is effect not detected, not excluded (rho 0.143, 0.007 under the 0.15 threshold, 90 pe…",
    "inputs": {
-    "T1_cards": "4dbf10f59ac5cbf7",
+    "T1_cards": "776fbbc8d64537af",
     "T2_pertinence": "1959a04e90dbf178",
     "T3_receipts": "5c83e6a18e12f4d3",
     "T4_needs": "a3face7aa0d2e275",
@@ -7422,7 +7557,7 @@
    ],
    "exploratory_it7": "P3 (IT7, exploratory, independently verified): the same result as CMP-04 - network routes NO ADDED VALUE, signature route not detected and not excluded (weak positive counter-evidence: lower bound 0.039, top-decile hit rate 15 percent); module transfer inconclusive (null 95th percentile 0.389 and p 0.060 on the producer's draw, 0.396 and 0.0595 on the verif…",
    "inputs": {
-    "T1_cards": "6928bffd216a9458",
+    "T1_cards": "53a7464fda1dacbe",
     "T2_pertinence": "4f588d870d868008",
     "T3_receipts": "b410a77ea4345508",
     "T4_needs": "709e9155ba014a61",
@@ -7837,7 +7972,7 @@
    ],
    "exploratory_it7": "None. A diet has no compound target row, so neither P2 method applies, and the P3 negative says nothing about it.",
    "inputs": {
-    "T1_cards": "82c78bb0faf496fd",
+    "T1_cards": "036230f962baec0b",
     "T2_pertinence": "d95f7e8dcd00a63d",
     "T3_receipts": "892bcad601ce6d84",
     "T4_needs": "e7b1a58338e49f76",
@@ -8160,7 +8295,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "127c78ef30be1e16",
+    "T1_cards": "7d35696da1bcd73b",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d2e53556d365e6a4",
     "T4_needs": "77086341166ba9e5",
@@ -8462,7 +8597,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "d93b50061267cece",
+    "T1_cards": "469fc4d79ed04956",
     "T2_pertinence": "8b0a047e9ce40434",
     "T3_receipts": "fed069ad0e0c5861",
     "T4_needs": "70142e30938ab222",
@@ -8811,7 +8946,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "8b1aa5b1844cb51b",
+    "T1_cards": "18996fd91eb4a155",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d2e53556d365e6a4",
     "T4_needs": "77086341166ba9e5",
@@ -9059,7 +9194,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "d26742b32c3a46e7",
+    "T1_cards": "657c86669e912276",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "004bf101de3feb3f",
     "T4_needs": "e47c99263fff82cc",
@@ -9377,7 +9512,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "2012c1a2b2483cb8",
+    "T1_cards": "57776cb7e780b44b",
     "T2_pertinence": "094cb2bb03ecb864",
     "T3_receipts": "1c1753a4fefb0130",
     "T4_needs": "617f5352aa056a74",
@@ -9898,7 +10033,7 @@
    ],
    "exploratory_it7": "None from P3 (a receptor-physiology question, not a transcript module; memantine and perampanel are card-linked and firewalled). P2: memantine and perampanel are usable by the network method (signed antagonist actions on GRIN and GRIA targets) and have no neural LINCS signature, so the signature method does not apply; the need has 179 linked records by targ…",
    "inputs": {
-    "T1_cards": "aa82db6bc44328c2",
+    "T1_cards": "cb18892e6b5c2883",
     "T2_pertinence": "4744af9e5e721d31",
     "T3_receipts": "533fe34f5749cb80",
     "T4_needs": "8b70e11618e87937",
@@ -10348,7 +10483,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "d3ea4063f1daef25",
+    "T1_cards": "246f33e210da36e6",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "849c77d59629c2f4",
     "T4_needs": "05755b043796c572",
@@ -10599,7 +10734,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "42eb8415fd75b5d1",
+    "T1_cards": "b7fa89495d2f7e4c",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "a729e52b13cb13ec",
     "T4_needs": "6607eb58bf62a894",
@@ -10926,7 +11061,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "0a7f60ca8eaacc19",
+    "T1_cards": "ef91e99aa13b57e1",
     "T2_pertinence": "db0343ccb25dda32",
     "T3_receipts": "1e81e393df77743b",
     "T4_needs": "99f7c86d7134370b",
@@ -11278,7 +11413,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "73fc4bba6de209eb",
+    "T1_cards": "4208fb423e91e91d",
     "T2_pertinence": "904f40dca9a2c7f5",
     "T3_receipts": "e631cecfdfb7956c",
     "T4_needs": "70142e30938ab222",
@@ -11613,7 +11748,7 @@
    ],
    "exploratory_it7": "None from P3 (not the glycolysis module). P2: the need is exploration-only (direction uncertain) with 521 linked records by target association, 331 usable by the network method and 4 neural-signature records among them; association only, no direction toward a need, nothing evaluated.",
    "inputs": {
-    "T1_cards": "b10a1a02a0f1734c",
+    "T1_cards": "f216fb2246577436",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "b8cf46990840f474",
     "T4_needs": "34001ad580d89a15",
@@ -11910,7 +12045,7 @@
    ],
    "exploratory_it7": "None. An ion has no signed target row for the network method and no neural LINCS perturbation; the P3 negative does not apply.",
    "inputs": {
-    "T1_cards": "dab53d9b98846ee4",
+    "T1_cards": "308164eb62cabdff",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "679405f21efb5aa3",
     "T4_needs": "8b70e11618e87937",
@@ -12239,7 +12374,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "e0390963f60516fd",
+    "T1_cards": "6b1123e9d7740ab8",
     "T2_pertinence": "419afd58578b735f",
     "T3_receipts": "426c49feed3ec7e7",
     "T4_needs": "bbaa10de8747dfa1",
@@ -12568,7 +12703,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "730659484b2be591",
+    "T1_cards": "608532338aa3959b",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d2e53556d365e6a4",
     "T4_needs": "77086341166ba9e5",
@@ -12730,7 +12865,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "496c8eb68a497fef",
+    "T1_cards": "9f4668f7e3dd8818",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "c3c30203aefa55c6",
     "T4_needs": "c156cede56e9ac9b",
@@ -12890,7 +13025,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "3b7e5abab5ca3a2f",
+    "T1_cards": "c2e5d0c18fece107",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "c124efeb8d5edb82",
     "T4_needs": "97e5657152aa720b",
@@ -13082,7 +13217,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "eacd1a3d0adb25db",
+    "T1_cards": "77bb6fb828cb4b06",
     "T2_pertinence": "1d8e37b50e10f4e0",
     "T3_receipts": "2d4c21c2c119e3b6",
     "T4_needs": "2fa442aa63e75191",
@@ -13537,7 +13672,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "686e3bbca1c68ab0",
+    "T1_cards": "861b6d11fbcc6bc0",
     "T2_pertinence": "403956ddfaf8ef49",
     "T3_receipts": "026d7c8fa392ad46",
     "T4_needs": "e3d9478eddf1541c",

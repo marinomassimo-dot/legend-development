@@ -1,0 +1,10 @@
+trigger	condition_as_documented	test_2026-11-01	result	changed
+NP3A1 (functional_it13_p3a)	eight snRNA SRA experiments leave hup; or library/animal index deposited	efetch SRX9206272; esummary status; ENA read_run PRJNA666185/666183	SRA error "not public", status hup; ENA empty	no
+NP3B2 (recoverable_it13_p3b)	E-MTAB-14792 becomes public	BioStudies API	Study not accessible	no
+census C2 / MTBLS12344	fly head metabolomics released	MetaboLights ws	401 no permission	no
+NP1B1/NP1B2 (modifiers_it12_p1b)	second HAP1 clone, neural isogenic screen, new deposit	GEO gds WWOX query, 303 series, newest neural = GSE158681-85 (known)	no new series; none after 2026-10-15	no
+NP3B1 (recoverable_it13_p3b)	compound arm with Ca2+/MEA readout in WWOX-deficient human neural culture	GEO scan + PubMed radar (no new PMIDs)	none found; title-level only	no
+NP1B3 (modifiers_it12_p1b)	operator-run DepMap bulk download, licence read	not executed (operator-run by definition)	condition not a data change	no
+NP1B4 (modifiers_it12_p1b)	ChEMBL REST returns normal response	GET status.json, molecule/CHEMBL25.json	HTTP 500 both	no
+radar Discovery:residual-function-chaperone	BRAT1 paper PMID 42930560	title-level only	other gene; not read; no module trigger	no
+radar Discovery:pdh-assay	PMID 42941930	this package	context only, closed	no

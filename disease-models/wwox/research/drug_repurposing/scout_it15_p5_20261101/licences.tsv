@@ -1,0 +1,9 @@
+item	licence_text_actually_read	where_and_date	note
+ToolUniverse package	Apache License 2.0	GitHub licence API, 2026-11-01	code only
+ChEMBL data (release 37)	Creative Commons Attribution-ShareAlike 3.0 Unported; attribution must carry URL and release version	FTP README and LICENSE, raw/chembl_README.txt, 2026-11-01	data
+ChEMBL REST wrapped by ToolUniverse	not returned by tool; EMBL-EBI terms not re-read today	-	unverified today
+Papyrus data 05.7	CC BY-SA 4.0	Zenodo record page, 2026-11-01	older 4TU metadata differs
+Papyrus-scripts, DTA-GNN, rare-disease-explainer, TxGNN	MIT	GitHub licence API, 2026-11-01	code only
+simpathic code	Apache-2.0	GitHub licence API, 2026-11-01	data licence unread
+UniChem FTP	no licence sentence in README files	raw/uc_README.txt, raw/uc_data_README.txt, 2026-11-01	unverified
+GtoPdb bulk CSV	ODbL database / CC BY-SA 4.0 contents (carried from IT14, read 2026-10-31)	scout_it14_p6_20261101/licences.tsv	not re-read

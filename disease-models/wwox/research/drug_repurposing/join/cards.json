@@ -21221,7 +21221,7 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "d354600e77c8be1a",
+     "digest": "3315397b8bd1be35",
      "locators": 618,
      "origin_id": "N-13",
      "papers": 30,
@@ -21489,7 +21489,7 @@
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33914858.json",
        "pmid": "33914858",
        "reading_depth": "partial_fulltext_read",
-       "receipt_events": 5,
+       "receipt_events": 6,
        "receipt_id": "FTR-20260923-33914858-01",
        "repair_unverified": 0,
        "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
@@ -21990,7 +21990,7 @@
        "N-15",
        "HYP-20260709-07",
        "PMID 42422765 manifest",
-       "PMID 34268881 manifest"
+       "PMID 33914858 manifest"
       ]
      },
      "state_of_known_roads": "map N-13, DL-MECH-031, HYP-20260709-07, N-15.",
@@ -22007,7 +22007,7 @@
       "target_expression": "Oligodendrocyte-lineage transcripts are barely detectable in the week-15 organoid."
      },
      "endpoint_pursued": "A myelin endpoint with a quantified treated arm in a Wwox-deficient system (MBP or g-ratio by electron microscopy, oligodendrocyte counts) after a pro-myelinating agent, after chronic activity suppression, and after an activity-raising manipulation, each against a Wwox-deficient vehicle arm.",
-     "functional_evidence_available": "Neuron-specific, not oligodendrocyte-specific, Wwox loss reproduces the hypomyelination (genetic evidence of the earlier mouse work, PMID 34268881 manifest); neuronal gene replacement is reported to restore MBP by image. No pro-myelinating compound has been given to any Wwox system.",
+     "functional_evidence_available": "Neuron-specific, not oligodendrocyte-specific, Wwox loss reproduces the hypomyelination (genetic evidence of the earlier mouse work, PMID 33914858 manifest); neuronal gene replacement is reported to restore MBP by image. No pro-myelinating compound has been given to any Wwox system.",
      "temporal_or_model_limit": "Mouse, early postnatal window; the AAV rescue works to the earliest days tested and later ages were not testable in the null."
     },
     "p4_roadmap_fields": {
@@ -22036,7 +22036,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "7b4ba010f44e8583c54e33e48d34baa21735c6d8a161b029f0910781b27feb39",
+   "input_sha256": "2d40a2606b564d14deab5860d190532686775e889066eb5389f54ff342417dbd",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -22059,7 +22059,7 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "d354600e77c8be1a",
+    "digest": "3315397b8bd1be35",
     "locators": 618,
     "origin_id": "N-13",
     "papers": 30,
@@ -22327,7 +22327,7 @@
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33914858.json",
       "pmid": "33914858",
       "reading_depth": "partial_fulltext_read",
-      "receipt_events": 5,
+      "receipt_events": 6,
       "receipt_id": "FTR-20260923-33914858-01",
       "repair_unverified": 0,
       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
@@ -22788,7 +22788,7 @@
      "target_expression": "Oligodendrocyte-lineage transcripts are barely detectable in the week-15 organoid."
     },
     "endpoint_pursued": "A myelin endpoint with a quantified treated arm in a Wwox-deficient system (MBP or g-ratio by electron microscopy, oligodendrocyte counts) after a pro-myelinating agent, after chronic activity suppression, and after an activity-raising manipulation, each against a Wwox-deficient vehicle arm.",
-    "functional_evidence_available": "Neuron-specific, not oligodendrocyte-specific, Wwox loss reproduces the hypomyelination (genetic evidence of the earlier mouse work, PMID 34268881 manifest); neuronal gene replacement is reported to restore MBP by image. No pro-myelinating compound has been given to any Wwox system.",
+    "functional_evidence_available": "Neuron-specific, not oligodendrocyte-specific, Wwox loss reproduces the hypomyelination (genetic evidence of the earlier mouse work, PMID 33914858 manifest); neuronal gene replacement is reported to restore MBP by image. No pro-myelinating compound has been given to any Wwox system.",
     "temporal_or_model_limit": "Mouse, early postnatal window; the AAV rescue works to the earliest days tested and later ages were not testable in the null."
    },
    "schema_version": 1,

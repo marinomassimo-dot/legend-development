@@ -28,8 +28,7 @@ directory.
 
 ## Current capability — read this first
 
-**The state of the capability now is the newest "Roadmap iteration" section below (currently
-iteration 12, task `ORCH-ROADMAP-IT12`).**
+**The state of the capability now is the one "Roadmap iteration" section below whose heading carries the word CURRENT (exactly one does).**
 Every older "measured state" section, the 2026-10-21 stage column and the 2026-10-23 "Stage of the
 capability as a whole" are **historical snapshots**: they stay for provenance, carry the date at
 which they were true, and are not current counts. Numbers that must be current (catalogue size,

@@ -839,5 +839,39 @@ class It12Integration(unittest.TestCase):
         self.assertTrue(all(r["reason_class"] == "counter_evidence" for r in rows))
 
 
+class It15Integration(unittest.TestCase):
+    """IT15 P1/P3.1: the module README names its current state without an iteration number; the deepening queue is reconciled against
+    existing assessments at run time (derived, not pinned: no count of queue entries or of reconciled entries is fixed here)."""
+
+    def test_readme_has_exactly_one_current_section_and_does_not_pin_an_iteration_in_its_pointer(self):
+        txt = (HERE.parent / "README.md").read_text(encoding="utf-8")
+        heads = [l for l in txt.splitlines() if l.startswith("### Roadmap iteration") and "CURRENT" in l]
+        self.assertEqual(len(heads), 1, heads)
+        pointer = txt[txt.index("## Current capability"):txt.index("Every older")]
+        self.assertNotRegex(pointer, r"iteration\s+\d+")
+
+    def test_queue_reconciliation_vocabulary_and_consistency(self):
+        rows = rk.read_tsv(HERE / "deepening_queue.tsv")
+        self.assertTrue(rows)
+        for r in rows:
+            self.assertIn(r["reconciliation"], {"ASSESSED_ELSEWHERE", "MENTIONED_ONLY", "NOT_ASSESSED_BEFORE"})
+            self.assertEqual(bool(r["assessed_in"]), r["reconciliation"] == "ASSESSED_ELSEWHERE", r["display_group"])
+            if r["reconciliation"] == "MENTIONED_ONLY":
+                self.assertTrue(r["mentioned_in"])
+
+    def test_reconciliation_is_a_whole_word_search(self):
+        ctx = {"cands": {"X": {"id": "X", "name": "ketamine-like thing", "identity": "", "card_path": ""}, "Y": {"id": "Y", "name": "nothing", "identity": "esketamine only"}},
+               "qualification_all": {}, "uncarded": []}
+        a, m = rk.prior_assessments("ketamine hydrochloride", ["KETAMINE HYDROCHLORIDE"], ctx)
+        self.assertEqual(a, ["card:X"])        # "esketamine" must not count as "ketamine"
+        self.assertEqual(m, [])
+
+    def test_view_denominator_sentence_does_not_call_ranked_entries_drugs(self):
+        import repurposing_view as v
+        sent = v.UI_IT["rk_inv_units_n"] if hasattr(v, "UI_IT") else ""
+        if sent:
+            self.assertNotIn("interventi ordinabili o no", sent)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

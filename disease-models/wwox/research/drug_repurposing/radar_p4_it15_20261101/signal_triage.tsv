@@ -1,0 +1,11 @@
+item	field	value	source	status
+42941930	pmid_pmcid_doi	42941930 / PMC13705396 / 10.3390/ijms27209160	PubMed tool; Europe PMC core	verified
+42941930	journal_date	Int J Mol Sci 27(20):9160; first publication 2026-10-15	Europe PMC	verified
+42941930	licence	CC BY, isOpenAccess Y	Europe PMC core; XML licence block	verified
+42941930	data_availability	per-replicate 13C integral table + analysis script as Supplementary Data; raw FIDs on request; no repository	XML Data Availability Statement	verified text; supplement not opened
+42941930	supplement_size	unknown	mdpi s1 403; EPMC supplementaryFiles truncated twice	NOT VERIFIED
+42941930	system	undifferentiated SH-SY5Y; MPTP, 3-NP, antimycin A, azide, oligomycin; 24 h (3-NP 12 h); washout then 24 h [U-13C6]glucose	abstract; Methods	verified
+42941930	readouts	positional 13C-NMR (800 MHz); medium 13C; PC and PDH capacity (relative to control)	Sections 4.4 4.6 4.7	verified
+42941930	replicates	n=3 per group, 6 groups, shared control, Dunnett df 12	abstract	verified
+42941930	WWOX_relevance	none (no WWOX perturbation or measurement)	full text	verified
+42941930	utility	assay-design precedent only; no dataset for reuse; no decision change	this package	CLOSED context only

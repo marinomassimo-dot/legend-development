@@ -1,0 +1,6 @@
+change_v1.5.7_to_v1.5.8	source	touches_gap	note
+Carbon-A gene annotation, 29 model providers, RFD4-Proteina, BioEmu-2, pKAI, stereochemistry checks, pH linkage	release body (raw/rel.json)	none	protein design/modelling; not activity data
+Orange Book returns patents and exclusivity; FDA label route/section selection	release body	none	regulatory, not potency
+GSEA_prerank p-value fix; MAGICapp, SAbDab, LOVD fixes; CI/packaging	release body	none	unrelated
+PR 824: about 300 tools returned part of a result as if complete; adds returned/total_results/has_more/next_offset/truncated/result_set_complete	raw/pr824.json (title and body)	indirect, no gap among 1-3	would address the silent truncation (100 asked, 50 returned) recorded in the 2026-10-26 L1000FWD test; says GtoPdb paging was added on the CSV path; first 100 of the PR file list contain no ChEMBL/GtoPdb/UniChem file (list capped at 100, remainder not read)
+No change names ChEMBL, GtoPdb, IUPHAR, BindingDB, PubChem, UniChem, DrugCentral or Open Targets	string search of v1.5.7 and v1.5.8 bodies, 0 hits	none	v1.5.7 body also has none
