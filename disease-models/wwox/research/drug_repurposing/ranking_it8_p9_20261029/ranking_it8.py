@@ -793,6 +793,185 @@ def matching_pilot(units: list[dict], cases: list[dict] | None = None, uncarded:
     return out
 
 
+# ---- IT19 P6: matching direction, abstention and limits, regenerated from the sources (no hand-made dataset) -------------------------
+MATCHING_REF = DR / "matching_it19_p5_20261102"
+MD_DETERMINATE = ("compatible", "opposite")
+MD_LIMITS = (
+    "EXPERIMENTAL: a retrospective comparison on a small, deliberately non-random reference (32 selected pairs over 25 compounds; 17 determinate, "
+    "11 from a functional measurement and 6 from a class-level attribution); no general accuracy and no superiority of one path over another is claimed.",
+    "Pharmacological compatibility means only that a documented action has the direction the need states. It is not research priority, not evidence "
+    "of benefit in WWOX deficiency, and says nothing about safety or about whether the need's direction is the beneficial one.",
+    "Unknown is not negative: the bounded search found nothing, which is a statement about the search, not about the compound.",
+    "An abstention keeps the row visible with its action and its reason; it removes a direction the source row cannot carry, and on this selection it "
+    "also removed one direction the reference supports (bepridil at the T-type need): no field yet lets a sourced subunit-level measurement re-license it.",
+    "The reference side was built by one actor who had seen the earlier labels; the module side is machine-generated from committed code. "
+    "8 of the 17 determinate rows are independent of the module's construction sources; agreement on the others is not independent confirmation.",
+)
+MD_SOURCES = {
+    "need_direction": "needs/needs.json (intervention_direction)",
+    "action_level_label_reason": "coverage/associations.jsonl.gz (framework/scripts/repurposing_search.py, active path)",
+    "reference": "matching_it19_p5_20261102/reference_it19_p5.tsv",
+    "selection": "matching_it19_p5_20261102/selection.tsv",
+    "before_fix": "matching_it19_p5_20261102/module_answers_prefix.tsv (active path before the group-transfer guard)",
+}
+
+
+def md_independence(dep: str) -> str:
+    head = (dep or "").split(" ")[0]
+    return {"independent_of_module_input": "independent", "partly_shared": "partly_shared", "shared_derivation_mechanism_citation": "shared",
+            "not_applicable": "not_applicable"}.get(head, "unclassified")
+
+
+def md_reference_state(label: str) -> str:
+    return "determinate" if label in MD_DETERMINATE else label
+
+
+def md_module_direction(label: str) -> str | None:
+    """The direction a live label asserts (same rule as matching_it19_p5_20261102/join_it19_p5.py), or None for an abstention."""
+    if label == "consistent":
+        return "compatible"
+    if label == "opposed":
+        return "opposite"
+    if label.startswith("mixed:"):
+        parts = set(label.split(":", 1)[1].split("|"))
+        if parts == {"consistent", "direction_unresolved"}:
+            return "compatible"
+        if parts == {"direction_unresolved", "opposed"}:
+            return "opposite"
+    return None
+
+
+def md_agreement(ref_label: str, asserted: str | None) -> str:
+    if asserted is None:
+        return "abstained_reference_determinate" if ref_label in MD_DETERMINATE else "abstained_reference_not_determinate"
+    if ref_label not in MD_DETERMINATE:
+        return "asserted_reference_not_determinate"
+    return "asserted_and_agrees" if asserted == ref_label else "asserted_and_disagrees"
+
+
+def md_next_check(agreement: str, ref_state: str, asserted: str | None, abst: list[str]) -> str:
+    """A closed vocabulary of next useful checks, chosen by rule from the pair's state; the view prints each code in words."""
+    if agreement == "asserted_and_disagrees":
+        return "reconcile_source_and_module"
+    if agreement == "asserted_and_agrees":
+        return "measure_in_wwox_system" if asserted == "compatible" else "reopen_only_if_need_direction_changes"
+    if agreement == "abstained_reference_determinate":
+        return "sourced_per_gene_override" if "group_record_mostly_outside_module_targets" in abst else "measure_target_to_need_coupling"
+    if ref_state == "unknown":
+        return "extend_bounded_search"
+    return "measure_at_required_resolution"
+
+
+def read_associations_gz(p: Path) -> list[dict]:
+    with gzip.open(p, "rt", encoding="utf-8") as fh:
+        return [json.loads(line) for line in fh if line.strip()]
+
+
+def parent_members(cat: dict) -> dict[str, set[str]]:
+    """parent ChEMBL id -> catalogue ids of the parent and of every record whose parent relation names it (salts, the same rule as
+    matching_it19_p5_20261102/module_answers.py)."""
+    out: dict[str, set[str]] = defaultdict(set)
+    for e in cat.values():
+        cid = (e.get("ids") or {}).get("chembl")
+        par = ((e.get("relations") or {}).get("parent") or "").replace("CAT:", "") or cid
+        if par:
+            out[par].add(e["id"])
+    return out
+
+
+def matching_direction(assoc: list[dict] | None = None, needs: dict | None = None, ref_dir: Path = MATCHING_REF, cat: dict | None = None) -> dict:
+    """IT19 P6. For every pair of the IT19 P5 reference, the need and its declared direction, the compound's documented action, the level of the
+    target the source row is about, the LIVE label of the active path (regenerated coverage), the reason for an abstention, the reference label with
+    its measure kind and independence, the missing datum and the next useful check; plus, per need, the module-wide direction counts by target level
+    and abstention class. Every value is read from a named source (MD_SOURCES); nothing is typed in by hand. An abstention without a class, a pair
+    with no live row, or an unknown reference state is a build error."""
+    if not (ref_dir / "reference_it19_p5.tsv").exists():
+        return {}
+    if assoc is None:
+        assoc = read_associations_gz(DR / "coverage/associations.jsonl.gz")
+    if needs is None:
+        needs = {n["id"]: n for n in jload(DR / "needs/needs.json")["needs"]}
+    import repurposing_search as rs
+    ref = read_tsv(ref_dir / "reference_it19_p5.tsv")
+    sel = {r["pair_id"]: r for r in read_tsv(ref_dir / "selection.tsv")}
+    before = {r["pair_id"]: r for r in read_tsv(ref_dir / "module_answers_prefix.tsv")}
+    members = parent_members(cat if cat is not None else load_catalog())
+    by_key: dict[tuple[str, str], list[dict]] = defaultdict(list)
+    for a in assoc:
+        if a["link_source"].startswith("ChEMBL") and a["target_kind"] in rs.LINK_KINDS and not a["excluded_from_counts"]:
+            by_key[(a["need"], a["catalogue_id"])].append(a)
+    pairs = []
+    for r in ref:
+        pid, nid, par = r["pair_id"], r["need_id"], r["parent_chembl_id"]
+        rows = [a for cid in sorted(members.get(par, set()) | {"CAT:" + par}) for a in by_key.get((nid, cid), [])]
+        if not rows:
+            raise ValueError(f"matching_direction: pair {pid} has no live ChEMBL row on {nid} for {par}")
+        labels = {a["consistency"] for a in rows}
+        label = next(iter(labels)) if len(labels) == 1 else "mixed:" + "|".join(sorted(labels))
+        abst = sorted({a["abstention_class"] for a in rows if a["abstention_class"]})
+        groups = sorted({(a["chembl_target_id"], a["target_level"], a["record_components"], a["components_in_module_targets"]) for a in rows}, key=lambda x: tuple(str(y) for y in x))
+        asserted = md_module_direction(label)
+        if r["reference_label"] not in MD_DETERMINATE + ("indeterminable", "unknown"):
+            raise ValueError(f"matching_direction: pair {pid} has an unknown reference label {r['reference_label']}")
+        ref_state = md_reference_state(r["reference_label"])
+        agreement = md_agreement(r["reference_label"], asserted)
+        nd = needs[nid]["intervention_direction"]
+        why_by_class = {}
+        for a in rows:
+            if a["abstention_class"]:
+                why_by_class.setdefault(a["abstention_class"], a["consistency_why"])
+        pairs.append({
+            "pair_id": pid, "stratum": sel[pid]["stratum_description"], "need": nid, "need_direction": nd["direction"], "need_direction_on": nd.get("on") or "",
+            "need_direction_certainty": nd.get("certainty") or "",
+            "compound": r["compound"], "parent_chembl_id": par,
+            "actions": sorted({a["action_raw"] or "UNSTATED" for a in rows}), "action_directions": sorted({a["action_on_target"] for a in rows}),
+            "targets": sorted({a["target"] for a in rows}),
+            "records": [{"chembl_target_id": g[0], "target_level": g[1], "components": g[2], "components_in_module_targets": g[3]} for g in groups],
+            "target_levels": sorted({g[1] for g in groups}),
+            "label": label, "asserted_direction": asserted, "abstention_classes": abst, "abstention_reasons": [why_by_class[c] for c in abst],
+            "label_before_group_guard": before[pid]["active_consistency"] if pid in before else "",
+            "reference_label": r["reference_label"], "reference_state": ref_state, "reference_status": r["status"],
+            "measure_kind": ("functional" if r["status"] == "determinate_functional" else "class_level" if r["status"].startswith("determinate_class_level") else "none"),
+            "measure_type": r["measure_type"], "reference_locator": r["source_locator"], "independence": md_independence(r["dependency_on_module_sources"]),
+            "missing_datum": "" if ref_state == "determinate" else r["resolution_note"], "agreement": agreement,
+            "next_check": md_next_check(agreement, ref_state, asserted, abst),
+        })
+    det = [p for p in pairs if p["reference_state"] == "determinate"]
+    counts = {
+        "pairs": len(pairs), "compounds": len({p["parent_chembl_id"] for p in pairs}), "determinate": len(det),
+        "determinate_functional": sum(1 for p in det if p["measure_kind"] == "functional"), "determinate_class_level": sum(1 for p in det if p["measure_kind"] == "class_level"),
+        "determinate_independent": sum(1 for p in det if p["independence"] == "independent"),
+        "by_reference_label": dict(sorted(Counter(p["reference_label"] for p in pairs).items())),
+        "by_live_label": dict(sorted(Counter(p["asserted_direction"] or "abstained" for p in pairs).items())),
+        "by_agreement": dict(sorted(Counter(p["agreement"] for p in pairs).items())),
+        "by_target_level": dict(sorted(Counter(lvl for p in pairs for lvl in p["target_levels"]).items())),
+        "by_abstention_class": dict(sorted(Counter(c for p in pairs for c in p["abstention_classes"]).items())),
+        "changed_by_group_guard": sum(1 for p in pairs if p["label_before_group_guard"] and p["label_before_group_guard"] != p["label"]),
+    }
+    by_need = []
+    for nid in sorted({p["need"] for p in pairs}):
+        ps = [p for p in pairs if p["need"] == nid]
+        by_need.append({"need": nid, "need_direction": ps[0]["need_direction"], "need_direction_on": ps[0]["need_direction_on"], "pairs": [p["pair_id"] for p in ps],
+                        "by_live_label": dict(sorted(Counter(p["asserted_direction"] or "abstained" for p in ps).items())),
+                        "by_reference_label": dict(sorted(Counter(p["reference_label"] for p in ps).items()))})
+    by_compound = []
+    for par in sorted({p["parent_chembl_id"] for p in pairs}, key=lambda x: next(p["compound"].lower() for p in pairs if p["parent_chembl_id"] == x)):
+        ps = [p for p in pairs if p["parent_chembl_id"] == par]
+        by_compound.append({"compound": ps[0]["compound"], "parent_chembl_id": par, "pairs": [p["pair_id"] for p in ps]})
+    module = {}
+    for nid, n in sorted(needs.items()):
+        h = [a for a in assoc if a["need"] == nid and a["target_kind"] in rs.LINK_KINDS and not a["excluded_from_counts"]]
+        if not h:
+            continue
+        module[nid] = {"need_direction": n["intervention_direction"]["direction"], "rows": len(h),
+                       "by_label": dict(sorted(Counter("abstained" if a["abstention_class"] else a["consistency"] for a in h).items())),
+                       "by_target_level": {lvl: dict(sorted(Counter("abstained" if a["abstention_class"] else a["consistency"] for a in h if a["target_level"] == lvl).items())) for lvl in sorted({a["target_level"] for a in h})},
+                       "abstained_by_class": dict(sorted(Counter(a["abstention_class"] for a in h if a["abstention_class"]).items())),
+                       "group_records_held_back": sorted({(a["record_components"], a["components_in_module_targets"]) for a in h if a["abstention_class"] == "group_record_mostly_outside_module_targets"})}
+    return {"status": "EXPERIMENTAL", "limits": list(MD_LIMITS), "sources": MD_SOURCES, "counts": counts, "pairs": pairs, "by_need": by_need, "by_compound": by_compound,
+            "module_by_need": module, "unit": "association rows of intervention targets, not excluded (module_by_need); selected (need, compound) pairs (pairs)"}
+
+
 def evidence_level_note(u: dict, mev: list[dict]) -> dict:
     """The two readable fields: evidence of the molecule(s) tested, and evidence of the mechanism or class, kept apart."""
     t = u["unit_type"]
@@ -1269,7 +1448,18 @@ def prior_assessments(display_group: str, names: list[str], ctx: dict) -> tuple[
     return sorted(set(named)), sorted(set(text_only))
 
 
-def deepening_queue(inv: list[dict], ctx: dict, uni: dict | None = None) -> list[dict]:
+def direction_basis(assoc: list[dict], family_ids: list[str], needs: list[str]) -> list[str]:
+    """IT19 P6: per need, the level of the target behind each direction-consistent row of these families (single protein, family, complex, group
+    with its component count), so a queue entry says what kind of source record carries its direction."""
+    fams, out = set(family_ids), []
+    for n in needs:
+        lv = sorted({a["target_level"] + (f" {a['components_in_module_targets']}/{a['record_components']}" if a.get("record_components") else "")
+                     for a in assoc if a["need"] == n and a["family"] in fams and a["consistency"] == "consistent" and not a["excluded_from_counts"]})
+        out.append(f"{n}: {', '.join(lv) or 'none'}")
+    return out
+
+
+def deepening_queue(inv: list[dict], ctx: dict, uni: dict | None = None, assoc: list[dict] | None = None) -> list[dict]:
     """Where to deepen first: Q1 families (target listed, direction-consistent action, no opposed action anywhere) that a person could in principle obtain
     (an approved or marketed status, or an access category that is not 'unknown/unverified'), on a need that has WWOX-system observations.
     Order: needs with a WWOX-system observation, then access evidence, then name. It is a work queue, not a promise ranking."""
@@ -1292,6 +1482,7 @@ def deepening_queue(inv: list[dict], ctx: dict, uni: dict | None = None) -> list
         q.append({"display_group": g, "names": sorted({r["name"] for r in rs}), "family_ids": sorted(r["family_id"] for r in rs), "needs": needs, "wwox_observations_on_best_need": wobs,
                   "reconciliation": "ASSESSED_ELSEWHERE" if assessed else ("MENTIONED_ONLY" if mentioned else "NO_CARD_OR_RECORD_FOUND"),
                   "assessed_in": assessed, "mentioned_in": mentioned,
+                  "direction_basis": direction_basis(assoc or [], sorted(r["family_id"] for r in rs), needs),
                   "status_class": st, "access_categories": acc or ["unknown/unverified"], "mnet_usable": any(r["mnet_usable"] == "yes" for r in rs),
                   "msig_neural": any(r["msig_neural_strict"] == "yes" for r in rs), "units": sorted({u for r in rs for u in r["units"]}),
                   "shares_need_with_units": sorted({u["unit_id"] for u in (uni or {"units": []})["units"] if u["class"] != "EXCL" for p in u["pathways"] if p["need"] in needs}),
@@ -1530,7 +1721,8 @@ def build_all() -> dict[str, bytes]:
     cat = load_catalog()
     uni = assemble(ctx, cat)
     inv, inv_sum = inventory(ctx, cat, uni)
-    queue = deepening_queue(inv, ctx, uni)
+    assoc = read_associations_gz(DR / "coverage/associations.jsonl.gz")
+    queue = deepening_queue(inv, ctx, uni, assoc)
     sel = build_selections(uni)
     units_by_id = {u["unit_id"]: u for u in uni["units"]}
     unc = ctx["uncarded"]
@@ -1593,11 +1785,11 @@ def build_all() -> dict[str, bytes]:
     inv_cols = ["family_id", "name", "records", "origin", "modality", "status_class", "access_categories", "class", "evaluation_depth", "first_order", "needs_documented_target_link", "needs_pathway_member_only",
                 "needs_direction_consistent", "needs_opposed", "mnet_usable", "msig_neural_strict", "msig_any_context", "units", "name_twins_not_merged", "display_group", "display_group_size", "reason"]
     files["inventory_families.tsv.gz"] = gz_bytes(tsv_bytes(inv, inv_cols))
-    qrows = [{"display_group": q["display_group"], "names": q["names"], "family_ids": q["family_ids"], "needs": q["needs"], "wwox_observations_on_best_need": q["wwox_observations_on_best_need"],
+    qrows = [{"display_group": q["display_group"], "names": q["names"], "family_ids": q["family_ids"], "needs": q["needs"], "wwox_observations_on_best_need": q["wwox_observations_on_best_need"], "direction_basis": q["direction_basis"],
               "status_class": q["status_class"], "access_categories": q["access_categories"], "mnet_usable": q["mnet_usable"], "msig_neural": q["msig_neural"], "units": q["units"], "shares_need_with_units": q["shares_need_with_units"], "reconciliation": q["reconciliation"], "assessed_in": q["assessed_in"], "mentioned_in": q["mentioned_in"], "why": q["why"]} for q in queue]
-    files["deepening_queue.tsv"] = tsv_bytes(qrows, ["display_group", "names", "family_ids", "needs", "wwox_observations_on_best_need", "status_class", "access_categories", "mnet_usable", "msig_neural", "units", "shares_need_with_units", "reconciliation", "assessed_in", "mentioned_in", "why"])
+    files["deepening_queue.tsv"] = tsv_bytes(qrows, ["display_group", "names", "family_ids", "needs", "wwox_observations_on_best_need", "direction_basis", "status_class", "access_categories", "mnet_usable", "msig_neural", "units", "shares_need_with_units", "reconciliation", "assessed_in", "mentioned_in", "why"])
     ing = {"summary": summary, "units": uni["units"], "selection_table": srows, "deepening_queue_head": queue[:40], "uncarded": unc, "it9_records": uni["it9_records"], "it10_records": uni["it10_records"], "it11_records": uni["it11_records"],
-           "matching_pilot": matching_pilot(uni["units"], None, unc), "deepened_cases": deepened_cases()}
+           "matching_pilot": matching_pilot(uni["units"], None, unc), "deepened_cases": deepened_cases(), "matching_direction": matching_direction(assoc, cat=cat)}
     files["ranking.json"] = json_bytes(ing)
     # per-unit input digests (for the snapshot / diff mechanism)
     drows = [{"unit_id": u["unit_id"], **u["inputs"]} for u in uni["units"]]

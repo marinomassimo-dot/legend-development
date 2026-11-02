@@ -115,5 +115,46 @@ class GroupTransfer(unittest.TestCase):
         self.assertEqual(got2[("N-SEIZURE", "CACNA1G")]["consistency"], "consistent")
 
 
+class VisibleLevelAndAbstention(unittest.TestCase):
+    """IT19 P6: every association row carries the level of the target the source row is about, the component counts the guard read,
+    and a closed abstention class whenever it carries no direction, so a reader can see why a relation is held back."""
+
+    def test_group_abstention_names_level_counts_and_class(self):
+        a = rows(NEED_TTYPE, guard=True)[("CAT:CHEMBLGRP", "CACNA1G")]
+        self.assertEqual(a["target_level"], "protein_complex_group")
+        self.assertEqual((a["record_components"], a["components_in_module_targets"]), (len(BIG_GROUP), 3))
+        self.assertEqual(a["abstention_class"], "group_record_mostly_outside_module_targets")
+
+    def test_directed_rows_have_no_abstention_class_and_keep_their_level(self):
+        r = rows(NEED_TTYPE, guard=True)
+        self.assertIsNone(r[("CAT:CHEMBLSING", "CACNA1H")]["abstention_class"])
+        self.assertEqual(r[("CAT:CHEMBLSING", "CACNA1H")]["target_level"], "single_protein")
+        self.assertIsNone(r[("CAT:CHEMBLSING", "CACNA1H")]["record_components"])
+
+    def test_unknown_action_is_classed_as_not_stated(self):
+        self.assertEqual(rows(NEED_TTYPE, guard=True)[("CAT:CHEMBLMOD", "CACNA1G")]["abstention_class"], "action_not_stated")
+
+    def test_every_reason_the_code_writes_has_a_class_and_an_unknown_one_fails(self):
+        self.assertEqual(rs.abstention_class("direction_unresolved", "the need's direction is 'uncertain': exploration only"), "need_direction_not_evaluable")
+        self.assertEqual(rs.abstention_class("direction_unresolved", "no explicit role row couples this target"), "no_coupling_row")
+        self.assertEqual(rs.abstention_class("direction_unresolved", "role row for X is 'unresolved'"), "coupling_not_measured")
+        self.assertEqual(rs.abstention_class("not_evaluable", "anything", "artefact"), "excluded_source_artefact")
+        self.assertIsNone(rs.abstention_class("consistent", "anything"))
+        with self.assertRaises(ValueError):
+            rs.abstention_class("direction_unresolved", "a reason no code path writes")
+
+    def test_dgidb_row_is_a_gene_listing_unless_the_correction_states_a_level(self):
+        self.assertEqual(rs.target_level("DGIdb interaction", {}), "gene_listing")
+        self.assertEqual(rs.target_level("DGIdb interaction", {"target_level": "complex"}), "protein_complex")
+        self.assertEqual(rs.target_level("ChEMBL curated mechanism", {"target_type": "PROTEIN FAMILY"}), "protein_family")
+
+    def test_compound_to_needs_carries_the_same_fields(self):
+        idx = rs.Index(ENTRIES, [], MODULE)
+        e = next(x for x in ENTRIES if x["id"] == "CAT:CHEMBLGRP")
+        got = {(x["need"], x["target"]): x for x in rs.compound_to_needs(e, NEEDS, idx, ROLES)}
+        self.assertEqual(got[("N-TTYPE", "CACNA1G")]["abstention_class"], "group_record_mostly_outside_module_targets")
+        self.assertEqual(got[("N-TTYPE", "CACNA1G")]["target_level"], "protein_complex_group")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

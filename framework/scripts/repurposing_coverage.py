@@ -667,6 +667,10 @@ def make_summary(entries, idx, rows, cells, per_need, priorities, need_by, cards
                     "families_consistent": len({x["family"] for x in h if x["consistency"] == "consistent"}),
                     "families_opposed": len({x["family"] for x in h if x["consistency"] == "opposed"}),
                     "families_with_both_consistent_and_opposed": len({x["family"] for x in h if x["consistency"] == "consistent"} & {x["family"] for x in h if x["consistency"] == "opposed"}),
+                    # IT19 P6: direction by the level of the target the source row is about, and why a counted row carries no direction (association rows, not families)
+                    "direction_rows_by_target_level": {lvl: dict(sorted(collections.Counter(("abstained" if x["abstention_class"] else x["consistency"]) for x in h if x["target_level"] == lvl).items()))
+                                                       for lvl in sorted({x["target_level"] for x in h})},
+                    "abstained_rows_by_class": dict(sorted(collections.Counter(x["abstention_class"] for x in h if x["abstention_class"]).items())),
                     "excluded_records_by_reason": dict(collections.Counter(reason_class(a) for a in {x["catalogue_id"]: x for x in a_all if x["excluded_from_counts"] and x["target_kind"] in (rs.LINK_KINDS | rs.PATHWAY_KINDS)}.values())),
                     "identity_guard_hits": len(per_need[nid]["identity_guard_hits"]), "nonhuman_chembl_rows_set_aside": per_need[nid]["nonhuman_chembl_rows_set_aside"],
                     "cells_L3_observed_wwox_system": sum(1 for c in cs if c["L3_observed_effect"]["state"] == "observed_wwox_system"),

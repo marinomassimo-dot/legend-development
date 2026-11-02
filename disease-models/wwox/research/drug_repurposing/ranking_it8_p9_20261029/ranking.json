@@ -191,6 +191,9 @@
     "prescription"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7"
+   ],
    "display_group": "acamprosate",
    "family_ids": [
     "FAM:CAT:CHEMBL1201293",
@@ -223,6 +226,9 @@
     "prescription"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7, single_protein"
+   ],
    "display_group": "amantadine",
    "family_ids": [
     "FAM:CAT:CHEMBL1569",
@@ -257,6 +263,9 @@
     "experimental"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7"
+   ],
    "display_group": "av 101",
    "family_ids": [
     "FAM:CAT:CHEMBL3545351",
@@ -290,6 +299,9 @@
     "experimental"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7"
+   ],
    "display_group": "azd8108",
    "family_ids": [
     "FAM:CAT:CHEMBL3707355"
@@ -320,6 +332,9 @@
     "experimental"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7"
+   ],
    "display_group": "delucemine",
    "family_ids": [
     "FAM:CAT:CHEMBL2106165",
@@ -356,6 +371,9 @@
     "prescription"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, single_protein"
+   ],
    "display_group": "dextromethorphan",
    "family_ids": [
     "FAM:CAT:CHEMBL1201461",
@@ -392,6 +410,9 @@
     "experimental"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex 2/2"
+   ],
    "display_group": "evt 101",
    "family_ids": [
     "FAM:CAT:CHEMBL3545349",
@@ -427,6 +448,9 @@
    "assessed_in": [
     "record:P3-17"
    ],
+   "direction_basis": [
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7"
+   ],
    "display_group": "felbamate",
    "family_ids": [
     "FAM:CAT:CHEMBL1094",
@@ -461,6 +485,9 @@
     "experimental"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7"
+   ],
    "display_group": "gw468816",
    "family_ids": [
     "FAM:CAT:CHEMBL1207366"
@@ -491,6 +518,9 @@
     "experimental"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7"
+   ],
    "display_group": "indantadol",
    "family_ids": [
     "FAM:CAT:CHEMBL3707400"
@@ -521,6 +551,9 @@
     "prescription"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7, single_protein"
+   ],
    "display_group": "ketamine",
    "family_ids": [
     "FAM:CAT:CHEMBL1714",
@@ -555,6 +588,9 @@
     "experimental"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7"
+   ],
    "display_group": "lanicemine",
    "family_ids": [
     "FAM:CAT:CHEMBL467084",
@@ -588,6 +624,9 @@
     "experimental"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7"
+   ],
    "display_group": "neramexane",
    "family_ids": [
     "FAM:CAT:CHEMBL2106798",
@@ -621,6 +660,9 @@
     "prescription"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7"
+   ],
    "display_group": "orphenadrine",
    "family_ids": [
     "FAM:CAT:CHEMBL1200395",
@@ -653,6 +695,9 @@
     "experimental"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7"
+   ],
    "display_group": "perzinfotel",
    "family_ids": [
     "FAM:CAT:CHEMBL452461",
@@ -686,6 +731,9 @@
     "experimental"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7"
+   ],
    "display_group": "ralfinamide",
    "family_ids": [
     "FAM:CAT:CHEMBL2107771"
@@ -716,6 +764,9 @@
     "experimental"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex 2/2"
+   ],
    "display_group": "rislenemdaz",
    "family_ids": [
     "FAM:CAT:CHEMBL2068839",
@@ -749,6 +800,9 @@
     "experimental"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex 2/2"
+   ],
    "display_group": "traxoprodil",
    "family_ids": [
     "FAM:CAT:CHEMBL17350",
@@ -785,6 +839,9 @@
     "unknown/unverified"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing"
+   ],
    "display_group": "esketamine",
    "family_ids": [
     "FAM:CAT:DGIDB:9c85048f5868"
@@ -817,6 +874,9 @@
    "assessed_in": [
     "card:F01_glutamate_receptor_node",
     "record:P3-18"
+   ],
+   "direction_basis": [
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing"
    ],
    "display_group": "memantine",
    "family_ids": [
@@ -853,6 +913,9 @@
    "assessed_in": [
     "card:EB-VGB-01",
     "card:H02_gabaat_inactivator_myelin_exposure"
+   ],
+   "direction_basis": [
+    "NEED-SEIZURE-CONTROL-SYMPTOMATIC: gene_listing, single_protein"
    ],
    "display_group": "vigabatrin",
    "family_ids": [
@@ -895,6 +958,9 @@
     "experimental"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-T-TYPE-CALCIUM: gene_listing, single_protein"
+   ],
    "display_group": "abt 639",
    "family_ids": [
     "FAM:CAT:CHEMBL3590674",
@@ -928,6 +994,9 @@
     "prescription"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-T-TYPE-CALCIUM: gene_listing, protein_family 3/3"
+   ],
    "display_group": "methsuximide",
    "family_ids": [
     "FAM:CAT:CHEMBL697",
@@ -962,39 +1031,9 @@
     "experimental"
    ],
    "assessed_in": [],
-   "display_group": "phloroglucinol",
-   "family_ids": [
-    "FAM:CAT:CHEMBL473159",
-    "FAM:CAT:DGIDB:19749060be64"
+   "direction_basis": [
+    "NEED-T-TYPE-CALCIUM: single_protein"
    ],
-   "mentioned_in": [],
-   "mnet_usable": true,
-   "msig_neural": false,
-   "names": [
-    "PHLOROGLUCINOL",
-    "Phloroglucinol"
-   ],
-   "needs": [
-    "NEED-T-TYPE-CALCIUM"
-   ],
-   "reconciliation": "NO_CARD_OR_RECORD_FOUND",
-   "shares_need_with_units": [
-    "U17",
-    "U25"
-   ],
-   "status_class": [
-    "approved_any_source",
-    "clinical_candidate"
-   ],
-   "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no card, qualification record or uncarded item names it (module READMEs and reports were not searched)",
-   "wwox_observations_on_best_need": 1
-  },
-  {
-   "access_categories": [
-    "experimental"
-   ],
-   "assessed_in": [],
    "display_group": "ulixacaltamide",
    "family_ids": [
     "FAM:CAT:CHEMBL3934636"
@@ -1026,16 +1065,17 @@
     "unknown/unverified"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-T-TYPE-CALCIUM: gene_listing"
+   ],
    "display_group": "bepridil",
    "family_ids": [
-    "FAM:CAT:CHEMBL1008",
     "FAM:CAT:DGIDB:df7564f65e1c"
    ],
    "mentioned_in": [],
    "mnet_usable": true,
-   "msig_neural": true,
+   "msig_neural": false,
    "names": [
-    "BEPRIDIL",
     "Bepridil Hydrochloride"
    ],
    "needs": [
@@ -1060,6 +1100,9 @@
    "assessed_in": [
     "card:EB-ETX-01",
     "card:H01_apinocaltamide_ttype"
+   ],
+   "direction_basis": [
+    "NEED-T-TYPE-CALCIUM: gene_listing"
    ],
    "display_group": "ethosuximide",
    "family_ids": [
@@ -1093,6 +1136,9 @@
     "unknown/unverified"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-T-TYPE-CALCIUM: gene_listing, protein_family 3/3, single_protein"
+   ],
    "display_group": "mibefradil",
    "family_ids": [
     "FAM:CAT:CHEMBL1534525",
@@ -1128,6 +1174,9 @@
     "unknown/unverified"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-T-TYPE-CALCIUM: gene_listing, protein_family 3/3"
+   ],
    "display_group": "paramethadione",
    "family_ids": [
     "FAM:CAT:CHEMBL1100",
@@ -1160,6 +1209,9 @@
     "unknown/unverified"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-T-TYPE-CALCIUM: gene_listing, protein_family 3/3"
+   ],
    "display_group": "phensuximide",
    "family_ids": [
     "FAM:CAT:CHEMBL797",
@@ -1192,6 +1244,42 @@
     "unknown/unverified"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-T-TYPE-CALCIUM: gene_listing"
+   ],
+   "display_group": "phloroglucinol",
+   "family_ids": [
+    "FAM:CAT:DGIDB:19749060be64"
+   ],
+   "mentioned_in": [],
+   "mnet_usable": true,
+   "msig_neural": false,
+   "names": [
+    "Phloroglucinol"
+   ],
+   "needs": [
+    "NEED-T-TYPE-CALCIUM"
+   ],
+   "reconciliation": "NO_CARD_OR_RECORD_FOUND",
+   "shares_need_with_units": [
+    "U17",
+    "U25"
+   ],
+   "status_class": [
+    "approved_any_source"
+   ],
+   "units": [],
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no card, qualification record or uncarded item names it (module READMEs and reports were not searched)",
+   "wwox_observations_on_best_need": 1
+  },
+  {
+   "access_categories": [
+    "unknown/unverified"
+   ],
+   "assessed_in": [],
+   "direction_basis": [
+    "NEED-T-TYPE-CALCIUM: single_protein"
+   ],
    "display_group": "pimozide",
    "family_ids": [
     "FAM:CAT:DGIDB:be7af74855ee"
@@ -1222,16 +1310,17 @@
     "unknown/unverified"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-T-TYPE-CALCIUM: gene_listing"
+   ],
    "display_group": "suloctidil",
    "family_ids": [
-    "FAM:CAT:CHEMBL404849",
     "FAM:CAT:DGIDB:6abc18fc4ac1"
    ],
    "mentioned_in": [],
    "mnet_usable": true,
-   "msig_neural": true,
+   "msig_neural": false,
    "names": [
-    "SULOCTIDIL",
     "Suloctidil"
    ],
    "needs": [
@@ -1254,16 +1343,17 @@
     "unknown/unverified"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-T-TYPE-CALCIUM: gene_listing"
+   ],
    "display_group": "terodiline",
    "family_ids": [
-    "FAM:CAT:CHEMBL363295",
     "FAM:CAT:DGIDB:5626675dc6fe"
    ],
    "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
-    "TERODILINE",
     "Terodiline Hydrochloride"
    ],
    "needs": [
@@ -1286,6 +1376,9 @@
     "unknown/unverified"
    ],
    "assessed_in": [],
+   "direction_basis": [
+    "NEED-T-TYPE-CALCIUM: gene_listing, protein_family 3/3"
+   ],
    "display_group": "trimethadione",
    "family_ids": [
     "FAM:CAT:CHEMBL695",
@@ -1804,6 +1897,2350 @@
    "unit_id": "U47"
   }
  ],
+ "matching_direction": {
+  "by_compound": [
+   {
+    "compound": "ABT-639",
+    "pairs": [
+     "P15"
+    ],
+    "parent_chembl_id": "CHEMBL3590674"
+   },
+   {
+    "compound": "apimostinel",
+    "pairs": [
+     "P22"
+    ],
+    "parent_chembl_id": "CHEMBL3989872"
+   },
+   {
+    "compound": "apinocaltamide",
+    "pairs": [
+     "P13",
+     "P14"
+    ],
+    "parent_chembl_id": "CHEMBL4217292"
+   },
+   {
+    "compound": "bepridil",
+    "pairs": [
+     "P07",
+     "P08"
+    ],
+    "parent_chembl_id": "CHEMBL1008"
+   },
+   {
+    "compound": "CX1739",
+    "pairs": [
+     "P29"
+    ],
+    "parent_chembl_id": "CHEMBL3707399"
+   },
+   {
+    "compound": "dasolampanel",
+    "pairs": [
+     "P28"
+    ],
+    "parent_chembl_id": "CHEMBL2103869"
+   },
+   {
+    "compound": "delucemine",
+    "pairs": [
+     "P18"
+    ],
+    "parent_chembl_id": "CHEMBL2110814"
+   },
+   {
+    "compound": "dextromethorphan",
+    "pairs": [
+     "P32"
+    ],
+    "parent_chembl_id": "CHEMBL52440"
+   },
+   {
+    "compound": "EVT-101",
+    "pairs": [
+     "P26"
+    ],
+    "parent_chembl_id": "CHEMBL3545350"
+   },
+   {
+    "compound": "felbamate",
+    "pairs": [
+     "P17"
+    ],
+    "parent_chembl_id": "CHEMBL1094"
+   },
+   {
+    "compound": "gabapentin",
+    "pairs": [
+     "P09",
+     "P10"
+    ],
+    "parent_chembl_id": "CHEMBL940"
+   },
+   {
+    "compound": "memantine",
+    "pairs": [
+     "P19"
+    ],
+    "parent_chembl_id": "CHEMBL807"
+   },
+   {
+    "compound": "MK-8777",
+    "pairs": [
+     "P30"
+    ],
+    "parent_chembl_id": "CHEMBL3707401"
+   },
+   {
+    "compound": "neboglamine",
+    "pairs": [
+     "P24"
+    ],
+    "parent_chembl_id": "CHEMBL1255840"
+   },
+   {
+    "compound": "orphenadrine",
+    "pairs": [
+     "P20"
+    ],
+    "parent_chembl_id": "CHEMBL900"
+   },
+   {
+    "compound": "perzinfotel",
+    "pairs": [
+     "P16"
+    ],
+    "parent_chembl_id": "CHEMBL452461"
+   },
+   {
+    "compound": "phloroglucinol",
+    "pairs": [
+     "P05",
+     "P06"
+    ],
+    "parent_chembl_id": "CHEMBL473159"
+   },
+   {
+    "compound": "radiprodil",
+    "pairs": [
+     "P25"
+    ],
+    "parent_chembl_id": "CHEMBL182066"
+   },
+   {
+    "compound": "ralfinamide",
+    "pairs": [
+     "P21"
+    ],
+    "parent_chembl_id": "CHEMBL2107771"
+   },
+   {
+    "compound": "rapastinel",
+    "pairs": [
+     "P23"
+    ],
+    "parent_chembl_id": "CHEMBL3544917"
+   },
+   {
+    "compound": "selurampanel",
+    "pairs": [
+     "P27"
+    ],
+    "parent_chembl_id": "CHEMBL3545042"
+   },
+   {
+    "compound": "suloctidil",
+    "pairs": [
+     "P03",
+     "P04"
+    ],
+    "parent_chembl_id": "CHEMBL404849"
+   },
+   {
+    "compound": "talampanel",
+    "pairs": [
+     "P31"
+    ],
+    "parent_chembl_id": "CHEMBL61872"
+   },
+   {
+    "compound": "terodiline",
+    "pairs": [
+     "P01",
+     "P02"
+    ],
+    "parent_chembl_id": "CHEMBL363295"
+   },
+   {
+    "compound": "trimethadione",
+    "pairs": [
+     "P11",
+     "P12"
+    ],
+    "parent_chembl_id": "CHEMBL695"
+   }
+  ],
+  "by_need": [
+   {
+    "by_live_label": {
+     "abstained": 5,
+     "compatible": 9,
+     "opposite": 3
+    },
+    "by_reference_label": {
+     "compatible": 8,
+     "indeterminable": 1,
+     "opposite": 4,
+     "unknown": 4
+    },
+    "need": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+    "need_direction": "down",
+    "need_direction_on": "postsynaptic glutamatergic gain (NMDAR, possibly AMPAR)",
+    "pairs": [
+     "P16",
+     "P17",
+     "P18",
+     "P19",
+     "P20",
+     "P21",
+     "P22",
+     "P23",
+     "P24",
+     "P25",
+     "P26",
+     "P27",
+     "P28",
+     "P29",
+     "P30",
+     "P31",
+     "P32"
+    ]
+   },
+   {
+    "by_live_label": {
+     "abstained": 7
+    },
+    "by_reference_label": {
+     "compatible": 1,
+     "indeterminable": 5,
+     "unknown": 1
+    },
+    "need": "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
+    "need_direction": "down",
+    "need_direction_on": "seizure/spasm burden",
+    "pairs": [
+     "P01",
+     "P03",
+     "P05",
+     "P07",
+     "P09",
+     "P11",
+     "P13"
+    ]
+   },
+   {
+    "by_live_label": {
+     "abstained": 5,
+     "compatible": 3
+    },
+    "by_reference_label": {
+     "compatible": 4,
+     "indeterminable": 3,
+     "unknown": 1
+    },
+    "need": "NEED-T-TYPE-CALCIUM",
+    "need_direction": "down",
+    "need_direction_on": "T-type calcium current",
+    "pairs": [
+     "P02",
+     "P04",
+     "P06",
+     "P08",
+     "P10",
+     "P12",
+     "P14",
+     "P15"
+    ]
+   }
+  ],
+  "counts": {
+   "by_abstention_class": {
+    "action_not_stated": 2,
+    "coupling_not_measured": 20,
+    "group_record_mostly_outside_module_targets": 4
+   },
+   "by_agreement": {
+    "abstained_reference_determinate": 5,
+    "abstained_reference_not_determinate": 12,
+    "asserted_and_agrees": 12,
+    "asserted_reference_not_determinate": 3
+   },
+   "by_live_label": {
+    "abstained": 17,
+    "compatible": 12,
+    "opposite": 3
+   },
+   "by_reference_label": {
+    "compatible": 13,
+    "indeterminable": 9,
+    "opposite": 4,
+    "unknown": 6
+   },
+   "by_target_level": {
+    "protein_complex": 2,
+    "protein_complex_group": 23,
+    "protein_family": 4,
+    "single_protein": 3
+   },
+   "changed_by_group_guard": 4,
+   "compounds": 25,
+   "determinate": 17,
+   "determinate_class_level": 6,
+   "determinate_functional": 11,
+   "determinate_independent": 8,
+   "pairs": 32
+  },
+  "limits": [
+   "EXPERIMENTAL: a retrospective comparison on a small, deliberately non-random reference (32 selected pairs over 25 compounds; 17 determinate, 11 from a functional measurement and 6 from a class-level attribution); no general accuracy and no superiority of one path over another is claimed.",
+   "Pharmacological compatibility means only that a documented action has the direction the need states. It is not research priority, not evidence of benefit in WWOX deficiency, and says nothing about safety or about whether the need's direction is the beneficial one.",
+   "Unknown is not negative: the bounded search found nothing, which is a statement about the search, not about the compound.",
+   "An abstention keeps the row visible with its action and its reason; it removes a direction the source row cannot carry, and on this selection it also removed one direction the reference supports (bepridil at the T-type need): no field yet lets a sourced subunit-level measurement re-license it.",
+   "The reference side was built by one actor who had seen the earlier labels; the module side is machine-generated from committed code. 8 of the 17 determinate rows are independent of the module's construction sources; agreement on the others is not independent confirmation."
+  ],
+  "module_by_need": {
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR": {
+    "abstained_by_class": {
+     "action_not_stated": 196,
+     "coupling_not_measured": 234,
+     "no_coupling_row": 2
+    },
+    "by_label": {
+     "abstained": 432,
+     "consistent": 198,
+     "opposed": 45
+    },
+    "by_target_level": {
+     "gene_listing": {
+      "abstained": 227,
+      "consistent": 67,
+      "opposed": 9
+     },
+     "protein_complex": {
+      "consistent": 10
+     },
+     "protein_complex_group": {
+      "abstained": 79,
+      "consistent": 60,
+      "opposed": 9
+     },
+     "single_protein": {
+      "abstained": 126,
+      "consistent": 61,
+      "opposed": 27
+     }
+    },
+    "group_records_held_back": [],
+    "need_direction": "down",
+    "rows": 675
+   },
+   "NEED-GABA-CHLORIDE-GRADIENT": {
+    "abstained_by_class": {
+     "need_direction_not_evaluable": 5
+    },
+    "by_label": {
+     "abstained": 5
+    },
+    "by_target_level": {
+     "gene_listing": {
+      "abstained": 2
+     },
+     "single_protein": {
+      "abstained": 3
+     }
+    },
+    "group_records_held_back": [],
+    "need_direction": "uncertain",
+    "rows": 5
+   },
+   "NEED-GSK3B-DEREPRESSION": {
+    "abstained_by_class": {
+     "need_direction_not_evaluable": 93
+    },
+    "by_label": {
+     "abstained": 93
+    },
+    "by_target_level": {
+     "gene_listing": {
+      "abstained": 47
+     },
+     "protein_family": {
+      "abstained": 3
+     },
+     "single_protein": {
+      "abstained": 43
+     }
+    },
+    "group_records_held_back": [],
+    "need_direction": "uncertain",
+    "rows": 93
+   },
+   "NEED-INHIBITORY-HYPOFUNCTION": {
+    "abstained_by_class": {
+     "need_direction_not_evaluable": 23
+    },
+    "by_label": {
+     "abstained": 23
+    },
+    "by_target_level": {
+     "gene_listing": {
+      "abstained": 19
+     },
+     "single_protein": {
+      "abstained": 4
+     }
+    },
+    "group_records_held_back": [],
+    "need_direction": "uncertain",
+    "rows": 23
+   },
+   "NEED-ISR-ATTENUATION": {
+    "abstained_by_class": {
+     "need_direction_not_evaluable": 13
+    },
+    "by_label": {
+     "abstained": 13
+    },
+    "by_target_level": {
+     "gene_listing": {
+      "abstained": 9
+     },
+     "single_protein": {
+      "abstained": 4
+     }
+    },
+    "group_records_held_back": [],
+    "need_direction": "uncertain",
+    "rows": 13
+   },
+   "NEED-LACTATE-LDH": {
+    "abstained_by_class": {
+     "need_direction_not_evaluable": 12
+    },
+    "by_label": {
+     "abstained": 12
+    },
+    "by_target_level": {
+     "gene_listing": {
+      "abstained": 6
+     },
+     "single_protein": {
+      "abstained": 6
+     }
+    },
+    "group_records_held_back": [],
+    "need_direction": "uncertain",
+    "rows": 12
+   },
+   "NEED-MTOR-AUTOPHAGY": {
+    "abstained_by_class": {
+     "need_direction_not_evaluable": 275
+    },
+    "by_label": {
+     "abstained": 275
+    },
+    "by_target_level": {
+     "gene_listing": {
+      "abstained": 204
+     },
+     "protein_complex": {
+      "abstained": 1
+     },
+     "single_protein": {
+      "abstained": 70
+     }
+    },
+    "group_records_held_back": [],
+    "need_direction": "uncertain",
+    "rows": 275
+   },
+   "NEED-MYELINATION": {
+    "abstained_by_class": {
+     "action_not_stated": 159,
+     "no_coupling_row": 159
+    },
+    "by_label": {
+     "abstained": 318
+    },
+    "by_target_level": {
+     "gene_listing": {
+      "abstained": 166
+     },
+     "protein_family": {
+      "abstained": 5
+     },
+     "single_protein": {
+      "abstained": 147
+     }
+    },
+    "group_records_held_back": [],
+    "need_direction": "restore",
+    "rows": 318
+   },
+   "NEED-NEUROINFLAMMATION-GLIA": {
+    "abstained_by_class": {
+     "need_direction_not_evaluable": 702
+    },
+    "by_label": {
+     "abstained": 702
+    },
+    "by_target_level": {
+     "gene_listing": {
+      "abstained": 542
+     },
+     "protein_complex_group": {
+      "abstained": 2
+     },
+     "protein_family": {
+      "abstained": 9
+     },
+     "single_protein": {
+      "abstained": 149
+     }
+    },
+    "group_records_held_back": [],
+    "need_direction": "uncertain",
+    "rows": 702
+   },
+   "NEED-PDH-PYRUVATE-AXIS": {
+    "abstained_by_class": {
+     "need_direction_not_evaluable": 21
+    },
+    "by_label": {
+     "abstained": 21
+    },
+    "by_target_level": {
+     "gene_listing": {
+      "abstained": 11
+     },
+     "protein_family": {
+      "abstained": 4
+     },
+     "single_protein": {
+      "abstained": 6
+     }
+    },
+    "group_records_held_back": [],
+    "need_direction": "uncertain",
+    "rows": 21
+   },
+   "NEED-REDOX-NRF2": {
+    "abstained_by_class": {
+     "need_direction_not_evaluable": 882
+    },
+    "by_label": {
+     "abstained": 882
+    },
+    "by_target_level": {
+     "gene_listing": {
+      "abstained": 868
+     },
+     "protein_protein_interaction": {
+      "abstained": 2
+     },
+     "single_protein": {
+      "abstained": 12
+     }
+    },
+    "group_records_held_back": [],
+    "need_direction": "uncertain",
+    "rows": 882
+   },
+   "NEED-SEIZURE-CONTROL-SYMPTOMATIC": {
+    "abstained_by_class": {
+     "action_not_stated": 50,
+     "coupling_not_measured": 32
+    },
+    "by_label": {
+     "abstained": 82,
+     "consistent": 5
+    },
+    "by_target_level": {
+     "gene_listing": {
+      "abstained": 53,
+      "consistent": 1
+     },
+     "protein_complex_group": {
+      "abstained": 10
+     },
+     "protein_family": {
+      "abstained": 9
+     },
+     "single_protein": {
+      "abstained": 10,
+      "consistent": 4
+     }
+    },
+    "group_records_held_back": [],
+    "need_direction": "down",
+    "rows": 87
+   },
+   "NEED-T-TYPE-CALCIUM": {
+    "abstained_by_class": {
+     "action_not_stated": 88,
+     "group_record_mostly_outside_module_targets": 12
+    },
+    "by_label": {
+     "abstained": 100,
+     "consistent": 88
+    },
+    "by_target_level": {
+     "gene_listing": {
+      "abstained": 64,
+      "consistent": 34
+     },
+     "protein_complex_group": {
+      "abstained": 30
+     },
+     "protein_family": {
+      "abstained": 6,
+      "consistent": 21
+     },
+     "single_protein": {
+      "consistent": 33
+     }
+    },
+    "group_records_held_back": [
+     [
+      26,
+      3
+     ]
+    ],
+    "need_direction": "down",
+    "rows": 188
+   },
+   "NEED-WNT-BETA-CATENIN": {
+    "abstained_by_class": {
+     "need_direction_not_evaluable": 22
+    },
+    "by_label": {
+     "abstained": 22
+    },
+    "by_target_level": {
+     "gene_listing": {
+      "abstained": 4
+     },
+     "protein_family": {
+      "abstained": 2
+     },
+     "single_protein": {
+      "abstained": 16
+     }
+    },
+    "group_records_held_back": [],
+    "need_direction": "uncertain",
+    "rows": 22
+   },
+   "NEED-WWOX-ENDOGENOUS-BOOST": {
+    "abstained_by_class": {
+     "action_not_stated": 3
+    },
+    "by_label": {
+     "abstained": 3
+    },
+    "by_target_level": {
+     "gene_listing": {
+      "abstained": 3
+     }
+    },
+    "group_records_held_back": [],
+    "need_direction": "up",
+    "rows": 3
+   },
+   "NEED-WWOX-GENE-ADDITION": {
+    "abstained_by_class": {
+     "action_not_stated": 3
+    },
+    "by_label": {
+     "abstained": 3
+    },
+    "by_target_level": {
+     "gene_listing": {
+      "abstained": 3
+     }
+    },
+    "group_records_held_back": [],
+    "need_direction": "restore",
+    "rows": 3
+   },
+   "NEED-WWOX-MISSENSE-PROTEIN-RESCUE": {
+    "abstained_by_class": {
+     "action_not_stated": 3
+    },
+    "by_label": {
+     "abstained": 3
+    },
+    "by_target_level": {
+     "gene_listing": {
+      "abstained": 3
+     }
+    },
+    "group_records_held_back": [],
+    "need_direction": "up",
+    "rows": 3
+   },
+   "NEED-WWOX-PTC-READTHROUGH": {
+    "abstained_by_class": {
+     "action_not_stated": 3
+    },
+    "by_label": {
+     "abstained": 3
+    },
+    "by_target_level": {
+     "gene_listing": {
+      "abstained": 3
+     }
+    },
+    "group_records_held_back": [],
+    "need_direction": "restore",
+    "rows": 3
+   },
+   "NEED-WWOX-SPLICE-CORRECTION": {
+    "abstained_by_class": {
+     "action_not_stated": 3
+    },
+    "by_label": {
+     "abstained": 3
+    },
+    "by_target_level": {
+     "gene_listing": {
+      "abstained": 3
+     }
+    },
+    "group_records_held_back": [],
+    "need_direction": "restore",
+    "rows": 3
+   }
+  },
+  "pairs": [
+   {
+    "abstention_classes": [
+     "coupling_not_measured"
+    ],
+    "abstention_reasons": [
+     "role row for CACNA1G is 'unresolved' (inferred, not measured) [qualifier: symptom-level inference, not mechanism-linked to WWOX; independent audit 2026-10-28: nothing in this need's own sources measures a T-type effect; demoted from same]"
+    ],
+    "action_directions": [
+     "down"
+    ],
+    "actions": [
+     "BLOCKER"
+    ],
+    "agreement": "abstained_reference_not_determinate",
+    "asserted_direction": null,
+    "compound": "terodiline",
+    "independence": "shared",
+    "label": "direction_unresolved",
+    "label_before_group_guard": "direction_unresolved",
+    "measure_kind": "none",
+    "measure_type": "functional electrophysiology (whole-cell patch clamp)",
+    "missing_datum": "no measurement on any Cav3 isoform or native T-type current was found; the calcium-channel evidence is L-type",
+    "need": "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
+    "need_direction": "down",
+    "need_direction_certainty": "supported_as_clinical_report_only",
+    "need_direction_on": "seizure/spasm burden",
+    "next_check": "measure_at_required_resolution",
+    "pair_id": "P01",
+    "parent_chembl_id": "CHEMBL363295",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2363032",
+      "components": 26,
+      "components_in_module_targets": 3,
+      "target_level": "protein_complex_group"
+     }
+    ],
+    "reference_label": "indeterminable",
+    "reference_locator": "PubMed:10482914 abstract items 2-3; PubMed:9151306 abstract; ChEMBL CHEMBL3436045/CHEMBL5291721 rows",
+    "reference_state": "indeterminable",
+    "reference_status": "indeterminable_other_channel_type_only",
+    "stratum": "heterogeneous group record, clean blocker",
+    "target_levels": [
+     "protein_complex_group"
+    ],
+    "targets": [
+     "CACNA1G"
+    ]
+   },
+   {
+    "abstention_classes": [
+     "group_record_mostly_outside_module_targets"
+    ],
+    "abstention_reasons": [
+     "group_record_mostly_outside_module_targets: the ChEMBL protein complex group record CHEMBL2363032 has 3 of 26 components among the module's intervention targets, so its single curated action is not resolved to this gene"
+    ],
+    "action_directions": [
+     "down"
+    ],
+    "actions": [
+     "BLOCKER"
+    ],
+    "agreement": "abstained_reference_not_determinate",
+    "asserted_direction": null,
+    "compound": "terodiline",
+    "independence": "shared",
+    "label": "direction_unresolved",
+    "label_before_group_guard": "consistent",
+    "measure_kind": "none",
+    "measure_type": "functional electrophysiology (whole-cell patch clamp)",
+    "missing_datum": "no Cav3.1/3.2/3.3 or native T-type measurement found",
+    "need": "NEED-T-TYPE-CALCIUM",
+    "need_direction": "down",
+    "need_direction_certainty": "inferred",
+    "need_direction_on": "T-type calcium current",
+    "next_check": "measure_at_required_resolution",
+    "pair_id": "P02",
+    "parent_chembl_id": "CHEMBL363295",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2363032",
+      "components": 26,
+      "components_in_module_targets": 3,
+      "target_level": "protein_complex_group"
+     }
+    ],
+    "reference_label": "indeterminable",
+    "reference_locator": "PubMed:10482914 abstract items 2-3; PubMed:9151306 abstract",
+    "reference_state": "indeterminable",
+    "reference_status": "indeterminable_other_channel_type_only",
+    "stratum": "heterogeneous group record, clean blocker",
+    "target_levels": [
+     "protein_complex_group"
+    ],
+    "targets": [
+     "CACNA1G",
+     "CACNA1H",
+     "CACNA1I"
+    ]
+   },
+   {
+    "abstention_classes": [
+     "coupling_not_measured"
+    ],
+    "abstention_reasons": [
+     "role row for CACNA1G is 'unresolved' (inferred, not measured) [qualifier: symptom-level inference, not mechanism-linked to WWOX; independent audit 2026-10-28: nothing in this need's own sources measures a T-type effect; demoted from same]"
+    ],
+    "action_directions": [
+     "down"
+    ],
+    "actions": [
+     "BLOCKER"
+    ],
+    "agreement": "abstained_reference_not_determinate",
+    "asserted_direction": null,
+    "compound": "suloctidil",
+    "independence": "shared",
+    "label": "direction_unresolved",
+    "label_before_group_guard": "direction_unresolved",
+    "measure_kind": "none",
+    "measure_type": "radioligand binding (no direction at a channel), plus class statements",
+    "missing_datum": "binding at L-type sites only; no T-type or Cav3 functional measurement found",
+    "need": "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
+    "need_direction": "down",
+    "need_direction_certainty": "supported_as_clinical_report_only",
+    "need_direction_on": "seizure/spasm burden",
+    "next_check": "measure_at_required_resolution",
+    "pair_id": "P03",
+    "parent_chembl_id": "CHEMBL404849",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2363032",
+      "components": 26,
+      "components_in_module_targets": 3,
+      "target_level": "protein_complex_group"
+     }
+    ],
+    "reference_label": "indeterminable",
+    "reference_locator": "ChEMBL document CHEMBL1909046 assays CHEMBL1909102/1909103/1909121; PubMed:3036152 abstract sentence 1; PubMed:14709594 abstract last sentence",
+    "reference_state": "indeterminable",
+    "reference_status": "indeterminable_binding_only_other_channel_type",
+    "stratum": "heterogeneous group record, clean blocker",
+    "target_levels": [
+     "protein_complex_group"
+    ],
+    "targets": [
+     "CACNA1G"
+    ]
+   },
+   {
+    "abstention_classes": [
+     "group_record_mostly_outside_module_targets"
+    ],
+    "abstention_reasons": [
+     "group_record_mostly_outside_module_targets: the ChEMBL protein complex group record CHEMBL2363032 has 3 of 26 components among the module's intervention targets, so its single curated action is not resolved to this gene"
+    ],
+    "action_directions": [
+     "down"
+    ],
+    "actions": [
+     "BLOCKER"
+    ],
+    "agreement": "abstained_reference_not_determinate",
+    "asserted_direction": null,
+    "compound": "suloctidil",
+    "independence": "shared",
+    "label": "direction_unresolved",
+    "label_before_group_guard": "consistent",
+    "measure_kind": "none",
+    "measure_type": "radioligand binding",
+    "missing_datum": "no Cav3 measurement found",
+    "need": "NEED-T-TYPE-CALCIUM",
+    "need_direction": "down",
+    "need_direction_certainty": "inferred",
+    "need_direction_on": "T-type calcium current",
+    "next_check": "measure_at_required_resolution",
+    "pair_id": "P04",
+    "parent_chembl_id": "CHEMBL404849",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2363032",
+      "components": 26,
+      "components_in_module_targets": 3,
+      "target_level": "protein_complex_group"
+     }
+    ],
+    "reference_label": "indeterminable",
+    "reference_locator": "ChEMBL document CHEMBL1909046",
+    "reference_state": "indeterminable",
+    "reference_status": "indeterminable_binding_only_other_channel_type",
+    "stratum": "heterogeneous group record, clean blocker",
+    "target_levels": [
+     "protein_complex_group"
+    ],
+    "targets": [
+     "CACNA1G",
+     "CACNA1H",
+     "CACNA1I"
+    ]
+   },
+   {
+    "abstention_classes": [
+     "coupling_not_measured"
+    ],
+    "abstention_reasons": [
+     "role row for CACNA1G is 'unresolved' (inferred, not measured) [qualifier: symptom-level inference, not mechanism-linked to WWOX; independent audit 2026-10-28: nothing in this need's own sources measures a T-type effect; demoted from same]"
+    ],
+    "action_directions": [
+     "down"
+    ],
+    "actions": [
+     "BLOCKER"
+    ],
+    "agreement": "abstained_reference_not_determinate",
+    "asserted_direction": null,
+    "compound": "phloroglucinol",
+    "independence": "shared",
+    "label": "direction_unresolved",
+    "label_before_group_guard": "direction_unresolved",
+    "measure_kind": "none",
+    "measure_type": "clinical endpoint (symptom response), not a target measurement",
+    "missing_datum": "no calcium-channel measurement at any resolution was found in the bounded search",
+    "need": "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
+    "need_direction": "down",
+    "need_direction_certainty": "supported_as_clinical_report_only",
+    "need_direction_on": "seizure/spasm burden",
+    "next_check": "extend_bounded_search",
+    "pair_id": "P05",
+    "parent_chembl_id": "CHEMBL473159",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2363032",
+      "components": 26,
+      "components_in_module_targets": 3,
+      "target_level": "protein_complex_group"
+     }
+    ],
+    "reference_label": "unknown",
+    "reference_locator": "PubMed:31917916 abstract (primary and secondary outcomes)",
+    "reference_state": "unknown",
+    "reference_status": "unknown_no_channel_measurement_found",
+    "stratum": "heterogeneous group record, clean blocker",
+    "target_levels": [
+     "protein_complex_group"
+    ],
+    "targets": [
+     "CACNA1G"
+    ]
+   },
+   {
+    "abstention_classes": [
+     "group_record_mostly_outside_module_targets"
+    ],
+    "abstention_reasons": [
+     "group_record_mostly_outside_module_targets: the ChEMBL protein complex group record CHEMBL2363032 has 3 of 26 components among the module's intervention targets, so its single curated action is not resolved to this gene"
+    ],
+    "action_directions": [
+     "down"
+    ],
+    "actions": [
+     "BLOCKER"
+    ],
+    "agreement": "abstained_reference_not_determinate",
+    "asserted_direction": null,
+    "compound": "phloroglucinol",
+    "independence": "shared",
+    "label": "direction_unresolved",
+    "label_before_group_guard": "consistent",
+    "measure_kind": "none",
+    "measure_type": "clinical endpoint",
+    "missing_datum": "no calcium-channel measurement found",
+    "need": "NEED-T-TYPE-CALCIUM",
+    "need_direction": "down",
+    "need_direction_certainty": "inferred",
+    "need_direction_on": "T-type calcium current",
+    "next_check": "extend_bounded_search",
+    "pair_id": "P06",
+    "parent_chembl_id": "CHEMBL473159",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2363032",
+      "components": 26,
+      "components_in_module_targets": 3,
+      "target_level": "protein_complex_group"
+     }
+    ],
+    "reference_label": "unknown",
+    "reference_locator": "PubMed:31917916 abstract",
+    "reference_state": "unknown",
+    "reference_status": "unknown_no_channel_measurement_found",
+    "stratum": "heterogeneous group record, clean blocker",
+    "target_levels": [
+     "protein_complex_group"
+    ],
+    "targets": [
+     "CACNA1G",
+     "CACNA1H",
+     "CACNA1I"
+    ]
+   },
+   {
+    "abstention_classes": [
+     "coupling_not_measured"
+    ],
+    "abstention_reasons": [
+     "role row for CACNA1G is 'unresolved' (inferred, not measured) [qualifier: symptom-level inference, not mechanism-linked to WWOX; independent audit 2026-10-28: nothing in this need's own sources measures a T-type effect; demoted from same]"
+    ],
+    "action_directions": [
+     "down"
+    ],
+    "actions": [
+     "BLOCKER"
+    ],
+    "agreement": "abstained_reference_not_determinate",
+    "asserted_direction": null,
+    "compound": "bepridil",
+    "independence": "independent",
+    "label": "direction_unresolved",
+    "label_before_group_guard": "direction_unresolved",
+    "measure_kind": "none",
+    "measure_type": "functional electrophysiology (tail-current analysis; patch clamp)",
+    "missing_datum": "T-type block is documented, but not on Cav3.1 specifically, which is the only gene this need lists",
+    "need": "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
+    "need_direction": "down",
+    "need_direction_certainty": "supported_as_clinical_report_only",
+    "need_direction_on": "seizure/spasm burden",
+    "next_check": "measure_at_required_resolution",
+    "pair_id": "P07",
+    "parent_chembl_id": "CHEMBL1008",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2363032",
+      "components": 26,
+      "components_in_module_targets": 3,
+      "target_level": "protein_complex_group"
+     }
+    ],
+    "reference_label": "indeterminable",
+    "reference_locator": "PubMed:1281221 abstract sentence 4; PubMed:15855830 abstract sentences 2-3",
+    "reference_state": "indeterminable",
+    "reference_status": "indeterminable_family_level_only",
+    "stratum": "heterogeneous group record, clean blocker",
+    "target_levels": [
+     "protein_complex_group"
+    ],
+    "targets": [
+     "CACNA1G"
+    ]
+   },
+   {
+    "abstention_classes": [
+     "group_record_mostly_outside_module_targets"
+    ],
+    "abstention_reasons": [
+     "group_record_mostly_outside_module_targets: the ChEMBL protein complex group record CHEMBL2363032 has 3 of 26 components among the module's intervention targets, so its single curated action is not resolved to this gene"
+    ],
+    "action_directions": [
+     "down"
+    ],
+    "actions": [
+     "BLOCKER"
+    ],
+    "agreement": "abstained_reference_determinate",
+    "asserted_direction": null,
+    "compound": "bepridil",
+    "independence": "independent",
+    "label": "direction_unresolved",
+    "label_before_group_guard": "consistent",
+    "measure_kind": "functional",
+    "measure_type": "functional electrophysiology (patch clamp)",
+    "missing_datum": "",
+    "need": "NEED-T-TYPE-CALCIUM",
+    "need_direction": "down",
+    "need_direction_certainty": "inferred",
+    "need_direction_on": "T-type calcium current",
+    "next_check": "sourced_per_gene_override",
+    "pair_id": "P08",
+    "parent_chembl_id": "CHEMBL1008",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2363032",
+      "components": 26,
+      "components_in_module_targets": 3,
+      "target_level": "protein_complex_group"
+     }
+    ],
+    "reference_label": "compatible",
+    "reference_locator": "PubMed:15855830 abstract sentences 2-3",
+    "reference_state": "determinate",
+    "reference_status": "determinate_functional",
+    "stratum": "heterogeneous group record, clean blocker",
+    "target_levels": [
+     "protein_complex_group"
+    ],
+    "targets": [
+     "CACNA1G",
+     "CACNA1H",
+     "CACNA1I"
+    ]
+   },
+   {
+    "abstention_classes": [
+     "action_not_stated"
+    ],
+    "abstention_reasons": [
+     "the source states no up/down action (modulator, binder, unstated or enzyme-type)"
+    ],
+    "action_directions": [
+     "unresolved"
+    ],
+    "actions": [
+     "MODULATOR"
+    ],
+    "agreement": "abstained_reference_not_determinate",
+    "asserted_direction": null,
+    "compound": "gabapentin",
+    "independence": "partly_shared",
+    "label": "direction_unresolved",
+    "label_before_group_guard": "direction_unresolved",
+    "measure_kind": "none",
+    "measure_type": "radioligand binding (alpha2delta); activation (Kv7)",
+    "missing_datum": "the measured target is an auxiliary subunit, not a Cav3 pore-forming gene; no net direction on T-type current established",
+    "need": "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
+    "need_direction": "down",
+    "need_direction_certainty": "supported_as_clinical_report_only",
+    "need_direction_on": "seizure/spasm burden",
+    "next_check": "measure_at_required_resolution",
+    "pair_id": "P09",
+    "parent_chembl_id": "CHEMBL940",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2363032",
+      "components": 26,
+      "components_in_module_targets": 3,
+      "target_level": "protein_complex_group"
+     }
+    ],
+    "reference_label": "indeterminable",
+    "reference_locator": "ChEMBL documents CHEMBL1148434, CHEMBL1146981; GtoPdb ligand 5483 (KCNQ3/KCNQ5); DrugCentral CACNA2D1/CACNA2D2 rows",
+    "reference_state": "indeterminable",
+    "reference_status": "indeterminable_target_outside_need_genes",
+    "stratum": "heterogeneous group record, ambiguous MODULATOR",
+    "target_levels": [
+     "protein_complex_group"
+    ],
+    "targets": [
+     "CACNA1G"
+    ]
+   },
+   {
+    "abstention_classes": [
+     "action_not_stated"
+    ],
+    "abstention_reasons": [
+     "the source states no up/down action (modulator, binder, unstated or enzyme-type)"
+    ],
+    "action_directions": [
+     "unresolved"
+    ],
+    "actions": [
+     "MODULATOR"
+    ],
+    "agreement": "abstained_reference_not_determinate",
+    "asserted_direction": null,
+    "compound": "gabapentin",
+    "independence": "partly_shared",
+    "label": "direction_unresolved",
+    "label_before_group_guard": "direction_unresolved",
+    "measure_kind": "none",
+    "measure_type": "radioligand binding",
+    "missing_datum": "no Cav3 direction established",
+    "need": "NEED-T-TYPE-CALCIUM",
+    "need_direction": "down",
+    "need_direction_certainty": "inferred",
+    "need_direction_on": "T-type calcium current",
+    "next_check": "measure_at_required_resolution",
+    "pair_id": "P10",
+    "parent_chembl_id": "CHEMBL940",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2363032",
+      "components": 26,
+      "components_in_module_targets": 3,
+      "target_level": "protein_complex_group"
+     }
+    ],
+    "reference_label": "indeterminable",
+    "reference_locator": "ChEMBL documents CHEMBL1148434, CHEMBL1146981",
+    "reference_state": "indeterminable",
+    "reference_status": "indeterminable_target_outside_need_genes",
+    "stratum": "heterogeneous group record, ambiguous MODULATOR",
+    "target_levels": [
+     "protein_complex_group"
+    ],
+    "targets": [
+     "CACNA1G",
+     "CACNA1H",
+     "CACNA1I"
+    ]
+   },
+   {
+    "abstention_classes": [
+     "coupling_not_measured"
+    ],
+    "abstention_reasons": [
+     "role row for CACNA1G is 'unresolved' (inferred, not measured) [qualifier: symptom-level inference, not mechanism-linked to WWOX; independent audit 2026-10-28: nothing in this need's own sources measures a T-type effect; demoted from same]"
+    ],
+    "action_directions": [
+     "down"
+    ],
+    "actions": [
+     "BLOCKER"
+    ],
+    "agreement": "abstained_reference_not_determinate",
+    "asserted_direction": null,
+    "compound": "trimethadione",
+    "independence": "shared",
+    "label": "direction_unresolved",
+    "label_before_group_guard": "direction_unresolved",
+    "measure_kind": "none",
+    "measure_type": "in vivo pharmacology with a class attribution; no current measurement",
+    "missing_datum": "no isoform-resolved measurement; the need lists CACNA1G alone",
+    "need": "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
+    "need_direction": "down",
+    "need_direction_certainty": "supported_as_clinical_report_only",
+    "need_direction_on": "seizure/spasm burden",
+    "next_check": "measure_at_required_resolution",
+    "pair_id": "P11",
+    "parent_chembl_id": "CHEMBL695",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2362995",
+      "components": 3,
+      "components_in_module_targets": 3,
+      "target_level": "protein_family"
+     }
+    ],
+    "reference_label": "indeterminable",
+    "reference_locator": "PubMed:16171802 title and abstract; PubMed:17291698 abstract (last two sentences)",
+    "reference_state": "indeterminable",
+    "reference_status": "indeterminable_family_level_only",
+    "stratum": "homogeneous family record, clean blocker",
+    "target_levels": [
+     "protein_family"
+    ],
+    "targets": [
+     "CACNA1G"
+    ]
+   },
+   {
+    "abstention_classes": [],
+    "abstention_reasons": [],
+    "action_directions": [
+     "down"
+    ],
+    "actions": [
+     "BLOCKER"
+    ],
+    "agreement": "asserted_and_agrees",
+    "asserted_direction": "compatible",
+    "compound": "trimethadione",
+    "independence": "shared",
+    "label": "consistent",
+    "label_before_group_guard": "consistent",
+    "measure_kind": "class_level",
+    "measure_type": "in vivo pharmacology with a class attribution",
+    "missing_datum": "",
+    "need": "NEED-T-TYPE-CALCIUM",
+    "need_direction": "down",
+    "need_direction_certainty": "inferred",
+    "need_direction_on": "T-type calcium current",
+    "next_check": "measure_in_wwox_system",
+    "pair_id": "P12",
+    "parent_chembl_id": "CHEMBL695",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2362995",
+      "components": 3,
+      "components_in_module_targets": 3,
+      "target_level": "protein_family"
+     }
+    ],
+    "reference_label": "compatible",
+    "reference_locator": "PubMed:16171802 abstract; PubMed:17291698 abstract",
+    "reference_state": "determinate",
+    "reference_status": "determinate_class_level",
+    "stratum": "homogeneous family record, clean blocker",
+    "target_levels": [
+     "protein_family"
+    ],
+    "targets": [
+     "CACNA1G",
+     "CACNA1H",
+     "CACNA1I"
+    ]
+   },
+   {
+    "abstention_classes": [
+     "coupling_not_measured"
+    ],
+    "abstention_reasons": [
+     "role row for CACNA1G is 'unresolved' (inferred, not measured) [qualifier: symptom-level inference, not mechanism-linked to WWOX; independent audit 2026-10-28: nothing in this need's own sources measures a T-type effect; demoted from same]"
+    ],
+    "action_directions": [
+     "down"
+    ],
+    "actions": [
+     "BLOCKER"
+    ],
+    "agreement": "abstained_reference_determinate",
+    "asserted_direction": null,
+    "compound": "apinocaltamide",
+    "independence": "partly_shared",
+    "label": "direction_unresolved",
+    "label_before_group_guard": "direction_unresolved",
+    "measure_kind": "functional",
+    "measure_type": "functional calcium-flux assay (FLIPR); inactivated-state Ki by patch clamp for Cav3.3",
+    "missing_datum": "",
+    "need": "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
+    "need_direction": "down",
+    "need_direction_certainty": "supported_as_clinical_report_only",
+    "need_direction_on": "seizure/spasm burden",
+    "next_check": "measure_target_to_need_coupling",
+    "pair_id": "P13",
+    "parent_chembl_id": "CHEMBL4217292",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2362995",
+      "components": 3,
+      "components_in_module_targets": 3,
+      "target_level": "protein_family"
+     }
+    ],
+    "reference_label": "compatible",
+    "reference_locator": "ChEMBL document CHEMBL4177680, assays CHEMBL4181719/4181720/4181721",
+    "reference_state": "determinate",
+    "reference_status": "determinate_functional",
+    "stratum": "homogeneous family record, clean blocker",
+    "target_levels": [
+     "protein_family"
+    ],
+    "targets": [
+     "CACNA1G"
+    ]
+   },
+   {
+    "abstention_classes": [],
+    "abstention_reasons": [],
+    "action_directions": [
+     "down"
+    ],
+    "actions": [
+     "BLOCKER"
+    ],
+    "agreement": "asserted_and_agrees",
+    "asserted_direction": "compatible",
+    "compound": "apinocaltamide",
+    "independence": "partly_shared",
+    "label": "consistent",
+    "label_before_group_guard": "consistent",
+    "measure_kind": "functional",
+    "measure_type": "functional calcium-flux assay",
+    "missing_datum": "",
+    "need": "NEED-T-TYPE-CALCIUM",
+    "need_direction": "down",
+    "need_direction_certainty": "inferred",
+    "need_direction_on": "T-type calcium current",
+    "next_check": "measure_in_wwox_system",
+    "pair_id": "P14",
+    "parent_chembl_id": "CHEMBL4217292",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2362995",
+      "components": 3,
+      "components_in_module_targets": 3,
+      "target_level": "protein_family"
+     }
+    ],
+    "reference_label": "compatible",
+    "reference_locator": "ChEMBL document CHEMBL4177680",
+    "reference_state": "determinate",
+    "reference_status": "determinate_functional",
+    "stratum": "homogeneous family record, clean blocker",
+    "target_levels": [
+     "protein_family"
+    ],
+    "targets": [
+     "CACNA1G",
+     "CACNA1H",
+     "CACNA1I"
+    ]
+   },
+   {
+    "abstention_classes": [],
+    "abstention_reasons": [],
+    "action_directions": [
+     "down"
+    ],
+    "actions": [
+     "BLOCKER"
+    ],
+    "agreement": "asserted_and_agrees",
+    "asserted_direction": "compatible",
+    "compound": "ABT-639",
+    "independence": "partly_shared",
+    "label": "consistent",
+    "label_before_group_guard": "consistent",
+    "measure_kind": "functional",
+    "measure_type": "functional channel block as curated by GtoPdb",
+    "missing_datum": "",
+    "need": "NEED-T-TYPE-CALCIUM",
+    "need_direction": "down",
+    "need_direction_certainty": "inferred",
+    "need_direction_on": "T-type calcium current",
+    "next_check": "measure_in_wwox_system",
+    "pair_id": "P15",
+    "parent_chembl_id": "CHEMBL3590674",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL1859",
+      "components": null,
+      "components_in_module_targets": null,
+      "target_level": "single_protein"
+     }
+    ],
+    "reference_label": "compatible",
+    "reference_locator": "GtoPdb targets 535/536/537, ligand 7721; PubMed:24726441",
+    "reference_state": "determinate",
+    "reference_status": "determinate_functional",
+    "stratum": "single-protein record, clean blocker, calcium need",
+    "target_levels": [
+     "single_protein"
+    ],
+    "targets": [
+     "CACNA1H"
+    ]
+   },
+   {
+    "abstention_classes": [
+     "coupling_not_measured"
+    ],
+    "abstention_reasons": [
+     "role row for GRIN2D is 'unresolved' (inferred, not measured) [qualifier: UNRESOLVED at subunit level: no GluN2D datum in a WWOX system; pore blockers act relatively more on GluN2C/2D at physiological Mg2+ (abstract level), which could mean an interneuron effect (F04)]"
+    ],
+    "action_directions": [
+     "down"
+    ],
+    "actions": [
+     "ANTAGONIST"
+    ],
+    "agreement": "asserted_and_agrees",
+    "asserted_direction": "compatible",
+    "compound": "perzinfotel",
+    "independence": "partly_shared",
+    "label": "mixed:consistent|direction_unresolved",
+    "label_before_group_guard": "mixed:consistent|direction_unresolved",
+    "measure_kind": "class_level",
+    "measure_type": "radioligand binding plus in vivo antagonism of an NMDA challenge; no current measurement found",
+    "missing_datum": "",
+    "need": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+    "need_direction": "down",
+    "need_direction_certainty": "supported_in_WWOX_mouse_model for the tool compound; unknown for any clinically used antagonist",
+    "need_direction_on": "postsynaptic glutamatergic gain (NMDAR, possibly AMPAR)",
+    "next_check": "measure_in_wwox_system",
+    "pair_id": "P16",
+    "parent_chembl_id": "CHEMBL452461",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2094124",
+      "components": 7,
+      "components_in_module_targets": 4,
+      "target_level": "protein_complex_group"
+     }
+    ],
+    "reference_label": "compatible",
+    "reference_locator": "ChEMBL document CHEMBL1131113 assays CHEMBL751237, CHEMBL724597; CHEMBL5214881",
+    "reference_state": "determinate",
+    "reference_status": "determinate_class_level",
+    "stratum": "homogeneous receptor group, clean down action, one ChEMBL mechanism",
+    "target_levels": [
+     "protein_complex_group"
+    ],
+    "targets": [
+     "GRIN1",
+     "GRIN2A",
+     "GRIN2B",
+     "GRIN2D"
+    ]
+   },
+   {
+    "abstention_classes": [
+     "coupling_not_measured"
+    ],
+    "abstention_reasons": [
+     "role row for GRIN2D is 'unresolved' (inferred, not measured) [qualifier: UNRESOLVED at subunit level: no GluN2D datum in a WWOX system; pore blockers act relatively more on GluN2C/2D at physiological Mg2+ (abstract level), which could mean an interneuron effect (F04)]"
+    ],
+    "action_directions": [
+     "down"
+    ],
+    "actions": [
+     "ANTAGONIST"
+    ],
+    "agreement": "asserted_and_agrees",
+    "asserted_direction": "compatible",
+    "compound": "felbamate",
+    "independence": "independent",
+    "label": "mixed:consistent|direction_unresolved",
+    "label_before_group_guard": "mixed:consistent|direction_unresolved",
+    "measure_kind": "functional",
+    "measure_type": "functional electrophysiology (two-electrode voltage clamp in oocytes)",
+    "missing_datum": "",
+    "need": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+    "need_direction": "down",
+    "need_direction_certainty": "supported_in_WWOX_mouse_model for the tool compound; unknown for any clinically used antagonist",
+    "need_direction_on": "postsynaptic glutamatergic gain (NMDAR, possibly AMPAR)",
+    "next_check": "measure_in_wwox_system",
+    "pair_id": "P17",
+    "parent_chembl_id": "CHEMBL1094",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2094124",
+      "components": 7,
+      "components_in_module_targets": 4,
+      "target_level": "protein_complex_group"
+     }
+    ],
+    "reference_label": "compatible",
+    "reference_locator": "ChEMBL document CHEMBL1144021, assay CHEMBL934123",
+    "reference_state": "determinate",
+    "reference_status": "determinate_functional",
+    "stratum": "homogeneous receptor group, clean down action, one ChEMBL mechanism",
+    "target_levels": [
+     "protein_complex_group"
+    ],
+    "targets": [
+     "GRIN1",
+     "GRIN2A",
+     "GRIN2B",
+     "GRIN2D"
+    ]
+   },
+   {
+    "abstention_classes": [
+     "coupling_not_measured"
+    ],
+    "abstention_reasons": [
+     "role row for GRIN2D is 'unresolved' (inferred, not measured) [qualifier: UNRESOLVED at subunit level: no GluN2D datum in a WWOX system; pore blockers act relatively more on GluN2C/2D at physiological Mg2+ (abstract level), which could mean an interneuron effect (F04)]"
+    ],
+    "action_directions": [
+     "down"
+    ],
+    "actions": [
+     "ANTAGONIST"
+    ],
+    "agreement": "asserted_reference_not_determinate",
+    "asserted_direction": "compatible",
+    "compound": "delucemine",
+    "independence": "not_applicable",
+    "label": "mixed:consistent|direction_unresolved",
+    "label_before_group_guard": "mixed:consistent|direction_unresolved",
+    "measure_kind": "none",
+    "measure_type": "none",
+    "missing_datum": "no evidence at any resolution; unknown, not negative",
+    "need": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+    "need_direction": "down",
+    "need_direction_certainty": "supported_in_WWOX_mouse_model for the tool compound; unknown for any clinically used antagonist",
+    "need_direction_on": "postsynaptic glutamatergic gain (NMDAR, possibly AMPAR)",
+    "next_check": "extend_bounded_search",
+    "pair_id": "P18",
+    "parent_chembl_id": "CHEMBL2110814",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2094124",
+      "components": 7,
+      "components_in_module_targets": 4,
+      "target_level": "protein_complex_group"
+     }
+    ],
+    "reference_label": "unknown",
+    "reference_locator": "searched 2026-11-02; no hit",
+    "reference_state": "unknown",
+    "reference_status": "unknown_no_source_in_bounded_search",
+    "stratum": "homogeneous receptor group, clean down action, one ChEMBL mechanism",
+    "target_levels": [
+     "protein_complex_group"
+    ],
+    "targets": [
+     "GRIN1",
+     "GRIN2A",
+     "GRIN2B",
+     "GRIN2D"
+    ]
+   },
+   {
+    "abstention_classes": [
+     "coupling_not_measured"
+    ],
+    "abstention_reasons": [
+     "role row for GRIN2D is 'unresolved' (inferred, not measured) [qualifier: UNRESOLVED at subunit level: no GluN2D datum in a WWOX system; pore blockers act relatively more on GluN2C/2D at physiological Mg2+ (abstract level), which could mean an interneuron effect (F04)]"
+    ],
+    "action_directions": [
+     "down"
+    ],
+    "actions": [
+     "NEGATIVE ALLOSTERIC MODULATOR"
+    ],
+    "agreement": "asserted_and_agrees",
+    "asserted_direction": "compatible",
+    "compound": "memantine",
+    "independence": "independent",
+    "label": "mixed:consistent|direction_unresolved",
+    "label_before_group_guard": "mixed:consistent|direction_unresolved",
+    "measure_kind": "functional",
+    "measure_type": "functional electrophysiology (oocyte current) and calcium flux",
+    "missing_datum": "",
+    "need": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+    "need_direction": "down",
+    "need_direction_certainty": "supported_in_WWOX_mouse_model for the tool compound; unknown for any clinically used antagonist",
+    "need_direction_on": "postsynaptic glutamatergic gain (NMDAR, possibly AMPAR)",
+    "next_check": "measure_in_wwox_system",
+    "pair_id": "P19",
+    "parent_chembl_id": "CHEMBL807",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2094124",
+      "components": 7,
+      "components_in_module_targets": 4,
+      "target_level": "protein_complex_group"
+     }
+    ],
+    "reference_label": "compatible",
+    "reference_locator": "ChEMBL document CHEMBL1146243, assays CHEMBL889736/889737; CHEMBL6115009 (GluN2C/2D flux)",
+    "reference_state": "determinate",
+    "reference_status": "determinate_functional",
+    "stratum": "homogeneous receptor group, clean down action, one ChEMBL mechanism",
+    "target_levels": [
+     "protein_complex_group"
+    ],
+    "targets": [
+     "GRIN1",
+     "GRIN2A",
+     "GRIN2B",
+     "GRIN2D"
+    ]
+   },
+   {
+    "abstention_classes": [
+     "coupling_not_measured"
+    ],
+    "abstention_reasons": [
+     "role row for GRIN2D is 'unresolved' (inferred, not measured) [qualifier: UNRESOLVED at subunit level: no GluN2D datum in a WWOX system; pore blockers act relatively more on GluN2C/2D at physiological Mg2+ (abstract level), which could mean an interneuron effect (F04)]"
+    ],
+    "action_directions": [
+     "down"
+    ],
+    "actions": [
+     "ANTAGONIST"
+    ],
+    "agreement": "asserted_reference_not_determinate",
+    "asserted_direction": "compatible",
+    "compound": "orphenadrine",
+    "independence": "partly_shared",
+    "label": "mixed:consistent|direction_unresolved",
+    "label_before_group_guard": "mixed:consistent|direction_unresolved",
+    "measure_kind": "none",
+    "measure_type": "radioligand binding only",
+    "missing_datum": "binding at a channel-blocker site is not a measured direction on receptor function",
+    "need": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+    "need_direction": "down",
+    "need_direction_certainty": "supported_in_WWOX_mouse_model for the tool compound; unknown for any clinically used antagonist",
+    "need_direction_on": "postsynaptic glutamatergic gain (NMDAR, possibly AMPAR)",
+    "next_check": "measure_at_required_resolution",
+    "pair_id": "P20",
+    "parent_chembl_id": "CHEMBL900",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2094124",
+      "components": 7,
+      "components_in_module_targets": 4,
+      "target_level": "protein_complex_group"
+     }
+    ],
+    "reference_label": "indeterminable",
+    "reference_locator": "ChEMBL document CHEMBL1131462, assay CHEMBL761030",
+    "reference_state": "indeterminable",
+    "reference_status": "indeterminable_binding_only",
+    "stratum": "homogeneous receptor group, clean down action, other mechanisms off the directed needs",
+    "target_levels": [
+     "protein_complex_group"
+    ],
+    "targets": [
+     "GRIN1",
+     "GRIN2A",
+     "GRIN2B",
+     "GRIN2D"
+    ]
+   },
+   {
+    "abstention_classes": [
+     "coupling_not_measured"
+    ],
+    "abstention_reasons": [
+     "role row for GRIN2D is 'unresolved' (inferred, not measured) [qualifier: UNRESOLVED at subunit level: no GluN2D datum in a WWOX system; pore blockers act relatively more on GluN2C/2D at physiological Mg2+ (abstract level), which could mean an interneuron effect (F04)]"
+    ],
+    "action_directions": [
+     "down"
+    ],
+    "actions": [
+     "ANTAGONIST"
+    ],
+    "agreement": "asserted_reference_not_determinate",
+    "asserted_direction": "compatible",
+    "compound": "ralfinamide",
+    "independence": "not_applicable",
+    "label": "mixed:consistent|direction_unresolved",
+    "label_before_group_guard": "mixed:consistent|direction_unresolved",
+    "measure_kind": "none",
+    "measure_type": "none",
+    "missing_datum": "unknown, not negative",
+    "need": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+    "need_direction": "down",
+    "need_direction_certainty": "supported_in_WWOX_mouse_model for the tool compound; unknown for any clinically used antagonist",
+    "need_direction_on": "postsynaptic glutamatergic gain (NMDAR, possibly AMPAR)",
+    "next_check": "extend_bounded_search",
+    "pair_id": "P21",
+    "parent_chembl_id": "CHEMBL2107771",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2094124",
+      "components": 7,
+      "components_in_module_targets": 4,
+      "target_level": "protein_complex_group"
+     }
+    ],
+    "reference_label": "unknown",
+    "reference_locator": "searched 2026-11-02; no hit",
+    "reference_state": "unknown",
+    "reference_status": "unknown_no_source_in_bounded_search",
+    "stratum": "homogeneous receptor group, clean down action, other mechanisms off the directed needs",
+    "target_levels": [
+     "protein_complex_group"
+    ],
+    "targets": [
+     "GRIN1",
+     "GRIN2A",
+     "GRIN2B",
+     "GRIN2D"
+    ]
+   },
+   {
+    "abstention_classes": [
+     "coupling_not_measured"
+    ],
+    "abstention_reasons": [
+     "role row for GRIN2D is 'unresolved' (inferred, not measured) [qualifier: UNRESOLVED at subunit level: no GluN2D datum in a WWOX system; pore blockers act relatively more on GluN2C/2D at physiological Mg2+ (abstract level), which could mean an interneuron effect (F04)]"
+    ],
+    "action_directions": [
+     "up"
+    ],
+    "actions": [
+     "PARTIAL AGONIST"
+    ],
+    "agreement": "asserted_and_agrees",
+    "asserted_direction": "opposite",
+    "compound": "apimostinel",
+    "independence": "independent",
+    "label": "mixed:direction_unresolved|opposed",
+    "label_before_group_guard": "mixed:direction_unresolved|opposed",
+    "measure_kind": "class_level",
+    "measure_type": "review of mechanism (secondary source); no primary measurement read",
+    "missing_datum": "",
+    "need": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+    "need_direction": "down",
+    "need_direction_certainty": "supported_in_WWOX_mouse_model for the tool compound; unknown for any clinically used antagonist",
+    "need_direction_on": "postsynaptic glutamatergic gain (NMDAR, possibly AMPAR)",
+    "next_check": "reopen_only_if_need_direction_changes",
+    "pair_id": "P22",
+    "parent_chembl_id": "CHEMBL3989872",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2094124",
+      "components": 7,
+      "components_in_module_targets": 4,
+      "target_level": "protein_complex_group"
+     }
+    ],
+    "reference_label": "opposite",
+    "reference_locator": "PubMed:40005971 abstract (last two sentences)",
+    "reference_state": "determinate",
+    "reference_status": "determinate_class_level_source_conflict",
+    "stratum": "homogeneous receptor group, partial agonist",
+    "target_levels": [
+     "protein_complex_group"
+    ],
+    "targets": [
+     "GRIN1",
+     "GRIN2A",
+     "GRIN2B",
+     "GRIN2D"
+    ]
+   },
+   {
+    "abstention_classes": [
+     "coupling_not_measured"
+    ],
+    "abstention_reasons": [
+     "role row for GRIN2D is 'unresolved' (inferred, not measured) [qualifier: UNRESOLVED at subunit level: no GluN2D datum in a WWOX system; pore blockers act relatively more on GluN2C/2D at physiological Mg2+ (abstract level), which could mean an interneuron effect (F04)]"
+    ],
+    "action_directions": [
+     "up"
+    ],
+    "actions": [
+     "PARTIAL AGONIST"
+    ],
+    "agreement": "asserted_and_agrees",
+    "asserted_direction": "opposite",
+    "compound": "rapastinel",
+    "independence": "partly_shared",
+    "label": "mixed:direction_unresolved|opposed",
+    "label_before_group_guard": "mixed:direction_unresolved|opposed",
+    "measure_kind": "class_level",
+    "measure_type": "review of mechanism (secondary source)",
+    "missing_datum": "",
+    "need": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+    "need_direction": "down",
+    "need_direction_certainty": "supported_in_WWOX_mouse_model for the tool compound; unknown for any clinically used antagonist",
+    "need_direction_on": "postsynaptic glutamatergic gain (NMDAR, possibly AMPAR)",
+    "next_check": "reopen_only_if_need_direction_changes",
+    "pair_id": "P23",
+    "parent_chembl_id": "CHEMBL3544917",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2094124",
+      "components": 7,
+      "components_in_module_targets": 4,
+      "target_level": "protein_complex_group"
+     }
+    ],
+    "reference_label": "opposite",
+    "reference_locator": "PubMed:40005971 abstract (last two sentences)",
+    "reference_state": "determinate",
+    "reference_status": "determinate_class_level_source_conflict",
+    "stratum": "homogeneous receptor group, partial agonist",
+    "target_levels": [
+     "protein_complex_group"
+    ],
+    "targets": [
+     "GRIN1",
+     "GRIN2A",
+     "GRIN2B",
+     "GRIN2D"
+    ]
+   },
+   {
+    "abstention_classes": [
+     "coupling_not_measured"
+    ],
+    "abstention_reasons": [
+     "role row for GRIN2D is 'unresolved' (inferred, not measured) [qualifier: UNRESOLVED at subunit level: no GluN2D datum in a WWOX system; pore blockers act relatively more on GluN2C/2D at physiological Mg2+ (abstract level), which could mean an interneuron effect (F04)]"
+    ],
+    "action_directions": [
+     "up"
+    ],
+    "actions": [
+     "POSITIVE ALLOSTERIC MODULATOR"
+    ],
+    "agreement": "asserted_and_agrees",
+    "asserted_direction": "opposite",
+    "compound": "neboglamine",
+    "independence": "partly_shared",
+    "label": "mixed:direction_unresolved|opposed",
+    "label_before_group_guard": "mixed:direction_unresolved|opposed",
+    "measure_kind": "functional",
+    "measure_type": "functional ex vivo release assay (rodent)",
+    "missing_datum": "",
+    "need": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+    "need_direction": "down",
+    "need_direction_certainty": "supported_in_WWOX_mouse_model for the tool compound; unknown for any clinically used antagonist",
+    "need_direction_on": "postsynaptic glutamatergic gain (NMDAR, possibly AMPAR)",
+    "next_check": "reopen_only_if_need_direction_changes",
+    "pair_id": "P24",
+    "parent_chembl_id": "CHEMBL1255840",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2094124",
+      "components": 7,
+      "components_in_module_targets": 4,
+      "target_level": "protein_complex_group"
+     }
+    ],
+    "reference_label": "opposite",
+    "reference_locator": "PubMed:20045056 abstract sentences 1 and 6",
+    "reference_state": "determinate",
+    "reference_status": "determinate_functional",
+    "stratum": "NMDA receptor group, positive allosteric modulator",
+    "target_levels": [
+     "protein_complex_group"
+    ],
+    "targets": [
+     "GRIN1",
+     "GRIN2A",
+     "GRIN2B",
+     "GRIN2D"
+    ]
+   },
+   {
+    "abstention_classes": [],
+    "abstention_reasons": [],
+    "action_directions": [
+     "down"
+    ],
+    "actions": [
+     "ANTAGONIST"
+    ],
+    "agreement": "asserted_and_agrees",
+    "asserted_direction": "compatible",
+    "compound": "radiprodil",
+    "independence": "independent",
+    "label": "consistent",
+    "label_before_group_guard": "consistent",
+    "measure_kind": "functional",
+    "measure_type": "functional calcium-influx assay",
+    "missing_datum": "",
+    "need": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+    "need_direction": "down",
+    "need_direction_certainty": "supported_in_WWOX_mouse_model for the tool compound; unknown for any clinically used antagonist",
+    "need_direction_on": "postsynaptic glutamatergic gain (NMDAR, possibly AMPAR)",
+    "next_check": "measure_in_wwox_system",
+    "pair_id": "P25",
+    "parent_chembl_id": "CHEMBL182066",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL1907603",
+      "components": 2,
+      "components_in_module_targets": 2,
+      "target_level": "protein_complex"
+     }
+    ],
+    "reference_label": "compatible",
+    "reference_locator": "ChEMBL document CHEMBL1799931, assays CHEMBL1805126/1805127; CHEMBL1137121",
+    "reference_state": "determinate",
+    "reference_status": "determinate_functional",
+    "stratum": "defined two-subunit complex record, clean antagonist",
+    "target_levels": [
+     "protein_complex"
+    ],
+    "targets": [
+     "GRIN1",
+     "GRIN2B"
+    ]
+   },
+   {
+    "abstention_classes": [],
+    "abstention_reasons": [],
+    "action_directions": [
+     "down"
+    ],
+    "actions": [
+     "ANTAGONIST"
+    ],
+    "agreement": "asserted_and_agrees",
+    "asserted_direction": "compatible",
+    "compound": "EVT-101",
+    "independence": "independent",
+    "label": "consistent",
+    "label_before_group_guard": "consistent",
+    "measure_kind": "functional",
+    "measure_type": "functional electrophysiology (oocyte current)",
+    "missing_datum": "",
+    "need": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+    "need_direction": "down",
+    "need_direction_certainty": "supported_in_WWOX_mouse_model for the tool compound; unknown for any clinically used antagonist",
+    "need_direction_on": "postsynaptic glutamatergic gain (NMDAR, possibly AMPAR)",
+    "next_check": "measure_in_wwox_system",
+    "pair_id": "P26",
+    "parent_chembl_id": "CHEMBL3545350",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL1907603",
+      "components": 2,
+      "components_in_module_targets": 2,
+      "target_level": "protein_complex"
+     }
+    ],
+    "reference_label": "compatible",
+    "reference_locator": "ChEMBL document CHEMBL4308825, assay CHEMBL4309004",
+    "reference_state": "determinate",
+    "reference_status": "determinate_functional",
+    "stratum": "defined two-subunit complex record, clean antagonist",
+    "target_levels": [
+     "protein_complex"
+    ],
+    "targets": [
+     "GRIN1",
+     "GRIN2B"
+    ]
+   },
+   {
+    "abstention_classes": [
+     "coupling_not_measured"
+    ],
+    "abstention_reasons": [
+     "role row for GRIA1 is 'unresolved' (inferred, not measured) [qualifier: AMPAR role is a guess, not measured: demoted to unresolved]"
+    ],
+    "action_directions": [
+     "down"
+    ],
+    "actions": [
+     "ANTAGONIST"
+    ],
+    "agreement": "abstained_reference_determinate",
+    "asserted_direction": null,
+    "compound": "selurampanel",
+    "independence": "independent",
+    "label": "direction_unresolved",
+    "label_before_group_guard": "direction_unresolved",
+    "measure_kind": "class_level",
+    "measure_type": "clinical electroencephalographic endpoint plus the class attribution; no receptor measurement read",
+    "missing_datum": "",
+    "need": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+    "need_direction": "down",
+    "need_direction_certainty": "supported_in_WWOX_mouse_model for the tool compound; unknown for any clinically used antagonist",
+    "need_direction_on": "postsynaptic glutamatergic gain (NMDAR, possibly AMPAR)",
+    "next_check": "measure_target_to_need_coupling",
+    "pair_id": "P27",
+    "parent_chembl_id": "CHEMBL3545042",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2096670",
+      "components": 4,
+      "components_in_module_targets": 4,
+      "target_level": "protein_complex_group"
+     }
+    ],
+    "reference_label": "compatible",
+    "reference_locator": "PubMed:25963722 title and abstract (results)",
+    "reference_state": "determinate",
+    "reference_status": "determinate_class_level",
+    "stratum": "AMPA receptor group, clean antagonist",
+    "target_levels": [
+     "protein_complex_group"
+    ],
+    "targets": [
+     "GRIA1",
+     "GRIA2",
+     "GRIA3",
+     "GRIA4"
+    ]
+   },
+   {
+    "abstention_classes": [
+     "coupling_not_measured"
+    ],
+    "abstention_reasons": [
+     "role row for GRIA1 is 'unresolved' (inferred, not measured) [qualifier: AMPAR role is a guess, not measured: demoted to unresolved]"
+    ],
+    "action_directions": [
+     "down"
+    ],
+    "actions": [
+     "ANTAGONIST"
+    ],
+    "agreement": "abstained_reference_not_determinate",
+    "asserted_direction": null,
+    "compound": "dasolampanel",
+    "independence": "not_applicable",
+    "label": "direction_unresolved",
+    "label_before_group_guard": "direction_unresolved",
+    "measure_kind": "none",
+    "measure_type": "none",
+    "missing_datum": "unknown, not negative",
+    "need": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+    "need_direction": "down",
+    "need_direction_certainty": "supported_in_WWOX_mouse_model for the tool compound; unknown for any clinically used antagonist",
+    "need_direction_on": "postsynaptic glutamatergic gain (NMDAR, possibly AMPAR)",
+    "next_check": "extend_bounded_search",
+    "pair_id": "P28",
+    "parent_chembl_id": "CHEMBL2103869",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2096670",
+      "components": 4,
+      "components_in_module_targets": 4,
+      "target_level": "protein_complex_group"
+     }
+    ],
+    "reference_label": "unknown",
+    "reference_locator": "searched 2026-11-02; no hit",
+    "reference_state": "unknown",
+    "reference_status": "unknown_no_source_in_bounded_search",
+    "stratum": "AMPA receptor group, clean antagonist",
+    "target_levels": [
+     "protein_complex_group"
+    ],
+    "targets": [
+     "GRIA1",
+     "GRIA2",
+     "GRIA3",
+     "GRIA4"
+    ]
+   },
+   {
+    "abstention_classes": [
+     "coupling_not_measured"
+    ],
+    "abstention_reasons": [
+     "role row for GRIA1 is 'unresolved' (inferred, not measured) [qualifier: AMPAR role is a guess, not measured: demoted to unresolved]"
+    ],
+    "action_directions": [
+     "up"
+    ],
+    "actions": [
+     "POSITIVE ALLOSTERIC MODULATOR"
+    ],
+    "agreement": "abstained_reference_determinate",
+    "asserted_direction": null,
+    "compound": "CX1739",
+    "independence": "independent",
+    "label": "direction_unresolved",
+    "label_before_group_guard": "direction_unresolved",
+    "measure_kind": "class_level",
+    "measure_type": "class attribution in a review and in an in vivo study; no receptor measurement read",
+    "missing_datum": "",
+    "need": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+    "need_direction": "down",
+    "need_direction_certainty": "supported_in_WWOX_mouse_model for the tool compound; unknown for any clinically used antagonist",
+    "need_direction_on": "postsynaptic glutamatergic gain (NMDAR, possibly AMPAR)",
+    "next_check": "measure_target_to_need_coupling",
+    "pair_id": "P29",
+    "parent_chembl_id": "CHEMBL3707399",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2096670",
+      "components": 4,
+      "components_in_module_targets": 4,
+      "target_level": "protein_complex_group"
+     }
+    ],
+    "reference_label": "opposite",
+    "reference_locator": "PubMed:39894310 abstract; PubMed:41051937 abstract first sentence and methods",
+    "reference_state": "determinate",
+    "reference_status": "determinate_class_level",
+    "stratum": "AMPA receptor group, positive allosteric modulator",
+    "target_levels": [
+     "protein_complex_group"
+    ],
+    "targets": [
+     "GRIA1",
+     "GRIA2",
+     "GRIA3",
+     "GRIA4"
+    ]
+   },
+   {
+    "abstention_classes": [
+     "coupling_not_measured"
+    ],
+    "abstention_reasons": [
+     "role row for GRIA1 is 'unresolved' (inferred, not measured) [qualifier: AMPAR role is a guess, not measured: demoted to unresolved]"
+    ],
+    "action_directions": [
+     "up"
+    ],
+    "actions": [
+     "POSITIVE ALLOSTERIC MODULATOR"
+    ],
+    "agreement": "abstained_reference_not_determinate",
+    "asserted_direction": null,
+    "compound": "MK-8777",
+    "independence": "not_applicable",
+    "label": "direction_unresolved",
+    "label_before_group_guard": "direction_unresolved",
+    "measure_kind": "none",
+    "measure_type": "none",
+    "missing_datum": "unknown, not negative",
+    "need": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+    "need_direction": "down",
+    "need_direction_certainty": "supported_in_WWOX_mouse_model for the tool compound; unknown for any clinically used antagonist",
+    "need_direction_on": "postsynaptic glutamatergic gain (NMDAR, possibly AMPAR)",
+    "next_check": "extend_bounded_search",
+    "pair_id": "P30",
+    "parent_chembl_id": "CHEMBL3707401",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2096670",
+      "components": 4,
+      "components_in_module_targets": 4,
+      "target_level": "protein_complex_group"
+     }
+    ],
+    "reference_label": "unknown",
+    "reference_locator": "searched 2026-11-02; no hit",
+    "reference_state": "unknown",
+    "reference_status": "unknown_no_source_in_bounded_search",
+    "stratum": "AMPA receptor group, positive allosteric modulator",
+    "target_levels": [
+     "protein_complex_group"
+    ],
+    "targets": [
+     "GRIA1",
+     "GRIA2",
+     "GRIA3",
+     "GRIA4"
+    ]
+   },
+   {
+    "abstention_classes": [
+     "coupling_not_measured"
+    ],
+    "abstention_reasons": [
+     "role row for GRIA1 is 'unresolved' (inferred, not measured) [qualifier: AMPAR role is a guess, not measured: demoted to unresolved]"
+    ],
+    "action_directions": [
+     "down"
+    ],
+    "actions": [
+     "ANTAGONIST"
+    ],
+    "agreement": "abstained_reference_determinate",
+    "asserted_direction": null,
+    "compound": "talampanel",
+    "independence": "partly_shared",
+    "label": "direction_unresolved",
+    "label_before_group_guard": "direction_unresolved",
+    "measure_kind": "functional",
+    "measure_type": "functional electrophysiology and tissue response (non-human); binding for the subunit rows",
+    "missing_datum": "",
+    "need": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+    "need_direction": "down",
+    "need_direction_certainty": "supported_in_WWOX_mouse_model for the tool compound; unknown for any clinically used antagonist",
+    "need_direction_on": "postsynaptic glutamatergic gain (NMDAR, possibly AMPAR)",
+    "next_check": "measure_target_to_need_coupling",
+    "pair_id": "P31",
+    "parent_chembl_id": "CHEMBL61872",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL2009",
+      "components": null,
+      "components_in_module_targets": null,
+      "target_level": "single_protein"
+     },
+     {
+      "chembl_target_id": "CHEMBL4016",
+      "components": null,
+      "components_in_module_targets": null,
+      "target_level": "single_protein"
+     }
+    ],
+    "reference_label": "compatible",
+    "reference_locator": "ChEMBL documents CHEMBL1127102 (assay CHEMBL792542), CHEMBL1133353 (assay CHEMBL661778); GtoPdb target 445 ligand 8279",
+    "reference_state": "determinate",
+    "reference_status": "determinate_functional",
+    "stratum": "single-protein record(s), glutamate need",
+    "target_levels": [
+     "single_protein"
+    ],
+    "targets": [
+     "GRIA1",
+     "GRIA2"
+    ]
+   },
+   {
+    "abstention_classes": [],
+    "abstention_reasons": [],
+    "action_directions": [
+     "down"
+    ],
+    "actions": [
+     "ANTAGONIST"
+    ],
+    "agreement": "asserted_and_agrees",
+    "asserted_direction": "compatible",
+    "compound": "dextromethorphan",
+    "independence": "partly_shared",
+    "label": "consistent",
+    "label_before_group_guard": "consistent",
+    "measure_kind": "functional",
+    "measure_type": "functional electrophysiology and calcium flux",
+    "missing_datum": "",
+    "need": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+    "need_direction": "down",
+    "need_direction_certainty": "supported_in_WWOX_mouse_model for the tool compound; unknown for any clinically used antagonist",
+    "need_direction_on": "postsynaptic glutamatergic gain (NMDAR, possibly AMPAR)",
+    "next_check": "measure_in_wwox_system",
+    "pair_id": "P32",
+    "parent_chembl_id": "CHEMBL52440",
+    "records": [
+     {
+      "chembl_target_id": "CHEMBL1972",
+      "components": null,
+      "components_in_module_targets": null,
+      "target_level": "single_protein"
+     }
+    ],
+    "reference_label": "compatible",
+    "reference_locator": "ChEMBL documents CHEMBL6114989 (assay CHEMBL6117156), CHEMBL6115009; GtoPdb target 458 ligand 6953",
+    "reference_state": "determinate",
+    "reference_status": "determinate_functional",
+    "stratum": "single-protein record(s), glutamate need",
+    "target_levels": [
+     "single_protein"
+    ],
+    "targets": [
+     "GRIN2A"
+    ]
+   }
+  ],
+  "sources": {
+   "action_level_label_reason": "coverage/associations.jsonl.gz (framework/scripts/repurposing_search.py, active path)",
+   "before_fix": "matching_it19_p5_20261102/module_answers_prefix.tsv (active path before the group-transfer guard)",
+   "need_direction": "needs/needs.json (intervention_direction)",
+   "reference": "matching_it19_p5_20261102/reference_it19_p5.tsv",
+   "selection": "matching_it19_p5_20261102/selection.tsv"
+  },
+  "status": "EXPERIMENTAL",
+  "unit": "association rows of intervention targets, not excluded (module_by_need); selected (need, compound) pairs (pairs)"
+ },
  "matching_pilot": [
   {
    "action": "Blocco competitivo NMDAR; sonda sperimentale.",
@@ -2232,7 +4669,7 @@
    "could_rise": "already at the top group; it holds while no null, unfavourable or mixed WWOX-system result appears beside it | further questions: an overexpression or ceiling endpoint and a tumour-surveillance endpoint (none exists); whether the organoid radial-glia and SATB2 findings (same-laboratory human-system results, PMID 34268881 and 42397075, context only, not separate positions) hold | stored work-order statement: Quantified myelination would add a controlled row on the same need; a failure would move the card to C2 by rule; a treated-after-onset arm would show whether the word recovery may be used for that endpoint.",
    "counter_evidence_statements": "Rescue is not normalisation: unmyelinated axons per field remain about 52 versus about 26 in wild type. | The neuron-promoter vector corrected neuronal function without correcting radial-glia abnormalities (organoid arm); SATB2 mRNA overshoots wild type up to about eleven-fold in treated organoids. | No ceiling is measured and no tumour-surveillance or overexpression-toxicity endpoint exists in the mouse study; applied recombinant WWOX lowered viability of human ESC-derived cortical neurons in a preprint. More is not safer.",
    "depth_of_evidence": "E4 card reviewed, 12 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
-   "evaluated_on": "2026-11-01",
+   "evaluated_on": "2026-11-02",
    "evaluation_depth": "E4 card reviewed, 12 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
    "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
@@ -2276,7 +4713,7 @@
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no reading-limit flag (found: graphical_reading); a favourable WWOX readout carries no design-limit flag (found: one_experiment); one and the same readout meets all four | stored work-order statement: A direct measurement would turn the F2 into a row with a mechanism; a negative would add a null to the need.",
    "counter_evidence_statements": "IT12 P2.2 figure audit (dated 2026-10-31, PMID 37275776 Fig 7B, image viewed): the stored statement that the GIRK2 crossings lie inside the therapeutic band is wrong on one clause. In oocytes the GIRK2 homomer activated by Gbeta-gamma is half-maximally inhibited at about 0.03 to 0.06 mM, about 4 to 8 times BELOW the shaded band (about 0.25 to 0.9 mM), while the brain-predominant GIRK1/2 plus Gbeta-gamma channel crosses at about 0.4 to 1 mM, inside it (partial block, about 20 to 60 percent). So a measured non-T-type target exists at labelled exposure, and the wording 'T-type potency is weak against the labelled range' is not the whole story: the ethosuximide result in the WWOX mouse (PTZ seizure score) cannot be attributed to T-type mediation. An oocyte datum, not a WWOX mechanism; the authors say neuronal GIRK2 homomer abundance is unknown. In a genetic absence model the relay-neuron T-type current is smaller than control and the burst-threshold difference follows Ih (PMID 24953239 Figs 5 and 6). No group or member evidence changes. | IT13 P3a (2026-10-31): ethosuximide's attribution to T-type channels is not supported by any measurement in Wwox tissue: the catalogue mechanism record lists T-type only, the source paper's own oocyte data show GIRK block near the labelled band (a GIRK route would predict the opposite sign; prior knowledge), the two PTZ-alone null cohorts of the figure differ by about the size of the drug effect, no interaction test, and P17 Cacna1g/h/Kcnj6 transcripts are inside the control-line background. The late-phase effect stays one experiment in one laboratory; the group is unchanged.",
    "depth_of_evidence": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
-   "evaluated_on": "2026-11-01",
+   "evaluated_on": "2026-11-02",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
    "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
    "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
@@ -2318,7 +4755,7 @@
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no design-limit flag (found: nonspecific_also_in_wild_type, one_experiment_N6_arm); one and the same readout meets all four | further questions: GSK3beta/IMPase engagement at the exposure reached at tolerated levels (no activity row exists for lithium) | stored work-order statement: A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays.",
    "counter_evidence_statements": "none stated beyond the counts",
    "depth_of_evidence": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
-   "evaluated_on": "2026-11-01",
+   "evaluated_on": "2026-11-02",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
    "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
    "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
@@ -2360,7 +4797,7 @@
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no design-limit flag (found: one_experiment_n5_slices, tool_compound_d-APV); one and the same readout meets all four | further questions: gap-junction dependence (carbenoxolone, 87 percent reduction) and bursting in heterozygote slices as rival explanations of the d-APV result | stored work-order statement: E1 decides whether an NMDAR gain is present or the dependence is permissive; a partial blocker is read only after E1, and without E1 a memantine result cannot be attributed to pyramidal receptors. A titration that cannot lower bursts inside a reachable range closes the magnesium strand. A silencer that lowers firing without raising CTIP2/SATB2 would be read…",
    "counter_evidence_statements": "none stated beyond the counts",
    "depth_of_evidence": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
-   "evaluated_on": "2026-11-01",
+   "evaluated_on": "2026-11-02",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "evidence_of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level; a tool-compound result supports the evaluation of the MECHANISM only, not of any clinical agent",
    "evidence_of_molecule": "d-APV (competitive NMDAR block; a tool compound, not a candidate drug): tested in a WWOX system (1 assertion(s): 1 benefit)",
@@ -2414,7 +4851,7 @@
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: If MYC difference vanishes within cell-cycle and potency strata, MYC is a marker and the need moves to inert for lever purposes. If genetic MYC lowering moves neuronal fractions in knockout beyond corrected cells and cell counts hold, the driver reading advances to a second model and the development question (a prenatal window) becomes the limit. If progeni…",
    "counter_evidence_statements": "none stated beyond the counts",
    "depth_of_evidence": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract",
-   "evaluated_on": "2026-11-01",
+   "evaluated_on": "2026-11-02",
    "evaluation_depth": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract",
    "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
    "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
@@ -2455,7 +4892,7 @@
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays.",
    "counter_evidence_statements": "none stated beyond the counts",
    "depth_of_evidence": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
-   "evaluated_on": "2026-11-01",
+   "evaluated_on": "2026-11-02",
    "evaluation_depth": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
    "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
@@ -2501,7 +4938,7 @@
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays.",
    "counter_evidence_statements": "none stated beyond the counts",
    "depth_of_evidence": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
-   "evaluated_on": "2026-11-01",
+   "evaluated_on": "2026-11-02",
    "evaluation_depth": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
    "evidence_of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level",
    "evidence_of_molecule": "Vigabatrin: tested in a WWOX system (7 assertion(s): 2 benefit, 3 null, 1 partial_benefit, 1 unresolved)",
@@ -2561,7 +4998,7 @@
    "could_rise": "would rise to F2/F1 with a first signed result of the intervention in a WWOX system against an untreated same-genotype comparator; criteria not met now: a signed result of the intervention in a WWOX system exists; an outside-WWOX harm or null signal stands without a favourable outside signal; the signed rows behind this position were read beyond abstract, query or unknown depth (found: 2 row(s)) | further questions: a T-type measurement in the Wwox model, to test whether the ethosuximide sensitivity is T-type mediated at all | stored work-order statement: A direct measurement would turn the F2 into a row with a mechanism; a negative would add a null to the need.",
    "counter_evidence_statements": "IT12 P2.2 (dated 2026-10-31): the only WWOX link of apinocaltamide is the ethosuximide result, and that result should not be carried to apinocaltamide as T-type evidence: ethosuximide has a measured non-T-type target (GIRK) inside or below the labelled plasma range in oocytes (PMID 37275776 Fig 7B), and T-type mediation is not measured in any Wwox system. Group G4a is unchanged.",
    "depth_of_evidence": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
-   "evaluated_on": "2026-11-01",
+   "evaluated_on": "2026-11-02",
    "evaluation_depth": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
    "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
    "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
@@ -2602,7 +5039,7 @@
    "could_rise": "already at the top group; it holds while no null, unfavourable or mixed WWOX-system result appears beside it | further questions: an overexpression or ceiling endpoint and a tumour-surveillance endpoint (none exists); whether the organoid radial-glia and SATB2 findings (same-laboratory human-system results, PMID 34268881 and 42397075, context only, not separate positions) hold | stored work-order statement: Quantified myelination would add a controlled row on the same need; a failure would move the card to C2 by rule; a treated-after-onset arm would show whether the word recovery may be used for that endpoint.",
    "counter_evidence_statements": "Rescue is not normalisation: unmyelinated axons per field remain about 52 versus about 26 in wild type. | The neuron-promoter vector corrected neuronal function without correcting radial-glia abnormalities (organoid arm); SATB2 mRNA overshoots wild type up to about eleven-fold in treated organoids. | No ceiling is measured and no tumour-surveillance or overexpression-toxicity endpoint exists in the mouse study; applied recombinant WWOX lowered viability of human ESC-derived cortical neurons in a preprint. More is not safer.",
    "depth_of_evidence": "E4 card reviewed, 12 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
-   "evaluated_on": "2026-11-01",
+   "evaluated_on": "2026-11-02",
    "evaluation_depth": "E4 card reviewed, 12 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
    "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
@@ -2646,7 +5083,7 @@
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no reading-limit flag (found: graphical_reading); a favourable WWOX readout carries no design-limit flag (found: one_experiment); one and the same readout meets all four | stored work-order statement: A direct measurement would turn the F2 into a row with a mechanism; a negative would add a null to the need.",
    "counter_evidence_statements": "IT12 P2.2 figure audit (dated 2026-10-31, PMID 37275776 Fig 7B, image viewed): the stored statement that the GIRK2 crossings lie inside the therapeutic band is wrong on one clause. In oocytes the GIRK2 homomer activated by Gbeta-gamma is half-maximally inhibited at about 0.03 to 0.06 mM, about 4 to 8 times BELOW the shaded band (about 0.25 to 0.9 mM), while the brain-predominant GIRK1/2 plus Gbeta-gamma channel crosses at about 0.4 to 1 mM, inside it (partial block, about 20 to 60 percent). So a measured non-T-type target exists at labelled exposure, and the wording 'T-type potency is weak against the labelled range' is not the whole story: the ethosuximide result in the WWOX mouse (PTZ seizure score) cannot be attributed to T-type mediation. An oocyte datum, not a WWOX mechanism; the authors say neuronal GIRK2 homomer abundance is unknown. In a genetic absence model the relay-neuron T-type current is smaller than control and the burst-threshold difference follows Ih (PMID 24953239 Figs 5 and 6). No group or member evidence changes. | IT13 P3a (2026-10-31): ethosuximide's attribution to T-type channels is not supported by any measurement in Wwox tissue: the catalogue mechanism record lists T-type only, the source paper's own oocyte data show GIRK block near the labelled band (a GIRK route would predict the opposite sign; prior knowledge), the two PTZ-alone null cohorts of the figure differ by about the size of the drug effect, no interaction test, and P17 Cacna1g/h/Kcnj6 transcripts are inside the control-line background. The late-phase effect stays one experiment in one laboratory; the group is unchanged.",
    "depth_of_evidence": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
-   "evaluated_on": "2026-11-01",
+   "evaluated_on": "2026-11-02",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
    "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
    "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
@@ -2688,7 +5125,7 @@
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no design-limit flag (found: nonspecific_also_in_wild_type, one_experiment_N6_arm); one and the same readout meets all four | further questions: GSK3beta/IMPase engagement at the exposure reached at tolerated levels (no activity row exists for lithium) | stored work-order statement: A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays.",
    "counter_evidence_statements": "none stated beyond the counts",
    "depth_of_evidence": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
-   "evaluated_on": "2026-11-01",
+   "evaluated_on": "2026-11-02",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
    "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
    "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
@@ -2730,7 +5167,7 @@
    "could_rise": "would rise to G1 if one and the same readout met the criteria not met now: a favourable WWOX readout carries no design-limit flag (found: one_experiment_n5_slices, tool_compound_d-APV); one and the same readout meets all four | further questions: gap-junction dependence (carbenoxolone, 87 percent reduction) and bursting in heterozygote slices as rival explanations of the d-APV result | stored work-order statement: E1 decides whether an NMDAR gain is present or the dependence is permissive; a partial blocker is read only after E1, and without E1 a memantine result cannot be attributed to pyramidal receptors. A titration that cannot lower bursts inside a reachable range closes the magnesium strand. A silencer that lowers firing without raising CTIP2/SATB2 would be read…",
    "counter_evidence_statements": "none stated beyond the counts",
    "depth_of_evidence": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
-   "evaluated_on": "2026-11-01",
+   "evaluated_on": "2026-11-02",
    "evaluation_depth": "E4 card reviewed, 1 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "evidence_of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level; a tool-compound result supports the evaluation of the MECHANISM only, not of any clinical agent",
    "evidence_of_molecule": "d-APV (competitive NMDAR block; a tool compound, not a candidate drug): tested in a WWOX system (1 assertion(s): 1 benefit)",
@@ -2784,7 +5221,7 @@
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: If MYC difference vanishes within cell-cycle and potency strata, MYC is a marker and the need moves to inert for lever purposes. If genetic MYC lowering moves neuronal fractions in knockout beyond corrected cells and cell counts hold, the driver reading advances to a second model and the development question (a prenatal window) becomes the limit. If progeni…",
    "counter_evidence_statements": "none stated beyond the counts",
    "depth_of_evidence": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract",
-   "evaluated_on": "2026-11-01",
+   "evaluated_on": "2026-11-02",
    "evaluation_depth": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract",
    "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
    "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
@@ -2825,7 +5262,7 @@
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | further questions: an overexpression or ceiling endpoint and a tumour-surveillance endpoint (none exists); whether the organoid radial-glia and SATB2 findings (same-laboratory human-system results, PMID 34268881 and 42397075, context only, not separate positions) hold | stored work-order statement: It would resolve the two glucose rows and either remove the C2 or make it a C1.",
    "counter_evidence_statements": "Rescue is not normalisation: unmyelinated axons per field remain about 52 versus about 26 in wild type. | The neuron-promoter vector corrected neuronal function without correcting radial-glia abnormalities (organoid arm); SATB2 mRNA overshoots wild type up to about eleven-fold in treated organoids. | No ceiling is measured and no tumour-surveillance or overexpression-toxicity endpoint exists in the mouse study; applied recombinant WWOX lowered viability of human ESC-derived cortical neurons in a preprint. More is not safer.",
    "depth_of_evidence": "E4 card reviewed, 12 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
-   "evaluated_on": "2026-11-01",
+   "evaluated_on": "2026-11-02",
    "evaluation_depth": "E4 card reviewed, 12 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
    "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
@@ -2869,7 +5306,7 @@
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays.",
    "counter_evidence_statements": "none stated beyond the counts",
    "depth_of_evidence": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
-   "evaluated_on": "2026-11-01",
+   "evaluated_on": "2026-11-02",
    "evaluation_depth": "E4 card reviewed, 2 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
    "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
@@ -2915,7 +5352,7 @@
    "could_rise": "would rise if the null or mixed rows were shown to be an artefact of dose, timing, genotype or reading depth and a controlled, unflagged favourable readout stood alone | stored work-order statement: A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays.",
    "counter_evidence_statements": "none stated beyond the counts",
    "depth_of_evidence": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
-   "evaluated_on": "2026-11-01",
+   "evaluated_on": "2026-11-02",
    "evaluation_depth": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
    "evidence_of_mechanism_or_class": "no class- or mechanism-level WWOX-system assertion at card level",
    "evidence_of_molecule": "Vigabatrin: tested in a WWOX system (7 assertion(s): 2 benefit, 3 null, 1 partial_benefit, 1 unresolved)",
@@ -2975,7 +5412,7 @@
    "could_rise": "would rise to F2/F1 with a first signed result of the intervention in a WWOX system against an untreated same-genotype comparator; criteria not met now: a signed result of the intervention in a WWOX system exists; an outside-WWOX harm or null signal stands without a favourable outside signal; the signed rows behind this position were read beyond abstract, query or unknown depth (found: 2 row(s)) | further questions: a T-type measurement in the Wwox model, to test whether the ethosuximide sensitivity is T-type mediated at all | stored work-order statement: A direct measurement would turn the F2 into a row with a mechanism; a negative would add a null to the need.",
    "counter_evidence_statements": "IT12 P2.2 (dated 2026-10-31): the only WWOX link of apinocaltamide is the ethosuximide result, and that result should not be carried to apinocaltamide as T-type evidence: ethosuximide has a measured non-T-type target (GIRK) inside or below the labelled plasma range in oocytes (PMID 37275776 Fig 7B), and T-type mediation is not measured in any Wwox system. Group G4a is unchanged.",
    "depth_of_evidence": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
-   "evaluated_on": "2026-11-01",
+   "evaluated_on": "2026-11-02",
    "evaluation_depth": "E3 card reviewed with assertions; no WWOX-side result read beyond abstract",
    "evidence_of_mechanism_or_class": "not applicable: a single intervention, not a class",
    "evidence_of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)",
@@ -3006,7 +5443,7 @@
   }
  ],
  "summary": {
-  "as_of": "2026-11-01",
+  "as_of": "2026-11-02",
   "classes": {
    "EXCL": "EXCLUDED FROM A SPECIFIC COMPARISON WITH REASON",
    "INSUFF": "STILL INSUFFICIENTLY EVALUATED",
@@ -3076,8 +5513,8 @@
     "UNIT": 25
    },
    "by_first_order": {
-    "Q1": 97,
-    "Q2": 1894,
+    "Q1": 93,
+    "Q2": 1898,
     "Q3": 208,
     "Q4": 14236,
     "Q5": 23808,
@@ -3098,9 +5535,9 @@
    "need_linked_families_plus_units": 2224,
    "need_linked_families_q1_q2_q3": 2199,
    "q1_by_status": {
-    "approved_any_source": 33,
+    "approved_any_source": 30,
     "approved_any_source,clinical_candidate,phase_unknown": 1,
-    "clinical_candidate": 12,
+    "clinical_candidate": 11,
     "clinical_candidate,no_status_statement": 1,
     "clinical_candidate,phase_unknown": 2,
     "no_status_statement": 47,

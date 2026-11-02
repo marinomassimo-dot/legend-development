@@ -253,6 +253,59 @@ def group_transfer_unresolved(src: str, t: dict, module_symbols: set[str] | None
             "intervention targets, so its single curated action is not resolved to this gene")
 
 
+CHEMBL_TARGET_LEVELS = {"SINGLE PROTEIN": "single_protein", "PROTEIN FAMILY": "protein_family", "PROTEIN COMPLEX": "protein_complex",
+                        "PROTEIN COMPLEX GROUP": "protein_complex_group", "SELECTIVITY GROUP": "selectivity_group",
+                        "PROTEIN-PROTEIN INTERACTION": "protein_protein_interaction", "CHIMERIC PROTEIN": "chimeric_protein",
+                        "PROTEIN NUCLEIC-ACID COMPLEX": "protein_nucleic_acid_complex"}
+# IT19 P6: the closed vocabulary of target levels a reader sees. ChEMBL rows carry the source's own target type; a DGIdb row names one gene
+# (`gene_listing`) unless the GtoPdb correction states a complex or a single protein. A level is what the SOURCE row is about, never inferred.
+TARGET_LEVELS = tuple(CHEMBL_TARGET_LEVELS.values()) + ("other_chembl_target_type", "gene_listing")
+
+
+def target_level(src: str, t: dict) -> str:
+    """The level of the target the source row is about: single protein, family, complex, complex group, selectivity group, or a gene listing."""
+    if src.startswith("ChEMBL"):
+        return CHEMBL_TARGET_LEVELS.get(t.get("target_type") or "SINGLE PROTEIN", "other_chembl_target_type")
+    if t.get("target_level") == "complex":
+        return "protein_complex"
+    if t.get("target_level") == "single_protein":
+        return "single_protein"
+    return "gene_listing"
+
+
+def group_components(src: str, t: dict, module_symbols: set[str] | None) -> tuple[int | None, int | None]:
+    """(components of the ChEMBL record, components among the module's intervention targets) for a record above single-protein
+    level; (None, None) otherwise. The counts are what the group-transfer guard reads, printed so a reader can check it."""
+    if not src.startswith("ChEMBL") or t.get("target_type") in (None, "SINGLE PROTEIN"):
+        return None, None
+    genes = {g.upper() for g in t.get("gene_symbols") or []}
+    return len(genes), (len(genes & module_symbols) if module_symbols else None)
+
+
+# IT19 P6: why a row carries no direction, as a closed class read from the reason the code itself wrote (one prefix per code path).
+ABSTENTION_PREFIXES = (
+    ("group_record_mostly_outside_module_targets", "group_record_mostly_outside_module_targets"),
+    ("the need's direction is", "need_direction_not_evaluable"),
+    ("target kind", "not_an_intervention_target"),
+    ("the source states no up/down action", "action_not_stated"),
+    ("no explicit role row", "no_coupling_row"),
+    ("role row for", "coupling_not_measured"),
+)
+ABSTENTION_CLASSES = tuple(c for _, c in ABSTENTION_PREFIXES) + ("excluded_source_artefact",)
+
+
+def abstention_class(label: str, why: str, excluded: str | None = None) -> str | None:
+    """None for a directed row (consistent / opposed); otherwise the class of the abstention. An unknown reason fails loudly."""
+    if label in ("consistent", "opposed"):
+        return None
+    if excluded:
+        return "excluded_source_artefact"
+    for prefix, cls in ABSTENTION_PREFIXES:
+        if (why or "").startswith(prefix):
+            return cls
+    raise ValueError(f"abstention reason without a class: {why!r}")
+
+
 def load_roles(path: Path = DEFAULT_ROLES) -> dict[tuple[str, str], dict]:
     out = {}
     p = Path(path)
@@ -416,7 +469,10 @@ def associations_for_need(need: dict, idx: Index, roles: dict, module_symbols: s
                 limits.append("the gene is an effector constraint of the need (the record argues against manipulating it): listed beside, never a link")
             if tgt["target_kind"] == "pathway_member":
                 limits.append("pathway member: counted apart from intervention-target links, never in the headline")
+            n_comp, n_in = group_components(src, t, module_symbols)
             assoc.append({
+                "target_level": target_level(src, t), "chembl_target_id": t.get("target_id") if src.startswith("ChEMBL") else None,
+                "record_components": n_comp, "components_in_module_targets": n_in, "abstention_class": abstention_class(label, why, excl),
                 "need": need["id"], "target": tgt["symbol"], "hgnc_id": tgt.get("hgnc_id"), "target_kind": tgt["target_kind"],
                 "catalogue_id": e["id"], "compound": e["name"], "family": idx.family[e["id"]],
                 "link_source": src, "action_raw": raw, "action_on_target": ad,
@@ -484,7 +540,10 @@ def compound_to_needs(entry: dict, needs: list[dict], idx: Index, roles: dict, f
                 transfer = group_transfer_unresolved(t["source"], t, module_symbols or getattr(idx, "module_symbols", None))
                 if transfer and label in ("consistent", "opposed"):
                     label, why = "direction_unresolved", transfer
-                out.append({"excluded_from_counts": excl, "excluded_reason": exclusion_class(excl), "need": need["id"], "target": tgt["symbol"], "target_kind": tgt["target_kind"], "link_source": t["source"],
+                n_comp, n_in = group_components(t["source"], t, module_symbols or getattr(idx, "module_symbols", None))
+                out.append({"target_level": target_level(t["source"], t), "record_components": n_comp, "components_in_module_targets": n_in,
+                            "abstention_class": abstention_class(label, why, excl),
+                            "excluded_from_counts": excl, "excluded_reason": exclusion_class(excl), "need": need["id"], "target": tgt["symbol"], "target_kind": tgt["target_kind"], "link_source": t["source"],
                             "action_raw": raw, "action_on_target": ad, "need_direction": nd, "consistency": label, "consistency_why": why,
                             "exploration_only": nd in ("uncertain", "modulate"), "via_family_member": via})
     seen, uniq = set(), []
@@ -503,7 +562,11 @@ def source_states(catalog_dir: Path | None = None) -> dict:
 
 
 def _print_assoc(a: dict) -> str:
-    return "\t".join([a["target"], a["catalogue_id"], a["compound"] or "-", a["link_source"].split()[0], a["action_raw"] or "UNSTATED", a["consistency"]])
+    lvl = a.get("target_level") or "-"
+    if a.get("record_components"):
+        lvl += f" {a.get('components_in_module_targets')}/{a['record_components']}"
+    return "\t".join([a["target"], a["catalogue_id"], a["compound"] or "-", a["link_source"].split()[0], a["action_raw"] or "UNSTATED", lvl, a["consistency"],
+                      a.get("abstention_class") or ""])
 
 
 def main(argv=None) -> int:
@@ -566,7 +629,7 @@ def main(argv=None) -> int:
             for r in res:
                 print(f"## {r['catalogue_id']}\t{r['name']}\t{r['status_class']}\t{','.join(r['access'])}\ttarget rows={r['n_target_rows']}\t{r['family']}")
                 for x in r["needs_touched"]:
-                    print(f"   {x['need']}\t{x['target']}\t{x['action_raw'] or 'UNSTATED'}\t{x['consistency']}{' EXCLUDED: ' + x['excluded_from_counts'][:40] if x['excluded_from_counts'] else ''}{' [exploration]' if x['exploration_only'] else ''}{' via ' + x['via_family_member'] if x['via_family_member'] else ''}")
+                    print(f"   {x['need']}\t{x['target']}\t{x['action_raw'] or 'UNSTATED'}\t{x['target_level']}{' ' + str(x['components_in_module_targets']) + '/' + str(x['record_components']) if x['record_components'] else ''}\t{x['consistency']}{' (' + x['abstention_class'] + ')' if x['abstention_class'] else ''}{' EXCLUDED: ' + x['excluded_from_counts'][:40] if x['excluded_from_counts'] else ''}{' [exploration]' if x['exploration_only'] else ''}{' via ' + x['via_family_member'] if x['via_family_member'] else ''}")
         return 0 if res else 1
     if a.cmd == "target":
         rows = idx.chembl_human.get(a.symbol.upper(), [])
