@@ -21,6 +21,7 @@ import gzip
 import io
 import urllib.error
 import urllib.request
+import zlib
 
 from . import _http
 
@@ -62,10 +63,23 @@ def get_bytes(url, params=None, body=None, timeout=60.0):
         return 0, f"{type(exc).__name__}: {exc}"
 
 
-def _text(payload):
-    if isinstance(payload, bytes):
-        return gzip.decompress(payload).decode("utf-8") if payload[:2] == b"\x1f\x8b" else payload.decode("utf-8")
-    return payload if isinstance(payload, str) else None
+def _text(status, payload, url):
+    """(text, "") for a readable HTTP 200 body, else (None, diagnostic). A damaged body (corrupt or truncated
+    gzip, non-UTF-8 bytes) is an error, never a decoded-with-replacement table that would look valid."""
+    if status != 200:
+        return None, f"HTTP {status}: {str(payload)[:300]}"
+    if isinstance(payload, str):
+        return payload, ""
+    if not isinstance(payload, bytes):
+        return None, f"HTTP 200 from {url}: unexpected payload type {type(payload).__name__}"
+    try:
+        raw = gzip.decompress(payload) if payload[:2] == b"\x1f\x8b" else payload
+    except (OSError, EOFError, zlib.error) as exc:  # gzip.BadGzipFile is an OSError
+        return None, f"HTTP 200 from {url}: corrupt gzip body ({len(payload)} bytes): {type(exc).__name__}: {exc}"
+    try:
+        return raw.decode("utf-8"), ""
+    except UnicodeDecodeError as exc:
+        return None, f"HTTP 200 from {url}: body is not UTF-8 ({len(raw)} bytes): {exc}"
 
 
 def origin_class(origin: str) -> str:
@@ -89,9 +103,9 @@ def query(request: dict, fetch=get_bytes) -> dict:
     if chembl:
         out["requests_sent"].append(MAP_URL)
         status, payload = fetch(MAP_URL)
-        text = _text(payload) if status == 200 else None
+        text, error = _text(status, payload, MAP_URL)
         if text is None:
-            out["error"] = f"HTTP {status}: {str(payload)[:300]}"
+            out["error"] = error
             return out
         lines = text.splitlines()[1:]
         structs |= {p[1].strip() for p in (ln.split("\t") for ln in lines) if len(p) == 2 and p[0].strip() == chembl}
@@ -101,9 +115,9 @@ def query(request: dict, fetch=get_bytes) -> dict:
             return out
     out["requests_sent"].append(TSV_URL)
     status, payload = fetch(TSV_URL)
-    text = _text(payload) if status == 200 else None
+    text, error = _text(status, payload, TSV_URL)
     if text is None:
-        out["error"] = f"HTTP {status}: {str(payload)[:300]}"
+        out["error"] = error
         return out
     rows = csv.DictReader(io.StringIO(text), delimiter="\t")
     if not rows.fieldnames or "STRUCT_ID" not in rows.fieldnames or "ACTION_TYPE" not in rows.fieldnames:
