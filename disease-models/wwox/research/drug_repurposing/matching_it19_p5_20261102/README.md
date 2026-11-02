@@ -75,6 +75,8 @@ The 65 existing regressions in `test_repurposing_coverage.py` still pass.
 
 No disagreement with the reference was found on any path, on a selection built to find them: zero `asserted_and_disagrees` rows. With 12-15 assertions the lower bound sits near 0.76-0.80, so **no claim of general accuracy, and no claim of superiority of one path over another, is made or supported**. These are case series with intervals.
 
+**Why the active path asserts less than IT18's L rule.** The active path requires an explicit coupling row in `coverage/target_roles.tsv` before it will call a row consistent or opposed. Three couplings the reference can score are `unresolved` there on purpose: CACNA1G under the SEIZURE need (demoted by an independent audit: nothing in that need's own sources measures a T-type effect), GRIA1-4 (the need says "possibly AMPAR"; no WWOX datum), and GRIN2D. So the active path abstains on P11, P13, P27, P29, P31 and on part of the NMDA group rows even where the reference holds a direction, and `abstained_reference_determinate` counts 4 rows before the fix and 5 after. Those abstentions are not the group-transfer defect; they are the WWOX side of the model declining to couple a target to the need's quantity, which is a different and documented decision.
+
 **The decision that improved, and its price.** The fix changes exactly 4 of the 32 pairs, all at the T-TYPE need, all through the 26-component group record:
 
 | Pair | Compound | Before | After | Reference | Verdict |
