@@ -7,7 +7,9 @@
  "OBJECTIVE": "Iteration 19: verified mandate binding and an observed resume, DrugCentral corrupt-response handling, dashboard online, a matching reference with usable coverage, direction/abstention visible in consumers. Computational capability is not biological benefit.",
  "START_UTC": "2026-11-02T09:55:00Z",
  "BASELINE": "development/main = local main = 38c5c320f85d4cc57d50d407ec9d440696170593 (fetched 2026-11-02 09:55 UTC); CI of 07ed2ede and 38c5c320 success; one worktree; IT18 COMPLETE.",
- "DECISIONS_TAKEN": [],
+ "DECISIONS_TAKEN": [
+  "2026-11-02 11:20 UTC: operator agreed to take into P8 the related defect found by the DrugCentral verifier - framework/adapters/_http.py get_json decodes HTTP 200 bodies with errors=\"replace\", so a non-UTF-8 JSON body parses silently with U+FFFD in strings (affects chembl, openfda, ilincs, orphadata, pubtator3, opentargets); same rule as the DrugCentral fix: a damaged body is a queryable error, not a table that looks valid."
+ ],
  "DEFAULTS_TAKEN": [],
  "STOP_LOG": [],
  "AUTHORISED_QUEUE_20261102A": {
@@ -96,7 +98,7 @@
    "order": 9,
    "steps": [
     {
-     "step": "P8 follow-up chosen and executed by a fresh actor on an IT19 gap, verified",
+     "step": "P8 follow-up chosen and executed by a fresh actor on an IT19 gap, verified - includes the _http.get_json errors=\"replace\" defect (operator agreed 2026-11-02 11:20 UTC)",
      "status": "TODO",
      "owner": "orchestrator"
     }
