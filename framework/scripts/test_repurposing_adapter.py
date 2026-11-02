@@ -16,6 +16,7 @@ Properties pinned:
 """
 from __future__ import annotations
 
+import gzip
 import json
 import os
 import shutil
@@ -649,6 +650,53 @@ class DrugCentralActionOrigin(unittest.TestCase):
             self.dc.get_bytes = orig
         self.assertEqual(out["status"], "MATCH_FOUND")
         self.assertEqual(calls, [self.dc.TSV_URL])
+
+    # IT19 P2: a damaged HTTP 200 body is a queryable QUERY_ERROR on both paths, never an exception
+    # and never a replacement-decoded table that looks valid.
+    def _damaged(self, url_hit, body):
+        def fetch(url, params=None, body_=None, timeout=60):
+            self.sent.append(url)
+            if url == url_hit:
+                return 200, body
+            return (200, self.MAP) if url == self.dc.MAP_URL else (200, self.tsv)
+        return fetch
+
+    def _assert_query_error(self, out, url, needle):
+        self.assertEqual(out["status"], "QUERY_ERROR")
+        self.assertEqual(out["hits"], [])
+        self.assertIn(needle, out["error"])
+        self.assertIn(url, out["error"])
+        self.assertEqual(out["requests_sent"][-1], url)
+        self.assertEqual(out["source_version"], "DrugCentral download directory 2027")
+        self.assertTrue(out["licence"] and out["citation"])
+
+    def test_corrupt_gzip_is_a_query_error_on_both_paths(self):
+        good = gzip.compress(self.tsv, mtime=0)
+        for name, body in (("truncated", good[: len(good) // 2]), ("bad header", b"\x1f\x8b\x09" + b"\x00" * 20)):
+            for url, req in ((self.dc.TSV_URL, {"struct_id": "403"}), (self.dc.MAP_URL, {"chembl_id": "CHEMBL9"})):
+                with self.subTest(body=name, url=url):
+                    out = self.dc.query(req, fetch=self._damaged(url, body))
+                    self._assert_query_error(out, url, "corrupt gzip body")
+
+    def test_non_utf8_text_is_a_query_error_on_both_paths(self):
+        tsv_bad = self.tsv.replace(b"Example receptor", b"Example r\xe9ceptor")
+        for url, req, body in ((self.dc.TSV_URL, {"struct_id": "403"}, tsv_bad),
+                               (self.dc.TSV_URL, {"struct_id": "403"}, gzip.compress(tsv_bad, mtime=0)),
+                               (self.dc.MAP_URL, {"chembl_id": "CHEMBL9"}, self.MAP + b"CHEMBL\xff\t1\n")):
+            with self.subTest(url=url, gz=body[:2] == b"\x1f\x8b"):
+                out = self.dc.query(req, fetch=self._damaged(url, body))
+                self._assert_query_error(out, url, "not UTF-8")
+                self.assertNotIn("�", json.dumps(out), "no replacement-decoded data reaches the result")
+
+    def test_valid_gzip_table_positive_control_and_zero_hits_stays_valid_empty(self):
+        gz = gzip.compress(self.tsv, mtime=0)
+        fetch = lambda url, params=None, body=None, timeout=60: (200, gzip.compress(self.MAP, mtime=0)) if url == self.dc.MAP_URL else (200, gz)
+        out = self.dc.query({"chembl_id": "CHEMBL9"}, fetch=fetch)
+        self.assertEqual((out["status"], len(out["hits"]), out["error"]), ("MATCH_FOUND", 2, ""))
+        empty = self.dc.query({"gene": "NOSUCHGENE"}, fetch=fetch)
+        self.assertEqual((empty["status"], empty["hits"], empty["error"]), ("NO_MATCH_FOUND", [], ""))
+        self.assertEqual(empty["requests_sent"], [self.dc.TSV_URL])
+        self.assertEqual(ra.check_output(empty), [])
 
 
 class CacheRefusesEmptyAnd200Errors(unittest.TestCase):
