@@ -23,7 +23,8 @@
     {
      "step": "P0 diagnosis and three questions (diagnosis_it18_20261101); P4 pre-registration written before any label",
      "status": "DONE",
-     "owner": "orchestrator"
+     "owner": "orchestrator",
+     "evidence": "diagnosis_it18_20261101/README.md; matching_it18_p4_20261101/PRE_REGISTRATION.md written before any label"
     }
    ]
   },
@@ -33,7 +34,8 @@
     {
      "step": "P1 reopen tables reach the radar; object-named queries compared blind on 10 declared questions",
      "status": "DONE",
-     "owner": "orchestrator"
+     "owner": "orchestrator",
+     "evidence": "radar_it18_p1_20261101/README.md: reopen questions 0 -> 25 on the real repository; blind rating of 117 hits on 10 declared questions"
     }
    ]
   },
