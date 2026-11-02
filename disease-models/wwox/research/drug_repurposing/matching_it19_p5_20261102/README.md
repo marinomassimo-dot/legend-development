@@ -123,8 +123,9 @@ python3 $P/join_it19_p5.py --selection $P/selection.tsv --reference $P/reference
   --prefix $P/module_answers_prefix.tsv --guarded $P/module_answers_guarded.tsv \
   --out $P/results_it19_p5.json --out-tsv $P/cases_it19_p5.tsv
 python3 $P/test_select_pairs.py && python3 $P/test_check_reference.py && python3 $P/test_join_it19_p5.py
-python3 -B ../../../../framework/scripts/test_repurposing_group_transfer.py
-python3 -B ../../../../framework/scripts/test_repurposing_coverage.py
+cd $P   # the two framework suites, from the package directory
+python3 -B ../../../../../framework/scripts/test_repurposing_group_transfer.py
+python3 -B ../../../../../framework/scripts/test_repurposing_coverage.py
 ```
 
 Third-party data: identifiers, coarse classes, short locators and the compound names only. The DrugCentral TSV, the UniChem map and the ChEMBL activity pull used for this package live in the gitignored `files/drug_repurposing_it19/matching_it19_p5_20261102/cache/` (5.6 MB; digests in `cache_SHA256SUMS.txt`, which is committed); no raw third-party table is committed. Public GETs only (ChEMBL REST, DrugCentral download, PubMed metadata), zero spend, no registration, no account, no contact address sent to any service, no new terms accepted. ChEMBL content is CC BY-SA 3.0, GtoPdb CC BY-SA 4.0, DrugCentral CC BY-SA 4.0; PubMed metadata and abstracts are cited by PMID and DOI in `reference_it19_p5.tsv` and the receipts.
