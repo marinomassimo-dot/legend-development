@@ -351,6 +351,21 @@ Of the 7 that left the queue, 3 (ethosuximide, memantine, esketamine) were `dgid
 families whose ChEMBL sibling is already a **ranked unit** — duplicates of assessed work, not lost
 candidates.
 
+### The one IT19 expectation that had to move, and how
+
+`ranking_it8_p9_20261029/test_ranking_it8.py` holds a drift detector,
+`test_live_labels_equal_the_guarded_answers_committed_by_it19_p5`, asserting that the live engine
+still reproduces every label in IT19's committed `module_answers_guarded.tsv`. After P3 one pair
+legitimately differs: **P08 (bepridil) `direction_unresolved` → `mixed:consistent|direction_unresolved`**.
+
+IT19's dated table was **not** rewritten — a dated result stays what it was. Instead the detector now
+compares against that same table and carries a `DECLARED_CHANGES_SINCE_IT19_P5` entry naming the
+pair, the old label, the new label and the reason. The detector stays sharp in both directions: any
+*undeclared* drift on any of the 32 pairs fails, and a declaration that no longer corresponds to a
+real difference fails too, so it cannot rot into a blanket exemption. `changed_by_group_guard` is
+still 4 and the reference counts (32 pairs, 25 compounds, 17 determinate, 11 functional, 6
+class-level, 8 independent) are unchanged.
+
 ### What this does and does not establish
 
 No new evaluation set was built and **no IT17–IT19 experiment was rewritten**: the IT18 P4
