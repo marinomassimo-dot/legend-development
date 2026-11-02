@@ -18,7 +18,7 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 12069,
+    "values": 12190,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -123,7 +123,7 @@
    },
    "^\\.pairs\\[\\]\\.(l2|l3|l4|x|n|r)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 33914,
+    "values": 33869,
     "why": "levels 2-4, indices: computed from cards and needs"
    },
    "^\\.pairs\\[\\]\\.l1\\.(state|n_assoc|readout_only|why|stale)$": {
@@ -148,7 +148,7 @@
    },
    "^\\.pairs\\[\\]\\.p\\.": {
     "class": "OWN",
-    "values": 15783,
+    "values": 15609,
     "why": "priority criteria computed by the coverage tool"
    },
    "^\\.pairs\\[\\]\\.p\\.cr\\.dir\\[\\]\\[\\]$": {
@@ -193,7 +193,7 @@
    },
    "^\\.ui\\.": {
     "class": "UI",
-    "values": 1307,
+    "values": 1308,
     "why": "Italian orientation text (builder data UI_IT and siblings)"
    }
   },
@@ -223,7 +223,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3064,
+    "forbidden-name": 3110,
     "forbidden-wording": 12
    },
    "co_attested_wording": [
@@ -248,7 +248,7 @@
    "forbidden_names": 126046,
    "forbidden_wordings": 2888,
    "pair_unmarked_attested_or_unchecked": {
-    "count": 152,
+    "count": 153,
     "names": [
      "act 709478",
      "apinocaltamide",
@@ -263,7 +263,7 @@
      "px 478",
      "sulfopin"
     ],
-    "unchecked_without_corpus": 152
+    "unchecked_without_corpus": 153
    },
    "suppressed_by_exemption": {
     "bibliographic journal name (validated against the journals of the cache)": 4,
@@ -357,7 +357,7 @@
   "excluded_rows_with_names_shareable": 0,
   "needs": 23,
   "pairs_total": 2584,
-  "pairs_with_status_class_full": 922,
+  "pairs_with_status_class_full": 912,
   "pairs_with_status_class_shareable": 0,
   "pairs_with_target_list_full": 2204,
   "pairs_with_target_list_shareable": 13,
@@ -462,11 +462,11 @@
   "BIBLIO": 2429,
   "COUNT": 11599,
   "ID": 4547,
-  "OWN": 83679,
+  "OWN": 83581,
   "ROWNAME": 2251,
   "SRC_A": 189,
   "SRC_META": 256,
-  "UI": 1307
+  "UI": 1308
  },
  "embedded_sources": [
   {
@@ -501,7 +501,7 @@
  "files": {
   "COMPARISON.md": {
    "bytes": 7424,
-   "sha256": "34349144b68515c8523e86b18b0b79e305141c053c328b5e9ed3fc335389b6b7"
+   "sha256": "e1a4de1e825d88b3c2315266557ee52f6c0c2842055fcecf17c2d0317f94b0dc"
   },
   "LICENSES/CC-BY-4.0.txt": {
    "bytes": 18657,
@@ -521,7 +521,7 @@
   },
   "NOTICE.md": {
    "bytes": 12774,
-   "sha256": "6de85ddd9a344e6390152006e22b58508f9d75ba1ee751c8975c50acc4983d79"
+   "sha256": "7b632cb276c9ffa68278415249e2f2989a3e7d84b58805caa910d53b5c670184"
   },
   "README.md": {
    "bytes": 4906,
@@ -544,8 +544,8 @@
    "sha256": "240723d6c86c13fc8f19ff2a5bbe7eec5e64da0f3769ea25e49d8d7b7e5784d0"
   },
   "index.html": {
-   "bytes": 4398351,
-   "sha256": "22dbf7609666a2cb553f42138df1c249c2ceebcd47c6b2c6fd46c1fd3e736088"
+   "bytes": 4435029,
+   "sha256": "8730da1dc42bf635728f586acfca1789d9b98d36604d0076120d5c0b2ec2c6b0"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
@@ -604,7 +604,7 @@
   "card_sentence_redactions": 12,
   "lead_field_redactions": 11,
   "pair_status_rule": "pairs[].p.cr.pha[1] (status classes of the row) is dropped in the shareable build: a status class derives from ChEMBL max_phase, DGIdb approved flags, MATRIX and openFDA together, and the build does not re-derive a class-A-only status per row.",
-  "pairs_status_class_dropped": 922,
+  "pairs_status_class_dropped": 912,
   "repository_file_names_described": 201,
   "rule": "IT5 P13 fix. Own analysis stays in the shareable build: a conclusion at the level of a need, a class or a card subject, in our own words, short, attributed to a published work. Withheld: (1) a sentence that states a compound-target(-action) pair together with its database of origin when the pair is asserted only by a class-B/C catalogue source; (2) a compound named in prose whose only provenance in the repository is a class-B/C catalogue row (it appears in no cited full text and is not a card subject); (3) a per-compound status, phase, approval or access statement attributed to a class-B/C source; (4) repository file names, which cannot be used outside the repository. The replacement keeps the research conclusion and names the withheld source class with the phrase in withheld_phrase. The FULL build keeps everything. The audit enforces (1) and (2) by derivation from the catalogue, (3) and (4) by pattern, and every redaction below must match exactly once or more: a stale redaction fails the build.",
   "withheld_phrase": "dato di una fonte non inclusa in questa versione"
