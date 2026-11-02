@@ -1410,6 +1410,8 @@
  "investigations": {
   "rows": [
    {
+    "below_the_line": "",
+    "below_the_line_reason": "",
     "decisive_uncertainty": "No arm exists in which treatment begins after the phenotype is established; the window is stated, not measured against a later start, and P300 readouts are survivor-selected.",
     "direction_state": "resolved",
     "direction_state_label": "the need states an up/down intervention direction",
@@ -1440,6 +1442,8 @@
     "why_now": "Every partial-benefit lever in this module is ordered as a bridge to, or a substitute for, restoration; whether restoration works after onset decides which of those two framings is the real one, so one result re-reads the whole list."
    },
    {
+    "below_the_line": "",
+    "below_the_line_reason": "",
     "decisive_uncertainty": "Which sign the ISR actually has at protein level in a WWOX-deficient human neural cell. Until that is measured, an ISR-attenuating compound and an ISR-potentiating compound are equally defensible, which is the definition of an unqualified axis.",
     "direction_state": "unresolved",
     "direction_state_label": "the need's own direction is uncertain: no lever on it can be qualified either way, which is a visible gap and not a negative finding",
@@ -1470,6 +1474,8 @@
     "why_now": "The need's direction is unresolved and the two available readouts disagree by design, so no compound on this axis can be qualified either way. Resolving the sign is the cheapest act that converts the largest blocked slice of the catalogue into an orderable or a refused question; leaving it unresolved keeps that slice invisible rather than negative."
    },
    {
+    "below_the_line": "",
+    "below_the_line_reason": "",
     "decisive_uncertainty": "Whether the carded effect is a T-type effect at all, which isoform carries it, and whether it is genotype-dependent. A pan-isoform and an isoform-preferring agent giving the same result would weaken the T-type attribution rather than strengthen it.",
     "direction_state": "resolved",
     "direction_state_label": "the need states an up/down intervention direction",
@@ -1500,6 +1506,8 @@
     "why_now": "The module's one T-type result is complex-or-group level with no isoform datum and no drug-by-genotype interaction test, and its own need file names both gaps. Two approved compounds with different isoform reach make the discrimination possible without building a tool compound, which turns a standing caveat into a measurable question."
    },
    {
+    "below_the_line": "",
+    "below_the_line_reason": "",
     "decisive_uncertainty": "Whether an interaction term survives; a wild-type effect of the same size would move this thread out of its group without any new compound being involved.",
     "direction_state": "resolved",
     "direction_state_label": "the need states an up/down intervention direction",
@@ -1530,6 +1538,8 @@
     "why_now": "The position of this thread rests on a single laboratory and a single paper in which the comparison drug acted better, and the specificity flag is an unknown rather than a clean reading. The thread is already ordered, so the result changes a standing position rather than adding a new one."
    },
    {
+    "below_the_line": "",
+    "below_the_line_reason": "",
     "decisive_uncertainty": "Whether a partial, clinically achievable block suffices, and whether the carded effect is a subunit effect or a pore-block effect. A pore blocker's potency depends on voltage and on magnesium, so the unreported bath is itself the obstacle.",
     "direction_state": "resolved",
     "direction_state_label": "the need states an up/down intervention direction",
@@ -1560,6 +1570,8 @@
     "why_now": "This is the only axis in the module with a measured WWOX-system drug readout, and it was obtained with a full competitive block by a tool compound. Whether a partial block reproduces it is the step between a perturbation result and an orderable question; the magnesium dependence makes the result uninterpretable unless the bath is reported."
    },
    {
+    "below_the_line": "",
+    "below_the_line_reason": "",
     "decisive_uncertainty": "Whether the neuron still emits the activity-dependent signal that a pro-myelinating agent would amplify. If it does not, the whole class is not a lever here regardless of its pharmacology.",
     "direction_state": "unresolved",
     "direction_state_label": "the need's own direction is uncertain: no lever on it can be qualified either way, which is a visible gap and not a negative finding",
@@ -1590,6 +1602,8 @@
     "why_now": "This need carries 318 catalogue associations and not one of them is direction-coherent: a restore-type need has no action vocabulary in the catalogue to match, so the slice looks empty for a structural reason, not a biological one. The premise question is cheaper than any compound test and decides whether the axis is a target or a consequence."
    },
    {
+    "below_the_line": "",
+    "below_the_line_reason": "",
     "decisive_uncertainty": "Whether PDH flux is actually reduced. The lever's direction is derived from the chain, not from a measurement, and the available signs contradict it.",
     "direction_state": "unresolved",
     "direction_state_label": "the need's own direction is uncertain: no lever on it can be qualified either way, which is a visible gap and not a negative finding",
@@ -1620,6 +1634,8 @@
     "why_now": "The chain that motivates this lever predicts a PDH block, and the two available data point the other way: the kinase transcript is down and the one human activity measurement shows no difference. Ordering the compound before the premise is measured is how a plausible chain becomes a wasted experiment."
    },
    {
+    "below_the_line": "",
+    "below_the_line_reason": "",
     "decisive_uncertainty": "Whether the axis is engaged at all in a WWOX-deficient neural cell, and whether engaging it helps or harms. No compound in the record acts in such a cell.",
     "direction_state": "unresolved",
     "direction_state_label": "the need's own direction is uncertain: no lever on it can be qualified either way, which is a visible gap and not a negative finding",
@@ -1650,6 +1666,8 @@
     "why_now": "Both arms of this need are explicitly conditional and neither is established, and the module has already refused to read agreement between two electrophiles as evidence of pathway dependence. A genetic arm answers the dependence question that no compound pair can answer."
    },
    {
+    "below_the_line": "",
+    "below_the_line_reason": "",
     "decisive_uncertainty": "Whether any part of the carded effect is attributable to the named kinase rather than to the agent's other actions, and whether the opposing push on the second need is tolerable.",
     "direction_state": "opposed_risk",
     "direction_state_label": "a documented action of this intervention pushes against another need of the same objective",
@@ -1680,6 +1698,8 @@
     "why_now": "The thread is carried by one paper from one laboratory, the agent is non-selective, and it pushes the canonical Wnt readout in the direction this module's other need wants lowered. The question now is whether to keep it, not what to measure next with it: that is a decision a single interaction test can settle."
    },
    {
+    "below_the_line": "",
+    "below_the_line_reason": "",
     "decisive_uncertainty": "Whether symptomatic response tracks any developmental endpoint in this genotype class. The mechanism argument on this axis predicts the opposite of what the reports show, and that contradiction is unexplained.",
     "direction_state": "resolved",
     "direction_state_label": "the need states an up/down intervention direction",
@@ -1708,47 +1728,30 @@
     "unit_group_partial": "G3",
     "unit_id": "U20",
     "why_now": "This is the thread with real human reports behind it and the one most likely to be read as a recommendation. The module already holds a series in which symptomatic response and developmental outcome did not move together, so the useful investigation is the separation itself, not another symptomatic observation."
-   },
-   {
-    "decisive_uncertainty": "Whether the absence is a catalogue coverage limit, a target-listing limit, or a genuine absence of pharmacology. This package did not separate those three.",
-    "direction_state": "unresolved",
-    "direction_state_label": "the need's own direction is uncertain: no lever on it can be qualified either way, which is a visible gap and not a negative finding",
-    "evidence_available": "Per need: the observation rows exist, the targets are listed, and the search layer returns no association on them. The glycaemia and growth need carries no target at all because it is an endpoint.",
-    "evidence_depth": "no ranked unit: the investigation is a premise measurement, so no evaluation depth applies (this is not a depth of zero)",
-    "feasibility": "A catalogue query, no new data.",
-    "intervention": "No lever available (four needs with no catalogue reach)",
-    "inv_id": "INV-11",
-    "movement_reason": "first evaluation of this investigation: no previous position to compare",
-    "need_direction": "uncertain",
-    "need_id": "NEED-MITOCHONDRIAL-RESPIRATION",
-    "need_short": "Mitochondrial respiration / OXPHOS capacity",
-    "next_test": "Separate the three causes for one of the four needs: check whether the listed targets carry any catalogued action anywhere, then whether the module's target list is the limit.",
-    "novelty_perimeter": "Queried: the search layer over every target of all 23 needs. Three needs returned zero associations and one carries no target. That is a measured property of this catalogue and this target list on this date, not a statement that no pharmacology exists for these processes.",
-    "objective": "partial",
-    "origin_class": "generated_by_legend",
-    "origin_class_label": "reached from a qualified need through the module's own target and catalogue path, not named in the WWOX material checked",
-    "question": "For the four needs on which the catalogue returns nothing at all, what would have to exist before any compound question could be asked?",
-    "rank": 6,
-    "tie_group": "6",
-    "tracks": [],
-    "unit_class": "",
-    "unit_group_broad": "",
-    "unit_group_partial": "",
-    "unit_id": "",
-    "why_now": "Naming these keeps them visible as gaps rather than as silently empty rows. Three of the four have no catalogue association on their targets and one is an endpoint rather than an intervention; none of this is evidence that the biology is unpromising."
    }
   ],
   "summary": {
+   "below_the_line": 1,
+   "below_the_line_note": "rows beyond the ten-row ceiling stay in investigations.tsv with their reason; a tie is kept whole rather than split. Below the line is a ceiling on the page, never a finding that an investigation is unpromising.",
+   "below_the_line_rows": [
+    {
+     "intervention": "No lever available (four needs with no catalogue reach)",
+     "inv_id": "INV-11",
+     "rank": 6,
+     "reason": "below the ten-row ceiling the operator set for the published list: rank 6 is the first position that does not fit (10 rows already published, this tie holds 1). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
+    }
+   ],
    "by_direction_state": {
     "opposed_risk": 1,
     "resolved": 5,
-    "unresolved": 5
+    "unresolved": 4
    },
    "by_origin_class": {
-    "generated_by_legend": 4,
+    "generated_by_legend": 3,
     "known_in_wwox": 7
    },
-   "count": 11,
+   "count": 10,
+   "count_including_below_the_line": 11,
    "direction_states": {
     "opposed_risk": "a documented action of this intervention pushes against another need of the same objective",
     "resolved": "the need states an up/down intervention direction",
@@ -1761,13 +1764,14 @@
     "known_in_wwox": "already named in the WWOX literature or in a LEGEND card"
    },
    "plain_statement": "Ordine delle indagini da finanziare, non classifica di efficacia: ogni riga ordina il valore del prossimo esperimento discriminante (che cosa cambierebbe il risultato, a quale costo), non la probabilita di beneficio. An unresolved or opposed direction is named in the row's decisive uncertainty and the order does not imply a direction the evidence does not support. Nothing here is medical advice.",
+   "published": 10,
+   "published_ceiling": 10,
    "tie_groups": {
     "1": 2,
     "2": 2,
     "3": 2,
     "4": 2,
-    "5": 2,
-    "6": 1
+    "5": 2
    },
    "unit_of_a_row": "a question on compound-action-context-benefit with one concrete next step; the same compound may appear in more than one row for different objectives or contexts",
    "what_is_not_rewarded": [
@@ -5919,16 +5923,27 @@
    "records": 44211
   },
   "investigations": {
+   "below_the_line": 1,
+   "below_the_line_note": "rows beyond the ten-row ceiling stay in investigations.tsv with their reason; a tie is kept whole rather than split. Below the line is a ceiling on the page, never a finding that an investigation is unpromising.",
+   "below_the_line_rows": [
+    {
+     "intervention": "No lever available (four needs with no catalogue reach)",
+     "inv_id": "INV-11",
+     "rank": 6,
+     "reason": "below the ten-row ceiling the operator set for the published list: rank 6 is the first position that does not fit (10 rows already published, this tie holds 1). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
+    }
+   ],
    "by_direction_state": {
     "opposed_risk": 1,
     "resolved": 5,
-    "unresolved": 5
+    "unresolved": 4
    },
    "by_origin_class": {
-    "generated_by_legend": 4,
+    "generated_by_legend": 3,
     "known_in_wwox": 7
    },
-   "count": 11,
+   "count": 10,
+   "count_including_below_the_line": 11,
    "direction_states": {
     "opposed_risk": "a documented action of this intervention pushes against another need of the same objective",
     "resolved": "the need states an up/down intervention direction",
@@ -5941,13 +5956,14 @@
     "known_in_wwox": "already named in the WWOX literature or in a LEGEND card"
    },
    "plain_statement": "Ordine delle indagini da finanziare, non classifica di efficacia: ogni riga ordina il valore del prossimo esperimento discriminante (che cosa cambierebbe il risultato, a quale costo), non la probabilita di beneficio. An unresolved or opposed direction is named in the row's decisive uncertainty and the order does not imply a direction the evidence does not support. Nothing here is medical advice.",
+   "published": 10,
+   "published_ceiling": 10,
    "tie_groups": {
     "1": 2,
     "2": 2,
     "3": 2,
     "4": 2,
-    "5": 2,
-    "6": 1
+    "5": 2
    },
    "unit_of_a_row": "a question on compound-action-context-benefit with one concrete next step; the same compound may appear in more than one row for different objectives or contexts",
    "what_is_not_rewarded": [

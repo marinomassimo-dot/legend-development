@@ -1736,7 +1736,8 @@ DIRECTION_STATES = {
     "opposed_risk": "a documented action of this intervention pushes against another need of the same objective",
 }
 INV_COLS = ["rank", "tie_group", "inv_id", "intervention", "question", "why_now", "evidence_available", "evidence_depth", "decisive_uncertainty",
-            "next_test", "feasibility", "origin_class", "novelty_perimeter", "direction_state", "need_id", "unit_id", "movement_reason"]
+            "next_test", "feasibility", "origin_class", "novelty_perimeter", "direction_state", "need_id", "unit_id", "movement_reason",
+            "below_the_line", "below_the_line_reason"]
 # A novelty perimeter records what was actually queried. These phrasings claim more than a query can support.
 FORBIDDEN_NOVELTY = ("never studied", "never tested", "mai studiato", "first ever", "the first", "no one has", "unique in", "untested anywhere")
 # No dose, route, schedule or preparation is carried anywhere in this table.
@@ -1812,7 +1813,46 @@ def investigations(ctx: dict, uni: dict, as_of: str, prev: dict | None = None) -
         }
         row["movement_reason"] = investigation_movement(row, prev)
         out.append(row)
-    return out
+    return _apply_the_line(out)
+
+
+# The operator's ceiling: the published list carries AT MOST ten rows, and a short list is never padded. A row beyond the
+# ceiling is not deleted and not judged unpromising: it stays in investigations.tsv with `below_the_line` and the reason.
+MAX_PUBLISHED_INVESTIGATIONS = 10
+
+
+def _apply_the_line(rows: list[dict]) -> list[dict]:
+    """Mark the rows that fall below the ten-row ceiling, cutting on a tie boundary when that keeps the list at ten.
+
+    A tie is shown whole only if doing so still leaves ten or fewer published rows; otherwise the whole tie group goes
+    below the line, because publishing half of a tie would assert an order inside it that the method does not have.
+    """
+    for r in rows:
+        r["below_the_line"] = ""
+        r["below_the_line_reason"] = ""
+    if len(rows) <= MAX_PUBLISHED_INVESTIGATIONS:
+        return rows
+    published, cut_rank = 0, None
+    for rank in sorted({r["rank"] for r in rows}):
+        n = sum(1 for r in rows if r["rank"] == rank)
+        if published + n > MAX_PUBLISHED_INVESTIGATIONS:
+            cut_rank = rank
+            break
+        published += n
+    for r in rows:
+        if cut_rank is not None and r["rank"] >= cut_rank:
+            whole_tie = sum(1 for x in rows if x["rank"] == r["rank"])
+            r["below_the_line"] = "yes"
+            r["below_the_line_reason"] = (
+                f"below the ten-row ceiling the operator set for the published list: rank {r['rank']} is the first position "
+                f"that does not fit ({published} rows already published, this tie holds {whole_tie}). The tie is kept whole "
+                "rather than split, because publishing part of a tie would assert an order inside it that this method does "
+                "not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row "
+                "stays in investigations.tsv with its question, its decisive uncertainty and its next test."
+            )
+            r["movement_reason"] = (r["movement_reason"] + " | below the line this evaluation: "
+                                    f"rank {r['rank']} does not fit the ten-row published ceiling")
+    return rows
 
 
 def investigation_movement(row: dict, prev: dict | None) -> str:
@@ -1828,19 +1868,32 @@ def investigation_movement(row: dict, prev: dict | None) -> str:
     return f"moved {direction} from rank {o['rank']} to {row['rank']} since the previous evaluation; the reason class is declared with `snapshot --reason`"
 
 
-def investigations_summary(rows: list[dict]) -> dict:
+def investigations_summary(rows: list[dict], all_rows: list[dict] | None = None) -> dict:
+    """`rows` are the published rows; `all_rows` (default: the same) includes the ones below the line, for the digest."""
+    all_rows = all_rows if all_rows is not None else rows
+    below = [r for r in all_rows if r.get("below_the_line")]
     return {
         "plain_statement": INVESTIGATIONS_STATEMENT,
+        "published_ceiling": MAX_PUBLISHED_INVESTIGATIONS,
+        "published": len(rows),
+        "below_the_line": len(below),
+        "below_the_line_note": ("rows beyond the ten-row ceiling stay in investigations.tsv with their reason; a tie is kept "
+                                "whole rather than split. Below the line is a ceiling on the page, never a finding that an "
+                                "investigation is unpromising.") if below else "",
+        "below_the_line_rows": [{"inv_id": r["inv_id"], "rank": r["rank"], "intervention": r["intervention"],
+                                 "reason": r["below_the_line_reason"]} for r in below],
         "unit_of_a_row": "a question on compound-action-context-benefit with one concrete next step; the same compound may appear "
                          "in more than one row for different objectives or contexts",
         "what_is_not_rewarded": ["novelty for its own sake", "publication count", "number of linked pathways or needs",
                                  "ease of purchase or access category", "depth of existing evidence (carried separately as evidence_depth)"],
         "count": len(rows),
+        "count_including_below_the_line": len(all_rows),
         "by_origin_class": dict(sorted(Counter(r["origin_class"] for r in rows).items())),
         "by_direction_state": dict(sorted(Counter(r["direction_state"] for r in rows).items())),
         "tie_groups": dict(sorted(Counter(r["rank"] for r in rows).items())),
         "origin_classes": ORIGIN_CLASSES, "direction_states": DIRECTION_STATES,
-        "order_digest": sha16([(r["inv_id"], r["rank"]) for r in rows]),
+        # the digest covers the WHOLE evaluated order, published or not: the ceiling is a page limit and must not change it
+        "order_digest": sha16([(r["inv_id"], r["rank"]) for r in all_rows]),
     }
 
 
@@ -1923,9 +1976,11 @@ def build_all() -> dict[str, bytes]:
     _, _prev_snap = latest_snapshot()
     invs = investigations(ctx, uni, as_of, _prev_snap)
     if invs:
+        # the TSV is the whole evaluated order; ranking.json publishes at most ten rows (the view builder's contract)
+        pub = [r for r in invs if not r.get("below_the_line")]
         files["investigations.tsv"] = tsv_bytes(invs, INV_COLS)
-        ing["investigations"] = {"summary": investigations_summary(invs), "rows": invs}
-        summary["investigations"] = investigations_summary(invs)
+        ing["investigations"] = {"summary": investigations_summary(pub, invs), "rows": pub}
+        summary["investigations"] = investigations_summary(pub, invs)
     files["ranking.json"] = json_bytes(ing)
     # per-unit input digests (for the snapshot / diff mechanism)
     drows = [{"unit_id": u["unit_id"], **u["inputs"]} for u in uni["units"]]

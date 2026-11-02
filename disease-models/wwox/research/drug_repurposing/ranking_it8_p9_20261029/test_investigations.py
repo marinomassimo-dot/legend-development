@@ -26,8 +26,16 @@ spec.loader.exec_module(rk)
 
 
 def load_rows() -> list[dict]:
+    """The PUBLISHED rows: ranking.json carries at most ten (the view builder's contract, IT20 integration)."""
     j = json.loads((HERE / "ranking.json").read_text(encoding="utf-8"))
     return j["investigations"]["rows"]
+
+
+def load_all_rows() -> list[dict]:
+    """The whole evaluated order, including the rows below the ten-row ceiling: investigations.tsv."""
+    import csv as _csv
+    with (HERE / "investigations.tsv").open(encoding="utf-8") as f:
+        return list(_csv.DictReader(f, delimiter="\t"))
 
 
 def load_summary() -> dict:
@@ -67,6 +75,12 @@ class Contract(unittest.TestCase):
     def test_at_most_ten_ranked_positions_and_no_artificial_filler(self):
         self.assertLessEqual(len({r["rank"] for r in self.rows}), 10)
         self.assertEqual(len({r["inv_id"] for r in self.rows}), len(self.rows))
+
+    def test_ranking_json_publishes_at_most_ten_rows(self):
+        """2026-11-02: the view builder rejects a longer list; the ceiling is the operator's 'up to ten'."""
+        self.assertLessEqual(len(self.rows), rk.MAX_PUBLISHED_INVESTIGATIONS)
+        for r in self.rows:
+            self.assertFalse(r.get("below_the_line"), f"{r['inv_id']} is below the line but was published")
 
     def test_origin_class_and_direction_state_use_the_closed_vocabularies(self):
         for r in self.rows:
@@ -154,6 +168,64 @@ class OrderDoesNotRewardTheWrongThings(unittest.TestCase):
                     beaten.append((g["inv_id"], r["inv_id"]))
         self.assertTrue(beaten, "no generated hypothesis outranks a unit with a measured WWOX-system position: "
                                 "the investigations order has collapsed onto the evidence-depth order")
+
+
+class TheTenRowCeiling(unittest.TestCase):
+    """The published list is capped at ten; a row beyond it is kept, flagged and explained, never deleted or judged."""
+
+    def setUp(self):
+        self.pub = load_rows()
+        self.all = load_all_rows()
+        self.summary = load_summary()
+
+    def test_the_tsv_keeps_every_row_the_json_omits(self):
+        self.assertGreaterEqual(len(self.all), len(self.pub))
+        omitted = {r["inv_id"] for r in self.all} - {r["inv_id"] for r in self.pub}
+        self.assertEqual(omitted, {r["inv_id"] for r in self.summary["below_the_line_rows"]})
+
+    def test_a_row_below_the_line_states_the_reason_and_is_not_called_unpromising(self):
+        for r in self.all:
+            if r.get("below_the_line") == "yes":
+                self.assertIn("ten-row ceiling", r["below_the_line_reason"])
+                self.assertIn("not a judgement that the investigation is unpromising", r["below_the_line_reason"])
+                self.assertIn("below the line", r["movement_reason"])
+
+    def test_the_summary_declares_the_ceiling_and_what_falls_below_it(self):
+        self.assertEqual(self.summary["published_ceiling"], rk.MAX_PUBLISHED_INVESTIGATIONS)
+        self.assertEqual(self.summary["published"], len(self.pub))
+        self.assertEqual(self.summary["count_including_below_the_line"], len(self.all))
+        if self.summary["below_the_line"]:
+            self.assertIn("never a finding", self.summary["below_the_line_note"])
+
+    def test_the_order_digest_covers_the_whole_evaluated_order_not_only_the_published_part(self):
+        """The ceiling is a page limit: it must not move the digest the snapshot mechanism compares."""
+        self.assertEqual(self.summary["order_digest"], rk.sha16([(r["inv_id"], int(r["rank"])) for r in self.all]))
+
+    def test_a_short_list_is_not_padded_and_is_untouched_by_the_ceiling(self):
+        rows = [{"inv_id": f"I{i}", "rank": i, "movement_reason": "m"} for i in range(1, 4)]
+        out = rk._apply_the_line(rows)
+        self.assertEqual(len(out), 3)
+        self.assertTrue(all(not r["below_the_line"] for r in out))
+
+    def test_a_tie_that_would_overflow_the_ceiling_goes_below_the_line_whole(self):
+        """Nine singles then a tie of three: publishing two of the three would assert an order inside the tie."""
+        rows = [{"inv_id": f"I{i}", "rank": i, "movement_reason": "m"} for i in range(1, 10)]
+        rows += [{"inv_id": f"T{k}", "rank": 10, "movement_reason": "m"} for k in range(3)]
+        out = rk._apply_the_line(rows)
+        pub = [r for r in out if not r["below_the_line"]]
+        self.assertEqual(len(pub), 9)
+        self.assertEqual({r["inv_id"] for r in out if r["below_the_line"]}, {"T0", "T1", "T2"})
+
+    def test_a_tie_that_exactly_fills_the_ceiling_is_published_whole(self):
+        rows = [{"inv_id": f"I{i}", "rank": i, "movement_reason": "m"} for i in range(1, 9)]
+        rows += [{"inv_id": f"T{k}", "rank": 9, "movement_reason": "m"} for k in range(2)]
+        out = rk._apply_the_line(rows)
+        self.assertTrue(all(not r["below_the_line"] for r in out))
+
+    def test_everything_below_the_first_cut_rank_goes_below_the_line(self):
+        rows = [{"inv_id": f"I{i}", "rank": i, "movement_reason": "m"} for i in range(1, 13)]
+        out = rk._apply_the_line(rows)
+        self.assertEqual({r["inv_id"] for r in out if not r["below_the_line"]}, {f"I{i}" for i in range(1, 11)})
 
 
 class Movement(unittest.TestCase):
