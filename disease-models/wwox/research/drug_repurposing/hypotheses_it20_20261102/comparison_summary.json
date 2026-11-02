@@ -1,0 +1,370 @@
+{
+ "schema": "repurposing.comparison.arms/1",
+ "as_of": "2026-11-02",
+ "plain_statement": "An order of research investment - the value of the next discriminating test given its cost and what the result would change - not a ranking of efficacy. Nothing here is medical advice.",
+ "universe": {
+  "associations": 3331,
+  "families": 2002,
+  "needs": 19,
+  "by_consistency": {
+   "consistent": 291,
+   "direction_unresolved": 2995,
+   "opposed": 45
+  },
+  "definition": "every (family, target, need) association the shipped search layer returns for the 23 needs, minus the rows it excludes from counts; identical for both arms"
+ },
+ "arm_external": {
+  "families_selected": 622,
+  "top_n": 10,
+  "top": [
+   {
+    "rank_external": 1,
+    "compound": "TERODILINE HYDROCHLORIDE",
+    "family": "FAM:CAT:CHEMBL363295",
+    "n_targets": 4,
+    "n_needs": 3,
+    "approved": true
+   },
+   {
+    "rank_external": 2,
+    "compound": "Terodiline Hydrochloride",
+    "family": "FAM:CAT:DGIDB:5626675dc6fe",
+    "n_targets": 4,
+    "n_needs": 3,
+    "approved": true
+   },
+   {
+    "rank_external": 3,
+    "compound": "ACAMPROSATE CALCIUM",
+    "family": "FAM:CAT:CHEMBL1201293",
+    "n_targets": 4,
+    "n_needs": 1,
+    "approved": true
+   },
+   {
+    "rank_external": 4,
+    "compound": "AMANTADINE HYDROCHLORIDE",
+    "family": "FAM:CAT:CHEMBL1569",
+    "n_targets": 4,
+    "n_needs": 1,
+    "approved": true
+   },
+   {
+    "rank_external": 5,
+    "compound": "Acamprosate Calcium",
+    "family": "FAM:CAT:DGIDB:d4a136aae03c",
+    "n_targets": 4,
+    "n_needs": 1,
+    "approved": true
+   },
+   {
+    "rank_external": 6,
+    "compound": "Amantadine Hydrochloride",
+    "family": "FAM:CAT:DGIDB:50a16e084956",
+    "n_targets": 4,
+    "n_needs": 1,
+    "approved": true
+   },
+   {
+    "rank_external": 7,
+    "compound": "Aspartic Acid",
+    "family": "FAM:CAT:DGIDB:34eebcba2b28",
+    "n_targets": 4,
+    "n_needs": 1,
+    "approved": true
+   },
+   {
+    "rank_external": 8,
+    "compound": "ESKETAMINE",
+    "family": "FAM:CAT:CHEMBL1714",
+    "n_targets": 4,
+    "n_needs": 1,
+    "approved": true
+   },
+   {
+    "rank_external": 9,
+    "compound": "Esketamine",
+    "family": "FAM:CAT:DGIDB:9c85048f5868",
+    "n_targets": 4,
+    "n_needs": 1,
+    "approved": true
+   },
+   {
+    "rank_external": 10,
+    "compound": "FELBAMATE",
+    "family": "FAM:CAT:CHEMBL1094",
+    "n_targets": 4,
+    "n_needs": 1,
+    "approved": true
+   }
+  ]
+ },
+ "arm_wwox": {
+  "families_selected": 99,
+  "approved_among_them": 34,
+  "with_an_opposed_action_elsewhere": 0,
+  "needs_covered": [
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+   "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
+   "NEED-T-TYPE-CALCIUM"
+  ]
+ },
+ "overlap": {
+  "in_both": [
+   "FAM:CAT:CHEMBL1094",
+   "FAM:CAT:CHEMBL1100",
+   "FAM:CAT:CHEMBL1200395",
+   "FAM:CAT:CHEMBL1201293",
+   "FAM:CAT:CHEMBL1201461",
+   "FAM:CAT:CHEMBL1207366",
+   "FAM:CAT:CHEMBL146927",
+   "FAM:CAT:CHEMBL1534525",
+   "FAM:CAT:CHEMBL1569",
+   "FAM:CAT:CHEMBL1699",
+   "FAM:CAT:CHEMBL1714",
+   "FAM:CAT:CHEMBL17350",
+   "FAM:CAT:CHEMBL182066",
+   "FAM:CAT:CHEMBL2068839",
+   "FAM:CAT:CHEMBL2106165",
+   "FAM:CAT:CHEMBL2106798",
+   "FAM:CAT:CHEMBL2107771",
+   "FAM:CAT:CHEMBL3545349",
+   "FAM:CAT:CHEMBL3545351",
+   "FAM:CAT:CHEMBL3590674",
+   "FAM:CAT:CHEMBL3707355",
+   "FAM:CAT:CHEMBL3707400",
+   "FAM:CAT:CHEMBL3934636",
+   "FAM:CAT:CHEMBL41306",
+   "FAM:CAT:CHEMBL4217292",
+   "FAM:CAT:CHEMBL452461",
+   "FAM:CAT:CHEMBL467084",
+   "FAM:CAT:CHEMBL695",
+   "FAM:CAT:CHEMBL696",
+   "FAM:CAT:CHEMBL697",
+   "FAM:CAT:CHEMBL797",
+   "FAM:CAT:CHEMBL89598",
+   "FAM:CAT:DGIDB:0c06b5be21bb",
+   "FAM:CAT:DGIDB:10db9bda50a5",
+   "FAM:CAT:DGIDB:11dcd9a41857",
+   "FAM:CAT:DGIDB:12763ab6f922",
+   "FAM:CAT:DGIDB:16efa988f8ef",
+   "FAM:CAT:DGIDB:19749060be64",
+   "FAM:CAT:DGIDB:2062f50d5e38",
+   "FAM:CAT:DGIDB:20ebb8844252",
+   "FAM:CAT:DGIDB:21ee9b970f92",
+   "FAM:CAT:DGIDB:255ce6a4a3eb",
+   "FAM:CAT:DGIDB:26101f2e95f9",
+   "FAM:CAT:DGIDB:28d2dd57d9ab",
+   "FAM:CAT:DGIDB:2c655dcafeea",
+   "FAM:CAT:DGIDB:2c9c9be867db",
+   "FAM:CAT:DGIDB:357b0cb8489b",
+   "FAM:CAT:DGIDB:358b8a817686",
+   "FAM:CAT:DGIDB:375a5f9081f2",
+   "FAM:CAT:DGIDB:389fa6870ff8",
+   "FAM:CAT:DGIDB:3af0766b5a01",
+   "FAM:CAT:DGIDB:3c34d1b4b0fe",
+   "FAM:CAT:DGIDB:3e00b590c5a1",
+   "FAM:CAT:DGIDB:42d5d5465a4d",
+   "FAM:CAT:DGIDB:49ec8aa9cde9",
+   "FAM:CAT:DGIDB:4b8e1694eb56",
+   "FAM:CAT:DGIDB:4de972be2747",
+   "FAM:CAT:DGIDB:50a16e084956",
+   "FAM:CAT:DGIDB:50d46a0f452e",
+   "FAM:CAT:DGIDB:52d01b8327f7",
+   "FAM:CAT:DGIDB:5626675dc6fe",
+   "FAM:CAT:DGIDB:648084fa2168",
+   "FAM:CAT:DGIDB:651044756fbb",
+   "FAM:CAT:DGIDB:6998a1a2d947",
+   "FAM:CAT:DGIDB:6abc18fc4ac1",
+   "FAM:CAT:DGIDB:71c5708d2fca",
+   "FAM:CAT:DGIDB:79d9fde1e294",
+   "FAM:CAT:DGIDB:7a0554580c65",
+   "FAM:CAT:DGIDB:7eb00d275f22",
+   "FAM:CAT:DGIDB:8007dbf268ec",
+   "FAM:CAT:DGIDB:80196c332448",
+   "FAM:CAT:DGIDB:80f00139fe06",
+   "FAM:CAT:DGIDB:82d11eef5cb3",
+   "FAM:CAT:DGIDB:8a52a55f3a98",
+   "FAM:CAT:DGIDB:8e01cef4cadd",
+   "FAM:CAT:DGIDB:9c85048f5868",
+   "FAM:CAT:DGIDB:a5f65a8da11f",
+   "FAM:CAT:DGIDB:ad3e4f19b28e",
+   "FAM:CAT:DGIDB:afdd68468a16",
+   "FAM:CAT:DGIDB:b0ca5cf2303c",
+   "FAM:CAT:DGIDB:b811c040b8a4",
+   "FAM:CAT:DGIDB:b98350579779",
+   "FAM:CAT:DGIDB:bc4c80984e38",
+   "FAM:CAT:DGIDB:be7af74855ee",
+   "FAM:CAT:DGIDB:c074cb76e927",
+   "FAM:CAT:DGIDB:c3bb8a601e8c",
+   "FAM:CAT:DGIDB:ca0cbcf4f1e9",
+   "FAM:CAT:DGIDB:d34fc2e86617",
+   "FAM:CAT:DGIDB:d4a136aae03c",
+   "FAM:CAT:DGIDB:d87959cfb914",
+   "FAM:CAT:DGIDB:df7564f65e1c",
+   "FAM:CAT:DGIDB:e157e3677373",
+   "FAM:CAT:DGIDB:e1b85a54dc9c",
+   "FAM:CAT:DGIDB:eab00dc4a194",
+   "FAM:CAT:DGIDB:f3bc61dd89a5",
+   "FAM:CAT:DGIDB:f5aacf22df23",
+   "FAM:CAT:DGIDB:f79c13ae4dd1",
+   "FAM:CAT:DGIDB:f7b5eb49f754",
+   "FAM:CAT:DGIDB:f9ecb57f1990"
+  ],
+  "external_only": 523,
+  "wwox_only": [],
+  "external_top_n_surviving_qualification": [
+   "FAM:CAT:CHEMBL1094",
+   "FAM:CAT:CHEMBL1201293",
+   "FAM:CAT:CHEMBL1569",
+   "FAM:CAT:CHEMBL1714",
+   "FAM:CAT:DGIDB:50a16e084956",
+   "FAM:CAT:DGIDB:5626675dc6fe",
+   "FAM:CAT:DGIDB:9c85048f5868",
+   "FAM:CAT:DGIDB:d4a136aae03c"
+  ],
+  "external_top_n_not_qualified": [
+   "FAM:CAT:CHEMBL363295",
+   "FAM:CAT:DGIDB:34eebcba2b28"
+  ]
+ },
+ "direction_unresolved": {
+  "associations": 2048,
+  "families": 1584,
+  "needs": [
+   "NEED-GABA-CHLORIDE-GRADIENT",
+   "NEED-GSK3B-DEREPRESSION",
+   "NEED-INHIBITORY-HYPOFUNCTION",
+   "NEED-ISR-ATTENUATION",
+   "NEED-LACTATE-LDH",
+   "NEED-MTOR-AUTOPHAGY",
+   "NEED-NEUROINFLAMMATION-GLIA",
+   "NEED-PDH-PYRUVATE-AXIS",
+   "NEED-REDOX-NRF2",
+   "NEED-WNT-BETA-CATENIN"
+  ],
+  "statement": "a visible gap, not a rejection: the need's own direction is unresolved, so neither arm can qualify a lever on it and the ordering must not imply one"
+ },
+ "needs_without_an_adequate_tool": [
+  {
+   "need": "NEED-WWOX-GENE-ADDITION",
+   "need_direction": "restore",
+   "associations_in_universe": 3,
+   "why_no_tool": "associations exist but none carries a documented action coherent with the stated direction"
+  },
+  {
+   "need": "NEED-WWOX-SPLICE-CORRECTION",
+   "need_direction": "restore",
+   "associations_in_universe": 3,
+   "why_no_tool": "associations exist but none carries a documented action coherent with the stated direction"
+  },
+  {
+   "need": "NEED-WWOX-PTC-READTHROUGH",
+   "need_direction": "restore",
+   "associations_in_universe": 3,
+   "why_no_tool": "associations exist but none carries a documented action coherent with the stated direction"
+  },
+  {
+   "need": "NEED-WWOX-MISSENSE-PROTEIN-RESCUE",
+   "need_direction": "up",
+   "associations_in_universe": 3,
+   "why_no_tool": "associations exist but none carries a documented action coherent with the stated direction"
+  },
+  {
+   "need": "NEED-WWOX-ENDOGENOUS-BOOST",
+   "need_direction": "up",
+   "associations_in_universe": 3,
+   "why_no_tool": "associations exist but none carries a documented action coherent with the stated direction"
+  },
+  {
+   "need": "NEED-ISR-ATTENUATION",
+   "need_direction": "uncertain",
+   "associations_in_universe": 13,
+   "why_no_tool": "direction of the need is unresolved, so no association can be qualified as coherent"
+  },
+  {
+   "need": "NEED-PDH-PYRUVATE-AXIS",
+   "need_direction": "uncertain",
+   "associations_in_universe": 21,
+   "why_no_tool": "direction of the need is unresolved, so no association can be qualified as coherent"
+  },
+  {
+   "need": "NEED-LACTATE-LDH",
+   "need_direction": "uncertain",
+   "associations_in_universe": 12,
+   "why_no_tool": "direction of the need is unresolved, so no association can be qualified as coherent"
+  },
+  {
+   "need": "NEED-MITOCHONDRIAL-RESPIRATION",
+   "need_direction": "uncertain",
+   "associations_in_universe": 0,
+   "why_no_tool": "no catalogue association at all on this need's targets"
+  },
+  {
+   "need": "NEED-INHIBITORY-HYPOFUNCTION",
+   "need_direction": "uncertain",
+   "associations_in_universe": 23,
+   "why_no_tool": "direction of the need is unresolved, so no association can be qualified as coherent"
+  },
+  {
+   "need": "NEED-GABA-CHLORIDE-GRADIENT",
+   "need_direction": "uncertain",
+   "associations_in_universe": 5,
+   "why_no_tool": "direction of the need is unresolved, so no association can be qualified as coherent"
+  },
+  {
+   "need": "NEED-MYELINATION",
+   "need_direction": "restore",
+   "associations_in_universe": 318,
+   "why_no_tool": "associations exist but none carries a documented action coherent with the stated direction"
+  },
+  {
+   "need": "NEED-GSK3B-DEREPRESSION",
+   "need_direction": "uncertain",
+   "associations_in_universe": 93,
+   "why_no_tool": "direction of the need is unresolved, so no association can be qualified as coherent"
+  },
+  {
+   "need": "NEED-WNT-BETA-CATENIN",
+   "need_direction": "uncertain",
+   "associations_in_universe": 22,
+   "why_no_tool": "direction of the need is unresolved, so no association can be qualified as coherent"
+  },
+  {
+   "need": "NEED-MYC-PROGENITOR-PROLIFERATION",
+   "need_direction": "uncertain",
+   "associations_in_universe": 0,
+   "why_no_tool": "no catalogue association at all on this need's targets"
+  },
+  {
+   "need": "NEED-MTOR-AUTOPHAGY",
+   "need_direction": "uncertain",
+   "associations_in_universe": 275,
+   "why_no_tool": "direction of the need is unresolved, so no association can be qualified as coherent"
+  },
+  {
+   "need": "NEED-NEUROINFLAMMATION-GLIA",
+   "need_direction": "uncertain",
+   "associations_in_universe": 702,
+   "why_no_tool": "direction of the need is unresolved, so no association can be qualified as coherent"
+  },
+  {
+   "need": "NEED-REDOX-OXIDATIVE-STRESS",
+   "need_direction": "uncertain",
+   "associations_in_universe": 0,
+   "why_no_tool": "no catalogue association at all on this need's targets"
+  },
+  {
+   "need": "NEED-SYSTEMIC-GLYCAEMIA-GROWTH",
+   "need_direction": "restore",
+   "associations_in_universe": 0,
+   "why_no_tool": "no catalogue association at all on this need's targets"
+  },
+  {
+   "need": "NEED-REDOX-NRF2",
+   "need_direction": "uncertain",
+   "associations_in_universe": 882,
+   "why_no_tool": "direction of the need is unresolved, so no association can be qualified as coherent"
+  }
+ ]
+}

@@ -1716,6 +1716,134 @@ def _base_triggers() -> list[dict]:
     ]
 
 
+# ------------------------------------------------------------------------------------------------------------- investigations (IT20 P5)
+# "Principali indagini da portare avanti": an order of RESEARCH INVESTMENT - the value of the next discriminating test given
+# its cost and what its result would change - and NOT a ranking of efficacy. Depth of evidence is carried as a separate
+# displayed field (`evidence_depth`) and is never a requirement that keeps a new hypothesis out of the list.
+INVESTIGATIONS_SRC = HERE / "investigations_it20.tsv"
+INVESTIGATIONS_STATEMENT = ("Ordine delle indagini da finanziare, non classifica di efficacia: ogni riga ordina il valore del prossimo "
+                            "esperimento discriminante (che cosa cambierebbe il risultato, a quale costo), non la probabilita di beneficio. "
+                            "An unresolved or opposed direction is named in the row's decisive uncertainty and the order does not imply a "
+                            "direction the evidence does not support. Nothing here is medical advice.")
+ORIGIN_CLASSES = {
+    "known_in_wwox": "already named in the WWOX literature or in a LEGEND card",
+    "generated_by_legend": "reached from a qualified need through the module's own target and catalogue path, not named in the WWOX material checked",
+    "external_transferred": "carried in from another condition or literature by a stated mechanistic analogy",
+}
+DIRECTION_STATES = {
+    "resolved": "the need states an up/down intervention direction",
+    "unresolved": "the need's own direction is uncertain: no lever on it can be qualified either way, which is a visible gap and not a negative finding",
+    "opposed_risk": "a documented action of this intervention pushes against another need of the same objective",
+}
+INV_COLS = ["rank", "tie_group", "inv_id", "intervention", "question", "why_now", "evidence_available", "evidence_depth", "decisive_uncertainty",
+            "next_test", "feasibility", "origin_class", "novelty_perimeter", "direction_state", "need_id", "unit_id", "movement_reason"]
+# A novelty perimeter records what was actually queried. These phrasings claim more than a query can support.
+FORBIDDEN_NOVELTY = ("never studied", "never tested", "mai studiato", "first ever", "the first", "no one has", "unique in", "untested anywhere")
+# No dose, route, schedule or preparation is carried anywhere in this table.
+FORBIDDEN_POSOLOGY = (" mg", "mg/kg", "mcg", "microgram", "milligram", " iu ", "twice daily", "once daily", "per day", "bid ", "tid ",
+                      "intravenous", "oral dose", "dosage", "posology", "titrat")
+
+
+def _inv_guard(row: dict, field: str, needles: tuple, what: str) -> None:
+    t = (row.get(field) or "").lower()
+    for n in needles:
+        if n in t:
+            raise SystemExit(f"investigations_it20.tsv: {row.get('inv_id')} {field}: {what} ({n.strip()!r})")
+
+
+def investigations(ctx: dict, uni: dict, as_of: str, prev: dict | None = None) -> list[dict]:
+    """Read the curated investigations table, validate it against the units and the needs, and derive the displayed fields.
+
+    Every judgement is curated and reviewable in the TSV; this function adds no ordering of its own. What it DOES enforce:
+    the referenced unit and need exist, the vocabularies are closed, the ranks are contiguous from 1 (ties allowed), the
+    declared direction state matches the need file, a novelty perimeter never claims absence, and no row carries posology.
+    """
+    if not INVESTIGATIONS_SRC.exists():
+        return []
+    src = read_tsv(INVESTIGATIONS_SRC)
+    units_by_id = {u["unit_id"]: u for u in uni["units"]}
+    seen = set()
+    for r in src:
+        if r["inv_id"] in seen:
+            raise SystemExit(f"investigations_it20.tsv: duplicate inv_id {r['inv_id']}")
+        seen.add(r["inv_id"])
+        if r["origin_class"] not in ORIGIN_CLASSES:
+            raise SystemExit(f"investigations_it20.tsv: {r['inv_id']} unknown origin_class {r['origin_class']!r}")
+        if r["direction_state"] not in DIRECTION_STATES:
+            raise SystemExit(f"investigations_it20.tsv: {r['inv_id']} unknown direction_state {r['direction_state']!r}")
+        if r["need_id"] not in ctx["needs"]:
+            raise SystemExit(f"investigations_it20.tsv: {r['inv_id']} unknown need {r['need_id']}")
+        if r["unit_id"] and r["unit_id"] not in units_by_id:
+            raise SystemExit(f"investigations_it20.tsv: {r['inv_id']} unknown unit {r['unit_id']}")
+        for f in ("question", "why_now", "evidence_available", "decisive_uncertainty", "next_test", "novelty_perimeter"):
+            if not (r.get(f) or "").strip():
+                raise SystemExit(f"investigations_it20.tsv: {r['inv_id']} empty required field {f}")
+        _inv_guard(r, "novelty_perimeter", FORBIDDEN_NOVELTY, "a novelty perimeter states what was queried, never that something was never studied")
+        for f in INV_COLS:
+            if f in r:
+                _inv_guard(r, f, FORBIDDEN_POSOLOGY, "no dose, route, schedule or preparation may be carried in this table")
+        # the declared direction state must match the need file: an uncertain need may not be presented as resolved
+        nd_dir = ctx["needs"][r["need_id"]]["dir"]
+        if nd_dir in ("uncertain", "modulate") and r["direction_state"] == "resolved":
+            raise SystemExit(f"investigations_it20.tsv: {r['inv_id']} declares direction_state=resolved on need {r['need_id']} whose direction is {nd_dir!r}")
+    ranks = sorted({int(r["rank"]) for r in src})
+    if ranks != list(range(1, len(ranks) + 1)):
+        raise SystemExit(f"investigations_it20.tsv: ranks must be contiguous from 1 (ties allowed), got {ranks}")
+    tie_size = Counter(int(r["rank"]) for r in src)
+    out = []
+    for r in sorted(src, key=lambda x: (int(x["rank"]), x["inv_id"])):
+        u = units_by_id.get(r["unit_id"]) if r["unit_id"] else None
+        rank = int(r["rank"])
+        depth = f"{u['evaluation_depth']} - {clip(u['evaluation_depth_text'], 160)}" if u else \
+            "no ranked unit: the investigation is a premise measurement, so no evaluation depth applies (this is not a depth of zero)"
+        row = {
+            "rank": rank,
+            "tie_group": f"{rank} (tie of {tie_size[rank]})" if tie_size[rank] > 1 else str(rank),
+            "inv_id": r["inv_id"], "intervention": r["intervention"], "question": r["question"], "why_now": r["why_now"],
+            "evidence_available": r["evidence_available"], "evidence_depth": depth, "decisive_uncertainty": r["decisive_uncertainty"],
+            "next_test": r["next_test"], "feasibility": r["feasibility"], "origin_class": r["origin_class"],
+            "origin_class_label": ORIGIN_CLASSES[r["origin_class"]], "novelty_perimeter": r["novelty_perimeter"],
+            "direction_state": r["direction_state"], "direction_state_label": DIRECTION_STATES[r["direction_state"]],
+            "need_id": r["need_id"], "need_short": ctx["needs"][r["need_id"]]["short"], "need_direction": ctx["needs"][r["need_id"]]["dir"],
+            "objective": "broad" if ctx["needs"][r["need_id"]]["goal"] == "deep_recovery" else "partial",
+            "unit_id": r["unit_id"], "unit_class": u["class"] if u else "", "unit_group_broad": (u["views"]["broad"].get("group", "") if u else ""),
+            "unit_group_partial": (u["views"]["partial"].get("group", "") if u else ""),
+            "tracks": (u["tracks"] if u else []),
+        }
+        row["movement_reason"] = investigation_movement(row, prev)
+        out.append(row)
+    return out
+
+
+def investigation_movement(row: dict, prev: dict | None) -> str:
+    """Why the position changed since the last snapshot. First evaluation says so; an unchanged position says so."""
+    if prev is None or not prev.get("investigations"):
+        return "first evaluation of this investigation: no previous position to compare"
+    o = prev["investigations"].get(row["inv_id"])
+    if o is None:
+        return "new entry since the previous evaluation"
+    if o.get("rank") == row["rank"]:
+        return "position unchanged since the previous evaluation"
+    direction = "up" if row["rank"] < o["rank"] else "down"
+    return f"moved {direction} from rank {o['rank']} to {row['rank']} since the previous evaluation; the reason class is declared with `snapshot --reason`"
+
+
+def investigations_summary(rows: list[dict]) -> dict:
+    return {
+        "plain_statement": INVESTIGATIONS_STATEMENT,
+        "unit_of_a_row": "a question on compound-action-context-benefit with one concrete next step; the same compound may appear "
+                         "in more than one row for different objectives or contexts",
+        "what_is_not_rewarded": ["novelty for its own sake", "publication count", "number of linked pathways or needs",
+                                 "ease of purchase or access category", "depth of existing evidence (carried separately as evidence_depth)"],
+        "count": len(rows),
+        "by_origin_class": dict(sorted(Counter(r["origin_class"] for r in rows).items())),
+        "by_direction_state": dict(sorted(Counter(r["direction_state"] for r in rows).items())),
+        "tie_groups": dict(sorted(Counter(r["rank"] for r in rows).items())),
+        "origin_classes": ORIGIN_CLASSES, "direction_states": DIRECTION_STATES,
+        "order_digest": sha16([(r["inv_id"], r["rank"]) for r in rows]),
+    }
+
+
 def build_all() -> dict[str, bytes]:
     ctx = load_all()
     cat = load_catalog()
@@ -1790,6 +1918,14 @@ def build_all() -> dict[str, bytes]:
     files["deepening_queue.tsv"] = tsv_bytes(qrows, ["display_group", "names", "family_ids", "needs", "wwox_observations_on_best_need", "direction_basis", "status_class", "access_categories", "mnet_usable", "msig_neural", "units", "shares_need_with_units", "reconciliation", "assessed_in", "mentioned_in", "why"])
     ing = {"summary": summary, "units": uni["units"], "selection_table": srows, "deepening_queue_head": queue[:40], "uncarded": unc, "it9_records": uni["it9_records"], "it10_records": uni["it10_records"], "it11_records": uni["it11_records"],
            "matching_pilot": matching_pilot(uni["units"], None, unc), "deepened_cases": deepened_cases(), "matching_direction": matching_direction(assoc, cat=cat)}
+    # investigations (IT20 P5): the dashboard's opening order of research investment. Built from the curated table,
+    # compared against the latest snapshot for movement_reason. The ranking of units above is untouched by it.
+    _, _prev_snap = latest_snapshot()
+    invs = investigations(ctx, uni, as_of, _prev_snap)
+    if invs:
+        files["investigations.tsv"] = tsv_bytes(invs, INV_COLS)
+        ing["investigations"] = {"summary": investigations_summary(invs), "rows": invs}
+        summary["investigations"] = investigations_summary(invs)
     files["ranking.json"] = json_bytes(ing)
     # per-unit input digests (for the snapshot / diff mechanism)
     drows = [{"unit_id": u["unit_id"], **u["inputs"]} for u in uni["units"]]
@@ -1814,7 +1950,12 @@ def current_state(files: dict[str, bytes]) -> dict:
     st = {}
     for u in j["units"]:
         st[u["unit_id"]] = {"label": u["label"], "class": u["class"], "broad": u["views"]["broad"].get("group", "-"), "partial": u["views"]["partial"].get("group", "-"), "inputs": u["inputs"]}
-    return {"rules_version": j["summary"]["rules_version"], "as_of": j["summary"]["as_of"], "units": st}
+    out = {"rules_version": j["summary"]["rules_version"], "as_of": j["summary"]["as_of"], "units": st}
+    # investigation positions travel in the snapshot so that movement_reason can be derived on the next run
+    if j.get("investigations"):
+        out["investigations"] = {r["inv_id"]: {"rank": r["rank"], "intervention": r["intervention"], "origin_class": r["origin_class"]}
+                                 for r in j["investigations"]["rows"]}
+    return out
 
 
 def latest_snapshot() -> tuple[Path | None, dict | None]:

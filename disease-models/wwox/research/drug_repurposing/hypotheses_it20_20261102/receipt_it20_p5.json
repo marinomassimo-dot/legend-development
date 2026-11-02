@@ -1,0 +1,84 @@
+{
+ "_schema": "package receipt, IT20 P5 (handed back; NOT appended to the receipt ledger)",
+ "task": "ORCH-ROADMAP-IT20-20261102",
+ "package": "P5 + addendum",
+ "actor": "scientist",
+ "branch": "it20-hyp",
+ "as_of": "2026-11-02",
+ "baseline_main": "4f8ff596",
+ "not_medical_advice": true,
+ "plain_statement": "Ordine delle indagini da finanziare, non classifica di efficacia: ogni riga ordina il valore del prossimo esperimento discriminante (che cosa cambierebbe il risultato, a quale costo), non la probabilita di beneficio. An unresolved or opposed direction is named in the row's decisive uncertainty and the order does not imply a direction the evidence does not support. Nothing here is medical advice.",
+ "spend": {
+  "external_spend": "none",
+  "network_calls": "none (offline, catalogue as committed)",
+  "email_sent": "none",
+  "registration": "none"
+ },
+ "reference_experiment": {
+  "question": "IT20 diagnosis question 3: does the WWOX-qualified search change a decision against an external-only search at equal usable universe?",
+  "universe": {
+   "associations": 3331,
+   "families": 2002,
+   "needs": 19,
+   "by_consistency": {
+    "consistent": 291,
+    "direction_unresolved": 2995,
+    "opposed": 45
+   },
+   "definition": "every (family, target, need) association the shipped search layer returns for the 23 needs, minus the rows it excludes from counts; identical for both arms"
+  },
+  "arm_external_families": 622,
+  "arm_wwox_families": 99,
+  "arm_wwox_needs_covered": [
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+   "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
+   "NEED-T-TYPE-CALCIUM"
+  ],
+  "wwox_only_families": 0,
+  "external_only_families": 523,
+  "external_top10_surviving": 8,
+  "needs_without_an_adequate_tool": 20,
+  "finding": "the qualified arm is a strict subset of the external arm and reaches 3 of 23 needs: the qualification filters, it does not generate"
+ },
+ "generation": {
+  "direction_coherent_families": 99,
+  "already_named_in_wwox_material": 69,
+  "not_named": 30,
+  "sustainable_new_therapeutic_relations": 0,
+  "advance_kept": "one isoform-discriminating probe pair on the T-type axis (INV-03), recorded as a probe and not as a therapy",
+  "limit_named": "20 of 23 needs cannot qualify a lever (unresolved direction 10, restore-type vocabulary mismatch 6, no catalogue association 4)"
+ },
+ "investigations": {
+  "rows": 11,
+  "rank_positions": 6,
+  "by_origin_class": {
+   "generated_by_legend": 4,
+   "known_in_wwox": 7
+  },
+  "by_direction_state": {
+   "opposed_risk": 1,
+   "resolved": 5,
+   "unresolved": 5
+  },
+  "order_digest": "7e42ebdea7d58824"
+ },
+ "invariants_held": {
+  "unit_ranking_unchanged": "ranking.json units byte-identical to 4f8ff596; summary.order_digest unchanged",
+  "existing_suite": "71/71 test_ranking_it8.py pass",
+  "new_suites": "30/30 test_investigations.py, 15/15 test_compare_universe.py",
+  "superseded_assumption": "test_group_order_places_unorderable_last_without_a_verdict kept, with a dated 2026-11-02 comment separating the group guarantee from the investment order"
+ },
+ "artefacts": {
+  "README.md": "d89d35b62fbfb3e9",
+  "compare_universe.py": "3fd95c433dd134a8",
+  "comparison_arms.tsv": "95fe5e98cd45cbd7",
+  "comparison_summary.json": "e103074088cea206",
+  "test_compare_universe.py": "65843de585a47a33",
+  "verify_order_change.tsv": "2eb8ab0913974fa5",
+  "../ranking_it8_p9_20261029/investigations_it20.tsv": "982d8eef5c6dee44",
+  "../ranking_it8_p9_20261029/investigations.tsv": "097d1f9fa70844a6",
+  "../ranking_it8_p9_20261029/test_investigations.py": "36801bd4ffe5e704",
+  "../ranking_it8_p9_20261029/ranking_it8.py": "3d9b70f6ff98a1a7"
+ },
+ "rebase_note": "built against main; it20-engine (repurposing_search.py / repurposing_coverage.py provenance work) not landed. Regenerate compare_universe.py run and ranking_it8.py run after it lands: the three measured counts depend on the association universe."
+}

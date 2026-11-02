@@ -101,6 +101,12 @@ class SyntheticRule(unittest.TestCase):
         self.assertFalse(va2["member"])
 
     def test_group_order_places_unorderable_last_without_a_verdict(self):
+        # 2026-11-02 (IT20 P5): these assertions still hold and are kept - they are a guarantee about the GROUP rule, which
+        # describes depth of evaluation. The OLD-METHOD ASSUMPTION they used to carry beside them - that "last in the group
+        # order" is also last in what the module asks the reader to fund next - is superseded: the investigations order
+        # (ranking.json -> investigations) ranks the value of the next discriminating test, so a GU unit whose missing premise
+        # is cheap and decisive can sit at the top of that list while staying GU here. The two orders answer different
+        # questions and neither is derived from the other.
         self.assertEqual(rk.GROUP_ORDER[-1], "GU")
         self.assertNotIn("GU", rk.IN_SELECTION)
         self.assertNotIn("G4b", rk.IN_SELECTION)
