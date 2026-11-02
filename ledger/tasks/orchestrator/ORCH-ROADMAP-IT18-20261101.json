@@ -7,7 +7,12 @@
  "OBJECTIVE": "Iteration 18: from catalogue to capability - contextual matching compared with target-only search, radar driven by real reopen conditions, one capability trial, consumers regenerated, applied continuity. Computational capability is not biological benefit.",
  "START_UTC": "2026-11-01T20:50:00Z",
  "BASELINE": "development/main = local main = 82e795d4f8e7 (fetched 2026-11-01 20:50 UTC); CI of 82e795d4 and 10a3d746 success; one worktree; IT17 COMPLETE.",
- "DECISIONS_TAKEN": [],
+ "DECISIONS_TAKEN": [
+  "Dashboard publication and updates authorised by the operator while free (initial and steady state); workflow from the verified patch is on main; Pages could not be enabled from this environment (no gh, credential access denied by the classifier): residual = Settings Pages source GitHub Actions + Run workflow.",
+  "P4 main comparison: no advantage of the contextual path over target-only measured and none excluded (reference covers 2 of 33 EVAL directed rows); WWOX contribution to accuracy on directed needs is zero; 128 uncertain-need rows are an information effect.",
+  "PROTON discarded for the current question; BioPathNet WATCH; DrugCentral adopted for direction checking only; OREVID adopt-limited (controls as code); ToolUniverse discarded for direction.",
+  "Process errors of the orchestrator: root checkout edited before moving to a worktree (parked stash it18-p1-moved-to-worktree); MANDATE_STATE vocabulary and four test conventions (exec bit/help, TSV width, card copy) caught by the first battery; ranking.json stale after new receipts caught by the second battery."
+ ],
  "DEFAULTS_TAKEN": [],
  "STOP_LOG": [],
  "AUTHORISED_QUEUE_20261101E": {
@@ -72,7 +77,7 @@
      "step": "P5 outcomes into cards/needs/queue/view by regeneration",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "ranking text fix and regeneration; freshness FRESH"
+     "evidence": "ranking text, vigabatrin/A51 PMIDs, regenerated ranking, coverage, view and shareable package; freshness FRESH"
     }
    ]
   },
@@ -81,8 +86,9 @@
    "steps": [
     {
      "step": "P6 applied continuity: fresh actor package, verifier, follow-up on a module gap; hourly monitor on real state; radar 05:20 UTC observation",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "fresh actors executed P4, P2, P3, P-PROTON, BioPathNet, evaluation; independent verifiers per package; the P4 actor chose and ran its own follow-up (run 3) without a new prompt; first scheduled radar run after landing observed 2026-11-02 05:20 UTC (68 questions, 37 reopen, 3 asked, one ChEMBL 500); hourly monitor classified IT18 UNKNOWN (no MANDATE_BOUND line yet) and took no action - bound by an explicit line on 2026-11-02 07:32 UTC"
     }
    ]
   },
