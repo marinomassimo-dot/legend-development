@@ -858,5 +858,96 @@ class CacheValidatesOnRead(unittest.TestCase):
             self.assertEqual(0, out2["transport"]["cache_discarded"])
 
 
+class DamagedJsonBodyIsAnError(unittest.TestCase):
+    """IT19 P8: get_json decoded HTTP 200 bodies with errors="replace", so a non-UTF-8 JSON body parsed into values carrying
+    U+FFFD and was cached as valid. The DrugCentral rule (IT19 P2) now holds at the shared door: a damaged body is a queryable
+    error with a diagnostic (URL, byte count, exception), never data that looks valid. Driven through the real get_json."""
+    URL = "http://x/target.json?q=a"
+    BAD = b'{"targets": [{"pref_name": "Example r\xe9ceptor"}], "page_meta": {}}'
+    GOOD = '{"targets": [{"pref_name": "Récepteur α-2 (Müller)"}], "page_meta": {}}'.encode("utf-8")
+
+    class _Response:
+        def __init__(self, body, status=200):
+            self.body, self.status = body, status
+        def read(self):
+            return self.body
+        def __enter__(self):
+            return self
+        def __exit__(self, *exc):
+            return False
+
+    def _serve(self, body, calls=None):
+        from unittest import mock
+        def urlopen(request, timeout=20):
+            if calls is not None:
+                calls.append(request.full_url)
+            return self._Response(body)
+        return mock.patch("urllib.request.urlopen", urlopen)
+
+    def test_invalid_utf8_200_is_a_diagnostic_text_never_replacement_decoded_data_and_never_cached(self):
+        h = load_http()
+        with self._serve(self.BAD):
+            status, payload = h.get_json(self.URL)
+        self.assertEqual(200, status)
+        self.assertIsInstance(payload, str, "the bad-body shape is text, which every adapter reports as QUERY_ERROR")
+        for needle in ("not UTF-8", self.URL, f"({len(self.BAD)} bytes)", "0xe9"):
+            self.assertIn(needle, payload)
+        self.assertNotIn("�", payload)
+        self.assertEqual("empty or not structured", h.payload_problem(payload, "targets"))
+        calls = []
+        with tempfile.TemporaryDirectory() as d, self._serve(self.BAD, calls):
+            f = h.make_fetch(cache_dir=d, retries=2, pause=0, sleep=lambda s: None)
+            for _ in range(2):
+                st, p = f(self.URL, expect="targets")
+                self.assertEqual(200, st); self.assertNotIn("�", p)
+            self.assertEqual([], os.listdir(d), "a damaged body is never stored as valid")
+            self.assertEqual(2, len(calls), "fetched again each time, and a damaged 200 is not retried (the retry stays bounded to 5xx/transport)")
+            self.assertEqual(0, f.stats["cache_hits"])
+
+    def test_body_that_is_utf8_but_not_json_keeps_its_text_shape_and_is_not_cached(self):
+        h = load_http()
+        with tempfile.TemporaryDirectory() as d, self._serve(b"<html>maintenance</html>"):
+            f = h.make_fetch(cache_dir=d, retries=0)
+            self.assertEqual((200, "<html>maintenance</html>"), f(self.URL, expect="targets"))
+            self.assertEqual([], os.listdir(d))
+
+    def test_valid_non_ascii_body_is_unchanged_and_cached_positive_control(self):
+        h = load_http()
+        expected = json.loads(self.GOOD.decode("utf-8"))
+        calls = []
+        with tempfile.TemporaryDirectory() as d, self._serve(self.GOOD, calls):
+            self.assertEqual((200, expected), h.get_json(self.URL))
+            f = h.make_fetch(cache_dir=d, retries=0)
+            self.assertEqual((200, expected), f(self.URL, expect="targets"))
+            self.assertEqual((200, expected), f(self.URL, expect="targets"))
+            self.assertEqual(1, f.stats["cache_hits"]); self.assertEqual(1, len(os.listdir(d)))
+        self.assertEqual("Récepteur α-2 (Müller)", expected["targets"][0]["pref_name"])
+
+    def test_cached_entry_with_invalid_utf8_bytes_is_discarded_kept_aside_and_refetched(self):
+        h = load_http()
+        with tempfile.TemporaryDirectory() as d, self._serve(self.GOOD):
+            path = os.path.join(d, h.hashlib.sha256(json.dumps([self.URL, None, None], sort_keys=True, default=str).encode()).hexdigest() + ".json")
+            with open(path, "wb") as fh:
+                fh.write(b'{"url": "' + self.URL.encode() + b'", "http": 200, "retrieved_at": "t", "payload": ' + self.BAD + b"}")
+            f = h.make_fetch(cache_dir=d, retries=0)
+            status, payload = f(self.URL, expect="targets")
+            self.assertEqual((200, json.loads(self.GOOD.decode("utf-8"))), (status, payload))
+            self.assertEqual(1, f.stats["cache_discarded"]); self.assertEqual("damaged JSON", f.discarded[0]["reason"])
+            self.assertTrue(os.path.exists(path + ".discarded"))
+
+    def test_the_error_state_reaches_the_consumer_through_every_json_adapter(self):
+        h = load_http()
+        requests = {"chembl": {"drug": "bortezomib"}, "openfda": {"drug": "example"}, "ilincs": {"where": {"libraryid": "LIB_5"}},
+                    "orphadata": {"name": "WWOX"}, "pubtator3": {"gene": "WWOX"}, "opentargets": {"ensembl_id": "ENSG00000186153"}}
+        for name, request in requests.items():
+            with self.subTest(adapter=name), self._serve(self.BAD):
+                out = ra.load(name, ADAPTERS).query(request, fetch=h.get_json)
+                self.assertEqual("QUERY_ERROR", out["status"])
+                self.assertEqual([], out["hits"])
+                self.assertIn("not UTF-8", out["error"])
+                self.assertNotIn("�", json.dumps(out, ensure_ascii=False))
+                self.assertEqual([], ra.check_output(out))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

@@ -5,6 +5,9 @@ policy to configure. Not an adapter (the leading underscore keeps it out of disc
 and never raises on an HTTP error: a 404 is an answer (NO_MATCH on most services), a 5xx is a
 QUERY_ERROR, and the adapter decides which. A transport failure (DNS, timeout) returns
 `(0, "<exception text>")` so the adapter can report it as QUERY_ERROR with the text kept.
+A success body that is not valid UTF-8 returns `(status, "<diagnostic: URL, byte count, exception>")`,
+the same text shape as a body that is not JSON: never a value decoded with U+FFFD replacements,
+so `payload_problem` refuses it (not cached) and every adapter reports QUERY_ERROR.
 """
 from __future__ import annotations
 
@@ -40,7 +43,11 @@ def get_json(url: str, params: dict | None = None, body: dict | None = None,
     try:
         with urllib.request.urlopen(request, timeout=timeout) as response:
             status = response.status
-            text = response.read().decode("utf-8", errors="replace")
+            raw = response.read()
+        try:
+            text = raw.decode("utf-8")
+        except UnicodeDecodeError as exc:  # a damaged body is a queryable error, never data with U+FFFD inside (IT19 P8)
+            return status, f"HTTP {status} from {url}: body is not UTF-8 ({len(raw)} bytes): {exc}"
     except urllib.error.HTTPError as exc:
         status = exc.code
         text = exc.read().decode("utf-8", errors="replace") if exc.fp else ""
