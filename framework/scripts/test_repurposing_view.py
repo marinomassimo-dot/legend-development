@@ -2278,5 +2278,66 @@ class DeepenedCasesShareable(unittest.TestCase):
         self.assertEqual(rep.violations, [], rep.violations[:5])
 
 
+class MatchingDirectionView(unittest.TestCase):
+    """IT19 P6: matching direction, abstention and limits in both editions. The full edition names compound, action, record and locator; the
+    shareable edition carries class labels, codes and counts only, and the audit stays the judge."""
+
+    NAMES = ("terodiline", "suloctidil", "phloroglucinol", "bepridil", "gabapentin", "trimethadione", "delucemine", "orphenadrine", "ralfinamide",
+             "apimostinel", "rapastinel", "neboglamine", "dasolampanel", "talampanel", "dextromethorphan")
+
+    @classmethod
+    def setUpClass(cls):
+        cls.full = rv.build(DR, "full")
+        cls.share = rv.build(DR, "shareable")
+        cls.md_full = embedded(cls.full)["cur"]["ranking"]["matching_direction"]
+        cls.md_share = embedded(cls.share)["cur"]["ranking"]["matching_direction"]
+
+    def test_both_editions_label_the_capability_experimental_with_its_limits(self):
+        for page in (self.full, self.share):
+            b = page[page.index('id="matching-direction"'):]
+            self.assertIn("SPERIMENTALE", b[:3000])
+            self.assertIn("32 coppie selezionate su 25 composti", b)
+            self.assertIn("Sconosciuto non significa negativo", b)
+            self.assertIn("non è beneficio", b)
+
+    def test_abstention_is_explained_with_counts_in_both_editions(self):
+        for page in (self.full, self.share):
+            self.assertIn("record di gruppo: 3 di 26 componenti sono bersagli del modulo", page)
+            self.assertIn('id="md-P02"', page)
+
+    def test_shareable_projection_has_no_compound_action_record_or_locator(self):
+        for p in self.md_share["pairs"]:
+            for k in ("compound", "parent_chembl_id", "actions", "targets", "reference_locator", "measure_type", "missing_datum", "abstention_reasons", "stratum"):
+                self.assertNotIn(k, p)
+            for r in p["records"]:
+                self.assertNotIn("chembl_target_id", r)
+        blob = json.dumps(self.md_share).lower()
+        for n in self.NAMES:
+            self.assertNotIn(n, blob, n)
+            self.assertIn(n, json.dumps(self.md_full).lower(), n)
+
+    def test_both_searches_are_present(self):
+        for page in (self.full, self.share):
+            self.assertIn("Dal bisogno agli interventi", page)
+            self.assertIn(rv.E(rv.UI_IT["md_cmp_h"]), page)
+        self.assertIn(rv.E(rv.UI_IT["md_cmp_withheld"]), self.share)
+        self.assertNotIn(rv.E(rv.UI_IT["md_cmp_withheld"]), self.full)
+
+    def test_full_card_actions_carry_level_and_abstention_and_shareable_ones_do_not(self):
+        acts_f = [a for c in embedded(self.full)["cur"]["cands"] for a in c["actions"]]
+        acts_s = [a for c in embedded(self.share)["cur"]["cands"] for a in c["actions"]]
+        self.assertTrue(acts_f and all("lvl" in a and "abst" in a for a in acts_f))
+        self.assertTrue(all("lvl" not in a and "abst" not in a for a in acts_s))
+
+    def test_audit_fails_when_a_compound_name_is_injected_into_the_projection(self):
+        import repurposing_shareable_audit as au
+        P = embedded(self.share)
+        P["cur"]["ranking"]["matching_direction"]["pairs"][1]["next_check"] = "terodiline"
+        data = json.dumps(P, ensure_ascii=False, sort_keys=True, separators=(",", ":")).replace("</", "<\\/").replace("<!--", "<\\!--")
+        text = re.sub(r'(<script id="data" type="application/json">).*?(</script>)', lambda m: m.group(1) + data + m.group(2), self.share, count=1, flags=re.S)
+        rep, _ = au.audit_html(text, DR, None)
+        self.assertIn("forbidden-name", {v["kind"] for v in rep.violations})
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=1)

@@ -2040,9 +2040,13 @@ def build_curated(dr: Path, ctx: dict) -> dict:
                     continue
                 if shareable and not tag_allowed(assoc_tag(a), allow):
                     continue
-                key = (a["need"], a.get("target") or a.get("gene"), a.get("action_on_target"), a.get("consistency"))
+                # IT19 P6: the full edition also carries the level of the target the source row is about and the class of an abstention;
+                # the shareable edition keeps its class-A row fields only (audit path rule for cands[].actions[])
+                lvl = (a.get("target_level") or "") + (f' {a.get("components_in_module_targets")}/{a["record_components"]}' if a.get("record_components") else "")
+                key = (a["need"], a.get("target") or a.get("gene"), a.get("action_on_target"), a.get("consistency")) + (() if shareable else (lvl, a.get("abstention_class") or ""))
                 actions[key] = actions.get(key, 0) + 1
-        act = [{"need": k[0], "target": k[1], "action": k[2], "cons": k[3], "n": v} for k, v in sorted(actions.items(), key=lambda kv: (kv[0][0], str(kv[0][1]), str(kv[0][2])))][:40]
+        act = [{"need": k[0], "target": k[1], "action": k[2], "cons": k[3], "n": v} | ({} if shareable else {"lvl": k[4], "abst": k[5]})
+               for k, v in sorted(actions.items(), key=lambda kv: tuple(str(x) for x in kv[0]))][:40]
         blob = json.dumps(card, ensure_ascii=False)
         pm = {}
         for m in PMID_RE.findall(blob):
@@ -3661,6 +3665,8 @@ def build_ranking(dr: Path, cur: dict, source: str):
         # (allowlist key deepened_cases_shareable) and never external_precedent, pharmacology, its limits or the source paths.
         "deepened_cases": J.get("deepened_cases", []) if full else shareable_deepened_cases(J.get("deepened_cases", []), load_allowlist(dr)),
         "deepened_cases_n": len(J.get("deepened_cases", [])),
+        # IT19 P6: full edition every field; shareable edition class labels, codes and counts only (no compound, ChEMBL action, record id, locator or note)
+        "matching_direction": J.get("matching_direction", {}) if full else shareable_matching_direction(J.get("matching_direction", {})),
         "selections": {v: {"top": s["top"], "groups": s["top_groups"], "objective": s["top_objective"], "apart": [{"id": a["unit_id"], "group": a["group"], "objective": a["objective"]} for a in s["not_in_top_listed_apart"]], "n_listed": s["n_listed"], "cut_rule": s["cut_rule"]}
                        for v, s in S["selections"].items()},
         "inventory": {k: inv[k] for k in ("families", "records", "by_class", "by_first_order", "need_linked_families_q1_q2_q3", "need_linked_families_plus_units", "distinct_display_names_total", "distinct_display_names_in_q1",
@@ -3790,6 +3796,197 @@ UI_IT8 = {
     "rk_unc_c_i": "Elemento", "rk_unc_c_c": "Classe", "rk_unc_c_d": "Profondità", "rk_unc_c_r": "Motivo e che cosa lo riaprirebbe", "rk_unc_c_u": "Voce collegata", "rk_unc_n": "{n} voci senza scheda",
 }
 UI_IT.update(UI_IT8)
+
+# IT19 P6: matching direction, abstention and limits. Italian strings are data; codes come from the regenerated ranking.json (matching_direction).
+UI_IT19 = {
+    "md_h": "Direzione del matching, astensioni e limiti",
+    "md_badge": "SPERIMENTALE",
+    "md_lead": "Per ogni coppia bisogno–intervento: la direzione dichiarata dal bisogno, l'azione documentata del composto, il livello del bersaglio su cui la fonte la descrive, "
+               "se la relazione è compatibile, opposta o indeterminabile, il motivo di un'astensione, l'evidenza di riferimento con la sua indipendenza, il dato che manca e la verifica utile successiva.",
+    "md_lim_h": "Limiti (da leggere prima)",
+    "md_lim_1": "Capacità sperimentale: confronto retrospettivo su un riferimento piccolo e scelto di proposito, non a caso ({p} coppie selezionate su {c} composti; {d} con un riferimento determinato, {f} da una misura funzionale e {k} da un'attribuzione di classe). Nessuna accuratezza generale e nessuna superiorità di un metodo sull'altro.",
+    "md_lim_2": "«Compatibile» dice soltanto che l'azione documentata va nella direzione che il bisogno dichiara. Non è priorità di ricerca, non è beneficio nella carenza di WWOX, non dice nulla sulla sicurezza né sul fatto che quella direzione sia la benefica.",
+    "md_lim_3": "Sconosciuto non significa negativo: la ricerca limitata non ha trovato nulla, ed è un'affermazione sulla ricerca, non sul composto.",
+    "md_lim_4": "Un'astensione lascia la riga visibile con azione e motivo: toglie una direzione che il record della fonte non può sostenere. Su questa selezione ha tolto anche una direzione che il riferimento sostiene (una misura su una sola subunità): manca ancora un campo che permetta a una misura documentata di ripristinarla.",
+    "md_lim_5": "Il riferimento è stato costruito da un solo attore che conosceva le etichette precedenti; la parte del modulo è generata dal codice. {i} dei {d} riferimenti determinati sono indipendenti dalle fonti con cui il modulo è stato costruito; l'accordo sugli altri non è una conferma indipendente.",
+    "md_how_h": "Come leggere",
+    "md_how_1": "Compatibile: l'azione va nella direzione dichiarata dal bisogno. Opposta: va nella direzione contraria (motivo di esclusione, non di interesse). Indeterminabile: il modulo si astiene e dice perché.",
+    "md_how_2": "Il livello del bersaglio dice di che cosa parla la fonte: una proteina singola, una famiglia, un complesso, un gruppo di complessi o un gene elencato senza livello dichiarato. Un'azione scritta per un gruppo ampio non viene attribuita a un singolo gene quando meno della metà dei componenti sono bersagli del modulo.",
+    "md_how_3": "Il riferimento è determinato (compatibile o opposto), indeterminabile (l'evidenza esiste ma non alla risoluzione richiesta, o è solo legame) oppure sconosciuto (nulla trovato).",
+    "md_src_h": "Fonte di ogni valore",
+    "md_src_need": "direzione del bisogno: registro dei bisogni",
+    "md_src_label": "azione, livello del bersaglio, etichetta e motivo: percorso attivo di ricerca, copertura rigenerata",
+    "md_src_ref": "riferimento, tipo di misura e indipendenza: pacchetto di confronto IT19 P5",
+    "md_src_before": "etichetta prima della correzione di gruppo: risposte del modulo registrate in IT19 P5 prima della correzione",
+    "md_need_h": "Dal bisogno agli interventi",
+    "md_need_note": "Tutte le righe di catalogo sui bersagli di intervento di ciascun bisogno (righe, non famiglie; righe escluse non contate), per esito e per livello del bersaglio. Un conteggio di righe non è una quota di malattia trattata.",
+    "md_c_need": "Bisogno e direzione dichiarata", "md_c_rows": "Righe", "md_c_bylabel": "Esito", "md_c_bylevel": "Per livello del bersaglio", "md_c_abst": "Astensioni per motivo",
+    "md_pairs_h": "Coppie valutate contro il riferimento",
+    "md_pairs_note": "Ordinate per bisogno. L'esito è quello del percorso attivo oggi; tra parentesi l'esito prima della correzione dei record di gruppo quando è diverso.",
+    "md_c_pair": "Coppia", "md_c_int": "Intervento e azione documentata", "md_c_lvl": "Livello del bersaglio", "md_c_rel": "Relazione e motivo", "md_c_ev": "Evidenza di riferimento", "md_c_miss": "Dato mancante", "md_c_next": "Prossima verifica utile",
+    "md_withheld_int": "nome e azione nell'edizione completa locale",
+    "md_cmp_h": "Dall'intervento ai bisogni",
+    "md_cmp_note": "Per ciascun composto valutato, i bisogni toccati e l'esito su ciascuno.",
+    "md_cmp_withheld": "In questa edizione i nomi dei composti e le azioni curate da ChEMBL non sono riportati (licenza e regole di condivisione): la ricerca dall'intervento ai bisogni, con nomi e azioni, è nell'edizione completa locale. Qui restano conteggi e classi.",
+    "md_counts": "{p} coppie: {a} compatibili, {o} opposte, {x} astensioni; riferimento: {rc} compatibili, {ro} opposte, {ri} indeterminabili, {ru} sconosciute. Accordo sulle coppie con direzione e riferimento determinato: {ag} su {ad}; nessun disaccordo trovato su una selezione costruita per trovarne. La correzione dei record di gruppo ha cambiato {g} coppie.",
+    "md_before": "prima della correzione",
+    "md_mixed": "righe miste: alcune righe di catalogo della coppia hanno una direzione, le altre si astengono per il motivo indicato",
+    "md_of": "di", "md_comp": "componenti nel modulo", "md_why": "Motivo", "md_none": "—",
+    "md_mkind_functional": "misura funzionale", "md_mkind_class_level": "attribuzione di classe", "md_mkind_none": "nessuna misura usabile",
+    "md_lab_compatible": "compatibile", "md_lab_opposite": "opposta", "md_lab_abstained": "indeterminabile (astensione)",
+    "md_ref_compatible": "compatibile", "md_ref_opposite": "opposta", "md_ref_indeterminable": "indeterminabile", "md_ref_unknown": "sconosciuto (non negativo)",
+    "md_ind_independent": "indipendente dalle fonti del modulo", "md_ind_partly_shared": "in parte condivisa con le fonti del modulo", "md_ind_shared": "derivazione condivisa (la stessa fonte citata dal meccanismo)", "md_ind_not_applicable": "non applicabile", "md_ind_unclassified": "non classificata",
+    "md_agr_asserted_and_agrees": "il modulo indica una direzione e il riferimento concorda",
+    "md_agr_asserted_and_disagrees": "il modulo indica una direzione e il riferimento la contraddice",
+    "md_agr_asserted_reference_not_determinate": "il modulo indica una direzione che il riferimento non può ancora confermare",
+    "md_agr_abstained_reference_determinate": "il modulo si astiene benché il riferimento abbia una direzione",
+    "md_agr_abstained_reference_not_determinate": "il modulo si astiene e nemmeno il riferimento ha una direzione",
+    "md_next_measure_in_wwox_system": "misurare in un sistema WWOX (la compatibilità farmacologica non è beneficio)",
+    "md_next_reopen_only_if_need_direction_changes": "nessuna: esclusa per direzione; riaprire solo se cambia la direzione dichiarata dal bisogno",
+    "md_next_sourced_per_gene_override": "una correzione per gene documentata e con ricevuta, che manca ancora nel modulo, permetterebbe alla misura sulla subunità di ripristinare la direzione",
+    "md_next_measure_target_to_need_coupling": "misurare in un sistema WWOX il legame tra l'attività del bersaglio e la quantità del bisogno (oggi dedotto, non misurato)",
+    "md_next_measure_at_required_resolution": "una misura funzionale alla risoluzione a cui è scritto il bisogno (sottotipo o subunità indicati)",
+    "md_next_extend_bounded_search": "estendere la ricerca limitata (farmacologia primaria): nulla trovato non vuol dire nulla da trovare",
+    "md_next_reconcile_source_and_module": "riconciliare la fonte del modulo con il riferimento",
+    "md_rs_determinate_functional": "misura funzionale sul bersaglio",
+    "md_rs_determinate_class_level": "attribuzione di classe (revisione, endpoint clinico o farmacologia in vivo)",
+    "md_rs_determinate_class_level_source_conflict": "attribuzione di classe con fonti in conflitto (conflitto registrato, non risolto)",
+    "md_rs_indeterminable_binding_only": "solo legame: nessuna direzione su un canale",
+    "md_rs_indeterminable_binding_only_other_channel_type": "solo legame, e su un altro tipo di canale",
+    "md_rs_indeterminable_family_level_only": "solo a livello di famiglia, non del gene richiesto",
+    "md_rs_indeterminable_other_channel_type_only": "misure solo su un altro tipo di canale",
+    "md_rs_indeterminable_target_outside_need_genes": "il bersaglio misurato non è tra i geni del bisogno",
+    "md_rs_unknown_no_channel_measurement_found": "nessuna misura sul canale trovata",
+    "md_rs_unknown_no_source_in_bounded_search": "nessuna fonte nella ricerca limitata",
+    "abst_group_record_mostly_outside_module_targets": "record di gruppo: la maggior parte dei componenti non sono bersagli del modulo, quindi l'unica azione curata non è attribuita a questo gene",
+    "abst_group_counts": "record di gruppo: {i} di {n} componenti sono bersagli del modulo; l'unica azione curata non è attribuita a questo gene",
+    "abst_need_direction_not_evaluable": "la direzione del bisogno è incerta o di modulazione: solo esplorazione",
+    "abst_not_an_intervention_target": "il gene non è un bersaglio di intervento di questo bisogno",
+    "abst_action_not_stated": "la fonte non dichiara se l'azione aumenta o riduce l'attività",
+    "abst_no_coupling_row": "nessuna riga collega l'attività del bersaglio alla quantità del bisogno",
+    "abst_coupling_not_measured": "il legame tra bersaglio e bisogno è dedotto, non misurato in un sistema WWOX",
+    "abst_excluded_source_artefact": "riga esclusa: artefatto o rischio di identità della fonte",
+    "lvl_single_protein": "proteina singola", "lvl_protein_family": "famiglia di proteine", "lvl_protein_complex": "complesso definito", "lvl_protein_complex_group": "gruppo di complessi",
+    "lvl_selectivity_group": "gruppo di selettività", "lvl_protein_protein_interaction": "interazione proteina-proteina", "lvl_chimeric_protein": "proteina chimerica",
+    "lvl_protein_nucleic_acid_complex": "complesso proteina-acido nucleico", "lvl_other_chembl_target_type": "altro tipo di bersaglio", "lvl_gene_listing": "gene elencato (livello non dichiarato dalla fonte)",
+    "tc_lvl": "Livello del bersaglio",
+    "md_raw_reason": "motivo come scritto dal codice (testo tecnico in inglese)", "md_locator": "tipo di misura e localizzazione nella fonte",
+    "tc_lvl_note": "Il livello è quello del record della fonte; un'azione su un gruppo ampio non è una misura sul singolo gene. Un'astensione spiega perché la direzione non è attribuita.",
+}
+UI_IT.update(UI_IT19)
+
+
+def md_level_text(rec: dict) -> str:
+    """Level of one source record in words, with the component count a reader needs to check the group guard."""
+    U = UI_IT
+    t = U.get("lvl_" + rec["target_level"], rec["target_level"].replace("_", " "))
+    if rec.get("components"):
+        t += f' ({rec.get("components_in_module_targets")} {U["md_of"]} {rec["components"]} {U["md_comp"]})'
+    return t
+
+
+def md_reason_text(p: dict) -> str:
+    """Why a pair carries no direction, in words; a group abstention names its component counts."""
+    U = UI_IT
+    out = []
+    for c in p["abstention_classes"]:
+        if c == "group_record_mostly_outside_module_targets":
+            g = next((r for r in p["records"] if r.get("components") and r["target_level"] not in ("single_protein", "protein_complex")), None)
+            out.append(U["abst_group_counts"].format(i=g["components_in_module_targets"], n=g["components"]) if g else U["abst_" + c])
+        else:
+            out.append(U["abst_" + c])
+    return "; ".join(out)
+
+
+def shareable_matching_direction(md: dict) -> dict:
+    """Shareable projection (IT19 P6): class labels, codes and counts only. No compound name, no ChEMBL action wording or record id, no
+    reference locator and no free-text resolution note (third-party and catalogue wording stay in the full local edition)."""
+    if not md:
+        return {}
+    keep = ("pair_id", "need", "need_direction", "target_levels", "label", "asserted_direction", "abstention_classes", "label_before_group_guard",
+            "reference_label", "reference_state", "reference_status", "measure_kind", "independence", "agreement", "next_check")
+    pairs = [{k: p[k] for k in keep} | {"records": [{"target_level": r["target_level"], "components": r["components"], "components_in_module_targets": r["components_in_module_targets"]} for r in p["records"]]}
+             for p in md["pairs"]]
+    return {"status": md["status"], "counts": md["counts"], "pairs": pairs,
+            "by_need": [{k: b[k] for k in ("need", "need_direction", "pairs", "by_live_label", "by_reference_label")} for b in md["by_need"]],
+            "module_by_need": md["module_by_need"], "compounds_withheld": len(md["by_compound"])}
+
+
+def render_matching_direction(md: dict, full: bool, needs: list[dict]) -> str:
+    """IT19 P6: matching direction, abstention and limits, server-rendered (reads without JavaScript). Both searches: need -> interventions
+    (module-wide counts and the evaluated pairs ordered by need) and intervention -> needs (full edition; counts only in the shareable one)."""
+    if not md:
+        return ""
+    U = UI_IT
+    C = md["counts"]
+    nm = {n["id"]: n for n in needs}
+    nlab = lambda nid: NEED_IT.get(nid, (nm.get(nid) or {}).get("short", nid))
+    dirw = lambda d: U.get("dir_" + d, d)
+    lab = lambda p: U["md_lab_" + (p["asserted_direction"] or "abstained")]
+    lims = [U["md_lim_1"].format(p=C["pairs"], c=C["compounds"], d=C["determinate"], f=C["determinate_functional"], k=C["determinate_class_level"]),
+            U["md_lim_2"], U["md_lim_3"], U["md_lim_4"], U["md_lim_5"].format(i=C["determinate_independent"], d=C["determinate"])]
+    bl, br, ba = C["by_live_label"], C["by_reference_label"], C["by_agreement"]
+    ad = ba.get("asserted_and_agrees", 0) + ba.get("asserted_and_disagrees", 0)
+    head = (f'<details class="inl" id="matching-direction"><summary>{E(U["md_h"])} <span class="md-badge">{E(U["md_badge"])}</span></summary>'
+            f'<p class="mini"><b>{E(U["md_badge"])}.</b> {E(U["md_lead"])}</p>'
+            f'<div class="note"><b>{E(U["md_lim_h"])}.</b><ul class="mini">' + "".join(f'<li>{E(x)}</li>' for x in lims) + '</ul></div>'
+            f'<p class="mini">{E(U["md_counts"].format(p=C["pairs"], a=bl.get("compatible", 0), o=bl.get("opposite", 0), x=bl.get("abstained", 0), rc=br.get("compatible", 0), ro=br.get("opposite", 0), ri=br.get("indeterminable", 0), ru=br.get("unknown", 0), ag=ba.get("asserted_and_agrees", 0), ad=ad, g=C["changed_by_group_guard"]))}</p>'
+            f'<details class="inl"><summary>{E(U["md_how_h"])}</summary><ul class="mini"><li>{E(U["md_how_1"])}</li><li>{E(U["md_how_2"])}</li><li>{E(U["md_how_3"])}</li></ul></details>'
+            f'<p class="mini"><b>{E(U["md_src_h"])}:</b> {E(U["md_src_need"])}; {E(U["md_src_label"])}; {E(U["md_src_ref"])}; {E(U["md_src_before"])}.'
+            + (" " + E("; ".join(f"{k}: {v}" for k, v in md["sources"].items())) if full else "") + '</p>')
+    # need -> interventions, module-wide
+    rows = []
+    for nid, m in md["module_by_need"].items():
+        bylab = ", ".join(f'{E(U["md_lab_" + ("compatible" if k == "consistent" else "opposite" if k == "opposed" else "abstained")])} {v}' for k, v in m["by_label"].items())
+        bylvl = "; ".join(f'{E(U.get("lvl_" + l, l))}: ' + ", ".join(f'{v} {E(U["md_lab_" + ("compatible" if k == "consistent" else "opposite" if k == "opposed" else "abstained")])}' for k, v in d.items()) for l, d in m["by_target_level"].items())
+        ab = "; ".join(f'{E(U["abst_" + k])}: {v}' for k, v in m["abstained_by_class"].items())
+        if m["group_records_held_back"]:
+            ab += '<br><span class="mut">' + "; ".join(E(U["abst_group_counts"].format(i=i, n=n)) for n, i in m["group_records_held_back"]) + '</span>'
+        rows.append(f'<tr><th scope="row" data-label="{E(U["md_c_need"])}">{E(nlab(nid))}<br><span class="mini">{E(dirw(m["need_direction"]))}</span></th>'
+                    f'<td data-label="{E(U["md_c_rows"])}">{m["rows"]}</td><td data-label="{E(U["md_c_bylabel"])}">{bylab}</td><td data-label="{E(U["md_c_bylevel"])}" class="mini">{bylvl}</td><td data-label="{E(U["md_c_abst"])}" class="mini">{ab or E(U["md_none"])}</td></tr>')
+    need_tab = (f'<h4>{E(U["md_need_h"])}</h4><p class="mini">{E(U["md_need_note"])}</p><div class="tblwrap"><table class="tbl stk"><thead><tr><th>{E(U["md_c_need"])}</th><th>{E(U["md_c_rows"])}</th>'
+                f'<th>{E(U["md_c_bylabel"])}</th><th>{E(U["md_c_bylevel"])}</th><th>{E(U["md_c_abst"])}</th></tr></thead><tbody>' + "".join(rows) + '</tbody></table></div>')
+    # evaluated pairs, ordered by need
+    prow = []
+    for p in sorted(md["pairs"], key=lambda p: (p["need"], p["pair_id"])):
+        nd = nm.get(p["need"]) or {}
+        dir_on = p.get("need_direction_on") or (nd.get("intervention_direction") or {}).get("on", "")
+        if full:
+            recs = ", ".join(r["chembl_target_id"] for r in p["records"])
+            intv = f'<b>{E(p["compound"])}</b> ({E(p["parent_chembl_id"])})<br><span class="mini">{E(", ".join(p["actions"]))} · {E(", ".join(p["targets"]))} · {E(recs)}</span>'
+        else:
+            intv = f'<span class="mut">{E(U["md_withheld_int"])}</span>'
+        lvl = "<br>".join(E(md_level_text(r)) for r in p["records"])
+        rel = f'<b>{E(lab(p))}</b>' + (f' <span class="mini">({E(U["md_mixed"])})</span>' if p["label"].startswith("mixed:") else "")
+        before = p.get("label_before_group_guard")
+        if before and before != p["label"]:
+            rel += f' <span class="mini">({E(U["md_before"])}: {E(U["md_lab_" + ("compatible" if before == "consistent" else "opposite" if before == "opposed" else "abstained")] if ":" not in before else before)})</span>'
+        if p["abstention_classes"]:
+            rel += f'<br><span class="mini">{E(U["md_why"])}: {E(md_reason_text(p))}</span>'
+            if full:
+                rel += f'<details class="inl"><summary class="mini">{E(U["md_raw_reason"])}</summary><p class="mini">' + E(" | ".join(p["abstention_reasons"])) + '</p></details>'
+        ev = (f'<b>{E(U["md_ref_" + p["reference_label"]])}</b> · {E(U.get("md_rs_" + p["reference_status"], p["reference_status"]))}'
+              f'<br><span class="mini">{E(U["md_mkind_" + p["measure_kind"]])}; {E(U["md_ind_" + p["independence"]])}</span>'
+              f'<br><span class="mini">{E(U["md_agr_" + p["agreement"]])}</span>')
+        if full:
+            ev += f'<details class="inl"><summary class="mini">{E(U["md_locator"])}</summary><p class="mini">{E(p["measure_type"])}; {E(p["reference_locator"])}</p></details>'
+        miss = E(p["missing_datum"]) if (full and p.get("missing_datum")) else (E(U.get("md_rs_" + p["reference_status"], "")) if p["reference_state"] != "determinate" else E(U["md_none"]))
+        prow.append(f'<tr id="md-{E(p["pair_id"])}"><th scope="row" data-label="{E(U["md_c_pair"])}">{E(p["pair_id"])}</th>'
+                    f'<td data-label="{E(U["md_c_need"])}">{E(nlab(p["need"]))}<br><span class="mini">{E(dirw(p["need_direction"]))}' + (f' · {E(dir_on)}' if full and dir_on else '') + '</span></td>'
+                    f'<td data-label="{E(U["md_c_int"])}">{intv}</td><td data-label="{E(U["md_c_lvl"])}" class="mini">{lvl}</td><td data-label="{E(U["md_c_rel"])}">{rel}</td>'
+                    f'<td data-label="{E(U["md_c_ev"])}">{ev}</td><td data-label="{E(U["md_c_miss"])}" class="mini">{miss}</td><td data-label="{E(U["md_c_next"])}" class="mini">{E(U["md_next_" + p["next_check"]])}</td></tr>')
+    pair_tab = (f'<h4>{E(U["md_pairs_h"])}</h4><p class="mini">{E(U["md_pairs_note"])}</p><div class="tblwrap"><table class="tbl stk"><thead><tr><th>{E(U["md_c_pair"])}</th><th>{E(U["md_c_need"])}</th><th>{E(U["md_c_int"])}</th>'
+                f'<th>{E(U["md_c_lvl"])}</th><th>{E(U["md_c_rel"])}</th><th>{E(U["md_c_ev"])}</th><th>{E(U["md_c_miss"])}</th><th>{E(U["md_c_next"])}</th></tr></thead><tbody>' + "".join(prow) + '</tbody></table></div>')
+    # intervention -> needs
+    if full:
+        byp = {p["pair_id"]: p for p in md["pairs"]}
+        items = "".join(f'<li><b>{E(c["compound"])}</b>: ' + "; ".join(f'<a href="#md-{E(x)}">{E(nlab(byp[x]["need"]))}</a> → {E(lab(byp[x]))}' for x in c["pairs"]) + '</li>' for c in md["by_compound"])
+        cmp_ = f'<h4>{E(U["md_cmp_h"])}</h4><p class="mini">{E(U["md_cmp_note"])}</p><ul class="mini">{items}</ul>'
+    else:
+        cmp_ = f'<h4>{E(U["md_cmp_h"])}</h4><p class="mini">{E(U["md_cmp_withheld"])} ({md.get("compounds_withheld", 0)})</p>'
+    return head + need_tab + pair_tab + cmp_ + '</details>'
+
+
 
 
 def rk_badges(u: dict, origin: bool = True) -> str:
@@ -4117,7 +4314,7 @@ def render_ranking(P: dict) -> str:
             f'<div class="note"><b>{E(U["rk_not_h"])}.</b><ul class="mini"><li>{E(U["rk_not_1"])}</li><li>{E(U["rk_not_2"])}</li><li>{E(U["rk_not_3"])}</li><li>{E(U["rk_not_4"])}</li></ul></div>'
             f'<details class="inl howto" open><summary>{E(U["rk_how_h"])}</summary><ol class="mini"><li>{E(U["rk_how_1"])}</li><li>{E(U["rk_how_2"])}</li><li>{E(U["rk_how_3"])}</li><li>{E(U["rk_how_4"])}</li></ol><h4>{E(U["rk_three_h"])}</h4><ol class="mini"><li>{E(U["rk_three_1"])}</li><li>{E(U["rk_three_2"])}</li><li>{E(U["rk_three_3"])}</li></ol>'
             f'<h4>{E(U["rk_groups_h"])}</h4><ul class="poslist rk-groups">{groups_legend}</ul><p class="mini">{E(U["rk_sel_note"])}</p><p class="mini mut">{E(U["rk_p3"])}</p></details>'
-            + render_matching_pilot(R.get("matching_pilot", [])) + render_deepened_cases(R.get("deepened_cases", []), R.get("deepened_cases_n", 0)) + controls + "".join(blocks) + f'<h3>{E(U["rk_t_h"])} (<span id="rk-n">{len(units)}</span>)</h3><p class="mini mut">{E(U["rk_t_note"])}</p>' + table + inv + evo
+            + render_matching_direction(R.get("matching_direction", {}), full, P["cur"]["needs"]) + render_matching_pilot(R.get("matching_pilot", [])) + render_deepened_cases(R.get("deepened_cases", []), R.get("deepened_cases_n", 0)) + controls + "".join(blocks) + f'<h3>{E(U["rk_t_h"])} (<span id="rk-n">{len(units)}</span>)</h3><p class="mini mut">{E(U["rk_t_note"])}</p>' + table + inv + evo
             + f'<p class="noprint"><a class="btnlink" href="#section=ranking">{E(U["sec_print"])}</a></p></section>')
 
 

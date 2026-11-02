@@ -18,7 +18,7 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 11246,
+    "values": 12044,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -123,7 +123,7 @@
    },
    "^\\.pairs\\[\\]\\.(l2|l3|l4|x|n|r)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 33918,
+    "values": 33914,
     "why": "levels 2-4, indices: computed from cards and needs"
    },
    "^\\.pairs\\[\\]\\.l1\\.(state|n_assoc|readout_only|why|stale)$": {
@@ -148,7 +148,7 @@
    },
    "^\\.pairs\\[\\]\\.p\\.": {
     "class": "OWN",
-    "values": 15801,
+    "values": 15783,
     "why": "priority criteria computed by the coverage tool"
    },
    "^\\.pairs\\[\\]\\.p\\.cr\\.dir\\[\\]\\[\\]$": {
@@ -193,7 +193,7 @@
    },
    "^\\.ui\\.": {
     "class": "UI",
-    "values": 1080,
+    "values": 1184,
     "why": "Italian orientation text (builder data UI_IT and siblings)"
    }
   },
@@ -223,7 +223,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3008,
+    "forbidden-name": 3058,
     "forbidden-wording": 12
    },
    "co_attested_wording": [
@@ -313,7 +313,7 @@
   }
  ],
  "comparison": {
-  "card_actions_listed_full": 41,
+  "card_actions_listed_full": 45,
   "card_actions_listed_shareable": 0,
   "card_fields_that_differ_count_of_cards": {
    "access": 10,
@@ -357,7 +357,7 @@
   "excluded_rows_with_names_shareable": 0,
   "needs": 23,
   "pairs_total": 2584,
-  "pairs_with_status_class_full": 923,
+  "pairs_with_status_class_full": 922,
   "pairs_with_status_class_shareable": 0,
   "pairs_with_target_list_full": 2204,
   "pairs_with_target_list_shareable": 13,
@@ -454,7 +454,7 @@
  ],
  "data": {
   "catalogue_generated": "2026-10-31T07:28:37Z",
-  "data_date": "2026-11-01",
+  "data_date": "2026-11-02",
   "dgidb_export": "2024-06-10",
   "view_schema": "legend.wwox.repurposing_view/2"
  },
@@ -462,11 +462,11 @@
   "BIBLIO": 2429,
   "COUNT": 11599,
   "ID": 4547,
-  "OWN": 82878,
+  "OWN": 83654,
   "ROWNAME": 2251,
   "SRC_A": 189,
   "SRC_META": 256,
-  "UI": 1080
+  "UI": 1184
  },
  "embedded_sources": [
   {
@@ -500,8 +500,8 @@
  ],
  "files": {
   "COMPARISON.md": {
-   "bytes": 6772,
-   "sha256": "682498d3c60bbdaa86e21a1b647c46934d70a00bf37a5ea05d20b5c95a6d46e9"
+   "bytes": 7424,
+   "sha256": "f7b1b6c1652a2b1cfe1b26d48f378323e95d32e18f3c0403a3f1d4fae4d0e8fa"
   },
   "LICENSES/CC-BY-4.0.txt": {
    "bytes": 18657,
@@ -521,15 +521,15 @@
   },
   "NOTICE.md": {
    "bytes": 12774,
-   "sha256": "c1561c78264ceebd18d0fc435fe1dfa57e97ef1acee079a91f8f1c25b77b32c8"
+   "sha256": "f975231bc45c95b1510ed1b1502e43f544ce8a7f111942e64028f05a8ada222d"
   },
   "README.md": {
    "bytes": 4906,
-   "sha256": "31c8de374179ffd58392839354d72f4cd17d00b2baee319660c89d34e90471bb"
+   "sha256": "411169038e5a77180fe8c05244e1be0131deb1cfff35d91362d9cb2df74798f5"
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 1999,
-   "sha256": "17eebe2152a1e0f8a2e3b74304854caf783ebd69f6f993f68470340bbfd1f65c"
+   "sha256": "45adea0aba494a34d7a54ebf3145ecd4ff833f66b30f0886ae7eed068d583834"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1636,
@@ -544,8 +544,8 @@
    "sha256": "240723d6c86c13fc8f19ff2a5bbe7eec5e64da0f3769ea25e49d8d7b7e5784d0"
   },
   "index.html": {
-   "bytes": 4250898,
-   "sha256": "15cf189a25cbed2d733373019fef914738b8208ef35a224fb819ad3216bb624f"
+   "bytes": 4344471,
+   "sha256": "4571c19786771004bdccb342802879c5f05e24cf41c4e96bdc0e816da9925403"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
@@ -604,8 +604,8 @@
   "card_sentence_redactions": 12,
   "lead_field_redactions": 11,
   "pair_status_rule": "pairs[].p.cr.pha[1] (status classes of the row) is dropped in the shareable build: a status class derives from ChEMBL max_phase, DGIdb approved flags, MATRIX and openFDA together, and the build does not re-derive a class-A-only status per row.",
-  "pairs_status_class_dropped": 923,
-  "repository_file_names_described": 201,
+  "pairs_status_class_dropped": 922,
+  "repository_file_names_described": 204,
   "rule": "IT5 P13 fix. Own analysis stays in the shareable build: a conclusion at the level of a need, a class or a card subject, in our own words, short, attributed to a published work. Withheld: (1) a sentence that states a compound-target(-action) pair together with its database of origin when the pair is asserted only by a class-B/C catalogue source; (2) a compound named in prose whose only provenance in the repository is a class-B/C catalogue row (it appears in no cited full text and is not a card subject); (3) a per-compound status, phase, approval or access statement attributed to a class-B/C source; (4) repository file names, which cannot be used outside the repository. The replacement keeps the research conclusion and names the withheld source class with the phrase in withheld_phrase. The FULL build keeps everything. The audit enforces (1) and (2) by derivation from the catalogue, (3) and (4) by pattern, and every redaction below must match exactly once or more: a stale redaction fails the build.",
   "withheld_phrase": "dato di una fonte non inclusa in questa versione"
  },

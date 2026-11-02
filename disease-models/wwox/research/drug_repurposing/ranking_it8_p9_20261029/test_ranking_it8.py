@@ -914,5 +914,53 @@ class DeepenedCasesLoader(unittest.TestCase):
         rk.deepened_cases()
 
 
+class MatchingDirection(unittest.TestCase):
+    """IT19 P6: the matching-direction layer is regenerated from the sources: the live label of every reference pair is the one the active path
+    writes into the regenerated coverage, every abstention carries a class and the reason text, unknown stays unknown, and the layer says EXPERIMENTAL."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.md = rk.matching_direction(cat=state()["cat"])
+        cls.p = {x["pair_id"]: x for x in cls.md["pairs"]}
+
+    def test_live_labels_equal_the_guarded_answers_committed_by_it19_p5(self):
+        g = {r["pair_id"]: r["active_consistency"] for r in rk.read_tsv(rk.MATCHING_REF / "module_answers_guarded.tsv")}
+        self.assertEqual({k: v["label"] for k, v in self.p.items()}, g)
+
+    def test_counts_match_the_reference_package(self):
+        c = self.md["counts"]
+        self.assertEqual((c["pairs"], c["compounds"], c["determinate"], c["determinate_functional"], c["determinate_class_level"], c["determinate_independent"]), (32, 25, 17, 11, 6, 8))
+        self.assertEqual(c["changed_by_group_guard"], 4)
+        self.assertNotIn("asserted_and_disagrees", c["by_agreement"])
+        self.assertEqual(self.md["status"], "EXPERIMENTAL")
+
+    def test_three_rows_compatible_abstained_with_reason_and_unknown(self):
+        ok, held, unk = self.p["P14"], self.p["P02"], self.p["P18"]
+        self.assertEqual((ok["label"], ok["reference_label"], ok["agreement"], ok["next_check"]), ("consistent", "compatible", "asserted_and_agrees", "measure_in_wwox_system"))
+        self.assertEqual(ok["target_levels"], ["protein_family"])
+        self.assertEqual((held["label"], held["label_before_group_guard"], held["abstention_classes"]), ("direction_unresolved", "consistent", ["group_record_mostly_outside_module_targets"]))
+        self.assertEqual([(r["components"], r["components_in_module_targets"]) for r in held["records"]], [(26, 3)])
+        self.assertIn("3 of 26 components", held["abstention_reasons"][0])
+        self.assertEqual((unk["reference_state"], unk["agreement"], unk["next_check"]), ("unknown", "asserted_reference_not_determinate", "extend_bounded_search"))
+        self.assertTrue(unk["missing_datum"])
+
+    def test_every_abstention_is_explained_and_unknown_is_never_scored_as_an_error(self):
+        for x in self.md["pairs"]:
+            if x["asserted_direction"] is None or x["label"].startswith("mixed:"):
+                self.assertTrue(x["abstention_classes"] and len(x["abstention_reasons"]) == len(x["abstention_classes"]), x["pair_id"])
+            if x["reference_state"] != "determinate":
+                self.assertNotIn(x["agreement"], ("asserted_and_agrees", "asserted_and_disagrees"))
+                self.assertTrue(x["missing_datum"], x["pair_id"])
+        self.assertTrue(all(x["next_check"] for x in self.md["pairs"]))
+
+    def test_a_pair_without_a_live_row_is_a_build_error(self):
+        with self.assertRaises(ValueError):
+            rk.matching_direction(assoc=[], cat=state()["cat"])
+
+    def test_queue_states_the_level_behind_each_direction(self):
+        q = rk.read_tsv(HERE / "deepening_queue.tsv")
+        self.assertTrue(q and all(r["direction_basis"] for r in q))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
