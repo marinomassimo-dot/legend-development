@@ -23,3 +23,82 @@ Data digests (sha256, equal to the LFS oids): entity_names.txt c1113fe726f25d8eb
 **Small relevant example.** The repository's `data/mock` is a toy (12 pathways, a few genes) for checking that the pipeline runs; it is not relevant. The relevant small example is a single WWOX query on the released gene-function model. Leakage risk recorded in advance: Pathway Commons 12 contains KEGG 07/2011 interactions, so some BRG steps may encode the same knowledge as the KEGG labels.
 
 **Stage 1 verdict.** Passes proportionately for **one** small trial of the distinct capability (typed, partly directed explanation paths) on the released model; fails for the drug question (no model, training disproportionate). Design: [`PRE_REGISTRATION.md`](PRE_REGISTRATION.md).
+
+## Stage 2 — one small trial, stopped at the pre-registered memory limit (2026-11-01)
+
+Design committed first (`751d80eb`). Outputs: [`results.json`](results.json) (ranks, names, coarse classes), [`wwox_step_provenance.tsv`](wwox_step_provenance.tsv), [`decisions.tsv`](decisions.tsv).
+
+**Step 0, feasibility — what was verified.**
+- Attempt 1 (torch 2.4.0 CPU): torchdrug 0.2.1's C++ extension does not compile (`ATen/SparseTensorUtils.h` not found).
+- Attempt 2 (torch 2.0.1 CPU, the README pin, Python 3.10): it compiles, the checkpoint loads, and **prediction runs**: 11 queries in 318 s (about 29 s per query on 2 threads, 1.5 GB RSS).
+- **Explanation does not fit.** The repository's `visualize` method (gradient edge importance plus beam search) needs gradients through the whole 1.9-million-row graph. On the first query it was **killed by the kernel (signal 9) after 82 s at 11.27 GB RSS**, on a 15 GB host shared with another job. That is above the pre-registered 8 GB limit, so it was not retried.
+- The 100-triplet sanity sample was not run, because the stop rule was reached before it. The loaded weights are therefore not checked against the logged MRR. One sign that they are not random: the control genes' top pathways are plausible and distinct from each other, for example NME5 -> purine and pyrimidine metabolism, SMARCA5 -> basal transcription. That is an observation, not a test.
+
+**(a) Predictions for `(WWOX, KEGGPathway, ?)`, descriptive.**
+- BioPathNet top-10: HSV-1 infection, **Hippo signaling (rank 2)**, endocytosis, MODY, tight junction, ER protein processing, mRNA surveillance, ubiquitin-mediated proteolysis, RNA transport, spliceosome.
+- Neighbour vote B top-10 is led by large neurodegeneration and RNA pathways: spliceosome, prion, multi-neurodegeneration, ALS, ... Hippo is at rank 13 in B.
+- Need-relevant pathways in the top-10: BioPathNet 7, B 9. The base rate is 186 of 321 pathways (58 percent), because the needs name 97 target symbols. The difference is under 3, so no statement is made.
+- Overlap between the two top-10 lists: 4 pathways.
+- Hippo is a pathway the module already holds through the WWOX-YAP/TAZ literature, so it is a recovery of known biology, not an added relation.
+- The relations BioPathNet adds that are not need-relevant (MODY, tight junction, mRNA surveillance) carry no explanation, because step (c) could not run.
+
+**(b) Specificity: passes.**
+- Median Jaccard between WWOX's top-10 and the top-10 of each of the 10 degree-matched controls is **0.05**; no pathway reaches the top-10 of 8 of the 11 genes.
+- The controls are unannotated genes with BRG degree within 0.8-1.25 times WWOX's. Excluding annotated genes was a clarification made before any prediction was computed.
+- This is unlike PROTON, whose added links were hubs.
+
+**(c) Explanations: not obtained** (OOM above). The decisive capability, a model path whose steps can be checked, was therefore not shown on this host.
+
+**What was checked against sources: the graph's own WWOX steps, not model explanations.** The released BRG stores 16 directed WWOX rows (plus 2 undirected in-complex-with rows). In the Pathway Commons 12 extended SIF, each row carries a data source and usually PubMed ids, so step-level provenance does exist. Three steps were checked at **abstract level only** (an abstract is not a read):
+
+| Step | Cited source | Result at abstract level |
+|---|---|---|
+| `WWOX controls-transport-of TP73` | PMID 15070730, [doi](https://doi.org/10.1073/pnas.0400805101) | consistent: Wwox redistributes nuclear p73 to the cytoplasm |
+| `TNK2 controls-phosphorylation-of WWOX` | PMID 16288044, [doi](https://doi.org/10.1158/0008-5472.CAN-05-1127) | consistent: Ack1 phosphorylates Wwox Tyr287, which leads to degradation; the edge carries **no sign**, so the degradation is lost |
+| `WWOX controls-transport-of YAP1` | first cited PMID 12807903, [doi](https://doi.org/10.1074/jbc.M305597200) | **does not name WWOX** (YAP-ErbB4 paper); the second PMID was not checked |
+
+Other issues in the same rows:
+- 4 of the 6 `controls-expression-of WWOX` rows come from MSigDB C3 motif sets. These are predictions, stored under the same relation type as curated regulation.
+- Pathway Commons 12 contains KEGG 2011 interactions, so some BRG steps may carry the same knowledge as the KEGG labels. This label-leakage risk was not measured.
+
+So the steps can be checked, but they are unsigned, of mixed evidential kind, and at least one is mis-cited. A path built from them would inherit all of this.
+
+**Against LEGEND's current path and PROTON.**
+- BioPathNet's graph is typed and partly directed, where NeuroKG is undirected. That is the capability gap the brief named, and it is real at the input level.
+- No relation is signed, and the only released model predicts gene-pathway membership, not drug-target or drug-disease relations. **For the current question (compounds for the WWOX needs), it adds nothing runnable.**
+- The P4 contextual path still supplies the direction that no graph here encodes.
+
+## Reading
+
+Targeted reading of the paper (Europe PMC JATS XML, CC BY 4.0) under the standing method. Receipt: [`receipt_FTR-20261102-41559192-01.json`](receipt_FTR-20261102-41559192-01.json), `partial_fulltext_read`, 15 section locators; `record --dry-run` passed against ledger tail `614dacd8`. It is staged for the integrator; if PROTON's receipt is recorded first, order the two by event ID. Artefact: `files/fulltext/PMC13472943_Hu2026_BioPathNet.xml`.
+
+Decisive points from the paper:
+- An explanation is a **gradient-based local approximation**: edge importance summed along paths. An influential path is not a mechanism.
+- The drug task needs PrimeKG retraining per disease split, and NBFNet-class training was infeasible above 48 h per epoch even on GPUs.
+- The drug task shows degree bias (0.23).
+- Drug performance collapses without drug-gene edges.
+- Drugs absent from PrimeKG cannot be predicted (memantine, lecanemab).
+
+## Decision
+
+**WATCH** (row in [`decisions.tsv`](decisions.tsv)).
+- BioPathNet runs on CPU for prediction, and its WWOX gene-pathway ranking is specific.
+- The capability that would justify it over LEGEND's path and PROTON, checkable explanation paths, needs more than 11 GB per query on CPU and was not obtained within the pre-registered limit.
+- No drug model exists.
+
+Reopen if any of these holds:
+1. Explanation fits in 8 GB, or a larger host or an operator-authorised GPU is available. Then run step (c) unchanged.
+2. A PrimeKG checkpoint is released with a DEE/WOREE-covering split.
+3. A signed drug-target graph is available.
+
+No card, IPOTESI or queue entry was created.
+
+## What is in git and what was removed
+
+In git: this README, the pre-registration, the availability table, `results.json`, the two TSVs and the receipt JSON. Not in git: no BioPathNet code, weights, Pathway Commons or KEGG rows.
+
+Removed from scratch at the end:
+- the venv (Python 3.10 + torch 2.0.1, about 1.1 GB), the uv cache and Python install
+- the code clone (43 MB), the checkpoint (111 MB), `PC_KEGG_0602` (62 MB)
+- the Pathway Commons 12 extended SIF (176 MB), the compiled extensions
+- the run outputs and driver scripts

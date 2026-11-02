@@ -1,0 +1,39 @@
+{
+ "event_id": "FTR-20261102-41559192-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "41559192",
+  "doi": "10.1038/s41551-025-01598-z"
+ },
+ "event_at": "2026-11-02T00:20:00Z",
+ "analysis_at": "2026-11-01T23:00:00Z",
+ "workflow": "scientist IT18 P-BIOPATHNET targeted reading (question-driven: task data, BRG, splits, interpretability method, compute cost, limitations, availability); Europe PMC JATS XML flattened per section, quotes located by exact text search; staged in the package for the integrator to record",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMC13472943_Hu2026_BioPathNet.xml",
+ "source_fingerprint": "83b0b3713d75257ea63d73d0c4077e4bb00e703278e3ebc1ce92f23eae99015b",
+ "source_kind": "fulltext_local",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/biopathnet_it18_20261101/README.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "Peer-reviewed (Nature Biomedical Engineering 2026, CC BY 4.0). NOT WWOX EVIDENCE: the paper contains no WWOX, DEE or WOREE analysis.",
+  "Read in full: abstract, Main (introduction), all Results subsections including the three drug case studies and Additional examples, Table 1, Discussion with its limitations paragraph, Data and Code availability. Methods read only in part: KG completion overview, BioPathNet sections (path representation, negative sampling, BRG, training), interpretation of predictions, gene-function and drug-repurposing task construction, comparison with baselines, model evaluation; NOT read: NBFNet equations, SL and lncRNA task methods, Extended Methods. Figures: legends only (images not opened). Supplementary information not opened (per-task tables, Supplementary Fig. 5 CRY1 example).",
+  "Locators (section | quote, exact text in the flattened XML): Results/BioPathNet's interpretability | 'the top-k path interpretations for a prediction are formally defined as the first derivative (gradient of the prediction) with respect to each path between a head and a tail node'; Methods/Interpretation of prediction | 'the importance of each path is approximated by the sum of the importance of edges in that path'; Results/Case study 1 | 'the visualization highlights the ten most important paths ranked by gradient in an ad hoc pseudo-linear explanation'; Results/Overview of the different LP tasks | 'extracted from Pathway Commons59–61 encompassing ~1.8 million edges and 13 different relation types between genes and chemicals'; Methods/Gene function prediction task | 'we used the KG from the KEGG database (G1), extracted from ConsensuPathDB'; Methods/Drug repurposing task | 'we used the same data and data splits as defined by TxGNN54, reflecting a zero-shot prediction scenario'; Results/BioPathNet vs general GNN-based LP method | 'baselines such as RAGAT and NBFNet were computationally infeasible, requiring over 48 h per epoch on GPUs'; Table 1 | 'Gene function prediction0.547 ± 0.002 (0.01)'; Results/BioPathNet's performance | 'for drug repurposing, we observe a weak positive correlation (0.23), indicating a tendency of the model to associate drug indications with well-characterized drugs or diseases'; Results/BRG perturbation | 'we observe a substantial performance drop when removing the top 5% of high-degree nodes from the BRG'; Discussion/limitations | 'substituting the PrimeKG portion with Pathway Commons dramatically reduced drug repurposing performance due to missing drug–gene connections'; Discussion/limitations | 'it missed FDA-approved drugs such as pramiracetam, memantine and lecanemab, which were not listed in the PrimeKG database'; Discussion | 'Path embeddings capture richer context and can be interpreted more easily, but are more abstract and less intuitive for downstream tasks'; Code availability | 'The BioPathNet model and all code necessary for reproducing our results are publicly available via GitHub'; Additional examples | 'CRY1 protein in complex with → PER3 interacts with → ARNTL function of → ‘Circadian rhythm’'",
+  "Used for: the explanation method is a gradient-based local approximation (edge importance summed along paths), so a path is an influence summary, not a mechanism; gene-function task data (KEGG via ConsensusPathDB labels, Pathway Commons BRG); drug task needs PrimeKG retraining per split (no released model), GPU-scale cost; degree bias in the drug task (0.23) and hub dependence; drug performance collapses without drug-gene edges; known drugs absent from PrimeKG cannot be predicted."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

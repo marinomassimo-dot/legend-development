@@ -1,0 +1,246 @@
+{
+ "package": "IT18 P-BIOPATHNET",
+ "date": "2026-11-01",
+ "code": "emyyue/BioPathNet b051a9003a1363b5655cdb7dfdad60609c0e4fe3",
+ "checkpoint_sha256": "da298d1039b055852366362b494e773e86f5030abab33c8a620b2725c1ffe441",
+ "environment": "throwaway venv: Python 3.10.21, torch 2.0.1+cpu, torch-scatter 2.1.2, torch-cluster 1.6.3, torchdrug 0.2.1 (no deps), rdkit 2023.9.6, ogb 1.3.6, fair-esm 2.0.0; 2 threads",
+ "install_attempts": [
+  "torch 2.4.0 + torchdrug 0.2.1: torchdrug C++ extension fails to compile (ATen/SparseTensorUtils.h not found)",
+  "torch 2.0.1 (README pin): compiles and runs"
+ ],
+ "step0_predict": {
+  "queries": 11,
+  "wall_s": 324.8,
+  "infer_s": 318.2,
+  "max_rss_gb": 1.52,
+  "status": "ok"
+ },
+ "step0_explain": {
+  "queries_attempted": 1,
+  "status": "KILLED by signal 9 after 82 s wall, max RSS 11.27 GB (host 15 GB, another job running)",
+  "stop_rule": "resident memory > 8 GB -> stop; no retry"
+ },
+ "sanity_test_sample": "not run (stop rule reached before it)",
+ "wwox_top10_biopathnet": [
+  [
+   "hsa05168",
+   "Herpes simplex virus 1 infection",
+   1.7882,
+   true
+  ],
+  [
+   "hsa04390",
+   "Hippo signaling pathway",
+   1.3066,
+   true
+  ],
+  [
+   "hsa04144",
+   "Endocytosis",
+   0.9188,
+   true
+  ],
+  [
+   "hsa04950",
+   "Maturity onset diabetes of the young",
+   0.8421,
+   false
+  ],
+  [
+   "hsa04530",
+   "Tight junction",
+   0.8405,
+   false
+  ],
+  [
+   "hsa04141",
+   "Protein processing in endoplasmic reticulum",
+   0.7448,
+   true
+  ],
+  [
+   "hsa03015",
+   "mRNA surveillance pathway",
+   0.6874,
+   false
+  ],
+  [
+   "hsa04120",
+   "Ubiquitin mediated proteolysis",
+   0.6801,
+   true
+  ],
+  [
+   "hsa03013",
+   "RNA transport",
+   0.6706,
+   true
+  ],
+  [
+   "hsa03040",
+   "Spliceosome",
+   0.6108,
+   true
+  ]
+ ],
+ "B_top10_neighbour_vote": [
+  [
+   "hsa03040",
+   "Spliceosome",
+   28,
+   true
+  ],
+  [
+   "hsa05020",
+   "Prion disease",
+   23,
+   true
+  ],
+  [
+   "hsa05022",
+   "Pathways of neurodegeneration - multiple diseases",
+   21,
+   true
+  ],
+  [
+   "hsa05014",
+   "Amyotrophic lateral sclerosis",
+   19,
+   true
+  ],
+  [
+   "hsa04141",
+   "Protein processing in endoplasmic reticulum",
+   18,
+   true
+  ],
+  [
+   "hsa03015",
+   "mRNA surveillance pathway",
+   17,
+   false
+  ],
+  [
+   "hsa05010",
+   "Alzheimer disease",
+   17,
+   true
+  ],
+  [
+   "hsa05016",
+   "Huntington disease",
+   17,
+   true
+  ],
+  [
+   "hsa03013",
+   "RNA transport",
+   16,
+   true
+  ],
+  [
+   "hsa05012",
+   "Parkinson disease",
+   16,
+   true
+  ]
+ ],
+ "need_relevant_base_rate": [
+  186,
+  321
+ ],
+ "need_relevant_in_top10": {
+  "biopathnet": 7,
+  "B": 9
+ },
+ "overlap_top10": [
+  "hsa03013",
+  "hsa03015",
+  "hsa03040",
+  "hsa04141"
+ ],
+ "hippo_hsa04390_rank": {
+  "biopathnet": 2,
+  "B": 13
+ },
+ "controls": {
+  "SDCBP": 515,
+  "MKI67": 711,
+  "NME5": 701,
+  "HMGA1": 613,
+  "SHKBP1": 655,
+  "DEK": 517,
+  "ACTA1": 567,
+  "BAG3": 662,
+  "CEP43": 676,
+  "SMARCA5": 535
+ },
+ "jaccard_wwox_vs_controls": {
+  "SDCBP": 0.17647058823529413,
+  "MKI67": 0.17647058823529413,
+  "NME5": 0.05263157894736842,
+  "HMGA1": 0.05263157894736842,
+  "SHKBP1": 0.42857142857142855,
+  "DEK": 0.0,
+  "ACTA1": 0.05263157894736842,
+  "BAG3": 0.17647058823529413,
+  "CEP43": 0.05263157894736842,
+  "SMARCA5": 0.05263157894736842
+ },
+ "median_jaccard": 0.05263157894736842,
+ "B_median_jaccard": 0.08187134502923976,
+ "hub_pathways_ge8_of_11": [],
+ "controls_top3": {
+  "SDCBP": [
+   "hsa04360",
+   "hsa04144",
+   "hsa05206"
+  ],
+  "MKI67": [
+   "hsa03040",
+   "hsa03008",
+   "hsa03013"
+  ],
+  "NME5": [
+   "hsa00240",
+   "hsa00230",
+   "hsa00983"
+  ],
+  "HMGA1": [
+   "hsa05206",
+   "hsa03013",
+   "hsa05202"
+  ],
+  "SHKBP1": [
+   "hsa04141",
+   "hsa03013",
+   "hsa05168"
+  ],
+  "DEK": [
+   "hsa00330",
+   "hsa00480",
+   "hsa00260"
+  ],
+  "ACTA1": [
+   "hsa05410",
+   "hsa04666",
+   "hsa04260"
+  ],
+  "BAG3": [
+   "hsa04141",
+   "hsa05134",
+   "hsa04210"
+  ],
+  "CEP43": [
+   "hsa04068",
+   "hsa04810",
+   "hsa05165"
+  ],
+  "SMARCA5": [
+   "hsa03020",
+   "hsa05130",
+   "hsa04714"
+  ]
+ },
+ "scores_note": "raw logits as output by the model; ranks only are interpreted"
+}
