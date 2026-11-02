@@ -1,0 +1,116 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT20-20261102",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Iteration 20: demonstrated resume after a stop, DGIdb/ChEMBL provenance transfer closed in the active path, specific pharmacological evidence recovered (bepridil), contrasting-case measurement, a new WWOX-guided question, a more useful public dashboard. Computational capability is not biological benefit.",
+ "START_UTC": "2026-11-02T22:24:00Z",
+ "BASELINE": "development/main = local main = dba013f3ae8523a835fcab9c5aaeb9657d506542 (fetched 2026-11-02 22:24 UTC); code SHA 2ebb5710 CI success; dba013f3 CI in progress at start; dashboard served (HTTP 200) and verified; folder trust accepted by the operator; one worktree.",
+ "DECISIONS_TAKEN": [],
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": [],
+ "AUTHORISED_QUEUE_20261102B": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P0 baseline, record, MANDATE_BOUND emitted first and resolved by the monitor",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "P1 resume after a controlled stop of a diagnostic session (two idempotent steps, persisted checkpoint, monitor classification, real resume path, no duplicates); collect one scheduled cron event when it occurs",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "P2 DGIdb copy of a ChEMBL group action: keep original source, republishing source, effective target level, transfer limits; four T-type cases; reach search, coverage, queue, ranking, view",
+     "status": "TODO",
+     "owner": "scientist"
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "P3 bepridil/Cav3.2 specific evidence consumable by the engine through the existing qualification structures, or reasoned abstention; no name whitelist; review the half-of-components heuristic",
+     "status": "TODO",
+     "owner": "scientist"
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "P4 fixtures for duplication / improper transfer / unknown-as-negative; contrasting cases; before/after comparison; independent check",
+     "status": "TODO",
+     "owner": "scientist"
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "P5 WWOX-guided question on the improved engine: external-only vs WWOX-qualified at equal usable universe; closed loop to next experiment and regenerated queue",
+     "status": "TODO",
+     "owner": "scientist"
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "P6 public dashboard: clearer exploration (need->interventions, compound->actions/needs/counter-evidence), reproducible funnel, readable priorities, less technical first screen; before/after screenshots; audit; publish; verify served version",
+     "status": "TODO",
+     "owner": "scientist"
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "P7 radar: verify real run, questions from IT20 gaps, capability-led searches on GitHub/Hugging Face/Nature, no reopening of resolved comparisons",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P8": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "P8 independent verification; durable learnings in their homes; autonomous follow-up chosen and executed",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P9": {
+   "order": 10,
+   "steps": [
+    {
+     "step": "P9 freshness, battery on the final candidate, safe_push, CI and publication to verdict, cleanup, final report",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}
