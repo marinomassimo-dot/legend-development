@@ -405,13 +405,25 @@ def assertion_key(e: dict, src: str, t: dict, prov: dict | None) -> str:
     part of the key because a ChEMBL group record carries the same target id for many molecules —
     without it two different compounds would collapse into one. An unresolved copy keeps its own key:
     it may or may not be a copy of something already counted, and claiming either way would be an
-    invention."""
+    invention.
+
+    🔴 The action in the key is the ACTION CLASS (`action_direction`: down / up / unresolved), never the
+    raw string. The two sources use different words for one assertion -- ChEMBL curates ANTAGONIST and
+    PARTIAL AGONIST where the DGIdb copy of the SAME record says `inhibitor` and `agonist` -- so a key
+    built from the raw text gave the copy and its original different keys and the copy was still counted
+    as a second support. Measured on the real catalogue (IT20 P4 verification, 2026-11-02): all 21
+    resolved copies mismatched, 18 on ANTAGONIST/inhibitor and 3 on PARTIAL AGONIST/agonist. The class
+    is also exactly what `claim_provenance` matched the copy to its original ON, so the key and the
+    resolution now agree by construction. The record id stays in the key, so two different ChEMBL
+    records on one molecule and target remain two assertions."""
     mol = e["id"]
+    raw = t.get("action_type") if src.startswith("ChEMBL") else t.get("interaction_type")
+    cls = action_direction(raw)
     if prov and prov.get("original_record"):
-        return f"{mol}|{prov['original_source']}:{prov['original_record']}:{t.get('interaction_type') or ''}".upper()
+        return f"{mol}|{prov['original_source']}:{prov['original_record']}:{cls}".upper()
     if src.startswith("ChEMBL"):
-        return f"{mol}|CHEMBL:{t.get('target_id')}:{t.get('action_type') or ''}".upper()
-    return f"{mol}|{t.get('claim_source')}:{t.get('gene_concept_id')}:{t.get('interaction_type') or ''}".upper()
+        return f"{mol}|CHEMBL:{t.get('target_id')}:{cls}".upper()
+    return f"{mol}|{t.get('claim_source')}:{t.get('gene_concept_id')}:{cls}".upper()
 
 
 CHEMBL_TARGET_LEVELS = {"SINGLE PROTEIN": "single_protein", "PROTEIN FAMILY": "protein_family", "PROTEIN COMPLEX": "protein_complex",

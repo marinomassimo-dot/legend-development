@@ -106,7 +106,7 @@ the `republication:ChEMBL` row is present (`provenance_effect.json`, `provenance
 | Rows that gained one | — | 0 |
 | Republished rows seen | — | 566; original record resolved through an identifier 80, level not carried 486 |
 | Resolved copies still directed | — | 21 (a legitimate record's copy stays usable, e.g. AZD8108 on GRIN1/2A/2B through `CHEMBL2094124`, 4 of 7) |
-| Copies no longer countable as distinct support | — | 21 |
+| Copies no longer countable as distinct support | — | 21 (count of resolved copies; they only actually stopped counting after the 2026-11-02 correction below) |
 | L2 coherent cells | 99 | 73 |
 | L2 opposed cells | 13 | 11 |
 | `consistent_mechanism_candidate` priorities | 99 | 73 |
@@ -291,7 +291,7 @@ receipt; their versions and answers are in the rule's `evidence` field.
 
 ## P4 — three properties, fixtures written before the verifier sees the change
 
-`framework/scripts/test_repurposing_provenance.py` (20 tests, `verbosity=2`, offline, **synthetic
+`framework/scripts/test_repurposing_provenance.py` (21 tests, `verbosity=2`, offline, **synthetic
 entries only**). It reuses the existing fixture shape of
 `framework/scripts/test_repurposing_group_transfer.py` (which is **not modified**: its 11 tests,
 including IT19's three named regressions, still pass unchanged) and adds only the entries the three
@@ -323,6 +323,7 @@ than a restatement:
 | a group-level document as a waiver (`test_a_group_level_document_is_refused`) | the table used to launder a class result into a subunit direction |
 | `test_the_waiver_matches_through_the_declared_parent_and_only_through_an_identifier` | identity by name creeping in through the parent/salt chain |
 | `test_a_malformed_documented_level_row_fails_whatever_gene_it_names` | a bad table row sitting unnoticed until it happens to name the gene under inspection (the shape is checked before the subject) |
+| `test_a_copy_collapses_although_the_two_sources_use_different_words` (`VOCABDOWN`, `VOCABUP`) | **the defect the 2026-11-02 correction below records**: an `assertion_key` built from the raw source string, so ChEMBL `ANTAGONIST` and its DGIdb copy `inhibitor` never collapse. Added after the fact, from the two real vocabulary pairs |
 
 ### Before / after, on the real catalogue
 
@@ -340,7 +341,7 @@ the committed `HEAD` copy of `repurposing_search.py` and agrees exactly), `cover
 | **Abstentions losing available information** — lost rows whose substance keeps no directed row in that need | — | **9** (terodiline, suloctidil, phloroglucinol × CACNA1G/H/I; the IT19 reference scored all three `indeterminable` or `unknown`) |
 | of which the IT19 reference supports | — | **0** |
 | **Specific evidence recovered** | 0 | **1** documented-level waiver (bepridil, CACNA1H), and 21 republished copies of legitimate records that keep their direction |
-| **Copies counted as distinct support** | 21 | **0** |
+| **Copies counted as distinct support** | 21 | **0** — see the correction below; this was **not** true when first written |
 | L2 coherent cells | 99 | 74 |
 | L2 opposed cells | 13 | 11 |
 | `consistent_mechanism_candidate` | 99 | 74 |
@@ -350,6 +351,48 @@ the committed `HEAD` copy of `repurposing_search.py` and agrees exactly), `cover
 Of the 7 that left the queue, 3 (ethosuximide, memantine, esketamine) were `dgidb_only` duplicate
 families whose ChEMBL sibling is already a **ranked unit** — duplicates of assessed work, not lost
 candidates.
+
+### CORRECTION, 2026-11-02 — "copies counted as distinct support 21 → 0" was false when first written
+
+The first version of this package (commits `cfa0b438`, `33b1c0c0`, `f9e05333`) claimed in both the P2
+and the P4 table that copies counted as distinct support fell **21 → 0**. **That claim was wrong, and
+the figure was wrong in the artefacts too.** An independent verification on branch `it20-orch`
+(`0eb9d98a`) found the defect and it is reproduced and confirmed here.
+
+**What was broken.** `assertion_key()` built the action part of the key from the **raw** source string:
+`action_type` for a ChEMBL row, `interaction_type` for a DGIdb copy. The two sources use **different
+words for one assertion** — ChEMBL curates `ANTAGONIST` and `PARTIAL AGONIST` where the DGIdb copy of
+the *same record* says `inhibitor` and `agonist`. So the copy and its original received **different
+keys**, nothing collapsed, and every copy was still counted as a second support. Measured on the real
+catalogue: **all 21** resolved, directed copies mismatched — **18** on `ANTAGONIST`/`inhibitor` and
+**3** on `PARTIAL AGONIST`/`agonist`. In the shipped artefacts
+`republished_copies_not_counted_as_support` summed to **0** across every cell and all 21 copies carried
+`adds_independent_support: true`. The verifier's worked example reproduces exactly: orphenadrine on
+GRIN1 reported **9 associations / 9 distinct assertions**, and 6 is correct.
+
+**Why the fixtures did not catch it.** Every synthetic pair in `test_repurposing_provenance.py` used
+`BLOCKER` and `blocker`, which are the same string after upper-casing. The suite passed while the
+defect was live — a fixture that only ever exercises the agreeing case cannot see a vocabulary
+mismatch. This is the sharper lesson of P4 than anything the suite asserted on its own.
+
+**The fix.** The key now carries the **action class** from the module's existing vocabulary
+(`action_direction()` → `down` / `up` / `unresolved`), not the raw text. No new table: that function is
+also exactly what `claim_provenance()` already matched a copy to its original *on*, so the key and the
+resolution now agree by construction. The record id stays in the key, so two different ChEMBL records
+on one molecule and target remain two assertions.
+
+**Verified numbers after the fix.** Resolved directed copies **21**, keys still mismatching their
+original **0** (was 21). `republished_copies_not_counted_as_support` now sums to **21 across 8 cells**
+(was 0). Over the matrix, `consistent_associations` **208** against
+`consistent_distinct_assertions` **190** — the 18 consistent copies; the other 3 sit in opposed cells.
+Orphenadrine on GRIN1: **9 associations / 6 distinct assertions**, as predicted. Two fixtures built
+from the two real vocabulary pairs were added (`CAT:VOCABDOWN`, `CAT:VOCABUP`), asserting that the two
+rows carry *different* `action_raw` and still share one key; the suite is now **21 tests**.
+
+Nothing else in the before/after table changed: directed rows, abstention counts, L2 states, the
+priorities and the queue never read `assertion_key`, so the defect affected the support **counting**
+only and not a single direction or abstention. The earlier figure is left visible above rather than
+overwritten.
 
 ### The one IT19 expectation that had to move, and how
 
@@ -377,7 +420,7 @@ So **no claim of general superiority** follows from the four compounds that prom
 none is made. What is established is narrower and checkable: a route by which a group-level assertion
 reached a member gene is closed, including through an intermediary; a specific documented measurement
 can re-license a direction for the one gene it was measured on; and a copy is no longer counted as a
-second support. The 20 property tests are the claim; the real-catalogue numbers are its size.
+second support. The 21 property tests are the claim; the real-catalogue numbers are its size.
 
 ---
 

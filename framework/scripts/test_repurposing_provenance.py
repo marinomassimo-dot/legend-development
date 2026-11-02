@@ -142,7 +142,23 @@ ENTRIES = [
     entry("OTHERMOL", "Othermoline", [chembl_row("CHEMBL2363032", BIG_GROUP, "BLOCKER", "PROTEIN COMPLEX GROUP")]),
     # 8. a specific record checked against its own source's target id: untouched by any of this
     entry("GTO", "Gtopdbine", [gtopdb_row("CACNA1H", HGNC["CACNA1H"], "blocker")], chembl=False),
+    # 9. THE TWO REAL VOCABULARY PAIRS. The two sources use different words for one assertion, and the
+    #    first draft of assertion_key used the raw string, so a copy and its original got different keys
+    #    and the copy was still counted as support. BLOCKER/blocker (used above) happens to match after
+    #    upper-casing, which is exactly why the suite passed while the defect was live. These two do not.
+    entry("VOCABDOWN", "Antagonine", [chembl_row("CHEMBL2094124", NMDA_GROUP, "ANTAGONIST", "PROTEIN COMPLEX GROUP"),
+                                      dgidb_copy("GRIN2A", HGNC["GRIN2A"], "inhibitor")]),
+    entry("VOCABUP", "Partialine", [chembl_row("CHEMBL2094124", NMDA_GROUP, "PARTIAL AGONIST", "PROTEIN COMPLEX GROUP"),
+                                    dgidb_copy("GRIN2A", HGNC["GRIN2A"], "agonist")]),
 ]
+
+
+def rc_module():
+    """repurposing_coverage, imported on demand: the properties are about the search layer, and only the
+    support-counting ones need the coverage layer."""
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import repurposing_coverage as rc
+    return rc
 
 
 def rows(need_, arte, roles=None):
@@ -167,6 +183,24 @@ class P1DuplicatedEvidence(unittest.TestCase):
         self.assertEqual(len({a["assertion_key"] for a in got}), 1, "record and copy are ONE assertion")
         self.assertEqual({a["consistency"] for a in got}, {"consistent"}, "a copy of a usable record stays usable")
         self.assertEqual(sorted(a["link_source"] for a in got), ["ChEMBL curated mechanism", "DGIdb interaction"])
+
+    def test_a_copy_collapses_although_the_two_sources_use_different_words(self):
+        """The real vocabulary pairs: ChEMBL ANTAGONIST / DGIdb `inhibitor` (18 rows on the real
+        catalogue) and ChEMBL PARTIAL AGONIST / DGIdb `agonist` (3 rows). The key must be the action
+        CLASS, not the raw string, or the copy is still counted as a second support. Measured
+        2026-11-02: with a raw-string key all 21 resolved copies mismatched."""
+        idx = rs.Index(ENTRIES, FULL, MODULE)
+        assoc = rs.associations_for_need(N_NMDA, idx, ROLES)["associations"]
+        for cid, expect in (("CAT:VOCABDOWN", "consistent"), ("CAT:VOCABUP", "opposed")):
+            got = [a for a in assoc if a["catalogue_id"] == cid and a["target"] == "GRIN2A"]
+            self.assertEqual(len(got), 2, cid)
+            self.assertNotEqual(got[0]["action_raw"], got[1]["action_raw"], f"{cid}: the fixture must use DIFFERENT words")
+            self.assertEqual({a["consistency"] for a in got}, {expect}, cid)
+            self.assertEqual(len({a["assertion_key"] for a in got}), 1,
+                             f"{cid}: record and copy are one assertion whatever each source calls the action")
+            ctx = rc_module().action_contexts(got)
+            self.assertEqual(len(ctx), 2, cid)
+            self.assertEqual(rc_module().distinct_assertions(ctx), 1, cid)
 
     def test_two_different_molecules_on_one_group_record_are_two_assertions(self):
         """The record id alone is NOT the assertion: CHEMBL2363032 carries an action for many molecules."""
