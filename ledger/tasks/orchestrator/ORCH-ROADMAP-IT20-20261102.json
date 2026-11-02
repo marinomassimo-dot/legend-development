@@ -17,8 +17,9 @@
    "steps": [
     {
      "step": "P0 baseline, record, MANDATE_BOUND emitted first and resolved by the monitor",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "baseline: main dba013f3 = development/main, one worktree, no jobs, dba013f3 CI in progress at start, site HTTP 200; MANDATE_BOUND emitted first, mandate_watch check returned this session 4325d70d... RUNNING; in-session cron re-armed for IT20"
     }
    ]
   },
@@ -27,8 +28,9 @@
    "steps": [
     {
      "step": "P1 resume after a controlled stop of a diagnostic session (two idempotent steps, persisted checkpoint, monitor classification, real resume path, no duplicates); collect one scheduled cron event when it occurs",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "continuity_it20_20261102/README.md: manual-path resume after a controlled stop observed on a diagnostic session (same session id, same checkpoint, R2 done, no duplicates); scheduled cron delivery to a dead session NOT yet observed - status kept IN_PROGRESS until one scheduled event is collected or the session ends"
     }
    ]
   },

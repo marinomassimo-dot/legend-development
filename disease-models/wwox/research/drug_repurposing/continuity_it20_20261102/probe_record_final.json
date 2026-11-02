@@ -1,0 +1,36 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT20-RESUME-20261102",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "LOW",
+ "OBJECTIVE": "IT20 P1 controlled resume probe (diagnostic session, not a second mandate of work): two idempotent steps with a persisted checkpoint under ~/.local/state/legend/probe_it20; closed and removed after the observation.",
+ "START_UTC": "2026-11-02T22:40:00Z",
+ "BASELINE": "main dba013f3 (+IT20 record)",
+ "DECISIONS_TAKEN": [
+  "Probe observation: the resumed session bound the mandate, read checkpoint.json (step R1), checked `mandate_watch.py job list` (no job running) and `git worktree list` (no second integrator), then executed R2 only and closed. Both steps were idempotent: no re-run of R1 occurred. Record left in place for the operator to remove with the probe state directory."
+ ],
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": [],
+ "AUTHORISED_QUEUE_20261102R": {
+  "MANDATE_STATE": "COMPLETE",
+  "OBJ_R1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "R1 run `python3 framework/scripts/scout_daily.py --plan` in the repository root and save its stdout to ~/.local/state/legend/probe_it20/plan_gaps.txt unless that file already exists with content (idempotent); write ~/.local/state/legend/probe_it20/checkpoint.json {\"step\":\"R1\",\"sha256\":<digest of plan_gaps.txt>}; set this step DONE with the sha256 as evidence in the record file",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "plan_gaps.txt sha256 691e8d2d23ad0a4f72a398c2dbb5fa30492983472bb69099004428aa25ff00d3 (39615 bytes, scout_daily.py --plan exit 0, main dba013f3ae85); checkpoint.json step R1 written 2026-11-02"
+    },
+    {
+     "step": "R2 if checkpoint.json says R1 is done: from plan_gaps.txt write ~/.local/state/legend/probe_it20/gap_queries.txt containing the question ids whose text mentions provenance, DGIdb, pharmacolog, evaluation or view (one per line), unless it already exists with content (idempotent); update checkpoint.json to step R2; set this step DONE with the sha256 of gap_queries.txt as evidence",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "gap_queries.txt sha256 f1de2ee484c129408e4f51f21f1c2eb990a56eddd98ba930194fee18250df6dc (26 ids of 69 plan blocks matched on provenance|DGIdb|pharmacolog|evaluation|view, one per line); checkpoint.json advanced to step R2 2026-11-02; resumed session read the R1 checkpoint before acting"
+    }
+   ]
+  }
+ },
+ "END_UTC": "2026-11-02T23:10:00Z"
+}
