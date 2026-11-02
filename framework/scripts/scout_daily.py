@@ -873,17 +873,21 @@ def resolve_plan(cached: dict | None, extracts: dict | None, ctx: dict, runner=g
     return plan, extracts
 
 
+NEVER_ASKED_DAYS = 90   # IT19 P7: above the 30-day cap of a repeat (3 x 30), so no question starves behind recurring ones
+
+
 def pick_questions(questions: list[dict], asked: dict, now: dt.datetime, n: int) -> list[dict]:
-    """Higher weight and longer since asked go first (a never-asked question counts as 30 days). A question whose terms
-    changed is a new question (the key includes the terms), so a changed priority is asked at once."""
+    """Higher weight and longer since asked go first. A repeat counts at most 30 days; a never-asked question counts as 90, so every
+    question is asked once before any heavier one is asked again (measured on the real plan in IT19: with 30 for both, 11 roadmap rows were never
+    asked in 90 days and 2 reopen rows waited past 60). A question whose terms changed is a new question (the key includes the terms)."""
     today = now.date()
 
     def score(q):
         last = asked.get(f"{q['id']}|{digest(q['kw'])}")
         try:
-            age = min(30, (today - dt.date.fromisoformat(last)).days) if isinstance(last, str) else 30
+            age = min(30, (today - dt.date.fromisoformat(last)).days) if isinstance(last, str) else NEVER_ASKED_DAYS
         except ValueError:
-            age = 30  # a damaged date counts as never asked
+            age = NEVER_ASKED_DAYS  # a damaged date counts as never asked
         return q["weight"] * age
     return sorted(questions, key=lambda q: (-score(q), q["id"]))[:n]
 

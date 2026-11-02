@@ -1132,5 +1132,26 @@ class QueryObjects(unittest.TestCase):
         self.assertIn("diagnosis:evaluation", by_id(plan))
 
 
+class NoQuestionStarves(unittest.TestCase):
+    """IT19 P7: a never-asked light question is asked before a heavy one is asked again."""
+
+    def test_unasked_light_question_beats_a_heavy_repeat(self):
+        qs = [{"id": f"roadmap:R{i}", "kw": f"kw{i}", "weight": 1} for i in range(3)] + [{"id": "diagnosis:x", "kw": "heavy", "weight": 2}]
+        now = sd.dt.datetime(2026, 11, 3, 5, 20, tzinfo=sd.dt.timezone.utc)
+        asked = {f"diagnosis:x|{sd.digest('heavy')}": "2026-10-04"}      # asked 30 days ago: a due repeat, weight 3 x 30
+        picked = [q["id"] for q in sd.pick_questions(qs, asked, now, 2)]
+        self.assertEqual(picked, ["roadmap:R0", "roadmap:R1"], "weight 1 x 90 outranks weight 2 x 30 (a weight-3 repeat ties at 90 and goes by id)")
+
+    def test_simulation_asks_every_question_within_the_cycle(self):
+        qs = [{"id": f"q{i}", "kw": f"kw{i}", "weight": 1 + i % 3} for i in range(30)]
+        asked, first = {}, {}
+        for d in range(16):
+            now = sd.dt.datetime(2026, 11, 3, 5, 20, tzinfo=sd.dt.timezone.utc) + sd.dt.timedelta(days=d)
+            for q in sd.pick_questions(qs, asked, now, 2):
+                asked[f"{q['id']}|{sd.digest(q['kw'])}"] = now.date().isoformat()
+                first.setdefault(q["id"], d)
+        self.assertEqual(len(first), 30, "30 questions at 2 a day are all asked in 15 days")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

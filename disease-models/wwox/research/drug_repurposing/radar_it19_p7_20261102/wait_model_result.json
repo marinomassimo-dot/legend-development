@@ -1,0 +1,434 @@
+{
+ "sha": "d6f27ee6d19c3345af3e7a1cadd27adb31fb1e9c",
+ "questions": 71,
+ "per_run": 2,
+ "days": 60,
+ "rows": [
+  {
+   "id": "task_step:OBJ_P2/P2",
+   "weight": 4,
+   "first_asked_day": 1,
+   "times_asked": 4
+  },
+  {
+   "id": "diagnosis:catalogue-use",
+   "weight": 3,
+   "first_asked_day": 1,
+   "times_asked": 3
+  },
+  {
+   "id": "diagnosis:compound-target-action",
+   "weight": 3,
+   "first_asked_day": 2,
+   "times_asked": 3
+  },
+  {
+   "id": "diagnosis:evaluation",
+   "weight": 3,
+   "first_asked_day": 2,
+   "times_asked": 3
+  },
+  {
+   "id": "diagnosis:hypothesis-generation",
+   "weight": 3,
+   "first_asked_day": 3,
+   "times_asked": 3
+  },
+  {
+   "id": "diagnosis:matching-(need-->-compound)",
+   "weight": 3,
+   "first_asked_day": 3,
+   "times_asked": 3
+  },
+  {
+   "id": "work_order:NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+   "weight": 3,
+   "first_asked_day": 4,
+   "times_asked": 3
+  },
+  {
+   "id": "work_order:NEED-GSK3B-DEREPRESSION",
+   "weight": 3,
+   "first_asked_day": 4,
+   "times_asked": 3
+  },
+  {
+   "id": "work_order:NEED-INHIBITORY-HYPOFUNCTION",
+   "weight": 3,
+   "first_asked_day": 5,
+   "times_asked": 3
+  },
+  {
+   "id": "work_order:NEED-ISR-ATTENUATION",
+   "weight": 3,
+   "first_asked_day": 5,
+   "times_asked": 3
+  },
+  {
+   "id": "work_order:NEED-LACTATE-LDH",
+   "weight": 3,
+   "first_asked_day": 6,
+   "times_asked": 3
+  },
+  {
+   "id": "work_order:NEED-MYC-PROGENITOR-PROLIFERATION",
+   "weight": 3,
+   "first_asked_day": 6,
+   "times_asked": 3
+  },
+  {
+   "id": "work_order:NEED-MYELINATION",
+   "weight": 3,
+   "first_asked_day": 7,
+   "times_asked": 3
+  },
+  {
+   "id": "work_order:NEED-NEUROINFLAMMATION-GLIA",
+   "weight": 3,
+   "first_asked_day": 7,
+   "times_asked": 3
+  },
+  {
+   "id": "work_order:NEED-PDH-PYRUVATE-AXIS",
+   "weight": 3,
+   "first_asked_day": 8,
+   "times_asked": 3
+  },
+  {
+   "id": "work_order:NEED-REDOX-NRF2",
+   "weight": 3,
+   "first_asked_day": 8,
+   "times_asked": 3
+  },
+  {
+   "id": "work_order:NEED-SEIZURE-CONTROL-SYMPTOMATIC",
+   "weight": 3,
+   "first_asked_day": 9,
+   "times_asked": 3
+  },
+  {
+   "id": "work_order:NEED-SYSTEMIC-GLYCAEMIA-GROWTH",
+   "weight": 3,
+   "first_asked_day": 9,
+   "times_asked": 3
+  },
+  {
+   "id": "work_order:NEED-T-TYPE-CALCIUM",
+   "weight": 3,
+   "first_asked_day": 10,
+   "times_asked": 3
+  },
+  {
+   "id": "work_order:NEED-WWOX-GENE-ADDITION",
+   "weight": 3,
+   "first_asked_day": 10,
+   "times_asked": 3
+  },
+  {
+   "id": "work_order:NEED-WWOX-MISSENSE-PROTEIN-RESCUE",
+   "weight": 3,
+   "first_asked_day": 11,
+   "times_asked": 3
+  },
+  {
+   "id": "reopen:biopathnet_it18_20261101/0",
+   "weight": 2,
+   "first_asked_day": 11,
+   "times_asked": 2
+  },
+  {
+   "id": "reopen:biopathnet_it18_20261101/Decision/8f981a42c5d8",
+   "weight": 2,
+   "first_asked_day": 12,
+   "times_asked": 2
+  },
+  {
+   "id": "reopen:function_pharm_it14_p3_20261101/NP3P1",
+   "weight": 2,
+   "first_asked_day": 12,
+   "times_asked": 2
+  },
+  {
+   "id": "reopen:function_pharm_it14_p3_20261101/NP3P2",
+   "weight": 2,
+   "first_asked_day": 13,
+   "times_asked": 2
+  },
+  {
+   "id": "reopen:function_pharm_it14_p3_20261101/NP3P3",
+   "weight": 2,
+   "first_asked_day": 13,
+   "times_asked": 2
+  },
+  {
+   "id": "reopen:functional_it13_p3a_20261031/NP3A1",
+   "weight": 2,
+   "first_asked_day": 14,
+   "times_asked": 2
+  },
+  {
+   "id": "reopen:functional_it13_p3a_20261031/NP3A2",
+   "weight": 2,
+   "first_asked_day": 14,
+   "times_asked": 2
+  },
+  {
+   "id": "reopen:functional_it13_p3a_20261031/NP3A3",
+   "weight": 2,
+   "first_asked_day": 15,
+   "times_asked": 2
+  },
+  {
+   "id": "reopen:functional_it13_p3a_20261031/NP3A4",
+   "weight": 2,
+   "first_asked_day": 15,
+   "times_asked": 2
+  },
+  {
+   "id": "reopen:functional_it13_p3a_20261031/NP3A5",
+   "weight": 2,
+   "first_asked_day": 16,
+   "times_asked": 2
+  },
+  {
+   "id": "reopen:glia_maturation_it14_p4_20261101/NP4G1",
+   "weight": 2,
+   "first_asked_day": 16,
+   "times_asked": 2
+  },
+  {
+   "id": "reopen:glia_maturation_it14_p4_20261101/NP4G2",
+   "weight": 2,
+   "first_asked_day": 17,
+   "times_asked": 2
+  },
+  {
+   "id": "reopen:glia_maturation_it14_p4_20261101/NP4G3",
+   "weight": 2,
+   "first_asked_day": 18,
+   "times_asked": 2
+  },
+  {
+   "id": "reopen:glia_maturation_it14_p4_20261101/NP4G4",
+   "weight": 2,
+   "first_asked_day": 18,
+   "times_asked": 2
+  },
+  {
+   "id": "reopen:modifiers_it12_p1b_20261031/NP1B1",
+   "weight": 2,
+   "first_asked_day": 19,
+   "times_asked": 2
+  },
+  {
+   "id": "reopen:modifiers_it12_p1b_20261031/NP1B2",
+   "weight": 2,
+   "first_asked_day": 19,
+   "times_asked": 2
+  },
+  {
+   "id": "reopen:modifiers_it12_p1b_20261031/NP1B3",
+   "weight": 2,
+   "first_asked_day": 20,
+   "times_asked": 2
+  },
+  {
+   "id": "reopen:modifiers_it12_p1b_20261031/NP1B4",
+   "weight": 2,
+   "first_asked_day": 20,
+   "times_asked": 2
+  },
+  {
+   "id": "reopen:recoverable_it13_p3b_20261031/NP3B1",
+   "weight": 2,
+   "first_asked_day": 21,
+   "times_asked": 2
+  },
+  {
+   "id": "reopen:recoverable_it13_p3b_20261031/NP3B2",
+   "weight": 2,
+   "first_asked_day": 24,
+   "times_asked": 1
+  },
+  {
+   "id": "reopen:recoverable_it13_p3b_20261031/NP3B3",
+   "weight": 2,
+   "first_asked_day": 24,
+   "times_asked": 1
+  },
+  {
+   "id": "reopen:recovery_it10_p23_20261031/R1",
+   "weight": 2,
+   "first_asked_day": 32,
+   "times_asked": 1
+  },
+  {
+   "id": "reopen:recovery_it10_p23_20261031/R2",
+   "weight": 2,
+   "first_asked_day": 33,
+   "times_asked": 1
+  },
+  {
+   "id": "reopen:recovery_it10_p23_20261031/R4",
+   "weight": 2,
+   "first_asked_day": 34,
+   "times_asked": 1
+  },
+  {
+   "id": "reopen:recovery_it10_p23_20261031/R5",
+   "weight": 2,
+   "first_asked_day": 34,
+   "times_asked": 1
+  },
+  {
+   "id": "reopen:recovery_it10_p23_20261031/R7",
+   "weight": 2,
+   "first_asked_day": 35,
+   "times_asked": 1
+  },
+  {
+   "id": "reopen:recovery_it10_p23_20261031/R8",
+   "weight": 2,
+   "first_asked_day": 35,
+   "times_asked": 1
+  },
+  {
+   "id": "reopen:recovery_it10_p23_20261031/R9",
+   "weight": 2,
+   "first_asked_day": 36,
+   "times_asked": 1
+  },
+  {
+   "id": "reopen:scout_it15_p5_20261101/0",
+   "weight": 2,
+   "first_asked_day": 36,
+   "times_asked": 1
+  },
+  {
+   "id": "reopen:scout_it15_p5_20261101/2",
+   "weight": 2,
+   "first_asked_day": 37,
+   "times_asked": 1
+  },
+  {
+   "id": "reopen:scout_it15_p5_20261101/4",
+   "weight": 2,
+   "first_asked_day": 37,
+   "times_asked": 1
+  },
+  {
+   "id": "reopen:scout_it18_20261101/0",
+   "weight": 2,
+   "first_asked_day": 38,
+   "times_asked": 1
+  },
+  {
+   "id": "reopen:scout_it18_20261101/3",
+   "weight": 2,
+   "first_asked_day": 38,
+   "times_asked": 1
+  },
+  {
+   "id": "reopen:target_first_it15_qa_nmdar_20261101/NP5A1",
+   "weight": 2,
+   "first_asked_day": 39,
+   "times_asked": 1
+  },
+  {
+   "id": "reopen:target_first_it15_qa_nmdar_20261101/NP5A2",
+   "weight": 2,
+   "first_asked_day": 39,
+   "times_asked": 1
+  },
+  {
+   "id": "reopen:target_first_it15_qa_nmdar_20261101/NP5A3",
+   "weight": 2,
+   "first_asked_day": 40,
+   "times_asked": 1
+  },
+  {
+   "id": "reopen:target_first_it15_qb_gsk3_20261101/NP5B1",
+   "weight": 2,
+   "first_asked_day": 40,
+   "times_asked": 1
+  },
+  {
+   "id": "reopen:target_first_it15_qb_gsk3_20261101/NP5B2",
+   "weight": 2,
+   "first_asked_day": null,
+   "times_asked": 0
+  },
+  {
+   "id": "reopen:target_first_it15_qb_gsk3_20261101/NP5B3",
+   "weight": 2,
+   "first_asked_day": null,
+   "times_asked": 0
+  },
+  {
+   "id": "roadmap:R1",
+   "weight": 2,
+   "first_asked_day": null,
+   "times_asked": 0
+  },
+  {
+   "id": "roadmap:R2",
+   "weight": 2,
+   "first_asked_day": null,
+   "times_asked": 0
+  },
+  {
+   "id": "roadmap:R3",
+   "weight": 2,
+   "first_asked_day": null,
+   "times_asked": 0
+  },
+  {
+   "id": "roadmap:R10",
+   "weight": 1,
+   "first_asked_day": null,
+   "times_asked": 0
+  },
+  {
+   "id": "roadmap:R11",
+   "weight": 1,
+   "first_asked_day": null,
+   "times_asked": 0
+  },
+  {
+   "id": "roadmap:R4",
+   "weight": 1,
+   "first_asked_day": null,
+   "times_asked": 0
+  },
+  {
+   "id": "roadmap:R5",
+   "weight": 1,
+   "first_asked_day": null,
+   "times_asked": 0
+  },
+  {
+   "id": "roadmap:R6",
+   "weight": 1,
+   "first_asked_day": null,
+   "times_asked": 0
+  },
+  {
+   "id": "roadmap:R7",
+   "weight": 1,
+   "first_asked_day": null,
+   "times_asked": 0
+  },
+  {
+   "id": "roadmap:R8",
+   "weight": 1,
+   "first_asked_day": null,
+   "times_asked": 0
+  },
+  {
+   "id": "roadmap:R9",
+   "weight": 1,
+   "first_asked_day": null,
+   "times_asked": 0
+  }
+ ]
+}
