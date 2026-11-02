@@ -11,7 +11,9 @@
   "2026-11-02 11:20 UTC: operator agreed to take into P8 the related defect found by the DrugCentral verifier - framework/adapters/_http.py get_json decodes HTTP 200 bodies with errors=\"replace\", so a non-UTF-8 JSON body parses silently with U+FFFD in strings (affects chembl, openfda, ilincs, orphadata, pubtator3, opentargets); same rule as the DrugCentral fix: a damaged body is a queryable error, not a table that looks valid."
  ],
  "DEFAULTS_TAKEN": [],
- "STOP_LOG": [],
+ "STOP_LOG": [
+  "2026-11-02: P3 dashboard BLOCKED on one account operation (Settings > Pages > Source = GitHub Actions); no other executable step remains; MANDATE_STATE stays OPEN until the site is served and check_published_view.py passes, so the watch reports BLOCKED, not a restart"
+ ],
  "AUTHORISED_QUEUE_20261102A": {
   "MANDATE_STATE": "OPEN",
   "OBJ_P0": {
@@ -118,8 +120,9 @@
    "steps": [
     {
      "step": "P9 freshness, battery on frozen SHA, safe_push, CI to verdict, cleanup, final report",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "candidate d6b01779: battery 185 of 186 suites passed; the 1 failure (test_repurposing_view, 2 tests) classified as regression introduced by P6 (a CSS class .md-badge made the shareable page contain \".md\", and two matching-block tables made the stacked-table count 147 not 145: the second is an assumption of the test superseded by the new block); fixed, full view suite exit 0 and audit-shareable --dynamic PASS on 2ebb5710; landed code SHA 2ebb5710 (safe_push gate PASS); CI Public release gate success 2026-11-02 17:25:53Z-18:12:33Z; the Publish workflow ran on the push and failed at configure-pages (token cannot create the Pages site); this commit is record only; worktrees, branches, stash and battery clone removed"
     }
    ]
   }
