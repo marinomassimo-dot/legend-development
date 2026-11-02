@@ -289,6 +289,83 @@ receipt; their versions and answers are in the rule's `evidence` field.
 
 ---
 
+## P4 — three properties, fixtures written before the verifier sees the change
+
+`framework/scripts/test_repurposing_provenance.py` (20 tests, `verbosity=2`, offline, **synthetic
+entries only**). It reuses the existing fixture shape of
+`framework/scripts/test_repurposing_group_transfer.py` (which is **not modified**: its 11 tests,
+including IT19's three named regressions, still pass unchanged) and adds only the entries the three
+properties need. The 65 regressions of `test_repurposing_coverage.py` also pass; one line of that
+suite changed, the closed set of `source_artefacts.tsv` rule prefixes, which now admits the two new
+rule kinds.
+
+| Property | What it pins |
+|---|---|
+| **P1 duplicated evidence** | a curated record and another database's copy of it are **one** assertion: both stay listed, they share one `assertion_key`, and `distinct_assertions()` counts one. Two different molecules on the same group record are **two** assertions (the record id alone is not the assertion). An unresolvable copy keeps its own key rather than claiming to be a copy of something |
+| **P2 improper transfer** | a record above the gene does not resolve its action to a member gene, **and neither does a copy of it**; a resolved copy inherits the *original's* abstention class and component counts, not a new one; a documented measurement is specific to its gene **and** to its molecule; a family-level document offered as a subunit waiver raises rather than being accepted |
+| **P3 unknown stays unknown** | an abstained row is **not excluded** and keeps compound, claim source, action, `action_stated`, limits and reason; an unstated action keeps the source's own reason in record and in copy; an unresolved WWOX coupling is not decided by pharmacology; every new reason has a class and an unknown reason still raises |
+
+### Why these cases discriminate
+
+Each fixture fails at least one plausible wrong implementation, which is what makes it a test rather
+than a restatement:
+
+| Fixture | The wrong implementation it catches |
+|---|---|
+| improper attribution through an intermediary (`GRPCOPY`) | a guard that inspects only the original source's rows and lets a republished copy through — **the exact IT19 residual**, and `test_the_intermediary_route_is_closed` asserts the `consistent` label *before* the fix so the fixture is shown to be capable of failing |
+| valid specific evidence kept (`DOCD` on the documented gene) | a guard that abstains on every group record, discarding information the module does have |
+| family/complex documented at the relevant level (`FAM`, `CPLX`, `NMDA`) | a guard keyed on "is it a group?" instead of "is it written at the level the module reasons about?" |
+| a copy of a **legitimate** record (`FAMCOPY`, and the resolved copy inside `CAT:FAM`) | an over-broad republication rule that abstains on every copy regardless of what it copies |
+| unknown pharmacology (`MOD`, `MODCOPY`) | a guard that writes a label, or a new reason, over a row the source itself left unstated |
+| WWOX role unresolved despite known pharmacology (`N-NOROLE`, empty role table) | a waiver leaking into the second judgment — what a compound does at a target deciding whether that target is coupled to the need |
+| opposing signal kept visible (`OPP`, `OPPCOPY`) | an asymmetric rule that protects an unfavourable label it would have removed if favourable, or that hides an exclusion |
+| molecule- and subunit-specificity (`DOCD` siblings, `OTHERMOL`) | a waiver read as a class permission or a compound-family permission |
+| a group-level document as a waiver (`test_a_group_level_document_is_refused`) | the table used to launder a class result into a subunit direction |
+| `test_the_waiver_matches_through_the_declared_parent_and_only_through_an_identifier` | identity by name creeping in through the parent/salt chain |
+| `test_a_malformed_documented_level_row_fails_whatever_gene_it_names` | a bad table row sitting unnoticed until it happens to name the gene under inspection (the shape is checked before the subject) |
+
+### Before / after, on the real catalogue
+
+From `provenance_effect.json` (three arms over all 23 needs; the `it19` arm was cross-checked against
+the committed `HEAD` copy of `repurposing_search.py` and agrees exactly), `coverage_summary.json` and
+`deepening_queue.tsv`.
+
+| | IT19 (as left) | IT20 (shipped) |
+|---|---|---|
+| Association rows listed | 5 240 | 5 240 |
+| **Unsupported directions still emitted** — directed rows through a republished claim whose original record level is not carried | **90** | **0** |
+| Directed rows, all sources | 336 | 247 |
+| **Justified abstentions** — `republished_claim_level_not_carried` | 0 | 90 |
+| `group_record_mostly_outside_module_targets` | 12 | 11 |
+| **Abstentions losing available information** — lost rows whose substance keeps no directed row in that need | — | **9** (terodiline, suloctidil, phloroglucinol × CACNA1G/H/I; the IT19 reference scored all three `indeterminable` or `unknown`) |
+| of which the IT19 reference supports | — | **0** |
+| **Specific evidence recovered** | 0 | **1** documented-level waiver (bepridil, CACNA1H), and 21 republished copies of legitimate records that keep their direction |
+| **Copies counted as distinct support** | 21 | **0** |
+| L2 coherent cells | 99 | 74 |
+| L2 opposed cells | 13 | 11 |
+| `consistent_mechanism_candidate` | 99 | 74 |
+| `insufficient_data` | 366 | 381 |
+| **Actual queue changes** | 34 rows | **28 rows**: 7 left (bepridil, esketamine, ethosuximide, memantine, phloroglucinol, suloctidil, terodiline), bepridil returned on the recovered evidence, **0 others entered**; `direction_basis` stopped reading a bare `gene_listing` for 20 compounds whose direction rests on a real record |
+
+Of the 7 that left the queue, 3 (ethosuximide, memantine, esketamine) were `dgidb_only` duplicate
+families whose ChEMBL sibling is already a **ranked unit** — duplicates of assessed work, not lost
+candidates.
+
+### What this does and does not establish
+
+No new evaluation set was built and **no IT17–IT19 experiment was rewritten**: the IT18 P4
+pre-registration, the IT19 P5 selection, reference, locked answers and dated results are inputs here
+and are untouched on disk. The figures above are **counts of the module's own behaviour on its own
+catalogue**, not an accuracy measurement: the IT19 reference is the only external yardstick in play,
+it covers 32 selected pairs chosen to discriminate attribution kinds, and it is reused, not extended.
+So **no claim of general superiority** follows from the four compounds that prompted the work, and
+none is made. What is established is narrower and checkable: a route by which a group-level assertion
+reached a member gene is closed, including through an intermediary; a specific documented measurement
+can re-license a direction for the one gene it was measured on; and a copy is no longer counted as a
+second support. The 20 property tests are the claim; the real-catalogue numbers are its size.
+
+---
+
 ## Reproduce
 
 ```bash

@@ -373,13 +373,21 @@ def documented_level_waiver(e: dict, t: dict, symbol: str, action_dir: str, rule
     No compound is named in code and the rule is deleted like any other row."""
     mols = molecule_ids(e, t)
     for r in rules:
-        if not r["rule"].startswith(DOCUMENTED_LEVEL_RULE) or r["symbol"].upper() != symbol.upper():
+        if not r["rule"].startswith(DOCUMENTED_LEVEL_RULE):
             continue
-        _, mol, act, lvl = r["rule"].split(":", 3)
+        # the rule's SHAPE is checked before its subject, so a malformed row fails on the first row that reads
+        # the table rather than only when it happens to name the gene under inspection
+        parts = r["rule"].split(":")
+        if len(parts) != 4:
+            raise ValueError(f"{r['rule']!r} is not target_level_documented:<MOLECULE>:<ACTION>:<LEVEL>")
+        _, mol, act, lvl = parts
         if lvl not in DOCUMENTED_LEVELS:
             raise ValueError(f"target_level_documented level {lvl!r} is not one of {sorted(DOCUMENTED_LEVELS)}: "
                              "a record above single-protein level cannot document a direction for one gene")
-        if mol not in mols or action_direction(act) != action_dir or action_direction(act) == "unresolved":
+        if action_direction(act) == "unresolved":
+            raise ValueError(f"target_level_documented action {act!r} states no up/down direction: "
+                             "a measurement with no direction cannot license one")
+        if r["symbol"].upper() != symbol.upper() or mol not in mols or action_direction(act) != action_dir:
             continue
         return (f"record-level abstention answered by a documented {lvl} measurement for {mol} on {symbol} "
                 f"with action {act}: {r['evidence']} (source_artefacts.tsv {r['rule']}). The direction on this "
