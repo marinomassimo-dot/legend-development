@@ -121,13 +121,13 @@
    "not_evaluable": 31,
    "pathway_member_only": 330
   },
-  "L2_coherent": 99,
+  "L2_coherent": 74,
   "L2_states": {
-   "coherent": 99,
-   "direction_unresolved": 404,
+   "coherent": 74,
+   "direction_unresolved": 431,
    "none": 64,
    "not_evaluable": 2004,
-   "opposed": 13
+   "opposed": 11
   },
   "L3_observed": 10,
   "L3_states": {
@@ -171,7 +171,8 @@
     "abstained_rows_by_class": {
      "action_not_stated": 196,
      "coupling_not_measured": 234,
-     "no_coupling_row": 2
+     "no_coupling_row": 2,
+     "republished_claim_level_not_carried": 55
     },
     "by_target_kind_records_families": {
      "disease_gene_product": {
@@ -207,11 +208,32 @@
     "cells_L3_observed_wwox_system": 1,
     "cells_L4_observed": 0,
     "direction": "down",
+    "direction_rows_by_effective_target_level": {
+     "gene_listing": {
+      "abstained": 147
+     },
+     "protein_complex": {
+      "consistent": 12
+     },
+     "protein_complex_group": {
+      "abstained": 101,
+      "consistent": 75,
+      "opposed": 12
+     },
+     "single_protein": {
+      "abstained": 126,
+      "consistent": 62,
+      "opposed": 27
+     },
+     "unresolved": {
+      "abstained": 113
+     }
+    },
     "direction_rows_by_target_level": {
      "gene_listing": {
-      "abstained": 227,
-      "consistent": 67,
-      "opposed": 9
+      "abstained": 282,
+      "consistent": 18,
+      "opposed": 3
      },
      "protein_complex": {
       "consistent": 10
@@ -231,9 +253,9 @@
      "placeholder": 1
     },
     "exploration_only": false,
-    "families_consistent": 63,
+    "families_consistent": 48,
     "families_incl_pathway_members": 186,
-    "families_opposed": 13,
+    "families_opposed": 11,
     "families_with_both_consistent_and_opposed": 0,
     "families_with_documented_link": 173,
     "headline_families_intervention_targets": 173,
@@ -243,6 +265,11 @@
     "nonhuman_chembl_rows_set_aside": 0,
     "records_incl_pathway_members": 192,
     "records_with_documented_link": 179,
+    "republished_rows": {
+     "original_record_level_not_carried": 113,
+     "original_record_resolved": 43,
+     "rows": 156
+    },
     "target_kinds": {
      "intervention_target": 9,
      "pathway_member": 1
@@ -286,6 +313,14 @@
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
+    "direction_rows_by_effective_target_level": {
+     "gene_listing": {
+      "abstained": 2
+     },
+     "single_protein": {
+      "abstained": 3
+     }
+    },
     "direction_rows_by_target_level": {
      "gene_listing": {
       "abstained": 2
@@ -308,6 +343,11 @@
     "nonhuman_chembl_rows_set_aside": 0,
     "records_incl_pathway_members": 5,
     "records_with_documented_link": 3,
+    "republished_rows": {
+     "original_record_level_not_carried": 0,
+     "original_record_resolved": 0,
+     "rows": 0
+    },
     "target_kinds": {
      "intervention_target": 1,
      "pathway_member": 1
@@ -351,6 +391,20 @@
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
+    "direction_rows_by_effective_target_level": {
+     "gene_listing": {
+      "abstained": 41
+     },
+     "protein_family": {
+      "abstained": 4
+     },
+     "single_protein": {
+      "abstained": 43
+     },
+     "unresolved": {
+      "abstained": 5
+     }
+    },
     "direction_rows_by_target_level": {
      "gene_listing": {
       "abstained": 47
@@ -376,6 +430,11 @@
     "nonhuman_chembl_rows_set_aside": 0,
     "records_incl_pathway_members": 85,
     "records_with_documented_link": 81,
+    "republished_rows": {
+     "original_record_level_not_carried": 5,
+     "original_record_resolved": 1,
+     "rows": 6
+    },
     "target_kinds": {
      "effector_constraint": 1,
      "intervention_target": 1,
@@ -421,6 +480,17 @@
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
+    "direction_rows_by_effective_target_level": {
+     "gene_listing": {
+      "abstained": 18
+     },
+     "single_protein": {
+      "abstained": 4
+     },
+     "unresolved": {
+      "abstained": 1
+     }
+    },
     "direction_rows_by_target_level": {
      "gene_listing": {
       "abstained": 19
@@ -445,6 +515,11 @@
     "nonhuman_chembl_rows_set_aside": 2,
     "records_incl_pathway_members": 12,
     "records_with_documented_link": 12,
+    "republished_rows": {
+     "original_record_level_not_carried": 1,
+     "original_record_resolved": 0,
+     "rows": 1
+    },
     "target_kinds": {
      "intervention_target": 1,
      "readout_marker": 6
@@ -488,6 +563,14 @@
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
+    "direction_rows_by_effective_target_level": {
+     "gene_listing": {
+      "abstained": 9
+     },
+     "single_protein": {
+      "abstained": 4
+     }
+    },
     "direction_rows_by_target_level": {
      "gene_listing": {
       "abstained": 9
@@ -512,6 +595,11 @@
     "nonhuman_chembl_rows_set_aside": 0,
     "records_incl_pathway_members": 14,
     "records_with_documented_link": 12,
+    "republished_rows": {
+     "original_record_level_not_carried": 0,
+     "original_record_resolved": 0,
+     "rows": 0
+    },
     "target_kinds": {
      "intervention_target": 7,
      "pathway_member": 2,
@@ -556,6 +644,14 @@
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
+    "direction_rows_by_effective_target_level": {
+     "gene_listing": {
+      "abstained": 6
+     },
+     "single_protein": {
+      "abstained": 6
+     }
+    },
     "direction_rows_by_target_level": {
      "gene_listing": {
       "abstained": 6
@@ -578,6 +674,11 @@
     "nonhuman_chembl_rows_set_aside": 0,
     "records_incl_pathway_members": 10,
     "records_with_documented_link": 10,
+    "republished_rows": {
+     "original_record_level_not_carried": 0,
+     "original_record_resolved": 0,
+     "rows": 0
+    },
     "target_kinds": {
      "identity_guard": 1,
      "intervention_target": 4
@@ -619,6 +720,7 @@
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
+    "direction_rows_by_effective_target_level": {},
     "direction_rows_by_target_level": {},
     "excluded_records_by_reason": {},
     "exploration_only": true,
@@ -634,6 +736,11 @@
     "nonhuman_chembl_rows_set_aside": 0,
     "records_incl_pathway_members": 5,
     "records_with_documented_link": 0,
+    "republished_rows": {
+     "original_record_level_not_carried": 0,
+     "original_record_resolved": 0,
+     "rows": 0
+    },
     "target_kinds": {
      "identity_guard": 1,
      "pathway_member": 3,
@@ -678,6 +785,20 @@
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
+    "direction_rows_by_effective_target_level": {
+     "gene_listing": {
+      "abstained": 177
+     },
+     "protein_complex": {
+      "abstained": 1
+     },
+     "single_protein": {
+      "abstained": 77
+     },
+     "unresolved": {
+      "abstained": 20
+     }
+    },
     "direction_rows_by_target_level": {
      "gene_listing": {
       "abstained": 204
@@ -705,6 +826,11 @@
     "nonhuman_chembl_rows_set_aside": 0,
     "records_incl_pathway_members": 185,
     "records_with_documented_link": 185,
+    "republished_rows": {
+     "original_record_level_not_carried": 20,
+     "original_record_resolved": 7,
+     "rows": 27
+    },
     "target_kinds": {
      "intervention_target": 1,
      "pathway_member": 1,
@@ -748,6 +874,7 @@
     "cells_L3_observed_wwox_system": 1,
     "cells_L4_observed": 0,
     "direction": "uncertain",
+    "direction_rows_by_effective_target_level": {},
     "direction_rows_by_target_level": {},
     "excluded_records_by_reason": {
      "placeholder": 1
@@ -765,6 +892,11 @@
     "nonhuman_chembl_rows_set_aside": 0,
     "records_incl_pathway_members": 70,
     "records_with_documented_link": 0,
+    "republished_rows": {
+     "original_record_level_not_carried": 0,
+     "original_record_resolved": 0,
+     "rows": 0
+    },
     "target_kinds": {
      "pathway_member": 1,
      "readout_marker": 1
@@ -809,6 +941,20 @@
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "restore",
+    "direction_rows_by_effective_target_level": {
+     "gene_listing": {
+      "abstained": 126
+     },
+     "protein_family": {
+      "abstained": 7
+     },
+     "single_protein": {
+      "abstained": 148
+     },
+     "unresolved": {
+      "abstained": 37
+     }
+    },
     "direction_rows_by_target_level": {
      "gene_listing": {
       "abstained": 166
@@ -836,6 +982,11 @@
     "nonhuman_chembl_rows_set_aside": 0,
     "records_incl_pathway_members": 214,
     "records_with_documented_link": 214,
+    "republished_rows": {
+     "original_record_level_not_carried": 37,
+     "original_record_resolved": 3,
+     "rows": 40
+    },
     "target_kinds": {
      "intervention_target": 1,
      "readout_marker": 5
@@ -879,6 +1030,23 @@
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
+    "direction_rows_by_effective_target_level": {
+     "gene_listing": {
+      "abstained": 488
+     },
+     "protein_complex_group": {
+      "abstained": 4
+     },
+     "protein_family": {
+      "abstained": 10
+     },
+     "single_protein": {
+      "abstained": 157
+     },
+     "unresolved": {
+      "abstained": 43
+     }
+    },
     "direction_rows_by_target_level": {
      "gene_listing": {
       "abstained": 542
@@ -909,6 +1077,11 @@
     "nonhuman_chembl_rows_set_aside": 0,
     "records_incl_pathway_members": 521,
     "records_with_documented_link": 521,
+    "republished_rows": {
+     "original_record_level_not_carried": 43,
+     "original_record_resolved": 11,
+     "rows": 54
+    },
     "target_kinds": {
      "intervention_target": 9,
      "readout_marker": 3
@@ -956,6 +1129,20 @@
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
+    "direction_rows_by_effective_target_level": {
+     "gene_listing": {
+      "abstained": 7
+     },
+     "protein_family": {
+      "abstained": 4
+     },
+     "single_protein": {
+      "abstained": 6
+     },
+     "unresolved": {
+      "abstained": 4
+     }
+    },
     "direction_rows_by_target_level": {
      "gene_listing": {
       "abstained": 11
@@ -984,6 +1171,11 @@
     "nonhuman_chembl_rows_set_aside": 0,
     "records_incl_pathway_members": 156,
     "records_with_documented_link": 8,
+    "republished_rows": {
+     "original_record_level_not_carried": 4,
+     "original_record_resolved": 0,
+     "rows": 4
+    },
     "target_kinds": {
      "intervention_target": 4,
      "pathway_member": 4,
@@ -1028,6 +1220,20 @@
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
+    "direction_rows_by_effective_target_level": {
+     "gene_listing": {
+      "abstained": 862
+     },
+     "protein_protein_interaction": {
+      "abstained": 2
+     },
+     "single_protein": {
+      "abstained": 12
+     },
+     "unresolved": {
+      "abstained": 6
+     }
+    },
     "direction_rows_by_target_level": {
      "gene_listing": {
       "abstained": 868
@@ -1055,6 +1261,11 @@
     "nonhuman_chembl_rows_set_aside": 0,
     "records_incl_pathway_members": 862,
     "records_with_documented_link": 862,
+    "republished_rows": {
+     "original_record_level_not_carried": 6,
+     "original_record_resolved": 0,
+     "rows": 6
+    },
     "target_kinds": {
      "intervention_target": 2
     },
@@ -1093,6 +1304,7 @@
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
+    "direction_rows_by_effective_target_level": {},
     "direction_rows_by_target_level": {},
     "excluded_records_by_reason": {},
     "exploration_only": true,
@@ -1108,6 +1320,11 @@
     "nonhuman_chembl_rows_set_aside": 0,
     "records_incl_pathway_members": 4,
     "records_with_documented_link": 0,
+    "republished_rows": {
+     "original_record_level_not_carried": 0,
+     "original_record_resolved": 0,
+     "rows": 0
+    },
     "target_kinds": {
      "pathway_member": 1
     },
@@ -1117,7 +1334,8 @@
    "NEED-SEIZURE-CONTROL-SYMPTOMATIC": {
     "abstained_rows_by_class": {
      "action_not_stated": 50,
-     "coupling_not_measured": 32
+     "coupling_not_measured": 32,
+     "republished_claim_level_not_carried": 1
     },
     "by_target_kind_records_families": {
      "disease_gene_product": {
@@ -1155,10 +1373,27 @@
     "cells_L3_observed_wwox_system": 2,
     "cells_L4_observed": 1,
     "direction": "down",
+    "direction_rows_by_effective_target_level": {
+     "gene_listing": {
+      "abstained": 36
+     },
+     "protein_complex_group": {
+      "abstained": 10
+     },
+     "protein_family": {
+      "abstained": 9
+     },
+     "single_protein": {
+      "abstained": 10,
+      "consistent": 4
+     },
+     "unresolved": {
+      "abstained": 18
+     }
+    },
     "direction_rows_by_target_level": {
      "gene_listing": {
-      "abstained": 53,
-      "consistent": 1
+      "abstained": 54
      },
      "protein_complex_group": {
       "abstained": 10
@@ -1187,6 +1422,11 @@
     "nonhuman_chembl_rows_set_aside": 0,
     "records_incl_pathway_members": 63,
     "records_with_documented_link": 63,
+    "republished_rows": {
+     "original_record_level_not_carried": 18,
+     "original_record_resolved": 0,
+     "rows": 18
+    },
     "target_kinds": {
      "intervention_target": 2
     },
@@ -1228,6 +1468,7 @@
     "cells_L3_observed_wwox_system": 1,
     "cells_L4_observed": 1,
     "direction": "restore",
+    "direction_rows_by_effective_target_level": {},
     "direction_rows_by_target_level": {},
     "excluded_records_by_reason": {},
     "exploration_only": false,
@@ -1243,6 +1484,11 @@
     "nonhuman_chembl_rows_set_aside": 0,
     "records_incl_pathway_members": 0,
     "records_with_documented_link": 0,
+    "republished_rows": {
+     "original_record_level_not_carried": 0,
+     "original_record_resolved": 0,
+     "rows": 0
+    },
     "target_kinds": {},
     "targets": 0,
     "wwox_system_observations": 2
@@ -1250,7 +1496,8 @@
    "NEED-T-TYPE-CALCIUM": {
     "abstained_rows_by_class": {
      "action_not_stated": 88,
-     "group_record_mostly_outside_module_targets": 12
+     "group_record_mostly_outside_module_targets": 11,
+     "republished_claim_level_not_carried": 34
     },
     "by_target_kind_records_families": {
      "disease_gene_product": {
@@ -1284,13 +1531,32 @@
     "cells_L3_observed_wwox_system": 1,
     "cells_L4_observed": 0,
     "direction": "down",
-    "direction_rows_by_target_level": {
+    "direction_rows_by_effective_target_level": {
      "gene_listing": {
-      "abstained": 64,
-      "consistent": 34
+      "abstained": 46
      },
      "protein_complex_group": {
-      "abstained": 30
+      "abstained": 29,
+      "consistent": 1
+     },
+     "protein_family": {
+      "abstained": 6,
+      "consistent": 21
+     },
+     "single_protein": {
+      "consistent": 33
+     },
+     "unresolved": {
+      "abstained": 52
+     }
+    },
+    "direction_rows_by_target_level": {
+     "gene_listing": {
+      "abstained": 98
+     },
+     "protein_complex_group": {
+      "abstained": 29,
+      "consistent": 1
      },
      "protein_family": {
       "abstained": 6,
@@ -1304,7 +1570,7 @@
      "placeholder": 1
     },
     "exploration_only": false,
-    "families_consistent": 32,
+    "families_consistent": 22,
     "families_incl_pathway_members": 65,
     "families_opposed": 0,
     "families_with_both_consistent_and_opposed": 0,
@@ -1316,6 +1582,11 @@
     "nonhuman_chembl_rows_set_aside": 0,
     "records_incl_pathway_members": 67,
     "records_with_documented_link": 67,
+    "republished_rows": {
+     "original_record_level_not_carried": 52,
+     "original_record_resolved": 0,
+     "rows": 52
+    },
     "target_kinds": {
      "intervention_target": 3
     },
@@ -1359,6 +1630,20 @@
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
+    "direction_rows_by_effective_target_level": {
+     "gene_listing": {
+      "abstained": 2
+     },
+     "protein_family": {
+      "abstained": 2
+     },
+     "single_protein": {
+      "abstained": 16
+     },
+     "unresolved": {
+      "abstained": 2
+     }
+    },
     "direction_rows_by_target_level": {
      "gene_listing": {
       "abstained": 4
@@ -1386,6 +1671,11 @@
     "nonhuman_chembl_rows_set_aside": 0,
     "records_incl_pathway_members": 52,
     "records_with_documented_link": 12,
+    "republished_rows": {
+     "original_record_level_not_carried": 2,
+     "original_record_resolved": 0,
+     "rows": 2
+    },
     "target_kinds": {
      "identity_guard": 1,
      "intervention_target": 2,
@@ -1431,6 +1721,11 @@
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "up",
+    "direction_rows_by_effective_target_level": {
+     "gene_listing": {
+      "abstained": 3
+     }
+    },
     "direction_rows_by_target_level": {
      "gene_listing": {
       "abstained": 3
@@ -1452,6 +1747,11 @@
     "nonhuman_chembl_rows_set_aside": 0,
     "records_incl_pathway_members": 3,
     "records_with_documented_link": 3,
+    "republished_rows": {
+     "original_record_level_not_carried": 0,
+     "original_record_resolved": 0,
+     "rows": 0
+    },
     "target_kinds": {
      "disease_gene_product": 1
     },
@@ -1495,6 +1795,11 @@
     "cells_L3_observed_wwox_system": 2,
     "cells_L4_observed": 2,
     "direction": "restore",
+    "direction_rows_by_effective_target_level": {
+     "gene_listing": {
+      "abstained": 3
+     }
+    },
     "direction_rows_by_target_level": {
      "gene_listing": {
       "abstained": 3
@@ -1516,6 +1821,11 @@
     "nonhuman_chembl_rows_set_aside": 0,
     "records_incl_pathway_members": 3,
     "records_with_documented_link": 3,
+    "republished_rows": {
+     "original_record_level_not_carried": 0,
+     "original_record_resolved": 0,
+     "rows": 0
+    },
     "target_kinds": {
      "disease_gene_product": 1
     },
@@ -1562,6 +1872,11 @@
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "up",
+    "direction_rows_by_effective_target_level": {
+     "gene_listing": {
+      "abstained": 3
+     }
+    },
     "direction_rows_by_target_level": {
      "gene_listing": {
       "abstained": 3
@@ -1583,6 +1898,11 @@
     "nonhuman_chembl_rows_set_aside": 0,
     "records_incl_pathway_members": 45,
     "records_with_documented_link": 3,
+    "republished_rows": {
+     "original_record_level_not_carried": 0,
+     "original_record_resolved": 0,
+     "rows": 0
+    },
     "target_kinds": {
      "disease_gene_product": 1,
      "pathway_member": 5
@@ -1627,6 +1947,11 @@
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "restore",
+    "direction_rows_by_effective_target_level": {
+     "gene_listing": {
+      "abstained": 3
+     }
+    },
     "direction_rows_by_target_level": {
      "gene_listing": {
       "abstained": 3
@@ -1648,6 +1973,11 @@
     "nonhuman_chembl_rows_set_aside": 0,
     "records_incl_pathway_members": 3,
     "records_with_documented_link": 3,
+    "republished_rows": {
+     "original_record_level_not_carried": 0,
+     "original_record_resolved": 0,
+     "rows": 0
+    },
     "target_kinds": {
      "disease_gene_product": 1
     },
@@ -1690,6 +2020,11 @@
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "restore",
+    "direction_rows_by_effective_target_level": {
+     "gene_listing": {
+      "abstained": 3
+     }
+    },
     "direction_rows_by_target_level": {
      "gene_listing": {
       "abstained": 3
@@ -1711,6 +2046,11 @@
     "nonhuman_chembl_rows_set_aside": 0,
     "records_incl_pathway_members": 3,
     "records_with_documented_link": 3,
+    "republished_rows": {
+     "original_record_level_not_carried": 0,
+     "original_record_resolved": 0,
+     "rows": 0
+    },
     "target_kinds": {
      "disease_gene_product": 1
     },
@@ -1763,34 +2103,34 @@
    "source_queried_without_result"
   ],
   "by_disposition": {
-   "consistent_mechanism_candidate": 99,
+   "consistent_mechanism_candidate": 74,
    "exploration_candidate": 467,
-   "insufficient_data": 366,
+   "insufficient_data": 381,
    "no_catalogue_link_found": 14,
    "opposite_mechanism": 2,
    "source_queried_without_result": 5
   },
   "by_disposition_cells": {
-   "consistent_mechanism_candidate": 99,
+   "consistent_mechanism_candidate": 74,
    "exploration_candidate": 467,
-   "insufficient_data": 366,
+   "insufficient_data": 381,
    "no_catalogue_link_found": 14,
    "opposite_mechanism": 2,
    "source_queried_without_result": 5
   },
   "by_disposition_distinct_families_or_rows": {
-   "consistent_mechanism_candidate": 99,
+   "consistent_mechanism_candidate": 74,
    "exploration_candidate": 416,
-   "insufficient_data": 324,
+   "insufficient_data": 330,
    "no_catalogue_link_found": 12,
    "opposite_mechanism": 2,
    "source_queried_without_result": 4
   },
   "exploration_flagged": 596,
   "pairs_not_prioritised": {
-   "not_prioritised_no_card_no_coherence_no_approval_or_access": 1631
+   "not_prioritised_no_card_no_coherence_no_approval_or_access": 1641
   },
-  "records": 953
+  "records": 943
  },
  "schema": "legend.wwox.coverage/1",
  "search_completeness": {

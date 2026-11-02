@@ -1,0 +1,91 @@
+need	target	catalogue_id	compound	link_source	claim_source	action_raw	target_level	effective_target_level	original_record	consistency_before	consistency_after	abstention_class_after
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN1	CAT:DGIDB:0c06b5be21bb	Felbamate	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN1	CAT:DGIDB:12763ab6f922	Evt-101	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN1	CAT:DGIDB:16efa988f8ef	Perzinfotel	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN1	CAT:DGIDB:375a5f9081f2	Traxoprodil	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN1	CAT:DGIDB:435e0b231ae6	Apimostinel	DGIdb	ChEMBL	agonist	gene_listing	unresolved		opposed	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN1	CAT:DGIDB:49ec8aa9cde9	Orphenadrine Citrate	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN1	CAT:DGIDB:50a16e084956	Amantadine Hydrochloride	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN1	CAT:DGIDB:80196c332448	Ketamine Hydrochloride	DGIdb	ChEMBL	negative modulator	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN1	CAT:DGIDB:98e9b0689fe4	Neboglamine	DGIdb	ChEMBL	positive modulator	gene_listing	unresolved		opposed	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN1	CAT:DGIDB:9c85048f5868	Esketamine	DGIdb	ChEMBL	negative modulator	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN1	CAT:DGIDB:9c85048f5868	Esketamine	DGIdb	ChEMBL	negative modulator	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN1	CAT:DGIDB:ad3e4f19b28e	Lanicemine	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN1	CAT:DGIDB:bc4c80984e38	Neramexane Mesylate	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN1	CAT:DGIDB:c3bb8a601e8c	Delucemine	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN1	CAT:DGIDB:d34fc2e86617	Av-101	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN1	CAT:DGIDB:d4a136aae03c	Acamprosate Calcium	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN1	CAT:DGIDB:d87959cfb914	Memantine Hydrochloride	DGIdb	ChEMBL	negative modulator	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN1	CAT:DGIDB:eab00dc4a194	Cns-5161	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN1	CAT:DGIDB:f7b5eb49f754	Rislenemdaz	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2A	CAT:DGIDB:0c06b5be21bb	Felbamate	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2A	CAT:DGIDB:16efa988f8ef	Perzinfotel	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2A	CAT:DGIDB:255ce6a4a3eb	Dextromethorphan Polistirex	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2A	CAT:DGIDB:435e0b231ae6	Apimostinel	DGIdb	ChEMBL	agonist	gene_listing	unresolved		opposed	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2A	CAT:DGIDB:49ec8aa9cde9	Orphenadrine Citrate	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2A	CAT:DGIDB:50a16e084956	Amantadine Hydrochloride	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2A	CAT:DGIDB:80196c332448	Ketamine Hydrochloride	DGIdb	ChEMBL	negative modulator	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2A	CAT:DGIDB:98e9b0689fe4	Neboglamine	DGIdb	ChEMBL	positive modulator	gene_listing	unresolved		opposed	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2A	CAT:DGIDB:9c85048f5868	Esketamine	DGIdb	ChEMBL	negative modulator	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2A	CAT:DGIDB:9c85048f5868	Esketamine	DGIdb	ChEMBL	negative modulator	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2A	CAT:DGIDB:ad3e4f19b28e	Lanicemine	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2A	CAT:DGIDB:bc4c80984e38	Neramexane Mesylate	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2A	CAT:DGIDB:c3bb8a601e8c	Delucemine	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2A	CAT:DGIDB:d34fc2e86617	Av-101	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2A	CAT:DGIDB:d4a136aae03c	Acamprosate Calcium	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2A	CAT:DGIDB:d87959cfb914	Memantine Hydrochloride	DGIdb	ChEMBL	negative modulator	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2A	CAT:DGIDB:eab00dc4a194	Cns-5161	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2B	CAT:DGIDB:0c06b5be21bb	Felbamate	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2B	CAT:DGIDB:12763ab6f922	Evt-101	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2B	CAT:DGIDB:16efa988f8ef	Perzinfotel	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2B	CAT:DGIDB:375a5f9081f2	Traxoprodil	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2B	CAT:DGIDB:435e0b231ae6	Apimostinel	DGIdb	ChEMBL	agonist	gene_listing	unresolved		opposed	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2B	CAT:DGIDB:49ec8aa9cde9	Orphenadrine Citrate	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2B	CAT:DGIDB:50a16e084956	Amantadine Hydrochloride	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2B	CAT:DGIDB:80196c332448	Ketamine Hydrochloride	DGIdb	ChEMBL	negative modulator	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2B	CAT:DGIDB:98e9b0689fe4	Neboglamine	DGIdb	ChEMBL	positive modulator	gene_listing	unresolved		opposed	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2B	CAT:DGIDB:9c85048f5868	Esketamine	DGIdb	ChEMBL	negative modulator	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2B	CAT:DGIDB:9c85048f5868	Esketamine	DGIdb	ChEMBL	negative modulator	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2B	CAT:DGIDB:ad3e4f19b28e	Lanicemine	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2B	CAT:DGIDB:bc4c80984e38	Neramexane Mesylate	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2B	CAT:DGIDB:c3bb8a601e8c	Delucemine	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2B	CAT:DGIDB:d34fc2e86617	Av-101	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2B	CAT:DGIDB:d4a136aae03c	Acamprosate Calcium	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2B	CAT:DGIDB:d87959cfb914	Memantine Hydrochloride	DGIdb	ChEMBL	negative modulator	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2B	CAT:DGIDB:eab00dc4a194	Cns-5161	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2B	CAT:DGIDB:f7b5eb49f754	Rislenemdaz	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-SEIZURE-CONTROL-SYMPTOMATIC	ABAT	CAT:DGIDB:358b8a817686	Vigabatrin	DGIdb	ChEMBL	inhibitor	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1G	CAT:DGIDB:19749060be64	Phloroglucinol	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1G	CAT:DGIDB:2c9c9be867db	Mibefradil Dihydrochloride	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1G	CAT:DGIDB:389fa6870ff8	Paramethadione	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1G	CAT:DGIDB:5626675dc6fe	Terodiline Hydrochloride	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1G	CAT:DGIDB:6998a1a2d947	Ethosuximide	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1G	CAT:DGIDB:6abc18fc4ac1	Suloctidil	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1G	CAT:DGIDB:82d11eef5cb3	Methsuximide	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1G	CAT:DGIDB:8e01cef4cadd	Trimethadione	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1G	CAT:DGIDB:b811c040b8a4	Apinocaltamide	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1G	CAT:DGIDB:df7564f65e1c	Bepridil Hydrochloride	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1G	CAT:DGIDB:e157e3677373	Phensuximide	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1H	CAT:DGIDB:19749060be64	Phloroglucinol	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1H	CAT:DGIDB:2c9c9be867db	Mibefradil Dihydrochloride	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1H	CAT:DGIDB:389fa6870ff8	Paramethadione	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1H	CAT:DGIDB:5626675dc6fe	Terodiline Hydrochloride	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1H	CAT:DGIDB:651044756fbb	Abt-639	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1H	CAT:DGIDB:6998a1a2d947	Ethosuximide	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1H	CAT:DGIDB:6abc18fc4ac1	Suloctidil	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1H	CAT:DGIDB:82d11eef5cb3	Methsuximide	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1H	CAT:DGIDB:8e01cef4cadd	Trimethadione	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1H	CAT:DGIDB:b811c040b8a4	Apinocaltamide	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1H	CAT:DGIDB:df7564f65e1c	Bepridil Hydrochloride	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1H	CAT:DGIDB:e157e3677373	Phensuximide	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1I	CAT:DGIDB:19749060be64	Phloroglucinol	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1I	CAT:DGIDB:2c9c9be867db	Mibefradil Dihydrochloride	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1I	CAT:DGIDB:389fa6870ff8	Paramethadione	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1I	CAT:DGIDB:5626675dc6fe	Terodiline Hydrochloride	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1I	CAT:DGIDB:6998a1a2d947	Ethosuximide	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1I	CAT:DGIDB:6abc18fc4ac1	Suloctidil	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1I	CAT:DGIDB:82d11eef5cb3	Methsuximide	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1I	CAT:DGIDB:8e01cef4cadd	Trimethadione	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1I	CAT:DGIDB:b811c040b8a4	Apinocaltamide	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1I	CAT:DGIDB:df7564f65e1c	Bepridil Hydrochloride	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried
+NEED-T-TYPE-CALCIUM	CACNA1I	CAT:DGIDB:e157e3677373	Phensuximide	DGIdb	ChEMBL	blocker	gene_listing	unresolved		consistent	direction_unresolved	republished_claim_level_not_carried

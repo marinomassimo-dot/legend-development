@@ -929,9 +929,33 @@ class MatchingDirection(unittest.TestCase):
         cls.md = rk.matching_direction(cat=state()["cat"])
         cls.p = {x["pair_id"]: x for x in cls.md["pairs"]}
 
+    # IT20 P3: one pair's live label legitimately differs from the answers IT19 P5 committed, because the
+    # engine gained a datum IT19 named as missing. IT19's dated table is NOT rewritten -- a dated result
+    # stays what it was -- so the drift detector below keeps comparing against it and the single intended
+    # difference is DECLARED here, with its reason. Every other pair must still match exactly, and a
+    # declaration that no longer corresponds to a real difference fails too, so this cannot rot into a
+    # blanket exemption.
+    DECLARED_CHANGES_SINCE_IT19_P5 = {
+        "P08": ("direction_unresolved", "mixed:consistent|direction_unresolved",
+                "bepridil: coverage/source_artefacts.tsv now carries the documented single_protein measurement "
+                "on CACNA1H (PubMed:15855830, IC50 0.4 umol/l at -70 mV, functional patch clamp), so the "
+                "record-level abstention is answered for CACNA1H while CACNA1G and CACNA1I stay "
+                "group_record_mostly_outside_module_targets -- Cav3.2 data do not authorise a Cav3.1 direction. "
+                "See matching_it20_engine_20261102/README.md, P3."),
+    }
+
     def test_live_labels_equal_the_guarded_answers_committed_by_it19_p5(self):
         g = {r["pair_id"]: r["active_consistency"] for r in rk.read_tsv(rk.MATCHING_REF / "module_answers_guarded.tsv")}
-        self.assertEqual({k: v["label"] for k, v in self.p.items()}, g)
+        live = {k: v["label"] for k, v in self.p.items()}
+        self.assertEqual(set(live), set(g), "the pair set itself must not drift")
+        differ = {k for k in g if live[k] != g[k]}
+        self.assertEqual(differ, set(self.DECLARED_CHANGES_SINCE_IT19_P5),
+                         "a live label drifted from the IT19 P5 answers without being declared above, "
+                         "or a declaration no longer corresponds to a real difference")
+        for pid, (was, now, _why) in self.DECLARED_CHANGES_SINCE_IT19_P5.items():
+            self.assertEqual(g[pid], was, f"{pid}: the IT19 P5 table no longer says what the declaration claims")
+            self.assertEqual(live[pid], now, f"{pid}: the declared new label is not what the engine writes")
+        self.assertEqual({k: live[k] for k in g if k not in differ}, {k: g[k] for k in g if k not in differ})
 
     def test_counts_match_the_reference_package(self):
         c = self.md["counts"]

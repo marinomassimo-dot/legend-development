@@ -1,0 +1,46 @@
+{
+ "arms": {
+  "it19_neither_row": {
+   "abstained_group_record_mostly_outside_module_targets": 12,
+   "abstained_republished_claim_level_not_carried": 0,
+   "directed": 336,
+   "documented_level_waivers": 0,
+   "rows": 5240
+  },
+  "p2_republication_only": {
+   "abstained_group_record_mostly_outside_module_targets": 11,
+   "abstained_republished_claim_level_not_carried": 0,
+   "directed": 337,
+   "documented_level_waivers": 1,
+   "rows": 5240
+  },
+  "shipped_both_rows": {
+   "abstained_group_record_mostly_outside_module_targets": 11,
+   "abstained_republished_claim_level_not_carried": 90,
+   "directed": 247,
+   "documented_level_waivers": 1,
+   "rows": 5240
+  }
+ },
+ "arms_note": "`before`/`after` below isolate the P2 republication datum (both arms carry the P3 documented-level row). `arms` separates the two: it19_neither_row is the state IT19 left.",
+ "association_rows_total": 5240,
+ "copies_no_longer_counted_as_distinct_support": 21,
+ "directed_rows_after": 247,
+ "directed_rows_before": 337,
+ "lost_by_abstention_class": {
+  "republished_claim_level_not_carried": 90
+ },
+ "lost_rows_whose_substance_name_keeps_no_directed_row_in_that_need": 9,
+ "note": "a row never leaves the listing: it keeps its compound, its claim source, its action and its reason. `lost a direction` means the row no longer asserts one, not that it was removed.",
+ "republished_rows": {
+  "original_record_level_not_carried": 486,
+  "original_record_resolved_through_an_identifier": 80,
+  "resolved_and_abstained_because_the_original_record_is_held_back": 0,
+  "resolved_and_still_directed": 21,
+  "rows": 566
+ },
+ "rows_that_gained_a_direction": 0,
+ "rows_that_lost_a_direction": 90,
+ "rows_unchanged_by_the_datum": 5150,
+ "what_this_is": "effect of the republication datum on the active path; one row per association, real catalogue"
+}
