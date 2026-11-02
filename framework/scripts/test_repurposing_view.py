@@ -2036,7 +2036,7 @@ class It7P7Data(unittest.TestCase):
         self.assertIn("details>summary{padding:3px 0;min-height:24px}", css)
         for t in re.findall(r'<table class="tbl[^"]*stk">.*?</table>', self.h, re.S):
             self.assertIn("data-label=", t)
-        self.assertEqual(len(re.findall(r'<table class="tbl[^"]*stk">', self.h)), 3 + 2 * len(self.cur["ranking"]["units"]) + 4)     # (IT10 P5: +1, the IT10 qualification records table) three IT7 tables; IT8 P9: one pathway and one member-evidence table per ranked entry, the uncarded items and the triggers
+        self.assertEqual(len(re.findall(r'<table class="tbl[^"]*stk">', self.h)), 3 + 2 * len(self.cur["ranking"]["units"]) + 4 + 2)     # (IT19 P6: +2, the counts-per-need table and the pairs table of the matching-direction block) (IT10 P5: +1, the IT10 qualification records table) three IT7 tables; IT8 P9: one pathway and one member-evidence table per ranked entry, the uncarded items and the triggers
 
     def test_p4_matrix_checker_passes(self):
         r = subprocess.run([sys.executable, "-I", str(DR / rv.P4_DIR / "check_context_matrix.py")], capture_output=True, text=True, timeout=120)

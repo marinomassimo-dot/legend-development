@@ -3927,7 +3927,7 @@ def render_matching_direction(md: dict, full: bool, needs: list[dict]) -> str:
             U["md_lim_2"], U["md_lim_3"], U["md_lim_4"], U["md_lim_5"].format(i=C["determinate_independent"], d=C["determinate"])]
     bl, br, ba = C["by_live_label"], C["by_reference_label"], C["by_agreement"]
     ad = ba.get("asserted_and_agrees", 0) + ba.get("asserted_and_disagrees", 0)
-    head = (f'<details class="inl" id="matching-direction"><summary>{E(U["md_h"])} <span class="md-badge">{E(U["md_badge"])}</span></summary>'
+    head = (f'<details class="inl" id="matching-direction"><summary>{E(U["md_h"])} <span class="mx-badge">{E(U["md_badge"])}</span></summary>'
             f'<p class="mini"><b>{E(U["md_badge"])}.</b> {E(U["md_lead"])}</p>'
             f'<div class="note"><b>{E(U["md_lim_h"])}.</b><ul class="mini">' + "".join(f'<li>{E(x)}</li>' for x in lims) + '</ul></div>'
             f'<p class="mini">{E(U["md_counts"].format(p=C["pairs"], a=bl.get("compatible", 0), o=bl.get("opposite", 0), x=bl.get("abstained", 0), rc=br.get("compatible", 0), ro=br.get("opposite", 0), ri=br.get("indeterminable", 0), ru=br.get("unknown", 0), ag=ba.get("asserted_and_agrees", 0), ad=ad, g=C["changed_by_group_guard"]))}</p>'
