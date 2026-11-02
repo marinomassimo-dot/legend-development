@@ -16,7 +16,7 @@
  "DEFAULTS_TAKEN": [],
  "STOP_LOG": [],
  "AUTHORISED_QUEUE_20261101E": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P0": {
    "order": 1,
    "steps": [
@@ -97,8 +97,9 @@
    "steps": [
     {
      "step": "P7 freshness check, battery on frozen SHA, safe_push, CI to verdict, cleanup, final report",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "candidate a11de927: battery 181 of 182 suites passed (PASS elsewhere), 1 failure = ranking.json stale after two new receipts (classified: derived surface out of date, real incoherence; fixed by regeneration, order digest unchanged, suite 65/65 on the fix); landed code SHA 07ed2ede (a11de927 + ranking regeneration + record), safe_push gate PASS; CI Public release gate success 2026-11-02 08:31:40Z-09:00:39Z; this commit is record-only; worktrees/branches/stash/battery clones removed"
     }
    ]
   }
