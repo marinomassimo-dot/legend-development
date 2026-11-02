@@ -15,7 +15,7 @@
   "2026-11-02: P3 dashboard BLOCKED on one account operation (Settings > Pages > Source = GitHub Actions); no other executable step remains; MANDATE_STATE stays OPEN until the site is served and check_published_view.py passes, so the watch reports BLOCKED, not a restart"
  ],
  "AUTHORISED_QUEUE_20261102A": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P0": {
    "order": 1,
    "steps": [
@@ -54,9 +54,9 @@
    "steps": [
     {
      "step": "P3 dashboard online: Pages, workflow, check_published_view",
-     "status": "BLOCKED",
+     "status": "DONE",
      "owner": "orchestrator",
-     "blocker": "GitHub Pages site cannot be created by the workflow token (\"Resource not accessible by integration\", run 41425555798 job 125211292592); residual account operation: Settings, Pages, Source = GitHub Actions (https://github.com/marinomassimo-dot/legend-development/settings/pages), then re-run or push to the package; authorisation is not the issue"
+     "evidence": "2026-11-02 ~21:30 UTC the site answers HTTP 200 at https://marinomassimo-dot.github.io/legend-development/ (HTTP 404 at the previous check); the Publish workflow ran green on code SHA 2ebb5710 (run created 17:25:53Z, re-run after the account operation); served index.html sha256 dbba6eb8d44a7e70... equals shareable_package/index.html at 2ebb5710; check_published_view.py RESULT PASS 28 checks 0 failed; viewports 360/390/768/1280 px 17 scenarios each, no horizontal overflow; audit-shareable --dynamic PASS on the same bytes; zero spend (public repository, GitHub Actions source). The account operation (Pages source) was done by the operator or their delegate, not by this session."
     }
    ]
   },
