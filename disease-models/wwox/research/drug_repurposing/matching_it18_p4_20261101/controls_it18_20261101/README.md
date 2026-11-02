@@ -36,7 +36,7 @@ Controls not run, because P4 already has them by design: same candidate universe
 
 **Earlier records.** `../../scout_it8_20261029.md` G-e (registration: TRIAL the design, not the data: (1) hit rate per evidence line, (2) hub exclusion from shared-evidence lines, (3) leakage check of known answers); `../../scout_it8_verifier_20261030.md` (licences and README numbers confirmed; the "0.59 before, 0.37 strict" leak figure not located); `../../complementary_it10_p24_20261031/README.md` and `../../ops_it11_p5_20261031/scouting_it11.md` (cited as a negative LINCS result; TRIAL "stands"). **Proposed:** all three design items. **Implemented before today:** none found (git grep over the repository: no hub-exclusion, per-line hit-rate or leakage-audit code citing OREVID). **Proved:** only the licence facts and that the author's documents contain the quoted numbers; no OREVID number was reproduced at any point.
 
-**Revision now vs examined.** IT8 read the GitHub repository at the 2026-10-29 push (preprint v3, Zenodo `10.5281/zenodo.23323226`). Current: commit `bbff661a994e` (2026-10-30, release v1.3.0, new Zenodo `10.5281/zenodo.23800955`; OREVID predictions changed by two gene-level columns). Hugging Face `orevid/orevid-bench` is at `115ab61a9887` (2026-10-22), older than v1.3.
+**Revision now vs examined.** IT8 read the GitHub repository at the 2026-10-29 push (preprint v3, Zenodo `10.5281/zenodo.23323226`). Current: commit `bbff661a994e` (2026-10-30, a commit after tag v1.3.0 which points to `7c1cc0bb`; the later commit attached the prediction zip, new Zenodo `10.5281/zenodo.23800955` for v1.3.0; OREVID predictions changed by two gene-level columns). Hugging Face `orevid/orevid-bench` is at `115ab61a9887` (2026-10-22), older than v1.3.
 
 **The three artefacts do not carry one number set** (author claims, none reproduced here):
 
@@ -45,9 +45,9 @@ Controls not run, because P4 already has them by design: same candidate universe
 | zero-shot Recall@100, OREVID | 0.811 | 0.811 | 0.812 | 0.812 |
 | disease areas, OREVID | — | 0.617 | 0.627 | 0.627 |
 | "fair" zero-shot vs TxGNN | 0.809 vs 0.421 | — | 0.809 vs 0.421 | 0.815 vs 0.421 |
-| popularity baseline, zero-shot | — | — | 0.358 | 0.358 |
+| popularity baseline, zero-shot | — | — | 0.358 (carried by the HF card too) | 0.358 |
 
-The HF `results.json` files differ byte-wise from the GitHub ones. No OREVID figure is used by LEGEND and none transfers to LEGEND or WOREE (different task: disease-to-drug ranking over PrimeKG; WWOX-DEE has no known treatment row to rank against).
+The HF `results.json` files differ byte-wise from the GitHub ones. No OREVID figure is used by LEGEND and none transfers to LEGEND or WWOX-DEE (different task: disease-to-drug ranking over PrimeKG; WWOX-DEE has no known treatment row to rank against).
 
 **Licences checked.** Code MIT (GitHub API and LICENSE). `LICENSE-DATA.md` at `bbff661a994e`: tasks, predictions and derived results CC BY-NC-SA 4.0, because PrimeKG aggregates DrugBank (CC BY-NC 4.0), SIDER and DisGeNET (CC BY-NC-SA 4.0); HF card `license: cc-by-nc-sa-4.0`, not gated. Nothing was copied; only the idea is reused (no dataset import, no code copy).
 
