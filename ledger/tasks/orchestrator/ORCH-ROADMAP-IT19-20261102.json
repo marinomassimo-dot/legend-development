@@ -19,8 +19,9 @@
    "steps": [
     {
      "step": "P0 record, MANDATE_BOUND emitted first and resolver verified, IT18 CI acquired and reconciled",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "binding emitted before the first tool call; mandate_watch check returned session 4325d70d... RUNNING; IT18 CI success on 07ed2ede (08:31-09:00Z) and 38c5c320 (09:03-09:48Z)"
     }
    ]
   },
@@ -29,8 +30,9 @@
    "steps": [
     {
      "step": "P1 diagnose the IT18 UNKNOWN checks, minimal fix, controlled resume on a small real package",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "continuity_it19_20261102/README.md: causes separated, OOM of turbovnc-desktop at 23:11:56 Nov 1, no reboot; fixes in mandate_watch.py (reason logged) and the Standing method; controlled resume NOT observed: claude --bg refused \"Workspace not trusted\" (root and worktree), residual = operator runs claude once in the repository directory; in-session cron delivered a RESUME to this live idle session at the 11:47 check and ListAgents guard applied"
     }
    ]
   },
@@ -39,8 +41,9 @@
    "steps": [
     {
      "step": "P2 DrugCentral corrupt gzip / non-UTF-8: reproduce, fix, regressions",
-     "status": "TODO",
-     "owner": "scientist"
+     "status": "DONE",
+     "owner": "scientist",
+     "evidence": "drugcentral.py _text returns QUERY_ERROR on corrupt gzip / non-UTF-8 in both paths; 7 errors before, 71/71 after; independent verifier confirmed"
     }
    ]
   },
@@ -49,8 +52,9 @@
    "steps": [
     {
      "step": "P3 dashboard online: Pages, workflow, check_published_view",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "BLOCKED",
+     "owner": "orchestrator",
+     "blocker": "GitHub Pages site cannot be created by the workflow token (\"Resource not accessible by integration\", run 41425555798 job 125211292592); residual account operation: Settings, Pages, Source = GitHub Actions (https://github.com/marinomassimo-dot/legend-development/settings/pages), then re-run or push to the package; authorisation is not the issue"
     }
    ]
   },
@@ -59,8 +63,9 @@
    "steps": [
     {
      "step": "P4 job-level resource containment for trials; BioPathNet recipe recovered; independent check",
-     "status": "TODO",
-     "owner": "scientist"
+     "status": "DONE",
+     "owner": "scientist",
+     "evidence": "kernel-enforced per-job memory cap (systemd-run --user --scope -p MemoryMax) proven on a harmless load; BioPathNet driver recovered; independent verifier confirmed; WATCH kept"
     }
    ]
   },
@@ -89,8 +94,9 @@
    "steps": [
     {
      "step": "P7 scouting decisions reconciled; reopen-question wait measured before any weight change",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "radar_it19_p7_20261102: reopen wait measured (median 24 d, max 61), cause = repeats crowd out first asks, one constant (NEVER_ASKED_DAYS=90), median 21 max 30 after, roadmap rows no longer starve; scouting decisions restated within what was checked"
     }
    ]
   },
