@@ -501,7 +501,7 @@
  "files": {
   "COMPARISON.md": {
    "bytes": 7424,
-   "sha256": "f7b1b6c1652a2b1cfe1b26d48f378323e95d32e18f3c0403a3f1d4fae4d0e8fa"
+   "sha256": "34349144b68515c8523e86b18b0b79e305141c053c328b5e9ed3fc335389b6b7"
   },
   "LICENSES/CC-BY-4.0.txt": {
    "bytes": 18657,
@@ -521,7 +521,7 @@
   },
   "NOTICE.md": {
    "bytes": 12774,
-   "sha256": "f975231bc45c95b1510ed1b1502e43f544ce8a7f111942e64028f05a8ada222d"
+   "sha256": "6de85ddd9a344e6390152006e22b58508f9d75ba1ee751c8975c50acc4983d79"
   },
   "README.md": {
    "bytes": 4906,
@@ -544,8 +544,8 @@
    "sha256": "240723d6c86c13fc8f19ff2a5bbe7eec5e64da0f3769ea25e49d8d7b7e5784d0"
   },
   "index.html": {
-   "bytes": 4344471,
-   "sha256": "4571c19786771004bdccb342802879c5f05e24cf41c4e96bdc0e816da9925403"
+   "bytes": 4344312,
+   "sha256": "23309b6bc11b20df57dbf0fc9b72848a58d087d7afa10c101488070a96ff5d0b"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
@@ -605,7 +605,7 @@
   "lead_field_redactions": 11,
   "pair_status_rule": "pairs[].p.cr.pha[1] (status classes of the row) is dropped in the shareable build: a status class derives from ChEMBL max_phase, DGIdb approved flags, MATRIX and openFDA together, and the build does not re-derive a class-A-only status per row.",
   "pairs_status_class_dropped": 922,
-  "repository_file_names_described": 204,
+  "repository_file_names_described": 201,
   "rule": "IT5 P13 fix. Own analysis stays in the shareable build: a conclusion at the level of a need, a class or a card subject, in our own words, short, attributed to a published work. Withheld: (1) a sentence that states a compound-target(-action) pair together with its database of origin when the pair is asserted only by a class-B/C catalogue source; (2) a compound named in prose whose only provenance in the repository is a class-B/C catalogue row (it appears in no cited full text and is not a card subject); (3) a per-compound status, phase, approval or access statement attributed to a class-B/C source; (4) repository file names, which cannot be used outside the repository. The replacement keeps the research conclusion and names the withheld source class with the phrase in withheld_phrase. The FULL build keeps everything. The audit enforces (1) and (2) by derivation from the catalogue, (3) and (4) by pattern, and every redaction below must match exactly once or more: a stale redaction fails the build.",
   "withheld_phrase": "dato di una fonte non inclusa in questa versione"
  },

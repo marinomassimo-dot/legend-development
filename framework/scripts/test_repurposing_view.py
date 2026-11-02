@@ -2279,6 +2279,14 @@ class DeepenedCasesShareable(unittest.TestCase):
 
 
 class MatchingDirectionView(unittest.TestCase):
+
+    def test_no_dot_md_member_access_in_page_scripts(self):
+        """IT19: `T.md_of` reads like a markdown file name; the shareable edition's redaction rewrote it into prose and broke the page script
+        (SyntaxError at load: the ready marker never appeared and `audit-shareable --dynamic` waited 90 s per page). Use bracket access."""
+        js = (DR / "view/assets/curated.js").read_text(encoding="utf-8")
+        self.assertIsNone(re.search(r"\b\w+\.md\w*", js), "a `.md...` member access in curated.js is redacted as a file name in the shareable page")
+        shareable = (DR / "view/shareable_package/index.html").read_text(encoding="utf-8")
+        self.assertNotIn("un registro del repository (non incluso in questo pacchetto)_", shareable)
     """IT19 P6: matching direction, abstention and limits in both editions. The full edition names compound, action, record and locator; the
     shareable edition carries class labels, codes and counts only, and the audit stays the judge."""
 
