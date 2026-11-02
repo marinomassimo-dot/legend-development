@@ -180,6 +180,25 @@ Reusable guidance for any drug-repurposing package lives in these places only; r
 - WWOX-specific knowledge stays in the module records (needs, cards, working model), not in these generic pages.
 - Before freezing a candidate for the release battery, run `python3 framework/scripts/candidate_tree_freshness.py --candidate HEAD --base main` (or land through `task_close.py`): measured on the IT16 candidate, it reports exactly the three surfaces that failed the first battery (coverage report, reading state, pathograph) as STALE after a new receipt; the failure came from bypassing that existing path, not from a missing check.
 - Binding to the monitor (IT19): the `MANDATE_BOUND: <TASK_ID>` line must start a line of the session's own persisted text, in the first message of the mandate, and must then be verified: `python3 framework/scripts/mandate_watch.py check --task <TASK_ID> --deliver none --json` has to return this session's id (IT18: no line was written at the start, and a later line sat in a narration message that is absent from the transcript, so ten hourly checks said UNKNOWN). Reviving a dead session from cron (`claude --bg --resume`) additionally needs the CLI workspace trust of the repository directory, which `claude --bg` refuses without ("Workspace not trusted", reproduced 2026-11-02 from the root and from a worktree); the failed delivery and its reason are now logged by the watch.
+- **Two orders, never one (IT20 P5, 2026-11-02).** The module keeps two separate orderings and neither is derived from the
+  other. The *group view* (`ranking_it8.py`, G1…GU) orders depth of evaluation and answers "what has been shown". The
+  *investigations view* (`ranking.json` key `investigations`, `investigations.tsv`) orders **research investment** — the
+  value of the next discriminating test given its cost and what its result would change — and answers "what should be
+  funded next". It is published under one plain sentence, *ordine delle indagini da finanziare, non classifica di
+  efficacia*, because a numbered public list is otherwise read as a recommendation. Consequences that bind any package
+  touching it: evidence depth is displayed beside every row and is never a gate, so a unit that is GU in the group view
+  may top the investigations view when its missing premise is cheap and decisive; an unresolved or opposed need direction
+  is named in the row's own decisive-uncertainty field and the position never implies a direction the evidence does not
+  carry; a `novelty_perimeter` records what was actually queried and may not say that something was never studied; no dose,
+  route, schedule or preparation may enter the table; and `origin_class` (`known_in_wwox`, `generated_by_legend`,
+  `external_transferred`) is provenance only, never a bonus or a penalty. The generator enforces all of this and refuses a
+  row that breaks it.
+- **A qualified search filters; it does not generate (IT20 P5, measured).** Compared at equal usable universe, the
+  WWOX-qualified selection was a strict subset of a plain external target-list selection, and reached 3 of 23 needs: the
+  binding constraint is that a lever can be qualified only on a need whose direction is resolved and whose coupling is
+  stated. Before asking a package for new candidates, check how many needs can qualify one at all — a protein-level
+  measurement that resolves a need's direction unlocks more of the catalogue than any compound search does. Measurement and
+  method in [`hypotheses_it20_20261102/README.md`](hypotheses_it20_20261102/README.md).
 - Dated measurements and decisions are in the iteration section of the [module README](README.md) marked CURRENT.
 
 ## Delivery sequence and stop condition
