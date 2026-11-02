@@ -1,0 +1,7 @@
+step_as_stored_in_BRG	pc12_data_source	pc12_pubmed_ids	check_level	grade	note
+WWOX controls-transport-of TP73	pid	15070730	abstract only (not a read)	consistent at abstract level	abstract states Wwox expression redistributes nuclear p73 to the cytoplasm (type and direction match); full text not read
+TNK2 controls-phosphorylation-of WWOX	PhosphoSite	16288044;24899407	abstract only (not a read), first PMID	consistent at abstract level	abstract states activated Ack1 (TNK2) tyrosine-phosphorylates Wwox, primarily Tyr287, leading to its degradation; the stored edge carries no sign (degradation is not encoded)
+WWOX controls-transport-of YAP1	pid	12807903;15023535	abstract only (not a read), first PMID	not supported by the first cited PMID	12807903 is about YAP and ErbB-4; WWOX is not named in its abstract; 15023535 not checked; provenance of this step is unresolved
+SRC controls-phosphorylation-of WWOX	PhosphoSite	15 PMIDs incl. 15070730	not graded separately	n/a	15070730 abstract states Src phosphorylates Wwox at Tyr33 (seen while checking row 1)
+PAX2|RFX1|STAT1|TCF3 controls-expression-of WWOX	MSigDB	none	source type	prediction, not evidence	MSigDB C3 TFT motif gene sets: a motif-based inference stored with the same relation type as curated regulation
+INS|NOG controls-expression-of WWOX	CTD	28628672;27188386	not checked	n/a	CTD curated chemical-gene/gene expression statements
