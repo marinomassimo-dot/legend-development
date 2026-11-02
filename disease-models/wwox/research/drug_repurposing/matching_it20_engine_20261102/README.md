@@ -164,6 +164,131 @@ therefore carry a real `single_protein` level, are untouched — that is the gen
 
 ---
 
+## P3 — residual (b): recovering the specific evidence, and only it
+
+IT19 named the gap: the guard also held back bepridil's valid pharmacology, because the module had
+no field in which a documented subunit-level measurement could re-license a direction a group record
+cannot carry.
+
+### The source IT19 used, verified at the source
+
+`reference_it19_p5.tsv` row P08 cited `PubMed:15855830 abstract sentences 2-3`. The PubMed record was
+fetched again directly (`efetch`, `retmode=xml`, 2026-11-02) and read, not recalled:
+
+> **Voltage-dependent and frequency-independent inhibition of recombinant Cav3.2 T-type Ca2+ channel
+> by bepridil.** *Pharmacology* 2005;**74**, doi `10.1159/000085329`.
+> "Effects of bepridil on the low voltage-activated T-type Ca2+ channel (CaV3.2) current stably
+> expressed in human embryonic kidney (HEK)-293 cells were examined using patch-clamp techniques.
+> Bepridil potently inhibited ICa,T with a markedly voltage-dependent manner; the IC50 of bepridil
+> was 0.4 micromol/l at the holding potential of -70 mV, which was 26 times as potent as that at
+> -100 mV (10.6 micromol/l). … Bepridil exerted the tonic blocking action but not the use-dependent
+> block. Bepridil had no effect on the recovery from inactivation of T-type Ca2+ channels."
+
+IT19's figures are confirmed exactly. **One correction this re-read found:** the abstract says
+*recombinant* Cav3.2 in a *human* cell line and **does not state the species of the Cav3.2 clone**.
+IT19's reference row wrote "human Cav3.2 (CACNA1H) recombinant in HEK293", which is one step beyond
+the abstract. The species-resolved target assignment is therefore taken from a different source and
+the two statements are kept apart.
+
+### The decisive datum, through legitimate routes
+
+| Route | Asked | Answer |
+|---|---|---|
+| PubMed 15855830 | functional block of Cav3.2 | **IC50 0.4 µmol/l at a −70 mV holding potential**, 10.6 µmol/l at −100 mV (26-fold), tonic, not use-dependent, no effect on recovery from inactivation; patch clamp in HEK-293. The determining condition is the holding potential: the potency figure is meaningless without it |
+| DrugCentral 2027 (`drug.target.interaction.tsv`, via the repo adapter) | is the target assignment species- and subunit-resolved? | **yes**: bepridil, STRUCT_ID 342, `CACNA1H`, UniProt `O95180`, `CAC1H_HUMAN`, `ORGANISM Homo sapiens`, **single** protein, `ACTION_TYPE BLOCKER` |
+| the same row | is DrugCentral an independent confirmation of the **direction**? | **no.** `MOA_SOURCE: CHEMBL`, `action_origin: CHEMBL`, `action_origin_class: SHARED` — the action is the ChEMBL group annotation again. The adapter's own field says so |
+| the same row | does its activity value carry a direction? | **no.** `ACT_TYPE Ki 5.149` (`ACT_SOURCE WOMBAT-PK`) is a **binding** measure; binding and functional are not interchangeable |
+| ChEMBL_37 REST | any activity for CHEMBL1008 on CACNA1H? | **0 rows** against `CHEMBL1859` (CACNA1H single protein) and **0** against `CHEMBL2362995` (T-type family). Silent, not negative |
+| GtoPdb 2026.3.1 (local cache) | any Cav3 interaction for bepridil? | bepridil is ligand **2337** but is listed only on **KNa1.1** (rat) and **Kv7.4** (human). Silent, not negative |
+| the ChEMBL group record | does it cite this evidence? | no: `CHEMBL2363032` cites `ISBN:9780702034718 PP. 256` and `PubMed:10792039`, a troponin-C structure paper. So PubMed 15855830 is **independent of the module's own input** |
+
+Four things are kept apart and only the first is claimed:
+
+1. **what the compound does at the target** — voltage-dependent functional block of Cav3.2/CACNA1H;
+2. **other subtypes** — **no Cav3.1 (CACNA1G) or Cav3.3 (CACNA1I) value was found anywhere.**
+   Cav3.2 data do not authorise a Cav3.1 direction;
+3. **the link of the target to the WWOX need** — untouched here. It is governed by
+   `coverage/target_roles.tsv`, and at `NEED-SEIZURE-CONTROL-SYMPTOMATIC` CACNA1G remains
+   `coupling_not_measured` after an independent audit, so bepridil is still abstained there;
+4. **experimental or clinical benefit in WWOX deficiency** — nothing here speaks to it. Bepridil is a
+   withdrawn agent in the catalogue's access field and no compound is proposed for use.
+
+### The engine link
+
+The datum enters as **one row of the table that already exists**, symmetric to the
+`action_contradicted_by_cited_reference:<MOLECULE>:<ACTION>` rule that *removes* a direction:
+
+```
+claim_source  symbol    rule                                                 evidence
+ChEMBL        CACNA1H   target_level_documented:CHEMBL1008:BLOCKER:single_protein   <locator, species, system, assay, endpoint, concentration, determining condition, independence, and what it does NOT establish>
+```
+
+`documented_level_waiver()` reads it. Four deliberate narrownesses keep it from becoming the general
+override the task forbids:
+
+- only `single_protein` is an accepted documented level (`DOCUMENTED_LEVELS`), and **anything else
+  raises `ValueError`** — a family or class result can never be laundered into a subunit direction;
+- the row names **one gene**, so the siblings gain nothing;
+- the action must be the one the rule names, and the molecule must be one of this record's own
+  identifiers (`molecule_ids`: own ChEMBL id, `inherited_from_parent`, declared parent record — here
+  the salt `CHEMBL1200382` matches through its declared parent `CHEMBL1008`, an identifier chain the
+  catalogue already holds; **no name is used**);
+- it answers **only a record-level abstention**. An unstated action, a missing or inferred role row
+  and an uncertain need direction are untouched.
+
+No compound is named in code. No bepridil special case. The rule is deleted like any other row.
+
+### Measured
+
+**Exactly one waiver fires in the whole module** (all 23 needs, 5 240 association rows):
+
+| | it19 (neither row) | P2 datum only | shipped |
+|---|---|---|---|
+| Directed rows | 336 | 337 | 247 |
+| `group_record_mostly_outside_module_targets` | 12 | 11 | 11 |
+| `republished_claim_level_not_carried` | 0 | 0 | 90 |
+| documented-level waivers | 0 | 1 | 1 |
+
+- `NEED-T-TYPE-CALCIUM` / **CACNA1H** / `CAT:CHEMBL1200382` → `consistent`, matched molecule
+  `CHEMBL1008`. L2 coherent cells 73 → **74**, `families_consistent` at T-TYPE 21 → **22**.
+- **CACNA1G and CACNA1I stay `group_record_mostly_outside_module_targets`** — the recovery is
+  narrower than IT19's framing of P08 as "compatible at the T-TYPE need": the evidence is for one of
+  the three genes the need lists, and the engine now says exactly that.
+- The **republished copy** on CACNA1H stays `republished_claim_level_not_carried`: a copy carries no
+  molecule identifier, so the waiver cannot attach to it. A copy stays a copy.
+- At `NEED-SEIZURE-CONTROL-SYMPTOMATIC` bepridil remains abstained with `coupling_not_measured`.
+- `deepening_queue.tsv`: bepridil returns (27 → 28 rows) and its `direction_basis` now reads
+  `documented single_protein measurement on CACNA1H (record protein_complex_group 3/26 abstained;
+  see source_artefacts.tsv)` — `ranking_it8.py direction_basis()` was corrected so a reader is not
+  told the direction came from a 3/26 group record, which is the error this whole package is about.
+- `provenance_orphans.tsv` falls from 12 rows to **9**: terodiline, suloctidil and phloroglucinol at
+  CACNA1G/H/I, exactly the three the IT19 reference scored `indeterminable` or `unknown`.
+
+### The half-of-components rule, reviewed
+
+The 0.5 ratio was **not tuned** — tuning a heuristic until a desired compound reappears is the
+failure mode the task names, and it is also unnecessary now. What changed is the threshold's *job*.
+Before, the ratio was the last word on whether a group record's action reached a gene. Now it decides
+only **when the module must ask for explicit information**, and an explicit, located, measure-typed
+datum is what licenses a direction. That is the part of the heuristic replaced by information: the
+ratio still routes, but it no longer adjudicates alone. The three IT19 regressions stay meaningful
+and still pass unchanged (`test_repurposing_group_transfer.py`, 11 tests), because none of them
+depends on the ratio being 0.5 rather than on a record being written above or at the module's level.
+
+### Receipt
+
+One `FULLTEXT_READ_RECEIPT` in [`receipts/`](receipts/):
+`FTR-20261102-15855830-02`, depth **`abstract_only`**, `source_kind: abstract`, `prior_receipt:
+FTR-20261102-15855830-01` (IT19's first read), `reread_reason:
+new_question_outside_prior_coverage`. Validated with
+`fulltext_receipts.py record --dry-run` → `DRY RUN OK`. **It was NOT appended to the ledger** and is
+handed back for the integrator. Depth was not inflated: no full text was retrieved, the abstract was
+read in full, and the receipt records the one correction to IT19's reference row that the re-read
+found. The database queries (DrugCentral, ChEMBL REST, GtoPdb) are not literature reads and carry no
+receipt; their versions and answers are in the rule's `evidence` field.
+
+---
+
 ## Reproduce
 
 ```bash

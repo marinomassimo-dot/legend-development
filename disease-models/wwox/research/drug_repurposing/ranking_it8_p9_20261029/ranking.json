@@ -960,6 +960,39 @@
    ],
    "assessed_in": [],
    "direction_basis": [
+    "NEED-T-TYPE-CALCIUM: documented single_protein measurement on CACNA1H (record protein_complex_group 3/26 abstained; see source_artefacts.tsv)"
+   ],
+   "display_group": "bepridil",
+   "family_ids": [
+    "FAM:CAT:CHEMBL1008"
+   ],
+   "mentioned_in": [],
+   "mnet_usable": true,
+   "msig_neural": true,
+   "names": [
+    "BEPRIDIL"
+   ],
+   "needs": [
+    "NEED-T-TYPE-CALCIUM"
+   ],
+   "reconciliation": "NO_CARD_OR_RECORD_FOUND",
+   "shares_need_with_units": [
+    "U17",
+    "U25"
+   ],
+   "status_class": [
+    "approved_any_source"
+   ],
+   "units": [],
+   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no card, qualification record or uncarded item names it (module READMEs and reports were not searched)",
+   "wwox_observations_on_best_need": 1
+  },
+  {
+   "access_categories": [
+    "unknown/unverified"
+   ],
+   "assessed_in": [],
+   "direction_basis": [
     "NEED-T-TYPE-CALCIUM: protein_family 3/3, single_protein"
    ],
    "display_group": "mibefradil",
@@ -1858,8 +1891,8 @@
    },
    {
     "by_live_label": {
-     "abstained": 5,
-     "compatible": 3
+     "abstained": 4,
+     "compatible": 4
     },
     "by_reference_label": {
      "compatible": 4,
@@ -1888,14 +1921,14 @@
     "group_record_mostly_outside_module_targets": 4
    },
    "by_agreement": {
-    "abstained_reference_determinate": 5,
+    "abstained_reference_determinate": 4,
     "abstained_reference_not_determinate": 12,
-    "asserted_and_agrees": 12,
+    "asserted_and_agrees": 13,
     "asserted_reference_not_determinate": 3
    },
    "by_live_label": {
-    "abstained": 17,
-    "compatible": 12,
+    "abstained": 16,
+    "compatible": 13,
     "opposite": 3
    },
    "by_reference_label": {
@@ -2206,19 +2239,20 @@
    "NEED-T-TYPE-CALCIUM": {
     "abstained_by_class": {
      "action_not_stated": 88,
-     "group_record_mostly_outside_module_targets": 12,
+     "group_record_mostly_outside_module_targets": 11,
      "republished_claim_level_not_carried": 34
     },
     "by_label": {
-     "abstained": 134,
-     "consistent": 54
+     "abstained": 133,
+     "consistent": 55
     },
     "by_target_level": {
      "gene_listing": {
       "abstained": 98
      },
      "protein_complex_group": {
-      "abstained": 30
+      "abstained": 29,
+      "consistent": 1
      },
      "protein_family": {
       "abstained": 6,
@@ -2703,11 +2737,11 @@
     "actions": [
      "BLOCKER"
     ],
-    "agreement": "abstained_reference_determinate",
-    "asserted_direction": null,
+    "agreement": "asserted_and_agrees",
+    "asserted_direction": "compatible",
     "compound": "bepridil",
     "independence": "independent",
-    "label": "direction_unresolved",
+    "label": "mixed:consistent|direction_unresolved",
     "label_before_group_guard": "consistent",
     "measure_kind": "functional",
     "measure_type": "functional electrophysiology (patch clamp)",
@@ -2716,7 +2750,7 @@
     "need_direction": "down",
     "need_direction_certainty": "inferred",
     "need_direction_on": "T-type calcium current",
-    "next_check": "sourced_per_gene_override",
+    "next_check": "measure_in_wwox_system",
     "pair_id": "P08",
     "parent_chembl_id": "CHEMBL1008",
     "records": [
@@ -5167,7 +5201,7 @@
    "ORD": "EVALUATED AND ORDERABLE",
    "WEAK": "EVALUATED WITH WEAK PERTINENCE OR COUNTER-EVIDENCE"
   },
-  "deepening_queue_compounds": 27,
+  "deepening_queue_compounds": 28,
   "groups": {
    "G1": {
     "label": "Strongest WWOX-specific case today (in the mouse null)",
@@ -5212,7 +5246,7 @@
     "catalog_stats.json": "87ac308ce3ab9b3f",
     "measure_next.json": "bca46967510475c5",
     "needs.json": "7678b986106b07e9",
-    "source_artefacts.tsv": "d4242ad12c5c5c2d",
+    "source_artefacts.tsv": "4787fe42854e5756",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
    "receipt_ledger_lines": 948
@@ -5230,14 +5264,14 @@
     "UNIT": 25
    },
    "by_first_order": {
-    "Q1": 67,
-    "Q2": 1924,
+    "Q1": 68,
+    "Q2": 1923,
     "Q3": 208,
     "Q4": 14236,
     "Q5": 23808,
     "UNIT": 25
    },
-   "distinct_display_names_in_q1": 63,
+   "distinct_display_names_in_q1": 64,
    "distinct_display_names_total": 32276,
    "families": 40268,
    "mnet_usable_families": 13379,
@@ -5252,7 +5286,7 @@
    "need_linked_families_plus_units": 2224,
    "need_linked_families_q1_q2_q3": 2199,
    "q1_by_status": {
-    "approved_any_source": 14,
+    "approved_any_source": 15,
     "approved_any_source,clinical_candidate,phase_unknown": 1,
     "clinical_candidate": 11,
     "clinical_candidate,no_status_statement": 1,

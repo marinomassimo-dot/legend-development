@@ -121,10 +121,10 @@
    "not_evaluable": 31,
    "pathway_member_only": 330
   },
-  "L2_coherent": 73,
+  "L2_coherent": 74,
   "L2_states": {
-   "coherent": 73,
-   "direction_unresolved": 432,
+   "coherent": 74,
+   "direction_unresolved": 431,
    "none": 64,
    "not_evaluable": 2004,
    "opposed": 11
@@ -1496,7 +1496,7 @@
    "NEED-T-TYPE-CALCIUM": {
     "abstained_rows_by_class": {
      "action_not_stated": 88,
-     "group_record_mostly_outside_module_targets": 12,
+     "group_record_mostly_outside_module_targets": 11,
      "republished_claim_level_not_carried": 34
     },
     "by_target_kind_records_families": {
@@ -1536,7 +1536,8 @@
       "abstained": 46
      },
      "protein_complex_group": {
-      "abstained": 30
+      "abstained": 29,
+      "consistent": 1
      },
      "protein_family": {
       "abstained": 6,
@@ -1554,7 +1555,8 @@
       "abstained": 98
      },
      "protein_complex_group": {
-      "abstained": 30
+      "abstained": 29,
+      "consistent": 1
      },
      "protein_family": {
       "abstained": 6,
@@ -1568,7 +1570,7 @@
      "placeholder": 1
     },
     "exploration_only": false,
-    "families_consistent": 21,
+    "families_consistent": 22,
     "families_incl_pathway_members": 65,
     "families_opposed": 0,
     "families_with_both_consistent_and_opposed": 0,
@@ -2101,23 +2103,23 @@
    "source_queried_without_result"
   ],
   "by_disposition": {
-   "consistent_mechanism_candidate": 73,
+   "consistent_mechanism_candidate": 74,
    "exploration_candidate": 467,
-   "insufficient_data": 382,
+   "insufficient_data": 381,
    "no_catalogue_link_found": 14,
    "opposite_mechanism": 2,
    "source_queried_without_result": 5
   },
   "by_disposition_cells": {
-   "consistent_mechanism_candidate": 73,
+   "consistent_mechanism_candidate": 74,
    "exploration_candidate": 467,
-   "insufficient_data": 382,
+   "insufficient_data": 381,
    "no_catalogue_link_found": 14,
    "opposite_mechanism": 2,
    "source_queried_without_result": 5
   },
   "by_disposition_distinct_families_or_rows": {
-   "consistent_mechanism_candidate": 73,
+   "consistent_mechanism_candidate": 74,
    "exploration_candidate": 416,
    "insufficient_data": 330,
    "no_catalogue_link_found": 12,
