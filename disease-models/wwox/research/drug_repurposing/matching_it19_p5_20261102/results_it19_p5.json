@@ -1,0 +1,134 @@
+{
+ "active_path_after_fix": {
+  "accuracy": 1.0,
+  "agrees": 12,
+  "asserted_on_determinate": 12,
+  "ci95": [
+   0.7575,
+   1.0
+  ],
+  "classes": {
+   "abstained_reference_determinate": 5,
+   "abstained_reference_not_determinate": 12,
+   "asserted_and_agrees": 12,
+   "asserted_reference_not_determinate": 3
+  },
+  "pairs_asserted": [
+   "P12",
+   "P14",
+   "P15",
+   "P16",
+   "P17",
+   "P19",
+   "P22",
+   "P23",
+   "P24",
+   "P25",
+   "P26",
+   "P32"
+  ]
+ },
+ "active_path_before_fix": {
+  "accuracy": 1.0,
+  "agrees": 13,
+  "asserted_on_determinate": 13,
+  "ci95": [
+   0.7719,
+   1.0
+  ],
+  "classes": {
+   "abstained_reference_determinate": 4,
+   "abstained_reference_not_determinate": 9,
+   "asserted_and_agrees": 13,
+   "asserted_reference_not_determinate": 6
+  },
+  "pairs_asserted": [
+   "P08",
+   "P12",
+   "P14",
+   "P15",
+   "P16",
+   "P17",
+   "P19",
+   "P22",
+   "P23",
+   "P24",
+   "P25",
+   "P26",
+   "P32"
+  ]
+ },
+ "error_attribution": {
+  "group_annotation_legitimate_in_source_improper_after_expansion": 6,
+  "group_annotation_unsupported_by_its_own_cited_reference": 2,
+  "module_abstained_while_a_direction_was_available": 2,
+  "none": 22
+ },
+ "independent_of_module_input_on_determinate": 8,
+ "it18_L_v1": {
+  "accuracy": 1.0,
+  "agrees": 15,
+  "asserted_on_determinate": 15,
+  "ci95": [
+   0.7961,
+   1.0
+  ]
+ },
+ "it18_L_v2": {
+  "accuracy": 1.0,
+  "agrees": 14,
+  "asserted_on_determinate": 14,
+  "ci95": [
+   0.7847,
+   1.0
+  ]
+ },
+ "pairs": 32,
+ "reference_labels": {
+  "compatible": 13,
+  "indeterminable": 9,
+  "opposite": 4,
+  "unknown": 6
+ },
+ "rows_changed_by_fix": [
+  {
+   "after": "direction_unresolved",
+   "before": "consistent",
+   "compound": "terodiline",
+   "need": "NEED-T-TYPE-CALCIUM",
+   "pair_id": "P02",
+   "reference_label": "indeterminable",
+   "verdict": "removed_unsupported_attribution"
+  },
+  {
+   "after": "direction_unresolved",
+   "before": "consistent",
+   "compound": "suloctidil",
+   "need": "NEED-T-TYPE-CALCIUM",
+   "pair_id": "P04",
+   "reference_label": "indeterminable",
+   "verdict": "removed_unsupported_attribution"
+  },
+  {
+   "after": "direction_unresolved",
+   "before": "consistent",
+   "compound": "phloroglucinol",
+   "need": "NEED-T-TYPE-CALCIUM",
+   "pair_id": "P06",
+   "reference_label": "unknown",
+   "verdict": "removed_unsupported_attribution"
+  },
+  {
+   "after": "direction_unresolved",
+   "before": "consistent",
+   "compound": "bepridil",
+   "need": "NEED-T-TYPE-CALCIUM",
+   "pair_id": "P08",
+   "reference_label": "compatible",
+   "verdict": "abstained_although_the_reference_holds_a_direction"
+  }
+ ],
+ "usable_class_level": 6,
+ "usable_functional": 11,
+ "usable_reference_rows": 17
+}
