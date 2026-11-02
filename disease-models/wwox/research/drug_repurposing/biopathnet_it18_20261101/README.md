@@ -102,3 +102,48 @@ Removed from scratch at the end:
 - the code clone (43 MB), the checkpoint (111 MB), `PC_KEGG_0602` (62 MB)
 - the Pathway Commons 12 extended SIF (176 MB), the compiled extensions
 - the run outputs and driver scripts
+
+## Reproducibility record, added 2026-11-02 (IT19 P4)
+
+Added by `scientist` after the fact. The trial was **not** rerun. Each item says whether it is **recovered** (verbatim from the original run's own record) or **reconstructed** (written now from recovered material).
+
+**Where the original material survives.** Git holds only the package files: the `it18-biopath` branch was merged (`b8969305`) and its two commits (`751d80eb`, `4bcc1a72`) carry no driver. The scratch tree was deleted. The driver, every command and every tool output survive in the delegate's local session transcript (`agent-a32a58f8c2f709fe6.jsonl` under the orchestrator session `4325d70d`, sha256 `b49b87dfadf83fd4624d90c50891cfcad3ed73cf10b0844ec91b47ca5265dad9` on 2026-11-02). It is outside git and may be lost.
+
+**Recovered: environment, in the order it was built (2026-11-01, 23:00-23:04 UTC).** All installs were public GETs.
+1. `uv venv -p 3.10` with `UV_CACHE_DIR` and `UV_PYTHON_INSTALL_DIR` in scratch. `python3 -m venv` had failed because the host has no `ensurepip`. The result was Python 3.10.21.
+2. `torch==2.4.0` (CPU index `https://download.pytorch.org/whl/cpu`), `torch_scatter` (wheels `https://data.pyg.org/whl/torch-2.4.0+cpu.html`), `torchdrug==0.2.1 --no-deps`, `"numpy<2" rdkit decorator matplotlib tqdm networkx ninja jinja2 lmdb easydict pyyaml setuptools`.
+3. The import errors were fixed one at a time: `rdkit==2023.9.6` (torchdrug imports `mplCanvas`), `ogb==1.3.6 --no-deps` plus `pandas scikit-learn outdated urllib3 six`, `torch_cluster`, `fair-esm==2.0.0 --no-deps`, and the venv `bin` on `PATH` so that ninja is found.
+4. With torch 2.4.0 the extension build failed: `ATen/SparseTensorUtils.h: No such file or directory`.
+5. Then `torch==2.0.1` (CPU), with `torch_scatter torch_cluster --reinstall` from `https://data.pyg.org/whl/torch-2.0.1+cpu.html` (giving 2.1.2+pt20cpu and 1.6.3+pt20cpu), and `"setuptools<70"` because `pkg_resources` was missing. After this the extension compiled, with `TORCH_EXTENSIONS_DIR` in scratch.
+
+**Recovered: inputs and digests.**
+- Code: `git clone` of `https://github.com/emyyue/BioPathNet.git` with `GIT_LFS_SKIP_SMUDGE=1`, HEAD `b051a9003a1363b5655cdb7dfdad60609c0e4fe3`.
+- Checkpoint: `https://media.githubusercontent.com/media/emyyue/BioPathNet/main/experiments/KnowledgeGraphCompletionBiomed/biomedical/NBFNet/2025-05-17-23-27-40-436508/model_epoch_12.pth`, 110,765,951 bytes, sha256 `da298d1039b055852366362b494e773e86f5030abab33c8a620b2725c1ffe441`. Its training log is the `log.txt` beside it, sha256 `f77f95e58de8e932b776e7a94cf48437f03da941de1b810b86f7d8cf9f80466b`.
+- Data: the six `PC_KEGG_0602` files from the same media path. Their sha256 values are in Stage 1 above and were checked against the LFS oids.
+- Pathway Commons 12 `PathwayCommons12.All.hgnc.txt.gz` from `https://download.baderlab.org/PathwayCommons/PC2/v12/`, sha256 `e468612ca08c2c02f2131158019973d03e60c9892104fd20e2a331393127144e`.
+- Paper XML: `files/fulltext/PMC13472943_Hu2026_BioPathNet.xml`, sha256 `83b0b3713d75257ea63d73d0c4077e4bb00e703278e3ebc1ce92f23eae99015b`. This one is still on disk.
+
+**Recovered: configuration.** The driver builds the model in code with the architecture from the checkpoint's training log (`gfun.yaml`): NBFNet, `input_dim` 32, `hidden_dims` 6 x 32, `distmult`, `pna`, `short_cut`, `layer_norm`, `dependent`, `remove_one_hop`, `num_negative` 32, `strict_negative`, `adversarial_temperature` 1, `heterogeneous_negative` and `heterogeneous_evaluation`, `full_batch_eval`. Inference-only settings: `gpus: null`, `batch_size` 2, `torch.set_num_threads(2)`, seed 1024, and `remove_pos` true only in sanity mode. Dataset files: `train1.txt`, `train2.txt`, `valid.txt`, plus one query file, which differs by mode. The query files were:
+- `test_pred.txt`: WWOX and the 10 controls, each against `hsa04390` as a placeholder tail.
+- `test_vis.txt`: WWOX against `hsa05168`, `hsa04390` and `hsa04144`.
+
+**Recovered: commands** (scratch paths abbreviated; `V` = venv, `S` = scratch; the driver was named `drive.py` in scratch).
+```
+export PATH=$V/bin:$PATH TORCH_EXTENSIONS_DIR=$S/torch_ext
+/usr/bin/time -v $V/bin/python drive_it18_recovered.py $S/src $S/run/data $S/ckpt/model_epoch_12.pth $S/run predict    # exit 0, 5:24.83 wall, max RSS 1,519,840 kB
+/usr/bin/time -v $V/bin/python drive_it18_recovered.py $S/src $S/run/data $S/ckpt/model_epoch_12.pth $S/run visualize  # "Command terminated by signal 9", 1:22.27 wall, max RSS 11,267,116 kB
+```
+
+**Recovered: the limit, and what kind of limit it was.** The 8 GB limit was a **threshold read after the fact**: nothing enforced it. The job ran with no memory cap and was stopped by the host's global OOM killer at 11.27 GB, so it overshot the limit by 3.3 GB. The user journal records `turbovnc-desktop.service: A process of this unit has been killed by the OOM killer` at 23:11:56 and the unit restarting at 23:12:06. That unit is the desktop user service in which the sessions and the trial ran. So the overshoot reached the shared session, not only the job. `/usr/bin/time` printed `Exit status: 0` beside `Command terminated by signal 9`, so its exit-status line alone does not show a kill.
+
+**Reconstructed: how a rerun would enforce the limit.** This is the IT19 P4 recipe, measured on a harmless load and recorded in the repurposing adapter convention. Prefix the visualize command with `systemd-run --user --scope --collect -p MemoryMax=8G -p MemorySwapMax=0 --quiet`. The kernel then kills the job inside its own cgroup at 8 GB, and the job exits 137. This is the reopen condition 1 in Decision, made enforceable. It was not run on BioPathNet.
+
+**Recovered: helper scripts, not reproduced here** (sha256 of the text as written):
+- `prep.py` `006b10921911a4689321fc6c6b7aab8b0da040b5c8168156db21887ac281cc36`: degree-matched unannotated controls by lowest symbol sha256, the 100-triplet sample, and the query file.
+- `refB.py` `2973d2a9a708ffa44beae452f003c6ea04c04da1b99b2088b5fe55c496b4b7fa`: neighbour vote B and the need-relevant pathway set.
+- `measure.py` `ccc69fe0e65bf42f475770ae1fc9d0c2dafe718e8c3bc2d4bbe414782395f372`: the counts, Jaccard values and hubs in `results.json`.
+- `prov.py` `58d9cd03de9910def90eecc851d0e1555fce5a12b539688853b38010976d075d`: provenance of explanation steps from Pathway Commons 12. It was never run, because there were no explanations.
+
+**Recovered: the driver**, verbatim, as [`drive_it18_recovered.py`](drive_it18_recovered.py), sha256 `b478913dd25cfca752aeb8c18e319a532cf680a1b86bf595324b22cfc2bbab0e`. It is the same text that was written to scratch on 2026-11-01 at 23:01:54 UTC, and it is LEGEND's own code: it contains no BioPathNet code and imports the MIT clone from the path given as `SRC`. Usage: `drive_it18_recovered.py SRC DATA CKPT OUT {sanity,predict,visualize}`. It has no `--help`, and it is a historical executable note, not a reusable tool.
+
+**Not re-imported.** No BioPathNet code, weights, Pathway Commons or KEGG rows were downloaded again for this addition. The terms are as in Stage 1: data not cleared for redistribution.
