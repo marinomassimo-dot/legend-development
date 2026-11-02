@@ -469,6 +469,165 @@ document.addEventListener('click', function (e) { var a = e.target.closest ? e.t
   $('rk-json').onclick = function () { download('wwox_graduatoria_' + R.meta.as_of + '.json', 'application/json', JSON.stringify(R, null, 1) + '\n'); };
   apply();
 })();
+// ---------------------------------------------------------------- IT20 P6: explorer need -> targets -> interventions and intervention -> actions -> needs
+// Reads only D.cur (no new data field). Evidence class of a link: measured in WWOX / inference from outside WWOX / hypothesis (same rule as the quick guide).
+(function () {
+  if (!$('xp-out')) return;
+  var SHARE = D.source === 'shareable';
+  var KNOWN_ACT = { need: 1, target: 1, action: 1, cons: 1, n: 1, lvl: 1, abst: 1 };
+  function evc(l) { return l.result && l.result !== 'none' ? 'mis' : ((l.n_o || 0) > 0 ? 'inf' : 'ipo'); }
+  var EVG = { mis: '●', inf: '◇', ipo: '?', unk: '–' };
+  function evChip(k) { return '<span class="ev ev-' + k + '" title="' + esc(T['ev_' + k + '_txt']) + '"><span class="gl" aria-hidden="true">' + EVG[k] + '</span>' + esc(T['ev_' + k]) + '</span>'; }
+  function plusN(k) { return k > 0 ? '<p class="mini">+' + k + '</p>' : ''; }
+  function lvlW(l) { var p = String(l).split(' '); return (T['lvl_' + p[0]] || p[0].replace(/_/g, ' ')) + (p[1] ? ' (' + p[1] + ')' : ''); }
+  function cut(s, n) { s = String(s || ''); return s.length > n ? s.slice(0, n - 1) + '…' : s; }
+  function optsNeed() {
+    var h = '<option value="">' + esc(T.xp_pick) + '</option>';
+    C.threads.forEach(function (t) {
+      h += '<optgroup label="' + esc(threadName(t)) + '">' + t.needs.filter(function (i) { return NM[i]; }).map(function (i) { return '<option value="' + esc(i) + '">' + esc(needName(NM[i])) + '</option>'; }).join('') + '</optgroup>';
+    });
+    return h;
+  }
+  function optsCand() {
+    return '<option value="">' + esc(T.xp_pick) + '</option>' + CANDS.slice().sort(function (a, b) { return a.short.toLowerCase() < b.short.toLowerCase() ? -1 : 1; }).map(function (c) { return '<option value="' + esc(c.id) + '">' + esc(c.short) + '</option>'; }).join('');
+  }
+  // three-column subgraph; nodes {id,label,kind,href}, edges {a,b,cls,label}
+  function graph(cols, edges, title) {
+    var W = 960, CW = 280, X = [10, 340, 670], RH = 40, NH = 30, top = 28;
+    var n = Math.max.apply(null, cols.map(function (c) { return c.items.length; }).concat([1]));
+    var H = top + n * RH + 10, pos = {};
+    var s = '<div class="tw"><svg class="xp-svg" viewBox="0 0 ' + W + ' ' + H + '" style="min-width:640px" role="img" aria-label="' + esc(title) + '"><title>' + esc(title) + '</title>';
+    cols.forEach(function (c, ci) {
+      s += '<text x="' + X[ci] + '" y="16" font-weight="700">' + esc(c.head) + '</text>';
+      var off = top + (n - c.items.length) * RH / 2;
+      c.items.forEach(function (it, i) { pos[it.id] = { x: X[ci], y: off + i * RH }; });
+    });
+    var es = '', seen = {};
+    edges = edges.filter(function (e) { var k = e.a + '|' + e.b + '|' + e.cls; if (seen[k]) return false; seen[k] = 1; return true; });
+    edges.forEach(function (e) {
+      var a = pos[e.a], b = pos[e.b]; if (!a || !b) return;
+      var x1 = a.x + CW, y1 = a.y + NH / 2, x2 = b.x, y2 = b.y + NH / 2, mx = (x1 + x2) / 2;
+      es += '<path class="e-' + e.cls + '" d="M' + x1 + ',' + y1 + ' C' + mx + ',' + y1 + ' ' + mx + ',' + y2 + ' ' + x2 + ',' + y2 + '"><title>' + esc(e.label) + '</title></path>';
+    });
+    s += es;
+    cols.forEach(function (c) {
+      c.items.forEach(function (it) {
+        var p = pos[it.id], body = '<g class="xp-n k-' + it.kind + '"><rect x="' + p.x + '" y="' + p.y + '" width="' + CW + '" height="' + NH + '" rx="6"></rect><text x="' + (p.x + 8) + '" y="' + (p.y + 19) + '">' + esc(cut(it.label, 40)) + '</text><title>' + esc(it.label) + '</title></g>';
+        s += it.href ? '<a href="' + esc(it.href) + '"' + (it.open ? ' data-open="' + esc(it.open) + '"' : '') + ' aria-label="' + esc(it.label) + '">' + body + '</a>' : body;
+      });
+    });
+    s += '</svg></div>';
+    var rows = edges.filter(function (e) { return pos[e.a] && pos[e.b]; }).map(function (e) { return '<tr><td>' + esc(e.la) + '</td><td>' + esc(e.lb) + '</td><td>' + esc(e.label) + '</td></tr>'; }).join('');
+    s += '<details class="inl"' + (window.matchMedia && window.matchMedia('(max-width:560px)').matches ? ' open' : '') + '><summary>' + esc(T.xp_table_h) + '</summary><div class="tw"><table class="xp-tbl"><thead><tr><th scope="col">' + esc(T.xp_from) + '</th><th scope="col">' + esc(T.xp_to) + '</th><th scope="col">' + esc(T.xp_kind) + '</th></tr></thead><tbody>' + rows + '</tbody></table></div></details>';
+    return s;
+  }
+  function capItems(items, kind) {
+    if (items.length <= 14) return items;
+    var more = items.length - 13;
+    return items.slice(0, 13).concat([{ id: 'more-' + kind, label: '+' + more, kind: kind }]);
+  }
+  function linkLine(c, nid, l, withNeed) {
+    var g = l.group, k = evc(l);
+    return '<li class="xp-item">' + (withNeed ? '<a href="#x=need:' + esc(encodeURIComponent(nid)) + '">' + esc(NM[nid] ? needName(NM[nid]) : nid) + '</a>' : '<a href="#x=cand:' + esc(encodeURIComponent(c.id)) + '"><b>' + esc(c.short) + '</b></a>') + ' ' + grp(g) + ' ' + evChip(k) +
+      '<div class="mini">' + esc(first(T.pos[g].plain, 200)) + '</div>' +
+      '<div class="mini mut">' + esc(fill(T.xp_res_rows, { w: l.n_w || 0, o: l.n_o || 0, n: l.n_null || 0, h: l.n_harm || 0 })) + (l.tags && l.tags.length ? ' · ' + esc(l.tags.join('; ')) : '') + '</div></li>';
+  }
+  function actionRows(c, nid) {
+    var acts = (c.actions || []).filter(function (a) { return !nid || a.need === nid; });
+    if (!acts.length) return '<p class="mini mut">' + esc(SHARE ? T.xp_actions_withheld : T.xp_actions_none) + '</p>';
+    return '<div class="tw"><table class="xp-tbl"><thead><tr><th scope="col">' + esc(T.xp_target) + '</th><th scope="col">' + esc(T.xp_k_action) + '</th><th scope="col">' + esc(T.tc_lvl) + '</th><th scope="col">' + esc(T.xp_extra) + '</th></tr></thead><tbody>' +
+      acts.slice(0, 20).map(function (a) {
+        var extra = Object.keys(a).filter(function (k) { return !KNOWN_ACT[k]; }).map(function (k) { return k + ': ' + (typeof a[k] === 'object' ? JSON.stringify(a[k]) : a[k]); }).join('; ');
+        return '<tr><td>' + esc(a.target) + '</td><td>' + esc(T['act_' + a.action] || a.action) + ' <span class="mini">(' + esc(T['cons_' + a.cons] || String(a.cons || '').replace(/_/g, ' ')) + ')</span></td><td>' + (a.lvl ? esc(lvlW(a.lvl)) : '<span class="mut">' + esc(T.xp_unknown) + '</span>') + (a.abst ? '<div class="mini mut">' + esc(T['abst_' + a.abst] || a.abst) + '</div>' : '') + '</td><td class="mini">' + esc(extra) + '</td></tr>';
+      }).join('') + '</tbody></table></div>' + (acts.length > 20 ? '<p class="mini">+' + (acts.length - 20) + '</p>' : '');
+  }
+  function showNeed(nid) {
+    var n = NM[nid]; if (!n) return '';
+    var linked = CANDS.filter(function (c) { return c.links[nid]; });
+    var tg = (n.targets || []).map(function (t) { return { id: 't:' + t, label: t, kind: 'tgt' }; });
+    var cards = linked.map(function (c) { return { id: 'c:' + c.id, label: c.links[nid].group + ' · ' + c.short, kind: 'card', href: '#x=cand:' + encodeURIComponent(c.id) }; });
+    var EDG = [];
+    tg.forEach(function (t) { EDG.push({ a: 'n:' + nid, b: t.id, cls: 'tgt', label: T.xp_k_target, la: needName(n), lb: t.label }); });
+    linked.forEach(function (c) {
+      var l = c.links[nid], k = evc(l);
+      var acts = (c.actions || []).filter(function (a) { return a.need === nid; });
+      // an action row draws target -> compound in the link's evidence style; a link with no action row goes straight from the need
+      acts.forEach(function (a) { EDG.push({ a: 't:' + a.target, b: 'c:' + c.id, cls: k, label: T.xp_k_action + ': ' + (T['act_' + a.action] || a.action) + ' \u00b7 ' + T['ev_' + k] + ' \u00b7 ' + l.group, la: a.target, lb: c.short }); });
+      if (!acts.length) EDG.push({ a: 'n:' + nid, b: 'c:' + c.id, cls: k, label: T.xp_k_link + ' \u00b7 ' + T['ev_' + k] + ' \u00b7 ' + l.group, la: needName(n), lb: c.short });
+    });
+    if (!tg.length) tg = [{ id: 'none', label: T.xp_targets_none, kind: 'tgt' }];
+    var anyAct = linked.some(function (c) { return (c.actions || []).some(function (a) { return a.need === nid; }); });
+    var cols = [{ head: T.qk_iv_need, items: [{ id: 'n:' + nid, label: needName(n), kind: 'need' }] }, { head: T.xp_targets, items: capItems(tg, 'tgt') }, { head: T.xp_cards_for_need, items: capItems(cards, 'card') }];
+    if (!anyAct) {   // no action row to draw (shareable edition, or none recorded): declared targets -> need -> interventions, so no edge crosses a column
+      cols = [cols[1], cols[0], cols[2]];
+      EDG.forEach(function (e) { if (e.cls === 'tgt') { var a = e.a, la = e.la; e.a = e.b; e.b = a; e.la = e.lb; e.lb = la; } });
+    }
+    var fams = { F: [], C: [], P: [] };
+    linked.slice().sort(function (a, b) { var ga = a.links[nid].group, gb = b.links[nid].group; return ga < gb ? -1 : ga > gb ? 1 : (a.short.toLowerCase() < b.short.toLowerCase() ? -1 : 1); }).forEach(function (c) { fams[c.links[nid].group[0]].push(linkLine(c, nid, c.links[nid], false)); });
+    var wo = WO[nid];
+    var h = '<h3>' + esc(needName(n)) + '</h3>' + '<p class="mini">' + esc(T.xp_dir) + ': ' + dirOn(n) + ' · ' + esc(goalTxt(n.goal)) + ' · ' + esc(trackTxt(n.track)) + '</p>';
+    h += '<h4>' + esc(T.xp_graph_h) + '</h4><p class="mini mut">' + esc(T.xp_graph_note) + '</p>' + graph(cols, EDG, T.xp_graph_h + ': ' + needName(n));
+    h += '<div class="xp-cols"><div class="xp-box"><h4>' + esc(T.xp_cards_for_need) + '</h4>' + (linked.length ? ['F', 'C', 'P'].map(function (f) { return fams[f].length ? '<ul>' + fams[f].join('') + '</ul>' : ''; }).join('') : '<p class="mut">' + esc(T.xp_no_cards) + '</p>') + '</div>';
+    h += '<div class="xp-box"><h4>' + esc(T.xp_obs) + '</h4><p>' + (n.n_wwox_obs || 0) + ' ' + (n.scopes || []).map(function (s) { return sc(s); }).join(' ') + '</p>' +
+      '<h4>' + esc(T.xp_need_counter) + '</h4>' + ((n.counter || []).length ? '<ul class="mini">' + n.counter.slice(0, 3).map(function (x) { return '<li>' + esc(first(x, 260)) + '</li>'; }).join('') + '</ul>' + plusN(n.counter.length - 3) : '<p class="mini mut">' + esc(T.qk_iv_none) + '</p>') +
+      (wo ? '<h4>' + esc(T.xp_next) + '</h4><p class="mini">' + esc(wo.kind) + ': ' + esc(wo.summary_it || first(wo.question, 240)) + '</p><p class="mini mut">' + esc(wo.feasibility_it || '') + '</p>' : '') + '</div></div>';
+    return h;
+  }
+  function showCand(cid) {
+    var c = CM[cid]; if (!c) return '';
+    var nids = Object.keys(c.links);
+    var acts = c.actions || [];
+    var tg = uniq(acts.map(function (a) { return a.target; })).map(function (t) { return { id: 't:' + t, label: t, kind: 'tgt' }; });
+    var nd = nids.map(function (i) { return { id: 'n:' + i, label: c.links[i].group + ' · ' + (NM[i] ? needName(NM[i]) : i), kind: 'need', href: '#x=need:' + encodeURIComponent(i) }; });
+    var EDG = [], cols;
+    if (acts.length) {
+      acts.forEach(function (a) {
+        EDG.push({ a: 'c:' + cid, b: 't:' + a.target, cls: c.links[a.need] ? evc(c.links[a.need]) : 'act', label: T.xp_k_action + ': ' + (T['act_' + a.action] || a.action), la: c.short, lb: a.target });
+        var l = c.links[a.need]; if (l) EDG.push({ a: 't:' + a.target, b: 'n:' + a.need, cls: evc(l), label: T.xp_k_link + ' \u00b7 ' + T['ev_' + evc(l)] + ' \u00b7 ' + l.group, la: a.target, lb: NM[a.need] ? needName(NM[a.need]) : a.need });
+      });
+      // a linked need with no action row is still drawn, straight from the card
+      var shift = nids.filter(function (i) { return !acts.some(function (a) { return a.need === i; }); });
+      shift.forEach(function (i) { var k = evc(c.links[i]); EDG.push({ a: 'c:' + cid, b: 'n:' + i, cls: k, label: T.xp_k_link + ' \u00b7 ' + T['ev_' + k] + ' \u00b7 ' + c.links[i].group, la: c.short, lb: NM[i] ? needName(NM[i]) : i }); });
+      cols = [{ head: T.xp_cand, items: [{ id: 'c:' + cid, label: c.short, kind: 'card', href: '#cand-' + cid, open: cid }] }, { head: T.xp_actions, items: capItems(tg, 'tgt') }, { head: T.xp_needs_of_card, items: capItems(nd, 'need') }];
+    } else {
+      // no distributable (or no recorded) action: compound -> linked needs (evidence class) -> targets those needs declare (register text)
+      var ntg = [];
+      nids.forEach(function (i) {
+        var k = evc(c.links[i]);
+        EDG.push({ a: 'c:' + cid, b: 'n:' + i, cls: k, label: T.xp_k_link + ' \u00b7 ' + T['ev_' + k] + ' \u00b7 ' + c.links[i].group, la: c.short, lb: NM[i] ? needName(NM[i]) : i });
+        ((NM[i] || {}).targets || []).forEach(function (t) { if (ntg.indexOf(t) < 0) ntg.push(t); EDG.push({ a: 'n:' + i, b: 't:' + t, cls: 'tgt', label: T.xp_k_target, la: NM[i] ? needName(NM[i]) : i, lb: t }); });
+      });
+      cols = [{ head: T.xp_cand, items: [{ id: 'c:' + cid, label: c.short, kind: 'card', href: '#cand-' + cid, open: cid }] }, { head: T.xp_needs_of_card, items: capItems(nd, 'need') },
+              { head: T.xp_targets, items: capItems(ntg.length ? ntg.map(function (t) { return { id: 't:' + t, label: t, kind: 'tgt' }; }) : [{ id: 'none', label: T.xp_targets_none, kind: 'tgt' }], 'tgt') }];
+    }
+    var acc = (c.access || []).map(function (a) { return T['acc_' + a] || a; }).join(', ');
+    var h = '<h3>' + esc(c.name) + '</h3><p class="mini">' + esc(T.xp_status) + ': ' + esc(statusTxt(c.status)) + ' · ' + esc(goalTxt(c.goal)) + ' · ' + esc(trackTxt(c.track)) + ' · <a href="#cand-' + esc(cid) + '" data-open="' + esc(cid) + '">' + esc(T.xp_open_card) + '</a></p>';
+    h += '<h4>' + esc(T.xp_graph_h) + '</h4><p class="mini mut">' + esc(T.xp_graph_note) + '</p>' + graph(cols, EDG, T.xp_graph_h + ': ' + c.short);
+    h += '<div class="xp-cols"><div class="xp-box"><h4>' + esc(T.xp_needs_of_card) + '</h4>' + (nids.length ? '<ul>' + nids.map(function (i) { return linkLine(c, i, c.links[i], true); }).join('') + '</ul>' : '<p class="mut">' + esc(T.xp_no_cards) + '</p>') +
+      '<h4>' + esc(T.xp_actions) + '</h4>' + actionRows(c) + '</div>';
+    h += '<div class="xp-box"><h4>' + esc(T.xp_counter) + '</h4>' + ((c.against || []).length ? '<ul class="mini">' + c.against.slice(0, 5).map(function (x) { return '<li>' + esc(first(x, 260)) + '</li>'; }).join('') + '</ul>' + plusN(c.against.length - 5) : '<p class="mini mut">' + esc(T.qk_iv_none) + '</p>') +
+      '<h4>' + esc(T.xp_gaps) + '</h4><ul class="mini">' + uniq([c.missing].concat((c.not_known || []).slice(0, 4))).slice(0, 4).map(function (x) { return '<li>' + esc(first(x, 260)) + '</li>'; }).join('') + '</ul>' +
+      '<h4>' + esc(T.xp_next) + '</h4><p class="mini">' + esc(first(c.next || T.xp_unknown, 320)) + '</p>' +
+      '<h4>' + esc(T.xp_access) + '</h4><p class="mini">' + esc(acc || T['acc_unknown/unverified']) + ' · ' + esc(T.bf_cat_build) + ' ' + esc(META.catalogue_generated || T.xp_unknown) + ' · ' + esc(T.countryL[c.country] || c.country || T.xp_unknown) + (c.access_text ? '<br>' + esc(first(c.access_text, 240)) : '') + '</p><p class="mini mut">' + esc(T.xp_access_note) + '</p></div></div>';
+    return h;
+  }
+  var sn = $('xp-need'), scd = $('xp-cand');
+  sn.innerHTML = optsNeed(); scd.innerHTML = optsCand();
+  function show(kind, id, scroll) {
+    var out = $('xp-out');
+    if (kind === 'need' && NM[id]) { sn.value = id; scd.value = ''; out.innerHTML = showNeed(id); }
+    else if (kind === 'cand' && CM[id]) { scd.value = id; sn.value = ''; out.innerHTML = showCand(id); }
+    else return;
+    if (scroll) $('explore').scrollIntoView();
+  }
+  sn.addEventListener('change', function () { if (this.value) { history.replaceState(null, '', '#x=need:' + encodeURIComponent(this.value)); show('need', this.value); } });
+  scd.addEventListener('change', function () { if (this.value) { history.replaceState(null, '', '#x=cand:' + encodeURIComponent(this.value)); show('cand', this.value); } });
+  function fromX() { var m = decodeURIComponent(location.hash || '').match(/^#x=(need|cand):(.+)$/); if (m) show(m[1], m[2], true); }
+  window.addEventListener('hashchange', fromX);
+  // default view: the first need (register order) that has declared targets and a link with a favourable WWOX-system result; otherwise the first need
+  var dflt = NEEDS.filter(function (n) { return (n.targets || []).length && CANDS.some(function (c) { var l = c.links[n.id]; return l && /^F[12]$/.test(l.group); }); })[0] || NEEDS[0];
+  if (/^#x=/.test(location.hash)) fromX(); else if (dflt) show('need', dflt.id);
+})();
 window.addEventListener('hashchange', fromHash);
 renderAll();
 fromHash();
