@@ -14,3 +14,10 @@ Non-canonical research material. Metadata-level triage plus one probe; nothing i
 
 ## The one probe (DrugAudit evidence file)
 `drugaudit_probe.py` (stdlib only, safe `--help`, prints counts, copies no item text). `evidence.xlsx` at revision bc7b93ede215 (sha256 9df3f3d9...ca18ea4) was read in the scratch area only: 3,961 items, about 500 per source. It names 4 of the 186 universe compounds of the P4 matching task (gabapentin, pregabalin, lithium carbonate, ruxolitinib) and 2 of the 21 card compounds; each set has 2 items about mechanism or action; 8 of 508 ChEMBL items do, phrased "according to ChEMBL", the source the module already uses. Matching was on ChEMBL preferred names only, so counts may be slightly low. Output: `probe_drugaudit_output.txt`. Limit: one probe, name matching only; it does not test DrugAudit's own answer-qualification method.
+
+## Scope notes added in IT19 (the decisions above were stated more widely than their checks)
+- "No WWOX/WOREE in the file paths" (EuTxGNN) is a statement about names; the contents were not searched.
+- A discard is for the question tried (here the IT18 matching question), not general uselessness; reopen conditions are in `decisions.tsv`.
+- A triage on metadata is not a trial; only the DrugAudit evidence file was probed, and not DrugAudit's answer-qualification method.
+- A licence file not found or not read is not a prohibition; nothing was copied, and terms must be read before any reuse.
+- PROTON stays discarded for the current question and BioPathNet in WATCH within their documented limits; neither was reopened.
