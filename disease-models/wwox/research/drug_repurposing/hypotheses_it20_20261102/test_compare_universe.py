@@ -108,6 +108,21 @@ class CommittedResult(unittest.TestCase):
     def test_the_qualified_arm_reaches_only_a_minority_of_the_needs(self):
         self.assertLess(len(self.s["arm_wwox"]["needs_covered"]), 6)
 
+    def test_the_measured_counts_are_the_ones_the_readme_reports(self):
+        """2026-11-02, regenerated after it20-engine landed: the provenance guard took the coherent set from 291 to 208 and
+        arm W from 99 to 74 families (19 approved), and arm E's surviving top 10 from 8 to 5. The universe, arm E's size,
+        the three needs reached and the 20 toolless needs did not move. These are the figures section 2 and section 8 of the
+        README state; a later catalogue or engine change should fail here and send a reader to re-measure, not be absorbed."""
+        self.assertEqual(self.s["universe"]["associations"], 3331)
+        self.assertEqual(self.s["universe"]["families"], 2002)
+        self.assertEqual(self.s["universe"]["by_consistency"]["consistent"], 208)
+        self.assertEqual(self.s["arm_external"]["families_selected"], 622)
+        self.assertEqual(self.s["arm_wwox"]["families_selected"], 74)
+        self.assertEqual(self.s["arm_wwox"]["approved_among_them"], 19)
+        self.assertEqual(len(self.s["overlap"]["external_top_n_surviving_qualification"]), 5)
+        self.assertEqual(self.s["overlap"]["external_only"], 548)
+        self.assertEqual(len(self.s["needs_without_an_adequate_tool"]), 20)
+
     def test_most_needs_have_no_adequate_tool_and_each_says_why(self):
         rows = self.s["needs_without_an_adequate_tool"]
         self.assertGreater(len(rows), 10)

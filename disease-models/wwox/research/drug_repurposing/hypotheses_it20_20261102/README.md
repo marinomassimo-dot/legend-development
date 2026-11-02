@@ -18,9 +18,9 @@ which of five causes that depends on. Measured, on this date:
 
 | Candidate cause | Verdict | The measurement |
 |---|---|---|
-| (a) real generation capacity | **CONFIRMED, and it is the main cause** | Over one identical usable universe, the WWOX-qualified arm selected 99 compound families and the external-only arm 622; the qualified set is a **strict subset** (`wwox_only` = 0). The qualification path cannot propose a candidate that a plain target-list search would not already return — it filters, it does not generate. |
+| (a) real generation capacity | **CONFIRMED, and it is the main cause** | Over one identical usable universe, the WWOX-qualified arm selected 74 compound families and the external-only arm 622; the qualified set is a **strict subset** (`wwox_only` = 0). The qualification path cannot propose a candidate that a plain target-list search would not already return — it filters, it does not generate. |
 | (b) which needs and which catalogue slice are queried | **CONFIRMED** | Only **3 of 23** needs can qualify any lever at all, and all three are in the excitability cluster the literature already worked. That is the mechanism by which the known threads dominate: they are the only needs with a qualifiable tool. |
-| (c) qualification criteria | **CONFIRMED, and it is the binding constraint** | `consistent` requires both a resolved up/down need direction and an explicit coupling row. 10 needs are blocked by an unresolved direction, 6 by a `restore`-type direction that no catalogue action vocabulary matches, 4 by having no catalogue association at all. 291 of 3,331 associations are direction-coherent. |
+| (c) qualification criteria | **CONFIRMED, and it is the binding constraint** | `consistent` requires both a resolved up/down need direction and an explicit coupling row. 10 needs are blocked by an unresolved direction, 6 by a `restore`-type direction that no catalogue action vocabulary matches, 4 by having no catalogue association at all. 208 of 3,331 associations are direction-coherent. |
 | (d) ordering rules | **CONFIRMED as a contributing cause** | The existing group rule (G1…GU) is a function of WWOX-system evidence depth, so the order it produces necessarily favours what has already been tested in a WWOX system. It is a correct answer to its own question and the wrong answer to "what should we fund next". |
 | (e) public-presentation limits | Real but **not** the cause | Already recorded in `../diagnosis_it20_20261102/README.md`; a presentation change alone would have left (a)–(d) untouched, which is what the brief warned against. |
 
@@ -35,14 +35,14 @@ reach**. Nothing was re-searched; no network call; no spend.
 | | arm E (external-only) | arm W (WWOX-qualified) |
 |---|---|---|
 | rule | documented up/down action on a listed target, approved status preferred, ordered by targets and needs touched | the same U, keeping only an association whose documented action is direction-coherent with the need's stated direction |
-| families selected | 622 | 99 (34 with an approved status) |
+| families selected | 622 | 74 (19 with an approved status) |
 | needs reached | 19 | **3** |
-| families the other arm misses | 523 | **0** |
+| families the other arm misses | 548 | **0** |
 
 **What emerges in both:** the excitability cluster — the T-type calcium axis, the glutamate-receptor axis and the
 symptomatic seizure axis. These are exactly the threads the WWOX literature already names.
 
-**What the qualification excludes or weakens:** 523 families, and 2 of arm E's top 10. Arm E's top 10 is also instructive
+**What the qualification excludes or weakens:** 548 families, and 5 of arm E's top 10. Arm E's top 10 is also instructive
 about the reflex it stands for: it is populated by promiscuity (four listed targets each) and by **duplicate family twins** —
 the same compound served once by one source and once by another is counted twice. Both are artefacts of counting, which is
 why this module refuses to classify compounds by how many pathways they cover.
@@ -65,8 +65,8 @@ compound test can do.
 Run over the qualified needs through the existing path (needs → targets → catalogue families → existing qualifications),
 with the module's own card and table corpus checked by name for each proposal.
 
-Of the 99 direction-coherent families, 69 are already named in the WWOX material. Of the remaining 30, the honest
-classification is:
+Of the 74 direction-coherent families, 45 are already named in the WWOX material (matched by name after salt and
+stereochemistry-preserving normalisation). Of the remaining 29, the honest classification is:
 
 - **radioligands, tool compounds and research chemicals** — the large majority. Not usable as a therapeutic hypothesis; they
   stay visible as what they are.
@@ -143,5 +143,34 @@ need by need), then `python3 -B .../ranking_it8_p9_20261029/ranking_it8.py run`.
    the generator refuses a row that phrases it as one.
 5. The isoform-discriminating proposal rests on catalogue-curated mechanism rows, not on a potency measurement read by
    LEGEND; no potency is carried. Whether the isoform claims hold at the relevant exposure is unverified here.
-6. The engine branch (`it20-engine`) has not landed. Everything here was built against `main`; the association universe and
-   therefore the three measured counts must be regenerated after that branch lands.
+6. The published investigations list is capped at ten rows (the view builder's contract). The eleventh row, INV-11, sits
+   below the line in `investigations.tsv` with its reason; that is a ceiling on the page, not a judgement about the
+   investigation. `order_digest` is computed over the whole evaluated order so the ceiling cannot move it.
+
+## 8. Regenerated after the engine landed (2026-11-02)
+
+`it20-engine` landed on the integration branch (provenance fields `claim_source`, `claim_provenance`,
+`effective_target_level`, `assertion_key`; its own count of direction-coherent pairs 99 to 74). This package was merged with
+that state and both generators were rerun. What changed and what did not:
+
+| | before the engine | after |
+|---|---|---|
+| usable universe | 3,331 associations / 2,002 families | **unchanged** |
+| direction-coherent associations | 291 | **208** |
+| arm E families | 622 | **622 (unchanged)** |
+| arm W families | 99 (34 approved) | **74 (19 approved)** |
+| arm E top 10 surviving qualification | 8 | **5** |
+| families arm W would add | 0 | **0 — the strict-subset finding holds** |
+| needs arm W reaches | 3 of 23 | **3 of 23 (the same three)** |
+| needs with no adequate tool | 20 (10 / 6 / 4 by reason) | **20 (10 / 6 / 4, unchanged)** |
+
+The engine's stricter provenance guard therefore removed a quarter of the coherent set and cut arm E's surviving top-10 from
+eight to five — it made the qualification more selective, exactly as intended — **without changing either finding this
+package rests on**: the qualified arm still adds nothing of its own, and it still reaches only the excitability cluster. The
+two proposals behind INV-03 both survive the stricter guard, so that row's premise is unaffected. The unit ranking and both
+digests are unchanged (`units` byte-identical, `order_digest` ff38fcaa61295a5a, investigations digest 7e42ebdea7d58824).
+
+One normalisation note from the rerun: with salt suffixes stripped consistently, one approved agent on the glutamate axis
+that the first pass counted as not-named is in fact already named in the module's material, which is why the split moved
+from 69/30 to 45/29 by more than the 25 families the guard removed. A stereoisomer of a carded agent appears in the
+not-named set and is left there deliberately: this module does not merge stereoisomers.

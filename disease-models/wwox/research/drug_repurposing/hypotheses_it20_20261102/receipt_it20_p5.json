@@ -21,51 +21,53 @@
    "families": 2002,
    "needs": 19,
    "by_consistency": {
-    "consistent": 291,
-    "direction_unresolved": 2995,
-    "opposed": 45
+    "consistent": 208,
+    "direction_unresolved": 3084,
+    "opposed": 39
    },
    "definition": "every (family, target, need) association the shipped search layer returns for the 23 needs, minus the rows it excludes from counts; identical for both arms"
   },
   "arm_external_families": 622,
-  "arm_wwox_families": 99,
+  "arm_wwox_families": 74,
   "arm_wwox_needs_covered": [
    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
    "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
    "NEED-T-TYPE-CALCIUM"
   ],
   "wwox_only_families": 0,
-  "external_only_families": 523,
-  "external_top10_surviving": 8,
+  "external_only_families": 548,
+  "external_top10_surviving": 5,
   "needs_without_an_adequate_tool": 20,
   "finding": "the qualified arm is a strict subset of the external arm and reaches 3 of 23 needs: the qualification filters, it does not generate"
  },
  "generation": {
-  "direction_coherent_families": 99,
-  "already_named_in_wwox_material": 69,
-  "not_named": 30,
+  "direction_coherent_families": 74,
+  "already_named_in_wwox_material": 45,
+  "not_named": 29,
   "sustainable_new_therapeutic_relations": 0,
   "advance_kept": "one isoform-discriminating probe pair on the T-type axis (INV-03), recorded as a probe and not as a therapy",
   "limit_named": "20 of 23 needs cannot qualify a lever (unresolved direction 10, restore-type vocabulary mismatch 6, no catalogue association 4)"
  },
  "investigations": {
-  "rows": 11,
-  "rank_positions": 6,
+  "published": 10,
+  "below_the_line": 1,
+  "rank_positions": 5,
   "by_origin_class": {
-   "generated_by_legend": 4,
+   "generated_by_legend": 3,
    "known_in_wwox": 7
   },
   "by_direction_state": {
    "opposed_risk": 1,
    "resolved": 5,
-   "unresolved": 5
+   "unresolved": 4
   },
-  "order_digest": "7e42ebdea7d58824"
+  "order_digest": "7e42ebdea7d58824",
+  "ceiling": "at most ten published rows; the eleventh stays in investigations.tsv with below_the_line and its reason"
  },
  "invariants_held": {
   "unit_ranking_unchanged": "ranking.json units byte-identical to 4f8ff596; summary.order_digest unchanged",
   "existing_suite": "71/71 test_ranking_it8.py pass",
-  "new_suites": "30/30 test_investigations.py, 15/15 test_compare_universe.py",
+  "new_suites": "39/39 test_investigations.py, 16/16 test_compare_universe.py",
   "superseded_assumption": "test_group_order_places_unorderable_last_without_a_verdict kept, with a dated 2026-11-02 comment separating the group guarantee from the investment order"
  },
  "artefacts": {
@@ -80,5 +82,23 @@
   "../ranking_it8_p9_20261029/test_investigations.py": "36801bd4ffe5e704",
   "../ranking_it8_p9_20261029/ranking_it8.py": "3d9b70f6ff98a1a7"
  },
- "rebase_note": "built against main; it20-engine (repurposing_search.py / repurposing_coverage.py provenance work) not landed. Regenerate compare_universe.py run and ranking_it8.py run after it lands: the three measured counts depend on the association universe."
+ "regenerated_after_engine": {
+  "date": "2026-11-02",
+  "merged": "it20-orch (main + dash + hyp + engine) into it20-hyp",
+  "engine_change": "provenance fields claim_source / claim_provenance / effective_target_level / assertion_key",
+  "universe": "unchanged (3,331 associations / 2,002 families)",
+  "direction_coherent_associations": "291 -> 208",
+  "arm_wwox_families": "99 -> 74 (approved 34 -> 19)",
+  "arm_external_families": "622 unchanged",
+  "external_top10_surviving": "8 -> 5",
+  "wwox_only_families": 0,
+  "needs_covered": [
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+   "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
+   "NEED-T-TYPE-CALCIUM"
+  ],
+  "needs_without_an_adequate_tool": 20,
+  "findings_hold": "both: the qualified arm is still a strict subset and still reaches only the excitability cluster; INV-03's two proposals survive the stricter guard",
+  "unit_ranking": "unchanged (units byte-identical, order_digest ff38fcaa61295a5a)"
+ }
 }

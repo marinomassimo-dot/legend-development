@@ -28,7 +28,7 @@ spec.loader.exec_module(rk)
 def load_rows() -> list[dict]:
     """The PUBLISHED rows: ranking.json carries at most ten (the view builder's contract, IT20 integration)."""
     j = json.loads((HERE / "ranking.json").read_text(encoding="utf-8"))
-    return j["investigations"]["rows"]
+    return j["investigations"]
 
 
 def load_all_rows() -> list[dict]:
@@ -40,7 +40,7 @@ def load_all_rows() -> list[dict]:
 
 def load_summary() -> dict:
     j = json.loads((HERE / "ranking.json").read_text(encoding="utf-8"))
-    return j["investigations"]["summary"]
+    return j["summary"]["investigations"]
 
 
 class Contract(unittest.TestCase):
@@ -130,7 +130,7 @@ class DepthIsDisplayedNotRequired(unittest.TestCase):
 
     def test_an_unresolved_need_direction_is_never_declared_resolved(self):
         j = json.loads((HERE / "ranking.json").read_text(encoding="utf-8"))
-        for r in j["investigations"]["rows"]:
+        for r in j["investigations"]:
             if r["need_direction"] in ("uncertain", "modulate"):
                 self.assertNotEqual(r["direction_state"], "resolved", f"{r['inv_id']} hides an unresolved direction")
 

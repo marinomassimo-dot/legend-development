@@ -1990,7 +1990,9 @@ def build_all() -> dict[str, bytes]:
         # the TSV is the whole evaluated order; ranking.json publishes at most ten rows (the view builder's contract)
         pub = [r for r in invs if not r.get("below_the_line")]
         files["investigations.tsv"] = tsv_bytes(invs, INV_COLS)
-        ing["investigations"] = {"summary": investigations_summary(pub, invs), "rows": pub}
+        # the view builder's contract (framework/scripts/repurposing_view.py, INV_FIELDS / INV_MAX): a bare LIST of at most
+        # ten rows, in rank order, each tie group sharing one tie_group string. The summary lives under summary.investigations.
+        ing["investigations"] = pub
         summary["investigations"] = investigations_summary(pub, invs)
     files["ranking.json"] = json_bytes(ing)
     # per-unit input digests (for the snapshot / diff mechanism)
@@ -2020,7 +2022,7 @@ def current_state(files: dict[str, bytes]) -> dict:
     # investigation positions travel in the snapshot so that movement_reason can be derived on the next run
     if j.get("investigations"):
         out["investigations"] = {r["inv_id"]: {"rank": r["rank"], "intervention": r["intervention"], "origin_class": r["origin_class"]}
-                                 for r in j["investigations"]["rows"]}
+                                 for r in j["investigations"]}
     return out
 
 
