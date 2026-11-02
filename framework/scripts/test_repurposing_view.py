@@ -2348,5 +2348,135 @@ class MatchingDirectionView(unittest.TestCase):
         self.assertIn("forbidden-name", {v["kind"] for v in rep.violations})
 
 
+@unittest.skipUnless(HAVE_DATA, "module data absent")
+class It20P6Dashboard(unittest.TestCase):
+    """IT20 P6: quick guide, reproducible five-stage funnel, explorer need <-> compound, evidence classes. Read-only checks on fresh builds."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.full = rv.build(DR, "full")
+        cls.share = rv.build(DR, "shareable")
+        cls.PS = embedded(cls.share)
+
+    def test_funnel_numbers_equal_the_reproducible_table_and_stage_five_is_not_substituted(self):
+        rows = {r["step"]: r for r in rv.read_tsv(DR / rv.FUNNEL18_DIR / "funnel.tsv")}
+        for page in (self.full, self.share):
+            sec = page[page.index('id="funnel-it20"'):page.index("</section>", page.index('id="funnel-it20"'))]
+            st = static_numbers(sec)
+            for sid in rv.FUNNEL18_STEPS:
+                self.assertEqual(st["fu." + sid], rows[sid]["count"], sid)
+            s5 = sec[sec.index('data-step="S5"'):]
+            self.assertIn(rv.E(rv.UI_IT["fu_s5_na"]), s5)
+            self.assertNotRegex(s5, r'data-k="fu\.', "stage 5 must not carry a substituted count")
+            self.assertIn(rv.E(rv.UI_IT["fu_lead"]), sec)   # units differ, never summed
+        self.assertEqual(self.PS["cur"]["selection"]["it18_funnel"]["S3"]["of"], int(rows["S2"]["count"]))
+
+    def test_a_funnel_whose_denominators_do_not_nest_fails_the_build(self):
+        with tempfile.TemporaryDirectory() as td:
+            d = Path(td) / rv.FUNNEL18_DIR
+            d.mkdir()
+            txt = (DR / rv.FUNNEL18_DIR / "funnel.tsv").read_text(encoding="utf-8").splitlines()
+            bad = [re.sub(r"^(S3\t[^\t]*\t[^\t]*\t\d+\t)\d+", r"\g<1>1", ln) for ln in txt]
+            self.assertNotEqual(bad, txt)
+            (d / "funnel.tsv").write_text("\n".join(bad) + "\n", encoding="utf-8")
+            with self.assertRaises(SystemExit):
+                rv.load_funnel18(Path(td))
+
+    def test_quick_guide_lists_every_favourable_wwox_link_with_its_reason_and_keeps_the_notice(self):
+        cur = self.PS["cur"]
+        want = sorted((c["id"], nid) for c in cur["cands"] for nid, l in c["links"].items() if l["group"] in ("F1", "F2"))
+        qk = self.share[self.share.index('id="start"'):self.share.index('id="threads"')]
+        self.assertEqual(len(re.findall(r'<li class="qk-iv" data-pos="F[12]"', qk)), len(want))
+        for g in {cur_l["group"] for c in cur["cands"] for cur_l in c["links"].values()} & {"F1", "F2"}:
+            self.assertIn(rv.E(rv.POS_IT[g]["plain"]), qk)
+        for k in ("mis", "inf", "ipo", "unk"):
+            self.assertIn(rv.E(rv.UI_IT["ev_" + k]), qk)
+        first = self.share[:self.share.index('id="start"')]
+        self.assertIn(rv.E(rv.UI_IT["warn_1"]), first)                     # research-material notice stays on the first screen
+        how = self.share[self.share.index('<details class="inl howto">'):self.share.index('id="threads"')]
+        self.assertIn('data-k="meta.data_date"', how)                       # dates and perimeter moved into the drill-down, not removed
+        self.assertIn(rv.E(rv.UI_IT["qk_th_note"]), qk)                     # coverage states what is counted and the denominator
+
+    def test_evidence_class_is_read_from_existing_link_facts(self):
+        self.assertEqual(rv.link_evclass({"result": "favourable", "n_o": 0}), "mis")
+        self.assertEqual(rv.link_evclass({"result": "none", "n_o": 3}), "inf")
+        self.assertEqual(rv.link_evclass({"result": "none", "n_o": 0}), "ipo")
+        js = (DR / "view/assets/curated.js").read_text(encoding="utf-8")
+        self.assertIn("function evc(l) { return l.result && l.result !== 'none' ? 'mis' : ((l.n_o || 0) > 0 ? 'inf' : 'ipo'); }", js)
+
+    def test_explorer_shell_and_withheld_actions_note(self):
+        for page in (self.full, self.share):
+            self.assertIn('id="xp-need"', page)
+            self.assertIn('id="xp-cand"', page)
+            self.assertIn('<a href="#explore">', page)
+        self.assertFalse([a for c in self.PS["cur"]["cands"] for a in c["actions"]])
+        self.assertIn("xp_actions_withheld", (DR / "view/assets/curated.js").read_text(encoding="utf-8"))
+        # lesson IT19: no `X.md...` token in page script or style (the shareable redaction rewrites it as a file name)
+        for name in ("curated.js", "curated.css"):
+            self.assertNotRegex((DR / "view/assets" / name).read_text(encoding="utf-8"), r"[A-Za-z_\]\)]\.md[A-Za-z_]")
+
+
+class It20P6Investigations(unittest.TestCase):
+    """IT20 P6: the first-screen block "Principali indagini da portare avanti" renders from a fixture of the hypothesis branch's contract
+    (ranking.json key `investigations`), shows "in preparazione" when the key is absent, and keeps non-carded names out of the shareable edition."""
+    CARDS = [{"short": "Ethosuximide", "name": "Ethosuximide (class contrast)"}]
+
+    def row(self, rank, tie, name, origin, **kw):
+        r = {"rank": rank, "tie_group": tie, "intervention": name, "question": f"Does {name} lower the T-type current?", "why_now": "new measurement available",
+             "evidence_available": "one WWOX mouse readout", "evidence_depth": "partial full text", "decisive_uncertainty": "no genotype-by-drug test",
+             "next_test": "same-day PTZ control", "origin_class": origin, "novelty_perimeter": "no WWOX study found in PubMed and Europe PMC queries of 2026-11-02",
+             "movement_reason": "up: new controlled row"}
+        r.update(kw)
+        return r
+
+    def fixture(self):
+        return [self.row(1, "", "Ethosuximide", "known_in_wwox"), self.row(2, "T2", "Zonisamide-like class", "generated_by_legend"),
+                self.row(2, "T2", "Mibefradil", "external_transferred")]
+
+    def page(self, inv):
+        return rv.render_investigations({"cur": {"ranking": {"investigations": inv}}})
+
+    def test_renders_every_field_tie_and_origin_from_the_contract(self):
+        html = self.page(rv.investigations_view(self.fixture(), self.CARDS, True, {}))
+        self.assertEqual(re.findall(r'data-rank="(\d+)"', html), ["1", "2", "2"])
+        self.assertEqual(html.count("(" + rv.E(rv.UI_IT["iv_tie"]) + ")"), 2)
+        for o in rv.INV_ORIGINS:
+            self.assertIn(rv.E(rv.UI_IT["iv_o_" + o]), html)
+        for k in ("iv_q", "iv_why", "iv_ev", "iv_depth", "iv_unc", "iv_next", "iv_nov", "iv_move"):
+            self.assertIn(rv.E(rv.UI_IT[k]), html)
+        self.assertIn("Mibefradil", html)
+        self.assertNotIn(rv.E(rv.UI_IT["iv_pending"]), html)
+
+    def test_absent_key_shows_pending_and_no_row(self):
+        html = self.page(rv.investigations_view(None, self.CARDS, True, {}))
+        self.assertIn('data-state="pending"', html)
+        self.assertNotIn("inv-row", html)
+
+    def test_shareable_keeps_card_names_and_withholds_or_labels_the_others(self):
+        allow = {"investigations_shareable": {"class_labels": {"Mibefradil": "T-type calcium-channel blocker (class)"}}}
+        sh = rv.investigations_view(self.fixture(), self.CARDS, False, allow)
+        self.assertEqual([r["intervention"] for r in sh], ["Ethosuximide", rv.UI_IT["iv_withheld"], "T-type calcium-channel blocker (class)"])
+        self.assertNotIn("mibefradil", json.dumps(sh).lower())
+        self.assertNotIn("zonisamide", json.dumps(sh).lower())
+
+    def test_invalid_rows_fail_the_build(self):
+        for bad in ([self.row(1, "", "A", "invented_origin")], [self.row(2, "", "A", "known_in_wwox"), self.row(1, "", "B", "known_in_wwox")],
+                    [self.row(1, "", "A", "known_in_wwox"), self.row(1, "", "B", "known_in_wwox")], [self.row(i + 1, "", "X", "known_in_wwox") for i in range(11)]):
+            with self.assertRaises(SystemExit):
+                rv.investigations_view(bad, self.CARDS, True, {})
+        r = self.row(1, "", "A", "known_in_wwox")
+        del r["next_test"]
+        with self.assertRaises(SystemExit):
+            rv.investigations_view([r], self.CARDS, True, {})
+
+    @unittest.skipUnless(HAVE_DATA, "module data absent")
+    def test_live_pages_show_the_block_at_the_opening(self):
+        for src in ("full", "shareable"):
+            page = rv.build(DR, src)
+            i = page.index('id="investigations"')
+            self.assertLess(i, page.index('id="start"'))
+            self.assertLess(page.index(rv.E(rv.UI_IT["warn_1"])), i)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=1)

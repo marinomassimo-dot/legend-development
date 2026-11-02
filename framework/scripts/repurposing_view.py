@@ -1863,6 +1863,7 @@ def build_it7(dr: Path, funnel: dict, mx: dict, units: dict, cur: dict) -> dict:
                 "rows": [{"id": q, "quantity": s["quantity"], "quantity_it": cv["verdicts"][q]["quantity_it"], "verdict": derive_context_verdict(s), "higher": s["higher"], "lower": s["lower"], "other": s["other"],
                           "unknown": s["unknown"], "models_resolved": s["models_resolved"], "models_measured": s["models_measured"], "directions": [s["directions"][c] for c in ctx_ids], "note_it": cv["verdicts"][q]["note_it"]} for q, s in st.items()],
                 "verdict_counts": dict(Counter(derive_context_verdict(s) for s in st.values()))}
+    selection["it18_funnel"] = load_funnel18(dr)   # IT20 P6: the reproducible five-stage funnel (counts only, own census file)
     return {"selection": selection, "hypotheses": hyp, "predictive": predictive, "contexts": contexts}
 
 
@@ -2830,7 +2831,7 @@ TEMPLATE = """<!doctype html>
 <a class="skip" href="#main">__SKIP__</a>
 <header><div class="in"><h1>__H1__</h1>
 <p class="subline">__SUB__</p></div></header>
-__BANNER__<nav aria-label="__NAVLABEL__"><div class="in"><a href="#overview">__N_OV__</a><a href="#ranking">__N_RK__</a><a href="#threads">__N_TH__</a><a href="#chains">__N_EG__</a><a href="#charts">__N_CH__</a><a href="#selection">__N_SE__</a><a href="#hypotheses">__N_HY__</a><a href="#predictive">__N_PR2__</a><a href="#navigate">__N_NAV__</a><a href="#candidates">__N_CA__</a><a href="#priorities-cur">__N_PR__</a><a href="#compare">__N_CP__</a><a href="#technical">__N_TD__</a></div></nav>
+__BANNER__<nav aria-label="__NAVLABEL__"><div class="in"><a href="#overview">__N_OV__</a><a href="#start">__N_QK__</a><a href="#explore">__N_XP__</a><a href="#funnel-it20">__N_FU__</a><a href="#ranking">__N_RK__</a><a href="#threads">__N_TH__</a><a href="#chains">__N_EG__</a><a href="#charts">__N_CH__</a><a href="#selection">__N_SE__</a><a href="#hypotheses">__N_HY__</a><a href="#predictive">__N_PR2__</a><a href="#navigate">__N_NAV__</a><a href="#candidates">__N_CA__</a><a href="#priorities-cur">__N_PR__</a><a href="#compare">__N_CP__</a><a href="#technical">__N_TD__</a></div></nav>
 <main id="main">
 __CURATED__
 <details id="technical" class="techwrap"><summary class="techsum">__TD_SUM__</summary>
@@ -2991,14 +2992,15 @@ def render_overview(P: dict) -> str:
             f'<a class="go" href="#c=thread:{quote(t["id"])}">{E(U["th_explore"])}</a></article>')
     dd = meta["data_date"]
     srcnote = U["src_share" if P["source"] == "shareable" else "src_full"]
+    META_LINE = (f'<p class="meta-line"><b>{E(U["data_date"])}:</b> <span data-k="meta.data_date" data-v="{E(str(dd))}">{E(str(dd))}</span> · <b>{E(U["bf_needs_rec"])}</b> <span data-k="meta.needs_built_on" data-v="{E(str(meta["needs_built_on"]))}">{E(str(meta["needs_built_on"]))}</span> · <b>{E(U["bf_cat_build"])}</b> <span data-k="meta.catalogue_generated" data-v="{E(str(meta["catalogue_generated"]))}">{E(str(meta["catalogue_generated"]))}</span> · <b>{E(U["perimeter"])}:</b> {E(U["perimeter_txt"])} · {E(srcnote)}</p>')
     return (
         f'<section id="overview" aria-labelledby="h-over"><h2 id="h-over">{E(U["ov_h"])}</h2>'
         f'<div class="legendrow" role="group" aria-label="{E(U["legend_h"])}"><b>{E(U["legend_h"])}:</b> {legend}</div>'
         f'<p class="lead">{E(U["ov_lead"])} <span class="mini mut">{E(U["need_gloss"])}</span></p>'
         f'<div class="warnstrip" role="note"><b>{E(U["warn_h"])}.</b> {E(U["warn_1"])} {E(U["warn_2"])}</div>'
-        f'<details class="inl howto"><summary>{E(U["how_sum"])}</summary><div class="twocol"><div class="how"><h3>{E(U["how_h"])}</h3><ol><li>{E(U["how_1"])}</li><li>{E(U["how_2"])}</li><li>{E(U["how_3"])}</li><li>{E(U["how_4"])}</li></ol><p class="mini">{E(U["warn_3"])}</p></div>'
+        + render_investigations(P) + render_quick(P) +
+        f'<details class="inl howto"><summary>{E(U["qk_more"])}</summary>' + META_LINE + f'<div class="twocol"><div class="how"><h3>{E(U["how_h"])}</h3><ol><li>{E(U["how_1"])}</li><li>{E(U["how_2"])}</li><li>{E(U["how_3"])}</li><li>{E(U["how_4"])}</li></ol><p class="mini">{E(U["warn_3"])}</p></div>'
         f'<div class="legendbox"><p class="mini mut">{E(U["legend_note"])}</p><ul class="poslist">{legend_all}</ul></div></div></details>'
-        f'<p class="meta-line"><b>{E(U["data_date"])}:</b> <span data-k="meta.data_date" data-v="{E(str(dd))}">{E(str(dd))}</span> · <b>{E(U["bf_needs_rec"])}</b> <span data-k="meta.needs_built_on" data-v="{E(str(meta["needs_built_on"]))}">{E(str(meta["needs_built_on"]))}</span> · <b>{E(U["bf_cat_build"])}</b> <span data-k="meta.catalogue_generated" data-v="{E(str(meta["catalogue_generated"]))}">{E(str(meta["catalogue_generated"]))}</span> · <b>{E(U["perimeter"])}:</b> {E(U["perimeter_txt"])} · {E(srcnote)}</p>'
         f'<h3 id="threads">{E(U["th_h"])}</h3><p class="mini mut">{E(U["th_note"])}</p><div class="threads">' + "".join(cards) + '</div>'
         f'<h3>{E(U["goals_h"])}</h3><p class="mini mut">{E(U["goals_note"])} {E(U["goal_cross"].format(total=n_links, cross=n_cross))}</p><div class="goals">' + "".join(panels) + '</div>'
         f'<h3>{E(U["facts_h"])}</h3><div class="tiles">' + tiles + f'</div><p class="mini mut">{E(U["unit_note"])}</p></section>')
@@ -3665,6 +3667,8 @@ def build_ranking(dr: Path, cur: dict, source: str):
         # (allowlist key deepened_cases_shareable) and never external_precedent, pharmacology, its limits or the source paths.
         "deepened_cases": J.get("deepened_cases", []) if full else shareable_deepened_cases(J.get("deepened_cases", []), load_allowlist(dr)),
         "deepened_cases_n": len(J.get("deepened_cases", [])),
+        # IT20 P6: "Principali indagini da portare avanti" (generated by the hypothesis branch; None while the key is absent -> "in preparazione" on the page)
+        "investigations": investigations_view(J.get("investigations"), cur["cands"], full, load_allowlist(dr)),
         # IT19 P6: full edition every field; shareable edition class labels, codes and counts only (no compound, ChEMBL action, record id, locator or note)
         "matching_direction": J.get("matching_direction", {}) if full else shareable_matching_direction(J.get("matching_direction", {})),
         "selections": {v: {"top": s["top"], "groups": s["top_groups"], "objective": s["top_objective"], "apart": [{"id": a["unit_id"], "group": a["group"], "objective": a["objective"]} for a in s["not_in_top_listed_apart"]], "n_listed": s["n_listed"], "cut_rule": s["cut_rule"]}
@@ -3874,6 +3878,293 @@ UI_IT19 = {
     "tc_lvl_note": "Il livello è quello del record della fonte; un'azione su un gruppo ampio non è una misura sul singolo gene. Un'astensione spiega perché la direzione non è attribuita.",
 }
 UI_IT.update(UI_IT19)
+
+# ------------------------------------------------------------------ IT20 P6: quick guide, reproducible funnel, explorer (need <-> compound), evidence classes
+# The evidence class of a card x need link is read from facts the view already computed (never a new rule): a signed result of the intervention in a
+# WWOX system exists -> measurement; otherwise outside-WWOX rows exist (other disease, safety, label, target assay) -> inference by transfer; otherwise
+# the link rests on mechanism only -> hypothesis. A card whose rows carry no kind is "not classified".
+EVCLASS = ("mis", "inf", "ipo")
+UI_IT20 = {
+    "qk_h": "In breve: da dove partire",
+    "qk_lead": "Tre domande, nell'ordine in cui conviene porsele: quali filoni biologici hanno già qualcosa di misurato in WWOX, quali interventi meritano uno studio e perché, che cosa manca ancora. "
+               "Nessuna voce è una probabilità di beneficio né una graduatoria di cure.",
+    "qk_ev_h": "Che tipo di evidenza: tre classi, sempre con la parola accanto al simbolo",
+    "ev_mis": "Misura in WWOX", "ev_mis_txt": "esiste un risultato con segno dell'intervento in un sistema WWOX (animale, cellule, casi clinici); può essere debole o non controllato.",
+    "ev_inf": "Inferenza da fuori WWOX", "ev_inf_txt": "nessun risultato in WWOX; il sostegno o il controsegnale viene da altre malattie, da dati di sicurezza o di etichetta, o da un saggio sul bersaglio.",
+    "ev_ipo": "Ipotesi", "ev_ipo_txt": "nulla di misurato per questo intervento su questo bisogno: il legame è solo di meccanismo.",
+    "ev_unk": "Non classificato", "ev_unk_txt": "il tipo di evidenza non è registrato: non è un dato negativo.",
+    "qk_rule": "Regola: la classe si legge dai fatti già calcolati per ogni legame scheda–bisogno, non è un nuovo punteggio.",
+    "qk_th_h": "Filoni biologici: che cosa sostiene, che cosa indebolisce, che cosa manca",
+    "qk_th_note": "Ogni cella conta legami scheda–bisogno del filone (un intervento collegato a due bisogni conta due volte). Ordine dei filoni come nel registro, non una graduatoria. "
+                  "La copertura conta bisogni del filone con almeno un'osservazione in un sistema WWOX: non è la quota di malattia trattata.",
+    "qk_c_thread": "Filone", "qk_c_mis": "Con misura in WWOX", "qk_c_inf": "Solo inferenza da fuori WWOX", "qk_c_ipo": "Solo ipotesi",
+    "qk_c_counter": "Controevidenza da chiarire (C)", "qk_c_cov": "Bisogni con osservazione WWOX", "qk_c_go": "Esplora",
+    "qk_cov_fmt": "{a} di {b} bisogni", "qk_links": "legami", "qk_go": "apri",
+    "qk_iv_h": "Interventi da studiare per primi, e perché",
+    "qk_iv_note": "Qui compaiono i legami con un risultato favorevole già misurato in un sistema WWOX (F1, F2). Raggruppati per tipo di motivo; dentro un gruppo in ordine alfabetico. "
+                  "Gli altri interventi, con sostegno solo da fuori WWOX o con evidenza contraria, sono nell'esplorazione qui sotto.",
+    "qk_iv_need": "Bisogno", "qk_iv_why": "Perché ha priorità", "qk_iv_against": "Che cosa lo indebolisce", "qk_iv_missing": "Misura che manca", "qk_iv_next": "Prossimo test nominato",
+    "qk_iv_ctr": "{n} voci contrarie nella scheda; {r} risultati nulli o dannosi nelle righe pertinenti",
+    "qk_iv_none": "nessuna voce contraria registrata nella scheda (assenza di registrazione, non assenza di rischio)",
+    "qk_iv_rest": "Altri legami: {f3} con sostegno solo da fuori WWOX (F3), {c} con evidenza contraria da chiarire (C), {p} con una premessa mancante (P).",
+    "qk_more": "Lettura completa: date, perimetro e come leggere la pagina",
+    "fu_h": "Dal catalogo al prossimo test: quanti composti arrivano a ogni passo",
+    "fu_lead": "Ogni passo ha la sua unità e il suo denominatore; i numeri di passi diversi non si sommano e non si confrontano come un solo numero. La barra mostra la quota del denominatore del passo stesso.",
+    "fu_src": "Conteggi riproducibili: tabella del pacchetto IT18 P2 (catalogue_funnel_it18_p2_20261101), rigenerata offline dal suo script di conteggio sulle regole esistenti del modulo.",
+    "fu_s1": "1. Catalogati", "fu_s2": "2. Utilizzabili dal metodo", "fu_s3": "3. Effettivamente valutati", "fu_s4": "4. Pertinenti per un bisogno", "fu_s5": "5. Pronti per un test nominato",
+    "fu_S0": "voci di fonte nel catalogo (un sale, uno stereoisomero, una riga di sola fonte contano una volta ciascuno)",
+    "fu_S1": "composti con identità riconciliata (famiglia con almeno un record ChEMBL) sul totale delle famiglie",
+    "fu_S2": "composti con un meccanismo umano curato con direzione determinata (aumenta o riduce), non esclusi da una regola anti-artefatto",
+    "fu_S2w": "per confronto, regola più larga (qualunque fonte con segno): non è un passo della catena",
+    "fu_S3": "composti utilizzabili che stanno in una scheda o in un'unità della graduatoria",
+    "fu_S3u": "unità della graduatoria con almeno una famiglia del catalogo",
+    "fu_S4m": "coppie composto–bisogno con una direzione confrontabile (compatibile o opposta) nel confronto del modulo; il denominatore conta le coppie collegate per identificativo a un bersaglio d'intervento di un bisogno, su tutti i composti riconciliati: questo passo non è annidato nel precedente",
+    "fu_S4": "coppie unità–bisogno della graduatoria con un confronto compatibile o opposto possibile",
+    "fu_s5_na": "Non misurato nell'unità composto–bisogno: nessuna tabella riproducibile dice quante di queste coppie hanno un test nominato. Non viene sostituito con conteggi di righe di fonte.",
+    "fu_s5_other": "In un'unità diversa (schede, non composti): {a} di {b} schede non in astensione nominano un prossimo passo; {c} di {d} bisogni hanno una voce nel piano di lavoro.",
+    "fu_unit_record": "record", "fu_unit_family": "famiglie", "fu_unit_pair": "coppie", "fu_unit_unit": "unità",
+    "fu_of": "di", "fu_noden": "nessun denominatore: è il punto di partenza", "fu_side": "a lato, fuori catena",
+    "fu_read": "Lettura: il catalogo ha molte voci, ma il metodo di confronto può usarne una piccola parte e ancora meno sono state valutate. Il numero di voci dice poco sulla portata del metodo.",
+    "xp_h": "Esplora: da un bisogno agli interventi, o da un composto ai suoi bisogni",
+    "xp_lead": "Scegli un bisogno per vedere bersagli, interventi collegati e che cosa li sostiene o li indebolisce; oppure scegli un composto o intervento per vedere azioni, bisogni collegati, evidenza contraria e lacune.",
+    "xp_need": "Da un bisogno", "xp_cand": "Da un composto o intervento", "xp_pick": "scegli…",
+    "xp_graph_h": "Legami bisogno – bersaglio – azione – composto",
+    "xp_graph_note": "Linea continua: misura in WWOX; tratteggiata: inferenza da fuori WWOX; punteggiata: ipotesi. Grigio sottile: bersaglio dichiarato dal registro dei bisogni. La tabella sotto il grafico dice le stesse cose a parole.",
+    "xp_noscript": "Questa esplorazione richiede JavaScript; le stesse informazioni sono nelle schede e nella navigazione per bisogno più in basso.",
+    "xp_targets": "Bersagli dichiarati del bisogno", "xp_target": "Bersaglio", "xp_targets_none": "nessun bersaglio molecolare elencato (il bisogno è definito su una funzione o un fenotipo)",
+    "xp_dir": "Direzione voluta", "xp_obs": "Osservazioni in sistemi WWOX", "xp_need_counter": "Che cosa va contro, sul bisogno",
+    "xp_cards_for_need": "Interventi collegati a questo bisogno", "xp_no_cards": "nessuna scheda collega questo bisogno",
+    "xp_actions": "Azioni documentate sui bersagli",
+    "xp_actions_withheld": "Le azioni del composto sui bersagli vengono da banche dati il cui contenuto non è ridistribuibile in questa versione (ChEMBL CC BY-SA 3.0, DGIdb): sono nella versione locale completa. Qui il legame scheda–bisogno è quello dichiarato dalla scheda.",
+    "xp_actions_none": "nessuna azione su un bersaglio del bisogno registrata nel catalogo per questa scheda",
+    "xp_extra": "altri campi della fonte",
+    "xp_needs_of_card": "Bisogni collegati e motivo della priorità", "xp_counter": "Evidenza contraria e segnali opposti",
+    "xp_gaps": "Lacune: che cosa non si sa", "xp_next": "Prossimo test nominato", "xp_access": "Accesso e giurisdizione",
+    "xp_access_note": "Categoria di accesso come dichiarata dalla fonte, con il paese quando noto; un'approvazione storica non prova la disponibilità attuale e l'assenza di dati non significa «non accessibile». Gli interventi dietetici restano interventi complessi.",
+    "xp_open_card": "apri la scheda completa", "xp_status": "Stato della scheda", "xp_ev": "Tipo di evidenza", "xp_pos": "Posizione",
+    "xp_res_rows": "righe pertinenti: {w} in WWOX, {o} fuori WWOX; {n} nulle, {h} di danno",
+    "xp_table_h": "Gli stessi legami, come testo", "xp_from": "da", "xp_to": "a", "xp_kind": "tipo di legame",
+    "xp_k_target": "bersaglio dichiarato", "xp_k_action": "azione documentata", "xp_k_link": "legame dichiarato dalla scheda",
+    "xp_future": "Campi che il motore sta aggiungendo (fonte originale e fonte che ripubblica, livello effettivo del bersaglio, evidenza specifica) compaiono qui da soli quando sono presenti nei dati.",
+    "xp_unknown": "non noto",
+    "nav_start": "In breve", "nav_explore": "Esplora i legami", "nav_funnel": "Imbuto",
+}
+UI_IT.update(UI_IT20)
+
+
+def link_evclass(l: dict) -> str:
+    """Evidence class of one card x need link, read from the facts the position rule already computed (see EVCLASS)."""
+    if l.get("result") and l["result"] != "none":
+        return "mis"
+    if (l.get("n_o") or 0) > 0:
+        return "inf"
+    return "ipo"
+
+
+def ev_chip(cls: str, n: int | None = None) -> str:
+    """Evidence-class chip: glyph + word + border style; colour never carries the meaning alone."""
+    g = {"mis": "●", "inf": "◇", "ipo": "?", "unk": "–"}[cls]
+    return f'<span class="ev ev-{cls}" title="{E(UI_IT["ev_" + cls + "_txt"])}"><span class="gl" aria-hidden="true">{g}</span>{E(UI_IT["ev_" + cls])}' + (f' ×{n}' if n is not None else "") + '</span>'
+
+
+FUNNEL18_DIR = "catalogue_funnel_it18_p2_20261101"
+FUNNEL18_STEPS = ("S0", "S1", "S2", "S2w", "S3", "S3u", "S4", "S4m")
+
+
+def load_funnel18(dr: Path) -> dict:
+    """IT20 P6: the reproducible catalogue funnel of IT18 P2 (funnel.tsv, written by its funnel.py). A missing step, a non-integer or a chain whose
+    denominators do not nest fails the build; the view never recomputes or patches a count."""
+    p = dr / FUNNEL18_DIR / "funnel.tsv"
+    if not p.exists():
+        return {}
+    rows = {r["step"]: r for r in read_tsv(p)}
+    errs = [f"step {s} missing" for s in FUNNEL18_STEPS if s not in rows]
+    out = {}
+    for s in FUNNEL18_STEPS:
+        r = rows.get(s)
+        if not r:
+            continue
+        try:
+            out[s] = {"count": int(r["count"]), "of": int(r["of"]) if str(r.get("of") or "").strip() else None, "unit": r["unit"]}
+        except ValueError:
+            errs.append(f"step {s}: count or denominator is not an integer")
+    if not errs:
+        if out["S2"]["of"] != out["S1"]["count"] or out["S3"]["of"] != out["S2"]["count"] or out["S2w"]["of"] != out["S1"]["count"]:
+            errs.append("denominators do not nest (S2 of S1, S3 of S2, S2w of S1)")
+        if any(v["of"] is not None and v["count"] > v["of"] for v in out.values()):
+            errs.append("a count exceeds its denominator")
+    if errs:
+        raise SystemExit(f"{FUNNEL18_DIR}/funnel.tsv is invalid:\n  " + "\n  ".join(errs))
+    return out
+
+
+def render_funnel18(P: dict) -> str:
+    """Five stages, each with its own unit and denominator; stage 5 is stated as not measured in the chain's unit (never substituted)."""
+    S = P["cur"]["selection"]
+    F = S.get("it18_funnel") or {}
+    if not F:
+        return ""
+    U = UI_IT
+    unit = {"catalogue record": U["fu_unit_record"], "family": U["fu_unit_family"], "family-need pair": U["fu_unit_pair"], "unit-need pair": U["fu_unit_pair"], "ranking unit": U["fu_unit_unit"]}
+
+    def ind(sid, side=False):
+        x = F[sid]
+        u = unit.get(x["unit"], x["unit"])
+        if x["of"]:
+            p = 100.0 * x["count"] / x["of"]
+            barw = max(0.6, p)
+            bar = f'<span class="fu-bar" aria-hidden="true"><span style="width:{barw:.1f}%"></span></span>'
+            num = f'{numit("fu." + sid, x["count"])} {E(u)} <span class="mut">{E(U["fu_of"])} {E(fmt_it(x["of"]))} ({E(pct_it(round(p, 1)))})</span>'
+        else:
+            bar, num = "", f'{numit("fu." + sid, x["count"])} {E(u)} <span class="mut">({E(U["fu_noden"])})</span>'
+        return (f'<div class="fu-ind{" fu-side" if side else ""}" data-step="{E(sid)}">' + (f'<span class="fu-tag">{E(U["fu_side"])}</span> ' if side else "")
+                + f'<div class="fu-num">{num}</div>{bar}<div class="mini">{E(U["fu_" + sid])}</div></div>')
+    ready = next((s for s in S["steps"] if s["id"] == "ready"), {"indicators": []})
+    rd = {i["id"]: i for i in ready["indicators"]}
+    cn, nd = rd.get("cards_next", {}), rd.get("needs_plan", {})
+    n_abst = sum(1 for c in P["cur"]["cands"] if c["abstention"])
+    stages = [("fu_s1", ind("S0") + ind("S1")), ("fu_s2", ind("S2") + ind("S2w", True)), ("fu_s3", ind("S3") + ind("S3u", True)),
+              ("fu_s4", ind("S4m") + ind("S4")),
+              ("fu_s5", f'<div class="fu-ind fu-na" data-step="S5"><div class="fu-num"><b>{E(U["xp_unknown"])}</b></div><div class="mini">{E(U["fu_s5_na"])}</div>'
+                        f'<div class="mini">{E(U["fu_s5_other"].format(a=cn.get("records"), b=(cn.get("den_records") or 0) - n_abst, c=nd.get("records"), d=nd.get("den_records")))}</div></div>')]
+    body = "".join(f'<li class="fu-stage"><h4>{E(U[k])}</h4>{v}</li>' for k, v in stages)
+    return (f'<section id="funnel-it20" aria-labelledby="h-fu"><h2 id="h-fu">{E(U["fu_h"])}</h2><p class="lead">{E(U["fu_lead"])}</p>'
+            f'<ol class="fu">{body}</ol><p class="mini">{E(U["fu_read"])}</p><p class="mini mut">{E(U["fu_src"])}</p></section>')
+
+
+INV_FIELDS = ("rank", "tie_group", "intervention", "question", "why_now", "evidence_available", "evidence_depth", "decisive_uncertainty", "next_test", "origin_class", "novelty_perimeter", "movement_reason")
+INV_ORIGINS = ("known_in_wwox", "generated_by_legend", "external_transferred")
+INV_MAX = 10
+UI_IT20B = {
+    "iv_h": "Principali indagini da portare avanti",
+    "iv_lead": "Ordine provvisorio e motivato, con possibili pari merito: ogni riga è una domanda su un composto o intervento, la sua azione, il contesto e il beneficio cercato, con un prossimo test. "
+               "Non è una graduatoria di cure né una probabilità di beneficio; la profondità dell'evidenza è indicata a parte.",
+    "iv_pending": "In preparazione: l'elenco è generato da un'analisi in corso e non è ancora nei dati di questa versione. Nessuna voce viene mostrata al suo posto.",
+    "iv_pos": "Posizione", "iv_tie": "pari merito", "iv_int": "Composto o intervento", "iv_q": "Domanda", "iv_why": "Perché adesso", "iv_ev": "Evidenza disponibile",
+    "iv_depth": "Profondità dell'evidenza", "iv_unc": "Incertezza decisiva", "iv_next": "Prossimo test", "iv_nov": "Novità, nel perimetro verificato", "iv_move": "Motivo dello spostamento",
+    "iv_o_known_in_wwox": "filone già noto in WWOX", "iv_o_generated_by_legend": "nuova ipotesi generata da LEGEND", "iv_o_external_transferred": "proposta esterna trasferita al contesto WWOX",
+    "iv_withheld": "intervento fuori dalle schede (nome nella versione locale completa)",
+    "iv_nov_note": "Una novità vale solo nel perimetro di ricerca dichiarato: l'assenza in una scheda o in una ricerca non significa «mai studiato».",
+}
+UI_IT.update(UI_IT20B)
+
+
+def investigations_view(rows, cands: list, full: bool, allow: dict):
+    """IT20 P6 projection of ranking.json["investigations"] (contract of the hypothesis branch). None when the key is absent. The order is the
+    generator's; at most ten rows, no filler. Shareable edition: an intervention is shown by name only when it is a card's own name; otherwise a
+    class label from the allowlist (investigations_shareable.class_labels, keyed by the intervention string) or a withheld note, and the name is
+    removed from the row's other own-text fields. The audit stays the judge of what remains."""
+    if rows is None:
+        return None
+    errs = []
+    if not isinstance(rows, list) or len(rows) > INV_MAX:
+        errs.append(f"investigations must be a list of at most {INV_MAX} rows")
+        rows = []
+    out = []
+    for i, r in enumerate(rows):
+        miss = [k for k in INV_FIELDS if k not in r]
+        if miss:
+            errs.append(f"row {i}: missing {', '.join(miss)}")
+            continue
+        if r["origin_class"] not in INV_ORIGINS:
+            errs.append(f"row {i}: origin_class {r['origin_class']!r} not in {INV_ORIGINS}")
+        if not isinstance(r["rank"], int) or r["rank"] < 1:
+            errs.append(f"row {i}: rank must be a positive integer")
+        out.append({k: r[k] for k in INV_FIELDS})
+    ranks = [r["rank"] for r in out if isinstance(r["rank"], int)]
+    if ranks != sorted(ranks):
+        errs.append("rows are not in rank order")
+    for rk in set(ranks):
+        tg = {str(r["tie_group"] or "") for r in out if r["rank"] == rk}
+        if ranks.count(rk) > 1 and (len(tg) != 1 or tg == {""}):
+            errs.append(f"rank {rk} is shared by several rows without one common tie_group")
+    if errs:
+        raise SystemExit("ranking.json investigations are invalid:\n  " + "\n  ".join(errs))
+    if full:
+        return out
+    own = {str(x).strip().lower() for c in cands for x in (c["short"], c["name"])}
+    labels = ((allow.get("investigations_shareable") or {}).get("class_labels")) or {}
+    res = []
+    for r in out:
+        name = str(r["intervention"]).strip()
+        if name.lower() in own:
+            res.append(r)
+            continue
+        lab = labels.get(name) or UI_IT["iv_withheld"]
+        e = {k: (re.sub(re.escape(name), lab, v, flags=re.I) if isinstance(v, str) and name else v) for k, v in r.items()}
+        e["intervention"] = lab
+        res.append(e)
+    return res
+
+
+def render_investigations(P: dict) -> str:
+    """First-screen block. Absent data -> an explicit "in preparazione" state, never a placeholder row."""
+    U = UI_IT
+    rows = ((P["cur"].get("ranking") or {}).get("investigations"))
+    head = f'<section id="investigations" class="inv" aria-labelledby="h-inv"><h2 id="h-inv">{E(U["iv_h"])}</h2>'
+    if rows is None:
+        return head + f'<p class="note" data-state="pending">{E(U["iv_pending"])}</p></section>'
+    counts = Counter(r["rank"] for r in rows)
+    items = []
+    for r in rows:
+        tie = f' <span class="mini">({E(U["iv_tie"])})</span>' if counts[r["rank"]] > 1 else ""
+        dl = "".join(f'<dt>{E(U[k])}</dt><dd>{E(str(r[f]))}</dd>' for k, f in (("iv_q", "question"), ("iv_why", "why_now"), ("iv_ev", "evidence_available"), ("iv_depth", "evidence_depth"),
+                                                                            ("iv_unc", "decisive_uncertainty"), ("iv_next", "next_test"), ("iv_nov", "novelty_perimeter"), ("iv_move", "movement_reason")) if str(r[f] or "").strip())
+        items.append(f'<li class="inv-row" data-rank="{E(str(r["rank"]))}" data-origin="{E(r["origin_class"])}"><div class="inv-h"><span class="inv-pos" aria-label="{E(U["iv_pos"])} {E(str(r["rank"]))}">{E(str(r["rank"]))}</span>{tie} '
+                     f'<b>{E(str(r["intervention"]))}</b> <span class="org org-{E(r["origin_class"])}">{E(U["iv_o_" + r["origin_class"]])}</span></div><dl class="qk-dl">{dl}</dl></li>')
+    return head + f'<p class="mini mut">{E(U["iv_lead"])}</p><ol class="inv-list">{"".join(items)}</ol><p class="mini mut">{E(U["iv_nov_note"])}</p></section>'
+
+
+def render_quick(P: dict) -> str:
+    """IT20 P6 quick guide, server-rendered (reads without JavaScript): evidence classes, threads by what supports / weakens / is missing, and the
+    links with a favourable WWOX-system result in plain words. Everything is read from positions and facts the view already computed."""
+    cur = P["cur"]
+    U = UI_IT
+    from urllib.parse import quote
+    legend = "".join(f'<li>{ev_chip(k)} <span class="mini">{E(U["ev_" + k + "_txt"])}</span></li>' for k in ("mis", "inf", "ipo", "unk"))
+    rows = []
+    for t in cur["threads"]:
+        v = thread_view(cur, t)
+        nm = THREAD_IT.get(t["id"], (t["name"], ""))[0]
+        ev = Counter(link_evclass(l) for _, _, l in v["links"])
+        nc = sum(1 for _, _, l in v["links"] if l["group"].startswith("C"))
+        n_obs = sum(1 for n in v["needs"] if n["n_wwox_obs"] > 0)
+        cell = lambda k: (ev_chip(k, ev[k]) if ev[k] else '<span class="mut">0</span>')
+        rows.append(f'<tr data-thread="{E(t["id"])}"><th scope="row">{E(nm)}</th><td>{cell("mis")}</td><td>{cell("inf")}</td><td>{cell("ipo")}</td>'
+                    '<td>' + (f'<span class="grp c1">C</span> ×{nc}' if nc else '<span class="mut">0</span>') + '</td>'
+                    f'<td>{E(U["qk_cov_fmt"].format(a=n_obs, b=len(v["needs"])))}</td><td><a href="#c=thread:{quote(t["id"])}">{E(U["qk_go"])}</a></td></tr>')
+    table = (f'<div class="tw"><table class="qk-th"><caption class="mini mut">{E(U["qk_th_note"])}</caption><thead><tr><th scope="col">{E(U["qk_c_thread"])}</th><th scope="col">{E(U["qk_c_mis"])}</th>'
+             f'<th scope="col">{E(U["qk_c_inf"])}</th><th scope="col">{E(U["qk_c_ipo"])}</th><th scope="col">{E(U["qk_c_counter"])}</th><th scope="col">{E(U["qk_c_cov"])}</th><th scope="col">{E(U["qk_c_go"])}</th></tr></thead>'
+             f'<tbody>{"".join(rows)}</tbody></table></div>')
+    nmap = {n["id"]: n for n in cur["needs"]}
+    items = []
+    for g in ("F1", "F2"):
+        sel = sorted(((c, nid, l) for c in cur["cands"] for nid, l in c["links"].items() if l["group"] == g), key=lambda x: (x[0]["short"].lower(), x[1]))
+        for c, nid, l in sel:
+            nctr = len(c.get("against") or [])
+            ctr = U["qk_iv_ctr"].format(n=nctr, r=(l.get("n_null") or 0) + (l.get("n_harm") or 0)) if (nctr or l.get("n_null") or l.get("n_harm")) else U["qk_iv_none"]
+            items.append(
+                f'<li class="qk-iv" data-pos="{g}"><div class="qk-ivh"><a href="#x=cand:{quote(c["id"])}"><b>{E(c["short"])}</b></a> {pos_chip(g, long=True)} {ev_chip(link_evclass(l))}</div>'
+                f'<dl class="qk-dl"><dt>{E(U["qk_iv_need"])}</dt><dd>{E(NEED_IT.get(nid, (nmap.get(nid) or {}).get("short", nid)))}</dd>'
+                f'<dt>{E(U["qk_iv_why"])}</dt><dd>{E(POS_IT[g]["plain"])}</dd>'
+                f'<dt>{E(U["qk_iv_against"])}</dt><dd>{E(ctr)}</dd>'
+                f'<dt>{E(U["qk_iv_missing"])}</dt><dd>{E(clip(c.get("missing") or U["xp_unknown"], 220))}</dd>'
+                f'<dt>{E(U["qk_iv_next"])}</dt><dd>{E(clip(c.get("next") or U["xp_unknown"], 220))}</dd></dl></li>')
+    pos = Counter(l["group"][0] if l["group"] != "F3" else "F3" for c in cur["cands"] for l in c["links"].values())
+    rest = U["qk_iv_rest"].format(f3=pos["F3"], c=pos["C"], p=pos["P"])
+    return (f'<section id="start" class="qk" aria-labelledby="h-qk"><h2 id="h-qk">{E(U["qk_h"])}</h2><p class="lead">{E(U["qk_lead"])}</p>'
+            f'<div class="qk-ev" role="group" aria-label="{E(U["qk_ev_h"])}"><h3>{E(U["qk_ev_h"])}</h3><ul class="evlist">{legend}</ul><p class="mini mut">{E(U["qk_rule"])}</p></div>'
+            f'<h3 id="qk-threads">{E(U["qk_th_h"])}</h3>{table}'
+            f'<h3 id="qk-interventions">{E(U["qk_iv_h"])}</h3><p class="mini mut">{E(U["qk_iv_note"])}</p><ul class="qk-ivs">{"".join(items)}</ul><p class="mini">{E(rest)}</p></section>')
+
+
+def render_explore(P: dict) -> str:
+    """IT20 P6 explorer shell; the page script fills it from D.cur (no new data field). Without JavaScript a note points to the server-rendered sections."""
+    U = UI_IT
+    return (f'<section id="explore" aria-labelledby="h-xp"><h2 id="h-xp">{E(U["xp_h"])}</h2><p class="mut">{E(U["xp_lead"])}</p>'
+            f'<div class="fbar xp-bar"><label>{E(U["xp_need"])}<select id="xp-need"></select></label><label>{E(U["xp_cand"])}<select id="xp-cand"></select></label></div>'
+            f'<noscript><p class="note">{E(U["xp_noscript"])}</p></noscript>'
+            f'<div id="xp-out" aria-live="polite"></div><p class="mini mut">{E(U["xp_future"])}</p></section>')
 
 
 def md_level_text(rec: dict) -> str:
@@ -4382,10 +4673,10 @@ def render(P: dict, dr: Path = DEFAULT_DR) -> str:
     U = UI_IT
     page = TEMPLATE
     cur_html = fill_tokens(read_asset(dr, "curated.html"))
-    cur_html = cur_html.replace("__OVERVIEW__", render_overview(P)).replace("__GRAPH__", render_evidence_graph(P)).replace("__WORKORDER__", render_work_order(P)).replace("__SELECTION__", render_selection(P)).replace("__HYPOTHESES__", render_hypotheses(P)).replace("__PREDICTIVE__", render_predictive(P)).replace("__CHARTS__", render_charts(P)).replace("__RANKING__", render_ranking(P)).replace("__RANKPRINT__", render_ranking_onepage(P))
+    cur_html = cur_html.replace("__OVERVIEW__", render_overview(P)).replace("__GRAPH__", render_evidence_graph(P)).replace("__WORKORDER__", render_work_order(P)).replace("__SELECTION__", render_selection(P)).replace("__HYPOTHESES__", render_hypotheses(P)).replace("__PREDICTIVE__", render_predictive(P)).replace("__CHARTS__", render_charts(P)).replace("__RANKING__", render_ranking(P)).replace("__EXPLORE__", render_explore(P)).replace("__FUNNEL20__", render_funnel18(P)).replace("__RANKPRINT__", render_ranking_onepage(P))
     page = page.replace("__CSS__", CSS + read_asset(dr, "curated.css")).replace("__JS__", JS).replace("__CJS__", read_asset(dr, "curated.js"))
     page = page.replace("__CURATED__", cur_html).replace("__FOOTER__", render_footer(P))
-    for k, key in (("TITLE", "page_title"), ("SKIP", "skip"), ("H1", "h1"), ("SUB", "sub"), ("NAVLABEL", "nav_label"), ("N_OV", "nav_overview"), ("N_RK", "nav_ranking"), ("N_TH", "nav_threads"), ("N_EG", "nav_chains"), ("N_CH", "nav_charts"), ("N_SE", "nav_selection"), ("N_HY", "nav_hyp"), ("N_PR2", "nav_pred"), ("N_NAV", "nav_navigate"),
+    for k, key in (("TITLE", "page_title"), ("SKIP", "skip"), ("H1", "h1"), ("SUB", "sub"), ("NAVLABEL", "nav_label"), ("N_OV", "nav_overview"), ("N_QK", "nav_start"), ("N_XP", "nav_explore"), ("N_FU", "nav_funnel"), ("N_RK", "nav_ranking"), ("N_TH", "nav_threads"), ("N_EG", "nav_chains"), ("N_CH", "nav_charts"), ("N_SE", "nav_selection"), ("N_HY", "nav_hyp"), ("N_PR2", "nav_pred"), ("N_NAV", "nav_navigate"),
                    ("N_CA", "nav_cards"), ("N_PR", "nav_priority"), ("N_CP", "nav_compare"), ("N_TD", "nav_tech"), ("TD_SUM", "td_sum"), ("TD_NOTE", "td_note")):
         page = page.replace(f"__{k}__", E(U[key]))
     page = page.replace("__BANNER__", render_banner(P))
@@ -4583,7 +4874,8 @@ def scenarios(P: dict) -> list[tuple[str, str]]:
             ("brief", "#brief=" + longest), ("evidence_graph", "#chains"), ("work_order", "#work-order"),
             ("selection", "#selection"), ("hypotheses", "#hypotheses"), ("predictive", "#predictive"), ("contexts", "#contexts"),
             ("section_selection", "#section=selection"), ("section_predictive", "#section=predictive"),
-            ("ranking", "#ranking"), ("section_rankingprint", "#section=rankingprint"), ("deepened_cases", "#deepened-cases")]
+            ("ranking", "#ranking"), ("section_rankingprint", "#section=rankingprint"), ("deepened_cases", "#deepened-cases"),
+            ("explore_cand", "#x=cand:" + quote(a)), ("explore_need", "#x=need:" + quote(cur["needs"][0]["id"])), ("funnel_it20", "#funnel-it20")]
 
 
 CUR_READY_JS = "document.body.getAttribute('data-cur-ready')==='1'"   # set by assets/curated.js when the curated part has rendered
@@ -4617,7 +4909,7 @@ def measure_viewports(html_path: Path, shots: Path | None = None, widths: list |
                     m.update({"requested": w, "scenario": name, "mobile": mobile, "overflow": m["scrollWidth"] > w or m["innerWidth"] > w})
                     if shots and (mobile or w > 390):
                         shots.mkdir(parents=True, exist_ok=True)
-                        anchor = {"comparison": "#compare", "filtered_thread": "#navigate", "technical_open": "#tech-versions", "export_card": "body", "evidence_graph": "#chains", "work_order": "#work-order", "selection": "#selection", "ranking": "#ranking", "section_rankingprint": "body", "hypotheses": "#hypotheses", "predictive": "#predictive", "contexts": "#contexts", "deepened_cases": "#deepened-cases"}.get(name, "body")
+                        anchor = {"comparison": "#compare", "filtered_thread": "#navigate", "technical_open": "#tech-versions", "export_card": "body", "evidence_graph": "#chains", "work_order": "#work-order", "selection": "#selection", "ranking": "#ranking", "section_rankingprint": "body", "hypotheses": "#hypotheses", "predictive": "#predictive", "contexts": "#contexts", "deepened_cases": "#deepened-cases", "explore_cand": "#explore", "explore_need": "#explore", "funnel_it20": "#funnel-it20"}.get(name, "body")
                         y = cdp.evaluate("(function(){var e=document.querySelector(%s);return e?Math.max(0,Math.round(e.getBoundingClientRect().top+scrollY)-8):0})()" % json.dumps(anchor))
                         lm = cdp.call("Page.getLayoutMetrics")["cssContentSize"]
                         tall = name in ("export_card", "comparison", "brief", "evidence_graph", "selection", "hypotheses", "predictive", "contexts", "ranking") and w <= 390

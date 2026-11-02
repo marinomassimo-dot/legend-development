@@ -179,3 +179,32 @@ details>summary{padding:3px 0;min-height:24px}
 .rk-origin{border:1px solid var(--g4);background:var(--g4bg);color:var(--g4)}.rk-or-generated_in_it9{border-width:2px;border-style:double}.rk-or-reference_or_control{border-style:dashed}.rk-nx{border:1px solid var(--line)}.rk-nx-NX1{border-width:2px;border-color:var(--g1)}.rk-nx-NX3{border-style:dashed}
 @media print{.secprint[data-section=rankingprint] *{font-size:6.2pt!important}.secprint[data-section=rankingprint] .chip{padding:0 3px!important;margin:0 1px!important}.secprint[data-section=rankingprint] h2{font-size:9pt!important}}
 .mx-badge{display:inline-block;padding:0 6px;margin-left:4px;border:2px solid var(--warn);border-radius:4px;font-size:.8em;font-weight:700;letter-spacing:.04em}
+/* IT20 P6: quick guide, evidence classes, five-stage funnel, explorer subgraph. Evidence class = glyph + word + border style; colour never alone. */
+.qk{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:10px 0;background:var(--card)}.qk h2{margin:0 0 4px;font-size:1.08rem}.qk h3{margin:12px 0 4px;font-size:.98rem}
+.evlist{list-style:none;padding:0;margin:4px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:4px 12px}.evlist li{margin:0}
+.ev{display:inline-block;padding:1px 8px;border-radius:6px;font-size:.78rem;margin:1px 2px;font-weight:600;background:var(--card);color:var(--fg);white-space:normal}.ev .gl{margin-right:4px}
+.ev.ev-mis{border:2px solid var(--g1)}.ev.ev-inf{border:2px dashed var(--g3)}.ev.ev-ipo{border:2px dotted var(--g4)}.ev.ev-unk{border:1px double var(--g4);color:var(--mut)}
+.tw{overflow-x:auto;max-width:100%}.qk-th{border-collapse:collapse;width:100%;font-size:.84rem}.qk-th th,.qk-th td{border-bottom:1px solid var(--line);padding:4px 6px;text-align:left;vertical-align:top}.qk-th thead th{font-size:.76rem;color:var(--mut)}.qk-th caption{caption-side:bottom;text-align:left;padding-top:4px}
+.qk-ivs{list-style:none;padding:0;margin:4px 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,380px),1fr));gap:8px}
+.qk-iv{border:1px solid var(--line);border-left:5px solid var(--g1);border-radius:8px;padding:6px 10px}.qk-ivh{margin-bottom:4px}
+.qk-dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:2px 10px;margin:0;font-size:.82rem}.qk-dl dt{font-weight:600;color:var(--mut)}.qk-dl dd{margin:0}
+.fu{list-style:none;padding:0;margin:6px 0;display:grid;gap:6px}.fu-stage{border:1px solid var(--line);border-radius:8px;padding:6px 10px;background:var(--card)}.fu-stage h4{margin:0 0 4px}
+.fu-ind{margin:4px 0 6px}.fu-num{font-size:.95rem}.fu-bar{display:block;height:8px;border:1px solid var(--mut);border-radius:4px;margin:3px 0;max-width:520px;background:var(--bg)}.fu-bar>span{display:block;height:100%;background:var(--g3);border-radius:3px}
+.fu-side{padding-left:10px;border-left:3px dotted var(--line)}.fu-tag{font-size:.72rem;font-weight:700;color:var(--mut);text-transform:uppercase}.fu-na{border-left:3px dashed var(--g4);padding-left:10px}
+.xp-bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:8px}.xp-bar select{width:100%;max-width:100%}
+#xp-out .xp-svg{width:100%;height:auto;max-width:1000px;display:block;margin:6px 0}.xp-svg text{fill:var(--fg);font-size:12px}.xp-svg .xp-n rect{fill:var(--card);stroke:var(--mut);stroke-width:1.2}
+.xp-svg .xp-n.k-need rect{stroke:var(--acc);stroke-width:2}.xp-svg .xp-n.k-card rect{stroke:var(--fg)}.xp-svg .xp-n.k-tgt rect{stroke-dasharray:2 2}
+.xp-svg path{fill:none;stroke:var(--g4);stroke-width:1}.xp-svg path.e-mis{stroke:var(--g1);stroke-width:2.6}.xp-svg path.e-inf{stroke:var(--g3);stroke-width:2.2;stroke-dasharray:7 4}.xp-svg path.e-ipo{stroke:var(--g4);stroke-width:2;stroke-dasharray:2 3}.xp-svg path.e-act{stroke:var(--g2);stroke-width:1.6}
+.xp-svg a:focus rect{stroke:var(--acc);stroke-width:3}
+.xp-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:8px 14px}.xp-box{border:1px solid var(--line);border-radius:8px;padding:6px 10px;margin:6px 0}.xp-box h4{margin:0 0 4px}
+.xp-box ul{margin:2px 0;padding-left:18px}.xp-item{margin:4px 0}.xp-tbl{border-collapse:collapse;font-size:.8rem;width:100%}.xp-tbl th,.xp-tbl td{border-bottom:1px solid var(--line);padding:2px 6px;text-align:left;vertical-align:top}
+@media (max-width:560px){.qk{padding:8px}.qk-dl{grid-template-columns:minmax(0,1fr);gap:0}.qk-dl dd{margin-bottom:4px}.qk-th{font-size:.78rem}}
+@media print{#explore{display:none}.qk,.fu-stage{break-inside:avoid-page}.tw{overflow:visible}}
+/* IT20 P6: on a phone the sticky navigation is one scrollable row instead of four wrapped rows (it covered a quarter of the screen while scrolling) */
+@media (max-width:560px){nav .in{flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:thin}nav .in a{flex:0 0 auto}}
+@media print{nav .in{flex-wrap:wrap}}
+/* IT20 P6: "Principali indagini" block; origin class = word + border style */
+.inv{border:2px solid var(--acc);border-radius:10px;padding:8px 12px;margin:10px 0;background:var(--card)}.inv h2{margin:0 0 4px;font-size:1.08rem}
+.inv-list{list-style:none;padding:0;margin:4px 0;display:grid;gap:8px}.inv-row{border:1px solid var(--line);border-radius:8px;padding:6px 10px}.inv-h{margin-bottom:4px}
+.inv-pos{display:inline-block;min-width:1.7em;text-align:center;font-weight:700;border:2px solid var(--fg);border-radius:99px;padding:0 6px}
+.org{display:inline-block;font-size:.76rem;padding:1px 8px;border-radius:6px;margin-left:4px}.org-known_in_wwox{border:2px solid var(--g1)}.org-generated_by_legend{border:2px dashed var(--acc)}.org-external_transferred{border:2px dotted var(--g4)}
