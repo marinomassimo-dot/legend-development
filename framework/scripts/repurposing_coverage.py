@@ -188,7 +188,7 @@ def build(needs_path=rs.DEFAULT_NEEDS, catalog_dir: Path = cc.DEFAULT_DIR, dr: P
     entries = cc.load(catalog_dir / "catalog.jsonl.gz")
     cstats = json.loads((catalog_dir / "catalog_stats.json").read_text())
     arte = rs.load_artefacts(artefacts_path)
-    idx, roles = rs.Index(entries, arte), rs.load_roles(roles_path)
+    idx, roles = rs.Index(entries, arte, rs.module_intervention_symbols(needs)), rs.load_roles(roles_path)
     cards = load_cards(dr)
     att, mods = card_attachments(catalog_dir / "card_links.json", catalog_dir / "non_molecule_modalities.tsv")
     pert = load_pertinence(pertinence_path)

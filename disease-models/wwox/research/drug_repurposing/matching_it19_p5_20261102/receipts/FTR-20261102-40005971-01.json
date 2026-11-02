@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-02T08:29:00Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-02T08:30:00Z",
+ "event_id": "FTR-20261102-40005971-01",
+ "evidence_basis": [
+  "abstract analysed in full; every statement carried into the reference table is marked abstract-level and names its measure type",
+  "no experimental detail absent from the abstract is used: a class attribution is recorded as determinate_class_level, never as a functional measurement",
+  "coverage uses `unavailable` for the sections not obtained: full text was not acquired in this package"
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/matching_it19_p5_20261102/reference_it19_p5.tsv",
+  "disease-models/wwox/research/drug_repurposing/matching_it19_p5_20261102/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 40005971 (abstract and metadata as served 2026-11-02)",
+ "study_id": {
+  "doi": "10.3390/ph18020157",
+  "pmid": "40005971"
+ },
+ "workflow": "IT19 P5 reference construction (matching_it19_p5_20261102). Abstract analysed through the PubMed metadata route for one pharmacological fact: stinels (rapastinel, apimostinel) defined as positive allosteric modulators of NMDA receptor activity; earlier partial-agonist descriptions called inconsistent; pairs P22-P23. No full text was retrieved and none was required for the labelled fact; the label states the measure type and the resolution the abstract reports. Prepared as a JSON file for the integrator; not appended by the preparing actor."
+}

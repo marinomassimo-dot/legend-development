@@ -212,6 +212,47 @@ def evidence_scope(src: str, t: dict) -> tuple[str, str, str | None]:
     return "unspecified", "not_established", stated
 
 
+def module_intervention_symbols(needs: list[dict]) -> set[str]:
+    """Every gene the module declares as an intervention target, over ALL needs (upper case).
+
+    The set is module-wide on purpose: one need may name a single member of a family the module
+    reasons about elsewhere (SEIZURE-CONTROL lists CACNA1G alone while T-TYPE-CALCIUM lists
+    CACNA1G/H/I), and a per-need set would make the same ChEMBL family record usable under one
+    need and unusable under the other."""
+    return {t["symbol"].upper() for n in needs for t in n.get("targets", []) if t.get("target_kind") in TARGET_KINDS_EVALUABLE}
+
+
+def group_transfer_unresolved(src: str, t: dict, module_symbols: set[str] | None) -> str | None:
+    """Why a ChEMBL group/family record does not resolve its action to THIS gene, or None.
+
+    A ChEMBL mechanism curated on a PROTEIN FAMILY or PROTEIN COMPLEX GROUP target carries ONE
+    action for every component. Expanding that action onto each component gene gives a member a
+    direction the source never measured: the 26-component "Voltage-gated calcium channel" group
+    record (CHEMBL2363032) put BLOCKER onto CACNA1G/H/I for compounds whose only measured calcium
+    evidence is L-type (terodiline, suloctidil) or none at all (phloroglucinol, whose single cited
+    reference is a clinical bowel-syndrome trial). The record itself is legitimate in ChEMBL; the
+    improper step is LEGEND's expansion.
+
+    The guard abstains when FEWER THAN HALF of the record's components are among the module's
+    intervention targets, so a record written at the level the module reasons about stays usable:
+    the T-type family (3 of 3), the NMDA receptor group (4 of 7), the AMPA group (4 of 4) and the
+    defined GRIN1/GRIN2B complex all keep their direction. Single proteins and defined complexes
+    are never touched. IT18 P4 ran this rule inside its own comparison script (`L_v2`); this is the
+    same rule in the active path, with the measured consequences in
+    disease-models/wwox/research/drug_repurposing/matching_it19_p5_20261102/README.md."""
+    if not src.startswith("ChEMBL") or not module_symbols:
+        return None
+    ttype = t.get("target_type")
+    if ttype in (None, "SINGLE PROTEIN", "PROTEIN COMPLEX"):
+        return None
+    genes = {g.upper() for g in t.get("gene_symbols") or []}
+    if not genes or len(genes & module_symbols) / len(genes) >= 0.5:
+        return None
+    return (f"group_record_mostly_outside_module_targets: the ChEMBL {ttype.lower()} record "
+            f"{t.get('target_id')} has {len(genes & module_symbols)} of {len(genes)} components among the module's "
+            "intervention targets, so its single curated action is not resolved to this gene")
+
+
 def load_roles(path: Path = DEFAULT_ROLES) -> dict[tuple[str, str], dict]:
     out = {}
     p = Path(path)
@@ -225,9 +266,11 @@ def load_roles(path: Path = DEFAULT_ROLES) -> dict[tuple[str, str], dict]:
 class Index:
     """Symbol / HGNC-id -> catalogue target rows. Built once per run."""
 
-    def __init__(self, entries: list[dict], artefacts: list[dict] | None = None):
+    def __init__(self, entries: list[dict], artefacts: list[dict] | None = None, module_symbols: set[str] | None = None):
         self.entries = entries
         self.artefacts = artefacts or []
+        # module-wide intervention targets, for the group-transfer guard; None = guard off
+        self.module_symbols = {s.upper() for s in module_symbols} if module_symbols else None
         self.early = {}
         for r in self.artefacts:
             if r["rule"].startswith("early_alphabet_run"):
@@ -319,8 +362,9 @@ def links_for_target(idx: Index, tgt: dict) -> tuple[list, list, list]:
     return idx.chembl_human.get(sym, []), idx.dgidb.get(h, []), idx.chembl_nonhuman.get(sym, [])
 
 
-def associations_for_need(need: dict, idx: Index, roles: dict) -> dict:
+def associations_for_need(need: dict, idx: Index, roles: dict, module_symbols: set[str] | None = None) -> dict:
     nd = need_direction(need)
+    module_symbols = module_symbols or getattr(idx, "module_symbols", None)
     assoc, guards, nonhuman = [], [], 0
     for tgt in need["targets"]:
         ch, dg, nh = links_for_target(idx, tgt)
@@ -339,6 +383,9 @@ def associations_for_need(need: dict, idx: Index, roles: dict) -> dict:
                 excl = excl or "placeholder: DGIdb drug_name literally NULL/none, not a compound"
             if excl:
                 label, why = "not_evaluable", excl
+            transfer = group_transfer_unresolved(src, t, module_symbols)
+            if transfer and label in ("consistent", "opposed"):
+                label, why = "direction_unresolved", transfer
             scope, subsel, src_sel = evidence_scope(src, t)
             kind = relation_kind(src, t)
             elsewhere = src.startswith("DGIdb") and kind not in CURATED_KINDS and ad == "unresolved" and curated_elsewhere(e, t, {tgt["symbol"].upper()})
@@ -402,7 +449,8 @@ def resolve_compound(idx: Index, query: str) -> list[dict]:
     return exact or hits
 
 
-def compound_to_needs(entry: dict, needs: list[dict], idx: Index, roles: dict, family: bool = True) -> list[dict]:
+def compound_to_needs(entry: dict, needs: list[dict], idx: Index, roles: dict, family: bool = True,
+                      module_symbols: set[str] | None = None) -> list[dict]:
     """Needs touched by the entry's targets. With family=True the targets of the other records of its chemical family
     (salt/parent/stereo records) are included and marked `via` - mechanisms are often curated on one salt form only."""
     out = []
@@ -433,6 +481,9 @@ def compound_to_needs(entry: dict, needs: list[dict], idx: Index, roles: dict, f
                 excl = artefact_reason(own, t, idx.artefacts, idx.early)
                 if excl:
                     label, why = "not_evaluable", excl
+                transfer = group_transfer_unresolved(t["source"], t, module_symbols or getattr(idx, "module_symbols", None))
+                if transfer and label in ("consistent", "opposed"):
+                    label, why = "direction_unresolved", transfer
                 out.append({"excluded_from_counts": excl, "excluded_reason": exclusion_class(excl), "need": need["id"], "target": tgt["symbol"], "target_kind": tgt["target_kind"], "link_source": t["source"],
                             "action_raw": raw, "action_on_target": ad, "need_direction": nd, "consistency": label, "consistency_why": why,
                             "exploration_only": nd in ("uncertain", "modulate"), "via_family_member": via})
@@ -484,7 +535,7 @@ def main(argv=None) -> int:
             print(f"{x['id']}\t{d}\t{'EXPLORATION' if d in ('uncertain', 'modulate') else 'direction-evaluable'}\t{len(x['targets'])} targets")
         return 0
     entries = cc.load(a.catalog)
-    idx, roles = Index(entries, load_artefacts(a.artefacts)), load_roles(a.roles)
+    idx, roles = Index(entries, load_artefacts(a.artefacts), module_intervention_symbols(needs)), load_roles(a.roles)
     if a.cmd == "need":
         nd = next((x for x in needs if x["id"] == a.need_id), None)
         if nd is None:

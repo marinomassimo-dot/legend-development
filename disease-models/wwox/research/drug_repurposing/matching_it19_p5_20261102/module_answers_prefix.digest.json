@@ -1,0 +1,10 @@
+{
+ "answers_sha256": "ecec69ac9b146fcfd9abf8841f09493acaafcf326732df347b14223715393d79",
+ "catalog_sha256": "75652786013b931d2482ae40b2b563a02ef3e05eff43832722cc002e3ccf72fb",
+ "guard": false,
+ "needs_sha256": "7678b986106b07e9a1cab0c5a4397df8a708fa46d9b459ddaf61fac0831c3f0f",
+ "repurposing_search_sha256": "e84d8d0972441c4fc20ab047d03df029f7a9fcaec9fe440c3afccef17f8c62cc",
+ "rows": 32,
+ "script_sha256": "42bb4891d74ded81051ea1b32a82ca4801b45d13b4f410ac8ca57afb0a8788fb",
+ "selection_sha256": "9d5804dcf302e26ead331cf4b981b961b47ee17297b29f3e6713bda62873d50d"
+}
