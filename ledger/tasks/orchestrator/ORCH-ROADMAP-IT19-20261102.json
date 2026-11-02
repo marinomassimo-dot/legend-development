@@ -74,8 +74,9 @@
    "steps": [
     {
      "step": "P5 matching reference at usable coverage; module transfer defect fix with 3 regression cases",
-     "status": "TODO",
-     "owner": "scientist"
+     "status": "DONE",
+     "owner": "scientist",
+     "evidence": "matching_it19_p5_20261102: 32 rule-selected pairs, determinate references 0 -> 17 (8 independent), EVAL directed 2 -> 13 of 33, no disagreement found, no superiority claim; active-path group-transfer guard with 3 regressions (3 right, 1 lost: bepridil); independent verification confirmed with 3 minor defects, fixed (46aa60c7); 13 abstract-only receipts handed back, to be appended after P6"
     }
    ]
   },
@@ -105,8 +106,9 @@
    "steps": [
     {
      "step": "P8 follow-up chosen and executed by a fresh actor on an IT19 gap, verified - includes the _http.get_json errors=\"replace\" defect (operator agreed 2026-11-02 11:20 UTC)",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "follow-up from a gap found in IT19: _http.get_json errors=\"replace\" fixed (damaged 200 body = queryable error, nothing cached, six adapters), reproduced before, 5 tests (7 checks fail on old code), adapter suite 76, independent verifier confirmed, no cache held U+FFFD"
     }
    ]
   },

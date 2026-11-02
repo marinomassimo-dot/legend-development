@@ -105,5 +105,12 @@
     }
    ]
   }
- }
+ },
+ "ADDENDA": [
+  {
+   "date": "2026-11-02",
+   "by": "orchestrator (IT19 P0)",
+   "text": "Reconciliation of the closing statements, history above unchanged: CI Public release gate success for 07ed2ede (08:31-09:00Z) and 38c5c320 (09:03-09:48Z). Work integrated and independently verified except BioPathNet. Automatic continuity was NOT demonstrated: ten hourly checks said UNKNOWN (no MANDATE_BOUND at start; later line absent from the transcript); the sessions died at 23:11 2026-11-01 when the kernel OOM-killed the desktop service after the BioPathNet overshoot (no reboot) - see continuity_it19_20261102. Dashboard publication: authorised, workflow on main, Pages site not creatable by the workflow token: pending one account operation. The matching reference gap is delegable work (IT19 P5), not HUMAN_REQUIRED."
+  }
+ ]
 }
