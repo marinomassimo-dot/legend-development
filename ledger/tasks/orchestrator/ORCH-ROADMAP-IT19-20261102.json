@@ -85,8 +85,9 @@
    "steps": [
     {
      "step": "P6 direction, abstention and limits visible in cards, queue, comparison and views, regenerated",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "matching_direction in ranking.json (32 P5 pairs joined to live coverage rows, order digest ff38fcaa unchanged), coverage regenerated with the group guard (consistent_mechanism_candidate 103 -> 99), target level and abstention class on every row, deepening_queue direction_basis, SPERIMENTALE block in both views, shareable page carries classes/counts only; orchestrator found and fixed a P6 defect (T.md_* keys rewritten by the shareable redaction as file names: SyntaxError, ready marker never set, audit-shareable --dynamic waited 90 s per page for hours) with a regression; audit-shareable --dynamic PASS; known residual: four T-type queue entries still get a direction through DGIdb copies of the ChEMBL group action (documented via direction_basis)"
     }
    ]
   },
