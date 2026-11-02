@@ -192,19 +192,17 @@
    ],
    "assessed_in": [],
    "direction_basis": [
-    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7"
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: protein_complex_group 4/7"
    ],
    "display_group": "acamprosate",
    "family_ids": [
-    "FAM:CAT:CHEMBL1201293",
-    "FAM:CAT:DGIDB:d4a136aae03c"
+    "FAM:CAT:CHEMBL1201293"
    ],
    "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": true,
    "names": [
-    "ACAMPROSATE",
-    "Acamprosate Calcium"
+    "ACAMPROSATE"
    ],
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
@@ -227,7 +225,7 @@
    ],
    "assessed_in": [],
    "direction_basis": [
-    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7, single_protein"
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: protein_complex_group 4/7, single_protein"
    ],
    "display_group": "amantadine",
    "family_ids": [
@@ -264,19 +262,17 @@
    ],
    "assessed_in": [],
    "direction_basis": [
-    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7"
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: protein_complex_group 4/7"
    ],
    "display_group": "av 101",
    "family_ids": [
-    "FAM:CAT:CHEMBL3545351",
-    "FAM:CAT:DGIDB:d34fc2e86617"
+    "FAM:CAT:CHEMBL3545351"
    ],
    "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
-    "AV-101",
-    "Av-101"
+    "AV-101"
    ],
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
@@ -287,8 +283,7 @@
     "U27"
    ],
    "status_class": [
-    "clinical_candidate",
-    "no_status_statement"
+    "clinical_candidate"
    ],
    "units": [],
    "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no card, qualification record or uncarded item names it (module READMEs and reports were not searched)",
@@ -300,7 +295,7 @@
    ],
    "assessed_in": [],
    "direction_basis": [
-    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7"
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing 4/7, protein_complex_group 4/7"
    ],
    "display_group": "azd8108",
    "family_ids": [
@@ -333,19 +328,17 @@
    ],
    "assessed_in": [],
    "direction_basis": [
-    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7"
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: protein_complex_group 4/7"
    ],
    "display_group": "delucemine",
    "family_ids": [
-    "FAM:CAT:CHEMBL2106165",
-    "FAM:CAT:DGIDB:c3bb8a601e8c"
+    "FAM:CAT:CHEMBL2106165"
    ],
    "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
-    "DELUCEMINE HYDROCHLORIDE",
-    "Delucemine"
+    "DELUCEMINE HYDROCHLORIDE"
    ],
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
@@ -357,7 +350,6 @@
    ],
    "status_class": [
     "clinical_candidate",
-    "no_status_statement",
     "phase_unknown"
    ],
    "units": [],
@@ -376,8 +368,7 @@
    ],
    "display_group": "dextromethorphan",
    "family_ids": [
-    "FAM:CAT:CHEMBL1201461",
-    "FAM:CAT:DGIDB:255ce6a4a3eb"
+    "FAM:CAT:CHEMBL1201461"
    ],
    "mentioned_in": [
     "card:F04_nmdar_intervention_class"
@@ -385,8 +376,7 @@
    "mnet_usable": true,
    "msig_neural": true,
    "names": [
-    "DEXTROMETHORPHAN POLISTIREX",
-    "Dextromethorphan Polistirex"
+    "DEXTROMETHORPHAN POLISTIREX"
    ],
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
@@ -411,19 +401,17 @@
    ],
    "assessed_in": [],
    "direction_basis": [
-    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex 2/2"
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: protein_complex 2/2"
    ],
    "display_group": "evt 101",
    "family_ids": [
-    "FAM:CAT:CHEMBL3545349",
-    "FAM:CAT:DGIDB:12763ab6f922"
+    "FAM:CAT:CHEMBL3545349"
    ],
    "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
-    "EVT-101",
-    "Evt-101"
+    "EVT-101"
    ],
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
@@ -434,8 +422,7 @@
     "U27"
    ],
    "status_class": [
-    "clinical_candidate",
-    "no_status_statement"
+    "clinical_candidate"
    ],
    "units": [],
    "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no card, qualification record or uncarded item names it (module READMEs and reports were not searched)",
@@ -449,12 +436,11 @@
     "record:P3-17"
    ],
    "direction_basis": [
-    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7"
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: protein_complex_group 4/7"
    ],
    "display_group": "felbamate",
    "family_ids": [
-    "FAM:CAT:CHEMBL1094",
-    "FAM:CAT:DGIDB:0c06b5be21bb"
+    "FAM:CAT:CHEMBL1094"
    ],
    "mentioned_in": [
     "card:F04_nmdar_intervention_class"
@@ -462,8 +448,7 @@
    "mnet_usable": true,
    "msig_neural": true,
    "names": [
-    "FELBAMATE",
-    "Felbamate"
+    "FELBAMATE"
    ],
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
@@ -486,7 +471,7 @@
    ],
    "assessed_in": [],
    "direction_basis": [
-    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7"
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing 4/7, protein_complex_group 4/7"
    ],
    "display_group": "gw468816",
    "family_ids": [
@@ -519,7 +504,7 @@
    ],
    "assessed_in": [],
    "direction_basis": [
-    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7"
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing 4/7, protein_complex_group 4/7"
    ],
    "display_group": "indantadol",
    "family_ids": [
@@ -552,7 +537,7 @@
    ],
    "assessed_in": [],
    "direction_basis": [
-    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7, single_protein"
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: protein_complex_group 4/7, single_protein"
    ],
    "display_group": "ketamine",
    "family_ids": [
@@ -589,19 +574,17 @@
    ],
    "assessed_in": [],
    "direction_basis": [
-    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7"
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: protein_complex_group 4/7"
    ],
    "display_group": "lanicemine",
    "family_ids": [
-    "FAM:CAT:CHEMBL467084",
-    "FAM:CAT:DGIDB:ad3e4f19b28e"
+    "FAM:CAT:CHEMBL467084"
    ],
    "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
-    "LANICEMINE",
-    "Lanicemine"
+    "LANICEMINE"
    ],
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
@@ -612,8 +595,7 @@
     "U27"
    ],
    "status_class": [
-    "clinical_candidate",
-    "no_status_statement"
+    "clinical_candidate"
    ],
    "units": [],
    "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no card, qualification record or uncarded item names it (module READMEs and reports were not searched)",
@@ -625,19 +607,17 @@
    ],
    "assessed_in": [],
    "direction_basis": [
-    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7"
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: protein_complex_group 4/7"
    ],
    "display_group": "neramexane",
    "family_ids": [
-    "FAM:CAT:CHEMBL2106798",
-    "FAM:CAT:DGIDB:bc4c80984e38"
+    "FAM:CAT:CHEMBL2106798"
    ],
    "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
-    "NERAMEXANE MESYLATE",
-    "Neramexane Mesylate"
+    "NERAMEXANE MESYLATE"
    ],
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
@@ -648,8 +628,7 @@
     "U27"
    ],
    "status_class": [
-    "clinical_candidate",
-    "no_status_statement"
+    "clinical_candidate"
    ],
    "units": [],
    "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no card, qualification record or uncarded item names it (module READMEs and reports were not searched)",
@@ -661,19 +640,17 @@
    ],
    "assessed_in": [],
    "direction_basis": [
-    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7"
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing 4/7, protein_complex_group 4/7"
    ],
    "display_group": "orphenadrine",
    "family_ids": [
-    "FAM:CAT:CHEMBL1200395",
-    "FAM:CAT:DGIDB:49ec8aa9cde9"
+    "FAM:CAT:CHEMBL1200395"
    ],
    "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": true,
    "names": [
-    "ORPHENADRINE CITRATE",
-    "Orphenadrine Citrate"
+    "ORPHENADRINE CITRATE"
    ],
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
@@ -696,19 +673,17 @@
    ],
    "assessed_in": [],
    "direction_basis": [
-    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7"
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: protein_complex_group 4/7"
    ],
    "display_group": "perzinfotel",
    "family_ids": [
-    "FAM:CAT:CHEMBL452461",
-    "FAM:CAT:DGIDB:16efa988f8ef"
+    "FAM:CAT:CHEMBL452461"
    ],
    "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
-    "PERZINFOTEL",
-    "Perzinfotel"
+    "PERZINFOTEL"
    ],
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
@@ -719,8 +694,7 @@
     "U27"
    ],
    "status_class": [
-    "clinical_candidate",
-    "no_status_statement"
+    "clinical_candidate"
    ],
    "units": [],
    "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no card, qualification record or uncarded item names it (module READMEs and reports were not searched)",
@@ -732,7 +706,7 @@
    ],
    "assessed_in": [],
    "direction_basis": [
-    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex_group 4/7"
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing 4/7, protein_complex_group 4/7"
    ],
    "display_group": "ralfinamide",
    "family_ids": [
@@ -765,19 +739,17 @@
    ],
    "assessed_in": [],
    "direction_basis": [
-    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex 2/2"
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: protein_complex 2/2"
    ],
    "display_group": "rislenemdaz",
    "family_ids": [
-    "FAM:CAT:CHEMBL2068839",
-    "FAM:CAT:DGIDB:f7b5eb49f754"
+    "FAM:CAT:CHEMBL2068839"
    ],
    "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
-    "RISLENEMDAZ",
-    "Rislenemdaz"
+    "RISLENEMDAZ"
    ],
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
@@ -788,8 +760,7 @@
     "U27"
    ],
    "status_class": [
-    "clinical_candidate",
-    "no_status_statement"
+    "clinical_candidate"
    ],
    "units": [],
    "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no card, qualification record or uncarded item names it (module READMEs and reports were not searched)",
@@ -801,12 +772,11 @@
    ],
    "assessed_in": [],
    "direction_basis": [
-    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing, protein_complex 2/2"
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: protein_complex 2/2"
    ],
    "display_group": "traxoprodil",
    "family_ids": [
-    "FAM:CAT:CHEMBL17350",
-    "FAM:CAT:DGIDB:375a5f9081f2"
+    "FAM:CAT:CHEMBL17350"
    ],
    "mentioned_in": [
     "card:F04_nmdar_intervention_class"
@@ -814,8 +784,7 @@
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
-    "TRAXOPRODIL",
-    "Traxoprodil"
+    "TRAXOPRODIL"
    ],
    "needs": [
     "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
@@ -827,83 +796,10 @@
    ],
    "status_class": [
     "clinical_candidate",
-    "no_status_statement",
     "phase_unknown"
    ],
    "units": [],
    "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; the compound is named in the text of an existing item (mentioned_in) but was not itself assessed",
-   "wwox_observations_on_best_need": 7
-  },
-  {
-   "access_categories": [
-    "unknown/unverified"
-   ],
-   "assessed_in": [],
-   "direction_basis": [
-    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing"
-   ],
-   "display_group": "esketamine",
-   "family_ids": [
-    "FAM:CAT:DGIDB:9c85048f5868"
-   ],
-   "mentioned_in": [],
-   "mnet_usable": true,
-   "msig_neural": false,
-   "names": [
-    "Esketamine"
-   ],
-   "needs": [
-    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
-   ],
-   "reconciliation": "NO_CARD_OR_RECORD_FOUND",
-   "shares_need_with_units": [
-    "U21",
-    "U27"
-   ],
-   "status_class": [
-    "approved_any_source"
-   ],
-   "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no card, qualification record or uncarded item names it (module READMEs and reports were not searched)",
-   "wwox_observations_on_best_need": 7
-  },
-  {
-   "access_categories": [
-    "unknown/unverified"
-   ],
-   "assessed_in": [
-    "card:F01_glutamate_receptor_node",
-    "record:P3-18"
-   ],
-   "direction_basis": [
-    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR: gene_listing"
-   ],
-   "display_group": "memantine",
-   "family_ids": [
-    "FAM:CAT:DGIDB:d87959cfb914"
-   ],
-   "mentioned_in": [
-    "card:F04_nmdar_intervention_class",
-    "card:P11_magnesium_nmdar_gate"
-   ],
-   "mnet_usable": true,
-   "msig_neural": false,
-   "names": [
-    "Memantine Hydrochloride"
-   ],
-   "needs": [
-    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
-   ],
-   "reconciliation": "ASSESSED_ELSEWHERE",
-   "shares_need_with_units": [
-    "U21",
-    "U27"
-   ],
-   "status_class": [
-    "approved_any_source"
-   ],
-   "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; the compound is already the named subject of an assessment listed in assessed_in, which is read before any new work",
    "wwox_observations_on_best_need": 7
   },
   {
@@ -915,7 +811,7 @@
     "card:H02_gabaat_inactivator_myelin_exposure"
    ],
    "direction_basis": [
-    "NEED-SEIZURE-CONTROL-SYMPTOMATIC: gene_listing, single_protein"
+    "NEED-SEIZURE-CONTROL-SYMPTOMATIC: single_protein"
    ],
    "display_group": "vigabatrin",
    "family_ids": [
@@ -959,7 +855,7 @@
    ],
    "assessed_in": [],
    "direction_basis": [
-    "NEED-T-TYPE-CALCIUM: gene_listing, single_protein"
+    "NEED-T-TYPE-CALCIUM: single_protein"
    ],
    "display_group": "abt 639",
    "family_ids": [
@@ -995,12 +891,11 @@
    ],
    "assessed_in": [],
    "direction_basis": [
-    "NEED-T-TYPE-CALCIUM: gene_listing, protein_family 3/3"
+    "NEED-T-TYPE-CALCIUM: protein_family 3/3"
    ],
    "display_group": "methsuximide",
    "family_ids": [
-    "FAM:CAT:CHEMBL697",
-    "FAM:CAT:DGIDB:82d11eef5cb3"
+    "FAM:CAT:CHEMBL697"
    ],
    "mentioned_in": [
     "card:H01_apinocaltamide_ttype"
@@ -1008,8 +903,7 @@
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
-    "METHSUXIMIDE",
-    "Methsuximide"
+    "METHSUXIMIDE"
    ],
    "needs": [
     "NEED-T-TYPE-CALCIUM"
@@ -1066,92 +960,19 @@
    ],
    "assessed_in": [],
    "direction_basis": [
-    "NEED-T-TYPE-CALCIUM: gene_listing"
-   ],
-   "display_group": "bepridil",
-   "family_ids": [
-    "FAM:CAT:DGIDB:df7564f65e1c"
-   ],
-   "mentioned_in": [],
-   "mnet_usable": true,
-   "msig_neural": false,
-   "names": [
-    "Bepridil Hydrochloride"
-   ],
-   "needs": [
-    "NEED-T-TYPE-CALCIUM"
-   ],
-   "reconciliation": "NO_CARD_OR_RECORD_FOUND",
-   "shares_need_with_units": [
-    "U17",
-    "U25"
-   ],
-   "status_class": [
-    "approved_any_source"
-   ],
-   "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no card, qualification record or uncarded item names it (module READMEs and reports were not searched)",
-   "wwox_observations_on_best_need": 1
-  },
-  {
-   "access_categories": [
-    "unknown/unverified"
-   ],
-   "assessed_in": [
-    "card:EB-ETX-01",
-    "card:H01_apinocaltamide_ttype"
-   ],
-   "direction_basis": [
-    "NEED-T-TYPE-CALCIUM: gene_listing"
-   ],
-   "display_group": "ethosuximide",
-   "family_ids": [
-    "FAM:CAT:DGIDB:6998a1a2d947"
-   ],
-   "mentioned_in": [
-    "card:G01_lithium_gsk3"
-   ],
-   "mnet_usable": true,
-   "msig_neural": false,
-   "names": [
-    "Ethosuximide"
-   ],
-   "needs": [
-    "NEED-T-TYPE-CALCIUM"
-   ],
-   "reconciliation": "ASSESSED_ELSEWHERE",
-   "shares_need_with_units": [
-    "U17",
-    "U25"
-   ],
-   "status_class": [
-    "approved_any_source"
-   ],
-   "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; the compound is already the named subject of an assessment listed in assessed_in, which is read before any new work",
-   "wwox_observations_on_best_need": 1
-  },
-  {
-   "access_categories": [
-    "unknown/unverified"
-   ],
-   "assessed_in": [],
-   "direction_basis": [
-    "NEED-T-TYPE-CALCIUM: gene_listing, protein_family 3/3, single_protein"
+    "NEED-T-TYPE-CALCIUM: protein_family 3/3, single_protein"
    ],
    "display_group": "mibefradil",
    "family_ids": [
     "FAM:CAT:CHEMBL1534525",
-    "FAM:CAT:DGIDB:21ee9b970f92",
-    "FAM:CAT:DGIDB:2c9c9be867db"
+    "FAM:CAT:DGIDB:21ee9b970f92"
    ],
    "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": true,
    "names": [
     "MIBEFRADIL DIHYDROCHLORIDE",
-    "Mibefradil",
-    "Mibefradil Dihydrochloride"
+    "Mibefradil"
    ],
    "needs": [
     "NEED-T-TYPE-CALCIUM"
@@ -1175,19 +996,17 @@
    ],
    "assessed_in": [],
    "direction_basis": [
-    "NEED-T-TYPE-CALCIUM: gene_listing, protein_family 3/3"
+    "NEED-T-TYPE-CALCIUM: protein_family 3/3"
    ],
    "display_group": "paramethadione",
    "family_ids": [
-    "FAM:CAT:CHEMBL1100",
-    "FAM:CAT:DGIDB:389fa6870ff8"
+    "FAM:CAT:CHEMBL1100"
    ],
    "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
-    "PARAMETHADIONE",
-    "Paramethadione"
+    "PARAMETHADIONE"
    ],
    "needs": [
     "NEED-T-TYPE-CALCIUM"
@@ -1210,52 +1029,17 @@
    ],
    "assessed_in": [],
    "direction_basis": [
-    "NEED-T-TYPE-CALCIUM: gene_listing, protein_family 3/3"
+    "NEED-T-TYPE-CALCIUM: protein_family 3/3"
    ],
    "display_group": "phensuximide",
    "family_ids": [
-    "FAM:CAT:CHEMBL797",
-    "FAM:CAT:DGIDB:e157e3677373"
+    "FAM:CAT:CHEMBL797"
    ],
    "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
-    "PHENSUXIMIDE",
-    "Phensuximide"
-   ],
-   "needs": [
-    "NEED-T-TYPE-CALCIUM"
-   ],
-   "reconciliation": "NO_CARD_OR_RECORD_FOUND",
-   "shares_need_with_units": [
-    "U17",
-    "U25"
-   ],
-   "status_class": [
-    "approved_any_source"
-   ],
-   "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no card, qualification record or uncarded item names it (module READMEs and reports were not searched)",
-   "wwox_observations_on_best_need": 1
-  },
-  {
-   "access_categories": [
-    "unknown/unverified"
-   ],
-   "assessed_in": [],
-   "direction_basis": [
-    "NEED-T-TYPE-CALCIUM: gene_listing"
-   ],
-   "display_group": "phloroglucinol",
-   "family_ids": [
-    "FAM:CAT:DGIDB:19749060be64"
-   ],
-   "mentioned_in": [],
-   "mnet_usable": true,
-   "msig_neural": false,
-   "names": [
-    "Phloroglucinol"
+    "PHENSUXIMIDE"
    ],
    "needs": [
     "NEED-T-TYPE-CALCIUM"
@@ -1311,85 +1095,17 @@
    ],
    "assessed_in": [],
    "direction_basis": [
-    "NEED-T-TYPE-CALCIUM: gene_listing"
-   ],
-   "display_group": "suloctidil",
-   "family_ids": [
-    "FAM:CAT:DGIDB:6abc18fc4ac1"
-   ],
-   "mentioned_in": [],
-   "mnet_usable": true,
-   "msig_neural": false,
-   "names": [
-    "Suloctidil"
-   ],
-   "needs": [
-    "NEED-T-TYPE-CALCIUM"
-   ],
-   "reconciliation": "NO_CARD_OR_RECORD_FOUND",
-   "shares_need_with_units": [
-    "U17",
-    "U25"
-   ],
-   "status_class": [
-    "approved_any_source"
-   ],
-   "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no card, qualification record or uncarded item names it (module READMEs and reports were not searched)",
-   "wwox_observations_on_best_need": 1
-  },
-  {
-   "access_categories": [
-    "unknown/unverified"
-   ],
-   "assessed_in": [],
-   "direction_basis": [
-    "NEED-T-TYPE-CALCIUM: gene_listing"
-   ],
-   "display_group": "terodiline",
-   "family_ids": [
-    "FAM:CAT:DGIDB:5626675dc6fe"
-   ],
-   "mentioned_in": [],
-   "mnet_usable": true,
-   "msig_neural": false,
-   "names": [
-    "Terodiline Hydrochloride"
-   ],
-   "needs": [
-    "NEED-T-TYPE-CALCIUM"
-   ],
-   "reconciliation": "NO_CARD_OR_RECORD_FOUND",
-   "shares_need_with_units": [
-    "U17",
-    "U25"
-   ],
-   "status_class": [
-    "approved_any_source"
-   ],
-   "units": [],
-   "why": "target listed with a direction-consistent documented action on a need with WWOX-system observations; no WWOX-system result for this compound is known and no card, qualification record or uncarded item names it (module READMEs and reports were not searched)",
-   "wwox_observations_on_best_need": 1
-  },
-  {
-   "access_categories": [
-    "unknown/unverified"
-   ],
-   "assessed_in": [],
-   "direction_basis": [
-    "NEED-T-TYPE-CALCIUM: gene_listing, protein_family 3/3"
+    "NEED-T-TYPE-CALCIUM: protein_family 3/3"
    ],
    "display_group": "trimethadione",
    "family_ids": [
-    "FAM:CAT:CHEMBL695",
-    "FAM:CAT:DGIDB:8e01cef4cadd"
+    "FAM:CAT:CHEMBL695"
    ],
    "mentioned_in": [],
    "mnet_usable": true,
    "msig_neural": false,
    "names": [
-    "TRIMETHADIONE",
-    "Trimethadione"
+    "TRIMETHADIONE"
    ],
    "needs": [
     "NEED-T-TYPE-CALCIUM"
@@ -2214,18 +1930,19 @@
     "abstained_by_class": {
      "action_not_stated": 196,
      "coupling_not_measured": 234,
-     "no_coupling_row": 2
+     "no_coupling_row": 2,
+     "republished_claim_level_not_carried": 55
     },
     "by_label": {
-     "abstained": 432,
-     "consistent": 198,
-     "opposed": 45
+     "abstained": 487,
+     "consistent": 149,
+     "opposed": 39
     },
     "by_target_level": {
      "gene_listing": {
-      "abstained": 227,
-      "consistent": 67,
-      "opposed": 9
+      "abstained": 282,
+      "consistent": 18,
+      "opposed": 3
      },
      "protein_complex": {
       "consistent": 10
@@ -2460,16 +2177,16 @@
    "NEED-SEIZURE-CONTROL-SYMPTOMATIC": {
     "abstained_by_class": {
      "action_not_stated": 50,
-     "coupling_not_measured": 32
+     "coupling_not_measured": 32,
+     "republished_claim_level_not_carried": 1
     },
     "by_label": {
-     "abstained": 82,
-     "consistent": 5
+     "abstained": 83,
+     "consistent": 4
     },
     "by_target_level": {
      "gene_listing": {
-      "abstained": 53,
-      "consistent": 1
+      "abstained": 54
      },
      "protein_complex_group": {
       "abstained": 10
@@ -2489,16 +2206,16 @@
    "NEED-T-TYPE-CALCIUM": {
     "abstained_by_class": {
      "action_not_stated": 88,
-     "group_record_mostly_outside_module_targets": 12
+     "group_record_mostly_outside_module_targets": 12,
+     "republished_claim_level_not_carried": 34
     },
     "by_label": {
-     "abstained": 100,
-     "consistent": 88
+     "abstained": 134,
+     "consistent": 54
     },
     "by_target_level": {
      "gene_listing": {
-      "abstained": 64,
-      "consistent": 34
+      "abstained": 98
      },
      "protein_complex_group": {
       "abstained": 30
@@ -5450,7 +5167,7 @@
    "ORD": "EVALUATED AND ORDERABLE",
    "WEAK": "EVALUATED WITH WEAK PERTINENCE OR COUNTER-EVIDENCE"
   },
-  "deepening_queue_compounds": 34,
+  "deepening_queue_compounds": 27,
   "groups": {
    "G1": {
     "label": "Strongest WWOX-specific case today (in the mouse null)",
@@ -5495,7 +5212,7 @@
     "catalog_stats.json": "87ac308ce3ab9b3f",
     "measure_next.json": "bca46967510475c5",
     "needs.json": "7678b986106b07e9",
-    "source_artefacts.tsv": "e646de9e32c9efea",
+    "source_artefacts.tsv": "d4242ad12c5c5c2d",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
    "receipt_ledger_lines": 948
@@ -5513,14 +5230,14 @@
     "UNIT": 25
    },
    "by_first_order": {
-    "Q1": 93,
-    "Q2": 1898,
+    "Q1": 67,
+    "Q2": 1924,
     "Q3": 208,
     "Q4": 14236,
     "Q5": 23808,
     "UNIT": 25
    },
-   "distinct_display_names_in_q1": 71,
+   "distinct_display_names_in_q1": 63,
    "distinct_display_names_total": 32276,
    "families": 40268,
    "mnet_usable_families": 13379,
@@ -5535,12 +5252,12 @@
    "need_linked_families_plus_units": 2224,
    "need_linked_families_q1_q2_q3": 2199,
    "q1_by_status": {
-    "approved_any_source": 30,
+    "approved_any_source": 14,
     "approved_any_source,clinical_candidate,phase_unknown": 1,
     "clinical_candidate": 11,
     "clinical_candidate,no_status_statement": 1,
     "clinical_candidate,phase_unknown": 2,
-    "no_status_statement": 47,
+    "no_status_statement": 37,
     "phase_unknown": 1
    },
    "q1_with_opposed_action_elsewhere": 0,

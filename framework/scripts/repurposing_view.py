@@ -3860,6 +3860,8 @@ UI_IT19 = {
     "md_rs_unknown_no_source_in_bounded_search": "nessuna fonte nella ricerca limitata",
     "abst_group_record_mostly_outside_module_targets": "record di gruppo: la maggior parte dei componenti non sono bersagli del modulo, quindi l'unica azione curata non è attribuita a questo gene",
     "abst_group_counts": "record di gruppo: {i} di {n} componenti sono bersagli del modulo; l'unica azione curata non è attribuita a questo gene",
+    # IT20 P2: una riga ripubblicata da una banca dati terza porta l'azione ma non il record originale né il suo livello
+    "abst_republished_claim_level_not_carried": "riga ripubblicata da un'altra banca dati: porta l'azione ma non il record originale né il suo livello, quindi la direzione non è attribuita a questo gene",
     "abst_need_direction_not_evaluable": "la direzione del bisogno è incerta o di modulazione: solo esplorazione",
     "abst_not_an_intervention_target": "il gene non è un bersaglio di intervento di questo bisogno",
     "abst_action_not_stated": "la fonte non dichiara se l'azione aumenta o riduce l'attività",

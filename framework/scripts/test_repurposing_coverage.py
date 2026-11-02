@@ -772,7 +772,8 @@ class RealFiles(unittest.TestCase):
                     self.assertIn(a["identity_state"], ("source_ids_checked_confirmed", "source_ids_checked_corrected"))
         art = rs.load_artefacts()
         self.assertEqual({(a["claim_source"], a["rule"].split(":")[0]) for a in art},
-                         {("*", "alias_risk"), ("ChEMBL", "action_contradicted_by_cited_reference")})   # symbol rules for GtoPdb are gone; IT18 P2 molecule rule
+                         {("*", "alias_risk"), ("ChEMBL", "action_contradicted_by_cited_reference"),
+                          ("ChEMBL", "republication")})   # symbol rules for GtoPdb are gone; IT18 P2 molecule rule; IT20 P2 republication datum
         per = self.base["summary"]["needs"]["per_need"]
         for nid, v in per.items():
             self.assertIn("excluded_records_by_reason", v, nid)

@@ -330,6 +330,10 @@ def build(needs_path=rs.DEFAULT_NEEDS, catalog_dir: Path = cc.DEFAULT_DIR, dr: P
                           "consistent_actions": action_contexts(cons), "opposed_actions": action_contexts(opp),
                           "signs_not_summed": True if cons and opp else None,
                           "consistent_associations": len(cons), "opposed_associations": len(opp),
+                          "consistent_distinct_assertions": distinct_assertions(action_contexts(cons)),
+                          "opposed_distinct_assertions": distinct_assertions(action_contexts(opp)),
+                          "republished_copies_not_counted_as_support": sum(1 for x in action_contexts(cons) + action_contexts(opp)
+                                                                           if not x["adds_independent_support"]),
                           "unresolved_associations": len([a for a in link if a["consistency"] in ("direction_unresolved", "not_evaluable")]),
                           "certainty_qualifiers": sorted({a["certainty_qualifier"] for a in cons + opp if a.get("certainty_qualifier")})}
             L3, L4 = observation_levels(obs)
@@ -379,15 +383,30 @@ def build(needs_path=rs.DEFAULT_NEEDS, catalog_dir: Path = cc.DEFAULT_DIR, dr: P
 def action_contexts(assocs: list[dict]) -> list[dict]:
     """The context of each action (target, action, source, record) so that consistent and opposed actions on one need can be read side by
     side. Duplicates collapse; nothing is counted twice and no sign is combined."""
-    seen, out = set(), []
+    seen, out, assertions = set(), [], set()
     for a in sorted(assocs, key=lambda a: (a["target"], a["catalogue_id"], str(a["action_on_target"]), a["link_source"])):
         key = (a["target"], a["action_on_target"], a["action_raw"], a["link_source"], a["catalogue_id"])
         if key in seen:
             continue
         seen.add(key)
+        # IT20 P2: a republished row and the record it copies are ONE assertion. Both stay listed (the reader sees who serves what),
+        # but the copy says so and the distinct-assertion count below does not count it twice.
+        prov = a.get("claim_provenance")
+        akey = (a["target"], a.get("assertion_key"))
         out.append({"target": a["target"], "action": a["action_on_target"], "action_raw": a["action_raw"], "link_source": a["link_source"],
-                    "record": a["catalogue_id"], "compound_record_name": a["compound"], "certainty_qualifier": a.get("certainty_qualifier")})
+                    "record": a["catalogue_id"], "compound_record_name": a["compound"], "certainty_qualifier": a.get("certainty_qualifier"),
+                    "claim_source": a.get("claim_source"), "effective_target_level": a.get("effective_target_level"),
+                    "republished_copy_of": (prov or {}).get("original_record"),
+                    "adds_independent_support": not (prov and prov.get("original_record") and akey in assertions)})
+        assertions.add(akey)
     return out
+
+
+def distinct_assertions(contexts: list[dict]) -> int:
+    """How many DISTINCT assertions the listed contexts rest on. Two rows that are one source's record and another
+    source's copy of it are one. Not a quality score and not independence: two unrelated sources may still share a
+    literature, which `shared sources are not independent confirmations` says elsewhere."""
+    return sum(1 for c in contexts if c.get("adds_independent_support", True))
 
 
 def observation_levels(obs: list[dict]) -> tuple[dict, dict]:
@@ -670,6 +689,12 @@ def make_summary(entries, idx, rows, cells, per_need, priorities, need_by, cards
                     # IT19 P6: direction by the level of the target the source row is about, and why a counted row carries no direction (association rows, not families)
                     "direction_rows_by_target_level": {lvl: dict(sorted(collections.Counter(("abstained" if x["abstention_class"] else x["consistency"]) for x in h if x["target_level"] == lvl).items()))
                                                        for lvl in sorted({x["target_level"] for x in h})},
+                    # IT20 P2: the level of the record the ASSERTION was made on, which for a republished row is not the level of the row served
+                    "direction_rows_by_effective_target_level": {lvl: dict(sorted(collections.Counter(("abstained" if x["abstention_class"] else x["consistency"]) for x in h if x.get("effective_target_level") == lvl).items()))
+                                                                 for lvl in sorted({x.get("effective_target_level") for x in h if x.get("effective_target_level")})},
+                    "republished_rows": {"rows": sum(1 for x in h if x.get("claim_provenance")),
+                                         "original_record_resolved": sum(1 for x in h if (x.get("claim_provenance") or {}).get("original_record")),
+                                         "original_record_level_not_carried": sum(1 for x in h if x.get("claim_provenance") and not x["claim_provenance"].get("original_record"))},
                     "abstained_rows_by_class": dict(sorted(collections.Counter(x["abstention_class"] for x in h if x["abstention_class"]).items())),
                     "excluded_records_by_reason": dict(collections.Counter(reason_class(a) for a in {x["catalogue_id"]: x for x in a_all if x["excluded_from_counts"] and x["target_kind"] in (rs.LINK_KINDS | rs.PATHWAY_KINDS)}.values())),
                     "identity_guard_hits": len(per_need[nid]["identity_guard_hits"]), "nonhuman_chembl_rows_set_aside": per_need[nid]["nonhuman_chembl_rows_set_aside"],
