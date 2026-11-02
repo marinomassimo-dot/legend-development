@@ -1,0 +1,116 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT19-20261102",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Iteration 19: verified mandate binding and an observed resume, DrugCentral corrupt-response handling, dashboard online, a matching reference with usable coverage, direction/abstention visible in consumers. Computational capability is not biological benefit.",
+ "START_UTC": "2026-11-02T09:55:00Z",
+ "BASELINE": "development/main = local main = 38c5c320f85d4cc57d50d407ec9d440696170593 (fetched 2026-11-02 09:55 UTC); CI of 07ed2ede and 38c5c320 success; one worktree; IT18 COMPLETE.",
+ "DECISIONS_TAKEN": [],
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": [],
+ "AUTHORISED_QUEUE_20261102A": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P0 record, MANDATE_BOUND emitted first and resolver verified, IT18 CI acquired and reconciled",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "P1 diagnose the IT18 UNKNOWN checks, minimal fix, controlled resume on a small real package",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "P2 DrugCentral corrupt gzip / non-UTF-8: reproduce, fix, regressions",
+     "status": "TODO",
+     "owner": "scientist"
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "P3 dashboard online: Pages, workflow, check_published_view",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "P4 job-level resource containment for trials; BioPathNet recipe recovered; independent check",
+     "status": "TODO",
+     "owner": "scientist"
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "P5 matching reference at usable coverage; module transfer defect fix with 3 regression cases",
+     "status": "TODO",
+     "owner": "scientist"
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "P6 direction, abstention and limits visible in cards, queue, comparison and views, regenerated",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "P7 scouting decisions reconciled; reopen-question wait measured before any weight change",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P8": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "P8 follow-up chosen and executed by a fresh actor on an IT19 gap, verified",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P9": {
+   "order": 10,
+   "steps": [
+    {
+     "step": "P9 freshness, battery on frozen SHA, safe_push, CI to verdict, cleanup, final report",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}
