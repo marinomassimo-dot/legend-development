@@ -23,8 +23,9 @@ Not proposed: any static host that needs a new account, a payment method or a ve
 
 ## 3. The workflow, kept as a proposal
 
-`view/DEPLOY_pages_workflow.proposal.yml` is the whole mechanism. It has one trigger (`workflow_dispatch`), so it cannot run on a push, a
-schedule or a pull request. Its first job (read-only permissions) checks that every file in the package directory, `manifest.json` included, equals the digest in the table of section 4 and in the manifest, and that no
+`view/DEPLOY_pages_workflow.proposal.yml` is the whole mechanism. It has two triggers: `workflow_dispatch` and (IT19, after the operator authorised publication and updates while free) a push to `main` that changes
+the package directory; it cannot run on a schedule or a pull request. The deploy step asks `configure-pages` to enable Pages if it is off (`enablement: true`; if the
+workflow token is not allowed to, the run fails visibly and the one remaining operation is Settings, Pages, Source = GitHub Actions). Its first job (read-only permissions) checks that every file in the package directory, `manifest.json` included, equals the digest in the table of section 4 and in the manifest, and that no
 other file is there; this is an integrity check, not a content check (the content proof is `audit-shareable --dynamic`, section 7). Its second job, the only one with `pages: write` and `id-token: write`, publishes that directory with the official Pages actions. The Pages environment normally accepts deployments only from the default branch: dispatch the workflow from that branch, after the work has landed there. It is **not** under `.github/` and is not
 active; nothing was added under `.github/` by this work. Every `uses:` is pinned to a commit SHA (section 11); re-check them before activation.
 

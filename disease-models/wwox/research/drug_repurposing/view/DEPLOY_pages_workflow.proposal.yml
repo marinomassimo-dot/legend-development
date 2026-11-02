@@ -9,13 +9,17 @@
 # integrity check, not a content check: the content proof is `audit-shareable --dynamic`, run by hand before
 # the workflow is dispatched (DEPLOY.md, section 7). The Pages environment normally accepts deployments only
 # from the default branch, so the workflow is dispatched from that branch after the work has landed there.
-# It cannot be triggered by a push, a schedule or a pull request: workflow_dispatch is its only trigger.
+# IT19 (operator authorisation of publication and updates while free): it runs by hand (workflow_dispatch) and on a push to main that changes the package directory, never on a schedule or a pull request.
 # Every `uses:` is pinned to the commit SHA of the release named in the trailing comment (looked up on 2026-10-29 with
 # `git ls-remote --tags` against the action repositories; see DEPLOY.md section 11). Re-check them before activation.
 name: Publish the shareable view (manual, proposal)
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - disease-models/wwox/research/drug_repurposing/view/shareable_package/**
 
 permissions:
   contents: read
@@ -73,6 +77,8 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+        with:
+          enablement: true  # IT19: tries to enable Pages (source: GitHub Actions) when it is off; free for a public repository; fails visibly if the token cannot
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: ${{ env.PACKAGE_DIR }}

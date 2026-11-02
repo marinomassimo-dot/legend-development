@@ -2118,8 +2118,10 @@ class It7P7Deployment(unittest.TestCase):
     def test_workflow_is_a_manual_only_proposal_outside_github_dir(self):
         self.assertIn("it is a PROPOSAL", self.wf)      # IT11 P5: the header is true at both paths
         on = re.search(r"^on:\n((?:  .*\n)+)", self.wf, re.M).group(1)
-        self.assertEqual([l.strip() for l in on.splitlines() if l.strip()], ["workflow_dispatch:"])
-        for bad in ("push", "schedule", "pull_request", "workflow_run"):
+        # IT19: the operator authorised publication and updates while free; a push to main that changes the package directory also runs it
+        self.assertEqual([l.strip() for l in on.splitlines() if l.strip()],
+                         ["workflow_dispatch:", "push:", "branches: [main]", "paths:", "- disease-models/wwox/research/drug_repurposing/view/shareable_package/**"])
+        for bad in ("schedule", "pull_request", "workflow_run"):
             self.assertNotRegex(on, bad)
         self.assertIn("manifest.json", self.wf)
         top = re.search(r"^permissions:\n((?:  .*\n)+)", self.wf, re.M).group(1)
