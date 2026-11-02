@@ -24,7 +24,7 @@ Data digests (sha256, equal to the LFS oids): entity_names.txt c1113fe726f25d8eb
 
 **Stage 1 verdict.** Passes proportionately for **one** small trial of the distinct capability (typed, partly directed explanation paths) on the released model; fails for the drug question (no model, training disproportionate). Design: [`PRE_REGISTRATION.md`](PRE_REGISTRATION.md).
 
-## Stage 2 — one small trial, stopped at the pre-registered memory limit (2026-11-01)
+## Stage 2 — one small trial, killed at 11.27 GB after the pre-registered 8 GB threshold was exceeded; nothing enforced the limit (2026-11-01; see the IT19 section)
 
 Design committed first (`751d80eb`). Outputs: [`results.json`](results.json) (ranks, names, coarse classes), [`wwox_step_provenance.tsv`](wwox_step_provenance.tsv), [`decisions.tsv`](decisions.tsv).
 
