@@ -1,0 +1,33 @@
+pair_id	stratum	stratum_description	need_id	parent_chembl_id	it18_split	it18_L_v1	it18_L_v2	chembl_records_reaching_need	available_compounds_in_stratum	available_pairs_in_stratum	selection_hash
+P01	S01	heterogeneous group record, clean blocker	NEED-SEIZURE-CONTROL-SYMPTOMATIC	CHEMBL363295	dev	compatible	indeterminable	CHEMBL2363032|PROTEIN COMPLEX GROUP|n=26|BLOCKER	4	8	b7ec8c3e2a20
+P02	S01	heterogeneous group record, clean blocker	NEED-T-TYPE-CALCIUM	CHEMBL363295	dev	compatible	indeterminable	CHEMBL2363032|PROTEIN COMPLEX GROUP|n=26|BLOCKER	4	8	b7ec8c3e2a20
+P03	S01	heterogeneous group record, clean blocker	NEED-SEIZURE-CONTROL-SYMPTOMATIC	CHEMBL404849	dev	compatible	indeterminable	CHEMBL2363032|PROTEIN COMPLEX GROUP|n=26|BLOCKER	4	8	c58ca300b4e0
+P04	S01	heterogeneous group record, clean blocker	NEED-T-TYPE-CALCIUM	CHEMBL404849	dev	compatible	indeterminable	CHEMBL2363032|PROTEIN COMPLEX GROUP|n=26|BLOCKER	4	8	c58ca300b4e0
+P05	S01	heterogeneous group record, clean blocker	NEED-SEIZURE-CONTROL-SYMPTOMATIC	CHEMBL473159	dev	compatible	indeterminable	CHEMBL2363032|PROTEIN COMPLEX GROUP|n=26|BLOCKER	4	8	d24bec287a5c
+P06	S01	heterogeneous group record, clean blocker	NEED-T-TYPE-CALCIUM	CHEMBL473159	dev	compatible	indeterminable	CHEMBL2363032|PROTEIN COMPLEX GROUP|n=26|BLOCKER	4	8	d24bec287a5c
+P07	S01	heterogeneous group record, clean blocker	NEED-SEIZURE-CONTROL-SYMPTOMATIC	CHEMBL1008	eval	compatible	indeterminable	CHEMBL2363032|PROTEIN COMPLEX GROUP|n=26|BLOCKER	4	8	fd930c982f4f
+P08	S01	heterogeneous group record, clean blocker	NEED-T-TYPE-CALCIUM	CHEMBL1008	eval	compatible	indeterminable	CHEMBL2363032|PROTEIN COMPLEX GROUP|n=26|BLOCKER	4	8	fd930c982f4f
+P09	S02	heterogeneous group record, ambiguous MODULATOR	NEED-SEIZURE-CONTROL-SYMPTOMATIC	CHEMBL940	dev	indeterminable	indeterminable	CHEMBL2363032|PROTEIN COMPLEX GROUP|n=26|MODULATOR	5	10	15a884c75637
+P10	S02	heterogeneous group record, ambiguous MODULATOR	NEED-T-TYPE-CALCIUM	CHEMBL940	dev	indeterminable	indeterminable	CHEMBL2363032|PROTEIN COMPLEX GROUP|n=26|MODULATOR	5	10	15a884c75637
+P11	S03	homogeneous family record, clean blocker	NEED-SEIZURE-CONTROL-SYMPTOMATIC	CHEMBL695	eval	compatible	compatible	CHEMBL2362995|PROTEIN FAMILY|n=3|BLOCKER	6	12	3c862c749dbc
+P12	S03	homogeneous family record, clean blocker	NEED-T-TYPE-CALCIUM	CHEMBL695	eval	compatible	compatible	CHEMBL2362995|PROTEIN FAMILY|n=3|BLOCKER	6	12	3c862c749dbc
+P13	S03	homogeneous family record, clean blocker	NEED-SEIZURE-CONTROL-SYMPTOMATIC	CHEMBL4217292	eval	compatible	compatible	CHEMBL2362995|PROTEIN FAMILY|n=3|BLOCKER	6	12	57dd5c498a98
+P14	S03	homogeneous family record, clean blocker	NEED-T-TYPE-CALCIUM	CHEMBL4217292	eval	compatible	compatible	CHEMBL2362995|PROTEIN FAMILY|n=3|BLOCKER	6	12	57dd5c498a98
+P15	S04	single-protein record, clean blocker, calcium need	NEED-T-TYPE-CALCIUM	CHEMBL3590674	dev	compatible	compatible	CHEMBL1859|SINGLE PROTEIN|n=1|BLOCKER	1	1	97804642032f
+P16	S05	homogeneous receptor group, clean down action, one ChEMBL mechanism	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL452461	dev	compatible	compatible	CHEMBL2094124|PROTEIN COMPLEX GROUP|n=7|ANTAGONIST	10	10	059ad249069b
+P17	S05	homogeneous receptor group, clean down action, one ChEMBL mechanism	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL1094	dev	compatible	compatible	CHEMBL2094124|PROTEIN COMPLEX GROUP|n=7|ANTAGONIST	10	10	50227f1d721f
+P18	S05	homogeneous receptor group, clean down action, one ChEMBL mechanism	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL2110814	dev	compatible	compatible	CHEMBL2094124|PROTEIN COMPLEX GROUP|n=7|ANTAGONIST	10	10	56949ebbb336
+P19	S05	homogeneous receptor group, clean down action, one ChEMBL mechanism	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL807	eval	compatible	compatible	CHEMBL2094124|PROTEIN COMPLEX GROUP|n=7|NEGATIVE ALLOSTERIC MODULATOR	10	10	5ae1c340ab68
+P20	S06	homogeneous receptor group, clean down action, other mechanisms off the directed needs	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL900	eval	compatible	compatible	CHEMBL2094124|PROTEIN COMPLEX GROUP|n=7|ANTAGONIST	5	5	7757fc794faf
+P21	S06	homogeneous receptor group, clean down action, other mechanisms off the directed needs	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL2107771	eval	compatible	compatible	CHEMBL2094124|PROTEIN COMPLEX GROUP|n=7|ANTAGONIST	5	5	82844b9a8a68
+P22	S07	homogeneous receptor group, partial agonist	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL3989872	eval	indeterminable	indeterminable	CHEMBL2094124|PROTEIN COMPLEX GROUP|n=7|PARTIAL AGONIST	2	2	3a3da1a65a87
+P23	S07	homogeneous receptor group, partial agonist	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL3544917	dev	indeterminable	indeterminable	CHEMBL2094124|PROTEIN COMPLEX GROUP|n=7|PARTIAL AGONIST	2	2	6bd0b1d3ee71
+P24	S08	NMDA receptor group, positive allosteric modulator	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL1255840	eval	opposite	opposite	CHEMBL2094124|PROTEIN COMPLEX GROUP|n=7|POSITIVE ALLOSTERIC MODULATOR	1	1	d427d02a7a39
+P25	S09	defined two-subunit complex record, clean antagonist	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL182066	eval	compatible	compatible	CHEMBL1907603|PROTEIN COMPLEX|n=2|ANTAGONIST	4	4	3d6e2398c5bb
+P26	S09	defined two-subunit complex record, clean antagonist	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL3545350	eval	compatible	compatible	CHEMBL1907603|PROTEIN COMPLEX|n=2|ANTAGONIST	4	4	7090035e6a59
+P27	S10	AMPA receptor group, clean antagonist	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL3545042	dev	compatible	compatible	CHEMBL2096670|PROTEIN COMPLEX GROUP|n=4|ANTAGONIST	7	7	1685875fd3d8
+P28	S10	AMPA receptor group, clean antagonist	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL2103869	eval	compatible	compatible	CHEMBL2096670|PROTEIN COMPLEX GROUP|n=4|ANTAGONIST	7	7	4e3efa9cebd5
+P29	S11	AMPA receptor group, positive allosteric modulator	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL3707399	eval	opposite	opposite	CHEMBL2096670|PROTEIN COMPLEX GROUP|n=4|POSITIVE ALLOSTERIC MODULATOR	6	6	25bb9660bcbb
+P30	S11	AMPA receptor group, positive allosteric modulator	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL3707401	eval	opposite	opposite	CHEMBL2096670|PROTEIN COMPLEX GROUP|n=4|POSITIVE ALLOSTERIC MODULATOR	6	6	265741bb2dd7
+P31	S12	single-protein record(s), glutamate need	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL61872	dev	compatible	compatible	CHEMBL2009|SINGLE PROTEIN|n=1|ANTAGONIST;CHEMBL4016|SINGLE PROTEIN|n=1|ANTAGONIST	2	2	0b511b321d38
+P32	S12	single-protein record(s), glutamate need	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL52440	eval	compatible	compatible	CHEMBL1972|SINGLE PROTEIN|n=1|ANTAGONIST	2	2	547118d067b4
