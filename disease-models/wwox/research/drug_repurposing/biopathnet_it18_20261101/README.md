@@ -98,7 +98,7 @@ No card, IPOTESI or queue entry was created.
 In git: this README, the pre-registration, the availability table, `results.json`, the two TSVs and the receipt JSON. Not in git: no BioPathNet code, weights, Pathway Commons or KEGG rows.
 
 Removed from scratch at the end:
-- the venv (Python 3.10 + torch 2.0.1, about 1.1 GB), the uv cache and Python install
+- the venv (Python 3.10 + torch 2.0.1, about 1.3 GB (measured)), the uv cache and Python install
 - the code clone (43 MB), the checkpoint (111 MB), `PC_KEGG_0602` (62 MB)
 - the Pathway Commons 12 extended SIF (176 MB), the compiled extensions
 - the run outputs and driver scripts
