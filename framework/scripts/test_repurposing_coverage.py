@@ -772,7 +772,11 @@ class RealFiles(unittest.TestCase):
                     self.assertIn(a["identity_state"], ("source_ids_checked_confirmed", "source_ids_checked_corrected"))
         art = rs.load_artefacts()
         self.assertEqual({(a["claim_source"], a["rule"].split(":")[0]) for a in art},
-                         {("*", "alias_risk"), ("ChEMBL", "action_contradicted_by_cited_reference")})   # symbol rules for GtoPdb are gone; IT18 P2 molecule rule
+                         {("*", "alias_risk"), ("ChEMBL", "action_contradicted_by_cited_reference"),
+                          ("ChEMBL", "republication"), ("ChEMBL", "target_level_documented")})
+        # symbol rules for GtoPdb are gone; IT18 P2 molecule rule; IT20 P2 republication datum; IT20 P3 documented-level datum.
+        # The two IT20 rule kinds are symmetric: one withholds a direction a record cannot carry, one supplies the
+        # measurement that answers that withholding for one gene. Both are data; neither names a compound in code.
         per = self.base["summary"]["needs"]["per_need"]
         for nid, v in per.items():
             self.assertIn("excluded_records_by_reason", v, nid)

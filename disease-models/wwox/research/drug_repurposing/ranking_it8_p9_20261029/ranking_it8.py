@@ -1453,9 +1453,20 @@ def direction_basis(assoc: list[dict], family_ids: list[str], needs: list[str]) 
     with its component count), so a queue entry says what kind of source record carries its direction."""
     fams, out = set(family_ids), []
     for n in needs:
-        lv = sorted({a["target_level"] + (f" {a['components_in_module_targets']}/{a['record_components']}" if a.get("record_components") else "")
-                     for a in assoc if a["need"] == n and a["family"] in fams and a["consistency"] == "consistent" and not a["excluded_from_counts"]})
-        out.append(f"{n}: {', '.join(lv) or 'none'}")
+        lv = set()
+        for a in assoc:
+            if not (a["need"] == n and a["family"] in fams and a["consistency"] == "consistent" and not a["excluded_from_counts"]):
+                continue
+            # IT20 P3: when a record-level abstention was answered by a documented single-protein measurement,
+            # the direction rests on THAT measurement, not on the record. Printing the record's component counts
+            # alone would tell a reader the opposite of what happened.
+            if a.get("documented_level_waiver"):
+                lv.add(f"documented single_protein measurement on {a['target']} (record {a['target_level']}"
+                       + (f" {a['components_in_module_targets']}/{a['record_components']}" if a.get("record_components") else "")
+                       + " abstained; see source_artefacts.tsv)")
+                continue
+            lv.add(a["target_level"] + (f" {a['components_in_module_targets']}/{a['record_components']}" if a.get("record_components") else ""))
+        out.append(f"{n}: {', '.join(sorted(lv)) or 'none'}")
     return out
 
 

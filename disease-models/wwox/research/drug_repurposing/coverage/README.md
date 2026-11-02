@@ -55,6 +55,35 @@ After `needs.json` or a card changes: regenerate, then regenerate the view (`rep
     celecoxib) are listed as unresolved alias-risk rows;
   * **placeholder**: the DGIdb drug literally named `NULL`.
   * Every excluded association carries an explicit `excluded_reason` (`source_artefact`, `alias_risk`, `placeholder`).
+
+**Two rule kinds in `source_artefacts.tsv` that change a DIRECTION rather than exclude a row** (IT20; the row stays in
+the listing in both cases, and neither names a compound in code):
+
+* `republication:<ORIGINAL_SOURCE>` (`claim_source` = the republishing claim source, `symbol` = `*`) declares that rows
+  served under that claim source are **copies** of another source's curated records. The DGIdb export of 2024-06-10
+  flattens one ChEMBL mechanism into one row per component gene and carries the action but neither the ChEMBL target
+  record id nor its **level**, so such a row arrives looking like a statement about one gene. The module resolves the
+  original record only through an identifier it already holds (the record's own ChEMBL id plus a curated mechanism row of
+  the same record on the same gene with the same direction). A **resolved** copy is then asked exactly what the original
+  is asked — the group-transfer guard, run on the original row — so a copy can never do what the record it copies cannot,
+  and a copy of a legitimate record stays usable. An **unresolved** copy keeps its action and its claim source and
+  carries no direction (`republished_claim_level_not_carried`), with the missing datum named. A copy also shares its
+  original's `assertion_key`, so it is never counted as a second, independent support
+  (`consistent_distinct_assertions` beside `consistent_associations`).
+* `target_level_documented:<MOLECULE_CHEMBL_ID>:<ACTION>:single_protein` (`symbol` = the one gene the measurement
+  resolves) **supplies** the datum a record-level abstention names as missing: a documented single-protein measurement
+  for that molecule, that action and that gene, with its locator, species, system, assay, endpoint, concentration and
+  determining conditions in `evidence`. It is the symmetric twin of
+  `action_contradicted_by_cited_reference`, which removes a direction. Only `single_protein` is accepted and anything
+  else **raises**, so a family or class result cannot be laundered into a subunit direction; the row names one gene, so
+  siblings gain nothing; the molecule must match through `molecule_ids` (own ChEMBL id, `inherited_from_parent`, declared
+  parent record — never a name); and it answers **only** a record-level abstention, never an unstated action, a missing
+  or inferred role row, or an uncertain need direction. What a compound does at a target and whether that target is
+  coupled to a need's quantity stay two judgments, and `target_roles.tsv` still governs the second.
+
+Every association therefore carries `claim_source`, `claim_provenance`, `effective_target_level` (the level of the
+record the **assertion** was made on, or `unresolved`), `assertion_key` and `documented_level_waiver`. `target_level`
+is unchanged and still reports what the **source row** is about.
 * Per-need counts are given by target kind and the unions are given both ways (headline only; headline plus pathway members).
 
 ## Four levels, never summed, never a score

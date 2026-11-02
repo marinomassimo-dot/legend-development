@@ -253,6 +253,167 @@ def group_transfer_unresolved(src: str, t: dict, module_symbols: set[str] | None
             "intervention targets, so its single curated action is not resolved to this gene")
 
 
+def republication_rule(rules: list[dict], claim_source: str | None) -> dict | None:
+    """The `republication:<ORIGINAL_SOURCE>` row of source_artefacts.tsv for this DGIdb claim source, or None.
+
+    A republication row is a DATUM, not a code branch: it declares that the rows a republishing
+    source serves under this claim source are copies of another source's curated records, and says
+    what the copy does not carry. Delete the row and the rows behave as they did before. No source
+    is excluded by it and no compound is named in it."""
+    if not claim_source:
+        return None
+    for r in rules:
+        if r["claim_source"] == claim_source and r["rule"].startswith("republication:"):
+            return r
+    return None
+
+
+def claim_provenance(e: dict, t: dict, rules: list[dict]) -> dict | None:
+    """What a republished claim row is a copy OF, and what the republication does not carry; None for an original row.
+
+    DGIdb serves a ChEMBL curated mechanism as one row per component gene (`gene_claim_name`),
+    keeping the action but dropping the ChEMBL target record and its level. The row therefore LOOKS
+    like a statement about one gene (`gene_listing`) while the assertion behind it may have been
+    made on a 26-component group. That is the same improper transfer `group_transfer_unresolved`
+    guards, arriving through an intermediary, and it is why the four T-type entries kept a direction
+    after IT19: the guard only saw the ChEMBL row, not its copy.
+
+    The original record is resolved only through an IDENTIFIER the catalogue already trusts: this
+    record's own ChEMBL molecule id plus a ChEMBL curated mechanism row of the same record that names
+    this gene with the same direction. No name matching, no release-to-release guessing. When that
+    chain is absent the level is `unresolved` and `missing` says which datum is missing: the
+    association is kept and the direction uncertainty is made explicit, never turned into a negative.
+
+    `_original_row` is the resolved ChEMBL row itself (popped before serialisation) so the caller can
+    ask the ordinary guard about it instead of re-implementing the rule."""
+    if t.get("source") != "DGIdb interaction":
+        return None
+    rule = republication_rule(rules, t.get("claim_source"))
+    if not rule:
+        return None
+    original = rule["rule"].split(":", 1)[1]
+    gene = (t.get("gene") or "").upper()
+    ad = action_direction(t.get("interaction_type"))
+    prov = {"original_source": original, "republisher": "DGIdb", "republication_declared_by": "source_artefacts.tsv",
+            "republication_note": rule["evidence"], "republished_record_level": "unresolved",
+            "original_record": None, "duplicate_of_record": None, "missing": None, "_original_row": None}
+    own = (e.get("ids") or {}).get("chembl") if original == "ChEMBL" else None
+    if own:
+        for u in e["targets"]:
+            if u is t or u["source"] != "ChEMBL curated mechanism" or u.get("organism") != "Homo sapiens":
+                continue
+            if gene not in {g.upper() for g in u.get("gene_symbols") or []}:
+                continue
+            if action_direction(u.get("action_type")) != ad:
+                continue
+            prov.update({"republished_record_level": target_level("ChEMBL curated mechanism", u),
+                         "original_record": u.get("target_id"), "duplicate_of_record": u.get("target_id"),
+                         "_original_row": u})
+            return prov
+    prov["missing"] = (f"the {original} target record id and its target level are not carried by the republishing export"
+                       + ("" if own else f", and this catalogue record holds no {original} molecule identifier through which "
+                                         "the original curated record could be read")
+                       + f"; the level of the {original} assertion behind this gene row is therefore unknown")
+    return prov
+
+
+def republished_transfer_unresolved(prov: dict | None, module_symbols: set[str] | None) -> str | None:
+    """Why a republished claim does not resolve a direction to THIS gene, or None.
+
+    Two different facts, two different reasons. When the original record IS resolved, the copy is
+    asked exactly what the original is asked — the ordinary group guard, run on the original row — so
+    a copy can never do what the record it copies cannot, and a copy of a legitimate record stays
+    usable. When the original record is NOT resolved, the missing datum is the level itself: the row
+    keeps its action, its claim source and its place in the listing, and carries no direction."""
+    if not prov or not module_symbols:
+        return None
+    if prov["republished_record_level"] == "unresolved":
+        return (f"republished_claim_level_not_carried: this row is a {prov['republisher']} copy of a "
+                f"{prov['original_source']} curated mechanism, served as one gene per row; {prov['missing']}, "
+                "so a direction is not resolved to this gene from the copy alone (source_artefacts.tsv "
+                f"republication:{prov['original_source']})")
+    reason = group_transfer_unresolved("ChEMBL curated mechanism", prov["_original_row"], module_symbols)
+    if not reason:
+        return None
+    return (reason + f"; this row is a {prov['republisher']} copy of that same {prov['original_source']} record "
+            f"({prov['original_record']}), so it is the same assertion and does not resolve what the record cannot")
+
+
+DOCUMENTED_LEVEL_RULE = "target_level_documented:"
+DOCUMENTED_LEVELS = {"single_protein"}
+
+
+def molecule_ids(e: dict, t: dict) -> set[str]:
+    """Every ChEMBL molecule identifier this record's row may legitimately be addressed by: the record's own id,
+    the parent a mechanism was inherited through, and the record's declared parent record (a salt addressed by
+    its base). Identifier chains the catalogue already holds; no name is used. `CAT:<CHEMBL id>` is the
+    catalogue's own id shape for a ChEMBL record, relied on elsewhere in the module (`idx.family["CAT:" + subj]`)."""
+    parent = (e.get("relations") or {}).get("parent") or ""
+    pid = parent[4:] if parent.upper().startswith("CAT:CHEMBL") else None
+    return {(e.get("ids") or {}).get("chembl"), t.get("inherited_from_parent"), pid} - {None}
+
+
+def documented_level_waiver(e: dict, t: dict, symbol: str, action_dir: str, rules: list[dict]) -> tuple[str, str] | None:
+    """(why the record-level abstention is answered, the matched molecule id), or None.
+
+    A record-level abstention says: the source record is written above the gene, so its single curated action is
+    not resolved to this gene. That is a statement about a MISSING datum, and the honest way out is to supply the
+    datum, not to loosen the rule. A `target_level_documented:<MOLECULE>:<ACTION>:<LEVEL>` row of
+    source_artefacts.tsv supplies it: for that molecule, that action and the gene in the row's `symbol` column, a
+    measurement at `LEVEL` exists, with its locator in `evidence`.
+
+    Four deliberate narrownesses, so this cannot become a general override:
+      * only `single_protein` is accepted as a documented level (`DOCUMENTED_LEVELS`), and anything else raises --
+        a family or class result can never be laundered into a subunit direction through this table;
+      * the row names ONE gene, so evidence on one subunit says nothing about its siblings;
+      * the action must be the one the rule names, and the molecule one of this record's own identifiers;
+      * it answers ONLY a record-level abstention. An unstated action, a missing or inferred role row, or an
+        uncertain need direction are untouched -- what a compound does at a target and whether that target is
+        coupled to the need's quantity are two judgments, and this table speaks to the first only.
+    No compound is named in code and the rule is deleted like any other row."""
+    mols = molecule_ids(e, t)
+    for r in rules:
+        if not r["rule"].startswith(DOCUMENTED_LEVEL_RULE):
+            continue
+        # the rule's SHAPE is checked before its subject, so a malformed row fails on the first row that reads
+        # the table rather than only when it happens to name the gene under inspection
+        parts = r["rule"].split(":")
+        if len(parts) != 4:
+            raise ValueError(f"{r['rule']!r} is not target_level_documented:<MOLECULE>:<ACTION>:<LEVEL>")
+        _, mol, act, lvl = parts
+        if lvl not in DOCUMENTED_LEVELS:
+            raise ValueError(f"target_level_documented level {lvl!r} is not one of {sorted(DOCUMENTED_LEVELS)}: "
+                             "a record above single-protein level cannot document a direction for one gene")
+        if action_direction(act) == "unresolved":
+            raise ValueError(f"target_level_documented action {act!r} states no up/down direction: "
+                             "a measurement with no direction cannot license one")
+        if r["symbol"].upper() != symbol.upper() or mol not in mols or action_direction(act) != action_dir:
+            continue
+        return (f"record-level abstention answered by a documented {lvl} measurement for {mol} on {symbol} "
+                f"with action {act}: {r['evidence']} (source_artefacts.tsv {r['rule']}). The direction on this "
+                f"row rests on that measurement, not on the source record the abstention is about, and it is "
+                f"specific to {symbol}: it says nothing about the other members of the record", mol)
+    return None
+
+
+def assertion_key(e: dict, src: str, t: dict, prov: dict | None) -> str:
+    """One key per underlying ASSERTION (substance record + source record + action), so a consumer can
+    tell two sources apart from two copies of one source.
+
+    A republished row whose original record is resolved gets the key of that record: the copy and the
+    record collapse to one assertion and are never counted as two supports. The substance record is
+    part of the key because a ChEMBL group record carries the same target id for many molecules —
+    without it two different compounds would collapse into one. An unresolved copy keeps its own key:
+    it may or may not be a copy of something already counted, and claiming either way would be an
+    invention."""
+    mol = e["id"]
+    if prov and prov.get("original_record"):
+        return f"{mol}|{prov['original_source']}:{prov['original_record']}:{t.get('interaction_type') or ''}".upper()
+    if src.startswith("ChEMBL"):
+        return f"{mol}|CHEMBL:{t.get('target_id')}:{t.get('action_type') or ''}".upper()
+    return f"{mol}|{t.get('claim_source')}:{t.get('gene_concept_id')}:{t.get('interaction_type') or ''}".upper()
+
+
 CHEMBL_TARGET_LEVELS = {"SINGLE PROTEIN": "single_protein", "PROTEIN FAMILY": "protein_family", "PROTEIN COMPLEX": "protein_complex",
                         "PROTEIN COMPLEX GROUP": "protein_complex_group", "SELECTIVITY GROUP": "selectivity_group",
                         "PROTEIN-PROTEIN INTERACTION": "protein_protein_interaction", "CHIMERIC PROTEIN": "chimeric_protein",
@@ -260,6 +421,9 @@ CHEMBL_TARGET_LEVELS = {"SINGLE PROTEIN": "single_protein", "PROTEIN FAMILY": "p
 # IT19 P6: the closed vocabulary of target levels a reader sees. ChEMBL rows carry the source's own target type; a DGIdb row names one gene
 # (`gene_listing`) unless the GtoPdb correction states a complex or a single protein. A level is what the SOURCE row is about, never inferred.
 TARGET_LEVELS = tuple(CHEMBL_TARGET_LEVELS.values()) + ("other_chembl_target_type", "gene_listing")
+# IT20 P2: the level of the record the ASSERTION was made on, which for a republished row is not the level of the row served.
+# `unresolved` is a value, not a gap to be filled by a guess: it says the republishing source did not carry the datum.
+EFFECTIVE_TARGET_LEVELS = TARGET_LEVELS + ("unresolved",)
 
 
 def target_level(src: str, t: dict) -> str:
@@ -285,6 +449,7 @@ def group_components(src: str, t: dict, module_symbols: set[str] | None) -> tupl
 # IT19 P6: why a row carries no direction, as a closed class read from the reason the code itself wrote (one prefix per code path).
 ABSTENTION_PREFIXES = (
     ("group_record_mostly_outside_module_targets", "group_record_mostly_outside_module_targets"),
+    ("republished_claim_level_not_carried", "republished_claim_level_not_carried"),
     ("the need's direction is", "need_direction_not_evaluable"),
     ("target kind", "not_an_intervention_target"),
     ("the source states no up/down action", "action_not_stated"),
@@ -436,7 +601,11 @@ def associations_for_need(need: dict, idx: Index, roles: dict, module_symbols: s
                 excl = excl or "placeholder: DGIdb drug_name literally NULL/none, not a compound"
             if excl:
                 label, why = "not_evaluable", excl
-            transfer = group_transfer_unresolved(src, t, module_symbols)
+            prov = claim_provenance(e, t, idx.artefacts)
+            transfer = group_transfer_unresolved(src, t, module_symbols) or republished_transfer_unresolved(prov, module_symbols)
+            waiver = documented_level_waiver(e, t, tgt["symbol"], ad, idx.artefacts) if transfer else None
+            if waiver:
+                transfer = None
             if transfer and label in ("consistent", "opposed"):
                 label, why = "direction_unresolved", transfer
             scope, subsel, src_sel = evidence_scope(src, t)
@@ -469,9 +638,23 @@ def associations_for_need(need: dict, idx: Index, roles: dict, module_symbols: s
                 limits.append("the gene is an effector constraint of the need (the record argues against manipulating it): listed beside, never a link")
             if tgt["target_kind"] == "pathway_member":
                 limits.append("pathway member: counted apart from intervention-target links, never in the headline")
+            if waiver:
+                limits.append(waiver[0])
+            if prov:
+                limits.append(f"republished claim: {prov['republisher']} serves this row as a copy of a {prov['original_source']} "
+                              f"curated mechanism; original record {prov['original_record'] or 'NOT IDENTIFIED'}, level of that record "
+                              f"{prov['republished_record_level']}" + (f"; missing: {prov['missing']}" if prov["missing"] else "")
+                              + "; a copy is not a second, independent statement")
             n_comp, n_in = group_components(src, t, module_symbols)
+            orow = (prov or {}).pop("_original_row", None)
+            if prov and orow is not None:
+                n_comp, n_in = group_components("ChEMBL curated mechanism", orow, module_symbols)
             assoc.append({
                 "target_level": target_level(src, t), "chembl_target_id": t.get("target_id") if src.startswith("ChEMBL") else None,
+                "claim_source": t.get("claim_source"), "claim_provenance": prov,
+                "documented_level_waiver": {"matched_molecule": waiver[1], "why": waiver[0]} if waiver else None,
+                "effective_target_level": prov["republished_record_level"] if prov else target_level(src, t),
+                "assertion_key": assertion_key(e, src, t, prov),
                 "record_components": n_comp, "components_in_module_targets": n_in, "abstention_class": abstention_class(label, why, excl),
                 "need": need["id"], "target": tgt["symbol"], "hgnc_id": tgt.get("hgnc_id"), "target_kind": tgt["target_kind"],
                 "catalogue_id": e["id"], "compound": e["name"], "family": idx.family[e["id"]],
@@ -537,11 +720,23 @@ def compound_to_needs(entry: dict, needs: list[dict], idx: Index, roles: dict, f
                 excl = artefact_reason(own, t, idx.artefacts, idx.early)
                 if excl:
                     label, why = "not_evaluable", excl
-                transfer = group_transfer_unresolved(t["source"], t, module_symbols or getattr(idx, "module_symbols", None))
+                ms = module_symbols or getattr(idx, "module_symbols", None)
+                prov = claim_provenance(own, t, idx.artefacts)
+                transfer = group_transfer_unresolved(t["source"], t, ms) or republished_transfer_unresolved(prov, ms)
+                waiver = documented_level_waiver(own, t, tgt["symbol"], ad, idx.artefacts) if transfer else None
+                if waiver:
+                    transfer = None
                 if transfer and label in ("consistent", "opposed"):
                     label, why = "direction_unresolved", transfer
-                n_comp, n_in = group_components(t["source"], t, module_symbols or getattr(idx, "module_symbols", None))
+                n_comp, n_in = group_components(t["source"], t, ms)
+                orow = (prov or {}).pop("_original_row", None)
+                if prov and orow is not None:
+                    n_comp, n_in = group_components("ChEMBL curated mechanism", orow, ms)
                 out.append({"target_level": target_level(t["source"], t), "record_components": n_comp, "components_in_module_targets": n_in,
+                            "claim_source": t.get("claim_source"), "claim_provenance": prov,
+                            "documented_level_waiver": {"matched_molecule": waiver[1], "why": waiver[0]} if waiver else None,
+                            "effective_target_level": prov["republished_record_level"] if prov else target_level(t["source"], t),
+                            "assertion_key": assertion_key(own, t["source"], t, prov),
                             "abstention_class": abstention_class(label, why, excl),
                             "excluded_from_counts": excl, "excluded_reason": exclusion_class(excl), "need": need["id"], "target": tgt["symbol"], "target_kind": tgt["target_kind"], "link_source": t["source"],
                             "action_raw": raw, "action_on_target": ad, "need_direction": nd, "consistency": label, "consistency_why": why,

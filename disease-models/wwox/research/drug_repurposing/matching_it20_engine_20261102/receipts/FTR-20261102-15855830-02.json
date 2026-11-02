@@ -1,0 +1,44 @@
+{
+ "analysis_at": "2026-11-02T22:55:00Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-02T22:56:00Z",
+ "event_id": "FTR-20261102-15855830-02",
+ "evidence_basis": [
+  "abstract re-read in full from the PubMed record fetched directly (efetch, retmode=xml) on 2026-11-02; the title and all five abstract sentences were read, not recalled from the IT19 reference row",
+  "the source re-read is Pharmacology 2005, volume 74, DOI 10.1159 oblique 000085329, title 'Voltage-dependent and frequency-independent inhibition of recombinant Cav3.2 T-type Ca2+ channel by bepridil'",
+  "every datum carried into coverage/source_artefacts.tsv is abstract-level and names its measure type: FUNCTIONAL electrophysiology (patch clamp), never binding",
+  "one correction to the IT19 reference row, found by this re-read: the abstract says `recombinant Cav3.2 ... stably expressed in human embryonic kidney (HEK)-293 cells` and does NOT state the species of the Cav3.2 clone; IT19's reference_it19_p5.tsv wrote `human Cav3.2 (CACNA1H) recombinant in HEK293`, which is one step beyond the abstract. The species-resolved target assignment is taken instead from DrugCentral 2027 (bepridil, STRUCT_ID 342, CACNA1H, UniProt O95180, SWISSPROT CAC1H_HUMAN, ORGANISM Homo sapiens), and the two statements are kept apart in the evidence field",
+  "independence checked rather than assumed: the DrugCentral row's ACTION_TYPE BLOCKER carries MOA_SOURCE CHEMBL and action_origin_class SHARED, so it is not an independent confirmation of the direction; its ACT_TYPE Ki 5.149 (WOMBAT-PK) is a binding measure and licenses no direction",
+  "the two silent sources are recorded as silent, not negative: ChEMBL_37 REST returned 0 activities for CHEMBL1008 against CHEMBL1859 (CACNA1H single protein) and against CHEMBL2362995 (T-type family) on 2026-11-02, and GtoPdb 2026.3.1 lists bepridil (ligand 2337) on KNa1.1 (rat) and Kv7.4 (human) only",
+  "coverage uses `unavailable` for the sections not obtained: no full text was retrieved and none was required for the labelled fact",
+  "no claim about benefit, safety, or any effect in a WWOX-deficient system is made or implied; the subunit scope is CACNA1H only"
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/coverage/source_artefacts.tsv",
+  "disease-models/wwox/research/drug_repurposing/matching_it20_engine_20261102/README.md"
+ ],
+ "prior_receipt": "FTR-20261102-15855830-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 15855830 (title, abstract sentences 1-5 and MeSH headings, as served by efetch 2026-11-02)",
+ "study_id": {
+  "doi": "10.1159/000085329",
+  "pmid": "15855830"
+ },
+ "workflow": "IT20 P3 (matching_it20_engine_20261102). Re-read of one abstract to supply the datum a record-level abstention names as missing: a documented single-protein measurement for bepridil on CACNA1H. The datum entered the engine as one data row in coverage/source_artefacts.tsv (rule target_level_documented:CHEMBL1008:BLOCKER:single_protein), with the locator, the measure type, the determining condition (IC50 0.4 umol/l at a -70 mV holding potential, 10.6 umol/l at -100 mV), the tonic/non-use-dependent character, and the explicit statement that no Cav3.1 or Cav3.3 value was found so no direction on CACNA1G or CACNA1I is licensed. Pharmacological compatibility only; the coupling of the target to the WWOX need remains governed by coverage/target_roles.tsv and is unchanged by this reading. Prepared as a JSON file for the integrator; NOT appended to the ledger by the preparing actor."
+}
