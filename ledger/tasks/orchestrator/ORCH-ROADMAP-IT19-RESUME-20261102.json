@@ -1,0 +1,36 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT19-RESUME-20261102",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "LOW",
+ "OBJECTIVE": "IT19 P1 controlled resume probe on a small real package (P7: how long do reopen questions wait under the existing selector). Probe only: not a second mandate of work; closed after the observation.",
+ "START_UTC": "2026-11-02T10:30:00Z",
+ "BASELINE": "main with ORCH-ROADMAP-IT19-20261102",
+ "DECISIONS_TAKEN": [],
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": [],
+ "AUTHORISED_QUEUE_20261102R": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_R1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "R1 in worktree .claude/worktrees/it19-probe (branch it19-probe from main) write disease-models/wwox/research/drug_repurposing/radar_it19_p7_20261102/wait_model.py that, from the plan scout_daily.resolve_plan derives at main and the existing pick_questions, simulates 60 days (2 plan questions + open slot per day as in the radar) and prints for each reopen: question the day it is first asked; commit; mark this step DONE with the commit sha as evidence",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "R2 run it, save wait_model_result.json next to it, commit; mark DONE with evidence",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "R3 write README.md of that directory: how many reopen questions wait more than 14 days, whether the existing weight and elapsed-time selector explains it, and a recommendation (change nothing is valid); commit; mark DONE with evidence",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}
