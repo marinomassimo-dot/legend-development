@@ -20,6 +20,7 @@ on:
     branches: [main]
     paths:
       - disease-models/wwox/research/drug_repurposing/view/shareable_package/**
+      - .github/workflows/publish-shareable-view.yml
 
 permissions:
   contents: read

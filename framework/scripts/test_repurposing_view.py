@@ -2120,7 +2120,7 @@ class It7P7Deployment(unittest.TestCase):
         on = re.search(r"^on:\n((?:  .*\n)+)", self.wf, re.M).group(1)
         # IT19: the operator authorised publication and updates while free; a push to main that changes the package directory also runs it
         self.assertEqual([l.strip() for l in on.splitlines() if l.strip()],
-                         ["workflow_dispatch:", "push:", "branches: [main]", "paths:", "- disease-models/wwox/research/drug_repurposing/view/shareable_package/**"])
+                         ["workflow_dispatch:", "push:", "branches: [main]", "paths:", "- disease-models/wwox/research/drug_repurposing/view/shareable_package/**", "- .github/workflows/publish-shareable-view.yml"])
         for bad in ("schedule", "pull_request", "workflow_run"):
             self.assertNotRegex(on, bad)
         self.assertIn("manifest.json", self.wf)
