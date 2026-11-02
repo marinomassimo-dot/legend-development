@@ -7,7 +7,9 @@
  "OBJECTIVE": "Iteration 20: demonstrated resume after a stop, DGIdb/ChEMBL provenance transfer closed in the active path, specific pharmacological evidence recovered (bepridil), contrasting-case measurement, a new WWOX-guided question, a more useful public dashboard. Computational capability is not biological benefit.",
  "START_UTC": "2026-11-02T22:24:00Z",
  "BASELINE": "development/main = local main = dba013f3ae8523a835fcab9c5aaeb9657d506542 (fetched 2026-11-02 22:24 UTC); code SHA 2ebb5710 CI success; dba013f3 CI in progress at start; dashboard served (HTTP 200) and verified; folder trust accepted by the operator; one worktree.",
- "DECISIONS_TAKEN": [],
+ "DECISIONS_TAKEN": [
+  "2026-11-02 ~23:20 UTC: operator addendum folded into P5 and P6 without a parallel engine: P5 (branch it20-hyp) generates mechanism-driven hypotheses from qualified WWOX needs and extends the existing ranking with an ordered list \"Principali indagini da portare avanti\" (ranking.json key investigations; origin_class known_in_wwox / generated_by_legend / external_transferred; verified novelty perimeter; movement reason); P6 (branch it20-dash) renders it as the first-screen block against that contract. Old-order tests are examined, not deleted."
+ ],
  "DEFAULTS_TAKEN": [],
  "STOP_LOG": [],
  "AUTHORISED_QUEUE_20261102B": {
@@ -68,7 +70,7 @@
    "order": 6,
    "steps": [
     {
-     "step": "P5 WWOX-guided question on the improved engine: external-only vs WWOX-qualified at equal usable universe; closed loop to next experiment and regenerated queue",
+     "step": "P5 WWOX-guided question on the improved engine: external-only vs WWOX-qualified at equal usable universe; closed loop to next experiment and regenerated queue + addendum: investigations ranking (Principali indagini)",
      "status": "TODO",
      "owner": "scientist"
     }
@@ -89,8 +91,9 @@
    "steps": [
     {
      "step": "P7 radar: verify real run, questions from IT20 gaps, capability-led searches on GitHub/Hugging Face/Nature, no reopening of resolved comparisons",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "diagnosis_it20_20261102 feeds the radar plan (5 diagnosis questions); scout_it20_20261102 (15 decisions, ChEMBL_37 mechanism trial, GitHub channel incomplete: 3 empty then 403); no resolved comparison reopened; production radar run after the change not yet observed (next scheduled 05:20 UTC 2026-11-03)"
     }
    ]
   },
