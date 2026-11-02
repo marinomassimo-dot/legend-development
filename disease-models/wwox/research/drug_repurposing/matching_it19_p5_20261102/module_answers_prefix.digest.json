@@ -1,9 +1,11 @@
 {
  "answers_sha256": "ecec69ac9b146fcfd9abf8841f09493acaafcf326732df347b14223715393d79",
  "catalog_sha256": "75652786013b931d2482ae40b2b563a02ef3e05eff43832722cc002e3ccf72fb",
+ "correction_20261102": "Dated correction after independent verification. The table was generated with the post-fix repurposing_search.py (e84d8d09...) run with the group-transfer guard OFF, not with the pre-fix file; the original field therefore named the post-fix file although this digest was committed at 82690f75, where the file was e7db278d... (now recorded in repurposing_search_sha256, the pre-fix origin). Guard off is behaviourally the pre-fix path (test_1 in test_repurposing_group_transfer.py asserts the pre-fix label), and the table is reproducible with module_answers.py without --guard. answers_sha256 covers module_answers_prefix.tsv only; script, selection, catalogue and needs digests are unchanged.",
+ "generated_with_repurposing_search_sha256": "e84d8d0972441c4fc20ab047d03df029f7a9fcaec9fe440c3afccef17f8c62cc",
  "guard": false,
  "needs_sha256": "7678b986106b07e9a1cab0c5a4397df8a708fa46d9b459ddaf61fac0831c3f0f",
- "repurposing_search_sha256": "e84d8d0972441c4fc20ab047d03df029f7a9fcaec9fe440c3afccef17f8c62cc",
+ "repurposing_search_sha256": "e7db278d44ed6364b901b7def4533211ec110f9126306f1ce7a9d5dafc9d6201",
  "rows": 32,
  "script_sha256": "42bb4891d74ded81051ea1b32a82ca4801b45d13b4f410ac8ca57afb0a8788fb",
  "selection_sha256": "9d5804dcf302e26ead331cf4b981b961b47ee17297b29f3e6713bda62873d50d"
