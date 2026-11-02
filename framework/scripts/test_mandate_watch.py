@@ -117,6 +117,15 @@ class Watch(unittest.TestCase):
         self.assertEqual(r2["action"], "NONE")
         self.assertEqual(len(calls), 1)
 
+    def test_a_failed_revival_logs_why_it_failed(self):
+        """IT19 P1: `claude --bg --resume` exits 1 with 'Workspace not trusted' until the operator accepts trust; the event must say so."""
+        e = self.env(record())
+        run = lambda c, cwd=None: SimpleNamespace(returncode=1, stdout="", stderr="Workspace not trusted. Run `claude` in /work/dir once and accept the trust prompt")
+        r = e.check([], deliver="resume", runner=run)
+        self.assertTrue(r["delivery"].startswith("failed rc=1"))
+        events = [json.loads(l) for l in (mw.state_dir() / mw.EVENTS_FILE).read_text().splitlines()]
+        self.assertIn("Workspace not trusted", events[-1].get("delivery_output", ""))
+
     def test_progress_in_the_record_allows_a_new_request(self):
         e = self.env(record(steps=("TODO", "TODO")))
         run = lambda c, cwd=None: SimpleNamespace(returncode=0, stdout="", stderr="")

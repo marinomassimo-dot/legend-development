@@ -352,7 +352,7 @@ def classify(status: dict, session: dict | None, session_list_ok: bool, bound: b
     if v != "CONTINUE":
         return {"state": "UNKNOWN", "action": "NONE", "why": f"record verdict {v}: {status.get('message', '')}"[:300]}
     if not bound:
-        return {"state": "UNKNOWN", "action": "NONE", "why": "no session transcript carries MANDATE_BOUND for this task"}
+        return {"state": "UNKNOWN", "action": "NONE", "why": "no session transcript carries MANDATE_BOUND for this task (the line must start a line of the session's own persisted text; after writing it, run `mandate_watch.py check --task <id> --deliver none --json` and expect a session id, else write it again in a message of its own)"}
     if not session_list_ok:
         return {"state": "UNKNOWN", "action": "NONE", "why": "the session listing could not be read"}
     if jobs["alive"]:
@@ -433,7 +433,9 @@ def check(task: str, *, root: Path = ROOT, deliver: str = "none", quiet_minutes:
         out["delivery"] = "the caller is the session: continue now"
     # Every scheduled look is recorded, RUNNING included (iteration 7): a healthy long run used to leave no trace, so
     # "did the scheduler look at this mandate this hour?" could not be answered from the log.
-    log_event("check", **{k: out[k] for k in ("task", "state", "action", "why") if k in out}, delivery=out.get("delivery"))
+    # IT19: a failed revival says WHY in the log (for example "Workspace not trusted"), not only that it failed.
+    log_event("check", **{k: out[k] for k in ("task", "state", "action", "why") if k in out}, delivery=out.get("delivery"),
+              **({"delivery_output": out["delivery_output"][:200]} if str(out.get("delivery", "")).startswith("failed") and out.get("delivery_output") else {}))
     return out
 
 
