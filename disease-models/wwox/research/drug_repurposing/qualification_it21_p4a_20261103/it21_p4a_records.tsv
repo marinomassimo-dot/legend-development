@@ -1,0 +1,7 @@
+cand_id	package	compound	state	decision	unit_id	class	origin	need
+IT21P4A-01	P4a-IT21	nanatinostat (CHR-3996, VRx-3996)	DROP	DROP (informative; see reasons)		EXCL	generated_in_it21	NEED-PDH-PYRUVATE-AXIS
+IT21P4A-02	P4a-IT21	IOX1 (5-carboxy-8-hydroxyquinoline)	DROP	DROP (informative; see reasons)		EXCL	generated_in_it21	NEED-PDH-PYRUVATE-AXIS
+IT21P4A-03	P4a-IT21	CGI-1746 (CGI1746)	DROP	DROP (informative; see reasons)		EXCL	generated_in_it21	NEED-INHIBITORY-HYPOFUNCTION
+IT21P4A-04	P4a-IT21	GSK343 (GSK-343)	CONDITIONAL	CONDITIONAL (kept; scope narrowed; role unknown)		ORD	generated_in_it21	NEED-NEUROINFLAMMATION-GLIA
+IT21P4A-05	P4a-IT21	tizaterkib (AZD0364, ATG-017, AZ13820216)	INCONCLUSIVE	INCONCLUSIVE (insufficient support, not no activity)		INSUFF	generated_in_it21	NEED-NEUROINFLAMMATION-GLIA
+IT21P4A-06	P4a-IT21	SRT-2104	INCONCLUSIVE	INCONCLUSIVE (insufficient support, not no activity)		INSUFF	generated_in_it21	NEED-MYC-PROGENITOR-PROLIFERATION

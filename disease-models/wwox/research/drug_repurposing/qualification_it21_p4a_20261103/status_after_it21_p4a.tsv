@@ -1,0 +1,7 @@
+proposal_id	compound	status_before	disposition	status_after	status_changed	qualified
+IT21P2-0006	nanatinostat (CHR-3996, VRx-3996)	CONDITIONAL_H_HARM	REJECTED_INFORMATIVE	CONDITIONAL_H_HARM	no	no (needs a sourced role and a measured link in a WWOX system)
+IT21P2-0008	IOX1 (5-carboxy-8-hydroxyquinoline)	CONDITIONAL_H_HARM	REJECTED_INFORMATIVE	CONDITIONAL_H_HARM	no	no (needs a sourced role and a measured link in a WWOX system)
+IT21P2-0057	CGI-1746 (CGI1746)	CONDITIONAL_H_HARM	REJECTED_INFORMATIVE	CONDITIONAL_H_HARM	no	no (needs a sourced role and a measured link in a WWOX system)
+IT21P2-0195	GSK343 (GSK-343)	CONDITIONAL_H_HARM	KEPT_CONDITIONAL	CONDITIONAL_H_HARM	no	no (needs a sourced role and a measured link in a WWOX system)
+IT21P2-0374	tizaterkib (AZD0364, ATG-017, AZ13820216)	CONDITIONAL_H_PROTECT	INCONCLUSIVE	CONDITIONAL_H_PROTECT	no	no (needs a sourced role and a measured link in a WWOX system)
+IT21P2-0512	SRT-2104	CONDITIONAL_H_HARM	INCONCLUSIVE	CONDITIONAL_H_HARM	no	no (needs a sourced role and a measured link in a WWOX system)
