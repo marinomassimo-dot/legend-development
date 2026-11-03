@@ -57,6 +57,8 @@ def investigation_chembl_ids(dr: Path) -> set:
     j = json.loads(rj.read_text(encoding="utf-8"))
     for r in j.get("investigations") or []:
         out |= {x for x in str(r.get("chembl_ids") or "").split(";") if x}
+    for r in j.get("conditional_hypotheses") or []:   # IT21 P7-fix: the conditional proposals shown beside the list
+        out |= {x for x in str(r.get("chembl_ids") or "").split(";") if x}
     for n in (j.get("investigations_context") or {}).get("informative_negatives") or []:
         out |= {x for x in str(n.get("chembl_ids") or "").split(";") if x}
     return out
