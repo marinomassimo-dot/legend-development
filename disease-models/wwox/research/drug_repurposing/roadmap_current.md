@@ -199,6 +199,7 @@ Reusable guidance for any drug-repurposing package lives in these places only; r
   stated. Before asking a package for new candidates, check how many needs can qualify one at all — a protein-level
   measurement that resolves a need's direction unlocks more of the catalogue than any compound search does. Measurement and
   method in [`hypotheses_it20_20261102/README.md`](hypotheses_it20_20261102/README.md).
+- Provenance through intermediaries and specific evidence (IT20): follow [the republished-claim bullet of the convention](../../../../framework/protocols/repurposing_adapter_convention.md); a verifier must recompute any 'X to 0' claim from a fresh regeneration (IT20: a claimed 21 to 0 was still 21).
 - Dated measurements and decisions are in the iteration section of the [module README](README.md) marked CURRENT.
 
 ## Delivery sequence and stop condition
