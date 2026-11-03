@@ -1,0 +1,27 @@
+WWOX: 10 LIB_6 signatures
+LINCSKD_11540 HA1E (kidney epithelial) 96 h: genes 978; WWOX own value None
+LINCSKD_14017 HCC515 (lung) 96 h: genes 978; WWOX own value None
+LINCSKD_17714 HEPG2 (liver) 96 h: genes 978; WWOX own value None
+LINCSKD_22148 MCF7 (breast) 144 h: genes 978; WWOX own value None
+LINCSKD_25575 NPC (neural progenitor cells) 96 h: genes 978; WWOX own value None
+LINCSKD_26546 PC3 (prostate) 144 h: genes 978; WWOX own value None
+LINCSKD_29101 PC3 (prostate) 96 h: genes 978; WWOX own value None
+LINCSKD_3475 A375 (skin) 96 h: genes 978; WWOX own value None
+LINCSKD_7088 A549 (lung) 96 h: genes 978; WWOX own value None
+LINCSKD_8047 ASC (adipose) 96 h: genes 978; WWOX own value None
+MODULE NPC LINCSKD_25575 SLC2A1 expected up value None
+MODULE NPC LINCSKD_25575 HK2 expected up value None
+MODULE NPC LINCSKD_25575 LDHA expected up value None
+MODULE NPC LINCSKD_25575 LDHB expected up value None
+MODULE NPC LINCSKD_25575 BNIP3 expected up value (-1.34044, 0.002302914858)
+MODULE NPC LINCSKD_25575 PDK1 expected down value None
+SPEARMAN NPC vs HA1E LINCSKD_11540: shared genes 978 rho 0.492
+SPEARMAN NPC vs HCC515 LINCSKD_14017: shared genes 978 rho 0.398
+SPEARMAN NPC vs HEPG2 LINCSKD_17714: shared genes 978 rho 0.487
+SPEARMAN NPC vs MCF7 LINCSKD_22148: shared genes 978 rho 0.053
+SPEARMAN NPC vs PC3 LINCSKD_26546: shared genes 978 rho -0.072
+SPEARMAN NPC vs PC3 LINCSKD_29101: shared genes 978 rho 0.210
+SPEARMAN NPC vs A375 LINCSKD_3475: shared genes 978 rho 0.391
+SPEARMAN NPC vs A549 LINCSKD_7088: shared genes 978 rho 0.151
+SPEARMAN NPC vs ASC LINCSKD_8047: shared genes 978 rho 0.298
+ALL PAIRS n=45 median rho 0.265 min -0.075 max 0.543

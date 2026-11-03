@@ -1153,5 +1153,28 @@ class NoQuestionStarves(unittest.TestCase):
         self.assertEqual(len(first), 30, "30 questions at 2 a day are all asked in 15 days")
 
 
+class FallbackThemeList(unittest.TestCase):
+    """IT21 P6: the fixed fallback list stays well formed and keeps discovery and follow-up of known projects in balance."""
+
+    def test_shape_and_ids(self):
+        ids = [t["id"] for t in sd.THEMES]
+        self.assertEqual(len(ids), len(set(ids)), "ids are unique")
+        for t in sd.THEMES:
+            for key in ("id", "category", "gap", "decision", "kw"):
+                self.assertTrue(t.get(key), f"{t.get('id')}: {key} is required")
+            self.assertIn(t["category"], sd.CATEGORY_ROADMAP, "every category maps to a roadmap item")
+
+    def test_it21_changes(self):
+        ids = {t["id"] for t in sd.THEMES}
+        self.assertTrue({"gene-knockdown-neural", "genetic-suppression-rescue"} <= ids)
+        self.assertNotIn("open-compound-resources", ids, "retired: IT14/IT15/IT21 found nothing beyond the existing sources")
+
+    def test_balance(self):
+        cats = {t["category"] for t in sd.THEMES}
+        self.assertGreaterEqual(len(cats), 5, "no single category crowds the rotation")
+        self.assertIn("negative results", cats, "counter-evidence stays in the rotation")
+        self.assertIn("experiments", cats, "follow-up of a known project stays in the rotation")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

@@ -1,0 +1,4 @@
+panel_gene	panel_role	position	query_gene	suppressor_gene	category	tissue	suppressor_type	pmid
+GRIN2A	DEE	suppressor	HTT	GRIN2A	Patients	Neuron	-	15742215
+GRIN2A	DEE	suppressor	HTT	GRIN2A	Patients	Neuron	-	17569088
+GRIN2A	DEE	suppressor	HTT	GRIN2A	Patients	Neuron	-	21989477
