@@ -223,7 +223,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3173,
+    "forbidden-name": 3172,
     "forbidden-wording": 12
    },
    "co_attested_wording": [
@@ -551,8 +551,8 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 4519278,
-   "sha256": "8dac6e4ea39830c3d9e7c33257f384a428d804dc0a8e83abe96f41618341352d"
+   "bytes": 4520415,
+   "sha256": "82a01ee4d5c3cd3eabd8dc2f421cd74bbd82fbff136044e786233005f1639876"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
