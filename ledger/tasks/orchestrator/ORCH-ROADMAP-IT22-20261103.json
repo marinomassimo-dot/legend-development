@@ -11,7 +11,9 @@
   "2026-11-03: operator integration 'priorita al rendimento della ricerca' queued: majority of active work on P3-P6 (connect unused WWOX observations with proof of which proposals change; complementary routes with justified method; alternatives inside known classes only on specific data; primary sources of emerging hypotheses; a dedicated partial-benefit selection); each emerging hypothesis answers why not proposed before / what knowledge now used / does the fix work on another case; novelty, evidence strength, WWOX relevance, feasibility shown separately; abstention only after documented exploration"
  ],
  "DEFAULTS_TAKEN": [],
- "STOP_LOG": [],
+ "STOP_LOG": [
+  "2026-11-03 residual (to carry): prospective benefit not observed; no hypothesis qualified; primary full-text reads partial; ERK pair counts as two hand-overs (no paralog-group cluster rule); 12 dormant decision sources untagged; ChEMBL activities not in the local cache (pracinostat conflict unresolved); test_dossier_quote_audit timeout classification pending the battery"
+ ],
  "AUTHORISED_QUEUE_20261103": {
   "MANDATE_STATE": "OPEN",
   "OBJ_P0": {
@@ -32,7 +34,7 @@
      "step": "P1 fix H8 cross-molecule decision transfer (fixtures first; nanatinostat vs pracinostat/CUDC-101/quisinostat)",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "decision_scope_it22.tsv + decision_effect(); 10 fixtures; 69 blocked rows -> 24 kept (BTK refuted premise), 45 released, 6 new handoffs"
+     "evidence": "decision_scope_it22.tsv + decision_effect (global premises, per-question work_done, class_limit); 14 fixtures; 69 blocked rows -> 24 kept (BTK premise_contradicted), 45 released; verifier F01-F04 fixed"
     }
    ]
   },
@@ -41,8 +43,9 @@
    "steps": [
     {
      "step": "P2 fix attribution_screen comparability (measure type/unit/context across both sides; no 10x/100 nM law)",
-     "status": "PENDING",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "typed measures, lower-bound rule, largest-deficit type, NOT_COMPARABLE_MEASURES; 46 attribution tests; weak-attribution blocks 20 -> 5; vorinostat stays WEAK"
     }
    ]
   },
@@ -51,8 +54,9 @@
    "steps": [
     {
      "step": "P3 connect unconsumed WWOX knowledge (NRF2/redox, cell-population, glia/maturation/myelination, corrections) to generator inputs, with consumption proof",
-     "status": "PENDING",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "build_inputs_it22.py + Q8 + guards/annotations by deposit; incremental engine runs; results_p4; measures_it22.json; 4 input audits in p3_A..D"
     }
    ]
   },
@@ -61,8 +65,9 @@
    "steps": [
     {
      "step": "P4 use non-pathway relations in the engine (measured/inferred/hypothesised, transfer step declared)",
-     "status": "PENDING",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Path B / compound-first and phenotype-first reused; typed class-alternatives table; dossiers (TR, EZH2, stability) and batch qualifications (7 of 8 new hand-overs); relation types declared in each dossier"
     }
    ]
   },
@@ -71,8 +76,9 @@
    "steps": [
     {
      "step": "P5 incremental measurement of the three effects; reconcile IT21 benchmark wording",
-     "status": "PENDING",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "measure_it22.py stages S0-S4; P1/P2 change selection not the 980 generated rows; P3 adds 20 rows; sensitivity and hNPC arm; IT21 benchmark wording limited to measured properties"
     }
    ]
   },
@@ -81,8 +87,9 @@
    "steps": [
     {
      "step": "P6 extended reverse test (known, new-link, preserved exclusion) and deepening of few hypotheses with receipts",
-     "status": "PENDING",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "forward snapshot a8372c7e before reverse analysis; 6 contrast cases blind-first by a separate actor; 5 general fixes held on a second case; dossiers + 59 receipts recorded (1027 chained)"
     }
    ]
   },
@@ -91,8 +98,9 @@
    "steps": [
     {
      "step": "P7 targeted scouting only where a gap is named",
-     "status": "PENDING",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "scout_it22_p7_20261103: B3DB probed (CC0, 9 percent coverage, none of the decisive compounds) WATCH, nothing adopted"
     }
    ]
   },
@@ -101,8 +109,9 @@
    "steps": [
     {
      "step": "P8 independent blind-first verification, regenerate queue/ranking/view, publish",
-     "status": "PENDING",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "independent verification verification_it22_p8_20261103 (27 findings: 5 confirmed, 21 corrected, 1 refuted) answered in RESPONSE_integrator.md; ranking, view, shareable package regenerated; shareable audit PASS before the fixes"
     }
    ]
   },
@@ -111,8 +120,9 @@
    "steps": [
     {
      "step": "P9 durable lessons at canonical points + regeneration proof",
-     "status": "PENDING",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "roadmap_current.md Standing method bullet; generation_it22 README; regression suites (decision scope 14, inputs 7, attribution 46, generation 41); correction note; durable path re-run (results_p4)"
     }
    ]
   },
