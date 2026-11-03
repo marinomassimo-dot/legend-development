@@ -1,0 +1,137 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT21-20261103",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Iteration 21: generate new WWOX-guided pharmacological hypotheses (compound -> action -> biological context -> hypothesised benefit -> discriminating experiment) and carry them to verifiable qualification and an understandable research priority. Computational capability is not biological benefit.",
+ "START_UTC": "2026-11-03T06:20:00Z",
+ "BASELINE": "development/main = local main = 7fe0f0972472257edb27443bcc226f3b3459aa3e (fetched 2026-11-03); code SHA e7f00f13 CI green; one worktree at start.",
+ "DECISIONS_TAKEN": [],
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": [],
+ "AUTHORISED_QUEUE_20261103": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P0 baseline, record, MANDATE_BOUND, diagnosis of the generative chain (observation->interpretation->path->action->compound->qualification->investigation->dashboard)",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "P1 scoped fixes: INV-01 glycaemic reconciliation with C04; INV-03 efonidipine/flunarizine pair qualification; claim_provenance ambiguity regression",
+     "status": "PENDING",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "P2 reactivate generator with current inputs (identity/aliases, target level, copy fixes, specific evidence, family limits, prodrug/active form, seed level)",
+     "status": "PENDING",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "P3 mechanistic exploration A/B/C/D across non-excitability mechanisms incl. one broad-recovery and one partial-benefit path",
+     "status": "PENDING",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "P4 substantive qualification of a small diversified set; novelty class; 5-field output",
+     "status": "PENDING",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "P5 generative-capacity and WWOX-contribution measurement with a fit-for-question comparison (not set vs filtered subset)",
+     "status": "PENDING",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "P6 scouting GitHub/HF/Nature targeted to generative gaps; radar questions update",
+     "status": "PENDING",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "P7 ranking and dashboard: new qualified/conditional investigations; transparency of curation; publication limits by source; label and language fixes; publish and verify served",
+     "status": "PENDING",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P8": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "P8 independent verification (blind-first), autonomous follow-up, durable learnings",
+     "status": "PENDING",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P9": {
+   "order": 10,
+   "steps": [
+    {
+     "step": "P9 scheduled-cron resume proof with a dedicated diagnostic session, in parallel",
+     "status": "PENDING",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P10": {
+   "order": 11,
+   "steps": [
+    {
+     "step": "P10 validation, integration, full battery on the frozen SHA, CI, Pages, cleanup",
+     "status": "PENDING",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  }
+ }
+}
