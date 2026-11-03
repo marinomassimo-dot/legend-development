@@ -16,7 +16,7 @@ NOT USABLE YET. Both gates are unresolved: no licence of any kind, and no checkp
 ## Licence, recorded separately
 
 - Code: none found. Paths searched (raw, main): LICENSE, LICENSE.md, LICENSE.txt, COPYING all return 404; README.md, skills/README.md, skills/MolNexus/SKILL.md contain no licence, copyright or terms-of-use text; API licence field null. A tree listing (non-truncated) shows no licence-like file anywhere. Under default copyright this means all rights reserved.
-- Data (BioNexKG demo graph, task folds, feature tables, about 190 MB in git): none found; same paths. The README does not state provenance or terms of the underlying sources. Whether the demo is a subset of a fuller graph is not stated.
+- Data (BioNexKG demo graph, task folds, feature tables, about 154 MB in git): none found; same paths. The README does not state provenance or terms of the underlying sources. Whether the demo is a subset of a fuller graph is not stated.
 - Weights: none found, and none exist to license (see below).
 
 ## Checkpoint state

@@ -82,7 +82,7 @@ Compound to gene or protein pairs for the matched compounds: 85,662 distinct pai
 |---|---|---|
 | IN_LEGEND_SAME_SIGN | 971 | pair and sign already in `family_actions` |
 | IN_LEGEND_MIXED_SIGN | 106 | EC-KG carries both signs |
-| IN_LEGEND_OPPOSITE_SIGN | 15 | EC-KG sign opposes the generator's (8 rest on prediction rows only; the others include PAC-1/CASP3, regorafenib/EPHA2, dactolisib/PIK3CB and PIK3R1, cyproterone/PGR, the BMP agonists on BMPR1A/BMPR2) |
+| IN_LEGEND_OPPOSITE_SIGN | 15 | EC-KG sign opposes the generator's (8 rest on prediction rows only; the others include PAC-1/CASP3, regorafenib/EPHA2, dactolisib/PIK3CB and PIK3R1, cyproterone/PGR, the BMP agonists on BMPR1A/BMPR2; read the verifier correction below: 9 are EC-KG errors, 5 are LEGEND-side suspects, 1 is a name-matching error) |
 | IN_LEGEND_ECKG_UNSIGNED | 172 | in `family_actions`, EC-KG has no activity sign |
 | IN_LEGEND_UNSIGNED_ONLY | 1,227 | in `family_targets_any` only |
 | NEW_PAIR_LEGEND_ORIGIN_PRESENT | 2,157 | not in LEGEND, but ChEMBL, GtoPdb or DGIdb is an origin: dropped by the generator's guards or a family mismatch, **not new knowledge** |
@@ -91,7 +91,7 @@ Compound to gene or protein pairs for the matched compounds: 85,662 distinct pai
 | NEW_PAIR_PREDICTION_ONLY | 38,641 | text mining only; not counted |
 | TARGET_NOT_MAPPED_TO_HGNC | 22,424 | target is a UMLS concept, UniProt or PR id without HGNC; not compared |
 
-Of the 17,068: 6,468 best-evidence OBSERVED (CTD), 10,600 ANNOTATION (mostly LINCS); 536 have an activity-level sign; 220 have two independent origins.
+Of the 17,068: 6,468 best-evidence OBSERVED (CTD), 10,600 ANNOTATION (mostly LINCS); 536 have an activity-level sign under the strict rule (12,068 under the rule the build code states, 10,327 of them LINCS-only); 220 have two independent origins.
 Other relation types present in the subset and absent from the generator's tables (counts are fetched rows): compound to disease `treats_or_applied_or_studied_to_treat` 45,912 (mostly SemMedDB and text mining), `treats` 6,510, `applied_to_treat` 3,708, `contraindicated_in` 11,642, `has_adverse_event` 13,892 (FAERS), `has_side_effect` 5,866, compound to gene `affects`/`regulates` with expression aspects. Around WWOX itself (3,293 rows): 562 `associated_with`, 517 `interacts_with`, 372 `gene_associated_with_condition`, 303 `expressed_in`, 223 `directly_physically_interacts_with` (301 IntAct rows), 150 HPO phenotype rows; 1,104 of the 3,293 are PrimeKG-labelled, 839 SemMedDB, so only 109 are OBSERVED.
 Compound to disease edges were not compared with LEGEND: the generator inputs (`family_actions`, `family_targets_any`) hold no indication or adverse-event table.
 
@@ -138,3 +138,10 @@ Release note for the integrator: `extract_ecKG_wwox.tsv` (3.0 MB) and `extract_d
 - N2 was counted, not delivered.
 
 Revisit (WATCH to ADOPT-AS-EXTRACT) when: (a) a release resolves PrimeKG rows to their true primary sources; (b) LEGEND decides to add a safety lookup (seizure adverse events and contraindications from FAERS and DrugCentral), a narrow use that needs only permissive rows plus a licence check on DrugCentral; or (c) the generator gains a relation type for chemical-induced expression (LINCS, CC BY) with a stated rule for reading it.
+
+## Corrections after the independent verification (IT23 P6)
+
+- **Overlap.** 1,271 of 1,412 signed pairs (90.0 percent) have any EC-KG edge; 113 of them only as text-mining PREDICTION rows, so with a non-prediction edge it is **1,158 (82.0 percent)**. The 971 / 15 / 106 and 17,068 figures count compound-node pairs, not family-target pairs. The 613-family match list is not committed, so the 1,412 denominator is not independently checkable.
+- **Sign discordances (15).** The verifier's pharmacology reading (labels and papers, not re-read in full): EC-KG is wrong on 9 (PAC-1/CASP3, regorafenib/EPHA2, dactolisib/PIK3CB and PIK3R1, BMP-2 and BMP-7 on BMPR1A/1B/2); LEGEND is the suspect on 5 (panobinostat on SIRT1, SIRT2, SIRT3 and SIRT7: DGIdb 'other' claims with unspecified scope on non-HDAC class III enzymes; idronoxil on CASP3); cyproterone/PGR is a **name-matching error** (the free alcohol was matched to cyproterone acetate, a progesterone-receptor agonist). Where the EC-KG sign comes from is not recorded per row (signs are collected from every row, prediction rows included), so "both sides have a non-prediction origin" is not established.
+- **Harm table.** `harm_signals_it23.tsv` is **incomplete by construction**: only FAERS events whose disease node is a direct WWOX neighbour are in the extract (the generic 'Seizure' term is not covered); absence is no evidence of safety. The compound-to-family map was built by name for most nodes: the join now keeps a match only when the EC-KG name equals one of the family's own compound names exactly, and records the route (this removed the citrate anion that had flagged a lithium-citrate family). 31 family-level signals, 22 compounds. For antiseizure drugs (ATC N03) the limit says the reports mainly reflect the indication.
+- The note at the end of the folder saying a producer script has no shebang is out of date.

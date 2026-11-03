@@ -12,7 +12,9 @@
   "2026-11-03: order of the two new trials decided after the gap check: the engine consumes 65 curated seed rows (Q5 3 genes, Q6 1, Q8 1) while a full WWOX organoid signature (GSE156243, thousands of genes; composition-confounded; hNPC second system failed its control) is unused, so dseqr/LINCS first with explicit scenarios (no 'reverse every change'); module discovery second, only if the narrow-seed gap persists, with seed/edge/hub sensitivity; NORDic result (WATCH: outcomes track the assumed scenario) says role uncertainty, not target count, is the dominant limit"
  ],
  "DEFAULTS_TAKEN": [],
- "STOP_LOG": [],
+ "STOP_LOG": [
+  "2026-11-03 residual: no external tool adopted; FAERS table incomplete by construction; CANDO score tables not kept (terms unread); 5 LEGEND-side sign suspects (panobinostat SIRT1/2/3/7, idronoxil CASP3) await a source check; no emerging candidate from IT23; P7 dashboard integration waits for the multilingual landing"
+ ],
  "AUTHORISED_QUEUE_20261103B": {
   "MANDATE_STATE": "OPEN",
   "OBJ_P0": {
@@ -40,8 +42,9 @@
    "steps": [
     {
      "step": "P2 relations beyond pathways: what the engine really uses; EC-KG minimal qualified extract with provenance, redundancy and novelty measured",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "relations_it23_p2: EC-KG WATCH (assets found, Apache-2.0 code, CC BY 4.0 integration + upstream terms; 82-90 percent of signed pairs already present; adds relation types: FAERS seizure reports -> carried limit on 42 rows/1 hand-over, no eligibility change; 15 sign discordances reviewed: 9 EC-KG errors, 5 LEGEND suspects, 1 matching error); module discovery WATCH (abstention: seed sets too small, hub domination, DIAMOnD fragile); dseqr REJECT (data bucket gone, author-local build paths; SigCom pass adds nothing: Jaccard 0 with LEGEND); verified independently (34 findings, 14 confirmed, 18 corrected, 2 refuted) and corrected"
     }
    ]
   },
@@ -52,7 +55,7 @@
      "step": "P3 NORDic: consequences of interventions on a small WWOX network, only if inputs are qualified; never import the '?'/binding -> inhibition conversion",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "simulation_it23_p3_20261103: NORDic WATCH (MIT code; conversion defect reproduced at lines 114/119/313; perturbation clamp encodes knockdown and drug alike; 3,072-cell Q5 run: outcomes track the assumed scenario, not the intervention; missing inputs listed)"
+     "evidence": "simulation_it23_p3_20261103: NORDic WATCH (MIT code; conversion defect reproduced at lines 114/119/313; perturbation clamp encodes knockdown and drug alike; 3,072-cell Q5 run: outcomes track the assumed scenario, not the intervention; missing inputs listed) ; verifier: drug-target aggregator step REJECT (TTD capitalisation: 45,449 of 45,453 inhibitors encoded as activation)"
     }
    ]
   },
@@ -63,7 +66,7 @@
      "step": "P4 CANDO: multi-protein profiles and alternatives for a small real compound set; compare with the current matching",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "profiles_it23_p4_20261103: CANDO WATCH (BSD-3 code; demo matrix has 11 human proteins and none of the target genes; Zenodo human CxP usable: 43 of 48 LEGEND genes, 2,168 compounds joined by DrugBank id; score = ECFP4 Dice x site confidence, no direction; no selection changed; derived score tables kept out of the public tip until the data terms are read)"
+     "evidence": "profiles_it23_p4_20261103: CANDO WATCH (BSD-3 code; demo matrix has 11 human proteins and none of the target genes; Zenodo human CxP usable: 43 of 48 LEGEND genes, 2,168 compounds joined by DrugBank id; score = ECFP4 Dice x site confidence, no direction; no selection changed; derived score tables kept out of the public tip until the data terms are read) ; verifier: the matrix cannot score any of the 16 hand-over families"
     }
    ]
   },
@@ -72,8 +75,9 @@
    "steps": [
     {
      "step": "P5 other tools only for concrete gaps (DeepPurpose, drexml, GEMGen, RDKG-115)",
-     "status": "PENDING",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "MolNexus: no licence, no checkpoint, no paper (reopen: root LICENSE + official checkpoints with checksum); DeepPurpose, drexml, GEMGen, RDKG-115, support resources: no concrete gap emerged from the trials, not installed"
     }
    ]
   },
@@ -82,8 +86,9 @@
    "steps": [
     {
      "step": "P6 attributable measurement (current / relations / simulation / profiles / combination), coverage shown, frozen predictions, independent verification, favourable and counter-evidence kept apart",
-     "status": "PENDING",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "verification_it23_20261103 (34 findings) answered; stage S5 compared with the IT22 final stage on the same 1,000 rows: only carried_limits changed; byte-identical across hash seeds after a tie-break fix"
     }
    ]
   },

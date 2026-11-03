@@ -1,0 +1,54 @@
+check	quantity	claimed	recomputed	match	source_and_method
+1	NORDic commits on main	single commit	216	NO	GitHub API commits?per_page=1, Link rel=last
+1	NORDic head commit	9db480d 2026-08-07	9db480d 2026-08-07T15:54Z	YES	GitHub API
+1	NORDic licence	MIT 2025	MIT, Copyright 2025 (2023 in earlier LICENSE versions)	YES	raw LICENSE at main, ba63a8d, c021341
+1	PyPI NORDic 2.8.1 licence field	none	None	YES	pypi.org/pypi/NORDic/json
+1	get_drug_targets.py lines 114-115, 119, 313	inhibitor-first; other non-empty to -1; TTD non-listed to +	same	YES	raw main file, 353 lines
+1	functions.py line 330 clamp	+1 to 1, -1 to 0	str(int(x>0))	YES	raw main file
+1	TTD MOA rows (current file)	not examined	45,453	n/a	P1-07-Drug-TargetMapping.xlsx (ttd.idrblab.cn, 2026-11-03), column D
+1	TTD rows encoded - by NORDic line 313	implied: inhibitor-type rows	4 (exact lowercase match); 33,650 would match case-insensitively	NO	same file; `m in decrease_expr_MOA`
+1	TTD 'Inhibitor' rows encoded +	not examined	29,740	n/a	same
+1	sim cells / seconds	3,072 / 38 s	3,072 / 38.4 s	YES	logs/sim_q5.log, sim_q5_all.tsv
+1	triple blockade, KD_RELA sign-dependent	32 of 32	32, 32	YES	sim_q5_summary.md section 4
+1	EP300i / IKKi sign-dependent	16 / 8	16 / 8 (IKKi 4 'other')	YES	same
+1	BRD4i vs EP300i separated	16 of 32, COFACTOR only	16/32; OR 0/16, COFACTOR 16/16	YES	section 5-6
+1	feedback sustained	24 of 32	24	YES	section 7
+1	Q5 BRD4 / EP300 rows	43 / 2, H_HARM	43 / 2, all CONDITIONAL_H_HARM	YES	results_p4/proposals_it21.tsv
+2	legend signed pairs found in EC-KG (any edge)	1,271 of 1,412 (90.0 %)	1,271 (from novelty.tsv); denominator not reproducible (573 families in novelty hold 1,314)	PARTLY	novelty.tsv x family_actions.tsv.gz
+2	same, with a non-prediction edge	not stated	1,158 (82.0 % of 1,412)	n/a	same, n_origins_non_prediction>0
+2	IN_LEGEND_SAME / OPPOSITE / MIXED / ECKG_UNSIGNED (node pairs)	971 / 15 / 106 / 172	971 / 15 / 106 / 172	YES	novelty.tsv status
+2	same as family-target pairs	not stated	1,056 / 15 / 128 / 181	n/a	expand legend_families x target_hgnc
+2	prediction-only within SAME / OPPOSITE	not stated / 8	23 / 8	YES (8)	n_origins_non_prediction==0
+2	NEW_PAIR_INDEPENDENT_ORIGIN	17,068 (190 compounds)	17,068 (190)	YES	novelty.tsv
+2	share LINCS or CTD	97.3 %	97.28 % (16,604) as non-prediction origins exactly within {LINCS,CTD}; 97.8 % on independent origins	YES (definition-dependent)	novelty.tsv origins_non_prediction
+2	LINCS only / CTD only / both	10,319 / 6,173 / 112	10,319 / 6,173 / 112	YES	same
+2	pairs with an activity-level sign among 17,068	536	536 strict 'activity' aspect; 12,068 under the code's stated rule (activity or activity_or_abundance); 10,327 LINCS-only	NO (definition)	novelty.tsv eckg_activity_sign, sign_levels_seen
+2	two or more independent origins	220	220	YES	solid minus COPY_PRONE
+2	extract rows / restricted rows in extract	11,417 / 0	11,417 / 0	YES	extract_ecKG_wwox.tsv vs PERMISSIVE list
+2	permissive rows in digest	0	0	YES	extract_digest_restricted.tsv
+2	duplicate assertions (one origin, two aggregators)	not stated	extract 12 keys; digest 228 duplicate hashes	n/a	key = subject|predicate|object|source|qualifiers
+2	FAERS seizure-type rows / compounds	26 compounds	41 rows, 25 compounds, 42 families	NO (26 vs 25)	extract, regex seiz|convuls|epilep
+2	FAERS rows by hood	not stated	986 of 986 are N1	n/a	extract hood
+2	harm families mis-joined	none	1 clear (citrate(3-) to LITHIUM CITRATE ANHYDROUS); 3 salt/ester or enantiomer approximations	n/a	family_meta names
+2	sign discordances	15	15	YES	novelty.tsv / sign_discordance_it23.tsv
+3	demo matrix human rows	11	11	YES	coverage_demo64.tsv organism_taxid 9606
+3	LEGEND genes in human matrix	43 of 48	43 of 48	YES	coverage.tsv
+3	join: one family / ambiguous / none	2,168 / 5 / 276	2,168 / 5 / 276	YES	identity_join.tsv
+3	distinct families, InChIKey, signed>0, name differs	2,115 / 2,073 / 847 / 189	2,115 / 2,073 / 847 / 189	YES	same
+3	hand-over families joined to CANDO	not examined	0 of 16 (sorafenib, tretinoin present under other family ids)	n/a	handoff_it21.tsv x identity_join.tsv
+3	Zenodo licence and version	bsd-3-clause, 2.3.X, 2025-10-23	same	YES	zenodo.org/api/records/17241534
+4	dseqr URLs answering 404 NoSuchBucket	7	5 of 5 re-tested (root, 3 matrices, virtual-host form)	YES	curl
+4	files with /home/alex paths	13	13 (9 + 4); about 6 are drug-matrix builders	YES (count)	git grep -l in shallow clones
+4	scenario-vs-scenario Jaccards	36 in overlap.tsv	36 of 36 identical	YES	scenarios.tsv, skeleton key
+4	MCLF rows in top 20	16-18 at fixed 4 uM, 6 h	16-18 MCLF; 14-17 at 4 uM and 6 h	PARTLY	scenarios.tsv library_best, dose_best, time_best
+4	landmark genes measured	54 of 834 (6.5 %)	54 of 834 (6.47 %)	YES	run_facts.json
+5	module new STRING targets with or without signed action	3 / 45	3 / 42 (45 new in total)	NO	new_targets.tsv
+5	licences DIAMOnD, ROBUST x2, Drugst.One client, pipeline	MIT, GPL-3.0, GPL-3.0, MIT, MIT	same	YES	GitHub API spdx
+6	MolNexus licence / commits / releases / checkpoints	none / 3 / none / none	null / 3 / [] / no .pt, .pth or .ckpt in 175-entry tree	YES	GitHub API
+6	MolNexus demo size	about 190 MB	154,479,397 B	NO	tree sizes under demo/
+7	proposals rows P4 / S5	1,000 / 1,000	1,000 / 1,000	YES	results_*/proposals_it21.tsv
+7	proposal rows changed	42 (harm families)	42, only carried_limits; FAERS clause removed gives the old string	YES	row diff
+7	status / eligibility / blocker distributions	unchanged	unchanged	YES	status, chain_status, status_class, handoff_eligible, handoff_blocker
+7	summary, clusters, carried decisions	unchanged	byte-identical	YES	cmp
+7	handoff rows changed	1 (Tretinoin)	4: Tretinoin limit plus 3 direct_acting_hits_same_set (hash-seed nondeterminism)	NO	row diff; reruns with PYTHONHASHSEED 1 and 2
+7	--no-v1 byte identity	unchanged	46 tests OK incl. byte-identity test	YES	test_attribution_it21.py with LEGEND_CATALOG_CACHE

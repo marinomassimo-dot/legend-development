@@ -99,3 +99,7 @@ systemd-run --user --scope -p MemoryMax=4G -p MemorySwapMax=0 \
 ```
 
 Limits stated plainly: the CANDO papers and DrugBank, PDB and COACH terms were not read; COACH ligand lists were not inspected (the ion and cofactor claim comes from the neighbours the script prints); the website matrix was compared with the Zenodo copy by size and the first 3 MB only; no signature was generated for absent compounds.
+
+## Corrections after the independent verification (IT23 P6)
+
+"The comparison changed no selection" is true only because the matrix cannot score any of the 16 hand-over families (14 are not DrugBank-approved and absent; 2 sit under unmerged identities): the producer never tested this against the hand-over. Read it as: the matrix cannot change the selection. The derived score tables (`comparison.tsv`, `profile_similarity.tsv`, `sign_sensitivity.tsv`, `recovery.tsv`) are not kept in git: the terms of the matrix data were not read; the recipe (`cando_profiles_it23_p4.py`) reproduces them.

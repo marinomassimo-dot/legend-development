@@ -762,7 +762,7 @@ def cmd_propose(a):
         hs = harm.get(p["family_id"])
         p["harm_signal_faers_seizure"] = "yes" if hs else ""
         if hs:                                       # a counter-evidence limit for a seizure disorder, never a verdict: reports are associations and may reflect the indication
-            p["carried_limits"] = " | ".join(([p["carried_limits"]] if p["carried_limits"] else []) + [f"FAERS_SEIZURE_REPORTS: spontaneous reports of {hs['events']} (association, not causation; confounded by indication; absence would not mean safety)"])
+            p["carried_limits"] = " | ".join(([p["carried_limits"]] if p["carried_limits"] else []) + [f"FAERS_SEIZURE_REPORTS: spontaneous reports of {hs['events']} (association, not causation; " + ("an antiseizure drug (ATC N03): the reports mainly reflect its indication; " if any(c_.startswith("N03") for c_ in atc_of.get(p["family_id"], ())) else "confounded by indication; ") + f"{hs['completeness']}; absence would not mean safety)"])
         cf = [r_["note"] for r_ in conflicts if base_name(r_["compound"]) == base_name(p["compound"]) and (not r_["main_target"] or r_["main_target"] == p["main_target"])]
         if cf:                                       # IT22 P8-fix F07: two sources disagree about a measured value; the disagreement stays visible
             p["carried_limits"] = " | ".join(([p["carried_limits"]] if p["carried_limits"] else []) + ["SOURCE_CONFLICT: " + x for x in cf])
@@ -787,7 +787,7 @@ def cmd_propose(a):
     for (sset, arm_, fid_), d_ in disp.items():
         if arm_ == "direct_search" and meta.get(fid_, {}).get("modality") == "small_molecule" and (phase_of.get(fid_, -1) >= 3 or earlier_state(d_["name"], decisions)):
             direct_hits.setdefault(sset, []).append((d_["name"], phase_of.get(fid_, -1)))
-    direct_hits = {k: "; ".join(f"{n} (phase {ph:g})" for n, ph in sorted(set(v), key=lambda x: -x[1])[:6]) + " - diagnostic only: acts on the seed gene itself, not through the chain" for k, v in direct_hits.items()}
+    direct_hits = {k: "; ".join(f"{n} (phase {ph:g})" for n, ph in sorted(set(v), key=lambda x: (-x[1], x[0]))[:6]) + " - diagnostic only: acts on the seed gene itself, not through the chain" for k, v in direct_hits.items()}
     handoff = []
     for p in sorted(handed, key=lambda p: (p["question"], p["hypothesis"], -float(p["zmin"]))):
         q, hyp, role = p["question"], p["hypothesis"], roles[p["question"]]

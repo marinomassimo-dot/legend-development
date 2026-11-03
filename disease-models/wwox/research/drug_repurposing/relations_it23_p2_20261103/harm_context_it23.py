@@ -29,10 +29,17 @@ def rd(p):
 
 def main():
     nov = rd(HERE / "novelty.tsv")
+    props = rd(DR / "generation_it22_p1_20261103/results_p4/proposals_it21.tsv")
+    norm = lambda s: re.sub(r"[^a-z0-9]+", "", (s or "").lower())
+    fam_names = {}
+    for r in props:
+        fam_names.setdefault(r["family_id"], set()).update({norm(r["compound"]), norm(r["base_name"])})
     fams = {}
     for r in nov:
         for f in (r["legend_families"] or "").split(";"):
-            if f:
+            # IT23 P6 verifier F16: the family map of novelty.tsv was built by name for most nodes; keep a join only when the EC-KG name equals one of the family's own compound names exactly
+            # (an ion or a counter-ion node such as 'citrate(3-)' no longer reaches a lithium-citrate family), and record the route
+            if f and norm(r["compound_name"]) in fam_names.get(f, ()):
                 fams.setdefault(r["compound_id"], set()).add(f)
     ext = rd(HERE / "extract_ecKG_wwox.tsv")
     out = {}
@@ -40,13 +47,14 @@ def main():
         if r["predicate"] != "biolink:has_adverse_event" or r["primary_knowledge_source"] != "infores:faers" or not SEIZURE.search(r["object_name"]):
             continue
         for f in fams.get(r["subject"], ()):
-            e = out.setdefault((f, r["subject"]), dict(family_id=f, compound_id=r["subject"], compound_name=r["subject_name"], events=set(), source="infores:faers", licence=r["source_licence_stated"] or "CC0 (FAERS, via EC-KG CC BY 4.0)"))
+            e = out.setdefault((f, r["subject"]), dict(family_id=f, compound_id=r["subject"], compound_name=r["subject_name"], events=set(), match_route="exact normalised name (EC-KG nodes expose no ChEMBL cross-reference)", source="infores:faers", licence=r["source_licence_stated"] or "CC0 (FAERS, via EC-KG CC BY 4.0)"))
             e["events"].add(r["object_name"])
     rows = [dict(e, events="; ".join(sorted(e["events"])), n_events=len(e["events"]),
+                 completeness="INCOMPLETE BY CONSTRUCTION: only events whose disease node is a direct WWOX neighbour in the extract; the generic 'Seizure' term is not covered",
                  reading="spontaneous reports: an association with a confounded denominator, not a safety verdict; absence is not evidence of safety") for e in out.values()]
     rows.sort(key=lambda x: (x["compound_name"].lower(), x["family_id"]))
     with open(HERE / "harm_signals_it23.tsv", "w", encoding="utf-8", newline="") as fh:
-        w = csv.DictWriter(fh, fieldnames=["family_id", "compound_id", "compound_name", "n_events", "events", "source", "licence", "reading"], delimiter="\t", lineterminator="\n")
+        w = csv.DictWriter(fh, fieldnames=["family_id", "compound_id", "compound_name", "n_events", "events", "match_route", "completeness", "source", "licence", "reading"], delimiter="\t", lineterminator="\n")
         w.writeheader()
         w.writerows(rows)
     act = {}

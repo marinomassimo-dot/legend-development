@@ -1,0 +1,5 @@
+file	bytes	sha256	why_not_kept
+comparison.tsv	107285	13109dd7969b58453faf79f62877c6245e410dc4557a9a79560284854d607de2	derived from CANDO matrix scores; the data terms of the matrix were not read; reproduce with cando_profiles_it23_p4.py
+profile_similarity.tsv	1321	3875fba49ca3a2997f3f144f97e5a227acfa7efca63569664d3ef0de095e2da1	derived from CANDO matrix scores; the data terms of the matrix were not read; reproduce with cando_profiles_it23_p4.py
+sign_sensitivity.tsv	4177	e6caacf278929792db7cc521fbce7ebd40b4bbe510ec8d45f917c7dc1a2a94ca	derived from CANDO matrix scores; the data terms of the matrix were not read; reproduce with cando_profiles_it23_p4.py
+recovery.tsv	1438	0d59800c6db850e54197bee943a7cb6549b221615a7cfc5bc80946f5e184e732	derived from CANDO matrix scores; the data terms of the matrix were not read; reproduce with cando_profiles_it23_p4.py

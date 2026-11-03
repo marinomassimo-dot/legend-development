@@ -64,7 +64,7 @@ Note: the engine's proposal table (`results_p1/proposals_it21.tsv`) holds main t
 | Q3 | DIAMOnD | 10 | 0 | 17 | 31 | 2 (EIF2AK3, 2 families; HSP90B1, 3 families) |
 
    For Q2 the lists are the glycolysis paralogues and neighbours of the seeds (GPI, TPI1, ALDOB, PGAM2, ENO2...): the seed set already is a pathway, so the module is the pathway again, with no regulator. For Q3 the DIAMOnD list adds 40 non-neighbour proteins of the ER stress and ER-associated degradation machinery (ERN1, DNAJB9, HYOU1, PDIA4, SEL1L, VCP...); the sign of the interferon-stress-response seeds is unresolved (guard tag `ISR_SIGN_UNRESOLVED`), so no direction attaches to any of them.
-   Across both sets, all methods, STRING: 3 distinct new targets have a signed, documented catalogue action (SLC7A5, EIF2AK3, HSP90B1); 45 do not. The LEGEND network adds 16 more signed-action targets (e.g. IRAK4 15 families, CXCR1 9, PTGES 8, TNF 15, IL6 8), but that network is the engine's own and the additions are the hub artefact in finding 3, so they are not counted as evidence.
+   Across both sets, all methods, STRING: 3 distinct new targets have a signed, documented catalogue action (SLC7A5, EIF2AK3, HSP90B1); of 45 distinct new STRING targets, 42 have none. The LEGEND network adds 16 more signed-action targets (e.g. IRAK4 15 families, CXCR1 9, PTGES 8, TNF 15, IL6 8), but that network is the engine's own and the additions are the hub artefact in finding 3, so they are not counted as evidence.
 5. **Overlap with the engine.** Q2: STRING lists contain at most 1 of the 11 engine main targets (EGLN2, HIF1A, HDAC5 and others sit outside the glycolysis neighbourhood). Q4 (6 genes, below threshold): 0-1 of 7. The unsigned module lists and the signed engine look at different things; the overlap is about zero.
 
 ## Verdict on seed size and the abstention
@@ -84,3 +84,7 @@ Q4, Q5, Q6, Q7, Q8 and Q1 do not qualify. Do not enlarge them by adding genes wi
 ## Files
 
 `pipeline_audit.tsv`, `sensitivity.tsv`, `new_targets.tsv`, `run_facts.json`, `reproduce_module_probe.py` (run: `python3 -I reproduce_module_probe.py --string-dir DIR` with the two STRING files `9606.protein.links.v12.0.txt.gz` and `9606.protein.info.v12.0.txt.gz`; downloads were not stored in the repository).
+
+## Corrections after the independent verification (IT23 P6)
+
+Q3 is the ISR/ER-stress set (ATF5, CHAC1, TRIB3, ...), not an interferon-stress set. The Drugst.One python client sends the gene list to `api.drugst.one` and turns off TLS certificate checking: a further reason not to adopt its drug step. Abstaining is the right reading of the sensitivity table.

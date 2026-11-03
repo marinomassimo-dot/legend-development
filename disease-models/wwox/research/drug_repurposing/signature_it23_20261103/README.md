@@ -79,3 +79,7 @@ Cannot: say anything about WWOX specificity, composition (the class is crude), b
 `dseqr_code_audit.tsv`, `assets.tsv`, `scenarios.tsv` (180 rows: 9 scenarios x top 20, with cell line, tissue, dose, time, library, identity, catalogue and LEGEND membership), `overlap.tsv`, `composition_class.tsv` (per-gene class assignment and coverage flags), `legend_compounds_in_returned_depth.tsv`, `run_facts.json` (coverage, counts, response digests), `reproduce_dseqr_cmap_comparison.py`.
 
 Reproduce: `python3 -I reproduce_dseqr_cmap_comparison.py run <repo_root> <geo_files_dir> <scratch_dir> <out_dir>` (live) or `analyse` (offline from stored responses; the raw service responses stay in scratch and are identified by sha256 in `run_facts.json`). Standard library only.
+
+## Corrections after the independent verification (IT23 P6)
+
+13 files hard-code `/home/alex`, of which about 6 build the drug matrices (five are version converters and one is a single-cell reference script). The top-20 lists hold 16-18 MCLF-library signatures, of which 14-17 at 4 uM and 6 h. The bucket returns 404 NoSuchBucket on 5 of 5 URLs re-checked. All 36 scenario Jaccards recompute exactly.
