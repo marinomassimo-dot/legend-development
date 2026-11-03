@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-03T14:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "unavailable",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-03T14:40:00Z",
+ "event_id": "FTR-20261103-32049046-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Open article (Cancer Cell 2020, T-ALL cells, patient-derived xenografts). NOT WWOX EVIDENCE. Read: abstract, the results section 'AURKB inhibition destabilizes MYC' in full, and the AZD1152 / FBXW7 / N-MYC passages found by keyword search; the other sections, STAR methods and supplement not read.",
+  "locator L11 (Results), verbatim: \"indicating a specific regulation of (c-)MYC, but not N-MYC, by Aurora B kinase.\"",
+  "locator L12 (Results), verbatim: \"Pharmacologic targeting of AURKB by AZD1152, which specifically suppresses AURKB autophosphorylation (Figure S1C), diminished MYC expression as well in multiple T-ALL cells\"",
+  "locator L13 (Results), verbatim: \"In contrast, Jurkat and PEER cells were resistant to AZD1152 associated with unchanged MYC abundance\"",
+  "locator L14 (Results), verbatim: \"These data suggest that decrease in MYC expression is required for T-ALL cells to respond to AZD1152 and expression of functional FBXW7 predicts anti-T-ALL efficacy.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch2/README.md",
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch2/qualification_it22_p4_batch2.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI PMC efetch XML for PMC7321798, rendered to text, 2026-11-03; bytes not saved to the repository",
+ "study_id": {
+  "doi": "10.1016/j.ccell.2020.01.001",
+  "pmid": "32049046"
+ },
+ "workflow": "IT22 P4 batch2 qualification (qualification_it22_p4_20261103/batch2), question-driven: Which inhibitor, cell types and MYC family member does the AURKB -> MYC edge reference establish, and is the effect general? Prepared as a JSON file for the integrator; was not appended by the preparing actor. The served text was not snapshotted to files/, so locator text cannot be machine-matched against a local artefact; the quotes were matched against the text as served at preparation time."
+}

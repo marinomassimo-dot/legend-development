@@ -1,0 +1,84 @@
+compound	target	measure_type	relation	value_nM	assay_type	document	pmid_of_document	assay_description
+AT-13148	Beta-adrenergic receptor kinase 1	Kd	=	170.0	B	CHEMBL3991601	29191878	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess residual binding of ~300 proteins
+AT-13148	MAP kinase-activated protein kinase 2	Kd	>	30000.0	B	CHEMBL3991601	29191878	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess residual binding of ~300 proteins
+AT-13148	MAP kinase-activated protein kinase 5	Kd	>	30000.0	B	CHEMBL3991601	29191878	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess residual binding of ~300 proteins
+AT-13148	Protein kinase C delta type	Kd	=	44.0	B	CHEMBL3991601	29191878	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess residual binding of ~300 proteins
+AT-13148	RAC-alpha serine/threonine-protein kinase	IC50	=	38.0	B	CHEMBL4020778	28506751	Inhibition of recombinant full length human His-tagged AKT1 expressed in baculovirus expression system using ser/thr 6 as substrate after 1 
+AT-13148	RAC-alpha serine/threonine-protein kinase	IC50	=	38.0	B	CHEMBL5257016	(not resolved)	Inhibition of AKT1 (unknown origin)
+AT-13148	RAC-alpha serine/threonine-protein kinase	IC50	=	38.0	B	CHEMBL5346869	(not resolved)	Inhibition of PKBalpha (unknown origin)
+AT-13148	RAC-alpha serine/threonine-protein kinase	Kd	>	30000.0	B	CHEMBL3991601	29191878	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess residual binding of ~300 proteins
+AT-13148	RAC-beta serine/threonine-protein kinase	IC50	=	402.0	B	CHEMBL4020778	28506751	Inhibition of recombinant human full length His-tagged AKT2 expressed in baculovirus expression system using ser/thr 6 as substrate after 1 
+AT-13148	RAC-beta serine/threonine-protein kinase	IC50	=	402.0	B	CHEMBL5257016	(not resolved)	Inhibition of AKT2 (unknown origin)
+AT-13148	RAC-beta serine/threonine-protein kinase	IC50	=	402.0	B	CHEMBL5346869	(not resolved)	Inhibition of PKBbeta (unknown origin)
+AT-13148	RAC-beta serine/threonine-protein kinase	Kd	>	30000.0	B	CHEMBL3991601	29191878	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess residual binding of ~300 proteins
+AT-13148	RAC-gamma serine/threonine-protein kinase	IC50	=	50.0	B	CHEMBL4020778	28506751	Inhibition of recombinant human full length His-tagged AKT3 expressed in baculovirus expression system using ser/thr 6 as substrate after 1 
+AT-13148	RAC-gamma serine/threonine-protein kinase	IC50	=	50.0	B	CHEMBL5257016	(not resolved)	Inhibition of AKT3 (unknown origin)
+AT-13148	RAC-gamma serine/threonine-protein kinase	IC50	=	50.0	B	CHEMBL5346869	(not resolved)	Inhibition of PKBgamma (unknown origin)
+AT-13148	RAC-gamma serine/threonine-protein kinase	Kd	>	30000.0	B	CHEMBL3991601	29191878	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess residual binding of ~300 proteins
+AT-13148	Rho-associated protein kinase 1	IC50	<	10.0	B	CHEMBL5257016	(not resolved)	Inhibition of ROCK1 (unknown origin)
+AT-13148	Rho-associated protein kinase 1	Kd	=	27.0	B	CHEMBL3991601	29191878	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess residual binding of ~300 proteins
+AT-13148	Rho-associated protein kinase 2	IC50	<	10.0	B	CHEMBL3880434	(patent compilation 2013, no PMID)	Inhibition of human ROCK2 using KEAKEKRQEQIAKRRRLSSLRASTSKSGGSQK substrate and [gamma-33P-ATP] incubated for 40 mins by scintillation counti
+AT-13148	Rho-associated protein kinase 2	IC50	<	10.0	B	CHEMBL5257016	(not resolved)	Inhibition of ROCK2 (unknown origin)
+AT-13148	Rho-associated protein kinase 2	Kd	=	26.0	B	CHEMBL3991601	29191878	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess residual binding of ~300 proteins
+AT-13148	Ribosomal protein S6 kinase	IC50	=	12.0	B	CHEMBL3880434	(patent compilation 2013, no PMID)	Inhibition of N-terminal His-tagged full-length human recombinant p70S6K expressed in Spodoptera frugiperda insect cells using AKRRRLSSLRA s
+AT-13148	Ribosomal protein S6 kinase alpha-1	IC50	=	85.0	B	CHEMBL5257016	(not resolved)	Inhibition of RSK1 (unknown origin)
+AT-13148	Ribosomal protein S6 kinase alpha-1	Kd	>	30000.0	B	CHEMBL3991601	29191878	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess residual binding of ~300 proteins
+AT-13148	Ribosomal protein S6 kinase alpha-3	Kd	>	30000.0	B	CHEMBL3991601	29191878	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess residual binding of ~300 proteins
+AT-13148	Ribosomal protein S6 kinase alpha-4	Kd	>	30000.0	B	CHEMBL3991601	29191878	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess residual binding of ~300 proteins
+AT-13148	Ribosomal protein S6 kinase alpha-5	Kd	>	30000.0	B	CHEMBL3991601	29191878	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess residual binding of ~300 proteins
+AT-13148	Ribosomal protein S6 kinase alpha-6	Kd	>	30000.0	B	CHEMBL3991601	29191878	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess residual binding of ~300 proteins
+AT-13148	Ribosomal protein S6 kinase beta-1	Kd	>	30000.0	B	CHEMBL3991601	29191878	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess residual binding of ~300 proteins
+AT-13148	Serine/threonine-protein kinase AKT	IC50	=	10.0	B	CHEMBL3880434	(patent compilation 2013, no PMID)	Inhibition of PKB-PIF (unknown origin) using AKTide-2T peptide substrate and [gamma33P]-ATP incubated for 20 mins by scintillation counting 
+AT-13148	Serine/threonine-protein kinase AKT	IC50	=	1100.0	B	CHEMBL3880434	(patent compilation 2013, no PMID)	Inhibition of PKB in human U87MG cells assessed as reduction in Gsk3beta Ser9 phosphorylation incubated for 1 hr by time-resolved fluorescen
+AT-13148	Serine/threonine-protein kinase LATS1	Kd	=	27.0	B	CHEMBL3991601	29191878	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess residual binding of ~300 proteins
+AT-13148	Serine/threonine-protein kinase N1	Kd	=	25.0	B	CHEMBL3991601	29191878	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess residual binding of ~300 proteins
+AT-13148	Serine/threonine-protein kinase N2	Kd	=	9.0	B	CHEMBL3991601	29191878	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess residual binding of ~300 proteins
+AT-13148	Serine/threonine-protein kinase NLK	Kd	>	30000.0	B	CHEMBL3991601	29191878	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess residual binding of ~300 proteins
+AT-13148	Serine/threonine-protein kinase Nek1	Kd	>	30000.0	B	CHEMBL3991601	29191878	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess residual binding of ~300 proteins
+AT-13148	Serine/threonine-protein kinase Nek2	Kd	>	30000.0	B	CHEMBL3991601	29191878	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess residual binding of ~300 proteins
+AT-13148	Serine/threonine-protein kinase Nek3	Kd	>	30000.0	B	CHEMBL3991601	29191878	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess residual binding of ~300 proteins
+AT-13148	Serine/threonine-protein kinase Nek9	Kd	>	30000.0	B	CHEMBL3991601	29191878	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess residual binding of ~300 proteins
+AT-13148	Serine/threonine-protein kinase Sgk3	IC50	=	50.0	B	CHEMBL5257016	(not resolved)	Inhibition of SGK3 (unknown origin)
+AT-13148	cAMP-dependent protein kinase (PKA)	IC50	<	10.0	B	CHEMBL5257016	(not resolved)	Inhibition of PKA (unknown origin)
+AT-13148	cAMP-dependent protein kinase catalytic subunit alpha	IC50	<	10.0	B	CHEMBL4020778	28506751	Inhibition of recombinant human His-tagged PKA catalytic domain (1 to 351 residues) expressed in Escherichia coli using Ser/Thr 7 as substra
+AT-13148	cAMP-dependent protein kinase catalytic subunit alpha	Kd	=	15.0	B	CHEMBL3991601	29191878	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess residual binding of ~300 proteins
+AT-13148	cAMP-dependent protein kinase catalytic subunit beta	Kd	=	14.0	B	CHEMBL3991601	29191878	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess residual binding of ~300 proteins
+AT-13148	cAMP-dependent protein kinase type II-alpha regulatory subunit	Kd	>	30000.0	B	CHEMBL3991601	29191878	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess residual binding of ~300 proteins
+desidustat	Aspartyl/asparaginyl beta-hydroxylase	IC50	=	9900.0	B	CHEMBL6115055	40263713	Inhibition of AspH (unknown origin)
+desidustat	Bifunctional peptidase and arginyl-hydroxylase JMJD5	IC50	=	48300.0	B	CHEMBL6115055	40263713	Inhibition of JMJD5 (unknown origin)
+desidustat	Egl nine homolog 1	IC50	=	1300.0	B	CHEMBL6115055	40263713	Inhibition of PHD2 (unknown origin)
+desidustat	Gamma-butyrobetaine dioxygenase	IC50	=	420.0	B	CHEMBL6115055	40263713	Inhibition of full-length recombinant human BBOX using GBB/2-OG as substrate preincubated for 15 mins followed by substrate addition measure
+desidustat	Lysine-specific demethylase 4A	IC50	>	100000.0	B	CHEMBL6115055	40263713	Inhibition of KDM4A (unknown origin)
+desidustat	Unchecked	IC50	=	21700.0	B	CHEMBL6115055	40263713	Inhibition of FIH (unknown origin)
+pracinostat	Histone deacetylase	IC50	=	126.0	B	CHEMBL2440014	(not resolved)	Inhibition of HDAC in human HeLa cell nuclear extracts using Fluor de Lys as substrate by fluorescence assay
+pracinostat	Histone deacetylase 1	IC50	=	50.0	B	CHEMBL4706478	29360358	Inhibition of full length recombinant human C-terminal FLAG/His-tagged HDAC1 (1 to 482 end residues) expressed in baculovirus infected Sf9 c
+pracinostat	Histone deacetylase 1	Ki	=	16.0	B	CHEMBL3390834	(no PMID; Medchemcomm 2012 doi 10.1039/C1MD00199J)	Inhibition of recombinant human HDAC-1 expressed in baculovirus infected insect Sf9 cells using Fluor de Lys as substrate preincubated for 2
+pracinostat	Histone deacetylase 1	Ki	=	28.0	B	CHEMBL3596180	25637120	Inhibition of human HDAC1
+pracinostat	Histone deacetylase 11	IC50	>	10000.0	B	CHEMBL4706478	29360358	Inhibition of human full length HDAC11 expressed in baculovirus infected Sf9 cells using fluorogenic HDAC class2a as substrate measured afte
+pracinostat	Histone deacetylase 11	Ki	=	43.0	B	CHEMBL3596180	25637120	Inhibition of human HDAC11
+pracinostat	Histone deacetylase 2	IC50	=	290.0	B	CHEMBL4706478	29360358	Inhibition of HDAC2 (unknown origin) using fluorogenic HDAC substrate 3 incubated for 30 mins by fluorescence based assay
+pracinostat	Histone deacetylase 2	Ki	=	16.0	B	CHEMBL3390834	(no PMID; Medchemcomm 2012 doi 10.1039/C1MD00199J)	Inhibition of recombinant human HDAC-2 expressed in baculovirus infected insect Sf9 cells using Fluor de Lys as substrate preincubated for 2
+pracinostat	Histone deacetylase 2	Ki	=	27.0	B	CHEMBL3596180	25637120	Inhibition of human HDAC2
+pracinostat	Histone deacetylase 3	Ki	=	19.0	B	CHEMBL3596180	25637120	Inhibition of human HDAC3
+pracinostat	Histone deacetylase 3/Nuclear receptor corepressor 2 (HDAC3/NCoR2)	IC50	=	70.0	B	CHEMBL4706478	29360358	Inhibition of recombinant human C-terminal His-tagged HDAC3 (1 to 428 end residues)/N-terminal GST-tagged recombinant human NCoR2 (395 to 48
+pracinostat	Histone deacetylase 4	IC50	>	10000.0	B	CHEMBL4706478	29360358	Inhibition of recombinant human N-terminal GST-tagged and C-terminal His-tagged HDAC4 (627 to 1084 end residues) expressed in baculovirus in
+pracinostat	Histone deacetylase 4	Ki	=	16.0	B	CHEMBL3596180	25637120	Inhibition of human HDAC4
+pracinostat	Histone deacetylase 5	IC50	=	5113.0	B	CHEMBL4706478	29360358	Inhibition of HDAC5 (unknown origin) using fluorogenic HDAC class2a as substrate measured after 30 mins by fluorescence based assay
+pracinostat	Histone deacetylase 5	Ki	=	21.0	B	CHEMBL3596180	25637120	Inhibition of human HDAC5
+pracinostat	Histone deacetylase 7	IC50	>	10000.0	B	CHEMBL4706478	29360358	Inhibition of N-terminal GST-tagged human HDAC7 (518 to end residues) expressed in baculovirus infected Sf9 cells using fluorogenic HDAC cla
+pracinostat	Histone deacetylase 7	Ki	=	107.0	B	CHEMBL3596180	25637120	Inhibition of human HDAC7
+pracinostat	Histone deacetylase 8	IC50	=	140.0	B	CHEMBL4609972	(not resolved)	Inhibition of HDAC8 (unknown origin)
+pracinostat	Histone deacetylase 8	IC50	=	2835.0	B	CHEMBL4706478	29360358	Inhibition of recombinant human full length C-terminal His-tagged HDAC8 expressed in baculovirus infected Sf9 cells using fluorogenic HDAC c
+pracinostat	Histone deacetylase 8	Ki	=	16.0	B	CHEMBL3390834	(no PMID; Medchemcomm 2012 doi 10.1039/C1MD00199J)	Inhibition of recombinant human HDAC-8 expressed in HEK293-F cells using Fluor de Lys as substrate preincubated for 2 hrs followed by substr
+pracinostat	Histone deacetylase 8	Ki	=	48.0	B	CHEMBL3596180	25637120	Inhibition of human HDAC8
+pracinostat	Histone deacetylase 9	IC50	>	10000.0	B	CHEMBL4706478	29360358	Inhibition of C-terminal His-tagged human HDAC9 (604 to 1066 residues) expressed in baculovirus infected Sf9 cells using fluorogenic HDAC cl
+pracinostat	Histone deacetylase 9	Ki	=	24.0	B	CHEMBL3596180	25637120	Inhibition of human HDAC9
+pracinostat	Polyamine deacetylase HDAC10	IC50	=	82.0	B	CHEMBL4706478	29360358	Inhibition of N-terminal FLAG-tagged human HDAC10 (2 to 631 residues) expressed in baculovirus infected Sf9 cells using fluorogenic HDAC sub
+pracinostat	Polyamine deacetylase HDAC10	IC50	=	1584.89	B	CHEMBL4385610	(not resolved)	Inhibition of tubastatin-Alexa647-tracer binding to recombinant GST-tagged HDAC10 (unknown origin) measured after 1 hr by TR-FRET assay
+pracinostat	Polyamine deacetylase HDAC10	IC50	=	3162.28	B	CHEMBL4385610	(not resolved)	Inhibition of dye-labeled tracer binding to HDAC10 (unknown origin) transfected in human HeLa cells measured after 2 hrs by nano-luciferase 
+pracinostat	Polyamine deacetylase HDAC10	Ki	=	23.0	B	CHEMBL3596180	25637120	Inhibition of human HDAC10
+pracinostat	Protein deacetylase HDAC6	IC50	=	93.0	B	CHEMBL4706478	29360358	Inhibition of recombinant human N-terminal GST-tagged HDAC6 expressed in baculovirus infected Sf9 cells using fluorogenic HDAC substrate 3 m
+pracinostat	Protein deacetylase HDAC6	IC50	=	186.1	B	CHEMBL4808148	(not resolved)	Determination of IC50 values for inhibition of enzymatic assay of human HDAC6 with custom peptide substrate
+pracinostat	Protein deacetylase HDAC6	IC50	=	334.0	B	CHEMBL4808148	(not resolved)	Determination of IC50 values for inhibition of enzymatic assay of human HDAC6 with custom peptide substrate
+pracinostat	Protein deacetylase HDAC6	Ki	=	247.0	B	CHEMBL3596180	25637120	Inhibition of human HDAC6
+rineterkib	Mitogen-activated protein kinase 1	IC50	=	0.0261	B	CHEMBL3886495	(patent US-9242996-B2, no PMID)	ERK2 (20 pM) Kinase Assay: Compound potency against activated ERK2 was determined using a kinase assay that measures ERK2-catalyzed phosphor

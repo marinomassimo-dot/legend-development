@@ -7,7 +7,8 @@ Stages (each a `propose` run of the same code at a different state; the engine o
   S0  IT21 as published (diagnosis_it21_v1_20261103/results_v1)                   H8 unscoped, pooled-median attribution, IT9 P1 inputs
   S1  + P1 scoped decisions (results_p1)                                           attribution still the IT21 one
   S2  + P2 typed pharmacology (results_p2b)                                        the three-effect stage 2 (results_p2 is the same code before the affinity-type fallback, kept for the record)
-  S3  + P3 inputs (results_p3)                                                     Q8 seed set, seed guards consumed, hand-over order
+  S3  + P3 inputs (results_p3)                                                     Q8 seed set, seed guards consumed, hand-over order (the stage the reverse test analysed)
+  S4  + the general fixes the reverse test supported (results_p4)                  second-system annotation by deposit, route class, co-potent targets, direct hits beside the hand-over
 Units: ROW = one seed-specific (compound-record, question, arm) line; FAMILY = chemical family id; COMPOUND = base name (salt/case folded); CLUSTER = (question, hypothesis, main target);
 HAND-OVER = a row chosen for qualification (one per cluster, three per question and hypothesis). Rows are not hypotheses and families are not compounds.
 """
@@ -20,7 +21,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 DR = HERE.parent
-STAGES = [("S0_IT21", DR / "diagnosis_it21_v1_20261103" / "results_v1"), ("S1_P1", HERE / "results_p1"), ("S2_P1_P2", HERE / "results_p2b"), ("S3_P1_P2_P3", HERE / "results_p3")]
+STAGES = [("S0_IT21", DR / "diagnosis_it21_v1_20261103" / "results_v1"), ("S1_P1", HERE / "results_p1"), ("S2_P1_P2", HERE / "results_p2b"), ("S3_P1_P2_P3", HERE / "results_p3"), ("S4_reverse_test_fixes", HERE / "results_p4")]
 
 
 def rd(p):
@@ -38,6 +39,13 @@ def stage(d):
                 by_question_rows=dict(collections.Counter(r["question"] for r in P)), by_question_handover=dict(collections.Counter(r["question"] for r in H)),
                 seed_support_limited_rows=sum(1 for r in P if r.get("seed_support_limited") == "yes"), work_done_rows=sum(1 for r in P if r.get("cluster_work_done") == "yes"),
                 rows_with_carried_limits=sum(1 for r in P if r.get("carried_limits")), attribution_states=dict(collections.Counter(r.get("attribution_state", "") for r in P))), P, H
+
+
+def arm_counts():
+    """Seed rows placed in the engine sets with and without the rows that rest on the GSE126075 shWWOX library (adapter counts of the two input folders)."""
+    a = json.loads((HERE / "inputs_it22" / "seeds_p1" / "adapter_counts.json").read_text())["per_question"]
+    b = json.loads((HERE / "inputs_it22_hnpc_arm" / "seeds_p1" / "adapter_counts.json").read_text())["per_question"]
+    return {q: dict(placed_main=a.get(q, {}).get("rows_placed", 0), placed_without_that_library=b.get(q, {}).get("rows_placed", 0)) for q in ("Q2", "Q3", "Q4", "Q5", "Q6", "Q7", "Q8")}
 
 
 def main():
@@ -65,12 +73,12 @@ def main():
     for T in (300.0, 1000.0, 3000.0):          # technical choice: where a comparable pair with a measured main target stops being a 'secondary activity' and becomes WEAK
         sens[f"WEAK_if_main_target_above_{T:g}nM"] = sum(1 for r in P2 if r.get("attribution_state") in ("SECONDARY_ACTIVITY_MEASURED", "WEAK_ATTRIBUTION") and r.get("attribution_main_nm") and float(r["attribution_main_nm"]) > T)
     out["sensitivity_attribution_threshold_rows_at_stage_S2"] = sens
-    P3 = tabs["S3_P1_P2_P3"][0]
+    P3 = tabs["S4_reverse_test_fixes"][0]
     out["q2_q3_dependence_on_the_failed_second_system"] = dict(
         q2_rows=sum(1 for r in P3 if r["question"] == "Q2"), q2_rows_limited=sum(1 for r in P3 if r["question"] == "Q2" and r.get("seed_support_limited") == "yes"),
         q3_rows=sum(1 for r in P3 if r["question"] == "Q3"), q3_rows_limited=sum(1 for r in P3 if r["question"] == "Q3" and r.get("seed_support_limited") == "yes"),
         q4_rows_npy_contested=sum(1 for r in P3 if r["question"] == "Q4" and "NPY_SIGN_CONTESTED" in (r.get("seed_guards") or "")),
-        hnpc_excluded_arm="seed sets: Q2 has no gene seed left (all 8 placed rows are hNPC-supported), Q3 keeps 1 of 6; engine re-run of Q3 gives 0 seed-specific rows (eng_arm)")
+        hnpc_excluded_arm=arm_counts())
     (HERE / "measures_it22.json").write_text(json.dumps(out, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps({k: {x: v for x, v in out[k].items() if x in ("rows", "families", "compounds", "clusters", "eligible_rows", "eligible_clusters", "handover_rows", "handover_compounds")} for k, _ in STAGES}, indent=1))
     print(json.dumps(out["deltas"], indent=1))

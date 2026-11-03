@@ -1,5 +1,5 @@
 {
- "p1_seeds_sha256": "a17bbc5f07ad34b1fd9b442b65a889eb029692d15892dc90140f094ad0297563",
+ "p1_seeds_sha256": "58be133ce0c42b25034cb28a8cd071a9a90777768aa95e5308cd3da56616cbbe",
  "tiers": [
   "A",
   "B"
@@ -35,11 +35,11 @@
    "process_or_state_without_gene_members_not_representable": 2
   },
   "Q3": {
-   "not_usable_or_reserved": 10,
-   "usable_rows": 8,
+   "not_usable_or_reserved": 14,
+   "usable_rows": 4,
    "unchanged_null_observation_not_a_seed": 2,
    "rows_placed": 1,
-   "process_or_state_without_gene_members_not_representable": 5
+   "process_or_state_without_gene_members_not_representable": 1
   },
   "Q4": {
    "usable_rows": 15,
@@ -67,8 +67,7 @@
    "rows_placed": 1
   },
   "Q8": {
-   "usable_rows": 1,
-   "rows_placed": 1
+   "not_usable_or_reserved": 1
   }
  }
 }

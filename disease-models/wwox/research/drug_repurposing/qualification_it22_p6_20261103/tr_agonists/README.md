@@ -157,7 +157,7 @@ Strength of evidence refers to the evidence that the compound helps *this* defic
 
 ## 9. Papers read and depth
 
-Every receipt is a JSON file in `receipts/`, one per paper, in the fixture format of the ledger plus a `verbatim_locators` list (exact quotes, machine-checked against the text served where it was saved to the scratchpad). The integrator records them; no receipt was appended by this package.
+Every receipt is a JSON file `receipts/FTR-20261103-<pmid>-03.json`, one per paper, in the ledger format; the verbatim locators (exact quotes, machine-checked against the text served where it was saved to the scratchpad) sit inside `evidence_basis` as "Locator Ln" lines. Each passed `fulltext_receipts.py record --dry-run`. The integrator records them; no receipt was appended by this package.
 
 | PMID | Paper | Depth | Notes |
 |---|---|---|---|

@@ -1,0 +1,44 @@
+{
+ "analysis_at": "2026-11-03T18:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "unavailable",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "unavailable",
+  "references": "not_read"
+ },
+ "event_at": "2026-11-03T18:35:00Z",
+ "event_id": "FTR-20261103-36834863-03",
+ "evidence_basis": [
+  "coverage_map",
+  "Body text read for abstract, introduction, results 2.1 and 2.5, discussion and methods; figure images were not seen and not every results subsection was read line by line (2.2-2.4 were keyword-scanned).",
+  "Locator L1 (Abstract; for: Triac rescues myelination and PV+ interneuron maturation in Mct8/Oatp1c1 Dko mice only with early postnatal treatment): \"Triac treatment (400 ng/g) induced normalized myelination, cortical GABAergic interneuron differentiation, electrophysiological parameters, and locomotor performance only when administered during the first three postnatal weeks.\"",
+  "Locator L2 (Results 2.5; for: Late window: myelination not improved): \"In contrast, in Dko mice that received Triac only between postnatal week 3 and 6, myelination was not improved while a partial recovery of PV+ immunoreactivity could still be detected.\"",
+  "Locator L3 (Discussion; for: High-dose Triac in mice: peripheral thyrotoxic state): \"Triac is most likely the only TH receptor active substance in these animals with such a high thyromimetic activity (at the highest dose) that it still causes a peripheral thyrotoxic state as indicated by the elevated hepatic and renal Dio1 expression\"",
+  "Locator L4 (Discussion; for: Thyroid axis suppression at the effective dose): \"The high concentration of Triac needed for effective normalization of brain parameters in our mouse model resulted in a fully downregulated HPT axis with Tshb transcript below the detection limit\"",
+  "Locator L5 (Discussion; for: Low dose (clinical-range per the authors) ineffective on brain readouts in the mouse): \"treating Dko mice with such a low Triac dose had only little beneficial effects on brain parameters such as myelination or interneuron maturation\"",
+  "Locator L6 (Discussion; for: Triac CNS entry route not identified in this paper): \"As one hypothesis, the not-yet identified transport systems by which Triac enters the CNS and neural target cells might be down-regulated in the mature mouse CNS\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "ledger_prev_hash": null,
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p6_20261103/tr_agonists/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC9966820 via Europe PMC key-less full-text XML (body, captions, methods)",
+ "study_id": {
+  "doi": "10.3390/ijms24043452",
+  "pmid": "36834863"
+ },
+ "workflow": "IT22 P6 qualification (qualification_it22_p6_20261103/tr_agonists). Text obtained through public key-less routes (PubMed full-text tool or Europe PMC REST); no e-mail address was sent to any service. Prepared as a JSON file for the integrator; was not appended by the preparing actor. "
+}

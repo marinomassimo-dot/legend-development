@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-03T18:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-03T19:10:00Z",
+ "event_id": "FTR-20261103-25840982-01",
+ "evidence_basis": [
+  "abstract analysed in full (Rho kinase inhibitors block melanoma 2015 Cancer Res); used for one qualification fact: AT13148 inhibits ROCK1/2 in melanoma cells; no MK2 named; a ChEMBL mechanism reference for MK2",
+  "no experimental detail absent from the abstract is used; statements carried into the tables are marked abstract-level",
+  "coverage uses `unavailable` for the sections not obtained: full text was not read in this package"
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch1/README.md",
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch1/qualification_it22_p4_b1.tsv",
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch1/edge_provenance_it22_p4_b1.tsv",
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch1/locators_it22_p4_b1.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 25840982 (abstract and metadata as served 2026-11-03)",
+ "study_id": {
+  "doi": "10.1158/0008-5472.CAN-14-2156",
+  "pmid": "25840982"
+ },
+ "workflow": "IT22 P4 batch 1 qualification (qualification_it22_p4_20261103/batch1). Abstract analysed for one fact of an edge or compound record; no full text was read. Prepared as a JSON file for the integrator; it was not appended at preparation time."
+}

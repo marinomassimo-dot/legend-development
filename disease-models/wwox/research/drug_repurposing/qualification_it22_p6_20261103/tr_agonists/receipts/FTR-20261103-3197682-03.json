@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-03T18:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "unavailable",
+  "methods": "unavailable",
+  "results": "unavailable",
+  "figures": "unavailable",
+  "tables": "unavailable",
+  "discussion": "unavailable",
+  "limitations": "unavailable",
+  "supplementary": "unavailable",
+  "references": "unavailable"
+ },
+ "event_at": "2026-11-03T18:35:00Z",
+ "event_id": "FTR-20261103-3197682-03",
+ "evidence_basis": [
+  "coverage_map",
+  "Abstract only.",
+  "Locator L1 (Abstract; for: Seizure-prone rat strain with low thyroid hormone: seizure susceptibility has been linked to hypothyroidism too (association, one strain)): \"The data indicate that the GEPR-9 rat is hypothyroid from at least the second week of life up to 1 year of age.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "ledger_prev_hash": null,
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p6_20261103/tr_agonists/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "Europe PMC core record (abstract) for PMID 3197682",
+ "study_id": {
+  "doi": "10.1016/0920-1211(88)90026-5",
+  "pmid": "3197682"
+ },
+ "workflow": "IT22 P6 qualification (qualification_it22_p6_20261103/tr_agonists). Text obtained through public key-less routes (PubMed full-text tool or Europe PMC REST); no e-mail address was sent to any service. Prepared as a JSON file for the integrator; was not appended by the preparing actor. "
+}

@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-03T14:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "unavailable",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-03T14:40:00Z",
+ "event_id": "FTR-20261103-31888761-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Open article (Clin Epigenetics 2019, colorectal cancer lines and xenografts). NOT WWOX EVIDENCE. Read: abstract, the results section 'DOT1L silencing or inhibition demethylates H3K79 and suppresses transcription of c-Myc' in full, and the EPZ004777 concentration passages by keyword search; the other results sections, methods and discussion were not read in full.",
+  "locator L4 (Results), verbatim: \"both c-Myc RNA levels and protein levels were reduced after DOT1L silencing or inhibition\"",
+  "locator L5 (Results), verbatim: \"The results showed that 30 \u03bcM and 50 \u03bcM EPZ004777 significantly reduced cell viability of SW480 cells in a dose-dependent manner\"",
+  "locator L6 (Results), verbatim: \"However, HCT116 was less sensitive to EPZ004777 treatment.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch2/README.md",
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch2/qualification_it22_p4_batch2.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC full-text XML for PMC6937672, rendered to text, 2026-11-03; bytes not saved to the repository",
+ "study_id": {
+  "doi": "10.1186/s13148-019-0778-y",
+  "pmid": "31888761"
+ },
+ "workflow": "IT22 P4 batch2 qualification (qualification_it22_p4_20261103/batch2), question-driven: Does DOT1L inhibition by EPZ004777 lower MYC (RNA, protein) in any cell system, at what concentration? Prepared as a JSON file for the integrator; was not appended by the preparing actor. The served text was not snapshotted to files/, so locator text cannot be machine-matched against a local artefact; the quotes were matched against the text as served at preparation time."
+}

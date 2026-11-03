@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-03T18:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "unavailable",
+  "references": "not_read"
+ },
+ "event_at": "2026-11-03T18:35:00Z",
+ "event_id": "FTR-20261103-29111262-03",
+ "evidence_basis": [
+  "coverage_map",
+  "Introduction, methods, results text and captions were scanned by keyword and the passages quoted were read; the discussion was not read. DITPA, not Triac, is the analogue tested.",
+  "Locator L1 (Abstract (text cut at the source line); for: DITPA (not Triac) promotes human OL differentiation transcripts in hESC-derived OPC cultures): \"treatment of these cultures with DITPA (an MCT8-independent TH analog), up-regulates OL differentiation transcr\"",
+  "Locator L2 (Fig. 5 legend; for: Differentiation medium of the hESC-OPC system contains T3: a T3-deprived control is needed in any TH-analogue test): \"Cells were treated with either T3 alone (T3, 50 ng/mL), DITPA alone (DITPA, 10 ng/mL) or T3 with DITPA (T3, 50 ng/mL + DITPA, 10 ng/mL)\"",
+  "Locator L3 (Fig. 1 legend; for: T3 promotes terminal differentiation of human OPCs in vitro): \"(i, j) T3 promoted terminal differentiation of OPCs into (i) O4 + pre-OLs (stage VI), and (j) MBP + pre-myelinating OLs.\"",
+  "Locator L4 (Results; for: Same TH-signalling readout under T3 and DITPA in this system): \"Further analysis revealed no significant differences in the gene expression for THRB, DIO2 and DIO3, between T3 and DITPA treatments\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "ledger_prev_hash": null,
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p6_20261103/tr_agonists/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC5704066 via Europe PMC key-less full-text XML (body, methods, captions)",
+ "study_id": {
+  "doi": "10.1016/j.ebiom.2017.10.016",
+  "pmid": "29111262"
+ },
+ "workflow": "IT22 P6 qualification (qualification_it22_p6_20261103/tr_agonists). Text obtained through public key-less routes (PubMed full-text tool or Europe PMC REST); no e-mail address was sent to any service. Prepared as a JSON file for the integrator; was not appended by the preparing actor. "
+}

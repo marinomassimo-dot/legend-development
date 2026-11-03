@@ -1,0 +1,26 @@
+file	sha256	bytes	source
+PMC12063501.xml	55ac2854321709f0d289898adcbd9d21b8a40eb447483112905b5e03c5ca1746	138278	NCBI PMC / Europe PMC full-text XML 2026-11-03
+PMC2854092.xml	d65f382c221995dc5a6c0d77178d28a1f9fdd01fe2598ebbef8012d4de18fb70	131729	NCBI PMC / Europe PMC full-text XML 2026-11-03
+PMC4083087.xml	19423f914dd971f4f1c1420600695f35a743c68806e36cca49f30e730def329e	168119	NCBI PMC / Europe PMC full-text XML 2026-11-03
+PMC6571149.xml	6af41e6c66953aa53cdcb66e687259a2e58f09028f2a98e650139bf8dc0e9330	138639	NCBI PMC / Europe PMC full-text XML 2026-11-03
+PMC7611345.xml	d7d49326b8763b3a605548dbac32d8d8518c8e1f4f192a65d97da23d8e5887a3	146009	NCBI PMC / Europe PMC full-text XML 2026-11-03
+act_CHEMBL1851943.json	da226d2821edde26aea42798ffb3b292976f548276517d4bc48547d410e0b8c9	127194	ChEMBL REST (ChEMBL_37 as served 2026-11-03)
+act_CHEMBL3544960.json	be0d02974f1d1c3d0ffdc5d28942de7a726d72bba877d72b4c52f81d6cc5c3a7	513900	ChEMBL REST (ChEMBL_37 as served 2026-11-03)
+act_CHEMBL3909517.json	3139f90767ace56d1a4de4fcfb91c1fb8fd79c6f336bad75bf2850eaf5965ac4	3152	ChEMBL REST (ChEMBL_37 as served 2026-11-03)
+act_CHEMBL4650314.json	8c83e9254f7bba05b0d31ce91ec2cee12674cb7c7b43db36b3468bdd47a620fd	10182	ChEMBL REST (ChEMBL_37 as served 2026-11-03)
+at13148.json	01badbce0fa66fe0a6a11e5f812be2e1db0e13fc7d75031780162e561a9c2220	3803	ChEMBL REST (ChEMBL_37 as served 2026-11-03)
+mech_CHEMBL1851943.json	1831a97fd70932c52e428eb7310b5858adfdccd16df88e9f0613f3d8cd0ee5d4	109	ChEMBL REST (ChEMBL_37 as served 2026-11-03)
+mech_CHEMBL3544960.json	577684b80c478aab752048602c2417f5e23551af28615a5eba459ac4b5228ae6	1802	ChEMBL REST (ChEMBL_37 as served 2026-11-03)
+mech_CHEMBL3909517.json	1831a97fd70932c52e428eb7310b5858adfdccd16df88e9f0613f3d8cd0ee5d4	109	ChEMBL REST (ChEMBL_37 as served 2026-11-03)
+mech_CHEMBL4650314.json	1831a97fd70932c52e428eb7310b5858adfdccd16df88e9f0613f3d8cd0ee5d4	109	ChEMBL REST (ChEMBL_37 as served 2026-11-03)
+mol_CHEMBL1851943.json	4e98999655b8f2b30fdd3f73e5ed1e90b620d59a560d452091732aa4d3729632	4332	ChEMBL REST (ChEMBL_37 as served 2026-11-03)
+mol_CHEMBL3909517.json	9edc8ad05f02b3b7e0e78fbeb82e9e7a2d40dfb95765915df3e776ac23de8ec7	5115	ChEMBL REST (ChEMBL_37 as served 2026-11-03)
+mol_CHEMBL4650314.json	7e2abc89e36bc3c1289c8e5b2f72119021d77b2b1eb867f36667975404ff5d7e	4180	ChEMBL REST (ChEMBL_37 as served 2026-11-03)
+op_BCL3_TNF.tsv	b9c81e3f32f5a4c10af7fdeb7946e5edb21b7d9c84c714868c00791a200f9223	352709	OmniPath interactions service 2026-11-03 (filters ignored by the service: filtered locally by gene symbol)
+op_CDC25A_FOXO1.tsv	7ba3097aeeaab4037f3cc5014ad250b204d1f47f6b54b94cf689b13494868a72	28035	OmniPath interactions service 2026-11-03 (filters ignored by the service: filtered locally by gene symbol)
+op_EGLN2_FOXO3.tsv	697bde65d34df55e26d44d4c1c3b326d0cdb9178d97f7abdfd37af1358dcf1e8	26424	OmniPath interactions service 2026-11-03 (filters ignored by the service: filtered locally by gene symbol)
+op_FOXO1_NPY.tsv	3a88fcfe048b606726c2b9a9734195c1d176709e16bf12134b8d80b4183e1a18	108427	OmniPath interactions service 2026-11-03 (filters ignored by the service: filtered locally by gene symbol)
+op_FOXO3_BNIP3.tsv	4c1d2a831a35293c128e3172736fb2f6fac57a50bed56000f5a15c95000ba077	83187	OmniPath interactions service 2026-11-03 (filters ignored by the service: filtered locally by gene symbol)
+op_HDAC5_SLC2A1.tsv	0285028f6acdb9657e9cf5357e47626889f23b445830c458cd5b15ae340c4070	20642	OmniPath interactions service 2026-11-03 (filters ignored by the service: filtered locally by gene symbol)
+op_MAPK1_BCL3.tsv	8810f82e7a8c4980d6a7ad8b842c8ac1a0c59c67d0d224a796a3c8724973ab8b	147691	OmniPath interactions service 2026-11-03 (filters ignored by the service: filtered locally by gene symbol)
+op_MAPKAPK2_CDC25A.tsv	c9d1d2dec584cd4df66f775c06cb75bd6beb7194b75b5e871223eff4a39c1e4e	46672	OmniPath interactions service 2026-11-03 (filters ignored by the service: filtered locally by gene symbol)

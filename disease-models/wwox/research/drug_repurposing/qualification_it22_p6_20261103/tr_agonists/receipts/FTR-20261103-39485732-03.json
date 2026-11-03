@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-03T18:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "captions_only",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "supplementary": "unavailable",
+  "references": "not_read"
+ },
+ "event_at": "2026-11-03T18:35:00Z",
+ "event_id": "FTR-20261103-39485732-03",
+ "evidence_basis": [
+  "coverage_map",
+  "Review (secondary). Paragraphs on Triac, Triac Trial II and transporter route were read; other sections were not.",
+  "Locator L1 (Section on TRIAC; for: Trial II design (as described by the review); result not available in this source): \"A second international phase IIb trial (TRIAC Trial II; NCT02396459) is currently being conducted to assess the neurocognitive outcome in MCT8 patients who are younger than 30 months at baseline and receive TRIAC for 96 months at a higher dose compared to TRIAC Trial I.\"",
+  "Locator L2 (Section on TRIAC; for: Candidate murine Triac transporter route, age-dependent (review statement)): \"Particularly, the Slc22a8 transporter present at the murine BBB and BCSFB is strongly expressed only during the early postnatal phase\"",
+  "Locator L3 (Conclusions; for: No neurological benefit shown by any intervention at the review date): \"Unfortunately, none of these interventions has so far resulted in profound beneficial effects on the neurological outcome.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "ledger_prev_hash": null,
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p6_20261103/tr_agonists/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC11623285 via Europe PMC key-less full-text XML",
+ "study_id": {
+  "doi": "10.1530/etj-24-0286",
+  "pmid": "39485732"
+ },
+ "workflow": "IT22 P6 qualification (qualification_it22_p6_20261103/tr_agonists). Text obtained through public key-less routes (PubMed full-text tool or Europe PMC REST); no e-mail address was sent to any service. Prepared as a JSON file for the integrator; was not appended by the preparing actor. "
+}

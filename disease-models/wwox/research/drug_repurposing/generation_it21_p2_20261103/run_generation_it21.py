@@ -471,11 +471,22 @@ def eligible(row, role, fam_meta, decisions):
     return True, ""
 
 
+ROUTE_ATC = {"D": "dermatological (topical use is the usual route)", "S": "sensory organs (ophthalmic or otic use is the usual route)"}
+
+
+def route_class_note(atc_codes):
+    """IT22 reverse test G4: the ATC class names the usual route; a topical or local class says nothing about systemic or brain exposure. Empty when no ATC code or a systemic class."""
+    classes = sorted({c[0] for c in atc_codes if c and c[0] in ROUTE_ATC})
+    return "; ".join(f"ATC {c}: {ROUTE_ATC[c]}: systemic and brain exposure not established by the class" for c in classes)
+
+
 def attribution_note(p):
     """One sentence for the qualifier: what the local Guide to Pharmacology release says about the main target of this compound (IT21 V1). Affinity, not occupancy or exposure."""
     st = p.get("attribution_state", "")
     via = (" Identity joined to its ChEMBL record through the ligand id in the claim name (" + p["identity_via"] + ")." if p.get("identity_via") else "")
     mixed = (f" Basis: {p['attribution_comparison_basis']}." if p.get("attribution_comparison_basis") else "") + (f" Note: {p['attribution_context_note']}." if p.get("attribution_context_note") else "")
+    co = f" {p['attribution_copotent']} other target(s) measured within 10-fold of it in the same measure type: attribution is to a set of co-targets, not to one." if str(p.get("attribution_copotent") or "0") not in ("", "0") else ""
+    mixed = mixed + co
     if st == "ATTRIBUTABLE":
         return f"main target {p['main_target']} measured at {p['attribution_main_nm']} nM; best measured target {p['attribution_best_target']} at {p['attribution_best_nm']} nM ({p['attribution_fold']}-fold).{via}{mixed}"
     if st == "SINGLE_MEASURED_TARGET":
@@ -593,8 +604,10 @@ def cmd_propose(a):
     idx = rs.Index(entries, rs.load_artefacts(), rs.module_intervention_symbols(rs.load_needs()["needs"]))
     modality = {}
     status_of, phase_of = {}, {}
+    atc_of = collections.defaultdict(set)
     for e in entries:
         f = fam[e["id"]]
+        atc_of[f] |= set(e.get("atc") or [])
         if (e.get("ids") or {}).get("chembl") or f not in modality:
             modality[f] = e.get("modality")
         sc = e.get("status_class")
@@ -687,7 +700,7 @@ def cmd_propose(a):
             sib = fb.get(s["family_id"]) or next((t for t, c_ in fb.items() if c_ == s["family_id"]), "")
             proposals[-1].update(identity_via=meta.get(s["family_id"], {}).get("identity_via", ""), attribution_state=att["state"], attribution_fold=att["fold"],
                                  attribution_best_target=att["best_target"], attribution_best_nm=att["best_nm"], attribution_main_nm=att["main_nm"],
-                                 attribution_main_measure=att["main_measure"], attribution_best_measure=att["best_measure"], attribution_mixed_measure=att["mixed_measure"], attribution_comparison_basis=att["comparison_basis"], attribution_context_note=att["context_note"], attribution_values_kept=att["values_kept"][:400],
+                                 attribution_main_measure=att["main_measure"], attribution_best_measure=att["best_measure"], attribution_mixed_measure=att["mixed_measure"], attribution_comparison_basis=att["comparison_basis"], attribution_context_note=att["context_note"], attribution_copotent=att.get("n_copotent", ""), attribution_values_kept=att["values_kept"][:400],
                                  sibling_family=sib, sibling_z_reach=reach.get(s["seed_set"], {}).get(sib, "") if sib else "",
                                  sibling_compatible_action=reach_act.get(s["seed_set"], {}).get(sib, "") if sib else "")
         if ok:
@@ -731,6 +744,11 @@ def cmd_propose(a):
     handed = select_handoff(elig_rows)
     hid = {p["proposal_id"] for p in handed}
     # attribution for the handed-over proposals
+    direct_hits = {}                                            # IT22 reverse test G1: signed hits ON the seed gene itself are executed (diagnostic arm) and were never shown beside the hand-over
+    for (sset, arm_, fid_), d_ in disp.items():
+        if arm_ == "direct_search" and meta.get(fid_, {}).get("modality") == "small_molecule" and (phase_of.get(fid_, -1) >= 3 or earlier_state(d_["name"], decisions)):
+            direct_hits.setdefault(sset, []).append((d_["name"], phase_of.get(fid_, -1)))
+    direct_hits = {k: "; ".join(f"{n} (phase {ph:g})" for n, ph in sorted(set(v), key=lambda x: -x[1])[:6]) + " - diagnostic only: acts on the seed gene itself, not through the chain" for k, v in direct_hits.items()}
     handoff = []
     for p in sorted(handed, key=lambda p: (p["question"], p["hypothesis"], -float(p["zmin"]))):
         q, hyp, role = p["question"], p["hypothesis"], roles[p["question"]]
@@ -768,6 +786,8 @@ def cmd_propose(a):
             abstentions=(f"{len(wh)} withheld row(s) on this record ({collections.Counter(r['reason_class'] for r in wh).most_common(1)[0][0]})" if wh else "none on this record"),
             earlier_thread=p["earlier_thread"],
             carried_limits_from_cluster=p.get("carried_limits", ""), seed_guards=p.get("seed_guards", ""),
+            route_class_note=route_class_note(atc_of.get(p["family_id"], ())),
+            direct_acting_hits_same_set=direct_hits.get(p["seed_set"], ""),
             cluster_work_done=("an earlier qualification already worked this cluster (" + p["cluster_earlier_decisions"][:120] + "); this molecule was not assessed there: priority was lowered, and it is not a discovery") if p.get("cluster_work_done") else "",
             **({"attribution_state": p["attribution_state"], "attribution_note": attribution_note(p)} if "attribution_state" in p else {}),
             novelty_perimeter=(("earlier LEGEND thread (" + p["earlier_thread"] + ")") if p["earlier_thread"] else "named in LEGEND cards/units" if p["named_in_legend_material"] == "yes" else

@@ -306,6 +306,7 @@ def attribution(ligands, main_gene, aff, kinds=None, weak_fold=WEAK_FOLD, potent
         note.append("types compared separately: " + ", ".join(f"{k} {v[0]:.1f}x" for k, v in sorted(per_type.items())))
     if skipped:
         note.append("not compared: " + "; ".join(skipped[:3]))
+    cop = sum(1 for g, d in by_gene.items() if g != main and t in d and d[t]["rel"] == "=" and d[t]["nm"] <= m["nm"] * weak_fold)       # co-potent other targets, same type
     if f < weak_fold:
         state = "ATTRIBUTABLE"
     elif m["nm"] <= potent_nm and ps == "ok":
@@ -315,7 +316,7 @@ def attribution(ligands, main_gene, aff, kinds=None, weak_fold=WEAK_FOLD, potent
     else:
         state = "WEAK_ATTRIBUTION"
     return dict(base, state=state, main_nm=round(m["nm"], 3), best_target=g, best_nm=round(b["nm"], 3), fold=round(f, 1), occupancy="", best_measure=t, main_measure=t,
-                comparison_basis=f"{t} at {main} vs {t} at {g}" + (" (main value is a lower bound)" if ps == "lower_bound" else ""), context_note="; ".join(note))
+                comparison_basis=f"{t} at {main} vs {t} at {g}" + (" (main value is a lower bound)" if ps == "lower_bound" else ""), context_note="; ".join(note), n_copotent=cop)
 
 
 def sensitivity(folds):

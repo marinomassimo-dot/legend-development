@@ -1,0 +1,5 @@
+proposal_id	compound	disposition	status_before	status_after
+IT21P2-0425	EPZ004777 (listed as Epz004777; chemical probe, no clinical phase)	INCONCLUSIVE	CONDITIONAL_H_HARM	CONDITIONAL_H_HARM
+IT21P2-0431	TAK-901 (listed as TAK-901; DGIdb twin 'Tak-901' is the same substance, counted once)	INCONCLUSIVE	CONDITIONAL_H_HARM	CONDITIONAL_H_HARM
+IT21P2-1008	TAPINAROF (benvitimod; 3,5-dihydroxy-4-isopropylstilbene; topical drug)	KEPT_CONDITIONAL	CONDITIONAL_H_HARM	CONDITIONAL_H_HARM
+IT21P2-0993	GSK2816126 (= GSK126)	NOT_REDONE_SEE_EZH2_DOSSIER	CONDITIONAL_H_HARM	CONDITIONAL_H_HARM

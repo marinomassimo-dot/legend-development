@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-03T18:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-03T19:10:00Z",
+ "event_id": "FTR-20261103-32616501-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Peer-reviewed open article. NOT WWOX EVIDENCE: no neural, CNS or WWOX analysis.",
+  "Read end to end as flattened text: Introduction, Methods, Results (safety, PK, PD, efficacy), Discussion; figures, tables, supplementary files and the reference list were not read (the flattened text carries no table content)",
+  "Question: is MAPKAPK2 a documented target of AT-13148 and what is its measured profile in humans? Finding: no MAPKAP/MK2/CDC25 string; ROCK IC50 6 and 4 nM v AKT 38-402 nM; narrow therapeutic index, development not recommended",
+  "Verbatim locators L8-L11 and absence locator N1 are in locators_it22_p4_b1.tsv and were matched against the saved XML text"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch1/README.md",
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch1/qualification_it22_p4_b1.tsv",
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch1/edge_provenance_it22_p4_b1.tsv",
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch1/locators_it22_p4_b1.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "d7d49326b8763b3a605548dbac32d8d8518c8e1f4f192a65d97da23d8e5887a3",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC7611345 full-text XML as served by NCBI PMC (db=pmc), retrieved 2026-11-03",
+ "study_id": {
+  "doi": "10.1158/1078-0432.CCR-20-0700",
+  "pmid": "32616501"
+ },
+ "workflow": "IT22 P4 batch 1 qualification (qualification_it22_p4_20261103/batch1). Question-driven reading of the open article text. Prepared as a JSON file for the integrator; it was not appended at preparation time."
+}

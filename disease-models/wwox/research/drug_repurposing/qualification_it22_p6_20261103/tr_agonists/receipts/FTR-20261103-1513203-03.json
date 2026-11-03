@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-03T18:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "unavailable",
+  "methods": "unavailable",
+  "results": "unavailable",
+  "figures": "unavailable",
+  "tables": "unavailable",
+  "discussion": "unavailable",
+  "limitations": "unavailable",
+  "supplementary": "unavailable",
+  "references": "unavailable"
+ },
+ "event_at": "2026-11-03T18:35:00Z",
+ "event_id": "FTR-20261103-1513203-03",
+ "evidence_basis": [
+  "coverage_map",
+  "Abstract only.",
+  "Locator L1 (Abstract; for: Adult rats made hyperthyroid with T3 (100 micrograms/kg/day, 7 days) were more susceptible to two chemoconvulsants): \"there is an increased susceptibility to the convulsant effect of isoniazid (300 mg/kg, ip) and picrotoxin (4 mg/kg, ip)\""
+ ],
+ "evidence_depth": "abstract_only",
+ "ledger_prev_hash": null,
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p6_20261103/tr_agonists/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "Europe PMC core record (abstract) for PMID 1513203",
+ "study_id": {
+  "doi": "10.1016/0024-3205(92)90486-9",
+  "pmid": "1513203"
+ },
+ "workflow": "IT22 P6 qualification (qualification_it22_p6_20261103/tr_agonists). Text obtained through public key-less routes (PubMed full-text tool or Europe PMC REST); no e-mail address was sent to any service. Prepared as a JSON file for the integrator; was not appended by the preparing actor. "
+}

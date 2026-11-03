@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-03T14:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-03T14:40:00Z",
+ "event_id": "FTR-20261103-40945864-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Abstract analysed in full; used for one labelled fact (tapinarof activation of AhR and NRF2 arms in keratinocytes); no full text was obtained. NOT WWOX EVIDENCE.",
+  "locator A12 (Abstract), verbatim: \"Tapinarof potentiated PM-induced CYP1A1 and HO-1 expression, confirming AhR/Nrf2 activation.\"",
+  "locator A13 (Abstract), verbatim: \"This dual pathway activation protected cells from PM-induced oxidative stress and cell death, as validated using the AhR antagonist, CH223191, and Nrf2 inhibitor, brusatol.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch2/README.md",
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch2/qualification_it22_p4_batch2.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 40945864 (abstract and metadata as served 2026-11-03)",
+ "study_id": {
+  "doi": "10.1016/j.taap.2025.117559",
+  "pmid": "40945864"
+ },
+ "workflow": "IT22 P4 batch2 qualification (qualification_it22_p4_20261103/batch2), question-driven: tapinarof activation of AhR and NRF2 arms in keratinocytes? Prepared as a JSON file for the integrator; was not appended by the preparing actor. The served text was not snapshotted to files/, so locator text cannot be machine-matched against a local artefact; the quotes were matched against the text as served at preparation time."
+}

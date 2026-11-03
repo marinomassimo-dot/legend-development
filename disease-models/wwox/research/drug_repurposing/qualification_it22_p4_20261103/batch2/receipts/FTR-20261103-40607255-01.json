@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-03T14:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "unavailable",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-03T14:40:00Z",
+ "event_id": "FTR-20261103-40607255-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Open article (Int J Biol Sci 2025, BV2 / primary microglia, mouse). NOT WWOX EVIDENCE. Read: abstract, introduction opening and the AhR / Nrf2 / FICZ passages found by keyword search; methods, figures and the in vivo part not read. Compound used is melatonin and FICZ, not tapinarof.",
+  "locator L15 (Results), verbatim: \"Lentivirus transfection of AhR or FICZ significantly increased Nrf2 DNA-binding activity in LPS-treated cells\"",
+  "locator L16 (Results), verbatim: \"In an EMSA, LPS decreased AhR-regulated Nrf2 binding, which was blocked by melatonin or FICZ at 4 hours.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch2/README.md",
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch2/qualification_it22_p4_batch2.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC full-text XML for PMC12210381, rendered to text, 2026-11-03; bytes not saved to the repository",
+ "study_id": {
+  "doi": "10.7150/ijbs.105081",
+  "pmid": "40607255"
+ },
+ "workflow": "IT22 P4 batch2 qualification (qualification_it22_p4_20261103/batch2), question-driven: In microglia, does an AhR agonist raise Nrf2 activity (direction of the AhR -> NRF2 edge in a neural cell type)? Prepared as a JSON file for the integrator; was not appended by the preparing actor. The served text was not snapshotted to files/, so locator text cannot be machine-matched against a local artefact; the quotes were matched against the text as served at preparation time."
+}

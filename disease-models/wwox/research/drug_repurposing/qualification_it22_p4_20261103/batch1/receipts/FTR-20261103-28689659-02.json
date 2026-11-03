@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-03T18:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-03T19:10:00Z",
+ "event_id": "FTR-20261103-28689659-02",
+ "evidence_basis": [
+  "Selected passages of the open text inspected by keyword search (Erk inhibitor II, Erk2 knockdown, LPS/macrophage, TNF, MEK); the article was NOT read section by section, so every section other than the abstract is declared not_read",
+  "Question: does the Erk2 -> Bcl3 edge predict the sign of TNF change after ERK inhibition? Finding: ERK dependence of Bcl3 activity was shown in HeLa reporter cells; the paper has no TNF measurement (one TNF string, introduction)",
+  "Verbatim locators L4, L5, L6 and absence locator N3 are in locators_it22_p4_b1.tsv and were matched against the saved XML text (sha256 in source_fingerprint)"
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch1/README.md",
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch1/qualification_it22_p4_b1.tsv",
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch1/edge_provenance_it22_p4_b1.tsv",
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch1/locators_it22_p4_b1.tsv"
+ ],
+ "prior_receipt": "FTR-20261103-28689659-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "6af41e6c66953aa53cdcb66e687259a2e58f09028f2a98e650139bf8dc0e9330",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC6571149 full-text XML as served by NCBI PMC (db=pmc), retrieved 2026-11-03",
+ "study_id": {
+  "doi": "10.1016/j.molcel.2017.06.011",
+  "pmid": "28689659"
+ },
+ "workflow": "IT22 P4 batch 1 qualification (qualification_it22_p4_20261103/batch1). Question-driven keyword reading of the open text after the earlier abstract-only event. Prepared as a JSON file for the integrator; it was not appended at preparation time."
+}

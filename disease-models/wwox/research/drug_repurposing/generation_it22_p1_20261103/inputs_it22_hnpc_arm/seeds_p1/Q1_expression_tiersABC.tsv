@@ -1,0 +1,2 @@
+seed_id	gene	kind	members	direction	level	direction_status	readout_level	evidence_class	species	ortholog_map	source_ref	note	guard_tag
+Q1_expression_tiersABC:WWOX	WWOX	gene		uncertain	1.0	uncertain	expression	transcript_contrast	human		S003	directions seen: ['uncertain']; tiers ['C']; P1 gives no magnitude (equal weight)	

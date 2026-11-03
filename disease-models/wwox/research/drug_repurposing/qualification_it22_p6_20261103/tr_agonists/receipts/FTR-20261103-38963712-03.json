@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-03T18:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "supplementary": "unavailable",
+  "references": "not_read"
+ },
+ "event_at": "2026-11-03T18:35:00Z",
+ "event_id": "FTR-20261103-38963712-03",
+ "evidence_basis": [
+  "coverage_map",
+  "Only the MCT8-deficiency management section and the Triac recommendations of the 2024 European Thyroid Association guideline were read; this is a guideline (secondary synthesis), not a primary trial.",
+  "Locator L1 (Management and treatment; for: Levothyroxine did not improve neurodevelopment in MCT8 deficiency): \"Treatment with levothyroxine in a wide dose range (2.5–15 mcg/kg/day), commenced at the age of 0.5 to 36 months, did not improve neurodevelopment and, in some cases even aggravated the hyperthyroid state in peripheral tissues\"",
+  "Locator L2 (Management and treatment; for: Neurological efficacy of Triac unknown at the guideline date): \"The neurocognitive response to TRIAC treatment is unknown (123, 124), and is currently under investigation (NCT02396459).\"",
+  "Locator L3 (Management and treatment; for: No proven neurocognitive rescue): \"No available treatment regimen has proven to rescue the neurocognitive phenotype in humans with MCT8 deficiency.\"",
+  "Locator L4 (Management and treatment; for: Triac paediatric dose range): \"TRIAC therapy (dose range: 6.4–84.3 mcg/kg/day) has proven to have beneficial effects for some features:\"",
+  "Locator L5 (Areas of uncertainty; for: Open safety question: T4 lowering): \"Potential adverse effects of further lowering (F)T4 concentrations with TRIAC treatment.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "ledger_prev_hash": null,
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p6_20261103/tr_agonists/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC11301568 via Europe PMC key-less full-text XML (guideline body; management section and recommendations)",
+ "study_id": {
+  "doi": "10.1530/etj-24-0125",
+  "pmid": "38963712"
+ },
+ "workflow": "IT22 P6 qualification (qualification_it22_p6_20261103/tr_agonists). Text obtained through public key-less routes (PubMed full-text tool or Europe PMC REST); no e-mail address was sent to any service. Prepared as a JSON file for the integrator; was not appended by the preparing actor. "
+}

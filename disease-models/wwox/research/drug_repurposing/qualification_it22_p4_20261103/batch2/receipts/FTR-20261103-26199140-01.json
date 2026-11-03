@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-03T14:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "unavailable",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-03T14:40:00Z",
+ "event_id": "FTR-20261103-26199140-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Open article (Nat Commun 2015, human breast epithelial and cancer cell lines). NOT WWOX EVIDENCE. Read: abstract, two introduction paragraphs, the results sections on DOT1L and EMT-TFs and on c-Myc as prerequisite, and the discussion paragraphs on c-Myc; methods, figures and supplement not read.",
+  "locator L1 (Discussion), verbatim: \"Although DOT1L did not change the total level of c-Myc expression (Fig. 4e), c-Myc was recruited to the DOT1L-occupied region of EMT-TF promoters\"",
+  "locator L2 (Results), verbatim: \"The knockdown of c-Myc using siRNA blocked the increased EMT-TF expression caused by DOT1L overexpression in MCF10A cells\"",
+  "locator L3 (Results), verbatim: \"inhibition of DOT1L enzymatic activity with EPZ004777 treatment reversed DOT1L-induced EMT-TF expression in MCF10A cells\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch2/README.md",
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch2/qualification_it22_p4_batch2.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC full-text XML for PMC4525167, rendered to text, 2026-11-03; bytes not saved to the repository",
+ "study_id": {
+  "doi": "10.1038/ncomms8821",
+  "pmid": "26199140"
+ },
+ "workflow": "IT22 P4 batch2 qualification (qualification_it22_p4_20261103/batch2), question-driven: Does the only reference of the DOT1L -> MYC edge show that DOT1L changes MYC level or activity in a way an inhibitor would reverse? Prepared as a JSON file for the integrator; was not appended by the preparing actor. The served text was not snapshotted to files/, so locator text cannot be machine-matched against a local artefact; the quotes were matched against the text as served at preparation time."
+}

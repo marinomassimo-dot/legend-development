@@ -1,0 +1,4 @@
+proposal	name	chembl_id	pref_name	max_phase	type	first_approval	inchikey	chemical_probe	black_box	oral	topical	parenteral
+IT21P2-0425	Epz004777	CHEMBL2169919			Small molecule		WXRGFPHDRFQODR-ICLZECGLSA-N	1	0	False	False	False
+IT21P2-0431	TAK-901	CHEMBL3544932	TAK-901	1.0	Small molecule		WKDACQVEJIVHMZ-UHFFFAOYSA-N	0	0	False	False	False
+IT21P2-1008	Tapinarof	CHEMBL259571	TAPINAROF	4.0	Small molecule	2022	ZISJNXNHJRQYJO-CMDGGOBGSA-N	0	0	False	True	False

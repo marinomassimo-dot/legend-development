@@ -1,0 +1,71 @@
+# IT22 P4 batch 2: qualification of three proposals newly handed over by IT22 P3 (2026-11-03)
+
+Non-canonical research material. Public edition: the reference genotype is a WWOX-DEE genotype class; no individual-level record. **Not medical advice.** Zero spend, no registration; no e-mail address or contact string was sent to any service (ChEMBL REST, OmniPath, NCBI E-utilities, Europe PMC, PMC and DailyMed were queried with no identifying parameter). No existing file was edited, no state-changing git command was run, no receipt was recorded: 21 receipt JSONs are prepared for the integrator. QUALIFIED is not available to a generated conditional row; no row below is qualified.
+
+Rows come from `generation_it22_p1_20261103/results_p3/handoff_it21.tsv`. Format and vocabulary follow `qualification_it21_p4a_20261103` (the 22 columns of its table, plus `why_not_proposed_before` and `novelty_class`).
+
+## 1. Decisions (first)
+
+| Proposal | Compound | Q / arm | Disposition | Single deciding reason |
+|---|---|---|---|---|
+| IT21P2-0425 | EPZ004777 (tool probe) | Q6 H_HARM, DOT1L -> MYC | **INCONCLUSIVE** | The edge's only reference states DOT1L "did not change the total level of c-Myc expression" (breast epithelial cells); a colorectal paper reports a MYC fall at 30-70 uM; no neural cell is measured, and cortical-progenitor data point both ways (Dot1l loss lowers progenitors and SATB2 neurons; transient inhibition in human NPCs primed maturation) |
+| IT21P2-0431 | TAK-901 (phase 1) | Q6 H_HARM, AURKB -> MYC | **INCONCLUSIVE** | The edge was shown with a different inhibitor (AZD1152) in T-ALL, for c-MYC and not N-MYC, FBXW7-dependent; AURKB is not separable from AURKA (IC50 15 v 21 nM); and the compound's own phenotype (polyploidy at 40-500 nM) would lower a progenitor-fraction readout with no MYC effect |
+| IT21P2-1008 | tapinarof (topical, approved) | Q8 H_HARM, AHR -> NFE2L2 | **KEPT_CONDITIONAL** (scope narrowed to in vitro, after step 0) | AhR agonism is documented at 13-27 nM and the AHR -> NRF2 edge is supported (hepatoma-type cells; microglia with another agonist), with a feasible discriminating test; but the role of low NFE2L2 is unknown, AhR-target transcripts run up while NFE2L2 runs down locally, and no systemic or CNS exposure is supported |
+| IT21P2-0993 | GSK2816126 (= GSK126) | Q8 H_HARM, EZH2 -> NFE2L2 | not redone | covered by `qualification_it22_p6_20261103/ezh2_glia`; convergence note in section 4 |
+
+Counts: 3 of 3 assigned; KEPT_CONDITIONAL 1, INCONCLUSIVE 2, REJECTED_INFORMATIVE 0, QUALIFIED 0. All status_after = status_before (CONDITIONAL_H_HARM). INCONCLUSIVE names the missing datum; it is not a negative. "Unknown is not negative" holds throughout: no CNS exposure datum was found for any of the three, and absence of a hit is not absence of a paper.
+
+Novelty and why they were not proposed earlier are in the table columns. In one line each: 0425 and 0431 are **known threads re-emitted** (IT9 generated both; they were stopped by filter F5 and by the "mechanism cluster examined earlier" rule, which `decision_scope_it22.tsv` replaced); 1008 is a **new relation and new context** (a chain ending in NFE2L2 could not exist while the organoid NFE2L2 values were consumed by nothing; Q8 was created by IT22 P3-A).
+
+## 2. Earlier decisions on other cluster members: what still applies
+
+| Earlier decision (scope in `decision_scope_it22.tsv`) | Transfers to | Status here |
+|---|---|---|
+| pinometostat, premise_unresolved `edge:DOT1L>MYC`: "DOT1L loss reduces SATB2/neuron output and the IT9 edge was co-binding" | the premise, not the molecule | **Both halves confirmed by reading** (Cho 2015: no change in MYC level; Franz 2019: Dot1l loss lowers PAX6 and SATB2 cells). Pinometostat's own properties (clinical, intravenous, Ki 0.08 nM) are not used for EPZ004777 |
+| barasertib / defosbarasertib, premise_unresolved `edge:AURKB>MYC`: cytotoxicity in the cells to preserve; leukaemia-only edge | the premise | **Confirmed by reading**: the edge paper is T-ALL with AZD1152 (barasertib), c-MYC not N-MYC; TAK-901's own paper reports polyploidy |
+| AT-9283, molecule: more than 5 targets under 1 uM (artefact control) | that molecule only | Does not transfer by itself; TAK-901's own ChEMBL data show the same breadth (46 targets under 1 uM, 8 Kd under 100 nM), so a genetic AURKB control is required on its own evidence |
+| tapinarof: IT9 `excluded:F2_topical_only` (for the Q6 AHR -> MYC relation) | the exposure fact, not a refutation | Applies: no systemic or CNS route is supported; in vitro use only |
+
+## 3. Potency and selectivity: same measure type only
+
+Run with `LEGEND_CATALOG_CACHE=/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/catalog/cache`; raw outputs `class_alternatives_dot1l.tsv`, `class_alternatives_aurk.tsv`, `class_alternatives_ahr.tsv`; ChEMBL activities grouped by target, type, unit and relation in `chembl_batch2_activities_by_target.tsv` (never pooled).
+
+* **EPZ004777.** DOT1L IC50 0.4 nM (Guide to Pharmacology); ChEMBL IC50 0.4-700 nM over 9 rows and 6 documents (assay-dependent), Kd 0.25 nM, cell EC50 4 nM in MLL-rearranged lines. Same-type selectivity: PRMT5 IC50 500 nM (1250-fold from different documents, an indication only). The GtoPdb comparison is "no other target with an IC50". The DOT1L alternatives table lists SGC0946 (IC50 0.3 nM), pinometostat (Ki 0.08 nM) and others; IC50 and Ki rows are not ranked against each other and no "more potent" claim is made.
+* **TAK-901.** Not in the local GtoPdb release (attribution there not assessable). ChEMBL IC50: AURKB/INCENP 15 nM v AURKA/TPX2 21 nM (1.4-fold; not separable); Kd (kinobeads): AURKA 14-24 nM v AURKB 44 nM; Ki AURKB 0.02 nM is another measure type. 46 targets under 1 uM across types. The Aurora table shows barasertib AURKB IC50 0.37 nM v AURKA 1368 nM (3697-fold, same type); no ranking of TAK-901 against it is made (different assays).
+* **Tapinarof.** AhR reporter EC50 13-27 nM (4 documents). Not in the typed GtoPdb release; the only AHR row is ezutromid (antagonist, Kd 50 nM), TCDD has none, so no comparison is possible.
+
+## 4. EZH2 convergence note (GSK2816126 = GSK126, IT21P2-0993; not redone)
+
+The EZH2 arm now arises from two different WWOX observations: mouse glial cytokines (Q5; Il6 in Wwox-null hippocampus, Tnf/Il1b in P47T cerebellum; chain EZH2 -T(+)-> IL6/TNF) and the human organoid NFE2L2 transcript lower (Q8; N22-A001; chain EZH2 -T(-)-> NFE2L2).
+
+* **Independent at the level of observation.** Different species (mouse v human), tissue and platform, different deposits and papers, opposite sign of the seed (cytokines up, NFE2L2 down), no shared samples; the two origins count separately.
+* **Not independent at the level of inference.** (1) Both EZH2 edges are text-mined or curated regulatory-network edges from the same resource family (CollecTRI / ExTRI), neither measured in a neural cell; the Q5 edge sign is contested by its own reference (PMID 29132376, per the P6 dossier), and the EZH2 -| NFE2L2 edge rests on 6 references of which only titles were checked (lung-cancer repression of Nrf2; microglia and Parkinson / epilepsy / sepsis models by title). (2) The two arms meet downstream: the generator already links NFE2L2 -T(-)-> IL1B (the omaveloxolone rows, P3-A), and the EZH2/NRF2 titles above are inflammasome and neuroinflammation papers, so lower NRF2 tone could itself produce the cytokine rise. The Q8 observation therefore looks like a possible upstream reading of the Q5 observation along one hypothesised path (EZH2 -| NRF2 -| cytokines), not a second line of evidence for the same lever. (3) Neither seed has a resolved role (NRF2_TONE_UNRESOLVED; Q5 role unknown); no EZH2 or H3K27me3 reading exists in any WWOX system (EZH2 transcript 0.93x in the organoid, descriptive). (4) The shared hazard from the P6 dossier (EZH2/PRC2 needed for oligodendrocyte differentiation) applies to both.
+* **Consequence.** The convergence is shared network edges plus one hypothesis, not mutual confirmation; it does not raise the case beyond the dossier's "stays CONDITIONAL". One experiment would serve both and separate them: Wwox-null versus wild-type mouse glia with an EZH2 inhibitor and EZH2 knockdown, reading Nfe2l2/Nqo1 and Il6/Il1b in the same wells, with Nfe2l2 knockdown to test whether the cytokine effect runs through NRF2 (human organoids cannot read cytokines: IL6 0 cpm).
+
+## 5. Tapinarof: exposure, AhR agonism, AhR/NRF2 crosstalk
+
+* **Systemic and CNS exposure (US label, read; maximal-use trials, abstracts).** Adults with extensive plaque psoriasis: plasma below the 50 pg/mL limit in 68% of samples, Day 1 Cmax 0.90 +/- 1.4 ng/mL, Day 29 0.12 ng/mL. Children 2 years and older: Day 1 Cmax 2.4 +/- 3.9 ng/mL (3.8 in the 2-6 group), below quantification in 76% on Day 28 (abstract of the paediatric trial: mean Cmax 2.44 ng/mL, about 9.6 nM total plasma). Plasma protein binding about 99%; hepatic oxidation, glucuronidation, sulfation. The healthy-subject benvitimod study: detected in under 5% of plasma samples. **No brain or CNS measurement exists in anything retrieved**; "localized exposure" in a review is a claim. Total plasma peaks are the same order as the reporter EC50 (13-27 nM) but with 99% binding the free fraction is far lower. A systemic or CNS route is unsupported; in vitro or ex vivo is the only feasible use. Rat reproductive study (subcutaneous): no effect on offspring neurobehaviour up to 30 mg/kg/day.
+* **AhR agonism.** Primary paper (abstract): binds and activates AhR in several cell types; no effect in AhR-deficient mice (imiquimod skin model). ChEMBL reporter EC50 13-27 nM. The label itself says the mechanism of therapeutic action is unknown.
+* **AHR -> NRF2 direction.** Miao 2005 (abstract): AHR activation drives Nrf2 transcription through XRE-like elements; AHR siRNA abolishes TCDD-induced NRF2 mRNA. In microglia (BV2 / primary), FICZ raised Nrf2 DNA-binding under LPS (read in part; another agonist, inflammatory context). Tapinarof raises HO-1 in HaCaT cells, with protection blocked by both an AhR antagonist and an Nrf2 inhibitor (abstract; skin). Not found: tapinarof in any neural cell; AhR/NRF2 crosstalk in astrocytes or neurons beyond microglia.
+* **Adverse effects of AhR activation in neural cells (all TCDD, a persistent agonist; abstracts).** NPC proliferation slowed by G1 arrest; adult hippocampal neurogenesis impaired by TCDD and, separately, by AhR deletion ("proper modulation" is the recurring theme); embryonic zebrafish brain morphogenesis disrupted. Tapinarof is rapidly metabolised, so transfer is unmeasured; the direction of risk is toward the progenitor and neurogenesis axis.
+* **Caveats on the NRF2 route itself.** Tapinarof is a redox-active stilbene (radical scavenging; about 50% degraded in 48 h at pH 7.4; phototoxic in keratinocytes at 3.7 uM under UVA), so NRF2 activation may be AhR-independent and dosing in multi-day cultures is uncertain. Locally AHRR (an AhR-target repressor) is 3.0x higher in the KO organoid while NFE2L2 is 0.75x: descriptive, 4 v 2 libraries, but it argues against AHR -> NFE2L2 being what sets NFE2L2 there.
+
+## 6. What was read, at what depth (full list: `reading_depth_batch2.tsv`; receipts: `receipts/`)
+
+* **Partial full text (6):** Cho 2015 (PMID 26199140, the only DOT1L -> MYC reference), Zhang 2019 (31888761), Franz 2019 (30329130), Ciceri 2024 (38297124), Jiang 2020 (32049046, the only AURKB -> MYC reference), the microglia AhR-Nrf2 paper (40607255). Only the sections named in each receipt were read; methods, figures and supplements were not. None is a complete read.
+* **Abstract only (15):** PMIDs 23240617, 20486776, 36523606, 40494548, 23358665, 28595996, 15790560, 34713415, 40126804, 24673513, 38154665, 21741596, 26299268, 40945864, 39067626.
+* **Label read, no receipt (a label is not a study):** VTAMA US label (DailyMed SPL v4, 2025-07-30). **Titles only, not cited as read:** 37838333 (abstract empty in PubMed), the six EZH2 -> NFE2L2 references, 32814769, 30171029.
+* 42 verbatim quotes (L1-L20, A1-A18, D1-D4) are in `locators_batch2.tsv`; every one was matched by exact string against the text served on 2026-11-03 before the file was written. The served texts were not snapshotted to the repository, so the receipts use `source_kind` `fulltext_remote` or `abstract` and `source_fingerprint` null.
+
+## 7. Missing data and what could not be verified (consolidated)
+
+No measurement of the DOT1L -> MYC, AURKB -> MYC or AHR -> NFE2L2 relation exists in any WWOX-deficient or neural system retrieved. No CNS exposure for EPZ004777, TAK-901 or tapinarof. Not read in full: Daigle 2011 (route, pharmacokinetics, assay durations), Farrell 2013 (the "not Aurora A" statement is unreconciled with ChEMBL AURKA/TPX2 IC50 21 nM), Smith 2017, Miao 2005 (cell type of the knockdown). The dose and schedule of EPZ004777 in Ciceri 2024 were not found in the text served. Whether the seed's "MYC" (PMID 42397075) is MYC or also MYCN is unverified (MYCN is 5-7x more abundant locally). FBXW7 and GSK3B status in radial glia unknown. AHR is 3-6 cpm in the organoid and absent from the hNPC table (a table-membership fact, not a measured zero); organoid and hNPC comparisons are descriptive (4 v 2 libraries; one library per hNPC arm). ChEMBL and PubMed are moving services (counts as of 2026-11-03). The selection of AhR-in-neural-cells papers is mine and not exhaustive; PubMed's term mapping may drop conditions, so a missing paper is not a missing literature.
+
+## 8. Files
+
+| File | What |
+|---|---|
+| `qualification_it22_p4_batch2.tsv` | one row per proposal (24 columns) plus a pointer row for IT21P2-0993 |
+| `edge_provenance_batch2.tsv`, `status_after_batch2.tsv`, `reading_depth_batch2.tsv`, `locators_batch2.tsv`, `receipts/` | edge checks, status (unchanged), reading depth, 42 verbatim locators, 21 prepared receipts (event IDs `FTR-20261103-<pmid>-01`; none existed in the ledger for these PMIDs when checked with `fulltext_receipts.py status`) |
+| `chembl_batch2_*.tsv`, `class_alternatives_*.tsv`, `organoid_gene_rows_batch2.tsv`, `hnpc_gene_rows_batch2.tsv` | retrieved and tabulated data |
+| `collect_chembl_batch2.py`, `build_tables_batch2.py`, `make_receipts_batch2.py` | scripts (`run`, `write`, `write TEXT_DIR`) |

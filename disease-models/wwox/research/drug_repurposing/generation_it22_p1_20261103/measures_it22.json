@@ -247,6 +247,73 @@
   "seed_support_limited_rows": 126,
   "work_done_rows": 107
  },
+ "S4_reverse_test_fixes": {
+  "attribution_states": {
+   "ATTRIBUTABLE": 87,
+   "BORDERLINE_POTENT_MAIN_TARGET": 6,
+   "NOT_ASSESSABLE": 753,
+   "NOT_COMPARABLE_MEASURES": 21,
+   "SECONDARY_ACTIVITY_MEASURED": 13,
+   "SINGLE_MEASURED_TARGET": 90,
+   "UNMEASURED_AT_MAIN_TARGET": 24,
+   "WEAK_ATTRIBUTION": 6
+  },
+  "blockers": {
+   "ELIGIBLE": 217,
+   "arm_has_no_stated_benefit_hypothesis": 96,
+   "decided_in_earlier_qualification_record": 21,
+   "identity_not_resolved": 567,
+   "main_target_weak_attribution": 4,
+   "modality_antibody_not_small_molecule": 6,
+   "modality_protein_or_peptide_not_small_molecule": 5,
+   "modality_unknown_not_small_molecule": 11,
+   "reach_null_not_confirming": 49,
+   "shared_premise_refuted": 24
+  },
+  "by_question_handover": {
+   "Q2": 4,
+   "Q4": 1,
+   "Q5": 6,
+   "Q6": 3,
+   "Q8": 2
+  },
+  "by_question_rows": {
+   "Q2": 51,
+   "Q4": 87,
+   "Q5": 282,
+   "Q6": 560,
+   "Q8": 20
+  },
+  "clusters": 154,
+  "compounds": 792,
+  "eligible_clusters": 45,
+  "eligible_rows": 217,
+  "families": 868,
+  "handover_compounds": 16,
+  "handover_ids": [
+   "IT21P2-0005",
+   "IT21P2-0014",
+   "IT21P2-0035",
+   "IT21P2-0043",
+   "IT21P2-0052",
+   "IT21P2-0217",
+   "IT21P2-0221",
+   "IT21P2-0236",
+   "IT21P2-0296",
+   "IT21P2-0380",
+   "IT21P2-0402",
+   "IT21P2-0425",
+   "IT21P2-0431",
+   "IT21P2-0456",
+   "IT21P2-0993",
+   "IT21P2-1008"
+  ],
+  "handover_rows": 16,
+  "rows": 1000,
+  "rows_with_carried_limits": 238,
+  "seed_support_limited_rows": 146,
+  "work_done_rows": 107
+ },
  "deltas": {
   "S0_IT21->S1_P1": {
    "handover_added": [
@@ -297,10 +364,51 @@
    "state_changed_n": 0,
    "withdrawn": [],
    "withdrawn_n": 0
+  },
+  "S3_P1_P2_P3->S4_reverse_test_fixes": {
+   "handover_added": [],
+   "handover_removed": [],
+   "released": [],
+   "released_n": 0,
+   "rows_new": 0,
+   "rows_retired_from_the_table": 0,
+   "state_changed": [],
+   "state_changed_n": 0,
+   "withdrawn": [],
+   "withdrawn_n": 0
   }
  },
  "q2_q3_dependence_on_the_failed_second_system": {
-  "hnpc_excluded_arm": "seed sets: Q2 has no gene seed left (all 8 placed rows are hNPC-supported), Q3 keeps 1 of 6; engine re-run of Q3 gives 0 seed-specific rows (eng_arm)",
+  "hnpc_excluded_arm": {
+   "Q2": {
+    "placed_main": 8,
+    "placed_without_that_library": 0
+   },
+   "Q3": {
+    "placed_main": 6,
+    "placed_without_that_library": 1
+   },
+   "Q4": {
+    "placed_main": 6,
+    "placed_without_that_library": 6
+   },
+   "Q5": {
+    "placed_main": 3,
+    "placed_without_that_library": 3
+   },
+   "Q6": {
+    "placed_main": 2,
+    "placed_without_that_library": 2
+   },
+   "Q7": {
+    "placed_main": 1,
+    "placed_without_that_library": 1
+   },
+   "Q8": {
+    "placed_main": 1,
+    "placed_without_that_library": 0
+   }
+  },
   "q2_rows": 51,
   "q2_rows_limited": 51,
   "q3_rows": 0,

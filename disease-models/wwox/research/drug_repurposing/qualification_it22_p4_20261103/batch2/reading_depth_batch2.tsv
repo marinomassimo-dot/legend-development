@@ -1,0 +1,27 @@
+pmid_or_source	paper	depth	read	not_read	receipt
+26199140	Cho 2015 Nat Commun	partial_fulltext_read	abstract, intro (2 paragraphs), results (EMT-TF, c-Myc sections), discussion paragraphs	methods, figures, supplement	FTR-20261103-26199140-01
+31888761	Zhang 2019 Clin Epigenetics	partial_fulltext_read	abstract, c-Myc results section, EPZ004777 passages	other results, methods, discussion	FTR-20261103-31888761-01
+30329130	Franz 2019 NAR	partial_fulltext_read	abstract and keyword passages	no section in full	FTR-20261103-30329130-01
+38297124	Ciceri 2024 Nature	partial_fulltext_read	abstract and keyword passages	no section in full; EPZ004777 dose not found	FTR-20261103-38297124-01
+32049046	Jiang 2020 Cancer Cell	partial_fulltext_read	abstract, MYC destabilisation results section, keyword passages	other sections, STAR methods, supplement	FTR-20261103-32049046-01
+40607255	Melatonin AhR-Nrf2 microglia 2025	partial_fulltext_read	abstract, intro opening, keyword passages	methods, figures, in vivo	FTR-20261103-40607255-01
+23240617	Latchney 2013	abstract_only	abstract, first intro paragraph	full text	FTR-20261103-23240617-01
+20486776	NPC and TCDD 2011	abstract_only	abstract (PMC record served the abstract only)	full text	FTR-20261103-20486776-01
+36523606	AHR zebrafish brain 2022	abstract_only	abstract	full text retrieved, not read	FTR-20261103-36523606-01
+40494548	DOT1L loss NDD, Brain 2026	abstract_only	abstract	full text not served	FTR-20261103-40494548-01
+23358665	Farrell 2013 TAK-901	abstract_only	abstract	full text (not open)	FTR-20261103-23358665-01
+28595996	Smith 2017 tapinarof	abstract_only	abstract	full text (not open)	FTR-20261103-28595996-01
+15790560	Miao 2005 AHR-NRF2	abstract_only	abstract	full text (not open)	FTR-20261103-15790560-01
+34713415	Tapinarof maximal use 2022	abstract_only	abstract	full text	FTR-20261103-34713415-01
+40126804	Tapinarof paediatric maximal use 2025	abstract_only	abstract	full text	FTR-20261103-40126804-01
+24673513	Benvitimod healthy subjects	abstract_only	abstract	full text	FTR-20261103-24673513-01
+38154665	Tapinarof clinical review 2024	abstract_only	abstract	full text	FTR-20261103-38154665-01
+21741596	Daigle 2011 EPZ004777	abstract_only	abstract	full text (PK and route unread)	FTR-20261103-21741596-01
+26299268	Roidl 2016 DOT1L NSC	abstract_only	abstract	full text	FTR-20261103-26299268-01
+40945864	Tapinarof AhR/Nrf2 HaCaT 2025	abstract_only	abstract	full text	FTR-20261103-40945864-01
+39067626	Tapinarof redox/phototoxicity 2024	abstract_only	abstract	full text	FTR-20261103-39067626-01
+VTAMA label	US label, DailyMed SPL v4 2025-07-30	regulatory label read (sections 4, 6, 8.1, 8.4, 12.1-12.3 in the SPL text)	sections named	tables of adverse reactions in full	none (a label is not a study; no receipt prepared)
+37838333	Tapinarof regulates SEMA3A through NRF2 (JID 2024)	title only (PubMed abstract empty)	title	everything	none (not cited as read)
+24928441, 35230663, 32972446, 37432566, 36074295, 37048131	EZH2 -> NFE2L2 edge references	titles only	titles	everything	none (not cited as read)
+32814769, 30171029	DOT1L-MYC in prostate and myeloma	titles only	titles	everything	none (not cited as read)
+ChEMBL REST, OmniPath, Guide to Pharmacology (local release), GSE156243 / GSE126075 (local files)	data	retrieved and tabulated	see chembl_batch2_*.tsv, class_alternatives_*.tsv, *_gene_rows_batch2.tsv		

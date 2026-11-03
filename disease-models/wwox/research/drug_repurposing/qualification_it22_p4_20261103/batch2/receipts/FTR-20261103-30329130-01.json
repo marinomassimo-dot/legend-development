@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-03T14:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "unavailable",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-03T14:40:00Z",
+ "event_id": "FTR-20261103-30329130-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Open article (Nucleic Acids Res 2019, mouse). NOT WWOX EVIDENCE. Read: abstract and the passages on PAX6, SATB2 and the inhibitors SGC0946 / EPZ5676 found by keyword search (no results section read in full); methods, figures and supplement not read.",
+  "locator L7 (Results), verbatim: \"Loss of DOT1L reduced the total number of PAX6- and SATB2-positive cells at E18.\"",
+  "locator L8 (Abstract), verbatim: \"Loss of DOT1L results in reduced numbers of progenitors expressing genes including SoxB1 gene family members.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch2/README.md",
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch2/qualification_it22_p4_batch2.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC full-text XML for PMC6326801, rendered to text, 2026-11-03; bytes not saved to the repository",
+ "study_id": {
+  "doi": "10.1093/nar/gky953",
+  "pmid": "30329130"
+ },
+ "workflow": "IT22 P4 batch2 qualification (qualification_it22_p4_20261103/batch2), question-driven: What does genetic Dot1l loss do to progenitor numbers and SATB2 neurons in mouse cortex? Prepared as a JSON file for the integrator; was not appended by the preparing actor. The served text was not snapshotted to files/, so locator text cannot be machine-matched against a local artefact; the quotes were matched against the text as served at preparation time."
+}

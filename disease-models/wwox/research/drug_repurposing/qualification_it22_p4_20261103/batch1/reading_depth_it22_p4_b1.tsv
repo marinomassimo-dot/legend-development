@@ -1,0 +1,27 @@
+pmid	pmcid	citation	depth_in_this_package	used_for	receipt_prepared
+24990963	PMC4083087	EglN2/FOXO3a 2014 Genes Dev	partial_fulltext_read (existing ledger event FTR-20261030-24990963-01); this package re-inspected abstract and selected passages and verified L1-L3; NO new receipt	EGLN2 -| FOXO3; agents used were non-selective	none (earlier receipt stands)
+28689659	PMC6571149	Bcl3 phosphorylation 2017 Mol Cell	queried_not_full_read (selected passages of the open text via keyword search; abstract_only receipt FTR-20261103-28689659-01 exists)	MAPK1 -> BCL3; sign routes; no TNF datum; L4-L6, N3	receipts/FTR-20261103-28689659-02.json
+20181828	PMC2854092	p8/FoxO3/bnip3 2010 Mol Biol Cell	abstract_only (text matched only for the two abstract quotes)	FOXO3 -> BNIP3 reference; L7	receipts/FTR-20261103-20181828-01.json
+32616501	PMC7611345	AT13148 first-in-human 2020 Clin Cancer Res	partial_fulltext_read (Introduction, Methods, Results, Discussion read; figures, tables, supplement, references not read)	AT-13148 ROCK/AKT profile, toxicity, no MK2 string; L8-L11, N1	receipts/FTR-20261103-32616501-01.json
+39914641	PMC12063501	desidustat stroke CKD mice 2025 Exp Neurol	partial_fulltext_read (Introduction through Conclusion read; figures, supplement, references not read)	desidustat in CNS-relevant mouse model, class action, PK, no FOXO/BNIP3 readout; L12-L15, N2	receipts/FTR-20261103-39914641-01.json
+22991226		HDAC5 glucose uptake 2012 J Mol Endocrinol	abstract_only (existing event FTR-20261103-22991226-01)	HDAC5 knockdown lowers GLUT1 in muscle; pan-HDACi GLUT1 not stated	none (existing receipt stands)
+15629715		MAPKAP kinase-2 checkpoint kinase 2005 Mol Cell	abstract_only	MK2 phosphorylates Cdc25B/C (Cdc25A not named in the abstract)	receipts/FTR-20261103-15629715-01.json
+17292828		p38MAPK/MK2 in p53-deficient cells 2007 Cancer Cell	abstract_only	MK2 depletion abrogates the Cdc25A-mediated S-phase checkpoint in p53-deficient cells after cisplatin	receipts/FTR-20261103-17292828-01.json
+21670150		Cdc25A/Foxo1 breast cancer 2011 Mol Cell Biol	abstract_only	Cdc25A enhances Foxo1 stability by dephosphorylating Cdk2 in breast cancer cells (full-text route returned an empty body)	receipts/FTR-20261103-21670150-01.json
+16783365		hypothalamic Foxo1 2006 Nat Neurosci	abstract_only	hypothalamic Foxo1 stimulates NPY and AgRP transcription through PI3K/Akt	receipts/FTR-20261103-16783365-01.json
+15465827		BCL-3 and p50 2004 J Biol Chem	abstract_only	BCL-3 with p50 attenuates LPS-induced TNFalpha in macrophages, HDAC1 recruitment	receipts/FTR-20261103-15465827-01.json
+22798670		Cyclophilin B / Bcl-3 2012 J Immunol	abstract_only	Bcl-3 induction reduces TNFalpha in LPS-stimulated macrophages; knockdown restores	receipts/FTR-20261103-22798670-01.json
+22781553		AT13148 multi-AGC inhibitor 2012 Clin Cancer Res	abstract_only	AT13148 is a multi-AGC kinase inhibitor (AKT, p70S6K, PKA, ROCK, SGK); no MK2 named; a ChEMBL mechanism reference for MK2	receipts/FTR-20261103-22781553-01.json
+25840982		Rho kinase inhibitors block melanoma 2015 Cancer Res	abstract_only	AT13148 inhibits ROCK1/2 in melanoma cells; no MK2 named; a ChEMBL mechanism reference for MK2	receipts/FTR-20261103-25840982-01.json
+29360358		Fused pyrimidine hydroxamates 2018 J Med Chem	abstract_only	document behind the pracinostat HDAC panel IC50 values in ChEMBL (abstract does not state them)	receipts/FTR-20261103-29360358-01.json
+39383771		naporafenib + rineterkib phase 1b 2024 Lung Cancer	abstract_only	rineterkib is an ERK1/2 inhibitor; RDE 200 mg QD; DUSP6 mRNA -45.5% on treatment with naporafenib	receipts/FTR-20261103-39383771-01.json
+38759372		SB939 EAE 2024 Int Immunopharmacol	abstract_only	pracinostat (SB939) halts EAE in mice, neuronal IDO1-dependent	receipts/FTR-20261103-38759372-01.json
+30841499		HDACi BDNF neurite outgrowth 2019 Int J Mol Sci	abstract_only	SB-939 raised BDNF expression and neurite outgrowth in hNPC-derived neurons	receipts/FTR-20261103-30841499-01.json
+42415186		HDACi safety in children 2026 Clin Epigenetics	abstract_only	paediatric toxicity of six HDAC inhibitors incl. pracinostat, mainly haematological	receipts/FTR-20261103-42415186-01.json
+30290271		(seed paper)	abstract_only in this package (existing ledger events not re-read)	seed paper (Wwox KO mouse hippocampus): NPY interneuron loss, Tnf/Il6 up; existing ledger events	none
+36828035		(seed paper)	abstract_only in this package (existing ledger events not re-read)	seed paper (P47T mouse): neuroinflammation; existing ledger events	none
+34268881		(seed paper)	abstract_only in this package (existing ledger events not re-read)	seed paper (organoid model); existing ledger events	none
+29191878		(not read)	title/ChEMBL row only; paper NOT read	Kd values (kinobeads) incl. MAPKAPK2 > 30000 nM: taken from the ChEMBL activity row only	none
+25637120		(not read)	title/ChEMBL row only; paper NOT read	pracinostat Ki panel: ChEMBL row only	none
+40263713		(not read)	title/ChEMBL row only; paper NOT read	desidustat enzyme panel: ChEMBL row only	none
+32791404		(not read)	title/ChEMBL row only; paper NOT read	review compilation of cell IC50: ChEMBL row only	none

@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-03T14:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "unavailable",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-03T14:40:00Z",
+ "event_id": "FTR-20261103-38297124-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Open article (Nature 2024, human PSC-derived cortical neurons). NOT WWOX EVIDENCE. Read: abstract and the passages naming DOT1L, EPZ004777, GSK343 found by keyword search; no section read in full; the dose and schedule of EPZ004777 were not found in the text served; figures and extended data not read.",
+  "locator L9 (Abstract), verbatim: \"Transient inhibition of EZH2, EHMT1 and EHMT2 or DOT1L, at progenitor stage primes newly born neurons to rapidly acquire mature properties upon differentiation.\"",
+  "locator L10 (Results), verbatim: \"Transient inhibition of EZH2, EHMT1/2 and DOT1L in NPCs using GSK343, UNC0638 and EPZ004777, respectively, induced increased NEFH and STX1A expression in d35 neurons\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch2/README.md",
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch2/qualification_it22_p4_batch2.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC full-text XML for PMC10881400, rendered to text, 2026-11-03; bytes not saved to the repository",
+ "study_id": {
+  "doi": "10.1038/s41586-023-06984-8",
+  "pmid": "38297124"
+ },
+ "workflow": "IT22 P4 batch2 qualification (qualification_it22_p4_20261103/batch2), question-driven: Was EPZ004777 or DOT1L inhibition tested in human NPCs, and what did it do? Prepared as a JSON file for the integrator; was not appended by the preparing actor. The served text was not snapshotted to files/, so locator text cannot be machine-matched against a local artefact; the quotes were matched against the text as served at preparation time."
+}

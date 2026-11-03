@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-03T14:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-03T14:40:00Z",
+ "event_id": "FTR-20261103-36523606-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Abstract analysed (the first part as printed); the PMC text was retrieved but not read beyond the abstract. NOT WWOX EVIDENCE.",
+  "locator L20 (Abstract), verbatim: \"Early embryonic TCDD exposure impaired embryonic brain morphogenesis, resulted in ventriculomegaly, and disrupted neural connectivity\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch2/README.md",
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch2/qualification_it22_p4_batch2.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 36523606 (abstract as served 2026-11-03)",
+ "study_id": {
+  "doi": "10.3389/fnmol.2022.1032302",
+  "pmid": "36523606"
+ },
+ "workflow": "IT22 P4 batch2 qualification (qualification_it22_p4_20261103/batch2), question-driven: Is AhR activation by an agonist adverse for embryonic brain development in a vertebrate model? Prepared as a JSON file for the integrator; was not appended by the preparing actor. The served text was not snapshotted to files/, so locator text cannot be machine-matched against a local artefact; the quotes were matched against the text as served at preparation time."
+}

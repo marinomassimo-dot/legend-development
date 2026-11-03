@@ -52,9 +52,17 @@ def main():
         nxt += 1
         seeds.append(r)
     by = {r["seed_id"]: r for r in seeds}
+    for r in seeds:                                         # derived once, before it is used below (G3)
+        if r["usable_for_generation"] == "yes" and "GSE126075" in (r["context"] + r["reason"] + r["source_locator"]) and r["seed_id"] not in HNPC_ROWS:
+            HNPC_ROWS.append(r["seed_id"])
     tag = lambda r, t: r.__setitem__("guard_tag", ";".join(sorted({x for x in (r["guard_tag"] + ";" + t).split(";") if x})))
     for sid in HNPC_ROWS:                                   # D01: carried to every proposal these rows generate, as an annotation (check_seeds.py allows one machine guard per row, and the existing one stays)
         by[sid]["change_ref"] = (by[sid]["change_ref"] + ";" if by[sid]["change_ref"] else "") + "it22-D01"
+    by_all = {r["seed_id"]: r for r in seeds}
+    deposit = [r["seed_id"] for r in seeds if r["usable_for_generation"] == "yes" and "GSE126075" in (r["context"] + r["reason"] + r["source_locator"])]      # IT22 reverse test G3: by DEPOSIT, not by a hand list of seed ids
+    for sid in deposit:
+        if sid not in HNPC_ROWS:
+            HNPC_ROWS.append(sid)
     wr(out / "seed_annotations.tsv", [dict(seed_id=sid, annotation="SECOND_SYSTEM_GATE_FAILED", source="hnpc_gse126075_it5_20261029/RESULTS.md section 1") for sid in HNPC_ROWS], ["seed_id", "annotation", "source"])
     tag(by["S116"], "NPY_SIGN_CONTESTED"); by["S116"]["change_ref"] = (by["S116"]["change_ref"] + ";" if by["S116"]["change_ref"] else "") + "it22-B"
     r79 = by["S079"]                                        # latent hazard: a cell-type marker set must never become a gene seed if the ortholog table is completed later

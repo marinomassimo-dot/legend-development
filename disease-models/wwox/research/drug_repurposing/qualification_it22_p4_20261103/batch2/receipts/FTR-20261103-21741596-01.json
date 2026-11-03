@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-03T14:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-03T14:40:00Z",
+ "event_id": "FTR-20261103-21741596-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Abstract analysed in full; used for one labelled fact (primary description of EPZ004777 selectivity for MLL-rearranged cells); no full text was obtained. NOT WWOX EVIDENCE.",
+  "locator A18 (Abstract), verbatim: \"Exposure of leukemic cells to EPZ004777 results in selective killing of those cells bearing the MLL gene translocation, with little effect on non-MLL-translocated cells.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch2/README.md",
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch2/qualification_it22_p4_batch2.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 21741596 (abstract and metadata as served 2026-11-03)",
+ "study_id": {
+  "doi": "10.1016/j.ccr.2011.06.009",
+  "pmid": "21741596"
+ },
+ "workflow": "IT22 P4 batch2 qualification (qualification_it22_p4_20261103/batch2), question-driven: primary description of EPZ004777 selectivity for MLL-rearranged cells? Prepared as a JSON file for the integrator; was not appended by the preparing actor. The served text was not snapshotted to files/, so locator text cannot be machine-matched against a local artefact; the quotes were matched against the text as served at preparation time."
+}

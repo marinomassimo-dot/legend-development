@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-03T14:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-03T14:40:00Z",
+ "event_id": "FTR-20261103-23358665-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Abstract analysed in full; used for one labelled fact (primary characterisation of TAK-901: selectivity, cellular engagement, phenotype); no full text was obtained. NOT WWOX EVIDENCE.",
+  "locator A1 (Abstract), verbatim: \"TAK-901 exhibited time-dependent, tight-binding inhibition of Aurora B, but not Aurora A.\"",
+  "locator A2 (Abstract), verbatim: \"TAK-901 suppressed cellular histone H3 phosphorylation and induced polyploidy.\"",
+  "locator A3 (Abstract), verbatim: \"In various human cancer cell lines, TAK-901 inhibited cell proliferation with effective concentration values from 40 to 500 nmol/L.\"",
+  "locator A4 (Abstract), verbatim: \"TAK-901 potently inhibited only a few kinases other than Aurora B in intact cells, including FLT3 and FGFR2.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch2/README.md",
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p4_20261103/batch2/qualification_it22_p4_batch2.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 23358665 (abstract and metadata as served 2026-11-03)",
+ "study_id": {
+  "doi": "10.1158/1535-7163.MCT-12-0657",
+  "pmid": "23358665"
+ },
+ "workflow": "IT22 P4 batch2 qualification (qualification_it22_p4_20261103/batch2), question-driven: primary characterisation of TAK-901: selectivity, cellular engagement, phenotype? Prepared as a JSON file for the integrator; was not appended by the preparing actor. The served text was not snapshotted to files/, so locator text cannot be machine-matched against a local artefact; the quotes were matched against the text as served at preparation time."
+}
