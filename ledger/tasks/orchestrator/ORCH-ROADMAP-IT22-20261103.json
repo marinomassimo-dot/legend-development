@@ -8,7 +8,8 @@
  "START_UTC": "2026-11-03T18:11:13Z",
  "BASELINE": "development/main = local main = d6de0a5aef72f228ef7477be6f6394c2b4b0db94 (fetched 2026-11-03T18:11:13Z); CI Public release gate success on d6de0a5a; one worktree at start plus task worktree; no active jobs; 15 GiB RAM (10 available), 81 GB disk free. IT21 content SHA 8adb49db; 980 conditional proposals; 11 handed to qualification; 0 QUALIFIED_HYPOTHESIS; 968 chained receipts.",
  "DECISIONS_TAKEN": [
-  "2026-11-03: operator integration 'priorita al rendimento della ricerca' queued: majority of active work on P3-P6 (connect unused WWOX observations with proof of which proposals change; complementary routes with justified method; alternatives inside known classes only on specific data; primary sources of emerging hypotheses; a dedicated partial-benefit selection); each emerging hypothesis answers why not proposed before / what knowledge now used / does the fix work on another case; novelty, evidence strength, WWOX relevance, feasibility shown separately; abstention only after documented exploration"
+  "2026-11-03: operator integration 'priorita al rendimento della ricerca' queued: majority of active work on P3-P6 (connect unused WWOX observations with proof of which proposals change; complementary routes with justified method; alternatives inside known classes only on specific data; primary sources of emerging hypotheses; a dedicated partial-benefit selection); each emerging hypothesis answers why not proposed before / what knowledge now used / does the fix work on another case; novelty, evidence strength, WWOX relevance, feasibility shown separately; abstention only after documented exploration",
+  "2026-11-03: operator follow-on package 'dashboard multilingue' queued as OBJ_P11, executed after the IT22 battery closed (frozen candidate 03ac7b8c untouched)"
  ],
  "DEFAULTS_TAKEN": [],
  "STOP_LOG": [
@@ -131,7 +132,18 @@
    "steps": [
     {
      "step": "P10 battery on frozen candidate, push, CI, served dashboard, cleanup, dossier-audit timeout classification, final report",
-     "status": "PENDING",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "battery PASS WITH SKIPS on 03ac7b8c (197 targets, 8 skipped), pushed with the gate PASS; CI and Pages pending"
+    }
+   ]
+  },
+  "OBJ_P11": {
+   "order": 12,
+   "steps": [
+    {
+     "step": "P11 multilingual dashboard (EN initial, IT/FR/ES/DE, mobile selector, preference kept, translations apart from the scientific data, original-language-only passages flagged), regenerate and publish the shareable package; executed after the IT22 battery closed",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator"
     }
    ]
