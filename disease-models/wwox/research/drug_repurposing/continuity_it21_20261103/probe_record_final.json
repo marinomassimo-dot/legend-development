@@ -1,0 +1,40 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT21-RESUME-20261103",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "LOW",
+ "OBJECTIVE": "Diagnostic probe: prove a resume by the scheduled cron to a really stopped session. No repository change.",
+ "START_UTC": "2026-11-03T06:40:00Z",
+ "BASELINE": "probe",
+ "DECISIONS_TAKEN": [
+  "2026-11-03: probe proved resume to a really stopped session; no repository commit, no network, per mandate"
+ ],
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": [],
+ "AUTHORISED_QUEUE_20261103P": {
+  "MANDATE_STATE": "COMPLETE",
+  "OBJ_R1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "R1: if ~/.local/state/legend/probe_it21/r1.txt is absent write the UTC time into it and write checkpoint.json {step:R1} in the same dir",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "r1.txt written 2026-11-03T07:45:19Z at ~/.local/state/legend/probe_it21/; checkpoint.json = {step:R1}; session then stopped awaiting resume"
+    }
+   ]
+  },
+  "OBJ_R2": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "R2: only if checkpoint.json says R1 and r2.txt is absent, write r2.txt with the UTC time and the line count of r1.txt, set checkpoint.json {step:R2}; then mark both steps DONE in this record and set MANDATE_STATE COMPLETE",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "resumed by hourly watch; checkpoint read as R1; r2.txt written 2026-11-03T08:38:04Z with r1 line count 1; checkpoint.json = {step:R2}"
+    }
+   ]
+  }
+ }
+}
