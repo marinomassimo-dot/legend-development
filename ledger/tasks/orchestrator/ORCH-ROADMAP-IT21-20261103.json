@@ -7,7 +7,9 @@
  "OBJECTIVE": "Iteration 21: generate new WWOX-guided pharmacological hypotheses (compound -> action -> biological context -> hypothesised benefit -> discriminating experiment) and carry them to verifiable qualification and an understandable research priority. Computational capability is not biological benefit.",
  "START_UTC": "2026-11-03T06:20:00Z",
  "BASELINE": "development/main = local main = 7fe0f0972472257edb27443bcc226f3b3459aa3e (fetched 2026-11-03); code SHA e7f00f13 CI green; one worktree at start.",
- "DECISIONS_TAKEN": [],
+ "DECISIONS_TAKEN": [
+  "2026-11-03: operator integration (from available knowledge to effective generation; vorinostat case) queued as OBJ_P11 without interrupting running packages"
+ ],
  "DEFAULTS_TAKEN": [],
  "STOP_LOG": [],
  "AUTHORISED_QUEUE_20261103": {
@@ -17,9 +19,9 @@
    "steps": [
     {
      "step": "P0 baseline, record, MANDATE_BOUND, diagnosis of the generative chain (observation->interpretation->path->action->compound->qualification->investigation->dashboard)",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "MANDATE_BOUND emitted first; generation_it21_p2_20261103/README.md section 1 diagnosis (9 breaks)"
     }
    ]
   },
@@ -28,9 +30,9 @@
    "steps": [
     {
      "step": "P1 scoped fixes: INV-01 glycaemic reconciliation with C04; INV-03 efonidipine/flunarizine pair qualification; claim_provenance ambiguity regression",
-     "status": "PENDING",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "INV-01/INV-03/claim_provenance corrected (task/it21-p1, merged); P8 E: the 4 new tests fail on the old code"
     }
    ]
   },
@@ -39,9 +41,9 @@
    "steps": [
     {
      "step": "P2 reactivate generator with current inputs (identity/aliases, target level, copy fixes, specific evidence, family limits, prodrug/active form, seed level)",
-     "status": "PENDING",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "generation_it21_p2_20261103: refreshed generator with IT19/IT20 guards + P8-fix sign guard; 980 conditional proposals, 13 handed on"
     }
    ]
   },
@@ -50,9 +52,9 @@
    "steps": [
     {
      "step": "P3 mechanistic exploration A/B/C/D across non-excitability mechanisms incl. one broad-recovery and one partial-benefit path",
-     "status": "PENDING",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "qualification_it21_p3b_20261103: 10 proposals outside excitability (Path B, phenotype-first), 0 qualified hypotheses"
     }
    ]
   },
@@ -61,9 +63,9 @@
    "steps": [
     {
      "step": "P4 substantive qualification of a small diversified set; novelty class; 5-field output",
-     "status": "PENDING",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "qualification_it21_p4a_20261103 (6 qualified/closed) + p3b (5); 19 receipts recorded (968 chained)"
     }
    ]
   },
@@ -72,9 +74,9 @@
    "steps": [
     {
      "step": "P5 generative-capacity and WWOX-contribution measurement with a fit-for-question comparison (not set vs filtered subset)",
-     "status": "PENDING",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "evaluation_it21_p5_20261103: no advantage of WWOX seed identity vs matched decoys; decoy arm re-run after the sign guard in progress"
     }
    ]
   },
@@ -83,9 +85,9 @@
    "steps": [
     {
      "step": "P6 scouting GitHub/HF/Nature targeted to generative gaps; radar questions update",
-     "status": "PENDING",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "scout_it21_p6_20261103: nothing adopted, radar fallback list updated + test"
     }
    ]
   },
@@ -94,9 +96,9 @@
    "steps": [
     {
      "step": "P7 ranking and dashboard: new qualified/conditional investigations; transparency of curation; publication limits by source; label and language fixes; publish and verify served",
-     "status": "PENDING",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "ranking + first screen with IT21 rows, informative negatives, P5 slot; shareable audit PASS"
     }
    ]
   },
@@ -105,9 +107,9 @@
    "steps": [
     {
      "step": "P8 independent verification (blind-first), autonomous follow-up, durable learnings",
-     "status": "PENDING",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "verification_it21_p8_20261103 done and P8-fix merged; follow-up F1 edge-reference screen done; V1 vorinostat integration running"
     }
    ]
   },
@@ -116,9 +118,9 @@
    "steps": [
     {
      "step": "P9 scheduled-cron resume proof with a dedicated diagnostic session, in parallel",
-     "status": "PENDING",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "continuity_it21_20261103: scheduled cron 08:37:47 resumed a really stopped session, R2 08:38:04, no duplication"
     }
    ]
   },
@@ -128,6 +130,17 @@
     {
      "step": "P10 validation, integration, full battery on the frozen SHA, CI, Pages, cleanup",
      "status": "PENDING",
+     "owner": "orchestrator",
+     "evidence": "pending: P5 decoy re-run, V1, then battery on the frozen SHA, CI, Pages"
+    }
+   ]
+  },
+  "OBJ_P11": {
+   "order": 12,
+   "steps": [
+    {
+     "step": "V1 operator integration: vorinostat retrospective diagnosis (forward snapshot frozen first), reverse analysis, path trace, general fixes with contrast cases, independent review, durable method",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
      "evidence": ""
     }
