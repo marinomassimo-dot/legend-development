@@ -1,0 +1,10 @@
+edge	screen_label	manual_verdict	manual_note	outcome	basis_flag
+HDAC5>SLC2A1	SUPPORTS	SUPPORTS	reference: knockdown lowers GLUT1	TN	
+KDM4C>HIF1A	NO_ABSTRACT_EVIDENCE	CONTESTED	sole reference is a review; not a measurement	FN	NO_CITED_REF_OR_ALL_ARE_REVIEWS
+HIF1A>HK2	SPLIT		no manual verdict of the sign	NOT_SCORED	
+BTK>STAT3	SUPPORTS	SUPPORTS	BTK down-regulates STAT3 activity	TN	
+STAT3>NPY	SPLIT	SUPPORTS	by title	FP	
+EZH2>IL6	SPLIT	CONTESTED	29132376: EZH2 inhibition raises IL6	TP	
+MAPK1>BCL3	NO_ABSTRACT_EVIDENCE	SUPPORTS	phosphorylation increases Bcl3 activity	TN	
+BCL3>TNF	SPLIT	SUPPORTS	by title	FP	
+SIRT1>MYC	SPLIT	CONTESTED	split 2 v 2 inside the edge's list	TP	

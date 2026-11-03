@@ -1,0 +1,13 @@
+proposal_id	edge	network_sign	refs_cited	refs_with_abstract	refs_review_type	refs_with_sign_sentence	n_support	n_oppose	label	basis_flag	depth
+IT21P2-0014	XIAP -P(+)-> HIF1A	+	1	1	0	1	2	0	SUPPORTS		abstract keyword/sentence heuristic; not a read
+IT21P2-0014	HIF1A -T(+)-> HK2	+	91	91	3	35	34	8	SPLIT		abstract keyword/sentence heuristic; not a read
+IT21P2-0221	ROCK2 -P(+)-> EP300	+	1	1	0	0	0	0	NO_ABSTRACT_EVIDENCE		abstract keyword/sentence heuristic; not a read
+IT21P2-0221	EP300 -T(+)-> TNF	+	14	14	0	7	5	2	SPLIT		abstract keyword/sentence heuristic; not a read
+IT21P2-0236	PIM2 -P(+)-> NFATC1	+	1	1	0	0	0	0	NO_ABSTRACT_EVIDENCE		abstract keyword/sentence heuristic; not a read
+IT21P2-0236	NFATC1 -T(+)-> IL6	+	6	6	0	3	4	1	SPLIT		abstract keyword/sentence heuristic; not a read
+IT21P2-0296	MAPK3 -P(-)-> BRD4	-	1	1	0	1	2	0	SUPPORTS		abstract keyword/sentence heuristic; not a read
+IT21P2-0296	BRD4 -T(+)-> TNF	+	6	6	0	2	2	0	SUPPORTS		abstract keyword/sentence heuristic; not a read
+IT21P2-0388	MAP3K7 -P(-)-> NFKBIB	-	1	1	0	0	0	0	NO_ABSTRACT_EVIDENCE		abstract keyword/sentence heuristic; not a read
+IT21P2-0388	NFKBIB -T(+)-> IL1B	+	7	7	0	5	1	6	SPLIT		abstract keyword/sentence heuristic; not a read
+IT21P2-0456	JAK2 -P(+)-> MYC	+	1	1	0	0	0	0	NO_ABSTRACT_EVIDENCE		abstract keyword/sentence heuristic; not a read
+IT21P2-0542	PGR -T(+)-> MYC	+	16	16	1	0	0	0	NO_ABSTRACT_EVIDENCE		abstract keyword/sentence heuristic; not a read

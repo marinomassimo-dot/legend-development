@@ -1,0 +1,10 @@
+proposal_id	edge	network_sign	refs_cited	refs_with_abstract	refs_review_type	refs_with_sign_sentence	n_support	n_oppose	label	basis_flag	depth
+IT21P2-0006	HDAC5 -T(+)-> SLC2A1	+	1	1	0	1	1	0	SUPPORTS		abstract keyword/sentence heuristic; not a read
+IT21P2-0008	KDM4C -P(+)-> HIF1A	+	1	1	1	0	0	0	NO_ABSTRACT_EVIDENCE	NO_CITED_REF_OR_ALL_ARE_REVIEWS	abstract keyword/sentence heuristic; not a read
+IT21P2-0008	HIF1A -T(+)-> HK2	+	91	91	3	35	34	8	SPLIT		abstract keyword/sentence heuristic; not a read
+IT21P2-0057	BTK -P(-)-> STAT3	-	2	2	1	1	2	0	SUPPORTS		abstract keyword/sentence heuristic; not a read
+IT21P2-0057	STAT3 -T(+)-> NPY	+	12	12	3	4	4	2	SPLIT		abstract keyword/sentence heuristic; not a read
+IT21P2-0195	EZH2 -T(+)-> IL6	+	16	16	1	8	3	6	SPLIT		abstract keyword/sentence heuristic; not a read
+IT21P2-0374	MAPK1 -P(+)-> BCL3	+	1	1	0	0	0	0	NO_ABSTRACT_EVIDENCE		abstract keyword/sentence heuristic; not a read
+IT21P2-0374	BCL3 -T(-)-> TNF	-	10	10	0	6	8	3	SPLIT		abstract keyword/sentence heuristic; not a read
+IT21P2-0512	SIRT1 -T(-)-> MYC	-	19	19	0	8	13	11	SPLIT		abstract keyword/sentence heuristic; not a read
