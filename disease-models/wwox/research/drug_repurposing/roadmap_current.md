@@ -219,6 +219,20 @@ Reusable guidance for any drug-repurposing package lives in these places only; r
   DGIdb-only twin read from the ligand id in the claim name (1,423 twins the catalogue never joined; stored catalogue unchanged, join applied at
   hand-over); and earlier qualification records as a decision source. `NAMED_ALREADY` on a lever means only that a card names the gene: read the
   card's state before calling a thread closed. Result and handoff list: [`diagnosis_it21_v1_20261103`](diagnosis_it21_v1_20261103/README.md).
+- **A decision travels only as far as its reason; incomparable measures give no exclusion; knowledge added is not knowledge consumed (IT22, measured).**
+  (1) An earlier decision on one molecule reaches another member of its mechanism cluster only inside the scope its own reason supports
+  (`generation_it22_p1_20261103/decision_scope_it22.tsv`, function `decision_effect`): molecule-specific reasons stay with the molecule, a refuted premise closes the
+  arm it belongs to, an unresolved premise travels as a carried limit, work already done lowers priority and says "not a discovery"; a decision with no recorded scope keeps
+  the old veto under its own label. Selection diversification, work done and a negative scientific judgement are three different reasons and are labelled apart.
+  (2) Potency is compared only between measures of the SAME type (IC50/EC50/Ki/Kd, compatible relation and assay class); otherwise the state is `NOT_COMPARABLE_MEASURES`
+  with the values kept; a measured secondary action (100 to 1,000 nM) is kept with an on-target-control requirement; the nM conventions are stated with a sensitivity, never a law
+  (`attribution_screen_it21.py`). (3) A new WWOX observation counts as used only when it is in the seed table (`build_inputs_it22.py` builds the amended inputs; `check_seeds.py` must PASS),
+  reaches the engine (incremental `run_v4.py --seeds-dir --only`), and shows in the proposals (guards become carried limits; counts in `measure_it22.py`). A control that failed in a
+  deposit (the shWWOX hNPC library did not show WWOX lower) is attached to every seed row of that deposit, by deposit, not by a list of ids. Cell-population facts are never gene seeds
+  (guard `COMPOSITION_NOT_REGULATION`). (4) Reverse test: freeze the forward output, then reconstruct the favourable reasons blind, then classify each as consumed, represented-not-executed,
+  executed-not-consumed, omission, justified exclusion, missing datum or representation limit; keep only fixes that also help a second case. Measured stage by stage
+  ([`measures_it22.json`](generation_it22_p1_20261103/measures_it22.json)): the P1 and P2 corrections changed selection, not the 980 generated rows; only the new input (P3) added generated rows (20).
+  Records: [`generation_it22_p1_20261103`](generation_it22_p1_20261103/README.md), [`diagnosis_it22_p6_20261103`](diagnosis_it22_p6_20261103/reverse/README.md).
 - Provenance through intermediaries and specific evidence (IT20): follow [the republished-claim bullet of the convention](../../../../framework/protocols/repurposing_adapter_convention.md); a verifier must recompute any 'X to 0' claim from a fresh regeneration (IT20: a claimed 21 to 0 was still 21).
 - Dated measurements and decisions are in the iteration section of the [module README](README.md) marked CURRENT.
 
