@@ -199,6 +199,20 @@ Reusable guidance for any drug-repurposing package lives in these places only; r
   stated. Before asking a package for new candidates, check how many needs can qualify one at all — a protein-level
   measurement that resolves a need's direction unlocks more of the catalogue than any compound search does. Measurement and
   method in [`hypotheses_it20_20261102/README.md`](hypotheses_it20_20261102/README.md).
+- **Generation is not the qualified filter, and WWOX identity is tested against decoys (IT21, measured).** The seed-graph
+  generator was re-run on current inputs (IT19/IT20 guards withdrew 235 of 1,202 seed-specific rows; conflicting or
+  glue-type actions carry no sign) and its output stays `CONDITIONAL_*` until a measurement resolves the role; nothing
+  leaves that vocabulary by pipeline (`CLOSED_AS_WRITTEN` is a terminal state, never a promotion). Retrospective result:
+  replacing the WWOX seed genes by degree- or reach-matched decoy genes yields about as many proposals (real count above the
+  decoy 95th percentile in 0 of 5 sets), so **WWOX identity adds no demonstrable advantage at this level**; the independent
+  routes that did produce a distinct conditional question were compound-first (Path B) and role-resolving probes. Two
+  pitfalls to carry: (1) an edge of the signed network can be contradicted by the references it cites; screen each chain
+  edge against its own references' abstracts before spending a qualification (`generation_it21_p2_20261103/
+  edge_ref_sign_screen_it21.py`; a prompt for human reading, validated precision 0.50 and not held out); (2) "new" is
+  relative to a perimeter that must include earlier exclusions and candidate lists, not only cards (P8 caught five earlier
+  threads presented as new). A partial `files/fulltext` corpus makes `audit-shareable` fail spuriously (every name looks
+  unattested): never create it in a worktree to carry a receipt. Records: [`evaluation_it21_p5_20261103`](evaluation_it21_p5_20261103/README.md),
+  [`verification_it21_p8_20261103`](verification_it21_p8_20261103/README.md).
 - Provenance through intermediaries and specific evidence (IT20): follow [the republished-claim bullet of the convention](../../../../framework/protocols/repurposing_adapter_convention.md); a verifier must recompute any 'X to 0' claim from a fresh regeneration (IT20: a claimed 21 to 0 was still 21).
 - Dated measurements and decisions are in the iteration section of the [module README](README.md) marked CURRENT.
 
