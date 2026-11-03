@@ -337,5 +337,31 @@ class Guards(unittest.TestCase):
         self.assertIn("not a depth of zero", rows[0]["evidence_depth"])
 
 
+class IT21Corrections(unittest.TestCase):
+    """IT21 P1: two statements in the published investigations were wider than the card or the catalogue behind them."""
+
+    def row(self, inv):
+        return next(r for r in load_all_rows() if r["inv_id"] == inv)
+
+    def test_glycaemia_is_not_called_prevented_and_the_three_ages_stay_distinct(self):
+        t = self.row("INV-01")["evidence_available"]
+        self.assertNotIn("glucose and weight endpoints are prevented", t)
+        low = t.lower()
+        for must in ("p10", "not significantly different from the untreated knockout", "p20", "comparator is absent",
+                     "age, dose and comparison", "not evidence of no benefit"):
+            self.assertIn(must, low)
+        self.assertNotIn("no effect", low.replace("not evidence of no benefit", ""), "no universal claim of inefficacy")
+
+    def test_the_t_type_pair_is_a_proposal_to_verify_and_its_falsifier_is_not_overstated(self):
+        r = self.row("INV-03")
+        blob = " ".join(r.values()).lower()
+        self.assertNotIn("isoform-discriminating", blob)
+        self.assertIn("proposal to verify", blob)
+        self.assertIn("annotation completeness", blob)
+        self.assertIn("absence of a subtype in a catalogue is not inactivity", blob)
+        self.assertNotIn("would weaken the t-type attribution rather than strengthen", blob)
+        self.assertIn("compatible with a common target", blob)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

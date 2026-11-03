@@ -377,5 +377,57 @@ class P3UnknownStaysUnknown(unittest.TestCase):
             self.assertEqual(got[key]["abstention_class"], cls, f"{cid} {target}")
 
 
+class P4CompatibleMatchIsNotIdentifiedOrigin(unittest.TestCase):
+    """IT21 P1. A copy matched to ChEMBL by molecule id + gene + action class is a COMPATIBLE match. When two records are
+    compatible, the descent is not identified and must not depend on the order the rows are listed in; when one is, it is kept
+    and labelled as a compatible match; the direct ChEMBL evidence is never touched."""
+
+    SINGLE = chembl_row("CHEMBLSP1", ["CACNA1G"], "BLOCKER", "SINGLE PROTEIN")
+    GROUP = chembl_row("CHEMBL2363032", BIG_GROUP, "BLOCKER", "PROTEIN COMPLEX GROUP")
+    COPY = dgidb_copy("CACNA1G", HGNC["CACNA1G"], "blocker")
+
+    def prov_for(self, targets):
+        e = entry("AMBIG", "Ambigine", targets)
+        copy = next(t for t in e["targets"] if t["source"] == "DGIdb interaction")
+        return rs.claim_provenance(e, copy, [REPUB])
+
+    def test_two_compatible_records_leave_the_descent_unresolved_in_either_order(self):
+        for order in ((self.SINGLE, self.GROUP), (self.GROUP, self.SINGLE)):
+            p = self.prov_for([*order, dict(self.COPY)])
+            self.assertIsNone(p["original_record"], "the first listed record must not be chosen")
+            self.assertIsNone(p["duplicate_of_record"])
+            self.assertEqual(p["republished_record_level"], "unresolved")
+            self.assertEqual(p["origin_basis"], "ambiguous_compatible_matches")
+            self.assertEqual(p["candidate_records"], ["CHEMBL2363032", "CHEMBLSP1"], "both candidates are named, sorted, order-free")
+            self.assertIn("not identified", p["missing"])
+
+    def test_an_ambiguous_copy_abstains_but_is_not_excluded_and_the_direct_rows_keep_their_direction(self):
+        for order in ((self.SINGLE, self.GROUP), (self.GROUP, self.SINGLE)):
+            idx = rs.Index([entry("AMBIG", "Ambigine", [*order, dict(self.COPY)])], FULL, MODULE)
+            got = rs.associations_for_need(N_TTYPE, idx, ROLES)["associations"]
+            copy = next(a for a in got if a["link_source"] == "DGIdb interaction")
+            self.assertEqual(copy["consistency"], "direction_unresolved")
+            self.assertEqual(copy["abstention_class"], "republished_claim_level_not_carried")
+            self.assertFalse(copy["excluded_from_counts"])
+            self.assertEqual(copy["action_raw"], "blocker", "an unresolved descent is not a negative")
+            direct = next(a for a in got if a["link_source"] == "ChEMBL curated mechanism" and a["target"] == "CACNA1G"
+                          and a.get("target_level") == "single_protein")
+            self.assertEqual(direct["consistency"], "consistent", "valid direct evidence is kept")
+            self.assertNotEqual(direct["assertion_key"], copy["assertion_key"], "an unresolved copy keeps its own key")
+
+    def test_one_compatible_record_is_kept_and_labelled_a_compatible_match(self):
+        p = self.prov_for([self.SINGLE, dict(self.COPY)])
+        self.assertEqual(p["original_record"], "CHEMBLSP1")
+        self.assertEqual(p["origin_basis"], "unique_compatible_match")
+        self.assertEqual(p["republished_record_level"], "single_protein")
+        p2 = self.prov_for([self.SINGLE, dict(self.SINGLE), dict(self.COPY)])
+        self.assertEqual(p2["origin_basis"], "unique_compatible_match", "two rows of ONE record are one candidate")
+
+    def test_no_compatible_record_is_stated_as_such(self):
+        p = self.prov_for([chembl_row("CHEMBLSP1", ["CACNA1G"], "ACTIVATOR", "SINGLE PROTEIN"), dict(self.COPY)])
+        self.assertEqual(p["origin_basis"], "no_compatible_record")
+        self.assertIsNone(p["original_record"])
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
