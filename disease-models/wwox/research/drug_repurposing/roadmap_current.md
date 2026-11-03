@@ -233,6 +233,16 @@ Reusable guidance for any drug-repurposing package lives in these places only; r
   executed-not-consumed, omission, justified exclusion, missing datum or representation limit; keep only fixes that also help a second case. Measured stage by stage
   ([`measures_it22.json`](generation_it22_p1_20261103/measures_it22.json)): the P1 and P2 corrections changed selection, not the 980 generated rows; only the new input (P3) added generated rows (20).
   Records: [`generation_it22_p1_20261103`](generation_it22_p1_20261103/README.md), [`diagnosis_it22_p6_20261103`](diagnosis_it22_p6_20261103/reverse/README.md).
+- **Evaluate an external capability on a frozen case, by what it changes in the calculation (IT23).** Freeze the current method's input and output on contrasting cases first
+  (`cases_it23_p1_20261103`); then ask of each capability: which unused knowledge enters, which proposal or comparison changes, why that is biologically pertinent, which premise could
+  refute it, whether it works on a second case. Six capabilities were tried (EC-KG, NORDic, CANDO, dseqr/LINCS, module discovery, MolNexus): none was adopted as a tool; one relation type
+  (adverse-event reports) became a carried limit, and the sign-discordance audit of the action table found five suspect rows. Rules that held: an unknown action never becomes an edge (NORDic's
+  aggregator turns `?`/`binding` into activation, presence-only and contrasting signs into inhibition, and, with the file served today, TTD inhibitors into activation: reproduce a conversion
+  on the CURRENT file before trusting it); a simulation whose benefit readout is defined per scenario returns the scenario, so report what varies with the intervention inside one scenario;
+  a profile matrix that cannot score the hand-over families cannot change the selection (test coverage against the hand-over before saying "changed nothing"); an id-join claim must say
+  how the id map was built (here, mostly by name); a table built from a neighbourhood extract is incomplete by construction and must say so. The independent verifier reopened the
+  producers' own numbers (34 findings, 18 corrected): recompute headline figures from the raw file and test byte-determinism across `PYTHONHASHSEED`.
+  Records: [`it23_result_20261103`](it23_result_20261103/README.md), [`verification_it23_20261103`](verification_it23_20261103/README.md).
 - Provenance through intermediaries and specific evidence (IT20): follow [the republished-claim bullet of the convention](../../../../framework/protocols/repurposing_adapter_convention.md); a verifier must recompute any 'X to 0' claim from a fresh regeneration (IT20: a claimed 21 to 0 was still 21).
 - Dated measurements and decisions are in the iteration section of the [module README](README.md) marked CURRENT.
 
