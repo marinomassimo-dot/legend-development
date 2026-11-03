@@ -296,9 +296,15 @@ def claim_provenance(e: dict, t: dict, rules: list[dict]) -> dict | None:
     ad = action_direction(t.get("interaction_type"))
     prov = {"original_source": original, "republisher": "DGIdb", "republication_declared_by": "source_artefacts.tsv",
             "republication_note": rule["evidence"], "republished_record_level": "unresolved",
-            "original_record": None, "duplicate_of_record": None, "missing": None, "_original_row": None}
+            "original_record": None, "duplicate_of_record": None, "missing": None, "origin_basis": "no_compatible_record",
+            "_original_row": None}
     own = (e.get("ids") or {}).get("chembl") if original == "ChEMBL" else None
     if own:
+        # IT21 P1: a match by molecule id + gene + action class is a COMPATIBLE pharmacological match, not by itself an identified
+        # origin. Take EVERY compatible record, never the first one in list order: when exactly one record is compatible it is the
+        # only candidate (kept, labelled `unique_compatible_match`); when several are compatible the descent is ambiguous and is
+        # reported as such, with the candidates named, instead of being decided by the order the rows happen to be listed in.
+        compatible: dict[str, dict] = {}
         for u in e["targets"]:
             if u is t or u["source"] != "ChEMBL curated mechanism" or u.get("organism") != "Homo sapiens":
                 continue
@@ -306,9 +312,19 @@ def claim_provenance(e: dict, t: dict, rules: list[dict]) -> dict | None:
                 continue
             if action_direction(u.get("action_type")) != ad:
                 continue
+            compatible.setdefault(str(u.get("target_id")), u)
+        if len(compatible) == 1:
+            (tid, u), = compatible.items()
             prov.update({"republished_record_level": target_level("ChEMBL curated mechanism", u),
                          "original_record": u.get("target_id"), "duplicate_of_record": u.get("target_id"),
-                         "_original_row": u})
+                         "origin_basis": "unique_compatible_match", "_original_row": u})
+            return prov
+        if len(compatible) > 1:
+            prov["origin_basis"] = "ambiguous_compatible_matches"
+            prov["candidate_records"] = sorted(compatible)
+            prov["missing"] = (f"{len(compatible)} {original} curated mechanism records of this molecule name this gene with the same "
+                               f"action class ({', '.join(sorted(compatible))}) and the republishing export carries no record id, so "
+                               "which of them the copy descends from is not identified; the descent is left unresolved, not chosen by list order")
             return prov
     prov["missing"] = (f"the {original} target record id and its target level are not carried by the republishing export"
                        + ("" if own else f", and this catalogue record holds no {original} molecule identifier through which "
@@ -654,7 +670,11 @@ def associations_for_need(need: dict, idx: Index, roles: dict, module_symbols: s
                 limits.append(waiver[0])
             if prov:
                 limits.append(f"republished claim: {prov['republisher']} serves this row as a copy of a {prov['original_source']} "
-                              f"curated mechanism; original record {prov['original_record'] or 'NOT IDENTIFIED'}, level of that record "
+                              f"curated mechanism; original record {prov['original_record'] or 'NOT IDENTIFIED'}"
+                              + (" (the only record compatible by molecule, gene and action class; the export carries no record id, so "
+                                 "the identity of the assertion across releases is a compatible match, not proved)"
+                                 if prov.get("origin_basis") == "unique_compatible_match" else "")
+                              + f", level of that record "
                               f"{prov['republished_record_level']}" + (f"; missing: {prov['missing']}" if prov["missing"] else "")
                               + "; a copy is not a second, independent statement")
             n_comp, n_in = group_components(src, t, module_symbols)
