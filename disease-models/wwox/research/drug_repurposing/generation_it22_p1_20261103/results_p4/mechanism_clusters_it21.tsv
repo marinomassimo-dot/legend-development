@@ -89,7 +89,7 @@ Q6	H_HARM	DOT1L	5	5	1	1	yes	Pinometostat: DROP (ranking_it8_p9_20261029/it9_reco
 Q6	H_HARM	EP300	2	2	0	0	no	CURCUMIN: DROP (ranking_it8_p9_20261029/it9_records.tsv#P3-07)	C646; CURCUMIN
 Q6	H_HARM	HCK	1	1	0	0	no		Compound 2 [Pmid: 15546730]
 Q6	H_HARM	IL31RA	1	1	0	0	no		NEMOLIZUMAB
-Q6	H_HARM	JAK2	43	39	19	1	yes		2-Tert-Butyl-9-Fluoro-1,6-Dihydrobenzo[H]Imidazo[4,5-F]Isoquinolin-7-One; AC-430; AZD-1480; Abrocitinib; Ac430; Az960
+Q6	H_HARM	JAK2	43	39	18	1	yes		2-Tert-Butyl-9-Fluoro-1,6-Dihydrobenzo[H]Imidazo[4,5-F]Isoquinolin-7-One; AC-430; AZD-1480; Abrocitinib; Ac430; Az960
 Q6	H_HARM	KIT	4	3	0	0	no		DOVITINIB LACTATE; MASITINIB; Masitinib; PAZOPANIB HYDROCHLORIDE
 Q6	H_HARM	METTL3	2	2	0	0	yes	Stm2457: DROP (ranking_it8_p9_20261029/it9_records.tsv#E-04)	Stc-15; Stm2457
 Q6	H_HARM	NOTCH1	3	3	0	0	no		BRONTICTUZUMAB; Imr-1; Ro4929097

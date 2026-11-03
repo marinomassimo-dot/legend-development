@@ -80,13 +80,38 @@ class Fixtures(unittest.TestCase):
         self.assertTrue(hasattr(G, "REASON_LABELS"))
 
 
+class P8Fixes(unittest.TestCase):
+    """IT22 P8-fix: verifier findings F01 (premise travels across clusters), F02 (class limit), F03 (work done is per question), F04 (contradicted is not refuted)."""
+    def test_an_edge_premise_reaches_a_row_in_another_cluster(self):          # tizaterkib's BCL3 > TNF premise and razuprotafib
+        tiz = dec("tizaterkib", "INCONCLUSIVE", "p4a#374", ("premise_unresolved", "edge:BCL3>TNF", "ERK is also required for TNF production"))
+        other = prop("Razuprotafib", "PTPN1", "PTPN1 -P(-)-> BCL3; BCL3 -T(-)-> TNF", q="Q5")
+        self.assertEqual(G.decision_effect(other, [], [tiz])["carried_limits"], ["tizaterkib INCONCLUSIVE: ERK is also required for TNF production"])
+        self.assertEqual(G.decision_effect(prop("X", "T1", "T1 -T(+)-> G"), [], [tiz])["carried_limits"], [])
+
+    def test_a_class_limit_travels_to_every_member_of_the_target_and_never_blocks(self):
+        rox = dec("roxadustat", "DROP", "it9#E-02", ("class_limit", "target:EGLN2", "acts through HIF stabilisation, not the EGLN2 chain"))
+        r = G.decision_effect(prop("Desidustat", "EGLN2", "EGLN2 -P(-)-> FOXO3"), [], [rox])
+        self.assertEqual(r["block"], "")
+        self.assertTrue(r["carried_limits"])
+
+    def test_work_done_applies_only_to_the_question_the_record_concerned(self):
+        d = dec("GSK343", "KEPT_CONDITIONAL", "p4a#195", ("work_done", "", "carried as conditional"))
+        d["components"][0]["questions"] = ["Q5"]
+        self.assertTrue(G.decision_effect(prop("Tazemetostat", "EZH2", "EZH2 -T(+)-> IL6", q="Q5"), [d])["work_done"])
+        self.assertFalse(G.decision_effect(prop("Tazemetostat", "EZH2", "EZH2 -T(-)-> NFE2L2", q="Q8"), [d])["work_done"])
+
+    def test_a_contradicted_premise_blocks_under_its_own_label(self):
+        cgi = dec("CGI-1746", "REJECTED_INFORMATIVE", "p4a#57", ("premise_contradicted", "target:BTK@Q4", "measured low, not proof of absence"))
+        self.assertTrue(G.decision_effect(prop("Zanubrutinib", "BTK", BTK_CHAIN, q="Q4"), [], [cgi])["block"].startswith("shared_premise_contradicted"))
+
+
 class CommittedTable(unittest.TestCase):
     def test_every_decision_in_a_blocked_cluster_has_a_scope(self):
         tab = HERE / "decision_scope_it22.tsv"
         self.assertTrue(tab.exists())
         rows = G.rd(tab)
         for r in rows:
-            self.assertIn(r["scope"], ("molecule", "premise_refuted", "premise_unresolved", "work_done"))
+            self.assertIn(r["scope"], ("molecule", "premise_refuted", "premise_contradicted", "premise_unresolved", "class_limit", "work_done"))
             self.assertTrue(r["basis"].strip())
 
 
@@ -103,7 +128,7 @@ class RealCases(unittest.TestCase):
         self.assertFalse([r for r in self.rows if r["handoff_blocker"] == "mechanism_cluster_examined_earlier"])
 
     def test_btk_arc_stays_closed_by_its_refuted_premise(self):
-        btk = [r for r in self.rows if r["main_target"] == "BTK" and r["handoff_blocker"] in ("shared_premise_refuted",)]
+        btk = [r for r in self.rows if r["main_target"] == "BTK" and r["handoff_blocker"] in ("shared_premise_refuted", "shared_premise_contradicted")]
         self.assertGreaterEqual(len(btk), 20)
 
     def test_nanatinostat_peers_are_evaluated_on_their_own_data(self):

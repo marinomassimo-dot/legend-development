@@ -119,26 +119,26 @@
  },
  "S2_P1_P2": {
   "attribution_states": {
-   "ATTRIBUTABLE": 86,
+   "ATTRIBUTABLE": 88,
    "BORDERLINE_POTENT_MAIN_TARGET": 6,
    "NOT_ASSESSABLE": 737,
-   "NOT_COMPARABLE_MEASURES": 21,
+   "NOT_COMPARABLE_MEASURES": 18,
    "SECONDARY_ACTIVITY_MEASURED": 13,
    "SINGLE_MEASURED_TARGET": 87,
    "UNMEASURED_AT_MAIN_TARGET": 24,
-   "WEAK_ATTRIBUTION": 6
+   "WEAK_ATTRIBUTION": 7
   },
   "blockers": {
-   "ELIGIBLE": 212,
+   "ELIGIBLE": 211,
    "arm_has_no_stated_benefit_hypothesis": 95,
    "decided_in_earlier_qualification_record": 20,
    "identity_not_resolved": 555,
-   "main_target_weak_attribution": 4,
+   "main_target_weak_attribution": 5,
    "modality_antibody_not_small_molecule": 6,
    "modality_protein_or_peptide_not_small_molecule": 5,
    "modality_unknown_not_small_molecule": 11,
    "reach_null_not_confirming": 48,
-   "shared_premise_refuted": 24
+   "shared_premise_contradicted": 24
   },
   "by_question_handover": {
    "Q2": 4,
@@ -155,7 +155,7 @@
   "clusters": 150,
   "compounds": 791,
   "eligible_clusters": 43,
-  "eligible_rows": 212,
+  "eligible_rows": 211,
   "families": 867,
   "handover_compounds": 14,
   "handover_ids": [
@@ -176,9 +176,9 @@
   ],
   "handover_rows": 14,
   "rows": 980,
-  "rows_with_carried_limits": 115,
+  "rows_with_carried_limits": 170,
   "seed_support_limited_rows": 0,
-  "work_done_rows": 93
+  "work_done_rows": 56
  },
  "S3_P1_P2_P3": {
   "attribution_states": {
@@ -247,28 +247,28 @@
   "seed_support_limited_rows": 126,
   "work_done_rows": 107
  },
- "S4_reverse_test_fixes": {
+ "S4_reverse_test_and_verifier_fixes": {
   "attribution_states": {
-   "ATTRIBUTABLE": 87,
+   "ATTRIBUTABLE": 89,
    "BORDERLINE_POTENT_MAIN_TARGET": 6,
    "NOT_ASSESSABLE": 753,
-   "NOT_COMPARABLE_MEASURES": 21,
+   "NOT_COMPARABLE_MEASURES": 18,
    "SECONDARY_ACTIVITY_MEASURED": 13,
    "SINGLE_MEASURED_TARGET": 90,
    "UNMEASURED_AT_MAIN_TARGET": 24,
-   "WEAK_ATTRIBUTION": 6
+   "WEAK_ATTRIBUTION": 7
   },
   "blockers": {
-   "ELIGIBLE": 217,
+   "ELIGIBLE": 216,
    "arm_has_no_stated_benefit_hypothesis": 96,
    "decided_in_earlier_qualification_record": 21,
    "identity_not_resolved": 567,
-   "main_target_weak_attribution": 4,
+   "main_target_weak_attribution": 5,
    "modality_antibody_not_small_molecule": 6,
    "modality_protein_or_peptide_not_small_molecule": 5,
    "modality_unknown_not_small_molecule": 11,
    "reach_null_not_confirming": 49,
-   "shared_premise_refuted": 24
+   "shared_premise_contradicted": 24
   },
   "by_question_handover": {
    "Q2": 4,
@@ -287,7 +287,7 @@
   "clusters": 154,
   "compounds": 792,
   "eligible_clusters": 45,
-  "eligible_rows": 217,
+  "eligible_rows": 216,
   "families": 868,
   "handover_compounds": 16,
   "handover_ids": [
@@ -310,9 +310,9 @@
   ],
   "handover_rows": 16,
   "rows": 1000,
-  "rows_with_carried_limits": 238,
+  "rows_with_carried_limits": 284,
   "seed_support_limited_rows": 146,
-  "work_done_rows": 107
+  "work_done_rows": 56
  },
  "deltas": {
   "S0_IT21->S1_P1": {
@@ -342,11 +342,11 @@
    "handover_added": [],
    "handover_removed": [],
    "released": [],
-   "released_n": 13,
+   "released_n": 12,
    "rows_new": 0,
    "rows_retired_from_the_table": 0,
    "state_changed": [],
-   "state_changed_n": 38,
+   "state_changed_n": 35,
    "withdrawn": [],
    "withdrawn_n": 0
   },
@@ -357,15 +357,15 @@
    ],
    "handover_removed": [],
    "released": [],
-   "released_n": 0,
+   "released_n": 1,
    "rows_new": 20,
    "rows_retired_from_the_table": 0,
    "state_changed": [],
-   "state_changed_n": 0,
+   "state_changed_n": 3,
    "withdrawn": [],
    "withdrawn_n": 0
   },
-  "S3_P1_P2_P3->S4_reverse_test_fixes": {
+  "S3_P1_P2_P3->S4_reverse_test_and_verifier_fixes": {
    "handover_added": [],
    "handover_removed": [],
    "released": [],
@@ -373,9 +373,9 @@
    "rows_new": 0,
    "rows_retired_from_the_table": 0,
    "state_changed": [],
-   "state_changed_n": 0,
+   "state_changed_n": 3,
    "withdrawn": [],
-   "withdrawn_n": 0
+   "withdrawn_n": 1
   }
  },
  "q2_q3_dependence_on_the_failed_second_system": {
@@ -416,8 +416,8 @@
   "q4_rows_npy_contested": 75
  },
  "sensitivity_attribution_threshold_rows_at_stage_S2": {
-  "WEAK_if_main_target_above_1000nM": 6,
+  "WEAK_if_main_target_above_1000nM": 7,
   "WEAK_if_main_target_above_3000nM": 6,
-  "WEAK_if_main_target_above_300nM": 13
+  "WEAK_if_main_target_above_300nM": 14
  }
 }

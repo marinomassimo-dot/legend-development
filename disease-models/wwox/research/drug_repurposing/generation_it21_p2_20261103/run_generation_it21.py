@@ -380,6 +380,16 @@ HANDOFF_RULE = (
     "blocks the members whose chain or main target carries that premise ('shared_premise_refuted'); an UNRESOLVED premise travels as a carried limit, never a veto; work already done "
     "demotes the cluster behind unworked ones and the hand-over says 'not a discovery'; a decision with no scope row keeps the old veto under its own label ('decision_scope_untagged')."
 )
+H8_NEW = (
+    "H8 (IT22 P1: scoped; before, ANY member's decision vetoed the whole cluster) a decision about one member reaches another member only inside the scope its own reason supports "
+    "(decision_scope_it22.tsv): a reason about the molecule (potency profile, label, artefact) stays with the molecule; a premise REFUTED for the arc (an edge or a target-in-context) "
+    "blocks the members whose chain or main target carries that premise ('shared_premise_refuted'); an UNRESOLVED premise travels as a carried limit, never a veto; work already done "
+    "demotes the cluster behind unworked ones and the hand-over says 'not a discovery'; a decision with no scope row keeps the old veto under its own label ('decision_scope_untagged')."
+)
+H8_LEGACY = (
+    "H8 a mechanism cluster in which ANY member (eligible or not) has an IT9/IT10/IT11 qualification record is not handed over as new: it is listed in mechanism_clusters_it21.tsv with that record, "
+    "because the earlier reason may have been about the compound and only the qualification can say so (unknown is not negative)."
+)
 REASON_LABELS = {"mechanism_cluster_selection": "H5/H6 diversification of the selection (one per cluster, three per question and hypothesis)",
                  "work_already_done": "an earlier qualification already worked this cluster: priority only, never a scientific verdict",
                  "shared_premise_refuted": "the premise that sank an earlier member is refuted for this arc and applies to this member",
@@ -393,7 +403,7 @@ def load_decision_scopes(path=None):
     path = Path(path or DECISION_SCOPE_TABLE)
     if path.exists():
         for r in rd(path):
-            out[r["decision_source"]].append(dict(scope=r["scope"], premise_key=r["premise_key"], note=r["basis"]))
+            out[r["decision_source"]].append(dict(scope=r["scope"], premise_key=r["premise_key"], note=r["basis"], questions=[q for q in (r.get("questions") or "").split(",") if q]))
     return out
 
 
@@ -410,7 +420,8 @@ def _premise_applies(key, p):
 
 
 SUPPORT_LIMITING_GUARDS = {"NPY_SIGN_CONTESTED": "the NPY direction is contested by the mouse bulk and pooled-nuclei contrasts and by the neuron loss in the knockout organoid (cell-population sensitive)",
-                           "SECOND_SYSTEM_GATE_FAILED": "the shWWOX hNPC library did not show WWOX lower (gate 1 failed), so it is not an independent second system for this seed"}
+                           "SECOND_SYSTEM_PROGENITOR_GATE_FAILED": "the shWWOX hNPC (progenitor) library did not show WWOX lower (gate 1 failed; the neuron arm is lower but one noisy library), so it is not an independent second system for this seed",
+                           "ADJUSTED_P_ABOVE_ALPHA": "the seed transcript change has an adjusted p above the deposit's own alpha (4 v 2 libraries)"}
 
 
 def seed_guard_limits(p, sidx, ann=None):
@@ -426,9 +437,11 @@ def seed_guard_limits(p, sidx, ann=None):
     return sorted(tags), [f"{t}: {SUPPORT_LIMITING_GUARDS[t]}" for t in sorted(tags) if t in SUPPORT_LIMITING_GUARDS]
 
 
-def decision_effect(p, cluster_decisions):
-    """What the earlier decisions on OTHER members of p's mechanism cluster mean for p. Pure. cluster_decisions: dicts compound/state/source/components.
-    Returns block (reason or ''), work_done, carried_limits."""
+def decision_effect(p, cluster_decisions, global_decisions=()):
+    """What earlier decisions mean for p. Pure. cluster_decisions: decisions on OTHER members of p's mechanism cluster (compound/state/source/components); global_decisions: every decision with a
+    scope, whatever its cluster (IT22 P8-fix F01: a premise or class limit about an EDGE or a TARGET applies wherever that edge or target is in a chain, not only inside one cluster).
+    Scopes: molecule (stays with the molecule), premise_refuted / premise_contradicted (block), premise_unresolved / class_limit (carried limit), work_done (priority only, and only for the
+    questions the decided record concerned; F03). Returns block (reason or ''), work_done, carried_limits."""
     block, work, limits = "", False, []
     for d in cluster_decisions:
         comps = d.get("components") or []
@@ -436,13 +449,21 @@ def decision_effect(p, cluster_decisions):
             block = block or "decision_scope_untagged"
             continue
         for c in comps:
-            sc = c["scope"]
-            if sc == "premise_refuted" and _premise_applies(c["premise_key"], p):
-                block = f"shared_premise_refuted: {c['premise_key']} ({d['compound']})"
-            elif sc == "premise_unresolved" and _premise_applies(c["premise_key"], p):
-                limits.append(f"{d['compound']} {d['state']}: {c['note']}")
-            elif sc == "work_done":
+            if c["scope"] == "work_done" and (not c.get("questions") or p.get("question") in c["questions"]):
                 work = True
+    for d in list(cluster_decisions) + list(global_decisions):
+        if base_name(d.get("compound", "")) == base_name(p.get("compound", "")):
+            continue
+        for c in d.get("components") or []:
+            sc = c["scope"]
+            if not _premise_applies(c.get("premise_key", ""), p):
+                continue
+            if sc in ("premise_refuted", "premise_contradicted"):
+                block = f"shared_premise_{'refuted' if sc == 'premise_refuted' else 'contradicted'}: {c['premise_key']} ({d['compound']})"
+            elif sc in ("premise_unresolved", "class_limit"):
+                msg = f"{d['compound']} {d['state']}: {c['note']}"
+                if msg not in limits:
+                    limits.append(msg)
     return dict(block=block, work_done=work, carried_limits=limits)
 
 
@@ -708,6 +729,12 @@ def cmd_propose(a):
     assign_ids(proposals, R / "proposals_it21.tsv")
     # H8 (IT22 P1): an earlier decision on a cluster member reaches another member only inside its own scope
     scopes = load_decision_scopes() if v1 else {}
+    global_dec, seen_src = [], set()
+    for comp_, st_, src_, lab_ in decisions:
+        if src_ in scopes and src_ not in seen_src:
+            seen_src.add(src_)
+            global_dec.append(dict(compound=comp_, state=st_, source=src_, components=scopes[src_]))
+    conflicts = rd(DR / "generation_it22_p1_20261103" / "data_conflicts_it22.tsv") if (DR / "generation_it22_p1_20261103" / "data_conflicts_it22.tsv").exists() and v1 else []
     seed_ann = collections.defaultdict(set)
     if P1D and (P1D / "seed_annotations.tsv").exists():
         for r_ in rd(P1D / "seed_annotations.tsv"):
@@ -727,16 +754,19 @@ def cmd_propose(a):
         p["seed_guards"], p["seed_support_limited"] = ";".join(sg), "yes" if sl else ""
         if sl:
             p["carried_limits"] = " | ".join(sl)
-        if not p["cluster_earlier_decisions"]:
+        cf = [r_["note"] for r_ in conflicts if base_name(r_["compound"]) == base_name(p["compound"]) and (not r_["main_target"] or r_["main_target"] == p["main_target"])]
+        if cf:                                       # IT22 P8-fix F07: two sources disagree about a measured value; the disagreement stays visible
+            p["carried_limits"] = " | ".join(([p["carried_limits"]] if p["carried_limits"] else []) + ["SOURCE_CONFLICT: " + x for x in cf])
+        if not p["cluster_earlier_decisions"] and not (v1 and global_dec):
             continue
         if not v1:                                    # legacy P2 behaviour, kept so --no-v1 reproduces the committed P2 byte for byte
             if p["handoff_eligible"] == "yes":
                 p["handoff_eligible"], p["handoff_blocker"] = "no", "mechanism_cluster_examined_earlier"
             continue
-        others = [d for d in cl_dec[k] if base_name(d["compound"]) != base_name(p["compound"])]
-        eff = decision_effect(p, others)
+        others = [d for d in cl_dec.get(k, []) if base_name(d["compound"]) != base_name(p["compound"])]
+        eff = decision_effect(p, others, global_dec)
         p["cluster_work_done"] = "yes" if eff["work_done"] else ""
-        p["carried_limits"] = " | ".join(([p["carried_limits"]] if p["carried_limits"] else []) + eff["carried_limits"])[:600]
+        p["carried_limits"] = " | ".join(([p["carried_limits"]] if p["carried_limits"] else []) + eff["carried_limits"])[:1600]
         if p["handoff_eligible"] == "yes" and eff["block"]:
             p["handoff_eligible"], p["handoff_blocker"] = "no", eff["block"].split(":")[0] if eff["block"].startswith("shared") else eff["block"]
             p["blocker_detail"] = eff["block"]
@@ -760,7 +790,7 @@ def cmd_propose(a):
         act = signed[p["family_id"]].get(p["main_target"].upper())
         n_rows, n_assert, srcs = assertion_counts((idx, fam), p["family_id"], p["main_target"], rs) if act else (0, 0, "")
         alts = [x for x in proposals if x["question"] == q and x["hypothesis"] == hyp and x["main_target"] == p["main_target"] and x["base_name"] != p["base_name"]]
-        alt_names = sorted({x["compound"] for x in alts})
+        alt_names = sorted({x["base_name"].lower(): x["compound"] for x in alts}.values()) if v1 else sorted({x["compound"] for x in alts})
         rivals = [x for x in proposals if x["question"] == q and x["hypothesis"] == hyp and x["main_target"] != p["main_target"] and x["handoff_eligible"] == "yes" and x["proposal_id"] not in hid]
         wh = withheld.get(p["family_id"], [])
         benefit = role["h_harm_action"] if hyp == "H_HARM" else role["h_protect_action"]
@@ -797,6 +827,11 @@ def cmd_propose(a):
         check_status(h["status"])
     for p in proposals:
         check_status(p["status"])
+    if not v1:                       # --no-v1 must reproduce the committed P2 tables byte for byte: the IT22 columns exist only on the production path
+        it22_cols = ("cluster_work_done", "carried_limits", "blocker_detail", "seed_guards", "seed_support_limited", "carried_limits_from_cluster", "route_class_note", "direct_acting_hits_same_set")
+        for row_ in proposals + handoff:
+            for k_ in it22_cols:
+                row_.pop(k_, None)
     write_tsv(OUT / "proposals_it21.tsv", sorted(proposals, key=lambda p: p["proposal_id"]))
     write_tsv(OUT / "handoff_it21.tsv", handoff)
     carried = [p for p in proposals if p["earlier_decision"]]
@@ -813,7 +848,7 @@ def cmd_propose(a):
     summ = dict(seed_specific_rows=len(proposals), by_status=dict(collections.Counter(p["status"] for p in proposals)), eligible=len(elig_rows), handed_over=len(handoff),
                 blockers=dict(blockers), mechanism_clusters=len(cl), carried_prior_decisions=len(carried),
                 handed_over_ids=[h["proposal_id"] for h in handoff], dispositions={f"{q}|{arm}|{d}": n for (q, arm, d), n in sorted(n_by.items())},
-                selection_rule=HANDOFF_RULE)
+                selection_rule=(HANDOFF_RULE if v1 else HANDOFF_RULE.replace(H8_NEW, H8_LEGACY)))
     (OUT / "summary_it21.json").write_text(json.dumps(summ, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps({k: v for k, v in summ.items() if k != "selection_rule"}, indent=1, sort_keys=True))
 

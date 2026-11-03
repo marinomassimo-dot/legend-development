@@ -63,7 +63,7 @@ def main():
     for sid in deposit:
         if sid not in HNPC_ROWS:
             HNPC_ROWS.append(sid)
-    wr(out / "seed_annotations.tsv", [dict(seed_id=sid, annotation="SECOND_SYSTEM_GATE_FAILED", source="hnpc_gse126075_it5_20261029/RESULTS.md section 1") for sid in HNPC_ROWS], ["seed_id", "annotation", "source"])
+    wr(out / "seed_annotations.tsv", [dict(seed_id=sid, annotation="SECOND_SYSTEM_PROGENITOR_GATE_FAILED", source="hnpc_gse126075_it5_20261029/RESULTS.md section 1") for sid in HNPC_ROWS] + [dict(seed_id="S132", annotation="ADJUSTED_P_ABOVE_ALPHA", source="p3_A_redox/proposed_seed_rows.tsv N22-A001 (padj 1.43E-02 against the deposit's alpha 0.01)")], ["seed_id", "annotation", "source"])
     tag(by["S116"], "NPY_SIGN_CONTESTED"); by["S116"]["change_ref"] = (by["S116"]["change_ref"] + ";" if by["S116"]["change_ref"] else "") + "it22-B"
     r79 = by["S079"]                                        # latent hazard: a cell-type marker set must never become a gene seed if the ortholog table is completed later
     r79.update(usable_for_generation="no", reason_class="UNUSABLE_MATURITY_OR_COMPOSITION", change_ref="it22-B")

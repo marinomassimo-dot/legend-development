@@ -1,15 +1,15 @@
 {
  "blockers": {
-  "ELIGIBLE": 217,
+  "ELIGIBLE": 216,
   "arm_has_no_stated_benefit_hypothesis": 96,
   "decided_in_earlier_qualification_record": 21,
   "identity_not_resolved": 567,
-  "main_target_weak_attribution": 4,
+  "main_target_weak_attribution": 5,
   "modality_antibody_not_small_molecule": 6,
   "modality_protein_or_peptide_not_small_molecule": 5,
   "modality_unknown_not_small_molecule": 11,
   "reach_null_not_confirming": 49,
-  "shared_premise_refuted": 24
+  "shared_premise_contradicted": 24
  },
  "by_status": {
   "CONDITIONAL_H_HARM": 570,
@@ -46,7 +46,7 @@
   "Q8|mimics|CONDITIONAL_IF_PROTECTIVE": 25,
   "Q8|opposes|CONDITIONAL_IF_HARMFUL": 50
  },
- "eligible": 217,
+ "eligible": 216,
  "handed_over": 16,
  "handed_over_ids": [
   "IT21P2-0005",

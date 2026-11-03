@@ -40,8 +40,8 @@ class GuardConsumption(unittest.TestCase):
         self.assertTrue(limits and "contested" in limits[0])
         q = dict(seed_set="Q2_expression_tiersAB", contributing_seed_1="HK2|HK2|up|hops1-3|HIF1A|1e-5", contributing_seed_2="")
         self.assertEqual(G.seed_guard_limits(q, sidx)[1], [])                                    # a guard that does not limit support is listed, not a limit
-        tags2, limits2 = G.seed_guard_limits(q, sidx, {"S018": {"SECOND_SYSTEM_GATE_FAILED"}})
-        self.assertIn("SECOND_SYSTEM_GATE_FAILED", tags2)
+        tags2, limits2 = G.seed_guard_limits(q, sidx, {"S018": {"SECOND_SYSTEM_PROGENITOR_GATE_FAILED"}})
+        self.assertIn("SECOND_SYSTEM_PROGENITOR_GATE_FAILED", tags2)
         self.assertTrue(limits2)
 
     def test_a_limited_row_ranks_after_an_unlimited_one_in_the_hand_over_order(self):

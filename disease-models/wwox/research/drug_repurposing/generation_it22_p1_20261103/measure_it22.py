@@ -21,7 +21,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 DR = HERE.parent
-STAGES = [("S0_IT21", DR / "diagnosis_it21_v1_20261103" / "results_v1"), ("S1_P1", HERE / "results_p1"), ("S2_P1_P2", HERE / "results_p2b"), ("S3_P1_P2_P3", HERE / "results_p3"), ("S4_reverse_test_fixes", HERE / "results_p4")]
+STAGES = [("S0_IT21", DR / "diagnosis_it21_v1_20261103" / "results_v1"), ("S1_P1", HERE / "results_p1"), ("S2_P1_P2", HERE / "results_p2b"), ("S3_P1_P2_P3", HERE / "results_p3"), ("S4_reverse_test_and_verifier_fixes", HERE / "results_p4")]
 
 
 def rd(p):
@@ -73,7 +73,7 @@ def main():
     for T in (300.0, 1000.0, 3000.0):          # technical choice: where a comparable pair with a measured main target stops being a 'secondary activity' and becomes WEAK
         sens[f"WEAK_if_main_target_above_{T:g}nM"] = sum(1 for r in P2 if r.get("attribution_state") in ("SECONDARY_ACTIVITY_MEASURED", "WEAK_ATTRIBUTION") and r.get("attribution_main_nm") and float(r["attribution_main_nm"]) > T)
     out["sensitivity_attribution_threshold_rows_at_stage_S2"] = sens
-    P3 = tabs["S4_reverse_test_fixes"][0]
+    P3 = tabs["S4_reverse_test_and_verifier_fixes"][0]
     out["q2_q3_dependence_on_the_failed_second_system"] = dict(
         q2_rows=sum(1 for r in P3 if r["question"] == "Q2"), q2_rows_limited=sum(1 for r in P3 if r["question"] == "Q2" and r.get("seed_support_limited") == "yes"),
         q3_rows=sum(1 for r in P3 if r["question"] == "Q3"), q3_rows_limited=sum(1 for r in P3 if r["question"] == "Q3" and r.get("seed_support_limited") == "yes"),

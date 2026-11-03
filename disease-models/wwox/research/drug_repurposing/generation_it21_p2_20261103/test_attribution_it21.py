@@ -163,9 +163,11 @@ class AttributionScreen(SyntheticCache):
     def test_human_only_and_nm_from_the_original_column_or_the_log_value(self):
         _, aff, _ = self.aff()
         # IT22 P2: the loader keeps measures per type (a type-less release row is "?"); the number is the median within the type
-        self.assertEqual(aff[("1", "TGT1")]["?"]["nm"], 1.3)
+        # IT22 P8-fix: a row without an original type takes the type from the release's own affinity column (pKi -> Ki ...), so the key is that type, not "?"
+        first = lambda k: next(iter(aff[k].values()))["nm"]
+        self.assertEqual(first(("1", "TGT1")), 1.3)
         self.assertNotIn(("1", "TGT9"), aff)
-        self.assertAlmostEqual(aff[("9", "TGT2")]["?"]["nm"], 100.0, places=3)
+        self.assertAlmostEqual(first(("9", "TGT2")), 100.0, places=3)
 
     def test_weak_when_the_main_target_is_at_least_ten_fold_weaker_than_the_best(self):
         _, aff, _ = self.aff()
@@ -212,9 +214,11 @@ class AttributionScreen(SyntheticCache):
     def test_mixed_measures_are_kept_separate_and_compared_type_by_type(self):
         aff = {("x", "A"): {"IC50": self.E(2.0), "Kd": self.E(400.0)}, ("x", "B"): {"IC50": self.E(10.0), "Kd": self.E(3000.0)}}
         a = A.attribution({"x"}, "B", aff)
-        self.assertEqual(a["state"], "ATTRIBUTABLE")                       # IC50 5x is the favourable same-type pair; the Kd 7.5x pair is reported, not pooled
+        self.assertEqual(a["state"], "ATTRIBUTABLE")                       # both same-type deficits (IC50 5x, Kd 7.5x) are below 10x; neither is pooled
         self.assertIn("IC50", a["context_note"]); self.assertIn("Kd", a["context_note"])
-        self.assertEqual(a["best_measure"], "IC50")
+        self.assertEqual(a["best_measure"], "Kd")                          # IT22 P8-fix: the verdict follows the type with the LARGEST deficit
+        hide = {("x", "A"): {"IC50": self.E(1.0), "Kd": self.E(5.0)}, ("x", "B"): {"IC50": self.E(5000.0), "Kd": self.E(6.0)}}      # a favourable Kd must not hide a 5000-fold IC50 deficit
+        self.assertEqual(A.attribution({"x"}, "B", hide)["state"], "WEAK_ATTRIBUTION")
 
     def test_a_comparable_pair_keeps_a_real_weak_attribution_signal(self):
         aff = {("x", "A"): {"IC50": self.E(1.3)}, ("x", "B"): {"IC50": self.E(3600.0)}}      # the vorinostat shape: same type, 2769-fold, main target above 1 uM
@@ -230,6 +234,12 @@ class AttributionScreen(SyntheticCache):
         self.assertIn("on-target control", G.attribution_note(dict(attribution_state=a["state"], main_target="B", attribution_main_nm=a["main_nm"], attribution_fold=a["fold"],
                                                                      attribution_best_target="A", attribution_best_nm=a["best_nm"], identity_via="")))
 
+    def test_no_ratio_still_states_a_low_absolute_value_without_blocking(self):          # verifier F09: colchicine Kd 20 uM
+        aff = {("x", "A"): {"IC50": self.E(11.0)}, ("x", "B"): {"Kd": self.E(20000.0)}}
+        a = A.attribution({"x"}, "B", aff)
+        self.assertEqual(a["state"], "NOT_COMPARABLE_MEASURES")
+        self.assertIn("low potency at the listed target on its own terms", a["context_note"])
+
     def test_a_missing_measure_never_becomes_a_negative(self):
         aff = {("x", "A"): {"IC50": self.E(3.0)}}
         self.assertEqual(A.attribution({"x"}, "B", aff)["state"], "UNMEASURED_AT_MAIN_TARGET")
@@ -241,8 +251,15 @@ class AttributionScreen(SyntheticCache):
         unk = {("x", "A"): {"IC50": self.E(2.0)}, ("x", "B"): {"IC50": self.E(5000.0)}}
         a = A.attribution({"x"}, "B", unk)
         self.assertEqual(a["state"], "WEAK_ATTRIBUTION"); self.assertIn("not recorded", a["context_note"])  # unknown context stays visible
+        # IT22 P8-fix (superseded assumption, verifier F05): a '<' on the OTHER target can only make the ratio larger, so an exact main value above 1 uM against '<2 nM' is a real weak signal
         cens = {("x", "A"): {"IC50": self.E(2.0, rel="<")}, ("x", "B"): {"IC50": self.E(5000.0)}}
-        self.assertEqual(A.attribution({"x"}, "B", cens)["state"], "NOT_COMPARABLE_MEASURES")           # a '<' on the best side is not an exact value
+        self.assertEqual(A.attribution({"x"}, "B", cens)["state"], "WEAK_ATTRIBUTION")
+        small = {("x", "A"): {"IC50": self.E(2.0, rel="<")}, ("x", "B"): {"IC50": self.E(15.0)}}          # 15/2 = 7.5 at least: the ratio could be 100, so 'attributable' cannot be claimed
+        self.assertEqual(A.attribution({"x"}, "B", small)["state"], "NOT_COMPARABLE_MEASURES")
+        opp = {("x", "A"): {"IC50": self.E(2.0, rel=">")}, ("x", "B"): {"IC50": self.E(5000.0)}}          # '>' on the best side bounds the ratio from above only
+        self.assertEqual(A.attribution({"x"}, "B", opp)["state"], "NOT_COMPARABLE_MEASURES")
+        lowmain = {("x", "A"): {"IC50": self.E(2.0)}, ("x", "B"): {"IC50": self.E(50.0, rel=">")}}      # main only known to exceed 50 nM: not enough to call it weak
+        self.assertEqual(A.attribution({"x"}, "B", lowmain)["state"], "NOT_COMPARABLE_MEASURES")
         lb = {("x", "A"): {"IC50": self.E(2.0)}, ("x", "B"): {"IC50": self.E(5000.0, rel=">")}}
         self.assertEqual(A.attribution({"x"}, "B", lb)["state"], "WEAK_ATTRIBUTION")                    # '>' on the main side is a lower bound: still weak
 

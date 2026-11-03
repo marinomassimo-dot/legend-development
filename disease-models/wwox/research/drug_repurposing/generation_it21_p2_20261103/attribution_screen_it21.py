@@ -115,7 +115,7 @@ def load_gtopdb_affinities(cache=None):
                 nm = None
         if nm is None or nm <= 0:
             continue
-        typ = r.get("Original Affinity Units") or "?"
+        typ = (r.get("Original Affinity Units") or "").strip()
         if typ in ("-", ""):                      # the original type is not recorded: the release's own affinity column (pKi, pIC50, pEC50, pKd ...) still names it
             au = (r.get("Affinity Units") or "").strip()
             typ = au[1:] if au.startswith("p") and au[1:] in ("Ki", "IC50", "EC50", "Kd", "KB") else (au if au not in ("", "-") else "?")
@@ -236,13 +236,13 @@ def _as_typed(v):
 
 
 def _pair_state(m, b):
-    """Interpretability of one same-type pair (main entry m, other-target entry b): 'ok', 'lower_bound' (main censored from below: the fold can only be larger) or a reason string.
-    Cell-based against cell-free values are not compared; an unknown assay context stays 'ok' with the unknown carried by the caller."""
+    """Interpretability of one same-type pair (main entry m, other-target entry b): 'ok', 'lower_bound' (the ratio can only be LARGER than the one computed: the main value is exact or '>' and
+    the other value is exact or '<') or a reason string. Cell-based against cell-free values are not compared; an unknown assay context stays 'ok' with the unknown carried by the caller."""
     if m["assay"] in ("cell", "biochemical") and b["assay"] in ("cell", "biochemical") and m["assay"] != b["assay"]:
         return "assay_context_differs"
     if m["rel"] == "=" and b["rel"] == "=":
         return "ok"
-    if m["rel"] == ">" and b["rel"] == "=":
+    if m["rel"] in ("=", ">") and b["rel"] in ("=", "<"):
         return "lower_bound"
     return "censored_value_not_comparable"
 
@@ -285,20 +285,25 @@ def attribution(ligands, main_gene, aff, kinds=None, weak_fold=WEAK_FOLD, potent
             if g == main or t not in d:
                 continue
             ps = _pair_state(m, d[t])
-            if ps == "ok" or ps == "lower_bound":
+            if ps == "lower_bound" and m["nm"] / d[t]["nm"] < weak_fold:
+                skipped.append(f"{t}: {main} vs {g} (a censored value leaves the ratio open upward: cannot show comparable potency)")
+            elif ps == "lower_bound" and m["rel"] == ">" and m["nm"] <= secondary_nm:
+                skipped.append(f"{t}: {main} vs {g} (main value only bounded from below at {m['nm']:g} nM)")
+            elif ps in ("ok", "lower_bound"):
                 folds.append((m["nm"] / d[t]["nm"], t, g, m, d[t], ps))
             else:
                 skipped.append(f"{t}: {main} vs {g} ({ps})")
     if not folds:
         why = "no other target has a value of the same type as the main target's (main: %s; others: %s)" % ("|".join(sorted(mt)), "|".join(sorted({t for g, d in by_gene.items() if g != main for t in d}))) if not skipped else "; ".join(skipped[:3])
+        absn = f"; the main target's own measured value is {mmin[1]['nm']:g} nM ({mmin[0]}), above {secondary_nm:g} nM: low potency at the listed target on its own terms (no ratio, no block)" if mmin[1]["rel"] == "=" and mmin[1]["nm"] > secondary_nm else ""
         return dict(base, state="NOT_COMPARABLE_MEASURES", main_nm=round(mmin[1]["nm"], 3), best_target=gbest[0], best_nm=round(gbest[2]["nm"], 3), best_measure=gbest[1],
-                    comparison_basis="none: " + why, context_note="values kept, ratio not formed; unknown is not negative")
+                    comparison_basis="none: " + why, context_note="values kept, ratio not formed; unknown is not negative" + absn)
     # one comparison per type: the most potent other target of that type; the verdict follows the type that is MOST favourable to the main target
     per_type = {}
     for f, t, g, m, b, ps in folds:
         if t not in per_type or b["nm"] < per_type[t][4]["nm"]:
             per_type[t] = (f, t, g, m, b, ps)
-    f, t, g, m, b, ps = min(per_type.values(), key=lambda x: x[0])
+    f, t, g, m, b, ps = max(per_type.values(), key=lambda x: x[0])           # the verdict follows the type that shows the LARGEST deficit: a favourable type never hides a same-type weakness (IT22 P8-fix)
     note = []
     if m["assay"] == "unknown" or b["assay"] == "unknown":
         note.append("assay context (cell or cell-free) not recorded for at least one side")
@@ -309,9 +314,9 @@ def attribution(ligands, main_gene, aff, kinds=None, weak_fold=WEAK_FOLD, potent
     cop = sum(1 for g, d in by_gene.items() if g != main and t in d and d[t]["rel"] == "=" and d[t]["nm"] <= m["nm"] * weak_fold)       # co-potent other targets, same type
     if f < weak_fold:
         state = "ATTRIBUTABLE"
-    elif m["nm"] <= potent_nm and ps == "ok":
+    elif m["nm"] <= potent_nm and m["rel"] == "=":
         state = "BORDERLINE_POTENT_MAIN_TARGET"
-    elif m["nm"] <= secondary_nm and ps == "ok":
+    elif m["nm"] <= secondary_nm and m["rel"] == "=":
         state = "SECONDARY_ACTIVITY_MEASURED"
     else:
         state = "WEAK_ATTRIBUTION"

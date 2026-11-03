@@ -17,12 +17,12 @@ Every proposal stays conditional; nothing in this package is qualified. Counts c
 |---|---:|---:|---:|---:|
 | IT21 as published | 980 | 150 | 154 | 11 |
 | + P1 scoped decisions | 980 | 150 | 199 | 14 |
-| + P2 typed pharmacology | 980 | 150 | 212 | 14 |
+| + P2 typed pharmacology | 980 | 150 | 211 | 14 |
 | + P3 inputs | 1,000 | 154 | 217 | 16 |
-| + reverse-test fixes | 1,000 | 154 | 217 | 16 |
+| + reverse-test and verifier fixes | 1,000 | 154 | 216 | 16 |
 
 P1 and P2 changed **selection and eligibility, not generation** (the 980 rows are the same rows); only the new input changed generation (20 new rows, one new question). P1 released 45 of 69 blocked rows (24 stay
-closed on a refuted premise); P2 moved 20 weak-attribution blocks to 4 and 38 attribution states. Sensitivity: weak-attribution rows at stage S2 if the secondary band ended at 300 / 1,000 / 3,000 nM: 13 / 6 / 6.
+closed on a refuted premise); P2 moved 20 weak-attribution blocks to 5 and 35 attribution states (a censored value on the other target now counts as a lower bound, and the verdict follows the type with the largest deficit). Sensitivity: weak-attribution rows at stage S2 if the secondary band ended at 300 / 1,000 / 3,000 nM: 14 / 7 / 6 (the data hold no row between 803 and 3,160 nM, so the boundary is a policy choice).
 Dependence on the failed second system: without the rows resting on the shWWOX hNPC library, Q2 keeps 0 of 8 placed seed rows, Q3 keeps 1 of 6, Q8 0 of 1; Q4 to Q7 are unaffected (engine re-run of that arm: `eng_arm`).
 
 ## 3. Executed, reasoned, observed
@@ -33,4 +33,4 @@ Agent reasoning (not engine steps): the seed-row proposals of the four input aud
 ## 4. Limits
 
 `SECONDARY_MAIN_NM` (1,000 nM) and the 10x rule are stated conventions. The chain edges of the new Q8 rows are context-free network edges. Assay class is unknown for most catalogue values. Pracinostat's HDAC5 value is 47 nM in the
-Guide to Pharmacology and 5,113 nM in one ChEMBL document (109-fold apart): attribution is undecidable until the sources are reconciled. Reverse-test fixes not yet applied: class-limit scope (G2), phase and route from the catalogue beyond ATC (G4).
+Guide to Pharmacology and 5,113 nM in one ChEMBL document (109-fold apart): attribution is undecidable until the sources are reconciled. Not done: a paralog-group cluster rule (the ERK pair counts as two hand-overs), tagging 12 dormant decision sources, a neuron-arm guard separate from the progenitor-arm one, ChEMBL activities in the local cache. Guards are recorded as carried limits: removing their ordering term changes no hand-over (verifier F12); the Q8 seed set is the one real input the engine consumed. Verification: [`verification_it22_p8_20261103`](../verification_it22_p8_20261103/README.md) with the integrator response.

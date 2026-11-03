@@ -1,0 +1,27 @@
+id	area	item	inputs	verifier_result	producer_result	agreement
+R01	attribution	vorinostat HDAC5 (IT21P2-0031)	raw GtoPdb ligand 6852: HDAC5 Ki 3,600 nM; HDAC1 Ki 1.3 nM; same type Ki	fold 2769.2 -> WEAK_ATTRIBUTION	producer WEAK_ATTRIBUTION, blocked	agree
+R02	attribution	nanatinostat HDAC5 (0006)	IC50 200 v HDAC1 IC50 3	66.7-fold, main 100-1000 nM -> SECONDARY_ACTIVITY_MEASURED	same	agree
+R03	attribution	pracinostat HDAC5 (0005)	ligand 8365: IC50 HDAC5 47, HDAC1 49, HDAC3 43, HDAC10 40	1.2-fold -> ATTRIBUTABLE (3 co-targets)	same; but ChEMBL 5,113 nM not carried (F07)	agree on GtoPdb; limit missing
+R04	attribution	fedratinib BRD4 (0169)	ligand 5716: BRD4 Kd 164; JAK1/2/3, TYK2 IC50 only	no same-type pair -> NOT_COMPARABLE_MEASURES	same	agree (policy gap F09)
+R05	attribution	fedratinib JAK2 (0549)	IC50 JAK2 3 v JAK1 100	0.03 -> ATTRIBUTABLE	same	agree
+R06	attribution	colchicine BRD4 (0171)	ligand 2367: BRD4 Kd 20,000; TUBB IC50 11; GLRA IC50; TAS2R EC50	no same-type pair -> NOT_COMPARABLE_MEASURES	same	agree (absolute 20 uM ignored, F09)
+R07	attribution	umbralisib CSNK1E (0861)	ligand 8916: CSNK1E EC50 6,000; PIK3CD IC50 13.8	types differ -> NOT_COMPARABLE_MEASURES	same	agree
+R08	attribution	molibresib BRD4 (0178)	IC50 BRD4 36.1 v BRD2 32.5 (EC50 700 ignored: no same-type partner)	1.1-fold -> ATTRIBUTABLE	same	agree
+R09	attribution	belumosudil ROCK2 / ROCK1 (0222/0734)	IC50 ROCK2 105 v ROCK1 24,000	ROCK2 ATTRIBUTABLE; ROCK1 228.6-fold, 24,000 nM -> WEAK	same	agree
+R10	attribution	SECONDARY row: SGI-1776 PIM2 (0242)	IC50 PIM2 363 v PIM1 7	51.9-fold, 363 nM -> SECONDARY	same	agree
+R11	attribution	SINGLE row: Epz004777 DOT1L (0425)	one measured target	SINGLE_MEASURED_TARGET	same	agree
+R12	attribution	londamocitinib JAK2 (0616)	ligand 11716: JAK2 IC50 1,220 '='; JAK1 IC50 3 '<'	bound-aware: fold >= 407, > 1,000 nM -> WEAK_ATTRIBUTION	producer NOT_COMPARABLE_MEASURES (censored_value_not_comparable); eligible yes	DISAGREE (F05)
+R13	attribution	trichostatin A HDAC5 (0023)	Ki 260 v HDAC1 Ki 0.2	1300-fold, 260 nM -> SECONDARY	same	agree (policy F10)
+R14	attribution	tretinoin RARB (0402)	EC50 12 v RARG 0.2 (60-fold); Ki RARB 0.4 v RORB (blank original type, pKi 6.55)	producer BORDERLINE; verifier typing ATTRIBUTABLE through the Ki pair	producer BORDERLINE (RORB typed '?')	DISAGREE (F06/F11)
+R15	attribution	clotrimazole NR1I3 (0194) / dexamethasone NR3C1 (0680)	clotrimazole: blank original types typed '?' by producer; dexamethasone NR3C1 row has no median in this release (High 9.0, Low 8.1)	clotrimazole ATTRIBUTABLE when typed; dexamethasone not reproducible from this file by ChEMBL join (producer joins a bridged ligand)	producer NOT_COMPARABLE for both	clotrimazole DISAGREE (F06); dexamethasone not verifiable
+R16	attribution-all	all 1,000 proposal rows, independent join by ChEMBL id	verifier code recompute_all.py	897 agree; 102 rows are bridged twin families (joined by name: 90 agree, 12 not joinable by name); 1 dexamethasone	see findings F05, F06, F08	summary
+R17	raw file	GtoPdb 2026.3.1 interactions, human rows	Original Affinity Units empty with p-value: 2,491; '-' with p-value: 2,682	fallback reaches only '-' rows	producer code line 114-120	BUG (F06)
+R18	sensitivity	weak-state rows at 300/1000/3000 nM	all rows with fold>=10	13 / 6 / 6 (gap 803-3,160 nM)	README 13/6/6	agree
+R19	decision scope	blocked IT21 rows	v1: 69 mechanism_cluster_examined_earlier	45 released (all eligible) + 24 shared_premise_refuted = 69; 24 are Q4 BTK, identical chain and seed	README 45/24	agree on counts (F04 on label)
+R20	decision scope	premise reach	apply each scope premise key to every row's chain/main target	chain-matching rows without carried limit: HDAC5>SLC2A1 4, BCL3>TNF 10 (0217/0218 handed/eligible), NOTCH1>MYC 36	limits only inside the cluster	DISAGREE (F01)
+R21	consumption	seed_guards for 1,000 rows	guard_tag + annotation of the two contributing seeds' rows in inputs_it22/seeds.tsv	1000/1000 equal; SECOND_SYSTEM 71, NPY 75, NRF2 20 (all with SECOND_SYSTEM)	proposals seed_guards	agree
+R22	consumption	hand-over with and without support-limited demotion / work_done demotion	select_handoff re-run on the 217 eligible rows	published set reproduced; no seed_support term: identical; no work_done term: 0198 replaces 0217	order_key	guards inert on selection (F12)
+R23	consumption	Q4 control	eng_main v eng_merged Q4 (proposals x4 files, contributions x4)	identical except evaluation_forbidden_on / guard_tag columns	README	agree
+R24	consumption	Q8 seed set	sha256(seeds.tsv) v adapter_counts.json; funnel_p1_Q8	9e18c29b...b83b equal; seed_units 1	README	agree
+R25	hNPC	WWOX in GSE126075 (hnpc_nrf2_read_output.txt)	TPM control/shWWOX: hNPC 2.90/3.35; neurons 2.54/0.52	hNPC not lower; neurons 4.9-fold lower (n=1)	gate 1 failed	agree for hNPC, incomplete for neurons (F15)
+R26	measures	'146 rows' failed control	count seed_guards containing SECOND_SYSTEM / NPY	71 / 75; sum 146	context C3 says 146	REFUTED (F25)
