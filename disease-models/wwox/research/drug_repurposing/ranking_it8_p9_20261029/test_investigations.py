@@ -50,8 +50,9 @@ class Contract(unittest.TestCase):
 
     def test_the_table_states_that_it_orders_research_investment_and_not_efficacy(self):
         s = self.summary["plain_statement"].lower()
-        self.assertIn("non classifica di efficacia", s)
-        self.assertIn("discriminante", s)
+        self.assertIn("not a ranking of efficacy", s)
+        self.assertIn("computes no position", s)
+        self.assertIn("discriminating", s)
         self.assertIn("medical advice", s)
 
     def test_what_is_not_rewarded_is_declared_and_includes_novelty_and_pathway_count(self):
@@ -361,6 +362,75 @@ class IT21Corrections(unittest.TestCase):
         self.assertIn("absence of a subtype in a catalogue is not inactivity", blob)
         self.assertNotIn("would weaken the t-type attribution rather than strengthen", blob)
         self.assertIn("compatible with a common target", blob)
+
+
+class It21P7(unittest.TestCase):
+    """IT21 P7: conditional hypotheses enter the order with explicit reasons, never as qualified; movement is read against IT20; the informative
+    negatives are shareable-safe; the curated context states that positions are written by agents and not computed."""
+
+    def setUp(self):
+        self.j = json.loads((HERE / "ranking.json").read_text(encoding="utf-8"))
+        self.all = load_all_rows()
+
+    def test_new_rows_are_conditional_with_origin_feasibility_and_a_stated_reason(self):
+        cond = [r for r in self.all if r["status"] == "conditional_hypothesis"]
+        self.assertGreaterEqual(len(cond), 3)
+        for r in cond:
+            for f in ("origin_detail", "feasibility", "evidence_depth", "movement_reason", "why_now"):
+                self.assertTrue(r[f].strip(), f"{r['inv_id']} {f}")
+            self.assertTrue(r["movement_reason"].startswith("new in IT21"))
+            self.assertIn("Not rewarded: novelty", r["movement_reason"])
+            blob = json.dumps(r).lower()
+            for bad in rk.FORBIDDEN_QUALIFIED:
+                self.assertNotIn(bad, blob)
+
+    def test_a_conditional_row_called_qualified_is_refused(self):
+        base = {"inv_id": "X", "rank": "1", "unit_id": "", "need_id": "N-OK", "intervention": "i", "question": "q", "why_now": "w", "evidence_available": "e",
+                "decisive_uncertainty": "d", "next_test": "n", "feasibility": "f", "origin_class": "generated_by_legend", "novelty_perimeter": "Queried: the cards.",
+                "direction_state": "resolved", "status": "conditional_hypothesis", "origin_detail": "o", "evidence_solidity": "s", "movement_note": "m", "it20_rank": ""}
+        g = Guards("test_the_real_shape_is_accepted")
+        g.setUp()
+        g.base = base
+        self.assertEqual(len(g.run_with([base])), 1)
+        with self.assertRaises(SystemExit):
+            g.run_with([dict(base, why_now="This is now qualified hypothesis material.")])
+        with self.assertRaises(SystemExit):
+            g.run_with([dict(base, origin_detail="")])
+        with self.assertRaises(SystemExit):
+            g.run_with([dict(base, status="qualified")])
+
+    def test_movement_is_read_against_it20(self):
+        for r in self.all:
+            m = r["movement_reason"]
+            self.assertTrue(m.startswith(("new in IT21", "position unchanged from IT20", "moved ")), m)
+            if r["it20_rank"]:
+                self.assertEqual(m.startswith("position unchanged"), int(r["it20_rank"]) == int(r["rank"]))
+        self.assertEqual(rk.investigation_movement_it20({"rank": 6}, {"it20_rank": "5", "movement_note": "n"}), "moved down from rank 5 (IT20) to rank 6: n")
+
+    def test_the_context_declares_curation_and_carries_the_pending_slot_and_the_funnel(self):
+        c = self.j["investigations_context"]
+        self.assertTrue(c["positions_are_curated_not_computed"])
+        self.assertIn("computes no position", c["curation"])
+        self.assertEqual(c["wwox_contribution"]["state"], "pending")
+        self.assertEqual(c["funnel"]["qualified_hypotheses"], 0)
+        self.assertEqual(c["funnel"]["generator_conditional_rows"], 992)
+        self.assertEqual(sum(c["published_vs_it20"].values()), len(self.j["investigations"]))
+
+    def test_informative_negatives_keep_the_name_out_of_the_shareable_fields(self):
+        negs = self.j["investigations_context"]["informative_negatives"]
+        self.assertGreaterEqual(len(negs), 5)
+        for n in negs:
+            if n["chembl_ids"]:
+                name = n["subject_full"].replace(",", " ").split()[0].lower()
+                for f in ("subject_label", "ruled_out", "reason", "reopen"):
+                    self.assertNotIn(name, n[f].lower())
+            self.assertTrue(n["reopen"].strip())
+
+    def test_a_published_row_with_a_chembl_id_has_a_class_label_in_the_allowlist(self):
+        allow = json.loads((HERE.parent / "view/shareable_sources.json").read_text(encoding="utf-8"))
+        labels = allow["investigations_shareable"]["class_labels"]
+        for r in self.j["investigations"]:
+            self.assertIn(r["intervention"], labels, f"{r['inv_id']} would show the generic withheld note")
 
 
 if __name__ == "__main__":

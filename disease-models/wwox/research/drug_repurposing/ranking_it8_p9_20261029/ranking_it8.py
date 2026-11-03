@@ -1732,8 +1732,9 @@ def _base_triggers() -> list[dict]:
 # its cost and what its result would change - and NOT a ranking of efficacy. Depth of evidence is carried as a separate
 # displayed field (`evidence_depth`) and is never a requirement that keeps a new hypothesis out of the list.
 INVESTIGATIONS_SRC = HERE / "investigations_it20.tsv"
-INVESTIGATIONS_STATEMENT = ("Ordine delle indagini da finanziare, non classifica di efficacia: ogni riga ordina il valore del prossimo "
-                            "esperimento discriminante (che cosa cambierebbe il risultato, a quale costo), non la probabilita di beneficio. "
+INVESTIGATIONS_STATEMENT = ("An order of investigations to fund, not a ranking of efficacy: each row orders the value of the next discriminating "
+                            "experiment (what its result would change, at what cost), not a probability of benefit. "
+                            "The positions are curated judgements written by research agents and reviewed row by row; the code validates them and computes no position. "
                             "An unresolved or opposed direction is named in the row's decisive uncertainty and the order does not imply a "
                             "direction the evidence does not support. Nothing here is medical advice.")
 ORIGIN_CLASSES = {
@@ -1746,9 +1747,17 @@ DIRECTION_STATES = {
     "unresolved": "the need's own direction is uncertain: no lever on it can be qualified either way, which is a visible gap and not a negative finding",
     "opposed_risk": "a documented action of this intervention pushes against another need of the same objective",
 }
+# IT21 P7: what kind of row this is. A conditional hypothesis keeps its status and is never shown as qualified.
+INV_STATUS = {
+    "carded_thread": "established thread: a carded WWOX-system result exists",
+    "premise_measurement": "premise measurement: no compound is involved, the result decides whether a lever question can be asked",
+    "conditional_hypothesis": "conditional hypothesis: the role of the observed change is unresolved; kept as a research question and never presented as qualified",
+}
+# A conditional row must not call itself qualified (the generator's closed status vocabulary has no such value for it).
+FORBIDDEN_QUALIFIED = ("is qualified", "was qualified", "now qualified", "qualified hypothesis")
 INV_COLS = ["rank", "tie_group", "inv_id", "intervention", "question", "why_now", "evidence_available", "evidence_depth", "decisive_uncertainty",
-            "next_test", "feasibility", "origin_class", "novelty_perimeter", "direction_state", "need_id", "unit_id", "movement_reason",
-            "below_the_line", "below_the_line_reason"]
+            "next_test", "feasibility", "origin_class", "origin_detail", "status", "status_label", "novelty_perimeter", "direction_state", "need_id", "unit_id",
+            "chembl_ids", "it20_rank", "movement_reason", "below_the_line", "below_the_line_reason"]
 # A novelty perimeter records what was actually queried. These phrasings claim more than a query can support.
 FORBIDDEN_NOVELTY = ("never studied", "never tested", "mai studiato", "first ever", "the first", "no one has", "unique in", "untested anywhere")
 # No dose, route, schedule or preparation is carried anywhere in this table.
@@ -1790,8 +1799,19 @@ def investigations(ctx: dict, uni: dict, as_of: str, prev: dict | None = None) -
         for f in ("question", "why_now", "evidence_available", "decisive_uncertainty", "next_test", "novelty_perimeter"):
             if not (r.get(f) or "").strip():
                 raise SystemExit(f"investigations_it20.tsv: {r['inv_id']} empty required field {f}")
+        st = (r.get("status") or "").strip() or ("carded_thread" if r["unit_id"] else "premise_measurement")
+        if st not in INV_STATUS:
+            raise SystemExit(f"investigations_it20.tsv: {r['inv_id']} unknown status {st!r}")
+        if st == "conditional_hypothesis":
+            for f in ("origin_detail", "evidence_solidity", "feasibility", "movement_note"):
+                if not (r.get(f) or "").strip():
+                    raise SystemExit(f"investigations_it20.tsv: {r['inv_id']} is a conditional hypothesis and needs a non-empty {f}")
+            _inv_guard({"inv_id": r["inv_id"], "_all": " ".join(str(v) for v in r.values())}, "_all", FORBIDDEN_QUALIFIED,
+                       "a conditional hypothesis is never called qualified")
+        if (r.get("it20_rank") or "").strip() and not (r["it20_rank"].strip().isdigit() and int(r["it20_rank"]) >= 1):
+            raise SystemExit(f"investigations_it20.tsv: {r['inv_id']} it20_rank must be empty (new) or a positive integer")
         _inv_guard(r, "novelty_perimeter", FORBIDDEN_NOVELTY, "a novelty perimeter states what was queried, never that something was never studied")
-        for f in INV_COLS:
+        for f in INV_COLS + ["evidence_solidity", "movement_note"]:
             if f in r:
                 _inv_guard(r, f, FORBIDDEN_POSOLOGY, "no dose, route, schedule or preparation may be carried in this table")
         # the declared direction state must match the need file: an uncertain need may not be presented as resolved
@@ -1806,15 +1826,23 @@ def investigations(ctx: dict, uni: dict, as_of: str, prev: dict | None = None) -
     for r in sorted(src, key=lambda x: (int(x["rank"]), x["inv_id"])):
         u = units_by_id.get(r["unit_id"]) if r["unit_id"] else None
         rank = int(r["rank"])
-        depth = f"{u['evaluation_depth']} - {clip(u['evaluation_depth_text'], 160)}" if u else \
-            "no ranked unit: the investigation is a premise measurement, so no evaluation depth applies (this is not a depth of zero)"
+        solidity = (r.get("evidence_solidity") or "").strip()
+        if u:
+            depth = f"{u['evaluation_depth']} - {clip(u['evaluation_depth_text'], 160)}"
+        elif solidity:
+            depth = solidity + " (no ranked unit, so no evaluation depth applies: this is not a depth of zero)"
+        else:
+            depth = "no ranked unit: the investigation is a premise measurement, so no evaluation depth applies (this is not a depth of zero)"
+        stt = (r.get("status") or "").strip() or ("carded_thread" if r["unit_id"] else "premise_measurement")
         row = {
             "rank": rank,
             "tie_group": f"{rank} (tie of {tie_size[rank]})" if tie_size[rank] > 1 else str(rank),
             "inv_id": r["inv_id"], "intervention": r["intervention"], "question": r["question"], "why_now": r["why_now"],
             "evidence_available": r["evidence_available"], "evidence_depth": depth, "decisive_uncertainty": r["decisive_uncertainty"],
             "next_test": r["next_test"], "feasibility": r["feasibility"], "origin_class": r["origin_class"],
-            "origin_class_label": ORIGIN_CLASSES[r["origin_class"]], "novelty_perimeter": r["novelty_perimeter"],
+            "origin_class_label": ORIGIN_CLASSES[r["origin_class"]], "origin_detail": (r.get("origin_detail") or "").strip(),
+            "status": stt, "status_label": INV_STATUS[stt], "chembl_ids": (r.get("chembl_ids") or "").strip(),
+            "it20_rank": (r.get("it20_rank") or "").strip(), "novelty_perimeter": r["novelty_perimeter"],
             "direction_state": r["direction_state"], "direction_state_label": DIRECTION_STATES[r["direction_state"]],
             "need_id": r["need_id"], "need_short": ctx["needs"][r["need_id"]]["short"], "need_direction": ctx["needs"][r["need_id"]]["dir"],
             "objective": "broad" if ctx["needs"][r["need_id"]]["goal"] == "deep_recovery" else "partial",
@@ -1822,7 +1850,7 @@ def investigations(ctx: dict, uni: dict, as_of: str, prev: dict | None = None) -
             "unit_group_partial": (u["views"]["partial"].get("group", "") if u else ""),
             "tracks": (u["tracks"] if u else []),
         }
-        row["movement_reason"] = investigation_movement(row, prev)
+        row["movement_reason"] = investigation_movement_it20(row, r) if "it20_rank" in r else investigation_movement(row, prev)
         out.append(row)
     return _apply_the_line(out)
 
@@ -1877,6 +1905,70 @@ def investigation_movement(row: dict, prev: dict | None) -> str:
         return "position unchanged since the previous evaluation"
     direction = "up" if row["rank"] < o["rank"] else "down"
     return f"moved {direction} from rank {o['rank']} to {row['rank']} since the previous evaluation; the reason class is declared with `snapshot --reason`"
+
+
+def investigation_movement_it20(row: dict, src: dict) -> str:
+    """Movement against the IT20 order, written from the curated `it20_rank` (empty = new in IT21) and the curated `movement_note`."""
+    note = (src.get("movement_note") or "").strip()
+    o = (src.get("it20_rank") or "").strip()
+    if not o:
+        head = "new in IT21 (no IT20 position)"
+    elif int(o) == row["rank"]:
+        head = f"position unchanged from IT20 (rank {o})"
+    else:
+        head = f"moved {'up' if row['rank'] < int(o) else 'down'} from rank {o} (IT20) to rank {row['rank']}"
+    return head + (": " + note if note else "")
+
+
+# IT21 P7: what the generator now rules out (informative negatives) and the curated context of the order.
+NEGATIVES_SRC = HERE / "informative_negatives_it21.tsv"
+CONTEXT_SRC = HERE / "investigations_context_it21.json"
+NEG_FIELDS = ("neg_id", "package", "subject_full", "subject_label", "ruled_out", "reason", "detail_full", "reopen", "chembl_ids")
+
+
+def informative_negatives() -> list[dict]:
+    """Read the informative negatives. A negative concerns a chain as written, never a compound's activity. The shareable-safe fields
+    (subject_label, ruled_out, reason, reopen) must not carry the compound name of a row that has a ChEMBL record: the name stays in
+    subject_full (full edition) and the record travels in the separate share-alike file."""
+    if not NEGATIVES_SRC.exists():
+        return []
+    rows = read_tsv(NEGATIVES_SRC)
+    seen = set()
+    for r in rows:
+        if r["neg_id"] in seen:
+            raise SystemExit(f"informative_negatives_it21.tsv: duplicate {r['neg_id']}")
+        seen.add(r["neg_id"])
+        for f in NEG_FIELDS:
+            if f not in r:
+                raise SystemExit(f"informative_negatives_it21.tsv: missing column {f}")
+            if f != "chembl_ids" and not (r[f] or "").strip():
+                raise SystemExit(f"informative_negatives_it21.tsv: {r['neg_id']} empty {f}")
+        for f in ("subject_label", "ruled_out", "reason", "reopen"):
+            _inv_guard({"inv_id": r["neg_id"], f: r[f]}, f, FORBIDDEN_POSOLOGY, "no dose, route, schedule or preparation")
+        if r["chembl_ids"].strip():
+            name = r["subject_full"].replace(",", " ").split()[0].lower()
+            for f in ("subject_label", "ruled_out", "reason", "reopen"):
+                if name in r[f].lower():
+                    raise SystemExit(f"informative_negatives_it21.tsv: {r['neg_id']} {f} carries the compound name {name!r}; keep it in subject_full")
+    return [{f: r[f] for f in NEG_FIELDS} for r in rows]
+
+
+def investigations_context(invs: list[dict]) -> dict:
+    """The curated context of the order: how positions are made, the funnel, the movement against IT20, the informative negatives and the
+    slot for the WWOX-contribution measurement (IT21 P5)."""
+    if not CONTEXT_SRC.exists():
+        return {}
+    c = json.loads(CONTEXT_SRC.read_text(encoding="utf-8"))
+    pub = [r for r in invs if not r.get("below_the_line")]
+    mv = Counter()
+    for r in pub:
+        m = r["movement_reason"]
+        mv["new" if m.startswith("new in IT21") else "unchanged" if m.startswith("position unchanged") else "moved"] += 1
+    c["published_vs_it20"] = dict(sorted(mv.items()))
+    c["below_the_line_vs_it20"] = [{"inv_id": r["inv_id"], "movement": r["movement_reason"]} for r in invs if r.get("below_the_line")]
+    c["informative_negatives"] = informative_negatives()
+    c["positions_are_curated_not_computed"] = True
+    return c
 
 
 def investigations_summary(rows: list[dict], all_rows: list[dict] | None = None) -> dict:
@@ -1993,6 +2085,7 @@ def build_all() -> dict[str, bytes]:
         # the view builder's contract (framework/scripts/repurposing_view.py, INV_FIELDS / INV_MAX): a bare LIST of at most
         # ten rows, in rank order, each tie group sharing one tie_group string. The summary lives under summary.investigations.
         ing["investigations"] = pub
+        ing["investigations_context"] = investigations_context(invs)
         summary["investigations"] = investigations_summary(pub, invs)
     files["ranking.json"] = json_bytes(ing)
     # per-unit input digests (for the snapshot / diff mechanism)

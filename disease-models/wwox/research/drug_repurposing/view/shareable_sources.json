@@ -43,7 +43,7 @@
   },
   "counts_and_identifiers_only": {
     "NCI Cancer Gene Index (via DGIdb)": "class C until the Cancer Gene Index is covered by a sentence at NCI: DGIdb declares public domain; NCI's reuse page (cancer.gov/policies/copyright-reuse, read 2026-10-29) says text in NCI products is free of copyright unless otherwise indicated, asks that NCI be credited, and flags third-party graphics, but it uses neither the words public domain nor data or datasets and does not name the Cancer Gene Index (IT7 P8 verifier D4; IT8 P2 re-read); rows are counted, never embedded",
-    "ChEMBL": "CC BY-SA 3.0 (EMBL-EBI): no ChEMBL content in the single page; ChEMBL identifiers are kept; the ChEMBL records and curated mechanisms of the twelve card compounds are shipped as a separate class-B file with its own licence text and credit line (shareable_package/class_b/chembl_cc-by-sa-3.0/)",
+    "ChEMBL": "CC BY-SA 3.0 (EMBL-EBI): no ChEMBL content in the single page; ChEMBL identifiers are kept; the ChEMBL records and curated mechanisms of the card compounds and of the compounds the first screen points to by identifier are shipped as a separate class-B file with its own licence text and credit line (shareable_package/class_b/chembl_cc-by-sa-3.0/)",
     "GtoPdb (via DGIdb and the public download)": "class B, not shipped: database ODbL and contents CC BY-SA 4.0 at once (two licences on the same rows); counts only",
     "ClinPGx / PharmGKB (via DGIdb)": "class B, not shipped: CC BY-SA 4.0 declared by DGIdb; the data-usage policy page was not read; counts only",
     "DGIdb (other claim sources: DTC, TTD, TdgClinicalTrial, TEND, JAX-CKB, CGI, MyCancerGenome and its trials, ClearityFoundation, OncoKB, CancerCommons, COSMIC)": "class C: non-commercial, unclear, publisher-table or unknown terms declared by DGIdb; counted, never embedded",
@@ -217,7 +217,7 @@
       "licence_text": "class_b/chembl_cc-by-sa-3.0/LICENSE_CC-BY-SA-3.0.txt",
       "credit": "ChEMBL, EMBL-EBI, https://www.ebi.ac.uk/chembl/ , release ChEMBL_37 (2026-05-01)",
       "release": "ChEMBL_37 2026-05-01",
-      "records_of": "the twelve ChEMBL records the module's cards name (selected through the repository's card-to-catalogue link table, not shipped here)",
+      "records_of": "the ChEMBL records the module's cards name, plus those of the compounds named by identifier in the published first-screen investigations and in the informative negatives (selected through the repository's card-to-catalogue link table and ranking.json, not shipped here)",
       "fields": [
         "chembl_id",
         "pref_name",
@@ -228,7 +228,7 @@
         "black_box_warning_in_source",
         "curated_mechanisms[mechanism_of_action, action_type, target_name, target_type, organism, gene_symbols]"
       ],
-      "changes": "selection of 12 records and of the fields above; reformatted from the catalogue's JSON; no ChEMBL value was altered"
+      "changes": "selection of records and of the fields above; reformatted from the catalogue's JSON; no ChEMBL value was altered"
     }
   },
   "licence_texts": {
@@ -422,6 +422,25 @@
         "system": "Recombinant receptors in cell lines and oocytes (details withheld from this edition)",
         "counter_evidence": "Subunit selectivity of this class is not resolved between documents."
       }
+    }
+  },
+  "investigations_shareable": {
+    "policy": "IT21 P7. How a compound whose only provenance is a ChEMBL record (CC BY-SA 3.0) is shown on the first screen. The term applies to ChEMBL content and to nothing else: the page itself embeds no ChEMBL content, so it shows the scientific class of the intervention in our own words (class_labels, written here, not copied from any catalogue) and the ChEMBL identifier, and the record (name, type, phase, curated mechanisms) travels in the separate class-B file with its licence text and credit line, which the package builder fills from the ChEMBL identifiers of the published investigations and of the informative negatives. A compound whose name an independent class-A source also states (the MATRIX list, openFDA NDC) is named in the label, with that source's attribution; a card subject is named as a card subject. The audit still decides: a name that only a class-B or class-C row provides fails it. Rows of other sources are not affected by this rule.",
+    "class_labels": {
+      "AAV9-delivered human WWOX (gene addition)": "AAV9 gene addition of human WWOX (gene therapy; see the gene-addition cards)",
+      "Integrated-stress-response modulators (class)": "Integrated-stress-response modulators (a class; no single compound)",
+      "T-type calcium blockade, proposed isoform-reach set to verify (efonidipine, flunarizine, against the carded T-type agents)": "Blockade of the T-type calcium current by a proposed pair of approved agents, to verify isoform reach against the carded T-type agents",
+      "Ethosuximide (and the carded T-type thread)": "Ethosuximide (see its card) and the carded T-type thread",
+      "NMDAR antagonism (the carded tool compound and the clinically used class)": "NMDAR antagonism (the carded tool compound and the clinically used class)",
+      "Pro-myelinating agents (class)": "Pro-myelinating agents (a class; no single compound)",
+      "Dichloroacetate and PDK inhibition": "Dichloroacetate (see its card) and inhibition of the pyruvate dehydrogenase kinases",
+      "The NRF2 (KEAP1) axis, genetic arm before any compound": "The NRF2 (KEAP1) axis, genetic arm before any compound",
+      "Agonist probe for the receptors of thyroid hormone (tiratricol, with liothyronine as comparator)": "Agonist probe for the receptors of thyroid hormone (a clinical-stage analogue, identified by its ChEMBL record below), with liothyronine as the approved comparator",
+      "HSC70 (HSPA8) inhibitor peptide forigerimod, with lysosomal and genetic controls": "A peptide inhibitor of the chaperone HSC70 (HSPA8) used as a cell-level probe, with lysosomal and genetic controls (identified by its ChEMBL record below)",
+      "Lithium": "Lithium (see its card)",
+      "GABA-aminotransferase inactivators (the carded clinical thread)": "GABA-aminotransferase inactivators (see the vigabatrin card)",
+      "No lever available (four needs with no catalogue reach)": "No lever available (four needs with no catalogue reach)",
+      "EZH2 (PRC2) inhibitor GSK343 as a probe in mouse glial systems": "A selective EZH2 (PRC2) inhibitor, a tool compound for mouse glial systems"
     }
   }
 }

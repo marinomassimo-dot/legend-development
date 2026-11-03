@@ -18,7 +18,7 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 12190,
+    "values": 12310,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -193,13 +193,13 @@
    },
    "^\\.ui\\.": {
     "class": "UI",
-    "values": 1309,
+    "values": 1336,
     "why": "Italian orientation text (builder data UI_IT and siblings)"
    }
   },
   "identifiers": {
    "CAT": 2229,
-   "CHEMBL": 302,
+   "CHEMBL": 307,
    "DOI": 5,
    "HGNC": 12,
    "NCT": 0,
@@ -223,7 +223,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3113,
+    "forbidden-name": 3131,
     "forbidden-wording": 12
    },
    "co_attested_wording": [
@@ -280,8 +280,11 @@
    "CHEMBL1096",
    "CHEMBL1201230",
    "CHEMBL1201333",
+   "CHEMBL1230640",
    "CHEMBL146927",
+   "CHEMBL1544",
    "CHEMBL1746",
+   "CHEMBL1801250",
    "CHEMBL189963",
    "CHEMBL190461",
    "CHEMBL1983350",
@@ -290,8 +293,11 @@
    "CHEMBL256997",
    "CHEMBL306823",
    "CHEMBL3301610",
+   "CHEMBL3989409",
+   "CHEMBL3989801",
    "CHEMBL4117516",
    "CHEMBL413",
+   "CHEMBL41632",
    "CHEMBL4217292",
    "CHEMBL4303525",
    "CHEMBL589586",
@@ -299,8 +305,8 @@
    "CHEMBL89598"
   ],
   "file": "class_b/chembl_cc-by-sa-3.0/chembl_cc-by-sa-3.0.jsonl",
-  "mechanism_rows": 19,
-  "records": 21,
+  "mechanism_rows": 22,
+  "records": 27,
   "release": "ChEMBL_37 2026-05-01"
  },
  "class_b_files": [
@@ -309,7 +315,7 @@
    "label": "chembl",
    "licence": "CC BY-SA 3.0 Unported",
    "path": "class_b/chembl_cc-by-sa-3.0/chembl_cc-by-sa-3.0.jsonl",
-   "records_of": "the twelve ChEMBL records the module's cards name (selected through the repository's card-to-catalogue link table, not shipped here)"
+   "records_of": "the ChEMBL records the module's cards name, plus those of the compounds named by identifier in the published first-screen investigations and in the informative negatives (selected through the repository's card-to-catalogue link table and un registro del repository (non incluso in questo pacchetto), not shipped here)"
   }
  ],
  "comparison": {
@@ -406,7 +412,7 @@
   {
    "label": "ChEMBL",
    "retrieved": "2026-10-27T22:41:53Z",
-   "terms": "CC BY-SA 3.0 (EMBL-EBI): no ChEMBL content in the single page; ChEMBL identifiers are kept; the ChEMBL records and curated mechanisms of the twelve card compounds are shipped as a separate class-B file with its own licence text and credit line (shareable_package/class_b/chembl_cc-by-sa-3.0/)",
+   "terms": "CC BY-SA 3.0 (EMBL-EBI): no ChEMBL content in the single page; ChEMBL identifiers are kept; the ChEMBL records and curated mechanisms of the card compounds and of the compounds the first screen points to by identifier are shipped as a separate class-B file with its own licence text and credit line (shareable_package/class_b/chembl_cc-by-sa-3.0/)",
    "version": "ChEMBL_37 2026-05-01"
   },
   {
@@ -454,7 +460,7 @@
  ],
  "data": {
   "catalogue_generated": "2026-10-31T07:28:37Z",
-  "data_date": "2026-11-02",
+  "data_date": "2026-11-03",
   "dgidb_export": "2024-06-10",
   "view_schema": "legend.wwox.repurposing_view/2"
  },
@@ -462,11 +468,11 @@
   "BIBLIO": 2429,
   "COUNT": 11599,
   "ID": 4547,
-  "OWN": 83581,
+  "OWN": 83701,
   "ROWNAME": 2251,
   "SRC_A": 189,
   "SRC_META": 256,
-  "UI": 1309
+  "UI": 1336
  },
  "embedded_sources": [
   {
@@ -501,7 +507,7 @@
  "files": {
   "COMPARISON.md": {
    "bytes": 7424,
-   "sha256": "e1a4de1e825d88b3c2315266557ee52f6c0c2842055fcecf17c2d0317f94b0dc"
+   "sha256": "40da9c9bbbc58cf933a4310ff713a0d6c3c67429c2f1fe3194d5e3e628581dd0"
   },
   "LICENSES/CC-BY-4.0.txt": {
    "bytes": 18657,
@@ -520,32 +526,32 @@
    "sha256": "e5dfa90d88e2069a2e4fd13429e8ebaefb7bd92fbbaede065af905656bc7ba87"
   },
   "NOTICE.md": {
-   "bytes": 12774,
-   "sha256": "7b632cb276c9ffa68278415249e2f2989a3e7d84b58805caa910d53b5c670184"
+   "bytes": 13087,
+   "sha256": "7168a87cc4b555d8c64e4df34f57d86568c6f1c14f6f0ccdb30f412fe3908d20"
   },
   "README.md": {
    "bytes": 4906,
-   "sha256": "411169038e5a77180fe8c05244e1be0131deb1cfff35d91362d9cb2df74798f5"
+   "sha256": "4e16e8515c2403b868c7eb6fab65186d81cbc925d95e49134e39594614f16b03"
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 1999,
    "sha256": "45adea0aba494a34d7a54ebf3145ecd4ff833f66b30f0886ae7eed068d583834"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
-   "bytes": 1636,
-   "sha256": "f34de9644251ef08ef2c72cf1cdcdce634723850f3c804fb3815592db17b0a1f"
+   "bytes": 1726,
+   "sha256": "91ced329795903224d2ee989a7fccb5034b67e36b23baa806dccfde1531b9543"
   },
   "class_b/chembl_cc-by-sa-3.0/LICENSE_CC-BY-SA-3.0.txt": {
    "bytes": 22240,
    "sha256": "3f941b3b89cf7b8370ceb83cc76d2120d471b58735d8ca60238a751a48d7f72f"
   },
   "class_b/chembl_cc-by-sa-3.0/chembl_cc-by-sa-3.0.jsonl": {
-   "bytes": 11589,
-   "sha256": "240723d6c86c13fc8f19ff2a5bbe7eec5e64da0f3769ea25e49d8d7b7e5784d0"
+   "bytes": 14081,
+   "sha256": "6723b001a71330ea1f0340694b8feedd8abb97b4a65582aad7b7b5d556a4edfa"
   },
   "index.html": {
-   "bytes": 4439243,
-   "sha256": "42e5457dbcb55209c3c2627b624fe9af02848861c3f61d64890c65610dd5d421"
+   "bytes": 4477500,
+   "sha256": "b113422558c781395299b5ebd97600fe3cf05197249a646a5865ee980190ac45"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
@@ -605,7 +611,7 @@
   "lead_field_redactions": 11,
   "pair_status_rule": "pairs[].p.cr.pha[1] (status classes of the row) is dropped in the shareable build: a status class derives from ChEMBL max_phase, DGIdb approved flags, MATRIX and openFDA together, and the build does not re-derive a class-A-only status per row.",
   "pairs_status_class_dropped": 912,
-  "repository_file_names_described": 201,
+  "repository_file_names_described": 203,
   "rule": "IT5 P13 fix. Own analysis stays in the shareable build: a conclusion at the level of a need, a class or a card subject, in our own words, short, attributed to a published work. Withheld: (1) a sentence that states a compound-target(-action) pair together with its database of origin when the pair is asserted only by a class-B/C catalogue source; (2) a compound named in prose whose only provenance in the repository is a class-B/C catalogue row (it appears in no cited full text and is not a card subject); (3) a per-compound status, phase, approval or access statement attributed to a class-B/C source; (4) repository file names, which cannot be used outside the repository. The replacement keeps the research conclusion and names the withheld source class with the phrase in withheld_phrase. The FULL build keeps everything. The audit enforces (1) and (2) by derivation from the catalogue, (3) and (4) by pattern, and every redaction below must match exactly once or more: a stale redaction fails the build.",
   "withheld_phrase": "dato di una fonte non inclusa in questa versione"
  },

@@ -13,7 +13,7 @@ is a decision of the operator. Contents (all deterministic, no clock is read):
   README.md             how to open it, how to hand it over, limits of the perimeter
   manifest.json         machine-readable: embedded sources with row/field counts, withheld counts by class, file digests, audit summary
   LICENSES/             the licence texts the package relies on (pinned by sha256 in view/shareable_sources.json)
-  class_b/chembl_cc-by-sa-3.0/   the ChEMBL records of the cards' twelve compounds, as a separate CC BY-SA 3.0 file with its own licence text and credit
+  class_b/chembl_cc-by-sa-3.0/   the ChEMBL records of the cards' compounds and of the compounds the first screen points to by identifier, as a separate CC BY-SA 3.0 file with its own licence text and credit
 
 The class-B file is never merged into index.html (the page embeds no ChEMBL content), so the share-alike condition attaches to that
 one file only (CC BY-SA 3.0 section 4(a): a Collection is not required to be placed under the licence).
@@ -47,9 +47,26 @@ def sha(b: bytes) -> str:
 
 
 # ---------------------------------------------------------------------------- the class-B ChEMBL file
+def investigation_chembl_ids(dr: Path) -> set:
+    """IT21 P7: ChEMBL identifiers the first screen points to (published investigations and informative negatives). The page names no such compound;
+    the record travels in the separate share-alike file, so a reader can resolve the identifier under the ChEMBL licence."""
+    out = set()
+    rj = dr / "ranking_it8_p9_20261029/ranking.json"
+    if not rj.exists():
+        return out
+    j = json.loads(rj.read_text(encoding="utf-8"))
+    for r in j.get("investigations") or []:
+        out |= {x for x in str(r.get("chembl_ids") or "").split(";") if x}
+    for n in (j.get("investigations_context") or {}).get("informative_negatives") or []:
+        out |= {x for x in str(n.get("chembl_ids") or "").split(";") if x}
+    return out
+
+
 def chembl_records(dr: Path, allow: dict) -> list[dict]:
     spec = allow["class_b_files"]["chembl"]
-    ids = sorted({x["chembl_id"] for v in rv.jload(dr / "catalog/card_links.json")["cards"].values() for x in v.get("links", []) if x.get("chembl_id")})
+    ids = {x["chembl_id"] for v in rv.jload(dr / "catalog/card_links.json")["cards"].values() for x in v.get("links", []) if x.get("chembl_id")}
+    ids |= investigation_chembl_ids(dr)
+    ids = sorted(ids)
     out = []
     with gzip.open(dr / "catalog/catalog.jsonl.gz", "rt", encoding="utf-8") as fh:
         for line in fh:
@@ -84,8 +101,8 @@ def chembl_credit(allow: dict, n: int) -> str:
         "  Original work: ChEMBL, EMBL-EBI (licensor). Title of the work: ChEMBL database.\n"
         "  Licence: Creative Commons Attribution-ShareAlike 3.0 Unported, https://creativecommons.org/licenses/by-sa/3.0/ ; the legal code is in LICENSE_CC-BY-SA-3.0.txt next to this file.\n\n"
         "Adaptation notice (section 3(b) and 4(c)(iv))\n\n"
-        f"  chembl_cc-by-sa-3.0.jsonl is an adaptation of ChEMBL: a selection of {n} molecule records (the compounds the cards of the LEGEND WWOX repurposing module name,\n"
-        "  by ChEMBL identifier) and of the fields chembl_id, pref_name, molecule_type, max_phase, withdrawn_flag, first_approval_year, black_box_warning_in_source and the\n"
+        f"  chembl_cc-by-sa-3.0.jsonl is an adaptation of ChEMBL: a selection of {n} molecule records (the compounds the cards of the LEGEND WWOX repurposing module name, and the compounds the first-screen investigations and informative negatives point to,\n"
+        "  all by ChEMBL identifier) and of the fields chembl_id, pref_name, molecule_type, max_phase, withdrawn_flag, first_approval_year, black_box_warning_in_source and the\n"
         "  curated mechanisms (mechanism_of_action, action_type, target_name, target_type, organism, gene_symbols), re-serialised as JSON Lines.\n"
         "  No ChEMBL value was altered. The adaptation is distributed under the same licence (CC BY-SA 3.0). No endorsement by ChEMBL or EMBL-EBI is implied.\n\n"
         "Scope\n\n"
@@ -187,7 +204,7 @@ def notice_md(allow: dict, S: dict, man: dict) -> str:
         L += [f"- **{e['label']}**: `{e['path']}` ({e['licence']}). {e['credit']}. Records: {e['records_of']}. Licence text and credit line travel with it in the same folder (`LICENSE_CC-BY-SA-3.0.txt`, `CREDIT.txt`)."]
     L += ["",
           "Decision for the three share-alike sources, with reasons:", "",
-          "- **ChEMBL (CC BY-SA 3.0): shipped as a separate file.** The condition is attribution naming the ChEMBL URL and the release version, and distribution of any adaptation under the same licence. It can be met exactly: the file is a selection of twelve records and of listed fields (an adaptation, stated as such), carries the legal code and the credit line, and is not merged with anything else; the single page embeds only ChEMBL identifiers, so the share-alike condition attaches to that file only (CC BY-SA 3.0 section 4(a), Collection).",
+          "- **ChEMBL (CC BY-SA 3.0): shipped as a separate file.** The condition is attribution naming the ChEMBL URL and the release version, and distribution of any adaptation under the same licence. It can be met exactly: the file is a selection of records (the card compounds and the compounds the first screen points to by identifier) and of listed fields (an adaptation, stated as such), carries the legal code and the credit line, and is not merged with anything else; the single page embeds only ChEMBL identifiers, so the share-alike condition attaches to that file only (CC BY-SA 3.0 section 4(a), Collection).",
           "- **GtoPdb (ODbL database, CC BY-SA 4.0 contents): counts only.** Two licences apply to the same rows, ODbL carries its own rules for a publicly used Derivative Database, and the catalogue merges GtoPdb ligand data into its records. A correct separate file would need a split the catalogue does not hold; it is not widened.",
           "- **ClinPGx / PharmGKB (CC BY-SA 4.0 declared by DGIdb): counts only.** The data-usage policy page was script-rendered and its text was never read; an unread condition is not honoured by guessing.", "",
           "## 5. Counted but not embedded", ""]

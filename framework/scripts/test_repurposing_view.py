@@ -2486,5 +2486,100 @@ class It20P6Investigations(unittest.TestCase):
             self.assertLess(page.index(rv.E(rv.UI_IT["warn_1"])), i)
 
 
+class It21P7InvestigationsContext(unittest.TestCase):
+    """IT21 P7: positions are declared curated (not computed), the three axes and the origin are shown, a conditional hypothesis is never shown as
+    qualified, informative negatives are projected without the compound name in the shareable edition, the WWOX-contribution slot is explicit,
+    and the interface chrome is Italian while scientific text is marked as English."""
+    CARDS = [{"short": "Ethosuximide", "name": "Ethosuximide (class contrast)"}]
+
+    def ctx(self):
+        return {"curation": "x", "published_vs_it20": {"unchanged": 1, "moved": 0, "new": 1}, "below_the_line_vs_it20": [{"inv_id": "INV-99", "movement": "m"}],
+                "funnel": {"generator_conditional_rows": 992, "handed_on_to_qualification": 13, "qualified_hypotheses": 0,
+                           "qualified_in_p4a": {"assigned": 6, "kept_conditional": 1, "rejected_informative": 3, "inconclusive": 2},
+                           "path_b_proposals_p3b": {"generated": 10, "qualified": 5, "kept_conditional": 2, "rejected_informative": 2, "inconclusive": 6}},
+                "wwox_contribution": {"state": "pending"},
+                "informative_negatives": [{"neg_id": "NEG-X", "package": "p", "subject_full": "Secretname", "subject_label": "An inhibitor of a kinase", "ruled_out": "the chain as written",
+                                           "reason": "target absent", "detail_full": "value 3 nM", "reopen": "if measured", "chembl_ids": "CHEMBL1"}]}
+
+    def row(self, **kw):
+        r = {"rank": 1, "tie_group": "", "intervention": "Ethosuximide", "question": "q", "why_now": "w", "evidence_available": "e", "evidence_depth": "d",
+             "decisive_uncertainty": "u", "next_test": "n", "origin_class": "generated_by_legend", "novelty_perimeter": "Queried: x", "movement_reason": "new in IT21",
+             "origin_detail": "path B", "feasibility": "cell-level probe", "status": "conditional_hypothesis", "status_label": "l", "chembl_ids": "CHEMBL1;CHEMBL2"}
+        r.update(kw)
+        return r
+
+    def page(self, source="full"):
+        inv = rv.investigations_view([self.row()], self.CARDS, source == "full", {})
+        return rv.render_investigations({"source": source, "cur": {"ranking": {"investigations": inv, "investigations_context": rv.investigations_context_view(self.ctx(), source == "full")}}})
+
+    def test_optional_fields_are_shown_and_old_payloads_stay_valid(self):
+        h = self.page()
+        for k in ("iv_h_origin", "iv_h_feas", "iv_h_chembl", "iv_st_conditional_hypothesis", "iv_curated_h", "iv_axes_h", "iv_vs_h"):
+            self.assertIn(rv.E(rv.UI_IT[k]), h)
+        old = {k: v for k, v in self.row().items() if k not in rv.INV_OPTIONAL}
+        self.assertEqual(len(rv.investigations_view([old], self.CARDS, True, {})), 1)
+
+    def test_the_page_says_positions_are_curated_and_the_code_does_not_compute(self):
+        t = rv.UI_IT["iv_curated"]
+        self.assertIn("non un calcolo predittivo", t)
+        self.assertIn("Il codice non calcola nessuna posizione", t)
+        self.assertIn("mai chiamata qualificata", t)
+
+    def test_shareable_negatives_drop_the_name_and_the_values_but_keep_the_label_and_the_identifier(self):
+        sh = rv.investigations_context_view(self.ctx(), False)["informative_negatives"][0]
+        self.assertNotIn("subject_full", sh)
+        self.assertNotIn("detail_full", sh)
+        self.assertEqual(sh["chembl_ids"], "CHEMBL1")
+        h = self.page("shareable")
+        self.assertNotIn("Secretname", h)
+        self.assertNotIn("3 nM", h)
+        self.assertIn("An inhibitor of a kinase", h)
+        self.assertIn(rv.E(rv.UI_IT["iv_chembl_share"]), h)
+        full = self.page("full")
+        self.assertIn("Secretname", full)
+        self.assertIn("3 nM", full)
+
+    def test_the_wwox_contribution_slot_is_explicit_while_pending(self):
+        h = self.page()
+        self.assertIn('id="inv-p5"', h)
+        self.assertIn(rv.E(rv.UI_IT["iv_p5_pending"]), h)
+
+    def test_scientific_text_is_marked_english_and_the_chrome_is_italian(self):
+        h = self.page()
+        self.assertIn(rv.E(rv.UI_IT["iv_text_en"]), h)
+        self.assertGreaterEqual(h.count('lang="en"'), 8)
+        en = re.compile(r"\b(the|and|is|are|not|with|for|that|which|this|from|of|an|be|its|by|or|when|does|has|have)\b")
+        for k, v in rv.UI_IT.items():
+            if k.startswith("iv_") and isinstance(v, str):
+                self.assertLess(len(en.findall(v)), 2, f"{k} mixes English into the Italian interface: {v[:80]}")
+
+    @unittest.skipUnless(HAVE_DATA, "module data absent")
+    def test_live_conditional_rows_are_never_qualified_and_shareable_names_stay_out(self):
+        j = json.loads((DR / "ranking_it8_p9_20261029/ranking.json").read_text(encoding="utf-8"))
+        rows = j["investigations"]
+        cond = [r for r in rows if r.get("status") == "conditional_hypothesis"]
+        self.assertTrue(cond)
+        for r in cond:
+            blob = json.dumps(r).lower()
+            for bad in ("is qualified", "was qualified", "now qualified", "qualified hypothesis"):
+                self.assertNotIn(bad, blob)
+            self.assertTrue(r["origin_detail"].strip() and r["feasibility"].strip() and r["evidence_depth"].strip())
+        page = rv.build(DR, "shareable")
+        low = page.lower()
+        for name in ("tiratricol", "forigerimod", "gsk343", "nanatinostat", "iox1", "cgi-1746"):
+            self.assertNotIn(name, low, f"{name} reached the single shareable page")
+        for cid in ("CHEMBL41632", "CHEMBL3989409"):
+            self.assertIn(cid, page)
+        self.assertLessEqual(len(j["investigations"]), 10)
+
+    @unittest.skipUnless(HAVE_DATA, "module data absent")
+    def test_the_class_b_file_carries_the_records_the_first_screen_points_to(self):
+        import repurposing_shareable_package as pk
+        allow = rv.load_allowlist(DR)
+        ids = {r["chembl_id"] for r in pk.chembl_records(DR, allow)}
+        self.assertTrue({"CHEMBL41632", "CHEMBL3989409", "CHEMBL1801250"} <= ids)
+        self.assertTrue(pk.investigation_chembl_ids(DR) <= ids)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=1)

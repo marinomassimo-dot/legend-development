@@ -1,0 +1,38 @@
+{
+ "schema": "legend.wwox.repurposing.investigations_context/1",
+ "as_of": "2026-11-03",
+ "curation": "Positions are curated judgements written by research agents (rows of investigations_it20.tsv) and reviewed one by one. The code validates them (complete fields, closed vocabularies, contiguous ranks, existing need and unit, no dose, no absence claim, no conditional hypothesis called qualified) and computes no position.",
+ "three_axes": {
+  "evidence_solidity": "how much is already measured, in which system (field evidence_depth)",
+  "priority_of_next_investigation": "the value of the next discriminating experiment (position and the reason for it)",
+  "development_feasibility": "how realistic it is to take the intervention beyond a research probe (field feasibility)"
+ },
+ "funnel": {
+  "generator_conditional_rows": 992,
+  "handed_on_to_qualification": 13,
+  "qualified_in_p4a": {
+   "assigned": 6,
+   "kept_conditional": 1,
+   "rejected_informative": 3,
+   "inconclusive": 2
+  },
+  "path_b_proposals_p3b": {
+   "generated": 10,
+   "qualified": 5,
+   "kept_conditional": 2,
+   "rejected_informative": 2,
+   "inconclusive": 6
+  },
+  "qualified_hypotheses": 0,
+  "sources": [
+   "generation_it21_p2_20261103",
+   "qualification_it21_p4a_20261103",
+   "qualification_it21_p3b_20261103"
+  ]
+ },
+ "wwox_contribution": {
+  "state": "pending",
+  "source": "evaluation_it21_p5_20261103",
+  "note": "Slot for the measurement of the WWOX contribution to the generated proposals (IT21 P5). Not yet integrated into this branch: nothing is shown in its place."
+ }
+}
