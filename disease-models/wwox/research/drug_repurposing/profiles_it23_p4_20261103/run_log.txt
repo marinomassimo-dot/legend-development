@@ -1,0 +1,46 @@
+WARNING: 60 accessions have no cached gene symbol (run with --fetch)
+tutorial matrix (64, 2449); Zenodo matrix (8385, 2449); drugbank-v2.5-approved rows 2449; cmpds-v2.2 approved rows 2449
+column order identical between cmpds-v2.2 (approved) and drugbank-v2.5-approved: True ; shared ids: 2449
+score range tutorial 0.0 0.9649999737739563 Zenodo 0.0 1.0 ; Zenodo zero cells 0.04393445001951559
+identity join: {'MATCH_ONE_FAMILY': 2168, 'NO_CATALOGUE_RECORD_WITH_THIS_DRUGBANK_ID': 276, 'AMBIGUOUS_SEVERAL_FAMILIES': 5} with InChIKey 2073 with >=1 signed action row 847 distinct families 2115 name disagreements (informational) 189
+Zenodo: rows 8385 mapped to >=1 UniProt 8385 human genes 7880 | tutorial: human genes ['APOE', 'BRD7', 'EXOSC10', 'HEY1', 'HSH2D', 'OBSCN', 'PKP2', 'PPIE', 'SQSTM1', 'STK3', 'UBAC1'] | non-human or unmapped rows 53
+column-order sanity (percentile of the compound among all 2449 at that protein row; score):
+   vorinostat at HDAC8 chain 5vi6A DB02546 99.8 0.830
+   vorinostat at HDAC6 chain 5b8dA DB02546 75.9 0.274
+   liothyronine at THRB chain 1n46A DB00279 100.0 0.950
+   liothyronine at THRA chain 3ilzA DB00279 100.0 0.950
+
+profile similarity (cosine of per-protein z-scored scores) between the eight compounds; full signature (all rows) / 30-gene subset:
+  liothyronine ~ levothyroxine 0.850 0.970 rank 2
+  liothyronine ~ dextrothyroxine 0.850 0.970 rank 2
+  liothyronine ~ vorinostat 0.279 0.118 rank 303
+  liothyronine ~ panobinostat 0.304 0.192 rank 251
+  liothyronine ~ chloroquine 0.027 0.073 rank 1218
+  liothyronine ~ palbociclib -0.107 -0.017 rank 1739
+  liothyronine ~ dimethyl_fumarate -0.194 -0.482 rank 2011
+  levothyroxine ~ dextrothyroxine 1.000 1.000 rank 1
+  levothyroxine ~ vorinostat 0.031 -0.009 rank 798
+  levothyroxine ~ panobinostat 0.044 0.057 rank 685
+  levothyroxine ~ chloroquine -0.021 -0.026 rank 1361
+  levothyroxine ~ palbociclib -0.080 -0.074 rank 1972
+  levothyroxine ~ dimethyl_fumarate 0.048 -0.359 rank 658
+  dextrothyroxine ~ vorinostat 0.031 -0.009 rank 798
+  dextrothyroxine ~ panobinostat 0.044 0.057 rank 685
+  dextrothyroxine ~ chloroquine -0.021 -0.026 rank 1361
+  dextrothyroxine ~ palbociclib -0.080 -0.074 rank 1972
+  dextrothyroxine ~ dimethyl_fumarate 0.048 -0.359 rank 658
+  vorinostat ~ panobinostat 0.398 0.935 rank 336
+  vorinostat ~ palbociclib -0.116 -0.002 rank 1566
+  vorinostat ~ dimethyl_fumarate -0.255 -0.295 rank 1852
+  panobinostat ~ palbociclib 0.010 0.138 rank 1235
+  panobinostat ~ dimethyl_fumarate -0.448 -0.448 rank 2240
+  chloroquine ~ vorinostat 0.131 0.217 rank 793
+  chloroquine ~ panobinostat 0.237 0.297 rank 328
+  chloroquine ~ palbociclib 0.200 0.233 rank 494
+  chloroquine ~ dimethyl_fumarate -0.126 -0.251 rank 1881
+  dimethyl_fumarate ~ palbociclib -0.250 -0.439 rank 1606
+
+sign sensitivity written: 16 rows
+recovery of LEGEND signed actions: rows 12 median AUC 0.743 min/max (0.117, 1.0)
+   inhibition_like_sign_negative rows 9 median AUC 0.529
+   activation_like_sign_positive rows 3 median AUC 1.0

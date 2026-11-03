@@ -1,0 +1,65 @@
+matrix_row	uniprot	gene	organism_taxid	mapping	wwox_question
+2xpwA	P0ACT4	tetR	562	pdb_2_uniprot	none
+3rf1A	A1VZ59	glyQ	354242	pdb_2_uniprot	none
+2qlcA	Q8KES1		194439	pdb_2_uniprot	none
+2gqrA	P0A7D7	purC	83333	pdb_2_uniprot	none
+4nqwB	P9WGX5	rskA	83332	pdb_2_uniprot	none
+1eb0A	P50049	ureE	1474	pdb_2_uniprot	none
+1zhhA	P54300	luxP	669	pdb_2_uniprot	none
+4zxkA	P62575	nanA	1313	pdb_2_uniprot	none
+1t4aA	P12049	purS	224308	pdb_2_uniprot	none
+4wliA	O32108	yuiC	224308	pdb_2_uniprot	none
+2x4mA	P17811	pla	632	pdb_2_uniprot	none
+3atsA	P9WI99		83332	pdb_2_uniprot	none
+1u2mC	P0AEU7	skp	83333	pdb_2_uniprot	none
+3eziA	P0AFA2	narX	83333	pdb_2_uniprot	none
+3mk7C	D9IA45	ccoP1	316	pdb_2_uniprot	none
+2y9kA	P35672	sctC1	99287	pdb_2_uniprot	none
+1k3zD	Q60778	Nfkbib	10090	pdb_2_uniprot	none
+1oegA	P02649	APOE	9606	pdb_2_uniprot	no LEGEND question (listed because it is in the 64-protein demonstration set)
+4uotA				UNMAPPED	none
+2cs0A	Q96JZ2	HSH2D	9606	pdb_2_uniprot	none
+1adeA	P0A7D4	purA	83333	pdb_2_uniprot	none
+2o3oI	Q45612	yycI	224308	pdb_2_uniprot	none
+3dtzB	Q9HKT8		273075	pdb_2_uniprot	none
+2dwvA	Q8VEB2	Sav1	10090	pdb_2_uniprot	none
+4xpmA	Q02205	MEH1	559292	pdb_2_uniprot	none
+3ktsA				UNMAPPED	none
+2plgA	Q8DKM0		197221	pdb_2_uniprot	none
+2cprA	Q01780	EXOSC10	9606	pdb_2_uniprot	none
+2eixA	Q1HA49	b5R	5791	pdb_2_uniprot	none
+3cx5A	P07256	COR1	559292	pdb_2_uniprot	none
+1j7qA	P04573		7740	pdb_2_uniprot	none
+3tt9A	Q99959	PKP2	9606	pdb_2_uniprot	none
+2ckzC	P47076	RPC17	559292	pdb_2_uniprot	none
+2grmA				UNMAPPED	none
+1xs1A	P28248	dcd	83333	pdb_2_uniprot	none
+4mkvA	P04717	rbcL	3888	pdb_2_uniprot	none
+3mdfA	Q9UNP9	PPIE	9606	pdb_2_uniprot	none
+3u7zA	A7AZY1		411470	pdb_2_uniprot	none
+1kqpA	P08164	nadE	224308	pdb_2_uniprot	none
+4dm5B	Q9HUT7	osmE	208964	pdb_2_uniprot	none
+3rfyA	Q9SSA5	CYP38	3702	pdb_2_uniprot	none
+1k77A	Q46891	otnI	83333	pdb_2_uniprot	none
+1vq8W	P14121	rpl30	272569	pdb_2_uniprot	none
+4gxzA	H9L4C1	scsC	99287	pdb_2_uniprot	none
+2i7kA	Q9NPI1	BRD7	9606	pdb_2_uniprot	no direct question (a bromodomain protein, not BRD4)
+1ztdA	Q8U363		186497	pdb_2_uniprot	none
+3ukgA	P11938	RAP1	559292	pdb_2_uniprot	none
+5brmG	Q13188	STK3	9606	pdb_2_uniprot	Hippo kinase MST2 (WW-domain adjacent)
+2ixsA	C4P954	sdaIR	1956	pdb_2_uniprot	none
+2ib1A	Q8CJ26	Nradd	10090	pdb_2_uniprot	none
+1ogyB	Q53177	napB	272943	pdb_2_uniprot	none
+4yh8B	P36629	prp2	284812	pdb_2_uniprot	none
+1x4hA	Q8CGC6	Rbm28	10090	pdb_2_uniprot	none
+2j3xA	O69275		1491	pdb_2_uniprot	none
+4pl2A				UNMAPPED	none
+1xnfA	P0AFB1	nlpI	83333	pdb_2_uniprot	none
+1q02A	Q13501	SQSTM1	9606	pdb_2_uniprot	autophagy / lysosomal flux (stability probes)
+2db7A	Q9Y5J3	HEY1	9606	pdb_2_uniprot	none
+3f9uB	Q5LAZ4		272559	pdb_2_uniprot	none
+4gc0A	P0AGF4	xylE	83333	pdb_2_uniprot	none
+4fcwA	Q9RA63	clpB	300852	pdb_2_uniprot	none
+2daiA	Q9BSL1	UBAC1	9606	pdb_2_uniprot	none
+2cr6A	Q5VST9	OBSCN	9606	pdb_2_uniprot	none
+3szgD	P9WJJ3	nadE	83332	pdb_2_uniprot	none

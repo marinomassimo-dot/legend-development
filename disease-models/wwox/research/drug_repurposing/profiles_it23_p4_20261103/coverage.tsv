@@ -1,0 +1,49 @@
+gene	in_zenodo_human_matrix	zenodo_rows	in_64_protein_demo_matrix	demo_rows	wwox_question_served	n_legend_families_with_a_signed_action_at_gene
+HDAC1	yes	4bkxB	no		HDAC class I / Q2 H_HARM-H_PROTECT handoff (IT21P2)	39
+HDAC2	yes	4ly1A	no		HDAC class I	32
+HDAC3	yes	4a69B	no		HDAC class I	36
+HDAC4	yes	2vqmA	no		HDAC class IIa	18
+HDAC5	yes	Q9UQL6	no		HDAC class IIa (handoff IT21P2-0005 pracinostat main target)	20
+HDAC6	yes	5eduB;5b8dA	no		stability lever L2a (tubastatin precedent), IT22 P6	40
+HDAC7	yes	3c10A	no		HDAC class IIa	17
+HDAC8	yes	5vi6A	no		HDAC class I	32
+HDAC9	yes	Q9UKV0	no		HDAC class IIa	18
+HDAC10	yes	Q969S8	no		HDAC class IIb	14
+HDAC11	no		no		HDAC class IV	7
+EZH1	yes	Q92800	no		EZH2 glia qualification (Ezh1 compensation), IT22 P6	3
+EZH2	yes	5hynF	no		EZH2 glia qualification, IT22 P6	16
+BRD4	yes	4z93A;4qb3A	no		BET / epigenetic readers	43
+THRA	yes	3ilzA	no		TR agonist qualification: the OPC-timing isoform, IT22 P6	13
+THRB	yes	1n46A;2nllB	no		TR agonist qualification: liver-directed isoform, IT22 P6	17
+NFE2L2	no		no		NRF2 axis (IT11 P23)	3
+KEAP1	yes	5gitA;1zgkA	no		NRF2 axis (IT11 P23)	5
+MAPK1	yes	4zznA	no		ERK axis	16
+MAPK3	yes	4qtbA	no		ERK axis	7
+AHR	yes	5nj8C	no		AHR axis	4
+CDK4	yes	2w96B	no		cell-cycle / OPC cycle exit	49
+CDK6	yes	1blxA	no		cell-cycle / OPC cycle exit	28
+GSK3B	yes	1j1bA	no		GSK3 target-first package (IT15 QB)	45
+GRIN1	yes	5h8fB	no		NMDAR pharmacology (IT6 P9, IT15 QA)	39
+GRIN2B	yes	5ewmB	no		NMDAR pharmacology	57
+EGLN1	yes	4bqyA	no		HIF axis (IT10 P21)	9
+EGLN2	yes	5v1bA	no		HIF axis; handoff IT21P2-0043 desidustat	6
+HIF1A	yes	4h6jA	no		HIF axis	3
+LDHA	yes	5w8jA	no		lactate / LDH axis	0
+PKM	yes	6b6uA	no		glycolysis	5
+SQSTM1	no		yes	1q02A	autophagy / lysosomal flux (stability probes)	1
+HSPA8	yes	4kbqD;5aqmA	no		stability lever L1 (HSC70, forigerimod)	1
+LAMP2	yes	P13473	no		lysosomal flux control	0
+WWOX	no		no		the disease gene itself	0
+WWP1	yes	5hpsA	no		WW-domain partner	0
+YAP1	yes	4re1C	no		WW-domain partner / Hippo	0
+STK3	yes	6ao5A	yes	5brmG	Hippo kinase MST2 (WW-domain adjacent)	5
+SLC2A1	yes	5eqgA	no		GLUT1 (seed readout)	0
+XIAP	yes	1i4oD	no		handoff IT21P2-0014	10
+ZHX2	no		no		handoff IT21P2-0035	2
+SIRT1	yes	5btrB	no		deacetylase	9
+SIRT2	yes	5fyqB	no		deacetylase	4
+SIRT3	yes	4bn4A	no		deacetylase	2
+KDM1A	yes	5l3dA	no		epigenetic	10
+DNMT1	yes	3swrA;5wvoC	no		epigenetic	5
+APOE	yes	2l7bA	yes	1oegA	no LEGEND question (listed because it is in the 64-protein demonstration set)	0
+BRD7	yes	5mq1A	yes	2i7kA	no direct question (a bromodomain protein, not BRD4)	3

@@ -7,7 +7,10 @@
  "OBJECTIVE": "IT23: turn the evaluation of external resources into a verifiable improvement of the generative engine of drug repurposing (relations, simulation of interventions, multi-protein profiles); success is an inference previously absent or a limit that still prevents a trustworthy prediction, not more candidates or more tools.",
  "START_UTC": "2026-11-03T22:15:11Z",
  "BASELINE": "main = development/main = 03ac7b8c00193f400e008e7046b5f20a5d25180c; IT22 closed: Public release gate success 22:09:43Z, Pages workflow success, served index equals package index (sha256 prefix 82a01ee4d5c3cd3e); IT22 worktree and battery clone removed; worktree task/it22-ml holds the multilingual package (commit 9a761977, not landed).",
- "DECISIONS_TAKEN": [],
+ "DECISIONS_TAKEN": [
+  "2026-11-03: operator integration 'Nuove risorse, priorita al rendimento generativo' queued inside P2/P3/P5 without restarting: dseqr (CMap/LINCS signature route) and nf-core/diseasemodulediscovery (module discovery vs direct neighbours / simple propagation) join NORDic and CANDO as candidate methods, none mandatory; MolNexus preliminary qualification (licence, checkpoints; reopening condition if unresolved); support resources (RECeSS/stanscofi/benchscofi, Open Targets MIRA, Drugst.One, BitBIRCH) only for a concrete gap; each improvement must answer: what unused knowledge enters, what changes, why biologically pertinent, which premise could refute it, does it work on a second case; an emerging candidate needs its verifiable generating chain apart from a post-hoc explanation",
+  "2026-11-03: order of the two new trials decided after the gap check: the engine consumes 65 curated seed rows (Q5 3 genes, Q6 1, Q8 1) while a full WWOX organoid signature (GSE156243, thousands of genes; composition-confounded; hNPC second system failed its control) is unused, so dseqr/LINCS first with explicit scenarios (no 'reverse every change'); module discovery second, only if the narrow-seed gap persists, with seed/edge/hub sensitivity; NORDic result (WATCH: outcomes track the assumed scenario) says role uncertainty, not target count, is the dominant limit"
+ ],
  "DEFAULTS_TAKEN": [],
  "STOP_LOG": [],
  "AUTHORISED_QUEUE_20261103B": {
@@ -37,7 +40,7 @@
    "steps": [
     {
      "step": "P2 relations beyond pathways: what the engine really uses; EC-KG minimal qualified extract with provenance, redundancy and novelty measured",
-     "status": "PENDING",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator"
     }
    ]
@@ -47,8 +50,9 @@
    "steps": [
     {
      "step": "P3 NORDic: consequences of interventions on a small WWOX network, only if inputs are qualified; never import the '?'/binding -> inhibition conversion",
-     "status": "PENDING",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "simulation_it23_p3_20261103: NORDic WATCH (MIT code; conversion defect reproduced at lines 114/119/313; perturbation clamp encodes knockdown and drug alike; 3,072-cell Q5 run: outcomes track the assumed scenario, not the intervention; missing inputs listed)"
     }
    ]
   },
@@ -57,8 +61,9 @@
    "steps": [
     {
      "step": "P4 CANDO: multi-protein profiles and alternatives for a small real compound set; compare with the current matching",
-     "status": "PENDING",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "profiles_it23_p4_20261103: CANDO WATCH (BSD-3 code; demo matrix has 11 human proteins and none of the target genes; Zenodo human CxP usable: 43 of 48 LEGEND genes, 2,168 compounds joined by DrugBank id; score = ECFP4 Dice x site confidence, no direction; no selection changed; derived score tables kept out of the public tip until the data terms are read)"
     }
    ]
   },

@@ -1,0 +1,22 @@
+seed_id	entity_symbol	level	direction	species_observed	usable_for_generation	reserved_for_evaluation	reason_class	context_short
+S077		pathology	down	mouse	yes	no	USABLE	mouse; Synapsin-Cre neuron-specific Wwox deletion, corpus callosum and optic nerve, P17
+S078		function	unchanged	mouse	yes	no	USABLE	mouse; Olig2-Cre and GFAP-Cre Wwox deletion; development, weight, survival scored
+S079		expression	down	mouse	no	no	UNUSABLE_MATURITY_OR_COMPOSITION	mouse; P17 hippocampus S, N, null and cortex S (GSE158681/2)
+S080	GFAP	pathology	up	mouse	yes	no	USABLE	mouse; Wwox constitutive null, hippocampus (CA1, CA3, whole) two weeks; and null brain P20 (region not stated)
+S081	AIF1	pathology	up	mouse	yes	no	USABLE	mouse; Wwox constitutive null; hippocampus two weeks (IBA1 protein symbol = AIF1) and P20 (Iba1 area about 4.5 v 7.6 percent)
+S082	GFAP	pathology	up	mouse	yes	no	USABLE	mouse; P47T knock-in homozygote; hippocampus, cortex, cerebellum; 80 to 250 days
+S083	GFAP	pathology	down	rat	yes	no	USABLE	rat; lde/lde (13 bp exon 9 deletion) cerebral cortex PND 5-21; at least 3 males per genotype per age
+S084	IL1B	expression	up	mouse	yes	no	USABLE	mouse; P47T knock-in homozygote cerebellum, qPCR/RNA-seq n 6 per group
+S085	TNF	expression	up	mouse	yes	no	USABLE	mouse; Wwox constitutive null hippocampus two weeks, qRT-PCR n 4 v 4; and P47T knock-in cerebellum n 6 per group
+S086	IL6	expression	up	mouse	yes	no	USABLE	mouse; Wwox constitutive null hippocampus two weeks, qPCR n 4 per group (registry reading)
+S087		expression	unchanged	human	no	no	UNUSABLE_NOT_EVALUABLE	human; WWOX-knockout cerebral organoid week 15, bulk RNA; microglial markers at or near zero
+S088	MBP	expression	up	human	no	no	UNUSABLE_NOT_EVALUABLE	human; WWOX-knockout organoid week 15 (MBP +0.625, PLP1 +0.863); shWWOX hNPC PLP1 -1.67 on 25-32 tags
+S089		protein	unchanged	mouse	no	no	UNUSABLE_UNVERIFIED_CARRIED	mouse; P47T heterozygote, unchallenged; Iba1 and Gfap immunostaining
+S090		expression	uncertain	mouse	no	no	UNUSABLE_DIRECTION_NOT_TABULATED	mouse; neuron-specific deletion P17 cortex 4v3 and hippocampus 2v3
+S091	GFAP	expression	unchanged	mouse	no	no	UNUSABLE_NOT_EVALUABLE	mouse; P47T homozygote thresholded differential-expression sheets (two-fold, forebrain regions)
+S092	GFAP	protein	down	mouse	no	yes	RESERVED_INTERVENTION_RESPONSE	mouse; Wwox-null, neuron-restricted AAV9-WWOX; GFAP-positive cells about 44 (KO) v about 5 (WT) v about 5 (treated)
+S093		pathology	up	mouse	no	yes	RESERVED_ENDPOINT	mouse; neuronal AAV9 rescue: g-ratio normalises, CC1+ and PDGFRA+ counts toward WT, unmyelinated axons about two-fold above WT
+S122		pathology	down	mouse	no	yes	RESERVED_ENDPOINT	mouse; Synapsin-Cre neuron-specific deletion, corpus callosum P17
+S123	GFAP	pathology	up	mouse	no	yes	RESERVED_ENDPOINT	mouse; Wwox-null hippocampus two weeks (area fraction up about 30 percent whole hippocampus; 36 and 53 percent in CA1 and CA3) and null brai
+S124	AIF1	pathology	uncertain	mouse	no	yes	RESERVED_INTERVENTION_RESPONSE	mouse; Wwox-null, neuron-restricted AAV9-WWOX arms (supplement S7F)
+S125	GFAP	pathology	down	rat	no	yes	RESERVED_ENDPOINT	rat; lde/lde cortex PND 5-21

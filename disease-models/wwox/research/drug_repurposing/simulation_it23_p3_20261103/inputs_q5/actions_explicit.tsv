@@ -1,0 +1,11 @@
+target	n_families_total	n_explicit_minus1	n_explicit_plus1	n_mixed_or_zero_dropped	n_with_flags	action_used_in_sim	node_layer_acted_on	note
+BRD4	43	43	0	0	0	inhibit	BRD4 activity (cofactor)	
+EP300	11	10	1	0	0	mixed_by_family	EP300 activity (cofactor)	family-level sign from the catalogue; EP300 has one activating family
+IKBKB	13	13	0	0	0	inhibit	IKBKB activity	
+IL1B	5	5	0	0	0	inhibit	IL1B_sig (protein/activity; neutraliser)	
+IL6	8	8	0	0	0	inhibit	IL6_sig (protein/activity; neutraliser)	
+JAK2	88	88	0	0	0	inhibit	JAK2 activity	
+NLRP3	9	9	0	0	0	inhibit	NLRP3 activity	
+RELA	1	1	0	0	0	inhibit	RELA activity	
+STAT3	8	8	0	0	0	inhibit	STAT3 activity	
+TNF	15	15	0	0	0	inhibit	TNF_sig (protein/activity; neutraliser)	

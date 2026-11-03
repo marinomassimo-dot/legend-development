@@ -1,0 +1,79 @@
+{
+ "responsible_lines": {
+  "unsigned_to_inhibition": [
+   [
+    119,
+    "targets_df[(targets_df!=\"0\")&(targets_df!=\"-1\")&(targets_df!=\"1\")] = \"-1\"#\"1\""
+   ]
+  ],
+  "minus_beats_plus": [
+   [
+    114,
+    "is_inhibitor = np.vectorize(lambda x : \"-\" in x)"
+   ]
+  ],
+  "ttd_unlisted_moa_to_plus": [
+   [
+    313,
+    "drug_targets[\"MOA\"] = [(\"-\" if (m in decrease_expr_MOA) else \"+\") for m in drug_targets[\"MOA\"]]"
+   ]
+  ]
+ },
+ "nordic_output": [
+  {
+   "row": "D1",
+   "gene": "G1",
+   "input": "TTD MOA='inhibitor'",
+   "nordic_value": -1,
+   "correct": "inhibitor (explicit)"
+  },
+  {
+   "row": "D2",
+   "gene": "G2",
+   "input": "TTD MOA='?'",
+   "nordic_value": 1,
+   "correct": "unknown ('?')"
+  },
+  {
+   "row": "D3",
+   "gene": "G3",
+   "input": "TTD MOA='binding'",
+   "nordic_value": 1,
+   "correct": "unknown ('binding': no direction)"
+  },
+  {
+   "row": "D4",
+   "gene": "G4",
+   "input": "DrugCentral presence only",
+   "nordic_value": -1,
+   "correct": "unknown (presence only)"
+  },
+  {
+   "row": "D5",
+   "gene": "G5",
+   "input": "TTD MOA='agonist' + 2nd source '-'",
+   "nordic_value": -1,
+   "correct": "contrasting (+ and -)"
+  }
+ ],
+ "explicit_only": {
+  "D1": -1,
+  "D2": null,
+  "D3": null,
+  "D4": null,
+  "D5": "CONFLICT"
+ },
+ "ttd_decrease_list": [
+  "inhibitor",
+  "blocker",
+  "degrader",
+  "antagonist",
+  "antisense",
+  "breaker",
+  "disrupter",
+  "inactivator",
+  "inverse agonist",
+  "replacement",
+  "suppressor"
+ ]
+}

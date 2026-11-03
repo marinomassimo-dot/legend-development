@@ -1,0 +1,10 @@
+source	target	sign	status	reason	premise_switch
+IL6_sig	JAK2	+1	ASSUMED_NOT_QUALIFIED	ligand-receptor-JAK step; the IT7 signed tables carry no edge out of IL6 (checked: 0 outgoing edges)	RECEPTOR
+TNF_sig	IKBKB	+1	ASSUMED_NOT_QUALIFIED	TNF receptor to IKK; no outgoing edge from TNF in the IT7 tables except one	RECEPTOR
+IL1B_sig	IKBKB	+1	ASSUMED_NOT_QUALIFIED	IL1R1 to IKK; no outgoing edge from IL1B in the IT7 tables	RECEPTOR
+IKBKB	RELA	+1	ASSUMED_NOT_QUALIFIED	IKK frees NF-kB (via IkB); SIGNOR has IKBKB -> NFKB1_RELA with sign -1 and CHUK_IKBKB_IKBKG -> NFKBIA -1, i.e. the signed export cannot express this step without the IkB node	NFKB_CORE
+SOCS3	JAK2	-1	ASSUMED_NOT_QUALIFIED	SOCS3 inhibits JAK signalling; not in the IT7 tables	NEGFB
+WWOX_loss	TRIG	+1	ASSUMED_NOT_QUALIFIED	UNKNOWN link: what makes cytokines rise in the null mouse is the open question; this edge is a scenario premise, not an observation	SCENARIO
+WWOX_loss	W_route	+1	ASSUMED_NOT_QUALIFIED	Q5 seed S077 (neuron-specific deletion, myelinated axons down, level pathology) - a phenotype observation, not a molecular edge	SCENARIO
+CYT	MYELIN_OL	+/-1 by scenario	ASSUMED_NOT_QUALIFIED	role of the cytokine program in myelin is the unknown being scenario-tested; the five roles are premises	SCENARIO
+NLRP3_signal2	CASP1	+1	ASSUMED_NOT_QUALIFIED	inflammasome second signal (input node ACT2); NFKB -> NLRP3 and CASP1 -> IL1B are qualified, the second signal is not	NLRP3
