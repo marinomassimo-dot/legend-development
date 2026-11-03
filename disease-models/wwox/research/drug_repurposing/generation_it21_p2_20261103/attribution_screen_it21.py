@@ -116,7 +116,9 @@ def load_gtopdb_affinities(cache=None):
         if nm is None or nm <= 0:
             continue
         typ = r.get("Original Affinity Units") or "?"
-        typ = "?" if typ in ("-", "") else typ
+        if typ in ("-", ""):                      # the original type is not recorded: the release's own affinity column (pKi, pIC50, pEC50, pKd ...) still names it
+            au = (r.get("Affinity Units") or "").strip()
+            typ = au[1:] if au.startswith("p") and au[1:] in ("Ki", "IC50", "EC50", "Kd", "KB") else (au if au not in ("", "-") else "?")
         rel = (r.get("Original Affinity Relation") or "=").strip() or "="
         raw[(r["Ligand ID"], sym, typ)].append((nm, rel, assay_class(r.get("Assay Description"))))
     typed, kinds = collections.defaultdict(dict), collections.defaultdict(set)
