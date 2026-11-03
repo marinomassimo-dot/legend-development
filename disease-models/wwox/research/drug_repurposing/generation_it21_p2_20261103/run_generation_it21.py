@@ -409,18 +409,28 @@ def attribution_note(p):
     """One sentence for the qualifier: what the local Guide to Pharmacology release says about the main target of this compound (IT21 V1). Affinity, not occupancy or exposure."""
     st = p.get("attribution_state", "")
     via = (" Identity joined to its ChEMBL record through the ligand id in the claim name (" + p["identity_via"] + ")." if p.get("identity_via") else "")
+    mixed = (f" Median pools mixed measure types (main: {p.get('attribution_main_measure') or 'n/a'}; best: {p.get('attribution_best_measure') or 'n/a'}): read as indicative." if p.get("attribution_mixed_measure") == "yes" else "")
     if st == "ATTRIBUTABLE":
-        return f"main target {p['main_target']} measured at {p['attribution_main_nm']} nM; best measured target {p['attribution_best_target']} at {p['attribution_best_nm']} nM ({p['attribution_fold']}-fold).{via}"
+        return f"main target {p['main_target']} measured at {p['attribution_main_nm']} nM; best measured target {p['attribution_best_target']} at {p['attribution_best_nm']} nM ({p['attribution_fold']}-fold).{via}{mixed}"
+    if st == "SINGLE_MEASURED_TARGET":
+        return f"main target {p['main_target']} measured at {p['attribution_main_nm']} nM and it is the only measured target: no comparison is possible (not attributable by comparison; unknown, not negative).{via}{mixed}"
+    if st == "BORDERLINE_POTENT_MAIN_TARGET":
+        return (f"BORDERLINE: main target {p['main_target']} measured at {p['attribution_main_nm']} nM (potent, at or below {AS_POTENT_NM:g} nM) although {p['attribution_fold']}-fold weaker than the best "
+                f"measured target {p['attribution_best_target']} ({p['attribution_best_nm']} nM): relative weakness only, not blocked; check that the chain's cell type expresses {p['main_target']}.{via}{mixed}")
     if st == "UNMEASURED_AT_MAIN_TARGET":
-        return f"no measured affinity for the main target {p['main_target']} (annotation only); the compound is measured on other targets, best {p['attribution_best_target']} at {p['attribution_best_nm']} nM: the listed target may not be the main action.{via}"
+        return (f"UNMEASURED AT MAIN TARGET (ranked after measured rows in the cap): no measured affinity for {p['main_target']}; the compound is measured on other targets, best "
+                f"{p['attribution_best_target']} at {p['attribution_best_nm']} nM: the listed target may not be the main action (annotation only).{via}{mixed}")
     if st == "NOT_ASSESSABLE":
         return "no ligand or no affinity in the local Guide to Pharmacology release: attribution not assessed (unknown, not negative)." + via
-    return f"WEAK: {p['attribution_fold']}-fold weaker than the best target {p['attribution_best_target']}.{via}"
+    return f"WEAK: {p['attribution_fold']}-fold weaker than the best target {p['attribution_best_target']}.{via}{mixed}"
+
+
+AS_POTENT_NM = 100.0     # mirrors attribution_screen_it21.POTENT_MAIN_NM (a unit test asserts they agree)
 
 
 def order_key(r):
-    """More independent origins first, then the shorter admissible chain, then the larger smallest-|z| (a null-relative score, last on purpose)."""
-    return (-int(r["n_origins"] or 0), int(r.get("chain_edges") or 99), -float(r["zmin"]))
+    """IT21 V1-fix: a row whose main target is UNMEASURED (measured elsewhere) ranks after every other row; then more independent origins first, then the shorter admissible chain, then the larger smallest-|z| (a null-relative score, last on purpose)."""
+    return (1 if r.get("attribution_state") == "UNMEASURED_AT_MAIN_TARGET" else 0, -int(r["n_origins"] or 0), int(r.get("chain_edges") or 99), -float(r["zmin"]))
 
 
 def select_handoff(rows, per_group=3):
@@ -519,10 +529,10 @@ def cmd_propose(a):
             if s.get("source") == "ChEMBL" and s.get("max_phase") is not None:
                 phase_of[f] = max(phase_of.get(f, -1), s["max_phase"])
     v1 = not a.no_v1
-    fb, fl, aff = {}, {}, {}
+    fb, fl, aff, kinds_ = {}, {}, {}, {}
     if v1:      # IT21 V1: identity bridge (claim-name ligand id) and attribution screen; both read data the repository already holds
         import attribution_screen_it21 as AS
-        lig_, aff, _k = AS.load_gtopdb_affinities()
+        lig_, aff, kinds_ = AS.load_gtopdb_affinities()
         bridges = AS.bridge_claim_name_ligands(entries)
         fb = AS.family_bridge(bridges, fam)
         fl = AS.family_ligands(entries, fam, bridges, lig_)
@@ -579,7 +589,7 @@ def cmd_propose(a):
         att = None
         if v1:
             import attribution_screen_it21 as AS
-            att = AS.attribution(fl.get(s["family_id"], set()), main, aff)
+            att = AS.attribution(fl.get(s["family_id"], set()), main, aff, kinds_)
         d2 = dict(d, seed_specific_all_three_nulls=s["seed_specific_all_three_nulls"], attribution_state=(att or {}).get("state", ""))
         ok, why = eligible(d2, role, meta, decisions)
         hyp = "H_HARM" if s["arm"] == "opposes" else "H_PROTECT"
@@ -602,6 +612,7 @@ def cmd_propose(a):
             sib = fb.get(s["family_id"]) or next((t for t, c_ in fb.items() if c_ == s["family_id"]), "")
             proposals[-1].update(identity_via=meta.get(s["family_id"], {}).get("identity_via", ""), attribution_state=att["state"], attribution_fold=att["fold"],
                                  attribution_best_target=att["best_target"], attribution_best_nm=att["best_nm"], attribution_main_nm=att["main_nm"],
+                                 attribution_main_measure=att["main_measure"], attribution_best_measure=att["best_measure"], attribution_mixed_measure=att["mixed_measure"],
                                  sibling_family=sib, sibling_z_reach=reach.get(s["seed_set"], {}).get(sib, "") if sib else "",
                                  sibling_compatible_action=reach_act.get(s["seed_set"], {}).get(sib, "") if sib else "")
         if ok:
@@ -657,7 +668,7 @@ def cmd_propose(a):
             target_axis_named_in_legend_material=p["target_named_in_legend_material"],
             abstentions=(f"{len(wh)} withheld row(s) on this record ({collections.Counter(r['reason_class'] for r in wh).most_common(1)[0][0]})" if wh else "none on this record"),
             earlier_thread=p["earlier_thread"],
-            **({"attribution_note": attribution_note(p)} if "attribution_state" in p else {}),
+            **({"attribution_state": p["attribution_state"], "attribution_note": attribution_note(p)} if "attribution_state" in p else {}),
             novelty_perimeter=(("earlier LEGEND thread (" + p["earlier_thread"] + ")") if p["earlier_thread"] else "named in LEGEND cards/units" if p["named_in_legend_material"] == "yes" else
                                "not named in LEGEND cards, units, earlier exclusion lists or IT9/IT10 candidate lists (perimeter of this module only, not a literature claim)"),
             evaluation_forbidden_on=p["evaluation_forbidden_on"]))

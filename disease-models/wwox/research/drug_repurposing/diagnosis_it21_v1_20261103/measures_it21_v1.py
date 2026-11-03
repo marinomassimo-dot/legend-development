@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """IT21 V1 measures: committed IT21 P2 tables (forward path) against the v1 tables (identity bridge + attribution screen + P4a decisions), plus the catalogue-level
-size of the claim-name bridge. Reads existing tables only; writes measures_it21_v1.json next to this file. Needs LEGEND_CATALOG_CACHE for the bridge counts.
+size of the claim-name bridge. Reads existing tables (and the first V1 pass from git, FIRST_V1_REV); writes measures_it21_v1.json next to this file. Needs LEGEND_CATALOG_CACHE for the bridge counts.
 """
 import sys
 if len(sys.argv) > 1 and sys.argv[1] in ("-h", "--help"):
@@ -26,6 +26,9 @@ def load(name, path):
     sys.modules[name] = m
     spec.loader.exec_module(m)
     return m
+
+
+FIRST_V1_REV = "d1963a79"      # the commit whose results_v1 tables are the first V1 pass (before the V1-fix)
 
 
 def main():
@@ -75,6 +78,40 @@ def main():
     br = AS.bridge_claim_name_ligands(entries)
     dec = collections.Counter(r["decision"] for v_ in br.values() for r in v_)
     out["claim_name_bridge"] = dict(dgidb_only_entries_with_a_claim_name_ligand_and_no_concept_id_ligand=len(br), decisions=dict(dec), twin_families_joinable=len(AS.family_bridge(br, fam)))
+    # V1-fix (independent review): effect against the first V1 pass (the committed tables of FIRST_V1_REV, read from git)
+    import io, subprocess
+    def first(name):
+        txt = subprocess.run(["git", "show", f"{FIRST_V1_REV}:{(HERE / 'results_v1' / name).relative_to(REPO).as_posix()}"], cwd=REPO, capture_output=True, text=True, check=True).stdout
+        return list(csv.DictReader(io.StringIO(txt), delimiter="\t"))
+    f1 = {r["proposal_id"]: r for r in first("proposals_it21.tsv")}
+    f1h = [r["proposal_id"] for r in first("handoff_it21.tsv")]
+    fx = {}
+    fx["first_v1_rev"] = FIRST_V1_REV
+    fx["states_first_v1"] = dict(collections.Counter(r["attribution_state"] for r in f1.values()))
+    fx["states_now"] = out["attribution_states"]
+    fx["weak_to_borderline"] = sorted((new[i]["compound"], new[i]["main_target"], new[i]["attribution_main_nm"], new[i]["attribution_fold"]) for i in new if f1[i]["attribution_state"] == "WEAK_ATTRIBUTION" and new[i]["attribution_state"] == "BORDERLINE_POTENT_MAIN_TARGET")
+    fx["still_weak"] = sorted((new[i]["compound"], new[i]["main_target"], new[i]["attribution_main_nm"], new[i]["attribution_fold"]) for i in new if new[i]["attribution_state"] == "WEAK_ATTRIBUTION")
+    fx["attributable_to_single_measured"] = sum(1 for i in new if f1[i]["attribution_state"] == "ATTRIBUTABLE" and new[i]["attribution_state"] == "SINGLE_MEASURED_TARGET")
+    fx["eligible_first_v1_now"] = [sum(1 for r in f1.values() if r["handoff_eligible"] == "yes"), out["eligible_before_after"][1]]
+    fx["handed_first_v1"] = [(i, f1[i]["compound"], f1[i]["attribution_state"]) for i in f1h]
+    fx["handed_now"] = [(i, new[i]["compound"], new[i]["main_target"], new[i]["attribution_state"]) for i in hn]
+    fx["handed_added_vs_first_v1"] = [(i, new[i]["compound"], new[i]["attribution_state"]) for i in hn if i not in f1h]
+    fx["handed_dropped_vs_first_v1"] = [(i, f1[i]["compound"], new[i]["handoff_blocker"] or "not selected (cap)") for i in f1h if i not in hn]
+    fx["handed_unmeasured_at_main_target"] = [(i, new[i]["compound"]) for i in hn if new[i]["attribution_state"] == "UNMEASURED_AT_MAIN_TARGET"]
+    fx["handed_borderline"] = [(i, new[i]["compound"]) for i in hn if new[i]["attribution_state"] == "BORDERLINE_POTENT_MAIN_TARGET"]
+    sens = {}
+    for t in (3.0, 10.0, 30.0):
+        rows_ = [r for r in new.values() if r["attribution_fold"] != "" and float(r["attribution_fold"]) >= t and r["attribution_state"] != "SINGLE_MEASURED_TARGET"]
+        sens[str(t)] = dict(fold_at_or_above=len(rows_), blocked_weak=sum(1 for r in rows_ if float(r["attribution_main_nm"]) > AS.POTENT_MAIN_NM), borderline_potent=sum(1 for r in rows_ if float(r["attribution_main_nm"]) <= AS.POTENT_MAIN_NM))
+    fx["sensitivity_fold_threshold_with_potent_floor_100nM"] = sens
+    fx["mixed_measure_rows"] = dict(collections.Counter(r["attribution_mixed_measure"] for r in new.values()))
+    fx["mixed_measure_among_weak_or_borderline"] = sorted((r["compound"], r["main_target"], r["attribution_state"], r["attribution_main_measure"], r["attribution_best_measure"]) for r in new.values() if r["attribution_mixed_measure"] == "yes" and r["attribution_state"] in ("WEAK_ATTRIBUTION", "BORDERLINE_POTENT_MAIN_TARGET"))
+    b1 = {i for i, r in f1.items() if r["identity_via"]}
+    b2 = {i for i, r in new.items() if r["identity_via"]}
+    fx["bridged_rows_first_v1_now"] = [len(b1), len(b2)]
+    fx["bridged_rows_lost"] = sorted((new[i]["compound"], new[i]["main_target"], new[i]["handoff_blocker"]) for i in b1 - b2)
+    fx["bridge_decisions_first_v1_now"] = [{"related_not_merged": 66, "unresolved": 63, "merged": 1423}, dict(collections.Counter(r["decision"] for v_ in br.values() for r in v_))]
+    out["v1_fix"] = fx
     (HERE / "measures_it21_v1.json").write_text(json.dumps(out, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps(out, indent=1, sort_keys=True))
 

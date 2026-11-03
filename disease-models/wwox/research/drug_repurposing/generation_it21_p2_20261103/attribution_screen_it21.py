@@ -11,8 +11,15 @@
    Pharmacology release and states, for the main target of a proposal, how much weaker it is than the compound's best measured human target.
    Reading: at the concentration that half-occupies the best target, a target FOLD times weaker is occupied 1/(1+FOLD). FOLD >= 10 (< 9 percent) is WEAK;
    the threshold is a stated pharmacological convention and the sensitivity at 3, 10, 30, 100 is reported, not hidden.
-   States: WEAK_ATTRIBUTION | ATTRIBUTABLE | UNMEASURED_AT_MAIN_TARGET (ligand measured elsewhere, annotation only) | NOT_ASSESSABLE (no ligand or no measurement).
+   V1-fix (independent review): a relative fold alone is not weakness. WEAK needs fold >= 10 AND a main-target potency that is not itself high
+   (main target above POTENT_MAIN_NM = 100 nM). Fold >= 10 with a main target at or below 100 nM is BORDERLINE_POTENT_MAIN_TARGET: annotated, not blocked.
+   A family measured on one target only has no comparison: SINGLE_MEASURED_TARGET (not 'attributable by comparison'). The median of a (ligand, gene) pool
+   can mix measure types (Ki, IC50, EC50 ...): the types pooled are reported and a pool of more than one type is marked mixed_measure (never blocks alone).
+   States: WEAK_ATTRIBUTION | BORDERLINE_POTENT_MAIN_TARGET | ATTRIBUTABLE | SINGLE_MEASURED_TARGET | UNMEASURED_AT_MAIN_TARGET (ligand measured elsewhere,
+   annotation only, ranked after the others in the cap) | NOT_ASSESSABLE (no ligand or no measurement).
    Only WEAK_ATTRIBUTION blocks a hand-over; unknown is not negative. Affinity is an enzyme or binding measurement, not cellular occupancy or exposure.
+   Identity bridge V1-fix: structure equality is necessary but not sufficient; the twin's NAME must match the ligand's or its ChEMBL record's, modulo salt and
+   counter-ion words; an extra non-salt word (ester or prodrug) is related_not_merged; no name match is unresolved.
 
 Standard library only. The GtoPdb and DGIdb files are the shared catalogue cache (LEGEND_CATALOG_CACHE), third-party and not in git.
 """
@@ -23,7 +30,30 @@ HERE = Path(__file__).resolve().parent
 DR = HERE.parent
 WEAK_FOLD = 10.0
 SENSITIVITY_FOLDS = (3.0, 10.0, 30.0, 100.0)
+POTENT_MAIN_NM = 100.0          # main-target affinity at or below this is potent in absolute terms: a large fold there is annotated, not blocked
 _CLAIM_ID = re.compile(r"^IUPHAR\.LIGAND:(\d+)$", re.I)
+# counter-ion, hydration and formulation words: a name differing from the parent by these only names the same substance (ester and prodrug groups are NOT here)
+SALT_WORDS = frozenset("""hydrochloride dihydrochloride hydrobromide hydroiodide sulfate sulphate bisulfate phosphate diphosphate mesylate dimesylate besylate tosylate
+fumarate maleate tartrate bitartrate citrate succinate sodium disodium potassium calcium magnesium lithium zinc chloride bromide iodide nitrate hydrate monohydrate
+dihydrate trihydrate hemihydrate anhydrous micronized propanediol triethiodide acid free base salt oxalate lactate gluconate malate napsylate edisylate camsylate pamoate""".split())
+_TAG = re.compile(r"<[^>]+>|&[a-z]+;")
+
+
+def _name_tokens(name):
+    return [t for t in re.split(r"[^a-z0-9]+", _TAG.sub(" ", (name or "").lower())) if t]
+
+
+def name_relation(twin_names, *parent_names):
+    """How a DGIdb-only record's name relates to the ligand / ChEMBL record names: 'match' (equal after dropping salt words), 'derivative' (one name is the other
+    plus non-salt words: ester, prodrug, other form) or 'none'. Pure; no compound name appears in it."""
+    core = lambda n: tuple(t for t in _name_tokens(n) if t not in SALT_WORDS)
+    twins = [core(n) for n in twin_names if core(n)]
+    parents = [core(n) for n in parent_names if core(n)]
+    if any(a == b for a in twins for b in parents):
+        return "match"
+    if any(a[:len(b)] == b or b[:len(a)] == a for a in twins for b in parents):
+        return "derivative"
+    return "none"
 
 
 def cache_dir():
@@ -44,7 +74,7 @@ def _rd(path):
 
 
 def load_gtopdb_affinities(cache=None):
-    """({ligand id: ligands.csv row}, {(ligand id, HGNC symbol): [nM, ...]}, {(ligand id, symbol): {unit types}}), human targets only."""
+    """({ligand id: ligands.csv row}, {(ligand id, HGNC symbol): median nM}, {(ligand id, symbol): {measure types pooled into that median: Ki, IC50, EC50 ...}}), human targets only."""
     cache = cache or cache_dir()
     lig = {r["Ligand ID"]: r for r in _rd(cache / "gtopdb" / "ligands.csv") if r.get("Ligand ID")}
     aff, kinds = collections.defaultdict(list), collections.defaultdict(set)
@@ -68,7 +98,7 @@ def load_gtopdb_affinities(cache=None):
         if nm is None or nm <= 0:
             continue
         aff[(r["Ligand ID"], sym)].append(nm)
-        kinds[(r["Ligand ID"], sym)].add(r.get("Affinity Units") or "?")
+        kinds[(r["Ligand ID"], sym)].add(r.get("Original Affinity Units") or r.get("Affinity Units") or "?")
     return lig, {k: statistics.median(v) for k, v in aff.items()}, kinds
 
 
@@ -127,6 +157,10 @@ def bridge_claim_name_ligands(entries, cache=None, cb=None):
                         rec.update(decision="unresolved", reason="drugbank_ids_disjoint")
                     elif dg_chembl and r_id not in dg_chembl:
                         rec.update(decision="unresolved", reason="dgidb_chembl_concept_differs_from_gtopdb_reference")
+                    elif name_relation([e["name"], e["ids"].get("dgidb_drug_name")], l["Name"], m["name"]) == "derivative":
+                        rec.update(decision="related_not_merged", reason="twin_name_is_a_derivative_of_the_ligand_name (ester, prodrug or other form)")
+                    elif name_relation([e["name"], e["ids"].get("dgidb_drug_name")], l["Name"], m["name"]) == "none":
+                        rec.update(decision="unresolved", reason="twin_name_matches_neither_the_ligand_nor_its_chembl_record")
                     else:
                         rec.update(decision="merged", reason=code)
             recs.append(rec)
@@ -166,24 +200,36 @@ def family_ligands(entries, fam, bridges, lig):
     return out
 
 
-def attribution(ligands, main_gene, aff, kinds=None, weak_fold=WEAK_FOLD):
-    """State of the attribution of a family (its ligand ids) to `main_gene`. Pure."""
+def attribution(ligands, main_gene, aff, kinds=None, weak_fold=WEAK_FOLD, potent_nm=POTENT_MAIN_NM):
+    """State of the attribution of a family (its ligand ids) to `main_gene`. Pure. `kinds` ({(ligand, gene): {measure types}}) adds the measure types pooled behind the two
+    medians and mixed_measure ('yes' when either pool holds more than one type; informational, never blocks)."""
     main = (main_gene or "").upper()
     best_by_gene = {}
     for (lid, sym), nm in aff.items():
         if lid in ligands:
             if sym not in best_by_gene or nm < best_by_gene[sym][0]:
                 best_by_gene[sym] = (nm, lid)
+    empty = dict(main_nm="", best_target="", best_nm="", fold="", occupancy="", n_targets_measured=0, main_measure="", best_measure="", mixed_measure="")
     if not ligands or not best_by_gene:
-        return dict(state="NOT_ASSESSABLE", main_nm="", best_target="", best_nm="", fold="", occupancy="", n_targets_measured=0)
-    bg, (bnm, _) = min(best_by_gene.items(), key=lambda kv: kv[1][0])
+        return dict(empty, state="NOT_ASSESSABLE")
+    bg, (bnm, blid) = min(best_by_gene.items(), key=lambda kv: kv[1][0])
+    kd = kinds or {}
+    bkind = sorted(kd.get((blid, bg), ()))
     if main not in best_by_gene:
-        return dict(state="UNMEASURED_AT_MAIN_TARGET", main_nm="", best_target=bg, best_nm=round(bnm, 3), fold="", occupancy="", n_targets_measured=len(best_by_gene))
-    mnm = best_by_gene[main][0]
+        return dict(empty, state="UNMEASURED_AT_MAIN_TARGET", best_target=bg, best_nm=round(bnm, 3), n_targets_measured=len(best_by_gene), best_measure="|".join(bkind),
+                    mixed_measure=("yes" if len(bkind) > 1 else "no") if kinds is not None else "")
+    mnm, mlid = best_by_gene[main]
+    mkind = sorted(kd.get((mlid, main), ()))
     fold = mnm / bnm
-    state = "WEAK_ATTRIBUTION" if fold >= weak_fold else "ATTRIBUTABLE"
+    if len(best_by_gene) == 1:
+        state = "SINGLE_MEASURED_TARGET"          # nothing to compare against: not attributable by comparison
+    elif fold >= weak_fold:
+        state = "BORDERLINE_POTENT_MAIN_TARGET" if mnm <= potent_nm else "WEAK_ATTRIBUTION"
+    else:
+        state = "ATTRIBUTABLE"
+    mixed = ("yes" if (len(mkind) > 1 or len(bkind) > 1) else "no") if kinds is not None else ""
     return dict(state=state, main_nm=round(mnm, 3), best_target=bg, best_nm=round(bnm, 3), fold=round(fold, 1), occupancy=round(1 / (1 + fold), 4),
-                n_targets_measured=len(best_by_gene))
+                n_targets_measured=len(best_by_gene), main_measure="|".join(mkind), best_measure="|".join(bkind), mixed_measure=mixed)
 
 
 def sensitivity(folds):

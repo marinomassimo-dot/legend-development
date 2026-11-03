@@ -3,23 +3,25 @@
  "attribution_sensitivity_assessed_rows_at_or_above_fold": {
   "10.0": 33,
   "100.0": 16,
-  "3.0": 60,
+  "3.0": 59,
   "30.0": 23,
-  "assessed": 224
+  "assessed": 219
  },
  "attribution_states": {
-  "ATTRIBUTABLE": 191,
-  "NOT_ASSESSABLE": 733,
-  "UNMEASURED_AT_MAIN_TARGET": 23,
-  "WEAK_ATTRIBUTION": 33
+  "ATTRIBUTABLE": 99,
+  "BORDERLINE_POTENT_MAIN_TARGET": 8,
+  "NOT_ASSESSABLE": 737,
+  "SINGLE_MEASURED_TARGET": 87,
+  "UNMEASURED_AT_MAIN_TARGET": 24,
+  "WEAK_ATTRIBUTION": 25
  },
  "blockers_after": {
-  "ELIGIBLE": 151,
+  "ELIGIBLE": 154,
   "arm_has_no_stated_benefit_hypothesis": 93,
   "decided_in_earlier_qualification_record": 19,
-  "identity_not_resolved": 551,
-  "main_target_weak_attribution": 28,
-  "mechanism_cluster_examined_earlier": 68,
+  "identity_not_resolved": 555,
+  "main_target_weak_attribution": 20,
+  "mechanism_cluster_examined_earlier": 69,
   "modality_antibody_not_small_molecule": 6,
   "modality_protein_or_peptide_not_small_molecule": 5,
   "modality_unknown_not_small_molecule": 11,
@@ -38,14 +40,14 @@
  },
  "claim_name_bridge": {
   "decisions": {
-   "merged": 1423,
+   "merged": 1365,
    "out_of_selection": 140,
    "rejected_conflict": 9,
-   "related_not_merged": 66,
-   "unresolved": 63
+   "related_not_merged": 100,
+   "unresolved": 87
   },
   "dgidb_only_entries_with_a_claim_name_ligand_and_no_concept_id_ligand": 1630,
-  "twin_families_joinable": 1423
+  "twin_families_joinable": 1365
  },
  "contrast": {
   "C1 GSK343": {
@@ -58,7 +60,7 @@
    "status": "CONDITIONAL_H_HARM"
   },
   "C2 tizaterkib": {
-   "attribution": "ATTRIBUTABLE",
+   "attribution": "SINGLE_MEASURED_TARGET",
    "blocker_after": "decided_in_earlier_qualification_record",
    "fold": "1.0",
    "handoff_after": "no/not handed",
@@ -78,7 +80,7 @@
  },
  "eligible_before_after": [
   141,
-  151
+  154
  ],
  "generated_rows_changed": 0,
  "glue_rows_with_main_target_CRBN": [],
@@ -88,30 +90,25 @@
    "Q2 H_PROTECT ZHX2",
    "UNMEASURED_AT_MAIN_TARGET"
   ],
-  "IT21P2-0254": [
-   "Estradiol Valerate",
-   "Q5 H_HARM ESR2",
-   "ATTRIBUTABLE"
+  "IT21P2-0217": [
+   "RAZUPROTAFIB",
+   "Q5 H_HARM PTPRB",
+   "SINGLE_MEASURED_TARGET"
   ],
-  "IT21P2-0295": [
-   "To-901317",
-   "Q5 H_PROTECT RORC",
-   "ATTRIBUTABLE"
-  ],
-  "IT21P2-0330": [
-   "Vitamin A",
-   "Q5 H_PROTECT NR2C2",
-   "ATTRIBUTABLE"
+  "IT21P2-0402": [
+   "Tretinoin",
+   "Q5 H_PROTECT RARB",
+   "BORDERLINE_POTENT_MAIN_TARGET"
   ],
   "IT21P2-0637": [
    "Ezutromid",
    "Q6 H_HARM AHR",
-   "ATTRIBUTABLE"
+   "SINGLE_MEASURED_TARGET"
   ]
  },
  "handed_before_after": [
   13,
-  10
+  11
  ],
  "handed_dropped": {
   "IT21P2-0006": [
@@ -121,10 +118,6 @@
   "IT21P2-0008": [
    "Iox1",
    "decided_in_earlier_qualification_record"
-  ],
-  "IT21P2-0014": [
-   "ASTX-660",
-   "main_target_weak_attribution"
   ],
   "IT21P2-0057": [
    "Cgi1746",
@@ -138,31 +131,17 @@
    "TIZATERKIB",
    "decided_in_earlier_qualification_record"
   ],
-  "IT21P2-0388": [
-   "CEP-11981",
-   "not selected (cap)"
-  ],
   "IT21P2-0512": [
    "SRT-2104",
    "decided_in_earlier_qualification_record"
   ]
  },
- "identity_bridged_rows": 114,
+ "identity_bridged_rows": 110,
  "identity_not_resolved_before_after": [
   659,
-  551
+  555
  ],
  "previously_eligible_now_weak": [
-  [
-   "AMDIZALISIB",
-   "PIK3CB",
-   "290.0"
-  ],
-  [
-   "ASTX-660",
-   "XIAP",
-   "12.7"
-  ],
   [
    "Hg-10-102-01",
    "JAK2",
@@ -192,14 +171,15 @@
  "rows": 980,
  "universe_Q2_H_HARM": {
   "by_blocker_after": {
+   "ELIGIBLE": 2,
    "decided_in_earlier_qualification_record": 1,
    "identity_not_resolved": 16,
-   "main_target_weak_attribution": 9,
-   "mechanism_cluster_examined_earlier": 4,
+   "main_target_weak_attribution": 6,
+   "mechanism_cluster_examined_earlier": 5,
    "modality_protein_or_peptide_not_small_molecule": 2,
    "reach_null_not_confirming": 2
   },
-  "eligible_after": 0,
+  "eligible_after": 2,
   "eligible_before": 4,
   "hdac5_cluster_members": [
    [
@@ -264,7 +244,7 @@
    ],
    [
     "Quisinostat",
-    "WEAK_ATTRIBUTION",
+    "BORDERLINE_POTENT_MAIN_TARGET",
     "33.5"
    ],
    [
@@ -304,6 +284,542 @@
    ]
   ],
   "rows": 34
+ },
+ "v1_fix": {
+  "attributable_to_single_measured": 86,
+  "bridge_decisions_first_v1_now": [
+   {
+    "merged": 1423,
+    "related_not_merged": 66,
+    "unresolved": 63
+   },
+   {
+    "merged": 1365,
+    "out_of_selection": 140,
+    "rejected_conflict": 9,
+    "related_not_merged": 100,
+    "unresolved": 87
+   }
+  ],
+  "bridged_rows_first_v1_now": [
+   114,
+   110
+  ],
+  "bridged_rows_lost": [
+   [
+    "(10R)-10-Methyl-3-(6-Methylpyridin-3-Yl)-9,10,11,12-Tetrahydro-8H-[1,4]Diazepino[5',6':4,5]Thieno[3,2-F]Quinolin-8-One",
+    "MAPKAPK2",
+    "identity_not_resolved"
+   ],
+   [
+    "Estradiol Valerate",
+    "ESR2",
+    "identity_not_resolved"
+   ],
+   [
+    "Ethyl 3-[(E)-2-Amino-1-Cyanoethenyl]-6,7-Dichloro-1-Methyl-1H-Indole-2-Carboxylate",
+    "DYRK1A",
+    "identity_not_resolved"
+   ],
+   [
+    "Ethyl 3-[(E)-2-Amino-1-Cyanoethenyl]-6,7-Dichloro-1-Methyl-1H-Indole-2-Carboxylate",
+    "DYRK1A",
+    "identity_not_resolved"
+   ],
+   [
+    "To-901317",
+    "RORC",
+    "identity_not_resolved"
+   ],
+   [
+    "Vitamin A",
+    "NR2C2",
+    "identity_not_resolved"
+   ]
+  ],
+  "eligible_first_v1_now": [
+   151,
+   154
+  ],
+  "first_v1_rev": "d1963a79",
+  "handed_added_vs_first_v1": [
+   [
+    "IT21P2-0014",
+    "ASTX-660",
+    "BORDERLINE_POTENT_MAIN_TARGET"
+   ],
+   [
+    "IT21P2-0217",
+    "RAZUPROTAFIB",
+    "SINGLE_MEASURED_TARGET"
+   ],
+   [
+    "IT21P2-0388",
+    "CEP-11981",
+    "ATTRIBUTABLE"
+   ],
+   [
+    "IT21P2-0402",
+    "Tretinoin",
+    "BORDERLINE_POTENT_MAIN_TARGET"
+   ]
+  ],
+  "handed_borderline": [
+   [
+    "IT21P2-0014",
+    "ASTX-660"
+   ],
+   [
+    "IT21P2-0402",
+    "Tretinoin"
+   ]
+  ],
+  "handed_dropped_vs_first_v1": [
+   [
+    "IT21P2-0254",
+    "Estradiol Valerate",
+    "identity_not_resolved"
+   ],
+   [
+    "IT21P2-0295",
+    "To-901317",
+    "identity_not_resolved"
+   ],
+   [
+    "IT21P2-0330",
+    "Vitamin A",
+    "identity_not_resolved"
+   ]
+  ],
+  "handed_first_v1": [
+   [
+    "IT21P2-0035",
+    "Sorafenib",
+    "UNMEASURED_AT_MAIN_TARGET"
+   ],
+   [
+    "IT21P2-0221",
+    "SAR-407899 FREE BASE",
+    "ATTRIBUTABLE"
+   ],
+   [
+    "IT21P2-0236",
+    "LGH-447",
+    "ATTRIBUTABLE"
+   ],
+   [
+    "IT21P2-0254",
+    "Estradiol Valerate",
+    "ATTRIBUTABLE"
+   ],
+   [
+    "IT21P2-0295",
+    "To-901317",
+    "ATTRIBUTABLE"
+   ],
+   [
+    "IT21P2-0296",
+    "RAVOXERTINIB",
+    "NOT_ASSESSABLE"
+   ],
+   [
+    "IT21P2-0330",
+    "Vitamin A",
+    "ATTRIBUTABLE"
+   ],
+   [
+    "IT21P2-0456",
+    "Az960",
+    "ATTRIBUTABLE"
+   ],
+   [
+    "IT21P2-0542",
+    "LONAPRISAN",
+    "NOT_ASSESSABLE"
+   ],
+   [
+    "IT21P2-0637",
+    "Ezutromid",
+    "ATTRIBUTABLE"
+   ]
+  ],
+  "handed_now": [
+   [
+    "IT21P2-0014",
+    "ASTX-660",
+    "XIAP",
+    "BORDERLINE_POTENT_MAIN_TARGET"
+   ],
+   [
+    "IT21P2-0035",
+    "Sorafenib",
+    "ZHX2",
+    "UNMEASURED_AT_MAIN_TARGET"
+   ],
+   [
+    "IT21P2-0217",
+    "RAZUPROTAFIB",
+    "PTPRB",
+    "SINGLE_MEASURED_TARGET"
+   ],
+   [
+    "IT21P2-0221",
+    "SAR-407899 FREE BASE",
+    "ROCK2",
+    "ATTRIBUTABLE"
+   ],
+   [
+    "IT21P2-0236",
+    "LGH-447",
+    "PIM2",
+    "ATTRIBUTABLE"
+   ],
+   [
+    "IT21P2-0296",
+    "RAVOXERTINIB",
+    "MAPK3",
+    "NOT_ASSESSABLE"
+   ],
+   [
+    "IT21P2-0388",
+    "CEP-11981",
+    "MAP3K7",
+    "ATTRIBUTABLE"
+   ],
+   [
+    "IT21P2-0402",
+    "Tretinoin",
+    "RARB",
+    "BORDERLINE_POTENT_MAIN_TARGET"
+   ],
+   [
+    "IT21P2-0456",
+    "Az960",
+    "JAK2",
+    "SINGLE_MEASURED_TARGET"
+   ],
+   [
+    "IT21P2-0542",
+    "LONAPRISAN",
+    "PGR",
+    "NOT_ASSESSABLE"
+   ],
+   [
+    "IT21P2-0637",
+    "Ezutromid",
+    "AHR",
+    "SINGLE_MEASURED_TARGET"
+   ]
+  ],
+  "handed_unmeasured_at_main_target": [
+   [
+    "IT21P2-0035",
+    "Sorafenib"
+   ]
+  ],
+  "mixed_measure_among_weak_or_borderline": [
+   [
+    "BI-2536",
+    "BRD4",
+    "BORDERLINE_POTENT_MAIN_TARGET",
+    "Kd",
+    "IC50|Ki"
+   ],
+   [
+    "BI-2536",
+    "BRD4",
+    "BORDERLINE_POTENT_MAIN_TARGET",
+    "Kd",
+    "IC50|Ki"
+   ],
+   [
+    "Belinostat",
+    "HDAC5",
+    "WEAK_ATTRIBUTION",
+    "Ki",
+    "EC50|Ki"
+   ],
+   [
+    "Givinostat",
+    "HDAC5",
+    "WEAK_ATTRIBUTION",
+    "Ki",
+    "EC50|Ki"
+   ],
+   [
+    "Hg-10-102-01",
+    "JAK2",
+    "WEAK_ATTRIBUTION",
+    "Ki",
+    "IC50|Ki"
+   ],
+   [
+    "MOLIBRESIB",
+    "BRD4",
+    "WEAK_ATTRIBUTION",
+    "EC50|IC50",
+    "IC50"
+   ],
+   [
+    "MOLIBRESIB",
+    "BRD4",
+    "WEAK_ATTRIBUTION",
+    "EC50|IC50",
+    "IC50"
+   ],
+   [
+    "PROGESTERONE",
+    "PGR",
+    "BORDERLINE_POTENT_MAIN_TARGET",
+    "EC50|Ki",
+    "-"
+   ],
+   [
+    "Tretinoin",
+    "RARB",
+    "BORDERLINE_POTENT_MAIN_TARGET",
+    "-|EC50",
+    "-|EC50"
+   ]
+  ],
+  "mixed_measure_rows": {
+   "": 737,
+   "no": 219,
+   "yes": 24
+  },
+  "sensitivity_fold_threshold_with_potent_floor_100nM": {
+   "10.0": {
+    "blocked_weak": 25,
+    "borderline_potent": 8,
+    "fold_at_or_above": 33
+   },
+   "3.0": {
+    "blocked_weak": 34,
+    "borderline_potent": 25,
+    "fold_at_or_above": 59
+   },
+   "30.0": {
+    "blocked_weak": 19,
+    "borderline_potent": 4,
+    "fold_at_or_above": 23
+   }
+  },
+  "states_first_v1": {
+   "ATTRIBUTABLE": 191,
+   "NOT_ASSESSABLE": 733,
+   "UNMEASURED_AT_MAIN_TARGET": 23,
+   "WEAK_ATTRIBUTION": 33
+  },
+  "states_now": {
+   "ATTRIBUTABLE": 99,
+   "BORDERLINE_POTENT_MAIN_TARGET": 8,
+   "NOT_ASSESSABLE": 737,
+   "SINGLE_MEASURED_TARGET": 87,
+   "UNMEASURED_AT_MAIN_TARGET": 24,
+   "WEAK_ATTRIBUTION": 25
+  },
+  "still_weak": [
+   [
+    "Abrocitinib",
+    "JAK2",
+    "803.0",
+    "27.7"
+   ],
+   [
+    "BELUMOSUDIL",
+    "ROCK1",
+    "24000.0",
+    "228.6"
+   ],
+   [
+    "Belinostat",
+    "HDAC5",
+    "175.0",
+    "11.1"
+   ],
+   [
+    "Colchicine",
+    "BRD4",
+    "20000.0",
+    "1818.2"
+   ],
+   [
+    "Dacinostat",
+    "HDAC5",
+    "420.0",
+    "763.6"
+   ],
+   [
+    "Fedratinib",
+    "BRD4",
+    "164.0",
+    "54.7"
+   ],
+   [
+    "Givinostat",
+    "HDAC5",
+    "600.0",
+    "50.0"
+   ],
+   [
+    "Gsk2334470",
+    "AURKB",
+    "3160.0",
+    "1259.0"
+   ],
+   [
+    "Hg-10-102-01",
+    "JAK2",
+    "3200.0",
+    "258.1"
+   ],
+   [
+    "LONDAMOCITINIB",
+    "JAK2",
+    "1220.0",
+    "406.7"
+   ],
+   [
+    "Laduviglusib",
+    "MAPK1",
+    "10000.0",
+    "1492.5"
+   ],
+   [
+    "Leniolisib",
+    "PIK3CA",
+    "262.0",
+    "11.4"
+   ],
+   [
+    "MOLIBRESIB",
+    "BRD4",
+    "368.05",
+    "11.3"
+   ],
+   [
+    "MOLIBRESIB",
+    "BRD4",
+    "368.05",
+    "11.3"
+   ],
+   [
+    "NANATINOSTAT",
+    "HDAC5",
+    "200.0",
+    "66.7"
+   ],
+   [
+    "PAZOPANIB HYDROCHLORIDE",
+    "KIT",
+    "140.0",
+    "14.0"
+   ],
+   [
+    "Rivoceranib",
+    "CSK",
+    "530.0",
+    "530.0"
+   ],
+   [
+    "Romidepsin",
+    "HDAC5",
+    "550.0",
+    "366666.7"
+   ],
+   [
+    "Ruboxistaurin",
+    "PIM2",
+    "20000.0",
+    "3389.8"
+   ],
+   [
+    "SGI-1776",
+    "PIM2",
+    "363.0",
+    "51.9"
+   ],
+   [
+    "SGI-1776",
+    "PIM2",
+    "363.0",
+    "51.9"
+   ],
+   [
+    "TAS-119",
+    "AURKB",
+    "140.0",
+    "350.0"
+   ],
+   [
+    "Trichostatin A",
+    "HDAC5",
+    "260.0",
+    "1300.0"
+   ],
+   [
+    "Umbralisib",
+    "CSNK1E",
+    "6000.0",
+    "433.8"
+   ],
+   [
+    "Vorinostat",
+    "HDAC5",
+    "3600.0",
+    "2769.2"
+   ]
+  ],
+  "weak_to_borderline": [
+   [
+    "AMDIZALISIB",
+    "PIK3CB",
+    "87.0",
+    "290.0"
+   ],
+   [
+    "ASTX-660",
+    "XIAP",
+    "2.8",
+    "12.7"
+   ],
+   [
+    "BI-2536",
+    "BRD4",
+    "37.0",
+    "19.3"
+   ],
+   [
+    "BI-2536",
+    "BRD4",
+    "37.0",
+    "19.3"
+   ],
+   [
+    "PROGESTERONE",
+    "PGR",
+    "2.5",
+    "250.0"
+   ],
+   [
+    "Quisinostat",
+    "HDAC5",
+    "3.69",
+    "33.5"
+   ],
+   [
+    "Tretinoin",
+    "RARB",
+    "6.199",
+    "27.5"
+   ],
+   [
+    "Xevinapant",
+    "XIAP",
+    "66.4",
+    "34.9"
+   ]
+  ]
  },
  "vorinostat": {
   "attribution_best_nm": "1.3",

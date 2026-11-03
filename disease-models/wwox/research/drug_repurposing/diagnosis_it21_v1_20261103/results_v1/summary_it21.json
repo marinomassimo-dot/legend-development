@@ -1,11 +1,11 @@
 {
  "blockers": {
-  "ELIGIBLE": 151,
+  "ELIGIBLE": 154,
   "arm_has_no_stated_benefit_hypothesis": 93,
   "decided_in_earlier_qualification_record": 19,
-  "identity_not_resolved": 551,
-  "main_target_weak_attribution": 28,
-  "mechanism_cluster_examined_earlier": 68,
+  "identity_not_resolved": 555,
+  "main_target_weak_attribution": 20,
+  "mechanism_cluster_examined_earlier": 69,
   "modality_antibody_not_small_molecule": 6,
   "modality_protein_or_peptide_not_small_molecule": 5,
   "modality_unknown_not_small_molecule": 11,
@@ -41,16 +41,17 @@
   "Q6|opposes|CONDITIONAL_IF_HARMFUL": 100,
   "Q7|direct_search|DIAGNOSTIC_ONLY": 50
  },
- "eligible": 151,
- "handed_over": 10,
+ "eligible": 154,
+ "handed_over": 11,
  "handed_over_ids": [
+  "IT21P2-0014",
   "IT21P2-0035",
+  "IT21P2-0217",
   "IT21P2-0221",
   "IT21P2-0236",
-  "IT21P2-0254",
-  "IT21P2-0295",
   "IT21P2-0296",
-  "IT21P2-0330",
+  "IT21P2-0388",
+  "IT21P2-0402",
   "IT21P2-0456",
   "IT21P2-0542",
   "IT21P2-0637"
