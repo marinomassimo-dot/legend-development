@@ -11,9 +11,11 @@
   "2026-11-02 ~23:20 UTC: operator addendum folded into P5 and P6 without a parallel engine: P5 (branch it20-hyp) generates mechanism-driven hypotheses from qualified WWOX needs and extends the existing ranking with an ordered list \"Principali indagini da portare avanti\" (ranking.json key investigations; origin_class known_in_wwox / generated_by_legend / external_transferred; verified novelty perimeter; movement reason); P6 (branch it20-dash) renders it as the first-screen block against that contract. Old-order tests are examined, not deleted."
  ],
  "DEFAULTS_TAKEN": [],
- "STOP_LOG": [],
+ "STOP_LOG": [
+  "2026-11-03: P1 scheduled-cron delivery to a really dead session not observed (manual path observed); myelination needs one WWOX-system datum fixing the sign of a muscarinic-class effect; dashboard row 1 shows a withheld note (name differs from the card name); pre-existing IT8 dose/exposure wording in ranking/cards text (Q01/Q07) untouched"
+ ],
  "AUTHORISED_QUEUE_20261102B": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P0": {
    "order": 1,
    "steps": [
@@ -98,7 +100,7 @@
      "step": "P7 radar: verify real run, questions from IT20 gaps, capability-led searches on GitHub/Hugging Face/Nature, no reopening of resolved comparisons",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "diagnosis_it20_20261102 feeds the radar plan (5 diagnosis questions); scout_it20_20261102 (15 decisions, ChEMBL_37 mechanism trial, GitHub channel incomplete: 3 empty then 403); no resolved comparison reopened; production radar run after the change not yet observed (next scheduled 05:20 UTC 2026-11-03)"
+     "evidence": "diagnosis_it20_20261102 feeds the radar plan (5 diagnosis questions); scout_it20_20261102 (15 decisions, ChEMBL_37 mechanism trial, GitHub channel incomplete: 3 empty then 403); no resolved comparison reopened; production radar run after the change not yet observed (next scheduled 05:20 UTC 2026-11-03); production observation 2026-11-03 05:20:03Z (scheduled cron, not a manual call): plan derived at main e7f00f13, 76 questions of which 45 reopen, 0 provenance/probe errors, asked diagnosis:matching-evaluation and diagnosis:provenance-through-intermediaries (the IT20 gaps), 7 pending log entries to examine; a reduction of waits in the field still needs days of runs"
     }
    ]
   },
@@ -118,9 +120,9 @@
    "steps": [
     {
      "step": "P9 freshness, battery on the final candidate, safe_push, CI and publication to verdict, cleanup, final report",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "candidate e7f00f13: battery PASS WITH SKIPS (189 targets, 7 skipped for absent corpus); safe_push gate PASS; CI Public release gate success (2026-11-03 01:41:59Z-02:28:48Z); Publish workflow verify/deploy/smoke success; served index.html sha256 equals the package (3c522ce0...); check_published_view PASS 28; headless load of the live URL: 0 script errors, 10 investigation rows, explorer #x=need/#x=cand render SVG + text table; worktrees/branches cleaned; remaining: collect the 05:20 UTC production radar event, then the record-only close-out"
+     "evidence": "candidate e7f00f13: battery PASS WITH SKIPS (189 targets, 7 skipped for absent corpus); safe_push gate PASS; CI Public release gate success (2026-11-03 01:41:59Z-02:28:48Z); Publish workflow verify/deploy/smoke success; served index.html sha256 equals the package (3c522ce0...); check_published_view PASS 28; headless load of the live URL: 0 script errors, 10 investigation rows, explorer #x=need/#x=cand render SVG + text table; worktrees/branches cleaned; remaining: collect the 05:20 UTC production radar event, then the record-only close-out; radar event collected (see P7); this commit is record only, its CI is not awaited by this record; one follow-up note merged (followup_it20_20261102); local worktrees removed"
     }
    ]
   }
