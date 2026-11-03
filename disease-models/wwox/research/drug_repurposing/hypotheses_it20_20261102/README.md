@@ -56,6 +56,14 @@ WWOX-restoration need and myelination), and no catalogue association at all (4, 
 an endpoint). This package did **not** separate catalogue-coverage limits from target-listing limits for the last group;
 INV-11 is that work.
 
+> **Correction, 2026-11-03 (`followup_it20_20261102/`).** The "no matching catalogue action vocabulary" cause stated here
+> and in § 1 row (c) for those 6 needs is wrong: `repurposing_search.consistency()` already maps `restore` to `up`, and 4
+> of the 5 WWOX-restoration needs carry a `same` coupling row. All six are correct abstentions, at three later guards —
+> `action_not_stated` (the only catalogue rows on WWOX state no up/down action), `coupling_not_measured` (PTC-readthrough,
+> demoted by the 2026-10-28 audit) and `no_coupling_row` (myelination, whose record holds any pharmacological route
+> `unknown`). The counts in this package are unaffected; only the attributed cause is. `comparison_summary.json` was
+> already accurate.
+
 **Which next experiment discriminates:** for the generation deficit itself, INV-02 and INV-06 — a protein-level measurement
 that resolves a need's direction converts the largest blocked slice of the catalogue into an orderable question, which no
 compound test can do.
