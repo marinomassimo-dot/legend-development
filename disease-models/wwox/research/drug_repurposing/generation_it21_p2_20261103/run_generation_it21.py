@@ -35,7 +35,9 @@ sys.path.insert(0, str(REPO / "framework/scripts"))
 
 # ---- the status vocabulary: closed, and QUALIFIED is not in it -------------------------------------------------------------------------------------
 STATUS_VOCAB = ("CONDITIONAL_H_HARM", "CONDITIONAL_H_PROTECT", "HYPOTHESIS_ROLE_SOURCED_NOT_QUALIFIED", "HELD_UNCERTAIN_ACTIVE_MOIETY",
-                "DIAGNOSTIC_ONLY", "NOT_APPLICABLE")
+                "DIAGNOSTIC_ONLY", "NOT_APPLICABLE", "CLOSED_AS_WRITTEN")
+# CLOSED_AS_WRITTEN (P8-fix, IT21 verifier B4): a qualification record rejected the proposal in the form it was written. It is a CLOSED status, not a
+# promotion: it names no qualification, and nothing in this module can move a row out of it or into a qualified state. A reopening is a new record.
 FORBIDDEN_STATUS_WORDS = ("QUALIFIED", "KEEP", "RECOMMEND", "CANDIDATE_FOR_USE", "VALIDATED")
 
 
@@ -287,6 +289,63 @@ def earlier_state(name, decisions):
     return None
 
 
+# ---- earlier threads: LEGEND's own earlier exclusion and candidate tables (P8-fix, IT21 verifier C4) --------------------------------------------------
+# (relative path under DR, name column, id column, reason columns). Listed from the most to the least informative; the first thread found for a compound carries its reason.
+EARLIER_THREAD_SOURCES = (
+    ("exploration_it9_p3_20261030/excluded.tsv", "name", "parent", ("disposition", "selection_reason")),
+    ("qualification_it9_p4c_d_20261030/excluded_selection_p4c_d.tsv", "name", "parent", ("disposition",)),
+    ("exploration_it9_p3_20261030/selected.tsv", "name", "parent_chembl_id", ("legend_status",)),
+    ("exploration_it9_p3_20261030/candidates_consolidated.tsv", "name", "parent", ("disposition", "selection_reason")),
+    ("generation_it10_p1_20261031/results/deepening_candidates.tsv", "name", "", ("disposition", "rule")),
+)
+
+
+def thread_keys(name, ident=""):
+    """Every key under which one compound can be found again: the hyphen/space/case-free name, the salt-free name, and the ChEMBL id."""
+    ks = {norm(name), base_name(name)}
+    m = re.search(r"CHEMBL\d+", (ident or "").upper())
+    if m:
+        ks.add(m.group(0).lower())
+    return {k for k in ks if len(k) >= 4}
+
+
+def load_earlier_threads(sources=EARLIER_THREAD_SOURCES, root=None):
+    """key -> (source file, reason). First source wins. A missing file is skipped (the perimeter is then smaller, never invented)."""
+    root = Path(root) if root else DR
+    out = {}
+    for rel, ncol, icol, rcols in sources:
+        p = root / rel
+        if not p.exists():
+            continue
+        for r in rd(p):
+            reason = "; ".join(x for x in (r.get(c, "") for c in rcols) if x)
+            for k in thread_keys(r.get(ncol, ""), r.get(icol, "") if icol else ""):
+                out.setdefault(k, (rel, reason))
+    return out
+
+
+def earlier_thread(name, family_id, threads):
+    """'source: reason' of an earlier LEGEND thread on this compound, or ''. Matches by name (hyphen variants, salts) and by the ChEMBL id of the family."""
+    for k in sorted(thread_keys(name, family_id)):
+        if k in threads:
+            src, why = threads[k]
+            return f"{src}: {why or 'listed'}"
+    return ""
+
+
+def intended_effect(hyp, seed_direction):
+    """What the arm wants the compound to do to the seed readout, from the seed's OWN direction. H_HARM (arm 'opposes'): move the readout against the observed
+    change; H_PROTECT (arm 'mimics'): move it with the observed change, a probe of the role question. Pure."""
+    d = (seed_direction or "").lower()
+    if d not in ("up", "down"):
+        return "direction of the seed readout not stated in the row: the intended effect cannot be written"
+    if hyp == "H_HARM":
+        eff = "lowers" if d == "up" else "raises"
+        return f"{eff} the seed-gene readout (the seed is {d} in the WWOX-deficient system and that change is assumed harmful)"
+    eff = "raises or sustains" if d == "up" else "lowers"
+    return (f"{eff} the seed-gene readout (the seed is {d}): a probe of the role question, a risk and not a benefit unless step 0 shows the seed change is protective")
+
+
 def corpus_text():
     """Lower-cased text of the cards, packets, unit tables and proposal maps: a name found here is 'named in LEGEND material' (a perimeter, not a literature claim)."""
     parts = []
@@ -379,6 +438,25 @@ def assertion_counts(entries_idx, family, gene, rs):
     return rows, len(keys), ";".join(sorted(srcs))
 
 
+def assign_ids(proposals, previous_path):
+    """Proposal ids are stable across a re-run (P8-fix): a row already numbered in the previous table keeps its id (qualification records cite them); a new row takes the
+    next free number, in the order of the original rule; a row that disappeared leaves a gap. On a first run this is the original contiguous numbering."""
+    keyed = lambda p: (p["seed_set"], p["hypothesis"], p["family_id"])
+    prev = {}
+    if Path(previous_path).exists():
+        prev = {keyed(r): r["proposal_id"] for r in rd(previous_path)}
+    order = sorted(proposals, key=lambda p: (p["question"], p["hypothesis"], -float(p["zmin"])))
+    used = {prev[keyed(p)] for p in proposals if keyed(p) in prev}
+    nxt = max([int(i.split("-")[1]) for i in prev.values()] + [0]) + 1 if prev else 1
+    for p in order:
+        if keyed(p) in prev:
+            p["proposal_id"] = prev[keyed(p)]
+        else:
+            p["proposal_id"] = f"IT21P2-{nxt:04d}"
+            nxt += 1
+    assert len({p["proposal_id"] for p in proposals}) == len(proposals)
+
+
 def cmd_propose(a):
     D = load_dispose()
     import compound_catalog as cc
@@ -420,6 +498,7 @@ def cmd_propose(a):
         m["modality"] = modality.get(f)
     decisions = earlier_decisions()
     text = corpus_text()
+    threads = load_earlier_threads()
     signed = collections.defaultdict(dict)
     for r in rd(R / "actions" / "family_actions.tsv.gz"):
         signed[r["family_id"]][r["target_symbol"].upper()] = r
@@ -474,13 +553,13 @@ def cmd_propose(a):
             readout_level="expression" if "expression" in s["seed_set"] else s["seed_set"].split("_")[1],
             has_chembl=meta.get(s["family_id"], {}).get("has_chembl", ""), modality=meta.get(s["family_id"], {}).get("modality") or "",
             status_class=status_of.get(s["family_id"], ""), max_phase=phase_of.get(s["family_id"], ""),
-            chain_edges=chain.count("->"), earlier_decision=(f"{dec[0]} ({dec[1]})" if dec else ""), named_in_legend_material="yes" if named_in_corpus(s["name"], text) else "no",
+            chain_edges=chain.count("->"), earlier_decision=(f"{dec[0]} ({dec[1]})" if dec else ""), earlier_thread=earlier_thread(s["name"], s["family_id"], threads),
+            named_in_legend_material="yes" if (named_in_corpus(s["name"], text) or earlier_thread(s["name"], s["family_id"], threads)) else "no",
             target_named_in_legend_material="yes" if named_in_corpus(main, text) else "no",
             handoff_eligible="yes" if ok else "no", handoff_blocker=why, evaluation_forbidden_on=s["evaluation_forbidden_on"]))
         if ok:
             elig_rows.append(proposals[-1])
-    for i, p in enumerate(sorted(proposals, key=lambda p: (p["question"], p["hypothesis"], -float(p["zmin"]))), 1):
-        p["proposal_id"] = f"IT21P2-{i:04d}"
+    assign_ids(proposals, R / "proposals_it21.tsv")
     # H8: a mechanism cluster with an earlier qualification record on ANY member is not handed over as new
     cl_dec = collections.defaultdict(list)
     for p in proposals:
@@ -527,11 +606,12 @@ def cmd_propose(a):
             negatives_and_limits=f"contrary seed share {p['contrary_seed_share'] or 'n/a'}; z total/indeg/adm/reach {p['z_total']}/{p['z_indeg']}/{p['z_adm']}/{p['z_reach']}; chain of {p['chain_edges']} edge(s); modality {p['modality']}; phase {p['max_phase']}; status {p['status_class']}"
                                + ("; TOOL COMPOUND: selectivity and exposure not assessed here, the single listed target may not be the only action" if p["status_class"] == "tool_probe" else "")
                                + f"; dev limits: {D.dev_scope(p['compound'], rd(IT10 / 'dev_constraints.tsv'))}; the seed is {p['readout_level']}-level, so a change there is not a change in target activity or function",
-            intended_effect_on_seed_readout=("lowers the seed-gene readout (the seed rise is assumed harmful)" if hyp == "H_HARM" else
-                                             "raises or sustains the seed-gene readout: a probe of the role question, a risk and not a benefit unless step 0 shows the seed change is protective"),
+            intended_effect_on_seed_readout=intended_effect(hyp, (p["contributing_seed_1"].split("|") + ["", "", ""])[2]),
             target_axis_named_in_legend_material=p["target_named_in_legend_material"],
             abstentions=(f"{len(wh)} withheld row(s) on this record ({collections.Counter(r['reason_class'] for r in wh).most_common(1)[0][0]})" if wh else "none on this record"),
-            novelty_perimeter=("named in LEGEND cards/units" if p["named_in_legend_material"] == "yes" else "not named in LEGEND cards/units (perimeter of this module only, not a literature claim)"),
+            earlier_thread=p["earlier_thread"],
+            novelty_perimeter=(("earlier LEGEND thread (" + p["earlier_thread"] + ")") if p["earlier_thread"] else "named in LEGEND cards/units" if p["named_in_legend_material"] == "yes" else
+                               "not named in LEGEND cards, units, earlier exclusion lists or IT9/IT10 candidate lists (perimeter of this module only, not a literature claim)"),
             evaluation_forbidden_on=p["evaluation_forbidden_on"]))
     for h in handoff:
         check_status(h["status"])

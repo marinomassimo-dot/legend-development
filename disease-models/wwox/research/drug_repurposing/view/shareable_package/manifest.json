@@ -199,7 +199,7 @@
   },
   "identifiers": {
    "CAT": 2229,
-   "CHEMBL": 307,
+   "CHEMBL": 304,
    "DOI": 5,
    "HGNC": 12,
    "NCT": 0,
@@ -223,7 +223,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3131,
+    "forbidden-name": 3138,
     "forbidden-wording": 12
    },
    "co_attested_wording": [
@@ -248,7 +248,7 @@
    "forbidden_names": 126046,
    "forbidden_wordings": 2888,
    "pair_unmarked_attested_or_unchecked": {
-    "count": 153,
+    "count": 154,
     "names": [
      "act 709478",
      "apinocaltamide",
@@ -263,7 +263,7 @@
      "px 478",
      "sulfopin"
     ],
-    "unchecked_without_corpus": 153
+    "unchecked_without_corpus": 154
    },
    "suppressed_by_exemption": {
     "bibliographic journal name (validated against the journals of the cache)": 4,
@@ -282,7 +282,6 @@
    "CHEMBL1201333",
    "CHEMBL1230640",
    "CHEMBL146927",
-   "CHEMBL1544",
    "CHEMBL1746",
    "CHEMBL1801250",
    "CHEMBL189963",
@@ -293,11 +292,8 @@
    "CHEMBL256997",
    "CHEMBL306823",
    "CHEMBL3301610",
-   "CHEMBL3989409",
-   "CHEMBL3989801",
    "CHEMBL4117516",
    "CHEMBL413",
-   "CHEMBL41632",
    "CHEMBL4217292",
    "CHEMBL4303525",
    "CHEMBL589586",
@@ -305,8 +301,8 @@
    "CHEMBL89598"
   ],
   "file": "class_b/chembl_cc-by-sa-3.0/chembl_cc-by-sa-3.0.jsonl",
-  "mechanism_rows": 22,
-  "records": 27,
+  "mechanism_rows": 19,
+  "records": 23,
   "release": "ChEMBL_37 2026-05-01"
  },
  "class_b_files": [
@@ -527,31 +523,31 @@
   },
   "NOTICE.md": {
    "bytes": 13087,
-   "sha256": "7168a87cc4b555d8c64e4df34f57d86568c6f1c14f6f0ccdb30f412fe3908d20"
+   "sha256": "c60f6036e78142c19ae1c5145f98e2c86edb04701caf4e0b5b0062ddd0f54560"
   },
   "README.md": {
    "bytes": 4906,
    "sha256": "4e16e8515c2403b868c7eb6fab65186d81cbc925d95e49134e39594614f16b03"
   },
   "TEXT_PROVENANCE.json": {
-   "bytes": 693,
-   "sha256": "1b43e69e3e1b06e9e36ec18dae2f7190f15ab0bd67e6859bc194896d1dfc8cce"
+   "bytes": 1999,
+   "sha256": "45adea0aba494a34d7a54ebf3145ecd4ff833f66b30f0886ae7eed068d583834"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
-   "sha256": "91ced329795903224d2ee989a7fccb5034b67e36b23baa806dccfde1531b9543"
+   "sha256": "e85c21bd2ce4d7442760bf28db9df40d4480bdf115aa043bad24236efc402ca0"
   },
   "class_b/chembl_cc-by-sa-3.0/LICENSE_CC-BY-SA-3.0.txt": {
    "bytes": 22240,
    "sha256": "3f941b3b89cf7b8370ceb83cc76d2120d471b58735d8ca60238a751a48d7f72f"
   },
   "class_b/chembl_cc-by-sa-3.0/chembl_cc-by-sa-3.0.jsonl": {
-   "bytes": 14081,
-   "sha256": "6723b001a71330ea1f0340694b8feedd8abb97b4a65582aad7b7b5d556a4edfa"
+   "bytes": 12190,
+   "sha256": "0fec943aa25805d10d994a486c5e305be21c0c3fb3d826418843fe75e6518ebc"
   },
   "index.html": {
-   "bytes": 4478014,
-   "sha256": "15bd4f29895dd89b66d8b86809f85fe56d0f8fc332bf0b20ff8c927883adb6af"
+   "bytes": 4476110,
+   "sha256": "3eb6f03ba2ce1cf0b225b49f68ad6afedad72c7d6d1c3feda24d897095e86472"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",

@@ -411,10 +411,42 @@ class It21P7(unittest.TestCase):
         c = self.j["investigations_context"]
         self.assertTrue(c["positions_are_curated_not_computed"])
         self.assertIn("computes no position", c["curation"])
-        self.assertEqual(c["wwox_contribution"]["state"], "pending")
+        # the P5 evaluation is committed (state 'measured', set before P8-fix); P8-fix: 980 conditional rows after the glue/conflict sign guard
+        self.assertEqual(c["wwox_contribution"]["state"], "measured")
         self.assertEqual(c["funnel"]["qualified_hypotheses"], 0)
-        self.assertEqual(c["funnel"]["generator_conditional_rows"], 992)
+        self.assertEqual(c["funnel"]["generator_conditional_rows"], 980)
         self.assertEqual(sum(c["published_vs_it20"].values()), len(self.j["investigations"]))
+
+    def test_the_ceiling_never_displaces_a_risk_flagged_or_human_report_row_for_a_conditional_probe(self):
+        """P8-fix (verifier D3): the curation block states the rule and the data obeys it."""
+        c = self.j["investigations_context"]
+        self.assertIn("risk flag", c["curation"])
+        self.assertIn("not displaced by conditional probes", c["ceiling_rule"])
+        below = [r for r in self.all if r.get("below_the_line")]
+        shown = [r for r in self.all if not r.get("below_the_line")]
+        if any(r["status"] == "conditional_hypothesis" for r in shown) or not below:
+            return
+        protected = [r for r in below if r["direction_state"] == "opposed_risk" or "real human reports" in r["why_now"].lower() or r["evidence_available"].lower().startswith("clinical report only")]
+        self.assertEqual([r["inv_id"] for r in protected], [], "a risk-flagged or human-report row is below the line while a conditional probe is shown")
+
+    def test_lithium_and_gaba_t_are_shown_and_the_new_conditional_probes_are_below_the_line_and_not_qualified(self):
+        by = {r["inv_id"]: r for r in self.all}
+        for k in ("INV-09", "INV-10"):
+            self.assertFalse(by[k].get("below_the_line"), k)
+        for k in ("INV-12", "INV-13"):
+            self.assertEqual(by[k]["below_the_line"], "yes", k)
+            self.assertEqual(by[k]["status"], "conditional_hypothesis")
+        self.assertEqual(sum(1 for r in self.all if not r.get("below_the_line")), 10)
+
+    def test_inv_01_states_that_the_paper_text_overstates_the_glycaemia_correction_and_inv_09_places_the_concern_correctly(self):
+        by = {r["inv_id"]: r for r in self.all}
+        self.assertIn("both doses partially corrected hypoglycaemia", by["INV-01"]["evidence_available"])
+        self.assertIn("the panel does not support it", by["INV-01"]["evidence_available"])
+        m = by["INV-09"]["movement_reason"] + by["INV-09"]["evidence_available"]
+        self.assertIn("+/+ arm of Cheng 2020 Figure 7d", m)
+        self.assertIn("DISFAVOURED_BY_SIGN_PRECEDENT", m)
+        self.assertIn("pilocarpine model in Wwox mice", m)
+        self.assertNotIn("rejected with an informative sign", m)
 
     def test_informative_negatives_keep_the_name_out_of_the_shareable_fields(self):
         negs = self.j["investigations_context"]["informative_negatives"]

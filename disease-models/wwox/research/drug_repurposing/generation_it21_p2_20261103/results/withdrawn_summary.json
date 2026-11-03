@@ -1,10 +1,10 @@
 {
  "gained": 13,
  "it10_seed_specific": 1202,
- "still_seed_specific": 979,
- "withdrawn": 223,
+ "still_seed_specific": 967,
+ "withdrawn": 235,
  "withdrawn_by_cause": {
-  "DIRECTION_WITHDRAWN_AT_MAIN_TARGET": 219,
+  "DIRECTION_WITHDRAWN_AT_MAIN_TARGET": 231,
   "DIRECTION_WITHDRAWN_AT_OTHER_TARGET_OF_THE_FAMILY": 3,
   "NO_ACTION_CHANGE_NULL_OR_SCORE_SHIFT": 1
  },
@@ -13,14 +13,16 @@
   "Q2_expression_tiersAB|opposes": 12,
   "Q4_expression_tiersAB|mimics": 1,
   "Q4_expression_tiersAB|opposes": 4,
-  "Q5_expression_tiersAB|mimics": 43,
+  "Q5_expression_tiersAB|mimics": 47,
   "Q5_expression_tiersAB|opposes": 23,
   "Q6_expression_tiersAB|mimics": 36,
-  "Q6_expression_tiersAB|opposes": 69,
-  "Q6_protein_tiersAB|mimics": 10,
+  "Q6_expression_tiersAB|opposes": 73,
+  "Q6_protein_tiersAB|mimics": 14,
   "Q6_protein_tiersAB|opposes": 22
  },
  "withdrawn_by_withheld_reason": {
+  "action_conflict_or_glue_modulator/protein_complex": 9,
+  "action_conflict_or_glue_modulator/single_protein": 3,
   "group_record_mostly_outside_module_targets/gene_listing;group_record_mostly_outside_module_targets/protein_family": 23,
   "group_record_mostly_outside_module_targets/gene_listing;group_record_mostly_outside_module_targets/protein_protein_interaction": 2,
   "group_record_mostly_outside_module_targets/protein_family": 51,
@@ -28,5 +30,5 @@
   "none": 4,
   "republished_claim_level_not_carried/gene_listing": 139
  },
- "withdrawn_compounds_with_no_surviving_twin": 94
+ "withdrawn_compounds_with_no_surviving_twin": 115
 }

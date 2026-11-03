@@ -212,6 +212,76 @@ class GuardWrapper(unittest.TestCase):
         self.assertEqual(u["sign"], "unresolved")
         self.assertEqual(log[0]["reason_class"], "republished_claim_level_not_carried")
 
+    # ---- P8-fix finding 1: conflict on action and glue/neosubstrate receptors lose the sign, keep the association ---------------------------------------
+    def fam_entry(self, name, chembl, action, genes, ttype="SINGLE PROTEIN"):
+        t = dict(source="ChEMBL curated mechanism", target_type=ttype, gene_symbols=genes, target_id="CHEMBL9", organism="Homo sapiens", action_type=action, uniprot=["P1"])
+        return dict(id="CAT:" + chembl, name=name, ids=dict(chembl=chembl), relations={}, targets=[t])
+
+    def call_family(self, members, e, t, sign="down"):
+        log = []
+        idx = types.SimpleNamespace(artefacts=[], family={m["id"]: "F1" for m in members}, members={"F1": members})
+        w = Rf.make_wrapper(lambda rs_, i, e_, t_: dict(stated=True, excluded=None, sign=sign, stable=True, group="ChEMBL"), set(), log)
+        return w(rs, idx, e, t), log
+
+    def test_family_whose_records_conflict_inhibitor_vs_modulator_gets_no_sign(self):
+        a, b = self.fam_entry("Drug", "CHEMBL1", "INHIBITOR", ["XYZ1"]), self.fam_entry("Drug salt", "CHEMBL2", "MODULATOR", ["XYZ1"])
+        u, log = self.call_family([a, b], a, a["targets"][0])
+        self.assertEqual(u["sign"], "unresolved")
+        self.assertEqual(log[0]["reason_class"], "action_conflict_or_glue_modulator")
+        self.assertEqual(log[0]["waived_genes"], "")
+
+    def test_family_whose_records_conflict_up_vs_down_gets_no_sign(self):
+        a, b = self.fam_entry("Drug", "CHEMBL1", "INHIBITOR", ["XYZ1"]), self.fam_entry("Drug salt", "CHEMBL2", "AGONIST", ["XYZ1"])
+        self.assertEqual(self.call_family([a, b], a, a["targets"][0])[0]["sign"], "unresolved")
+
+    def test_agreeing_records_and_a_conflict_at_another_gene_keep_the_sign(self):
+        a, b = self.fam_entry("Drug", "CHEMBL1", "INHIBITOR", ["XYZ1"]), self.fam_entry("Drug salt", "CHEMBL2", "INHIBITOR", ["XYZ1"])
+        self.assertEqual(self.call_family([a, b], a, a["targets"][0]), (dict(stated=True, excluded=None, sign="down", stable=True, group="ChEMBL"), []))
+        c = self.fam_entry("Drug other", "CHEMBL3", "MODULATOR", ["OTHER2"])
+        self.assertEqual(self.call_family([a, c], a, a["targets"][0])[0]["sign"], "down")
+
+    def test_a_dgidb_modulator_beside_a_chembl_inhibitor_is_not_a_conflict(self):
+        a = self.fam_entry("Drug", "CHEMBL1", "INHIBITOR", ["XYZ1"])
+        d = dict(id="CAT:DGIDB:x", name="Drug", ids={}, targets=[dict(source="DGIdb interaction", gene="XYZ1", interaction_type="modulator")])
+        self.assertEqual(self.call_family([a, d], a, a["targets"][0])[0]["sign"], "down")
+
+    def test_glue_substrate_receptor_gets_no_sign_whatever_the_records_say(self):
+        a = self.fam_entry("Lenalidomide-like", "CHEMBL848", "INHIBITOR", ["CRBN", "CUL4A", "DDB1", "RBX1"], ttype="PROTEIN COMPLEX")
+        u, log = self.call_family([a], a, a["targets"][0])
+        self.assertEqual(u["sign"], "unresolved")
+        self.assertIn("glue substrate receptor", log[0]["reason_class"] + " " + str(log[0]) + " " + Rf.conflict_or_glue(rs, [a], a["targets"][0]))
+
+    def test_committed_crbn_pairs_carry_no_sign_but_keep_the_association(self):
+        rows = tsv(RES / "actions" / "family_actions.tsv.gz")
+        if rows is None:
+            self.skipTest("actions not generated")
+        self.assertEqual([r for r in rows if r["target_symbol"] == "CRBN"], [])
+        anyt = tsv(RES / "actions" / "family_targets_any.tsv.gz")
+        self.assertTrue([r for r in anyt if r["target_symbol"] == "CRBN"])
+
+    # ---- P8-fix findings 2 and 3 --------------------------------------------------------------------------------------------------------------------
+    def test_intended_effect_follows_the_seed_direction(self):
+        self.assertTrue(G.intended_effect("H_HARM", "up").startswith("lowers"))
+        self.assertTrue(G.intended_effect("H_HARM", "down").startswith("raises"))
+        self.assertTrue(G.intended_effect("H_PROTECT", "up").startswith("raises or sustains"))
+        self.assertTrue(G.intended_effect("H_PROTECT", "down").startswith("lowers"))
+        self.assertIn("cannot be written", G.intended_effect("H_HARM", ""))
+
+    def test_earlier_exclusion_lists_are_in_the_perimeter_with_their_reason(self):
+        th = G.load_earlier_threads()
+        for name, fam in (("Az960", "FAM:CAT:CHEMBL1774055"), ("AZ-960", ""), ("CUDC101", "FAM:CAT:CHEMBL598797"), ("Nanatinostat", "FAM:CAT:CHEMBL1801250"),
+                          ("GSK-343", ""), ("Cgi1746", "FAM:CAT:CHEMBL1230541")):
+            self.assertTrue(G.earlier_thread(name, fam, th), name)
+        self.assertIn("F5_no_human_exposure_statement", G.earlier_thread("Az960", "", th))
+        self.assertEqual(G.earlier_thread("Entirely Madeup", "FAM:CAT:CHEMBL0000001", th), "")
+
+    def test_closed_as_written_is_a_closed_status_not_a_promotion(self):
+        self.assertIn("CLOSED_AS_WRITTEN", G.STATUS_VOCAB)
+        self.assertEqual(G.check_status("CLOSED_AS_WRITTEN"), "CLOSED_AS_WRITTEN")
+        for disp in ("CONDITIONAL_IF_HARMFUL", "CONDITIONAL_IF_PROTECTIVE", "PRIMARY_RELIEVE", "NOT_APPLICABLE", "X"):
+            for arm in ("opposes", "mimics"):
+                self.assertNotEqual(G.proposal_status(disp, arm), "CLOSED_AS_WRITTEN")   # this module never produces it; only a qualification record does
+
     def test_without_a_republication_row_nothing_changes(self):
         e = dict(id="CAT:DGIDB:x", name="Copydrug", ids={}, relations={}, targets=[])
         t = dict(source="DGIdb interaction", claim_source="SomeOtherSource", gene="CACNA1G", interaction_type="blocker")

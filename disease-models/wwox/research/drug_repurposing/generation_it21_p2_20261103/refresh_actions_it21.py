@@ -31,7 +31,14 @@ REPO = HERE.parents[4]
 V3 = DR / "generation_it9_p2_20261030" / "v3"
 sys.path.insert(0, str(REPO / "framework/scripts"))
 
-ABSTENTION_CLASSES = ("group_record_mostly_outside_module_targets", "republished_claim_level_not_carried")
+ABSTENTION_CLASSES = ("group_record_mostly_outside_module_targets", "republished_claim_level_not_carried", "action_conflict_or_glue_modulator")
+
+# P8-fix finding 1 (IT21 verifier C1). The search layer has no guard for these two cases, so they are added HERE, in the one adapter, as pure functions:
+#  * a family whose records disagree on the action at one gene (INHIBITOR on one salt record, MODULATOR on another; or up against down) has no sign;
+#  * a MODULATOR action is a glue/recruiter-type statement (lenalidomide-class: the drug recruits neosubstrates to CRBN, it does not lower CRBN activity),
+#    and the CRBN/DCAF15-type substrate receptors carry no sign for any compound: an 'inhibitor' sign there predicts the wrong direction on the substrate.
+GLUE_RECEPTOR_GENES = frozenset({"CRBN", "DCAF15"})
+MODULATOR_ACTIONS = frozenset({"MODULATOR"})
 
 
 def reason_class(reason):
@@ -39,6 +46,41 @@ def reason_class(reason):
         if reason.startswith(c):
             return c
     return ABSTENTION_CLASSES[0]
+
+
+def row_genes(t):
+    return [g for g in ((t.get("gene_symbols") or []) if (t.get("source") or "").startswith("ChEMBL") else [t.get("gene") or ""]) if g]
+
+
+def family_members(idx, e):
+    """The catalogue records of e's family (the record itself when the index carries no family map)."""
+    fam, mem = getattr(idx, "family", None), getattr(idx, "members", None)
+    return (mem.get(fam[e["id"]], [e]) if fam and mem and e["id"] in fam else [e])
+
+
+def conflict_or_glue(rs, members, t):
+    """'' or the reason a signed row must lose its sign: the family's own records disagree at one of the row's genes (up v down, or a ChEMBL MODULATOR
+    statement beside a signed one), or the gene is a glue substrate receptor. Pure on the catalogue entries of ONE family."""
+    genes = {g.upper() for g in row_genes(t)}
+    if genes & GLUE_RECEPTOR_GENES:
+        return "action_conflict_or_glue_modulator: sign at a glue substrate receptor (" + ";".join(sorted(genes & GLUE_RECEPTOR_GENES)) + ")"
+    cats = collections.defaultdict(set)
+    for m in members:
+        for t2 in m["targets"]:
+            if not (t2.get("source") or "").startswith("ChEMBL"):
+                continue                       # only the curated mechanisms disagree meaningfully; a DGIdb 'modulator' beside a ChEMBL inhibitor is source noise
+            raw = t2.get("action_type") or ""
+            c = rs.action_direction(raw)
+            if raw.strip().upper() in MODULATOR_ACTIONS:
+                c = "modulator"
+            if c == "unresolved":
+                continue
+            for g in {x.upper() for x in row_genes(t2)} & genes:
+                cats[g].add(c)
+    for g, c in sorted(cats.items()):
+        if {"up", "down"} <= c or ("modulator" in c and c & {"up", "down"}):
+            return f"action_conflict_or_glue_modulator: records of the family disagree on the action at {g} ({'/'.join(sorted(c))})"
+    return ""
 
 
 def make_wrapper(orig, module_symbols, log):
@@ -50,11 +92,13 @@ def make_wrapper(orig, module_symbols, log):
         src = t["source"]
         prov = rs.claim_provenance(e, t, idx.artefacts)
         transfer = rs.group_transfer_unresolved(src, t, module_symbols) or rs.republished_transfer_unresolved(prov, module_symbols)
+        glue = "" if transfer else conflict_or_glue(rs, family_members(idx, e), t)
+        transfer = transfer or glue
         if not transfer:
             return u
         chembl = src.startswith("ChEMBL")
         genes = list(t.get("gene_symbols") or []) if chembl else [t.get("gene") or ""]
-        waived = [g for g in genes if g and rs.documented_level_waiver(e, t, g, u["sign"], idx.artefacts)]
+        waived = [] if glue else [g for g in genes if g and rs.documented_level_waiver(e, t, g, u["sign"], idx.artefacts)]
         log.append(dict(record=e["id"], name=e.get("name"), source=src, claim_source=t.get("claim_source") or "",
                         target_level=rs.target_level(src, t), effective_level=(prov or {}).get("republished_record_level", ""),
                         chembl_target=t.get("target_id") or "", genes=";".join(genes), action=u["sign"],

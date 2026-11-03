@@ -1164,7 +1164,7 @@
    "decisive_uncertainty": "No arm exists in which treatment begins after the phenotype is established; the window is stated, not measured against a later start, and P300 readouts are survivor-selected.",
    "direction_state": "resolved",
    "direction_state_label": "the need states an up/down intervention direction",
-   "evidence_available": "WWOX-system, read beyond the abstract: the high-dose arm reaches a survival plateau to day 300 and lowers spike-wave discharges to a wild-type-indistinguishable level; weight is ordered against wild type and the untreated knockout (equal to the high dose at P30 only), and glycaemia is NOT shown to be prevented: at P10 the treated arms are not significantly different from the untreated knockout (high dose about 113, low dose about 105, untreated knockout about 95; Figure 3E, card C04 DR-AAV-GLU10-HD and DR-AAV-GLU10-LD), at P20 the untreated-knockout comparator is absent because those animals are dead (Figure 3F, DR-AAV-GLU20-LD and DR-AAV-GLU20-HD, direction UNKNOWN) and the P20 result is dose-graded against wild type only, and by P30 the dose separation has closed (Figure 3G); the glucose result depends on age, dose and comparison, and a non-significant difference at P10 is not evidence of no benefit. Every treated arm was injected in the stated neonatal window.",
+   "evidence_available": "WWOX-system, read beyond the abstract: the high-dose arm reaches a survival plateau to day 300 and lowers spike-wave discharges to a wild-type-indistinguishable level; weight is ordered against wild type and the untreated knockout (equal to the high dose at P30 only), and glycaemia is NOT shown to be prevented: at P10 the treated arms are not significantly different from the untreated knockout (high dose about 113, low dose about 105, untreated knockout about 95; Figure 3E, card C04 DR-AAV-GLU10-HD and DR-AAV-GLU10-LD), at P20 the untreated-knockout comparator is absent because those animals are dead (Figure 3F, DR-AAV-GLU20-LD and DR-AAV-GLU20-HD, direction UNKNOWN) and the P20 result is dose-graded against wild type only, and by P30 the dose separation has closed (Figure 3G); the paper's own text states that both doses partially corrected hypoglycaemia, while the panel does not support it (card C04 records this: the treated arms are not significantly different from the untreated knockout at P10); the glucose result depends on age, dose and comparison, and a non-significant difference at P10 is not evidence of no benefit. Every treated arm was injected in the stated neonatal window.",
    "evidence_depth": "E4 - card reviewed, 12 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)",
    "feasibility": "Established model and established vector; the added arm is a timing change, not a new assay.",
    "intervention": "AAV9-delivered human WWOX (gene addition)",
@@ -1456,84 +1456,88 @@
   {
    "below_the_line": "",
    "below_the_line_reason": "",
-   "chembl_ids": "CHEMBL41632;CHEMBL1544",
-   "decisive_uncertainty": "Whether the block is receptor-responsive and causal, or a consequence of seizures, or of the neuron's own signal being absent (the pro-myelinating-class row asks the premise from the signal side). The agent also has systemic actions that oppose the glycaemia need; an effect on seizure threshold was not looked up.",
-   "direction_state": "resolved",
-   "direction_state_label": "the need states an up/down intervention direction",
-   "evidence_available": "WWOX-system: precursor cells increased and mature oligodendrocytes decreased after neuron-restricted WWOX deletion, restored by neuronal add-back (IT14), with the add-back window early; the myelin deficit is partly prevented when WWOX is restored in neurons in the neonatal window. Outside WWOX: in a mouse model of a thyroid-hormone-uptake defect, a thyromimetic normalised myelination and interneuron differentiation only when started in the first three postnatal weeks (abstract-level reading). No myelin compound has been given to a WWOX system, and another myelin compound already has a negative developmental-myelination result in this module.",
-   "evidence_depth": "Conditional hypothesis: the WWOX-side pattern was read in IT14; the drug-side precedent was read at abstract level only; no WWOX-deficient measurement shows that the block responds to the receptor (no ranked unit, so no evaluation depth applies: this is not a depth of zero)",
-   "feasibility": "Development feasibility: a cell-level probe is feasible now, and an approved thyroid-hormone molecule and a clinical-stage analogue exist; systemic hormone action, the early treatment window and the lack of a brain-exposure datum for the analogue limit any later use.",
-   "intervention": "Agonist probe for the receptors of thyroid hormone (tiratricol, with liothyronine as comparator)",
-   "inv_id": "INV-12",
-   "it20_rank": "",
-   "movement_reason": "new in IT21 (no IT20 position): Enters at rank 5. Reasons: a cheap, role-resolving cell test on a glia axis with a documented WWOX pattern. Not rewarded: novelty. Its status stays conditional (KEPT_CONDITIONAL in IT21 P3b).",
-   "need_direction": "restore",
-   "need_id": "NEED-MYELINATION",
-   "need_short": "Hypomyelination",
-   "next_test": "Seizure-free neuron plus precursor co-culture with wild-type and WWOX-deficient neurons: the agonist against vehicle and against hormone-depleted medium, with a receptor-isoform-selective control; read precursor and mature-cell counts. Correction in both genotypes means non-specific maturation; correction only in the deficient condition opens a pre-onset in vivo question; no change closes the route.",
-   "novelty_perimeter": "Queried: a whole-word name search of this module and its registries on 2026-11-03 (no hit for either molecule) and the compound-to-WWOX path of IT21 P3b. A name search in this module, not a statement about the literature.",
+   "chembl_ids": "",
+   "decisive_uncertainty": "Whether any part of the carded effect is attributable to the named kinase rather than to the agent's other actions, and whether the opposing push on the second need is tolerable.",
+   "direction_state": "opposed_risk",
+   "direction_state_label": "a documented action of this intervention pushes against another need of the same objective",
+   "evidence_available": "WWOX-system with a specificity flag: one paper, one laboratory, the comparison drug reported better; the kinase output readout is a phosphorylation site in mouse plus a docking mechanism in cells. IT21 addition (P3b, proposal G02): the same provocation test in the null, heterozygous and wild-type littermates shows the lithium effect in all three genotypes, and a second documented action of lithium (inositol monophosphatase inhibition) has a documented pro-convulsant sign in rodents, which disfavours it as the mediator by analogy (the precedent is the lithium-pilocarpine model, not a measurement in the Wwox assay; Cheng 2020 also ran a pilocarpine model in Wwox mice, so the objection that the provocations differ is testable in the same system); abstract-level reading for the sign argument.",
+   "evidence_depth": "E4 - card reviewed, 1 WWOX-side assertion(s) read beyond abstract",
+   "feasibility": "Selective tool compounds exist; the assay is the carded one.",
+   "intervention": "Lithium",
+   "inv_id": "INV-09",
+   "it20_rank": "5",
+   "movement_reason": "position unchanged from IT20 (rank 5): Position unchanged from IT20. The ten-row ceiling does not displace a row that carries a risk flag or human clinical reports in favour of a conditional probe (the rule stated in the curation block of the context), so this row stays at rank 5 and the two new IT21 conditional probes sit at rank 6, below the line. New IT21 input: the inositol-monophosphatase route to the lithium effect is DISFAVOURED_BY_SIGN_PRECEDENT (an analogy from the lithium-pilocarpine model, not a measurement in the Wwox assay; see what the generator rules out). That result is not what supports this row's concern that the effect is not specific to WWOX loss: the concern comes from the +/+ arm of Cheng 2020 Figure 7d, where lithium suppresses the seizure stage as in the null. Cheng 2020 also ran a pilocarpine model in Wwox mice, so the objection that the two provocations differ is testable in the same system; the inositol arm of that proposal is folded into this row's next test.",
+   "need_direction": "uncertain",
+   "need_id": "NEED-GSK3B-DEREPRESSION",
+   "need_short": "GSK3beta de-repression",
+   "next_test": "A selective inhibitor of the named kinase beside the non-selective agent in the same WWOX-system assay, with the second need's readout measured in the same experiment. IT21 addition: include an arm with the inositol precursor added back, which tests the second action in the same experiment.",
+   "novelty_perimeter": "Queried: this need's two observation rows; the lithium unit, its caveat rows and its counter-statements; the search layer over the four kinase-axis targets (588 associations, 526 families, none direction-coherent because the need direction is unresolved). The opposing action on the second need is recorded in this module's own need file.",
    "objective": "partial",
-   "origin_class": "external_transferred",
-   "origin_class_label": "carried in from another condition or literature by a stated mechanistic analogy",
-   "origin_detail": "Carried in from another condition by a stated mechanistic analogy (a hormone-uptake defect with myelin and interneuron rescue) and reached through the compound-to-WWOX path (IT21 P3b, proposal G03, partial-benefit path; a related receptor arm, G10, was left inconclusive).",
-   "question": "In a seizure-free neuron plus oligodendrocyte-precursor co-culture, does an agonist of the receptors for thyroid hormone release the maturation block seen after neuronal WWOX loss, and does it do so only in the WWOX-deficient condition?",
+   "origin_class": "known_in_wwox",
+   "origin_class_label": "already named in the WWOX literature or in a LEGEND card",
+   "origin_detail": "Carded thread: lithium.",
+   "question": "Should this thread stay in the selection, given that its only pharmacology acts against a second need of the same objective?",
    "rank": 5,
-   "status": "conditional_hypothesis",
-   "status_label": "conditional hypothesis: the role of the observed change is unresolved; kept as a research question and never presented as qualified",
+   "status": "carded_thread",
+   "status_label": "established thread: a carded WWOX-system result exists",
    "tie_group": "5 (tie of 2)",
-   "tracks": [],
-   "unit_class": "",
+   "tracks": [
+    "A"
+   ],
+   "unit_class": "ORD",
    "unit_group_broad": "",
-   "unit_group_partial": "",
-   "unit_id": "",
-   "why_now": "It is the role-resolving question the glia and myelin work left open (IT14): the maturation block is receptor-responsive or it is not, and one co-culture answers that before any in vivo question is asked. It enters at rank 5 because the test is cell-level and inexpensive and an approved molecule exists for any later step, not because it is new: the precedent comes from a hormone-uptake defect in another disease and does not transfer by itself, and it sits below the two premise measurements (the dichloroacetate and NRF2 rows)."
+   "unit_group_partial": "G2b",
+   "unit_id": "U24",
+   "why_now": "The thread is carried by one paper from one laboratory, the agent is non-selective, and it pushes the canonical Wnt readout in the direction this module's other need wants lowered. The question now is whether to keep it, not what to measure next with it: that is a decision a single interaction test can settle."
   },
   {
    "below_the_line": "",
    "below_the_line_reason": "",
-   "chembl_ids": "CHEMBL3989409;CHEMBL3989801",
-   "decisive_uncertainty": "Whether the same step clears the Q230P-class protein in neural cells, and whether spared protein is functional (the degron and the GSK3B docking site may be one conformational event, giving a stable but inert protein). HSC70 also folds proteins, so blocking it may harm instead of help; the mirrored harm arm is carried as a second conditional arm.",
+   "chembl_ids": "",
+   "decisive_uncertainty": "Whether symptomatic response tracks any developmental endpoint in this genotype class. The mechanism argument on this axis predicts the opposite of what the reports show, and that contradiction is unexplained.",
    "direction_state": "resolved",
    "direction_state_label": "the need states an up/down intervention direction",
-   "evidence_available": "WWOX-system: the Q230P class shows no protein band with a normal transcript; a different missense (P252A) over-expressed in non-neural cells is cleared faster and restored by lysosomal inhibitors but not by a proteasome inhibitor. Compound side: a curated inhibitor action on HSPA8 exists; the one reference reports impaired HSC70 refolding and lower lysosomal degradation in lupus-mouse B cells (abstract-level reading). Nothing shows that the route and the allele are the same.",
-   "evidence_depth": "Conditional hypothesis: the drug-side action is curated and its one reference was read at abstract level; no measurement in a WWOX-deficient neural cell connects the lysosomal step to the allele (no ranked unit, so no evaluation depth applies: this is not a depth of zero)",
-   "feasibility": "Development feasibility: low as a drug (a peptide whose one distribution study shows lungs and spleen, with no CNS exposure) and high as a cell-level probe. It depends on the allele and cannot serve a variant that makes no protein.",
-   "intervention": "HSC70 (HSPA8) inhibitor peptide forigerimod, with lysosomal and genetic controls",
-   "inv_id": "INV-13",
-   "it20_rank": "",
-   "movement_reason": "new in IT21 (no IT20 position): Enters at rank 5. Reasons: the only allele-dependent broad-recovery path found, with a cell-level test that closes or opens the route. Not rewarded: novelty. Its status stays conditional (KEPT_CONDITIONAL in IT21 P3b).",
-   "need_direction": "up",
-   "need_id": "NEED-WWOX-MISSENSE-PROTEIN-RESCUE",
-   "need_short": "Rescue a destabilised SDR-domain missense WWOX protein",
-   "next_test": "Chase of the Q230P-class protein with HSPA8 and LAMP2 knockdown and a lysosomal-acidification inhibitor, then a docking-function read (phospho-tau, with the L404A docking mutant as control). No rise with knockdown closes the route; a rise without function closes deep recovery on this route; both rising earns a variant-specific preclinical question, still not qualified.",
-   "novelty_perimeter": "Queried: a whole-word name search of this module and its registries on 2026-11-03 (no hit for the peptide), the need file, and the catalogue, where a curated inhibitor row was filed as not evaluable by the compound-to-need route. A name search in this module, not a statement about the literature.",
-   "objective": "broad",
-   "origin_class": "generated_by_legend",
-   "origin_class_label": "reached from a qualified need through the module's own target and catalogue path, not named in the WWOX material checked",
-   "origin_detail": "Generated by LEGEND: the compound-to-WWOX path found a curated inhibitor row on HSPA8 that the compound-to-need route had filed as not evaluable (IT21 P3b, proposal G01, broad-recovery path, track B).",
-   "question": "Is a destabilised Q230P-class WWOX missense protein cleared by an HSC70-linked lysosomal step in neural cells, and when that step is blocked does the spared protein regain GSK3B-docking function?",
+   "evidence_available": "Clinical report only, published cases, with a brain-imaging safety signal recorded beside them; no same-genotype comparator and no developmental endpoint tied to the response.",
+   "evidence_depth": "E3 - card reviewed with assertions; no WWOX-side result read beyond abstract",
+   "feasibility": "A record-level analysis on material already in the module; no experiment.",
+   "intervention": "GABA-aminotransferase inactivators (the carded clinical thread)",
+   "inv_id": "INV-10",
+   "it20_rank": "5",
+   "movement_reason": "position unchanged from IT20 (rank 5): Position unchanged from IT20. The ten-row ceiling does not displace a row with real human clinical reports in favour of a conditional probe (curation rule), so this row stays at rank 5 and the two new IT21 conditional probes sit at rank 6, below the line. This row is a record-level analysis that needs no experiment budget and can proceed alongside.",
+   "need_direction": "down",
+   "need_id": "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
+   "need_short": "Seizure and spasm control as a symptom-level need",
+   "next_test": "Assemble the published same-genotype cases with both a symptomatic and a developmental endpoint recorded, and state the discordance rate; no new exposure is proposed.",
+   "novelty_perimeter": "Queried: this need's three observation rows; the inactivator unit, its caveats and the safety flag; the chloride-gradient and inhibitory-hypofunction needs for the mechanism argument that contradicts the reports.",
+   "objective": "partial",
+   "origin_class": "known_in_wwox",
+   "origin_class_label": "already named in the WWOX literature or in a LEGEND card",
+   "origin_detail": "Carded clinical thread: GABA-transaminase inactivators.",
+   "question": "What does the published symptomatic response predict, and what does it not predict, about developmental outcome?",
    "rank": 5,
-   "status": "conditional_hypothesis",
-   "status_label": "conditional hypothesis: the role of the observed change is unresolved; kept as a research question and never presented as qualified",
+   "status": "carded_thread",
+   "status_label": "established thread: a carded WWOX-system result exists",
    "tie_group": "5 (tie of 2)",
-   "tracks": [],
-   "unit_class": "",
+   "tracks": [
+    "A"
+   ],
+   "unit_class": "WEAK",
    "unit_group_broad": "",
-   "unit_group_partial": "",
-   "unit_id": "",
-   "why_now": "It is the only broad-recovery path found in IT21, and it depends on the allele: the chase and knockdown test either closes the route or turns a detectable-protein result into a function question. It enters at rank 5 on that ground, behind the premise measurements, not on novelty; the compound is not a development candidate."
+   "unit_group_partial": "G3",
+   "unit_id": "U20",
+   "why_now": "This is the thread with real human reports behind it and the one most likely to be read as a recommendation. The module already holds a series in which symptomatic response and developmental outcome did not move together, so the useful investigation is the separation itself, not another symptomatic observation."
   }
  ],
  "investigations_context": {
   "as_of": "2026-11-03",
   "below_the_line_vs_it20": [
    {
-    "inv_id": "INV-09",
-    "movement": "moved down from rank 5 (IT20) to rank 6: Moved down by the ten-row ceiling, not by a finding of lower value: two IT21 conditional probes entered at rank 5 on the criteria in their rows, and this row asks a keep-or-drop question that a single interaction test settles at low cost. New IT21 input: the inositol-monophosphatase route to the lithium effect was rejected with an informative sign (see what the generator rules out), which supports the row's concern that the effect is not specific to WWOX loss; the inositol arm of that proposal is folded into this row's next test. | below the line this evaluation: rank 6 does not fit the ten-row published ceiling"
+    "inv_id": "INV-12",
+    "movement": "new in IT21 (no IT20 position): Enters at rank 6, below the ten-row line (the tie is kept whole). Reasons: a cheap, role-resolving cell test on a glia axis with a documented WWOX pattern. Not rewarded: novelty. Its status stays conditional (KEPT_CONDITIONAL in IT21 P3b). Below the line because the ceiling is ten and a risk-flagged row and a row with human reports are not displaced by a conditional probe: the weakest NEW conditional probes, which are abstract-level on the drug side, go below the line instead. | below the line this evaluation: rank 6 does not fit the ten-row published ceiling"
    },
    {
-    "inv_id": "INV-10",
-    "movement": "moved down from rank 5 (IT20) to rank 6: Moved down by the ten-row ceiling, not by a finding of lower value: this row is a record-level analysis that needs no experiment budget and can proceed alongside; two IT21 conditional probes entered at rank 5. | below the line this evaluation: rank 6 does not fit the ten-row published ceiling"
+    "inv_id": "INV-13",
+    "movement": "new in IT21 (no IT20 position): Enters at rank 6, below the ten-row line (the tie is kept whole). Reasons: the only allele-dependent broad-recovery path found, with a cell-level test that closes or opens the route. Not rewarded: novelty. Its status stays conditional (KEPT_CONDITIONAL in IT21 P3b). Below the line because the ceiling is ten and a risk-flagged row and a row with human reports are not displaced by a conditional probe: the weakest NEW conditional probes, which are abstract-level on the drug side, go below the line instead. | below the line this evaluation: rank 6 does not fit the ten-row published ceiling"
    },
    {
     "inv_id": "INV-11",
@@ -1544,16 +1548,18 @@
     "movement": "new in IT21 (no IT20 position): Enters below the line at rank 7. Reasons: feasible but sign-contested and role-unknown; kept in the table with its test so it is not lost. Not rewarded: novelty. Its status stays conditional (KEPT_CONDITIONAL in IT21 P4a). | below the line this evaluation: rank 7 does not fit the ten-row published ceiling"
    }
   ],
-  "curation": "Positions are curated judgements written by research agents (rows of investigations_it20.tsv) and reviewed one by one. The code validates them (complete fields, closed vocabularies, contiguous ranks, existing need and unit, no dose, no absence claim, no conditional hypothesis called qualified) and computes no position.",
+  "ceiling_rule": "risk-flagged and human-report rows are not displaced by conditional probes",
+  "curation": "Positions are curated judgements written by research agents (rows of investigations_it20.tsv) and reviewed one by one. The code validates them (complete fields, closed vocabularies, contiguous ranks, existing need and unit, no dose, no absence claim, no conditional hypothesis called qualified) and computes no position. Ceiling rule: the published list carries at most ten rows; a row that carries a risk flag (direction state opposed_risk) or real human clinical reports is never placed below the line by displacement from a conditional probe, which goes below the line instead (whole ties are kept together); a row below the line stays in the table with its reason and is not judged unpromising.",
   "funnel": {
-   "generator_conditional_rows": 992,
+   "generator_conditional_rows": 980,
    "handed_on_to_qualification": 13,
    "path_b_proposals_p3b": {
+    "disfavoured_by_sign_precedent": 1,
     "generated": 10,
     "inconclusive": 6,
     "kept_conditional": 2,
     "qualified": 5,
-    "rejected_informative": 2
+    "rejected_informative": 1
    },
    "qualified_hypotheses": 0,
    "qualified_in_p4a": {
@@ -1574,9 +1580,9 @@
     "detail_full": "Curated mechanism rows in ChEMBL list inhibition of both IMPA1 and GSK3A/B for lithium; the sign argument rests on three abstract-level references. The null/wild-type panels (N 6 vs 7 and 12 vs 8) show a lithium effect of about the size of the difference between the lithium and ethosuximide null controls.",
     "neg_id": "NEG-01",
     "package": "IT21 P3b (G02)",
-    "reason": "The documented consequence of inhibiting this enzyme in rodents is a pro-convulsant effect that inositol reverses, which predicts aggravation, not the protection seen; the protection also appears in wild-type littermates, so it is not specific to WWOX loss. A different provocation was used in that precedent, so this disfavours the route and does not close the assay question.",
+    "reason": "The documented consequence of inhibiting this enzyme in rodents is a pro-convulsant effect that inositol reverses, which predicts aggravation, not the protection seen; the protection also appears in wild-type littermates, so it is not specific to WWOX loss. The precedent is an analogy from another model (the drug together with low-dose pilocarpine), not a measurement in the Wwox assay, so it disfavours the route and does not close the assay question; the same mouse paper also ran a pilocarpine model in Wwox mice, so the objection that the provocations differ is testable in the same system.",
     "reopen": "Inositol add-back reverses the lithium effect in the Wwox-null assay (then the GSK3 attribution falls and the enzyme becomes a lever with an unexplained sign).",
-    "ruled_out": "That inositol monophosphatase inhibition contributes to the protection lithium gives in the Wwox seizure assay, or that this enzyme is a lever for it.",
+    "ruled_out": "Disfavoured, not ruled out (DISFAVOURED_BY_SIGN_PRECEDENT): that inositol monophosphatase inhibition contributes to the protection lithium gives in the Wwox seizure assay, or that this enzyme is a lever for it.",
     "subject_full": "Lithium, inositol monophosphatase (IMPA1) as mediator",
     "subject_label": "Lithium (carded): inhibition of inositol monophosphatase as the mediator of its seizure protection"
    },
@@ -1596,7 +1602,7 @@
     "detail_full": "HDAC1/2/3 about 3-7 nM against HDAC5 200 nM (a 67-fold difference) in ChEMBL activity rows; organoid HDAC5 0.81x with SLC2A1 2.67x.",
     "neg_id": "NEG-03",
     "package": "IT21 P4a (IT21P2-0006)",
-    "reason": "Its strongest documented actions are on other deacetylases than the one the chain needs, the single reference for the edge is a knockdown in non-neural cells, and in the WWOX-deficient organoid the pair moves in the direction opposite to the one needed. This says nothing about whether the compound is inactive.",
+    "reason": "Its strongest documented actions are on other deacetylases than the one the chain needs, the single reference for the edge is a knockdown in non-neural cells, so the attribution fails as written. (The two transcripts also move in opposite directions in the organoid, but that is a descriptive ratio that says nothing about enzyme activity and is not a reason.) This says nothing about whether the compound is inactive.",
     "reopen": "HDAC5-specific lowering of SLC2A1 at concentrations that engage HDAC5, or class I inhibition changing SLC2A1 in either direction (then a different proposal).",
     "ruled_out": "The chain as written: that this inhibitor lowers SLC2A1 by acting on HDAC5 in a WWOX-deficient neural cell.",
     "subject_full": "Nanatinostat, HDAC5 to SLC2A1",
@@ -1615,10 +1621,10 @@
    },
    {
     "chembl_ids": "",
-    "detail_full": "BTK 0.07-0.50 cpm in organoid libraries, absent in the hNPC table; NPY 0.05-0.12 cpm in knockout against 3.2-7.7 in wild type; published off-targets of this exact compound include the sigma-1 receptor and the proteasome.",
+    "detail_full": "BTK 0.07-0.50 cpm in organoid libraries, not in the hNPC table; NPY 0.05-0.12 cpm in knockout against 3.2-7.7 in wild type; published off-targets of this exact compound include the sigma-1 receptor and the proteasome.",
     "neg_id": "NEG-05",
     "package": "IT21 P4a (IT21P2-0057)",
-    "reason": "BTK is barely detected in the WWOX-deficient organoid and absent in the human progenitor data, NPY is near zero where it was measured, both edges come from other cell types, and the compound has documented actions on unrelated proteins. A proposal can be unreadable where it was generated.",
+    "reason": "BTK is barely detected in the WWOX-deficient organoid and is not in the human progenitor table (a table-membership fact, not a measured zero), NPY is near zero where it was measured, both edges come from other cell types, and the compound has documented actions on unrelated proteins. A proposal can be unreadable where it was generated.",
     "reopen": "BTK detected in the NPY-producing cell class with NPY following BTK knockdown; BTK only in microglia moves the idea to another proposal.",
     "ruled_out": "The chain as written: that BTK acts in the NPY-producing cell of the WWOX-deficient systems that carry the seed.",
     "subject_full": "CGI-1746, BTK to STAT3 to NPY",
@@ -1627,8 +1633,7 @@
   ],
   "positions_are_curated_not_computed": true,
   "published_vs_it20": {
-   "new": 2,
-   "unchanged": 8
+   "unchanged": 10
   },
   "schema": "legend.wwox.repurposing.investigations_context/1",
   "three_axes": {
@@ -1637,9 +1642,9 @@
    "priority_of_next_investigation": "the value of the next discriminating experiment (position and the reason for it)"
   },
   "wwox_contribution": {
-   "note": "Slot for the measurement of the WWOX contribution to the generated proposals (IT21 P5). Not yet integrated into this branch: nothing is shown in its place.",
+   "note": "No advantage at the level the generator can be tested: real WWOX seed sets are above the 95th percentile of degree- and reach-matched decoys in 0 of 5 sets; retrospective, no prospective benefit claim.",
    "source": "evaluation_it21_p5_20261103",
-   "state": "pending"
+   "state": "measured"
   }
  },
  "it10_records": [
@@ -5788,14 +5793,14 @@
    "below_the_line_note": "rows beyond the ten-row ceiling stay in investigations.tsv with their reason; a tie is kept whole rather than split. Below the line is a ceiling on the page, never a finding that an investigation is unpromising.",
    "below_the_line_rows": [
     {
-     "intervention": "Lithium",
-     "inv_id": "INV-09",
+     "intervention": "Agonist probe for the receptors of thyroid hormone (tiratricol, with liothyronine as comparator)",
+     "inv_id": "INV-12",
      "rank": 6,
      "reason": "below the ten-row ceiling the operator set for the published list: rank 6 is the first position that does not fit (10 rows already published, this tie holds 2). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
     },
     {
-     "intervention": "GABA-aminotransferase inactivators (the carded clinical thread)",
-     "inv_id": "INV-10",
+     "intervention": "HSC70 (HSPA8) inhibitor peptide forigerimod, with lysosomal and genetic controls",
+     "inv_id": "INV-13",
      "rank": 6,
      "reason": "below the ten-row ceiling the operator set for the published list: rank 6 is the first position that does not fit (10 rows already published, this tie holds 2). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
     },
@@ -5813,13 +5818,13 @@
     }
    ],
    "by_direction_state": {
-    "resolved": 6,
+    "opposed_risk": 1,
+    "resolved": 5,
     "unresolved": 4
    },
    "by_origin_class": {
-    "external_transferred": 1,
-    "generated_by_legend": 4,
-    "known_in_wwox": 5
+    "generated_by_legend": 3,
+    "known_in_wwox": 7
    },
    "count": 10,
    "count_including_below_the_line": 14,
@@ -5828,7 +5833,7 @@
     "resolved": "the need states an up/down intervention direction",
     "unresolved": "the need's own direction is uncertain: no lever on it can be qualified either way, which is a visible gap and not a negative finding"
    },
-   "order_digest": "720fa8b5da7cfbc0",
+   "order_digest": "a5e7804925898f76",
    "origin_classes": {
     "external_transferred": "carried in from another condition or literature by a stated mechanistic analogy",
     "generated_by_legend": "reached from a qualified need through the module's own target and catalogue path, not named in the WWOX material checked",

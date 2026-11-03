@@ -38,13 +38,26 @@ class Dispositions(unittest.TestCase):
             self.assertIn(q["disposition"], VOCAB)
         self.assertEqual([q["proposal_id"] for q in Q if q["disposition"] == "QUALIFIED_HYPOTHESIS"], [], "a qualified hypothesis needs a sourced role and a measured link in a WWOX system")
 
-    def test_status_never_changes(self):
+    def test_status_never_promotes_and_a_rejection_closes_the_row_as_written(self):
+        # P8-fix (verifier B4): a rejected row no longer reads as a live conditional; CLOSED_AS_WRITTEN is a closed status, not a promotion.
         for q in Q:
-            self.assertEqual(q["status_after"], q["status_before"])
-            self.assertTrue(q["status_after"].startswith("CONDITIONAL_H_"))
+            if q["disposition"] == "REJECTED_INFORMATIVE":
+                self.assertEqual(q["status_after"], "CLOSED_AS_WRITTEN")
+            else:
+                self.assertEqual(q["status_after"], q["status_before"])
+                self.assertTrue(q["status_after"].startswith("CONDITIONAL_H_"))
+        self.assertEqual(sum(q["status_after"] == "CLOSED_AS_WRITTEN" for q in Q), 3)
         for r in tsv("status_after_it21_p4a.tsv"):
-            self.assertEqual(r["status_changed"], "no")
+            self.assertEqual(r["status_changed"].startswith("yes"), r["disposition"] == "REJECTED_INFORMATIVE")
             self.assertTrue(r["qualified"].startswith("no"))
+            self.assertNotIn("QUALIFIED", r["status_after"].replace("NOT_QUALIFIED", ""))
+
+    def test_status_vocabulary_is_the_generators_closed_vocabulary(self):
+        import importlib.util, sys
+        spec = importlib.util.spec_from_file_location("run_generation_it21_for_p4a", HERE.parent / "generation_it21_p2_20261103" / "run_generation_it21.py")
+        g = importlib.util.module_from_spec(spec); sys.modules[spec.name] = g; spec.loader.exec_module(g)
+        for q in Q:
+            self.assertEqual(g.check_status(q["status_after"]), q["status_after"])
 
     def test_five_part_output_filled(self):
         for q in Q:

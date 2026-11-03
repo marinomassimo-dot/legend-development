@@ -1,16 +1,61 @@
 {
- "attributed_quotations": [],
- "bibliographic_title_runs": 0,
+ "attributed_quotations": [
+  {
+   "path": ".cur.cands[].against[]",
+   "text": "Independent comparator-controlled study: no phenotypic rescue, NMD not relieved; the authors write: \"Thus, this study suggests that a partial downregulation of p53 per se is not sufficient to produce phenotypic rescue in human cells.\"",
+   "words": 22
+  }
+ ],
+ "bibliographic_title_runs": 158,
  "corpus_by_extension": {
-  "txt": 1,
-  "xml": 1
+  "html": 42,
+  "json": 4,
+  "pdf": 193,
+  "txt": 182,
+  "xml": 573
  },
- "corpus_files": 2,
- "corpus_words": 10139,
+ "corpus_files": 994,
+ "corpus_words": 13521756,
  "failures": 0,
  "method": "every string of the shareable data object against the third-party texts held locally (full texts, abstracts, openFDA label JSON), longest verbatim run in words (shingle 7); limits: unquoted phrase <= 25 words, marked quotation <= 12 words, or <= 30 words with an attribution phrase",
  "not_covered": "third-party texts not held locally; label sections that were not fetched",
  "schema": "legend.wwox.repurposing_view.text_provenance/1",
- "short_marked_quotations": [],
- "unquoted_runs_within_limit": 0
+ "short_marked_quotations": [
+  {
+   "path": ".cur.cands[].identity",
+   "run": "a multi kinase inhibitor a51 established to suppress wnt and myc",
+   "words": 11
+  },
+  {
+   "path": ".cur.needs[].obs[].full",
+   "run": "overexpression of inflammatory cytokines tnf a and il6",
+   "words": 8
+  },
+  {
+   "path": ".cur.cands[].asserts[].note",
+   "run": "no sustained positive effect of treatment was detected",
+   "words": 8
+  },
+  {
+   "path": ".cur.cands[].asserts[].note_full",
+   "run": "no sustained positive effect of treatment was detected",
+   "words": 8
+  },
+  {
+   "path": ".cur.cands[].brief.wwox",
+   "run": "no sustained positive effect of treatment was detected",
+   "words": 8
+  },
+  {
+   "path": ".cur.cands[].brief.counter[].text",
+   "run": "no sustained positive effect of treatment was detected",
+   "words": 8
+  },
+  {
+   "path": ".cur.cands[].asserts[].note_full",
+   "run": "a marked reduction in both progenitor populations",
+   "words": 7
+  }
+ ],
+ "unquoted_runs_within_limit": 31
 }
