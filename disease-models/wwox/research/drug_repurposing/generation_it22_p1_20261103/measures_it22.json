@@ -1,0 +1,315 @@
+{
+ "S0_IT21": {
+  "attribution_states": {
+   "ATTRIBUTABLE": 99,
+   "BORDERLINE_POTENT_MAIN_TARGET": 8,
+   "NOT_ASSESSABLE": 737,
+   "SINGLE_MEASURED_TARGET": 87,
+   "UNMEASURED_AT_MAIN_TARGET": 24,
+   "WEAK_ATTRIBUTION": 25
+  },
+  "blockers": {
+   "ELIGIBLE": 154,
+   "arm_has_no_stated_benefit_hypothesis": 93,
+   "decided_in_earlier_qualification_record": 19,
+   "identity_not_resolved": 555,
+   "main_target_weak_attribution": 20,
+   "mechanism_cluster_examined_earlier": 69,
+   "modality_antibody_not_small_molecule": 6,
+   "modality_protein_or_peptide_not_small_molecule": 5,
+   "modality_unknown_not_small_molecule": 11,
+   "reach_null_not_confirming": 48
+  },
+  "by_question_handover": {
+   "Q2": 2,
+   "Q5": 6,
+   "Q6": 3
+  },
+  "by_question_rows": {
+   "Q2": 51,
+   "Q4": 87,
+   "Q5": 282,
+   "Q6": 560
+  },
+  "clusters": 150,
+  "compounds": 791,
+  "eligible_clusters": 32,
+  "eligible_rows": 154,
+  "families": 867,
+  "handover_compounds": 11,
+  "handover_ids": [
+   "IT21P2-0014",
+   "IT21P2-0035",
+   "IT21P2-0217",
+   "IT21P2-0221",
+   "IT21P2-0236",
+   "IT21P2-0296",
+   "IT21P2-0388",
+   "IT21P2-0402",
+   "IT21P2-0456",
+   "IT21P2-0542",
+   "IT21P2-0637"
+  ],
+  "handover_rows": 11,
+  "rows": 980,
+  "rows_with_carried_limits": 0,
+  "seed_support_limited_rows": 0,
+  "work_done_rows": 0
+ },
+ "S1_P1": {
+  "attribution_states": {
+   "ATTRIBUTABLE": 99,
+   "BORDERLINE_POTENT_MAIN_TARGET": 8,
+   "NOT_ASSESSABLE": 737,
+   "SINGLE_MEASURED_TARGET": 87,
+   "UNMEASURED_AT_MAIN_TARGET": 24,
+   "WEAK_ATTRIBUTION": 25
+  },
+  "blockers": {
+   "ELIGIBLE": 199,
+   "arm_has_no_stated_benefit_hypothesis": 93,
+   "decided_in_earlier_qualification_record": 19,
+   "identity_not_resolved": 555,
+   "main_target_weak_attribution": 20,
+   "modality_antibody_not_small_molecule": 6,
+   "modality_protein_or_peptide_not_small_molecule": 5,
+   "modality_unknown_not_small_molecule": 11,
+   "reach_null_not_confirming": 48,
+   "shared_premise_refuted": 24
+  },
+  "by_question_handover": {
+   "Q2": 4,
+   "Q4": 1,
+   "Q5": 6,
+   "Q6": 3
+  },
+  "by_question_rows": {
+   "Q2": 51,
+   "Q4": 87,
+   "Q5": 282,
+   "Q6": 560
+  },
+  "clusters": 150,
+  "compounds": 791,
+  "eligible_clusters": 42,
+  "eligible_rows": 199,
+  "families": 867,
+  "handover_compounds": 14,
+  "handover_ids": [
+   "IT21P2-0005",
+   "IT21P2-0014",
+   "IT21P2-0035",
+   "IT21P2-0043",
+   "IT21P2-0052",
+   "IT21P2-0217",
+   "IT21P2-0221",
+   "IT21P2-0236",
+   "IT21P2-0296",
+   "IT21P2-0380",
+   "IT21P2-0402",
+   "IT21P2-0425",
+   "IT21P2-0431",
+   "IT21P2-0456"
+  ],
+  "handover_rows": 14,
+  "rows": 980,
+  "rows_with_carried_limits": 115,
+  "seed_support_limited_rows": 0,
+  "work_done_rows": 93
+ },
+ "S2_P1_P2": {
+  "attribution_states": {
+   "ATTRIBUTABLE": 86,
+   "BORDERLINE_POTENT_MAIN_TARGET": 6,
+   "NOT_ASSESSABLE": 737,
+   "NOT_COMPARABLE_MEASURES": 21,
+   "SECONDARY_ACTIVITY_MEASURED": 13,
+   "SINGLE_MEASURED_TARGET": 87,
+   "UNMEASURED_AT_MAIN_TARGET": 24,
+   "WEAK_ATTRIBUTION": 6
+  },
+  "blockers": {
+   "ELIGIBLE": 212,
+   "arm_has_no_stated_benefit_hypothesis": 95,
+   "decided_in_earlier_qualification_record": 20,
+   "identity_not_resolved": 555,
+   "main_target_weak_attribution": 4,
+   "modality_antibody_not_small_molecule": 6,
+   "modality_protein_or_peptide_not_small_molecule": 5,
+   "modality_unknown_not_small_molecule": 11,
+   "reach_null_not_confirming": 48,
+   "shared_premise_refuted": 24
+  },
+  "by_question_handover": {
+   "Q2": 4,
+   "Q4": 1,
+   "Q5": 6,
+   "Q6": 3
+  },
+  "by_question_rows": {
+   "Q2": 51,
+   "Q4": 87,
+   "Q5": 282,
+   "Q6": 560
+  },
+  "clusters": 150,
+  "compounds": 791,
+  "eligible_clusters": 43,
+  "eligible_rows": 212,
+  "families": 867,
+  "handover_compounds": 14,
+  "handover_ids": [
+   "IT21P2-0005",
+   "IT21P2-0014",
+   "IT21P2-0035",
+   "IT21P2-0043",
+   "IT21P2-0052",
+   "IT21P2-0217",
+   "IT21P2-0221",
+   "IT21P2-0236",
+   "IT21P2-0296",
+   "IT21P2-0380",
+   "IT21P2-0402",
+   "IT21P2-0425",
+   "IT21P2-0431",
+   "IT21P2-0456"
+  ],
+  "handover_rows": 14,
+  "rows": 980,
+  "rows_with_carried_limits": 115,
+  "seed_support_limited_rows": 0,
+  "work_done_rows": 93
+ },
+ "S3_P1_P2_P3": {
+  "attribution_states": {
+   "ATTRIBUTABLE": 87,
+   "BORDERLINE_POTENT_MAIN_TARGET": 6,
+   "NOT_ASSESSABLE": 753,
+   "NOT_COMPARABLE_MEASURES": 21,
+   "SECONDARY_ACTIVITY_MEASURED": 13,
+   "SINGLE_MEASURED_TARGET": 90,
+   "UNMEASURED_AT_MAIN_TARGET": 24,
+   "WEAK_ATTRIBUTION": 6
+  },
+  "blockers": {
+   "ELIGIBLE": 217,
+   "arm_has_no_stated_benefit_hypothesis": 96,
+   "decided_in_earlier_qualification_record": 21,
+   "identity_not_resolved": 567,
+   "main_target_weak_attribution": 4,
+   "modality_antibody_not_small_molecule": 6,
+   "modality_protein_or_peptide_not_small_molecule": 5,
+   "modality_unknown_not_small_molecule": 11,
+   "reach_null_not_confirming": 49,
+   "shared_premise_refuted": 24
+  },
+  "by_question_handover": {
+   "Q2": 4,
+   "Q4": 1,
+   "Q5": 6,
+   "Q6": 3,
+   "Q8": 2
+  },
+  "by_question_rows": {
+   "Q2": 51,
+   "Q4": 87,
+   "Q5": 282,
+   "Q6": 560,
+   "Q8": 20
+  },
+  "clusters": 154,
+  "compounds": 792,
+  "eligible_clusters": 45,
+  "eligible_rows": 217,
+  "families": 868,
+  "handover_compounds": 16,
+  "handover_ids": [
+   "IT21P2-0005",
+   "IT21P2-0014",
+   "IT21P2-0035",
+   "IT21P2-0043",
+   "IT21P2-0052",
+   "IT21P2-0217",
+   "IT21P2-0221",
+   "IT21P2-0236",
+   "IT21P2-0296",
+   "IT21P2-0380",
+   "IT21P2-0402",
+   "IT21P2-0425",
+   "IT21P2-0431",
+   "IT21P2-0456",
+   "IT21P2-0993",
+   "IT21P2-1008"
+  ],
+  "handover_rows": 16,
+  "rows": 1000,
+  "rows_with_carried_limits": 218,
+  "seed_support_limited_rows": 126,
+  "work_done_rows": 107
+ },
+ "deltas": {
+  "S0_IT21->S1_P1": {
+   "handover_added": [
+    "IT21P2-0005",
+    "IT21P2-0043",
+    "IT21P2-0052",
+    "IT21P2-0380",
+    "IT21P2-0425",
+    "IT21P2-0431"
+   ],
+   "handover_removed": [
+    "IT21P2-0388",
+    "IT21P2-0542",
+    "IT21P2-0637"
+   ],
+   "released": [],
+   "released_n": 45,
+   "rows_new": 0,
+   "rows_retired_from_the_table": 0,
+   "state_changed": [],
+   "state_changed_n": 0,
+   "withdrawn": [],
+   "withdrawn_n": 0
+  },
+  "S1_P1->S2_P1_P2": {
+   "handover_added": [],
+   "handover_removed": [],
+   "released": [],
+   "released_n": 13,
+   "rows_new": 0,
+   "rows_retired_from_the_table": 0,
+   "state_changed": [],
+   "state_changed_n": 38,
+   "withdrawn": [],
+   "withdrawn_n": 0
+  },
+  "S2_P1_P2->S3_P1_P2_P3": {
+   "handover_added": [
+    "IT21P2-0993",
+    "IT21P2-1008"
+   ],
+   "handover_removed": [],
+   "released": [],
+   "released_n": 0,
+   "rows_new": 20,
+   "rows_retired_from_the_table": 0,
+   "state_changed": [],
+   "state_changed_n": 0,
+   "withdrawn": [],
+   "withdrawn_n": 0
+  }
+ },
+ "q2_q3_dependence_on_the_failed_second_system": {
+  "hnpc_excluded_arm": "seed sets: Q2 has no gene seed left (all 8 placed rows are hNPC-supported), Q3 keeps 1 of 6; engine re-run of Q3 gives 0 seed-specific rows (eng_arm)",
+  "q2_rows": 51,
+  "q2_rows_limited": 51,
+  "q3_rows": 0,
+  "q3_rows_limited": 0,
+  "q4_rows_npy_contested": 75
+ },
+ "sensitivity_attribution_threshold_rows_at_stage_S2": {
+  "WEAK_if_main_target_above_1000nM": 6,
+  "WEAK_if_main_target_above_3000nM": 6,
+  "WEAK_if_main_target_above_300nM": 13
+ }
+}

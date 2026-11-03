@@ -1,0 +1,7 @@
+ligand_id	ligand	chembl_id	approved	target	measure	nm	relation	assay_class	action	same_type_ratio_to_most_potent_other_target	other_targets_measured
+7020	SGC0946	CHEMBL3087498		DOT1L	IC50	0.3	=	unknown	Inhibition	no other target with a IC50 value: not comparable (values kept)	
+7377	EPZ004777	CHEMBL2169919		DOT1L	IC50	0.4	=	unknown	Inhibition	no other target with a IC50 value: not comparable (values kept)	
+7018	bromo-deaza-SAH	CHEMBL2349526		DOT1L	IC50	77.0	=	unknown	Inhibition	no other target with a IC50 value: not comparable (values kept)	DNMT1 Ki 950
+9205	compound 13 [Chen <i>et al.</i>, 2016]			DOT1L	Ki	0.08	=	unknown	Inhibition	no other target with a Ki value: not comparable (values kept)	
+7019	pinometostat	CHEMBL3087499		DOT1L	Ki	0.08	=	unknown	Inhibition	no other target with a Ki value: not comparable (values kept)	
+7018	bromo-deaza-SAH	CHEMBL2349526		DOT1L	Ki	38.0	=	unknown	Inhibition	0.0x vs DNMT1 (Ki)	DNMT1 Ki 950

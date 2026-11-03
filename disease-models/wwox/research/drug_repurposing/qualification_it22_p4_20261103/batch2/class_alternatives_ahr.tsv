@@ -1,0 +1,2 @@
+ligand_id	ligand	chembl_id	approved	target	measure	nm	relation	assay_class	action	same_type_ratio_to_most_potent_other_target	other_targets_measured
+11110	ezutromid	CHEMBL1773683		AHR	Kd	50.0	=	cell	Antagonist	no other target with a Kd value: not comparable (values kept)	
