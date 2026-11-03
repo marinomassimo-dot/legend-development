@@ -16,7 +16,7 @@
   "2026-11-03 residual (to carry): prospective benefit not observed; no hypothesis qualified; primary full-text reads partial; ERK pair counts as two hand-overs (no paralog-group cluster rule); 12 dormant decision sources untagged; ChEMBL activities not in the local cache (pracinostat conflict unresolved); test_dossier_quote_audit timeout classification pending the battery"
  ],
  "AUTHORISED_QUEUE_20261103": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P0": {
    "order": 1,
    "steps": [
@@ -132,9 +132,9 @@
    "steps": [
     {
      "step": "P10 battery on frozen candidate, push, CI, served dashboard, cleanup, dossier-audit timeout classification, final report",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "battery PASS WITH SKIPS on 03ac7b8c (197 targets, 8 skipped), pushed with the gate PASS; CI and Pages pending"
+     "evidence": "battery PASS WITH SKIPS on 03ac7b8c (197 targets, 8 skipped), pushed with the gate PASS; Public release gate success 22:09:43Z; Pages workflow success; served index equals the package index; IT22 worktree and battery clone removed"
     }
    ]
   },
@@ -143,8 +143,9 @@
    "steps": [
     {
      "step": "P11 multilingual dashboard (EN initial, IT/FR/ES/DE, mobile selector, preference kept, translations apart from the scientific data, original-language-only passages flagged), regenerate and publish the shareable package; executed after the IT22 battery closed",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "multilingual shareable view: EN initial + IT/FR/ES/DE from one generator; 1,390 interface texts and 274 curated passages translated apart from the data; 12 new tests; static audit of 10 pages PASS, dynamic audit PASS (EN rerun after one wording fix), viewports 5 pages x 129 scenarios no overflow; translations read by independent reviewers (high-risk sample, then every curated passage in each language) and 100+ fixes applied"
     }
    ]
   }
