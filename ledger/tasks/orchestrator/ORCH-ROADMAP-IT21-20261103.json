@@ -11,7 +11,9 @@
   "2026-11-03: operator integration (from available knowledge to effective generation; vorinostat case) queued as OBJ_P11 without interrupting running packages"
  ],
  "DEFAULTS_TAKEN": [],
- "STOP_LOG": [],
+ "STOP_LOG": [
+  "2026-11-03: not observed: prospective benefit of any proposal; full-text primary reads were few (P4a one partial read, 18 abstracts); WWOX-level contrary-evidence store not visible to the generator; catalogue-level repair of DGIdb-only twins left as follow-up; dashboard row 1 and IT20 residuals as before"
+ ],
  "AUTHORISED_QUEUE_20261103": {
   "MANDATE_STATE": "OPEN",
   "OBJ_P0": {
@@ -76,7 +78,7 @@
      "step": "P5 generative-capacity and WWOX-contribution measurement with a fit-for-question comparison (not set vs filtered subset)",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "evaluation_it21_p5_20261103: no advantage of WWOX seed identity vs matched decoys; decoy arm re-run after the sign guard in progress"
+     "evidence": "evaluation_it21_p5_20261103: no advantage vs degree/reach-matched decoys (0 of 5 sets above p95); decoy arm re-run on the corrected 980-row list, decision unchanged"
     }
    ]
   },
@@ -107,9 +109,9 @@
    "steps": [
     {
      "step": "P8 independent verification (blind-first), autonomous follow-up, durable learnings",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "verification_it21_p8_20261103 done and P8-fix merged; follow-up F1 edge-reference screen done; V1 vorinostat integration running"
+     "evidence": "verification_it21_p8 (16 items, none refuted, 9 findings fixed in task/it21-p8fix), F1 edge-reference screen, V1 review verification_it21_v1 (6 findings fixed in task/it21-v1fix)"
     }
    ]
   },
@@ -129,9 +131,9 @@
    "steps": [
     {
      "step": "P10 validation, integration, full battery on the frozen SHA, CI, Pages, cleanup",
-     "status": "PENDING",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": "pending: P5 decoy re-run, V1, then battery on the frozen SHA, CI, Pages"
+     "evidence": "candidate frozen; battery on exact SHA in a no-hardlinks clone pending"
     }
    ]
   },
@@ -140,9 +142,9 @@
    "steps": [
     {
      "step": "V1 operator integration: vorinostat retrospective diagnosis (forward snapshot frozen first), reverse analysis, path trace, general fixes with contrast cases, independent review, durable method",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "diagnosis_it21_v1_20261103: forward snapshot committed first (532d5004); general attribution screen + identity bridge + P4a as decision source; vorinostat conditional (HDAC5 chain unsound, pan-HDAC arm conditional per card A01); independent review, fixes a7d91877"
     }
    ]
   }
