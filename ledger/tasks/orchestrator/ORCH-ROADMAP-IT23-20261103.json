@@ -1,0 +1,106 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT23-20261103",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "IT23: turn the evaluation of external resources into a verifiable improvement of the generative engine of drug repurposing (relations, simulation of interventions, multi-protein profiles); success is an inference previously absent or a limit that still prevents a trustworthy prediction, not more candidates or more tools.",
+ "START_UTC": "2026-11-03T22:15:11Z",
+ "BASELINE": "main = development/main = 03ac7b8c00193f400e008e7046b5f20a5d25180c; IT22 closed: Public release gate success 22:09:43Z, Pages workflow success, served index equals package index (sha256 prefix 82a01ee4d5c3cd3e); IT22 worktree and battery clone removed; worktree task/it22-ml holds the multilingual package (commit 9a761977, not landed).",
+ "DECISIONS_TAKEN": [],
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": [],
+ "AUTHORISED_QUEUE_20261103B": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P0 baseline (IT22 closure verified: CI green on 03ac7b8c, served page equals package), record, continuity with the multilingual package (worktree task/it22-ml; no concurrent regeneration of view surfaces)",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "P1 choose the gap with contrasting cases (sustained direction / possibly compensatory), freeze the current method's input and output",
+     "status": "PENDING",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "P2 relations beyond pathways: what the engine really uses; EC-KG minimal qualified extract with provenance, redundancy and novelty measured",
+     "status": "PENDING",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "P3 NORDic: consequences of interventions on a small WWOX network, only if inputs are qualified; never import the '?'/binding -> inhibition conversion",
+     "status": "PENDING",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "P4 CANDO: multi-protein profiles and alternatives for a small real compound set; compare with the current matching",
+     "status": "PENDING",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "P5 other tools only for concrete gaps (DeepPurpose, drexml, GEMGen, RDKG-115)",
+     "status": "PENDING",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "P6 attributable measurement (current / relations / simulation / profiles / combination), coverage shown, frozen predictions, independent verification, favourable and counter-evidence kept apart",
+     "status": "PENDING",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "P7 integration of hypotheses worth following: card, decisive premise, next experiment, queue, dashboard (after the multilingual landing)",
+     "status": "PENDING",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P8": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "P8 durable method in canonical places, few regressions, removal of superfluous experimental code, tests, integration, push, CI, report",
+     "status": "PENDING",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}
