@@ -16,7 +16,7 @@
   "test_dossier_quote_audit.py corpus-wide run sits 29 s under its own 600 s cap on this host (environmental, unchanged code); not touched"
  ],
  "AUTHORISED_QUEUE_20261103": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P0": {
    "order": 1,
    "steps": [
@@ -132,9 +132,9 @@
    "steps": [
     {
      "step": "P10 validation, integration, full battery on the frozen SHA, CI, Pages, cleanup",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "battery on exact SHA 8adb49db (no-hardlinks clone, files via cp -al): 1 suite flagged = test_dossier_quote_audit.py (environmental: corpus-wide scan of 61 GB takes 9m50s against a 600 s per-call cap; unchanged code; alone 18/18 OK in 571 s). Earlier battery failures (verbosity=2, coverage report, reading state, 2 view tests superseded by the conditional-block contract) fixed and re-verified. Landing, push, CI and Pages follow."
+     "evidence": "battery on exact SHA 8adb49db (no-hardlinks clone, files via cp -al): 1 suite flagged = test_dossier_quote_audit.py (environmental: corpus-wide scan of 61 GB takes 9m50s against a 600 s per-call cap; unchanged code; alone 18/18 OK in 571 s). Earlier battery failures (verbosity=2, coverage report, reading state, 2 view tests superseded by the conditional-block contract) fixed and re-verified. Landing, push, CI and Pages follow. Landed: code/content SHA 8adb49db, pushed as 3fb816a8 (record-only on top) via safe_push (gate PASS); CI Public release gate success on 3fb816a8; Pages workflow success, served page digest equals the package index; worktrees/branches removed, unique saved texts kept in ~/.local/state/legend/it21_p4a_saved_fulltext."
     }
    ]
   },
