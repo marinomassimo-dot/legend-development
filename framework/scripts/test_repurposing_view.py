@@ -2447,6 +2447,14 @@ class It20P6Investigations(unittest.TestCase):
         self.assertIn("Mibefradil", html)
         self.assertNotIn(rv.E(rv.UI_IT["iv_pending"]), html)
 
+    def test_lead_says_positively_that_the_order_is_research_investment_not_efficacy(self):
+        html = self.page(rv.investigations_view(self.fixture(), self.CARDS, True, {}))
+        purpose = rv.E(rv.UI_IT["iv_purpose"])
+        self.assertIn(purpose, html)
+        self.assertLess(html.index(purpose), html.index("inv-row"))
+        self.assertIn("prossimo test discriminante", rv.UI_IT["iv_purpose"])
+        self.assertIn("non l'efficacia", rv.UI_IT["iv_purpose"])
+
     def test_absent_key_shows_pending_and_no_row(self):
         html = self.page(rv.investigations_view(None, self.CARDS, True, {}))
         self.assertIn('data-state="pending"', html)
