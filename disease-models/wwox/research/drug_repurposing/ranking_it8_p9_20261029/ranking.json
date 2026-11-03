@@ -2,9 +2,9 @@
  "conditional_hypotheses": [
   {
    "chembl_ids": "CHEMBL41632;CHEMBL1544",
-   "decisive_uncertainty": "Whether the block is receptor-responsive and causal, or a consequence of seizures, or of the neuron's own signal being absent (the pro-myelinating-class row asks the premise from the signal side). The agent also has systemic actions that oppose the glycaemia need; an effect on seizure threshold was not looked up.",
+   "decisive_uncertainty": "Whether the block is receptor-responsive and causal, or a consequence of seizures, or of the neuron's own signal being absent (the pro-myelinating-class row asks the premise from the signal side). The agent also has systemic actions that oppose the glycaemia need; an effect on seizure threshold was not looked up. IT22: the seizure-threshold question is now looked up and is mixed, not closed.",
    "direction_state": "resolved",
-   "evidence_available": "WWOX-system: precursor cells increased and mature oligodendrocytes decreased after neuron-restricted WWOX deletion, restored by neuronal add-back (IT14), with the add-back window early; the myelin deficit is partly prevented when WWOX is restored in neurons in the neonatal window. Outside WWOX: in a mouse model of a thyroid-hormone-uptake defect, a thyromimetic normalised myelination and interneuron differentiation only when started in the first three postnatal weeks (abstract-level reading). No myelin compound has been given to a WWOX system, and another myelin compound already has a negative developmental-myelination result in this module.",
+   "evidence_available": "WWOX-system: precursor cells increased and mature oligodendrocytes decreased after neuron-restricted WWOX deletion, restored by neuronal add-back (IT14), with the add-back window early; the myelin deficit is partly prevented when WWOX is restored in neurons in the neonatal window. Outside WWOX: in a mouse model of a thyroid-hormone-uptake defect, a thyromimetic normalised myelination and interneuron differentiation only when started in the first three postnatal weeks (abstract-level reading). No myelin compound has been given to a WWOX system, and another myelin compound already has a negative developmental-myelination result in this module. IT22 P6 (partial full text of the two human trials of the molecule in a hormone-entry defect; mouse rescue; OPC literature at abstract level): the human precedent has no neurodevelopmental endpoint; the mouse rescue works only in postnatal weeks 1-3 and the effective dose suppressed the thyroid axis; precursor cells express receptor-alpha rather than receptor-beta in rodents (abstract level), so a receptor-beta-leaning liver-directed agent is an isoform control, not a candidate; seizure evidence is mixed (worsening in 3 patients with prior seizures; hyperthyroid rats more seizure-prone).",
    "evidence_depth": "Conditional hypothesis: the WWOX-side pattern was read in IT14; the drug-side precedent was read at abstract level only; no WWOX-deficient measurement shows that the block responds to the receptor (no ranked unit, so no evaluation depth applies: this is not a depth of zero)",
    "feasibility": "Development feasibility: a cell-level probe is feasible now, and an approved thyroid-hormone molecule and a clinical-stage analogue exist; systemic hormone action, the early treatment window and the lack of a brain-exposure datum for the analogue limit any later use.",
    "intervention": "Agonist probe for the receptors of thyroid hormone (tiratricol, with liothyronine as comparator)",
@@ -20,14 +20,14 @@
   },
   {
    "chembl_ids": "CHEMBL3989409;CHEMBL3989801",
-   "decisive_uncertainty": "Whether the same step clears the Q230P-class protein in neural cells, and whether spared protein is functional (the degron and the GSK3B docking site may be one conformational event, giving a stable but inert protein). HSC70 also folds proteins, so blocking it may harm instead of help; the mirrored harm arm is carried as a second conditional arm.",
+   "decisive_uncertainty": "Whether the same step clears the Q230P-class protein in neural cells, and whether spared protein is functional (the degron and the GSK3B docking site may be one conformational event, giving a stable but inert protein). HSC70 also folds proteins, so blocking it may harm instead of help; the mirrored harm arm is carried as a second conditional arm. IT22: the weakest link is the substrate itself: no WWOX missense protein is shown above the assay floor, so gate 0 is a KO-controlled blot for the protein (the G372R line first).",
    "direction_state": "resolved",
-   "evidence_available": "WWOX-system: the Q230P class shows no protein band with a normal transcript; a different missense (P252A) over-expressed in non-neural cells is cleared faster and restored by lysosomal inhibitors but not by a proteasome inhibitor. Compound side: a curated inhibitor action on HSPA8 exists; the one reference reports impaired HSC70 refolding and lower lysosomal degradation in lupus-mouse B cells (abstract-level reading). Nothing shows that the route and the allele are the same.",
+   "evidence_available": "WWOX-system: the Q230P class shows no protein band with a normal transcript; a different missense (P252A) over-expressed in non-neural cells is cleared faster and restored by lysosomal inhibitors but not by a proteasome inhibitor. Compound side: a curated inhibitor action on HSPA8 exists; the one reference reports impaired HSC70 refolding and lower lysosomal degradation in lupus-mouse B cells (abstract-level reading). Nothing shows that the route and the allele are the same. IT22 P6: the peptide's measured binding is micromolar (7.32 uM by surface plasmon resonance), refolding is inhibited at 40 uM, and its own paper reads its action as flux slowing like a lysosomal-acidification inhibitor; the one measured rescue of a WWOX missense is over-expressed P252A in non-neural cells.",
    "evidence_depth": "Conditional hypothesis: the drug-side action is curated and its one reference was read at abstract level; no measurement in a WWOX-deficient neural cell connects the lysosomal step to the allele (no ranked unit, so no evaluation depth applies: this is not a depth of zero)",
    "feasibility": "Development feasibility: low as a drug (a peptide whose one distribution study shows lungs and spleen, with no CNS exposure) and high as a cell-level probe. It depends on the allele and cannot serve a variant that makes no protein.",
    "intervention": "HSC70 (HSPA8) inhibitor peptide forigerimod, with lysosomal and genetic controls",
    "inv_id": "INV-13",
-   "next_test": "Chase of the Q230P-class protein with HSPA8 and LAMP2 knockdown and a lysosomal-acidification inhibitor, then a docking-function read (phospho-tau, with the L404A docking mutant as control). No rise with knockdown closes the route; a rise without function closes deep recovery on this route; both rising earns a variant-specific preclinical question, still not qualified.",
+   "next_test": "Chase of the Q230P-class protein with HSPA8 and LAMP2 knockdown and a lysosomal-acidification inhibitor, then a docking-function read (phospho-tau, with the L404A docking mutant as control). No rise with knockdown closes the route; a rise without function closes deep recovery on this route; both rising earns a variant-specific preclinical question, still not qualified. IT22: one cycloheximide-chase design with HSPA8 and LAMP2A knockdown and a lysosomal-acidification inhibitor tests every stability lever; the peptide is one arm, not the lead.",
    "novelty_perimeter": "Queried: a whole-word name search of this module and its registries on 2026-11-03 (no hit for the peptide), the need file, and the catalogue, where a curated inhibitor row was filed as not evaluable by the compound-to-need route. A name search in this module, not a statement about the literature.",
    "origin_class": "generated_by_legend",
    "origin_detail": "Generated by LEGEND: the compound-to-WWOX path found a curated inhibitor row on HSPA8 that the compound-to-need route had filed as not evaluable (IT21 P3b, proposal G01, broad-recovery path, track B).",
@@ -40,7 +40,7 @@
    "chembl_ids": "CHEMBL2204995",
    "decisive_uncertainty": "The sign: falling cytokines reproduced by controls keeps the proposal conditional; rising cytokines reject the harm arm for this axis. The role of the cytokine change in the knockout is itself unmeasured. The compound is a substrate of efflux transporters in vitro and has no human exposure.",
    "direction_state": "unresolved",
-   "evidence_available": "WWOX-system: the cytokine seeds are mouse transcript changes in two Wwox-deficient preparations; the human neural datasets carry no IL6 or TNF reads. Compound side: a selective, cell-active inhibitor of EZH2 with reported lowering of cytokines in a mouse brain model (abstract-level reading); a reference of the chain reports raised cytokines after EZH2 inhibition in glioma and microglia.",
+   "evidence_available": "WWOX-system: the cytokine seeds are mouse transcript changes in two Wwox-deficient preparations; the human neural datasets carry no IL6 or TNF reads. Compound side: a selective, cell-active inhibitor of EZH2 with reported lowering of cytokines in a mouse brain model (abstract-level reading); a reference of the chain reports raised cytokines after EZH2 inhibition in glioma and microglia. IT22 P6 correction: the reference that carried the opposite sign used a different EZH2 inhibitor and siRNA, not the probe; in microglia the cytokines did not change and the rise came through medium from EZH2-suppressed tumour cells. Separate hazard: Ezh2 loss delays oligodendrocyte differentiation and Ezh1 compensates (mouse), so dual EZH1/EZH2 inhibitors are the highest-risk members. The arm is now reached from two different WWOX observations (glial cytokines and NRF2 tone), but through shared network edges, so it is not independent support.",
    "evidence_depth": "Conditional hypothesis: compound selectivity and cell activity are documented; the sign of the chain is contested inside its own reference list; no Wwox-deficient glial measurement (no ranked unit, so no evaluation depth applies: this is not a depth of zero)",
    "feasibility": "Development feasibility: a tool compound for in vitro and mouse work only; brain entry is restricted by efflux in vitro and there is no human exposure statement.",
    "intervention": "EZH2 (PRC2) inhibitor GSK343 as a probe in mouse glial systems",
@@ -1476,16 +1476,16 @@
    "below_the_line": "",
    "below_the_line_reason": "",
    "chembl_ids": "",
-   "decisive_uncertainty": "Whether the axis is engaged at all in a WWOX-deficient neural cell, and whether engaging it helps or harms. No compound in the record acts in such a cell.",
+   "decisive_uncertainty": "Whether the axis is engaged at all in a WWOX-deficient neural cell, and whether engaging it helps or harms. No compound in the record acts in such a cell. IT22: the target transcript of the aryl-hydrocarbon receptor is higher in the knockout while NFE2L2 is lower, so engagement of the axis is not even directionally clear.",
    "direction_state": "unresolved",
    "direction_state_label": "the need's own direction is uncertain: no lever on it can be qualified either way, which is a visible gap and not a negative finding",
-   "evidence_available": "Outside WWOX for the pharmacology; WWOX-system only for the raised reactive-oxygen readouts, whose sign differs by context between a fly and late-passage fibroblasts and does not reconcile.",
+   "evidence_available": "Outside WWOX for the pharmacology; WWOX-system only for the raised reactive-oxygen readouts, whose sign differs by context between a fly and late-passage fibroblasts and does not reconcile. IT22: the organoid NFE2L2 transcript (0.75x) is now a generator input (new question, role unknown, second system failed its control); the generator returns a topical aryl-hydrocarbon-receptor agonist and EZH2 inhibitors as conditional rows, and the canonical NRF2 activators only as diagnostic direct hits on the seed gene itself.",
    "evidence_depth": "E3 - card reviewed with assertions; no WWOX-side result read beyond abstract",
    "feasibility": "Standard genetic perturbation; the readout is the constraint, not the reagent.",
    "intervention": "The NRF2 (KEAP1) axis, genetic arm before any compound",
    "inv_id": "INV-08",
    "it20_rank": "4",
-   "movement_reason": "position unchanged from IT20 (rank 4): No IT21 input changes the position. An ALOX15 proposal on the same axis was left inconclusive in IT21 (no neural WWOX measurement).",
+   "movement_reason": "position unchanged from IT20 (rank 4): No IT21 input changes the position. An ALOX15 proposal on the same axis was left inconclusive in IT21 (no neural WWOX measurement). IT22: unchanged position; a new generator input reaches the axis but adds no measurement.",
    "need_direction": "uncertain",
    "need_id": "NEED-REDOX-NRF2",
    "need_short": "Redox state and NRF2 pathway tone in WWOX-deficient neural cells",
@@ -1589,11 +1589,11 @@
   "below_the_line_vs_it20": [
    {
     "inv_id": "INV-12",
-    "movement": "new in IT21 (no IT20 position): Enters at rank 6, below the ten-row line (the tie is kept whole). Reasons: a cheap, role-resolving cell test on a glia axis with a documented WWOX pattern. Not rewarded: novelty. Its status stays conditional (KEPT_CONDITIONAL in IT21 P3b). Below the line because the ceiling is ten and a risk-flagged row and a row with human reports are not displaced by a conditional probe: the weakest NEW conditional probes, which are abstract-level on the drug side, go below the line instead. | below the line this evaluation: rank 6 does not fit the ten-row published ceiling"
+    "movement": "new in IT21 (no IT20 position): Enters at rank 6, below the ten-row line (the tie is kept whole). Reasons: a cheap, role-resolving cell test on a glia axis with a documented WWOX pattern. Not rewarded: novelty. Its status stays conditional (KEPT_CONDITIONAL in IT21 P3b). Below the line because the ceiling is ten and a risk-flagged row and a row with human reports are not displaced by a conditional probe: the weakest NEW conditional probes, which are abstract-level on the drug side, go below the line instead. IT22: unchanged position; the dossier narrows it to an in-vitro bypass question and adds the isoform control. | below the line this evaluation: rank 6 does not fit the ten-row published ceiling"
    },
    {
     "inv_id": "INV-13",
-    "movement": "new in IT21 (no IT20 position): Enters at rank 6, below the ten-row line (the tie is kept whole). Reasons: the only allele-dependent broad-recovery path found, with a cell-level test that closes or opens the route. Not rewarded: novelty. Its status stays conditional (KEPT_CONDITIONAL in IT21 P3b). Below the line because the ceiling is ten and a risk-flagged row and a row with human reports are not displaced by a conditional probe: the weakest NEW conditional probes, which are abstract-level on the drug side, go below the line instead. | below the line this evaluation: rank 6 does not fit the ten-row published ceiling"
+    "movement": "new in IT21 (no IT20 position): Enters at rank 6, below the ten-row line (the tie is kept whole). Reasons: the only allele-dependent broad-recovery path found, with a cell-level test that closes or opens the route. Not rewarded: novelty. Its status stays conditional (KEPT_CONDITIONAL in IT21 P3b). Below the line because the ceiling is ten and a risk-flagged row and a row with human reports are not displaced by a conditional probe: the weakest NEW conditional probes, which are abstract-level on the drug side, go below the line instead. IT22: unchanged position; the dossier ranks the lysosomal-flux arm with genetic controls above the peptide as the discriminating design. | below the line this evaluation: rank 6 does not fit the ten-row published ceiling"
    },
    {
     "inv_id": "INV-11",
@@ -1601,7 +1601,7 @@
    },
    {
     "inv_id": "INV-14",
-    "movement": "new in IT21 (no IT20 position): Enters below the line at rank 7. Reasons: feasible but sign-contested and role-unknown; kept in the table with its test so it is not lost. Not rewarded: novelty. Its status stays conditional (KEPT_CONDITIONAL in IT21 P4a). | below the line this evaluation: rank 7 does not fit the ten-row published ceiling"
+    "movement": "new in IT21 (no IT20 position): Enters below the line at rank 7. Reasons: feasible but sign-contested and role-unknown; kept in the table with its test so it is not lost. Not rewarded: novelty. Its status stays conditional (KEPT_CONDITIONAL in IT21 P4a). IT22: unchanged position; counter-evidence reworded and the oligodendrocyte hazard added. | below the line this evaluation: rank 7 does not fit the ten-row published ceiling"
    }
   ],
   "ceiling_rule": "risk-flagged and human-report rows are not displaced by conditional probes",
@@ -1687,6 +1687,69 @@
     "subject_label": "An inhibitor of the kinase BTK proposed to restore NPY through STAT3"
    }
   ],
+  "it22_changes": [
+   {
+    "id": "C1",
+    "text": "A decision about one molecule no longer blocks every molecule that shares its target: it travels only as far as its own reason (the molecule's own potency or label stays with it; a refuted premise still closes the arm it belongs to). 69 proposals were blocked by the old rule; 24 stay closed (premise refuted), 45 are released to be judged on their own data, none promoted."
+   },
+   {
+    "id": "C2",
+    "text": "Potency is compared only between measures of the same type; unlike measures are kept side by side and never turned into an exclusion. 20 proposals blocked on weak target attribution became 4; the cautious case (a pan-HDAC inhibitor 2,769-fold weaker at the listed target, same measure type) stays blocked."
+   },
+   {
+    "id": "C3",
+    "text": "Observations that no generator input carried now reach it: a new question on NRF2 tone (one organoid contrast, role unknown) produced 20 new conditional proposals; a failed control (the second neural system did not show WWOX lower) is attached to every proposal built on it (146 rows); a cell-type marker set can no longer become a gene seed; a contested direction is carried as a limit on 75 proposals."
+   },
+   {
+    "id": "C4",
+    "text": "What did not change: the number of generated proposals from the old inputs (980, only selection changed), the absence of any qualified hypothesis, and the earlier retrospective result (WWOX seed identity not separable from matched random sets on the measured properties only)."
+   },
+   {
+    "id": "C5",
+    "text": "Seven of eight new hand-overs were qualified on their own data and end inconclusive or conditional; the main limit is not the number of candidates but missing measurements in a WWOX-deficient neural system."
+   }
+  ],
+  "partial_benefit": [
+   {
+    "candidate_class": "Agonists of thyroid-hormone receptors (probe; a receptor-beta-leaning liver-directed agent only as isoform control)",
+    "closes_if": "Correction in both genotypes (non-specific), or no change, or correction only with the receptor-beta-leaning control.",
+    "evidence": "Conditional; human precedent is a hormone-entry defect without a neurodevelopmental endpoint",
+    "experiment": "Seizure-free neuron plus precursor co-culture, WWOX-deficient versus corrected neurons, hormone-depleted medium, isoform control.",
+    "feasibility": "Cell probe now; systemic use limited",
+    "function": "Oligodendrocyte maturation and myelination",
+    "novelty": "New molecule for LEGEND in a known thread",
+    "opposing": "Thyroid-axis suppression and peripheral thyrotoxicosis at the effective mouse dose; seizure worsening reported in a few patients with prior seizures; premature differentiation.",
+    "pb_id": "PB1",
+    "why": "Neuron-driven developmental myelin deficit with precursors up and mature cells down; maturation block favoured over loss but not demonstrated (IT14).",
+    "wwox_relevance": "Moderate (pattern documented; no thyroid-axis datum)"
+   },
+   {
+    "candidate_class": "EZH2 (PRC2) inhibitors, probe level; dual EZH1/EZH2 agents flagged highest-risk",
+    "closes_if": "Cytokines rise or precursor differentiation falls.",
+    "evidence": "Weak; sign contested; no measurement in a Wwox glia; brain exposure unmeasured",
+    "experiment": "Wwox-null versus wild-type glial cultures, inhibitor versus a second chemotype versus Ezh2 knockdown, histone mark and cytokine protein, with a parallel precursor-differentiation read.",
+    "feasibility": "In vitro tool compound only",
+    "function": "Glial inflammatory tone",
+    "novelty": "Known thread re-emitted with a corrected counter-evidence and a new hazard",
+    "opposing": "Net-negative on the myelin axis if both EZH1 and EZH2 are inhibited (oligodendrocyte differentiation blocked in mouse knockouts); cytokines rose after EZH2 suppression in tumour cells.",
+    "pb_id": "PB2",
+    "why": "Cytokine transcripts up in two mouse Wwox-deficient preparations (one significant in the null hippocampus).",
+    "wwox_relevance": "Moderate for the observation, none for the lever"
+   },
+   {
+    "candidate_class": "A topical aryl-hydrocarbon-receptor agonist as an in vitro probe after step 0; direct NRF2-activating drugs remain the carded probes",
+    "closes_if": "No change at step 0 (axis not engaged), or receptor-dependent harm in precursors.",
+    "evidence": "Weak; edge supported outside neural cells; no CNS exposure data for the topical drug",
+    "experiment": "Step 0: nuclear NRF2, NQO1 activity and a ROS reporter in isogenic WWOX-deficient versus corrected neural cultures at baseline and after an oxidative challenge; then probe versus NFE2L2 knockdown.",
+    "feasibility": "In vitro after step 0",
+    "function": "NRF2 tone and redox state",
+    "novelty": "New relation for LEGEND; molecule already in an earlier exclusion list",
+    "opposing": "Aryl-hydrocarbon-receptor activation is adverse in neural precursors in toxin studies; the pathway-target transcript is higher while NFE2L2 is lower.",
+    "pb_id": "PB3",
+    "why": "Human knockout organoid shows a lower NFE2L2 transcript (0.75x), role unknown; the second system failed its control.",
+    "wwox_relevance": "Low to moderate (one contrast, second system failed)"
+   }
+  ],
   "positions_are_curated_not_computed": true,
   "published_vs_it20": {
    "unchanged": 10
@@ -1698,7 +1761,7 @@
    "priority_of_next_investigation": "the value of the next discriminating experiment (position and the reason for it)"
   },
   "wwox_contribution": {
-   "note": "No advantage at the level the generator can be tested: real WWOX seed sets are above the 95th percentile of degree- and reach-matched decoys in 0 of 5 sets; retrospective, no prospective benefit claim.",
+   "note": "Retrospective, limited to the measured properties: the number of generated proposals and their membership in matched random seed sets (real WWOX sets above the 95th percentile of degree- and reach-matched decoys in 0 of 5 sets). Not the general conclusion that WWOX adds no value: network interactions, cell-type-specific contrasts and role premises were not measured. No prospective benefit claim.",
    "source": "evaluation_it21_p5_20261103",
    "state": "measured"
   }
@@ -5796,7 +5859,7 @@
     "source_artefacts.tsv": "efd24d2cf8eb3fdb",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
-   "receipt_ledger_lines": 968
+   "receipt_ledger_lines": 1027
   },
   "inventory": {
    "all_families_by_access_category": {
@@ -6775,7 +6838,7 @@
    "inputs": {
     "T1_cards": "11000cbfd1a380c8",
     "T2_pertinence": "91e62b924fe30a2a",
-    "T3_receipts": "52149a4b03e76932",
+    "T3_receipts": "3c79d8366dc9f31d",
     "T4_needs": "9ae567485b16c45c",
     "T5_pharmacology": "be0a401756e3e8c1",
     "T6_identity": "37847be0f29d1700"
@@ -6875,7 +6938,7 @@
     "41124647",
     "41274966"
    ],
-   "receipts_on_cited_pmids": 9,
+   "receipts_on_cited_pmids": 11,
    "research_objective": "broad_durable_recovery (restoring the function of residual protein)",
    "tracks": [
     "B"
@@ -7073,7 +7136,7 @@
    "inputs": {
     "T1_cards": "052d4cdd3f784c6f",
     "T2_pertinence": "a99cbab9e0538513",
-    "T3_receipts": "f65f2005fcac34e1",
+    "T3_receipts": "cffffef7ff8079fc",
     "T4_needs": "9ae567485b16c45c",
     "T5_pharmacology": "895b485de4f247a9",
     "T6_identity": "7c588eecdff99806"
@@ -7140,7 +7203,7 @@
     "39041895",
     "41124647"
    ],
-   "receipts_on_cited_pmids": 9,
+   "receipts_on_cited_pmids": 10,
    "research_objective": "broad_durable_recovery (stabilise residual protein)",
    "tracks": [
     "B"
@@ -7326,7 +7389,7 @@
    "inputs": {
     "T1_cards": "db046e3f84da8b91",
     "T2_pertinence": "c124efeb8d5edb82",
-    "T3_receipts": "51d892749172e3bd",
+    "T3_receipts": "614063a21f97744f",
     "T4_needs": "9ae567485b16c45c",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "1736f240aa99dc64"
@@ -7388,7 +7451,7 @@
     "29808465",
     "41124647"
    ],
-   "receipts_on_cited_pmids": 7,
+   "receipts_on_cited_pmids": 8,
    "research_objective": "",
    "tracks": [
     "B"
@@ -7557,7 +7620,7 @@
    "inputs": {
     "T1_cards": "70b8ac1a7a824668",
     "T2_pertinence": "c124efeb8d5edb82",
-    "T3_receipts": "d1a40a526bc95810",
+    "T3_receipts": "62163ca53f9096f9",
     "T4_needs": "9ae567485b16c45c",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "e6f2c75717c7735a"
@@ -7618,7 +7681,7 @@
     "29808465",
     "41124647"
    ],
-   "receipts_on_cited_pmids": 6,
+   "receipts_on_cited_pmids": 7,
    "research_objective": "",
    "tracks": [
     "B"
@@ -7787,7 +7850,7 @@
    "inputs": {
     "T1_cards": "557ac251cc931202",
     "T2_pertinence": "c124efeb8d5edb82",
-    "T3_receipts": "d1a40a526bc95810",
+    "T3_receipts": "62163ca53f9096f9",
     "T4_needs": "9ae567485b16c45c",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "0978e8cf6b505ee6"
@@ -7848,7 +7911,7 @@
     "29808465",
     "41124647"
    ],
-   "receipts_on_cited_pmids": 6,
+   "receipts_on_cited_pmids": 7,
    "research_objective": "",
    "tracks": [
     "B"

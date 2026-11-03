@@ -4070,8 +4070,11 @@ UI_IT20B = {
     "iv_neg_ruled": "Escluso", "iv_neg_reason": "Perché", "iv_neg_reopen": "Si riapre se", "iv_neg_pkg": "Pacchetto",
     "iv_text_en": "Il testo scientifico delle righe è in inglese, come nelle schede; le etichette e le spiegazioni dell'interfaccia sono in italiano.",
     "iv_p5_h": "Contributo di WWOX alla misura",
-    "iv_p5_done": "Misura retrospettiva (IT21 P5): sostituendo i geni di partenza WWOX con geni scelti a caso della stessa dimensione di rete, il generatore produce quasi altrettante proposte (nessuno dei 5 insiemi supera il 95° percentile dei confronti più stretti). Risultato: nessun vantaggio dimostrabile della sola informazione WWOX a questo livello. Non dice nulla sul beneficio prospettico né che i composti elencati siano inattivi. Si riapre con un dato misurato nel sistema WWOX che distingua le proposte.",
+    "iv_p5_done": "Misura retrospettiva (IT21 P5, riletta in IT22): sostituendo i geni di partenza WWOX con geni scelti a caso della stessa dimensione di rete, il generatore produce quasi altrettante proposte (nessuno dei 5 insiemi supera il 95° percentile dei confronti più stretti). La conclusione vale solo per le proprietà misurate (numero di proposte e appartenenza a insiemi casuali): non è la conclusione generale che WWOX non aggiunga valore, perché interazioni di rete, contrasti specifici per tipo cellulare e premesse sul ruolo non sono state misurate. Non dice nulla sul beneficio prospettico né che i composti elencati siano inattivi. Si riapre con un dato misurato nel sistema WWOX che distingua le proposte.",
     "iv_p5_pending": "In preparazione: la misura del contributo di WWOX alle proposte generate (pacchetto di valutazione IT21 P5) non è ancora integrata in questa versione. Nulla viene mostrato al suo posto.",
+    "iv_it22_h": "Che cosa cambia rispetto a IT21", "iv_it22_lead": "Cambiamenti di IT22 nel modo in cui il generatore usa ciò che il repository già conteneva, con il conteggio che li dimostra. Nessuna di queste righe è un risultato scientifico sul beneficio.",
+    "iv_pb_h": "Beneficio parziale: selezione dedicata", "iv_pb_lead": "Quale funzione si vorrebbe migliorare, perché, con quali possibili effetti opposti e con quale esperimento discriminante. Selezione curata dall'agente, non un punteggio: nessuna riga è qualificata e l'ordine non è una classifica; novità, solidità dell'evidenza, pertinenza WWOX e fattibilità restano separate.",
+    "iv_pb_fn": "Funzione da migliorare", "iv_pb_why": "Perché", "iv_pb_cand": "Classe candidata", "iv_pb_opp": "Possibili effetti opposti", "iv_pb_exp": "Esperimento discriminante", "iv_pb_close": "Lo chiuderebbe", "iv_pb_nov": "Novità", "iv_pb_ev": "Solidità dell'evidenza", "iv_pb_rel": "Pertinenza WWOX", "iv_pb_feas": "Fattibilità",
     "iv_cond_h": "Ipotesi condizionali generate (non in graduatoria)",
     "iv_cond_lead": "Proposte condizionate mostrate accanto all'elenco ordinato, non al suo interno: il limite di dieci righe le tiene fuori dalla numerazione, e nessuna posizione è implicata né dall'ordine in cui compaiono né dalla loro assenza dalla lista. Ogni riga è una domanda di ricerca con una sonda, non una cura né un'ipotesi qualificata: ciò che non si sa non è inefficace.",
     "iv_cond_id": "Riferimento",
@@ -4186,7 +4189,7 @@ def investigations_context_view(ctx, full: bool):
         return None
     keep = NEG_FIELDS_FULL if full else NEG_FIELDS_SHARE
     negs = [{k: n[k] for k in keep if k in n} for n in ctx.get("informative_negatives") or []]
-    return {k: ctx[k] for k in ("schema", "as_of", "curation", "three_axes", "funnel", "wwox_contribution", "published_vs_it20", "below_the_line_vs_it20", "positions_are_curated_not_computed") if k in ctx} | {"informative_negatives": negs}
+    return {k: ctx[k] for k in ("schema", "as_of", "curation", "three_axes", "funnel", "wwox_contribution", "published_vs_it20", "below_the_line_vs_it20", "positions_are_curated_not_computed", "it22_changes", "partial_benefit") if k in ctx} | {"informative_negatives": negs}
 
 
 def render_investigations(P: dict) -> str:
@@ -4240,6 +4243,16 @@ def render_investigations(P: dict) -> str:
                       f'<span class="stt stt-conditional_hypothesis">{E(U["iv_st_conditional_hypothesis"])}</span></div><dl class="qk-dl">{cdl}</dl></li>')
         out += (f'<section id="inv-conditional" class="inl" aria-labelledby="h-inv-cond"><h3 id="h-inv-cond">{E(U["iv_cond_h"])} ({len(conds)})</h3>'
                 f'<p class="note">{E(U["iv_cond_lead"])}</p><ul class="inv-list inv-cond-list">{"".join(ci)}</ul></section>')
+    chg = ctx.get("it22_changes") or []
+    if chg:
+        out += (f'<section id="inv-it22" class="inl" aria-labelledby="h-inv-it22"><h3 id="h-inv-it22">{E(U["iv_it22_h"])}</h3><p class="note">{E(U["iv_it22_lead"])}</p>'
+                '<ul class="inv-it22-list">' + "".join(f'<li data-chg="{E(c["id"])}"><span lang="en">{E(c["text"])}</span></li>' for c in chg) + '</ul></section>')
+    pbs = ctx.get("partial_benefit") or []
+    if pbs:
+        pf = [("iv_pb_fn", "function"), ("iv_pb_why", "why"), ("iv_pb_cand", "candidate_class"), ("iv_pb_opp", "opposing"), ("iv_pb_exp", "experiment"), ("iv_pb_close", "closes_if"),
+              ("iv_pb_nov", "novelty"), ("iv_pb_ev", "evidence"), ("iv_pb_rel", "wwox_relevance"), ("iv_pb_feas", "feasibility")]
+        pi = "".join(f'<li class="inv-row inv-pb" data-pb="{E(r["pb_id"])}"><dl class="qk-dl">' + "".join(f'<dt>{E(U[k])}</dt><dd><span lang="en">{E(str(r[f]))}</span></dd>' for k, f in pf if str(r.get(f) or "").strip()) + '</dl></li>' for r in pbs)
+        out += (f'<section id="inv-partial" class="inl" aria-labelledby="h-inv-pb"><h3 id="h-inv-pb">{E(U["iv_pb_h"])} ({len(pbs)})</h3><p class="note">{E(U["iv_pb_lead"])}</p><ul class="inv-list inv-pb-list">{pi}</ul></section>')
     below = ctx.get("below_the_line_vs_it20") or []
     if below:
         out += f'<p class="mini mut">{E(U["iv_below"])} ' + E("; ".join(b["inv_id"] for b in below)) + "</p>"

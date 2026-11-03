@@ -34,7 +34,70 @@
  "wwox_contribution": {
   "state": "measured",
   "source": "evaluation_it21_p5_20261103",
-  "note": "No advantage at the level the generator can be tested: real WWOX seed sets are above the 95th percentile of degree- and reach-matched decoys in 0 of 5 sets; retrospective, no prospective benefit claim."
+  "note": "Retrospective, limited to the measured properties: the number of generated proposals and their membership in matched random seed sets (real WWOX sets above the 95th percentile of degree- and reach-matched decoys in 0 of 5 sets). Not the general conclusion that WWOX adds no value: network interactions, cell-type-specific contrasts and role premises were not measured. No prospective benefit claim."
  },
- "ceiling_rule": "risk-flagged and human-report rows are not displaced by conditional probes"
+ "ceiling_rule": "risk-flagged and human-report rows are not displaced by conditional probes",
+ "it22_changes": [
+  {
+   "id": "C1",
+   "text": "A decision about one molecule no longer blocks every molecule that shares its target: it travels only as far as its own reason (the molecule's own potency or label stays with it; a refuted premise still closes the arm it belongs to). 69 proposals were blocked by the old rule; 24 stay closed (premise refuted), 45 are released to be judged on their own data, none promoted."
+  },
+  {
+   "id": "C2",
+   "text": "Potency is compared only between measures of the same type; unlike measures are kept side by side and never turned into an exclusion. 20 proposals blocked on weak target attribution became 4; the cautious case (a pan-HDAC inhibitor 2,769-fold weaker at the listed target, same measure type) stays blocked."
+  },
+  {
+   "id": "C3",
+   "text": "Observations that no generator input carried now reach it: a new question on NRF2 tone (one organoid contrast, role unknown) produced 20 new conditional proposals; a failed control (the second neural system did not show WWOX lower) is attached to every proposal built on it (146 rows); a cell-type marker set can no longer become a gene seed; a contested direction is carried as a limit on 75 proposals."
+  },
+  {
+   "id": "C4",
+   "text": "What did not change: the number of generated proposals from the old inputs (980, only selection changed), the absence of any qualified hypothesis, and the earlier retrospective result (WWOX seed identity not separable from matched random sets on the measured properties only)."
+  },
+  {
+   "id": "C5",
+   "text": "Seven of eight new hand-overs were qualified on their own data and end inconclusive or conditional; the main limit is not the number of candidates but missing measurements in a WWOX-deficient neural system."
+  }
+ ],
+ "partial_benefit": [
+  {
+   "pb_id": "PB1",
+   "function": "Oligodendrocyte maturation and myelination",
+   "why": "Neuron-driven developmental myelin deficit with precursors up and mature cells down; maturation block favoured over loss but not demonstrated (IT14).",
+   "candidate_class": "Agonists of thyroid-hormone receptors (probe; a receptor-beta-leaning liver-directed agent only as isoform control)",
+   "opposing": "Thyroid-axis suppression and peripheral thyrotoxicosis at the effective mouse dose; seizure worsening reported in a few patients with prior seizures; premature differentiation.",
+   "experiment": "Seizure-free neuron plus precursor co-culture, WWOX-deficient versus corrected neurons, hormone-depleted medium, isoform control.",
+   "closes_if": "Correction in both genotypes (non-specific), or no change, or correction only with the receptor-beta-leaning control.",
+   "novelty": "New molecule for LEGEND in a known thread",
+   "evidence": "Conditional; human precedent is a hormone-entry defect without a neurodevelopmental endpoint",
+   "wwox_relevance": "Moderate (pattern documented; no thyroid-axis datum)",
+   "feasibility": "Cell probe now; systemic use limited"
+  },
+  {
+   "pb_id": "PB2",
+   "function": "Glial inflammatory tone",
+   "why": "Cytokine transcripts up in two mouse Wwox-deficient preparations (one significant in the null hippocampus).",
+   "candidate_class": "EZH2 (PRC2) inhibitors, probe level; dual EZH1/EZH2 agents flagged highest-risk",
+   "opposing": "Net-negative on the myelin axis if both EZH1 and EZH2 are inhibited (oligodendrocyte differentiation blocked in mouse knockouts); cytokines rose after EZH2 suppression in tumour cells.",
+   "experiment": "Wwox-null versus wild-type glial cultures, inhibitor versus a second chemotype versus Ezh2 knockdown, histone mark and cytokine protein, with a parallel precursor-differentiation read.",
+   "closes_if": "Cytokines rise or precursor differentiation falls.",
+   "novelty": "Known thread re-emitted with a corrected counter-evidence and a new hazard",
+   "evidence": "Weak; sign contested; no measurement in a Wwox glia; brain exposure unmeasured",
+   "wwox_relevance": "Moderate for the observation, none for the lever",
+   "feasibility": "In vitro tool compound only"
+  },
+  {
+   "pb_id": "PB3",
+   "function": "NRF2 tone and redox state",
+   "why": "Human knockout organoid shows a lower NFE2L2 transcript (0.75x), role unknown; the second system failed its control.",
+   "candidate_class": "A topical aryl-hydrocarbon-receptor agonist as an in vitro probe after step 0; direct NRF2-activating drugs remain the carded probes",
+   "opposing": "Aryl-hydrocarbon-receptor activation is adverse in neural precursors in toxin studies; the pathway-target transcript is higher while NFE2L2 is lower.",
+   "experiment": "Step 0: nuclear NRF2, NQO1 activity and a ROS reporter in isogenic WWOX-deficient versus corrected neural cultures at baseline and after an oxidative challenge; then probe versus NFE2L2 knockdown.",
+   "closes_if": "No change at step 0 (axis not engaged), or receptor-dependent harm in precursors.",
+   "novelty": "New relation for LEGEND; molecule already in an earlier exclusion list",
+   "evidence": "Weak; edge supported outside neural cells; no CNS exposure data for the topical drug",
+   "wwox_relevance": "Low to moderate (one contrast, second system failed)",
+   "feasibility": "In vitro after step 0"
+  }
+ ]
 }
