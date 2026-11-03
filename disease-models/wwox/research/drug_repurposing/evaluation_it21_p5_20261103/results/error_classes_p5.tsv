@@ -1,0 +1,12 @@
+error_class	what	measure	n
+identity	twin catalogue records not merged on name; a DGIdb-only family has no ChEMBL id	identity_not_resolved (rows)	662
+identity	salt or name twins of one compound	94 compound-at-set-and-arm rows lose novelty outright after the guards (129 withdrawn rows keep a twin)	129
+level	class-level or group record written above the gene (group_record_mostly_outside_module_targets)	withdrawn rows by withheld reason, IT10 list	80
+level	republished copy of a ChEMBL claim whose level the copy does not carry	withdrawn rows by withheld reason, IT10 list	139
+context	a null that matches a different covariate removes the row (reach-matched null)	reach_null_not_confirming (rows)	48
+context	a mechanism cluster already holds an earlier qualification record	mechanism_cluster_examined_earlier (rows)	34
+role	the arm has no stated benefit hypothesis (mimics in Q4, Q6, Q7)	arm_has_no_stated_benefit_hypothesis (rows)	74
+pharmacology	modality is not a small molecule (antibody, peptide, unknown)	modality_* (rows)	21
+pharmacology	active moiety uncertain (prodrug or unresolved)	HELD_UNCERTAIN_ACTIVE_MOIETY (candidate rows, capped tables)	100
+earlier decision	compound already decided in an IT9 to IT11 record	decided_in_earlier_qualification_record (rows)	12
+guards, all causes	rows of the IT10 seed-specific list withdrawn by the refreshed guards	withdrawn of 1,202	223

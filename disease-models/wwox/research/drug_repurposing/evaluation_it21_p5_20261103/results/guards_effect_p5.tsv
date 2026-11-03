@@ -1,0 +1,16 @@
+seed_set	design	n_guards_off	n_guards_on	withdrawn	gained	withdrawn_share
+Q2_expression_tiersAB	real	66	51	15	0	0.2273
+Q2_expression_tiersAB	deg	median 9	median 8	median 0	median 0	median 0.1111; range 0.0000 to 0.9204; replicates with rows 11
+Q2_expression_tiersAB	reach	median 68	median 58	median 11	median 0	median 0.1667; range 0.0000 to 0.5333; replicates with rows 15
+Q4_expression_tiersAB	real	88	87	5	4	0.0568
+Q4_expression_tiersAB	deg	median 34	median 32	median 3	median 0	median 0.1250; range 0.0000 to 0.2830; replicates with rows 12
+Q4_expression_tiersAB	reach	median 17	median 15	median 2	median 0	median 0.1818; range 0.0000 to 0.3360; replicates with rows 15
+Q5_expression_tiersAB	real	351	286	66	1	0.188
+Q5_expression_tiersAB	deg	median 60	median 56	median 13	median 1	median 0.2095; range 0.0667 to 0.5000; replicates with rows 15
+Q5_expression_tiersAB	reach	median 276	median 223	median 54	median 4	median 0.1782; range 0.0631 to 0.3314; replicates with rows 15
+Q6_expression_tiersAB	real	519	420	105	6	0.2023
+Q6_expression_tiersAB	deg	median 66	median 51	median 15	median 0	median 0.1804; range 0.0000 to 0.4892; replicates with rows 12
+Q6_expression_tiersAB	reach	median 346	median 279	median 84	median 4	median 0.2181; range 0.1259 to 0.4450; replicates with rows 15
+Q6_protein_tiersAB	real	178	148	32	2	0.1798
+Q6_protein_tiersAB	deg	median 15	median 14	median 0	median 0	median 0.0430; range 0.0000 to 0.2025; replicates with rows 9
+Q6_protein_tiersAB	reach	median 90	median 55	median 19	median 1	median 0.4000; range 0.1401 to 1.0000; replicates with rows 13
