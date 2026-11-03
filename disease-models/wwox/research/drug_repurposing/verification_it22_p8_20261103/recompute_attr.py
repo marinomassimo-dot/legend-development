@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+import sys
+if len(sys.argv) > 1 and sys.argv[1] in ("-h", "--help"):
+    print("IT22 P8 verifier recomputation (recompute_attr.py): read-only recomputation of attribution states from the raw Guide to Pharmacology file; needs LEGEND_CATALOG_CACHE; writes nothing but its own output tables.")
+    raise SystemExit(0)
 """Independent recomputation of GtoPdb attribution from the raw interactions file (verifier; written without importing the producer code)."""
 import csv, collections, statistics, sys, os, math
 CACHE = os.environ.get("LEGEND_CATALOG_CACHE")

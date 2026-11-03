@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+import sys
+if len(sys.argv) > 1 and sys.argv[1] in ("-h", "--help"):
+    print("IT22 P8 verifier recomputation (recompute_all.py): read-only recomputation of attribution states from the raw Guide to Pharmacology file; needs LEGEND_CATALOG_CACHE; writes nothing but its own output tables.")
+    raise SystemExit(0)
 """Verifier: recompute the attribution state of every proposal row whose family id is a ChEMBL record, from the raw GtoPdb file, with an independent implementation."""
 import csv, collections, statistics, os, sys
 sys.path.insert(0, os.path.dirname(__file__))
