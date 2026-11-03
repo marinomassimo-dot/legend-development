@@ -1,0 +1,11 @@
+blocker	real	coarse_mean_per_replicate_over_5_sets	deg_mean_per_replicate_over_5_sets	reach_mean_per_replicate_over_5_sets
+arm_has_no_stated_benefit_hypothesis	74	14.5	21.1	32.1
+decided_in_earlier_qualification_record	12	1.1	1.0	3.5
+identity_not_resolved	662	105.4	148.1	408.4
+mechanism_cluster_examined_earlier	34	4.0	5.6	22.2
+modality_antibody_not_small_molecule	6	1.2	3.3	11.3
+modality_gene_product_not_small_molecule	0	0.1	0.2	0.6
+modality_other:antibody drug conjugate_not_small_molecule	0	0.1	0.1	0.1
+modality_protein_or_peptide_not_small_molecule	4	1.9	2.2	8.0
+modality_unknown_not_small_molecule	11	4.6	5.2	12.4
+reach_null_not_confirming	48	20.1	59.3	72.2

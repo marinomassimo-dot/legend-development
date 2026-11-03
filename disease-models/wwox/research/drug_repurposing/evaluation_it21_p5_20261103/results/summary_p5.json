@@ -1,0 +1,68 @@
+{
+ "k_decoys_per_design": 40,
+ "designs": [
+  "coarse",
+  "deg",
+  "reach"
+ ],
+ "fine_designs": [
+  "deg",
+  "reach"
+ ],
+ "control": {
+  "pooled_by_question_like_P2": {
+   "eligible": 141,
+   "clusters": 32,
+   "capped": 13
+  },
+  "p2_published": {
+   "eligible": 141,
+   "clusters": 32,
+   "handed_over": 13
+  },
+  "real_eligible_per_set_rule": 141,
+  "real_spec_rows": {
+   "Q2_expression_tiersAB": 51,
+   "Q4_expression_tiersAB": 87,
+   "Q5_expression_tiersAB": 286,
+   "Q6_expression_tiersAB": 420,
+   "Q6_protein_tiersAB": 148
+  }
+ },
+ "criteria": {
+  "C1_count_sets_above_p95": 0,
+  "C1": false,
+  "C2_share_not_generic_eligible": 0.3759,
+  "C2": false,
+  "C3_sets_above_p95": 0,
+  "C3": false,
+  "C4_sets_above_p95": 1,
+  "C4": false
+ },
+ "decision": "no advantage",
+ "real_eligible": 141,
+ "real_eligible_generic_in_any_fine": 88,
+ "handed_over": {
+  "n": 13,
+  "generic_in_any_fine": 7,
+  "generic_in_both_fine": 1,
+  "beyond_direct": 12,
+  "target_is_need_target": 1,
+  "in_arm_E": 1
+ },
+ "real_spec_rows": {
+  "n": 992,
+  "beyond_direct": 868,
+  "in_arm_E": 119,
+  "target_is_need_target": 78,
+  "direct_on_seed": 5,
+  "linked_to_a_need": 211,
+  "generic_in_any_fine": 450,
+  "generic_in_both_fine": 133
+ },
+ "direct_search_universe": {
+  "arm_E_families": 622,
+  "need_targets": 46,
+  "associations": 3331
+ }
+}

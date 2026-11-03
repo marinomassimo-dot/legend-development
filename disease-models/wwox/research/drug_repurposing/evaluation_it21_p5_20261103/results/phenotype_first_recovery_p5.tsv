@@ -1,0 +1,21 @@
+intervention	seed_set	real_rows	real_arms	coarse_share_of_decoys_with_a_hit	deg_share_of_decoys_with_a_hit	reach_share_of_decoys_with_a_hit
+lithium	Q2_expression_tiersAB	0		0.0	0.0	0.025
+lithium	Q4_expression_tiersAB	0		0.025	0.0	0.0
+lithium	Q5_expression_tiersAB	0		0.075	0.1	0.225
+lithium	Q6_expression_tiersAB	3	mimics	0.025	0.025	0.275
+lithium	Q6_protein_tiersAB	0		0.0	0.125	0.05
+ethosuximide	Q2_expression_tiersAB	0		0.0	0.0	0.0
+ethosuximide	Q4_expression_tiersAB	0		0.0	0.0	0.0
+ethosuximide	Q5_expression_tiersAB	0		0.0	0.0	0.0
+ethosuximide	Q6_expression_tiersAB	0		0.0	0.0	0.0
+ethosuximide	Q6_protein_tiersAB	0		0.0	0.0	0.0
+vigabatrin	Q2_expression_tiersAB	0		0.0	0.0	0.0
+vigabatrin	Q4_expression_tiersAB	0		0.0	0.0	0.0
+vigabatrin	Q5_expression_tiersAB	0		0.0	0.0	0.0
+vigabatrin	Q6_expression_tiersAB	0		0.0	0.0	0.0
+vigabatrin	Q6_protein_tiersAB	0		0.0	0.0	0.0
+apv	Q2_expression_tiersAB	0		0.0	0.0	0.0
+apv	Q4_expression_tiersAB	0		0.0	0.0	0.0
+apv	Q5_expression_tiersAB	0		0.0	0.0	0.0
+apv	Q6_expression_tiersAB	0		0.0	0.0	0.0
+apv	Q6_protein_tiersAB	0		0.0	0.0	0.0
