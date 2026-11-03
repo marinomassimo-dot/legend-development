@@ -5,7 +5,11 @@ Writes, next to this file: forward_snapshot_inputs.tsv, forward_snapshot_vorinos
 forward_snapshot_contrast_cases.tsv.  Run from the repository root:  python3 <this file>
 It is committed BEFORE any reverse analysis of the case (git log shows the order).
 """
-import csv, gzip, os, subprocess, sys
+import sys
+if len(sys.argv) > 1 and sys.argv[1] in ("-h", "--help"):
+    print(__doc__)
+    raise SystemExit(0)
+import csv, gzip, os, subprocess
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = subprocess.check_output(["git", "rev-parse", "--show-toplevel"], cwd=HERE, text=True).strip()

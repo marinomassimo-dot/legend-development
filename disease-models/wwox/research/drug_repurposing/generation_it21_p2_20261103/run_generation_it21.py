@@ -263,8 +263,10 @@ def cmd_direct(a):
 
 
 # ---- novelty / earlier decisions --------------------------------------------------------------------------------------------------------------------
-def earlier_decisions():
-    """name -> (state, source file, label) from the IT9/IT10/IT11 qualification records and the ranking proposal maps."""
+def earlier_decisions(include_p4a=False):
+    """name -> (state, source file, label) from the IT9/IT10/IT11 qualification records and the ranking proposal maps.
+    include_p4a (IT21 V1): also the IT21 P4a qualification records, a produced output that the hand-over did not consume (a rejected chain re-emitted under another member name
+    of the same mechanism cluster was handed over as new)."""
     out = []
     rk = DR / "ranking_it8_p9_20261029"
     labels = {}
@@ -274,6 +276,10 @@ def earlier_decisions():
     for f in ("it9_records.tsv", "it10_records.tsv", "it11_records.tsv"):
         for r in rd(rk / f):
             out.append((r["compound"], r["state"], f"ranking_it8_p9_20261029/{f}#{r['cand_id']}", labels.get(r["cand_id"], "")))
+    p4a = DR / "qualification_it21_p4a_20261103" / "qualification_it21_p4a.tsv"
+    if include_p4a and p4a.exists():
+        for r in rd(p4a):
+            out.append((r["compound"], r["disposition"], f"qualification_it21_p4a_20261103/qualification_it21_p4a.tsv#{r['proposal_id']}", r.get("classification", "")[:60]))
     return out
 
 
@@ -284,7 +290,7 @@ def earlier_state(name, decisions):
     for comp, state, src, label in decisions:
         c = base_name(comp)
         first = base_name(re.split(r"[ (]", comp.strip())[0]) if comp.strip() else ""
-        if n == c or (len(n) >= 6 and n in c) or (len(first) >= 6 and first == n):
+        if n == c or (len(n) >= 6 and n in c) or (len(first) >= 4 and first == n):      # V1: exact first-token match from 4 characters (IOX1 was missed at 6)
             return state, src, label
     return None
 
@@ -389,12 +395,27 @@ def eligible(row, role, fam_meta, decisions):
         return False, "identity_not_resolved"
     if m.get("modality") != "small_molecule":
         return False, f"modality_{m.get('modality') or 'unknown'}_not_small_molecule"
+    if row.get("attribution_state") == "WEAK_ATTRIBUTION":      # IT21 V1: the listed main target is not where the compound acts (attribution_screen_it21.py)
+        return False, "main_target_weak_attribution"
     hyp = "H_HARM" if row["arm"] == "opposes" else "H_PROTECT"
     if not arm_has_stated_benefit(role, hyp):
         return False, "arm_has_no_stated_benefit_hypothesis"
     if earlier_state(row["name"], decisions):
         return False, "decided_in_earlier_qualification_record"
     return True, ""
+
+
+def attribution_note(p):
+    """One sentence for the qualifier: what the local Guide to Pharmacology release says about the main target of this compound (IT21 V1). Affinity, not occupancy or exposure."""
+    st = p.get("attribution_state", "")
+    via = (" Identity joined to its ChEMBL record through the ligand id in the claim name (" + p["identity_via"] + ")." if p.get("identity_via") else "")
+    if st == "ATTRIBUTABLE":
+        return f"main target {p['main_target']} measured at {p['attribution_main_nm']} nM; best measured target {p['attribution_best_target']} at {p['attribution_best_nm']} nM ({p['attribution_fold']}-fold).{via}"
+    if st == "UNMEASURED_AT_MAIN_TARGET":
+        return f"no measured affinity for the main target {p['main_target']} (annotation only); the compound is measured on other targets, best {p['attribution_best_target']} at {p['attribution_best_nm']} nM: the listed target may not be the main action.{via}"
+    if st == "NOT_ASSESSABLE":
+        return "no ligand or no affinity in the local Guide to Pharmacology release: attribution not assessed (unknown, not negative)." + via
+    return f"WEAK: {p['attribution_fold']}-fold weaker than the best target {p['attribution_best_target']}.{via}"
 
 
 def order_key(r):
@@ -462,15 +483,18 @@ def cmd_propose(a):
     import compound_catalog as cc
     import repurposing_search as rs
     R = HERE / "results"
+    OUT = Path(a.out_dir) if a.out_dir else R          # reads stay on R (actions, previous ids); writes go to OUT
+    OUT.mkdir(parents=True, exist_ok=True)
     eng = Path(a.engine_dir)
     # dispositions through the existing function; reach z replaced by the reach run of THIS engine directory
     rows_out, n_by, it9 = D.build(eng, DR)
     cols = D.COLS
     ix = {c: cols.index(c) for c in cols}
-    reach = {}
+    reach, reach_act = {}, {}
     for pr in glob.glob(str(eng / "proposals_p1_*_reach.tsv.gz")):
         sn = os.path.basename(pr)[len("proposals_p1_"):-len(".tsv.gz")][:-len("_reach")]
         reach[sn] = {r["family_id"]: float(r["Z_ind_robust"]) for r in rd(pr)}
+        reach_act[sn] = {r["family_id"]: r["compatible_action"] for r in rd(pr)}
     disp = {}
     for q, rws in rows_out.items():
         for r in rws:
@@ -494,9 +518,22 @@ def cmd_propose(a):
         for s in e.get("status_records") or []:
             if s.get("source") == "ChEMBL" and s.get("max_phase") is not None:
                 phase_of[f] = max(phase_of.get(f, -1), s["max_phase"])
+    v1 = not a.no_v1
+    fb, fl, aff = {}, {}, {}
+    if v1:      # IT21 V1: identity bridge (claim-name ligand id) and attribution screen; both read data the repository already holds
+        import attribution_screen_it21 as AS
+        lig_, aff, _k = AS.load_gtopdb_affinities()
+        bridges = AS.bridge_claim_name_ligands(entries)
+        fb = AS.family_bridge(bridges, fam)
+        fl = AS.family_ligands(entries, fam, bridges, lig_)
+        for f, tgt in fb.items():
+            if f in meta:
+                modality[f] = modality.get(tgt) or modality.get(f)       # the substance is the ChEMBL record's: its modality is that record's
     for f, m in meta.items():
         m["modality"] = modality.get(f)
-    decisions = earlier_decisions()
+        if v1 and f in fb and m.get("has_chembl") != "1":
+            m["has_chembl"], m["identity_via"] = "1", "gtopdb_ligand_claim_name->" + fb[f]
+    decisions = earlier_decisions(include_p4a=v1)
     text = corpus_text()
     threads = load_earlier_threads()
     signed = collections.defaultdict(dict)
@@ -537,11 +574,15 @@ def cmd_propose(a):
         sgn = 1 if s["arm"] == "opposes" else -1
         rz = d["reach_z"]
         zmin = min([sgn * z for z in zs] + ([sgn * float(rz)] if rz != "" else []))
-        d2 = dict(d, seed_specific_all_three_nulls=s["seed_specific_all_three_nulls"])
-        ok, why = eligible(d2, role, meta, decisions)
-        hyp = "H_HARM" if s["arm"] == "opposes" else "H_PROTECT"
         chain = s["edge_chain_main_target_to_seed_1"] or ""
         main = s["contributing_seed_1"].split("|")[4] if s["contributing_seed_1"] and len(s["contributing_seed_1"].split("|")) > 4 else (chain.split(" ")[0] if chain else "")
+        att = None
+        if v1:
+            import attribution_screen_it21 as AS
+            att = AS.attribution(fl.get(s["family_id"], set()), main, aff)
+        d2 = dict(d, seed_specific_all_three_nulls=s["seed_specific_all_three_nulls"], attribution_state=(att or {}).get("state", ""))
+        ok, why = eligible(d2, role, meta, decisions)
+        hyp = "H_HARM" if s["arm"] == "opposes" else "H_PROTECT"
         status = proposal_status(d["disposition"], s["arm"])
         dec = earlier_state(s["name"], decisions)
         proposals.append(dict(
@@ -557,6 +598,12 @@ def cmd_propose(a):
             named_in_legend_material="yes" if (named_in_corpus(s["name"], text) or earlier_thread(s["name"], s["family_id"], threads)) else "no",
             target_named_in_legend_material="yes" if named_in_corpus(main, text) else "no",
             handoff_eligible="yes" if ok else "no", handoff_blocker=why, evaluation_forbidden_on=s["evaluation_forbidden_on"]))
+        if v1:
+            sib = fb.get(s["family_id"]) or next((t for t, c_ in fb.items() if c_ == s["family_id"]), "")
+            proposals[-1].update(identity_via=meta.get(s["family_id"], {}).get("identity_via", ""), attribution_state=att["state"], attribution_fold=att["fold"],
+                                 attribution_best_target=att["best_target"], attribution_best_nm=att["best_nm"], attribution_main_nm=att["main_nm"],
+                                 sibling_family=sib, sibling_z_reach=reach.get(s["seed_set"], {}).get(sib, "") if sib else "",
+                                 sibling_compatible_action=reach_act.get(s["seed_set"], {}).get(sib, "") if sib else "")
         if ok:
             elig_rows.append(proposals[-1])
     assign_ids(proposals, R / "proposals_it21.tsv")
@@ -610,6 +657,7 @@ def cmd_propose(a):
             target_axis_named_in_legend_material=p["target_named_in_legend_material"],
             abstentions=(f"{len(wh)} withheld row(s) on this record ({collections.Counter(r['reason_class'] for r in wh).most_common(1)[0][0]})" if wh else "none on this record"),
             earlier_thread=p["earlier_thread"],
+            **({"attribution_note": attribution_note(p)} if "attribution_state" in p else {}),
             novelty_perimeter=(("earlier LEGEND thread (" + p["earlier_thread"] + ")") if p["earlier_thread"] else "named in LEGEND cards/units" if p["named_in_legend_material"] == "yes" else
                                "not named in LEGEND cards, units, earlier exclusion lists or IT9/IT10 candidate lists (perimeter of this module only, not a literature claim)"),
             evaluation_forbidden_on=p["evaluation_forbidden_on"]))
@@ -617,15 +665,15 @@ def cmd_propose(a):
         check_status(h["status"])
     for p in proposals:
         check_status(p["status"])
-    write_tsv(R / "proposals_it21.tsv", sorted(proposals, key=lambda p: p["proposal_id"]))
-    write_tsv(R / "handoff_it21.tsv", handoff)
+    write_tsv(OUT / "proposals_it21.tsv", sorted(proposals, key=lambda p: p["proposal_id"]))
+    write_tsv(OUT / "handoff_it21.tsv", handoff)
     carried = [p for p in proposals if p["earlier_decision"]]
-    write_tsv(R / "carried_prior_decisions.tsv", carried, ["proposal_id", "question", "hypothesis", "compound", "earlier_decision", "main_target", "zmin", "n_origins"])
+    write_tsv(OUT / "carried_prior_decisions.tsv", carried, ["proposal_id", "question", "hypothesis", "compound", "earlier_decision", "main_target", "zmin", "n_origins"])
     # cluster map: every mechanism cluster with its members (alternatives), handed or not
     cl = collections.defaultdict(list)
     for p in proposals:
         cl[(p["question"], p["hypothesis"], p["main_target"])].append(p)
-    write_tsv(R / "mechanism_clusters_it21.tsv", [dict(question=k[0], hypothesis=k[1], main_target=k[2], n_families=len(v), n_base_names=len({x["base_name"] for x in v}),
+    write_tsv(OUT / "mechanism_clusters_it21.tsv", [dict(question=k[0], hypothesis=k[1], main_target=k[2], n_families=len(v), n_base_names=len({x["base_name"] for x in v}),
                                                          n_eligible=sum(1 for x in v if x["handoff_eligible"] == "yes"), handed_over=sum(1 for x in v if x["proposal_id"] in hid),
                                                          target_named_in_legend_material=v[0]["target_named_in_legend_material"], earlier_decisions_in_cluster=v[0]["cluster_earlier_decisions"],
                                                          examples="; ".join(sorted({x["compound"] for x in v})[:6])) for k, v in sorted(cl.items())])
@@ -634,7 +682,7 @@ def cmd_propose(a):
                 blockers=dict(blockers), mechanism_clusters=len(cl), carried_prior_decisions=len(carried),
                 handed_over_ids=[h["proposal_id"] for h in handoff], dispositions={f"{q}|{arm}|{d}": n for (q, arm, d), n in sorted(n_by.items())},
                 selection_rule=HANDOFF_RULE)
-    (R / "summary_it21.json").write_text(json.dumps(summ, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+    (OUT / "summary_it21.json").write_text(json.dumps(summ, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps({k: v for k, v in summ.items() if k != "selection_rule"}, indent=1, sort_keys=True))
 
 
@@ -643,6 +691,8 @@ if __name__ == "__main__":
     ap.add_argument("cmd", choices=["engine", "withdrawn", "propose", "anchors", "direct", "control", "all"])
     ap.add_argument("--control-dir", default="")
     ap.add_argument("--engine-dir", default=str(HERE / "results" / "engine"))
+    ap.add_argument("--out-dir", default="", help="propose: write the tables here instead of results/ (default unchanged)")
+    ap.add_argument("--no-v1", action="store_true", help="propose: switch the IT21 V1 identity bridge and attribution screen off (the control: reproduces the committed tables)")
     a = ap.parse_args()
     if a.cmd in ("engine", "all"):
         cmd_engine(a)
