@@ -1,0 +1,1098 @@
+{
+ "002544584dfc": {
+  "src": "en",
+  "text": "Conditional hypothesis: the drug-side action is curated and its one reference was read at abstract level; no measurement in a WWOX-deficient neural cell connects the lysosomal step to the allele (no ranked unit, so no evaluation depth applies: this is not a depth of zero)"
+ },
+ "01fe147e4f17": {
+  "src": "en",
+  "text": "A peptide inhibitor of the chaperone HSC70 (HSPA8) used as a cell-level probe, with lysosomal and genetic controls (identified by its ChEMBL record below)"
+ },
+ "03f48d9b64a8": {
+  "src": "it",
+  "text": "Capire se l'aumento di MYC nella glia radiale e' una causa, un marcatore dello stato progenitore o una conseguenza del ciclo cellulare, e se il deficit dei marcatori di strato corretto dal gene nei neuroni indica un compartimento raggiungibile dopo la nascita."
+ },
+ "050ae835269e": {
+  "src": "en",
+  "text": "The NRF2 (KEAP1) axis, genetic arm before any compound"
+ },
+ "0576439dbdf4": {
+  "src": "it",
+  "text": "quantità):"
+ },
+ "0608602d5cd8": {
+  "src": "en",
+  "text": "Queried: this need's two observation rows; the lithium unit, its caveat rows and its counter-statements; the search layer over the four kinase-axis targets (588 associations, 526 families, none direction-coherent because the need direction is unresolved). The opposing action on the second need is recorded in this module's own need file."
+ },
+ "066e3e1ce5ab": {
+  "src": "en",
+  "text": "Both arms of this need are explicitly conditional and neither is established, and the module has already refused to read agreement between two electrophiles as evidence of pathway dependence. A genetic arm answers the dependence question that no compound pair can answer."
+ },
+ "06822686c175": {
+  "src": "en",
+  "text": "Does lowering KEAP1 or raising NRF2 change a functional readout in a WWOX-deficient neural cell, in the direction the two conditional arms of this need assume?"
+ },
+ "098bc6a615c5": {
+  "src": "en",
+  "text": "That an inhibitor of the DNA-damage response is a lever for a WWOX-deficient developing brain."
+ },
+ "0a4e86d20af4": {
+  "src": "en",
+  "text": "Moderate (pattern documented; no thyroid-axis datum)"
+ },
+ "0a4ec8b00343": {
+  "src": "en",
+  "text": "Cell probe now; systemic use limited"
+ },
+ "0b7d6ffd8755": {
+  "src": "en",
+  "text": "Glial inflammatory tone"
+ },
+ "0b81342e079e": {
+  "src": "en",
+  "text": "Blockade of the T-type calcium current by a proposed pair of approved agents, to verify isoform reach against the carded T-type agents"
+ },
+ "0be03bbf61e9": {
+  "src": "it",
+  "text": "dataset murino (P17)"
+ },
+ "0ce1153dc28b": {
+  "src": "it",
+  "text": "solo se esistono archi WWOX curati che raggiungono i bersagli dei composti"
+ },
+ "0d73fdef9cdc": {
+  "src": "en",
+  "text": "No scenario in the record makes over-activity of this response the harmful process; if the response is protective and already reduced, an inhibitor aggravates it. It is held as a harm flag, not a lever. Competence of the response in post-mitotic WWOX-deficient neurons is unmeasured."
+ },
+ "0d7cc1bfbe47": {
+  "src": "en",
+  "text": "Whether a partial, clinically achievable block suffices, and whether the carded effect is a subunit effect or a pore-block effect. A pore blocker's potency depends on voltage and on magnesium, so the unreported bath is itself the obstacle."
+ },
+ "0d8e9c90b659": {
+  "src": "en",
+  "text": "Queried: the IT9 P3 and IT21 P4a records of this module (the thread was generated and excluded in IT9, never qualified before IT21) and a name search on 2026-11-03. This is a re-emitted thread, not a new relation."
+ },
+ "0df87d071310": {
+  "src": "en",
+  "text": "Potency is compared only between measures of the same type; unlike measures are kept side by side and never turned into an exclusion. 20 proposals blocked on weak target attribution became 5 (the verifier's lower-bound rule restored one); the cautious case (a pan-HDAC inhibitor 2,769-fold weaker at the listed target, same measure type) stays blocked."
+ },
+ "0fc1e5c79db3": {
+  "src": "en",
+  "text": "Before any ISR-attenuating compound can be ordered: in a WWOX-deficient HUMAN neural system, does the ISR run high or low?"
+ },
+ "11260e3b1080": {
+  "src": "it",
+  "text": "Capire se la risposta integrata allo stress è attiva nelle cellule neurali prive di WWOX, se compensa o danneggia e quanto dipende dall'attività di rete: oggi il segno è discordante."
+ },
+ "12a627fd20ce": {
+  "src": "it",
+  "text": "Capire se l'aggiunta del gene giova solo se data nei primi giorni di vita (prevenzione) o anche dopo la comparsa del fenotipo, e se la dose intermedia distingue soglia da gradiente."
+ },
+ "13e3d1c623c2": {
+  "src": "en",
+  "text": "Repeat the slice burst assay with the magnesium concentration reported, a partial-block agent beside the tool compound, and the untreated same-genotype comparator."
+ },
+ "163545e4bfce": {
+  "src": "en",
+  "text": "Genetic KEAP1 lowering with a functional readout in the WWOX-deficient neural system, isogenic control, before any electrophile is compared."
+ },
+ "177992f07455": {
+  "src": "en",
+  "text": "In a seizure-free neuron plus oligodendrocyte-precursor co-culture, does an agonist of the receptors for thyroid hormone release the maturation block seen after neuronal WWOX loss, and does it do so only in the WWOX-deficient condition?"
+ },
+ "18f5ff936c8e": {
+  "src": "it",
+  "text": "Capire se la differenza di glucosio a P10 è reale e se una dose del vettore la corregge."
+ },
+ "1903592fd41e": {
+  "src": "en",
+  "text": "No change at step 0 (axis not engaged), or AhR-dependent harm in precursors."
+ },
+ "1ac2249b3bbf": {
+  "src": "it",
+  "text": "Precedente in fibroblasti umani a livello di abstract; le cellule WWOX-deficienti richiedono una richiesta di accesso solo in bozza, non inoltrata da qui."
+ },
+ "1bd991c0740c": {
+  "src": "en",
+  "text": "Queried: this need's eleven observation rows and their readout levels; the ISR card and its assertions; the search layer over the eight ISR targets (78 associations, 56 families, none direction-coherent because the need direction is unresolved). The gap is a missing measurement in the sources this module has read, not a claim about the ISR literature."
+ },
+ "1ce3795a7d2b": {
+  "src": "en",
+  "text": "INV-14"
+ },
+ "1db9251bd119": {
+  "src": "en",
+  "text": "Generated by LEGEND from the myelination need (IT20)."
+ },
+ "1f475a336995": {
+  "src": "en",
+  "text": "A decision about one molecule no longer blocks every molecule that shares its target: it travels only as far as its own reason (the molecule's own potency or label stays with it; a refuted premise still closes the arm it belongs to). 69 proposals were blocked by the old rule; 24 stay closed (premise refuted), 45 are released to be judged on their own data, none promoted."
+ },
+ "1fb921424dfb": {
+  "src": "en",
+  "text": "WWOX-system: a T-type blocker suppressed the late phase of the provoked seizure score in the null mouse, one experiment, genotype specificity not established by an interaction. Catalogue: direction-coherent blocker actions on CACNA1G, CACNA1H and CACNA1I, at group and single-protein level, from curated mechanism rows."
+ },
+ "2266079d3554": {
+  "src": "en",
+  "text": "The documented consequence of inhibiting this enzyme in rodents is a pro-convulsant effect that inositol reverses, which predicts aggravation, not the protection seen; the protection also appears in wild-type littermates, so it is not specific to WWOX loss. The precedent is an analogy from another model (the drug together with low-dose pilocarpine), not a measurement in the Wwox assay, so it disfavours the route and does not close the assay question; the same mouse paper also ran a pilocarpine model in Wwox mice, so the objection that the provocations differ is testable in the same system."
+ },
+ "23df7fae7383": {
+  "src": "en",
+  "text": "Seizure-free neuron plus precursor co-culture with wild-type and WWOX-deficient neurons: the agonist against vehicle and against hormone-depleted medium, with a receptor-isoform-selective control; read precursor and mature-cell counts. Correction in both genotypes means non-specific maturation; correction only in the deficient condition opens a pre-onset in vivo question; no change closes the route."
+ },
+ "23f13b85d1f9": {
+  "src": "en",
+  "text": "This is the thread with real human reports behind it and the one most likely to be read as a recommendation. The module already holds a series in which symptomatic response and developmental outcome did not move together, so the useful investigation is the separation itself, not another symptomatic observation."
+ },
+ "241d57e6d936": {
+  "src": "en",
+  "text": "Queried: this need's three observation rows; the pro-myelinating class unit and its abstention; the search layer over the six myelination targets (546 associations, 313 families, none direction-coherent). The emptiness is a vocabulary mismatch this package measured, not a claim that no pro-myelinating literature exists."
+ },
+ "266b8f78f05d": {
+  "src": "en",
+  "text": "Dichloroacetate (see its card) and inhibition of the pyruvate dehydrogenase kinases"
+ },
+ "2bbdf11dd6e5": {
+  "src": "it",
+  "text": "Capire se vigabatrin o CPP-115 aggiungono danno alla mielina in un modello giovanile privo di Wwox."
+ },
+ "2e7e81130d1a": {
+  "src": "en",
+  "text": "BTK detected in the NPY-producing cell class with NPY following BTK knockdown; BTK only in microglia moves the idea to another proposal."
+ },
+ "2f8732bc88cb": {
+  "src": "en",
+  "text": "New molecule for LEGEND in a known thread"
+ },
+ "3168a29cd7dc": {
+  "src": "it",
+  "text": "Capire quale di tre letture spiega lo scoppio di attività nelle fette (guadagno NMDAR, dipendenza permissiva, spinta AMPAR) e se dipende dal blocco da magnesio; serve prima la corrente NMDAR isolata (E1). IT13: servono bracci WT+WWOX e WWOX mutato (morto), l'organoide come unità, cieco, e due silenziatori indipendenti con lavaggio; la scarica da sola resta sintomatica."
+ },
+ "32e98ceb59e0": {
+  "src": "en",
+  "text": "The assay exists and the compound is carded; this is the control arm the original design omitted."
+ },
+ "33f1d5bb1e2d": {
+  "src": "en",
+  "text": "Agonist probe for the receptors of thyroid hormone (a clinical-stage analogue, identified by its ChEMBL record below), with liothyronine as the approved comparator"
+ },
+ "3477a60374eb": {
+  "src": "en",
+  "text": "position unchanged from IT20 (rank 1): No IT21 input changes the position. The row text was corrected in IT21 P1 (glycaemia is not called prevented)."
+ },
+ "354174b33207": {
+  "src": "en",
+  "text": "A concentration window with H3K9me3 up, HIF1alpha unchanged and glycolytic genes down, reproduced by KDM4 knockdown (only if the role of HIF is first shown protective)."
+ },
+ "364bcad629f4": {
+  "src": "en",
+  "text": "Does a clinically used NMDAR antagonist reproduce the burst suppression obtained with the tool compound, at a stated extracellular magnesium concentration?"
+ },
+ "3799ce5fa621": {
+  "src": "en",
+  "text": "Its strongest documented actions are on other deacetylases than the one the chain needs, the single reference for the edge is a knockdown in non-neural cells, so the attribution fails as written. (The two transcripts also move in opposite directions in the organoid, but that is a descriptive ratio that says nothing about enzyme activity and is not a reason.) This says nothing about whether the compound is inactive."
+ },
+ "38352ccdb83c": {
+  "src": "it",
+  "text": "Reattività gliale"
+ },
+ "3b261fe99e59": {
+  "src": "it",
+  "text": "Rete con quattro archi HIF1A duplicati (già presenti nella rete esterna) contro rete solo esterna (non verifica la conoscenza WWOX; nessun valore aggiunto misurabile)"
+ },
+ "3c554cdbf4d7": {
+  "src": "en",
+  "text": "It is the only broad-recovery path found in IT21, and it depends on the allele: the chase and knockdown test either closes the route or turns a detectable-protein result into a function question. It enters at rank 6 on that ground, below the ten-row line, behind the premise measurements and behind the two rows that carry a risk flag or human clinical reports, not on novelty; the compound is not a development candidate."
+ },
+ "3c7d9427840a": {
+  "src": "en",
+  "text": "Weak; sign contested; no measurement in a Wwox glia; brain exposure unmeasured"
+ },
+ "3d05ab636d8d": {
+  "src": "it",
+  "text": "Capire se la sensibilità all'etosuccimide riflette il canale T, dato che non esiste alcuna misura del canale T. IT13: il catalogo elenca solo il canale T, ma i dati dello stesso articolo mostrano anche blocco GIRK; i trascritti P17 non decidono."
+ },
+ "3d3c8dccc85e": {
+  "src": "en",
+  "text": "Step 0: nuclear NRF2, NQO1 activity and a ROS reporter in isogenic WWOX-deficient versus corrected neural cultures at baseline and after an oxidative challenge; then probe versus NFE2L2 knockdown."
+ },
+ "3e043aae172d": {
+  "src": "en",
+  "text": "What did not change: the number of generated proposals from the old inputs (980, only selection changed), the absence of any qualified hypothesis, and the earlier retrospective result (WWOX seed identity not separable from matched random sets on the measured properties only)."
+ },
+ "3e893fac5fec": {
+  "src": "en",
+  "text": "The slice preparation exists; the change is a reported bath and one added arm."
+ },
+ "3eebc821a49d": {
+  "src": "en",
+  "text": "E4 - card reviewed, 12 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)"
+ },
+ "3ef2c98d4f63": {
+  "src": "en",
+  "text": "Whether the neuron still emits the activity-dependent signal that a pro-myelinating agent would amplify. If it does not, the whole class is not a lever here regardless of its pharmacology."
+ },
+ "3f6e29d745c3": {
+  "src": "it",
+  "text": "Laboratorio con linee isogeniche di organoidi e una leva MYC inducibile; linee non disponibili (non nota); dati single-cell depositati con possibile richiesta di accesso."
+ },
+ "4063d0f09dbe": {
+  "src": "en",
+  "text": "Whether PDH flux is actually reduced. The lever's direction is derived from the chain, not from a measurement, and the available signs contradict it."
+ },
+ "40da6e5a79b9": {
+  "src": "en",
+  "text": "Every partial-benefit lever in this module is ordered as a bridge to, or a substitute for, restoration; whether restoration works after onset decides which of those two framings is the real one, so one result re-reads the whole list."
+ },
+ "411684173502": {
+  "src": "it",
+  "text": "Q06 · Dentro il rumore in ogni contesto misurato."
+ },
+ "4125f4ddb460": {
+  "src": "en",
+  "text": "An inhibitor of the kinase BTK proposed to restore NPY through STAT3"
+ },
+ "427f1824cd7c": {
+  "src": "en",
+  "text": "position unchanged from IT20 (rank 2): No IT21 input changes the position. The row text was corrected in IT21 P1 (the pair is a proposal to verify, not a documented discriminating pair)."
+ },
+ "437a9b30f72e": {
+  "src": "it",
+  "text": "Il modulo si trasferisce a un contrasto indipendente di perdita di WWOX (topo P47T, ippocampo)"
+ },
+ "43f23e7d0884": {
+  "src": "en",
+  "text": "WWOX-system transcript-level only and contradictory: the knockout organoid shows the ISR target set lower, one shRNA library per arm shows it higher, and the designs are not comparable. No ATF4 protein and no eIF2-alpha phosphorylation measurement exists in the sources read."
+ },
+ "444e8904b150": {
+  "src": "it",
+  "text": "non nota (composto di uno sponsor, nessuna evidenza di accesso ottenuta qui)."
+ },
+ "445a4b2cf09a": {
+  "src": "en",
+  "text": "Queried: this need's eight observation rows, the two NMDAR cards and their assertions, and the search layer over the eight receptor-subunit targets (709 associations, 187 families). The module's own need file records that the clinically used agents were not found to have been given to a WWOX system in the sources read."
+ },
+ "44a508f73808": {
+  "src": "it",
+  "text": "riferimento senza segno: sovrapposizione dei bersagli del composto con i regolatori di primo ordine dei geni, corretta per frequenza"
+ },
+ "44e42297575e": {
+  "src": "it",
+  "text": "risolvere una premessa"
+ },
+ "4519813edc31": {
+  "src": "it",
+  "text": "Esperimento già pubblicato da un solo laboratorio; animali e linea non disponibili (non nota). Denominatori presso gli autori delle serie; contatto fuori ambito."
+ },
+ "4577c06f509a": {
+  "src": "it",
+  "text": "Q11 · Segni opposti tra linee, topo e organoidi di pazienti; nel topo è l'effetto di composizione atteso. Il documento P4 lo legge come non risolto."
+ },
+ "46f1eae52d16": {
+  "src": "en",
+  "text": "The chain as written: that BTK acts in the NPY-producing cell of the WWOX-deficient systems that carry the seed."
+ },
+ "48a152b1b896": {
+  "src": "en",
+  "text": "Development feasibility: low as a drug (a peptide whose one distribution study shows lungs and spleen, with no CNS exposure) and high as a cell-level probe. It depends on the allele and cannot serve a variant that makes no protein."
+ },
+ "4a0535568293": {
+  "src": "it",
+  "text": "Caso più forte oggi, specifico per WWOX (nel topo nullo)."
+ },
+ "4a6fd650fb3a": {
+  "src": "it",
+  "text": "IL-1-axis and JAK-STAT agents as a class (IL-1 receptor antagonist via IL1R1; caspase-1 inhibitor via CASP1; IL-1beta antibodies; NLRP3 inhibitor; JAK2 inhibitors)"
+ },
+ "4ae99e2edac2": {
+  "src": "en",
+  "text": "E3 - card reviewed with assertions; no WWOX-side result read beyond abstract"
+ },
+ "4d6578e29718": {
+  "src": "en",
+  "text": "INV-13"
+ },
+ "50b28c98d057": {
+  "src": "en",
+  "text": "position unchanged from IT20 (rank 3): No IT21 input changes the position."
+ },
+ "53e618810345": {
+  "src": "it",
+  "text": "Laboratorio con linee neurali isogeniche e una fonte di microglia; disponibilità non nota."
+ },
+ "54c7b0203090": {
+  "src": "en",
+  "text": "Inositol add-back reverses the lithium effect in the Wwox-null assay (then the GSK3 attribution falls and the enzyme becomes a lever with an unexplained sign)."
+ },
+ "54ec8d0b1d06": {
+  "src": "en",
+  "text": "NRF2 tone and redox state"
+ },
+ "5561cde28ac2": {
+  "src": "en",
+  "text": "AAV9 gene addition of human WWOX (gene therapy; see the gene-addition cards)"
+ },
+ "556c9a6f6d08": {
+  "src": "en",
+  "text": "Carded clinical thread: GABA-transaminase inactivators."
+ },
+ "562b73f805e4": {
+  "src": "en",
+  "text": "position unchanged from IT20 (rank 3): No IT21 input changes the position. The thyroid-hormone probe row asks the receptor-responsiveness question on the same axis; the two are not merged because one measures the neuron's signal and the other the precursor cell's response."
+ },
+ "5676cadaba90": {
+  "src": "en",
+  "text": "E3 - card reviewed with assertions; no WWOX-side result read beyond abstract; class pharmacology table (IT7 P5)"
+ },
+ "57bbe22323a3": {
+  "src": "en",
+  "text": "Queried: the ethosuximide and apinocaltamide units, their assertion rows and caveat rows, and the per-need position table. The missing interaction test is recorded in this module's own caveats, not inferred from absence."
+ },
+ "5867b942f879": {
+  "src": "en",
+  "text": "Seven of eight new hand-overs were qualified on their own data and end inconclusive or conditional. Seven of the 16 hand-overs rest on one organoid deposit and six flip direction if the unknown role of their question flips; the main limit is not the number of candidates but missing measurements in a WWOX-deficient neural system."
+ },
+ "58c7e2cffd4b": {
+  "src": "it",
+  "text": "Il modulo non è dimostrato come tratto riproducibile della perdita di WWOX: i risultati sui composti non hanno rilevanza WWOX dimostrata."
+ },
+ "592c062bb94b": {
+  "src": "it",
+  "text": "Q12 · Più bassi nei quattro contrasti murini, che sono un solo modello; nessun altro contesto è stato calcolato."
+ },
+ "595b2de50fd2": {
+  "src": "en",
+  "text": "AhR-pathway activation is adverse in neural precursors in toxin studies; the pathway-target transcript is higher while NFE2L2 is lower."
+ },
+ "5ba82d5d53ac": {
+  "src": "en",
+  "text": "Oligodendrocyte maturation and myelination"
+ },
+ "5cd356f84317": {
+  "src": "en",
+  "text": "position unchanged from IT20 (rank 5): Position unchanged from IT20. The ten-row ceiling does not displace a row that carries a risk flag or human clinical reports in favour of a conditional probe (the rule stated in the curation block of the context), so this row stays at rank 5 and the two new IT21 conditional probes sit at rank 6, below the line. New IT21 input: the inositol-monophosphatase route to the lithium effect is DISFAVOURED_BY_SIGN_PRECEDENT (an analogy from the lithium-pilocarpine model, not a measurement in the Wwox assay; see what the generator rules out). That result is not what supports this row's concern that the effect is not specific to WWOX loss: the concern comes from the +/+ arm of Cheng 2020 Figure 7d, where lithium suppresses the seizure stage as in the null. Cheng 2020 also ran a pilocarpine model in Wwox mice, so the objection that the two provocations differ is testable in the same system; the inositol arm of that proposal is folded into this row's next test."
+ },
+ "5e1261630425": {
+  "src": "it",
+  "text": "Le famiglie sono scelte per disponibilità di dati, non per un'analisi del catalogo; una sola concentrazione e poche misure nel tempo."
+ },
+ "5edba0003d0f": {
+  "src": "en",
+  "text": "Which sign the ISR actually has at protein level in a WWOX-deficient human neural cell. Until that is measured, an ISR-attenuating compound and an ISR-potentiating compound are equally defensible, which is the definition of an unqualified axis."
+ },
+ "5ef585ced049": {
+  "src": "en",
+  "text": "Which T-type isoform carries the suppression of the provoked seizure phase, and does the effect depend on the genotype?"
+ },
+ "5f18b5a7ddaf": {
+  "src": "en",
+  "text": "ATF4 protein and eIF2-alpha phosphorylation by immunoblot in a WWOX-deficient human neural line against an isogenic control, one differentiation stage, no compound involved."
+ },
+ "5fe4b6e74a85": {
+  "src": "en",
+  "text": "The published provoked-seizure design with a drug-by-genotype interaction term and the proposed pair beside the carded agent, after the potency of each agent on the three isoforms has been qualified in one assay and species; identical provocation and scoring."
+ },
+ "5ff1be97b7ac": {
+  "src": "en",
+  "text": "WWOX-system: blocking NMDAR abolished the burst in the WWOX-deficient slice, one drug, one preparation. The recording bath magnesium is not stated in the source, and the incubation solution already contains magnesium."
+ },
+ "6113969a50d8": {
+  "src": "en",
+  "text": "The module's one T-type result is complex-or-group level with no isoform datum and no drug-by-genotype interaction test, and its own need file names both gaps. Two approved compounds are proposed as a pair that MAY differ in isoform reach; the pair is a proposal to verify, not a documented discriminating pair: the catalogue difference between them (one T-type target row for the first agent, three for the second) comes from annotation completeness, not from a documented functional selectivity, because in the catalogue both are tagged selectivity Not Determined and no fitted potency on the three isoforms is carried for the first agent (ChEMBL holds no calcium-channel activity for it), while the second has Kd values on all three only from synthesis papers that used it as a reference, in different assays and conditions. Absence of a subtype in a catalogue is not inactivity. Both agents also act on other targets (L-type channels for one, receptors beyond the channel family for the other), so the potency measures in one assay and species, at the concentration reached in the animal, are the first step."
+ },
+ "61503ef49d53": {
+  "src": "en",
+  "text": "Conditional; human precedent is a hormone-entry defect without a neurodevelopmental endpoint"
+ },
+ "6212490d6f18": {
+  "src": "en",
+  "text": "An inhibitor of iron-dependent demethylases and hydroxylases proposed to lower HIF activity through KDM4C"
+ },
+ "63a54671a54d": {
+  "src": "en",
+  "text": "The chain that motivates this lever predicts a PDH block, and the two available data point the other way: the kinase transcript is down and the one human activity measurement shows no difference. Ordering the compound before the premise is measured is how a plausible chain becomes a wasted experiment."
+ },
+ "6929f2e1854f": {
+  "src": "en",
+  "text": "An established assay on material the module already uses."
+ },
+ "69dcffb1f252": {
+  "src": "en",
+  "text": "Pro-myelinating agents (a class; no single compound)"
+ },
+ "6a5533f711c0": {
+  "src": "en",
+  "text": "Queried: this need's three observation rows; the NRF2-axis unit and the IT10 and IT11 qualification records on it; the search layer over NFE2L2 and KEAP1 (890 associations, 863 families, none direction-coherent because the need direction is unresolved)."
+ },
+ "6a7132220b2b": {
+  "src": "it",
+  "text": "Imbuto dal catalogo ai valutati: che cosa è contato, in quale unità"
+ },
+ "6cb32a5e5e01": {
+  "src": "it",
+  "text": "Q01 · Solo segni non risolti: nel topo cala in tutti e quattro i contrasti ma la differenza poggia in parte sul gruppo di controllo; non è una misura dell'attività."
+ },
+ "6dcb70653636": {
+  "src": "en",
+  "text": "A record-level analysis on material already in the module; no experiment."
+ },
+ "6e3b73bb3129": {
+  "src": "en",
+  "text": "This is the only axis in the module with a measured WWOX-system drug readout, and it was obtained with a full competitive block by a tool compound. Whether a partial block reproduces it is the step between a perturbation result and an orderable question; the magnesium dependence makes the result uninterpretable unless the bath is reported."
+ },
+ "6e4a8421c3c4": {
+  "src": "en",
+  "text": "Correction in both genotypes (non-specific), or no change, or correction only with the receptor-beta-leaning control."
+ },
+ "6e4c947de36f": {
+  "src": "it",
+  "text": "Q02 · Organoide più basso, linea shRNA più alta; il topo è dentro il rumore e non rompe il pareggio."
+ },
+ "6fabb5546b60": {
+  "src": "en",
+  "text": "BTK is barely detected in the WWOX-deficient organoid and is not in the human progenitor table (a table-membership fact, not a measured zero), NPY is near zero where it was measured, both edges come from other cell types, and the compound has documented actions on unrelated proteins. A proposal can be unreadable where it was generated."
+ },
+ "714571f82c43": {
+  "src": "it",
+  "text": "ratto"
+ },
+ "7193b7f13c82": {
+  "src": "en",
+  "text": "Disfavoured, not ruled out (DISFAVOURED_BY_SIGN_PRECEDENT): that inositol monophosphatase inhibition contributes to the protection lithium gives in the Wwox seizure assay, or that this enzyme is a lever for it."
+ },
+ "71ef438aa92a": {
+  "src": "en",
+  "text": "Ethosuximide (see its card) and the carded T-type thread"
+ },
+ "74f2218ad0d4": {
+  "src": "en",
+  "text": "Whether an interaction term survives; a wild-type effect of the same size would move this thread out of its group without any new compound being involved."
+ },
+ "770d346f88ca": {
+  "src": "en",
+  "text": "Whether the carded effect is a T-type effect at all, which isoform carries it, and whether it is genotype-dependent. Whether the two agents really differ in isoform reach at the concentrations used is itself unmeasured. The same effect from two compounds is compatible with a common target (the T-type class) and does not by itself weaken the T-type attribution; it only fails to discriminate isoforms. What would weaken the attribution is no effect of either agent at on-target exposure, an effect that tracks off-target activity rather than T-type potency, or an equal effect in wild type (no genotype dependence)."
+ },
+ "775302e45683": {
+  "src": "it",
+  "text": "via della firma trascrizionale: opposizione del modulo in cellule simili ai progenitori, valutata in cellule simili ai neuroni"
+ },
+ "776a4e50c7e0": {
+  "src": "en",
+  "text": "Queried: this need's three observation rows; the inactivator unit, its caveats and the safety flag; the chloride-gradient and inhibitory-hypofunction needs for the mechanism argument that contradicts the reports."
+ },
+ "777f53f919ef": {
+  "src": "it",
+  "text": "Capire se, prima della prima scarica, la densità gliale in un cervello privo di Wwox è sotto, pari o sopra il selvatico: il segno è discordante tra specie e la scheda J01 si astiene."
+ },
+ "7876a323a562": {
+  "src": "en",
+  "text": "In vitro tool compound only"
+ },
+ "79a188d2a6e2": {
+  "src": "en",
+  "text": "A selective EZH2 (PRC2) inhibitor, a tool compound for mouse glial systems"
+ },
+ "7a8d260186f6": {
+  "src": "en",
+  "text": "position unchanged from IT20 (rank 4): No IT21 input changes the position. One IT21 rejection (an inhibitor of class I histone deacetylases proposed to lower SLC2A1) touches the same glycolysis theme and is listed under what the generator rules out."
+ },
+ "7ad35f135a41": {
+  "src": "it",
+  "text": "; 95° percentile della distribuzione nulla appaiata, circa 0,39 (estrazione del produttore)"
+ },
+ "7c190faff741": {
+  "src": "en",
+  "text": "Outside WWOX for the pharmacology; WWOX-system only for the raised reactive-oxygen readouts, whose sign differs by context between a fly and late-passage fibroblasts and does not reconcile. IT22: the organoid NFE2L2 transcript (0.75x) is now a generator input (new question, role unknown, second system failed its control); the generator returns a topical AhR-pathway agent and agents that block EZH2 as conditional rows, and the canonical NRF2 activators only as diagnostic direct hits on the seed gene itself."
+ },
+ "7c63d75ce699": {
+  "src": "it",
+  "text": "un contrasto umano neurale privo di WWOX, replicato, con lettura proteica o di attività appaiata; una coorte P47T più grande"
+ },
+ "7d03763d1251": {
+  "src": "en",
+  "text": "Whether the block is receptor-responsive and causal, or a consequence of seizures, or of the neuron's own signal being absent (the pro-myelinating-class row asks the premise from the signal side). The agent also has systemic actions that oppose the glycaemia need; an effect on seizure threshold was not looked up. IT22: the seizure-threshold question is now looked up and is mixed, not closed."
+ },
+ "7d390d75ffb7": {
+  "src": "en",
+  "text": "position unchanged from IT20 (rank 4): No IT21 input changes the position. An ALOX15 proposal on the same axis was left inconclusive in IT21 (no neural WWOX measurement). IT22: unchanged position; a new generator input reaches the axis but adds no measurement."
+ },
+ "7d8949a5b207": {
+  "src": "en",
+  "text": "IT21 P4a (IT21P2-0006)"
+ },
+ "7ece1ad80d85": {
+  "src": "it",
+  "text": "Q13 · Istologia più alta in topo nullo e P47T, più bassa nel ratto; nessun programma reattivo nel trascritto dell'organoide."
+ },
+ "7ed580f1184f": {
+  "src": "it",
+  "text": "Q07 · Più basso nella linea shRNA (resazurina grezza), più alto nella mosca con amiloide; nessuna misura di flusso in cellule neurali."
+ },
+ "7f3b48fad94a": {
+  "src": "en",
+  "text": "E4 - card reviewed, 1 WWOX-side assertion(s) read beyond abstract"
+ },
+ "7fe911461399": {
+  "src": "en",
+  "text": "Queried: this need's ten observation rows and their readout levels; the dichloroacetate and HIF-axis units; the search layer over the eight axis targets (209 associations, 180 families, none direction-coherent because the need direction is unresolved)."
+ },
+ "820a0ae2704b": {
+  "src": "en",
+  "text": "Whether the axis is engaged at all in a WWOX-deficient neural cell, and whether engaging it helps or harms. No compound in the record acts in such a cell. IT22: the AhR-target transcript is higher in the knockout while NFE2L2 is lower, so engagement of the axis is not even directionally clear."
+ },
+ "85ab04c15263": {
+  "src": "en",
+  "text": "Reached from the T-type calcium need through the catalogue path; the proposed pair is a proposal to verify (IT20)."
+ },
+ "876203c73520": {
+  "src": "en",
+  "text": "Whether any part of the carded effect is attributable to the named kinase rather than to the agent's other actions, and whether the opposing push on the second need is tolerable."
+ },
+ "87e5073b2c92": {
+  "src": "en",
+  "text": "E4 - card reviewed, 1 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)"
+ },
+ "8819b0a9180b": {
+  "src": "it",
+  "text": "Q14 · Più alta in organoide, topo e P47T e negli organoidi di pazienti: letture diverse, stessa direzione."
+ },
+ "897c432eaebe": {
+  "src": "en",
+  "text": "Whether the same step clears the Q230P-class protein in neural cells, and whether spared protein is functional (the degron and the GSK3B docking site may be one conformational event, giving a stable but inert protein). HSC70 also folds proteins, so blocking it may harm instead of help; the mirrored harm arm is carried as a second conditional arm. IT22: the weakest link is the substrate itself: no WWOX missense protein is shown above the assay floor, so gate 0 is a KO-controlled blot for the protein (the G372R line first)."
+ },
+ "898eac047cf8": {
+  "src": "en",
+  "text": "WWOX-system with a specificity flag: one paper, one laboratory, the comparison drug reported better; the kinase output readout is a phosphorylation site in mouse plus a docking mechanism in cells. IT21 addition (P3b, proposal G02): the same provocation test in the null, heterozygous and wild-type littermates shows the lithium effect in all three genotypes, and a second documented action of lithium (inositol monophosphatase inhibition) has a documented pro-convulsant sign in rodents, which disfavours it as the mediator by analogy (the precedent is the lithium-pilocarpine model, not a measurement in the Wwox assay; Cheng 2020 also ran a pilocarpine model in Wwox mice, so the objection that the provocations differ is testable in the same system); abstract-level reading for the sign argument."
+ },
+ "8a0e5121072a": {
+  "src": "en",
+  "text": "Selective tool compounds exist; the assay is the carded one."
+ },
+ "8b1f755d3bfe": {
+  "src": "en",
+  "text": "WWOX-system: the myelin deficit is partly prevented when WWOX is restored in neurons in the neonatal window; the treated arms of the source are unquantified, and whether an established deficit re-myelinates is unmeasured."
+ },
+ "8c1d688c6aa5": {
+  "src": "en",
+  "text": "Measure the axonal activity-dependent myelination signal in the WWOX-deficient system against an isogenic control, before any compound; then decide whether the class is orderable."
+ },
+ "8d27befa6c69": {
+  "src": "it",
+  "text": "le stesse condizioni, più una firma più grande di sei geni"
+ },
+ "8d3f28942f92": {
+  "src": "it",
+  "text": "la stessa rete con quattro archi HIF1A duplicati (già presenti nella rete esterna; non rappresenta il patrimonio WWOX)"
+ },
+ "8f8b3380a169": {
+  "src": "en",
+  "text": "Cytokine transcripts up in two mouse Wwox-deficient preparations (one significant in the null hippocampus)."
+ },
+ "907cf72f9e20": {
+  "src": "en",
+  "text": "Generated by LEGEND: the compound-to-WWOX path found a curated inhibitor row on HSPA8 that the compound-to-need route had filed as not evaluable (IT21 P3b, proposal G01, broad-recovery path, track B)."
+ },
+ "92ea76c9db7b": {
+  "src": "it",
+  "text": "sconosciute. Le sconosciute sono lacune, non zeri. Contando i modelli e non le colonne, i sistemi indipendenti sono circa"
+ },
+ "93f1ef260d11": {
+  "src": "en",
+  "text": "This need carries 318 catalogue associations and not one of them is direction-coherent: a restore-type need has no action vocabulary in the catalogue to match, so the slice looks empty for a structural reason, not a biological one. The premise question is cheaper than any compound test and decides whether the axis is a target or a consequence."
+ },
+ "942d686b27d0": {
+  "src": "en",
+  "text": "It is the role-resolving question the glia and myelin work left open (IT14): the maturation block is receptor-responsive or it is not, and one co-culture answers that before any in vivo question is asked. It enters at rank 6, below the ten-row line and behind the lithium and GABA-T rows (which carry a risk flag and human clinical reports and are not displaced by conditional probes), because the test is cell-level and inexpensive and an approved molecule exists for any later step, not because it is new: the precedent comes from a hormone-uptake defect in another disease and does not transfer by itself, and it sits below the two premise measurements (the dichloroacetate and NRF2 rows)."
+ },
+ "95f673af346c": {
+  "src": "it",
+  "text": "Elettrofisiologia su fette del knockout neurone-specifico dell'articolo originale: la linea non è disponibile qui, se sia ottenibile non nota; magnesio: etichette USA per nome, Italia non verificata."
+ },
+ "96d53a7f4305": {
+  "src": "en",
+  "text": "The sign: falling cytokines reproduced by controls keeps the proposal conditional; rising cytokines reject the harm arm for this axis. The role of the cytokine change in the knockout is itself unmeasured. The compound is a substrate of efflux transporters in vitro and has no human exposure."
+ },
+ "9771a0390514": {
+  "src": "en",
+  "text": "WWOX-system, read beyond the abstract: the high-dose arm reaches a survival plateau to day 300 and lowers spike-wave discharges to a wild-type-indistinguishable level; weight is ordered against wild type and the untreated knockout (equal to the high dose at P30 only), and glycaemia is NOT shown to be prevented: at P10 the treated arms are not significantly different from the untreated knockout (high dose about 113, low dose about 105, untreated knockout about 95; Figure 3E, card C04 DR-AAV-GLU10-HD and DR-AAV-GLU10-LD), at P20 the untreated-knockout comparator is absent because those animals are dead (Figure 3F, DR-AAV-GLU20-LD and DR-AAV-GLU20-HD, direction UNKNOWN) and the P20 result is dose-graded against wild type only, and by P30 the dose separation has closed (Figure 3G); the paper's own text states that both doses partially corrected hypoglycaemia, while the panel does not support it (card C04 records this: the treated arms are not significantly different from the untreated knockout at P10); the glucose result depends on age, dose and comparison, and a non-significant difference at P10 is not evidence of no benefit. Every treated arm was injected in the stated neonatal window."
+ },
+ "97c9a0c40034": {
+  "src": "it",
+  "text": "Linea cellulare con la variante non disponibile; disegno completo ma il righello di funzione non è ancora validato."
+ },
+ "988eee7a8c84": {
+  "src": "it",
+  "text": "Insieme dei bersagli ISR, livello del trascritto"
+ },
+ "98bdb7453f61": {
+  "src": "en",
+  "text": "What does the published symptomatic response predict, and what does it not predict, about developmental outcome?"
+ },
+ "993a661913f3": {
+  "src": "en",
+  "text": "Should this thread stay in the selection, given that its only pharmacology acts against a second need of the same objective?"
+ },
+ "99973bd6aa30": {
+  "src": "en",
+  "text": "A WWOX-deficient neural measurement showing over-active checkpoint signalling that harms the cell."
+ },
+ "9aa65bd593d4": {
+  "src": "en",
+  "text": "Standard genetic perturbation; the readout is the constraint, not the reagent."
+ },
+ "9aec2f69f7c9": {
+  "src": "en",
+  "text": "PDH activity and flux in a WWOX-deficient human neural cell against an isogenic control, with the glycolytic readout measured in the same material."
+ },
+ "9bc3d7f67697": {
+  "src": "en",
+  "text": "Development feasibility: a cell-level probe is feasible now, and an approved thyroid-hormone molecule and a clinical-stage analogue exist; systemic hormone action, the early treatment window and the lack of a brain-exposure datum for the analogue limit any later use."
+ },
+ "9cc96d4676c8": {
+  "src": "it",
+  "text": "Capire se la perdita di inibizione GABA-A veloce è il passo che produce le scariche nella fetta del knockout neuronale, o se spiegano meglio un guadagno eccitatorio, una depolarizzazione graduata condivisa o uno stato secondario; l'eterozigote condivide la depolarizzazione ma scarica molto meno."
+ },
+ "9dbedd3a95fb": {
+  "src": "en",
+  "text": "Queried: the two gene-addition cards (C01, C04) and their assertion rows; the deepdive manifest of the source; the work-order statements for this need. Checked for a post-onset arm and found none. Not a statement about the literature beyond the sources this module has read."
+ },
+ "9e1c38e4e909": {
+  "src": "it",
+  "text": "Capire se l'attività di GSK3 è davvero aumentata quando WWOX manca (oggi c'è solo un blot di fosfo-Ser9) e in che direzione ogni classe di inibitore sposta la via Wnt; i composti trovati sono strumenti per questo esperimento, non candidati."
+ },
+ "9f6ea7ef32cb": {
+  "src": "it",
+  "text": "Misure biochimiche su tessuto o cellule dei laboratori d'origine; il materiale non è disponibile qui."
+ },
+ "a2459fa9c9f5": {
+  "src": "it",
+  "text": "Q05 · Più alto in organoide e in mosca con amiloide, nessun segno opposto; nel topo nessun segno risolto. Il verdetto prudente del documento P4 è «non risolto tra specie»."
+ },
+ "a32410816420": {
+  "src": "it",
+  "text": "In questa edizione i casi riportano la classe di composti e non i singoli nomi. Il precedente esterno e le misure farmacologiche (valori e testi derivati da ChEMBL, CC BY-SA 3.0, e da lavori di terzi) restano nell'edizione completa locale: nessun valore di potenza è riportato qui."
+ },
+ "a38eb56059b7": {
+  "src": "en",
+  "text": "WWOX-system: a glycolytic signature; the kinase transcript lower in the organoid; no difference in the one human PDH activity measurement. The kinase-to-PDH link has no WWOX observation."
+ },
+ "a503e5fa8348": {
+  "src": "en",
+  "text": "New compound routes for the Q8 question; the NRF2 axis and its step 0 were already a carded thread since IT10; the molecule is in an earlier exclusion list"
+ },
+ "a5a33bf563ba": {
+  "src": "it",
+  "text": "Elettrofisiologia su fette del knockout neurone-specifico del laboratorio d'origine: la linea non è disponibile qui, se sia ottenibile non nota."
+ },
+ "a5cc1428dc95": {
+  "src": "it",
+  "text": "Nessuna potenza né esposizione tissutale entra in alcun metodo; la soglia registrata è rho 0,15 e il minimo effetto rilevabile è circa 0,157: effetti più piccoli non sono esclusi."
+ },
+ "a6253a0caf85": {
+  "src": "en",
+  "text": "Carded axis: burst suppression by NMDAR block in the slice."
+ },
+ "a72991d26e70": {
+  "src": "it",
+  "text": "Capire se lattato o attività LDH sono aumentati nelle cellule neurali prive di WWOX; per lo stiripentolo non c'è sostegno a livello enzimatico da dati primari, e il test del nodo usa un inibitore nanomolare di LDHA umana la cui selettività su LDHB è da stabilire."
+ },
+ "a74155840d98": {
+  "src": "it",
+  "text": "Q09 · Più bassi nell'organoide, più alti nella linea shRNA; effetti piccoli."
+ },
+ "a76d3e956e10": {
+  "src": "en",
+  "text": "IT21 P4a (IT21P2-0057)"
+ },
+ "a884fdfd0770": {
+  "src": "en",
+  "text": "Inhibitors of the DNA-damage response as levers"
+ },
+ "a8b0d2711a13": {
+  "src": "en",
+  "text": "Is a destabilised Q230P-class WWOX missense protein cleared by an HSC70-linked lysosomal step in neural cells, and when that step is blocked does the spared protein regain GSK3B-docking function?"
+ },
+ "a8c69835d4c3": {
+  "src": "it",
+  "text": "Drosophila (mosca)"
+ },
+ "a96ad03abece": {
+  "src": "en",
+  "text": "Assemble the published same-genotype cases with both a symptomatic and a developmental endpoint recorded, and state the discordance rate; no new exposure is proposed."
+ },
+ "ab1a6c5c29fc": {
+  "src": "it",
+  "text": "contrasto D del modulo"
+ },
+ "ab86d6c60dfe": {
+  "src": "en",
+  "text": "Wwox-null versus wild-type mouse primary microglia or astrocyte cultures (or organotypic slices) for several days, the inhibitor against a second chemotype and Ezh2 knockdown, transcript and protein readouts; scope limited to mouse glial systems, because the human neural data cannot read the seeds."
+ },
+ "ab8c4677cb30": {
+  "src": "it",
+  "text": "topo P47T"
+ },
+ "ad96353e723f": {
+  "src": "en",
+  "text": "The need's direction is unresolved and the two available readouts disagree by design, so no compound on this axis can be qualified either way. Resolving the sign is the cheapest act that converts the largest blocked slice of the catalogue into an orderable or a refused question; leaving it unresolved keeps that slice invisible rather than negative."
+ },
+ "ad96dba77e60": {
+  "src": "en",
+  "text": "Known thread re-emitted with a corrected counter-evidence and a new hazard"
+ },
+ "af1494d21e0e": {
+  "src": "en",
+  "text": "Named in the WWOX literature and carded: the neonatal AAV9 gene-addition study (cards C01 and C04)."
+ },
+ "b194cff7573c": {
+  "src": "en",
+  "text": "Moderate for the observation, none for the lever"
+ },
+ "b1e450d2e658": {
+  "src": "en",
+  "text": "In vitro after step 0"
+ },
+ "b422ec117b63": {
+  "src": "en",
+  "text": "Lithium"
+ },
+ "b485d29dc9e5": {
+  "src": "en",
+  "text": "Observations that no generator input carried now reach it: a new question on NRF2 tone (one organoid contrast, adjusted p above the deposit's own alpha, role unknown) produced 20 new conditional proposals (the axis itself was already a carded thread since IT10; the compound routes are new); a failed control (the second neural system's progenitor arm did not show WWOX lower) is attached to 71 proposals and a contested direction to 75 more, as carried limits (recorded in the output; removing their ordering term changes no hand-over); a cell-type marker set can no longer become a gene seed; a premise or class limit now travels wherever its edge or target appears in a chain, not only inside one cluster."
+ },
+ "b4c4c771fbc1": {
+  "src": "en",
+  "text": "Carded axis: the NRF2/KEAP1 need with two conditional arms."
+ },
+ "b642851c0b57": {
+  "src": "it",
+  "text": "una misura di risposta del composto in un sistema neurale umano privo di WWOX, con replica; potenza dal dato ChEMBL di attività; fase II delle firme; un modulo più grande e replicato"
+ },
+ "b8355b6e40c2": {
+  "src": "it",
+  "text": "Capire se nelle cellule neurali carenti di WWOX ci sono ROS, tono di NRF2 o citochine (proteina) alterati, e se attivare NRF2 cambia vitalità o attività di rete in modo dipendente da NRF2."
+ },
+ "b8fd55715efe": {
+  "src": "en",
+  "text": "WWOX-system: precursor cells increased and mature oligodendrocytes decreased after neuron-restricted WWOX deletion, restored by neuronal add-back (IT14), with the add-back window early; the myelin deficit is partly prevented when WWOX is restored in neurons in the neonatal window. Outside WWOX: in a mouse model of a thyroid-hormone-uptake defect, a thyromimetic normalised myelination and interneuron differentiation only when started in the first three postnatal weeks (abstract-level reading). No myelin compound has been given to a WWOX system, and another myelin compound already has a negative developmental-myelination result in this module. IT22 P6 (partial full text of the two human trials of the molecule in a hormone-entry defect; mouse rescue; OPC literature at abstract level): the human precedent has no neurodevelopmental endpoint; the mouse rescue works only in postnatal weeks 1-3 and the effective dose suppressed the thyroid axis; precursor cells express receptor-alpha rather than receptor-beta in rodents (abstract level), so a receptor-beta-leaning liver-directed agent is an isoform control, not a candidate; seizure evidence is mixed (worsening in 3 patients with prior seizures; hyperthyroid rats more seizure-prone)."
+ },
+ "bac33ad59d7f": {
+  "src": "it",
+  "text": "organoide (anche degli organoidi di pazienti)"
+ },
+ "bb296bd12eb2": {
+  "src": "it",
+  "text": "Cellule neurali selvatiche, non cellule prive di WWOX; livello del trascritto, non dell'attività."
+ },
+ "bbd6d2457960": {
+  "src": "en",
+  "text": "Conditional hypothesis: compound selectivity and cell activity are documented; the sign of the chain is contested inside its own reference list; no Wwox-deficient glial measurement (no ranked unit, so no evaluation depth applies: this is not a depth of zero)"
+ },
+ "bbd74eff6228": {
+  "src": "en",
+  "text": "A topical agent acting on the AhR pathway as an in vitro probe after step 0; direct NRF2-activating drugs remain the carded probes"
+ },
+ "bc23d5777145": {
+  "src": "it",
+  "text": "Nessun insieme di dati adatto in mano; disponibilità di linee isogeniche: non nota."
+ },
+ "bc4949b309b9": {
+  "src": "it",
+  "text": "Capire se l'effetto tardivo dell'etosuccimide è riproducibile con un test farmaco per genotipo, se il litio è specifico per genotipo e se i denominatori delle serie di casi (dieta chetogenica, vigabatrin) mantengono la posizione C2."
+ },
+ "bc9268a2d703": {
+  "src": "en",
+  "text": "WWOX-system with a specificity flag: one paper, one laboratory, no drug-by-genotype test, and a wild-type arm whose variability is comparable to the effect."
+ },
+ "bf214653e458": {
+  "src": "en",
+  "text": "Conditional hypothesis: the WWOX-side pattern was read in IT14; the drug-side precedent was read at abstract level only; no WWOX-deficient measurement shows that the block responds to the receptor (no ranked unit, so no evaluation depth applies: this is not a depth of zero)"
+ },
+ "bf7ea87f82fb": {
+  "src": "it",
+  "text": "Ogni caso risponde alle stesse domande. Il livello dice che tipo di sostegno esiste, non quanto il composto sia promettente: nessun livello è un punteggio di efficacia e la copertura di un percorso descrive collegamenti, non una quota di malattia trattata. Una misura funzionale può essere non specifica (per esempio ridurre le crisi anche nel tipo selvatico). Sconosciuto non significa negativo."
+ },
+ "c1851c47199a": {
+  "src": "en",
+  "text": "Carded thread: the T-type suppression of the provoked seizure phase in the null mouse."
+ },
+ "c1aa3b056f50": {
+  "src": "en",
+  "text": "IT21 P4a (IT21P2-0008)"
+ },
+ "c2d4c1ce61dd": {
+  "src": "en",
+  "text": "The chain was generated, not observed, and one reference cited by the chain itself reports the opposite sign, so the direction is not predicted. The test is feasible in existing mouse systems and one experiment can serve a second kinase-pathway probe. It sits at rank 7, below the ten-row line: the role of the inflammatory change (harm or protection) is unknown and the readout can wait for the glial measurements already planned."
+ },
+ "c5a4e3d438da": {
+  "src": "en",
+  "text": "The same provoked-seizure design with both genotypes treated and an interaction term, powered on the published effect size."
+ },
+ "c662546b6bc3": {
+  "src": "en",
+  "text": "position unchanged from IT20 (rank 1): No IT21 input changes the position."
+ },
+ "c7f9760e7c63": {
+  "src": "en",
+  "text": "Is the carded suppression specific to WWOX loss, or does the same agent act equally in wild type?"
+ },
+ "c9e80c4519ba": {
+  "src": "en",
+  "text": "A measurement in an existing system; no compound and no new model."
+ },
+ "ca1a44149841": {
+  "src": "en",
+  "text": "WWOX-system: the Q230P class shows no protein band with a normal transcript; a different missense (P252A) over-expressed in non-neural cells is cleared faster and restored by lysosomal inhibitors but not by a proteasome inhibitor. Compound side: a curated inhibitor action on HSPA8 exists; the one reference reports impaired HSC70 refolding and lower lysosomal degradation in lupus-mouse B cells (abstract-level reading). Nothing shows that the route and the allele are the same. IT22 P6: the peptide's measured binding is micromolar (7.32 uM by surface plasmon resonance), refolding is inhibited at 40 uM, and its own paper reads its action as flux slowing like a lysosomal-acidification inhibitor; the one measured rescue of a WWOX missense is over-expressed P252A in non-neural cells."
+ },
+ "cb9711fb3acb": {
+  "src": "en",
+  "text": "In Wwox-null versus wild-type mouse microglia and astrocyte cultures, does EZH2 inhibition lower or raise IL6 and TNF, with a second chemotype and Ezh2 knockdown as controls?"
+ },
+ "cba0cf129e29": {
+  "src": "en",
+  "text": "Carried in from another condition by a stated mechanistic analogy (a hormone-uptake defect with myelin and interneuron rescue) and reached through the compound-to-WWOX path (IT21 P3b, proposal G03, partial-benefit path; a related receptor arm, G10, was left inconclusive)."
+ },
+ "cc0a7dd62915": {
+  "src": "it",
+  "text": "; p esatto a una coda"
+ },
+ "ccdfb67baae8": {
+  "src": "it",
+  "text": "; intervallo di confidenza al 90% di SIG, estremo inferiore"
+ },
+ "ce5809b35a2a": {
+  "src": "en",
+  "text": "IT21 P3b (G06)"
+ },
+ "ce659b5b0279": {
+  "src": "en",
+  "text": "Queried: the search layer over CACNA1G, CACNA1H and CACNA1I (190 associations, 66 families); the T-type card and the ethosuximide and apinocaltamide units; the uncarded-items table; the IT9 to IT11 qualification records; a name scan of every card and ranking table for each proposed compound. Both proposals are absent from that WWOX material and are members of a class the module already holds, so this is a proposed probe set to verify, not a new biological relation."
+ },
+ "cf11c4afad7a": {
+  "src": "en",
+  "text": "Human knockout organoid shows a lower NFE2L2 transcript (0.75x), role unknown; the second system failed its control."
+ },
+ "d07824ef936c": {
+  "src": "en",
+  "text": "HDAC5-specific lowering of SLC2A1 at concentrations that engage HDAC5, or class I inhibition changing SLC2A1 in either direction (then a different proposal)."
+ },
+ "d25fa8478abe": {
+  "src": "en",
+  "text": "Queried: a whole-word name search of this module and its registries on 2026-11-03 (no hit for either molecule) and the compound-to-WWOX path of IT21 P3b. A name search in this module, not a statement about the literature."
+ },
+ "d2852be44ee8": {
+  "src": "en",
+  "text": "Wwox-null versus wild-type glial cultures, the probe versus a second chemotype versus Ezh2 knockdown, histone mark and cytokine protein, with a parallel precursor-differentiation read."
+ },
+ "d2c4fa5690e1": {
+  "src": "en",
+  "text": "INV-12"
+ },
+ "d318b7f50341": {
+  "src": "en",
+  "text": "Blockers of the PRC2 methyltransferase EZH2, probe level; dual EZH1/EZH2 agents flagged highest-risk"
+ },
+ "d389295f281b": {
+  "src": "it",
+  "text": "Tra le famiglie di composti del sottoinsieme pilota, una rete esterna con segno (o la via della firma trascrizionale) ordina i composti per l'opposizione osservata a un modulo di sei geni glicolisi/lattato, in contesti neurali LINCS tenuti fuori dal calcolo, meglio di un riferimento di sovrapposizione senza segno?"
+ },
+ "d3c51f3a4233": {
+  "src": "en",
+  "text": "position unchanged from IT20 (rank 5): Position unchanged from IT20. The ten-row ceiling does not displace a row with real human clinical reports in favour of a conditional probe (curation rule), so this row stays at rank 5 and the two new IT21 conditional probes sit at rank 6, below the line. This row is a record-level analysis that needs no experiment budget and can proceed alongside."
+ },
+ "d456e9186e46": {
+  "src": "en",
+  "text": "Is there a PDH block in a WWOX-deficient human neural cell at all, and does its direction match the one this lever assumes?"
+ },
+ "d480d04437a2": {
+  "src": "en",
+  "text": "Generated by LEGEND from the qualified need path: the direction of the integrated stress response is unresolved (IT20)."
+ },
+ "d4a08ae0ae4b": {
+  "src": "it",
+  "text": "Q03 · Misurato solo nella mosca (più alto solo con amiloide): nessuna misura in sistemi neurali umani o murini."
+ },
+ "d54033a186d2": {
+  "src": "en",
+  "text": "An inhibitor of class I histone deacetylases proposed to lower the glucose transporter SLC2A1 through HDAC5"
+ },
+ "d5b5a56b6309": {
+  "src": "en",
+  "text": "GABA-aminotransferase inactivators (see the vigabatrin card)"
+ },
+ "d5f41cebd21d": {
+  "src": "en",
+  "text": "Lithium (carded): inhibition of inositol monophosphatase as the mediator of its seizure protection"
+ },
+ "d71a4eb39ca3": {
+  "src": "en",
+  "text": "Carded thread: lithium."
+ },
+ "d7efa24460cc": {
+  "src": "en",
+  "text": "The position of this thread rests on a single laboratory and a single paper in which the comparison drug acted better, and the specificity flag is an unknown rather than a clean reading. The thread is already ordered, so the result changes a standing position rather than adding a new one."
+ },
+ "d8b4e0c0eb62": {
+  "src": "it",
+  "text": "Q10 · Calo robusto nei progenitori shRNA ma segni opposti altrove; la composizione del tessuto può spiegarlo. Il documento P4 lo legge come non risolto."
+ },
+ "d99712f30874": {
+  "src": "en",
+  "text": "Seizure-free neuron plus precursor co-culture, WWOX-deficient versus corrected neurons, hormone-depleted medium, isoform control."
+ },
+ "dacd86fc66cd": {
+  "src": "en",
+  "text": "One added arm of the published design with injection after the first recorded spike-wave discharge, same endpoints, untreated same-genotype comparator kept."
+ },
+ "dae4a2481281": {
+  "src": "it",
+  "text": "Capire se la fosforilazione di PDH è più alta nelle cellule neurali prive di WWOX e se un inibitore di PDK la modifica in modo dipendente dal genotipo, aggiungendo un inibitore nanomolare pan-isoforma accanto al dicloroacetato (con riserve su selettività e disponibilità). In più (IT9 P6): un esperimento condizionale sull'asse HIF (proteina HIF-1alfa e HIF-2alfa nelle cellule neurali prive di WWOX, poi knockdown genetico e una leva di classe PX-478 contro un controllo di direzione), proposto e non eseguito. Restato (IT10 P2.1/P5): la direzione del cambiamento di HIF non è stabilita (condizionale); controllo genetico per primo; ossigeno fisiologico al 5% come condizione primaria; bracci per attività, MYC e stato di coltura. IT12: nel cervello P47T adulto (solo trascritti) lo spostamento e' ampio e modesto, guidato dagli enzimi glicolitici, e non riproduce il profilo selettivo dell'organoide; restano separate tre ipotesi (stato dell'organoide, attivita', composizione); aggiunti ancoraggio in vivo e pannello genico."
+ },
+ "db02c57474cb": {
+  "src": "en",
+  "text": "Clinical report only, published cases, with a brain-imaging safety signal recorded beside them; no same-genotype comparator and no developmental endpoint tied to the response."
+ },
+ "dc449159abf1": {
+  "src": "en",
+  "text": "The thread is carried by one paper from one laboratory, the agent is non-selective, and it pushes the canonical Wnt readout in the direction this module's other need wants lowered. The question now is whether to keep it, not what to measure next with it: that is a decision a single interaction test can settle."
+ },
+ "e22f10004a65": {
+  "src": "en",
+  "text": "The chain as written: that this inhibitor lowers HIF activity without touching the HIF prolyl hydroxylases."
+ },
+ "e31a7ba5e00a": {
+  "src": "en",
+  "text": "Established model and established vector; the added arm is a timing change, not a new assay."
+ },
+ "e36a2bbd6799": {
+  "src": "en",
+  "text": "Neuron-driven developmental myelin deficit with precursors up and mature cells down; maturation block favoured over loss but not demonstrated (IT14)."
+ },
+ "e3d5181822f1": {
+  "src": "en",
+  "text": "WWOX-system: the cytokine seeds are mouse transcript changes in two Wwox-deficient preparations; the human neural datasets carry no IL6 or TNF reads. Compound side: a selective, cell-active inhibitor of EZH2 with reported lowering of cytokines in a mouse brain model (abstract-level reading); a reference of the chain reports raised cytokines after EZH2 inhibition in glioma and microglia. IT22 P6 correction: the reference that carried the opposite sign used a different EZH2-blocking agent and siRNA, not the probe; in microglia the cytokines did not change and the rise came through medium from EZH2-suppressed tumour cells. Separate hazard: Ezh2 loss delays oligodendrocyte differentiation and Ezh1 compensates (mouse), so dual EZH1/EZH2 blockers are the highest-risk members. The arm is now reached from two different WWOX observations (glial cytokines and NRF2 tone), but through shared network edges, so it is not independent support."
+ },
+ "e42d8e04d9a5": {
+  "src": "it",
+  "text": "Capire se la proteina Q230P viene prodotta e poi eliminata, per quale via, e se quella che torna è funzionante."
+ },
+ "e518c2a4ebb3": {
+  "src": "en",
+  "text": "position unchanged from IT20 (rank 2): No IT21 input changes the position."
+ },
+ "e5257ab6e129": {
+  "src": "it",
+  "text": "Q04 · Dentro il rumore in quasi tutti i contesti; l'unico contrasto murino fuori dal rumore è non specifico."
+ },
+ "e60681463c5a": {
+  "src": "en",
+  "text": "No arm exists in which treatment begins after the phenotype is established; the window is stated, not measured against a later start, and P300 readouts are survivor-selected."
+ },
+ "e7d6e650a5ef": {
+  "src": "en",
+  "text": "Thyroid-axis suppression and peripheral thyrotoxicosis at the effective mouse dose; seizure worsening reported in a few patients with prior seizures; premature differentiation."
+ },
+ "e84067150d3f": {
+  "src": "en",
+  "text": "E2 - card reviewed, abstention (premise named, no test designed)"
+ },
+ "e9520227b9c9": {
+  "src": "en",
+  "text": "Development feasibility: a tool compound for in vitro and mouse work only; brain entry is restricted by efflux in vitro and there is no human exposure statement."
+ },
+ "e9d2ada2a64c": {
+  "src": "en",
+  "text": "Carded chain: Dichloroacetate (see its card) and inhibition of the pyruvate dehydrogenase kinases on the pyruvate axis."
+ },
+ "ea55b666039e": {
+  "src": "it",
+  "text": "; intervallo di confidenza al 90% di SIG, estremo superiore"
+ },
+ "eacd337144b1": {
+  "src": "en",
+  "text": "Published assay, approved compounds, three arms added to an existing design."
+ },
+ "eba7e8903360": {
+  "src": "en",
+  "text": "Weak; edge supported outside neural cells; no CNS exposure data for the topical drug"
+ },
+ "ee335183c025": {
+  "src": "en",
+  "text": "Is there an axonal signal left for a pro-myelinating agent to act on, before any such agent is ordered?"
+ },
+ "f0fae297b689": {
+  "src": "en",
+  "text": "The chain as written: that this inhibitor lowers SLC2A1 by acting on HDAC5 in a WWOX-deficient neural cell."
+ },
+ "f136b8ca088b": {
+  "src": "en",
+  "text": "IT21 P3b (G02)"
+ },
+ "f22be07d79af": {
+  "src": "en",
+  "text": "Low to moderate (one contrast, second system failed)"
+ },
+ "f244c97f8622": {
+  "src": "it",
+  "text": "registro di ricerca del repository (non incluso in questo pacchetto)"
+ },
+ "f26302ef4988": {
+  "src": "en",
+  "text": "A selective inhibitor of the named kinase beside the non-selective agent in the same WWOX-system assay, with the second need's readout measured in the same experiment. IT21 addition: include an arm with the inositol precursor added back, which tests the second action in the same experiment."
+ },
+ "f2b729e18317": {
+  "src": "en",
+  "text": "Net-negative on the myelin axis if both EZH1 and EZH2 are inhibited (oligodendrocyte differentiation blocked in mouse knockouts); cytokines rose after EZH2 suppression in tumour cells."
+ },
+ "f3d66e9fd0ff": {
+  "src": "en",
+  "text": "Integrated-stress-response modulators (a class; no single compound)"
+ },
+ "f5a4dd769acf": {
+  "src": "en",
+  "text": "Queried: a whole-word name search of this module and its registries on 2026-11-03 (no hit for the peptide), the need file, and the catalogue, where a curated inhibitor row was filed as not evaluable by the compound-to-need route. A name search in this module, not a statement about the literature."
+ },
+ "f5fa1532a11a": {
+  "src": "en",
+  "text": "Generated by LEGEND (generator refresh IT21 P2, proposal IT21P2-0195, harm arm of the cytokine question); a thread already generated in IT9 and re-emitted, qualified in IT21 P4a and kept conditional with the scope narrowed to mouse glial systems."
+ },
+ "f8c3ae2a2f19": {
+  "src": "en",
+  "text": "NMDAR antagonism (the carded tool compound and the clinically used class)"
+ },
+ "f8c3f8a97bfb": {
+  "src": "en",
+  "text": "Whether symptomatic response tracks any developmental endpoint in this genotype class. The mechanism argument on this axis predicts the opposite of what the reports show, and that contradiction is unexplained."
+ },
+ "f8c40246e1de": {
+  "src": "en",
+  "text": "A protein measurement on material the module already reasons about; no new model and no compound needed."
+ },
+ "f948bf663b3e": {
+  "src": "en",
+  "text": "Agonists of thyroid-hormone receptors (probe; a receptor-beta-leaning liver-directed agent only as isoform control)"
+ },
+ "f9ca34bd9d4c": {
+  "src": "en",
+  "text": "Cytokines rise or precursor differentiation falls."
+ },
+ "fa08a3a261c2": {
+  "src": "en",
+  "text": "Chase of the Q230P-class protein with HSPA8 and LAMP2 knockdown and a lysosomal-acidification inhibitor, then a docking-function read (phospho-tau, with the L404A docking mutant as control). No rise with knockdown closes the route; a rise without function closes deep recovery on this route; both rising earns a variant-specific preclinical question, still not qualified. IT22: one cycloheximide-chase design with HSPA8 and LAMP2A knockdown and a lysosomal-acidification inhibitor tests every stability lever; the peptide is one arm, not the lead."
+ },
+ "fb1711428b97": {
+  "src": "it",
+  "text": "Laboratorio con il vettore e un topo Wwox-nullo; nessuno noto nel repository. Se il vettore sia ottenibile: non nota."
+ },
+ "fb82f4a9b16b": {
+  "src": "it",
+  "text": "linea shRNA"
+ },
+ "fdba233e1765": {
+  "src": "en",
+  "text": "In cells the compound stabilises HIF1alpha, the opposite of the intended effect, because concentrations that inhibit the intended demethylase overlap those that inhibit the prolyl hydroxylases; the intended target is also the least expressed family member in the WWOX-deficient organoid and absent in the human progenitor data. The route is the one that made another HIF-pathway agent a drop in IT9."
+ },
+ "fe1eff02f6cc": {
+  "src": "en",
+  "text": "Does neuronal WWOX restoration started AFTER symptom onset recover any endpoint, or only prevent one when given in the neonatal window?"
+ }
+}

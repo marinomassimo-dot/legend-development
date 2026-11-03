@@ -7,7 +7,8 @@
 The folder is the distributable edition. Nothing here publishes anything: putting it on any external surface
 is a decision of the operator. Contents (all deterministic, no clock is read):
 
-  index.html            the shareable view (same bytes as view/index_shareable.html)
+  index.html            the shareable view in English, the initial language (same bytes as view/index_shareable.html)
+  it.html fr.html es.html de.html   the same view in Italian, French, Spanish and German (one dataset, five renderings; each page links to the others and remembers the choice)
   NOTICE.md             the sources actually embedded, their terms and credit lines, and how each condition is met
   COMPARISON.md         what the full research version holds that this one withholds, with counts, and what is identical
   README.md             how to open it, how to hand it over, limits of the perimeter
@@ -38,7 +39,7 @@ SCHEMA = "legend.wwox.repurposing_view.shareable_package/1"
 PKG = "view/shareable_package"
 CHEMBL_DIR = "class_b/chembl_cc-by-sa-3.0"
 CHEMBL_FILE = CHEMBL_DIR + "/chembl_cc-by-sa-3.0.jsonl"
-GENERATED = ("index.html", "NOTICE.md", "COMPARISON.md", "README.md", "manifest.json", CHEMBL_FILE, CHEMBL_DIR + "/LICENSE_CC-BY-SA-3.0.txt", CHEMBL_DIR + "/CREDIT.txt")
+GENERATED = ("index.html", "it.html", "fr.html", "es.html", "de.html", "NOTICE.md", "COMPARISON.md", "README.md", "manifest.json", CHEMBL_FILE, CHEMBL_DIR + "/LICENSE_CC-BY-SA-3.0.txt", CHEMBL_DIR + "/CREDIT.txt")
 COMMAND = "python3 -B framework/scripts/repurposing_view.py package"
 
 
@@ -231,7 +232,7 @@ def readme_md(man: dict) -> str:
         "Research material at disease and reference-genotype level: what to study for WWOX-related epileptic encephalopathy, and on what evidence. Not medical advice, not a ranking of treatments, not a probability of benefit. The page is in Italian for the physician; scientific citations keep their original form.", "",
         "**Perimeter: this folder is the distributable edition. Its existence does not mean it is published: a copy is public only where the operator has put it, and publication on any external surface (a website, a repository change, an e-mail attachment to third parties) requires the operator's decision. A reader who obtained these files from a web address is reading the operator's publication of them. The page asks search engines not to index it (a robots meta tag); that is a request, not an access control.**", "",
         "## Open it", "",
-        "Open `index.html` by double-click or from `file://`. It is one self-contained file (inline CSS and JavaScript, data embedded as JSON); it needs no server, loads nothing from the network and opens identically from any folder or from the unzipped archive. Links inside it go to the same page (`#...` anchors) or to public identifiers (PubMed, DOI, ChEMBL, source licence pages); none is a repository-relative path.", "",
+        "Open `index.html` (English, the initial language) by double-click or from `file://`; the language selector at the top switches to `it.html`, `fr.html`, `es.html` or `de.html`, which must stay in the same folder. Each page is one self-contained file (inline CSS and JavaScript, data embedded as JSON); it needs no server, loads nothing from the network and opens identically from any folder or from the unzipped archive. Links inside it go to the same page (`#...` anchors) or to public identifiers (PubMed, DOI, ChEMBL, source licence pages); none is a repository-relative path.", "",
         "Card export (print / PDF, standalone HTML download) and the comparison view work offline: use the buttons on a card profile, or the URL fragments `#export=<card id>`, `#brief=<card id>` (one A4 page per card) and `#compare=<id>,<id>`; the sections on selection, hypotheses and predictive test print on their own through `#section=selection`, `#section=hypotheses` and `#section=predictive`.", "",
         "## Hand it over", "",
         "Build a zip with the documented command (deterministic: fixed timestamps, sorted entries):", "",
@@ -302,11 +303,17 @@ def comparison_md(man: dict) -> str:
 # ---------------------------------------------------------------------------- build
 def build_files(dr: Path, corpus_dirs: list[Path] | None = None, recompute_text: bool = True) -> tuple[dict[str, bytes], dict]:
     allow = rv.load_allowlist(dr)
-    html = rv.build(dr, "shareable")
+    htmls = {lg: rv.build(dr, "shareable", lg) for lg in rv.LANGS}      # one dataset, five renderings: English first (the initial language), then it, fr, es, de
+    html = htmls["en"]
     PF, PS = rv.build_payload(dr, "full"), rv.build_payload(dr, "shareable")
     rep, ref = au.audit_html(html, dr)
     if not rep.ok:
         raise SystemExit("the shareable build fails its audit; no package is written:\n" + au.render_report(rep, "audit"))
+    for lg, page in htmls.items():
+        if lg != "en":
+            r_lg, _ = au.audit_html(page, dr)
+            if not r_lg.ok:
+                raise SystemExit(f"the shareable build in {lg} fails its audit; no package is written:\n" + au.render_report(r_lg, "audit"))
     chembl = chembl_records(dr, allow)
     chembl_bytes = ("".join(json.dumps(r, ensure_ascii=False, sort_keys=True) + "\n" for r in chembl)).encode("utf-8")
     licences = {}
@@ -335,12 +342,14 @@ def build_files(dr: Path, corpus_dirs: list[Path] | None = None, recompute_text:
         "prose_policy": {"rule": allow["prose_policy"]["rule"], "withheld_phrase": allow["prose_policy"]["withheld_phrase"], "pair_status_rule": allow["prose_policy"]["pair_status_rule"],
                          "card_sentence_redactions": len(allow["prose_policy"]["card_substrings"]), "lead_field_redactions": len(allow["prose_policy"]["lead_fields"]) + len(allow["prose_policy"]["lead_substrings"]),
                          "repository_file_names_described": html.count(allow["prose_policy"]["file_token_replacement"]),
+                         "languages": list(rv.LANGS),
                          "pairs_status_class_dropped": cmp_["pairs_with_status_class_full"] - cmp_["pairs_with_status_class_shareable"]},
         "class_b_content": {"file": CHEMBL_FILE, "records": len(chembl), "chembl_ids": [r["chembl_id"] for r in chembl], "mechanism_rows": sum(len(r["curated_mechanisms"]) for r in chembl), "release": allow["class_b_files"]["chembl"]["release"]},
         "licence_texts": {k: v["sha256"] for k, v in allow["licence_texts"].items()},
     }
-    files = {"index.html": html.encode("utf-8"), CHEMBL_FILE: chembl_bytes, CHEMBL_DIR + "/LICENSE_CC-BY-SA-3.0.txt": licences["LICENSES/CC-BY-SA-3.0.txt"],
-             CHEMBL_DIR + "/CREDIT.txt": chembl_credit(allow, len(chembl)).encode("utf-8")}
+    files = {rv.LANG_FILE[lg]: pg.encode("utf-8") for lg, pg in htmls.items()}
+    files.update({CHEMBL_FILE: chembl_bytes, CHEMBL_DIR + "/LICENSE_CC-BY-SA-3.0.txt": licences["LICENSES/CC-BY-SA-3.0.txt"],
+             CHEMBL_DIR + "/CREDIT.txt": chembl_credit(allow, len(chembl)).encode("utf-8")})
     for rel, b in licences.items():
         files[rel] = b
     tb = text_provenance_file(dr, PS, corpus_dirs) if recompute_text else None

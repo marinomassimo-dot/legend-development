@@ -286,7 +286,7 @@ class Curated(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.full = rv.build(DR, "full")
-        cls.share = rv.build(DR, "shareable")
+        cls.share = rv.build(DR, "shareable", "it")
         cls.PF, cls.PS = embedded(cls.full), embedded(cls.share)
         cls.allow = json.loads((DR / "view/shareable_sources.json").read_text())
 
@@ -636,7 +636,7 @@ class ShareableAudit(unittest.TestCase):
         import repurposing_shareable_audit as au
         import repurposing_shareable_package as pk
         cls.au, cls.pk = au, pk
-        cls.share = rv.build(DR, "shareable")
+        cls.share = rv.build(DR, "shareable", "it")
         cls.ref = au.Reference(DR)
         cls.allow_pol = json.loads((DR / "view/shareable_sources.json").read_text())["prose_policy"]
 
@@ -838,7 +838,7 @@ class ShareableAudit(unittest.TestCase):
             pol["prose_policy"]["card_substrings"].append({"find": "text that no card contains", "replace": "x"})
             (dr / "view/shareable_sources.json").write_text(json.dumps(pol), encoding="utf-8")
             with self.assertRaises(SystemExit):
-                rv.build(dr, "shareable")
+                rv.build(dr, "shareable", "it")
 
     def test_mutation_bc_only_pair_in_a_lead_sentence_and_in_a_card(self):
         # a sentence that names a compound and a target that the catalogue gives it only through class-B/C claims, with a database named
@@ -932,7 +932,7 @@ class ShareableAudit(unittest.TestCase):
         self.assertEqual(man_b, ["chembl"])
 
     def test_package_links_work_outside_the_repository(self):
-        page = rv.build(DR, "shareable")
+        page = rv.build(DR, "shareable", "it")
         body = re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", page, flags=re.S)
         for h in re.findall(r'href="([^"]*)"', body):
             self.assertTrue(h.startswith(("#", "https://", "http://")), h)
@@ -974,7 +974,7 @@ class ShareableAuditRendered(unittest.TestCase):
             self.skipTest("no Chromium binary: the rendered surfaces were NOT scanned")
         with tempfile.TemporaryDirectory() as td:
             f = Path(td) / "s.html"
-            text = rv.build(DR, "shareable")
+            text = rv.build(DR, "shareable", "it")
             f.write_text(text, encoding="utf-8")
             try:
                 extra, info = au.dynamic_surfaces(f, embedded(text))
@@ -1045,7 +1045,7 @@ class ItalianFix(unittest.TestCase):
     def setUpClass(cls):
         if not HAVE_DATA:
             raise unittest.SkipTest("module data absent")
-        cls.page = rv.build(DR, "shareable")
+        cls.page = rv.build(DR, "shareable", "it")
         cls.P = embedded(cls.page)
 
     def test_goal_tiles_count_every_position_link(self):
@@ -1135,7 +1135,7 @@ class Italian(unittest.TestCase):
     def test_first_screen_is_italian_and_orients(self):
         if not HAVE_DATA:
             self.skipTest("module data absent")
-        page = rv.build(DR, "shareable")
+        page = rv.build(DR, "shareable", "it")
         head = page[:page.index('id="charts"')]
         for must in ("Panoramica", "Filoni biologici", "Motivo della priorità", "Tipo di evidenza osservata nei bisogni", "Lacuna decisiva", "Composti e interventi da studiare",
                      "Recupero ampio e duraturo", "Beneficio parziale utile", "Track (campo separato)", "non consiglio medico", "Dettagli tecnici"):
@@ -1239,7 +1239,7 @@ class RealViewports(unittest.TestCase):
             self.skipTest("no Chromium binary: viewports were NOT measured")
         with tempfile.TemporaryDirectory() as td:
             f = Path(td) / "v.html"
-            f.write_text(rv.build(DR, "shareable"), encoding="utf-8")
+            f.write_text(rv.build(DR, "shareable", "it"), encoding="utf-8")
             try:
                 res = rv.measure_viewports(f, widths=[360, 390])
             except Exception as e:   # the browser could not be driven here
@@ -1599,11 +1599,11 @@ class It6P13Data(unittest.TestCase):
         self.assertEqual(sh["evidence_graph"]["chains"], self.cur["evidence_graph"]["chains"])
         self.assertEqual(sh["work_order"]["entries"], self.cur["work_order"]["entries"])
         for path in ("view/evidence_graph.json", "view/work_order.json", "isr_kinase", ".md"):     # no repository path or file name in the shareable page
-            self.assertNotIn(path, self.static_html(rv.build(DR, "shareable")), path)
+            self.assertNotIn(path, self.static_html(rv.build(DR, "shareable", "it")), path)
 
     def test_leak_audit_catches_a_class_c_name_in_the_graph_and_in_a_brief(self):
         import repurposing_shareable_audit as au
-        share = rv.build(DR, "shareable")
+        share = rv.build(DR, "shareable", "it")
         ref = au.Reference(DR)
         name = None
         import gzip
@@ -1641,7 +1641,7 @@ class WorkOrderFigure(unittest.TestCase):
         cls.entry = next(e for e in cls.doc["entries"] if e["need"] == cls.NEED)
         cls.figs = cls.entry["figure"]
         cls.full = rv.build(DR, "full")
-        cls.share = rv.build(DR, "shareable")
+        cls.share = rv.build(DR, "shareable", "it")
         cls.P = rv.build_payload(DR)
 
     def block(self, page):
@@ -2060,7 +2060,7 @@ class It7P7Data(unittest.TestCase):
         sh = rv.build_payload(DR, "shareable")["cur"]
         self.assertEqual(sh["selection"], self.cur["selection"])
         self.assertEqual(sh["predictive"], self.cur["predictive"])
-        page = re.sub(r"<script\b.*?</script>", "", rv.build(DR, "shareable"), flags=re.S)
+        page = re.sub(r"<script\b.*?</script>", "", rv.build(DR, "shareable", "it"), flags=re.S)
         text = " ".join(re.sub(r"<[^>]+>", " ", re.search(rf'<section id="{i}".*?</section>', page, re.S).group(0)) for i in ("selection", "hypotheses", "predictive"))
         for bad in ("DTC", "TTD", "OncoKB", "CancerCommons", "MyCancerGenome", "TALC", "Drug Target Commons", "DrugBank", "alvocidib", "saracatinib", "pyruvate dehydrogenase kinase inhibitor"):
             self.assertNotIn(bad, text, bad)
@@ -2214,7 +2214,7 @@ class DeepenedCasesShareable(unittest.TestCase):
         cls.full = rv.jload(DR / "ranking_it8_p9_20261029/deepened_cases.json")
         cls.allow = rv.load_allowlist(DR)
         cls.proj = rv.shareable_deepened_cases(cls.full, cls.allow)
-        cls.page = rv.build(DR, "shareable")
+        cls.page = rv.build(DR, "shareable", "it")
 
     def test_every_case_is_exposed_with_its_level_and_the_withheld_fields_are_absent(self):
         self.assertEqual([c["case_id"] for c in self.proj], [c["case_id"] for c in self.full])
@@ -2299,7 +2299,7 @@ class MatchingDirectionView(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.full = rv.build(DR, "full")
-        cls.share = rv.build(DR, "shareable")
+        cls.share = rv.build(DR, "shareable", "it")
         cls.md_full = embedded(cls.full)["cur"]["ranking"]["matching_direction"]
         cls.md_share = embedded(cls.share)["cur"]["ranking"]["matching_direction"]
 
@@ -2357,7 +2357,7 @@ class It20P6Dashboard(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.full = rv.build(DR, "full")
-        cls.share = rv.build(DR, "shareable")
+        cls.share = rv.build(DR, "shareable", "it")
         cls.PS = embedded(cls.share)
 
     def test_funnel_numbers_equal_the_reproducible_table_and_stage_five_is_not_substituted(self):
@@ -2587,7 +2587,7 @@ class It21P7InvestigationsContext(unittest.TestCase):
             for bad in ("is qualified", "was qualified", "now qualified", "qualified hypothesis"):
                 self.assertNotIn(bad, blob)
             self.assertTrue(r["origin_detail"].strip() and r["feasibility"].strip() and r["evidence_depth"].strip())
-        page = rv.build(DR, "shareable")
+        page = rv.build(DR, "shareable", "it")
         low = page.lower()
         for name in ("tiratricol", "forigerimod", "gsk343", "nanatinostat", "iox1", "cgi-1746"):
             self.assertNotIn(name, low, f"{name} reached the single shareable page")

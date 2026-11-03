@@ -113,3 +113,12 @@ jobs:
           echo "package $want"; echo "live    $have"
           [ "$want" = "$have" ]
           grep -c 'name="robots"' live.html || echo "no robots meta tag (indexing accepted)"
+          # the other four language pages of the package are served beside index.html and must equal their package files too
+          for lang in it fr es de; do
+            code=$(curl -s -o "live_$lang.html" -w "%{http_code}" "${url}$lang.html" || true)
+            echo "live $lang.html status: $code"
+            [ "$code" = "200" ]
+            want=$(sha256sum "$PACKAGE_DIR/$lang.html" | cut -d' ' -f1)
+            have=$(sha256sum "live_$lang.html" | cut -d' ' -f1)
+            [ "$want" = "$have" ]
+          done

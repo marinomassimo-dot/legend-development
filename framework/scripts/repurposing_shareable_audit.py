@@ -599,7 +599,8 @@ def link_checks(text: str, rep: Report, rendered_hrefs: list[str] | None = None)
     rest = rest_of_page(text)
     body = re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", rest, flags=re.S)
     hrefs = re.findall(r'href="([^"]*)"', body) + list(rendered_hrefs or [])
-    bad = [h for h in hrefs if not (h.startswith(("#", "https://", "http://")))]
+    pages = set(rv.LANG_FILE.values())                  # the sibling language pages of the same package are allowed targets (relative, same folder, no network)
+    bad = [h for h in hrefs if not (h.startswith(("#", "https://", "http://")) or h.split("#")[0] in pages)]
     for h in bad:
         rep.bad("link-not-document-or-public-url", "href", h)
     for h in hrefs:
@@ -609,7 +610,8 @@ def link_checks(text: str, rep: Report, rendered_hrefs: list[str] | None = None)
                 rep.bad("link-host-not-public-reference", "href", h)
     if re.search(r'(src|href)="\.\./', text):
         rep.bad("repository-relative-link", "html", "../")
-    if re.search(r"<link |@import|url\(\s*https?:|src=\"https?:", rest):
+    rest_links = re.sub(r'<link rel="alternate" hreflang="\w+" href="(?:%s)">' % "|".join(re.escape(x) for x in sorted(pages)), "", rest)    # hreflang alternates between the package's own pages
+    if re.search(r"<link |@import|url\(\s*https?:|src=\"https?:", rest_links):
         rep.bad("external-resource-load", "html", "")
     uh = sorted(set(hrefs))
     rep.info["links"] = {"distinct_hrefs": len(uh), "internal_anchors": sum(1 for h in uh if h.startswith("#")), "external_public": sum(1 for h in uh if h.startswith("http")), "hosts": sorted({h.split("/")[2] for h in uh if h.startswith("http")})}
@@ -917,7 +919,7 @@ def main(argv=None) -> int:
         return 0
     if a.command == "fetch-labels":
         return fetch_labels(a.out or Path("labels"))
-    files = a.html or [p for p in (a.dr / "view/index_shareable.html", a.dr / "view/shareable_package/index.html") if p.exists()]
+    files = a.html or [p for p in [a.dr / "view" / rv.out_name("shareable", lg) for lg in rv.LANGS] + [a.dr / "view/shareable_package" / rv.LANG_FILE[lg] for lg in rv.LANGS] if p.exists()]
     ref = Reference(a.dr)
     corpus_cache: dict = {}
     rc, reports = 0, {}

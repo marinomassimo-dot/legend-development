@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import argparse
 import gzip
+import hashlib
 import html
 import csv
 import json
@@ -32,6 +33,159 @@ from pathlib import Path
 
 COUNTED_KINDS = {"intervention_target", "disease_gene_product", "pathway_member"}   # = LINK_KINDS | PATHWAY_KINDS of repurposing_search.py
 
+# ------------------------------------------------------------------ IT22 follow-on: page language (EN initial, IT, FR, ES, DE)
+# The Italian text tables below stay the SOURCE of the interface wording. A language other than Italian is a translation file per language
+# (view/i18n/ui_<lang>.json: "<table>.<key>" -> text) read on lookup, so the five pages are five renderings of one generator and one
+# dataset, not five hand-kept dashboards. Reader-facing English text written by the curators (rationales, counter-evidence, uncertainties) goes
+# through `lx()`: its translation is looked up by the hash of the English original in view/i18n/content_<lang>.json, and a passage with no
+# translation, or whose original changed since it was translated, is shown in the original language with a visible marker. Nothing scientific
+# (identifiers, values, sources, epistemic labels' data) is translated here: it is the same JSON in every page.
+LANGS = ("en", "it", "fr", "es", "de")
+LANG_NAMES = {"en": "English", "it": "Italiano", "fr": "Français", "es": "Español", "de": "Deutsch"}
+LANG_FILE = {"en": "index.html", "it": "it.html", "fr": "fr.html", "es": "es.html", "de": "de.html"}      # names inside the shareable package
+CUR = {"lang": "it", "collect": None}
+TRANS: dict = {}
+MISSING: set = set()
+I18N_SUBDIR = "i18n"
+
+
+def load_translations(dr: Path) -> None:
+    TRANS.clear()
+    for lang in LANGS:
+        for kind in ("ui", "content"):
+            f = dr / "view" / I18N_SUBDIR / f"{kind}_{lang}.json"
+            if f.exists():
+                TRANS.setdefault(lang, {}).setdefault(kind, {}).update(json.loads(f.read_text(encoding="utf-8")))
+    load_authored_inventory(dr)
+
+
+def text_hash(text: str) -> str:
+    return hashlib.sha256(str(text).encode("utf-8")).hexdigest()[:12]
+
+
+class _Loc(dict):
+    """An Italian text table that answers in the page language being rendered. Keys keep their Italian value in the dict itself (the source)."""
+
+    def __init__(self, name, base):
+        super().__init__(base)
+        self._name = name
+
+    def _leaf(self, path, value):
+        lang = CUR["lang"]
+        if lang == "it" or not isinstance(value, str) or not re.search(r"[^\W\d_]", value):
+            return value
+        found = TRANS.get(lang, {}).get("ui", {}).get(f"{self._name}.{path}")
+        if found is None:
+            MISSING.add((lang, f"{self._name}.{path}"))
+            return value
+        return found
+
+    def _tr(self, key, value, path=None):
+        path = str(key) if path is None else path
+        if isinstance(value, dict):
+            return {k2: self._tr(key, v2, f"{path}.{k2}") for k2, v2 in value.items()}
+        if isinstance(value, (tuple, list)):
+            return type(value)(self._tr(key, v2, f"{path}.{i}") for i, v2 in enumerate(value))
+        return self._leaf(path, value)
+
+    def leaves(self):
+        """(path, Italian text) of every translatable leaf: what the translation files must hold."""
+        out = []
+
+        def walk(path, v):
+            if isinstance(v, dict):
+                for k2, v2 in v.items():
+                    walk(f"{path}.{k2}", v2)
+            elif isinstance(v, (tuple, list)):
+                for i, v2 in enumerate(v):
+                    walk(f"{path}.{i}", v2)
+            elif isinstance(v, str) and re.search(r"[^\W\d_]", v):
+                out.append((f"{self._name}.{path}", v))
+
+        for k, v in dict.items(self):
+            walk(str(k), v)
+        return out
+
+    def __getitem__(self, key):
+        return self._tr(key, super().__getitem__(key))
+
+    def get(self, key, default=None):
+        return self._tr(key, super().__getitem__(key)) if key in self else default
+
+    def items(self):
+        return [(k, self._tr(k, v)) for k, v in super().items()]
+
+    def values(self):
+        return [self._tr(k, v) for k, v in super().items()]
+
+
+def lx(text, tag="span") -> str:
+    """Reader-facing curated English text in the page language. English pages and untranslated passages keep the original with lang="en"; an untranslated passage on another
+    language's page also carries the `orig` marker (a visible 'original language only' badge)."""
+    text = str(text)
+    if CUR["collect"] is not None:
+        CUR["collect"][text_hash(text)] = {"text": text, "src": "en"}
+    lang = CUR["lang"]
+    if lang == "en":
+        return f'<{tag} lang="en">{E(text)}</{tag}>'
+    found = TRANS.get(lang, {}).get("content", {}).get(text_hash(text))
+    if found:
+        return f'<{tag} lang="{lang}">{E(found)}</{tag}>'
+    return f'<{tag} lang="en" class="orig" title="{E(UI_IT["orig_only_title"])}">{E(text)}</{tag}>'
+
+
+def lxi(text, tag="span") -> str:
+    """Italian-authored passage (a data file's own wording) in the page language: the Italian page keeps it, another page shows the translation looked up by hash, or the
+    Italian original with the `orig` marker. Used where the passage sits inside a sentence the node pass cannot see whole."""
+    text = str(text)
+    if CUR["collect"] is not None:
+        CUR["collect"][text_hash(text)] = {"text": text, "src": "it"}
+    lang = CUR["lang"]
+    if lang == "it":
+        return E(text)
+    found = TRANS.get(lang, {}).get("content", {}).get(text_hash(text))
+    if found:
+        return E(found)
+    return f'<{tag} lang="it" class="orig" title="{E(UI_IT["orig_only_title"])}">{E(text)}</{tag}>'
+
+
+IT_WORDS = re.compile(r"\b(di|che|il|la|le|sono|una|del|della|dei|nel|nella|è|può|più|gli|dal|alla|nei|anche|ogni|questo|questa|degli|delle|dello|nelle|nello|tra|fra)\b")
+EN_WORDS = re.compile(r"\b(the|of|and|with|is|are|to|for|that|which|from|not|no)\b")
+TEXT_NODE = re.compile(r">([^<>]+)<")
+AUTH_IT: dict = {}                                   # hash -> Italian authored passage (loaded from content_source.json), localised by the node pass
+
+
+def load_authored_inventory(dr: Path) -> None:
+    AUTH_IT.clear()
+    f = dr / "view" / I18N_SUBDIR / "content_source.json"
+    if f.exists():
+        AUTH_IT.update({h: v["text"] for h, v in json.loads(f.read_text(encoding="utf-8")).items() if v.get("src") == "it"})
+
+
+def localize_authored_nodes(page: str) -> str:
+    """Italian-authored passages that reach the page from data files (work order, context verdicts, overview narrative) are not in the interface tables: their text nodes
+    are found by hash in the inventory and replaced by the translation; with none, the Italian original stays with the `orig` marker. Script and style are untouched."""
+    lang = CUR["lang"]
+    if lang == "it" or not AUTH_IT:
+        return page
+    tr = TRANS.get(lang, {}).get("content", {})
+
+    def swap(m):
+        raw = m.group(1)
+        t = html.unescape(raw).strip()
+        h = text_hash(t)
+        if h not in AUTH_IT or AUTH_IT[h] != t:
+            return m.group(0)
+        lead = raw[: len(raw) - len(raw.lstrip())]
+        trail = raw[len(raw.rstrip()):]
+        if h in tr:
+            return f">{lead}{E(tr[h])}{trail}<"
+        return f'><span lang="it" class="orig" title="{E(UI_IT["orig_only_title"])}">{lead}{raw.strip()}{trail}</span><'
+
+    parts = re.split(r"(<script\b[^>]*>.*?</script>|<style\b[^>]*>.*?</style>)", page, flags=re.S)
+    return "".join(x if x.startswith(("<script", "<style")) else TEXT_NODE.sub(swap, x) for x in parts)
+
+
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_DR = ROOT / "disease-models/wwox/research/drug_repurposing"
 REGEN_CMD = "python3 -B framework/scripts/repurposing_coverage.py run && python3 -B framework/scripts/repurposing_view.py run"
@@ -43,6 +197,22 @@ SOURCES = ("full", "shareable")
 SHAREABLE_ROBOTS_META = '<meta name="robots" content="noindex,nofollow">'
 
 OUT_NAME = {"full": "index.html", "shareable": "index_shareable.html"}
+
+
+def out_name(src: str, lang: str) -> str:
+    """File name of one rendering in view/: the shareable English page keeps the historical name, the other languages sit beside it; the full view is one language (default Italian)."""
+    base = OUT_NAME[src]
+    if (src == "shareable" and lang == "en") or (src == "full" and lang == "it"):
+        return base
+    return base.replace(".html", f".{lang}.html")
+
+
+def langs_for(src: str, lang):
+    """Which languages a command renders: shareable defaults to all five (one dataset, five renderings); full defaults to Italian."""
+    if lang in (None, ""):
+        return list(LANGS) if src == "shareable" else ["it"]
+    return list(LANGS) if lang == "all" else [lang]
+
 
 LEVELS = ["L1_documented_link", "L2_mechanistic_coherence", "L3_observed_effect", "L4_observed_recovery_in_wwox_system"]
 
@@ -192,9 +362,50 @@ def source_rows(manifest: dict, stats: dict, summary: dict) -> list[dict]:
 
 
 # ------------------------------------------------------------------ data boundary (full | shareable)
+ALLOW_TEXT_PATHS = ("withheld_phrase", "file_token_replacement", "regeneration_text")
+
+
+def allow_leaves(allow: dict) -> dict:
+    """The Italian wording the allowlist injects into pages (key -> Italian), the part of the shareable policy that a reader sees."""
+    pol = allow.get("prose_policy") or {}
+    out = {f"ALLOW.{k}": pol[k] for k in ALLOW_TEXT_PATHS if isinstance(pol.get(k), str)}
+    out.update({f"ALLOW.input_labels.{k}": v for k, v in (pol.get("input_labels") or {}).items() if isinstance(v, str)})
+    return out
+
+
 def load_allowlist(dr: Path) -> dict:
     p = dr / "view/shareable_sources.json"
-    return jload(p) if p.exists() else {"dgidb_claim_sources": {}, "name_sources": {}, "access_scope_prefixes": {}, "own_text": {"allowed": True}}
+    allow = jload(p) if p.exists() else {"dgidb_claim_sources": {}, "name_sources": {}, "access_scope_prefixes": {}, "own_text": {"allowed": True}}
+    lang = CUR["lang"]
+    if lang != "it" and isinstance(allow.get("prose_policy"), dict):
+        tr = TRANS.get(lang, {}).get("ui", {})
+        swaps = {}                                                   # Italian wording -> wording in the page language, also inside the English replacement texts that quote it
+        pol = dict(allow["prose_policy"])
+        for key, it_text in allow_leaves(allow).items():
+            found = tr.get(key)
+            if found is None:
+                MISSING.add((lang, key))
+                continue
+            swaps[it_text] = found
+            if key.startswith("ALLOW.input_labels."):
+                pol["input_labels"] = dict(pol.get("input_labels") or {}, **{key[len("ALLOW.input_labels."):]: found})
+            else:
+                pol[key.split(".", 1)[1]] = found
+        allow = dict(allow, prose_policy=pol)
+
+        def sub(x):
+            if isinstance(x, str):
+                for a_, b_ in swaps.items():
+                    if a_ in x:
+                        x = x.replace(a_, b_)
+                return x
+            if isinstance(x, dict):
+                return {k: sub(v) for k, v in x.items()}
+            if isinstance(x, list):
+                return [sub(v) for v in x]
+            return x
+        allow = {k: (sub(v) if k != "licence_texts" else v) for k, v in allow.items()}
+    return allow
 
 
 def assoc_tag(a: dict) -> str:
@@ -283,7 +494,7 @@ def apply_prose_policy(P: dict, allow: dict) -> dict:
         d[r["field"]] = d[r["field"]].replace(r["find"], r["replace"])
     for d in leads:   # record and card files are repository paths: described, not printed
         if d.get("card"):
-            d["card"] = "scheda " + Path(d["card"]).name.split(".")[0]
+            d["card"] = UI_IT["card_word"] + " " + Path(d["card"]).name.split(".")[0]
         if d.get("record"):
             d["record"] = "registro di ricerca del repository (non incluso in questo pacchetto)"
     P["leads"] = leads
@@ -291,7 +502,7 @@ def apply_prose_policy(P: dict, allow: dict) -> dict:
     t["regeneration"] = pol.get("regeneration_text") or "see the package README"
     labels = pol.get("input_labels") or {}
     t["generated_from"] = {labels.get(k, k): v for k, v in (t.get("generated_from") or {}).items()}
-    t["catalog_file"] = dict(t.get("catalog_file") or {}, path="catalogo dei composti")
+    t["catalog_file"] = dict(t.get("catalog_file") or {}, path=labels.get("catalog.jsonl.gz", "catalogo dei composti"))
     for k in ("leads", "tech", "cur", "needs", "funnel", "strings", "access", "observations", "dispositions", "level_defs", "excluded_detail", "card_leads"):
         P[k] = _map_strings(P[k], lambda x: scrub_file_tokens(x, allow))
     for k in ("leads_note", "pair_unit", "ranking_note", "no_probability"):
@@ -2075,7 +2286,7 @@ def build_curated(dr: Path, ctx: dict) -> dict:
             "next": clip(nxt, 360), "next_full": nxt, "limits": card.get("limits") or [], "asserts": asserts, "n_disease_assertions": len(inp.get("disease_assertions") or ([inp["disease_assertion"]] if inp.get("disease_assertion") else [])),
             "access": acc, "country": ("US evidence found" if acc and acc != ["unknown/unverified"] else "no country evidence obtained"), "chembl": chembl, "actions": act,
             "pmids": [{"id": k, "role": v, "title": (titles.get(k) or {}).get("title"), "journal": (titles.get(k) or {}).get("journal"), "year": (titles.get(k) or {}).get("year")} for k, v in sorted(pm.items())], "dois": dois, "scope_counts": scope_counts,
-            "card_path": (f"../{folder}/{cid}.card.json" if not shareable else CARD_FILE_NOTE_IT.format(id=cid)), "n_prio": sum(len(prio_by_row.get(r["row_id"], [])) for r in rws),
+            "card_path": (f"../{folder}/{cid}.card.json" if not shareable else UI_IT["card_file_note"].format(id=cid)), "n_prio": sum(len(prio_by_row.get(r["row_id"], [])) for r in rws),
             "disp": dict(sorted(Counter(p["disposition"] for r in rws for p in prio_by_row.get(r["row_id"], [])).items())),
         })
     dup = Counter(c["short"] for c in cands)
@@ -2690,6 +2901,9 @@ details{margin-top:6px}summary{cursor:pointer;color:var(--acc)}.crit{display:gri
 .ncard{border:1px solid var(--line);border-radius:8px;padding:10px;background:var(--card)}.ncard.explore{border-style:dashed}.ncard h3{margin-top:0;font-size:.95rem}
 .kv{font-size:.84rem;margin:2px 0}.kv b{font-weight:600}ul{padding-left:20px;margin:4px 0}.sr{position:absolute;left:-9999px}
 .cnt{font-weight:600}
+.langsel{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px;align-items:center}.langsel a{display:inline-block;min-width:44px;min-height:44px;line-height:44px;text-align:center;border:1px solid var(--line);border-radius:8px;padding:0 10px;text-decoration:none;font-weight:600;background:var(--card);color:var(--fg)}
+.langsel a[aria-current=true]{background:var(--accbg);border-color:var(--acc);color:var(--fg)}.langsel .lbl{font-size:.8rem;color:var(--mut)}
+.orig::after{content:" EN";font-size:.68em;border:1px solid var(--line);border-radius:3px;padding:0 3px;margin-left:3px;color:var(--mut);font-weight:600}.langnote{margin:6px auto;max-width:1100px;padding:0 14px}
 @media (max-width:560px){body{font-size:14px}section{padding:10px 10px;margin:14px 0}#filters{position:static}.tbl{font-size:.82rem}}
 """
 
@@ -2825,17 +3039,17 @@ document.body.setAttribute('data-ready','1');
 """
 
 TEMPLATE = """<!doctype html>
-<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>__TITLE__</title>__ROBOTS__
+<html lang="__LANG__"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>__TITLE__</title>__ROBOTS____ALT__
 <style>__CSS__</style></head><body>
 <a class="skip" href="#main">__SKIP__</a>
 <header><div class="in"><h1>__H1__</h1>
-<p class="subline">__SUB__</p></div></header>
+<p class="subline">__SUB__</p>__LANGNAV__</div></header>__LANGNOTE__
 __BANNER__<nav aria-label="__NAVLABEL__"><div class="in"><a href="#overview">__N_OV__</a><a href="#start">__N_QK__</a><a href="#explore">__N_XP__</a><a href="#funnel-it20">__N_FU__</a><a href="#ranking">__N_RK__</a><a href="#threads">__N_TH__</a><a href="#chains">__N_EG__</a><a href="#charts">__N_CH__</a><a href="#selection">__N_SE__</a><a href="#hypotheses">__N_HY__</a><a href="#predictive">__N_PR2__</a><a href="#navigate">__N_NAV__</a><a href="#candidates">__N_CA__</a><a href="#priorities-cur">__N_PR__</a><a href="#compare">__N_CP__</a><a href="#technical">__N_TD__</a></div></nav>
 <main id="main">
 __CURATED__
 <details id="technical" class="techwrap"><summary class="techsum">__TD_SUM__</summary>
-<p class="mut technote">__TD_NOTE__</p>
+<p class="mut technote">__TD_NOTE__</p>__TDLANG__
 <section id="funnel"><h2>Imbuto dal catalogo ai valutati: che cosa è contato, in quale unità</h2>__FUNNEL__</section>
 <section id="access"><h2>Distribuzione per categoria di accesso</h2>__ACCESS__</section>
 <section id="filters"><h2>Filtri per la matrice completa <span class="mut">(sezioni seguenti; shareable through the URL hash, for example <code>#f=disp:exploration_candidate&amp;need:NEED-ISR-ATTENUATION</code>)</span></h2>
@@ -3295,7 +3509,7 @@ def render_predictive(P: dict) -> str:
                     f'<td data-label="{lab("ctx_c_verdict")}"><span class="chip vd vd-{E(r["verdict"])}">{E(U["ctx_v_" + r["verdict"]])}</span></td></tr>')
     heads = "".join(f"<th>{E(c)}</th>" for c in cx["context_ids"])
     wide = "".join(f'<tr><th scope="row">{E(r["quantity_it"])}<div class="mini mut">{E(r["id"])}</div></th>' + "".join(f"<td>{E(U['ctx_d_' + d])}</td>" for d in r["directions"]) + "</tr>" for r in cx["rows"])
-    mod = "; ".join(f'{E(c)}: {E(cx["model_labels_it"][cx["models_of"][c]])}' for c in cx["context_ids"])
+    mod = "; ".join(f'{E(c)}: {lxi(cx["model_labels_it"][cx["models_of"][c]])}' for c in cx["context_ids"])
     facts = U["ctx_facts"].format(cells=f'<b data-k="ctx.cells" data-v="{cx["cells"]}">{fmt_it(cx["cells"])}</b>', contexts=f'<b data-k="ctx.contexts" data-v="{cx["contexts"]}">{cx["contexts"]}</b>',
                                   quantities=f'<b data-k="ctx.quantities" data-v="{cx["quantities"]}">{cx["quantities"]}</b>', measured=f'<b data-k="ctx.measured" data-v="{cx["measured"]}">{cx["measured"]}</b>',
                                   unknown=f'<b data-k="ctx.unknown" data-v="{cx["unknown"]}">{cx["unknown"]}</b>', models=f'<b data-k="ctx.models" data-v="{cx["models"]}">{cx["models"]}</b>')
@@ -4082,6 +4296,17 @@ UI_IT20B = {
 }
 UI_IT.update(UI_IT20B)
 
+UI_IT22ML = {
+    "lang_label": "Lingua",
+    "lang_note": "Questa pagina è mostrata in italiano. I passaggi contrassegnati EN (dati tecnici, schede, testi dei registri e ogni testo senza traduzione verificata) sono disponibili soltanto nella lingua originale, l'inglese: la traduzione riguarda l'interfaccia e i testi curati per il lettore. Identificativi, fonti, valori e qualificazioni epistemiche sono gli stessi in tutte le lingue.",
+    "td_en_only": "Questa sezione (matrice completa, filtri, schede dei bisogni, registri e dati tecnici) è disponibile soltanto nella lingua originale dei dati, l'inglese: i filtri, i collegamenti e gli identificativi funzionano come nelle altre lingue.",
+    "card_word": "scheda",
+    "card_file_note": "scheda {id} (file del repository, non incluso in questo pacchetto)",
+    "orig_only_title": "Passaggio disponibile soltanto nella lingua originale (inglese)",
+    "lang_switch_title": "Cambia lingua della pagina",
+}
+UI_IT.update(UI_IT22ML)
+
 
 def investigations_view(rows, cands: list, full: bool, allow: dict):
     """IT20 P6 projection of ranking.json["investigations"] (contract of the hypothesis branch). None when the key is absent. The order is the
@@ -4208,7 +4433,7 @@ def render_investigations(P: dict) -> str:
     items = []
     for r in rows:
         tie = f' <span class="mini">({E(U["iv_tie"])})</span>' if counts[r["position"]] > 1 else ""
-        en = lambda txt: f'<span lang="en">{E(str(txt))}</span>'
+        en = lambda txt: lx(txt)
         spec = [("iv_q", "question"), ("iv_h_origin", "origin_detail"), ("iv_ev", "evidence_available"), ("iv_depth", "evidence_depth"),
                 ("iv_why", "why_now"), ("iv_unc", "decisive_uncertainty"), ("iv_next", "next_test"), ("iv_h_feas", "feasibility"),
                 ("iv_nov", "novelty_perimeter"), ("iv_move", "movement_reason")]
@@ -4221,7 +4446,7 @@ def render_investigations(P: dict) -> str:
         badge = f' <span class="stt stt-{E(st)}">{E(U["iv_st_" + st])}</span>' if st in ("carded_thread", "premise_measurement", "conditional_hypothesis") else ""
         items.append(f'<li class="inv-row" data-rank="{E(str(r["position"]))}" data-origin="{E(r["origin_class"])}"' + (f' data-status="{E(st)}"' if st else "") +
                      f'><div class="inv-h"><span class="inv-pos" aria-label="{E(U["iv_pos"])} {E(str(r["position"]))}">{E(str(r["position"]))}</span>{tie} '
-                     f'<b lang="en">{E(str(r["intervention"]))}</b> <span class="org org-{E(r["origin_class"])}">{E(U["iv_o_" + r["origin_class"]])}</span>{badge}</div><dl class="qk-dl">{dl}</dl></li>')
+                     f'{lx(r["intervention"], "b")} <span class="org org-{E(r["origin_class"])}">{E(U["iv_o_" + r["origin_class"]])}</span>{badge}</div><dl class="qk-dl">{dl}</dl></li>')
     out = head + f'<p class="lead inv-purpose"><b>{E(U["iv_purpose"])}</b></p><p class="mini mut">{E(U["iv_lead"])}</p>'
     if ctx:
         mv = ctx.get("published_vs_it20") or {}
@@ -4234,24 +4459,24 @@ def render_investigations(P: dict) -> str:
         for r in conds:
             cspec = [("iv_cond_id", "inv_id"), ("iv_q", "question"), ("iv_h_origin", "origin_detail"), ("iv_why", "why_now"), ("iv_ev", "evidence_available"),
                      ("iv_depth", "evidence_depth"), ("iv_unc", "decisive_uncertainty"), ("iv_next", "next_test"), ("iv_h_feas", "feasibility"), ("iv_nov", "novelty_perimeter")]
-            cdl = "".join(f'<dt>{E(U[k])}</dt><dd><span lang="en">{E(str(r[f]))}</span></dd>' for k, f in cspec if str(r.get(f) or "").strip())
+            cdl = "".join(f'<dt>{E(U[k])}</dt><dd>{lx(r[f])}</dd>' for k, f in cspec if str(r.get(f) or "").strip())
             cids = [x for x in str(r.get("chembl_ids") or "").split(";") if x]
             if cids:
                 cdl += f'<dt>{E(U["iv_h_chembl"])}</dt><dd><span class="mini">{E(", ".join(cids))}</span> <span class="mini mut">({E(U["iv_chembl_full"] if full else U["iv_chembl_share"])}).</span></dd>'
             ci.append(f'<li class="inv-row inv-cond" data-inv="{E(r["inv_id"])}" data-origin="{E(r["origin_class"])}" data-status="conditional_hypothesis"><div class="inv-h">'
-                      f'<b lang="en">{E(str(r["intervention"]))}</b> <span class="org org-{E(r["origin_class"])}">{E(U["iv_o_" + r["origin_class"]])}</span> '
+                      f'{lx(r["intervention"], "b")} <span class="org org-{E(r["origin_class"])}">{E(U["iv_o_" + r["origin_class"]])}</span> '
                       f'<span class="stt stt-conditional_hypothesis">{E(U["iv_st_conditional_hypothesis"])}</span></div><dl class="qk-dl">{cdl}</dl></li>')
         out += (f'<section id="inv-conditional" class="inl" aria-labelledby="h-inv-cond"><h3 id="h-inv-cond">{E(U["iv_cond_h"])} ({len(conds)})</h3>'
                 f'<p class="note">{E(U["iv_cond_lead"])}</p><ul class="inv-list inv-cond-list">{"".join(ci)}</ul></section>')
     chg = ctx.get("it22_changes") or []
     if chg:
         out += (f'<section id="inv-it22" class="inl" aria-labelledby="h-inv-it22"><h3 id="h-inv-it22">{E(U["iv_it22_h"])}</h3><p class="note">{E(U["iv_it22_lead"])}</p>'
-                '<ul class="inv-it22-list">' + "".join(f'<li data-chg="{E(c["id"])}"><span lang="en">{E(c["text"])}</span></li>' for c in chg) + '</ul></section>')
+                '<ul class="inv-it22-list">' + "".join(f'<li data-chg="{E(c["id"])}">{lx(c["text"])}</li>' for c in chg) + '</ul></section>')
     pbs = ctx.get("partial_benefit") or []
     if pbs:
         pf = [("iv_pb_fn", "function"), ("iv_pb_why", "why"), ("iv_pb_cand", "candidate_class"), ("iv_pb_opp", "opposing"), ("iv_pb_exp", "experiment"), ("iv_pb_close", "closes_if"),
               ("iv_pb_nov", "novelty"), ("iv_pb_ev", "evidence"), ("iv_pb_rel", "wwox_relevance"), ("iv_pb_feas", "feasibility")]
-        pi = "".join(f'<li class="inv-row inv-pb" data-pb="{E(r["pb_id"])}"><dl class="qk-dl">' + "".join(f'<dt>{E(U[k])}</dt><dd><span lang="en">{E(str(r[f]))}</span></dd>' for k, f in pf if str(r.get(f) or "").strip()) + '</dl></li>' for r in pbs)
+        pi = "".join(f'<li class="inv-row inv-pb" data-pb="{E(r["pb_id"])}"><dl class="qk-dl">' + "".join(f'<dt>{E(U[k])}</dt><dd>{lx(r[f])}</dd>' for k, f in pf if str(r.get(f) or "").strip()) + '</dl></li>' for r in pbs)
         out += (f'<section id="inv-partial" class="inl" aria-labelledby="h-inv-pb"><h3 id="h-inv-pb">{E(U["iv_pb_h"])} ({len(pbs)})</h3><p class="note">{E(U["iv_pb_lead"])}</p><ul class="inv-list inv-pb-list">{pi}</ul></section>')
     below = ctx.get("below_the_line_vs_it20") or []
     if below:
@@ -4269,7 +4494,7 @@ def render_investigations(P: dict) -> str:
             sub = n["subject_full"] if full and n.get("subject_full") else n["subject_label"]
             dd = [("iv_neg_ruled", n["ruled_out"]), ("iv_neg_reason", n["reason"])] + ([("iv_neg_reason", n["detail_full"])] if full and n.get("detail_full") else []) + [("iv_neg_reopen", n["reopen"]), ("iv_neg_pkg", n["package"])]
             ids = [x for x in str(n.get("chembl_ids") or "").split(";") if x]
-            li.append(f'<li class="inv-neg" data-neg="{E(n["neg_id"])}"><b lang="en">{E(sub)}</b><dl class="qk-dl">' + "".join(f'<dt>{E(U[k])}</dt><dd lang="en">{E(v)}</dd>' for k, v in dd) +
+            li.append(f'<li class="inv-neg" data-neg="{E(n["neg_id"])}">{lx(sub, "b")}<dl class="qk-dl">' + "".join(f'<dt>{E(U[k])}</dt><dd>{lx(v, "span")}</dd>' for k, v in dd) +
                       (f'<dt>{E(U["iv_h_chembl"])}</dt><dd><span class="mini">{E(", ".join(ids))}</span></dd>' if ids else "") + '</dl></li>')
         out += f'<details class="inl" id="inv-negatives" open><summary>{E(U["iv_neg_h"])} ({len(negs)})</summary><p class="mini">{E(U["iv_neg_lead"])}</p><ul class="inv-negs">{"".join(li)}</ul></details>'
     p5 = ctx.get("wwox_contribution")
@@ -4810,9 +5035,10 @@ def render_ranking_onepage(P: dict) -> str:
 
 def ui_payload() -> dict:
     """Italian orientation strings for the page script (D.ui): one dict, no logic."""
-    ui = dict(UI_IT)
-    ui.update({"pos": POS_IT, "scopeL": SCOPE_IT, "goalL": GOALS_IT, "thread": {k: {"name": v[0], "text": v[1]} for k, v in THREAD_IT.items()}, "need": NEED_IT,
-               "statusL": STATUS_IT, "countryL": COUNTRY_IT, "crit": CRIT_IT})
+    plain = lambda tbl: {k: tbl[k] for k in tbl.keys()}          # read through the table so the page language applies (dict(tbl) would copy the Italian storage)
+    ui = plain(UI_IT)
+    ui.update({"pos": plain(POS_IT), "scopeL": plain(SCOPE_IT), "goalL": plain(GOALS_IT), "thread": {k: {"name": THREAD_IT[k][0], "text": THREAD_IT[k][1]} for k in THREAD_IT.keys()}, "need": plain(NEED_IT),
+               "statusL": plain(STATUS_IT), "countryL": plain(COUNTRY_IT), "crit": plain(CRIT_IT)})
     return ui
 
 
@@ -4826,6 +5052,33 @@ def fill_tokens(text: str) -> str:
             raise SystemExit(f"asset token {{{{{m.group(1)}}}}} has no Italian string in UI_IT")
         return E(UI_IT[m.group(1)])
     return TOKEN_RE.sub(one, text)
+
+
+def render_lang_alternates(P: dict) -> str:
+    """hreflang alternates of the five pages of the shareable package (relative file names; the package holds all five side by side)."""
+    if P["source"] != "shareable":
+        return ""
+    return "".join(f'<link rel="alternate" hreflang="{l}" href="{LANG_FILE[l]}">' for l in LANGS)
+
+
+LANG_JS = r"""(function(){var K='legend.lang';try{var cur=document.documentElement.lang;var L=document.querySelectorAll('.langsel a');
+function fix(){for(var i=0;i<L.length;i++){L[i].href=L[i].getAttribute('data-file')+location.hash;}}
+fix();window.addEventListener('hashchange',fix);
+for(var i=0;i<L.length;i++){L[i].addEventListener('click',function(){try{localStorage.setItem(K,this.getAttribute('data-lang'));}catch(e){}});}
+if(__INITIAL__){var p=null;try{p=localStorage.getItem(K);}catch(e){}
+for(var j=0;j<L.length;j++){if(p&&p!==cur&&L[j].getAttribute('data-lang')===p){location.replace(L[j].getAttribute('data-file')+location.hash);}}}
+}catch(e){}})();"""
+
+
+def render_lang_nav(P: dict) -> str:
+    """The language selector of the shareable pages: five plain links (they work without JavaScript and by keyboard), 44 px targets on a phone, the current page marked.
+    A few lines of script keep the choice in localStorage (wrapped: it can be absent) and, on the English page only, open the remembered language; the filter hash is carried over."""
+    if P["source"] != "shareable":
+        return ""
+    cur = CUR["lang"]
+    links = "".join(f'<a href="{LANG_FILE[l]}" data-file="{LANG_FILE[l]}" data-lang="{l}" hreflang="{l}" lang="{l}" title="{E(LANG_NAMES[l])}"' + (' aria-current="true"' if l == cur else "") + f'>{l.upper()}</a>' for l in LANGS)
+    script = LANG_JS.replace("__INITIAL__", "true" if cur == "en" else "false")
+    return f'<nav class="langsel" aria-label="{E(UI_IT["lang_label"])}" title="{E(UI_IT["lang_switch_title"])}"><span class="lbl">{E(UI_IT["lang_label"])}</span>{links}</nav><script>{script}</script>'
 
 
 def render(P: dict, dr: Path = DEFAULT_DR) -> str:
@@ -4846,6 +5099,11 @@ def render(P: dict, dr: Path = DEFAULT_DR) -> str:
         page = page.replace(f"__{k}__", E(U[key]))
     page = page.replace("__BANNER__", render_banner(P))
     page = page.replace("__ROBOTS__", SHAREABLE_ROBOTS_META if P["source"] == "shareable" else "")
+    page = page.replace("__LANG__", CUR["lang"])
+    page = page.replace("__TDLANG__", f'<p class="mini mut technote"><span class="orig" lang="en">{E(UI_IT["td_en_only"])}</span></p>' if CUR["lang"] != "en" else "")
+    page = page.replace("__ALT__", render_lang_alternates(P))
+    page = page.replace("__LANGNAV__", render_lang_nav(P))
+    page = page.replace("__LANGNOTE__", f'<p class="mini mut langnote" id="langnote">{E(UI_IT["lang_note"])}</p>' if (P["source"] == "shareable" and CUR["lang"] != "en") else "")
     st = dict(st)
     st.pop("BANNER", None)
     for k, v in st.items():
@@ -4855,12 +5113,21 @@ def render(P: dict, dr: Path = DEFAULT_DR) -> str:
         allow = load_allowlist(dr)
         parts = re.split(r"(<script\b[^>]*>.*?</script>|<style\b[^>]*>.*?</style>)", page, flags=re.S)
         page = "".join(scrub_file_tokens(x, allow) if x.startswith("<script") else (x if x.startswith("<style") else re.sub(r">([^<]+)<", lambda m: ">" + scrub_file_tokens(m.group(1), allow) + "<", x)) for x in parts)
+    page = localize_authored_nodes(page)
     page = page.replace("__DATA__", data)  # last: the data may contain placeholder-like text
     return page
 
 
-def build(dr: Path = DEFAULT_DR, source: str = "full") -> str:
-    out = render(build_payload(dr, source), dr)
+def build(dr: Path = DEFAULT_DR, source: str = "full", lang: str | None = None) -> str:
+    lang = lang or ("en" if source == "shareable" else "it")          # the shareable edition opens in English; the local full view stays Italian unless asked
+    if lang not in LANGS:
+        raise SystemExit(f"unknown language {lang!r}: one of {', '.join(LANGS)}")
+    load_translations(dr)
+    CUR["lang"] = lang
+    try:
+        out = render(build_payload(dr, source), dr)
+    finally:
+        CUR["lang"] = "it"
     n = len(out.encode("utf-8"))
     if n > MAX_BYTES:
         raise SystemExit(f"view is {n} bytes, above the {MAX_BYTES} budget: trim the projection")
@@ -5110,6 +5377,84 @@ def measure_viewports(html_path: Path, shots: Path | None = None, widths: list |
     return out
 
 
+for _n in ("UI_IT", "POS_IT", "SCOPE_IT", "GOALS_IT", "THREAD_IT", "NEED_IT", "STATUS_IT", "COUNTRY_IT", "CRIT_IT", "STATE_IT", "OBJ_IT", "DEEPENED_LEVEL_IT"):
+    globals()[_n] = _Loc(_n, globals()[_n])       # from here on a lookup answers in the page language being rendered (CUR)
+LOC_TABLES = ("UI_IT", "POS_IT", "SCOPE_IT", "GOALS_IT", "THREAD_IT", "NEED_IT", "STATUS_IT", "COUNTRY_IT", "CRIT_IT", "STATE_IT", "OBJ_IT", "DEEPENED_LEVEL_IT")
+
+
+def i18n_collect(dr: Path) -> tuple[dict, dict]:
+    """The two source inventories: every Italian interface text (key -> Italian, the allowlist wording included) and every authored passage that reaches a page and is not
+    an interface text (hash -> {text, src}): curated English passages seen by `lx`, and Italian-authored passages found by a marked rendering (every interface text prefixed
+    with a marker, so what is left unmarked and Italian is authored data). Written to view/i18n/ui_source.json and content_source.json."""
+    ui = {k: v for t in LOC_TABLES for k, v in globals()[t].leaves()}
+    ui.update(allow_leaves(jload(dr / "view/shareable_sources.json") if (dr / "view/shareable_sources.json").exists() else {}))
+    load_translations(dr)
+    AUTH_IT.clear()                                   # collect from scratch: the inventory being rebuilt must not filter itself
+    CUR["collect"] = {}
+    try:
+        build(dr, "shareable", "it")
+        content = dict(CUR["collect"])
+    finally:
+        CUR["collect"] = None
+    TRANS["zz"] = {"ui": {k: "\u00a7" + v for k, v in ui.items()}, "content": {}}
+    CUR["lang"] = "zz"
+    try:
+        page = render(build_payload(dr, "shareable"), dr)
+    finally:
+        CUR["lang"] = "it"
+        TRANS.pop("zz", None)
+    body = re.sub(r"<script\b.*?</script>|<style\b.*?</style>", "", page, flags=re.S)
+    body = re.sub(r"<(span|b|dd)\b[^>]*\blang=\"en\"[^>]*>.*?</\1>", "", body, flags=re.S)
+    for raw in TEXT_NODE.findall(body):
+        t = html.unescape(raw).strip()
+        low = t.lower()
+        if "\u00a7" in t or len(t) < 6 or len(EN_WORDS.findall(low)) >= (3 if len(t) >= 25 else 1):
+            continue
+        if not ((len(t) >= 25 and len(IT_WORDS.findall(low)) >= 2) or (len(t) < 25 and (IT_WORDS.findall(low) or re.search(r"[àèéìòù]", low) or re.search(r"\\b\\w+(zione|mente|ività|ità)\\b|\\b\\w{7,}(are|ere|ire)\\b|\\b(ruoli|dei|bersagli|risultato|catalogo|artefatti|statistiche|premessa|ipotesi|osservazione|contrasto|quantità)\\b", low)))):
+            continue
+        content.setdefault(text_hash(t), {"text": t, "src": "it"})
+    load_authored_inventory(dr)
+    return ui, content
+
+
+I18N_TOKEN_RE = re.compile(r"\{[a-zA-Z_0-9]*\}|&[a-z]+;|<[^>]+>|(?<![A-Za-z])[A-Z]{2,}[A-Z0-9]*\d+[A-Z0-9]*(?![A-Za-z0-9])|(?<![A-Za-z0-9])\d[\d.,]*\d|(?<![A-Za-z0-9])\d")
+
+
+def i18n_tokens(text: str) -> Counter:
+    """Placeholders, markup, identifiers and numbers of a text; digit groups are compared without their separator (Italian 0,39 / English 0.39; a thousands separator 2,769 / 2769)."""
+    return Counter(I18N_TOKEN_RE.findall(re.sub(r"(?<=\d)[.,](?=\d)", "", text)))
+
+
+
+def i18n_check(dr: Path) -> int:
+    """Completeness and fidelity of the translation files. UI texts must be complete in every language (a missing one would show Italian on that page); the
+    placeholders, markup, identifiers and numbers of a text must survive translation; curated passages may be absent (they then show in the original language
+    with the EN marker) but a translation whose original changed is stale and reported."""
+    ui, content = i18n_collect(dr)
+    load_translations(dr)
+    rc = 0
+    for lang in ("en", "fr", "es", "de"):
+        t = TRANS.get(lang, {}).get("ui", {})
+        miss = [k for k in ui if k not in t]
+        extra = [k for k in t if k not in ui]
+        bad = [k for k in ui if k in t and i18n_tokens(ui[k]) != i18n_tokens(t[k]) and not k.startswith("THREAD_IT.")]
+        print(f"ui_{lang}: {len(ui) - len(miss)}/{len(ui)} present; {len(extra)} unused; {len(bad)} with changed placeholders, identifiers or numbers")
+        for k in bad[:8]:
+            print(f"   changed: {k}: {sorted(set(I18N_TOKEN_RE.findall(ui[k])) ^ set(I18N_TOKEN_RE.findall(t[k])))[:6]}")
+        rc |= bool(miss or bad)
+        for k in miss[:5]:
+            print(f"   missing: {k}")
+    for lang in ("en", "it", "fr", "es", "de"):
+        t = TRANS.get(lang, {}).get("content", {})
+        mine = {h: v for h, v in content.items() if v["src"] != lang}
+        have = [h for h in mine if h in t]
+        stale = [h for h in t if h not in mine]
+        bad = [h for h in have if i18n_tokens(mine[h]["text"]) != i18n_tokens(t[h])]
+        print(f"content_{lang}: {len(have)}/{len(mine)} passages translated; {len(mine) - len(have)} stay in the original language (marker); {len(stale)} stale; {len(bad)} with changed identifiers or numbers")
+        rc |= bool(bad)
+    return rc
+
+
 def main(argv=None) -> int:
     argv = list(sys.argv[1:] if argv is None else argv)
     if argv and argv[0] in ("audit-shareable", "package"):   # IT5 P13: the proof and the package live in their own small modules
@@ -5119,11 +5464,13 @@ def main(argv=None) -> int:
         import repurposing_shareable_package as _m
         return _m.main(argv[1:])
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0], formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("command", nargs="?", choices=["run", "check", "positions", "titles", "viewports"], help="(also: audit-shareable, package: see the module docstring) run: write the view; check: exit 1 if a file is stale; positions: print one TSV line per card x need with the inputs and the position (for re-derivation); titles: report (or with --refresh, fill) the source-title cache; viewports: measure the page at 360/390/768/1280 px with a real device-metrics emulation")
+    ap.add_argument("command", nargs="?", choices=["run", "check", "positions", "titles", "viewports", "i18n"], help="(also: audit-shareable, package: see the module docstring) run: write the view; check: exit 1 if a file is stale; positions: print one TSV line per card x need with the inputs and the position (for re-derivation); titles: report (or with --refresh, fill) the source-title cache; viewports: measure the page at 360/390/768/1280 px with a real device-metrics emulation")
     ap.add_argument("--dr", type=Path, default=DEFAULT_DR, help="drug_repurposing directory (default: the module)")
     ap.add_argument("--source", choices=list(SOURCES), default=None,
                     help="run: full (default) embeds every row, written to view/index.html; shareable embeds only allowlisted rows (view/shareable_sources.json), written to view/index_shareable.html. check: both unless given")
     ap.add_argument("--out", type=Path, default=None, help="output file (default: <dr>/view/index.html or index_shareable.html); with check and no --source, only valid for one source")
+    ap.add_argument("--lang", choices=list(LANGS) + ["all"], default=None, help="run: page language (shareable: default all five, written next to the English one; full: default it); i18n: collect or check the translation files")
+    ap.add_argument("--what", choices=["collect", "check"], default="check", help="i18n: collect writes view/i18n/ui_source.json and content_source.json; check verifies the translation files")
     ap.add_argument("--refresh", action="store_true", help="titles: fetch the missing titles (NCBI esummary, keyless, one call per 100 ids, no e-mail or tool parameter) into view/source_titles.json")
     ap.add_argument("--refetch", action="store_true", help="titles --refresh: fetch every referenced PMID again, not only the missing ones")
     ap.add_argument("--shots", type=Path, default=None, help="viewports: directory for screenshots (omit for measurements only)")
@@ -5165,23 +5512,38 @@ def main(argv=None) -> int:
             if not c["links"]:
                 print("\t".join([c["id"], "(no linked need)", "", "", "", "", "", ""]))
         return 0
+    if a.command == "i18n":
+        if a.what == "collect":
+            ui, content = i18n_collect(a.dr)
+            d = a.dr / "view" / I18N_SUBDIR
+            d.mkdir(parents=True, exist_ok=True)
+            (d / "ui_source.json").write_text(json.dumps(ui, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+            (d / "content_source.json").write_text(json.dumps(content, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+            print(f"collected {len(ui)} interface texts and {len(content)} curated passages into {d}")
+            return 0
+        return i18n_check(a.dr)
     if a.command == "run":
         src = a.source or "full"
-        out = a.out or (a.dr / "view" / OUT_NAME[src])
-        text = build(a.dr, src)
-        out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(text, encoding="utf-8")
-        print(f"wrote {out} ({len(text.encode('utf-8')):,} bytes, source {src})")
+        langs = langs_for(src, a.lang)
+        if a.out and len(langs) > 1:
+            raise SystemExit("--out names one file: give one --lang with it")
+        for lg in langs:
+            out = a.out or (a.dr / "view" / out_name(src, lg))
+            text = build(a.dr, src, lg)
+            out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_text(text, encoding="utf-8")
+            print(f"wrote {out} ({len(text.encode('utf-8')):,} bytes, source {src}, language {lg})")
         return 0
     rc = 0
     for src in ([a.source] if a.source else list(SOURCES)):
-        out = a.out if (a.out and a.source) else (a.dr / "view" / OUT_NAME[src])
-        text = build(a.dr, src)
-        if not out.exists() or out.read_text(encoding="utf-8") != text:
-            print(f"STALE: {out} differs from a fresh {src} build; run: python3 -B framework/scripts/repurposing_view.py run" + (" --source shareable" if src == "shareable" else ""))
-            rc = 1
-        else:
-            print(f"view is current ({src})")
+        for lg in langs_for(src, a.lang):
+            out = a.out if (a.out and a.source and len(langs_for(src, a.lang)) == 1) else (a.dr / "view" / out_name(src, lg))
+            text = build(a.dr, src, lg)
+            if not out.exists() or out.read_text(encoding="utf-8") != text:
+                print(f"STALE: {out} differs from a fresh {src} build ({lg}); run: python3 -B framework/scripts/repurposing_view.py run" + (" --source shareable" if src == "shareable" else ""))
+                rc = 1
+            else:
+                print(f"view is current ({src}, {lg})")
     return rc
 
 
