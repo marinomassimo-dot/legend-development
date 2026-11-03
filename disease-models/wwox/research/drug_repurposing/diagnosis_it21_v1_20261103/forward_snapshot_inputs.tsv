@@ -1,0 +1,23 @@
+role	path	blob_sha	last_commit
+seed table (131 rows, 65 usable)	disease-models/wwox/research/drug_repurposing/generation_it9_p1_20261030/seeds.tsv	e1981fbd98e1	cc38e73b 2026-10-30
+compound catalogue (44,211 entries)	disease-models/wwox/research/drug_repurposing/catalog/catalog.jsonl.gz	2dc6fdd0b7bc	dadbda7a 2026-10-28
+family action table, guards on (IT21 P2)	disease-models/wwox/research/drug_repurposing/generation_it21_p2_20261103/results/actions/family_actions.tsv.gz	bc6ecf69b12e	117416c1 2026-11-03
+family meta (identity flags)	disease-models/wwox/research/drug_repurposing/generation_it21_p2_20261103/results/actions/family_meta.tsv.gz	d9cd52275d0d	117416c1 2026-11-03
+IT21 P2 generator and hand-over rules	disease-models/wwox/research/drug_repurposing/generation_it21_p2_20261103/run_generation_it21.py	a46711510fe5	117416c1 2026-11-03
+IT21 P2 action refresh	disease-models/wwox/research/drug_repurposing/generation_it21_p2_20261103/refresh_actions_it21.py	bab25cb7008a	117416c1 2026-11-03
+IT21 P2 proposals	disease-models/wwox/research/drug_repurposing/generation_it21_p2_20261103/results/proposals_it21.tsv	cae1e3b5dfbf	117416c1 2026-11-03
+IT21 P2 hand-over	disease-models/wwox/research/drug_repurposing/generation_it21_p2_20261103/results/handoff_it21.tsv	7b1a6dda6c1b	117416c1 2026-11-03
+IT21 P2 summary (blockers)	disease-models/wwox/research/drug_repurposing/generation_it21_p2_20261103/results/summary_it21.json	663f68fd9afc	117416c1 2026-11-03
+IT10 v4 seed-specific list	disease-models/wwox/research/drug_repurposing/generation_it10_p1_20261031/results_v4/v3_seed_specific_all_nulls.tsv	7af7f989cffa	49518c64 2026-10-30
+IT10 dispositions Q2	disease-models/wwox/research/drug_repurposing/generation_it10_p1_20261031/results/dispositions_Q2.tsv	14c7db210aa5	e356f1af 2026-10-31
+IT9 P3 consolidated candidates	disease-models/wwox/research/drug_repurposing/exploration_it9_p3_20261030/candidates_consolidated.tsv	abd9f96789c4	f5099d75 2026-10-30
+IT9 P3 excluded	disease-models/wwox/research/drug_repurposing/exploration_it9_p3_20261030/excluded.tsv	aa2db0360a77	f5099d75 2026-10-30
+IT9 P4c-e selection note	disease-models/wwox/research/drug_repurposing/qualification_it9_p4c_e_20261030/selection_note_E.md	955234c71e37	f56ffb86 2026-10-30
+IT21 P4a qualification	disease-models/wwox/research/drug_repurposing/qualification_it21_p4a_20261103/qualification_it21_p4a.tsv	45dbc2e6bc0c	117416c1 2026-11-03
+IT21 P3b path B levers	disease-models/wwox/research/drug_repurposing/qualification_it21_p3b_20261103/pathb_levers_it21.tsv	5f4c269b449c	5bf245cf 2026-11-03
+IT21 P5 decoy comparison (real rows)	disease-models/wwox/research/drug_repurposing/evaluation_it21_p5_20261103/results/real_rows_vs_decoy_frequency_p5.tsv	22c7f27eb217	8aae649d 2026-11-03
+ranking (queue/ranking/dashboard input)	disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/ranking.json	e1f2921ef473	117416c1 2026-11-03
+informative negatives (NEG-03 nanatinostat)	disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/informative_negatives_it21.tsv	0f97dd162aa2	117416c1 2026-11-03
+needs	disease-models/wwox/research/drug_repurposing/needs/needs.json	20bf7a4fe0b0	9e8fffe0 2026-11-01
+card A01 PBA class (HDAC comparator, revival trigger)	disease-models/wwox/research/drug_repurposing/cards/A01_pba_class.packet.json	14eebb525cb6	8a795828 2026-10-29
+local GtoPdb interactions (cache, not in git)	/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/catalog/cache/gtopdb/interactions.csv	sha256:cdbd18c66cf99d1a	not tracked
