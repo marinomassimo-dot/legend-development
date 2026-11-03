@@ -11,7 +11,7 @@
  "DEFAULTS_TAKEN": [],
  "STOP_LOG": [],
  "AUTHORISED_QUEUE_20261103": {
-  "MANDATE_STATE": "ACTIVE",
+  "MANDATE_STATE": "OPEN",
   "OBJ_P0": {
    "order": 1,
    "steps": [
