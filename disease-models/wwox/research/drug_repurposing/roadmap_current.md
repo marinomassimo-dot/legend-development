@@ -204,7 +204,7 @@ Reusable guidance for any drug-repurposing package lives in these places only; r
   glue-type actions carry no sign) and its output stays `CONDITIONAL_*` until a measurement resolves the role; nothing
   leaves that vocabulary by pipeline (`CLOSED_AS_WRITTEN` is a terminal state, never a promotion). Retrospective result:
   replacing the WWOX seed genes by degree- or reach-matched decoy genes yields about as many proposals (real count above the
-  decoy 95th percentile in 0 of 5 sets), so **WWOX identity adds no demonstrable advantage at this level**; the independent
+  decoy 95th percentile in 0 of 5 sets), so **WWOX identity adds no demonstrable advantage on the properties measured (proposal count; membership against matched random seed sets)** (IT22: this is not the general conclusion that WWOX adds no value; network interactions, cell-type-specific contrasts and role premises were not measured); the independent
   routes that did produce a distinct conditional question were compound-first (Path B) and role-resolving probes. Two
   pitfalls to carry: (1) an edge of the signed network can be contradicted by the references it cites; screen each chain
   edge against its own references' abstracts before spending a qualification (`generation_it21_p2_20261103/
