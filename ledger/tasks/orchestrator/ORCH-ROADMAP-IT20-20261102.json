@@ -41,8 +41,9 @@
    "steps": [
     {
      "step": "P2 DGIdb copy of a ChEMBL group action: keep original source, republishing source, effective target level, transfer limits; four T-type cases; reach search, coverage, queue, ranking, view",
-     "status": "TODO",
-     "owner": "scientist"
+     "status": "DONE",
+     "owner": "scientist",
+     "evidence": "matching_it20_engine_20261102: DGIdb copy of a ChEMBL group action reproduced then closed in the active path (original/republishing source, release 33 vs 37, effective target level, assertion_key by action class); directed 336->247, unsupported directions via republished claims 90->0, L2 coherent 99->74, queue 34->28; independent verifier recomputed and found one real defect (key vocabulary mismatch, 21 copies still distinct) fixed with a dated correction"
     }
    ]
   },
@@ -51,8 +52,9 @@
    "steps": [
     {
      "step": "P3 bepridil/Cav3.2 specific evidence consumable by the engine through the existing qualification structures, or reasoned abstention; no name whitelist; review the half-of-components heuristic",
-     "status": "TODO",
-     "owner": "scientist"
+     "status": "DONE",
+     "owner": "scientist",
+     "evidence": "bepridil/Cav3.2: PubMed 15855830 re-read at abstract depth (IC50 0.4 uM at -70 mV, tonic; clone species NOT stated in the abstract - IT19 wording corrected); one data-row waiver for CACNA1H only, CACNA1G/I stay abstained, no name list; receipt FTR-20261102-15855830-02 appended"
     }
    ]
   },
@@ -61,8 +63,9 @@
    "steps": [
     {
      "step": "P4 fixtures for duplication / improper transfer / unknown-as-negative; contrasting cases; before/after comparison; independent check",
-     "status": "TODO",
-     "owner": "scientist"
+     "status": "DONE",
+     "owner": "scientist",
+     "evidence": "test_repurposing_provenance.py 21 tests (real vocabulary pairs), contrasting cases and before/after in the engine README; verified by a second actor"
     }
    ]
   },
@@ -71,8 +74,9 @@
    "steps": [
     {
      "step": "P5 WWOX-guided question on the improved engine: external-only vs WWOX-qualified at equal usable universe; closed loop to next experiment and regenerated queue + addendum: investigations ranking (Principali indagini)",
-     "status": "TODO",
-     "owner": "scientist"
+     "status": "DONE",
+     "owner": "scientist",
+     "evidence": "hypotheses_it20_20261102: external-only 622 vs WWOX-qualified 74 families at one usable universe, wwox_only=0: the qualification filters, it does not generate; no sustainable new therapeutic relation outside the excitability cluster; 10 ranked investigations (ranking.json investigations, 11th below the line), unit ranking unchanged (order digest ff38fcaa61295a5a); verified"
     }
    ]
   },
@@ -81,8 +85,9 @@
    "steps": [
     {
      "step": "P6 public dashboard: clearer exploration (need->interventions, compound->actions/needs/counter-evidence), reproducible funnel, readable priorities, less technical first screen; before/after screenshots; audit; publish; verify served version",
-     "status": "TODO",
-     "owner": "scientist"
+     "status": "DONE",
+     "owner": "scientist",
+     "evidence": "dashboard: investigations first block, in-breve evidence classes, five-stage funnel, explorer with text alternative, lighter first screen; verified independently (scripts, rows equal data, funnel recomputed, viewports 0 overflow on view and package); defects (stale screenshots, missing purpose sentence) fixed; audit-shareable --dynamic PASS; publication pending the final candidate"
     }
    ]
   },
