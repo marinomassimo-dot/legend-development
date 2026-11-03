@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-03T13:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "captions_only",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "event_at": "2026-11-03T13:50:00Z",
+ "event_id": "FTR-20261103-32493453-01",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator | proposition: vorinostat is detectable in CSF of two pediatric brain-tumour patients; measured as concentration (type: total CSF concentration by HPLC-MS, not an affinity) | Results, Quantitation of pharmaceuticals ... | \"vorinostat (mean 75.4 nM, range 6.4–197.2 nM)\"",
+  "verbatim_locator | proposition: unbound fraction in CSF calculated, not measured | Results, same section | \"the unbound fraction accounted for about 99% of the total drug amount measured\"",
+  "verbatim_locator | proposition: panobinostat not detected in CSF, so CNS access is compound-specific within the class | Results, same section | \"Similarly, panobinostat was untraceable in CSF samples\"",
+  "verbatim_locator | proposition: setting limits transfer to a WWOX patient (tumour, leptomeningeal disease, n=2, concomitant chemotherapy) | Discussion | \"most of the studied cases exhibited leptomeningeal disease, which also might influence BBB penetration\"",
+  "Tables and figures read as captions only; supplementary not opened. Nothing in this paper concerns WWOX, missense stability or HDAC6 engagement."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p6_20261103/stability_probes/README.md",
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p6_20261103/stability_probes/stability_levers_it22_p6.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC7268320 (PubMed MCP get_full_text_article, served 2026-11-03)",
+ "study_id": {
+  "doi": "10.1186/s40478-020-00953-2",
+  "pmid": "32493453"
+ },
+ "workflow": "IT22 P6 qualification (stability_probes). Full text served by the PubMed PMC route as plain text. Question: is there a human CNS-exposure measurement for a pan-HDAC inhibitor. Prepared as a JSON file for the integrator; was not appended by the preparing actor."
+}

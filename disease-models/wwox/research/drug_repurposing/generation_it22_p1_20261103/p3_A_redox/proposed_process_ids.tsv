@@ -1,0 +1,4 @@
+process_id	label	kind	members_hgnc	definition_source
+STATE:ROS_HALLMARK_SET_ENRICHED_P47T_CEREBELLUM	ROS hallmark set enriched in P47T cerebellum (direction not stated)	local_state		defined by the row that uses it in proposed_seed_rows.tsv (N22-A005); no member list is in the repository
+STATE:ROS_HIGHER_IN_LATE_PASSAGE_WWOX_NULL_MEF	ROS higher in late-passage Wwox-null MEF	local_state		defined by the row that uses it (N22-A006)
+STATE:CYTOKINE_TRANSCRIPTS_BELOW_FLOOR_IN_ORGANOID	IL6, IL1B, TNF transcripts at or below the count floor in the organoid	local_state		defined by the row that uses it (N22-A008)

@@ -1,0 +1,69 @@
+{
+  "analysis_at": "2026-11-03T18:45:00Z",
+  "analysis_time_precision": "minute",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "read",
+    "methods": "read",
+    "results": "read",
+    "figures": "unavailable",
+    "tables": "unavailable",
+    "discussion": "read",
+    "limitations": "read",
+    "supplementary": "unavailable"
+  },
+  "event_at": "2026-11-03T18:45:00Z",
+  "event_id": "FTR-20261103-31377265-01",
+  "evidence_basis": [
+    "Served article text read in this session. Figures, tables and the supplement were not served, so the depth stays partial.",
+    "verbatim_locators below are exact quotes copied from the text served in this session"
+  ],
+  "evidence_depth": "partial_fulltext_read",
+  "ledger_prev_hash": null,
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/qualification_it22_p6_20261103/tr_agonists/README.md"
+  ],
+  "prior_receipt": null,
+  "record_kind": "contemporaneous_receipt",
+  "reread_reason": "first_read",
+  "source_fingerprint": null,
+  "source_kind": "fulltext_remote",
+  "source_locator": "PMC7611958 via the PubMed full-text tool (article text only: introduction, methods, results, discussion; no figures, tables or supplement in the served text)",
+  "study_id": {
+    "doi": "10.1016/S2213-8587(19)30155-X",
+    "pmid": "31377265"
+  },
+  "workflow": "IT22 P6 qualification (qualification_it22_p6_20261103/tr_agonists). Text obtained through public key-less routes (PubMed full-text tool or Europe PMC REST); no e-mail address was sent to any service. Prepared as a JSON file for the integrator; was not appended by the preparing actor. The event_id is a proposal for the integrator.",
+  "verbatim_locators": [
+    {
+      "evidence_for": "Triac enters cells independently of MCT8 (stated by the authors, not measured here)",
+      "quote": "Triac is a thyroid hormone analogue whose cellular entry is not dependent on MCT8",
+      "location": "Introduction"
+    },
+    {
+      "evidence_for": "No neurological efficacy claim can be drawn from Trial I",
+      "quote": "The current trial was not designed to detect whether Triac also modulates neurodevelopment in human MCT8 deficiency, since it lacked specific neurodevelopmental outcomes and enrolled patients of all ages.",
+      "location": "Discussion"
+    },
+    {
+      "evidence_for": "Seizure frequency rose in 3 patients with pre-existing seizures on Triac (confounded: one with a gastrointestinal infection, two with difficult-to-control seizures)",
+      "quote": "In three subjects with pre-existing seizures an increase in seizure frequency was reported.",
+      "location": "Results, safety"
+    },
+    {
+      "evidence_for": "Treatment-related adverse events in Trial I",
+      "quote": "All seven adverse events that were suspected to be related to Triac treatment, occurring in six (13%) patients, were mild and involved a transient increase in perspiration (3 patients) and irritability (3 patients).",
+      "location": "Results, safety"
+    },
+    {
+      "evidence_for": "Exploratory neurological signal limited to early treatment, small numbers",
+      "quote": "The greatest increase in gross motor function was observed in patients in whom Triac treatment was started before the age of 4 years",
+      "location": "Results"
+    },
+    {
+      "evidence_for": "Thyroid axis suppression by Triac with unknown brain consequence",
+      "quote": "It is unknown if the further reduction in circulating T4 concentrations under Triac treatment aggravates the hypothyroid state in the brain in human MCT8 deficiency.",
+      "location": "Discussion"
+    }
+  ]
+}

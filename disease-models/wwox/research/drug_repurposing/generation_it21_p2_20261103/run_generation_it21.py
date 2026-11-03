@@ -409,6 +409,23 @@ def _premise_applies(key, p):
     return False
 
 
+SUPPORT_LIMITING_GUARDS = {"NPY_SIGN_CONTESTED": "the NPY direction is contested by the mouse bulk and pooled-nuclei contrasts and by the neuron loss in the knockout organoid (cell-population sensitive)",
+                           "SECOND_SYSTEM_GATE_FAILED": "the shWWOX hNPC library did not show WWOX lower (gate 1 failed), so it is not an independent second system for this seed"}
+
+
+def seed_guard_limits(p, sidx, ann=None):
+    """IT22 P3: the guard tags of the P1 rows behind a proposal's two contributing seeds, and the support limits among them. Pure given sidx."""
+    tags = set()
+    for k in ("contributing_seed_1", "contributing_seed_2"):
+        f = (p.get(k) or "").split("|")[0]
+        if not f:
+            continue
+        for r in sidx.get((p["seed_set"], f"{p['seed_set']}:{f}"), []) or sidx.get((p["seed_set"], f), []):
+            tags |= {t for t in (r.get("guard_tag") or "").split(";") if t}
+            tags |= set((ann or {}).get(r["seed_id"], ()))
+    return sorted(tags), [f"{t}: {SUPPORT_LIMITING_GUARDS[t]}" for t in sorted(tags) if t in SUPPORT_LIMITING_GUARDS]
+
+
 def decision_effect(p, cluster_decisions):
     """What the earlier decisions on OTHER members of p's mechanism cluster mean for p. Pure. cluster_decisions: dicts compound/state/source/components.
     Returns block (reason or ''), work_done, carried_limits."""
@@ -487,7 +504,7 @@ AS_POTENT_NM = 100.0     # mirrors attribution_screen_it21.POTENT_MAIN_NM (a uni
 
 def order_key(r):
     """IT21 V1-fix: a row whose main target is UNMEASURED (measured elsewhere) ranks after every other row; then more independent origins first, then the shorter admissible chain, then the larger smallest-|z| (a null-relative score, last on purpose)."""
-    return (1 if r.get("cluster_work_done") == "yes" else 0, 1 if r.get("attribution_state") == "UNMEASURED_AT_MAIN_TARGET" else 0, -int(r["n_origins"] or 0), int(r.get("chain_edges") or 99), -float(r["zmin"]))
+    return (1 if r.get("cluster_work_done") == "yes" else 0, 1 if r.get("seed_support_limited") == "yes" else 0, 1 if r.get("attribution_state") == "UNMEASURED_AT_MAIN_TARGET" else 0, -int(r["n_origins"] or 0), int(r.get("chain_edges") or 99), -float(r["zmin"]))
 
 
 def select_handoff(rows, per_group=3):
@@ -554,7 +571,8 @@ def cmd_propose(a):
     OUT.mkdir(parents=True, exist_ok=True)
     eng = Path(a.engine_dir)
     # dispositions through the existing function; reach z replaced by the reach run of THIS engine directory
-    rows_out, n_by, it9 = D.build(eng, DR)
+    P1D = Path(a.p1_inputs) if getattr(a, "p1_inputs", "") else None       # IT22: an amended seed/question/role set (seeds.tsv, questions.tsv, question_roles.tsv, seeds_p1/)
+    rows_out, n_by, it9 = D.build(eng, DR, P1D)
     cols = D.COLS
     ix = {c: cols.index(c) for c in cols}
     reach, reach_act = {}, {}
@@ -568,7 +586,7 @@ def cmd_propose(a):
             d = {c: r[ix[c]] for c in cols}
             d["reach_z"] = reach.get(d["seed_set"], {}).get(d["family_id"], "")
             disp[(d["seed_set"], d["arm"], d["family_id"])] = d
-    roles = D.load_roles(IT10 / "question_roles.tsv")
+    roles = D.load_roles((P1D / "question_roles.tsv") if P1D else IT10 / "question_roles.tsv")
     meta = {r["family_id"]: r for r in rd(R / "actions" / "family_meta.tsv.gz")}
     entries = cc.load(DR / "catalog" / "catalog.jsonl.gz")
     fam = rs.families(entries)
@@ -607,9 +625,9 @@ def cmd_propose(a):
     for r in rd(R / "actions" / "family_actions.tsv.gz"):
         signed[r["family_id"]][r["target_symbol"].upper()] = r
     withheld = withheld_by_family(fam)
-    p1 = rd(DR / "generation_it9_p1_20261030" / "seeds.tsv")
-    sidx = D.load_seed_index(str(DR / "generation_it9_p2_20261030" / "seeds_p1"), p1)
-    questions = {r["question_id"]: r for r in rd(DR / "generation_it9_p1_20261030" / "questions.tsv")}
+    p1 = rd((P1D or DR / "generation_it9_p1_20261030") / "seeds.tsv")
+    sidx = D.load_seed_index(str((P1D / "seeds_p1") if P1D else DR / "generation_it9_p2_20261030" / "seeds_p1"), p1)
+    questions = {r["question_id"]: r for r in rd((P1D or DR / "generation_it9_p1_20261030") / "questions.tsv")}
     spec = rd(eng / "v3_seed_specific_all_nulls.tsv")
     contrib = {}
 
@@ -677,6 +695,10 @@ def cmd_propose(a):
     assign_ids(proposals, R / "proposals_it21.tsv")
     # H8 (IT22 P1): an earlier decision on a cluster member reaches another member only inside its own scope
     scopes = load_decision_scopes() if v1 else {}
+    seed_ann = collections.defaultdict(set)
+    if P1D and (P1D / "seed_annotations.tsv").exists():
+        for r_ in rd(P1D / "seed_annotations.tsv"):
+            seed_ann[r_["seed_id"]].add(r_["annotation"])
     cl_dec, cl_str = collections.defaultdict(list), collections.defaultdict(list)
     for p in proposals:
         dec = earlier_state(p["compound"], decisions)
@@ -688,6 +710,10 @@ def cmd_propose(a):
         k = (p["question"], p["hypothesis"], p["main_target"])
         p["cluster_earlier_decisions"] = " | ".join(sorted(set(cl_str.get(k, []))))[:300]
         p["cluster_work_done"], p["carried_limits"], p["blocker_detail"] = "", "", ""
+        sg, sl = seed_guard_limits(p, sidx, seed_ann) if v1 else ([], [])
+        p["seed_guards"], p["seed_support_limited"] = ";".join(sg), "yes" if sl else ""
+        if sl:
+            p["carried_limits"] = " | ".join(sl)
         if not p["cluster_earlier_decisions"]:
             continue
         if not v1:                                    # legacy P2 behaviour, kept so --no-v1 reproduces the committed P2 byte for byte
@@ -697,7 +723,7 @@ def cmd_propose(a):
         others = [d for d in cl_dec[k] if base_name(d["compound"]) != base_name(p["compound"])]
         eff = decision_effect(p, others)
         p["cluster_work_done"] = "yes" if eff["work_done"] else ""
-        p["carried_limits"] = " | ".join(eff["carried_limits"])[:400]
+        p["carried_limits"] = " | ".join(([p["carried_limits"]] if p["carried_limits"] else []) + eff["carried_limits"])[:600]
         if p["handoff_eligible"] == "yes" and eff["block"]:
             p["handoff_eligible"], p["handoff_blocker"] = "no", eff["block"].split(":")[0] if eff["block"].startswith("shared") else eff["block"]
             p["blocker_detail"] = eff["block"]
@@ -741,7 +767,7 @@ def cmd_propose(a):
             target_axis_named_in_legend_material=p["target_named_in_legend_material"],
             abstentions=(f"{len(wh)} withheld row(s) on this record ({collections.Counter(r['reason_class'] for r in wh).most_common(1)[0][0]})" if wh else "none on this record"),
             earlier_thread=p["earlier_thread"],
-            carried_limits_from_cluster=p.get("carried_limits", ""),
+            carried_limits_from_cluster=p.get("carried_limits", ""), seed_guards=p.get("seed_guards", ""),
             cluster_work_done=("an earlier qualification already worked this cluster (" + p["cluster_earlier_decisions"][:120] + "); this molecule was not assessed there: priority was lowered, and it is not a discovery") if p.get("cluster_work_done") else "",
             **({"attribution_state": p["attribution_state"], "attribution_note": attribution_note(p)} if "attribution_state" in p else {}),
             novelty_perimeter=(("earlier LEGEND thread (" + p["earlier_thread"] + ")") if p["earlier_thread"] else "named in LEGEND cards/units" if p["named_in_legend_material"] == "yes" else
@@ -778,6 +804,7 @@ if __name__ == "__main__":
     ap.add_argument("--control-dir", default="")
     ap.add_argument("--engine-dir", default=str(HERE / "results" / "engine"))
     ap.add_argument("--out-dir", default="", help="propose: write the tables here instead of results/ (default unchanged)")
+    ap.add_argument("--p1-inputs", default="", help="propose: read seeds/questions/roles/seed sets from this amended input folder (IT22) instead of the IT9 P1 + IT10 ones")
     ap.add_argument("--no-v1", action="store_true", help="propose: switch the IT21 V1 identity bridge and attribution screen off (the control: reproduces the committed tables)")
     a = ap.parse_args()
     if a.cmd in ("engine", "all"):

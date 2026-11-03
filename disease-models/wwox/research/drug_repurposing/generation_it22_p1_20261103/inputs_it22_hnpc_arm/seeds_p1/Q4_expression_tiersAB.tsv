@@ -1,0 +1,5 @@
+seed_id	gene	kind	members	direction	level	direction_status	readout_level	evidence_class	species	ortholog_map	source_ref	note	guard_tag
+Q4_expression_tiersAB:GRIN2C	GRIN2C	gene		down	1.0	defined	expression	transcript_contrast	mouse	HGNC approved symbol with HGNC mgd ortholog link (MGI:95822); 1:1 assumed from a single link	S129	directions seen: ['down']; tiers ['B']; P1 gives no magnitude (equal weight)	
+Q4_expression_tiersAB:GRM3	GRM3	gene		down	1.0	defined	expression	transcript_contrast	mouse	HGNC approved symbol with HGNC mgd ortholog link (MGI:1351340); 1:1 assumed from a single link	S131	directions seen: ['down']; tiers ['B']; P1 gives no magnitude (equal weight)	
+Q4_expression_tiersAB:KCNA2	KCNA2	gene		down	1.0	defined	expression	transcript_contrast	mouse	HGNC approved symbol with HGNC mgd ortholog link (MGI:96659); 1:1 assumed from a single link	S130	directions seen: ['down']; tiers ['B']; P1 gives no magnitude (equal weight)	
+Q4_expression_tiersAB:NPY	NPY	gene		down	1.0	defined	expression	transcript_contrast	human		S116	directions seen: ['down']; tiers ['A']; P1 gives no magnitude (equal weight)	NPY_SIGN_CONTESTED

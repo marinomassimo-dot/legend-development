@@ -1,0 +1,2 @@
+seed_id	gene	kind	members	direction	level	direction_status	readout_level	evidence_class	species	ortholog_map	source_ref	note	guard_tag
+Q3_expression_tiersAB:SET:ISR_TARGETS_12	SET:ISR_TARGETS_12	process	ASNS;ATF5;CHAC1;DDIT3;GADD45A;PCK2;PHGDH;PSAT1;PSPH;SESN2;TRIB3;SLC7A11	uncertain	1.0	uncertain	expression	transcript_contrast	human		S046	directions seen: ['uncertain']; tiers ['A']; P1 gives no magnitude (equal weight)	ISR_SIGN_UNRESOLVED

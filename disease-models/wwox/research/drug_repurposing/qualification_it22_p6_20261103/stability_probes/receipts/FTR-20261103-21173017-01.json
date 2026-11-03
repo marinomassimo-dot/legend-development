@@ -1,0 +1,44 @@
+{
+ "analysis_at": "2026-11-03T13:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "event_at": "2026-11-03T13:50:00Z",
+ "event_id": "FTR-20261103-21173017-01",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator | proposition: the HSC70-blocking peptide concentrates in lung and spleen in lupus mice | Results, In vivo P140 peptide effects and biodistribution | \"Alexa Fluor-labelled P140 accumulated particularly in the lungs and spleen\"",
+  "verbatim_locator | proposition: P140 impairs HSC70 refolding activity in vitro, concentration dependent | Results, P140 alters autophagic processes in MRL/lpr B cells | \"At 40 and 80 µM, P140 inhibited luciferase refolding by 50.2% and 100%, respectively\"",
+  "verbatim_locator | proposition: autophagic flux is reduced at the autolysosome stage in lupus B cells, like chloroquine | Results, same section | \"This suggests that in MRL/lpr B cells, P140 downregulates autophagic flux at the autolysosome stage.\"",
+  "verbatim_locator | proposition: the chaperone-mediated autophagy arm is a model, not a measurement | Figure 5 legend (C) | \"(3b) affects chaperone-mediated autophagy (CMA) leading to the alteration of (auto)antigens processing by lysosomal hydrolysis\"",
+  "verbatim_locator | proposition: HSC70 level fell in treated spleen B cells; inducible Hsp70 did not | Results, HSC70 and MHCII overexpression ... | \"HSC70 expression in splenic B cells was decreased by 32%\"",
+  "verbatim_locator | proposition: autophagy in this setting is unexplored by the authors' own account | Discussion | \"Autophagy processes have not been explored in lupus.\"",
+  "Figures read as captions only (downgrades to partial); supplementary figures S1-S5 not opened; no neural cell, no brain tissue and no WWOX in this paper."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p6_20261103/stability_probes/README.md",
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p6_20261103/stability_probes/stability_levers_it22_p6.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC3070272 (PubMed MCP get_full_text_article, served 2026-11-03)",
+ "study_id": {
+  "doi": "10.1136/ard.2010.139832",
+  "pmid": "21173017"
+ },
+ "workflow": "IT22 P6 qualification (stability_probes). Full text served by the PubMed PMC route as plain text; figure legends read, images not inspected. Question: what the primary source shows about the HSC70-blocking peptide action, selectivity and distribution. Prepared as a JSON file for the integrator; was not appended by the preparing actor."
+}

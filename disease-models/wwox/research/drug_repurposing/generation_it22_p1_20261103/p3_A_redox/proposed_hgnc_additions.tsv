@@ -1,0 +1,6 @@
+symbol	hgnc_id	approved_symbol	status	provenance
+NFE2L2	HGNC:7782	NFE2L2	Approved	hgnc_id verified in generation_it21_p2_20261103/results/actions/family_actions.tsv.gz (column hgnc_id)
+KEAP1	HGNC:23177	KEAP1	Approved	verified in the same file; not used by any proposed row
+HMOX1	HGNC:5013	HMOX1	Approved	verified in the same file
+NQO1	HGNC:2874	NQO1	Approved	NOT verified locally (no local file carries it); recalled, must be checked against the HGNC snapshot (45,289 rows, 2026-10-30) before check_seeds.py
+G6PD	HGNC:4057	G6PD	Approved	NOT verified locally; recalled; check against the snapshot

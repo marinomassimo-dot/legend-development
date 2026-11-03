@@ -1,0 +1,2 @@
+seed_id	gene	kind	members	direction	level	direction_status	readout_level	evidence_class	species	ortholog_map	source_ref	note	guard_tag
+Q8_expression_tiersAB:NFE2L2	NFE2L2	gene		down	1.0	defined	expression	transcript_contrast	human		S132	directions seen: ['down']; tiers ['A']; P1 gives no magnitude (equal weight)	NRF2_TONE_UNRESOLVED

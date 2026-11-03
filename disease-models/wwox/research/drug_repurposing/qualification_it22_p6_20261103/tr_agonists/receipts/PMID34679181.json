@@ -1,0 +1,64 @@
+{
+  "analysis_at": "2026-11-03T18:45:00Z",
+  "analysis_time_precision": "minute",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "read",
+    "methods": "read",
+    "results": "read",
+    "figures": "captions_only",
+    "tables": "read",
+    "discussion": "read",
+    "limitations": "read",
+    "supplementary": "unavailable"
+  },
+  "event_at": "2026-11-03T18:45:00Z",
+  "event_id": "FTR-20261103-34679181-01",
+  "evidence_basis": [
+    "Served article text, Tables 1-2 and figure legends read in this session; figure images and the supplement were not seen.",
+    "verbatim_locators below are exact quotes copied from the text served in this session"
+  ],
+  "evidence_depth": "partial_fulltext_read",
+  "ledger_prev_hash": null,
+  "outputs": [
+    "disease-models/wwox/research/drug_repurposing/qualification_it22_p6_20261103/tr_agonists/README.md"
+  ],
+  "prior_receipt": null,
+  "record_kind": "contemporaneous_receipt",
+  "reread_reason": "first_read",
+  "source_fingerprint": null,
+  "source_kind": "fulltext_remote",
+  "source_locator": "PMC8852204 via the PubMed full-text tool (article text and inline tables 1-2; figure legends; supplement not served)",
+  "study_id": {
+    "doi": "10.1210/clinem/dgab750",
+    "pmid": "34679181"
+  },
+  "workflow": "IT22 P6 qualification (qualification_it22_p6_20261103/tr_agonists). Text obtained through public key-less routes (PubMed full-text tool or Europe PMC REST); no e-mail address was sent to any service. Prepared as a JSON file for the integrator; was not appended by the preparing actor. The event_id is a proposal for the integrator.",
+  "verbatim_locators": [
+    {
+      "evidence_for": "Triac maintenance dose in children and adults with MCT8 deficiency",
+      "quote": "The median maintenance dose was 38 µg/kg/day (interquartile range, 31-61 µg/kg/day; range, 15-105 µg/kg/day).",
+      "location": "Results"
+    },
+    {
+      "evidence_for": "Safety over up to 6 years in a retrospective off-label cohort",
+      "quote": "No severe adverse events related to Triac were reported during follow-up.",
+      "location": "Results"
+    },
+    {
+      "evidence_for": "Thyrotoxic signs on Triac",
+      "quote": "Transient signs of increased thyrotoxicosis (increased irritability and anxiety, reduced sleep, increase in blood pressure, and tachycardia) were reported in a small subset of patients (5 of 67 patients; Supplementary Table 4).",
+      "location": "Results"
+    },
+    {
+      "evidence_for": "No neurodevelopmental outcome in the real-life cohort",
+      "quote": "this study precludes determining the optimal Triac dose for MCT8 deficiency for both the peripheral and neurocognitive phenotype as data on neurodevelopmental outcomes had not been uniformly collected",
+      "location": "Discussion, limitations"
+    },
+    {
+      "evidence_for": "Deaths and discontinuations (causes in line with natural history per the authors)",
+      "quote": "During the study period, 3 patients died and 10 other patients discontinued Triac therapy",
+      "location": "Results"
+    }
+  ]
+}

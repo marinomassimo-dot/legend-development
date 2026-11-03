@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-03T13:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "not_present",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "event_at": "2026-11-03T13:50:00Z",
+ "event_id": "FTR-20261103-41274966-01",
+ "evidence_basis": [
+  "coverage_map",
+  "selected passages inspected by sentence search for degradation, HSP90, dose, toxicity and chaperone; not a reading of sections",
+  "verbatim_locator | proposition: the HSP90 route is the authors' proposed mechanism, sign ambiguous | Discussion | \"Acetylated HSP90 is associated with improved stabilization of ɑ-tubulin microtubules and client proteins, while impairing chaperone function of HSP90, thereby inhibiting degradation of misfolded protein through natural degradation pathways such as mutant PAH enzyme.\"",
+  "verbatim_locator | proposition: dose-dependent toxicity | Results | \"Necropsy revealed kidney enlargement and ascites, indicating dose-dependent toxicity.\"",
+  "verbatim_locator | proposition: route and schedule of the effective arm (one inhibitor, intraperitoneal, mouse) | Methods | \"administered intraperitoneally to the Pah eun2 mice at a dose of 50 mg/kg twice per week\"",
+  "No turnover (chase) measurement was found by the search; the earlier complete receipt stands for coverage."
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p6_20261103/stability_probes/README.md",
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p6_20261103/stability_probes/stability_levers_it22_p6.tsv"
+ ],
+ "prior_receipt": "FTR-20261022-41274966-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "74502be43909796db6de99143a6bd40e376772c11c0ad248924a5bc77049451e",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID41274966_Tubastatin2025_PMC_r2.xml (shared checkout, outside the worktree)",
+ "study_id": {
+  "doi": null,
+  "pmid": "41274966"
+ },
+ "workflow": "IT22 P6 qualification (stability_probes). Targeted sentence retrieval from the local JATS text for a new question (mechanism the authors assign to a selective HDAC6 inhibitor on a missense enzyme, and its dose limit). Not a section-by-section reading. Prepared as a JSON file for the integrator; was not appended by the preparing actor."
+}

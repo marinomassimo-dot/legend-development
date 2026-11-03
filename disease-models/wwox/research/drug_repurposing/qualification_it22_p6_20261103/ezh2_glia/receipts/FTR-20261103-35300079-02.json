@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-03T12:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-03T12:10:00Z",
+ "event_id": "FTR-20261103-35300079-02",
+ "evidence_basis": [
+  "abstract analysed in full; used for the authors' statement that current EZH2 inhibitors have poor brain penetrance and that TDI-6118 is a brain-penetrant EZH2 inhibitor (abstract-level).",
+  "a PMC full text exists; it was not read in this package."
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p6_20261103/ezh2_glia/README.md",
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p6_20261103/ezh2_glia/qualification_ezh2_glia_it22_p6.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 35300079 (abstract and metadata as served 2026-11-03)",
+ "study_id": {
+  "doi": "10.1021/acsmedchemlett.1c00448",
+  "pmid": "35300079"
+ },
+ "workflow": "IT22 P6 EZH2/glia qualification (qualification_it22_p6_20261103/ezh2_glia), question-driven: Is a brain-penetrant EZH2 inhibitor documented, and what does the paper say of the existing inhibitors? Prepared as a JSON file for the integrator; was not appended by the preparing actor."
+}

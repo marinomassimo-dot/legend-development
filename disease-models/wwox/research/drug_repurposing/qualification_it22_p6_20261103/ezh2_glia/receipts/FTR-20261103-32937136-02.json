@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-03T12:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "unavailable",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-03T12:10:00Z",
+ "event_id": "FTR-20261103-32937136-02",
+ "evidence_basis": [
+  "coverage_map",
+  "Peer-reviewed open article (Cell Rep 2020, mouse and chick). NOT WWOX EVIDENCE: no Wwox manipulation.",
+  "Read: abstract, introduction, results, discussion and STAR methods in the PMC article text as served; figures, key resources table and supplementary items were not served and were not read; italic gene and genotype names were stripped in the served text, so some sentences are garbled (genotype labels missing). Locators L9-L13."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p6_20261103/ezh2_glia/README.md",
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p6_20261103/ezh2_glia/qualification_ezh2_glia_it22_p6.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PubMed Central PMC8070886 article text via the PubMed full-text tool, 2026-11-03; bytes were not saved locally",
+ "study_id": {
+  "doi": "10.1016/j.celrep.2020.108147",
+  "pmid": "32937136"
+ },
+ "workflow": "IT22 P6 EZH2/glia qualification (qualification_it22_p6_20261103/ezh2_glia), question-driven: Does loss of PRC2 (Ezh2, Ezh1, Eed) alter oligodendrocyte-lineage differentiation, by which mechanism, and does Ezh1 compensate? Prepared as a JSON file for the integrator; was not appended by the preparing actor. The article text was not snapshotted to files/, so locator text cannot be machine-matched against a local artefact; source_kind is fulltext_remote for that reason."
+}

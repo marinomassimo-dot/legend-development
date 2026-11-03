@@ -1,0 +1,2 @@
+seed_id	gene	kind	members	direction	level	direction_status	readout_level	evidence_class	species	ortholog_map	source_ref	note	guard_tag
+Q6_expression_tiersAB:MYC	MYC	gene		up	1.0	defined	expression	transcript_contrast	human		S100	directions seen: ['up']; tiers ['A']; P1 gives no magnitude (equal weight)	

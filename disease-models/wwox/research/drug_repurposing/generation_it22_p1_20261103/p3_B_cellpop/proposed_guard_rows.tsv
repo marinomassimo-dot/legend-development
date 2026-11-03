@@ -1,0 +1,3 @@
+guard_tag	forbidden_use	scope_members	questions
+COMPOSITION_NOT_REGULATION	Do not read the row as, or convert it to, a transcript or protein change of any gene or set member (a cell-type share is not a per-cell level); do not score a candidate by reversing a gene signature derived from it; do not use it as the independent second system in the README 3a cross-system sign rule for a gene-level row	N22-B01,N22-B02,N22-B04,N22-B05,N22-B06,N22-B07,N22-B08,S079	Q4,Q5,Q6
+NPY_SIGN_CONTESTED	Do not treat the NPY down direction (S116) as established for scoring by reversal: the mouse transcript contrast and pooled nuclei have the opposite sign and the organoid lost neurons; carry as conditional arms only	NPY	Q4

@@ -1,0 +1,6 @@
+process_id	label	kind	members_hgnc	definition_source
+STATE:MATURE_OLIGODENDROCYTE_NUCLEI_SHARE	mature oligodendrocyte nuclei share	local_state		defined by N22-B05 (state, no gene members; not an engine seed)
+STATE:OPC_NUCLEI_SHARE	OPC nuclei share	local_state		defined by N22-B06
+STATE:RADIAL_GLIA_RELATIVE_NUMBER	radial glia relative number	local_state		defined by N22-B07
+STATE:NEURON_CLUSTER_FRACTION	neuron cluster fraction	local_state		defined by N22-B08
+STATE:NEURONAL_IMMATURITY_MARKER_DETECTION	neuronal immaturity marker detection	local_state		defined by N22-B04

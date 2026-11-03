@@ -1,0 +1,2 @@
+seed_id	gene	kind	members	direction	level	direction_status	readout_level	evidence_class	species	ortholog_map	source_ref	note	guard_tag
+Q1_protein_tiersABC:WWOX	WWOX	gene		down	1.0	defined	protein	protein_state	human		S001	directions seen: ['down']; tiers ['C']; P1 gives no magnitude (equal weight)	

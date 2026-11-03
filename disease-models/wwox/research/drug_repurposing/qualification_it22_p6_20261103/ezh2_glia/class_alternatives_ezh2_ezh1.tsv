@@ -1,0 +1,22 @@
+ligand_id	ligand	chembl_id	approved	target	measure	nm	relation	assay_class	action	same_type_ratio_to_most_potent_other_target	other_targets_measured
+12615	tulmimetostat	CHEMBL5095231		EZH1	IC50	0.06	=	biochemical	Inhibition	3.0x vs EZH2 (IC50)	EZH2 IC50 0.02|Ki 0.011
+12282	valemetostat	CHEMBL4597193	yes	EZH1	IC50	16.0	=	unknown	Inhibition	3.1x vs EZH2 (IC50)	EZH2 IC50 5.1
+13512	zeprumetostat		yes	EZH1	IC50	19.1	=	unknown	Inhibition	4.8x vs EZH2 (IC50)	EZH2 IC50 4
+8240	GSK343	CHEMBL2204995		EZH1	IC50	240.0	=	unknown	Inhibition	60.0x vs EZH2 (IC50)	EZH2 IC50 4
+12615	tulmimetostat	CHEMBL5095231		EZH2	IC50	0.02	=	biochemical	Inhibition	0.3x vs EZH1 (IC50)	EZH1 IC50 0.06
+12353	SKLB-03220			EZH2	IC50	1.72	=	unknown	Inhibition	no other target with a IC50 value: not comparable (values kept)	
+9115	CPI-1205			EZH2	IC50	2.0	=	unknown	Inhibition	no other target with a IC50 value: not comparable (values kept)	
+8237	UNC1999			EZH2	IC50	2.0	=	unknown	Inhibition	no other target with a IC50 value: not comparable (values kept)	
+8240	GSK343	CHEMBL2204995		EZH2	IC50	4.0	=	unknown	Inhibition	0.0x vs EZH1 (IC50)	EZH1 IC50 240
+13512	zeprumetostat		yes	EZH2	IC50	4.0	=	unknown	Inhibition	0.2x vs EZH1 (IC50)	EZH1 IC50 19.1
+12282	valemetostat	CHEMBL4597193	yes	EZH2	IC50	5.1	=	unknown	Inhibition	0.3x vs EZH1 (IC50)	EZH1 IC50 16
+9881	EBI-2511			EZH2	IC50	8.0	=	cell	Inhibition	no other target with a IC50 value: not comparable (values kept)	
+7013	EI1			EZH2	IC50	9.4	=	unknown	Inhibition	no other target with a IC50 value: not comparable (values kept)	
+7012	GSK126	CHEMBL3287735		EZH2	IC50	9.9	=	biochemical	Inhibition	no other target with a IC50 value: not comparable (values kept)	
+9332	JQEZ5			EZH2	IC50	11.0	=	biochemical	Inhibition	no other target with a IC50 value: not comparable (values kept)	
+7011	tazemetostat		yes	EZH2	IC50	11.0	=	unknown	Inhibition	no other target with a IC50 value: not comparable (values kept)	
+12352	compound 15a [PMID: 36642961]			EZH2	IC50	250.0	=	unknown	Inhibition	1.1x vs NSD2 (IC50)	NSD1 IC50 690; NSD2 IC50 230
+12615	tulmimetostat	CHEMBL5095231		EZH2	Ki	0.011	=	unknown	Inhibition	no other target with a Ki value: not comparable (values kept)	EZH1 IC50 0.06
+10516	mevrometostat	CHEMBL4080228		EZH2	Ki	0.1	<	biochemical	Inhibition	no other target with a Ki value: not comparable (values kept)	
+9273	EPZ011989			EZH2	Ki	3.0	<	unknown	Inhibition	no other target with a Ki value: not comparable (values kept)	
+8387	EPZ005687			EZH2	Ki	24.0	=	unknown	Inhibition	no other target with a Ki value: not comparable (values kept)	

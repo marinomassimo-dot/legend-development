@@ -361,13 +361,15 @@ def explain_columns(contrib_rows, level):
     return note, f"{top_share:.3f}", f"{contrary:.3f}", nw if nw else "", f(bsh), f(cw)
 
 
-def build(v3, DR):
-    """Dispositions of every candidate row of one engine run directory (v3 results, or results_v4)."""
-    roles = load_roles(HERE / "question_roles.tsv")
+def build(v3, DR, p1_dir=None):
+    """Dispositions of every candidate row of one engine run directory (v3 results, or results_v4).
+    IT22: p1_dir (default None = the IT9 P1 seeds, the IT10 roles) reads an amended input folder holding seeds.tsv, question_roles.tsv and seeds_p1/."""
+    p1_dir = Path(p1_dir) if p1_dir else None
+    roles = load_roles((p1_dir / "question_roles.tsv") if p1_dir else HERE / "question_roles.tsv")
     dev = rd(HERE / "dev_constraints.tsv")
     it9 = {norm(r["compound"]): r for r in rd(DR / "ranking_it8_p9_20261029" / "it9_records.tsv")}
-    p1 = rd(DR / "generation_it9_p1_20261030" / "seeds.tsv")
-    sidx = load_seed_index(str(DR / "generation_it9_p2_20261030" / "seeds_p1"), p1)
+    p1 = rd((p1_dir or DR / "generation_it9_p1_20261030") / "seeds.tsv")
+    sidx = load_seed_index(str((p1_dir / "seeds_p1") if p1_dir else DR / "generation_it9_p2_20261030" / "seeds_p1"), p1)
     rolereason = {norm(r["compound"]) for r in rd(HERE / "it9_role_dependent_reasons.tsv")}
     reach = {}                          # IT11: z under the reach-matched null (null genes matched on the F5-admissible reach), where it was run
     for pr in glob.glob(str(HERE / "results_v4_reach" / "proposals_p1_*_reach.tsv.gz")):

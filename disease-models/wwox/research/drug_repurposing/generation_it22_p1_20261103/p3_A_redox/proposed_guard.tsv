@@ -1,0 +1,2 @@
+guard_tag	forbidden_use	scope_members	questions
+NRF2_TONE_UNRESOLVED	Do not score candidates by reversal of the NRF2-target transcript signature (NFE2L2, NQO1, HMOX1, G6PD, GCLM, SRXN1 and other measured targets) until nuclear NRF2/KEAP1 protein or NQO1 activity is measured in a WWOX-deficient neural system; the signature is mixed in direction and a transcript is not NRF2 activity	NFE2L2,NQO1,HMOX1,G6PD,KEAP1,GCLM,SRXN1	Q8

@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-03T12:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "unavailable",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-03T12:10:00Z",
+ "event_id": "FTR-20261103-29132376-02",
+ "evidence_basis": [
+  "coverage_map",
+  "Peer-reviewed open article (J Neuroinflammation 2017). NOT WWOX EVIDENCE.",
+  "Read: abstract, introduction, methods, results, discussion and conclusions in the PMC article text as served by the PubMed full-text tool; the figure images and legends, and the additional files, were not served and were not read; the article has no limitations section. Locators L1-L4 are in locators_ezh2_glia_it22_p6.tsv."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p6_20261103/ezh2_glia/README.md",
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p6_20261103/ezh2_glia/qualification_ezh2_glia_it22_p6.tsv"
+ ],
+ "prior_receipt": "FTR-20261103-29132376-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PubMed Central PMC5684749 article text via the PubMed full-text tool, 2026-11-03; bytes were not saved locally",
+ "study_id": {
+  "doi": "10.1186/s12974-017-0993-4",
+  "pmid": "29132376"
+ },
+ "workflow": "IT22 P6 EZH2/glia qualification (qualification_it22_p6_20261103/ezh2_glia), question-driven: Which EZH2 inhibitor was used in this edge reference, in which cell type were IL1B/IL6/TNF measured, and did the sign reach microglia directly? Prepared as a JSON file for the integrator; was not appended by the preparing actor. The article text was not snapshotted to files/, so locator text cannot be machine-matched against a local artefact; source_kind is fulltext_remote for that reason."
+}

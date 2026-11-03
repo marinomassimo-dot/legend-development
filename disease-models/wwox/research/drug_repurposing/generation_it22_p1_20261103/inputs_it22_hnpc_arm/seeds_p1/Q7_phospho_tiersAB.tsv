@@ -1,0 +1,2 @@
+seed_id	gene	kind	members	direction	level	direction_status	readout_level	evidence_class	species	ortholog_map	source_ref	note	guard_tag
+Q7_phospho_tiersAB:GSK3B	GSK3B	gene		uncertain	1.0	uncertain	phospho	protein_state	mouse	HGNC approved symbol with HGNC mgd ortholog link (MGI:1861437); 1:1 assumed from a single link	S104	directions seen: ['down']; tiers ['B']; P1 gives no magnitude (equal weight); phospho-site row: direction treated as uncertain for activity	

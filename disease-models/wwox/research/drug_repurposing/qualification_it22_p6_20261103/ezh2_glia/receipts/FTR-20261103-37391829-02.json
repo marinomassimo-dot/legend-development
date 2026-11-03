@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-03T12:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "unavailable",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-03T12:10:00Z",
+ "event_id": "FTR-20261103-37391829-02",
+ "evidence_basis": [
+  "coverage_map",
+  "Peer-reviewed open article (J Neuroinflammation 2023, MPTP mouse). NOT WWOX EVIDENCE.",
+  "Read: abstract, background, methods, results, discussion and conclusions in the PMC article text as served; figures and their statistics (the paper reports densitometry and ELISA in figures) were not served and were not read, so effect sizes and n per group are NOT taken from it. Locators L5-L8."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p6_20261103/ezh2_glia/README.md",
+  "disease-models/wwox/research/drug_repurposing/qualification_it22_p6_20261103/ezh2_glia/qualification_ezh2_glia_it22_p6.tsv"
+ ],
+ "prior_receipt": "FTR-20261103-37391829-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PubMed Central PMC10311910 article text via the PubMed full-text tool, 2026-11-03; bytes were not saved locally",
+ "study_id": {
+  "doi": "10.1186/s12974-023-02842-6",
+  "pmid": "37391829"
+ },
+ "workflow": "IT22 P6 EZH2/glia qualification (qualification_it22_p6_20261103/ezh2_glia), question-driven: What exactly was measured for GSK343 in the brain (cytokine matrix, cell type, exposure, uninjured controls)? Prepared as a JSON file for the integrator; was not appended by the preparing actor. The article text was not snapshotted to files/, so locator text cannot be machine-matched against a local artefact; source_kind is fulltext_remote for that reason."
+}
