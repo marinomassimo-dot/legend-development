@@ -223,7 +223,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3384,
+    "forbidden-name": 3286,
     "forbidden-wording": 21
    },
    "co_attested_wording": [
@@ -248,7 +248,7 @@
    "forbidden_names": 126046,
    "forbidden_wordings": 2888,
    "pair_unmarked_attested_or_unchecked": {
-    "count": 179,
+    "count": 156,
     "names": [
      "act 709478",
      "apinocaltamide",
@@ -263,7 +263,7 @@
      "px 478",
      "sulfopin"
     ],
-    "unchecked_without_corpus": 179
+    "unchecked_without_corpus": 156
    },
    "suppressed_by_exemption": {
     "bibliographic journal name (validated against the journals of the cache)": 4,
@@ -563,8 +563,8 @@
    "sha256": "0cf8c22785ef19d3a796f831aa1d529f64eb27188c88e8bd72560dc1f6a1e26e"
   },
   "index.html": {
-   "bytes": 4491809,
-   "sha256": "0eeb1869c31f3362b8477d8a8b9bfb3a468d58bbc918925fb4912bf642affa91"
+   "bytes": 4492735,
+   "sha256": "c09531e667eaf9c9cd69af27d6055c0c8281455dbd1a17d015b0b50c8649691f"
   },
   "it.html": {
    "bytes": 4531669,
