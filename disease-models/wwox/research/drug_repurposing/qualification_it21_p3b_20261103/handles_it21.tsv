@@ -1,0 +1,58 @@
+handle	mechanism	wwox_level_of_observation	gene	basis	pointer	note
+H_STAB	stability_residual_function	abundance_and_degradation	ITCH	LEGEND_RECORD	discovery_ledger DL-MECH-048; PAPER 079; PAPER 030	E3 ligase that adds K63 polyUb to WWOX (Lys274); nuclear localisation after DNA damage; role in a destabilised SDR missense is NOT shown
+H_STAB	stability_residual_function	abundance_and_degradation	TNK2	LEGEND_RECORD	DL-MECH-048 (Mahajan 2005); ack1_it11_p24_20261031	ACK1 phosphorylates WWOX Tyr287 then polyUb; already a LEGEND package (ack1_it11_p24)
+H_STAB	stability_residual_function	abundance_and_degradation	HSPA8	LEGEND_RECORD	DL-MECH-047, DL-MECH-048	HSC70 association of the P252A SDR mutant (lysosomal route); transfer to Q230P not shown
+H_STAB	stability_residual_function	abundance_and_degradation	LAMP2	LEGEND_RECORD	DL-MECH-047	CMA receptor named in the lysosomal-route record; no WWOX measurement of LAMP2A
+H_STAB	stability_residual_function	abundance_and_degradation	HSP90AA1	BACKGROUND_UNREAD	cards A03/A05 (class level)	client-binding chaperone class is carded at class level; gene-level lever not named
+H_STAB	stability_residual_function	abundance_and_degradation	HSP90AB1	BACKGROUND_UNREAD	cards A03/A05 (class level)	as above
+H_STAB	stability_residual_function	abundance_and_degradation	STUB1	BACKGROUND_UNREAD	-	CHIP E3; no WWOX record read
+H_STAB	stability_residual_function	abundance_and_degradation	VCP	BACKGROUND_UNREAD	-	p97; ERAD; no WWOX record read
+H_STAB	stability_residual_function	abundance_and_degradation	HDAC6	BACKGROUND_UNREAD	-	aggresome/HSP90 deacetylase; no WWOX record read
+H_STAB	stability_residual_function	abundance_and_degradation	UBE2N	BACKGROUND_UNREAD	DL-MECH-048 (K63 chains)	K63-specific E2; no selective compound expected
+H_STRESS	cellular_stress	function	SIGMAR1	BACKGROUND_UNREAD	-	ER chaperone / ER-mitochondria contact; absent from LEGEND registries (whole-word search 2026-11-03)
+H_STRESS	cellular_stress	function	ATF6	BACKGROUND_UNREAD	-	UPR arm; card A04 covers ER proteostasis regulators at class level
+H_STRESS	cellular_stress	function	ERN1	BACKGROUND_UNREAD	-	IRE1
+H_STRESS	cellular_stress	function	HSF1	BACKGROUND_UNREAD	-	heat-shock response; absent from LEGEND registries
+H_REDOX	redox_nrf2	function	GPX4	LEGEND_RECORD	paper_registry CORPUS-STUB-028, CORPUS-STUB-066 (WWOX-ferroptosis titles; not processed, not read)	ferroptosis axis in non-neural WWOX-manipulated systems: title only, never read
+H_REDOX	redox_nrf2	function	SLC7A11	LEGEND_RECORD	CORPUS-STUB-028	title only
+H_REDOX	redox_nrf2	function	ACSL4	BACKGROUND_UNREAD	CORPUS-STUB-066 (neighbour)	lipid-peroxidation determinant
+H_REDOX	redox_nrf2	function	ALOX15	BACKGROUND_UNREAD	-	-
+H_REDOX	redox_nrf2	function	TXNRD1	BACKGROUND_UNREAD	-	NRF2 target, not NRF2
+H_REDOX	redox_nrf2	function	GCLC	BACKGROUND_UNREAD	-	glutathione synthesis
+H_REDOX	redox_nrf2	function	NQO1	LEGEND_RECORD	nrf2_it11_p23_20261031 (NQO1 0.73x organoid transcript)	readout marker in the NRF2 card, not an intervention target
+H_REDOX	redox_nrf2	function	HMOX1	LEGEND_RECORD	nrf2_it11_p23_20261031 (HMOX1 1.67x organoid transcript)	readout marker
+H_DDR	cellular_stress_dna_damage	function	ATM	LEGEND_RECORD	PAPER 030 (Abu-Odeh 2014); working model CLAIM 029	WWOX-ATM; a loss-of-function branch, therefore a HARM flag for inhibitors, not a lever
+H_DDR	cellular_stress_dna_damage	function	ATR	LEGEND_RECORD	PAPER 080	checkpoint support
+H_DDR	cellular_stress_dna_damage	function	CHEK1	LEGEND_RECORD	PAPER 080 (neighbour)	-
+H_DDR	cellular_stress_dna_damage	function	PARP1	BACKGROUND_UNREAD	CLAIM 029 (neighbour)	synthetic-lethal logic with DDR deficiency; no WWOX record read
+H_DDR	cellular_stress_dna_damage	function	WEE1	BACKGROUND_UNREAD	-	-
+H_METAB	metabolism	activity	IMPA1	BACKGROUND_UNREAD	phenotype_first U24 (lithium)	lithium inhibits IMPA1/2 and GSK3; card G01 argues GSK3 only; inositol absent from LEGEND registries
+H_METAB	metabolism	activity	IMPA2	BACKGROUND_UNREAD	phenotype_first U24 (lithium)	-
+H_METAB	metabolism	activity	INPP1	BACKGROUND_UNREAD	phenotype_first U24 (lithium)	-
+H_METAB	metabolism	activity	BPNT1	BACKGROUND_UNREAD	phenotype_first U24 (lithium)	-
+H_METAB	metabolism	activity	NAMPT	BACKGROUND_UNREAD	-	NAD salvage; NAD+ nearly absent from LEGEND registries (2 whole-word records, both about ketogenic/metabolism)
+H_METAB	metabolism	activity	NMNAT2	BACKGROUND_UNREAD	-	-
+H_METAB	metabolism	activity	PARP1	BACKGROUND_UNREAD	-	NAD consumer
+H_METAB	metabolism	activity	SIRT1	BACKGROUND_UNREAD	-	NAD-dependent deacetylase
+H_METAB	metabolism	activity	ACLY	BACKGROUND_UNREAD	working model "Acetyl-CoA convergence" (pathway-map topology, not measured)	-
+H_METAB	metabolism	activity	ACSS2	BACKGROUND_UNREAD	working model "Acetyl-CoA convergence"	-
+H_METAB	metabolism	activity	BDH1	BACKGROUND_UNREAD	card E04 (ketogenic) neighbour	-
+H_GLIA	glia_myelination	function	CHRM1	LEGEND_RECORD	needs MYELINATION; PAPER 475 (clemastine impairs developmental myelination)	named target; counter-evidence exists
+H_GLIA	glia_myelination	function	GPR17	BACKGROUND_UNREAD	-	OPC differentiation brake; absent from LEGEND registries
+H_GLIA	glia_myelination	function	LINGO1	BACKGROUND_UNREAD	-	-
+H_GLIA	glia_myelination	function	THRA	BACKGROUND_UNREAD	-	-
+H_GLIA	glia_myelination	function	THRB	BACKGROUND_UNREAD	-	-
+H_GLIA	glia_myelination	function	S1PR1	BACKGROUND_UNREAD	-	-
+H_GLIA	glia_myelination	function	S1PR5	BACKGROUND_UNREAD	-	-
+H_GLIA	glia_myelination	function	RXRG	BACKGROUND_UNREAD	-	-
+H_GLIA	glia_myelination	function	PPARG	BACKGROUND_UNREAD	-	-
+H_GLIA	glia_myelination	function	EBP	BACKGROUND_UNREAD	-	sterol isomerase; hit of OPC screens
+H_GLIA	glia_myelination	function	NR3C1	BACKGROUND_UNREAD	-	-
+H_GLIA	glia_myelination	function	TSPO	BACKGROUND_UNREAD	-	-
+H_GLIA	glia_myelination	function	P2RX7	BACKGROUND_UNREAD	-	-
+H_GLIA	glia_myelination	function	CSF1R	BACKGROUND_UNREAD	-	microglia
+H_DEV	development	function	NOTCH1	BACKGROUND_UNREAD	-	progenitor state; MYC card M01 covers MYC only
+H_DEV	development	function	RARA	BACKGROUND_UNREAD	-	-
+H_DEV	development	function	RARB	BACKGROUND_UNREAD	-	-
+H_DEV	development	function	PIK3CD	BACKGROUND_UNREAD	-	-
+H_DEV	development	function	SIRT1	BACKGROUND_UNREAD	-	-
