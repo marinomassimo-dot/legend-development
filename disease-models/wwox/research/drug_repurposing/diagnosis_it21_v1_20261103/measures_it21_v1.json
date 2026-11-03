@@ -1,0 +1,331 @@
+{
+ "any_qualified": 0,
+ "attribution_sensitivity_assessed_rows_at_or_above_fold": {
+  "10.0": 33,
+  "100.0": 16,
+  "3.0": 60,
+  "30.0": 23,
+  "assessed": 224
+ },
+ "attribution_states": {
+  "ATTRIBUTABLE": 191,
+  "NOT_ASSESSABLE": 733,
+  "UNMEASURED_AT_MAIN_TARGET": 23,
+  "WEAK_ATTRIBUTION": 33
+ },
+ "blockers_after": {
+  "ELIGIBLE": 151,
+  "arm_has_no_stated_benefit_hypothesis": 93,
+  "decided_in_earlier_qualification_record": 19,
+  "identity_not_resolved": 551,
+  "main_target_weak_attribution": 28,
+  "mechanism_cluster_examined_earlier": 68,
+  "modality_antibody_not_small_molecule": 6,
+  "modality_protein_or_peptide_not_small_molecule": 5,
+  "modality_unknown_not_small_molecule": 11,
+  "reach_null_not_confirming": 48
+ },
+ "blockers_before": {
+  "ELIGIBLE": 141,
+  "arm_has_no_stated_benefit_hypothesis": 71,
+  "decided_in_earlier_qualification_record": 8,
+  "identity_not_resolved": 659,
+  "mechanism_cluster_examined_earlier": 32,
+  "modality_antibody_not_small_molecule": 6,
+  "modality_protein_or_peptide_not_small_molecule": 4,
+  "modality_unknown_not_small_molecule": 11,
+  "reach_null_not_confirming": 48
+ },
+ "claim_name_bridge": {
+  "decisions": {
+   "merged": 1423,
+   "out_of_selection": 140,
+   "rejected_conflict": 9,
+   "related_not_merged": 66,
+   "unresolved": 63
+  },
+  "dgidb_only_entries_with_a_claim_name_ligand_and_no_concept_id_ligand": 1630,
+  "twin_families_joinable": 1423
+ },
+ "contrast": {
+  "C1 GSK343": {
+   "attribution": "ATTRIBUTABLE",
+   "blocker_after": "decided_in_earlier_qualification_record",
+   "fold": "1.0",
+   "handoff_after": "no/not handed",
+   "handoff_before": "yes/handed",
+   "qualified": "no",
+   "status": "CONDITIONAL_H_HARM"
+  },
+  "C2 tizaterkib": {
+   "attribution": "ATTRIBUTABLE",
+   "blocker_after": "decided_in_earlier_qualification_record",
+   "fold": "1.0",
+   "handoff_after": "no/not handed",
+   "handoff_before": "yes/handed",
+   "qualified": "no",
+   "status": "CONDITIONAL_H_PROTECT"
+  },
+  "C3a nanatinostat": {
+   "attribution": "WEAK_ATTRIBUTION",
+   "blocker_after": "main_target_weak_attribution",
+   "fold": "66.7",
+   "handoff_after": "no/not handed",
+   "handoff_before": "yes/handed",
+   "qualified": "no",
+   "status": "CONDITIONAL_H_HARM"
+  }
+ },
+ "eligible_before_after": [
+  141,
+  151
+ ],
+ "generated_rows_changed": 0,
+ "glue_rows_with_main_target_CRBN": [],
+ "handed_added": {
+  "IT21P2-0035": [
+   "Sorafenib",
+   "Q2 H_PROTECT ZHX2",
+   "UNMEASURED_AT_MAIN_TARGET"
+  ],
+  "IT21P2-0254": [
+   "Estradiol Valerate",
+   "Q5 H_HARM ESR2",
+   "ATTRIBUTABLE"
+  ],
+  "IT21P2-0295": [
+   "To-901317",
+   "Q5 H_PROTECT RORC",
+   "ATTRIBUTABLE"
+  ],
+  "IT21P2-0330": [
+   "Vitamin A",
+   "Q5 H_PROTECT NR2C2",
+   "ATTRIBUTABLE"
+  ],
+  "IT21P2-0637": [
+   "Ezutromid",
+   "Q6 H_HARM AHR",
+   "ATTRIBUTABLE"
+  ]
+ },
+ "handed_before_after": [
+  13,
+  10
+ ],
+ "handed_dropped": {
+  "IT21P2-0006": [
+   "NANATINOSTAT",
+   "main_target_weak_attribution"
+  ],
+  "IT21P2-0008": [
+   "Iox1",
+   "decided_in_earlier_qualification_record"
+  ],
+  "IT21P2-0014": [
+   "ASTX-660",
+   "main_target_weak_attribution"
+  ],
+  "IT21P2-0057": [
+   "Cgi1746",
+   "decided_in_earlier_qualification_record"
+  ],
+  "IT21P2-0195": [
+   "Gsk343",
+   "decided_in_earlier_qualification_record"
+  ],
+  "IT21P2-0374": [
+   "TIZATERKIB",
+   "decided_in_earlier_qualification_record"
+  ],
+  "IT21P2-0388": [
+   "CEP-11981",
+   "not selected (cap)"
+  ],
+  "IT21P2-0512": [
+   "SRT-2104",
+   "decided_in_earlier_qualification_record"
+  ]
+ },
+ "identity_bridged_rows": 114,
+ "identity_not_resolved_before_after": [
+  659,
+  551
+ ],
+ "previously_eligible_now_weak": [
+  [
+   "AMDIZALISIB",
+   "PIK3CB",
+   "290.0"
+  ],
+  [
+   "ASTX-660",
+   "XIAP",
+   "12.7"
+  ],
+  [
+   "Hg-10-102-01",
+   "JAK2",
+   "258.1"
+  ],
+  [
+   "LONDAMOCITINIB",
+   "JAK2",
+   "406.7"
+  ],
+  [
+   "NANATINOSTAT",
+   "HDAC5",
+   "66.7"
+  ],
+  [
+   "SGI-1776",
+   "PIM2",
+   "51.9"
+  ],
+  [
+   "SGI-1776",
+   "PIM2",
+   "51.9"
+  ]
+ ],
+ "rows": 980,
+ "universe_Q2_H_HARM": {
+  "by_blocker_after": {
+   "decided_in_earlier_qualification_record": 1,
+   "identity_not_resolved": 16,
+   "main_target_weak_attribution": 9,
+   "mechanism_cluster_examined_earlier": 4,
+   "modality_protein_or_peptide_not_small_molecule": 2,
+   "reach_null_not_confirming": 2
+  },
+  "eligible_after": 0,
+  "eligible_before": 4,
+  "hdac5_cluster_members": [
+   [
+    "4-Phenylbutyric Acid",
+    "NOT_ASSESSABLE",
+    ""
+   ],
+   [
+    "Abexinostat",
+    "UNMEASURED_AT_MAIN_TARGET",
+    ""
+   ],
+   [
+    "Belinostat",
+    "WEAK_ATTRIBUTION",
+    "11.1"
+   ],
+   [
+    "CUDC-101",
+    "ATTRIBUTABLE",
+    "4.7"
+   ],
+   [
+    "Dacinostat",
+    "WEAK_ATTRIBUTION",
+    "763.6"
+   ],
+   [
+    "Givinostat",
+    "WEAK_ATTRIBUTION",
+    "50.0"
+   ],
+   [
+    "Ka1010",
+    "NOT_ASSESSABLE",
+    ""
+   ],
+   [
+    "Martinostat",
+    "NOT_ASSESSABLE",
+    ""
+   ],
+   [
+    "NANATINOSTAT",
+    "WEAK_ATTRIBUTION",
+    "66.7"
+   ],
+   [
+    "Panobinostat",
+    "UNMEASURED_AT_MAIN_TARGET",
+    ""
+   ],
+   [
+    "Pivaloyloxymethylbutyrate",
+    "NOT_ASSESSABLE",
+    ""
+   ],
+   [
+    "Pracinostat",
+    "ATTRIBUTABLE",
+    "1.2"
+   ],
+   [
+    "Quisinostat",
+    "WEAK_ATTRIBUTION",
+    "33.5"
+   ],
+   [
+    "Romidepsin",
+    "WEAK_ATTRIBUTION",
+    "366666.7"
+   ],
+   [
+    "Scriptaid",
+    "NOT_ASSESSABLE",
+    ""
+   ],
+   [
+    "Ss-208",
+    "NOT_ASSESSABLE",
+    ""
+   ],
+   [
+    "Tmp269",
+    "NOT_ASSESSABLE",
+    ""
+   ],
+   [
+    "Trichostatin A",
+    "WEAK_ATTRIBUTION",
+    "1300.0"
+   ],
+   [
+    "Valproic Acid",
+    "UNMEASURED_AT_MAIN_TARGET",
+    ""
+   ],
+   [
+    "Vorinostat",
+    "WEAK_ATTRIBUTION",
+    "2769.2"
+   ]
+  ],
+  "rows": 34
+ },
+ "vorinostat": {
+  "attribution_best_nm": "1.3",
+  "attribution_best_target": "HDAC1",
+  "attribution_fold": "2769.2",
+  "attribution_main_nm": "3600.0",
+  "attribution_state": "WEAK_ATTRIBUTION",
+  "handoff_blocker": "main_target_weak_attribution",
+  "handoff_eligible": "no",
+  "identity_via": "gtopdb_ligand_claim_name->FAM:CAT:CHEMBL98",
+  "main_target": "HDAC5",
+  "proposal_id": "IT21P2-0031",
+  "qualified": "no",
+  "sibling_compatible_action": "mimics",
+  "sibling_family": "FAM:CAT:CHEMBL98",
+  "sibling_z_reach": "0.12837",
+  "status": "CONDITIONAL_H_HARM",
+  "z_reach": "3.15875",
+  "z_total": "5.686"
+ },
+ "vorinostat_before": {
+  "handoff_blocker": "identity_not_resolved",
+  "handoff_eligible": "no"
+ }
+}

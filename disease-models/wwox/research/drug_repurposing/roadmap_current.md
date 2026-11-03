@@ -213,6 +213,12 @@ Reusable guidance for any drug-repurposing package lives in these places only; r
   threads presented as new). A partial `files/fulltext` corpus makes `audit-shareable` fail spuriously (every name looks
   unattested): never create it in a worktree to carry a receipt. Records: [`evaluation_it21_p5_20261103`](evaluation_it21_p5_20261103/README.md),
   [`verification_it21_p8_20261103`](verification_it21_p8_20261103/README.md).
+- **Check that a hand-over uses what the repository already holds (IT21 V1, vorinostat retrospective).** Three links were missing and are now code
+  (`generation_it21_p2_20261103/attribution_screen_it21.py`, tested): the measured affinity of a compound at the target its chain runs through (33 of
+  224 assessed rows are 10-fold or more weaker there than at the compound's best target; a listed target can be the weakest one); the identity of a
+  DGIdb-only twin read from the ligand id in the claim name (1,423 twins the catalogue never joined; stored catalogue unchanged, join applied at
+  hand-over); and earlier qualification records as a decision source. `NAMED_ALREADY` on a lever means only that a card names the gene: read the
+  card's state before calling a thread closed. Result and handoff list: [`diagnosis_it21_v1_20261103`](diagnosis_it21_v1_20261103/README.md).
 - Provenance through intermediaries and specific evidence (IT20): follow [the republished-claim bullet of the convention](../../../../framework/protocols/repurposing_adapter_convention.md); a verifier must recompute any 'X to 0' claim from a fresh regeneration (IT20: a claimed 21 to 0 was still 21).
 - Dated measurements and decisions are in the iteration section of the [module README](README.md) marked CURRENT.
 

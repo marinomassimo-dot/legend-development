@@ -1,0 +1,61 @@
+{
+ "blockers": {
+  "ELIGIBLE": 151,
+  "arm_has_no_stated_benefit_hypothesis": 93,
+  "decided_in_earlier_qualification_record": 19,
+  "identity_not_resolved": 551,
+  "main_target_weak_attribution": 28,
+  "mechanism_cluster_examined_earlier": 68,
+  "modality_antibody_not_small_molecule": 6,
+  "modality_protein_or_peptide_not_small_molecule": 5,
+  "modality_unknown_not_small_molecule": 11,
+  "reach_null_not_confirming": 48
+ },
+ "by_status": {
+  "CONDITIONAL_H_HARM": 552,
+  "CONDITIONAL_H_PROTECT": 428
+ },
+ "carried_prior_decisions": 40,
+ "dispositions": {
+  "Q1|direct_search|DIAGNOSTIC_ONLY": 8,
+  "Q2|direct_search|DIAGNOSTIC_ONLY": 50,
+  "Q2|flagged_mimics|HELD_UNCERTAIN_ACTIVE_MOIETY": 15,
+  "Q2|flagged_opposes|HELD_UNCERTAIN_ACTIVE_MOIETY": 5,
+  "Q2|mimics|CONDITIONAL_IF_PROTECTIVE": 25,
+  "Q2|opposes|CONDITIONAL_IF_HARMFUL": 50,
+  "Q3|direct_search|DIAGNOSTIC_ONLY": 50,
+  "Q4|direct_search|DIAGNOSTIC_ONLY": 53,
+  "Q4|flagged_mimics|HELD_UNCERTAIN_ACTIVE_MOIETY": 2,
+  "Q4|flagged_opposes|HELD_UNCERTAIN_ACTIVE_MOIETY": 1,
+  "Q4|mimics|CONDITIONAL_IF_PROTECTIVE": 25,
+  "Q4|opposes|CONDITIONAL_IF_HARMFUL": 50,
+  "Q5|direct_search|DIAGNOSTIC_ONLY": 50,
+  "Q5|flagged_mimics|HELD_UNCERTAIN_ACTIVE_MOIETY": 13,
+  "Q5|flagged_opposes|HELD_UNCERTAIN_ACTIVE_MOIETY": 25,
+  "Q5|mimics|CONDITIONAL_IF_PROTECTIVE": 25,
+  "Q5|opposes|CONDITIONAL_IF_HARMFUL": 50,
+  "Q6|direct_search|DIAGNOSTIC_ONLY": 100,
+  "Q6|flagged_mimics|HELD_UNCERTAIN_ACTIVE_MOIETY": 13,
+  "Q6|flagged_opposes|HELD_UNCERTAIN_ACTIVE_MOIETY": 26,
+  "Q6|mimics|CONDITIONAL_IF_PROTECTIVE": 50,
+  "Q6|opposes|CONDITIONAL_IF_HARMFUL": 100,
+  "Q7|direct_search|DIAGNOSTIC_ONLY": 50
+ },
+ "eligible": 151,
+ "handed_over": 10,
+ "handed_over_ids": [
+  "IT21P2-0035",
+  "IT21P2-0221",
+  "IT21P2-0236",
+  "IT21P2-0254",
+  "IT21P2-0295",
+  "IT21P2-0296",
+  "IT21P2-0330",
+  "IT21P2-0456",
+  "IT21P2-0542",
+  "IT21P2-0637"
+ ],
+ "mechanism_clusters": 150,
+ "seed_specific_rows": 980,
+ "selection_rule": "H1 arm opposes or mimics, unflagged for active moiety, seed-specific under the three IT10 nulls AND the reach-matched null (same sign, |z| > 3 in all four); H2 identity resolved in the catalogue (ChEMBL id) and modality small_molecule; H3 the arm has a stated benefit hypothesis in question_roles.tsv (arms whose own text says 'no sourced/stated' benefit hypothesis are kept in proposals, never handed over); H4 not decided in an IT9/IT10/IT11 qualification record (those are carried with their state, not re-proposed); H5 one proposal per mechanism cluster = (question, hypothesis, main target), chosen by number of evidence origins, then the shorter admissible chain (fewer edges), then the smallest |z|; salt twins count once; H6 at most 3 per (question, hypothesis); H7 a proposal whose only signed support at the main target is not a resolved assertion is not handed over (the signed pair must survive the refreshed guards, which is the case for every row of the refreshed table); H8 a mechanism cluster in which ANY member (eligible or not) has an IT9/IT10/IT11 qualification record is not handed over as new: it is listed in mechanism_clusters_it21.tsv with that record, because the earlier reason may have been about the compound and only the qualification can say so (unknown is not negative)."
+}
