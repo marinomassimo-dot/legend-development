@@ -4069,6 +4069,7 @@ UI_IT20B = {
     "iv_neg_ruled": "Escluso", "iv_neg_reason": "Perché", "iv_neg_reopen": "Si riapre se", "iv_neg_pkg": "Pacchetto",
     "iv_text_en": "Il testo scientifico delle righe è in inglese, come nelle schede; le etichette e le spiegazioni dell'interfaccia sono in italiano.",
     "iv_p5_h": "Contributo di WWOX alla misura",
+    "iv_p5_done": "Misura retrospettiva (IT21 P5): sostituendo i geni di partenza WWOX con geni scelti a caso della stessa dimensione di rete, il generatore produce quasi altrettante proposte (nessuno dei 5 insiemi supera il 95° percentile dei confronti più stretti). Risultato: nessun vantaggio dimostrabile della sola informazione WWOX a questo livello. Non dice nulla sul beneficio prospettico né che i composti elencati siano inattivi. Si riapre con un dato misurato nel sistema WWOX che distingua le proposte.",
     "iv_p5_pending": "In preparazione: la misura del contributo di WWOX alle proposte generate (pacchetto di valutazione IT21 P5) non è ancora integrata in questa versione. Nulla viene mostrato al suo posto.",
     "iv_nov_note": "Una novità vale solo nel perimetro di ricerca dichiarato: l'assenza in una scheda o in una ricerca non significa «mai studiato».",
 }
@@ -4192,7 +4193,9 @@ def render_investigations(P: dict) -> str:
                       (f'<dt>{E(U["iv_h_chembl"])}</dt><dd><span class="mini">{E(", ".join(ids))}</span></dd>' if ids else "") + '</dl></li>')
         out += f'<details class="inl" id="inv-negatives" open><summary>{E(U["iv_neg_h"])} ({len(negs)})</summary><p class="mini">{E(U["iv_neg_lead"])}</p><ul class="inv-negs">{"".join(li)}</ul></details>'
     p5 = ctx.get("wwox_contribution")
-    if p5 is not None and p5.get("state") == "pending":
+    if p5 is not None and p5.get("state") == "measured":
+        out += f'<p class="note" data-state="measured" id="inv-p5"><b>{E(U["iv_p5_h"])}.</b> {E(U["iv_p5_done"])}</p>'
+    elif p5 is not None and p5.get("state") == "pending":
         out += f'<p class="note" data-state="pending" id="inv-p5"><b>{E(U["iv_p5_h"])}.</b> {E(U["iv_p5_pending"])}</p>'
     return out + f'<p class="mini mut">{E(U["iv_nov_note"])}</p></section>'
 

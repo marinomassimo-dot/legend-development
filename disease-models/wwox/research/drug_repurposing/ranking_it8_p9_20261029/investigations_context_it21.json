@@ -31,8 +31,8 @@
   ]
  },
  "wwox_contribution": {
-  "state": "pending",
+  "state": "measured",
   "source": "evaluation_it21_p5_20261103",
-  "note": "Slot for the measurement of the WWOX contribution to the generated proposals (IT21 P5). Not yet integrated into this branch: nothing is shown in its place."
+  "note": "No advantage at the level the generator can be tested: real WWOX seed sets are above the 95th percentile of degree- and reach-matched decoys in 0 of 5 sets; retrospective, no prospective benefit claim."
  }
 }
