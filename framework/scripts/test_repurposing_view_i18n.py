@@ -26,12 +26,14 @@ def data_of(page: str) -> dict:
     return json.loads(m.group(1).replace("<\\/", "</").replace("<\\!--", "<!--"))
 
 
-def mask(x):
-    """Same structure and every number, identifier and key; free text (a label that is translated) is blanked."""
+def mask(x, key=""):
+    """Same structure and every number, identifier and key; free text (a label that is translated) is blanked; a dict keyed by translated file labels is compared by its values."""
     if isinstance(x, dict):
-        return {k: mask(v) for k, v in x.items() if k != "ui" and not re.search(r"[a-z]{3,} [a-z]{3,}", str(k))}
+        if key == "generated_from":
+            return sorted(json.dumps(v, sort_keys=True) for v in x.values())
+        return {k: mask(v, k) for k, v in x.items() if k != "ui"}
     if isinstance(x, list):
-        return [mask(v) for v in x]
+        return [mask(v, key) for v in x]
     if isinstance(x, str):
         return x if re.fullmatch(r"[A-Za-z0-9_.:+/#-]{1,40}", x) and not re.fullmatch(r"[a-z]{4,}", x) else ""
     return x
@@ -91,7 +93,7 @@ class FiveLanguages(unittest.TestCase):
         fr_nav = re.search(r"<nav class=\"langsel\".*?</script>", self.pages["fr"], re.S).group(0)
         self.assertIn("if(true){", en_nav)                                             # only the English page opens a remembered language
         self.assertIn("if(false){", fr_nav)
-        self.assertNotRegex(self.pages["en"], r"https?://[^\"' ]*\.(?:js|css)")
+        self.assertNotRegex(self.pages["en"], r"<script[^>]+\bsrc=|<link[^>]+rel=\"stylesheet\"")
 
     def test_other_languages_carry_the_original_language_notes(self):
         for lg in ("it", "fr", "es", "de"):
@@ -110,7 +112,7 @@ class FiveLanguages(unittest.TestCase):
             body = re.sub(r"<script\b.*?</script>|<style\b.*?</style>", "", self.pages[lg], flags=re.S)
             body = re.sub(r"<(\w+)\b[^>]*class=\"orig\"[^>]*>.*?</\1>", "", body, flags=re.S)
             left = [t for t in (html.unescape(x).strip() for x in rv.TEXT_NODE.findall(body))
-                    if len(t) >= 25 and len(rv.IT_WORDS.findall(t.lower())) >= 3 and len(rv.EN_WORDS.findall(t.lower())) < 2]
+                    if len(t) >= 25 and len(rv.IT_WORDS.findall(re.sub(r"\bIL-?\d\w*", "", t).lower())) >= 3 and len(rv.EN_WORDS.findall(t.lower())) < 2]
             self.assertEqual(left, [], lg)
 
     def test_an_untranslated_passage_is_flagged_not_passed_off_as_translated(self):

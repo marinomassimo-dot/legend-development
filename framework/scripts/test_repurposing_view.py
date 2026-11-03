@@ -615,9 +615,9 @@ class Curated(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td:
             out = Path(td) / "x.html"
             out.write_text("stale", encoding="utf-8")
-            self.assertEqual(rv.main(["check", "--source", "shareable", "--out", str(out)]), 1)
-            self.assertEqual(rv.main(["run", "--source", "shareable", "--out", str(out)]), 0)
-            self.assertEqual(rv.main(["check", "--source", "shareable", "--out", str(out)]), 0)
+            self.assertEqual(rv.main(["check", "--source", "shareable", "--lang", "en", "--out", str(out)]), 1)
+            self.assertEqual(rv.main(["run", "--source", "shareable", "--lang", "en", "--out", str(out)]), 0)
+            self.assertEqual(rv.main(["check", "--source", "shareable", "--lang", "en", "--out", str(out)]), 0)
             self.assertEqual(rv.main(["check", "--source", "full", "--out", str(out)]), 1)
 
     def test_no_third_party_name_in_full_only_fields_of_shareable_actions(self):
@@ -935,7 +935,7 @@ class ShareableAudit(unittest.TestCase):
         page = rv.build(DR, "shareable", "it")
         body = re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", page, flags=re.S)
         for h in re.findall(r'href="([^"]*)"', body):
-            self.assertTrue(h.startswith(("#", "https://", "http://")), h)
+            self.assertTrue(h.startswith(("#", "https://", "http://")) or h.split("#")[0] in rv.LANG_FILE.values(), h)
         P = embedded(page)
         for c in P["cur"]["cands"]:
             self.assertFalse(c["card_path"].startswith(("../", "cards/")), c["card_path"])
@@ -1057,7 +1057,7 @@ class ItalianFix(unittest.TestCase):
         self.assertIn("I 54 legami candidato-bisogno sono contati tutti", self.page)
 
     def test_no_raw_status_code_in_the_header_and_italian_labels(self):
-        head = self.page[:self.page.index('<nav ')]
+        head = self.page[:self.page.index('<nav aria-label=')]
         for code in ("STALE_EXPORT", "PARTIAL", "NOT_FETCHED", "FAILED"):
             self.assertNotIn(code, head)
         self.assertIn("esportazione non aggiornata", head)
@@ -2482,7 +2482,7 @@ class It20P6Investigations(unittest.TestCase):
     @unittest.skipUnless(HAVE_DATA, "module data absent")
     def test_live_pages_show_the_block_at_the_opening(self):
         for src in ("full", "shareable"):
-            page = rv.build(DR, src)
+            page = rv.build(DR, src, "it")
             i = page.index('id="investigations"')
             self.assertLess(i, page.index('id="start"'))
             self.assertLess(page.index(rv.E(rv.UI_IT["warn_1"])), i)
