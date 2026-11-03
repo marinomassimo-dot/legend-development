@@ -1,0 +1,9 @@
+rows 932; columns ['PubmedID', 'Category', 'Tissue', 'QueryGene', 'QueryFunction', 'QueryMutation', 'QueryType', 'SuppressorGene', 'SuppressorFunction', 'SuppressorMutation', 'SNP_ID', 'SuppressorType', 'EffectSize', 'Disease', 'DiseaseSubType', 'CellLineIdentified', 'ModelSystemValidated', 'Drugs', 'QueryPLI', 'SuppressorPLI', 'QueryKOfitness', 'SuppressorKOfitness', 'PPI', 'NegGI', 'PosGI', 'MechanisticClass']
+category counts {'Patients': 585, 'Cells': 347}
+rows with a neural tissue label 58
+distinct genes in table 484
+panel genes present ['GRIN2A']
+panel genes absent ['ATF4', 'BNIP3', 'CACNA1G', 'CDKL5', 'ERBB4', 'GRIN2B', 'HIF1A', 'HK2', 'KCNJ6', 'KCNQ2', 'LDHA', 'LDHB', 'MTOR', 'NFE2L2', 'PDK1', 'RUNX2', 'SCN1A', 'SCN2A', 'SCN8A', 'SLC12A2', 'SLC2A1', 'STXBP1', 'TP73', 'WWOX']
+HIT GRIN2A DEE suppressor HTT GRIN2A Patients Neuron - 15742215
+HIT GRIN2A DEE suppressor HTT GRIN2A Patients Neuron - 17569088
+HIT GRIN2A DEE suppressor HTT GRIN2A Patients Neuron - 21989477

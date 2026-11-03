@@ -1,0 +1,5 @@
+NPC LIB_6 other-gene signatures available: 985; using first 40
+CONTROL NPC other genes n=40: min -0.510 p25 -0.166 median 0.236 p75 0.438 max 0.754
+WWOX NPC vs WWOX other cells n=9: min -0.072 median 0.298 max 0.492
+WWOX-cell values above the control median: 5 of 9
+WWOX-cell values above the control maximum: 0 of 9
