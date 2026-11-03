@@ -1,0 +1,126 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT22-20261103",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Iteration 22: turn unused knowledge into better pharmacological generation: fix transfer of decisions between molecules (H8) and non-comparable pharmacology comparisons (attribution screen), connect unconsumed WWOX observations to the generator, measure incrementally, extend the reverse test, qualify few hypotheses, integrate.",
+ "START_UTC": "2026-11-03T18:11:13Z",
+ "BASELINE": "development/main = local main = d6de0a5aef72f228ef7477be6f6394c2b4b0db94 (fetched 2026-11-03T18:11:13Z); CI Public release gate success on d6de0a5a; one worktree at start plus task worktree; no active jobs; 15 GiB RAM (10 available), 81 GB disk free. IT21 content SHA 8adb49db; 980 conditional proposals; 11 handed to qualification; 0 QUALIFIED_HYPOTHESIS; 968 chained receipts.",
+ "DECISIONS_TAKEN": [],
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": [],
+ "AUTHORISED_QUEUE_20261103": {
+  "MANDATE_STATE": "ACTIVE",
+  "OBJ_P0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P0 baseline freeze, record, reconcile IT21 baseline",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "P1 fix H8 cross-molecule decision transfer (fixtures first; nanatinostat vs pracinostat/CUDC-101/quisinostat)",
+     "status": "PENDING",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "P2 fix attribution_screen comparability (measure type/unit/context across both sides; no 10x/100 nM law)",
+     "status": "PENDING",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "P3 connect unconsumed WWOX knowledge (NRF2/redox, cell-population, glia/maturation/myelination, corrections) to generator inputs, with consumption proof",
+     "status": "PENDING",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "P4 use non-pathway relations in the engine (measured/inferred/hypothesised, transfer step declared)",
+     "status": "PENDING",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "P5 incremental measurement of the three effects; reconcile IT21 benchmark wording",
+     "status": "PENDING",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "P6 extended reverse test (known, new-link, preserved exclusion) and deepening of few hypotheses with receipts",
+     "status": "PENDING",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "P7 targeted scouting only where a gap is named",
+     "status": "PENDING",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P8": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "P8 independent blind-first verification, regenerate queue/ranking/view, publish",
+     "status": "PENDING",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P9": {
+   "order": 10,
+   "steps": [
+    {
+     "step": "P9 durable lessons at canonical points + regeneration proof",
+     "status": "PENDING",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P10": {
+   "order": 11,
+   "steps": [
+    {
+     "step": "P10 battery on frozen candidate, push, CI, served dashboard, cleanup, dossier-audit timeout classification, final report",
+     "status": "PENDING",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}
