@@ -456,26 +456,45 @@ def _quote_matches(snippet: str, text: str) -> tuple[bool, str]:
     deletion, a substitution and an inserted sign are all caught, because all three change the
     sequence being compared rather than the appearance of the quote.
     """
+    return _quote_matches_prepared(snippet, _PreparedText(text))
+
+
+class _PreparedText:
+    """A surface normalised once. `_quote_matches` builds one per call (behaviour unchanged); a caller that tests MANY quotations against the same surface (dossier_quote_audit's
+    cross-paper scan: every unmatched quotation against every paper of the corpus) builds one per surface and reuses it, so the normalisation and the offset map are paid once per
+    surface and not once per quotation. Only the alphanumeric KEY is kept after the first fold (the per-character offset map is large and is rebuilt on the rare key hit), so a cache of
+    many surfaces stays a few times the text size."""
+
+    def __init__(self, text: str) -> None:
+        self.text = text
+        self.normal = _normalise_text(text)
+        self._key: str | None = None
+
+    @property
+    def key(self) -> str:
+        if self._key is None:
+            self._key = _fold_with_offsets(self.text)[1]
+        return self._key
+
+    @property
+    def fold(self) -> tuple[str, str, list[int]]:
+        """The full fold with offsets, rebuilt on demand (a key hit)."""
+        return _fold_with_offsets(self.text)
+
+
+def _quote_matches_prepared(snippet: str, prepared: "_PreparedText") -> tuple[bool, str]:
+    """`_quote_matches` against a surface that is already normalised (see `_PreparedText`). The decision rule is the one documented on `_quote_matches`, unchanged."""
     snippet_normal = _normalise_text(snippet)
-    text_normal = _normalise_text(text)
-    if snippet_normal in text_normal:
+    if snippet_normal in prepared.normal:
         return True, "strict"
 
     _snippet_normal, snippet_key, _snippet_offsets = _fold_with_offsets(snippet)
-    text_normal_folded, text_key, text_offsets = _fold_with_offsets(text)
     if not snippet_key:
         return False, "folded"
-    # `find` takes the FIRST occurrence. If the same word sequence appears more than once in
-    # the artifact with different punctuation — a sentence restated in the discussion, a
-    # figure caption echoing the body — the span compared is the first one, not necessarily
-    # the one the reader quoted. That can refuse a quote another occurrence would have
-    # matched. This is deliberate and it is the safe direction of the error: a refusal costs
-    # a re-capture, an acceptance costs a false `verified` on the axis that decides whether a
-    # result is a result. If false refusals ever become common enough to matter, scan every
-    # occurrence and accept when ANY span agrees — never widen by relaxing the comparison.
-    position = text_key.find(snippet_key)
+    position = prepared.key.find(snippet_key)
     if position < 0:
         return False, "folded"
+    text_normal_folded, text_key, text_offsets = prepared.fold
 
     start = text_offsets[position]
     end = text_offsets[position + len(snippet_key) - 1] + 1

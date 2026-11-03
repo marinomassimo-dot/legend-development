@@ -34,3 +34,10 @@ Agent reasoning (not engine steps): the seed-row proposals of the four input aud
 
 `SECONDARY_MAIN_NM` (1,000 nM) and the 10x rule are stated conventions. The chain edges of the new Q8 rows are context-free network edges. Assay class is unknown for most catalogue values. Pracinostat's HDAC5 value is 47 nM in the
 Guide to Pharmacology and 5,113 nM in one ChEMBL document (109-fold apart): attribution is undecidable until the sources are reconciled. Not done: a paralog-group cluster rule (the ERK pair counts as two hand-overs), tagging 12 dormant decision sources, a neuron-arm guard separate from the progenitor-arm one, ChEMBL activities in the local cache. Guards are recorded as carried limits: removing their ordering term changes no hand-over (verifier F12); the Q8 seed set is the one real input the engine consumed. Verification: [`verification_it22_p8_20261103`](../verification_it22_p8_20261103/README.md) with the integrator response.
+
+## 5. `test_dossier_quote_audit.py` timeout (observed in IT21), classified with evidence
+
+The test's CLI run (cap 600 s) is **CPU-bound and deterministic**, not an environmental fluctuation: the standalone corpus-wide run on `main` took 10m03s real, 9m50s user, 11 s system (idle machine). Cause: `find_elsewhere` normalised and
+folded every paper of the corpus again for every unmatched quotation (264 quotations, 945 surfaces). Fix at the source, the control untouched and the cap unchanged: each surface is normalised once (`deepdive_manifest._PreparedText`,
+`_quote_matches_prepared`; `_quote_matches` delegates, decision rule identical). After: 25 s user on the same inputs, **byte-identical report** (264 quotations; 119 verbatim, 9 stitched, 0 elsewhere, 105 not found, 31 undecidable). Regression: `PreparedSurface` (2 tests) in
+`test_dossier_quote_audit.py`; the existing 18 tests and the 208 of `test_deepdive_manifest.py` pass.

@@ -255,5 +255,33 @@ class TheRealDossiersAreAudited(unittest.TestCase):
                          "the audit must never write a dossier")
 
 
+class PreparedSurface(unittest.TestCase):
+    """IT22: the cross-paper scan normalises each surface once. The decision must be the one `_quote_matches` takes, case by case; only the cost changes
+    (a corpus-wide run measured 10m03s CPU-bound against the 600 s cap of `run_cli`, and 25 s after, with a byte-identical report)."""
+
+    TEXT = ("The mean was 4.2 (P < 0.05) in the knockout. A sentence about the heterozygote is indistinguishable from the wild type, on every measure.")
+
+    def test_prepared_and_direct_matching_agree_on_strict_folded_refused_and_absent(self) -> None:
+        import deepdive_manifest as dm
+        prepared = dm._PreparedText(self.TEXT)
+        for snippet in ("The mean was 4.2 (P < 0.05) in the knockout.",                        # strict
+                        "heterozygote is indistinguishable from the wild type on every measure",  # folded (comma dropped)
+                        "The mean was 4.2 (P 0.05) in the knockout.",                           # deletion of the comparator: refused
+                        "a sentence that is nowhere in the text at all"):                       # absent
+            self.assertEqual(dm._quote_matches_prepared(snippet, prepared), dm._quote_matches(snippet, self.TEXT), snippet)
+
+    def test_find_elsewhere_keeps_its_answer_and_caches_prepared_surfaces(self) -> None:
+        import tempfile
+        with tempfile.TemporaryDirectory() as t:
+            a, b = Path(t) / "PMID1.xml", Path(t) / "PMID2.xml"
+            a.write_text(PAPER, encoding="utf-8")
+            b.write_text(OTHER, encoding="utf-8")
+            index = {"1": a, "2": b}
+            cache: dict = {}
+            self.assertEqual(dqa.find_elsewhere("A sentence that lives only in the other paper and nowhere else at all.", index, "1", cache), "2")
+            self.assertIsNone(dqa.find_elsewhere("nothing like this exists anywhere in either paper", index, "1", cache))
+            self.assertTrue(all(hasattr(v, "key") for v in cache.values()))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

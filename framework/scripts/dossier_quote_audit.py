@@ -193,13 +193,18 @@ def texts_for(root: Path, corpus: Path, disease: str, pmid: str,
 
 def find_elsewhere(span: str, index: dict[str, Path], skip: str,
                    cache: dict[str, str]) -> str | None:
-    """Which other paper in the corpus contains this sentence — diagnostically."""
+    """Which other paper in the corpus contains this sentence — diagnostically.
+
+    The cache holds each surface already NORMALISED (`dm._PreparedText`): before, every
+    unmatched quotation re-normalised and re-folded every paper of the corpus, which made a
+    corpus-wide run CPU-bound at about the test's own 600 s cap (measured 10m03s, user 9m50s).
+    The decision rule is the one `dm._quote_matches` applies, unchanged."""
     for pmid, path in index.items():
         if pmid == skip:
             continue
         if pmid not in cache:
-            cache[pmid] = diagnostic_text(path)
-        if dm._quote_matches(span, cache[pmid])[0]:
+            cache[pmid] = dm._PreparedText(diagnostic_text(path))
+        if dm._quote_matches_prepared(span, cache[pmid])[0]:
             return pmid
     return None
 
