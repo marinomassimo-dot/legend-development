@@ -1,0 +1,22 @@
+pmid	pmcid	citation	depth_in_this_package	receipt_prepared	used_for
+26682036	PMC4678600	Hopkinson 2013, Chem Sci 4:3110	partial_fulltext_read (text of the open article; tables, figures, supplement not read)	receipts/FTR-20261103-26682036-01.json	IOX1 profile and HIF1alpha stabilisation; locators L1-L4
+22190494	PMC3268300	Menssen 2012, PNAS	abstract_only	receipts/FTR-20261103-22190494-01.json	SIRT1 -> MYC sign (+)
+19364925	PMC2700370	Yuan 2009, J Cell Biol	abstract_only	receipts/FTR-20261103-19364925-01.json	SIRT1 -> MYC sign (-)
+29132376	PMC5684749	Yin 2017, J Neuroinflammation	abstract_only	receipts/FTR-20261103-29132376-01.json	EZH2 inhibition raises IL6/TNF (cited reference of the edge)
+25868794		Zhang 2015, Int J Cancer	abstract_only	receipts/FTR-20261103-25868794-01.json	EZH2 inhibitors are P-gp/BCRP substrates
+37391829	PMC10311910	Mannino 2023, J Neuroinflammation	abstract_only	receipts/FTR-20261103-37391829-01.json	GSK-343 lowers cytokines in MPTP mouse
+38212578		Zhang 2024, Nat Chem Biol	abstract_only	receipts/FTR-20261103-38212578-01.json	CGI1746 acts through sigma-1 receptor
+39759071	PMC11700655	Akintola 2024, iScience	abstract_only	receipts/FTR-20261103-39759071-01.json	CGI-1746 inhibits the proteasome in BTK-negative cells
+20061378	PMC2832984	Pacholec 2010, J Biol Chem	abstract_only	receipts/FTR-20261103-20061378-01.json	STAC direct-activation dispute
+23471411	PMC3799917	Hubbard 2013, Science	abstract_only	receipts/FTR-20261103-23471411-01.json	STAC allosteric activation, substrate dependence
+22991226		Raichur 2012, J Mol Endocrinol	abstract_only	receipts/FTR-20261103-22991226-01.json	HDAC5 knockdown lowers GLUT1 in muscle cells
+22483777		Kim 2012, Biochem Pharmacol	abstract_only	receipts/FTR-20261103-22483777-01.json	SIRT1 inhibition raises c-Myc (K562)
+22245592		Hong 2012, Toxicol Appl Pharmacol	abstract_only	receipts/FTR-20261103-22245592-01.json	SIRT1 destabilises c-Myc under hypoxia
+28689659	PMC6571149	Wang 2017, Mol Cell	abstract_only	receipts/FTR-20261103-28689659-01.json	Erk2 phosphorylates Bcl3
+9751072		Uckun 1998, Biochem Pharmacol	abstract_only	receipts/FTR-20261103-9751072-01.json	BTK -> STAT3 edge reference (review)
+21080647		Moffat 2010, J Med Chem	abstract_only	receipts/FTR-20261103-21080647-01.json	CHR-3996 class I selective (title and abstract)
+31710489		Ward 2019, J Med Chem	abstract_only	receipts/FTR-20261103-31710489-01.json	AZD0364 identity and potency statement
+25574479	PMC4284130	Jiang 2014, Ann Clin Transl Neurol	abstract_only	receipts/FTR-20261103-25574479-01.json	SRT2104 penetrated the blood-brain barrier in HD mice
+29207681	PMC5710961	Zhang 2017, Oncotarget (review)	abstract_only	receipts/FTR-20261103-29207681-01.json	KDM4C -> HIF1A edge reference is a review
+42397075		Steinberg 2026, Brain	abstract re-read only; existing complete reading in the ledger (not repeated)	none (no new reading)	seed S100 context
+12907458;15465827;17367410;12590942;18403487;11163183;18048358;23129632;25678599;22616762;23770971;26556603;27239324;31786775;21276135;30290271;21113169;37530631		titles only (PubMed esummary)	TITLE_ONLY: never cited as having been read; used to name an edge's context or a competing prediction	none	see edge_provenance_it21_p4a.tsv

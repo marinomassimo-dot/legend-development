@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-03T08:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "not_present",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-03T08:45:00Z",
+ "event_id": "FTR-20261103-26682036-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Peer-reviewed, open article (Chem Sci 2013). NOT WWOX EVIDENCE: the paper contains no WWOX or neural-cell analysis.",
+  "Read: abstract, introduction, the combined Results and Discussion (enzyme panel, crystal-structure section, cellular activity of IOX1) and conclusions, from the open article text; the two tables, the three figures and the supplementary information were not read; the article has no separate Methods section.",
+  "Four verbatim locators are in locators_it21_p4a.tsv (L1 to L4) and were matched against the saved PMC XML (sha256 in source_fingerprint)."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it21_p4a_20261103/README.md",
+  "disease-models/wwox/research/drug_repurposing/qualification_it21_p4a_20261103/qualification_it21_p4a.tsv",
+  "disease-models/wwox/research/drug_repurposing/qualification_it21_p4a_20261103/edge_provenance_it21_p4a.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "1aa6a161bf9bb82e6562a6a536175e5ba82b3b52995cfd60be30b989fd44ebb5",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMC4678600_PMID26682036_Hopkinson2013_IOX1.xml",
+ "study_id": {
+  "doi": "10.1039/C3SC51122G",
+  "pmid": "26682036"
+ },
+ "workflow": "IT21 P4a question-driven reading (qualification_it21_p4a_20261103): does the compound IOX1 raise or lower HIF in cells, and at what concentration relative to its KDM4 inhibition? Open article text obtained through the PubMed full-text route and PMC efetch XML, flattened to text, quotes located by exact string search. Prepared as a JSON file for the integrator; was not appended by the preparing actor. The saved XML is under the worktree's gitignored files/ tree and is not transported by the branch."
+}

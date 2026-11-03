@@ -1,0 +1,136 @@
+label	pmid	year	journal	title
+P01_nanatinostat	32051267	2020	J Virol	Integrated Assessment of Viral Transcription, Antigen Presentation, and CD8(+) T Cell Function Reveals Multiple Limitations of Class I-Selective Histone Deacetylase Inhibitors during HIV-1 Latency Reversal.
+P01_nanatinostat	37530631	2023	Blood Adv	Targeted therapy with nanatinostat and valganciclovir in recurrent EBV-positive lymphoid malignancies: a phase 1b/2 study.
+P01_nanatinostat	21080647	2010	J Med Chem	Discovery of 2-(6-{[(6-fluoroquinolin-2-yl)methyl]amino}bicyclo[3.1.0]hex-3-yl)-N-hydroxypyrimidine-5-carboxamide (CHR-3996), a class I selective orally active histone deacetylase inhibitor.
+P01_nanatinostat	40488628	2025	Antimicrob Agents Chemother	"A propidium iodide-based in vitro screen of the ""Bug Box"" against Babesia duncani reveals potent inhibitors."
+P01_nanatinostat	41279324	2025	bioRxiv	Single-Cell Profiling of HDAC Inhibitor-Induced EBV Lytic Heterogeneity Defines Abortive and Refractory States in B Lymphoblasts.
+P01_nanatinostat	42707018	2026	Clin Transl Med	4-Hydroxytamoxifen induces a noncanonical ferroptosis in lung adenocarcinoma by targeting AKR1B10.
+P01_nanatinostat	37566338	2023	Curr Hematol Malig Rep	EBV Reactivation and Lymphomagenesis: More Questions than Answers.
+P01_nanatinostat	30993446	2019	Protein J	Epigenetic Modulators as Potential Multi-targeted Drugs Against Hedgehog Pathway for Treatment of Cancer.
+P02_HDAC5_GLUT1	21047791	2011	J Biol Chem	Class II histone deacetylases limit GLUT4 gene expression during adipocyte differentiation.
+P02_HDAC5_GLUT1	16620308	2006	Clin Exp Pharmacol Physiol	Exercise and skeletal muscle glucose transporter 4 expression: molecular mechanisms.
+P02_HDAC5_GLUT1	22991226	2012	J Mol Endocrinol	Histone deacetylase 5 regulates glucose uptake and insulin action in muscle cells.
+P02_HDAC5_GLUT1	25011668	2014	Cell Physiol Biochem	4-Phenylbutyric acid increases GLUT4 gene expression through suppression of HDAC5 but not endoplasmic reticulum stress.
+P02_HDAC5_GLUT1	31068415	2019	J Biol Chem	Effects of histone deacetylase inhibitor Scriptaid and parathyroid hormone on osteocyte functions and metabolism.
+P02_HDAC5_GLUT1	32771698	2020	Mol Metab	Histone deacetylase 5 regulates interleukin 6 secretion and insulin action in skeletal muscle.
+P02_HDAC5_GLUT1	25549240	2014	PLoS One	Enhancement of glucose uptake in mouse skeletal muscle cells and adipocytes by P2Y6 receptor agonists.
+P02_HDAC5_GLUT1	18216015	2008	J Biol Chem	GLUT4 enhancer factor (GEF) interacts with MEF2A and HDAC5 to regulate the GLUT4 promoter in adipocytes.
+P03_WWOX_HDAC	37328865	2023	Alzheimers Res Ther	Shared genetic risk loci between Alzheimer's disease and related dementias, Parkinson's disease, and amyotrophic lateral sclerosis.
+P03_WWOX_HDAC	32290755	2020	Epigenetics	Clinical epigenetics and multidrug-resistant bacterial infections: host remodelling in critical illness.
+P03_WWOX_HDAC	16818616	2006	Cancer Res	A role for the WWOX gene in prostate cancer.
+P03_WWOX_HDAC	21072196	2010	PLoS One	Profiling gene expression induced by protease-activated receptor 2 (PAR2) activation in human kidney cells.
+P03_WWOX_HDAC	25678599	2015	Mol Cancer Res	The Tumor-Suppressor WWOX and HDAC3 Inhibit the Transcriptional Activity of the β-Catenin Coactivator BCL9-2 in Breast Cancer Cells.
+P03_WWOX_HDAC	17019711	2007	Int J Cancer	Epigenetic modulation of endogenous tumor suppressor expression in lung cancer xenografts suppresses tumorigenicity.
+P04_KDM4C_HIF	23129632	2012	Proc Natl Acad Sci U S A	Histone demethylase JMJD2C is a coactivator for hypoxia-inducible factor 1 that is required for breast cancer progression.
+P04_KDM4C_HIF	32972441	2020	J Exp Clin Cancer Res	microRNA-216b enhances cisplatin-induced apoptosis in osteosarcoma MG63 and SaOS-2 cells by binding to JMJD2C and regulating the HIF1α/HES1 signaling axis.
+P04_KDM4C_HIF	36174675	2022	J Biol Chem	Intermittent hypoxia enhances the expression of hypoxia inducible factor HIF1A through histone demethylation.
+P04_KDM4C_HIF	27114850	2016	Aging Dis	Hypoxia-Inducible Histone Lysine Demethylases: Impact on the Aging Process and Age-Related Diseases.
+P04_KDM4C_HIF	32195022	2020	Am J Cancer Res	Histone demethylase KDM4C activates HIF1α/VEGFA signaling through the costimulatory factor STAT3 in NSCLC.
+P04_KDM4C_HIF	25520177	2015	Acta Biochim Biophys Sin (Shanghai)	Regulation of histone demethylase KDM6B by hypoxia-inducible factor-2α.
+P04_KDM4C_HIF	18713068	2008	Biochem J	Regulation of Jumonji-domain-containing histone demethylases by hypoxia-inducible factor (HIF)-1alpha.
+P04_KDM4C_HIF	30640062	2019	Stem Cell Res	Sufficiency of hypoxia-inducible 2-oxoglutarate dioxygenases to block chemical oxidative stress-induced differentiation of human embryonic stem cells.
+P05_IOX1_Hopkinson	26682036	2013	Chem Sci	5-Carboxy-8-hydroxyquinoline is a Broad Spectrum 2-Oxoglutarate Oxygenase Inhibitor which Causes Iron Translocation.
+P05_IOX1_Hopkinson	24325601	2014	J Med Chem	Pan-histone demethylase inhibitors simultaneously targeting Jumonji C and lysine-specific demethylases display high anticancer activities.
+P06_CGI1746	38212578	2024	Nat Chem Biol	CGI1746 targets σ(1)R to modulate ferroptosis through mitochondria-associated membranes.
+P06_CGI1746	21113169	2011	Nat Chem Biol	Specific Btk inhibition suppresses B cell- and myeloid cell-mediated arthritis.
+P06_CGI1746	39759071	2024	iScience	Inhibition of proteolytic and ATPase activities of the proteasome by the BTK inhibitor CGI-1746.
+P06_CGI1746	34910982	2022	Bioorg Chem	Discovery of pyrido[3,4-b]indol-1-one derivatives as novel non-covalent Bruton's tyrosine kinase (BTK) inhibitors.
+P06_CGI1746	25701252	2015	Bioorg Med Chem Lett	Potent and selective Bruton's tyrosine kinase inhibitors: discovery of GDC-0834.
+P06_CGI1746	25589346	2015	Cancer Res	Bruton tyrosine kinase is a therapeutic target in stem-like cells from multiple myeloma.
+P06_CGI1746	38106469	2023	Front Cell Infect Microbiol	Corrigendum: Two small-molecule inhibitors of Toxoplasma gondii proliferation in vitro.
+P06_CGI1746	27256378	2016	Mol Cancer Ther	Bruton's Tyrosine Kinase Inhibitors Prevent Therapeutic Escape in Breast Cancer Cells.
+P07_STAT3_NPY	36172879	2022	J Cell Mol Med	Neuropeptide Y regulates cholesterol uptake and efflux in macrophages and promotes foam cell formation.
+P07_STAT3_NPY	30670491	2019	Clin Cancer Res	Depression Stresses the Immune Response and Promotes Prostate Cancer Growth.
+P07_STAT3_NPY	39710657	2024	BMC Biol	Chronic sleep deprivation disturbs energy balance modulated by suprachiasmatic nucleus efferents in mice.
+P07_STAT3_NPY	42612877	2026	Biochem Pharmacol	Neuropeptide Y regulates myocardial fibrosis via NPY1R/JAK2/STAT3 signaling pathway.
+P07_STAT3_NPY	22374387	2012	Peptides	Neuropeptide Y activates phosphorylation of ERK and STAT3 in stromal vascular cells from brown adipose tissue, but fails to affect thermogenic function of brown adipocytes.
+P07_STAT3_NPY	30504424	2019	Clin Cancer Res	Depression-Induced Neuropeptide Y Secretion Promotes Prostate Cancer Growth by Recruiting Myeloid Cells.
+P07_STAT3_NPY	36545693	2023	Food Funct	Diet containing stearic acid increased food intake in mice by reducing serum leptin compared with oleic acid.
+P07_STAT3_NPY	39017237	2024	Pharmacol Res Perspect	miRNA and leptin signaling in metabolic diseases and at extreme environments.
+P08_BTK_STAT3	39903516	2025	JCI Insight	Molecular control of PDPNhi macrophage subset induction by ADAP as a host defense in sepsis.
+P08_BTK_STAT3	35873012	2022	Iran J Pharm Res	Expression Modulation of Immune Checkpoint Molecules by Ibrutinib and Everolimus Through STAT3 in MCF-7 Breast Cancer Cells.
+P08_BTK_STAT3	29263930	2017	Signal Transduct Target Ther	STAT3 mediates C6-ceramide-induced cell death in chronic lymphocytic leukemia.
+P08_BTK_STAT3	39818374	2025	Int J Biol Macromol	CDK1 inhibitor RO-3306 enhances BTKi potency in diffuse large B-cell lymphoma by suppressing JAK2/STAT3 signaling.
+P08_BTK_STAT3	26255791	2016	J Bone Miner Res	WHI-131 Promotes Osteoblast Differentiation and Prevents Osteoclast Formation and Resorption in Mice.
+P08_BTK_STAT3	30353642	2019	J Cell Mol Med	CUDC-907 blocks multiple pro-survival signals and abrogates microenvironment protection in CLL.
+P08_BTK_STAT3	36735294	2023	Elife	B cell receptor-induced IL-10 production from neonatal mouse CD19(+)CD43(-) cells depends on STAT5-mediated IL-6 secretion.
+P08_BTK_STAT3	34858727	2021	Oncoimmunology	Tumor cell-derived IL-10 promotes cell-autonomous growth and immune escape in diffuse large B-cell lymphoma.
+P09_EZH2_IL6_glia	33574814	2020	Front Immunol	Myeloid Ezh2 Deficiency Limits Atherosclerosis Development.
+P09_EZH2_IL6_glia	39471914	2025	Biochim Biophys Acta Mol Basis Dis	EZH2 contributes to sepsis-induced acute lung injury through regulating macrophage polarization.
+P09_EZH2_IL6_glia	28539837	2017	Int J Biol Sci	Ezh2 Acts as a Tumor Suppressor in Kras-driven Lung Adenocarcinoma.
+P09_EZH2_IL6_glia	31202798	2019	Eur J Pharmacol	EZH2 inhibitor DZNep modulates microglial activation and protects against ischaemic brain injury after experimental stroke.
+P09_EZH2_IL6_glia	31579944	2020	J Pathol	Genetic or pharmacologic blockade of enhancer of zeste homolog 2 inhibits the progression of peritoneal fibrosis.
+P09_EZH2_IL6_glia	30827307	2019	Zhonghua Wei Zhong Bing Ji Jiu Yi Xue	[Effects of histone methyltransferase inhibitor on the polarization of peritoneal macrophages in septic mice].
+P09_EZH2_IL6_glia	30711627	2019	Gastroenterology	Plasma Cell Polarization to the Immunoglobulin G Phenotype in Hepatocellular Carcinomas Involves Epigenetic Alterations and Promotes Hepatoma Progression in Mice.
+P09_EZH2_IL6_glia	39897521	2025	J Inflamm Res	Integrative Bioinformatics Analysis to Identify Key Ferroptosis-Related Genes and Immune Infiltration in Aortic Aneurysm and Dissection: Implication of PTGS2.
+P10_GSK343_brain	37391829	2023	J Neuroinflammation	Neuroprotective effects of GSK-343 in an in vivo model of MPTP-induced nigrostriatal degeneration.
+P10_GSK343_brain	35265199	2022	Theranostics	Heterogeneity of tyrosine-based melanin anabolism regulates pulmonary and cerebral organotropic colonization microenvironment of melanoma cells.
+P10_GSK343_brain	25868794	2015	Int J Cancer	ABCB1 and ABCG2 restrict the brain penetration of a panel of novel EZH2-Inhibitors.
+P10_GSK343_brain	40276524	2025	Anim Cells Syst (Seoul)	Asxl1 loss in mice leads to microcephaly by regulating neural stem cell survival.
+P10_GSK343_brain	31791385	2019	Clin Epigenetics	Dissecting the role of novel EZH2 inhibitors in primary glioblastoma cell cultures: effects on proliferation, epithelial-mesenchymal transition, migration, and on the pro-inflammatory phenotype.
+P10_GSK343_brain	41861524	2026	Biomed Pharmacother	EZH2 inhibition in resistant glioblastoma stem cells counteracts oxidative stress protection and triggers ferroptosis.
+P10_GSK343_brain	41557490	2026	J Neurosci Res	Pharmacological Inhibition of EZH2 by GSK-343 Attenuates Neuroinflammation in a Mouse Model of Spinal Cord Injury.
+P11_tizaterkib	37905140	2023	bioRxiv	ERK1/2 Inhibition Alleviates Noise-Induced Hearing Loss While Tempering Down the Immune Response.
+P11_tizaterkib	34164484	2021	Ann Transl Med	Lipopolysaccharide-induced inflammation in human peritoneal mesothelial cells is controlled by ERK1/2-CDK5-PPARγ axis.
+P11_tizaterkib	38194710	2024	Biomed Mater	Self-assembled coating with a metal-polyphenolic network for intraocular lens modification to prevent posterior capsule opacification.
+P11_tizaterkib	39814427	2025	J Alzheimers Dis	Discovering potential ERK1 inhibitors from natural products for therapeutic targeting of Alzheimer's disease.
+P11_tizaterkib	38379263	2024	Cell Biochem Funct	Caffeic acid phenethyl ester mediates apoptosis in serum-starved HT29 colon cancer cells through modulation of heat shock proteins and MAPK pathways.
+P11_tizaterkib	40928301	2025	J Enzyme Inhib Med Chem	Advances in ERK1/2 inhibition: a medicinal chemistry perspective on structure and regulation.
+P11_tizaterkib	32709140	2020	Antioxidants (Basel)	Targeting the MAPK/ERK and PI3K/AKT Signaling Pathways Affects NRF2, Trx and GSH Antioxidant Systems in Leukemia Cells.
+P11_tizaterkib	31710489	2019	J Med Chem	Discovery of a Potent and Selective Oral Inhibitor of ERK1/2 (AZD0364) That Is Efficacious in Both Monotherapy and Combination Therapy in Models of Nonsmall Cell Lung Cancer (NSCLC).
+P12_Bcl3_TNF	15465827	2004	J Biol Chem	BCL-3 and NF-kappaB p50 attenuate lipopolysaccharide-induced inflammatory responses in macrophages.
+P12_Bcl3_TNF	19333135	2009	Shock	CL097, a TLR7/8 ligand, inhibits TLR-4--dependent activation of IRAK-M and BCL-3 expression.
+P12_Bcl3_TNF	19617629	2009	J Biol Chem	Adiponectin inhibits pro-inflammatory signaling in human macrophages independent of interleukin-10.
+P12_Bcl3_TNF	12907458	2003	Blood	IL-10-inducible Bcl-3 negatively regulates LPS-induced TNF-alpha production in macrophages.
+P12_Bcl3_TNF	41723504	2026	BMC Res Notes	Bcl-3 expression in the imiquimod-induced psoriasis mouse skin.
+P12_Bcl3_TNF	22782967	2012	J Leukoc Biol	Induction of Bcl-3 by acute binge alcohol results in toll-like receptor 4/LPS tolerance.
+P12_Bcl3_TNF	29267498	2017	Braz J Med Biol Res	Ginsenoside Rg1 protects human renal tubular epithelial cells from lipopolysaccharide-induced apoptosis and inflammation damage.
+P12_Bcl3_TNF	15864776	2005	Eur J Immunol	Lipopolysaccharide primes neutrophils for a rapid response to IL-10.
+P13_Bcl3_ERK	33724154	2021	Virulence	Pathogenicity and virulence of Japanese encephalitis virus: Neuroinflammation and neuronal cell damage.
+P13_Bcl3_ERK	33068678	2021	Gene	5-HTP decreases goat mammary epithelial cells apoptosis through MAPK/ERK/Bcl-3 pathway.
+P13_Bcl3_ERK	31997536	2020	J Thromb Haemost	Phospho-inositide-dependent kinase 1 regulates signal dependent translation in megakaryocytes and platelets.
+P13_Bcl3_ERK	21307189	2011	J Virol	Epstein-Barr virus LMP1 activates EGFR, STAT3, and ERK through effects on PKCdelta.
+P13_Bcl3_ERK	28915576	2017	Oncotarget	Hepatic B cell leukemia-3 suppresses chemically-induced hepatocarcinogenesis in mice through altered MAPK and NF-κB activation.
+P13_Bcl3_ERK	19617629	2009	J Biol Chem	Adiponectin inhibits pro-inflammatory signaling in human macrophages independent of interleukin-10.
+P13_Bcl3_ERK	27832756	2016	BMC Microbiol	Lactobacillus acidophilus alleviates the inflammatory response to enterotoxigenic Escherichia coli K88 via inhibition of the NF-κB and p38 mitogen-activated protein kinase signaling pathways in piglets.
+P14_ERK_TNF_Tpl2	12881420	2003	EMBO J	Tpl2 transduces CD40 and TNF signals that activate ERK and regulates IgE induction by CD40.
+P14_ERK_TNF_Tpl2	11163183	2000	Cell	TNF-alpha induction by LPS is regulated posttranscriptionally via a Tpl2/ERK-dependent pathway.
+P14_ERK_TNF_Tpl2	17507094	2007	Mol Immunol	Sensitivity of TLR4- and -7-induced NF kappa B1 p105-TPL2-ERK pathway to TNF-receptor-associated-factor-6 revealed by RNAi in mouse macrophages.
+P14_ERK_TNF_Tpl2	12821717	2003	J Dent Res	Cot/Tpl2 is essential for RANKL induction by lipid A in osteoblasts.
+P14_ERK_TNF_Tpl2	20732300	2010	Biochem Biophys Res Commun	Functional roles of Cot/Tpl2 in mast cell responses to lipopolysaccharide and FcεRI-clustering.
+P14_ERK_TNF_Tpl2	15372110	2004	J Clin Invest	A serine/threonine kinase, Cot/Tpl2, modulates bacterial DNA-induced IL-12 production and Th cell differentiation.
+P14_ERK_TNF_Tpl2	19808894	2010	Diabetes	Tpl2 kinase is upregulated in adipose tissue in obesity and may mediate interleukin-1beta and tumor necrosis factor-{alpha} effects on extracellular signal-regulated kinase activation and lipolysis.
+P14_ERK_TNF_Tpl2	18048358	2008	J Biol Chem	Extracellular signal-regulated kinase regulation of tumor necrosis factor-alpha mRNA nucleocytoplasmic transport requires TAP-NxT1 binding and the AU-rich element.
+P15_WWOX_glia_cytokine	30290271	2019	Neurobiol Dis	Wwox deletion leads to reduced GABA-ergic inhibitory interneuron numbers and activation of microglia and astrocytes in mouse hippocampus.
+P16_WWOX_ERK_brain	34359949	2021	Cells	WWOX and Its Binding Proteins in Neurodegeneration.
+P16_WWOX_ERK_brain	32764489	2020	Cancers (Basel)	Therapeutic Zfra4-10 or WWOX7-21 Peptide Induces Complex Formation of WWOX with Selective Protein Targets in Organs that Leads to Cancer Suppression and Spleen Cytotoxic Memory Z Cell Activation In Vivo.
+P16_WWOX_ERK_brain	29310447	2018	Exp Biol Med (Maywood)	Phosphorylation/de-phosphorylation in specific sites of tumor suppressor WWOX and control of distinct biological events.
+P16_WWOX_ERK_brain	15126504	2004	J Biol Chem	Down-regulation of WW domain-containing oxidoreductase induces Tau phosphorylation in vitro. A potential role in Alzheimer's disease.
+P17_SRT2104_brain	31618623	2020	Behav Brain Res	SRT2104 attenuates chronic unpredictable mild stress-induced depressive-like behaviors and imbalance between microglial M1 and M2 phenotypes in the mice.
+P17_SRT2104_brain	37099021	2023	Invest Ophthalmol Vis Sci	Neuroprotection of SRT2104 in Murine Ischemia/Reperfusion Injury Through the Enhancement of Sirt1-Mediated Deacetylation.
+P17_SRT2104_brain	33412146	2021	Brain Res	Sirt1 activator SRT2104 protects against oxygen-glucose deprivation/reoxygenation-induced injury via regulating microglia polarization by modulating Sirt1/NF-κB pathway.
+P17_SRT2104_brain	34265417	2021	Neurosci Lett	Ameliorative effect of SIRT1 in postpartum depression mediated by upregulation of the glucocorticoid receptor.
+P17_SRT2104_brain	39423873	2024	Ageing Res Rev	The role of sirtuin 1 in ageing and neurodegenerative disease: A molecular perspective.
+P17_SRT2104_brain	41593189	2026	Sci Rep	SIRT1 activation by SRT2104 enhances mitophagy and reduces senescence in auditory cells.
+P17_SRT2104_brain	37820952	2023	Brain Res Bull	Arc regulates brain damage and neuroinflammation via Sirt1 signaling following subarachnoid hemorrhage.
+P17_SRT2104_brain	25574479	2014	Ann Clin Transl Neurol	Sirtuin 1 activator SRT2104 protects Huntington's disease mice.
+P18_SRT2104_clinical	40195304	2025	Cell Death Dis	The SIRT1 activator SRT2104 exerts exercise mimetic effects and promotes Duchenne muscular dystrophy recovery.
+P18_SRT2104_clinical	38448466	2024	Sci Rep	Emerging roles of SIRT1 activator, SRT2104, in disease treatment.
+P18_SRT2104_clinical	35985370	2022	Mech Ageing Dev	The SIRT1 activator SRT2104 promotes BMP9-induced osteogenic and angiogenic differentiation in mesenchymal stem cells.
+P18_SRT2104_clinical	40999873	2025	Adv Sci (Weinh)	The Sirt1-Piezo1 Axis Promotes Bone Formation and Repair in Mice.
+P18_SRT2104_clinical	22616762	2013	Br J Clin Pharmacol	Pharmacokinetics and tolerability of SRT2104, a first-in-class small molecule activator of SIRT1, after single and repeated oral administration in man.
+P18_SRT2104_clinical	39658647	2025	Oncogene	Delactylase effects of SIRT1 on a positive feedback loop involving the H19-glycolysis-histone lactylation in gastric cancer.
+P18_SRT2104_clinical	25978169	2015	Crit Care Med	The Selective Sirtuin 1 Activator SRT2104 Reduces Endotoxin-Induced Cytokine Release and Coagulation Activation in Humans.
+P18_SRT2104_clinical	29371235	2018	J Endocrinol	SRT2104 attenuates diabetes-induced aortic endothelial dysfunction via inhibition of P53.
+P19_SIRT1_activators_direct	20061378	2010	J Biol Chem	SRT1720, SRT2183, SRT1460, and resveratrol are not direct activators of SIRT1.
+P20_SIRT1_MYC	35195252	2022	Biochem J	FoxO transcription factors in mitochondrial homeostasis.
+P20_SIRT1_MYC	37554307	2023	Front Cell Dev Biol	The SIRT1-c-Myc axis in regulation of stem cells.
+P20_SIRT1_MYC	38673833	2024	Int J Mol Sci	Apoptotic Effect of Isoimpertorin via Inhibition of c-Myc and SIRT1 Signaling Axis.
+P20_SIRT1_MYC	19364925	2009	J Cell Biol	A c-Myc-SIRT1 feedback loop regulates cell growth and transformation.
+P20_SIRT1_MYC	26655722	2016	J Biol Chem	SIRT1 Limits Adipocyte Hyperplasia through c-Myc Inhibition.
+P20_SIRT1_MYC	34042046	2021	Elife	SIRT1 regulates sphingolipid metabolism and neural differentiation of mouse embryonic stem cells through c-Myc-SMPDL3B.
+P20_SIRT1_MYC	40935852	2025	Exp Mol Med	Targeting TGF-β-Smad2/3-JNK1-mediated SIRT1 activity overcomes the chemoresistance of KRAS mutation lung cancer.
+P20_SIRT1_MYC	28162896	2017	Curr Biol	Haploinsufficiency of SIRT1 Enhances Glutamine Metabolism and Promotes Cancer Development.
+P21_WWOX_SIRT1	25925209	2015	Gene	Differential expressions of cancer-associated genes and their regulatory miRNAs in colorectal carcinoma.
+P22_WWOX_MYC_neural	42397075	2026	Brain	Disrupted WWOX-MYC interplay impairs neurogenesis in human brain organoids.
+P23_WWOX_EZH2	21276135	2011	Cancer Sci	Bmi1 regulates cell fate via tumor suppressor WWOX repression in small-cell lung cancer cells.

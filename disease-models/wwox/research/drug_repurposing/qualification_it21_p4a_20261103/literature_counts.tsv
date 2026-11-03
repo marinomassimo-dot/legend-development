@@ -1,0 +1,28 @@
+label	query	http_status	hit_count	first_hits(pmid:year)
+L01_nanatinostat_HDAC_selectivity	"(nanatinostat OR ""CHR-3996"" OR ""VRx-3996"") AND (HDAC OR ""histone deacetylase"")"	503		
+L02_HDAC5_SLC2A1	"(HDAC5) AND (GLUT1 OR SLC2A1 OR ""glucose transporter 1"")"	503		
+L03_nanatinostat_CNS	"(nanatinostat OR ""CHR-3996"" OR ""VRx-3996"") AND (brain OR CNS OR neuron OR ""blood-brain"")"	503		
+L04_IOX1_PHD_HIF	"(IOX1 OR ""5-carboxy-8-hydroxyquinoline"") AND (HIF OR ""prolyl hydroxylase"" OR PHD2 OR EGLN OR ""2-oxoglutarate"")"	503		
+L05_IOX1_cell	"(IOX1 OR ""5-carboxy-8-hydroxyquinoline"") AND (cell OR permeab OR ""ester"")"	503		
+L06_KDM4C_HIF1A	"(KDM4C OR JMJD2C) AND (HIF1A OR HIF-1alpha OR ""HIF-1"")"	503		
+L07_WWOX_KDM4	"WWOX AND (KDM4 OR JMJD2 OR ""histone demethylase"")"	503		
+L08_CGI1746_BTK	"(CGI1746 OR CGI-1746) AND (BTK OR ""Bruton"")"	503		
+L09_BTK_STAT3	"(BTK OR ""Bruton"") AND STAT3 AND (phosphorylation OR ""tyrosine kinase"")"	503		
+L10_STAT3_NPY	"STAT3 AND (NPY OR ""neuropeptide Y"") AND (promoter OR transcription OR regulat)"	503		
+L11_BTK_neuron_brain	"(BTK OR ""Bruton"") AND (neuron OR microglia OR brain) AND (expression OR inhibitor)"	503		
+L12_GSK343_selectivity	GSK343 AND (EZH2 OR EZH1 OR selectiv)	503		
+L13_EZH2_IL6	"EZH2 AND (IL6 OR ""interleukin-6"") AND (inhibit OR knockdown OR repress)"	503		
+L14_EZH2_inhibitor_brain_development	(EZH2 OR PRC2) AND (inhibitor OR deletion OR knockout) AND (cortex OR neural progenitor OR neurogenesis)	503		
+L15_GSK343_microglia	GSK343 AND (microglia OR astrocyte OR neuroinflammation OR LPS)	503		
+L16_tizaterkib	"(tizaterkib OR AZD0364 OR ""AZ13767370"")"	503		
+L17_ERK_inhibitor_TNF	"(ERK OR MAPK1 OR ""MAPK3"") AND (inhibitor) AND (TNF OR ""tumor necrosis factor"") AND (macrophage OR microglia)"	503		
+L18_BCL3_TNF	"BCL3 AND (TNF OR ""tumor necrosis factor"") AND (repress OR inhibit OR suppress)"	503		
+L19_ERK_WWOX	"WWOX AND (ERK OR MAPK OR ""MAPK1"" OR ""p-ERK"")"	503		
+L20_SRT2104_SIRT1_activation	(SRT2104 OR SRT-2104) AND (SIRT1 OR sirtuin)	503		
+L21_SIRT1_activators_artefact	"(resveratrol OR SRT1720 OR SRT2104 OR SRT1460) AND SIRT1 AND (fluorophore OR artifact OR artefact OR ""direct activat"" OR ""not direct"")"	503		
+L22_SIRT1_MYC	"SIRT1 AND (MYC OR ""c-Myc"") AND (deacetyl OR stability OR degradation OR ""protein"")"	503		
+L23_SRT2104_brain	"(SRT2104 OR SRT-2104) AND (brain OR CNS OR Huntington OR ""blood-brain"" OR neuro)"	503		
+L24_WWOX_SIRT1	WWOX AND (SIRT1 OR sirtuin)	503		
+L25_WWOX_HDAC	"WWOX AND (HDAC OR ""histone deacetylase"")"	503		
+L26_WWOX_EZH2	WWOX AND (EZH2 OR PRC2 OR polycomb)	503		
+L27_WWOX_BTK	"WWOX AND (BTK OR ""Bruton"")"	503		

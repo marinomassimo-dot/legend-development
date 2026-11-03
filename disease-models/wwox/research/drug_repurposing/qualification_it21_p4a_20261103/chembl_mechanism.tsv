@@ -1,0 +1,2 @@
+proposal	name	target_chembl_id	mechanism_of_action	action_type	direct_interaction	molecular_mechanism	refs
+IT21P2-0512	SRT-2104	CHEMBL4506	NAD-dependent deacetylase sirtuin 1 activator	ACTIVATOR	1	1	"[""23770971"", ""26556603"", ""27239324""]"

@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-03T08:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-03T08:45:00Z",
+ "event_id": "FTR-20261103-22190494-01",
+ "evidence_basis": [
+  "abstract analysed in full (Menssen 2012 PNAS); used for one qualification fact: sign of SIRT1 on c-MYC (SIRT1 stabilises and promotes c-MYC): counter-evidence to the SIRT1 -> MYC (-) edge",
+  "no experimental detail absent from the abstract is used; every statement carried into the tables is marked abstract-level",
+  "coverage uses `unavailable` for the sections not obtained: full text was not acquired in this package"
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it21_p4a_20261103/README.md",
+  "disease-models/wwox/research/drug_repurposing/qualification_it21_p4a_20261103/qualification_it21_p4a.tsv",
+  "disease-models/wwox/research/drug_repurposing/qualification_it21_p4a_20261103/edge_provenance_it21_p4a.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 22190494 (abstract and metadata as served 2026-11-03)",
+ "study_id": {
+  "doi": "10.1073/pnas.1105304109",
+  "pmid": "22190494"
+ },
+ "workflow": "IT21 P4a qualification (qualification_it21_p4a_20261103). Abstract analysed through the PubMed route for one fact of an edge or a compound record; no full text was retrieved and none was required for the labelled fact. Prepared as a JSON file for the integrator; was not appended by the preparing actor."
+}
