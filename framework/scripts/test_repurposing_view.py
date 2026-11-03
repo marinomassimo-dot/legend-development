@@ -907,8 +907,10 @@ class ShareableAudit(unittest.TestCase):
         files, man = self.pk.build_files(DR, recompute_text=False)
         rows = [json.loads(x) for x in files[self.pk.CHEMBL_FILE].decode().splitlines()]
         links = json.loads((DR / "catalog/card_links.json").read_text())["cards"]
-        ids = sorted({x["chembl_id"] for v in links.values() for x in v.get("links", []) if x.get("chembl_id")})
-        self.assertEqual([r["chembl_id"] for r in rows], ids)
+        card_ids = {x["chembl_id"] for v in links.values() for x in v.get("links", []) if x.get("chembl_id")}
+        inv_ids = self.pk.investigation_chembl_ids(DR)   # IT21 P7: the records the first screen points to by identifier
+        self.assertTrue(inv_ids)
+        self.assertEqual([r["chembl_id"] for r in rows], sorted(card_ids | inv_ids))
         for r in rows:
             self.assertEqual(r["licence"], "CC BY-SA 3.0 Unported")
             self.assertEqual(r["chembl_release"], "ChEMBL_37 2026-05-01")
