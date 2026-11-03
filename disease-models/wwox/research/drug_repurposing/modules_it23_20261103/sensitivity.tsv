@@ -1,0 +1,193 @@
+seed_set	network	method	n_seeds_in_network	perturbation	n_runs	mean_jaccard	min_jaccard	metric	value	extra
+Q2_rows	LEGEND_signed_as_unsigned	first_neighbours	7	baseline	1			hub_fraction_top5pct_degree	0.600	mean_degree_percentile=0.836; list_len=50
+Q2_rows	LEGEND_signed_as_unsigned	first_neighbours	7	leave_one_seed_out	7	0.814	0.732	held_out_seed_in_top_list	0.286	
+Q2_rows	LEGEND_signed_as_unsigned	first_neighbours	7	random_10pct_edges_removed	20	0.856	0.786			
+Q2_rows	LEGEND_signed_as_unsigned	first_neighbours	7	top20_degree_nodes_removed	1	0.702		removed_nodes_in_baseline_list	10	removed: SP1;RELA;NFKB1;MYC;JUN;...
+Q2_rows	LEGEND_signed_as_unsigned	rwr	7	baseline	1			hub_fraction_top5pct_degree	0.740	mean_degree_percentile=0.896; list_len=50
+Q2_rows	LEGEND_signed_as_unsigned	rwr	7	leave_one_seed_out	7	0.835	0.707	held_out_seed_in_top_list	0.286	
+Q2_rows	LEGEND_signed_as_unsigned	rwr	7	random_10pct_edges_removed	20	0.862	0.754			
+Q2_rows	LEGEND_signed_as_unsigned	rwr	7	top20_degree_nodes_removed	1	0.639		removed_nodes_in_baseline_list	11	removed: SP1;RELA;NFKB1;MYC;JUN;...
+Q2_rows	LEGEND_signed_as_unsigned	rwr_hubcorr	7	baseline	1			hub_fraction_top5pct_degree	0.100	mean_degree_percentile=0.501; list_len=50
+Q2_rows	LEGEND_signed_as_unsigned	rwr_hubcorr	7	leave_one_seed_out	7	0.815	0.613	held_out_seed_in_top_list	0.286	
+Q2_rows	LEGEND_signed_as_unsigned	rwr_hubcorr	7	random_10pct_edges_removed	20	0.807	0.538			
+Q2_rows	LEGEND_signed_as_unsigned	rwr_hubcorr	7	top20_degree_nodes_removed	1	0.887		removed_nodes_in_baseline_list	0	removed: SP1;RELA;NFKB1;MYC;JUN;...
+Q2_rows	LEGEND_signed_as_unsigned	diamond	7	baseline	1			hub_fraction_top5pct_degree	0.140	mean_degree_percentile=0.651; list_len=50
+Q2_rows	LEGEND_signed_as_unsigned	diamond	7	leave_one_seed_out	7	0.983	0.980	held_out_seed_in_top_list	0.857	
+Q2_rows	LEGEND_signed_as_unsigned	diamond	7	random_10pct_edges_removed	20	0.406	0.087			
+Q2_rows	LEGEND_signed_as_unsigned	diamond	7	top20_degree_nodes_removed	1	0.124		removed_nodes_in_baseline_list	5	removed: SP1;RELA;NFKB1;MYC;JUN;...
+Q2_rows	STRING_v12_min900	first_neighbours	6	baseline	1			hub_fraction_top5pct_degree	0.000	mean_degree_percentile=0.682; list_len=50
+Q2_rows	STRING_v12_min900	first_neighbours	6	leave_one_seed_out	6	0.755	0.351	held_out_seed_in_top_list	0.333	
+Q2_rows	STRING_v12_min900	first_neighbours	6	random_10pct_edges_removed	20	0.797	0.667			
+Q2_rows	STRING_v12_min900	first_neighbours	6	top20_degree_nodes_removed	1	1.000		removed_nodes_in_baseline_list	0	removed: RPS27A;UBA52;FAU;TP53;RPS11;...
+Q2_rows	STRING_v12_min900	rwr	6	baseline	1			hub_fraction_top5pct_degree	0.100	mean_degree_percentile=0.801; list_len=50
+Q2_rows	STRING_v12_min900	rwr	6	leave_one_seed_out	6	0.763	0.562	held_out_seed_in_top_list	0.333	
+Q2_rows	STRING_v12_min900	rwr	6	random_10pct_edges_removed	20	0.846	0.695			
+Q2_rows	STRING_v12_min900	rwr	6	top20_degree_nodes_removed	1	0.961		removed_nodes_in_baseline_list	1	removed: RPS27A;UBA52;FAU;TP53;RPS11;...
+Q2_rows	STRING_v12_min900	rwr_hubcorr	6	baseline	1			hub_fraction_top5pct_degree	0.000	mean_degree_percentile=0.572; list_len=50
+Q2_rows	STRING_v12_min900	rwr_hubcorr	6	leave_one_seed_out	6	0.754	0.639	held_out_seed_in_top_list	0.333	
+Q2_rows	STRING_v12_min900	rwr_hubcorr	6	random_10pct_edges_removed	20	0.802	0.587			
+Q2_rows	STRING_v12_min900	rwr_hubcorr	6	top20_degree_nodes_removed	1	0.923		removed_nodes_in_baseline_list	0	removed: RPS27A;UBA52;FAU;TP53;RPS11;...
+Q2_rows	STRING_v12_min900	diamond	6	baseline	1			hub_fraction_top5pct_degree	0.040	mean_degree_percentile=0.754; list_len=50
+Q2_rows	STRING_v12_min900	diamond	6	leave_one_seed_out	6	0.826	0.149	held_out_seed_in_top_list	0.333	
+Q2_rows	STRING_v12_min900	diamond	6	random_10pct_edges_removed	20	0.607	0.053			
+Q2_rows	STRING_v12_min900	diamond	6	top20_degree_nodes_removed	1	1.000		removed_nodes_in_baseline_list	0	removed: RPS27A;UBA52;FAU;TP53;RPS11;...
+Q2_withprocess	LEGEND_signed_as_unsigned	first_neighbours	12	baseline	1			hub_fraction_top5pct_degree	0.340	mean_degree_percentile=0.742; list_len=50
+Q2_withprocess	LEGEND_signed_as_unsigned	first_neighbours	12	leave_one_seed_out	12	0.880	0.754	held_out_seed_in_top_list	0.333	
+Q2_withprocess	LEGEND_signed_as_unsigned	first_neighbours	12	random_10pct_edges_removed	20	0.839	0.695			
+Q2_withprocess	LEGEND_signed_as_unsigned	first_neighbours	12	top20_degree_nodes_removed	1	0.667		removed_nodes_in_baseline_list	10	removed: SP1;RELA;NFKB1;MYC;JUN;...
+Q2_withprocess	LEGEND_signed_as_unsigned	rwr	12	baseline	1			hub_fraction_top5pct_degree	0.660	mean_degree_percentile=0.913; list_len=50
+Q2_withprocess	LEGEND_signed_as_unsigned	rwr	12	leave_one_seed_out	12	0.876	0.786	held_out_seed_in_top_list	0.083	
+Q2_withprocess	LEGEND_signed_as_unsigned	rwr	12	random_10pct_edges_removed	20	0.825	0.695			
+Q2_withprocess	LEGEND_signed_as_unsigned	rwr	12	top20_degree_nodes_removed	1	0.639		removed_nodes_in_baseline_list	11	removed: SP1;RELA;NFKB1;MYC;JUN;...
+Q2_withprocess	LEGEND_signed_as_unsigned	rwr_hubcorr	12	baseline	1			hub_fraction_top5pct_degree	0.020	mean_degree_percentile=0.589; list_len=50
+Q2_withprocess	LEGEND_signed_as_unsigned	rwr_hubcorr	12	leave_one_seed_out	12	0.873	0.768	held_out_seed_in_top_list	0.333	
+Q2_withprocess	LEGEND_signed_as_unsigned	rwr_hubcorr	12	random_10pct_edges_removed	20	0.844	0.695			
+Q2_withprocess	LEGEND_signed_as_unsigned	rwr_hubcorr	12	top20_degree_nodes_removed	1	0.923		removed_nodes_in_baseline_list	0	removed: SP1;RELA;NFKB1;MYC;JUN;...
+Q2_withprocess	LEGEND_signed_as_unsigned	diamond	12	baseline	1			hub_fraction_top5pct_degree	0.160	mean_degree_percentile=0.663; list_len=50
+Q2_withprocess	LEGEND_signed_as_unsigned	diamond	12	leave_one_seed_out	12	0.557	0.053	held_out_seed_in_top_list	0.417	
+Q2_withprocess	LEGEND_signed_as_unsigned	diamond	12	random_10pct_edges_removed	20	0.298	0.064			
+Q2_withprocess	LEGEND_signed_as_unsigned	diamond	12	top20_degree_nodes_removed	1	0.163		removed_nodes_in_baseline_list	5	removed: SP1;RELA;NFKB1;MYC;JUN;...
+Q2_withprocess	STRING_v12_min900	first_neighbours	11	baseline	1			hub_fraction_top5pct_degree	0.020	mean_degree_percentile=0.780; list_len=50
+Q2_withprocess	STRING_v12_min900	first_neighbours	11	leave_one_seed_out	11	0.867	0.707	held_out_seed_in_top_list	0.727	
+Q2_withprocess	STRING_v12_min900	first_neighbours	11	random_10pct_edges_removed	20	0.841	0.724			
+Q2_withprocess	STRING_v12_min900	first_neighbours	11	top20_degree_nodes_removed	1	1.000		removed_nodes_in_baseline_list	0	removed: RPS27A;UBA52;FAU;TP53;RPS11;...
+Q2_withprocess	STRING_v12_min900	rwr	11	baseline	1			hub_fraction_top5pct_degree	0.040	mean_degree_percentile=0.779; list_len=50
+Q2_withprocess	STRING_v12_min900	rwr	11	leave_one_seed_out	11	0.883	0.800	held_out_seed_in_top_list	0.818	
+Q2_withprocess	STRING_v12_min900	rwr	11	random_10pct_edges_removed	20	0.869	0.786			
+Q2_withprocess	STRING_v12_min900	rwr	11	top20_degree_nodes_removed	1	0.961		removed_nodes_in_baseline_list	1	removed: RPS27A;UBA52;FAU;TP53;RPS11;...
+Q2_withprocess	STRING_v12_min900	rwr_hubcorr	11	baseline	1			hub_fraction_top5pct_degree	0.000	mean_degree_percentile=0.654; list_len=50
+Q2_withprocess	STRING_v12_min900	rwr_hubcorr	11	leave_one_seed_out	11	0.828	0.724	held_out_seed_in_top_list	0.545	
+Q2_withprocess	STRING_v12_min900	rwr_hubcorr	11	random_10pct_edges_removed	20	0.829	0.754			
+Q2_withprocess	STRING_v12_min900	rwr_hubcorr	11	top20_degree_nodes_removed	1	1.000		removed_nodes_in_baseline_list	0	removed: RPS27A;UBA52;FAU;TP53;RPS11;...
+Q2_withprocess	STRING_v12_min900	diamond	11	baseline	1			hub_fraction_top5pct_degree	0.020	mean_degree_percentile=0.798; list_len=50
+Q2_withprocess	STRING_v12_min900	diamond	11	leave_one_seed_out	11	0.980	0.941	held_out_seed_in_top_list	0.636	
+Q2_withprocess	STRING_v12_min900	diamond	11	random_10pct_edges_removed	20	0.802	0.667			
+Q2_withprocess	STRING_v12_min900	diamond	11	top20_degree_nodes_removed	1	1.000		removed_nodes_in_baseline_list	0	removed: RPS27A;UBA52;FAU;TP53;RPS11;...
+Q3_rows	LEGEND_signed_as_unsigned	first_neighbours	5	baseline	1			hub_fraction_top5pct_degree	0.375	mean_degree_percentile=0.782; list_len=48
+Q3_rows	LEGEND_signed_as_unsigned	first_neighbours	5	leave_one_seed_out	5	0.817	0.396	held_out_seed_in_top_list	0.000	
+Q3_rows	LEGEND_signed_as_unsigned	first_neighbours	5	random_10pct_edges_removed	20	0.889	0.812			
+Q3_rows	LEGEND_signed_as_unsigned	first_neighbours	5	top20_degree_nodes_removed	1	0.917		removed_nodes_in_baseline_list	4	removed: SP1;RELA;NFKB1;MYC;JUN;...
+Q3_rows	LEGEND_signed_as_unsigned	rwr	5	baseline	1			hub_fraction_top5pct_degree	0.380	mean_degree_percentile=0.802; list_len=50
+Q3_rows	LEGEND_signed_as_unsigned	rwr	5	leave_one_seed_out	5	0.728	0.299	held_out_seed_in_top_list	0.000	
+Q3_rows	LEGEND_signed_as_unsigned	rwr	5	random_10pct_edges_removed	20	0.800	0.613			
+Q3_rows	LEGEND_signed_as_unsigned	rwr	5	top20_degree_nodes_removed	1	0.818		removed_nodes_in_baseline_list	5	removed: SP1;RELA;NFKB1;MYC;JUN;...
+Q3_rows	LEGEND_signed_as_unsigned	rwr_hubcorr	5	baseline	1			hub_fraction_top5pct_degree	0.080	mean_degree_percentile=0.509; list_len=50
+Q3_rows	LEGEND_signed_as_unsigned	rwr_hubcorr	5	leave_one_seed_out	5	0.686	0.449	held_out_seed_in_top_list	0.000	
+Q3_rows	LEGEND_signed_as_unsigned	rwr_hubcorr	5	random_10pct_edges_removed	20	0.810	0.515			
+Q3_rows	LEGEND_signed_as_unsigned	rwr_hubcorr	5	top20_degree_nodes_removed	1	0.887		removed_nodes_in_baseline_list	1	removed: SP1;RELA;NFKB1;MYC;JUN;...
+Q3_rows	LEGEND_signed_as_unsigned	diamond	5	baseline	1			hub_fraction_top5pct_degree	0.660	mean_degree_percentile=0.886; list_len=50
+Q3_rows	LEGEND_signed_as_unsigned	diamond	5	leave_one_seed_out	5	0.348	0.020	held_out_seed_in_top_list	0.000	
+Q3_rows	LEGEND_signed_as_unsigned	diamond	5	random_10pct_edges_removed	20	0.225	0.031			
+Q3_rows	LEGEND_signed_as_unsigned	diamond	5	top20_degree_nodes_removed	1	0.370		removed_nodes_in_baseline_list	0	removed: SP1;RELA;NFKB1;MYC;JUN;...
+Q3_rows	STRING_v12_min900	first_neighbours	5	baseline	1			hub_fraction_top5pct_degree	0.080	mean_degree_percentile=0.758; list_len=50
+Q3_rows	STRING_v12_min900	first_neighbours	5	leave_one_seed_out	5	0.787	0.588	held_out_seed_in_top_list	0.400	
+Q3_rows	STRING_v12_min900	first_neighbours	5	random_10pct_edges_removed	20	0.874	0.804			
+Q3_rows	STRING_v12_min900	first_neighbours	5	top20_degree_nodes_removed	1	1.000		removed_nodes_in_baseline_list	0	removed: RPS27A;UBA52;FAU;TP53;RPS11;...
+Q3_rows	STRING_v12_min900	rwr	5	baseline	1			hub_fraction_top5pct_degree	0.100	mean_degree_percentile=0.768; list_len=50
+Q3_rows	STRING_v12_min900	rwr	5	leave_one_seed_out	5	0.698	0.478	held_out_seed_in_top_list	0.400	
+Q3_rows	STRING_v12_min900	rwr	5	random_10pct_edges_removed	20	0.862	0.786			
+Q3_rows	STRING_v12_min900	rwr	5	top20_degree_nodes_removed	1	1.000		removed_nodes_in_baseline_list	0	removed: RPS27A;UBA52;FAU;TP53;RPS11;...
+Q3_rows	STRING_v12_min900	rwr_hubcorr	5	baseline	1			hub_fraction_top5pct_degree	0.000	mean_degree_percentile=0.618; list_len=50
+Q3_rows	STRING_v12_min900	rwr_hubcorr	5	leave_one_seed_out	5	0.682	0.523	held_out_seed_in_top_list	0.400	
+Q3_rows	STRING_v12_min900	rwr_hubcorr	5	random_10pct_edges_removed	20	0.783	0.613			
+Q3_rows	STRING_v12_min900	rwr_hubcorr	5	top20_degree_nodes_removed	1	1.000		removed_nodes_in_baseline_list	0	removed: RPS27A;UBA52;FAU;TP53;RPS11;...
+Q3_rows	STRING_v12_min900	diamond	5	baseline	1			hub_fraction_top5pct_degree	0.040	mean_degree_percentile=0.710; list_len=50
+Q3_rows	STRING_v12_min900	diamond	5	leave_one_seed_out	5	0.800	0.000	held_out_seed_in_top_list	0.000	
+Q3_rows	STRING_v12_min900	diamond	5	random_10pct_edges_removed	20	0.818	0.020			
+Q3_rows	STRING_v12_min900	diamond	5	top20_degree_nodes_removed	1	1.000		removed_nodes_in_baseline_list	0	removed: RPS27A;UBA52;FAU;TP53;RPS11;...
+Q3_withprocess	LEGEND_signed_as_unsigned	first_neighbours	11	baseline	1			hub_fraction_top5pct_degree	0.560	mean_degree_percentile=0.771; list_len=50
+Q3_withprocess	LEGEND_signed_as_unsigned	first_neighbours	11	leave_one_seed_out	11	0.851	0.500	held_out_seed_in_top_list	0.091	
+Q3_withprocess	LEGEND_signed_as_unsigned	first_neighbours	11	random_10pct_edges_removed	20	0.836	0.639			
+Q3_withprocess	LEGEND_signed_as_unsigned	first_neighbours	11	top20_degree_nodes_removed	1	0.639		removed_nodes_in_baseline_list	11	removed: SP1;RELA;NFKB1;MYC;JUN;...
+Q3_withprocess	LEGEND_signed_as_unsigned	rwr	11	baseline	1			hub_fraction_top5pct_degree	0.700	mean_degree_percentile=0.924; list_len=50
+Q3_withprocess	LEGEND_signed_as_unsigned	rwr	11	leave_one_seed_out	11	0.879	0.667	held_out_seed_in_top_list	0.000	
+Q3_withprocess	LEGEND_signed_as_unsigned	rwr	11	random_10pct_edges_removed	20	0.851	0.724			
+Q3_withprocess	LEGEND_signed_as_unsigned	rwr	11	top20_degree_nodes_removed	1	0.587		removed_nodes_in_baseline_list	13	removed: SP1;RELA;NFKB1;MYC;JUN;...
+Q3_withprocess	LEGEND_signed_as_unsigned	rwr_hubcorr	11	baseline	1			hub_fraction_top5pct_degree	0.020	mean_degree_percentile=0.507; list_len=50
+Q3_withprocess	LEGEND_signed_as_unsigned	rwr_hubcorr	11	leave_one_seed_out	11	0.841	0.515	held_out_seed_in_top_list	0.000	
+Q3_withprocess	LEGEND_signed_as_unsigned	rwr_hubcorr	11	random_10pct_edges_removed	20	0.775	0.613			
+Q3_withprocess	LEGEND_signed_as_unsigned	rwr_hubcorr	11	top20_degree_nodes_removed	1	0.786		removed_nodes_in_baseline_list	0	removed: SP1;RELA;NFKB1;MYC;JUN;...
+Q3_withprocess	LEGEND_signed_as_unsigned	diamond	11	baseline	1			hub_fraction_top5pct_degree	0.780	mean_degree_percentile=0.934; list_len=50
+Q3_withprocess	LEGEND_signed_as_unsigned	diamond	11	leave_one_seed_out	11	0.519	0.190	held_out_seed_in_top_list	0.182	
+Q3_withprocess	LEGEND_signed_as_unsigned	diamond	11	random_10pct_edges_removed	20	0.329	0.124			
+Q3_withprocess	LEGEND_signed_as_unsigned	diamond	11	top20_degree_nodes_removed	1	0.429		removed_nodes_in_baseline_list	3	removed: SP1;RELA;NFKB1;MYC;JUN;...
+Q3_withprocess	STRING_v12_min900	first_neighbours	12	baseline	1			hub_fraction_top5pct_degree	0.000	mean_degree_percentile=0.657; list_len=50
+Q3_withprocess	STRING_v12_min900	first_neighbours	12	leave_one_seed_out	12	0.870	0.707	held_out_seed_in_top_list	0.583	
+Q3_withprocess	STRING_v12_min900	first_neighbours	12	random_10pct_edges_removed	20	0.782	0.695			
+Q3_withprocess	STRING_v12_min900	first_neighbours	12	top20_degree_nodes_removed	1	1.000		removed_nodes_in_baseline_list	0	removed: RPS27A;UBA52;FAU;TP53;RPS11;...
+Q3_withprocess	STRING_v12_min900	rwr	12	baseline	1			hub_fraction_top5pct_degree	0.160	mean_degree_percentile=0.802; list_len=50
+Q3_withprocess	STRING_v12_min900	rwr	12	leave_one_seed_out	12	0.861	0.613	held_out_seed_in_top_list	0.583	
+Q3_withprocess	STRING_v12_min900	rwr	12	random_10pct_edges_removed	20	0.755	0.639			
+Q3_withprocess	STRING_v12_min900	rwr	12	top20_degree_nodes_removed	1	0.887		removed_nodes_in_baseline_list	1	removed: RPS27A;UBA52;FAU;TP53;RPS11;...
+Q3_withprocess	STRING_v12_min900	rwr_hubcorr	12	baseline	1			hub_fraction_top5pct_degree	0.000	mean_degree_percentile=0.565; list_len=50
+Q3_withprocess	STRING_v12_min900	rwr_hubcorr	12	leave_one_seed_out	12	0.859	0.724	held_out_seed_in_top_list	0.583	
+Q3_withprocess	STRING_v12_min900	rwr_hubcorr	12	random_10pct_edges_removed	20	0.798	0.613			
+Q3_withprocess	STRING_v12_min900	rwr_hubcorr	12	top20_degree_nodes_removed	1	0.961		removed_nodes_in_baseline_list	0	removed: RPS27A;UBA52;FAU;TP53;RPS11;...
+Q3_withprocess	STRING_v12_min900	diamond	12	baseline	1			hub_fraction_top5pct_degree	0.020	mean_degree_percentile=0.689; list_len=50
+Q3_withprocess	STRING_v12_min900	diamond	12	leave_one_seed_out	12	0.910	0.000	held_out_seed_in_top_list	0.167	
+Q3_withprocess	STRING_v12_min900	diamond	12	random_10pct_edges_removed	20	0.484	0.000			
+Q3_withprocess	STRING_v12_min900	diamond	12	top20_degree_nodes_removed	1	1.000		removed_nodes_in_baseline_list	0	removed: RPS27A;UBA52;FAU;TP53;RPS11;...
+Q4_rows	LEGEND_signed_as_unsigned	first_neighbours	5	baseline	1			hub_fraction_top5pct_degree	0.559	mean_degree_percentile=0.886; list_len=34
+Q4_rows	LEGEND_signed_as_unsigned	first_neighbours	5	leave_one_seed_out	5	0.824	0.618	held_out_seed_in_top_list	0.000	
+Q4_rows	LEGEND_signed_as_unsigned	first_neighbours	5	random_10pct_edges_removed	20	0.913	0.824			
+Q4_rows	LEGEND_signed_as_unsigned	first_neighbours	5	top20_degree_nodes_removed	1	0.912		removed_nodes_in_baseline_list	3	removed: SP1;RELA;NFKB1;MYC;JUN;...
+Q4_rows	LEGEND_signed_as_unsigned	rwr	5	baseline	1			hub_fraction_top5pct_degree	0.560	mean_degree_percentile=0.886; list_len=50
+Q4_rows	LEGEND_signed_as_unsigned	rwr	5	leave_one_seed_out	5	0.737	0.562	held_out_seed_in_top_list	0.200	
+Q4_rows	LEGEND_signed_as_unsigned	rwr	5	random_10pct_edges_removed	20	0.833	0.724			
+Q4_rows	LEGEND_signed_as_unsigned	rwr	5	top20_degree_nodes_removed	1	0.667		removed_nodes_in_baseline_list	10	removed: SP1;RELA;NFKB1;MYC;JUN;...
+Q4_rows	LEGEND_signed_as_unsigned	rwr_hubcorr	5	baseline	1			hub_fraction_top5pct_degree	0.040	mean_degree_percentile=0.481; list_len=50
+Q4_rows	LEGEND_signed_as_unsigned	rwr_hubcorr	5	leave_one_seed_out	5	0.723	0.389	held_out_seed_in_top_list	0.200	
+Q4_rows	LEGEND_signed_as_unsigned	rwr_hubcorr	5	random_10pct_edges_removed	20	0.718	0.266			
+Q4_rows	LEGEND_signed_as_unsigned	rwr_hubcorr	5	top20_degree_nodes_removed	1	0.818		removed_nodes_in_baseline_list	0	removed: SP1;RELA;NFKB1;MYC;JUN;...
+Q4_rows	LEGEND_signed_as_unsigned	diamond	5	baseline	1			hub_fraction_top5pct_degree	0.180	mean_degree_percentile=0.688; list_len=50
+Q4_rows	LEGEND_signed_as_unsigned	diamond	5	leave_one_seed_out	5	0.984	0.961	held_out_seed_in_top_list	0.400	
+Q4_rows	LEGEND_signed_as_unsigned	diamond	5	random_10pct_edges_removed	20	0.159	0.031			
+Q4_rows	LEGEND_signed_as_unsigned	diamond	5	top20_degree_nodes_removed	1	0.351		removed_nodes_in_baseline_list	1	removed: SP1;RELA;NFKB1;MYC;JUN;...
+Q4_rows	STRING_v12_min900	first_neighbours	6	baseline	1			hub_fraction_top5pct_degree	0.000	mean_degree_percentile=0.624; list_len=50
+Q4_rows	STRING_v12_min900	first_neighbours	6	leave_one_seed_out	6	0.682	0.408	held_out_seed_in_top_list	0.000	
+Q4_rows	STRING_v12_min900	first_neighbours	6	random_10pct_edges_removed	20	0.759	0.639			
+Q4_rows	STRING_v12_min900	first_neighbours	6	top20_degree_nodes_removed	1	1.000		removed_nodes_in_baseline_list	0	removed: RPS27A;UBA52;FAU;TP53;RPS11;...
+Q4_rows	STRING_v12_min900	rwr	6	baseline	1			hub_fraction_top5pct_degree	0.100	mean_degree_percentile=0.724; list_len=50
+Q4_rows	STRING_v12_min900	rwr	6	leave_one_seed_out	6	0.656	0.478	held_out_seed_in_top_list	0.333	
+Q4_rows	STRING_v12_min900	rwr	6	random_10pct_edges_removed	20	0.738	0.639			
+Q4_rows	STRING_v12_min900	rwr	6	top20_degree_nodes_removed	1	0.923		removed_nodes_in_baseline_list	1	removed: RPS27A;UBA52;FAU;TP53;RPS11;...
+Q4_rows	STRING_v12_min900	rwr_hubcorr	6	baseline	1			hub_fraction_top5pct_degree	0.000	mean_degree_percentile=0.529; list_len=50
+Q4_rows	STRING_v12_min900	rwr_hubcorr	6	leave_one_seed_out	6	0.702	0.562	held_out_seed_in_top_list	0.000	
+Q4_rows	STRING_v12_min900	rwr_hubcorr	6	random_10pct_edges_removed	20	0.802	0.695			
+Q4_rows	STRING_v12_min900	rwr_hubcorr	6	top20_degree_nodes_removed	1	0.852		removed_nodes_in_baseline_list	0	removed: RPS27A;UBA52;FAU;TP53;RPS11;...
+Q4_rows	STRING_v12_min900	diamond	6	baseline	1			hub_fraction_top5pct_degree	0.080	mean_degree_percentile=0.774; list_len=50
+Q4_rows	STRING_v12_min900	diamond	6	leave_one_seed_out	6	0.667	0.000	held_out_seed_in_top_list	0.000	
+Q4_rows	STRING_v12_min900	diamond	6	random_10pct_edges_removed	20	0.623	0.042			
+Q4_rows	STRING_v12_min900	diamond	6	top20_degree_nodes_removed	1	1.000		removed_nodes_in_baseline_list	0	removed: RPS27A;UBA52;FAU;TP53;RPS11;...
+Q4_withprocess	LEGEND_signed_as_unsigned	first_neighbours	5	baseline	1			hub_fraction_top5pct_degree	0.559	mean_degree_percentile=0.886; list_len=34
+Q4_withprocess	LEGEND_signed_as_unsigned	first_neighbours	5	leave_one_seed_out	5	0.824	0.618	held_out_seed_in_top_list	0.000	
+Q4_withprocess	LEGEND_signed_as_unsigned	first_neighbours	5	random_10pct_edges_removed	20	0.925	0.882			
+Q4_withprocess	LEGEND_signed_as_unsigned	first_neighbours	5	top20_degree_nodes_removed	1	0.912		removed_nodes_in_baseline_list	3	removed: SP1;RELA;NFKB1;MYC;JUN;...
+Q4_withprocess	LEGEND_signed_as_unsigned	rwr	5	baseline	1			hub_fraction_top5pct_degree	0.560	mean_degree_percentile=0.886; list_len=50
+Q4_withprocess	LEGEND_signed_as_unsigned	rwr	5	leave_one_seed_out	5	0.737	0.562	held_out_seed_in_top_list	0.200	
+Q4_withprocess	LEGEND_signed_as_unsigned	rwr	5	random_10pct_edges_removed	20	0.823	0.754			
+Q4_withprocess	LEGEND_signed_as_unsigned	rwr	5	top20_degree_nodes_removed	1	0.667		removed_nodes_in_baseline_list	10	removed: SP1;RELA;NFKB1;MYC;JUN;...
+Q4_withprocess	LEGEND_signed_as_unsigned	rwr_hubcorr	5	baseline	1			hub_fraction_top5pct_degree	0.040	mean_degree_percentile=0.481; list_len=50
+Q4_withprocess	LEGEND_signed_as_unsigned	rwr_hubcorr	5	leave_one_seed_out	5	0.723	0.389	held_out_seed_in_top_list	0.200	
+Q4_withprocess	LEGEND_signed_as_unsigned	rwr_hubcorr	5	random_10pct_edges_removed	20	0.711	0.299			
+Q4_withprocess	LEGEND_signed_as_unsigned	rwr_hubcorr	5	top20_degree_nodes_removed	1	0.818		removed_nodes_in_baseline_list	0	removed: SP1;RELA;NFKB1;MYC;JUN;...
+Q4_withprocess	LEGEND_signed_as_unsigned	diamond	5	baseline	1			hub_fraction_top5pct_degree	0.180	mean_degree_percentile=0.688; list_len=50
+Q4_withprocess	LEGEND_signed_as_unsigned	diamond	5	leave_one_seed_out	5	0.984	0.961	held_out_seed_in_top_list	0.400	
+Q4_withprocess	LEGEND_signed_as_unsigned	diamond	5	random_10pct_edges_removed	20	0.182	0.053			
+Q4_withprocess	LEGEND_signed_as_unsigned	diamond	5	top20_degree_nodes_removed	1	0.351		removed_nodes_in_baseline_list	1	removed: SP1;RELA;NFKB1;MYC;JUN;...
+Q4_withprocess	STRING_v12_min900	first_neighbours	6	baseline	1			hub_fraction_top5pct_degree	0.000	mean_degree_percentile=0.624; list_len=50
+Q4_withprocess	STRING_v12_min900	first_neighbours	6	leave_one_seed_out	6	0.682	0.408	held_out_seed_in_top_list	0.000	
+Q4_withprocess	STRING_v12_min900	first_neighbours	6	random_10pct_edges_removed	20	0.776	0.613			
+Q4_withprocess	STRING_v12_min900	first_neighbours	6	top20_degree_nodes_removed	1	1.000		removed_nodes_in_baseline_list	0	removed: RPS27A;UBA52;FAU;TP53;RPS11;...
+Q4_withprocess	STRING_v12_min900	rwr	6	baseline	1			hub_fraction_top5pct_degree	0.100	mean_degree_percentile=0.724; list_len=50
+Q4_withprocess	STRING_v12_min900	rwr	6	leave_one_seed_out	6	0.656	0.478	held_out_seed_in_top_list	0.333	
+Q4_withprocess	STRING_v12_min900	rwr	6	random_10pct_edges_removed	20	0.744	0.639			
+Q4_withprocess	STRING_v12_min900	rwr	6	top20_degree_nodes_removed	1	0.923		removed_nodes_in_baseline_list	1	removed: RPS27A;UBA52;FAU;TP53;RPS11;...
+Q4_withprocess	STRING_v12_min900	rwr_hubcorr	6	baseline	1			hub_fraction_top5pct_degree	0.000	mean_degree_percentile=0.529; list_len=50
+Q4_withprocess	STRING_v12_min900	rwr_hubcorr	6	leave_one_seed_out	6	0.702	0.562	held_out_seed_in_top_list	0.000	
+Q4_withprocess	STRING_v12_min900	rwr_hubcorr	6	random_10pct_edges_removed	20	0.791	0.667			
+Q4_withprocess	STRING_v12_min900	rwr_hubcorr	6	top20_degree_nodes_removed	1	0.852		removed_nodes_in_baseline_list	0	removed: RPS27A;UBA52;FAU;TP53;RPS11;...
+Q4_withprocess	STRING_v12_min900	diamond	6	baseline	1			hub_fraction_top5pct_degree	0.080	mean_degree_percentile=0.774; list_len=50
+Q4_withprocess	STRING_v12_min900	diamond	6	leave_one_seed_out	6	0.667	0.000	held_out_seed_in_top_list	0.000	
+Q4_withprocess	STRING_v12_min900	diamond	6	random_10pct_edges_removed	20	0.680	0.042			
+Q4_withprocess	STRING_v12_min900	diamond	6	top20_degree_nodes_removed	1	1.000		removed_nodes_in_baseline_list	0	removed: RPS27A;UBA52;FAU;TP53;RPS11;...

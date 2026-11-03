@@ -1,0 +1,6 @@
+query	tail	signature_rank_in_tail	z_sum	pert_name	inchikey	cell_line	dose	time	legend_proposal	legend_question	legend_arm	legend_compound
+QA_all	reversers	272	-10.92	VE-821	DUIHHZKTCSNTGM-UHFFFAOYSA-N	HELA	0.37 uM	24 h	IT21P2-0117	Q4	H_PROTECT	Ve-821
+QC_minus_declared	reversers	247	-11.04	VE-821	DUIHHZKTCSNTGM-UHFFFAOYSA-N	HELA	0.37 uM	24 h	IT21P2-0117	Q4	H_PROTECT	Ve-821
+QD_minus_composition	reversers	261	-11.00	VE-821	DUIHHZKTCSNTGM-UHFFFAOYSA-N	HELA	0.37 uM	24 h	IT21P2-0117	Q4	H_PROTECT	Ve-821
+QF_minus_broad_maturation	mimickers	175	9.68	acalabrutinib	WDENQIQQYWYTPO-IBGZPJMESA-N	HBL1	10 uM	24 h	IT21P2-0063	Q4	H_HARM	ACALABRUTINIB
+QE_composition_flipped	reversers	260	-10.70	VE-821	DUIHHZKTCSNTGM-UHFFFAOYSA-N	HELA	0.37 uM	24 h	IT21P2-0117	Q4	H_PROTECT	Ve-821

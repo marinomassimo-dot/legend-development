@@ -1,0 +1,156 @@
+{
+ "networks": {
+  "LEGEND_signed_as_unsigned": {
+   "nodes": 8769,
+   "edges": 69346
+  },
+  "STRING_v12_min900": {
+   "nodes": 12323,
+   "edges": 100856
+  }
+ },
+ "seed_sets": {
+  "Q2_rows": {
+   "genes": [
+    "BNIP3",
+    "HK2",
+    "LDHA",
+    "LDHB",
+    "PDHA1",
+    "PDK1",
+    "SLC2A1"
+   ],
+   "n": 7,
+   "LEGEND_signed_as_unsigned": {
+    "in_network": 7,
+    "missing": []
+   },
+   "STRING_v12_min900": {
+    "in_network": 6,
+    "missing": [
+     "LDHB"
+    ]
+   }
+  },
+  "Q2_withprocess": {
+   "genes": [
+    "ALDOA",
+    "BNIP3",
+    "ENO1",
+    "HK2",
+    "LDHA",
+    "LDHB",
+    "PDHA1",
+    "PDK1",
+    "PFKP",
+    "PGK1",
+    "PKM",
+    "SLC2A1"
+   ],
+   "n": 12,
+   "LEGEND_signed_as_unsigned": {
+    "in_network": 12,
+    "missing": []
+   },
+   "STRING_v12_min900": {
+    "in_network": 11,
+    "missing": [
+     "LDHB"
+    ]
+   }
+  },
+  "Q3_rows": {
+   "genes": [
+    "ATF5",
+    "CHAC1",
+    "PSAT1",
+    "SESN2",
+    "TRIB3"
+   ],
+   "n": 5,
+   "LEGEND_signed_as_unsigned": {
+    "in_network": 5,
+    "missing": []
+   },
+   "STRING_v12_min900": {
+    "in_network": 5,
+    "missing": []
+   }
+  },
+  "Q3_withprocess": {
+   "genes": [
+    "ASNS",
+    "ATF5",
+    "CHAC1",
+    "DDIT3",
+    "GADD45A",
+    "PCK2",
+    "PHGDH",
+    "PSAT1",
+    "PSPH",
+    "SESN2",
+    "SLC7A11",
+    "TRIB3"
+   ],
+   "n": 12,
+   "LEGEND_signed_as_unsigned": {
+    "in_network": 11,
+    "missing": [
+     "PSPH"
+    ]
+   },
+   "STRING_v12_min900": {
+    "in_network": 12,
+    "missing": []
+   }
+  },
+  "Q4_rows": {
+   "genes": [
+    "GAD1",
+    "GAD2",
+    "GRIN2C",
+    "GRM3",
+    "KCNA2",
+    "NPY"
+   ],
+   "n": 6,
+   "LEGEND_signed_as_unsigned": {
+    "in_network": 5,
+    "missing": [
+     "KCNA2"
+    ]
+   },
+   "STRING_v12_min900": {
+    "in_network": 6,
+    "missing": []
+   }
+  },
+  "Q4_withprocess": {
+   "genes": [
+    "GAD1",
+    "GAD2",
+    "GRIN2C",
+    "GRM3",
+    "KCNA2",
+    "NPY"
+   ],
+   "n": 6,
+   "LEGEND_signed_as_unsigned": {
+    "in_network": 5,
+    "missing": [
+     "KCNA2"
+    ]
+   },
+   "STRING_v12_min900": {
+    "in_network": 6,
+    "missing": []
+   }
+  }
+ },
+ "topm": 50,
+ "diamond_n": 100,
+ "rwr_restart": 0.5,
+ "reps": 20,
+ "hub_n": 20,
+ "seconds": 694.2
+}

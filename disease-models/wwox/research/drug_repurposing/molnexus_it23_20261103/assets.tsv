@@ -1,0 +1,7 @@
+asset	path_or_url	kind	size_bytes	licence_state	location_official	note
+code	https://github.com/ZJUFanLab/MolNexus (main)	source	49640000	none found	yes	api licence null; LICENSE/LICENSE.md/LICENSE.txt/COPYING 404
+demo data (BioNexKG demo, folds, features)	demo/ in repository	data	190000000	none found	yes	approx total of demo/ files in tree listing
+CGI weights	model/cgi (expected local)	checkpoint	NA	none found	no	gitignored; no release, no HF/Zenodo hit
+CMI weights	model/cmi (expected local)	checkpoint	NA	none found	no	gitignored; no release, no HF/Zenodo hit
+CPI weights	model/cpi/<split>/ensemble_N.pt (expected local)	checkpoint	NA	none found	no	splits Warm CCS DCS PCS
+publication	none linked	paper	NA	none found	no	PubMed query returned zero records

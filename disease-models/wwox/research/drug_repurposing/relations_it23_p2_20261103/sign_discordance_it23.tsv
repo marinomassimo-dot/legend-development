@@ -1,0 +1,16 @@
+compound_name	target	family_id	legend_sign	legend_group	legend_scope	legend_flags	eckg_sign	eckg_non_prediction_origins	eckg_best_evidence	reading
+PAC-1	CASP3	FAM:CAT:DGIDB:15f6aeb74f1a	1.0000	GtoPdb	single_protein		-1	infores:drugbank;infores:pharos;infores:signor	OBSERVED	prompt to read the source; both sides have a non-prediction origin
+Cyproterone	PGR	FAM:CAT:CHEMBL139835	1.0000	ChEMBL	single_protein		-1	infores:drugcentral	OBSERVED	prompt to read the source; both sides have a non-prediction origin
+Regorafenib	EPHA2	FAM:CAT:DGIDB:18c39af2d48d	-1.0000	DGIdb_other	unspecified		+1	infores:bindingdb;infores:chembl;infores:drugbank;infores:hetionet;infores:primekg	OBSERVED	prompt to read the source; both sides have a non-prediction origin
+dactolisib	PIK3CB	FAM:CAT:DGIDB:67a3ed5bd011	-1.0000	DGIdb_other	unspecified		+1	infores:bindingdb;infores:pharos	OBSERVED	prompt to read the source; both sides have a non-prediction origin
+dactolisib	PIK3R1	FAM:CAT:DGIDB:67a3ed5bd011	-1.0000	DGIdb_other	unspecified		+1	infores:bindingdb	OBSERVED	prompt to read the source; both sides have a non-prediction origin
+Panobinostat	SIRT2	FAM:CAT:DGIDB:be0d8ea27925	-1.0000	DGIdb_other	unspecified		+1		PREDICTION	prompt to read the source; EC-KG rests on prediction rows only
+Panobinostat	SIRT3	FAM:CAT:DGIDB:be0d8ea27925	-1.0000	DGIdb_other	unspecified		+1		PREDICTION	prompt to read the source; EC-KG rests on prediction rows only
+Panobinostat	SIRT1	FAM:CAT:DGIDB:be0d8ea27925	-1.0000	DGIdb_other	unspecified		+1		PREDICTION	prompt to read the source; EC-KG rests on prediction rows only
+Panobinostat	SIRT7	FAM:CAT:DGIDB:be0d8ea27925	-1.0000	DGIdb_other	unspecified		+1		PREDICTION	prompt to read the source; EC-KG rests on prediction rows only
+Idronoxil	CASP3	FAM:CAT:DGIDB:b34c953dc1fa	-1.0000	DGIdb_other	unspecified		+1		PREDICTION	prompt to read the source; EC-KG rests on prediction rows only
+EPTOTERMIN ALFA	BMPR1B	FAM:CAT:CHEMBL2108594	1.0000	ChEMBL	single_protein		-1		PREDICTION	prompt to read the source; EC-KG rests on prediction rows only
+EPTOTERMIN ALFA	BMPR2	FAM:CAT:CHEMBL2108594	1.0000	ChEMBL	single_protein		-1		PREDICTION	prompt to read the source; EC-KG rests on prediction rows only
+DIBOTERMIN ALFA	BMPR1A	FAM:CAT:CHEMBL2109171	1.0000	ChEMBL	single_protein		-1	infores:drugbank	OBSERVED	prompt to read the source; both sides have a non-prediction origin
+DIBOTERMIN ALFA	BMPR1B	FAM:CAT:CHEMBL2109171	1.0000	ChEMBL	single_protein		-1		PREDICTION	prompt to read the source; EC-KG rests on prediction rows only
+DIBOTERMIN ALFA	BMPR2	FAM:CAT:CHEMBL2109171	1.0000	ChEMBL	single_protein		-1	infores:drugbank	OBSERVED	prompt to read the source; both sides have a non-prediction origin

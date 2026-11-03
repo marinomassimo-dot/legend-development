@@ -735,6 +735,11 @@ def cmd_propose(a):
             seen_src.add(src_)
             global_dec.append(dict(compound=comp_, state=st_, source=src_, components=scopes[src_]))
     conflicts = rd(DR / "generation_it22_p1_20261103" / "data_conflicts_it22.tsv") if (DR / "generation_it22_p1_20261103" / "data_conflicts_it22.tsv").exists() and v1 else []
+    harm_f = DR / "relations_it23_p2_20261103" / "harm_signals_it23.tsv"          # IT23 P2: FAERS seizure-related reports from EC-KG (id join), carried as a limit
+    harm = {}
+    if v1 and harm_f.exists():
+        for r_ in rd(harm_f):
+            harm.setdefault(r_["family_id"], r_)
     seed_ann = collections.defaultdict(set)
     if P1D and (P1D / "seed_annotations.tsv").exists():
         for r_ in rd(P1D / "seed_annotations.tsv"):
@@ -754,6 +759,10 @@ def cmd_propose(a):
         p["seed_guards"], p["seed_support_limited"] = ";".join(sg), "yes" if sl else ""
         if sl:
             p["carried_limits"] = " | ".join(sl)
+        hs = harm.get(p["family_id"])
+        p["harm_signal_faers_seizure"] = "yes" if hs else ""
+        if hs:                                       # a counter-evidence limit for a seizure disorder, never a verdict: reports are associations and may reflect the indication
+            p["carried_limits"] = " | ".join(([p["carried_limits"]] if p["carried_limits"] else []) + [f"FAERS_SEIZURE_REPORTS: spontaneous reports of {hs['events']} (association, not causation; confounded by indication; absence would not mean safety)"])
         cf = [r_["note"] for r_ in conflicts if base_name(r_["compound"]) == base_name(p["compound"]) and (not r_["main_target"] or r_["main_target"] == p["main_target"])]
         if cf:                                       # IT22 P8-fix F07: two sources disagree about a measured value; the disagreement stays visible
             p["carried_limits"] = " | ".join(([p["carried_limits"]] if p["carried_limits"] else []) + ["SOURCE_CONFLICT: " + x for x in cf])
@@ -828,7 +837,7 @@ def cmd_propose(a):
     for p in proposals:
         check_status(p["status"])
     if not v1:                       # --no-v1 must reproduce the committed P2 tables byte for byte: the IT22 columns exist only on the production path
-        it22_cols = ("cluster_work_done", "carried_limits", "blocker_detail", "seed_guards", "seed_support_limited", "carried_limits_from_cluster", "route_class_note", "direct_acting_hits_same_set")
+        it22_cols = ("harm_signal_faers_seizure", "cluster_work_done", "carried_limits", "blocker_detail", "seed_guards", "seed_support_limited", "carried_limits_from_cluster", "route_class_note", "direct_acting_hits_same_set")
         for row_ in proposals + handoff:
             for k_ in it22_cols:
                 row_.pop(k_, None)

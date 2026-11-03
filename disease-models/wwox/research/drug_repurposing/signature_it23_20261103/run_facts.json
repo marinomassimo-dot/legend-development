@@ -1,0 +1,172 @@
+{
+ "composition_class": {
+  "broad_class_size": 209,
+  "declared_markers_in_S1": 16,
+  "genes_with_rho": 807,
+  "gse150123_samples": 62,
+  "maturation_consistent": 10,
+  "rho_threshold": 0.6,
+  "union": 26
+ },
+ "coverage": {
+  "QA_all": {
+   "down": 317,
+   "genes_in_query": 834,
+   "in_L1000_12328_space": 529,
+   "inferred_not_landmark": 475,
+   "landmark_978_measured": 54,
+   "not_in_space": 305,
+   "up": 517
+  },
+  "QC_minus_declared": {
+   "down": 313,
+   "genes_in_query": 818,
+   "in_L1000_12328_space": 518,
+   "inferred_not_landmark": 464,
+   "landmark_978_measured": 54,
+   "not_in_space": 300,
+   "up": 505
+  },
+  "QD_minus_composition": {
+   "down": 308,
+   "genes_in_query": 808,
+   "in_L1000_12328_space": 512,
+   "inferred_not_landmark": 458,
+   "landmark_978_measured": 54,
+   "not_in_space": 296,
+   "up": 500
+  },
+  "QE_composition_flipped": {
+   "down": 325,
+   "genes_in_query": 834,
+   "in_L1000_12328_space": 529,
+   "inferred_not_landmark": 475,
+   "landmark_978_measured": 54,
+   "not_in_space": 305,
+   "up": 509
+  },
+  "QF_minus_broad_maturation": {
+   "down": 260,
+   "genes_in_query": 625,
+   "in_L1000_12328_space": 380,
+   "inferred_not_landmark": 345,
+   "landmark_978_measured": 35,
+   "not_in_space": 245,
+   "up": 365
+  }
+ },
+ "legend_Q2Q4Q8": {
+  "dgidb_only_unresolved_rows": 115,
+  "identity_resolved_rows": 43,
+  "rows": 158
+ },
+ "responses": {
+  "QA_all": {
+   "bytes": 262798,
+   "content_range": "0-600/693215",
+   "limit": 300,
+   "n_down": 311,
+   "n_up": 505,
+   "sha256": "61e76495ce5c3a3f8a6fbb5f863ddd80fc394562e73604164bd0eae7faa40b31",
+   "status": 200,
+   "utc": "2026-11-03T22:50:32.913102+00:00"
+  },
+  "QC_minus_declared": {
+   "bytes": 262789,
+   "content_range": "0-600/693215",
+   "limit": 300,
+   "n_down": 307,
+   "n_up": 493,
+   "sha256": "f2a3c12b75ec8c92b3d61609c49e7da13206b2371c0c12a47362a3b2d2e8002c",
+   "status": 200,
+   "utc": "2026-11-03T22:50:55.542723+00:00"
+  },
+  "QD_minus_composition": {
+   "bytes": 262282,
+   "content_range": "0-600/693215",
+   "limit": 300,
+   "n_down": 302,
+   "n_up": 488,
+   "sha256": "8fa1a4df49587890655b2add917fb2eb021ca722a9c77c09904e38fa5065ec44",
+   "status": 200,
+   "utc": "2026-11-03T22:51:17.835401+00:00"
+  },
+  "QE_composition_flipped": {
+   "bytes": 261412,
+   "content_range": "0-600/693215",
+   "limit": 300,
+   "n_down": 319,
+   "n_up": 497,
+   "sha256": "f793d26dd210705d984d5004991d0c5b2adb14b664c03724b72560be417a9ca7",
+   "status": 200,
+   "utc": "2026-11-03T22:51:40.236863+00:00"
+  },
+  "QF_minus_broad_maturation": {
+   "bytes": 265959,
+   "content_range": "0-600/693215",
+   "limit": 300,
+   "n_down": 255,
+   "n_up": 354,
+   "sha256": "4d610cfa89b38c8c846b5e268f7bfded4f8e728e531480f7f57645f0d3a7ce04",
+   "status": 200,
+   "utc": "2026-11-03T22:52:45.728810+00:00"
+  }
+ },
+ "scenario_counts": {
+  "S1_reverse_all": {
+   "identity_resolved": 19,
+   "in_catalogue": 11,
+   "in_legend_Q2Q4Q8_by_identity": 0,
+   "top_n": 20
+  },
+  "S2_mimic_all": {
+   "identity_resolved": 19,
+   "in_catalogue": 10,
+   "in_legend_Q2Q4Q8_by_identity": 0,
+   "top_n": 20
+  },
+  "S3_ignore_declared_markers_reverse": {
+   "identity_resolved": 19,
+   "in_catalogue": 11,
+   "in_legend_Q2Q4Q8_by_identity": 0,
+   "top_n": 20
+  },
+  "S4_ignore_composition_reverse": {
+   "identity_resolved": 19,
+   "in_catalogue": 10,
+   "in_legend_Q2Q4Q8_by_identity": 0,
+   "top_n": 20
+  },
+  "S5_ignore_composition_mimic": {
+   "identity_resolved": 19,
+   "in_catalogue": 9,
+   "in_legend_Q2Q4Q8_by_identity": 0,
+   "top_n": 20
+  },
+  "S6_mimic_composition_reverse_rest": {
+   "identity_resolved": 19,
+   "in_catalogue": 10,
+   "in_legend_Q2Q4Q8_by_identity": 0,
+   "top_n": 20
+  },
+  "S7_reverse_composition_mimic_rest": {
+   "identity_resolved": 18,
+   "in_catalogue": 8,
+   "in_legend_Q2Q4Q8_by_identity": 0,
+   "top_n": 20
+  },
+  "S8_ignore_broad_class_reverse": {
+   "identity_resolved": 19,
+   "in_catalogue": 11,
+   "in_legend_Q2Q4Q8_by_identity": 0,
+   "top_n": 20
+  },
+  "S9_ignore_broad_class_mimic": {
+   "identity_resolved": 18,
+   "in_catalogue": 7,
+   "in_legend_Q2Q4Q8_by_identity": 0,
+   "top_n": 20
+  }
+ },
+ "signature": "GSE156243 KO v WT organoid, S1 (padj<=0.01, |log2FC|>=0.26)"
+}

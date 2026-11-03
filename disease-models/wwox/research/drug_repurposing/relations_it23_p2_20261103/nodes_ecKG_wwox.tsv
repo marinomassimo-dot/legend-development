@@ -1,0 +1,1751 @@
+id	name	category	upstream_data_source	hood
+NCBIGene:51741	WWOX protein, human	biolink:Protein	primekg;rtxkg2;robokop	W
+CHEBI:124920	1-[3-[[(2R,3S,4R,5R)-5-(4-amino-7-pyrrolo[2,3-d]pyrimidinyl)-3,4-dihydroxy-2-oxolanyl]methyl-propan-2-ylamino]propyl]-3-(4-tert-butylphenyl)urea	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:124921	1-[(2S)-butan-2-yl]-N-[(4,6-dimethyl-2-oxo-1H-pyridin-3-yl)methyl]-3-methyl-6-[6-(1-piperazinyl)-3-pyridinyl]-4-indolecarboxamide	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:12777	vitamin A	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:131158	(2S)-2-hydroxy-3-methyl-N-[(2S)-1-[[(5S)-3-methyl-4-oxo-2,5-dihydro-1H-3-benzazepin-5-yl]amino]-1-oxopropan-2-yl]butanamide	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:131166	3-[3-[4-(methylaminomethyl)phenyl]-5-isoxazolyl]-5-(4-propan-2-ylsulfonylphenyl)-2-pyrazinamine	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:132774	Roxadustat	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:135323	gestodene	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:135398	norelgestromin	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:135563	elcometrine	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:135564	nomegestrol acetate	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:135566	rimexolone	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:135573	meprednisone	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:135782	ulobetasol propionate	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:135820	cortivazol	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:135957	Voclosporin	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:136027	trimegestone	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:136046	Ripasudil	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:137064	LY-2157299	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:137113	JQ1	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:138488	alsterpaullone	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:139047	GSK2656157	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:143114	CCT251545	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:145373	Pexidartinib	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:145417	rigosertib	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:146227	halicin	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:147398	tideglusib	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:15351	acetyl-CoA	biolink:SmallMolecule	rtxkg2;robokop	N1
+CHEBI:15367	Tretinoin	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:16113	Cholesterol	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:16240	Hydrogen peroxide	biolink:Drug	primekg;rtxkg2;robokop	N1
+CHEBI:16325	lithocholic acid	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:16336	Hyaluronic acid	biolink:Drug	primekg;rtxkg2;robokop	N1
+CHEBI:16467	Arginine	biolink:Drug	primekg;rtxkg2;robokop	N1
+CHEBI:16469	Estradiol	biolink:Drug	primekg;rtxkg2;robokop	N1
+CHEBI:16480	Nitric oxide	biolink:Drug	primekg;rtxkg2;robokop	N1
+CHEBI:167651	AZD1080	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:167652	AZD2858	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:167657	CHIR-98014	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:167661	LY-2090314	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:167664	MK-8353	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:167670	SCH772984	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:167673	TAK-632	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:167693	GSK343	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:167707	Acalabrutinib	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:16947	citrate(3-)	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:16962	Cortisone acetate	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:16991	deoxyribonucleic acid	biolink:SmallMolecule	rtxkg2;robokop	N1
+CHEBI:17026	Progesterone	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:17234	D-glucopyranose	biolink:Drug	primekg;rtxkg2;robokop	N1
+CHEBI:17252	Hydroxyprogesterone caproate	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:173077	Copanlisib	biolink:Drug	primekg;robokop	N2
+CHEBI:175901	Gemcitabine	biolink:Drug	primekg;rtxkg2;robokop	N1
+CHEBI:17650	Hydrocortisone	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:17688	Nicotine	biolink:Drug	primekg;rtxkg2;robokop	N1
+CHEBI:177493	Avagacestat	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:177650	Mapracorat	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:17855	triglyceride	biolink:SmallMolecule	rtxkg2;robokop	N1
+CHEBI:17895	Tyrosine	biolink:Drug	primekg;rtxkg2;robokop	N1
+CHEBI:183517	LFM-A13	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:187817	SR 1001	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:188757	Gandotinib	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:195521	leucettine L41	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:204734	Desonide	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:205919	Clobetasol	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:215747	Tapinarof	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:229217	Nirogacestat	biolink:Drug	rtxkg2;robokop	N2
+CHEBI:229220	Repotrectinib	biolink:Drug	rtxkg2;robokop	N2
+CHEBI:229222	Capivasertib	biolink:Drug	rtxkg2;robokop	N2
+CHEBI:229649	Leniolisib	biolink:Drug	rtxkg2;robokop	N2
+CHEBI:229661	Omaveloxolone	biolink:Drug	rtxkg2;robokop	N2
+CHEBI:229762	Eltanexor	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:229764	Selinexor	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:229800	Onapristone	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:230352	Desidustat	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:230905	Ribociclib	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:231350	Pacritinib	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:231352	Resminostat	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:231594	Norgestrel	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:231598	Tazemetostat	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:231696	PAC-1	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:232383	1-(3-((((2R,3S,4R,5R)-5-(4-Amino-5-bromo-7H-pyrrolo[2,3-d]pyrimidin-7-yl)-3,4-dihydroxytetrahydrofuran-2-yl)methyl)(isopropyl)amino)propyl)-3-(4-(tert-butyl)phenyl)urea	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:232544	Tirabrutinib	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:232556	Erdafitinib	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:233305	CX-6258	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:233362	Abemaciclib	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:233436	Tolebrutinib	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:23359	colchicine	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:2504	aflatoxin B1	biolink:SmallMolecule	primekg;rtxkg2;robokop	N1
+CHEBI:26523	reactive oxygen species	biolink:ChemicalEntity	primekg;rtxkg2;robokop	N1
+CHEBI:26710	Sodium chloride	biolink:Drug	primekg;rtxkg2;robokop	N1
+CHEBI:27641	cycloheximide	biolink:SmallMolecule	rtxkg2;robokop	N1
+CHEBI:27882	Colchicine	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:27899	Cisplatin	biolink:Drug	primekg;rtxkg2;robokop	N1
+CHEBI:28077	Rifampin	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:28119	TCDD	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:28121	Harmine	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:28787	Nitroglycerin	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:29865	benzo[a]pyrene	biolink:SmallMolecule	primekg;rtxkg2;robokop	N1
+CHEBI:29866	Arsenite ion	biolink:SmallMolecule	primekg;rtxkg2;robokop	N1
+CHEBI:30492	dioxidaniumyl	biolink:SmallMolecule	rtxkg2;robokop	N1
+CHEBI:3077	Betamethasone	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:31184	Alclometasone	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:31189	Allylestrenol	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:31199	Amcinonide	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:31397	Ciclesonide	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:31485	Difluprednate	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:31527	Dydrogesterone	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:31623	Fluocinolone	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:31625	Fluorometholone	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:31638	Fulvestrant	biolink:Drug	primekg;rtxkg2;robokop	N1
+CHEBI:31663	Halcinonide	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:3207	Budesonide	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:32181	tamibarotene	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:3330	Calpeptin	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:33697	ribonucleic acid	biolink:ChemicalEntity	rtxkg2;robokop	N1
+CHEBI:33699	messenger RNA	biolink:ChemicalEntity	rtxkg2;robokop	N1
+CHEBI:338412	Anisomycin	biolink:SmallMolecule	primekg;rtxkg2;robokop	N1
+CHEBI:34474	6alpha-Fluoroprednisolone	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:34764	flumethasone pivalate	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:34829	Medrysone	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:34895	Norethynodrel	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:34907	paxilline	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:35341	steroid	biolink:SmallMolecule	rtxkg2;robokop	N1
+CHEBI:3764	Clotrimazole	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:3962	curcumin	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:39867	Valproic acid	biolink:Drug	primekg;rtxkg2;robokop	N1
+CHEBI:40303	Lovastatin	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:41774	Tamoxifen	biolink:Drug	primekg;rtxkg2;robokop	N1
+CHEBI:41879	Dexamethasone	biolink:Drug	primekg;rtxkg2;robokop	N1
+CHEBI:42977	25-Hydroxycholesterol	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:4315	Danazol	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:43645	indirubin-3'-monoxime	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:43871	fasudil	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:44185	Methotrexate	biolink:Drug	primekg;rtxkg2;robokop	N1
+CHEBI:45716	Vorinostat	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:46024	Trichostatin A	biolink:SmallMolecule	primekg;rtxkg2;robokop	N1
+CHEBI:4659	Disulfiram	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:472552	Broxuridine	biolink:SmallMolecule	primekg;rtxkg2;robokop	N1
+CHEBI:47775	high-density lipoprotein cholesterol	biolink:ChemicalEntity	rtxkg2;robokop	N1
+CHEBI:4806	(-)-epigallocatechin 3-gallate	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:49375	Dasatinib	biolink:Drug	primekg;rtxkg2;robokop	N1
+CHEBI:50114	estrogen	biolink:ChemicalEntity	primekg;rtxkg2;robokop	N1
+CHEBI:50131	Decitabine	biolink:Drug	primekg;rtxkg2;robokop	N1
+CHEBI:50305	Podofilox	biolink:Drug	primekg;rtxkg2;robokop	N1
+CHEBI:50692	Mifepristone	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:50742	Cyproterone	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:50777	etonogestrel	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:50848	Loteprednol	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:50851	hydrocortamate	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:50854	CID 25010759	biolink:MolecularMixture	rtxkg2;robokop	N2
+CHEBI:50924	Sorafenib	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:5106	Flunisolide	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:5109	Fluocinonide	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:5127	Flurandrenolide	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:5134	Fluticasone	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:518413	alverine	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:53785	Alverine citrate	biolink:MolecularMixture	rtxkg2;robokop	N2
+CHEBI:5834	HYPERFORIN	biolink:ChemicalEntity	primekg;rtxkg2;robokop	N2
+CHEBI:59582	Clocortolone	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:59750	Diflorasone	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:61076	Belinostat	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:61080	Romidepsin	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:61390	Afatinib	biolink:Drug	primekg;rtxkg2;robokop	N1
+CHEBI:61400	WZ4002	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:63450	masitinib	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:63453	AZD4547	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:6504	Lithium carbonate	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:65310	triciribine	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:65329	LY294002	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:6704	Mebendazole	biolink:Drug	primekg;rtxkg2;robokop	N1
+CHEBI:6715	Medroxyprogesterone acetate	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:67171	cortistatin A	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:6722	Megestrol acetate	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:67271	MK-2206	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:67272	perifosine	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:67559	5Z-7-oxozeaenol	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:68647	Regorafenib	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:6888	Methylprednisolone	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:691037	Desoximetasone	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:69136	Latrunculin A	biolink:SmallMolecule	primekg;rtxkg2;robokop	N1
+CHEBI:6970	Mometasone	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:71219	Pazopanib	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:71952	dactolisib	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:71955	GSK1059615	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:72564	Temozolomide	biolink:Drug	primekg;rtxkg2;robokop	N1
+CHEBI:73390	Promegestone	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:7496	Nelfinavir	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:75272	splitomicin	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:75283	Miltefosine	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:7565	Nifedipine	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:7627	Norethisterone	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:76612	Ibrutinib	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:77317	SR12813	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:78331	PP2	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:7922	Paramethasone	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:79999	XCT 790	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:8069	Phenobarbital	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:8378	Prednisolone	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:8382	Prednisone	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:85990	Panobinostat	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:85993	Palbociclib	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:8600	prunetin	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:86007	bohemine	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:86474	RO4929097	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:87103	2-tert-butyl-9-fluoro-1,6-dihydrobenzo[h]imidazo[4,5-f]isoquinolin-7-one	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:87237	PF-4800567	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:8768	Rabeprazole	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:8772	Raloxifene	biolink:Drug	primekg;rtxkg2;robokop	N1
+CHEBI:90677	GSK690693	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:90706	Ro 41-5253	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:91107	SB 415286	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:91108	SB 431542	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:91348	6-[[5-fluoro-2-(3,4,5-trimethoxyanilino)-4-pyrimidinyl]amino]-2,2-dimethyl-4H-pyrido[3,2-b][1,4]oxazin-3-one	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:91362	3-[4-[4-[2-[3-[(dimethylamino)methyl]phenyl]-1H-pyrrolo[2,3-b]pyridin-4-yl]-1-ethyl-3-pyrazolyl]phenyl]-1,1-dimethylurea	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:91366	4-[[9-chloro-7-(2,6-difluorophenyl)-5H-pyrimido[5,4-d][2]benzazepin-2-yl]amino]benzoic acid	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:91367	AZD-1152	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:91376	ZM447439	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:91407	Momelotinib	biolink:Drug	rtxkg2;robokop	N2
+CHEBI:91408	Fedratinib	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:91418	N1'-[3-fluoro-4-[[6-methoxy-7-[3-(4-morpholinyl)propoxy]-4-quinolinyl]oxy]phenyl]-N1-(4-fluorophenyl)cyclopropane-1,1-dicarboxamide	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:91419	4-(2-methyl-3-propan-2-yl-4-imidazolyl)-N-(4-methylsulfonylphenyl)-2-pyrimidinamine	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:91421	3-(2,4-dichlorophenyl)-4-(1-methyl-3-indolyl)pyrrole-2,5-dione	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:91435	linifanib	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:91465	(3S,6R)-1-[6-(3-amino-1H-indazol-6-yl)-2-(methylamino)-4-pyrimidinyl]-N-cyclohexyl-6-methyl-3-piperidinecarboxamide	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:91471	LSM-1231	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:9168	Sirolimus	biolink:Drug	primekg;rtxkg2;robokop	N1
+CHEBI:92658	kenpaullone	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:93239	8-hydroxy-5-quinolinecarboxylic acid	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:93752	Alpelisib	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:94187	Givinostat	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:95061	N-[(1-methyl-4-piperidinyl)methyl]-3-[3-(trifluoromethoxy)phenyl]-6-imidazo[1,2-b]pyridazinamine	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:95071	pracinostat	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+CHEBI:95079	2-methoxy-N-(3-methyl-2-oxo-1,4-dihydroquinazolin-6-yl)benzenesulfonamide	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:95082	2-[(4S)-6-(4-chlorophenyl)-8-methoxy-1-methyl-4H-[1,2,4]triazolo[4,3-a][1,4]benzodiazepin-4-yl]-N-ethylacetamide	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:95083	7-(3,5-dimethyl-4-isoxazolyl)-8-methoxy-1-[(1R)-1-(2-pyridinyl)ethyl]-3H-imidazo[4,5-c]quinolin-2-one	biolink:SmallMolecule	rtxkg2;robokop	N2
+CHEBI:95341	Baricitinib	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEBI:9667	Triamcinolone	biolink:Drug	primekg;rtxkg2;robokop	N2
+CHEMBL.COMPOUND:CHEMBL3545008	SAR-260301	biolink:ChemicalEntity	rtxkg2	N2
+CHEMBL.COMPOUND:CHEMBL3545055	INK-1117	biolink:ChemicalEntity	rtxkg2	N2
+CHEMBL.COMPOUND:CHEMBL3545138	PRT-2607	biolink:ChemicalEntity	rtxkg2	N2
+CHEMBL.COMPOUND:CHEMBL3545159	R-333	biolink:ChemicalEntity	rtxkg2	N2
+CHEMBL.COMPOUND:CHEMBL3545239	PF-05019702	biolink:ChemicalEntity	rtxkg2	N2
+CHEMBL.COMPOUND:CHEMBL3545261	BRONTICTUZUMAB	biolink:ChemicalEntity	rtxkg2	N2
+CHEMBL.COMPOUND:CHEMBL3545382	R-348	biolink:ChemicalEntity	rtxkg2	N2
+CHEMBL.COMPOUND:CHEMBL3545399	R-112	biolink:ChemicalEntity	rtxkg2	N2
+CHEMBL.COMPOUND:CHEMBL4297816	PX-478	biolink:ChemicalEntity	rtxkg2	N2
+CHEMBL.COMPOUND:CHEMBL4297930	CYC-065	biolink:ChemicalEntity	rtxkg2	N2
+CL:0000010	cultured cell	biolink:Cell	rtxkg2;robokop	N1
+CL:0000047	neural stem cell	biolink:Cell	rtxkg2;robokop	N1
+CL:0000062	osteoblast	biolink:Cell	rtxkg2;robokop	N1
+CL:0000066	epithelial cell	biolink:Cell	rtxkg2;robokop	N1
+CL:0000084	T cell	biolink:Cell	rtxkg2;robokop	N1
+CL:0000115	endothelial cell	biolink:Cell	rtxkg2;robokop	N1
+CL:0000127	astrocyte	biolink:Cell	rtxkg2;robokop	N1
+CL:0000128	oligodendrocyte	biolink:Cell	rtxkg2;robokop	N1
+CL:0000148	melanocyte	biolink:Cell	rtxkg2;robokop	N1
+CL:0000151	secretory cell	biolink:Cell	rtxkg2;robokop	N1
+CL:0000182	hepatocyte	biolink:Cell	rtxkg2;robokop	N1
+CL:0000216	Sertoli cell	biolink:Cell	rtxkg2;robokop	N1
+CL:0000236	B cell	biolink:Cell	rtxkg2;robokop	N1
+CL:0000362	epidermal cell	biolink:Cell	rtxkg2;robokop	N1
+CL:0000540	neuron	biolink:Cell	rtxkg2;robokop	N1
+CL:0000573	retinal cone cell	biolink:Cell	rtxkg2;robokop	N1
+CL:0000647	multinucleated giant cell	biolink:Cell	rtxkg2;robokop	N1
+CL:0002314	external supporting cell of vestibular epithelium	biolink:Cell	rtxkg2;robokop	N1
+DOID:0050155	sensory system disease	biolink:Disease	rtxkg2	N1
+DOID:0050177	monogenic disease	biolink:Disease	rtxkg2	N1
+DOID:0060057	gluten allergy	biolink:Disease	rtxkg2	N1
+DOID:0060118	thoracic disease	biolink:Disease	rtxkg2	N1
+DOID:0080015	physical disorder	biolink:Disease	rtxkg2	N1
+DOID:11284	obsolete disseminated scars of retina	biolink:Disease	rtxkg2	N1
+DOID:13213	obsolete metastatic cancer to the breast	biolink:Disease	rtxkg2	N1
+DOID:13668	obsolete meningococcal encephalitis	biolink:Disease	rtxkg2	N1
+DOID:13679	obsolete simple type schizophrenia subchronic state	biolink:Disease	rtxkg2	N1
+DOID:2172	obsolete malignant eyelid tumor	biolink:Disease	rtxkg2	N1
+DOID:2651	obsolete intraductal papillomatosis	biolink:Disease	rtxkg2	N1
+DOID:3100	obsolete Ureaplasma urealyticum urethritis	biolink:Disease	rtxkg2	N1
+DOID:4263	obsolete drug-induced akathisia	biolink:Disease	rtxkg2	N1
+DOID:5575	obsolete delayed puberty	biolink:Disease	rtxkg2	N1
+DOID:7	disease of anatomical entity	biolink:Disease	rtxkg2	N1
+DOID:7517	obsolete central nervous system mixed germ cell tumor	biolink:Disease	rtxkg2	N1
+DRUGBANK:DB00033	Interferon gamma-1b	biolink:Drug	primekg	N2
+DRUGBANK:DB18715	Tolebrutinib	biolink:ChemicalEntity	rtxkg2	N2
+GTOPDB:10682	compound 8u [PMID: 31999451]	biolink:SmallMolecule	robokop	N2
+GTOPDB:12511	QR-6401	biolink:SmallMolecule	robokop	N2
+GTOPDB:12917	ABBV-3373	biolink:SmallMolecule	robokop	N2
+HGNC:3860	FRA16D	biolink:Gene	rtxkg2	N1
+HP:0000007	Autosomal recessive inheritance	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000045	Abnormal scrotum morphology	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000058	Abnormal labia morphology	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000062	Ambiguous genitalia	biolink:PhenotypicFeature	primekg;robokop	N1
+HP:0000142	Abnormal vagina morphology	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000253	Progressive microcephaly	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000286	Epicanthus	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000311	Round face	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000341	Narrow forehead	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000343	Long philtrum	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000347	Micrognathia	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000348	High forehead	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000463	Anteverted nares	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000470	Short neck	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000494	Downslanted palpebral fissures	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000504	Abnormality of vision	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000512	Abnormal electroretinogram	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000582	Upslanted palpebral fissure	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000592	Blue sclerae	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000640	Gaze-evoked nystagmus	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000708	Atypical behavior	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000718	Aggressive behavior	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000750	Delayed speech and language development	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000786	Primary amenorrhea	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000812	Abnormal internal genitalia	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000817	Reduced eye contact	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000823	Delayed puberty	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000837	Increased circulating gonadotropin level	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000855	insulin resistance	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000868	Decreased fertility in females	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0000969	edema	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0001188	Hand clenching	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0001257	Spasticity	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0001260	Dysarthria	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0001263	Global developmental delay	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0001265	Hyporeflexia	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0001268	Mental deterioration	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0001270	Motor delay	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0001273	Abnormal corpus callosum morphology	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0001288	Gait disturbance	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0001290	Generalized hypotonia	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0001315	Reduced tendon reflexes	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0001336	Myoclonus	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0001337	Tremor	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0001442	Typified by somatic mosaicism	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0001508	Failure to thrive	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0001510	Growth delay	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0001558	Decreased fetal movement	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0001608	Abnormality of the voice	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0001864	Clinodactyly of the 5th toe	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0001999	Abnormal facial shape	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0002007	Frontal bossing	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0002017	Nausea and vomiting	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0002059	Cerebral atrophy	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0002061	Lower limb spasticity	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0002063	Rigidity	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0002066	Gait ataxia	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0002069	Bilateral tonic-clonic seizure	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0002070	Limb ataxia	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0002079	Hypoplasia of the corpus callosum	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0002121	Generalized non-motor (absence) seizure	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0002188	Delayed CNS myelination	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0002215	Sparse axillary hair	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0002225	Sparse pubic hair	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0002266	Focal clonic seizure	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0002317	Unsteady gait	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0002353	EEG abnormality	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0002355	Difficulty walking	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0002375	Hypokinesia	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0002376	Developmental regression	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0002421	Poor head control	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0002509	Limb hypertonia	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0002514	Cerebral calcification	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0002521	Hypsarrhythmia	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0002716	Lymphadenopathy	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0002750	Delayed skeletal maturation	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0002839	Urinary bladder sphincter dysfunction	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0003429	CNS hypomyelination	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0003487	Babinski sign	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0003593	Infantile onset	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0003623	Neonatal onset	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0003828	Variable expressivity	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0004305	Involuntary movements	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0004322	Short stature	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0004324	Increased body weight	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0005484	Secondary microcephaly	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0006855	Cerebellar vermis atrophy	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0007334	Bilateral tonic-clonic seizure with focal onset	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0008187	Absence of secondary sex characteristics	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0008193	Primary gonadal insufficiency	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0008214	Decreased serum estradiol	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0008232	Elevated circulating follicle stimulating hormone level	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0008665	Clitoral hypertrophy	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0008726	Hypoplasia of the vagina	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0008730	Female external genitalia in individual with 46,XY karyotype	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0008734	Decreased testicular size	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0008736	Hypoplasia of penis	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0008872	Feeding difficulties in infancy	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0008936	Axial hypotonia	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0009879	Simplified gyral pattern	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0009909	Uplifted earlobe	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0010464	Streak ovary	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0010844	EEG with multifocal slow activity	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0010867	Dyssynergia	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0010880	Increased nuchal translucency	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0011167	Focal tonic seizure	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0011169	Generalized clonic seizure	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0011443	Abnormality of coordination	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0011463	Childhood onset	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0011968	Feeding difficulties	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0011969	Elevated circulating luteinizing hormone level	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0012244	Abnormal sex determination	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0012444	Brain atrophy	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0012447	Abnormal myelination	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0012547	Abnormal involuntary eye movements	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0012735	Cough	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0030680	Abnormal cardiovascular system morphology	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0032940	Dissociation	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0033258	Sudden unexpected death in epilepsy	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0033715	Hippocampal sclerosis	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0033725	Thin corpus callosum	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0040171	Decreased serum testosterone concentration	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0100660	Dyskinesia	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0100710	Impulsivity	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0100749	Chest pain	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0100779	Urogenital sinus anomaly	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+HP:0200134	Epileptic encephalopathy	biolink:PhenotypicFeature	primekg;rtxkg2;robokop	N1
+MESH:D005091	Exons	biolink:ChemicalEntity	rtxkg2	N1
+MESH:D007438	Introns	biolink:ChemicalEntity	rtxkg2	N1
+MESH:D010957	Plasmids	biolink:ChemicalEntity	rtxkg2	N1
+MESH:D011401	Promoter Regions, Genetic	biolink:ChemicalEntity	rtxkg2	N1
+MESH:D012045	Regulatory Sequences, Nucleic Acid	biolink:ChemicalEntity	rtxkg2	N1
+MESH:D018899	CpG Islands	biolink:ChemicalEntity	rtxkg2	N1
+MONDO:0000004	Adrenocortical insufficiency	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0000172	Muscular dystrophy-dystroglycanopathy, type b	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0000270	Lower respiratory tract disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0000328	Hyperphosphatemia	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0000411	electroclinical syndrome	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0000412	neonatal period electroclinical syndrome	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0000413	infancy electroclinical syndrome	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0000426	Autosomal dominant disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0000429	Autosomal genetic disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0000437	Cerebellar ataxia	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0000473	Arterial disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0000500	Tongue squamous cell carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0000514	Bone squamous cell carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0000594	Pervasive developmental disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0000612	Lymphatic system cancer	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0000621	Immune system cancer	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0000627	Benign endocrine neoplasm	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0000728	Ptosis	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0000777	Gastrointestinal allergy	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0000816	Abdominal obesity-metabolic syndrome	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0000870	Childhood acute lymphoblastic leukemia	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0001056	Gastric cancer	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0001071	Intellectual disability	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0001076	Glucose intolerance	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0001115	Familial polycythemia	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0001149	Microcephaly	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0001152	Amnestic disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0001176	Lens disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0001187	Urinary bladder cancer	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0001406	Peripheral nervous system neoplasm	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0001416	Female reproductive organ cancer	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0001422	Primary aldosteronism	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0001571	Gynecomastia disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0001811	Tetanic cataract	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0001827	White piedra	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0001856	Splenic artery aneurysm	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0001933	Endocrine pancreas disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0001962	Abnormality of glucagon secretion	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0001967	Gonadal dysgenesis	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002025	Psychiatric disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002041	Fungal infectious disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002051	Integumentary system disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002081	Musculoskeletal system disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002108	Thyroid cancer	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002118	Urinary system disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002125	status epilepticus	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002145	Disorder of sexual differentiation	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002149	Reproductive system cancer	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002204	Transient arthritis	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002229	Ovarian epithelial tumor	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002254	Syndromic disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002259	Gonadal disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002263	Female reproductive system disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002273	Plasma protein metabolism disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002340	Tactile epilepsy	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002356	Pancreas disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002363	Papilloma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002409	Auditory system disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002427	Cerebellar disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002467	Inner ear disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002516	Digestive system cancer	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002547	Nerve sheath neoplasm	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002602	Central nervous system disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002614	Bone inflammation disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002629	Bone osteosarcoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002643	Vestibular disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002657	Breast disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002697	Ovarian gonadoblastoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002698	Testicular gonadoblastoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002714	Central nervous system cancer	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002724	Mast cell neoplasm	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002752	Ovarian adenocarcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0002974	Cervical cancer	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0003036	Mucoepidermoid carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0003150	Male reproductive system disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0003210	Intrahepatic cholangiocarcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0003382	Eyelid disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0003443	Papillary urothelial neoplasm	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0003582	Hereditary breast ovarian cancer syndrome	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0003608	Optic atrophy	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0003620	Peripheral nervous system disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0003755	Urinary tract non-invasive transitional cell neoplasm	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0003778	Inborn error of immunity	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0003835	Gastric cardia adenocarcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0003847	Hereditary disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0003900	Connective tissue disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0003924	Adrenal cortex adenoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0003939	Muscle tissue disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0003982	Bilateral breast carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004069	Inborn mitochondrial metabolism disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004180	Benign urinary system neoplasm	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004184	Urethral disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004192	Urethra cancer	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004203	Female urethral cancer	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004335	Digestive system disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004518	Anterior urethra cancer	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004580	Retinal degeneration	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004596	Cor pulmonale	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004598	Acute cor pulmonale	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004658	Breast carcinoma in situ	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004708	Esophagus carcinoma in situ	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004736	Inborn disorder of amino acid metabolism	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004742	Primary cerebellar degeneration	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004782	Diabetes insipidus	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004843	Pathologic nystagmus	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004844	Oral mucosa leukoplakia	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004900	Peripheral vertigo	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004946	Hypoglycemia	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004950	Gastric carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004958	Oral cavity squamous cell carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004960	Monoclonal gammopathy	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004970	Adenocarcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004971	Adenoid cystic carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004972	Adenoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004975	Alzheimer disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004987	Urinary bladder neoplasm	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004989	Breast carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004992	Cancer	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004993	Carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0004995	Cardiovascular disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005002	Chronic obstructive pulmonary disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005005	Clear cell renal carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005008	Colorectal adenocarcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005009	Congestive heart failure	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005011	Crohn disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005017	Diffuse gastric adenocarcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005023	Ductal breast carcinoma in situ	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005027	Epilepsy	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005036	Gastric adenocarcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005039	Reproductive system disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005046	Immune system disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005059	Leukemia	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005066	Metabolic disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005070	Neoplasm	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005071	Nervous system disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005072	Neuroblastoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005085	Pterygium	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005086	Renal cell carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005087	Respiratory system disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005089	Sarcoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005093	Skin disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005095	Spondyloarthropathy	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005096	Squamous cell carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005129	Cataract	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005131	Cervical carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005140	Ovarian carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005151	Endocrine system disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005165	Benign neoplasm	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005178	Osteoarthritis	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005180	Parkinson disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005192	Exocrine pancreatic carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005233	Non-small cell lung carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005240	Kidney disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005258	Autism spectrum disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005260	Autism	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005267	Heart disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005271	Allergic disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005291	Brain aneurysm	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005294	Peripheral vascular disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005298	Osteoporosis	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005301	Multiple sclerosis	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005302	Attention deficit hyperactivity disorder, inattentive type	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005328	Eye disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005335	Colorectal neoplasm	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005336	Myopathy	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005345	Hypospadias	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005357	Creutzfeldt jacob disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005372	Male infertility	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005377	Nephrotic syndrome	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005381	Bone disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005385	Vascular disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005387	Primary ovarian failure	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005399	Venous thromboembolism	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005406	Gestational diabetes	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005411	Gallbladder cancer	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005438	Metastatic malignant neoplasm in the lymph nodes	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005486	Tooth agenesis	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005488	Adolescent idiopathic scoliosis	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005495	Adrenal gland disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005503	Developmental disorder of mental health	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005515	Oral cavity cancer	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005550	Infectious disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005558	Ovarian disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005559	Neurodegenerative disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005560	Brain disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005570	Hematologic disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005571	Polycythemia	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005575	Colorectal cancer	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005578	Arthritic joint disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005580	Esophageal squamous cell carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005590	Breast ductal adenocarcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005611	Bladder transitional cell carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005833	Lymphatic system disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005836	Male reproductive organ cancer	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005872	Nervous system cancer	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005910	Phagocyte bactericidal dysfunction	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0005942	Reye syndrome	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0006025	Autosomal recessive disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0006026	Urinary bladder disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0006058	Wilms tumor	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0006082	Anal squamous cell carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0006256	Invasive breast carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0006295	Malignant urinary system neoplasm	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0006316	Neuroblastic tumor	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0006335	Ovarian endometrioid adenocarcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0006427	Spindle cell melanoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0006474	Transitional cell carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0006816	Arthropathy	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0007012	Variant creutzfeldt-jakob disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0007088	Alzheimer disease type 1	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0007089	Alzheimer disease 2	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0007186	Gastroesophageal reflux disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0007254	Breast cancer	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0007256	Hepatocellular carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0007296	Spinocerebellar ataxia type 31	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0007298	Spinocerebellar ataxia type 29	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0007303	Cervical rib disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0007403	Inherited creutzfeldt-jakob disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0007450	Neurohypophyseal diabetes insipidus	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0007549	Generalized dominant dystrophic epidermolysis bullosa	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0007574	Spinocerebellar ataxia type 34	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0007576	Esophageal cancer	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0007648	Hereditary diffuse gastric adenocarcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0007774	Hyperreflexia	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0008119	Spinocerebellar ataxia type 1	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0008170	Ovarian cancer	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0008243	Pick disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0008315	Prostate cancer	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0008457	Spinocerebellar ataxia type 6	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0008458	Spinocerebellar ataxia type 2	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0008840	Ataxia telangiectasia	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0008903	Lung cancer	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0008919	Systemic primary carnitine deficiency disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0008943	Autosomal recessive spinocerebellar ataxia 2	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0009047	Cryptorchidism	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0009155	Eem syndrome	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0009693	Multiple myeloma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0009876	Isolated growth hormone deficiency type ia	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0009923	46,xy disorder of sex development due to 5-alpha-reductase 2 deficiency	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0010062	Spinocerebellar ataxia-dysmorphism syndrome	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0010065	Spinocerebellar degeneration with slow eye movements	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0010150	Head and neck squamous cell carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0010246	Developmental and epileptic encephalopathy, 9	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0010375	Developmental and epileptic encephalopathy, 8	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0010396	Developmental and epileptic encephalopathy, 2	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0010422	Alzheimer disease 16	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0010472	Developmental and epileptic encephalopathy, 36	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0010481	Angioedema	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0010632	Developmental and epileptic encephalopathy, 1	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0010765	46,xy complete gonadal dysgenesis	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0010768	Gonadoblastoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0010847	Spinocerebellar ataxia type 4	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0010848	Spinocerebellar ataxia type 5	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0010989	Mayer-rokitansky-küster-hauser syndrome type 2	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0011122	Obesity disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0011194	Alzheimer disease 5	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0011330	Spinocerebellar ataxia type 10	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0011366	Ovarian germ cell tumor	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0011401	Alzheimer disease without neurofibrillary tangles	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0011429	Juvenile idiopathic arthritis	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0011439	Spinocerebellar ataxia type 12	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0011464	Spinocerebellar ataxia type 11	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0011529	Spinocerebellar ataxia type 13	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0011540	Spinocerebellar ataxia type 14	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0011561	Alzheimer disease 6	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0011647	Alzheimer disease 7	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0011664	Immunodeficiency due to cd25 deficiency	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0011694	Spinocerebellar ataxia type 15/16	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0011698	Glycine n-methyltransferase deficiency	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0011743	Alzheimer disease 4	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0011777	Alzheimer disease 8	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0011781	Spinocerebellar ataxia type 17	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0011819	Spinocerebellar ataxia type 19/22	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0011833	Spinocerebellar ataxia type 21	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0011834	Spinocerebellar ataxia type 18	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0011913	Alzheimer disease 3	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0011962	Endometrial cancer	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0011996	Chronic myelogenous leukemia, bcr-abl1 positive	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0012098	Spinocerebellar ataxia type 20	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0012103	Spinocerebellar ataxia type 25	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0012115	scoliosis, isolated, susceptibility to, 3	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0012116	Spinocerebellar ataxia type 8	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0012153	Alzheimer disease 9	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0012235	Autosomal recessive spinocerebellar ataxia 7	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0012245	Developmental and epileptic encephalopathy, 3	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0012246	Spinocerebellar ataxia type 26	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0012247	Spinocerebellar ataxia type 27	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0012321	Alzheimer disease 10	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0012344	Alzheimer disease 11	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0012449	Spinocerebellar ataxia type 23	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0012450	Spinocerebellar ataxia type 28	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0012609	Alzheimer disease 12	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0012630	Alzheimer disease 13	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0012631	Alzheimer disease 14	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0012812	Developmental and epileptic encephalopathy, 4	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0013056	Developmental and epileptic encephalopathy, 39	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0013156	Muscular dystrophy-dystroglycanopathy (congenital without intellectual disability), type b4	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0013241	Spinocerebellar ataxia type 30	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0013277	Developmental and epileptic encephalopathy, 5	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0013282	Alpha 1-antitrypsin deficiency	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0013387	Developmental and epileptic encephalopathy, 7	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0013388	Developmental and epileptic encephalopathy, 11	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0013389	Developmental and epileptic encephalopathy, 12	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0013392	Autosomal recessive spinocerebellar ataxia 10	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0013454	Leber congenital amaurosis 11	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0013485	Spinocerebellar ataxia type 35	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0013486	Spinocerebellar ataxia type 32	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0013594	Spinocerebellar ataxia type 36	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0013645	Autosomal recessive spinocerebellar ataxia 11	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0013687	Autosomal recessive spinocerebellar ataxia 12	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0013801	Developmental and epileptic encephalopathy, 13	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0013885	Malan overgrowth syndrome	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0013905	Autosomal recessive spinocerebellar ataxia 13	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0013989	Developmental and epileptic encephalopathy, 14	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014003	Developmental and epileptic encephalopathy, 15	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014036	Alzheimer disease 17	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014133	Developmental and epileptic encephalopathy, 16	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014159	Autosomal recessive spinocerebellar ataxia 14	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014199	Developmental and epileptic encephalopathy, 17	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014201	Developmental and epileptic encephalopathy, 18	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014265	Alzheimer disease 18	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014311	Autosomal recessive spinocerebellar ataxia 15	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014316	Alzheimer disease 19	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014328	Developmental and epileptic encephalopathy, 19	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014339	Autosomal recessive spinocerebellar ataxia 16	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014360	Developmental and epileptic encephalopathy, 21	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014371	Developmental and epileptic encephalopathy, 23	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014377	Developmental and epileptic encephalopathy, 24	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014392	Developmental and epileptic encephalopathy, 25	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014410	Spinocerebellar ataxia type 37	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014417	Spinocerebellar ataxia type 38	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014475	Spinocerebellar ataxia type 40	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014477	Developmental and epileptic encephalopathy, 26	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014503	Autosomal recessive spinocerebellar ataxia 17	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014505	Developmental and epileptic encephalopathy, 27	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014530	Autosomal recessive spinocerebellar ataxia 18	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014533	Developmental and epileptic encephalopathy, 28	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014593	Developmental and epileptic encephalopathy, 29	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014595	Developmental and epileptic encephalopathy, 30	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014598	Developmental and epileptic encephalopathy, 31a	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014601	Autosomal recessive spinocerebellar ataxia 20	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014607	Developmental and epileptic encephalopathy, 32	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014625	Developmental and epileptic encephalopathy, 33	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014626	Spinocerebellar ataxia type 41	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014647	Developmental and epileptic encephalopathy, 50	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014718	Developmental and epileptic encephalopathy, 34	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014719	Developmental and epileptic encephalopathy, 35	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014776	Spinocerebellar ataxia type 42	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014845	Spinocerebellar ataxia, autosomal recessive 22	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014859	Developmental and epileptic encephalopathy, 37	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014867	Spinocerebellar ataxia 43	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014868	Developmental and epileptic encephalopathy, 38	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014895	Developmental and epileptic encephalopathy, 40	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014916	Developmental and epileptic encephalopathy, 41	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014917	Developmental and epileptic encephalopathy, 42	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014921	Developmental and epileptic encephalopathy, 43	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014933	Developmental and epileptic encephalopathy, 44	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014934	Spinocerebellar ataxia, autosomal recessive 24	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014942	Developmental and epileptic encephalopathy, 45	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014947	Developmental and epileptic encephalopathy, 46	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0014949	Developmental and epileptic encephalopathy, 47	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0015000	Developmental and epileptic encephalopathy, 48	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0015002	Developmental and epileptic encephalopathy, 49	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0015025	Developmental and epileptic encephalopathy, 51	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0015074	Thyroid tumor	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0015075	Thyroid gland carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0015131	Combined immunodeficiency	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0015140	Early-onset autosomal dominant alzheimer disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0015459	Nasopharyngeal carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0015790	Central diabetes insipidus	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0015796	Acute lung injury	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0016163	Spinocerebellar ataxia 7	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0016266	Squamous cell carcinoma of the corpus uteri	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0016267	Undifferentiated carcinoma of the corpus uteri	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0016419	Hereditary breast carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0016642	Meningioma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0016674	46,xy partial gonadal dysgenesis	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0016757	Malignant triton tumor	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0016809	Spinocerebellar ataxia with epilepsy	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0017768	Reflex epilepsy	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0017771	Mayer-rokitansky-kuster-hauser syndrome	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0018097	Infantile spasms	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0018177	Glioblastoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0018184	Gastric linitis plastica	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0018276	Muscular dystrophy-dystroglycanopathy	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0018305	Chronic granulomatous disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0018364	Malignant epithelial tumor of ovary	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0018846	Penile agenesis	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0018874	Acute myeloid leukemia	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0019052	Inborn errors of metabolism	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0019086	Carcinoma of esophagus	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0019087	Cholangiocarcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0019214	Inborn carbohydrate metabolic disorder	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0019349	Sotos syndrome	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0019433	Oligoarticular juvenile idiopathic arthritis	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0019434	Systemic-onset juvenile idiopathic arthritis	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0019436	Psoriasis-related juvenile idiopathic arthritis	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0019623	Hereditary angioedema	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0019781	Astrocytoma (excluding glioblastoma)	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0019792	Autosomal dominant cerebellar ataxia type i	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0019793	Autosomal dominant cerebellar ataxia type iii	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0019794	Autosomal dominant cerebellar ataxia type iv	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0019950	Congenital muscular dystrophy	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0020121	Muscular dystrophy	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0020380	Autosomal dominant cerebellar ataxia	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0020665	High grade malignant neoplasm	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0021040	Pancreatic neoplasm	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0021042	Glioma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0021063	Malignant colon neoplasm	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0021066	Urinary system neoplasm	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0021085	Gastric neoplasm	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0021100	Breast neoplasm	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0021245	Oral cavity neoplasm	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0021259	Prostate neoplasm	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0021315	Malignant tumor of nasopharynx	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0021355	Neoplasm of esophagus	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0021459	Benign neoplasm of esophagus	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0022687	Cerebellar degeneration	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0024268	Superficial mycosis	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0024331	Colorectal carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0024879	Metastatic carcinoma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0024882	Secondary neoplasm	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0025353	Developmental and epileptic encephalopathy, 90	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0029138	Developmental and epileptic encephalopathy, 67	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0030054	Developmental and epileptic encephalopathy, 86	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0030059	Developmental and epileptic encephalopathy, 87	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0030066	Granulomatous disease, chronic, autosomal recessive, 5	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0030072	Developmental and epileptic encephalopathy, 88	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0030856	Developmental and epileptic encephalopathy 89	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0031007	Spondyloepiphyseal dysplasia, sensorineural hearing loss, impaired intellectual development, and leber congenital amaurosis	biolink:Disease	rtxkg2;robokop	N1
+MONDO:0032526	Spinocerebellar ataxia 48	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0032598	Developmental and epileptic encephalopathy, 68	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0032657	Developmental and epileptic encephalopathy, 69	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0032663	Developmental and epileptic encephalopathy, 70	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0032678	Developmental and epileptic encephalopathy, 71	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0032706	Spinocerebellar ataxia, autosomal recessive 27	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0032710	Developmental and epileptic encephalopathy, 72	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0032725	Developmental and epileptic encephalopathy, 74	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0032752	Developmental and epileptic encephalopathy, 75	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0032768	Developmental and epileptic encephalopathy, 76	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0032808	Developmental and epileptic encephalopathy, 77	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0032812	Developmental and epileptic encephalopathy, 78	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0032813	Developmental and epileptic encephalopathy, 79	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0032822	Developmental and epileptic encephalopathy, 80	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0032831	Pontocerebellar hypoplasia, type 13	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0032858	Developmental and epileptic encephalopathy, 81	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0032880	Developmental and epileptic encephalopathy, 82	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0032895	Developmental and epileptic encephalopathy, 83	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0032918	Developmental and epileptic encephalopathy, 84	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0032920	Juvenile arthritis due to defect in lacc1	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0032923	Spinocerebellar ataxia, autosomal recessive 28	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0033115	Spinocerebellar ataxia, autosomal recessive 25	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0033116	Spinocerebellar ataxia, autosomal recessive 26	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0033361	Developmental and epileptic encephalopathy, 52	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0033362	Developmental and epileptic encephalopathy, 53	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0033363	Developmental and epileptic encephalopathy, 54	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0033364	Developmental and epileptic encephalopathy, 55	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0033365	Developmental and epileptic encephalopathy, 56	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0033366	Developmental and epileptic encephalopathy, 57	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0033367	Developmental and epileptic encephalopathy, 58	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0033368	Developmental and epileptic encephalopathy, 59	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0033369	Developmental and epileptic encephalopathy, 60	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0033370	Developmental and epileptic encephalopathy, 61	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0033371	Developmental and epileptic encephalopathy, 62	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0033372	Developmental and epileptic encephalopathy, 63	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0033373	Developmental and epileptic encephalopathy, 64	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0033374	Developmental and epileptic encephalopathy, 65	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0033479	Spinocerebellar ataxia 44	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0033480	Spinocerebellar ataxia 45	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0033481	Spinocerebellar ataxia 46	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0033482	Spinocerebellar ataxia 47	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0033560	Mitochondrial complex 1 deficiency, nuclear type 35	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0034106	Developmental and epileptic encephalopathy, 73	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0043377	Juvenile spondyloarthropathy	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0044881	Hematopoietic and lymphoid cell neoplasm	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0054801	Erythrocytosis, familial, 6	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0054845	Developmental and epileptic encephalopathy, 66	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0100036	variable age onset epilepsy	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0100062	Genetic developmental and epileptic encephalopathy	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0100079	Developmental and epileptic encephalopathy, 6a	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0100087	Familial alzheimer disease	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0100130	Adult acute respiratory distress syndrome	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0100133	Mitochondrial complex i deficiency	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0100309	Hereditary ataxia	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0100342	Malignant glioma	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0100459	Azoospermia	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0700092	Neurodevelopmental disorder	biolink:Disease	rtxkg2;robokop	N1
+MONDO:0700226	Food allergy	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:0850339	Posterior fossa ependymoma	biolink:Disease	rtxkg2;robokop	N1
+MONDO:8000015	46,xy sex reversal 11	biolink:Disease	primekg;rtxkg2;robokop	N1
+MONDO:8000018	Benign paroxysmal positional vertigo	biolink:Disease	rtxkg2;robokop	N1
+NCBIGene:10007	GNPDA1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:10009	ZBTB33 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:10020	GNE	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:10046	MAMLD1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:100528019	HSPB2-C11orf52	biolink:Gene	primekg;rtxkg2	N1
+NCBIGene:100653049	LOC100653049	biolink:Protein	rtxkg2;robokop	N1
+NCBIGene:10067	SCAMP3 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:10111	RAD50 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:10152	ABI2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:10153	CEBPZ	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:10155	TRIM28 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:1017	CDK2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:10188	TNK2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:1019	CDK4	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:101927280	LINC02208	biolink:Gene	rtxkg2;robokop	N1
+NCBIGene:10291	SF3A1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:10322	SMYD5 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:10342	TFG protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:10463	SLC30A9 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:10476	ATP5PD protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:10493	VAT1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:10524	KAT5 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:10618	TGOLN2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:10657	KHDRBS1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:10695	CNPY3	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:10712	ENTREP3	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:1080	CFTR protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:10817	FRS3	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:10857	PGRMC1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:10888	GPR83	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:10915	TCERG1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:11030	RBPMS protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:11051	NUDT21	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:11052	CPSF6	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:11065	UBE2C protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:11100	HNRNPUL1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:11196	SEC23IP protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:11197	WIF1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:11200	CHEK2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:11334	TUSC2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:113730	KLHDC7B protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:115482696	H3P23	biolink:Gene	rtxkg2;robokop	N1
+NCBIGene:116159	CYYR1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:116449	CLNK	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:117159	DCD	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:12	SERPINA3 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:131920	TMEM207 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:134285	TMEM171	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:13543	Dvl2	biolink:Protein	rtxkg2;robokop	N1
+NCBIGene:13869	Erbb4	biolink:Protein	rtxkg2;robokop	N1
+NCBIGene:1398	CRK protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:140691	TRIM69 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:1460	CSNK2B	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:147179	WIPF2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:1485	CTAG1B	biolink:Gene	primekg;rtxkg2;robokop	N1
+NCBIGene:149473	CCDC24	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:152	ADRA2C protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:154796	AMOT	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:158297	SAXO1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:16	AARS1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:160	AP2A1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:161742	SPRED1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:162461	TMEM92	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:167826	OLIG3	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:1738	DLD	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:178	AGL	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:1808	DPYSL2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:1822	ATN1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:1855	DVL1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:1856	DVL2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:1857	DVL3	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:1869	E2F1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:1870	E2F2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:19	ABCA1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:2001	ELF5 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:200350	FOXD4L1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:200523	TEX37 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:2048	EPHB2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:2064	ERBB2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:2066	ERBB4	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:2113	P54	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:2150	F2RL1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:2162	F13A1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:2185	PTK2B	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:2193	FARSA	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:219438	OR5D18	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:219988	PATL1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:220004	SAXO4	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:2232	FDXR	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:2272	FHIT	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:22794	CASC3 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:22827	PUF60	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:22881	ANKRD6 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:22908	SACM1L protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:2299	FOXI1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:23095	KIF1B protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:23111	SPART protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:23149	FCHO1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:23165	NUP205	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:23191	CYFIP1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:23212	RRS1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:23248	RPRD2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:23271	CAMSAP2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:23300	ATMIN protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:23307	FKBP15 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:23314	SATB2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:23335	WDR7	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:23368	PPP1R13B protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:23378	RRP8	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:23435	TARDBP protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:23450	SF3B3	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:23451	SF3B1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:23536	ADAT1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:23558	WBP2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:23559	WBP1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:23598	PATZ1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:23623	RUSC1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:23636	NUP62	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:23788	MTCH2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:246100	CTAG1A	biolink:Gene	primekg;rtxkg2;robokop	N1
+NCBIGene:2475	MTOR protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:2521	FUS protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:2523	FUT1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:254187	TSGA10IP	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:2623	GATA1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:2624	GATA2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:26284	ERAL1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:26505	CNNM3 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:26520	TIMM9	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:26528	DAZAP1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:2669	GEM protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:2670	GFAP protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:26872	STEAP1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:26952	SMR3A	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:26986	PABPC1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:26994	RNF11	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:27	ABL2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:27033	ZBTB32 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:27095	TRAPPC3 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:27287	VENTX	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:2736	GLI2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:2745	GLRX protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:2801	GOLGA2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:283149	BCL9L protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:284325	ACTMAP	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:2896	GRN protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:28972	SPCS1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:2908	NR3C1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:29082	CHMP4A	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:29083	GTPBP8	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:2932	GSK3B protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:2965	GTF2H1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:29796	UQCR10	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:29894	CPSF1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:3028	HSD17B10	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:3030	HADHA	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:3065	HDAC1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:30849	PIK3R4	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:3091	HIF1A protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:311	ANXA11	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:3160775	VP40	biolink:Protein	rtxkg2;robokop	N1
+NCBIGene:3170	FOXA2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:3190	HNRNPK protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:3198	HOXA1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:3224	HOXC8 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:323	APBB2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:3290	HSD11B1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:3312	HSPA8 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:3315	HSPB1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:3316	HSPB2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:337880	KRTAP11-1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:340359	KLHL38	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:3433	IFIT2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:3479	IGF1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:351	APP protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:3613	IMPA2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:367	AR protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:3725	JUN protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:3727	JunD protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:376132	LRRC10	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:3777	KCNK3	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:3783720	BNLF2a	biolink:Protein	rtxkg2;robokop	N1
+NCBIGene:3850	KRT3 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:387509	GPR153	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:388324	INCA1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:388633	LDLRAD1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:39	ACAT2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:392	ARHGAP1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:3927	LASP1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:399687	MYO18A protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:399947	C11orf87	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:4000	lamin C	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:402682	UFSP1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:4037	LRP3 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:4069	lysozyme C, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:4088	SMAD3 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:4089	SMAD4 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:4137	MAPT	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:414236	C10orf55	biolink:Gene	primekg;rtxkg2;robokop	N1
+NCBIGene:4193	MDM2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:4312	MMP1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:442858	CDH1	biolink:Protein	robokop	N1
+NCBIGene:4591	TRIM37 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:4644	MYO5A protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:4680	CEACAM6 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:4692	NDN protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:472	ATM	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:4729	NDUFV2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:473	RERE protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:4738	NEDD8 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:4739	NEDD9	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:4776	NFATC4 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:4794	NFKBIE protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:4831	NME2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:4846	NOS3	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:4860	PNP	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:487	ATP2A1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:4904	YBX1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:4961478	SCAF_HHV8P Capsid scaffolding protein (sprot)	biolink:Protein	rtxkg2;robokop	N1
+NCBIGene:4961482	ORF17.5	biolink:Protein	robokop	N1
+NCBIGene:5013	OTX1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5018	OXA1L	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5083	PAX9 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:50943	FOXP3 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:51024	FIS1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:51031	GLOD4 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5104	SERPINA5 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:51081	MRPS7 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:51108	METTL9	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5111	PCNA	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:51164	DCTN4 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:51246	SHISA5 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:51292	GMPR2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:51316	PLAC8	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5134	PDCD2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:51382	ATP6V1D	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:515	ATP5PB	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:51529	ANAPC11	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:51545	ZNF581	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5156	PDGFRA	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:51692	CPSF3 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5175	PECAM1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:51778	MYOZ2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5223	PGAM1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5241	PGR	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5265	SERPINA1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5290	PIK3CA	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5308	PITX2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:53358	SHC3 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:53981	CPSF2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:54210	TREM1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5430	POLR2A	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5431	POLR2B	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:54438	GFOD1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5478	PPIA protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5479	PPIB	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:55011	PIH1D1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:55048	VPS37C protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:55210	ATAD3A protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:553115	PEF1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:55324	ABCF3 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:55339	WDR33	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:55359	STYK1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:55527	FEM1A protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:55620	STAP2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:55699	IARS2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:55731	FAM222B	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5578	PRKCA	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:55837	EAPP protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:55885	LMO3	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5594	MAPK1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5599	MAPK8	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5604	MAP2K1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5613	PRKX	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5631	PRPS1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5653	KLK6 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5684	PSMA3 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:56898	BDH2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5696	PSMB8	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:56997	COQ8A protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:57048	PLSCR3 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5715	PSMD9	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5720	PSME1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:57338	JPH3 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:57348	TTYH1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:57414	RHBDD2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:57561	ARRDC3 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5770	PTPN1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:581	BAX protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:58190	CTDSP1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:58524	DMRT3 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:58529	MYOZ1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5863	RGL2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5920	PLAAT4 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:5932	RBBP8 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:596	BCL2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:60314	MYG1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:607	BCL9 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:6182	MRPL12 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:6192	RPS4Y1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:63898	SH2D4A	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:63978	PRDM14 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:6421	SFPQ	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:64216	TFB2M protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:64518	TEKT3	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:64689	GORASP1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:64943	NT5DC2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:6513	SLC2A1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:6565	SLC15A2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:6599	SMARCC1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:6615	SNAI1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:6631	SNRPC protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:6667	SP1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:6677	SPAM1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:6714	SRC	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:672	BRCA1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:6729	SRP54	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:6772	STAT1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:6774	STAT3 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:6793	STK10 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:6850	SYK protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:688	KLF5	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:7015	TERT protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:7018	TF	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:7020	TFAP2A protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:7022	TFAP2C	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:7086	TKT	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:7105	TSPAN6 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:7124	TNF protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:7157	TP53 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:716	C1S	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:7161	TP73	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:7273	TTN protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:7296	TXNRD1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:7298	TYMS protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:7314	UBB protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:7316	UBC	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:7358	UGDH protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:7422	VEGFA protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:7430	EZR	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:7431	VIM protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:7466	WFS1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:753	LDLRAD4 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:7532	YWHAG	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:7545	ZIC1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:7681	MKRN3 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:7694	ZNF135 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:7716	VEZF1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:780	DDR1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:7846	TUBA1A protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:7866	IFRD2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:79670	TUT7	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:79850	TLCD3A protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:79869	CPSF7	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:79962	DNAJC22	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:80256	ATOSB	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:80288	Bcl9l	biolink:Protein	rtxkg2;robokop	N1
+NCBIGene:80349	SKIC8	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:8050	PDHX	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:80714	PBX4	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:81552	VOPP1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:81608	FIP1L1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:81857	MED25 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:8189	SYMPK protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:821	CANX protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:83451	ABHD11 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:83478	ARHGAP24 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:83640	RAMAC protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:83719	YPEL3	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:83737	ITCH	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:83990	BRIP1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:84069	PLEKHN1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:84080	ENKD1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:84260	TCHP protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:843	CASP10 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:84330	ZNF414 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:8436	CAVIN2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:8445	DYRK2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:84662	GLIS2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:85236	H2BC12	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:85409	NKD2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:8574	AKR7A2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:860	RUNX2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:8626	TP63	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:8692	HYAL2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:8835	SOCS2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:8841	HDAC3	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:8842	PROM1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:8851	CDK5R1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:8878	SQSTM1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:8900	CCNA1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:9053	MAP7 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:9119	KRT75	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:9185	REPS2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:920947	VP40	biolink:Protein	rtxkg2;robokop	N1
+NCBIGene:9247	GCM2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:9260	PDLIM7 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:9276	COPB2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:9367	RAB9A protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:9375	TM9SF2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:9413	ENTREP1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:95	ACY1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:9516	LITAF protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:9518	GDF15	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:9531	BAG3 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:958	CD40	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:9586	CREB5	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:9611	NCOR1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:9612	NCOR2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:969	CD69	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:9693	RAPGEF2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:9709	HERPUD1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:9761	MLEC	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:9802	DAZAP2 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:9869	SETDB1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:991	CDC20 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:9926	LPGAT1	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:998	CDC42 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:999	CDH1 protein, human	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCBIGene:9993	DGCR2	biolink:Protein	primekg;rtxkg2;robokop	N1
+NCIT:C107587	Failure to Thrive	biolink:PhenotypicFeature	rtxkg2;robokop	N1
+NCIT:C143854	Spasticity, CTCAE	biolink:PhenotypicFeature	rtxkg2;robokop	N1
+NCIT:C146775	Nystagmus, CTCAE 5.0	biolink:PhenotypicFeature	rtxkg2;robokop	N1
+NCIT:C165206	Responsive Disease	biolink:PhenotypicFeature	rtxkg2;robokop	N1
+NCIT:C3137	Inflammation	biolink:PhenotypicFeature	rtxkg2;robokop	N1
+NCIT:C35041	Stress	biolink:PhenotypicFeature	rtxkg2;robokop	N1
+NCIT:C3824	Lesion	biolink:PhenotypicFeature	rtxkg2;robokop	N1
+NCIT:C42083	Neuronal Differentiation	biolink:PhenotypicFeature	rtxkg2;robokop	N1
+NCIT:C53458	Sign	biolink:PhenotypicFeature	rtxkg2;robokop	N1
+NCIT:C54685	Tissue Adhesion	biolink:PhenotypicFeature	rtxkg2;robokop	N1
+NCIT:C55745	Short Stature, CTCAE	biolink:PhenotypicFeature	rtxkg2;robokop	N1
+NCIT:C55857	Nystagmus, CTCAE 3.0	biolink:PhenotypicFeature	rtxkg2;robokop	N1
+OMIM:608812	Colorectal cancer, susceptibility to, 1 related phenotypic feature	biolink:Disease	rtxkg2;robokop	N1
+OMIM:612229	Colorectal cancer, susceptibility to, 3 related phenotypic feature	biolink:Disease	rtxkg2;robokop	N1
+OMIM:612591	Colorectal cancer, susceptibility to, 10 related phenotypic feature	biolink:Disease	rtxkg2;robokop	N1
+OMIM:615083	Colorectal cancer, susceptibility to, 12 related phenotypic feature	biolink:Disease	rtxkg2;robokop	N1
+PR:000001036	WW domain-containing oxidoreductase	biolink:Protein	rtxkg2;robokop	N1
+PR:000029067	Homo sapiens protein	biolink:Protein	robokop	N1
+PR:000046076	WW domain-containing oxidoreductase phosphorylated 1 (human)	biolink:Protein	rtxkg2;robokop	N1
+PUBCHEM.COMPOUND:10344820	Unii-Y4069R7J86	biolink:SmallMolecule	rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:118612873	Gilmelisib	biolink:SmallMolecule	rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:121486665	compound 4g [PMID: 2680437]	biolink:SmallMolecule	robokop	N2
+PUBCHEM.COMPOUND:124037380	GSK143	biolink:SmallMolecule	robokop	N2
+PUBCHEM.COMPOUND:124037381	compound 36 [PMID: 21958547]	biolink:SmallMolecule	robokop	N2
+PUBCHEM.COMPOUND:126535127	Ulecaciclib	biolink:SmallMolecule	rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:1285940	C646	biolink:SmallMolecule	rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:129202507	Crozbaciclib	biolink:SmallMolecule	rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:134558471	Milrebrutinib	biolink:SmallMolecule	rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:134813913	kinase inhibitor 2 [PMID: 30199702]	biolink:SmallMolecule	robokop	N2
+PUBCHEM.COMPOUND:135565596	Copanlisib	biolink:SmallMolecule	rtxkg2	N2
+PUBCHEM.COMPOUND:136189563	CRT 0066101	biolink:SmallMolecule	rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:137321148	GSK2646264	biolink:SmallMolecule	robokop	N2
+PUBCHEM.COMPOUND:137321152	STAT3 inhibitor 8q	biolink:SmallMolecule	rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:139390026	Inixaciclib	biolink:SmallMolecule	rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:139593561	BSJ-03-204	biolink:SmallMolecule	robokop	N2
+PUBCHEM.COMPOUND:139593562	BSJ-04-132	biolink:SmallMolecule	robokop	N2
+PUBCHEM.COMPOUND:139600321	[[2-[[(5S,8S,10aR)-8-[[(2S)-5-amino-1-(benzhydrylamino)-1,5-dioxopentan-2-yl]carbamoyl]-3-[8-[2-(2,6-dioxopiperidin-3-yl)-1-oxo-3H-isoindol-4-yl]oct-7-ynoyl]-6-oxo-1,2,4,5,8,9,10,10a-octahydropyrrolo[1,2-a][1,5]diazocin-5-yl]carbamoyl]-1H-indol-5-yl]-difluoromethyl]phosphonic acid	biolink:SmallMolecule	rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:146277756	tibremciclib	biolink:SmallMolecule	robokop	N2
+PUBCHEM.COMPOUND:154616422	Tagtociclib	biolink:SmallMolecule	rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:156587563	CP-10	biolink:SmallMolecule	robokop	N2
+PUBCHEM.COMPOUND:166532451	STX-478	biolink:SmallMolecule	robokop	N2
+PUBCHEM.COMPOUND:16757525	(7S)-2-(2-aminopyrimidin-4-yl)-7-(2-fluoroethyl)-1,5,6,7-tetrahydro-4H-pyrrolo[3,2-c]pyridin-4-one	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:16760286	Alsterpaullone, 2-Cyanoethyl	biolink:SmallMolecule	rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:167993665	compound 30 [PMID: 37057760]	biolink:SmallMolecule	robokop	N2
+PUBCHEM.COMPOUND:169422744	compound 25ap [PMID: 37796543]	biolink:SmallMolecule	robokop	N2
+PUBCHEM.COMPOUND:197004	1,2-Di-(4-sulfamidophenyl)-4-butylpyrazolidine-3,5-dione	biolink:SmallMolecule	rtxkg2	N1
+PUBCHEM.COMPOUND:25058139	GSK866	biolink:SmallMolecule	robokop	N2
+PUBCHEM.COMPOUND:251717	Aminotransferase, alanine	biolink:SmallMolecule	rtxkg2	N1
+PUBCHEM.COMPOUND:25232708	SRT1720	biolink:MolecularMixture	rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:339916	6-Phenyl-5H-pyrrolo[2,3-b]pyrazine	biolink:SmallMolecule	robokop	N2
+PUBCHEM.COMPOUND:3707	Indirubin-3'-monoxime	biolink:SmallMolecule	rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:5288600	IC 261	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:53246941	(5R)-N-[1-[3-(dimethylamino)propyl]benzimidazol-2-yl]-5-methyl-1-oxo-2,3,4,5-tetrahydro-[1,4]diazepino[1,2-a]indole-8-carboxamide	biolink:SmallMolecule	rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:54596718	APR19	biolink:SmallMolecule	robokop	N2
+PUBCHEM.COMPOUND:54671203	Doxycycline	biolink:Drug	primekg;rtxkg2;robokop	N1
+PUBCHEM.COMPOUND:54761306	Ceralasertib	biolink:SmallMolecule	rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:57991377	(2r)-N-[4-[2-[(4-Morpholin-4-Ylphenyl)amino]pyrimidin-4-Yl]phenyl]pyrrolidine-2-Carboxamide	biolink:SmallMolecule	rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:6620134	Quinostatin	biolink:SmallMolecule	rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:66550324	Miricorilant	biolink:SmallMolecule	rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:67041274	Velsecorat	biolink:SmallMolecule	rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:71113742	Sovleplenib	biolink:SmallMolecule	rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:71291068	CPI203	biolink:SmallMolecule	rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:72164440	compound 35 [PMID: 23916259]	biolink:SmallMolecule	robokop	N2
+PUBCHEM.COMPOUND:72201027	Sgc-cbp30	biolink:SmallMolecule	rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:72709209	(S)-1-((5-chloropyridin-3-yl)methyl)-8-((R)-3-methylmorpholino)-2-(trifluoromethyl)-3,4-dihydro-1H-pyrimido[1,2-a]pyrimidin-6(2H)-one	biolink:SmallMolecule	rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:87056204	Sofnobrutinib	biolink:SmallMolecule	rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:91820602	Hyaluronoglucosaminidase	biolink:Drug	rtxkg2;robokop	N1
+PUBCHEM.COMPOUND:9549296	Syk Inhibitor II	biolink:SmallMolecule	rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:9803433	MK-0752	biolink:SmallMolecule	rtxkg2;robokop	N2
+PUBCHEM.COMPOUND:9824013	(11R,13S,17S)-11-(1,3-benzodioxol-5-yl)-17-hydroxy-13-methyl-17-prop-1-ynyl-1,2,6,7,8,11,12,14,15,16-decahydrocyclopenta[a]phenanthren-3-one	biolink:SmallMolecule	rtxkg2	N2
+PUBCHEM.COMPOUND:9952923	Riviciclib (P276-00)	biolink:SmallMolecule	rtxkg2	N2
+SO:0000704	gene	biolink:Gene	rtxkg2	N1
+UMLS:C0002520	Amino Acids	biolink:Protein	primekg;rtxkg2	N1
+UMLS:C0003250	Antibodies, Monoclonal	biolink:Protein	rtxkg2	N1
+UMLS:C0004403	Autosome Abnormalities	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0005456	Binding Sites	biolink:Protein	rtxkg2	N1
+UMLS:C0005890	Body Height	biolink:PhenotypicFeature	rtxkg2	N1
+UMLS:C0007090	Carcinogens	biolink:ChemicalEntity	rtxkg2	N1
+UMLS:C0007600	Cultured Cell Line	biolink:Cell	rtxkg2;robokop	N1
+UMLS:C0007621	Neoplastic Cell Transformation	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0007994	chemically induced	biolink:Disease	rtxkg2	N1
+UMLS:C0008628	Chromosome Deletion	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0009502	Complement C1q	biolink:Protein	rtxkg2	N1
+UMLS:C0011265	Presenile dementia	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0012860	DNA Damage	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0013227	Pharmaceutical Preparations	biolink:Drug	rtxkg2	N1
+UMLS:C0015950	Fetal Proteins	biolink:Protein	rtxkg2	N1
+UMLS:C0016030	Fibroblasts	biolink:Cell	rtxkg2;robokop	N1
+UMLS:C0016055	Fibronectins	biolink:Protein	rtxkg2	N1
+UMLS:C0016736	Frostbite	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0016904	gamma-aminobutyric acid	biolink:Protein	rtxkg2	N1
+UMLS:C0017337	Genes	biolink:Gene	rtxkg2	N1
+UMLS:C0017428	Genome	biolink:Gene	rtxkg2	N1
+UMLS:C0017429	Genome, Human	biolink:Gene	rtxkg2	N1
+UMLS:C0017471	Germ Cells	biolink:Cell	rtxkg2;robokop	N1
+UMLS:C0018873	HeLa Cells	biolink:Cell	rtxkg2;robokop	N1
+UMLS:C0022457	K-ras Oncogene	biolink:Gene	rtxkg2	N1
+UMLS:C0023688	Ligands	biolink:ChemicalEntity	rtxkg2	N1
+UMLS:C0023821	High Density Lipoproteins	biolink:Protein	rtxkg2	N1
+UMLS:C0024232	Lymphatic Metastasis	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0027671	Neoplastic Processes	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0029431	Osteoclasts	biolink:Cell	rtxkg2;robokop	N1
+UMLS:C0029925	Ovarian Carcinoma	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0030016	Oxidoreductases	biolink:Protein	rtxkg2	N1
+UMLS:C0030956	Peptides	biolink:Protein	rtxkg2	N1
+UMLS:C0031727	Phosphotransferases	biolink:Protein	rtxkg2	N1
+UMLS:C0033377	Ptosis	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0033684	Proteins	biolink:Protein	rtxkg2	N1
+UMLS:C0034786	Receptors, Androgen	biolink:Protein	rtxkg2	N1
+UMLS:C0034802	Epidermal Growth Factor Receptor	biolink:Protein	rtxkg2	N1
+UMLS:C0034804	Receptors, Estrogen	biolink:Protein	rtxkg2	N1
+UMLS:C0034833	Receptors, Progesterone	biolink:Protein	rtxkg2	N1
+UMLS:C0036003	Adenosylmethionine Decarboxylase	biolink:Protein	rtxkg2	N1
+UMLS:C0037366	Smoke	biolink:ChemicalEntity	rtxkg2	N1
+UMLS:C0038250	Stem cells	biolink:Cell	rtxkg2;robokop	N1
+UMLS:C0040648	Transcription Factors	biolink:Protein	rtxkg2	N1
+UMLS:C0040690	Transforming Growth Factor beta	biolink:Protein	rtxkg2;robokop	N1
+UMLS:C0040715	Chromosomal translocation	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0041368	Tumor Necrosis Factors	biolink:Protein	rtxkg2	N1
+UMLS:C0041484	Monophenol Monooxygenase	biolink:Protein	rtxkg2	N1
+UMLS:C0042172	E-Cadherin	biolink:Protein	rtxkg2	N1
+UMLS:C0055817	citrate-binding transport protein	biolink:Protein	rtxkg2	N1
+UMLS:C0056695	Cyclic AMP Response Element-Binding Protein	biolink:Protein	rtxkg2	N1
+UMLS:C0059973	ezrin	biolink:Protein	rtxkg2	N1
+UMLS:C0062534	Hepatocyte Growth Factor	biolink:Protein	rtxkg2	N1
+UMLS:C0073667	RU-28362	biolink:ChemicalEntity	rtxkg2	N2
+UMLS:C0076827	toosendanin	biolink:SmallMolecule	rtxkg2	N1
+UMLS:C0076930	Receptors, Transforming Growth Factor beta	biolink:Protein	rtxkg2	N1
+UMLS:C0079068	c-myc Genes	biolink:Gene	rtxkg2	N1
+UMLS:C0079185	Cyclin B	biolink:Protein	rtxkg2	N1
+UMLS:C0079427	Tumor Suppressor Genes	biolink:Gene	rtxkg2;robokop	N1
+UMLS:C0079745	Lymphoma, Large-Cell, Follicular	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0079904	NF-kappa B	biolink:Protein	rtxkg2	N1
+UMLS:C0080055	Tumor Suppressor Protein p53	biolink:Protein	rtxkg2	N1
+UMLS:C0080059	Proto-Oncogene Proteins pp60(c-src)	biolink:Protein	rtxkg2	N1
+UMLS:C0080065	Proto-Oncogene Proteins c-myc	biolink:Protein	rtxkg2	N1
+UMLS:C0080124	Antisense RNA	biolink:Polypeptide	rtxkg2	N1
+UMLS:C0085201	Apolipoprotein A-I	biolink:Protein	rtxkg2	N1
+UMLS:C0085983	Cell Line, Tumor	biolink:Cell	rtxkg2;robokop	N1
+UMLS:C0087044	Synapsin I	biolink:Protein	rtxkg2	N1
+UMLS:C0105770	beta catenin	biolink:Protein	rtxkg2	N1
+UMLS:C0120285	Green Fluorescent Proteins	biolink:Protein	rtxkg2	N1
+UMLS:C0126732	NF-kappaB inhibitor alpha	biolink:Protein	rtxkg2	N1
+UMLS:C0133390	Org 2058	biolink:ChemicalEntity	rtxkg2	N2
+UMLS:C0151888	Hyporeflexia	biolink:PhenotypicFeature	rtxkg2;robokop	N1
+UMLS:C0153676	Secondary malignant neoplasm of lung	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0153690	Metastatic malignant neoplasm to bone	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0155158	Recurrent pterygium	biolink:Disease	rtxkg2	N1
+UMLS:C0161479	Nerve injury	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0162735	Point Mutation	biolink:Disease	rtxkg2	N1
+UMLS:C0164786	Proto-Oncogene Proteins c-akt	biolink:Protein	rtxkg2	N1
+UMLS:C0165519	Matrix Metalloproteinase 9	biolink:Protein	rtxkg2	N1
+UMLS:C0174680	Cyclin D1	biolink:Protein	rtxkg2	N1
+UMLS:C0178874	Tumor Progression	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0207262	HMG coenzyme A reductase (NADPH) kinase	biolink:Protein	rtxkg2	N1
+UMLS:C0214897	Receptor, Transforming Growth Factor-beta Type II	biolink:Protein	rtxkg2	N1
+UMLS:C0215848	Hypoxia-Inducible Factor 1	biolink:Protein	rtxkg2	N1
+UMLS:C0221284	Leptocyte	biolink:Cell	rtxkg2	N1
+UMLS:C0228075	Small neuron	biolink:Cell	rtxkg2	N1
+UMLS:C0231337	Senility	biolink:PhenotypicFeature	rtxkg2	N1
+UMLS:C0235169	Excitability	biolink:PhenotypicFeature	rtxkg2;robokop	N1
+UMLS:C0242210	Binding Proteins	biolink:Protein	rtxkg2	N1
+UMLS:C0242656	Disease Progression	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0248813	JNK Mitogen-Activated Protein Kinases	biolink:Protein	rtxkg2	N1
+UMLS:C0251991	LY 294002	biolink:ChemicalEntity	rtxkg2	N2
+UMLS:C0253023	Fas Ligand Protein	biolink:Protein	rtxkg2	N1
+UMLS:C0258441	TNF receptor-associated factor 2	biolink:Protein	rtxkg2	N1
+UMLS:C0259714	CP-10	biolink:ChemicalEntity	rtxkg2	N2
+UMLS:C0277556	Recurrent disease	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0278252	Prognosis bad	biolink:PhenotypicFeature	rtxkg2	N1
+UMLS:C0278488	Carcinoma breast stage IV	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0278512	Metastatic osteosarcoma	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0282625	src-Family Kinases	biolink:Protein	rtxkg2	N1
+UMLS:C0334227	Tumor cells, malignant	biolink:Cell	rtxkg2;robokop	N1
+UMLS:C0346429	Multiple malignancy	biolink:Disease	rtxkg2	N1
+UMLS:C0346989	Metastatic malignant neoplasm to peritoneum	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0380603	Fibroblast Growth Factor 2	biolink:Protein	rtxkg2	N1
+UMLS:C0427861	Human cells	biolink:PhenotypicFeature	rtxkg2	N1
+UMLS:C0431085	Tumor cells, uncertain whether benign or malignant	biolink:Cell	rtxkg2;robokop	N1
+UMLS:C0475440	Tumor size	biolink:PhenotypicFeature	rtxkg2	N1
+UMLS:C0494463	Alzheimer Disease, Late Onset	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0518031	Endurance	biolink:PhenotypicFeature	rtxkg2	N1
+UMLS:C0520947	Clumsiness - motor delay	biolink:Disease	rtxkg2	N1
+UMLS:C0527443	bone morphogenetic protein 2	biolink:Protein	rtxkg2	N1
+UMLS:C0544886	Somatic mutation	biolink:Disease	rtxkg2	N1
+UMLS:C0546126	Acute Confusional Senile Dementia	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0596263	Carcinogenesis	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0596402	cytotoxicity	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0596890	MCF-7 Cells	biolink:Cell	rtxkg2;robokop	N1
+UMLS:C0597032	Neoplastic Cell	biolink:Cell	rtxkg2	N1
+UMLS:C0597611	Tumor Suppressor Proteins	biolink:Protein	rtxkg2	N1
+UMLS:C0598934	tumor growth	biolink:Disease	rtxkg2	N1
+UMLS:C0599155	Mutation, Missense	biolink:Disease	rtxkg2	N1
+UMLS:C0599566	expression vector	biolink:ChemicalEntity	rtxkg2	N1
+UMLS:C0600432	K562 Cells	biolink:Cell	rtxkg2	N1
+UMLS:C0665341	Estrogen Receptor alpha	biolink:Protein	rtxkg2	N1
+UMLS:C0677930	Primary Neoplasm	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0682523	Human Cell Line	biolink:Cell	rtxkg2;robokop	N1
+UMLS:C0699748	Pathogenesis	biolink:Disease	rtxkg2	N1
+UMLS:C0750900	Alzheimer's Disease, Focal Onset	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0750901	Alzheimer Disease, Early Onset	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0758915	Procaspase-3	biolink:Protein	rtxkg2	N1
+UMLS:C0870182	Autosome Disorders	biolink:Disease	rtxkg2	N1
+UMLS:C0877373	Advanced cancer	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0919532	Genomic Instability	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C0940937	Precancerous lesion	biolink:Disease	rtxkg2	N1
+UMLS:C0949455	Ubiquitin-Like Proteins	biolink:Protein	rtxkg2	N1
+UMLS:C0965644	Hypoxia-Inducible Factor 1, alpha Subunit	biolink:Protein	rtxkg2	N1
+UMLS:C0968902	Transcription Factor AP-2 Alpha	biolink:Protein	rtxkg2	N1
+UMLS:C1096063	Drug Resistant Epilepsy	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C1099354	RNA, Small Interfering	biolink:Polypeptide	rtxkg2	N1
+UMLS:C1101610	MicroRNAs	biolink:Polypeptide	rtxkg2	N1
+UMLS:C1155266	Inflammatory Response	biolink:Disease	rtxkg2	N1
+UMLS:C1257931	Mammary Neoplasms, Human	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C1258971	ZM 447439	biolink:ChemicalEntity	rtxkg2	N2
+UMLS:C1260954	Morphologically altered structure	biolink:Disease	rtxkg2	N1
+UMLS:C1268443	Normal cell	biolink:Cell	rtxkg2	N1
+UMLS:C1269955	Tumor Cell Invasion	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C1311914	BAY 61-3606	biolink:ChemicalEntity	rtxkg2	N2
+UMLS:C1318484	Chimera (disorder)	biolink:Disease	rtxkg2	N1
+UMLS:C1333402	Enzyme Gene	biolink:Gene	rtxkg2	N1
+UMLS:C1333840	Grade 2 Malignant Neoplasm	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C1335144	Orthologous Gene	biolink:Gene	rtxkg2	N1
+UMLS:C1335186	Oxidoreductase Gene	biolink:Gene	rtxkg2	N1
+UMLS:C1335533	Protein Fragment	biolink:Protein	rtxkg2	N1
+UMLS:C1336776	Transcription Coactivator	biolink:Protein	rtxkg2	N1
+UMLS:C1336789	Transcription Repressor/Corepressor	biolink:Protein	rtxkg2	N1
+UMLS:C1511667	DNA Breaks, Double-Stranded	biolink:Disease	rtxkg2	N1
+UMLS:C1512505	Breast Cancer Cell	biolink:Cell	rtxkg2;robokop	N1
+UMLS:C1512981	Mammary Tumorigenesis	biolink:Disease	rtxkg2	N1
+UMLS:C1515032	Substrate Interaction Domain	biolink:Polypeptide	rtxkg2	N1
+UMLS:C1516170	Cancer Cell Growth	biolink:Disease	rtxkg2	N1
+UMLS:C1517806	Leukemic Cell	biolink:Cell	rtxkg2;robokop	N1
+UMLS:C1518174	Malignant Epithelial Cell	biolink:Cell	rtxkg2;robokop	N1
+UMLS:C1519315	Signaling Molecule	biolink:ChemicalEntity	rtxkg2	N1
+UMLS:C1519697	Tumorigenicity	biolink:Disease	rtxkg2	N1
+UMLS:C1519758	Unbalanced Translocation	biolink:Disease	rtxkg2	N1
+UMLS:C1521843	Diffuse Large B Cell Lymphoma of the Mouse Hematologic System	biolink:Disease	rtxkg2	N1
+UMLS:C1541359	AZD5438	biolink:Drug	rtxkg2	N2
+UMLS:C1564881	Apoptosis Regulatory Proteins	biolink:Protein	rtxkg2	N1
+UMLS:C1700595	AC 261066	biolink:ChemicalEntity	rtxkg2	N2
+UMLS:C1704241	complex (molecular entity)	biolink:ChemicalEntity	rtxkg2	N1
+UMLS:C1999216	Inhibitor	biolink:ChemicalEntity	rtxkg2	N1
+UMLS:C2347443	GSK690693	biolink:Drug	rtxkg2	N2
+UMLS:C2606606	GSK 650394	biolink:ChemicalEntity	rtxkg2	N2
+UMLS:C2742210	RO 4929097	biolink:ChemicalEntity	rtxkg2	N2
+UMLS:C2934618	PHT 427	biolink:ChemicalEntity	rtxkg2	N2
+UMLS:C2935082	EX 527	biolink:ChemicalEntity	rtxkg2	N2
+UMLS:C2974251	NMS P715	biolink:ChemicalEntity	rtxkg2	N2
+UMLS:C3160731	Pulmonary function (finding)	biolink:PhenotypicFeature	rtxkg2	N1
+UMLS:C3178452	VE 821	biolink:ChemicalEntity	rtxkg2	N2
+UMLS:C3263723	Traumatic injury	biolink:Disease	rtxkg2;robokop	N1
+UMLS:C3490747	LY2874455	biolink:ChemicalEntity	rtxkg2	N2
+UMLS:C3491261	P505-15	biolink:ChemicalEntity	rtxkg2	N2
+UMLS:C3500976	GSK2606414	biolink:ChemicalEntity	rtxkg2	N2
+UMLS:C3530144	HS-173	biolink:ChemicalEntity	rtxkg2	N2
+UMLS:C3852638	AZD5582	biolink:ChemicalEntity	rtxkg2	N2
+UMLS:C4016881	ESOPHAGEAL SQUAMOUS CELL CARCINOMA, SOMATIC	biolink:PhenotypicFeature	rtxkg2	N1
+UMLS:C4287812	ulixertinib	biolink:Drug	rtxkg2	N2
+UMLS:C4319717	WW Domain-Containing Oxidoreductase	biolink:Protein	rtxkg2	N1
+UMLS:C4552091	Polyarthritis, Juvenile, Rheumatoid Factor Negative	biolink:Disease	rtxkg2	N1
+UMLS:C4704862	Polyarthritis, Juvenile, Rheumatoid Factor Positive	biolink:Disease	rtxkg2	N1
+UMLS:C4704874	Mammary Carcinoma, Human	biolink:Disease	rtxkg2	N1
+UMLS:C4705193	MG149	biolink:ChemicalEntity	rtxkg2	N2
+UMLS:C5203340	Lethality	biolink:PhenotypicFeature	rtxkg2	N1
+UMLS:C5206912	M 4344	biolink:ChemicalEntity	rtxkg2	N2
+UMLS:C5544228	halicin	biolink:ChemicalEntity	rtxkg2	N2
+UMLS:C5706699	Pifusertib	biolink:ChemicalEntity	rtxkg2	N2
+UNII:07YMO87363	(Z)-5-((4-(pyridin-4-yl)quinolin-6-yl)methylene)thiazolidine-2,4-dione	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:0WAX4UT396	Razuprotafib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:15KFN616FK	Rineterkib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:16ZDH50O1U	Ulixertinib	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+UNII:1A7Y9MP123	Cudc-101	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+UNII:2158753C7E	Relacorilant	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:21K6M2I7AG	INTERFERON GAMMA-1B	biolink:ChemicalEntity	rtxkg2;robokop	N2
+UNII:27TW751DTH	ASTEGOLIMAB	biolink:ChemicalEntity	rtxkg2;robokop	N2
+UNII:2D9N67F58G	(E)-(4-(2-(1H-indazol-3-yl)vinyl)phenyl)(piperazin-1-yl)methanone	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:2LHZ9ZC3YO	Tolinapant	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:311Y5GV21M	MIRICORILANT	biolink:ChemicalEntity	rtxkg2;robokop	N2
+UNII:333YMY788E	TAREXTUMAB	biolink:ChemicalEntity	rtxkg2;robokop	N2
+UNII:33639WNC7Q	(S)-2-(2-(2-Methylindolin-1-yl)-2-oxoethyl)-6-morpholinopyrimidin-4(3H)-one	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:3666C56BBU	Begacestat	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:375142VBIA	FRESOLIMUMAB	biolink:ChemicalEntity	rtxkg2;robokop	N2
+UNII:38073MQB2A	Umbralisib	biolink:Drug	rtxkg2;robokop	N2
+UNII:42EK42WHI5	Adavivint	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:43J9Q56T3W	Serabelisib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:4521NR0J09	5-Thiazolecarboxamide, 4-methyl-N-[2-[3-(4-morpholinylmethyl)imidazo[2,1-b]thiazol-6-yl]phenyl]-2-(3-pyridinyl)-	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:478ZV54680	RGB 286638	biolink:MolecularMixture	rtxkg2	N2
+UNII:4801QYW816	Gusacitinib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:4A2Y23XK11	Lazertinib	biolink:Drug	rtxkg2;robokop	N2
+UNII:4B93MGE4AL	Futibatinib	biolink:Drug	rtxkg2;robokop	N2
+UNII:4GF4A623RF	CHEMBL310840	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:4KW1M48SHS	Gdc-0152	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:4T71DC0G0A	Unii-4T71DC0G0A	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:5277GPA358	Cenisertib	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+UNII:56R994WX4L	Ilginatinib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:5YZ3QBQ97C	Syk Inhibitor	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:5ZHA5P4PFX	Dalpiciclib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:60ES45KTMK	Pilaralisib	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+UNII:63D4RUV1GN	AS-252424	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:63V8AIE65T	(S,E)-3-(6-Bromopyridin-2-yl)-2-cyano-N-(1-phenylethyl)acrylamide	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:6I3O3W6O3B	Entospletinib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:6L5D03D975	Ilorasertib	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+UNII:6R5034F862	Rosiptor	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:6T4O391P5Y	Vactosertib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:6V5T4O5758	N-(2-((1S,4R)-6-((4-(Cyclobutylamino)-5-(trifluoromethyl)pyrimidin-2-yl)amino)-1,2,3,4-tetrahydro-1,4-epiminonaphthalen-9-yl)-2-oxoethyl)acetamide	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:721809WQCP	Ruboxistaurin	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:72W09924WP	Asoprisnil	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+UNII:73SM5SF3OR	Abrocitinib	biolink:Drug	rtxkg2;robokop	N2
+UNII:7LBRZUYSHU	Branebrutinib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:7N03P021J8	Bms-911543	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:7N13IK9LNH	BAY 1895344	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:7T1PY32ZPH	Cirtuvivint	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:834YJF89WO	Belumosudil	biolink:Drug	rtxkg2;robokop	N2
+UNII:8JJC99KHGL	Martinostat	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:8QR88H79VX	Mivavotinib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:8R4A7GDZ1D	Apabetalone	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:8V9YR09EF3	PINOMETOSTAT	biolink:ChemicalEntity	primekg;rtxkg2;robokop	N2
+UNII:9554OW6MVU	Nivocasan	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:98BSN6N516	Rogaratinib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:995FT1W541	Idronoxil	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+UNII:9JD9B4S53T	MK-0752	biolink:ChemicalEntity	rtxkg2;robokop	N2
+UNII:9JH486CZ13	Molidustat	biolink:Drug	rtxkg2;robokop	N2
+UNII:9R2G075611	N-(4-(3-(2-aminopyrimidin-4-yl)pyridin-2-yloxy)phenyl)-4-(4-methylthiophen-2-yl)phthalazin-1-amine	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:9TG5O4V25H	N-{4-[(1r,3s,5s)-3-Amino-5-Methylcyclohexyl]pyridin-3-Yl}-6-(2,6-Difluorophenyl)-5-Fluoropyridine-2-Carboxamide	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:A17W0640NB	(R)-4A-(ethoxymethyl)-1-(4-fluorophenyl)-6-((4-(trifluoromethyl)phenyl)sulfonyl)-4,4a,5,6,7,8-hexahydro-1H-pyrazolo[3,4-g]isoquinoline	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:A49037RP1E	(S)-1-(4-(1H-Pyrazol-4-yl)phenyl)-2-amino-1-(4-chlorophenyl)ethanol	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:A6U64OU57E	Lanraplenib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:AG9MHG098Z	Zanubrutinib	biolink:Drug	primekg;rtxkg2;robokop	N2
+UNII:AIQ4OWD0RA	(R)-8-(1-((3,5-difluorophenyl)amino)ethyl)-N,N-dimethyl-2-morpholino-4-oxo-4H-chromene-6-carboxamide	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:CER0OPG92L	Abivertinib	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+UNII:D01E4B1U35	Poseltinib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:D1LXQ45S1O	Cerdulatinib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:D77H8321PB	Citco	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:D9F5G5D3GN	edaxeterkib	biolink:SmallMolecule	robokop	N2
+UNII:DM9UIR23R7	5-(3-(ethylsulfonyl)phenyl)-3,8-dimethyl-N-(1-methylpiperidin-4-yl)-9H-pyrido[2,3-b]indole-7-carboxamide	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:DRP53ZDY6H	Riviciclib	biolink:MolecularMixture	rtxkg2;robokop	N2
+UNII:DRU6NG543J	Spebrutinib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:DW94IAT0LS	2-methyl-1-(2-methyl-3-(trifluoromethyl)benzyl)-6-morpholino-1H-benzo[d]imidazole-4-carboxylic acid	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+UNII:E7YVO9NSJ9	(4-fluorophenyl)(4-((5-methyl-1H-pyrazol-3-yl)amino)quinazolin-2-yl)methanol	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:E9L2885WUL	Fenebrutinib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:F40IRN5981	Chiauranib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:F5Z5EL4D26	Lonaprisan	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:FD2SWT2SDI	SU9516	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+UNII:GN465U8B72	Nemolizumab	biolink:Drug	rtxkg2;robokop	N2
+UNII:H1NMJ5XDG5	GC376	biolink:MolecularMixture	rtxkg2	N2
+UNII:H8J407531S	MK-5108	biolink:ChemicalEntity	rtxkg2;robokop	N2
+UNII:HPI19004QS	Fosdagrocorat	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:I60W9520VV	Vadadustat	biolink:Drug	rtxkg2;robokop	N2
+UNII:I7MVZ8HDNU	Remibrutinib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:IT063R5MY0	EPTOTERMIN ALFA	biolink:ChemicalEntity	rtxkg2;robokop	N2
+UNII:J6U9WP10T7	ENMD 2076	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:J8AY0Z4CBP	Cep-11981	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:JMH6YR91PG	VOFATAMAB	biolink:ChemicalEntity	rtxkg2;robokop	N2
+UNII:K9C42672RH	2-[[(1R,2S)-2-aminocyclohexyl]amino]-4-[3-(triazol-2-yl)anilino]pyrimidine-5-carboxamide	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:KL2Z2TLF01	(S)-5-chloro-N2-(1-(5-fluoropyrimidin-2-yl)ethyl)-N4-(5-methyl-1H-pyrazol-3-yl)pyrimidine-2,4-diamine	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:KQ33EVH4KU	Unii-KQ33evh4KU	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:KZ3DLD11RQ	N-[4-hydroxy-3-(2-hydroxynaphthalen-1-yl)naphthalen-1-yl]-4-methoxybenzenesulfonamide	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:L4C1UY2NYH	Inavolisib	biolink:Drug	rtxkg2;robokop	N2
+UNII:M63IS9PTJF	AZ-960	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:MZK2GP0RHK	Decernotinib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:N0A21N6RAU	Deucravacitinib	biolink:Drug	rtxkg2;robokop	N2
+UNII:N65WC8PXDD	Xevinapant	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:N9B0H171MJ	Derazantinib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:ND1SOF0DLU	Elraglusib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:NR9ZYH80Z8	Debio-1347	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:OPM23UN90U	Dagrocorat	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:PJX9GH268R	Bms-986142	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:PQ7O0OB5GU	Vecabrutinib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:QI52W1ZIIB	PIFUSERTIB	biolink:ChemicalEntity	rtxkg2;robokop	N2
+UNII:QJ8RO3296G	8-Cyclopentyl-2-((4-(4-methylpiperazin-1-yl)phenyl)amino)-7-oxo-7,8-dihydropyrido[2,3-d]pyrimidine-6-carbonitrile	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:R3I80TLN7S	Milademetan	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:R6AXV96CRH	Ravoxertinib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:RCA38L4HB5	Unii-rca38L4HB5	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:S4L4MM20B6	1(2H)-Isoquinolinone, 5,8-dichloro-2-((1,2-dihydro-4-methoxy-6-methyl-2-oxo-3-pyridinyl)methyl)-3,4-dihydro-7-((R)-methoxy-3-oxetanylmethyl)-	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:SA2ND7EHY4	1-(tert-Butyl)-3-(p-tolyl)-1H-pyrazolo[3,4-d]pyrimidin-4-amine	biolink:SmallMolecule	primekg;rtxkg2;robokop	N1
+UNII:SQ8A3S5101	Fostamatinib	biolink:Drug	primekg;rtxkg2;robokop	N2
+UNII:T472P45MG6	DIBOTERMIN ALFA	biolink:ChemicalEntity	rtxkg2;robokop	N2
+UNII:T678746713	Altiratinib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:U2H19X4WBV	Tomivosertib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:UM2XKY25DH	NORELGESTROMIN	biolink:SmallMolecule	robokop	N2
+UNII:V10P524501	Dacinostat	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:VO9KX45QIQ	Tizaterkib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:VR86R11J7J	Mivebresib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:W66XP666AM	Voruciclib	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+UNII:W6I5QDT7QI	Netarsudil	biolink:Drug	primekg;rtxkg2;robokop	N2
+UNII:W9F9H8GXWR	Tanaproget	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+UNII:WBH8AY6ENB	Lerociclib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:WF9CA8UL2V	GSK2646264	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:WJA5UO9E10	Orelabrutinib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:XAV9KYN9WL	1-Cyclopropyl-3-(3-(5-(morpholinomethyl)-1H-benzo[d]imidazol-2-yl)-1H-pyrazol-4-yl)urea	biolink:SmallMolecule	primekg;rtxkg2;robokop	N2
+UNII:Y6BX7BL23K	Pemigatinib	biolink:Drug	primekg;rtxkg2;robokop	N2
+UNII:Y7W5AL9KHB	R 112 (pharMaceutical)	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:YET2XNU791	Fadraciclib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:YTL7A418KQ	NANATINOSTAT	biolink:ChemicalEntity	primekg;rtxkg2;robokop	N2
+UNII:YZ68ZB8LWA	Atuzabrutinib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:ZA45457L1K	Evobrutinib	biolink:SmallMolecule	rtxkg2;robokop	N2
+UNII:ZPX6CRU43V	cimpuciclib	biolink:SmallMolecule	robokop	N2
+UniProtKB:G5E9A7	G5E9A7_HUMAN DM1 locus, WD repeat containing (trembl)	biolink:Protein	robokop	N1
+UniProtKB:O95411	TIAF1 protein, human	biolink:Protein	rtxkg2;robokop	N1
+UniProtKB:P02489	CRYAA_HUMAN Alpha-crystallin A chain (sprot)	biolink:Protein	rtxkg2;robokop	N1
+UniProtKB:P0CG04	IGLC1_HUMAN Immunoglobulin lambda constant 1 (sprot)	biolink:Protein	rtxkg2;robokop	N1
+UniProtKB:P78358	CTAG1B protein, human	biolink:Protein	rtxkg2;robokop	N1
+UniProtKB:Q03040	VP40_MABVP Matrix protein VP40 (sprot)	biolink:Protein	rtxkg2;robokop	N1
+UniProtKB:Q1PD51	VP40_MABVA Matrix protein VP40 (sprot)	biolink:Protein	rtxkg2;robokop	N1
+UniProtKB:Q1PDC8	VP40_MABVR Matrix protein VP40 (sprot)	biolink:Protein	rtxkg2;robokop	N1
+UniProtKB:Q5CZI7	MAPT protein, human	biolink:Protein	rtxkg2	N1
+UniProtKB:Q5SWW7	CJ055_HUMAN Uncharacterized protein C10orf55 (sprot)	biolink:Protein	rtxkg2;robokop	N1
+UniProtKB:Q6UY67	VP40_MABVO Matrix protein VP40 (sprot)	biolink:Protein	rtxkg2;robokop	N1
+UniProtKB:Q8IZ03	Q8IZ03_HUMAN Interferon-induced protein with tetratricopeptide repeats 2 (trembl)	biolink:Protein	robokop	N1
+UniProtKB:Q96EJ4	Q96EJ4_HUMAN PLAC8 protein (trembl)	biolink:Protein	robokop	N1
+UniProtKB:Q9NZC7-1	WW domain-containing oxidoreductase isoform 1 (human)	biolink:Protein	rtxkg2;robokop	N1
+UniProtKB:Q9NZC7-2	WW domain-containing oxidoreductase isoform 2 (human)	biolink:Protein	rtxkg2;robokop	N1
+UniProtKB:Q9NZC7-3	WW domain-containing oxidoreductase isoform 3 (human)	biolink:Protein	rtxkg2;robokop	N1
+UniProtKB:Q9NZC7-4	WW domain-containing oxidoreductase isoform 4 (human)	biolink:Protein	rtxkg2;robokop	N1
+UniProtKB:Q9NZC7-5	WW domain-containing oxidoreductase isoform 5 (human)	biolink:Protein	rtxkg2;robokop	N1
+UniProtKB:Q9NZC7-6	WW domain-containing oxidoreductase isoform 6 (human)	biolink:Protein	rtxkg2;robokop	N1
+UniProtKB:Q9NZC7-7	WW domain-containing oxidoreductase isoform h7 (human)	biolink:Protein	rtxkg2;robokop	N1
