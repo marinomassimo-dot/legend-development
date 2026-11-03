@@ -30,9 +30,9 @@
    "steps": [
     {
      "step": "P1 resume after a controlled stop of a diagnostic session (two idempotent steps, persisted checkpoint, monitor classification, real resume path, no duplicates); collect one scheduled cron event when it occurs",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "continuity_it20_20261102/README.md: manual-path resume after a controlled stop observed on a diagnostic session (same session id, same checkpoint, R2 done, no duplicates); scheduled cron delivery to a dead session NOT yet observed - status kept IN_PROGRESS until one scheduled event is collected or the session ends"
+     "evidence": "continuity_it20_20261102/README.md: diagnostic background session (CLI 2.1.316) bound to its own record, R1 + persisted checkpoint, claude stop of that session only, monitor events RUNNING x5 then STOPPED_RESUMABLE/RESUME, `--deliver resume` sent under the SAME session id, R2 completed from the checkpoint, no duplicate (plan sha unchanged, no commit); MANUAL call of the monitor with --quiet-minutes 1. NOT observed: a delivery by the scheduled hourly cron to a really dead session; RESUME deliveries by the in-session cron to this live idle session are not a resume after a stop"
     }
    ]
   },
@@ -107,8 +107,9 @@
    "steps": [
     {
      "step": "P8 independent verification; durable learnings in their homes; autonomous follow-up chosen and executed",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "independent verifiers: engine (5 of 7 items confirmed, 1 real defect assertion_key vocabulary fixed + false 21->0 claim corrected), dashboard (9 items, 2 defects fixed), hypotheses ordering confirmed; durable learnings: republished-claim rule in repurposing_adapter_convention.md and pointer in the Standing method, investigations method in the roadmap; follow-up chosen and executed by a fresh actor: followup_it20_20261102 (restore vocabulary: the stated cause was wrong, correct abstention, myelination needs one WWOX-system sign datum)"
     }
    ]
   },
@@ -117,8 +118,9 @@
    "steps": [
     {
      "step": "P9 freshness, battery on the final candidate, safe_push, CI and publication to verdict, cleanup, final report",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "candidate e7f00f13: battery PASS WITH SKIPS (189 targets, 7 skipped for absent corpus); safe_push gate PASS; CI Public release gate success (2026-11-03 01:41:59Z-02:28:48Z); Publish workflow verify/deploy/smoke success; served index.html sha256 equals the package (3c522ce0...); check_published_view PASS 28; headless load of the live URL: 0 script errors, 10 investigation rows, explorer #x=need/#x=cand render SVG + text table; worktrees/branches cleaned; remaining: collect the 05:20 UTC production radar event, then the record-only close-out"
     }
    ]
   }
