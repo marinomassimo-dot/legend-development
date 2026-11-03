@@ -21,6 +21,11 @@
    Identity bridge V1-fix: structure equality is necessary but not sufficient; the twin's NAME must match the ligand's or its ChEMBL record's, modulo salt and
    counter-ion words; an extra non-salt word (ester or prodrug) is related_not_merged; no name match is unresolved.
 
+IT22 P2 (supersedes the pooled-median reading above): measures are kept per TYPE (IC50, EC50, Ki, Kd); a ratio is formed only between the same type at the main target and at
+   another target, with compatible relation (exact, or a lower bound on the main side) and, when both are recorded, the same assay class (cell / cell-free). No same-type pair ->
+   NOT_COMPARABLE_MEASURES (values kept, no ratio, no exclusion). A measured main target of 100-1000 nM is SECONDARY_ACTIVITY_MEASURED (kept; the experiment needs an on-target control);
+   only an exact value or lower bound above 1000 nM with a comparable pair is WEAK_ATTRIBUTION. The nM conventions are stated, not laws; ratios are never converted into occupancy.
+
 Standard library only. The GtoPdb and DGIdb files are the shared catalogue cache (LEGEND_CATALOG_CACHE), third-party and not in git.
 """
 import collections, csv, gzip, importlib.util, json, math, os, re, statistics
@@ -30,6 +35,7 @@ HERE = Path(__file__).resolve().parent
 DR = HERE.parent
 WEAK_FOLD = 10.0
 SENSITIVITY_FOLDS = (3.0, 10.0, 30.0, 100.0)
+SECONDARY_MAIN_NM = 1000.0     # IT22 P2: up to here a main target with a measured value is a SECONDARY ACTIVITY (kept), above it WEAK (a stated convention, with a sensitivity)
 POTENT_MAIN_NM = 100.0          # main-target affinity at or below this is potent in absolute terms: a large fold there is annotated, not blocked
 _CLAIM_ID = re.compile(r"^IUPHAR\.LIGAND:(\d+)$", re.I)
 # counter-ion, hydration and formulation words: a name differing from the parent by these only names the same substance (ester and prodrug groups are NOT here)
@@ -73,11 +79,23 @@ def _rd(path):
     return [dict(zip(rows[1], r)) for r in rows[2:]]
 
 
+_CELL = re.compile(r"\b(cell|cells|cellular|whole[- ]cell|culture|cultured|hek|cho|tissue|in vivo|reporter|proliferation|viability)\b", re.I)
+_BIOCHEM = re.compile(r"\b(enzyme|enzymatic|recombinant|purified|kinase activity|biochemical|binding assay|radioligand|spr|surface plasmon|fret|cell[- ]free|membrane)\b", re.I)
+
+
+def assay_class(text):
+    """'cell', 'biochemical' or 'unknown' from the Guide-to-Pharmacology assay description. Unknown stays unknown (it is never guessed)."""
+    c, b = bool(_CELL.search(text or "")), bool(_BIOCHEM.search(text or ""))
+    return "cell" if c and not b else "biochemical" if b and not c else "unknown"
+
+
 def load_gtopdb_affinities(cache=None):
-    """({ligand id: ligands.csv row}, {(ligand id, HGNC symbol): median nM}, {(ligand id, symbol): {measure types pooled into that median: Ki, IC50, EC50 ...}}), human targets only."""
+    """(ligands {ligand id: ligands.csv row}, typed {(ligand id, HGNC symbol): {measure type: {nm, rel, assay, n}}}, kinds {(ligand id, symbol): {measure types}}), human targets only.
+    IT22 P2: the measures are kept SEPARATE by type (IC50, EC50, Ki, Kd, ...; '?' when the release records none); within a type the median of exact ('=') values is used,
+    and a censored value ('<', '>', '~') is kept only when no exact value exists, with its relation. Nothing is converted between types."""
     cache = cache or cache_dir()
     lig = {r["Ligand ID"]: r for r in _rd(cache / "gtopdb" / "ligands.csv") if r.get("Ligand ID")}
-    aff, kinds = collections.defaultdict(list), collections.defaultdict(set)
+    raw = collections.defaultdict(list)
     for r in _rd(cache / "gtopdb" / "interactions.csv"):
         if r.get("Target Species") != "Human" or not r.get("Ligand ID"):
             continue
@@ -97,9 +115,19 @@ def load_gtopdb_affinities(cache=None):
                 nm = None
         if nm is None or nm <= 0:
             continue
-        aff[(r["Ligand ID"], sym)].append(nm)
-        kinds[(r["Ligand ID"], sym)].add(r.get("Original Affinity Units") or r.get("Affinity Units") or "?")
-    return lig, {k: statistics.median(v) for k, v in aff.items()}, kinds
+        typ = r.get("Original Affinity Units") or "?"
+        typ = "?" if typ in ("-", "") else typ
+        rel = (r.get("Original Affinity Relation") or "=").strip() or "="
+        raw[(r["Ligand ID"], sym, typ)].append((nm, rel, assay_class(r.get("Assay Description"))))
+    typed, kinds = collections.defaultdict(dict), collections.defaultdict(set)
+    for (lid, sym, typ), v in raw.items():
+        exact = [x for x in v if x[1] == "="]
+        use = exact or v
+        classes = {x[2] for x in use if x[2] != "unknown"}
+        typed[(lid, sym)][typ] = dict(nm=statistics.median(x[0] for x in use), rel="=" if exact else use[0][1],
+                                      assay=(next(iter(classes)) if len(classes) == 1 else "mixed" if classes else "unknown"), n=len(use))
+        kinds[(lid, sym)].add(typ)
+    return lig, dict(typed), kinds
 
 
 def claim_name_ligands(cache=None):
@@ -200,36 +228,92 @@ def family_ligands(entries, fam, bridges, lig):
     return out
 
 
-def attribution(ligands, main_gene, aff, kinds=None, weak_fold=WEAK_FOLD, potent_nm=POTENT_MAIN_NM):
-    """State of the attribution of a family (its ligand ids) to `main_gene`. Pure. `kinds` ({(ligand, gene): {measure types}}) adds the measure types pooled behind the two
-    medians and mixed_measure ('yes' when either pool holds more than one type; informational, never blocks)."""
+def _as_typed(v):
+    """A bare number (legacy callers, tests) is one measure of unknown type; a dict is already {type: {nm, rel, assay}}."""
+    return v if isinstance(v, dict) else {"?": dict(nm=float(v), rel="=", assay="unknown", n=1)}
+
+
+def _pair_state(m, b):
+    """Interpretability of one same-type pair (main entry m, other-target entry b): 'ok', 'lower_bound' (main censored from below: the fold can only be larger) or a reason string.
+    Cell-based against cell-free values are not compared; an unknown assay context stays 'ok' with the unknown carried by the caller."""
+    if m["assay"] in ("cell", "biochemical") and b["assay"] in ("cell", "biochemical") and m["assay"] != b["assay"]:
+        return "assay_context_differs"
+    if m["rel"] == "=" and b["rel"] == "=":
+        return "ok"
+    if m["rel"] == ">" and b["rel"] == "=":
+        return "lower_bound"
+    return "censored_value_not_comparable"
+
+
+def attribution(ligands, main_gene, aff, kinds=None, weak_fold=WEAK_FOLD, potent_nm=POTENT_MAIN_NM, secondary_nm=SECONDARY_MAIN_NM):
+    """State of the attribution of a family (its ligand ids) to `main_gene`. Pure.
+
+    IT22 P2. `aff` maps (ligand id, symbol) to {measure type: {nm, rel, assay}} (a bare number is one measure of unknown type). Types are never pooled or converted: a ratio is formed
+    only between the SAME type at the main target and at another target (IC50 with IC50, Kd with Kd ...), with compatible relation and assay context. Where no same-type pair exists
+    the state is NOT_COMPARABLE_MEASURES: the values are kept (values_kept), the limit is stated, and no quantitative exclusion follows. The ratio is a statement about the two
+    measurements, never converted into occupancy of the target. Tiers for a comparable pair: fold below WEAK_FOLD ATTRIBUTABLE; fold at or above it with the main target at or below
+    potent_nm BORDERLINE_POTENT_MAIN_TARGET; above potent_nm and up to secondary_nm SECONDARY_ACTIVITY_MEASURED (a measured secondary action: kept, the discriminating experiment must carry
+    an on-target control because the more potent target co-acts); above secondary_nm (exact value, or a lower bound) WEAK_ATTRIBUTION, the only state that blocks a hand-over. The two nM
+    conventions are stated, reported with a sensitivity, and are not a statement that the compound is inactive or that the secondary action is irrelevant."""
     main = (main_gene or "").upper()
-    best_by_gene = {}
-    for (lid, sym), nm in aff.items():
-        if lid in ligands:
-            if sym not in best_by_gene or nm < best_by_gene[sym][0]:
-                best_by_gene[sym] = (nm, lid)
-    empty = dict(main_nm="", best_target="", best_nm="", fold="", occupancy="", n_targets_measured=0, main_measure="", best_measure="", mixed_measure="")
-    if not ligands or not best_by_gene:
+    by_gene = collections.defaultdict(dict)                 # gene -> type -> (best entry over the family's ligands)
+    for (lid, sym), v in aff.items():
+        if lid not in ligands:
+            continue
+        for t, e in _as_typed(v).items():
+            cur = by_gene[sym].get(t)
+            if cur is None or e["nm"] < cur["nm"]:
+                by_gene[sym][t] = dict(e, ligand=lid)
+    empty = dict(main_nm="", best_target="", best_nm="", fold="", occupancy="", n_targets_measured=0, main_measure="", best_measure="", mixed_measure="", comparison_basis="", values_kept="", context_note="")
+    if not ligands or not by_gene:
         return dict(empty, state="NOT_ASSESSABLE")
-    bg, (bnm, blid) = min(best_by_gene.items(), key=lambda kv: kv[1][0])
-    kd = kinds or {}
-    bkind = sorted(kd.get((blid, bg), ()))
-    if main not in best_by_gene:
-        return dict(empty, state="UNMEASURED_AT_MAIN_TARGET", best_target=bg, best_nm=round(bnm, 3), n_targets_measured=len(best_by_gene), best_measure="|".join(bkind),
-                    mixed_measure=("yes" if len(bkind) > 1 else "no") if kinds is not None else "")
-    mnm, mlid = best_by_gene[main]
-    mkind = sorted(kd.get((mlid, main), ()))
-    fold = mnm / bnm
-    if len(best_by_gene) == 1:
-        state = "SINGLE_MEASURED_TARGET"          # nothing to compare against: not attributable by comparison
-    elif fold >= weak_fold:
-        state = "BORDERLINE_POTENT_MAIN_TARGET" if mnm <= potent_nm else "WEAK_ATTRIBUTION"
-    else:
+    flat = lambda g: "; ".join(f"{t} {e['nm']:g} nM{'' if e['rel'] == '=' else ' (' + e['rel'] + ')'}" for t, e in sorted(by_gene[g].items()))
+    gbest = min(((g, t, e) for g, d in by_gene.items() for t, e in d.items()), key=lambda x: x[2]["nm"])
+    if main not in by_gene:
+        return dict(empty, state="UNMEASURED_AT_MAIN_TARGET", best_target=gbest[0], best_nm=round(gbest[2]["nm"], 3), n_targets_measured=len(by_gene), best_measure=gbest[1],
+                    values_kept="; ".join(f"{g}: {flat(g)}" for g in sorted(by_gene)))
+    mt = by_gene[main]
+    mmin = min(mt.items(), key=lambda kv: kv[1]["nm"])
+    base = dict(empty, n_targets_measured=len(by_gene), main_measure="|".join(sorted(mt)), values_kept="; ".join(f"{g}: {flat(g)}" for g in sorted(by_gene)))
+    if len(by_gene) == 1:
+        return dict(base, state="SINGLE_MEASURED_TARGET", main_nm=round(mmin[1]["nm"], 3), best_target=main, best_nm=round(mmin[1]["nm"], 3), fold=1.0, best_measure=mmin[0])
+    folds, skipped = [], []
+    for t, m in mt.items():
+        for g, d in by_gene.items():
+            if g == main or t not in d:
+                continue
+            ps = _pair_state(m, d[t])
+            if ps == "ok" or ps == "lower_bound":
+                folds.append((m["nm"] / d[t]["nm"], t, g, m, d[t], ps))
+            else:
+                skipped.append(f"{t}: {main} vs {g} ({ps})")
+    if not folds:
+        why = "no other target has a value of the same type as the main target's (main: %s; others: %s)" % ("|".join(sorted(mt)), "|".join(sorted({t for g, d in by_gene.items() if g != main for t in d}))) if not skipped else "; ".join(skipped[:3])
+        return dict(base, state="NOT_COMPARABLE_MEASURES", main_nm=round(mmin[1]["nm"], 3), best_target=gbest[0], best_nm=round(gbest[2]["nm"], 3), best_measure=gbest[1],
+                    comparison_basis="none: " + why, context_note="values kept, ratio not formed; unknown is not negative")
+    # one comparison per type: the most potent other target of that type; the verdict follows the type that is MOST favourable to the main target
+    per_type = {}
+    for f, t, g, m, b, ps in folds:
+        if t not in per_type or b["nm"] < per_type[t][4]["nm"]:
+            per_type[t] = (f, t, g, m, b, ps)
+    f, t, g, m, b, ps = min(per_type.values(), key=lambda x: x[0])
+    note = []
+    if m["assay"] == "unknown" or b["assay"] == "unknown":
+        note.append("assay context (cell or cell-free) not recorded for at least one side")
+    if len(per_type) > 1:
+        note.append("types compared separately: " + ", ".join(f"{k} {v[0]:.1f}x" for k, v in sorted(per_type.items())))
+    if skipped:
+        note.append("not compared: " + "; ".join(skipped[:3]))
+    if f < weak_fold:
         state = "ATTRIBUTABLE"
-    mixed = ("yes" if (len(mkind) > 1 or len(bkind) > 1) else "no") if kinds is not None else ""
-    return dict(state=state, main_nm=round(mnm, 3), best_target=bg, best_nm=round(bnm, 3), fold=round(fold, 1), occupancy=round(1 / (1 + fold), 4),
-                n_targets_measured=len(best_by_gene), main_measure="|".join(mkind), best_measure="|".join(bkind), mixed_measure=mixed)
+    elif m["nm"] <= potent_nm and ps == "ok":
+        state = "BORDERLINE_POTENT_MAIN_TARGET"
+    elif m["nm"] <= secondary_nm and ps == "ok":
+        state = "SECONDARY_ACTIVITY_MEASURED"
+    else:
+        state = "WEAK_ATTRIBUTION"
+    return dict(base, state=state, main_nm=round(m["nm"], 3), best_target=g, best_nm=round(b["nm"], 3), fold=round(f, 1), occupancy="", best_measure=t, main_measure=t,
+                comparison_basis=f"{t} at {main} vs {t} at {g}" + (" (main value is a lower bound)" if ps == "lower_bound" else ""), context_note="; ".join(note))
 
 
 def sensitivity(folds):

@@ -458,7 +458,7 @@ def attribution_note(p):
     """One sentence for the qualifier: what the local Guide to Pharmacology release says about the main target of this compound (IT21 V1). Affinity, not occupancy or exposure."""
     st = p.get("attribution_state", "")
     via = (" Identity joined to its ChEMBL record through the ligand id in the claim name (" + p["identity_via"] + ")." if p.get("identity_via") else "")
-    mixed = (f" Median pools mixed measure types (main: {p.get('attribution_main_measure') or 'n/a'}; best: {p.get('attribution_best_measure') or 'n/a'}): read as indicative." if p.get("attribution_mixed_measure") == "yes" else "")
+    mixed = (f" Basis: {p['attribution_comparison_basis']}." if p.get("attribution_comparison_basis") else "") + (f" Note: {p['attribution_context_note']}." if p.get("attribution_context_note") else "")
     if st == "ATTRIBUTABLE":
         return f"main target {p['main_target']} measured at {p['attribution_main_nm']} nM; best measured target {p['attribution_best_target']} at {p['attribution_best_nm']} nM ({p['attribution_fold']}-fold).{via}{mixed}"
     if st == "SINGLE_MEASURED_TARGET":
@@ -469,11 +469,19 @@ def attribution_note(p):
     if st == "UNMEASURED_AT_MAIN_TARGET":
         return (f"UNMEASURED AT MAIN TARGET (ranked after measured rows in the cap): no measured affinity for {p['main_target']}; the compound is measured on other targets, best "
                 f"{p['attribution_best_target']} at {p['attribution_best_nm']} nM: the listed target may not be the main action (annotation only).{via}{mixed}")
+    if st == "SECONDARY_ACTIVITY_MEASURED":
+        return (f"SECONDARY ACTIVITY: main target {p['main_target']} measured at {p['attribution_main_nm']} nM, {p['attribution_fold']}-fold weaker than {p['attribution_best_target']} "
+                f"({p['attribution_best_nm']} nM) in the same measure type: a measured secondary action, kept; the experiment needs an on-target control because the more potent target co-acts (potency in vitro, not exposure).{via}{mixed}")
+    if st == "NOT_COMPARABLE_MEASURES":
+        return (f"NOT COMPARABLE: the local release has values for this compound but none of the same measure type at {p['main_target']} and at another target, so no ratio is formed and no quantitative exclusion follows "
+                f"(values: {p.get('attribution_values_kept', '')[:200]}).{via}{mixed}")
     if st == "NOT_ASSESSABLE":
         return "no ligand or no affinity in the local Guide to Pharmacology release: attribution not assessed (unknown, not negative)." + via
-    return f"WEAK: {p['attribution_fold']}-fold weaker than the best target {p['attribution_best_target']}.{via}{mixed}"
+    return (f"WEAK: main target {p['main_target']} at {p['attribution_main_nm']} nM (above {AS_SECONDARY_NM:g} nM), {p['attribution_fold']}-fold weaker than {p['attribution_best_target']} in the same measure type: "
+            f"potency alone does not support attributing the effect to the listed target; not a statement that the compound is inactive there.{via}{mixed}")
 
 
+AS_SECONDARY_NM = 1000.0   # mirrors attribution_screen_it21.SECONDARY_MAIN_NM
 AS_POTENT_NM = 100.0     # mirrors attribution_screen_it21.POTENT_MAIN_NM (a unit test asserts they agree)
 
 
@@ -661,7 +669,7 @@ def cmd_propose(a):
             sib = fb.get(s["family_id"]) or next((t for t, c_ in fb.items() if c_ == s["family_id"]), "")
             proposals[-1].update(identity_via=meta.get(s["family_id"], {}).get("identity_via", ""), attribution_state=att["state"], attribution_fold=att["fold"],
                                  attribution_best_target=att["best_target"], attribution_best_nm=att["best_nm"], attribution_main_nm=att["main_nm"],
-                                 attribution_main_measure=att["main_measure"], attribution_best_measure=att["best_measure"], attribution_mixed_measure=att["mixed_measure"],
+                                 attribution_main_measure=att["main_measure"], attribution_best_measure=att["best_measure"], attribution_mixed_measure=att["mixed_measure"], attribution_comparison_basis=att["comparison_basis"], attribution_context_note=att["context_note"], attribution_values_kept=att["values_kept"][:400],
                                  sibling_family=sib, sibling_z_reach=reach.get(s["seed_set"], {}).get(sib, "") if sib else "",
                                  sibling_compatible_action=reach_act.get(s["seed_set"], {}).get(sib, "") if sib else "")
         if ok:

@@ -162,9 +162,10 @@ class AttributionScreen(SyntheticCache):
 
     def test_human_only_and_nm_from_the_original_column_or_the_log_value(self):
         _, aff, _ = self.aff()
-        self.assertEqual(aff[("1", "TGT1")], 1.3)
+        # IT22 P2: the loader keeps measures per type (a type-less release row is "?"); the number is the median within the type
+        self.assertEqual(aff[("1", "TGT1")]["?"]["nm"], 1.3)
         self.assertNotIn(("1", "TGT9"), aff)
-        self.assertAlmostEqual(aff[("9", "TGT2")], 100.0, places=3)
+        self.assertAlmostEqual(aff[("9", "TGT2")]["?"]["nm"], 100.0, places=3)
 
     def test_weak_when_the_main_target_is_at_least_ten_fold_weaker_than_the_best(self):
         _, aff, _ = self.aff()
@@ -183,7 +184,9 @@ class AttributionScreen(SyntheticCache):
     def test_a_large_fold_with_a_potent_main_target_is_borderline_not_weak(self):        # V1-fix finding 1
         aff = {("x", "A"): 0.1, ("x", "B"): 100.0, ("x", "C"): 100.5}
         self.assertEqual(A.attribution({"x"}, "B", aff)["state"], "BORDERLINE_POTENT_MAIN_TARGET")      # 1000-fold, but the main target is at the 100 nM floor
-        self.assertEqual(A.attribution({"x"}, "C", aff)["state"], "WEAK_ATTRIBUTION")                  # just above the floor
+        # IT22 P2 (superseded assumption): a main target just above 100 nM is a measured SECONDARY activity, no longer WEAK; WEAK starts above SECONDARY_MAIN_NM (1000 nM)
+        self.assertEqual(A.attribution({"x"}, "C", aff)["state"], "SECONDARY_ACTIVITY_MEASURED")
+        self.assertEqual(A.attribution({"x"}, "D", {**aff, ("x", "D"): 1500.0})["state"], "WEAK_ATTRIBUTION")
         self.assertEqual(A.attribution({"x"}, "B", aff)["fold"], 1000.0)
         self.assertEqual(A.POTENT_MAIN_NM, G.AS_POTENT_NM)
 
@@ -192,15 +195,62 @@ class AttributionScreen(SyntheticCache):
         self.assertEqual(A.attribution({"x"}, "A", aff)["state"], "SINGLE_MEASURED_TARGET")
         self.assertEqual(A.attribution({"x"}, "A", aff)["fold"], 1.0)
 
-    def test_pooled_measure_types_are_reported_and_a_mixed_pool_is_marked(self):        # V1-fix finding 1
-        aff = {("x", "A"): 1.0, ("x", "B"): 5000.0}
-        kinds = {("x", "A"): {"Ki"}, ("x", "B"): {"Ki", "EC50", "IC50"}}
-        a = A.attribution({"x"}, "B", aff, kinds)
-        self.assertEqual((a["main_measure"], a["best_measure"], a["mixed_measure"]), ("EC50|IC50|Ki", "Ki", "yes"))
-        self.assertEqual(a["state"], "WEAK_ATTRIBUTION")                       # a mixed pool alone never blocks, and never unblocks
-        b = A.attribution({"x"}, "A", aff, {("x", "A"): {"Ki"}, ("x", "B"): {"Ki"}})
-        self.assertEqual(b["mixed_measure"], "no")
-        self.assertEqual(A.attribution({"x"}, "A", aff)["mixed_measure"], "")      # no measure information given: not asserted
+    # ---- IT22 P2 fixtures: measures of different types are never compared as if they were one scale --------------------------------------------------
+    @staticmethod
+    def E(nm, rel="=", assay="unknown"):
+        return dict(nm=nm, rel=rel, assay=assay, n=1)
+
+    def test_different_measure_types_are_not_declared_comparable(self):          # the reported synthetic case: EC50 at the proposed target, Ki at the other
+        aff = {("x", "A"): {"Ki": self.E(1.0)}, ("x", "B"): {"EC50": self.E(5000.0)}}
+        a = A.attribution({"x"}, "B", aff)
+        self.assertEqual(a["state"], "NOT_COMPARABLE_MEASURES")
+        self.assertEqual(a["fold"], "")                                   # no ratio is formed, so none can become an exclusion
+        self.assertIn("EC50", a["values_kept"])
+        self.assertIn("Ki 1 nM", a["values_kept"])
+        self.assertIn("same type", a["comparison_basis"])
+
+    def test_mixed_measures_are_kept_separate_and_compared_type_by_type(self):
+        aff = {("x", "A"): {"IC50": self.E(2.0), "Kd": self.E(400.0)}, ("x", "B"): {"IC50": self.E(10.0), "Kd": self.E(3000.0)}}
+        a = A.attribution({"x"}, "B", aff)
+        self.assertEqual(a["state"], "ATTRIBUTABLE")                       # IC50 5x is the favourable same-type pair; the Kd 7.5x pair is reported, not pooled
+        self.assertIn("IC50", a["context_note"]); self.assertIn("Kd", a["context_note"])
+        self.assertEqual(a["best_measure"], "IC50")
+
+    def test_a_comparable_pair_keeps_a_real_weak_attribution_signal(self):
+        aff = {("x", "A"): {"IC50": self.E(1.3)}, ("x", "B"): {"IC50": self.E(3600.0)}}      # the vorinostat shape: same type, 2769-fold, main target above 1 uM
+        a = A.attribution({"x"}, "B", aff)
+        self.assertEqual(a["state"], "WEAK_ATTRIBUTION")
+        self.assertEqual(a["comparison_basis"], "IC50 at B vs IC50 at A")
+        self.assertEqual(a["occupancy"], "")                                  # a ratio is not converted into occupancy
+
+    def test_a_secondary_activity_is_not_excluded_because_another_target_is_more_potent(self):
+        aff = {("x", "A"): {"IC50": self.E(3.0)}, ("x", "B"): {"IC50": self.E(200.0)}}       # the nanatinostat shape: a measured 200 nM secondary action
+        a = A.attribution({"x"}, "B", aff)
+        self.assertEqual(a["state"], "SECONDARY_ACTIVITY_MEASURED")
+        self.assertIn("on-target control", G.attribution_note(dict(attribution_state=a["state"], main_target="B", attribution_main_nm=a["main_nm"], attribution_fold=a["fold"],
+                                                                     attribution_best_target="A", attribution_best_nm=a["best_nm"], identity_via="")))
+
+    def test_a_missing_measure_never_becomes_a_negative(self):
+        aff = {("x", "A"): {"IC50": self.E(3.0)}}
+        self.assertEqual(A.attribution({"x"}, "B", aff)["state"], "UNMEASURED_AT_MAIN_TARGET")
+        self.assertNotEqual(A.attribution({"x"}, "B", aff)["state"], "WEAK_ATTRIBUTION")
+
+    def test_assay_context_and_censoring_gate_the_pair(self):
+        cell = {("x", "A"): {"IC50": self.E(2.0, assay="biochemical")}, ("x", "B"): {"IC50": self.E(5000.0, assay="cell")}}
+        self.assertEqual(A.attribution({"x"}, "B", cell)["state"], "NOT_COMPARABLE_MEASURES")           # cell-free against cell-based: not one scale
+        unk = {("x", "A"): {"IC50": self.E(2.0)}, ("x", "B"): {"IC50": self.E(5000.0)}}
+        a = A.attribution({"x"}, "B", unk)
+        self.assertEqual(a["state"], "WEAK_ATTRIBUTION"); self.assertIn("not recorded", a["context_note"])  # unknown context stays visible
+        cens = {("x", "A"): {"IC50": self.E(2.0, rel="<")}, ("x", "B"): {"IC50": self.E(5000.0)}}
+        self.assertEqual(A.attribution({"x"}, "B", cens)["state"], "NOT_COMPARABLE_MEASURES")           # a '<' on the best side is not an exact value
+        lb = {("x", "A"): {"IC50": self.E(2.0)}, ("x", "B"): {"IC50": self.E(5000.0, rel=">")}}
+        self.assertEqual(A.attribution({"x"}, "B", lb)["state"], "WEAK_ATTRIBUTION")                    # '>' on the main side is a lower bound: still weak
+
+    def test_assay_class_never_guesses(self):
+        self.assertEqual(A.assay_class("Assay using purified recombinant enzyme"), "biochemical")
+        self.assertEqual(A.assay_class("Inhibition of proliferation in HEK cells"), "cell")
+        self.assertEqual(A.assay_class(""), "unknown")
+        self.assertEqual(A.assay_class("recombinant enzyme in cells"), "unknown")
 
     def test_the_loader_reports_the_original_measure_types(self):
         _, _, kinds = self.aff()
