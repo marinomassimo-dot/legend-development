@@ -132,8 +132,9 @@ class CommittedResults(unittest.TestCase):
     def test_control_reproduces_p2(self):
         c = self.S["control"]
         self.assertEqual(c["pooled_by_question_like_P2"], dict(eligible=141, clusters=32, capped=13))
-        self.assertEqual(c["real_spec_rows"], {"Q2_expression_tiersAB": 51, "Q4_expression_tiersAB": 87, "Q5_expression_tiersAB": 286,
-                                               "Q6_expression_tiersAB": 420, "Q6_protein_tiersAB": 148})
+        # superseded assumption (IT21 P8-fix): 286/420/148 were the counts before the glue/conflict sign guard withdrew the 12 CRBN rows
+        self.assertEqual(c["real_spec_rows"], {"Q2_expression_tiersAB": 51, "Q4_expression_tiersAB": 87, "Q5_expression_tiersAB": 282,
+                                               "Q6_expression_tiersAB": 416, "Q6_protein_tiersAB": 144})
 
     def test_decoy_file_replicate_zero_equals_p2_list(self):
         ref = {}

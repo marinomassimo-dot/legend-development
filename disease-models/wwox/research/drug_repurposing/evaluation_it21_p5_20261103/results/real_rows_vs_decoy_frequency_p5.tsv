@@ -413,10 +413,6 @@ Q5_expression_tiersAB	FAM:CAT:DGIDB:45b2405f8f75	7-Hydroxycholesterol	H_HARM	ROR
 Q5_expression_tiersAB	FAM:CAT:DGIDB:75ad8857ad10	Cholesterol Sulphate	H_HARM	RORA	0	identity_not_resolved	0	IT21P2-0273	1		0	0	1	0	1	0.0	0.0	0.0	0	0
 Q5_expression_tiersAB	FAM:CAT:CHEMBL4297063	DOVITINIB LACTATE	H_PROTECT	FGFR3	0	reach_null_not_confirming	0	IT21P2-0424	2		0	0	0	0	1	0.0	0.0	0.0	0	0
 Q5_expression_tiersAB	FAM:CAT:DGIDB:7f061bf749aa	Tretinoin	H_PROTECT	RARB	0	identity_not_resolved	0	IT21P2-0402	2		0	0	1	0	1	0.0	0.025	0.15	0	1
-Q5_expression_tiersAB	FAM:CAT:CHEMBL43452	POMALIDOMIDE	H_PROTECT	CRBN	0	decided_in_earlier_qualification_record	0	IT21P2-0403	2	DROP (ranking_it8_p9_20261029/it9_record	0	0	0	0	1	0.075	0.0	0.05	0	0
-Q5_expression_tiersAB	FAM:CAT:CHEMBL468	THALIDOMIDE	H_PROTECT	CRBN	0	mechanism_cluster_examined_earlier	0	IT21P2-0404	2		0	0	1	0	1	0.075	0.0	0.05	0	0
-Q5_expression_tiersAB	FAM:CAT:CHEMBL6068337	LENALIDOMIDE HYDROCHLORIDE MONOHYDRATE	H_PROTECT	CRBN	0	decided_in_earlier_qualification_record	0	IT21P2-0405	2	REFERENCE (ranking_it8_p9_20261029/it9_r	0	1	1	0	0	0.075	0.0	0.05	0	0
-Q5_expression_tiersAB	FAM:CAT:DGIDB:38ff5b0e0f26	Sj995973	H_PROTECT	CRBN	0	identity_not_resolved	0	IT21P2-0406	2		0	0	0	0	1	0.075	0.0	0.05	0	0
 Q5_expression_tiersAB	FAM:CAT:DGIDB:6802569a3c41	Lithocholic Acid	H_HARM	VDR	0	identity_not_resolved	0	IT21P2-0275	2		0	0	1	0	1	0.0	0.0	0.0	0	0
 Q5_expression_tiersAB	FAM:CAT:DGIDB:88f4aeb726f1	3-Keto-Lithocholic Acid	H_HARM	VDR	0	identity_not_resolved	0	IT21P2-0276	2		0	0	0	0	1	0.0	0.0	0.0	0	0
 Q5_expression_tiersAB	FAM:CAT:DGIDB:9e056646b4e6	Laduviglusib	H_PROTECT	MAPK1	0	reach_null_not_confirming	0	IT21P2-0423	2		0	1	1	0	0	0.025	0.0	0.1	0	1
@@ -591,10 +587,6 @@ Q6_expression_tiersAB	FAM:CAT:DGIDB:28a63164639a	Chf-5074	H_HARM	PSEN1	0	identit
 Q6_expression_tiersAB	FAM:CAT:DGIDB:62c594195bd0	Az4800	H_HARM	PSEN1	0	identity_not_resolved	0	IT21P2-0505	1		0	0	0	0	1	0.05	0.025	0.175	0	1
 Q6_expression_tiersAB	FAM:CAT:DGIDB:93e5438541e3	Avagacestat	H_HARM	PSEN1	0	identity_not_resolved	0	IT21P2-0506	1		0	0	0	0	1	0.05	0.025	0.175	0	1
 Q6_expression_tiersAB	FAM:CAT:DGIDB:f571f2fbfdf4	Sch-900229	H_HARM	PSEN1	0	identity_not_resolved	0	IT21P2-0507	1		0	0	0	0	1	0.05	0.025	0.175	0	1
-Q6_expression_tiersAB	FAM:CAT:CHEMBL43452	POMALIDOMIDE	H_HARM	CRBN	0	decided_in_earlier_qualification_record	0	IT21P2-0491	1	DROP (ranking_it8_p9_20261029/it9_record	0	0	0	0	1	0.025	0.0	0.0	0	0
-Q6_expression_tiersAB	FAM:CAT:CHEMBL468	THALIDOMIDE	H_HARM	CRBN	0	mechanism_cluster_examined_earlier	0	IT21P2-0492	1		0	0	1	0	1	0.025	0.0	0.0	0	0
-Q6_expression_tiersAB	FAM:CAT:CHEMBL6068337	LENALIDOMIDE HYDROCHLORIDE MONOHYDRATE	H_HARM	CRBN	0	decided_in_earlier_qualification_record	0	IT21P2-0493	1	REFERENCE (ranking_it8_p9_20261029/it9_r	0	1	1	0	0	0.025	0.0	0.0	0	0
-Q6_expression_tiersAB	FAM:CAT:DGIDB:38ff5b0e0f26	Sj995973	H_HARM	CRBN	0	identity_not_resolved	0	IT21P2-0494	1		0	0	0	0	1	0.025	0.0	0.0	0	0
 Q6_expression_tiersAB	FAM:CAT:DGIDB:717e70d312c5	Compound 23 [Pmid: 35816678]	H_HARM	ROCK2	0	identity_not_resolved	0	IT21P2-0572	1		0	0	0	0	1	0.05	0.075	0.275	1	1
 Q6_expression_tiersAB	FAM:CAT:CHEMBL2069623	Pf-4800567	H_PROTECT	CSNK1E	0	arm_has_no_stated_benefit_hypothesis	0	IT21P2-0878	1		0	0	0	0	1	0.05	0.025	0.2	0	1
 Q6_expression_tiersAB	FAM:CAT:DGIDB:09d75f595ec6	Gc-376	H_PROTECT	CAPN1	0	identity_not_resolved	0	IT21P2-0885	1		0	0	0	0	1	0.025	0.025	0.15	0	1
@@ -902,10 +894,6 @@ Q6_protein_tiersAB	FAM:CAT:DGIDB:a3c14c38917f	Itacnosertib	H_HARM	JAK2	0	identit
 Q6_protein_tiersAB	FAM:CAT:CHEMBL2035185	CT-1578	H_HARM	JAK2	1		0	IT21P2-0625	1		0	1	1	1	0	0.0	0.0	0.05	0	0
 Q6_protein_tiersAB	FAM:CAT:CHEMBL1287853	FEDRATINIB	H_HARM	JAK2	1		0	IT21P2-0549	1		0	1	1	1	0	0.0	0.0	0.05	0	0
 Q6_protein_tiersAB	FAM:CAT:CHEMBL2035187	PACRITINIB	H_HARM	JAK2	1		0	IT21P2-0715	1		0	1	1	1	0	0.0	0.0	0.05	0	0
-Q6_protein_tiersAB	FAM:CAT:CHEMBL43452	POMALIDOMIDE	H_PROTECT	CRBN	0	arm_has_no_stated_benefit_hypothesis	0	IT21P2-0775	1	DROP (ranking_it8_p9_20261029/it9_record	0	0	0	0	1	0.0	0.0	0.0	0	0
-Q6_protein_tiersAB	FAM:CAT:CHEMBL468	THALIDOMIDE	H_PROTECT	CRBN	0	arm_has_no_stated_benefit_hypothesis	0	IT21P2-0776	1		0	0	1	0	1	0.0	0.0	0.0	0	0
-Q6_protein_tiersAB	FAM:CAT:CHEMBL6068337	LENALIDOMIDE HYDROCHLORIDE MONOHYDRATE	H_PROTECT	CRBN	0	arm_has_no_stated_benefit_hypothesis	0	IT21P2-0777	1	REFERENCE (ranking_it8_p9_20261029/it9_r	0	1	1	0	0	0.0	0.0	0.0	0	0
-Q6_protein_tiersAB	FAM:CAT:DGIDB:38ff5b0e0f26	Sj995973	H_PROTECT	CRBN	0	identity_not_resolved	0	IT21P2-0778	1		0	0	0	0	1	0.0	0.0	0.0	0	0
 Q6_protein_tiersAB	FAM:CAT:CHEMBL1090479	GSK-1070916	H_HARM	AURKB	0	mechanism_cluster_examined_earlier	0	IT21P2-0436	1		0	0	0	0	1	0.0	0.0	0.0	0	0
 Q6_protein_tiersAB	FAM:CAT:CHEMBL2140408	AMG-900	H_HARM	AURKB	0	mechanism_cluster_examined_earlier	0	IT21P2-0437	1		1	0	0	0	0	0.0	0.0	0.0	0	0
 Q6_protein_tiersAB	FAM:CAT:DGIDB:46cf880ffb75	Mk-5108	H_HARM	AURKB	0	identity_not_resolved	0	IT21P2-0438	1		0	0	0	0	1	0.0	0.0	0.0	0	0

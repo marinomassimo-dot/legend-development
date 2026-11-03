@@ -24,9 +24,9 @@
   "real_spec_rows": {
    "Q2_expression_tiersAB": 51,
    "Q4_expression_tiersAB": 87,
-   "Q5_expression_tiersAB": 286,
-   "Q6_expression_tiersAB": 420,
-   "Q6_protein_tiersAB": 148
+   "Q5_expression_tiersAB": 282,
+   "Q6_expression_tiersAB": 416,
+   "Q6_protein_tiersAB": 144
   }
  },
  "criteria": {
@@ -51,12 +51,12 @@
   "in_arm_E": 1
  },
  "real_spec_rows": {
-  "n": 992,
-  "beyond_direct": 868,
-  "in_arm_E": 119,
+  "n": 980,
+  "beyond_direct": 859,
+  "in_arm_E": 116,
   "target_is_need_target": 78,
   "direct_on_seed": 5,
-  "linked_to_a_need": 211,
+  "linked_to_a_need": 205,
   "generic_in_any_fine": 450,
   "generic_in_both_fine": 133
  },

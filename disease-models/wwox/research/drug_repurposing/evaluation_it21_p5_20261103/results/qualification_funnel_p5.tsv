@@ -1,6 +1,6 @@
 stage	n	note
-1 seed-specific rows (P2, guards on, three nulls)	992	992 rows in 153 mechanism clusters; all CONDITIONAL_H_HARM / CONDITIONAL_H_PROTECT, none qualified by construction (closed status vocabulary)
-2 identity resolved (ChEMBL id) and small molecule	309	first blocker met in order: identity 662, modality 21 (an upper bound: later blockers are counted after these)
+1 seed-specific rows (P2, guards on, three nulls)	980	992 rows in 153 mechanism clusters; all CONDITIONAL_H_HARM / CONDITIONAL_H_PROTECT, none qualified by construction (closed status vocabulary)
+2 identity resolved (ChEMBL id) and small molecule	300	first blocker met in order: identity 662, modality 21 (an upper bound: later blockers are counted after these)
 3 eligible by H1 to H4 and H8 (stated benefit hypothesis, not decided earlier, cluster not examined earlier, reach null confirms)	141	141 rows in 32 mechanism clusters
 4 handed over to qualification (cap 3 per question and hypothesis)	13	the rule is the author's; another cap gives another 13
 5 qualified (QUALIFIED_HYPOTHESIS)	0	no qualification record exists for the 13; L7 of the P2 README. Zero is the pipeline's closed vocabulary plus no P4-type run, not a negative result
@@ -16,5 +16,5 @@ earlier record it9 / generated_in_it9 / DROP	16	ranking_it8_p9_20261029
 earlier record it9 / generated_in_it9 / INCONCLUSIVE	5	ranking_it8_p9_20261029
 earlier record it9 / generated_in_it9 / KEEP	4	ranking_it8_p9_20261029
 earlier record it9 / reference_or_control / REFERENCE	7	ranking_it8_p9_20261029
-P3b path-B proposals (compound to WWOX, authored handles; NOT the P2 generator)	10	selected for qualification 5; dispositions {'KEPT_CONDITIONAL': 2, 'REJECTED_INFORMATIVE': 2, 'INCONCLUSIVE': 6}; QUALIFIED_HYPOTHESIS 0
-P2 seed-specific rows whose compound has an earlier qualification record (state)	37	{'none': 955, 'KEEP': 6, 'DROP': 16, 'INCONCLUSIVE': 2, 'REFERENCE': 11, 'CONDITIONAL': 2}
+P3b path-B proposals (compound to WWOX, authored handles; NOT the P2 generator)	10	selected for qualification 5; dispositions {'KEPT_CONDITIONAL': 2, 'DISFAVOURED_BY_SIGN_PRECEDENT': 1, 'INCONCLUSIVE': 6, 'REJECTED_INFORMATIVE': 1}; QUALIFIED_HYPOTHESIS 0
+P2 seed-specific rows whose compound has an earlier qualification record (state)	31	{'none': 949, 'KEEP': 6, 'DROP': 13, 'INCONCLUSIVE': 2, 'REFERENCE': 8, 'CONDITIONAL': 2}

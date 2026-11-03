@@ -1,14 +1,14 @@
 proposal_id	question	hypothesis	compound	main_target	catalogue_records	catalogue_target_rows	needs_touched_by_catalogue_targets	compound_record_dirs	compound_registry_records	target_record_dirs	target_in_a_card_or_need	named_in_cards_units_p2	target_named_p2	earlier_decision_p2	relation_class	relation_is_new
-IT21P2-0006	Q2	H_HARM	NANATINOSTAT	HDAC5	1	0	none	3	0	10	yes	no	yes		new compound on an axis LEGEND holds	1
-IT21P2-0008	Q2	H_HARM	Iox1	KDM4C	1	4	none	2	0	1	none	no	no		neither compound nor axis in cards/units (named only in lists)	1
-IT21P2-0014	Q2	H_HARM	ASTX-660	XIAP	1	0	none	3	0	2	none	no	no		neither compound nor axis in cards/units (named only in lists)	1
-IT21P2-0057	Q4	H_HARM	Cgi1746	BTK	1	1	none	4	0	9	none	no	no		neither compound nor axis in cards/units (named only in lists)	1
-IT21P2-0195	Q5	H_HARM	Gsk343	EZH2	1	2	none	4	0	5	none	no	no		neither compound nor axis in cards/units (named only in lists)	1
-IT21P2-0221	Q5	H_HARM	SAR-407899 FREE BASE	ROCK2	1	0	none	3	0	7	none	no	no		neither compound nor axis in cards/units (named only in lists)	1
-IT21P2-0236	Q5	H_HARM	LGH-447	PIM2	2	4	none	4	0	7	none	no	no		neither compound nor axis in cards/units (named only in lists)	1
-IT21P2-0296	Q5	H_PROTECT	RAVOXERTINIB	MAPK3	2	8	none	2	0	6	none	no	no		neither compound nor axis in cards/units (named only in lists)	1
-IT21P2-0374	Q5	H_PROTECT	TIZATERKIB	MAPK1	2	5	none	3	0	6	none	no	no		neither compound nor axis in cards/units (named only in lists)	1
-IT21P2-0388	Q5	H_PROTECT	CEP-11981	MAP3K7	2	24	NEED-GSK3B-DEREPRESSION;NEED-NEUROINFLAMMATION-GLIA	4	0	6	none	no	no		neither compound nor axis in cards/units (named only in lists)	0
-IT21P2-0456	Q6	H_HARM	Az960	JAK2	1	2	NEED-NEUROINFLAMMATION-GLIA	4	0	18	yes	no	yes		new compound on an axis LEGEND holds	0
-IT21P2-0512	Q6	H_HARM	SRT-2104	SIRT1	2	1	none	3	0	5	none	no	no		neither compound nor axis in cards/units (named only in lists)	1
-IT21P2-0542	Q6	H_HARM	LONAPRISAN	PGR	2	1	none	3	0	9	none	no	no		neither compound nor axis in cards/units (named only in lists)	1
+IT21P2-0006	Q2	H_HARM	NANATINOSTAT	HDAC5	1	0	none	6	0	13	yes	yes	yes		compound and target axis both held by LEGEND	0
+IT21P2-0008	Q2	H_HARM	Iox1	KDM4C	1	4	none	5	0	4	none	yes	no		known compound on a new axis	0
+IT21P2-0014	Q2	H_HARM	ASTX-660	XIAP	1	0	none	5	0	4	none	yes	no		known compound on a new axis	0
+IT21P2-0057	Q4	H_HARM	Cgi1746	BTK	1	1	none	6	0	12	none	yes	no		known compound on a new axis	0
+IT21P2-0195	Q5	H_HARM	Gsk343	EZH2	1	2	none	8	0	9	none	yes	yes		compound and target axis both held by LEGEND	0
+IT21P2-0221	Q5	H_HARM	SAR-407899 FREE BASE	ROCK2	1	0	none	4	0	9	none	no	no		neither compound nor axis in cards/units (named only in lists)	1
+IT21P2-0236	Q5	H_HARM	LGH-447	PIM2	2	4	none	6	0	9	none	no	no		neither compound nor axis in cards/units (named only in lists)	1
+IT21P2-0296	Q5	H_PROTECT	RAVOXERTINIB	MAPK3	2	8	none	4	0	8	none	no	no		neither compound nor axis in cards/units (named only in lists)	1
+IT21P2-0374	Q5	H_PROTECT	TIZATERKIB	MAPK1	2	5	none	5	0	8	none	no	no		neither compound nor axis in cards/units (named only in lists)	1
+IT21P2-0388	Q5	H_PROTECT	CEP-11981	MAP3K7	2	24	NEED-GSK3B-DEREPRESSION;NEED-NEUROINFLAMMATION-GLIA	6	0	7	none	yes	no		known compound on a new axis	0
+IT21P2-0456	Q6	H_HARM	Az960	JAK2	1	2	NEED-NEUROINFLAMMATION-GLIA	7	0	20	yes	yes	yes		compound and target axis both held by LEGEND	0
+IT21P2-0512	Q6	H_HARM	SRT-2104	SIRT1	2	1	none	5	0	7	none	yes	no		known compound on a new axis	0
+IT21P2-0542	Q6	H_HARM	LONAPRISAN	PGR	2	1	none	5	0	12	none	yes	no		known compound on a new axis	0
