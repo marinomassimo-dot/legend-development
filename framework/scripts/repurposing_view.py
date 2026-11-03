@@ -4041,6 +4041,7 @@ UI_IT20B = {
     "iv_h": "Principali indagini da portare avanti",
     "iv_lead": "Ordine provvisorio e motivato, con possibili pari merito: ogni riga è una domanda su un composto o intervento, la sua azione, il contesto e il beneficio cercato, con un prossimo test. "
                "Non è una graduatoria di cure né una probabilità di beneficio; la profondità dell'evidenza è indicata a parte.",
+    "iv_purpose": "Ordine delle indagini da finanziare: valuta il valore del prossimo test discriminante, non l'efficacia di un intervento.",
     "iv_pending": "In preparazione: l'elenco è generato da un'analisi in corso e non è ancora nei dati di questa versione. Nessuna voce viene mostrata al suo posto.",
     "iv_pos": "Posizione", "iv_tie": "pari merito", "iv_int": "Composto o intervento", "iv_q": "Domanda", "iv_why": "Perché adesso", "iv_ev": "Evidenza disponibile",
     "iv_depth": "Profondità dell'evidenza", "iv_unc": "Incertezza decisiva", "iv_next": "Prossimo test", "iv_nov": "Novità, nel perimetro verificato", "iv_move": "Motivo dello spostamento",
@@ -4072,12 +4073,13 @@ def investigations_view(rows, cands: list, full: bool, allow: dict):
             errs.append(f"row {i}: origin_class {r['origin_class']!r} not in {INV_ORIGINS}")
         if not isinstance(r["rank"], int) or r["rank"] < 1:
             errs.append(f"row {i}: rank must be a positive integer")
-        out.append({k: r[k] for k in INV_FIELDS})
-    ranks = [r["rank"] for r in out if isinstance(r["rank"], int)]
+        # the page key is "position": the curated payload carries no "rank", "score" or "probability" key (Curated.test_positions_are_reasoned_and_unscored)
+        out.append({("position" if k == "rank" else k): r[k] for k in INV_FIELDS})
+    ranks = [r["position"] for r in out if isinstance(r["position"], int)]
     if ranks != sorted(ranks):
         errs.append("rows are not in rank order")
     for rk in set(ranks):
-        tg = {str(r["tie_group"] or "") for r in out if r["rank"] == rk}
+        tg = {str(r["tie_group"] or "") for r in out if r["position"] == rk}
         if ranks.count(rk) > 1 and (len(tg) != 1 or tg == {""}):
             errs.append(f"rank {rk} is shared by several rows without one common tie_group")
     if errs:
@@ -4106,15 +4108,15 @@ def render_investigations(P: dict) -> str:
     head = f'<section id="investigations" class="inv" aria-labelledby="h-inv"><h2 id="h-inv">{E(U["iv_h"])}</h2>'
     if rows is None:
         return head + f'<p class="note" data-state="pending">{E(U["iv_pending"])}</p></section>'
-    counts = Counter(r["rank"] for r in rows)
+    counts = Counter(r["position"] for r in rows)
     items = []
     for r in rows:
-        tie = f' <span class="mini">({E(U["iv_tie"])})</span>' if counts[r["rank"]] > 1 else ""
+        tie = f' <span class="mini">({E(U["iv_tie"])})</span>' if counts[r["position"]] > 1 else ""
         dl = "".join(f'<dt>{E(U[k])}</dt><dd>{E(str(r[f]))}</dd>' for k, f in (("iv_q", "question"), ("iv_why", "why_now"), ("iv_ev", "evidence_available"), ("iv_depth", "evidence_depth"),
                                                                             ("iv_unc", "decisive_uncertainty"), ("iv_next", "next_test"), ("iv_nov", "novelty_perimeter"), ("iv_move", "movement_reason")) if str(r[f] or "").strip())
-        items.append(f'<li class="inv-row" data-rank="{E(str(r["rank"]))}" data-origin="{E(r["origin_class"])}"><div class="inv-h"><span class="inv-pos" aria-label="{E(U["iv_pos"])} {E(str(r["rank"]))}">{E(str(r["rank"]))}</span>{tie} '
+        items.append(f'<li class="inv-row" data-rank="{E(str(r["position"]))}" data-origin="{E(r["origin_class"])}"><div class="inv-h"><span class="inv-pos" aria-label="{E(U["iv_pos"])} {E(str(r["position"]))}">{E(str(r["position"]))}</span>{tie} '
                      f'<b>{E(str(r["intervention"]))}</b> <span class="org org-{E(r["origin_class"])}">{E(U["iv_o_" + r["origin_class"]])}</span></div><dl class="qk-dl">{dl}</dl></li>')
-    return head + f'<p class="mini mut">{E(U["iv_lead"])}</p><ol class="inv-list">{"".join(items)}</ol><p class="mini mut">{E(U["iv_nov_note"])}</p></section>'
+    return head + f'<p class="lead inv-purpose"><b>{E(U["iv_purpose"])}</b></p><p class="mini mut">{E(U["iv_lead"])}</p><ol class="inv-list">{"".join(items)}</ol><p class="mini mut">{E(U["iv_nov_note"])}</p></section>'
 
 
 def render_quick(P: dict) -> str:
