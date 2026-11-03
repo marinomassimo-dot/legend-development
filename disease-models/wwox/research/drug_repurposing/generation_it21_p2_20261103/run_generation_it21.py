@@ -375,9 +375,58 @@ HANDOFF_RULE = (
     "H5 one proposal per mechanism cluster = (question, hypothesis, main target), chosen by number of evidence origins, then the shorter admissible chain (fewer edges), then the smallest |z|; salt twins count once; "
     "H6 at most 3 per (question, hypothesis); "
     "H7 a proposal whose only signed support at the main target is not a resolved assertion is not handed over (the signed pair must survive the refreshed guards, which is the case for every row of the refreshed table); "
-    "H8 a mechanism cluster in which ANY member (eligible or not) has an IT9/IT10/IT11 qualification record is not handed over as new: it is listed in mechanism_clusters_it21.tsv with that record, "
-    "because the earlier reason may have been about the compound and only the qualification can say so (unknown is not negative)."
+    "H8 (IT22 P1: scoped; before, ANY member's decision vetoed the whole cluster) a decision about one member reaches another member only inside the scope its own reason supports "
+    "(decision_scope_it22.tsv): a reason about the molecule (potency profile, label, artefact) stays with the molecule; a premise REFUTED for the arc (an edge or a target-in-context) "
+    "blocks the members whose chain or main target carries that premise ('shared_premise_refuted'); an UNRESOLVED premise travels as a carried limit, never a veto; work already done "
+    "demotes the cluster behind unworked ones and the hand-over says 'not a discovery'; a decision with no scope row keeps the old veto under its own label ('decision_scope_untagged')."
 )
+REASON_LABELS = {"mechanism_cluster_selection": "H5/H6 diversification of the selection (one per cluster, three per question and hypothesis)",
+                 "work_already_done": "an earlier qualification already worked this cluster: priority only, never a scientific verdict",
+                 "shared_premise_refuted": "the premise that sank an earlier member is refuted for this arc and applies to this member",
+                 "decision_scope_untagged": "an earlier decision with no recorded scope: the old cluster veto, kept until its reason is read"}
+DECISION_SCOPE_TABLE = DR / "generation_it22_p1_20261103" / "decision_scope_it22.tsv"
+
+
+def load_decision_scopes(path=None):
+    """source id (the `#cand_id` pointer earlier_decisions() carries) -> [component dicts]."""
+    out = collections.defaultdict(list)
+    path = Path(path or DECISION_SCOPE_TABLE)
+    if path.exists():
+        for r in rd(path):
+            out[r["decision_source"]].append(dict(scope=r["scope"], premise_key=r["premise_key"], note=r["basis"]))
+    return out
+
+
+def _premise_applies(key, p):
+    """edge:A>B -> both genes appear in the chain in that order; target:GENE@Q -> same main target and question."""
+    kind, _, val = key.partition(":")
+    if kind == "edge":
+        a, _, b = val.partition(">")
+        return re.search(rf"\b{re.escape(a)}\b[^;]*?-> *{re.escape(b)}\b", p.get("chain", "") or "") is not None
+    if kind == "target":
+        g, _, q = val.partition("@")
+        return p.get("main_target") == g and (not q or p.get("question") == q)
+    return False
+
+
+def decision_effect(p, cluster_decisions):
+    """What the earlier decisions on OTHER members of p's mechanism cluster mean for p. Pure. cluster_decisions: dicts compound/state/source/components.
+    Returns block (reason or ''), work_done, carried_limits."""
+    block, work, limits = "", False, []
+    for d in cluster_decisions:
+        comps = d.get("components") or []
+        if not comps:
+            block = block or "decision_scope_untagged"
+            continue
+        for c in comps:
+            sc = c["scope"]
+            if sc == "premise_refuted" and _premise_applies(c["premise_key"], p):
+                block = f"shared_premise_refuted: {c['premise_key']} ({d['compound']})"
+            elif sc == "premise_unresolved" and _premise_applies(c["premise_key"], p):
+                limits.append(f"{d['compound']} {d['state']}: {c['note']}")
+            elif sc == "work_done":
+                work = True
+    return dict(block=block, work_done=work, carried_limits=limits)
 
 
 def eligible(row, role, fam_meta, decisions):
@@ -430,7 +479,7 @@ AS_POTENT_NM = 100.0     # mirrors attribution_screen_it21.POTENT_MAIN_NM (a uni
 
 def order_key(r):
     """IT21 V1-fix: a row whose main target is UNMEASURED (measured elsewhere) ranks after every other row; then more independent origins first, then the shorter admissible chain, then the larger smallest-|z| (a null-relative score, last on purpose)."""
-    return (1 if r.get("attribution_state") == "UNMEASURED_AT_MAIN_TARGET" else 0, -int(r["n_origins"] or 0), int(r.get("chain_edges") or 99), -float(r["zmin"]))
+    return (1 if r.get("cluster_work_done") == "yes" else 0, 1 if r.get("attribution_state") == "UNMEASURED_AT_MAIN_TARGET" else 0, -int(r["n_origins"] or 0), int(r.get("chain_edges") or 99), -float(r["zmin"]))
 
 
 def select_handoff(rows, per_group=3):
@@ -618,16 +667,32 @@ def cmd_propose(a):
         if ok:
             elig_rows.append(proposals[-1])
     assign_ids(proposals, R / "proposals_it21.tsv")
-    # H8: a mechanism cluster with an earlier qualification record on ANY member is not handed over as new
-    cl_dec = collections.defaultdict(list)
+    # H8 (IT22 P1): an earlier decision on a cluster member reaches another member only inside its own scope
+    scopes = load_decision_scopes() if v1 else {}
+    cl_dec, cl_str = collections.defaultdict(list), collections.defaultdict(list)
     for p in proposals:
-        if p["earlier_decision"]:
-            cl_dec[(p["question"], p["hypothesis"], p["main_target"])].append(f"{p['compound']}: {p['earlier_decision']}")
+        dec = earlier_state(p["compound"], decisions)
+        if dec:
+            k = (p["question"], p["hypothesis"], p["main_target"])
+            cl_str[k].append(f"{p['compound']}: {p['earlier_decision']}")
+            cl_dec[k].append(dict(compound=p["compound"], state=dec[0], source=dec[1], components=scopes.get(dec[1], [])))
     for p in proposals:
         k = (p["question"], p["hypothesis"], p["main_target"])
-        p["cluster_earlier_decisions"] = " | ".join(sorted(set(cl_dec.get(k, []))))[:300]
-        if p["handoff_eligible"] == "yes" and p["cluster_earlier_decisions"]:
-            p["handoff_eligible"], p["handoff_blocker"] = "no", "mechanism_cluster_examined_earlier"
+        p["cluster_earlier_decisions"] = " | ".join(sorted(set(cl_str.get(k, []))))[:300]
+        p["cluster_work_done"], p["carried_limits"], p["blocker_detail"] = "", "", ""
+        if not p["cluster_earlier_decisions"]:
+            continue
+        if not v1:                                    # legacy P2 behaviour, kept so --no-v1 reproduces the committed P2 byte for byte
+            if p["handoff_eligible"] == "yes":
+                p["handoff_eligible"], p["handoff_blocker"] = "no", "mechanism_cluster_examined_earlier"
+            continue
+        others = [d for d in cl_dec[k] if base_name(d["compound"]) != base_name(p["compound"])]
+        eff = decision_effect(p, others)
+        p["cluster_work_done"] = "yes" if eff["work_done"] else ""
+        p["carried_limits"] = " | ".join(eff["carried_limits"])[:400]
+        if p["handoff_eligible"] == "yes" and eff["block"]:
+            p["handoff_eligible"], p["handoff_blocker"] = "no", eff["block"].split(":")[0] if eff["block"].startswith("shared") else eff["block"]
+            p["blocker_detail"] = eff["block"]
     elig_rows = [p for p in proposals if p["handoff_eligible"] == "yes"]
     handed = select_handoff(elig_rows)
     hid = {p["proposal_id"] for p in handed}
@@ -668,6 +733,8 @@ def cmd_propose(a):
             target_axis_named_in_legend_material=p["target_named_in_legend_material"],
             abstentions=(f"{len(wh)} withheld row(s) on this record ({collections.Counter(r['reason_class'] for r in wh).most_common(1)[0][0]})" if wh else "none on this record"),
             earlier_thread=p["earlier_thread"],
+            carried_limits_from_cluster=p.get("carried_limits", ""),
+            cluster_work_done=("an earlier qualification already worked this cluster (" + p["cluster_earlier_decisions"][:120] + "); this molecule was not assessed there: priority was lowered, and it is not a discovery") if p.get("cluster_work_done") else "",
             **({"attribution_state": p["attribution_state"], "attribution_note": attribution_note(p)} if "attribution_state" in p else {}),
             novelty_perimeter=(("earlier LEGEND thread (" + p["earlier_thread"] + ")") if p["earlier_thread"] else "named in LEGEND cards/units" if p["named_in_legend_material"] == "yes" else
                                "not named in LEGEND cards, units, earlier exclusion lists or IT9/IT10 candidate lists (perimeter of this module only, not a literature claim)"),
