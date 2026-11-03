@@ -1,0 +1,6 @@
+case	compound	row	by_hand	screen_output	result
+well_attributed	Entospletinib	IT21P2-0352/0362	GtoPdb ligand 7889 has one target (SYK 7.7 nM)	ATTRIBUTABLE fold 1.0 (ChEMBL family and bridged twin agree)	correct but vacuous: one measured target always gives fold 1.0
+weak_attribution	Abrocitinib JAK2	IT21P2-0617	JAK2 803 nM vs JAK1 29 nM = 27.7	WEAK 27.7	correct
+weak_attribution	Progesterone PGR	IT21P2-0906	PGR 2.5 nM (median of EC50 1.5 and Ki 3.5) vs MR antagonist pIC50 11 (0.01 nM)	WEAK 250	questionable: canonical high-potency target blocked by an outlier functional value; Ki, EC50 and IC50 pooled
+dgidb_twin	Fasudil ROCK2	IT21P2-0223	Ki ROCK2 271 vs ROCK1 100 = 2.7; IC50 rows without a median are skipped	ATTRIBUTABLE 2.7, bridged to CHEMBL38380	correct
+dgidb_twin	Estradiol Valerate ESR2	IT21P2-0254	twin claims name estradiol ligands only	ATTRIBUTABLE 3.0 via CHEMBL135	identity overreach, see item 4
