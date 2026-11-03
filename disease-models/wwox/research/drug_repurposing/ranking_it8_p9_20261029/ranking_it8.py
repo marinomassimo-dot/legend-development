@@ -1894,6 +1894,27 @@ def _apply_the_line(rows: list[dict]) -> list[dict]:
     return rows
 
 
+CONDITIONAL_COLS = ["inv_id", "intervention", "question", "why_now", "evidence_available", "evidence_depth", "decisive_uncertainty", "next_test",
+                    "feasibility", "origin_class", "origin_detail", "status", "status_label", "novelty_perimeter", "direction_state", "chembl_ids"]
+
+
+def conditional_hypotheses(all_rows: list[dict]) -> list[dict]:
+    """IT21 P7-fix: the conditional proposals that the ten-row ceiling keeps out of the ordered list. They are shown on the first screen BESIDE the
+    list, not inside it: no position, tie group or movement is carried, so none can be read off. Built from the same curated rows; validated here
+    so that none ever claims to be qualified and none is also published in the ordered list."""
+    out = []
+    for r in all_rows:
+        if r.get("status") != "conditional_hypothesis" or not r.get("below_the_line"):
+            continue
+        blob = json.dumps({k: r.get(k, "") for k in CONDITIONAL_COLS}).lower()
+        for bad in FORBIDDEN_QUALIFIED:
+            if bad in blob:
+                raise SystemExit(f"conditional_hypotheses: {r['inv_id']} claims to be qualified ({bad!r})")
+        out.append({k: r.get(k, "") for k in CONDITIONAL_COLS})
+    out.sort(key=lambda x: x["inv_id"])
+    return out
+
+
 def investigation_movement(row: dict, prev: dict | None) -> str:
     """Why the position changed since the last snapshot. First evaluation says so; an unchanged position says so."""
     if prev is None or not prev.get("investigations"):
@@ -2086,6 +2107,7 @@ def build_all() -> dict[str, bytes]:
         # ten rows, in rank order, each tie group sharing one tie_group string. The summary lives under summary.investigations.
         ing["investigations"] = pub
         ing["investigations_context"] = investigations_context(invs)
+        ing["conditional_hypotheses"] = conditional_hypotheses(invs)
         summary["investigations"] = investigations_summary(pub, invs)
     files["ranking.json"] = json_bytes(ing)
     # per-unit input digests (for the snapshot / diff mechanism)

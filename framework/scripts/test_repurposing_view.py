@@ -2521,6 +2521,18 @@ class It21P7InvestigationsContext(unittest.TestCase):
         old = {k: v for k, v in self.row().items() if k not in rv.INV_OPTIONAL}
         self.assertEqual(len(rv.investigations_view([old], self.CARDS, True, {})), 1)
 
+    def test_conditional_hypotheses_render_beside_the_list_without_a_position(self):
+        row = {k: v for k, v in self.row().items() if k not in ("rank", "tie_group", "movement_reason")} | {"inv_id": "INV-90"}
+        ch = rv.conditional_hypotheses_view([row], self.CARDS, True, {})
+        h = rv.render_investigations({"source": "full", "cur": {"ranking": {"investigations": [], "conditional_hypotheses": ch, "investigations_context": {}}}})
+        self.assertIn(rv.E(rv.UI_IT["iv_cond_h"]), h)
+        self.assertIn("INV-90", h)
+        self.assertNotIn("inv-pos", h)
+        with self.assertRaises(SystemExit):
+            rv.conditional_hypotheses_view([dict(row, why_now="this is qualified")], self.CARDS, True, {})
+        with self.assertRaises(SystemExit):
+            rv.conditional_hypotheses_view([dict(row, status="carded_thread")], self.CARDS, True, {})
+
     def test_the_page_says_positions_are_curated_and_the_code_does_not_compute(self):
         t = rv.UI_IT["iv_curated"]
         self.assertIn("non un calcolo predittivo", t)
@@ -2558,9 +2570,18 @@ class It21P7InvestigationsContext(unittest.TestCase):
     @unittest.skipUnless(HAVE_DATA, "module data absent")
     def test_live_conditional_rows_are_never_qualified_and_shareable_names_stay_out(self):
         j = json.loads((DR / "ranking_it8_p9_20261029/ranking.json").read_text(encoding="utf-8"))
+        # Superseded assumption (IT21 P7-fix): the conditional rows used to sit inside j["investigations"]; the ten-row ceiling and the rule that
+        # risk-flagged / human-report rows are not displaced moved them below the line, so they now travel in j["conditional_hypotheses"], shown
+        # beside the ordered list on the first screen, with no position.
         rows = j["investigations"]
-        cond = [r for r in rows if r.get("status") == "conditional_hypothesis"]
+        self.assertFalse([r for r in rows if r.get("status") == "conditional_hypothesis" and r.get("below_the_line")])
+        cond = j["conditional_hypotheses"]
         self.assertTrue(cond)
+        self.assertTrue({r["inv_id"] for r in cond} >= {"INV-12", "INV-13", "INV-14"})
+        for r in cond:
+            self.assertEqual(r["status"], "conditional_hypothesis")
+            for k in ("rank", "position", "tie_group"):
+                self.assertNotIn(k, r)
         for r in cond:
             blob = json.dumps(r).lower()
             for bad in ("is qualified", "was qualified", "now qualified", "qualified hypothesis"):
@@ -2570,9 +2591,16 @@ class It21P7InvestigationsContext(unittest.TestCase):
         low = page.lower()
         for name in ("tiratricol", "forigerimod", "gsk343", "nanatinostat", "iox1", "cgi-1746"):
             self.assertNotIn(name, low, f"{name} reached the single shareable page")
-        for cid in ("CHEMBL41632", "CHEMBL3989409"):
+        for cid in ("CHEMBL41632", "CHEMBL3989409", "CHEMBL2204995"):
             self.assertIn(cid, page)
         self.assertLessEqual(len(j["investigations"]), 10)
+        self.assertIn('id="inv-conditional"', page)
+        self.assertIn(rv.E(rv.UI_IT["iv_cond_h"]), page)
+        self.assertIn(rv.E(rv.UI_IT["iv_st_conditional_hypothesis"]), page)
+        sec = page[page.index('id="inv-conditional"'):]
+        sec = sec[:sec.index("</section>")].lower()
+        for bad in ("is qualified", "was qualified", "now qualified", "qualified hypothesis"):
+            self.assertNotIn(bad, sec)
 
     @unittest.skipUnless(HAVE_DATA, "module data absent")
     def test_the_class_b_file_carries_the_records_the_first_screen_points_to(self):
@@ -2580,6 +2608,10 @@ class It21P7InvestigationsContext(unittest.TestCase):
         allow = rv.load_allowlist(DR)
         ids = {r["chembl_id"] for r in pk.chembl_records(DR, allow)}
         self.assertTrue({"CHEMBL41632", "CHEMBL3989409", "CHEMBL1801250"} <= ids)
+        # superseded assumption (IT21 P7-fix): the conditional rows' ids now come from conditional_hypotheses; the package must carry them too
+        j = json.loads((DR / "ranking_it8_p9_20261029/ranking.json").read_text(encoding="utf-8"))
+        cids = {x for r in j["conditional_hypotheses"] for x in r["chembl_ids"].split(";") if x}
+        self.assertTrue(cids and cids <= ids, cids - ids)
         self.assertTrue(pk.investigation_chembl_ids(DR) <= ids)
 
 

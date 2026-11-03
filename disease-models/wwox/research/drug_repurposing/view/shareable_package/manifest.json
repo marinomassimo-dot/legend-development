@@ -18,7 +18,7 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 12310,
+    "values": 12352,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -193,13 +193,13 @@
    },
    "^\\.ui\\.": {
     "class": "UI",
-    "values": 1337,
+    "values": 1340,
     "why": "Italian orientation text (builder data UI_IT and siblings)"
    }
   },
   "identifiers": {
    "CAT": 2229,
-   "CHEMBL": 304,
+   "CHEMBL": 308,
    "DOI": 5,
    "HGNC": 12,
    "NCT": 0,
@@ -223,7 +223,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3138,
+    "forbidden-name": 3162,
     "forbidden-wording": 12
    },
    "co_attested_wording": [
@@ -248,7 +248,7 @@
    "forbidden_names": 126046,
    "forbidden_wordings": 2888,
    "pair_unmarked_attested_or_unchecked": {
-    "count": 154,
+    "count": 156,
     "names": [
      "act 709478",
      "apinocaltamide",
@@ -263,7 +263,7 @@
      "px 478",
      "sulfopin"
     ],
-    "unchecked_without_corpus": 154
+    "unchecked_without_corpus": 156
    },
    "suppressed_by_exemption": {
     "bibliographic journal name (validated against the journals of the cache)": 4,
@@ -282,18 +282,23 @@
    "CHEMBL1201333",
    "CHEMBL1230640",
    "CHEMBL146927",
+   "CHEMBL1544",
    "CHEMBL1746",
    "CHEMBL1801250",
    "CHEMBL189963",
    "CHEMBL190461",
    "CHEMBL1983350",
    "CHEMBL2107333",
+   "CHEMBL2204995",
    "CHEMBL2338329",
    "CHEMBL256997",
    "CHEMBL306823",
    "CHEMBL3301610",
+   "CHEMBL3989409",
+   "CHEMBL3989801",
    "CHEMBL4117516",
    "CHEMBL413",
+   "CHEMBL41632",
    "CHEMBL4217292",
    "CHEMBL4303525",
    "CHEMBL589586",
@@ -301,8 +306,8 @@
    "CHEMBL89598"
   ],
   "file": "class_b/chembl_cc-by-sa-3.0/chembl_cc-by-sa-3.0.jsonl",
-  "mechanism_rows": 19,
-  "records": 23,
+  "mechanism_rows": 22,
+  "records": 28,
   "release": "ChEMBL_37 2026-05-01"
  },
  "class_b_files": [
@@ -464,11 +469,11 @@
   "BIBLIO": 2429,
   "COUNT": 11599,
   "ID": 4547,
-  "OWN": 83701,
+  "OWN": 83743,
   "ROWNAME": 2251,
   "SRC_A": 189,
   "SRC_META": 256,
-  "UI": 1337
+  "UI": 1340
  },
  "embedded_sources": [
   {
@@ -523,7 +528,7 @@
   },
   "NOTICE.md": {
    "bytes": 13087,
-   "sha256": "c60f6036e78142c19ae1c5145f98e2c86edb04701caf4e0b5b0062ddd0f54560"
+   "sha256": "5538775b294c207ae3aaa76be6222a22acce5719e483034fafd3d35894dc984f"
   },
   "README.md": {
    "bytes": 4906,
@@ -535,19 +540,19 @@
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
-   "sha256": "e85c21bd2ce4d7442760bf28db9df40d4480bdf115aa043bad24236efc402ca0"
+   "sha256": "6521c4a04a94c813c7356d5191911e904daedc0ac00859d6a8b77abf982edd07"
   },
   "class_b/chembl_cc-by-sa-3.0/LICENSE_CC-BY-SA-3.0.txt": {
    "bytes": 22240,
    "sha256": "3f941b3b89cf7b8370ceb83cc76d2120d471b58735d8ca60238a751a48d7f72f"
   },
   "class_b/chembl_cc-by-sa-3.0/chembl_cc-by-sa-3.0.jsonl": {
-   "bytes": 12190,
-   "sha256": "0fec943aa25805d10d994a486c5e305be21c0c3fb3d826418843fe75e6518ebc"
+   "bytes": 14377,
+   "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "index.html": {
-   "bytes": 4476110,
-   "sha256": "3eb6f03ba2ce1cf0b225b49f68ad6afedad72c7d6d1c3feda24d897095e86472"
+   "bytes": 4500149,
+   "sha256": "a54c16351608794306b127256dd86bcc8aaf1602efce9cbd03e6518702217bfd"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
