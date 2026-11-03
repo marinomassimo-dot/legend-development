@@ -1,0 +1,4 @@
+question	seed_set	family_id	name	seed_gene_targets	action_it10	action_now	reading
+Q5	Q5_expression_tiersAB	FAM:CAT:DGIDB:08083da7c335	Canakinumab	targets:IL1B	opposes	unsigned_or_no_signed_direct_action	direction withdrawn by the current guards; the association stays (unknown is not negative)
+Q5	Q5_expression_tiersAB	FAM:CAT:DGIDB:19a0fdd3e919	Ozoralizumab	targets:TNF	opposes	unsigned_or_no_signed_direct_action	direction withdrawn by the current guards; the association stays (unknown is not negative)
+Q5	Q5_expression_tiersAB	FAM:CAT:DGIDB:1b066b3df1ff	Lutikizumab	targets:IL1B	opposes	unsigned_or_no_signed_direct_action	direction withdrawn by the current guards; the association stays (unknown is not negative)

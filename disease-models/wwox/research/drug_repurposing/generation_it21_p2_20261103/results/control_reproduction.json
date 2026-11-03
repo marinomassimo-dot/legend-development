@@ -1,0 +1,10 @@
+{
+ "control_only": 0,
+ "control_seed_specific": 1202,
+ "guarded_seed_specific": 992,
+ "guarded_vs_control_gained": 13,
+ "guarded_vs_control_lost": 223,
+ "identical_keys": true,
+ "it10_only": 0,
+ "it10_seed_specific": 1202
+}

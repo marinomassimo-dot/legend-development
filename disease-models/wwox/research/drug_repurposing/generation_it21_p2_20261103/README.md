@@ -1,0 +1,119 @@
+# IT21 P2: where WWOX-guided hypothesis generation breaks today, and a refreshed generator run (2026-11-03)
+
+Non-canonical research material. Actor `orchestrator-delegate` (package P0+P2), task IT21, branch `task/it21-p0p2`, baseline `main` = `5771e94f`. **Not medical advice.**
+Every proposal below is a conditional hypothesis (compound, action, biological context, hypothesised benefit, discriminating experiment). A compatible action of a context-free
+regulatory network is not a predicted benefit; an RNA change is never read as target activity; a conditional hypothesis (H_HARM / H_PROTECT) is a research question with the
+measurement that resolves its role, and **this pipeline cannot call it qualified** (section 5). Public edition: the subject is the WWOX-DEE reference genotype class, never a person.
+Nothing here edits the four scientific current files, a registry, a card, a need, the ranking or the receipt ledger. Zero spend, no external contact, no registration.
+
+## 1. Diagnosis: the chain, stage by stage (first)
+
+Chain: WWOX observation, interpretation, mechanistic path, pharmacological action, compound, qualification, investigation, dashboard. Classes are the eight requested; evidence is a path and a count.
+
+| # | Stage | Where it breaks | Class | Evidence (path, count) |
+|---|---|---|---|---|
+| D1 | observation to seed | `seeds.tsv` (131 rows, 65 usable, 29 gene symbols) has not changed since 2026-10-30 (`036f8013`). Later packages verified or corrected rows (S084, S085, S086, S004; three correction notes) and produced observations that are in no seed row: NRF2 organoid values (NFE2L2 0.75x, NQO1 0.73x, HMOX1 1.67x, 36 genes recounted), the GSE158684 snRNA Pvalb/oligodendrocyte shift, IT14 glia/myelin | **available but unlinked information** (rows S084 to S086 and S004 are also **superseded input**, handled only by `origin_overrides.tsv`) | `generation_it9_p1_20261030/seeds.tsv` (0 hits for NFE2L2, HMOX1, NQO1, GSE158684); `CORRECTION_NOTE_IT10/11/12_*.md`; `nrf2_it11_p23_20261031/README.md` § 1; `snrna_it13b_pv_20261031/`; `glia_maturation_it14_p4_20261101/` |
+| D2 | observation to interpretation | The role of the observed change (harmful, protective, composition) is stated by 0 of 65 usable seed rows; 6 of 7 questions are `unknown`, Q1 is `not_applicable`. The measurements that resolve it do not exist in public data (HIF-1alpha/2alpha protein, ATF4/eIF2alpha-P, cytokine protein in a WWOX-deficient neural cell) | **missing biological datum** | `generation_it10_p1_20261031/question_roles.tsv`; its README § 0 and § 5; `hif_it10_p21_20261031/README.md` § 0 ("never measured in a WWOX-deficient mammalian neural cell") |
+| D3 | interpretation to mechanistic path | One generic signed network (70,461 edges, 8,769 genes), one regulatory level, no tissue context. Q1, Q3 and Q7 return 0 robust proposals; 15 usable process/state rows and 6 pathology-level gene rows cannot be seeds (no gene members) | **inadequate mechanism representation** | `generation_it9_p2_20261030/README.md` § 1 table; `seeds_p1/adapter_counts.json` (15 and 6 summed over Q1 to Q7) |
+| D4 | path to pharmacological action | The generator's compound side, `v3/results/actions/family_actions.tsv.gz` (IT9), never absorbed the IT19/IT20 guards (group-transfer, republished-claim, documented-level waiver): `build_actions_v3.py` reads `usable_census.row_usability`, which predates them. Under the active rules 11,208 catalogue rows lose their direction (1,585 group-level, 9,623 republished copies); 13,028 of 32,954 signed (family, gene) pairs (40 percent) and 2,702 of 13,307 families lose their sign; catalogue drift since IT9 is 3 pairs | **superseded input/cache** | `results/actions/refresh_summary.json`; `results/actions_diff_guards_on_vs_off.tsv` (13,036 rows); `results/actions_diff_catalogue_drift_since_it9.tsv` (3 rows) |
+| D5 | action to compound | 696 of 992 current seed-specific rows (70 percent) are catalogue families with no ChEMBL identifier (DGIdb-only records, identity as served, often a twin of a ChEMBL family); identities are never merged on name, so they cannot be handed over (662 are stopped by this blocker first) | **available but unlinked information** (twin records) | `results/summary_it21.json` `blockers.identity_not_resolved`; `results/actions/family_meta.tsv.gz` |
+| D6 | compound to qualification | IT10 v4 returned 1,202 seed-specific rows (1,050 families, 851 compound names). The qualification records that came from the engine are 32 (25 IT9, 4 IT10, 3 IT11; 44 with references and controls). The IT10 deepening list took the top 8 per question and arm: 192 rows, 170 new to LEGEND | **proposal generated but never qualified** | `generation_it10_p1_20261031/results_v4/v3_seed_specific_all_nulls.tsv`; `ranking_it8_p9_20261029/it9_records.tsv`, `it10_records.tsv`, `it11_records.tsv`; `generation_it10_p1_20261031/results/deepening_candidates.tsv` |
+| D7 | qualification | 16 of the 32 IT9 records are DROP. IT10 found 2 (roxadustat, harmine) that rested on the role assumption and reopened them as conditional probes; it read the other 14 for their stated reasons (chain provenance, identity, contradiction) and left them closed. I did not re-read those 14; they are not reopened here. 26 mechanism clusters of the current list already hold a record on some member | **proposal rejected for a reason still valid** (14), 2 reopened | `generation_it10_p1_20261031/it9_role_dependent_reasons.tsv` and its README § 3C; `results/mechanism_clusters_it21.tsv` (`earlier_decisions_in_cluster`) |
+| D8 | qualification to investigation | The IT20 comparison is a filter on an already-linked universe (3,331 associations, 2,002 families, 19 needs; 3,084 associations are `direction_unresolved`). The WWOX-qualified arm keeps 74 families, a strict subset of the 622 of the external-only arm (`wwox_only` 0), reaches 3 of 23 needs, and leaves 10 needs (2,048 associations, 1,584 families) blocked by an unresolved direction. That is a statement about the filter, not about generation: the v4 generator keeps an unresolved role as two conditional arms and reached 1,202 seed-specific rows on 4 questions. The same logic recurs inside this package: the module-relative group guard (46 module symbols) withholds a class-level direction outside the module (section 6) | **qualified-assertion filter wrongly applied to exploration** | `hypotheses_it20_20261102/README.md` §§ 1, 2, 8 and `comparison_summary.json` |
+| D9 | investigation to dashboard | The published order holds 10 rows (an 11th sits below the line): 7 `known_in_wwox`, 4 `generated_by_legend`, all four from the qualified path; none of the 992 conditional rows of this package has a place in it yet. IT20 recorded the presentation limits: technical first screen, a long path from a biological thread to a compound, funnel units not shown as one reproducible chain | **public presentation limit** | `ranking_it8_p9_20261029/investigations_it20.tsv`; `hypotheses_it20_20261102/README.md` § 7.6; `diagnosis_it20_20261102/README.md` rows 5 and 6 |
+
+What the table says about the IT20 result: "the qualified arm adds nothing of its own" is true of the arm and is a property of its rule (D8). It is not evidence that generation is exhausted: D4 and D6 show a generator whose
+inputs were out of date and whose output was about 96 percent unexamined (32 qualification records against 851 compound names).
+
+## 2. What was re-run, why, and what was not
+
+Two checks before reuse (section 3 results). The generator inputs were audited against the current ones; what was stale was rebuilt through the existing builder, not re-implemented.
+
+| Input | Absorbs the current one? | Action |
+|---|---|---|
+| Compound identity and aliases (HGNC snapshot 2026-10-30, 45,289 rows) | yes for symbols; the snapshot is 4 days old and could not be refreshed (no external contact) | none; limit L5 |
+| Target level of a ChEMBL row (family, complex group, single protein) | **no** (D4) | rebuilt: `refresh_actions_it21.py` wraps `usable_census.row_usability` with `rs.group_transfer_unresolved` |
+| Republished DGIdb copy of a ChEMBL claim (IT20 P2: `claim_source`, `effective_target_level`, `assertion_key`) | **no** | same wrapper: `rs.claim_provenance`, `rs.republished_transfer_unresolved`; the association stays in `family_targets_any`, only the sign is withheld |
+| Specific evidence (`target_level_documented:` rows of `coverage/source_artefacts.tsv`, e.g. bepridil on CACNA1H) | **no** | same wrapper: `rs.documented_level_waiver`; the pair is re-added for that gene only, flag `DOCUMENTED_LEVEL_WAIVER` (1 pair: bepridil / CACNA1H; the other 25 group-expanded bepridil targets stay withheld) |
+| Active form / prodrug | yes (builder flag `UNCERTAIN_ACTIVE_MOIETY`, 350 families, 132 with a signed target) | unchanged; 100 candidate rows are `HELD_UNCERTAIN_ACTIVE_MOIETY` |
+| Family/complex limits (complex members credited by name) | yes (builder rules F2/F3) | unchanged |
+| Seed context and biological level | rows yes, currency no (D1) | seeds NOT edited (a new seed needs a source reading, section 6 L1); every proposal carries species, tier and `readout_level`; levels are never merged (engine refuses mixed levels) |
+| Origins counted once | yes (`dispose_it10.contributing_origins`; the two human deposits fold to one) | reused; copies of one ChEMBL assertion counted once through `rs.assertion_key` in the hand-over table |
+
+Re-run (the compound side changed, so every set can change): the unguarded rebuild (control), the guarded rebuild, then `engine_v4/run_v4.py` on all 10 seed sets under the three IT10 nulls plus the reach-matched null (IT11) on the 5 sets it had been run on, `dispose_it10.build` for the role-aware dispositions.
+Run time: about 15 to 20 minutes for each engine run (two in parallel on 4 cores), 7 seconds per rebuild, under `systemd-run ... MemoryMax=8G`.
+`run_v4.py` gained two options (`--actions DIR`, `--reach`); without them its behaviour is unchanged (checked by the control run below and by `test_it10_p1.py`, 44 tests pass).
+
+Not re-run: the IT9 P2 batteries T1 to T6 on the old sets, the signature arm, the IT10 origin and null sensitivities, any qualification package (P4), the IT20 comparison. Their conclusions about the engine (seeds enter, direction logic, guards) do not depend on the action table's guards; their candidate-level conclusions are replaced by sections 3 and 4.
+
+## 3. Results
+
+**Control.** The unguarded rebuild on today's catalogue and the same engine reproduce the IT10 v4 seed-specific list exactly (1,202 and 1,202 rows, identical keys; `results/control_reproduction.json`). The differences below are therefore due to the guards and to nothing else.
+
+**Guards.** 1,202 seed-specific rows become 992: **223 withdrawn** (18.6 percent), 13 gained. Of the 223, 219 are a direction withdrawn at the row's own main target (`results/withdrawn_vs_it10.tsv`, column `cause`); by what withdrew it: 139 republished copies of a ChEMBL claim whose level the copy does not carry, 80 group/family/interaction records written above the gene, 4 other. 129 of the 223 are the same compound still seed-specific in a twin family (the catalogue holds one compound twice), so **94 compound-at-set-and-arm rows lose their novelty outright** and 129 only lose a duplicate. The 13 gained rows are re-ranking effects of a different action set, not findings (`results/gained_vs_it10.tsv`). 3 direct-search rows (anti-IL-1B and anti-TNF biologics) lose their direction; the association stays. By set, withdrawn: Q6 expression 105, Q5 66, Q6 protein 32, Q2 15, Q4 5.
+
+**The guards' own anchors** (`results/anchors_it21.tsv`): bepridil keeps CACNA1H only (26 targets before); terodiline, suloctidil and phloroglucinol (26 to 31 targets each) lose every group-expanded calcium-channel direction; ethosuximide keeps CACNA1G/H/I (a record at the module's own level), lithium carbonate, memantine and dichloroacetate keep theirs in their ChEMBL family and lose it in the DGIdb-only twin family (one origin counts once); vigabatrin (ABAT) keeps it in both.
+
+**Proposals.** 992 seed-specific rows are carried as conditional hypotheses: 556 `CONDITIONAL_H_HARM`, 436 `CONDITIONAL_H_PROTECT` (no question has a sourced role, so no row is anything else). They fall in 153 mechanism clusters (question, arm, main target). `results/proposals_it21.tsv` holds each one with the seed row(s) that generated it, origins, chain, the z under the four nulls, identity, modality, earlier decision, the hand-over blocker.
+Handover blockers (the first one met, in the order of `eligible()`; the cluster rule last): identity not resolved 662, arm with no stated benefit hypothesis 74 (Q4/Q6/Q7 `mimics`: kept, not handed over), mechanism cluster already examined 34, reach-matched null not confirming 48, compound decided earlier 12, modality not small molecule 21, **eligible 141** (32 clusters), handed over **13** (cap of 3 per question and arm).
+
+## 4. Proposals handed to qualification (13; rule H1 to H8 in `run_generation_it21.py`, written before the table was read)
+
+All are `CONDITIONAL_*`, `qualified = no (needs a P4-type qualification record)`. Each row of `results/handoff_it21.tsv` also carries: the assumption (role of the observed change = unknown, no source), the hypothesised benefit, the discriminating experiment (step 0 resolves the role with no compound; step 1 is the compound against vehicle and against genetic perturbation of the main target, readout at the seed's own level), the rival explanations, the negatives and limits, the abstentions on the record, and the novelty perimeter (named or not in LEGEND cards and units: a statement about this module, not the literature). An H_PROTECT row would *raise* the seed readout: it is a probe of the role question and a risk, not a benefit, unless step 0 shows the seed change is protective.
+
+| ID | Q / arm | Compound (status class, phase) | Action on main target | Chain to the seed | Generated by (seed row, species, level) | Origins | Alternatives at the same target |
+|---|---|---|---|---|---|---|---|
+| 0006 | Q2 H_HARM | NANATINOSTAT (clinical_candidate, 2.0) | inhibits/lowers HDAC5 | HDAC5 -T(+)-> SLC2A1 | S017 SLC2A1 up (expression, human, tier A) | 1 | 4-Phenylbutyric Acid; Abexinostat; Belinostat ... |
+| 0008 | Q2 H_HARM | Iox1 (tool_probe, n/a) | inhibits/lowers KDM4C | KDM4C -P(+)-> HIF1A; HIF1A -T(+)-> HK2 | S018 HK2 up (expression, human, tier A) | 1 | Zavondemstat |
+| 0014 | Q2 H_HARM | ASTX-660 (clinical_candidate, 1.0) | inhibits/lowers XIAP | XIAP -P(+)-> HIF1A; HIF1A -T(+)-> HK2 | S018 HK2 up (expression, human, tier A) | 1 | Azd5582; Bv-6; GDC-0152 ... |
+| 0057 | Q4 H_HARM | Cgi1746 (tool_probe, n/a) | inhibits/lowers BTK | BTK -P(-)-> STAT3; STAT3 -T(+)-> NPY | S116 NPY down (expression, human, tier A) | 1 | ABIVERTINIB; ACALABRUTINIB; ATUZABRUTINIB ... |
+| 0195 | Q5 H_HARM | Gsk343 (tool_probe, n/a) | inhibits/lowers EZH2 | EZH2 -T(+)-> IL6 | S086 IL6 up (expression, mouse, tier B) | 2 | Cpi-1205; Ebi-2511; Ei1 ... |
+| 0221 | Q5 H_HARM | SAR-407899 FREE BASE (clinical_candidate, 2.0) | inhibits/lowers ROCK2 | ROCK2 -P(+)-> EP300; EP300 -T(+)-> TNF | S085 TNF up (expression, mouse, tier B) | 2 | BELUMOSUDIL; Compound 11D [Doi: 10.1039/C; Compound 22 [Pmid: 20462760] ... |
+| 0236 | Q5 H_HARM | LGH-447 (clinical_candidate, 1.0) | inhibits/lowers PIM2 | PIM2 -P(+)-> NFATC1; NFATC1 -T(+)-> IL6 | S086 IL6 up (expression, mouse, tier B) | 2 | Azd1208; Compound 14K [Pmid: 21982499; Compound 28 [Pmid: 30624936] ... |
+| 0296 | Q5 H_PROTECT | RAVOXERTINIB (clinical_candidate, 2.0) | inhibits/lowers MAPK3 | MAPK3 -P(-)-> BRD4; BRD4 -T(+)-> TNF | S085 TNF up (expression, mouse, tier B) | 2 | 5-(2-Phenylpyrazolo[1,5-A]Py; MK-8353; Mk-8353 ... |
+| 0374 | Q5 H_PROTECT | TIZATERKIB (clinical_candidate, 1.0) | inhibits/lowers MAPK1 | MAPK1 -P(+)-> BCL3; BCL3 -T(-)-> TNF | S085 TNF up (expression, mouse, tier B) | 2 | Astx029; Compound 27 [Pmid: 29775310]; Edaxeterkib ... |
+| 0388 | Q5 H_PROTECT | CEP-11981 (clinical_candidate, 2.0) | inhibits/lowers MAP3K7 | MAP3K7 -P(-)-> NFKBIB; NFKBIB -T(+)-> IL1B | S084 IL1B up (expression, mouse, tier B) | 2 | 5Z-7-Oxozeaenol; Compound 12 [Pmid: 27448772]; Compound 17D [Pmid: 23099093 ... |
+| 0456 | Q6 H_HARM | Az960 (tool_probe, n/a) | inhibits/lowers JAK2 | JAK2 -P(+)-> MYC | S101 MYC up (protein, human, tier A) | 1 | 2-Tert-Butyl-9-Fluoro-1,6-Di; AC-430; AZD-1480 ... |
+| 0512 | Q6 H_HARM | SRT-2104 (clinical_candidate, 2.0) | activates/raises SIRT1 | SIRT1 -T(-)-> MYC | S100 MYC up (expression, human, tier A) | 1 | Sirt1 Activator 3; Srt1720 |
+| 0542 | Q6 H_HARM | LONAPRISAN (clinical_candidate, 2.0) | inhibits/lowers PGR | PGR -T(+)-> MYC | S100 MYC up (expression, human, tier A) | 1 | Apr19; Asoprisnil; ONAPRISTONE ... |
+
+Reading the table. Mechanism clusters with 2 origins (Q5: GSK343/EZH2, SAR-407899/ROCK2, LGH-447/PIM2) rest on two mouse articles (null hippocampus, P47T cerebellum) at transcript level, tier B; Q2 rows rest on one derivation shared by the two human deposits (counted once); Q4 and Q6 rows rest on one human observation each. Four of the 13 are tool compounds (IOX1, CGI1746, GSK343, AZ960): selectivity and exposure are not assessed and the single listed target may not be the only action. Chains of two edges and low z (Q4 BTK, Q2 XIAP, KDM4C) are the weakest; one-edge chains (HDAC5, EZH2, JAK2, SIRT1, PGR) are the most direct, and a one-edge chain is still a regulatory edge, not an effect measured in a WWOX system. Alternatives at the same target are in the table and in `results/mechanism_clusters_it21.tsv`; they share the chain and are not independent support. The first qualification step for each is the neural expression of the main target and the sign of the edge in a neural context (IT9 P4 edges a to c), which this package does not test.
+
+Negatives and abstentions kept visible: 26 clusters with an earlier record (`results/carried_prior_decisions.tsv` lists 37 rows; none is handed over); 94 withdrawn compound rows (`results/withdrawn_vs_it10.tsv`); 3 direct-search rows (`results/direct_search_direction_withdrawn_it21.tsv`); 11,208 withheld catalogue rows with their reason class (`results/actions/withheld_rows.tsv.gz`); the 74 `mimics` rows that have no sourced benefit hypothesis; and 100 flagged rows held for an uncertain active moiety (in the capped candidate tables).
+
+## 5. A conditional hypothesis never becomes qualified here
+
+`STATUS_VOCAB` is closed (`CONDITIONAL_H_HARM`, `CONDITIONAL_H_PROTECT`, `HYPOTHESIS_ROLE_SOURCED_NOT_QUALIFIED`, `HELD_UNCERTAIN_ACTIVE_MOIETY`, `DIAGNOSTIC_ONLY`, `NOT_APPLICABLE`); `check_status` refuses any other value and any value naming qualification, and is called on every row before it is written. Even a role that a source states raises an arm to `HYPOTHESIS_ROLE_SOURCED_NOT_QUALIFIED`. Tests: `StatusNeverQualified` runs every combination of role (6), arm (5) and leaning (3) through the production disposition function; a fully supported toy row (all criteria met, extreme z) stays `CONDITIONAL_H_HARM`; the committed tables carry no qualified status.
+
+## 6. Limits identified
+
+* L1 Seeds are IT9. D1 is not repaired: adding the NRF2 organoid, the snRNA and the IT14 glia observations needs a source reading per row (level, species, tier, direction, one origin) that was outside this package and outside zero-spend retrieval of new files. The Q5 and Q6 lists keep their S084 to S086 dependence (mouse transcript, tier B; TNF only significant in the P47T cerebellum, see `CORRECTION_NOTE_IT10_20261031.md`).
+* L2 Compatible action, not effect. Edges are CollecTRI/SIGNOR regulatory edges of a generic network; the seed is a transcript or protein observation; the compound's action is a catalogue row. Nothing links a compound to a change in a WWOX-deficient system. Q6 depends on one human seed (MYC) and is covariate-sensitive (IT11: 44 of 180 protein rows leave under a reach-matched null).
+* L3 The module-relative group guard is conservative outside the module. A pan-class record loses its direction on every member when fewer than half its components are among the module's 46 intervention symbols; roxadustat is one case (a ChEMBL protein-family record on EGLN1, EGLN2, EGLN3 and P4HTM, 0 of 4 in the module; its DGIdb-only twin keeps EGLN2 through a different row, whose source was not examined). That is correct for a member-level score and wrong as a statement about a class-level hypothesis; unknown is not negative, and a class-level arm is a separate question this package did not build.
+* L4 Identity. 662 of 992 rows are DGIdb-only families; a twin of a ChEMBL family is not merged on name. Salt twins are counted once in the hand-over only.
+* L5 HGNC is the 2026-10-30 snapshot; not refreshed. The reach null exists for 5 of 10 sets (the 5 of IT11).
+* L6 The hand-over rule is mine and written in code (`HANDOFF_RULE`); a different cap, chain-length order or cluster definition gives another 13. Eligible clusters: 32; 19 stay unhanded.
+* L7 No qualification was run: neural expression of the main target, edge sign in context, potency at relevant exposure, labels, safety and trials are all open for every row.
+* L8 `novelty_perimeter` is a name search in LEGEND cards and units; it is never a literature claim.
+
+## 7. Files and commands
+
+| File | What |
+|---|---|
+| `refresh_actions_it21.py` | thin adapter over the v3 builder: `run --guards on|off`, `diff` (stdlib; 7 s) |
+| `run_generation_it21.py` | `engine`, `control`, `withdrawn`, `anchors`, `direct`, `propose`, `all`; the selection rule, status vocabulary and attribution |
+| `test_generation_it21.py` | 32 tests (guard wrapper, status never qualified, hand-over rule, committed-table properties) |
+| `results/actions/` | refreshed `family_actions` / `family_meta` / `family_targets_any` / `family_flags`, `withheld_rows.tsv.gz`, `refresh_summary.json` |
+| `results/engine/` | engine v4 output on the refreshed table (proposals, contributions, candidate tables) |
+| `results/proposals_it21.tsv`, `handoff_it21.tsv`, `mechanism_clusters_it21.tsv`, `carried_prior_decisions.tsv`, `summary_it21.json` | proposals with attribution, the 13 handed over, clusters with alternatives, earlier decisions |
+| `results/withdrawn_vs_it10.tsv`, `gained_vs_it10.tsv`, `withdrawn_summary.json`, `control_reproduction.json`, `anchors_it21.tsv`, `direct_search_direction_withdrawn_it21.tsv`, `actions_diff_*.tsv` | what the refresh changed |
+
+```
+export LEGEND_CATALOG_CACHE=<root>/disease-models/wwox/research/drug_repurposing/catalog/cache
+python3 refresh_actions_it21.py run --out results/actions --guards on
+python3 refresh_actions_it21.py run --out <scratch>/act_off --guards off          # control
+python3 refresh_actions_it21.py diff --old <scratch>/act_off --new results/actions --out results/actions_diff_guards_on_vs_off.tsv
+python3 run_generation_it21.py engine          # ~15 to 20 min, MemoryMax 8G
+python3 run_generation_it21.py all             # withdrawn, anchors, direct, propose (needs results/engine)
+python3 test_generation_it21.py
+```
