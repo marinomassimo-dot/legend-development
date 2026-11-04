@@ -1,0 +1,62 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT26-20261104",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Iteration 26: carry out the three next actions named at the IT25 close: (A1) a different actor reads the G-SRS terms and samples the joins, then route R4 is consumed by the generator; (A2) scan the DGIdb listing-tier pairs for alias artefacts of the ZHX2 kind; (A3) read primary sources for the pairs IT25 left UNKNOWN and for the TALC table.",
+ "START_UTC": "2026-11-04T12:00:00Z",
+ "BASELINE": "development/main = local main = ab55c8e5 (IT25 closed); clean tree",
+ "DECISIONS_TAKEN": [
+  "Authorised by the operator's message 'Procedi con le prossime 3 azioni che hai individuato'. A pair is withheld only when a source check has read and named it as contradicted or artefact; NOT_MEASURED pairs stay in.",
+  "R4 carries only rows a second actor confirmed at structure level (19 of 22; martinostat, EZN-2968 and MSC-2364447 are not carried)."
+ ],
+ "STOP_LOG": [],
+ "AUTHORISED_QUEUE_20261104": {
+  "MANDATE_STATE": "ACTIVE",
+  "OBJ_A1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "A1 G-SRS terms read by a second actor (CC0 Licensing page, static bundle chunk); 22 joins re-derived in PubChem and ChEMBL: 20 CONFIRMED, 0 CONFLICT, 2 UNVERIFIABLE; R4 file of 19 families consumed by run_generation_it21.py",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "identity_gsrs_it26_a1_20261104; generation_it26_a1_20261104: S7 994 proposals, eligible 215 to 220 (5 rows, none handed over), hand-overs unchanged (15)"
+    }
+   ]
+  },
+  "OBJ_A2": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "A2 alias scan of 648 listing-only rows (172 genes)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "alias_scan_it26_a2_20261104: positive control ZHX2 found; 3 new pointers (VEGFC, PIK3CG, none with a proposal); a drug-side collision rabeprazole/lucitanib (E-3810) found by reading the 26 listing-dependent proposals; 6 pairs excluded"
+    }
+   ]
+  },
+  "OBJ_A3": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "A3 primary sources for UNKNOWN pairs and TALC",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "source_check_it26_20261104: fexagratinib AKT1-3 excluded (alias AZD5363), pilaralisib/GSK2636771 NOT_MEASURED, afuresertib CONFIRMED (full text), TALC read (PMC4346098, Table 1 RAF/MEK, no ZHX2); 10 receipts recorded (1,053 chained); single producer"
+    }
+   ]
+  },
+  "OBJ_A4": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "A4 battery on the frozen candidate, push, CI, cleanup, report",
+     "status": "PENDING",
+     "owner": "orchestrator",
+     "evidence": "pending"
+    }
+   ]
+  }
+ }
+}

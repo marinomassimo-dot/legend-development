@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-04T16:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "unavailable",
+  "results": "not_read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-04T16:00:00Z",
+ "event_id": "FTR-20261104-27903677-03",
+ "evidence_basis": [
+  "abstract analysed in full; nothing beyond the abstract is used",
+  "verbatim_locator | proposition: GSK2636771 is used as the p110 beta inhibitor; no Vps34 statement | Abstract | \"the p110\u03b2 inhibitor GSK2636771\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/source_check_it26_20261104/README.md",
+  "disease-models/wwox/research/drug_repurposing/source_check_it26_20261104/verdicts_it26.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 27903677 (abstract); journal text not obtained (not in PMC)",
+ "study_id": {
+  "doi": "10.1158/1078-0432.CCR-15-2764",
+  "pmid": "27903677"
+ },
+ "workflow": "IT26 source check (source_check_it26_20261104): question-driven, one compound-target relation set. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor. Hosford 2017. Abstract only; no selectivity panel in the abstract."
+}

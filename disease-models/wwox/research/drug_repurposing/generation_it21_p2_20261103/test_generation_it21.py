@@ -446,5 +446,20 @@ class CommittedProvenance(unittest.TestCase):
             self.assertIn("NOT_A_FINDING", r["cause"])
 
 
+class IdentityRouteR4(unittest.TestCase):
+    """IT26: R4 (G-SRS name -> UNII -> structure) gives an identity, only for rows a second actor confirmed, and never a name-only row."""
+
+    def test_missing_file_means_no_route(self):
+        self.assertEqual(G.load_identity_r4(HERE / "no_such_r4.tsv"), {})
+
+    def test_committed_rows_are_confirmed_ones(self):
+        r4 = G.load_identity_r4()
+        self.assertEqual(len(r4), 19)
+        self.assertTrue(all(v.startswith("CHEMBL") for v in r4.values()))
+        self.assertIn("FAM:CAT:DGIDB:b34c953dc1fa", r4)                      # idronoxil
+        self.assertNotIn("FAM:CAT:DGIDB:ec1f021cf6ea", r4)                   # martinostat: no catalogue key, not carried
+        self.assertNotIn("FAM:CAT:DGIDB:b459313a7710", r4)                   # EZN-2968: no hit
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=1)

@@ -467,6 +467,19 @@ def decision_effect(p, cluster_decisions, global_decisions=()):
     return dict(block=block, work_done=work, carried_limits=limits)
 
 
+R4_FILE = DR / "identity_gsrs_it26_a1_20261104" / "identity_r4_it26.tsv"
+
+
+def load_identity_r4(path=None):
+    """{family id: ChEMBL id} of the identity route R4 (G-SRS name -> UNII -> structure). Only rows a second actor confirmed at structure level are in the file;
+    a weak (name-only) trial row is not. The route gives the generator an identity (has_chembl), never a merge of two families."""
+    path = Path(path) if path else R4_FILE
+    if not path.exists():
+        return {}
+    with open(path, encoding="utf-8", newline="") as fh:
+        return {r["family_id"]: r["chembl_id"] for r in csv.DictReader(fh, delimiter="\t")}
+
+
 def eligible(row, role, fam_meta, decisions):
     """(ok, reason). Pure given its inputs; the tests call it."""
     if row["arm"] not in ("opposes", "mimics"):
@@ -648,10 +661,15 @@ def cmd_propose(a):
         for f, tgt in fb.items():
             if f in meta:
                 modality[f] = modality.get(tgt) or modality.get(f)       # the substance is the ChEMBL record's: its modality is that record's
+    r4 = load_identity_r4() if v1 else {}
     for f, m in meta.items():
+        if f in r4 and f not in fb and m.get("has_chembl") != "1":      # IT26: route R4 (G-SRS name -> UNII -> structure, verified by a second actor), the family's own record has no ChEMBL id
+            modality[f] = modality.get("FAM:CAT:" + r4[f]) or modality.get(f)
         m["modality"] = modality.get(f)
         if v1 and f in fb and m.get("has_chembl") != "1":
             m["has_chembl"], m["identity_via"] = "1", "gtopdb_ligand_claim_name->" + fb[f]
+        elif f in r4 and m.get("has_chembl") != "1":
+            m["has_chembl"], m["identity_via"] = "1", "gsrs_unii_structure->" + r4[f]
     decisions = earlier_decisions(include_p4a=v1)
     text = corpus_text()
     threads = load_earlier_threads()

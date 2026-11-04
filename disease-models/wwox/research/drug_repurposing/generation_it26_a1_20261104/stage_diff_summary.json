@@ -1,0 +1,23 @@
+{
+ "added": [
+  "Fexagratinib FGFR3"
+ ],
+ "eligible_s6": 215,
+ "eligible_s7": 220,
+ "handoff_s6": 15,
+ "handoff_s7": 15,
+ "newly_eligible": [
+  "4-Phenylbutyric Acid",
+  "Idronoxil",
+  "Pivaloyloxymethylbutyrate",
+  "Tazemetostat"
+ ],
+ "proposals_s6": 996,
+ "proposals_s7": 994,
+ "removed": [
+  "Rabeprazole FGFR3",
+  "Fexagratinib AKT2",
+  "Fexagratinib AKT1"
+ ],
+ "rows_changed": 25
+}

@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-04T16:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "unavailable",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "read"
+ },
+ "event_at": "2026-11-04T16:00:00Z",
+ "event_id": "FTR-20261104-24978597-03",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: afuresertib (GSK2110183) inhibits AKT1 with sub-nanomolar potency, ATP-competitive | Results, subsection on potent and selective inhibitors of the AKT kinases | \"GSK2110183 has a Ki* of 0.08, 2 and 2.6 nM against AKT1, AKT2 and AKT3, respectively\"",
+  "verbatim_locator | proposition: same value in the table | Table 1, row AKT1, column GSK2110183 | \"AKT1 0.08*\"",
+  "verbatim_locator | proposition: compound class and mode | Results, same subsection | \"GSK2110183 and GSK2141795 are ATP competitive, time dependant and fully reversible inhibitors of the AKT kinase family.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/source_check_it26_20261104/README.md",
+  "disease-models/wwox/research/drug_repurposing/source_check_it26_20261104/verdicts_it26.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC fullTextXML for PMC4076210 (open access) fetched 2026-11-04; Methods kinase assays, Results kinase selectivity subsection, Table 1 and first Discussion paragraph read; other sections not read; Table S1 panel not opened; bytes not saved",
+ "study_id": {
+  "doi": "10.1371/journal.pone.0100880",
+  "pmid": "24978597"
+ },
+ "workflow": "IT26 source check (source_check_it26_20261104): question-driven, one compound-target relation set. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor. Afuresertib primary pharmacology; supports the sign for the afuresertib hydrochloride record because the DGIdb record aliases the same compound (GSK2110183)."
+}

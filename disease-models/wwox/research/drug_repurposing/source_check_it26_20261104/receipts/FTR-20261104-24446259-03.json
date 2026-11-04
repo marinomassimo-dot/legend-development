@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-04T12:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-04T12:00:00Z",
+ "event_id": "FTR-20261104-24446259-03",
+ "evidence_basis": [
+  "abstract analysed in full; nothing beyond the abstract is used",
+  "verbatim_locator | proposition: E-3810 is the code of the dual FGFR1/VEGFR1-3 inhibitor (lucitanib), not of rabeprazole in this paper | Abstract | \"We developed and validated a high-performance liquid chromatography-tandem mass spectrometry analytical method to measure E-3810, a novel dual inhibitor of fibroblast growth factor receptor 1 and vascular endothelial growth factor receptor 1-3 in tissues\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/source_check_it26_20261104/README.md",
+  "disease-models/wwox/research/drug_repurposing/source_check_it26_20261104/verdicts_it26.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 24446259 (abstract); journal text not obtained",
+ "study_id": {
+  "pmid": "24446259"
+ },
+ "workflow": "IT26 A2/A3 source check (source_check_it26_20261104): drug-side alias collision E-3810 (rabeprazole vs lucitanib) in DGIdb. Zangarini 2014, J Mass Spectrom. Code E-3810 = FGFR/VEGFR inhibitor. Abstract only. Prepared for the integrator."
+}

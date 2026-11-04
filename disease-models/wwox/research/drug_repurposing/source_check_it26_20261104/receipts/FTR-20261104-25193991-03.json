@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-04T12:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-04T12:00:00Z",
+ "event_id": "FTR-20261104-25193991-03",
+ "evidence_basis": [
+  "abstract analysed in full; nothing beyond the abstract is used",
+  "verbatim_locator | proposition: lucitanib inhibits FGFR1/2 and VEGFR1-3 (and PDGFRa/b): the target profile that DGIdb lists on the rabeprazole record | Abstract | \"Lucitanib is a potent, oral inhibitor fibroblast growth factor receptor types 1 and 2 (FGFR), vascular endothelial growth factor receptor types 1, 2, and 3 (VEGFR), platelet-derived growth factor receptor types \u03b1 and \u03b2 (PGFR\u03b1/\u03b2)\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/source_check_it26_20261104/README.md",
+  "disease-models/wwox/research/drug_repurposing/source_check_it26_20261104/verdicts_it26.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 25193991 (abstract); journal text not obtained",
+ "study_id": {
+  "pmid": "25193991"
+ },
+ "workflow": "IT26 A2/A3 source check (source_check_it26_20261104): drug-side alias collision E-3810 (rabeprazole vs lucitanib) in DGIdb. Soria 2014, Ann Oncol. Lucitanib target profile. Abstract only. Prepared for the integrator."
+}

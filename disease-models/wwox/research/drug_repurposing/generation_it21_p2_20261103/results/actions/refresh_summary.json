@@ -7,7 +7,7 @@
   "complex_rows_all_members_credited_unresolved": 231,
   "dgidb_rows_dropped_copy_of_uncredited_complex_member": 27,
   "families_total": 40268,
-  "families_with_signed_hgnc_target": 10598,
+  "families_with_signed_hgnc_target": 10597,
   "prodrug_families": 350,
   "prodrug_families_with_signed_target": 132,
   "rows_dropped_alias_collision": 72,
@@ -21,8 +21,8 @@
  "withheld_by_class": {
   "action_conflict_or_glue_modulator": 6,
   "group_record_mostly_outside_module_targets": 1585,
-  "listing_tier_claim_not_carried": 12,
+  "listing_tier_claim_not_carried": 21,
   "republished_claim_level_not_carried": 9624
  },
- "withheld_rows": 11227
+ "withheld_rows": 11236
 }

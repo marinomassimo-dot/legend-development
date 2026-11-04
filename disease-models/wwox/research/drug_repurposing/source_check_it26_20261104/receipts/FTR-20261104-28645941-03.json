@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-04T16:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "unavailable",
+  "results": "not_read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-04T16:00:00Z",
+ "event_id": "FTR-20261104-28645941-03",
+ "evidence_basis": [
+  "abstract analysed in full; nothing beyond the abstract is used",
+  "verbatim_locator | proposition: GSK2636771 is described as PI3K beta selective; no Vps34/class III statement | Abstract | \"GSK2636771 is a potent, orally bioavailable, adenosine triphosphate-competitive, selective inhibitor of PI3K\u03b2.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/source_check_it26_20261104/README.md",
+  "disease-models/wwox/research/drug_repurposing/source_check_it26_20261104/verdicts_it26.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 28645941 (abstract); journal text not obtained (not in PMC)",
+ "study_id": {
+  "doi": "10.1158/1078-0432.CCR-17-0725",
+  "pmid": "28645941"
+ },
+ "workflow": "IT26 source check (source_check_it26_20261104): question-driven, one compound-target relation set. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor. Mateo 2017 first-in-human (the brief called it Mayer). Abstract only."
+}

@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-04T16:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "unavailable",
+  "results": "not_read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-04T16:00:00Z",
+ "event_id": "FTR-20261104-25637314-03",
+ "evidence_basis": [
+  "abstract analysed in full; nothing beyond the abstract is used",
+  "verbatim_locator | proposition: XL147 is described as selective for class I PI3Ks over >130 protein kinases; PIK3C3 is not named in the abstract | Abstract | \"broad kinase selectivity profiling of >130 protein kinases revealed that XL147 is highly selective for class I PI3Ks over other kinases\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/source_check_it26_20261104/README.md",
+  "disease-models/wwox/research/drug_repurposing/source_check_it26_20261104/verdicts_it26.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 25637314 (abstract); journal text not obtained (not in PMC)",
+ "study_id": {
+  "doi": "10.1158/1535-7163.MCT-14-0833",
+  "pmid": "25637314"
+ },
+ "workflow": "IT26 source check (source_check_it26_20261104): question-driven, one compound-target relation set. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor. Foster 2015, the original XL147 pharmacology paper (also a DGIdb publication on the TALC pilaralisib row). Abstract only: whether the panel contained Vps34 is not known."
+}

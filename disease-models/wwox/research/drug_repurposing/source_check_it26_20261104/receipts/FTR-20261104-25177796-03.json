@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-04T16:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "unavailable",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-04T16:00:00Z",
+ "event_id": "FTR-20261104-25177796-03",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: GDC-0941 is stated not to inhibit Vps34 (class I inhibitor context for pictilisib; XL147 and GSK2636771 are not mentioned in the text) | Results, VPS34-IN1 rapidly reduces PtdIns(3)P | \"GDC-0941, a class I PI3K inhibitor that does not inhibit Vps34 [34]\"",
+  "verbatim_locator | proposition: VPS34-IN1 profile on lipid kinases; this is a compound other than the pairs asked about | Results, VPS34-IN1 is a potent and selective inhibitor | \"did not significantly inhibit any of the lipid kinases tested including class I (p110\u03b1, p110\u03b2 p110\u03b3 and p110\u03b4)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/source_check_it26_20261104/README.md",
+  "disease-models/wwox/research/drug_repurposing/source_check_it26_20261104/verdicts_it26.tsv"
+ ],
+ "prior_receipt": "FTR-20261104-25177796-02",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC fullTextXML for PMC4209782 (open access) fetched 2026-11-04; Materials, Results selectivity and SGK3 subsections and Discussion read; other methods not read; supplementary tables not opened; bytes not saved",
+ "study_id": {
+  "pmid": "25177796"
+ },
+ "workflow": "IT26 source check (source_check_it26_20261104): question-driven, one compound-target relation set. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor. Re-read at full-text level for context (the IT25 receipt was abstract level). It does not test pilaralisib or GSK2636771."
+}

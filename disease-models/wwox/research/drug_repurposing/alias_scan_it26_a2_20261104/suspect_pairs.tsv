@@ -1,0 +1,5 @@
+compound	gene	claim_source	ncbi_only_alias	stem_of_measured_target
+Sorafenib	VEGFC	MyCancerGenomeClinicalTrial	Flt4-L	FLT4
+Sorafenib	ZHX2	TALC	RAF	RAF1
+Regorafenib	ZHX2	TALC	RAF	RAF1
+Gsk-2636771	PIK3CG	MyCancerGenome	PIK3	PIK3CB
