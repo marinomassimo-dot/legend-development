@@ -75,6 +75,20 @@ class GeneratorUsesTheLimitWithoutMovingSelection(unittest.TestCase):
             self.assertEqual((r["handoff_eligible"], r["handoff_blocker"]), (self.old[i]["handoff_eligible"], self.old[i]["handoff_blocker"]), i)
 
 
+class HandOverIsDeterministic(unittest.TestCase):
+    def test_direct_hits_are_ordered_by_phase_then_name_not_by_set_order(self):
+        h = DR / "generation_it23_p2_20261103" / "results_s5" / "handoff_it21.tsv"
+        if not h.exists():
+            self.skipTest("stage tables absent")
+        seen = 0
+        for r in rd(h):
+            items = [x for x in r["direct_acting_hits_same_set"].split(" - diagnostic only")[0].split("; ") if x]
+            keys = [(-float(re.search(r"phase (-?[\d.]+)", x).group(1)), x.split(" (phase")[0]) for x in items]
+            self.assertEqual(keys, sorted(keys), r["proposal_id"])          # a tie among phase-4 compounds used to follow set order, which depends on PYTHONHASHSEED
+            seen += bool(items)
+        self.assertGreater(seen, 0)
+
+
 class SimulationInputsKeepUnknownUnknown(unittest.TestCase):
     S = DR / "simulation_it23_p3_20261103"
 

@@ -22,8 +22,9 @@
    "steps": [
     {
      "step": "P0 baseline (IT22 closure verified: CI green on 03ac7b8c, served page equals package), record, continuity with the multilingual package (worktree task/it22-ml; no concurrent regeneration of view surfaces)",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "IT22 closure verified (release gate green 22:09, Pages success, served page equal); multilingual package landed first (378b798a, battery PASS WITH SKIPS 198 targets) with the operator README commit b6c303a2 integrated by rebase; IT23 worktree separate"
     }
    ]
   },
@@ -32,8 +33,9 @@
    "steps": [
     {
      "step": "P1 choose the gap with contrasting cases (sustained direction / possibly compensatory), freeze the current method's input and output",
-     "status": "PENDING",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "cases_it23_p1_20261103: Q5/Q6/Q8 and the frozen current method committed before any capability (frozen_inputs.tsv digests, frozen_current_method.tsv 862 rows)"
     }
    ]
   },
@@ -44,7 +46,7 @@
      "step": "P2 relations beyond pathways: what the engine really uses; EC-KG minimal qualified extract with provenance, redundancy and novelty measured",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "relations_it23_p2: EC-KG WATCH (assets found, Apache-2.0 code, CC BY 4.0 integration + upstream terms; 82-90 percent of signed pairs already present; adds relation types: FAERS seizure reports -> carried limit on 42 rows/1 hand-over, no eligibility change; 15 sign discordances reviewed: 9 EC-KG errors, 5 LEGEND suspects, 1 matching error); module discovery WATCH (abstention: seed sets too small, hub domination, DIAMOnD fragile); dseqr REJECT (data bucket gone, author-local build paths; SigCom pass adds nothing: Jaccard 0 with LEGEND); verified independently (34 findings, 14 confirmed, 18 corrected, 2 refuted) and corrected"
+     "evidence": "relations_it23_p2: EC-KG WATCH (assets found, Apache-2.0 code, CC BY 4.0 integration + upstream terms; 82-90 percent of signed pairs already present; adds relation types: FAERS seizure reports -> carried limit on 31 rows/1 hand-over, no eligibility change; 15 sign discordances reviewed: 9 EC-KG errors, 5 LEGEND suspects, 1 matching error); module discovery WATCH (abstention: seed sets too small, hub domination, DIAMOnD fragile); dseqr REJECT (data bucket gone, author-local build paths; SigCom pass adds nothing: Jaccard 0 with LEGEND); verified independently (34 findings, 14 confirmed, 18 corrected, 2 refuted) and corrected"
     }
    ]
   },
@@ -97,8 +99,9 @@
    "steps": [
     {
      "step": "P7 integration of hypotheses worth following: card, decisive premise, next experiment, queue, dashboard (after the multilingual landing)",
-     "status": "PENDING",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "no emerging candidate to card; dashboard: sixth item in the changes block (IT23 result) in five languages, static and dynamic audit of 10 pages PASS; it23_result_20261103 README"
     }
    ]
   },
@@ -107,7 +110,7 @@
    "steps": [
     {
      "step": "P8 durable method in canonical places, few regressions, removal of superfluous experimental code, tests, integration, push, CI, report",
-     "status": "PENDING",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator"
     }
    ]
