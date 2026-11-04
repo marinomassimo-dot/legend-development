@@ -1,0 +1,11 @@
+# Self-evaluation - orchestrator, IT25 and IT26 (source checks, alias artefacts, identity route R4), 2026-11-04
+
+Verdict: IT25 and IT26 changed correctness, identity coverage and traceability; they produced no new hypothesis, no hand-over change and no ranking-position change, and the result READMEs say so. Part 1 (session_self_eval, receipts verify, lint, growth anchors) returns PASS with the standing declared gaps.
+
+1. **The most useful finding came from reading, not from the detector.** The gene-alias scan recovered the IT25 positive control (ZHX2/RAF) but could not see the second artefact class; reading the 26 proposals that rest on a listing-only pair found rabeprazole carrying lucitanib's targets through the shared code E-3810. Caught by: self, on reading the list; a generic detector for it was tried (name-based DGIdb query) and does not work. The open limit is stated in the alias README.
+2. **A second actor closed a gap I had declared and could not close.** The IT25 trial rested on a weaker basis because the terms page was not rendered; the verifier found the Licensing page as a static bundle chunk (CC0 1.0) and re-derived all 22 joins in other registries (20 confirmed, 2 unverifiable). Caught by: peer (subagent verifier).
+3. **R4 was consumed only after that check and only for 19 of 22 rows**, with a control run (S7a: exclusions only) that separates the two causes in the stage diff. Five rows became eligible and none was handed over; the README says that eligibility is not a better hypothesis.
+4. **Producer note corrected.** The IT25 note named TALC as Simon and Somaiah 2013; the producer found Morgensztern et al. 2015 (Table 1 read in full). Caught by: peer.
+5. **Limits stated:** single producer for most source checks, five papers at abstract level, MyCancerGenome rows not public, downstream scripts still read the frozen results_p4, LINCS recheck not re-run with the new keys.
+
+Micro-upgrade (the answer, not a promise): the Standing method gains the drug-side alias lesson and the static-bundle route for terms pages; `alias_scan_it26.py` ships with its positive-control test; `load_identity_r4` ships with a test that only second-actor-confirmed rows are carried.
