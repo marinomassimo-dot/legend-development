@@ -9891,7 +9891,7 @@
    ],
    "caveats": {
     "note": [
-     "IT27: in the partial-loss P47T mouse (missense with protein present; prefrontal cortex, parietal cortex and hippocampus, ten animals, one origin) the ISR transcripts Chac1 and Trib3 lean up (log2FC +0.6 to +1.5, mostly not significant at 5 v 5). It is a third, different perturbation, not a resolution of the human sign."
+     "IT27: in the partial-loss P47T mouse (missense with protein present; prefrontal cortex, parietal cortex and hippocampus, ten animals, one origin) Chac1 is higher in all three regions (log2FC +0.58, +1.11, +1.25; padj 0.10, 0.0497, 0.30) and Trib3 is higher in parietal cortex and hippocampus (+0.80, +1.54) but not prefrontal cortex (-0.21); none of the Trib3 values is significant. It is a third, different perturbation, not a resolution of the human sign."
     ]
    },
    "class": "ORD",
@@ -9977,7 +9977,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "0a3fe34c959b3ca6",
+    "T1_cards": "549fbcc128b11638",
     "T2_pertinence": "079230f81c69cb2e",
     "T3_receipts": "293d407faa57bb47",
     "T4_needs": "932744721b4c9f86",
@@ -10125,7 +10125,7 @@
       "stake": "first WWOX-system test of a target hypothesis"
      },
      "notes": [
-      "IT27: in the partial-loss P47T mouse (missense with protein present; prefrontal cortex, parietal cortex and hippocampus, ten animals, one origin) the ISR transcripts Chac1 and Trib3 lean up (log2FC +0.6 to +1.5, mostly not significant at 5 v 5). It is a third, different perturbation, not a resolution of the human sign."
+      "IT27: in the partial-loss P47T mouse (missense with protein present; prefrontal cortex, parietal cortex and hippocampus, ten animals, one origin) Chac1 is higher in all three regions (log2FC +0.58, +1.11, +1.25; padj 0.10, 0.0497, 0.30) and Trib3 is higher in parietal cortex and hippocampus (+0.80, +1.54) but not prefrontal cortex (-0.21); none of the Trib3 values is significant. It is a third, different perturbation, not a resolution of the human sign."
      ],
      "objective": "partial",
      "objective_note": "",
@@ -10552,7 +10552,7 @@
    "caveats": {
     "note": [
      "IT12 P1-alt (dated 2026-10-31): in the one genetic-interaction screen of a WWOX-null line (GSE298081, HAP1, one unreplicated clone; association table only) loss of PDHA1, CS, LIPT1 and NDUFAF1 is better tolerated, the opposite sign to a PDH-activation rationale: counter-evidence of low weight, non-neural.",
-     "IT27: Ldha, Hk2 and Slc2a1 are higher in all three P47T regions (log2FC +0.2 to +0.9), the same sign as in the two human systems and not individually significant at 5 v 5. The fly-head metabolite data (MTBLS12344) show 2-hydroxyglutarate rising only in an Abeta42 background; lactate and pyruvate could not be read, so the lactate and PDH question stays open."
+     "IT27: Ldha, Hk2 and Slc2a1 are higher in all three P47T regions (log2FC +0.2 to +0.9), the same sign as in the two human systems; two calls are individually significant in the prefrontal cortex (Hk2 padj 2e-5, Ldha padj 0.015) and the other values, including every Slc2a1 value, are not. The fly-head metabolite data (MTBLS12344) show 2-hydroxyglutarate rising only in an Abeta42 background; lactate and pyruvate could not be read, so the lactate and PDH question stays open."
     ]
    },
    "class": "ORD",
@@ -10666,7 +10666,7 @@
    ],
    "exploratory_it7": "P3 (IT7, exploratory, independently verified): the same result as CMP-04 - network routes NO ADDED VALUE, signature route not detected and not excluded (weak positive counter-evidence: lower bound 0.039, top-decile hit rate 15 percent); module transfer inconclusive (null 95th percentile 0.389 and p 0.060 on the producer's draw, 0.396 and 0.0595 on the verif…",
    "inputs": {
-    "T1_cards": "a7558ccfa2d62f11",
+    "T1_cards": "209da46a49e55a74",
     "T2_pertinence": "4f588d870d868008",
     "T3_receipts": "b410a77ea4345508",
     "T4_needs": "709e9155ba014a61",
@@ -10958,7 +10958,7 @@
      },
      "notes": [
       "IT12 P1-alt (dated 2026-10-31): in the one genetic-interaction screen of a WWOX-null line (GSE298081, HAP1, one unreplicated clone; association table only) loss of PDHA1, CS, LIPT1 and NDUFAF1 is better tolerated, the opposite sign to a PDH-activation rationale: counter-evidence of low weight, non-neural.",
-      "IT27: Ldha, Hk2 and Slc2a1 are higher in all three P47T regions (log2FC +0.2 to +0.9), the same sign as in the two human systems and not individually significant at 5 v 5. The fly-head metabolite data (MTBLS12344) show 2-hydroxyglutarate rising only in an Abeta42 background; lactate and pyruvate could not be read, so the lactate and PDH question stays open."
+      "IT27: Ldha, Hk2 and Slc2a1 are higher in all three P47T regions (log2FC +0.2 to +0.9), the same sign as in the two human systems; two calls are individually significant in the prefrontal cortex (Hk2 padj 2e-5, Ldha padj 0.015) and the other values, including every Slc2a1 value, are not. The fly-head metabolite data (MTBLS12344) show 2-hydroxyglutarate rising only in an Abeta42 background; lactate and pyruvate could not be read, so the lactate and PDH question stays open."
      ],
      "objective": "partial",
      "objective_note": "",

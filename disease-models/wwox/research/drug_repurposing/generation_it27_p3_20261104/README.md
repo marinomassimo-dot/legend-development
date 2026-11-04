@@ -12,7 +12,7 @@ Non-canonical research material, not medical advice. Nothing here is a finding; 
 
 ## Consumption path (what the code does with it)
 source `verification_it27_p1_20261104/results/p1a_all_regions_own_results.tsv.gz` -> representation: 7 rows appended to `generation_it22_p1_20261103/inputs_it22/seed_annotations.tsv` by `build_annotations_it27.py` (tag `P47T_PARTIAL_LOSS_MOUSE_{CONCORDANT|MIXED|DISCORDANT}`, rule fixed in the script: three regions, a |log2FC| under 0.15 carries no sign) -> read by `run_generation_it21.py` (`seed_guard_limits`, annotation set per seed id) -> column `seed_guards` of the proposal table -> no effect on order: the tags are not in `SUPPORT_LIMITING_GUARDS`.
-Tags: Q2 SLC2A1, HK2, LDHA CONCORDANT (log2FC +0.2 to +0.9 in all three regions; none individually decisive); LDHB, BNIP3 and Q3 PSAT1 and Q8 NFE2L2 MIXED. No DISCORDANT seed exists. (A first draft called PSAT1 DISCORDANT on log2FC -0.03 by sign alone; the 0.15 floor was added for that defect, after seeing it, and is stated.)
+Tags: Q2 SLC2A1, HK2, LDHA CONCORDANT (log2FC +0.2 to +0.9 in all three regions; Hk2 and Ldha are individually significant in the prefrontal cortex only, Slc2a1 nowhere); LDHB, BNIP3 and Q3 PSAT1 and Q8 NFE2L2 MIXED. No DISCORDANT seed exists. (A first draft called PSAT1 DISCORDANT on log2FC -0.03 by sign alone; the 0.15 floor was added for that defect, after seeing it, and is stated.)
 
 ## Measured (engine re-run on the refreshed action table, then `propose`; scratch runs, tables committed in `results_s8/`)
 | Comparison | Rows | Changed |
