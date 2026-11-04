@@ -22,3 +22,12 @@ The detector above cannot see this class (it needs a drug-side comparison of two
 
 ## Files
 `alias_scan_it26.py` (scan), `test_alias_scan_it26.py` (5 tests), `suspect_pairs.tsv`, `ncbi_alias_listing_genes.json` (public NCBI aliases, 172 genes).
+
+## IT27 addendum: drug-side collision pointers (`collide`)
+
+`alias_scan_it26.py collide` reads the cached ChEMBL molecule synonyms and lists every code-like synonym (letters and digits, at least 4 characters) carried by two or more molecules that are different substances (different parent AND different InChIKey connectivity block). Result `collisions_it27.tsv`: 165 pointers over 19,933 molecules.
+
+* Known positive: `E3810` = rabeprazole sodium (CHEMBL1219 family) and lucitanib (CHEMBL2220486). This is a real code reuse in ChEMBL itself, not only in DGIdb.
+* Negative control (unit test): a free base and its sodium salt that share a parent and an InChIKey block are not flagged; a code shared only by a salt pair is not flagged.
+* `AZD5363` is flagged, but as a different thing from the IT26 fexagratinib case: the ChEMBL record named `AZD-5363` (CHEMBL2178577) is a second record that also carries `AZD5672` (a different code), next to capivasertib (CHEMBL2325741). The fexagratinib alias came from a GtoPdb ligand record (iuphar.ligand:7707) inside DGIdb and is not a ChEMBL synonym collision, so this detector does NOT find that case. State: one of the two known cases is caught, the other is a different mechanism.
+* The 165 pointers include radionuclide labels (`51CR`, `57CO`), prodrug or duplicate records of one compound under distinct ChEMBL ids (`BIIB057`, `PRT2607`, `P505-15`) and genuine reuses. None is a verdict. Against the S7 proposal table, 8 of 994 proposals sit on a ChEMBL family with a pointer (defosbarasertib, riviciclib, methylprednisolone, gdc0834, lgh447, bix02565, p50515, prt2607) and none of them is hand-over eligible. DGIdb-only families (`FAM:CAT:DGIDB:*`) were not matched here because they carry no ChEMBL parent in the family id.
