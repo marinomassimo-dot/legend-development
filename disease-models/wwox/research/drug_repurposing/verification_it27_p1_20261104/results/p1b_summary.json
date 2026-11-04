@@ -1,0 +1,550 @@
+{
+ "header_equals_series_titles": {
+  "hip": true,
+  "ctx": true
+ },
+ "gsm_map": {
+  "hip": {
+   "S_Ctrl_1": [
+    "GSM4805477",
+    "S-Control"
+   ],
+   "S_Ctrl_2": [
+    "GSM4805478",
+    "S-Control"
+   ],
+   "S_KO_1": [
+    "GSM4805479",
+    "Wwox deletion in neurons"
+   ],
+   "S_KO_2": [
+    "GSM4805480",
+    "Wwox deletion in neurons"
+   ],
+   "S_KO_3": [
+    "GSM4805481",
+    "Wwox deletion in neurons"
+   ],
+   "N_Ctrl_1": [
+    "GSM4805482",
+    "N-Control"
+   ],
+   "N_Ctrl_2": [
+    "GSM4805483",
+    "N-Control"
+   ],
+   "N_KO_1": [
+    "GSM4805484",
+    "Wwox deletion in Neural Stem and Progenitors"
+   ],
+   "N_KO_2": [
+    "GSM4805485",
+    "Wwox deletion in Neural Stem and Progenitors"
+   ],
+   "KO_1": [
+    "GSM4805486",
+    "Wwox- null"
+   ],
+   "KO_2": [
+    "GSM4805487",
+    "Wwox- null"
+   ],
+   "WT_1": [
+    "GSM4805488",
+    "Wild type"
+   ],
+   "WT_2": [
+    "GSM4805489",
+    "Wild type"
+   ],
+   "WT_3": [
+    "GSM4805490",
+    "Wild type"
+   ]
+  },
+  "ctx": {
+   "CRTX_S_Ctrl_1": [
+    "GSM4805491",
+    "S-Control"
+   ],
+   "CRTX_S_Ctrl_2": [
+    "GSM4805492",
+    "S-Control"
+   ],
+   "CRTX_S_Ctrl_3": [
+    "GSM4805493",
+    "S-Control"
+   ],
+   "CRTX_S_Ctrl_4": [
+    "GSM4805494",
+    "S-Control"
+   ],
+   "CRTX_S_KO_1": [
+    "GSM4805495",
+    "Wwox deletion in neurons"
+   ],
+   "CRTX_S_KO_2": [
+    "GSM4805496",
+    "Wwox deletion in neurons"
+   ],
+   "CRTX_S_KO_3": [
+    "GSM4805497",
+    "Wwox deletion in neurons"
+   ]
+  }
+ },
+ "tx_total_hip": 111083,
+ "tx_unmapped_hip": 0,
+ "genes_hip": 34866,
+ "tx_total_ctx": 111083,
+ "tx_unmapped_ctx": 0,
+ "genes_ctx": 34866,
+ "tpm_column_sums_hip": [
+  1000000.0000169937,
+  999999.9999190023,
+  999999.9999700125,
+  999999.999884005,
+  999999.9999670101,
+  999999.9999340001,
+  999999.9999129956,
+  1000000.0000419928,
+  999999.9999689994,
+  1000000.0000760172,
+  999999.9999490051,
+  999999.99998,
+  1000000.0000510002,
+  1000000.0000000037
+ ],
+ "tpm_column_sums_ctx": [
+  999999.9998800039,
+  1000000.000009006,
+  1000000.000028994,
+  999999.9999799987,
+  999999.999948,
+  999999.9999929966,
+  999999.9999100015
+ ],
+ "tpm_column_sums_hip_after_gene_map": [
+  1000000.0000169993,
+  999999.9999189988,
+  999999.999969999,
+  999999.9998839969,
+  999999.9999670006,
+  999999.9999339946,
+  999999.9999129992,
+  1000000.0000419978,
+  999999.9999689964,
+  1000000.000075998,
+  999999.9999489983,
+  999999.9999799995,
+  1000000.0000509991,
+  1000000.0000000027
+ ],
+ "integers_in_tpm": false,
+ "contrasts": {
+  "H_S": {
+   "cLFC>=0.585": {
+    "up": 549,
+    "down": 1167
+   },
+   "cLFC>=1": {
+    "up": 324,
+    "down": 322
+   },
+   "cLFC>=2": {
+    "up": 85,
+    "down": 56
+   },
+   "median_lfc_expressed_genes_removed_by_centring": -0.38960031729997335,
+   "n_expr": 13956,
+   "calls_0.585": 1716,
+   "also_in_ctl_WT_vs_S_Ctrl": 588,
+   "Wwox_pct_reduction": 85.4522830505263
+  },
+  "H_N": {
+   "cLFC>=0.585": {
+    "up": 1412,
+    "down": 1586
+   },
+   "cLFC>=1": {
+    "up": 469,
+    "down": 518
+   },
+   "cLFC>=2": {
+    "up": 80,
+    "down": 86
+   },
+   "median_lfc_expressed_genes_removed_by_centring": -0.26818990324758696,
+   "n_expr": 13796,
+   "calls_0.585": 2998,
+   "also_in_ctl_WT_vs_N_Ctrl": 1231,
+   "Wwox_pct_reduction": 93.99888916849105
+  },
+  "H_null": {
+   "cLFC>=0.585": {
+    "up": 262,
+    "down": 470
+   },
+   "cLFC>=1": {
+    "up": 88,
+    "down": 122
+   },
+   "cLFC>=2": {
+    "up": 15,
+    "down": 10
+   },
+   "median_lfc_expressed_genes_removed_by_centring": -0.21620533260568642,
+   "n_expr": 13594,
+   "calls_0.585": 732,
+   "also_in_ctl_WT_vs_S_Ctrl": 184,
+   "Wwox_pct_reduction": 91.49220728607878
+  },
+  "C_S": {
+   "cLFC>=0.585": {
+    "up": 316,
+    "down": 564
+   },
+   "cLFC>=1": {
+    "up": 128,
+    "down": 143
+   },
+   "cLFC>=2": {
+    "up": 19,
+    "down": 11
+   },
+   "median_lfc_expressed_genes_removed_by_centring": -0.20232347795755873,
+   "n_expr": 13474,
+   "Wwox_pct_reduction": 68.45928223430772
+  },
+  "ctl_WT_vs_S_Ctrl": {
+   "cLFC>=0.585": {
+    "up": 1438,
+    "down": 1658
+   },
+   "cLFC>=1": {
+    "up": 369,
+    "down": 780
+   },
+   "cLFC>=2": {
+    "up": 71,
+    "down": 122
+   },
+   "median_lfc_expressed_genes_removed_by_centring": 0.37541084480749337,
+   "n_expr": 14053
+  },
+  "ctl_WT_vs_N_Ctrl": {
+   "cLFC>=0.585": {
+    "up": 2086,
+    "down": 2291
+   },
+   "cLFC>=1": {
+    "up": 633,
+    "down": 880
+   },
+   "cLFC>=2": {
+    "up": 117,
+    "down": 124
+   },
+   "median_lfc_expressed_genes_removed_by_centring": 0.3052930355272788,
+   "n_expr": 13999
+  },
+  "ctl_S_Ctrl_vs_N_Ctrl": {
+   "cLFC>=0.585": {
+    "up": 327,
+    "down": 259
+   },
+   "cLFC>=1": {
+    "up": 148,
+    "down": 91
+   },
+   "cLFC>=2": {
+    "up": 61,
+    "down": 32
+   },
+   "median_lfc_expressed_genes_removed_by_centring": -0.05529596477074995,
+   "n_expr": 13904
+  }
+ },
+ "chance_separation_if_exchangeable": {
+  "2v2": 0.3333333333333333,
+  "2v3": 0.2,
+  "3v3": 0.1,
+  "3v4": 0.05714285714285714
+ },
+ "Wwox_ensembl": [
+  "ENSMUSG00000004637"
+ ],
+ "Wwox_TPM_hip": {
+  "S_Ctrl_1": 3.323574,
+  "S_Ctrl_2": 3.4088730000000003,
+  "S_KO_1": 0.37268,
+  "S_KO_2": 0.34157,
+  "S_KO_3": 0.754876,
+  "N_Ctrl_1": 3.489076,
+  "N_Ctrl_2": 3.60831,
+  "N_KO_1": 0.059436,
+  "N_KO_2": 0.36648600000000003,
+  "KO_1": 0.276262,
+  "KO_2": 0.384913,
+  "WT_1": 3.515471,
+  "WT_2": 4.270766,
+  "WT_3": 3.87087
+ },
+ "Wwox_TPM_ctx": {
+  "CRTX_S_Ctrl_1": 8.012867,
+  "CRTX_S_Ctrl_2": 26.536874,
+  "CRTX_S_Ctrl_3": 25.701393,
+  "CRTX_S_Ctrl_4": 15.064065999999999,
+  "CRTX_S_KO_1": 5.000991,
+  "CRTX_S_KO_2": 3.802207,
+  "CRTX_S_KO_3": 9.013017999999999
+ },
+ "marker_TPM_sum_per_arm_hip": {
+  "oligo_myelin": {
+   "S_Ctrl": 5252.334209499999,
+   "S_KO": 1179.5626440000003,
+   "N_Ctrl": 4980.978450999999,
+   "N_KO": 1891.9406004999998,
+   "null": 1180.3285695,
+   "WT": 4696.522944,
+   "n_genes": 10
+  },
+  "OPC": {
+   "S_Ctrl": 195.868593,
+   "S_KO": 106.30562033333335,
+   "N_Ctrl": 202.922931,
+   "N_KO": 90.66961549999999,
+   "null": 90.56988100000001,
+   "WT": 148.68936233333332,
+   "n_genes": 5
+  },
+  "astro": {
+   "S_Ctrl": 949.2872855,
+   "S_KO": 1581.0168096666666,
+   "N_Ctrl": 840.898764,
+   "N_KO": 881.7062945,
+   "null": 826.0317144999999,
+   "WT": 793.2416676666667,
+   "n_genes": 5
+  },
+  "microglia": {
+   "S_Ctrl": 83.8057445,
+   "S_KO": 66.84346566666666,
+   "N_Ctrl": 97.0086725,
+   "N_KO": 45.1436645,
+   "null": 63.668051999999996,
+   "WT": 59.318765333333324,
+   "n_genes": 5
+  },
+  "neuron_exc": {
+   "S_Ctrl": 2202.3710309999997,
+   "S_KO": 1469.617345,
+   "N_Ctrl": 2346.0689275,
+   "N_KO": 2269.0522539999997,
+   "null": 1265.1793284999999,
+   "WT": 1302.570753,
+   "n_genes": 4
+  },
+  "neuron_inh": {
+   "S_Ctrl": 211.8089825,
+   "S_KO": 152.671837,
+   "N_Ctrl": 224.26009949999997,
+   "N_KO": 218.9973395,
+   "null": 138.674139,
+   "WT": 171.46702499999995,
+   "n_genes": 3
+  },
+  "pan_neuron": {
+   "S_Ctrl": 1769.4779429999999,
+   "S_KO": 1562.3655543333334,
+   "N_Ctrl": 1668.177566,
+   "N_KO": 1774.199338,
+   "null": 1901.7654524999998,
+   "WT": 1946.006900333333,
+   "n_genes": 4
+  }
+ },
+ "marker_TPM_sum_per_arm_ctx": {
+  "oligo_myelin": {
+   "CS_Ctrl": 6692.146468,
+   "CS_KO": 3095.2787980000007,
+   "n_genes": 10
+  },
+  "OPC": {
+   "CS_Ctrl": 243.2828675,
+   "CS_KO": 168.95877733333333,
+   "n_genes": 5
+  },
+  "astro": {
+   "CS_Ctrl": 915.076888,
+   "CS_KO": 1213.761598,
+   "n_genes": 5
+  },
+  "microglia": {
+   "CS_Ctrl": 163.22482575,
+   "CS_KO": 83.76313466666666,
+   "n_genes": 5
+  },
+  "neuron_exc": {
+   "CS_Ctrl": 3130.6858517500004,
+   "CS_KO": 2668.964323666667,
+   "n_genes": 4
+  },
+  "neuron_inh": {
+   "CS_Ctrl": 230.0062935,
+   "CS_KO": 185.57325533333335,
+   "n_genes": 3
+  },
+  "pan_neuron": {
+   "CS_Ctrl": 1525.905385,
+   "CS_KO": 1662.0118156666667,
+   "n_genes": 4
+  }
+ },
+ "marker_cLFC": {
+  "H_S": {
+   "oligo_myelin": -1.7807522676167562,
+   "OPC": -0.3575492913985724,
+   "astro": 0.2562165146468785,
+   "microglia": 0.11579108633678187,
+   "neuron_exc": -0.20000424509159603,
+   "neuron_inh": -0.013923367847893275,
+   "pan_neuron": 0.25401313785020957,
+   "median_shift_removed": -0.38960031729997335
+  },
+  "H_N": {
+   "oligo_myelin": -0.9997206705149972,
+   "OPC": -0.5832726877331553,
+   "astro": -0.1316558550539781,
+   "microglia": -1.034016212048242,
+   "neuron_exc": 0.1917351667778826,
+   "neuron_inh": 0.13725555452473778,
+   "pan_neuron": 0.48625233102386367,
+   "median_shift_removed": -0.26818990324758696
+  },
+  "H_null": {
+   "oligo_myelin": -1.7095022145841878,
+   "OPC": -0.32832065263927146,
+   "astro": 0.08483652152431145,
+   "microglia": 0.4511544790846869,
+   "neuron_exc": 0.1333113082895681,
+   "neuron_inh": -0.13738216109219065,
+   "pan_neuron": 0.16403127797399122,
+   "median_shift_removed": -0.21620533260568642
+  },
+  "C_S": {
+   "oligo_myelin": -0.799469299982042,
+   "OPC": -0.2862158878989916,
+   "astro": 0.08159902087493551,
+   "microglia": -0.8264380309949455,
+   "neuron_exc": 0.19688728467486993,
+   "neuron_inh": -0.15012384177406807,
+   "pan_neuron": 0.34276324335061875,
+   "median_shift_removed": -0.20232347795755873
+  },
+  "ctl_WT_vs_S_Ctrl": {
+   "oligo_myelin": -0.16878940502051804,
+   "OPC": 0.07783855846280874,
+   "astro": -0.06646702896718404,
+   "microglia": 0.19242527365992274,
+   "neuron_exc": -0.21963268899027363,
+   "neuron_inh": -0.18331686241039796,
+   "pan_neuron": -0.3795254552538566,
+   "median_shift_removed": 0.37541084480749337
+  },
+  "ctl_WT_vs_N_Ctrl": {
+   "oligo_myelin": -0.3603324610272369,
+   "OPC": 0.22667349006502835,
+   "astro": -0.3173588073144057,
+   "microglia": 0.3886865748729489,
+   "neuron_exc": -0.11454475436809941,
+   "neuron_inh": 0.13350377435238753,
+   "pan_neuron": -0.4171429180476903,
+   "median_shift_removed": 0.3052930355272788
+  },
+  "ctl_S_Ctrl_vs_N_Ctrl": {
+   "oligo_myelin": -0.07603986588014856,
+   "OPC": 0.11467189814210238,
+   "astro": -0.03684735927207543,
+   "microglia": 0.22902728050556803,
+   "neuron_exc": 0.057736761994353215,
+   "neuron_inh": 0.10909830785490102,
+   "pan_neuron": -0.11200143029504539,
+   "median_shift_removed": -0.05529596477074995
+  }
+ },
+ "hip_sample_corr_min_within_arm": {
+  "S_Ctrl": 0.9564071263464378,
+  "S_KO": 0.9408408427316163,
+  "N_Ctrl": 0.9784857729236234,
+  "N_KO": 0.9710250630932931,
+  "null": 0.9751584217720053,
+  "WT": 0.9737182863677867
+ },
+ "hip_sample_corr_median_between_arm": 0.9331483616103393,
+ "ctx_corr_matrix_rounded": {
+  "CRTX_S_Ctrl_1": {
+   "CRTX_S_Ctrl_1": 1.0,
+   "CRTX_S_Ctrl_2": 0.9557,
+   "CRTX_S_Ctrl_3": 0.9519,
+   "CRTX_S_Ctrl_4": 0.9585,
+   "CRTX_S_KO_1": 0.9386,
+   "CRTX_S_KO_2": 0.9217,
+   "CRTX_S_KO_3": 0.9339
+  },
+  "CRTX_S_Ctrl_2": {
+   "CRTX_S_Ctrl_1": 0.9557,
+   "CRTX_S_Ctrl_2": 1.0,
+   "CRTX_S_Ctrl_3": 0.9624,
+   "CRTX_S_Ctrl_4": 0.9675,
+   "CRTX_S_KO_1": 0.9613,
+   "CRTX_S_KO_2": 0.9356,
+   "CRTX_S_KO_3": 0.9461
+  },
+  "CRTX_S_Ctrl_3": {
+   "CRTX_S_Ctrl_1": 0.9519,
+   "CRTX_S_Ctrl_2": 0.9624,
+   "CRTX_S_Ctrl_3": 1.0,
+   "CRTX_S_Ctrl_4": 0.971,
+   "CRTX_S_KO_1": 0.9654,
+   "CRTX_S_KO_2": 0.9575,
+   "CRTX_S_KO_3": 0.9558
+  },
+  "CRTX_S_Ctrl_4": {
+   "CRTX_S_Ctrl_1": 0.9585,
+   "CRTX_S_Ctrl_2": 0.9675,
+   "CRTX_S_Ctrl_3": 0.971,
+   "CRTX_S_Ctrl_4": 1.0,
+   "CRTX_S_KO_1": 0.964,
+   "CRTX_S_KO_2": 0.947,
+   "CRTX_S_KO_3": 0.9568
+  },
+  "CRTX_S_KO_1": {
+   "CRTX_S_Ctrl_1": 0.9386,
+   "CRTX_S_Ctrl_2": 0.9613,
+   "CRTX_S_Ctrl_3": 0.9654,
+   "CRTX_S_Ctrl_4": 0.964,
+   "CRTX_S_KO_1": 1.0,
+   "CRTX_S_KO_2": 0.964,
+   "CRTX_S_KO_3": 0.956
+  },
+  "CRTX_S_KO_2": {
+   "CRTX_S_Ctrl_1": 0.9217,
+   "CRTX_S_Ctrl_2": 0.9356,
+   "CRTX_S_Ctrl_3": 0.9575,
+   "CRTX_S_Ctrl_4": 0.947,
+   "CRTX_S_KO_1": 0.964,
+   "CRTX_S_KO_2": 1.0,
+   "CRTX_S_KO_3": 0.9525
+  },
+  "CRTX_S_KO_3": {
+   "CRTX_S_Ctrl_1": 0.9339,
+   "CRTX_S_Ctrl_2": 0.9461,
+   "CRTX_S_Ctrl_3": 0.9558,
+   "CRTX_S_Ctrl_4": 0.9568,
+   "CRTX_S_KO_1": 0.956,
+   "CRTX_S_KO_2": 0.9525,
+   "CRTX_S_KO_3": 1.0
+  }
+ }
+}

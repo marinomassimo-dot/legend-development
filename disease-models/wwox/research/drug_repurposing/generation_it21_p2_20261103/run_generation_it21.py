@@ -372,7 +372,7 @@ HANDOFF_RULE = (
     "H2 identity resolved in the catalogue (ChEMBL id) and modality small_molecule; "
     "H3 the arm has a stated benefit hypothesis in question_roles.tsv (arms whose own text says 'no sourced/stated' benefit hypothesis are kept in proposals, never handed over); "
     "H4 not decided in an IT9/IT10/IT11 qualification record (those are carried with their state, not re-proposed); "
-    "H5 one proposal per mechanism cluster = (question, hypothesis, main target), chosen by number of evidence origins, then the shorter admissible chain (fewer edges), then the smallest |z|; salt twins count once; "
+    "H5 one proposal per mechanism cluster = (question, hypothesis, main target), chosen by the order key (in this order: no cluster work already done, no limited seed support, main target not UNMEASURED, then more evidence origins, then the shorter admissible chain (fewer edges), then the LARGER smallest-|z|); an exact tie on the whole key is not broken by any science, the first row in table order is kept and the cluster export says how many eligible rows tied (tie_size); salt twins count once; "
     "H6 at most 3 per (question, hypothesis); "
     "H7 a proposal whose only signed support at the main target is not a resolved assertion is not handed over (the signed pair must survive the refreshed guards, which is the case for every row of the refreshed table); "
     "H8 (IT22 P1: scoped; before, ANY member's decision vetoed the whole cluster) a decision about one member reaches another member only inside the scope its own reason supports "
@@ -566,6 +566,12 @@ def select_handoff(rows, per_group=3):
             out.append(r)
             count[g] += 1
     return out
+
+
+def tie_size(members):
+    """Eligible rows of a cluster that share the best order_key with the representative (1 = no tie; 0 = nothing eligible). Informational: the rule is unchanged."""
+    keys = [order_key(x) for x in members if x["handoff_eligible"] == "yes"]
+    return keys.count(min(keys)) if keys else 0
 
 
 def assertion_counts(entries_idx, family, gene, rs):
@@ -871,7 +877,7 @@ def cmd_propose(a):
     for p in proposals:
         cl[(p["question"], p["hypothesis"], p["main_target"])].append(p)
     write_tsv(OUT / "mechanism_clusters_it21.tsv", [dict(question=k[0], hypothesis=k[1], main_target=k[2], n_families=len(v), n_base_names=len({x["base_name"] for x in v}),
-                                                         n_eligible=sum(1 for x in v if x["handoff_eligible"] == "yes"), handed_over=sum(1 for x in v if x["proposal_id"] in hid),
+                                                         n_eligible=sum(1 for x in v if x["handoff_eligible"] == "yes"), tie_size=tie_size(v), handed_over=sum(1 for x in v if x["proposal_id"] in hid),
                                                          target_named_in_legend_material=v[0]["target_named_in_legend_material"], earlier_decisions_in_cluster=v[0]["cluster_earlier_decisions"],
                                                          examples="; ".join(sorted({x["compound"] for x in v})[:6])) for k, v in sorted(cl.items())])
     blockers = collections.Counter(p["handoff_blocker"] or "ELIGIBLE" for p in proposals)

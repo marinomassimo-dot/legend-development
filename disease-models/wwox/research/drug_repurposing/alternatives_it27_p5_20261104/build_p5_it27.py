@@ -81,7 +81,7 @@ print("OK", len(out), "order rows;", len(vr), "variants")
 
 # 3. alternatives classification (rule-based from exported columns + short curated notes; classes are labels for reading, not decisions)
 NOTES = {
- ("HDAC5", "pracinostat"): "REPRESENTATIVE. Pan-HDAC (class I and IIb inside 10 nM-ish GtoPdb IC50s 40-49 nM; HDAC5 47 nM GtoPdb/20197387, 5113 nM ChEMBL/29360358, Ki 21 nM ChEMBL/25637120); oral, phase 3 oncology; CNS exposure not found in repo",
+ ("HDAC5", "pracinostat"): "REPRESENTATIVE. Pan-HDAC (GtoPdb IC50 HDAC1 49, HDAC3 43, HDAC10 40 nM; HDAC5 47 nM GtoPdb/20197387, 5113 nM ChEMBL/29360358, Ki 21 nM ChEMBL/25637120); oral, phase 3 oncology; CNS exposure not found in repo",
  ("HDAC5", "tmp269"): "class IIa-selective probe: GtoPdb IC50 HDAC4 157, HDAC5 97, HDAC7 43, HDAC9 23 nM (one document 23524983, abstract not read here); only HDAC5-only engine contribution (P6 SINGLE_TARGET); ChEMBL id CHEMBL3110004 exists in catalog/ligand_reconciliation_not_merged.tsv (chembl_id_active_but_not_in_catalogue_selection) and GtoPdb ligand 7491; tool compound, no human exposure statement (IT9 F5)",
  ("HDAC5", "ss-208"): "HDAC6-selective (HDAC6 12 nM v HDAC5 6910 nM, IC50, 31414801): a negative-selectivity control for HDAC5 rather than a candidate; identity not in catalogue",
  ("HDAC5", "ka1010"): "HDAC6-selective (HDAC6 8 nM v HDAC5 1093 nM, IC50, 27222932): same remark as SS-208",
@@ -120,6 +120,9 @@ NOTES = {
  ("ROCK2", "fasudil"): "pan-ROCK, Ki ROCK1 100 v ROCK2 271 nM (21145740/19597037); also hits PKA/PKG-type kinases (not in the table)",
  ("ROCK2", "ripasudil"): "IC50 ROCK2 19 v ROCK1 51 nM, PRKACA 2100 nM (24502505); topical ophthalmic",
 }
+import re
+NORM = lambda x: re.sub(r"[^a-z0-9]", "", x.lower())
+NOTES = {(a, NORM(b)): v for (a, b), v in NOTES.items()}
 alt_rows = []
 for k in [("Q2", "H_HARM", "HDAC5"), ("Q2", "H_HARM", "XIAP"), ("Q8", "H_HARM", "EZH2"), ("Q5", "H_HARM", "EZH2"), ("Q5", "H_HARM", "ROCK2")]:
     members = [p for p in props if (p["question"], p["hypothesis"], p["main_target"]) == k]
@@ -145,7 +148,9 @@ for k in [("Q2", "H_HARM", "HDAC5"), ("Q2", "H_HARM", "XIAP"), ("Q8", "H_HARM", 
             cls = "differing_modality (catalogue typing)"
         elif p["handoff_eligible"] == "yes":
             ok = g.order_key(p)
-            if ok == first and k[2] != "HDAC5":
+            if ok[0] == 1 and rep is None:
+                cls = "capacity_only (cluster demoted by k1 work_done; Q5 H_HARM cap of 3 reached by unworked clusters)"
+            elif ok == first and k[2] != "HDAC5":
                 cls = "capacity_only (exact tie on every order term; representative set by input order)"
             elif ok[2] == 1:
                 cls = "capacity_only (ranked lower: no measured value at main target, k3)"
@@ -160,6 +165,18 @@ for k in [("Q2", "H_HARM", "HDAC5"), ("Q2", "H_HARM", "XIAP"), ("Q8", "H_HARM", 
             pos = str(sorted(el, key=g.order_key).index(p) + 1) + " of " + str(len(el))
         alt_rows.append(dict(cluster="/".join(k), proposal_id=p["proposal_id"], compound=p["compound"], class_=cls, exported_blocker=b, order_position=pos, zmin=p["zmin"],
                              main_target_nM=p["attribution_main_nm"], main_measure=p["attribution_main_measure"], best_other_target=p["attribution_best_target"], best_other_nM=p["attribution_best_nm"],
-                             fold_main_over_best_other=p["attribution_fold"], attribution_state=p["attribution_state"], max_phase=p["max_phase"], note=NOTES.get((k[2], bn), "")))
+                             fold_main_over_best_other=p["attribution_fold"], attribution_state=p["attribution_state"], max_phase=p["max_phase"], note=NOTES.get((k[2], NORM(bn)), "")))
 wr("alternatives_classification_it27p5.tsv", [dict(r, **{"class": r.pop("class_")}) for r in alt_rows], ["cluster", "proposal_id", "compound", "class", "exported_blocker", "order_position", "zmin", "main_target_nM", "main_measure", "best_other_target", "best_other_nM", "fold_main_over_best_other", "attribution_state", "max_phase", "note"])
 print("alternatives", len(alt_rows))
+
+# 4. exact ties behind the 15 hand-overs (twins = same normalised name, counted once)
+ts = []
+for r in rd(S7 / "handoff_it21.tsv"):
+    p = next(x for x in props if x["proposal_id"] == r["proposal_id"])
+    k = (p["question"], p["hypothesis"], p["main_target"])
+    rows = [x for x in elig if (x["question"], x["hypothesis"], x["main_target"]) == k]
+    tied = sorted({NORM(x["compound"]) for x in rows if g.order_key(x) == g.order_key(p) and NORM(x["compound"]) != NORM(p["compound"])})
+    ts.append(dict(proposal_id=p["proposal_id"], cluster="/".join(k), representative=p["compound"], n_eligible_families=len(rows), n_eligible_names=len({NORM(x["compound"]) for x in rows}),
+                   n_exact_ties_other_names=len(tied), exact_ties=";".join(tied), selected_by="input order among exact ties" if tied else "order_key (unique minimum)"))
+wr("tie_summary_it27p5.tsv", ts, list(ts[0]))
+print(sum(1 for t in ts if t["n_exact_ties_other_names"]), "of", len(ts), "hand-overs sit in an exact tie")

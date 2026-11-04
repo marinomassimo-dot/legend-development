@@ -1,0 +1,16 @@
+proposal_id	cluster	representative	n_eligible_families	n_eligible_names	n_exact_ties_other_names	exact_ties	selected_by
+IT21P2-0005	Q2/H_HARM/HDAC5	Pracinostat	12	12	0		order_key (unique minimum)
+IT21P2-0014	Q2/H_HARM/XIAP	ASTX-660	3	3	2	idronoxil;xevinapant	input order among exact ties
+IT21P2-0043	Q2/H_PROTECT/EGLN2	Desidustat	4	3	1	molidustat	input order among exact ties
+IT21P2-0052	Q4/H_HARM/MAPKAPK2	AT-13148	1	1	0		order_key (unique minimum)
+IT21P2-0217	Q5/H_HARM/PTPRB	RAZUPROTAFIB	2	1	0		order_key (unique minimum)
+IT21P2-0221	Q5/H_HARM/ROCK2	SAR-407899 FREE BASE	4	4	3	belumosudil;fasudil;ripasudil	input order among exact ties
+IT21P2-0236	Q5/H_HARM/PIM2	LGH-447	2	2	0		order_key (unique minimum)
+IT21P2-0296	Q5/H_PROTECT/MAPK3	RAVOXERTINIB	4	3	2	mk8353;ulixertinib	input order among exact ties
+IT21P2-0380	Q5/H_PROTECT/MAPK1	Rineterkib	1	1	0		order_key (unique minimum)
+IT21P2-0402	Q5/H_PROTECT/RARB	Tretinoin	2	2	0		order_key (unique minimum)
+IT21P2-0425	Q6/H_HARM/DOT1L	Epz004777	1	1	0		order_key (unique minimum)
+IT21P2-0431	Q6/H_HARM/AURKB	TAK-901	10	10	1	ibcasertib	input order among exact ties
+IT21P2-0456	Q6/H_HARM/JAK2	Az960	18	16	6	ac430;bms911543;gandotinib;ls104;ns018;xl019	input order among exact ties
+IT21P2-0993	Q8/H_HARM/EZH2	GSK2816126	4	3	2	mevrometostat;tazemetostat	input order among exact ties
+IT21P2-1008	Q8/H_HARM/AHR	TAPINAROF	2	1	0		order_key (unique minimum)

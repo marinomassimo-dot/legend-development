@@ -1,0 +1,83 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT27-20261104",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Iteration 27: verified WWOX data (IT24 P4 deposits, MTBLS12344) -> inputs actually consumed -> comparison of alternatives inside clusters -> disposition carried to cards, ranking and dashboard; plus circumscribed IT26 residuals (E-3810/AZD5363 recheck, collision pointer, LINCS with R4).",
+ "START_UTC": "2026-11-04T14:00:00Z",
+ "BASELINE": "development/main = local main = 051beb9b (IT26 closed, CI green); clean tree",
+ "DECISIONS_TAKEN": [
+  "Authorised by the operator's IT27 mandate message; zero spend, no external contact, no e-mail sent to any service."
+ ],
+ "STOP_LOG": [],
+ "AUTHORISED_QUEUE_20261104": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P1/P2 independent verification of GSE215425, GSE158681/2, GSE158684 and MTBLS12344 by a verifier distinct from the IT24 producer",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "P3/P4 choose inputs and show the consumption path against S7",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "P5/P6 compare representatives and alternatives in HDAC5, XIAP, EZH2 and one contrasting cluster; multi-target decomposition",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P8": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "P8-P10 residuals: E-3810/AZD5363 recheck, collision pointer, PX-478 barrier, LINCS with R4",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P11": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "P11/P12 consumers, regeneration proof, ranking and dashboard",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P14": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "P13/P14 scouting on named gaps, verification, battery, push, CI, cleanup, report",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  }
+ }
+}

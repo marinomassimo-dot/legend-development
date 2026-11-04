@@ -142,6 +142,14 @@ class HandoffRule(unittest.TestCase):
         self.assertEqual(sum(1 for r in out if r["hypothesis"] == "H_HARM"), 3)
         self.assertIn("g", names)          # the cap is per (question, hypothesis)
 
+    def test_tie_size_counts_exact_ties_and_h5_text_names_the_real_key(self):     # IT27 P5: the H5 text listed three of the six order terms and said smallest |z|
+        mk = lambda n, o, z, el="yes": dict(question="Q8", hypothesis="H_HARM", main_target="EZH2", n_origins=o, zmin=z, name=n, handoff_eligible=el, chain_edges=2)
+        self.assertEqual(G.tie_size([mk("a", 2, 5), mk("b", 2, 5), mk("c", 1, 9), mk("d", 2, 5, el="no")]), 2)
+        self.assertEqual(G.tie_size([mk("a", 2, 5), mk("c", 1, 9)]), 1)
+        self.assertEqual(G.tie_size([mk("a", 2, 5, el="no")]), 0)
+        for term in ("cluster work already done", "UNMEASURED", "LARGER smallest-|z|", "tie_size"):
+            self.assertIn(term, G.HANDOFF_RULE.replace("no cluster work already done", "cluster work already done"))
+
     def test_salt_twins_count_once(self):
         self.assertEqual(G.base_name("Bepridil Hydrochloride"), G.base_name("BEPRIDIL"))
         self.assertNotEqual(G.base_name("Dexamethasone"), G.base_name("Prednisone"))

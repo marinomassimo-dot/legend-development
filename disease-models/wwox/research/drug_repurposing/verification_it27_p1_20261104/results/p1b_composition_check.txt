@@ -1,0 +1,8 @@
+# S_KO minus S_Ctrl mean TPM change; total absolute up = 217138, down = -217138
+top gains: mt-Atp8 82781->139357; Klf10 18982->71296; mt-Nd4l 13161->25289; Gm29013 1139->10929; mt-Atp6 9325->18289; mt-Co3 2077->8678; mt-Nd1 7150->13684; Actb 13775->19580
+top losses: Gm28437 10855->1814; Gm14303 7791->3267; Gm12338 10195->6843; Gm14539 4309->1187; Gm10925 3917->1015; Mbp 3294->745; Snurf 8524->5991; Ttr 3445->1219
+share of TPM in top-20 genes of the reference arm: ref 0.253, pert 0.374
+# null minus WT mean TPM change; total absolute up = 91282, down = -91282
+top gains: mt-Atp8 210729->249093; Klf10 42428->58959; mt-Atp6 26132->31211; mt-Nd1 12063->16743; mt-Nd4l 26176->29579; mt-Co2 5071->7700; mt-Co3 7898->10049; mt-Cytb 11899->13847
+top losses: Gm29013 7175->4674; Gm28437 4284->1819; Mbp 2767->685; Gm12338 7351->5991; Gm14303 5020->3738; Snurf 5307->4377; Gm10925 2268->1403; Ttr 2110->1462
+share of TPM in top-20 genes of the reference arm: ref 0.450, pert 0.520
