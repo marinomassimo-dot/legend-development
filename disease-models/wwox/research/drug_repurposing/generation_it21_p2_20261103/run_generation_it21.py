@@ -894,7 +894,7 @@ def cmd_propose(a):
     for p in proposals:
         cl[(p["question"], p["hypothesis"], p["main_target"])].append(p)
     write_tsv(OUT / "mechanism_clusters_it21.tsv", [dict(question=k[0], hypothesis=k[1], main_target=k[2], n_families=len(v), n_base_names=len({x["base_name"] for x in v}),
-                                                         n_eligible=sum(1 for x in v if x["handoff_eligible"] == "yes"), tie_size=tie_size(v), handed_over=sum(1 for x in v if x["proposal_id"] in hid),
+                                                         n_eligible=sum(1 for x in v if x["handoff_eligible"] == "yes"), **({"tie_size": tie_size(v)} if v1 else {}), handed_over=sum(1 for x in v if x["proposal_id"] in hid),
                                                          target_named_in_legend_material=v[0]["target_named_in_legend_material"], earlier_decisions_in_cluster=v[0]["cluster_earlier_decisions"],
                                                          examples="; ".join(sorted({x["compound"] for x in v})[:6])) for k, v in sorted(cl.items())])
     blockers = collections.Counter(p["handoff_blocker"] or "ELIGIBLE" for p in proposals)
