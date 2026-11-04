@@ -1,3 +1,9 @@
 {
- "top20_hits": []
+ "legend_distinct_full_keys": 128,
+ "legend_distinct_skeletons": 127,
+ "legend_rows": 158,
+ "legend_rows_with_structure": 136,
+ "top20_hits": [],
+ "top_rows": 180,
+ "tops_with_unresolved_identity": 11
 }

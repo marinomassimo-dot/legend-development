@@ -1,0 +1,5 @@
+V3 own answer (before reading multitarget_it24_p6). v3_mine.py: per proposal (seed_set, family) rows of contributions_p1_<set>.tsv.gz (base file), each row attributed to main_target_hops1to3 (else hop0), sum of contrib_total, orientation +1 for H_HARM, -1 for H_PROTECT.
+No threshold: SINGLE 902 / MULTI_POSITIVE 66 / CONFLICT 32. With |net|>=10% of the max: 981/18/1.
+All 1000 rows have contrary_seed_share <= 0.10 (selection filter; the 32 trivially).
+Hand-overs (16): non-single (no threshold): MULTI_POS Pracinostat 0005, LGH-447 0236, Ravoxertinib 0296, Tretinoin 0402; CONFLICT Sorafenib 0035, SAR-407899 0221. With 10% threshold only 0296 and 0402 (multi positive).
+Orientation: seed_engine.py seed_contrib_table: x = -a*V (a = signed action/|actions|, V influence on seed gene); call_label: q>0 => 'opposes', q<0 => 'mimics'. dispose_it10.disposition: H_HARM primary = opposes; H_PROTECT primary = mimics. So base-file positive = oppose; flip for H_PROTECT is correct.

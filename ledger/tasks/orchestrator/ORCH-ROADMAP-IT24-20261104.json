@@ -53,8 +53,9 @@
    "steps": [
     {
      "step": "P3 catalogue coverage for the families and questions actually in the queue",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "catalogue coverage for queued questions assessed through identity census (R0-R3: 136 of 158 Q2/Q4/Q8 rows structure-bearing; 98 of 1,000 rows unresolved) and listing-tier measurement (316 single-listing signed rows, 554 pairs under the wide rule, 28 proposals including one hand-over) rather than a broad enrichment; no new pharmacology sources added; reopening: read primary sources for listing-tier rows that drive a proposal"
     }
    ]
   },
@@ -115,8 +116,9 @@
    "steps": [
     {
      "step": "P9 incremental attributable measurement against a frozen reference",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "attributable increments, no accuracy claim: signs (8 pairs, bounded: no chain depends on them, nulls not re-run), identity (consumer-side recovery 93 of 115, no generator change), target decomposition (no selection change), provenance of sign (3 of 15 pairs relabelled); combined effect on selection: none; coverage/traceability gains only"
     }
    ]
   },
@@ -135,8 +137,9 @@
    "steps": [
     {
      "step": "P11 independent verification and substantive regressions",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "verification_it24_20261104 (independent verifier, own answers before reading the producer): V1-V4 confirmed on the numbers; findings applied: 89 firm + 4 weaker identity rows, salt-key latent defect documented, empty recheck file regenerated with script, exclusion-key fragility regression added, conflict magnitude stated (31 of 32 under 6 percent), contrary_seed_share non-informative claim withdrawn, OBSERVED-is-not-measured caution"
     }
    ]
   },

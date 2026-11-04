@@ -270,6 +270,18 @@ class GuardWrapper(unittest.TestCase):
         e = self.dg_entry("TALC", "SIRT1")
         self.assertEqual(self.call_listing([e], e, e["targets"][0], "FAM:CAT:DGIDB:be0d8ea27925", mode="off")[0]["sign"], "down")
 
+    def test_the_named_exclusions_still_match_the_committed_tables(self):
+        """The exclusion key is (family id, gene, claim source) and a family id is the smallest member id: if a catalogue build joins the record to another family the key stops
+        matching and the sign would re-enter silently. Every named family must exist in the committed tables and none of its named pairs may carry a sign."""
+        import gzip
+        pairs = Rf.load_pair_exclusions()
+        self.assertTrue(pairs)
+        meta = {r["family_id"] for r in csv.DictReader(gzip.open(HERE / "results/actions/family_meta.tsv.gz", "rt", encoding="utf-8"), delimiter="\t")}
+        acts = {(r["family_id"], r["target_symbol"].upper()) for r in csv.DictReader(gzip.open(HERE / "results/actions/family_actions.tsv.gz", "rt", encoding="utf-8"), delimiter="\t")}
+        for (fam, gene, _src) in pairs:
+            self.assertIn(fam, meta, fam)
+            self.assertNotIn((fam, gene), acts, (fam, gene))
+
     def test_the_wide_listing_sensitivity_needs_a_second_independent_source_with_the_same_direction(self):
         e, m = self.dg_entry("TALC", "ABC1"), self.dg_entry("GuideToPharmacology", "ABC1", eid="CAT:DGIDB:y")
         self.assertEqual(self.call_listing([e], e, e["targets"][0], "F9", mode="tier")[0]["sign"], "unresolved")
