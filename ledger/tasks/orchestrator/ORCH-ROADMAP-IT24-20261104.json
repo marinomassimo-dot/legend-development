@@ -20,8 +20,9 @@
    "steps": [
     {
      "step": "P0 baseline, IT23 reconciliation, IT24 record observable by the monitor",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "main cceaf854 fetched, tree clean, IT23 record closed with evidence, IT24 record bound (mandate_watch sees the session RUNNING), cron monitor and daily scout present"
     }
    ]
   },
@@ -40,8 +41,9 @@
    "steps": [
     {
      "step": "P2 chemical identity recovery for the DGIdb-only families (rows vs families vs substances), shared resolver",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "identity_it24_p2_20261104: of 115 rows IT23 called incomparable, 93 carry a structure through routes already held (R1 23, R2 4, R3 66), 22 unresolved; no name merges; top-20 LINCS overlap stays 0 on 136 resolvable rows; 3 regression tests"
     }
    ]
   },
@@ -80,8 +82,9 @@
    "steps": [
     {
      "step": "P6 multi-target profiles from LEGEND qualified data: feasibility then comparison against single chain",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "multitarget_it24_p6_20261104: engine score is already multi-target; decomposition shows 32 target-level conflicts invisible in contrary_seed_share, 4 multi-target and 2 conflict hand-overs (paralog pairs flagged); no selection change; coverage/presentation gain only"
     }
    ]
   },
