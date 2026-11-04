@@ -1,0 +1,747 @@
+{
+ "info": {
+  "csv_integer": true,
+  "n_genes": 55010,
+  "dup_symbols": 110,
+  "dup_ids": 0,
+  "animals": {
+   "F10": {
+    "regions": [
+     "CB",
+     "CTX",
+     "HPC",
+     "PFC"
+    ],
+    "geno": "P47T",
+    "sex": "F"
+   },
+   "F4": {
+    "regions": [
+     "CB",
+     "CTX",
+     "HPC",
+     "PFC"
+    ],
+    "geno": "WT",
+    "sex": "F"
+   },
+   "F5": {
+    "regions": [
+     "CB",
+     "CTX",
+     "HPC",
+     "PFC"
+    ],
+    "geno": "WT",
+    "sex": "F"
+   },
+   "F8": {
+    "regions": [
+     "CB",
+     "CTX",
+     "HPC",
+     "PFC"
+    ],
+    "geno": "P47T",
+    "sex": "F"
+   },
+   "F9": {
+    "regions": [
+     "CTX",
+     "HPC",
+     "PFC"
+    ],
+    "geno": "P47T",
+    "sex": "F"
+   },
+   "M1": {
+    "regions": [
+     "CTX",
+     "HPC",
+     "PFC"
+    ],
+    "geno": "WT",
+    "sex": "M"
+   },
+   "M2": {
+    "regions": [
+     "CB",
+     "CTX",
+     "HPC",
+     "PFC"
+    ],
+    "geno": "WT",
+    "sex": "M"
+   },
+   "M3": {
+    "regions": [
+     "CB",
+     "CTX",
+     "HPC",
+     "PFC"
+    ],
+    "geno": "WT",
+    "sex": "M"
+   },
+   "M6": {
+    "regions": [
+     "CB",
+     "CTX",
+     "HPC",
+     "PFC"
+    ],
+    "geno": "P47T",
+    "sex": "M"
+   },
+   "M7": {
+    "regions": [
+     "CTX",
+     "HPC",
+     "PFC"
+    ],
+    "geno": "P47T",
+    "sex": "M"
+   }
+  },
+  "n_animals": 10,
+  "sex_by_genotype": {
+   "WT": {
+    "M": 3,
+    "F": 2
+   },
+   "P47T": {
+    "M": 2,
+    "F": 3
+   }
+  },
+  "phi_sex_genotype_animals": 0.19999999999999996,
+  "correction_scope": {
+   "PFC": {
+    "within_region_padj10": 2832,
+    "pooled_fdr10": 2630,
+    "within_region_padj05": 2131,
+    "pooled_fdr05": 1936,
+    "padj_x4_lt05": 1327
+   },
+   "CTX": {
+    "within_region_padj10": 1958,
+    "pooled_fdr10": 2058,
+    "within_region_padj05": 1307,
+    "pooled_fdr05": 1397,
+    "padj_x4_lt05": 705
+   },
+   "HPC": {
+    "within_region_padj10": 493,
+    "pooled_fdr10": 1126,
+    "within_region_padj05": 242,
+    "pooled_fdr05": 626,
+    "padj_x4_lt05": 95
+   },
+   "CB": {
+    "within_region_padj10": 3936,
+    "pooled_fdr10": 3132,
+    "within_region_padj05": 2778,
+    "pooled_fdr05": 2153,
+    "padj_x4_lt05": 1363
+   }
+  },
+  "PFC_CTX_same_animals_concordance": {
+   "n_shared_genes": 17575,
+   "spearman_lfc_all": 0.6433060679219916,
+   "n_both_padj10": 1209,
+   "same_sign_both": 1209
+  },
+  "animal_effect_PFC_CTX_resid_corr": {
+   "same_animal_mean": 0.28111882963362633,
+   "different_animal_mean": -0.02976102602602853
+  }
+ },
+ "regions": {
+  "PFC": {
+   "n": 10,
+   "n_wt": 5,
+   "n_mut": 5,
+   "genes_kept": 17718,
+   "libsize_ratio_mut_over_wt": 1.0816259327736693,
+   "sf_ratio_mut_over_wt": 1.0489925195241177,
+   "lfc_median_deseq_sex": -0.001635279920634833,
+   "lfc_median_ols_sex": -0.006312417462855,
+   "median_lfc_by_expr_quintile": [
+    0.05457661977275684,
+    0.0017265531586258293,
+    -0.042677372859183244,
+    -0.014627408670427468,
+    0.024149105382043526
+   ],
+   "deseq_sex": {
+    "padj_lt10": 2832,
+    "padj_lt05": 2131,
+    "padj05_abs1_5": 963,
+    "padj05_abs2": 451,
+    "up10": 1621,
+    "dn10": 1211,
+    "n_padj_na": 10
+   },
+   "deseq_nosex": {
+    "padj_lt10": 3112,
+    "padj_lt05": 2372,
+    "padj05_abs1_5": 1022,
+    "padj05_abs2": 472,
+    "up10": 1763,
+    "dn10": 1349,
+    "n_padj_na": 14
+   },
+   "ols_sex": {
+    "fdr_lt10": 1363,
+    "fdr_lt05": 559,
+    "fdr05_abs1_5_centred": 305
+   },
+   "ols_nosex": {
+    "fdr_lt10": 1913,
+    "fdr_lt05": 964,
+    "fdr05_abs1_5_centred": 487
+   },
+   "spearman_lfc_deseq_vs_ols": 0.9909229505504441,
+   "pearson_lfc_deseq_vs_ols_centred": 0.9886722989856956,
+   "slope_ols_on_deseq": 0.9700138354256185,
+   "calls_FDR10_overlap": {
+    "deseq": 2832,
+    "ols": 1363,
+    "both": 1291,
+    "jaccard": 0.44455922865013775,
+    "same_sign_in_both": 1291
+   },
+   "calls_FDR05_2x_overlap": {
+    "deseq": 451,
+    "ols": 182,
+    "both": 178,
+    "jaccard": 0.3912087912087912
+   },
+   "sex_sensitivity": {
+    "spearman_lfc": 0.9873868779432303,
+    "calls10_with": 2832,
+    "calls10_without": 3112,
+    "both": 2686
+   },
+   "Wwox": {
+    "ENSMUSG00000004637.15": {
+     "lfc": -0.13555390455103056,
+     "padj": 0.482783072800734,
+     "baseMean": 802.8435634428131
+    }
+   },
+   "sex_genes_counts": {
+    "Xist": {
+     "F_min_max": [
+      6496,
+      10712
+     ],
+     "M_min_max": [
+      2,
+      11
+     ]
+    },
+    "Ddx3y": {
+     "F_min_max": [
+      0,
+      2
+     ],
+     "M_min_max": [
+      1389,
+      1706
+     ]
+    },
+    "Uty": {
+     "F_min_max": [
+      3,
+      7
+     ],
+     "M_min_max": [
+      442,
+      569
+     ]
+    },
+    "Kdm5d": {
+     "F_min_max": [
+      1,
+      6
+     ],
+     "M_min_max": [
+      589,
+      757
+     ]
+    }
+   },
+   "LOAO": {
+    "per_animal": {
+     "F10": {
+      "calls_padj10": 2603,
+      "strong_kept_padj10_same_sign": 428,
+      "strong_n": 451
+     },
+     "F4": {
+      "calls_padj10": 2201,
+      "strong_kept_padj10_same_sign": 416,
+      "strong_n": 451
+     },
+     "F5": {
+      "calls_padj10": 2889,
+      "strong_kept_padj10_same_sign": 436,
+      "strong_n": 451
+     },
+     "F8": {
+      "calls_padj10": 2413,
+      "strong_kept_padj10_same_sign": 428,
+      "strong_n": 451
+     },
+     "F9": {
+      "calls_padj10": 3018,
+      "strong_kept_padj10_same_sign": 431,
+      "strong_n": 451
+     },
+     "M1": {
+      "calls_padj10": 2077,
+      "strong_kept_padj10_same_sign": 424,
+      "strong_n": 451
+     },
+     "M2": {
+      "calls_padj10": 2010,
+      "strong_kept_padj10_same_sign": 421,
+      "strong_n": 451
+     },
+     "M3": {
+      "calls_padj10": 2225,
+      "strong_kept_padj10_same_sign": 420,
+      "strong_n": 451
+     },
+     "M6": {
+      "calls_padj10": 1873,
+      "strong_kept_padj10_same_sign": 365,
+      "strong_n": 451
+     },
+     "M7": {
+      "calls_padj10": 3329,
+      "strong_kept_padj10_same_sign": 437,
+      "strong_n": 451
+     }
+    },
+    "strong_genes_FDR05_2x": 451,
+    "strong_kept_in_all10": 346,
+    "strong_kept_in_ge8": 410,
+    "mid_genes_FDR10": 2832,
+    "mid_kept_in_all10": 1439,
+    "mid_kept_in_ge8": 1825,
+    "strong_sign_flip_any": 0
+   }
+  },
+  "CTX": {
+   "n": 10,
+   "n_wt": 5,
+   "n_mut": 5,
+   "genes_kept": 18398,
+   "libsize_ratio_mut_over_wt": 0.968870236006408,
+   "sf_ratio_mut_over_wt": 0.9572237246958025,
+   "lfc_median_deseq_sex": 0.008776570945591889,
+   "lfc_median_ols_sex": -0.006113853575840675,
+   "median_lfc_by_expr_quintile": [
+    0.03562682420561939,
+    -0.009207855607376882,
+    -0.015467393475404533,
+    0.013398007174074154,
+    0.02852800993881225
+   ],
+   "deseq_sex": {
+    "padj_lt10": 1958,
+    "padj_lt05": 1307,
+    "padj05_abs1_5": 767,
+    "padj05_abs2": 382,
+    "up10": 1140,
+    "dn10": 818,
+    "n_padj_na": 359
+   },
+   "deseq_nosex": {
+    "padj_lt10": 1737,
+    "padj_lt05": 1222,
+    "padj05_abs1_5": 746,
+    "padj05_abs2": 387,
+    "up10": 1006,
+    "dn10": 731,
+    "n_padj_na": 20
+   },
+   "ols_sex": {
+    "fdr_lt10": 338,
+    "fdr_lt05": 73,
+    "fdr05_abs1_5_centred": 49
+   },
+   "ols_nosex": {
+    "fdr_lt10": 534,
+    "fdr_lt05": 170,
+    "fdr05_abs1_5_centred": 117
+   },
+   "spearman_lfc_deseq_vs_ols": 0.9814399744620054,
+   "pearson_lfc_deseq_vs_ols_centred": 0.9803840602791168,
+   "slope_ols_on_deseq": 0.962151138028084,
+   "calls_FDR10_overlap": {
+    "deseq": 1958,
+    "ols": 338,
+    "both": 328,
+    "jaccard": 0.16666666666666666,
+    "same_sign_in_both": 328
+   },
+   "calls_FDR05_2x_overlap": {
+    "deseq": 382,
+    "ols": 32,
+    "both": 32,
+    "jaccard": 0.08376963350785341
+   },
+   "sex_sensitivity": {
+    "spearman_lfc": 0.9777170370016973,
+    "calls10_with": 1958,
+    "calls10_without": 1737,
+    "both": 1612
+   },
+   "Wwox": {
+    "ENSMUSG00000004637.15": {
+     "lfc": 0.03601358914331467,
+     "padj": 0.921863903136158,
+     "baseMean": 865.2627244263655
+    }
+   },
+   "sex_genes_counts": {
+    "Xist": {
+     "F_min_max": [
+      11418,
+      20478
+     ],
+     "M_min_max": [
+      4,
+      20
+     ]
+    },
+    "Ddx3y": {
+     "F_min_max": [
+      1,
+      5
+     ],
+     "M_min_max": [
+      1691,
+      2386
+     ]
+    },
+    "Uty": {
+     "F_min_max": [
+      15,
+      42
+     ],
+     "M_min_max": [
+      545,
+      577
+     ]
+    },
+    "Kdm5d": {
+     "F_min_max": [
+      1,
+      3
+     ],
+     "M_min_max": [
+      557,
+      903
+     ]
+    }
+   },
+   "LOAO": {
+    "per_animal": {
+     "F10": {
+      "calls_padj10": 1569,
+      "strong_kept_padj10_same_sign": 367,
+      "strong_n": 382
+     },
+     "F4": {
+      "calls_padj10": 1225,
+      "strong_kept_padj10_same_sign": 328,
+      "strong_n": 382
+     },
+     "F5": {
+      "calls_padj10": 2074,
+      "strong_kept_padj10_same_sign": 378,
+      "strong_n": 382
+     },
+     "F8": {
+      "calls_padj10": 1599,
+      "strong_kept_padj10_same_sign": 361,
+      "strong_n": 382
+     },
+     "F9": {
+      "calls_padj10": 1642,
+      "strong_kept_padj10_same_sign": 363,
+      "strong_n": 382
+     },
+     "M1": {
+      "calls_padj10": 1207,
+      "strong_kept_padj10_same_sign": 347,
+      "strong_n": 382
+     },
+     "M2": {
+      "calls_padj10": 1192,
+      "strong_kept_padj10_same_sign": 339,
+      "strong_n": 382
+     },
+     "M3": {
+      "calls_padj10": 1213,
+      "strong_kept_padj10_same_sign": 344,
+      "strong_n": 382
+     },
+     "M6": {
+      "calls_padj10": 1732,
+      "strong_kept_padj10_same_sign": 299,
+      "strong_n": 382
+     },
+     "M7": {
+      "calls_padj10": 3170,
+      "strong_kept_padj10_same_sign": 355,
+      "strong_n": 382
+     }
+    },
+    "strong_genes_FDR05_2x": 382,
+    "strong_kept_in_all10": 271,
+    "strong_kept_in_ge8": 322,
+    "mid_genes_FDR10": 1958,
+    "mid_kept_in_all10": 840,
+    "mid_kept_in_ge8": 1045,
+    "strong_sign_flip_any": 0
+   }
+  },
+  "HPC": {
+   "n": 10,
+   "n_wt": 5,
+   "n_mut": 5,
+   "genes_kept": 17931,
+   "libsize_ratio_mut_over_wt": 0.9120481334870018,
+   "sf_ratio_mut_over_wt": 0.9090581107805717,
+   "lfc_median_deseq_sex": 0.0068166907058636724,
+   "lfc_median_ols_sex": 0.004264084910709103,
+   "median_lfc_by_expr_quintile": [
+    0.039097201515920554,
+    0.03793197331367208,
+    -0.013441526321913713,
+    -0.0051576390113091015,
+    0.004671286488142889
+   ],
+   "deseq_sex": {
+    "padj_lt10": 493,
+    "padj_lt05": 242,
+    "padj05_abs1_5": 202,
+    "padj05_abs2": 122,
+    "up10": 334,
+    "dn10": 159,
+    "n_padj_na": 365
+   },
+   "deseq_nosex": {
+    "padj_lt10": 741,
+    "padj_lt05": 412,
+    "padj05_abs1_5": 299,
+    "padj05_abs2": 163,
+    "up10": 467,
+    "dn10": 274,
+    "n_padj_na": 395
+   },
+   "ols_sex": {
+    "fdr_lt10": 0,
+    "fdr_lt05": 0,
+    "fdr05_abs1_5_centred": 0
+   },
+   "ols_nosex": {
+    "fdr_lt10": 0,
+    "fdr_lt05": 0,
+    "fdr05_abs1_5_centred": 0
+   },
+   "spearman_lfc_deseq_vs_ols": 0.9899865819525105,
+   "pearson_lfc_deseq_vs_ols_centred": 0.9783775025066015,
+   "slope_ols_on_deseq": 0.9842189640670478,
+   "calls_FDR10_overlap": {
+    "deseq": 493,
+    "ols": 0,
+    "both": 0,
+    "jaccard": 0.0,
+    "same_sign_in_both": 0
+   },
+   "calls_FDR05_2x_overlap": {
+    "deseq": 122,
+    "ols": 0,
+    "both": 0,
+    "jaccard": 0.0
+   },
+   "sex_sensitivity": {
+    "spearman_lfc": 0.9882352682116946,
+    "calls10_with": 493,
+    "calls10_without": 741,
+    "both": 464
+   },
+   "Wwox": {
+    "ENSMUSG00000004637.15": {
+     "lfc": -0.15859215621815212,
+     "padj": 0.6050974709776652,
+     "baseMean": 634.0269758101623
+    }
+   },
+   "sex_genes_counts": {
+    "Xist": {
+     "F_min_max": [
+      4628,
+      9915
+     ],
+     "M_min_max": [
+      1,
+      10
+     ]
+    },
+    "Ddx3y": {
+     "F_min_max": [
+      0,
+      6
+     ],
+     "M_min_max": [
+      1518,
+      2439
+     ]
+    },
+    "Uty": {
+     "F_min_max": [
+      7,
+      10
+     ],
+     "M_min_max": [
+      460,
+      628
+     ]
+    },
+    "Kdm5d": {
+     "F_min_max": [
+      0,
+      5
+     ],
+     "M_min_max": [
+      698,
+      1063
+     ]
+    }
+   }
+  },
+  "CB": {
+   "n": 7,
+   "n_wt": 4,
+   "n_mut": 3,
+   "genes_kept": 17898,
+   "libsize_ratio_mut_over_wt": 0.889168724955459,
+   "sf_ratio_mut_over_wt": 0.901051285421132,
+   "lfc_median_deseq_sex": 0.011976250792211497,
+   "lfc_median_ols_sex": 0.012213020492683673,
+   "median_lfc_by_expr_quintile": [
+    0.04201720142548022,
+    0.0982276852610124,
+    0.032807633556051985,
+    -0.02967577672843604,
+    -0.050685801310549436
+   ],
+   "deseq_sex": {
+    "padj_lt10": 3936,
+    "padj_lt05": 2778,
+    "padj05_abs1_5": 455,
+    "padj05_abs2": 90,
+    "up10": 1836,
+    "dn10": 2100,
+    "n_padj_na": 3470
+   },
+   "deseq_nosex": {
+    "padj_lt10": 4566,
+    "padj_lt05": 3300,
+    "padj05_abs1_5": 509,
+    "padj05_abs2": 116,
+    "up10": 2162,
+    "dn10": 2404,
+    "n_padj_na": 2780
+   },
+   "ols_sex": {
+    "fdr_lt10": 6,
+    "fdr_lt05": 0,
+    "fdr05_abs1_5_centred": 0
+   },
+   "ols_nosex": {
+    "fdr_lt10": 2,
+    "fdr_lt05": 1,
+    "fdr05_abs1_5_centred": 0
+   },
+   "spearman_lfc_deseq_vs_ols": 0.9951280600943841,
+   "pearson_lfc_deseq_vs_ols_centred": 0.9919807647563765,
+   "slope_ols_on_deseq": 0.9942481114178234,
+   "calls_FDR10_overlap": {
+    "deseq": 3936,
+    "ols": 6,
+    "both": 6,
+    "jaccard": 0.001524390243902439,
+    "same_sign_in_both": 6
+   },
+   "calls_FDR05_2x_overlap": {
+    "deseq": 90,
+    "ols": 0,
+    "both": 0,
+    "jaccard": 0.0
+   },
+   "sex_sensitivity": {
+    "spearman_lfc": 0.9926756622064857,
+    "calls10_with": 3936,
+    "calls10_without": 4566,
+    "both": 3811
+   },
+   "Wwox": {
+    "ENSMUSG00000004637.15": {
+     "lfc": -0.11313718756363449,
+     "padj": 0.48767929592684855,
+     "baseMean": 1269.062824015696
+    }
+   },
+   "sex_genes_counts": {
+    "Xist": {
+     "F_min_max": [
+      14345,
+      20899
+     ],
+     "M_min_max": [
+      6,
+      41
+     ]
+    },
+    "Ddx3y": {
+     "F_min_max": [
+      0,
+      2
+     ],
+     "M_min_max": [
+      1809,
+      2649
+     ]
+    },
+    "Uty": {
+     "F_min_max": [
+      61,
+      160
+     ],
+     "M_min_max": [
+      776,
+      1047
+     ]
+    },
+    "Kdm5d": {
+     "F_min_max": [
+      0,
+      2
+     ],
+     "M_min_max": [
+      865,
+      1321
+     ]
+    }
+   }
+  }
+ }
+}

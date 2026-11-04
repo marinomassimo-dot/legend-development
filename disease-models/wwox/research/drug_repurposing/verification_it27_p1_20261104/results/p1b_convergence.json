@@ -1,0 +1,29 @@
+{
+ "call_rate_per_expressed_gene": {
+  "H_S": 0.12295786758383491,
+  "H_N": 0.217309365033343,
+  "H_null": 0.053847285567161986,
+  "C_S": 0.06531096927415764
+ },
+ "n_calls": {
+  "H_S": 1716,
+  "H_N": 2998,
+  "H_null": 732,
+  "C_S": 880
+ },
+ "observed_exactly_k_of_4": {
+  "1": 3282,
+  "2": 1098,
+  "3": 208,
+  "4": 56
+ },
+ "expected_exactly_k_of_4_if_independent_x_universe": {
+  "2": 784.2,
+  "3": 54.0,
+  "4": 1.3
+ },
+ "genes_in_ge3_of_4": 264,
+ "of_which_same_direction": 248,
+ "of_which_same_dir_and_no_ctl_flag": 152,
+ "genes_in_4_of_4_same_dir": 56
+}

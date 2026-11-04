@@ -1,0 +1,110 @@
+{
+ "PFC": {
+  "n_mine": 17718,
+  "n_prod": 15008,
+  "n_shared": 15007,
+  "spearman_lfc_deseq_vs_prod_centred": 0.9950203066735,
+  "spearman_lfc_myols_vs_prod": 0.999999964749817,
+  "spearman_p_myols_vs_prod": 0.9989050418335852,
+  "slope_prod_on_deseq": 0.9717177310325812,
+  "FDR10": {
+   "prod": 1419,
+   "deseq2": 2657,
+   "my_ols": 1249,
+   "prod_and_deseq2": 1349,
+   "prod_and_myols": 1249,
+   "prod_only_not_deseq2": 70,
+   "deseq2_only_not_prod": 1308,
+   "prod_calls_with_same_sign_in_deseq2_when_both": 1349
+  },
+  "FDR05_2x": {
+   "prod": 155,
+   "deseq2": 341,
+   "both": 152,
+   "prod_calls_deseq2_padj_lt10": 155
+  },
+  "tested_by_me_not_producer": 2711,
+  "of_which_deseq2_padj10": 175
+ },
+ "CTX": {
+  "n_mine": 18398,
+  "n_prod": 15408,
+  "n_shared": 15405,
+  "spearman_lfc_deseq_vs_prod_centred": 0.9896394429158392,
+  "spearman_lfc_myols_vs_prod": 0.9999999799295506,
+  "spearman_p_myols_vs_prod": 0.9996352114115451,
+  "slope_prod_on_deseq": 0.9594127948139357,
+  "FDR10": {
+   "prod": 425,
+   "deseq2": 1822,
+   "my_ols": 311,
+   "prod_and_deseq2": 411,
+   "prod_and_myols": 311,
+   "prod_only_not_deseq2": 14,
+   "deseq2_only_not_prod": 1411,
+   "prod_calls_with_same_sign_in_deseq2_when_both": 411
+  },
+  "FDR05_2x": {
+   "prod": 33,
+   "deseq2": 298,
+   "both": 33,
+   "prod_calls_deseq2_padj_lt10": 33
+  },
+  "tested_by_me_not_producer": 2993,
+  "of_which_deseq2_padj10": 136
+ },
+ "HPC": {
+  "n_mine": 17931,
+  "n_prod": 15114,
+  "n_shared": 15110,
+  "spearman_lfc_deseq_vs_prod_centred": 0.9951762027277179,
+  "spearman_lfc_myols_vs_prod": 0.9999999689077245,
+  "spearman_p_myols_vs_prod": 0.9995898317298142,
+  "slope_prod_on_deseq": 0.9824327035215017,
+  "FDR10": {
+   "prod": 0,
+   "deseq2": 455,
+   "my_ols": 0,
+   "prod_and_deseq2": 0,
+   "prod_and_myols": 0,
+   "prod_only_not_deseq2": 0,
+   "deseq2_only_not_prod": 455,
+   "prod_calls_with_same_sign_in_deseq2_when_both": 0
+  },
+  "FDR05_2x": {
+   "prod": 0,
+   "deseq2": 101,
+   "both": 0,
+   "prod_calls_deseq2_padj_lt10": 0
+  },
+  "tested_by_me_not_producer": 2821,
+  "of_which_deseq2_padj10": 38
+ },
+ "CB": {
+  "n_mine": 17898,
+  "n_prod": 14789,
+  "n_shared": 14789,
+  "spearman_lfc_deseq_vs_prod_centred": 0.9981822829384948,
+  "spearman_lfc_myols_vs_prod": 0.9999999723258337,
+  "spearman_p_myols_vs_prod": 0.9990315349958698,
+  "slope_prod_on_deseq": 0.9985718374929926,
+  "FDR10": {
+   "prod": 6,
+   "deseq2": 3936,
+   "my_ols": 6,
+   "prod_and_deseq2": 6,
+   "prod_and_myols": 6,
+   "prod_only_not_deseq2": 0,
+   "deseq2_only_not_prod": 3930,
+   "prod_calls_with_same_sign_in_deseq2_when_both": 6
+  },
+  "FDR05_2x": {
+   "prod": 0,
+   "deseq2": 90,
+   "both": 0,
+   "prod_calls_deseq2_padj_lt10": 0
+  },
+  "tested_by_me_not_producer": 3109,
+  "of_which_deseq2_padj10": 0
+ }
+}

@@ -1,0 +1,28 @@
+HPC {'mutant_labels': ['M3', 'M2', 'F5', 'F8', 'F10'], 'overlap_with_true': 2, 'deseq_padj10': 0, 'deseq_padj05': 0, 'deseq_p05_nominal': 137, 'ols_fdr10': 0, 'n_genes': 17931}
+HPC {'mutant_labels': ['M2', 'M1', 'F5', 'F4', 'F10'], 'overlap_with_true': 1, 'deseq_padj10': 32, 'deseq_padj05': 29, 'deseq_p05_nominal': 1101, 'ols_fdr10': 0, 'n_genes': 17931}
+HPC {'mutant_labels': ['M2', 'F5', 'F4', 'M7', 'F9'], 'overlap_with_true': 2, 'deseq_padj10': 0, 'deseq_padj05': 0, 'deseq_p05_nominal': 898, 'ols_fdr10': 0, 'n_genes': 17931}
+HPC {'mutant_labels': ['M2', 'F5', 'F4', 'M7', 'F10'], 'overlap_with_true': 2, 'deseq_padj10': 3, 'deseq_padj05': 2, 'deseq_p05_nominal': 1029, 'ols_fdr10': 0, 'n_genes': 17931}
+HPC {'mutant_labels': ['M2', 'M1', 'F5', 'M6', 'F8'], 'overlap_with_true': 2, 'deseq_padj10': 1, 'deseq_padj05': 1, 'deseq_p05_nominal': 365, 'ols_fdr10': 0, 'n_genes': 17931}
+HPC {'mutant_labels': ['M1', 'F5', 'F4', 'M7', 'F9'], 'overlap_with_true': 2, 'deseq_padj10': 4, 'deseq_padj05': 3, 'deseq_p05_nominal': 966, 'ols_fdr10': 0, 'n_genes': 17931}
+HPC {'mutant_labels': ['M3', 'M1', 'F4', 'F8', 'F10'], 'overlap_with_true': 2, 'deseq_padj10': 124, 'deseq_padj05': 36, 'deseq_p05_nominal': 2606, 'ols_fdr10': 0, 'n_genes': 17931}
+HPC {'mutant_labels': ['M3', 'M2', 'F4', 'M7', 'F9'], 'overlap_with_true': 2, 'deseq_padj10': 0, 'deseq_padj05': 0, 'deseq_p05_nominal': 641, 'ols_fdr10': 0, 'n_genes': 17931}
+CTX {'mutant_labels': ['M2', 'M1', 'F5', 'M7', 'M6'], 'overlap_with_true': 2, 'deseq_padj10': 0, 'deseq_padj05': 0, 'deseq_p05_nominal': 257, 'ols_fdr10': 0, 'n_genes': 18398}
+CTX {'mutant_labels': ['M2', 'F5', 'F4', 'M6', 'F9'], 'overlap_with_true': 2, 'deseq_padj10': 0, 'deseq_padj05': 0, 'deseq_p05_nominal': 450, 'ols_fdr10': 0, 'n_genes': 18398}
+CTX {'mutant_labels': ['M2', 'M1', 'F5', 'F9', 'F8'], 'overlap_with_true': 2, 'deseq_padj10': 1, 'deseq_padj05': 1, 'deseq_p05_nominal': 195, 'ols_fdr10': 0, 'n_genes': 18398}
+CTX {'mutant_labels': ['M3', 'F5', 'F4', 'M7', 'F8'], 'overlap_with_true': 2, 'deseq_padj10': 0, 'deseq_padj05': 0, 'deseq_p05_nominal': 309, 'ols_fdr10': 0, 'n_genes': 18398}
+CTX {'mutant_labels': ['M3', 'M2', 'F4', 'M7', 'F8'], 'overlap_with_true': 2, 'deseq_padj10': 3, 'deseq_padj05': 1, 'deseq_p05_nominal': 911, 'ols_fdr10': 0, 'n_genes': 18398}
+CTX {'mutant_labels': ['M3', 'M1', 'F5', 'M7', 'F10'], 'overlap_with_true': 2, 'deseq_padj10': 0, 'deseq_padj05': 0, 'deseq_p05_nominal': 622, 'ols_fdr10': 0, 'n_genes': 18398}
+CTX {'mutant_labels': ['M2', 'M1', 'F5', 'F9', 'F10'], 'overlap_with_true': 2, 'deseq_padj10': 1, 'deseq_padj05': 1, 'deseq_p05_nominal': 440, 'ols_fdr10': 0, 'n_genes': 18398}
+CTX {'mutant_labels': ['M3', 'M2', 'M1', 'F5', 'F4'], 'overlap_with_true': 0, 'deseq_padj10': 1951, 'deseq_padj05': 1316, 'deseq_p05_nominal': 3557, 'ols_fdr10': 338, 'n_genes': 18398}
+PFC {'mutant_labels': ['M2', 'M1', 'F4', 'M7', 'M6'], 'overlap_with_true': 2, 'deseq_padj10': 2, 'deseq_padj05': 1, 'deseq_p05_nominal': 505, 'ols_fdr10': 0, 'n_genes': 17718}
+PFC {'mutant_labels': ['M1', 'F5', 'F4', 'M7', 'F9'], 'overlap_with_true': 2, 'deseq_padj10': 16, 'deseq_padj05': 3, 'deseq_p05_nominal': 1165, 'ols_fdr10': 0, 'n_genes': 17718}
+PFC {'mutant_labels': ['M3', 'M1', 'F4', 'M6', 'F10'], 'overlap_with_true': 2, 'deseq_padj10': 0, 'deseq_padj05': 0, 'deseq_p05_nominal': 282, 'ols_fdr10': 0, 'n_genes': 17718}
+PFC {'mutant_labels': ['M3', 'M2', 'M1', 'F9', 'F8'], 'overlap_with_true': 2, 'deseq_padj10': 182, 'deseq_padj05': 88, 'deseq_p05_nominal': 1584, 'ols_fdr10': 3, 'n_genes': 17718}
+PFC {'mutant_labels': ['M2', 'F5', 'F4', 'M7', 'F9'], 'overlap_with_true': 2, 'deseq_padj10': 2, 'deseq_padj05': 1, 'deseq_p05_nominal': 956, 'ols_fdr10': 0, 'n_genes': 17718}
+PFC {'mutant_labels': ['M2', 'M1', 'F5', 'M6', 'F9'], 'overlap_with_true': 2, 'deseq_padj10': 0, 'deseq_padj05': 0, 'deseq_p05_nominal': 195, 'ols_fdr10': 0, 'n_genes': 17718}
+PFC {'mutant_labels': ['M3', 'M2', 'F5', 'F4', 'F8'], 'overlap_with_true': 1, 'deseq_padj10': 1, 'deseq_padj05': 1, 'deseq_p05_nominal': 1088, 'ols_fdr10': 0, 'n_genes': 17718}
+PFC {'mutant_labels': ['M2', 'F5', 'F4', 'M6', 'F8'], 'overlap_with_true': 2, 'deseq_padj10': 0, 'deseq_padj05': 0, 'deseq_p05_nominal': 530, 'ols_fdr10': 0, 'n_genes': 17718}
+CB {'mutant_labels': ['F5', 'F4', 'F8'], 'overlap_with_true': 1, 'deseq_padj10': 17, 'deseq_padj05': 14, 'deseq_p05_nominal': 366, 'ols_fdr10': 0, 'n_genes': 17898}
+CB {'mutant_labels': ['F5', 'F4', 'F10'], 'overlap_with_true': 1, 'deseq_padj10': 7, 'deseq_padj05': 6, 'deseq_p05_nominal': 421, 'ols_fdr10': 0, 'n_genes': 17898}
+CB {'mutant_labels': ['M3', 'F5', 'F10'], 'overlap_with_true': 1, 'deseq_padj10': 3, 'deseq_padj05': 3, 'deseq_p05_nominal': 757, 'ols_fdr10': 0, 'n_genes': 17898}
+CB {'mutant_labels': ['M3', 'M2', 'F4'], 'overlap_with_true': 0, 'deseq_padj10': 42, 'deseq_padj05': 21, 'deseq_p05_nominal': 1415, 'ols_fdr10': 0, 'n_genes': 17898}
