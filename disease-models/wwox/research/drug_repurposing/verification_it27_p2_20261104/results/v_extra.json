@@ -1,0 +1,46 @@
+{
+ "hydroxyglutarate": {
+  "cell_geometric_means_TIC": {
+   "C(ctrl,LacZ)": 26901298.420665927,
+   "D(Wwox,LacZ)": 29430134.06756922,
+   "G(ctrl,Abeta)": 44603280.57028369,
+   "H(Wwox,Abeta)": 85649250.6626443
+  },
+  "FC_KD_in_LacZ": 1.0940042226720406,
+  "FC_KD_in_Abeta": 1.920245541752974,
+  "FC_Abeta_in_ctrl": 1.658034488625979,
+  "ratio_of_ratios": 1.7552450913424154,
+  "log2_interaction_t": 2.4364572006242224,
+  "permutation_p_interaction": 0.02599870006499675,
+  "linear_scale_interaction": {
+   "est": 40329332.854990974,
+   "p": 0.009082712872177115,
+   "ci95": [
+    11514541.679426253,
+    69144124.0305557
+   ]
+  }
+ },
+ "lactate": {
+  "cell_geometric_means_TIC": {
+   "C(ctrl,LacZ)": 7235963.313395473,
+   "D(Wwox,LacZ)": 5461197.309725207,
+   "G(ctrl,Abeta)": 7417158.801908486,
+   "H(Wwox,Abeta)": 18761688.150940876
+  },
+  "FC_KD_in_LacZ": 0.754729822857897,
+  "FC_KD_in_Abeta": 2.5294979724734175,
+  "FC_Abeta_in_ctrl": 1.025040962849767,
+  "ratio_of_ratios": 3.3515277863210655,
+  "log2_interaction_t": 4.507039655979746,
+  "permutation_p_interaction": 0.000599970001499925,
+  "linear_scale_interaction": {
+   "est": 13490168.084275343,
+   "p": 1.2151961967318252e-06,
+   "ci95": [
+    9689879.481433913,
+    17290456.687116772
+   ]
+  }
+ }
+}

@@ -1,0 +1,1625 @@
+file	assay_name	group_wwox	group_amyloid	target	ppm	area	apex_rt	tic
+C1	C1_KDExp	RNAi Control	LacZ	lactate	5	11119975.8	560.75	78587375507
+C1	C1_KDExp	RNAi Control	LacZ	lactate	10	11119975.8	560.75	78587375507
+C2	C2_KDExp	RNAi Control	LacZ	lactate	5	9886511.4	559.06	75050529828
+C2	C2_KDExp	RNAi Control	LacZ	lactate	10	9886511.4	559.06	75050529828
+C3	C3_KDExp	RNAi Control	LacZ	lactate	5	4071370.7	560.70	77514488408
+C3	C3_KDExp	RNAi Control	LacZ	lactate	10	4071370.7	560.70	77514488408
+C4	C4_KDExp	RNAi Control	LacZ	lactate	5	4612376.6	559.73	77283810937
+C4	C4_KDExp	RNAi Control	LacZ	lactate	10	4612376.6	559.73	77283810937
+C5	C5_KDExp	RNAi Control	LacZ	lactate	5	9551805.0	560.06	78148198625
+C5	C5_KDExp	RNAi Control	LacZ	lactate	10	9551805.0	560.06	78148198625
+D1	D1_KDExp	Wwox RNAi	LacZ	lactate	5	5667885.2	559.75	76823195347
+D1	D1_KDExp	Wwox RNAi	LacZ	lactate	10	5667885.2	559.75	76823195347
+D2	D2_KDExp	Wwox RNAi	LacZ	lactate	5	3139580.3	559.80	77616845301
+D2	D2_KDExp	Wwox RNAi	LacZ	lactate	10	3139580.3	559.80	77616845301
+D3	D3_KDExp	Wwox RNAi	LacZ	lactate	5	5859109.0	561.10	75045955676
+D3	D3_KDExp	Wwox RNAi	LacZ	lactate	10	5859109.0	561.10	75045955676
+D4	D4_KDExp	Wwox RNAi	LacZ	lactate	5	7777527.7	561.15	78252486569
+D4	D4_KDExp	Wwox RNAi	LacZ	lactate	10	7777527.7	561.15	78252486569
+D5	D5_KDExp	Wwox RNAi	LacZ	lactate	5	5683667.2	560.98	75259658073
+D5	D5_KDExp	Wwox RNAi	LacZ	lactate	10	5683667.2	560.98	75259658073
+G1	G1_KDExp	RNAi Control	AB42	lactate	5	9033951.6	558.62	77636841683
+G1	G1_KDExp	RNAi Control	AB42	lactate	10	9033951.6	558.62	77636841683
+G2	G2_KDExp	RNAi Control	AB42	lactate	5	6905308.6	561.30	74321981717
+G2	G2_KDExp	RNAi Control	AB42	lactate	10	6905308.6	561.30	74321981717
+G3	G3_KDExp	RNAi Control	AB42	lactate	5	7179781.7	558.99	79485462450
+G3	G3_KDExp	RNAi Control	AB42	lactate	10	7179781.7	558.99	79485462450
+G4	G4_KDExp	RNAi Control	AB42	lactate	5	6009333.3	561.17	75504738608
+G4	G4_KDExp	RNAi Control	AB42	lactate	10	6009333.3	561.17	75504738608
+G5	G5_KDExp	RNAi Control	AB42	lactate	5	8169786.8	560.63	78569703194
+G5	G5_KDExp	RNAi Control	AB42	lactate	10	8169786.8	560.63	78569703194
+H1	H1_KDExp	Wwox RNAi	AB42	lactate	5	19568584.2	562.44	75919573450
+H1	H1_KDExp	Wwox RNAi	AB42	lactate	10	19568584.2	562.44	75919573450
+H2	H2_KDExp	Wwox RNAi	AB42	lactate	5	20394942.3	560.98	78001196696
+H2	H2_KDExp	Wwox RNAi	AB42	lactate	10	20394942.3	560.98	78001196696
+H3	H3_KDExp	Wwox RNAi	AB42	lactate	5	17489806.7	561.57	76278124731
+H3	H3_KDExp	Wwox RNAi	AB42	lactate	10	17489806.7	561.57	76278124731
+H4	H4_KDExp	Wwox RNAi	AB42	lactate	5	17908503.8	562.02	79443297885
+H4	H4_KDExp	Wwox RNAi	AB42	lactate	10	17908503.8	562.02	79443297885
+H5	H5_KDExp	Wwox RNAi	AB42	lactate	5	17828399.6	562.57	74207473206
+H5	H5_KDExp	Wwox RNAi	AB42	lactate	10	17828399.6	562.57	74207473206
+I1	I1_OEExp	Control gRNA	LacZ	lactate	5	6937744.7	563.80	74382645183
+I1	I1_OEExp	Control gRNA	LacZ	lactate	10	6937744.7	563.80	74382645183
+I2	I2_OEExp	Control gRNA	LacZ	lactate	5	4901419.5	563.82	66652024118
+I2	I2_OEExp	Control gRNA	LacZ	lactate	10	4901419.5	563.82	66652024118
+I3	I3_OEExp	Control gRNA	LacZ	lactate	5	6567095.0	563.98	66557132626
+I3	I3_OEExp	Control gRNA	LacZ	lactate	10	6567095.0	563.98	66557132626
+I4	I4_OEExp	Control gRNA	LacZ	lactate	5	9102299.6	563.15	73224921914
+I4	I4_OEExp	Control gRNA	LacZ	lactate	10	9102299.6	563.15	73224921914
+I5	I5_OEExp	Control gRNA	LacZ	lactate	5	8873547.0	562.11	83394468956
+I5	I5_OEExp	Control gRNA	LacZ	lactate	10	8873547.0	562.11	83394468956
+J1	J1_OEExp	Wwox gRNA	LacZ	lactate	5	7272938.9	564.00	66156998187
+J1	J1_OEExp	Wwox gRNA	LacZ	lactate	10	7272938.9	564.00	66156998187
+J2	J2_OEExp	Wwox gRNA	LacZ	lactate	5	9436352.6	563.77	69356998249
+J2	J2_OEExp	Wwox gRNA	LacZ	lactate	10	9436352.6	563.77	69356998249
+J3	J3_OEExp	Wwox gRNA	LacZ	lactate	5	8032322.0	562.68	70939688012
+J3	J3_OEExp	Wwox gRNA	LacZ	lactate	10	8032322.0	562.68	70939688012
+J4	J4_OEExp	Wwox gRNA	LacZ	lactate	5	12979469.3	563.13	67533335357
+J4	J4_OEExp	Wwox gRNA	LacZ	lactate	10	12979469.3	563.13	67533335357
+J5	J5_OEExp	Wwox gRNA	LacZ	lactate	5	5875359.5	563.58	72977783165
+J5	J5_OEExp	Wwox gRNA	LacZ	lactate	10	5875359.5	563.58	72977783165
+K1	K1_OEExp	Control gRNA	AB42	lactate	5	15511746.1	563.50	74246380220
+K1	K1_OEExp	Control gRNA	AB42	lactate	10	15511746.1	563.50	74246380220
+K2	K2_OEExp	Control gRNA	AB42	lactate	5	11624285.8	562.27	65264738495
+K2	K2_OEExp	Control gRNA	AB42	lactate	10	11624285.8	562.27	65264738495
+K3	K3_OEExp	Control gRNA	AB42	lactate	5	10466061.0	563.12	70106919060
+K3	K3_OEExp	Control gRNA	AB42	lactate	10	10466061.0	563.12	70106919060
+K4	K4_OEExp	Control gRNA	AB42	lactate	5	20163396.7	564.15	69485749776
+K4	K4_OEExp	Control gRNA	AB42	lactate	10	20163396.7	564.15	69485749776
+K5	K5_OEExp	Control gRNA	AB42	lactate	5	18863681.1	562.75	85528412434
+K5	K5_OEExp	Control gRNA	AB42	lactate	10	18863681.1	562.75	85528412434
+L1	L1_OEExp	Wwox gRNA	AB42	lactate	5	12606069.8	562.37	73054612432
+L1	L1_OEExp	Wwox gRNA	AB42	lactate	10	12606069.8	562.37	73054612432
+L2	L2_OEExp	Wwox gRNA	AB42	lactate	5	14167537.4	563.47	69020431450
+L2	L2_OEExp	Wwox gRNA	AB42	lactate	10	14167537.4	563.47	69020431450
+L3	L3_OEExp	Wwox gRNA	AB42	lactate	5	14901451.3	562.60	70289160915
+L3	L3_OEExp	Wwox gRNA	AB42	lactate	10	14901451.3	562.60	70289160915
+L4	L4_OEExp	Wwox gRNA	AB42	lactate	5	20892518.8	563.22	71324975699
+L4	L4_OEExp	Wwox gRNA	AB42	lactate	10	20892518.8	563.22	71324975699
+L5	L5_OEExp	Wwox gRNA	AB42	lactate	5	17157346.3	563.52	80716298575
+L5	L5_OEExp	Wwox gRNA	AB42	lactate	10	17157346.3	563.52	80716298575
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	lactate	5	1653283.0	563.00	79135534226
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	lactate	10	1653283.0	563.00	79135534226
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	lactate	5	2971727.1	563.00	79014597867
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	lactate	10	2971727.1	563.00	79014597867
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	lactate	5	4220010.2	563.00	79262381295
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	lactate	10	4220010.2	563.00	79262381295
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	lactate	5	5087107.7	563.00	71286131064
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	lactate	10	5087107.7	563.00	71286131064
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	lactate	5	5150195.9	563.00	69880950563
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	lactate	10	5150195.9	563.00	69880950563
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	lactate	5	5086956.0	563.00	69859142672
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	lactate	10	5086956.0	563.00	69859142672
+pooled_10	Pool1_4	Not Applicable	Not Applicable	lactate	5	9347688.8	564.06	77853943855
+pooled_10	Pool1_4	Not Applicable	Not Applicable	lactate	10	9347688.8	564.06	77853943855
+pooled_11	Pool1_5	Not Applicable	Not Applicable	lactate	5	9796298.4	561.58	77988498071
+pooled_11	Pool1_5	Not Applicable	Not Applicable	lactate	10	9796298.4	561.58	77988498071
+pooled_12	Pool1_6	Not Applicable	Not Applicable	lactate	5	8797467.9	564.44	73866613161
+pooled_12	Pool1_6	Not Applicable	Not Applicable	lactate	10	8797467.9	564.44	73866613161
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	lactate	5	13141246.6	560.96	75589662197
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	lactate	10	13141246.6	560.96	75589662197
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	lactate	5	12139523.6	561.80	74553266127
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	lactate	10	12139523.6	561.80	74553266127
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	lactate	5	10293929.7	563.82	70825764115
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	lactate	10	10293929.7	563.82	70825764115
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	lactate	5	8952481.8	562.68	68396261652
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	lactate	10	8952481.8	562.68	68396261652
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	lactate	5	8932671.1	563.56	66909828861
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	lactate	10	8932671.1	563.56	66909828861
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	lactate	5	8992423.9	563.22	67722142626
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	lactate	10	8992423.9	563.22	67722142626
+pooled_7	Pool1_1	Not Applicable	Not Applicable	lactate	5	8636104.0	562.21	80035784138
+pooled_7	Pool1_1	Not Applicable	Not Applicable	lactate	10	8636104.0	562.21	80035784138
+pooled_8	Pool1_2	Not Applicable	Not Applicable	lactate	5	8595511.1	564.27	78589705479
+pooled_8	Pool1_2	Not Applicable	Not Applicable	lactate	10	8595511.1	564.27	78589705479
+pooled_9	Pool1_3	Not Applicable	Not Applicable	lactate	5	9625788.9	562.22	79404787529
+pooled_9	Pool1_3	Not Applicable	Not Applicable	lactate	10	9625788.9	562.22	79404787529
+C1	C1_KDExp	RNAi Control	LacZ	hydroxyglutarate	5	33008992.5	749.03	78587375507
+C1	C1_KDExp	RNAi Control	LacZ	hydroxyglutarate	10	33008992.5	749.03	78587375507
+C2	C2_KDExp	RNAi Control	LacZ	hydroxyglutarate	5	31031563.5	749.52	75050529828
+C2	C2_KDExp	RNAi Control	LacZ	hydroxyglutarate	10	31031563.5	749.52	75050529828
+C3	C3_KDExp	RNAi Control	LacZ	hydroxyglutarate	5	20858804.5	749.36	77514488408
+C3	C3_KDExp	RNAi Control	LacZ	hydroxyglutarate	10	20858804.5	749.36	77514488408
+C4	C4_KDExp	RNAi Control	LacZ	hydroxyglutarate	5	27673621.0	749.38	77283810937
+C4	C4_KDExp	RNAi Control	LacZ	hydroxyglutarate	10	27673621.0	749.38	77283810937
+C5	C5_KDExp	RNAi Control	LacZ	hydroxyglutarate	5	23685953.3	749.76	78148198625
+C5	C5_KDExp	RNAi Control	LacZ	hydroxyglutarate	10	23685953.3	749.76	78148198625
+D1	D1_KDExp	Wwox RNAi	LacZ	hydroxyglutarate	5	18277614.7	749.85	76823195347
+D1	D1_KDExp	Wwox RNAi	LacZ	hydroxyglutarate	10	18277614.7	749.85	76823195347
+D2	D2_KDExp	Wwox RNAi	LacZ	hydroxyglutarate	5	26715102.9	750.32	77616845301
+D2	D2_KDExp	Wwox RNAi	LacZ	hydroxyglutarate	10	26715102.9	750.32	77616845301
+D3	D3_KDExp	Wwox RNAi	LacZ	hydroxyglutarate	5	33383246.4	749.85	75045955676
+D3	D3_KDExp	Wwox RNAi	LacZ	hydroxyglutarate	10	33383246.4	749.85	75045955676
+D4	D4_KDExp	Wwox RNAi	LacZ	hydroxyglutarate	5	48395956.4	750.55	78252486569
+D4	D4_KDExp	Wwox RNAi	LacZ	hydroxyglutarate	10	48395956.4	750.55	78252486569
+D5	D5_KDExp	Wwox RNAi	LacZ	hydroxyglutarate	5	26552307.9	750.86	75259658073
+D5	D5_KDExp	Wwox RNAi	LacZ	hydroxyglutarate	10	26552307.9	750.86	75259658073
+G1	G1_KDExp	RNAi Control	AB42	hydroxyglutarate	5	38810097.7	749.79	77636841683
+G1	G1_KDExp	RNAi Control	AB42	hydroxyglutarate	10	38810097.7	749.79	77636841683
+G2	G2_KDExp	RNAi Control	AB42	hydroxyglutarate	5	43419262.9	750.23	74321981717
+G2	G2_KDExp	RNAi Control	AB42	hydroxyglutarate	10	43419262.9	750.23	74321981717
+G3	G3_KDExp	RNAi Control	AB42	hydroxyglutarate	5	53116211.6	749.98	79485462450
+G3	G3_KDExp	RNAi Control	AB42	hydroxyglutarate	10	53116211.6	749.98	79485462450
+G4	G4_KDExp	RNAi Control	AB42	hydroxyglutarate	5	39324459.6	750.84	75504738608
+G4	G4_KDExp	RNAi Control	AB42	hydroxyglutarate	10	39324459.6	750.84	75504738608
+G5	G5_KDExp	RNAi Control	AB42	hydroxyglutarate	5	49129030.4	749.33	78569703194
+G5	G5_KDExp	RNAi Control	AB42	hydroxyglutarate	10	49129030.4	749.33	78569703194
+H1	H1_KDExp	Wwox RNAi	AB42	hydroxyglutarate	5	70772815.6	750.72	75919573450
+H1	H1_KDExp	Wwox RNAi	AB42	hydroxyglutarate	10	70772815.6	750.72	75919573450
+H2	H2_KDExp	Wwox RNAi	AB42	hydroxyglutarate	5	132020169.4	750.53	78001196696
+H2	H2_KDExp	Wwox RNAi	AB42	hydroxyglutarate	10	132020169.4	750.53	78001196696
+H3	H3_KDExp	Wwox RNAi	AB42	hydroxyglutarate	5	93275769.7	750.02	76278124731
+H3	H3_KDExp	Wwox RNAi	AB42	hydroxyglutarate	10	93275769.7	750.02	76278124731
+H4	H4_KDExp	Wwox RNAi	AB42	hydroxyglutarate	5	89651988.5	750.52	79443297885
+H4	H4_KDExp	Wwox RNAi	AB42	hydroxyglutarate	10	89651988.5	750.52	79443297885
+H5	H5_KDExp	Wwox RNAi	AB42	hydroxyglutarate	5	56553736.6	749.74	74207473206
+H5	H5_KDExp	Wwox RNAi	AB42	hydroxyglutarate	10	56553736.6	749.74	74207473206
+I1	I1_OEExp	Control gRNA	LacZ	hydroxyglutarate	5	25634644.1	750.97	74382645183
+I1	I1_OEExp	Control gRNA	LacZ	hydroxyglutarate	10	25634644.1	750.97	74382645183
+I2	I2_OEExp	Control gRNA	LacZ	hydroxyglutarate	5	27892150.4	750.32	66652024118
+I2	I2_OEExp	Control gRNA	LacZ	hydroxyglutarate	10	27892150.4	750.32	66652024118
+I3	I3_OEExp	Control gRNA	LacZ	hydroxyglutarate	5	23442164.0	749.82	66557132626
+I3	I3_OEExp	Control gRNA	LacZ	hydroxyglutarate	10	23442164.0	749.82	66557132626
+I4	I4_OEExp	Control gRNA	LacZ	hydroxyglutarate	5	53343130.3	750.01	73224921914
+I4	I4_OEExp	Control gRNA	LacZ	hydroxyglutarate	10	53343130.3	750.01	73224921914
+I5	I5_OEExp	Control gRNA	LacZ	hydroxyglutarate	5	36368798.1	750.65	83394468956
+I5	I5_OEExp	Control gRNA	LacZ	hydroxyglutarate	10	36368798.1	750.65	83394468956
+J1	J1_OEExp	Wwox gRNA	LacZ	hydroxyglutarate	5	28156842.6	750.23	66156998187
+J1	J1_OEExp	Wwox gRNA	LacZ	hydroxyglutarate	10	28156842.6	750.23	66156998187
+J2	J2_OEExp	Wwox gRNA	LacZ	hydroxyglutarate	5	34109913.5	750.39	69356998249
+J2	J2_OEExp	Wwox gRNA	LacZ	hydroxyglutarate	10	34109913.5	750.39	69356998249
+J3	J3_OEExp	Wwox gRNA	LacZ	hydroxyglutarate	5	23932548.8	750.57	70939688012
+J3	J3_OEExp	Wwox gRNA	LacZ	hydroxyglutarate	10	23932548.8	750.57	70939688012
+J4	J4_OEExp	Wwox gRNA	LacZ	hydroxyglutarate	5	30801946.5	750.15	67533335357
+J4	J4_OEExp	Wwox gRNA	LacZ	hydroxyglutarate	10	30801946.5	750.15	67533335357
+J5	J5_OEExp	Wwox gRNA	LacZ	hydroxyglutarate	5	24759886.3	750.31	72977783165
+J5	J5_OEExp	Wwox gRNA	LacZ	hydroxyglutarate	10	24759886.3	750.31	72977783165
+K1	K1_OEExp	Control gRNA	AB42	hydroxyglutarate	5	51775105.0	749.18	74246380220
+K1	K1_OEExp	Control gRNA	AB42	hydroxyglutarate	10	51775105.0	749.18	74246380220
+K2	K2_OEExp	Control gRNA	AB42	hydroxyglutarate	5	59968953.0	750.02	65264738495
+K2	K2_OEExp	Control gRNA	AB42	hydroxyglutarate	10	59968953.0	750.02	65264738495
+K3	K3_OEExp	Control gRNA	AB42	hydroxyglutarate	5	52199275.2	750.43	70106919060
+K3	K3_OEExp	Control gRNA	AB42	hydroxyglutarate	10	52199275.2	750.43	70106919060
+K4	K4_OEExp	Control gRNA	AB42	hydroxyglutarate	5	62693608.5	750.85	69485749776
+K4	K4_OEExp	Control gRNA	AB42	hydroxyglutarate	10	62693608.5	750.85	69485749776
+K5	K5_OEExp	Control gRNA	AB42	hydroxyglutarate	5	49434971.2	750.30	85528412434
+K5	K5_OEExp	Control gRNA	AB42	hydroxyglutarate	10	49434971.2	750.30	85528412434
+L1	L1_OEExp	Wwox gRNA	AB42	hydroxyglutarate	5	82597458.6	750.37	73054612432
+L1	L1_OEExp	Wwox gRNA	AB42	hydroxyglutarate	10	82597458.6	750.37	73054612432
+L2	L2_OEExp	Wwox gRNA	AB42	hydroxyglutarate	5	44645347.8	750.06	69020431450
+L2	L2_OEExp	Wwox gRNA	AB42	hydroxyglutarate	10	44645347.8	750.06	69020431450
+L3	L3_OEExp	Wwox gRNA	AB42	hydroxyglutarate	5	80817691.3	750.40	70289160915
+L3	L3_OEExp	Wwox gRNA	AB42	hydroxyglutarate	10	80817691.3	750.40	70289160915
+L4	L4_OEExp	Wwox gRNA	AB42	hydroxyglutarate	5	131575049.4	750.05	71324975699
+L4	L4_OEExp	Wwox gRNA	AB42	hydroxyglutarate	10	131575049.4	750.05	71324975699
+L5	L5_OEExp	Wwox gRNA	AB42	hydroxyglutarate	5	93507839.1	750.00	80716298575
+L5	L5_OEExp	Wwox gRNA	AB42	hydroxyglutarate	10	93507839.1	750.00	80716298575
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	hydroxyglutarate	5	644051.5	750.00	79135534226
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	hydroxyglutarate	10	644051.5	750.00	79135534226
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	hydroxyglutarate	5	1044067.3	750.00	79014597867
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	hydroxyglutarate	10	1044067.3	750.00	79014597867
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	hydroxyglutarate	5	1026344.2	750.00	79262381295
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	hydroxyglutarate	10	1026344.2	750.00	79262381295
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	hydroxyglutarate	5	1153913.8	750.00	71286131064
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	hydroxyglutarate	10	1153913.8	750.00	71286131064
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	hydroxyglutarate	5	1445139.1	750.00	69880950563
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	hydroxyglutarate	10	1445139.1	750.00	69880950563
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	hydroxyglutarate	5	1518926.5	750.00	69859142672
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	hydroxyglutarate	10	1518926.5	750.00	69859142672
+pooled_10	Pool1_4	Not Applicable	Not Applicable	hydroxyglutarate	5	54361404.1	750.88	77853943855
+pooled_10	Pool1_4	Not Applicable	Not Applicable	hydroxyglutarate	10	54361404.1	750.88	77853943855
+pooled_11	Pool1_5	Not Applicable	Not Applicable	hydroxyglutarate	5	51076426.2	749.93	77988498071
+pooled_11	Pool1_5	Not Applicable	Not Applicable	hydroxyglutarate	10	51076426.2	749.93	77988498071
+pooled_12	Pool1_6	Not Applicable	Not Applicable	hydroxyglutarate	5	51325814.0	749.72	73866613161
+pooled_12	Pool1_6	Not Applicable	Not Applicable	hydroxyglutarate	10	51325814.0	749.72	73866613161
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	hydroxyglutarate	5	51981101.5	750.38	75589662197
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	hydroxyglutarate	10	51981101.5	750.38	75589662197
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	hydroxyglutarate	5	47688547.6	749.52	74553266127
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	hydroxyglutarate	10	47688547.6	749.52	74553266127
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	hydroxyglutarate	5	46773213.8	749.32	70825764115
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	hydroxyglutarate	10	46773213.8	749.32	70825764115
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	hydroxyglutarate	5	48447012.4	750.71	68396261652
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	hydroxyglutarate	10	48447012.4	750.71	68396261652
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	hydroxyglutarate	5	48726557.1	750.42	66909828861
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	hydroxyglutarate	10	48726557.1	750.42	66909828861
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	hydroxyglutarate	5	48311275.0	750.52	67722142626
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	hydroxyglutarate	10	48311275.0	750.52	67722142626
+pooled_7	Pool1_1	Not Applicable	Not Applicable	hydroxyglutarate	5	51838562.3	749.90	80035784138
+pooled_7	Pool1_1	Not Applicable	Not Applicable	hydroxyglutarate	10	51838562.3	749.90	80035784138
+pooled_8	Pool1_2	Not Applicable	Not Applicable	hydroxyglutarate	5	51749530.7	750.62	78589705479
+pooled_8	Pool1_2	Not Applicable	Not Applicable	hydroxyglutarate	10	51749530.7	750.62	78589705479
+pooled_9	Pool1_3	Not Applicable	Not Applicable	hydroxyglutarate	5	55299296.7	750.40	79404787529
+pooled_9	Pool1_3	Not Applicable	Not Applicable	hydroxyglutarate	10	55299296.7	750.40	79404787529
+C1	C1_KDExp	RNAi Control	LacZ	citrate	5	99567188.0	840.23	78587375507
+C1	C1_KDExp	RNAi Control	LacZ	citrate	10	99567188.0	840.23	78587375507
+C2	C2_KDExp	RNAi Control	LacZ	citrate	5	95330775.2	840.49	75050529828
+C2	C2_KDExp	RNAi Control	LacZ	citrate	10	95330775.2	840.49	75050529828
+C3	C3_KDExp	RNAi Control	LacZ	citrate	5	72559070.7	840.33	77514488408
+C3	C3_KDExp	RNAi Control	LacZ	citrate	10	72559070.7	840.33	77514488408
+C4	C4_KDExp	RNAi Control	LacZ	citrate	5	78211851.3	841.68	77283810937
+C4	C4_KDExp	RNAi Control	LacZ	citrate	10	78211851.3	841.68	77283810937
+C5	C5_KDExp	RNAi Control	LacZ	citrate	5	68467108.1	840.22	78148198625
+C5	C5_KDExp	RNAi Control	LacZ	citrate	10	68467108.1	840.22	78148198625
+D1	D1_KDExp	Wwox RNAi	LacZ	citrate	5	45965580.3	840.49	76823195347
+D1	D1_KDExp	Wwox RNAi	LacZ	citrate	10	45965580.3	840.49	76823195347
+D2	D2_KDExp	Wwox RNAi	LacZ	citrate	5	65524456.9	840.02	77616845301
+D2	D2_KDExp	Wwox RNAi	LacZ	citrate	10	65524456.9	840.02	77616845301
+D3	D3_KDExp	Wwox RNAi	LacZ	citrate	5	66041374.3	841.01	75045955676
+D3	D3_KDExp	Wwox RNAi	LacZ	citrate	10	66041374.3	841.01	75045955676
+D4	D4_KDExp	Wwox RNAi	LacZ	citrate	5	79062323.3	841.45	78252486569
+D4	D4_KDExp	Wwox RNAi	LacZ	citrate	10	79062323.3	841.45	78252486569
+D5	D5_KDExp	Wwox RNAi	LacZ	citrate	5	56657618.2	840.67	75259658073
+D5	D5_KDExp	Wwox RNAi	LacZ	citrate	10	56657618.2	840.67	75259658073
+G1	G1_KDExp	RNAi Control	AB42	citrate	5	78356104.0	840.74	77636841683
+G1	G1_KDExp	RNAi Control	AB42	citrate	10	78356104.0	840.74	77636841683
+G2	G2_KDExp	RNAi Control	AB42	citrate	5	70873893.3	840.94	74321981717
+G2	G2_KDExp	RNAi Control	AB42	citrate	10	70873893.3	840.94	74321981717
+G3	G3_KDExp	RNAi Control	AB42	citrate	5	104696032.7	840.25	79485462450
+G3	G3_KDExp	RNAi Control	AB42	citrate	10	104696032.7	840.25	79485462450
+G4	G4_KDExp	RNAi Control	AB42	citrate	5	103610304.5	840.11	75504738608
+G4	G4_KDExp	RNAi Control	AB42	citrate	10	103610304.5	840.11	75504738608
+G5	G5_KDExp	RNAi Control	AB42	citrate	5	93956557.5	840.97	78569703194
+G5	G5_KDExp	RNAi Control	AB42	citrate	10	93956557.5	840.97	78569703194
+H1	H1_KDExp	Wwox RNAi	AB42	citrate	5	66251610.5	840.34	75919573450
+H1	H1_KDExp	Wwox RNAi	AB42	citrate	10	66251610.5	840.34	75919573450
+H2	H2_KDExp	Wwox RNAi	AB42	citrate	5	95835246.6	841.50	78001196696
+H2	H2_KDExp	Wwox RNAi	AB42	citrate	10	95835246.6	841.50	78001196696
+H3	H3_KDExp	Wwox RNAi	AB42	citrate	5	100805762.6	840.77	76278124731
+H3	H3_KDExp	Wwox RNAi	AB42	citrate	10	100805762.6	840.77	76278124731
+H4	H4_KDExp	Wwox RNAi	AB42	citrate	5	66198340.3	839.93	79443297885
+H4	H4_KDExp	Wwox RNAi	AB42	citrate	10	66198340.3	839.93	79443297885
+H5	H5_KDExp	Wwox RNAi	AB42	citrate	5	63831934.5	840.62	74207473206
+H5	H5_KDExp	Wwox RNAi	AB42	citrate	10	63831934.5	840.62	74207473206
+I1	I1_OEExp	Control gRNA	LacZ	citrate	5	55628388.4	840.95	74382645183
+I1	I1_OEExp	Control gRNA	LacZ	citrate	10	55628388.4	840.95	74382645183
+I2	I2_OEExp	Control gRNA	LacZ	citrate	5	58205420.7	842.02	66652024118
+I2	I2_OEExp	Control gRNA	LacZ	citrate	10	58205420.7	842.02	66652024118
+I3	I3_OEExp	Control gRNA	LacZ	citrate	5	57618151.6	841.79	66557132626
+I3	I3_OEExp	Control gRNA	LacZ	citrate	10	57618151.6	841.79	66557132626
+I4	I4_OEExp	Control gRNA	LacZ	citrate	5	61268832.7	840.66	73224921914
+I4	I4_OEExp	Control gRNA	LacZ	citrate	10	61268832.7	840.66	73224921914
+I5	I5_OEExp	Control gRNA	LacZ	citrate	5	71189912.3	841.06	83394468956
+I5	I5_OEExp	Control gRNA	LacZ	citrate	10	71189912.3	841.06	83394468956
+J1	J1_OEExp	Wwox gRNA	LacZ	citrate	5	44432255.3	840.58	66156998187
+J1	J1_OEExp	Wwox gRNA	LacZ	citrate	10	44432255.3	840.58	66156998187
+J2	J2_OEExp	Wwox gRNA	LacZ	citrate	5	46466232.4	840.53	69356998249
+J2	J2_OEExp	Wwox gRNA	LacZ	citrate	10	46466232.4	840.53	69356998249
+J3	J3_OEExp	Wwox gRNA	LacZ	citrate	5	35852232.4	840.65	70939688012
+J3	J3_OEExp	Wwox gRNA	LacZ	citrate	10	35852232.4	840.65	70939688012
+J4	J4_OEExp	Wwox gRNA	LacZ	citrate	5	40866536.3	841.55	67533335357
+J4	J4_OEExp	Wwox gRNA	LacZ	citrate	10	40866536.3	841.55	67533335357
+J5	J5_OEExp	Wwox gRNA	LacZ	citrate	5	37454189.3	840.98	72977783165
+J5	J5_OEExp	Wwox gRNA	LacZ	citrate	10	37454189.3	840.98	72977783165
+K1	K1_OEExp	Control gRNA	AB42	citrate	5	76046598.3	840.82	74246380220
+K1	K1_OEExp	Control gRNA	AB42	citrate	10	76046598.3	840.82	74246380220
+K2	K2_OEExp	Control gRNA	AB42	citrate	5	64827105.8	841.77	65264738495
+K2	K2_OEExp	Control gRNA	AB42	citrate	10	64827105.8	841.77	65264738495
+K3	K3_OEExp	Control gRNA	AB42	citrate	5	69194180.2	840.95	70106919060
+K3	K3_OEExp	Control gRNA	AB42	citrate	10	69194180.2	840.95	70106919060
+K4	K4_OEExp	Control gRNA	AB42	citrate	5	64844770.5	840.65	69485749776
+K4	K4_OEExp	Control gRNA	AB42	citrate	10	64844770.5	840.65	69485749776
+K5	K5_OEExp	Control gRNA	AB42	citrate	5	33568847.6	840.53	85528412434
+K5	K5_OEExp	Control gRNA	AB42	citrate	10	33568847.6	840.53	85528412434
+L1	L1_OEExp	Wwox gRNA	AB42	citrate	5	88409212.5	840.13	73054612432
+L1	L1_OEExp	Wwox gRNA	AB42	citrate	10	88409212.5	840.13	73054612432
+L2	L2_OEExp	Wwox gRNA	AB42	citrate	5	68511356.4	840.72	69020431450
+L2	L2_OEExp	Wwox gRNA	AB42	citrate	10	68511356.4	840.72	69020431450
+L3	L3_OEExp	Wwox gRNA	AB42	citrate	5	79865043.4	840.52	70289160915
+L3	L3_OEExp	Wwox gRNA	AB42	citrate	10	79865043.4	840.52	70289160915
+L4	L4_OEExp	Wwox gRNA	AB42	citrate	5	93769608.2	840.22	71324975699
+L4	L4_OEExp	Wwox gRNA	AB42	citrate	10	93769608.2	840.22	71324975699
+L5	L5_OEExp	Wwox gRNA	AB42	citrate	5	76924863.8	840.41	80716298575
+L5	L5_OEExp	Wwox gRNA	AB42	citrate	10	76924863.8	840.41	80716298575
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	citrate	5	8709.5	841.00	79135534226
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	citrate	10	8709.5	841.00	79135534226
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	citrate	5	37686.4	841.00	79014597867
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	citrate	10	37686.4	841.00	79014597867
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	citrate	5	29989.5	841.00	79262381295
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	citrate	10	29989.5	841.00	79262381295
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	citrate	5	586739.7	841.00	71286131064
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	citrate	10	586739.7	841.00	71286131064
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	citrate	5	487452.1	841.00	69880950563
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	citrate	10	487452.1	841.00	69880950563
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	citrate	5	568940.6	841.00	69859142672
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	citrate	10	568940.6	841.00	69859142672
+pooled_10	Pool1_4	Not Applicable	Not Applicable	citrate	5	59754205.3	841.61	77853943855
+pooled_10	Pool1_4	Not Applicable	Not Applicable	citrate	10	59754205.3	841.61	77853943855
+pooled_11	Pool1_5	Not Applicable	Not Applicable	citrate	5	62419213.2	840.99	77988498071
+pooled_11	Pool1_5	Not Applicable	Not Applicable	citrate	10	62419213.2	840.99	77988498071
+pooled_12	Pool1_6	Not Applicable	Not Applicable	citrate	5	66962065.7	840.32	73866613161
+pooled_12	Pool1_6	Not Applicable	Not Applicable	citrate	10	66962065.7	840.32	73866613161
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	citrate	5	80309143.7	840.82	75589662197
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	citrate	10	80309143.7	840.82	75589662197
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	citrate	5	65914803.5	840.22	74553266127
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	citrate	10	65914803.5	840.22	74553266127
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	citrate	5	80076647.5	840.18	70825764115
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	citrate	10	80076647.5	840.18	70825764115
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	citrate	5	73816595.1	840.77	68396261652
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	citrate	10	73816595.1	840.77	68396261652
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	citrate	5	68022620.6	842.01	66909828861
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	citrate	10	68022620.6	842.01	66909828861
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	citrate	5	76560889.2	840.72	67722142626
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	citrate	10	76560889.2	840.72	67722142626
+pooled_7	Pool1_1	Not Applicable	Not Applicable	citrate	5	60295621.1	840.52	80035784138
+pooled_7	Pool1_1	Not Applicable	Not Applicable	citrate	10	60295621.1	840.52	80035784138
+pooled_8	Pool1_2	Not Applicable	Not Applicable	citrate	5	57749696.1	840.89	78589705479
+pooled_8	Pool1_2	Not Applicable	Not Applicable	citrate	10	57749696.1	840.89	78589705479
+pooled_9	Pool1_3	Not Applicable	Not Applicable	citrate	5	63979943.7	841.01	79404787529
+pooled_9	Pool1_3	Not Applicable	Not Applicable	citrate	10	63979943.7	841.01	79404787529
+C1	C1_KDExp	RNAi Control	LacZ	itaconate	5	3354336.4	747.78	78587375507
+C1	C1_KDExp	RNAi Control	LacZ	itaconate	10	3354336.4	747.78	78587375507
+C2	C2_KDExp	RNAi Control	LacZ	itaconate	5	3523424.9	750.77	75050529828
+C2	C2_KDExp	RNAi Control	LacZ	itaconate	10	3523424.9	750.77	75050529828
+C3	C3_KDExp	RNAi Control	LacZ	itaconate	5	2193087.9	749.36	77514488408
+C3	C3_KDExp	RNAi Control	LacZ	itaconate	10	2193087.9	749.36	77514488408
+C4	C4_KDExp	RNAi Control	LacZ	itaconate	5	3205018.4	750.63	77283810937
+C4	C4_KDExp	RNAi Control	LacZ	itaconate	10	3205018.4	750.63	77283810937
+C5	C5_KDExp	RNAi Control	LacZ	itaconate	5	3063146.9	749.76	78148198625
+C5	C5_KDExp	RNAi Control	LacZ	itaconate	10	3063146.9	749.76	78148198625
+D1	D1_KDExp	Wwox RNAi	LacZ	itaconate	5	2117299.7	748.59	76823195347
+D1	D1_KDExp	Wwox RNAi	LacZ	itaconate	10	2117299.7	748.59	76823195347
+D2	D2_KDExp	Wwox RNAi	LacZ	itaconate	5	1915487.9	746.57	77616845301
+D2	D2_KDExp	Wwox RNAi	LacZ	itaconate	10	1915487.9	746.57	77616845301
+D3	D3_KDExp	Wwox RNAi	LacZ	itaconate	5	3942689.0	748.60	75045955676
+D3	D3_KDExp	Wwox RNAi	LacZ	itaconate	10	3942689.0	748.60	75045955676
+D4	D4_KDExp	Wwox RNAi	LacZ	itaconate	5	4496644.0	750.55	78252486569
+D4	D4_KDExp	Wwox RNAi	LacZ	itaconate	10	4496644.0	750.55	78252486569
+D5	D5_KDExp	Wwox RNAi	LacZ	itaconate	5	2721187.5	746.91	75259658073
+D5	D5_KDExp	Wwox RNAi	LacZ	itaconate	10	2721187.5	746.91	75259658073
+G1	G1_KDExp	RNAi Control	AB42	itaconate	5	3796027.9	749.79	77636841683
+G1	G1_KDExp	RNAi Control	AB42	itaconate	10	3796027.9	749.79	77636841683
+G2	G2_KDExp	RNAi Control	AB42	itaconate	5	4090946.7	750.23	74321981717
+G2	G2_KDExp	RNAi Control	AB42	itaconate	10	4090946.7	750.23	74321981717
+G3	G3_KDExp	RNAi Control	AB42	itaconate	5	4927609.4	748.73	79485462450
+G3	G3_KDExp	RNAi Control	AB42	itaconate	10	4927609.4	748.73	79485462450
+G4	G4_KDExp	RNAi Control	AB42	itaconate	5	4305073.1	750.84	75504738608
+G4	G4_KDExp	RNAi Control	AB42	itaconate	10	4305073.1	750.84	75504738608
+G5	G5_KDExp	RNAi Control	AB42	itaconate	5	4737442.2	749.33	78569703194
+G5	G5_KDExp	RNAi Control	AB42	itaconate	10	4737442.2	749.33	78569703194
+H1	H1_KDExp	Wwox RNAi	AB42	itaconate	5	5870399.9	751.97	75919573450
+H1	H1_KDExp	Wwox RNAi	AB42	itaconate	10	5870399.9	751.97	75919573450
+H2	H2_KDExp	Wwox RNAi	AB42	itaconate	5	12574637.4	750.53	78001196696
+H2	H2_KDExp	Wwox RNAi	AB42	itaconate	10	12574637.4	750.53	78001196696
+H3	H3_KDExp	Wwox RNAi	AB42	itaconate	5	9354247.0	751.45	76278124731
+H3	H3_KDExp	Wwox RNAi	AB42	itaconate	10	9354247.0	751.45	76278124731
+H4	H4_KDExp	Wwox RNAi	AB42	itaconate	5	7266224.4	749.28	79443297885
+H4	H4_KDExp	Wwox RNAi	AB42	itaconate	10	7266224.4	749.28	79443297885
+H5	H5_KDExp	Wwox RNAi	AB42	itaconate	5	5462711.7	751.00	74207473206
+H5	H5_KDExp	Wwox RNAi	AB42	itaconate	10	5462711.7	751.00	74207473206
+I1	I1_OEExp	Control gRNA	LacZ	itaconate	5	3026862.1	749.72	74382645183
+I1	I1_OEExp	Control gRNA	LacZ	itaconate	10	3026862.1	749.72	74382645183
+I2	I2_OEExp	Control gRNA	LacZ	itaconate	5	3084772.6	751.57	66652024118
+I2	I2_OEExp	Control gRNA	LacZ	itaconate	10	3084772.6	751.57	66652024118
+I3	I3_OEExp	Control gRNA	LacZ	itaconate	5	3248324.4	751.26	66557132626
+I3	I3_OEExp	Control gRNA	LacZ	itaconate	10	3248324.4	751.26	66557132626
+I4	I4_OEExp	Control gRNA	LacZ	itaconate	5	5082199.7	750.01	73224921914
+I4	I4_OEExp	Control gRNA	LacZ	itaconate	10	5082199.7	750.01	73224921914
+I5	I5_OEExp	Control gRNA	LacZ	itaconate	5	4626800.7	749.40	83394468956
+I5	I5_OEExp	Control gRNA	LacZ	itaconate	10	4626800.7	749.40	83394468956
+J1	J1_OEExp	Wwox gRNA	LacZ	itaconate	5	3292260.5	750.23	66156998187
+J1	J1_OEExp	Wwox gRNA	LacZ	itaconate	10	3292260.5	750.23	66156998187
+J2	J2_OEExp	Wwox gRNA	LacZ	itaconate	5	4402586.2	750.39	69356998249
+J2	J2_OEExp	Wwox gRNA	LacZ	itaconate	10	4402586.2	750.39	69356998249
+J3	J3_OEExp	Wwox gRNA	LacZ	itaconate	5	2852257.3	748.06	70939688012
+J3	J3_OEExp	Wwox gRNA	LacZ	itaconate	10	2852257.3	748.06	70939688012
+J4	J4_OEExp	Wwox gRNA	LacZ	itaconate	5	3701508.5	748.90	67533335357
+J4	J4_OEExp	Wwox gRNA	LacZ	itaconate	10	3701508.5	748.90	67533335357
+J5	J5_OEExp	Wwox gRNA	LacZ	itaconate	5	3251728.0	749.05	72977783165
+J5	J5_OEExp	Wwox gRNA	LacZ	itaconate	10	3251728.0	749.05	72977783165
+K1	K1_OEExp	Control gRNA	AB42	itaconate	5	5306787.5	749.18	74246380220
+K1	K1_OEExp	Control gRNA	AB42	itaconate	10	5306787.5	749.18	74246380220
+K2	K2_OEExp	Control gRNA	AB42	itaconate	5	6632302.4	750.02	65264738495
+K2	K2_OEExp	Control gRNA	AB42	itaconate	10	6632302.4	750.02	65264738495
+K3	K3_OEExp	Control gRNA	AB42	itaconate	5	5306665.6	750.43	70106919060
+K3	K3_OEExp	Control gRNA	AB42	itaconate	10	5306665.6	750.43	70106919060
+K4	K4_OEExp	Control gRNA	AB42	itaconate	5	6215006.0	750.85	69485749776
+K4	K4_OEExp	Control gRNA	AB42	itaconate	10	6215006.0	750.85	69485749776
+K5	K5_OEExp	Control gRNA	AB42	itaconate	5	5549184.2	750.30	85528412434
+K5	K5_OEExp	Control gRNA	AB42	itaconate	10	5549184.2	750.30	85528412434
+L1	L1_OEExp	Wwox gRNA	AB42	itaconate	5	7815645.3	750.37	73054612432
+L1	L1_OEExp	Wwox gRNA	AB42	itaconate	10	7815645.3	750.37	73054612432
+L2	L2_OEExp	Wwox gRNA	AB42	itaconate	5	4145117.6	748.80	69020431450
+L2	L2_OEExp	Wwox gRNA	AB42	itaconate	10	4145117.6	748.80	69020431450
+L3	L3_OEExp	Wwox gRNA	AB42	itaconate	5	7678288.3	750.40	70289160915
+L3	L3_OEExp	Wwox gRNA	AB42	itaconate	10	7678288.3	750.40	70289160915
+L4	L4_OEExp	Wwox gRNA	AB42	itaconate	5	12578475.1	750.05	71324975699
+L4	L4_OEExp	Wwox gRNA	AB42	itaconate	10	12578475.1	750.05	71324975699
+L5	L5_OEExp	Wwox gRNA	AB42	itaconate	5	9172107.8	751.30	80716298575
+L5	L5_OEExp	Wwox gRNA	AB42	itaconate	10	9172107.8	751.30	80716298575
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	itaconate	5	189649.8	750.00	79135534226
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	itaconate	10	189649.8	750.00	79135534226
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	itaconate	5	487744.5	750.00	79014597867
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	itaconate	10	487744.5	750.00	79014597867
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	itaconate	5	74014.8	750.00	79262381295
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	itaconate	10	74014.8	750.00	79262381295
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	itaconate	5	87373.5	750.00	71286131064
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	itaconate	10	87373.5	750.00	71286131064
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	itaconate	5	42265.1	750.00	69880950563
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	itaconate	10	42265.1	750.00	69880950563
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	itaconate	5	96379.1	750.00	69859142672
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	itaconate	10	96379.1	750.00	69859142672
+pooled_10	Pool1_4	Not Applicable	Not Applicable	itaconate	5	5897303.8	749.63	77853943855
+pooled_10	Pool1_4	Not Applicable	Not Applicable	itaconate	10	5897303.8	749.63	77853943855
+pooled_11	Pool1_5	Not Applicable	Not Applicable	itaconate	5	5113831.6	751.23	77988498071
+pooled_11	Pool1_5	Not Applicable	Not Applicable	itaconate	10	5113831.6	751.23	77988498071
+pooled_12	Pool1_6	Not Applicable	Not Applicable	itaconate	5	5375143.3	749.72	73866613161
+pooled_12	Pool1_6	Not Applicable	Not Applicable	itaconate	10	5375143.3	749.72	73866613161
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	itaconate	5	4691014.6	750.38	75589662197
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	itaconate	10	4691014.6	750.38	75589662197
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	itaconate	5	4754588.4	750.78	74553266127
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	itaconate	10	4754588.4	750.78	74553266127
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	itaconate	5	4181591.5	750.57	70825764115
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	itaconate	10	4181591.5	750.57	70825764115
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	itaconate	5	4658511.3	748.21	68396261652
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	itaconate	10	4658511.3	748.21	68396261652
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	itaconate	5	4457986.0	750.42	66909828861
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	itaconate	10	4457986.0	750.42	66909828861
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	itaconate	5	4920323.8	750.52	67722142626
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	itaconate	10	4920323.8	750.52	67722142626
+pooled_7	Pool1_1	Not Applicable	Not Applicable	itaconate	5	4753216.0	748.64	80035784138
+pooled_7	Pool1_1	Not Applicable	Not Applicable	itaconate	10	4753216.0	748.64	80035784138
+pooled_8	Pool1_2	Not Applicable	Not Applicable	itaconate	5	5769668.2	749.37	78589705479
+pooled_8	Pool1_2	Not Applicable	Not Applicable	itaconate	10	5769668.2	749.37	78589705479
+pooled_9	Pool1_3	Not Applicable	Not Applicable	itaconate	5	5105223.6	749.15	79404787529
+pooled_9	Pool1_3	Not Applicable	Not Applicable	itaconate	10	5105223.6	749.15	79404787529
+C1	C1_KDExp	RNAi Control	LacZ	lysine	5	14473998.2	1091.42	78587375507
+C1	C1_KDExp	RNAi Control	LacZ	lysine	10	14473998.2	1091.42	78587375507
+C2	C2_KDExp	RNAi Control	LacZ	lysine	5	16821406.9	1091.80	75050529828
+C2	C2_KDExp	RNAi Control	LacZ	lysine	10	16821406.9	1091.80	75050529828
+C3	C3_KDExp	RNAi Control	LacZ	lysine	5	9128981.2	1092.98	77514488408
+C3	C3_KDExp	RNAi Control	LacZ	lysine	10	9128981.2	1092.98	77514488408
+C4	C4_KDExp	RNAi Control	LacZ	lysine	5	14898987.0	1093.35	77283810937
+C4	C4_KDExp	RNAi Control	LacZ	lysine	10	14898987.0	1093.35	77283810937
+C5	C5_KDExp	RNAi Control	LacZ	lysine	5	12075224.8	1092.12	78148198625
+C5	C5_KDExp	RNAi Control	LacZ	lysine	10	12075224.8	1092.12	78148198625
+D1	D1_KDExp	Wwox RNAi	LacZ	lysine	5	3599139.7	1094.95	76823195347
+D1	D1_KDExp	Wwox RNAi	LacZ	lysine	10	3599139.7	1094.95	76823195347
+D2	D2_KDExp	Wwox RNAi	LacZ	lysine	5	9862103.8	1091.51	77616845301
+D2	D2_KDExp	Wwox RNAi	LacZ	lysine	10	9862103.8	1091.51	77616845301
+D3	D3_KDExp	Wwox RNAi	LacZ	lysine	5	7831031.3	1093.80	75045955676
+D3	D3_KDExp	Wwox RNAi	LacZ	lysine	10	7831031.3	1093.80	75045955676
+D4	D4_KDExp	Wwox RNAi	LacZ	lysine	5	7662155.1	1093.45	78252486569
+D4	D4_KDExp	Wwox RNAi	LacZ	lysine	10	7662155.1	1093.45	78252486569
+D5	D5_KDExp	Wwox RNAi	LacZ	lysine	5	5545871.8	1090.54	75259658073
+D5	D5_KDExp	Wwox RNAi	LacZ	lysine	10	5545871.8	1090.54	75259658073
+G1	G1_KDExp	RNAi Control	AB42	lysine	5	14209518.1	1091.95	77636841683
+G1	G1_KDExp	RNAi Control	AB42	lysine	10	14209518.1	1091.95	77636841683
+G2	G2_KDExp	RNAi Control	AB42	lysine	5	13045805.6	1092.56	74321981717
+G2	G2_KDExp	RNAi Control	AB42	lysine	10	13045805.6	1092.56	74321981717
+G3	G3_KDExp	RNAi Control	AB42	lysine	5	17039856.7	1093.79	79485462450
+G3	G3_KDExp	RNAi Control	AB42	lysine	10	17039856.7	1093.79	79485462450
+G4	G4_KDExp	RNAi Control	AB42	lysine	5	15256697.1	1093.39	75504738608
+G4	G4_KDExp	RNAi Control	AB42	lysine	10	15256697.1	1093.39	75504738608
+G5	G5_KDExp	RNAi Control	AB42	lysine	5	9617383.0	1092.74	78569703194
+G5	G5_KDExp	RNAi Control	AB42	lysine	10	9617383.0	1092.74	78569703194
+H1	H1_KDExp	Wwox RNAi	AB42	lysine	5	4321791.4	1092.10	75919573450
+H1	H1_KDExp	Wwox RNAi	AB42	lysine	10	4321791.4	1092.10	75919573450
+H2	H2_KDExp	Wwox RNAi	AB42	lysine	5	5063240.8	1093.19	78001196696
+H2	H2_KDExp	Wwox RNAi	AB42	lysine	10	5063240.8	1093.19	78001196696
+H3	H3_KDExp	Wwox RNAi	AB42	lysine	5	4886602.5	1090.55	76278124731
+H3	H3_KDExp	Wwox RNAi	AB42	lysine	10	4886602.5	1090.55	76278124731
+H4	H4_KDExp	Wwox RNAi	AB42	lysine	5	4468137.6	1090.96	79443297885
+H4	H4_KDExp	Wwox RNAi	AB42	lysine	10	4468137.6	1090.96	79443297885
+H5	H5_KDExp	Wwox RNAi	AB42	lysine	5	3576007.1	1092.85	74207473206
+H5	H5_KDExp	Wwox RNAi	AB42	lysine	10	3576007.1	1092.85	74207473206
+I1	I1_OEExp	Control gRNA	LacZ	lysine	5	8198764.4	1091.85	74382645183
+I1	I1_OEExp	Control gRNA	LacZ	lysine	10	8198764.4	1091.85	74382645183
+I2	I2_OEExp	Control gRNA	LacZ	lysine	5	8342774.3	1092.60	66652024118
+I2	I2_OEExp	Control gRNA	LacZ	lysine	10	8342774.3	1092.60	66652024118
+I3	I3_OEExp	Control gRNA	LacZ	lysine	5	7292876.4	1094.04	66557132626
+I3	I3_OEExp	Control gRNA	LacZ	lysine	10	7292876.4	1094.04	66557132626
+I4	I4_OEExp	Control gRNA	LacZ	lysine	5	8907418.2	1091.95	73224921914
+I4	I4_OEExp	Control gRNA	LacZ	lysine	10	8907418.2	1091.95	73224921914
+I5	I5_OEExp	Control gRNA	LacZ	lysine	5	9309245.6	1094.16	83394468956
+I5	I5_OEExp	Control gRNA	LacZ	lysine	10	9309245.6	1094.16	83394468956
+J1	J1_OEExp	Wwox gRNA	LacZ	lysine	5	3947740.1	1091.95	66156998187
+J1	J1_OEExp	Wwox gRNA	LacZ	lysine	10	3947740.1	1091.95	66156998187
+J2	J2_OEExp	Wwox gRNA	LacZ	lysine	5	6029648.0	1090.01	69356998249
+J2	J2_OEExp	Wwox gRNA	LacZ	lysine	10	6029648.0	1090.01	69356998249
+J3	J3_OEExp	Wwox gRNA	LacZ	lysine	5	4993476.5	1094.40	70939688012
+J3	J3_OEExp	Wwox gRNA	LacZ	lysine	10	4993476.5	1094.40	70939688012
+J4	J4_OEExp	Wwox gRNA	LacZ	lysine	5	6963612.1	1092.86	67533335357
+J4	J4_OEExp	Wwox gRNA	LacZ	lysine	10	6963612.1	1092.86	67533335357
+J5	J5_OEExp	Wwox gRNA	LacZ	lysine	5	5571834.3	1094.13	72977783165
+J5	J5_OEExp	Wwox gRNA	LacZ	lysine	10	5571834.3	1094.13	72977783165
+K1	K1_OEExp	Control gRNA	AB42	lysine	5	3837454.1	1094.91	74246380220
+K1	K1_OEExp	Control gRNA	AB42	lysine	10	3837454.1	1094.91	74246380220
+K2	K2_OEExp	Control gRNA	AB42	lysine	5	4610406.7	1094.29	65264738495
+K2	K2_OEExp	Control gRNA	AB42	lysine	10	4610406.7	1094.29	65264738495
+K3	K3_OEExp	Control gRNA	AB42	lysine	5	5467614.2	1091.80	70106919060
+K3	K3_OEExp	Control gRNA	AB42	lysine	10	5467614.2	1091.80	70106919060
+K4	K4_OEExp	Control gRNA	AB42	lysine	5	8745764.8	1092.63	69485749776
+K4	K4_OEExp	Control gRNA	AB42	lysine	10	8745764.8	1092.63	69485749776
+K5	K5_OEExp	Control gRNA	AB42	lysine	5	6416646.3	1091.21	85528412434
+K5	K5_OEExp	Control gRNA	AB42	lysine	10	6416646.3	1091.21	85528412434
+L1	L1_OEExp	Wwox gRNA	AB42	lysine	5	4676540.6	1093.85	73054612432
+L1	L1_OEExp	Wwox gRNA	AB42	lysine	10	4676540.6	1093.85	73054612432
+L2	L2_OEExp	Wwox gRNA	AB42	lysine	5	4899028.1	1093.79	69020431450
+L2	L2_OEExp	Wwox gRNA	AB42	lysine	10	4899028.1	1093.79	69020431450
+L3	L3_OEExp	Wwox gRNA	AB42	lysine	5	6491716.4	1093.82	70289160915
+L3	L3_OEExp	Wwox gRNA	AB42	lysine	10	6491716.4	1093.82	70289160915
+L4	L4_OEExp	Wwox gRNA	AB42	lysine	5	4515342.1	1092.70	71324975699
+L4	L4_OEExp	Wwox gRNA	AB42	lysine	10	4515342.1	1092.70	71324975699
+L5	L5_OEExp	Wwox gRNA	AB42	lysine	5	4347941.2	1093.89	80716298575
+L5	L5_OEExp	Wwox gRNA	AB42	lysine	10	4347941.2	1093.89	80716298575
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	lysine	5	4381.5	1092.00	79135534226
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	lysine	10	4381.5	1092.00	79135534226
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	lysine	5	12013.6	1092.00	79014597867
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	lysine	10	12013.6	1092.00	79014597867
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	lysine	5	11031.3	1092.00	79262381295
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	lysine	10	11031.3	1092.00	79262381295
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	lysine	5	27694.8	1092.00	71286131064
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	lysine	10	27694.8	1092.00	71286131064
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	lysine	5	31331.5	1092.00	69880950563
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	lysine	10	31331.5	1092.00	69880950563
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	lysine	5	80623.1	1092.00	69859142672
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	lysine	10	80623.1	1092.00	69859142672
+pooled_10	Pool1_4	Not Applicable	Not Applicable	lysine	5	5261417.0	1094.57	77853943855
+pooled_10	Pool1_4	Not Applicable	Not Applicable	lysine	10	5261417.0	1094.57	77853943855
+pooled_11	Pool1_5	Not Applicable	Not Applicable	lysine	5	5831303.4	1092.12	77988498071
+pooled_11	Pool1_5	Not Applicable	Not Applicable	lysine	10	5831303.4	1092.12	77988498071
+pooled_12	Pool1_6	Not Applicable	Not Applicable	lysine	5	5726761.0	1093.20	73866613161
+pooled_12	Pool1_6	Not Applicable	Not Applicable	lysine	10	5726761.0	1093.20	73866613161
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	lysine	5	9509156.3	1095.13	75589662197
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	lysine	10	9509156.3	1095.13	75589662197
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	lysine	5	10878208.6	1090.31	74553266127
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	lysine	10	10878208.6	1090.31	74553266127
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	lysine	5	11476296.7	1090.98	70825764115
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	lysine	10	11476296.7	1090.98	70825764115
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	lysine	5	11086933.0	1091.52	68396261652
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	lysine	10	11086933.0	1091.52	68396261652
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	lysine	5	11216547.8	1093.40	66909828861
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	lysine	10	11216547.8	1093.40	66909828861
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	lysine	5	11124865.3	1093.13	67722142626
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	lysine	10	11124865.3	1093.13	67722142626
+pooled_7	Pool1_1	Not Applicable	Not Applicable	lysine	5	5740774.9	1093.48	80035784138
+pooled_7	Pool1_1	Not Applicable	Not Applicable	lysine	10	5740774.9	1093.48	80035784138
+pooled_8	Pool1_2	Not Applicable	Not Applicable	lysine	5	5716622.9	1093.70	78589705479
+pooled_8	Pool1_2	Not Applicable	Not Applicable	lysine	10	5716622.9	1093.70	78589705479
+pooled_9	Pool1_3	Not Applicable	Not Applicable	lysine	5	6290070.0	1092.21	79404787529
+pooled_9	Pool1_3	Not Applicable	Not Applicable	lysine	10	6290070.0	1092.21	79404787529
+C1	C1_KDExp	RNAi Control	LacZ	glucuronate	5	4283325.0	809.80	78587375507
+C1	C1_KDExp	RNAi Control	LacZ	glucuronate	10	4283325.0	809.80	78587375507
+C2	C2_KDExp	RNAi Control	LacZ	glucuronate	5	3432288.5	808.57	75050529828
+C2	C2_KDExp	RNAi Control	LacZ	glucuronate	10	3432288.5	808.57	75050529828
+C3	C3_KDExp	RNAi Control	LacZ	glucuronate	5	2520042.1	804.19	77514488408
+C3	C3_KDExp	RNAi Control	LacZ	glucuronate	10	2520042.1	804.19	77514488408
+C4	C4_KDExp	RNAi Control	LacZ	glucuronate	5	3647691.2	808.58	77283810937
+C4	C4_KDExp	RNAi Control	LacZ	glucuronate	10	3647691.2	808.58	77283810937
+C5	C5_KDExp	RNAi Control	LacZ	glucuronate	5	3516832.2	809.72	78148198625
+C5	C5_KDExp	RNAi Control	LacZ	glucuronate	10	3516832.2	809.72	78148198625
+D1	D1_KDExp	Wwox RNAi	LacZ	glucuronate	5	3346019.7	810.08	76823195347
+D1	D1_KDExp	Wwox RNAi	LacZ	glucuronate	10	3346019.7	810.08	76823195347
+D2	D2_KDExp	Wwox RNAi	LacZ	glucuronate	5	4444928.2	807.75	77616845301
+D2	D2_KDExp	Wwox RNAi	LacZ	glucuronate	10	4444928.2	807.75	77616845301
+D3	D3_KDExp	Wwox RNAi	LacZ	glucuronate	5	5200177.2	809.17	75045955676
+D3	D3_KDExp	Wwox RNAi	LacZ	glucuronate	10	5200177.2	809.17	75045955676
+D4	D4_KDExp	Wwox RNAi	LacZ	glucuronate	5	9411787.7	806.91	78252486569
+D4	D4_KDExp	Wwox RNAi	LacZ	glucuronate	10	9411787.7	806.91	78252486569
+D5	D5_KDExp	Wwox RNAi	LacZ	glucuronate	5	4123466.5	804.57	75259658073
+D5	D5_KDExp	Wwox RNAi	LacZ	glucuronate	10	4123466.5	804.57	75259658073
+G1	G1_KDExp	RNAi Control	AB42	glucuronate	5	4348483.7	804.69	77636841683
+G1	G1_KDExp	RNAi Control	AB42	glucuronate	10	4348483.7	804.69	77636841683
+G2	G2_KDExp	RNAi Control	AB42	glucuronate	5	4309411.6	806.49	74321981717
+G2	G2_KDExp	RNAi Control	AB42	glucuronate	10	4309411.6	806.49	74321981717
+G3	G3_KDExp	RNAi Control	AB42	glucuronate	5	4215939.9	806.99	79485462450
+G3	G3_KDExp	RNAi Control	AB42	glucuronate	10	4215939.9	806.99	79485462450
+G4	G4_KDExp	RNAi Control	AB42	glucuronate	5	3369853.7	810.81	75504738608
+G4	G4_KDExp	RNAi Control	AB42	glucuronate	10	3369853.7	810.81	75504738608
+G5	G5_KDExp	RNAi Control	AB42	glucuronate	5	5214937.4	806.26	78569703194
+G5	G5_KDExp	RNAi Control	AB42	glucuronate	10	5214937.4	806.26	78569703194
+H1	H1_KDExp	Wwox RNAi	AB42	glucuronate	5	6626506.6	808.35	75919573450
+H1	H1_KDExp	Wwox RNAi	AB42	glucuronate	10	6626506.6	808.35	75919573450
+H2	H2_KDExp	Wwox RNAi	AB42	glucuronate	5	12879318.3	808.23	78001196696
+H2	H2_KDExp	Wwox RNAi	AB42	glucuronate	10	12879318.3	808.23	78001196696
+H3	H3_KDExp	Wwox RNAi	AB42	glucuronate	5	8080217.4	806.46	76278124731
+H3	H3_KDExp	Wwox RNAi	AB42	glucuronate	10	8080217.4	806.46	76278124731
+H4	H4_KDExp	Wwox RNAi	AB42	glucuronate	5	6748195.4	807.34	79443297885
+H4	H4_KDExp	Wwox RNAi	AB42	glucuronate	10	6748195.4	807.34	79443297885
+H5	H5_KDExp	Wwox RNAi	AB42	glucuronate	5	5883546.5	805.73	74207473206
+H5	H5_KDExp	Wwox RNAi	AB42	glucuronate	10	5883546.5	805.73	74207473206
+I1	I1_OEExp	Control gRNA	LacZ	glucuronate	5	3228306.3	807.37	74382645183
+I1	I1_OEExp	Control gRNA	LacZ	glucuronate	10	3228306.3	807.37	74382645183
+I2	I2_OEExp	Control gRNA	LacZ	glucuronate	5	3655827.0	805.40	66652024118
+I2	I2_OEExp	Control gRNA	LacZ	glucuronate	10	3655827.0	805.40	66652024118
+I3	I3_OEExp	Control gRNA	LacZ	glucuronate	5	3698791.5	802.47	66557132626
+I3	I3_OEExp	Control gRNA	LacZ	glucuronate	10	3698791.5	802.47	66557132626
+I4	I4_OEExp	Control gRNA	LacZ	glucuronate	5	4406240.8	807.25	73224921914
+I4	I4_OEExp	Control gRNA	LacZ	glucuronate	10	4406240.8	807.25	73224921914
+I5	I5_OEExp	Control gRNA	LacZ	glucuronate	5	4600664.1	805.45	83394468956
+I5	I5_OEExp	Control gRNA	LacZ	glucuronate	10	4600664.1	805.45	83394468956
+J1	J1_OEExp	Wwox gRNA	LacZ	glucuronate	5	5645892.4	805.35	66156998187
+J1	J1_OEExp	Wwox gRNA	LacZ	glucuronate	10	5645892.4	805.35	66156998187
+J2	J2_OEExp	Wwox gRNA	LacZ	glucuronate	5	5518009.6	808.52	69356998249
+J2	J2_OEExp	Wwox gRNA	LacZ	glucuronate	10	5518009.6	808.52	69356998249
+J3	J3_OEExp	Wwox gRNA	LacZ	glucuronate	5	3990877.8	804.15	70939688012
+J3	J3_OEExp	Wwox gRNA	LacZ	glucuronate	10	3990877.8	804.15	70939688012
+J4	J4_OEExp	Wwox gRNA	LacZ	glucuronate	5	5497838.8	809.50	67533335357
+J4	J4_OEExp	Wwox gRNA	LacZ	glucuronate	10	5497838.8	809.50	67533335357
+J5	J5_OEExp	Wwox gRNA	LacZ	glucuronate	5	4346697.6	806.36	72977783165
+J5	J5_OEExp	Wwox gRNA	LacZ	glucuronate	10	4346697.6	806.36	72977783165
+K1	K1_OEExp	Control gRNA	AB42	glucuronate	5	7174063.9	805.74	74246380220
+K1	K1_OEExp	Control gRNA	AB42	glucuronate	10	7174063.9	805.74	74246380220
+K2	K2_OEExp	Control gRNA	AB42	glucuronate	5	7885159.0	809.35	65264738495
+K2	K2_OEExp	Control gRNA	AB42	glucuronate	10	7885159.0	809.35	65264738495
+K3	K3_OEExp	Control gRNA	AB42	glucuronate	5	7295357.7	807.26	70106919060
+K3	K3_OEExp	Control gRNA	AB42	glucuronate	10	7295357.7	807.26	70106919060
+K4	K4_OEExp	Control gRNA	AB42	glucuronate	5	7079457.5	808.65	69485749776
+K4	K4_OEExp	Control gRNA	AB42	glucuronate	10	7079457.5	808.65	69485749776
+K5	K5_OEExp	Control gRNA	AB42	glucuronate	5	6955565.8	809.13	85528412434
+K5	K5_OEExp	Control gRNA	AB42	glucuronate	10	6955565.8	809.13	85528412434
+L1	L1_OEExp	Wwox gRNA	AB42	glucuronate	5	9215312.4	809.32	73054612432
+L1	L1_OEExp	Wwox gRNA	AB42	glucuronate	10	9215312.4	809.32	73054612432
+L2	L2_OEExp	Wwox gRNA	AB42	glucuronate	5	8317397.7	805.70	69020431450
+L2	L2_OEExp	Wwox gRNA	AB42	glucuronate	10	8317397.7	805.70	69020431450
+L3	L3_OEExp	Wwox gRNA	AB42	glucuronate	5	9186367.9	807.28	70289160915
+L3	L3_OEExp	Wwox gRNA	AB42	glucuronate	10	9186367.9	807.28	70289160915
+L4	L4_OEExp	Wwox gRNA	AB42	glucuronate	5	10595219.4	808.23	71324975699
+L4	L4_OEExp	Wwox gRNA	AB42	glucuronate	10	10595219.4	808.23	71324975699
+L5	L5_OEExp	Wwox gRNA	AB42	glucuronate	5	9635391.8	807.32	80716298575
+L5	L5_OEExp	Wwox gRNA	AB42	glucuronate	10	9635391.8	807.32	80716298575
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	glucuronate	5	39920.8	808.00	79135534226
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	glucuronate	10	39920.8	808.00	79135534226
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	glucuronate	5	53263.1	808.00	79014597867
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	glucuronate	10	53263.1	808.00	79014597867
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	glucuronate	5	56824.6	808.00	79262381295
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	glucuronate	10	56824.6	808.00	79262381295
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	glucuronate	5	184790.1	808.00	71286131064
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	glucuronate	10	184790.1	808.00	71286131064
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	glucuronate	5	227362.7	808.00	69880950563
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	glucuronate	10	227362.7	808.00	69880950563
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	glucuronate	5	188460.0	808.00	69859142672
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	glucuronate	10	188460.0	808.00	69859142672
+pooled_10	Pool1_4	Not Applicable	Not Applicable	glucuronate	5	5541586.9	809.71	77853943855
+pooled_10	Pool1_4	Not Applicable	Not Applicable	glucuronate	10	5541586.9	809.71	77853943855
+pooled_11	Pool1_5	Not Applicable	Not Applicable	glucuronate	5	6692520.7	807.13	77988498071
+pooled_11	Pool1_5	Not Applicable	Not Applicable	glucuronate	10	6692520.7	807.13	77988498071
+pooled_12	Pool1_6	Not Applicable	Not Applicable	glucuronate	5	6274698.3	803.53	73866613161
+pooled_12	Pool1_6	Not Applicable	Not Applicable	glucuronate	10	6274698.3	803.53	73866613161
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	glucuronate	5	5831713.9	807.77	75589662197
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	glucuronate	10	5831713.9	807.77	75589662197
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	glucuronate	5	5268008.8	808.45	74553266127
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	glucuronate	10	5268008.8	808.45	74553266127
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	glucuronate	5	5791685.8	808.21	70825764115
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	glucuronate	10	5791685.8	808.21	70825764115
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	glucuronate	5	5845749.3	805.96	68396261652
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	glucuronate	10	5845749.3	805.96	68396261652
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	glucuronate	5	5842469.2	807.10	66909828861
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	glucuronate	10	5842469.2	807.10	66909828861
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	glucuronate	5	5781586.4	807.24	67722142626
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	glucuronate	10	5781586.4	807.24	67722142626
+pooled_7	Pool1_1	Not Applicable	Not Applicable	glucuronate	5	5985461.5	807.72	80035784138
+pooled_7	Pool1_1	Not Applicable	Not Applicable	glucuronate	10	5985461.5	807.72	80035784138
+pooled_8	Pool1_2	Not Applicable	Not Applicable	glucuronate	5	6338623.5	808.32	78589705479
+pooled_8	Pool1_2	Not Applicable	Not Applicable	glucuronate	10	6338623.5	808.32	78589705479
+pooled_9	Pool1_3	Not Applicable	Not Applicable	glucuronate	5	6606192.1	806.47	79404787529
+pooled_9	Pool1_3	Not Applicable	Not Applicable	glucuronate	10	6606192.1	806.47	79404787529
+C1	C1_KDExp	RNAi Control	LacZ	orotate	5	2031671.5	598.41	78587375507
+C1	C1_KDExp	RNAi Control	LacZ	orotate	10	2031671.5	598.41	78587375507
+C2	C2_KDExp	RNAi Control	LacZ	orotate	5	2736786.5	598.28	75050529828
+C2	C2_KDExp	RNAi Control	LacZ	orotate	10	2736786.5	598.28	75050529828
+C3	C3_KDExp	RNAi Control	LacZ	orotate	5	1280299.0	595.84	77514488408
+C3	C3_KDExp	RNAi Control	LacZ	orotate	10	1280299.0	595.84	77514488408
+C4	C4_KDExp	RNAi Control	LacZ	orotate	5	2179107.2	596.06	77283810937
+C4	C4_KDExp	RNAi Control	LacZ	orotate	10	2179107.2	596.06	77283810937
+C5	C5_KDExp	RNAi Control	LacZ	orotate	5	2174776.4	596.45	78148198625
+C5	C5_KDExp	RNAi Control	LacZ	orotate	10	2174776.4	596.45	78148198625
+D1	D1_KDExp	Wwox RNAi	LacZ	orotate	5	622861.9	597.58	76823195347
+D1	D1_KDExp	Wwox RNAi	LacZ	orotate	10	622861.9	597.58	76823195347
+D2	D2_KDExp	Wwox RNAi	LacZ	orotate	5	1029733.2	596.40	77616845301
+D2	D2_KDExp	Wwox RNAi	LacZ	orotate	10	1029733.2	596.40	77616845301
+D3	D3_KDExp	Wwox RNAi	LacZ	orotate	5	1420837.8	599.04	75045955676
+D3	D3_KDExp	Wwox RNAi	LacZ	orotate	10	1420837.8	599.04	75045955676
+D4	D4_KDExp	Wwox RNAi	LacZ	orotate	5	1776513.1	596.19	78252486569
+D4	D4_KDExp	Wwox RNAi	LacZ	orotate	10	1776513.1	596.19	78252486569
+D5	D5_KDExp	Wwox RNAi	LacZ	orotate	5	975723.6	596.20	75259658073
+D5	D5_KDExp	Wwox RNAi	LacZ	orotate	10	975723.6	596.20	75259658073
+G1	G1_KDExp	RNAi Control	AB42	orotate	5	1858022.8	596.46	77636841683
+G1	G1_KDExp	RNAi Control	AB42	orotate	10	1858022.8	596.46	77636841683
+G2	G2_KDExp	RNAi Control	AB42	orotate	5	2757983.8	599.41	74321981717
+G2	G2_KDExp	RNAi Control	AB42	orotate	10	2757983.8	599.41	74321981717
+G3	G3_KDExp	RNAi Control	AB42	orotate	5	1603106.7	596.69	79485462450
+G3	G3_KDExp	RNAi Control	AB42	orotate	10	1603106.7	596.69	79485462450
+G4	G4_KDExp	RNAi Control	AB42	orotate	5	1653439.5	596.37	75504738608
+G4	G4_KDExp	RNAi Control	AB42	orotate	10	1653439.5	596.37	75504738608
+G5	G5_KDExp	RNAi Control	AB42	orotate	5	1571828.6	598.50	78569703194
+G5	G5_KDExp	RNAi Control	AB42	orotate	10	1571828.6	598.50	78569703194
+H1	H1_KDExp	Wwox RNAi	AB42	orotate	5	692066.4	594.92	75919573450
+H1	H1_KDExp	Wwox RNAi	AB42	orotate	10	692066.4	594.92	75919573450
+H2	H2_KDExp	Wwox RNAi	AB42	orotate	5	925933.9	598.94	78001196696
+H2	H2_KDExp	Wwox RNAi	AB42	orotate	10	925933.9	598.94	78001196696
+H3	H3_KDExp	Wwox RNAi	AB42	orotate	5	1231459.3	596.89	76278124731
+H3	H3_KDExp	Wwox RNAi	AB42	orotate	10	1231459.3	596.89	76278124731
+H4	H4_KDExp	Wwox RNAi	AB42	orotate	5	1042280.1	595.84	79443297885
+H4	H4_KDExp	Wwox RNAi	AB42	orotate	10	1042280.1	595.84	79443297885
+H5	H5_KDExp	Wwox RNAi	AB42	orotate	5	1065738.6	597.74	74207473206
+H5	H5_KDExp	Wwox RNAi	AB42	orotate	10	1065738.6	597.74	74207473206
+I1	I1_OEExp	Control gRNA	LacZ	orotate	5	1682268.8	599.00	74382645183
+I1	I1_OEExp	Control gRNA	LacZ	orotate	10	1682268.8	599.00	74382645183
+I2	I2_OEExp	Control gRNA	LacZ	orotate	5	1342447.2	597.49	66652024118
+I2	I2_OEExp	Control gRNA	LacZ	orotate	10	1342447.2	597.49	66652024118
+I3	I3_OEExp	Control gRNA	LacZ	orotate	5	1315859.2	597.99	66557132626
+I3	I3_OEExp	Control gRNA	LacZ	orotate	10	1315859.2	597.99	66557132626
+I4	I4_OEExp	Control gRNA	LacZ	orotate	5	1568198.6	598.39	73224921914
+I4	I4_OEExp	Control gRNA	LacZ	orotate	10	1568198.6	598.39	73224921914
+I5	I5_OEExp	Control gRNA	LacZ	orotate	5	1600129.6	597.02	83394468956
+I5	I5_OEExp	Control gRNA	LacZ	orotate	10	1600129.6	597.02	83394468956
+J1	J1_OEExp	Wwox gRNA	LacZ	orotate	5	938334.8	596.48	66156998187
+J1	J1_OEExp	Wwox gRNA	LacZ	orotate	10	938334.8	596.48	66156998187
+J2	J2_OEExp	Wwox gRNA	LacZ	orotate	5	1293450.3	598.93	69356998249
+J2	J2_OEExp	Wwox gRNA	LacZ	orotate	10	1293450.3	598.93	69356998249
+J3	J3_OEExp	Wwox gRNA	LacZ	orotate	5	1580081.9	596.50	70939688012
+J3	J3_OEExp	Wwox gRNA	LacZ	orotate	10	1580081.9	596.50	70939688012
+J4	J4_OEExp	Wwox gRNA	LacZ	orotate	5	1348500.1	596.92	67533335357
+J4	J4_OEExp	Wwox gRNA	LacZ	orotate	10	1348500.1	596.92	67533335357
+J5	J5_OEExp	Wwox gRNA	LacZ	orotate	5	1434165.2	597.41	72977783165
+J5	J5_OEExp	Wwox gRNA	LacZ	orotate	10	1434165.2	597.41	72977783165
+K1	K1_OEExp	Control gRNA	AB42	orotate	5	1050158.4	597.16	74246380220
+K1	K1_OEExp	Control gRNA	AB42	orotate	10	1050158.4	597.16	74246380220
+K2	K2_OEExp	Control gRNA	AB42	orotate	5	1067225.3	598.88	65264738495
+K2	K2_OEExp	Control gRNA	AB42	orotate	10	1067225.3	598.88	65264738495
+K3	K3_OEExp	Control gRNA	AB42	orotate	5	860521.7	599.58	70106919060
+K3	K3_OEExp	Control gRNA	AB42	orotate	10	860521.7	599.58	70106919060
+K4	K4_OEExp	Control gRNA	AB42	orotate	5	1101784.4	599.29	69485749776
+K4	K4_OEExp	Control gRNA	AB42	orotate	10	1101784.4	599.29	69485749776
+K5	K5_OEExp	Control gRNA	AB42	orotate	5	1645648.0	597.55	85528412434
+K5	K5_OEExp	Control gRNA	AB42	orotate	10	1645648.0	597.55	85528412434
+L1	L1_OEExp	Wwox gRNA	AB42	orotate	5	994955.7	597.44	73054612432
+L1	L1_OEExp	Wwox gRNA	AB42	orotate	10	994955.7	597.44	73054612432
+L2	L2_OEExp	Wwox gRNA	AB42	orotate	5	935857.4	598.85	69020431450
+L2	L2_OEExp	Wwox gRNA	AB42	orotate	10	935857.4	598.85	69020431450
+L3	L3_OEExp	Wwox gRNA	AB42	orotate	5	1293572.8	597.67	70289160915
+L3	L3_OEExp	Wwox gRNA	AB42	orotate	10	1293572.8	597.67	70289160915
+L4	L4_OEExp	Wwox gRNA	AB42	orotate	5	857408.5	598.32	71324975699
+L4	L4_OEExp	Wwox gRNA	AB42	orotate	10	857408.5	598.32	71324975699
+L5	L5_OEExp	Wwox gRNA	AB42	orotate	5	1336623.3	596.74	80716298575
+L5	L5_OEExp	Wwox gRNA	AB42	orotate	10	1336623.3	596.74	80716298575
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	orotate	5	14023.0	598.00	79135534226
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	orotate	10	14023.0	598.00	79135534226
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	orotate	5	9196.5	598.00	79014597867
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	orotate	10	9196.5	598.00	79014597867
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	orotate	5	0.0	598.00	79262381295
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	orotate	10	0.0	598.00	79262381295
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	orotate	5	9484.4	598.00	71286131064
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	orotate	10	9484.4	598.00	71286131064
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	orotate	5	103507.6	598.00	69880950563
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	orotate	10	103507.6	598.00	69880950563
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	orotate	5	172813.9	598.00	69859142672
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	orotate	10	172813.9	598.00	69859142672
+pooled_10	Pool1_4	Not Applicable	Not Applicable	orotate	5	1201418.2	594.98	77853943855
+pooled_10	Pool1_4	Not Applicable	Not Applicable	orotate	10	1201418.2	594.98	77853943855
+pooled_11	Pool1_5	Not Applicable	Not Applicable	orotate	5	1322709.7	599.47	77988498071
+pooled_11	Pool1_5	Not Applicable	Not Applicable	orotate	10	1322709.7	599.47	77988498071
+pooled_12	Pool1_6	Not Applicable	Not Applicable	orotate	5	1374912.4	598.39	73866613161
+pooled_12	Pool1_6	Not Applicable	Not Applicable	orotate	10	1374912.4	598.39	73866613161
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	orotate	5	1623582.9	597.46	75589662197
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	orotate	10	1623582.9	597.46	75589662197
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	orotate	5	1366531.3	595.71	74553266127
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	orotate	10	1366531.3	595.71	74553266127
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	orotate	5	1591461.0	599.11	70825764115
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	orotate	10	1591461.0	599.11	70825764115
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	orotate	5	1540666.4	599.45	68396261652
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	orotate	10	1540666.4	599.45	68396261652
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	orotate	5	1496655.7	596.09	66909828861
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	orotate	10	1496655.7	596.09	66909828861
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	orotate	5	1528668.6	596.88	67722142626
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	orotate	10	1528668.6	596.88	67722142626
+pooled_7	Pool1_1	Not Applicable	Not Applicable	orotate	5	1206712.1	597.16	80035784138
+pooled_7	Pool1_1	Not Applicable	Not Applicable	orotate	10	1206712.1	597.16	80035784138
+pooled_8	Pool1_2	Not Applicable	Not Applicable	orotate	5	1218100.0	597.82	78589705479
+pooled_8	Pool1_2	Not Applicable	Not Applicable	orotate	10	1218100.0	597.82	78589705479
+pooled_9	Pool1_3	Not Applicable	Not Applicable	orotate	5	1177524.5	597.18	79404787529
+pooled_9	Pool1_3	Not Applicable	Not Applicable	orotate	10	1177524.5	597.18	79404787529
+C1	C1_KDExp	RNAi Control	LacZ	glutamate	5	152381013.2	731.17	78587375507
+C1	C1_KDExp	RNAi Control	LacZ	glutamate	10	152381013.2	731.17	78587375507
+C2	C2_KDExp	RNAi Control	LacZ	glutamate	5	173070593.0	731.68	75050529828
+C2	C2_KDExp	RNAi Control	LacZ	glutamate	10	173070593.0	731.68	75050529828
+C3	C3_KDExp	RNAi Control	LacZ	glutamate	5	141565296.1	731.00	77514488408
+C3	C3_KDExp	RNAi Control	LacZ	glutamate	10	141565296.1	731.00	77514488408
+C4	C4_KDExp	RNAi Control	LacZ	glutamate	5	142436413.8	731.23	77283810937
+C4	C4_KDExp	RNAi Control	LacZ	glutamate	10	142436413.8	731.23	77283810937
+C5	C5_KDExp	RNAi Control	LacZ	glutamate	5	149648675.3	730.62	78148198625
+C5	C5_KDExp	RNAi Control	LacZ	glutamate	10	149648675.3	730.62	78148198625
+D1	D1_KDExp	Wwox RNAi	LacZ	glutamate	5	102704191.5	730.52	76823195347
+D1	D1_KDExp	Wwox RNAi	LacZ	glutamate	10	102704191.5	730.52	76823195347
+D2	D2_KDExp	Wwox RNAi	LacZ	glutamate	5	155850868.5	731.23	77616845301
+D2	D2_KDExp	Wwox RNAi	LacZ	glutamate	10	155850868.5	731.23	77616845301
+D3	D3_KDExp	Wwox RNAi	LacZ	glutamate	5	139488336.8	731.77	75045955676
+D3	D3_KDExp	Wwox RNAi	LacZ	glutamate	10	139488336.8	731.77	75045955676
+D4	D4_KDExp	Wwox RNAi	LacZ	glutamate	5	133338277.8	731.41	78252486569
+D4	D4_KDExp	Wwox RNAi	LacZ	glutamate	10	133338277.8	731.41	78252486569
+D5	D5_KDExp	Wwox RNAi	LacZ	glutamate	5	140191816.6	731.53	75259658073
+D5	D5_KDExp	Wwox RNAi	LacZ	glutamate	10	140191816.6	731.53	75259658073
+G1	G1_KDExp	RNAi Control	AB42	glutamate	5	146023347.2	730.16	77636841683
+G1	G1_KDExp	RNAi Control	AB42	glutamate	10	146023347.2	730.16	77636841683
+G2	G2_KDExp	RNAi Control	AB42	glutamate	5	142720871.6	730.78	74321981717
+G2	G2_KDExp	RNAi Control	AB42	glutamate	10	142720871.6	730.78	74321981717
+G3	G3_KDExp	RNAi Control	AB42	glutamate	5	166090050.9	730.26	79485462450
+G3	G3_KDExp	RNAi Control	AB42	glutamate	10	166090050.9	730.26	79485462450
+G4	G4_KDExp	RNAi Control	AB42	glutamate	5	157873485.6	731.67	75504738608
+G4	G4_KDExp	RNAi Control	AB42	glutamate	10	157873485.6	731.67	75504738608
+G5	G5_KDExp	RNAi Control	AB42	glutamate	5	166808523.9	729.89	78569703194
+G5	G5_KDExp	RNAi Control	AB42	glutamate	10	166808523.9	729.89	78569703194
+H1	H1_KDExp	Wwox RNAi	AB42	glutamate	5	132069397.2	731.24	75919573450
+H1	H1_KDExp	Wwox RNAi	AB42	glutamate	10	132069397.2	731.24	75919573450
+H2	H2_KDExp	Wwox RNAi	AB42	glutamate	5	157443968.4	731.46	78001196696
+H2	H2_KDExp	Wwox RNAi	AB42	glutamate	10	157443968.4	731.46	78001196696
+H3	H3_KDExp	Wwox RNAi	AB42	glutamate	5	156998323.3	731.97	76278124731
+H3	H3_KDExp	Wwox RNAi	AB42	glutamate	10	156998323.3	731.97	76278124731
+H4	H4_KDExp	Wwox RNAi	AB42	glutamate	5	131580191.3	731.27	79443297885
+H4	H4_KDExp	Wwox RNAi	AB42	glutamate	10	131580191.3	731.27	79443297885
+H5	H5_KDExp	Wwox RNAi	AB42	glutamate	5	156040029.4	731.34	74207473206
+H5	H5_KDExp	Wwox RNAi	AB42	glutamate	10	156040029.4	731.34	74207473206
+I1	I1_OEExp	Control gRNA	LacZ	glutamate	5	158474560.1	731.83	74382645183
+I1	I1_OEExp	Control gRNA	LacZ	glutamate	10	158474560.1	731.83	74382645183
+I2	I2_OEExp	Control gRNA	LacZ	glutamate	5	166885479.8	732.13	66652024118
+I2	I2_OEExp	Control gRNA	LacZ	glutamate	10	166885479.8	732.13	66652024118
+I3	I3_OEExp	Control gRNA	LacZ	glutamate	5	143695408.8	731.86	66557132626
+I3	I3_OEExp	Control gRNA	LacZ	glutamate	10	143695408.8	731.86	66557132626
+I4	I4_OEExp	Control gRNA	LacZ	glutamate	5	152566617.3	731.92	73224921914
+I4	I4_OEExp	Control gRNA	LacZ	glutamate	10	152566617.3	731.92	73224921914
+I5	I5_OEExp	Control gRNA	LacZ	glutamate	5	143845234.4	731.34	83394468956
+I5	I5_OEExp	Control gRNA	LacZ	glutamate	10	143845234.4	731.34	83394468956
+J1	J1_OEExp	Wwox gRNA	LacZ	glutamate	5	117975456.3	731.96	66156998187
+J1	J1_OEExp	Wwox gRNA	LacZ	glutamate	10	117975456.3	731.96	66156998187
+J2	J2_OEExp	Wwox gRNA	LacZ	glutamate	5	152214258.8	732.31	69356998249
+J2	J2_OEExp	Wwox gRNA	LacZ	glutamate	10	152214258.8	732.31	69356998249
+J3	J3_OEExp	Wwox gRNA	LacZ	glutamate	5	131783528.5	731.04	70939688012
+J3	J3_OEExp	Wwox gRNA	LacZ	glutamate	10	131783528.5	731.04	70939688012
+J4	J4_OEExp	Wwox gRNA	LacZ	glutamate	5	146778477.0	731.94	67533335357
+J4	J4_OEExp	Wwox gRNA	LacZ	glutamate	10	146778477.0	731.94	67533335357
+J5	J5_OEExp	Wwox gRNA	LacZ	glutamate	5	145138765.3	732.43	72977783165
+J5	J5_OEExp	Wwox gRNA	LacZ	glutamate	10	145138765.3	732.43	72977783165
+K1	K1_OEExp	Control gRNA	AB42	glutamate	5	158614956.1	730.92	74246380220
+K1	K1_OEExp	Control gRNA	AB42	glutamate	10	158614956.1	730.92	74246380220
+K2	K2_OEExp	Control gRNA	AB42	glutamate	5	158493716.1	731.61	65264738495
+K2	K2_OEExp	Control gRNA	AB42	glutamate	10	158493716.1	731.61	65264738495
+K3	K3_OEExp	Control gRNA	AB42	glutamate	5	155437495.3	731.89	70106919060
+K3	K3_OEExp	Control gRNA	AB42	glutamate	10	155437495.3	731.89	70106919060
+K4	K4_OEExp	Control gRNA	AB42	glutamate	5	118265639.9	731.25	69485749776
+K4	K4_OEExp	Control gRNA	AB42	glutamate	10	118265639.9	731.25	69485749776
+K5	K5_OEExp	Control gRNA	AB42	glutamate	5	107387283.2	730.68	85528412434
+K5	K5_OEExp	Control gRNA	AB42	glutamate	10	107387283.2	730.68	85528412434
+L1	L1_OEExp	Wwox gRNA	AB42	glutamate	5	162280988.4	730.86	73054612432
+L1	L1_OEExp	Wwox gRNA	AB42	glutamate	10	162280988.4	730.86	73054612432
+L2	L2_OEExp	Wwox gRNA	AB42	glutamate	5	144372098.3	731.51	69020431450
+L2	L2_OEExp	Wwox gRNA	AB42	glutamate	10	144372098.3	731.51	69020431450
+L3	L3_OEExp	Wwox gRNA	AB42	glutamate	5	164386277.7	732.18	70289160915
+L3	L3_OEExp	Wwox gRNA	AB42	glutamate	10	164386277.7	732.18	70289160915
+L4	L4_OEExp	Wwox gRNA	AB42	glutamate	5	167904849.5	732.18	71324975699
+L4	L4_OEExp	Wwox gRNA	AB42	glutamate	10	167904849.5	732.18	71324975699
+L5	L5_OEExp	Wwox gRNA	AB42	glutamate	5	167403329.9	731.99	80716298575
+L5	L5_OEExp	Wwox gRNA	AB42	glutamate	10	167403329.9	731.99	80716298575
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	glutamate	5	28055.9	732.00	79135534226
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	glutamate	10	28055.9	732.00	79135534226
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	glutamate	5	19058.1	732.00	79014597867
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	glutamate	10	19058.1	732.00	79014597867
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	glutamate	5	24166.2	732.00	79262381295
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	glutamate	10	24166.2	732.00	79262381295
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	glutamate	5	42104.1	732.00	71286131064
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	glutamate	10	42104.1	732.00	71286131064
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	glutamate	5	71531.9	732.00	69880950563
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	glutamate	10	71531.9	732.00	69880950563
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	glutamate	5	44656.8	732.00	69859142672
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	glutamate	10	44656.8	732.00	69859142672
+pooled_10	Pool1_4	Not Applicable	Not Applicable	glutamate	5	149511342.1	731.55	77853943855
+pooled_10	Pool1_4	Not Applicable	Not Applicable	glutamate	10	149511342.1	731.55	77853943855
+pooled_11	Pool1_5	Not Applicable	Not Applicable	glutamate	5	150547995.5	731.89	77988498071
+pooled_11	Pool1_5	Not Applicable	Not Applicable	glutamate	10	150547995.5	731.89	77988498071
+pooled_12	Pool1_6	Not Applicable	Not Applicable	glutamate	5	152773185.2	731.67	73866613161
+pooled_12	Pool1_6	Not Applicable	Not Applicable	glutamate	10	152773185.2	731.67	73866613161
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	glutamate	5	155165866.2	731.24	75589662197
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	glutamate	10	155165866.2	731.24	75589662197
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	glutamate	5	150977558.8	730.34	74553266127
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	glutamate	10	150977558.8	730.34	74553266127
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	glutamate	5	155268881.0	731.23	70825764115
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	glutamate	10	155268881.0	731.23	70825764115
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	glutamate	5	146286447.3	731.27	68396261652
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	glutamate	10	146286447.3	731.27	68396261652
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	glutamate	5	153612747.9	732.23	66909828861
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	glutamate	10	153612747.9	732.23	66909828861
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	glutamate	5	150580869.7	731.98	67722142626
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	glutamate	10	150580869.7	731.98	67722142626
+pooled_7	Pool1_1	Not Applicable	Not Applicable	glutamate	5	147422151.6	732.04	80035784138
+pooled_7	Pool1_1	Not Applicable	Not Applicable	glutamate	10	147422151.6	732.04	80035784138
+pooled_8	Pool1_2	Not Applicable	Not Applicable	glutamate	5	142515733.6	732.11	78589705479
+pooled_8	Pool1_2	Not Applicable	Not Applicable	glutamate	10	142515733.6	732.11	78589705479
+pooled_9	Pool1_3	Not Applicable	Not Applicable	glutamate	5	152097814.8	731.12	79404787529
+pooled_9	Pool1_3	Not Applicable	Not Applicable	glutamate	10	152097814.8	731.12	79404787529
+C1	C1_KDExp	RNAi Control	LacZ	pyruvate	5	10671366.2	506.07	78587375507
+C1	C1_KDExp	RNAi Control	LacZ	pyruvate	10	10671366.2	506.07	78587375507
+C2	C2_KDExp	RNAi Control	LacZ	pyruvate	5	9888791.0	507.56	75050529828
+C2	C2_KDExp	RNAi Control	LacZ	pyruvate	10	9888791.0	507.56	75050529828
+C3	C3_KDExp	RNAi Control	LacZ	pyruvate	5	7748046.7	505.28	77514488408
+C3	C3_KDExp	RNAi Control	LacZ	pyruvate	10	7748046.7	505.28	77514488408
+C4	C4_KDExp	RNAi Control	LacZ	pyruvate	5	10171200.4	506.92	77283810937
+C4	C4_KDExp	RNAi Control	LacZ	pyruvate	10	10171200.4	506.92	77283810937
+C5	C5_KDExp	RNAi Control	LacZ	pyruvate	5	9192657.5	507.50	78148198625
+C5	C5_KDExp	RNAi Control	LacZ	pyruvate	10	9192657.5	507.50	78148198625
+D1	D1_KDExp	Wwox RNAi	LacZ	pyruvate	5	5060752.0	508.25	76823195347
+D1	D1_KDExp	Wwox RNAi	LacZ	pyruvate	10	5060752.0	508.25	76823195347
+D2	D2_KDExp	Wwox RNAi	LacZ	pyruvate	5	6373520.6	507.01	77616845301
+D2	D2_KDExp	Wwox RNAi	LacZ	pyruvate	10	6373520.6	507.01	77616845301
+D3	D3_KDExp	Wwox RNAi	LacZ	pyruvate	5	14571054.2	504.59	75045955676
+D3	D3_KDExp	Wwox RNAi	LacZ	pyruvate	10	14571054.2	504.59	75045955676
+D4	D4_KDExp	Wwox RNAi	LacZ	pyruvate	5	43574034.0	507.38	78252486569
+D4	D4_KDExp	Wwox RNAi	LacZ	pyruvate	10	43574034.0	507.38	78252486569
+D5	D5_KDExp	Wwox RNAi	LacZ	pyruvate	5	5963518.8	505.59	75259658073
+D5	D5_KDExp	Wwox RNAi	LacZ	pyruvate	10	5963518.8	505.59	75259658073
+G1	G1_KDExp	RNAi Control	AB42	pyruvate	5	9435669.7	501.96	77636841683
+G1	G1_KDExp	RNAi Control	AB42	pyruvate	10	9435669.7	501.96	77636841683
+G2	G2_KDExp	RNAi Control	AB42	pyruvate	5	13799607.7	504.52	74321981717
+G2	G2_KDExp	RNAi Control	AB42	pyruvate	10	13799607.7	504.52	74321981717
+G3	G3_KDExp	RNAi Control	AB42	pyruvate	5	8756769.3	506.35	79485462450
+G3	G3_KDExp	RNAi Control	AB42	pyruvate	10	8756769.3	506.35	79485462450
+G4	G4_KDExp	RNAi Control	AB42	pyruvate	5	8249904.7	505.86	75504738608
+G4	G4_KDExp	RNAi Control	AB42	pyruvate	10	8249904.7	505.86	75504738608
+G5	G5_KDExp	RNAi Control	AB42	pyruvate	5	16507593.3	505.40	78569703194
+G5	G5_KDExp	RNAi Control	AB42	pyruvate	10	16507593.3	505.40	78569703194
+H1	H1_KDExp	Wwox RNAi	AB42	pyruvate	5	6725421.8	507.03	75919573450
+H1	H1_KDExp	Wwox RNAi	AB42	pyruvate	10	6725421.8	507.03	75919573450
+H2	H2_KDExp	Wwox RNAi	AB42	pyruvate	5	9489116.3	505.60	78001196696
+H2	H2_KDExp	Wwox RNAi	AB42	pyruvate	10	9489116.3	505.60	78001196696
+H3	H3_KDExp	Wwox RNAi	AB42	pyruvate	5	7605152.2	507.21	76278124731
+H3	H3_KDExp	Wwox RNAi	AB42	pyruvate	10	7605152.2	507.21	76278124731
+H4	H4_KDExp	Wwox RNAi	AB42	pyruvate	5	5468982.1	506.60	79443297885
+H4	H4_KDExp	Wwox RNAi	AB42	pyruvate	10	5468982.1	506.60	79443297885
+H5	H5_KDExp	Wwox RNAi	AB42	pyruvate	5	5596617.0	505.57	74207473206
+H5	H5_KDExp	Wwox RNAi	AB42	pyruvate	10	5596617.0	505.57	74207473206
+I1	I1_OEExp	Control gRNA	LacZ	pyruvate	5	7589038.1	505.70	74382645183
+I1	I1_OEExp	Control gRNA	LacZ	pyruvate	10	7589038.1	505.70	74382645183
+I2	I2_OEExp	Control gRNA	LacZ	pyruvate	5	7693364.9	506.90	66652024118
+I2	I2_OEExp	Control gRNA	LacZ	pyruvate	10	7693364.9	506.90	66652024118
+I3	I3_OEExp	Control gRNA	LacZ	pyruvate	5	7737692.7	508.20	66557132626
+I3	I3_OEExp	Control gRNA	LacZ	pyruvate	10	7737692.7	508.20	66557132626
+I4	I4_OEExp	Control gRNA	LacZ	pyruvate	5	19351431.0	507.43	73224921914
+I4	I4_OEExp	Control gRNA	LacZ	pyruvate	10	19351431.0	507.43	73224921914
+I5	I5_OEExp	Control gRNA	LacZ	pyruvate	5	17461331.9	506.90	83394468956
+I5	I5_OEExp	Control gRNA	LacZ	pyruvate	10	17461331.9	506.90	83394468956
+J1	J1_OEExp	Wwox gRNA	LacZ	pyruvate	5	9154286.3	506.87	66156998187
+J1	J1_OEExp	Wwox gRNA	LacZ	pyruvate	10	9154286.3	506.87	66156998187
+J2	J2_OEExp	Wwox gRNA	LacZ	pyruvate	5	11032221.7	508.21	69356998249
+J2	J2_OEExp	Wwox gRNA	LacZ	pyruvate	10	11032221.7	508.21	69356998249
+J3	J3_OEExp	Wwox gRNA	LacZ	pyruvate	5	5681651.6	508.54	70939688012
+J3	J3_OEExp	Wwox gRNA	LacZ	pyruvate	10	5681651.6	508.54	70939688012
+J4	J4_OEExp	Wwox gRNA	LacZ	pyruvate	5	8113912.3	507.53	67533335357
+J4	J4_OEExp	Wwox gRNA	LacZ	pyruvate	10	8113912.3	507.53	67533335357
+J5	J5_OEExp	Wwox gRNA	LacZ	pyruvate	5	5827702.5	508.13	72977783165
+J5	J5_OEExp	Wwox gRNA	LacZ	pyruvate	10	5827702.5	508.13	72977783165
+K1	K1_OEExp	Control gRNA	AB42	pyruvate	5	7299549.2	505.21	74246380220
+K1	K1_OEExp	Control gRNA	AB42	pyruvate	10	7299549.2	505.21	74246380220
+K2	K2_OEExp	Control gRNA	AB42	pyruvate	5	4997265.2	506.48	65264738495
+K2	K2_OEExp	Control gRNA	AB42	pyruvate	10	4997265.2	506.48	65264738495
+K3	K3_OEExp	Control gRNA	AB42	pyruvate	5	5205206.2	507.34	70106919060
+K3	K3_OEExp	Control gRNA	AB42	pyruvate	10	5205206.2	507.34	70106919060
+K4	K4_OEExp	Control gRNA	AB42	pyruvate	5	7873043.3	507.21	69485749776
+K4	K4_OEExp	Control gRNA	AB42	pyruvate	10	7873043.3	507.21	69485749776
+K5	K5_OEExp	Control gRNA	AB42	pyruvate	5	8099308.8	506.67	85528412434
+K5	K5_OEExp	Control gRNA	AB42	pyruvate	10	8099308.8	506.67	85528412434
+L1	L1_OEExp	Wwox gRNA	AB42	pyruvate	5	5806883.7	509.53	73054612432
+L1	L1_OEExp	Wwox gRNA	AB42	pyruvate	10	5806883.7	509.53	73054612432
+L2	L2_OEExp	Wwox gRNA	AB42	pyruvate	5	4959781.7	506.43	69020431450
+L2	L2_OEExp	Wwox gRNA	AB42	pyruvate	10	4959781.7	506.43	69020431450
+L3	L3_OEExp	Wwox gRNA	AB42	pyruvate	5	7982181.9	507.30	70289160915
+L3	L3_OEExp	Wwox gRNA	AB42	pyruvate	10	7982181.9	507.30	70289160915
+L4	L4_OEExp	Wwox gRNA	AB42	pyruvate	5	16466882.5	506.27	71324975699
+L4	L4_OEExp	Wwox gRNA	AB42	pyruvate	10	16466882.5	506.27	71324975699
+L5	L5_OEExp	Wwox gRNA	AB42	pyruvate	5	7915171.3	506.69	80716298575
+L5	L5_OEExp	Wwox gRNA	AB42	pyruvate	10	7915171.3	506.69	80716298575
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	pyruvate	5	97886.6	507.00	79135534226
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	pyruvate	10	97886.6	507.00	79135534226
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	pyruvate	5	97395.4	507.00	79014597867
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	pyruvate	10	97395.4	507.00	79014597867
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	pyruvate	5	125718.7	507.00	79262381295
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	pyruvate	10	125718.7	507.00	79262381295
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	pyruvate	5	127153.4	507.00	71286131064
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	pyruvate	10	127153.4	507.00	71286131064
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	pyruvate	5	68195.2	507.00	69880950563
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	pyruvate	10	68195.2	507.00	69880950563
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	pyruvate	5	164987.3	507.00	69859142672
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	pyruvate	10	164987.3	507.00	69859142672
+pooled_10	Pool1_4	Not Applicable	Not Applicable	pyruvate	5	9381341.6	507.24	77853943855
+pooled_10	Pool1_4	Not Applicable	Not Applicable	pyruvate	10	9381341.6	507.24	77853943855
+pooled_11	Pool1_5	Not Applicable	Not Applicable	pyruvate	5	9817375.6	504.94	77988498071
+pooled_11	Pool1_5	Not Applicable	Not Applicable	pyruvate	10	9829636.7	504.94	77988498071
+pooled_12	Pool1_6	Not Applicable	Not Applicable	pyruvate	5	8409097.0	507.54	73866613161
+pooled_12	Pool1_6	Not Applicable	Not Applicable	pyruvate	10	8409097.0	507.54	73866613161
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	pyruvate	5	11709939.9	506.90	75589662197
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	pyruvate	10	11709939.9	506.90	75589662197
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	pyruvate	5	9971958.9	507.53	74553266127
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	pyruvate	10	9971958.9	507.53	74553266127
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	pyruvate	5	8309312.8	509.46	70825764115
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	pyruvate	10	8309312.8	509.46	70825764115
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	pyruvate	5	10574267.8	507.05	68396261652
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	pyruvate	10	10574267.8	507.05	68396261652
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	pyruvate	5	10811113.9	507.55	66909828861
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	pyruvate	10	10811113.9	507.55	66909828861
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	pyruvate	5	11103608.1	506.20	67722142626
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	pyruvate	10	11103608.1	506.20	67722142626
+pooled_7	Pool1_1	Not Applicable	Not Applicable	pyruvate	5	9084094.5	506.85	80035784138
+pooled_7	Pool1_1	Not Applicable	Not Applicable	pyruvate	10	9084094.5	506.85	80035784138
+pooled_8	Pool1_2	Not Applicable	Not Applicable	pyruvate	5	9355686.8	506.14	78589705479
+pooled_8	Pool1_2	Not Applicable	Not Applicable	pyruvate	10	9355686.8	506.14	78589705479
+pooled_9	Pool1_3	Not Applicable	Not Applicable	pyruvate	5	9939102.1	505.93	79404787529
+pooled_9	Pool1_3	Not Applicable	Not Applicable	pyruvate	10	9939102.1	505.93	79404787529
+C1	C1_KDExp	RNAi Control	LacZ	leucine	5	10634547.1	587.34	78587375507
+C1	C1_KDExp	RNAi Control	LacZ	leucine	10	10634547.1	587.34	78587375507
+C2	C2_KDExp	RNAi Control	LacZ	leucine	5	9280311.9	587.37	75050529828
+C2	C2_KDExp	RNAi Control	LacZ	leucine	10	9280311.9	587.37	75050529828
+C3	C3_KDExp	RNAi Control	LacZ	leucine	5	3634108.3	587.54	77514488408
+C3	C3_KDExp	RNAi Control	LacZ	leucine	10	3634108.3	587.54	77514488408
+C4	C4_KDExp	RNAi Control	LacZ	leucine	5	8053642.0	587.98	77283810937
+C4	C4_KDExp	RNAi Control	LacZ	leucine	10	8053642.0	587.98	77283810937
+C5	C5_KDExp	RNAi Control	LacZ	leucine	5	5295473.4	588.35	78148198625
+C5	C5_KDExp	RNAi Control	LacZ	leucine	10	5295473.4	588.35	78148198625
+D1	D1_KDExp	Wwox RNAi	LacZ	leucine	5	5827650.5	586.65	76823195347
+D1	D1_KDExp	Wwox RNAi	LacZ	leucine	10	5827650.5	586.65	76823195347
+D2	D2_KDExp	Wwox RNAi	LacZ	leucine	5	9256856.5	586.83	77616845301
+D2	D2_KDExp	Wwox RNAi	LacZ	leucine	10	9256856.5	586.83	77616845301
+D3	D3_KDExp	Wwox RNAi	LacZ	leucine	5	11780063.0	588.31	75045955676
+D3	D3_KDExp	Wwox RNAi	LacZ	leucine	10	11780063.0	588.31	75045955676
+D4	D4_KDExp	Wwox RNAi	LacZ	leucine	5	8090081.3	586.64	78252486569
+D4	D4_KDExp	Wwox RNAi	LacZ	leucine	10	8090081.3	586.64	78252486569
+D5	D5_KDExp	Wwox RNAi	LacZ	leucine	5	4619675.3	588.25	75259658073
+D5	D5_KDExp	Wwox RNAi	LacZ	leucine	10	4619675.3	588.25	75259658073
+G1	G1_KDExp	RNAi Control	AB42	leucine	5	8293462.5	586.89	77636841683
+G1	G1_KDExp	RNAi Control	AB42	leucine	10	8293462.5	586.89	77636841683
+G2	G2_KDExp	RNAi Control	AB42	leucine	5	11735584.5	586.87	74321981717
+G2	G2_KDExp	RNAi Control	AB42	leucine	10	11735584.5	586.87	74321981717
+G3	G3_KDExp	RNAi Control	AB42	leucine	5	7202752.9	587.26	79485462450
+G3	G3_KDExp	RNAi Control	AB42	leucine	10	7202752.9	587.26	79485462450
+G4	G4_KDExp	RNAi Control	AB42	leucine	5	7183355.8	586.93	75504738608
+G4	G4_KDExp	RNAi Control	AB42	leucine	10	7183355.8	586.93	75504738608
+G5	G5_KDExp	RNAi Control	AB42	leucine	5	5174145.5	586.17	78569703194
+G5	G5_KDExp	RNAi Control	AB42	leucine	10	5174145.5	586.17	78569703194
+H1	H1_KDExp	Wwox RNAi	AB42	leucine	5	5473839.7	586.63	75919573450
+H1	H1_KDExp	Wwox RNAi	AB42	leucine	10	5473839.7	586.63	75919573450
+H2	H2_KDExp	Wwox RNAi	AB42	leucine	5	3449542.4	588.20	78001196696
+H2	H2_KDExp	Wwox RNAi	AB42	leucine	10	3449542.4	588.20	78001196696
+H3	H3_KDExp	Wwox RNAi	AB42	leucine	5	4360808.3	587.26	76278124731
+H3	H3_KDExp	Wwox RNAi	AB42	leucine	10	4360808.3	587.26	76278124731
+H4	H4_KDExp	Wwox RNAi	AB42	leucine	5	5832647.2	586.28	79443297885
+H4	H4_KDExp	Wwox RNAi	AB42	leucine	10	5832647.2	586.28	79443297885
+H5	H5_KDExp	Wwox RNAi	AB42	leucine	5	2674320.3	586.96	74207473206
+H5	H5_KDExp	Wwox RNAi	AB42	leucine	10	2674320.3	586.96	74207473206
+I1	I1_OEExp	Control gRNA	LacZ	leucine	5	8161593.2	588.10	74382645183
+I1	I1_OEExp	Control gRNA	LacZ	leucine	10	8161593.2	588.10	74382645183
+I2	I2_OEExp	Control gRNA	LacZ	leucine	5	6147452.6	588.18	66652024118
+I2	I2_OEExp	Control gRNA	LacZ	leucine	10	6147452.6	588.18	66652024118
+I3	I3_OEExp	Control gRNA	LacZ	leucine	5	7521972.5	588.35	66557132626
+I3	I3_OEExp	Control gRNA	LacZ	leucine	10	7521972.5	588.35	66557132626
+I4	I4_OEExp	Control gRNA	LacZ	leucine	5	7141804.1	586.02	73224921914
+I4	I4_OEExp	Control gRNA	LacZ	leucine	10	7141804.1	586.02	73224921914
+I5	I5_OEExp	Control gRNA	LacZ	leucine	5	12472777.0	587.45	83394468956
+I5	I5_OEExp	Control gRNA	LacZ	leucine	10	12472777.0	587.45	83394468956
+J1	J1_OEExp	Wwox gRNA	LacZ	leucine	5	4948172.3	588.44	66156998187
+J1	J1_OEExp	Wwox gRNA	LacZ	leucine	10	4948172.3	588.44	66156998187
+J2	J2_OEExp	Wwox gRNA	LacZ	leucine	5	6772362.2	588.15	69356998249
+J2	J2_OEExp	Wwox gRNA	LacZ	leucine	10	6772362.2	588.15	69356998249
+J3	J3_OEExp	Wwox gRNA	LacZ	leucine	5	3159685.0	588.50	70939688012
+J3	J3_OEExp	Wwox gRNA	LacZ	leucine	10	3159685.0	588.50	70939688012
+J4	J4_OEExp	Wwox gRNA	LacZ	leucine	5	2745515.7	587.30	67533335357
+J4	J4_OEExp	Wwox gRNA	LacZ	leucine	10	2745515.7	587.30	67533335357
+J5	J5_OEExp	Wwox gRNA	LacZ	leucine	5	3096774.4	587.96	72977783165
+J5	J5_OEExp	Wwox gRNA	LacZ	leucine	10	3096774.4	587.96	72977783165
+K1	K1_OEExp	Control gRNA	AB42	leucine	5	3593025.3	586.38	74246380220
+K1	K1_OEExp	Control gRNA	AB42	leucine	10	3593025.3	586.38	74246380220
+K2	K2_OEExp	Control gRNA	AB42	leucine	5	7285976.4	587.75	65264738495
+K2	K2_OEExp	Control gRNA	AB42	leucine	10	7285976.4	587.75	65264738495
+K3	K3_OEExp	Control gRNA	AB42	leucine	5	7434562.4	587.31	70106919060
+K3	K3_OEExp	Control gRNA	AB42	leucine	10	7434562.4	587.31	70106919060
+K4	K4_OEExp	Control gRNA	AB42	leucine	5	6745040.4	588.36	69485749776
+K4	K4_OEExp	Control gRNA	AB42	leucine	10	6745040.4	588.36	69485749776
+K5	K5_OEExp	Control gRNA	AB42	leucine	5	5305595.6	588.10	85528412434
+K5	K5_OEExp	Control gRNA	AB42	leucine	10	5305595.6	588.10	85528412434
+L1	L1_OEExp	Wwox gRNA	AB42	leucine	5	5129024.8	587.99	73054612432
+L1	L1_OEExp	Wwox gRNA	AB42	leucine	10	5129024.8	587.99	73054612432
+L2	L2_OEExp	Wwox gRNA	AB42	leucine	5	4697161.7	586.41	69020431450
+L2	L2_OEExp	Wwox gRNA	AB42	leucine	10	4697161.7	586.41	69020431450
+L3	L3_OEExp	Wwox gRNA	AB42	leucine	5	7861749.4	586.77	70289160915
+L3	L3_OEExp	Wwox gRNA	AB42	leucine	10	7861749.4	586.77	70289160915
+L4	L4_OEExp	Wwox gRNA	AB42	leucine	5	4511617.5	587.36	71324975699
+L4	L4_OEExp	Wwox gRNA	AB42	leucine	10	4511617.5	587.36	71324975699
+L5	L5_OEExp	Wwox gRNA	AB42	leucine	5	4988626.6	588.61	80716298575
+L5	L5_OEExp	Wwox gRNA	AB42	leucine	10	4988626.6	588.61	80716298575
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	leucine	5	52391.1	588.00	79135534226
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	leucine	10	52391.1	588.00	79135534226
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	leucine	5	29545.6	588.00	79014597867
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	leucine	10	29545.6	588.00	79014597867
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	leucine	5	9818.0	588.00	79262381295
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	leucine	10	9818.0	588.00	79262381295
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	leucine	5	57328.9	588.00	71286131064
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	leucine	10	57328.9	588.00	71286131064
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	leucine	5	67004.6	588.00	69880950563
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	leucine	10	67004.6	588.00	69880950563
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	leucine	5	25609.5	588.00	69859142672
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	leucine	10	25609.5	588.00	69859142672
+pooled_10	Pool1_4	Not Applicable	Not Applicable	leucine	5	6690267.5	588.36	77853943855
+pooled_10	Pool1_4	Not Applicable	Not Applicable	leucine	10	6690267.5	588.36	77853943855
+pooled_11	Pool1_5	Not Applicable	Not Applicable	leucine	5	5714737.7	587.13	77988498071
+pooled_11	Pool1_5	Not Applicable	Not Applicable	leucine	10	5714737.7	587.13	77988498071
+pooled_12	Pool1_6	Not Applicable	Not Applicable	leucine	5	5997107.4	587.31	73866613161
+pooled_12	Pool1_6	Not Applicable	Not Applicable	leucine	10	5997107.4	587.31	73866613161
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	leucine	5	7751360.6	588.20	75589662197
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	leucine	10	7751360.6	588.20	75589662197
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	leucine	5	6976891.1	587.54	74553266127
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	leucine	10	6976891.1	587.54	74553266127
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	leucine	5	7121764.3	588.18	70825764115
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	leucine	10	7121764.3	588.18	70825764115
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	leucine	5	7426138.8	588.52	68396261652
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	leucine	10	7426138.8	588.52	68396261652
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	leucine	5	7089577.8	587.94	66909828861
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	leucine	10	7089577.8	587.94	66909828861
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	leucine	5	6549524.2	587.39	67722142626
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	leucine	10	6549524.2	587.39	67722142626
+pooled_7	Pool1_1	Not Applicable	Not Applicable	leucine	5	6269397.2	587.59	80035784138
+pooled_7	Pool1_1	Not Applicable	Not Applicable	leucine	10	6269397.2	587.59	80035784138
+pooled_8	Pool1_2	Not Applicable	Not Applicable	leucine	5	6210613.9	588.57	78589705479
+pooled_8	Pool1_2	Not Applicable	Not Applicable	leucine	10	6210613.9	588.57	78589705479
+pooled_9	Pool1_3	Not Applicable	Not Applicable	leucine	5	6476534.1	587.76	79404787529
+pooled_9	Pool1_3	Not Applicable	Not Applicable	leucine	10	6476534.1	587.76	79404787529
+C1	C1_KDExp	RNAi Control	LacZ	methionine	5	2329214.4	617.07	78587375507
+C1	C1_KDExp	RNAi Control	LacZ	methionine	10	2329214.4	617.07	78587375507
+C2	C2_KDExp	RNAi Control	LacZ	methionine	5	1690752.1	618.60	75050529828
+C2	C2_KDExp	RNAi Control	LacZ	methionine	10	1690752.1	618.60	75050529828
+C3	C3_KDExp	RNAi Control	LacZ	methionine	5	1439042.4	617.51	77514488408
+C3	C3_KDExp	RNAi Control	LacZ	methionine	10	1439042.4	617.51	77514488408
+C4	C4_KDExp	RNAi Control	LacZ	methionine	5	2512336.1	616.42	77283810937
+C4	C4_KDExp	RNAi Control	LacZ	methionine	10	2512336.1	616.42	77283810937
+C5	C5_KDExp	RNAi Control	LacZ	methionine	5	1159561.7	618.09	78148198625
+C5	C5_KDExp	RNAi Control	LacZ	methionine	10	1159561.7	618.09	78148198625
+D1	D1_KDExp	Wwox RNAi	LacZ	methionine	5	2089260.0	616.55	76823195347
+D1	D1_KDExp	Wwox RNAi	LacZ	methionine	10	2089260.0	616.55	76823195347
+D2	D2_KDExp	Wwox RNAi	LacZ	methionine	5	2806699.3	616.79	77616845301
+D2	D2_KDExp	Wwox RNAi	LacZ	methionine	10	2806699.3	616.79	77616845301
+D3	D3_KDExp	Wwox RNAi	LacZ	methionine	5	2877489.2	618.08	75045955676
+D3	D3_KDExp	Wwox RNAi	LacZ	methionine	10	2877489.2	618.08	75045955676
+D4	D4_KDExp	Wwox RNAi	LacZ	methionine	5	2067932.1	618.04	78252486569
+D4	D4_KDExp	Wwox RNAi	LacZ	methionine	10	2067932.1	618.04	78252486569
+D5	D5_KDExp	Wwox RNAi	LacZ	methionine	5	1354954.2	616.65	75259658073
+D5	D5_KDExp	Wwox RNAi	LacZ	methionine	10	1354954.2	616.65	75259658073
+G1	G1_KDExp	RNAi Control	AB42	methionine	5	1724024.3	616.63	77636841683
+G1	G1_KDExp	RNAi Control	AB42	methionine	10	1724024.3	616.63	77636841683
+G2	G2_KDExp	RNAi Control	AB42	methionine	5	2083929.3	619.54	74321981717
+G2	G2_KDExp	RNAi Control	AB42	methionine	10	2083929.3	619.54	74321981717
+G3	G3_KDExp	RNAi Control	AB42	methionine	5	2019713.3	616.98	79485462450
+G3	G3_KDExp	RNAi Control	AB42	methionine	10	2019713.3	616.98	79485462450
+G4	G4_KDExp	RNAi Control	AB42	methionine	5	1807236.7	618.15	75504738608
+G4	G4_KDExp	RNAi Control	AB42	methionine	10	1807236.7	618.15	75504738608
+G5	G5_KDExp	RNAi Control	AB42	methionine	5	1650861.1	617.38	78569703194
+G5	G5_KDExp	RNAi Control	AB42	methionine	10	1650861.1	617.38	78569703194
+H1	H1_KDExp	Wwox RNAi	AB42	methionine	5	1490844.4	619.37	75919573450
+H1	H1_KDExp	Wwox RNAi	AB42	methionine	10	1490844.4	619.37	75919573450
+H2	H2_KDExp	Wwox RNAi	AB42	methionine	5	1220348.4	619.26	78001196696
+H2	H2_KDExp	Wwox RNAi	AB42	methionine	10	1220348.4	619.26	78001196696
+H3	H3_KDExp	Wwox RNAi	AB42	methionine	5	965226.7	618.52	76278124731
+H3	H3_KDExp	Wwox RNAi	AB42	methionine	10	965226.7	618.52	76278124731
+H4	H4_KDExp	Wwox RNAi	AB42	methionine	5	3545467.4	617.50	79443297885
+H4	H4_KDExp	Wwox RNAi	AB42	methionine	10	3545467.4	617.50	79443297885
+H5	H5_KDExp	Wwox RNAi	AB42	methionine	5	583441.0	618.34	74207473206
+H5	H5_KDExp	Wwox RNAi	AB42	methionine	10	583441.0	618.34	74207473206
+I1	I1_OEExp	Control gRNA	LacZ	methionine	5	2257963.5	619.39	74382645183
+I1	I1_OEExp	Control gRNA	LacZ	methionine	10	2257963.5	619.39	74382645183
+I2	I2_OEExp	Control gRNA	LacZ	methionine	5	1985713.5	618.29	66652024118
+I2	I2_OEExp	Control gRNA	LacZ	methionine	10	1985713.5	618.29	66652024118
+I3	I3_OEExp	Control gRNA	LacZ	methionine	5	1923069.8	619.55	66557132626
+I3	I3_OEExp	Control gRNA	LacZ	methionine	10	1923069.8	619.55	66557132626
+I4	I4_OEExp	Control gRNA	LacZ	methionine	5	2109420.2	617.36	73224921914
+I4	I4_OEExp	Control gRNA	LacZ	methionine	10	2109420.2	617.36	73224921914
+I5	I5_OEExp	Control gRNA	LacZ	methionine	5	2737037.9	617.39	83394468956
+I5	I5_OEExp	Control gRNA	LacZ	methionine	10	2737037.9	617.39	83394468956
+J1	J1_OEExp	Wwox gRNA	LacZ	methionine	5	1093967.6	618.45	66156998187
+J1	J1_OEExp	Wwox gRNA	LacZ	methionine	10	1093967.6	618.45	66156998187
+J2	J2_OEExp	Wwox gRNA	LacZ	methionine	5	1394127.7	618.06	69356998249
+J2	J2_OEExp	Wwox gRNA	LacZ	methionine	10	1394127.7	618.06	69356998249
+J3	J3_OEExp	Wwox gRNA	LacZ	methionine	5	470300.8	616.93	70939688012
+J3	J3_OEExp	Wwox gRNA	LacZ	methionine	10	470300.8	616.93	70939688012
+J4	J4_OEExp	Wwox gRNA	LacZ	methionine	5	449166.7	619.93	67533335357
+J4	J4_OEExp	Wwox gRNA	LacZ	methionine	10	449166.7	619.93	67533335357
+J5	J5_OEExp	Wwox gRNA	LacZ	methionine	5	331906.0	619.35	72977783165
+J5	J5_OEExp	Wwox gRNA	LacZ	methionine	10	331906.0	619.35	72977783165
+K1	K1_OEExp	Control gRNA	AB42	methionine	5	931817.9	619.02	74246380220
+K1	K1_OEExp	Control gRNA	AB42	methionine	10	931817.9	619.02	74246380220
+K2	K2_OEExp	Control gRNA	AB42	methionine	5	1391388.1	617.67	65264738495
+K2	K2_OEExp	Control gRNA	AB42	methionine	10	1391388.1	617.67	65264738495
+K3	K3_OEExp	Control gRNA	AB42	methionine	5	1418346.0	617.20	70106919060
+K3	K3_OEExp	Control gRNA	AB42	methionine	10	1418346.0	617.20	70106919060
+K4	K4_OEExp	Control gRNA	AB42	methionine	5	1150759.1	619.47	69485749776
+K4	K4_OEExp	Control gRNA	AB42	methionine	10	1150759.1	619.47	69485749776
+K5	K5_OEExp	Control gRNA	AB42	methionine	5	1409636.2	617.73	85528412434
+K5	K5_OEExp	Control gRNA	AB42	methionine	10	1409636.2	617.73	85528412434
+L1	L1_OEExp	Wwox gRNA	AB42	methionine	5	1048004.1	619.35	73054612432
+L1	L1_OEExp	Wwox gRNA	AB42	methionine	10	1048004.1	619.35	73054612432
+L2	L2_OEExp	Wwox gRNA	AB42	methionine	5	1348911.9	617.83	69020431450
+L2	L2_OEExp	Wwox gRNA	AB42	methionine	10	1348911.9	617.83	69020431450
+L3	L3_OEExp	Wwox gRNA	AB42	methionine	5	1197609.2	616.82	70289160915
+L3	L3_OEExp	Wwox gRNA	AB42	methionine	10	1197609.2	616.82	70289160915
+L4	L4_OEExp	Wwox gRNA	AB42	methionine	5	1236321.7	618.69	71324975699
+L4	L4_OEExp	Wwox gRNA	AB42	methionine	10	1236321.7	618.69	71324975699
+L5	L5_OEExp	Wwox gRNA	AB42	methionine	5	981089.2	618.42	80716298575
+L5	L5_OEExp	Wwox gRNA	AB42	methionine	10	981089.2	618.42	80716298575
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	methionine	5	0.0	618.00	79135534226
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	methionine	10	0.0	618.00	79135534226
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	methionine	5	4952.9	618.00	79014597867
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	methionine	10	4952.9	618.00	79014597867
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	methionine	5	0.0	618.00	79262381295
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	methionine	10	0.0	618.00	79262381295
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	methionine	5	0.0	618.00	71286131064
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	methionine	10	0.0	618.00	71286131064
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	methionine	5	0.0	618.00	69880950563
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	methionine	10	0.0	618.00	69880950563
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	methionine	5	3110.3	618.00	69859142672
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	methionine	10	3110.3	618.00	69859142672
+pooled_10	Pool1_4	Not Applicable	Not Applicable	methionine	5	1494548.5	618.13	77853943855
+pooled_10	Pool1_4	Not Applicable	Not Applicable	methionine	10	1494548.5	618.13	77853943855
+pooled_11	Pool1_5	Not Applicable	Not Applicable	methionine	5	1493105.1	617.08	77988498071
+pooled_11	Pool1_5	Not Applicable	Not Applicable	methionine	10	1493105.1	617.08	77988498071
+pooled_12	Pool1_6	Not Applicable	Not Applicable	methionine	5	1215488.2	618.77	73866613161
+pooled_12	Pool1_6	Not Applicable	Not Applicable	methionine	10	1215488.2	618.77	73866613161
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	methionine	5	1989250.0	618.01	75589662197
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	methionine	10	1989250.0	618.01	75589662197
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	methionine	5	1599816.2	617.42	74553266127
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	methionine	10	1599816.2	617.42	74553266127
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	methionine	5	1417625.6	620.77	70825764115
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	methionine	10	1417625.6	620.77	70825764115
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	methionine	5	1774733.2	617.13	68396261652
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	methionine	10	1774733.2	617.13	68396261652
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	methionine	5	1760714.1	619.14	66909828861
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	methionine	10	1760714.1	619.14	66909828861
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	methionine	5	1729441.5	618.75	67722142626
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	methionine	10	1729441.5	618.75	67722142626
+pooled_7	Pool1_1	Not Applicable	Not Applicable	methionine	5	1404293.8	617.53	80035784138
+pooled_7	Pool1_1	Not Applicable	Not Applicable	methionine	10	1404293.8	617.53	80035784138
+pooled_8	Pool1_2	Not Applicable	Not Applicable	methionine	5	1315053.2	616.87	78589705479
+pooled_8	Pool1_2	Not Applicable	Not Applicable	methionine	10	1315053.2	616.87	78589705479
+pooled_9	Pool1_3	Not Applicable	Not Applicable	methionine	5	1396696.6	618.95	79404787529
+pooled_9	Pool1_3	Not Applicable	Not Applicable	methionine	10	1396696.6	618.95	79404787529
+C1	C1_KDExp	RNAi Control	LacZ	aspartate	5	94590671.9	745.23	78587375507
+C1	C1_KDExp	RNAi Control	LacZ	aspartate	10	94590671.9	745.23	78587375507
+C2	C2_KDExp	RNAi Control	LacZ	aspartate	5	75244765.1	744.51	75050529828
+C2	C2_KDExp	RNAi Control	LacZ	aspartate	10	75244765.1	744.51	75050529828
+C3	C3_KDExp	RNAi Control	LacZ	aspartate	5	86560285.3	745.42	77514488408
+C3	C3_KDExp	RNAi Control	LacZ	aspartate	10	86560285.3	745.42	77514488408
+C4	C4_KDExp	RNAi Control	LacZ	aspartate	5	84043224.3	745.63	77283810937
+C4	C4_KDExp	RNAi Control	LacZ	aspartate	10	84043224.3	745.63	77283810937
+C5	C5_KDExp	RNAi Control	LacZ	aspartate	5	92743471.4	744.71	78148198625
+C5	C5_KDExp	RNAi Control	LacZ	aspartate	10	92743471.4	744.71	78148198625
+D1	D1_KDExp	Wwox RNAi	LacZ	aspartate	5	71933489.1	744.78	76823195347
+D1	D1_KDExp	Wwox RNAi	LacZ	aspartate	10	71933489.1	744.78	76823195347
+D2	D2_KDExp	Wwox RNAi	LacZ	aspartate	5	111073759.3	745.31	77616845301
+D2	D2_KDExp	Wwox RNAi	LacZ	aspartate	10	111073759.3	745.31	77616845301
+D3	D3_KDExp	Wwox RNAi	LacZ	aspartate	5	72851526.7	744.61	75045955676
+D3	D3_KDExp	Wwox RNAi	LacZ	aspartate	10	72851526.7	744.61	75045955676
+D4	D4_KDExp	Wwox RNAi	LacZ	aspartate	5	4889466.7	745.36	78252486569
+D4	D4_KDExp	Wwox RNAi	LacZ	aspartate	10	4889466.7	745.36	78252486569
+D5	D5_KDExp	Wwox RNAi	LacZ	aspartate	5	90389506.4	745.66	75259658073
+D5	D5_KDExp	Wwox RNAi	LacZ	aspartate	10	90389506.4	745.66	75259658073
+G1	G1_KDExp	RNAi Control	AB42	aspartate	5	92237945.4	744.41	77636841683
+G1	G1_KDExp	RNAi Control	AB42	aspartate	10	92237945.4	744.41	77636841683
+G2	G2_KDExp	RNAi Control	AB42	aspartate	5	106508795.6	745.00	74321981717
+G2	G2_KDExp	RNAi Control	AB42	aspartate	10	106508795.6	745.00	74321981717
+G3	G3_KDExp	RNAi Control	AB42	aspartate	5	106009188.3	744.79	79485462450
+G3	G3_KDExp	RNAi Control	AB42	aspartate	10	106009188.3	744.79	79485462450
+G4	G4_KDExp	RNAi Control	AB42	aspartate	5	105492469.8	745.61	75504738608
+G4	G4_KDExp	RNAi Control	AB42	aspartate	10	105492469.8	745.61	75504738608
+G5	G5_KDExp	RNAi Control	AB42	aspartate	5	91655200.3	744.10	78569703194
+G5	G5_KDExp	RNAi Control	AB42	aspartate	10	91655200.3	744.10	78569703194
+H1	H1_KDExp	Wwox RNAi	AB42	aspartate	5	100201928.3	745.34	75919573450
+H1	H1_KDExp	Wwox RNAi	AB42	aspartate	10	100201928.3	745.34	75919573450
+H2	H2_KDExp	Wwox RNAi	AB42	aspartate	5	77352354.2	745.53	78001196696
+H2	H2_KDExp	Wwox RNAi	AB42	aspartate	10	77352354.2	745.53	78001196696
+H3	H3_KDExp	Wwox RNAi	AB42	aspartate	5	106016884.6	744.79	76278124731
+H3	H3_KDExp	Wwox RNAi	AB42	aspartate	10	106016884.6	744.79	76278124731
+H4	H4_KDExp	Wwox RNAi	AB42	aspartate	5	101251962.7	745.48	79443297885
+H4	H4_KDExp	Wwox RNAi	AB42	aspartate	10	101251962.7	745.48	79443297885
+H5	H5_KDExp	Wwox RNAi	AB42	aspartate	5	89818104.8	744.54	74207473206
+H5	H5_KDExp	Wwox RNAi	AB42	aspartate	10	89818104.8	744.54	74207473206
+I1	I1_OEExp	Control gRNA	LacZ	aspartate	5	88452010.4	745.78	74382645183
+I1	I1_OEExp	Control gRNA	LacZ	aspartate	10	88452010.4	745.78	74382645183
+I2	I2_OEExp	Control gRNA	LacZ	aspartate	5	89291408.7	745.12	66652024118
+I2	I2_OEExp	Control gRNA	LacZ	aspartate	10	89291408.7	745.12	66652024118
+I3	I3_OEExp	Control gRNA	LacZ	aspartate	5	75046022.3	745.83	66557132626
+I3	I3_OEExp	Control gRNA	LacZ	aspartate	10	75046022.3	745.83	66557132626
+I4	I4_OEExp	Control gRNA	LacZ	aspartate	5	59042859.1	746.02	73224921914
+I4	I4_OEExp	Control gRNA	LacZ	aspartate	10	59042859.1	746.02	73224921914
+I5	I5_OEExp	Control gRNA	LacZ	aspartate	5	57792750.3	745.46	83394468956
+I5	I5_OEExp	Control gRNA	LacZ	aspartate	10	57792750.3	745.46	83394468956
+J1	J1_OEExp	Wwox gRNA	LacZ	aspartate	5	49140591.7	746.27	66156998187
+J1	J1_OEExp	Wwox gRNA	LacZ	aspartate	10	49140591.7	746.27	66156998187
+J2	J2_OEExp	Wwox gRNA	LacZ	aspartate	5	84173117.5	745.18	69356998249
+J2	J2_OEExp	Wwox gRNA	LacZ	aspartate	10	84173117.5	745.18	69356998249
+J3	J3_OEExp	Wwox gRNA	LacZ	aspartate	5	77604166.9	745.32	70939688012
+J3	J3_OEExp	Wwox gRNA	LacZ	aspartate	10	77604166.9	745.32	70939688012
+J4	J4_OEExp	Wwox gRNA	LacZ	aspartate	5	77206299.0	744.95	67533335357
+J4	J4_OEExp	Wwox gRNA	LacZ	aspartate	10	77206299.0	744.95	67533335357
+J5	J5_OEExp	Wwox gRNA	LacZ	aspartate	5	98129754.1	745.29	72977783165
+J5	J5_OEExp	Wwox gRNA	LacZ	aspartate	10	98129754.1	745.29	72977783165
+K1	K1_OEExp	Control gRNA	AB42	aspartate	5	71364501.4	745.23	74246380220
+K1	K1_OEExp	Control gRNA	AB42	aspartate	10	71364501.4	745.23	74246380220
+K2	K2_OEExp	Control gRNA	AB42	aspartate	5	82376099.7	746.03	65264738495
+K2	K2_OEExp	Control gRNA	AB42	aspartate	10	82376099.7	746.03	65264738495
+K3	K3_OEExp	Control gRNA	AB42	aspartate	5	83825846.2	745.23	70106919060
+K3	K3_OEExp	Control gRNA	AB42	aspartate	10	83825846.2	745.23	70106919060
+K4	K4_OEExp	Control gRNA	AB42	aspartate	5	110104180.6	745.48	69485749776
+K4	K4_OEExp	Control gRNA	AB42	aspartate	10	110104180.6	745.48	69485749776
+K5	K5_OEExp	Control gRNA	AB42	aspartate	5	78895067.6	745.12	85528412434
+K5	K5_OEExp	Control gRNA	AB42	aspartate	10	78895067.6	745.12	85528412434
+L1	L1_OEExp	Wwox gRNA	AB42	aspartate	5	44311621.9	746.42	73054612432
+L1	L1_OEExp	Wwox gRNA	AB42	aspartate	10	44311621.9	746.42	73054612432
+L2	L2_OEExp	Wwox gRNA	AB42	aspartate	5	94107407.7	745.92	69020431450
+L2	L2_OEExp	Wwox gRNA	AB42	aspartate	10	94107407.7	745.92	69020431450
+L3	L3_OEExp	Wwox gRNA	AB42	aspartate	5	77074837.4	745.17	70289160915
+L3	L3_OEExp	Wwox gRNA	AB42	aspartate	10	77074837.4	745.17	70289160915
+L4	L4_OEExp	Wwox gRNA	AB42	aspartate	5	47862835.6	746.29	71324975699
+L4	L4_OEExp	Wwox gRNA	AB42	aspartate	10	47862835.6	746.29	71324975699
+L5	L5_OEExp	Wwox gRNA	AB42	aspartate	5	55546386.8	744.99	80716298575
+L5	L5_OEExp	Wwox gRNA	AB42	aspartate	10	55546386.8	744.99	80716298575
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	aspartate	5	10377.6	745.00	79135534226
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	aspartate	10	10377.6	745.00	79135534226
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	aspartate	5	2355.3	745.00	79014597867
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	aspartate	10	2355.3	745.00	79014597867
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	aspartate	5	16641.1	745.00	79262381295
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	aspartate	10	16641.1	745.00	79262381295
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	aspartate	5	46931.5	745.00	71286131064
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	aspartate	10	46931.5	745.00	71286131064
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	aspartate	5	73755.1	745.00	69880950563
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	aspartate	10	73755.1	745.00	69880950563
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	aspartate	5	159152.7	745.00	69859142672
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	aspartate	10	159152.7	745.00	69859142672
+pooled_10	Pool1_4	Not Applicable	Not Applicable	aspartate	5	73735445.0	745.65	77853943855
+pooled_10	Pool1_4	Not Applicable	Not Applicable	aspartate	10	73735445.0	745.65	77853943855
+pooled_11	Pool1_5	Not Applicable	Not Applicable	aspartate	5	72052156.1	745.99	77988498071
+pooled_11	Pool1_5	Not Applicable	Not Applicable	aspartate	10	72052156.1	745.99	77988498071
+pooled_12	Pool1_6	Not Applicable	Not Applicable	aspartate	5	72217066.0	745.78	73866613161
+pooled_12	Pool1_6	Not Applicable	Not Applicable	aspartate	10	72217066.0	745.78	73866613161
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	aspartate	5	92934061.3	745.19	75589662197
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	aspartate	10	92934061.3	745.19	75589662197
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	aspartate	5	91716311.3	744.33	74553266127
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	aspartate	10	91716311.3	744.33	74553266127
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	aspartate	5	94837287.5	744.08	70825764115
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	aspartate	10	94837287.5	744.08	70825764115
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	aspartate	5	94631097.1	745.70	68396261652
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	aspartate	10	94631097.1	745.70	68396261652
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	aspartate	5	93827359.4	745.22	66909828861
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	aspartate	10	93827359.4	745.22	66909828861
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	aspartate	5	95955987.4	745.28	67722142626
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	aspartate	10	95955987.4	745.28	67722142626
+pooled_7	Pool1_1	Not Applicable	Not Applicable	aspartate	5	73381651.6	746.14	80035784138
+pooled_7	Pool1_1	Not Applicable	Not Applicable	aspartate	10	73381651.6	746.14	80035784138
+pooled_8	Pool1_2	Not Applicable	Not Applicable	aspartate	5	73588786.0	745.42	78589705479
+pooled_8	Pool1_2	Not Applicable	Not Applicable	aspartate	10	73588786.0	745.42	78589705479
+pooled_9	Pool1_3	Not Applicable	Not Applicable	aspartate	5	76218870.8	745.35	79404787529
+pooled_9	Pool1_3	Not Applicable	Not Applicable	aspartate	10	76218870.8	745.35	79404787529
+C1	C1_KDExp	RNAi Control	LacZ	phenylalanine	5	5921802.7	556.77	78587375507
+C1	C1_KDExp	RNAi Control	LacZ	phenylalanine	10	5921802.7	556.77	78587375507
+C2	C2_KDExp	RNAi Control	LacZ	phenylalanine	5	5737926.6	556.33	75050529828
+C2	C2_KDExp	RNAi Control	LacZ	phenylalanine	10	5737926.6	556.33	75050529828
+C3	C3_KDExp	RNAi Control	LacZ	phenylalanine	5	3313166.5	555.24	77514488408
+C3	C3_KDExp	RNAi Control	LacZ	phenylalanine	10	3313166.5	555.24	77514488408
+C4	C4_KDExp	RNAi Control	LacZ	phenylalanine	5	6240858.4	554.27	77283810937
+C4	C4_KDExp	RNAi Control	LacZ	phenylalanine	10	6240858.4	554.27	77283810937
+C5	C5_KDExp	RNAi Control	LacZ	phenylalanine	5	4075309.7	556.07	78148198625
+C5	C5_KDExp	RNAi Control	LacZ	phenylalanine	10	4075309.7	556.07	78148198625
+D1	D1_KDExp	Wwox RNAi	LacZ	phenylalanine	5	3813383.6	554.26	76823195347
+D1	D1_KDExp	Wwox RNAi	LacZ	phenylalanine	10	3813383.6	554.26	76823195347
+D2	D2_KDExp	Wwox RNAi	LacZ	phenylalanine	5	4954914.0	555.80	77616845301
+D2	D2_KDExp	Wwox RNAi	LacZ	phenylalanine	10	4954914.0	555.80	77616845301
+D3	D3_KDExp	Wwox RNAi	LacZ	phenylalanine	5	6277157.6	555.85	75045955676
+D3	D3_KDExp	Wwox RNAi	LacZ	phenylalanine	10	6277157.6	555.85	75045955676
+D4	D4_KDExp	Wwox RNAi	LacZ	phenylalanine	5	4838092.1	557.17	78252486569
+D4	D4_KDExp	Wwox RNAi	LacZ	phenylalanine	10	4838092.1	557.17	78252486569
+D5	D5_KDExp	Wwox RNAi	LacZ	phenylalanine	5	2560016.0	555.70	75259658073
+D5	D5_KDExp	Wwox RNAi	LacZ	phenylalanine	10	2560016.0	555.70	75259658073
+G1	G1_KDExp	RNAi Control	AB42	phenylalanine	5	5184752.8	555.89	77636841683
+G1	G1_KDExp	RNAi Control	AB42	phenylalanine	10	5184752.8	555.89	77636841683
+G2	G2_KDExp	RNAi Control	AB42	phenylalanine	5	6847212.5	555.85	74321981717
+G2	G2_KDExp	RNAi Control	AB42	phenylalanine	10	6847212.5	555.85	74321981717
+G3	G3_KDExp	RNAi Control	AB42	phenylalanine	5	5111014.4	554.99	79485462450
+G3	G3_KDExp	RNAi Control	AB42	phenylalanine	10	5111014.4	554.99	79485462450
+G4	G4_KDExp	RNAi Control	AB42	phenylalanine	5	4816663.4	554.63	75504738608
+G4	G4_KDExp	RNAi Control	AB42	phenylalanine	10	4816663.4	554.63	75504738608
+G5	G5_KDExp	RNAi Control	AB42	phenylalanine	5	3850669.2	555.18	78569703194
+G5	G5_KDExp	RNAi Control	AB42	phenylalanine	10	3850669.2	555.18	78569703194
+H1	H1_KDExp	Wwox RNAi	AB42	phenylalanine	5	3312496.8	555.72	75919573450
+H1	H1_KDExp	Wwox RNAi	AB42	phenylalanine	10	3312496.8	555.72	75919573450
+H2	H2_KDExp	Wwox RNAi	AB42	phenylalanine	5	2653816.1	555.71	78001196696
+H2	H2_KDExp	Wwox RNAi	AB42	phenylalanine	10	2653816.1	555.71	78001196696
+H3	H3_KDExp	Wwox RNAi	AB42	phenylalanine	5	2710218.3	554.80	76278124731
+H3	H3_KDExp	Wwox RNAi	AB42	phenylalanine	10	2710218.3	554.80	76278124731
+H4	H4_KDExp	Wwox RNAi	AB42	phenylalanine	5	3421070.9	555.30	79443297885
+H4	H4_KDExp	Wwox RNAi	AB42	phenylalanine	10	3421070.9	555.30	79443297885
+H5	H5_KDExp	Wwox RNAi	AB42	phenylalanine	5	2101680.8	554.56	74207473206
+H5	H5_KDExp	Wwox RNAi	AB42	phenylalanine	10	2101680.8	554.56	74207473206
+I1	I1_OEExp	Control gRNA	LacZ	phenylalanine	5	4028637.8	557.10	74382645183
+I1	I1_OEExp	Control gRNA	LacZ	phenylalanine	10	4028637.8	557.10	74382645183
+I2	I2_OEExp	Control gRNA	LacZ	phenylalanine	5	3643086.1	556.92	66652024118
+I2	I2_OEExp	Control gRNA	LacZ	phenylalanine	10	3643086.1	556.92	66652024118
+I3	I3_OEExp	Control gRNA	LacZ	phenylalanine	5	3852834.3	555.75	66557132626
+I3	I3_OEExp	Control gRNA	LacZ	phenylalanine	10	3852834.3	555.75	66557132626
+I4	I4_OEExp	Control gRNA	LacZ	phenylalanine	5	4007828.4	554.97	73224921914
+I4	I4_OEExp	Control gRNA	LacZ	phenylalanine	10	4007828.4	554.97	73224921914
+I5	I5_OEExp	Control gRNA	LacZ	phenylalanine	5	6270829.9	555.40	83394468956
+I5	I5_OEExp	Control gRNA	LacZ	phenylalanine	10	6270829.9	555.40	83394468956
+J1	J1_OEExp	Wwox gRNA	LacZ	phenylalanine	5	2699535.6	554.52	66156998187
+J1	J1_OEExp	Wwox gRNA	LacZ	phenylalanine	10	2699535.6	554.52	66156998187
+J2	J2_OEExp	Wwox gRNA	LacZ	phenylalanine	5	3476102.3	555.59	69356998249
+J2	J2_OEExp	Wwox gRNA	LacZ	phenylalanine	10	3476102.3	555.59	69356998249
+J3	J3_OEExp	Wwox gRNA	LacZ	phenylalanine	5	2354424.3	555.95	70939688012
+J3	J3_OEExp	Wwox gRNA	LacZ	phenylalanine	10	2354424.3	555.95	70939688012
+J4	J4_OEExp	Wwox gRNA	LacZ	phenylalanine	5	2600387.8	556.17	67533335357
+J4	J4_OEExp	Wwox gRNA	LacZ	phenylalanine	10	2600387.8	556.17	67533335357
+J5	J5_OEExp	Wwox gRNA	LacZ	phenylalanine	5	2720879.9	556.85	72977783165
+J5	J5_OEExp	Wwox gRNA	LacZ	phenylalanine	10	2720879.9	556.85	72977783165
+K1	K1_OEExp	Control gRNA	AB42	phenylalanine	5	2534705.7	556.59	74246380220
+K1	K1_OEExp	Control gRNA	AB42	phenylalanine	10	2534705.7	556.59	74246380220
+K2	K2_OEExp	Control gRNA	AB42	phenylalanine	5	3326994.2	555.34	65264738495
+K2	K2_OEExp	Control gRNA	AB42	phenylalanine	10	3326994.2	555.34	65264738495
+K3	K3_OEExp	Control gRNA	AB42	phenylalanine	5	3417768.5	554.92	70106919060
+K3	K3_OEExp	Control gRNA	AB42	phenylalanine	10	3417768.5	554.92	70106919060
+K4	K4_OEExp	Control gRNA	AB42	phenylalanine	5	3829616.3	555.97	69485749776
+K4	K4_OEExp	Control gRNA	AB42	phenylalanine	10	3829616.3	555.97	69485749776
+K5	K5_OEExp	Control gRNA	AB42	phenylalanine	5	3155083.6	554.74	85528412434
+K5	K5_OEExp	Control gRNA	AB42	phenylalanine	10	3155083.6	554.74	85528412434
+L1	L1_OEExp	Wwox gRNA	AB42	phenylalanine	5	3056348.3	554.36	73054612432
+L1	L1_OEExp	Wwox gRNA	AB42	phenylalanine	10	3056348.3	554.36	73054612432
+L2	L2_OEExp	Wwox gRNA	AB42	phenylalanine	5	2670709.4	556.74	69020431450
+L2	L2_OEExp	Wwox gRNA	AB42	phenylalanine	10	2670709.4	556.74	69020431450
+L3	L3_OEExp	Wwox gRNA	AB42	phenylalanine	5	4004169.7	555.88	70289160915
+L3	L3_OEExp	Wwox gRNA	AB42	phenylalanine	10	4004169.7	555.88	70289160915
+L4	L4_OEExp	Wwox gRNA	AB42	phenylalanine	5	2629965.5	555.04	71324975699
+L4	L4_OEExp	Wwox gRNA	AB42	phenylalanine	10	2629965.5	555.04	71324975699
+L5	L5_OEExp	Wwox gRNA	AB42	phenylalanine	5	2711797.4	555.28	80716298575
+L5	L5_OEExp	Wwox gRNA	AB42	phenylalanine	10	2711797.4	555.28	80716298575
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	phenylalanine	5	10172.7	556.00	79135534226
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	phenylalanine	10	10172.7	556.00	79135534226
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	phenylalanine	5	0.0	556.00	79014597867
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	phenylalanine	10	0.0	556.00	79014597867
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	phenylalanine	5	4206.3	556.00	79262381295
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	phenylalanine	10	4206.3	556.00	79262381295
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	phenylalanine	5	14535.4	556.00	71286131064
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	phenylalanine	10	14535.4	556.00	71286131064
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	phenylalanine	5	17986.0	556.00	69880950563
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	phenylalanine	10	17986.0	556.00	69880950563
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	phenylalanine	5	20912.3	556.00	69859142672
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	phenylalanine	10	20912.3	556.00	69859142672
+pooled_10	Pool1_4	Not Applicable	Not Applicable	phenylalanine	5	3418116.1	557.17	77853943855
+pooled_10	Pool1_4	Not Applicable	Not Applicable	phenylalanine	10	3418116.1	557.17	77853943855
+pooled_11	Pool1_5	Not Applicable	Not Applicable	phenylalanine	5	3136593.3	556.32	77988498071
+pooled_11	Pool1_5	Not Applicable	Not Applicable	phenylalanine	10	3136593.3	556.32	77988498071
+pooled_12	Pool1_6	Not Applicable	Not Applicable	phenylalanine	5	2867392.1	557.91	73866613161
+pooled_12	Pool1_6	Not Applicable	Not Applicable	phenylalanine	10	2867392.1	557.91	73866613161
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	phenylalanine	5	4663503.5	555.69	75589662197
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	phenylalanine	10	4663503.5	555.69	75589662197
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	phenylalanine	5	4128656.6	555.06	74553266127
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	phenylalanine	10	4128656.6	555.06	74553266127
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	phenylalanine	5	3902072.0	558.56	70825764115
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	phenylalanine	10	3902072.0	558.56	70825764115
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	phenylalanine	5	4111057.3	557.41	68396261652
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	phenylalanine	10	4111057.3	557.41	68396261652
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	phenylalanine	5	4219883.8	556.64	66909828861
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	phenylalanine	10	4219883.8	556.64	66909828861
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	phenylalanine	5	4374947.7	556.30	67722142626
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	phenylalanine	10	4374947.7	556.30	67722142626
+pooled_7	Pool1_1	Not Applicable	Not Applicable	phenylalanine	5	3185163.3	556.96	80035784138
+pooled_7	Pool1_1	Not Applicable	Not Applicable	phenylalanine	10	3185163.3	556.96	80035784138
+pooled_8	Pool1_2	Not Applicable	Not Applicable	phenylalanine	5	3255737.6	556.11	78589705479
+pooled_8	Pool1_2	Not Applicable	Not Applicable	phenylalanine	10	3255737.6	556.11	78589705479
+pooled_9	Pool1_3	Not Applicable	Not Applicable	phenylalanine	5	3417261.4	556.93	79404787529
+pooled_9	Pool1_3	Not Applicable	Not Applicable	phenylalanine	10	3417261.4	556.93	79404787529
+C1	C1_KDExp	RNAi Control	LacZ	tryptophan	5	180557.2	631.58	78587375507
+C1	C1_KDExp	RNAi Control	LacZ	tryptophan	10	180557.2	631.58	78587375507
+C2	C2_KDExp	RNAi Control	LacZ	tryptophan	5	64687.2	633.16	75050529828
+C2	C2_KDExp	RNAi Control	LacZ	tryptophan	10	64687.2	633.16	75050529828
+C3	C3_KDExp	RNAi Control	LacZ	tryptophan	5	93952.0	633.52	77514488408
+C3	C3_KDExp	RNAi Control	LacZ	tryptophan	10	93952.0	633.52	77514488408
+C4	C4_KDExp	RNAi Control	LacZ	tryptophan	5	74358.3	633.67	77283810937
+C4	C4_KDExp	RNAi Control	LacZ	tryptophan	10	74358.3	633.67	77283810937
+C5	C5_KDExp	RNAi Control	LacZ	tryptophan	5	59630.2	633.88	78148198625
+C5	C5_KDExp	RNAi Control	LacZ	tryptophan	10	59630.2	633.88	78148198625
+D1	D1_KDExp	Wwox RNAi	LacZ	tryptophan	5	90480.0	634.19	76823195347
+D1	D1_KDExp	Wwox RNAi	LacZ	tryptophan	10	90480.0	634.19	76823195347
+D2	D2_KDExp	Wwox RNAi	LacZ	tryptophan	5	170340.3	631.47	77616845301
+D2	D2_KDExp	Wwox RNAi	LacZ	tryptophan	10	170340.3	631.47	77616845301
+D3	D3_KDExp	Wwox RNAi	LacZ	tryptophan	5	88215.9	633.93	75045955676
+D3	D3_KDExp	Wwox RNAi	LacZ	tryptophan	10	88215.9	633.93	75045955676
+D4	D4_KDExp	Wwox RNAi	LacZ	tryptophan	5	46491.3	635.29	78252486569
+D4	D4_KDExp	Wwox RNAi	LacZ	tryptophan	10	46491.3	635.29	78252486569
+D5	D5_KDExp	Wwox RNAi	LacZ	tryptophan	5	20795.9	636.52	75259658073
+D5	D5_KDExp	Wwox RNAi	LacZ	tryptophan	10	20795.9	636.52	75259658073
+G1	G1_KDExp	RNAi Control	AB42	tryptophan	5	289884.1	631.23	77636841683
+G1	G1_KDExp	RNAi Control	AB42	tryptophan	10	289884.1	631.23	77636841683
+G2	G2_KDExp	RNAi Control	AB42	tryptophan	5	42927.6	634.43	74321981717
+G2	G2_KDExp	RNAi Control	AB42	tryptophan	10	42927.6	634.43	74321981717
+G3	G3_KDExp	RNAi Control	AB42	tryptophan	5	70609.7	633.15	79485462450
+G3	G3_KDExp	RNAi Control	AB42	tryptophan	10	70609.7	633.15	79485462450
+G4	G4_KDExp	RNAi Control	AB42	tryptophan	5	95603.8	633.99	75504738608
+G4	G4_KDExp	RNAi Control	AB42	tryptophan	10	95603.8	633.99	75504738608
+G5	G5_KDExp	RNAi Control	AB42	tryptophan	5	34281.0	635.92	78569703194
+G5	G5_KDExp	RNAi Control	AB42	tryptophan	10	34281.0	635.92	78569703194
+H1	H1_KDExp	Wwox RNAi	AB42	tryptophan	5	72188.7	634.12	75919573450
+H1	H1_KDExp	Wwox RNAi	AB42	tryptophan	10	72188.7	634.12	75919573450
+H2	H2_KDExp	Wwox RNAi	AB42	tryptophan	5	95152.0	633.65	78001196696
+H2	H2_KDExp	Wwox RNAi	AB42	tryptophan	10	95152.0	633.65	78001196696
+H3	H3_KDExp	Wwox RNAi	AB42	tryptophan	5	51271.2	634.63	76278124731
+H3	H3_KDExp	Wwox RNAi	AB42	tryptophan	10	51271.2	634.63	76278124731
+H4	H4_KDExp	Wwox RNAi	AB42	tryptophan	5	65437.9	633.48	79443297885
+H4	H4_KDExp	Wwox RNAi	AB42	tryptophan	10	65437.9	633.48	79443297885
+H5	H5_KDExp	Wwox RNAi	AB42	tryptophan	5	29083.5	633.11	74207473206
+H5	H5_KDExp	Wwox RNAi	AB42	tryptophan	10	29083.5	633.11	74207473206
+I1	I1_OEExp	Control gRNA	LacZ	tryptophan	5	50729.0	636.53	74382645183
+I1	I1_OEExp	Control gRNA	LacZ	tryptophan	10	50729.0	636.53	74382645183
+I2	I2_OEExp	Control gRNA	LacZ	tryptophan	5	28041.4	636.72	66652024118
+I2	I2_OEExp	Control gRNA	LacZ	tryptophan	10	28041.4	636.72	66652024118
+I3	I3_OEExp	Control gRNA	LacZ	tryptophan	5	110043.4	635.59	66557132626
+I3	I3_OEExp	Control gRNA	LacZ	tryptophan	10	110043.4	635.59	66557132626
+I4	I4_OEExp	Control gRNA	LacZ	tryptophan	5	53888.9	634.66	73224921914
+I4	I4_OEExp	Control gRNA	LacZ	tryptophan	10	53888.9	634.66	73224921914
+I5	I5_OEExp	Control gRNA	LacZ	tryptophan	5	80850.9	635.75	83394468956
+I5	I5_OEExp	Control gRNA	LacZ	tryptophan	10	80850.9	635.75	83394468956
+J1	J1_OEExp	Wwox gRNA	LacZ	tryptophan	5	52889.9	633.10	66156998187
+J1	J1_OEExp	Wwox gRNA	LacZ	tryptophan	10	52889.9	633.10	66156998187
+J2	J2_OEExp	Wwox gRNA	LacZ	tryptophan	5	72135.1	636.68	69356998249
+J2	J2_OEExp	Wwox gRNA	LacZ	tryptophan	10	72135.1	636.68	69356998249
+J3	J3_OEExp	Wwox gRNA	LacZ	tryptophan	5	55981.2	634.29	70939688012
+J3	J3_OEExp	Wwox gRNA	LacZ	tryptophan	10	55981.2	634.29	70939688012
+J4	J4_OEExp	Wwox gRNA	LacZ	tryptophan	5	120542.7	633.22	67533335357
+J4	J4_OEExp	Wwox gRNA	LacZ	tryptophan	10	120542.7	633.22	67533335357
+J5	J5_OEExp	Wwox gRNA	LacZ	tryptophan	5	43022.2	635.21	72977783165
+J5	J5_OEExp	Wwox gRNA	LacZ	tryptophan	10	43022.2	635.21	72977783165
+K1	K1_OEExp	Control gRNA	AB42	tryptophan	5	66010.6	633.79	74246380220
+K1	K1_OEExp	Control gRNA	AB42	tryptophan	10	66010.6	633.79	74246380220
+K2	K2_OEExp	Control gRNA	AB42	tryptophan	5	46556.2	635.33	65264738495
+K2	K2_OEExp	Control gRNA	AB42	tryptophan	10	46556.2	635.33	65264738495
+K3	K3_OEExp	Control gRNA	AB42	tryptophan	5	40836.5	634.71	70106919060
+K3	K3_OEExp	Control gRNA	AB42	tryptophan	10	40836.5	634.71	70106919060
+K4	K4_OEExp	Control gRNA	AB42	tryptophan	5	44660.3	635.47	69485749776
+K4	K4_OEExp	Control gRNA	AB42	tryptophan	10	44660.3	635.47	69485749776
+K5	K5_OEExp	Control gRNA	AB42	tryptophan	5	72903.6	633.86	85528412434
+K5	K5_OEExp	Control gRNA	AB42	tryptophan	10	72903.6	633.86	85528412434
+L1	L1_OEExp	Wwox gRNA	AB42	tryptophan	5	38474.7	635.19	73054612432
+L1	L1_OEExp	Wwox gRNA	AB42	tryptophan	10	38474.7	635.19	73054612432
+L2	L2_OEExp	Wwox gRNA	AB42	tryptophan	5	47392.5	635.34	69020431450
+L2	L2_OEExp	Wwox gRNA	AB42	tryptophan	10	47392.5	635.34	69020431450
+L3	L3_OEExp	Wwox gRNA	AB42	tryptophan	5	76168.3	634.29	70289160915
+L3	L3_OEExp	Wwox gRNA	AB42	tryptophan	10	76168.3	634.29	70289160915
+L4	L4_OEExp	Wwox gRNA	AB42	tryptophan	5	169596.3	631.84	71324975699
+L4	L4_OEExp	Wwox gRNA	AB42	tryptophan	10	169596.3	631.84	71324975699
+L5	L5_OEExp	Wwox gRNA	AB42	tryptophan	5	37819.7	635.51	80716298575
+L5	L5_OEExp	Wwox gRNA	AB42	tryptophan	10	37819.7	635.51	80716298575
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	tryptophan	5	0.0	636.00	79135534226
+matrix_blank_1	Matrix_Blank_1	Not Applicable	Not Applicable	tryptophan	10	0.0	636.00	79135534226
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	tryptophan	5	0.0	636.00	79014597867
+matrix_blank_2	Matrix_Blank_2	Not Applicable	Not Applicable	tryptophan	10	0.0	636.00	79014597867
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	tryptophan	5	5422.5	636.00	79262381295
+matrix_blank_3	Matrix_Blank_3	Not Applicable	Not Applicable	tryptophan	10	5422.5	636.00	79262381295
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	tryptophan	5	0.0	636.00	71286131064
+matrix_blank_4	Matrix_Blank_4	Not Applicable	Not Applicable	tryptophan	10	0.0	636.00	71286131064
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	tryptophan	5	0.0	636.00	69880950563
+matrix_blank_5	Matrix_Blank_5	Not Applicable	Not Applicable	tryptophan	10	0.0	636.00	69880950563
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	tryptophan	5	0.0	636.00	69859142672
+matrix_blank_6	Matrix_Blank_6	Not Applicable	Not Applicable	tryptophan	10	0.0	636.00	69859142672
+pooled_10	Pool1_4	Not Applicable	Not Applicable	tryptophan	5	28301.0	636.52	77853943855
+pooled_10	Pool1_4	Not Applicable	Not Applicable	tryptophan	10	28301.0	636.52	77853943855
+pooled_11	Pool1_5	Not Applicable	Not Applicable	tryptophan	5	57813.0	634.34	77988498071
+pooled_11	Pool1_5	Not Applicable	Not Applicable	tryptophan	10	57813.0	634.34	77988498071
+pooled_12	Pool1_6	Not Applicable	Not Applicable	tryptophan	5	17992.6	635.86	73866613161
+pooled_12	Pool1_6	Not Applicable	Not Applicable	tryptophan	10	17992.6	635.86	73866613161
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	tryptophan	5	157378.7	632.56	75589662197
+pooled_2_04	Pool2_6	Not Applicable	Not Applicable	tryptophan	10	157378.7	632.56	75589662197
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	tryptophan	5	26642.3	637.58	74553266127
+pooled_2_05	Pool2_1	Not Applicable	Not Applicable	tryptophan	10	26642.3	637.58	74553266127
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	tryptophan	5	153821.5	632.60	70825764115
+pooled_2_06	Pool2_2	Not Applicable	Not Applicable	tryptophan	10	153821.5	632.60	70825764115
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	tryptophan	5	67665.3	635.71	68396261652
+pooled_2_07	Pool2_3	Not Applicable	Not Applicable	tryptophan	10	67665.3	635.71	68396261652
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	tryptophan	5	36465.3	636.31	66909828861
+pooled_2_08	Pool2_4	Not Applicable	Not Applicable	tryptophan	10	36465.3	636.31	66909828861
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	tryptophan	5	24625.1	635.90	67722142626
+pooled_2_09	Pool2_5	Not Applicable	Not Applicable	tryptophan	10	24625.1	635.90	67722142626
+pooled_7	Pool1_1	Not Applicable	Not Applicable	tryptophan	5	54719.0	633.52	80035784138
+pooled_7	Pool1_1	Not Applicable	Not Applicable	tryptophan	10	54719.0	633.52	80035784138
+pooled_8	Pool1_2	Not Applicable	Not Applicable	tryptophan	5	146259.7	633.06	78589705479
+pooled_8	Pool1_2	Not Applicable	Not Applicable	tryptophan	10	146259.7	633.06	78589705479
+pooled_9	Pool1_3	Not Applicable	Not Applicable	tryptophan	5	91733.7	634.79	79404787529
+pooled_9	Pool1_3	Not Applicable	Not Applicable	tryptophan	10	91733.7	634.79	79404787529

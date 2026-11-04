@@ -1,0 +1,133 @@
+{
+ "lactate": {
+  "apex": 563.0,
+  "left": 20.0,
+  "right": 22.0,
+  "height": 611345.8793775719,
+  "base": 3230.104513656128,
+  "anchor_rt": 561.04,
+  "pooled_mean_peak_over_blank_mean": null
+ },
+ "hydroxyglutarate": {
+  "apex": 750.0,
+  "left": 27.0,
+  "right": 27.0,
+  "height": 4122370.791590212,
+  "base": 15396.486254168689,
+  "anchor_rt": 749.93,
+  "pooled_mean_peak_over_blank_mean": null
+ },
+ "citrate": {
+  "apex": 841.0,
+  "left": 11.0,
+  "right": 22.0,
+  "height": 6939008.410779917,
+  "base": 41936.882326016894,
+  "anchor_rt": 824.3,
+  "pooled_mean_peak_over_blank_mean": null
+ },
+ "itaconate": {
+  "apex": 750.0,
+  "left": 24.0,
+  "right": 14.0,
+  "height": 616154.3803881455,
+  "base": 54826.81294463984,
+  "anchor_rt": 771.31,
+  "pooled_mean_peak_over_blank_mean": null
+ },
+ "lysine": {
+  "apex": 1092.0,
+  "left": 18.0,
+  "right": 36.0,
+  "height": 443376.52075728774,
+  "base": 0.0,
+  "anchor_rt": 1092.18,
+  "pooled_mean_peak_over_blank_mean": null
+ },
+ "glucuronate": {
+  "apex": 808.0,
+  "left": 19.0,
+  "right": 19.0,
+  "height": 334715.1610585418,
+  "base": 585.8390264078083,
+  "anchor_rt": 805.39,
+  "pooled_mean_peak_over_blank_mean": null
+ },
+ "orotate": {
+  "apex": 598.0,
+  "left": 15.0,
+  "right": 14.0,
+  "height": 108077.79529354486,
+  "base": 0.0,
+  "anchor_rt": 597.3,
+  "pooled_mean_peak_over_blank_mean": null
+ },
+ "glutamate": {
+  "note": "no deposit anchor: global max of mean pooled EIC",
+  "apex": 732.0,
+  "left": 15.0,
+  "right": 13.0,
+  "height": 13137519.170624645,
+  "base": 5417.2923719575065,
+  "anchor_rt": 732.0,
+  "pooled_mean_peak_over_blank_mean": null
+ },
+ "pyruvate": {
+  "note": "no deposit anchor: global max of mean pooled EIC",
+  "apex": 507.0,
+  "left": 19.0,
+  "right": 31.0,
+  "height": 603998.7088793163,
+  "base": 912.1098938315613,
+  "anchor_rt": 507.0,
+  "pooled_mean_peak_over_blank_mean": null
+ },
+ "leucine": {
+  "apex": 588.0,
+  "left": 15.0,
+  "right": 10.0,
+  "height": 793405.7972586435,
+  "base": 881.5025032596131,
+  "anchor_rt": 587.2,
+  "pooled_mean_peak_over_blank_mean": null
+ },
+ "methionine": {
+  "apex": 618.0,
+  "left": 12.0,
+  "right": 16.0,
+  "height": 146103.27210455,
+  "base": 0.0,
+  "anchor_rt": 618.5,
+  "pooled_mean_peak_over_blank_mean": null
+ },
+ "aspartate": {
+  "note": "no deposit anchor: global max of mean pooled EIC",
+  "apex": 745.0,
+  "left": 11.0,
+  "right": 13.0,
+  "height": 8821988.987074949,
+  "base": 179.54430525232303,
+  "anchor_rt": 745.0,
+  "pooled_mean_peak_over_blank_mean": null
+ },
+ "phenylalanine": {
+  "note": "no deposit anchor: global max of mean pooled EIC",
+  "apex": 556.0,
+  "left": 19.0,
+  "right": 19.0,
+  "height": 268421.39090566884,
+  "base": 0.0,
+  "anchor_rt": 556.0,
+  "pooled_mean_peak_over_blank_mean": null
+ },
+ "tryptophan": {
+  "note": "no deposit anchor: global max of mean pooled EIC",
+  "apex": 636.0,
+  "left": 2.0,
+  "right": 18.0,
+  "height": 91754.79235799515,
+  "base": 0.0,
+  "anchor_rt": 636.0,
+  "pooled_mean_peak_over_blank_mean": null
+ }
+}

@@ -1,0 +1,121 @@
+metabolite	norm	test	log2FC_or_effect	p	CI95_lo	CI95_hi	BH_over_all	Holm_over_all	Holm_primary6	QC_gate_pass
+hydroxyglutarate	raw	Welch D_vs_C(KD in LacZ)	0.116	0.6714	nan	nan	0.7673	1		True
+hydroxyglutarate	raw	Welch H_vs_G(KD in Abeta)	0.935	0.007182	nan	nan	0.01724	0.5099		True
+hydroxyglutarate	raw	Welch G_vs_C(Abeta in ctrl)	0.725	0.001761	nan	nan	0.005561	0.1462		True
+hydroxyglutarate	raw	two-way KD_in_LacZ	0.116	0.639	-0.399	0.631	0.7373	1		True
+hydroxyglutarate	raw	two-way KD_in_Abeta	0.935	0.001418	0.420	1.450	0.004599	0.1191		True
+hydroxyglutarate	raw	two-way KD_main	0.526	0.007483	0.161	0.890	0.01761	0.5238		True
+hydroxyglutarate	raw	two-way Abeta_main	1.135	6.048e-06	0.771	1.499	9.071e-05	0.0006834		True
+hydroxyglutarate	raw	two-way interaction	0.819	0.02988	0.091	1.547	0.05351	1		True
+hydroxyglutarate	TIC	Welch D_vs_C(KD in LacZ)	0.130	0.6348	nan	nan	0.7373	1		True
+hydroxyglutarate	TIC	Welch H_vs_G(KD in Abeta)	0.941	0.005551	nan	nan	0.01388	0.4052		True
+hydroxyglutarate	TIC	Welch G_vs_C(Abeta in ctrl)	0.729	0.001907	nan	nan	0.005866	0.1563		True
+hydroxyglutarate	TIC	two-way KD_in_LacZ	0.130	0.5897	-0.370	0.629	0.7018	1	0.8959715801469841	True
+hydroxyglutarate	TIC	two-way KD_in_Abeta	0.941	0.001041	0.442	1.441	0.00347	0.08848	0.006245496509932946	True
+hydroxyglutarate	TIC	two-way KD_main	0.535	0.005409	0.182	0.889	0.01381	0.4003		True
+hydroxyglutarate	TIC	two-way Abeta_main	1.135	4.147e-06	0.782	1.488	7.854e-05	0.000481		True
+hydroxyglutarate	TIC	two-way interaction	0.812	0.02689	0.105	1.518	0.05042	1	0.13445645256478905	True
+hydroxyglutarate	panel	Welch D_vs_C(KD in LacZ)	0.144	0.5907	nan	nan	0.7018	1		True
+hydroxyglutarate	panel	Welch H_vs_G(KD in Abeta)	1.522	0.0002648	nan	nan	0.001096	0.02436		True
+hydroxyglutarate	panel	Welch G_vs_C(Abeta in ctrl)	0.686	0.002784	nan	nan	0.007768	0.2171		True
+hydroxyglutarate	panel	two-way KD_in_LacZ	0.144	0.5505	-0.357	0.646	0.6672	1		True
+hydroxyglutarate	panel	two-way KD_in_Abeta	1.522	8.232e-06	1.021	2.024	0.0001098	0.000922		True
+hydroxyglutarate	panel	two-way KD_main	0.833	0.0001357	0.479	1.188	0.00074	0.01343		True
+hydroxyglutarate	panel	two-way Abeta_main	1.375	3.883e-07	1.021	1.730	3.306e-05	4.659e-05		True
+hydroxyglutarate	panel	two-way interaction	1.378	0.0008029	0.669	2.087	0.002753	0.06905		True
+citrate	raw	Welch D_vs_C(KD in LacZ)	-0.410	0.04243	nan	nan	0.07172	1		True
+citrate	raw	Welch H_vs_G(KD in Abeta)	-0.213	0.2797	nan	nan	0.3688	1		True
+citrate	raw	Welch G_vs_C(Abeta in ctrl)	0.124	0.448	nan	nan	0.5486	1		True
+citrate	raw	two-way KD_in_LacZ	-0.410	0.0333	-0.783	-0.037	0.05792	1		True
+citrate	raw	two-way KD_in_Abeta	-0.213	0.2436	-0.586	0.160	0.336	1		True
+citrate	raw	two-way KD_main	-0.311	0.02354	-0.575	-0.048	0.04556	1		True
+citrate	raw	two-way Abeta_main	0.222	0.09345	-0.042	0.486	0.1438	1		True
+citrate	raw	two-way interaction	0.197	0.4407	-0.331	0.724	0.5486	1		True
+citrate	TIC	Welch D_vs_C(KD in LacZ)	-0.396	0.04701	nan	nan	0.07728	1		True
+citrate	TIC	Welch H_vs_G(KD in Abeta)	-0.207	0.2767	nan	nan	0.3688	1		True
+citrate	TIC	Welch G_vs_C(Abeta in ctrl)	0.128	0.4243	nan	nan	0.536	1		True
+citrate	TIC	two-way KD_in_LacZ	-0.396	0.03518	-0.762	-0.031	0.06031	1	0.14073005049714643	True
+citrate	TIC	two-way KD_in_Abeta	-0.207	0.2473	-0.572	0.158	0.3372	1	0.7419031643175279	True
+citrate	TIC	two-way KD_main	-0.302	0.02484	-0.560	-0.043	0.04731	1		True
+citrate	TIC	two-way Abeta_main	0.223	0.08637	-0.036	0.481	0.1364	1		True
+citrate	TIC	two-way interaction	0.190	0.448	-0.327	0.706	0.5486	1	0.8959715801469841	True
+citrate	panel	Welch D_vs_C(KD in LacZ)	-0.382	0.06657	nan	nan	0.1065	1		True
+citrate	panel	Welch H_vs_G(KD in Abeta)	0.374	0.1994	nan	nan	0.2783	1		True
+citrate	panel	Welch G_vs_C(Abeta in ctrl)	0.084	0.6134	nan	nan	0.7216	1		True
+citrate	panel	two-way KD_in_LacZ	-0.382	0.1025	-0.849	0.085	0.1537	1		True
+citrate	panel	two-way KD_in_Abeta	0.374	0.1089	-0.093	0.841	0.1614	1		True
+citrate	panel	two-way KD_main	-0.004	0.9807	-0.334	0.327	0.9817	1		True
+citrate	panel	two-way Abeta_main	0.462	0.00908	0.132	0.793	0.02056	0.6174		True
+citrate	panel	two-way interaction	0.756	0.0275	0.095	1.417	0.05077	1		True
+lactate	raw	Welch D_vs_C(KD in LacZ)	-0.419	0.2961	nan	nan	0.3863	1		True
+lactate	raw	Welch H_vs_G(KD in Abeta)	1.333	3.983e-05	nan	nan	0.0003208	0.004262		True
+lactate	raw	Welch G_vs_C(Abeta in ctrl)	0.031	0.9259	nan	nan	0.9497	1		True
+lactate	raw	two-way KD_in_LacZ	-0.419	0.1461	-1.001	0.162	0.2099	1		True
+lactate	raw	two-way KD_in_Abeta	1.333	0.0001756	0.751	1.915	0.0008782	0.01704		True
+lactate	raw	two-way KD_main	0.457	0.03179	0.045	0.868	0.05609	1		True
+lactate	raw	two-way Abeta_main	0.907	0.0002534	0.496	1.319	0.001086	0.02357		True
+lactate	raw	two-way interaction	1.752	0.0003538	0.929	2.575	0.001387	0.03219		True
+lactate	TIC	Welch D_vs_C(KD in LacZ)	-0.406	0.3119	nan	nan	0.4025	1		True
+lactate	TIC	Welch H_vs_G(KD in Abeta)	1.339	1.976e-05	nan	nan	0.0002156	0.002174		True
+lactate	TIC	Welch G_vs_C(Abeta in ctrl)	0.036	0.9155	nan	nan	0.9471	1		True
+lactate	TIC	two-way KD_in_LacZ	-0.406	0.1575	-0.986	0.174	0.2224	1		True
+lactate	TIC	two-way KD_in_Abeta	1.339	0.0001632	0.759	1.919	0.0008514	0.01599		True
+lactate	TIC	two-way KD_main	0.466	0.02836	0.056	0.877	0.05157	1		True
+lactate	TIC	two-way Abeta_main	0.908	0.0002451	0.498	1.318	0.001086	0.02304		True
+lactate	TIC	two-way interaction	1.745	0.0003583	0.924	2.566	0.001387	0.03225		True
+lactate	panel	Welch D_vs_C(KD in LacZ)	-0.391	0.3898	nan	nan	0.4976	1		True
+lactate	panel	Welch H_vs_G(KD in Abeta)	1.920	3.417e-05	nan	nan	0.0003154	0.00369		True
+lactate	panel	Welch G_vs_C(Abeta in ctrl)	-0.008	0.9815	nan	nan	0.9817	1		True
+lactate	panel	two-way KD_in_LacZ	-0.391	0.2707	-1.118	0.336	0.365	1		True
+lactate	panel	two-way KD_in_Abeta	1.920	4.01e-05	1.193	2.647	0.0003208	0.004262		True
+lactate	panel	two-way KD_main	0.764	0.006182	0.250	1.278	0.01514	0.4451		True
+lactate	panel	two-way Abeta_main	1.148	0.0002253	0.634	1.662	0.00104	0.0214		True
+lactate	panel	two-way interaction	2.311	0.0002111	1.283	3.340	0.001013	0.02027		True
+itaconate	raw	Welch D_vs_C(KD in LacZ)	-0.076	0.7887	nan	nan	0.8845	1		False
+itaconate	raw	Welch H_vs_G(KD in Abeta)	0.827	0.01763	nan	nan	0.03586	1		False
+itaconate	raw	Welch G_vs_C(Abeta in ctrl)	0.523	0.008512	nan	nan	0.01964	0.5873		False
+itaconate	raw	two-way KD_in_LacZ	-0.076	0.7674	-0.610	0.458	0.8687	1		False
+itaconate	raw	two-way KD_in_Abeta	0.827	0.004704	0.293	1.361	0.01227	0.3528		False
+itaconate	raw	two-way KD_main	0.376	0.05122	-0.002	0.753	0.08306	1		False
+itaconate	raw	two-way Abeta_main	0.975	5.144e-05	0.597	1.352	0.0003319	0.005299		False
+itaconate	raw	two-way interaction	0.903	0.02216	0.147	1.658	0.0436	1		False
+itaconate	TIC	Welch D_vs_C(KD in LacZ)	-0.062	0.827	nan	nan	0.9067	1		False
+itaconate	TIC	Welch H_vs_G(KD in Abeta)	0.833	0.01518	nan	nan	0.03141	0.9566		False
+itaconate	TIC	Welch G_vs_C(Abeta in ctrl)	0.528	0.009534	nan	nan	0.02119	0.6388		False
+itaconate	TIC	two-way KD_in_LacZ	-0.062	0.8052	-0.589	0.465	0.8946	1		False
+itaconate	TIC	two-way KD_in_Abeta	0.833	0.004065	0.306	1.360	0.01084	0.3089		False
+itaconate	TIC	two-way KD_main	0.385	0.04354	0.013	0.758	0.07257	1		False
+itaconate	TIC	two-way Abeta_main	0.975	4.422e-05	0.603	1.348	0.0003259	0.004643		False
+itaconate	TIC	two-way interaction	0.895	0.02156	0.150	1.641	0.04312	1		False
+itaconate	panel	Welch D_vs_C(KD in LacZ)	-0.048	0.879	nan	nan	0.9252	1		False
+itaconate	panel	Welch H_vs_G(KD in Abeta)	1.414	0.002113	nan	nan	0.006036	0.1685		False
+itaconate	panel	Welch G_vs_C(Abeta in ctrl)	0.484	0.01163	nan	nan	0.02525	0.7677		False
+itaconate	panel	two-way KD_in_LacZ	-0.048	0.8674	-0.644	0.548	0.9252	1		False
+itaconate	panel	two-way KD_in_Abeta	1.414	0.0001236	0.818	2.010	0.0007064	0.01236		False
+itaconate	panel	two-way KD_main	0.683	0.003396	0.262	1.105	0.009261	0.2615		False
+itaconate	panel	two-way Abeta_main	1.215	1.505e-05	0.794	1.637	0.0001806	0.00167		False
+itaconate	panel	two-way interaction	1.462	0.002046	0.619	2.305	0.006036	0.1657		False
+lysine	raw	Welch D_vs_C(KD in LacZ)	-1.016	0.01178	nan	nan	0.02525	0.7677		True
+lysine	raw	Welch H_vs_G(KD in Abeta)	-1.617	3.17e-05	nan	nan	0.0003154	0.003456		True
+lysine	raw	Welch G_vs_C(Abeta in ctrl)	0.043	0.8425	nan	nan	0.9108	1		True
+lysine	raw	two-way KD_in_LacZ	-1.016	0.0006085	-1.523	-0.510	0.002213	0.05354		True
+lysine	raw	two-way KD_in_Abeta	-1.617	4.544e-06	-2.123	-1.110	7.854e-05	0.0005226		True
+lysine	raw	two-way KD_main	-1.316	7.817e-07	-1.675	-0.958	3.306e-05	9.303e-05		True
+lysine	raw	two-way Abeta_main	-0.258	0.1469	-0.616	0.101	0.2099	1		True
+lysine	raw	two-way interaction	-0.600	0.09466	-1.317	0.116	0.1438	1		True
+lysine	TIC	Welch D_vs_C(KD in LacZ)	-1.003	0.01219	nan	nan	0.02565	0.7799		True
+lysine	TIC	Welch H_vs_G(KD in Abeta)	-1.611	4.617e-05	nan	nan	0.0003259	0.004801		True
+lysine	TIC	Welch G_vs_C(Abeta in ctrl)	0.047	0.8311	nan	nan	0.9067	1		True
+lysine	TIC	two-way KD_in_LacZ	-1.003	0.0006657	-1.508	-0.498	0.00235	0.05792		True
+lysine	TIC	two-way KD_in_Abeta	-1.611	4.582e-06	-2.116	-1.105	7.854e-05	0.0005226		True
+lysine	TIC	two-way KD_main	-1.307	8.265e-07	-1.664	-0.950	3.306e-05	9.752e-05		True
+lysine	TIC	two-way Abeta_main	-0.257	0.1466	-0.614	0.100	0.2099	1		True
+lysine	TIC	two-way interaction	-0.608	0.09014	-1.322	0.107	0.1405	1		True
+lysine	panel	Welch D_vs_C(KD in LacZ)	-0.988	0.002106	nan	nan	0.006036	0.1685		True
+lysine	panel	Welch H_vs_G(KD in Abeta)	-1.030	0.0005231	nan	nan	0.001962	0.04656		True
+lysine	panel	Welch G_vs_C(Abeta in ctrl)	0.003	0.9817	nan	nan	0.9817	1		True
+lysine	panel	two-way KD_in_LacZ	-0.988	8.105e-05	-1.388	-0.588	0.0004863	0.008186		True
+lysine	panel	two-way KD_in_Abeta	-1.030	5.254e-05	-1.429	-0.630	0.0003319	0.005359		True
+lysine	panel	two-way KD_main	-1.009	1.137e-06	-1.292	-0.726	3.412e-05	0.0001331		True
+lysine	panel	two-way Abeta_main	-0.017	0.8987	-0.300	0.265	0.9378	1		True
+lysine	panel	two-way interaction	-0.041	0.8786	-0.607	0.524	0.9252	1		True

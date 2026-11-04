@@ -33,7 +33,7 @@ def area(rt,y,apex,left,right):
     x=rt[m];z=y[m]
     b0=z[:2].mean();b1=z[-2:].mean()
     base=np.interp(x,[x[0],x[-1]],[b0,b1])
-    return float(np.trapz(np.clip(z-base,0,None),x))
+    return float(np.trapezoid(np.clip(z-base,0,None),x))
 def file_area(rt,y,w,recentre=True):
     apex=w['apex']
     if recentre:
