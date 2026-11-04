@@ -1,0 +1,208 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT24-20261104",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Iteration 24: turn available knowledge and capability into better pharmacological generation: source-check the five suspect actions, recover chemical identity, enrich catalogue for queued questions, use WWOX contrasts and biological roles in the calculation, multi-target comparison on qualified data, attributable measurement, reverse test, independent verification, ranking and dashboard, durable method.",
+ "START_UTC": "2026-11-04T00:00:00Z",
+ "BASELINE": "development/main = origin/main = local main = cceaf85406865a212313002dfefb5d151bf60f6f (fetched at start); clean tree; one worktree; IT23 record reconciled to COMPLETE at P0.",
+ "DECISIONS_TAKEN": [
+  "2026-11-04: IT24 mandate received; IT23 record found OPEN with P8 IN_PROGRESS despite green battery/gate/Pages on cceaf854; closed with evidence, history kept"
+ ],
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": [],
+ "AUTHORISED_QUEUE_20261104": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P0 baseline, IT23 reconciliation, IT24 record observable by the monitor",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "P1 source check of the five suspect sign relations (panobinostat SIRT1/2/3/7, idronoxil CASP3) and regeneration of the action table",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "P2 chemical identity recovery for the DGIdb-only families (rows vs families vs substances), shared resolver",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "P3 catalogue coverage for the families and questions actually in the queue",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "P4 WWOX datasets: reanalysis possible vs new measurement, contrasts and gene lists",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "P5 biological roles and context consumed by the calculation",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "P6 multi-target profiles from LEGEND qualified data: feasibility then comparison against single chain",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "P7 generation beyond pathway-drug links, chain recorded per proposal",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P8": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "P8 one vertical alternative-to-a-known-line comparison, or documented abstention",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P9": {
+   "order": 10,
+   "steps": [
+    {
+     "step": "P9 incremental attributable measurement against a frozen reference",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P10": {
+   "order": 11,
+   "steps": [
+    {
+     "step": "P10 reverse test on few contrasting cases",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P11": {
+   "order": 12,
+   "steps": [
+    {
+     "step": "P11 independent verification and substantive regressions",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P12": {
+   "order": 13,
+   "steps": [
+    {
+     "step": "P12 adverse-report coverage and sign provenance",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P13": {
+   "order": 14,
+   "steps": [
+    {
+     "step": "P13 targeted scouting GitHub / Hugging Face / Nature after named gaps",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P14": {
+   "order": 15,
+   "steps": [
+    {
+     "step": "P14 ranking of investigations",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P15": {
+   "order": 16,
+   "steps": [
+    {
+     "step": "P15 dashboard and full cycle, five languages, served site",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P16": {
+   "order": 17,
+   "steps": [
+    {
+     "step": "P16 durable method and simplification",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P17": {
+   "order": 18,
+   "steps": [
+    {
+     "step": "P17 continuity monitor and radar check, resources",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P18": {
+   "order": 19,
+   "steps": [
+    {
+     "step": "P18 battery on frozen candidate, push, CI, Pages, cleanup, final report",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}

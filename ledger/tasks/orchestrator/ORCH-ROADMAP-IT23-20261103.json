@@ -13,10 +13,11 @@
  ],
  "DEFAULTS_TAKEN": [],
  "STOP_LOG": [
-  "2026-11-03 residual: no external tool adopted; FAERS table incomplete by construction; CANDO score tables not kept (terms unread); 5 LEGEND-side sign suspects (panobinostat SIRT1/2/3/7, idronoxil CASP3) await a source check; no emerging candidate from IT23; P7 dashboard integration waits for the multilingual landing"
+  "2026-11-03 residual: no external tool adopted; FAERS table incomplete by construction; CANDO score tables not kept (terms unread); 5 LEGEND-side sign suspects (panobinostat SIRT1/2/3/7, idronoxil CASP3) await a source check; no emerging candidate from IT23; P7 dashboard integration waits for the multilingual landing",
+  "2026-11-04 IT24 P0 reconciliation: record said OPEN/P8 IN_PROGRESS although battery, release gate and Pages were green on cceaf854; set P8 DONE with evidence and MANDATE_STATE COMPLETE; history above kept unchanged"
  ],
  "AUTHORISED_QUEUE_20261103B": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P0": {
    "order": 1,
    "steps": [
@@ -110,8 +111,9 @@
    "steps": [
     {
      "step": "P8 durable method in canonical places, few regressions, removal of superfluous experimental code, tests, integration, push, CI, report",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "closed 2026-11-04 on main cceaf854: battery PASS WITH SKIPS (199 targets, 8 skipped) on that exact SHA; Public release gate success 02:24:54Z and Pages workflow success (verify/deploy/smoke); five served pages equal the package; reconciled in IT24 P0 after the record was found OPEN with P8 IN_PROGRESS while the final report declared closure"
     }
    ]
   }
