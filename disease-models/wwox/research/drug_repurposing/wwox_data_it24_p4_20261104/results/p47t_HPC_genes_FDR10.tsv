@@ -1,0 +1,1 @@
+region	ensembl_id	symbol	mean_norm_count_WT	mean_norm_count_P47T	log2FC_uncentred	log2FC_centred	p	FDR_with_sex	FDR_no_sex	T2	T3	direction

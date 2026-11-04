@@ -30,3 +30,5 @@ python3 .../build_cards.py && python3 disease-models/wwox/research/drug_repurpos
 ```
 The scripts need the network and write dated retrievals; rerunning them changes the retrieval date and may change counts. No call sent any personal
 address, credential or registration; the ChEMBL, DGIdb, Open Targets, openFDA, PubTator 3, iLINCS and Orphadata calls are key-less.
+
+> **Update 2026-11-04 (IT24 P4):** `MTBLS12344` became public on 2026-11-02; the "not public" statements above are superseded. Per-sample files are public, the deposited result table is empty, and a first integration (citrate and 2-hydroxyglutarate only; lactate and itaconate failed the QC gate) is in `wwox_data_it24_p4_20261104/` (not independently verified).

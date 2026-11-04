@@ -633,3 +633,14 @@ renderAll();
 fromHash();
 document.body.setAttribute('data-cur-ready', '1');
 })();
+(function () {   // IT24 P15: filter of the main investigations by origin; the buttons exist only when this runs, so the list is complete without JavaScript
+  var bar = document.querySelector('#investigations .inv-filter'); if (!bar) return;
+  bar.hidden = false;
+  var rows = document.querySelectorAll('#investigations .inv-list > .inv-row');
+  bar.addEventListener('click', function (e) {
+    var b = e.target.closest('button[data-f]'); if (!b) return;
+    var f = b.getAttribute('data-f');
+    bar.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+    rows.forEach(function (r) { r.hidden = !!f && r.getAttribute('data-origin') !== f; });
+  });
+})();

@@ -63,8 +63,9 @@
    "steps": [
     {
      "step": "P4 WWOX datasets: reanalysis possible vs new measurement, contrasts and gene lists",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "wwox_data_it24_p4_20261104: accession truth (GSE158681/2 bulk, GSE158684 snRNA, GSE215425 P47T), 14-row opportunity table with classes; first per-gene P47T region lists (PFC 813/607 at FDR<0.10, HPC none, PTX 297/129, CB n=3v4) and mouse descriptive lists (flagged background-confounded); MTBLS12344 now public: citrate/2HG integrated, lactate/itaconate failed QC; shRNA hNPC control failure kept deposit-confined; single producer, not independently verified, not consumed by the generator"
     }
    ]
   },

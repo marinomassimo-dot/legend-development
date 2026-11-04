@@ -1,0 +1,9 @@
+url	accessed	sha256	bytes	local_name
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE215nnn/GSE215425/suppl/GSE215425_processed_data.csv.gz	2026-11-04	d654f6bdd2a4ac5b3e24741f16962503a711575c72aa92a2c729a7a0cf04c18c	2008962	GSE215425_processed_data.csv.gz
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE158nnn/GSE158681/suppl/GSE158681_Wwox_mutant_Hippo_RNA_TPM_Table.txt.gz	2026-11-04	52ff4f078fc3d7600dceb716ddb26bbb2c6bb4134736a388a39d10915399e483	4819338	GSE158681_Wwox_mutant_Hippo_RNA_TPM_Table.txt.gz
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE158nnn/GSE158682/suppl/GSE158682_Wwox_neuronal_Del_Cortex_RNA_TPM_Table.txt.gz	2026-11-04	77aecf5cdd194ad638e2e7c5886e04f2583d6c425c6dea22ed3b131be2e8060f	2614428	GSE158682_Wwox_neuronal_Del_Cortex_RNA_TPM_Table.txt.gz
+https://ftp.ensembl.org/pub/release-92/fasta/mus_musculus/cdna/Mus_musculus.GRCm38.cdna.all.fa.gz	2026-11-04	7d2fcb0cbe069c08eff61a77a056f76baadad5f112dcc4e9dd7888832084e3e7	49851793	c92.fa.gz
+https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS12344/m_MTBLS12344_LC-MS_alternating_hilic_metabolite_profiling_v2_maf.tsv	2026-11-04	8bd1add7e482d049443130062c41e5386e4c474c80d45b0417165a4a8c6200b0	4342	m_MTBLS12344_LC-MS_alternating_hilic_metabolite_profiling_v2_maf.tsv
+https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS12344/s_MTBLS12344.txt	2026-11-04	693871598ae5a42ec3c50516f5557a2bc9159316c8c80ea98ed277b74684efc4	25251	s_MTBLS12344.txt
+https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS12344/a_MTBLS12344_LC-MS_alternating_hilic_metabolite_profiling.txt	2026-11-04	cd3f78b9401d6cd2e8b29cb24e1e4594d522bc65b807238597f68697d88abdae	43180	a_MTBLS12344_LC-MS_alternating_hilic_metabolite_profiling.txt
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE215425&targ=self&form=text&view=brief	2026-11-04	f8c0b6f7027d3c5e51fbe0061b2d5f4ddacffd69d4f60e265290569e0cb3d93d	4560	GSE215425_brief.txt

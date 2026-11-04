@@ -1,0 +1,115 @@
+{
+ "dataset": "GSE158681/2",
+ "contrasts": {
+  "H_S": {
+   "n_KO": 3,
+   "n_ctl": 2,
+   "genes_mean_TPM_ge1": 13919,
+   "calls_by_threshold": {
+    "0.585": {
+     "up": 549,
+     "down": 1160,
+     "of_which_BACKGROUND_CONFOUNDED": 865
+    },
+    "1.0": {
+     "up": 324,
+     "down": 319,
+     "of_which_BACKGROUND_CONFOUNDED": 375
+    },
+    "2.0": {
+     "up": 85,
+     "down": 56,
+     "of_which_BACKGROUND_CONFOUNDED": 88
+    }
+   },
+   "median_shift": -0.3891926229689687
+  },
+  "H_N": {
+   "n_KO": 2,
+   "n_ctl": 2,
+   "genes_mean_TPM_ge1": 13756,
+   "calls_by_threshold": {
+    "0.585": {
+     "up": 1405,
+     "down": 1578,
+     "of_which_BACKGROUND_CONFOUNDED": 1436
+    },
+    "1.0": {
+     "up": 462,
+     "down": 515,
+     "of_which_BACKGROUND_CONFOUNDED": 598
+    },
+    "2.0": {
+     "up": 77,
+     "down": 85,
+     "of_which_BACKGROUND_CONFOUNDED": 116
+    }
+   },
+   "median_shift": -0.26818990324758696
+  },
+  "H_null": {
+   "n_KO": 2,
+   "n_ctl": 3,
+   "genes_mean_TPM_ge1": 13559,
+   "calls_by_threshold": {
+    "0.585": {
+     "up": 260,
+     "down": 469,
+     "of_which_BACKGROUND_CONFOUNDED": 292
+    },
+    "1.0": {
+     "up": 87,
+     "down": 122,
+     "of_which_BACKGROUND_CONFOUNDED": 94
+    },
+    "2.0": {
+     "up": 15,
+     "down": 10,
+     "of_which_BACKGROUND_CONFOUNDED": 10
+    }
+   },
+   "median_shift": -0.21607925953022067
+  },
+  "C_S": {
+   "n_KO": 3,
+   "n_ctl": 4,
+   "genes_mean_TPM_ge1": 13450,
+   "calls_by_threshold": {
+    "0.585": {
+     "up": 316,
+     "down": 564,
+     "of_which_BACKGROUND_CONFOUNDED": "NA_no_control_vs_control_in_cortex"
+    },
+    "1.0": {
+     "up": 128,
+     "down": 143,
+     "of_which_BACKGROUND_CONFOUNDED": "NA_no_control_vs_control_in_cortex"
+    },
+    "2.0": {
+     "up": 19,
+     "down": 11,
+     "of_which_BACKGROUND_CONFOUNDED": "NA_no_control_vs_control_in_cortex"
+    }
+   },
+   "median_shift": -0.20233003146913392
+  }
+ },
+ "Wwox": {
+  "H_S": {
+   "mean_TPM_KO": 0.48970866666666674,
+   "mean_TPM_ctl": 3.3662235000000003
+  },
+  "H_N": {
+   "mean_TPM_KO": 0.212961,
+   "mean_TPM_ctl": 3.548693
+  },
+  "H_null": {
+   "mean_TPM_KO": 0.33058750000000003,
+   "mean_TPM_ctl": 3.885702333333333
+  },
+  "C_S": {
+   "mean_TPM_KO": 5.938738666666666,
+   "mean_TPM_ctl": 18.828799999999998
+  }
+ }
+}

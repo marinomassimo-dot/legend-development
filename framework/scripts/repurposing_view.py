@@ -3117,12 +3117,12 @@ def scope_chip(code: str, n: int | None = None) -> str:
     return f'<span class="sc s-{E(code)}"><span class="gl" aria-hidden="true">{E(g)}</span>{E(SCOPE_IT.get(code, code))}' + (f' ×{n}' if n else "") + '</span>'
 
 
-STATE_IT = {"ok": "ok", "failed": "interrogazione non riuscita", "incomplete": "incompleta", "stale": "dati non aggiornati", "truncated": "parziale", "not_fetched": "non acquisita", "other": "stato non riconosciuto"}
+STATE_IT = {"stale_export": "esportazione non aggiornata", "ok": "ok", "failed": "interrogazione non riuscita", "incomplete": "incompleta", "stale": "dati non aggiornati", "truncated": "parziale", "not_fetched": "non acquisita", "other": "stato non riconosciuto"}
 
 
 def state_label_it(x: dict) -> str:
     """Plain Italian for a source state; the raw code stays in the technical table."""
-    return "esportazione non aggiornata" if "EXPORT" in str(x["status"]).upper() and x["state_class"] == "stale" else STATE_IT.get(x["state_class"], "stato non riconosciuto")
+    return STATE_IT["stale_export"] if "EXPORT" in str(x["status"]).upper() and x["state_class"] == "stale" else STATE_IT.get(x["state_class"], STATE_IT["other"])
 
 
 def render_banner(P: dict) -> str:
@@ -4264,6 +4264,10 @@ UI_IT20B = {
     "iv_pending": "In preparazione: l'elenco è generato da un'analisi in corso e non è ancora nei dati di questa versione. Nessuna voce viene mostrata al suo posto.",
     "iv_pos": "Posizione", "iv_tie": "pari merito", "iv_int": "Composto o intervento", "iv_q": "Domanda", "iv_why": "Motivo della priorità", "iv_ev": "Evidenza disponibile",
     "iv_depth": "Solidità dell'evidenza (profondità di lettura)", "iv_unc": "Incertezza decisiva", "iv_next": "Prossimo test", "iv_nov": "Novità, nel perimetro verificato", "iv_move": "Motivo dello spostamento",
+    "iv_more": "Dettagli scientifici della riga", "iv_f_h": "Mostra", "iv_f_all": "Tutte", "iv_legend_h": "Come leggere l'origine di ogni riga",
+    "iv_ol_known_in_wwox": "parte da un risultato già osservato in un sistema WWOX (letteratura WWOX o scheda)",
+    "iv_ol_generated_by_legend": "nata dal calcolo di LEGEND: ipotesi generata, senza conferma sperimentale",
+    "iv_ol_external_transferred": "precedente di un'altra malattia o di un altro sistema, trasferito al contesto WWOX: la rilevanza per WWOX è da verificare",
     "iv_o_known_in_wwox": "filone già noto in WWOX", "iv_o_generated_by_legend": "nuova ipotesi generata da LEGEND", "iv_o_external_transferred": "proposta esterna trasferita al contesto WWOX",
     "iv_withheld": "classe di intervento senza scheda (il nome del composto non è incluso in questa versione)",
     "iv_h_origin": "Origine della proposta", "iv_h_solidity": "Solidità dell'evidenza", "iv_h_feas": "Fattibilità di sviluppo",
@@ -4437,7 +4441,10 @@ def render_investigations(P: dict) -> str:
         spec = [("iv_q", "question"), ("iv_h_origin", "origin_detail"), ("iv_ev", "evidence_available"), ("iv_depth", "evidence_depth"),
                 ("iv_why", "why_now"), ("iv_unc", "decisive_uncertainty"), ("iv_next", "next_test"), ("iv_h_feas", "feasibility"),
                 ("iv_nov", "novelty_perimeter"), ("iv_move", "movement_reason")]
-        dl = "".join(f'<dt>{E(U[k])}</dt><dd>{en(r[f])}</dd>' for k, f in spec if str(r.get(f) or "").strip())
+        glance = [("iv_q", "question"), ("iv_why", "why_now"), ("iv_depth", "evidence_depth"), ("iv_unc", "decisive_uncertainty"), ("iv_next", "next_test")]
+        gk = {f for _, f in glance}
+        gl = "".join(f'<dt>{E(U[k])}</dt><dd>{en(r[f])}</dd>' for k, f in glance if str(r.get(f) or "").strip())
+        dl = "".join(f'<dt>{E(U[k])}</dt><dd>{en(r[f])}</dd>' for k, f in spec if f not in gk and str(r.get(f) or "").strip())
         ids = [x for x in str(r.get("chembl_ids") or "").split(";") if x]
         if ids:
             note = U["iv_chembl_full"] if full else U["iv_chembl_share"]
@@ -4446,12 +4453,17 @@ def render_investigations(P: dict) -> str:
         badge = f' <span class="stt stt-{E(st)}">{E(U["iv_st_" + st])}</span>' if st in ("carded_thread", "premise_measurement", "conditional_hypothesis") else ""
         items.append(f'<li class="inv-row" data-rank="{E(str(r["position"]))}" data-origin="{E(r["origin_class"])}"' + (f' data-status="{E(st)}"' if st else "") +
                      f'><div class="inv-h"><span class="inv-pos" aria-label="{E(U["iv_pos"])} {E(str(r["position"]))}">{E(str(r["position"]))}</span>{tie} '
-                     f'{lx(r["intervention"], "b")} <span class="org org-{E(r["origin_class"])}">{E(U["iv_o_" + r["origin_class"]])}</span>{badge}</div><dl class="qk-dl">{dl}</dl></li>')
+                     f'{lx(r["intervention"], "b")} <span class="org org-{E(r["origin_class"])}">{E(U["iv_o_" + r["origin_class"]])}</span>{badge}</div>'
+                     f'<dl class="qk-dl inv-glance">{gl}</dl><details class="inv-more"><summary>{E(U["iv_more"])}</summary><dl class="qk-dl">{dl}</dl></details></li>')
     out = head + f'<p class="lead inv-purpose"><b>{E(U["iv_purpose"])}</b></p><p class="mini mut">{E(U["iv_lead"])}</p>'
     if ctx:
         mv = ctx.get("published_vs_it20") or {}
-        out += (f'<div class="note inv-how"><b>{E(U["iv_curated_h"])}.</b> {E(U["iv_curated"])}<br><b>{E(U["iv_axes_h"])}.</b> {E(U["iv_axes"])}'
-                f'<br><b>{E(U["iv_vs_h"])}.</b> {E(U["iv_vs"].format(u=mv.get("unchanged", 0), m=mv.get("moved", 0), n=mv.get("new", 0)))}</div>')
+        out += (f'<details class="note inv-how"><summary>{E(U["iv_curated_h"])}</summary>{E(U["iv_curated"])}<br><b>{E(U["iv_axes_h"])}.</b> {E(U["iv_axes"])}</details>'
+                f'<p class="inv-vs"><b>{E(U["iv_vs_h"])}.</b> {E(U["iv_vs"].format(u=mv.get("unchanged", 0), m=mv.get("moved", 0), n=mv.get("new", 0)))}</p>')
+    present = [o for o in ("known_in_wwox", "generated_by_legend", "external_transferred") if any(r["origin_class"] == o for r in rows)]
+    out += (f'<ul class="inv-legend" aria-label="{E(U["iv_legend_h"])}">' + "".join(f'<li><span class="org org-{o}">{E(U["iv_o_" + o])}</span> {E(U["iv_ol_" + o])}</li>' for o in present) + '</ul>'
+            f'<div class="inv-filter" hidden role="group" aria-label="{E(U["iv_f_h"])}"><span class="mini">{E(U["iv_f_h"])}:</span> <button type="button" data-f="" aria-pressed="true">{E(U["iv_f_all"])}</button>'
+            + "".join(f'<button type="button" data-f="{o}" aria-pressed="false">{E(U["iv_o_" + o])}</button>' for o in present) + '</div>')
     out += f'<p class="mini mut">{E(U["iv_text_en"])}</p><ol class="inv-list">{"".join(items)}</ol>'
     conds = rk.get("conditional_hypotheses") or []
     if conds:

@@ -1,0 +1,30 @@
+{
+ "L-Lactate": {
+  "maf_rt": 561.04,
+  "apex_rt_from_pools": 563.0,
+  "lo": 548.0,
+  "hi": 578.0,
+  "mz": 89.0245
+ },
+ "Citrate": {
+  "maf_rt": 824.3,
+  "apex_rt_from_pools": 841.0,
+  "lo": 826.0,
+  "hi": 856.0,
+  "mz": 191.0199
+ },
+ "2-Hydroxyglutarate": {
+  "maf_rt": 749.93,
+  "apex_rt_from_pools": 750.5,
+  "lo": 735.5,
+  "hi": 765.5,
+  "mz": 147.0299
+ },
+ "Itaconate": {
+  "maf_rt": 771.31,
+  "apex_rt_from_pools": 750.5,
+  "lo": 735.5,
+  "hi": 765.5,
+  "mz": 129.0194
+ }
+}

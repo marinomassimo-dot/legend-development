@@ -1,0 +1,1140 @@
+{
+ "dataset": "GSE215425",
+ "regions": {
+  "PFC": {
+   "n_WT": 5,
+   "n_MUT": 5,
+   "genes_tested": 15008,
+   "median_shift_log2": -0.006830368483434384,
+   "df": 7,
+   "calls": {
+    "T1_FDR<0.10": {
+     "up": 813,
+     "down": 607,
+     "up_nosex": 1072,
+     "down_nosex": 855
+    },
+    "T2_FDR<0.05&|cLFC|>=0.585": {
+     "up": 212,
+     "down": 71,
+     "up_nosex": 315,
+     "down_nosex": 113
+    },
+    "T3_FDR<0.05&|cLFC|>=1": {
+     "up": 128,
+     "down": 28,
+     "up_nosex": 179,
+     "down_nosex": 39
+    }
+   },
+   "genes": {
+    "Wwox": {
+     "mean_norm_WT": 842.8063645202574,
+     "mean_norm_MUT": 765.5626959085603,
+     "cLFC": -0.12894932061161135,
+     "p": 0.22891350140137579,
+     "FDR": 0.46470091018961823
+    },
+    "Gfap": {
+     "mean_norm_WT": 13953.305125120494,
+     "mean_norm_MUT": 15611.071214259098,
+     "cLFC": 0.5538117317708195,
+     "p": 0.3905426559284205,
+     "FDR": 0.6162980307202478
+    },
+    "Aif1": {
+     "mean_norm_WT": 416.64103709611265,
+     "mean_norm_MUT": 658.4776813859238,
+     "cLFC": 0.6570548878948889,
+     "p": 0.0003929305161819048,
+     "FDR": 0.025978419325365758
+    },
+    "Hk2": {
+     "mean_norm_WT": 116.60085544521326,
+     "mean_norm_MUT": 182.98160623011802,
+     "cLFC": 0.6688142682779962,
+     "p": 4.685058797635019e-05,
+     "FDR": 0.011526780727033831
+    },
+    "Ldha": {
+     "mean_norm_WT": 11790.665518288324,
+     "mean_norm_MUT": 16016.110510309965,
+     "cLFC": 0.4104382479320897,
+     "p": 0.025269839027992614,
+     "FDR": 0.15941561333842505
+    },
+    "Ldhb": {
+     "mean_norm_WT": 15482.700959289225,
+     "mean_norm_MUT": 13252.231478433527,
+     "cLFC": -0.23438411277402987,
+     "p": 0.03111692679119795,
+     "FDR": 0.17569122796507583
+    },
+    "Slc2a1": {
+     "mean_norm_WT": 4417.689908724344,
+     "mean_norm_MUT": 5392.932114392769,
+     "cLFC": 0.27190045621183045,
+     "p": 0.05102416570939051,
+     "FDR": 0.22380826962858974
+    },
+    "Bnip3": {
+     "mean_norm_WT": 4334.478662122175,
+     "mean_norm_MUT": 3727.8190385915686,
+     "cLFC": -0.2072658351766508,
+     "p": 0.007787798011577801,
+     "FDR": 0.09316519312817882
+    },
+    "Pdk1": {
+     "mean_norm_WT": 2221.7405431307866,
+     "mean_norm_MUT": 2173.9062003622107,
+     "cLFC": -0.034335373454666224,
+     "p": 0.794015665792361,
+     "FDR": 0.8950943075189159
+    },
+    "Atf4": {
+     "mean_norm_WT": 4231.344657104817,
+     "mean_norm_MUT": 3809.9971415308064,
+     "cLFC": -0.14430478527280524,
+     "p": 0.25544472199719626,
+     "FDR": 0.48999417021139074
+    },
+    "Chac1": {
+     "mean_norm_WT": 227.70327829945828,
+     "mean_norm_MUT": 333.8407771372693,
+     "cLFC": 0.4983299163291965,
+     "p": 0.12069594575817184,
+     "FDR": 0.33541503163069936
+    },
+    "Trib3": null,
+    "Sesn2": {
+     "mean_norm_WT": 618.7391870427543,
+     "mean_norm_MUT": 648.5172930015526,
+     "cLFC": 0.10113750705369404,
+     "p": 0.3884974597848332,
+     "FDR": 0.6149741458127599
+    },
+    "Ddit3": {
+     "mean_norm_WT": 650.043769865092,
+     "mean_norm_MUT": 689.0379825405573,
+     "cLFC": 0.08996291056055099,
+     "p": 0.518502226336508,
+     "FDR": 0.7163957557259426
+    },
+    "Asns": {
+     "mean_norm_WT": 3415.0248088458525,
+     "mean_norm_MUT": 3758.697077608129,
+     "cLFC": 0.1444382756986027,
+     "p": 0.049709151591346264,
+     "FDR": 0.22078571976410913
+    }
+   },
+   "sex_check": {
+    "Xist": {
+     "F_min_max": [
+      169.84426123145508,
+      242.1460957317991
+     ],
+     "M_min_max": [
+      0.05237275417446857,
+      0.2762247321229048
+     ]
+    },
+    "Ddx3y": {
+     "F_min_max": [
+      0.0,
+      0.05115042157410205
+     ],
+     "M_min_max": [
+      36.37287777416842,
+      42.83994481833415
+     ]
+    },
+    "Uty": {
+     "F_min_max": [
+      0.06618927870034969,
+      0.17902647550935719
+     ],
+     "M_min_max": [
+      10.197709359146181,
+      14.900048562636309
+     ]
+    }
+   },
+   "sex_balance": {
+    "WT_M": 3,
+    "WT_F": 2,
+    "MUT_M": 2,
+    "MUT_F": 3
+   },
+   "sets": {
+    "ATF4_gene": {
+     "n_measurable": 1,
+     "mean_cLFC": null
+    },
+    "ISR_targets": {
+     "n_measurable": 10,
+     "mean_cLFC": -0.04915425778431399,
+     "null_2.5": -0.1600565160513933,
+     "null_97.5": 0.2824303435852113,
+     "outside_null": false
+    },
+    "UPR_branches": {
+     "n_measurable": 7,
+     "mean_cLFC": 0.0983709343223301,
+     "null_2.5": -0.14418941134307045,
+     "null_97.5": 0.23849092224123508,
+     "outside_null": false
+    },
+    "OXPHOS_nuclear": {
+     "n_measurable": 57,
+     "mean_cLFC": 0.0015604132779876191,
+     "null_2.5": -0.022137276925394134,
+     "null_97.5": 0.10067419490221614,
+     "outside_null": false
+    },
+    "Mito_translation": {
+     "n_measurable": 76,
+     "mean_cLFC": -0.0046993767602344985,
+     "null_2.5": -0.052755580793253314,
+     "null_97.5": 0.0852189855191673,
+     "outside_null": false
+    },
+    "Mito_import": {
+     "n_measurable": 20,
+     "mean_cLFC": -0.04289717377971368,
+     "null_2.5": -0.09358410446155493,
+     "null_97.5": 0.15813365554739853,
+     "outside_null": false
+    },
+    "Glycolysis_lactate": {
+     "n_measurable": 9,
+     "mean_cLFC": 0.16922033630516703,
+     "null_2.5": -0.14025290004277635,
+     "null_97.5": 0.3348176373473095,
+     "outside_null": false
+    },
+    "PDK_family": {
+     "n_measurable": 3,
+     "mean_cLFC": 0.09193575813872697,
+     "null_2.5": -0.22634062371921443,
+     "null_97.5": 0.3558295575847433,
+     "outside_null": false
+    },
+    "Lactate_transporters": {
+     "n_measurable": 1,
+     "mean_cLFC": null
+    },
+    "Ctl_cytosolic_ribosome": {
+     "n_measurable": 80,
+     "mean_cLFC": -0.0973052787613303,
+     "null_2.5": -0.007130484624672956,
+     "null_97.5": 0.10516672014011816,
+     "outside_null": true
+    },
+    "Ctl_housekeeping": {
+     "n_measurable": 11,
+     "mean_cLFC": 0.07057910264259375,
+     "null_2.5": -0.09848558829948904,
+     "null_97.5": 0.2110252968732889,
+     "outside_null": false
+    },
+    "Mk_radial_glia_progenitor": {
+     "n_measurable": 9,
+     "mean_cLFC": 0.1450994914480758,
+     "null_2.5": -0.15124427392704484,
+     "null_97.5": 0.22969158693865932,
+     "outside_null": false
+    },
+    "Mk_cell_cycle_proliferation": {
+     "n_measurable": 5,
+     "mean_cLFC": 0.09029766840941611,
+     "null_2.5": -0.32270187902643827,
+     "null_97.5": 0.6025591749711292,
+     "outside_null": false
+    },
+    "Mk_neuronal_pan": {
+     "n_measurable": 5,
+     "mean_cLFC": 0.05845443530458759,
+     "null_2.5": -0.1358114464591058,
+     "null_97.5": 0.2777807334041288,
+     "outside_null": false
+    },
+    "Mk_glutamatergic": {
+     "n_measurable": 2,
+     "mean_cLFC": null
+    },
+    "Mk_GABAergic": {
+     "n_measurable": 1,
+     "mean_cLFC": null
+    },
+    "Mk_astrocyte_glia": {
+     "n_measurable": 1,
+     "mean_cLFC": null
+    },
+    "Mk_regional_patterning_non_cortical": {
+     "n_measurable": 0,
+     "mean_cLFC": null
+    },
+    "Mk_wnt_pathway": {
+     "n_measurable": 3,
+     "mean_cLFC": -0.1644724417222782,
+     "null_2.5": -0.296425807407568,
+     "null_97.5": 0.547813290161731,
+     "outside_null": false
+    }
+   }
+  },
+  "HPC": {
+   "n_WT": 5,
+   "n_MUT": 5,
+   "genes_tested": 15114,
+   "median_shift_log2": 0.0027442184928012977,
+   "df": 7,
+   "calls": {
+    "T1_FDR<0.10": {
+     "up": 0,
+     "down": 0,
+     "up_nosex": 0,
+     "down_nosex": 0
+    },
+    "T2_FDR<0.05&|cLFC|>=0.585": {
+     "up": 0,
+     "down": 0,
+     "up_nosex": 0,
+     "down_nosex": 0
+    },
+    "T3_FDR<0.05&|cLFC|>=1": {
+     "up": 0,
+     "down": 0,
+     "up_nosex": 0,
+     "down_nosex": 0
+    }
+   },
+   "genes": {
+    "Wwox": {
+     "mean_norm_WT": 672.3487029200115,
+     "mean_norm_MUT": 598.5223543393626,
+     "cLFC": -0.1648126751728277,
+     "p": 0.2193352073712559,
+     "FDR": 0.5636824393957209
+    },
+    "Gfap": {
+     "mean_norm_WT": 56638.91494138114,
+     "mean_norm_MUT": 125362.64958086601,
+     "cLFC": 1.4444479095257063,
+     "p": 0.09934636119927487,
+     "FDR": 0.4782817154884401
+    },
+    "Aif1": {
+     "mean_norm_WT": 441.5953648307297,
+     "mean_norm_MUT": 461.1799989696089,
+     "cLFC": 0.07981201342180316,
+     "p": 0.6858380203968624,
+     "FDR": 0.8552603828612358
+    },
+    "Hk2": {
+     "mean_norm_WT": 188.5601536719126,
+     "mean_norm_MUT": 355.02863232673053,
+     "cLFC": 0.8230325497731469,
+     "p": 0.060771639990930666,
+     "FDR": 0.45925706148797607
+    },
+    "Ldha": {
+     "mean_norm_WT": 11334.137835558757,
+     "mean_norm_MUT": 16700.764887780995,
+     "cLFC": 0.5160198219363624,
+     "p": 0.06794747832788062,
+     "FDR": 0.4626167169886765
+    },
+    "Ldhb": {
+     "mean_norm_WT": 14748.516133196335,
+     "mean_norm_MUT": 13839.05392711078,
+     "cLFC": -0.1384502343767814,
+     "p": 0.15162006788609497,
+     "FDR": 0.5138084542669147
+    },
+    "Slc2a1": {
+     "mean_norm_WT": 5318.681326025008,
+     "mean_norm_MUT": 6028.394742903264,
+     "cLFC": 0.17844234427906555,
+     "p": 0.2815067689520686,
+     "FDR": 0.6082138032121557
+    },
+    "Bnip3": {
+     "mean_norm_WT": 3986.396737692726,
+     "mean_norm_MUT": 4077.213166654011,
+     "cLFC": 0.00022733206050763516,
+     "p": 0.9680639268681022,
+     "FDR": 0.9861372373582595
+    },
+    "Pdk1": {
+     "mean_norm_WT": 1983.310611262875,
+     "mean_norm_MUT": 1902.3028102396595,
+     "cLFC": -0.10249526080202497,
+     "p": 0.5006239926197218,
+     "FDR": 0.7546056671441582
+    },
+    "Atf4": {
+     "mean_norm_WT": 3786.675456090973,
+     "mean_norm_MUT": 4986.440734891861,
+     "cLFC": 0.29774044919575116,
+     "p": 0.3877112963424273,
+     "FDR": 0.680193677645902
+    },
+    "Chac1": {
+     "mean_norm_WT": 189.08602253410885,
+     "mean_norm_MUT": 495.6938225219509,
+     "cLFC": 0.8908621265134761,
+     "p": 0.17241128682664653,
+     "FDR": 0.5275326936869855
+    },
+    "Trib3": null,
+    "Sesn2": {
+     "mean_norm_WT": 911.631943341122,
+     "mean_norm_MUT": 1180.2654556599286,
+     "cLFC": 0.32750722454854525,
+     "p": 0.28774466865847437,
+     "FDR": 0.6129707465932356
+    },
+    "Ddit3": {
+     "mean_norm_WT": 584.5555450515801,
+     "mean_norm_MUT": 784.3520591521149,
+     "cLFC": 0.3889123580642667,
+     "p": 0.1720376682785476,
+     "FDR": 0.5273123744396611
+    },
+    "Asns": {
+     "mean_norm_WT": 3573.0212058177085,
+     "mean_norm_MUT": 4479.438489362137,
+     "cLFC": 0.31446367160222527,
+     "p": 0.10424514746057767,
+     "FDR": 0.48011087556551185
+    }
+   },
+   "sex_check": {
+    "Xist": {
+     "F_min_max": [
+      133.67667149096746,
+      231.39640577785738
+     ],
+     "M_min_max": [
+      0.021604314347008192,
+      0.21589362213106522
+     ]
+    },
+    "Ddx3y": {
+     "F_min_max": [
+      0.0,
+      0.18156448121837998
+     ],
+     "M_min_max": [
+      32.7726518394957,
+      52.69292269235299
+     ]
+    },
+    "Uty": {
+     "F_min_max": [
+      0.16336609585930426,
+      0.3026074686973
+     ],
+     "M_min_max": [
+      9.931106618029,
+      12.81125693322581
+     ]
+    }
+   },
+   "sex_balance": {
+    "WT_M": 3,
+    "WT_F": 2,
+    "MUT_M": 2,
+    "MUT_F": 3
+   },
+   "sets": {
+    "ATF4_gene": {
+     "n_measurable": 1,
+     "mean_cLFC": null
+    },
+    "ISR_targets": {
+     "n_measurable": 10,
+     "mean_cLFC": 0.16456209766186544,
+     "null_2.5": -0.14224510256656542,
+     "null_97.5": 0.23486400754462078,
+     "outside_null": false
+    },
+    "UPR_branches": {
+     "n_measurable": 7,
+     "mean_cLFC": 0.17973032499554478,
+     "null_2.5": -0.14983703213285873,
+     "null_97.5": 0.2155785133057739,
+     "outside_null": false
+    },
+    "OXPHOS_nuclear": {
+     "n_measurable": 57,
+     "mean_cLFC": 0.04903491543945131,
+     "null_2.5": -0.05293002687544985,
+     "null_97.5": 0.06398205258863811,
+     "outside_null": false
+    },
+    "Mito_translation": {
+     "n_measurable": 76,
+     "mean_cLFC": 0.03658549160803863,
+     "null_2.5": -0.04888707540049498,
+     "null_97.5": 0.07573234416934366,
+     "outside_null": false
+    },
+    "Mito_import": {
+     "n_measurable": 20,
+     "mean_cLFC": -0.009351228326388003,
+     "null_2.5": -0.09509424445728924,
+     "null_97.5": 0.13969054364861966,
+     "outside_null": false
+    },
+    "Glycolysis_lactate": {
+     "n_measurable": 9,
+     "mean_cLFC": 0.20599289040956367,
+     "null_2.5": -0.15718093955898618,
+     "null_97.5": 0.2584432238413488,
+     "outside_null": false
+    },
+    "PDK_family": {
+     "n_measurable": 3,
+     "mean_cLFC": 0.0317834514484029,
+     "null_2.5": -0.22902571046533818,
+     "null_97.5": 0.3582035906448792,
+     "outside_null": false
+    },
+    "Lactate_transporters": {
+     "n_measurable": 1,
+     "mean_cLFC": null
+    },
+    "Ctl_cytosolic_ribosome": {
+     "n_measurable": 80,
+     "mean_cLFC": -0.06640888622849754,
+     "null_2.5": -0.043985249770279074,
+     "null_97.5": 0.06484247837577842,
+     "outside_null": true
+    },
+    "Ctl_housekeeping": {
+     "n_measurable": 11,
+     "mean_cLFC": 0.05300061205009277,
+     "null_2.5": -0.12134506124717379,
+     "null_97.5": 0.17232967258743973,
+     "outside_null": false
+    },
+    "Mk_radial_glia_progenitor": {
+     "n_measurable": 9,
+     "mean_cLFC": 0.057335642327714625,
+     "null_2.5": -0.15458881525467102,
+     "null_97.5": 0.23393433790550766,
+     "outside_null": false
+    },
+    "Mk_cell_cycle_proliferation": {
+     "n_measurable": 4,
+     "mean_cLFC": 0.20787606235354578,
+     "null_2.5": -0.31445123650860013,
+     "null_97.5": 0.6010188131296632,
+     "outside_null": false
+    },
+    "Mk_neuronal_pan": {
+     "n_measurable": 5,
+     "mean_cLFC": 0.0028655947761197465,
+     "null_2.5": -0.16877246548703986,
+     "null_97.5": 0.24822703910775668,
+     "outside_null": false
+    },
+    "Mk_glutamatergic": {
+     "n_measurable": 2,
+     "mean_cLFC": null
+    },
+    "Mk_GABAergic": {
+     "n_measurable": 1,
+     "mean_cLFC": null
+    },
+    "Mk_astrocyte_glia": {
+     "n_measurable": 1,
+     "mean_cLFC": null
+    },
+    "Mk_regional_patterning_non_cortical": {
+     "n_measurable": 0,
+     "mean_cLFC": null
+    },
+    "Mk_wnt_pathway": {
+     "n_measurable": 3,
+     "mean_cLFC": 0.09023768899916729,
+     "null_2.5": -0.3049701915819474,
+     "null_97.5": 0.57628319694964,
+     "outside_null": false
+    }
+   }
+  },
+  "CTX": {
+   "n_WT": 5,
+   "n_MUT": 5,
+   "genes_tested": 15408,
+   "median_shift_log2": -0.005131662613540694,
+   "df": 7,
+   "calls": {
+    "T1_FDR<0.10": {
+     "up": 297,
+     "down": 129,
+     "up_nosex": 377,
+     "down_nosex": 162
+    },
+    "T2_FDR<0.05&|cLFC|>=0.585": {
+     "up": 44,
+     "down": 9,
+     "up_nosex": 111,
+     "down_nosex": 26
+    },
+    "T3_FDR<0.05&|cLFC|>=1": {
+     "up": 31,
+     "down": 2,
+     "up_nosex": 71,
+     "down_nosex": 6
+    }
+   },
+   "genes": {
+    "Wwox": {
+     "mean_norm_WT": 864.2320099662866,
+     "mean_norm_MUT": 869.6443721466842,
+     "cLFC": 0.028290538309111046,
+     "p": 0.8514600701716892,
+     "FDR": 0.9390020671984285
+    },
+    "Gfap": {
+     "mean_norm_WT": 21854.686435072857,
+     "mean_norm_MUT": 29038.668082149856,
+     "cLFC": 0.4530836670816323,
+     "p": 0.4277333128098759,
+     "FDR": 0.693373475410265
+    },
+    "Aif1": {
+     "mean_norm_WT": 464.1019613292725,
+     "mean_norm_MUT": 716.3495849559577,
+     "cLFC": 0.6491066166767885,
+     "p": 0.00037451909560474143,
+     "FDR": 0.055486444471902464
+    },
+    "Hk2": {
+     "mean_norm_WT": 132.9120208088031,
+     "mean_norm_MUT": 187.17393071486725,
+     "cLFC": 0.44861214125009174,
+     "p": 0.07960474495208547,
+     "FDR": 0.34689500622105335
+    },
+    "Ldha": {
+     "mean_norm_WT": 11917.386065349801,
+     "mean_norm_MUT": 19730.66618580209,
+     "cLFC": 0.6435164410831541,
+     "p": 0.08750514837675946,
+     "FDR": 0.3609513327746222
+    },
+    "Ldhb": {
+     "mean_norm_WT": 18358.551669288543,
+     "mean_norm_MUT": 15642.202705858877,
+     "cLFC": -0.1618117101185978,
+     "p": 0.1063298658120767,
+     "FDR": 0.3867635912257974
+    },
+    "Slc2a1": {
+     "mean_norm_WT": 5477.638173444864,
+     "mean_norm_MUT": 6274.3108945395015,
+     "cLFC": 0.2298274852874801,
+     "p": 0.1752315645021666,
+     "FDR": 0.47190902657734224
+    },
+    "Bnip3": {
+     "mean_norm_WT": 4776.078186994046,
+     "mean_norm_MUT": 4849.771238292361,
+     "cLFC": 0.06207282667334426,
+     "p": 0.7862216315344778,
+     "FDR": 0.9085804319120403
+    },
+    "Pdk1": {
+     "mean_norm_WT": 2342.3160749526737,
+     "mean_norm_MUT": 2265.3770616173747,
+     "cLFC": -0.04940149545918496,
+     "p": 0.697472234874615,
+     "FDR": 0.8628241296177017
+    },
+    "Atf4": {
+     "mean_norm_WT": 4604.307078185126,
+     "mean_norm_MUT": 5307.648429022853,
+     "cLFC": 0.1858590132008054,
+     "p": 0.5260376815454719,
+     "FDR": 0.7584866160072719
+    },
+    "Chac1": {
+     "mean_norm_WT": 200.59415986711326,
+     "mean_norm_MUT": 443.00816285636057,
+     "cLFC": 0.9086217103379095,
+     "p": 0.08575052332335904,
+     "FDR": 0.3563741761369275
+    },
+    "Trib3": null,
+    "Sesn2": {
+     "mean_norm_WT": 611.2797758394445,
+     "mean_norm_MUT": 777.4887550146947,
+     "cLFC": 0.34979799382625926,
+     "p": 0.09625043960295836,
+     "FDR": 0.3714996927360677
+    },
+    "Ddit3": {
+     "mean_norm_WT": 808.1685466428842,
+     "mean_norm_MUT": 865.7578287795604,
+     "cLFC": 0.17822234880803756,
+     "p": 0.28733290276740964,
+     "FDR": 0.5835554279690908
+    },
+    "Asns": {
+     "mean_norm_WT": 3250.7271652351,
+     "mean_norm_MUT": 4171.888833886556,
+     "cLFC": 0.3769590738625241,
+     "p": 0.03737026098798624,
+     "FDR": 0.2569389581628683
+    }
+   },
+   "sex_check": {
+    "Xist": {
+     "F_min_max": [
+      280.62258989729185,
+      452.25076246921145
+     ],
+     "M_min_max": [
+      0.10422910641572884,
+      0.5222301357495459
+     ]
+    },
+    "Ddx3y": {
+     "F_min_max": [
+      0.02068559508940521,
+      0.11042356735745958
+     ],
+     "M_min_max": [
+      38.695825729561626,
+      62.17266197698225
+     ]
+    },
+    "Uty": {
+     "F_min_max": [
+      0.31028392634107815,
+      0.9662736003699447
+     ],
+     "M_min_max": [
+      12.363801053284424,
+      14.857447362074582
+     ]
+    }
+   },
+   "sex_balance": {
+    "WT_M": 3,
+    "WT_F": 2,
+    "MUT_M": 2,
+    "MUT_F": 3
+   },
+   "sets": {
+    "ATF4_gene": {
+     "n_measurable": 1,
+     "mean_cLFC": null
+    },
+    "ISR_targets": {
+     "n_measurable": 10,
+     "mean_cLFC": 0.10647357724343942,
+     "null_2.5": -0.17084359095347323,
+     "null_97.5": 0.24561928034345415,
+     "outside_null": false
+    },
+    "UPR_branches": {
+     "n_measurable": 7,
+     "mean_cLFC": 0.2084984588515653,
+     "null_2.5": -0.17359476224836776,
+     "null_97.5": 0.22240153929153955,
+     "outside_null": false
+    },
+    "OXPHOS_nuclear": {
+     "n_measurable": 57,
+     "mean_cLFC": 0.1390472738613146,
+     "null_2.5": -0.05373688612789471,
+     "null_97.5": 0.09217488307547723,
+     "outside_null": true
+    },
+    "Mito_translation": {
+     "n_measurable": 76,
+     "mean_cLFC": 0.12392564666787025,
+     "null_2.5": -0.05401862273431971,
+     "null_97.5": 0.07915224270953064,
+     "outside_null": true
+    },
+    "Mito_import": {
+     "n_measurable": 20,
+     "mean_cLFC": 0.08482379609893938,
+     "null_2.5": -0.10553779534185255,
+     "null_97.5": 0.14458380398866952,
+     "outside_null": false
+    },
+    "Glycolysis_lactate": {
+     "n_measurable": 9,
+     "mean_cLFC": 0.2555758873592773,
+     "null_2.5": -0.18786902412753628,
+     "null_97.5": 0.2886449898303848,
+     "outside_null": false
+    },
+    "PDK_family": {
+     "n_measurable": 3,
+     "mean_cLFC": 0.04908078160772291,
+     "null_2.5": -0.2817201364768641,
+     "null_97.5": 0.3115863092603288,
+     "outside_null": false
+    },
+    "Lactate_transporters": {
+     "n_measurable": 1,
+     "mean_cLFC": null
+    },
+    "Ctl_cytosolic_ribosome": {
+     "n_measurable": 80,
+     "mean_cLFC": 0.011392241139403226,
+     "null_2.5": -0.04198179259532007,
+     "null_97.5": 0.08191751544990561,
+     "outside_null": false
+    },
+    "Ctl_housekeeping": {
+     "n_measurable": 11,
+     "mean_cLFC": 0.08636323131977414,
+     "null_2.5": -0.1415175713806953,
+     "null_97.5": 0.1899392542972524,
+     "outside_null": false
+    },
+    "Mk_radial_glia_progenitor": {
+     "n_measurable": 9,
+     "mean_cLFC": -0.010113436656680044,
+     "null_2.5": -0.17410037295091732,
+     "null_97.5": 0.23223953585209797,
+     "outside_null": false
+    },
+    "Mk_cell_cycle_proliferation": {
+     "n_measurable": 6,
+     "mean_cLFC": 0.3980781414787497,
+     "null_2.5": -0.3254556568713284,
+     "null_97.5": 0.5438837898481791,
+     "outside_null": false
+    },
+    "Mk_neuronal_pan": {
+     "n_measurable": 5,
+     "mean_cLFC": 0.08095933820480183,
+     "null_2.5": -0.211425304427036,
+     "null_97.5": 0.2666290035968892,
+     "outside_null": false
+    },
+    "Mk_glutamatergic": {
+     "n_measurable": 2,
+     "mean_cLFC": null
+    },
+    "Mk_GABAergic": {
+     "n_measurable": 1,
+     "mean_cLFC": null
+    },
+    "Mk_astrocyte_glia": {
+     "n_measurable": 1,
+     "mean_cLFC": null
+    },
+    "Mk_regional_patterning_non_cortical": {
+     "n_measurable": 0,
+     "mean_cLFC": null
+    },
+    "Mk_wnt_pathway": {
+     "n_measurable": 3,
+     "mean_cLFC": -0.41636750331618555,
+     "null_2.5": -0.34110026896750434,
+     "null_97.5": 0.47329885759213297,
+     "outside_null": true
+    }
+   }
+  },
+  "CB": {
+   "n_WT": 4,
+   "n_MUT": 3,
+   "genes_tested": 14789,
+   "median_shift_log2": 0.010935513392396144,
+   "df": 4,
+   "calls": {
+    "T1_FDR<0.10": {
+     "up": 2,
+     "down": 4,
+     "up_nosex": 0,
+     "down_nosex": 2
+    },
+    "T2_FDR<0.05&|cLFC|>=0.585": {
+     "up": 0,
+     "down": 1,
+     "up_nosex": 0,
+     "down_nosex": 0
+    },
+    "T3_FDR<0.05&|cLFC|>=1": {
+     "up": 0,
+     "down": 0,
+     "up_nosex": 0,
+     "down_nosex": 0
+    }
+   },
+   "genes": {
+    "Wwox": {
+     "mean_norm_WT": 1316.020519168867,
+     "mean_norm_MUT": 1212.3628607965627,
+     "cLFC": -0.1237185939492593,
+     "p": 0.22334169202622042,
+     "FDR": 0.38389124632447397
+    },
+    "Gfap": {
+     "mean_norm_WT": 5180.4563115358815,
+     "mean_norm_MUT": 9546.5880276677,
+     "cLFC": 0.8877245663530725,
+     "p": 0.0497791132397304,
+     "FDR": 0.20050838104256888
+    },
+    "Aif1": {
+     "mean_norm_WT": 59.23888836921615,
+     "mean_norm_MUT": 96.8860393013457,
+     "cLFC": 0.7506731893767571,
+     "p": 0.04808230496853847,
+     "FDR": 0.19968806744726633
+    },
+    "Hk2": {
+     "mean_norm_WT": 651.6785946058404,
+     "mean_norm_MUT": 588.9318371557325,
+     "cLFC": -0.1875447539637685,
+     "p": 0.027781730107199233,
+     "FDR": 0.17853315646818405
+    },
+    "Ldha": {
+     "mean_norm_WT": 5531.341097096584,
+     "mean_norm_MUT": 6863.333109794028,
+     "cLFC": 0.310567406031086,
+     "p": 0.11435838904093158,
+     "FDR": 0.26939251601247804
+    },
+    "Ldhb": {
+     "mean_norm_WT": 20777.652166794353,
+     "mean_norm_MUT": 26013.49984769015,
+     "cLFC": 0.33245195836834934,
+     "p": 0.038098113115271906,
+     "FDR": 0.19112262366906213
+    },
+    "Slc2a1": {
+     "mean_norm_WT": 5631.037072561646,
+     "mean_norm_MUT": 5027.912132850767,
+     "cLFC": -0.17253262014940748,
+     "p": 0.35457426694304595,
+     "FDR": 0.5116338260403756
+    },
+    "Bnip3": {
+     "mean_norm_WT": 3992.6549751989796,
+     "mean_norm_MUT": 4919.285167135761,
+     "cLFC": 0.2990602811845749,
+     "p": 0.04301337975522675,
+     "FDR": 0.19549012698219065
+    },
+    "Pdk1": {
+     "mean_norm_WT": 1038.0007953388604,
+     "mean_norm_MUT": 1106.2754745210286,
+     "cLFC": 0.09103751737775975,
+     "p": 0.18293173925242373,
+     "FDR": 0.34218698769308936
+    },
+    "Atf4": {
+     "mean_norm_WT": 5387.676613802234,
+     "mean_norm_MUT": 5615.898209991596,
+     "cLFC": 0.06396125158277896,
+     "p": 0.5056756825259966,
+     "FDR": 0.645743453989173
+    },
+    "Chac1": {
+     "mean_norm_WT": 153.1412212035853,
+     "mean_norm_MUT": 176.53136444405868,
+     "cLFC": 0.22213447686922672,
+     "p": 0.5099011078325392,
+     "FDR": 0.6486819340847675
+    },
+    "Trib3": {
+     "mean_norm_WT": 48.39377503892928,
+     "mean_norm_MUT": 64.98407469010883,
+     "cLFC": 0.41206064267486864,
+     "p": 0.07679430464397487,
+     "FDR": 0.2279171124583071
+    },
+    "Sesn2": {
+     "mean_norm_WT": 622.1116451878416,
+     "mean_norm_MUT": 475.9650736010739,
+     "cLFC": -0.39937841658319845,
+     "p": 0.006468438764064077,
+     "FDR": 0.17028187605411552
+    },
+    "Ddit3": {
+     "mean_norm_WT": 734.0244003267067,
+     "mean_norm_MUT": 943.5987344070692,
+     "cLFC": 0.38920468334880803,
+     "p": 0.026886399215280396,
+     "FDR": 0.1785260429177917
+    },
+    "Asns": {
+     "mean_norm_WT": 2844.79717127583,
+     "mean_norm_MUT": 2977.708605980583,
+     "cLFC": 0.06669425746454,
+     "p": 0.2722295755646089,
+     "FDR": 0.43299668670950753
+    }
+   },
+   "sex_check": {
+    "Xist": {
+     "F_min_max": [
+      361.90931801323717,
+      522.4110830039945
+     ],
+     "M_min_max": [
+      0.18376755462536504,
+      0.8355711865789497
+     ]
+    },
+    "Ddx3y": {
+     "F_min_max": [
+      0.0,
+      0.05045790421934293
+     ],
+     "M_min_max": [
+      53.986050567015546,
+      67.44144238161898
+     ]
+    },
+    "Uty": {
+     "F_min_max": [
+      1.6131634561143775,
+      4.0366323375474344
+     ],
+     "M_min_max": [
+      21.33763493532098,
+      25.17270308766134
+     ]
+    }
+   },
+   "sex_balance": {
+    "WT_M": 2,
+    "WT_F": 2,
+    "MUT_M": 1,
+    "MUT_F": 2
+   },
+   "sets": {
+    "ATF4_gene": {
+     "n_measurable": 1,
+     "mean_cLFC": null
+    },
+    "ISR_targets": {
+     "n_measurable": 11,
+     "mean_cLFC": 0.20783322186668665,
+     "null_2.5": -0.18322779361955047,
+     "null_97.5": 0.1687707428886207,
+     "outside_null": true
+    },
+    "UPR_branches": {
+     "n_measurable": 7,
+     "mean_cLFC": 0.12800253033857042,
+     "null_2.5": -0.23497374100181218,
+     "null_97.5": 0.14640017217867612,
+     "outside_null": false
+    },
+    "OXPHOS_nuclear": {
+     "n_measurable": 57,
+     "mean_cLFC": 0.31841616429931674,
+     "null_2.5": -0.11897302615706198,
+     "null_97.5": 0.015073353787897379,
+     "outside_null": true
+    },
+    "Mito_translation": {
+     "n_measurable": 76,
+     "mean_cLFC": 0.24661541135429185,
+     "null_2.5": -0.08063163832394368,
+     "null_97.5": 0.03265062131905647,
+     "outside_null": true
+    },
+    "Mito_import": {
+     "n_measurable": 20,
+     "mean_cLFC": 0.19845418211576774,
+     "null_2.5": -0.1498188908213653,
+     "null_97.5": 0.06817529815070698,
+     "outside_null": true
+    },
+    "Glycolysis_lactate": {
+     "n_measurable": 9,
+     "mean_cLFC": 0.08068561910457953,
+     "null_2.5": -0.21603510477888846,
+     "null_97.5": 0.13449255764346754,
+     "outside_null": false
+    },
+    "PDK_family": {
+     "n_measurable": 3,
+     "mean_cLFC": 0.004051330116454331,
+     "null_2.5": -0.3130724235382315,
+     "null_97.5": 0.26937889364442114,
+     "outside_null": false
+    },
+    "Lactate_transporters": {
+     "n_measurable": 1,
+     "mean_cLFC": null
+    },
+    "Ctl_cytosolic_ribosome": {
+     "n_measurable": 80,
+     "mean_cLFC": 0.3551886753675188,
+     "null_2.5": -0.10004449944873298,
+     "null_97.5": 0.017467441349093775,
+     "outside_null": true
+    },
+    "Ctl_housekeeping": {
+     "n_measurable": 11,
+     "mean_cLFC": 0.12304110810884455,
+     "null_2.5": -0.19524956866804688,
+     "null_97.5": 0.12424263159349663,
+     "outside_null": false
+    },
+    "Mk_radial_glia_progenitor": {
+     "n_measurable": 9,
+     "mean_cLFC": -0.02196138098249157,
+     "null_2.5": -0.20945445243320415,
+     "null_97.5": 0.1877972925497884,
+     "outside_null": false
+    },
+    "Mk_cell_cycle_proliferation": {
+     "n_measurable": 2,
+     "mean_cLFC": null
+    },
+    "Mk_neuronal_pan": {
+     "n_measurable": 5,
+     "mean_cLFC": 0.0010184887358423212,
+     "null_2.5": -0.2787083899658495,
+     "null_97.5": 0.18976421222242676,
+     "outside_null": false
+    },
+    "Mk_glutamatergic": {
+     "n_measurable": 2,
+     "mean_cLFC": null
+    },
+    "Mk_GABAergic": {
+     "n_measurable": 0,
+     "mean_cLFC": null
+    },
+    "Mk_astrocyte_glia": {
+     "n_measurable": 1,
+     "mean_cLFC": null
+    },
+    "Mk_regional_patterning_non_cortical": {
+     "n_measurable": 1,
+     "mean_cLFC": null
+    },
+    "Mk_wnt_pathway": {
+     "n_measurable": 3,
+     "mean_cLFC": -0.07177684074145076,
+     "null_2.5": -0.3439767339132026,
+     "null_97.5": 0.35024244666079946,
+     "outside_null": false
+    }
+   }
+  }
+ }
+}

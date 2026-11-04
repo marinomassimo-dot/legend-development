@@ -1,0 +1,13 @@
+V1 own answer (written before reading identity_it24_p2_20261104). script v1_mine.py, rows v1_mine_rows.tsv
+158 rows (Q2 51, Q4 87, Q8 20) = 158 families = 158 compound labels.
+(a) family member with ids.inchikey: 43 rows (root record also 43). 115 rows without.
+Of the 115: (b) merged claim-name bridge: 23 ; (c) own ids.iuphar_ligand -> GtoPdb InChIKey: 66; b and c overlap 0; b|c = 89 ; unresolved 26.
+Total structure-bearing 43+89=132 rows; 26 unresolved. 
+Distinct full InChIKeys 131, distinct first blocks 130. After family_bridge fusion 154 families (4 twin pairs fused: Vadadustat, Zanubrutinib, Tirabrutinib, Tapinarof); 4 further pairs share an identical full key but stay separate families (BMS-986142, Branebrutinib, Ceralasertib, Elimusertib: gtopdb ligand has no ChEMBL id -> conservative).
+7 families have 2 keys (ChEMBL parent + salt, same family by parent link): molidustat, spebrutinib, acalabrutinib, tirabrutinib, vecabrutinib, abivertinib, tazemetostat. 
+Labelled/Radioactive among the 158 rows' ligands: 0. Several ligand ids per record: 0 in the 158 (22 in the whole catalogue). Whole catalogue: 404 record-ligand links are labelled/radioactive; bridge rule excludes (53 related_not_merged).
+Stereo-different pair not fused: Compound 71 [WO2018191577A1] (flat key JSAQBOQCZJHWMA-UHFFFAOYSA-N) vs Biib091 (-XMMPIXPASA-N): same first block, different rows. Tulmimetostat/Valemetostat related_not_merged.
+Two c-only names differ from ligand name via synonyms (Example A225 -> flixebrutinib; Biib091 -> corubrutinib): valid (concept id, synonym).
+--- after reading producer: producer R0 43,R1 23,R2 4,R3 66,none 22. Mine without R2: 43/23/66/26; R2 = 0040,0055,1006,1007 (perimeter: unmerged decisions with known GtoPdb structure).
+Producer key choice: first keyed family member -> salt key for panobinostat (lactate), sorafenib (tosylate), spebrutinib besylate(row is the besylate). Not parent key. Not in LINCS top20 so no effect.
+Distinct per-row single key: 128 full / 127 skeleton (producer json), README column sums to 135 (sum by route, not deduped).

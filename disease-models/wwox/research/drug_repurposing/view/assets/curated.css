@@ -209,4 +209,10 @@ details>summary{padding:3px 0;min-height:24px}
 .inv-pos{display:inline-block;min-width:1.7em;text-align:center;font-weight:700;border:2px solid var(--fg);border-radius:99px;padding:0 6px}
 .org{display:inline-block;font-size:.76rem;padding:1px 8px;border-radius:6px;margin-left:4px}.org-known_in_wwox{border:2px solid var(--g1)}.org-generated_by_legend{border:2px dashed var(--acc)}.org-external_transferred{border:2px dotted var(--g4)}
 .stt{display:inline-block;font-size:.76rem;padding:1px 8px;border-radius:6px;margin-left:4px;border:1px solid var(--line)}.stt-conditional_hypothesis{border:2px dashed var(--fg);font-weight:600}
-.inv-how{margin:6px 0}.inv-negs{list-style:none;padding:0;margin:4px 0;display:grid;gap:8px}.inv-neg{border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+.inv-how{margin:6px 0}.inv-how summary{font-weight:700;color:var(--fg)}.inv-vs{margin:6px 0;font-size:.88rem}
+.inv-row[hidden]{display:none}.inv-row{padding:10px 12px}.inv-h{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:baseline;font-size:1.02rem;margin-bottom:6px}
+.inv-glance{grid-template-columns:minmax(7.5em,max-content) minmax(0,1fr);font-size:.9rem;gap:4px 12px}.inv-glance dt{color:var(--mut)}
+.inv-more{margin-top:8px;border-top:1px dashed var(--line);padding-top:4px}.inv-more summary{font-size:.85rem}.inv-more .qk-dl{margin-top:6px}
+.inv-legend{list-style:none;margin:6px 0;padding:0;display:grid;gap:4px;font-size:.84rem}
+.inv-filter{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:6px 0}.inv-filter[hidden]{display:none}.inv-filter button{padding:5px 10px;font-size:.84rem;min-height:34px}.inv-filter button[aria-pressed=true]{background:var(--accbg);border-color:var(--acc);font-weight:700}
+@media (max-width:560px){.inv-glance{grid-template-columns:minmax(0,1fr)}.inv-glance dt{margin-top:6px;font-size:.78rem}.inv-h{font-size:.98rem}.inv-filter button{flex:1 1 auto}}.inv-negs{list-style:none;padding:0;margin:4px 0;display:grid;gap:8px}.inv-neg{border:1px solid var(--line);border-radius:8px;padding:6px 10px}
