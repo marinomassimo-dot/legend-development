@@ -1,0 +1,22 @@
+{
+ "proposals_old": 1000,
+ "proposals_new": 996,
+ "left": [
+  "Buparlisib",
+  "Pictilisib",
+  "Regorafenib",
+  "Sorafenib"
+ ],
+ "moved": [
+  "Idronoxil",
+  "Panobinostat"
+ ],
+ "handoff_old": 16,
+ "handoff_new": 15,
+ "handoff_left": [
+  "IT21P2-0035"
+ ],
+ "handoff_gained": [],
+ "phase_from_own_record": 256,
+ "phase_from_sibling_family": 108
+}

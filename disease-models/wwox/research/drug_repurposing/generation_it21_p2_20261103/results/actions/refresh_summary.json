@@ -21,8 +21,8 @@
  "withheld_by_class": {
   "action_conflict_or_glue_modulator": 6,
   "group_record_mostly_outside_module_targets": 1585,
-  "listing_tier_claim_not_carried": 8,
+  "listing_tier_claim_not_carried": 12,
   "republished_claim_level_not_carried": 9624
  },
- "withheld_rows": 11223
+ "withheld_rows": 11227
 }

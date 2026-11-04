@@ -1,0 +1,7 @@
+proposal_id	question	compound	family_id	change	z_total_old	z_total_new	z_reach_old	z_reach_new	eligible_old	eligible_new	blocker_old	blocker_new	handed_over_old	handed_over_new
+IT21P2-0033	Q2	Panobinostat	FAM:CAT:DGIDB:be0d8ea27925	MOVED	5.48	5.686	2.93332	3.15875	no	yes	reach_null_not_confirming			
+IT21P2-0034	Q2	Idronoxil	FAM:CAT:DGIDB:b34c953dc1fa	MOVED	5.266	5.717	2.78284	3.38313	no	no	reach_null_not_confirming	identity_not_resolved		
+IT21P2-0035	Q2	Sorafenib	FAM:CAT:DGIDB:0bc1cf72f3bb	LEFT_THE_TABLE	-54.08		-7.94658		yes				yes	
+IT21P2-0036	Q2	Regorafenib	FAM:CAT:DGIDB:18c39af2d48d	LEFT_THE_TABLE	-35.8		-7.27948		yes					
+IT21P2-0844	Q6	Pictilisib	FAM:CAT:DGIDB:304d32aabb7a	LEFT_THE_TABLE	-8.787		-5.8539		no		arm_has_no_stated_benefit_hypothesis			
+IT21P2-0846	Q6	Buparlisib	FAM:CAT:DGIDB:7cbc364139ee	LEFT_THE_TABLE	-8.787		-5.8539		no		arm_has_no_stated_benefit_hypothesis			

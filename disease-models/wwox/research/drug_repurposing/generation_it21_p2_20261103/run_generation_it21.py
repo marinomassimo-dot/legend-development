@@ -722,8 +722,11 @@ def cmd_propose(a):
             proposals[-1].update(identity_via=meta.get(s["family_id"], {}).get("identity_via", ""), attribution_state=att["state"], attribution_fold=att["fold"],
                                  attribution_best_target=att["best_target"], attribution_best_nm=att["best_nm"], attribution_main_nm=att["main_nm"],
                                  attribution_main_measure=att["main_measure"], attribution_best_measure=att["best_measure"], attribution_mixed_measure=att["mixed_measure"], attribution_comparison_basis=att["comparison_basis"], attribution_context_note=att["context_note"], attribution_copotent=att.get("n_copotent", ""), attribution_values_kept=att["values_kept"][:400],
+                                 max_phase_source="own" if proposals[-1]["max_phase"] != "" else ("sibling_family" if sib and phase_of.get(sib, "") != "" else ""),
                                  sibling_family=sib, sibling_z_reach=reach.get(s["seed_set"], {}).get(sib, "") if sib else "",
                                  sibling_compatible_action=reach_act.get(s["seed_set"], {}).get(sib, "") if sib else "")
+        if v1 and proposals[-1].get("max_phase_source") == "sibling_family":      # IT25 (IT24 reverse-test F2): a blank phase is read from the sibling family the identity bridge names, and says so
+            proposals[-1]["max_phase"] = phase_of[sib]
         if ok:
             elig_rows.append(proposals[-1])
     assign_ids(proposals, R / "proposals_it21.tsv")

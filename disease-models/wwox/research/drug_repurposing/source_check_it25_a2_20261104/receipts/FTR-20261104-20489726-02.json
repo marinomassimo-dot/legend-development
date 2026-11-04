@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-04T12:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-04T12:00:00Z",
+ "event_id": "FTR-20261104-20489726-02",
+ "evidence_basis": [
+  "abstract analysed in full; nothing beyond the abstract is used",
+  "verbatim_locator | proposition: triciribine phosphate does not inhibit Akt activity in vitro; it blocks PH-domain-dependent membrane recruitment | Abstract | \"in vitro, TCN-P inhibits neither Akt activity nor the phosphorylation of Akt S473 and T308 by mammalian target of rapamycin or phosphoinositide-dependent kinase 1.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/source_check_it25_a2_20261104/README.md",
+  "disease-models/wwox/research/drug_repurposing/source_check_it25_a2_20261104/verdicts.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 20489726 (abstract; PMC2952662 exists, not opened)",
+ "study_id": {
+  "doi": "10.1038/cdd.2010.63",
+  "pmid": "20489726"
+ },
+ "workflow": "IT25 A2 source check (source_check_it25_a2_20261104): question-driven, one compound-target relation set. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor. Berndt 2010. Abstract only."
+}

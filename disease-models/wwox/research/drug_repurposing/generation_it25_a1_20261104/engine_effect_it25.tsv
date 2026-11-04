@@ -1,0 +1,7 @@
+family_id	compound	contribution_rows_removed	contribution_rows_recomputed	cause
+FAM:CAT:DGIDB:0bc1cf72f3bb	Sorafenib	102	102	IT25 A2 pairs
+FAM:CAT:DGIDB:18c39af2d48d	Regorafenib	83	83	IT25 A2 pairs
+FAM:CAT:DGIDB:304d32aabb7a	Pictilisib	111	100	IT25 A2 pairs
+FAM:CAT:DGIDB:7cbc364139ee	Buparlisib	111	100	IT25 A2 pairs
+FAM:CAT:DGIDB:be0d8ea27925	Panobinostat	106	79	IT24 P1 pairs
+FAM:CAT:DGIDB:b34c953dc1fa	Idronoxil	89	47	IT24 P1 pairs

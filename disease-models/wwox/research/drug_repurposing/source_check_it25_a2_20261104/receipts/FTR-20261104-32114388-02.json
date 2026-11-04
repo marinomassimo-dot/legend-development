@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-04T12:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "unavailable",
+  "introduction": "read",
+  "limitations": "unavailable",
+  "methods": "read",
+  "references": "unavailable",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-04T12:00:00Z",
+ "event_id": "FTR-20261104-32114388-02",
+ "evidence_basis": [
+  "coverage_map",
+  "verbatim_locator | proposition: ZHX2 level modulates sorafenib resistance; sorafenib is not shown to act on ZHX2 (ZHX2 is the modulated variable) | Results 3.2 | \"DOX induced ZHX2 overexpression significantly suppressed, while ZHX2 silence with siRNA increased the resistance of HCC cells to sorafenib.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/source_check_it25_a2_20261104/README.md",
+  "disease-models/wwox/research/drug_repurposing/source_check_it25_a2_20261104/verdicts.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PubMed full-text service for PMC7047184, fetched 2026-11-04; text searched for sorafenib and read in context; figures and supplement not seen; bytes not saved",
+ "study_id": {
+  "doi": "10.1016/j.ebiom.2020.102676",
+  "pmid": "32114388"
+ },
+ "workflow": "IT25 A2 source check (source_check_it25_a2_20261104): question-driven, one compound-target relation set. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor. Lin 2020, HCC cell lines. Relevant because it is the only ZHX2-sorafenib paper PubMed returns; it reads ZHX2 as determinant of drug response, not as target."
+}
