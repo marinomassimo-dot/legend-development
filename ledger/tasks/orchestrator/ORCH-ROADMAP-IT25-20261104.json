@@ -11,7 +11,9 @@
     "Authorised by the operator's message 'Procedi con le prossime 3 azioni indicate'. A pair is withheld only when a source check has read and named it; UNKNOWN pairs are not excluded.",
     "The G-SRS trial rests on the public-domain statement of the cited paper because the service's terms page could not be rendered; recorded as a weaker basis. Not consumed by the generator."
   ],
-  "STOP_LOG": [],
+  "STOP_LOG": [
+    "2026-11-04 IT25 complete: A1-A4 DONE, 6c457266 released, CI green."
+  ],
   "AUTHORISED_QUEUE_20261104": {
     "MANDATE_STATE": "COMPLETE",
     "OBJ_A1": {
@@ -52,8 +54,9 @@
       "steps": [
         {
           "step": "A4 battery on the frozen candidate, push, CI, cleanup, report",
-          "status": "TODO",
-          "owner": "orchestrator"
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "First battery on cb4ec64a FAILED on one suite (ranking.json embeds the ledger line count, 1035 vs 1043; own defect, derived file regenerated, order digest unchanged). Second battery on exact 6c457266: PASS WITH SKIPS (202 targets, 8 environment skips). Pushed by safe_push (gate PASS, verified by ls-remote). CI: Public release gate success. Worktree, branch and battery clone removed; root clean. Self-evaluation: this session's IT24 note applies; new lesson recorded in the Standing method (ranking_it8.py run joins the pre-battery list)."
         }
       ]
     }
