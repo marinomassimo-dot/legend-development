@@ -2,12 +2,12 @@
  "blockers": {
   "ELIGIBLE": 220,
   "arm_has_no_stated_benefit_hypothesis": 96,
-  "decided_in_earlier_qualification_record": 21,
+  "decided_in_earlier_qualification_record": 22,
   "decision_scope_untagged": 1,
   "identity_not_resolved": 546,
   "main_target_weak_attribution": 5,
   "modality_antibody_not_small_molecule": 6,
-  "modality_protein_or_peptide_not_small_molecule": 6,
+  "modality_protein_or_peptide_not_small_molecule": 5,
   "modality_unknown_not_small_molecule": 11,
   "reach_null_not_confirming": 47,
   "shared_premise_contradicted": 35

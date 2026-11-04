@@ -469,5 +469,17 @@ class IdentityRouteR4(unittest.TestCase):
         self.assertNotIn("FAM:CAT:DGIDB:b459313a7710", r4)                   # EZN-2968: no hit
 
 
+class ModalityDeclarations(unittest.TestCase):
+    """IT27: a declared modality correction (PX-478) is structure-level, second-actor evidence, never a loosened filter."""
+
+    def test_missing_file_means_no_declaration(self):
+        self.assertEqual(G.load_modality_declarations(HERE / "no_such_decl.tsv"), {})
+
+    def test_px478_is_declared_and_a_real_peptide_is_not(self):
+        d = G.load_modality_declarations()
+        self.assertEqual(d["FAM:CAT:DGIDB:b884da5f3057"], ("protein_or_peptide", "small_molecule"))
+        self.assertEqual(len(d), 1)                       # romidepsin, voclosporin, GDC-0152 stay protein_or_peptide (peptide bonds, ring or mimetic)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=1)

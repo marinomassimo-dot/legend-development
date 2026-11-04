@@ -1,0 +1,5 @@
+id	gap	resource	licence_read	parts	smallest_test	verdict	cost_hours
+P13-7	G3	proteome-wide thermal shift, cells v lysate, 96 compounds (eLife 2024, PMC11554310; PRIDE reported PXD048009 unverified)	article CC BY 4.0; supplement/PRIDE terms not read	data only (source-data xlsx, PRIDE raw)	read Supp file 1; count compared-family compounds covered; stop if fewer than 3	TRIAL	3
+P13-8	G1	iPSC-derived astrocyte and microglia CRISPRi single-cell screens (GEO GSE182307; Drager 2022)	not read	processed data via GEO; code unread	check target list for panel genes (with IT24 P13-3)	WATCH	2
+P13-9	G4	GraphGuest (arXiv 2311.12670)	not read	Python package, repository unread	open repository; read licence and negative-sampling component	WATCH	2
+P13-10	G5	preon name normaliser (PyPI)	not read	code	none worth running; collision check is in-house	WATCH	0

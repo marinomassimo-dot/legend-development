@@ -467,6 +467,19 @@ def decision_effect(p, cluster_decisions, global_decisions=()):
     return dict(block=block, work_done=work, carried_limits=limits)
 
 
+MODALITY_DECL_FILE = Path(__file__).resolve().parent / "modality_declarations_it27.tsv"
+
+
+def load_modality_declarations(path=None):
+    """{family id: (from_modality, to_modality)} declared at structure level by a second actor (IT27: PX-478, a single amino acid that ChEMBL types 'Protein'). The modality filter is not loosened:
+    a declaration applies only while the computed modality still equals its `from_modality`, so a stale or wrong row does nothing."""
+    path = Path(path) if path else MODALITY_DECL_FILE
+    if not path.exists():
+        return {}
+    with open(path, encoding="utf-8", newline="") as fh:
+        return {r["family_id"]: (r["from_modality"], r["to_modality"]) for r in csv.DictReader(fh, delimiter="\t")}
+
+
 R4_FILE = DR / "identity_gsrs_it26_a1_20261104" / "identity_r4_it26.tsv"
 
 
@@ -668,9 +681,13 @@ def cmd_propose(a):
             if f in meta:
                 modality[f] = modality.get(tgt) or modality.get(f)       # the substance is the ChEMBL record's: its modality is that record's
     r4 = load_identity_r4() if v1 else {}
+    modality_decl = load_modality_declarations() if v1 else {}
     for f, m in meta.items():
         if f in r4 and f not in fb and m.get("has_chembl") != "1":      # IT26: route R4 (G-SRS name -> UNII -> structure, verified by a second actor), the family's own record has no ChEMBL id
             modality[f] = modality.get("FAM:CAT:" + r4[f]) or modality.get(f)
+        decl = modality_decl.get(f)
+        if decl and modality.get(f) == decl[0]:
+            modality[f] = decl[1]
         m["modality"] = modality.get(f)
         if v1 and f in fb and m.get("has_chembl") != "1":
             m["has_chembl"], m["identity_via"] = "1", "gtopdb_ligand_claim_name->" + fb[f]
