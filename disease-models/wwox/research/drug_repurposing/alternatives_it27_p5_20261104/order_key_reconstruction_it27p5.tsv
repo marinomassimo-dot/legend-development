@@ -1,0 +1,28 @@
+question	hypothesis	main_target	proposal_id	compound	handed_over	k1_cluster_work_done	k2_seed_support_limited	k3_unmeasured_at_main	k4_minus_n_origins	k5_chain_edges	k6_minus_zmin	rank_in_cluster	exact_tie_with_first	n_exact_ties_with_first	zmin_text_ascending_rank
+Q2	H_HARM	HDAC5	IT21P2-0005	Pracinostat	yes	0	1	0	-1	1	-4.76	1	yes	1	12
+Q2	H_HARM	HDAC5	IT21P2-0020	Pivaloyloxymethylbutyrate	no	0	1	0	-1	1	-3.27	2	no		10
+Q2	H_HARM	HDAC5	IT21P2-0021	4-Phenylbutyric Acid	no	0	1	0	-1	1	-3.27	3	no		11
+Q2	H_HARM	HDAC5	IT21P2-0022	CUDC-101	no	0	1	0	-1	1	-3.17	4	no		3
+Q2	H_HARM	HDAC5	IT21P2-0023	Trichostatin A	no	0	1	0	-1	1	-3.17	5	no		4
+Q2	H_HARM	HDAC5	IT21P2-0026	Belinostat	no	0	1	0	-1	1	-3.17	6	no		5
+Q2	H_HARM	HDAC5	IT21P2-0027	Dacinostat	no	0	1	0	-1	1	-3.17	7	no		6
+Q2	H_HARM	HDAC5	IT21P2-0029	Givinostat	no	0	1	0	-1	1	-3.17	8	no		8
+Q2	H_HARM	HDAC5	IT21P2-0030	Quisinostat	no	0	1	0	-1	1	-3.16	9	no		1
+Q2	H_HARM	HDAC5	IT21P2-0019	Valproic Acid	no	0	1	1	-1	1	-3.27	10	no		9
+Q2	H_HARM	HDAC5	IT21P2-0028	Abexinostat	no	0	1	1	-1	1	-3.17	11	no		7
+Q2	H_HARM	HDAC5	IT21P2-0033	Panobinostat	no	0	1	1	-1	1	-3.16	12	no		2
+Q2	H_HARM	XIAP	IT21P2-0014	ASTX-660	yes	0	1	0	-1	2	-3.38	1	yes	3	1
+Q2	H_HARM	XIAP	IT21P2-0017	Xevinapant	no	0	1	0	-1	2	-3.38	2	yes	3	2
+Q2	H_HARM	XIAP	IT21P2-0034	Idronoxil	no	0	1	0	-1	2	-3.38	3	yes	3	3
+Q5	H_HARM	EZH2	IT21P2-0198	GSK2816126	no	1	0	0	-2	1	-4.59	1	yes	4	1
+Q5	H_HARM	EZH2	IT21P2-0199	TAZEMETOSTAT	no	1	0	0	-2	1	-4.59	2	yes	4	2
+Q5	H_HARM	EZH2	IT21P2-0200	MEVROMETOSTAT	no	1	0	0	-2	1	-4.59	3	yes	4	3
+Q5	H_HARM	EZH2	IT21P2-0209	Tazemetostat	no	1	0	0	-2	1	-4.59	4	yes	4	4
+Q8	H_HARM	EZH2	IT21P2-0993	GSK2816126	yes	0	1	0	-1	1	-3.78	1	yes	4	1
+Q8	H_HARM	EZH2	IT21P2-0994	TAZEMETOSTAT	no	0	1	0	-1	1	-3.78	2	yes	4	2
+Q8	H_HARM	EZH2	IT21P2-0995	MEVROMETOSTAT	no	0	1	0	-1	1	-3.78	3	yes	4	3
+Q8	H_HARM	EZH2	IT21P2-1004	Tazemetostat	no	0	1	0	-1	1	-3.78	4	yes	4	4
+Q5	H_HARM	ROCK2	IT21P2-0221	SAR-407899 FREE BASE	yes	0	0	0	-2	2	-4.29	1	yes	4	1
+Q5	H_HARM	ROCK2	IT21P2-0222	BELUMOSUDIL	no	0	0	0	-2	2	-4.29	2	yes	4	2
+Q5	H_HARM	ROCK2	IT21P2-0223	Fasudil	no	0	0	0	-2	2	-4.29	3	yes	4	3
+Q5	H_HARM	ROCK2	IT21P2-0230	Ripasudil	no	0	0	0	-2	2	-4.29	4	yes	4	4

@@ -1,0 +1,11 @@
+animal	regions	geno	sex	n_libs
+F10	['CB', 'CTX', 'HPC', 'PFC']	P47T	F	4
+F4	['CB', 'CTX', 'HPC', 'PFC']	WT	F	4
+F5	['CB', 'CTX', 'HPC', 'PFC']	WT	F	4
+F8	['CB', 'CTX', 'HPC', 'PFC']	P47T	F	4
+F9	['CTX', 'HPC', 'PFC']	P47T	F	3
+M1	['CTX', 'HPC', 'PFC']	WT	M	3
+M2	['CB', 'CTX', 'HPC', 'PFC']	WT	M	4
+M3	['CB', 'CTX', 'HPC', 'PFC']	WT	M	4
+M6	['CB', 'CTX', 'HPC', 'PFC']	P47T	M	4
+M7	['CTX', 'HPC', 'PFC']	P47T	M	3
