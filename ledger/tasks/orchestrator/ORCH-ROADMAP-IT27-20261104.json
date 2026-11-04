@@ -18,9 +18,9 @@
    "steps": [
     {
      "step": "P1/P2 independent verification of GSE215425, GSE158681/2, GSE158684 and MTBLS12344 by a verifier distinct from the IT24 producer",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "verification_it27_p1_20261104 and verification_it27_p2_20261104 (second actor, per-gene parts blind): GSE215425 and MTBLS12344 verified with corrections, GSE158681/2 descriptive; hippocampus null corrected to a method-dependent weak signal; regions are repeated measures"
     }
    ]
   },
@@ -29,9 +29,9 @@
    "steps": [
     {
      "step": "P3/P4 choose inputs and show the consumption path against S7",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "generation_it27_p3_20261104: P47T consensus not seeded (15 of 81 tissue-restricted); verified contrast consumed as annotations on Q2/Q3/Q8 seeds, 69 proposals, S7 reproduced exactly, order/eligibility/hand-overs unchanged"
     }
    ]
   },
@@ -40,9 +40,9 @@
    "steps": [
     {
      "step": "P5/P6 compare representatives and alternatives in HDAC5, XIAP, EZH2 and one contrasting cluster; multi-target decomposition",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "alternatives_it27_p5_20261104 and decomposition_it27_p6_20261104: HDAC5, XIAP, EZH2 ties and contexts, ROCK2 belumosudil preferable for ROCK2 v ROCK1; H5 text fixed, tie_size exported, rule unchanged; one hypothesis worth deepening (HDAC5 lever validity)"
     }
    ]
   },
@@ -51,9 +51,9 @@
    "steps": [
     {
      "step": "P8-P10 residuals: E-3810/AZD5363 recheck, collision pointer, PX-478 barrier, LINCS with R4",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "E-3810 collision verified, fexagratinib reclassified as unmeasured listing, collide detector with controls, PX-478 declared small_molecule (filter unchanged), LINCS recheck with R4 (155 of 158 keyed, 0 hits)"
     }
    ]
   },
@@ -62,9 +62,9 @@
    "steps": [
     {
      "step": "P11/P12 consumers, regeneration proof, ranking and dashboard",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "ranking order digest ff38fcaa61295a5a unchanged; three unit notes; views regenerated (6 pages), coverage regenerated; Standing method and current-stage pointer"
     }
    ]
   },
@@ -73,7 +73,7 @@
    "steps": [
     {
      "step": "P13/P14 scouting on named gaps, verification, battery, push, CI, cleanup, report",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
      "evidence": ""
     }
