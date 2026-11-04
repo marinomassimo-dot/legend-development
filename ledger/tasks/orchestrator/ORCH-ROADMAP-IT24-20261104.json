@@ -75,8 +75,9 @@
    "steps": [
     {
      "step": "P5 biological roles and context consumed by the calculation",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "roles/context: no new role calculation added; P47T partial-loss region lists (IT24 P4) show the ISR sets inside their nulls in 5v5 regions, so a missense partial loss does not settle the ISR sign: recorded in wwox_data_it24_p4 as scenario evidence; roles stay UNKNOWN with conditional hypotheses as before; not consumed by the generator (single unverified producer)"
     }
    ]
   },
@@ -96,8 +97,9 @@
    "steps": [
     {
      "step": "P7 generation beyond pathway-drug links, chain recorded per proposal",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "no new generative chain beyond pathway-drug links was produced in IT24: target decomposition (P6) and the own-concept-ligand attribution (P10 F1) are consumption gains, not new hypotheses; stated plainly in the result README"
     }
    ]
   },
@@ -106,8 +108,9 @@
    "steps": [
     {
      "step": "P8 one vertical alternative-to-a-known-line comparison, or documented abstention",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "abstention documented: no vertical alternative-to-a-known-line comparison was run in IT24; the one concrete alternative-selection datum (sulfopin on PIN1 with measured Ki, and Ss-208/Ka1010 in vorinostat's HDAC5 cluster) came from the reverse test and is carried as the F1 fix; reopening: regenerate stage tables with F1/F2 and compare the HDAC5 cluster"
     }
    ]
   },
@@ -127,8 +130,9 @@
    "steps": [
     {
      "step": "P10 reverse test on few contrasting cases",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "reverse_it24_p10_20261104: 4 contrasting cases (vorinostat known control; idronoxil; sulfopin; panobinostat) with frozen digests; classifications JUSTIFIED_EXCLUSION / NOT_EXECUTED (withheld pairs still in engine contributions, bounded) / OMISSION (own concept-id ligand never read by family_ligands: fixed in code with regression, second cases Ss-208 and Ka1010) / DATA_MISSING / REPRESENTATION_LIMIT; F2/F3 not applied, stated; stage tables not regenerated"
     }
    ]
   },

@@ -227,6 +227,10 @@ def family_ligands(entries, fam, bridges, lig):
         for r in bridges.get(e["id"], []):
             if r["decision"] == "merged":
                 out[fam[e["id"]]].add(r["ligand_id"])
+        if e.get("origin") == "dgidb_only":       # IT24 P10 (sulfopin): the record's OWN concept-id ligand; not labelled or radioactive; several different ligands would be ambiguous and are left out
+            own = {str(x) for x in ((e.get("ids") or {}).get("iuphar_ligand") or []) if str(x) in lig and lig[str(x)].get("Labelled") != "yes" and lig[str(x)].get("Radioactive") != "yes"}
+            if len(own) == 1:
+                out[fam[e["id"]]] |= own
     return out
 
 

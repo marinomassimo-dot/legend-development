@@ -288,6 +288,16 @@ class AttributionScreen(SyntheticCache):
         self.assertEqual(fl["CAT:DGIDB:a"], {"1"})
         self.assertNotIn("CAT:DGIDB:b", fl)
 
+    def test_family_ligands_use_the_records_own_concept_id_ligand_only_when_unambiguous_and_unlabelled(self):
+        lig = {"7": {"ChEMBL ID": "", "Labelled": "no", "Radioactive": "no"}, "8": {"ChEMBL ID": "", "Labelled": "yes", "Radioactive": "no"}, "9": {"ChEMBL ID": "", "Labelled": "no", "Radioactive": "no"}}
+        mk = lambda i, ids: dict(id="CAT:DGIDB:" + i, origin="dgidb_only", ids=dict(iuphar_ligand=ids), targets=[])
+        es = [mk("own", ["7"]), mk("labelled", ["8"]), mk("two", ["7", "9"]), mk("unknown", ["99"])]
+        fam = {e["id"]: e["id"] for e in es}
+        fl = A.family_ligands(es, fam, {}, lig)
+        self.assertEqual(fl["CAT:DGIDB:own"], {"7"})
+        for k in ("labelled", "two", "unknown"):
+            self.assertNotIn("CAT:DGIDB:" + k, fl)
+
     def test_sensitivity_counts_at_each_threshold(self):
         self.assertEqual(A.sensitivity([1, 5, 12, 40, 400]), {"3.0": 4, "10.0": 3, "30.0": 2, "100.0": 1})
 

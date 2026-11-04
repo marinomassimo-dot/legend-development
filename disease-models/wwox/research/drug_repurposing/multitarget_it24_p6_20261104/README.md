@@ -35,3 +35,5 @@ Output: `target_decomposition.tsv` (all seed sets, both orientations), `proposal
 Reproduce: `python3 multitarget_feasibility_it24.py --eng ../generation_it22_p1_20261103/eng_merged --out .`
 
 Verified independently (counts and orientation exact: the flip for H_PROTECT is justified by `seed_engine.seed_contrib_table` and `dispose_it10.disposition`).
+
+Sensitivity from the reverse test (`reverse_it24_p10_20261104`): the decomposition was computed on the engine outputs that pre-date the IT24 P1 action refresh, and a 1 percent mass floor on target counts reduces the conflicts from 32 to 9 and the multi-positive rows from 66 to 34; sorafenib and SAR-407899 then read as single-target. Read the counts above as an upper bound.

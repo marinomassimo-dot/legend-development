@@ -1,0 +1,57 @@
+seed_set	family	target	net_contrib	share_of_abs_mass	withheld
+Q1_expression_tiersABC	vorinostat_ChEMBL_sibling	HDAC3	-3.476e-05	1.0000	
+Q1_expression_tiersABC	sorafenib_DGIdb	CDK8	1.238e-05	1.0000	
+Q1_expression_tiersABC	vorinostat_DGIdb_twin	HDAC3	-2.112e-05	1.0000	
+Q1_expression_tiersABC	panobinostat_DGIdb	HDAC3	-1.589e-05	1.0000	
+Q2_expression_tiersAB	vorinostat_DGIdb_twin	HDAC5	3.965e-02	0.9941	
+Q2_expression_tiersAB	vorinostat_DGIdb_twin	HDAC8	2.353e-04	0.0059	
+Q2_expression_tiersAB	panobinostat_DGIdb	HDAC5	3.099e-02	0.9800	
+Q2_expression_tiersAB	panobinostat_DGIdb	SIRT6	5.921e-04	0.0187	WITHHELD_AT_ACTION_TABLE
+Q2_expression_tiersAB	panobinostat_DGIdb	HDAC8	-3.273e-05	0.0010	
+Q2_expression_tiersAB	panobinostat_DGIdb	SIRT7	7.006e-06	0.0002	WITHHELD_AT_ACTION_TABLE
+Q2_expression_tiersAB	panobinostat_DGIdb	SIRT1	-6.074e-09	0.0000	WITHHELD_AT_ACTION_TABLE
+Q2_expression_tiersAB	idronoxil_DGIdb	XIAP	7.349e-04	0.9966	
+Q2_expression_tiersAB	idronoxil_DGIdb	CASP3	2.499e-06	0.0034	WITHHELD_AT_ACTION_TABLE
+Q2_expression_tiersAB	vorinostat_ChEMBL_sibling	HDAC2	-1.492e-04	0.6786	
+Q2_expression_tiersAB	vorinostat_ChEMBL_sibling	HDAC3	7.067e-05	0.3214	
+Q2_expression_tiersAB	sorafenib_DGIdb	ZHX2	-4.779e-02	0.9993	
+Q2_expression_tiersAB	sorafenib_DGIdb	CDK8	-1.353e-05	0.0003	
+Q2_expression_tiersAB	sorafenib_DGIdb	BRAF	1.208e-05	0.0003	
+Q2_expression_tiersAB	sorafenib_DGIdb	CDK19	-8.428e-06	0.0002	
+Q3_expression_tiersAB	vorinostat_ChEMBL_sibling	HDAC3	-4.657e-03	0.9813	
+Q3_expression_tiersAB	vorinostat_ChEMBL_sibling	HDAC2	-8.523e-05	0.0180	
+Q3_expression_tiersAB	vorinostat_ChEMBL_sibling	HDAC1	-3.469e-06	0.0007	
+Q3_expression_tiersAB	sorafenib_DGIdb	RET	-7.220e-04	0.8271	
+Q3_expression_tiersAB	sorafenib_DGIdb	RAF1	-1.163e-04	0.1332	
+Q3_expression_tiersAB	sorafenib_DGIdb	KIT	3.162e-05	0.0362	
+Q3_expression_tiersAB	sorafenib_DGIdb	ARAF	-3.041e-06	0.0035	
+Q3_expression_tiersAB	vorinostat_DGIdb_twin	HDAC3	-2.809e-03	0.8645	
+Q3_expression_tiersAB	vorinostat_DGIdb_twin	HDAC8	-3.867e-04	0.1190	
+Q3_expression_tiersAB	vorinostat_DGIdb_twin	HDAC2	-5.140e-05	0.0158	
+Q3_expression_tiersAB	vorinostat_DGIdb_twin	HDAC1	-2.092e-06	0.0006	
+Q3_expression_tiersAB	idronoxil_DGIdb	CASP3	-6.006e-05	1.0000	WITHHELD_AT_ACTION_TABLE
+Q3_expression_tiersAB	panobinostat_DGIdb	HDAC3	-2.205e-03	0.8618	
+Q3_expression_tiersAB	panobinostat_DGIdb	HDAC8	-3.015e-04	0.1178	
+Q3_expression_tiersAB	panobinostat_DGIdb	HDAC2	-4.018e-05	0.0157	
+Q3_expression_tiersAB	panobinostat_DGIdb	SIRT1	-1.171e-05	0.0046	WITHHELD_AT_ACTION_TABLE
+Q3_expression_tiersAB	panobinostat_DGIdb	HDAC1	-2.120e-07	0.0001	
+Q4_expression_tiersAB	sorafenib_DGIdb	ARAF	9.350e-07	1.0000	
+Q5_expression_tiersAB	idronoxil_DGIdb	XIAP	3.549e-04	0.9715	
+Q5_expression_tiersAB	idronoxil_DGIdb	CASP3	1.042e-05	0.0285	WITHHELD_AT_ACTION_TABLE
+Q5_expression_tiersAB	vorinostat_ChEMBL_sibling	HDAC3	1.599e-02	1.0000	
+Q5_expression_tiersAB	vorinostat_DGIdb_twin	HDAC3	7.959e-03	1.0000	
+Q5_expression_tiersAB	panobinostat_DGIdb	SIRT1	-3.383e-03	0.5125	WITHHELD_AT_ACTION_TABLE
+Q5_expression_tiersAB	panobinostat_DGIdb	HDAC3	3.218e-03	0.4875	
+Q5_expression_tiersAB	sorafenib_DGIdb	RET	9.756e-05	0.3572	
+Q5_expression_tiersAB	sorafenib_DGIdb	MAP2K1	9.194e-05	0.3366	
+Q5_expression_tiersAB	sorafenib_DGIdb	KIT	8.364e-05	0.3062	
+Q6_expression_tiersAB	idronoxil_DGIdb	CASP3	1.821e-04	1.0000	WITHHELD_AT_ACTION_TABLE
+Q6_expression_tiersAB	sorafenib_DGIdb	CDK19	-2.047e-03	1.0000	
+Q6_expression_tiersAB	vorinostat_DGIdb_twin	HDAC3	-9.653e-03	1.0000	
+Q6_expression_tiersAB	panobinostat_DGIdb	HDAC3	-1.085e-02	1.0000	
+Q6_expression_tiersAB	vorinostat_ChEMBL_sibling	HDAC3	-1.601e-02	1.0000	
+Q7_phospho_tiersAB	sorafenib_DGIdb	BRAF	-1.005e-04	1.0000	
+Q7_phospho_tiersAB	idronoxil_DGIdb	XIAP	2.671e-02	1.0000	
+Q7_phospho_tiersAB	panobinostat_DGIdb	SIRT7	-5.036e-05	1.0000	WITHHELD_AT_ACTION_TABLE
+Q8_expression_tiersAB	vorinostat_DGIdb_twin	HDAC8	1.602e-07	1.0000	
+Q8_expression_tiersAB	panobinostat_DGIdb	HDAC8	1.349e-07	1.0000	
