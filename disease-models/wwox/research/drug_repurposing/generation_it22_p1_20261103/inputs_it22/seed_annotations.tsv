@@ -19,3 +19,10 @@ S051	SECOND_SYSTEM_PROGENITOR_GATE_FAILED	hnpc_gse126075_it5_20261029/RESULTS.md
 S052	SECOND_SYSTEM_PROGENITOR_GATE_FAILED	hnpc_gse126075_it5_20261029/RESULTS.md section 1
 S132	SECOND_SYSTEM_PROGENITOR_GATE_FAILED	hnpc_gse126075_it5_20261029/RESULTS.md section 1
 S132	ADJUSTED_P_ABOVE_ALPHA	p3_A_redox/proposed_seed_rows.tsv N22-A001 (padj 1.43E-02 against the deposit's alpha 0.01)
+S021	P47T_PARTIAL_LOSS_MOUSE_MIXED	verification_it27_p1_20261104 (p1a_all_regions_own_results.tsv.gz, DESeq2 ~sex+genotype; PFC, CTX, HPC; P47T v WT, 5 v 5); log2FC -0.22/+0.08/+0.00 (PFC/CTX/HPC)
+S018	P47T_PARTIAL_LOSS_MOUSE_CONCORDANT	verification_it27_p1_20261104 (p1a_all_regions_own_results.tsv.gz, DESeq2 ~sex+genotype; PFC, CTX, HPC; P47T v WT, 5 v 5); log2FC +0.66/+0.48/+0.91 (PFC/CTX/HPC)
+S019	P47T_PARTIAL_LOSS_MOUSE_CONCORDANT	verification_it27_p1_20261104 (p1a_all_regions_own_results.tsv.gz, DESeq2 ~sex+genotype; PFC, CTX, HPC; P47T v WT, 5 v 5); log2FC +0.42/+0.75/+0.58 (PFC/CTX/HPC)
+S020	P47T_PARTIAL_LOSS_MOUSE_MIXED	verification_it27_p1_20261104 (p1a_all_regions_own_results.tsv.gz, DESeq2 ~sex+genotype; PFC, CTX, HPC; P47T v WT, 5 v 5); log2FC -0.24/-0.17/-0.13 (PFC/CTX/HPC)
+S017	P47T_PARTIAL_LOSS_MOUSE_CONCORDANT	verification_it27_p1_20261104 (p1a_all_regions_own_results.tsv.gz, DESeq2 ~sex+genotype; PFC, CTX, HPC; P47T v WT, 5 v 5); log2FC +0.27/+0.21/+0.18 (PFC/CTX/HPC)
+S043	P47T_PARTIAL_LOSS_MOUSE_MIXED	verification_it27_p1_20261104 (p1a_all_regions_own_results.tsv.gz, DESeq2 ~sex+genotype; PFC, CTX, HPC; P47T v WT, 5 v 5); log2FC -0.05/-0.09/-0.03 (PFC/CTX/HPC)
+S132	P47T_PARTIAL_LOSS_MOUSE_MIXED	verification_it27_p1_20261104 (p1a_all_regions_own_results.tsv.gz, DESeq2 ~sex+genotype; PFC, CTX, HPC; P47T v WT, 5 v 5); log2FC +0.01/-0.04/+0.44 (PFC/CTX/HPC)
