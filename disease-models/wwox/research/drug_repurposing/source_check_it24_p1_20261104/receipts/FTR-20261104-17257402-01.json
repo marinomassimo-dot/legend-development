@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-04T07:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "unavailable",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-04T07:50:00Z",
+ "event_id": "FTR-20261104-17257402-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Question: phenoxodiol effect on XIAP and caspase-3 in melanoma cells. Read the phenoxodiol sections; the 436-melanoma tissue microarray part was not read.",
+  "verbatim_locator | proposition: phenoxodiol lowers XIAP and increases caspase-3/7 activity after carboplatin (consequence, with a second drug) | Results, Fig 8 | \"remarkable XIAP degradation was observed, coupled with caspase-2 and Bid activation (as demonstrated by disappearance of the bands representing the inactive forms of caspase-2 and Bid), and a significant increase on the activity of caspase-3/7\"",
+  "verbatim_locator | proposition: caspase-3 is the downstream effector that XIAP restrains | Introduction | \"inhibits the execution phase by inhibiting the effector caspases, caspase-3 and caspase-7\"",
+  "verbatim_locator | proposition: authors state phenoxodiol pre-treatment yields activation of caspase-3 after XIAP decrease | Discussion | \"pre-treatment of YUMAC cells with Phenoxodiol for 2 or 4 hours resulted in decreased levels of XIAP, sensitization to Carboplatin, and remarkable activation of caspase-3\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/source_check_it24_p1_20261104/README.md",
+  "disease-models/wwox/research/drug_repurposing/source_check_it24_p1_20261104/verdicts.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC full-text XML for PMC1796544 fetched 2026-11-04; abstract, the phenoxodiol results (Figs 6-8) and the discussion read; tissue-microarray parts not read",
+ "study_id": {
+  "doi": "10.1186/1479-5876-5-6",
+  "pmid": "17257402"
+ },
+ "workflow": "IT24 P1 source check (source_check_it24_p1_20261104): question-driven, one compound-target relation. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor. Melanoma YUMAC cells, 10 ug/ml phenoxodiol."
+}

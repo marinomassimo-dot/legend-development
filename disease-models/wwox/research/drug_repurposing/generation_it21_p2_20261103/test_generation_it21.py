@@ -245,6 +245,36 @@ class GuardWrapper(unittest.TestCase):
         d = dict(id="CAT:DGIDB:x", name="Drug", ids={}, targets=[dict(source="DGIdb interaction", gene="XYZ1", interaction_type="modulator")])
         self.assertEqual(self.call_family([a, d], a, a["targets"][0])[0]["sign"], "down")
 
+    # ---- IT24 P1: a direction asserted only by a listing-tier claim source (TALC, trial listings) is withheld for the pairs a source check named ----------------------
+    def dg_entry(self, claim_source, gene, itype="inhibitor", eid="CAT:DGIDB:x"):
+        return dict(id=eid, name="Drug", ids={}, targets=[dict(source="DGIdb interaction", gene=gene, claim_source=claim_source, interaction_type=itype)])
+
+    def call_listing(self, members, e, t, family, mode="pairs", sign="down"):
+        log = []
+        idx = types.SimpleNamespace(artefacts=[], family={m["id"]: family for m in members}, members={family: members})
+        orig = lambda rs_, i, e_, t_: dict(stated=True, excluded=None, sign=sign, stable=True, group="DGIdb_other")
+        return Rf.make_wrapper(orig, set(), log, mode)(rs, idx, e, t), log
+
+    def test_a_named_listing_pair_loses_its_sign_and_keeps_its_association(self):
+        e = self.dg_entry("TALC", "SIRT1")
+        u, log = self.call_listing([e], e, e["targets"][0], "FAM:CAT:DGIDB:be0d8ea27925")
+        self.assertEqual(u["sign"], "unresolved")
+        self.assertEqual(log[0]["reason_class"], "listing_tier_claim_not_carried")
+        self.assertEqual(log[0]["waived_genes"], "")
+
+    def test_an_unnamed_listing_pair_the_same_gene_from_a_measured_source_and_mode_off_keep_the_sign(self):
+        e = self.dg_entry("TALC", "HDAC6")                           # the same family, a gene the source check did not name
+        self.assertEqual(self.call_listing([e], e, e["targets"][0], "FAM:CAT:DGIDB:be0d8ea27925")[0]["sign"], "down")
+        m = self.dg_entry("GuideToPharmacology", "SIRT1")           # a measured-pharmacology claim is not a listing
+        self.assertEqual(self.call_listing([m], m, m["targets"][0], "FAM:CAT:DGIDB:be0d8ea27925")[0]["sign"], "down")
+        e = self.dg_entry("TALC", "SIRT1")
+        self.assertEqual(self.call_listing([e], e, e["targets"][0], "FAM:CAT:DGIDB:be0d8ea27925", mode="off")[0]["sign"], "down")
+
+    def test_the_wide_listing_sensitivity_needs_a_second_independent_source_with_the_same_direction(self):
+        e, m = self.dg_entry("TALC", "ABC1"), self.dg_entry("GuideToPharmacology", "ABC1", eid="CAT:DGIDB:y")
+        self.assertEqual(self.call_listing([e], e, e["targets"][0], "F9", mode="tier")[0]["sign"], "unresolved")
+        self.assertEqual(self.call_listing([e, m], e, e["targets"][0], "F9", mode="tier")[0]["sign"], "down")
+
     def test_glue_substrate_receptor_gets_no_sign_whatever_the_records_say(self):
         a = self.fam_entry("Lenalidomide-like", "CHEMBL848", "INHIBITOR", ["CRBN", "CUL4A", "DDB1", "RBX1"], ttype="PROTEIN COMPLEX")
         u, log = self.call_family([a], a, a["targets"][0])

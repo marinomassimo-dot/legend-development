@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-04T07:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "unavailable",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-04T07:50:00Z",
+ "event_id": "FTR-20261104-20139990-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Question: do enzymatic HDAC-inhibitor profiles in the literature include sirtuins, and do they name panobinostat? Served text read end to end; the per-compound panel is in figures and a table that were not served, so panobinostat values are NOT read here.",
+  "verbatim_locator | proposition: sirtuins are a mechanistically distinct, NAD-dependent class (not the zinc enzymes the hydroxamate pharmacophore targets) | Introduction | \"The Class III proteins form a structurally and mechanistically distinct class of NAD-dependent hydrolases (Sirtuins; Sirt1-7).\"",
+  "verbatim_locator | proposition: the panel covers HDAC1-9 only, sirtuins were not profiled | Results, Comparative study of HDAC inhibitors | \"allowing a first, precise profiling of HDACi against HDAC1-9\"",
+  "verbatim_locator | proposition: chelator pharmacophore is zinc-directed | Introduction | \"The chelator refers to a suitable metal-binding biasing element (e.g. hydroxamate,-aminoanilide) that engages zinc in the enzyme active site.\" (served text has dropped symbols)"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/source_check_it24_p1_20261104/README.md",
+  "disease-models/wwox/research/drug_repurposing/source_check_it24_p1_20261104/verdicts.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PubMed MCP get_full_text_article for PMC2822059, 2026-11-04 (text only; figures, tables and supplementary not served)",
+ "study_id": {
+  "doi": "10.1038/nchembio.313",
+  "pmid": "20139990"
+ },
+ "workflow": "IT24 P1 source check (source_check_it24_p1_20261104): question-driven, one compound-target relation. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor. Evidence that this panel does not test sirtuins; no statement on panobinostat is taken from it."
+}

@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-04T07:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-04T07:50:00Z",
+ "event_id": "FTR-20261104-17868033-01",
+ "evidence_basis": [
+  "abstract analysed in full; nothing beyond the abstract is used",
+  "verbatim_locator | proposition: Abstract: eight recombinant zinc HDACs (1,2,3,8,4,6,7,9) tested with a Fluor de Lys assay; HDAC5, 10, 11 and sirtuins not in the panel. | Abstract | \"The hydroxamic acid-derived compounds (trichostatin A, NVP-LAQ824, panobinostat, ITF2357, vorinostat and belinostat) were potent pan-HDAC inhibitors.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/source_check_it24_p1_20261104/README.md",
+  "disease-models/wwox/research/drug_repurposing/source_check_it24_p1_20261104/verdicts.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 17868033 (abstract); full text not in PMC",
+ "study_id": {
+  "doi": "10.1042/BJ20070779",
+  "pmid": "17868033"
+ },
+ "workflow": "IT24 P1 source check (source_check_it24_p1_20261104): question-driven, one compound-target relation. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor. Khan 2008, panobinostat enzymatic panel. Abstract only; paywalled."
+}

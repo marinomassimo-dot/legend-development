@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-04T07:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-04T07:50:00Z",
+ "event_id": "FTR-20261104-24377743-01",
+ "evidence_basis": [
+  "abstract analysed in full; nothing beyond the abstract is used",
+  "verbatim_locator | proposition: Abstract: the TALC source is a tabulated list of lung-cancer agents in practice or in trials with a hyperlink to clinicaltrials.gov, not an enzymology paper. | Abstract | \"In this tabulated summary of over 320 targeted therapies currently in practice and in clinical trials for patients with lung cancer are listed.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/source_check_it24_p1_20261104/README.md",
+  "disease-models/wwox/research/drug_repurposing/source_check_it24_p1_20261104/verdicts.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 24377743 (abstract); full text and table behind Elsevier, no lawful copy obtained",
+ "study_id": {
+  "doi": "10.1016/j.cllc.2013.11.009",
+  "pmid": "24377743"
+ },
+ "workflow": "IT24 P1 source check (source_check_it24_p1_20261104): question-driven, one compound-target relation. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor. Simon and Somaiah 2013 (DGIdb source TALC, per DGIdb licence table pii S1525730413002350). The table row for panobinostat was NOT seen."
+}

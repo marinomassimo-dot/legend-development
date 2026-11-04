@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-04T07:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-04T07:50:00Z",
+ "event_id": "FTR-20261104-17904534-01",
+ "evidence_basis": [
+  "abstract analysed in full; nothing beyond the abstract is used",
+  "verbatim_locator | proposition: Abstract: primary molecular target unknown; PMET inhibition associated with pan-caspase activation. | Abstract | \"induces apoptosis by disrupting FLICE-inhibitory protein, FLIP, expression and by caspase-dependent and -independent degradation of the X-linked inhibitor of apoptosis, XIAP\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/source_check_it24_p1_20261104/README.md",
+  "disease-models/wwox/research/drug_repurposing/source_check_it24_p1_20261104/verdicts.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 17904534 (abstract); full text not in PMC",
+ "study_id": {
+  "doi": "10.1016/j.bcp.2007.08.019",
+  "pmid": "17904534"
+ },
+ "workflow": "IT24 P1 source check (source_check_it24_p1_20261104): question-driven, one compound-target relation. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor. Herst 2007. Abstract only."
+}

@@ -31,7 +31,14 @@ REPO = HERE.parents[4]
 V3 = DR / "generation_it9_p2_20261030" / "v3"
 sys.path.insert(0, str(REPO / "framework/scripts"))
 
-ABSTENTION_CLASSES = ("group_record_mostly_outside_module_targets", "republished_claim_level_not_carried", "action_conflict_or_glue_modulator")
+ABSTENTION_CLASSES = ("group_record_mostly_outside_module_targets", "republished_claim_level_not_carried", "action_conflict_or_glue_modulator", "listing_tier_claim_not_carried")
+
+# IT24 P1 (source check of panobinostat -> SIRT1..7 and idronoxil -> CASP3, source_check_it24_p1_20261104). Both signs rested on ONE DGIdb claim whose source is a listing, not
+# pharmacology: TALC is a tabulated summary of lung-cancer agents (Clin Lung Cancer 2013), ClearityFoundationClinicalTrial a patient-advocacy trial listing. No primary source
+# was found for either direction (a downstream caspase-3 rise is not an action on CASP3). The sign is withheld PAIR BY PAIR, for the pairs the source check named
+# (source_exclusions_it24.tsv: one row per family and gene, with the claim source it applies to). The same listing tier carries 316 further single-source signed rows that were
+# NOT read; `--listing-tier` measures that wider rule as a sensitivity (it is not the default, because the evidence reaches only the named pairs).
+LISTING_TIER_SOURCES = frozenset({"TALC", "ClearityFoundationClinicalTrial", "MyCancerGenome", "MyCancerGenomeClinicalTrial", "CancerCommons"})
 
 # P8-fix finding 1 (IT21 verifier C1). The search layer has no guard for these two cases, so they are added HERE, in the one adapter, as pure functions:
 #  * a family whose records disagree on the action at one gene (INHIBITOR on one salt record, MODULATOR on another; or up against down) has no sign;
@@ -83,8 +90,40 @@ def conflict_or_glue(rs, members, t):
     return ""
 
 
-def make_wrapper(orig, module_symbols, log):
+def load_pair_exclusions(path=None):
+    """{(family id, GENE): reason} from source_exclusions_it24.tsv (header: family_id, gene, claim_source, outcome, ref)."""
+    path = path or HERE / "source_exclusions_it24.tsv"
+    out = {}
+    with open(path, encoding="utf-8", newline="") as fh:
+        for r in csv.DictReader(fh, delimiter="\t"):
+            out[(r["family_id"], r["gene"].upper(), r["claim_source"])] = "listing_tier_claim_not_carried: " + r["outcome"] + " (" + r["ref"] + ")"
+    return out
+
+
+def listing_tier_unresolved(orig, rs, idx, e, t, sign_, pairs=None, wide=False):
+    """'' or the reason the sign of a DGIdb row from a listing-tier claim source is not carried: no other claim of the family, from a source outside the listing
+    tier, gives the same direction at one of the row's genes. Pure on the catalogue entries of ONE family."""
+    if (t.get("source") or "").startswith("ChEMBL") or (t.get("claim_source") or "") not in LISTING_TIER_SOURCES:
+        return ""
+    genes = {g.upper() for g in row_genes(t)}
+    fam_ = getattr(idx, "family", {}).get(e["id"]) if getattr(idx, "family", None) else None
+    if not wide:
+        hit = [pairs[(fam_, g, t.get("claim_source") or "")] for g in sorted(genes) if (fam_, g, t.get("claim_source") or "") in (pairs or {})]
+        return hit[0] if hit else ""
+    for m in family_members(idx, e):
+        for t2 in m["targets"]:
+            if t2 is t or (t2.get("claim_source") or "") in LISTING_TIER_SOURCES or not ({g.upper() for g in row_genes(t2)} & genes):
+                continue
+            u2 = orig(rs, idx, m, t2)
+            if u2["stated"] and not u2["excluded"] and u2["sign"] == sign_:
+                return ""
+    return "listing_tier_claim_not_carried: direction asserted only by " + (t.get("claim_source") or "") + " (a listing, not a measurement) at " + ";".join(sorted(genes))
+
+
+def make_wrapper(orig, module_symbols, log, listing="pairs"):
     """Wrap usable_census.row_usability: withhold the sign when the search layer would abstain, record why, remember the waived genes."""
+    mode, PAIRS = listing, (load_pair_exclusions() if listing != "off" else {})
+
     def row_usability(rs, idx, e, t):
         u = orig(rs, idx, e, t)
         if not (u["stated"] and not u["excluded"] and u["sign"] in ("up", "down") and u["stable"]):
@@ -94,11 +133,13 @@ def make_wrapper(orig, module_symbols, log):
         transfer = rs.group_transfer_unresolved(src, t, module_symbols) or rs.republished_transfer_unresolved(prov, module_symbols)
         glue = "" if transfer else conflict_or_glue(rs, family_members(idx, e), t)
         transfer = transfer or glue
+        listing = "" if (transfer or mode == "off") else listing_tier_unresolved(orig, rs, idx, e, t, u["sign"], PAIRS, wide=(mode == "tier"))
+        transfer = transfer or listing
         if not transfer:
             return u
         chembl = src.startswith("ChEMBL")
         genes = list(t.get("gene_symbols") or []) if chembl else [t.get("gene") or ""]
-        waived = [] if glue else [g for g in genes if g and rs.documented_level_waiver(e, t, g, u["sign"], idx.artefacts)]
+        waived = [] if (glue or listing) else [g for g in genes if g and rs.documented_level_waiver(e, t, g, u["sign"], idx.artefacts)]
         log.append(dict(record=e["id"], name=e.get("name"), source=src, claim_source=t.get("claim_source") or "",
                         target_level=rs.target_level(src, t), effective_level=(prov or {}).get("republished_record_level", ""),
                         chembl_target=t.get("target_id") or "", genes=";".join(genes), action=u["sign"],
@@ -123,7 +164,7 @@ def cmd_run(a):
 
             def run_and_wrap(mod, _ex=ex):
                 _ex(mod)
-                mod.row_usability = make_wrapper(mod.row_usability, ms, log)
+                mod.row_usability = make_wrapper(mod.row_usability, ms, log, a.listing_tier)
                 seen["wrapped"] = True
             spec.loader.exec_module = run_and_wrap
         return m
@@ -230,6 +271,7 @@ if __name__ == "__main__":
     r = sp.add_parser("run")
     r.add_argument("--out", required=True)
     r.add_argument("--guards", choices=["on", "off"], default="on")
+    r.add_argument("--listing-tier", choices=["pairs", "tier", "off"], default="pairs", help="IT24: withhold the named listing-tier pairs (default), the whole listing tier (sensitivity) or nothing (IT23 behaviour)")
     r.add_argument("--catalog", default=str(DR / "catalog" / "catalog.jsonl.gz"))
     d = sp.add_parser("diff")
     d.add_argument("--old", required=True)

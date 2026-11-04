@@ -26,3 +26,9 @@ Vorinostat stays a known diagnostic case (IT21), not a blind test. Cases used to
 
 `frozen_inputs.tsv`: seeds, the Q5/Q6/Q8 engine seed sets, roles, annotations, the family action table, the IT22 stage tables, the decision scope table and the engine code. `frozen_current_method.tsv`: for the three questions every proposal row with its chain, z-scores, status, eligibility, blocker, attribution state, carried limits and hand-over flag.
 Re-run `python3 freeze_current_method.py` to check that nothing frozen has changed (the digests must equal).
+
+## IT24 note
+
+`family_actions.tsv.gz` (and `test_generation_it21.py`, `refresh_actions_it21.py`) changed after this freeze: IT24 P1 withheld eight signed pairs (panobinostat SIRT1 to SIRT7 on the DGIdb-only record, idronoxil CASP3) after a source check
+(`../source_check_it24_p1_20261104`). `frozen_inputs.tsv` keeps the digests as they were at the IT23 freeze, so a re-run of `freeze_current_method.py` now reports those files as changed by design; the frozen method rows
+(`frozen_current_method.tsv`) are unchanged because none of the eight pairs is a main target of a Q5/Q6/Q8 proposal. Do not re-run the freeze script over `frozen_inputs.tsv`.

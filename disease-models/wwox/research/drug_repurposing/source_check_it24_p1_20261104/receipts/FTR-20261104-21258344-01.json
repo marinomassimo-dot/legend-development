@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-04T07:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-04T07:50:00Z",
+ "event_id": "FTR-20261104-21258344-01",
+ "evidence_basis": [
+  "abstract analysed in full; nothing beyond the abstract is used",
+  "verbatim_locator | proposition: Abstract: affinity-capture chemoproteomics of 16 HDAC inhibitors; sirtuins not mentioned in the abstract. | Abstract | \"We identified several non-HDAC targets for hydroxamate inhibitors.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/source_check_it24_p1_20261104/README.md",
+  "disease-models/wwox/research/drug_repurposing/source_check_it24_p1_20261104/verdicts.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 21258344 (abstract); full text not in PMC",
+ "study_id": {
+  "doi": "10.1038/nbt.1759",
+  "pmid": "21258344"
+ },
+ "workflow": "IT24 P1 source check (source_check_it24_p1_20261104): question-driven, one compound-target relation. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor. Bantscheff 2011. Abstract only; whether panobinostat captured sirtuins is UNKNOWN from this reading."
+}

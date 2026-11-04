@@ -31,8 +31,9 @@
    "steps": [
     {
      "step": "P1 source check of the five suspect sign relations (panobinostat SIRT1/2/3/7, idronoxil CASP3) and regeneration of the action table",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "source_check_it24_p1_20261104: no primary source for panobinostat-SIRT1..7 or idronoxil-CASP3 (EXCLUDE_FROM_SIGNED_PROPAGATION, no opposite sign); 8 pairs withheld at refresh_actions_it21 (named-pair table, wide listing tier measured as sensitivity only: 554 pairs/28 proposals, not adopted); 3 regressions; 8 receipts recorded (1035 chained); effect bounded (no chain depends on the pairs), nulls not re-run"
     }
    ]
   },

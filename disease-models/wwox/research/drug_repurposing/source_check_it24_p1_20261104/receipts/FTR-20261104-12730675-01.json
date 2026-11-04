@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-04T07:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-04T07:50:00Z",
+ "event_id": "FTR-20261104-12730675-01",
+ "evidence_basis": [
+  "abstract analysed in full; nothing beyond the abstract is used",
+  "verbatim_locator | proposition: Abstract: caspase system activation, XIAP and FLIP lowered via Akt; caspase-3 is not named in the abstract. | Abstract | \"This effect is dependent upon the activation of the caspase system, inhibiting XIAP, an inhibitor of apoptosis, and disrupting FLICE inhibitory protein (FLIP) expression through the Akt signal transduction pathway.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/source_check_it24_p1_20261104/README.md",
+  "disease-models/wwox/research/drug_repurposing/source_check_it24_p1_20261104/verdicts.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 12730675 (abstract); full text behind Nature subscription redirect, no lawful copy obtained",
+ "study_id": {
+  "doi": "10.1038/sj.onc.1206422",
+  "pmid": "12730675"
+ },
+ "workflow": "IT24 P1 source check (source_check_it24_p1_20261104): question-driven, one compound-target relation. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor. Kamsteeg 2003, primary ovarian cancer cells. Abstract only; paywalled, not a reading choice."
+}

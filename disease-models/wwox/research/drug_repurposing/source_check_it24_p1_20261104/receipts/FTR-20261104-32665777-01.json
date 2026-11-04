@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-04T07:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "unavailable",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-04T07:50:00Z",
+ "event_id": "FTR-20261104-32665777-01",
+ "evidence_basis": [
+  "coverage_map",
+  "Question: does phenoxodiol (idronoxil) inhibit or activate CASP3? Sections read by keyword hit plus surrounding paragraph; figure images and the full methods were not opened.",
+  "verbatim_locator | proposition: phenoxodiol pre-treatment raises cleaved caspase-3 protein (readout, not direct modulation) | Results, Detection of caspase-dependent apoptosis (Fig 3A) | \"Statistically significant increase in the amount of the cleaved caspase-3 protein was detected for administrations of 5-Fu and/or 1-OHP co-administration, and Pxd pre-treatment followed by 5-Fu and/or 1-OHP in both CRC cells\"",
+  "verbatim_locator | proposition: authors read the result as induction of caspase-mediated apoptosis | Discussion | \"The presence of active caspase-3 in both CRC cells as a result of Pxd pre-treatment is indicative of induction of caspase-mediated apoptosis in these cells.\"",
+  "verbatim_locator | proposition: proposed upstream mechanism is ENOX2 inhibition and XIAP degradation, not caspase binding | Introduction | \"Accumulation of ceramide in cell triggers caspase-mediated apoptosis via degradation of X-linked inhibitor of apoptosis protein (XIAP)\"",
+  "verbatim_locator | proposition: internal inconsistency in the ELISA methods (cell line) | Methods | \"After treatment the selected concentration of the agents on MCF-7 cells, cell lysate was extracted.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/source_check_it24_p1_20261104/README.md",
+  "disease-models/wwox/research/drug_repurposing/source_check_it24_p1_20261104/verdicts.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC full-text XML for PMC7355152 fetched 2026-11-04; text searched for caspase-3, ENOX2, XIAP, MCF-7 and read around each hit; bytes not saved to the repository",
+ "study_id": {
+  "doi": "10.17179/excli2020-2042",
+  "pmid": "32665777"
+ },
+ "workflow": "IT24 P1 source check (source_check_it24_p1_20261104): question-driven, one compound-target relation. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor. Colorectal cell lines HCT-116, pre-treatment 10 ug/ml for 4 h then 5-FU plus oxaliplatin."
+}
