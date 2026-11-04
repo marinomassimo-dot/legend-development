@@ -13,7 +13,7 @@
  ],
  "STOP_LOG": [],
  "AUTHORISED_QUEUE_20261104": {
-  "MANDATE_STATE": "ACTIVE",
+  "MANDATE_STATE": "OPEN",
   "OBJ_A1": {
    "order": 1,
    "steps": [
@@ -52,7 +52,7 @@
    "steps": [
     {
      "step": "A4 battery on the frozen candidate, push, CI, cleanup, report",
-     "status": "PENDING",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
      "evidence": "pending"
     }
