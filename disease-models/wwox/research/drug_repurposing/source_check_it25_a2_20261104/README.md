@@ -60,3 +60,9 @@ engine's input.
 
 Add the 7 rows of `source_exclusions_it25_proposed.tsv`. Do not add nelfinavir, perifosine, triciribine,
 MK-2206 or afuresertib (supported, indirect or unknown). The wider listing-tier rule stays unadopted.
+
+## Integrator status (IT25)
+* Single producer, not independently verified. Two decisive facts were re-checked by the integrator against a second route: ZHX2 carries the NCBI alias `RAF` (mygene.info gene 22882), and the Bago 2014 abstract (PMID 25177796) states that GDC-0941 and BKM120 "do not inhibit Vps34".
+* Applied: four exclusions (sorafenib and regorafenib to ZHX2; pictilisib and buparlisib to PIK3C3). NOT applied: fexagratinib to AKT1, pilaralisib and GSK2636771 to PIK3C3 (truth unknown, nothing read), because a pair is withheld only when a check has read and named it. `source_exclusions_it25_proposed.tsv` is kept as the producer's proposal.
+* The 8 receipts were recorded in event-id order (ledger now 1,043 chained). Five of the papers are abstract-level only; the receipts say so.
+* Open: the same alias artefact may exist for other DGIdb nodes; no scan was run.

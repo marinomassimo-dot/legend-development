@@ -48,3 +48,8 @@ No terms page of the service itself was read (not renderable); no verifier sampl
 ## Files
 
 `gsrs_trial_it25.py` (run with `--run` or `--offline`), `test_gsrs_trial_it25.py`, `gsrs_results.tsv`. Reproduce: `gsrs_trial_it25.py --offline --cache <cache> --catalog-cache <catalog cache> --out .` (cache is outside git).
+
+## Integrator status (IT25)
+* Single producer, not independently verified, not consumed by the generator or the census. The gate asked for the service's own terms; the page could not be rendered, so the trial rested on the public-domain statement in the cited paper. That is a weaker basis than reading the terms and is recorded as such. The raw responses are outside git.
+* Reading: 10 firm and 10 weak (name only) structures of the 22; 2 no hit. A weak row is not an identity. Twelve recovered keys coincide with an existing CHEMBL family (twins, not merged).
+* Next, if wanted: have a different actor read the service's terms and sample the joins before any row enters the census as route R4.

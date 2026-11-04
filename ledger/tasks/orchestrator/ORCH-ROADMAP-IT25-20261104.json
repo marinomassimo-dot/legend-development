@@ -1,0 +1,61 @@
+{
+  "_schema": "task record, Annex A.1c",
+  "TASK_ID": "ORCH-ROADMAP-IT25-20261104",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "HIGH",
+  "OBJECTIVE": "Iteration 25: carry out the three next actions named at the IT24 close: (A1) regenerate the stage tables with F1/F2 and the source checks and compare the HDAC5 cluster; (A2) read primary sources for listing-tier rows that drive a proposal (sorafenib/regorafenib ZHX2; Q6 AKT1/PIK3C3); (A3) run the G-SRS identity route on the 22 unresolved rows after reading its terms.",
+  "START_UTC": "2026-11-04T12:00:00Z",
+  "BASELINE": "development/main = local main = f5ebd245ce522df4f83ae9e44486edf5b8c2530a (IT24 closed); clean tree",
+  "DECISIONS_TAKEN": [
+    "Authorised by the operator's message 'Procedi con le prossime 3 azioni indicate'. A pair is withheld only when a source check has read and named it; UNKNOWN pairs are not excluded.",
+    "The G-SRS trial rests on the public-domain statement of the cited paper because the service's terms page could not be rendered; recorded as a weaker basis. Not consumed by the generator."
+  ],
+  "STOP_LOG": [],
+  "AUTHORISED_QUEUE_20261104": {
+    "MANDATE_STATE": "COMPLETE",
+    "OBJ_A1": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "A1 regenerate stage tables with F1/F2 and the source checks; compare the HDAC5 cluster",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "generation_it25_a1_20261104: control reproduces S5 (only attribution columns differ); engine re-run deterministic (6 of 8 candidate tables byte-identical); S6 = 996 proposals, hand-overs 16 to 15 (sorafenib out), panobinostat/idronoxil cross z_reach 3 by removed data (not a finding); F1 states 247 to 711, WEAK 7 to 27; F2 108 phases from sibling."
+        }
+      ]
+    },
+    "OBJ_A2": {
+      "order": 2,
+      "steps": [
+        {
+          "step": "A2 primary-source reading for listing-tier rows driving a proposal",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "source_check_it25_a2_20261104: ZHX2 alias RAF artefact (verified), Bago 2014 for PIK3C3; 4 exclusions applied, 3 UNKNOWN left in; 8 receipts recorded (1,043 chained); single producer."
+        }
+      ]
+    },
+    "OBJ_A3": {
+      "order": 3,
+      "steps": [
+        {
+          "step": "A3 G-SRS identity route on the 22 unresolved rows",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "identity_gsrs_it25_a3_20261104: 10 firm, 10 weak, 2 no hit; terms page unreadable, weaker basis stated; single producer, not consumed."
+        }
+      ]
+    },
+    "OBJ_A4": {
+      "order": 4,
+      "steps": [
+        {
+          "step": "A4 battery on the frozen candidate, push, CI, cleanup, report",
+          "status": "TODO",
+          "owner": "orchestrator"
+        }
+      ]
+    }
+  }
+}
