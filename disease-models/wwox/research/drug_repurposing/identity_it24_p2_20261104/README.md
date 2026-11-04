@@ -48,3 +48,16 @@ Reproduce: `LEGEND_CATALOG_CACHE=<catalogue cache> python3 identity_census_it24.
 ## Independent verification (IT24, `verification_it24_20261104`)
 
 Counts reproduced. No false fusion among the 158 rows (tulmimetostat and valemetostat stay apart; labelled/radioactive and multi-ligand records not present in the 158). One latent defect, not changing any result here: R0 and R1 take the first keyed member of the family, which for panobinostat (lactate), sorafenib (tosylate) and spebrutinib (besylate) is a SALT key whose first block differs from the parent's, so a parent-skeleton match would miss them; none of the three is in the IT23 top-20 lists. Four twin pairs are fused by the existing bridge (vadadustat, zanubrutinib, tirabrutinib, tapinarof) and four pairs sharing one full key remain separate families (conservative). `recheck_lincs_it24.py` now regenerates `lincs_top20_recheck.json` (the first version was empty and unreproducible).
+
+## IT27 addendum: the same frozen top-20 lists with the verified R4 identities (`recheck_lincs_it27.py`)
+
+Same nine IT23 scenarios, same 180 stored rows, no new query (a fresh query would be a distinct comparison with a possibly different universe and data version). R4 (G-SRS name to UNII to structure, confirmed at structure level by a second actor, `identity_gsrs_it26_a1_20261104`) is added as a route to the 158 Q2/Q4/Q8 rows of the IT22 final table; it is not a second identity authority, the keys are the independently seen InChIKey first blocks of `verify_rows.tsv` and they agree with the catalogue key wherever one existed (0 disagreements).
+
+| Item | IT24 | IT27 with R4 |
+|---|---|---|
+| LEGEND rows with a structure | 136 of 158 | 155 of 158 (19 R4 rows, all among the 22 unresolved) |
+| Distinct first blocks | 127 | 134 (12 of the 19 R4 substances were already keyed through another row, so only 7 are new substances) |
+| Top-20 rows with an unresolved perturbagen | 11 of 180 | 11 of 180 (the signature side is unchanged) |
+| Top-20 hits (first-block identity) | 0 | 0; 0 hits on an R4 row |
+
+Reading: the IT23 zero now rests on 155 of 158 rows, not 136. Zero overlap on a top-20 is neither a failure nor a refutation of any card, and the stored lists cannot say anything about the returned depth (300 per tail), which needs the service output that was not stored. A positive overlap would not have been an independent confirmation or a benefit. Rows are not substances: R4 is carried per family, and the same substance can sit in two families. Output `lincs_top20_recheck_it27.json`.

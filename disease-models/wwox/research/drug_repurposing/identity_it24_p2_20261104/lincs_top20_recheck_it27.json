@@ -1,0 +1,13 @@
+{
+ "distinct_skeletons_after": 134,
+ "distinct_skeletons_before": 127,
+ "legend_rows": 158,
+ "legend_rows_with_structure_after": 155,
+ "legend_rows_with_structure_before": 136,
+ "r4_catalogue_vs_independent_key_disagreements": [],
+ "r4_rows_added": 19,
+ "top20_hits_all": [],
+ "top20_hits_with_r4": [],
+ "top_rows": 180,
+ "tops_with_unresolved_identity": 11
+}
