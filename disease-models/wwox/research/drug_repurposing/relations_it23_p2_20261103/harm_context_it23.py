@@ -60,6 +60,12 @@ def main():
     act = {}
     for r in csv.DictReader(gzip.open(DR / "generation_it21_p2_20261103/results/actions/family_actions.tsv.gz", "rt", encoding="utf-8"), delimiter="\t"):
         act[(r["family_id"], r["target_symbol"].upper())] = r
+    # IT24 P12: the provenance of the SIGN, not of the pair. `novelty.tsv` aggregates origins and evidence classes over every edge of a pair; the sign can rest on a different edge
+    # (a prediction) than the one that makes the pair look observed. sign_rows_it24.tsv holds only the sign-bearing edges of the discordant pairs (source, evidence class).
+    signrows = {}
+    if (HERE / "sign_rows_it24.tsv").exists():
+        for x in rd(HERE / "sign_rows_it24.tsv"):
+            signrows.setdefault((x["compound"], x["target"]), []).append(x)
     disc = []
     for r in nov:
         if r["status"] != "IN_LEGEND_OPPOSITE_SIGN":
@@ -69,7 +75,11 @@ def main():
             if a:
                 disc.append(dict(compound_name=r["compound_name"], target=r["target_symbol_in_legend"], family_id=f, legend_sign=a["mean_sign"], legend_group=a["groups"], legend_scope=a["scopes"], legend_flags=a["flags"],
                                  eckg_sign=r["eckg_activity_sign"], eckg_non_prediction_origins=r["origins_non_prediction"], eckg_best_evidence=r["best_evidence_class"],
-                                 reading="prompt to read the source; EC-KG rests on prediction rows only" if not r["origins_non_prediction"] else "prompt to read the source; both sides have a non-prediction origin"))
+                                 eckg_sign_evidence=";".join(sorted({x["evidence"] for x in signrows.get((r["compound_name"], r["target_symbol_in_legend"]), [])})),
+                                 eckg_sign_origins=";".join(sorted({x["source"] for x in signrows.get((r["compound_name"], r["target_symbol_in_legend"]), []) if x["evidence"] != "PREDICTION"}))))
+                disc[-1]["reading"] = ("prompt to read the source; the EC-KG SIGN rests on prediction rows only" + ("" if not r["origins_non_prediction"] else " (the pair has non-prediction origins, none of them carries this sign)")
+                                       if signrows and not disc[-1]["eckg_sign_origins"] else "prompt to read the source; the EC-KG sign has a non-prediction origin" if signrows else
+                                       ("prompt to read the source; EC-KG rests on prediction rows only" if not r["origins_non_prediction"] else "prompt to read the source; pair-level origins only (sign provenance not available)"))
     with open(HERE / "sign_discordance_it23.tsv", "w", encoding="utf-8", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=list(disc[0]), delimiter="\t", lineterminator="\n")
         w.writeheader()

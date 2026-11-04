@@ -144,8 +144,9 @@
    "steps": [
     {
      "step": "P12 adverse-report coverage and sign provenance",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "relations_it23_p2: sign-level provenance replaces pair-level in the discordance reading (3 of 15 pairs looked observed only through other edges; regression added); FAERS completeness limit unchanged with a stated reopening condition (generic Seizure term, denominator); not a safety system"
     }
    ]
   },

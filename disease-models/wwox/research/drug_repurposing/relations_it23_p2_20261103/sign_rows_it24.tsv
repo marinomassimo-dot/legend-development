@@ -1,0 +1,18 @@
+compound	target	legend_sign	eckg_sign	level	source	evidence	predicate	aggregators
+PAC-1	CASP3	1.0000	-1	activity_or_abundance	infores:text-mining-provider-targeted	PREDICTION	biolink:affects	infores:robokop-kg
+PAC-1	CASP3	1.0000	-1	activity	infores:pharos	OBSERVED	biolink:affects	infores:robokop-kg
+Cyproterone	PGR	1.0000	-1	activity	infores:drugcentral	OBSERVED	biolink:affects	infores:robokop-kg
+Regorafenib	EPHA2	-1.0000	1	activity_or_abundance	infores:text-mining-provider-targeted	PREDICTION	biolink:affects	infores:robokop-kg
+dactolisib	PIK3CB	-1.0000	1	activity	infores:bindingdb	OBSERVED	biolink:affects	infores:robokop-kg
+dactolisib	PIK3CB	-1.0000	1	activity	infores:pharos	OBSERVED	biolink:affects	infores:robokop-kg
+dactolisib	PIK3R1	-1.0000	1	activity	infores:bindingdb	OBSERVED	biolink:affects	infores:robokop-kg
+Panobinostat	SIRT2	-1.0000	1	activity_or_abundance	infores:text-mining-provider-targeted	PREDICTION	biolink:affects	infores:robokop-kg
+Panobinostat	SIRT3	-1.0000	1	activity_or_abundance	infores:text-mining-provider-targeted	PREDICTION	biolink:affects	infores:robokop-kg
+Panobinostat	SIRT1	-1.0000	1	activity_or_abundance	infores:text-mining-provider-targeted	PREDICTION	biolink:affects	infores:robokop-kg
+Panobinostat	SIRT7	-1.0000	1	activity_or_abundance	infores:text-mining-provider-targeted	PREDICTION	biolink:affects	infores:robokop-kg
+Idronoxil	CASP3	-1.0000	1	activity_or_abundance	infores:text-mining-provider-targeted	PREDICTION	biolink:affects	infores:robokop-kg
+EPTOTERMIN ALFA	BMPR1B	1.0000	-1	activity_or_abundance	infores:text-mining-provider-targeted	PREDICTION	biolink:affects	infores:robokop-kg
+EPTOTERMIN ALFA	BMPR2	1.0000	-1	activity_or_abundance	infores:text-mining-provider-targeted	PREDICTION	biolink:affects	infores:robokop-kg
+DIBOTERMIN ALFA	BMPR1A	1.0000	-1	activity_or_abundance	infores:text-mining-provider-targeted	PREDICTION	biolink:affects	infores:robokop-kg
+DIBOTERMIN ALFA	BMPR1B	1.0000	-1	activity_or_abundance	infores:text-mining-provider-targeted	PREDICTION	biolink:affects	infores:robokop-kg
+DIBOTERMIN ALFA	BMPR2	1.0000	-1	activity_or_abundance	infores:text-mining-provider-targeted	PREDICTION	biolink:affects	infores:robokop-kg

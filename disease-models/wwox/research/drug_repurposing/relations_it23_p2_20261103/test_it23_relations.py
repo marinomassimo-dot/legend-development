@@ -46,11 +46,22 @@ class HarmSignals(unittest.TestCase):
 
     def test_sign_discordances_are_prompts_with_legends_own_row(self):
         d = rd(HERE / "sign_discordance_it23.tsv")
-        self.assertEqual(len(d), 15)
+        self.assertEqual(len(d), 10)          # 15 at IT23; IT24 P1 withheld the five unsupported LEGEND signs (panobinostat SIRT1/2/3/7, idronoxil CASP3), so they are no longer a LEGEND sign to compare
+        self.assertFalse({(r["compound_name"], r["target"]) for r in d} & {("Panobinostat", "SIRT1"), ("Panobinostat", "SIRT2"), ("Panobinostat", "SIRT3"), ("Panobinostat", "SIRT7"), ("Idronoxil", "CASP3")})
         for r in d:
             self.assertTrue(r["legend_group"] and r["legend_scope"])
             self.assertIn("prompt to read the source", r["reading"])
             self.assertNotEqual(r["legend_sign"][:1] == "-", r["eckg_sign"][:1] == "-")      # they really disagree in sign
+
+    def test_the_provenance_read_is_the_signs_not_the_pairs(self):
+        """IT24 P12: a pair can look observed through other edges while its SIGN rests on a prediction edge only (regorafenib/EPHA2, dibotermin alfa/BMPR1A and BMPR2)."""
+        by = {(r["compound_name"], r["target"]): r for r in rd(HERE / "sign_discordance_it23.tsv")}
+        for k in (("Regorafenib", "EPHA2"), ("DIBOTERMIN ALFA", "BMPR1A"), ("DIBOTERMIN ALFA", "BMPR2")):
+            self.assertEqual(by[k]["eckg_best_evidence"], "OBSERVED")                 # the pair-level aggregate
+            self.assertEqual(by[k]["eckg_sign_evidence"], "PREDICTION")                # the sign's own edges
+            self.assertEqual(by[k]["eckg_sign_origins"], "")
+            self.assertIn("SIGN rests on prediction rows only", by[k]["reading"])
+        self.assertEqual(by[("Cyproterone", "PGR")]["eckg_sign_evidence"], "OBSERVED")
 
 
 class GeneratorUsesTheLimitWithoutMovingSelection(unittest.TestCase):
