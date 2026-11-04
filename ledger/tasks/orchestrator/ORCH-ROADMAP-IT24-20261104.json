@@ -1,223 +1,230 @@
 {
- "_schema": "task record, Annex A.1c",
- "TASK_ID": "ORCH-ROADMAP-IT24-20261104",
- "OWNER": "orchestrator",
- "ACTOR_ID": "orchestrator",
- "PRIORITY": "HIGH",
- "OBJECTIVE": "Iteration 24: turn available knowledge and capability into better pharmacological generation: source-check the five suspect actions, recover chemical identity, enrich catalogue for queued questions, use WWOX contrasts and biological roles in the calculation, multi-target comparison on qualified data, attributable measurement, reverse test, independent verification, ranking and dashboard, durable method.",
- "START_UTC": "2026-11-04T00:00:00Z",
- "BASELINE": "development/main = origin/main = local main = cceaf85406865a212313002dfefb5d151bf60f6f (fetched at start); clean tree; one worktree; IT23 record reconciled to COMPLETE at P0.",
- "DECISIONS_TAKEN": [
-  "2026-11-04: IT24 mandate received; IT23 record found OPEN with P8 IN_PROGRESS despite green battery/gate/Pages on cceaf854; closed with evidence, history kept",
-  "2026-11-04: operator integration 'P15 readability of the already multilingual dashboard' queued inside OBJ_P15: English first then the other four; at a glance which investigations are priority, why, which WWOX evidence supports them, residual uncertainty; visual hierarchy, card summaries, filters, phone use; observed results vs generated hypotheses vs precedents from other diseases clearly distinguishable; scientific detail available on demand; reuse generator; verify five languages, evidence links, data-to-view correspondence; never present pathway coverage percentages as therapeutic benefit; deliver on the public site with before/after comparison and navigation check; runs after the engine advances"
- ],
- "DEFAULTS_TAKEN": [],
- "STOP_LOG": [],
- "AUTHORISED_QUEUE_20261104": {
-  "MANDATE_STATE": "OPEN",
-  "OBJ_P0": {
-   "order": 1,
-   "steps": [
-    {
-     "step": "P0 baseline, IT23 reconciliation, IT24 record observable by the monitor",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "main cceaf854 fetched, tree clean, IT23 record closed with evidence, IT24 record bound (mandate_watch sees the session RUNNING), cron monitor and daily scout present"
+  "_schema": "task record, Annex A.1c",
+  "TASK_ID": "ORCH-ROADMAP-IT24-20261104",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "HIGH",
+  "OBJECTIVE": "Iteration 24: turn available knowledge and capability into better pharmacological generation: source-check the five suspect actions, recover chemical identity, enrich catalogue for queued questions, use WWOX contrasts and biological roles in the calculation, multi-target comparison on qualified data, attributable measurement, reverse test, independent verification, ranking and dashboard, durable method.",
+  "START_UTC": "2026-11-04T00:00:00Z",
+  "BASELINE": "development/main = origin/main = local main = cceaf85406865a212313002dfefb5d151bf60f6f (fetched at start); clean tree; one worktree; IT23 record reconciled to COMPLETE at P0.",
+  "DECISIONS_TAKEN": [
+    "2026-11-04: IT24 mandate received; IT23 record found OPEN with P8 IN_PROGRESS despite green battery/gate/Pages on cceaf854; closed with evidence, history kept",
+    "2026-11-04: operator integration 'P15 readability of the already multilingual dashboard' queued inside OBJ_P15: English first then the other four; at a glance which investigations are priority, why, which WWOX evidence supports them, residual uncertainty; visual hierarchy, card summaries, filters, phone use; observed results vs generated hypotheses vs precedents from other diseases clearly distinguishable; scientific detail available on demand; reuse generator; verify five languages, evidence links, data-to-view correspondence; never present pathway coverage percentages as therapeutic benefit; deliver on the public site with before/after comparison and navigation check; runs after the engine advances"
+  ],
+  "DEFAULTS_TAKEN": [],
+  "STOP_LOG": [
+    "2026-11-04 IT24 complete: P0-P18 DONE, bdaf3ca6 released, CI green, served pages verified."
+  ],
+  "AUTHORISED_QUEUE_20261104": {
+    "MANDATE_STATE": "COMPLETE",
+    "OBJ_P0": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "P0 baseline, IT23 reconciliation, IT24 record observable by the monitor",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "main cceaf854 fetched, tree clean, IT23 record closed with evidence, IT24 record bound (mandate_watch sees the session RUNNING), cron monitor and daily scout present"
+        }
+      ]
+    },
+    "OBJ_P1": {
+      "order": 2,
+      "steps": [
+        {
+          "step": "P1 source check of the five suspect sign relations (panobinostat SIRT1/2/3/7, idronoxil CASP3) and regeneration of the action table",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "source_check_it24_p1_20261104: no primary source for panobinostat-SIRT1..7 or idronoxil-CASP3 (EXCLUDE_FROM_SIGNED_PROPAGATION, no opposite sign); 8 pairs withheld at refresh_actions_it21 (named-pair table, wide listing tier measured as sensitivity only: 554 pairs/28 proposals, not adopted); 3 regressions; 8 receipts recorded (1035 chained); effect bounded (no chain depends on the pairs), nulls not re-run"
+        }
+      ]
+    },
+    "OBJ_P2": {
+      "order": 3,
+      "steps": [
+        {
+          "step": "P2 chemical identity recovery for the DGIdb-only families (rows vs families vs substances), shared resolver",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "identity_it24_p2_20261104: of 115 rows IT23 called incomparable, 93 carry a structure through routes already held (R1 23, R2 4, R3 66), 22 unresolved; no name merges; top-20 LINCS overlap stays 0 on 136 resolvable rows; 3 regression tests"
+        }
+      ]
+    },
+    "OBJ_P3": {
+      "order": 4,
+      "steps": [
+        {
+          "step": "P3 catalogue coverage for the families and questions actually in the queue",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "catalogue coverage for queued questions assessed through identity census (R0-R3: 136 of 158 Q2/Q4/Q8 rows structure-bearing; 98 of 1,000 rows unresolved) and listing-tier measurement (316 single-listing signed rows, 554 pairs under the wide rule, 28 proposals including one hand-over) rather than a broad enrichment; no new pharmacology sources added; reopening: read primary sources for listing-tier rows that drive a proposal"
+        }
+      ]
+    },
+    "OBJ_P4": {
+      "order": 5,
+      "steps": [
+        {
+          "step": "P4 WWOX datasets: reanalysis possible vs new measurement, contrasts and gene lists",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "wwox_data_it24_p4_20261104: accession truth (GSE158681/2 bulk, GSE158684 snRNA, GSE215425 P47T), 14-row opportunity table with classes; first per-gene P47T region lists (PFC 813/607 at FDR<0.10, HPC none, PTX 297/129, CB n=3v4) and mouse descriptive lists (flagged background-confounded); MTBLS12344 now public: citrate/2HG integrated, lactate/itaconate failed QC; shRNA hNPC control failure kept deposit-confined; single producer, not independently verified, not consumed by the generator"
+        }
+      ]
+    },
+    "OBJ_P5": {
+      "order": 6,
+      "steps": [
+        {
+          "step": "P5 biological roles and context consumed by the calculation",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "roles/context: no new role calculation added; P47T partial-loss region lists (IT24 P4) show the ISR sets inside their nulls in 5v5 regions, so a missense partial loss does not settle the ISR sign: recorded in wwox_data_it24_p4 as scenario evidence; roles stay UNKNOWN with conditional hypotheses as before; not consumed by the generator (single unverified producer)"
+        }
+      ]
+    },
+    "OBJ_P6": {
+      "order": 7,
+      "steps": [
+        {
+          "step": "P6 multi-target profiles from LEGEND qualified data: feasibility then comparison against single chain",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "multitarget_it24_p6_20261104: engine score is already multi-target; decomposition shows 32 target-level conflicts invisible in contrary_seed_share, 4 multi-target and 2 conflict hand-overs (paralog pairs flagged); no selection change; coverage/presentation gain only"
+        }
+      ]
+    },
+    "OBJ_P7": {
+      "order": 8,
+      "steps": [
+        {
+          "step": "P7 generation beyond pathway-drug links, chain recorded per proposal",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "no new generative chain beyond pathway-drug links was produced in IT24: target decomposition (P6) and the own-concept-ligand attribution (P10 F1) are consumption gains, not new hypotheses; stated plainly in the result README"
+        }
+      ]
+    },
+    "OBJ_P8": {
+      "order": 9,
+      "steps": [
+        {
+          "step": "P8 one vertical alternative-to-a-known-line comparison, or documented abstention",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "abstention documented: no vertical alternative-to-a-known-line comparison was run in IT24; the one concrete alternative-selection datum (sulfopin on PIN1 with measured Ki, and Ss-208/Ka1010 in vorinostat's HDAC5 cluster) came from the reverse test and is carried as the F1 fix; reopening: regenerate stage tables with F1/F2 and compare the HDAC5 cluster"
+        }
+      ]
+    },
+    "OBJ_P9": {
+      "order": 10,
+      "steps": [
+        {
+          "step": "P9 incremental attributable measurement against a frozen reference",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "attributable increments, no accuracy claim: signs (8 pairs, bounded: no chain depends on them, nulls not re-run), identity (consumer-side recovery 93 of 115, no generator change), target decomposition (no selection change), provenance of sign (3 of 15 pairs relabelled); combined effect on selection: none; coverage/traceability gains only"
+        }
+      ]
+    },
+    "OBJ_P10": {
+      "order": 11,
+      "steps": [
+        {
+          "step": "P10 reverse test on few contrasting cases",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "reverse_it24_p10_20261104: 4 contrasting cases (vorinostat known control; idronoxil; sulfopin; panobinostat) with frozen digests; classifications JUSTIFIED_EXCLUSION / NOT_EXECUTED (withheld pairs still in engine contributions, bounded) / OMISSION (own concept-id ligand never read by family_ligands: fixed in code with regression, second cases Ss-208 and Ka1010) / DATA_MISSING / REPRESENTATION_LIMIT; F2/F3 not applied, stated; stage tables not regenerated"
+        }
+      ]
+    },
+    "OBJ_P11": {
+      "order": 12,
+      "steps": [
+        {
+          "step": "P11 independent verification and substantive regressions",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "verification_it24_20261104 (independent verifier, own answers before reading the producer): V1-V4 confirmed on the numbers; findings applied: 89 firm + 4 weaker identity rows, salt-key latent defect documented, empty recheck file regenerated with script, exclusion-key fragility regression added, conflict magnitude stated (31 of 32 under 6 percent), contrary_seed_share non-informative claim withdrawn, OBSERVED-is-not-measured caution"
+        }
+      ]
+    },
+    "OBJ_P12": {
+      "order": 13,
+      "steps": [
+        {
+          "step": "P12 adverse-report coverage and sign provenance",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "relations_it23_p2: sign-level provenance replaces pair-level in the discordance reading (3 of 15 pairs looked observed only through other edges; regression added); FAERS completeness limit unchanged with a stated reopening condition (generic Seizure term, denominator); not a safety system"
+        }
+      ]
+    },
+    "OBJ_P13": {
+      "order": 14,
+      "steps": [
+        {
+          "step": "P13 targeted scouting GitHub / Hugging Face / Nature after named gaps",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "scout_it24_p13_20261104: gaps named from IT24 results; 6 resources (G-SRS name-to-UNII TRIAL for the 22 unresolved identities, SIGMA-KG TRIAL data-only, scPerturb TRIAL metadata, hiPSC progenitor drug screen TRIAL name overlap, KCGS 2.0 WATCH, EvE Bio REJECT licence); empty: G1 selectivity panels beyond ChEMBL/DTC, astrocyte/microglia perturbation sets, rare-disease benchmark with leakage control; nothing installed or imported; only compound names sent to one key-less public endpoint"
+        }
+      ]
+    },
+    "OBJ_P14": {
+      "order": 15,
+      "steps": [
+        {
+          "step": "P14 ranking of investigations",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "Ranking rebuilt by ranking_it8.py run; item C7 added to it22_changes; no position changed; test_investigations 50 pass."
+        }
+      ]
+    },
+    "OBJ_P15": {
+      "order": 16,
+      "steps": [
+        {
+          "step": "P15 dashboard and full cycle, five languages, served site | INTEGRATION (operator, 2026-11-04): readability of the published site - EN first, priority/why/WWOX evidence/uncertainty at a glance, hierarchy, card summaries, filters, phone; observed vs generated vs other-disease precedent distinguishable; details on demand; five languages, evidence links and data-view correspondence verified; no pathway-coverage percentage shown as benefit; before/after and navigation check on the served site",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "Investigations view readable at a glance (glance block, details on demand, origin legend, filter), five languages, static and dynamic shareable audit PASS; served site at bdaf3ca6 byte-identical to the package for all five pages, check_published_view 32 checks PASS; before/after in it24_result_20261104/README.md."
+        }
+      ]
+    },
+    "OBJ_P16": {
+      "order": 17,
+      "steps": [
+        {
+          "step": "P16 durable method and simplification",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "Standing method bullet in roadmap_current.md (look for the held capability first; pre-battery order). No new tool, role, gate or registry."
+        }
+      ]
+    },
+    "OBJ_P17": {
+      "order": 18,
+      "steps": [
+        {
+          "step": "P17 continuity monitor and radar check, resources",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "mandate_watch saw the session RUNNING; hourly watch and daily scout cron present; radar check recorded in scout_it24_p13_20261104 (TRIAL: G-SRS identity route, SIGMA-KG, scPerturb, hiPSC screen; WATCH: KCGS 2.0; REJECT: EvE Bio)."
+        }
+      ]
+    },
+    "OBJ_P18": {
+      "order": 19,
+      "steps": [
+        {
+          "step": "P18 battery on frozen candidate, push, CI, Pages, cleanup, final report",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "First battery on ac3fecff FAILED on 3 suites (own defects: non-verbose test runner, coverage_report and reading_state not regenerated); fixed in bdaf3ca6; second battery on exact bdaf3ca6: PASS WITH SKIPS (200 targets, 8 environment skips). Pushed with safe_push (post-push verification failed once on a transient SSH error; remote re-read held bdaf3ca6). CI: Public release gate success, Publish the shareable view success. Self-evaluation: session_evaluations/self_eval_orchestrator_IT24_20261104.md."
+        }
+      ]
     }
-   ]
-  },
-  "OBJ_P1": {
-   "order": 2,
-   "steps": [
-    {
-     "step": "P1 source check of the five suspect sign relations (panobinostat SIRT1/2/3/7, idronoxil CASP3) and regeneration of the action table",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "source_check_it24_p1_20261104: no primary source for panobinostat-SIRT1..7 or idronoxil-CASP3 (EXCLUDE_FROM_SIGNED_PROPAGATION, no opposite sign); 8 pairs withheld at refresh_actions_it21 (named-pair table, wide listing tier measured as sensitivity only: 554 pairs/28 proposals, not adopted); 3 regressions; 8 receipts recorded (1035 chained); effect bounded (no chain depends on the pairs), nulls not re-run"
-    }
-   ]
-  },
-  "OBJ_P2": {
-   "order": 3,
-   "steps": [
-    {
-     "step": "P2 chemical identity recovery for the DGIdb-only families (rows vs families vs substances), shared resolver",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "identity_it24_p2_20261104: of 115 rows IT23 called incomparable, 93 carry a structure through routes already held (R1 23, R2 4, R3 66), 22 unresolved; no name merges; top-20 LINCS overlap stays 0 on 136 resolvable rows; 3 regression tests"
-    }
-   ]
-  },
-  "OBJ_P3": {
-   "order": 4,
-   "steps": [
-    {
-     "step": "P3 catalogue coverage for the families and questions actually in the queue",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "catalogue coverage for queued questions assessed through identity census (R0-R3: 136 of 158 Q2/Q4/Q8 rows structure-bearing; 98 of 1,000 rows unresolved) and listing-tier measurement (316 single-listing signed rows, 554 pairs under the wide rule, 28 proposals including one hand-over) rather than a broad enrichment; no new pharmacology sources added; reopening: read primary sources for listing-tier rows that drive a proposal"
-    }
-   ]
-  },
-  "OBJ_P4": {
-   "order": 5,
-   "steps": [
-    {
-     "step": "P4 WWOX datasets: reanalysis possible vs new measurement, contrasts and gene lists",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "wwox_data_it24_p4_20261104: accession truth (GSE158681/2 bulk, GSE158684 snRNA, GSE215425 P47T), 14-row opportunity table with classes; first per-gene P47T region lists (PFC 813/607 at FDR<0.10, HPC none, PTX 297/129, CB n=3v4) and mouse descriptive lists (flagged background-confounded); MTBLS12344 now public: citrate/2HG integrated, lactate/itaconate failed QC; shRNA hNPC control failure kept deposit-confined; single producer, not independently verified, not consumed by the generator"
-    }
-   ]
-  },
-  "OBJ_P5": {
-   "order": 6,
-   "steps": [
-    {
-     "step": "P5 biological roles and context consumed by the calculation",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "roles/context: no new role calculation added; P47T partial-loss region lists (IT24 P4) show the ISR sets inside their nulls in 5v5 regions, so a missense partial loss does not settle the ISR sign: recorded in wwox_data_it24_p4 as scenario evidence; roles stay UNKNOWN with conditional hypotheses as before; not consumed by the generator (single unverified producer)"
-    }
-   ]
-  },
-  "OBJ_P6": {
-   "order": 7,
-   "steps": [
-    {
-     "step": "P6 multi-target profiles from LEGEND qualified data: feasibility then comparison against single chain",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "multitarget_it24_p6_20261104: engine score is already multi-target; decomposition shows 32 target-level conflicts invisible in contrary_seed_share, 4 multi-target and 2 conflict hand-overs (paralog pairs flagged); no selection change; coverage/presentation gain only"
-    }
-   ]
-  },
-  "OBJ_P7": {
-   "order": 8,
-   "steps": [
-    {
-     "step": "P7 generation beyond pathway-drug links, chain recorded per proposal",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "no new generative chain beyond pathway-drug links was produced in IT24: target decomposition (P6) and the own-concept-ligand attribution (P10 F1) are consumption gains, not new hypotheses; stated plainly in the result README"
-    }
-   ]
-  },
-  "OBJ_P8": {
-   "order": 9,
-   "steps": [
-    {
-     "step": "P8 one vertical alternative-to-a-known-line comparison, or documented abstention",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "abstention documented: no vertical alternative-to-a-known-line comparison was run in IT24; the one concrete alternative-selection datum (sulfopin on PIN1 with measured Ki, and Ss-208/Ka1010 in vorinostat's HDAC5 cluster) came from the reverse test and is carried as the F1 fix; reopening: regenerate stage tables with F1/F2 and compare the HDAC5 cluster"
-    }
-   ]
-  },
-  "OBJ_P9": {
-   "order": 10,
-   "steps": [
-    {
-     "step": "P9 incremental attributable measurement against a frozen reference",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "attributable increments, no accuracy claim: signs (8 pairs, bounded: no chain depends on them, nulls not re-run), identity (consumer-side recovery 93 of 115, no generator change), target decomposition (no selection change), provenance of sign (3 of 15 pairs relabelled); combined effect on selection: none; coverage/traceability gains only"
-    }
-   ]
-  },
-  "OBJ_P10": {
-   "order": 11,
-   "steps": [
-    {
-     "step": "P10 reverse test on few contrasting cases",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "reverse_it24_p10_20261104: 4 contrasting cases (vorinostat known control; idronoxil; sulfopin; panobinostat) with frozen digests; classifications JUSTIFIED_EXCLUSION / NOT_EXECUTED (withheld pairs still in engine contributions, bounded) / OMISSION (own concept-id ligand never read by family_ligands: fixed in code with regression, second cases Ss-208 and Ka1010) / DATA_MISSING / REPRESENTATION_LIMIT; F2/F3 not applied, stated; stage tables not regenerated"
-    }
-   ]
-  },
-  "OBJ_P11": {
-   "order": 12,
-   "steps": [
-    {
-     "step": "P11 independent verification and substantive regressions",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "verification_it24_20261104 (independent verifier, own answers before reading the producer): V1-V4 confirmed on the numbers; findings applied: 89 firm + 4 weaker identity rows, salt-key latent defect documented, empty recheck file regenerated with script, exclusion-key fragility regression added, conflict magnitude stated (31 of 32 under 6 percent), contrary_seed_share non-informative claim withdrawn, OBSERVED-is-not-measured caution"
-    }
-   ]
-  },
-  "OBJ_P12": {
-   "order": 13,
-   "steps": [
-    {
-     "step": "P12 adverse-report coverage and sign provenance",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "relations_it23_p2: sign-level provenance replaces pair-level in the discordance reading (3 of 15 pairs looked observed only through other edges; regression added); FAERS completeness limit unchanged with a stated reopening condition (generic Seizure term, denominator); not a safety system"
-    }
-   ]
-  },
-  "OBJ_P13": {
-   "order": 14,
-   "steps": [
-    {
-     "step": "P13 targeted scouting GitHub / Hugging Face / Nature after named gaps",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "scout_it24_p13_20261104: gaps named from IT24 results; 6 resources (G-SRS name-to-UNII TRIAL for the 22 unresolved identities, SIGMA-KG TRIAL data-only, scPerturb TRIAL metadata, hiPSC progenitor drug screen TRIAL name overlap, KCGS 2.0 WATCH, EvE Bio REJECT licence); empty: G1 selectivity panels beyond ChEMBL/DTC, astrocyte/microglia perturbation sets, rare-disease benchmark with leakage control; nothing installed or imported; only compound names sent to one key-less public endpoint"
-    }
-   ]
-  },
-  "OBJ_P14": {
-   "order": 15,
-   "steps": [
-    {
-     "step": "P14 ranking of investigations",
-     "status": "TODO",
-     "owner": "orchestrator"
-    }
-   ]
-  },
-  "OBJ_P15": {
-   "order": 16,
-   "steps": [
-    {
-     "step": "P15 dashboard and full cycle, five languages, served site | INTEGRATION (operator, 2026-11-04): readability of the published site - EN first, priority/why/WWOX evidence/uncertainty at a glance, hierarchy, card summaries, filters, phone; observed vs generated vs other-disease precedent distinguishable; details on demand; five languages, evidence links and data-view correspondence verified; no pathway-coverage percentage shown as benefit; before/after and navigation check on the served site",
-     "status": "TODO",
-     "owner": "orchestrator"
-    }
-   ]
-  },
-  "OBJ_P16": {
-   "order": 17,
-   "steps": [
-    {
-     "step": "P16 durable method and simplification",
-     "status": "TODO",
-     "owner": "orchestrator"
-    }
-   ]
-  },
-  "OBJ_P17": {
-   "order": 18,
-   "steps": [
-    {
-     "step": "P17 continuity monitor and radar check, resources",
-     "status": "TODO",
-     "owner": "orchestrator"
-    }
-   ]
-  },
-  "OBJ_P18": {
-   "order": 19,
-   "steps": [
-    {
-     "step": "P18 battery on frozen candidate, push, CI, Pages, cleanup, final report",
-     "status": "TODO",
-     "owner": "orchestrator"
-    }
-   ]
   }
- }
 }
