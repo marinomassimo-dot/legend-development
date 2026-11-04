@@ -25,29 +25,30 @@ def main():
             for t in {r["main_target_hop0"], r["main_target_hops1to3"]} - {""}:
                 by[r["family_id"]][t][r["seed_id"]] += c
         for fam, tg in by.items():
-            net = {t: sum(s.values()) for t, s in tg.items()}
-            pos = {t: {k for k, v in s.items() if v > 0} for t, s in tg.items() if net[t] > 0}
-            neg = [t for t in tg if net[t] < 0]
-            posmass = {t: sum(v for v in tg[t].values() if v > 0) for t in pos}
-            tot = sum(posmass.values())
-            red = ""
-            if len(pos) >= 2:
-                ts = sorted(pos)
-                j = [len(pos[x] & pos[y]) / len(pos[x] | pos[y]) for i, x in enumerate(ts) for y in ts[i + 1:]]
-                m = sum(j) / len(j)
-                red = "REDUNDANT" if m >= 0.8 else ("COMPLEMENTARY" if m < 0.5 else "PARTLY_OVERLAPPING")
-            kind = "CONFLICT_BETWEEN_TARGETS" if pos and neg else ("MULTI_POSITIVE" if len(pos) >= 2 else ("SINGLE_TARGET" if len(pos) == 1 else "NO_POSITIVE_TARGET"))
-            out.append(dict(seed_set=sset, family_id=fam, n_targets=len(tg), n_pos=len(pos), n_neg=len(neg), kind=kind, overlap=red,
-                            dominant_share=f"{max(posmass.values()) / tot:.3f}" if tot else "", targets_pos=";".join(sorted(pos)), targets_neg=";".join(sorted(neg))))
+            for orient, sg in (("oppose", 1), ("mimic", -1)):         # contributions are signed for the 'oppose' orientation; the mimic arm reads them flipped
+                net = {t: sg * sum(s_.values()) for t, s_ in tg.items()}
+                pos = {t: {k for k, v in s_.items() if sg * v > 0} for t, s_ in tg.items() if net[t] > 0}
+                neg = [t for t in tg if net[t] < 0]
+                posmass = {t: sum(sg * v for v in tg[t].values() if sg * v > 0) for t in pos}
+                tot = sum(posmass.values())
+                red = ""
+                if len(pos) >= 2:
+                    ts = sorted(pos)
+                    j = [len(pos[x] & pos[y]) / len(pos[x] | pos[y]) for i, x in enumerate(ts) for y in ts[i + 1:]]
+                    m = sum(j) / len(j)
+                    red = "REDUNDANT" if m >= 0.8 else ("COMPLEMENTARY" if m < 0.5 else "PARTLY_OVERLAPPING")
+                kind = "CONFLICT_BETWEEN_TARGETS" if pos and neg else ("MULTI_POSITIVE" if len(pos) >= 2 else ("SINGLE_TARGET" if len(pos) == 1 else "NO_POSITIVE_TARGET"))
+                out.append(dict(seed_set=sset, family_id=fam, orientation=orient, n_targets=len(tg), n_pos=len(pos), n_neg=len(neg), kind=kind, overlap=red,
+                                dominant_share=f"{max(posmass.values()) / tot:.3f}" if tot else "", targets_pos=";".join(sorted(pos)), targets_neg=";".join(sorted(neg))))
     os.makedirs(a.out, exist_ok=True)
     cols = list(out[0])
     with open(os.path.join(a.out, "target_decomposition.tsv"), "w", encoding="utf-8", newline="") as fh:
         w = csv.DictWriter(fh, cols, delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(out)
     s = collections.defaultdict(collections.Counter)
     for r in out:
-        s[r["seed_set"]][r["kind"]] += 1
+        s[r["seed_set"] + "/" + r["orientation"]][r["kind"]] += 1
         if r["overlap"]:
-            s[r["seed_set"]]["overlap_" + r["overlap"]] += 1
+            s[r["seed_set"] + "/" + r["orientation"]]["overlap_" + r["overlap"]] += 1
     json.dump({k: dict(v) for k, v in s.items()}, open(os.path.join(a.out, "summary.json"), "w"), indent=1, sort_keys=True)
     print(json.dumps({k: dict(v) for k, v in s.items()}, indent=1, sort_keys=True))
 
