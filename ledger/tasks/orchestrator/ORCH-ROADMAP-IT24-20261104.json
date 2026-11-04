@@ -159,8 +159,9 @@
    "steps": [
     {
      "step": "P13 targeted scouting GitHub / Hugging Face / Nature after named gaps",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "scout_it24_p13_20261104: gaps named from IT24 results; 6 resources (G-SRS name-to-UNII TRIAL for the 22 unresolved identities, SIGMA-KG TRIAL data-only, scPerturb TRIAL metadata, hiPSC progenitor drug screen TRIAL name overlap, KCGS 2.0 WATCH, EvE Bio REJECT licence); empty: G1 selectivity panels beyond ChEMBL/DTC, astrocyte/microglia perturbation sets, rare-disease benchmark with leakage control; nothing installed or imported; only compound names sent to one key-less public endpoint"
     }
    ]
   },
