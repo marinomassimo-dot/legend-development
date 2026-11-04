@@ -1,0 +1,26 @@
+{
+ "bridges_merged_families": 1365,
+ "distinct_substances_by_route": {
+  "R0_catalogue_inchikey": 43,
+  "R1_merged_bridge": 23,
+  "R2_structure_known_not_merged": 4,
+  "R3_gtopdb_concept_ligand_structure": 65,
+  "none_unresolved": 22
+ },
+ "families": 158,
+ "families_by_route": {
+  "R0_catalogue_inchikey": 43,
+  "R1_merged_bridge": 23,
+  "R2_structure_known_not_merged": 4,
+  "R3_gtopdb_concept_ligand_structure": 66,
+  "none_unresolved": 22
+ },
+ "rows": 158,
+ "rows_by_route": {
+  "R0_catalogue_inchikey": 43,
+  "R1_merged_bridge": 23,
+  "R2_structure_known_not_merged": 4,
+  "R3_gtopdb_concept_ligand_structure": 66,
+  "none_unresolved": 22
+ }
+}
