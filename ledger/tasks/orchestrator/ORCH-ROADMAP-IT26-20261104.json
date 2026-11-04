@@ -11,9 +11,11 @@
   "Authorised by the operator's message 'Procedi con le prossime 3 azioni che hai individuato'. A pair is withheld only when a source check has read and named it as contradicted or artefact; NOT_MEASURED pairs stay in.",
   "R4 carries only rows a second actor confirmed at structure level (19 of 22; martinostat, EZN-2968 and MSC-2364447 are not carried)."
  ],
- "STOP_LOG": [],
+ "STOP_LOG": [
+  "2026-11-04 IT26 complete: A1-A4 DONE; battery PASS WITH SKIPS on 07def85b."
+ ],
  "AUTHORISED_QUEUE_20261104": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_A1": {
    "order": 1,
    "steps": [
@@ -52,9 +54,9 @@
    "steps": [
     {
      "step": "A4 battery on the frozen candidate, push, CI, cleanup, report",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "pending"
+     "evidence": "First battery on 5e675254 FAILED on two suites (own defects: two new shebang scripts without the executable bit; mandate record with invalid MANDATE_STATE/step vocabulary). Fixed in 07def85b. Second battery on exact 07def85b: PASS WITH SKIPS (204 targets, 8 environment skips). Push by safe_push, CI and cleanup follow in the closing report."
     }
    ]
   }
