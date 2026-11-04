@@ -8,7 +8,8 @@
  "START_UTC": "2026-11-04T00:00:00Z",
  "BASELINE": "development/main = origin/main = local main = cceaf85406865a212313002dfefb5d151bf60f6f (fetched at start); clean tree; one worktree; IT23 record reconciled to COMPLETE at P0.",
  "DECISIONS_TAKEN": [
-  "2026-11-04: IT24 mandate received; IT23 record found OPEN with P8 IN_PROGRESS despite green battery/gate/Pages on cceaf854; closed with evidence, history kept"
+  "2026-11-04: IT24 mandate received; IT23 record found OPEN with P8 IN_PROGRESS despite green battery/gate/Pages on cceaf854; closed with evidence, history kept",
+  "2026-11-04: operator integration 'P15 readability of the already multilingual dashboard' queued inside OBJ_P15: English first then the other four; at a glance which investigations are priority, why, which WWOX evidence supports them, residual uncertainty; visual hierarchy, card summaries, filters, phone use; observed results vs generated hypotheses vs precedents from other diseases clearly distinguishable; scientific detail available on demand; reuse generator; verify five languages, evidence links, data-to-view correspondence; never present pathway coverage percentages as therapeutic benefit; deliver on the public site with before/after comparison and navigation check; runs after the engine advances"
  ],
  "DEFAULTS_TAKEN": [],
  "STOP_LOG": [],
@@ -168,7 +169,7 @@
    "order": 16,
    "steps": [
     {
-     "step": "P15 dashboard and full cycle, five languages, served site",
+     "step": "P15 dashboard and full cycle, five languages, served site | INTEGRATION (operator, 2026-11-04): readability of the published site - EN first, priority/why/WWOX evidence/uncertainty at a glance, hierarchy, card summaries, filters, phone; observed vs generated vs other-disease precedent distinguishable; details on demand; five languages, evidence links and data-view correspondence verified; no pathway-coverage percentage shown as benefit; before/after and navigation check on the served site",
      "status": "TODO",
      "owner": "orchestrator"
     }

@@ -1,0 +1,58 @@
+{
+ "Q1_expression_tiersABC": {
+  "NO_POSITIVE_TARGET": 95,
+  "SINGLE_TARGET": 191
+ },
+ "Q2_expression_tiersAB": {
+  "CONFLICT_BETWEEN_TARGETS": 233,
+  "MULTI_POSITIVE": 123,
+  "NO_POSITIVE_TARGET": 663,
+  "SINGLE_TARGET": 530,
+  "overlap_COMPLEMENTARY": 165,
+  "overlap_PARTLY_OVERLAPPING": 13
+ },
+ "Q3_expression_tiersAB": {
+  "CONFLICT_BETWEEN_TARGETS": 247,
+  "MULTI_POSITIVE": 92,
+  "NO_POSITIVE_TARGET": 869,
+  "SINGLE_TARGET": 697,
+  "overlap_COMPLEMENTARY": 58,
+  "overlap_PARTLY_OVERLAPPING": 59,
+  "overlap_REDUNDANT": 48
+ },
+ "Q4_expression_tiersAB": {
+  "CONFLICT_BETWEEN_TARGETS": 5,
+  "MULTI_POSITIVE": 19,
+  "NO_POSITIVE_TARGET": 335,
+  "SINGLE_TARGET": 372,
+  "overlap_COMPLEMENTARY": 19
+ },
+ "Q4_protein_tiersAB": {
+  "NO_POSITIVE_TARGET": 1
+ },
+ "Q5_expression_tiersAB": {
+  "CONFLICT_BETWEEN_TARGETS": 225,
+  "MULTI_POSITIVE": 116,
+  "NO_POSITIVE_TARGET": 684,
+  "SINGLE_TARGET": 969,
+  "overlap_COMPLEMENTARY": 146
+ },
+ "Q6_expression_tiersAB": {
+  "NO_POSITIVE_TARGET": 939,
+  "SINGLE_TARGET": 859
+ },
+ "Q6_protein_tiersAB": {
+  "NO_POSITIVE_TARGET": 139,
+  "SINGLE_TARGET": 201
+ },
+ "Q7_phospho_tiersAB": {
+  "MULTI_POSITIVE": 9,
+  "NO_POSITIVE_TARGET": 658,
+  "SINGLE_TARGET": 370,
+  "overlap_REDUNDANT": 9
+ },
+ "Q8_expression_tiersAB": {
+  "NO_POSITIVE_TARGET": 371,
+  "SINGLE_TARGET": 238
+ }
+}
