@@ -67,7 +67,7 @@ These checks run without an agent. For research workflows, follow the [operator 
 
 ## Support, openness and responsible use
 
-Developed in partnership with, and sponsored by, the **[WWOX Foundation](https://www.wwox.org/)**. See the [sponsorship statement](SPONSORSHIP.md).
+Developed in partnership with, and sponsored by, the **[WWOX Foundation](https://www.wwox.org/current-research/)**. See the [sponsorship statement](SPONSORSHIP.md).
 
 The code is **open source under the [MIT License](LICENSE)**. External data, models, Foundation materials and third-party content retain their respective terms: [Data sources](DATA_SOURCES.md) · [Third-party notices](THIRD_PARTY_NOTICES.md).
 
