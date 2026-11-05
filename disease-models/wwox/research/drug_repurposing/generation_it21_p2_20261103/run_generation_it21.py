@@ -367,12 +367,14 @@ def named_in_corpus(name, text):
 
 
 # ---- selection rule for the hand-over (written here before the table is read) ------------------------------------------------------------------------
+H5_NEW = "H5 one proposal per mechanism cluster = (question, hypothesis, main target), chosen by the order key (in this order: no cluster work already done, no limited seed support, main target not UNMEASURED, then more evidence origins, then the shorter admissible chain (fewer edges), then the LARGER smallest-|z|); an exact tie on the whole key is not broken by any science, the first row in table order is kept and the cluster export says how many eligible rows tied (tie_size); salt twins count once; "
+H5_LEGACY = "H5 one proposal per mechanism cluster = (question, hypothesis, main target), chosen by number of evidence origins, then the shorter admissible chain (fewer edges), then the smallest |z|; salt twins count once; "   # the committed no-v1 (P2) tables keep this wording byte for byte
 HANDOFF_RULE = (
     "H1 arm opposes or mimics, unflagged for active moiety, seed-specific under the three IT10 nulls AND the reach-matched null (same sign, |z| > 3 in all four); "
     "H2 identity resolved in the catalogue (ChEMBL id) and modality small_molecule; "
     "H3 the arm has a stated benefit hypothesis in question_roles.tsv (arms whose own text says 'no sourced/stated' benefit hypothesis are kept in proposals, never handed over); "
     "H4 not decided in an IT9/IT10/IT11 qualification record (those are carried with their state, not re-proposed); "
-    "H5 one proposal per mechanism cluster = (question, hypothesis, main target), chosen by the order key (in this order: no cluster work already done, no limited seed support, main target not UNMEASURED, then more evidence origins, then the shorter admissible chain (fewer edges), then the LARGER smallest-|z|); an exact tie on the whole key is not broken by any science, the first row in table order is kept and the cluster export says how many eligible rows tied (tie_size); salt twins count once; "
+    "{H5}"
     "H6 at most 3 per (question, hypothesis); "
     "H7 a proposal whose only signed support at the main target is not a resolved assertion is not handed over (the signed pair must survive the refreshed guards, which is the case for every row of the refreshed table); "
     "H8 (IT22 P1: scoped; before, ANY member's decision vetoed the whole cluster) a decision about one member reaches another member only inside the scope its own reason supports "
@@ -901,7 +903,7 @@ def cmd_propose(a):
     summ = dict(seed_specific_rows=len(proposals), by_status=dict(collections.Counter(p["status"] for p in proposals)), eligible=len(elig_rows), handed_over=len(handoff),
                 blockers=dict(blockers), mechanism_clusters=len(cl), carried_prior_decisions=len(carried),
                 handed_over_ids=[h["proposal_id"] for h in handoff], dispositions={f"{q}|{arm}|{d}": n for (q, arm, d), n in sorted(n_by.items())},
-                selection_rule=(HANDOFF_RULE if v1 else HANDOFF_RULE.replace(H8_NEW, H8_LEGACY)))
+                selection_rule=(HANDOFF_RULE.replace("{H5}", H5_NEW) if v1 else HANDOFF_RULE.replace("{H5}", H5_LEGACY).replace(H8_NEW, H8_LEGACY)))
     (OUT / "summary_it21.json").write_text(json.dumps(summ, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps({k: v for k, v in summ.items() if k != "selection_rule"}, indent=1, sort_keys=True))
 

@@ -148,7 +148,7 @@ class HandoffRule(unittest.TestCase):
         self.assertEqual(G.tie_size([mk("a", 2, 5), mk("c", 1, 9)]), 1)
         self.assertEqual(G.tie_size([mk("a", 2, 5, el="no")]), 0)
         for term in ("cluster work already done", "UNMEASURED", "LARGER smallest-|z|", "tie_size"):
-            self.assertIn(term, G.HANDOFF_RULE.replace("no cluster work already done", "cluster work already done"))
+            self.assertIn(term, G.HANDOFF_RULE.replace("{H5}", G.H5_NEW).replace("no cluster work already done", "cluster work already done"))
 
     def test_salt_twins_count_once(self):
         self.assertEqual(G.base_name("Bepridil Hydrochloride"), G.base_name("BEPRIDIL"))
