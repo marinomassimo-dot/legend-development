@@ -23,12 +23,12 @@
    },
    "^\\.cur\\.cands\\[\\]\\.": {
     "class": "OWN",
-    "values": 6561,
+    "values": 6565,
     "why": "card text and computed positions (provenance of the prose: see text audit)"
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
     "class": "BIBLIO",
-    "values": 491,
+    "values": 501,
     "why": "PMID / DOI of a cited work"
    },
    "^\\.cur\\.cands\\[\\]\\.access\\[\\]$": {
@@ -53,7 +53,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.pmids\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 729,
+    "values": 744,
     "why": "title, journal, year of a cited work (bibliographic facts)"
    },
    "^\\.cur\\.evidence_graph\\.chains\\[\\]\\.(nodes\\[\\]\\.pmids\\[\\]|edges\\[\\]\\.src\\.id)$": {
@@ -203,7 +203,7 @@
    "DOI": 5,
    "HGNC": 12,
    "NCT": 0,
-   "PMID": 96
+   "PMID": 102
   },
   "links": {
    "distinct_hrefs": 140,
@@ -224,7 +224,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3320,
+    "forbidden-name": 3321,
     "forbidden-wording": 21
    },
    "co_attested_wording": [
@@ -467,10 +467,10 @@
   "view_schema": "legend.wwox.repurposing_view/2"
  },
  "embedded_field_classes": {
-  "BIBLIO": 2429,
+  "BIBLIO": 2454,
   "COUNT": 11599,
   "ID": 4547,
-  "OWN": 83798,
+  "OWN": 83802,
   "ROWNAME": 2251,
   "SRC_A": 189,
   "SRC_META": 256,
@@ -528,8 +528,8 @@
    "sha256": "e5dfa90d88e2069a2e4fd13429e8ebaefb7bd92fbbaede065af905656bc7ba87"
   },
   "NOTICE.md": {
-   "bytes": 13085,
-   "sha256": "19c7cbf314c6307fda0bffb60b6cdb5e3d561d661123419db56ab9ea8371aa1b"
+   "bytes": 13086,
+   "sha256": "f008b5751f3b06e8c934f9dcc31d0651f5757ab0acd86e958ff3469d121074ac"
   },
   "README.md": {
    "bytes": 5072,
@@ -552,24 +552,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 4608219,
-   "sha256": "77fbe372f6f814e8b2c292ac1a1e007fa3a3d5c5bb3e7699a163b920b7f58474"
+   "bytes": 4610749,
+   "sha256": "2cb4e019783abbc014669b1d64137e315ab1581d6586b2244077987f3154ec21"
   },
   "es.html": {
-   "bytes": 4593499,
-   "sha256": "0a78bb248854fd5c5438042630c348f2caabedaddde7f04de0786f622fe673a0"
+   "bytes": 4596029,
+   "sha256": "95d7f7b57a293cf8977233e08b97040c9a1fcb74345a11b06029c7d9db00a580"
   },
   "fr.html": {
-   "bytes": 4614616,
-   "sha256": "92131831692bad9b5b6a5071f2fdd8db01a3ddab3b4961aea87cc0d892ee1018"
+   "bytes": 4617146,
+   "sha256": "2749802cd8d629f18de99006eeef542e4e7d2d05b08011fd6bae9cc2aa319373"
   },
   "index.html": {
-   "bytes": 4529815,
-   "sha256": "f50e9255b991a0d22aefe081f93289c233946193bed36f26dbcd6c1a48f9afeb"
+   "bytes": 4532345,
+   "sha256": "c81c177cdc03535f6e5b720e23529656b6af3a772ee275c59398a59a84c86e81"
   },
   "it.html": {
-   "bytes": 4569745,
-   "sha256": "713231c7ac85508991f606f0720add0113ee4b72d9d3be2826ab3701bbe5aff6"
+   "bytes": 4572275,
+   "sha256": "68a8778d17a1a711d6cc2dd2519dbee063df94673f98d15f08269b958cee86e3"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
