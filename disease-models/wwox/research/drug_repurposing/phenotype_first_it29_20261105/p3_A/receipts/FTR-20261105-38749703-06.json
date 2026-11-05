@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-05T08:24:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "introduction": "unavailable",
+  "methods": "unavailable",
+  "results": "unavailable",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "tables": "unavailable",
+  "references": "unavailable",
+  "limitations": "unavailable",
+  "supplementary": "unavailable",
+  "abstract": "read"
+ },
+ "event_at": "2026-11-05T08:25:00Z",
+ "event_id": "FTR-20261105-38749703-06",
+ "evidence_basis": [
+  "abstract analysed; no methods, figures or numbers beyond the abstract are used",
+  "verbatim_locator | proposition: neostigmine (cholinesterase inhibitor raising acetylcholine) - adverse on the endpoint (in vivo mouse lysolecithin lesion; cuprizone ACh measurement) | Abstract | \"We identified a dose-dependent decrease in mature oligodendrocyte density with no effect on OPC recruitment\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_A/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_A/evidence_it29_A.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 38749703 (abstract as served by NCBI E-utilities efetch 2026-11-05)",
+ "study_id": {
+  "doi": "10.1523/JNEUROSCI.0051-24.2024",
+  "pmid": "38749703"
+ },
+ "workflow": "IT29 P3-A (phenotype_first_it29_20261105, sub-question: small molecules modifying OPC differentiation and myelination; Case 1). Question-driven reading for direction, system and target-attribution control. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

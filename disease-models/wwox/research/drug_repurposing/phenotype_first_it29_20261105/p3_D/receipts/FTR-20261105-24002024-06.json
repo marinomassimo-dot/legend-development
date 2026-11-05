@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-05T09:11:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T09:12:00Z",
+ "event_id": "FTR-20261105-24002024-06",
+ "evidence_basis": [
+  "abstract not read",
+  "verbatim_locator | proposition: valproate; diazepam; potassium bromide; stiripentol (favourable) on forebrain epileptiform event frequency (interictal and ictal in scn1lab larval zebrafish (LoF) | partial_fulltext (Results, pharmacological evaluation) | \"Epileptiform event frequency ... were reduced by valproate, diazepam, potassium bromide and stiripentol\"",
+  "verbatim_locator | proposition: ethosuximide (adverse) on epileptiform event frequency, same assay in scn1lab larval zebrafish (LoF) | partial_fulltext (Results, pharmacological evaluation) | \"ethosuximide (4 of 7 fish) or vigabatrin (6 of 7 fish)\"",
+  "verbatim_locator | proposition: vigabatrin (adverse) on epileptiform event frequency, same assay in scn1lab larval zebrafish (LoF) | partial_fulltext (Results, pharmacological evaluation) | \"ethosuximide (4 of 7 fish) or vigabatrin (6 of 7 fish)\"",
+  "verbatim_locator | proposition: carbamazepine (adverse) on epileptiform event frequency, same assay in scn1lab larval zebrafish (LoF) | partial_fulltext (Results, pharmacological evaluation) | \"epileptiform activity became more frequent following exposure to carbamazepine\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_D/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_D/evidence_it29_D.tsv"
+ ],
+ "prior_receipt": "FTR-20261021-24002024-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC3891590 full-text XML fetched 2026-11-05 through Europe PMC REST fullTextXML; sections marked read were read through keyword-directed passages, figures not viewed, bytes not saved",
+ "study_id": {
+  "pmid": "24002024",
+  "doi": "10.1038/ncomms3410"
+ },
+ "workflow": "IT29 P3-D (phenotype_first_it29_20261105/p3_D, case 2: DEE-model pharmacology of network hyperexcitability). Question-driven reading; prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

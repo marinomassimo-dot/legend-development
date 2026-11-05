@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-05T08:14:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "limitations": "not_read",
+  "supplementary": "unavailable"
+ },
+ "event_at": "2026-11-05T08:15:00Z",
+ "event_id": "FTR-20261105-25896324-06",
+ "evidence_basis": [
+  "sections named in coverage read from the PMC text served by NCBI efetch; figures, tables, references and supplement not read; no figure value is quoted",
+  "verbatim_locator | proposition: 22 drugs from the NIH Clinical Collection I/II (727 drugs), including benztropine - favourable on the endpoint (in vitro mouse EpiSC-derived OPCs, 96-well, 72 h at 5 uM) | Results (screen) | \"we identified the 22 drugs that enhanced oligodendrocyte formation greater than five standard deviations above DMSO treatment\"",
+  "verbatim_locator | proposition: 11 screen hits incl. clobetasol, miconazole, ketoconazole, clotrimazole, hydroxyzine, benztropine, haloperidol, medroxyprogesterone - context_dependent on the endpoint (ex vivo mouse cerebellar slice culture, P7 start, 5 d) | Results, ex vivo slice screen | \"consisted of four drugs that increased the number of MBP+ aligned fibers ~150% or greater\"",
+  "verbatim_locator | proposition: miconazole - favourable on the endpoint (in vivo mouse lysolecithin lesion, 8 and 12 dpl) | Results (LPC model) | \"lesions of vehicle-treated mice consisted mostly of unmyelinated axons (6% myelinated)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_A/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_A/evidence_it29_A.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC4528969 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); Results, Discussion and in-vitro and slice methods read; figures, extended data not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1038/nature14335",
+  "pmid": "25896324"
+ },
+ "workflow": "IT29 P3-A (phenotype_first_it29_20261105, sub-question: small molecules modifying OPC differentiation and myelination; Case 1). Question-driven reading for direction, system and target-attribution control. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

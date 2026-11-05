@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-05T09:20:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T09:25:00Z",
+ "event_id": "FTR-20261105-26921596-06",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: Phenobarbital produced the learning deficit; retigabine, tested in the same design, did not (next row) | 4. Discussion | \"We found that phenobarbital, but not retigabine, induced deficits in learning/memory in the passive avoidance task.\"",
+  "verbatim_locator | proposition: No learning deficit in the passive-avoidance task; seizure endpoint not tested in the same animals | 4. Discussion | \"We found that phenobarbital, but not retigabine, induced deficits in learning/memory in the passive avoidance task.\"",
+  "verbatim_locator | proposition: Increased anxiety-like behaviour in two of three tasks: the Kv7 opener is not neutral for non-seizure function, though subtler than phenobarbital | 4. Discussion | \"Our finding that retigabine increased anxiety-like behavior in two of the three tasks (open field and light-dark, but not the elevated plus maze)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_E/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_E/evidence_it29_E.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC PMC4828307 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); only the sections named in the verbatim_locator entries were read for the quoted propositions, the remaining sections were skimmed or not read; figures, tables and supplement not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1016/j.yebeh.2016.01.018",
+  "pmid": "26921596"
+ },
+ "workflow": "IT29 P3-E (phenotype_first_it29_20261105, sub-question: compensatory role of hyperexcitability in developmental epilepsy models; benefit on discharge versus benefit on function). Question-driven reading. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

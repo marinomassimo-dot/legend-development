@@ -20,7 +20,7 @@
   "verbatim_locator | proposition: transfer-condition finding for IT29 P3 C | Abstract | \"OL maturation deficiency in Myrf -CKO mice caused spontaneous epileptogenesis and resulted in death\"",
   "verbatim_locator | proposition: transfer-condition finding for IT29 P3 C | Abstract | \"enhancing differentiation by orally administered clemastine rescues the defective mossy fiber development in the early postnatal period and attenuates epilepsy susceptibility in adults\""
  ],
- "evidence_depth": "abstract_and_introduction_read",
+ "evidence_depth": "partial_fulltext_read",
  "outputs": [
   "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_C/README.md"
  ],

@@ -86,9 +86,29 @@ def build(rows: list[dict], need_id: str) -> list[dict]:
         out.append({
             "need_id": need_id, "symbol": sym, "coupling": coupling,
             "basis": f"perturbation evidence for the endpoint (IT29 phenotype-first table): {why}",
-            "qualifier": "EXTERNAL_TRANSFER: sign comes from non-WWOX systems; not measured in a WWOX-deficient cell; " + why,
+            "qualifier": "EXTERNAL_TRANSFER: sign comes from non-WWOX systems; not measured in a WWOX-deficient cell; " + why
+                         + "".join("; " + n for n in dict.fromkeys(r.get("curation_note", "").strip() for r in rs) if n),
         })
     return out
+
+
+def extend_needs(needs_path: Path, need_id: str, symbols: list[str], hgnc: dict, out: Path) -> int:
+    """Write a copy of needs.json in which `need_id` also lists `symbols` as intervention targets (the search layer
+    walks need -> targets, so a signed target that the need does not list is never reached). Returns how many were added."""
+    import json
+    doc = json.loads(needs_path.read_text(encoding="utf-8"))
+    needs = doc["needs"] if isinstance(doc, dict) and "needs" in doc else doc
+    need = next(n for n in needs if n["id"] == need_id)
+    have = {t["symbol"].upper() for t in need["targets"]}
+    added = 0
+    for sym in symbols:
+        if sym.upper() in have or sym.upper() not in hgnc:
+            continue
+        need["targets"].append({"symbol": sym.upper(), "role": "target with perturbation evidence for this endpoint (IT29 phenotype-first table)",
+                                "hgnc_id": hgnc[sym.upper()][0], "hgnc_name": hgnc[sym.upper()][1], "target_kind": "intervention_target"})
+        added += 1
+    out.write_text(json.dumps(doc, indent=1, ensure_ascii=False), encoding="utf-8")
+    return added
 
 
 def read_tsv(path: Path) -> list[dict]:
@@ -102,6 +122,9 @@ def main(argv=None) -> int:
     ap.add_argument("--evidence", nargs="+", type=Path, required=True)
     ap.add_argument("--base-roles", type=Path, help="existing roles file to append to (not modified)")
     ap.add_argument("--out", type=Path, required=True)
+    ap.add_argument("--needs-in", type=Path, help="needs.json to extend with the signed targets (needs --hgnc and --needs-out)")
+    ap.add_argument("--hgnc", type=Path, help="TSV symbol, hgnc_id, hgnc_name")
+    ap.add_argument("--needs-out", type=Path)
     a = ap.parse_args(argv)
     rows = [r for p in a.evidence for r in read_tsv(p)]
     new = build(rows, a.need)
@@ -113,6 +136,10 @@ def main(argv=None) -> int:
         w = csv.DictWriter(fh, fieldnames=cols, delimiter="\t", lineterminator="\n")
         w.writeheader()
         w.writerows(base + new)
+    if a.needs_in:
+        hg = {r["symbol"].upper(): (r["hgnc_id"], r["hgnc_name"]) for r in read_tsv(a.hgnc)}
+        n_add = extend_needs(a.needs_in, a.need, [r["symbol"] for r in new], hg, a.needs_out)
+        print(f"{n_add} target(s) added to {a.need} in {a.needs_out}", file=sys.stderr)
     print(f"{len(new)} coupling row(s) for {a.need} -> {a.out}", file=sys.stderr)
     return 0
 

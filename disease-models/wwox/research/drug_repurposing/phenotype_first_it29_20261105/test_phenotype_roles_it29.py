@@ -44,5 +44,16 @@ class T(unittest.TestCase):
         self.assertIn("EXTERNAL_TRANSFER", m.build([row()], "N")[0]["qualifier"])
 
 
+class N(unittest.TestCase):
+    def test_signed_target_the_need_does_not_list_is_added_once_and_unknown_hgnc_is_skipped(self):
+        import json, tempfile
+        d = Path(tempfile.mkdtemp())
+        (d / "n.json").write_text(json.dumps({"needs": [{"id": "N", "targets": [{"symbol": "AAA"}]}]}))
+        added = m.extend_needs(d / "n.json", "N", ["AAA", "BBB", "CCC"], {"BBB": ("HGNC:1", "b")}, d / "o.json")
+        out = json.loads((d / "o.json").read_text())["needs"][0]["targets"]
+        self.assertEqual(added, 1)
+        self.assertEqual([t["symbol"] for t in out], ["AAA", "BBB"])
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-05T08:13:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "limitations": "not_read",
+  "supplementary": "unavailable"
+ },
+ "event_at": "2026-11-05T08:14:00Z",
+ "event_id": "FTR-20261105-27671734-06",
+ "evidence_basis": [
+  "sections named in coverage read from the PMC text served by NCBI efetch; figures, tables, references and supplement not read; no figure value is quoted",
+  "verbatim_locator | proposition: clemastine; benztropine - favourable on the endpoint (in vitro mouse OPC cultures from Chrm1-5 and Hrh1 knockouts) | Results, Identification of the muscarinic receptor target for remyelination | \"knockout of the Chrm1 completely abolished the effects of the anti-muscarinic compounds\"",
+  "verbatim_locator | proposition: Chrm1 deletion - favourable on the endpoint (in vitro mouse OPCs; purified culture and rat-DRG co-culture) | Results, Identification of the muscarinic receptor target for remyelination | \"the Chrm1 knockout cultures displayed a five-fold increase in MBP-positive OLs\"",
+  "verbatim_locator | proposition: Chrm2, Chrm3, Chrm4, Chrm5 or Hrh1 deletion - null on the endpoint (in vitro mouse OPC cultures) | Results, Identification of the muscarinic receptor target for remyelination | \"none of these individual receptors are essential for mediating the effects of the MR antagonists\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_A/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_A/evidence_it29_A.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC5039026 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); Introduction and Results through Fig 7 start read; Discussion, Methods, figures not read; bytes not saved",
+ "study_id": {
+  "doi": "10.7554/eLife.18246",
+  "pmid": "27671734"
+ },
+ "workflow": "IT29 P3-A (phenotype_first_it29_20261105, sub-question: small molecules modifying OPC differentiation and myelination; Case 1). Question-driven reading for direction, system and target-attribution control. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

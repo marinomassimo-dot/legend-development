@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-05T09:20:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "references": "not_read",
+  "supplementary": "unavailable"
+ },
+ "event_at": "2026-11-05T09:21:00Z",
+ "event_id": "FTR-20261105-21131950-07",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: CC1+ OLs reduced and Nkx2.2+ OPCs increased at 15 dpl; at 30 dpl CC1+ cells near control and no remyelination difference on semi-thin sections | B26 | \"a significant reduction (P = 0.0094) in the number of CC1+ oligodendrocytes in the lesions of Rxrg−/− mice compared with controls\"",
+  "verbatim_locator | proposition: fewer MBP+ cells and simpler morphology | B27 | \"the percentage of total MBP+ oligodendrocytes decreased in cells treated with either antagonist compared to controls\"",
+  "verbatim_locator | proposition: higher percentage of MBP+ membrane sheets; abolished by RXR antagonists, giving a target control; selective agonists also increased sheets | B28 | \"cultures treated with 9cRA had a higher percentage of MBP+ membrane sheets\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_B/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_B/evidence_it29_B.tsv"
+ ],
+ "prior_receipt": "FTR-20261105-21131950-06",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC4013508 fetched 2026-11-05 through Europe PMC fullTextXML or NCBI efetch db=pmc (XML); Results sections on Rxrg-null lesions and RXR agonists and antagonists read; others not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1038/nn.2702",
+  "pmid": "21131950"
+ },
+ "workflow": "IT29 P3-B (phenotype_first_it29_20261105/p3_B, genetic and pathway perturbations of oligodendrocyte differentiation). Question-driven reading for direction of the endpoint; prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

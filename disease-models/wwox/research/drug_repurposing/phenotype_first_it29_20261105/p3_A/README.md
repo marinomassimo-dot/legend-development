@@ -1,0 +1,58 @@
+# IT29 P3-A: small molecules that move OPC differentiation and myelin formation (Case 1)
+
+Non-canonical research material, not medical advice; no dose, schedule or route is proposed. Public edition: the subject is the WWOX-DEE reference genotype class. Written 2026-11-05. Rows: `evidence_it29_A.tsv` (52 rows, ids R01 to R52). Receipts: `receipts/` (14 drafts, suffix -06, not recorded). Endpoint as fixed in `SELECTION.md`: OPC to MBP+/myelinating oligodendrocyte and myelin formation; favourable = more.
+
+## 1. Decision (10 lines)
+
+1. **Signed, context-conditioned levers exist**, but they are all **OPC-intrinsic differentiation accelerators**, shown in wild-type cells or after injury. No source gave any of them to a hypomyelination model whose driver is neuronal, and none used a Wwox-deficient system.
+2. **Muscarinic antagonism (benztropine, clemastine)** is favourable in every OPC assay (R01-R03, R07, R08, R14) and in vivo after injury (R05, R06, R12, R19). Target attribution is contested: the Chrm1-null OPC removes the drug effect (R14) but a later chemistry study shows only the two of six antimuscarinics that inhibit **EBP** work (R32, R33). Rule: the muscarinic class cannot be signed by target; it can be signed by compound.
+3. **Azole (miconazole, ketoconazole) and glucocorticoid (clobetasol) screen hits** are favourable in mouse and human OPC (R20, R28) and are the **only compounds tested in a non-injury neonatal in vivo window** (R24, R25: wild-type pups, P2 start, four daily doses, more CC1+ cells and larger MBP+ callosal area). The azole mechanism is target-controlled (CYP51; siRNA, lanosterol, Ro 48-8071 block; R30), the clobetasol one by a GR antagonist (R26).
+4. **Most screening hits converge on cholesterol-pathway steps CYP51, TM7SF2 and EBP** (R30-R32, R38). Statins and cholesterol depletion are neutral to negative (R34). A signed coupling for this endpoint is therefore at the sterol enzymes, not at the receptors the drugs were annotated for.
+5. **Thyroid hormone receptor and RXR ligands**: T3 is the assay positive control and is additive to the sterol route (R35); the CNS-selective agonist sobetirome/Sob-AM2 is favourable and thyroid hormone itself was adverse in one genetic demyelination model (R49, R50; abstract only). The RXR agonist is favourable in purified OPC but null in the axon co-culture and small in vivo (R42, R44, R45); RXR antagonists are adverse (R43); bexarotene failed its primary human endpoint (R46).
+6. **Adverse or null rows are real**: HDAC and BET inhibitors lowered oligodendrocyte number in a seizure-free developmental zebrafish screen (R40); NU9056 did not reproduce (R41); 22 of 42 antimuscarinics inactive (R04) and four of six in the sterol study (R33); five H1 antihistamines inactive (R09); voriconazole inactive (R27); most of a 1,000-compound library lost cells (R10); neostigmine lowered mature oligodendrocytes (R52); Chrm1 loss is silent in uninjured adult myelin (R17); RXR agonist null in co-culture (R44).
+7. **Cell-autonomy is established only for the differentiation step.** Effects appear in purified OPC and on axon-free pillars or fibres (R07, R31, R38), so neither neuronal activity nor an axonal signal is needed for the drug to act. In vivo, neuronal activity was never manipulated, and the muscarinic ligand itself is neuron/axon-derived acetylcholine (R52).
+8. **Seizure-free systems with a developmental readout**: zebrafish larva (R39-R41), P7 cerebellar slices (R21), human cortical spheroids (R37), neonatal pups (R24, R25). None has a neuronal-driver deficit.
+9. **For the search layer**: the 546 abstentions at `no_coupling_row` can be partly resolved: sign EBP/CYP51/TM7SF2 inhibition, CHRM1/CHRM3 antagonism (with the EBP caveat), NR3C1 agonism, THR agonism as `+`; HDAC and BET inhibition and RXR antagonism as `-`; HMGCR inhibition as neutral. Every sign is conditional on a **cell-intrinsic block of differentiation**, not a neuronal-signal deficit.
+10. **Class stays a role question for WWOX** (agrees with IT14 P4 RESTRICT): the only evidence that would move it is an arm in the Wwox-null OPC monoculture or the Wwox-null DRG co-culture (IT14 P4 C1/C2), now with a sterol-pathway comparator beside the muscarinic one.
+
+## 2. Evidence by theme
+
+### 2.1 Muscarinic antagonists (benztropine, clemastine, class)
+* Screens: a ~100,000-compound primary rat OPC screen and a 1,000-compound micropillar screen both returned benztropine and clemastine (R01, R07, R08). Deshmukh 2013: EC50 about 0.5 uM, MBP+ cells and myelinating fraction up (R01, R02), carbachol blocks the effect (R03); 20 of 42 antimuscarinics active, 22 inactive (R04); cuprizone acceleration only early (R05); EAE with g-ratio and a pre-onset oligodendrocyte increase (R06). Mei 2014: eight FDA-approved compounds, six antimuscarinic; five H1 antagonists inactive (R09); lysolecithin lesion: unmyelinated axons 9% versus 29% (R12); quetiapine target undetermined (R13).
+* Genetic control: Mei 2016 (R14-R19). In purified mouse OPCs the effect of both drugs is abolished only in Chrm1 knockouts (R14) and preserved in Chrm2-5 and Hrh1 knockouts (R16). Chrm1-null OPCs differentiate about five-fold more (R15), also in DRG co-culture; lysolecithin acceleration (R18). OPC-restricted Chrm1 deletion (Cnp-Cre) leaves **uninjured 8-week myelin (g-ratio, density, CC1)** unchanged (R17): M1 blockade accelerates repair, it does not raise baseline myelin.
+* Human: M3, not M1, was the receptor chosen from human OPC expression; M3 knockdown enhanced human OPC differentiation and improved remyelination after transplant into **shiverer/rag2** hosts (R47; abstract only). The mouse (M1) and human (M3) subtype results disagree and are unreconciled.
+* Re-attribution: Hubler 2018 (R32, R33): benztropine, clemastine, tamoxifen and U50488 inhibit EBP; of six antimuscarinics blocking M1/M3/M5 at the screening dose only these two enhance differentiation. Allimuthu 2019 found EBP-inhibitor scaffolds without M1, ER or KOR affinity that work (R38).
+* Clemastine in neonatal hypoxic white-matter injury (R48; abstract only) is the one developmental-age in vivo myelination effect with an OPC-specific M1 claim, but it is an injury model.
+* Opposed: neostigmine, which raises acetylcholine, reduced mature oligodendrocytes after lysolecithin (R52), with ChAT-GFP in axons and astrocytes (abstract). The ligand removed by the antagonists is partly neuron-derived.
+
+### 2.2 Azole, glucocorticoid and the sterol convergence
+* Najm 2015 (R20-R29): a 727-drug screen with an independent-site validation gave 22 hits above T3, two classes (1-substituted imidazoles and steranes) (R20). Only 4 of 11 reached the high group in P7 cerebellar slices (R21). Miconazole and clobetasol: >70% remyelinated axons at 12 dpl versus 6% (R22, R23); in P2 wild-type pups both increased CC1+ cells and MBP+ callosal area (R24, R25); both enhanced human ESC/iPSC OPC (R28); neither inhibits M1-M5 or 414 kinases (R29, a null on the muscarinic route); clobetasol is GR-dependent (RU486; R26); voriconazole inactive (R27).
+* Hubler 2018 (R30-R37): CYP51 potency among azoles predicts MBP+ formation; siRNA, lanosterol and the lanosterol-synthase block give target control (R30). EBP/TM7SF2 inhibitors and EBP CRISPR work (R31); statins and cyclodextrin do not (R34); nine 8,9-unsaturated sterols enhance formation. Brain target engagement and in vivo remyelination with tamoxifen and ifenprodil (R36), human cortical spheroids with miconazole and ifenprodil (R37).
+* Clobetasol is also immunosuppressive; its EAE benefit was immune (Najm), so only the lysolecithin and pup rows are myelination evidence.
+
+### 2.3 Thyroid hormone receptor and RXR
+* T3 is the field's positive control and is additive to sterol modulators (R35). Sobetirome/Sob-AM2 improved remyelination in gliotoxin and genetic models while chronic T3 worsened the genetic one (R49, R50), and reached the Mct8/Dio2-null brain with T3-dependent gene effects but **no myelin endpoint** (R51, `undetermined`). Abstracts only; the developmental MCT8-deficient hypomyelination model has no myelin readout in what I read.
+* RXR (Huang 2011; R42-R46): agonist favourable in purified OPC (antagonist-reversed), antagonists adverse in purified OPC and co-culture (stalled at premyelinating), agonist null in co-culture, modest in aged-rat lesion (~30% Mbp transcript), Rxrg-null delay transient; bexarotene failed its primary human MRI endpoint with poor tolerability (secondary-analysis introduction only).
+
+### 2.4 Other screening-derived classes
+* Zebrafish (Early 2018; R39-R41): seizure-free whole-animal developmental screen of 146 epigenetic compounds; splitomicin (sirtuin inhibitor) and C646 (p300/CBP) increased myelinating oligodendrocytes about 73%, splitomicin also EM myelination about 1.8-fold; HDAC/BET inhibitors reduced them; NU9056 did not reproduce. Aligns with the IT28 finding that HDAC4/5 activity is needed.
+* XAV939 (tankyrase) was an assay positive control (R11).
+
+## 3. Transfer to the WWOX question (what the evidence supports)
+* The compounds act on OPC-autonomous differentiation; the WWOX deficit is upstream (neuronal) per IT14 P4. A favourable signed row means a **bypass** hypothesis only: a drug could push OPCs through a block regardless of its origin.
+* Conditions that make a row pertinent: neuron-intact tissue (R02, R21, R37), developmental stage (R21, R24, R25, R39-R41), human cells (R28, R37, R47), and an axon-like readout (R07, R31, R38).
+* Conditions that break transfer: wild-type pups or adult injury rather than a hypomyelinating genotype; marker counts (MBP+) rather than EM; mouse OPC; no seizure-activity or neuronal-signal arm; for clobetasol and azoles, systemic endocrine and hepatic liabilities in the developing brain are untested here.
+* Direction cannot be assumed to survive a **neuronal signal deficit**. Chrm1-null adult myelin is normal (R17), meaning the lever accelerates, it does not substitute for, the axonal permissive signal.
+
+## 4. Not established
+* No compound in this table was tested in any Wwox-null, dysmyelinating-neuron-driven or seizure-comparable system. Shiverer transplant (R47) is the closest developmental dysmyelination host but its defect is myelin gene loss, not a neuronal driver.
+* Whether neuronal activity or an axonal cue is required in vivo for any of these drugs. In vitro axon-free readouts say not for the differentiation step; in vivo the question was never asked.
+* Reconciling M1 (mouse), M3 (human) and EBP (chemistry) attributions.
+* Dose-response and safety in neonates for glucocorticoid, azole and anticholinergic classes. No dose is given here.
+* Per-drug ranking in P7 slices (R21): only the high group count was in the text read.
+
+## 5. Not reached
+* Figures, extended data and supplements of all sources (so no n, p or per-compound ranking from figures).
+* Full text of Welliver 2018, Hartley 2019, Cree 2018, Barez-Lopez 2018 and Ravichandar 2024 (PMC records served abstracts only): these rows are abstract-only conditional leads.
+* Not searched or not read: Liu 2016 (clemastine, socially isolated adolescent mice), ReBUILD trial, Abiraman 2015 (M1/M3 in OPC), Sob-AM2 in the Mct8/Oatp1c1 double knockout, kappa-opioid receptor and GPR17 antagonist lines, PDGFRA-negative or zebrafish muscarinic data. A reopening trigger: any source that gives these compounds in a **neuron-driven hypomyelination** (for example a neuron-specific deletion with pup treatment) with an EM endpoint.
+* Europe PMC keyword searches ('myelination high-content screen' and relatives) returned reviews and 2025-2026 items; none changed the class list.

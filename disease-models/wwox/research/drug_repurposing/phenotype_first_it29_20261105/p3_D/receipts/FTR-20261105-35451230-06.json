@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-05T09:14:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T09:15:00Z",
+ "event_id": "FTR-20261105-35451230-06",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: phenytoin; valproate; ethosuximide; levetiracetam; diazepam (null) on ictal-like event frequency, local field recording of midbrai in stxbp1b homozygous LoF larval zebrafish | partial_fulltext (Abstract, Results, Discussion) | \"No statistically significant changes in event frequency were noted for any of the five ASMs tested\"",
+  "verbatim_locator | proposition: clemizole; trazodone (favourable) on ictal-like event frequency in stxbp1b homozygous LoF larval zebrafish | partial_fulltext (Abstract, Results, Discussion) | \"Event frequencies were significantly reduced following exposure to clemizole (Figures 3A,B ) and trazodone\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_D/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_D/evidence_it29_D.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC9436285 full-text XML fetched 2026-11-05 through Europe PMC REST fullTextXML; sections marked read were read through keyword-directed passages, figures not viewed, bytes not saved",
+ "study_id": {
+  "pmid": "35451230"
+ },
+ "workflow": "IT29 P3-D (phenotype_first_it29_20261105/p3_D, case 2: DEE-model pharmacology of network hyperexcitability). Question-driven reading; prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

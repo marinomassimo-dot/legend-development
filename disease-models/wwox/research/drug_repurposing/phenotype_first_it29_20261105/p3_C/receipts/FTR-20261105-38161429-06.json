@@ -24,9 +24,9 @@
  "outputs": [
   "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_C/README.md"
  ],
- "prior_receipt": null,
+ "prior_receipt": "FTR-20261003-38161429-01",
  "record_kind": "contemporaneous_receipt",
- "reread_reason": "first_read",
+ "reread_reason": "new_question_outside_prior_coverage",
  "source_fingerprint": null,
  "source_kind": "fulltext_remote",
  "source_locator": "OA article via Europe PMC fullTextXML; text and the MRI findings table read; the primary case series are cited and not read; bytes not saved; PMC10757851",

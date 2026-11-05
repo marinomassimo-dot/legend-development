@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-05T09:10:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "references": "not_read",
+  "supplementary": "unavailable"
+ },
+ "event_at": "2026-11-05T09:11:00Z",
+ "event_id": "FTR-20261105-19503085-06",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: dCKO: no Pdgfra/Olig2/Mbp/Plp in vivo, die ~P2 weeks with tremor; in culture OPCs persist but do not become RIP+ (block at precursor); redundancy needed (single | B01 | \"expression of OPC markers Pdgfrα and Olig2 as well as mature oligodendrocyte markers myelin basic protein (Mbp) and Plp/DM20 were undetectable in dCKO mice\"",
+  "verbatim_locator | proposition: each single mutant keeps normal Olig2/Pdgfra/Plp/Mbp expression: redundancy, so a paralog-selective inhibitor would be predicted to be inert on this endpoint | B02 | \"mice with a single deletion of HDAC1 (HDAC1CKO) or HDAC2 (HDAC2CKO) showed normal expression\"",
+  "verbatim_locator | proposition: introduction states differentiation is repressed by VPA/TSA; this paper then shows TSA/VPA raise the Wnt/beta-catenin reporter in a hippocampal progenitor line  | B03 | \"oligodendrocyte differentiation is repressed in vitro in tissue culture studies and in vivo during animal development\"",
+  "verbatim_locator | proposition: Olig1-Cre: no Pdgfra/Plp/Mbp to P14; CNP-Cre (after OPC formation): OPCs largely spared but differentiation defect | B04 | \"constitutive activation of β-catenin in Olig1-expressing cells inhibits OPC specification\"",
+  "verbatim_locator | proposition: earlier and dispersed Olig2/Pdgfra OPC markers (more precursors earlier); terminal differentiation not scored at this age so direction on the endpoint is not gi | B05 | \"a pre-scheduled increase and dispersal of oligodendrocyte progenitor markers Olig2\"",
+  "verbatim_locator | proposition: Pdgfra OPCs normal, Plp and Mbp undetectable: the Wnt effector is needed for the transition even though Wnt gain blocks it | B06 | \"expression of myelin genes Plp and Mbp was undetectable compared to robust expression in the lateral white matter of wild-type spinal cords\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_B/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_B/evidence_it29_B.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC2701973 fetched 2026-11-05 through Europe PMC fullTextXML or NCBI efetch db=pmc (XML); Results, Discussion and introduction read in full; methods and figures not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1038/nn.2333",
+  "pmid": "19503085"
+ },
+ "workflow": "IT29 P3-B (phenotype_first_it29_20261105/p3_B, genetic and pathway perturbations of oligodendrocyte differentiation). Question-driven reading for direction of the endpoint; prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

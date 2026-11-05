@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-05T09:19:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T09:20:00Z",
+ "event_id": "FTR-20261105-41709000-06",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: OV350 (KCC2 activator), daily during p10-p21 (favourable) on abnormal spasm-like events in pups (video) p10 to p21 in Cdkl5 knockout mouse | partial_fulltext (Abstract, Results, Discussion) | \"OV350-treated Cdkl5 KO pups had significantly fewer low-amplitude spasm-like events than their veh-treated counterparts\"",
+  "verbatim_locator | proposition: OV350 given in pups, tested in adults (context_dependent) on adult kainate-induced seizure and EEG power after early trea in Cdkl5 knockout mouse | partial_fulltext (Results, figure legends) | \"OV350 treatment did not reduce time spent in epileptic activity in the Cdkl5 KO mice\"",
+  "verbatim_locator | proposition: none (no drug tested) (undetermined) on cortical organoid action-potential firing in CDKL5 R59X patient cortical organoids | abstract_only | \"higher action potential (AP) firing rate and lower rheobase in both CDD organoids\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_D/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_D/evidence_it29_D.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC12992657 full-text XML fetched 2026-11-05 through Europe PMC REST fullTextXML; sections marked read were read through keyword-directed passages, figures not viewed, bytes not saved",
+ "study_id": {
+  "pmid": "41709000"
+ },
+ "workflow": "IT29 P3-D (phenotype_first_it29_20261105/p3_D, case 2: DEE-model pharmacology of network hyperexcitability). Question-driven reading; prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

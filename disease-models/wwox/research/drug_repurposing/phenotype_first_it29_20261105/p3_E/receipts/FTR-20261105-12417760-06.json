@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-05T09:20:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "read"
+ },
+ "event_at": "2026-11-05T09:25:00Z",
+ "event_id": "FTR-20261105-12417760-06",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: Increased apoptotic neurodegeneration at plasma levels the authors call relevant for seizure control | PMC HTML body (section not tagged) | \"phenytoin, phenobarbital, diazepam, clonazepam, vigabatrin, and valproate cause apoptotic neurodegeneration in the developing rat brain\"",
+  "verbatim_locator | proposition: Listed among agents causing apoptosis in the abstract; doses and per-drug histology for vigabatrin not read beyond the methods listing | PMC HTML body (section not tagged) | \"phenytoin, phenobarbital, diazepam, clonazepam, vigabatrin, and valproate cause apoptotic neurodegeneration in the developing rat brain\"",
+  "verbatim_locator | proposition: Table 1: degenerating-cell fraction higher than vehicle in most of 16 regions for all three drugs, e.g | PMC HTML body (section not tagged) | \"Phenytoin, phenobarbital, and valproate increase the rate of apoptosis in the brain of 7-day-old rats\"",
+  "verbatim_locator | proposition: Estradiol ameliorated drug-induced apoptosis: the harm is separable from the discharge effect and can be modified | PMC HTML body (section not tagged) | \"ameliorates AED-induced apoptotic neurodegeneration\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_E/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_E/evidence_it29_E.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC PMC137548 page HTML fetched 2026-11-05 from pmc.ncbi.nlm.nih.gov (the XML route returned a publisher restriction notice); text extracted from the page; only the passages named in the verbatim_locator entries (plus abstract, and for Bittigau the methods list and Table 1) were read; figures not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1073/pnas.222550499",
+  "pmid": "12417760"
+ },
+ "workflow": "IT29 P3-E (phenotype_first_it29_20261105, sub-question: compensatory role of hyperexcitability in developmental epilepsy models; benefit on discharge versus benefit on function). Question-driven reading. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

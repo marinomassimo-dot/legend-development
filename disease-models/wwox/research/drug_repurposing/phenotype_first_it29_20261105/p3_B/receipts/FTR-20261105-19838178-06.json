@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-05T09:16:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "references": "not_read",
+  "supplementary": "unavailable"
+ },
+ "event_at": "2026-11-05T09:17:00Z",
+ "event_id": "FTR-20261105-19838178-06",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: tremor, hindlimb paralysis, seizures, early death; progressive reduction of Mbp/Plp1; astrocytic and microglial responses secondary | B16 | \"we observed a significant reduction of Mbp and Plp1 expression in the cerebral white matter region at P14\"",
+  "verbatim_locator | proposition: early MBP at E17.5 and more myelinated axons at P3 by EM | B17 | \"early and robust MBP expression was already detectable in the spinal cord of GPR17 null embryos at e17.5\"",
+  "verbatim_locator | proposition: no significant extra myelinated axons, normal g-ratio and OL number (data not shown in paper); authors invoke compensating regulators | B18 | \"Adult GPR17 null mice did not appear to exhibit a significant increase of myelinated axon fibers in the CNS\"",
+  "verbatim_locator | proposition: null cells differentiate earlier; WT cells reach the same level later | B19 | \"GPR17−/− progenitors differentiated into MBP+ or RIP+ mature oligodendrocytes earlier than control cells\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_B/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_B/evidence_it29_B.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC2783566 fetched 2026-11-05 through Europe PMC fullTextXML or NCBI efetch db=pmc (XML); Results (transgenic, null mice, culture) read; discussion and methods skimmed; figures not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1038/nn.2410",
+  "pmid": "19838178"
+ },
+ "workflow": "IT29 P3-B (phenotype_first_it29_20261105/p3_B, genetic and pathway perturbations of oligodendrocyte differentiation). Question-driven reading for direction of the endpoint; prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

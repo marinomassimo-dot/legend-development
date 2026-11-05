@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-05T08:19:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "limitations": "not_read",
+  "supplementary": "unavailable"
+ },
+ "event_at": "2026-11-05T08:20:00Z",
+ "event_id": "FTR-20261105-36116011-06",
+ "evidence_basis": [
+  "sections named in coverage read from the PMC text served by NCBI efetch; figures, tables, references and supplement not read; no figure value is quoted",
+  "verbatim_locator | proposition: bexarotene - context_dependent on the endpoint (human relapsing-remitting MS, 6 months, placebo-controlled phase 2a) | Introduction | \"was not met, and bexarotene was poorly tolerated, precluding its further development as a treatment in multiple sclerosis\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_A/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_A/evidence_it29_A.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC9539389 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); Introduction and start of Methods read; Results and Discussion not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1002/acn3.51662",
+  "pmid": "36116011"
+ },
+ "workflow": "IT29 P3-A (phenotype_first_it29_20261105, sub-question: small molecules modifying OPC differentiation and myelination; Case 1). Question-driven reading for direction, system and target-attribution control. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

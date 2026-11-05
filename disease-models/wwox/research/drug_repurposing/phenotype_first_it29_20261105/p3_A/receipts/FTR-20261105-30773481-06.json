@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-05T08:16:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "limitations": "not_read",
+  "supplementary": "unavailable"
+ },
+ "event_at": "2026-11-05T08:17:00Z",
+ "event_id": "FTR-20261105-30773481-06",
+ "evidence_basis": [
+  "sections named in coverage read from the PMC text served by NCBI efetch; figures, tables, references and supplement not read; no figure value is quoted",
+  "verbatim_locator | proposition: CW9956, CW9009, CW3388 (EBP inhibitors) and 76 analogues; other screen hits - favourable on the endpoint (in vitro mouse EpiSC-derived OPCs; microfibres for CW3388) | Results | \"potency for inhibition of EBP correlated closely with potency for enhanced oligodendrocyte formation\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_A/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_A/evidence_it29_A.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC6474808 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); Introduction, Results, Discussion and start of Methods read; figures not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1016/j.chembiol.2019.01.004",
+  "pmid": "30773481"
+ },
+ "workflow": "IT29 P3-A (phenotype_first_it29_20261105, sub-question: small molecules modifying OPC differentiation and myelination; Case 1). Question-driven reading for direction, system and target-attribution control. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

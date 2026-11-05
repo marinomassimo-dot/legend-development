@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-05T09:26:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "references": "not_read",
+  "supplementary": "unavailable"
+ },
+ "event_at": "2026-11-05T09:27:00Z",
+ "event_id": "FTR-20261105-35501379-06",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: seizures themselves drive extra oligodendrogenesis and thicker myelin in the seizure network after onset only; blocking this myelination reduced seizure burden  | B37 | \"Blocking activity-dependent myelination decreased seizure burden over time and reduced ictal synchrony as assessed by EEG coherence.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_B/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_B/evidence_it29_B.tsv"
+ ],
+ "prior_receipt": "FTR-20261022-35501379-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC9076538 fetched 2026-11-05 through Europe PMC fullTextXML or NCBI efetch db=pmc (XML); Abstract and selected results read (ethosuximide, Scn8a and TrkB design); remainder skimmed; bytes not saved",
+ "study_id": {
+  "doi": "10.1038/s41593-022-01052-2",
+  "pmid": "35501379"
+ },
+ "workflow": "IT29 P3-B (phenotype_first_it29_20261105/p3_B, genetic and pathway perturbations of oligodendrocyte differentiation). Question-driven reading for direction of the endpoint; prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

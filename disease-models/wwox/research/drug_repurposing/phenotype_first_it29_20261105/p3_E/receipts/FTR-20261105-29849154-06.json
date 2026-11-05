@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-05T09:20:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T09:25:00Z",
+ "event_id": "FTR-20261105-29849154-06",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: Dampening pyramidal activity in the critical window reduced PV and SST interneuron density; activity-dependent survival, so network silencing early costs inhibitory cells | Pyramidal cells regulate interneuron death | \"dampening the activity of pyramidal cells decreases the density of PV+ and SST+ interneurons at P21 compared to controls\"",
+  "verbatim_locator | proposition: Raising pyramidal activity in the same window prevented interneuron death and raised PV and SST density: moderate excitatory drive is a survival signal for inhibitory neurons | Pyramidal cells regulate interneuron death | \"increasing the activity of pyramidal cells during the period of interneuron cell death prevents this process\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_E/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_E/evidence_it29_E.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC PMC6207348 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); only the sections named in the verbatim_locator entries were read for the quoted propositions, the remaining sections were skimmed or not read; figures, tables and supplement not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1038/s41586-018-0139-6",
+  "pmid": "29849154"
+ },
+ "workflow": "IT29 P3-E (phenotype_first_it29_20261105, sub-question: compensatory role of hyperexcitability in developmental epilepsy models; benefit on discharge versus benefit on function). Question-driven reading. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

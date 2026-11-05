@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-05T09:24:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "references": "not_read",
+  "supplementary": "unavailable"
+ },
+ "event_at": "2026-11-05T09:25:00Z",
+ "event_id": "FTR-20261105-25849987-06",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: initiation of wrapping does not require activity but sheaths on silenced axons are shorter and retracted; suppressing neighbours relieves the deficit | B36 | \"initiation does not require activity. Instead, oligodendrocyte processes wrapping silenced axons are retracted more frequently\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_B/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_B/evidence_it29_B.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC4414883 fetched 2026-11-05 through Europe PMC fullTextXML or NCBI efetch db=pmc (XML); Abstract and start of introduction only; bytes not saved",
+ "study_id": {
+  "doi": "10.1038/nn.3992",
+  "pmid": "25849987"
+ },
+ "workflow": "IT29 P3-B (phenotype_first_it29_20261105/p3_B, genetic and pathway perturbations of oligodendrocyte differentiation). Question-driven reading for direction of the endpoint; prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

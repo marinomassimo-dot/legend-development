@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-05T09:14:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "references": "not_read",
+  "supplementary": "unavailable"
+ },
+ "event_at": "2026-11-05T09:15:00Z",
+ "event_id": "FTR-20261105-32937136-06",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: OPCs form and migrate normally; Mbp+/Plp1+ OLs markedly reduced and not recovered at P10; optic nerves not opaque; Notch, Wnt and NFIA programmes de-repressed;  | B13 | \"Mbp+/Plp1+ OLs were markedly reduced at P3 and did not recover even at P10\"",
+  "verbatim_locator | proposition: OL formation delayed then restored by P3, attributed to compensation by Ezh1 as H3K27me3 recovers | B14 | \"The clearly delayed but restored OL formation in Ezh2-cKOΔOlig1 and Ezh2-cKOΔOlig2 mice\"",
+  "verbatim_locator | proposition: each inhibitor alone significantly rescued Mbp expression and OL morphology of Eed-null cells; combination rescued further | B15 | \"both Notch inhibition and Wnt inhibition significantly rescued Mbp expression and OL morphology in the Eed null OL lineage\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_B/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_B/evidence_it29_B.tsv"
+ ],
+ "prior_receipt": "FTR-20261103-32937136-02",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC8070886 fetched 2026-11-05 through Europe PMC fullTextXML or NCBI efetch db=pmc (XML); Results read to the Notch and Wnt rescue; discussion, methods, figures not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1016/j.celrep.2020.108147",
+  "pmid": "32937136"
+ },
+ "workflow": "IT29 P3-B (phenotype_first_it29_20261105/p3_B, genetic and pathway perturbations of oligodendrocyte differentiation). Question-driven reading for direction of the endpoint; prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}
