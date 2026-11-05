@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-05T09:18:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T09:19:00Z",
+ "event_id": "FTR-20261105-41015095-06",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: retigabine (favourable) on evoked spike count on high-density MEA (900 mV stimulation s in KCNQ2 G256W/+ patient iPSC glutamatergic neurons,  | partial_fulltext (Abstract, Results 2.7, Discussion; Supplement not read) | \"Retigabine treatment ... reduced the total number of spikes during stimulation with 900 mV\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_D/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_D/evidence_it29_D.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC12745820 full-text XML fetched 2026-11-05 through Europe PMC REST fullTextXML; sections marked read were read through keyword-directed passages, figures not viewed, bytes not saved",
+ "study_id": {
+  "pmid": "41015095"
+ },
+ "workflow": "IT29 P3-D (phenotype_first_it29_20261105/p3_D, case 2: DEE-model pharmacology of network hyperexcitability). Question-driven reading; prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

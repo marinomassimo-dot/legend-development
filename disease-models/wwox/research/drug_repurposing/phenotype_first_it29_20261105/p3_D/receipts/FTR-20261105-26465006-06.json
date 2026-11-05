@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-05T09:12:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-05T09:13:00Z",
+ "event_id": "FTR-20261105-26465006-06",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: dimethadione (favourable) on electrographic burst discharge in larva (field electrode, fo in scn1lab larval zebrafish (LoF) | partial_fulltext (Results, Discussion) | \"suppressed burst discharge activity in scn1Lab mutant larvae\"",
+  "verbatim_locator | proposition: ethosuximide; flunarizine; phenytoin; carbamazepine; decimemide; tiletamine; pri (null) on locomotion (behavioural seizure) and discharge in scn1lab larval zebrafish (LoF) | partial_fulltext (Discussion) | \"resistant to many antiepileptic compounds (e.g., phenytoin, carbamazepine, ethosuximide\"",
+  "verbatim_locator | proposition: tiletamine; huperzine A (null) on locomotion and discharge in scn1lab larval zebrafish (LoF) | partial_fulltext (Results) | \"huperzine A failed to significantly alter scn1Lab seizure behavior at any concentration tested\"",
+  "verbatim_locator | proposition: mepivacaine and other library compounds scored hyperexcitable (55 compounds) (adverse) on locomotion in library screen in scn1lab larval zebrafish (LoF) | partial_fulltext (Results, Tables 2-3) | \"mepivacaine, a hyperexcitable proconvulsant anesthetic\"",
+  "verbatim_locator | proposition: fenfluramine (and norfenfluramine in GRI19) (favourable) on locomotion (and EEG at the end of Dinday 2015) after dosing in scn1lab larval zebrafish (LoF) | partial_fulltext (Results) | \"The fenfluramine-treated scn1Lab mutant exhibited a suppression of spontaneous electrographic seizure discharge to levels similar to controls\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_D/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_D/evidence_it29_D.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC4596025 full-text XML fetched 2026-11-05 through Europe PMC REST fullTextXML; sections marked read were read through keyword-directed passages, figures not viewed, bytes not saved",
+ "study_id": {
+  "pmid": "26465006",
+  "doi": "10.1523/ENEURO.0068-15.2015"
+ },
+ "workflow": "IT29 P3-D (phenotype_first_it29_20261105/p3_D, case 2: DEE-model pharmacology of network hyperexcitability). Question-driven reading; prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

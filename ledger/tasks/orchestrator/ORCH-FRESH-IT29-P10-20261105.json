@@ -1,0 +1,112 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-FRESH-IT29-P10-20261105",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "IT29 P10: a fresh Orchestrator context resumes one repurposing question from the durable records: recognise it, separate done from new, choose breadth, route and brief actors, report the return to its consumers, choose the next step. Question: class IIa HDACs in CNS oligodendrocyte maturation and myelination (catalytic v scaffold, autonomous v neuronal).",
+ "START_UTC": "2026-11-05T09:30:00Z",
+ "BASELINE": "branch task/it29 at 51d06ddd plus untracked IT29 P5/P6 files; ORCH-ROADMAP-IT29-20261105 is behind the work (see cycle_it29_p10_20261105/LOG.md #1); not edited here",
+ "DECISIONS_TAKEN": [
+  "Question chosen by reading p3_B (row 'HDAC4 / HDAC5 in CNS oligodendroglia: not reached'), the decision_scope class_limit rows and receipt FTR-20261105-29472387-06, not from a summary.",
+  "Write scope: cycle_it29_p10_20261105/ and this record only; ORCH-ROADMAP-IT29-20261105.json, the four scientific current files and the receipt ledger are not touched; no commit, no push.",
+  "Zero spend, no e-mail or contact, no operator e-mail to any service."
+ ],
+ "STOP_LOG": [
+  "2026-11-05 P10 complete: Q1-Q6 DONE; return recorded in cycle_it29_p10_20261105/RETURN.md"
+ ],
+ "AUTHORISED_QUEUE_20261105C": {
+  "MANDATE_STATE": "COMPLETE",
+  "OBJ_Q1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Q1 recognise the open question and where it lives",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "cycle_it29_p10_20261105/QUESTION.md",
+     "challenge": {
+      "id": "CH-IT29-CLASSIIA-CNS-MYELIN",
+      "origin": [
+       "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_B/README.md",
+       "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_B/evidence_it29_B.tsv#B38",
+       "disease-models/wwox/research/drug_repurposing/generation_it22_p1_20261103/decision_scope_it22.tsv"
+      ],
+      "decision_at_stake": "whether the myelin counter-premise carried on the class IIa HDAC lever (HDAC5 thread; TMP269, nanatinostat, pracinostat) is real for the CNS, a peripheral-nerve artefact, or neutral, and so whether the class IIa row of the case-1 signed table is adverse, neutral or empty",
+      "available_knowledge": "class I, HDAC3 and PRC2 loss in the oligodendrocyte lineage are adverse (p3_B); the only class IIa myelin datum is a Schwann-cell Hdac4 deletion with Hdac5 null (PMID 29472387, partial read, Hdac5 alone null); no CNS oligodendroglia class IIa datum was reached",
+      "decisive_uncertainty": "whether class IIa loss or catalytic inhibition changes CNS oligodendrocyte differentiation or myelination, autonomously or through the neuron",
+      "discriminating_outcomes": "CNS conditional loss with myelin function readout (adverse v null); catalytic-site mutant or selective inhibitor v scaffold-only loss; neuronal-specific deletion with myelin readout",
+      "prior_work": "IT28 P3 (HDAC5 edge and catalytic biology, no myelin content); IT28 P8 reconstruction row M5; IT29 P3-B (class I, HDAC3, PRC2); receipt FTR-20261105-29472387-06 (partial)",
+      "resources": "three Scientist reads, free full-text routes only",
+      "reevaluate_when": "a CNS oligodendroglia class IIa deletion or selective-inhibitor study with a myelin readout is published, or the Methods of PMID 29472387 show a genotype that contradicts the class_limit wording",
+      "nature": "shared_premise",
+      "sources": [
+       "29472387"
+      ],
+      "reopen_reason": "IT29 P10 asks for the genotype table, Methods and Discussion not covered by the first receipt, and for the CNS and neuronal routes nobody has read",
+      "returned": [
+       "disease-models/wwox/research/drug_repurposing/generation_it22_p1_20261103/decision_scope_it22.tsv",
+       "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/signed_rows_case1_it29.tsv",
+       "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_B/README.md"
+      ]
+     }
+    }
+   ]
+  },
+  "OBJ_Q2": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Q2 separate work already done (files, receipts) from new research",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "QUESTION.md section 'Done v new'; receipts FTR-20261105-29472387-06 (partial), p3_B receipts, batch_it28_p3 receipts"
+    }
+   ]
+  },
+  "OBJ_Q3": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "Q3 choose breadth and stopping rule",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "three readers, 6-12 sources each, no second wave unless a decisive unread full text or a contradiction; pre-registered consequences in QUESTION.md"
+    }
+   ]
+  },
+  "OBJ_Q4": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "Q4 route and brief the actors",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "ROUTING.md; BRIEF_COMMON_P10.md; BRIEF_F.md BRIEF_G.md BRIEF_H.md"
+    }
+   ]
+  },
+  "OBJ_Q5": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "Q5 report the returned outcome to the consumers (receipts dry-run, challenge check, row recomputation)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "RETURN.md: 42 rows (9/22/11) and 18 receipts recomputed from TSVs, match READMEs; challenge_batch check OK on 3 consumers; pre-registered 'nothing found' met, narrower PNS wording added; S10 not yet regenerated (old wording 20+1 hits)"
+    }
+   ]
+  },
+  "OBJ_Q6": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "Q6 choose the next useful step",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "RETURN.md step 6: verify S10 regeneration changes only carried_limits (eligible 220, hand-overs 15); no second reading wave; OPC-readout arm as operator-decided measurement attached to CH-IT28-HDAC5-LEVER"
+    }
+   ]
+  }
+ }
+}

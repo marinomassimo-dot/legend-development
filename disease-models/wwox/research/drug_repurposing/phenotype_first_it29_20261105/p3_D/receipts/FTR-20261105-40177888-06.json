@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-05T09:22:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T09:23:00Z",
+ "event_id": "FTR-20261105-40177888-06",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: Kv7/M-current activation; persistent sodium current inhibition; M-current inhibi (favourable) on Ca2+ spike frequency and spreading depolarisation in acute c in Scn8a N1768D/+ mouse (gain of function) | abstract_only | \"pharmacological activation of IKM suppressed Ca2+ spikes and SD\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_D/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_D/evidence_it29_D.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "abstract fetched 2026-11-05 through Europe PMC REST search (resultType=core); full text not open; bytes not saved",
+ "study_id": {
+  "pmid": "40177888",
+  "doi": "10.1093/brain/awaf120"
+ },
+ "workflow": "IT29 P3-D (phenotype_first_it29_20261105/p3_D, case 2: DEE-model pharmacology of network hyperexcitability). Question-driven reading; prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

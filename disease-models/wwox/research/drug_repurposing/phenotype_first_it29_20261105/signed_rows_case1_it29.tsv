@@ -1,0 +1,34 @@
+row_id	evidence_row	target_symbol	action_on_target	direction_on_endpoint	attribution	intervention_type	measure_level	composition_or_autonomous	source_id	curation_note
+S1-01	R15	CHRM1	loss	favourable	not_applicable	genetic_loss	function	cell_autonomous	27671734	Chrm1-null OPC in purified culture; uninjured adult conditional loss is null (R17); Chrm1-null OPCs already show about five times more MBP-positive cells, so 'knockout abolishes the drug effect' may be a ceiling effect
+S1-02	R33	CHRM1	inhibit	context_dependent	target_controlled	compound	marker	cell_autonomous	30046109	muscarinic antagonists that lack EBP inhibition did not induce differentiation: attribution to M1 contested
+S1-03	B25	CHRM3	loss	favourable	not_applicable	genetic_loss	function	cell_autonomous	29959237	human OPC knockdown and adult mouse conditional loss (abstract level)
+S1-04	R33	CHRM3	inhibit	context_dependent	target_controlled	compound	marker	cell_autonomous	30046109	same contested attribution as CHRM1
+S1-05	R30	CYP51A1	inhibit	favourable	target_controlled	compound	marker	cell_autonomous	30046109	azoles; CYP51 siRNA, lanosterol and lanosterol-synthase block as target controls; pure OPC
+S1-06	R31	EBP	inhibit	favourable	target_controlled	compound	function	cell_autonomous	30046109	EBP CRISPR and TASIN-1; pure OPC
+S1-07	R38	EBP	inhibit	favourable	target_controlled	compound	marker	cell_autonomous	30773481	independent chemistry series in pure OPC
+S1-08	R31	TM7SF2	inhibit	favourable	target_controlled	compound	function	cell_autonomous	30046109	amorolfine route; pure OPC
+S1-09	R26	NR3C1	activate	favourable	target_controlled	compound	marker	cell_autonomous	25896324	clobetasol effect reversed by a GR antagonist (RU486); purified OPC; neonatal glucocorticoid exposure is a separate liability not scored here
+S1-10	R42	RXRA	activate	favourable	target_controlled	compound	marker	cell_autonomous	21131950	RXR agonists in purified OPC; null in axon co-culture and small in vivo (A-sheet)
+S1-11	R42	RXRG	activate	favourable	target_controlled	compound	marker	cell_autonomous	21131950	as RXRA
+S1-12	B26	RXRG	loss	context_dependent	not_applicable	genetic_loss	function	not_separated	21131950	Rxrg-null remyelination is context dependent
+S1-13	B29	THRA	loss	adverse	not_applicable	genetic_loss	marker	cell_autonomous	12456652	TRalpha1-null OPC and mouse; thyroid agonists themselves are compound-only in the sources read
+S1-14	B19	GPR17	loss	favourable	not_applicable	genetic_loss	marker	cell_autonomous	19838178	earlier onset only; adult null shows no extra myelin (B18)
+S1-15	B16	GPR17	gain	adverse	not_applicable	genetic_gain	marker	not_separated	19838178	transgene overexpression
+S1-16	B31	LINGO1	loss	favourable	not_applicable	genetic_loss	function	not_separated	15895088	dominant negative, RNAi and knockout; in vivo mixed lineage
+S1-17	B07	HDAC3	loss	adverse	not_applicable	genetic_loss	function	not_separated	26859354	catalytic-dead NCoR/HDAC3 complex did not reproduce the astrocyte fate switch and the authors allow a deacetylase-independent role (B11, no myelin readout); HDAC3-directed inhibitors lowered Olig2 only as a specification marker; also HDAC3-directed inhibitors lowered Olig2 in purified OPC (B10); a catalytic-dead NCoR/HDAC3 mutant did not reproduce the fate switch (B11, no myelin readout)
+S1-18	B09	HDAC3	loss	adverse	not_applicable	genetic_loss	marker	cell_autonomous	26859354	purified OPC, Cre excision
+S1-19	B01	HDAC1	loss	context_dependent	not_applicable	genetic_loss	marker	not_separated	19503085	single Hdac1 or Hdac2 loss is null; double loss removes the lineage: redundancy, no single-target sign
+S1-20	B01	HDAC2	loss	context_dependent	not_applicable	genetic_loss	marker	not_separated	19503085	as HDAC1
+S1-21	B13	EED	loss	adverse	not_applicable	genetic_loss	function	not_separated	32937136	PRC2 core; persistent block
+S1-22	B14	EZH2	loss	context_dependent	not_applicable	genetic_loss	marker	not_separated	32937136	Ezh2 loss is a delay compensated by Ezh1; no EZH2 catalytic-inhibitor experiment reached
+S1-23	B04	CTNNB1	gain	adverse	not_applicable	genetic_gain	marker	not_separated	19503085	stabilised beta-catenin blocks the lineage; not a GSK3 inhibitor result
+S1-24	B06	TCF7L2	loss	adverse	not_applicable	genetic_loss	marker	not_separated	19503085	effector required
+S1-25	B24	RPTOR	loss	context_dependent	not_applicable	genetic_loss	function	not_separated	24671993	mTORC1/mTORC2 deletions differ; abstract level
+S1-26	B24	RICTOR	loss	context_dependent	not_applicable	genetic_loss	function	not_separated	24671993	as RPTOR
+S1-27	B22	MAPK1	loss	context_dependent	not_applicable	genetic_loss	marker	not_separated	22144101	single Erk loss null; MEK inhibitors block differentiation in vitro; double Erk loss differentiates but thins myelin; the single-Erk result is cited in the source from Fyffe-Maricich 2011, not measured there
+S1-28	B22	MAPK3	loss	context_dependent	not_applicable	genetic_loss	marker	not_separated	22144101	as MAPK1; the single-Erk result is cited in the source from Fyffe-Maricich 2011, not measured there
+S1-29	B38	HDAC4	loss	context_dependent	not_applicable	genetic_loss	transcript	not_separated	29472387	Schwann cell, transcript-level, not CNS oligodendrocyte; IT29 P10 (CH-IT29-CLASSIIA-CNS-MYELIN): peripheral, transient, double or triple mutant, scaffold role; no CNS datum
+S1-30	B38	HDAC5	loss	context_dependent	not_applicable	genetic_loss	transcript	not_separated	29472387	as HDAC4; Hdac5 alone is null (B39); IT29 P10 (CH-IT29-CLASSIIA-CNS-MYELIN): peripheral, transient, double or triple mutant, scaffold role; no CNS datum
+S1-31	B37	NTRK2	loss	context_dependent	not_applicable	genetic_loss	function	not_separated	35501379	myelin endpoint rises in a seizure network and blocking it lowered seizures: favourable for the endpoint is not net benefit
+S1-32	NCC-screen	NR3C1	activate	context_dependent	compound_only	compound	marker	cell_autonomous	27592856	independent acute rat OPC screen (727 compounds, differentiation as percent of the quetiapine response, derived by p12_scout): clobetasol adverse at the highest dose with viability of at least 50 percent; abstract-level, methods unread; disagrees with the mouse precursor study that signs the receptor
+S1-33	NCC-screen	CYP51A1	inhibit	context_dependent	compound_only	compound	marker	cell_autonomous	27592856	same screen: ketoconazole adverse and miconazole biphasic in rat OPC; abstract-level, methods unread; disagrees with the mouse precursor study that signs the enzyme

@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-05T09:20:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T09:25:00Z",
+ "event_id": "FTR-20261105-33201535-06",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: Opposite to the open-label trial: greater post-dose reduction in seizure burden in the treated arm, pilot, post hoc, adjusted for a baseline imbalance (treated arm had higher burden) | Interpretation: | \"demonstrated an additional reduction in seizure burden attributable to bumetanide over phenobarbital without increased serious adverse effects\"",
+  "verbatim_locator | proposition: Small imbalance (treated vs none in controls) in a pilot; authors attribute cases to gentamicin and multiorgan disease; no neurodevelopmental follow-up in the text read | Results: | \"2 of 26 treated subjects (8%) and 0 of 13 control subjects had hearing impairment\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_E/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_E/evidence_it29_E.tsv"
+ ],
+ "prior_receipt": "FTR-20261023-33201535-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC PMC8122513 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); only the sections named in the verbatim_locator entries were read for the quoted propositions, the remaining sections were skimmed or not read; figures, tables and supplement not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1002/ana.25959",
+  "pmid": "33201535"
+ },
+ "workflow": "IT29 P3-E (phenotype_first_it29_20261105, sub-question: compensatory role of hyperexcitability in developmental epilepsy models; benefit on discharge versus benefit on function). Question-driven reading. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

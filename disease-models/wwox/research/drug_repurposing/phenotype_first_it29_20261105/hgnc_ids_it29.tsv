@@ -1,0 +1,26 @@
+symbol	hgnc_id	hgnc_name	source
+CHRM1	HGNC:1950	cholinergic receptor muscarinic 1	HGNC REST fetch/symbol, 2026-11-05
+CHRM3	HGNC:1952	cholinergic receptor muscarinic 3	HGNC REST fetch/symbol, 2026-11-05
+CTNNB1	HGNC:2514	catenin beta 1	HGNC REST fetch/symbol, 2026-11-05
+CYP51A1	HGNC:2649	cytochrome P450 family 51 subfamily A member 1	HGNC REST fetch/symbol, 2026-11-05
+EBP	HGNC:3133	EBP cholestenol delta-isomerase	HGNC REST fetch/symbol, 2026-11-05
+EED	HGNC:3188	embryonic ectoderm development	HGNC REST fetch/symbol, 2026-11-05
+EZH2	HGNC:3527	enhancer of zeste 2 polycomb repressive complex 2 subunit	HGNC REST fetch/symbol, 2026-11-05
+GPR17	HGNC:4471	G protein-coupled receptor 17	HGNC REST fetch/symbol, 2026-11-05
+HDAC1	HGNC:4852	histone deacetylase 1	HGNC REST fetch/symbol, 2026-11-05
+HDAC2	HGNC:4853	histone deacetylase 2	HGNC REST fetch/symbol, 2026-11-05
+HDAC3	HGNC:4854	histone deacetylase 3	HGNC REST fetch/symbol, 2026-11-05
+HDAC4	HGNC:14063	histone deacetylase 4	HGNC REST fetch/symbol, 2026-11-05
+HDAC5	HGNC:14068	histone deacetylase 5	HGNC REST fetch/symbol, 2026-11-05
+LINGO1	HGNC:21205	leucine rich repeat and Ig domain containing 1	HGNC REST fetch/symbol, 2026-11-05
+MAPK1	HGNC:6871	mitogen-activated protein kinase 1	HGNC REST fetch/symbol, 2026-11-05
+MAPK3	HGNC:6877	mitogen-activated protein kinase 3	HGNC REST fetch/symbol, 2026-11-05
+NR3C1	HGNC:7978	nuclear receptor subfamily 3 group C member 1	HGNC REST fetch/symbol, 2026-11-05
+NTRK2	HGNC:8032	neurotrophic receptor tyrosine kinase 2	HGNC REST fetch/symbol, 2026-11-05
+RICTOR	HGNC:28611	RPTOR independent companion of MTOR complex 2	HGNC REST fetch/symbol, 2026-11-05
+RPTOR	HGNC:30287	regulatory associated protein of MTOR complex 1	HGNC REST fetch/symbol, 2026-11-05
+RXRA	HGNC:10477	retinoid X receptor alpha	HGNC REST fetch/symbol, 2026-11-05
+RXRG	HGNC:10479	retinoid X receptor gamma	HGNC REST fetch/symbol, 2026-11-05
+TCF7L2	HGNC:11641	transcription factor 7 like 2	HGNC REST fetch/symbol, 2026-11-05
+THRA	HGNC:11796	thyroid hormone receptor alpha	HGNC REST fetch/symbol, 2026-11-05
+TM7SF2	HGNC:11863	transmembrane 7 superfamily member 2	HGNC REST fetch/symbol, 2026-11-05

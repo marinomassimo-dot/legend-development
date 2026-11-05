@@ -174,7 +174,7 @@ function candHtml(c) {
     '<div class="chips2">' + (gl.length ? gl.map(grp).join('') : chip(T.cd_no_need)) + chip(goalTxt(c.goal)) + chip(trackTxt(c.track)) + chip(T.cd_status + ': ' + statusTxt(c.status)) + (c.access.length ? chip(T.cd_access + ': ' + c.access.map(function (a) { return T['acc_' + a] || a; }).join(', ')) : chip(T.cd_access_none)) + '</div>' +
     '<div>' + (Object.keys(scopes).length ? Object.keys(scopes).map(function (k) { return sc(k, scopes[k]); }).join('') : '<span class="mini mut">' + esc(T.cd_noscope) + '</span>') + '</div>' +
     '<div class="btns noprint"><label><input type="checkbox" data-sel="' + esc(c.id) + '"' + (sel ? ' checked' : '') + '> ' + esc(T.cd_pick) + '</label><button type="button" data-export="' + esc(c.id) + '">' + esc(T.cd_export) + '</button><button type="button" data-brief="' + esc(c.id) + '">' + esc(T.cd_brief) + '</button></div>' +
-    '<div class="qa"><div><h4>' + esc(T.q1) + '</h4>' + q.why + '</div><div><h4>' + esc(T.q2) + '</h4>' + q.wwox + '</div><div><h4>' + esc(T.q3) + '</h4>' + q.other + '</div><div><h4>' + esc(T.q4) + '</h4>' + q.counter + '</div><div><h4>' + esc(T.q5) + '</h4>' + q.miss + '</div><div><h4>' + esc(T.q6) + '</h4>' + q.next + '</div></div>' + (c.needs.length ? whyPos(c) : '') + techDetails(c) + '</article>';
+    (c.needs.length ? '<p class="card-q" data-role="question"><b>' + esc(T.iv_q) + ':</b> ' + c.needs.map(function (n) { return esc(needName(NM[n])); }).join(' · ') + '</p>' : '') + '<div class="qa"><div data-role="rationale"><h4>' + esc(T.q1) + '</h4>' + q.why + '</div><div data-role="evidence"><h4>' + esc(T.q2) + '</h4>' + q.wwox + '</div><div data-role="context"><h4>' + esc(T.q3) + '</h4>' + q.other + '</div><div data-role="counter"><h4>' + esc(T.q4) + '</h4>' + q.counter + '</div><div data-role="uncertainty"><h4>' + esc(T.q5) + '</h4>' + q.miss + '</div><div data-role="next_test"><h4>' + esc(T.q6) + '</h4>' + q.next + '</div></div>' + (c.needs.length ? whyPos(c) : '') + techDetails(c) + '</article>';
 }
 var CSORT = 'group';
 function renderCands() {
@@ -272,6 +272,8 @@ function renderCompare() {
   h += row(esc(T.cp_scopes), function (c) { var k = Object.keys(c.scope_counts.int); return k.length ? k.map(function (s) { return sc(s, c.scope_counts.int[s]); }).join('') : '<span class="mut">' + esc(T.cp_noscope) + '</span>'; });
   h += row(esc(T.cp_against), function (c) { return String(c.against.length) + (c.against_note && !c.against.length ? ' (' + esc(T.cp_prose) + ')' : ''); });
   h += row(esc(T.cp_missing), function (c) { return esc(first(c.missing || T.cp_nostated, 200)); });
+  h += row(esc(T.xp_access), function (c) { var a = (c.access || []).map(function (x) { return T['acc_' + x] || x; }).join(', '); return esc(a || T['acc_unknown/unverified']) + '<div class="mini mut">' + esc(T.bf_cat_build) + ' ' + esc(META.catalogue_generated || T.xp_unknown) + ' · ' + esc(T.countryL[c.country] || c.country || T.xp_unknown) + '</div>' + (c.access_text ? '<div class="mini">' + esc(first(c.access_text, 160)) + '</div>' : ''); });
+  h += row(esc(T.xp_next), function (c) { return esc(first(c.next || T.xp_unknown, 240)); });
   h += '</tbody></table></div>';
   var shared = cs[0].needs.filter(function (n) { return cs.every(function (c) { return c.needs.indexOf(n) >= 0; }); });
   var anyShared = uniq([].concat.apply([], cs.map(function (c) { return c.needs; }))).filter(function (n) { return cs.filter(function (c) { return c.needs.indexOf(n) >= 0; }).length >= 2; });
@@ -628,6 +630,33 @@ document.addEventListener('click', function (e) { var a = e.target.closest ? e.t
   var dflt = NEEDS.filter(function (n) { return (n.targets || []).length && CANDS.some(function (c) { var l = c.links[n.id]; return l && /^F[12]$/.test(l.group); }); })[0] || NEEDS[0];
   if (/^#x=/.test(location.hash)) fromX(); else if (dflt) show('need', dflt.id);
 })();
+  // IT29: a node of an evidence chain, selected by click, Enter or focus, shows its relations (direction, type, source) and its cards; the edge table remains the text equivalent
+  (function () {
+  var EG = C.evidence_graph; if (!EG) return;
+  var COLS = EG.columns;
+  function edgeLine(e, other, arrow) {
+    var code = { 'risultato sperimentale': 'R', 'inferenza': 'I', 'associazione': 'A' }[e.type] || '';
+    var src = e.src.kind === 'PMID' ? ext(PUBMED + e.src.id + '/', e.src.label) : esc(e.src.label);
+    return '<li>' + arrow + ' <b>' + esc(other.label) + '</b> <span class="mini">(' + esc(code) + ': ' + esc(T['eg_leg_' + code] || e.type) + '; ' + src + ')</span></li>';
+  }
+  function show(g) {
+    var art = g.closest('.chain'); if (!art) return;
+    var ch = EG.chains.filter(function (x) { return x.id === art.dataset.chain; })[0]; if (!ch) return;
+    var n = ch.nodes.filter(function (x) { return x.id === g.dataset.node; })[0]; if (!n) return;
+    var nm = {}; ch.nodes.forEach(function (x) { nm[x.id] = x; });
+    var ins = ch.edges.filter(function (e) { return e.to === n.id; }), outs = ch.edges.filter(function (e) { return e.from === n.id; });
+    var h = '<h4>' + esc(n.label) + '</h4><p class="mini">' + esc(T['eg_col_' + COLS.indexOf(n.col)]) + ' · ' + esc(T['eg_scope_' + n.scope] || '') + (n.unresolved ? ' · <b>' + esc(T.eg_unres) + '</b>' : '') + '</p>';
+    h += (ins.length ? '<p class="mini"><b>' + esc(T.eg_rel_in) + '</b></p><ul class="mini">' + ins.map(function (e) { return edgeLine(e, nm[e.from], '←'); }).join('') + '</ul>' : '')
+       + (outs.length ? '<p class="mini"><b>' + esc(T.eg_rel_out) + '</b></p><ul class="mini">' + outs.map(function (e) { return edgeLine(e, nm[e.to], '→'); }).join('') + '</ul>' : '')
+       + (!ins.length && !outs.length ? '<p class="mini mut">' + esc(T.eg_rel_none) + '</p>' : '')
+       + (n.cards.length ? '<p class="mini"><b>' + esc(T.eg_node_cards) + ':</b> ' + n.cards.map(function (c) { return '<a href="#cand-' + esc(c) + '" data-open="' + esc(c) + '">' + esc(c) + '</a>'; }).join(', ') + '</p>' : '')
+       + (n.pmids.length ? '<p class="mini">' + n.pmids.map(function (p) { return ext(PUBMED + p + '/', 'PMID ' + p); }).join(' · ') + '</p>' : '');
+    art.querySelector('.eg-detail').innerHTML = h;
+  }
+  document.addEventListener('click', function (ev) { var g = ev.target.closest && ev.target.closest('.chain .eg-n'); if (g) show(g); });
+  document.addEventListener('focusin', function (ev) { var g = ev.target.closest && ev.target.closest('.chain .eg-n'); if (g) show(g); else if (ev.target.matches && ev.target.matches('.chain a') && ev.target.querySelector('.eg-n')) show(ev.target.querySelector('.eg-n')); });
+  document.addEventListener('keydown', function (ev) { if ((ev.key === 'Enter' || ev.key === ' ') && ev.target.matches && ev.target.matches('.chain .eg-n')) { ev.preventDefault(); show(ev.target); } });
+  })();
 window.addEventListener('hashchange', fromHash);
 renderAll();
 fromHash();
@@ -643,4 +672,14 @@ document.body.setAttribute('data-cur-ready', '1');
     bar.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
     rows.forEach(function (r) { r.hidden = !!f && r.getAttribute('data-origin') !== f; });
   });
+})();
+(function () {   // IT29: a link to one main investigation (#inv-N) shows it even when the origin filter hides it, opens its detail and moves focus to it
+  function open() {
+    var m = (location.hash || '').match(/^#(inv-\d+)$/); if (!m) return;
+    var r = document.getElementById(m[1]); if (!r || !r.classList.contains('inv-row')) return;
+    if (r.hidden) { var all = document.querySelector('#investigations .inv-filter button[data-f=""]'); if (all) all.click(); r.hidden = false; }
+    var d = r.querySelector('details.inv-more'); if (d) d.open = true;
+    r.setAttribute('tabindex', '-1'); r.scrollIntoView(); r.focus({ preventScroll: true });
+  }
+  window.addEventListener('hashchange', open); open();
 })();

@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-05T09:12:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "references": "not_read",
+  "supplementary": "unavailable"
+ },
+ "event_at": "2026-11-05T09:13:00Z",
+ "event_id": "FTR-20261105-26859354-06",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: fewer OPCs and OLs, Mbp and Plp1 reduced, myelinated axons nearly absent in optic nerve by P62, tremor from week 3; OPCs diverted to GFAP astrocytes (fate switc | B07 | \"Mbp and Plp1 was substantially reduced in the cortex and spinal cord of Hdac3 mutants\"",
+  "verbatim_locator | proposition: tdTomato-labelled GFAP+ astrocytes appear from OPCs at both ages; reduction of CC1+ OLs reported (value not read); smaller effect in adults | B08 | \"we detected a population of tdTomato reporter-labeled GFAP+ astrocytes in the white matter of Hdac3 mutant mice, but not in control mice\"",
+  "verbatim_locator | proposition: most Cre-GFP cells lost Olig2 and acquired GFAP; cell-autonomous in purified OPCs | B09 | \"the majority of Cre-GFP transduced cells, where Hdac3 expression was depleted, acquired GFAP expression and lost Olig2 expression\"",
+  "verbatim_locator | proposition: Olig2 expression strongly suppressed; apicidin raised GFAP+ astrocyte formation | B10 | \"strongly suppressed Olig2 expression assayed by immunocytochemistry, qRT-PCR and western blot analyses\"",
+  "verbatim_locator | proposition: no OL-to-astrocyte switch and no Stat3 acetylation increase, unlike the Hdac3 deletion: the fate-switch phenotype is not reproduced by loss of NCoR-associated c | B11 | \"does not lead to an OL-astrocyte fate switch and elevate Stat3 acetylation and astrogliogenesis\"",
+  "verbatim_locator | proposition: Hdac1/2 deletion did not raise GFAP+ astrocytes or Stat3 modification, so class I members block differentiation by different routes (block at precursor v fate d | B12 | \"Hdac1/2 deletion by the Olig1-Cre line did not cause a substantial increase in GFAP+ astrocytes\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_B/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_B/evidence_it29_B.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC4750051 fetched 2026-11-05 through Europe PMC fullTextXML or NCBI efetch db=pmc (XML); Results and Discussion read; methods, figures and supplement not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1016/j.devcel.2016.01.002",
+  "pmid": "26859354"
+ },
+ "workflow": "IT29 P3-B (phenotype_first_it29_20261105/p3_B, genetic and pathway perturbations of oligodendrocyte differentiation). Question-driven reading for direction of the endpoint; prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

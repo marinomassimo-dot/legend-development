@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-05T09:20:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T09:25:00Z",
+ "event_id": "FTR-20261105-23536761-06",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: Combination cut seizure incidence by roughly three quarters and completely suppressed seizures in about half; phenobarbital alone was partial | Effect of Combination Treatment on Hypoxia-induced | \"the combination of phenobarbital with low dose bumetanide (n = 35) reduced seizure incidence by approximately 75% compared to vehicles\"",
+  "verbatim_locator | proposition: Authors state bumetanide alone had little to no efficacy, in contrast to prior reports; only a higher dose moderately attenuated seizures | Efficacy of Combination Therapy with Phenobarbital | \"bumetanide alone had little to no efficacy in this model\"",
+  "verbatim_locator | proposition: No increase over background at the lower phenobarbital exposure used; contrasts with the apoptosis seen with higher exposure (Bittigau rows) | Effects of Phenobarbital and Bumetanide on Constit | \"Neither phenobarbital (n = 11) nor high dose bumetanide (n = 11), administered separately or in combination\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_E/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_E/evidence_it29_E.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC PMC3594228 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); only the sections named in the verbatim_locator entries were read for the quoted propositions, the remaining sections were skimmed or not read; figures, tables and supplement not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1371/journal.pone.0057148",
+  "pmid": "23536761"
+ },
+ "workflow": "IT29 P3-E (phenotype_first_it29_20261105, sub-question: compensatory role of hyperexcitability in developmental epilepsy models; benefit on discharge versus benefit on function). Question-driven reading. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

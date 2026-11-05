@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-05T09:20:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T09:21:00Z",
+ "event_id": "FTR-20261105-35234610-06",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: NBI-921352 (Nav1.6-selective inhibitor, oral) (favourable) on electrically induced tonic-clonic seizure (6 Hz stimulation) in Scn8a N1768D/+ mouse (gain of function) and wild-t | partial_fulltext (Abstract, Introduction, Results Fig 5) | \"prevented induction of GTC with hindlimb extension in Scn8a N1768D/+ mice in a dose-dependent manner\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_D/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_D/evidence_it29_D.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC8903829 full-text XML fetched 2026-11-05 through Europe PMC REST fullTextXML; sections marked read were read through keyword-directed passages, figures not viewed, bytes not saved",
+ "study_id": {
+  "pmid": "35234610",
+  "doi": "10.7554/eLife.72468"
+ },
+ "workflow": "IT29 P3-D (phenotype_first_it29_20261105/p3_D, case 2: DEE-model pharmacology of network hyperexcitability). Question-driven reading; prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

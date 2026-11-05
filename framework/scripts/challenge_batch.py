@@ -10,6 +10,8 @@ nature (identity_or_measure -> targeted_reading | shared_premise -> thematic_bat
 reopen_reason, returned (paths of consumers that must carry the challenge id).
 `check` prints, per challenge: the routing by nature; for each source its standing depth in the receipt ledger; DUPLICATE_NO_NEW_INFORMATION when every source was already read at
 partial or full depth and no `reopen_reason` is given (a motivated re-evaluation stays possible); and for each `returned` path whether it exists and names the challenge id.
+NAMES_ID / LACKS_ID is a TRACEABILITY check (the file mentions the id). It does not show that the result was read or that anything changed: for that, show the persisted result, the consumer input that reads it, the command that regenerates the output and the diff
+(see disease-models/wwox/research/drug_repurposing/consumption_it29_p9_20261105/ for the pattern). A fixture carrying only the id is not a demonstration of consumption.
 It reads shared origins from the ledger by study id only: no detected dependency does not certify independence. Offline, standard library only. Exit 1 on a malformed challenge."""
 import sys
 if __name__ == "__main__" and (len(sys.argv) < 2 or sys.argv[1] in ("-h", "--help")):
@@ -75,7 +77,7 @@ def main():
         print(f"{where} {r['id']}: route={r['route']} problems={r['problems'] or 'none'} duplicate={'DUPLICATE_NO_NEW_INFORMATION' if r['duplicate'] else 'no'}")
         print("  sources (0 unread, 1 abstract, 2 partial, 3 full):", r["standing"])
         for p, ok in r["returned"].items():
-            print("  returned:", "OK " if ok else "MISSING ", p)
+            print("  returned:", "NAMES_ID " if ok else "LACKS_ID ", p)
     raise SystemExit(1 if bad else 0)
 
 

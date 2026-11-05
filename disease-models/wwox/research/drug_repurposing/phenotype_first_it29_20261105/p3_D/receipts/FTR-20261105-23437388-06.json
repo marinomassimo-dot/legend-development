@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-05T09:21:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T09:22:00Z",
+ "event_id": "FTR-20261105-23437388-06",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: vigabatrin (continuous) (favourable) on electrographic seizure frequency (video-EEG) in mice in Tsc1 GFAP-cre conditional knockout mouse (mTOR) | partial_fulltext (Abstract, Results) | \"almost completely suppressed seizures in Tsc1 GFAP CKO mice\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_D/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_D/evidence_it29_D.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC3577710 full-text XML fetched 2026-11-05 through Europe PMC REST fullTextXML; sections marked read were read through keyword-directed passages, figures not viewed, bytes not saved",
+ "study_id": {
+  "pmid": "23437388"
+ },
+ "workflow": "IT29 P3-D (phenotype_first_it29_20261105/p3_D, case 2: DEE-model pharmacology of network hyperexcitability). Question-driven reading; prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

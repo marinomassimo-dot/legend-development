@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-05T09:18:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "references": "not_read",
+  "supplementary": "unavailable"
+ },
+ "event_at": "2026-11-05T09:19:00Z",
+ "event_id": "FTR-20261105-22144101-06",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: ERK needed for early-to-late progenitor and immature OL transition, not immature to mature; mTOR needed for immature to mature, not earlier; rapamycin injection | B21 | \"inhibition of mTOR by rapamycin injection attenuated the onset of myelination in the early postnatal brain\"",
+  "verbatim_locator | proposition: no or only transient partial inhibition of differentiation, against inhibition by MEK inhibitors | B22 | \"no inhibition or only a transient and partial inhibition of OL progenitor differentiation was observed in mixed primary cortical cultures\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_B/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_B/evidence_it29_B.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC3265651 fetched 2026-11-05 through Europe PMC fullTextXML or NCBI efetch db=pmc (XML); Abstract and introduction read; results, discussion not read; one methods sentence on rapamycin dosing seen; bytes not saved",
+ "study_id": {
+  "doi": "10.1002/glia.22281",
+  "pmid": "22144101"
+ },
+ "workflow": "IT29 P3-B (phenotype_first_it29_20261105/p3_B, genetic and pathway perturbations of oligodendrocyte differentiation). Question-driven reading for direction of the endpoint; prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

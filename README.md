@@ -10,6 +10,10 @@ LEGEND turns fragmented knowledge into testable hypotheses, candidate interventi
 
 [https://marinomassimo-dot.github.io/legend-development/](https://marinomassimo-dot.github.io/legend-development/)
 
+[![First screen of the LEGEND dashboard: research priorities for WWOX-related encephalopathy, with the next test for each](disease-models/wwox/research/drug_repurposing/view/preview/dashboard_first_screen_1280px.png)](https://marinomassimo-dot.github.io/legend-development/)
+
+Explore the main research investigations and why they are a priority, the biology and mechanisms behind them, the compounds and interventions involved, and the evidence for and against each hypothesis. Available in English, Italian, French, Spanish and German. Research material, not medical advice.
+
 ## Drug repurposing
 
 LEGEND explores how existing medicines, OTC products, supplements, dietary approaches and other interventions could address disease-specific biological needs.

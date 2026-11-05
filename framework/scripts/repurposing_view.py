@@ -599,6 +599,28 @@ UI_IT = {
     "nav_label": "Sezioni",
     "nav_overview": "Panoramica", "nav_threads": "Filoni", "nav_charts": "Grafici", "nav_navigate": "Esplora", "nav_cards": "Schede",
     "nav_priority": "Priorità", "nav_compare": "Confronto", "nav_tech": "Dettagli tecnici",
+    "eg_detail_hint": "Seleziona un nodo (clic, Invio o Tab) per vederne le relazioni, la direzione, il tipo e le fonti.",
+    "eg_rel_in": "Riceve da",
+    "eg_rel_out": "Porta a",
+    "eg_rel_none": "Nessuna relazione registrata per questo nodo.",
+    "eg_node_cards": "Scheda",
+    "ft_found_link": "Ricerca della WWOX Foundation",
+    "eg_col_0": "Osservazione WWOX",
+    "eg_col_1": "Bisogno",
+    "eg_col_2": "Meccanismo",
+    "eg_col_3": "Intervento",
+    "eg_col_4": "Evidenza",
+    "eg_col_5": "Esperimento",
+    "brand": "LEGEND",
+    "brand_ctx": "Riposizionamento di farmaci · encefalopatia correlata a WWOX",
+    "brand_state": "Anteprima di ricerca in sviluppo",
+    "brand_state_title": "Le priorità sono curate e in revisione: indicano quale test discriminante vale la pena fare, non l'efficacia di un trattamento.",
+    "np_pri": "Priorità di ricerca",
+    "np_bio": "Biologia e meccanismi",
+    "np_cmp": "Composti e interventi",
+    "np_evi": "Evidenze e confronti",
+    "np_all": "Tutte le sezioni",
+    "iv_link": "Collegamento a questa indagine",
     "source_limited": "Alcune fonti hanno uno stato limitato",
     "source_limited_tail": "Un dato assente non è una conclusione sulla biologia.",
     "see_tech": "vedi i dettagli tecnici",
@@ -1259,6 +1281,11 @@ WORK_ORDER_NAME = "view/work_order.json"
 GRAPH_SCHEMA = "legend.wwox.evidence_graph/1"
 WORK_ORDER_SCHEMA = "legend.wwox.work_order/1"
 GRAPH_COLUMNS = ["osservazione WWOX", "bisogno", "meccanismo", "intervento", "evidenza", "esperimento"]
+
+
+def col_label(col: str) -> str:
+    """The column names are keys of the chain files (Italian, validated); the reader sees them in the page language."""
+    return UI_IT["eg_col_" + str(GRAPH_COLUMNS.index(col))]
 EDGE_TYPES = ["risultato sperimentale", "inferenza", "associazione"]
 EDGE_CODE = {"risultato sperimentale": "R", "inferenza": "I", "associazione": "A"}
 NODE_SCOPES = ("wwox", "wwox_other", "non_wwox", "computational", "proposed", "none")
@@ -3043,9 +3070,9 @@ TEMPLATE = """<!doctype html>
 <title>__TITLE__</title>__ROBOTS____ALT__
 <style>__CSS__</style></head><body>
 <a class="skip" href="#main">__SKIP__</a>
-<header><div class="in"><h1>__H1__</h1>
+<header><div class="in"><p class="brand"><span class="brand-name">__BRAND__</span><span class="brand-ctx">__BRAND_CTX__</span><span class="brand-state" title="__BRAND_STATE_T__">__BRAND_STATE__</span></p><h1>__H1__</h1>
 <p class="subline">__SUB__</p>__LANGNAV__</div></header>__LANGNOTE__
-__BANNER__<nav aria-label="__NAVLABEL__"><div class="in"><a href="#overview">__N_OV__</a><a href="#start">__N_QK__</a><a href="#explore">__N_XP__</a><a href="#funnel-it20">__N_FU__</a><a href="#ranking">__N_RK__</a><a href="#threads">__N_TH__</a><a href="#chains">__N_EG__</a><a href="#charts">__N_CH__</a><a href="#selection">__N_SE__</a><a href="#hypotheses">__N_HY__</a><a href="#predictive">__N_PR2__</a><a href="#navigate">__N_NAV__</a><a href="#candidates">__N_CA__</a><a href="#priorities-cur">__N_PR__</a><a href="#compare">__N_CP__</a><a href="#technical">__N_TD__</a></div></nav>
+__BANNER__<nav aria-label="__NAVLABEL__"><div class="in navmain"><a href="#investigations">__NP_PRI__</a><a href="#threads">__NP_BIO__</a><a href="#navigate">__NP_CMP__</a><a href="#compare">__NP_EVI__</a><details class="navall"><summary>__NP_ALL__</summary><div class="navall-in"><a href="#overview">__N_OV__</a><a href="#start">__N_QK__</a><a href="#explore">__N_XP__</a><a href="#funnel-it20">__N_FU__</a><a href="#ranking">__N_RK__</a><a href="#threads">__N_TH__</a><a href="#chains">__N_EG__</a><a href="#charts">__N_CH__</a><a href="#selection">__N_SE__</a><a href="#hypotheses">__N_HY__</a><a href="#predictive">__N_PR2__</a><a href="#navigate">__N_NAV__</a><a href="#candidates">__N_CA__</a><a href="#priorities-cur">__N_PR__</a><a href="#compare">__N_CP__</a><a href="#technical">__N_TD__</a></div></details></div></nav>
 <main id="main">
 __CURATED__
 <details id="technical" class="techwrap"><summary class="techsum">__TD_SUM__</summary>
@@ -3212,7 +3239,8 @@ def render_overview(P: dict) -> str:
         f'<div class="legendrow" role="group" aria-label="{E(U["legend_h"])}"><b>{E(U["legend_h"])}:</b> {legend}</div>'
         f'<p class="lead">{E(U["ov_lead"])} <span class="mini mut">{E(U["need_gloss"])}</span></p>'
         f'<div class="warnstrip" role="note"><b>{E(U["warn_h"])}.</b> {E(U["warn_1"])} {E(U["warn_2"])}</div>'
-        + render_investigations(P) + render_quick(P) +
+        + render_investigations(P)
+        + render_quick(P) +
         f'<details class="inl howto"><summary>{E(U["qk_more"])}</summary>' + META_LINE + f'<div class="twocol"><div class="how"><h3>{E(U["how_h"])}</h3><ol><li>{E(U["how_1"])}</li><li>{E(U["how_2"])}</li><li>{E(U["how_3"])}</li><li>{E(U["how_4"])}</li></ol><p class="mini">{E(U["warn_3"])}</p></div>'
         f'<div class="legendbox"><p class="mini mut">{E(U["legend_note"])}</p><ul class="poslist">{legend_all}</ul></div></div></details>'
         f'<h3 id="threads">{E(U["th_h"])}</h3><p class="mini mut">{E(U["th_note"])}</p><div class="threads">' + "".join(cards) + '</div>'
@@ -3260,7 +3288,7 @@ def render_chain_svg(ch: dict) -> str:
              f'<title id="eg-t-{cid}">{E(ch["title"])}</title><title id="eg-d-{cid}">{E(U["eg_svg_desc"].format(n=len(ch["nodes"]), m=len(ch["edges"])))}</title>'
              f'<defs><marker id="eg-ar-{cid}" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path class="eg-ar" d="M0,0 L8,4 L0,8 z"/></marker></defs>']
     for ci, c in enumerate(GRAPH_COLUMNS):
-        parts.append(f'<text class="eg-ch" x="{EG_PADX + ci * EG_PITCH}" y="{EG_HEADH - 10}">{E(c)}</text>')
+        parts.append(f'<text class="eg-ch" x="{EG_PADX + ci * EG_PITCH}" y="{EG_HEADH - 10}">{E(col_label(c))}</text>')
     for e in ch["edges"]:
         a, b = boxes[e["from"]], boxes[e["to"]]
         x1, y1, x2, y2 = a["x"] + a["w"], a["y"] + a["h"] / 2, b["x"] - 2, b["y"] + b["h"] / 2
@@ -3274,7 +3302,9 @@ def render_chain_svg(ch: dict) -> str:
         ty = bx["y"] + EG_PADY + EG_LINEH * len(bx["lines"])
         txt += "".join(f'<tspan class="tag" x="{bx["x"] + 6}" y="{ty + (EG_LINEH - 1) * (i + 1) - 2}">{E(t)}</tspan>' for i, t in enumerate(bx["tag"]))
         cls = f'eg-n sc-{E(n["scope"])}' + (" unres" if n["unresolved"] else "")
-        body = f'<g class="{cls}" data-node="{E(nid)}" data-col="{E(n["col"])}"><rect x="{bx["x"]}" y="{bx["y"]}" width="{bx["w"]}" height="{bx["h"]}" rx="5"/><text>{txt}</text></g>'
+        nlabel = f'{n["label"]}. {col_label(n["col"])}. {U.get("eg_scope_" + n["scope"], "")}' + (f'. {U["eg_unres"]}' if n["unresolved"] else "")
+        focus = "" if n["cards"] else ' tabindex="0"'
+        body = f'<g class="{cls}" data-node="{E(nid)}" data-col="{E(n["col"])}" role="group" aria-label="{E(nlabel)}"{focus}><rect x="{bx["x"]}" y="{bx["y"]}" width="{bx["w"]}" height="{bx["h"]}" rx="5"/><text>{txt}</text></g>'
         if n["cards"]:
             body = f'<a href="#cand-{E(n["cards"][0])}" data-open="{E(n["cards"][0])}"><title>{E(U["eg_open_card"])}: {E(n["cards"][0])}</title>{body}</a>'
         parts.append(body)
@@ -3294,12 +3324,12 @@ def render_evidence_graph(P: dict) -> str:
     for ch in eg["chains"]:
         nm = {n["id"]: n for n in ch["nodes"]}
         rows = "".join(
-            f'<tr><td>{E(nm[e["from"]]["label"])}<div class="mut">{E(nm[e["from"]]["col"])}</div></td><td>{E(nm[e["to"]]["label"])}<div class="mut">{E(nm[e["to"]]["col"])}</div></td>'
+            f'<tr><td>{E(nm[e["from"]]["label"])}<div class="mut">{E(col_label(nm[e["from"]]["col"]))}</div></td><td>{E(nm[e["to"]]["label"])}<div class="mut">{E(col_label(nm[e["to"]]["col"]))}</div></td>'
             f'<td><b>{E(e["type"])}</b> <span class="mut">({EDGE_CODE[e["type"]]})</span></td><td>{E(e["src"]["label"])}' + (f' <span class="mut">{E(e["src"]["title"])}</span>' if e["src"]["title"] else "") + f'</td><td>{E(e["note"])}</td></tr>'
             for e in ch["edges"])
         out.append(
             f'<article class="chain" id="chain-{E(ch["id"])}" data-chain="{E(ch["id"])}" data-state="{E(ch["state"])}"><h3>{E(ch["title"])} <span class="grp {"c1" if ch["state"] == "non risolto" else "p1"}">{E(U["eg_state_" + ch["state"].replace(" ", "_")])}</span></h3>'
-            f'<p class="mini">{E(ch["question"])}</p><p class="mini eg-cue">{E(U["eg_cue"])}</p><div class="eg-fig" tabindex="0" role="group" aria-label="{E(ch["title"])}">{render_chain_svg(ch)}</div>'
+            f'<p class="mini">{E(ch["question"])}</p><p class="mini eg-cue">{E(U["eg_cue"])}</p><div class="eg-fig" tabindex="0" role="group" aria-label="{E(ch["title"])}">{render_chain_svg(ch)}</div><div class="eg-detail" aria-live="polite"><p class="mini mut">{E(U["eg_detail_hint"])}</p></div>'
             f'<details class="inl"><summary>{E(U["eg_table_sum"])} ({len(ch["edges"])})</summary><table class="tbl"><thead><tr><th>{E(U["eg_th_from"])}</th><th>{E(U["eg_th_to"])}</th><th>{E(U["eg_th_type"])}</th><th>{E(U["eg_th_src"])}</th><th>{E(U["eg_th_note"])}</th></tr></thead><tbody>{rows}</tbody></table></details></article>')
     out.append("</section>")
     return "".join(out)
@@ -3377,7 +3407,7 @@ def render_work_order(P: dict) -> str:
             f'<div class="wo-meta"><span class="chip wo-k wo-k-{kcls[e["kind"]]}" title="{E(U["wo_kind"])}">{E(U["wo_kind"])}: <b>{E(e["kind"])}</b></span> <span class="mini mut">{E(U["wo_pos"])}:</span> {pos}</div>'
             f'<p class="wo-sum"><b>{E(U["wo_brief"])}.</b> {E(e["summary_it"])}</p><p class="wo-q"><b>{E(U["wo_q"])}.</b> {E(e["question"])}</p>{fig}{win}'
             f'<details class="inl"><summary>{E(U["wo_more"])}</summary><dl class="wo-dl"><dt>{E(U["wo_data"])}</dt><dd>{E(e["data"])}</dd><dt>{E(U["wo_change"])}</dt><dd>{E(e["would_change"])}</dd>'
-            f'<dt>{E(U["wo_feas"])}</dt><dd class="wo-feas"><b>{E(e["feasibility_it"])}</b><br>{E(e["feasibility"])}</dd><dt>{E(U["wo_date"])}</dt><dd>{E(e["date"])}</dd>{upd}<dt>{E(U["wo_cards"])}</dt><dd>{cards}</dd></dl>'
+            f'<dt>{E(U["wo_feas"])}</dt><dd class="wo-feas"><b>{lxi(e["feasibility_it"])}</b><br>{E(e["feasibility"])}</dd><dt>{E(U["wo_date"])}</dt><dd>{E(e["date"])}</dd>{upd}<dt>{E(U["wo_cards"])}</dt><dd>{cards}</dd></dl>'
             f'<p class="mini mut">{E(U["wo_text_en"])}</p></details></article>')
     return (f'<div id="work-order" class="wo-wrap"><h3>{E(U["wo_h"])}</h3><p class="note">{E(U["wo_note"])}</p>'
             f'<p class="meta-line"><b>{E(U["wo_update"])}:</b> <span data-k="cur.work_order_date" data-v="{E(wo["research_update"])}">{E(wo["research_update"])}</span> · <b>{E(U["wo_catalogue"])}:</b> <span data-k="cur.catalogue_generated" data-v="{E(cat)}">{E(cat)}</span> <span class="mini mut">({E(U["wo_dates_note"])})</span></p>'
@@ -3494,7 +3524,7 @@ def render_predictive(P: dict) -> str:
     vrows = []
     for vi, v in enumerate(pr["verdicts"]):
         nums = "; ".join(f'{E(n["id"])} <b data-k="pred.v{vi}.{ni}" data-v="{n["value"]}">{E(dec_it(n["value"], n["digits"]))}</b>' for ni, n in enumerate(v["numbers"]))
-        vrows.append(f'<tr data-verdict="{E(v["verdict"])}"><td data-label="{E(U["pred_c_cmp"])}">{E(v["comparison_it"])}</td><td data-label="{E(U["pred_c_verdict"])}"><span class="chip vd vd-{E(v["verdict"])}">{E(U["pred_v_" + v["verdict"]])}</span></td><td data-label="{E(U["pred_c_num"])}">{nums}</td><td class="mini" data-label="{E(U["pred_c_reopen"])}">{E(v["reopen_it"])}</td></tr>')
+        vrows.append(f'<tr data-verdict="{E(v["verdict"])}"><td data-label="{E(U["pred_c_cmp"])}">{lxi(v["comparison_it"])}</td><td data-label="{E(U["pred_c_verdict"])}"><span class="chip vd vd-{E(v["verdict"])}">{E(U["pred_v_" + v["verdict"]])}</span></td><td data-label="{E(U["pred_c_num"])}">{nums}</td><td class="mini" data-label="{E(U["pred_c_reopen"])}">{E(v["reopen_it"])}</td></tr>')
     meths = "".join(f'<li><b>{E(m["id"])}</b> {E(m["it"])}</li>' for m in pr["methods"])
     uni = pr["universe"]
     uni_txt = (f'<b data-k="pred.universe" data-v="{uni["families"]}">{E(fmt_it(uni["families"]))}</b> ' + E(U["pred_universe_txt"].format(s=fmt_it(uni["signatures"]), p=fmt_it(uni["pilot_families"]), c=fmt_it(uni["catalogue_families"]))))
@@ -3502,13 +3532,13 @@ def render_predictive(P: dict) -> str:
     crow = []
     for r in cx["rows"]:
         lab = lambda k: E(U[k])
-        crow.append(f'<tr data-q="{E(r["id"])}" data-verdict="{E(r["verdict"])}"><th scope="row">{E(r["quantity_it"])}<div class="mini mut">{E(r["id"])} · {E(r["note_it"])}</div></th>'
+        crow.append(f'<tr data-q="{E(r["id"])}" data-verdict="{E(r["verdict"])}"><th scope="row">{lxi(r["quantity_it"])}<div class="mini mut">{E(r["id"])} · {lxi(r["note_it"])}</div></th>'
                     f'<td data-label="{lab("ctx_c_hi")}">{numit("ctx." + r["id"] + ".higher", r["higher"])}</td><td data-label="{lab("ctx_c_lo")}">{numit("ctx." + r["id"] + ".lower", r["lower"])}</td>'
                     f'<td data-label="{lab("ctx_c_ns")}">{numit("ctx." + r["id"] + ".other", r["other"])}</td><td data-label="{lab("ctx_c_unk")}">{numit("ctx." + r["id"] + ".unknown", r["unknown"])}</td>'
                     f'<td data-label="{lab("ctx_c_models")}">{numit("ctx." + r["id"] + ".models", r["models_resolved"])} / {numit("ctx." + r["id"] + ".measured", r["models_measured"])}</td>'
                     f'<td data-label="{lab("ctx_c_verdict")}"><span class="chip vd vd-{E(r["verdict"])}">{E(U["ctx_v_" + r["verdict"]])}</span></td></tr>')
     heads = "".join(f"<th>{E(c)}</th>" for c in cx["context_ids"])
-    wide = "".join(f'<tr><th scope="row">{E(r["quantity_it"])}<div class="mini mut">{E(r["id"])}</div></th>' + "".join(f"<td>{E(U['ctx_d_' + d])}</td>" for d in r["directions"]) + "</tr>" for r in cx["rows"])
+    wide = "".join(f'<tr><th scope="row">{lxi(r["quantity_it"])}<div class="mini mut">{E(r["id"])}</div></th>' + "".join(f"<td>{E(U['ctx_d_' + d])}</td>" for d in r["directions"]) + "</tr>" for r in cx["rows"])
     mod = "; ".join(f'{E(c)}: {lxi(cx["model_labels_it"][cx["models_of"][c]])}' for c in cx["context_ids"])
     facts = U["ctx_facts"].format(cells=f'<b data-k="ctx.cells" data-v="{cx["cells"]}">{fmt_it(cx["cells"])}</b>', contexts=f'<b data-k="ctx.contexts" data-v="{cx["contexts"]}">{cx["contexts"]}</b>',
                                   quantities=f'<b data-k="ctx.quantities" data-v="{cx["quantities"]}">{cx["quantities"]}</b>', measured=f'<b data-k="ctx.measured" data-v="{cx["measured"]}">{cx["measured"]}</b>',
@@ -3517,7 +3547,7 @@ def render_predictive(P: dict) -> str:
             f'<dl class="pred-dl"><dt>{E(U["pred_q"])}</dt><dd>{E(pr["question_it"])}</dd><dt>{E(U["pred_methods"])}</dt><dd><ul class="mini">{meths}</ul></dd>'
             f'<dt>{E(U["pred_prereg"])}</dt><dd>{E(U["pred_prereg_txt"])}</dd><dt>{E(U["pred_universe"])}</dt><dd>{uni_txt}</dd><dt>{E(U["pred_threshold"])}</dt><dd>{thr}</dd></dl>'
             f'<h3>{E(U["pred_verdict_h"])}</h3><div class="scrollx"><table class="tbl pred-t stk"><thead><tr><th>{E(U["pred_c_cmp"])}</th><th>{E(U["pred_c_verdict"])}</th><th>{E(U["pred_c_num"])}</th><th>{E(U["pred_c_reopen"])}</th></tr></thead><tbody>{"".join(vrows)}</tbody></table></div>'
-            f'<h3>{E(U["pred_limits_h"])}</h3><ul class="mini">{"".join("<li>" + E(x) + "</li>" for x in pr["limits_it"])}</ul><p class="mini"><b>{E(U["sel_warn_prob"])}</b></p>'
+            f'<h3>{E(U["pred_limits_h"])}</h3><ul class="mini">{"".join("<li>" + lxi(x) + "</li>" for x in pr["limits_it"])}</ul><p class="mini"><b>{E(U["sel_warn_prob"])}</b></p>'
             f'<h2 id="contexts">{E(U["ctx_h"])}</h2><p class="lead">{E(U["ctx_lead"])}</p><p>{facts}</p><div class="note"><b>{E(U["ctx_no_subgroup"])}</b></div><p class="mini mut">{E(U["ctx_def"])}</p>'
             f'<div class="scrollx"><table class="tbl ctx-t stk"><thead><tr><th>{E(U["ctx_c_q"])}</th><th>{E(U["ctx_c_hi"])}</th><th>{E(U["ctx_c_lo"])}</th><th>{E(U["ctx_c_ns"])}</th><th>{E(U["ctx_c_unk"])}</th><th>{E(U["ctx_c_models"])}</th><th>{E(U["ctx_c_verdict"])}</th></tr></thead><tbody>{"".join(crow)}</tbody></table></div>'
             f'<details class="inl"><summary>{E(U["ctx_full"])}</summary><p class="mini mut">{E(U["ctx_models_h"])}: {mod}</p><div class="scrollx"><table class="tbl"><thead><tr><th></th>{heads}</tr></thead><tbody>{wide}</tbody></table></div></details>'
@@ -3629,6 +3659,9 @@ def render_charts(P: dict) -> str:
     return "".join(out)
 
 
+WWOX_FOUNDATION_RESEARCH_URL = "https://www.wwox.org/current-research"
+
+
 def render_footer(P: dict) -> str:
     U = UI_IT
     ft = P["cur"]["footer"]
@@ -3655,6 +3688,7 @@ def render_footer(P: dict) -> str:
             h.append(f'<li><b>{E(e["label"])}</b>: {E(str(e.get("licence") or ""))}. {E(str(e.get("credit") or ""))}. {E(U["ft_classb_where"])} <code>{E(str(e.get("path") or ""))}</code></li>')
         h.append("</ul>")
     h.append(f'<p class="mini">{E(U["ft_ids"])}</p>')
+    h.append(f'<p class="mini foundation"><a href="{WWOX_FOUNDATION_RESEARCH_URL}" rel="noopener noreferrer">{E(U["ft_found_link"])}</a></p>')
     return "".join(h)
 
 
@@ -4451,9 +4485,10 @@ def render_investigations(P: dict) -> str:
             dl += f'<dt>{E(U["iv_h_chembl"])}</dt><dd><span class="mini">{E(", ".join(ids))}</span> <span class="mini mut">({E(note)})</span></dd>'
         st = r.get("status")
         badge = f' <span class="stt stt-{E(st)}">{E(U["iv_st_" + st])}</span>' if st in ("carded_thread", "premise_measurement", "conditional_hypothesis") else ""
-        items.append(f'<li class="inv-row" data-rank="{E(str(r["position"]))}" data-origin="{E(r["origin_class"])}"' + (f' data-status="{E(st)}"' if st else "") +
+        n_row = len(items) + 1
+        items.append(f'<li class="inv-row" id="inv-{n_row}" data-rank="{E(str(r["position"]))}" data-origin="{E(r["origin_class"])}"' + (f' data-status="{E(st)}"' if st else "") +
                      f'><div class="inv-h"><span class="inv-pos" aria-label="{E(U["iv_pos"])} {E(str(r["position"]))}">{E(str(r["position"]))}</span>{tie} '
-                     f'{lx(r["intervention"], "b")} <span class="org org-{E(r["origin_class"])}">{E(U["iv_o_" + r["origin_class"]])}</span>{badge}</div>'
+                     f'{lx(r["intervention"], "b")} <span class="org org-{E(r["origin_class"])}">{E(U["iv_o_" + r["origin_class"]])}</span>{badge}<a class="plink" href="#inv-{n_row}" aria-label="{E(U["iv_link"])}" title="{E(U["iv_link"])}">#</a></div>'
                      f'<dl class="qk-dl inv-glance">{gl}</dl><details class="inv-more"><summary>{E(U["iv_more"])}</summary><dl class="qk-dl">{dl}</dl></details></li>')
     out = head + f'<p class="lead inv-purpose"><b>{E(U["iv_purpose"])}</b></p><p class="mini mut">{E(U["iv_lead"])}</p>'
     if ctx:
@@ -5106,7 +5141,7 @@ def render(P: dict, dr: Path = DEFAULT_DR) -> str:
     cur_html = cur_html.replace("__OVERVIEW__", render_overview(P)).replace("__GRAPH__", render_evidence_graph(P)).replace("__WORKORDER__", render_work_order(P)).replace("__SELECTION__", render_selection(P)).replace("__HYPOTHESES__", render_hypotheses(P)).replace("__PREDICTIVE__", render_predictive(P)).replace("__CHARTS__", render_charts(P)).replace("__RANKING__", render_ranking(P)).replace("__EXPLORE__", render_explore(P)).replace("__FUNNEL20__", render_funnel18(P)).replace("__RANKPRINT__", render_ranking_onepage(P))
     page = page.replace("__CSS__", CSS + read_asset(dr, "curated.css")).replace("__JS__", JS).replace("__CJS__", read_asset(dr, "curated.js"))
     page = page.replace("__CURATED__", cur_html).replace("__FOOTER__", render_footer(P))
-    for k, key in (("TITLE", "page_title"), ("SKIP", "skip"), ("H1", "h1"), ("SUB", "sub"), ("NAVLABEL", "nav_label"), ("N_OV", "nav_overview"), ("N_QK", "nav_start"), ("N_XP", "nav_explore"), ("N_FU", "nav_funnel"), ("N_RK", "nav_ranking"), ("N_TH", "nav_threads"), ("N_EG", "nav_chains"), ("N_CH", "nav_charts"), ("N_SE", "nav_selection"), ("N_HY", "nav_hyp"), ("N_PR2", "nav_pred"), ("N_NAV", "nav_navigate"),
+    for k, key in (("TITLE", "page_title"), ("SKIP", "skip"), ("H1", "h1"), ("SUB", "sub"), ("BRAND", "brand"), ("BRAND_CTX", "brand_ctx"), ("BRAND_STATE", "brand_state"), ("BRAND_STATE_T", "brand_state_title"), ("NP_PRI", "np_pri"), ("NP_BIO", "np_bio"), ("NP_CMP", "np_cmp"), ("NP_EVI", "np_evi"), ("NP_ALL", "np_all"), ("NAVLABEL", "nav_label"), ("N_OV", "nav_overview"), ("N_QK", "nav_start"), ("N_XP", "nav_explore"), ("N_FU", "nav_funnel"), ("N_RK", "nav_ranking"), ("N_TH", "nav_threads"), ("N_EG", "nav_chains"), ("N_CH", "nav_charts"), ("N_SE", "nav_selection"), ("N_HY", "nav_hyp"), ("N_PR2", "nav_pred"), ("N_NAV", "nav_navigate"),
                    ("N_CA", "nav_cards"), ("N_PR", "nav_priority"), ("N_CP", "nav_compare"), ("N_TD", "nav_tech"), ("TD_SUM", "td_sum"), ("TD_NOTE", "td_note")):
         page = page.replace(f"__{k}__", E(U[key]))
     page = page.replace("__BANNER__", render_banner(P))

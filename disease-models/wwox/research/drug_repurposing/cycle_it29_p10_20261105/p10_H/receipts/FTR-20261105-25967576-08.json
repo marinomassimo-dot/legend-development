@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-05T09:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T09:53:00Z",
+ "event_id": "FTR-20261105-25967576-08",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: stroke nuclear HDAC4 shuttling is neuronal, not oligodendroglial | Abstract | \"Stroke significantly increased nuclear HDAC4 immunoreactivity in neurons, but not in astrocytes or in oligodendrocytes\"",
+  "verbatim_locator | proposition: nuclear HDAC4 correlates with MBP density | Results | \"nuclear HDAC4 immunoreactivity after stroke was significantly correlated to an increase in density of MAP-2 ( C ), p-NFH ( D ) and MBP ( D ) immunoreactivity\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/cycle_it29_p10_20261105/p10_H/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC4480163 via NCBI E-utilities efetch db=pmc (XML), Europe PMC metadata, fetched 2026-11-05; only the sections marked read in coverage were read, and for those by targeted passage search plus reading of the quoted passages; figures and tables not read; bytes not saved in the repository",
+ "study_id": {
+  "doi": null,
+  "pmid": "25967576"
+ },
+ "workflow": "IT29 P10 Scientist H (cycle_it29_p10_20261105, challenge CH-IT29-CLASSIIA-CNS-MYELIN). Neuron/axon route and adversarial search for a favourable or neutral class IIa sign. Draft for the integrator; the ledger was not written by the preparing actor."
+}

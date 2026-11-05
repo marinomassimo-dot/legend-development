@@ -1300,7 +1300,7 @@
    "intervention": "T-type calcium blockade, proposed isoform-reach set to verify (efonidipine, flunarizine, against the carded T-type agents)",
    "inv_id": "INV-03",
    "it20_rank": "2",
-   "movement_reason": "position unchanged from IT20 (rank 2): No IT21 input changes the position. The row text was corrected in IT21 P1 (the pair is a proposal to verify, not a documented discriminating pair).",
+   "movement_reason": "position unchanged from IT20 (rank 2): No IT21 input changes the position. The row text was corrected in IT21 P1 (the pair is a proposal to verify, not a documented discriminating pair). IT29: in other models the sign of several channel-agent classes flips with the lesion class; a discriminating challenge in the WWOX slice preparation would separate an inhibition-loss-like from an excitatory-gain-like network.",
    "need_direction": "down",
    "need_id": "NEED-T-TYPE-CALCIUM",
    "need_short": "Ethosuximide sensitivity of provoked seizure in Wwox loss",
@@ -1337,7 +1337,7 @@
    "intervention": "Ethosuximide (and the carded T-type thread)",
    "inv_id": "INV-04",
    "it20_rank": "2",
-   "movement_reason": "position unchanged from IT20 (rank 2): No IT21 input changes the position.",
+   "movement_reason": "position unchanged from IT20 (rank 2): No IT21 input changes the position. IT29: epilepsy-model screens in other genotypes give no corroboration for this agent (absence of corroboration is not refutation); the position rests on the single pup experiment.",
    "need_direction": "down",
    "need_id": "NEED-T-TYPE-CALCIUM",
    "need_short": "Ethosuximide sensitivity of provoked seizure in Wwox loss",
@@ -1402,20 +1402,20 @@
    "below_the_line": "",
    "below_the_line_reason": "",
    "chembl_ids": "",
-   "decisive_uncertainty": "Whether the neuron still emits the activity-dependent signal that a pro-myelinating agent would amplify. If it does not, the whole class is not a lever here regardless of its pharmacology.",
+   "decisive_uncertainty": "Whether the neuron still emits the activity-dependent signal that a pro-myelinating agent would amplify. If it does not, the whole class is not a lever here regardless of its pharmacology. IT29: even where an intrinsic route works, whether it acts when the lesion is neuronal is untested.",
    "direction_state": "unresolved",
    "direction_state_label": "the need's own direction is uncertain: no lever on it can be qualified either way, which is a visible gap and not a negative finding",
-   "evidence_available": "WWOX-system: the myelin deficit is partly prevented when WWOX is restored in neurons in the neonatal window; the treated arms of the source are unquantified, and whether an established deficit re-myelinates is unmeasured.",
+   "evidence_available": "WWOX-system: the myelin deficit is partly prevented when WWOX is restored in neurons in the neonatal window; the treated arms of the source are unquantified, and whether an established deficit re-myelinates is unmeasured. IT29: perturbation evidence from other systems signs several intrinsic precursor-differentiation routes (muscarinic-receptor, lipid-synthesis, thyroid- and RXR-type receptor) in wild-type or injury settings and none in a neuron-driven hypomyelination model; HDAC3 loss is adverse for maturation; an independent screen disagrees with some signs.",
    "evidence_depth": "E2 - card reviewed, abstention (premise named, no test designed)",
    "feasibility": "A measurement in an existing system; no compound and no new model.",
    "intervention": "Pro-myelinating agents (class)",
    "inv_id": "INV-06",
    "it20_rank": "3",
-   "movement_reason": "position unchanged from IT20 (rank 3): No IT21 input changes the position. The thyroid-hormone probe row asks the receptor-responsiveness question on the same axis; the two are not merged because one measures the neuron's signal and the other the precursor cell's response.",
+   "movement_reason": "position unchanged from IT20 (rank 3): No IT21 input changes the position. The thyroid-hormone probe row asks the receptor-responsiveness question on the same axis; the two are not merged because one measures the neuron's signal and the other the precursor cell's response. IT29 (phenotype-first table): position unchanged; the added evidence is transferred from non-WWOX systems and conditional.",
    "need_direction": "restore",
    "need_id": "NEED-MYELINATION",
    "need_short": "Hypomyelination",
-   "next_test": "Measure the axonal activity-dependent myelination signal in the WWOX-deficient system against an isogenic control, before any compound; then decide whether the class is orderable.",
+   "next_test": "Measure the axonal activity-dependent myelination signal in the WWOX-deficient system against an isogenic control, before any compound; then decide whether the class is orderable. IT29: add an arm in Wwox-null precursor monoculture or the Wwox-null neuron co-culture, with a lipid-synthesis comparator beside the muscarinic one, crossed with a neuronal-activity manipulation.",
    "novelty_perimeter": "Queried: this need's three observation rows; the pro-myelinating class unit and its abstention; the search layer over the six myelination targets (546 associations, 313 families, none direction-coherent). The emptiness is a vocabulary mismatch this package measured, not a claim that no pro-myelinating literature exists.",
    "objective": "partial",
    "origin_class": "generated_by_legend",
@@ -5096,7 +5096,7 @@
    "next_experiment_or_control": "Does the ethosuximide sensitivity reflect T-type involvement, given that no T-type measurement exists and a class-level progenitor-viability harm signal is recorded?",
    "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
    "next_experiment_stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)",
-   "notes": "the one outside-WWOX harm row is class-level (other T-type blockers lowered progenitor viability; ethosuximide was not tested), not ethosuximide data | Graph coverage (IT11 P2.1): the generation graph has no way to speak about this molecule: its signed targets (the T-type channel genes CACNA1G, CACNA1H, CACNA1I) are sink or isolated nodes of the signed network, so no seed set can reach them. The absence of a graph row is not evidence about ethosuximide, and the lead was a development input of the phenotype-first path, not an independent validation of the graph. | IT28 (compare_it28_p9_20261105): the added value over the untreated control is an interaction-tested late-phase effect only; the comparison that would attribute an effect to T-type block is one specificity design (both genotypes treated, concurrent control, drug-by-genotype term) and then a single attribution arm, either a nanomolar pan-Cav3 blocker with measured brain exposure or a Cacna1g occlusion arm. A second antiseizure agent serves as a nonspecificity reference only; its sign in a Wwox pup assay is UNKNOWN.",
+   "notes": "the one outside-WWOX harm row is class-level (other T-type blockers lowered progenitor viability; ethosuximide was not tested), not ethosuximide data | Graph coverage (IT11 P2.1): the generation graph has no way to speak about this molecule: its signed targets (the T-type channel genes CACNA1G, CACNA1H, CACNA1I) are sink or isolated nodes of the signed network, so no seed set can reach them. The absence of a graph row is not evidence about ethosuximide, and the lead was a development input of the phenotype-first path, not an independent validation of the graph. | IT28 (compare_it28_p9_20261105): the added value over the untreated control is an interaction-tested late-phase effect only; the comparison that would attribute an effect to T-type block is one specificity design (both genotypes treated, concurrent control, drug-by-genotype term) and then a single attribution arm, either a nanomolar pan-Cav3 blocker with measured brain exposure or a Cacna1g occlusion arm. A second antiseizure agent serves as a nonspecificity reference only; its sign in a Wwox pup assay is UNKNOWN. | IT29 (phenotype_first_it29_20261105/case2_lesion_conditional_it29.tsv): no corroboration in epilepsy-model screens of other genotypes; the T-type thread keeps its place on the single pup experiment",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
    "pathways_needs": "Seizure and spasm control as a symptom-level need [F2; effect_observed_in_wwox_system]; Ethosuximide sensitivity of provoked seizure in Wwox loss [F2; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
@@ -5466,7 +5466,7 @@
    "next_experiment_or_control": "Does the ethosuximide sensitivity reflect T-type involvement, given that no T-type measurement exists and a class-level progenitor-viability harm signal is recorded?",
    "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
    "next_experiment_stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)",
-   "notes": "the one outside-WWOX harm row is class-level (other T-type blockers lowered progenitor viability; ethosuximide was not tested), not ethosuximide data | Graph coverage (IT11 P2.1): the generation graph has no way to speak about this molecule: its signed targets (the T-type channel genes CACNA1G, CACNA1H, CACNA1I) are sink or isolated nodes of the signed network, so no seed set can reach them. The absence of a graph row is not evidence about ethosuximide, and the lead was a development input of the phenotype-first path, not an independent validation of the graph. | IT28 (compare_it28_p9_20261105): the added value over the untreated control is an interaction-tested late-phase effect only; the comparison that would attribute an effect to T-type block is one specificity design (both genotypes treated, concurrent control, drug-by-genotype term) and then a single attribution arm, either a nanomolar pan-Cav3 blocker with measured brain exposure or a Cacna1g occlusion arm. A second antiseizure agent serves as a nonspecificity reference only; its sign in a Wwox pup assay is UNKNOWN.",
+   "notes": "the one outside-WWOX harm row is class-level (other T-type blockers lowered progenitor viability; ethosuximide was not tested), not ethosuximide data | Graph coverage (IT11 P2.1): the generation graph has no way to speak about this molecule: its signed targets (the T-type channel genes CACNA1G, CACNA1H, CACNA1I) are sink or isolated nodes of the signed network, so no seed set can reach them. The absence of a graph row is not evidence about ethosuximide, and the lead was a development input of the phenotype-first path, not an independent validation of the graph. | IT28 (compare_it28_p9_20261105): the added value over the untreated control is an interaction-tested late-phase effect only; the comparison that would attribute an effect to T-type block is one specificity design (both genotypes treated, concurrent control, drug-by-genotype term) and then a single attribution arm, either a nanomolar pan-Cav3 blocker with measured brain exposure or a Cacna1g occlusion arm. A second antiseizure agent serves as a nonspecificity reference only; its sign in a Wwox pup assay is UNKNOWN. | IT29 (phenotype_first_it29_20261105/case2_lesion_conditional_it29.tsv): no corroboration in epilepsy-model screens of other genotypes; the T-type thread keeps its place on the single pup experiment",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
    "pathways_needs": "Seizure and spasm control as a symptom-level need [F2; effect_observed_in_wwox_system]; Ethosuximide sensitivity of provoked seizure in Wwox loss [F2; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
@@ -5867,7 +5867,7 @@
     "source_artefacts.tsv": "efd24d2cf8eb3fdb",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
-   "receipt_ledger_lines": 1103
+   "receipt_ledger_lines": 1178
   },
   "inventory": {
    "all_families_by_access_category": {
@@ -11600,7 +11600,8 @@
     "note": [
      "the one outside-WWOX harm row is class-level (other T-type blockers lowered progenitor viability; ethosuximide was not tested), not ethosuximide data",
      "Graph coverage (IT11 P2.1): the generation graph has no way to speak about this molecule: its signed targets (the T-type channel genes CACNA1G, CACNA1H, CACNA1I) are sink or isolated nodes of the signed network, so no seed set can reach them. The absence of a graph row is not evidence about ethosuximide, and the lead was a development input of the phenotype-first path, not an independent validation of the graph.",
-     "IT28 (compare_it28_p9_20261105): the added value over the untreated control is an interaction-tested late-phase effect only; the comparison that would attribute an effect to T-type block is one specificity design (both genotypes treated, concurrent control, drug-by-genotype term) and then a single attribution arm, either a nanomolar pan-Cav3 blocker with measured brain exposure or a Cacna1g occlusion arm. A second antiseizure agent serves as a nonspecificity reference only; its sign in a Wwox pup assay is UNKNOWN."
+     "IT28 (compare_it28_p9_20261105): the added value over the untreated control is an interaction-tested late-phase effect only; the comparison that would attribute an effect to T-type block is one specificity design (both genotypes treated, concurrent control, drug-by-genotype term) and then a single attribution arm, either a nanomolar pan-Cav3 blocker with measured brain exposure or a Cacna1g occlusion arm. A second antiseizure agent serves as a nonspecificity reference only; its sign in a Wwox pup assay is UNKNOWN.",
+     "IT29 (phenotype_first_it29_20261105/case2_lesion_conditional_it29.tsv): no corroboration in epilepsy-model screens of other genotypes; the T-type thread keeps its place on the single pup experiment"
     ]
    },
    "class": "ORD",
@@ -11710,7 +11711,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "f62d6b5ac926ff9f",
+    "T1_cards": "4a75bfe6581e070f",
     "T2_pertinence": "8b0a047e9ce40434",
     "T3_receipts": "ed2f3f3cb4598d76",
     "T4_needs": "70142e30938ab222",
@@ -11953,7 +11954,8 @@
      "notes": [
       "the one outside-WWOX harm row is class-level (other T-type blockers lowered progenitor viability; ethosuximide was not tested), not ethosuximide data",
       "Graph coverage (IT11 P2.1): the generation graph has no way to speak about this molecule: its signed targets (the T-type channel genes CACNA1G, CACNA1H, CACNA1I) are sink or isolated nodes of the signed network, so no seed set can reach them. The absence of a graph row is not evidence about ethosuximide, and the lead was a development input of the phenotype-first path, not an independent validation of the graph.",
-      "IT28 (compare_it28_p9_20261105): the added value over the untreated control is an interaction-tested late-phase effect only; the comparison that would attribute an effect to T-type block is one specificity design (both genotypes treated, concurrent control, drug-by-genotype term) and then a single attribution arm, either a nanomolar pan-Cav3 blocker with measured brain exposure or a Cacna1g occlusion arm. A second antiseizure agent serves as a nonspecificity reference only; its sign in a Wwox pup assay is UNKNOWN."
+      "IT28 (compare_it28_p9_20261105): the added value over the untreated control is an interaction-tested late-phase effect only; the comparison that would attribute an effect to T-type block is one specificity design (both genotypes treated, concurrent control, drug-by-genotype term) and then a single attribution arm, either a nanomolar pan-Cav3 blocker with measured brain exposure or a Cacna1g occlusion arm. A second antiseizure agent serves as a nonspecificity reference only; its sign in a Wwox pup assay is UNKNOWN.",
+      "IT29 (phenotype_first_it29_20261105/case2_lesion_conditional_it29.tsv): no corroboration in epilepsy-model screens of other genotypes; the T-type thread keeps its place on the single pup experiment"
      ],
      "objective": "partial",
      "objective_note": "",
@@ -13531,7 +13533,11 @@
    "cards": [
     "F02_myelination_activity_sign"
    ],
-   "caveats": {},
+   "caveats": {
+    "note": [
+     "IT29 (phenotype_first_it29_20261105): signed precursor-differentiation routes come from non-WWOX systems (wild type or injury); none was tested in a neuron-driven hypomyelination model, so a signed route is a conditional lead, not a lever; HDAC3 loss is adverse for maturation"
+    ]
+   },
    "class": "INSUFF",
    "class_label": "STILL INSUFFICIENTLY EVALUATED",
    "class_reason": "every card of the unit is an abstention or names no step: a datum is missing before a test can be designed; not placed at the bottom",
@@ -13613,9 +13619,9 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "ef66f6e68ea4d303",
+    "T1_cards": "e63e387f5414b36b",
     "T2_pertinence": "c124efeb8d5edb82",
-    "T3_receipts": "849c77d59629c2f4",
+    "T3_receipts": "88c3569a28b9c69a",
     "T4_needs": "05755b043796c572",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "1b6967b150a8ef31"
@@ -13681,7 +13687,7 @@
     "42397075",
     "42422765"
    ],
-   "receipts_on_cited_pmids": 57,
+   "receipts_on_cited_pmids": 58,
    "research_objective": "",
    "tracks": [
     "A"
@@ -13741,7 +13747,9 @@
       "level_text": "low or none today: no discriminating next step is named, or the outcome could not change the decision before a premise exists",
       "stake": "no discriminating next step named"
      },
-     "notes": [],
+     "notes": [
+      "IT29 (phenotype_first_it29_20261105): signed precursor-differentiation routes come from non-WWOX systems (wild type or injury); none was tested in a neuron-driven hypomyelination model, so a signed route is a conditional lead, not a lever; HDAC3 loss is adverse for maturation"
+     ],
      "objective": "partial",
      "objective_note": "",
      "positions": {

@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-05T09:57:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T09:59:00Z",
+ "event_id": "FTR-20261105-24657831-09",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: HDAC4 and HDAC5 counts in mature oligodendrocytes unchanged by stroke | Results | \"Stroke did not significantly alter the numbers of HDAC4+ and HDAC5+/APC+ cells\"",
+  "verbatim_locator | proposition: class II HDACs mainly cytoplasmic in OPC/OL | Results | \"HDAC4 and HDAC5 were predominantly expressed in the cytoplasm\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/cycle_it29_p10_20261105/p10_F/README.md"
+ ],
+ "prior_receipt": "FTR-20261105-24657831-08",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "fetched 2026-11-05 through Europe PMC REST fullTextXML (or NCBI E-utilities efetch db=pmc); bytes not saved in the repository; PMC4332872 author manuscript via NCBI efetch; Methods read only for antibodies and immunohistochemistry; figures and tables not read; supplement unavailable",
+ "study_id": {
+  "doi": "10.1016/j.neuint.2014.03.006",
+  "pmid": "24657831"
+ },
+ "workflow": "IT29 P10-F (class IIa HDACs in central oligodendrocyte lineage). Question-driven reading; prepared as a draft JSON for the integrator, the ledger was not written by the preparing actor."
+}

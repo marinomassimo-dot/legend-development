@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-05T09:51:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T09:57:00Z",
+ "event_id": "FTR-20261105-25241747-08",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: Ncor deletion in neural stem cells raises oligodendrocyte genes, which is opposite to NCoR as an activator of the Schwann route | Results > Absence of the T3-Associated Corepressor NCOR Promotes Oligodendrocyte-Associated Gene Expression | \"approximately 18% of Ncor−/− NSCs stained positive for the archetypical OL marker MBP\"",
+  "Results read for the NCoR and HDAC2/HDAC3 sections; Discussion, Methods and figure images not read"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/cycle_it29_p10_20261105/p10_G/README.md",
+  "disease-models/wwox/research/drug_repurposing/cycle_it29_p10_20261105/p10_G/evidence_it29_G.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC4266002 (Europe PMC fullTextXML, fetched 2026-11-05; text only, bytes not saved)",
+ "study_id": {
+  "doi": "10.1016/j.stemcr.2014.07.008",
+  "pmid": "25241747"
+ },
+ "workflow": "IT29 P10-G (cycle_it29_p10_20261105, challenge CH-IT29-CLASSIIA-CNS-MYELIN). Question-driven reading of class IIa HDACs in myelinating glia. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

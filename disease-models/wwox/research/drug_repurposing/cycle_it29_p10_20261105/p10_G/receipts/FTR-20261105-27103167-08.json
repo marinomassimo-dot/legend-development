@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-05T09:51:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T09:57:00Z",
+ "event_id": "FTR-20261105-27103167-09",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: A reported class IIa-selective compound lowered MBP, MAP2 and neurofilament density in peri-infarct cortex | Results > MC1568, but not SAHA, Reduces Dendritic, Axonal and Myelination Densities | \"selective class IIa HDAC inhibition with MC1568 significantly decreased MAP2, pNFH and MBP densities in the peri-infarct cortex compared to vehicle-control\"",
+  "verbatim_locator | proposition: The compound arm also had higher mortality and larger lesions, a confound for the MBP result | Results > Selective class IIa HDAC inhibition increases mortality and lesion volume | \"Animals in the MC1568-treatment group were found dead mainly between 3 and 5 days after MCAO\"",
+  "Methods read; figure images not inspected; selectivity of MC1568 for class IIa is a claim of the source, not checked"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/cycle_it29_p10_20261105/p10_G/README.md",
+  "disease-models/wwox/research/drug_repurposing/cycle_it29_p10_20261105/p10_G/evidence_it29_G.tsv"
+ ],
+ "prior_receipt": "FTR-20261105-27103167-08",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC4860113 (NCBI efetch db=pmc XML, accepted author manuscript, fetched 2026-11-05; text only, bytes not saved)",
+ "study_id": {
+  "doi": "10.1016/j.neuint.2016.04.006",
+  "pmid": "27103167"
+ },
+ "workflow": "IT29 P10-G (cycle_it29_p10_20261105, challenge CH-IT29-CLASSIIA-CNS-MYELIN). Question-driven reading of class IIa HDACs in myelinating glia. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

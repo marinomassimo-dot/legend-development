@@ -1,4 +1,16 @@
-# Curated research view (local, regenerable)
+# Curated research view: the public dashboard
+
+**Public URL:** <https://marinomassimo-dot.github.io/legend-development/> (English by default; Italian, French, Spanish and German pages sit next to it).
+
+**What it is for.** A readable way into the drug-repurposing research: which investigations deserve attention and why, which compounds, interventions and mechanisms they involve, what supports or weakens each hypothesis, and which experiment would move the decision. It shows research priorities, not treatment rankings, and it is not medical advice.
+
+**How it relates to the repository.** The page is generated from the module's own data (cards, needs, ranking, coverage, catalogue) by `framework/scripts/repurposing_view.py`; nothing is typed into it by hand, and every count is read from the data at build time. The public edition is the *shareable* build, limited to the sources listed in `shareable_sources.json`.
+
+**Regenerate and publish.** `python3 -B framework/scripts/repurposing_view.py run --source shareable`, then `package`, then `check`; a push to `main` that changes `shareable_package/` triggers the Pages workflow (`.github/workflows/publish-shareable-view.yml`). The steps, hashes and the audit are in [`DEPLOY.md`](DEPLOY.md).
+
+The sections below describe the file formats and the history of the build; dated statements keep the date they were written.
+
+## Local files and regeneration (historical text, kept in context)
 
 `index.html` (full) and `index_shareable.html` (shareable) are each one self-contained file (inline CSS and JS, data embedded as
 JSON, no network resource, works from file://). They are generated; do not edit them by hand. Non-canonical research

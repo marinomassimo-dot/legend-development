@@ -1,0 +1,32 @@
+# NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR direction=down 
+# headline links (intervention targets, not excluded): records=179 families=173; all rows listed=709; excluded (source artefact / alias risk / placeholder)=19 identity_guard_hits=0 nonhuman_chembl_set_aside=0
+GJA1	CAT:DGIDB:2363bc48ff30	Ca2+	DGIdb	inhibitor	single_protein	not_evaluable	not_an_intervention_target
+GJA1	CAT:DGIDB:37352f589f92	Flufenamic Acid	DGIdb	inhibitor	single_protein	not_evaluable	not_an_intervention_target
+GJA1	CAT:DGIDB:54e40726316e	Epigallocatechin Gallate	DGIdb	UNSTATED	gene_listing	not_evaluable	not_an_intervention_target
+GJA1	CAT:DGIDB:56c8b26bba28	Octanol	DGIdb	inhibitor	single_protein	not_evaluable	not_an_intervention_target
+GJA1	CAT:DGIDB:63f7075aecd7	Vitamin A	DGIdb	UNSTATED	gene_listing	not_evaluable	not_an_intervention_target
+GJA1	CAT:DGIDB:7d5783f5ca55	Carvedilol	DGIdb	UNSTATED	gene_listing	not_evaluable	not_an_intervention_target
+GJA1	CAT:DGIDB:8643362103b5	Ascorbic Acid	DGIdb	UNSTATED	gene_listing	not_evaluable	not_an_intervention_target
+GJA1	CAT:DGIDB:8bf40375467a	Bleomycin	DGIdb	UNSTATED	gene_listing	not_evaluable	not_an_intervention_target
+GJA1	CAT:DGIDB:a652145799fa	Protease Inhibitor	DGIdb	UNSTATED	gene_listing	not_evaluable	not_an_intervention_target
+GJA1	CAT:DGIDB:b0bb45a45124	Proteasome Inhibitor	DGIdb	UNSTATED	gene_listing	not_evaluable	not_an_intervention_target
+GJA1	CAT:DGIDB:bcd511b0ba09	Atenolol	DGIdb	UNSTATED	gene_listing	not_evaluable	not_an_intervention_target
+GJA1	CAT:DGIDB:c149ff05ce3c	Selenium	DGIdb	UNSTATED	gene_listing	not_evaluable	not_an_intervention_target
+GJA1	CAT:DGIDB:dbe9f2f2ef42	Labetalol	DGIdb	UNSTATED	gene_listing	not_evaluable	not_an_intervention_target
+GJA1	CAT:DGIDB:ea45bb50fb31	Carbenoxolone	DGIdb	inhibitor	single_protein	not_evaluable	not_an_intervention_target
+GJA1	CAT:DGIDB:eef19c54306d	Null	DGIdb	UNSTATED	gene_listing	not_evaluable	excluded_source_artefact
+GJA1	CAT:DGIDB:eef19c54306d	Null	DGIdb	UNSTATED	gene_listing	not_evaluable	excluded_source_artefact
+GJA1	CAT:DGIDB:f811027783b0	Propylthiouracil	DGIdb	UNSTATED	gene_listing	not_evaluable	not_an_intervention_target
+GRIA1	CAT:CHEMBL119625	ZONAMPANEL	ChEMBL	ANTAGONIST	protein_complex_group 4/4	direction_unresolved	coupling_not_measured
+GRIA1	CAT:CHEMBL1214124	PERAMPANEL	ChEMBL	ANTAGONIST	protein_complex_group 4/4	direction_unresolved	coupling_not_measured
+GRIA1	CAT:CHEMBL1276138	FARAMPATOR	ChEMBL	POSITIVE ALLOSTERIC MODULATOR	protein_complex_group 4/4	direction_unresolved	coupling_not_measured
+GRIA1	CAT:CHEMBL1277001	MIBAMPATOR	ChEMBL	POSITIVE ALLOSTERIC MODULATOR	protein_complex_group 4/4	direction_unresolved	coupling_not_measured
+GRIA1	CAT:CHEMBL2103869	DASOLAMPANEL	ChEMBL	ANTAGONIST	protein_complex_group 4/4	direction_unresolved	coupling_not_measured
+GRIA1	CAT:CHEMBL220492	TOPIRAMATE	ChEMBL	ANTAGONIST	protein_complex_group 4/4	direction_unresolved	coupling_not_measured
+GRIA1	CAT:CHEMBL29741	IRAMPANEL	ChEMBL	ANTAGONIST	protein_complex_group 4/4	direction_unresolved	coupling_not_measured
+GRIA1	CAT:CHEMBL3545042	SELURAMPANEL	ChEMBL	ANTAGONIST	protein_complex_group 4/4	direction_unresolved	coupling_not_measured
+GRIA1	CAT:CHEMBL3545042	SELURAMPANEL	DGIdb	UNSTATED	gene_listing	direction_unresolved	action_not_stated
+GRIA1	CAT:CHEMBL3545042	SELURAMPANEL	DGIdb	inhibitor	gene_listing 4/4	direction_unresolved	coupling_not_measured
+GRIA1	CAT:CHEMBL3707399	CX1739	ChEMBL	POSITIVE ALLOSTERIC MODULATOR	protein_complex_group 4/4	direction_unresolved	coupling_not_measured
+GRIA1	CAT:CHEMBL3707399	CX1739	DGIdb	positive modulator	gene_listing 4/4	direction_unresolved	coupling_not_measured
+GRIA1	CAT:CHEMBL3707401	MK-8777	ChEMBL	POSITIVE ALLOSTERIC MODULATOR	protein_complex_group 4/4	direction_unresolved	coupling_not_measured

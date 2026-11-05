@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-05T08:21:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "introduction": "unavailable",
+  "methods": "unavailable",
+  "results": "unavailable",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "tables": "unavailable",
+  "references": "unavailable",
+  "limitations": "unavailable",
+  "supplementary": "unavailable",
+  "abstract": "read"
+ },
+ "event_at": "2026-11-05T08:22:00Z",
+ "event_id": "FTR-20261105-29244098-06",
+ "evidence_basis": [
+  "abstract analysed; no methods, figures or numbers beyond the abstract are used",
+  "verbatim_locator | proposition: clemastine - favourable on the endpoint (in vivo mouse neonatal hypoxic white-matter injury (plus one adult human case)) | Abstract | \"clemastine dramatically promotes oligodendrocyte precursor cell differentiation, myelination, and improves functional recovery\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_A/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_A/evidence_it29_A.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 29244098 (abstract as served by NCBI E-utilities efetch 2026-11-05)",
+ "study_id": {
+  "doi": "10.1093/brain/awx312",
+  "pmid": "29244098"
+ },
+ "workflow": "IT29 P3-A (phenotype_first_it29_20261105, sub-question: small molecules modifying OPC differentiation and myelination; Case 1). Question-driven reading for direction, system and target-attribution control. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-05T08:15:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "limitations": "not_read",
+  "supplementary": "unavailable"
+ },
+ "event_at": "2026-11-05T08:16:00Z",
+ "event_id": "FTR-20261105-30046109-06",
+ "evidence_basis": [
+  "sections named in coverage read from the PMC text served by NCBI efetch; figures, tables, references and supplement not read; no figure value is quoted",
+  "verbatim_locator | proposition: ketoconazole and azoles; CYP51 siRNA; lanosterol - favourable on the endpoint (in vitro mouse EpiSC- and primary-derived OPCs, 72 h) | Results | \"abrogated the enhanced oligodendrocyte formation observed from the CYP51 inhibitor ketoconazole\"",
+  "verbatim_locator | proposition: TASIN-1; EBP CRISPR; amorolfine (TM7SF2) - favourable on the endpoint (in vitro mouse OPC; electrospun microfibers) | Results | \"Only molecules targeting CYP51 (ketoconazole), TM7SF2 (amorolfine), and EBP (TASIN-1) enhanced formation of MBP+ oligodendrocytes\"",
+  "verbatim_locator | proposition: benztropine; clemastine; tamoxifen; U50488 - favourable on the endpoint (in vitro mouse OPC and biochemical EBP assay) | Results | \"benztropine, clemastine, tamoxifen, and U50488 induced accumulation of zymostenol and zymosterol and decreased basal sterol levels\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_A/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_A/evidence_it29_A.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC6423962 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); Results, Discussion and Methods through sterol profiling read; figures, extended data not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1038/s41586-018-0360-3",
+  "pmid": "30046109"
+ },
+ "workflow": "IT29 P3-A (phenotype_first_it29_20261105, sub-question: small molecules modifying OPC differentiation and myelination; Case 1). Question-driven reading for direction, system and target-attribution control. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

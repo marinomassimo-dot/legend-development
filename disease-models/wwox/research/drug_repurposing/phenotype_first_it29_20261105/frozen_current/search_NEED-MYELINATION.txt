@@ -1,0 +1,32 @@
+# NEED-MYELINATION direction=restore 
+# headline links (intervention targets, not excluded): records=214 families=202; all rows listed=546; excluded (source artefact / alias risk / placeholder)=22 identity_guard_hits=0 nonhuman_chembl_set_aside=0
+CHRM1	CAT:CHEMBL1092	TRIHEXYPHENIDYL HYDROCHLORIDE	ChEMBL	ANTAGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL1200330	PILOCARPINE HYDROCHLORIDE	ChEMBL	AGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL1200347	ISOPROPAMIDE IODIDE	ChEMBL	ANTAGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL1200383	BENZTROPINE MESYLATE	ChEMBL	ANTAGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL1200426	METHIXENE HYDROCHLORIDE	ChEMBL	ANTAGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL1200479	DICYCLOMINE HYDROCHLORIDE	ChEMBL	ANTAGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL1200771	TRIDIHEXETHYL CHLORIDE	ChEMBL	ANTAGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL1200828	CYCRIMINE HYDROCHLORIDE	ChEMBL	ANTAGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL1200880	DIPHEMANIL METHYLSULFATE	ChEMBL	ANTAGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL1200891	OXYPHENCYCLIMINE HYDROCHLORIDE	ChEMBL	ANTAGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL1200906	OXYPHENONIUM BROMIDE	ChEMBL	ANTAGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL1200950	CLIDINIUM BROMIDE	ChEMBL	ANTAGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL1200970	ETHOPROPAZINE HYDROCHLORIDE	ChEMBL	ANTAGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL1201027	GLYCOPYRRONIUM BROMIDE	ChEMBL	ANTAGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL1201035	BIPERIDEN HYDROCHLORIDE	ChEMBL	ANTAGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL1201067	BIPERIDEN LACTATE	ChEMBL	ANTAGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL1213136	PILOCARPINE NITRATE	ChEMBL	AGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL1240	PROPANTHELINE BROMIDE	ChEMBL	ANTAGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL1354199	METHSCOPOLAMINE BROMIDE	ChEMBL	ANTAGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL1364551	MINAPRINE HYDROCHLORIDE	ChEMBL	AGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL1529	DIPHENIDOL HYDROCHLORIDE	ChEMBL	ANTAGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL1531864	PIRENZEPINE HYDROCHLORIDE	ChEMBL	ANTAGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL1578	ANISOTROPINE METHYLBROMIDE	ChEMBL	ANTAGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL1626570	HEXOCYCLIUM METHYLSULFATE	ChEMBL	ANTAGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL1724	MEPENZOLATE BROMIDE	ChEMBL	ANTAGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL1761	PROCYCLIDINE HYDROCHLORIDE	ChEMBL	ANTAGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL2107204	TALSACLIDINE FUMARATE	ChEMBL	AGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL2111051	TALSACLIDINE	ChEMBL	AGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL2146146	ATROPINE SULFATE	ChEMBL	ANTAGONIST	single_protein	direction_unresolved	no_coupling_row
+CHRM1	CAT:CHEMBL21536	XANOMELINE	ChEMBL	AGONIST	single_protein	direction_unresolved	no_coupling_row

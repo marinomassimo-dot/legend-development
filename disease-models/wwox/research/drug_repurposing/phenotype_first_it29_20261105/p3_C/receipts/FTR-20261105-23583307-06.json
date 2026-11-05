@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-05T07:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "unavailable"
+ },
+ "event_at": "2026-11-05T08:10:00Z",
+ "event_id": "FTR-20261105-23583307-06",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: transfer-condition finding for IT29 P3 C | Oligodendrocyte development | \"pnd 7 is analogous to 32–36 weeks\"",
+  "verbatim_locator | proposition: transfer-condition finding for IT29 P3 C | Myelination | \"Myelination is well underway in rodents by pnd 10–14 and peaks at approximately pnd 20\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_C/README.md"
+ ],
+ "prior_receipt": "FTR-20260927-23583307-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "OA author manuscript via NCBI efetch db=pmc XML; the myelination and oligodendrocyte development sections read; rest skimmed; bytes not saved; PMC3737272",
+ "study_id": {
+  "doi": "10.1016/j.pneurobio.2013.04.001",
+  "pmid": "23583307"
+ },
+ "workflow": "IT29 P3-C (phenotype_first_it29_20261105), transfer-conditions search. Draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

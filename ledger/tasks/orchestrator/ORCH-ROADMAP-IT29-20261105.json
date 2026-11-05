@@ -1,0 +1,217 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT29-20261105",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Iteration 29: phenotype-first generation: functional endpoint to the perturbations that modify it, to actions and compounds, to transfer conditions to WWOX; compared with the current need/gene/target path and with a simple search on the same material, on one principal and one contrasting case; autonomous-cycle proof with a fresh Orchestrator context.",
+ "START_UTC": "2026-11-05T09:00:00Z",
+ "BASELINE": "development/main = local main = 8c7c46cf (IT28 closed, CI green, battery PASS WITH SKIPS on ce6c5eed); clean tree; no active worktree",
+ "DECISIONS_TAKEN": [
+  "Stage consumed by the current method: IT28 P6 results_s9 (Standing method pointer, file digests frozen in phenotype_first_it29_20261105/frozen_current).",
+  "Cases chosen before any compound was looked for: principal = oligodendrocyte-lineage maturation/myelination; contrasting = network hyperexcitability (SELECTION.md).",
+  "Zero spend, no e-mail or contact, no operator e-mail to any service."
+ ],
+ "STOP_LOG": [],
+ "AUTHORISED_QUEUE_20261105B": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P0 baseline, reconciliation, frozen current-method output",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "main=8c7c46cf, clean, no worktree; frozen_current digests"
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "P1 IT28 residues: IT20 diagnosis correction in current explanations, scope of conclusions, pilot meaning",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "IT20 explanation corrected in roadmap and IT28 diagnosis (history kept); scope of IT28 conclusions and the pilot meaning stated; no test added for a documentation sentence"
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "P2 two cases chosen before compounds (SELECTION.md)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "phenotype_first_it29_20261105/SELECTION.md"
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "P3 functional search beyond the WWOX keyword, both cases",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "P3: 5 readers A-E, 160 evidence rows, 57 receipts recorded (phenotype_first_it29_20261105/p3_*)"
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "P4 minimal computable input (signed perturbation table)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "P4: signed_rows_case1_it29.tsv (33 hand-curated rows) + phenotype_roles_it29.py with 10 regressions; case 2 lesion-conditional table"
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "P5 execute the generative path through the existing search layer",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "P5: search layer run with signed roles and extended targets (97 signed rows, 80 families); stage S10 (30 proposals carry the oligodendrocyte HDAC limit)"
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "P6 comparison: current path v simple search v contextualised path",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "P6: comparison_case1_it29.tsv (arms A/B/C), README answer-first, new data v method separated, retrospective declared"
+    }
+   ]
+  },
+  "OBJ_P8": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "P7 second case: what generalises, remove shortcuts",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "P7: case 2 lesion-conditional table; no compound-name rule in the converter; generalisation limits stated"
+    }
+   ]
+  },
+  "OBJ_P9": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "P8 comparisons of the most informative hypotheses",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "P8: discriminating perturbations stated in README (sodium-channel challenge, OPC arm with neuronal-activity crossing)"
+    }
+   ]
+  },
+  "OBJ_P10": {
+   "order": 10,
+   "steps": [
+    {
+     "step": "P9 challenge return proof on real cases",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "P9: consumption_it29_p9_20261105 (50 proposals change in carried_limits only, regenerates cell for cell); challenge_batch wording"
+    }
+   ]
+  },
+  "OBJ_P11": {
+   "order": 11,
+   "steps": [
+    {
+     "step": "P10 fresh Orchestrator context resumes a repurposing question",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "P10: separate context (a596f7fd) chose CH-IT29-CLASSIIA-CNS-MYELIN, routed three readers, closed steps 5-6; 21 gaps in cycle_it29_p10_20261105/LOG.md; limit: same repository and model"
+    }
+   ]
+  },
+  "OBJ_P12": {
+   "order": 12,
+   "steps": [
+    {
+     "step": "P11 pharmacological residues: pracinostat assay descriptions, TMP269 identity, lawful full texts",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "P11: p11_residues_README.md (pracinostat not resolved; TMP269 full-key identity with partial independence, not applied; no lawful open full text)"
+    }
+   ]
+  },
+  "OBJ_P13": {
+   "order": 13,
+   "steps": [
+    {
+     "step": "P12 targeted scouting",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "P12: p12_scout (NCC acute precursor screen used as independent partial test; derived rows only, no new component)"
+    }
+   ]
+  },
+  "OBJ_P14": {
+   "order": 14,
+   "steps": [
+    {
+     "step": "P13 ranking and dashboard, including functional check in five languages",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "P13: INV-06/04/03 and unit notes, ranking digest unchanged, views and package in five languages, view_functional_it29.py 60 of 60"
+    }
+   ]
+  },
+  "OBJ_P15": {
+   "order": 15,
+   "steps": [
+    {
+     "step": "P14 independent verification",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "P14: p14_verify (3 errors, 7 uncertainties, corrected); second verification of the corrections not needed (numbers re-derived by the same scripts)"
+    }
+   ]
+  },
+  "OBJ_P16": {
+   "order": 16,
+   "steps": [
+    {
+     "step": "P15 make durable what worked",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "P15: six Standing-method bullets, current-stage pointer fixed, challenge_batch wording; no new framework"
+    }
+   ]
+  },
+  "OBJ_P17": {
+   "order": 17,
+   "steps": [
+    {
+     "step": "P16 tests, battery, integration, push, CI, cleanup",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "battery on the exact frozen SHA d099a5be465f91fe7dc8c7f108751fd34f3a242d: REGRESSION VERDICT PASS WITH SKIPS (208 targets, 8 skipped); the earlier run on 72a58bfb failed one test (legend above the fold at phone width), fixed in d099a5be; push, CI, served-site check and cleanup still to do"
+    }
+   ]
+  },
+  "OBJ_P18": {
+   "order": 18,
+   "steps": [
+    {
+     "step": "D0-D9 public dashboard integration (visual hierarchy, entry paths, interactions, graph, cards and comparison, languages, accessibility, performance, README entry points, integrity, browser verification, publication); parallel to the generative path; the frozen battery candidate is never modified, the package lands in the next candidate",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "queued 2026-11-05 on the operator integration message"
+    }
+   ]
+  }
+ }
+}

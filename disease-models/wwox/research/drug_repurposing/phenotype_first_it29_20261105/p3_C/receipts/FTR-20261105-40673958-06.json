@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-05T07:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "unavailable"
+ },
+ "event_at": "2026-11-05T08:10:00Z",
+ "event_id": "FTR-20261105-40673958-06",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: transfer-condition finding for IT29 P3 C | Abstract | \"OL maturation deficiency in Myrf -CKO mice caused spontaneous epileptogenesis and resulted in death\"",
+  "verbatim_locator | proposition: transfer-condition finding for IT29 P3 C | Abstract | \"enhancing differentiation by orally administered clemastine rescues the defective mossy fiber development in the early postnatal period and attenuates epilepsy susceptibility in adults\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_C/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "OA article via Europe PMC fullTextXML; abstract and introduction read; results not read; bytes not saved; PMC13031610",
+ "study_id": {
+  "doi": "10.1007/s12264-025-01452-x",
+  "pmid": "40673958"
+ },
+ "workflow": "IT29 P3-C (phenotype_first_it29_20261105), transfer-conditions search. Draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

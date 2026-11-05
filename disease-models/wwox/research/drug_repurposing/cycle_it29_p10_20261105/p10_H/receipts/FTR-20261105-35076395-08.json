@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-05T09:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T09:53:00Z",
+ "event_id": "FTR-20261105-35076395-08",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: Hdac4/5/7 triple Schwann deletion delays but does not abolish myelination | Results | \"myelin is finally formed and adult tKO nerves show almost normal myelination parameters\"",
+  "verbatim_locator | proposition: Hdac4/5 double deletion gives normal adult nerves | Results | \"myelination proceeds normally after P8 and adult nerves are morphologically and functionally indistinguishable from those of wild-type mice\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/cycle_it29_p10_20261105/p10_H/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC8853665 via Europe PMC REST fullTextXML (open access), fetched 2026-11-05; only the sections marked read in coverage were read, and for those by targeted passage search plus reading of the quoted passages; figures and tables not read; bytes not saved in the repository",
+ "study_id": {
+  "doi": null,
+  "pmid": "35076395"
+ },
+ "workflow": "IT29 P10 Scientist H (cycle_it29_p10_20261105, challenge CH-IT29-CLASSIIA-CNS-MYELIN). Neuron/axon route and adversarial search for a favourable or neutral class IIa sign. Draft for the integrator; the ledger was not written by the preparing actor."
+}

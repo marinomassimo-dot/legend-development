@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-05T08:11:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "limitations": "not_read",
+  "supplementary": "unavailable"
+ },
+ "event_at": "2026-11-05T08:12:00Z",
+ "event_id": "FTR-20261105-24107995-06",
+ "evidence_basis": [
+  "sections named in coverage read from the PMC text served by NCBI efetch; figures, tables, references and supplement not read; no figure value is quoted",
+  "verbatim_locator | proposition: benztropine - favourable on the endpoint (in vitro rat optic-nerve OPC (primary, passaged), 384-well, 6 d) | Results, High-throughput OPC differentiation screen | \"Among the most effective inducers of OPC differentiation was benztropine\"",
+  "verbatim_locator | proposition: benztropine - favourable on the endpoint (in vitro rat and mouse OPC co-cultured with ES-derived neurons or mouse cortical cells; MBP-axon colocalisation) | Results, High-throughput OPC differentiation screen | \"Benztropine treated cultures had a significantly higher percentage of myelinating oligodendrocytes\"",
+  "verbatim_locator | proposition: muscarinic agonist carbachol (reversal); muscarinic antagonist panel - favourable on the endpoint (in vitro rat OPC) | Results, M1/M3 muscarinic receptor antagonism | \"Inhibition of benztropine-induced OPC differentiation was observed in the presence of carbachol\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_A/README.md",
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_A/evidence_it29_A.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC4431622 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); Results, Discussion, Methods summary and cell-culture methods read; figures, Extended Data not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1038/nature12647",
+  "pmid": "24107995"
+ },
+ "workflow": "IT29 P3-A (phenotype_first_it29_20261105, sub-question: small molecules modifying OPC differentiation and myelination; Case 1). Question-driven reading for direction, system and target-attribution control. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

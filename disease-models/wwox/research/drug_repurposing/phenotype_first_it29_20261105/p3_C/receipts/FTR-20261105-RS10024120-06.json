@@ -1,0 +1,36 @@
+{
+ "analysis_at": "2026-11-05T07:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-05T08:10:00Z",
+ "event_id": "FTR-20261105-RS10024120-06",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: transfer-condition finding for IT29 P3 C | Abstract | \"Pharmacological reinforcement of myelination with clemastine during PV+ interneuron maturation phenocopied the seizure-resistant state\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_C/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Research Square preprint record via Europe PMC search; abstract only; bytes not saved",
+ "study_id": {
+  "doi": "10.21203/rs.3.rs-10024120/v1"
+ },
+ "workflow": "IT29 P3-C (phenotype_first_it29_20261105), transfer-conditions search. Draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

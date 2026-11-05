@@ -18,7 +18,7 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 12405,
+    "values": 12407,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -193,7 +193,7 @@
    },
    "^\\.ui\\.": {
     "class": "UI",
-    "values": 1368,
+    "values": 1390,
     "why": "Italian orientation text (builder data UI_IT and siblings)"
    }
   },
@@ -206,8 +206,8 @@
    "PMID": 96
   },
   "links": {
-   "distinct_hrefs": 128,
-   "external_public": 57,
+   "distinct_hrefs": 140,
+   "external_public": 58,
    "hosts": [
     "civicdb.org",
     "open.fda.gov",
@@ -216,14 +216,15 @@
     "www.ebi.ac.uk",
     "www.genenames.org",
     "www.ncbi.nlm.nih.gov",
-    "www.nlm.nih.gov"
+    "www.nlm.nih.gov",
+    "www.wwox.org"
    ],
-   "internal_anchors": 66
+   "internal_anchors": 77
   },
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3296,
+    "forbidden-name": 3320,
     "forbidden-wording": 21
    },
    "co_attested_wording": [
@@ -248,7 +249,7 @@
    "forbidden_names": 126046,
    "forbidden_wordings": 2888,
    "pair_unmarked_attested_or_unchecked": {
-    "count": 156,
+    "count": 157,
     "names": [
      "act 709478",
      "apinocaltamide",
@@ -263,7 +264,7 @@
      "px 478",
      "sulfopin"
     ],
-    "unchecked_without_corpus": 156
+    "unchecked_without_corpus": 157
    },
    "suppressed_by_exemption": {
     "bibliographic journal name (validated against the journals of the cache)": 4,
@@ -469,11 +470,11 @@
   "BIBLIO": 2429,
   "COUNT": 11599,
   "ID": 4547,
-  "OWN": 83796,
+  "OWN": 83798,
   "ROWNAME": 2251,
   "SRC_A": 189,
   "SRC_META": 256,
-  "UI": 1368
+  "UI": 1390
  },
  "embedded_sources": [
   {
@@ -551,24 +552,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 4583688,
-   "sha256": "aca2f7d0d024ca62b15e0e1b66d1c1dba4c6ae5fd6a043f6ce667f3bf762aba1"
+   "bytes": 4608219,
+   "sha256": "77fbe372f6f814e8b2c292ac1a1e007fa3a3d5c5bb3e7699a163b920b7f58474"
   },
   "es.html": {
-   "bytes": 4568922,
-   "sha256": "b043a7544cae40e938aef657595654bf1f1ab44ff89b13f4369f36b4b0a863ce"
+   "bytes": 4593499,
+   "sha256": "0a78bb248854fd5c5438042630c348f2caabedaddde7f04de0786f622fe673a0"
   },
   "fr.html": {
-   "bytes": 4589940,
-   "sha256": "66912bde1682be235b8ece8d68390c211a0fd2ccb617be4d4a7b800e344cd35b"
+   "bytes": 4614616,
+   "sha256": "92131831692bad9b5b6a5071f2fdd8db01a3ddab3b4961aea87cc0d892ee1018"
   },
   "index.html": {
-   "bytes": 4506206,
-   "sha256": "39e232a99d7a06823caf252d471b4124651ccc1b9d36d7fc05648536e3945f53"
+   "bytes": 4529815,
+   "sha256": "f50e9255b991a0d22aefe081f93289c233946193bed36f26dbcd6c1a48f9afeb"
   },
   "it.html": {
-   "bytes": 4545556,
-   "sha256": "66dd809ffedebfb8bce0e2a22e1ecdb1d77d8f2158f73261b571462cb923dc78"
+   "bytes": 4569745,
+   "sha256": "713231c7ac85508991f606f0720add0113ee4b72d9d3be2826ab3701bbe5aff6"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",

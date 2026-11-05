@@ -99,10 +99,9 @@ header{padding:12px 0 4px}header h1{font-size:1.3rem;margin:0 0 2px}.subline{mar
 .cmp th[scope=row]{overflow-wrap:normal;min-width:84px;font-size:.8rem}
 /* P12 fix: legend above the fold at 360x780 and 390x844 */
 .legendrow{margin:4px 0;gap:2px 12px;font-size:.84rem}.legendrow .grp{font-size:.72rem}
-@media (max-width:560px){.btail{display:none}.warnbar{padding:4px 12px}header{padding:8px 0 2px}header h1{font-size:1.1rem}.subline{font-size:.76rem}section#overview{padding-top:8px}#overview h2{margin:0 0 2px;font-size:1rem}}
+@media (max-width:560px){.btail{display:none}.warnbar{padding:4px 12px}header{padding:8px 0 2px}header h1{font-size:1.1rem}.subline{display:none}section#overview{padding-top:8px}#overview h2{margin:0 0 2px;font-size:1rem}}
 /* P12 fix: legend above the fold at 360x780 and 390x844 */
 .legendrow{margin:4px 0;gap:2px 12px;font-size:.84rem}.legendrow .grp{font-size:.72rem}
-@media (max-width:560px){.btail{display:none}.warnbar{padding:4px 12px}header{padding:8px 0 2px}header h1{font-size:1.1rem}.subline{font-size:.76rem}section#overview{padding-top:8px}#overview h2{margin:0 0 2px;font-size:1rem}}
 
 /* ---- IT6 P13: one-page synthesis (#brief=), evidence graph (server-rendered SVG), work order ---- */
 .bf{border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin:0 0 16px;background:var(--card);max-width:780px}.bf h2{font-size:1.1rem;margin:0}.bf .meta{font-size:.8rem;color:var(--mut);margin:3px 0}
@@ -216,3 +215,21 @@ details>summary{padding:3px 0;min-height:24px}
 .inv-legend{list-style:none;margin:6px 0;padding:0;display:grid;gap:4px;font-size:.84rem}
 .inv-filter{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:6px 0}.inv-filter[hidden]{display:none}.inv-filter button{padding:5px 10px;font-size:.84rem;min-height:34px}.inv-filter button[aria-pressed=true]{background:var(--accbg);border-color:var(--acc);font-weight:700}
 @media (max-width:560px){.inv-glance{grid-template-columns:minmax(0,1fr)}.inv-glance dt{margin-top:6px;font-size:.78rem}.inv-h{font-size:.98rem}.inv-filter button{flex:1 1 auto}}.inv-negs{list-style:none;padding:0;margin:4px 0;display:grid;gap:8px}.inv-neg{border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+/* IT29: identity bar, four entry points, one-line source status, permalink of an investigation */
+.brand{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;margin:0 0 6px;font-size:.82rem}
+.brand-name{font-weight:800;letter-spacing:.14em;font-size:.95rem;color:var(--acc)}.brand-ctx{color:var(--mut)}
+.brand-state{border:1px solid var(--warn);background:var(--warnbg);border-radius:99px;padding:1px 10px;font-size:.76rem;font-weight:600}
+nav .navmain{overflow:visible;display:flex;flex-wrap:wrap;align-items:center;gap:2px 6px;padding-top:4px;padding-bottom:4px}
+nav .navmain>a{display:inline-block;min-height:40px;line-height:40px;padding:0 12px;border-radius:8px;font-weight:600;font-size:.92rem;text-decoration:none}
+nav .navmain>a:hover{background:var(--accbg)}
+.navall{position:relative;margin-left:auto}.navall>summary{cursor:pointer;min-height:40px;line-height:40px;padding:0 12px;border-radius:8px;font-size:.88rem;color:var(--acc);list-style:none}
+.navall>summary::-webkit-details-marker{display:none}.navall>summary::after{content:" ▾"}.navall[open]>summary::after{content:" ▴"}
+.navall-in{position:absolute;right:0;top:100%;z-index:10;width:min(320px,calc(100vw - 32px));display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:6px;box-shadow:0 6px 20px rgba(0,0,0,.18);max-height:70vh;overflow:auto}
+.navall-in a{display:block;min-height:40px;line-height:40px;padding:0 10px;border-radius:6px;text-decoration:none}.navall-in a:hover{background:var(--accbg)}
+.warnbar{font-size:.76rem;padding:3px 16px}.warnbar .btail{display:none}
+@media (min-width:900px){.warnbar .btail{display:inline}}
+.plink{margin-left:auto;text-decoration:none;color:var(--mut);padding:0 8px;border-radius:6px;min-width:28px;text-align:center}.plink:hover,.plink:focus-visible{color:var(--acc);background:var(--accbg)}
+.inv-row:target,.inv-row:focus{outline:3px solid var(--acc);outline-offset:2px}
+@media (max-width:640px){nav{position:static}nav .navmain{overflow:visible;white-space:normal;flex-wrap:wrap;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:4px;box-sizing:border-box}nav .navmain>a,.navall>summary{box-sizing:border-box;overflow-wrap:anywhere;white-space:normal;min-height:44px;line-height:1.2;display:flex;align-items:center;padding:0 10px;border:1px solid var(--line);border-radius:8px;font-size:.86rem}.navall{margin-left:0}.navall-in{left:0;right:auto}}
+@media print{.navall,.brand-state{display:none}nav{position:static}}
+.card-q{margin:6px 0;font-size:.92rem}
