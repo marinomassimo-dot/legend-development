@@ -1,0 +1,202 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-SCIBATCH-DR-20261105",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Parallel scientific batch beside the IT30 infrastructure work: reconstruct the open questions of the Drug Repurposing module and the state of each search; run the independent literature work that no earlier iteration executed (concordance of symptomatic response and developmental outcome; vigabatrin white-matter safety; post-onset restoration precedents); reconcile; have the decisive conclusions verified by an actor other than the producer; hand over a verified package with evidence, provenance, inferences, hypotheses, transfer conditions, counter-evidence, module inputs and proposed registry changes, with commits validated and the consumers named. Integration into shared consumers, regeneration and publication stay with the IT30 Orchestrator. IT29 and IT30 mandates, worktrees, records and frozen candidates are not touched.",
+ "START_UTC": "2026-11-05T22:19:00Z",
+ "BASELINE": "development/main = origin/main = local main = 14c5fc7b47043ebc9bef336d609f6386bd6bbaa2 (fetched 2026-11-05T22:19Z); branches task/it29 (d099a5be465f91fe7dc8c7f108751fd34f3a242d) and task/it30 (10709fe6cb560ca7e2c7c5525955a02d2d530907) are NOT on main and are read only through git show; this task works in .claude/worktrees/dr-parallel-20261105 on branch task/dr-parallel-20261105",
+ "RESUME": {
+  "worktree": ".claude/worktrees/dr-parallel-20261105 (branch task/dr-parallel-20261105)",
+  "package_dir": "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/",
+  "briefs": "BRIEF_COMMON.md, BRIEF_MAP.md, BRIEF_A1.md, BRIEF_A2.md, BRIEF_B1.md, BRIEF_R1.md, BRIEF_R2.md in the package directory",
+  "returns": "each agent writes only inside its subdirectory (map, a1_wwox_reports, a2_baseline, b1_whitematter, r1_restoration_ndd, r2_restoration_dee); receipts are STAGED in receipts/ of each subdirectory and are never recorded by the agents; event-id suffixes 21 to 25 (map none), verifiers 31 to 35",
+  "next_action": "read the agent returns; recompute every headline count from its TSV; validate TSV widths and staged receipts (staged_receipt_check, then a trial record in a scratch clone with its own copy of files/); then dispatch independent verifiers (different model, producer conclusions withheld for the locator audit)",
+  "not_to_redo": "do not re-read the IT29 or IT30 worktrees; do not record receipts on this branch (the ledger is hash-chained and IT29 and IT30 both append to it: the IT30 Orchestrator records the staged set in event-id order after IT29 lands)"
+ },
+ "DECISIONS_TAKEN": [
+  "Role: ACTOR_ID orchestrator, assigned by the operator in the opening message of this session (a stated assumption; the runtime assigns none, AGENTS.md section 4).",
+  "The operator's message announced a scientific prompt that follows the opening, but no such text is in the message. Safe default taken (STOP POLICY, options with a default): the scientific scope is reconstructed from the module's own open questions (work orders, investigations, uncarded items, reopen tables, challenges, residues) and restricted to questions that are executable at zero spend on public literature and that no earlier record executed. Reversible: a later operator text can add or replace packages.",
+  "Zero spend, no e-mail or contact, no operator e-mail to any service; open full-text routes only.",
+  "Own worktree and branch from main; the worktrees of IT29 and IT30 are read only through git show; no receipt is recorded on this branch (ledger collision with IT29 and IT30); no edit of roadmap_current.md, of the module README CURRENT section, of the generation stage tables, the ranking, the views or the four scientific current files: those are the IT30 Orchestrator's consumers.",
+  "Producers and verifiers are different subagent contexts, and verifiers run on a different model where the runtime honours the request (read back from the transcript, not assumed)."
+ ],
+ "STOP_LOG": [],
+ "AUTHORISED_QUEUE_20261105D": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_S0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "S0 open-question map of the module with the state of every search and where it is published (main, task/it29, task/it30)",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_S1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "S1 concordance of symptomatic response and developmental outcome: WWOX reports (A1) and the infantile-spasms baseline (A2)",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "challenge": {
+      "id": "CH-SB-CONCORDANCE",
+      "origin": [
+       "disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/ranking.json#INV-10",
+       "disease-models/wwox/research/drug_repurposing/view/work_order.json#NEED-SEIZURE-CONTROL-SYMPTOMATIC",
+       "disease-models/wwox/research/drug_repurposing/catalogue_funnel_it18_p2_20261101/vigabatrin_sources_resolved.tsv"
+      ],
+      "decision_at_stake": "whether the C2 flag stays on the vigabatrin and ketogenic-diet case series, what INV-10 may say about what a symptomatic response predicts about development, and the wording of CLAIM 001, 031 and 042",
+      "available_knowledge": "six WWOX case reports read at complete or partial depth with verbatim locators; one five-patient diet series whose exposed denominator is not stated; two children with a vigabatrin MRI signal change known only from the abstract; UKISS at abstract level only",
+      "decisive_uncertainty": "for how many patients a symptomatic and a developmental outcome are both recorded, and whether they move together more or less than in the comparable non-WWOX early-onset encephalopathies",
+      "discriminating_outcomes": "counts of patients with both endpoints per intervention class with their concordance; the base rate of responder with unchanged development in IESS strata from primary trials",
+      "prior_work": "IT18 P2 vigabatrin assertion table; IT29 P3-E (UKISS abstracts only, vigabatrin infantile-spasms literature not searched in depth); INV-10 next test never executed",
+      "resources": "two Scientist readings, open full-text routes only",
+      "reevaluate_when": "a WWOX cohort with per-patient therapy and developmental outcome is published, or the Choi 2026 full text states exposure denominators",
+      "nature": "shared_premise",
+      "sources": [
+       "30361190",
+       "37583270",
+       "39101447",
+       "35573960",
+       "42092735",
+       "36537114",
+       "41442931"
+      ],
+      "reopen_reason": "INV-10 asks for an assembly across reports that nobody assembled; two sources were read only at abstract or partial depth and the denominators are missing",
+      "returned": [
+       "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/README.md",
+       "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/handover/CONSUMERS.md"
+      ]
+     }
+    }
+   ]
+  },
+  "OBJ_S2": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "S2 vigabatrin and CPP-115 white-matter safety: full-text readings, age and duration dependence, reversibility, transfer to a hypomyelinating baseline (B1)",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "challenge": {
+      "id": "CH-SB-VGB-WHITEMATTER",
+      "origin": [
+       "disease-models/wwox/research/drug_repurposing/cards/H02_gabaat_inactivator_myelin_exposure.packet.json",
+       "disease-models/wwox/research/drug_repurposing/view/work_order.json#NEED-MYELINATION"
+      ],
+      "decision_at_stake": "the position and caveat of card H02, whether the statement that start age decides is supported at full-text level, and the shape of an exposure-window series if an animal experiment is designed",
+      "available_knowledge": "abstract-level rat and dog toxicology, a single-child neuropathology report, the label sections on infant MRI change and intramyelinic oedema, two WWOX children with the MRI finding",
+      "decisive_uncertainty": "whether risk concentrates in a stated age, duration and co-therapy window that WWOX-DEE infants fall inside, and whether a hypomyelinating baseline changes it",
+      "discriminating_outcomes": "age and duration dependence and reversibility at full text; hormonal co-therapy as a confounder or not; any myelin-deficient baseline study",
+      "prior_work": "IT-series card H02 (abstract level)",
+      "resources": "one Scientist reading, open full-text routes only",
+      "reevaluate_when": "an infant MRI series separating hormonal therapy from vigabatrin, or any vigabatrin study on a myelin-deficient baseline, is published",
+      "nature": "shared_premise",
+      "sources": [
+       "21473881",
+       "25554247",
+       "26157036",
+       "19773459",
+       "41442931"
+      ],
+      "reopen_reason": "H02 rests on abstracts for the toxicology and on an abstract for the WWOX children; the design facts that decide transfer are in the full texts",
+      "returned": [
+       "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/README.md",
+       "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/handover/CONSUMERS.md"
+      ]
+     }
+    }
+   ]
+  },
+  "OBJ_S3": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "S3 post-onset restoration precedents: syndromic neurodevelopmental models (R1) and epilepsy, antisense, AAV and human timing precedents (R2), for INV-01 and NEED-WWOX-GENE-ADDITION",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "challenge": {
+      "id": "CH-SB-POSTONSET-RESTORATION",
+      "origin": [
+       "disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/ranking.json#INV-01",
+       "disease-models/wwox/research/drug_repurposing/view/work_order.json#NEED-WWOX-GENE-ADDITION",
+       "disease-models/wwox/research/drug_repurposing/advance_it8_p5_20261029/loop2_broad_recovery/README.md"
+      ],
+      "decision_at_stake": "which endpoints can be expected to recover after onset and which only be prevented, and therefore what the single added arm of INV-01 must measure and when; INV-01 is rank 1 and re-reads every partial-benefit lever",
+      "available_knowledge": "WWOX studies all treat at P0 to P5 and compare with untreated animals at an age when they are already abnormal (rescue_window_it6); three external leads (Shank3, Meis2, Csnk2b) with Methods not read",
+      "decisive_uncertainty": "the pattern of recovery after onset by endpoint class and by restoration timing in external models, and the conditions under which it transfers to a neuron-restricted, short-lived, hypomyelinated null",
+      "discriminating_outcomes": "structural and myelin endpoints against circuit and behaviour endpoints after onset; critical-period statements by the authors; human timing precedents",
+      "prior_work": "rescue_window_it6_20261029; advance_it8_p5 loop 2; IT29 P3-C and P3-E",
+      "resources": "two Scientist readings, open full-text routes only",
+      "reevaluate_when": "any WWOX treated-after-onset arm (mouse or organoid) is published",
+      "nature": "shared_premise",
+      "sources": [
+       "34253921",
+       "42587157",
+       "42190665"
+      ],
+      "reopen_reason": "the module sampled three external leads with Methods unread; the precedent base is thin for a rank-1 decision",
+      "returned": [
+       "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/README.md",
+       "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/handover/CONSUMERS.md"
+      ]
+     }
+    }
+   ]
+  },
+  "OBJ_S4": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "S4 reconcile: recompute headline counts from the TSVs, validate widths and staged receipts, trial-record the receipts in a scratch clone",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_S5": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "S5 independent verification by actors other than the producers (different model; blind locator audit on the decisive triples; contest the conclusions with the source)",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_S6": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "S6 hand-over: module inputs in the consumer vocabulary, proposed registry changes, consumer table, staged receipts index",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_S7": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "S7 validation (gate, LINT, structure suites, battery on a no-hardlinks clone), commit, land and push under the section 21d conditions",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_S8": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "S8 final report to the operator and the IT30 Orchestrator",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}
