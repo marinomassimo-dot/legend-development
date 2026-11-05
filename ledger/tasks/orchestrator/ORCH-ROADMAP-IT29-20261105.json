@@ -196,8 +196,9 @@
    "steps": [
     {
      "step": "P16 tests, battery, integration, push, CI, cleanup",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "battery on the exact frozen SHA d099a5be465f91fe7dc8c7f108751fd34f3a242d: REGRESSION VERDICT PASS WITH SKIPS (208 targets, 8 skipped); the earlier run on 72a58bfb failed one test (legend above the fold at phone width), fixed in d099a5be; push, CI, served-site check and cleanup still to do"
     }
    ]
   },
