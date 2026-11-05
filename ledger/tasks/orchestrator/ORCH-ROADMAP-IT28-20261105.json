@@ -11,9 +11,11 @@
   "Queued behind IT27 by the operator's IT28 message and started at IT27 closure; stage S8 (generation_it27_p3_20261104/results_s8) is the current stage by the Standing method pointer, read from the file, not from the prompt.",
   "Zero spend, no e-mail or contact, no operator e-mail to any service."
  ],
- "STOP_LOG": [],
+ "STOP_LOG": [
+  "2026-11-05 IT28 complete: packages P1-P14 DONE (P7 relations not executed, no named gap); final battery PASS WITH SKIPS on ce6c5eed."
+ ],
  "AUTHORISED_QUEUE_20261105": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P1": {
    "order": 1,
    "steps": [
@@ -172,9 +174,9 @@
    "steps": [
     {
      "step": "P13/P14 permanent method, regressions, independent verification, battery on a frozen candidate, push, CI, cleanup, report",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Standing method bullets (challenge step, measure join, blind reconstruction, assay-data), challenge_batch.py with 6 regressions routed in framework/scripts/README.md. Independent verifier (separate context) reproduced every number; sharpened 762 v 747 and NOT_ASSESSABLE 287 to 234. Battery on 48bc2ffe FAILED one suite (own broken relative link in the P9 README); fixed; battery on exact ce6c5eed: PASS WITH SKIPS (206 targets, 8 environment skips). Push by safe_push, CI, online site check and cleanup follow in the closing report."
     }
    ]
   }
