@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-05T01:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:45:00Z",
+ "event_id": "FTR-20261105-28447936-04",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: The proposed target mechanism of guanabenz/Sephin1 is contested by an independent in vitro reconstitution | Abstract | \"Surprisingly, they proved inert in vitro affecting neither stability of the PP1-PPP1R15A complex nor substrate-specific dephosphorylation.\"",
+  "verbatim_locator | proposition: An effect of Sephin1 persisted without PPP1R15A and without phosphorylatable eIF2a, so a benefit under Sephin1 is not proof of ISR potentiation | Abstract | \"However, repression was noted in both wildtype and Ppp1r15a deleted cells and in cells rendered ISR-deficient by CRISPR editing of the Eif2s1 locus to encode a non-phosphorylatable eIF2\u03b1 (eIF2\u03b1S51A).\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p4_isr_role_20261105/A_glia_myelin/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC PMC5429092 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); only the sections named in the verbatim_locator entries were read for the quoted propositions, the remaining sections were skimmed or not read; figures, tables and supplement not read; bytes not saved",
+ "study_id": {
+  "doi": "10.7554/eLife.26109",
+  "pmid": "28447936"
+ },
+ "workflow": "IT28 P4-A (batch_it28_p4_isr_role_20261105, sub-question: ISR in oligodendrocytes, myelin and glia). Question-driven reading for the protective-versus-damaging role of the ISR. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

@@ -43,7 +43,34 @@
      "step": "P3 batch one: HDAC5 lever validity (catalytic v scaffold), complementary sub-questions to distinct Scientists",
      "status": "TODO",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "",
+     "challenge": {
+      "id": "CH-IT28-HDAC5-LEVER",
+      "origin": [
+       "disease-models/wwox/research/drug_repurposing/decomposition_it27_p6_20261104/hypotheses_it27p7.tsv#H1",
+       "disease-models/wwox/research/drug_repurposing/alternatives_it27_p5_20261104/pracinostat_hdac5_discordance_it27p5.tsv"
+      ],
+      "decision_at_stake": "whether HDAC inhibitors (pracinostat, TMP269 and class) are a sensible lever on the HDAC5 to SLC2A1 thread, and which HDAC5 proposals keep their place in the Q2 cluster",
+      "available_knowledge": "one muscle knockdown origin (PMID 22991226); class IIa low intrinsic activity and scaffold function; discordant potency values 47 v 5113 nM",
+      "decisive_uncertainty": "whether catalytic inhibition lowers HDAC5 output at SLC2A1 in human neural cells",
+      "discriminating_outcomes": "catalytic-dead rescue and class-I-only inhibitor contrasts; TMP269 against knockdown",
+      "prior_work": "IT27 P5/P6/P7 table work; no primary-source batch before IT28",
+      "resources": "three Scientist reads, free full-text routes only",
+      "reevaluate_when": "a full text of PMID 22991226 or the potency papers' methods becomes available, or any neural HDAC5 catalytic-dead data appear",
+      "nature": "shared_premise",
+      "sources": [
+       "22991226",
+       "20139990",
+       "29360358",
+       "20197387",
+       "25637120"
+      ],
+      "reopen_reason": "IT28 reads the methods and mechanism the table work could not",
+      "returned": [
+       "disease-models/wwox/research/drug_repurposing/generation_it22_p1_20261103/decision_scope_it22.tsv",
+       "disease-models/wwox/research/drug_repurposing/batch_it28_p3_hdac5_20261105/README.md"
+      ]
+     }
     }
    ]
   },
@@ -54,7 +81,34 @@
      "step": "P4 batch two: role of the integrated stress response (compensation v contributor), transferable and WWOX-specific evidence",
      "status": "TODO",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "",
+     "challenge": {
+      "id": "CH-IT28-ISR-ROLE",
+      "origin": [
+       "disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/investigations_it20.tsv#INV-02",
+       "disease-models/wwox/research/drug_repurposing/generation_it27_p3_20261104/README.md"
+      ],
+      "decision_at_stake": "which ISR lever class (eIF2B activator, kinase inhibitor, potentiator) is worth testing and what must be measured first",
+      "available_knowledge": "human organoid ISR set lower, shWWOX progenitors higher, P47T mouse directionally up; no protein-level measurement",
+      "decisive_uncertainty": "the ISR sign at protein and translation level in WWOX-deficient human neural cells, by cell type",
+      "discriminating_outcomes": "attenuation rescues and potentiation worsens (damage) versus the reverse (compensation) versus neither (marker)",
+      "prior_work": "IT3 to IT5 ISR readings and the IT27 P47T annotation; no transferable-literature batch before IT28",
+      "resources": "two Scientist reads, free full-text routes only",
+      "reevaluate_when": "any protein-level ISR measurement in a WWOX-deficient neural system, or a mammalian ISR-modulation seizure study",
+      "nature": "need_without_interpretation",
+      "sources": [
+       "41380592",
+       "25741597",
+       "31727829",
+       "37473758"
+      ],
+      "reopen_reason": "IT28 asks about lever choice, not the sign alone",
+      "returned": [
+       "disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/investigations_it20.tsv",
+       "disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/unit_caveats.tsv",
+       "disease-models/wwox/research/drug_repurposing/batch_it28_p4_isr_role_20261105/README.md"
+      ]
+     }
     }
    ]
   },

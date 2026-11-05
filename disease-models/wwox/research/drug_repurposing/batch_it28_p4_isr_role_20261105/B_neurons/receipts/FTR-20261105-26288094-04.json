@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-05T01:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:45:00Z",
+ "event_id": "FTR-20261105-26288094-04",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: see README id A4 | Abstract | \"guanabenz treatment accelerated ALS-like disease progression in a strain of mutant SOD1 transgenic ALS mice\"",
+  "verbatim_locator | proposition: see README id A5 | Abstract | \"guanabenz is protective in fibroblasts expressing G93A mutant SOD1 when they are exposed to tunicamycin mediated ER stress\"",
+  "verbatim_locator | proposition: see README id A6 | Discussion | \"G93A-SOD1 male mice were more sensitive to the deleterious effects of guanabenz than their female counterparts.\"",
+  "verbatim_locator | proposition: see README id A9 | Discussion | \"Jiang et al tested guanabenz only in female G93A-SOD1 mice\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p4_isr_role_20261105/B_neurons/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC4545826 full text fetched 2026-11-05 through Europe PMC fullTextXML; Results and Discussion read in context for the cited passages, Methods and figure images not read; supplement not accessed; bytes not saved",
+ "study_id": {
+  "doi": "10.1371/journal.pone.0135570",
+  "pmid": "26288094"
+ },
+ "workflow": "IT28 P4-B (Guanabenz accelerates SOD1 disease (PLoS One 2015)): question-driven reading for the ISR protective-versus-harmful question in neurons, transferable literature searched without the disease gene name. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

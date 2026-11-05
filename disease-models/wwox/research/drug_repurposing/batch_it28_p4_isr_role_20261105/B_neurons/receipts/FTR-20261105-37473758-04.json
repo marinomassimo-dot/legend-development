@@ -1,0 +1,49 @@
+{
+ "analysis_at": "2026-11-05T01:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:45:00Z",
+ "event_id": "FTR-20261105-37473758-04",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: see README id F1 | Abstract (Summary) | \"the main arm of the ISR, eIF2\u03b1 phosphorylation (p-eIF2\u03b1), is suppressed in excitatory but not inhibitory neurons in a mouse model of fragile X syndrome (FXS; Fmr1\u2212/y)\"",
+  "verbatim_locator | proposition: see README id F2 | Results > p-eIF2\u03b1 is decreased in Fmr1\u2212/y excitatory neurons; Figure 1D-G | \"p-eIF2\u03b1 is decreased in mature excitatory neurons (labeled with Ca2+-calmodulin-dependent protein kinase 2 (CaMK2\u03b1)) (hippocampus, Figure 1D; cortex, Figure 1E; amygdala, Figure S2A) but not inhibitory neurons\"",
+  "verbatim_locator | proposition: see README id F2h | Results > p-eIF2\u03b1 is decreased in Fmr1\u2212/y excitatory neurons; Figure S1F-H | \"which revealed a trend toward a decrease in p-eIF2\u03b1 in individuals with FXS compared with their matching controls in two cortical areas\"",
+  "verbatim_locator | proposition: see README id F3 | Results > p-eIF2\u03b1 is decreased ...; uORF analysis, Figure S2J-M (published TRAP datasets re-analysed) | \"mRNAs containing uORFs in their 5\u2032 UTR were substantially enriched in the subset of genes downregulated in excitatory neurons of Fmr1\u2212/y mice compared with control animals\"",
+  "verbatim_locator | proposition: see README id F4 | Results > Hyperactivated mTORC1 downregulates p-eIF2\u03b1; Figure S3 | \"showed an increase in GCN2 phosphorylation on Thr899, indicating its activation\"",
+  "verbatim_locator | proposition: see README id F5 | Discussion | \"suggesting that enhanced mTORC1 activity contributes to reduced ISR in FXS\"",
+  "verbatim_locator | proposition: see README id F6 | Results > Decreased p-eIF2\u03b1 in excitatory neurons causes phenotypes reminiscent of ASD; Figure 3 | \"These findings demonstrate that the selective reduction of p-eIF2\u03b1 in excitatory neurons is sufficient to engender altered social and repetitive/stereotypic behaviors, which are hallmarks of autism.\"",
+  "verbatim_locator | proposition: see README id F7 | Results > same section; Figure 4, Figure S9G-H | \"Surprisingly, Eif2\u03b1S/A KI animals showed no significant change in social interaction\"",
+  "verbatim_locator | proposition: see README id F7b | Results > same section; Figure S9G-H | \"mice with whole-body reduction in p-eIF2\u03b1 (Eif2\u03b1S/A KI) showed no change in either synaptic excitation or inhibition\"",
+  "verbatim_locator | proposition: see README id F8 | Results > Rescue of Fmr1\u2212/y phenotypes by increasing p-eIF2\u03b1 | \"GADD34, which can also recruit PP1 to eIF2\u03b1, is induced by the ISR and is therefore less suited for chronic modulation of p-eIF2\u03b1.\"",
+  "verbatim_locator | proposition: see README id F9 | Results > Rescue of Fmr1\u2212/y phenotypes by increasing p-eIF2\u03b1; Figure 5D-E | \"normalization of p-eIF2\u03b1 in excitatory neurons of Fmr1\u2212/y mice corrected elevated protein synthesis\"",
+  "verbatim_locator | proposition: see README id F10 | Results > Rescue ...; Figure 6I-K | \"the audiogenic seizure phenotype of Fmr1\u2212/y mice was substantially alleviated upon correction of p-eIF2\u03b1\"",
+  "verbatim_locator | proposition: see README id F11 | Results > Rescue ...; Figure 6A-D | \"Fmr1\u2212/y mice injected with AAV-CReP-shRNAmir exhibited intact mGluR-LTD\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p4_isr_role_20261105/B_neurons/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC10592416 full text fetched 2026-11-05 through NCBI efetch db=pmc (XML); Results and Discussion read in context for the cited passages, Methods and figure images not read; supplement not accessed; bytes not saved",
+ "study_id": {
+  "doi": "10.1016/j.neuron.2023.06.017",
+  "pmid": "37473758"
+ },
+ "workflow": "IT28 P4-B (Fmr1 excitatory-neuron ISR (Neuron 2023)): question-driven reading for the ISR protective-versus-harmful question in neurons, transferable literature searched without the disease gene name. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

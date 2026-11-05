@@ -211,6 +211,10 @@
   "src": "en",
   "text": "Weak; sign contested; no measurement in a Wwox glia; brain exposure unmeasured"
  },
+ "3c8908a7c566": {
+  "src": "en",
+  "text": "position unchanged from IT20 (rank 1): IT28 challenge CH-IT28-ISR-ROLE (batches on the neuronal and the glial/myelin literature) changes what the test must measure and which result would discriminate, not the position."
+ },
  "3d05ab636d8d": {
   "src": "it",
   "text": "Capire se la sensibilità all'etosuccimide riflette il canale T, dato che non esiste alcuna misura del canale T. IT13: il catalogo elenca solo il canale T, ma i dati dello stesso articolo mostrano anche blocco GIRK; i trascritti P17 non decidono."
@@ -379,17 +383,9 @@
   "src": "it",
   "text": "Le famiglie sono scelte per disponibilità di dati, non per un'analisi del catalogo; una sola concentrazione e poche misure nel tempo."
  },
- "5edba0003d0f": {
-  "src": "en",
-  "text": "Which sign the ISR actually has at protein level in a WWOX-deficient human neural cell. Until that is measured, an ISR-attenuating compound and an ISR-potentiating compound are equally defensible, which is the definition of an unqualified axis."
- },
  "5ef585ced049": {
   "src": "en",
   "text": "Which T-type isoform carries the suppression of the provoked seizure phase, and does the effect depend on the genotype?"
- },
- "5f18b5a7ddaf": {
-  "src": "en",
-  "text": "ATF4 protein and eIF2-alpha phosphorylation by immunoblot in a WWOX-deficient human neural line against an isogenic control, one differentiation stage, no compound involved."
  },
  "5fe4b6e74a85": {
   "src": "en",
@@ -514,6 +510,10 @@
  "7d03763d1251": {
   "src": "en",
   "text": "Whether the block is receptor-responsive and causal, or a consequence of seizures, or of the neuron's own signal being absent (the pro-myelinating-class row asks the premise from the signal side). The agent also has systemic actions that oppose the glycaemia need; an effect on seizure threshold was not looked up. IT22: the seizure-threshold question is now looked up and is mixed, not closed."
+ },
+ "7d345e9c6100": {
+  "src": "en",
+  "text": "Which sign the ISR actually has at protein level in a WWOX-deficient human neural cell, and in which cell type. The IT28 reading of the transferable literature adds that the sign of a lever depends on which node is perturbed and on the stress class (chronic misfolded cargo versus a locked eIF2B lesion versus transient external stress), and that RNA target sets can disagree with eIF2-alpha phosphorylation in both directions. Until the protein-level sign is measured, an ISR-attenuating and an ISR-potentiating compound remain equally defensible."
  },
  "7d390d75ffb7": {
   "src": "en",
@@ -683,6 +683,10 @@
   "src": "en",
   "text": "WWOX-system: a glycolytic signature; the kinase transcript lower in the organoid; no difference in the one human PDH activity measurement. The kinase-to-PDH link has no WWOX observation."
  },
+ "a48ada2b2462": {
+  "src": "en",
+  "text": "ATF4 protein, total and phosphorylated eIF2-alpha and per-cell translation (nascent-protein labelling) in a WWOX-deficient human neural line against an isogenic control, at one differentiation stage and by cell type, no compound involved. Only if the sign is high, a pre-registered panel: an eIF2B activator and kinase-level loss against genetic PPP1R15A loss, with a second-stressor arm and a functional endpoint."
+ },
  "a503e5fa8348": {
   "src": "en",
   "text": "New compound routes for the Q8 question; the NRF2 axis and its step 0 were already a carded thread since IT10; the molecule is in an earlier exclusion list"
@@ -834,10 +838,6 @@
  "c5a4e3d438da": {
   "src": "en",
   "text": "The same provoked-seizure design with both genotypes treated and an interaction term, powered on the published effect size."
- },
- "c662546b6bc3": {
-  "src": "en",
-  "text": "position unchanged from IT20 (rank 1): No IT21 input changes the position."
  },
  "c7f9760e7c63": {
   "src": "en",

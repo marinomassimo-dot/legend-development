@@ -1,0 +1,20 @@
+# IT28 P3: is catalytic HDAC inhibition a valid lever on the HDAC5 to SLC2A1 thread? (challenge CH-IT28-HDAC5-LEVER)
+
+Non-canonical research material, not medical advice, no dose or treatment given. Three Scientists read complementary sub-questions (A edge origin, B class IIa catalytic biology, C pharmacological discordance); 10 receipts were recorded (`fulltext_read_receipts.jsonl`, 1,063 after this batch). Each sub-folder carries the verbatim locators.
+
+## Verdict on the rationale: NARROWED, not refuted, and not confirmed
+| Link of the chain | Finding | Source depth |
+|---|---|---|
+| The edge `HDAC5 -> SLC2A1 (+)` | One origin, not three: TRRUST, CollecTRI and ExTRI2 all trace to PMID 22991226 (human primary muscle cells). Gene identity (SLC2A1 = GLUT1) and sign are what the paper reports: HDAC5 knockdown reduced GLUT1 expression. The paper's headline is SLC2A4 (GLUT4); the one drug tested (Scriptaid, pan-HDAC) was reported for GLUT4 only. | abstract |
+| What the observation is | A knockdown association in muscle. No catalytic-dead, localisation or MEF2 evidence for GLUT1; "transcriptional" over-states an expression readout; nothing in the source supports "an HDAC5 inhibitor lowers SLC2A1", and nothing supports transfer to neural cells. | abstract |
+| Is HDAC5 a catalytic enzyme at the locus? | Class IIa HDACs have very low intrinsic activity on standard substrates; their repression is largely scaffold (SMRT/NCoR-HDAC3, MEF2, shuttling). In neurons the separating experiments exist for HDAC4, not HDAC5; the only catalytic-site mutant in neurons (HDAC4) did not need deacetylation. Cardiomyocyte data show catalytic activity mattering for HDAC5 but with the opposite sign (inhibition raises the output). | abstracts and parts of full text |
+| The compound side | Pracinostat at class I doses is not expected to engage class IIa catalytically (Bradner 2010: no usable class IIa cellular tool among standard inhibitors). The 47 v 5,113 nM discordance is class IIa-wide in the 2018 document (HDAC4/7/9 >10,000), the 2018 assay used a different substrate set, but the methods of the three papers are not freely readable: UNRESOLVED, with the exact missing datum named (isoform table and methods of PMID 20197387). Thermal-shift data show pracinostat stabilising endogenous HDAC5 in lysate (+9 C), a binding signal, not an activity. TMP269 is class IIa-selective on compiled data only. CNS exposure of pracinostat: not determined. | abstract, ChEMBL records, one full text |
+
+## Consequence for the proposals
+The premise is carried as a limit, not as a veto: the edge basis in `generation_it22_p1_20261103/decision_scope_it22.tsv` now states the single muscle origin and that catalytic inhibition is not shown to lower the output (23 HDAC-chain proposals change their `carried_limits`, nothing else: eligibility 220 and the 15 hand-overs unchanged). Pracinostat stays a conditional proposal; the parsimonious reading of any pracinostat effect is class I (HDAC3-linked), which is itself the discriminating contrast.
+
+## Discriminating experiment (first step, no compound)
+In human neural progenitors or neurons: HDAC5 knockdown reading SLC2A1 protein, glucose uptake and mRNA; rescue with wild type, a localisation mutant, a catalytic-site mutant and a gain-of-function (H976Y-type) variant; then TMP269, a class-I-only inhibitor, pracinostat dose-matched on H3 acetylation and an HDAC6 inhibitor as negative control. The premise is refuted if a catalytic-dead rescue restores SLC2A1 like wild type, if TMP269 leaves SLC2A1 unchanged while knockdown moves it, or if the pracinostat effect is reproduced by a class-I-only inhibitor or persists without HDAC5. If inhibition raises SLC2A1, the lever inverts.
+
+## Not determinable here
+Knockdown method, magnitude and statistics of the muscle observation (full text not obtainable by a free route); the three potency papers' methods; HDAC5 deacetylation of substrates in human neural cells; whether TMP269 engages HDAC5 at the cited doses; HDAC5 expression in the WWOX systems. IT27 found HDAC5 mRNA nominally lower and SLC2A1 nominally higher in the P47T mouse: mRNA association only.

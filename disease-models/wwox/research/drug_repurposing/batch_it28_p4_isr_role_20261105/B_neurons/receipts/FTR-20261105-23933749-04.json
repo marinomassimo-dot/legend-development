@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-05T01:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:45:00Z",
+ "event_id": "FTR-20261105-23933749-04",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: see README id K1 | Abstract | \"The genetic deletion of the eIF2\u03b1 kinase PERK prevented enhanced eIF2\u03b1 phosphorylation, as well as deficits in protein synthesis, synaptic plasticity, and spatial memory in APP/PS1 AD model mice.\"",
+  "verbatim_locator | proposition: see README id K2 | Abstract | \"deletion of another eIF2\u03b1 kinase, GCN2, prevented impairments of synaptic plasticity and spatial memory defects displayed in the APP/PS1 mice\"",
+  "verbatim_locator | proposition: see README id K3 | Results > Deletion of PERK prevents A\u03b2-induced impairment in LTP; Fig. 1a | \"increase in the levels of phosphorylated eIF2\u03b1 in the hippocampus (150.60 \u00b1 24.26 % of wild-type levels; Fig. 1a)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p4_isr_role_20261105/B_neurons/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC3756900 full text fetched 2026-11-05 through Europe PMC fullTextXML; Results and Discussion read in context for the cited passages, Methods and figure images not read; supplement not accessed; bytes not saved",
+ "study_id": {
+  "doi": "10.1038/nn.3486",
+  "pmid": "23933749"
+ },
+ "workflow": "IT28 P4-B (eIF2a kinases and APP/PS1 plasticity (Nat Neurosci 2013)): question-driven reading for the ISR protective-versus-harmful question in neurons, transferable literature searched without the disease gene name. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

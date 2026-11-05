@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-05T01:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:45:00Z",
+ "event_id": "FTR-20261105-40296303-04",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: Human iPSC organoids: UPR/ATF4 mRNA up, ATF6-N and XBP1-S protein up (no p-eIF2a reported in the text read) | Results > Hyperactivation of the UPR Signaling Pathway in Mutant OL Brain Organoids | \"These results all indicated that all 3 arms of the UPR were overactivated in mutant brain organoids in VWM\"",
+  "verbatim_locator | proposition: Claim that an eIF2B activator lowers IRE1/ATF6 readouts is outside the known ISRIB mechanism; low weight | Results > ISRIB Treatment Inhibited the Overactivation of UPR Pathway in Mutant Organoids | \"Cumulatively, the evidence suggests that ISRIB functions as an inhibitor of the UPR signaling pathway.\"",
+  "verbatim_locator | proposition: Authors' own limitation (two patient lines, two controls) | Discussion | \"the small sample size may reduce the representability of research results to some extent\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p4_isr_role_20261105/A_glia_myelin/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC PMC12037694 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); only the sections named in the verbatim_locator entries were read for the quoted propositions, the remaining sections were skimmed or not read; figures, tables and supplement not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1111/cns.70398",
+  "pmid": "40296303"
+ },
+ "workflow": "IT28 P4-A (batch_it28_p4_isr_role_20261105, sub-question: ISR in oligodendrocytes, myelin and glia). Question-driven reading for the protective-versus-damaging role of the ISR. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

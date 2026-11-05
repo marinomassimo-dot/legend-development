@@ -1,0 +1,49 @@
+{
+ "analysis_at": "2026-11-05T01:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:45:00Z",
+ "event_id": "FTR-20261105-41453885-04",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: Oligodendrocyte-lineage PERK loss extends Jimpy (mutant Plp1) lifespan | Results > Perk inactivation increases Jimpy oligodendrocyte survival, CNS myelination, and lifespan | \"The Jimpy; Perkfl/fl; Olig2-Cre animals lived ~2 weeks longer than the Jimpy; Perkfl/fl mice (Fig. 1a, b), suggesting that PERK activity is detrimental to Jimpy mice.\"",
+  "verbatim_locator | proposition: The myelin rescue by PERK loss is small in absolute terms | Results > Perk inactivation ... (EM paragraph) | \"though reaching only ~10% of the axons myelinated in WT mice\"",
+  "verbatim_locator | proposition: Prolonging eIF2a-P genetically (GADD34 C-terminal mutant) does not worsen or rescue Jimpy lifespan | Results > Downstream ISR inactivation fails to correct Jimpy oligodendrocyte deficits | \"The lifespan of Jimpy;Gadd34 mutants (Jimpy; Gadd34\u0394C/\u0394C) was indistinguishable from that of Jimpy;Gadd heterozygous\"",
+  "verbatim_locator | proposition: CHOP deletion does not rescue Jimpy oligodendrocytes | Results > Downstream ISR inactivation fails to correct Jimpy oligodendrocyte deficits | \"However, there was no increase in the density of oligodendrocytes in Jimpy mice when CHOP was deleted (Supplementary Fig. 4d, e).\"",
+  "verbatim_locator | proposition: An eIF2B activator (2BAct), acting downstream of eIF2a-P, extends Jimpy lifespan | Results > Pharmacological ISR attenuation increases Jimpy myelination and lifespan | \"survived approximately twice as long as Jimpy mice on the control diet\"",
+  "verbatim_locator | proposition: In the model whose ISR is called harmful, the bulk ER-stress/UPR RNA readout did not itself show the stress | Results > RNAseq pathways: Perk rescues myelination whereas 2BAct targets inflammation | \"Notably, we did not observe significant changes in the ER stress pathways and UPR response in Jimpy mice, perhaps because so few oligodendrocytes remain at this stage.\"",
+  "verbatim_locator | proposition: PERK loss and eIF2B activation, both ISR-lowering, do not give the same oligodendrocyte maturation outcome | Results > RNAseq pathways ... (2BAct) | \"However, unlike the oligodendrocyte-specific PERK mutant, 2BAct did not rescue the gene sets associated with oligodendrocytes, glial cell differentiation, or cholesterol homeostasis\"",
+  "verbatim_locator | proposition: Primary Jimpy OPC cultures with ISRIB: cell-autonomous effect (WT cultures unchanged) | Results > ISR inhibition promotes Jimpy oligodendrocyte maturation in vitro | \"These data demonstrate a cell-autonomous impact of ISR inhibition on oligodendrocyte differentiation and survival.\"",
+  "verbatim_locator | proposition: The authors' own context rule: transient inflammatory stress versus chronic cargo stress | Discussion | \"Inflammation creates a relative mild and usually transient cytotoxic environment, against which the ISR can provide short-term protection.\"",
+  "verbatim_locator | proposition: Authors' mechanism statement for the chronic-cargo case (interpretation, not a measurement) | Discussion | \"mutations in the abundantly expressed Plp1 gene result in a continuous source of improperly folded mutant proteins in the ER that activates a maladaptive UPR\"",
+  "verbatim_locator | proposition: The authors flag that an MBP readout in this model may not be myelin | Discussion | \"This suggests that the increased MBP immunoreactivity observed in Jimpy animals with a reduced ISR response may not exclusively reflect enhanced myelination.\"",
+  "verbatim_locator | proposition: The Western blots listed use only myelin proteins; no eIF2a-P, ATF4 or CHOP protein antibody is listed, so the ISR state in Jimpy rests on RNA sets and genetics | Methods > Western-blot | \"anti-MBP (1:1000; # 808403, BioLegend), anti-MAG (1:1000; #346200, Invitrogen), and anti-\u03b2-actin\"",
+  "verbatim_locator | proposition: The sign of the CHOP arm depends on the Plp1 allele | Discussion | \"A previous study showed that CHOP has an anti-apoptotic impact on oligodendrocytes that express a distinct mutant Plp1 allele\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p4_isr_role_20261105/A_glia_myelin/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC PMC12868624 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); only the sections named in the verbatim_locator entries were read for the quoted propositions, the remaining sections were skimmed or not read; figures, tables and supplement not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1038/s41467-025-68045-0",
+  "pmid": "41453885"
+ },
+ "workflow": "IT28 P4-A (batch_it28_p4_isr_role_20261105, sub-question: ISR in oligodendrocytes, myelin and glia). Question-driven reading for the protective-versus-damaging role of the ISR. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

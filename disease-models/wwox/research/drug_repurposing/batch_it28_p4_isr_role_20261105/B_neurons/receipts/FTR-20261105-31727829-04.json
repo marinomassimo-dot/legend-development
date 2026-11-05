@@ -1,0 +1,44 @@
+{
+ "analysis_at": "2026-11-05T01:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:45:00Z",
+ "event_id": "FTR-20261105-31727829-04",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: see README id D1 | Abstract | \"reversed the changes in translation and inhibitory synaptic transmission and rescued the synaptic plasticity and long-term memory deficits in DS mice\"",
+  "verbatim_locator | proposition: see README id D2 | Results > Activation of the ISR in the brains of Ts65Dn mice and individuals with DS; Figure 1F-G | \"We found increased eIF2-P levels in brain samples from human individuals with DS compared with non-DS euploid controls\"",
+  "verbatim_locator | proposition: see README id D3 | Results > The PKR branch ...; Figure S4 | \"Phosphorylation of PKR, but not of GCN2 or PERK, was increased in the hippocampus of Ts65Dn mice\"",
+  "verbatim_locator | proposition: see README id D4 | Results > Inhibition of the ISR rescues ...; Figure 4E-F, Figure S12 | \"reduction of eIF2-P levels corrected the deficits in long-term memory (Fig. 4E and fig. S11) and L-LTP in Ts65Dn mice (Fig. 4F) but had no effect on WT mice (fig. S12)\"",
+  "verbatim_locator | proposition: see README id D5 | Results > Inhibition of the ISR rescues ...; Figure 4G-H, Figure S13 | \"although it did not further enhance L-LTP (fig. S13A) or long-term fear memory (fig. S13B) in WT mice\"",
+  "verbatim_locator | proposition: see README id D6 | Results > Inhibition of the ISR reverses the enhanced inhibitory synaptic transmission; Figure 5 | \"Excitatory synaptic transmission (determined by measuring miniature excitatory postsynaptic current frequency and amplitude) was not altered in the hippocampus of Ts65Dn mice (fig. S15).\"",
+  "verbatim_locator | proposition: see README id D7 | Results > same; Figure 5E-H | \"reduced the enhanced synaptic inhibition in Ts65Dn mice\"",
+  "verbatim_locator | proposition: see README id D8 | Results > Activation of the ISR ...; Figure 1A-F | \"mRNA translation in the hippocampus of Ts65Dn mice was reduced\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p4_isr_role_20261105/B_neurons/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC7299149 full text fetched 2026-11-05 through NCBI efetch db=pmc (author manuscript XML); Results and Discussion read in context for the cited passages, Methods and figure images not read; supplement not accessed; bytes not saved",
+ "study_id": {
+  "doi": "10.1126/science.aaw5185",
+  "pmid": "31727829"
+ },
+ "workflow": "IT28 P4-B (Down syndrome ISR (Science 2019)): question-driven reading for the ISR protective-versus-harmful question in neurons, transferable literature searched without the disease gene name. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

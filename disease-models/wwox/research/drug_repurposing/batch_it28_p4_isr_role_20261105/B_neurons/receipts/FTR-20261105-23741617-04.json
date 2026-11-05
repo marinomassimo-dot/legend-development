@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-05T01:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:45:00Z",
+ "event_id": "FTR-20261105-23741617-04",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: see README id S1 | Abstract | \"ISRIB reduces the viability of cells subjected to PERK-activation by chronic endoplasmic reticulum stress.\"",
+  "verbatim_locator | proposition: see README id S2 | Results > ISRIB impairs adaptation to ER stress; Figure 5A-B | \"ISRIB addition caused a strong synergistic effect on ER-stressed cells, reducing colony number and size significantly more than ER-stress alone\"",
+  "verbatim_locator | proposition: see README id S3 | Results > ISRIB impairs adaptation to ER stress; Figure 5A | \"Importantly, addition of ISRIB alone did not affect cell viability\"",
+  "verbatim_locator | proposition: see README id S4 | Abstract | \"Remarkably, ISRIB-treated mice display significant enhancement in spatial and fear-associated learning.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p4_isr_role_20261105/B_neurons/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC3667625 full text fetched 2026-11-05 through NCBI efetch db=pmc (XML); Results and Discussion read in context for the cited passages, Methods and figure images not read; supplement not accessed; bytes not saved",
+ "study_id": {
+  "doi": "10.7554/eLife.00498",
+  "pmid": "23741617"
+ },
+ "workflow": "IT28 P4-B (ISRIB discovery (eLife 2013)): question-driven reading for the ISR protective-versus-harmful question in neurons, transferable literature searched without the disease gene name. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

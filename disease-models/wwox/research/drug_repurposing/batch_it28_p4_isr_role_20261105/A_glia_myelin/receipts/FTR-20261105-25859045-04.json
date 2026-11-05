@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-05T01:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:45:00Z",
+ "event_id": "FTR-20261105-25859045-04",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: Authors' framing of the CMT1B cargo problem | Main text, paragraph on CMT1B | \"MPZmutant causes CMT1B by a gain of toxic property associated with pathological signaling through CHOP and PPP1R15A\"",
+  "verbatim_locator | proposition: Mechanistic claim measured in cells (p-eIF2a Western, translation) | Main text, paragraph on Sephin1 selectivity | \"Sephin1 prolonged eIF2\u03b1 phosphorylation after stress (Fig. 1D), delaying translation recovery (Fig. 1E).\"",
+  "verbatim_locator | proposition: Claimed stress-dependence of the potentiator | Main text, paragraph on Sephin1 selectivity | \"In the absence of stress, Sephin1 did not affect eIF2\u03b1 signaling (fig. S2)\"",
+  "verbatim_locator | proposition: Guanabenz has a major off-target pharmacology; Sephin1 was derived to avoid it | Main text, introduction | \"In vivo, GBZ cannot be used to selectively inhibit PPP1R15A because it is a centrally active hypotensive drug with nanomolar affinity for the \u03b12-adrenergic receptor\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p4_isr_role_20261105/A_glia_myelin/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC PMC4490275 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); only the sections named in the verbatim_locator entries were read for the quoted propositions, the remaining sections were skimmed or not read; figures, tables and supplement not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1126/science.aaa4484",
+  "pmid": "25859045"
+ },
+ "workflow": "IT28 P4-A (batch_it28_p4_isr_role_20261105, sub-question: ISR in oligodendrocytes, myelin and glia). Question-driven reading for the protective-versus-damaging role of the ISR. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

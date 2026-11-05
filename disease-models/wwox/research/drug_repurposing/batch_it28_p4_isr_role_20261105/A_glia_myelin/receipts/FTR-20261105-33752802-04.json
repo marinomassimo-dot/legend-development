@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-05T01:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:45:00Z",
+ "event_id": "FTR-20261105-33752802-04",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: The remyelination benefit comes from global GADD34 mutation / drug, not oligodendrocyte-specific manipulation | Discussion | \"The genetic and pharmacologic approaches used here to modulate the ISR do not target specific cell types in the CNS.\"",
+  "verbatim_locator | proposition: Prolongation acts on survival of myelinating cells, not OPC proliferation, in this setting | Discussion | \"prolonging the ISR by the Gadd34 mutation or by Sephin1 treatment did not alter the number of proliferating OPCs in the presence of inflammation\"",
+  "verbatim_locator | proposition: Prolongation started at disease peak increased the g-ratio-defined remyelinated axons | Results > Sephin1 treatment enhances remyelination in late-stage EAE | \"the density of remyelinated axons (g > 0.8) was significantly higher in EAE mice treated with Sephin1 than those treated with vehicle\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p4_isr_role_20261105/A_glia_myelin/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC PMC7987340 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); only the sections named in the verbatim_locator entries were read for the quoted propositions, the remaining sections were skimmed or not read; figures, tables and supplement not read; bytes not saved",
+ "study_id": {
+  "doi": "10.7554/eLife.65469",
+  "pmid": "33752802"
+ },
+ "workflow": "IT28 P4-A (batch_it28_p4_isr_role_20261105, sub-question: ISR in oligodendrocytes, myelin and glia). Question-driven reading for the protective-versus-damaging role of the ISR. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

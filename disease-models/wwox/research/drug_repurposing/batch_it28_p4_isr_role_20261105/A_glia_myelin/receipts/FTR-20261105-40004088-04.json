@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-05T01:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:45:00Z",
+ "event_id": "FTR-20261105-40004088-04",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: The p-eIF2a/total ratio moved because the denominator (total eIF2a) moved; ratio readouts need the total reported | Results > 2.3. GCN2 Is Necessary for eIF2\u03b1 Recovery and Phosphorylation During Remyelination | \"showed a decrease in p-eIF2\u03b1 levels after the cuprizone challenge, and those levels were maintained after the removal of the drug. This result is probably due to the changes observed in eIF2\u03b1 total levels\"",
+  "verbatim_locator | proposition: GCN2 contributes to basal p-eIF2a in brain and is needed for remyelination (global KO) | Results > 2.3 ... | \"Under basal conditions, lower levels of eIF2\u03b1 phosphorylation were found in GCN2-deficient mice compared to WT mice (Figure 4A).\"",
+  "verbatim_locator | proposition: Group size three | Methods > 4.3. Tissue Processing for Immunofluorescence | \"Two groups of male WT (n = 3) or GC\"",
+  "verbatim_locator | proposition: Authors' own limitation | Discussion | \"Limitations of our study include the small sample size\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p4_isr_role_20261105/A_glia_myelin/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC PMC11855834 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); only the sections named in the verbatim_locator entries were read for the quoted propositions, the remaining sections were skimmed or not read; figures, tables and supplement not read; bytes not saved",
+ "study_id": {
+  "doi": "10.3390/ijms26041626",
+  "pmid": "40004088"
+ },
+ "workflow": "IT28 P4-A (batch_it28_p4_isr_role_20261105, sub-question: ISR in oligodendrocytes, myelin and glia). Question-driven reading for the protective-versus-damaging role of the ISR. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

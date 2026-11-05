@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-05T01:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:45:00Z",
+ "event_id": "FTR-20261105-40326783-04",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: Oligodendrocyte-specific eIF2B mutation gives oligodendrocyte pathology with a normal bulk ATF4-target readout | Discussion | \"Interestingly, the expression of the ATF4 transcriptome is completely normal in the brains of Cnp-2b5ho animals.\"",
+  "verbatim_locator | proposition: The oligodendrocyte-lineage phenotype is immaturity/cycling, not death | Results > Oligodendrocytes | \"Cnp-2b5ho mice had a higher percentage of Ki67+ oligodendrocytes than controls (70.49% \u00b1 8.82% versus 20.71% \u00b1 0.34%; P < 0.0001)\"",
+  "verbatim_locator | proposition: No apoptosis in the oligodendrocyte-specific mutant | Results > Oligodendrocytes | \"Cell death was not detected in any Cnp-2b5ho animal\"",
+  "verbatim_locator | proposition: Assay discordance for an ISR-target protein inside one model | Results > ATF4 transcriptome | \"Given the contradictory results between 4E-BP1 immunostaining, western blot and qPCR\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p4_isr_role_20261105/A_glia_myelin/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC PMC12588717 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); only the sections named in the verbatim_locator entries were read for the quoted propositions, the remaining sections were skimmed or not read; figures, tables and supplement not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1093/brain/awaf171",
+  "pmid": "40326783"
+ },
+ "workflow": "IT28 P4-A (batch_it28_p4_isr_role_20261105, sub-question: ISR in oligodendrocytes, myelin and glia). Question-driven reading for the protective-versus-damaging role of the ISR. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

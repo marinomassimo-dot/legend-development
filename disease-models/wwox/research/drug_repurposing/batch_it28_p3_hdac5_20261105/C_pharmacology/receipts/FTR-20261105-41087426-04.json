@@ -1,5 +1,5 @@
 {
- "analysis_at": "2026-11-05T12:00:00Z",
+ "analysis_at": "2026-11-05T01:40:00Z",
  "analysis_time_precision": "minute",
  "coverage": {
   "abstract": "not_read",
@@ -13,7 +13,7 @@
   "supplementary": "unavailable",
   "tables": "read"
  },
- "event_at": "2026-11-05T12:00:00Z",
+ "event_at": "2026-11-05T01:41:00Z",
  "event_id": "FTR-20261105-41087426-04",
  "evidence_basis": [
   "verbatim_locator | proposition: for pracinostat this review reports no measured CSF penetration (n.d.) and lists rule-based BBB properties only; it is a compilation, not a measurement | Table 2, Pracinostat column, rows 'Penetration through the CSF?' and 'No. of BBB requirements met' | \"Penetration through the CSF? | Yes | Limited | Limited | n.d. | n.d. | Limited | Yes | n.d.\" (column order Vorinostat, Belinostat, Panobinostat, Pracinostat ...)"

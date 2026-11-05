@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-05T01:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:45:00Z",
+ "event_id": "FTR-20261105-25766071-04",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: Protein p-eIF2a time course shows persistence under guanabenz in IFN-g-stressed differentiating OPCs | Results > Guanabenz protects oligodendrocytes against IFN-\u03b3 | \"By 20 h, however, p-eIF2\u03b1 expression had significantly decreased in dOPCs treated only with IFN-\u03b3 but remained high in cells treated with IFN-\u03b3+5.0 \u03bcM guanabenz (P=0.043, unpaired t-test).\"",
+  "verbatim_locator | proposition: In EAE the drug also changes T cells, so the EAE benefit is not cell-autonomous proof | Results > Guanabenz alters the number of activated CD4+ cells in EAE | \"guanabenz treatment results in both a decrease in the number of activated CD4+ T cells and an increase in the number of dead CD4+ T cells in the CNS while protecting mature oligodendrocytes\"",
+  "verbatim_locator | proposition: Authors name the cost of prolongation | Discussion | \"Sustained translational repression, due to prolonged eIF2\u03b1 phosphorylation, could prove detrimental to myelinating cells.\"",
+  "verbatim_locator | proposition: Remyelination was not tested in this paper | Discussion | \"Although this study does not directly address the impact of an enhanced ISR response on remyelination\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p4_isr_role_20261105/A_glia_myelin/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC PMC4360920 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); only the sections named in the verbatim_locator entries were read for the quoted propositions, the remaining sections were skimmed or not read; figures, tables and supplement not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1038/ncomms7532",
+  "pmid": "25766071"
+ },
+ "workflow": "IT28 P4-A (batch_it28_p4_isr_role_20261105, sub-question: ISR in oligodendrocytes, myelin and glia). Question-driven reading for the protective-versus-damaging role of the ISR. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

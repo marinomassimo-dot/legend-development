@@ -1,0 +1,45 @@
+{
+ "analysis_at": "2026-11-05T01:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:45:00Z",
+ "event_id": "FTR-20261105-42446983-04",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: see README id P1 | Abstract (Significance) | \"the ISR effector ATF4 protects GABAergic neurons during ISR-induced impairment, whereas its deletion in glutamatergic neurons has no effect\"",
+  "verbatim_locator | proposition: see README id P2 | Results > Cell Type\u2013Specific Roles of ISR Downstream Effectors; Figure 4E-F | \"deletion of Atf4 from GABAergic neurons in Ppp1r15bR658C mice (Ppp1r15bR658C:Atf4flox/flox:CreGad2+ mice) exacerbated their long-term memory deficits (Fig. 4F), indicating that ATF4 has a protective functional role in this neuronal population\"",
+  "verbatim_locator | proposition: see README id P3 | Results > Identification of an ISR Signature Using scRNA-seq | \"ATF4 can be modulated by ISR-independent mechanisms, including mechanistic target of rapamycin (mTORC1)-mediated translation (105\u2013107), promoter methylation, and posttranslational modifications (108). Consequently, relying solely on ATF4 targets risks confounding ISR activity with other signaling pathways.\"",
+  "verbatim_locator | proposition: see README id P4 | Discussion | \"Ppp1r15bR658C mice exhibited increased GABAergic, but not glutamatergic, synaptic transmission (91).\"",
+  "verbatim_locator | proposition: see README id P5 | Discussion | \"ISR inhibition reduces GABAergic synaptic transmission without affecting glutamatergic synaptic transmission (20, 39)\"",
+  "verbatim_locator | proposition: see README id P6 | Discussion | \"This discrepancy highlights the cell-type- and context-dependent functions of ATF4\"",
+  "verbatim_locator | proposition: see README id P7 | Results > Distinct Patterns of ISR Activation across Different Brain Cell Types; Figure 1D | \"Despite persistent ISR activation, no gene was consistently regulated across all brain cell types\"",
+  "verbatim_locator | proposition: see README id P8 | Results > Identification of an ISR Signature; Figure 3B | \"revealed upregulation of the ISR genes across all cell types\"",
+  "verbatim_locator | proposition: see README id P9 | Introduction | \"In their brains, the variant disrupts the PPP1R15B\u2022PP1 complex, leading to ISR activation (increased eIF2-P levels)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p4_isr_role_20261105/B_neurons/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC13389509 full text fetched 2026-11-05 through Europe PMC fullTextXML; Results and Discussion read in context for the cited passages, Methods and figure images not read; supplement not accessed; bytes not saved",
+ "study_id": {
+  "doi": "10.1073/pnas.2537017123",
+  "pmid": "42446983"
+ },
+ "workflow": "IT28 P4-B (Persistent ISR cell-type effectors (PNAS 2026)): question-driven reading for the ISR protective-versus-harmful question in neurons, transferable literature searched without the disease gene name. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

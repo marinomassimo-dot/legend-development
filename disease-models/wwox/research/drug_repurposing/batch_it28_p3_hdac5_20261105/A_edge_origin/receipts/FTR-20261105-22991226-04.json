@@ -1,5 +1,5 @@
 {
- "analysis_at": "2026-11-05T12:00:00Z",
+ "analysis_at": "2026-11-05T01:40:00Z",
  "analysis_time_precision": "minute",
  "coverage": {
   "abstract": "read",
@@ -13,20 +13,20 @@
   "supplementary": "unavailable",
   "tables": "unavailable"
  },
- "event_at": "2026-11-05T12:00:00Z",
+ "event_at": "2026-11-05T01:41:00Z",
  "event_id": "FTR-20261105-22991226-04",
  "evidence_basis": [
   "abstract analysed in full (Raichur 2012, J Mol Endocrinol), re-read for the IT28 P3-A edge-origin question; no full text obtained: not in PMC or Europe PMC full text, publisher PDF refused a plain request (HTTP 403), institutional repository copy restricted (HTTP 401); no workaround attempted",
   "verbatim_locator | proposition: the only experimental perturbation named is knockdown of HDAC5 in human primary muscle cells, with GLUT1 (SLC2A1) lower and GLUT4 (SLC2A4) higher | Abstract, sentence 3 | \"Knockdown of HDAC5 in human primary muscle cells increased glucose uptake and was associated with increased GLUT4 (SLC2A4) expression and promoter activity but was associated with reduced GLUT1 (SLC2A1) expression.\"",
-  "verbatim_locator | proposition: the abstract gives no readout level, knockdown method, catalytic-dead rescue or localisation experiment for the GLUT1 change | Abstract, whole text | \"There was no change in PGC-1α (PPARGC1A) expression.\""
+  "verbatim_locator | proposition: the abstract gives no readout level, knockdown method, catalytic-dead rescue or localisation experiment for the GLUT1 change | Abstract, whole text | \"There was no change in PGC-1\u03b1 (PPARGC1A) expression.\""
  ],
  "evidence_depth": "abstract_only",
  "outputs": [
   "disease-models/wwox/research/drug_repurposing/batch_it28_p3_hdac5_20261105/A_edge_origin/README.md"
  ],
- "prior_receipt": null,
+ "prior_receipt": "FTR-20261103-22991226-01",
  "record_kind": "contemporaneous_receipt",
- "reread_reason": "first_read",
+ "reread_reason": "new_question_outside_prior_coverage",
  "source_fingerprint": null,
  "source_kind": "abstract",
  "source_locator": "PubMed record for PMID 22991226 served 2026-11-05 through the PubMed connector (abstract and metadata); full text not obtained by any free route tried",

@@ -1,5 +1,5 @@
 {
- "analysis_at": "2026-11-05T02:00:00Z",
+ "analysis_at": "2026-11-05T01:40:00Z",
  "analysis_time_precision": "minute",
  "coverage": {
   "abstract": "read",
@@ -13,13 +13,13 @@
   "supplementary": "unavailable",
   "tables": "not_read"
  },
- "event_at": "2026-11-05T02:00:00Z",
+ "event_at": "2026-11-05T01:41:00Z",
  "event_id": "FTR-20261105-20139990-04",
  "evidence_basis": [
   "abstract analysed",
   "verbatim_locator | proposition: pharmacologically relevant concentrations of standard HDAC inhibitors do not target class IIa HDACs; class I/IIb potency is orders of magnitude higher | RESULTS > A chemical genetic phylogeny of human histone deacetylases | \"First and foremost, the Class IIa enzymes are not targeted by most HDACi at pharmacologically-relevant concentrations.\"",
   "verbatim_locator | proposition: no tested inhibitor is a usable class IIa tool where class I/IIb HDACs are present (cells) | same section | \"none of the inhibitors tested is suitable for use as a tool compound to study Class IIa enzymes in settings where Class I/IIb enzymes are functionally present (i.e. in cells).\"",
-  "verbatim_locator | proposition: class IIa HDACs bind acetyl-lysine peptide but do not deacetylate it | RESULTS > Inhibition of Class IIa deacetylases by acetylated lysine | \"Class IIa enzymes appear to bind ε–N-acetyl lysine peptides with comparable affinity to Class I and IIb HDACs, yet Class IIa enzymes fail to deacetylate acetyl-lysine in this context.\"",
+  "verbatim_locator | proposition: class IIa HDACs bind acetyl-lysine peptide but do not deacetylate it | RESULTS > Inhibition of Class IIa deacetylases by acetylated lysine | \"Class IIa enzymes appear to bind \u03b5\u2013N-acetyl lysine peptides with comparable affinity to Class I and IIb HDACs, yet Class IIa enzymes fail to deacetylate acetyl-lysine in this context.\"",
   "verbatim_locator | proposition: the authors propose a reader (non-enzymatic) function for class IIa HDACs in some settings | DISCUSSION | \"Class IIa HDACs may function as receptors rather than enzymes, in some settings.\"",
   "verbatim_locator | proposition: no cellular marker of class IIa on-target activity existed | RESULTS > Discovery of a first non-selective HDAC inhibitor | \"Intracellular on-target activity for Class IIa HDACs cannot as of yet be probed due the lack of bona fide markers for these isoforms.\"",
   "verbatim_locator | proposition: the His-to-Tyr gain-of-function HDAC4 mutant raises hydroxamate affinity about 100-fold | DISCUSSION | \"Consistent with this model is the 100-fold increased affinity observed with the hydroxamate LAQ-824 for the H976Y HDAC4 gain of function mutant\""
@@ -28,9 +28,9 @@
  "outputs": [
   "disease-models/wwox/research/drug_repurposing/batch_it28_p3_hdac5_20261105/B_class_iia_biology/README.md"
  ],
- "prior_receipt": null,
+ "prior_receipt": "FTR-20261104-20139990-01",
  "record_kind": "contemporaneous_receipt",
- "reread_reason": "first_read",
+ "reread_reason": "new_question_outside_prior_coverage",
  "source_fingerprint": null,
  "source_kind": "fulltext_remote",
  "source_locator": "PMC author manuscript PMC2822059 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); abstract, RESULTS subsections and DISCUSSION read; methods and supplementary not read; bytes not saved",
@@ -38,5 +38,5 @@
   "doi": "10.1038/nchembio.313",
   "pmid": "20139990"
  },
- "workflow": "IT28 batch P3-B (class IIa biology): question-driven, catalytic versus scaffold function of HDAC5. Draft JSON for the integrator; not recorded in the ledger by the preparing actor. Biochemical profiling of recombinant HDAC1-9 with a panel of inhibitors (Bradner 2010, Nat Chem Biol). Cell-free; no neural cells; no gene-expression readout."
+ "workflow": "IT28 batch P3-B (class IIa biology): question-driven, catalytic versus scaffold function of HDAC5. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor. Biochemical profiling of recombinant HDAC1-9 with a panel of inhibitors (Bradner 2010, Nat Chem Biol). Cell-free; no neural cells; no gene-expression readout."
 }

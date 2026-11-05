@@ -1,5 +1,5 @@
 {
- "analysis_at": "2026-11-05T02:00:00Z",
+ "analysis_at": "2026-11-05T01:40:00Z",
  "analysis_time_precision": "minute",
  "coverage": {
   "abstract": "read",
@@ -13,7 +13,7 @@
   "supplementary": "unavailable",
   "tables": "not_read"
  },
- "event_at": "2026-11-05T02:00:00Z",
+ "event_at": "2026-11-05T01:41:00Z",
  "event_id": "FTR-20261105-23141539-04",
  "evidence_basis": [
   "abstract analysed",
@@ -21,7 +21,7 @@
   "verbatim_locator | proposition: a catalytic-site alanine-substituted HDAC4 (L-H/A) rescues knockdown-induced neuronal loss like wild type | RESULTS > HDAC4 promotes neuronal survival and regulates gene expression via distinct mechanisms and protein domains | \"full-length HDAC4 containing Alanine substitutions of five residues in the catalytic site (L-H/A) was cytoplasmic and rescued cell survival similar to wildtype.\"",
   "verbatim_locator | proposition: truncation lacking the deacetylase domain is a nuclear gain-of-function repressor of HDAC4 target genes | RESULTS > A truncated form of HDAC4 encoded by a human +C allele ... | \"these studies show that putative HDAC4 enzymatic function is dispensable for transcriptional regulation\"",
   "verbatim_locator | proposition: nuclear HDAC4 did not change bulk H3 acetylation whereas SAHA did | RESULTS > HDAC4 associates with neuronal chromatin ... | \"neither APV-induced nuclear translocation of native HDAC4 nor expression of 3SA mutant altered the levels of acetylated histone H3 (Figure 3F). In contrast, we found H3 acetylation to be increased upon treatments with a non-specific HDAC inhibitor, SAHA\"",
-  "verbatim_locator | proposition: deleting the N-terminal MEF2/chromatin-binding domain (DeltaN) gave a cytoplasmic protein with increased HDAC4 target gene expression in knockdown-plus-rescue neurons | RESULTS > HDAC4 promotes neuronal survival ... | \"Remarkably, KD+ΔN neurons had increased levels of HDAC4-dependent genes\""
+  "verbatim_locator | proposition: deleting the N-terminal MEF2/chromatin-binding domain (DeltaN) gave a cytoplasmic protein with increased HDAC4 target gene expression in knockdown-plus-rescue neurons | RESULTS > HDAC4 promotes neuronal survival ... | \"Remarkably, KD+\u0394N neurons had increased levels of HDAC4-dependent genes\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [
@@ -37,5 +37,5 @@
   "doi": "10.1016/j.cell.2012.09.037",
   "pmid": "23141539"
  },
- "workflow": "IT28 batch P3-B (class IIa biology): question-driven, catalytic versus scaffold function of HDAC5. Draft JSON for the integrator; not recorded in the ledger by the preparing actor. HDAC4 (not HDAC5) in rodent primary neurons and mouse; knockdown-plus-rescue with catalytic-site mutant. Class IIa paralog evidence only for HDAC5."
+ "workflow": "IT28 batch P3-B (class IIa biology): question-driven, catalytic versus scaffold function of HDAC5. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor. HDAC4 (not HDAC5) in rodent primary neurons and mouse; knockdown-plus-rescue with catalytic-site mutant. Class IIa paralog evidence only for HDAC5."
 }

@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-05T01:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:45:00Z",
+ "event_id": "FTR-20261105-22622579-04",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: see README id N1 | Main text (no section titles in the author manuscript); Fig. 3a-d | \"Transient eIF2\u03b1 phosphorylation is beneficial to cells overloaded with misfolded proteins - reducing protein synthesis and increasing availability of chaperones, promoting refolding22,23. However, persistently high levels of eIF2\u03b1-P are detrimental in vitro24.\"",
+  "verbatim_locator | proposition: see README id N2 | Main text; Fig. 3d-k | \"Critically, treatment with salubrinal had the opposite effect, by preventing dephosphorylation of eIF2\u03b1-P.\"",
+  "verbatim_locator | proposition: see README id N3 | Main text; Fig. 3k | \"Salubrinal treatment resulted in earlier severe neuronal loss (Fig. 3k)\"",
+  "verbatim_locator | proposition: see README id N4 | Main text; Fig. 2c,h | \"We found abrupt, significant reduction in global translation rates, with a 50% decline in 35S-methionine incorporation in hippocampal slices from prion-infected mice at 9wpi\"",
+  "verbatim_locator | proposition: see README id N5 | Main text; Fig. 2d | \"GADD34 levels did not change, despite rising eIF2\u03b1\u2013P levels, suggesting insufficient GADD34 for dephosphorylation of increased eIF2\u03b1\u2013P\"",
+  "verbatim_locator | proposition: see README id N6 | Main text; Fig. 1, Fig. 3 | \"This is the window of reversibility when diseased neurons can still be rescued\"",
+  "verbatim_locator | proposition: see README id N7 | Main text; Fig. 3 | \"Promoting eIF2\u03b1-P dephosphorylation rescues vital translation rates and is thereby neuroprotective, while preventing this further reduces translation and enhances neurotoxicity.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p4_isr_role_20261105/B_neurons/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC3378208 full text fetched 2026-11-05 through NCBI efetch db=pmc (author manuscript XML); Results and Discussion read in context for the cited passages, Methods and figure images not read; supplement not accessed; bytes not saved",
+ "study_id": {
+  "doi": "10.1038/nature11058",
+  "pmid": "22622579"
+ },
+ "workflow": "IT28 P4-B (eIF2a-P and prion neurodegeneration (Nature 2012)): question-driven reading for the ISR protective-versus-harmful question in neurons, transferable literature searched without the disease gene name. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

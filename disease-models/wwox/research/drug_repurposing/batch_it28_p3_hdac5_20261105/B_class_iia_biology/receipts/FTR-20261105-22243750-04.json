@@ -1,5 +1,5 @@
 {
- "analysis_at": "2026-11-05T02:00:00Z",
+ "analysis_at": "2026-11-05T01:40:00Z",
  "analysis_time_precision": "minute",
  "coverage": {
   "abstract": "read",
@@ -13,11 +13,11 @@
   "supplementary": "unavailable",
   "tables": "not_read"
  },
- "event_at": "2026-11-05T02:00:00Z",
+ "event_at": "2026-11-05T01:41:00Z",
  "event_id": "FTR-20261105-22243750-04",
  "evidence_basis": [
   "abstract analysed",
-  "verbatim_locator | proposition: HDAC5 nucleocytoplasmic distribution in striatal neurons is controlled by signalling, and nuclear HDAC5 co-localises with MEF2 | RESULTS > cAMP signaling promotes nuclear import of HDAC5 in striatal neurons | \"forskolin (10 μM), induced the rapid nuclear import of HDAC5 (Figure 1A–B)\"",
+  "verbatim_locator | proposition: HDAC5 nucleocytoplasmic distribution in striatal neurons is controlled by signalling, and nuclear HDAC5 co-localises with MEF2 | RESULTS > cAMP signaling promotes nuclear import of HDAC5 in striatal neurons | \"forskolin (10 \u03bcM), induced the rapid nuclear import of HDAC5 (Figure 1A\u2013B)\"",
   "verbatim_locator | proposition: nuclear HDAC5 puncta co-localise with endogenous MEF2 | same section | \"the nuclear HDAC5 puncta co-localized with endogenous MEF2 proteins (Figure S1A)\"",
   "verbatim_locator | proposition: a phospho-mimetic S279E HDAC5 stays cytoplasmic after forskolin (a localisation change) | RESULTS > Dephosphorylation of S279 is required for nuclear import of HDAC5 | \"the HDAC5 S279E mutant failed to relocalize to the nucleus by 3 hrs after forskolin treatment\"",
   "verbatim_locator | proposition: phospho-site antibodies for class IIa are not paralog-specific | DISCUSSION | \"it is important to note that the P-S259 antibody recognizes multiple class IIa HDAC proteins, not only HDAC5\"",
@@ -37,5 +37,5 @@
   "doi": "10.1016/j.neuron.2011.10.032",
   "pmid": "22243750"
  },
- "workflow": "IT28 batch P3-B (class IIa biology): question-driven, catalytic versus scaffold function of HDAC5. Draft JSON for the integrator; not recorded in the ledger by the preparing actor. HDAC5 localisation control in primary striatal neurons and NAc. Localisation and behaviour; no catalytic-versus-scaffold test."
+ "workflow": "IT28 batch P3-B (class IIa biology): question-driven, catalytic versus scaffold function of HDAC5. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor. HDAC5 localisation control in primary striatal neurons and NAc. Localisation and behaviour; no catalytic-versus-scaffold test."
 }

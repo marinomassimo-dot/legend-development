@@ -1,5 +1,5 @@
 {
- "analysis_at": "2026-11-05T12:00:00Z",
+ "analysis_at": "2026-11-05T01:40:00Z",
  "analysis_time_precision": "minute",
  "coverage": {
   "abstract": "read",
@@ -13,13 +13,13 @@
   "supplementary": "unavailable",
   "tables": "read"
  },
- "event_at": "2026-11-05T12:00:00Z",
+ "event_at": "2026-11-05T01:41:00Z",
  "event_id": "FTR-20261105-41473577-04",
  "evidence_basis": [
-  "verbatim_locator | proposition: in HeLa lysate SB939 stabilised endogenous HDAC5 more than TMP269, SAHA gave no shift; this is binding, not catalysis | Results 2.2 and Table 1, HDAC5 rows | \"HDAC5 was best stabilized by SB939, with a Tagg value of 67 ± 1 °C compared to the 58 ± 1 °C DMSO control, or ΔTagg of 9 °C\"; \"TMP-269 significantly stablized HDAC5, with a Tagg of 62 ± 1 °C and ΔTagg of 4 °C\"; \"SAHA did not (Tagg of 58 ± 1 °C or ΔTagg of 0 °C\"",
+  "verbatim_locator | proposition: in HeLa lysate SB939 stabilised endogenous HDAC5 more than TMP269, SAHA gave no shift; this is binding, not catalysis | Results 2.2 and Table 1, HDAC5 rows | \"HDAC5 was best stabilized by SB939, with a Tagg value of 67 \u00b1 1 \u00b0C compared to the 58 \u00b1 1 \u00b0C DMSO control, or \u0394Tagg of 9 \u00b0C\"; \"TMP-269 significantly stablized HDAC5, with a Tagg of 62 \u00b1 1 \u00b0C and \u0394Tagg of 4 \u00b0C\"; \"SAHA did not (Tagg of 58 \u00b1 1 \u00b0C or \u0394Tagg of 0 \u00b0C\"",
   "verbatim_locator | proposition: the IC50 column of Table 1 is a compilation from earlier papers, not measured in one assay | Table 1 footnote b | \"The previously determined IC50 values of each inhibitor and isoform were determined using the deacetylase activity assay [31,37,38,50,51].\"",
   "verbatim_locator | proposition: the authors themselves flag that class IIa activity assays rely on unnatural fluorinated substrates that may poorly reflect binding | Discussion | \"activity assays with the inactive class IIA pseudodeacetylases require unnatural fluorinated peptide substrates to allow monitoring of catalytic turnover, which could poorly reflect inhibitor binding\"",
-  "verbatim_locator | proposition: Table 1 lists pracinostat (SB939) IC50 47 nM at HDAC5 and TMP269 97 nM, sourced to PMID 20197387 and 23524983 | Table 1, HDAC5 rows, IC50 (nM) column | \"SB939 | 67 ± 1 | 9 | 47\"; \"TMP269 | 62 ± 1 | 4 | 97\""
+  "verbatim_locator | proposition: Table 1 lists pracinostat (SB939) IC50 47 nM at HDAC5 and TMP269 97 nM, sourced to PMID 20197387 and 23524983 | Table 1, HDAC5 rows, IC50 (nM) column | \"SB939 | 67 \u00b1 1 | 9 | 47\"; \"TMP269 | 62 \u00b1 1 | 4 | 97\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

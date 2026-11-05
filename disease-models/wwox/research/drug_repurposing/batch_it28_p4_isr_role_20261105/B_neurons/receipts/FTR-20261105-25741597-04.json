@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-05T01:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:45:00Z",
+ "event_id": "FTR-20261105-25741597-04",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: see README id H1 | Figure 2 legend | \"ISRIB treatment (blue bars) lowers ATF4 levels while leaving eIF2\u03b1-P unchanged in prion-diseased mice when compared with vehicle treated (gray bars) animals\"",
+  "verbatim_locator | proposition: see README id H2 | Results > ISRIB is neuroprotective in prion-diseased mice; Table 2 | \"none (0/12) of the ISRIB-treated animals, but all (9/9) vehicle-treated mice developed confirmatory signs of prion disease by 12 w.p.i. on clinical observation\"",
+  "verbatim_locator | proposition: see README id H3 | Results > ISRIB is not toxic to the pancreas; Figure 5 | \"chronic GSK2606414 treatment was toxic, causing ~50% reduction in pancreatic weight (Figure 5b) and extensive destruction of exocrine acinar pancreatic tissue (Figure 5c). Critically, ISRIB treatment produced no detectable pancreatic toxicity\"",
+  "verbatim_locator | proposition: see README id H4 | Discussion | \"Thus, ISRIB only restores protein synthesis rates to ~70% of control levels in vivo (Figure 2b)\"",
+  "verbatim_locator | proposition: see README id H5 | Discussion | \"the beneficial effects of ISR-reversing drugs in preventing neurodegeneration do not require full suppression of the response\"",
+  "verbatim_locator | proposition: see README id H6 | Results > ISRIB reduces ATF4 levels ... | \"ISRIB or vehicle alone from 7 w.p.i., when synapse loss is established\"",
+  "verbatim_locator | proposition: see README id H7 | Table 2 legend | \"Seven out of 12 ISRIB-treated mice exhibited early indicator clinical signs, but none progressed to confirmatory signs\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p4_isr_role_20261105/B_neurons/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC4385927 full text fetched 2026-11-05 through Europe PMC fullTextXML; Results and Discussion read in context for the cited passages, Methods and figure images not read; supplement not accessed; bytes not saved",
+ "study_id": {
+  "doi": "10.1038/cddis.2015.49",
+  "pmid": "25741597"
+ },
+ "workflow": "IT28 P4-B (ISRIB v GSK2606414 in prion mice (Cell Death Dis 2015)): question-driven reading for the ISR protective-versus-harmful question in neurons, transferable literature searched without the disease gene name. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

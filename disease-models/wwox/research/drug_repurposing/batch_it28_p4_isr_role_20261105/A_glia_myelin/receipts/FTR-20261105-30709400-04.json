@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-05T01:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:45:00Z",
+ "event_id": "FTR-20261105-30709400-04",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: ATF4 is induced but dispensable in EAE; the protective arm is not ATF4 | Discussion | \"Although we demonstrated that the activity of ATF4 was significantly enhanced in oligodendrocytes during EAE, it was very surprising to find that ATF4 inactivation specifically in oligodendrocytes did not affect the disease severity or inflammation\"",
+  "verbatim_locator | proposition: ATF4 is dispensable in unstressed oligodendrocyte-lineage cells (Cnp-Cre) | Results > ATF4 was dispensable for oligodendrocytes under normal conditions | \"ATF4 cKO mice did not display any neurological phenotypes and were indistinguishable from littermate control mice.\"",
+  "verbatim_locator | proposition: A translation-linked, ATF4-independent route is the authors' candidate for the protection | Discussion | \"the PERK-eIF2\u03b1 pathway also activates the transcription factor NF-\u03baB by repressing the translation of the NF-\u03baB inhibitor I\u03baB\u03b1\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p4_isr_role_20261105/A_glia_myelin/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC PMC6357515 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); only the sections named in the verbatim_locator entries were read for the quoted propositions, the remaining sections were skimmed or not read; figures, tables and supplement not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1186/s12974-019-1415-6",
+  "pmid": "30709400"
+ },
+ "workflow": "IT28 P4-A (batch_it28_p4_isr_role_20261105, sub-question: ISR in oligodendrocytes, myelin and glia). Question-driven reading for the protective-versus-damaging role of the ISR. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

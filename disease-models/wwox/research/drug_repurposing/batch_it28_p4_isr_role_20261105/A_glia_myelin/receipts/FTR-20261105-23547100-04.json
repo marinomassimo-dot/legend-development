@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-05T01:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:45:00Z",
+ "event_id": "FTR-20261105-23547100-04",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: CHOP loss (rescuing) went with higher, longer p-eIF2a (via less GADD34), measured by Western | Results > Genes rescued in S63del/Chop-null mice | \"resulted in a sustained up-regulation of eIF2\u03b1 phosphorylation compared with S63del\"",
+  "verbatim_locator | proposition: Translation was measured directly (35S labeling): GADD34 loss deepened the translational brake | Results > Inactivation of Gadd34 limits reactivation of translation in S63del nerves | \"Metabolic labeling of total protein showed a \u223c20% reduction in S63del, and a more pronounced 35\u201340% reduction in S63del/Gadd34\u0394c/\u0394c as compared with WT nerves\"",
+  "verbatim_locator | proposition: A deeper eIF2a-P brake lowered cargo and the whole UPR (protective by reducing load) | Results > Inactivation of Gadd34 limits reactivation of translation in S63del nerves | \"all three arms of the UPR (Ron and Walter, 2007) are less active, consistent with a general reduction in ER stress in S63del nerves lacking Gadd34 activity\"",
+  "verbatim_locator | proposition: Potentiation has an on-target cost in healthy myelinating cultures (concentration window) | Results > eIF2\u03b1 phosphorylation as a therapeutic target | \"treatment of WT DRG cultures with salubrinal reduced myelination\"",
+  "verbatim_locator | proposition: In P0S63del Schwann cells the CHOP arm is damaging, yet more eIF2a-P is protective | Discussion | \"indicating that the PERK/CHOP arm of the UPR is pathogenetic in this context\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p4_isr_role_20261105/A_glia_myelin/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC PMC3620355 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); only the sections named in the verbatim_locator entries were read for the quoted propositions, the remaining sections were skimmed or not read; figures, tables and supplement not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1084/jem.20122005",
+  "pmid": "23547100"
+ },
+ "workflow": "IT28 P4-A (batch_it28_p4_isr_role_20261105, sub-question: ISR in oligodendrocytes, myelin and glia). Question-driven reading for the protective-versus-damaging role of the ISR. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

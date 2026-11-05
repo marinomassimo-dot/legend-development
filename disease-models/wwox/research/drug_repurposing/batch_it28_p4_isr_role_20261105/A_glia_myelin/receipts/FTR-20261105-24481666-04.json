@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-05T01:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:45:00Z",
+ "event_id": "FTR-20261105-24481666-04",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: Protein-level readout (p-eIF2a) used to verify the genotype lowered ISR input | Results > Generation of OL-PERKko/ko mice. | \"reduced expression of PERK and phosphorylated eIF2\u03b1 (p-eIF2\u03b1) in the brains of OL-PERKko/ko mice when compared to control PERKflox/flox mice\"",
+  "verbatim_locator | proposition: PERK is dispensable for developmental myelination (Cnp-Cre) | Results > Inactivation of Perk in OLs is not detrimental to OLs and myelin integrity. | \"Collectively, these data indicate that the deletion of Perk from OLs does not affect OL development or myelin synthesis.\"",
+  "verbatim_locator | proposition: Under inflammatory demyelination, loss of PERK in oligodendrocytes worsens disease (control maximum 2.7 in the same sentence) | Results > Deletion of Perk in OLs worsens the EAE disease course. | \"PERKko/ko mice displayed a higher clinical score that reached a mean maximum of 3.7 (Fig. 4A)\"",
+  "verbatim_locator | proposition: The harm of PERK loss is not through the immune response | Results > OL-PERKko/ko mice experiencing EAE display an increased loss of OLs without a detectable effect on the inflammatory response. | \"the deletion of Perk specifically in OLs has no significant effect on T cell infiltration or microglia/macrophage activation\"",
+  "verbatim_locator | proposition: PERK is essential outside oligodendrocytes (systemic PERK inhibition is not cell-type specific) | Results > Generation of OL-PERKko/ko mice. | \"Because Perk null mice die from pancreatic and liver insufficiency early in life\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p4_isr_role_20261105/A_glia_myelin/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC PMC6342275 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); only the sections named in the verbatim_locator entries were read for the quoted propositions, the remaining sections were skimmed or not read; figures, tables and supplement not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1002/glia.22634",
+  "pmid": "24481666"
+ },
+ "workflow": "IT28 P4-A (batch_it28_p4_isr_role_20261105, sub-question: ISR in oligodendrocytes, myelin and glia). Question-driven reading for the protective-versus-damaging role of the ISR. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

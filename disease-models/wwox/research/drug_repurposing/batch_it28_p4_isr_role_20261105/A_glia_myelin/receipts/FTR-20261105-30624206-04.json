@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-05T01:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:45:00Z",
+ "event_id": "FTR-20261105-30624206-04",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: In a mouse whose ATF4-target set is high, eIF2a-P was not raised: target-set RNA and eIF2a-P come apart | Results > A chronic ISR in the CNS of VWM mice is prevented by 2BAct | \"we did not detect an increase in eIF2\u03b1 phosphorylation in R191H brains.\"",
+  "verbatim_locator | proposition: ISR readout is stage dependent (absent at P14) | Results > A chronic ISR in the CNS of VWM mice is prevented by 2BAct | \"Interestingly, we did not observe ISR induction in R191H mice at postnatal day 14\"",
+  "verbatim_locator | proposition: Temporal order: ISR-set induction before pathology | Results > A chronic ISR in the CNS of VWM mice is prevented by 2BAct | \"Activation of this stress response preceded the appearance of pathology (myelin loss, gliosis and motor deficits) in VWM mice.\"",
+  "verbatim_locator | proposition: Pharmacological ISR attenuation prevents pathology when the lesion sits in eIF2B itself | Abstract | \"Remarkably, long-term treatment with a small molecule eIF2B activator, 2BAct, prevents all measures of pathology and normalizes the transcriptome and proteome of VWM mice.\"",
+  "verbatim_locator | proposition: Cell-type assignment of the ISR set was by single-nucleus signature, mostly astrocytes | Results > The ISR is activated in astrocytes and myelinating oligodendrocytes of R191H mice | \"For the first time, our work provides in vivo evidence that in VWM mice, astrocytes exhibit a molecular signature of an early maladaptive ISR.\"",
+  "verbatim_locator | proposition: Oligodendrocytes show a smaller ISR-set enrichment | Results > The ISR is activated in astrocytes and myelinating oligodendrocytes of R191H mice | \"Interestingly, the comparison of R191H to WT cerebellum also revealed significant enrichment of the ISR signature in other non-neuronal cell types, including myelinating oligodendrocytes\"",
+  "verbatim_locator | proposition: A locked-on ISR can still be raised by an added stressor: baseline versus inducible capacity are separable | Discussion | \"However, the system can still respond to further stress\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p4_isr_role_20261105/A_glia_myelin/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC PMC6326728 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); only the sections named in the verbatim_locator entries were read for the quoted propositions, the remaining sections were skimmed or not read; figures, tables and supplement not read; bytes not saved",
+ "study_id": {
+  "doi": "10.7554/eLife.42940",
+  "pmid": "30624206"
+ },
+ "workflow": "IT28 P4-A (batch_it28_p4_isr_role_20261105, sub-question: ISR in oligodendrocytes, myelin and glia). Question-driven reading for the protective-versus-damaging role of the ISR. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

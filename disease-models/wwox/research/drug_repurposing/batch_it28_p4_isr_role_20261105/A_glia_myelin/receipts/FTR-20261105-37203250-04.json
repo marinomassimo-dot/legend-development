@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-05T01:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:45:00Z",
+ "event_id": "FTR-20261105-37203250-04",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: A bulk puromycin Western blot missed the translation effect of a mild ISR | Results > eIF2\u03b1 phosphorylation induction by IFN-\u03b3 results in mild protein synthesis inhibition in oligodendrocytes | \"Surprisingly, Western blot analysis did not reveal any changes in protein synthesis in IFN-\u03b3 treated oligodendrocytes\"",
+  "verbatim_locator | proposition: A per-cell OP-puro assay did detect the mild translation reduction | Results > Sephin1 induces translation reduction in IFN-\u03b3 stressed oligodendrocytes ... | \"Of note, using the sensitive OP-puro assay, we observed a reduction of fluorescent intensity in IFN-\u03b3 (****p<0.0001)\"",
+  "verbatim_locator | proposition: In the protective inflammatory case the ATF4 protein did not rise significantly | Results > Sephin1 induces translation reduction in IFN-\u03b3 stressed oligodendrocytes ... | \"Although there was not a significant increase in ATF4 expression, the levels of GADD34 were increased after 24 hours of Sephin1 treatment in IFN-\u03b3 stressed oligodendrocytes\"",
+  "verbatim_locator | proposition: Epistasis: an eIF2B activator removes the benefit of the potentiator (ISR-dependence of the benefit) | Results > eIF2B activators counteract the effect of Sephin1 on IFN-\u03b3 stressed oligodendrocytes and on EAE | \"Sephin1 treated mice fed chow containing 2BAct developed EAE symptoms significantly faster than those on normal chow\"",
+  "verbatim_locator | proposition: The reversal was partial | Results > eIF2B activators counteract the effect of Sephin1 ... | \"although the beneficial impact of Sephin1 was not completely abrogated by 2BAct\"",
+  "verbatim_locator | proposition: Oligodendrocytes under a mild IFN-g ISR still respond to a second (thapsigargin) stressor: capacity challenge is feasible | Results > eIF2\u03b1 phosphorylation induction by IFN-\u03b3 results in mild protein synthesis inhibition in oligodendrocytes | \"We found that TG was still capable of inducing eIF2\u03b1 phosphorylation and reducing protein synthesis in the presence of IFN-\u03b3\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p4_isr_role_20261105/A_glia_myelin/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC PMC10681276 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); only the sections named in the verbatim_locator entries were read for the quoted propositions, the remaining sections were skimmed or not read; figures, tables and supplement not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1002/glia.24386",
+  "pmid": "37203250"
+ },
+ "workflow": "IT28 P4-A (batch_it28_p4_isr_role_20261105, sub-question: ISR in oligodendrocytes, myelin and glia). Question-driven reading for the protective-versus-damaging role of the ISR. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

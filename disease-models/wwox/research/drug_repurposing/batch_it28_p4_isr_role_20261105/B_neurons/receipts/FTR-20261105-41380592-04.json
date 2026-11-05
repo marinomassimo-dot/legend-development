@@ -1,0 +1,44 @@
+{
+ "analysis_at": "2026-11-05T01:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:45:00Z",
+ "event_id": "FTR-20261105-41380592-04",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: see README id R1 | Abstract | \"Inactivation of dPARS2 in Drosophila causes developmental delay and seizure\"",
+  "verbatim_locator | proposition: see README id R2 | Results > Activation of the integrated stress response in dPARS2 deficiency; Figure 5A-B | \"The ISR was indeed activated in dPARS2-deficient fly heads, as determined by the increased P-eIF2\u03b1 levels\"",
+  "verbatim_locator | proposition: see README id R3 | Results > The GCN2 branch ...; Figure 6A-B | \"Phosphorylation of GCN2, but not of PERK, was increased in the head of dPARS2-deficient flies\"",
+  "verbatim_locator | proposition: see README id R4 | Results > Inhibition of the GCN2 branch ...; Figure 6G-K | \"Depletion of GCN2 in dPARS2-deficient animals largely suppressed developmental delay\"",
+  "verbatim_locator | proposition: see README id R5 | Results > Inhibition of the GCN2 branch ...; Figure 6J-K | \"the seizure phenotype was largely reduced or suppressed in dPARS2-deficient flies lacking GCN2\"",
+  "verbatim_locator | proposition: see README id R6 | Results > ISR activation triggers developmental delay and seizure through ATF4; Figure 7 | \"downregulation of ATF4 largely rescued the developmental delay and seizure induction defects caused by dPARS2 deficiency\"",
+  "verbatim_locator | proposition: see README id R7 | Discussion | \"we have yet to determine the exact mechanism by which ISR activation causes developmental delay and seizures\"",
+  "verbatim_locator | proposition: see README id R8 | Results > PARS2 V95I mutation causes ISR activation in human cells; Figure 8 | \"we individually expressed the His-tagged wild-type PARS2 and His-tagged PARS2 variants by transfection into human embryonic kidney 293T (HEK-293T) cells\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p4_isr_role_20261105/B_neurons/README.md"
+ ],
+ "prior_receipt": "FTR-20261027-41380592-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC12754399 full text fetched 2026-11-05 through Europe PMC fullTextXML; Results and Discussion read in context for the cited passages, Methods and figure images not read; supplement not accessed; bytes not saved",
+ "study_id": {
+  "doi": "10.1016/j.redox.2025.103966",
+  "pmid": "41380592"
+ },
+ "workflow": "IT28 P4-B (PARS2/DEE75 Drosophila (Redox Biol 2026)): question-driven reading for the ISR protective-versus-harmful question in neurons, transferable literature searched without the disease gene name. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}
