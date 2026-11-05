@@ -22,11 +22,15 @@ class T(unittest.TestCase):
         h = lambda s: [r["proposal_id"] for r in rd(DR / s / "handoff_it21.tsv")]
         self.assertEqual(h("generation_it28_p6_20261105/results_s9"), h("generation_it29_p5_20261105/results_s10"))
 
-    def test_the_oligodendrocyte_hdac_limit_reaches_hdac3_and_hdac5_proposals_only(self):
+    def test_the_oligodendrocyte_hdac_limit_reaches_hdac3_and_hdac5_proposals_only_and_keeps_its_scope_clause(self):
+        # carried_limits is capped at 1600 characters by the generator (cap not raised): the scope clause comes first in each sentence so a cut loses the tail, not the scope
         moved = [p for p in S9 if S9[p] != S10[p]]
         self.assertEqual({S10[p]["main_target"] for p in moved}, {"HDAC3", "HDAC5"})
-        self.assertTrue(all("oligodendrocyte lineage" in S10[p]["carried_limits"] for p in moved))
-        self.assertFalse(any("oligodendrocyte lineage" in r["carried_limits"] and "IT29 phenotype-first" in r["carried_limits"] for p, r in S10.items() if r["main_target"] not in ("HDAC3", "HDAC5")))
+        for p in moved:
+            t = S10[p]["carried_limits"]
+            self.assertIn("IT29 (non-WWOX, partial text", t, p)
+            self.assertIn("NOT covered" if S10[p]["main_target"] == "HDAC5" else "catalytic-dead complex", t, p)
+        self.assertFalse(any("IT29 (non-WWOX" in r["carried_limits"] for r in S10.values() if r["main_target"] not in ("HDAC3", "HDAC5")))
 
 
 if __name__ == "__main__":

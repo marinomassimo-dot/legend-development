@@ -40,6 +40,10 @@ class T(unittest.TestCase):
         out = m.build([row(), row(source_id="S2", direction_on_endpoint="context_dependent")], "N")
         self.assertEqual(out[0]["coupling"], "unresolved")
 
+    def test_unattributed_context_dependent_row_still_blocks_a_sign(self):
+        out = m.build([row(), row(source_id="S2", attribution="compound_only", direction_on_endpoint="context_dependent")], "N")
+        self.assertEqual(out[0]["coupling"], "unresolved")
+
     def test_every_row_is_marked_external(self):
         self.assertIn("EXTERNAL_TRANSFER", m.build([row()], "N")[0]["qualifier"])
 

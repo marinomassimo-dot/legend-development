@@ -1,0 +1,32 @@
+row_id	evidence_row	mismatch	source_depth	classification
+S1-01	R15	action loss vs loss of M1 receptor; attr not_applicable vs target_controlled	partial_fulltext: Introduction and Results through Fig 7 start read; Discussion, Methods, figures not read	FALSE_POSITIVE (genetic row: attribution recorded as not_applicable in signed row; target is the manipulated entity)
+S1-02	R33	action inhibit vs M1/M3/M5 blockade without EBP inhibition; dir context_dependent vs null	partial_fulltext: Results, Discussion and Methods through sterol profiling read; figures, extended data not read	UNCERTAINTY (direction downgraded to context_dependent in signed row; evidence row carries null)
+S1-03	B25	OK	abstract_only	MATCH
+S1-04	R33	action inhibit vs M1/M3/M5 blockade without EBP inhibition; dir context_dependent vs null	partial_fulltext: Results, Discussion and Methods through sterol profiling read; figures, extended data not read	UNCERTAINTY (direction downgraded to context_dependent in signed row; evidence row carries null)
+S1-05	R30	action inhibit vs CYP51 inhibition raises lanosterol; siRNA phenocopies; lanosterol supplied directly	partial_fulltext: Results, Discussion and Methods through sterol profiling read; figures, extended data not read	FALSE_POSITIVE (action wording normalised: verbose evidence text v verb in signed row)
+S1-06	R31	action inhibit vs EBP and TM7SF2 inhibition; EBP guide RNA	partial_fulltext: Results, Discussion and Methods through sterol profiling read; figures, extended data not read	FALSE_POSITIVE (action wording normalised: verbose evidence text v verb in signed row)
+S1-07	R38	action inhibit vs EBP, CYP51, TM7SF2 inhibition	partial_fulltext: Introduction, Results, Discussion and start of Methods read; figures not read	FALSE_POSITIVE (action wording normalised: verbose evidence text v verb in signed row)
+S1-08	R31	action inhibit vs EBP and TM7SF2 inhibition; EBP guide RNA	partial_fulltext: Results, Discussion and Methods through sterol profiling read; figures, extended data not read	FALSE_POSITIVE (action wording normalised: verbose evidence text v verb in signed row)
+S1-09	R26	action activate vs GR antagonist reverses clobetasol	partial_fulltext: Results, Discussion and in-vitro/slice methods read; figures, extended data not read	FALSE_POSITIVE (action wording normalised: verbose evidence text v verb in signed row)
+S1-10	R42	action activate vs RXR agonist	partial_fulltext: Introduction and Results through 9cRA in vivo read; Discussion, Methods, figures not read	FALSE_POSITIVE (action wording normalised: verbose evidence text v verb in signed row)
+S1-11	R42	action activate vs RXR agonist	partial_fulltext: Introduction and Results through 9cRA in vivo read; Discussion, Methods, figures not read	FALSE_POSITIVE (action wording normalised: verbose evidence text v verb in signed row)
+S1-12	B26	OK	partial_fulltext	MATCH
+S1-13	B29	action loss vs loss (and gain in culture)	abstract_only	FALSE_POSITIVE (action wording normalised: verbose evidence text v verb in signed row)
+S1-14	B19	OK	partial_fulltext	MATCH
+S1-15	B16	OK	partial_fulltext	MATCH
+S1-16	B31	action loss vs loss or antagonism; attr not_applicable vs target_controlled	abstract_only	FALSE_POSITIVE (genetic row: attribution recorded as not_applicable in signed row; target is the manipulated entity)
+S1-17	B07	OK	partial_fulltext	MATCH
+S1-18	B09	OK	partial_fulltext	MATCH
+S1-19	B01	dir context_dependent vs adverse	full_text	UNCERTAINTY (direction downgraded to context_dependent in signed row; evidence row carries adverse)
+S1-20	B01	dir context_dependent vs adverse	full_text	UNCERTAINTY (direction downgraded to context_dependent in signed row; evidence row carries adverse)
+S1-21	B13	action loss vs loss of PRC2 function	partial_fulltext	FALSE_POSITIVE (action wording normalised: verbose evidence text v verb in signed row)
+S1-22	B14	action loss vs loss (EZH2 only; EZH1 remains)	partial_fulltext	FALSE_POSITIVE (action wording normalised: verbose evidence text v verb in signed row)
+S1-23	B04	action gain vs gain (constitutive Wnt signalling, the state GSK3 inhibition tends to mimic)	full_text	FALSE_POSITIVE (action wording normalised: verbose evidence text v verb in signed row)
+S1-24	B06	action loss vs loss (the OL-specific beta-catenin effector)	full_text	FALSE_POSITIVE (action wording normalised: verbose evidence text v verb in signed row)
+S1-25	B24	action loss vs loss of mTORC1 or mTORC2 scaffold	abstract_only	FALSE_POSITIVE (action wording normalised: verbose evidence text v verb in signed row)
+S1-26	B24	action loss vs loss of mTORC1 or mTORC2 scaffold	abstract_only	FALSE_POSITIVE (action wording normalised: verbose evidence text v verb in signed row)
+S1-27	B22	action loss vs loss of one ERK isoform; dir context_dependent vs null	partial_fulltext	UNCERTAINTY (direction downgraded to context_dependent in signed row; evidence row carries null); ERROR provenance: evidence row B22 cites Fyffe-Maricich 2011 inside 22144101 (secondary citation), signed row credits 22144101 without saying so
+S1-28	B22	action loss vs loss of one ERK isoform; dir context_dependent vs null	partial_fulltext	UNCERTAINTY (direction downgraded to context_dependent in signed row; evidence row carries null); ERROR provenance: evidence row B22 cites Fyffe-Maricich 2011 inside 22144101 (secondary citation), signed row credits 22144101 without saying so
+S1-29	B38	action loss vs loss of class IIa corepressors; dir context_dependent vs adverse	partial_fulltext	UNCERTAINTY (direction downgraded to context_dependent in signed row; evidence row carries adverse)
+S1-30	B38	action loss vs loss of class IIa corepressors; dir context_dependent vs adverse	partial_fulltext	UNCERTAINTY (direction downgraded to context_dependent in signed row; evidence row carries adverse)
+S1-31	B37	OK	partial_fulltext	MATCH

@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-05T09:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "unavailable",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "unavailable",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-05T09:53:00Z",
+ "event_id": "FTR-20261105-29729650-08",
+ "evidence_basis": [
+  "verbatim_locator | proposition: cAMP-induced c-Jun repression by HDAC4 depends on deacetylase activity (secondary account) | Main text | \"the capacity of cAMP to downregulate c-Jun in Schwann cells disappears when the deacetylase activity is inhibited with triscostatin A\"",
+  "verbatim_locator | proposition: double Hdac4/5 removal delays, not abolishes, myelin development | Main text | \"delays myelin development\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/cycle_it29_p10_20261105/p10_H/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC5990392 via Europe PMC REST fullTextXML (open access commentary), fetched 2026-11-05; only the sections marked read in coverage were read, and for those by targeted passage search plus reading of the quoted passages; figures and tables not read; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.18632/aging.101443",
+  "pmid": "29729650"
+ },
+ "workflow": "IT29 P10 Scientist H (cycle_it29_p10_20261105, challenge CH-IT29-CLASSIIA-CNS-MYELIN). Neuron/axon route and adversarial search for a favourable or neutral class IIa sign. Draft for the integrator; the ledger was not written by the preparing actor."
+}

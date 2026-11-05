@@ -13,6 +13,7 @@ from pathlib import Path
 
 CACHE = Path(__import__("os").environ.get("LEGEND_CATALOG_CACHE", "")) / "chembl"
 
+# sobetirome: R49 targets THRB at abstract level; the THRA route used here is secondary (DGIdb/ChEMBL), see the README
 # name, evidence direction, evidence rows, is the target sign for this compound derived from the SAME study?
 REF = [
     ("benztropine", "favourable", "R01 R02 R06 R14", False), ("clemastine", "favourable", "R07 R12 R14 R48", False),
@@ -20,8 +21,8 @@ REF = [
     ("quetiapine", "favourable", "R13", False), ("miconazole", "favourable", "R22 R24 R28 R30", False),
     ("ketoconazole", "favourable", "R30", True), ("clobetasol", "favourable", "R23 R25 R26", True),
     ("amorolfine", "favourable", "R31", True), ("tamoxifen", "favourable", "R32 R36", False), ("ifenprodil", "favourable", "R36 R37", False),
-    ("liothyronine", "favourable", "R35", False), ("bexarotene", "favourable", "R35 R42", False), ("sobetirome", "favourable", "R49", False),
-    ("trichostatin", "adverse", "R40", False), ("apicidin", "adverse", "R40", False), ("fimepinostat", "adverse", "R40", False),
+    ("liothyronine", "favourable", "R35", False), ("bexarotene", "favourable", "R35", False), ("sobetirome", "favourable", "R49", False),
+    ("trichostatin", "adverse", "R40", False), ("apicidin", "adverse", "R40", True), ("fimepinostat", "adverse", "R40", False),
     ("mevastatin", "adverse", "R34", True), ("neostigmine", "adverse", "R52", False),
 ]
 ALIAS = {"fimepinostat": ["cudc-907", "fimepinostat"], "trichostatin": ["trichostatin"]}

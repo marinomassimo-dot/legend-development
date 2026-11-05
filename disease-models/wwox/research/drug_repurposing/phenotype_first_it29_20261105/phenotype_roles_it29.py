@@ -9,8 +9,8 @@ Rules (each protects against a named mistake):
   * Only rows that name a target AND are target_controlled or genetic sign a target. A compound-only effect is not
     attributed to its nominal target.
   * Viability and transcript-level rows never sign; unknown / null / undetermined / context_dependent rows never
-    sign either (unknown is not negative), but a context_dependent row makes the target `unresolved` because a
-    discordance on the same question must stay visible.
+    sign either (unknown is not negative), but a context_dependent row, attributed or not, makes the target `unresolved`
+    because a discordance on the same question must stay visible (attribution limits positive claims, not caution).
   * Direction is converted through the action on the TARGET: lowering target activity with a favourable result
     means more target activity lowers the endpoint, so coupling `opposite`.
   * Rows from different sources that disagree give `unresolved` with the count in the qualifier; they are not averaged.
@@ -67,9 +67,8 @@ def build(rows: list[dict], need_id: str) -> list[dict]:
         votes = defaultdict(set)
         ctx = 0
         for r in rs:
-            if r.get("direction_on_endpoint") == "context_dependent" and (
-                    r.get("attribution") == "target_controlled" or r.get("intervention_type", "").startswith("genetic")):
-                ctx += 1
+            if r.get("direction_on_endpoint") == "context_dependent":
+                ctx += 1                          # a compound-only row cannot SIGN a target, but it may keep a discordance visible
             s = signs(r)
             if s:
                 votes[s].add(r["source_id"])
