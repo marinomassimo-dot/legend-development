@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-05T22:47:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T22:52:00Z",
+ "event_id": "FTR-20261105-30082419-24",
+ "evidence_basis": [
+  "passages analysed through an automated page-to-text fetch that capped each excerpt, so quotes are spans rather than always whole sentences",
+  "verbatim_locator | proposition: restoration at a stated adult age fully corrected every identified physiological deficit of the recorded region | Abstract | \"restoring UBE3A levels in adult animals fully rescued all the identified physiological deficits of mPFC neurons\"",
+  "verbatim_locator | proposition: the authors state there is no critical developmental window for this endpoint class | Significance Statement | \"This indicates that there is no critical developmental window for reversing the identified physiological deficits in mPFC\"",
+  "verbatim_locator | proposition: the behavioural half of the same group's work found no rescue after adult restoration | Introduction | \"we found that Ube3a gene reinstatement in adult animals did not rescue any of the behavioral defects\"",
+  "verbatim_locator | proposition: the authors name the split between the two endpoint classes as their conclusion | Abstract | \"Together, these findings show a striking dissociation between the rescue of behavioral and physiological deficits\"",
+  "verbatim_locator | proposition: the restoration age is stated | Methods, Tamoxifen injection | \"we injected 14-week-old mutant and WT control mice (both males and females) with tamoxifen\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd/evidence_r1.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page for the PMC record read 2026-11-05 through an automated page-to-text fetch that returned section-labelled verbatim excerpts; Europe PMC REST fullTextXML and efetch db=pmc returned no article body for this record; the extraction step capped each excerpt, so quotes are spans and not always whole sentences; bytes not saved outside the session scratch directory",
+ "study_id": {
+  "doi": "10.1523/JNEUROSCI.0083-18.2018",
+  "pmid": "30082419"
+ },
+ "workflow": "ORCH-SCIBATCH-DR-20261105 challenge CH-SB-POSTONSET-RESTORATION, Scientist label sb-r1: external precedents for restoring a single gene after phenotype onset in neurodevelopmental disorder models, read for which endpoint classes recover and what decides it. Keyword-directed passage reading, not line-by-line. Prepared as a JSON file for the Orchestrator; the preparing actor did not write the ledger."
+}

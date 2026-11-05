@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-05T22:50:29Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_present",
+  "introduction": "not_present",
+  "limitations": "not_present",
+  "methods": "not_present",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-05T22:51:18Z",
+ "event_id": "FTR-20261105-31929713-22",
+ "evidence_basis": [
+  "sections listed in coverage read in a text conversion of the XML; figure images not viewed; supplementary files not opened",
+  "verbatim_locator | proposition: hormonal-arm non-responders were quickly given vigabatrin | Commentary text | \"Infants treated with hormonal monotherapy who did not respond well were quickly given vigabatrin\"",
+  "verbatim_locator | proposition: restates the person-level association between early cessation and VABS | Commentary text | \"This study also reported that spasm cessation between days 14 and 42 of the treatment was associated with higher mean VABS scores\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/evidence_a2.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC6942552 full-text XML fetched 2026-11-05 through Europe PMC REST fullTextXML and read as a text conversion of section headings, paragraphs, table rows and captions; figure images not viewed; supplementary files not opened; bytes kept outside the repository and not saved in it",
+ "study_id": {
+  "doi": "10.15844/pedneurbriefs-33-2",
+  "pmid": "31929713"
+ },
+ "workflow": "sb-a2, scientific batch ORCH-SCIBATCH-DR-20261105, challenge CH-SB-CONCORDANCE part 2: question-driven reading for the transfer baseline of symptomatic response versus developmental outcome in infantile epileptic spasms syndrome and other early-onset developmental and epileptic encephalopathies; short commentary on the ICISS 18-month report, read whole as a pointer and for one design statement; row A11. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

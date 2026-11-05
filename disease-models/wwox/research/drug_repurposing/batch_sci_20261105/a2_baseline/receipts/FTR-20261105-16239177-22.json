@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-05T22:43:13Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-05T22:44:21Z",
+ "event_id": "FTR-20261105-16239177-22",
+ "evidence_basis": [
+  "abstract analysed; no methods, figures or tables described beyond the abstract",
+  "verbatim_locator | proposition: no overall VABS difference at 14 months | Abstract | \"Mean VABS score did not differ significantly (hormone 78.6 [SD 16.8] vs vigabatrin 77.5 [SD 12.7]; difference 1.0, 95% CI -4.9 to 7.0\"",
+  "verbatim_locator | proposition: higher VABS with hormone in no identified aetiology | Abstract | \"In infants with no identified underlying aetiology, the mean VABS score was higher in those allocated hormone treatment than in those allocated vigabatrin\"",
+  "verbatim_locator | proposition: spasm absence at final assessment similar | Abstract | \"Absence of spasms at final clinical assessment (hormone 41/55 [75%] vs vigabatrin 39/51 [76%]) was similar in each treatment group\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/evidence_a2.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 16239177 (abstract and metadata as served 2026-11-05 through the PubMed tool and NCBI E-utilities efetch); full text not reachable by an open route (subscription only per Europe PMC); bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1016/S1474-4422(05)70199-X",
+  "pmid": "16239177"
+ },
+ "workflow": "sb-a2, scientific batch ORCH-SCIBATCH-DR-20261105, challenge CH-SB-CONCORDANCE part 2: question-driven reading for the transfer baseline of symptomatic response versus developmental outcome in infantile epileptic spasms syndrome and other early-onset developmental and epileptic encephalopathies; UKISS 14-month report at abstract level; rows A02 and A03. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

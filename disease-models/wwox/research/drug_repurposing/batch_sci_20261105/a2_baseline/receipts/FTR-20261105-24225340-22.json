@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-05T22:47:45Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "read"
+ },
+ "event_at": "2026-11-05T22:48:08Z",
+ "event_id": "FTR-20261105-24225340-22",
+ "evidence_basis": [
+  "sections listed in coverage read in a text conversion of the XML; figure images not viewed; supplementary files not opened",
+  "verbatim_locator | proposition: no correlation between DQ/IQ and epilepsy variables | Results, Cognitive development according to epilepsy | \"statistical analysis failed to detect any significant correlation between global DQ/IQ and epilepsy variables\"",
+  "verbatim_locator | proposition: after age 3, lower DQ/IQ with myoclonic or focal seizures | Results, Cognitive development according to epilepsy | \"IQ/DQ was significantly lower for patients exhibiting myoclonic (p = .03) or focal seizures (p = .03)\"",
+  "verbatim_locator | proposition: no correlation of cognitive delay with seizure severity | Discussion | \"Our series also found no correlation between the severity of cognitive delay and that of seizure activity.\"",
+  "verbatim_locator | proposition: SCN1A-positive worse psychomotor course despite milder epilepsy | Discussion | \"mutated patients tend to exhibit worse psychomotor course than non-mutated ones although epilepsy tends to be less severe\"",
+  "verbatim_locator | proposition: evaluations by the same neuropsychologist from 2006 | Methods | \"Neuropsychological evaluations were prospectively performed by the same neuropsychologist from 2006.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/evidence_a2.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC4225757 full-text XML fetched 2026-11-05 through Europe PMC REST fullTextXML and read as a text conversion of section headings, paragraphs, table rows and captions; figure images not viewed; supplementary files not opened; bytes kept outside the repository and not saved in it",
+ "study_id": {
+  "doi": "10.1186/1750-1172-8-176",
+  "pmid": "24225340"
+ },
+ "workflow": "sb-a2, scientific batch ORCH-SCIBATCH-DR-20261105, challenge CH-SB-CONCORDANCE part 2: question-driven reading for the transfer baseline of symptomatic response versus developmental outcome in infantile epileptic spasms syndrome and other early-onset developmental and epileptic encephalopathies; prospective Dravet syndrome cohort, DQ or IQ against epilepsy variables and SCN1A status; rows D03 to D05. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

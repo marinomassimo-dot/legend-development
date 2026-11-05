@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-05T22:52:15Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-05T22:52:32Z",
+ "event_id": "FTR-20261105-19369101-22",
+ "evidence_basis": [
+  "abstract analysed; no methods, figures or tables described beyond the abstract",
+  "verbatim_locator | proposition: seizure free 50%, normal or borderline 30% | Abstract | \"At the final evaluation, a seizure free status was achieved in 50% of patients; 30% of individuals had a normal or borderline mental development\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/evidence_a2.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 19369101 (abstract and metadata as served 2026-11-05 through the PubMed tool and NCBI E-utilities efetch); full text not reachable by an open route (subscription only per Europe PMC); bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1016/j.ejpn.2009.03.003",
+  "pmid": "19369101"
+ },
+ "workflow": "sb-a2, scientific batch ORCH-SCIBATCH-DR-20261105, challenge CH-SB-CONCORDANCE part 2: question-driven reading for the transfer baseline of symptomatic response versus developmental outcome in infantile epileptic spasms syndrome and other early-onset developmental and epileptic encephalopathies; early vigabatrin in TSC, uncontrolled series, at abstract level; row C05. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

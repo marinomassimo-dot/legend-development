@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-05T22:52:15Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T22:52:32Z",
+ "event_id": "FTR-20261105-29750338-22",
+ "evidence_basis": [
+  "abstract analysed; no methods, figures or tables described beyond the abstract",
+  "verbatim_locator | proposition: longer contraindicated medication use associated with worse cognition | Abstract | \"A longer duration of CIM use in the first 5 years after seizure onset was significantly associated with a worse cognitive outcome\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/evidence_a2.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 29750338 (abstract and metadata as served 2026-11-05 through the PubMed tool and NCBI E-utilities efetch); full text not attempted; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1111/epi.14191",
+  "pmid": "29750338"
+ },
+ "workflow": "sb-a2, scientific batch ORCH-SCIBATCH-DR-20261105, challenge CH-SB-CONCORDANCE part 2: question-driven reading for the transfer baseline of symptomatic response versus developmental outcome in infantile epileptic spasms syndrome and other early-onset developmental and epileptic encephalopathies; SCN1A cohort, contraindicated medication and cognition, at abstract level; row D08. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
