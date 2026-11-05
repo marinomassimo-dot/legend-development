@@ -19,9 +19,9 @@
    "steps": [
     {
      "step": "P0/P1 diagnosis of where generative capacity is lost on four contrasting cases; correct the IT20 3-of-23 wording to its perimeter",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "diagnosis_it28_20261105: four cases localised; IT20 3-of-23 wording corrected to its perimeter in roadmap_current.md"
     }
    ]
   },
@@ -30,9 +30,9 @@
    "steps": [
     {
      "step": "P2 challenge trigger on existing handoff/task-record/needs fields, worked on one real question from opening to return",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "framework/scripts/challenge_batch.py (+6 regressions) on the mandate step; worked on CH-IT28-HDAC5-LEVER and CH-IT28-ISR-ROLE; returned files verified"
     }
    ]
   },
@@ -41,9 +41,9 @@
    "steps": [
     {
      "step": "P3 batch one: HDAC5 lever validity (catalytic v scaffold), complementary sub-questions to distinct Scientists",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "",
+     "evidence": "batch_it28_p3_hdac5_20261105 (3 Scientists, 10 receipts): edge has one muscle origin, catalytic inhibition not shown to lower HDAC5 output, potency discordance unresolved; returned to decision scope",
      "challenge": {
       "id": "CH-IT28-HDAC5-LEVER",
       "origin": [
@@ -79,9 +79,9 @@
    "steps": [
     {
      "step": "P4 batch two: role of the integrated stress response (compensation v contributor), transferable and WWOX-specific evidence",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "",
+     "evidence": "batch_it28_p4_isr_role_20261105 (2 Scientists, 25 receipts): lever sign depends on node and stress class; INV-02 test sharpened, position unchanged",
      "challenge": {
       "id": "CH-IT28-ISR-ROLE",
       "origin": [
@@ -117,9 +117,9 @@
    "steps": [
     {
      "step": "P5 return of both batches to inputs, cards and queue; one full chain source to regenerated output",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "decision_scope basis and INV-02 text, unit notes U12 U17 U25, S9 tables, views in five languages; chain: PMID 22991226 -> edge basis -> carried_limits of 23 proposals"
     }
    ]
   },
@@ -128,9 +128,9 @@
    "steps": [
     {
      "step": "P6/P7 smallest engine improvement on a demonstrated gap, before/after, second case; relations only where a gap is named",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "generation_it28_p6_20261105: exact-InChIKey join and R4 measure carry; 53 proposals gain an attribution state, eligibility 220 and 15 hand-overs unchanged; second case BTK/ATR/EZH2 families; P7 relations not executed (no named gap)"
     }
    ]
   },
@@ -139,9 +139,9 @@
    "steps": [
     {
      "step": "P8/P9 inverse test (vorinostat plus a contrast) and pharmacological comparisons for priority investigations",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "inverse_it28_p8_20261105 (blind reconstruction in the same runtime) and compare_it28_p9_20261105 (15 receipts): two class limits carried; added value and attribution comparison for INV-03/INV-04"
     }
    ]
   },
@@ -150,9 +150,9 @@
    "steps": [
     {
      "step": "P10 bounded predictive pilot if usable data exist; otherwise the impossible comparison and the measure that reopens it",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "pilot_it28_p10_20261105: 3 of 7 seed directions replicate in P47T, one module, decoy p 0.016 overstated; prospective test impossible, measure that reopens it named"
     }
    ]
   },
@@ -161,9 +161,9 @@
    "steps": [
     {
      "step": "P11/P12 ranking, challenges and dashboard online in the available languages; scouting by current gap",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "ranking order digest ff38fcaa61295a5a unchanged; INV-02 text and U12 U17 U25 notes; scout_it28_p12 no ADOPT; online site check follows the push"
     }
    ]
   },
@@ -172,7 +172,7 @@
    "steps": [
     {
      "step": "P13/P14 permanent method, regressions, independent verification, battery on a frozen candidate, push, CI, cleanup, report",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
      "evidence": ""
     }
