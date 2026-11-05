@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-05T12:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "read"
+ },
+ "event_at": "2026-11-05T12:00:00Z",
+ "event_id": "FTR-20261105-41473577-04",
+ "evidence_basis": [
+  "verbatim_locator | proposition: in HeLa lysate SB939 stabilised endogenous HDAC5 more than TMP269, SAHA gave no shift; this is binding, not catalysis | Results 2.2 and Table 1, HDAC5 rows | \"HDAC5 was best stabilized by SB939, with a Tagg value of 67 ± 1 °C compared to the 58 ± 1 °C DMSO control, or ΔTagg of 9 °C\"; \"TMP-269 significantly stablized HDAC5, with a Tagg of 62 ± 1 °C and ΔTagg of 4 °C\"; \"SAHA did not (Tagg of 58 ± 1 °C or ΔTagg of 0 °C\"",
+  "verbatim_locator | proposition: the IC50 column of Table 1 is a compilation from earlier papers, not measured in one assay | Table 1 footnote b | \"The previously determined IC50 values of each inhibitor and isoform were determined using the deacetylase activity assay [31,37,38,50,51].\"",
+  "verbatim_locator | proposition: the authors themselves flag that class IIa activity assays rely on unnatural fluorinated substrates that may poorly reflect binding | Discussion | \"activity assays with the inactive class IIA pseudodeacetylases require unnatural fluorinated peptide substrates to allow monitoring of catalytic turnover, which could poorly reflect inhibitor binding\"",
+  "verbatim_locator | proposition: Table 1 lists pracinostat (SB939) IC50 47 nM at HDAC5 and TMP269 97 nM, sourced to PMID 20197387 and 23524983 | Table 1, HDAC5 rows, IC50 (nM) column | \"SB939 | 67 ± 1 | 9 | 47\"; \"TMP269 | 62 ± 1 | 4 | 97\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p3_hdac5_20261105/C_pharmacology/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p3_hdac5_20261105/C_pharmacology/hdac5_pharmacology_it28p3c.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC12747566 (NIH author manuscript) fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); abstract, introduction, results 2.1-2.3, Table 1, discussion, methods 4.1-4.4 and reference list read; figures not read; supplement none; bytes not saved",
+ "study_id": {
+  "doi": "10.1016/j.rechem.2025.102682",
+  "pmid": "41473577"
+ },
+ "workflow": "IT28 P3-C (pracinostat HDAC5 discordance): question-driven read for assay design, substrate class and comparators. Draft prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

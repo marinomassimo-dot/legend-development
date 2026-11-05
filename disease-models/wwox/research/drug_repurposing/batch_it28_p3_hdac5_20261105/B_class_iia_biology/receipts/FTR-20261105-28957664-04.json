@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-05T02:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "unavailable",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T02:00:00Z",
+ "event_id": "FTR-20261105-28957664-04",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: nuclear (3SA) HDAC5 lacking the MEF2-binding domain still reduces cocaine place preference | RESULTS > Nuclear HDAC5 limits reward-context associations ... | \"there was no difference between HDAC5 3SA and HDAC5 3SA-ΔMEF2, suggesting that dephosphorylated HDAC5 can reduce cocaine reward-context associations independent of direct binding to MEF2 transcription factors.\"",
+  "verbatim_locator | proposition: HDAC5 3SA but not cytoplasmic S279E represses a depolarisation-induced Npas4 reporter in neurons; DeltaMEF2 form equally | RESULTS > HDAC5 regulates activity-dependent Npas4 gene expression | \"overexpression of HDAC5 3SA, but not the cytoplasm-localized phospho-mimetic (HDAC5 S279E, (Taniguchi et al., 2012)), dramatically repressed depolarization-induced expression of a Npas4-luciferase reporter plasmid\"",
+  "verbatim_locator | proposition: direct MEF2 binding is not required for Npas4 repression | same section | \"suggesting that direct binding of nuclear HDAC5 to MEF2 is not required for its ability to regulate Npas4 gene expression\"",
+  "verbatim_locator | proposition: HDAC5 genomic occupancy is mostly intergenic/intronic, not promoter | RESULTS > HDAC5 association with the activity-regulated enhancer of the Npas4 gene | \"HDAC5-associated genomic regions are abundant in intergenic and intronic regions, and only a small proportion of HDAC5 associates with putative promoter regions\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p3_hdac5_20261105/B_class_iia_biology/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC author manuscript PMC5761688 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); abstract and selected results and discussion paragraphs read; figures, STAR methods, supplement not read; bytes not saved; text search finds no occurrence of the word catalytic",
+ "study_id": {
+  "doi": "10.1016/j.neuron.2017.09.012",
+  "pmid": "28957664"
+ },
+ "workflow": "IT28 batch P3-B (class IIa biology): question-driven, catalytic versus scaffold function of HDAC5. Draft JSON for the integrator; not recorded in the ledger by the preparing actor. HDAC5 nuclear-localisation and MEF2-domain mutants in striatal neurons and NAc. No catalytic-dead arm and no inhibitor arm."
+}

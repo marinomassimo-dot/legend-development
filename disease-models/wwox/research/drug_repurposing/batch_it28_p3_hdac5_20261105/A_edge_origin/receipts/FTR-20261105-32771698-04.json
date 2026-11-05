@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-05T12:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T12:00:00Z",
+ "event_id": "FTR-20261105-32771698-04",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: the same group family treats HDAC5 as a negative transcriptional regulator of GLUT4 (SLC2A4) in muscle, with no SLC2A1/GLUT1 measurement reported in the text | Introduction, paragraph 3 | \"Several studies highlighted the role of histone deacetylase 5 (HDAC5), a class II HDAC, as a negative transcriptional regulator of GLUT4 in the skeletal muscle\"",
+  "verbatim_locator | proposition: HDAC5 binding at the Slc2a4 promoter was probed by ChIP primers and H3K9ac, in mouse C2C12 Hdac5-knockdown myotubes | Results, ChIP paragraph | \"H3K9 acetylation as a marker of active transcription [31] was further enriched in the Slc2a4 (GLUT4) promoter of the HDAC5 KD myotubes (Figure 2G,H).\"",
+  "verbatim_locator | proposition: the terms GLUT1 and Slc2a1 do not occur anywhere in the article text read (case-insensitive count 0 in the paragraph text) | whole extracted paragraph text of PMC7481569 | count of matches for Glut1|Slc2a1|GLUT1 = 0"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p3_hdac5_20261105/A_edge_origin/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC7481569 (Mol Metab 2020, CC BY-NC-ND) fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); paragraph text searched and the passages quoted read in context; figure legends, discussion, tables and references not read; supplement not obtained; bytes not saved",
+ "study_id": {
+  "doi": null,
+  "pmid": "32771698"
+ },
+ "workflow": "IT28 P3-A edge-origin check: context paper from the same research tradition (HDAC5 deficiency in muscle, mouse); read to see whether it republishes or tests the GLUT1 observation. It does not. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

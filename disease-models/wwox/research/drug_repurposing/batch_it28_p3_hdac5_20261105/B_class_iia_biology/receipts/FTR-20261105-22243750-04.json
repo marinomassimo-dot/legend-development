@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-05T02:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "unavailable",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T02:00:00Z",
+ "event_id": "FTR-20261105-22243750-04",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: HDAC5 nucleocytoplasmic distribution in striatal neurons is controlled by signalling, and nuclear HDAC5 co-localises with MEF2 | RESULTS > cAMP signaling promotes nuclear import of HDAC5 in striatal neurons | \"forskolin (10 μM), induced the rapid nuclear import of HDAC5 (Figure 1A–B)\"",
+  "verbatim_locator | proposition: nuclear HDAC5 puncta co-localise with endogenous MEF2 | same section | \"the nuclear HDAC5 puncta co-localized with endogenous MEF2 proteins (Figure S1A)\"",
+  "verbatim_locator | proposition: a phospho-mimetic S279E HDAC5 stays cytoplasmic after forskolin (a localisation change) | RESULTS > Dephosphorylation of S279 is required for nuclear import of HDAC5 | \"the HDAC5 S279E mutant failed to relocalize to the nucleus by 3 hrs after forskolin treatment\"",
+  "verbatim_locator | proposition: phospho-site antibodies for class IIa are not paralog-specific | DISCUSSION | \"it is important to note that the P-S259 antibody recognizes multiple class IIa HDAC proteins, not only HDAC5\"",
+  "verbatim_locator | proposition: HDAC5 is known to antagonise MEF2-dependent transcription | INTRODUCTION | \"HDAC5 is known to antagonize MEF2-dependent transcription (Lu et al., 2000)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p3_hdac5_20261105/B_class_iia_biology/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC author manuscript PMC3259532 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); introduction, selected results paragraphs and discussion paragraphs read; figures, methods, supplement not read; bytes not saved; text search finds no catalytic-dead HDAC5 arm (the only hit for catalytic is PKA catalytic subunit)",
+ "study_id": {
+  "doi": "10.1016/j.neuron.2011.10.032",
+  "pmid": "22243750"
+ },
+ "workflow": "IT28 batch P3-B (class IIa biology): question-driven, catalytic versus scaffold function of HDAC5. Draft JSON for the integrator; not recorded in the ledger by the preparing actor. HDAC5 localisation control in primary striatal neurons and NAc. Localisation and behaviour; no catalytic-versus-scaffold test."
+}

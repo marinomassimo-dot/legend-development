@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-05T02:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "unavailable",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T02:00:00Z",
+ "event_id": "FTR-20261105-24209626-04",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: HDAC5 deacetylase activity is described as low basal and dependent on HDAC3 | RESULTS > Axon injury increases acetylated histone H3 levels | \"Because HDAC5 has a low basal deacetylase activity (Lahm et al., 2007) and becomes associated with deacetylase activity when bound to HDAC3 (Fischle et al., 2002), we next examined the distribution of HDAC3 in naive and injured DRG.\"",
+  "verbatim_locator | proposition: HDAC5 KO changes HDAC3 localisation in sensory neurons (HDAC5 position affects HDAC3) | same section | \"HDAC3 cytoplasmic localization was increased in HDAC5 KO TUJ1 positive DRG neurons compared to WT\"",
+  "verbatim_locator | proposition: HDAC5 KO shows reduced H3 acetylation after injury, authors invoke compensation | DISCUSSION > Dual role of HDAC5 in axon regeneration | \"HDAC5 KO mice displayed an unexpected reduced histone H3 acetylation after injury, suggesting decreased transcriptional activity, possibly via compensatory mechanisms.\"",
+  "verbatim_locator | proposition: a non-exportable HDAC5 (S259/280/498D) lowers Ac-H3; authors read this as retained H3 deacetylation capacity | RESULTS > HDAC5 nuclear export is required for axon regeneration | \"indicating that mutation of these serine residues affects GFP-HDAC5nuc localization, but not its ability to regulate H3 deacetylation.\"",
+  "verbatim_locator | proposition: a cytoplasmic substrate (tubulin) is attributed to HDAC5 in earlier work cited | RESULTS > HDAC5 is transported from the soma to the axon tip following injury | \"where it deacetylates tubulin to promote growth cone dynamics and axon regeneration (Cho and Cavalli, 2012)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p3_hdac5_20261105/B_class_iia_biology/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC author manuscript PMC3987749 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); abstract, selected results and discussion paragraphs read; figures, methods, supplement not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1016/j.cell.2013.10.003",
+  "pmid": "24209626"
+ },
+ "workflow": "IT28 batch P3-B (class IIa biology): question-driven, catalytic versus scaffold function of HDAC5. Draft JSON for the integrator; not recorded in the ledger by the preparing actor. HDAC5 in adult mouse DRG sensory neurons (peripheral, not CNS neural progenitors). Reader-level statements about HDAC3 dependence are citations of Lahm 2007 and Fischle 2002, not own measurements of catalytic dependence."
+}

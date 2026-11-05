@@ -684,6 +684,9 @@ def cmd_propose(a):
                 modality[f] = modality.get(tgt) or modality.get(f)       # the substance is the ChEMBL record's: its modality is that record's
     r4 = load_identity_r4() if v1 else {}
     modality_decl = load_modality_declarations() if v1 else {}
+    for f_, c_ in r4.items():       # IT28: an R4 identity (structure-level, second actor) also carries the measures of the ChEMBL record's family, as the claim-name bridge already does
+        if f_ in meta and f_ not in fb:
+            fl[f_] = set(fl.get(f_, set())) | set(fl.get("FAM:CAT:" + c_, set()))
     for f, m in meta.items():
         if f in r4 and f not in fb and m.get("has_chembl") != "1":      # IT26: route R4 (G-SRS name -> UNII -> structure, verified by a second actor), the family's own record has no ChEMBL id
             modality[f] = modality.get("FAM:CAT:" + r4[f]) or modality.get(f)

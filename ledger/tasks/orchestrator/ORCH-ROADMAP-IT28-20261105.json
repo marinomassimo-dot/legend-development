@@ -1,0 +1,128 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT28-20261105",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Iteration 28: from open questions to pharmacological generation: a challenge trigger on existing handoff/task records, two inverse batches (HDAC5 lever validity; role of the integrated stress response), return of results to inputs, cards and queue, the smallest engine improvement shown on two cases, inverse test, comparisons, ranking and dashboard.",
+ "START_UTC": "2026-11-05T01:30:00Z",
+ "BASELINE": "development/main = local main = ec411170 (IT27 closed, CI green, battery PASS WITH SKIPS on f476c204); clean tree",
+ "DECISIONS_TAKEN": [
+  "Queued behind IT27 by the operator's IT28 message and started at IT27 closure; stage S8 (generation_it27_p3_20261104/results_s8) is the current stage by the Standing method pointer, read from the file, not from the prompt.",
+  "Zero spend, no e-mail or contact, no operator e-mail to any service."
+ ],
+ "STOP_LOG": [],
+ "AUTHORISED_QUEUE_20261105": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P0/P1 diagnosis of where generative capacity is lost on four contrasting cases; correct the IT20 3-of-23 wording to its perimeter",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "P2 challenge trigger on existing handoff/task-record/needs fields, worked on one real question from opening to return",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "P3 batch one: HDAC5 lever validity (catalytic v scaffold), complementary sub-questions to distinct Scientists",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "P4 batch two: role of the integrated stress response (compensation v contributor), transferable and WWOX-specific evidence",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "P5 return of both batches to inputs, cards and queue; one full chain source to regenerated output",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "P6/P7 smallest engine improvement on a demonstrated gap, before/after, second case; relations only where a gap is named",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P8": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "P8/P9 inverse test (vorinostat plus a contrast) and pharmacological comparisons for priority investigations",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P10": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "P10 bounded predictive pilot if usable data exist; otherwise the impossible comparison and the measure that reopens it",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P11": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "P11/P12 ranking, challenges and dashboard online in the available languages; scouting by current gap",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P13": {
+   "order": 10,
+   "steps": [
+    {
+     "step": "P13/P14 permanent method, regressions, independent verification, battery on a frozen candidate, push, CI, cleanup, report",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  }
+ }
+}

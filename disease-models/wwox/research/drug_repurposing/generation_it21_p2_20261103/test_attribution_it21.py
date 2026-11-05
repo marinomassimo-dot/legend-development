@@ -284,9 +284,21 @@ class AttributionScreen(SyntheticCache):
         fam = {e["id"]: e["id"] for e in self.entries}
         br = A.bridge_claim_name_ligands(self.entries, self.cache)
         fl = A.family_ligands(self.entries, fam, br, lig)
-        self.assertEqual(fl["CAT:CHEMBL1"], {"1"})
+        self.assertEqual(fl["CAT:CHEMBL1"], {"1", "6"})      # IT28: ligand 6 has no ChEMBL id but the same full InChIKey as the record, so it joins
         self.assertEqual(fl["CAT:DGIDB:a"], {"1"})
         self.assertNotIn("CAT:DGIDB:b", fl)
+
+    def test_family_ligands_join_a_ligand_without_chembl_id_by_the_full_inchikey_only(self):        # IT28: tazemetostat (GtoPdb 7011, no ChEMBL id) and its ChEMBL family
+        K = "NSQSAUGJQHDYNO-UHFFFAOYSA-N"
+        lig = {"7011": {"ChEMBL ID": "", "InChIKey": K, "Labelled": "no", "Radioactive": "no"},
+               "7012": {"ChEMBL ID": "", "InChIKey": "NSQSAUGJQHDYNO-ZZZZZZZZZZ-N", "Labelled": "no", "Radioactive": "no"},      # same first block, other stereochemistry/isotopes: never joined
+               "7013": {"ChEMBL ID": "", "InChIKey": K, "Labelled": "yes", "Radioactive": "no"}}                                       # labelled analogue: never joined
+        mk = lambda i, key: dict(id="CAT:" + i, origin="chembl", ids=dict(chembl=i, inchikey=key), targets=[])
+        es = [mk("CHEMBL1", K), mk("CHEMBL2", "NSQSAUGJQHDYNO-YYYYYYYYYY-N")]
+        fam = {e["id"]: e["id"] for e in es}
+        fl = A.family_ligands(es, fam, {}, lig)
+        self.assertEqual(fl["CAT:CHEMBL1"], {"7011"})
+        self.assertEqual(fl.get("CAT:CHEMBL2", set()), set())
 
     def test_family_ligands_use_the_records_own_concept_id_ligand_only_when_unambiguous_and_unlabelled(self):
         lig = {"7": {"ChEMBL ID": "", "Labelled": "no", "Radioactive": "no"}, "8": {"ChEMBL ID": "", "Labelled": "yes", "Radioactive": "no"}, "9": {"ChEMBL ID": "", "Labelled": "no", "Radioactive": "no"}}

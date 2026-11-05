@@ -214,16 +214,23 @@ def family_bridge(bridges, fam):
 
 
 def family_ligands(entries, fam, bridges, lig):
-    """{family id: set of GtoPdb ligand ids}: by the ChEMBL id of a member (ligands.csv 'ChEMBL ID'), and by a merged claim-name bridge."""
+    """{family id: set of GtoPdb ligand ids}: by the ChEMBL id of a member (ligands.csv 'ChEMBL ID'), by the full InChIKey for a ligand with no ChEMBL id (IT28), and by a merged claim-name bridge."""
     by_chembl = collections.defaultdict(set)
     for lid, r in lig.items():
         if r["ChEMBL ID"]:
             by_chembl[r["ChEMBL ID"]].add(lid)
+    by_key = collections.defaultdict(set)         # IT28: a GtoPdb ligand WITHOUT a ChEMBL id joins by the FULL InChIKey (all three blocks); the first block alone is never used (stereoisomers, isotopologues)
+    for lid, r in lig.items():
+        if not r["ChEMBL ID"] and r.get("InChIKey") and r.get("Labelled") != "yes" and r.get("Radioactive") != "yes":
+            by_key[r["InChIKey"]].add(lid)
     out = collections.defaultdict(set)
     for e in entries:
         c = (e.get("ids") or {}).get("chembl")
         if c:
             out[fam[e["id"]]] |= by_chembl.get(c, set())
+        k = (e.get("ids") or {}).get("inchikey")
+        if k and k in by_key:
+            out[fam[e["id"]]] |= by_key[k]
         for r in bridges.get(e["id"], []):
             if r["decision"] == "merged":
                 out[fam[e["id"]]].add(r["ligand_id"])

@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-05T12:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "unavailable",
+  "tables": "read"
+ },
+ "event_at": "2026-11-05T12:00:00Z",
+ "event_id": "FTR-20261105-41087426-04",
+ "evidence_basis": [
+  "verbatim_locator | proposition: for pracinostat this review reports no measured CSF penetration (n.d.) and lists rule-based BBB properties only; it is a compilation, not a measurement | Table 2, Pracinostat column, rows 'Penetration through the CSF?' and 'No. of BBB requirements met' | \"Penetration through the CSF? | Yes | Limited | Limited | n.d. | n.d. | Limited | Yes | n.d.\" (column order Vorinostat, Belinostat, Panobinostat, Pracinostat ...)"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p3_hdac5_20261105/C_pharmacology/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_it28_p3_hdac5_20261105/C_pharmacology/hdac5_pharmacology_it28p3c.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC12521396 fetched 2026-11-05 through NCBI E-utilities efetch db=pmc (XML); Table 2 read; remaining sections not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1038/s41598-025-19717-w",
+  "pmid": "41087426"
+ },
+ "workflow": "IT28 P3-C (pracinostat HDAC5 discordance): question-driven read for assay design, substrate class and comparators. Draft prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
