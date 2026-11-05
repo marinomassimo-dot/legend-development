@@ -33,8 +33,9 @@
    "steps": [
     {
      "step": "S1 Baseline map: capability -> executed where -> result -> consumer; diagnosis class per bottleneck",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "context_it30_20261105/GAIN.md (map: capability, where it runs, result, consumer, diagnosis class)"
     }
    ]
   },
@@ -64,8 +65,9 @@
    "steps": [
     {
      "step": "S4 Measure gain: frozen inputs, current v simple v contextualised v added-data-only; retrospective only",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "context_it30_20261105/GAIN.md: retrospective on frozen IT29 rows, arms current / adapter, no row added so gain is the link not the data; 1 of 22 compounds in the stage; no predictive claim"
     }
    ]
   },
@@ -128,8 +130,9 @@
    "steps": [
     {
      "step": "S10 Radar tied to named gaps (GitHub, HF, Nature); one extra resource at most",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "not re-run: IT29 P12 (phenotype_first_it29_20261105/p12_scout) was a same-day targeted scout on the functional-screen gap; the new gap of IT30 (choosing the next work) was covered by CLM, read in S6; no installable tool found; no further resource opened"
     }
    ]
   },
