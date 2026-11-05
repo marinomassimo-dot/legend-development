@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-05T01:55:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:56:00Z",
+ "event_id": "FTR-20261105-21687355-05",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: flunarizine reduced the seizure score to PTZ in mice in a dose-dependent manner, with significance at the top dose tested | Abstract | \"Pre-treatment with flunarizine demonstrated dose-dependent decrease in the seizure score to PTZ administration\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/compare_it28_p9_20261105/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC3103921 full-text XML fetched 2026-11-05 through Europe PMC REST fullTextXML (NCBI E-utilities efetch db=pmc as fallback); sections listed in coverage read through keyword-directed passages, figures not viewed; supplement none; bytes not saved",
+ "study_id": {
+  "doi": "10.4103/0975-7406.80782",
+  "pmid": "21687355"
+ },
+ "workflow": "IT28 P9 comparison (compare_it28_p9_20261105): question-driven, flunarizine in the acute PTZ seizure-score model in mice. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

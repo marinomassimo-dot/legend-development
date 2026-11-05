@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-05T01:55:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:56:00Z",
+ "event_id": "FTR-20261105-40068874-05",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: Cav3.2 knockout reduced low-threshold spikes in immature granule cells but increased excitability in intermediate and mature granule cells | Abstract | \"Conversely, Cav3.2 KO increased excitability in regular spiking intermediate and mature GCs\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/compare_it28_p9_20261105/README.md"
+ ],
+ "prior_receipt": "FTR-20261022-40068874-02",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC11974363 full-text XML fetched 2026-11-05 through Europe PMC REST fullTextXML (NCBI E-utilities efetch db=pmc as fallback); sections listed in coverage read through keyword-directed passages, figures not viewed; supplement none; bytes not saved",
+ "study_id": {
+  "doi": "10.1523/eneuro.0423-24.2025",
+  "pmid": "40068874"
+ },
+ "workflow": "IT28 P9 comparison (compare_it28_p9_20261105): question-driven, maturation-stage dependence of Cav3.2 loss in a knockout; loss increased excitability in some cell stages. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

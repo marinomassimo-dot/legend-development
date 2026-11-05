@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-05T01:55:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:56:00Z",
+ "event_id": "FTR-20261105-42536722-05",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: deletion of Cacna1g (Cav3.1) prevented seizure generation in the digenic mouse without rescuing the social deficit; ethosuximide did the same | Abstract | \"deletion of Cacna1g , which encodes the T-type Ca 2+ channel Ca V 3.1, prevented seizure generation but did not ameliorate the social deficit\"",
+  "verbatim_locator | proposition: Cacna1g deletion removed the T-type current in relay neurons of the trigenic mouse | Results, Fig. 3 legend | \"Low-threshold T-type calcium current ( I T ) was examined\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/compare_it28_p9_20261105/README.md"
+ ],
+ "prior_receipt": "FTR-20261022-42536722-02",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC13426438 full-text XML fetched 2026-11-05 through Europe PMC REST fullTextXML (NCBI E-utilities efetch db=pmc as fallback); sections listed in coverage read through keyword-directed passages, figures not viewed; supplement none; bytes not saved",
+ "study_id": {
+  "doi": "10.1126/sciadv.aec6065",
+  "pmid": "42536722"
+ },
+ "workflow": "IT28 P9 comparison (compare_it28_p9_20261105): question-driven, genetic Cacna1g deletion in the same genotype as the drug: the strongest attribution design found. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

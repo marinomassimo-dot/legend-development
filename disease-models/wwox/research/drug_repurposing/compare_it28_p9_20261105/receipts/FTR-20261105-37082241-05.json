@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-05T01:55:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:56:00Z",
+ "event_id": "FTR-20261105-37082241-05",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: SB2193 FLIPR potency differs by isoform (Cav3.1 0.75 uM; Cav3.2 5.9 uM; Cav3.3 5.4 uM) with NNC 55-0396 as pan-Cav3 positive control | Results 3.1 | \"SB2193 most potently inhibited Ca v 3.1 (IC 50 = 750 nM), and less potently inhibited Ca v 3.2 (IC 50 = 5.9 \u03bcM) and Ca v 3.3 (IC 50 = 5.4 \u03bcM)\"",
+  "verbatim_locator | proposition: SB2193 increased SWD incidence and duration in GAERS | Results, Fig. 8 text | \"SB2193 treatment increased SWD incidence and duration in GAERS\"",
+  "verbatim_locator | proposition: brain exposure in the Dravet arm sat between the FLIPR and the patch-clamp IC50, so a failed arm is not a failed mechanism | Discussion | \"these values fall above the Ca v 3.1 IC 50 using the FLIPR assay (0.75 \u00b5M) but below the IC 50 (3.5 \u03bcM) as determined by whole cell patch-clamp electrophysiology\"",
+  "verbatim_locator | proposition: Cav3.3 null mice are cited as more susceptible to drug-induced SWD | Introduction | \"Ca v 3.3 null mice exhibit increased susceptibility to drug-induced SWDs\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/compare_it28_p9_20261105/README.md"
+ ],
+ "prior_receipt": "FTR-20261022-37082241-02",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC10110893 full-text XML fetched 2026-11-05 through Europe PMC REST fullTextXML (NCBI E-utilities efetch db=pmc as fallback); sections listed in coverage read through keyword-directed passages, figures not viewed; supplement none; bytes not saved",
+ "study_id": {
+  "doi": "10.3389/fphys.2023.1086243",
+  "pmid": "37082241"
+ },
+ "workflow": "IT28 P9 comparison (compare_it28_p9_20261105): question-driven, pan-Cav3 research compound: isoform potency table, brain exposure, GAERS aggravation; read for comparator and negative-result questions. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

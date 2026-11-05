@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-05T01:55:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "not_present",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:56:00Z",
+ "event_id": "FTR-20261105-42023289-05",
+ "evidence_basis": [
+  "passages analysed (keyword-directed), not a line-by-line read",
+  "verbatim_locator | proposition: levetiracetam was inactive in the mouse MES and scPTZ screens and active only in the low-intensity 6 Hz assay | Section on screening history | \"was shown to be inactive in mouse MES and scPTZ models, and was only efficacious in the 6 Hz assay at the lower (32 mA) stimulus intensity\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/compare_it28_p9_20261105/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC13096057 full-text XML fetched 2026-11-05 through Europe PMC REST fullTextXML (NCBI E-utilities efetch db=pmc as fallback); sections listed in coverage read through keyword-directed passages, figures not viewed; supplement none; bytes not saved",
+ "study_id": {
+  "doi": "10.1177/15357597261439480",
+  "pmid": "42023289"
+ },
+ "workflow": "IT28 P9 comparison (compare_it28_p9_20261105): question-driven, levetiracetam profile in the classical acute screens (MES, scPTZ). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-05T01:55:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:56:00Z",
+ "event_id": "FTR-20261105-37822150-05",
+ "evidence_basis": [
+  "passages analysed (keyword-directed), not a line-by-line read",
+  "verbatim_locator | proposition: review states Cacna1g KO mice are less prone to GBL and baclofen induced SWD but not to bicuculline or 4-aminopyridine seizures | Section 6.1 CACNA1G | \"Cacna1g KO mice are less prone to the induction of spike\u2010wave discharges by the application of \u03b3\u2010butyrolactone and baclofen but not to the induction of cortically induced absence seizures with bicuculine or convulsive seizures with 4\u2010aminopyridine\"",
+  "verbatim_locator | proposition: review states Cacna1g KO reduces phenotype severity in Scn1a and Scn2a mouse models and kainate-induced hippocampal seizures | Section 6.1 CACNA1G | \"KO of Cacna1g reduces the phenotypic severity in mouse models of Scn1a and Scn2a encephalopathies\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/compare_it28_p9_20261105/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC11591408 full-text XML fetched 2026-11-05 through Europe PMC REST fullTextXML (NCBI E-utilities efetch db=pmc as fallback); sections listed in coverage read through keyword-directed passages, figures not viewed; supplement none; bytes not saved",
+ "study_id": {
+  "doi": "10.1111/jnc.15983",
+  "pmid": "37822150"
+ },
+ "workflow": "IT28 P9 comparison (compare_it28_p9_20261105): question-driven, secondary source (review) for Cav3.1 knockout phenotypes; each claim to be traced to its primary before use. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

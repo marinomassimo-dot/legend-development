@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-05T01:55:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:56:00Z",
+ "event_id": "FTR-20261105-42274296-05",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: ethosuximide and the Cav3-selective ulixacaltamide each reduced atypical absence seizures in the knock-in; crossover design within knock-in animals | Key points / Methods | \"Cannabidiol, ethosuximide, and the selective Ca v 3 inhibitor, ulixacaltamide, reduced atypical absence seizures.\"",
+  "verbatim_locator | proposition: drug effects were assessed in a within-subject Latin-square crossover in knock-in mice | Methods | \"KI mice were randomized to treatment order using a Latin\u2010square design with a one\u2010week washout period\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/compare_it28_p9_20261105/README.md"
+ ],
+ "prior_receipt": "FTR-20261021-42274296-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC13395050 full-text XML fetched 2026-11-05 through Europe PMC REST fullTextXML (NCBI E-utilities efetch db=pmc as fallback); sections listed in coverage read through keyword-directed passages, figures not viewed; supplement none; bytes not saved",
+ "study_id": {
+  "doi": "10.1002/epi4.70289",
+  "pmid": "42274296"
+ },
+ "workflow": "IT28 P9 comparison (compare_it28_p9_20261105): question-driven, ethosuximide and a Cav3-selective inhibitor side by side in one knock-in genotype, vehicle-controlled crossover. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

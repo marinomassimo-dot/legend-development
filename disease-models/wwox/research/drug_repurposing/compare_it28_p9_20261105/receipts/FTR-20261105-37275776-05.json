@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-05T01:55:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:56:00Z",
+ "event_id": "FTR-20261105-37275776-05",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: ethosuximide inhibits GIRK1/2 with EC50 about 1.5-2 mM and GIRK2 activated by G beta-gamma with EC50 about 55 uM in Xenopus oocytes | Results, Ethosuximide differentially inhibits GIRK1/2 and GIRK2 channels | \"with an EC 50 of ~55 \u03bcM\"",
+  "verbatim_locator | proposition: ethosuximide at 750 uM, not 250 uM, restored near-normal firing of the mutant cultured network (concentration-dependent MEA endpoint) | Results, Ethosuximide corrects EEG and network firing patterns | \"At 250 \u03bcM, ETX did not affect the bursting phenotype, while at 750 \u03bcM, ETX did restore close-to-normal firing to the mutant network\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/compare_it28_p9_20261105/README.md"
+ ],
+ "prior_receipt": "FTR-20261022-37275776-02",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC10232839 full-text XML fetched 2026-11-05 through Europe PMC REST fullTextXML (NCBI E-utilities efetch db=pmc as fallback); sections listed in coverage read through keyword-directed passages, figures not viewed; supplement none; bytes not saved",
+ "study_id": {
+  "doi": "10.3389/fncel.2023.1175895",
+  "pmid": "37275776"
+ },
+ "workflow": "IT28 P9 comparison (compare_it28_p9_20261105): question-driven, ethosuximide potency on GIRK channels in oocytes and in vitro MEA network endpoint. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -5096,7 +5096,7 @@
    "next_experiment_or_control": "Does the ethosuximide sensitivity reflect T-type involvement, given that no T-type measurement exists and a class-level progenitor-viability harm signal is recorded?",
    "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
    "next_experiment_stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)",
-   "notes": "the one outside-WWOX harm row is class-level (other T-type blockers lowered progenitor viability; ethosuximide was not tested), not ethosuximide data | Graph coverage (IT11 P2.1): the generation graph has no way to speak about this molecule: its signed targets (the T-type channel genes CACNA1G, CACNA1H, CACNA1I) are sink or isolated nodes of the signed network, so no seed set can reach them. The absence of a graph row is not evidence about ethosuximide, and the lead was a development input of the phenotype-first path, not an independent validation of the graph.",
+   "notes": "the one outside-WWOX harm row is class-level (other T-type blockers lowered progenitor viability; ethosuximide was not tested), not ethosuximide data | Graph coverage (IT11 P2.1): the generation graph has no way to speak about this molecule: its signed targets (the T-type channel genes CACNA1G, CACNA1H, CACNA1I) are sink or isolated nodes of the signed network, so no seed set can reach them. The absence of a graph row is not evidence about ethosuximide, and the lead was a development input of the phenotype-first path, not an independent validation of the graph. | IT28 (compare_it28_p9_20261105): the added value over the untreated control is an interaction-tested late-phase effect only; the comparison that would attribute an effect to T-type block is one specificity design (both genotypes treated, concurrent control, drug-by-genotype term) and then a single attribution arm, either a nanomolar pan-Cav3 blocker with measured brain exposure or a Cacna1g occlusion arm. A second antiseizure agent serves as a nonspecificity reference only; its sign in a Wwox pup assay is UNKNOWN.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
    "pathways_needs": "Seizure and spasm control as a symptom-level need [F2; effect_observed_in_wwox_system]; Ethosuximide sensitivity of provoked seizure in Wwox loss [F2; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
@@ -5381,7 +5381,7 @@
    "next_experiment_or_control": "Does the ethosuximide sensitivity reflect T-type involvement, given that no T-type measurement exists and a class-level progenitor-viability harm signal is recorded?",
    "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
    "next_experiment_stake": "first WWOX-system test of a coherent, selected target hypothesis: the outcomes lead to opposite decisions (continue or stop)",
-   "notes": "none",
+   "notes": "IT28 (compare_it28_p9_20261105): the proposed pair is a convergence and selectivity contrast, not an efficacy comparison; isoform potency, CNS exposure and hERG/QT values are missing for the pair, and Cav3 deletions diverge across models (protective, aggravating, no rescue), so the isoforms are not interchangeable.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
    "pathways_needs": "Seizure and spasm control as a symptom-level need [F3; documented_association_target_listed]; Ethosuximide sensitivity of provoked seizure in Wwox loss [F3; directionally_compatible_documented_action] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
@@ -5466,7 +5466,7 @@
    "next_experiment_or_control": "Does the ethosuximide sensitivity reflect T-type involvement, given that no T-type measurement exists and a class-level progenitor-viability harm signal is recorded?",
    "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
    "next_experiment_stake": "whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)",
-   "notes": "the one outside-WWOX harm row is class-level (other T-type blockers lowered progenitor viability; ethosuximide was not tested), not ethosuximide data | Graph coverage (IT11 P2.1): the generation graph has no way to speak about this molecule: its signed targets (the T-type channel genes CACNA1G, CACNA1H, CACNA1I) are sink or isolated nodes of the signed network, so no seed set can reach them. The absence of a graph row is not evidence about ethosuximide, and the lead was a development input of the phenotype-first path, not an independent validation of the graph.",
+   "notes": "the one outside-WWOX harm row is class-level (other T-type blockers lowered progenitor viability; ethosuximide was not tested), not ethosuximide data | Graph coverage (IT11 P2.1): the generation graph has no way to speak about this molecule: its signed targets (the T-type channel genes CACNA1G, CACNA1H, CACNA1I) are sink or isolated nodes of the signed network, so no seed set can reach them. The absence of a graph row is not evidence about ethosuximide, and the lead was a development input of the phenotype-first path, not an independent validation of the graph. | IT28 (compare_it28_p9_20261105): the added value over the untreated control is an interaction-tested late-phase effect only; the comparison that would attribute an effect to T-type block is one specificity design (both genotypes treated, concurrent control, drug-by-genotype term) and then a single attribution arm, either a nanomolar pan-Cav3 blocker with measured brain exposure or a Cacna1g occlusion arm. A second antiseizure agent serves as a nonspecificity reference only; its sign in a Wwox pup assay is UNKNOWN.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
    "pathways_needs": "Seizure and spasm control as a symptom-level need [F2; effect_observed_in_wwox_system]; Ethosuximide sensitivity of provoked seizure in Wwox loss [F2; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
@@ -5795,7 +5795,7 @@
    "next_experiment_or_control": "Does the ethosuximide sensitivity reflect T-type involvement, given that no T-type measurement exists and a class-level progenitor-viability harm signal is recorded?",
    "next_experiment_priority": "NX1: decisive: the discriminating next experiment would change a decision (lift or stop)",
    "next_experiment_stake": "first WWOX-system test of a coherent, selected target hypothesis: the outcomes lead to opposite decisions (continue or stop)",
-   "notes": "none",
+   "notes": "IT28 (compare_it28_p9_20261105): the proposed pair is a convergence and selectivity contrast, not an efficacy comparison; isoform potency, CNS exposure and hERG/QT values are missing for the pair, and Cav3 deletions diverge across models (protective, aggravating, no rescue), so the isoforms are not interchangeable.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
    "pathways_needs": "Seizure and spasm control as a symptom-level need [F3; documented_association_target_listed]; Ethosuximide sensitivity of provoked seizure in Wwox loss [F3; directionally_compatible_documented_action] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
@@ -5867,7 +5867,7 @@
     "source_artefacts.tsv": "efd24d2cf8eb3fdb",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
-   "receipt_ledger_lines": 1088
+   "receipt_ledger_lines": 1103
   },
   "inventory": {
    "all_families_by_access_category": {
@@ -9694,7 +9694,7 @@
    "inputs": {
     "T1_cards": "cca836628762707e",
     "T2_pertinence": "c124efeb8d5edb82",
-    "T3_receipts": "dc01c05508dcbf56",
+    "T3_receipts": "3e2c4c2ede531683",
     "T4_needs": "55ff62f47762bab4",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "a51c161c63ba11d3"
@@ -9756,7 +9756,7 @@
     "34268881",
     "42397075"
    ],
-   "receipts_on_cited_pmids": 28,
+   "receipts_on_cited_pmids": 29,
    "research_objective": "",
    "tracks": [
     "A"
@@ -11599,7 +11599,8 @@
     ],
     "note": [
      "the one outside-WWOX harm row is class-level (other T-type blockers lowered progenitor viability; ethosuximide was not tested), not ethosuximide data",
-     "Graph coverage (IT11 P2.1): the generation graph has no way to speak about this molecule: its signed targets (the T-type channel genes CACNA1G, CACNA1H, CACNA1I) are sink or isolated nodes of the signed network, so no seed set can reach them. The absence of a graph row is not evidence about ethosuximide, and the lead was a development input of the phenotype-first path, not an independent validation of the graph."
+     "Graph coverage (IT11 P2.1): the generation graph has no way to speak about this molecule: its signed targets (the T-type channel genes CACNA1G, CACNA1H, CACNA1I) are sink or isolated nodes of the signed network, so no seed set can reach them. The absence of a graph row is not evidence about ethosuximide, and the lead was a development input of the phenotype-first path, not an independent validation of the graph.",
+     "IT28 (compare_it28_p9_20261105): the added value over the untreated control is an interaction-tested late-phase effect only; the comparison that would attribute an effect to T-type block is one specificity design (both genotypes treated, concurrent control, drug-by-genotype term) and then a single attribution arm, either a nanomolar pan-Cav3 blocker with measured brain exposure or a Cacna1g occlusion arm. A second antiseizure agent serves as a nonspecificity reference only; its sign in a Wwox pup assay is UNKNOWN."
     ]
    },
    "class": "ORD",
@@ -11709,9 +11710,9 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "a9090a39eff71b0f",
+    "T1_cards": "f62d6b5ac926ff9f",
     "T2_pertinence": "8b0a047e9ce40434",
-    "T3_receipts": "fed069ad0e0c5861",
+    "T3_receipts": "ed2f3f3cb4598d76",
     "T4_needs": "70142e30938ab222",
     "T5_pharmacology": "5da5f03bb1490bdc",
     "T6_identity": "589dd4de63446384"
@@ -11862,7 +11863,7 @@
     "36537114",
     "37275776"
    ],
-   "receipts_on_cited_pmids": 14,
+   "receipts_on_cited_pmids": 16,
    "research_objective": "",
    "tracks": [
     "A"
@@ -11951,7 +11952,8 @@
      },
      "notes": [
       "the one outside-WWOX harm row is class-level (other T-type blockers lowered progenitor viability; ethosuximide was not tested), not ethosuximide data",
-      "Graph coverage (IT11 P2.1): the generation graph has no way to speak about this molecule: its signed targets (the T-type channel genes CACNA1G, CACNA1H, CACNA1I) are sink or isolated nodes of the signed network, so no seed set can reach them. The absence of a graph row is not evidence about ethosuximide, and the lead was a development input of the phenotype-first path, not an independent validation of the graph."
+      "Graph coverage (IT11 P2.1): the generation graph has no way to speak about this molecule: its signed targets (the T-type channel genes CACNA1G, CACNA1H, CACNA1I) are sink or isolated nodes of the signed network, so no seed set can reach them. The absence of a graph row is not evidence about ethosuximide, and the lead was a development input of the phenotype-first path, not an independent validation of the graph.",
+      "IT28 (compare_it28_p9_20261105): the added value over the untreated control is an interaction-tested late-phase effect only; the comparison that would attribute an effect to T-type block is one specificity design (both genotypes treated, concurrent control, drug-by-genotype term) and then a single attribution arm, either a nanomolar pan-Cav3 blocker with measured brain exposure or a Cacna1g occlusion arm. A second antiseizure agent serves as a nonspecificity reference only; its sign in a Wwox pup assay is UNKNOWN."
      ],
      "objective": "partial",
      "objective_note": "",
@@ -14191,7 +14193,7 @@
    "inputs": {
     "T1_cards": "6c7034d2a9407314",
     "T2_pertinence": "db0343ccb25dda32",
-    "T3_receipts": "1e81e393df77743b",
+    "T3_receipts": "bb48c3a30409ee8f",
     "T4_needs": "df26617f6e00f842",
     "T5_pharmacology": "8e5ccb8ab12853d1",
     "T6_identity": "c599af8bf00c008f"
@@ -14311,7 +14313,7 @@
     "32000863",
     "36537114"
    ],
-   "receipts_on_cited_pmids": 16,
+   "receipts_on_cited_pmids": 17,
    "research_objective": "",
    "tracks": [
     "A"
@@ -14434,6 +14436,9 @@
     "limit": [
      "the only WWOX link of this intervention is the ethosuximide result: the need is defined by it and T-type mediation is NOT measured; ethosuximide T-type potency (ChEMBL) is above 5 mM or 600 uM with no target against a labelled plasma range of about 283 to 708 uM; apinocaltamide is nanomolar at Cav3.1/3.2/3.3, so the documented action is coherent with the need's direction but does not itself support WWOX relevance; outside WWOX its benefit is in absence-type models, convulsive models only at higher concentration"
     ],
+    "note": [
+     "IT28 (compare_it28_p9_20261105): the proposed pair is a convergence and selectivity contrast, not an efficacy comparison; isoform potency, CNS exposure and hERG/QT values are missing for the pair, and Cav3 deletions diverge across models (protective, aggravating, no rescue), so the isoforms are not interchangeable."
+    ],
     "question": [
      "a T-type measurement in the Wwox model, to test whether the ethosuximide sensitivity is T-type mediated at all"
     ]
@@ -14541,9 +14546,9 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "aa9a67c19cd7f4f1",
+    "T1_cards": "34475239b858d33f",
     "T2_pertinence": "904f40dca9a2c7f5",
-    "T3_receipts": "e631cecfdfb7956c",
+    "T3_receipts": "e279ae498a67db6d",
     "T4_needs": "70142e30938ab222",
     "T5_pharmacology": "5da5f03bb1490bdc",
     "T6_identity": "61b1f388d5aca48f"
@@ -14686,7 +14691,7 @@
     "36537114",
     "40165594"
    ],
-   "receipts_on_cited_pmids": 10,
+   "receipts_on_cited_pmids": 11,
    "research_objective": "",
    "tracks": [
     "A"
@@ -14766,7 +14771,9 @@
       "level_text": "decisive: the discriminating next experiment would change a decision (lift or stop)",
       "stake": "first WWOX-system test of a coherent, selected target hypothesis: the outcomes lead to opposite decisions (continue or stop)"
      },
-     "notes": [],
+     "notes": [
+      "IT28 (compare_it28_p9_20261105): the proposed pair is a convergence and selectivity contrast, not an efficacy comparison; isoform potency, CNS exposure and hERG/QT values are missing for the pair, and Cav3 deletions diverge across models (protective, aggravating, no rescue), so the isoforms are not interchangeable."
+     ],
      "objective": "partial",
      "objective_note": "",
      "positions": {

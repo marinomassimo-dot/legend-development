@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-05T01:55:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:56:00Z",
+ "event_id": "FTR-20261105-40564020-05",
+ "evidence_basis": [
+  "passages analysed (keyword-directed), not a line-by-line read",
+  "verbatim_locator | proposition: review: Cacna1i (Cav3.3) knockout mice lose over 70 percent of nRT T-type current yet have increased sensitivity to GHB-induced seizures | Section on thalamic genes | \"susceptibility to GHB-induced seizures is increased\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/compare_it28_p9_20261105/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC12189920 full-text XML fetched 2026-11-05 through Europe PMC REST fullTextXML (NCBI E-utilities efetch db=pmc as fallback); sections listed in coverage read through keyword-directed passages, figures not viewed; supplement none; bytes not saved",
+ "study_id": {
+  "doi": "10.3390/biomedicines13061301",
+  "pmid": "40564020"
+ },
+ "workflow": "IT28 P9 comparison (compare_it28_p9_20261105): question-driven, secondary source (review) for Cav3.3 and Cav3.2/3.3 knockout susceptibility; trace to primaries before use. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-05T01:55:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:56:00Z",
+ "event_id": "FTR-20261105-41489546-05",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: Z944 and ML218 inhibit Cav1.4 with IC50 about 30 uM and 2 uM; Cav1.2 about 37 uM for ML218 | Abstract | \"Z944 and ML218 inhibited Ca 2+ currents with IC 50 values of ~30 \u03bcM and 2 \u03bcM, respectively\"",
+  "verbatim_locator | proposition: authors state Z944 is in phase III trials for essential tremor | Introduction | \"Z944 is currently in phase III clinical trials for essential tremor\"",
+  "verbatim_locator | proposition: Z944 affinity for the three Cav3 isoforms is sub-micromolar and about 70-100 times higher than for Cav2.2 and Cav1.2, as cited from Tringham 2012 | Introduction | \"sub-micromolar affinity for the three Ca V 3 subtypes that is ~70-100 times higher than that for Ca V 2.2 and Ca V 1.2\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/compare_it28_p9_20261105/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC13080778 full-text XML fetched 2026-11-05 through Europe PMC REST fullTextXML (NCBI E-utilities efetch db=pmc as fallback); sections listed in coverage read through keyword-directed passages, figures not viewed; supplement none; bytes not saved",
+ "study_id": {
+  "doi": "10.1085/jgp.202513879",
+  "pmid": "41489546"
+ },
+ "workflow": "IT28 P9 comparison (compare_it28_p9_20261105): question-driven, off-target (Cav1.4) potency of the Cav3 tools Z944 and ML218; Z944 development stage as stated by the authors. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

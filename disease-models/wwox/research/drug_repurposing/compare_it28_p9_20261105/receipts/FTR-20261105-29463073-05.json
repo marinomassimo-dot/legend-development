@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-05T01:55:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:56:00Z",
+ "event_id": "FTR-20261105-29463073-05",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: all T-type blockers except ML218 decreased neural progenitor viability | Results, Fig. 2 | \"All of the T-type calcium channel blockers, except ML218, decreased NPC cellular viability\"",
+  "verbatim_locator | proposition: blockade reduced viability and induced apoptosis in progenitors but not in differentiated astrocytes | Abstract | \"The blockade of T-type calcium channels reduced cell viability, and induced apoptotic cell death in NPCs but not in differentiated astrocytes\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/compare_it28_p9_20261105/README.md"
+ ],
+ "prior_receipt": "FTR-20261021-29463073-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC6131011 full-text XML fetched 2026-11-05 through Europe PMC REST fullTextXML (NCBI E-utilities efetch db=pmc as fallback); sections listed in coverage read through keyword-directed passages, figures not viewed; supplement none; bytes not saved",
+ "study_id": {
+  "doi": "10.4062/biomolther.2017.223",
+  "pmid": "29463073"
+ },
+ "workflow": "IT28 P9 comparison (compare_it28_p9_20261105): question-driven, development endpoint: viability of neural progenitor cells under several T-type blockers, ML218 discordant. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-05T01:55:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T01:56:00Z",
+ "event_id": "FTR-20261105-32000863-05",
+ "evidence_basis": [
+  "passages analysed (keyword-directed), not a line-by-line read",
+  "verbatim_locator | proposition: ethosuximide pretreatment suppressed PTZ seizure activity in Wwox -/- mice and is stated to have had no effect in +/+ and +/- at a low PTZ dose; no interaction test is stated | Results, section on Fig. 7b | \"Pretreatment of an antiepileptic drug ethosuximide suppressed PTZ-induced seizure in Wwox\"",
+  "verbatim_locator | proposition: the only appearance of the term T-type is the Methods description of the drug; no T-type measurement is reported | Methods, Induction of seizure | \"a T-type Ca 2+ channel blocker that has anticonvulsant activity (Luszczki et al., 2005)\"",
+  "verbatim_locator | proposition: the authors rank lithium above ethosuximide in this paper | Discussion | \"its efficacy is better than the commonly used anticonvulsant drug ethosuximide\"",
+  "verbatim_locator | proposition: the same paper describes severe central hypomyelination in the null, a myelination endpoint on which no drug effect is reported | Introduction/background paragraph | \"severe hypomyelination in the central nervous system\"",
+  "absence_check | proposition: levetiracetam does not appear in the paper | whole text search | levetiracetam absent: zero matches in the PMC XML text"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/compare_it28_p9_20261105/README.md"
+ ],
+ "prior_receipt": "FTR-20261029-32000863-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC6990504 full-text XML fetched 2026-11-05 through Europe PMC REST fullTextXML (NCBI E-utilities efetch db=pmc as fallback); sections listed in coverage read through keyword-directed passages, figures not viewed; supplement none; bytes not saved",
+ "study_id": {
+  "doi": "10.1186/s40478-020-0883-3",
+  "pmid": "32000863"
+ },
+ "workflow": "IT28 P9 comparison (compare_it28_p9_20261105): question-driven, source of the INV-03/INV-04 WWOX-system result; re-read for what the paper says about ethosuximide T-type attribution, the comparator, the age and the myelin phenotype. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
