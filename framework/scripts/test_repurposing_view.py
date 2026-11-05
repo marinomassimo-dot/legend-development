@@ -140,7 +140,11 @@ class RealData(unittest.TestCase):
         self.assertNotRegex(self.page, r"@import|url\(\s*https?:")
         self.assertNotIn("<link ", self.page)
         hosts = set(re.findall(r'href="https?://([^/"]+)', self.page))
-        self.assertLessEqual(hosts, {"dgidb.org", "civicdb.org", "www.docm.info", "open.fda.gov", "huggingface.co", "www.ebi.ac.uk", "www.guidetopharmacology.org", "dsld.od.nih.gov", "pubmed.ncbi.nlm.nih.gov", "doi.org"} | {h for h in hosts if h.endswith(".nih.gov") or h.endswith("ebi.ac.uk") or h.endswith("docm.info")})
+        self.assertLessEqual(hosts, {"dgidb.org", "civicdb.org", "www.docm.info", "open.fda.gov", "huggingface.co", "www.ebi.ac.uk", "www.guidetopharmacology.org", "dsld.od.nih.gov", "pubmed.ncbi.nlm.nih.gov", "doi.org", "www.wwox.org"} | {h for h in hosts if h.endswith(".nih.gov") or h.endswith("ebi.ac.uk") or h.endswith("docm.info")})
+
+    def test_footer_links_the_foundation_research_page(self):
+        """IT29: the Foundation link goes to its research page, in every language build."""
+        self.assertIn('href="https://www.wwox.org/current-research"', self.page)
 
     def test_determinism(self):
         self.assertEqual(rv.build(DR), self.page)
@@ -256,6 +260,49 @@ class Browser(unittest.TestCase):
             exp = self.ref(**f)
             got = self.counts(self.dom(frag))
             self.assertEqual(got, (len(exp), sum(1 for p in exp if "p" in p)), frag)
+
+    def test_every_card_follows_the_common_reading_order(self):
+        """IT29: question, rationale, evidence, context, counter-evidence, uncertainty, next test, in this order, on every card."""
+        dom = self.dom("#cand-" + self.P["cur"]["cands"][0]["id"])
+        order = ["question", "rationale", "evidence", "context", "counter", "uncertainty", "next_test"]
+        cards = re.findall(r'<article class="cand".*?</article>', dom, re.S)
+        self.assertGreater(len(cards), 10)
+        for card in cards:
+            roles = re.findall(r'data-role="([a-z_]+)"', card)
+            roles = [r for r in roles if r in order]
+            if "question" not in roles:      # a card with no need has no question line; the six answers keep their order
+                order_c = order[1:]
+            else:
+                order_c = order
+            self.assertEqual(roles, order_c)
+
+    def test_every_chain_node_can_be_selected_by_keyboard_and_shows_its_relations(self):
+        """IT29: a node without a card is a tab stop, Enter fills the detail panel with direction, type and source of its edges; this is the keyboard and phone path."""
+        with tempfile.TemporaryDirectory() as td:
+            cdp = rv.Cdp(self.bin, td)
+            try:
+                cdp.call("Page.enable")
+                cdp.call("Emulation.setDeviceMetricsOverride", width=390, height=844, deviceScaleFactor=1, mobile=True)
+                cdp.call("Page.navigate", url=f"file://{self.html}#chains")
+                self.assertTrue(cdp.wait_for("!!document.querySelector('[data-cur-ready]')", 60))
+                cdp.settle()
+                self.assertEqual(cdp.evaluate("document.querySelectorAll('.chain .eg-n:not(a .eg-n)[tabindex=\"0\"]').length"), cdp.evaluate("document.querySelectorAll('.chain .eg-n:not(a .eg-n)').length"))
+                cdp.evaluate("var g=document.querySelector('.chain .eg-n[tabindex=\"0\"]');g.focus();g.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true}))")
+                cdp.settle()
+                txt = cdp.evaluate("document.querySelector('.chain .eg-detail').innerText")
+                self.assertNotRegex(txt, r"^Select a node")
+                self.assertRegex(txt, r"[\u2190\u2192]")        # direction is printed
+                self.assertRegex(txt, r"\((R|I|A): ")             # relation type is printed
+                self.assertFalse(cdp.evaluate("document.documentElement.scrollWidth > window.innerWidth"))
+            finally:
+                cdp.close()
+
+    def test_investigation_permalink_opens_its_detail_even_after_a_filter(self):
+        """IT29: #inv-N shows the row with its detail open; the lookup works in the page's own script, not by a CSS target."""
+        dom = self.dom("#inv-2")
+        row = re.search(r'<li class="inv-row" id="inv-2".*?</li>', dom, re.S).group(0)
+        self.assertRegex(row, r'<details class="inv-more"[^>]* open')
+        self.assertNotRegex(re.search(r'<li class="inv-row" id="inv-2"[^>]*>', dom).group(0), r"\bhidden\b")
 
     def test_distinct_disposition_chips_rendered(self):
         d = self.dom()
@@ -560,6 +607,48 @@ class Curated(unittest.TestCase):
         self.assertEqual(set(self.allow["name_sources"]), {"MATRIX list name", "openFDA NDC single-ingredient active_ingredient name"})
         for v in list(self.allow["dgidb_claim_sources"].values()) + list(self.allow["name_sources"].values()):
             self.assertTrue(v["licence"] and v["attribution"])
+
+    def test_four_entry_points_reach_existing_sections_and_all_sections_stay_listed(self):
+        """IT29: the navigation opens on four paths; every section link that existed before is still reachable under "all sections"."""
+        nav = re.search(r'<nav aria-label="[^"]*">(.*?)</nav>', self.share, re.S).group(1)
+        main, rest = nav.split('<details class="navall">', 1)
+        primary = re.findall(r'<a href="#([^"]+)">', main)
+        self.assertEqual(len(primary), 4, primary)
+        every = re.findall(r'<a href="#([^"]+)">', rest)
+        self.assertGreaterEqual(len(every), 16)
+        for target in primary + every:
+            self.assertRegex(self.share, rf'id="{re.escape(target)}"', target)
+
+    def test_no_italian_authored_value_is_visible_on_a_page_of_another_language(self):
+        """IT29: every value the data files author in Italian (keys ending in _it) reaches a non-Italian page only through its translation. The check reads the data,
+        not a list of known cases, so a new _it field that is rendered without `lxi` fails here instead of leaking into four languages."""
+        import html as H
+        P = rv.build_payload(DR, "shareable")
+        vals = set()
+
+        def walk(o, k=""):
+            if isinstance(o, dict):
+                for a, b in o.items():
+                    walk(b, a)
+            elif isinstance(o, list):
+                for b in o:
+                    walk(b, k)
+            elif isinstance(o, str) and k.endswith("_it") and len(o) >= 20:
+                vals.add(o)
+        walk(P)
+        self.assertGreater(len(vals), 20)
+        for lang in ("en", "fr", "es", "de"):
+            page = rv.build(DR, "shareable", lang)
+            body = re.sub(r"<script\b.*?</script>|<style\b.*?</style>", "", page, flags=re.S)
+            text = H.unescape(re.sub(r"<[^>]+>", "", body))
+            self.assertEqual([v[:60] for v in vals if v in text], [], lang)
+
+    def test_each_investigation_has_a_unique_permalink(self):
+        ids = re.findall(r'<li class="inv-row" id="(inv-\d+)"', self.share)
+        self.assertTrue(ids)
+        self.assertEqual(len(ids), len(set(ids)))
+        for i in ids:
+            self.assertIn(f'href="#{i}"', self.share)
 
     def test_shareable_embeds_no_non_allowlisted_row(self):
         ok = {"DGIdb:" + k for k in self.allow["dgidb_claim_sources"]}

@@ -200,6 +200,17 @@
      "owner": "orchestrator"
     }
    ]
+  },
+  "OBJ_P18": {
+   "order": 18,
+   "steps": [
+    {
+     "step": "D0-D9 public dashboard integration (visual hierarchy, entry paths, interactions, graph, cards and comparison, languages, accessibility, performance, README entry points, integrity, browser verification, publication); parallel to the generative path; the frozen battery candidate is never modified, the package lands in the next candidate",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "queued 2026-11-05 on the operator integration message"
+    }
+   ]
   }
  }
 }

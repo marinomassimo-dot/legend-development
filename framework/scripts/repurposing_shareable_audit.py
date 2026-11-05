@@ -52,7 +52,8 @@ WORDING_MAX_WORDS = 8          # a ChEMBL mechanism / target label our own text 
 SHORT_QUOTE_MAX = 12           # a marked quotation up to this long needs no attribution phrase
 ATTRIBUTED_QUOTE_MAX = 30      # a quotation in marks with an attribution phrase may be up to this long
 PUBLIC_HOSTS = {"dgidb.org", "civicdb.org", "www.docm.info", "open.fda.gov", "huggingface.co", "www.ebi.ac.uk", "www.guidetopharmacology.org",
-                "dsld.od.nih.gov", "pubmed.ncbi.nlm.nih.gov", "doi.org", "www.genenames.org", "www.nlm.nih.gov", "creativecommons.org", "opendatacommons.org"}
+                "dsld.od.nih.gov", "pubmed.ncbi.nlm.nih.gov", "doi.org", "www.genenames.org", "www.nlm.nih.gov", "creativecommons.org", "opendatacommons.org",
+                "www.wwox.org"}   # the sponsor's research page, linked from the footer (a presentation link; no data comes from it)
 ATTRIBUTION_WORDS = re.compile(r"(authors? (write|state|note|say|report|conclude)|per the .{0,40}(source|paper|study|abstract)|according to|the abstract|the label)", re.I)
 
 # ---------------------------------------------------------------------------- provenance rules (generalised JSON path -> class)

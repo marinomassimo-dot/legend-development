@@ -1,3 +1,11 @@
+# Drug repurposing
+
+**Start here:** the public [research dashboard](https://marinomassimo-dot.github.io/legend-development/) (how to regenerate and publish it: [`view/README.md`](view/README.md)) · the [roadmap and standing method](roadmap_current.md#standing-method) · the technical instructions in [`framework/scripts/README.md`](../../../../framework/scripts/README.md).
+
+Everything below this line is the **historical index** of the external deliverables received and reconciled in October 2026; it keeps its dates and is not the current state.
+
+---
+
 # Drug repurposing — external deliverables and their reconciliation
 
 Non-canonical research material. Nothing in this directory changes the four scientific current

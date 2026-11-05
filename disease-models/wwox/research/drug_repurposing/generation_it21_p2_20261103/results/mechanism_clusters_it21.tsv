@@ -23,7 +23,7 @@ Q5	H_HARM	BRD4	43	43	0	0	yes	Apabetalone: KEEP (ranking_it8_p9_20261029/it9_reco
 Q5	H_HARM	EP300	2	2	0	0	no	CURCUMIN: DROP (ranking_it8_p9_20261029/it9_records.tsv#P3-07)	C646; CURCUMIN
 Q5	H_HARM	ESR2	1	1	0	0	no		Estradiol Valerate
 Q5	H_HARM	EZH2	15	14	4	1	yes		Cpi-1205; Ebi-2511; Ei1; Epz005687; Epz011989; GSK2816126
-Q5	H_HARM	HDAC3	5	5	0	0	no		Compound 30 [Pmid: 37057760]; Droxinostat; Resminostat; Rgfp109; Rgfp966
+Q5	H_HARM	HDAC3	5	5	0	0	yes		Compound 30 [Pmid: 37057760]; Droxinostat; Resminostat; Rgfp109; Rgfp966
 Q5	H_HARM	HMGB1	1	1	0	0	yes		CD24FC
 Q5	H_HARM	HNF4A	1	1	0	0	no		Bi6015
 Q5	H_HARM	INPP5D	1	1	0	0	no		3 Alpha-Aminocholestane
@@ -133,7 +133,7 @@ Q6	H_PROTECT	CSNK1E	4	4	0	0	no		4-(3-Pyridin-2-Yl-1H-Pyrazol-4-Yl)Quinoline; Pf-
 Q6	H_PROTECT	DYRK1A	18	13	0	0	no	Harmine: DROP (ranking_it8_p9_20261029/it9_records.tsv#P3-10)	(S)-Cr8; CIRTUVIVINT; Compound 2-2C [Pmid: 32003560]; Compound 3B [Pmid: 23454515]; Compound 68 [Pmid: 24900699]; Compound 72 [Wo2013026806]
 Q6	H_PROTECT	GSK3A	10	9	0	0	no	LITHIUM CARBONATE: CONDITIONAL (ranking_it8_p9_20261029/it11_records.tsv#M07)	6-Phenyl[5H]Pyrrolo[2,3-B]Pyrazine; AZD-1080; Azd1080; Chir-98014; LITHIUM CARBONATE; LITHIUM CITRATE ANHYDROUS
 Q6	H_PROTECT	GSK3B	22	20	0	0	yes	Lithium Carbonate: CONDITIONAL (ranking_it8_p9_20261029/it11_records.tsv#M07)	(7S)-2-(2-Aminopyrimidin-4-Yl)-7-(2-Fluoroethyl)-1,5,6,7-Tetrahydro-4H-Pyrrolo[3,2-C]Pyridin-4-One; 2-({6-[(3-Chlorophenyl)Amino]-9-Isopropyl-9H-Purin-2-Yl}Amino)Ethanol; Alsterpaullone; Alsterpaullone 2-Cyanoethyl; Ar-Ao-14418; Azd2858
-Q6	H_PROTECT	HDAC3	5	5	0	0	no		Compound 30 [Pmid: 37057760]; Droxinostat; Resminostat; Rgfp109; Rgfp966
+Q6	H_PROTECT	HDAC3	5	5	0	0	yes		Compound 30 [Pmid: 37057760]; Droxinostat; Resminostat; Rgfp109; Rgfp966
 Q6	H_PROTECT	KAT5	1	1	0	0	no		Mg149
 Q6	H_PROTECT	MAPK8	4	4	0	0	no		Compound 11 [Pmid: 26431428]; Compound 35 [Pmid: 23916259]; Halicin; Jnk Inhibitor 9L
 Q6	H_PROTECT	NLK	1	1	0	0	no		Compound 25 [Pmid: 17935989]

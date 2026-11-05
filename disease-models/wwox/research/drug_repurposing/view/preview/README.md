@@ -68,3 +68,13 @@ Measured with `python3 -B framework/scripts/repurposing_view.py viewports --shot
 | `11_it7p7_predictive_390px.png`, `_1280px`, `11_it7p7_contexts_360px.png` | The exploratory predictive test and the context concordance table |
 | `11_it7p7_section_*_print_A4.pdf` | Each new section printed on its own |
 
+
+## IT29 dashboard integration (identity bar, four entry paths, permalinks)
+
+Captured from the generated shareable page (English build) with a real headless Chromium through the module's own DevTools client, 1280 px desktop and 390 px phone emulation. `it29_before_*` is the page as it was served before the change, `it29_after_*` the same first screen afterwards; `dashboard_first_screen_*` are the same first screen afterwards and the images the repository README embeds.
+
+| File | What to look at |
+|---|---|
+| `it29_before_first_1280px.png`, `it29_before_first_390px.png` | Before: a sixteen-link bar, the source warning on top, the F/C/P legend before the first answer |
+| `dashboard_first_screen_1280px.png`, `dashboard_first_screen_390px.png` (the images the repository README embeds) | After: identity line (name, context, development state), four entry paths with "All sections" disclosure, one-line source status, the first investigation visible on the first screen |
+| `it29_after_chains_1280px.png` | An evidence chain whose column headings are now in the page language |

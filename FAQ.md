@@ -176,7 +176,7 @@ The rails along which it develops:
 - **Depth of corpus** — from a triaged bibliography toward complete, receipt-backed full-text coverage, with reading debt reported rather than hidden. Current state: [`coverage_report.md`](disease-models/wwox/registries/coverage_report.md).
 - **Mechanism resolution** — turning associated pathways into a *signed* causal map: does WWOX loss raise or lower this node, in which cell type, in which developmental window.
 - **Biomarkers** — Tier 1/2 proximal readouts of WWOX-linked biology, kept strictly separate from Tier 3 distal clinical endpoints, with a defined validation path each.
-- **Drug repurposing** — a declared objective and a staged track. It opens as the other rails mature: gene and protein function, signed pathway direction, a proximal readout, and CNS/paediatric safety. Until then, candidates stay hypotheses in the discovery and hypothesis ledgers, never described as treatments. See [Track C](disease-models/wwox/mission.md#drug-repurposing--a-declared-objective-deliberately-staged).
+- **Drug repurposing** — a declared objective and a staged track. It opens as the other rails mature: gene and protein function, signed pathway direction, a proximal readout, and CNS/paediatric safety. Until then, candidates stay hypotheses in the discovery and hypothesis ledgers, never described as treatments. The current hypotheses, with their evidence and next tests, can be browsed in the public [research dashboard](https://marinomassimo-dot.github.io/legend-development/). See [Track C](disease-models/wwox/mission.md#drug-repurposing--a-declared-objective-deliberately-staged).
 - **Interoperability** — alignment with the [Monarch Initiative](https://monarchinitiative.org/) ontologies and a [DisMech](https://dismech.monarchinitiative.org/)-compatible contribution, so the model is consumable outside this repository.
 - **Measured reasoning failure** — a public failure benchmark and a reproducible evaluation comparing base model, structured schema and schema-plus-guardrails, including a temporal T0→T1 test of whether new evidence reopens the right earlier conclusion. Spec: [`framework/eval/`](framework/eval/).
 - **Portability** — the engine is disease-agnostic; WWOX is the first implementation, not the boundary. [`framework/ADOPTING.md`](framework/ADOPTING.md).
@@ -212,7 +212,7 @@ navigable model with explicit epistemic status is a substrate all four can read
 without any of them having to trust an unsourced summary — which is exactly why
 the honesty layer is load-bearing rather than decorative. This edition is
 developed in partnership with, and sponsored by, the
-[WWOX Foundation](https://www.wwox.org/) ([statement](SPONSORSHIP.md)).
+[WWOX Foundation](https://www.wwox.org/current-research) ([statement](SPONSORSHIP.md)).
 
 **It measures where AI reasoning fails, on real scientific work.** The failure
 taxonomy here was not imagined: it was harvested from actual errors made during

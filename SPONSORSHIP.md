@@ -32,7 +32,7 @@ misstate who can grant rights over this material.
 - **Contact:** through the [WWOX Foundation](https://www.wwox.org/). No personal email
   addresses appear anywhere in this repository — the publication gate blocks them by design.
 
-**Sponsor:** [WWOX Foundation](https://www.wwox.org/)  
+**Sponsor:** [WWOX Foundation](https://www.wwox.org/current-research)  
 **Foundation representative:** Johann Mentz, Founder/Director  
 **Status:** formally confirmed to the project lead  
 **Recorded:** 2026-07-25 · ownership line resolved 2026-07-26
