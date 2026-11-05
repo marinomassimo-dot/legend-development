@@ -1,0 +1,19 @@
+# IT28 P0/P1 diagnosis: where generative capacity is lost, on four contrasting current cases (2026-11-05)
+
+Non-canonical research material, not medical advice. Baseline: `main` = `ec411170` (IT27 closed, CI green). Current stage, read from the files and not from the prompt: the Standing method of `roadmap_current.md` names `generation_it27_p3_20261104/results_s8/`; IT28 adds `generation_it28_p6_20261105/results_s9/`. Reconciliation with IT27: the provisional worktree indications were checked in the final version: the P47T annotations do reach 69 proposals and do not change the selection (confirmed, S7 reproduced exactly); the HDAC5 lever question was NOT resolved by IT27 (it was only posed), and is the first IT28 batch.
+
+| Case | Where the limit sits | Evidence | What IT28 did |
+|---|---|---|---|
+| Lever with a pertinent measure: ROCK2, belumosudil v SAR-407899 | Executed and compared; the residual is pharmacology qualification, not generation: ROCK1 "conflict" has under 1% of the mass and is a listing artefact; selectivity (about 230-fold v 2.7-fold) is data the decomposition cannot see | `alternatives_it27_p5_20261104`, `decomposition_it27_p6_20261104` | nothing new needed |
+| Lever with unresolved role: ISR modulators (INV-02) and HDAC5 to SLC2A1 | Missing measurement (protein-level ISR sign) and a thin premise (one muscle knockdown origin); the engine cannot supply either | `batch_it28_p3_hdac5_20261105`, `batch_it28_p4_isr_role_20261105` | two inverse batches, results returned to the decision scope, INV-02 and the unit note |
+| Compound with several or opposed actions: pracinostat (class I potent, class IIa uncertain) | Multi-target contributions are ALREADY computed and decomposed; the missing piece is assay-matched potency (47 v 5,113 nM) whose methods are not freely readable: DATA_MISSING, not a missing function | `alternatives_it27_p5_20261104/pracinostat_hdac5_discordance_it27p5.tsv`, P3-C | named the exact datum (isoform table and methods of PMID 20197387) |
+| Knowledge present but not influencing the result | (a) NOT_CONSUMED defect: 762 GtoPdb ligands without a ChEMBL id never joined to a catalogue family, so tazemetostat's measured EZH2 IC50 (11 nM) was invisible and R4-identity families inherited no measure; (b) by design: the P47T annotation reaches the proposals without moving an order | S8 v S9 (53 proposals gain an attribution state, eligibility 220 and hand-overs unchanged) | exact full-InChIKey join, R4 families carry their ChEMBL family's measures, with tests |
+
+## Corrections of a diagnosis
+The IT20 figure "3 of 23 needs" is the reach of the WWOX-qualified selection path (a lever is qualified only where a need has a resolved up/down direction and a stated coupling row); the other 20 split as 10 unresolved direction, 6 restore-type vocabulary mismatch and 4 with no catalogue association (`hypotheses_it20_20261102`). It is not a count of needs whose direction is resolved, and it does not describe the generator, which proposes on conditional roles. `roadmap_current.md` now states the perimeter.
+
+## Interventions that can change a decision or generate a useful question
+1. Protein-level ISR sign (INV-02): changes which lever class is even sensible. A measurement, not code.
+2. Genetic HDAC5 arm with catalytic-dead rescue: decides whether the HDAC5 thread has any pharmacological lever. A measurement.
+3. Assay-level class IIa data (methods of three closed papers): decides the pracinostat value. Access, not code.
+4. Joining the measures that exist (done): changes attribution states and the tie structure, visible to later comparisons.
