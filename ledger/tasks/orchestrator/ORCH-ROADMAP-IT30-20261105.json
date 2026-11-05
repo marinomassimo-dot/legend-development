@@ -11,7 +11,8 @@
   "it29_candidate": "d099a5be465f91fe7dc8c7f108751fd34f3a242d (worktree task/it29)",
   "it29_battery": "clone /home/desktop/battery_it29, log /home/desktop/battery_it29.log, verdict line 'REGRESSION VERDICT'; the earlier battery on 72a58bfb failed one test (legend above the fold at phone width), fixed in d099a5be",
   "next_action": "read the IT29 battery verdict; if PASS, closure-only commit on task/it29 (P16 and dashboard DONE), ff-merge, safe_push, CI by curl, check served site; then merge task/it29 into task/it30 and continue S1",
-  "not_to_redo": "engine-dir recipe is in generation_it30_p5_20261105/README.md; carried_limits fix is committed (fa5eb2d2)"
+  "not_to_redo": "engine-dir recipe is in generation_it30_p5_20261105/README.md; carried_limits fix is committed (fa5eb2d2)",
+  "parallel_batch": "separate scientific batch ORCH-SCIBATCH-DR-20261105 works in .claude/worktrees/dr-parallel-20261105 (task/dr-parallel-20261105, based on 14c5fc7b); on 2026-11-05 it held only batch_sci_20261105/BRIEF_COMMON.md. It hands back READMEs, evidence tables and staged receipts inside its own directories; this session (IT30) is the single integrator of shared files (ledger, registries, consumers); receipts are trial-recorded in event-ID order in a scratch clone first"
  },
  "AUTHORISED_QUEUE_20261105C": {
   "MANDATE_STATE": "OPEN",
