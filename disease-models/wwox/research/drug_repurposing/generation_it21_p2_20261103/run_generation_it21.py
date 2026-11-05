@@ -439,6 +439,19 @@ def seed_guard_limits(p, sidx, ann=None):
     return sorted(tags), [f"{t}: {SUPPORT_LIMITING_GUARDS[t]}" for t in sorted(tags) if t in SUPPORT_LIMITING_GUARDS]
 
 
+def join_limits(parts):
+    """Join carried limits without losing any. A cut at a fixed length (1,600 characters until IT30) removed the scope clause of a limit and
+    kept the repeated text before it; here an identical segment is kept once, in first-seen order, and nothing is truncated. Display length
+    is the interface's concern (the view folds long text)."""
+    seen, out = set(), []
+    for part in parts:
+        for seg in str(part).split(" | "):
+            if seg and seg not in seen:
+                seen.add(seg)
+                out.append(seg)
+    return " | ".join(out)
+
+
 def decision_effect(p, cluster_decisions, global_decisions=()):
     """What earlier decisions mean for p. Pure. cluster_decisions: decisions on OTHER members of p's mechanism cluster (compound/state/source/components); global_decisions: every decision with a
     scope, whatever its cluster (IT22 P8-fix F01: a premise or class limit about an EDGE or a TARGET applies wherever that edge or target is in a chain, not only inside one cluster).
@@ -824,7 +837,7 @@ def cmd_propose(a):
         others = [d for d in cl_dec.get(k, []) if base_name(d["compound"]) != base_name(p["compound"])]
         eff = decision_effect(p, others, global_dec)
         p["cluster_work_done"] = "yes" if eff["work_done"] else ""
-        p["carried_limits"] = " | ".join(([p["carried_limits"]] if p["carried_limits"] else []) + eff["carried_limits"])[:1600]
+        p["carried_limits"] = join_limits(([p["carried_limits"]] if p["carried_limits"] else []) + eff["carried_limits"])
         if p["handoff_eligible"] == "yes" and eff["block"]:
             p["handoff_eligible"], p["handoff_blocker"] = "no", eff["block"].split(":")[0] if eff["block"].startswith("shared") else eff["block"]
             p["blocker_detail"] = eff["block"]
