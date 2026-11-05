@@ -3236,10 +3236,10 @@ def render_overview(P: dict) -> str:
     META_LINE = (f'<p class="meta-line"><b>{E(U["data_date"])}:</b> <span data-k="meta.data_date" data-v="{E(str(dd))}">{E(str(dd))}</span> · <b>{E(U["bf_needs_rec"])}</b> <span data-k="meta.needs_built_on" data-v="{E(str(meta["needs_built_on"]))}">{E(str(meta["needs_built_on"]))}</span> · <b>{E(U["bf_cat_build"])}</b> <span data-k="meta.catalogue_generated" data-v="{E(str(meta["catalogue_generated"]))}">{E(str(meta["catalogue_generated"]))}</span> · <b>{E(U["perimeter"])}:</b> {E(U["perimeter_txt"])} · {E(srcnote)}</p>')
     return (
         f'<section id="overview" aria-labelledby="h-over"><h2 id="h-over">{E(U["ov_h"])}</h2>'
+        f'<div class="legendrow" role="group" aria-label="{E(U["legend_h"])}"><b>{E(U["legend_h"])}:</b> {legend}</div>'
         f'<p class="lead">{E(U["ov_lead"])} <span class="mini mut">{E(U["need_gloss"])}</span></p>'
         f'<div class="warnstrip" role="note"><b>{E(U["warn_h"])}.</b> {E(U["warn_1"])} {E(U["warn_2"])}</div>'
-        + render_investigations(P) +
-        f'<div class="legendrow" role="group" aria-label="{E(U["legend_h"])}"><b>{E(U["legend_h"])}:</b> {legend}</div>'
+        + render_investigations(P)
         + render_quick(P) +
         f'<details class="inl howto"><summary>{E(U["qk_more"])}</summary>' + META_LINE + f'<div class="twocol"><div class="how"><h3>{E(U["how_h"])}</h3><ol><li>{E(U["how_1"])}</li><li>{E(U["how_2"])}</li><li>{E(U["how_3"])}</li><li>{E(U["how_4"])}</li></ol><p class="mini">{E(U["warn_3"])}</p></div>'
         f'<div class="legendbox"><p class="mini mut">{E(U["legend_note"])}</p><ul class="poslist">{legend_all}</ul></div></div></details>'
