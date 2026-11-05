@@ -1,5 +1,7 @@
 # LEGEND — From Evidence to Therapeutic Discovery
 
+![LEGEND — AI-assisted therapeutic discovery for rare diseases](assets/legend-banner.png)
+
 **An open-source, AI-assisted research platform connecting scientific evidence, mechanistic inference, computational experiments and drug repurposing for rare diseases.**
 
 LEGEND turns fragmented knowledge into testable hypotheses, candidate interventions and research priorities. Its first disease model covers **WWOX-related disorders**, particularly **WOREE / WWOX developmental and epileptic encephalopathy**.
