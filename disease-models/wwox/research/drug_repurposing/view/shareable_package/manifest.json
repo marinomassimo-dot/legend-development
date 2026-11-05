@@ -28,7 +28,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
     "class": "BIBLIO",
-    "values": 501,
+    "values": 503,
     "why": "PMID / DOI of a cited work"
    },
    "^\\.cur\\.cands\\[\\]\\.access\\[\\]$": {
@@ -53,7 +53,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.pmids\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 744,
+    "values": 747,
     "why": "title, journal, year of a cited work (bibliographic facts)"
    },
    "^\\.cur\\.evidence_graph\\.chains\\[\\]\\.(nodes\\[\\]\\.pmids\\[\\]|edges\\[\\]\\.src\\.id)$": {
@@ -203,7 +203,7 @@
    "DOI": 5,
    "HGNC": 12,
    "NCT": 0,
-   "PMID": 102
+   "PMID": 103
   },
   "links": {
    "distinct_hrefs": 140,
@@ -224,7 +224,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3321,
+    "forbidden-name": 3324,
     "forbidden-wording": 21
    },
    "co_attested_wording": [
@@ -467,7 +467,7 @@
   "view_schema": "legend.wwox.repurposing_view/2"
  },
  "embedded_field_classes": {
-  "BIBLIO": 2454,
+  "BIBLIO": 2459,
   "COUNT": 11599,
   "ID": 4547,
   "OWN": 83802,
@@ -529,7 +529,7 @@
   },
   "NOTICE.md": {
    "bytes": 13086,
-   "sha256": "f008b5751f3b06e8c934f9dcc31d0651f5757ab0acd86e958ff3469d121074ac"
+   "sha256": "270dbf019f75629329bc3c1931aebfe9c825eaa28d0c49b93f4539a583d68a2f"
   },
   "README.md": {
    "bytes": 5072,
@@ -552,24 +552,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 4611059,
-   "sha256": "232496f74c9b8a54be5f699e1b334e73059e4de37361c1d0c1ec9d2a98d2a788"
+   "bytes": 4611548,
+   "sha256": "9d95ea0caaf4e923dc5e36aaa697914f997df508ee8e2c20aaa3870aef242204"
   },
   "es.html": {
-   "bytes": 4596339,
-   "sha256": "b4ae47ee4586620a4e117374f31c814113fd80df4e433a8e66cf3e0fc3dc0427"
+   "bytes": 4596828,
+   "sha256": "f2967827b7a30608b06621d657e50248ec49f704c5935c17996d91a242232b76"
   },
   "fr.html": {
-   "bytes": 4617456,
-   "sha256": "6d18a21c0a6c4aceea9aadd4c4e2af20a8c34ea015fd14be124db3930070cfd8"
+   "bytes": 4617945,
+   "sha256": "b1ddc48d14dc1123528c236c4339066e89b13ff9eb60cb62e49a1d8727bf00c1"
   },
   "index.html": {
-   "bytes": 4532655,
-   "sha256": "02cb9a53dcd6c325f51f9a5fd5ed8f10591cc6ac1c5b8bca25965f54e22e5ebd"
+   "bytes": 4533144,
+   "sha256": "501af5d024e3b9d4f1d54c3e9b367f2c7d069e3b6370562ba14968bbd7cf2800"
   },
   "it.html": {
-   "bytes": 4572585,
-   "sha256": "1ce5586018eca8d05db3754342a5c3f00a6fe4e18a777926921ea087c46ed32a"
+   "bytes": 4573074,
+   "sha256": "24f7c8a8c94eb67be338f2ea314256d6ecc6c2fb5bed46652eb047731cd972bd"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",

@@ -40,8 +40,22 @@ class T(unittest.TestCase):
         self.assertIn("model A", q); self.assertIn("model B", q); self.assertIn("no class transfer", q)
 
     def test_a_combination_or_a_class_is_never_split_into_compounds(self):
-        s, panel = run([("drugx + drugy", "favourable", "m"), ("drugx, drugy", "favourable", "m"), ("five H1 antagonists", "null", "m"), ("drugx versus drugy", "null", "m")])
+        s, panel = run([("drugx + drugy", "favourable", "m"), ("drugx, drugy, drugz", "favourable", "m"), ("five H1 antagonists", "null", "m"), ("drugx versus drugy", "null", "m")])
         self.assertEqual(s, []); self.assertEqual(len(panel), 4)
+
+    def test_single_compounds_with_commas_digits_or_role_words_in_their_name_stay_single(self):
+        names = ["9-cis retinoic acid", "neostigmine (cholinesterase inhibitor)", "MDL29,951", "GC-1 (TR-beta selective agonist)",
+                 "clobazam (GABA-A positive modulator, benzodiazepine)", "OV350 (KCC2 activator, pups)", "NBI-921352 (Nav1.6 inhibitor)", "pynegabine (HN37), Kv7 opener", "OV350 given in pups, tested in adults"]
+        s, panel = run([(n, "favourable", "m") for n in names])
+        self.assertEqual(len(panel), 0)
+        self.assertEqual(len(s), len(names))
+
+    def test_a_benefit_with_only_a_stated_limit_is_not_called_a_failure_to_reproduce(self):
+        s, _ = run([("drugx", "favourable", "m1"), ("drugx", "favourable", "m2"), ("drugx", "context_dependent", "m3")])
+        self.assertEqual(s[0]["conflict"], "benefit_with_a_stated_limit")
+        self.assertIn("not a failure to reproduce", cc.question(s[0]))
+        s, _ = run([("drugx", "favourable", "m1"), ("drugx", "null", "m2")])
+        self.assertEqual(s[0]["conflict"], "benefit_not_reproduced")
 
     def test_unknown_is_not_turned_into_a_conflict_or_a_negative(self):
         s, _ = run([("drugx", "undetermined", "m1"), ("drugx", "undetermined", "m2")])

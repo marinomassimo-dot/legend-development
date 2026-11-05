@@ -15,11 +15,11 @@ Non-canonical. Not medical advice. Retrospective on inputs frozen at IT29 (the 1
 | Quantity on the frozen rows | Current path | Adapter |
 |---|---|---|
 | Compound-only rows the target converter can use | 0 of 100 (it signs a target only when target-controlled or genetic: 54 rows) | not applicable: it does not sign targets |
-| Compound rows read with their context | 0 | 39 of 119 (22 compound-theme entries, 54 distinct sources over all compound rows); 80 rows are panels or classes and stay unattributed |
-| Conditional questions for the queue | 0 | 8: 5 compound-level (2 sign flips: rapamycin, vigabatrin; 3 not reproduced or context-dependent: benztropine, clemastine, bumetanide) and 3 class-level from the case-2 lesion table (sodium-channel blockers, GABA-transaminase inhibitors, Kv7 openers) |
+| Compound rows read with their context | 0 | 53 of 119 (34 compound-theme entries); 66 rows are panels or classes and stay unattributed |
+| Conditional questions for the queue | 0 | 9: 6 compound-level (2 sign flips: rapamycin, vigabatrin; 1 benefit not reproduced: bumetanide; 3 benefit with a stated limit: benztropine, clemastine, clonazepam) and 3 class-level from the case-2 lesion table (sodium-channel blockers, GABA-transaminase inhibitors, Kv7 openers) |
 | Class transfers made | 0 | 0 (by rule and by test) |
-| Compounds that were already stage proposals | - | 1 of 22 (phenobarbital): the stage is built from transcript chains, the evidence from pharmacology |
+| Compounds that were already stage proposals | - | 1 of 34 (phenobarbital): the stage is built from transcript chains, the evidence from pharmacology |
 
-**What it does not show.** No new molecule, no changed ranking, no prediction that anything works. The two layers barely meet (1 of 22), which is a finding about the layers: transcript-derived proposals and literature pharmacology describe mostly different compounds. A variant "only the added data, without the new link" is the current path with the rows in the folder, which reaches 0 compound-only rows; so the gain is attributable to the link, not to new data (no row was added). Cost: one script, 5 tests, under a second to run; maintenance is the rule list for panels and classes (a regex), which will need extension when new wording appears.
+**What it does not show.** No new molecule, no changed ranking, no prediction that anything works. The two layers barely meet (1 of 22), which is a finding about the layers: transcript-derived proposals and literature pharmacology describe mostly different compounds. A variant "only the added data, without the new link" is the current path with the rows in the folder, which reaches 0 compound-only rows; so the gain is attributable to the link, not to new data (no row was added). Cost: one script, 7 tests, under a second to run; maintenance is the rule list for panels and classes (a regex), which will need extension when new wording appears.
 
 **Independent set.** None exists for compound-level context effects, so no part was reserved. Rows of one study share an origin (`n_sources` is printed beside `n_rows`).

@@ -153,8 +153,9 @@
    "steps": [
     {
      "step": "S12 Independent verification by a different actor",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "context_it30_20261105/VERIFY_IT30.md: a fresh context reconstructed the adapter, F03, carried-limits and CLM results from inputs before opening the producer files; confirmed the core, found 12 mis-routed single compounds, a mislabelled 'not reproduced', three wording errors in F03, two CLM counts; all corrected the same session; limit: same model family"
     }
    ]
   },

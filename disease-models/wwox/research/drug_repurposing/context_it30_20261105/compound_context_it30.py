@@ -18,7 +18,7 @@ from pathlib import Path
 
 csv.field_size_limit(10 ** 9)
 DR = Path(__file__).resolve().parent.parent
-PANEL = re.compile(r"[;,]|\+|\badd-on\b|\bversus\b|\bvs\b|\bplus\b|\bwith\b|\band\b|\bor\b|^\d|\b(antagonists?|agonists?|inhibitors?|blockers?|blockade|treatment|library|drugs|compounds|modulators|class)\b", re.I)
+PANEL = re.compile(r";|,\s[^,]*,\s|\+|\badd-on\b|\bversus\b|\bvs\b|\bplus\b|\bwith\b|\band\b|\bor\b|^\d+\s|\b(antagonists|agonists|inhibitors|blockers|blockade|treatment|library|drugs|compounds|modulators|class)\b", re.I)
 SIGNED = ("favourable", "adverse", "null", "context_dependent", "undetermined")
 THEME = {"A": "myelination (small molecules)", "B": "myelination (genetic or pathway)", "C": "myelination (transfer conditions)",
          "D": "network discharge in developmental epilepsy", "E": "compensatory roles in developmental epilepsy"}
@@ -35,15 +35,21 @@ def rd(p):
         return list(csv.DictReader(fh, delimiter="\t"))
 
 
+ALL = []
+
+
 def build(evidence_glob):
     single, panel = collections.defaultdict(list), []
+    ALL.clear()
     for f in sorted(glob.glob(str(DR / evidence_glob))):
         letter = Path(f).stem.rsplit("_", 1)[-1]
         for r in rd(f):
+            r["_theme"] = letter
+            ALL.append(r)
             if r["intervention_type"] != "compound":
                 continue
             r["_theme"] = letter
-            if PANEL.search(r["intervention"]):
+            if PANEL.search(re.sub(r"\(.*?\)", " ", r["intervention"])):
                 panel.append(r)
             else:
                 single[(name_key(r["intervention"]), letter)].append(r)
@@ -56,12 +62,14 @@ def summarise(single):
         dirs = collections.Counter(r["direction_on_endpoint"] for r in rows)
         ctx = collections.defaultdict(set)
         for r in rows:
-            ctx[r["direction_on_endpoint"]].add((r["system"].split(",")[0][:60] + " | " + r["stress_or_context"][:50]).strip(" |"))
+            ctx[r["direction_on_endpoint"]].add((r["system"].split(",")[0][:60] + " | " + r["stress_or_context"][:50] + " | endpoint: " + r["endpoint"][:60]).strip(" |"))
         fav, adv, nul = dirs.get("favourable", 0), dirs.get("adverse", 0), dirs.get("null", 0)
         if fav and adv:
             kind = "sign_flips_with_context"
-        elif fav and (nul or dirs.get("context_dependent")):
-            kind = "benefit_not_reproduced_or_context_dependent"
+        elif fav and nul:
+            kind = "benefit_not_reproduced"
+        elif fav and dirs.get("context_dependent"):
+            kind = "benefit_with_a_stated_limit"
         elif dirs.get("context_dependent") and not fav and not adv:
             kind = "context_dependent_only"
         else:
@@ -72,6 +80,16 @@ def summarise(single):
                         conflict=kind, attribution="compound_only" if all(r["attribution"] == "compound_only" for r in rows) else "mixed",
                         rows=",".join(r["row_id"] for r in rows)))
     return out
+
+
+def related_rows(summary):
+    """Rows that mention the compound by name but were not used for its entry (panel rows, other interventions, observations in the reference genotype).
+    They are pointers for whoever answers the question, not evidence added to it."""
+    for s in summary:
+        own = set(s["rows"].split(","))
+        key = s["compound"].split()[0]
+        s["related_rows"] = ",".join(r["row_id"] for r in ALL if r["row_id"] not in own and key in " ".join((r["intervention"], r["effect_note"], r["locator_quote"])).lower())
+    return summary
 
 
 def stage_join(summary, stage_path):
@@ -108,8 +126,12 @@ def question(s):
     c = s["compound"]
     if s["conflict"] == "sign_flips_with_context":
         return (f"The effect of {c} on {s['theme']} is favourable in some contexts and adverse in others ({s['contexts_by_direction']}). "
-                f"Which of these contexts is the reference genotype's? Until a measurement in a matched system answers it, {c} is a probe with a stated condition, not a lever; no class transfer.")
-    return (f"The effect of {c} on {s['theme']} is not reproduced across contexts ({s['directions']}). What differs between the contexts that gave a benefit and the ones that did not? "
+                f"Which of these contexts is the reference genotype's? Until a measurement in a matched system answers it, {c} is a probe with a stated condition, not a lever; no class transfer. "
+                f"Endpoints differ between rows and are printed with each context; a row in an unaffected animal is a safety row, not a candidate context.")
+    if s["conflict"] == "benefit_with_a_stated_limit":
+        return (f"{c} on {s['theme']}: benefit in most rows, with at least one row whose authors state a limit ({s['directions']}; {s['contexts_by_direction']}). No null or adverse single-compound row exists. "
+                f"What does the stated limit change for the question being asked? Read the limiting row before using {c} as a lever; it is not a failure to reproduce.")
+    return (f"The effect of {c} on {s['theme']} is not reproduced across contexts ({s['directions']}; {s['contexts_by_direction']}). What differs between the contexts that gave a benefit and the ones that did not? "
             f"Measure it with a matched control arm before reading {c} as a lever.")
 
 
@@ -119,14 +141,14 @@ def main():
     ap.add_argument("--evidence", default="phenotype_first_it29_20261105/p3_*/evidence_it29_*.tsv")
     a = ap.parse_args()
     single, panel = build(a.evidence)
-    summary = stage_join(summarise(single), DR / a.stage)
+    summary = stage_join(related_rows(summarise(single)), DR / a.stage)
     out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
     cols = list(summary[0])
     with open(out / "compound_context_it30.tsv", "w", encoding="utf-8", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=cols, delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(summary)
     qs = [dict(question_id=f"CQ-IT30-{i:02d}", compound=s["compound"], theme=s["theme"], conflict=s["conflict"], in_stage=s["in_stage"],
-               stage_handoff_eligible=s["stage_handoff_eligible"], question=question(s), evidence_rows=s["rows"])
-          for i, s in enumerate([s for s in summary if s["conflict"] in ("sign_flips_with_context", "benefit_not_reproduced_or_context_dependent")], 1)]
+               stage_handoff_eligible=s["stage_handoff_eligible"], question=question(s), evidence_rows=s["rows"], related_rows=s["related_rows"])
+          for i, s in enumerate([s for s in summary if s["conflict"] in ("sign_flips_with_context", "benefit_not_reproduced", "benefit_with_a_stated_limit")], 1)]
     qs += class_questions(DR / "phenotype_first_it29_20261105/case2_lesion_conditional_it29.tsv")
     for i, q in enumerate(qs, 1):
         q["question_id"] = f"CQ-IT30-{i:02d}"
