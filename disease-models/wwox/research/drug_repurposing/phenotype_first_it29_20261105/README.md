@@ -1,0 +1,45 @@
+# IT29: phenotype-first generation, compared with the current path (P2 to P8)
+
+Non-canonical research material, not medical advice. Public edition, WWOX-DEE reference genotype class. Zero spend; no contact. Baseline `main` = `8c7c46cf`; current stage consumed by the baseline method: IT28 `results_s9`; this package adds `generation_it29_p5_20261105/results_s10`.
+
+## Answer first
+The functional path added something **circumscribed and conditional** on the principal case, and a different kind of thing on the contrasting case.
+* **Case 1 (oligodendrocyte differentiation and myelination).** The current path could not sign a single association (546, all abstentions). With the signed perturbation table (`signed_rows_case1_it29.tsv`, 31 rows from 40 + 52 evidence rows) and the need's intervention targets extended from 1 to 25, the same search layer signs **216 rows over 191 families** (137 consistent, 79 opposed). **Neither ingredient works alone**: extending the targets without the signs gives 0 signed rows (2,557 associations, all unresolved), and the signs without extending the targets are never reached (the need lists CHRM1 as its only intervention target; the other five targets are readout markers).
+* **Its one finding that changes a carried decision.** Non-selective HDAC inhibitors are signed *against* oligodendrocyte maturation (HDAC1+2 double loss removes the lineage; HDAC3 loss diverts precursors to astrocytes; HDAC3-directed inhibitors lowered Olig2 in purified precursors). 28 proposals of the HDAC5/HDAC3 thread (12 hand-over eligible) were generated without that counter-premise. It is now a carried limit on 30 proposals (`results_s10`; only `carried_limits` moved; 220 eligible and the 15 hand-overs unchanged). This is an interaction between two cases the programme had treated separately (the glycolysis-driven HDAC5 thread and the myelination need).
+* **No compound is qualified as a pro-myelinating lever for WWOX.** Every favourable result is an oligodendrocyte-intrinsic differentiation accelerator in wild-type cells or after injury; none was tested in a neuron-driven hypomyelination model or any Wwox-deficient system, and in this lesion the neuronal signal, not the oligodendrocyte, is the proposed driver (IT14 P4; INV-06 stays a role question).
+* **Case 2 (network hyperexcitability).** Compound-level evidence from other epilepsy models could not sign targets (25 of 26 rows are compound-only). It was used differently: the **sign of several agent classes flips with the lesion class** (sodium-channel blockers, vigabatrin, Kv7 openers), so a single perturbation that discriminates 'inhibition-loss-like' from 'excitatory-gain-like' is more informative than any candidate (`case2_lesion_conditional_it29.tsv`). Ethosuximide is not corroborated by the DEE-model screens.
+* **Not a new hypothesis in the sense of a new molecule.** Every compound surfaced was already in the catalogue (19 of 20 in ChEMBL names, the 20th by DGIdb); the novelty is a signed relation compound - action - context - benefit that the record could not express, and a counter-premise.
+
+## Six-way localisation (what each limit was)
+| Limit | Case 1 | Case 2 |
+|---|---|---|
+| Knowledge limit | no pro-differentiation compound tested in a neuron-driven hypomyelination model | no paired seizure + function endpoint for T-type or NMDAR agents in a genetic DEE |
+| Data available but not represented | signed target-to-endpoint couplings (now `signed_rows_case1_it29.tsv`) | lesion-class conditioning (now a table, not executable) |
+| Representation present, not executed | the need listed one intervention target; the `--roles` and `--needs` inputs existed | - |
+| Executed, not consumed | HDAC-class limit on the myelin endpoint (now carried, S10) | - |
+| Pharmacological comparison insufficient | 9 of 20 reference compounds identified but not qualifiable by target | agent classes differ by lesion class |
+| Generative-method limit | seeds are transcripts; no myelin seed exists in the six seed sets | transcript chains return HDAC/proteasome agents, no channel agents (IT13) |
+
+## Comparison (P6), case 1, reference list of 20 compounds named in the evidence (`comparison_case1_it29.tsv`)
+| Arm | Reached | Direction right | Wrong | Abstained | Not reached |
+|---|---|---|---|---|---|
+| A current path | 4 | 0 | 0 | 4 | 16 |
+| B simple lookup of the named compounds | 20 present in the catalogue | no direction available | - | - | - |
+| C contextualised path | 11 | 7 (6 independent of the study that signed the target; clobetasol is circular) | 0 | 4 (the muscarinic antagonists) | 9 |
+
+* **Retrospective.** The reference list and the signs come from the same sources, so arm C against the list measures reach and bookkeeping, not independent predictive skill. The circular case is flagged; the other six right calls use a sign taken from a different study than the one naming the compound (liothyronine and sobetirome via THRA loss, bexarotene via RXR agonism in purified precursors, trichostatin A, apicidin and fimepinostat via HDAC3 genetics). No prospective test is possible with current data.
+* **Contribution of the new data v the method** (P6-E): new data alone (B) gives presence without direction; the existing method alone (A) abstains; the signed rows without target extension are unreachable; the extension without signs signs nothing. The value is the join.
+* **Out of catalogue or unqualifiable.** The nine not reached (clemastine, quetiapine, miconazole, ketoconazole, amorolfine, tamoxifen, ifenprodil, mevastatin, neostigmine) are in the catalogue but their recorded mechanisms point to targets that carry no target-controlled endpoint evidence (compound-only effects, fungal CYP51, H1, ER, ACHE). They are listed, not qualified.
+* **The muscarinic class is deliberately left unresolved.** Mouse M1 genetics, human M3 knockdown and the EBP chemistry disagree (only 2 of 6 antimuscarinics enhance differentiation, and those inhibit EBP), so CHRM1 and CHRM3 stay `unresolved` with the discordance in the qualifier. Signing them would have raised the count of 'consistent' rows with a false confidence.
+* **Volume is not quality.** 106 of the 137 consistent rows are glucocorticoid-receptor agonists (the receptor sign rests on one purified-precursor study with a receptor-antagonist control, and neonatal glucocorticoid exposure is a separate liability). They are rows, not proposals.
+
+## Case 2 comparison (`case2_lesion_conditional_it29.tsv`)
+Arm A (current) abstains on the seizure need (91 associations: action not stated, coupling not measured). Arm B finds every named agent in the catalogue (retigabine under ezogabine). Arm C is not a signed-coupling run: it is a lesion-conditional table that (1) demotes ethosuximide (no DEE-model corroboration; the T-type thread rests on one pup experiment), (2) qualifies clobazam as lesion-specific with exposure- and age-dependent harm in naive neonates, (3) shows that sodium-channel blockers would worsen an inhibition-loss lesion and help an excitatory-gain lesion, and (4) adds a never-considered class (serotonergic agents, fish evidence only). **What generalises:** the discipline (endpoint, attribution, transfer breakers, opposite results kept visible). **What does not:** the executable join, because case 2 evidence is compound-level, not target-controlled. The shortcut removed: no rule keyed on a compound name exists in the converter; the reference list lives only in the comparison script.
+
+## Discriminating perturbations (P8)
+1. **Case 2.** A sodium-channel blocker challenge in Wwox-deficient slices distinguishes 'inhibition-loss-like' (worsens) from 'excitatory-gain-like' (helps) and is informative without any therapeutic intent. It needs the measured sIPSC deficit (IT14 P3) as its comparator; every drug arm should carry a treated wild-type or heterozygote control and a function read-out (interneuron number, maturation), because early network silencing can cost PV interneurons (Wong 2018, abstract-to-partial level).
+2. **Case 1.** An arm in Wwox-null oligodendrocyte-precursor monoculture or the Wwox-null DRG co-culture, with a sterol-pathway comparator beside the muscarinic one, would show whether any of the intrinsic accelerators acts when the lesion is neuronal. A neuronal-activity manipulation crossed with a pro-differentiation agent is the untested interaction (no source crosses them).
+3. **Cross-case.** The endpoint 'more myelin' is not automatically benefit in an epileptic circuit (hyperexcitability itself drives myelination; blocking it lowered seizure burden in one model), so a myelin gain needs a function read-out.
+
+## Limits
+Partial or abstract-level reading throughout (every receipt states its depth); search tool errors forced Europe PMC and E-utilities routes, so the searches are bounded, not systematic; zebrafish serotonergic rows share a laboratory; direction labels in the evidence tables are the readers' and are verified only by the independent check of P14.

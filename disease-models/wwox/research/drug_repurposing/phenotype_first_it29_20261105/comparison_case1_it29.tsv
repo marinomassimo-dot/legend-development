@@ -1,0 +1,21 @@
+compound	evidence_direction	evidence_rows	sign_source_is_reference	in_catalogue_B	arm_A_labels	arm_A_verdict	arm_C_labels	arm_C_verdict
+benztropine	favourable	R01 R02 R06 R14	no	yes	direction_unresolved	abstained	direction_unresolved	abstained
+clemastine	favourable	R07 R12 R14 R48	no	yes	-	not_reached	-	not_reached
+atropine	favourable	R08	no	yes	direction_unresolved	abstained	direction_unresolved	abstained
+ipratropium	favourable	R08	no	yes	direction_unresolved	abstained	direction_unresolved	abstained
+oxybutynin	favourable	R08	no	yes	direction_unresolved	abstained	direction_unresolved	abstained
+quetiapine	favourable	R13	no	yes	-	not_reached	-	not_reached
+miconazole	favourable	R22 R24 R28 R30	no	yes	-	not_reached	-	not_reached
+ketoconazole	favourable	R30	yes	yes	-	not_reached	-	not_reached
+clobetasol	favourable	R23 R25 R26	yes	yes	-	not_reached	consistent,direction_unresolved	right
+amorolfine	favourable	R31	yes	yes	-	not_reached	-	not_reached
+tamoxifen	favourable	R32 R36	no	yes	-	not_reached	-	not_reached
+ifenprodil	favourable	R36 R37	no	yes	-	not_reached	-	not_reached
+liothyronine	favourable	R35	no	yes	-	not_reached	consistent,direction_unresolved	right
+bexarotene	favourable	R35 R42	no	yes	-	not_reached	consistent,direction_unresolved	right
+sobetirome	favourable	R49	no	yes	-	not_reached	consistent	right
+trichostatin	adverse	R40	no	yes	-	not_reached	direction_unresolved,opposed	right
+apicidin	adverse	R40	no	yes	-	not_reached	direction_unresolved,opposed	right
+fimepinostat	adverse	R40	no	yes	-	not_reached	direction_unresolved,opposed	right
+mevastatin	adverse	R34	yes	yes	-	not_reached	-	not_reached
+neostigmine	adverse	R52	no	yes	-	not_reached	-	not_reached
