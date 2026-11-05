@@ -1323,6 +1323,27 @@ class WaitPolls(unittest.TestCase):
 class RealViewports(unittest.TestCase):
     """Device-metrics emulation over the DevTools protocol (no sandbox flag): the page's own innerWidth and scrollWidth are measured at 360 and 390 px."""
 
+    def test_the_legend_sits_above_the_fold_on_a_phone_in_every_language(self):
+        # found on the served site (IT30): the check above builds Italian only; French and German were 19 px over at 360x780
+        if not rv.find_chromium():
+            self.skipTest("no Chromium binary: the legend was NOT measured")
+        for lang in ("en", "it", "fr", "es", "de"):
+            with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as td:
+                f = Path(td) / "v.html"
+                f.write_text(rv.build(DR, "shareable", lang), encoding="utf-8")
+                for w, h in ((360, 780), (390, 844)):
+                    try:
+                        c = rv.Cdp(rv.find_chromium(), td)
+                        try:
+                            c.call("Page.enable"); c.call("Emulation.setDeviceMetricsOverride", width=w, height=h, deviceScaleFactor=1, mobile=True)
+                            c.call("Page.navigate", url="file://" + str(f)); c.wait_for("!!document.querySelector('[data-cur-ready]')", 60); c.settle()
+                            b = c.evaluate("Math.round(document.querySelector('.legendrow').getBoundingClientRect().bottom+scrollY)")
+                        finally:
+                            c.close()
+                    except Exception as e:
+                        self.skipTest("viewport emulation unavailable: " + str(e)[:120])
+                    self.assertLess(b, h, f"{lang} {w}x{h}: the F/C/P legend must sit above the fold")
+
     def test_no_horizontal_overflow_at_360_and_390(self):
         if not rv.find_chromium():
             self.skipTest("no Chromium binary: viewports were NOT measured")
