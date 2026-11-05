@@ -1,0 +1,81 @@
+row_id	package	intervention	direction_on_endpoint	why_not_split
+R03	A	muscarinic agonist carbachol (reversal); muscarinic antagonist panel	favourable	combination or several compounds in one row: the result belongs to the panel
+R04	A	22 of 42 structurally diverse muscarinic antagonists	null	combination or several compounds in one row: the result belongs to the panel
+R08	A	benztropine, atropine, ipratropium, oxybutynin, trospium, tiotropium	favourable	combination or several compounds in one row: the result belongs to the panel
+R09	A	five histamine H1 receptor antagonists in the library	null	combination or several compounds in one row: the result belongs to the panel
+R10	A	most of the 1,000 bioactive library compounds	adverse	combination or several compounds in one row: the result belongs to the panel
+R14	A	clemastine; benztropine	favourable	combination or several compounds in one row: the result belongs to the panel
+R20	A	22 drugs from the NIH Clinical Collection I/II (727 drugs), including benztropine	favourable	combination or several compounds in one row: the result belongs to the panel
+R21	A	11 screen hits incl. clobetasol, miconazole, ketoconazole, clotrimazole, hydroxyzine, benztropine, haloperidol, medroxyprogesterone	context_dependent	combination or several compounds in one row: the result belongs to the panel
+R26	A	RU486 with clobetasol	favourable	combination or several compounds in one row: the result belongs to the panel
+R28	A	miconazole; clobetasol	favourable	combination or several compounds in one row: the result belongs to the panel
+R29	A	miconazole; clobetasol	null	combination or several compounds in one row: the result belongs to the panel
+R30	A	ketoconazole and azoles; CYP51 siRNA; lanosterol	favourable	combination or several compounds in one row: the result belongs to the panel
+R31	A	TASIN-1; EBP CRISPR; amorolfine (TM7SF2)	favourable	combination or several compounds in one row: the result belongs to the panel
+R32	A	benztropine; clemastine; tamoxifen; U50488	favourable	combination or several compounds in one row: the result belongs to the panel
+R33	A	muscarinic antagonists lacking EBP inhibition (panel of six; four without effect); ospemifene; three non-EBP-inhibiting EZH2 inhibitors	null	combination or several compounds in one row: the result belongs to the panel
+R34	A	statins (mevastatin listed in methods); methyl-beta-cyclodextrin; HMGCR and squalene synthase inhibition	adverse	combination or several compounds in one row: the result belongs to the panel
+R35	A	liothyronine (T3); bexarotene	favourable	combination or several compounds in one row: the result belongs to the panel
+R36	A	tamoxifen; ifenprodil	favourable	combination or several compounds in one row: the result belongs to the panel
+R37	A	miconazole; ifenprodil	favourable	combination or several compounds in one row: the result belongs to the panel
+R38	A	CW9956, CW9009, CW3388 (EBP inhibitors) and 76 analogues; other screen hits	favourable	combination or several compounds in one row: the result belongs to the panel
+R39	A	splitomicin; C646	favourable	combination or several compounds in one row: the result belongs to the panel
+R40	A	apicidin; suberohydroxamic acid; trichostatin A; CUDC-907; JQ1	adverse	combination or several compounds in one row: the result belongs to the panel
+R42	A	9-cis retinoic acid; RXR agonists HX630, PA024	favourable	combination or several compounds in one row: the result belongs to the panel
+R43	A	HX531; PA452 (RXR antagonists)	adverse	combination or several compounds in one row: the result belongs to the panel
+R44	A	9-cis retinoic acid	null	combination or several compounds in one row: the result belongs to the panel
+R45	A	9-cis retinoic acid; Rxrg knockout	context_dependent	combination or several compounds in one row: the result belongs to the panel
+R49	A	sobetirome; Sob-AM2 (CNS-selective prodrug)	favourable	combination or several compounds in one row: the result belongs to the panel
+R50	A	thyroid hormone (T3/T4), chronic	adverse	combination or several compounds in one row: the result belongs to the panel
+R51	A	sobetirome; Sob-AM2	undetermined	combination or several compounds in one row: the result belongs to the panel
+R52	A	neostigmine (cholinesterase inhibitor raising acetylcholine)	adverse	combination or several compounds in one row: the result belongs to the panel
+B03	B	pan-HDAC inhibitors valproic acid and trichostatin A (statement of prior work)	adverse	combination or several compounds in one row: the result belongs to the panel
+B10	B	HDAC3-directed inhibitors RGFP966 and apicidin	adverse	combination or several compounds in one row: the result belongs to the panel
+B15	B	Notch inhibitor LY411575 and Wnt inhibitor XAV939 added to Eed-null OPC differentiation culture	favourable	combination or several compounds in one row: the result belongs to the panel
+B20	B	GPR17 agonist MDL29,951	adverse	combination or several compounds in one row: the result belongs to the panel
+B21	B	ERK/MEK pharmacological inhibition and rapamycin, stage-resolved (authors' abstract)	adverse	combination or several compounds in one row: the result belongs to the panel
+B27	B	RXR antagonists HX531 or PA452 in OPC culture	adverse	combination or several compounds in one row: the result belongs to the panel
+B28	B	RXR agonists 9-cis-retinoic acid, HX630, PA024 in OPC culture	favourable	combination or several compounds in one row: the result belongs to the panel
+B30	B	TR-beta selective agonist GC-1	favourable	combination or several compounds in one row: the result belongs to the panel
+D01	D	valproate; diazepam; potassium bromide; stiripentol	favourable	combination or several compounds in one row: the result belongs to the panel
+D06	D	ethosuximide; flunarizine; phenytoin; carbamazepine; decimemide; tiletamine; primidone; phenacemide; vigabatrin	null	combination or several compounds in one row: the result belongs to the panel
+D07	D	tiletamine; huperzine A	null	combination or several compounds in one row: the result belongs to the panel
+D08	D	mepivacaine and other library compounds scored hyperexcitable (55 compounds)	adverse	combination or several compounds in one row: the result belongs to the panel
+D09	D	fenfluramine (and norfenfluramine in GRI19)	favourable	combination or several compounds in one row: the result belongs to the panel
+D10	D	clemizole analogues 4, 6, 20; methylergonovine; 6-APB; norfenfluramine	favourable	combination or several compounds in one row: the result belongs to the panel
+D11	D	m-chlorophenylpiperazine and CP-809,101 (5-HT2C-preferring agents)	context_dependent	combination or several compounds in one row: the result belongs to the panel
+D12	D	phenytoin; valproate; ethosuximide; levetiracetam; diazepam	null	combination or several compounds in one row: the result belongs to the panel
+D13	D	clemizole; trazodone	favourable	combination or several compounds in one row: the result belongs to the panel
+D14	D	4-phenylbutyrate and 16 other candidates (locomotion)	null	combination or several compounds in one row: the result belongs to the panel
+D15	D	clobazam (single i.p., 4 weekly repeats)	favourable	combination or several compounds in one row: the result belongs to the panel
+D16	D	clobazam plus valproate; add-on stiripentol (14-day food and pump exposure)	context_dependent	combination or several compounds in one row: the result belongs to the panel
+D17	D	cannabidiol; fenfluramine; lorcaserin; stiripentol; valproate; phenobarbital; clonazepam; lacosamide; rufinamide; topiramate; retigabine	null	combination or several compounds in one row: the result belongs to the panel
+D18	D	carbamazepine (single); lamotrigine (sub-chronic)	adverse	combination or several compounds in one row: the result belongs to the panel
+D19	D	tiagabine; levetiracetam (high dose only)	favourable	combination or several compounds in one row: the result belongs to the panel
+D20	D	OV350 (KCC2 activator), daily during p10-p21	favourable	combination or several compounds in one row: the result belongs to the panel
+D21	D	OV350 given in pups, tested in adults	context_dependent	combination or several compounds in one row: the result belongs to the panel
+D23	D	Kv7/M-current activation; persistent sodium current inhibition; M-current inhibitor	favourable	combination or several compounds in one row: the result belongs to the panel
+D24	D	NBI-921352 (Nav1.6-selective inhibitor, oral)	favourable	combination or several compounds in one row: the result belongs to the panel
+E02	E	bumetanide + phenobarbital	favourable	combination or several compounds in one row: the result belongs to the panel
+E04	E	bumetanide + phenobarbital	favourable	combination or several compounds in one row: the result belongs to the panel
+E06	E	bumetanide, phenobarbital, combination	null	combination or several compounds in one row: the result belongs to the panel
+E07	E	bumetanide add-on to phenobarbital	null	combination or several compounds in one row: the result belongs to the panel
+E08	E	bumetanide add-on to phenobarbital	adverse	combination or several compounds in one row: the result belongs to the panel
+E09	E	bumetanide add-on to phenobarbital	favourable	combination or several compounds in one row: the result belongs to the panel
+E10	E	bumetanide add-on to phenobarbital	undetermined	combination or several compounds in one row: the result belongs to the panel
+E11	E	bumetanide (clinically relevant exposure) +/- phenobarbital	null	combination or several compounds in one row: the result belongs to the panel
+E13	E	bumetanide (higher exposure) + phenobarbital	null	combination or several compounds in one row: the result belongs to the panel
+E14	E	bumepamine + phenobarbital	favourable	combination or several compounds in one row: the result belongs to the panel
+E15	E	bumepamine + phenobarbital	favourable	combination or several compounds in one row: the result belongs to the panel
+E16	E	diazepam and clonazepam	adverse	combination or several compounds in one row: the result belongs to the panel
+E18	E	phenytoin, phenobarbital, valproate	adverse	combination or several compounds in one row: the result belongs to the panel
+E20	E	NMDA receptor blockade	adverse	combination or several compounds in one row: the result belongs to the panel
+E26	E	clonazepam (low, non-sedating exposure)	favourable	combination or several compounds in one row: the result belongs to the panel
+E27	E	clonazepam (low, non-sedating exposure)	undetermined	combination or several compounds in one row: the result belongs to the panel
+E28	E	clonazepam (low versus higher exposure)	context_dependent	combination or several compounds in one row: the result belongs to the panel
+E37	E	pynegabine (HN37), Kv7 opener	favourable	combination or several compounds in one row: the result belongs to the panel
+E38	E	ethosuximide and gabapentin (chronic)	null	combination or several compounds in one row: the result belongs to the panel
+E39	E	hormonal treatment versus vigabatrin	context_dependent	combination or several compounds in one row: the result belongs to the panel
+E40	E	hormonal treatment versus vigabatrin	null	combination or several compounds in one row: the result belongs to the panel
+E41	E	hormonal treatment versus vigabatrin	context_dependent	combination or several compounds in one row: the result belongs to the panel
+E42	E	antiseizure treatment (vigabatrin in child 1)	adverse	combination or several compounds in one row: the result belongs to the panel

@@ -1,0 +1,11 @@
+# IT30: compound-level effects with their context, without an invented target
+
+Non-canonical. Not medical advice. Public edition, WWOX-DEE reference genotype class.
+
+**What this adds.** In IT29 the signed perturbation table was written by hand and the raw evidence files were not consumed by anything (compound-only rows carry free-text actions, so the target converter signs few of them). `compound_context_it30.py` reads the raw `evidence_it29_<A-E>.tsv` rows directly. A row counts only when it names ONE compound; combinations (`+`, add-on, versus), lists and classes ("five H1 antagonists") are written to `panel_rows_unattributed_it30.tsv` and never split. Per compound and theme it records which contexts gave which direction and flags a sign that flips (`sign_flips_with_context`) or a benefit that is not reproduced (`benefit_not_reproduced_or_context_dependent`). A flagged compound becomes a conditional question for the scientific queue (`conditional_questions_it30.tsv`). Nothing is attributed to a target, nothing is carried from a compound to its class.
+
+**Result on the committed evidence (174 rows, A to E).** 22 compound-theme entries from single-compound rows and 80 panel rows left unsplit; 5 conditional questions: rapamycin and vigabatrin (sign flips), benztropine, clemastine and bumetanide (benefit not reproduced or context-dependent). It works on both cases: benztropine and clemastine are the myelination case, rapamycin, vigabatrin and bumetanide the developmental-epilepsy case. Only 1 of the 22 compounds (phenobarbital, adverse in three neonatal-exposure rows) is a proposal in the stage tables (S11): the stage is built from transcript chains, the evidence from pharmacology, so the join is thin. That is a finding about the two layers, not a defect of the adapter.
+
+**Limits.** Evidence depth is the packages' own (mostly abstract or partial text). A conditional question is a question: it neither qualifies a compound nor ranks it, and the counts are not independent replications (rows of one study share an origin; `n_sources` is printed). The grouping by package letter keeps endpoints apart (discharge in larvae and adult behaviour after neonatal exposure are not pooled).
+
+Regenerate: `python3 compound_context_it30.py run --out results`. Checks: `python3 test_context_it30.py`.
