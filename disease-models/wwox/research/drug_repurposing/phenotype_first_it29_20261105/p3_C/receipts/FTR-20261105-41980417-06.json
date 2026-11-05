@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-05T07:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-05T08:10:00Z",
+ "event_id": "FTR-20261105-41980417-06",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: transfer-condition finding for IT29 P3 C | Pdk1 icKO mice exhibited severe deficits in hippocampal oligodendrocyte (OL) maturation, myelination, and excitatory synaptogenesis",
+  "verbatim_locator | proposition: transfer-condition finding for IT29 P3 C | Results > Clemastine behaviour | \"spontaneous alternation rates were significantly increased in clemastine-treated Pdk1 icKO mice compared to saline-treated mutants\"",
+  "verbatim_locator | proposition: transfer-condition finding for IT29 P3 C | Results 1 | \"Ultrastructural examination revealed normally compacted myelin sheaths without overt dysmorphic features in Pdk1 icKO mice\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_C/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "full text of the OA article via Europe PMC fullTextXML; abstract, introduction, methods summary, Results 1-4 and Fig. 4 and 6 legends read; supplementary figures not read; bytes not saved; PMC13092863",
+ "study_id": {
+  "doi": "10.1016/j.neurot.2026.e00906",
+  "pmid": "41980417"
+ },
+ "workflow": "IT29 P3-C (phenotype_first_it29_20261105), transfer-conditions search. Draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

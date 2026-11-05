@@ -195,7 +195,7 @@ Reusable guidance for any drug-repurposing package lives in these places only; r
   row that breaks it.
 - **A qualified search filters; it does not generate (IT20 P5, measured).** Compared at equal usable universe, the
   WWOX-qualified selection was a strict subset of a plain external target-list selection, and reached 3 of 23 needs (the reach of the qualified-selection path, not a count of resolved directions: of the other
-  20, 10 have an unresolved direction, 6 a restore-type vocabulary no catalogue action matches and 4 no catalogue association;
+  20, 10 have an unresolved direction, 6 abstain at three later guards (`action_not_stated`, `coupling_not_measured`, `no_coupling_row`; `consistency()` already maps `restore` to `up`, so there is no vocabulary gap: `followup_it20_20261102/`) and 4 have no catalogue association;
   the generator proposes on conditional roles and is not bounded by it): the
   binding constraint is that a lever can be qualified only on a need whose direction is resolved and whose coupling is
   stated. Before asking a package for new candidates, check how many needs can qualify one at all — a protein-level

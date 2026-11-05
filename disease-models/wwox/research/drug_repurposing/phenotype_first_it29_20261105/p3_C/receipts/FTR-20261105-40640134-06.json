@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-05T07:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "unavailable"
+ },
+ "event_at": "2026-11-05T08:10:00Z",
+ "event_id": "FTR-20261105-40640134-06",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: transfer-condition finding for IT29 P3 C | Abstract | \"OL progenitor-specific conditional NL3 knockout mice show similar deficits\"",
+  "verbatim_locator | proposition: transfer-condition finding for IT29 P3 C | Results > Clemastine rescues | \"it rescued texture discrimination ability\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_C/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "OA article via Europe PMC fullTextXML; abstract and the clemastine results section and legend read; remaining results skimmed; bytes not saved; PMC12246190",
+ "study_id": {
+  "doi": "10.1038/s41467-025-61455-0",
+  "pmid": "40640134"
+ },
+ "workflow": "IT29 P3-C (phenotype_first_it29_20261105), transfer-conditions search. Draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

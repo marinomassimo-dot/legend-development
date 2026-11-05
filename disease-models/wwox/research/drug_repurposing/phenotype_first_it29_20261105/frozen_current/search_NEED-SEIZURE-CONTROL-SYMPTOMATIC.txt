@@ -1,0 +1,32 @@
+# NEED-SEIZURE-CONTROL-SYMPTOMATIC direction=down 
+# headline links (intervention targets, not excluded): records=63 families=61; all rows listed=91; excluded (source artefact / alias risk / placeholder)=4 identity_guard_hits=0 nonhuman_chembl_set_aside=0
+ABAT	CAT:CHEMBL89598	VIGABATRIN	ChEMBL	INHIBITOR	single_protein	consistent	
+ABAT	CAT:DGIDB:0a2199127751	Cpp-115	DGIdb	UNSTATED	gene_listing	direction_unresolved	action_not_stated
+ABAT	CAT:DGIDB:0a2199127751	Cpp-115	DGIdb	inhibitor	single_protein	consistent	
+ABAT	CAT:DGIDB:15815371e6ca	Dp-Vpa	DGIdb	UNSTATED	gene_listing	direction_unresolved	action_not_stated
+ABAT	CAT:DGIDB:2bda755d6ffe	Alanine	DGIdb	UNSTATED	gene_listing	direction_unresolved	action_not_stated
+ABAT	CAT:DGIDB:34712e7d945d	Tiagabine Hydrochloride	DGIdb	UNSTATED	gene_listing	direction_unresolved	action_not_stated
+ABAT	CAT:DGIDB:34712e7d945d	Tiagabine Hydrochloride	DGIdb	UNSTATED	gene_listing	direction_unresolved	action_not_stated
+ABAT	CAT:DGIDB:358b8a817686	Vigabatrin	DGIdb	UNSTATED	gene_listing	direction_unresolved	action_not_stated
+ABAT	CAT:DGIDB:358b8a817686	Vigabatrin	DGIdb	UNSTATED	gene_listing	direction_unresolved	action_not_stated
+ABAT	CAT:DGIDB:358b8a817686	Vigabatrin	DGIdb	UNSTATED	gene_listing	direction_unresolved	action_not_stated
+ABAT	CAT:DGIDB:358b8a817686	Vigabatrin	DGIdb	inhibitor	gene_listing	direction_unresolved	republished_claim_level_not_carried
+ABAT	CAT:DGIDB:358b8a817686	Vigabatrin	DGIdb	inhibitor	single_protein	consistent	
+ABAT	CAT:DGIDB:39cf420e9741	4-Hydroxybenzaldehyde	DGIdb	UNSTATED	gene_listing	direction_unresolved	action_not_stated
+ABAT	CAT:DGIDB:3a65595da504	Pyruvic Acid	DGIdb	UNSTATED	gene_listing	direction_unresolved	action_not_stated
+ABAT	CAT:DGIDB:50d46a0f452e	4-Acryloylphenol	DGIdb	inhibitor	single_protein	consistent	
+ABAT	CAT:DGIDB:8d33802a6c2b	Valproic Acid	DGIdb	UNSTATED	gene_listing	direction_unresolved	action_not_stated
+ABAT	CAT:DGIDB:8d33802a6c2b	Valproic Acid	DGIdb	UNSTATED	gene_listing	direction_unresolved	action_not_stated
+ABAT	CAT:DGIDB:8d33802a6c2b	Valproic Acid	DGIdb	UNSTATED	gene_listing	direction_unresolved	action_not_stated
+ABAT	CAT:DGIDB:8d33802a6c2b	Valproic Acid	DGIdb	UNSTATED	gene_listing	direction_unresolved	action_not_stated
+ABAT	CAT:DGIDB:dd9b3f8eb91e	Divalproex Sodium	DGIdb	UNSTATED	gene_listing	direction_unresolved	action_not_stated
+ABAT	CAT:DGIDB:dd9b3f8eb91e	Divalproex Sodium	DGIdb	UNSTATED	gene_listing	direction_unresolved	action_not_stated
+ABAT	CAT:DGIDB:dd9b3f8eb91e	Divalproex Sodium	DGIdb	UNSTATED	gene_listing	direction_unresolved	action_not_stated
+ABAT	CAT:DGIDB:ed2bdcd97779	Pyridoxal Phosphate Anhydrous	DGIdb	UNSTATED	gene_listing	direction_unresolved	action_not_stated
+ABAT	CAT:DGIDB:eef19c54306d	Null	DGIdb	UNSTATED	gene_listing	not_evaluable	excluded_source_artefact
+ABAT	CAT:DGIDB:eef19c54306d	Null	DGIdb	UNSTATED	gene_listing	not_evaluable	excluded_source_artefact
+ABAT	CAT:DGIDB:eef19c54306d	Null	DGIdb	UNSTATED	gene_listing	not_evaluable	excluded_source_artefact
+CACNA1G	CAT:CHEMBL1059	PREGABALIN	ChEMBL	MODULATOR	protein_complex_group 3/26	direction_unresolved	action_not_stated
+CACNA1G	CAT:CHEMBL1100	PARAMETHADIONE	ChEMBL	BLOCKER	protein_family 3/3	direction_unresolved	coupling_not_measured
+CACNA1G	CAT:CHEMBL1200382	BEPRIDIL HYDROCHLORIDE	ChEMBL	BLOCKER	protein_complex_group 3/26	direction_unresolved	coupling_not_measured
+CACNA1G	CAT:CHEMBL1534525	MIBEFRADIL DIHYDROCHLORIDE	ChEMBL	BLOCKER	protein_family 3/3	direction_unresolved	coupling_not_measured

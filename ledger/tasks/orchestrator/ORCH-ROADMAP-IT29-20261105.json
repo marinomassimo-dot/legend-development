@@ -1,0 +1,191 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT29-20261105",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Iteration 29: phenotype-first generation: functional endpoint to the perturbations that modify it, to actions and compounds, to transfer conditions to WWOX; compared with the current need/gene/target path and with a simple search on the same material, on one principal and one contrasting case; autonomous-cycle proof with a fresh Orchestrator context.",
+ "START_UTC": "2026-11-05T09:00:00Z",
+ "BASELINE": "development/main = local main = 8c7c46cf (IT28 closed, CI green, battery PASS WITH SKIPS on ce6c5eed); clean tree; no active worktree",
+ "DECISIONS_TAKEN": [
+  "Stage consumed by the current method: IT28 P6 results_s9 (Standing method pointer, file digests frozen in phenotype_first_it29_20261105/frozen_current).",
+  "Cases chosen before any compound was looked for: principal = oligodendrocyte-lineage maturation/myelination; contrasting = network hyperexcitability (SELECTION.md).",
+  "Zero spend, no e-mail or contact, no operator e-mail to any service."
+ ],
+ "STOP_LOG": [],
+ "AUTHORISED_QUEUE_20261105B": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P0 baseline, reconciliation, frozen current-method output",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "main=8c7c46cf, clean, no worktree; frozen_current digests"
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "P1 IT28 residues: IT20 diagnosis correction in current explanations, scope of conclusions, pilot meaning",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "P2 two cases chosen before compounds (SELECTION.md)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "phenotype_first_it29_20261105/SELECTION.md"
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "P3 functional search beyond the WWOX keyword, both cases",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "P4 minimal computable input (signed perturbation table)",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "P5 execute the generative path through the existing search layer",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "P6 comparison: current path v simple search v contextualised path",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P8": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "P7 second case: what generalises, remove shortcuts",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P9": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "P8 comparisons of the most informative hypotheses",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P10": {
+   "order": 10,
+   "steps": [
+    {
+     "step": "P9 challenge return proof on real cases",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P11": {
+   "order": 11,
+   "steps": [
+    {
+     "step": "P10 fresh Orchestrator context resumes a repurposing question",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P12": {
+   "order": 12,
+   "steps": [
+    {
+     "step": "P11 pharmacological residues: pracinostat assay descriptions, TMP269 identity, lawful full texts",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P13": {
+   "order": 13,
+   "steps": [
+    {
+     "step": "P12 targeted scouting",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P14": {
+   "order": 14,
+   "steps": [
+    {
+     "step": "P13 ranking and dashboard, including functional check in five languages",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P15": {
+   "order": 15,
+   "steps": [
+    {
+     "step": "P14 independent verification",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P16": {
+   "order": 16,
+   "steps": [
+    {
+     "step": "P15 make durable what worked",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P17": {
+   "order": 17,
+   "steps": [
+    {
+     "step": "P16 tests, battery, integration, push, CI, cleanup",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}

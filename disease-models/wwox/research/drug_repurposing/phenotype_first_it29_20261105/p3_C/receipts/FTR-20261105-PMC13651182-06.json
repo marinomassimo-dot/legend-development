@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-05T07:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "unavailable"
+ },
+ "event_at": "2026-11-05T08:10:00Z",
+ "event_id": "FTR-20261105-PMC13651182-06",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: transfer-condition finding for IT29 P3 C | Abstract | \"gray matter myelination was increased without changes in oligodendrocyte numbers or myelin structure\"",
+  "verbatim_locator | proposition: transfer-condition finding for IT29 P3 C | Abstract | \"the enhanced myelination likely reflects an activity-dependent adaptation to altered neuronal network activity rather than a primary myelinopathy\"",
+  "verbatim_locator | proposition: transfer-condition finding for IT29 P3 C | Results > Fig. 1 | \"conduction velocity was slightly faster in Scn2a p.A263V/ + mice compared with controls\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/phenotype_first_it29_20261105/p3_C/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "OA article via Europe PMC fullTextXML; abstract, Results on conduction velocity and Discussion passages read; methods skimmed; bytes not saved; PMC13651182",
+ "study_id": {
+  "doi": "10.1186/s40478-026-02437-1"
+ },
+ "workflow": "IT29 P3-C (phenotype_first_it29_20261105), transfer-conditions search. Draft JSON for the integrator; the ledger was not written by the preparing actor."
+}
