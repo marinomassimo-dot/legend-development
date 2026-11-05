@@ -1,0 +1,8 @@
+question	seed_gene	seed_direction	log2FC_PFC	log2FC_CTX	log2FC_HPC	concordant
+Q2	BNIP3	up	-0.22	+0.08	+0.00	False
+Q2	HK2	up	+0.66	+0.48	+0.91	True
+Q2	LDHA	up	+0.42	+0.75	+0.58	True
+Q2	LDHB	up	-0.24	-0.17	-0.13	False
+Q2	SLC2A1	up	+0.27	+0.21	+0.18	True
+Q3	PSAT1	up	-0.05	-0.09	-0.03	False
+Q8	NFE2L2	down	+0.01	-0.04	+0.44	False

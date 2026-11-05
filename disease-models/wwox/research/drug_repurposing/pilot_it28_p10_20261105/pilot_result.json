@@ -1,0 +1,8 @@
+{
+ "n_seed_genes": 7,
+ "observed_concordant": 3,
+ "null_mean": 0.59548,
+ "null_p_ge_observed": 0.01595,
+ "draws": 100000,
+ "decoy_pool_genes": 17165
+}
