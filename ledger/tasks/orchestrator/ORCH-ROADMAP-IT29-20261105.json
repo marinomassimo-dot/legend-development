@@ -31,8 +31,9 @@
    "steps": [
     {
      "step": "P1 IT28 residues: IT20 diagnosis correction in current explanations, scope of conclusions, pilot meaning",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "IT20 explanation corrected in roadmap and IT28 diagnosis (history kept); scope of IT28 conclusions and the pilot meaning stated; no test added for a documentation sentence"
     }
    ]
   },
@@ -52,8 +53,9 @@
    "steps": [
     {
      "step": "P3 functional search beyond the WWOX keyword, both cases",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "P3: 5 readers A-E, 160 evidence rows, 57 receipts recorded (phenotype_first_it29_20261105/p3_*)"
     }
    ]
   },
@@ -62,8 +64,9 @@
    "steps": [
     {
      "step": "P4 minimal computable input (signed perturbation table)",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "P4: signed_rows_case1_it29.tsv (33 hand-curated rows) + phenotype_roles_it29.py with 10 regressions; case 2 lesion-conditional table"
     }
    ]
   },
@@ -72,8 +75,9 @@
    "steps": [
     {
      "step": "P5 execute the generative path through the existing search layer",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "P5: search layer run with signed roles and extended targets (97 signed rows, 80 families); stage S10 (30 proposals carry the oligodendrocyte HDAC limit)"
     }
    ]
   },
@@ -82,8 +86,9 @@
    "steps": [
     {
      "step": "P6 comparison: current path v simple search v contextualised path",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "P6: comparison_case1_it29.tsv (arms A/B/C), README answer-first, new data v method separated, retrospective declared"
     }
    ]
   },
@@ -92,8 +97,9 @@
    "steps": [
     {
      "step": "P7 second case: what generalises, remove shortcuts",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "P7: case 2 lesion-conditional table; no compound-name rule in the converter; generalisation limits stated"
     }
    ]
   },
@@ -102,8 +108,9 @@
    "steps": [
     {
      "step": "P8 comparisons of the most informative hypotheses",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "P8: discriminating perturbations stated in README (sodium-channel challenge, OPC arm with neuronal-activity crossing)"
     }
    ]
   },
@@ -112,8 +119,9 @@
    "steps": [
     {
      "step": "P9 challenge return proof on real cases",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "P9: consumption_it29_p9_20261105 (50 proposals change in carried_limits only, regenerates cell for cell); challenge_batch wording"
     }
    ]
   },
@@ -122,8 +130,9 @@
    "steps": [
     {
      "step": "P10 fresh Orchestrator context resumes a repurposing question",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "P10: separate context (a596f7fd) chose CH-IT29-CLASSIIA-CNS-MYELIN, routed three readers, closed steps 5-6; 21 gaps in cycle_it29_p10_20261105/LOG.md; limit: same repository and model"
     }
    ]
   },
@@ -132,8 +141,9 @@
    "steps": [
     {
      "step": "P11 pharmacological residues: pracinostat assay descriptions, TMP269 identity, lawful full texts",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "P11: p11_residues_README.md (pracinostat not resolved; TMP269 full-key identity with partial independence, not applied; no lawful open full text)"
     }
    ]
   },
@@ -142,8 +152,9 @@
    "steps": [
     {
      "step": "P12 targeted scouting",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "P12: p12_scout (NCC acute precursor screen used as independent partial test; derived rows only, no new component)"
     }
    ]
   },
@@ -152,8 +163,9 @@
    "steps": [
     {
      "step": "P13 ranking and dashboard, including functional check in five languages",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "P13: INV-06/04/03 and unit notes, ranking digest unchanged, views and package in five languages, view_functional_it29.py 60 of 60"
     }
    ]
   },
@@ -162,8 +174,9 @@
    "steps": [
     {
      "step": "P14 independent verification",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "P14: p14_verify (3 errors, 7 uncertainties, corrected); second verification of the corrections not needed (numbers re-derived by the same scripts)"
     }
    ]
   },
@@ -172,8 +185,9 @@
    "steps": [
     {
      "step": "P15 make durable what worked",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "P15: six Standing-method bullets, current-stage pointer fixed, challenge_batch wording; no new framework"
     }
    ]
   },
