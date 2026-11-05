@@ -12,9 +12,11 @@
   "Write scope: cycle_it29_p10_20261105/ and this record only; ORCH-ROADMAP-IT29-20261105.json, the four scientific current files and the receipt ledger are not touched; no commit, no push.",
   "Zero spend, no e-mail or contact, no operator e-mail to any service."
  ],
- "STOP_LOG": [],
+ "STOP_LOG": [
+  "2026-11-05 P10 complete: Q1-Q6 DONE; return recorded in cycle_it29_p10_20261105/RETURN.md"
+ ],
  "AUTHORISED_QUEUE_20261105C": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_Q1": {
    "order": 1,
    "steps": [
@@ -89,8 +91,9 @@
    "steps": [
     {
      "step": "Q5 report the returned outcome to the consumers (receipts dry-run, challenge check, row recomputation)",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "RETURN.md: 42 rows (9/22/11) and 18 receipts recomputed from TSVs, match READMEs; challenge_batch check OK on 3 consumers; pre-registered 'nothing found' met, narrower PNS wording added; S10 not yet regenerated (old wording 20+1 hits)"
     }
    ]
   },
@@ -99,8 +102,9 @@
    "steps": [
     {
      "step": "Q6 choose the next useful step",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "RETURN.md step 6: verify S10 regeneration changes only carried_limits (eligible 220, hand-overs 15); no second reading wave; OPC-readout arm as operator-decided measurement attached to CH-IT28-HDAC5-LEVER"
     }
    ]
   }

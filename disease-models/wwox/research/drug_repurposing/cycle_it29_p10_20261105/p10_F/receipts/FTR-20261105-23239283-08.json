@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-05T09:57:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T09:59:00Z",
+ "event_id": "FTR-20261105-23239283-09",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: Nes-Cre Hdac4 deletion shows no gross cytoarchitecture change; myelin not examined | Results | \"Histological analysis of the brains of Nes-Cre/HDAC4−/− mice revealed no obvious abnormalities in cytoarchitecture.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/cycle_it29_p10_20261105/p10_F/README.md"
+ ],
+ "prior_receipt": "FTR-20261105-23239283-08",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "fetched 2026-11-05 through Europe PMC REST fullTextXML (or NCBI E-utilities efetch db=pmc); bytes not saved in the repository; PMC3752780 via NCBI efetch; read as summary paragraphs (no myelin, oligodendrocyte or white-matter term occurs in the text); individual figure sections not read in detail; supplement unavailable",
+ "study_id": {
+  "doi": "10.1002/jnr.23170",
+  "pmid": "23239283"
+ },
+ "workflow": "IT29 P10-F (class IIa HDACs in central oligodendrocyte lineage). Question-driven reading; prepared as a draft JSON for the integrator, the ledger was not written by the preparing actor."
+}

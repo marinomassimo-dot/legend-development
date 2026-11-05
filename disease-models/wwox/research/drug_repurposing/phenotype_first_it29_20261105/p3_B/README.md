@@ -118,3 +118,5 @@ Activation of cortical axons with DREADD raises OPC proliferation and differenti
 - A knockout is not an inhibitor: B02, B11, B13/B14, B23 are the places where this matters most.
 - "Favourable" follows the task definition (more differentiation or myelination); B37 shows that this is not a statement of net benefit.
 - Nothing here gives dose, schedule, route or preparation; no individual-level record is involved.
+
+> **Note, IT29 P10 (CH-IT29-CLASSIIA-CNS-MYELIN, 2026-11-05).** The row 'HDAC4 / HDAC5 in CNS oligodendroglia' stays empty after bounded searches by three further readers (`cycle_it29_p10_20261105/p10_F`, `p10_G`, `p10_H`). The Schwann-cell source (PMID 29472387) shows a transient delay in a double mutant, recovered by P8, with a scaffold mechanism; it is not evidence that class IIa HDACs are required for myelination.

@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-05T09:51:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T09:57:00Z",
+ "event_id": "FTR-20261105-35076395-09",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: Only the Hdac4 conditional single mutant shows a subtle developmental delay; Hdac5 and Hdac7 singles do not | Results > Upregulation of Hdac7 permits developmental myelination | \"only cKO4 showed a subtle, but consistent, delay in myelin development\"",
+  "verbatim_locator | proposition: Triple class IIa deletion delays myelination strongly but adult myelin is normal | Results/Figure 1 | \"The percentage of myelinated axons is decreased at P2 (18.5 ± 3.7% in the tKO versus 54.6 ± 1.1% in controls\"",
+  "verbatim_locator | proposition: Remyelination delay has a functional consequence on conduction | Results > Figure 6 text | \"whereas six of nine sciatic nerves of control mice showed a response when electrically stimulated at 8 V, only one of eight tKO responded\"",
+  "verbatim_locator | proposition: Hdac5-null-containing genotypes conduct more slowly than wild type, a possible neuronal effect that the authors guess | Results > nerve impulse conduction | \"we observed a smaller amplitude and slower NCV for all genotypes when compared with wild-type nerves\"",
+  "Methods not read except the electrophysiology paragraph skimmed; figure images and RNA-seq and ChIP-seq source data not inspected; Hdac9/Mef2d and Jun-dependence sections read only at abstract and Discussion level"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/cycle_it29_p10_20261105/p10_G/README.md",
+  "disease-models/wwox/research/drug_repurposing/cycle_it29_p10_20261105/p10_G/evidence_it29_G.tsv"
+ ],
+ "prior_receipt": "FTR-20261105-35076395-08",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC8853665 (Europe PMC fullTextXML, fetched 2026-11-05; text only, bytes not saved); Methods, figure images and source data not read",
+ "study_id": {
+  "doi": "10.7554/eLife.72917",
+  "pmid": "35076395"
+ },
+ "workflow": "IT29 P10-G (cycle_it29_p10_20261105, challenge CH-IT29-CLASSIIA-CNS-MYELIN). Question-driven reading of class IIa HDACs in myelinating glia. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-05T09:51:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T09:57:00Z",
+ "event_id": "FTR-20261105-29472387-08",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: Hdac5 null alone has no myelination phenotype and the double was analysed against Hdac4flx/flx;Hdac5-/- controls | Results > HDAC4 and HDAC5 contribute to Schwann cell differentiation | \"HDAC5(−/−) is viable and has no obvious myelination phenotype\"",
+  "verbatim_locator | proposition: The double-mutant myelin deficit is a developmental delay that is compensated by P8 | Results > HDAC4 and HDAC5 contribute | \"morphological parameters of myelin maturation were similar\"",
+  "verbatim_locator | proposition: The c-Jun repression by HDAC4 runs through NCoR1/HDAC3 and not through Mef2 | Results > HDAC4 recruits the deacetylase activity of other HDACs | \"the efficiency of the construct HDAC4 3SA D934N GFP to block c-Jun expression was notably (but not totally) hampered\"",
+  "verbatim_locator | proposition: Mef2 binding is dispensable for c-Jun repression in Schwann cells | Results > HDAC4 binds to the c-Jun promoter by a Mef2-independent mechanism | \"suggesting that the binding of HDAC4 to Mef2 in the promoter is not needed to block c-Jun expression in Schwann cells\"",
+  "Methods read (mouse lines, EM, qPCR); Cre onset age not stated in the text; figure legends read, figure images not inspected; supplementary Fig. S5 to S8 unavailable (genotype panels S5, S6, S7 not seen)"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/cycle_it29_p10_20261105/p10_G/README.md",
+  "disease-models/wwox/research/drug_repurposing/cycle_it29_p10_20261105/p10_G/evidence_it29_G.tsv"
+ ],
+ "prior_receipt": "FTR-20261105-29472387-06",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC5881490 (Europe PMC fullTextXML, fetched 2026-11-05; text only, bytes not saved); supplementary PDF not retrieved; re-read after FTR-20261105-29472387-06 left Methods, Discussion, figures and tables unread",
+ "study_id": {
+  "doi": "10.1083/jcb.201611150",
+  "pmid": "29472387"
+ },
+ "workflow": "IT29 P10-G (cycle_it29_p10_20261105, challenge CH-IT29-CLASSIIA-CNS-MYELIN). Question-driven reading of class IIa HDACs in myelinating glia. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

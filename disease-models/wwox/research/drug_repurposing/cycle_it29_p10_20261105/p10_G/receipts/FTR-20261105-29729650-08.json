@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-05T09:51:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T09:57:00Z",
+ "event_id": "FTR-20261105-29729650-09",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: The commentary restates the authors' mechanism: Mef2-binding mutants still repress c-Jun and NCoR1/HDAC3-binding mutants do not | Commentary body | \"mutations that block the interaction of HDAC4 with this complex impair its ability to downregulate c-Jun\"",
+  "secondary commentary on PMID 29472387 by the same group; adds no new data; read in full (one page)"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/cycle_it29_p10_20261105/p10_G/README.md",
+  "disease-models/wwox/research/drug_repurposing/cycle_it29_p10_20261105/p10_G/evidence_it29_G.tsv"
+ ],
+ "prior_receipt": "FTR-20261105-29729650-08",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC5990392 (Europe PMC fullTextXML, fetched 2026-11-05; text only, bytes not saved)",
+ "study_id": {
+  "doi": "10.18632/aging.101443",
+  "pmid": "29729650"
+ },
+ "workflow": "IT29 P10-G (cycle_it29_p10_20261105, challenge CH-IT29-CLASSIIA-CNS-MYELIN). Question-driven reading of class IIa HDACs in myelinating glia. Prepared as a draft JSON for the integrator; the ledger was not written by the preparing actor."
+}

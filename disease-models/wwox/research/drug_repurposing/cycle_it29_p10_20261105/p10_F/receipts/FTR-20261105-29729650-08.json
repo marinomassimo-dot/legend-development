@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-05T09:57:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T09:59:00Z",
+ "event_id": "FTR-20261105-29729650-10",
+ "evidence_basis": [
+  "abstract analysed (none, commentary)",
+  "verbatim_locator | proposition: class IIa HDACs have little intrinsic deacetylase activity and work as co-repressors | Commentary body | \"class IIa HDACs (4,5,7 and 9) have no prominent deacetylase activity\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/cycle_it29_p10_20261105/p10_F/README.md"
+ ],
+ "prior_receipt": "FTR-20261105-29729650-09",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC full text of a short commentary (about 2 pages, no new data); read in full; bytes not saved",
+ "study_id": {
+  "doi": "10.18632/aging.101443",
+  "pmid": "29729650"
+ },
+ "workflow": "IT29 P10-F (class IIa HDACs in central oligodendrocyte lineage). Question-driven reading; prepared as a draft JSON for the integrator, the ledger was not written by the preparing actor."
+}

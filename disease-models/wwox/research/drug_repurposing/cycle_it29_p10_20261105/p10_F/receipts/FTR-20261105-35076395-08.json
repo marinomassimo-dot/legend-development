@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-05T09:57:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T09:59:00Z",
+ "event_id": "FTR-20261105-35076395-10",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: Hdac4/5/7 triple loss myelinates in the adult | Results first section | \"myelin is finally formed and adult tKO nerves show almost normal myelination parameters (Figure 2A–D).\"",
+  "verbatim_locator | proposition: Hdac9 is induced in the triple mutant | Results | \"Hdac9 among the most robustly upregulated genes by the tKO nerves in the RNA-seq analysis\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/cycle_it29_p10_20261105/p10_F/README.md"
+ ],
+ "prior_receipt": "FTR-20261105-35076395-09",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "fetched 2026-11-05 through Europe PMC REST fullTextXML (or NCBI E-utilities efetch db=pmc); bytes not saved in the repository; Europe PMC full text incl. review and response; read: abstract, Results first section, Hdac9 passages, Discussion lines and reviewer exchange; remaining Results, Methods, figures and tables not read; supplement unavailable",
+ "study_id": {
+  "doi": "10.7554/eLife.72917",
+  "pmid": "35076395"
+ },
+ "workflow": "IT29 P10-F (class IIa HDACs in central oligodendrocyte lineage). Question-driven reading; prepared as a draft JSON for the integrator, the ledger was not written by the preparing actor."
+}
