@@ -19,4 +19,4 @@ About 6 minutes, 4 GB cap. Two shortcuts do **not** reproduce S10 and must not b
 
 **What differs from S10 (`test_stage_it30.py`).** Same 994 proposal ids, same 220 eligible, same 15 hand-overs. `carried_limits` changes in the 33 rows that were at the cut, and `target_named_in_legend_material` goes no to yes in 10 rows: that flag is corpus-dependent (it reads the cards and rankings present in the checkout) and the checkout now holds the IT29 material. Neither moves selection.
 
-**Local-only artefact.** The catalogue cache (`LEGEND_CATALOG_CACHE`) is not distributed; without it the engine step cannot run. What stays checkable in the public checkout: `join_limits` and the committed S11 tables (`test_stage_it30.py`).
+**Local-only artefact.** The catalogue cache (`LEGEND_CATALOG_CACHE`) is not distributed; without it the engine step cannot run. The public checkout therefore allows partial checks only (`join_limits` and the committed S11 tables, `test_stage_it30.py`), not yet the full regeneration.

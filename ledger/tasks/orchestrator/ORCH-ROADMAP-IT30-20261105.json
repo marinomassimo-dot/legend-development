@@ -13,97 +13,159 @@
   "next_action": "read the IT29 battery verdict; if PASS, closure-only commit on task/it29 (P16 and dashboard DONE), ff-merge, safe_push, CI by curl, check served site; then merge task/it29 into task/it30 and continue S1",
   "not_to_redo": "engine-dir recipe is in generation_it30_p5_20261105/README.md; carried_limits fix is committed (fa5eb2d2)"
  },
- "STEPS": [
-  {
-   "id": "S0",
-   "step": "Close IT29: battery on d099a5be, closure record, ff-merge, safe_push, CI, served-site check, cleanup",
-   "status": "IN_PROGRESS",
-   "owner": "orchestrator"
+ "AUTHORISED_QUEUE_20261105C": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_S0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "S0 Close IT29: battery on d099a5be, closure record, ff-merge, safe_push, CI, served-site check, cleanup",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator"
+    }
+   ]
   },
-  {
-   "id": "S1",
-   "step": "Baseline map: capability -> executed where -> result -> consumer; diagnosis class per bottleneck",
-   "status": "TODO",
-   "owner": "orchestrator"
+  "OBJ_S1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "S1 Baseline map: capability -> executed where -> result -> consumer; diagnosis class per bottleneck",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
   },
-  {
-   "id": "S2",
-   "step": "IT29 residues re-checked: manual table v raw converter; hyperexcitability case not consumable; 1,600 cap (DONE fa5eb2d2); stage reproducibility (DONE, recipe in generation_it30_p5); independence by experimental origin",
-   "status": "IN_PROGRESS",
-   "owner": "orchestrator"
+  "OBJ_S2": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "S2 IT29 residues re-checked: manual table v raw converter; hyperexcitability case not consumable; 1,600 cap (DONE fa5eb2d2); stage reproducibility (DONE, recipe in generation_it30_p5); independence by experimental origin",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator"
+    }
+   ]
   },
-  {
-   "id": "S3",
-   "step": "Executable functional knowledge: four contrasting cases to module output; compound-only effects without invented target",
-   "status": "TODO",
-   "owner": "orchestrator"
+  "OBJ_S3": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "S3 Executable functional knowledge: four contrasting cases to module output; compound-only effects without invented target",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
   },
-  {
-   "id": "S4",
-   "step": "Measure gain: frozen inputs, current v simple v contextualised v added-data-only; retrospective only",
-   "status": "TODO",
-   "owner": "orchestrator"
+  "OBJ_S4": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "S4 Measure gain: frozen inputs, current v simple v contextualised v added-data-only; retrospective only",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
   },
-  {
-   "id": "S5",
-   "step": "Carried limits whole: join_limits + test_stage_it30 + S11 rebuilt from committed inputs",
-   "status": "DONE",
-   "owner": "orchestrator"
+  "OBJ_S5": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "S5 Carried limits whole: join_limits + test_stage_it30 + S11 rebuilt from committed inputs -- full rebuild needs the local catalogue cache (LEGEND_CATALOG_CACHE, not distributed); the public checkout allows partial checks (join_limits, committed S11 tables), not yet the full regeneration",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "fa5eb2d2: join_limits in run_generation_it21.py; generation_it30_p5_20261105/results_s11 (994 proposals, 220 eligible, 15 hand-overs unchanged); test_stage_it30.py 4 tests OK, confirmed by an external run"
+    }
+   ]
   },
-  {
-   "id": "S6",
-   "step": "CLM pattern: state -> compare alternatives -> choose next work; 20-30 real cases; verdict ADOPT/TRIAL/WATCH/DISCARD; checkpoint only if free and reasonable",
-   "status": "TODO",
-   "owner": "orchestrator"
+  "OBJ_S6": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "S6 CLM pattern: state -> compare alternatives -> choose next work; 20-30 real cases; verdict ADOPT/TRIAL/WATCH/DISCARD; checkpoint only if free and reasonable",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
   },
-  {
-   "id": "S7",
-   "step": "Continuity after compaction: strengthen existing resume point; separate-context resume trial",
-   "status": "TODO",
-   "owner": "orchestrator"
+  "OBJ_S7": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "S7 Continuity after compaction: strengthen existing resume point; separate-context resume trial",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "note": "2026-11-05 check: the first form of this record (root STEPS/MANDATE_STATE) gave NO_QUEUE; in the supported AUTHORISED_QUEUE form `mandate_continuity.py status` reports CONTINUE, 15 steps, TODO 12, IN_PROGRESS 2, DONE 1, next OBJ_S0[0]"
+    }
+   ]
   },
-  {
-   "id": "S8",
-   "step": "One real repurposing cycle from a queue question (not class IIa myelin)",
-   "status": "TODO",
-   "owner": "orchestrator"
+  "OBJ_S8": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "S8 One real repurposing cycle from a queue question (not class IIa myelin)",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
   },
-  {
-   "id": "S9",
-   "step": "Emerging hypotheses visible with chain, comparators, priority v strength; check penalty for added pharmacology",
-   "status": "TODO",
-   "owner": "orchestrator"
+  "OBJ_S9": {
+   "order": 10,
+   "steps": [
+    {
+     "step": "S9 Emerging hypotheses visible with chain, comparators, priority v strength; check penalty for added pharmacology",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
   },
-  {
-   "id": "S10",
-   "step": "Radar tied to named gaps (GitHub, HF, Nature); one extra resource at most",
-   "status": "TODO",
-   "owner": "orchestrator"
+  "OBJ_S10": {
+   "order": 11,
+   "steps": [
+    {
+     "step": "S10 Radar tied to named gaps (GitHub, HF, Nature); one extra resource at most",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
   },
-  {
-   "id": "S11",
-   "step": "Dashboard: priority, chains, counter-evidence; five languages; phone and keyboard; served site",
-   "status": "TODO",
-   "owner": "orchestrator"
+  "OBJ_S11": {
+   "order": 12,
+   "steps": [
+    {
+     "step": "S11 Dashboard: priority, chains, counter-evidence; five languages; phone and keyboard; served site",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
   },
-  {
-   "id": "S12",
-   "step": "Independent verification by a different actor",
-   "status": "TODO",
-   "owner": "orchestrator"
+  "OBJ_S12": {
+   "order": 13,
+   "steps": [
+    {
+     "step": "S12 Independent verification by a different actor",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
   },
-  {
-   "id": "S13",
-   "step": "Tests, battery on exact SHA, integration, push, CI, cleanup",
-   "status": "TODO",
-   "owner": "orchestrator"
+  "OBJ_S13": {
+   "order": 14,
+   "steps": [
+    {
+     "step": "S13 Tests, battery on exact SHA, integration, push, CI, cleanup",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
   },
-  {
-   "id": "S14",
-   "step": "Final report A-K",
-   "status": "TODO",
-   "owner": "orchestrator"
+  "OBJ_S14": {
+   "order": 15,
+   "steps": [
+    {
+     "step": "S14 Final report A-K",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
   }
- ],
- "MANDATE_STATE": "OPEN"
+ }
 }
