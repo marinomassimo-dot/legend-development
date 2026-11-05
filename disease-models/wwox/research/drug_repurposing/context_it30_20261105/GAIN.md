@@ -8,7 +8,7 @@ Non-canonical. Not medical advice. Retrospective on inputs frozen at IT29 (the 1
 | Target-to-need coupling from signed perturbations | `phenotype_roles_it29.py` then `repurposing_search.py --roles` | 97 signed rows over 80 families (case 1) | comparison, stage tables | executed and consumed; its input was a hand-curated table (knowledge present, converter signs few raw rows because actions are free text) |
 | Counter-premise on HDAC class | generator `carried_limits` | carried on 30 proposals | stage S10 | executed; the text was cut at 1,600 characters (fixed, S11) |
 | Compound-level effect with context | none before IT30 | none | none | **representation present (raw rows), never executed, so never consumed** |
-| Lesion-class sign flips (case 2) | descriptive table | none | none | representation present, not executable (agent classes, not compounds) |
+| Lesion-class sign flips (case 2) | descriptive table | none | none | representation present, not executable (agent classes, not compounds); now three class-level questions (IT30) |
 | Neonatal acquired-seizure record on bumetanide | read in IT29 package E | none | card F03 carried none of it | **executed but not consumed** (fixed: packet, card, view) |
 
 ## What the adapter changes (`compound_context_it30.py`)
@@ -16,7 +16,7 @@ Non-canonical. Not medical advice. Retrospective on inputs frozen at IT29 (the 1
 |---|---|---|
 | Compound-only rows the target converter can use | 0 of 100 (it signs a target only when target-controlled or genetic: 54 rows) | not applicable: it does not sign targets |
 | Compound rows read with their context | 0 | 39 of 119 (22 compound-theme entries, 54 distinct sources over all compound rows); 80 rows are panels or classes and stay unattributed |
-| Conditional questions for the queue | 0 | 5 (2 sign flips: rapamycin, vigabatrin; 3 not reproduced or context-dependent: benztropine, clemastine, bumetanide) |
+| Conditional questions for the queue | 0 | 8: 5 compound-level (2 sign flips: rapamycin, vigabatrin; 3 not reproduced or context-dependent: benztropine, clemastine, bumetanide) and 3 class-level from the case-2 lesion table (sodium-channel blockers, GABA-transaminase inhibitors, Kv7 openers) |
 | Class transfers made | 0 | 0 (by rule and by test) |
 | Compounds that were already stage proposals | - | 1 of 22 (phenobarbital): the stage is built from transcript chains, the evidence from pharmacology |
 

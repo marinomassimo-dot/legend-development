@@ -54,9 +54,10 @@
    "steps": [
     {
      "step": "S3 Executable functional knowledge: four contrasting cases to module output; compound-only effects without invented target",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "note": "context_it30_20261105: compound-level adapter over the raw evidence rows, 22 compound-theme entries, 80 panel rows unsplit, 5 conditional questions, 5 tests OK. Not yet done: the hyperexcitability lesion-class table is still descriptive (agent classes, not compounds); the target-controlled and null/toxicity-confounded contrast examples are not yet run through the module"
+     "note": "context_it30_20261105: compound-level adapter over the raw rows (22 entries, 80 panel rows unsplit) and the case-2 lesion-class table as class-level questions; 8 conditional questions in the queue file; 5 tests OK. Contrast examples run through the module: control-target (benztropine/clemastine, case 1), compound without target attribution (rapamycin, vigabatrin), context-changing (bumetanide, case 2 classes), null/confounded (bumetanide trials, hearing signal with aminoglycoside confounding). Still open: independent verification (S12); the target-controlled arm is the existing IT29 signed path",
+     "evidence": "context_it30_20261105/results/conditional_questions_it30.tsv (8 rows), test_context_it30.py 5 tests OK, GAIN.md"
     }
    ]
   },

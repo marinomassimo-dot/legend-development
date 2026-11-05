@@ -58,6 +58,10 @@ class T(unittest.TestCase):
         self.assertTrue(any("epilepsy" in q["theme"] for q in qs))
         for q in qs:
             self.assertTrue(q["evidence_rows"])
+        cls = [q for q in qs if q["conflict"] == "sign_flips_with_lesion_class"]
+        self.assertEqual({q["compound"] for q in cls}, {"sodium_channel_blocker (class level)", "gaba_transaminase_inhibitor (class level)", "kv7_opener (class level)"})
+        for q in cls:
+            self.assertIn("no transfer to a named compound", q["question"])
 
 
 if __name__ == "__main__":

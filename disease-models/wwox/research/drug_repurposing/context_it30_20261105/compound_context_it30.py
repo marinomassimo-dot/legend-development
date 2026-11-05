@@ -90,6 +90,20 @@ def stage_join(summary, stage_path):
     return summary
 
 
+def class_questions(path):
+    """The lesion-class table of case 2 (agent classes, not compounds) becomes class-level conditional questions: only the classes whose sign
+    differs between the two lesion types are asked. Nothing is carried to a member compound."""
+    out = []
+    for r in rd(path):
+        if not r["separates_A_from_B"].lower().startswith("yes"):
+            continue
+        out.append(dict(compound=r["agent_class"] + " (class level)", theme=THEME["D"], conflict="sign_flips_with_lesion_class", in_stage="", stage_handoff_eligible="",
+                        question=(f"The sign of the class {r['agent_class']} differs with the lesion: {r['predicted_sign_if_WWOX_is_A_like']} if the lesion is inhibition-loss-like, "
+                                  f"{r['predicted_sign_if_WWOX_is_B_like']} if excitatory-gain-like. Which lesion class is the reference genotype's? A measurement that separates the two comes before any member of the class is read as a lever; "
+                                  f"no transfer to a named compound."), evidence_rows=r["evidence_rows"]))
+    return out
+
+
 def question(s):
     c = s["compound"]
     if s["conflict"] == "sign_flips_with_context":
@@ -113,6 +127,10 @@ def main():
     qs = [dict(question_id=f"CQ-IT30-{i:02d}", compound=s["compound"], theme=s["theme"], conflict=s["conflict"], in_stage=s["in_stage"],
                stage_handoff_eligible=s["stage_handoff_eligible"], question=question(s), evidence_rows=s["rows"])
           for i, s in enumerate([s for s in summary if s["conflict"] in ("sign_flips_with_context", "benefit_not_reproduced_or_context_dependent")], 1)]
+    qs += class_questions(DR / "phenotype_first_it29_20261105/case2_lesion_conditional_it29.tsv")
+    for i, q in enumerate(qs, 1):
+        q["question_id"] = f"CQ-IT30-{i:02d}"
+    qs = [{**{"question_id": q["question_id"]}, **{k: v for k, v in q.items() if k != "question_id"}} for q in qs]
     with open(out / "conditional_questions_it30.tsv", "w", encoding="utf-8", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=list(qs[0]), delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(qs)
     with open(out / "panel_rows_unattributed_it30.tsv", "w", encoding="utf-8", newline="") as fh:
