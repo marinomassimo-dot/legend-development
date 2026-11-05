@@ -10,9 +10,11 @@
  "DECISIONS_TAKEN": [
   "Authorised by the operator's IT27 mandate message; zero spend, no external contact, no e-mail sent to any service."
  ],
- "STOP_LOG": [],
+ "STOP_LOG": [
+  "2026-11-05 IT27 complete: P1-P14 DONE; final battery exit 0 on f476c204."
+ ],
  "AUTHORISED_QUEUE_20261104": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P1": {
    "order": 1,
    "steps": [
@@ -73,9 +75,9 @@
    "steps": [
     {
      "step": "P13/P14 scouting on named gaps, verification, battery, push, CI, cleanup, report",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Final verifier (separate context) recomputed items 1-7 and found two wrong numeric claims in the ranking notes (corrected, views regenerated). Battery on 9d01c7e9 failed three suites (own defects: ragged delegate TSV, tie_size breaking the no-v1 byte-identical control, shareable package not regenerated); fixed. Battery on exact f476c204: exit 0. P13 scout: no ADOPT. Push by safe_push, CI and cleanup follow in the closing report."
     }
    ]
   }
