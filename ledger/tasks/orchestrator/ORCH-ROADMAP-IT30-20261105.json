@@ -7,12 +7,13 @@
  "OBJECTIVE": "Iteration 30: executable generative capacity, choice of the next searches (CLM pattern), continuity after compaction; durable ability to work and to change direction",
  "START_UTC": "2026-11-05T22:00:00Z",
  "RESUME": {
-  "worktree": ".claude/worktrees/it30 (branch task/it30, HEAD 0672016e at this write, merged with main 0845ed06)",
+  "worktree": ".claude/worktrees/it30 (branch task/it30), merged with main 0845ed06",
   "it29_candidate": "landed as main 0845ed06; worktree and branch removed",
   "it29_battery": "clone /home/desktop/battery_it29, log /home/desktop/battery_it29.log, verdict line 'REGRESSION VERDICT'; the earlier battery on 72a58bfb failed one test (legend above the fold at phone width), fixed in d099a5be",
   "next_action": "1) read the status of workflow 'Public release gate' for 0845ed06 (GitHub API, head_sha filter); if success, set IT29 P16 and dashboard steps DONE, MANDATE_STATE COMPLETE in the IT29 record (the file is on main); 2) continue S3 (hyperexcitability case to a consumable form, contrasting examples), S4 measure, S7 resume trial, S10 radar, S11 dashboard; 3) before the final battery freeze the SHA, regenerate views and package, run test_repurposing_view RealViewports and the language-legend test first",
   "not_to_redo": "engine-dir recipe is in generation_it30_p5_20261105/README.md; carried_limits fix is committed (fa5eb2d2)",
-  "parallel_batch": "separate scientific batch ORCH-SCIBATCH-DR-20261105 works in .claude/worktrees/dr-parallel-20261105 (task/dr-parallel-20261105, based on 14c5fc7b); on 2026-11-05 it held only batch_sci_20261105/BRIEF_COMMON.md. It hands back READMEs, evidence tables and staged receipts inside its own directories; this session (IT30) is the single integrator of shared files (ledger, registries, consumers); receipts are trial-recorded in event-ID order in a scratch clone first"
+  "parallel_batch": "separate scientific batch ORCH-SCIBATCH-DR-20261105 works in .claude/worktrees/dr-parallel-20261105 (task/dr-parallel-20261105, based on 14c5fc7b); on 2026-11-05 it held only batch_sci_20261105/BRIEF_COMMON.md. It hands back READMEs, evidence tables and staged receipts inside its own directories; this session (IT30) is the single integrator of shared files (ledger, registries, consumers); receipts are trial-recorded in event-ID order in a scratch clone first",
+  "pending_verification": "workflow 'Public release gate', run 42126538327 (https://github.com/marinomassimo-dot/legend-development/actions/runs/42126538327) on main 0845ed06; API: GET /repos/marinomassimo-dot/legend-development/actions/runs?head_sha=<40-char sha>. Success -> IT29 record (on main): OBJ_P17 (P16) and OBJ_P18 (D0-D9, the dashboard step) DONE, MANDATE_STATE COMPLETE; failure -> read the failed step, fix on main first"
  },
  "AUTHORISED_QUEUE_20261105C": {
   "MANDATE_STATE": "OPEN",
@@ -95,9 +96,9 @@
    "steps": [
     {
      "step": "S7 Continuity after compaction: strengthen existing resume point; separate-context resume trial",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "note": "2026-11-05 check: the first form of this record (root STEPS/MANDATE_STATE) gave NO_QUEUE; in the supported AUTHORISED_QUEUE form `mandate_continuity.py status` reports CONTINUE, 15 steps, TODO 12, IN_PROGRESS 2, DONE 1, next OBJ_S0[0]"
+     "evidence": "resume trial 2026-11-05T23:23Z, a fresh context of the same model given only mandate_continuity status and this record: it reproduced the step counts (TODO 8, IN_PROGRESS 4, DONE 3), separated concluded from in-progress with proof paths, found the one pending verification (Public release gate, run 42126538327 on 0845ed06, read live from the API: in progress) and answered it without redoing any reading, named three complete results not to redo, chose and ran the read-only next action, and wrote the update text that was then applied here. Gaps it found: a stale count in this note (replaced), the run id and the meaning of 'dashboard step' (= OBJ_P18 of the IT29 record) were not in RESUME (now added). Limits: same model family, no real compaction, a live session was not interrupted; the first form of this record (root STEPS) had returned NO_QUEUE and was corrected to AUTHORISED_QUEUE"
     }
    ]
   },
