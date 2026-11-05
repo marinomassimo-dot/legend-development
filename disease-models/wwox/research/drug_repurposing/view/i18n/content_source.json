@@ -31,6 +31,10 @@
   "src": "en",
   "text": "Does lowering KEAP1 or raising NRF2 change a functional readout in a WWOX-deficient neural cell, in the direction the two conditional arms of this need assume?"
  },
+ "0838f09e6cea": {
+  "src": "en",
+  "text": "position unchanged from IT20 (rank 2): No IT21 input changes the position. IT29: epilepsy-model screens in other genotypes give no corroboration for this agent (absence of corroboration is not refutation); the position rests on the single pup experiment."
+ },
  "098bc6a615c5": {
   "src": "en",
   "text": "That an inhibitor of the DNA-damage response is a lever for a WWOX-deficient developing brain."
@@ -235,10 +239,6 @@
   "src": "en",
   "text": "E4 - card reviewed, 12 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)"
  },
- "3ef2c98d4f63": {
-  "src": "en",
-  "text": "Whether the neuron still emits the activity-dependent signal that a pro-myelinating agent would amplify. If it does not, the whole class is not a lever here regardless of its pharmacology."
- },
  "3f6e29d745c3": {
   "src": "it",
   "text": "Laboratorio con linee isogeniche di organoidi e una leva MYC inducibile; linee non disponibili (non nota); dati single-cell depositati con possibile richiesta di accesso."
@@ -247,9 +247,17 @@
   "src": "en",
   "text": "Whether PDH flux is actually reduced. The lever's direction is derived from the chain, not from a measurement, and the available signs contradict it."
  },
+ "40b5ef7c03bb": {
+  "src": "en",
+  "text": "WWOX-system: the myelin deficit is partly prevented when WWOX is restored in neurons in the neonatal window; the treated arms of the source are unquantified, and whether an established deficit re-myelinates is unmeasured. IT29: perturbation evidence from other systems signs several intrinsic precursor-differentiation routes (muscarinic-receptor, lipid-synthesis, thyroid- and RXR-type receptor) in wild-type or injury settings and none in a neuron-driven hypomyelination model; HDAC3 loss is adverse for maturation; an independent screen disagrees with some signs."
+ },
  "40da6e5a79b9": {
   "src": "en",
   "text": "Every partial-benefit lever in this module is ordered as a bridge to, or a substitute for, restoration; whether restoration works after onset decides which of those two framings is the real one, so one result re-reads the whole list."
+ },
+ "40fe52ea0d7a": {
+  "src": "en",
+  "text": "position unchanged from IT20 (rank 2): No IT21 input changes the position. The row text was corrected in IT21 P1 (the pair is a proposal to verify, not a documented discriminating pair). IT29: in other models the sign of several channel-agent classes flips with the lesion class; a discriminating challenge in the WWOX slice preparation would separate an inhibition-loss-like from an excitatory-gain-like network."
  },
  "411684173502": {
   "src": "it",
@@ -258,10 +266,6 @@
  "4125f4ddb460": {
   "src": "en",
   "text": "An inhibitor of the kinase BTK proposed to restore NPY through STAT3"
- },
- "427f1824cd7c": {
-  "src": "en",
-  "text": "position unchanged from IT20 (rank 2): No IT21 input changes the position. The row text was corrected in IT21 P1 (the pair is a proposal to verify, not a documented discriminating pair)."
  },
  "437a9b30f72e": {
   "src": "it",
@@ -294,6 +298,10 @@
  "4577c06f509a": {
   "src": "it",
   "text": "Q11 · Segni opposti tra linee, topo e organoidi di pazienti; nel topo è l'effetto di composizione atteso. Il documento P4 lo legge come non risolto."
+ },
+ "468979f1b607": {
+  "src": "en",
+  "text": "Measure the axonal activity-dependent myelination signal in the WWOX-deficient system against an isogenic control, before any compound; then decide whether the class is orderable. IT29: add an arm in Wwox-null precursor monoculture or the Wwox-null neuron co-culture, with a lipid-synthesis comparator beside the muscarinic one, crossed with a neuronal-activity manipulation."
  },
  "46f1eae52d16": {
   "src": "en",
@@ -342,10 +350,6 @@
  "556c9a6f6d08": {
   "src": "en",
   "text": "Carded clinical thread: GABA-transaminase inactivators."
- },
- "562b73f805e4": {
-  "src": "en",
-  "text": "position unchanged from IT20 (rank 3): No IT21 input changes the position. The thyroid-hormone probe row asks the receptor-responsiveness question on the same axis; the two are not merged because one measures the neuron's signal and the other the precursor cell's response."
  },
  "5676cadaba90": {
   "src": "en",
@@ -535,6 +539,10 @@
   "src": "en",
   "text": "E4 - card reviewed, 1 WWOX-side assertion(s) read beyond abstract"
  },
+ "7f6ef8d06b05": {
+  "src": "en",
+  "text": "Whether the neuron still emits the activity-dependent signal that a pro-myelinating agent would amplify. If it does not, the whole class is not a lever here regardless of its pharmacology. IT29: even where an intrinsic route works, whether it acts when the lesion is neuronal is untested."
+ },
  "7fe911461399": {
   "src": "en",
   "text": "Queried: this need's ten observation rows and their readout levels; the dichloroacetate and HIF-axis units; the search layer over the eight axis targets (209 associations, 180 families, none direction-coherent because the need direction is unresolved)."
@@ -574,14 +582,6 @@
  "8a0e5121072a": {
   "src": "en",
   "text": "Selective tool compounds exist; the assay is the carded one."
- },
- "8b1f755d3bfe": {
-  "src": "en",
-  "text": "WWOX-system: the myelin deficit is partly prevented when WWOX is restored in neurons in the neonatal window; the treated arms of the source are unquantified, and whether an established deficit re-myelinates is unmeasured."
- },
- "8c1d688c6aa5": {
-  "src": "en",
-  "text": "Measure the axonal activity-dependent myelination signal in the WWOX-deficient system against an isogenic control, before any compound; then decide whether the class is orderable."
  },
  "8d27befa6c69": {
   "src": "it",
@@ -963,6 +963,10 @@
   "src": "en",
   "text": "The thread is carried by one paper from one laboratory, the agent is non-selective, and it pushes the canonical Wnt readout in the direction this module's other need wants lowered. The question now is whether to keep it, not what to measure next with it: that is a decision a single interaction test can settle."
  },
+ "dcdf79130cf2": {
+  "src": "en",
+  "text": "position unchanged from IT20 (rank 3): No IT21 input changes the position. The thyroid-hormone probe row asks the receptor-responsiveness question on the same axis; the two are not merged because one measures the neuron's signal and the other the precursor cell's response. IT29 (phenotype-first table): position unchanged; the added evidence is transferred from non-WWOX systems and conditional."
+ },
  "e22f10004a65": {
   "src": "en",
   "text": "The chain as written: that this inhibitor lowers HIF activity without touching the HIF prolyl hydroxylases."
@@ -982,10 +986,6 @@
  "e42d8e04d9a5": {
   "src": "it",
   "text": "Capire se la proteina Q230P viene prodotta e poi eliminata, per quale via, e se quella che torna è funzionante."
- },
- "e518c2a4ebb3": {
-  "src": "en",
-  "text": "position unchanged from IT20 (rank 2): No IT21 input changes the position."
  },
  "e5257ab6e129": {
   "src": "it",
