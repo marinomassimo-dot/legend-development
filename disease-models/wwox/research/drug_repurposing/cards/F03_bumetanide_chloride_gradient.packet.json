@@ -120,14 +120,18 @@
  "not_known": [
   "E_GABA in any Wwox system.",
   "NKCC1 and KCC2 protein levels.",
-  "Human brain or CSF exposure of bumetanide (the mouse brain to plasma ratio is about 0.015 to 0.02, abstract level)."
+  "Human brain or CSF exposure of bumetanide (the mouse brain to plasma ratio is about 0.015 to 0.02, abstract level).",
+  "Whether the neonatal acquired-seizure record (state-dependent effect, discordant small trials) transfers to a genetic developmental epileptic encephalopathy: none of those preparations carries a Wwox deficiency or a measured depolarising GABA response."
  ],
  "evidence_against": [
   "No transcript-level hint of a raised NKCC1:KCC2 ratio in the knockout organoid.",
   "Poor CNS penetration is a known limitation.",
   "Window may be closed.",
   "No measurement of the premise.",
-  "IT13 P3a (2026-10-31): also no transcript support in the P17 Wwox-deletion mouse deposits (NKCC1:KCC2 ratio not raised in the three hippocampal contrasts, Slc12a5 higher in one; transcript only, 2 to 4 animals per arm; E_GABA unmeasured)."
+  "IT13 P3a (2026-10-31): also no transcript support in the P17 Wwox-deletion mouse deposits (NKCC1:KCC2 ratio not raised in the three hippocampal contrasts, Slc12a5 higher in one; transcript only, 2 to 4 animals per arm; E_GABA unmeasured).",
+  "IT30 (non-WWOX, neonatal acquired-seizure models and trials; abstract or partial text, rows E03 E05 E07 E09 E11 E13 of the IT29 epilepsy package): the effect of NKCC1 blockade is state- and model-dependent, not a general property of the target. Recurrent seizures raise intracellular chloride and bumetanide limits that accumulation (PMID 20810895, partial text); in a hypoxia model bumetanide alone had little or no effect (PMID 23536761, partial text); two later rat-pup asphyxia studies found no potentiation of phenobarbital even at higher exposure (PMID 33258158 and PMID 33955541, abstracts only).",
+  "IT30 (human neonates with acquired seizures, not a genetic lesion): an open-label dose-finding trial was stopped early for limited seizure reduction and adverse reactions (PMID 25765333, abstract only); a small randomised pilot reported a greater post-dose reduction in the treated arm only after post-hoc adjustment for a baseline imbalance and was not powered for efficacy (PMID 33201535, partial text). The two results disagree and neither addresses a Wwox-deficient lesion or development.",
+  "IT30: a hearing signal was reported after bumetanide add-on in neonates (PMID 25765333, abstract only), confounded by aminoglycoside co-exposure and the underlying injury; a pilot also reported a small imbalance with the same confounders (PMID 33201535). Unknown whether it is attributable to the drug: not a safety conclusion either way."
  ],
  "bridge_gaps_exposed": [
   "No drug assertion exists, so no comparison is formed."
