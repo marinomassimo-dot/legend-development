@@ -205,11 +205,9 @@ class States(unittest.TestCase):
 @unittest.skipUnless(HAVE_DATA, "module data absent")
 class Browser(unittest.TestCase):
     """Runs the page's JS in headless Chromium when available; otherwise skipped."""
-    CANDIDATES = ["/snap/chromium/current/usr/lib/chromium-browser/chrome", "chromium", "chromium-browser", "google-chrome"]
-
     @classmethod
     def setUpClass(cls):
-        cls.bin = next((b for b in cls.CANDIDATES if shutil.which(b) or Path(b).exists()), None)
+        cls.bin = rv.find_chromium()
         if not cls.bin:
             raise unittest.SkipTest("no Chromium")
         cls.tmp = tempfile.TemporaryDirectory()
@@ -1302,6 +1300,20 @@ class CdpStartup(unittest.TestCase):
         script.write_text("#!" + sys.executable + "\n" + body, encoding="utf-8")
         script.chmod(0o700)
         return str(script)
+
+    def test_configured_browser_precedes_an_available_snapshot(self):
+        import os
+        from unittest.mock import patch
+        with tempfile.TemporaryDirectory() as td:
+            configured = self.browser(td, "pass\n")
+            with patch.dict(os.environ, {"CHROME_BIN": configured}), patch.object(rv, "CHROMIUM_CANDIDATES", [sys.executable]):
+                self.assertEqual(rv.find_chromium(), configured)
+
+    def test_unavailable_configured_browser_keeps_portable_fallback(self):
+        import os
+        from unittest.mock import patch
+        with patch.dict(os.environ, {"CHROME_BIN": "/missing-legend-browser-fixture"}), patch.object(rv, "CHROMIUM_CANDIDATES", [sys.executable]):
+            self.assertEqual(rv.find_chromium(), sys.executable)
 
     def test_exited_browser_reports_its_stderr_and_exit_code_without_waiting(self):
         import time

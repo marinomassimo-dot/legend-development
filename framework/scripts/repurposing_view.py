@@ -5188,7 +5188,13 @@ CHROMIUM_CANDIDATES = ["/snap/chromium/current/usr/lib/chromium-browser/chrome",
 
 
 def find_chromium() -> str | None:
+    import os
     import shutil
+    # Hosted Ubuntu supplies packaged Chrome with its AppArmor profile via CHROME_BIN.
+    # A separately downloaded Chromium snapshot can exist but abort with "No usable sandbox".
+    configured = os.environ.get("CHROME_BIN")
+    if configured and shutil.which(configured):
+        return configured
     return next((b for b in CHROMIUM_CANDIDATES if shutil.which(b) or Path(b).exists()), None)
 
 

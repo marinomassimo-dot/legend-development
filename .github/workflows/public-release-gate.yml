@@ -11,6 +11,9 @@ permissions:
 jobs:
   release-gate:
     runs-on: ubuntu-latest
+    env:
+      # Packaged Chrome has Ubuntu's sandbox profile; the raw Chromium snapshot does not.
+      CHROME_BIN: /usr/bin/google-chrome
     steps:
       - name: Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
