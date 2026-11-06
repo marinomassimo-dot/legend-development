@@ -1,39 +1,39 @@
 {
-    "analysis_at": "2026-11-05T22:46:00Z",
-    "analysis_time_precision": "minute",
-    "coverage": {
-        "abstract": "read",
-        "discussion": "not_read",
-        "figures": "not_read",
-        "introduction": "not_read",
-        "limitations": "not_read",
-        "methods": "not_read",
-        "references": "not_read",
-        "results": "not_read",
-        "supplementary": "not_read",
-        "tables": "not_read"
-    },
-    "event_at": "2026-11-05T22:47:00Z",
-    "event_id": "FTR-20261105-2757909-23",
-    "evidence_basis": [
-        "abstract analysed",
-        "verbatim_locator | proposition: GABA alone and the drug both produced mild toxicity to myelinated fibres in a myelinating explant culture | Abstract | \"showed mild toxicity of both drugs for myelinated fibres\"",
-        "verbatim_locator | proposition: electron microscopy showed no intramyelinic oedema and no primary demyelination in either condition | Abstract | \"In electron microscopy, no patent intramyelinic oedema nor primary demyelination were seen\""
-    ],
-    "evidence_depth": "abstract_only",
-    "outputs": [
-        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/README.md",
-        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/evidence_b1.tsv"
-    ],
-    "prior_receipt": null,
-    "record_kind": "contemporaneous_receipt",
-    "reread_reason": "first_read",
-    "source_fingerprint": null,
-    "source_kind": "abstract",
-    "source_locator": "PubMed record for this PMID, read 2026-11-05 through the PubMed metadata tool; abstract and indexing terms only, no full text retrieved",
-    "study_id": {
-        "doi": "10.1111/j.1365-2125.1989.tb03461.x",
-        "pmid": "2757909"
-    },
-    "workflow": "ORCH-SCIBATCH-DR-20261105 package B1 (challenge CH-SB-VGB-WHITEMATTER): white-matter and MRI safety of GABA-aminotransferase inactivators and what transfers to a brain with a hypomyelinating baseline. Question-driven reading. Prepared as a JSON file for the Orchestrator; the ledger was not written by the preparing actor. Read at abstract level because the archived article is scanned images only and carries no machine-readable full text; see queries.tsv Q16."
+ "analysis_at": "2026-11-05T22:46:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T22:47:00Z",
+ "event_id": "FTR-20261105-2757909-23",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: GABA alone and the drug both produced mild toxicity to myelinated fibres in a myelinating explant culture | Abstract | \"showed mild toxicity of both drugs for myelinated fibres\"",
+  "verbatim_locator | proposition: electron microscopy showed no intramyelinic oedema and no primary demyelination in either condition | Abstract | \"In electron microscopy, no patent intramyelinic oedema nor primary demyelination were seen\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/evidence_b1.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for this PMID, read 2026-11-05 through the PubMed metadata tool; abstract and indexing terms only, no full text retrieved",
+ "study_id": {
+  "doi": "10.1111/j.1365-2125.1989.tb03461.x",
+  "pmid": "2757909"
+ },
+ "workflow": "ORCH-SCIBATCH-DR-20261105 package B1 (challenge CH-SB-VGB-WHITEMATTER): white-matter and MRI safety of GABA-aminotransferase inactivators and what transfers to a brain with a hypomyelinating baseline. Question-driven reading. Prepared as a JSON file for the Orchestrator; the ledger was not written by the preparing actor. Read at abstract level because the archived article is scanned images only and carries no machine-readable full text; see queries.tsv Q16."
 }

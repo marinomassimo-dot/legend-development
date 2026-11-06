@@ -1,39 +1,39 @@
 {
-    "analysis_at": "2026-11-05T22:43:00Z",
-    "analysis_time_precision": "minute",
-    "coverage": {
-        "abstract": "read",
-        "discussion": "read",
-        "figures": "captions_only",
-        "introduction": "read",
-        "limitations": "not_present",
-        "methods": "not_present",
-        "references": "not_read",
-        "results": "read",
-        "supplementary": "not_present",
-        "tables": "read"
-    },
-    "event_at": "2026-11-05T22:44:00Z",
-    "event_id": "FTR-20261105-42033488-23",
-    "evidence_basis": [
-        "coverage map",
-        "verbatim_locator | proposition: a child with a genetic developmental and epileptic encephalopathy showed delayed myelination and mild corpus callosum hypoplasia alongside the drug-associated abnormality | Case report | \"Additional findings included delayed myelination, mild corpus callosum hypoplasia, and focal right temporo-parieto-occipital hypoperfusion, possibly postictal\"",
-        "verbatim_locator | proposition: the abnormality resolved completely on imaging after gradual discontinuation | Case report | \"The neuroradiological abnormalities resolved following the gradual discontinuation of vigabatrin\""
-    ],
-    "evidence_depth": "partial_fulltext_read",
-    "outputs": [
-        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/README.md",
-        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/evidence_b1.tsv"
-    ],
-    "prior_receipt": null,
-    "record_kind": "contemporaneous_receipt",
-    "reread_reason": "first_read",
-    "source_fingerprint": null,
-    "source_kind": "fulltext_remote",
-    "source_locator": "Europe PMC fullTextXML for the PMC record PMC13357445, fetched 2026-11-05; sections listed in coverage read in the converted text; figures not viewed; bytes kept outside the repository and not saved in it",
-    "study_id": {
-        "doi": "10.1007/s00247-026-06628-9",
-        "pmid": "42033488"
-    },
-    "workflow": "ORCH-SCIBATCH-DR-20261105 package B1 (challenge CH-SB-VGB-WHITEMATTER): white-matter and MRI safety of GABA-aminotransferase inactivators and what transfers to a brain with a hypomyelinating baseline. Question-driven reading. Prepared as a JSON file for the Orchestrator; the ledger was not written by the preparing actor. Read because it is the closest non-WWOX precedent: the same baseline description (delayed myelination with callosal hypoplasia) with the drug abnormality on top."
+ "analysis_at": "2026-11-05T22:43:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "not_present",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "read"
+ },
+ "event_at": "2026-11-05T22:44:00Z",
+ "event_id": "FTR-20261105-42033488-23",
+ "evidence_basis": [
+  "coverage map",
+  "verbatim_locator | proposition: a child with a genetic developmental and epileptic encephalopathy showed delayed myelination and mild corpus callosum hypoplasia alongside the drug-associated abnormality | Case report | \"Additional findings included delayed myelination, mild corpus callosum hypoplasia, and focal right temporo-parieto-occipital hypoperfusion, possibly postictal\"",
+  "verbatim_locator | proposition: the abnormality resolved completely on imaging after gradual discontinuation | Case report | \"The neuroradiological abnormalities resolved following the gradual discontinuation of vigabatrin\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/evidence_b1.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC fullTextXML for the PMC record PMC13357445, fetched 2026-11-05; sections listed in coverage read in the converted text; figures not viewed; bytes kept outside the repository and not saved in it",
+ "study_id": {
+  "doi": "10.1007/s00247-026-06628-9",
+  "pmid": "42033488"
+ },
+ "workflow": "ORCH-SCIBATCH-DR-20261105 package B1 (challenge CH-SB-VGB-WHITEMATTER): white-matter and MRI safety of GABA-aminotransferase inactivators and what transfers to a brain with a hypomyelinating baseline. Question-driven reading. Prepared as a JSON file for the Orchestrator; the ledger was not written by the preparing actor. Read because it is the closest non-WWOX precedent: the same baseline description (delayed myelination with callosal hypoplasia) with the drug abnormality on top."
 }

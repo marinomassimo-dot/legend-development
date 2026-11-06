@@ -1,39 +1,39 @@
 {
-    "analysis_at": "2026-11-06T06:47:00Z",
-    "analysis_time_precision": "minute",
-    "coverage": {
-        "abstract": "read",
-        "discussion": "not_read",
-        "figures": "not_read",
-        "introduction": "not_read",
-        "limitations": "not_read",
-        "methods": "not_read",
-        "references": "not_read",
-        "results": "not_read",
-        "supplementary": "not_read",
-        "tables": "not_read"
-    },
-    "event_at": "2026-11-06T06:48:00Z",
-    "event_id": "FTR-20261106-35980256-23",
-    "evidence_basis": [
-        "abstract analysed",
-        "verbatim_locator | proposition: a GABA-B agonist enhanced precursor differentiation and remyelination after an induced lesion in adult mice | Abstract | \"Bac administration to adult mice following induction of demyelination by LPC injection in the spinal cord resulted in enhanced OPC differentiation and remyelination\""
-    ],
-    "evidence_depth": "abstract_only",
-    "outputs": [
-        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/README.md",
-        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/evidence_b1.tsv",
-        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/RESPONSE.md"
-    ],
-    "prior_receipt": null,
-    "record_kind": "contemporaneous_receipt",
-    "reread_reason": "first_read",
-    "source_fingerprint": null,
-    "source_kind": "fulltext_remote",
-    "source_locator": "Europe PMC fullTextXML for the PMC record PMC9804779, fetched 2026-11-06; only the abstract section of the converted text was read; no results or methods section was read; bytes kept outside the repository and not saved in it",
-    "study_id": {
-        "doi": "10.1002/glia.24262",
-        "pmid": "35980256"
-    },
-    "workflow": "ORCH-SCIBATCH-DR-20261105 package B1 correction round (challenge CH-SB-VGB-WHITEMATTER): reading bounded by the Orchestrator to the human age evidence, the open sibling toxicology report, the two-sided GABA-and-myelination literature and the taurine rival, after a blind quote audit and an adversarial review of the first pass. Prepared as a JSON file for the Orchestrator; the ledger was not written by the preparing actor. Read for the opposite sign of the same axis. Full text fetched, abstract read."
+ "analysis_at": "2026-11-06T06:47:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-06T06:48:00Z",
+ "event_id": "FTR-20261106-35980256-23",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: a GABA-B agonist enhanced precursor differentiation and remyelination after an induced lesion in adult mice | Abstract | \"Bac administration to adult mice following induction of demyelination by LPC injection in the spinal cord resulted in enhanced OPC differentiation and remyelination\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/evidence_b1.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/RESPONSE.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC fullTextXML for the PMC record PMC9804779, fetched 2026-11-06; only the abstract section of the converted text was read; no results or methods section was read; bytes kept outside the repository and not saved in it",
+ "study_id": {
+  "doi": "10.1002/glia.24262",
+  "pmid": "35980256"
+ },
+ "workflow": "ORCH-SCIBATCH-DR-20261105 package B1 correction round (challenge CH-SB-VGB-WHITEMATTER): reading bounded by the Orchestrator to the human age evidence, the open sibling toxicology report, the two-sided GABA-and-myelination literature and the taurine rival, after a blind quote audit and an adversarial review of the first pass. Prepared as a JSON file for the Orchestrator; the ledger was not written by the preparing actor. Read for the opposite sign of the same axis. Full text fetched, abstract read."
 }

@@ -1,39 +1,39 @@
 {
-    "analysis_at": "2026-11-05T22:46:00Z",
-    "analysis_time_precision": "minute",
-    "coverage": {
-        "abstract": "read",
-        "discussion": "not_read",
-        "figures": "not_read",
-        "introduction": "not_read",
-        "limitations": "not_read",
-        "methods": "not_read",
-        "references": "not_read",
-        "results": "not_read",
-        "supplementary": "not_read",
-        "tables": "not_read"
-    },
-    "event_at": "2026-11-05T22:47:00Z",
-    "event_id": "FTR-20261105-27376954-23",
-    "evidence_basis": [
-        "abstract analysed",
-        "verbatim_locator | proposition: biallelic loss of the enzyme the drug inactivates was associated with decreased myelination on imaging and at post-mortem in one infant | Abstract | \"Brain magnetic resonance imaging (MRI) showed decreased myelination and generalized brain atrophy, later confirmed by post-mortem examination\"",
-        "verbatim_locator | proposition: the disorder had been reported in only three unrelated families at the time | Abstract | \"an autosomal recessive disorder reported in only three unrelated families\""
-    ],
-    "evidence_depth": "abstract_only",
-    "outputs": [
-        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/README.md",
-        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/evidence_b1.tsv"
-    ],
-    "prior_receipt": null,
-    "record_kind": "contemporaneous_receipt",
-    "reread_reason": "first_read",
-    "source_fingerprint": null,
-    "source_kind": "abstract",
-    "source_locator": "PubMed record for this PMID, read 2026-11-05 through the PubMed metadata tool; abstract and indexing terms only, no full text retrieved",
-    "study_id": {
-        "doi": "10.1007/s10545-016-9951-z",
-        "pmid": "27376954"
-    },
-    "workflow": "ORCH-SCIBATCH-DR-20261105 package B1 (challenge CH-SB-VGB-WHITEMATTER): white-matter and MRI safety of GABA-aminotransferase inactivators and what transfers to a brain with a hypomyelinating baseline. Question-driven reading. Prepared as a JSON file for the Orchestrator; the ledger was not written by the preparing actor. Read at abstract level as the genetic mirror of the pharmacological target loss; full text closed."
+ "analysis_at": "2026-11-05T22:46:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T22:47:00Z",
+ "event_id": "FTR-20261105-27376954-23",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: biallelic loss of the enzyme the drug inactivates was associated with decreased myelination on imaging and at post-mortem in one infant | Abstract | \"Brain magnetic resonance imaging (MRI) showed decreased myelination and generalized brain atrophy, later confirmed by post-mortem examination\"",
+  "verbatim_locator | proposition: the disorder had been reported in only three unrelated families at the time | Abstract | \"an autosomal recessive disorder reported in only three unrelated families\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/evidence_b1.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for this PMID, read 2026-11-05 through the PubMed metadata tool; abstract and indexing terms only, no full text retrieved",
+ "study_id": {
+  "doi": "10.1007/s10545-016-9951-z",
+  "pmid": "27376954"
+ },
+ "workflow": "ORCH-SCIBATCH-DR-20261105 package B1 (challenge CH-SB-VGB-WHITEMATTER): white-matter and MRI safety of GABA-aminotransferase inactivators and what transfers to a brain with a hypomyelinating baseline. Question-driven reading. Prepared as a JSON file for the Orchestrator; the ledger was not written by the preparing actor. Read at abstract level as the genetic mirror of the pharmacological target loss; full text closed."
 }

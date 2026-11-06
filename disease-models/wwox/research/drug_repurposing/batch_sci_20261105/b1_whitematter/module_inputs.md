@@ -30,7 +30,7 @@ direction field.
 | DR-H02-015 | brain_MRI_abnormality | whether a delayed-myelination baseline predisposes to the abnormality | UNKNOWN | PMID 40527948, `abstract_only`, receipt `FTR-20261105-40527948-23` | B1-09 |
 | DR-H02-016 | brain_MRI_abnormality | aetiology class of children with and without the abnormality | UNKNOWN | PMID 42735667, `abstract_only` | B1-11 |
 | DR-H02-017 | brain_MRI_abnormality | peak against cumulative exposure for the asymptomatic form | INCREASE | PMID 28230253, `abstract_only` | B1-12 |
-| DR-H02-018 | brain_MRI_abnormality | cerebrospinal and spectroscopic GABA concentration in children with and without the abnormality | INCREASE | PMID 35183975, `abstract_only` | B1-17 |
+| DR-H02-018 | brain_MRI_abnormality | cerebrospinal and spectroscopic GABA concentration in children with and without the abnormality | INCREASE | PMID 35183975, `abstract_only`; the spectroscopic ratio did not differ significantly between children with and without the abnormality (p = 0.31, two against eleven children); only the cerebrospinal free GABA difference (p = 0.03) and the higher ratio under the drug than in controls (p = 0.02) were significant | B1-17 |
 | DR-H02-019 | optic_nerve_diffusion_metric | optic-nerve fractional anisotropy during exposure and after stopping | DECREASE | PMID 40670421, `partial_fulltext_read` | B1-18 |
 | DR-H02-020 | CNS_myelination | myelin staining, myelin and oligodendrocyte enzyme activity and myelin basic protein in the immature rat, with a drug-free period | DECREASE | PMID 10840396, `abstract_only` | B1-23 |
 | DR-H02-021 | CNS_myelination | myelin staining, axonal degeneration, glial death and astrogliosis in the immature rat at low exposure | DECREASE | PMID 9168839, `abstract_only` | B1-24 |
@@ -97,8 +97,8 @@ Two rows that already exist should gain a note rather than a new id:
 * `not_known`: replace "Whether a Wwox-deficient juvenile brain is more, equally or less
   susceptible" with the same sentence plus: in the one cohort that compared it, a
   delayed-myelination baseline **did not demonstrate** an excess (76 children, abstract level,
-  myelination graded from routine reports, no stated power), while one case report describes the
-  pattern arising on such a baseline. Add that the OV329 toxicology package exists and is
+  myelination graded from routine reports, no stated power), while one case report describes delayed
+  myelination reported in the same examination as the pattern, on a normal initial MRI. Add that the OV329 toxicology package exists and is
   unread.
 * `status`: keep `controversial`. **No card-level harm tag is proposed**: no such field exists in
   any packet card, and the module carries this through `p4_card.status`, the counter-evidence rows

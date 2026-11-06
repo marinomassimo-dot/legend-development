@@ -18,8 +18,8 @@
  "evidence_basis": [
   "sections listed in coverage read in a text conversion of the XML; figure images not viewed; supplementary files not opened",
   "verbatim_locator | proposition: seizure freedom at 12 months 6 of 6 vs 17 of 31 | Results, Prompt vs. later genetic diagnosis | \"There were also higher rates of seizure freedom at age 12 months in the prompt diagnosis group [6/6 (100%) vs. 17/31 (54%), p = 0.049].\"",
-  "verbatim_locator | proposition: no severe-profound delay in the prompt group | Results, Prompt vs. later genetic diagnosis | \"No patient with a prompt diagnosis had severe‐profound developmental delay at last review, compared with 13/31 (42%) individuals with later diagnosis (p = .049).\"",
-  "verbatim_locator | proposition: mild-moderate delay in 4 of the 6 prompt cases | Table 2, development row | \"Mild‐mod DD | 8 (21%) | 4 (66%) | 4 (12%)\"",
+  "verbatim_locator | proposition: no severe-profound delay in the prompt group | Results, Prompt vs. later genetic diagnosis | \"No patient with a prompt diagnosis had severe\u2010profound developmental delay at last review, compared with 13/31 (42%) individuals with later diagnosis (p = .049).\"",
+  "verbatim_locator | proposition: mild-moderate delay in 4 of the 6 prompt cases | Table 2, development row | \"Mild\u2010mod DD | 8 (21%) | 4 (66%) | 4 (12%)\"",
   "verbatim_locator | proposition: developmental quotient inferred from milestones | Methods | \"based on a developmental quotient inferred from motor and language developmental milestones attained\"",
   "verbatim_locator | proposition: follow-up shorter in the prompt group | Results, Prompt vs. later genetic diagnosis | \"last review was more recent in the prompt (median 16 months) compared with the later group (median 50 months)\"",
   "verbatim_locator | proposition: authors cannot determine an effect on development | Discussion | \"We could not determine the impact of prompt genetic diagnosis on development, as the high phenotypic variability and our relatively crude measures of developmental outcome\"",

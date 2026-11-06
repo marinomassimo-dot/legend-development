@@ -17,7 +17,7 @@
  "event_id": "FTR-20261105-30061856-21",
  "evidence_basis": [
   "First read (no registry record). Sections read: abstract, Methods (patients, assessment of outcomes, diet), Results (causative mutations, efficacy by gene), Table 3, Supplementary Table 1 (the 172-gene panel list, no patient data). Introduction, Discussion and figures not read. CC BY licence.",
-  "verbatim_locator | proposition: Responders are defined as at least 90 percent seizure reduction | Methods, assessment of outcomes | \"Patients were considered KD responders if they showed ≥90% seizure reduction from the baseline seizure frequency\"",
+  "verbatim_locator | proposition: Responders are defined as at least 90 percent seizure reduction | Methods, assessment of outcomes | \"Patients were considered KD responders if they showed \u226590% seizure reduction from the baseline seizure frequency\"",
   "verbatim_locator | proposition: The single WWOX patient was a responder at 3, 6 and 12 months | Results, Table 3, WWOX row | \"WWOX (1) 1/1 (100.0%) 0.337 1/1 (100.0%) 0.301 1/1 (100.0%) 0.301\""
  ],
  "evidence_depth": "partial_fulltext_read",

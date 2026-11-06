@@ -1,41 +1,41 @@
 {
-    "analysis_at": "2026-11-05T22:44:00Z",
-    "analysis_time_precision": "minute",
-    "coverage": {
-        "abstract": "read",
-        "discussion": "not_read",
-        "figures": "not_read",
-        "introduction": "not_read",
-        "limitations": "not_read",
-        "methods": "not_read",
-        "references": "not_read",
-        "results": "not_read",
-        "supplementary": "not_read",
-        "tables": "not_read"
-    },
-    "event_at": "2026-11-05T22:45:00Z",
-    "event_id": "FTR-20261105-34617595-23",
-    "evidence_basis": [
-        "abstract analysed",
-        "keyword-directed passages inspected",
-        "verbatim_locator | proposition: the OV329 seizure-threshold study used adult animals and verified histology only to confirm electrode placement | Methods | \"Histological verification of the kindling site is detailed in the Supplement\"",
-        "verbatim_locator | proposition: the animals were adults, so no juvenile exposure window was tested in this study | Material and methods, animals | \"adult female Wistar Unilever rats\"",
-        "attestation: keyword census over the converted full text returned zero occurrences of myelin, vacuol, white matter, intramyelinic and magnetic resonance, so no quote can be given for the absent endpoint"
-    ],
-    "evidence_depth": "queried_not_full_read",
-    "outputs": [
-        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/README.md",
-        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/evidence_b1.tsv"
-    ],
-    "prior_receipt": null,
-    "record_kind": "contemporaneous_receipt",
-    "reread_reason": "first_read",
-    "source_fingerprint": null,
-    "source_kind": "fulltext_remote",
-    "source_locator": "NCBI E-utilities efetch db=pmc for the PMC record PMC8639636, fetched 2026-11-05; keyword-directed passages inspected (myelin, vacuolation, white matter, histopathology, retina, safety), no section read end to end; bytes kept outside the repository and not saved in it",
-    "study_id": {
-        "doi": "10.1111/epi.17090",
-        "pmid": "34617595"
-    },
-    "workflow": "ORCH-SCIBATCH-DR-20261105 package B1 (challenge CH-SB-VGB-WHITEMATTER): white-matter and MRI safety of GABA-aminotransferase inactivators and what transfers to a brain with a hypomyelinating baseline. Question-driven reading. Prepared as a JSON file for the Orchestrator; the ledger was not written by the preparing actor. Inspected to establish whether the second sibling has a white-matter endpoint. Keyword census over the converted full text returned zero occurrences of the myelin vocabulary."
+ "analysis_at": "2026-11-05T22:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T22:45:00Z",
+ "event_id": "FTR-20261105-34617595-23",
+ "evidence_basis": [
+  "abstract analysed",
+  "keyword-directed passages inspected",
+  "verbatim_locator | proposition: the OV329 seizure-threshold study used adult animals and verified histology only to confirm electrode placement | Methods | \"Histological verification of the kindling site is detailed in the Supplement\"",
+  "verbatim_locator | proposition: the animals were adults, so no juvenile exposure window was tested in this study | Material and methods, animals | \"adult female Wistar Unilever rats\"",
+  "attestation: keyword census over the converted full text returned zero occurrences of myelin, vacuol, white matter, intramyelinic and magnetic resonance, so no quote can be given for the absent endpoint"
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/evidence_b1.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI E-utilities efetch db=pmc for the PMC record PMC8639636, fetched 2026-11-05; keyword-directed passages inspected (myelin, vacuolation, white matter, histopathology, retina, safety), no section read end to end; bytes kept outside the repository and not saved in it",
+ "study_id": {
+  "doi": "10.1111/epi.17090",
+  "pmid": "34617595"
+ },
+ "workflow": "ORCH-SCIBATCH-DR-20261105 package B1 (challenge CH-SB-VGB-WHITEMATTER): white-matter and MRI safety of GABA-aminotransferase inactivators and what transfers to a brain with a hypomyelinating baseline. Question-driven reading. Prepared as a JSON file for the Orchestrator; the ledger was not written by the preparing actor. Inspected to establish whether the second sibling has a white-matter endpoint. Keyword census over the converted full text returned zero occurrences of the myelin vocabulary."
 }

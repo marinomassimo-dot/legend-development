@@ -44,8 +44,8 @@ contact.
    excess: in 76 children a delayed-myelination baseline did not appear to predispose, alongside
    aetiology, microcephaly and oral steroids — at abstract level, graded from routine reports,
    with no stated power, and in a cohort where 14 of 34 cases had originally been reported as
-   normal. In the opposite direction, one case report describes the pattern arising on a baseline
-   of delayed myelination and callosal hypoplasia. Rows B1-09, B1-10, B1-19.
+   normal. In the opposite direction, one case report describes delayed myelination and callosal hypoplasia
+   reported in the same examination as the pattern, on a normal initial MRI. Rows B1-09, B1-10, B1-19.
 6. DATO — The hormonal confounder is unresolved and the record is split, not clean: hormonal
    co-therapy travels with the symptomatic form (all 11 symptomatic cases in one cohort, and a
    second cohort of the same group and centre), while its association with the imaging finding

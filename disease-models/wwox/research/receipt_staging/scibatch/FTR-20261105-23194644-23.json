@@ -1,39 +1,39 @@
 {
-    "analysis_at": "2026-11-05T22:46:00Z",
-    "analysis_time_precision": "minute",
-    "coverage": {
-        "abstract": "read",
-        "discussion": "not_read",
-        "figures": "not_read",
-        "introduction": "not_read",
-        "limitations": "not_read",
-        "methods": "not_read",
-        "references": "not_read",
-        "results": "not_read",
-        "supplementary": "not_read",
-        "tables": "not_read"
-    },
-    "event_at": "2026-11-05T22:47:00Z",
-    "event_id": "FTR-20261105-23194644-23",
-    "evidence_basis": [
-        "abstract analysed",
-        "verbatim_locator | proposition: in an autoimmune demyelination model GABA injections worsened disease while raising endogenous GABA with the drug did not | Abstract | \"In sharp contrast to exogenous GABA administration, endogenous GABA increment by systemic treatment with the GABA-transaminase inhibitor vigabatrin\"",
-        "verbatim_locator | proposition: the authors conclude that GABA amplifies the immune response in this model | Abstract | \"these results indicate an immune amplifying role of GABA in neuroinflammatory diseases like MS\""
-    ],
-    "evidence_depth": "abstract_only",
-    "outputs": [
-        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/README.md",
-        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/evidence_b1.tsv"
-    ],
-    "prior_receipt": null,
-    "record_kind": "contemporaneous_receipt",
-    "reread_reason": "first_read",
-    "source_fingerprint": null,
-    "source_kind": "abstract",
-    "source_locator": "PubMed record for this PMID, read 2026-11-05 through the PubMed metadata tool; abstract and indexing terms only, no full text retrieved",
-    "study_id": {
-        "doi": "10.1016/j.jneuroim.2012.11.001",
-        "pmid": "23194644"
-    },
-    "workflow": "ORCH-SCIBATCH-DR-20261105 package B1 (challenge CH-SB-VGB-WHITEMATTER): white-matter and MRI safety of GABA-aminotransferase inactivators and what transfers to a brain with a hypomyelinating baseline. Question-driven reading. Prepared as a JSON file for the Orchestrator; the ledger was not written by the preparing actor. Read at abstract level: the only model with pre-existing myelin pathology in which the drug itself was given. Full text closed."
+ "analysis_at": "2026-11-05T22:46:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T22:47:00Z",
+ "event_id": "FTR-20261105-23194644-23",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: in an autoimmune demyelination model GABA injections worsened disease while raising endogenous GABA with the drug did not | Abstract | \"In sharp contrast to exogenous GABA administration, endogenous GABA increment by systemic treatment with the GABA-transaminase inhibitor vigabatrin\"",
+  "verbatim_locator | proposition: the authors conclude that GABA amplifies the immune response in this model | Abstract | \"these results indicate an immune amplifying role of GABA in neuroinflammatory diseases like MS\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/evidence_b1.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for this PMID, read 2026-11-05 through the PubMed metadata tool; abstract and indexing terms only, no full text retrieved",
+ "study_id": {
+  "doi": "10.1016/j.jneuroim.2012.11.001",
+  "pmid": "23194644"
+ },
+ "workflow": "ORCH-SCIBATCH-DR-20261105 package B1 (challenge CH-SB-VGB-WHITEMATTER): white-matter and MRI safety of GABA-aminotransferase inactivators and what transfers to a brain with a hypomyelinating baseline. Question-driven reading. Prepared as a JSON file for the Orchestrator; the ledger was not written by the preparing actor. Read at abstract level: the only model with pre-existing myelin pathology in which the drug itself was given. Full text closed."
 }

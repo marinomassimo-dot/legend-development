@@ -17,10 +17,10 @@
  "event_id": "FTR-20261105-38785332-22",
  "evidence_basis": [
   "sections listed in coverage read in a text conversion of the XML; figure images not viewed; supplementary files not opened",
-  "verbatim_locator | proposition: drug resistance defined at 24 months | Methods, Definitions | \"ongoing seizures after two or more adequately trialed and tolerated antiseizure medications (ASMs) with a seizure‐free period of <6 months\"",
-  "verbatim_locator | proposition: global delay defined as Bayley-III cognitive and language mean below 70 or Griffiths below 70 | Methods, Clinical follow-up | \"global developmental delay (GDD) (BSID‐III Cognitive and Language composite mean score below 70 or Griffiths below 70)\"",
+  "verbatim_locator | proposition: drug resistance defined at 24 months | Methods, Definitions | \"ongoing seizures after two or more adequately trialed and tolerated antiseizure medications (ASMs) with a seizure\u2010free period of <6 months\"",
+  "verbatim_locator | proposition: global delay defined as Bayley-III cognitive and language mean below 70 or Griffiths below 70 | Methods, Clinical follow-up | \"global developmental delay (GDD) (BSID\u2010III Cognitive and Language composite mean score below 70 or Griffiths below 70)\"",
   "verbatim_locator | proposition: 13 of 38 without drug resistance had global delay | Table 2, DRE row | \"No DRE n = 38 | 13 (34%)\"",
-  "verbatim_locator | proposition: association persists without identified aetiology | Results, Predictors of outcome | \"In infants without identified etiology, DRE still showed a significant association with GDD (p = 0.02, Fischer's exact test, RR 6.3, 95% CI 1.5–26.4).\"",
+  "verbatim_locator | proposition: association persists without identified aetiology | Results, Predictors of outcome | \"In infants without identified etiology, DRE still showed a significant association with GDD (p = 0.02, Fischer's exact test, RR 6.3, 95% CI 1.5\u201326.4).\"",
   "verbatim_locator | proposition: all genetic IESS infants had global delay despite good seizure control in most | Results, Outcome of infantile epileptic spasms syndrome | \"All nine individuals with confirmed genetic etiology had GDD despite good seizure control in the majority.\"",
   "verbatim_locator | proposition: suboptimal first examination: global delay with or without drug resistance | Figure 3 caption | \"Conversely, 26/30 with suboptimal HINE had GDD (13/14 with DRE and 13/16 without DRE).\"",
   "verbatim_locator | proposition: optimal first examination and no drug resistance: favourable outcomes | Figure 3 caption | \"22/22 with optimal HINE and without DRE had favorable outcomes irrespective of etiology (compared to 3/8 with optimal HINE and DRE).\"",

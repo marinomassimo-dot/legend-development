@@ -1,40 +1,40 @@
 {
-    "analysis_at": "2026-11-06T06:45:00Z",
-    "analysis_time_precision": "minute",
-    "coverage": {
-        "abstract": "read",
-        "discussion": "not_read",
-        "figures": "not_read",
-        "introduction": "not_read",
-        "limitations": "not_read",
-        "methods": "not_read",
-        "references": "not_read",
-        "results": "not_read",
-        "supplementary": "not_read",
-        "tables": "not_read"
-    },
-    "event_at": "2026-11-06T06:46:00Z",
-    "event_id": "FTR-20261106-19258289-23",
-    "evidence_basis": [
-        "abstract analysed",
-        "verbatim_locator | proposition: the authors argue the finding is age- and time-dependent because it has not been seen in adults | Abstract, Conclusion | \"Such transient hyperintensity is likely to be age-dependent and time-dependent because it has never been observed in adult patients\"",
-        "verbatim_locator | proposition: the finding peaked three to six months after the start of exposure and was independent of duration and epilepsy type | Abstract, Results | \"This hyperintensity was transient and maximal 3 to 6 months after the beginning of vigabatrin\""
-    ],
-    "evidence_depth": "abstract_only",
-    "outputs": [
-        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/README.md",
-        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/evidence_b1.tsv",
-        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/RESPONSE.md"
-    ],
-    "prior_receipt": null,
-    "record_kind": "contemporaneous_receipt",
-    "reread_reason": "first_read",
-    "source_fingerprint": null,
-    "source_kind": "abstract",
-    "source_locator": "PubMed record for this PMID, read 2026-11-06 through the PubMed metadata tool; abstract and indexing terms only, no full text retrieved",
-    "study_id": {
-        "doi": "10.1177/0883073808324219",
-        "pmid": "19258289"
-    },
-    "workflow": "ORCH-SCIBATCH-DR-20261105 package B1 correction round (challenge CH-SB-VGB-WHITEMATTER): reading bounded by the Orchestrator to the human age evidence, the open sibling toxicology report, the two-sided GABA-and-myelination literature and the taurine rival, after a blind quote audit and an adversarial review of the first pass. Prepared as a JSON file for the Orchestrator; the ledger was not written by the preparing actor. Read for the time course after the start of exposure, which is the shape an exposure-window series has to test. Full text closed."
+ "analysis_at": "2026-11-06T06:45:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-06T06:46:00Z",
+ "event_id": "FTR-20261106-19258289-23",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: the authors argue the finding is age- and time-dependent because it has not been seen in adults | Abstract, Conclusion | \"Such transient hyperintensity is likely to be age-dependent and time-dependent because it has never been observed in adult patients\"",
+  "verbatim_locator | proposition: the finding peaked three to six months after the start of exposure and was independent of duration and epilepsy type | Abstract, Results | \"This hyperintensity was transient and maximal 3 to 6 months after the beginning of vigabatrin\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/evidence_b1.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/RESPONSE.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for this PMID, read 2026-11-06 through the PubMed metadata tool; abstract and indexing terms only, no full text retrieved",
+ "study_id": {
+  "doi": "10.1177/0883073808324219",
+  "pmid": "19258289"
+ },
+ "workflow": "ORCH-SCIBATCH-DR-20261105 package B1 correction round (challenge CH-SB-VGB-WHITEMATTER): reading bounded by the Orchestrator to the human age evidence, the open sibling toxicology report, the two-sided GABA-and-myelination literature and the taurine rival, after a blind quote audit and an adversarial review of the first pass. Prepared as a JSON file for the Orchestrator; the ledger was not written by the preparing actor. Read for the time course after the start of exposure, which is the shape an exposure-window series has to test. Full text closed."
 }

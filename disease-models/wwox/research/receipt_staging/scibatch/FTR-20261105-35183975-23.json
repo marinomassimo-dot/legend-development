@@ -1,39 +1,39 @@
 {
-    "analysis_at": "2026-11-05T22:48:00Z",
-    "analysis_time_precision": "minute",
-    "coverage": {
-        "abstract": "read",
-        "discussion": "not_read",
-        "figures": "not_read",
-        "introduction": "not_read",
-        "limitations": "not_read",
-        "methods": "not_read",
-        "references": "not_read",
-        "results": "not_read",
-        "supplementary": "not_read",
-        "tables": "not_read"
-    },
-    "event_at": "2026-11-05T22:49:00Z",
-    "event_id": "FTR-20261105-35183975-23",
-    "evidence_basis": [
-        "abstract analysed",
-        "verbatim_locator | proposition: cerebrospinal free GABA was higher in the children with the abnormality than in those without | Abstract | \"CSF levels of free GABA were significantly higher in VABAM (5.26 ± 1.95 μmol/L) than in non-VABAM (0.59 ± 0.63 μmol/L) cases (P = 0.03)\"",
-        "verbatim_locator | proposition: both children with the abnormality had prematurity and pre-existing haemorrhagic white-matter injury | Abstract | \"both cases were very-low-birth-weight preterm infants with post-hemorrhagic hydrocephalus\""
-    ],
-    "evidence_depth": "abstract_only",
-    "outputs": [
-        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/README.md",
-        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/evidence_b1.tsv"
-    ],
-    "prior_receipt": null,
-    "record_kind": "contemporaneous_receipt",
-    "reread_reason": "first_read",
-    "source_fingerprint": null,
-    "source_kind": "abstract",
-    "source_locator": "PubMed record for this PMID, read 2026-11-05 through the PubMed metadata tool; abstract and indexing terms only, no full text retrieved",
-    "study_id": {
-        "doi": "10.1016/j.eplepsyres.2022.106881",
-        "pmid": "35183975"
-    },
-    "workflow": "ORCH-SCIBATCH-DR-20261105 package B1 (challenge CH-SB-VGB-WHITEMATTER): white-matter and MRI safety of GABA-aminotransferase inactivators and what transfers to a brain with a hypomyelinating baseline. Question-driven reading. Prepared as a JSON file for the Orchestrator; the ledger was not written by the preparing actor. Read at abstract level: the only human source found that measures the proposed harm axis directly. Full text closed."
+ "analysis_at": "2026-11-05T22:48:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T22:49:00Z",
+ "event_id": "FTR-20261105-35183975-23",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: cerebrospinal free GABA was higher in the children with the abnormality than in those without | Abstract | \"CSF levels of free GABA were significantly higher in VABAM (5.26 \u00b1 1.95 \u03bcmol/L) than in non-VABAM (0.59 \u00b1 0.63 \u03bcmol/L) cases (P = 0.03)\"",
+  "verbatim_locator | proposition: both children with the abnormality had prematurity and pre-existing haemorrhagic white-matter injury | Abstract | \"both cases were very-low-birth-weight preterm infants with post-hemorrhagic hydrocephalus\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/evidence_b1.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for this PMID, read 2026-11-05 through the PubMed metadata tool; abstract and indexing terms only, no full text retrieved",
+ "study_id": {
+  "doi": "10.1016/j.eplepsyres.2022.106881",
+  "pmid": "35183975"
+ },
+ "workflow": "ORCH-SCIBATCH-DR-20261105 package B1 (challenge CH-SB-VGB-WHITEMATTER): white-matter and MRI safety of GABA-aminotransferase inactivators and what transfers to a brain with a hypomyelinating baseline. Question-driven reading. Prepared as a JSON file for the Orchestrator; the ledger was not written by the preparing actor. Read at abstract level: the only human source found that measures the proposed harm axis directly. Full text closed."
 }

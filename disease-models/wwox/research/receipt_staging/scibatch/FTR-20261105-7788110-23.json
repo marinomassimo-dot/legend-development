@@ -1,39 +1,39 @@
 {
-    "analysis_at": "2026-11-05T22:50:00Z",
-    "analysis_time_precision": "minute",
-    "coverage": {
-        "abstract": "read",
-        "discussion": "not_read",
-        "figures": "not_read",
-        "introduction": "not_read",
-        "limitations": "not_read",
-        "methods": "not_read",
-        "references": "not_read",
-        "results": "not_read",
-        "supplementary": "not_read",
-        "tables": "not_read"
-    },
-    "event_at": "2026-11-05T22:51:00Z",
-    "event_id": "FTR-20261105-7788110-23",
-    "evidence_basis": [
-        "abstract analysed",
-        "verbatim_locator | proposition: autopsy of a term infant exposed from the neonatal period showed no intramyelinic oedema | Abstract | \"Autopsy in the first infant showed no evidence of intramyelinic oedema\"",
-        "verbatim_locator | proposition: the exposure was monotherapy in neonatal seizures resistant to other medicines | Abstract | \"Seizures in a term infant with Ohtahara syndrome, associated with polymicrogyria\""
-    ],
-    "evidence_depth": "abstract_only",
-    "outputs": [
-        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/README.md",
-        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/evidence_b1.tsv"
-    ],
-    "prior_receipt": null,
-    "record_kind": "contemporaneous_receipt",
-    "reread_reason": "first_read",
-    "source_fingerprint": null,
-    "source_kind": "abstract",
-    "source_locator": "PubMed record for this PMID, read 2026-11-05 through the PubMed metadata tool; abstract and indexing terms only, no full text retrieved",
-    "study_id": {
-        "doi": "10.1016/s1059-1311(05)80080-9",
-        "pmid": "7788110"
-    },
-    "workflow": "ORCH-SCIBATCH-DR-20261105 package B1 (challenge CH-SB-VGB-WHITEMATTER): white-matter and MRI safety of GABA-aminotransferase inactivators and what transfers to a brain with a hypomyelinating baseline. Question-driven reading. Prepared as a JSON file for the Orchestrator; the ledger was not written by the preparing actor. Read at abstract level as the earliest human exposure window with a negative autopsy; full text closed."
+ "analysis_at": "2026-11-05T22:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T22:51:00Z",
+ "event_id": "FTR-20261105-7788110-23",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: autopsy of a term infant exposed from the neonatal period showed no intramyelinic oedema | Abstract | \"Autopsy in the first infant showed no evidence of intramyelinic oedema\"",
+  "verbatim_locator | proposition: the exposure was monotherapy in neonatal seizures resistant to other medicines | Abstract | \"Seizures in a term infant with Ohtahara syndrome, associated with polymicrogyria\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/evidence_b1.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for this PMID, read 2026-11-05 through the PubMed metadata tool; abstract and indexing terms only, no full text retrieved",
+ "study_id": {
+  "doi": "10.1016/s1059-1311(05)80080-9",
+  "pmid": "7788110"
+ },
+ "workflow": "ORCH-SCIBATCH-DR-20261105 package B1 (challenge CH-SB-VGB-WHITEMATTER): white-matter and MRI safety of GABA-aminotransferase inactivators and what transfers to a brain with a hypomyelinating baseline. Question-driven reading. Prepared as a JSON file for the Orchestrator; the ledger was not written by the preparing actor. Read at abstract level as the earliest human exposure window with a negative autopsy; full text closed."
 }

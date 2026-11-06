@@ -1,42 +1,42 @@
 {
-    "analysis_at": "2026-11-05T22:41:00Z",
-    "analysis_time_precision": "minute",
-    "coverage": {
-        "abstract": "read",
-        "discussion": "read",
-        "figures": "captions_only",
-        "introduction": "read",
-        "limitations": "read",
-        "methods": "read",
-        "references": "not_read",
-        "results": "read",
-        "supplementary": "not_read",
-        "tables": "read"
-    },
-    "event_at": "2026-11-05T22:42:00Z",
-    "event_id": "FTR-20261105-36601084-23",
-    "evidence_basis": [
-        "coverage map",
-        "verbatim_locator | proposition: 38 of 172 children given vigabatrin for infantile spasms developed the brain MRI abnormality, a rate of 22.1 percent | Abstract, Results | \"The study enrolled 172 children with IS who received VGB. VABAM was observed in 38 patients (22.1%)\"",
-        "verbatim_locator | proposition: neither age at first exposure nor exposure during infancy nor peak, cumulative or duration of exposure was associated with the abnormality in this cohort | Discussion | \"In the final regression analysis, we found no risk factors associated with VABAM\"",
-        "verbatim_locator | proposition: the authors propose that an inherently abnormal baseline MRI could cause the abnormality to be overlooked | Discussion | \"TSC patients inherently have brain abnormalities on MRI, and therefore VABAM could be overlooked\"",
-        "verbatim_locator | proposition: the rate was lower in the tuberous sclerosis group than in the group with other causes | Abstract | \"the incidence of VABAM was significantly lower in the 80 patients with IST than in the 92 patients with IS caused by other etiologies\"",
-        "verbatim_locator | proposition: 13 of the 38 with the abnormality were symptomatic and 25 were not | Results | \"There were 13 (34.2%) patients with symptomatic VABAM; the other 25 (65.8%) were asymptomatic\""
-    ],
-    "evidence_depth": "partial_fulltext_read",
-    "outputs": [
-        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/README.md",
-        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/evidence_b1.tsv"
-    ],
-    "prior_receipt": null,
-    "record_kind": "contemporaneous_receipt",
-    "reread_reason": "first_read",
-    "source_fingerprint": null,
-    "source_kind": "fulltext_remote",
-    "source_locator": "Europe PMC fullTextXML for the PMC record PMC9806385, fetched 2026-11-05; sections listed in coverage read in the converted text; figures not viewed; bytes kept outside the repository and not saved in it",
-    "study_id": {
-        "doi": "10.1177/17562864221138148",
-        "pmid": "36601084"
-    },
-    "workflow": "ORCH-SCIBATCH-DR-20261105 package B1 (challenge CH-SB-VGB-WHITEMATTER): white-matter and MRI safety of GABA-aminotransferase inactivators and what transfers to a brain with a hypomyelinating baseline. Question-driven reading. Prepared as a JSON file for the Orchestrator; the ledger was not written by the preparing actor. Read for incidence, age and exposure dependence, aetiology, co-therapy and detection bias. Supplementary tables S1 to S3 were named in the text and not retrieved."
+ "analysis_at": "2026-11-05T22:41:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-05T22:42:00Z",
+ "event_id": "FTR-20261105-36601084-23",
+ "evidence_basis": [
+  "coverage map",
+  "verbatim_locator | proposition: 38 of 172 children given vigabatrin for infantile spasms developed the brain MRI abnormality, a rate of 22.1 percent | Abstract, Results | \"The study enrolled 172 children with IS who received VGB. VABAM was observed in 38 patients (22.1%)\"",
+  "verbatim_locator | proposition: neither age at first exposure nor exposure during infancy nor peak, cumulative or duration of exposure was associated with the abnormality in this cohort | Discussion | \"In the final regression analysis, we found no risk factors associated with VABAM\"",
+  "verbatim_locator | proposition: the authors propose that an inherently abnormal baseline MRI could cause the abnormality to be overlooked | Discussion | \"TSC patients inherently have brain abnormalities on MRI, and therefore VABAM could be overlooked\"",
+  "verbatim_locator | proposition: the rate was lower in the tuberous sclerosis group than in the group with other causes | Abstract | \"the incidence of VABAM was significantly lower in the 80 patients with IST than in the 92 patients with IS caused by other etiologies\"",
+  "verbatim_locator | proposition: 13 of the 38 with the abnormality were symptomatic and 25 were not | Results | \"There were 13 (34.2%) patients with symptomatic VABAM; the other 25 (65.8%) were asymptomatic\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/evidence_b1.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC fullTextXML for the PMC record PMC9806385, fetched 2026-11-05; sections listed in coverage read in the converted text; figures not viewed; bytes kept outside the repository and not saved in it",
+ "study_id": {
+  "doi": "10.1177/17562864221138148",
+  "pmid": "36601084"
+ },
+ "workflow": "ORCH-SCIBATCH-DR-20261105 package B1 (challenge CH-SB-VGB-WHITEMATTER): white-matter and MRI safety of GABA-aminotransferase inactivators and what transfers to a brain with a hypomyelinating baseline. Question-driven reading. Prepared as a JSON file for the Orchestrator; the ledger was not written by the preparing actor. Read for incidence, age and exposure dependence, aetiology, co-therapy and detection bias. Supplementary tables S1 to S3 were named in the text and not retrieved."
 }

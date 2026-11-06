@@ -182,8 +182,8 @@ that string and not as a list append.
 
 > "External precedents do not relieve the feasibility problem; they sharpen it. No external post-onset arm
 > treats an animal with the lifespan of this null, so the design options stay the three already named. Two
-> external sources treated short-lived nulls later than the perinatal window, which makes the constraint
-> vector-limited as much as biology-limited."
+> external sources treated nulls with short lives later with a modest survival benefit (abstract level), so a
+> vector contribution to the perinatal-only window is possible and unmeasured."
 
 **`window_state` — no change proposed.** All rows are `OTHER_DISEASE_PRECEDENT`. The closed vocabulary in
 `view/work_order.json` has four values, the fourth being `symptom_suppression_reversible`, which is named

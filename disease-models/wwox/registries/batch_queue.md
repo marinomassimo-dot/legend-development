@@ -82,9 +82,9 @@ time; it does not redistribute or license the article text.
 | Status | Records | Share |
 |---|---:|---:|
 | **Not found by identifier** — run the intake gate | 261 | 37% |
-| **Catalogued, never processed** — the reading debt | 124 | 18% |
+| **Catalogued, never processed** — the reading debt | 123 | 17% |
 | Known to the tracking log only | 83 | 12% |
-| Processed from the abstract | 3 | 0% |
+| Processed from the abstract | 4 | 1% |
 | Partial full text read | 69 | 10% |
 | Full text read | 166 | 24% |
 
@@ -213,7 +213,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [17609426](https://pubmed.ncbi.nlm.nih.gov/17609426/) | 2007 | ✅ | Journal Article; Multicenter Study; Research Support, Non-U.S. Gov't | catalogued only | Gene mapping and expression analysis of 16q loss of heterozygosity identifies WWOX and CYLD as being important in determining clinical outcome in multiple myeloma. |
 | [15798093](https://pubmed.ncbi.nlm.nih.gov/15798093/) | 2005 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | catalogued only | Components of DNA damage checkpoint pathway regulate UV exposure-dependent alterations of gene expression of FHIT and WWOX at chromosome fragile sites. |
 | [15073846](https://pubmed.ncbi.nlm.nih.gov/15073846/) | 2004 | ✅ | Journal Article; Research Support, Non-U.S. Gov't; Research Support, U.S. Gov't, P.H.S. | catalogued only | The fragile genes FHIT and WWOX are inactivated coordinately in invasive breast carcinoma. |
-| [38407561](https://pubmed.ncbi.nlm.nih.gov/38407561/) | 2024 | — | Case Reports; Journal Article; Research Support, Non-U.S. Gov't | catalogued only | Identification of a novel splice-site WWOX variant with paternal uniparental isodisomy in a patient with infantile epileptic encephalopathy. |
 | [36336217](https://pubmed.ncbi.nlm.nih.gov/36336217/) | 2022 | — | Journal Article; Research Support, Non-U.S. Gov't | catalogued only | Exosomal miR-625-3p secreted by cancer-associated fibroblasts in colorectal cancer promotes EMT and chemotherapeutic resistance by blocking the CELF2/WWOX pathway. |
 | [33191002](https://pubmed.ncbi.nlm.nih.gov/33191002/) | 2021 | — | Journal Article | catalogued only | Virus-encoded miR-155 ortholog in Marek's disease virus promotes cell proliferation via suppressing apoptosis by targeting tumor suppressor WWOX. |
 | [34058790](https://pubmed.ncbi.nlm.nih.gov/34058790/) | 2021 | — | Journal Article | catalogued only | Synergistic effect of toosendanin and regorafenib against cell proliferation and migration by regulating WWOX signaling pathway in hepatocellular carcinoma. |
@@ -573,7 +572,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [41776383](https://pubmed.ncbi.nlm.nih.gov/41776383/) | 2026 | — | Journal Article; Multicenter Study | screened | Pharmacogenomics of response to interferon-beta and glatiramer acetate in Multiple Sclerosis: A multi-centric study. |
 | [28151481](https://pubmed.ncbi.nlm.nih.gov/28151481/) | 2017 | ✅ | Journal Article; Retracted Publication | screened | 🛑 RETRACTED — Epigenetic regulation of HGF/Met receptor axis is critical for the outgrowth of bone metastasis from breast carcinoma. |
 
-*(showing all 468 outstanding records)*
+*(showing all 467 outstanding records)*
 
 ## Already processed from this seed
 
@@ -585,6 +584,7 @@ for an entirely unprocessed record.
 |---|---:|:---:|---|---|---|
 | [28373548](https://pubmed.ncbi.nlm.nih.gov/28373548/) | 2017 | ✅ | full text | receipt FTR-20260909-28373548-01 | ℹ️ EXPRESSION-OF-CONCERN NOTICE — Editorial Expression of Concern: WWOX gene restoration prevents lung cancer growth in vitro and in vivo. |
 | [31752354](https://pubmed.ncbi.nlm.nih.gov/31752354/) | 2019 | ✅ | abstract only | receipt FTR-20260920-31752354-01 | WWOX Possesses N-Terminal Cell Surface-Exposed Epitopes WWOX7-21 and WWOX7-11 for Signaling Cancer Growth Suppression and Prevention In Vivo. |
+| [38407561](https://pubmed.ncbi.nlm.nih.gov/38407561/) | 2024 | — | abstract only | receipt FTR-20261105-38407561-21 | Identification of a novel splice-site WWOX variant with paternal uniparental isodisomy in a patient with infantile epileptic encephalopathy. |
 | [41124647](https://pubmed.ncbi.nlm.nih.gov/41124647/) | 2026 | ✅ | partial full text | receipt FTR-20261004-41124647-03 | Genetic and Functional Evidence Links Germline Biallelic Inactivating Variants in WWOX to Histological Mixed-Type Thyroid Cancer. |
 | [42523332](https://pubmed.ncbi.nlm.nih.gov/42523332/) | 2026 | ✅ | partial full text | PAPER 542 | Golgi CATCHR complexes function as organizing hubs for vesicle tethering and fusion. |
 | [41228229](https://pubmed.ncbi.nlm.nih.gov/41228229/) | 2025 | ✅ | partial full text | receipt FTR-20260921-41228229-01 | The Role of WWOX in Cancer Progression: Mechanisms and Therapeutic Potential. |
@@ -822,7 +822,7 @@ for an entirely unprocessed record.
 | [21476439](https://pubmed.ncbi.nlm.nih.gov/21476439/) | 2011 | — | full text | PAPER 244 | WWOX oxidoreductase--substrate and enzymatic characterization. |
 | [16288044](https://pubmed.ncbi.nlm.nih.gov/16288044/) | 2005 | — | full text | PAPER 569 | Activated tyrosine kinase Ack1 promotes prostate tumorigenesis: role of Ack1 in polyubiquitination of tumor suppressor Wwox. |
 
-*(showing all 238 processed records from the seed)*
+*(showing all 239 processed records from the seed)*
 
 ## How to work one
 

@@ -1,39 +1,39 @@
 {
-    "analysis_at": "2026-11-05T22:46:00Z",
-    "analysis_time_precision": "minute",
-    "coverage": {
-        "abstract": "read",
-        "discussion": "not_read",
-        "figures": "not_read",
-        "introduction": "not_read",
-        "limitations": "not_read",
-        "methods": "not_read",
-        "references": "not_read",
-        "results": "not_read",
-        "supplementary": "not_read",
-        "tables": "not_read"
-    },
-    "event_at": "2026-11-05T22:47:00Z",
-    "event_id": "FTR-20261105-9168839-23",
-    "evidence_basis": [
-        "abstract analysed",
-        "verbatim_locator | proposition: exposure of the immature rat brain at amounts the authors call clinically comparable reduced myelin staining and killed glial cells in white matter | Abstract | \"We observed decreased myelin staining in the external capsule, axonal degeneration in white matter, evidence of glial cell death in the white matter\"",
-        "verbatim_locator | proposition: no myelin vacuolation was detected in that experiment | Abstract | \"We did not detect myelin vacuolation\""
-    ],
-    "evidence_depth": "abstract_only",
-    "outputs": [
-        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/README.md",
-        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/evidence_b1.tsv"
-    ],
-    "prior_receipt": null,
-    "record_kind": "contemporaneous_receipt",
-    "reread_reason": "first_read",
-    "source_fingerprint": null,
-    "source_kind": "abstract",
-    "source_locator": "PubMed record for this PMID, read 2026-11-05 through the PubMed metadata tool; abstract and indexing terms only, no full text retrieved",
-    "study_id": {
-        "doi": "10.1006/exnr.1997.6412",
-        "pmid": "9168839"
-    },
-    "workflow": "ORCH-SCIBATCH-DR-20261105 package B1 (challenge CH-SB-VGB-WHITEMATTER): white-matter and MRI safety of GABA-aminotransferase inactivators and what transfers to a brain with a hypomyelinating baseline. Question-driven reading. Prepared as a JSON file for the Orchestrator; the ledger was not written by the preparing actor. Read at abstract level: myelin loss and gliopathy as an endpoint separate from vacuolation. Full text closed."
+ "analysis_at": "2026-11-05T22:46:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T22:47:00Z",
+ "event_id": "FTR-20261105-9168839-23",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: exposure of the immature rat brain at amounts the authors call clinically comparable reduced myelin staining and killed glial cells in white matter | Abstract | \"We observed decreased myelin staining in the external capsule, axonal degeneration in white matter, evidence of glial cell death in the white matter\"",
+  "verbatim_locator | proposition: no myelin vacuolation was detected in that experiment | Abstract | \"We did not detect myelin vacuolation\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/evidence_b1.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for this PMID, read 2026-11-05 through the PubMed metadata tool; abstract and indexing terms only, no full text retrieved",
+ "study_id": {
+  "doi": "10.1006/exnr.1997.6412",
+  "pmid": "9168839"
+ },
+ "workflow": "ORCH-SCIBATCH-DR-20261105 package B1 (challenge CH-SB-VGB-WHITEMATTER): white-matter and MRI safety of GABA-aminotransferase inactivators and what transfers to a brain with a hypomyelinating baseline. Question-driven reading. Prepared as a JSON file for the Orchestrator; the ledger was not written by the preparing actor. Read at abstract level: myelin loss and gliopathy as an endpoint separate from vacuolation. Full text closed."
 }
