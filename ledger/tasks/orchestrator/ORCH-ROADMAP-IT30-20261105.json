@@ -166,7 +166,7 @@
      "step": "S13 Tests, battery on exact SHA, integration, push, CI, cleanup",
      "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "note": "candidate to freeze after this write: battery in a clean clone that imitates the CI (no files/, no catalogue cache, full history); verdict will be recorded as closure-only"
+     "note": "battery on the exact frozen SHA e90ad3fe93224e2debeacdd604dd332ce484eac0, clean clone imitating the CI (no files/, no catalogue cache, full history): REGRESSION VERDICT PASS WITH SKIPS (210 targets, 40 skipped). History kept: runs on 94c77107 and 1cbf4f42 returned FAIL (title cache, ranking not regenerated; depth downgrade by a later shallow receipt, vigabatrin-card assertions missing from the pertinence table, a multi-source observation with a list in the pmid field); each fixed in the next candidate and re-run on its own SHA. This record commit is closure-only; the battery is not attributed to it. Landing, push, CI on the pushed SHA and the served-site check are still to do"
     }
    ]
   },
