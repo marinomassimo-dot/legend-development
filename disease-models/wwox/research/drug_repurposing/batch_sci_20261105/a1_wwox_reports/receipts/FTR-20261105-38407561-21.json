@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-05T22:59:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-05T23:25:00Z",
+ "event_id": "FTR-20261105-38407561-21",
+ "evidence_basis": [
+  "An abstract is not a reading. Registry status: corpus placeholder, never read, paywalled (no PMCID). The abstract supports one conditional datum: seizures intractable despite antiepileptic drugs and ACTH. The parental side of the isodisomy, printed in the title, is deliberately not reproduced.",
+  "verbatim_locator | proposition: Seizures intractable despite ACTH | Abstract | \"Despite altering the type and dosage of antiepileptic drugs and ACTH therapy, the seizures were intractable.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/cases_a1.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/denominators_a1.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record retrieved through the PubMed tools on 2026-11-05; abstract text only",
+ "study_id": {
+  "doi": "10.1002/ajmg.a.63575",
+  "pmid": "38407561"
+ },
+ "workflow": "A1 (sb-a1), challenge CH-SB-CONCORDANCE, task ORCH-SCIBATCH-DR-20261105: question-driven reading for per-child intervention outcomes, developmental course and patient identity across WWOX-DEE reports. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

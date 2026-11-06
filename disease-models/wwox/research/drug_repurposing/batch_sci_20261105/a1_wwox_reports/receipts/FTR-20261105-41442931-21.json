@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-05T22:38:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-05T23:25:00Z",
+ "event_id": "FTR-20261105-41442931-21",
+ "evidence_basis": [
+  "An abstract is not a reading; this receipt records exactly what was consulted. Full-text routes tried on 2026-11-05: PubMed idconv (no PMCID), Europe PMC core record (not open access, subscription link only), publisher article pages through WebFetch (HTTP 403, two hosts). No preprint found in Europe PMC.",
+  "What the abstract does not state: genotype, sex, age band at exposure, duration class, reversal, and whether hormonal therapy was co-administered when the MRI changed.",
+  "verbatim_locator | proposition: Two children with VABAM; the MRI change is new during vigabatrin | Abstract | \"Brain magnetic resonance imaging during vigabatrin treatment revealed new symmetrical signal changes in the globus pallidi and thalami consistent with VABAM.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/cases_a1.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/denominators_a1.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record retrieved through the PubMed tools on 2026-11-05; abstract text only",
+ "study_id": {
+  "doi": "10.1016/j.pediatrneurol.2025.12.001",
+  "pmid": "41442931"
+ },
+ "workflow": "A1 (sb-a1), challenge CH-SB-CONCORDANCE, task ORCH-SCIBATCH-DR-20261105: question-driven reading for per-child intervention outcomes, developmental course and patient identity across WWOX-DEE reports. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-05T22:59:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T23:25:00Z",
+ "event_id": "FTR-20261105-29808465-21",
+ "evidence_basis": [
+  "Re-read of the patient data for a new question: diet exposure and developmental course in the two homozygous Q230P children. The corresponding-author contact line printed in the source is deliberately not reproduced.",
+  "verbatim_locator | proposition: Patient 2 was refractory to the ketogenic diet | Results, patient data, patient 2 | \"still refractory to multiple antiepileptic drugs and to a ketogenic diet\"",
+  "verbatim_locator | proposition: Patient 2 failed to develop motor or language skills | Results, patient data, patient 2 | \"has failed to develop any motor or language skills\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/cases_a1.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/denominators_a1.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/README.md"
+ ],
+ "prior_receipt": "FTR-20261004-29808465-03",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "0b2bce6f124ef868b0c12bb3b7eb439399ffb627f28babd424621988a52f8e49",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID29808465_Johannsen2018.pdf (read through a column-order text derivation made in scratch, not persisted)",
+ "study_id": {
+  "doi": "10.1007/s10048-018-0549-5",
+  "pmid": "29808465"
+ },
+ "workflow": "A1 (sb-a1), challenge CH-SB-CONCORDANCE, task ORCH-SCIBATCH-DR-20261105: question-driven reading for per-child intervention outcomes, developmental course and patient identity across WWOX-DEE reports. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
