@@ -261,14 +261,18 @@ def prior_reading(root: Path, disease: str, pmid: str) -> dict[str, Any]:
             "record_kind": event.get("record_kind"),
         })
         depth = str(event.get("evidence_depth") or "")
-        if depth:
+        # The depth of a paper is the deepest standing reading, not the latest one: a later passage-level or
+        # abstract-level query of a paper that was read completely does not make it unread (IT30: recording
+        # the receipts of a targeted re-query downgraded a complete read to `queried_not_full_read`).
+        if depth and receipts.DEPTHS.get(depth, -1) >= receipts.DEPTHS.get(str(state["depth"]), -1):
             state["depth"] = depth
-        if isinstance(coverage, dict):
-            # `read` and `not_present` are settled; `captions_only`, `unavailable` and
-            # `not_read` are the sections a resumed reading owes, and the brief's M0 says so.
-            state["uncovered"] = sorted(
-                f"{key}={str(value).strip()}" for key, value in coverage.items()
-                if str(value).strip() not in {"read", "not_present"})
+            if isinstance(coverage, dict):
+                # `read` and `not_present` are settled; `captions_only`, `unavailable` and
+                # `not_read` are the sections a resumed reading owes, and the brief's M0 says so.
+                # They are those of the deepest reading.
+                state["uncovered"] = sorted(
+                    f"{key}={str(value).strip()}" for key, value in coverage.items()
+                    if str(value).strip() not in {"read", "not_present"})
     return state
 
 

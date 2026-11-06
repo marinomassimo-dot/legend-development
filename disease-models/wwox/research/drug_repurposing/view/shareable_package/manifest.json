@@ -18,17 +18,17 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 12505,
+    "values": 12510,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
     "class": "OWN",
-    "values": 6922,
+    "values": 6923,
     "why": "card text and computed positions (provenance of the prose: see text audit)"
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
     "class": "BIBLIO",
-    "values": 595,
+    "values": 573,
     "why": "PMID / DOI of a cited work"
    },
    "^\\.cur\\.cands\\[\\]\\.access\\[\\]$": {
@@ -38,12 +38,12 @@
    },
    "^\\.cur\\.cands\\[\\]\\.brief\\.sources\\[\\]\\.(kind|id)$": {
     "class": "BIBLIO",
-    "values": 260,
+    "values": 248,
     "why": "PMID / ChEMBL identifier of an essential source of the one-page synthesis"
    },
    "^\\.cur\\.cands\\[\\]\\.brief\\.sources\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 390,
+    "values": 372,
     "why": "title, journal, year of an essential source (bibliographic facts)"
    },
    "^\\.cur\\.cands\\[\\]\\.chembl\\[\\]$": {
@@ -53,7 +53,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.pmids\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 885,
+    "values": 852,
     "why": "title, journal, year of a cited work (bibliographic facts)"
    },
    "^\\.cur\\.evidence_graph\\.chains\\[\\]\\.(nodes\\[\\]\\.pmids\\[\\]|edges\\[\\]\\.src\\.id)$": {
@@ -88,7 +88,7 @@
    },
    "^\\.cur\\.ranking\\.units\\[\\]\\.(pmids\\[\\]|views\\.(broad|partial)\\.evidence\\.pmids\\[\\])$": {
     "class": "BIBLIO",
-    "values": 273,
+    "values": 264,
     "why": "PMID of a cited work (ranking)"
    },
    "^\\.excluded_detail\\[\\]\\.(id|name|src)$": {
@@ -123,12 +123,12 @@
    },
    "^\\.pairs\\[\\]\\.(l2|l3|l4|x|n|r)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 33869,
+    "values": 33889,
     "why": "levels 2-4, indices: computed from cards and needs"
    },
    "^\\.pairs\\[\\]\\.l1\\.(state|n_assoc|readout_only|why|stale)$": {
     "class": "OWN",
-    "values": 12920,
+    "values": 12925,
     "why": "level-1 state, association count and note computed by the coverage tool"
    },
    "^\\.pairs\\[\\]\\.l1\\.(targets|pathway)\\[\\]$": {
@@ -143,12 +143,12 @@
    },
    "^\\.pairs\\[\\]\\.l1\\.withheld$": {
     "class": "COUNT",
-    "values": 2584,
+    "values": 2585,
     "why": "number of association rows withheld by the allowlist"
    },
    "^\\.pairs\\[\\]\\.p\\.": {
     "class": "OWN",
-    "values": 15609,
+    "values": 15662,
     "why": "priority criteria computed by the coverage tool"
    },
    "^\\.pairs\\[\\]\\.p\\.cr\\.dir\\[\\]\\[\\]$": {
@@ -206,8 +206,8 @@
    "PMID": 136
   },
   "links": {
-   "distinct_hrefs": 171,
-   "external_public": 89,
+   "distinct_hrefs": 170,
+   "external_public": 88,
    "hosts": [
     "civicdb.org",
     "open.fda.gov",
@@ -224,7 +224,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3364,
+    "forbidden-name": 3372,
     "forbidden-wording": 21
    },
    "co_attested_wording": [
@@ -364,8 +364,8 @@
   "excluded_rows_with_names_full": 3,
   "excluded_rows_with_names_shareable": 0,
   "needs": 23,
-  "pairs_total": 2584,
-  "pairs_with_status_class_full": 912,
+  "pairs_total": 2585,
+  "pairs_with_status_class_full": 913,
   "pairs_with_status_class_shareable": 0,
   "pairs_with_target_list_full": 2204,
   "pairs_with_target_list_shareable": 13,
@@ -467,10 +467,10 @@
   "view_schema": "legend.wwox.repurposing_view/2"
  },
  "embedded_field_classes": {
-  "BIBLIO": 2782,
-  "COUNT": 11599,
+  "BIBLIO": 2688,
+  "COUNT": 11600,
   "ID": 4547,
-  "OWN": 84266,
+  "OWN": 84350,
   "ROWNAME": 2251,
   "SRC_A": 189,
   "SRC_META": 256,
@@ -509,7 +509,7 @@
  "files": {
   "COMPARISON.md": {
    "bytes": 7422,
-   "sha256": "a7875712cacd3a0e9b473f01dacd96568023a1b37d4a37bdba23e195395f8ce7"
+   "sha256": "37bcee1e0d8b7ec00bec72142217c9f48d9030f5a5a4345732644d4921235306"
   },
   "LICENSES/CC-BY-4.0.txt": {
    "bytes": 18657,
@@ -529,7 +529,7 @@
   },
   "NOTICE.md": {
    "bytes": 13086,
-   "sha256": "a7338519189f0456e51847d6ffde1def0b918369481eb42082c729cf12b22b63"
+   "sha256": "15bba63206156a1981f34956eb71b7f2ac3f73a114383057378ec0f4857db10c"
   },
   "README.md": {
    "bytes": 5072,
@@ -537,7 +537,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 1999,
-   "sha256": "2429cbdc01e13ea0eadcacc3601d15310a8bf47a0ecd051ebaed4394673e3aaf"
+   "sha256": "53a424ce45ef0c1a96056b82c6b9c3f65c4bcfd6d415811a390be378bfa16113"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1726,
@@ -552,24 +552,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 4705756,
-   "sha256": "a020dd916bf681f19c5b2464b5e74d44a524b3baa8d8acf5c5ecb54f5170195b"
+   "bytes": 4709531,
+   "sha256": "fbfe5a254bed8d03bd0502475173d12b57d5964625086662663b2b11b6e94a1a"
   },
   "es.html": {
-   "bytes": 4691029,
-   "sha256": "275880ee2b3b5d46e835a5c964d5befcda31ab1264fd54b6bedcf56840cb327d"
+   "bytes": 4694807,
+   "sha256": "ab4061a8875cb772e7815fef7094c71bc0b359669bf2b414dfd694b7c3cdfef7"
   },
   "fr.html": {
-   "bytes": 4712734,
-   "sha256": "eedc93b640334a38a692e19ec5c726d100b471a3feaa92461cc3a8fba4617055"
+   "bytes": 4716514,
+   "sha256": "4ab28659abcbf2e00491fc8c23bac3f2ace0ab86f1a7a7ef176e2bce351d6260"
   },
   "index.html": {
-   "bytes": 4626343,
-   "sha256": "b6ac59ea38b24ff4c08c1323a8b08ae5f197b8ea4a28364b0b0d6757ec0e975b"
+   "bytes": 4630118,
+   "sha256": "dd69ce32ecc910027d0d0dc2041d4d8543a576fa0af5e5a842066a76d3cf73f3"
   },
   "it.html": {
-   "bytes": 4667423,
-   "sha256": "4e831611c2b2c6c6fa4e7812a1089f245450154f6e9af355478cff170ddd6228"
+   "bytes": 4671200,
+   "sha256": "25203b22d0a966df0df84cf88e5465b29935804d436e71a5b505029a8ae8ddfa"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
@@ -635,7 +635,7 @@
   ],
   "lead_field_redactions": 11,
   "pair_status_rule": "pairs[].p.cr.pha[1] (status classes of the row) is dropped in the shareable build: a status class derives from ChEMBL max_phase, DGIdb approved flags, MATRIX and openFDA together, and the build does not re-derive a class-A-only status per row.",
-  "pairs_status_class_dropped": 912,
+  "pairs_status_class_dropped": 913,
   "repository_file_names_described": 0,
   "rule": "IT5 P13 fix. Own analysis stays in the shareable build: a conclusion at the level of a need, a class or a card subject, in our own words, short, attributed to a published work. Withheld: (1) a sentence that states a compound-target(-action) pair together with its database of origin when the pair is asserted only by a class-B/C catalogue source; (2) a compound named in prose whose only provenance in the repository is a class-B/C catalogue row (it appears in no cited full text and is not a card subject); (3) a per-compound status, phase, approval or access statement attributed to a class-B/C source; (4) repository file names, which cannot be used outside the repository. The replacement keeps the research conclusion and names the withheld source class with the phrase in withheld_phrase. The FULL build keeps everything. The audit enforces (1) and (2) by derivation from the catalogue, (3) and (4) by pattern, and every redaction below must match exactly once or more: a stale redaction fails the build.",
   "withheld_phrase": "dato di una fonte non inclusa in questa versione"

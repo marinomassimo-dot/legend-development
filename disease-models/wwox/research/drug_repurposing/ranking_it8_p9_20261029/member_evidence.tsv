@@ -28,8 +28,8 @@ U18	class of molecules	class or mechanism level (card-level assertions and unnam
 U19	class of molecules	Sirolimus	molecule	no	0		no WWOX-system assertion attributed to this member				0
 U19	class of molecules	class or mechanism level (card-level assertions and unnamed members)	class_level	no	0		no WWOX-system assertion attributed to this member				0
 U20	class of molecules	Cpp-115 Free Base	molecule	no	0		no WWOX-system assertion attributed to this member; 4 outside-WWOX assertion(s) attributed				4
-U20	class of molecules	Vigabatrin	molecule	yes	7	2 benefit, 3 null, 1 partial_benefit, 1 unresolved	clinical cessation of epileptic spasms: unknown	30361190; 35573960; 36537114; 37583270; 39101447; 42092735	queried_not_full_read	A-VGB-1; A-VGB-10; A-VGB-2; A-VGB-3; A-VGB-4; A-VGB-5; A-VGB-6	11
-U20	class of molecules	class or mechanism level (card-level assertions and unnamed members)	class_level	no	0		no WWOX-system assertion attributed to this member				0
+U20	class of molecules	Vigabatrin	molecule	yes	7	2 benefit, 3 null, 1 partial_benefit, 1 unresolved	clinical cessation of epileptic spasms: unknown	30361190; 35573960; 36537114; 37583270; 39101447; 42092735	queried_not_full_read	A-VGB-1; A-VGB-10; A-VGB-2; A-VGB-3; A-VGB-4; A-VGB-5; A-VGB-6	36
+U20	class of molecules	class or mechanism level (card-level assertions and unnamed members)	class_level	no	0		no WWOX-system assertion attributed to this member; 2 outside-WWOX assertion(s) attributed				2
 U21	tool compound + class of molecules	Perampanel	molecule	no	0		no WWOX-system assertion attributed to this member; 3 outside-WWOX assertion(s) attributed				3
 U21	tool compound + class of molecules	Memantine	molecule	no	0		no WWOX-system assertion attributed to this member; 9 outside-WWOX assertion(s) attributed				9
 U21	tool compound + class of molecules	Radiprodil	molecule	no	0		no WWOX-system assertion attributed to this member; 3 outside-WWOX assertion(s) attributed				3

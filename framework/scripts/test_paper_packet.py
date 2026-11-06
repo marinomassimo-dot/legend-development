@@ -74,6 +74,27 @@ class TheFirewallHolds(unittest.TestCase):
 
 
 class ThePacketCarriesTheTechnicalState(unittest.TestCase):
+    def test_a_later_shallow_query_does_not_downgrade_the_depth_of_a_complete_read(self) -> None:
+        """IT30: depth is the deepest standing reading; the uncovered sections are those of that reading."""
+        import tempfile
+        from pathlib import Path as _P
+        deep = {"event_id": "E1", "event_at": "2026-01-01T00:00:00Z", "study_id": {"pmid": "1"}, "evidence_depth": "complete_fulltext_read", "coverage": {"results": "read"}}
+        shallow = {"event_id": "E2", "event_at": "2026-02-01T00:00:00Z", "study_id": {"pmid": "1"}, "evidence_depth": "queried_not_full_read", "coverage": {"results": "not_read"}}
+        orig_load, orig_active, orig_path = pp.receipts.load_ledger, pp.receipts.active_receipts, pp.receipts.default_ledger_path
+        try:
+            with tempfile.TemporaryDirectory() as td:
+                led = _P(td) / "ledger.jsonl"; led.write_text("x")
+                pp.receipts.default_ledger_path = lambda root, disease: led
+                pp.receipts.load_ledger = lambda path: [deep, shallow]
+                pp.receipts.active_receipts = lambda ledger: ledger
+                state = pp.prior_reading(_P(td), "wwox", "1")
+        finally:
+            pp.receipts.load_ledger, pp.receipts.active_receipts, pp.receipts.default_ledger_path = orig_load, orig_active, orig_path
+        self.assertEqual("complete_fulltext_read", state["depth"])
+        self.assertEqual([], state["uncovered"])
+        self.assertEqual(2, len(state["receipts"]))
+
+
     def test_a_complete_read_reports_its_depth_and_receipts(self) -> None:
         packet = pp.build(ROOT, "wwox", LIVE_PMID)
         self.assertEqual("complete_fulltext_read", packet["prior_reading"]["depth"])

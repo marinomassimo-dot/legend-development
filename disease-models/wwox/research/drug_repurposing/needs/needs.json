@@ -3965,7 +3965,7 @@
      "direction_observed": "symptom and development apart in 4 of 6 (partial or transient improvement, development unchanged); together in 2 of 6 (both unchanged)",
      "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
      "limits": "Six children from five reports, two of them from one report; developmental statements are clinical narratives without a scale; follow-up about 5 months to 2.5 years where dated, undated in 2; co-therapy in every case; counts only. Partial improvement is not a sustained response, and an absent developmental gain is not proof that no benefit exists. The source receipts are on the ledger (batch ORCH-SCIBATCH-DR-20261105), at partial full-text depth.",
-     "pmid": "30361190, 39101447, 28721938, 35573960, 29808465",
+     "pmid": null,
      "locators": [
       {
        "kind": "document",

@@ -113,11 +113,11 @@
  ],
  "matrix": {
   "L1_documented": 2204,
-  "L1_none_found": 19,
+  "L1_none_found": 20,
   "L1_not_evaluable": 31,
   "L1_states": {
    "documented": 2204,
-   "none_found": 19,
+   "none_found": 20,
    "not_evaluable": 31,
    "pathway_member_only": 330
   },
@@ -125,7 +125,7 @@
   "L2_states": {
    "coherent": 74,
    "direction_unresolved": 431,
-   "none": 64,
+   "none": 65,
    "not_evaluable": 2004,
    "opposed": 11
   },
@@ -134,17 +134,17 @@
    "none_in_cards": 2545,
    "observed_case_level_only": 2,
    "observed_wwox_system": 8,
-   "precedent_other_disease_only": 20,
+   "precedent_other_disease_only": 21,
    "safety_signal_only": 2,
    "target_engagement_only": 7
   },
   "L4_observed": 4,
   "L4_states": {
-   "none_in_record": 2580,
+   "none_in_record": 2581,
    "observed_case_level": 1,
    "observed_experimental": 3
   },
-  "cells_nonempty": 2584,
+  "cells_nonempty": 2585,
   "cells_possible_rows_x_needs": 51773,
   "levels_are_never_summed": true,
   "row_kinds": {
@@ -1431,7 +1431,7 @@
      "intervention_target": 2
     },
     "targets": 2,
-    "wwox_system_observations": 3
+    "wwox_system_observations": 4
    },
    "NEED-SYSTEMIC-GLYCAEMIA-GROWTH": {
     "abstained_rows_by_class": {},
@@ -2060,33 +2060,33 @@
   }
  },
  "observations": {
-  "assertions_listed_in_pertinence_table": 141,
+  "assertions_listed_in_pertinence_table": 168,
   "assertions_not_assessed_for_pertinence_not_counted": 8,
   "axis_cards_not_interventions": 3,
   "card_interventions": 36,
-  "data_assertions_in_intervention_cards": 149,
+  "data_assertions_in_intervention_cards": 176,
   "listed_by_evidence_kind": {
    "case_report_uninformative": 3,
    "case_report_wwox_clinical": 9,
    "effect_in_wild_type_arm": 2,
    "genotype_comparison_vs_wild_type": 4,
    "label_statement": 5,
-   "out_of_scope_endpoint": 6,
+   "out_of_scope_endpoint": 11,
    "readout_in_wwox_system": 18,
-   "readout_other_disease": 60,
-   "safety_signal": 13,
+   "readout_other_disease": 70,
+   "safety_signal": 25,
    "target_engagement_assay": 26
   },
   "listed_by_sign": {
    "benefit": 54,
-   "harm": 20,
+   "harm": 35,
    "mixed": 1,
    "normalised_vs_wild_type": 2,
    "not_normalised_vs_wild_type": 2,
-   "null": 27,
+   "null": 29,
    "partial_benefit": 6,
    "unquantified": 2,
-   "unresolved": 32
+   "unresolved": 42
   },
   "note": "an assertion is counted per (assertion, need) row of the pertinence table; L3/L4 cells count (row, need) pairs"
  },
@@ -2106,7 +2106,7 @@
    "consistent_mechanism_candidate": 74,
    "exploration_candidate": 467,
    "insufficient_data": 381,
-   "no_catalogue_link_found": 14,
+   "no_catalogue_link_found": 15,
    "opposite_mechanism": 2,
    "source_queried_without_result": 5
   },
@@ -2114,7 +2114,7 @@
    "consistent_mechanism_candidate": 74,
    "exploration_candidate": 467,
    "insufficient_data": 381,
-   "no_catalogue_link_found": 14,
+   "no_catalogue_link_found": 15,
    "opposite_mechanism": 2,
    "source_queried_without_result": 5
   },
@@ -2122,7 +2122,7 @@
    "consistent_mechanism_candidate": 74,
    "exploration_candidate": 416,
    "insufficient_data": 330,
-   "no_catalogue_link_found": 12,
+   "no_catalogue_link_found": 13,
    "opposite_mechanism": 2,
    "source_queried_without_result": 4
   },
@@ -2130,7 +2130,7 @@
   "pairs_not_prioritised": {
    "not_prioritised_no_card_no_coherence_no_approval_or_access": 1641
   },
-  "records": 943
+  "records": 944
  },
  "schema": "legend.wwox.coverage/1",
  "search_completeness": {

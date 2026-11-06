@@ -18,10 +18,20 @@
    "title": "Selfotel in acute ischemic stroke : possible neurotoxic effects of an NMDA antagonist.",
    "year": "2000"
   },
+  "10840396": {
+   "journal": "Epilepsia",
+   "title": "Effect of long-term vigabatrin administration on the immature rat brain.",
+   "year": "2000"
+  },
   "14695174": {
    "journal": "Cancer Res",
    "title": "An opposing view on WWOX protein function as a tumor suppressor.",
    "year": "2003"
+  },
+  "15150739": {
+   "journal": "Synapse",
+   "title": "Development of vigabatrin-induced lesions in the rat brain studied by magnetic resonance imaging, histology, and immunocytochemistry.",
+   "year": "2004"
   },
   "15843612": {
    "journal": "J Neurosci",
@@ -58,6 +68,26 @@
    "title": "Evaluation of long-term treatment of children with congenital lactic acidosis with dichloroacetate.",
    "year": "2008"
   },
+  "18783433": {
+   "journal": "Epilepsia",
+   "title": "Cerebral MRI abnormalities associated with vigabatrin therapy.",
+   "year": "2009"
+  },
+  "19054414": {
+   "journal": "Epilepsia",
+   "title": "Magnetic resonance imaging abnormalities associated with vigabatrin in patients with epilepsy.",
+   "year": "2009"
+  },
+  "19194884": {
+   "journal": "Ann Neurol",
+   "title": "Taurine deficiency is a cause of vigabatrin-induced retinal phototoxicity.",
+   "year": "2009"
+  },
+  "19258289": {
+   "journal": "J Child Neurol",
+   "title": "Transient brain magnetic resonance imaging hyperintensity in basal ganglia and brain stem of epileptic infants treated with vigabatrin.",
+   "year": "2009"
+  },
   "19261873": {
    "journal": "J Neurosci",
    "title": "Mg2+ imparts NMDA receptor subtype selectivity to the Alzheimer's drug memantine.",
@@ -68,6 +98,11 @@
    "title": "Transforming growth factor beta1 signaling via interaction with cell surface Hyal-2 and recruitment of WWOX/WOX1.",
    "year": "2009"
   },
+  "1940119": {
+   "journal": "J Child Neurol",
+   "title": "Neuropathologic findings in patients receiving long-term vigabatrin therapy for chronic intractable epilepsy.",
+   "year": "1991"
+  },
   "19773459": {
    "journal": "J Child Neurol",
    "title": "Pathological evidence of vacuolar myelinopathy in a child following vigabatrin administration.",
@@ -76,6 +111,11 @@
   "20152124": {
    "journal": "Neuron",
    "title": "Enhancement of learning and memory by elevating brain magnesium.",
+   "year": "2010"
+  },
+  "20384718": {
+   "journal": "Epilepsia",
+   "title": "Vigabatrin-associated reversible MRI signal changes in patients with infantile spasms.",
    "year": "2010"
   },
   "20435238": {
@@ -113,6 +153,11 @@
    "title": "Can magnesium supplementation reduce seizures in people with epilepsy? A hypothesis.",
    "year": "2012"
   },
+  "23194644": {
+   "journal": "J Neuroimmunol",
+   "title": "Systemic treatment with the inhibitory neurotransmitter γ-aminobutyric acid aggravates experimental autoimmune encephalomyelitis by affecting proinflammatory immune responses.",
+   "year": "2013"
+  },
   "23536761": {
    "journal": "PLoS One",
    "title": "Bumetanide enhances phenobarbital efficacy in a rat model of hypoxic neonatal seizures.",
@@ -136,6 +181,11 @@
   "25012504": {
    "journal": "Cell Death Differ",
    "title": "Tumor suppressor WWOX regulates glucose metabolism via HIF1α modulation.",
+   "year": "2014"
+  },
+  "25062867": {
+   "journal": "Int J Pharm",
+   "title": "The anti-epileptic drug substance vigabatrin inhibits taurine transport in intestinal and renal cell culture models.",
    "year": "2014"
   },
   "25449033": {
@@ -193,14 +243,34 @@
    "title": "Oligodendroglial NMDA Receptors Regulate Glucose Import and Axonal Energy Metabolism.",
    "year": "2016"
   },
+  "2757909": {
+   "journal": "Br J Clin Pharmacol",
+   "title": "Effects of vigabatrin and of GABA on myelinated rat cerebellar cultures: preliminary data.",
+   "year": "1989"
+  },
   "27668180": {
    "journal": "Epilepsy Behav Case Rep",
    "title": "A case report on the efficacy of vigabatrin analogue (1S, 3S)-3-amino-4-difluoromethylenyl-1-cyclopentanoic acid (CPP-115) in a patient with infantile spasms.",
    "year": "2016"
   },
+  "2767014": {
+   "journal": "Epilepsia",
+   "title": "The neuropathology of vigabatrin.",
+   "year": "1989"
+  },
+  "27796063": {
+   "journal": "Glia",
+   "title": "Endogenous GABA controls oligodendrocyte lineage cell number, myelination, and CNS internode length.",
+   "year": "2017"
+  },
   "28100400": {
    "journal": "Elife",
    "title": "Replication Study: BET bromodomain inhibition as a therapeutic strategy to target c-Myc.",
+   "year": "2017"
+  },
+  "28230253": {
+   "journal": "Epilepsia",
+   "title": "Risk of vigabatrin-associated brain abnormalities on MRI in the treatment of infantile spasms is dose-dependent.",
    "year": "2017"
   },
   "28447936": {
@@ -262,6 +332,11 @@
    "journal": "Int J Mol Sci",
    "title": "Loss of Wwox Causes Defective Development of Cerebral Cortex with Hypomyelination in a Rat Model of Lethal Dwarfism with Epilepsy.",
    "year": "2019"
+  },
+  "31349008": {
+   "journal": "Neuroscience",
+   "title": "Oligodendrocyte Differentiation and Myelination Is Potentiated via GABA(B) Receptor Activation.",
+   "year": "2020"
   },
   "31539780": {
    "journal": "Eur J Med Chem",
@@ -333,6 +408,16 @@
    "title": "Modeling genetic epileptic encephalopathies using brain organoids.",
    "year": "2021"
   },
+  "34369389": {
+   "journal": "JCI Insight",
+   "title": "Antisense oligonucleotide treatment rescues UBE3A expression and multiple phenotypes of an Angelman syndrome mouse model.",
+   "year": "2021"
+  },
+  "34617595": {
+   "journal": "Epilepsia",
+   "title": "OV329, a novel highly potent γ-aminobutyric acid aminotransferase inactivator, induces pronounced anticonvulsant effects in the pentylenetetrazole seizure threshold test and in amygdala-kindled rats.",
+   "year": "2021"
+  },
   "34634460": {
    "journal": "Neurobiol Dis",
    "title": "Altered neocortical oscillations and cellular excitability in an in vitro Wwox knockout mouse model of epileptic encephalopathy.",
@@ -342,6 +427,16 @@
    "journal": "EMBO Mol Med",
    "title": "Neonatal neuronal WWOX gene therapy rescues Wwox null phenotypes.",
    "year": "2021"
+  },
+  "35065785": {
+   "journal": "Lancet",
+   "title": "Lentiviral haematopoietic stem-cell gene therapy for early-onset metachromatic leukodystrophy: long-term results from a non-randomised, open-label, phase 1/2 trial and expanded access.",
+   "year": "2022"
+  },
+  "35183975": {
+   "journal": "Epilepsy Res",
+   "title": "Elevation of brain gamma-aminobutyric acid levels is associated with vigabatrin-associated brain abnormalities on magnetic resonance imaging.",
+   "year": "2022"
   },
   "3521930": {
    "journal": "Circ Shock",
@@ -373,9 +468,19 @@
    "title": "A Phenotypic-Driven Approach for the Diagnosis of WOREE Syndrome.",
    "year": "2022"
   },
+  "35715566": {
+   "journal": "Nat Med",
+   "title": "Onasemnogene abeparvovec for presymptomatic infants with two copies of SMN2 at risk for spinal muscular atrophy type 1: the Phase III SPR1NT trial.",
+   "year": "2022"
+  },
   "35730570": {
    "journal": "JCI Insight",
    "title": "Dichloroacetate improves systemic energy balance and feeding behavior during sepsis.",
+   "year": "2022"
+  },
+  "35980256": {
+   "journal": "Glia",
+   "title": "GABA(B) receptor agonist baclofen promotes central nervous system remyelination.",
    "year": "2022"
   },
   "36278433": {
@@ -392,6 +497,11 @@
    "journal": "Am J Med Genet A",
    "title": "Expansion of the clinical and molecular spectrum of WWOX-related epileptic encephalopathy.",
    "year": "2023"
+  },
+  "36601084": {
+   "journal": "Ther Adv Neurol Disord",
+   "title": "Vigabatrin-associated brain abnormalities on MRI in tuberous sclerosis complex patients with infantile spasms: are they preventable?",
+   "year": "2022"
   },
   "36655171": {
    "journal": "Brain Commun",
@@ -458,6 +568,11 @@
    "title": "An Update on Stiripentol Mechanisms of Action: A Narrative Review.",
    "year": "2024"
   },
+  "38937107": {
+   "journal": "eNeuro",
+   "title": "Sustained Inhibition of GABA-AT by OV329 Enhances Neuronal Inhibition and Prevents Development of Benzodiazepine Refractory Seizures.",
+   "year": "2024"
+  },
   "39041895": {
    "journal": "Protein Sci",
    "title": "Cellular turnover and degradation of the most common missense cystathionine beta-synthase variants causing homocystinuria.",
@@ -488,9 +603,19 @@
    "title": "Synthesis and hLDHA Inhibitory Activity of New Stiripentol-Related Compounds of Potential Use in Primary Hyperoxaluria.",
    "year": "2024"
   },
+  "39847501": {
+   "journal": "J Clin Invest",
+   "title": "Neonatal but not juvenile gene therapy reduces seizures and prolongs lifespan in SCN1B-Dravet syndrome mice.",
+   "year": "2025"
+  },
   "39868255": {
    "journal": "bioRxiv",
    "title": "Partial Wwox Loss of Function Increases Severity of Murine Sepsis and Neuroinflammation.",
+   "year": "2025"
+  },
+  "40051162": {
+   "journal": "Mol Ther",
+   "title": "Gene therapy rescues brain edema and motor function in a mouse model of megalencephalic leukoencephalopathy with subcortical cysts.",
    "year": "2025"
   },
   "40092791": {
@@ -508,6 +633,11 @@
    "title": "Minocycline in chronic management of febrile infection-related epilepsy syndrome (FIRES): a case series and literature review of treatment strategies.",
    "year": "2025"
   },
+  "40527948": {
+   "journal": "Pediatr Res",
+   "title": "Vigabatrin-associated brain abnormalities on MRI (VABAM) in children with epileptic spasms.",
+   "year": "2026"
+  },
   "40614647": {
    "journal": "Seizure",
    "title": "Retrospective multicenter study on cryptogenic NORSE/FIRES patients treated with anakinra.",
@@ -516,6 +646,11 @@
   "40665325": {
    "journal": "J Hematol Oncol",
    "title": "Phase I first-in-human dose escalation study of the oral casein kinase 1α and cyclin dependent kinase 7/9 inhibitor BTX A51 in advanced MDS and AML.",
+   "year": "2025"
+  },
+  "40670421": {
+   "journal": "Sci Rep",
+   "title": "Microstructural injury to the optic nerve with vigabatrin treatment in West syndrome: A DTI study.",
    "year": "2025"
   },
   "40825784": {
@@ -628,6 +763,11 @@
    "title": "Neuron-specific WWOX gene therapy produces dose-dependent, durable rescue in a model of WWOX-related epileptic encephalopathy.",
    "year": "2026"
   },
+  "42470358": {
+   "journal": "Epilepsia",
+   "title": "Progress report on new epilepsy treatments: A summary of the Eighteenth Eilat Conference on New Antiepileptic Drugs and Devices (EILAT XVIII). I. Treatments in preclinical and early clinical development.",
+   "year": "2026"
+  },
   "42586097": {
    "journal": "Lancet Neurol",
    "title": "Safety and efficacy of guanabenz in early-childhood onset vanishing white matter: primary analysis of a single-arm, phase 1/2 trial.",
@@ -641,6 +781,11 @@
   "42652189": {
    "journal": "Biomedicines",
    "title": "Distinct Roles of NMDA and AMPA Receptors in the Pathogenesis of Hyperbaric Oxygen-Induced Seizures.",
+   "year": "2026"
+  },
+  "42735667": {
+   "journal": "Seizure",
+   "title": "Vigabatrin-associated brain MRI abnormalities in children: Associations with drug exposure and epilepsy etiology.",
    "year": "2026"
   },
   "42771346": {
@@ -667,6 +812,11 @@
    "journal": "N Engl J Med",
    "title": "Metabolic effects of dichloroacetate in patients with diabetes mellitus and hyperlipoproteinemia.",
    "year": "1978"
+  },
+  "9168839": {
+   "journal": "Exp Neurol",
+   "title": "Low-dose vigabatrin (gamma-vinyl GABA)-induced damage in the immature rat brain.",
+   "year": "1997"
   },
   "9872743": {
    "journal": "Science",
