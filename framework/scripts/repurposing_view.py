@@ -5197,6 +5197,7 @@ class Cdp:
     The window size is irrelevant: Emulation.setDeviceMetricsOverride sets the real layout viewport, which is then MEASURED, not assumed."""
 
     def __init__(self, binary: str, tmpdir: str):
+        import os
         import socket
         import subprocess
         import time
@@ -5204,7 +5205,8 @@ class Cdp:
         with socket.socket() as so:
             so.bind(("127.0.0.1", 0))
             self.port = so.getsockname()[1]
-        self.proc = subprocess.Popen([binary, "--headless=new", "--disable-gpu", f"--remote-debugging-port={self.port}", f"--user-data-dir={tmpdir}", "about:blank"],
+        self.profile = os.path.join(tmpdir, "profile")     # owned by this object: close() removes it before the caller removes tmpdir
+        self.proc = subprocess.Popen([binary, "--headless=new", "--disable-gpu", f"--remote-debugging-port={self.port}", f"--user-data-dir={self.profile}", "about:blank"],
                                      stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)   # own process group: close() ends the helpers too
         url = None
         for _ in range(300):        # up to 60 s: a cold first start on a busy runner took longer than the former 20 s
@@ -5355,6 +5357,20 @@ class Cdp:
             self.proc.wait(timeout=5)
         except Exception:
             pass
+        # Helpers outside the group (a crash handler, a utility process) may still be writing into the profile for a moment after the browser is gone:
+        # remove it here, retrying until they have stopped, and fail loudly if they never do (the caller's directory removal is then clean).
+        import shutil
+        end = time.time() + 20
+        while True:
+            try:
+                shutil.rmtree(self.profile)
+                break
+            except FileNotFoundError:
+                break
+            except OSError:
+                if time.time() > end:
+                    raise
+                time.sleep(0.1)
 
 
 MEASURE_JS = r"""(function(){var iw=__REQ__,de=document.documentElement,off=[];
