@@ -3238,6 +3238,7 @@ def render_overview(P: dict) -> str:
         f'<section id="overview" aria-labelledby="h-over"><h2 id="h-over">{E(U["ov_h"])}</h2>'
         f'<div class="legendrow" role="group" aria-label="{E(U["legend_h"])}"><b>{E(U["legend_h"])}:</b> {legend}</div>'
         f'<p class="lead">{E(U["ov_lead"])} <span class="mini mut">{E(U["need_gloss"])}</span></p>'
+        + (f'<p class="mini mut langnote" id="langnote">{E(U["lang_note"])}</p>' if (P["source"] == "shareable" and CUR["lang"] != "en") else "") +
         f'<div class="warnstrip" role="note"><b>{E(U["warn_h"])}.</b> {E(U["warn_1"])} {E(U["warn_2"])}</div>'
         + render_investigations(P)
         + render_quick(P) +
@@ -5150,7 +5151,7 @@ def render(P: dict, dr: Path = DEFAULT_DR) -> str:
     page = page.replace("__TDLANG__", f'<p class="mini mut technote"><span class="orig" lang="en">{E(UI_IT["td_en_only"])}</span></p>' if CUR["lang"] != "en" else "")
     page = page.replace("__ALT__", render_lang_alternates(P))
     page = page.replace("__LANGNAV__", render_lang_nav(P))
-    page = page.replace("__LANGNOTE__", f'<p class="mini mut langnote" id="langnote">{E(UI_IT["lang_note"])}</p>' if (P["source"] == "shareable" and CUR["lang"] != "en") else "")
+    page = page.replace("__LANGNOTE__", "")     # IT30: the translation note now follows the lead (render_overview), so it no longer pushes the F/C/P legend down on a phone
     st = dict(st)
     st.pop("BANNER", None)
     for k, v in st.items():

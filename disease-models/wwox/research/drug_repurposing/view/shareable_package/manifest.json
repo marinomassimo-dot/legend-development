@@ -553,15 +553,15 @@
   },
   "de.html": {
    "bytes": 4611548,
-   "sha256": "9d95ea0caaf4e923dc5e36aaa697914f997df508ee8e2c20aaa3870aef242204"
+   "sha256": "4c42d4709f68d778d1fdacb4ae7b82961ba85b49f9dd62cb4af39f29eeb91936"
   },
   "es.html": {
    "bytes": 4596828,
-   "sha256": "f2967827b7a30608b06621d657e50248ec49f704c5935c17996d91a242232b76"
+   "sha256": "9ebd604d4733d4ac1f4771bd0fe78e442325cbacc69a1af81671954707d1dd66"
   },
   "fr.html": {
    "bytes": 4617945,
-   "sha256": "b1ddc48d14dc1123528c236c4339066e89b13ff9eb60cb62e49a1d8727bf00c1"
+   "sha256": "9e19bcd395e4175acece392ba8e7aa833eb07b9e6445d320322d1032cceea84c"
   },
   "index.html": {
    "bytes": 4533144,
@@ -569,7 +569,7 @@
   },
   "it.html": {
    "bytes": 4573074,
-   "sha256": "24f7c8a8c94eb67be338f2ea314256d6ecc6c2fb5bed46652eb047731cd972bd"
+   "sha256": "46c4558cc5ebbb2c6503860235d4c6efb809e7d71d5d57b02b0b71b579f56aba"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
