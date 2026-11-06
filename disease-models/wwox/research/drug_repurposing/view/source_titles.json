@@ -28,6 +28,11 @@
    "title": "Brain-specific knock-out of hypoxia-inducible factor-1alpha reduces rather than increases hypoxic-ischemic damage.",
    "year": "2005"
   },
+  "16227993": {
+   "journal": "Nat Med",
+   "title": "NKCC1 transporter facilitates seizures in the developing brain.",
+   "year": "2005"
+  },
   "16476929": {
    "journal": "Neurology",
    "title": "Dichloroacetate causes toxic neuropathy in MELAS: a randomized, controlled clinical trial.",
@@ -78,6 +83,11 @@
    "title": "Three-week combination treatment with ACTH + magnesium sulfate versus ACTH monotherapy for infantile spasms: a 24-week, randomized, open-label, follow-up study in China.",
    "year": "2010"
   },
+  "20810895": {
+   "journal": "J Neurosci",
+   "title": "Progressive NKCC1-dependent neuronal chloride accumulation during neonatal seizures.",
+   "year": "2010"
+  },
   "21473881": {
    "journal": "Neurotoxicology",
    "title": "Oral toxicity of vigabatrin in immature rats: characterization of intramyelinic edema.",
@@ -102,6 +112,11 @@
    "journal": "Epilepsy Res",
    "title": "Can magnesium supplementation reduce seizures in people with epilepsy? A hypothesis.",
    "year": "2012"
+  },
+  "23536761": {
+   "journal": "PLoS One",
+   "title": "Bumetanide enhances phenobarbital efficacy in a rat model of hypoxic neonatal seizures.",
+   "year": "2013"
   },
   "24321005": {
    "journal": "Epilepsia",
@@ -278,6 +293,16 @@
    "title": "Bumetanide for Core Symptoms of Autism Spectrum Disorder (BAMBI): A Single Center, Double-Blinded, Participant-Randomized, Placebo-Controlled, Phase-2 Superiority Trial.",
    "year": "2021"
   },
+  "33201535": {
+   "journal": "Ann Neurol",
+   "title": "A Pilot Randomized, Controlled, Double-Blind Trial of Bumetanide to Treat Neonatal Seizures.",
+   "year": "2021"
+  },
+  "33258158": {
+   "journal": "Epilepsia",
+   "title": "Phenobarbital and midazolam suppress neonatal seizures in a noninvasive rat model of birth asphyxia, whereas bumetanide is ineffective.",
+   "year": "2021"
+  },
   "33279441": {
    "journal": "Epilepsy Behav",
    "title": "The search for brain-permeant NKCC1 inhibitors for the treatment of seizures: Pharmacokinetic-pharmacodynamic modelling of NKCC1 inhibition by azosemide, torasemide, and bumetanide in mouse brain.",
@@ -291,6 +316,11 @@
   "33914858": {
    "journal": "Brain",
    "title": "Neuronal deletion of Wwox, associated with WOREE syndrome, causes epilepsy and myelin defects.",
+   "year": "2021"
+  },
+  "33955541": {
+   "journal": "Epilepsia",
+   "title": "A combination of phenobarbital and the bumetanide derivative bumepamine prevents neonatal seizures and subsequent hippocampal neurodegeneration in a rat model of birth asphyxia.",
    "year": "2021"
   },
   "34253921": {
