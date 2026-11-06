@@ -18,7 +18,7 @@
  "evidence_basis": [
   "Re-read for a new question: the per-patient treatments of Table 3 and the narratives (vigabatrin in 2.1, 2.2, 5 and 6; ketogenic diet in 3.1 and 6), the printed outcomes and developmental statements, and the scope of the Discussion sentence on nine vigabatrin-treated patients (the 70-patient table). Nationality and family-structure details printed in the narratives are deliberately not reproduced.",
   "verbatim_locator | proposition: Patient 2.2 responded to vigabatrin | Results, Patient 2.2 | \"She responded well to vigabatrin, and her seizures were under control.\"",
-  "verbatim_locator | proposition: Patient 6, homozygous Q230P, started the ketogenic diet after vigabatrin | Results, Patient 6 | \"He was started on a ketogenic diet at the age of 11 months\"",
+  "verbatim_locator | proposition: Patient 6 (homozygous missense class) started the ketogenic diet after vigabatrin | Results, Patient 6 | \"He was started on a ketogenic diet at the age of 11 months\"",
   "verbatim_locator | proposition: Patient 4 gained new skills with seizures controlled | Results, Patient 4 | \"recently started sitting alone, saying up to 10 single words\""
  ],
  "evidence_depth": "partial_fulltext_read",
