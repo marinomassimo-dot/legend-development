@@ -18,4 +18,4 @@ The map of every open question of the module, with the state of each search and 
 
 ## State
 
-* 2026-11-05T22:40Z: readers dispatched; nothing returned yet. Receipts will be staged, never recorded here (the IT29 and IT30 branches both append to the hash-chained ledger).
+* 2026-11-06: verified package complete; see README.md and integration/CONSUMERS.md. Wave-2 questions WO-06 and RS-R6 were not executed (usage limit).

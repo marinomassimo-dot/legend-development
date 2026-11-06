@@ -12,8 +12,9 @@
   "package_dir": "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/",
   "briefs": "BRIEF_COMMON.md, BRIEF_MAP.md, BRIEF_A1.md, BRIEF_A2.md, BRIEF_B1.md, BRIEF_R1.md, BRIEF_R2.md in the package directory",
   "returns": "each agent writes only inside its subdirectory (map, a1_wwox_reports, a2_baseline, b1_whitematter, r1_restoration_ndd, r2_restoration_dee); receipts are STAGED in receipts/ of each subdirectory and are never recorded by the agents; event-id suffixes 21 to 25 (map none), verifiers 31 to 35",
-  "next_action": "read the agent returns; recompute every headline count from its TSV; validate TSV widths and staged receipts (staged_receipt_check, then a trial record in a scratch clone with its own copy of files/); then dispatch independent verifiers (different model, producer conclusions withheld for the locator audit)",
-  "not_to_redo": "do not re-read the IT29 or IT30 worktrees; do not record receipts on this branch (the ledger is hash-chained and IT29 and IT30 both append to it: the IT30 Orchestrator records the staged set in event-id order after IT29 lands)"
+  "next_action": "validation (gate, LINT, structure suites, battery on a no-hardlinks clone), merge any newer main, land with task_close.py, safe_push; then session self-evaluation, capability scout, takeaways, memory",
+  "not_to_redo": "do not re-read the IT29 or IT30 worktrees; do not record receipts on this branch (the ledger is hash-chained and IT29 and IT30 both append to it: the IT30 Orchestrator records the staged set in event-id order after IT29 lands)",
+  "integration": "batch_sci_20261105/integration/CONSUMERS.md is the start for the IT30 Orchestrator"
  },
  "DECISIONS_TAKEN": [
   "Role: ACTOR_ID orchestrator, assigned by the operator in the opening message of this session (a stated assumption; the runtime assigns none, AGENTS.md section 4).",
@@ -22,7 +23,9 @@
   "Own worktree and branch from main; the worktrees of IT29 and IT30 are read only through git show; no receipt is recorded on this branch (ledger collision with IT29 and IT30); no edit of roadmap_current.md, of the module README CURRENT section, of the generation stage tables, the ranking, the views or the four scientific current files: those are the IT30 Orchestrator's consumers.",
   "Producers and verifiers are different subagent contexts, and verifiers run on a different model where the runtime honours the request (read back from the transcript, not assumed)."
  ],
- "STOP_LOG": [],
+ "STOP_LOG": [
+  "No stop for a reserved act. Class-3 hindsight: the briefs lacked the patient-overlap rule and the public-gate wording rule; both were sent as addenda before the readers returned. Waiting for the usage-limit reset was a wait on running work, not a stop."
+ ],
  "AUTHORISED_QUEUE_20261105D": {
   "MANDATE_STATE": "OPEN",
   "OBJ_S0": {
@@ -30,8 +33,9 @@
    "steps": [
     {
      "step": "S0 open-question map of the module with the state of every search and where it is published (main, task/it29, task/it30)",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "map/README.md: 115 rows; 14 concluded; 20 executable unclaimed"
     }
    ]
   },
@@ -40,7 +44,7 @@
    "steps": [
     {
      "step": "S1 concordance of symptomatic response and developmental outcome: WWOX reports (A1) and the infantile-spasms baseline (A2)",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "challenge": {
       "id": "CH-SB-CONCORDANCE",
@@ -71,7 +75,8 @@
        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/README.md",
        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/integration/CONSUMERS.md"
       ]
-     }
+     },
+     "evidence": "a1_wwox_reports, a2_baseline: audits 57+43 rows, review 44 statements, delta audit 33 rows supported; correction rounds answered in RESPONSE.md"
     }
    ]
   },
@@ -80,7 +85,7 @@
    "steps": [
     {
      "step": "S2 vigabatrin and CPP-115 white-matter safety: full-text readings, age and duration dependence, reversibility, transfer to a hypomyelinating baseline (B1)",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "challenge": {
       "id": "CH-SB-VGB-WHITEMATTER",
@@ -108,7 +113,8 @@
        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/README.md",
        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/integration/CONSUMERS.md"
       ]
-     }
+     },
+     "evidence": "b1_whitematter: audit 38, review 19, delta audit 23; RESPONSE.md; 14 orchestrator narrowing edits not re-audited"
     }
    ]
   },
@@ -117,7 +123,7 @@
    "steps": [
     {
      "step": "S3 post-onset restoration precedents: syndromic neurodevelopmental models (R1) and epilepsy, antisense, AAV and human timing precedents (R2), for INV-01 and NEED-WWOX-GENE-ADDITION",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "challenge": {
       "id": "CH-SB-POSTONSET-RESTORATION",
@@ -144,7 +150,8 @@
        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/README.md",
        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/integration/CONSUMERS.md"
       ]
-     }
+     },
+     "evidence": "r1_restoration_ndd, r2_restoration_dee: audits 62+64, review 67 statements, delta audits 50+34; orchestrator edits 19+10 not re-audited; combined matrix and consolidated NEED-WWOX-GENE-ADDITION set in integration/"
     }
    ]
   },
@@ -153,8 +160,9 @@
    "steps": [
     {
      "step": "S4 reconcile: recompute headline counts from the TSVs, validate widths and staged receipts, trial-record the receipts in a scratch clone",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "table widths, validators, DOI check on all receipts, recounts; trial record of 109 staged receipts in a throwaway clone: TRIAL OK"
     }
    ]
   },
@@ -163,8 +171,9 @@
    "steps": [
     {
      "step": "S5 independent verification by actors other than the producers (different model; blind locator audit on the decisive triples; contest the conclusions with the source)",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "verify/: blind audits, delta audits, adversarial reviews by actors other than the producers"
     }
    ]
   },
@@ -173,8 +182,9 @@
    "steps": [
     {
      "step": "S6 hand-over: module inputs in the consumer vocabulary, proposed registry changes, consumer table, staged receipts index",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "integration/CONSUMERS.md, NEED-WWOX-GENE-ADDITION_consolidated.{md,json}, PROPOSED_REGISTRY_CHANGES.md, VERIFICATION.md, FROM_THE_MAP.md; two leads staged with discovery_lead.py"
     }
    ]
   },
@@ -183,7 +193,7 @@
    "steps": [
     {
      "step": "S7 validation (gate, LINT, structure suites, battery on a no-hardlinks clone), commit, land and push under the section 21d conditions",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator"
     }
    ]
@@ -198,5 +208,11 @@
     }
    ]
   }
- }
+ },
+ "DEFAULTS_TAKEN": [
+  "Condition: the scientific prompt announced after the opening was absent from the message. Default: scope reconstructed from the module's own open questions, restricted to zero-spend literature questions no record executed. Why safe: reversible, nothing in a shared consumer touched. Different if the text had arrived: its packages would have replaced or added to these.",
+  "Condition: account usage limit stopped all in-flight agents twice (23:55Z on 11-05; ~07:20Z on 11-06). Default: resume each agent from its saved work after the reset instead of re-dispatching; seconds-wave questions WO-06 and RS-R6 left unexecuted and reported. Why safe: nothing was lost that was not re-checked.",
+  "Condition: first delta auditor declined to draft clinical wording for a suggested-wording column. Default: column redefined as a pointer to the governing passage, rows recomposed as labelled fields, re-dispatched.",
+  "Condition: IT29 landed on main during the batch. Default: merged development/main into the task branch before the receipts trial."
+ ]
 }
