@@ -83,8 +83,8 @@ time; it does not redistribute or license the article text.
 |---|---:|---:|
 | **Not found by identifier** — run the intake gate | 261 | 37% |
 | **Catalogued, never processed** — the reading debt | 123 | 17% |
-| Known to the tracking log only | 83 | 12% |
-| Processed from the abstract | 4 | 1% |
+| Known to the tracking log only | 81 | 11% |
+| Processed from the abstract | 6 | 1% |
 | Partial full text read | 69 | 10% |
 | Full text read | 166 | 24% |
 
@@ -325,7 +325,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [37615513](https://pubmed.ncbi.nlm.nih.gov/37615513/) | 2024 | — | Journal Article; Research Support, Non-U.S. Gov't | screened | Remote modulation of WWOX by an intronic variant associated with survival of Chinese gastric cancer patients. |
 | [39039877](https://pubmed.ncbi.nlm.nih.gov/39039877/) | 2024 | — | English Abstract; Journal Article | screened | [Genotype and phenotype of WWOX gene related developmental and epileptic encephalopathy]. |
 | [36621327](https://pubmed.ncbi.nlm.nih.gov/36621327/) | 2023 | — | Journal Article | screened | WWOX activates autophagy to alleviate lipopolysaccharide-induced acute lung injury by regulating mTOR. |
-| [34998176](https://pubmed.ncbi.nlm.nih.gov/34998176/) | 2022 | — | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't; Research Support, U.S. Gov't, Non-P.H.S. | screened | Interaction of Wwox with Brca1 and associated complex proteins prevents premature resection at double-strand breaks and aberrant homologous recombination. |
 | [36257459](https://pubmed.ncbi.nlm.nih.gov/36257459/) | 2022 | — | Journal Article | screened | Albendazole exerts an anti-hepatocellular carcinoma effect through a WWOX-dependent pathway. |
 | [34015398](https://pubmed.ncbi.nlm.nih.gov/34015398/) | 2021 | — | Journal Article; Research Support, Non-U.S. Gov't | screened | WWOX activation by toosendanin suppresses hepatocellular carcinoma metastasis through JAK2/Stat3 and Wnt/β-catenin signaling. |
 | [34034642](https://pubmed.ncbi.nlm.nih.gov/34034642/) | 2021 | — | Journal Article | screened | Recently defined epileptic encephalopathy related to WWOX gene mutation: six patients and new mutations. |
@@ -337,7 +336,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [27834355](https://pubmed.ncbi.nlm.nih.gov/27834355/) | 2016 | — | Journal Article | screened | WWOX inhibits the invasion of lung cancer cells by downregulating RUNX2. |
 | [27840941](https://pubmed.ncbi.nlm.nih.gov/27840941/) | 2016 | — | Journal Article | screened | Deregulated WWOX is involved in a negative feedback loop with microRNA-214-3p in osteosarcoma. |
 | [25411445](https://pubmed.ncbi.nlm.nih.gov/25411445/) | 2015 | — | Journal Article; Research Support, Non-U.S. Gov't | screened | WWOX-related encephalopathies: delineation of the phenotypical spectrum and emerging genotype-phenotype correlation. |
-| [26390919](https://pubmed.ncbi.nlm.nih.gov/26390919/) | 2015 | — | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't | screened | Tumor suppressor WWOX moderates the mitochondrial respiratory complex. |
 | [27352332](https://pubmed.ncbi.nlm.nih.gov/27352332/) | 2015 | — | Journal Article | screened | Ectopic WWOX Expression Inhibits Growth of 5637 Bladder Cancer Cell In Vitro and In Vivo. |
 | [24393846](https://pubmed.ncbi.nlm.nih.gov/24393846/) | 2014 | — | Journal Article; Research Support, Non-U.S. Gov't | screened | Wwox suppresses breast cancer cell growth through modulation of the hedgehog-GLI1 signaling pathway. |
 | [23254778](https://pubmed.ncbi.nlm.nih.gov/23254778/) | 2013 | — | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't | screened | Characterization of WWOX inactivation in murine mammary gland development. |
@@ -572,7 +570,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [41776383](https://pubmed.ncbi.nlm.nih.gov/41776383/) | 2026 | — | Journal Article; Multicenter Study | screened | Pharmacogenomics of response to interferon-beta and glatiramer acetate in Multiple Sclerosis: A multi-centric study. |
 | [28151481](https://pubmed.ncbi.nlm.nih.gov/28151481/) | 2017 | ✅ | Journal Article; Retracted Publication | screened | 🛑 RETRACTED — Epigenetic regulation of HGF/Met receptor axis is critical for the outgrowth of bone metastasis from breast carcinoma. |
 
-*(showing all 467 outstanding records)*
+*(showing all 465 outstanding records)*
 
 ## Already processed from this seed
 
@@ -585,6 +583,8 @@ for an entirely unprocessed record.
 | [28373548](https://pubmed.ncbi.nlm.nih.gov/28373548/) | 2017 | ✅ | full text | receipt FTR-20260909-28373548-01 | ℹ️ EXPRESSION-OF-CONCERN NOTICE — Editorial Expression of Concern: WWOX gene restoration prevents lung cancer growth in vitro and in vivo. |
 | [31752354](https://pubmed.ncbi.nlm.nih.gov/31752354/) | 2019 | ✅ | abstract only | receipt FTR-20260920-31752354-01 | WWOX Possesses N-Terminal Cell Surface-Exposed Epitopes WWOX7-21 and WWOX7-11 for Signaling Cancer Growth Suppression and Prevention In Vivo. |
 | [38407561](https://pubmed.ncbi.nlm.nih.gov/38407561/) | 2024 | — | abstract only | receipt FTR-20261105-38407561-21 | Identification of a novel splice-site WWOX variant with paternal uniparental isodisomy in a patient with infantile epileptic encephalopathy. |
+| [34998176](https://pubmed.ncbi.nlm.nih.gov/34998176/) | 2022 | — | abstract only | receipt FTR-20261106-34998176-26 | Interaction of Wwox with Brca1 and associated complex proteins prevents premature resection at double-strand breaks and aberrant homologous recombination. |
+| [26390919](https://pubmed.ncbi.nlm.nih.gov/26390919/) | 2015 | — | abstract only | receipt FTR-20261106-26390919-26 | Tumor suppressor WWOX moderates the mitochondrial respiratory complex. |
 | [41124647](https://pubmed.ncbi.nlm.nih.gov/41124647/) | 2026 | ✅ | partial full text | receipt FTR-20261004-41124647-03 | Genetic and Functional Evidence Links Germline Biallelic Inactivating Variants in WWOX to Histological Mixed-Type Thyroid Cancer. |
 | [42523332](https://pubmed.ncbi.nlm.nih.gov/42523332/) | 2026 | ✅ | partial full text | PAPER 542 | Golgi CATCHR complexes function as organizing hubs for vesicle tethering and fusion. |
 | [41228229](https://pubmed.ncbi.nlm.nih.gov/41228229/) | 2025 | ✅ | partial full text | receipt FTR-20260921-41228229-01 | The Role of WWOX in Cancer Progression: Mechanisms and Therapeutic Potential. |
@@ -822,7 +822,7 @@ for an entirely unprocessed record.
 | [21476439](https://pubmed.ncbi.nlm.nih.gov/21476439/) | 2011 | — | full text | PAPER 244 | WWOX oxidoreductase--substrate and enzymatic characterization. |
 | [16288044](https://pubmed.ncbi.nlm.nih.gov/16288044/) | 2005 | — | full text | PAPER 569 | Activated tyrosine kinase Ack1 promotes prostate tumorigenesis: role of Ack1 in polyubiquitination of tumor suppressor Wwox. |
 
-*(showing all 239 processed records from the seed)*
+*(showing all 241 processed records from the seed)*
 
 ## How to work one
 

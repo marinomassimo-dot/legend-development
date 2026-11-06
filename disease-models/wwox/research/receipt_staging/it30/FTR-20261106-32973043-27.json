@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-06T15:03:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-06T15:09:00Z",
+ "event_id": "FTR-20261106-32973043-27",
+ "evidence_basis": [
+  "passages of the open text read",
+  "verbatim_locator | proposition: E34 non-phosphorylatable eIF2alpha in Schwann cells - neuropathy, ERK/c-Jun: loss of eIF2alpha-P worsened disease: protective node | full_text | \"we provide genetic evidence that eIF2\u03b1 phosphorylation has a protective role in CMT1B Schwann cells by limiting ERK/c-Jun hyperactivation.\"",
+  "verbatim_locator | proposition: E35 non-phosphorylatable eIF2alpha in Schwann cells - UPR, oxidative stress, differentiation: protective effect not through UPR (role=counter to an ER-stress reading) | full_text | \"lack of eIF2\u03b1 phosphorylation did not significantly alter UPR or oxidative stress levels, but dramatically delayed Schwann cell differentiation and myelination\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/wo06_it30_20261106/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC7574653 article page HTML on the PMC site fetched as text (publisher blocks XML download); keyword-directed passages; bytes not saved",
+ "study_id": {
+  "doi": "10.1523/jneurosci.0957-20.2020",
+  "pmid": "32973043"
+ },
+ "workflow": "WO-06 residues of CH-IT28-ISR-ROLE (wo06_it30_20261106): question-driven reading of the ISR-seizure, Sephin1-rebuttal and glial-full-text residues. Staged for the integrator; the ledger was not written by the preparing actor."
+}

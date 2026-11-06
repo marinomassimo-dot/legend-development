@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-06T15:03:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-06T15:09:00Z",
+ "event_id": "FTR-20261106-25434873-27",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: E05 CO donor / CO synthase inhibitor - hippocampal neuronal damage: raised p-PERK/p-eIF2alpha accompanied less damage; inhibitor reversed it (support, association) | abstract_only | \"treating FS rats with ZnPP-IX (a CO synthase inhibitor) aggravated the neuronal damage\"",
+  "verbatim_locator | proposition: E06 CO donor / CO synthase inhibitor - mechanism statement: authors attribute protection to the PERK pathway (role=support, weak) | abstract_only | \"endogenous CO limits the neuronal damage induced by recurrent FSs, through the PERK-activated ERS pathway\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/wo06_it30_20261106/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record abstract retrieved through Europe PMC REST search (full text not reachable by an open route); bytes not saved",
+ "study_id": {
+  "doi": "10.1016/j.neulet.2014.11.040",
+  "pmid": "25434873"
+ },
+ "workflow": "WO-06 residues of CH-IT28-ISR-ROLE (wo06_it30_20261106): question-driven reading of the ISR-seizure, Sephin1-rebuttal and glial-full-text residues. Staged for the integrator; the ledger was not written by the preparing actor."
+}

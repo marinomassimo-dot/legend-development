@@ -1267,7 +1267,7 @@
    "need_direction": "uncertain",
    "need_id": "NEED-ISR-ATTENUATION",
    "need_short": "Integrated stress response",
-   "next_test": "ATF4 protein, total and phosphorylated eIF2-alpha and per-cell translation (nascent-protein labelling) in a WWOX-deficient human neural line against an isogenic control, at one differentiation stage and by cell type, no compound involved. Only if the sign is high, a pre-registered panel: an eIF2B activator and kinase-level loss against genetic PPP1R15A loss, with a second-stressor arm and a functional endpoint. IT30 (design hypothesis only, from the residues of CH-IT28-ISR-ROLE read in wo06_it30_20261106 and independently checked): keep a network-activity or seizure-relevant readout beside the protein-level sign; if a potentiation arm is tried, make it genetic (a PPP1R15B knockdown) or chemical with measured p-eIF2alpha and an alpha-2 control (guanabenz acts on alpha-2 receptors and Sephin1 and guanabenz were not shown to inhibit PPP1R15A-PP1); the only mammalian seizure-endpoint precedent for a potentiator is two salubrinal studies with opposite signs, so no arm is promoted.",
+   "next_test": "ATF4 protein, total and phosphorylated eIF2-alpha and per-cell translation (nascent-protein labelling) in a WWOX-deficient human neural line against an isogenic control, at one differentiation stage and by cell type, no compound involved. Only if the sign is high, a pre-registered panel: an eIF2B activator and kinase-level loss against genetic PPP1R15A loss, with a second-stressor arm and a functional endpoint. IT30 (design hypothesis only, from the residues of CH-IT28-ISR-ROLE read in wo06_it30_20261106 and independently checked): keep a network-activity or seizure-relevant readout beside the protein-level sign; if a potentiation arm is tried, make it genetic (a PPP1R15B knockdown) or chemical with measured p-eIF2alpha and an alpha-2 control (guanabenz acts on alpha-2 receptors and Sephin1 and guanabenz were not shown to inhibit PPP1R15A-PP1); the only mammalian seizure-endpoint precedent for a potentiator is two studies of one eIF2-alpha phosphatase inhibitor with opposite signs, so no arm is promoted.",
    "novelty_perimeter": "Queried: this need's eleven observation rows and their readout levels; the ISR card and its assertions; the search layer over the eight ISR targets (78 associations, 56 families, none direction-coherent because the need direction is unresolved). The gap is a missing measurement in the sources this module has read, not a claim about the ISR literature.",
    "objective": "partial",
    "origin_class": "generated_by_legend",
@@ -5942,7 +5942,7 @@
     "source_artefacts.tsv": "efd24d2cf8eb3fdb",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
-   "receipt_ledger_lines": 1287
+   "receipt_ledger_lines": 1311
   },
   "inventory": {
    "all_families_by_access_category": {
@@ -9777,7 +9777,7 @@
    "inputs": {
     "T1_cards": "cca836628762707e",
     "T2_pertinence": "c124efeb8d5edb82",
-    "T3_receipts": "3e2c4c2ede531683",
+    "T3_receipts": "5d41f288d29a6965",
     "T4_needs": "55ff62f47762bab4",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "a51c161c63ba11d3"
@@ -9839,7 +9839,7 @@
     "34268881",
     "42397075"
    ],
-   "receipts_on_cited_pmids": 29,
+   "receipts_on_cited_pmids": 30,
    "research_objective": "",
    "tracks": [
     "A"
@@ -11799,7 +11799,7 @@
    "inputs": {
     "T1_cards": "4a75bfe6581e070f",
     "T2_pertinence": "8b0a047e9ce40434",
-    "T3_receipts": "82bb5dc14c105b3f",
+    "T3_receipts": "448525c3acd07299",
     "T4_needs": "da5a5e48fa65a7cc",
     "T5_pharmacology": "5da5f03bb1490bdc",
     "T6_identity": "589dd4de63446384"
@@ -11951,7 +11951,7 @@
     "36537114",
     "37275776"
    ],
-   "receipts_on_cited_pmids": 18,
+   "receipts_on_cited_pmids": 19,
    "research_objective": "",
    "tracks": [
     "A"
@@ -14327,7 +14327,7 @@
    "inputs": {
     "T1_cards": "6c7034d2a9407314",
     "T2_pertinence": "db0343ccb25dda32",
-    "T3_receipts": "a830ad3081d1741b",
+    "T3_receipts": "e7260dcec1576997",
     "T4_needs": "5f1fd60b12ed4ae7",
     "T5_pharmacology": "8e5ccb8ab12853d1",
     "T6_identity": "c599af8bf00c008f"
@@ -14448,7 +14448,7 @@
     "32000863",
     "36537114"
    ],
-   "receipts_on_cited_pmids": 19,
+   "receipts_on_cited_pmids": 20,
    "research_objective": "",
    "tracks": [
     "A"
@@ -14683,7 +14683,7 @@
    "inputs": {
     "T1_cards": "34475239b858d33f",
     "T2_pertinence": "904f40dca9a2c7f5",
-    "T3_receipts": "61c7de378754f58d",
+    "T3_receipts": "b223c1dbed2753d9",
     "T4_needs": "da5a5e48fa65a7cc",
     "T5_pharmacology": "5da5f03bb1490bdc",
     "T6_identity": "61b1f388d5aca48f"
@@ -14827,7 +14827,7 @@
     "36537114",
     "40165594"
    ],
-   "receipts_on_cited_pmids": 13,
+   "receipts_on_cited_pmids": 14,
    "research_objective": "",
    "tracks": [
     "A"
@@ -16492,7 +16492,7 @@
    "inputs": {
     "T1_cards": "a68205663cff488b",
     "T2_pertinence": "1d8e37b50e10f4e0",
-    "T3_receipts": "2d4c21c2c119e3b6",
+    "T3_receipts": "c7e03f1a54047dee",
     "T4_needs": "2fa442aa63e75191",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "af32521d73bf653e"
@@ -16695,7 +16695,7 @@
     "39684792",
     "42939870"
    ],
-   "receipts_on_cited_pmids": 24,
+   "receipts_on_cited_pmids": 25,
    "research_objective": "",
    "tracks": [
     "A"

@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-06T15:03:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-06T15:09:00Z",
+ "event_id": "FTR-20261106-18255032-27",
+ "evidence_basis": [
+  "passages of the open text read",
+  "verbatim_locator | proposition: E29 Chop ablation - motor function, demyelination, BiP: CHOP loss rescued motor function while ER-stress marker BiP stayed induced (role=counter to equating rescue with stress relief) | full_text | \"Consistent with the idea that P0S63del levels determine UPR activation, BiP mRNA levels were similar in S63del and S63del/Chop-null nerves at P28\"",
+  "verbatim_locator | proposition: E30 Chop ablation - rotarod motor capacity: complete rescue (support) | full_text | \"Strikingly, S63del/Chop-null mice regained completely normal motor capacity in Rotarod analysis\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/wo06_it30_20261106/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC2267889 article page HTML on the PMC site fetched as text (publisher blocks XML download); keyword-directed passages; bytes not saved",
+ "study_id": {
+  "doi": "10.1016/j.neuron.2007.12.021",
+  "pmid": "18255032"
+ },
+ "workflow": "WO-06 residues of CH-IT28-ISR-ROLE (wo06_it30_20261106): question-driven reading of the ISR-seizure, Sephin1-rebuttal and glial-full-text residues. Staged for the integrator; the ledger was not written by the preparing actor."
+}

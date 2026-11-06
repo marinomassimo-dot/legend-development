@@ -747,10 +747,6 @@
   "src": "en",
   "text": "WWOX-system: a glycolytic signature; the kinase transcript lower in the organoid; no difference in the one human PDH activity measurement. The kinase-to-PDH link has no WWOX observation."
  },
- "a48ada2b2462": {
-  "src": "en",
-  "text": "ATF4 protein, total and phosphorylated eIF2-alpha and per-cell translation (nascent-protein labelling) in a WWOX-deficient human neural line against an isogenic control, at one differentiation stage and by cell type, no compound involved. Only if the sign is high, a pre-registered panel: an eIF2B activator and kinase-level loss against genetic PPP1R15A loss, with a second-stressor arm and a functional endpoint."
- },
  "a4f994f57698": {
   "src": "it",
   "text": "Istologia più alta in topo nullo e P47T, più bassa nel ratto; nessun programma reattivo nel trascritto dell'organoide."
@@ -1118,6 +1114,10 @@
  "f136b8ca088b": {
   "src": "en",
   "text": "IT21 P3b (G02)"
+ },
+ "f1d103f32dce": {
+  "src": "en",
+  "text": "ATF4 protein, total and phosphorylated eIF2-alpha and per-cell translation (nascent-protein labelling) in a WWOX-deficient human neural line against an isogenic control, at one differentiation stage and by cell type, no compound involved. Only if the sign is high, a pre-registered panel: an eIF2B activator and kinase-level loss against genetic PPP1R15A loss, with a second-stressor arm and a functional endpoint. IT30 (design hypothesis only, from the residues of CH-IT28-ISR-ROLE read in wo06_it30_20261106 and independently checked): keep a network-activity or seizure-relevant readout beside the protein-level sign; if a potentiation arm is tried, make it genetic (a PPP1R15B knockdown) or chemical with measured p-eIF2alpha and an alpha-2 control (guanabenz acts on alpha-2 receptors and Sephin1 and guanabenz were not shown to inhibit PPP1R15A-PP1); the only mammalian seizure-endpoint precedent for a potentiator is two studies of one eIF2-alpha phosphatase inhibitor with opposite signs, so no arm is promoted."
  },
  "f22be07d79af": {
   "src": "en",

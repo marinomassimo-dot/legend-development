@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-06T15:03:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-06T15:09:00Z",
+ "event_id": "FTR-20261106-32853550-27",
+ "evidence_basis": [
+  "passages of the open text read",
+  "verbatim_locator | proposition: E09 tRNA n-Tr20 deletion (genetic); Gcn2 deletion - seizure susceptibility; p-eIF2alpha: ISR rises with the seizure-modifying lesion; Gcn2 abolished the rise (genetic, but seizure not tested with Gcn2 deletion in the text read) | partial_fulltext | \"the expression of n-Tr20 is sufficient to alter seizure susceptibility in mice in response to different stimuli\"",
+  "verbatim_locator | proposition: E10 Gcn2 deletion - excitatory vs inhibitory transmission: ISR mediates only the excitatory change (role=counter) | partial_fulltext | \"it does not underlie the changes in inhibitory neurotransmission\"",
+  "verbatim_locator | proposition: E11 Gcn2 deletion - p-eIF2alpha: kinase identity: GCN2 | partial_fulltext | \"Deletion of the eIF2\u03b1 kinase Gcn2 (general control non-depressible protein 2) abolished the increase in p-eIF2\u03b1\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/wo06_it30_20261106/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC7572898 article page HTML on the PMC site fetched as text; keyword-directed passages on seizure, ISR, Gcn2 and transmission; bytes not saved",
+ "study_id": {
+  "doi": "10.1016/j.neuron.2020.07.023",
+  "pmid": "32853550"
+ },
+ "workflow": "WO-06 residues of CH-IT28-ISR-ROLE (wo06_it30_20261106): question-driven reading of the ISR-seizure, Sephin1-rebuttal and glial-full-text residues. Staged for the integrator; the ledger was not written by the preparing actor."
+}

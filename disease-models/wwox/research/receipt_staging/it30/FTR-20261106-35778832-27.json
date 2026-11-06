@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-06T15:03:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-06T15:09:00Z",
+ "event_id": "FTR-20261106-35778832-27",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: E22 guanabenz vs Sephin1 - clinical signs, neuropathology, ISR regulation: guanabenz improved disease; Sephin1 did not (role=counter to Sephin1 as guanabenz surrogate) | abstract_only | \"Guanabenz improved clinical signs, neuropathological hallmarks, and ISR regulation in VWM mice, but sephin1 did not.\"",
+  "verbatim_locator | proposition: E23 guanabenz vs Sephin1 - interpretation: mechanism unresolved | abstract_only | \"Sephin1 is not simply a guanabenz replacement without \u03b12-adrenergic effects.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/wo06_it30_20261106/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record abstract retrieved through Europe PMC REST search; full text open but not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1002/acn3.51611",
+  "pmid": "35778832"
+ },
+ "workflow": "WO-06 residues of CH-IT28-ISR-ROLE (wo06_it30_20261106): question-driven reading of the ISR-seizure, Sephin1-rebuttal and glial-full-text residues. Staged for the integrator; the ledger was not written by the preparing actor."
+}

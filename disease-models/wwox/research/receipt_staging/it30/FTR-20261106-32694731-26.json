@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-06T15:10:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-06T15:12:00Z",
+ "event_id": "FTR-20261106-32694731-26",
+ "evidence_basis": [
+  "abstract analysed",
+  "whole-page string search for WWOX returned 0 matches; the WWOX interaction rests on the database record only",
+  "verbatim_locator | proposition: the abstract describes genetic-interaction screens in FASN-mutant HAP1 cells and does not name WWOX | Abstract | \"we use pooled genome-wide CRISPR screens to systematically map genetic interactions (GIs) in human HAP1 cells carrying a loss-of-function mutation in fatty acid synthase (FASN)\""
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/rs_r6_it30_20261106/README.md",
+  "disease-models/wwox/research/drug_repurposing/rs_r6_it30_20261106/evidence_rs_r6.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PubMed Central HTML page for the PMC record PMC7566881, fetched 2026-11-06; the whole page text was searched for the string WWOX (0 matches); nothing read end to end; supplementary tables not reached; bytes not saved. The WWOX record comes from the Alliance of Genome Resources interactions endpoint (BioGRID source), not from this text",
+ "study_id": {
+  "doi": "10.1038/s42255-020-0211-z",
+  "pmid": "32694731"
+ },
+ "workflow": "RS-R6 (rs_r6_it30_20261106), task ORCH-SCIBATCH-DR-20261105: question-driven search for perturbations that modify a WWOX-loss phenotype. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

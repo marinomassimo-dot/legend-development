@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-06T15:03:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-06T15:09:00Z",
+ "event_id": "FTR-20261106-23554479-27",
+ "evidence_basis": [
+  "passages of the open text read",
+  "verbatim_locator | proposition: E26 oligodendrocyte-specific inducible PERK activation - axonal degeneration, inflammation: protective on axons; no anti-inflammatory effect | full_text | \"enhancing PERK signaling specifically in oligodendrocytes attenuated axonal degeneration but did not attenuate the degree of the inflammatory response\"",
+  "verbatim_locator | proposition: E27 oligodendrocyte-specific inducible PERK activation - oligodendrocyte and myelin integrity: tolerated (role=support for tolerability) | full_text | \"Persistent activation of PERK signaling specifically in oligodendrocytes was not detrimental to these cells or to myelin in adult animals.\"",
+  "verbatim_locator | proposition: E28 oligodendrocyte-specific inducible PERK activation - timing limitation: dimerizer started after day 10, authors note possible late start (role=counter) | full_text | \"because treatment with the dimerizer was not initiated until PID 10, which might be too late to alter the number of CNS infiltrating inflammatory cells\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/wo06_it30_20261106/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC3654380 article page HTML on the PMC site fetched as text (publisher blocks XML download); bytes not saved",
+ "study_id": {
+  "doi": "10.1523/jneurosci.1636-12.2013",
+  "pmid": "23554479"
+ },
+ "workflow": "WO-06 residues of CH-IT28-ISR-ROLE (wo06_it30_20261106): question-driven reading of the ISR-seizure, Sephin1-rebuttal and glial-full-text residues. Staged for the integrator; the ledger was not written by the preparing actor."
+}

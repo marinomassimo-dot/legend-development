@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-06T15:10:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-06T15:12:00Z",
+ "event_id": "FTR-20261106-21075834-26",
+ "evidence_basis": [
+  "An abstract is not a reading; it supports a conditional lead only.",
+  "verbatim_locator | proposition: genetic interactions of Drosophila Wwox with Idh and Sod | Abstract | \"Functional relationships between Wwox and either CG6439/isocitrate dehydrogenase (Idh) or Cu-Zn superoxide dismutase (Sod) were confirmed by genetic interactions.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/rs_r6_it30_20261106/README.md",
+  "disease-models/wwox/research/drug_repurposing/rs_r6_it30_20261106/evidence_rs_r6.tsv"
+ ],
+ "prior_receipt": "FTR-20261019-21075834-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record retrieved through Europe PMC REST search on 2026-11-06; abstract text only for this reading",
+ "study_id": {
+  "doi": "10.1093/hmg/ddq495",
+  "pmid": "21075834"
+ },
+ "workflow": "RS-R6 (rs_r6_it30_20261106), task ORCH-SCIBATCH-DR-20261105: question-driven search for perturbations that modify a WWOX-loss phenotype. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

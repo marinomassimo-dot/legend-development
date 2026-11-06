@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-06T15:03:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-06T15:09:00Z",
+ "event_id": "FTR-20261106-35984443-27",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: E15 guanabenz (alpha-2A agonist) in CA3 slices - epileptiform burst frequency: guanabenz reduced epileptiform activity through a receptor target (role=counter to attributing any guanabenz anti-seizure effect to the ISR) | abstract_only | \"dexmedetomidine, an imidazoline (pEC50, 8.59; RE, 67.1%), and guanabenz, a guanidine (pEC50, 7.94; RE, 37.9%)\"",
+  "verbatim_locator | proposition: E16 alpha-2A agonists - epileptiform activity: receptor-mediated, not ISR | abstract_only | \"CA3 epileptiform activity is mediated solely by \u03b12A-ARs without activation of other receptor systems\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/wo06_it30_20261106/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record abstract retrieved through Europe PMC REST search; full text open but not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1080/10799893.2022.2110896",
+  "pmid": "35984443"
+ },
+ "workflow": "WO-06 residues of CH-IT28-ISR-ROLE (wo06_it30_20261106): question-driven reading of the ISR-seizure, Sephin1-rebuttal and glial-full-text residues. Staged for the integrator; the ledger was not written by the preparing actor."
+}
