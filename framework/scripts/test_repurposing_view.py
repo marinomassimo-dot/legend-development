@@ -278,7 +278,7 @@ class Browser(unittest.TestCase):
 
     def test_every_chain_node_can_be_selected_by_keyboard_and_shows_its_relations(self):
         """IT29: a node without a card is a tab stop, Enter fills the detail panel with direction, type and source of its edges; this is the keyboard and phone path."""
-        with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as td:     # Chromium may still hold its profile when the directory is removed
+        with tempfile.TemporaryDirectory() as td:
             cdp = rv.Cdp(self.bin, td)
             try:
                 cdp.call("Page.enable")
@@ -1328,7 +1328,7 @@ class RealViewports(unittest.TestCase):
         if not rv.find_chromium():
             self.skipTest("no Chromium binary: the legend was NOT measured")
         for lang in ("en", "it", "fr", "es", "de"):
-            with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as td:
+            with tempfile.TemporaryDirectory() as td:
                 f = Path(td) / "v.html"
                 f.write_text(rv.build(DR, "shareable", lang), encoding="utf-8")
                 for w, h in ((360, 780), (390, 844)):

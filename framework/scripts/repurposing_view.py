@@ -5205,7 +5205,7 @@ class Cdp:
             so.bind(("127.0.0.1", 0))
             self.port = so.getsockname()[1]
         self.proc = subprocess.Popen([binary, "--headless=new", "--disable-gpu", f"--remote-debugging-port={self.port}", f"--user-data-dir={tmpdir}", "about:blank"],
-                                     stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                                     stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)   # own process group: close() ends the helpers too
         url = None
         for _ in range(100):
             try:
@@ -5325,11 +5325,36 @@ class Cdp:
         self.evaluate("new Promise(function(r){requestAnimationFrame(function(){requestAnimationFrame(function(){r(1)})})})")
 
     def close(self):
+        """End the browser AND its helper processes (renderer, GPU, zygote) before the profile directory is removed. Terminating only the main
+        process left the helpers writing into the profile, so the caller's TemporaryDirectory cleanup raced them (OSError 39 'Directory not
+        empty', IT30). The group is signalled, awaited, and killed if it does not leave; nothing is ignored."""
+        import os
+        import signal
+        import time
         try:
-            self.proc.terminate()
-            self.proc.wait(timeout=10)
+            self.sock.close()
         except Exception:
-            self.proc.kill()
+            pass
+        pgid = self.proc.pid                      # start_new_session=True made the browser its own group leader
+        for sig, grace in ((signal.SIGTERM, 8.0), (signal.SIGKILL, 5.0)):
+            try:
+                os.killpg(pgid, sig)
+            except ProcessLookupError:
+                break
+            end = time.time() + grace
+            while time.time() < end:
+                try:
+                    os.killpg(pgid, 0)            # still has a live member?
+                except ProcessLookupError:
+                    break
+                time.sleep(0.05)
+            else:
+                continue
+            break
+        try:
+            self.proc.wait(timeout=5)
+        except Exception:
+            pass
 
 
 MEASURE_JS = r"""(function(){var iw=__REQ__,de=document.documentElement,off=[];
@@ -5371,7 +5396,7 @@ def measure_viewports(html_path: Path, shots: Path | None = None, widths: list |
         return []
     P = json.loads(re.search(r'<script id="data" type="application/json">(.*?)</script>', html_path.read_text(encoding="utf-8"), re.S).group(1).replace("<\\/", "</").replace("<\\!--", "<!--"))
     out = []
-    with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as td:     # the browser may still be writing its profile when the directory is removed (IT30: a flaky OSError 39)
+    with tempfile.TemporaryDirectory() as td:
         cdp = Cdp(binary, td)
         try:
             cdp.call("Page.enable")

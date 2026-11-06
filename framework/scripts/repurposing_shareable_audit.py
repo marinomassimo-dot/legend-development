@@ -670,7 +670,7 @@ def dynamic_surfaces(html_path: Path, P: dict) -> tuple[list[tuple[str, str]], d
         return [], info
     ids = [c["id"] for c in P["cur"]["cands"]]
     out: list[tuple[str, str]] = []
-    with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as td:   # the browser may still be writing its profile when it exits
+    with tempfile.TemporaryDirectory() as td:
         cdp = rv.Cdp(binary, td)
         try:
             cdp.call("Page.enable")
