@@ -3956,7 +3956,7 @@
      "statement": "Across published WWOX-DEE reports, children with both a symptomatic and a developmental outcome recorded: 6. In 4, a partial or transient seizure improvement came with development unchanged; in 2, neither moved. No sustained, instrumented response is recorded.",
      "model_type": "human_clinical_report",
      "species": "human",
-     "genotype": "biallelic WWOX; null or splice class in 5, homozygous missense class in 1",
+     "genotype": "WWOX disease class level only (loss-of-function classes predominate; one child homozygous for a missense class; per-child classes are in the batch table)",
      "tissue_or_cells": "whole organism",
      "age_stage": "infancy to early childhood",
      "comparison": "responders against non-responders, between reports; no comparator arm",
