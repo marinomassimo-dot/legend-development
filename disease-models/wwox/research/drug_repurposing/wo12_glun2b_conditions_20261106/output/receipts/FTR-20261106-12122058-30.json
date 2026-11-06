@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-06T18:55:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-06T18:55:30Z",
+ "event_id": "FTR-20261106-12122058-30",
+ "evidence_basis": [
+  "full text keyword-directed",
+  "verbatim_locator | proposition: oocyte recordings used 100 micromolar glutamate and glycine, no Mg2+ (0.3 mM Ba2+, Tricine), pH 7.3, holding -60 mV | Methods | \"NMDA currents were induced by application of the agonist solution containing a saturating concentration of both l-glutamate and glycine (100 μM each).\"",
+  "verbatim_locator | proposition: ifenprodil IC50 155 nM at NR1/NR2B and 28 micromolar at NR1/NR2A in this oocyte system | Figure 2 legend | \"155 nM, 0.98, and 96% for NR2B wt\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/wo12_glun2b_conditions_20261106/output/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC6757916 article page text fetched 2026-11-06 from the PMC site; Methods, Figure 1 and 2 legends and Discussion passages read by keyword; figures not viewed; bytes not saved",
+ "study_id": {
+  "doi": "10.1523/JNEUROSCI.22-14-05955.2002",
+  "pmid": "12122058"
+ },
+ "workflow": "wo12-p WO-12: oocyte reference conditions and ratio"
+}

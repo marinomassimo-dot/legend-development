@@ -58,6 +58,7 @@ Three facts bind before you have finished reading anything else:
 | Self-diagnosis before growth and takeaways | [`framework/protocols/session_self_evaluation.md`](framework/protocols/session_self_evaluation.md) |
 | Batch commit, LINT, ingest, parallelism and worktree isolation, wikilinks, file generation, read receipts | [`framework/protocols/`](framework/protocols/) → [`index.md`](framework/protocols/index.md) |
 | **Which tool answers the question you actually have** — and why you never grep the two large registries | [`framework/scripts/README.md`](framework/scripts/README.md) |
+| Delegating to subagents: model and effort per delegate, one active, bounded escalation, startup cost | [`framework/protocols/delegation_budget.md`](framework/protocols/delegation_budget.md) |
 | Waiting for a job you started — a battery, a build, a clone — by PID, `PID:START` or a completion file, **never by process name** (`pgrep -f` matches the waiter itself) | [`framework/scripts/process_wait.py`](framework/scripts/process_wait.py) |
 | Running an assigned mandate (goal, roadmap, queue) to its end without the operator; may this turn end? | [cross-session transport §12](framework/protocols/cross_session_transport.md#12--autonomous-mandate-continuity) · `python3 framework/scripts/mandate_continuity.py status --task <TASK_ID>` |
 | Working on a drug-repurposing package (retrieval, cache, extracts, graded comparisons, radar, evaluation) | [Standing method](disease-models/wwox/research/drug_repurposing/roadmap_current.md#standing-method) |
