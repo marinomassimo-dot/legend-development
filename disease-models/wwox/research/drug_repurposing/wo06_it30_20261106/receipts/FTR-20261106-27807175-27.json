@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-06T15:03:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-06T15:09:00Z",
+ "event_id": "FTR-20261106-27807175-27",
+ "evidence_basis": [
+  "passages of the open text read",
+  "verbatim_locator | proposition: E31 Perk haploinsufficiency - neuropathy: ameliorated although p-eIF2alpha fell (role=counter to a one-sign ISR) | full_text | \"Perk haploinsufficiency paradoxically also ameliorates the neuropathy of the CMT1B mouse model\"",
+  "verbatim_locator | proposition: E32 Gadd34 loss - neuropathy: almost complete rescue by raising p-eIF2alpha (same model, opposite node sign) | full_text | \"We have shown that loss of Gadd34 increases eIF2α phosphorylation and almost completely rescues S63del neuropathy\"",
+  "verbatim_locator | proposition: E33 Perk ablation, Schwann cell vs neuron - myelination: cell-autonomous in Schwann cells, not in neurons | full_text | \"In this study, we demonstrate that Perk ablation in Schwann cells, but not in neurons, partially restores myelination in S63del nerves.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/wo06_it30_20261106/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC5148247 article page HTML on the PMC site fetched as text (publisher blocks XML download); keyword-directed passages; bytes not saved",
+ "study_id": {
+  "doi": "10.1523/jneurosci.1637-16.2016",
+  "pmid": "27807175"
+ },
+ "workflow": "WO-06 residues of CH-IT28-ISR-ROLE (wo06_it30_20261106): question-driven reading of the ISR-seizure, Sephin1-rebuttal and glial-full-text residues. Staged for the integrator; the ledger was not written by the preparing actor."
+}

@@ -31,6 +31,10 @@
   "src": "en",
   "text": "Does lowering KEAP1 or raising NRF2 change a functional readout in a WWOX-deficient neural cell, in the direction the two conditional arms of this need assume?"
  },
+ "0754c6e712e4": {
+  "src": "it",
+  "text": "Lavoro su animali; linea con delezione neurone-specifica non disponibile (non nota); denominatori di RM solo a livello di abstract (2 su 2 esposti, in un rapporto selezionato per il reperto; frequenza, non rischio attribuibile); il denominatore di una coorte di 64 bambini è probabilmente quello che li comprende, non verificato."
+ },
  "0838f09e6cea": {
   "src": "en",
   "text": "position unchanged from IT20 (rank 2): No IT21 input changes the position. IT29: epilepsy-model screens in other genotypes give no corroboration for this agent (absence of corroboration is not refutation); the position rests on the single pup experiment."
@@ -58,10 +62,6 @@
  "0be03bbf61e9": {
   "src": "it",
   "text": "dataset murino (P17)"
- },
- "0cbd3b9889b5": {
-  "src": "it",
-  "text": "Lavoro su animali; linea con delezione neurone-specifica non disponibile (non nota); denominatori di RM non disponibili dall'abstract."
  },
  "0ce1153dc28b": {
   "src": "it",
@@ -106,6 +106,14 @@
  "163545e4bfce": {
   "src": "en",
   "text": "Genetic KEAP1 lowering with a functional readout in the WWOX-deficient neural system, isogenic control, before any electrophile is compared."
+ },
+ "166039e85da5": {
+  "src": "en",
+  "text": "One added arm of the published design with injection after the first recorded spike-wave discharge, same endpoints, untreated same-genotype comparator kept. Worded per endpoint class: measure the restoration actually achieved at the age of treatment and its regional distribution, because the one comparable later-age failure in a short-lived null was left uninterpretable by that missing measurement; carry a within-animal pre-treatment recording, a treated wild-type or heterozygote arm, growth and glycaemia as primary endpoints (growth failed even with pre-onset treatment in the closest analogue), and follow-up long enough to see decay. Quantified myelin sheath structure (g-ratio or electron microscopy, not marker intensity) is the discriminating endpoint for a neuron-driven lesion: white-matter abnormality has been reversed after a documented onset only in glial or metabolic lesions, and sheath structure after onset has been reported only in a metabolic oligodendrocyte-enzyme lesion (G-ratio by electron microscopy, one source) and not in any neuron-driven lesion. Spike-wave rate is the confirmatory endpoint and its external precedent (not WWOX evidence) is split, so pair it with a rhythm or power-spectrum measure; interneuron number as well as excitability, because no source measured number."
+ },
+ "168c2068833c": {
+  "src": "en",
+  "text": "EXECUTED 2026-11-05: the published same-genotype cases with both a symptomatic and a developmental endpoint were assembled (6 children with both endpoints; a discordance rate is not computable at n below 10, so counts are given instead). Vigabatrin fired the 5-or-more branch (counts with sources); hormonal therapy, diet and cannabidiol fired the fewer-than-5 branch (not computable from the public record). Next: read these counts against the stratum base rates in un registro del repository (non incluso in questo pacchetto) section 1.3; only a WWOX-DEE responder rate with a favourable or improving developmental course clearly above the genetic-DEE base rate would be a WWOX finding. Denominator request, without contact: for each WWOX-DEE series that reports an intervention, the number exposed, the response definition, and a dated developmental instrument before and after a sustained response; where a source gives one, compare within-child continuous scores, since a cut at 70 cannot discriminate. The five-patient series and Choi 2026 come first, and the seven-child series (PMID 42721537) is read when an open route exists. No new exposure is proposed."
  },
  "177992f07455": {
   "src": "en",
@@ -202,6 +210,10 @@
  "2e7e81130d1a": {
   "src": "en",
   "text": "BTK detected in the NPY-producing cell class with NPY following BTK knockdown; BTK only in microglia moves the idea to another proposal."
+ },
+ "2e8aa799280e": {
+  "src": "en",
+  "text": "Clinical reports only. Children counted once across 14 reports: 36 to 38 exposed to at least one of vigabatrin, hormonal therapy, ketogenic diet or cannabidiol (partial full-text depth in 11 reports, one source at abstract level). Both a symptomatic and a developmental outcome are recorded for 6. In 4 of them, a partial or transient improvement came with development unchanged; in 2, neither moved. No sustained, instrumented response is recorded, and no developmental gain follows any of the four classes. Vigabatrin: 5 children with both endpoints in 4 reports (4 discordant, 1 concordant non-response); these are not independent of the other classes, since three of the five also supply them and all five were on co-therapy. Children with both endpoints, by class, of those exposed: hormonal 3 of 11; ketogenic diet 2 of 12; cannabidiol 1 of 7. Counts only, no percentage (n below 10). Developmental statements are clinical narratives without a scale. A brain-imaging safety signal is recorded beside them in two children (abstract level, a report selected for the finding), so it is not a frequency. No WWOX child is recorded with a developmental gain after a symptomatic improvement. Four children in three reports (two of them in one report) had a partial, transient or clinically-defined improvement with development not progressing; two had neither. That is what the baseline in other genetic and structural early-onset encephalopathies predicts (a responder with poor development is the majority outcome in infantile spasms and near-universal in genetic strata), so it is not by itself a WWOX-specific feature. The comparison holds only as a binary: the baseline uses standardised scores with a cut, every WWOX developmental statement is a clinician narrative, and no WWOX child had a sustained, instrumented response. Non-WWOX DEE baseline (batch_sci_20261105 a2_baseline; not WWOX evidence): in a prospective IESS cohort read at partial full-text depth, 72 percent of responders (126 of 175, computed from its Table 1) were below the developmental cut at 3 years, and no genetic-aetiology child reached a favourable outcome (0 of 49, a count over all genetic-aetiology children, not a responder rate). In two randomised IESS trials (abstract level), arms that raised early spasm cessation by 15 to 19 points showed no demonstrated developmental difference, with about one chance in four of detecting the difference that full mediation would predict. In TSC, two randomised trials of pre-onset prevention changed seizure endpoints without changing development to 36 months; they test prevention before onset, not response after onset. The person-level association (ICISS, abstract level: 15.9 VABS points higher with early cessation) is carried by unknown aetiology and a normal first neurological examination."
  },
  "2f8732bc88cb": {
   "src": "en",
@@ -451,6 +463,10 @@
   "src": "en",
   "text": "An inhibitor of iron-dependent demethylases and hydroxylases proposed to lower HIF activity through KDM4C"
  },
+ "6229c8fbf0f4": {
+  "src": "en",
+  "text": "Queried: this need's three observation rows; the inactivator unit, its caveats and the safety flag; the chloride-gradient and inhibitory-hypofunction needs for the mechanism argument that contradicts the reports. Extended on 2026-11-05/06: the non-WWOX DEE baseline queried (UKISS, ICISS, the National Infantile Spasms Consortium records with no developmental outcome endpoint, lead-time cohorts, EPISTOP and PREVeNT, STXBP1, Dravet and KCNQ2 cohorts, and an early-infantile DEE cohort with burst suppression; un registro del repository (non incluso in questo pacchetto)); 14 WWOX-DEE reports queried for exposure and both endpoints (a1_wwox_reports). Bounded queries, not a statement that nothing else exists."
+ },
  "63a54671a54d": {
   "src": "en",
   "text": "The chain that motivates this lever predicts a PDH block, and the two available data point the other way: the kinase transcript is down and the one human activity measurement shows no difference. Ordering the compound before the premise is measured is how a plausible chain becomes a wasted experiment."
@@ -518,10 +534,6 @@
  "775302e45683": {
   "src": "it",
   "text": "via della firma trascrizionale: opposizione del modulo in cellule simili ai progenitori, valutata in cellule simili ai neuroni"
- },
- "776a4e50c7e0": {
-  "src": "en",
-  "text": "Queried: this need's three observation rows; the inactivator unit, its caveats and the safety flag; the chloride-gradient and inhibitory-hypofunction needs for the mechanism argument that contradicts the reports."
  },
  "777f53f919ef": {
   "src": "it",
@@ -719,10 +731,6 @@
   "src": "it",
   "text": "Organoide più basso, linea shRNA più alta; il topo è dentro il rumore e non rompe il pareggio."
  },
- "9dbedd3a95fb": {
-  "src": "en",
-  "text": "Queried: the two gene-addition cards (C01, C04) and their assertion rows; the deepdive manifest of the source; the work-order statements for this need. Checked for a post-onset arm and found none. Not a statement about the literature beyond the sources this module has read."
- },
  "9e1c38e4e909": {
   "src": "it",
   "text": "Capire se l'attività di GSK3 è davvero aumentata quando WWOX manca (oggi c'è solo un blot di fosfo-Ser9) e in che direzione ogni classe di inibitore sposta la via Wnt; i composti trovati sono strumenti per questo esperimento, non candidati."
@@ -750,6 +758,10 @@
  "a503e5fa8348": {
   "src": "en",
   "text": "New compound routes for the Q8 question; the NRF2 axis and its step 0 were already a carded thread since IT10; the molecule is in an earlier exclusion list"
+ },
+ "a50ceba18e8b": {
+  "src": "en",
+  "text": "Whether the separation of symptomatic response and development seen in WWOX-DEE cases differs from the base rate of genetic and structural DEEs, in which a responder with poor development is the expected case (in unknown aetiology the two are coupled, so the base rate does not extend to DEE generally); whether any WWOX-DEE case shows a change on a continuous developmental measure after a symptomatic response; whether a sustained response, which no published child achieved, is followed by gain; and whether the separation holds for residual-function alleles. The earlier contradiction with the mechanism argument is not unexplained: other genetic DEE cohorts (STXBP1, Dravet, KCNQ2; partial full-text and abstract depth, not WWOX evidence) report a developmental component independent of seizure control."
  },
  "a5a33bf563ba": {
   "src": "it",
@@ -786,10 +798,6 @@
  "a8db6cde1c2c": {
   "src": "it",
   "text": "Più bassi in cinque contesti ma non specifici (controlli non correlati si muovono quanto): non letti come segnale respiratorio."
- },
- "a96ad03abece": {
-  "src": "en",
-  "text": "Assemble the published same-genotype cases with both a symptomatic and a developmental endpoint recorded, and state the discordance rate; no new exposure is proposed."
  },
  "ab1a6c5c29fc": {
   "src": "it",
@@ -1019,17 +1027,9 @@
   "src": "en",
   "text": "Seizure-free neuron plus precursor co-culture, WWOX-deficient versus corrected neurons, hormone-depleted medium, isoform control."
  },
- "dacd86fc66cd": {
-  "src": "en",
-  "text": "One added arm of the published design with injection after the first recorded spike-wave discharge, same endpoints, untreated same-genotype comparator kept."
- },
  "dae4a2481281": {
   "src": "it",
   "text": "Capire se la fosforilazione di PDH è più alta nelle cellule neurali prive di WWOX e se un inibitore di PDK la modifica in modo dipendente dal genotipo, aggiungendo un inibitore nanomolare pan-isoforma accanto al dicloroacetato (con riserve su selettività e disponibilità). In più (IT9 P6): un esperimento condizionale sull'asse HIF (proteina HIF-1alfa e HIF-2alfa nelle cellule neurali prive di WWOX, poi knockdown genetico e una leva di classe PX-478 contro un controllo di direzione), proposto e non eseguito. Restato (IT10 P2.1/P5): la direzione del cambiamento di HIF non è stabilita (condizionale); controllo genetico per primo; ossigeno fisiologico al 5% come condizione primaria; bracci per attività, MYC e stato di coltura. IT12: nel cervello P47T adulto (solo trascritti) lo spostamento e' ampio e modesto, guidato dagli enzimi glicolitici, e non riproduce il profilo selettivo dell'organoide; restano separate tre ipotesi (stato dell'organoide, attivita', composizione); aggiunti ancoraggio in vivo e pannello genico."
- },
- "db02c57474cb": {
-  "src": "en",
-  "text": "Clinical report only, published cases, with a brain-imaging safety signal recorded beside them; no same-genotype comparator and no developmental endpoint tied to the response."
  },
  "dc449159abf1": {
   "src": "en",
@@ -1038,6 +1038,10 @@
  "dcdf79130cf2": {
   "src": "en",
   "text": "position unchanged from IT20 (rank 3): No IT21 input changes the position. The thyroid-hormone probe row asks the receptor-responsiveness question on the same axis; the two are not merged because one measures the neuron's signal and the other the precursor cell's response. IT29 (phenotype-first table): position unchanged; the added evidence is transferred from non-WWOX systems and conditional."
+ },
+ "dd12a8b7fdb5": {
+  "src": "en",
+  "text": "Queried: the two gene-addition cards (C01, C04) and their assertion rows; the deepdive manifest of the source; the work-order statements for this need. Checked for a post-onset arm and found none. Not a statement about the literature beyond the sources this module has read. Extended on 2026-11-05/06 by two bounded external searches (batch_sci_20261105, r1 and r2 query logs, 66 queries in all): conditional, antisense and vector restoration after onset in Mecp2, Ube3a, Fmr1, Tsc1, Pten, Syngap1, Cdkl5, Shank3, Tcf4, Scn1a, Scn1b, Kcnt1, Scn8a and leukodystrophy models. The earlier of the two searches was anchored on gene names and could not reach enzyme, connexin, tubulin or astrocyte-transporter leukodystrophies; an independent review found post-onset white-matter arms there. Bounded searches, not a statement that none exists."
  },
  "e22f10004a65": {
   "src": "en",
@@ -1146,10 +1150,6 @@
  "f8c3ae2a2f19": {
   "src": "en",
   "text": "NMDAR antagonism (the carded tool compound and the clinically used class)"
- },
- "f8c3f8a97bfb": {
-  "src": "en",
-  "text": "Whether symptomatic response tracks any developmental endpoint in this genotype class. The mechanism argument on this axis predicts the opposite of what the reports show, and that contradiction is unexplained."
  },
  "f8c40246e1de": {
   "src": "en",

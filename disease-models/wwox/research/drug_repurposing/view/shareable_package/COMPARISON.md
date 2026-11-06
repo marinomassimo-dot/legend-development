@@ -21,7 +21,7 @@ The full version (`view/index.html` in the repository, local use) and this packa
 | Card actions on targets listed | 45 | 0 |
 | Pair objects carrying a status class | 912 | 0 |
 | Excluded rows listed with compound name and gene | 3 | 0 |
-| Card fields that differ (count of cards) | n/a | {"access": 10, "access_text": 7, "actions": 9, "asserts": 2, "brief": 1, "card_path": 39, "country": 5, "for": 2, "identity": 7, "links": 10, "mechanism": 2, "next_full": 2, "novelty": 2, "pharm": 2, "reopen": 1} |
+| Card fields that differ (count of cards) | n/a | {"access": 10, "access_text": 7, "actions": 9, "asserts": 2, "brief": 2, "card_path": 39, "country": 5, "for": 2, "identity": 7, "links": 10, "mechanism": 2, "next_full": 2, "novelty": 2, "pharm": 2, "reopen": 1} |
 | Deepened cases (question, level, system, WWOX evidence, counter-evidence, next experiment) | all fields, with compound names | the same own-text fields with a class label instead of compound names; precedent, pharmacology, its limits and source paths withheld (ChEMBL-graded values are CC BY-SA 3.0, third-party text is not copied) |
 | Matching direction (IT19 P6, EXPERIMENTAL): need direction, compound action, target level, compatible / opposed / indeterminable, abstention reason, reference label and independence, missing datum, next check | every field, with compound names, ChEMBL actions, ChEMBL record ids, reference locators and the free-text missing-datum notes | the same pairs as class labels, codes and counts (target level with component counts, abstention class, reference state and kind, independence class, next-check code); compound names, ChEMBL action wording, record ids, locators and notes withheld; the intervention-to-needs search is in the full version only |
 

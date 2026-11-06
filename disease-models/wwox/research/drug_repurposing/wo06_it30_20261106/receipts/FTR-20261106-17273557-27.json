@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-06T15:03:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-06T15:09:00Z",
+ "event_id": "FTR-20261106-17273557-27",
+ "evidence_basis": [
+  "passages of the open text read",
+  "verbatim_locator | proposition: E24 IFN-gamma delivery; Perk haploinsufficiency - demyelination, axon damage: loss of PERK abolishes benefit of raised PERK signalling (support for protective PERK in oligodendrocytes) | full_text | \"CNS delivery of IFN-γ did not prevent demyelination and axon damage in the lumbar spinal cord of mice on a Perk+/–background at PID17\"",
+  "verbatim_locator | proposition: E25 Perk haploinsufficiency - immune readouts: PERK loss did not change the immune response (narrows an immune confound, role=support) | full_text | \"Importantly, the Perk+/– genotype did not significantly affect T cell priming in the peripheral immune system\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/wo06_it30_20261106/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC1783809 article page HTML on the PMC site fetched as text (publisher blocks XML download); bytes not saved",
+ "study_id": {
+  "doi": "10.1172/jci29571",
+  "pmid": "17273557"
+ },
+ "workflow": "WO-06 residues of CH-IT28-ISR-ROLE (wo06_it30_20261106): question-driven reading of the ISR-seizure, Sephin1-rebuttal and glial-full-text residues. Staged for the integrator; the ledger was not written by the preparing actor."
+}

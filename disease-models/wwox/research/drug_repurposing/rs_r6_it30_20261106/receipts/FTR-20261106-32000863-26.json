@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-06T15:10:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-06T15:12:00Z",
+ "event_id": "FTR-20261106-32000863-26",
+ "evidence_basis": [
+  "abstract analysed",
+  "keyword-directed passages inspected",
+  "verbatim_locator | proposition: lithium chloride suppressed PTZ-induced seizure in Wwox-null mice | Results | \"Injection of a potent GSK3β inhibitor lithium chloride significantly suppressed PTZ-induced epileptic seizure in Wwox −/− mice\"",
+  "verbatim_locator | proposition: ethosuximide had no effect in the wild-type and heterozygous controls at the low PTZ dose used | Results | \"ethosuximide pretreatment had no effects on the behavior changes in Wwox +/+ and Wwox +/− mice treated with a low dose of PTZ\""
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/rs_r6_it30_20261106/README.md",
+  "disease-models/wwox/research/drug_repurposing/rs_r6_it30_20261106/evidence_rs_r6.tsv"
+ ],
+ "prior_receipt": "FTR-20261105-32000863-05",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC REST fullTextXML for the PMC record PMC6990504, fetched 2026-11-06; keyword-directed passages inspected (lithium, ethosuximide, Fig. 7 legend text), no section read end to end; figures not viewed; bytes not saved",
+ "study_id": {
+  "doi": "10.1186/s40478-020-0883-3",
+  "pmid": "32000863"
+ },
+ "workflow": "RS-R6 (rs_r6_it30_20261106), task ORCH-SCIBATCH-DR-20261105: question-driven search for perturbations that modify a WWOX-loss phenotype. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

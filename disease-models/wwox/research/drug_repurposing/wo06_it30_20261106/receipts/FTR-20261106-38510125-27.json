@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-06T15:03:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-06T15:09:00Z",
+ "event_id": "FTR-20261106-38510125-27",
+ "evidence_basis": [
+  "passages of the open text read",
+  "verbatim_locator | proposition: E14 ISRIB - spines, PSD-95, social recognition (no seizure endpoint): improved non-seizure phenotypes (undetermined for seizures) | partial_fulltext | \"ISRIB rescues these deficits and improves social recognition in Fmr1 KO mice.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/wo06_it30_20261106/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC10951902 full-text XML fetched through Europe PMC REST fullTextXML; keyword scan for seizure and eIF2 passages; bytes not saved",
+ "study_id": {
+  "doi": "10.1016/j.isci.2024.109259",
+  "pmid": "38510125"
+ },
+ "workflow": "WO-06 residues of CH-IT28-ISR-ROLE (wo06_it30_20261106): question-driven reading of the ISR-seizure, Sephin1-rebuttal and glial-full-text residues. Staged for the integrator; the ledger was not written by the preparing actor."
+}

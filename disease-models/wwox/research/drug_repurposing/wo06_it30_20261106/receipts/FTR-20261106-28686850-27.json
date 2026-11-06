@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-06T15:03:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-06T15:09:00Z",
+ "event_id": "FTR-20261106-28686850-27",
+ "evidence_basis": [
+  "passages of the open text read",
+  "verbatim_locator | proposition: E03 salubrinal; PERK inhibitor GSK2656157; metformin - CHOP and TUNEL apoptosis, not seizure severity: both compounds lowered apoptosis (potentiator and kinase inhibitor same sign) | full_text | \"it was significantly reduced in salubrinal, GSK2656157, and metformin groups\"",
+  "verbatim_locator | proposition: E04 salubrinal; PERK inhibitor GSK2656157; metformin - CHOP vs apoptosis: CHOP fall did not equal apoptosis fall (role=counter) | full_text | \"metformin reduced apoptosis induced by SE to a greater extent than salubrinal or GSK2656157, despite the similar reductions in CHOP levels\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/wo06_it30_20261106/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC5826674 article page HTML on the PMC site fetched as text; keyword-directed passages; bytes not saved",
+ "study_id": {
+  "doi": "10.17305/bjbms.2017.2044",
+  "pmid": "28686850"
+ },
+ "workflow": "WO-06 residues of CH-IT28-ISR-ROLE (wo06_it30_20261106): question-driven reading of the ISR-seizure, Sephin1-rebuttal and glial-full-text residues. Staged for the integrator; the ledger was not written by the preparing actor."
+}

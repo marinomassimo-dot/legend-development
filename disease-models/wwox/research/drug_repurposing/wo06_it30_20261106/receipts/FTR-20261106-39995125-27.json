@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-06T15:03:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-06T15:09:00Z",
+ "event_id": "FTR-20261106-39995125-27",
+ "evidence_basis": [
+  "passages of the open text read",
+  "verbatim_locator | proposition: E17 salubrinal (review statement) - neuroprotection in status epilepticus: secondary pointer to E03 class of study | partial_fulltext | \"treatment with salubrinal has been demonstrated to exert neuroprotective effects in the context of status epilepticus\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/wo06_it30_20261106/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC12308010 full-text XML fetched through Europe PMC REST fullTextXML; keyword passages on seizure, epilepsy and guanabenz only; bytes not saved",
+ "study_id": {
+  "doi": "10.2174/011570159x361653250213114821",
+  "pmid": "39995125"
+ },
+ "workflow": "WO-06 residues of CH-IT28-ISR-ROLE (wo06_it30_20261106): question-driven reading of the ISR-seizure, Sephin1-rebuttal and glial-full-text residues. Staged for the integrator; the ledger was not written by the preparing actor."
+}

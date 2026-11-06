@@ -105,7 +105,7 @@
   "p4_fields": {
     "endpoint_pursued": "clinician-reported seizure control, symptomatic only (the endpoint type the only WOREE therapeutic report used); no count, score, latency, duration or exposure denominator on the delivered surface",
     "functional_evidence_available": "none for the gene: no WWOX read-out of any kind in the source, so whatever changed in those children nothing measured WWOX; a clinician statement only",
-    "temporal_or_model_limit": "uncontrolled retrospective human case series of five children, one timepoint per patient, no comparator, no latency; two of the three responders had died within roughly two years and the developmental row is identical in all five columns",
+    "temporal_or_model_limit": "uncontrolled retrospective human case series of five children, one timepoint per patient, no comparator, no latency; two of the three responders were deceased at the last report; the developmental row is a single status label in all five columns, so no developmental course is recorded; across reports: 12 exposed (a minimum count), 5 responders, none with a developmental outcome; two children of the homozygous missense class exposed, one non-responder (A1-26), one with no outcome attributable to the diet (A1-35)",
     "cellular_context": {
       "target_expression": "NOT_APPLICABLE: a dietary intervention with no molecular target in any record read; no WWOX expression measured in the series",
       "cells_tissue_stage": "whole organism, paediatric patients; no tissue measured",

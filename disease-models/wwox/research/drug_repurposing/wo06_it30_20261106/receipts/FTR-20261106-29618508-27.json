@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-06T15:03:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-06T15:09:00Z",
+ "event_id": "FTR-20261106-29618508-27",
+ "evidence_basis": [
+  "passages of the open text read",
+  "verbatim_locator | proposition: E18 Sephin1; guanabenz - eIF2alpha-P dephosphorylation rate: no inhibition by either compound (role=counter to the Sephin1 mechanism) | full_text | \"none of the PPP1R15A-containing holophosphatases tested were inhibited by Sephin1 or guanabenz.\"",
+  "verbatim_locator | proposition: E19 Sephin1; guanabenz - concentration range: inactive at 100-fold the concentration of a cellular effect | full_text | \"which exceeds by 100-fold the concentration required for a proteostatic effect in cultured cells\"",
+  "verbatim_locator | proposition: E20 Sephin1; guanabenz - dephosphorylation rate: no measurable effect, per the authors citing their earlier work | full_text | \"reinforce observations that Sephin1 and guanabenz have no measurable effect on the rate of eIF2αP dephosphorylation in cells\"",
+  "verbatim_locator | proposition: E21 Sephin1; guanabenz - gene expression: compound effects persist without the claimed target (role=counter) | full_text | \"suggest the need to reconsider the role of these two compounds as eIF2αP dephosphorylation inhibitors.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/wo06_it30_20261106/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC5961032 full-text XML fetched through Europe PMC REST fullTextXML; bytes not saved",
+ "study_id": {
+  "doi": "10.1074/jbc.ra118.002325",
+  "pmid": "29618508"
+ },
+ "workflow": "WO-06 residues of CH-IT28-ISR-ROLE (wo06_it30_20261106): question-driven reading of the ISR-seizure, Sephin1-rebuttal and glial-full-text residues. Staged for the integrator; the ledger was not written by the preparing actor."
+}

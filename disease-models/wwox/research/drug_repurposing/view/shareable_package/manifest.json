@@ -18,17 +18,17 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 12407,
+    "values": 12501,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
     "class": "OWN",
-    "values": 6565,
+    "values": 6922,
     "why": "card text and computed positions (provenance of the prose: see text audit)"
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
     "class": "BIBLIO",
-    "values": 503,
+    "values": 595,
     "why": "PMID / DOI of a cited work"
    },
    "^\\.cur\\.cands\\[\\]\\.access\\[\\]$": {
@@ -38,12 +38,12 @@
    },
    "^\\.cur\\.cands\\[\\]\\.brief\\.sources\\[\\]\\.(kind|id)$": {
     "class": "BIBLIO",
-    "values": 248,
+    "values": 260,
     "why": "PMID / ChEMBL identifier of an essential source of the one-page synthesis"
    },
    "^\\.cur\\.cands\\[\\]\\.brief\\.sources\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 372,
+    "values": 390,
     "why": "title, journal, year of an essential source (bibliographic facts)"
    },
    "^\\.cur\\.cands\\[\\]\\.chembl\\[\\]$": {
@@ -53,7 +53,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.pmids\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 747,
+    "values": 885,
     "why": "title, journal, year of a cited work (bibliographic facts)"
    },
    "^\\.cur\\.evidence_graph\\.chains\\[\\]\\.(nodes\\[\\]\\.pmids\\[\\]|edges\\[\\]\\.src\\.id)$": {
@@ -73,12 +73,12 @@
    },
    "^\\.cur\\.needs\\[\\]\\.obs\\[\\]\\.(cite)$": {
     "class": "BIBLIO",
-    "values": 98,
+    "values": 107,
     "why": "title, journal, year of a cited work"
    },
    "^\\.cur\\.needs\\[\\]\\.obs\\[\\]\\.pmid$": {
     "class": "BIBLIO",
-    "values": 98,
+    "values": 107,
     "why": "PMID of the observation source"
    },
    "^\\.cur\\.ranking\\.units\\[\\]\\.(access|access_cats\\[\\])$": {
@@ -88,7 +88,7 @@
    },
    "^\\.cur\\.ranking\\.units\\[\\]\\.(pmids\\[\\]|views\\.(broad|partial)\\.evidence\\.pmids\\[\\])$": {
     "class": "BIBLIO",
-    "values": 234,
+    "values": 273,
     "why": "PMID of a cited work (ranking)"
    },
    "^\\.excluded_detail\\[\\]\\.(id|name|src)$": {
@@ -118,7 +118,7 @@
    },
    "^\\.needs\\[\\]\\.": {
     "class": "OWN",
-    "values": 1762,
+    "values": 1771,
     "why": "needs records written in this repository"
    },
    "^\\.pairs\\[\\]\\.(l2|l3|l4|x|n|r)(\\.|\\[\\]|$)": {
@@ -203,11 +203,11 @@
    "DOI": 5,
    "HGNC": 12,
    "NCT": 0,
-   "PMID": 103
+   "PMID": 136
   },
   "links": {
-   "distinct_hrefs": 140,
-   "external_public": 58,
+   "distinct_hrefs": 171,
+   "external_public": 89,
    "hosts": [
     "civicdb.org",
     "open.fda.gov",
@@ -224,7 +224,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3324,
+    "forbidden-name": 3364,
     "forbidden-wording": 21
    },
    "co_attested_wording": [
@@ -249,7 +249,7 @@
    "forbidden_names": 126046,
    "forbidden_wordings": 2888,
    "pair_unmarked_attested_or_unchecked": {
-    "count": 157,
+    "count": 159,
     "names": [
      "act 709478",
      "apinocaltamide",
@@ -264,7 +264,7 @@
      "px 478",
      "sulfopin"
     ],
-    "unchecked_without_corpus": 157
+    "unchecked_without_corpus": 159
    },
    "suppressed_by_exemption": {
     "bibliographic journal name (validated against the journals of the cache)": 4,
@@ -328,7 +328,7 @@
    "access_text": 7,
    "actions": 9,
    "asserts": 2,
-   "brief": 1,
+   "brief": 2,
    "card_path": 39,
    "country": 5,
    "for": 2,
@@ -462,15 +462,15 @@
  ],
  "data": {
   "catalogue_generated": "2026-10-31T07:28:37Z",
-  "data_date": "2026-11-05",
+  "data_date": "2026-11-06",
   "dgidb_export": "2024-06-10",
   "view_schema": "legend.wwox.repurposing_view/2"
  },
  "embedded_field_classes": {
-  "BIBLIO": 2465,
+  "BIBLIO": 2782,
   "COUNT": 11599,
   "ID": 4547,
-  "OWN": 83802,
+  "OWN": 84262,
   "ROWNAME": 2251,
   "SRC_A": 189,
   "SRC_META": 256,
@@ -509,7 +509,7 @@
  "files": {
   "COMPARISON.md": {
    "bytes": 7422,
-   "sha256": "3ff1342a9d7a84ed193c868a4435d2205d8e6e5e2d0f30b491abb1524297b7aa"
+   "sha256": "a7875712cacd3a0e9b473f01dacd96568023a1b37d4a37bdba23e195395f8ce7"
   },
   "LICENSES/CC-BY-4.0.txt": {
    "bytes": 18657,
@@ -529,11 +529,11 @@
   },
   "NOTICE.md": {
    "bytes": 13086,
-   "sha256": "270dbf019f75629329bc3c1931aebfe9c825eaa28d0c49b93f4539a583d68a2f"
+   "sha256": "a7338519189f0456e51847d6ffde1def0b918369481eb42082c729cf12b22b63"
   },
   "README.md": {
    "bytes": 5072,
-   "sha256": "20a1c353729ea4a6d80360442f7d4554d6d9d4632669ef042ff6ca60a7e21902"
+   "sha256": "7ec037e18e21ddf967c102ef962efced682c74688d42f555300164adbae37b59"
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 1999,
@@ -552,24 +552,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 4612293,
-   "sha256": "c53e2eb8b9596e535cd6e67064cc76bd865bf02eeff54d6fbcbc8683b7263cf3"
+   "bytes": 4704218,
+   "sha256": "120d4ee1ef77c598f396cd742cf9f647a85c14e6e29c1b6d6420f23da5f893fc"
   },
   "es.html": {
-   "bytes": 4597573,
-   "sha256": "b425c3a7ff0fccf0e0fdc8f591726f322f3de1cccd3daf4fe6cb61e1bf1e9519"
+   "bytes": 4689504,
+   "sha256": "5110bd7cfa1015befc7c8937c08f05e50650e64dafa3f139d4b9ebbb2f974863"
   },
   "fr.html": {
-   "bytes": 4618690,
-   "sha256": "d95d086697d7e23b2c6e3bea9fa122b11703dcb0a3b14d9bf40445f797833c8e"
+   "bytes": 4711122,
+   "sha256": "ea5525cdcb1fc6272119cb3faccc87407bfbd09b903e25c216c4815f88d89783"
   },
   "index.html": {
-   "bytes": 4533889,
-   "sha256": "0299e11a7527f43b98a2e1a9190f4a3cc1715400b03d1987a9eaf9b29345489f"
+   "bytes": 4624923,
+   "sha256": "b112eaf89b8f20b27a71589be09a849f90192e7a4285a0d8382d76358b705a64"
   },
   "it.html": {
-   "bytes": 4573819,
-   "sha256": "a4b58c9efd65bb62c065c975398d40092847ee23b177e8afb46c4887d18154aa"
+   "bytes": 4665897,
+   "sha256": "f3ea77cd6a51ee279083ab1ffabfd8f7bfc3d9ce122d618eb3f5a573f2f4a1fd"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",

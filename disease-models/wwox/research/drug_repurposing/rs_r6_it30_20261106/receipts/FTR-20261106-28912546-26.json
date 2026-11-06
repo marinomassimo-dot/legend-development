@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-06T15:10:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-06T15:12:00Z",
+ "event_id": "FTR-20261106-28912546-26",
+ "evidence_basis": [
+  "abstract analysed",
+  "keyword-directed passages inspected",
+  "verbatim_locator | proposition: Wwox RNAi reduced brat-RNAi larval brain overgrowth (Wwox loss as a suppressor of another gene tumour phenotype) | Figure 2 legend | \"All candidate gene knockdowns gave a significant reduction in larval brain size relative to brat -RNAi alone (p < 0.001 for all except Wwox -RNAi, p < 0.05)\"",
+  "verbatim_locator | proposition: explant growth was not significantly affected by co-depleting Wwox | Figure 2 legend | \"which was not significantly affected by co-depleting G6PD, JNK or Wwox (p > 0.05, n ≥ 10)\""
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/rs_r6_it30_20261106/README.md",
+  "disease-models/wwox/research/drug_repurposing/rs_r6_it30_20261106/evidence_rs_r6.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC REST fullTextXML for the PMC record PMC5599506, fetched 2026-11-06; keyword-directed passages inspected (every Wwox mention: Results, Figure 2 and 3 legends, Methods stock list), no section read end to end; figures not viewed; bytes not saved",
+ "study_id": {
+  "doi": "10.1038/s41598-017-11613-2",
+  "pmid": "28912546"
+ },
+ "workflow": "RS-R6 (rs_r6_it30_20261106), task ORCH-SCIBATCH-DR-20261105: question-driven search for perturbations that modify a WWOX-loss phenotype. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
