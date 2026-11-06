@@ -138,6 +138,8 @@ PRIORITY_TESTS = (
     # exists" — the properties the 2022 spectrum-drug-tracker audit showed a census can lose
     # in code while still looking like a census (_external_repos/MANIFEST.md).
     "framework/scripts/test_clinical_census.py",
+    # The delegate census reads back the model and effort the dispatch asked for.
+    "framework/scripts/test_session_model_census.py",
     # The repurposing adapter seam: discovery by directory listing, one-file removal measured by
     # deleting each adapter in turn, three states that stay three facts, and no score key in any
     # output. Offline through canned responses; the live measurement is recorded by hand.
