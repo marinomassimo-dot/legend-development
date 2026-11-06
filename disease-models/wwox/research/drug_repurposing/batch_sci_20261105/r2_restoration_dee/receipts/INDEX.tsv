@@ -1,10 +1,11 @@
 event_id	pmid	evidence_depth	prior_receipt	validated_ok
-FTR-20261105-35013317-25	35013317	partial_fulltext_read	null	pending
-FTR-20261105-36173683-25	36173683	partial_fulltext_read	null	pending
-FTR-20261105-32610343-25	32610343	partial_fulltext_read	null	pending
-FTR-20261105-31943325-25	31943325	partial_fulltext_read	null	pending
-FTR-20261105-39847501-25	39847501	partial_fulltext_read	FTR-20261003-39847501-01	pending
-FTR-20261105-35065785-25	35065785	partial_fulltext_read	null	pending
-FTR-20261105-35715566-25	35715566	partial_fulltext_read	null	pending
-FTR-20261105-28100454-25	28100454	partial_fulltext_read	null	pending
-FTR-20261105-37901435-25	37901435	partial_fulltext_read	null	pending
+FTR-20261105-28100454-25	28100454	partial_fulltext_read	null	yes 2026-11-06 staged_receipt_check.py --check-doi
+FTR-20261105-31943325-25	31943325	partial_fulltext_read	null	yes 2026-11-06 staged_receipt_check.py --check-doi
+FTR-20261105-32610343-25	32610343	partial_fulltext_read	null	yes 2026-11-06 staged_receipt_check.py --check-doi
+FTR-20261105-35013317-25	35013317	partial_fulltext_read	null	yes 2026-11-06 staged_receipt_check.py --check-doi
+FTR-20261105-35065785-25	35065785	partial_fulltext_read	null	yes 2026-11-06 staged_receipt_check.py --check-doi
+FTR-20261105-35715566-25	35715566	partial_fulltext_read	null	yes 2026-11-06 staged_receipt_check.py --check-doi
+FTR-20261105-36173683-25	36173683	partial_fulltext_read	null	yes 2026-11-06 staged_receipt_check.py --check-doi
+FTR-20261105-37901435-25	37901435	partial_fulltext_read	null	yes 2026-11-06 staged_receipt_check.py --check-doi
+FTR-20261105-39847501-25	39847501	partial_fulltext_read	FTR-20261003-39847501-01	yes 2026-11-06 staged_receipt_check.py --check-doi
+FTR-20261106-40051162-25	40051162	partial_fulltext_read	null	yes 2026-11-06 staged_receipt_check.py --check-doi
