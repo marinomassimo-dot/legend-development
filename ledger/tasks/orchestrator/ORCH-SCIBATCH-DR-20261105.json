@@ -211,7 +211,7 @@
  },
  "DEFAULTS_TAKEN": [
   "Condition: the scientific prompt announced after the opening was absent from the message. Default: scope reconstructed from the module's own open questions, restricted to zero-spend literature questions no record executed. Why safe: reversible, nothing in a shared consumer touched. Different if the text had arrived: its packages would have replaced or added to these.",
-  "Condition: account usage limit stopped all in-flight agents twice (23:55Z on 11-05; ~07:20Z on 11-06). Default: resume each agent from its saved work after the reset instead of re-dispatching; seconds-wave questions WO-06 and RS-R6 left unexecuted and reported. Why safe: nothing was lost that was not re-checked.",
+  "Condition: account usage limit stopped all in-flight agents twice (23:55Z on 11-05; ~07:20Z on 11-06). Default: resume each agent from its saved work after the reset instead of re-dispatching; wave-2 questions WO-06 and RS-R6 left unexecuted and reported. Why safe: nothing was lost that was not re-checked.",
   "Condition: first delta auditor declined to draft clinical wording for a suggested-wording column. Default: column redefined as a pointer to the governing passage, rows recomposed as labelled fields, re-dispatched.",
   "Condition: IT29 landed on main during the batch. Default: merged development/main into the task branch before the receipts trial."
  ]
