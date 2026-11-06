@@ -10,6 +10,8 @@ The functional path added something **circumscribed and conditional** on the pri
 * **Case 2 (network hyperexcitability).** Compound-level evidence from other epilepsy models could not sign targets (25 of 26 rows are compound-only). It was used differently: the **sign of several agent classes flips with the lesion class** (sodium-channel blockers, vigabatrin, Kv7 openers), so a single perturbation that discriminates 'inhibition-loss-like' from 'excitatory-gain-like' is more informative than any candidate (`case2_lesion_conditional_it29.tsv`). Ethosuximide is not corroborated by the DEE-model screens.
 * **Not a new hypothesis in the sense of a new molecule.** Every compound surfaced was already in the catalogue (19 of 20 in ChEMBL names, the 20th by DGIdb); the novelty is a signed relation compound - action - context - benefit that the record could not express, and a counter-premise.
 
+**Correction (IT30).** Two rows of the signed table (S1-32, S1-33) cite an independent screen as counter-evidence; that screen's table was later qualified as a viability/metabolic readout, not differentiation (`ncc_reconciliation_it30/README.md`). The rows are kept as a hold, so the 97 signed rows stand unchanged; without them the converter would give 216, 106 of them NR3C1 agonists on one study, and that is not restored here.
+
 ## Six-way localisation (what each limit was)
 | Limit | Case 1 | Case 2 |
 |---|---|---|

@@ -178,6 +178,17 @@
      "owner": "orchestrator"
     }
    ]
+  },
+  "OBJ_S15": {
+   "order": 16,
+   "steps": [
+    {
+     "step": "S15 NCC screening table: qualify the endpoint, reconcile rows S1-32 and S1-33 and the 20 compounds (operator-queued check)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "phenotype_first_it29_20261105/ncc_reconciliation_it30: the two official Additional file 3 are value-identical (728 rows); 12 of 15 values equal paper 2's Table 1 AB % quetiapine, T3 negative; endpoint = cytokine-protection AB viability/metabolic screen, not differentiation; KEEP data, DISCARD as differentiation counter-evidence or confirmation, sign restoration INCONCLUSIVE (held); counts: 2 rows, 114 labels over 111 families would move (97 v 216 signed), 1 comparison compound (circular); dashboard and rankings not affected; cause of the duplication unknown, not attributed"
+    }
+   ]
   }
  }
 }

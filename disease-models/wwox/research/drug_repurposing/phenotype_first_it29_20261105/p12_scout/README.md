@@ -5,6 +5,9 @@ URLs. WWOX not used as a keyword. Nothing installed. Not reopened: anything in I
 Depth: web-search summaries for everything except the one tested resource (data file opened and parsed; paper abstract read, methods not).
 Derived rows only in this directory (`test_ncc_vs_case1.tsv`, 20 rows); the third-party spreadsheets stayed in the scratchpad, not in git.
 
+## Correction (IT30, 2026-11-06)
+The endpoint named below is wrong: the file tested here is the cytokine-protection AB screen (percent of quetiapine), identical to paper 2's Additional file 3, not a differentiation table; every "direction recovered", "agreement" and "contradiction" in this note and in `test_ncc_vs_case1.tsv` is withdrawn as differentiation evidence. See `../ncc_reconciliation_it30/README.md`.
+
 ## Decision
 No installable tool closes the gap. One public output does, partially: a compound-level, dose-resolved OPC differentiation screen with a
 viability counter-screen, deposited as spreadsheets. On the 20 frozen compounds it recovers a direction for 11 that a name lookup could

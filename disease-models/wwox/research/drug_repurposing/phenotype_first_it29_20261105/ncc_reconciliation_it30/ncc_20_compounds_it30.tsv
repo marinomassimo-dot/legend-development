@@ -1,0 +1,21 @@
+compound	ref_direction	name_in_file	values_pct_quet_10_2_0.4_0.08uM	it29_p12_comparison	paper2_table1_ab_pct	endpoint_as_qualified	decision
+benztropine	favourable	Benzatropine	NA|102.3|123.0|NA	match	123	AB screening, % quetiapine (viability/metabolic readout of the cytokine-protection primary screen, paper 2)	KEEP the value with this endpoint; DISCARD as a differentiation sign and as counter-evidence or confirmation of the reference direction
+clemastine	favourable	-	-	not_in_library		not in file	no value; unchanged
+atropine	favourable	-(Hyoscyamine proxy 39.0|31.4 at 10|2uM;	-	not_in_library		not in file	no value; unchanged
+ipratropium	favourable	Ipratropium	38.5|21.2|NA|NA	match		AB screening, % quetiapine (viability/metabolic readout of the cytokine-protection primary screen, paper 2)	KEEP the value with this endpoint; DISCARD as a differentiation sign and as counter-evidence or confirmation of the reference direction
+oxybutynin	favourable	Oxybutynin	NA|91.6|55.9|NA	match	92	AB screening, % quetiapine (viability/metabolic readout of the cytokine-protection primary screen, paper 2)	KEEP the value with this endpoint; DISCARD as a differentiation sign and as counter-evidence or confirmation of the reference direction
+quetiapine	favourable	Quetiapine hemifumarate	87.7|129.5|NA|NA	match_circular	130	AB screening, % quetiapine (viability/metabolic readout of the cytokine-protection primary screen, paper 2)	KEEP the value with this endpoint; DISCARD as a differentiation sign and as counter-evidence or confirmation of the reference direction
+miconazole	favourable	Miconazole	NA|-295.1|43.2|NA	contradict_biphasic		AB screening, % quetiapine (viability/metabolic readout of the cytokine-protection primary screen, paper 2)	KEEP the value with this endpoint; DISCARD as a differentiation sign and as counter-evidence or confirmation of the reference direction
+ketoconazole	favourable	Ketoconazole	-67.7|16.5|NA|NA	contradict		AB screening, % quetiapine (viability/metabolic readout of the cytokine-protection primary screen, paper 2)	KEEP the value with this endpoint; DISCARD as a differentiation sign and as counter-evidence or confirmation of the reference direction
+clobetasol	favourable	Clobetasol	-99.6|-30.9|NA|NA	contradict		AB screening, % quetiapine (viability/metabolic readout of the cytokine-protection primary screen, paper 2)	KEEP the value with this endpoint; DISCARD as a differentiation sign and as counter-evidence or confirmation of the reference direction
+amorolfine	favourable	-	-	not_in_library		not in file	no value; unchanged
+tamoxifen	favourable	Tamoxifen	NA|NA|-49.8|116.6	contradict_biphasic	117	AB screening, % quetiapine (viability/metabolic readout of the cytokine-protection primary screen, paper 2)	KEEP the value with this endpoint; DISCARD as a differentiation sign and as counter-evidence or confirmation of the reference direction
+ifenprodil	favourable	Ifenprodil	153.5|162.0|NA|NA	match	162	AB screening, % quetiapine (viability/metabolic readout of the cytokine-protection primary screen, paper 2)	KEEP the value with this endpoint; DISCARD as a differentiation sign and as counter-evidence or confirmation of the reference direction
+liothyronine	favourable	Triiodothyronine	-37.8|-36.3|NA|NA	contradict_probable_artefact		AB screening, % quetiapine (viability/metabolic readout of the cytokine-protection primary screen, paper 2)	KEEP the value with this endpoint; DISCARD as a differentiation sign and as counter-evidence or confirmation of the reference direction
+bexarotene	favourable	-	-	not_in_library		not in file	no value; unchanged
+sobetirome	favourable	-	-	not_in_library		not in file	no value; unchanged
+trichostatin	adverse	-	-	not_in_library		not in file	no value; unchanged
+apicidin	adverse	-	-	not_in_library		not in file	no value; unchanged
+fimepinostat	adverse	-	-	not_in_library		not in file	no value; unchanged
+mevastatin	adverse	Mevistatin (sic)	NA|-111.9|-87.3|NA	match		AB screening, % quetiapine (viability/metabolic readout of the cytokine-protection primary screen, paper 2)	KEEP the value with this endpoint; DISCARD as a differentiation sign and as counter-evidence or confirmation of the reference direction
+neostigmine	adverse	-	-	not_in_library		not in file	no value; unchanged
