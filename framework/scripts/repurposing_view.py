@@ -5371,7 +5371,7 @@ def measure_viewports(html_path: Path, shots: Path | None = None, widths: list |
         return []
     P = json.loads(re.search(r'<script id="data" type="application/json">(.*?)</script>', html_path.read_text(encoding="utf-8"), re.S).group(1).replace("<\\/", "</").replace("<\\!--", "<!--"))
     out = []
-    with tempfile.TemporaryDirectory() as td:
+    with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as td:     # the browser may still be writing its profile when the directory is removed (IT30: a flaky OSError 39)
         cdp = Cdp(binary, td)
         try:
             cdp.call("Page.enable")

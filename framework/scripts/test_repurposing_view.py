@@ -278,7 +278,7 @@ class Browser(unittest.TestCase):
 
     def test_every_chain_node_can_be_selected_by_keyboard_and_shows_its_relations(self):
         """IT29: a node without a card is a tab stop, Enter fills the detail panel with direction, type and source of its edges; this is the keyboard and phone path."""
-        with tempfile.TemporaryDirectory() as td:
+        with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as td:     # Chromium may still hold its profile when the directory is removed
             cdp = rv.Cdp(self.bin, td)
             try:
                 cdp.call("Page.enable")
