@@ -17,8 +17,8 @@
  "event_id": "FTR-20261105-31929713-22",
  "evidence_basis": [
   "sections listed in coverage read in a text conversion of the XML; figure images not viewed; supplementary files not opened",
-  "verbatim_locator | proposition: hormonal-arm non-responders were quickly given vigabatrin | Commentary text | \"Infants treated with hormonal monotherapy who did not respond well were quickly given vigabatrin\"",
-  "verbatim_locator | proposition: restates the person-level association between early cessation and VABS | Commentary text | \"This study also reported that spasm cessation between days 14 and 42 of the treatment was associated with higher mean VABS scores\""
+  "verbatim_locator | proposition: editorial passage of the commentators, not a restatement of the trial and not verified as trial protocol: hormonal-arm non-responders were quickly given vigabatrin | Commentary text | \"Infants treated with hormonal monotherapy who did not respond well were quickly given vigabatrin\"",
+  "verbatim_locator | proposition: restates the trial: early cessation associated with higher VABS (A09, without numbers) | Commentary text | \"This study also reported that spasm cessation between days 14 and 42 of the treatment was associated with higher mean VABS scores\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [
@@ -35,5 +35,5 @@
   "doi": "10.15844/pedneurbriefs-33-2",
   "pmid": "31929713"
  },
- "workflow": "sb-a2, scientific batch ORCH-SCIBATCH-DR-20261105, challenge CH-SB-CONCORDANCE part 2: question-driven reading for the transfer baseline of symptomatic response versus developmental outcome in infantile epileptic spasms syndrome and other early-onset developmental and epileptic encephalopathies; short commentary on the ICISS 18-month report, read whole as a pointer and for one design statement; row A11. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+ "workflow": "sb-a2, scientific batch ORCH-SCIBATCH-DR-20261105, challenge CH-SB-CONCORDANCE part 2: question-driven reading for the transfer baseline of symptomatic response versus developmental outcome in infantile epileptic spasms syndrome and other early-onset developmental and epileptic encephalopathies; short commentary on the ICISS 18-month report, read whole as a pointer; its rescue statement is editorial; row A11. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
 }

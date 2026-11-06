@@ -69,7 +69,7 @@
       "reopen_reason": "INV-10 asks for an assembly across reports that nobody assembled; two sources were read only at abstract or partial depth and the denominators are missing",
       "returned": [
        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/README.md",
-       "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/handover/CONSUMERS.md"
+       "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/integration/CONSUMERS.md"
       ]
      }
     }
@@ -106,7 +106,7 @@
       "reopen_reason": "H02 rests on abstracts for the toxicology and on an abstract for the WWOX children; the design facts that decide transfer are in the full texts",
       "returned": [
        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/README.md",
-       "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/handover/CONSUMERS.md"
+       "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/integration/CONSUMERS.md"
       ]
      }
     }
@@ -142,7 +142,7 @@
       "reopen_reason": "the module sampled three external leads with Methods unread; the precedent base is thin for a rank-1 decision",
       "returned": [
        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/README.md",
-       "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/handover/CONSUMERS.md"
+       "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/integration/CONSUMERS.md"
       ]
      }
     }
