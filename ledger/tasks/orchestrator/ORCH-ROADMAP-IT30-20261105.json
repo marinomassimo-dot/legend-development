@@ -10,7 +10,7 @@
   "worktree": ".claude/worktrees/it30 (branch task/it30), merged with main 0845ed06",
   "it29_candidate": "landed as main 0845ed06; worktree and branch removed",
   "it29_battery": "clone /home/desktop/battery_it29, log /home/desktop/battery_it29.log, verdict line 'REGRESSION VERDICT'; the earlier battery on 72a58bfb failed one test (legend above the fold at phone width), fixed in d099a5be",
-  "next_action": "1) read the status of workflow 'Public release gate' for 0845ed06 (GitHub API, head_sha filter); if success, set IT29 P16 and dashboard steps DONE, MANDATE_STATE COMPLETE in the IT29 record (the file is on main); 2) continue S3 (hyperexcitability case to a consumable form, contrasting examples), S4 measure, S7 resume trial, S10 radar, S11 dashboard; 3) before the final battery freeze the SHA, regenerate views and package, run test_repurposing_view RealViewports and the language-legend test first",
+  "next_action": "1) land task/it30 on main (ff), safe_push, then read workflow 'Public release gate' for the pushed SHA via the API; red -> annotations (the workflow now repeats failing suites as annotations); green -> set IT29 OBJ_P17 and OBJ_P18 DONE and MANDATE_STATE COMPLETE; 2) write MANDATE_BOUND: ORCH-ROADMAP-IT30-20261105 in a message of its own once the record is on main; 3) integrate the parallel scientific batch returns (single integrator), S9, S11 dashboard presentation of the new results, S14 report",
   "not_to_redo": "engine-dir recipe is in generation_it30_p5_20261105/README.md; carried_limits fix is committed (fa5eb2d2)",
   "parallel_batch": "separate scientific batch ORCH-SCIBATCH-DR-20261105 works in .claude/worktrees/dr-parallel-20261105 (task/dr-parallel-20261105, based on 14c5fc7b); on 2026-11-05 it held only batch_sci_20261105/BRIEF_COMMON.md. It hands back READMEs, evidence tables and staged receipts inside its own directories; this session (IT30) is the single integrator of shared files (ledger, registries, consumers); receipts are trial-recorded in event-ID order in a scratch clone first",
   "pending_verification": "after landing IT30: workflow 'Public release gate' on the new main SHA (API: /actions/runs?head_sha=<40 hex>; annotations: /check-runs/<job id>/annotations show the failing suites). Green -> IT29 record on main: OBJ_P17 and OBJ_P18 DONE, MANDATE_STATE COMPLETE; red -> read the annotation, fix, re-land"
@@ -164,8 +164,9 @@
    "steps": [
     {
      "step": "S13 Tests, battery on exact SHA, integration, push, CI, cleanup",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "note": "battery on the exact frozen SHA e91fa3ff11eabaa0727a29c52f96533af8369f19, run in a clean clone that imitates the CI (no files/, no catalogue cache, full history): REGRESSION VERDICT PASS WITH SKIPS (210 targets, 40 skipped). Two earlier runs on 94c77107 failed two suites (source-title cache lacked six PMIDs cited in card F03; ranking not regenerated after the card change) and one flaky OSError 39 in a browser test: all fixed before e91fa3ff. This record commit is closure-only; the battery is not attributed to it. Landing, push, CI on the pushed SHA, served-site check still to do"
     }
    ]
   },
