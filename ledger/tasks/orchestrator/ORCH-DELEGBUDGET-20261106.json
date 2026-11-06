@@ -11,7 +11,8 @@
  "DECISIONS_TAKEN": [
   "WO-06 and RS-R6, the two unexecuted wave-2 questions, were executed by IT30 (S18, S19) while this was prepared; not repeated. The real package is map row WO-12 (two primary papers, conditions only), unclaimed elsewhere (git grep on ledger and research, 2026-11-06).",
   "Simulated probes 2026-11-06: general-purpose delegate asked sonnet/low ran claude-sonnet-5-5, effort low, birth context 40,232 tokens; typed agent wwox-scout asked effort low ran claude-sonnet-5-5, effort low, birth context 15,715 tokens. Both probes were launched in one message (two active at once for about four seconds each): a slip against the one-active rule, recorded.",
-  "A new agent definition is not loaded by a running session (legend-delegate: 'Agent type not found'); the real package therefore uses general-purpose with explicit model and effort. The typed agent takes effect at the next session start; not measured here."
+  "A new agent definition is not loaded by a running session (legend-delegate: 'Agent type not found'); the real package therefore uses general-purpose with explicit model and effort. The typed agent takes effect at the next session start; not measured here.",
+  "Battery on a no-hardlinks clone: first run on 760a4a4d stopped after three real failures caused by this branch (an agent missing from framework/config/fulltext_route_registry.json; a protocol line naming the receipt token that the locator-obligation guard scans; a test runner without verbosity 2), all fixed; second run on a88486fd4b481b25ae2f253840d7ee5fb5d6c9a0: REGRESSION VERDICT PASS WITH SKIPS (211 targets, 9 skipped, environment). The battery is not attributed to the closure commit that records it."
  ],
  "DELEGATIONS": [
   "producer wo12-p: asked sonnet/medium; read back claude-sonnet-5-5 x47, effort medium x47; 47 turns, output 42,940, cache read 3,037,811, peak context 95,759; completed README, evidence.tsv (14 rows), queries.tsv, 5 staged receipts (all pass the checker with DOI); result: primary Methods unreachable, NP5A2 stays NEEDS-DATUM",
@@ -27,7 +28,7 @@
   "Condition: the operator's list gave no starting settings per role. Default: sonnet/low for mechanical work, sonnet/medium for a producer, sonnet/high in a separate context for a verifier, as a revisable starting table in delegation_budget.md. Why safe: reversible text; no scientific standard changed. Different if the operator names settings."
  ],
  "AUTHORISED_QUEUE_20261106": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_S0": {
    "order": 1,
    "steps": [
@@ -66,8 +67,9 @@
    "steps": [
     {
      "step": "S3 validate, land, push; report spend against result",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "gate PASS 0 blocks, LINT WARN no BLOCK, receipts verify OK, battery PASS WITH SKIPS on a88486fd"
     }
    ]
   }
