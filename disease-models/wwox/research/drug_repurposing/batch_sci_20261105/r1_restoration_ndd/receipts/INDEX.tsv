@@ -1,19 +1,23 @@
 event_id	pmid	evidence_depth	prior_receipt	validated_ok
-FTR-20261105-17289941-24	17289941	partial_fulltext_read	null	yes
-FTR-20261105-26886798-24	26886798	partial_fulltext_read	null	yes
-FTR-20261105-31025938-24	31025938	partial_fulltext_read	null	yes
-FTR-20261105-22500629-24	22500629	partial_fulltext_read	null	yes
-FTR-20261105-39855191-24	39855191	partial_fulltext_read	null	yes
-FTR-20261105-41509287-24	41509287	partial_fulltext_read	null	yes
-FTR-20261105-35535852-24	35535852	partial_fulltext_read	null	yes
-FTR-20261105-21716289-24	21716289	partial_fulltext_read	null	yes
-FTR-20261105-31143434-24	31143434	partial_fulltext_read	null	yes
-FTR-20261105-25866966-24	25866966	partial_fulltext_read	null	yes
-FTR-20261105-30082419-24	30082419	partial_fulltext_read	null	yes
-FTR-20261105-34651584-24	34651584	partial_fulltext_read	null	yes
-FTR-20261105-18389497-24	18389497	partial_fulltext_read	null	yes
-FTR-20261105-18495876-24	18495876	partial_fulltext_read	null	yes
-FTR-20261105-22525157-24	22525157	partial_fulltext_read	null	yes
-FTR-20261105-24285883-24	24285883	partial_fulltext_read	null	yes
-FTR-20261105-19211884-24	19211884	abstract_only	null	yes
-FTR-20261105-41997465-24	41997465	abstract_only	null	yes
+FTR-20261105-17289941-24	17289941	partial_fulltext_read	null	yes staged_receipt_check.py --check-doi 2026-11-06
+FTR-20261105-18389497-24	18389497	partial_fulltext_read	null	yes staged_receipt_check.py --check-doi 2026-11-06
+FTR-20261105-18495876-24	18495876	partial_fulltext_read	null	yes staged_receipt_check.py --check-doi 2026-11-06
+FTR-20261105-19211884-24	19211884	abstract_only	null	yes staged_receipt_check.py --check-doi 2026-11-06
+FTR-20261105-21716289-24	21716289	partial_fulltext_read	null	yes staged_receipt_check.py --check-doi 2026-11-06
+FTR-20261105-22500629-24	22500629	partial_fulltext_read	null	yes staged_receipt_check.py --check-doi 2026-11-06
+FTR-20261105-22525157-24	22525157	partial_fulltext_read	null	yes staged_receipt_check.py --check-doi 2026-11-06
+FTR-20261105-24285883-24	24285883	partial_fulltext_read	null	yes staged_receipt_check.py --check-doi 2026-11-06
+FTR-20261105-25866966-24	25866966	partial_fulltext_read	null	yes staged_receipt_check.py --check-doi 2026-11-06
+FTR-20261105-26886798-24	26886798	partial_fulltext_read	null	yes staged_receipt_check.py --check-doi 2026-11-06
+FTR-20261105-30082419-24	30082419	partial_fulltext_read	null	yes staged_receipt_check.py --check-doi 2026-11-06
+FTR-20261105-31025938-24	31025938	partial_fulltext_read	null	yes staged_receipt_check.py --check-doi 2026-11-06
+FTR-20261105-31143434-24	31143434	partial_fulltext_read	null	yes staged_receipt_check.py --check-doi 2026-11-06
+FTR-20261105-34651584-24	34651584	partial_fulltext_read	null	yes staged_receipt_check.py --check-doi 2026-11-06
+FTR-20261105-35535852-24	35535852	partial_fulltext_read	null	yes staged_receipt_check.py --check-doi 2026-11-06
+FTR-20261105-39855191-24	39855191	partial_fulltext_read	null	yes staged_receipt_check.py --check-doi 2026-11-06
+FTR-20261105-41509287-24	41509287	partial_fulltext_read	null	yes staged_receipt_check.py --check-doi 2026-11-06
+FTR-20261105-41997465-24	41997465	abstract_only	null	yes staged_receipt_check.py --check-doi 2026-11-06
+FTR-20261106-32125365-24	32125365	abstract_only	null	yes staged_receipt_check.py --check-doi 2026-11-06
+FTR-20261106-34135323-24	34135323	partial_fulltext_read	null	yes staged_receipt_check.py --check-doi 2026-11-06
+FTR-20261106-34369389-24	34369389	partial_fulltext_read	null	yes staged_receipt_check.py --check-doi 2026-11-06
+FTR-20261106-36594817-24	36594817	partial_fulltext_read	null	yes staged_receipt_check.py --check-doi 2026-11-06
