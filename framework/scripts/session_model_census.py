@@ -18,8 +18,9 @@ mechanical instead of remembered.
     python3 framework/scripts/session_model_census.py --dir <directory of transcripts>
 
 Exit codes:
-  0  every run named held one model throughout
-  1  at least one run changed model mid-run — its measurement does not isolate the context
+  0  every run named held one model throughout, and ran the model its dispatch asked for
+  1  at least one run changed model mid-run, or ran none of the model its dispatch asked for —
+     its measurement does not isolate the context
   2  invalid invocation
 """
 
@@ -32,10 +33,29 @@ from pathlib import Path
 from typing import Any
 
 
+def _dispatch_meta(path: Path) -> dict[str, Any]:
+    """What the dispatch asked for, from the `agent-<id>.meta.json` that sits beside a delegate's transcript."""
+    sibling = path.with_suffix(".meta.json")
+    try:
+        meta = json.loads(sibling.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    return {key: meta[key] for key in ("agentType", "description", "model", "effort") if key in meta}
+
+
+def _asked_not_ran(meta: dict[str, Any], models: dict[str, int]) -> str:
+    """The alias the dispatch asked for, when no turn ran a model carrying that name."""
+    asked = str(meta.get("model") or "")
+    if asked and not any(asked in str(name) for name in models):
+        return asked
+    return ""
+
+
 def census(path: Path) -> dict[str, Any]:
     """Per-turn model and context, from the assistant turns' own usage blocks."""
     turns: list[dict[str, Any]] = []
     prompt_chars = 0
+    efforts: dict[str, int] = {}
     for line in path.read_text(encoding="utf-8", errors="replace").splitlines():
         if not line.strip():
             continue
@@ -50,6 +70,8 @@ def census(path: Path) -> dict[str, Any]:
         usage = message.get("usage") if isinstance(message, dict) else None
         if row.get("type") != "assistant" or not usage:
             continue
+        if row.get("effort") is not None:
+            efforts[str(row["effort"])] = efforts.get(str(row["effort"]), 0) + 1
         turns.append({
             "at": row.get("timestamp", ""),
             "model": message.get("model"),
@@ -60,6 +82,7 @@ def census(path: Path) -> dict[str, Any]:
             "cache_read": usage.get("cache_read_input_tokens", 0),
             "output": usage.get("output_tokens", 0),
         })
+    meta = _dispatch_meta(path)
     if not turns:
         return {"transcript": str(path), "turns": 0, "models": {}, "changed_mid_run": False}
 
@@ -77,6 +100,9 @@ def census(path: Path) -> dict[str, Any]:
         "first_turn_context": turns[0]["context"],
         "peak_context": max(turn["context"] for turn in turns),
         "prompt_chars": prompt_chars,
+        "efforts": efforts,
+        "dispatch": meta,
+        "asked_not_ran": _asked_not_ran(meta, models),
         "totals": {key: sum(turn[key] for turn in turns)
                    for key in ("cache_creation", "cache_read", "output")},
     }
@@ -98,11 +124,25 @@ def render(rows: list[dict[str, Any]]) -> str:
         totals = row["totals"]
         lines.append(f"    cache written {totals['cache_creation']:,} · cache read "
                      f"{totals['cache_read']:,} · output {totals['output']:,}")
+        asked = row.get("dispatch") or {}
+        efforts = " · ".join(f"{name} ×{count}" for name, count in sorted(row.get("efforts", {}).items()))
+        if asked or efforts:
+            lines.append(f"    asked model {asked.get('model', '—')} · asked effort "
+                         f"{asked.get('effort', '—')} · effort read back {efforts or '—'}")
+        if row.get("asked_not_ran"):
+            lines.append(f"    🔴 ASKED {row['asked_not_ran']}, NO TURN RAN IT")
         if row["changed_mid_run"]:
             for change in row["changes"]:
                 lines.append(f"    🔴 MODEL CHANGED MID-RUN: {change['from']} → {change['to']} "
                              f"at {change['at']}")
     moved = [row for row in rows if row.get("changed_mid_run")]
+    counted = [row for row in rows if row["turns"]]
+    if len(counted) > 1:
+        lines.append("")
+        lines.append(f"  TOTAL {len(counted)} run(s) · turns {sum(r['turns'] for r in counted):,} · cache written "
+                     f"{sum(r['totals']['cache_creation'] for r in counted):,} · cache read "
+                     f"{sum(r['totals']['cache_read'] for r in counted):,} · output "
+                     f"{sum(r['totals']['output'] for r in counted):,}  (tokens as logged; not a share of any plan)")
     lines.append("")
     if moved:
         lines.append(f"  🔴 {len(moved)} of {len(rows)} run(s) changed model mid-run. A comparison "
@@ -132,7 +172,7 @@ def main(argv: list[str] | None = None) -> int:
 
     rows = [census(path) for path in paths]
     print(json.dumps(rows, indent=1, ensure_ascii=False) if args.json else render(rows))
-    return 1 if any(row.get("changed_mid_run") for row in rows) else 0
+    return 1 if any(row.get("changed_mid_run") or row.get("asked_not_ran") for row in rows) else 0
 
 
 if __name__ == "__main__":

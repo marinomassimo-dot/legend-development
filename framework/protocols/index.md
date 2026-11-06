@@ -95,6 +95,7 @@ Provide a content map of the LEGEND system organized by:
 | [[scientist_standing_brief]] | The dispatch-ready operating brief for a reading task — order of acts, milestones M0–M5, where §21c's output and the attribution census must land (v2, 2026-09-10) |
 | [[controlled_benchmark_ab]] | Controlled A/B reading benchmark — blind input surface, freezing, evaluation |
 | [[cross_session_transport]] | Cross-session transport — durable artifact vs control envelope, delivery taxonomy, version-bound runtime guarantees |
+| [[delegation_budget]] | Delegation settings in one place — model and effort per delegate, one active delegate, bounded escalation, startup cost, what to measure |
 | [[legend_operating_convention_v1]] | Operating Convention v1 — the session layer: artifact classes, lifecycle, ownership, dispatch, handoff, review, preservation, escalation (non-binding working layer; governance wins on any disagreement) |
 | [[wikilink_schema]] | Wikilinking rules |
 

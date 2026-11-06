@@ -1,0 +1,69 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-DELEGBUDGET-20261106",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Operator priority of 2026-11-06 (resource discipline and coexistence between sessions): per-delegate model and effort, one active delegate, bounded escalation, lower startup cost, small packages, observable consumption, one home for the rules; tested by simulated probes and then by one real package (producer then verifier in sequence).",
+ "START_UTC": "2026-11-06T18:00:00Z",
+ "BASELINE": "main a5018d5e976eae50114c4de9b396d6556c98caf7 (IT30 working beside; this task changes no IT30 file). Reference spend: batch ORCH-SCIBATCH-DR-20261105, 21 delegates, all at effort max, 3,400 turns, census totals in framework/protocols/delegation_budget.md.",
+ "RESUME": "Rules and tooling: framework/protocols/delegation_budget.md, .claude/agents/legend-delegate.md (loads at the next session start only), session_model_census.py (dispatch request, effort, totals) with its test. Real package: disease-models/wwox/research/drug_repurposing/wo12_glun2b_conditions_20261106/ (BRIEF.md, output/). Producer then verifier, one active at a time; delegation lines below.",
+ "DECISIONS_TAKEN": [
+  "WO-06 and RS-R6, the two unexecuted wave-2 questions, were executed by IT30 (S18, S19) while this was prepared; not repeated. The real package is map row WO-12 (two primary papers, conditions only), unclaimed elsewhere (git grep on ledger and research, 2026-11-06).",
+  "Simulated probes 2026-11-06: general-purpose delegate asked sonnet/low ran claude-sonnet-5-5, effort low, birth context 40,232 tokens; typed agent wwox-scout asked effort low ran claude-sonnet-5-5, effort low, birth context 15,715 tokens. Both probes were launched in one message (two active at once for about four seconds each): a slip against the one-active rule, recorded.",
+  "A new agent definition is not loaded by a running session (legend-delegate: 'Agent type not found'); the real package therefore uses general-purpose with explicit model and effort. The typed agent takes effect at the next session start; not measured here."
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [
+  "No stop for a reserved act."
+ ],
+ "DEFAULTS_TAKEN": [
+  "Condition: the operator's list gave no starting settings per role. Default: sonnet/low for mechanical work, sonnet/medium for a producer, sonnet/high in a separate context for a verifier, as a revisable starting table in delegation_budget.md. Why safe: reversible text; no scientific standard changed. Different if the operator names settings."
+ ],
+ "AUTHORISED_QUEUE_20261106": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_S0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "S0 measure the previous batch's spend and startup context; simulated probes",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "census over 21 delegates; probes A and B"
+    }
+   ]
+  },
+  "OBJ_S1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "S1 rules in one place, typed agent, census extension with test",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "delegation_budget.md; legend-delegate.md; test_session_model_census.py 4 tests OK"
+    }
+   ]
+  },
+  "OBJ_S2": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "S2 one real package: producer then verifier, WO-12",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_S3": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "S3 validate, land, push; report spend against result",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}

@@ -55,6 +55,8 @@ or `disease_model.md`; `BATCH_COMMIT`; any change to §21c/d/e.
 
 ## 2 · Working beside other Scientists
 
+(Delegated by an Orchestrator? Its model, effort and concurrency limits are in [`delegation_budget.md`](delegation_budget.md); you start no agents.)
+
 (Repurposing packages: the reusable method is indexed in [Standing method](../../disease-models/wwox/research/drug_repurposing/roadmap_current.md#standing-method).)
 
 Several of you read at once. These are the measured lessons of the waves of 2026-10-19/20.
