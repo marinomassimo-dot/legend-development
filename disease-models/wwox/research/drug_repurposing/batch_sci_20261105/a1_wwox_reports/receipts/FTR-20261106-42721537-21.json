@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-06T07:10:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-06T07:15:00Z",
+ "event_id": "FTR-20261106-42721537-21",
+ "evidence_basis": [
+  "An abstract is not a reading. First contact with this record; the full-text queue (FT-110) cites it unread. Full text: Europe PMC core record not open access, no PMCID, subscription link only (checked 2026-11-06). Recorded at abstract level for the full-text queue; it enters no count of this package.",
+  "The abstract names no drug and no developmental course after an intervention; it does not state the zygosity of its recurrent splice-site allele. Possible overlaps to resolve when read: patients 1 and 2 of PMID 36537114 (one of patient 1's alleles is the recurrent allele; a co-author of that series works in the same national setting) and the three WWOX patients of PMID 40126049 (shared authors).",
+  "verbatim_locator | proposition: Drug resistance in all seven | Abstract, Results | \"Epilepsy was drug-resistant in all.\"",
+  "verbatim_locator | proposition: Developmental delay from birth | Abstract, Results | \"Developmental delay was evident from birth with generalized hypotonia, acquired microcephaly, and impaired visual attention.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/module_inputs.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record retrieved through the PubMed tools on 2026-11-06; abstract text only",
+ "study_id": {
+  "doi": "10.1016/j.seizure.2026.08.027",
+  "pmid": "42721537"
+ },
+ "workflow": "A1 (sb-a1) correction round, challenge CH-SB-CONCORDANCE, task ORCH-SCIBATCH-DR-20261105: bounded abstract-level reading requested by the Orchestrator after the audit and review of package A1. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,44 @@
+{
+ "analysis_at": "2026-11-05T22:41:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-05T22:50:00Z",
+ "event_id": "FTR-20261105-35013317-25",
+ "evidence_basis": [
+  "verbatim_locator | proposition: restoration of the silenced allele at P30, after seizures had manifested, abolished death from seizures over the following four months | Results | \"Survival curve of Cre injected mice showed a complete rescue of SUDEP in the following 4 months\"",
+  "verbatim_locator | proposition: no treated animal had a spontaneous seizure on two weeks of continuous video-EEG, against 7 of 8 control-virus-treated animals | Results | \"in all Scn1aStop/+ Cre mice (9 out of 9) continuous video/EEG monitoring did not show any spontaneous seizure\"",
+  "verbatim_locator | proposition: restoration in adults ten weeks after onset reduced and then abolished established seizures, with a within-animal pre-treatment baseline | Results | \"showed a significant reduction in the number of seizures in the first 8 days after viral treatment and completely disappeared in the following days\"",
+  "verbatim_locator | proposition: the whole-animal phenotype recovered although the interneuron excitability measure did not normalise but overshot | Discussion | \"Although the interneuron activity is not fully normalized, we observed a complete phenotypic recovery in DS animals upon Nav1.1 restoration\"",
+  "verbatim_locator | proposition: a glial endpoint, reactive astrogliosis and inflammation transcripts, recovered after post-onset restoration | Results | \"Inflammation-related genes were rescued in DS mice after Nav1.1 level normalization\"",
+  "verbatim_locator | proposition: in the adult arm the restored protein reached normal levels in cortex and hippocampus but not in cerebellum or striatum, and the seizure endpoint recovered anyway | Results | \"sufficient to regain normal levels of Nav1.1 protein in cerebral cortex and hippocampus but not in cerebellum and striatum\"",
+  "verbatim_locator | proposition: the authors own summary of the prior literature is that later-stage delivery had produced only mild amelioration, leaving insufficient restoration and irreversible damage unseparated | Introduction | \"in the latter cases mild phenotypic amelioration has been achieved\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r2_restoration_dee/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r2_restoration_dee/evidence_r2.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r2_restoration_dee/module_inputs.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC REST fullTextXML for the PMC record, fetched 2026-11-05; sections listed in coverage read as flattened article text; figures read as captions only; supplement not opened; bytes kept in the session scratch directory and not saved into the repository",
+ "study_id": {
+  "doi": "10.1038/s41467-021-27837-w",
+  "pmid": "35013317"
+ },
+ "workflow": "R2 of the parallel scientific batch (batch_sci_20261105/r2_restoration_dee): restoration or correction after phenotype onset in developmental and epileptic encephalopathy and hypomyelination models and in human gene-therapy timing precedents, for investigation INV-01 and the work order NEED-WWOX-GENE-ADDITION. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

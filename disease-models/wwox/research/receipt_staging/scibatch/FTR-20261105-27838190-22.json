@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-05T22:43:13Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-05T22:44:21Z",
+ "event_id": "FTR-20261105-27838190-22",
+ "evidence_basis": [
+  "abstract analysed; no methods, figures or tables described beyond the abstract",
+  "verbatim_locator | proposition: cessation days 14-42 72% with combination | Abstract | \"Between days 14 and 42 inclusive no spasms were witnessed in 133 (72%) of 186 patients on hormonal therapy with vigabatrin\"",
+  "verbatim_locator | proposition: open label, masked electroclinical assessors | Abstract | \"Parents and clinicians were not masked to therapy, but investigators assessing electro-clinical outcome were masked to treatment allocation.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/evidence_a2.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 27838190 (abstract and metadata as served 2026-11-05 through the PubMed tool and NCBI E-utilities efetch); full text not reachable by an open route (subscription only per Europe PMC); bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1016/S1474-4422(16)30294-0",
+  "pmid": "27838190"
+ },
+ "workflow": "sb-a2, scientific batch ORCH-SCIBATCH-DR-20261105, challenge CH-SB-CONCORDANCE part 2: question-driven reading for the transfer baseline of symptomatic response versus developmental outcome in infantile epileptic spasms syndrome and other early-onset developmental and epileptic encephalopathies; ICISS primary report at abstract level; row A07. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

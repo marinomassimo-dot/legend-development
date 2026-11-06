@@ -1,0 +1,217 @@
+source_item	source_file_or_anchor	qid	relation	note	other_files_naming_the_item
+NEED-WWOX-GENE-ADDITION	work_order.json entries	WO-01	primary		
+NEED-WWOX-GENE-ADDITION	work_order.json entries	WO-02	primary		
+NEED-WWOX-MISSENSE-PROTEIN-RESCUE	work_order.json entries	WO-03	primary		
+NEED-ISR-ATTENUATION	work_order.json entries	WO-04	primary		
+NEED-ISR-ATTENUATION	work_order.json entries	WO-05	merged		
+NEED-ISR-ATTENUATION	work_order.json entries	WO-06	merged		
+NEED-PDH-PYRUVATE-AXIS	work_order.json entries	WO-07	primary		
+NEED-PDH-PYRUVATE-AXIS	work_order.json entries	WO-08	primary		
+NEED-LACTATE-LDH	work_order.json entries	WO-09	primary		
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	work_order.json entries	WO-10	primary		
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	work_order.json entries	WO-11	merged		
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	work_order.json entries	WO-12	merged		
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	work_order.json entries	WO-13	merged		
+NEED-INHIBITORY-HYPOFUNCTION	work_order.json entries	WO-14	primary		
+NEED-INHIBITORY-HYPOFUNCTION	work_order.json entries	WO-15	merged		
+NEED-INHIBITORY-HYPOFUNCTION	work_order.json entries	WO-16	merged		
+NEED-INHIBITORY-HYPOFUNCTION	work_order.json entries	WO-17	merged		
+NEED-SEIZURE-CONTROL-SYMPTOMATIC	work_order.json entries	WO-19	primary		
+NEED-SEIZURE-CONTROL-SYMPTOMATIC	work_order.json entries	WO-20	primary		
+NEED-SEIZURE-CONTROL-SYMPTOMATIC	work_order.json entries	WO-21	primary		
+NEED-T-TYPE-CALCIUM	work_order.json entries	WO-24	primary		
+NEED-T-TYPE-CALCIUM	work_order.json entries	WO-25	merged		
+NEED-MYELINATION	work_order.json entries	WO-26	primary		
+NEED-MYELINATION	work_order.json entries	WO-27	merged		
+NEED-GSK3B-DEREPRESSION	work_order.json entries	WO-22	primary		
+NEED-GSK3B-DEREPRESSION	work_order.json entries	WO-23	merged		
+NEED-MYC-PROGENITOR-PROLIFERATION	work_order.json entries	WO-33	primary		
+NEED-NEUROINFLAMMATION-GLIA	work_order.json entries	WO-34	primary		
+NEED-SYSTEMIC-GLYCAEMIA-GROWTH	work_order.json entries	WO-35	primary		
+NEED-REDOX-NRF2	work_order.json entries	WO-36	primary		
+INV-01	ranking.json investigations	WO-02	primary		
+INV-01	ranking.json investigations	WO-01	merged		
+INV-02	ranking.json investigations	WO-04	primary		
+INV-03	ranking.json investigations	WO-25	primary		
+INV-04	ranking.json investigations	WO-20	primary		
+INV-05	ranking.json investigations	WO-10	primary		
+INV-06	ranking.json investigations	WO-27	primary		
+INV-07	ranking.json investigations	WO-07	primary		
+INV-08	ranking.json investigations	WO-36	primary		
+INV-09	ranking.json investigations	WO-21	primary		
+INV-10	ranking.json investigations	WO-19	primary		
+N01	uncarded_items.tsv	WO-10	merged		
+N02	uncarded_items.tsv	UN-N02	primary		
+N03	uncarded_items.tsv	UN-N03	primary		
+N03	uncarded_items.tsv	WO-10	merged		
+N04	uncarded_items.tsv	WO-04	merged		
+N05	uncarded_items.tsv	WO-07	merged		
+N06	uncarded_items.tsv	WO-09	merged		
+N07	uncarded_items.tsv	UN-N07	primary		
+N08	uncarded_items.tsv	UN-N08	primary		
+N09	uncarded_items.tsv	UN-N08	primary		
+N10	uncarded_items.tsv	UN-N08	primary		
+N11	uncarded_items.tsv	UN-N08	primary		
+N12	uncarded_items.tsv	RS-R2	merged		
+N12	uncarded_items.tsv	RS-R3	primary		
+N12	uncarded_items.tsv	RS-R4	merged		
+N12	uncarded_items.tsv	RS-R5	merged		
+N12	uncarded_items.tsv	RS-R6	merged		
+N12	uncarded_items.tsv	RS-R7	merged		
+N12	uncarded_items.tsv	RS-R8	merged		
+N12	uncarded_items.tsv	RS-R9	merged		
+N12	uncarded_items.tsv	WO-03	merged		
+N12	uncarded_items.tsv	DC-04	merged		
+N14	uncarded_items.tsv	RS-NP3B2	merged		
+N15	uncarded_items.tsv	WO-35	merged		
+N13	uncarded_items.tsv	WO-17	merged		
+N16	uncarded_items.tsv	WO-14	merged		
+N16	uncarded_items.tsv	WO-15	merged		
+N16	uncarded_items.tsv	WO-16	merged		
+N17	uncarded_items.tsv	WO-10	merged		
+N17	uncarded_items.tsv	WO-11	merged		
+N17	uncarded_items.tsv	WO-12	merged		
+N17	uncarded_items.tsv	WO-13	merged		
+N17	uncarded_items.tsv	DC-04	merged		
+N18	uncarded_items.tsv	WO-21	merged		
+N18	uncarded_items.tsv	WO-22	merged		
+N18	uncarded_items.tsv	WO-23	merged		
+R1	recovery_it10_p23_20261031/reopen_searches.tsv	WO-03	primary		README.md; recovery_it10_p23_20261031/README.md
+R2	recovery_it10_p23_20261031/reopen_searches.tsv	RS-R2	primary		
+R3	recovery_it10_p23_20261031/reopen_searches.tsv	RS-R3	primary		ranking_it8_p9_20261029/test_ranking_it8.py
+R4	recovery_it10_p23_20261031/reopen_searches.tsv	RS-R4	primary		
+R5	recovery_it10_p23_20261031/reopen_searches.tsv	RS-R5	primary		
+R6	recovery_it10_p23_20261031/reopen_searches.tsv	RS-R6	primary		
+R7	recovery_it10_p23_20261031/reopen_searches.tsv	RS-R7	primary		README.md; recovery_it10_p23_20261031/README.md
+R8	recovery_it10_p23_20261031/reopen_searches.tsv	RS-R8	primary		
+R9	recovery_it10_p23_20261031/reopen_searches.tsv	RS-R9	primary		
+NP1B1	modifiers_it12_p1b_20261031/reopen_searches_it12_p1b.tsv	RS-NP1B1	primary		README.md; ops_it11_p5_20261031/scouting_it11.md; radar_p4_it15_20261101/reopen_check_it15_p4.tsv
+NP1B2	modifiers_it12_p1b_20261031/reopen_searches_it12_p1b.tsv	RS-NP1B2	primary		radar_it18_p1_20261101/arm_key.json; radar_it18_p1_20261101/declared_questions.json; radar_it18_p1_20261101/rating_sheet.json; radar_it18_p1_20261101/ratings.tsv; radar_p4_it15_20261101/reopen_check_it15_p4.tsv
+NP1B3	modifiers_it12_p1b_20261031/reopen_searches_it12_p1b.tsv	RS-NP1B3	primary		radar_p4_it15_20261101/reopen_check_it15_p4.tsv
+NP1B4	modifiers_it12_p1b_20261031/reopen_searches_it12_p1b.tsv	RS-NP1B4	primary		README.md; continuity_it20_20261102/probe_gap_queries.txt; ops_it11_p5_20261031/scouting_it11.md; radar_it18_p1_20261101/README.md; radar_p4_it15_20261101/README.md; radar_p4_it15_20261101/reopen_check_it15_p4.tsv
+NP1B4	modifiers_it12_p1b_20261031/reopen_searches_it12_p1b.tsv	DC-04	merged		README.md; continuity_it20_20261102/probe_gap_queries.txt; ops_it11_p5_20261031/scouting_it11.md; radar_it18_p1_20261101/README.md; radar_p4_it15_20261101/README.md; radar_p4_it15_20261101/reopen_check_it15_p4.tsv
+NP3A1	functional_it13_p3a_20261031/reopen_searches_it13_p3a.tsv	RS-NP3A1	primary		bench_followup_it13b_20261031/README.md; gse158684_identity_it14_p1a_20261101/README.md; gse158684_verify_it14_p1b_20261101/README.md; ledger/tasks/orchestrator/ORCH-ROADMAP-IT14-20261101.json; radar_p4_it15_20261101/README.md; radar_p4_it15_20261101/reopen_check_it15_p4.tsv; ranking_it8_p9_20261029/test_ranking_it8.py; snrna_it13b_pv_20261031/README.md
+NP3A2	functional_it13_p3a_20261031/reopen_searches_it13_p3a.tsv	WO-20	primary		
+NP3A3	functional_it13_p3a_20261031/reopen_searches_it13_p3a.tsv	WO-17	primary		ranking_it8_p9_20261029/uncarded_items.tsv
+NP3A4	functional_it13_p3a_20261031/reopen_searches_it13_p3a.tsv	WO-18	primary		radar_it18_p1_20261101/arm_key.json; radar_it18_p1_20261101/declared_questions.json; radar_it18_p1_20261101/rating_sheet.json; radar_it18_p1_20261101/ratings.tsv; ranking_it8_p9_20261029/test_ranking_it8.py
+NP3A5	functional_it13_p3a_20261031/reopen_searches_it13_p3a.tsv	RS-NP3A5	primary		README.md; ledger/tasks/orchestrator/ORCH-ROADMAP-IT14-20261101.json; ranking_it8_p9_20261029/test_ranking_it8.py
+NP3B1	recoverable_it13_p3b_20261031/reopen_searches_it13_p3b.tsv	RS-NP3B1	primary		bench_followup_it13b_20261031/README.md; radar_it18_p1_20261101/arm_key.json; radar_it18_p1_20261101/declared_questions.json; radar_it18_p1_20261101/rating_sheet.json; radar_it18_p1_20261101/ratings.tsv; radar_p4_it15_20261101/reopen_check_it15_p4.tsv; ranking_it8_p9_20261029/test_ranking_it8.py
+NP3B2	recoverable_it13_p3b_20261031/reopen_searches_it13_p3b.tsv	RS-NP3B2	primary		bench_followup_it13b_20261031/README.md; radar_p4_it15_20261101/README.md; radar_p4_it15_20261101/reopen_check_it15_p4.tsv
+NP3B3	recoverable_it13_p3b_20261031/reopen_searches_it13_p3b.tsv	RS-NP3B3	primary		bench_followup_it13b_20261031/README.md; ranking_it8_p9_20261029/test_ranking_it8.py
+NP4G1	glia_maturation_it14_p4_20261101/reopen_searches_it14_p4.tsv	RS-NP4G1	primary		continuity_it20_20261102/probe_gap_queries.txt; ledger/tasks/orchestrator/ORCH-ROADMAP-IT14-20261101.json; ranking_it8_p9_20261029/test_ranking_it8.py
+NP4G2	glia_maturation_it14_p4_20261101/reopen_searches_it14_p4.tsv	RS-NP4G2	primary		
+NP4G3	glia_maturation_it14_p4_20261101/reopen_searches_it14_p4.tsv	RS-NP4G3	primary		
+NP4G4	glia_maturation_it14_p4_20261101/reopen_searches_it14_p4.tsv	RS-NP4G4	primary		ranking_it8_p9_20261029/test_ranking_it8.py
+NP3P1	function_pharm_it14_p3_20261101/reopen_searches_it14_p3.tsv	WO-14	primary		ledger/tasks/orchestrator/ORCH-ROADMAP-IT14-20261101.json; ranking_it8_p9_20261029/test_ranking_it8.py; ranking_it8_p9_20261029/uncarded_items.tsv
+NP3P2	function_pharm_it14_p3_20261101/reopen_searches_it14_p3.tsv	WO-15	primary		
+NP3P3	function_pharm_it14_p3_20261101/reopen_searches_it14_p3.tsv	WO-16	primary		continuity_it20_20261102/probe_gap_queries.txt; radar_it18_p1_20261101/arm_key.json; radar_it18_p1_20261101/declared_questions.json; radar_it18_p1_20261101/rating_sheet.json; radar_it18_p1_20261101/ratings.tsv; ranking_it8_p9_20261029/test_ranking_it8.py; ranking_it8_p9_20261029/uncarded_items.tsv
+NP5A1	target_first_it15_qa_nmdar_20261101/reopen_searches_it15_qa.tsv	WO-10	primary		ledger/tasks/orchestrator/ORCH-ROADMAP-IT15-20261101.json; ranking_it8_p9_20261029/uncarded_items.tsv
+NP5A1	target_first_it15_qa_nmdar_20261101/reopen_searches_it15_qa.tsv	WO-11	primary		ledger/tasks/orchestrator/ORCH-ROADMAP-IT15-20261101.json; ranking_it8_p9_20261029/uncarded_items.tsv
+NP5A2	target_first_it15_qa_nmdar_20261101/reopen_searches_it15_qa.tsv	WO-12	primary		
+NP5A3	target_first_it15_qa_nmdar_20261101/reopen_searches_it15_qa.tsv	WO-13	primary		radar_it18_p1_20261101/arm_key.json; radar_it18_p1_20261101/declared_questions.json; radar_it18_p1_20261101/rating_sheet.json; radar_it18_p1_20261101/ratings.tsv; ranking_it8_p9_20261029/uncarded_items.tsv
+NP5A3	target_first_it15_qa_nmdar_20261101/reopen_searches_it15_qa.tsv	DC-04	merged		radar_it18_p1_20261101/arm_key.json; radar_it18_p1_20261101/declared_questions.json; radar_it18_p1_20261101/rating_sheet.json; radar_it18_p1_20261101/ratings.tsv; ranking_it8_p9_20261029/uncarded_items.tsv
+NP5B1	target_first_it15_qb_gsk3_20261101/reopen_searches_it15_qb.tsv	WO-22	primary		ranking_it8_p9_20261029/uncarded_items.tsv
+NP5B2	target_first_it15_qb_gsk3_20261101/reopen_searches_it15_qb.tsv	WO-21	primary		
+NP5B3	target_first_it15_qb_gsk3_20261101/reopen_searches_it15_qb.tsv	WO-23	primary		ledger/tasks/orchestrator/ORCH-ROADMAP-IT15-20261101.json; radar_it18_p1_20261101/arm_key.json; radar_it18_p1_20261101/declared_questions.json; radar_it18_p1_20261101/rating_sheet.json; radar_it18_p1_20261101/ratings.tsv; ranking_it8_p9_20261029/uncarded_items.tsv
+T1	ranking_it8_p9_20261029/triggers.tsv		not_a_question	generic re-evaluation trigger of the ranking (not a question)	
+T2	ranking_it8_p9_20261029/triggers.tsv		not_a_question	generic re-evaluation trigger of the ranking (not a question)	
+T3	ranking_it8_p9_20261029/triggers.tsv		not_a_question	generic re-evaluation trigger of the ranking (not a question)	
+T4	ranking_it8_p9_20261029/triggers.tsv		not_a_question	generic re-evaluation trigger of the ranking (not a question)	
+T5	ranking_it8_p9_20261029/triggers.tsv		not_a_question	generic re-evaluation trigger of the ranking (not a question)	
+T6	ranking_it8_p9_20261029/triggers.tsv		not_a_question	generic re-evaluation trigger of the ranking (not a question)	
+T7	ranking_it8_p9_20261029/triggers.tsv		not_a_question	generic re-evaluation trigger of the ranking (not a question)	
+T8	ranking_it8_p9_20261029/triggers.tsv		not_a_question	generic re-evaluation trigger of the ranking (not a question)	
+reopen_check_it15_p4.tsv (9 probe rows)	radar_p4_it15_20261101/reopen_check_it15_p4.tsv	TS-01	merged	probe record, not a question; census C2 (MTBLS12344) is superseded by IT24 P4, see WO-09	
+reopen_check_it15_p4.tsv (9 probe rows)	radar_p4_it15_20261101/reopen_check_it15_p4.tsv	RS-NP1B4	merged	probe record, not a question; census C2 (MTBLS12344) is superseded by IT24 P4, see WO-09	
+reopen_check_it15_p4.tsv (9 probe rows)	radar_p4_it15_20261101/reopen_check_it15_p4.tsv	RS-NP3B2	merged	probe record, not a question; census C2 (MTBLS12344) is superseded by IT24 P4, see WO-09	
+reopen_check_it15_p4.tsv (9 probe rows)	radar_p4_it15_20261101/reopen_check_it15_p4.tsv	RS-NP3A1	merged	probe record, not a question; census C2 (MTBLS12344) is superseded by IT24 P4, see WO-09	
+priority_triggers_it12_p1a.md (UP and DOWN)	product_it12_p1a_20261031/priority_triggers_it12_p1a.md	RS-R3	merged		
+priority_triggers_it12_p1a.md (UP and DOWN)	product_it12_p1a_20261031/priority_triggers_it12_p1a.md	RS-R2	merged		
+scout_it15_p5_20261101/decisions.tsv (6 rows)	scout_it15_p5_20261101/decisions.tsv	EN-04	primary	grouped: one map row per decisions table	
+scout_it18_20261101/decisions.tsv (7 rows)	scout_it18_20261101/decisions.tsv	EN-05	primary	grouped: one map row per decisions table	
+scout_it20_20261102/decisions.tsv (15 rows)	scout_it20_20261102/decisions.tsv	EN-06	primary	grouped: one map row per decisions table	
+scout_it21_p6_20261103/decisions.tsv (8 rows)	scout_it21_p6_20261103/decisions.tsv	EN-07	primary	grouped: one map row per decisions table	
+biopathnet_it18_20261101/decisions.tsv (1 rows)	biopathnet_it18_20261101/decisions.tsv	EN-08	primary	grouped: one map row per decisions table	
+CH-IT28-HDAC5-LEVER	ORCH-ROADMAP-IT28-20261105.json OBJ_P3	WO-28	primary		
+CH-IT28-HDAC5-LEVER	ORCH-ROADMAP-IT28-20261105.json OBJ_P3	WO-29	merged		
+CH-IT28-HDAC5-LEVER	ORCH-ROADMAP-IT28-20261105.json OBJ_P3	WO-30	merged		
+CH-IT28-ISR-ROLE	ORCH-ROADMAP-IT28-20261105.json OBJ_P4	WO-05	primary		
+CH-IT28-ISR-ROLE	ORCH-ROADMAP-IT28-20261105.json OBJ_P4	WO-06	merged		
+CH-IT29-CLASSIIA-CNS-MYELIN	task/it29 ORCH-FRESH-IT29-P10-20261105.json OBJ_Q1	WO-31	primary		
+CH-IT29-CLASSIIA-CNS-MYELIN	task/it29 ORCH-FRESH-IT29-P10-20261105.json OBJ_Q1	WO-32	merged		
+IT30 step S0	task/it30 ORCH-ROADMAP-IT30-20261105.json	IT30-S0	primary		
+IT30 step S1	task/it30 ORCH-ROADMAP-IT30-20261105.json	IT30-S1	primary		
+IT30 step S2	task/it30 ORCH-ROADMAP-IT30-20261105.json	IT30-S2	primary		
+IT30 step S3	task/it30 ORCH-ROADMAP-IT30-20261105.json	IT30-S3	primary		
+IT30 step S4	task/it30 ORCH-ROADMAP-IT30-20261105.json	IT30-S4	primary		
+IT30 step S5	task/it30 ORCH-ROADMAP-IT30-20261105.json	IT30-S5	primary		
+IT30 step S6	task/it30 ORCH-ROADMAP-IT30-20261105.json	IT30-S6	primary		
+IT30 step S7	task/it30 ORCH-ROADMAP-IT30-20261105.json	IT30-S7	primary		
+IT30 step S8	task/it30 ORCH-ROADMAP-IT30-20261105.json	IT30-S8	primary		
+IT30 step S9	task/it30 ORCH-ROADMAP-IT30-20261105.json	IT30-S9	primary		
+IT30 step S10	task/it30 ORCH-ROADMAP-IT30-20261105.json	IT30-S10	primary		
+IT30 step S11	task/it30 ORCH-ROADMAP-IT30-20261105.json	IT30-S11	primary		
+IT30 step S12	task/it30 ORCH-ROADMAP-IT30-20261105.json	IT30-S12	primary		
+IT30 step S13	task/it30 ORCH-ROADMAP-IT30-20261105.json	IT30-S13	primary		
+IT30 step S14	task/it30 ORCH-ROADMAP-IT30-20261105.json	IT30-S14	primary		
+CQ-IT30-01	task/it30 context_it30_20261105/results/conditional_questions_it30.tsv	IT30-CQ1	primary		
+CQ-IT30-02	task/it30 context_it30_20261105/results/conditional_questions_it30.tsv	IT30-CQ2	primary		
+CQ-IT30-03	task/it30 context_it30_20261105/results/conditional_questions_it30.tsv	IT30-CQ3	primary		
+CQ-IT30-04	task/it30 context_it30_20261105/results/conditional_questions_it30.tsv	IT30-CQ4	primary		
+CQ-IT30-05	task/it30 context_it30_20261105/results/conditional_questions_it30.tsv	IT30-CQ5	primary		
+roadmap R1	roadmap_current.md Work order table	RM-R1	primary		
+roadmap R3	roadmap_current.md Work order table	RM-R3	primary		
+roadmap R4	roadmap_current.md Work order table	RM-R4	primary		
+roadmap R5	roadmap_current.md Work order table	RM-R5	primary		
+roadmap R6	roadmap_current.md Work order table	RM-R6	primary		
+roadmap R2	roadmap_current.md Work order table	RM-REST	primary		
+roadmap R7	roadmap_current.md Work order table	RM-REST	primary		
+roadmap R8	roadmap_current.md Work order table	RM-REST	primary		
+roadmap R9	roadmap_current.md Work order table	RM-REST	primary		
+roadmap R10	roadmap_current.md Work order table	RM-REST	primary		
+roadmap R11	roadmap_current.md Work order table	RM-REST	primary		
+roadmap R12	roadmap_current.md Work order table	RM-REST	primary		
+roadmap 'Next:' (PX-478/HIF)	roadmap_current.md last paragraph	RM-NEXT	primary		
+roadmap 'Next:' (PX-478/HIF)	roadmap_current.md last paragraph	WO-08	merged		
+roadmap 'Current stage' pointer	roadmap_current.md Standing method	DC-02	primary		
+roadmap header 'Updated 2026-11-01'	roadmap_current.md line 3	DC-05	primary		
+module README CURRENT marker	README.md Current capability	DC-01	primary		
+DEPLOY.md State (2026-11-01)	view/DEPLOY.md	DC-03	primary		
+IT29 P11 A (pracinostat HDAC5)	task/it29 phenotype_first_it29_20261105/p11_residues_README.md	WO-29	primary		
+IT29 P11 B (TMP269 identity)	task/it29 phenotype_first_it29_20261105/p11_residues_README.md	IT29-P11B	primary		
+IT29 P11 C (missing full texts)	task/it29 phenotype_first_it29_20261105/p11_residues_README.md	WO-29	primary		
+IT29 P14 (verifier corrections)	task/it29 phenotype_first_it29_20261105/p14_verify/README.md	IT29-P14	primary		
+IT29 P12 (targeted scout)	task/it29 phenotype_first_it29_20261105/p12_scout/README.md	IT29-P12	primary		
+radar item to examine: ToolUniverse 1.5.9	scout_daily_briefing.md (outside the repository) Delta 1	RD-TU	primary		
+radar item to examine: Monarch-app 1.32.0-rc1	scout_daily_briefing.md (outside the repository) Delta 2	RD-MA	primary		
+scout_daily.py --plan: TABLE_LIMIT	framework/scripts/scout_daily.py	EN-01	primary		
+scout_daily.py --plan: diagnosis parsed 0 items	scout_daily.py --plan output	EN-02	primary		
+scout_daily.py --plan: generic derived terms	scout_daily.py --plan output	EN-03	primary		
+Standing method IT28: UNMEASURED_AT_MAIN_TARGET consequence to watch	roadmap_current.md Standing method	EN-09	primary		
+Standing method IT28: UNMEASURED_AT_MAIN_TARGET consequence to watch	roadmap_current.md Standing method	IT30-S9	merged		
+IT30 S5 stated limit: LEGEND_CATALOG_CACHE not distributed	ORCH-ROADMAP-IT30-20261105.json OBJ_S5	EN-10	primary		
+IT28 diagnosis: interventions that can change a decision (1-3)	diagnosis_it28_20261105/README.md	WO-04	merged		
+IT28 diagnosis: interventions that can change a decision (1-3)	diagnosis_it28_20261105/README.md	WO-30	merged		
+IT28 diagnosis: interventions that can change a decision (1-3)	diagnosis_it28_20261105/README.md	WO-29	merged		
+IT28 P10 pilot: measure that would reopen it	pilot_it28_p10_20261105/README.md	WO-04	merged		
+IT28 P9 UNKNOWN list	compare_it28_p9_20261105/README.md	WO-24	merged		
+IT28 P9 UNKNOWN list	compare_it28_p9_20261105/README.md	WO-25	merged		
+IT28 P9 UNKNOWN list	compare_it28_p9_20261105/README.md	WO-20	merged		
+IT24 P4 section 5 (what remains wet-lab)	wwox_data_it24_p4_20261104/README.md	WO-04	merged		
+IT24 P4 section 5 (what remains wet-lab)	wwox_data_it24_p4_20261104/README.md	WO-07	merged		
+IT24 P4 section 5 (what remains wet-lab)	wwox_data_it24_p4_20261104/README.md	WO-09	merged		
+IT24 P4 section 5 (what remains wet-lab)	wwox_data_it24_p4_20261104/README.md	RS-NP3B2	merged		
+IT24 P4 section 5 (what remains wet-lab)	wwox_data_it24_p4_20261104/README.md	RS-NP3A1	merged		
+clinical census 2026-10-20	clinical_census_20261020.md	TS-02	primary		
+needs.json NEED-MTOR-AUTOPHAGY	needs/needs.json	NR-01	primary		
+needs.json NEED-MTOR-AUTOPHAGY	needs/needs.json	DC-05	merged		
+needs.json NEED-WWOX-PTC-READTHROUGH	needs/needs.json	NR-02	primary		
+needs.json NEED-MITOCHONDRIAL-RESPIRATION	needs/needs.json	NR-03	primary		
+needs.json NEED-WNT-BETA-CATENIN	needs/needs.json	NR-04	primary		
+needs.json NEED-REDOX-OXIDATIVE-STRESS	needs/needs.json	NR-05	primary		
+needs.json NEED-GABA-CHLORIDE-GRADIENT	needs/needs.json	WO-18	primary		
+needs.json NEED-WWOX-SPLICE-CORRECTION	needs/needs.json		not_a_question	modality outside the small-molecule catalogue; no open datum request authored; not a map row	
+needs.json NEED-WWOX-ENDOGENOUS-BOOST	needs/needs.json		not_a_question	allele-dependent; no open datum request authored; not a map row	
+this batch: BRIEF_A1/A2 (CH-SB-CONCORDANCE)	batch_sci_20261105/BRIEF_A1.md BRIEF_A2.md	WO-19	primary		
+this batch: BRIEF_B1 (CH-SB-VGB-WHITEMATTER)	batch_sci_20261105/BRIEF_B1.md	WO-26	primary		
+this batch: BRIEF_R1/R2 (CH-SB-POSTONSET-RESTORATION)	batch_sci_20261105/BRIEF_R1.md BRIEF_R2.md	WO-01	primary		

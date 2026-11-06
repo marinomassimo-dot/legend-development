@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-06T06:54:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-06T06:58:00Z",
+ "event_id": "FTR-20261106-34369389-24",
+ "evidence_basis": [
+  "passages analysed (keyword-directed), not a line-by-line read; no compound amount or schedule was carried into this record",
+  "verbatim_locator | proposition: antisense reactivation at postnatal day 21 fully rescued the audiogenic seizure endpoint, at the same postnatal age at which a conditional switch left it in place in another study | Figure 4 legend, P21 arm | \"Susceptibility to seizures visually observed in AS mice (n = 10) is rescued when treated with ASO at P21\"",
+  "verbatim_locator | proposition: the restoration level reached at that age was partial and regionally uneven, so the success is not explained by a complete restoration | Results, P21 section | \"ASO-treated AS mice maintained a strong expression of UBE3A: 50%-60% relative to WT in the cortex and hippocampus\"",
+  "verbatim_locator | proposition: two innate-behaviour endpoints were not rescued even by the neonatal arm | Abstract | \"No rescue was observed for the marble burying and nest building phenotypes\"",
+  "verbatim_locator | proposition: the plasticity endpoint did not separate from the untreated arm, so it does not replicate the full recovery another study reports for the same endpoint and gene | Abstract | \"Hippocampal plasticity of treated AS mice was comparable to WT but not significantly different from PBS-treated AS mice\"",
+  "verbatim_locator | proposition: two of three candidate compounds harmed the animals at a higher exposure, a third instance in this set of the restoring agent itself causing harm | Results, compound selection | \"led to overt signs of toxicity in mice (weight loss, trembling body, rough fur)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd/evidence_r1.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd/RESPONSE.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC REST fullTextXML for the PMC record, fetched 2026-11-06; sections in coverage read through keyword-directed passages; figures not viewed; bytes not saved outside the session scratch directory",
+ "study_id": {
+  "doi": "10.1172/jci.insight.145991",
+  "pmid": "34369389"
+ },
+ "workflow": "ORCH-SCIBATCH-DR-20261105 correction round, challenge CH-SB-POSTONSET-RESTORATION, Scientist label sb-r1: four sources added on instruction after a blind locator audit and an independent review, read for whether a restoration after onset recovers a seizure, interneuron-structure or behavioural endpoint and for what the authors say decides it. Keyword-directed passage reading, not line-by-line. Prepared as a JSON file for the Orchestrator; the preparing actor did not write the ledger."
+}

@@ -1,0 +1,44 @@
+{
+ "analysis_at": "2026-11-05T22:46:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T22:52:00Z",
+ "event_id": "FTR-20261105-28100454-25",
+ "evidence_basis": [
+  "verbatim_locator | proposition: the myelin endpoint improved under oligodendrocyte-directed replacement but stayed below wild type | Results | \"did not reach the wild-type levels\"",
+  "verbatim_locator | proposition: the treatment age was chosen to precede the stated onset of severe demyelination in the fourth postnatal week | Methods | \"which normally begins during the fourth week of life (after postnatal Day 20)\"",
+  "verbatim_locator | proposition: oligodendrocyte apoptosis fell steeply under the same treatment that left myelin below wild type | Results | \"apoptotic oligodendrocytes were much reduced in treated animals\"",
+  "verbatim_locator | proposition: whether replacement after the onset of pathology would help was not tested and is stated as unknown | Discussion | \"Whether replacement of Cx47 at later disease stages and after the onset of pathology would be beneficial\"",
+  "verbatim_locator | proposition: the lesion is intrinsic to the oligodendrocyte, the opposite driver from the WWOX system | Discussion | \"have supported a cell-autonomous disease mechanism in oligodendrocytes\"",
+  "verbatim_locator | proposition: the functional rescue is described by the authors as significant but not complete | Discussion | \"significant-if not complete-functional rescue\"",
+  "attestation_without_quote | proposition: survival rose from about 41 days in the mock-treated arm to about 58 days in the treated arm | Results | no verbatim sentence was captured for these figures; they were read as a reported mean with standard error on the open article page"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r2_restoration_dee/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r2_restoration_dee/evidence_r2.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r2_restoration_dee/module_inputs.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "open PMC article page for the PMC record, read 2026-11-05 in three question-directed passes because Europe PMC fullTextXML and the NCBI efetch route both refused this publisher; figures not viewed; the final portion of the page is reference list and navigation only; no bytes saved into the repository",
+ "study_id": {
+  "doi": "10.1093/brain/aww351",
+  "pmid": "28100454"
+ },
+ "workflow": "R2 of the parallel scientific batch (batch_sci_20261105/r2_restoration_dee): restoration or correction after phenotype onset in developmental and epileptic encephalopathy and hypomyelination models and in human gene-therapy timing precedents, for investigation INV-01 and the work order NEED-WWOX-GENE-ADDITION. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

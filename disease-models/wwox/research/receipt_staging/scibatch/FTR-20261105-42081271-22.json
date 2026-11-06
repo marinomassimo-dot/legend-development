@@ -1,0 +1,44 @@
+{
+ "analysis_at": "2026-11-05T22:48:42Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-05T22:49:20Z",
+ "event_id": "FTR-20261105-42081271-22",
+ "evidence_basis": [
+  "sections listed in coverage read in a text conversion of the XML; figure images not viewed; supplementary files not opened",
+  "verbatim_locator | proposition: seizure freedom at 12 months 6 of 6 vs 17 of 31 | Results, Prompt vs. later genetic diagnosis | \"There were also higher rates of seizure freedom at age 12 months in the prompt diagnosis group [6/6 (100%) vs. 17/31 (54%), p = 0.049].\"",
+  "verbatim_locator | proposition: no severe-profound delay in the prompt group | Results, Prompt vs. later genetic diagnosis | \"No patient with a prompt diagnosis had severe‐profound developmental delay at last review, compared with 13/31 (42%) individuals with later diagnosis (p = .049).\"",
+  "verbatim_locator | proposition: mild-moderate delay in 4 of the 6 prompt cases | Table 2, development row | \"Mild‐mod DD | 8 (21%) | 4 (66%) | 4 (12%)\"",
+  "verbatim_locator | proposition: developmental quotient inferred from milestones | Methods | \"based on a developmental quotient inferred from motor and language developmental milestones attained\"",
+  "verbatim_locator | proposition: follow-up shorter in the prompt group | Results, Prompt vs. later genetic diagnosis | \"last review was more recent in the prompt (median 16 months) compared with the later group (median 50 months)\"",
+  "verbatim_locator | proposition: authors cannot determine an effect on development | Discussion | \"We could not determine the impact of prompt genetic diagnosis on development, as the high phenotypic variability and our relatively crude measures of developmental outcome\"",
+  "verbatim_locator | proposition: developmental component independent of the epileptic encephalopathy | Discussion | \"KCNQ2 neonatal epilepsies have a developmental encephalopathy component that is independent of the epileptic encephalopathy.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/evidence_a2.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC13238869 full-text XML fetched 2026-11-05 through Europe PMC REST fullTextXML and read as a text conversion of section headings, paragraphs, table rows and captions; figure images not viewed; supplementary files not opened; bytes kept outside the repository and not saved in it",
+ "study_id": {
+  "doi": "10.1002/epi4.70266",
+  "pmid": "42081271"
+ },
+ "workflow": "sb-a2, scientific batch ORCH-SCIBATCH-DR-20261105, challenge CH-SB-CONCORDANCE part 2: question-driven reading for the transfer baseline of symptomatic response versus developmental outcome in infantile epileptic spasms syndrome and other early-onset developmental and epileptic encephalopathies; retrospective KCNQ2 neonatal epilepsy cohort, prompt versus later genetic diagnosis and targeted therapy; rows D09 and D10. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

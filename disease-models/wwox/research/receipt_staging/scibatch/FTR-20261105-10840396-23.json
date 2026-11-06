@@ -1,0 +1,39 @@
+{
+    "analysis_at": "2026-11-05T22:48:00Z",
+    "analysis_time_precision": "minute",
+    "coverage": {
+        "abstract": "read",
+        "discussion": "not_read",
+        "figures": "not_read",
+        "introduction": "not_read",
+        "limitations": "not_read",
+        "methods": "not_read",
+        "references": "not_read",
+        "results": "not_read",
+        "supplementary": "not_read",
+        "tables": "not_read"
+    },
+    "event_at": "2026-11-05T22:49:00Z",
+    "event_id": "FTR-20261105-10840396-23",
+    "evidence_basis": [
+        "abstract analysed",
+        "verbatim_locator | proposition: exposure of the immature rat brain reduced myelin staining, myelin and oligodendrocyte enzyme activity and myelin basic protein | Abstract | \"myelin staining indicated a reduction in myelination, as did the reduction in activities of myelin and oligodendrocyte-associated enzymes\"",
+        "verbatim_locator | proposition: after two drug-free weeks the imaging and the vacuolation had resolved while myelination had recovered only partially | Abstract | \"reduction in myelination reversed partially\""
+    ],
+    "evidence_depth": "abstract_only",
+    "outputs": [
+        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/README.md",
+        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/evidence_b1.tsv"
+    ],
+    "prior_receipt": null,
+    "record_kind": "contemporaneous_receipt",
+    "reread_reason": "first_read",
+    "source_fingerprint": null,
+    "source_kind": "abstract",
+    "source_locator": "PubMed record for this PMID, read 2026-11-05 through the PubMed metadata tool; abstract and indexing terms only, no full text retrieved",
+    "study_id": {
+        "doi": "10.1111/j.1528-1157.2000.tb00225.x",
+        "pmid": "10840396"
+    },
+    "workflow": "ORCH-SCIBATCH-DR-20261105 package B1 (challenge CH-SB-VGB-WHITEMATTER): white-matter and MRI safety of GABA-aminotransferase inactivators and what transfers to a brain with a hypomyelinating baseline. Question-driven reading. Prepared as a JSON file for the Orchestrator; the ledger was not written by the preparing actor. Read at abstract level: the single most decision-relevant animal source for the immature brain. Full text closed; its design facts are the abstract's statement."
+}

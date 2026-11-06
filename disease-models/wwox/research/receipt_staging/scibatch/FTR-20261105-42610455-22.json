@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-05T22:52:15Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-05T22:52:32Z",
+ "event_id": "FTR-20261105-42610455-22",
+ "evidence_basis": [
+  "abstract analysed; no methods, figures or tables described beyond the abstract",
+  "verbatim_locator | proposition: association persisted after adjustment for seizure control by 1 month | Abstract | \"This association remained significant after adjustment for seizure control by 1 month and total ASM burden.\"",
+  "verbatim_locator | proposition: severe impairment despite early seizure control in some | Abstract | \"some individuals experiencing severe impairment despite early seizure control and SCB initiation\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/evidence_a2.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 42610455 (abstract and metadata as served 2026-11-05 through the PubMed tool and NCBI E-utilities efetch); full text not reachable by an open route (the publisher page shows the abstract only); bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1093/brain/awag277",
+  "pmid": "42610455"
+ },
+ "workflow": "sb-a2, scientific batch ORCH-SCIBATCH-DR-20261105, challenge CH-SB-CONCORDANCE part 2: question-driven reading for the transfer baseline of symptomatic response versus developmental outcome in infantile epileptic spasms syndrome and other early-onset developmental and epileptic encephalopathies; KCNQ2 international cohort, early sodium channel blocker initiation, at abstract level; row D11. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,47 @@
+{
+ "analysis_at": "2026-11-06T06:53:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-06T06:58:00Z",
+ "event_id": "FTR-20261106-40051162-25",
+ "evidence_basis": [
+  "verbatim_locator | proposition: the vector was given at 10 months of age, which the authors state is seven months after the onset of cerebellar white-matter vacuolation | Results | \"7 months after CWM vacuolation onset\"",
+  "verbatim_locator | proposition: the authors class the design as a post-symptomatic strategy rather than a preventive one | Results | \"This post-symptomatic strategy\"",
+  "verbatim_locator | proposition: a structural white-matter abnormality present long before treatment was reversed to control levels, not merely arrested | Results | \"fully rescued this vacuolating phenotype to control levels\"",
+  "verbatim_locator | proposition: raised water content normalised completely in every brain region where a difference had been detected | Results | \"did exhibit a full normalization in treated Mlc1\"",
+  "verbatim_locator | proposition: the microstructural diffusion metrics recovered only partly, so the imaging recovery is not uniform across readouts | Discussion | \"DTI metrics still reflected a few microstructural abnormalities\"",
+  "verbatim_locator | proposition: the motor deficit was already measurable in the same cohort two months before treatment, which documents onset ahead of the intervention | Results | \"both motor tests already discriminated between WT and untreated Mlc1\"",
+  "verbatim_locator | proposition: the progressive motor phenotype reverted within two to four months of the late intervention | Results | \"reverted this motor phenotype as early as 2 to 4 months after the injection\"",
+  "verbatim_locator | proposition: only about a fifth of the cerebellar white-matter astrocyte population was transduced, yet the cerebellar structural endpoint fully rescued | Results | \"transduction levels were only around 20%\"",
+  "verbatim_locator | proposition: overexpression of this gene is separately reported to be deleterious in mice, producing a phenotype more severe than the null, while the exposure used here harmed no treated wild-type animal | Results | \"Overexpression of MLC1 has been found to be deleterious in mice\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r2_restoration_dee/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r2_restoration_dee/evidence_r2.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r2_restoration_dee/module_inputs.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r2_restoration_dee/RESPONSE.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC REST fullTextXML for the PMC record, fetched 2026-11-06; sections listed in coverage read as flattened article text; figures read as captions only; supplement not opened; bytes kept in the session scratch directory and not saved into the repository",
+ "study_id": {
+  "doi": "10.1016/j.ymthe.2025.02.046",
+  "pmid": "40051162"
+ },
+ "workflow": "R2 correction round (batch_sci_20261105/r2_restoration_dee): read on the Orchestrator's instruction after an independent review showed the package's myelin queries could not reach this gene family. Question-driven: age at intervention relative to the stated onset, the comparator, which white-matter and motor endpoints moved and by how much, regional transduction against outcome, and the overexpression hazard. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

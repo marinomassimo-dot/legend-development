@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-05T22:38:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T22:43:00Z",
+ "event_id": "FTR-20261105-26886798-24",
+ "evidence_basis": [
+  "passages analysed (keyword-directed), not a line-by-line read",
+  "verbatim_locator | proposition: restoration was induced in adult animals, with the age stated in Methods | Methods, Generation of Shank3CKI | \"Rescue treatment i.e. tamoxifen feeding was initiated on mice at 2-4.5 months\"",
+  "verbatim_locator | proposition: a structural endpoint moved after adult restoration but overshot wild type, so it was not normalised | Results, spine paragraph | \"the spine density in the TM condition is significantly higher than that of the WT\"",
+  "verbatim_locator | proposition: motor, locomotor and anxiety endpoints did not move after adult restoration although protein was restored in cortex and cerebellum | Results, behaviour battery paragraph | \"adult Shank3 re-expression has minimal impact on reduced locomotion, anxiety-like behavior and motor coordination deficits\"",
+  "verbatim_locator | proposition: a germline arm in the same model restored every behavioural endpoint, locating the failure in timing rather than in reachability | Results, germline rescue paragraph | \"restoring Shank3 expression at the germ cell stage can restore all behavioral phenotypes\"",
+  "verbatim_locator | proposition: the authors state the non-recovering endpoints are developmental and irreversible in the adult | Results, germline rescue paragraph | \"there are certain developmental defects that are irreversible by adult re-expression of Shank3\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd/evidence_r1.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC REST fullTextXML for the PMC record, fetched 2026-11-05; NCBI E-utilities efetch db=pmc as fallback; sections in coverage read through keyword-directed passages; figures not viewed; bytes not saved outside the session scratch directory",
+ "study_id": {
+  "doi": "10.1038/nature16971",
+  "pmid": "26886798"
+ },
+ "workflow": "ORCH-SCIBATCH-DR-20261105 challenge CH-SB-POSTONSET-RESTORATION, Scientist label sb-r1: external precedents for restoring a single gene after phenotype onset in neurodevelopmental disorder models, read for which endpoint classes recover and what decides it. Keyword-directed passage reading, not line-by-line. Prepared as a JSON file for the Orchestrator; the preparing actor did not write the ledger."
+}

@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-05T22:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-05T23:25:00Z",
+ "event_id": "FTR-20261105-30361190-21",
+ "evidence_basis": [
+  "Re-read for a new question: the developmental course of each child before and after hormonal therapy and vigabatrin, the scope of the Discussion qualifier carried by CLAIM 031, and the identity of the first child with patient 3 of PMID 36537114. Table 1 (rotated) was read only in its This-study columns, on a page render of page 9: AED response Partial (case 1, 3 drugs) and Poor (case 2, 4 drugs).",
+  "The qualifier is resolved from two Discussion sentences read together (README section 7).",
+  "verbatim_locator | proposition: First child: partial response to prednisolone | Results, clinical data, first child | \"Oral prednisolone was given as per UKISS protocol (Lux et al., 2005) with a partial response.\"",
+  "verbatim_locator | proposition: First child: profoundly delayed at two years after the spasms resolved | Results, clinical data, first child | \"At two years of age, he remained profoundly delayed\"",
+  "verbatim_locator | proposition: The authors attach the improvement of epileptic activity to the first child | Discussion | \"The developmental outcome was unfavourable with profound impairment despite improvement of epileptic activity (e.g. in the first child).\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/cases_a1.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/denominators_a1.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/README.md"
+ ],
+ "prior_receipt": "FTR-20261023-30361190-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "12e0930fa60a2c06a9ea3ca867506a24ff7d3a2d5eb5b7abeb686cd18d620958",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID30361190_Shaukat2018_JLE.pdf (read through a column-order text derivation and one page render of Table 1 made in scratch, neither persisted)",
+ "study_id": {
+  "doi": "10.1684/epd.2018.1005",
+  "pmid": "30361190"
+ },
+ "workflow": "A1 (sb-a1), challenge CH-SB-CONCORDANCE, task ORCH-SCIBATCH-DR-20261105: question-driven reading for per-child intervention outcomes, developmental course and patient identity across WWOX-DEE reports. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

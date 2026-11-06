@@ -1,0 +1,40 @@
+{
+    "analysis_at": "2026-11-06T06:44:00Z",
+    "analysis_time_precision": "minute",
+    "coverage": {
+        "abstract": "read",
+        "discussion": "not_read",
+        "figures": "not_read",
+        "introduction": "not_read",
+        "limitations": "not_read",
+        "methods": "not_read",
+        "references": "not_read",
+        "results": "not_read",
+        "supplementary": "not_read",
+        "tables": "not_read"
+    },
+    "event_at": "2026-11-06T06:45:00Z",
+    "event_id": "FTR-20261106-19054414-23",
+    "evidence_basis": [
+        "abstract analysed",
+        "verbatim_locator | proposition: the abnormality was more prevalent in exposed than in naive infants and showed no difference between exposed and naive children aged 2 to 16 and adults | Abstract, Results | \"there was no statistically significant difference in the incidence or prevalence of prespecified MRI abnormalities between vigabatrin-exposed and vigabatrin-naive subjects\"",
+        "verbatim_locator | proposition: the majority of the abnormalities resolved, including in children who stayed on the drug | Abstract, Conclusion | \"The majority of these MRI abnormalities resolved, even in subjects who remained on vigabatrin therapy\""
+    ],
+    "evidence_depth": "abstract_only",
+    "outputs": [
+        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/README.md",
+        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/evidence_b1.tsv",
+        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/RESPONSE.md"
+    ],
+    "prior_receipt": null,
+    "record_kind": "contemporaneous_receipt",
+    "reread_reason": "first_read",
+    "source_fingerprint": null,
+    "source_kind": "abstract",
+    "source_locator": "PubMed record for this PMID, read 2026-11-06 through the PubMed metadata tool; abstract and indexing terms only, no full text retrieved",
+    "study_id": {
+        "doi": "10.1111/j.1528-1167.2008.01896.x",
+        "pmid": "19054414"
+    },
+    "workflow": "ORCH-SCIBATCH-DR-20261105 package B1 correction round (challenge CH-SB-VGB-WHITEMATTER): reading bounded by the Orchestrator to the human age evidence, the open sibling toxicology report, the two-sided GABA-and-myelination literature and the taurine rival, after a blind quote audit and an adversarial review of the first pass. Prepared as a JSON file for the Orchestrator; the ledger was not written by the preparing actor. Read because the review showed the first pass had missed the only controlled cross-age human design; it carries both the age restriction and the resolution-under-continued-exposure fact. Full text closed."
+}

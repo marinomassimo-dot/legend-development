@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-05T22:58:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-05T23:25:00Z",
+ "event_id": "FTR-20261105-30061856-21",
+ "evidence_basis": [
+  "First read (no registry record). Sections read: abstract, Methods (patients, assessment of outcomes, diet), Results (causative mutations, efficacy by gene), Table 3, Supplementary Table 1 (the 172-gene panel list, no patient data). Introduction, Discussion and figures not read. CC BY licence.",
+  "verbatim_locator | proposition: Responders are defined as at least 90 percent seizure reduction | Methods, assessment of outcomes | \"Patients were considered KD responders if they showed ≥90% seizure reduction from the baseline seizure frequency\"",
+  "verbatim_locator | proposition: The single WWOX patient was a responder at 3, 6 and 12 months | Results, Table 3, WWOX row | \"WWOX (1) 1/1 (100.0%) 0.337 1/1 (100.0%) 0.301 1/1 (100.0%) 0.301\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/cases_a1.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/denominators_a1.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC REST fullTextXML for PMC6054992 and its supplementaryFiles archive, fetched 2026-11-05 into the scratch directory; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.3389/fneur.2018.00530",
+  "pmid": "30061856"
+ },
+ "workflow": "A1 (sb-a1), challenge CH-SB-CONCORDANCE, task ORCH-SCIBATCH-DR-20261105: question-driven reading for per-child intervention outcomes, developmental course and patient identity across WWOX-DEE reports. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

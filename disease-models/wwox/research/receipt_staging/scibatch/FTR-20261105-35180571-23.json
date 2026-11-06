@@ -1,0 +1,39 @@
+{
+    "analysis_at": "2026-11-05T22:50:00Z",
+    "analysis_time_precision": "minute",
+    "coverage": {
+        "abstract": "read",
+        "discussion": "not_read",
+        "figures": "not_read",
+        "introduction": "not_read",
+        "limitations": "not_read",
+        "methods": "not_read",
+        "references": "not_read",
+        "results": "not_read",
+        "supplementary": "not_read",
+        "tables": "not_read"
+    },
+    "event_at": "2026-11-05T22:51:00Z",
+    "event_id": "FTR-20261105-35180571-23",
+    "evidence_basis": [
+        "abstract analysed",
+        "verbatim_locator | proposition: 44 children with the abnormality were identified among 288 seen with West syndrome, with a median age at diagnosis under seven months | Abstract | \"median age at diagnosis was 6.29 months (range, 2 weeks to 11 months)\"",
+        "verbatim_locator | proposition: most were asymptomatic and the abnormality usually resolved after discontinuation | Abstract | \"Vigabatrin-associated brain abnormalities on MRI was asymptomatic in 25 of 44 patients\""
+    ],
+    "evidence_depth": "abstract_only",
+    "outputs": [
+        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/README.md",
+        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/evidence_b1.tsv"
+    ],
+    "prior_receipt": null,
+    "record_kind": "contemporaneous_receipt",
+    "reread_reason": "first_read",
+    "source_fingerprint": null,
+    "source_kind": "abstract",
+    "source_locator": "PubMed record for this PMID, read 2026-11-05 through the PubMed metadata tool; abstract and indexing terms only, no full text retrieved",
+    "study_id": {
+        "doi": "10.1016/j.yebeh.2022.108606",
+        "pmid": "35180571"
+    },
+    "workflow": "ORCH-SCIBATCH-DR-20261105 package B1 (challenge CH-SB-VGB-WHITEMATTER): white-matter and MRI safety of GABA-aminotransferase inactivators and what transfers to a brain with a hypomyelinating baseline. Question-driven reading. Prepared as a JSON file for the Orchestrator; the ledger was not written by the preparing actor. Read at abstract level for the age band and the symptomatic fraction; full text closed."
+}

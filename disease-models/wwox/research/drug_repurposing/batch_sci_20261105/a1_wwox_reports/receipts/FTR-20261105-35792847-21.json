@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-05T22:56:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-05T23:25:00Z",
+ "event_id": "FTR-20261105-35792847-21",
+ "evidence_basis": [
+  "Re-read for a new question: the per-patient treatments of Table 3 and the narratives (vigabatrin in 2.1, 2.2, 5 and 6; ketogenic diet in 3.1 and 6), the printed outcomes and developmental statements, and the scope of the Discussion sentence on nine vigabatrin-treated patients (the 70-patient table). Nationality and family-structure details printed in the narratives are deliberately not reproduced.",
+  "verbatim_locator | proposition: Patient 2.2 responded to vigabatrin | Results, Patient 2.2 | \"She responded well to vigabatrin, and her seizures were under control.\"",
+  "verbatim_locator | proposition: Patient 6 (homozygous missense class) started the ketogenic diet after vigabatrin | Results, Patient 6 | \"He was started on a ketogenic diet at the age of 11 months\"",
+  "verbatim_locator | proposition: Patient 4 gained new skills with seizures controlled | Results, Patient 4 | \"recently started sitting alone, saying up to 10 single words\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/cases_a1.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/denominators_a1.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/README.md"
+ ],
+ "prior_receipt": "FTR-20261003-35792847-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "034512f32f31e8483b95e83dfbd16973e6f459ebeabe970e62497fa723d81f87",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID35792847_AlBaradie2022_JLE_fulltext.html",
+ "study_id": {
+  "doi": "10.1684/epd.2022.1444",
+  "pmid": "35792847"
+ },
+ "workflow": "A1 (sb-a1), challenge CH-SB-CONCORDANCE, task ORCH-SCIBATCH-DR-20261105: question-driven reading for per-child intervention outcomes, developmental course and patient identity across WWOX-DEE reports. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

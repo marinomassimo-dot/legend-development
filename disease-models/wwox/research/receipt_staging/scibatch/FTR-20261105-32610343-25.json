@@ -1,0 +1,45 @@
+{
+ "analysis_at": "2026-11-05T22:43:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_present",
+  "limitations": "read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-05T22:51:00Z",
+ "event_id": "FTR-20261105-32610343-25",
+ "evidence_basis": [
+  "verbatim_locator | proposition: a single administration at birth raised lifespan about eleven to twelve fold over the control-treated same-genotype arm | Results | \"demonstrated a ~12-fold (jpASOPlp1.a) and ~11-fold (jpASOPlp1.b) increase in lifespan compared to ASO control-injected jimpy\"",
+  "verbatim_locator | proposition: oligodendrocyte number was fully restored while the structural myelin endpoint reached only about a tenth of control, even with treatment at birth | Results | \"While oligodendrocyte numbers were fully restored, this increased myelination reached ~10% of wtASOctr at 3 weeks of age\"",
+  "verbatim_locator | proposition: oligodendrocyte number across the neuraxis returned to near-control values | Results | \"MyRF positive oligodendrocytes were restored throughout the neuraxis at 3 weeks of age in jpASOPlp1.a and jpASOPlp1.b (81-101% of wtASOctr)\"",
+  "verbatim_locator | proposition: one motor readout improved only partially while another reached wild-type levels in the same animals | Results | \"rotarod performance was only variably and partial improved in jpASOPlp1.a and jpASOPlp1.b (to a maximum of 36% of wild-type)\"",
+  "verbatim_locator | proposition: conduction velocity reached about a sixth of control and tracked the myelin level rather than the functional benefit | Results | \"representing ~17% of wtASOctr levels, which directly correlated with the level of myelination relative to wtASOctr\"",
+  "verbatim_locator | proposition: survival in this model was driven by respiratory control rather than by global myelin | Results | \"38% of jpASOctr died spontaneously while 100% of jpASOPlp1.b and wtASOctr survived\"",
+  "verbatim_locator | proposition: no arm treated later in the disease exists; the authors name it as the next step | Discussion | \"additional preclinical development is needed to optimize dosage and timing, including treating later in disease\"",
+  "verbatim_locator | proposition: the germline arm, correcting the same lesion earlier and completely, did restore the structural and functional myelin endpoints to wild-type levels | Abstract | \"restored nerve conduction velocity, motor function, and lifespan to wild-type levels\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r2_restoration_dee/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r2_restoration_dee/evidence_r2.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r2_restoration_dee/module_inputs.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC REST fullTextXML for the PMC record, fetched 2026-11-05; sections listed in coverage read as flattened article text; figures read as captions only; supplement not opened; bytes kept in the session scratch directory and not saved into the repository",
+ "study_id": {
+  "doi": "10.1038/s41586-020-2494-3",
+  "pmid": "32610343"
+ },
+ "workflow": "R2 of the parallel scientific batch (batch_sci_20261105/r2_restoration_dee): restoration or correction after phenotype onset in developmental and epileptic encephalopathy and hypomyelination models and in human gene-therapy timing precedents, for investigation INV-01 and the work order NEED-WWOX-GENE-ADDITION. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
