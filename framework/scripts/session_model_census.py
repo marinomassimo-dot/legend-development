@@ -56,6 +56,7 @@ def census(path: Path) -> dict[str, Any]:
     turns: list[dict[str, Any]] = []
     prompt_chars = 0
     efforts: dict[str, int] = {}
+    index_by_id: dict[Any, int] = {}
     for line in path.read_text(encoding="utf-8", errors="replace").splitlines():
         if not line.strip():
             continue
@@ -70,9 +71,9 @@ def census(path: Path) -> dict[str, Any]:
         usage = message.get("usage") if isinstance(message, dict) else None
         if row.get("type") != "assistant" or not usage:
             continue
-        if row.get("effort") is not None:
-            efforts[str(row["effort"])] = efforts.get(str(row["effort"]), 0) + 1
-        turns.append({
+        # One API response is written as several transcript rows (one per content block) that repeat the same usage block: count a response once, keeping its largest output
+        key = message.get("id") or row.get("uuid")
+        turn = {
             "at": row.get("timestamp", ""),
             "model": message.get("model"),
             "context": (usage.get("input_tokens", 0)
@@ -81,7 +82,17 @@ def census(path: Path) -> dict[str, Any]:
             "cache_creation": usage.get("cache_creation_input_tokens", 0),
             "cache_read": usage.get("cache_read_input_tokens", 0),
             "output": usage.get("output_tokens", 0),
-        })
+        }
+        if key is not None and key in index_by_id:
+            earlier = turns[index_by_id[key]]
+            if turn["output"] > earlier["output"]:
+                earlier["output"] = turn["output"]
+            continue
+        if key is not None:
+            index_by_id[key] = len(turns)
+        turns.append(turn)
+        if row.get("effort") is not None:
+            efforts[str(row["effort"])] = efforts.get(str(row["effort"]), 0) + 1
     meta = _dispatch_meta(path)
     if not turns:
         return {"transcript": str(path), "turns": 0, "models": {}, "changed_mid_run": False}

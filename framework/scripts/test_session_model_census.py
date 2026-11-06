@@ -38,6 +38,21 @@ def write_run(directory: Path, name: str, models: list[str], *, asked: str | Non
 
 
 class Census(unittest.TestCase):
+    def test_one_response_written_as_several_rows_is_counted_once(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "dup.jsonl"
+            usage = {"input_tokens": 2, "cache_creation_input_tokens": 100, "cache_read_input_tokens": 50}
+            rows = [{"type": "user", "message": {"role": "user", "content": "go"}}]
+            for output in (5, 40, 40):      # thinking block, text block, tool_use block of ONE response
+                rows.append({"type": "assistant", "effort": "high", "message": {"id": "msg_1", "model": "m", "usage": {**usage, "output_tokens": output}}})
+            rows.append({"type": "assistant", "effort": "high", "message": {"id": "msg_2", "model": "m", "usage": {**usage, "output_tokens": 7}}})
+            path.write_text("\n".join(json.dumps(r) for r in rows), encoding="utf-8")
+            result = smc.census(path)
+        self.assertEqual(result["turns"], 2)
+        self.assertEqual(result["totals"]["output"], 47)
+        self.assertEqual(result["totals"]["cache_creation"], 200)
+        self.assertEqual(result["efforts"], {"high": 2})
+
     def test_asked_model_that_never_ran_is_flagged_and_fails_the_exit_code(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             path = write_run(Path(td), "agent-a", ["claude-opus-5"] * 3, asked="fable", effort=None)
