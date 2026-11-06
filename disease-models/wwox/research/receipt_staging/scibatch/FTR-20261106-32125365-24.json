@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-06T06:57:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-06T07:01:00Z",
+ "event_id": "FTR-20261106-32125365-24",
+ "evidence_basis": [
+  "abstract only: Europe PMC reports no PMC record and no open full-text route, so the endpoints, their individual results and the untreated comparator were not read; no vector amount was carried into this record",
+  "verbatim_locator | proposition: gene addition delivered at a post-neonatal age gave a behavioural gain against a control-vector arm, in the gene behind this package's strongest negative | Abstract | \"exhibited significant behavioural improvements compared to green fluorescence protein-treated controls\"",
+  "verbatim_locator | proposition: a structural correction was confined to the regions where the transgene was highly expressed, tying the movement to local level rather than to timing | Abstract | \"was found in regions of high transgene expression within the cerebellum\"",
+  "verbatim_locator | proposition: coverage at that age was sporadic and regionally uneven, so a post-onset behavioural gain does not require a high or even restoration | Abstract | \"Transgene brain expression was sporadic at the cellular level and most prominent in hippocampal neurons and cerebellar Purkinje cells\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd/evidence_r1.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd/RESPONSE.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for the PMID, abstract read through NCBI E-utilities efetch db=pubmed, fetched 2026-11-06; Europe PMC reports no PMC record and no open full-text route for it, so no full text was reachable by the routes allowed for this task; bytes not saved outside the session scratch directory",
+ "study_id": {
+  "doi": "10.1093/brain/awaa028",
+  "pmid": "32125365"
+ },
+ "workflow": "ORCH-SCIBATCH-DR-20261105 correction round, challenge CH-SB-POSTONSET-RESTORATION, Scientist label sb-r1: four sources added on instruction after a blind locator audit and an independent review, read for whether a restoration after onset recovers a seizure, interneuron-structure or behavioural endpoint and for what the authors say decides it. Keyword-directed passage reading, not line-by-line. Prepared as a JSON file for the Orchestrator; the preparing actor did not write the ledger."
+}

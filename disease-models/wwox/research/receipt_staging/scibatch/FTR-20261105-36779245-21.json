@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-05T22:54:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-05T23:25:00Z",
+ "event_id": "FTR-20261105-36779245-21",
+ "evidence_basis": [
+  "Re-read for a new question: which patients received each of the four classes and which were current (Table 2 underlines current drugs in the markup), the genotypes of Table 1 for identity checks, the MRI row of Table 2, and the developmental statements of the Results. Parent-of-origin labels printed in Table 1 are deliberately not reproduced.",
+  "verbatim_locator | proposition: Hormonal therapy named for two patients in the text | Results, antiseizure-medication paragraph | \"Patient 2 received adrenocorticotropic hormone and Patient 11 prednisone.\"",
+  "verbatim_locator | proposition: Development profoundly impaired in all at follow-up | Results, patients paragraph | \"Development was profoundly impaired in all patients at follow-up.\"",
+  "verbatim_locator | proposition: Patient 5, never on vigabatrin, has a dorsal pons T2 increase | Table 2, MRI findings row, Patient 5 | \"17 m: scaphocephaly, thin CC, OA, inc T2 dorsal pons\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/cases_a1.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/denominators_a1.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/README.md"
+ ],
+ "prior_receipt": "FTR-20261023-36779245-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "780f42de9b3982fa5bf9bf1e6bb76f71384c943aa197fb2d4de80be7ac7e7a34",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1111/epi.17542",
+  "pmid": "36779245"
+ },
+ "workflow": "A1 (sb-a1), challenge CH-SB-CONCORDANCE, task ORCH-SCIBATCH-DR-20261105: question-driven reading for per-child intervention outcomes, developmental course and patient identity across WWOX-DEE reports. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

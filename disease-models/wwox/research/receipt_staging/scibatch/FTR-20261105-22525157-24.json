@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-05T22:51:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T22:56:00Z",
+ "event_id": "FTR-20261105-22525157-24",
+ "evidence_basis": [
+  "passages analysed through an automated page-to-text fetch that capped each excerpt, so quotes are spans rather than always whole sentences",
+  "verbatim_locator | proposition: restoration was induced in animals already showing overt signs of the disorder | Results, structural deficits section | \"at which time the mutant mice displayed overt Rett-like signs\"",
+  "verbatim_locator | proposition: cellular structural measures became statistically indistinguishable from wild type after post-onset restoration | Results, structural deficits section | \"all parameters were not significantly different from their respective age-matched, wild-type controls\"",
+  "verbatim_locator | proposition: a tissue-level structural measure did not reverse while the cellular ones did | Results and Discussion | \"the gross measure of neuropil (cortical thickness) was not reversed to a statistically significant extent\"",
+  "verbatim_locator | proposition: a motor endpoint did not recover after restoration | Results, sensory-motor section | \"Interestingly, these phenotypes were not recovered after tamoxifen treatment\"",
+  "verbatim_locator | proposition: no untreated same-genotype comparator survived to the measurement point, which the authors name as a limit on the treatment-effect reading | Discussion | \"were therefore unavailable as a matched control group\"",
+  "verbatim_locator | proposition: restoration was mosaic, leaving a stated fraction of brain cells deficient | Discussion | \"Firstly, activation affects 70% of brain cells on average, leaving 30% highly deficient in MeCP2\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd/evidence_r1.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page for the PMC record read 2026-11-05 through an automated page-to-text fetch that returned section-labelled verbatim excerpts; Europe PMC REST fullTextXML and efetch db=pmc returned no article body for this record; the extraction step capped each excerpt, so quotes are spans and not always whole sentences; bytes not saved outside the session scratch directory",
+ "study_id": {
+  "doi": "10.1093/brain/aws096",
+  "pmid": "22525157"
+ },
+ "workflow": "ORCH-SCIBATCH-DR-20261105 challenge CH-SB-POSTONSET-RESTORATION, Scientist label sb-r1: external precedents for restoring a single gene after phenotype onset in neurodevelopmental disorder models, read for which endpoint classes recover and what decides it. Keyword-directed passage reading, not line-by-line. Prepared as a JSON file for the Orchestrator; the preparing actor did not write the ledger."
+}

@@ -1,0 +1,44 @@
+{
+ "analysis_at": "2026-11-05T22:42:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-05T22:50:00Z",
+ "event_id": "FTR-20261105-36173683-25",
+ "evidence_basis": [
+  "verbatim_locator | proposition: treating symptomatic adult animals at P40, about three weeks after the stated seizure onset at P18, increased survival | Results | \"Treating adult symptomatic L/L mice with a single dose of Kcnt1 ASO resulted in an increase in survival\"",
+  "verbatim_locator | proposition: the control arm in the same genotype behaved like untreated animals, so the survival gain is attributable to the intervention | Results | \"the animals treated with control ASO displayed a survival consistent with that of untreated L/L mice\"",
+  "verbatim_locator | proposition: a composite social, cognitive and motor endpoint improved in every treated animal after post-onset treatment | Results | \"an improvement in nesting behavior was noticed in all animals treated with Kcnt1 ASO\"",
+  "verbatim_locator | proposition: the intervention reduced open-arm time in every treated group, including treated wild-type animals, so the change is a property of the intervention and not a rescue | Results | \"all Kcnt1 ASO-treated mice spent less time in the open arms of the maze compared with control ASO-treated mice\"",
+  "verbatim_locator | proposition: in treated wild-type animals a memory measure fell relative to control, a cost of the intervention in a normal brain | Supplementary results | \"A reduction in the median time spent in the novel arm was observed in Kcnt1 ASO-treated mice compared with control\"",
+  "verbatim_locator | proposition: no within-animal before-and-after behavioural comparison was possible, the same obstacle the WWOX design faces | Discussion | \"While seizures precluded us from testing the behavioral battery before and after treatment in our model\"",
+  "verbatim_locator | proposition: growth stayed below wild type even with neonatal pre-onset treatment | Results | \"body weight was still lower compared with +/+ mice\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r2_restoration_dee/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r2_restoration_dee/evidence_r2.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r2_restoration_dee/module_inputs.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC REST fullTextXML for the PMC record, fetched 2026-11-05; sections listed in coverage read as flattened article text; figures read as captions only; supplement not opened; bytes kept in the session scratch directory and not saved into the repository",
+ "study_id": {
+  "doi": "10.1172/jci.insight.146090",
+  "pmid": "36173683"
+ },
+ "workflow": "R2 of the parallel scientific batch (batch_sci_20261105/r2_restoration_dee): restoration or correction after phenotype onset in developmental and epileptic encephalopathy and hypomyelination models and in human gene-therapy timing precedents, for investigation INV-01 and the work order NEED-WWOX-GENE-ADDITION. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

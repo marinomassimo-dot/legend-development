@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-05T22:49:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-05T23:25:00Z",
+ "event_id": "FTR-20261105-36537114-21",
+ "evidence_basis": [
+  "Re-read of the held delivered surface (chunks 0, 1, 2, 18, 22, 23, 24, 25) for one question set: which patients have a diet, vigabatrin or hormonal entry, what outcome is printed for each, and whether a developmental course is printed. Chunks 3 to 17, which carry the narratives of patients 1 to 4, are absent from this surface; methods is marked read for the delivered parts only.",
+  "Finding: Table 1 records a diet response for patients 1, 2 and 4 and no diet entry for patients 3 and 5; the delivered narrative of patient 5 names vigabatrin within a three-drug regimen and no diet; the developmental row is one status label per patient. Identity: Table 1 credits patient 3's variant to Shaukat 2018 and patients 2 and 4 to Piard 2019 at variant level.",
+  "verbatim_locator | proposition: Patient 1 is recorded as responding to the diet | Table 1, Epilepsy row, patient 1 | \"Intractable seizures associated with DEE. Responded to ketogenic diet\"",
+  "verbatim_locator | proposition: Patient 3 has no diet entry; myoclonic onset | Table 1, Epilepsy row, patient 3 | \"Myoclonic epilepsy at onset, later evolved into epileptic spasms and eventually into focal tonicclonic seizures\"",
+  "verbatim_locator | proposition: Patient 5 was poorly controlled on a regimen including vigabatrin | Methods, patient 5 narrative, delivered chunk 18 | \"At 2years of age, seizures were poorly controlled with clobazam, vigabatrin, and zonisamide.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/cases_a1.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/denominators_a1.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/README.md"
+ ],
+ "prior_receipt": "FTR-20261020-36537114-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "b3a6d7a077c020ba402ae29556d9a8eba825c0d8d729216613d0d3cc69322ad9",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID36537114_Chong2023_SGchunks_text_2026-10-21.txt",
+ "study_id": {
+  "doi": "10.1002/ajmg.a.63074",
+  "pmid": "36537114"
+ },
+ "workflow": "A1 (sb-a1), challenge CH-SB-CONCORDANCE, task ORCH-SCIBATCH-DR-20261105: question-driven reading for per-child intervention outcomes, developmental course and patient identity across WWOX-DEE reports. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
