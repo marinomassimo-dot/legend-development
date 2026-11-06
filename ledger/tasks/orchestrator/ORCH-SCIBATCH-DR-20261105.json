@@ -193,8 +193,9 @@
    "steps": [
     {
      "step": "S7 validation (gate, LINT, structure suites, battery on a no-hardlinks clone), commit, land and push under the section 21d conditions",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "gate PASS 0 blocks, LINT WARN no BLOCK, receipts verify OK 1178, session_self_eval PASS, trial record of 109 staged receipts OK. Battery on a no-hardlinks clone of 68770873d09a: 208 suites, one failure (framework/scripts/test_repurposing_view.py, IT29 file untouched by this branch): a browser temp-profile directory not empty at TemporaryDirectory cleanup in one test; that test alone passed, then the whole suite alone exit 0 (210 tests). Verdict as run: FAIL on that suite only; cause shown, rerun clean; 9 skips are environment (case-sensitive fs, absent local corpus artefacts)."
     }
    ]
   },
