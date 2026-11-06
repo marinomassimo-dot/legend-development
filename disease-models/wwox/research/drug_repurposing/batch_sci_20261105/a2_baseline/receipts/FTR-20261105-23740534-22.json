@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-05T22:51:29Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-05T22:52:00Z",
+ "event_id": "FTR-20261105-23740534-22",
+ "evidence_basis": [
+  "abstract analysed; no methods, figures or tables described beyond the abstract",
+  "verbatim_locator | proposition: faster resolution may or may not translate into better outcomes | Abstract | \"Hormonal treatment resolves spasms in more infants than vigabatrin, but this may or may not translate into better long-term outcomes.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/evidence_a2.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 23740534 (abstract and metadata as served 2026-11-05 through the PubMed tool and NCBI E-utilities efetch); full text not reachable by an open route (the publisher restricts the PMC text; the PubMed full-text tool returned the abstract only); bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1002/14651858.CD001770.pub3",
+  "pmid": "23740534"
+ },
+ "workflow": "sb-a2, scientific batch ORCH-SCIBATCH-DR-20261105, challenge CH-SB-CONCORDANCE part 2: question-driven reading for the transfer baseline of symptomatic response versus developmental outcome in infantile epileptic spasms syndrome and other early-onset developmental and epileptic encephalopathies; Cochrane review at abstract level, used as a pointer only; row B13. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-05T22:43:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T22:48:00Z",
+ "event_id": "FTR-20261105-35535852-24",
+ "evidence_basis": [
+  "abstract and introduction only; the results and methods of this record were not opened",
+  "verbatim_locator | proposition: neuron-restricted postnatal restoration improved several behavioural endpoints and partly corrected an electroencephalographic one | Abstract | \"postnatally reinstating Tcf4 expression in neurons improved anxiety-like behavior, activity levels, innate behaviors, and memory\"",
+  "verbatim_locator | proposition: restricting the restored cell type lowers the achievable ceiling even under embryonic conditions | Introduction, final paragraph | \"embryonic Tcf4 reinstatement selectively in excitatory or inhibitory neurons led to rescue of only a subset of behavioral phenotypes\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd/evidence_r1.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC REST fullTextXML for the PMC record, fetched 2026-11-05; NCBI E-utilities efetch db=pmc as fallback; sections in coverage read through keyword-directed passages; figures not viewed; bytes not saved outside the session scratch directory",
+ "study_id": {
+  "doi": "10.7554/eLife.72290",
+  "pmid": "35535852"
+ },
+ "workflow": "ORCH-SCIBATCH-DR-20261105 challenge CH-SB-POSTONSET-RESTORATION, Scientist label sb-r1: external precedents for restoring a single gene after phenotype onset in neurodevelopmental disorder models, read for which endpoint classes recover and what decides it. Keyword-directed passage reading, not line-by-line. Prepared as a JSON file for the Orchestrator; the preparing actor did not write the ledger."
+}

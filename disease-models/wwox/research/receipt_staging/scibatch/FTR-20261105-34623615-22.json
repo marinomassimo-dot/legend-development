@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-05T22:45:27Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_present",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "read"
+ },
+ "event_at": "2026-11-05T22:45:56Z",
+ "event_id": "FTR-20261105-34623615-22",
+ "evidence_basis": [
+  "sections listed in coverage read in a text conversion of the XML; figure images not viewed; supplementary files not opened",
+  "verbatim_locator | proposition: no response to standard therapy associated with poor neurodevelopmental outcome, OR 5.2 | Results | \"No response to initial standard therapy [OR (95% CI): 5.2 (1.8–14.9); p < 0.001], and structural etiology\"",
+  "verbatim_locator | proposition: response defined clinically within 14 days, sustained 28 days | Material and Methods | \"complete cessation was defined as no clinical spasms witnessed within 14 d of commencement of standard therapy and cessation lasting for ≥ 28 consecutive days\"",
+  "verbatim_locator | proposition: 76% with social quotient below 55 at last follow-up | Abstract | \"At the last follow-up, 76% had social quotient < 55, and 39% had cerebral palsy\"",
+  "verbatim_locator | proposition: relapse in nearly two thirds of responders | Results | \"Of 61 responders, nearly two-thirds of children (39) had relapsed on follow-up.\"",
+  "verbatim_locator | proposition: attrition about 60% | Discussion | \"There was substantial attrition (to the tune of 60%) in the present study\"",
+  "verbatim_locator | proposition: lead time not testable because few were treated within 1 month | Discussion | \"LTTT was not a significant predictor in the present study since there were very few children in the group with acceptable LTTT (≤ 1 mo).\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/evidence_a2.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC8498980 full-text XML fetched 2026-11-05 through Europe PMC REST fullTextXML and read as a text conversion of section headings, paragraphs, table rows and captions; figure images not viewed; supplementary files not opened; bytes kept outside the repository and not saved in it",
+ "study_id": {
+  "doi": "10.1007/s12098-021-03918-y",
+  "pmid": "34623615"
+ },
+ "workflow": "sb-a2, scientific batch ORCH-SCIBATCH-DR-20261105, challenge CH-SB-CONCORDANCE part 2: question-driven reading for the transfer baseline of symptomatic response versus developmental outcome in infantile epileptic spasms syndrome and other early-onset developmental and epileptic encephalopathies; cross-sectional follow-up of a West syndrome cohort with social quotient beyond 2 years; rows B05 and B06. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,45 @@
+{
+ "analysis_at": "2026-11-05T22:44:42Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-05T22:45:19Z",
+ "event_id": "FTR-20261105-42730593-22",
+ "evidence_basis": [
+  "sections listed in coverage read in a text conversion of the XML; figure images not viewed; supplementary files not opened",
+  "verbatim_locator | proposition: response 175 of 236, favourable development 49 of 236 | Abstract | \"Overall treatment response was achieved in 175 patients (74.2%). At 3 years, 49 patients (20.8%) achieved favorable developmental outcome.\"",
+  "verbatim_locator | proposition: response defined electroclinically: no spasms for more than 24 h and BASED score 2 or less | Figure 1 caption | \"Response was defined as absence of spasms for > 24 h and a BASED score ≤ 2.\"",
+  "verbatim_locator | proposition: favourable outcome defined as both quotients 70 or more on Bayley-II at 3 years | Methods, Developmental function | \"Developmental outcome at 3 years was categorized as favorable developmental outcome, defined as both MQ ≥ 70 and PMQ ≥ 70\"",
+  "verbatim_locator | proposition: no unresponsive child reached a favourable outcome | Results, Developmental outcomes at 3 years | \"notably, none of the 61 unresponsive patients achieved favorable developmental outcome at 3 years.\"",
+  "verbatim_locator | proposition: no genetic-aetiology child reached a favourable outcome; 3 of 81 structural did | Results, Developmental outcomes at 3 years | \"compared to only 3 of 81 (3.7%) with structural etiology and none of 49 (0.0%) with genetic etiology\"",
+  "verbatim_locator | proposition: lead time not associated with outcome within unknown aetiology | Results, Developmental outcomes at 3 years | \"Lead time was not significantly associated with favorable developmental outcome at 3 years in this subgroup on either univariable (p = 0.63) or multivariable analysis\"",
+  "verbatim_locator | proposition: TSC excluded from the cohort | Methods, Patients | \"were diagnosed with tuberous sclerosis, as vigabatrin is used as a dedicated first‐line treatment in this group\"",
+  "verbatim_locator | proposition: authors expect favourable outcomes overestimated because of losses | Discussion, limitations | \"patients lost to follow‐up or who died before 3 years may have had poorer developmental outcomes, potentially resulting in an overestimation of favorable outcomes\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/evidence_a2.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC13570280 full-text XML fetched 2026-11-05 through Europe PMC REST fullTextXML and read as a text conversion of section headings, paragraphs, table rows and captions; figure images not viewed; supplementary files not opened; bytes kept outside the repository and not saved in it",
+ "study_id": {
+  "doi": "10.1002/epi4.70319",
+  "pmid": "42730593"
+ },
+ "workflow": "sb-a2, scientific batch ORCH-SCIBATCH-DR-20261105, challenge CH-SB-CONCORDANCE part 2: question-driven reading for the transfer baseline of symptomatic response versus developmental outcome in infantile epileptic spasms syndrome and other early-onset developmental and epileptic encephalopathies; prospective IESS cohort on a stepwise vigabatrin then prednisolone protocol with Bayley-II at 3 years; rows B01 to B04. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

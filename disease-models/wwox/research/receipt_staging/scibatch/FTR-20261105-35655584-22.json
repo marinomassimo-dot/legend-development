@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-05T22:46:48Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "captions_only"
+ },
+ "event_at": "2026-11-05T22:47:09Z",
+ "event_id": "FTR-20261105-35655584-22",
+ "evidence_basis": [
+  "sections listed in coverage read in a text conversion of the XML; figure images not viewed; supplementary files not opened",
+  "verbatim_locator | proposition: no correlation of developmental score with age at seizure offset | Results, Developmental Trajectories | \"No correlation was observed between STXBP1_DevScore and age at seizure offset (p = 0.64, Pearson correlation coefficient)\"",
+  "verbatim_locator | proposition: milestones similar in remission and active epilepsy | Results, Developmental Trajectories | \"no prominent differences were found between individuals with seizure remission and individuals with active epilepsy regarding head control, walking, and speech milestones.\"",
+  "verbatim_locator | proposition: score correlated with age at onset | Results, Developmental Trajectories | \"We observed a correlation between age at epilepsy onset and STXBP1_DevScore (p = 0.03, Pearson correlation coefficient, Figure 3A)\"",
+  "verbatim_locator | proposition: impairment before epilepsy onset in 22 of 48 | Abstract | \"Twenty-two individuals (46%) showed signs of developmental impairment and/or neurologic abnormalities before epilepsy onset.\"",
+  "verbatim_locator | proposition: authors' conclusion: onset age, not epilepsy outcome, correlates with development | Discussion | \"These observations provide evidence that age at epilepsy onset but not epilepsy outcome correlates with neurodevelopmental outcome in STXBP1-DEE.\"",
+  "verbatim_locator | proposition: limitations named by the authors | Discussion | \"The major limitations of our study include selection bias toward individuals with epilepsy, the limited number of individuals recruited, and the retrospective nature of data\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/evidence_a2.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC9157582 full-text XML fetched 2026-11-05 through Europe PMC REST fullTextXML and read as a text conversion of section headings, paragraphs, table rows and captions; figure images not viewed; supplementary files not opened; bytes kept outside the repository and not saved in it",
+ "study_id": {
+  "doi": "10.1212/NXG.0000000000000676",
+  "pmid": "35655584"
+ },
+ "workflow": "sb-a2, scientific batch ORCH-SCIBATCH-DR-20261105, challenge CH-SB-CONCORDANCE part 2: question-driven reading for the transfer baseline of symptomatic response versus developmental outcome in infantile epileptic spasms syndrome and other early-onset developmental and epileptic encephalopathies; retrospective STXBP1-DEE cohort with a composite developmental score; rows D01 and D02; tables are images in the XML and were not viewed. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

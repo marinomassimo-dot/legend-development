@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-05T22:43:13Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-05T22:44:21Z",
+ "event_id": "FTR-20261105-21668442-22",
+ "evidence_basis": [
+  "abstract analysed; no methods, figures or tables described beyond the abstract",
+  "verbatim_locator | proposition: 3.9 VABS points lower per lead-time category | Abstract | \"each increase in category of lead time duration associated with a 3.9 (95% CI 7.3-0.4, p = 0.014) decrease in VABS\"",
+  "verbatim_locator | proposition: treatment by aetiology interaction | Abstract | \"There was a significant interaction between treatment allocation and etiology with the benefit in VABS in those allocated steroid therapy\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/evidence_a2.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 21668442 (abstract and metadata as served 2026-11-05 through the PubMed tool and NCBI E-utilities efetch); full text not reachable by an open route (the publisher route refused automated access with HTTP 403); bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1111/j.1528-1167.2011.03127.x",
+  "pmid": "21668442"
+ },
+ "workflow": "sb-a2, scientific batch ORCH-SCIBATCH-DR-20261105, challenge CH-SB-CONCORDANCE part 2: question-driven reading for the transfer baseline of symptomatic response versus developmental outcome in infantile epileptic spasms syndrome and other early-onset developmental and epileptic encephalopathies; UKISS lead-time analysis at abstract level; row A06. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

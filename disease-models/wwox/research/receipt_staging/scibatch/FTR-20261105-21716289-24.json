@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-05T22:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T22:49:00Z",
+ "event_id": "FTR-20261105-21716289-24",
+ "evidence_basis": [
+  "passages analysed (keyword-directed), not a line-by-line read; the supplementary figures this paper leans on were not opened",
+  "verbatim_locator | proposition: restoring the gene in astrocytes only corrected neuronal dendritic morphology, a structural endpoint, non-cell-autonomously | Abstract | \"restoration of MeCP2 in the mutant astrocytes exerted a non-cell-autonomous positive effect on mutant neurons in vivo\"",
+  "verbatim_locator | proposition: a survival benefit from restoring one non-neuronal cell type, against an oil-treated same-genotype arm | Results, lifespan paragraph | \"nine of 11 TAM-treated Mecp2 Stop/y - hGFAPcreT2 mice were alive at 7.5 months\"",
+  "verbatim_locator | proposition: one explicitly highly symptomatic animal improved after glia-restricted restoration | Results, lifespan paragraph | \"TAM treatment of a highly symptomatic MeCP2 Stop/y - hGFAPcreT2 mouse reversed symptoms to nearly hGFAPcreT2 values\"",
+  "absence_check | proposition: the treatment age for the main arm is not stated in the passages read, so prevention and recovery cannot be separated for this record | passages read | no induction age found in the abstract or the results paragraphs read"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd/evidence_r1.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI E-utilities efetch db=pmc for the PMC record, fetched 2026-11-05; Europe PMC REST fullTextXML returned HTTP 500 for this record; sections in coverage read through keyword-directed passages; bytes not saved outside the session scratch directory",
+ "study_id": {
+  "doi": "10.1038/nature10214",
+  "pmid": "21716289"
+ },
+ "workflow": "ORCH-SCIBATCH-DR-20261105 challenge CH-SB-POSTONSET-RESTORATION, Scientist label sb-r1: external precedents for restoring a single gene after phenotype onset in neurodevelopmental disorder models, read for which endpoint classes recover and what decides it. Keyword-directed passage reading, not line-by-line. Prepared as a JSON file for the Orchestrator; the preparing actor did not write the ledger."
+}

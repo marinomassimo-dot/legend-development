@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-05T22:43:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T23:25:00Z",
+ "event_id": "FTR-20261105-30356099-21",
+ "evidence_basis": [
+  "Re-read of Supplementary Table 1 for two new questions: whether any treatment row exists (none: the epilepsy block has seizures, onset, drug resistance, seizure type, frequency, febrile seizures, status, EEG and syndrome, but no drug), and whether any column carries the homozygous genotypes of patients 2 and 4 of PMID 36537114 (none, read cell-wise across all 20 columns). The workbook was parsed with a stdlib OOXML reader in scratch.",
+  "verbatim_locator | proposition: Patient 2 of this table is seizure-free and not drug-resistant | Supplementary Table 1, row Drug resistance, Patient 2 | \"seizures free since 2 y 3 m\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/cases_a1.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/denominators_a1.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/README.md"
+ ],
+ "prior_receipt": "FTR-20261003-30356099-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "8fca3cff5489f215f018b5af6cb6b3227bf1a95c5bdf45e9023aa4f4554aefc5",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID30356099_Piard2019_supplement/41436_2018_339_MOESM1_ESM.xlsx",
+ "study_id": {
+  "doi": "10.1038/s41436-018-0339-3",
+  "pmid": "30356099"
+ },
+ "workflow": "A1 (sb-a1), challenge CH-SB-CONCORDANCE, task ORCH-SCIBATCH-DR-20261105: question-driven reading for per-child intervention outcomes, developmental course and patient identity across WWOX-DEE reports. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

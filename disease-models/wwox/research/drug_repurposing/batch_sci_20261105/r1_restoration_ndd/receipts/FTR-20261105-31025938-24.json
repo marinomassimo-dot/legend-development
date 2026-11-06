@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-05T22:39:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T22:44:00Z",
+ "event_id": "FTR-20261105-31025938-24",
+ "evidence_basis": [
+  "passages analysed (keyword-directed), not a line-by-line read",
+  "verbatim_locator | proposition: restoration began in adulthood at a stated postnatal day | Results, seizure threshold section | \"mice with Syngap1 pathogenicity reversed starting at PND60\"",
+  "verbatim_locator | proposition: an electroencephalographic network endpoint was eliminated by adult restoration, measured in the same animals before and after | Results, interictal spiking section | \"SynGAP re-expression in adult Lox-Stop mice eliminated IIS activity during wakefulness and sleep\"",
+  "verbatim_locator | proposition: a cognitive endpoint returned to wild-type level after adult restoration | Results, contextual fear section | \"elevated ASR levels normally found in Syngap1 haploinsufficient mice were reversed back to WT levels by TMX injections\"",
+  "verbatim_locator | proposition: locomotor hyperactivity persisted across both recording phases in the same animals | Results, theta and locomotion section | \"Cre(+) Lox-Stop Het mice were hyperactive compared Cre(+)WT controls as evidenced by a significant main effect of genotype\"",
+  "verbatim_locator | proposition: a named working-memory endpoint was not improved by adult restoration in earlier work on the same model, cited not re-measured | Results, cognition section | \"This measure of working memory was not improved after protein restoration in adult Syngap1 Het mice\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd/evidence_r1.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC REST fullTextXML for the PMC record, fetched 2026-11-05; NCBI E-utilities efetch db=pmc as fallback; sections in coverage read through keyword-directed passages; figures not viewed; bytes not saved outside the session scratch directory",
+ "study_id": {
+  "doi": "10.7554/eLife.46752",
+  "pmid": "31025938"
+ },
+ "workflow": "ORCH-SCIBATCH-DR-20261105 challenge CH-SB-POSTONSET-RESTORATION, Scientist label sb-r1: external precedents for restoring a single gene after phenotype onset in neurodevelopmental disorder models, read for which endpoint classes recover and what decides it. Keyword-directed passage reading, not line-by-line. Prepared as a JSON file for the Orchestrator; the preparing actor did not write the ledger."
+}

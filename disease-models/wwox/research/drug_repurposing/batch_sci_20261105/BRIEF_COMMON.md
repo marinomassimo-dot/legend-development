@@ -1,0 +1,48 @@
+# Common brief for the Scientists of the parallel scientific batch (2026-11-05)
+
+You are a Scientist working for the Orchestrator of LEGEND (public edition; the subject is the WWOX-DEE reference genotype class; the repository holds no individual-level record). Task record: `ledger/tasks/orchestrator/ORCH-SCIBATCH-DR-20261105.json`. Working tree: `/home/desktop/legend-development/.claude/worktrees/dr-parallel-20261105` (use absolute paths). Held artefacts (gitignored, read-only) are in the shared checkout: `/home/desktop/legend-development/files/`.
+
+This batch runs beside two other sessions (IT29 and IT30, branches `task/it29` and `task/it30`). Their worktrees are not yours: never `cd` into them, never write there. Read what they hold only with `git -C /home/desktop/legend-development show <ref>:<path>` (`main` = 14c5fc7b, `task/it29` = d099a5be; `task/it30` moves while the IT30 session works, so read the ref, never a remembered hash).
+
+## Hard constraints
+
+* **Write only inside your own directory** (given in your brief). Do not edit any other file, do not commit, do not run `fulltext_receipts.py record`, do not touch the registries, the ledgers or the four scientific current files. You may read anything.
+* **Not medical advice.** No dose, schedule, route, preparation, titration or clinical preference anywhere, for any species. Report measured concentrations and in-vitro potencies as source facts; do not reproduce administered-dose numbers; describe exposure qualitatively ("high-dose arm", "dosing from postnatal day 4") when a number would read as a regimen.
+* **No individual-level record.** Published case data enter only as a row labelled the way the paper labels it ("patient 3", "child 1"), genotype at class level (null/null, missense, splice, other), no coordinates, no pedigree, no parent-of-origin allele linkage, no dates of birth, no photographs or figures reproduced.
+* **Zero spend, no e-mail, no registration, no account, no author contact.** Never send the operator's or any personal e-mail to any service, header or request; a service that insists on a contact address (Unpaywall and similar) is not used, the route is recorded as blocked. Open routes only: the PubMed/PMC tools, Europe PMC REST, NCBI E-utilities, bioRxiv/medRxiv open full text, publisher open access, ChEMBL public REST. Respect licences: short quotations (25 words at most), no third-party bytes saved inside the repository (keep downloads in the scratch directory named in your task, outside the repository).
+* **Depth honesty.** Label each source `abstract_only`, `partial_fulltext` (say which sections) or `full_text`. An abstract supports a conditional lead and nothing more; never describe methods, figures or tables you did not read. A figure is read only if you looked at it; otherwise it is `captions_only` or `not_read`. Unknown is not negative; a missing direction stays `undetermined`; a null needs a bounded-search statement ("not found after: <databases, strings, date>").
+* **Epistemic labels.** In every decision statement mark DATO (a source reports it), INFERENZA (you derived it from DATO), IPOTESI (a proposal with the test that would discriminate it). Keep "what the source says" apart from "what I conclude". A knockout is not an inhibitor; an association is not modulation; a symptom response is not developmental protection; a compound effect is not attributed to a target without a target-specific control in the source.
+* **Seek the counter-evidence on purpose.** For every support you record, spend a search on the opposite: the null, the adverse, the context where it fails. Record them as rows with `role = counter`.
+* **Prefer decisive sources over many.** 6 to 12 well-read sources beat 40 abstracts. Stop when the sub-question is answered or the route is exhausted, and say which. If a full text is not reachable by an open route, say so and do not infer methods from an abstract.
+
+## Using the repository (do not grep the two large registries)
+
+* A record, a paper or a claim: `python3 framework/scripts/registry_records.py get --pmid <PMID> --hops 1` (never `grep` on `paper_registry_current.md` or `literature_tracking_log_current.md`).
+* Before opening a PMID: `python3 framework/scripts/paper_packet.py claim --pmid <PMID> --actor <your label, e.g. sb-a1> --note ORCH-SCIBATCH-DR-20261105`. It prints `ALSO:` lines for any other worktree's claim, staged receipt or in-flight manifest on that paper. If another actor is on it, do not read it again; cite what they staged and say so.
+* Prior reading of a PMID: `python3 /tmp/claude-1000/-home-desktop-legend-development/9400b253-25a0-4b03-8822-96361325fc16/scratchpad/depth.py <PMID> ...` (one line per receipt: event id, depth, kind, sections read) and the held verbatim locators in `disease-models/wwox/research/deepdive_manifests/PMID<N>.json`. Held full texts, if any: `/home/desktop/legend-development/files/fulltext/`.
+* Reuse what the module already holds before searching again: cards in `disease-models/wwox/research/drug_repurposing/cards/` and `cards_early/`, needs in `needs/needs.json`, the work orders in `view/work_order.json`, the investigations in `ranking_it8_p9_20261029/ranking.json`, claims through `registry_records.py`.
+* Shell: `grep` is `ugrep` here; use `git grep` for repository searches. `$?` after a pipe is the pipe's status. No `bc`.
+
+## Receipts (one JSON per source you actually read; staged, never recorded)
+
+Follow the shape of `disease-models/wwox/research/drug_repurposing/compare_it28_p9_20261105/receipts/` (any file there). Fields as in the ledger: `analysis_at`, `analysis_time_precision`, `coverage` (closed vocabulary: `read`, `captions_only`, `not_present`, `unavailable`, `not_read`, `unknown_legacy`; the repair for doubt is `not_read`), `event_at`, `event_id`, `evidence_basis` (include `verbatim_locator | proposition: ... | section | "quote"` entries), `evidence_depth`, `outputs`, `prior_receipt`, `record_kind` = `contemporaneous_receipt`, `reread_reason`, `source_fingerprint`, `source_kind`, `source_locator`, `study_id` {doi, pmid}, `workflow`.
+
+* `event_id` = `FTR-<YYYYMMDD of event_at>-<PMID>-<NN>` with the `NN` given in your brief. For a source without PMID use the DOI-hash form seen in the exemplar directory.
+* `analysis_at` earlier than `event_at`, both real past times from `date -u` while you work, never in the future, never before 2026-11-05T22:00:00Z.
+* `prior_receipt` and `reread_reason`: look the PMID up with `depth.py` / `fulltext_receipts.py status --pmid <PMID>`; if a receipt exists set `prior_receipt` to its event id and `reread_reason` to `new_question_outside_prior_coverage`, else `null` and `first_read`.
+* `study_id.doi` must be the DOI PubMed stores for that PMID (check with `python3 framework/scripts/pubmed_identity_check.py --pmid <PMID>` when unsure). `source_locator` must not contain `/` unless it names a persisted local artefact (then a fingerprint is required): write the route in words ("Europe PMC fullTextXML for the PMC record, fetched <date>; bytes not saved"). A `source_kind: abstract` receipt says "PubMed record", not PMC.
+* Validate each file: `python3 framework/scripts/staged_receipt_check.py --artifact-root /home/desktop/legend-development <file>.json` and repair until it passes. This checks the receipt in isolation; the Orchestrator trial-records the set later.
+
+## Deliverables (all inside your directory)
+
+1. `README.md`, answer first: the decision in at most 10 lines (each line labelled DATO / INFERENZA / IPOTESI); then evidence by theme; counter-evidence; transfer conditions and transfer breakers; what is not established; what was not reachable; the exact queries run (database, string, date, hits). Plain backticked paths, no markdown links to files (relative links are checked by the release battery).
+2. The evidence table named in your brief, tab-separated, UTF-8, equal column count on every row, no tab or newline inside a field, `locator_quote` verbatim and at most 25 words with its section (for an abstract-only row, the abstract sentence).
+3. `queries.tsv`: `query_id, database_or_route, string_or_url, run_at_utc, hits, what_was_done`.
+4. `module_inputs.md`: the rows the module could consume, written as proposals in the vocabulary of the existing files your brief names (you do not edit those files), each with the evidence row ids it rests on, plus `proposed_registry_changes` as plain statements with the claim or record id they would touch (you change nothing).
+5. `receipts/`: staged receipts as above, plus `receipts/INDEX.tsv` (`event_id, pmid, evidence_depth, prior_receipt, validated_ok`).
+6. No scripts unless a count cannot be reproduced otherwise; if you keep one, no shebang line, a `--help` guard in its first lines (print the docstring and exit before any network call or file write), no symlinks anywhere.
+7. Any hash you write is written in full length. Do not write strings that look like an e-mail address. Do not name a 7-character abbreviated hash.
+
+## Final message to the Orchestrator (this is all it sees of your work)
+
+The decision in 10 lines; row counts per `role` and per direction; every source id read with its depth; the three findings that most change a priority or a flag; what supports, narrows or contradicts the sentence your brief quotes; the queries run; everything unreachable; plain statement if you found nothing; anything in this brief you could not follow and why.

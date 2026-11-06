@@ -1,0 +1,41 @@
+{
+    "analysis_at": "2026-11-06T06:46:00Z",
+    "analysis_time_precision": "minute",
+    "coverage": {
+        "abstract": "read",
+        "discussion": "not_read",
+        "figures": "captions_only",
+        "introduction": "read",
+        "limitations": "not_present",
+        "methods": "not_read",
+        "references": "not_read",
+        "results": "read",
+        "supplementary": "not_read",
+        "tables": "not_read"
+    },
+    "event_at": "2026-11-06T06:47:00Z",
+    "event_id": "FTR-20261106-42470358-23",
+    "evidence_basis": [
+        "coverage map",
+        "verbatim_locator | proposition: the standard toxicology studies of the sibling are reported elsewhere, in an earlier conference report | OV329 section, Toxicology | \"The results of standard GLP toxicology studies of OV329 have been described in the EILAT XVI progress report\"",
+        "verbatim_locator | proposition: in a two-day mouse infusion the sibling was below the assay's lower limit of quantitation in brain, eyeball and retina while the parent compound was measurable in all three | OV329 section, Toxicology | \"below the lower limit of quantitation of the assay (3 ng/mL) in brain, eyeball, and retina\"",
+        "attestation: no myelin, vacuolation, white-matter or intramyelinic endpoint appears in the section read, and the administered amounts of the infusion study are deliberately not reproduced"
+    ],
+    "evidence_depth": "partial_fulltext_read",
+    "outputs": [
+        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/README.md",
+        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/evidence_b1.tsv",
+        "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/b1_whitematter/RESPONSE.md"
+    ],
+    "prior_receipt": null,
+    "record_kind": "contemporaneous_receipt",
+    "reread_reason": "first_read",
+    "source_fingerprint": null,
+    "source_kind": "fulltext_remote",
+    "source_locator": "Europe PMC fullTextXML for the PMC record PMC13675778, fetched 2026-11-06; the section on the sibling compound read end to end (rationale, pharmacology pointer, toxicology, pharmacokinetics, interactions, cortical inhibition, adverse effects); the rest of the report not read; figures not viewed; bytes kept outside the repository and not saved in it",
+    "study_id": {
+        "doi": "10.1002/epi.70354",
+        "pmid": "42470358"
+    },
+    "workflow": "ORCH-SCIBATCH-DR-20261105 package B1 correction round (challenge CH-SB-VGB-WHITEMATTER): reading bounded by the Orchestrator to the human age evidence, the open sibling toxicology report, the two-sided GABA-and-myelination literature and the taurine rival, after a blind quote audit and an adversarial review of the first pass. Prepared as a JSON file for the Orchestrator; the ledger was not written by the preparing actor. Read because the review showed the sibling null was a blocked route rather than an absence. The two earlier conference reports that hold the toxicology are subscription-only and were not read."
+}

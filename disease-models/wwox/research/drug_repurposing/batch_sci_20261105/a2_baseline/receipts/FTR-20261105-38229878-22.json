@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-05T22:48:08Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-05T22:48:42Z",
+ "event_id": "FTR-20261105-38229878-22",
+ "evidence_basis": [
+  "sections listed in coverage read in a text conversion of the XML; figure images not viewed; supplementary files not opened",
+  "verbatim_locator | proposition: baseline epilepsy severity predicted the 10-year adaptive score | Results, Predictors of long-term developmental outcome | \"A worse epilepsy severity score (P = 0.003) equally predicted a lower GAC score (Table 5).\"",
+  "verbatim_locator | proposition: epilepsy severity less severe at follow-up | Results, Seizure progression | \"Carers of individuals with SCN1A positive DS reported epilepsy severity (as per ELDQOL) to be less severe at follow-up\"",
+  "verbatim_locator | proposition: developmental outcome worse at follow-up | Results, Developmental outcome | \"Overall, DS individuals had significantly worse developmental outcomes at follow-up (4.45, profound disability, SD 0.65) compared to their baseline (2.9, moderate disability, SD 1.1)\"",
+  "verbatim_locator | proposition: change of instrument between baseline and follow-up | Discussion, limitations | \"Baseline cognitive data were obtained from professionals with expertise in assessing developmental outcome in DS rather than by standardized questionnaires (ABAS-3)\"",
+  "verbatim_locator | proposition: 60% questionnaire return | Abstract | \"Sixty-eight of 113 caregivers (60%) returned posted questionnaires.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a2_baseline/evidence_a2.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC10789590 full-text XML fetched 2026-11-05 through Europe PMC REST fullTextXML and read as a text conversion of section headings, paragraphs, table rows and captions; figure images not viewed; supplementary files not opened; bytes kept outside the repository and not saved in it",
+ "study_id": {
+  "doi": "10.1093/braincomms/fcae004",
+  "pmid": "38229878"
+ },
+ "workflow": "sb-a2, scientific batch ORCH-SCIBATCH-DR-20261105, challenge CH-SB-CONCORDANCE part 2: question-driven reading for the transfer baseline of symptomatic response versus developmental outcome in infantile epileptic spasms syndrome and other early-onset developmental and epileptic encephalopathies; 10-year follow-up of an SCN1A-positive Dravet cohort, predictors of adaptive outcome; rows D06 and D07. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

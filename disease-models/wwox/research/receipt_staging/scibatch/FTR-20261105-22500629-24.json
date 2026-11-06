@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-05T22:40:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T22:45:00Z",
+ "event_id": "FTR-20261105-22500629-24",
+ "evidence_basis": [
+  "passages analysed (keyword-directed), not a line-by-line read",
+  "verbatim_locator | proposition: treatment began at an age the authors state the phenotypes are already established | Introduction, final paragraph | \"when the mouse brain development is anatomically complete but highly plastic and when all FXS phenotypes relevant for the study are established\"",
+  "verbatim_locator | proposition: a structural endpoint was corrected to wild-type level by a downstream drug begun after onset | Results, dendritic spine section | \"Chronic treatment with CTEP corrected this phenotype, reducing spine density in Fmr1 KO animals to WT levels\"",
+  "verbatim_locator | proposition: for several endpoints the drug moved wild-type animals proportionally, so the effect is not lesion-specific repair | Discussion | \"for others (e.g., LTD, inhibitory avoidance, and locomotor activity) CTEP treatment also had a proportional effect on WT mice\"",
+  "verbatim_locator | proposition: a systemic endpoint was only partly corrected while central endpoints were fully corrected | Results, macroorchidism section | \"which was partially corrected upon chronic treatment\"",
+  "verbatim_locator | proposition: another group reported the same structural endpoint rescuable from birth but not from six weeks, so the positive result is contested | Discussion | \"when treatment started at birth, but not when treatment started in 6-week-old animals\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd/evidence_r1.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI E-utilities efetch db=pmc for the PMC record, fetched 2026-11-05; Europe PMC REST fullTextXML returned HTTP 500 for this record; sections in coverage read through keyword-directed passages; bytes not saved outside the session scratch directory",
+ "study_id": {
+  "doi": "10.1016/j.neuron.2012.03.009",
+  "pmid": "22500629"
+ },
+ "workflow": "ORCH-SCIBATCH-DR-20261105 challenge CH-SB-POSTONSET-RESTORATION, Scientist label sb-r1: external precedents for restoring a single gene after phenotype onset in neurodevelopmental disorder models, read for which endpoint classes recover and what decides it. Keyword-directed passage reading, not line-by-line. Prepared as a JSON file for the Orchestrator; the preparing actor did not write the ledger."
+}

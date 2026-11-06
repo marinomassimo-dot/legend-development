@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-05T22:58:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T23:25:00Z",
+ "event_id": "FTR-20261105-28721938-21",
+ "evidence_basis": [
+  "Re-read of the case study for a new question: the sequence and printed outcome of phenobarbital, vigabatrin and ACTH, and the developmental course across them.",
+  "verbatim_locator | proposition: Vigabatrin gave one month of control, then relapse | Case study | \"Vigabatrine (VGB) was added to phenobarbital and the seizures and EEG were completely controlled for a month\"",
+  "verbatim_locator | proposition: After ACTH, seizures controlled and no development identified | Case study | \"with complete control of seizures, however, abnormal EEG with fragmented hypsarrhythmia during sleep remained and no motor or cognitive development was identified\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/cases_a1.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/denominators_a1.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/README.md"
+ ],
+ "prior_receipt": "FTR-20261003-28721938-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "a8ffcb4d19275c65a91a7eafd25411d2ef0eafbc569f52a92df06d570eb7fb8b",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID28721938_TartaArsene2017_JLE.pdf (read through a column-order text derivation made in scratch, not persisted)",
+ "study_id": {
+  "doi": "10.1684/epd.2017.0924",
+  "pmid": "28721938"
+ },
+ "workflow": "A1 (sb-a1), challenge CH-SB-CONCORDANCE, task ORCH-SCIBATCH-DR-20261105: question-driven reading for per-child intervention outcomes, developmental course and patient identity across WWOX-DEE reports. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

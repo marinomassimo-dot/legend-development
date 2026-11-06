@@ -1,0 +1,10 @@
+{
+ "kind": "MECH",
+ "status": "open",
+ "tag": "IPOTESI",
+ "title": "Seizure-related endpoints after onset split by restoration mode and endpoint identity, not cleanly by gene class: antisense reactivation of the Ube3a locus rescued provoked susceptibility and EEG rhythm while conditional re-expression and the epileptiform poly-spike endpoint did not move",
+ "source": "orchestrator, task ORCH-SCIBATCH-DR-20261105; disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd (rows R79-R89, PMIDs 34369389 and 36594817 read at full text); verify/review_R section 2(a)",
+ "causal_statement": "IPOTESI: the level and regional distribution of restoration achieved, rather than the gene class, may decide which seizure sub-endpoint recovers after onset; spike-wave discharge rate, an interictal epileptiform measure, would then be paired with a rhythm measure in any WWOX post-onset arm.",
+ "falsifier": "A post-onset arm with measured protein level per region in which spike-wave rate and a rhythm or power-spectrum measure move together, or in which neither moves at a verified high restoration level, would remove the sub-class distinction.",
+ "transfer_limit": "One gene; partial and regionally uneven restoration; correlation across pooled arms, not a dose-controlled design; not WWOX evidence."
+}

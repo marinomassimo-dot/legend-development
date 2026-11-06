@@ -1,0 +1,10 @@
+{
+ "kind": "MECH",
+ "status": "open",
+ "tag": "IPOTESI",
+ "title": "White-matter abnormality has been reversed after a documented onset in glial or metabolic leukodystrophy models; sheath morphometry after onset in a neuron-driven lesion (the Wwox situation) has no precedent: the discriminating endpoint of the INV-01 added arm is quantified sheath structure",
+ "source": "orchestrator, task ORCH-SCIBATCH-DR-20261105; disease-models/wwox/research/drug_repurposing/batch_sci_20261105/integration/NEED-WWOX-GENE-ADDITION_consolidated.md, r1_restoration_ndd, r2_restoration_dee; independent review verify/review_R (an astrocyte-directed vector given seven months after the stated onset of white-matter vacuolation reversed vacuolation, water accumulation and a motor deficit; a single systemic dose as late as P20 improved myelination in a leukodystrophy null, abstract level).",
+ "causal_statement": "IPOTESI: whether an established hypomyelination re-myelinates under restoration depends on whether the lesion is glial or metabolic (reversal documented) or neuron-driven (no sheath-level precedent); the Wwox deficit follows a neuronal defect, so the external reversals do not transfer without a sheath-level measurement.",
+ "falsifier": "A post-onset restoration arm in a neuron-restricted deletion model with electron microscopy g-ratio showing sheath thickness moving toward control would show that structure is recoverable in this lesion class; no movement with restoration achieved verified would show arrest.",
+ "transfer_limit": "Not WWOX evidence; vacuolation and water content are not myelin; the late sources correct a glial or metabolic lesion in the cell that carries it; two of three are abstract level; bounded searches, not a statement that none exists."
+}

@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-05T22:54:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-05T22:59:00Z",
+ "event_id": "FTR-20261105-41997465-24",
+ "evidence_basis": [
+  "abstract only: this record has no PMC identifier and no open full text was reachable by the routes allowed for this task",
+  "verbatim_locator | proposition: the oligodendrocyte and myelin molecular phenotype did not move while a behavioural endpoint did, in the same animals | Abstract | \"OL gene expression and molecular phenotypes in Tcf4+/- animals are unchanged in the presence of an MECP2 transgene\"",
+  "verbatim_locator | proposition: the behavioural half of the same dissociation | Abstract | \"behavioral rescue also extends to a contextual fear learning task\"",
+  "verbatim_locator | proposition: the model's myelin phenotype is described as a maturation arrest rather than a demyelinating lesion | Abstract | \"Tcf4 heterozygous and knock-in mouse lines exhibit consistent myelination abnormalities, with an arrest of oligodendrocytes (OLs) at an immature stage\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd/evidence_r1.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for the PMID, abstract read through NCBI E-utilities efetch db=pubmed, fetched 2026-11-05; no open full text was reachable by the routes allowed for this task; bytes not saved outside the session scratch directory",
+ "study_id": {
+  "doi": "10.1016/j.mcn.2026.104094",
+  "pmid": "41997465"
+ },
+ "workflow": "ORCH-SCIBATCH-DR-20261105 challenge CH-SB-POSTONSET-RESTORATION, Scientist label sb-r1: external precedents for restoring a single gene after phenotype onset in neurodevelopmental disorder models, read for which endpoint classes recover and what decides it. Keyword-directed passage reading, not line-by-line. Prepared as a JSON file for the Orchestrator; the preparing actor did not write the ledger."
+}

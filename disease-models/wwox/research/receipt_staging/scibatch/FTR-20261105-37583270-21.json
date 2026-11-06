@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-05T22:53:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-05T23:25:00Z",
+ "event_id": "FTR-20261105-37583270-21",
+ "evidence_basis": [
+  "Re-read for a new question: the full WWOX rows 37 to 40 of Tables 1 and 4 (row 38 is absent from the manifest), the Table 4 abbreviations, and whether any developmental outcome is printed for the four WWOX children. Only Table 4 outcome cells and ambulation labels exist; no developmental course.",
+  "verbatim_locator | proposition: Row 38 responded to initial hormonal therapy, relapsed, then responded to nitrazepam | Table 4, row 38 | \"38 WWOX F ES (3) Absent MIC, C HYP RIHT, relapse, response with NZ ESC, SF, NAMB (12)\"",
+  "verbatim_locator | proposition: Row 40 failed hormonal therapy and the ketogenic diet | Table 4, row 40 | \"40 WWOX F ES (2) Dystonia (8) MIC, C HYP, LSE UTN, SP, HYTR FIHT, poor responder, Failed KD PES, DRE, NAMB (30)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/cases_a1.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/denominators_a1.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/README.md"
+ ],
+ "prior_receipt": "FTR-20261003-37583270-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "7820a11b0bbc0a35e091817dae382d9d5a16a55f8777ce122426d48512e364f6",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID37583270_Nagarajan2023_PMC.xml",
+ "study_id": {
+  "doi": "10.1002/epi4.12811",
+  "pmid": "37583270"
+ },
+ "workflow": "A1 (sb-a1), challenge CH-SB-CONCORDANCE, task ORCH-SCIBATCH-DR-20261105: question-driven reading for per-child intervention outcomes, developmental course and patient identity across WWOX-DEE reports. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

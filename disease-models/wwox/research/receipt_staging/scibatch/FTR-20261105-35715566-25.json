@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-05T22:47:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "captions_only"
+ },
+ "event_at": "2026-11-05T22:52:00Z",
+ "event_id": "FTR-20261105-35715566-25",
+ "evidence_basis": [
+  "verbatim_locator | proposition: every infant treated before symptom onset reached the primary motor endpoint, which no untreated case in the natural-history cohort ever reached | Results | \"All 14 (100%) children in the ITT population achieved the primary endpoint of independent sitting for at least 30 seconds\"",
+  "verbatim_locator | proposition: survival free of permanent ventilation was universal in the pre-symptomatically treated group | Results | \"All 14 (100%) children in the two-copy cohort were alive and free of permanent ventilation at 14 months of age\"",
+  "verbatim_locator | proposition: in the symptomatic trials of the same intervention far fewer reached the same endpoint, and later | Discussion | \"Only 64% of patients in STR1VE-US and 44% of patients in STR1VE-EU achieved the independent sitting endpoint\"",
+  "verbatim_locator | proposition: residual developmental deficit persisted in a third of the group even with pre-symptomatic treatment | Results | \"BSID gross motor scores varied for children at the 18-month study visit, and five children were below the ranges\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r2_restoration_dee/README.md",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r2_restoration_dee/evidence_r2.tsv",
+  "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r2_restoration_dee/module_inputs.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC REST fullTextXML for the PMC record, fetched 2026-11-05; sections listed in coverage read as flattened article text; figures read as captions only; supplement not opened; bytes kept in the session scratch directory and not saved into the repository",
+ "study_id": {
+  "doi": "10.1038/s41591-022-01866-4",
+  "pmid": "35715566"
+ },
+ "workflow": "R2 of the parallel scientific batch (batch_sci_20261105/r2_restoration_dee): restoration or correction after phenotype onset in developmental and epileptic encephalopathy and hypomyelination models and in human gene-therapy timing precedents, for investigation INV-01 and the work order NEED-WWOX-GENE-ADDITION. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
