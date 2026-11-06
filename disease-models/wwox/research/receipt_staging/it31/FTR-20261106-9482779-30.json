@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-06T18:55:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-06T18:55:30Z",
+ "event_id": "FTR-20261106-9482779-30",
+ "evidence_basis": [
+  "full text keyword-directed",
+  "verbatim_locator | proposition: ifenprodil inhibition of native rat cortical neuron NMDA current was biphasic with high-affinity IC50 0.21 micromolar | Results | \"inhibition curves to ifenprodil were biphasic, with IC50 values of 0.21 and 58 \u03bcm for the high- and low-affinity components\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/wo12_glun2b_conditions_20261106/output/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC6792938 article page text fetched 2026-11-06 from the PMC site (not in the open XML subset); Abstract, Methods, Results passages read by keyword; figures not viewed; bytes not saved",
+ "study_id": {
+  "doi": "10.1523/JNEUROSCI.18-06-01935.1998",
+  "pmid": "9482779"
+ },
+ "workflow": "wo12-p WO-12: native-neuron comparator and glycine dependence"
+}

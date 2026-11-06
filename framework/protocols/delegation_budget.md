@@ -63,6 +63,8 @@ and one line in the task record: role, asked model and effort, model and effort 
 read, the file(s) completed. Tokens are reported as logged. They are not converted to a share of any
 plan, and no additional spend is enabled to make a package fit.
 
+**Reconciliation of the 7.5 million figure (2026-11-06).** A transcript writes one API response as several rows (one per content block) that repeat the same usage block, and the census summed every row. On 60 real delegate transcripts this gave 5.02 million output tokens against 2.57 million once each response id is counted once (2,855 of 6,272 rows were repeats). The census now counts a response once and keeps its largest output; the 7.5 million above is therefore an over-count by roughly a factor of two and the 3.24 million analysis is the nearer one. Cache read and cache creation were over-counted the same way. Rows without an id are not merged. Regression: `test_session_model_census.py`.
+
 ## 7 · Not changed
 
 Read depth, verbatim locators, blind audit, adversarial review, the receipt contract, §21c/§21d,
