@@ -1294,6 +1294,52 @@ class RulesUntouched(unittest.TestCase):
         self.assertEqual(h, "56e4bfd5f4023311", "the F/C/P rules changed: this view only displays them (IT5 P11 verified revision; re-pinned by IT6 P2 twice: engagement nulls are counter rows, C3 and F3 share one support, reading-limit and design-limit split, partial benefit never carries F1; the pin now also covers the constants that decide positions)")
 
 
+class CdpStartup(unittest.TestCase):
+    """Exercise failed browser starts with real child processes, without needing Chromium."""
+
+    def browser(self, directory, body):
+        script = Path(directory) / "browser"
+        script.write_text("#!" + sys.executable + "\n" + body, encoding="utf-8")
+        script.chmod(0o700)
+        return str(script)
+
+    def test_exited_browser_reports_its_stderr_and_exit_code_without_waiting(self):
+        import time
+        with tempfile.TemporaryDirectory() as td:
+            binary = self.browser(td, "import sys\nprint('browser-startup-fixture', file=sys.stderr)\nsys.exit(23)\n")
+            started = time.monotonic()
+            with self.assertRaises(RuntimeError) as caught:
+                rv.Cdp(binary, td, startup_timeout=30)
+            self.assertLess(time.monotonic() - started, 5)
+            self.assertIn("exit=23", str(caught.exception))
+            self.assertIn("browser-startup-fixture", str(caught.exception))
+            self.assertIn(binary, str(caught.exception))
+
+    def test_unresponsive_endpoint_obeys_deadline_and_reaps_browser(self):
+        import os
+        import time
+        body = """import http.server, os, pathlib, sys, time
+pathlib.Path(__file__).with_suffix('.pid').write_text(str(os.getpid()))
+port = int(next(a.split('=', 1)[1] for a in sys.argv if a.startswith('--remote-debugging-port=')))
+class Handler(http.server.BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header('Content-Length', '100')
+        self.end_headers()
+        time.sleep(60)
+http.server.HTTPServer(('127.0.0.1', port), Handler).serve_forever()
+"""
+        with tempfile.TemporaryDirectory() as td:
+            binary = self.browser(td, body)
+            started = time.monotonic()
+            with self.assertRaisesRegex(RuntimeError, "startup_timeout=0.8s"):
+                rv.Cdp(binary, td, startup_timeout=0.8)
+            self.assertLess(time.monotonic() - started, 4)
+            pid = int(Path(binary).with_suffix('.pid').read_text())
+            with self.assertRaises(ProcessLookupError):
+                os.kill(pid, 0)
+
+
 class WaitPolls(unittest.TestCase):
     """IT8: the browser-driven checks poll for a ready marker instead of sleeping a fixed time after the load event (a fixed 350 ms crashed the audit on a loaded host)."""
 

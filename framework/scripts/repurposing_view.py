@@ -5196,33 +5196,58 @@ class Cdp:
     """A minimal websocket client (RFC 6455, text frames) for one Chromium page target. Launches the browser WITHOUT any sandbox-bypass flag.
     The window size is irrelevant: Emulation.setDeviceMetricsOverride sets the real layout viewport, which is then MEASURED, not assumed."""
 
-    def __init__(self, binary: str, tmpdir: str):
+    def __init__(self, binary: str, tmpdir: str, *, startup_timeout: float = 60.0):
         import os
         import socket
         import subprocess
         import time
         import urllib.request
+        if startup_timeout <= 0:
+            raise ValueError("startup_timeout must be positive")
         with socket.socket() as so:
             so.bind(("127.0.0.1", 0))
             self.port = so.getsockname()[1]
         self.profile = os.path.join(tmpdir, "profile")     # owned by this object: close() removes it before the caller removes tmpdir
-        self.proc = subprocess.Popen([binary, "--headless=new", "--disable-gpu", f"--remote-debugging-port={self.port}", f"--user-data-dir={self.profile}", "about:blank"],
-                                     stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)   # own process group: close() ends the helpers too
+        stderr_path = os.path.join(tmpdir, "chromium-stderr.log")
+        deadline = time.monotonic() + startup_timeout
+        with open(stderr_path, "wb") as stderr:
+            self.proc = subprocess.Popen([binary, "--headless=new", "--disable-gpu", f"--remote-debugging-port={self.port}", f"--user-data-dir={self.profile}", "about:blank"],
+                                         stdout=subprocess.DEVNULL, stderr=stderr, start_new_session=True)
         url = None
-        for _ in range(300):        # up to 60 s: a cold first start on a busy runner took longer than the former 20 s
+        last_error = "no page target returned"
+        while time.monotonic() < deadline:
+            if self.proc.poll() is not None:
+                break
             try:
-                tabs = json.loads(urllib.request.urlopen(f"http://127.0.0.1:{self.port}/json/list", timeout=2).read())
+                remaining = deadline - time.monotonic()
+                with urllib.request.urlopen(f"http://127.0.0.1:{self.port}/json/list", timeout=min(2, remaining)) as response:
+                    tabs = json.loads(response.read())
                 url = next((t["webSocketDebuggerUrl"] for t in tabs if t.get("type") == "page"), None)
                 if url:
                     break
-            except Exception:
-                pass
-            time.sleep(0.2)
+            except Exception as exc:
+                last_error = f"{type(exc).__name__}: {exc}"
+            time.sleep(max(0, min(0.2, deadline - time.monotonic())))
         if not url:
+            code = self.proc.poll()
+            with open(stderr_path, "rb") as stderr:
+                stderr.seek(0, os.SEEK_END)
+                stderr.seek(max(0, stderr.tell() - 8192))
+                detail = stderr.read().decode("utf-8", errors="replace").strip()
+            message = (f"Chromium DevTools endpoint did not come up: binary={binary!r}, "
+                       f"exit={code!r}, startup_timeout={startup_timeout:g}s; "
+                       f"last endpoint error={last_error}; stderr={detail or '(empty)'}")
+            try:
+                self.close()
+            except Exception as exc:
+                message += f"; cleanup failed: {exc}"
+            raise RuntimeError(message)
+        try:
+            self.sock = socket.create_connection(("127.0.0.1", self.port), timeout=60)
+            self._handshake(url.split(f":{self.port}", 1)[1])
+        except Exception:
             self.close()
-            raise RuntimeError("Chromium DevTools endpoint did not come up")
-        self.sock = socket.create_connection(("127.0.0.1", self.port), timeout=60)
-        self._handshake(url.split(f":{self.port}", 1)[1])
+            raise
         self.n = 0
         self.events: list = []
 
@@ -5345,6 +5370,7 @@ class Cdp:
                 break
             end = time.time() + grace
             while time.time() < end:
+                self.proc.poll()                  # reap the leader; its zombie must not keep its own group alive
                 try:
                     os.killpg(pgid, 0)            # still has a live member?
                 except ProcessLookupError:

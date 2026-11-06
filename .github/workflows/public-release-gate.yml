@@ -25,6 +25,22 @@ jobs:
       - name: Install analysis dependencies
         run: python3 -m pip install --requirement requirements-analysis.txt
 
+      - name: Browser startup and keyboard regression
+        run: |
+          python3 - <<'PY'
+          import subprocess
+          import sys
+          sys.path.insert(0, "framework/scripts")
+          from repurposing_view import find_chromium
+          binary = find_chromium()
+          if not binary:
+              raise SystemExit("CI browser checks require Chromium or Chrome")
+          print(f"Browser: {binary}", flush=True)
+          subprocess.run([binary, "--version"], check=True, timeout=15)
+          PY
+          python3 framework/scripts/test_repurposing_view.py CdpStartup \
+            Browser.test_every_chain_node_can_be_selected_by_keyboard_and_shows_its_relations -v
+
       - name: Regression tests
         # The log is long and its detail needs a login to read; the failing suites and assertion lines are repeated as annotations,
         # which the check-runs API serves without one (IT30: a red run on 0845ed06 could not be diagnosed from outside).
@@ -37,6 +53,15 @@ jobs:
             grep -E "^(REGRESSION VERDICT|FAIL:|ERROR: test|AssertionError|[A-Za-z_.]*(Error|Exception):|- .*: exit [1-9])|^TIME .*exit [1-9]" regression.log | head -40 | cut -c1-300 | while IFS= read -r l; do echo "::error title=release regression::$l"; done
           fi
           exit "$rc"
+
+      - name: Upload regression log
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: regression-log
+          path: regression.log
+          if-no-files-found: ignore
+          retention-days: 7
 
       - name: Structural framework lint
         run: python3 framework/scripts/legend_lint.py .
