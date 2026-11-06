@@ -5207,7 +5207,7 @@ class Cdp:
         self.proc = subprocess.Popen([binary, "--headless=new", "--disable-gpu", f"--remote-debugging-port={self.port}", f"--user-data-dir={tmpdir}", "about:blank"],
                                      stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)   # own process group: close() ends the helpers too
         url = None
-        for _ in range(100):
+        for _ in range(300):        # up to 60 s: a cold first start on a busy runner took longer than the former 20 s
             try:
                 tabs = json.loads(urllib.request.urlopen(f"http://127.0.0.1:{self.port}/json/list", timeout=2).read())
                 url = next((t["webSocketDebuggerUrl"] for t in tabs if t.get("type") == "page"), None)

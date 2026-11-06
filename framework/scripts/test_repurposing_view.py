@@ -286,13 +286,19 @@ class Browser(unittest.TestCase):
                 cdp.call("Page.navigate", url=f"file://{self.html}#chains")
                 self.assertTrue(cdp.wait_for("!!document.querySelector('[data-cur-ready]')", 60))
                 cdp.settle()
-                self.assertEqual(cdp.evaluate("document.querySelectorAll('.chain .eg-n:not(a .eg-n)[tabindex=\"0\"]').length"), cdp.evaluate("document.querySelectorAll('.chain .eg-n:not(a .eg-n)').length"))
-                cdp.evaluate("var g=document.querySelector('.chain .eg-n[tabindex=\"0\"]');g.focus();g.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true}))")
+                # the nodes are waited for and every probe is null-safe, so a failure states what the page held instead of raising inside the page
+                cdp.wait_for("document.querySelectorAll('.chain .eg-n').length>0", 30)
+                diag = cdp.evaluate("JSON.stringify({chains:document.querySelectorAll('.chain').length,nodes:document.querySelectorAll('.chain .eg-n').length,hash:location.hash,ready:document.readyState,cur:document.body.getAttribute('data-cur-ready')})")
+                n_all = cdp.evaluate("[...document.querySelectorAll('.chain .eg-n')].filter(n=>!n.closest('a')).length")
+                n_tab = cdp.evaluate("[...document.querySelectorAll('.chain .eg-n')].filter(n=>!n.closest('a')&&n.getAttribute('tabindex')==='0').length")
+                self.assertGreater(n_tab, 0, "no keyboard-reachable chain node: " + str(diag))
+                self.assertEqual(n_tab, n_all, str(diag))
+                self.assertEqual(cdp.evaluate("(function(){var g=document.querySelector('.chain .eg-n[tabindex=\"0\"]');if(!g)return 'no-node';g.focus();g.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true}));return 'ok'})()"), "ok", str(diag))
                 cdp.settle()
-                txt = cdp.evaluate("document.querySelector('.chain .eg-detail').innerText")
-                self.assertNotRegex(txt, r"^Select a node")
-                self.assertRegex(txt, r"[\u2190\u2192]")        # direction is printed
-                self.assertRegex(txt, r"\((R|I|A): ")             # relation type is printed
+                txt = cdp.evaluate("(function(){var d=document.querySelector('.chain .eg-detail');return d?d.innerText:''})()") or ""
+                self.assertNotRegex(txt, r"^Select a node", str(diag))
+                self.assertRegex(txt, r"[\u2190\u2192]", "direction is not printed: " + repr(txt[:160]))        # direction is printed
+                self.assertRegex(txt, r"\((R|I|A): ", "relation type is not printed: " + repr(txt[:160]))             # relation type is printed
                 self.assertFalse(cdp.evaluate("document.documentElement.scrollWidth > window.innerWidth"))
             finally:
                 cdp.close()
