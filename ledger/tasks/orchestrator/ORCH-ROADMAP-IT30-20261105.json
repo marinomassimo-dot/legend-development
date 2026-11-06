@@ -10,10 +10,10 @@
   "worktree": ".claude/worktrees/it30 (branch task/it30), merged with main ea3c069f",
   "it29_candidate": "landed as main 0845ed06; worktree and branch removed",
   "it29_battery": "clone /home/desktop/battery_it29, log /home/desktop/battery_it29.log, verdict line 'REGRESSION VERDICT'; the earlier battery on 72a58bfb failed one test (legend above the fold at phone width), fixed in d099a5be",
-  "next_action": "1) land task/it30 on main (ff), safe_push, then read workflow 'Public release gate' for the pushed SHA via the API; red -> annotations (the workflow now repeats failing suites as annotations); green -> set IT29 OBJ_P17 and OBJ_P18 DONE and MANDATE_STATE COMPLETE; 2) write MANDATE_BOUND: ORCH-ROADMAP-IT30-20261105 in a message of its own once the record is on main; 3) integrate the parallel scientific batch returns (single integrator), S9, S11 dashboard presentation of the new results, S14 report",
+  "next_action": "1) freeze the candidate, run the battery in a clean clone, record the verdict (closure-only commit), merge main again if it moved, safe_push, read the 'Public release gate' run for the pushed SHA (annotations show failing suites now), then set IT29 OBJ_P17/OBJ_P18 DONE; 2) write MANDATE_BOUND: ORCH-ROADMAP-IT30-20261105 in a message of its own once the record is on main; 3) S9 and S11 (dashboard presentation of priority reasons, hypotheses v literature v missing premises, comparators) and S14 report remain",
   "not_to_redo": "engine-dir recipe is in generation_it30_p5_20261105/README.md; carried_limits fix is committed (fa5eb2d2)",
   "parallel_batch": "ORCH-SCIBATCH-DR-20261105 is COMPLETE; its worktree is removed; the IT30 Orchestrator is the integrator (S16)",
-  "pending_verification": "after landing IT30: workflow 'Public release gate' on the new main SHA (API: /actions/runs?head_sha=<40 hex>; annotations: /check-runs/<job id>/annotations show the failing suites). Green -> IT29 record on main: OBJ_P17 and OBJ_P18 DONE, MANDATE_STATE COMPLETE; red -> read the annotation, fix, re-land"
+  "pending_verification": "'Public release gate' on the pushed SHA (API /actions/runs?head_sha=<40 hex>; annotations /check-runs/<job id>/annotations)"
  },
  "AUTHORISED_QUEUE_20261105C": {
   "MANDATE_STATE": "OPEN",
@@ -166,7 +166,7 @@
      "step": "S13 Tests, battery on exact SHA, integration, push, CI, cleanup",
      "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "note": "battery on the exact frozen SHA e91fa3ff11eabaa0727a29c52f96533af8369f19, run in a clean clone that imitates the CI (no files/, no catalogue cache, full history): REGRESSION VERDICT PASS WITH SKIPS (210 targets, 40 skipped). Two earlier runs on 94c77107 failed two suites (source-title cache lacked six PMIDs cited in card F03; ranking not regenerated after the card change) and one flaky OSError 39 in a browser test: all fixed before e91fa3ff. This record commit is closure-only; the battery is not attributed to it. Landing, push, CI on the pushed SHA, served-site check still to do"
+     "note": "candidate to freeze after this write: battery in a clean clone that imitates the CI (no files/, no catalogue cache, full history); verdict will be recorded as closure-only"
     }
    ]
   },
@@ -196,9 +196,9 @@
    "steps": [
     {
      "step": "S16 consume the scientific batch: reconcile with IT30 state; independent re-audit of the 43 post-audit edits; receipts; consumers",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "note": "done: the 43 edits re-audited (B1 14: 11 supported, 3 overshoot; R1+R2 29: 3 false in R1 (R90-R92), 2 corrected, others supported) and corrected with 25 further field and consolidated-text fixes; 109 staged receipts re-trialled on this tip (TRIAL OK), recorded (ledger 1,287 chained, verify OK), derived surfaces regenerated (coverage, batch queue, reading state, pathograph); depth unchanged (no complete read). in progress: consumer edits by an integration agent in this worktree (needs, work order, investigations, caveats, cards, funnel rows); then ranking and view regeneration and the before/after"
+     "evidence": "context_it30_20261105/CONSUMED_BATCH.md (before/after by consumer, proof in the generated page, not applied and why); 43 post-audit edits re-audited (VERIFY_DELTAS_B1.md, VERIFY_DELTAS_R.md) and corrected; 109 receipts re-trialled on this tip and recorded; consumers updated through their validators (check_needs, check_cards, test_investigations, ranking_it8 run/check/snapshot), no ranking group moved; registry proposals left to BATCH_COMMIT"
     }
    ]
   },
@@ -218,9 +218,9 @@
    "steps": [
     {
      "step": "S18 RS-R6 modifiers and suppressors of WWOX loss (priority after S16)",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "note": "Scientist agent running into rs_r6_it30_20261106/ (lookups already done verified first; Alliance, FlyBase, MGI, BioGRID ORCS, DepMap routes; classes kept apart); receipts staged with suffix 26"
+     "evidence": "rs_r6_it30_20261106 (README, evidence_rs_r6.tsv 21 rows, hypotheses.md, queries.tsv, 9 receipts recorded) independently verified (context_it30_20261105/VERIFY_RS_R6.md): lookups of the earlier iterations checked first, key-less lookups run (Alliance, MGI/IMPC, DepMap public files; BioGRID ORCS only partly reached); no genetic suppressor or screen result; 9 measured pharmacological modifiers downstream of the loss, none with a target control or developmental endpoint; oncology dependency absent; 7 wording corrections applied; consumed in the R6 trigger of the ranking inputs"
     }
    ]
   },
@@ -229,9 +229,9 @@
    "steps": [
     {
      "step": "S19 WO-06 ISR and seizures: only the three never-executed residues",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "note": "Scientist agent running into wo06_it30_20261106/; receipts staged with suffix 27"
+     "evidence": "wo06_it30_20261106 (35 rows, 15 receipts recorded) independently verified (VERIFY_WO06.md): no mammalian primary ISR-modulator study on a seizure or network-activity endpoint; Sephin1 rebuttal biochemical only; five glial papers unchanged in direction; corrections applied; consumed as a design hypothesis only in INV-02 next_test (no arm promoted)"
     }
    ]
   },
