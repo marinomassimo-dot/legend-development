@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-06T18:55:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-06T18:55:30Z",
+ "event_id": "FTR-20261106-8768735-30",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: ifenprodil is about 350-fold more potent at human NR1A/NR2B than at NR1A/NR2A receptors expressed in Xenopus oocytes | Abstract | \"Ifenprodil was approximately 350-fold more potent at hNMDAR1A/2B than at hNMDAR1A/2A receptors.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/wo12_glun2b_conditions_20261106/output/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record (abstract) and Europe PMC record text, read 2026-11-06; full text not reachable by an open route (publisher site returned an access challenge, no PMC copy, OpenAlex lists no open copy); bytes not saved",
+ "study_id": {
+  "doi": null,
+  "pmid": "8768735"
+ },
+ "workflow": "wo12-p WO-12: abstract only; conditions not read"
+}

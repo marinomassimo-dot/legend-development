@@ -13,7 +13,12 @@
   "Simulated probes 2026-11-06: general-purpose delegate asked sonnet/low ran claude-sonnet-5-5, effort low, birth context 40,232 tokens; typed agent wwox-scout asked effort low ran claude-sonnet-5-5, effort low, birth context 15,715 tokens. Both probes were launched in one message (two active at once for about four seconds each): a slip against the one-active rule, recorded.",
   "A new agent definition is not loaded by a running session (legend-delegate: 'Agent type not found'); the real package therefore uses general-purpose with explicit model and effort. The typed agent takes effect at the next session start; not measured here."
  ],
- "DELEGATIONS": [],
+ "DELEGATIONS": [
+  "producer wo12-p: asked sonnet/medium; read back claude-sonnet-5-5 x47, effort medium x47; 47 turns, output 42,940, cache read 3,037,811, peak context 95,759; completed README, evidence.tsv (14 rows), queries.tsv, 5 staged receipts (all pass the checker with DOI); result: primary Methods unreachable, NP5A2 stays NEEDS-DATUM",
+  "verifier wo12-v (separate context, blind, reaches sources): asked sonnet/high; read back claude-sonnet-5-5 x28, effort high x28; 28 turns, output 34,298, cache read 1,575,350, peak context 74,384; 14 SUPPORTED, 3 OVERSHOOT (E09, E14, H2: an inferred 'Mg2+-free', a glycine-with-age overstatement), 0 other; verify/audit_wo12.md",
+  "correction: three narrowings and one added paragraph made by the Orchestrator from the auditor's governing passages; narrow edit, narrow verification: not re-audited, declared in the README",
+  "reference: ORCH-SCIBATCH-DR-20261105 mean per delegate (22 delegates over 20 turns) 158 turns, 346,931 output tokens, 37.8 million cache-read tokens, all at effort max. This package: 2 delegates, 75 turns, 77,238 output tokens, 4.6 million cache-read tokens. Scope was two papers against five packages: not the same work, and the yield was a bounded negative plus two third-source anchors; compare as spend per closed package, not as efficiency"
+ ],
  "ESCALATIONS": [],
  "STOP_LOG": [
   "No stop for a reserved act."
@@ -50,8 +55,9 @@
    "steps": [
     {
      "step": "S2 one real package: producer then verifier, WO-12",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "producer then verifier in sequence, one active at a time; delivery in wo12_glun2b_conditions_20261106/"
     }
    ]
   },

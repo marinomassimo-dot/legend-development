@@ -1,0 +1,10 @@
+query_id	database_or_route	string_or_url	run_at_utc	hits	what_was_done
+Q01	PubMed tools / Europe PMC REST	EXT_ID:8768735 and EXT_ID:9400004 (core record)	2026-11-06T18:53Z	1 each	abstracts; isOpenAccess N, inPMC N, no PMC id
+Q02	Publisher site (JPET) and ScienceDirect, 4 URLs	jpet.aspetjournals.org content 283/3/1285 and 278/2/808, .full and .full.pdf; sciencedirect PII pages	2026-11-06T18:53Z	0 usable	all returned an access challenge (HTTP 403); no workaround attempted
+Q03	OpenAlex works by DOI (no contact address)	doi lookups for both papers	2026-11-06T18:53Z	2	oa_status closed, no repository full text; Unpaywall not used (needs a contact address)
+Q04	Europe PMC REST search	ifenprodil polyamine 1993-1996; Mott 1998 and Traynelis 1995 title searches	2026-11-06T18:54Z	0 for Mott and Traynelis; 4 for polyamine	Mott 1998 not found in Europe PMC; polyamine hits are binding and cytotoxicity papers, not used
+Q05	Europe PMC REST search, open-access full-text filters	ifenprodil with pH, glycine, glutamate, magnesium, NR2B, oocytes	2026-11-06T18:54Z	269 / 9 / 7	none specific; picked by title from separate searches
+Q06	Europe PMC REST title searches	Perin-Dureau 2002; Pahk and Williams 1997; Mony 2009 review; ifenprodil glycine	2026-11-06T18:54Z	1 / 1 / 1 / 2	chosen: 12122058, 9143010, 9482779; Mony review not read (secondary)
+Q07	PMC site article pages	PMC6757916 and PMC6792938	2026-11-06T18:54Z	2	read; Europe PMC fullTextXML returned HTTP 500, E-utilities efetch carried a no-download notice for PMC6792938
+Q08	Held review XML (local)	Table 2 and footnotes of PMID 29446949	2026-11-06T18:55Z	1	read
+Q09	CiteSeerX copy listed by OpenAlex for Fischer 1997	summary and download URLs	2026-11-06T18:55Z	0	not retrieved: the environment refused the request as a copy of walled content; not pursued
