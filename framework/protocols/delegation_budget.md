@@ -65,5 +65,5 @@ plan, and no additional spend is enabled to make a package fit.
 
 ## 7 · Not changed
 
-Read depth, verbatim locators, blind audit, adversarial review, `FULLTEXT_READ_RECEIPT`, §21c/§21d,
+Read depth, verbatim locators, blind audit, adversarial review, the receipt contract, §21c/§21d,
 the release gate and the battery. A package that is cheaper and less verified is not a result.

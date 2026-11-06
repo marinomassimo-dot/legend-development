@@ -1,6 +1,7 @@
 {
   ".claude/agents/fulltext-dossier.md": "complete_analysis",
   ".claude/agents/legend-deepdive.md": "complete_analysis",
+  ".claude/agents/legend-delegate.md": "not_applicable",
   ".claude/agents/research-group-analyst.md": "not_applicable",
   ".claude/agents/study-intake-triage.md": "not_applicable",
   ".claude/agents/wwox-scout.md": "not_applicable",
