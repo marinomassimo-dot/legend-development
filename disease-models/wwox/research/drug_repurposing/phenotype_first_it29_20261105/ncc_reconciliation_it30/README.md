@@ -5,7 +5,7 @@ Non-canonical. Not medical advice. Public edition, WWOX-DEE reference genotype c
 ## Decision (answer first)
 * **KEEP** the table as data, with the endpoint it actually carries: the **primary Alamar Blue (AB) viability/metabolic screen of the cytokine-protection paper, values as percent of quetiapine** (paper 2, Table 1 column "AB screening (% quetiapine)"). **DISCARD** its use in IT29 as an oligodendrocyte-differentiation sign: neither as independent counter-evidence (rows S1-32, S1-33, five "contradictions" in the P12 scout) nor as independent confirmation (the five "agreements").
 * The assignment is **strong but its cause is unknown**: the two papers' supplements carry the same values, and paper 1's text describes a different normalisation (T3). Do not attribute it to the publisher, the authors or LEGEND. Where paper 1's own Table S2 should be, nobody has been able to say from the files alone.
-* **The NR3C1 and CYP51A1 signs are not restored.** Rows S1-32 and S1-33 stay in the signed table as an explicit **hold** (see the note in each row): the targets remain `unresolved`, now because the endpoint-qualified evidence is single-source and marker-level, not because of a contradiction. Restoring the favourable sign is a separate, reasoned decision (below).
+* **The two rows are withdrawn** (`../withdrawn_rows_it30.tsv`), the signed table now has 31 rows, and **NR3C1 and CYP51A1 were assessed separately on the evidence that remains** (section 4). No abstention is kept to preserve the earlier counts: the signed count moves from 97 to 216 and the outputs below were regenerated.
 
 ## 1. Material actually used
 | Item | DOI | File | sha256 |
@@ -27,7 +27,7 @@ Fetched from `static-content.springer.com/esm/art:<doi>/MediaObjects/...` and th
 Reconciliation evidence: (a) the two files' **cell values are identical** in all 728 rows and 8 columns; only the zip packaging differs (sizes 51,934 and 51,937 bytes, different hashes); (b) of 15 compounds read from paper 2's Table 1 "AB screening (% quetiapine)", **12 appear in the file with the same rounded value** and the other 3 differ by a rounding step or a spelling variant (toremifene 73 v 74.87, fluphenazine 91 v 92.63, benztropine as "Benzatropine" 123 v 122.96); (c) **T3 (triiodothyronine) is negative in the file** (-37.8 and -36.3 at the first two doses) and thyroxine -185.6: in a differentiation screen normalised to T3 the control would sit at 100, here it is negative, which fits a viability/metabolic readout and not the stated T3-normalised MBP table. Not read: paper 1's methods beyond the passages about the files, and the figures. Cause of the duplication: unknown.
 
 ## 3. Consequences, only on outputs that consume these rows
-Counts recomputed by running the same converter and search twice (rows S1-32 and S1-33 present, as committed; absent), same catalogue cache, `NEED-MYELINATION`.
+Counts from running the same converter and search twice (rows S1-32 and S1-33 present, as committed in IT29; absent, as now), same catalogue cache, `NEED-MYELINATION`. The 'without' column is the current state of the repository.
 | Output | With the two rows (as committed) | Without them | Real change |
 |---|---|---|---|
 | Rows in the signed table | 33 | 31 | 2 |
@@ -38,5 +38,14 @@ Counts recomputed by running the same converter and search twice (rows S1-32 and
 | IT29 P12 scout table | 11 directions "recovered", 5 "contradictions", 6 "agreements" | 0 usable as differentiation direction | 11 (all reclassified, `ncc_20_compounds_it30.tsv`) |
 | Dashboard, rankings, hypotheses, the four current files | not consumed | not consumed | none (checked: the view and the rankings do not read the signed table) |
 
-## 4. What is held and why
-Keeping the two rows as a hold leaves every committed output as it was (97 signed rows). Removing them without more would raise the signed count to 216, 106 of them one family of glucocorticoid agonists resting on one purified-OPC study with a neonatal glucocorticoid liability noted in the curation. That is the "volume is not quality" case the IT29 README already described, so the sign is not restored here. To restore, read paper 1's methods and the mouse studies' own readouts, then decide NR3C1 and CYP51A1 separately; until then the label is INCONCLUSIVE for the sign and DISCARD for the incongruous counter-evidence.
+## 4. NR3C1 and CYP51A1, assessed separately on the residual evidence
+| | CYP51A1 (inhibition of the enzyme, lanosterol demethylase) | NR3C1 (activation of the glucocorticoid receptor) |
+|---|---|---|
+| Residual rows | R22, R24 (miconazole in vivo, lesion and neonatal), R27 (voriconazole null: the effect is not generic P450 inhibition), R28 (human cells), R30 (ketoconazole and azoles; **CYP51 siRNA** with about 80 percent knockdown giving more MBP-positive cells; a pathway inhibitor abrogates the effect), R31, R37 | R23, R25 (clobetasol in vivo), R26 (**RU486 blocks the clobetasol effect** and GR phosphorylation), R28 (human cells) |
+| Independent origins | two studies (25896324, 30046109) | one study (25896324) |
+| Target control | genetic (siRNA) and pharmacological, plus a specificity control | one pharmacological antagonist (non-selective: it also acts on the progesterone receptor) |
+| Endpoint | MBP-positive oligodendrocytes, CC1 cells, remyelinated axons; marker level, non-WWOX | same |
+| Decision | **sign restored: inhibition of the enzyme is concordant with differentiation** (the converter's `opposite`), qualified: marker-level, mouse and human cells, the sterol-pathway reading means EBP and TM7SF2 are alternative routes | **sign restored as single-source: activation is concordant** (the converter's `same`), qualified: one study, antagonist-only target control, and the 106 associations that follow are one study counted many times, not 106 confirmations; the neonatal liability of glucocorticoids is not scored here |
+| Why not an abstention | the evidence is replicated and has a genetic control | an abstention here would rest on the 'volume' of the result, which is not a property of the evidence; the qualification above is carried in the note instead |
+
+Neither sign is a WWOX measurement, an efficacy claim or a ranking: each remains `EXTERNAL_TRANSFER`, and the compounds that reach these targets stay conditional hypotheses. The independent verification of this part is a fresh reader of rows R22 to R31; until then the note `single study` stays on NR3C1.

@@ -5,7 +5,7 @@ Non-canonical. Not medical advice. Retrospective on inputs frozen at IT29 (the 1
 ## Map: capability, where it runs, result, consumer, and what was missing
 | Capability | Runs in | Result | Consumer | Diagnosis |
 |---|---|---|---|---|
-| Target-to-need coupling from signed perturbations | `phenotype_roles_it29.py` then `repurposing_search.py --roles` | 97 signed rows over 80 families (case 1) | comparison, stage tables | executed and consumed; its input was a hand-curated table (knowledge present, converter signs few raw rows because actions are free text) |
+| Target-to-need coupling from signed perturbations | `phenotype_roles_it29.py` then `repurposing_search.py --roles` | 216 signed rows over 191 families (case 1; 97 over 80 in the first IT29 count, before two NCC rows were withdrawn) | comparison, stage tables | executed and consumed; its input was a hand-curated table (knowledge present, converter signs few raw rows because actions are free text) |
 | Counter-premise on HDAC class | generator `carried_limits` | carried on 30 proposals | stage S10 | executed; the text was cut at 1,600 characters (fixed, S11) |
 | Compound-level effect with context | none before IT30 | none | none | **representation present (raw rows), never executed, so never consumed** |
 | Lesion-class sign flips (case 2) | descriptive table | none | none | representation present, not executable (agent classes, not compounds); now three class-level questions (IT30) |

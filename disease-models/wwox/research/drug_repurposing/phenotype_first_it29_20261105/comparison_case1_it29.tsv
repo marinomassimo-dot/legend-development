@@ -7,7 +7,7 @@ oxybutynin	favourable	R08	no	yes	direction_unresolved	abstained	direction_unreso
 quetiapine	favourable	R13	no	yes	-	not_reached	-	not_reached
 miconazole	favourable	R22 R24 R28 R30	no	yes	-	not_reached	-	not_reached
 ketoconazole	favourable	R30	yes	yes	-	not_reached	-	not_reached
-clobetasol	favourable	R23 R25 R26	yes	yes	-	not_reached	direction_unresolved	abstained
+clobetasol	favourable	R23 R25 R26	yes	yes	-	not_reached	consistent,direction_unresolved	right
 amorolfine	favourable	R31	yes	yes	-	not_reached	-	not_reached
 tamoxifen	favourable	R32 R36	no	yes	-	not_reached	-	not_reached
 ifenprodil	favourable	R36 R37	no	yes	-	not_reached	-	not_reached

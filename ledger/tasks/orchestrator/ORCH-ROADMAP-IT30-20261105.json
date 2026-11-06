@@ -7,12 +7,12 @@
  "OBJECTIVE": "Iteration 30: executable generative capacity, choice of the next searches (CLM pattern), continuity after compaction; durable ability to work and to change direction",
  "START_UTC": "2026-11-05T22:00:00Z",
  "RESUME": {
-  "worktree": ".claude/worktrees/it30 (branch task/it30), merged with main 0845ed06",
+  "worktree": ".claude/worktrees/it30 (branch task/it30), merged with main ea3c069f",
   "it29_candidate": "landed as main 0845ed06; worktree and branch removed",
   "it29_battery": "clone /home/desktop/battery_it29, log /home/desktop/battery_it29.log, verdict line 'REGRESSION VERDICT'; the earlier battery on 72a58bfb failed one test (legend above the fold at phone width), fixed in d099a5be",
   "next_action": "1) land task/it30 on main (ff), safe_push, then read workflow 'Public release gate' for the pushed SHA via the API; red -> annotations (the workflow now repeats failing suites as annotations); green -> set IT29 OBJ_P17 and OBJ_P18 DONE and MANDATE_STATE COMPLETE; 2) write MANDATE_BOUND: ORCH-ROADMAP-IT30-20261105 in a message of its own once the record is on main; 3) integrate the parallel scientific batch returns (single integrator), S9, S11 dashboard presentation of the new results, S14 report",
   "not_to_redo": "engine-dir recipe is in generation_it30_p5_20261105/README.md; carried_limits fix is committed (fa5eb2d2)",
-  "parallel_batch": "separate scientific batch ORCH-SCIBATCH-DR-20261105 works in .claude/worktrees/dr-parallel-20261105 (task/dr-parallel-20261105, based on 14c5fc7b); on 2026-11-05 it held only batch_sci_20261105/BRIEF_COMMON.md. It hands back READMEs, evidence tables and staged receipts inside its own directories; this session (IT30) is the single integrator of shared files (ledger, registries, consumers); receipts are trial-recorded in event-ID order in a scratch clone first",
+  "parallel_batch": "ORCH-SCIBATCH-DR-20261105 is COMPLETE; its worktree is removed; the IT30 Orchestrator is the integrator (S16)",
   "pending_verification": "after landing IT30: workflow 'Public release gate' on the new main SHA (API: /actions/runs?head_sha=<40 hex>; annotations: /check-runs/<job id>/annotations show the failing suites). Green -> IT29 record on main: OBJ_P17 and OBJ_P18 DONE, MANDATE_STATE COMPLETE; red -> read the annotation, fix, re-land"
  },
  "AUTHORISED_QUEUE_20261105C": {
@@ -188,6 +188,72 @@
      "status": "DONE",
      "owner": "orchestrator",
      "evidence": "phenotype_first_it29_20261105/ncc_reconciliation_it30: the two official Additional file 3 are value-identical (728 rows); 12 of 15 values equal paper 2's Table 1 AB % quetiapine, T3 negative; endpoint = cytokine-protection AB viability/metabolic screen, not differentiation; KEEP data, DISCARD as differentiation counter-evidence or confirmation, sign restoration INCONCLUSIVE (held); counts: 2 rows, 114 labels over 111 families would move (97 v 216 signed), 1 comparison compound (circular); dashboard and rankings not affected; cause of the duplication unknown, not attributed"
+    }
+   ]
+  },
+  "OBJ_S16": {
+   "order": 17,
+   "steps": [
+    {
+     "step": "S16 consume the scientific batch: reconcile with IT30 state; independent re-audit of the 43 post-audit edits; receipts; consumers",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "note": "done: the 43 edits re-audited (B1 14: 11 supported, 3 overshoot; R1+R2 29: 3 false in R1 (R90-R92), 2 corrected, others supported) and corrected with 25 further field and consolidated-text fixes; 109 staged receipts re-trialled on this tip (TRIAL OK), recorded (ledger 1,287 chained, verify OK), derived surfaces regenerated (coverage, batch queue, reading state, pathograph); depth unchanged (no complete read). in progress: consumer edits by an integration agent in this worktree (needs, work order, investigations, caveats, cards, funnel rows); then ranking and view regeneration and the before/after"
+    }
+   ]
+  },
+  "OBJ_S17": {
+   "order": 18,
+   "steps": [
+    {
+     "step": "S17 NCC coordination: withdraw the screen as differentiation evidence; assess NR3C1 and CYP51A1 separately",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "phenotype_first_it29_20261105/ncc_reconciliation_it30 (section 4): rows S1-32 and S1-33 withdrawn (withdrawn_rows_it30.tsv); CYP51A1 sign restored (two studies, genetic and pharmacological control), NR3C1 sign restored as single-source with the volume caveat; no abstention kept to preserve counts; signed rows 97 to 216 (80 to 191 families); comparison_case1 regenerated (clobetasol abstained to right, circular); README, GAIN and the IT29 self-evaluation corrected; the batch does not cite the NCC screen (git grep)"
+    }
+   ]
+  },
+  "OBJ_S18": {
+   "order": 19,
+   "steps": [
+    {
+     "step": "S18 RS-R6 modifiers and suppressors of WWOX loss (priority after S16)",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "note": "Scientist agent running into rs_r6_it30_20261106/ (lookups already done verified first; Alliance, FlyBase, MGI, BioGRID ORCS, DepMap routes; classes kept apart); receipts staged with suffix 26"
+    }
+   ]
+  },
+  "OBJ_S19": {
+   "order": 20,
+   "steps": [
+    {
+     "step": "S19 WO-06 ISR and seizures: only the three never-executed residues",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "note": "Scientist agent running into wo06_it30_20261106/; receipts staged with suffix 27"
+    }
+   ]
+  },
+  "OBJ_S20": {
+   "order": 21,
+   "steps": [
+    {
+     "step": "S20 close batch step S8, update stale resume points, clean integrated temporary spaces",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "ORCH-SCIBATCH-DR-20261105: S8 DONE with the delivered report, MANDATE_STATE COMPLETE, RESUME updated; worktree dr-parallel-20261105 removed (clean, branch merged); throwaway clones battery_scibatch_base, battery_scibatch_final, trial_scibatch removed (clean, heads in main); their logs kept"
+    }
+   ]
+  },
+  "OBJ_S21": {
+   "order": 22,
+   "steps": [
+    {
+     "step": "S21 browser lifecycle: close the process group, no ignored cleanup errors",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "repurposing_view.py Cdp.close ends the browser process group (start_new_session, SIGTERM then SIGKILL, awaited); all ignore_cleanup_errors workarounds removed from view, audit and tests; 15 open-close cycles leave no process; chain-node and legend tests pass. The historical battery verdict FAIL on 94c77107 (title cache, ranking) is kept; the passing reruns are attributed to their own SHAs"
     }
    ]
   }

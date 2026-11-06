@@ -8,12 +8,12 @@
  "START_UTC": "2026-11-05T22:19:00Z",
  "BASELINE": "development/main = origin/main = local main = 14c5fc7b47043ebc9bef336d609f6386bd6bbaa2 (fetched 2026-11-05T22:19Z); branches task/it29 (d099a5be465f91fe7dc8c7f108751fd34f3a242d) and task/it30 (10709fe6cb560ca7e2c7c5525955a02d2d530907) are NOT on main and are read only through git show; this task works in .claude/worktrees/dr-parallel-20261105 on branch task/dr-parallel-20261105",
  "RESUME": {
-  "worktree": ".claude/worktrees/dr-parallel-20261105 (branch task/dr-parallel-20261105)",
+  "worktree": "removed after integration (branch merged into main at ea3c069f)",
   "package_dir": "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/",
   "briefs": "BRIEF_COMMON.md, BRIEF_MAP.md, BRIEF_A1.md, BRIEF_A2.md, BRIEF_B1.md, BRIEF_R1.md, BRIEF_R2.md in the package directory",
   "returns": "each agent writes only inside its subdirectory (map, a1_wwox_reports, a2_baseline, b1_whitematter, r1_restoration_ndd, r2_restoration_dee); receipts are STAGED in receipts/ of each subdirectory and are never recorded by the agents; event-id suffixes 21 to 25 (map none), verifiers 31 to 35",
-  "next_action": "validation (gate, LINT, structure suites, battery on a no-hardlinks clone), merge any newer main, land with task_close.py, safe_push; then session self-evaluation, capability scout, takeaways, memory",
-  "not_to_redo": "do not re-read the IT29 or IT30 worktrees; do not record receipts on this branch (the ledger is hash-chained and IT29 and IT30 both append to it: the IT30 Orchestrator records the staged set in event-id order after IT29 lands)",
+  "next_action": "none for this task: the hand-over was consumed by the IT30 Orchestrator (receipts recorded, 43 post-audit edits re-audited and corrected, consumers updated); follow ORCH-ROADMAP-IT30-20261105",
+  "not_to_redo": "receipts are recorded (ledger 1,287 chained); the batch literature work and its audits are complete; do not repeat the reading",
   "integration": "batch_sci_20261105/integration/CONSUMERS.md is the start for the IT30 Orchestrator"
  },
  "DECISIONS_TAKEN": [
@@ -27,7 +27,7 @@
   "No stop for a reserved act. Class-3 hindsight: the briefs lacked the patient-overlap rule and the public-gate wording rule; both were sent as addenda before the readers returned. Waiting for the usage-limit reset was a wait on running work, not a stop."
  ],
  "AUTHORISED_QUEUE_20261105D": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_S0": {
    "order": 1,
    "steps": [
@@ -204,8 +204,9 @@
    "steps": [
     {
      "step": "S8 final report to the operator and the IT30 Orchestrator",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "report delivered: disease-models/wwox/research/drug_repurposing/batch_sci_20261105/README.md (answer first) with integration/CONSUMERS.md, VERIFICATION.md and FROM_THE_MAP.md, and disease-models/wwox/research/session_evaluations/self_eval_orchestrator_SCIBATCH_20261106.md; landed on main at ea3c069f; consumed by the IT30 Orchestrator (task ORCH-ROADMAP-IT30-20261105, steps S16 and S17)"
     }
    ]
   }

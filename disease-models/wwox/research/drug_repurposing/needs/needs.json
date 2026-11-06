@@ -264,27 +264,250 @@
       }
      ],
      "locator_status": "DOCUMENT"
+    },
+    {
+     "id": "O7",
+     "pmid": "",
+     "statement": "External precedent, endpoint-class split after a manifested phenotype: across 39 sources in two bounded searches (173 rows; no source in both), post-onset arms (adult arms included) by endpoint class, studies counted in each outcome column where they have a row: seizure or network 13 studies (9 full, 7 partial, 3 none); cognition and behaviour 13 (4 full, 8 partial, 6 none); neuronal structure 7 (4, 3, 2, one not measured); survival 6 (1 full, 4 partial, 2 worse, 1 not measured); motor 7 (2, 3, 3); myelin and glia 4 (2 full, 2 partial, all in glial or metabolic lesions, see O10); systemic and metabolic 4.",
+     "model_type": "other_animal_model",
+     "species": "mouse",
+     "genotype": "other single-gene models (not WWOX)",
+     "tissue_or_cells": "brain-wide or regional, per source",
+     "age_stage": "post-onset arms, adult arms included",
+     "comparison": "treated against untreated same-genotype comparator, per source",
+     "readout": "seizure, network, behaviour, cognition, structure, survival, motor",
+     "readout_level": "functional",
+     "direction_observed": "recovery varies by endpoint class and within single papers; failures sit inside otherwise positive papers",
+     "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+     "limits": "Not WWOX evidence. A tabulation of studies, not a meta-analysis; models differ in gene, lesion, lifespan and assay; negative cells are under-counted by publication selection. Built from age_at_restoration_vs_onset and outcome only (status_vocab is not used: the two producers read it differently). Endpoint classes are normalised across the two tables; behaviour and cognition cells were re-binned after review.",
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/integration/combined_post_onset_matrix.tsv",
+       "anchor": "post_onset rows"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd/evidence_r1.tsv",
+       "anchor": "post-onset rows"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r2_restoration_dee/evidence_r2.tsv",
+       "anchor": "post-onset rows"
+      }
+     ],
+     "locator_status": "DOCUMENT"
+    },
+    {
+     "id": "O8",
+     "pmid": "",
+     "statement": "External precedent, spontaneous seizure endpoints after onset: complete rescue of spontaneous and provoked seizures in one conditional channel model treated after manifest seizures and again in adults with a within-animal two-week baseline, and partial recovery in one channel-transcript silencing model treated while symptomatic; no statistically significant reduction of epileptic spasms in a late arm of a kinase model (one conditional allele, heterozygous females, five late animals; the authors call seizure prevention limited after onset) or in a ligase model (conditional reactivation). In the same set an adult conditional restoration of a synaptic regulator eliminated interictal spiking measured in the same animals before and after.",
+     "model_type": "other_animal_model",
+     "species": "mouse",
+     "genotype": "Scn1a haploinsufficiency; Kcnt1 gain of function; Cdkl5; Ube3a; Syngap1 (not WWOX)",
+     "tissue_or_cells": "brain",
+     "age_stage": "post-onset and adult arms",
+     "comparison": "treated against control-virus or untreated same-genotype animals",
+     "readout": "video-EEG seizures, provoked threshold, interictal spiking",
+     "readout_level": "functional",
+     "direction_observed": "recovered in two channel models, not in two non-channel conditional arms, recovered for interictal spiking in one non-channel regulator",
+     "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+     "limits": "Not WWOX evidence. Gene class correlates with the split and is not established as its cause: it is confounded with restoration mode, endpoint identity and the level of restoration achieved. The provoked-threshold result of the synaptic-regulator study holds at the tonic-clonic stage only. WWOX falls on the non-channel side. Spike-wave discharge rate is an interictal network measure, so its external precedent is split, not negative.",
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r2_restoration_dee/evidence_r2.tsv",
+       "anchor": "rows R01-R03, R09, R15-R17"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd/evidence_r1.tsv",
+       "anchor": "rows R13, R14, R23, R24, R37, R39"
+      }
+     ],
+     "locator_status": "DOCUMENT"
+    },
+    {
+     "id": "O9",
+     "pmid": "34369389",
+     "statement": "External precedent, the same ligase locus under a different restoration mode: antisense reactivation gave a full rescue of audiogenic seizure susceptibility at the same postnatal age at which conditional reactivation had left seizures in place, and rescued the electroencephalographic rhythm and sleep phenotype in juveniles and adults, with the degree of improvement correlated to the protein level reached; the same programme reports that cortical poly-spike frequency, its epileptiform endpoint, was not reduced at either age (PMID 36594817).",
+     "model_type": "other_animal_model",
+     "species": "mouse",
+     "genotype": "Ube3a locus (not WWOX)",
+     "tissue_or_cells": "cortex, EEG",
+     "age_stage": "juvenile and adult",
+     "comparison": "treated against control-oligonucleotide animals",
+     "readout": "audiogenic susceptibility, EEG rhythm and sleep, poly-spike frequency",
+     "readout_level": "functional",
+     "direction_observed": "rhythm and provoked threshold recovered; epileptiform poly-spike frequency not reduced",
+     "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+     "limits": "Not WWOX evidence. Read at full text for both sources by the R1 package; the restoration level reached was partial and regionally uneven, which the authors offer as a candidate explanation of the poly-spike result. One gene.",
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd/evidence_r1.tsv",
+       "anchor": "rows R79-R89"
+      }
+     ],
+     "locator_status": "DOCUMENT"
+    },
+    {
+     "id": "O10",
+     "pmid": "40051162",
+     "statement": "External precedent, myelin and white matter: in the gene families searched first no study restored or corrected the gene after a documented onset of a myelin phenotype and then measured myelin sheath structure; two hypomyelination models were treated before onset and the sheath moved least in both (about a tenth of control with reduced compaction in one, below control in the other) while apoptosis, glial markers and, in the antisense jimpy arm, oligodendrocyte number, respiration and lifespan moved far more, and a germline suppression of the toxic allele reached nearly half of the wild-type myelinated-axon count at three weeks (about 35 percent in the optic-nerve correlate), with incomplete compaction. Outside those families the class is not empty: an astrocyte-directed vector given seven months after the stated onset of white-matter vacuolation reversed vacuolation and water accumulation and a progressive motor deficit against a same-genotype comparator; a single systemic administration as late as P20 in a leukodystrophy null with a lifespan under one month globally improved myelination with residual lipid abnormalities (abstract); enzyme re-expression improved lineage markers with the effect blunted in old animals (abstract). One (an oligodendrocyte-enzyme lesion treated at six weeks while symptomatic; open full text read by an independent verifier, locator audit pending) reports electron-microscopic G-ratio, layers per axon and axon number as normalised; the others did not measure sheath morphometry; all correct a glial or metabolic lesion in the cell that carries it.",
+     "model_type": "other_animal_model",
+     "species": "mouse",
+     "genotype": "leukodystrophy and hypomyelination models (not WWOX)",
+     "tissue_or_cells": "white matter, cerebellum, corpus callosum",
+     "age_stage": "pre-onset and post-onset arms",
+     "comparison": "treated against same-genotype comparator, per source",
+     "readout": "vacuolation, water content, myelin protein immunostaining, g-ratio where measured",
+     "readout_level": "protein",
+     "direction_observed": "structural sheath endpoints moved least pre-onset; post-onset white-matter endpoints reversed in glial-gene lesions",
+     "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+     "limits": "Not WWOX evidence. The WWOX myelin deficit follows a neuronal defect and oligodendrocyte-lineage deletion is silent, so the cell to reach differs. Vacuolation and water content are not myelin. The structural readout in the lineage-restricted Mecp2 rows is myelin basic protein immunostaining thickness at postnatal day 16, not electron microscopy. Of the late sources, the oligodendrocyte-enzyme one has open full text and locates its arm (six weeks, symptomatic); the others are abstract level and one never locates onset. What is unmeasured: sheath morphometry after onset in a neuron-driven lesion. Bounded searches, not a statement that none exists.",
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r2_restoration_dee/evidence_r2.tsv",
+       "anchor": "rows R24-R31, R54-R59, R67-R76"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd/evidence_r1.tsv",
+       "anchor": "rows R49-R52, R57-R59, R74, R76"
+      }
+     ],
+     "locator_status": "DOCUMENT"
+    },
+    {
+     "id": "O11",
+     "pmid": "39847501",
+     "statement": "External precedent, the age cliff and what it is evidence of: in a null of a DEE gene dying in the third postnatal week, a brain-directed vector supplying the missing protein extended lifespan, reduced seizure severity without changing time to first seizure and fully restored parvalbumin interneuron and pyramidal excitability when given at P2; at P10, at twice the exposure, all eight treated nulls died in the usual window. The authors attribute the later failure to transgene level and distribution, citing other work for reduced rodent CNS expression after the first postnatal days; the restoration achieved at the later age was never measured. The generalisation is route-, capsid- and promoter-specific: a single systemic administration at P20 rescued lethality in another short-lived null (abstract), and a systemic vector at four to five weeks produced a few percent neuronal transduction and a modest survival benefit (abstract).",
+     "model_type": "other_animal_model",
+     "species": "mouse",
+     "genotype": "Scn1b null (DEE52); leukodystrophy null; short-lived null (not WWOX)",
+     "tissue_or_cells": "forebrain neurons (vector reached forebrain only)",
+     "age_stage": "P2 versus P10; P20; four to five weeks",
+     "comparison": "treated against untreated and empty-vector same-genotype animals",
+     "readout": "survival, seizure severity, interneuron excitability, growth",
+     "readout_level": "functional",
+     "direction_observed": "benefit at P2, none at P10 with restoration not measured; growth not rescued at either age",
+     "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+     "limits": "Not WWOX evidence. The P10 arm is UNVERIFIED, not a recovery failure. The two late-delivery sources are abstract level and one never locates onset. Growth failing even pre-onset makes growth and glycaemia primary rather than supportive endpoints in a WWOX arm.",
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r2_restoration_dee/evidence_r2.tsv",
+       "anchor": "rows R37-R44, R66, R72, R77"
+      }
+     ],
+     "locator_status": "DOCUMENT"
+    },
+    {
+     "id": "O12",
+     "pmid": "",
+     "statement": "External precedent, the cost of restoring and the need for a treated wild-type arm: abrupt widespread reactivation of the deficient gene killed animals selectively in the restored genotype in two independent models and both groups moved to graded induction; one intervention changed behaviour in treated wild-type animals (elevated plus maze, descriptive, read by its authors as benefit, so its direction is contested), and a second compound moved wild-type animals proportionally (to be checked against its row before the count is kept); without a treated wild-type arm an intervention effect is scored as a rescue. Modest vector-mediated overexpression in wild-type brain was tolerated in three sources, one of which also reports a separate deleterious effect of overexpression of its gene.",
+     "model_type": "other_animal_model",
+     "species": "mouse",
+     "genotype": "Mecp2; Ube3a-family; Kcnt1; others (not WWOX)",
+     "tissue_or_cells": "brain",
+     "age_stage": "post-onset arms and wild-type controls",
+     "comparison": "treated wild type against control",
+     "readout": "survival, behaviour",
+     "readout_level": "functional",
+     "direction_observed": "hazard specific to abrupt conditional reactivation and to exposure, not to gene addition as such",
+     "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+     "limits": "Not WWOX evidence. No powered toxicity or tumour-surveillance endpoint; single exposures; hazards are gene-specific. WWOX overexpression has its own recorded signals (ectopic protein moved organoid readouts beyond wild type; applied recombinant protein lowered viability).",
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r1_restoration_ndd/evidence_r1.tsv",
+       "anchor": "rows R05, R31, R84"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r2_restoration_dee/evidence_r2.tsv",
+       "anchor": "rows R18, R19, R44, R71, R78"
+      }
+     ],
+     "locator_status": "DOCUMENT"
+    },
+    {
+     "id": "O13",
+     "pmid": "35715566",
+     "statement": "Human timing precedent, spinal muscular atrophy, single-administration vector replacement: treated before symptom onset, 14 of 14 infants sat independently for at least 30 seconds and 11 within the normal developmental window, and all were alive and free of permanent ventilation at 14 months, against none of 23 and 6 of 23 in a matched untreated natural-history cohort; 5 of 14 were below the normal gross-motor range at 18 months. The symptomatic comparison (64 and 44 percent reaching the same endpoint, months later) is a cross-trial secondary statement inside this report, flagged by its authors as limited by differing design, endpoints and eligibility; the symptomatic primary reports were not read.",
+     "model_type": "human_clinical_report",
+     "species": "human",
+     "genotype": "SMA (not WWOX)",
+     "tissue_or_cells": "whole organism",
+     "age_stage": "before symptom onset",
+     "comparison": "matched untreated natural-history cohort",
+     "readout": "independent sitting, survival without ventilation",
+     "readout_level": "clinical",
+     "direction_observed": "stage associated with outcome; stage not separated from eligibility",
+     "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+     "limits": "Never a WWOX expectation: a lower motor neuron disease with a peripheral endpoint, no seizure, interneuron or myelin endpoint, and a pre-symptomatic route that depends on newborn screening that does not exist here.",
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r2_restoration_dee/evidence_r2.tsv",
+       "anchor": "rows R50-R53"
+      }
+     ],
+     "locator_status": "DOCUMENT"
+    },
+    {
+     "id": "O14",
+     "pmid": "35065785",
+     "statement": "Human timing precedent, metachromatic leukodystrophy, ex-vivo lentiviral haematopoietic gene therapy: across the assessed treated cohort, which included early-symptomatic children, 20 of 25 showed normal acquisition of cognitive skills at ages at which the untreated cohort was severely impaired; treated groups exceeded a matched untreated cohort on gross motor function; the MRI white-matter and atrophy score stabilised in every treated group but plateaued at a worse level when treatment followed symptoms (the early-symptomatic course still differed significantly from the natural-history course); children entering the rapid progression phase did not benefit, two dying of progression despite documented engraftment in all treated patients.",
+     "model_type": "human_clinical_report",
+     "species": "human",
+     "genotype": "MLD (not WWOX)",
+     "tissue_or_cells": "whole organism, MRI",
+     "age_stage": "pre-symptomatic and early-symptomatic",
+     "comparison": "matched untreated cohort",
+     "readout": "gross motor function, cognitive acquisition, MRI score",
+     "readout_level": "clinical",
+     "direction_observed": "arrested at a stage-dependent plateau; no benefit in rapid progression",
+     "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+     "limits": "Never a WWOX expectation: benefit comes from cross-correction by engrafted donor-type myeloid progeny with a months-long latency, not restoration in the affected neural cell; no randomised comparator; a composite imaging severity score is not a myelin measurement.",
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/r2_restoration_dee/evidence_r2.tsv",
+       "anchor": "rows R45-R49"
+      }
+     ],
+     "locator_status": "DOCUMENT"
     }
    ],
    "inferred": [
     "That gene addition would recover a manifested deficit: in the mouse every endpoint is measured after neonatal treatment (main cohorts P0-P1; timing arms P1-P5 in S8, small n, no P4 survival) of animals never measured before it (prevention or early-window). The only post-onset add-back found is organoid hyperexcitability at week 10 to 16 (post-onset by about three weeks, different organoid cohorts, week 16 only, persistence not measured; its single-cell contrast is against non-treated, not vector-treated, organoids), which did not correct radial-glia abnormalities.",
     "That a lower dose than the high-dose arm would still help, or that it would not: with two doses the shape of the dose-response is not determined, and no expression difference was measured between the two doses in seven of eight regional comparisons (entry 12).",
     "Partial restoration may suffice in genotype classes that retain a missense allele (inference from a human genotype-phenotype series; not tested).",
-    "That recovery after onset depends on the endpoint class: circuit-level function (Shank3, O4; Meis2, O5) was restored after onset in two non-WWOX adult-viable models, while the only WWOX post-onset add-back (organoid firing at week 10 to 16) did not correct radial glia; this is a hypothesis (R1 of the IT8 P5 loop 2), not a finding, and its progenitor half rests only on the WWOX organoid arm (Shank3 and Meis2 measured no progenitor endpoint), and transfer to WWOX is unverified."
+    "That recovery after onset depends on the endpoint class: circuit-level function (Shank3, O4; Meis2, O5) was restored after onset in two non-WWOX adult-viable models, while the only WWOX post-onset add-back (organoid firing at week 10 to 16) did not correct radial glia; this is a hypothesis (R1 of the IT8 P5 loop 2), not a finding, and its progenitor half rests only on the WWOX organoid arm (Shank3 and Meis2 measured no progenitor endpoint), and transfer to WWOX is unverified.",
+    "That which endpoint classes could recover after onset is partly predictable from outside WWOX: circuit and physiology endpoints and some cellular structural endpoints have recovered after onset in several other single-gene models; developmentally built behaviours and tissue-level structure generally have not; spontaneous seizure endpoints are split by restoration mode, endpoint identity and level achieved rather than cleanly by gene class; white-matter abnormality has been reversed after a documented onset in glial or metabolic lesions, and the myelin sheath has not been measured after onset in a neuron-driven lesion in any of them. This is an expectation imported from other genes, not a WWOX result, and it changes no window_state.",
+    "That the perinatal efficacious window in the mouse is a biological boundary: the one comparable later-age experiment failed with the restoration achieved never measured, its authors attribute the failure to transgene level and distribution, and two other nulls with short lives were treated later with a modest survival benefit (abstract level); an observed perinatal-only window in a rodent is a candidate artefact of the modality until the restoration achieved at the later age is measured. This weakens 'WWOX restoration after onset cannot work' and equally forbids concluding that it can."
    ],
    "intervention_direction": {
     "direction": "restore",
     "on": "WWOX protein level in neurons",
     "rationale": "Neuron-restricted loss reproduces the phenotype and neuron-restricted restoration rescued several endpoints in the Wwox-null mouse.",
     "certainty": "supported_in_WWOX_mouse_model",
-    "do_not_assume": "No ceiling is measured. Ectopic WWOX moved some readouts beyond wild type in organoids, and applied recombinant WWOX lowered viability of human ESC-derived cortical neurons in disease and isogenic control lines (preprint). More is not safer."
+    "do_not_assume": "No ceiling is measured. Ectopic WWOX moved some readouts beyond wild type in organoids, and applied recombinant WWOX lowered viability of human ESC-derived cortical neurons in disease and isogenic control lines (preprint). More is not safer. Do not read an external post-onset recovery as licence for a WWOX post-onset arm in the mouse: every external post-onset arm treats an animal that would otherwise reach adulthood, while the null in this corpus is dead at about three weeks; the constraint is as much vector kinetics (level and distribution achieved) as biology."
    },
    "counter_evidence": [
     "Rescue is not normalisation: unmyelinated axons per field remain about 52 versus about 26 in wild type; the paper's text states that treated knockout mice exceeded wild type in motor coordination and learning (Figure 4K), and the record's count of exceeding panels (three of eight) is not adjudicated (map CHAIN A, CLAIM 004, CLAIM 011).",
     "The neuron-promoter vector corrected neuronal function without correcting radial-glia abnormalities (organoid arm), and layer-marker SATB2 mRNA overshoots wild type up to about eleven-fold in treated organoids.",
     "Two doses cannot distinguish a threshold from a steep gradient (manifest entry 40); the low dose shows progressive extinction (0 percent at about day 77), the high dose a plateau; no intermediate dose was run.",
     "The post-natal window is untested in the source; progenitor/radial-glia defects are largely prenatal (CLAIM 014).",
-    "The post-onset precedents use lesions compatible with adult life (heterozygous or viable null); a complete Wwox null is lethal by about P15, so they cannot be reproduced in that model, and the Meis2 effect is a bypass that also acts on wild-type cells (O5)."
+    "The post-onset precedents use lesions compatible with adult life (heterozygous or viable null); a complete Wwox null is lethal by about P15, so they cannot be reproduced in that model, and the Meis2 effect is a bypass that also acts on wild-type cells (O5).",
+    "A firing or interneuron-excitability endpoint used as a success criterion needs its acceptable direction fixed in advance: in the one external post-onset success with a cellular endpoint, fast-spiking excitability overshot wild type while the phenotype recovered (PMID 35013317).",
+    "Benefit decayed in one external model (four of 14 treated animals died between two and six months) and required re-treatment in another, so a short follow-up would miss both.",
+    "Human post-symptomatic treatment of a leukodystrophy failed outright in rapidly progressing cases with molecularly successful correction, and the structural white-matter endpoint was arrested at a stage-dependent plateau (O14).",
+    "Two external DEE models could not be asked the post-onset question at all, because death follows the first seizure; the absence of a post-onset arm in the WWOX literature is the field's normal condition for a lethal null."
    ],
    "sources": {
     "cards": [
@@ -373,7 +596,7 @@
     "status": "NOT_ASSESSED",
     "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
    },
-   "notes": "Gene addition is a modality, not a repurposing-catalogue compound class; kept as a need so that restoration-level comparators exist for every downstream need. The goal reads 'deep recovery' as an aim; the evidence is early-window prevention plus one organoid post-onset functional recovery. Do not carry a perinatal result to a later intervention.",
+   "notes": "Gene addition is a modality, not a repurposing-catalogue compound class; kept as a need so that restoration-level comparators exist for every downstream need. The goal reads 'deep recovery' as an aim; the evidence is early-window prevention plus one organoid post-onset functional recovery. Do not carry a perinatal result to a later intervention. External precedents (O7-O14) place post-onset recovery on record for seizure, network, cellular structural and some behavioural endpoints and for white-matter water and vacuolation in glial lesions; the myelin sheath structure after onset in a neuron-driven lesion, and interneuron number at any age, were not found in bounded searches.",
    "basis": "observed"
   },
   {
@@ -3615,7 +3838,7 @@
    "observed": [
     {
      "id": "O1",
-     "statement": "Clinician-reported improvement in seizure control on the ketogenic diet in three named patients of a five-patient series: on the delivered text surface the Discussion sentence and Table 1 carry no count, score or instrument (the per-patient narratives were not covered by that surface); two of the three had died at the time of writing; developmental status was recorded as identical across all five.",
+     "statement": "Clinician-reported improvement in seizure control on the ketogenic diet in three named patients of a five-patient series: on the delivered text surface the Discussion sentence and Table 1 carry no count, score or instrument (the per-patient narratives were not covered by that surface); two of the three had died at the time of writing; developmental status is a single Table 1 label (profound developmental delay) in all five; no pre-diet status or course is on the delivered surface.",
      "model_type": "human_clinical_report",
      "species": "human",
      "genotype": "WWOX-related, recessive genotypes, five-patient series (responder allele classes are in the card)",
@@ -3626,7 +3849,7 @@
      "readout_level": "clinical",
      "direction_observed": "improved in 3 of 5 (denominator: the five series patients; exposed number not stated)",
      "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-     "limits": "At least one, probably two, of the three responders are previously published individuals (patient 4 explicitly; patient 2 by a Table 1 row), so pooled counts can double-count them.",
+     "limits": "One of the three responders (patient 4) is stated to be published before. Patient 2's Table 1 credit to an earlier cohort is variant-level: no column of that report's Supplementary Table 1 carries patient 2's homozygous exon-level deletion. The series' other previously published child is most likely patient 3, a non-responder (INFERENZA). So pooled counts can double-count patient 4 among responders and patient 3 among exposed children.",
      "pmid": "36537114",
      "locators": [
       {
@@ -3664,7 +3887,7 @@
     },
     {
      "id": "O2",
-     "statement": "Vigabatrin reports are mixed: in one report spasms resolved in the first of two WWOX-null children and the second child had a partial response with residual cluster spasms at 11 months; another report records visible-seizure reduction in one child with electrical attacks still on video-EEG; another records it ineffective in one null/null child; another records one vigabatrin-resistant case. A brain-MRI abnormality finding (VABAM) is documented in two WWOX-DEE children of a separate case report, selected for the finding, with no denominator of vigabatrin-exposed WWOX children.",
+     "statement": "Vigabatrin reports are mixed: in one report spasms resolved in the first of two WWOX-null children and the second child had a partial response with residual cluster spasms at 11 months; another report records visible-seizure reduction in one child with electrical attacks still on video-EEG; another records it ineffective in one null/null child; another records one vigabatrin-resistant case. A brain-MRI abnormality finding (VABAM) is documented in two WWOX-DEE children of a separate case report, selected for the finding, with no denominator of vigabatrin-exposed WWOX children. Further: complete control for one month, then relapse (Tarta-Arsene 2017); seizures controlled in three of four treated children of one series, one with myoclonic seizures still on EEG (Al Baradie 2022); used in 7 of 10 children with spasms of one cohort, with no response reported (Oliver 2023). The 'resistant' case of the five-patient series is regimen-level poor control on three drugs.",
      "model_type": "human_clinical_report",
      "species": "human",
      "genotype": "WWOX-null class children with West syndrome",
@@ -3727,6 +3950,30 @@
       }
      ],
      "locator_status": "DOCUMENT"
+    },
+    {
+     "id": "O4",
+     "statement": "Across published WWOX-DEE reports, children with both a symptomatic and a developmental outcome recorded: 6. In 4, a partial or transient seizure improvement came with development unchanged; in 2, neither moved. No sustained, instrumented response is recorded.",
+     "model_type": "human_clinical_report",
+     "species": "human",
+     "genotype": "biallelic WWOX; null or splice class in 5, homozygous missense class in 1",
+     "tissue_or_cells": "whole organism",
+     "age_stage": "infancy to early childhood",
+     "comparison": "responders against non-responders, between reports; no comparator arm",
+     "readout": "clinician-reported seizure course and clinician-narrated development",
+     "readout_level": "clinical",
+     "direction_observed": "symptom and development apart in 4 of 6 (partial or transient improvement, development unchanged); together in 2 of 6 (both unchanged)",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Six children from five reports, two of them from one report; developmental statements are clinical narratives without a scale; follow-up about 5 months to 2.5 years where dated, undated in 2; co-therapy in every case; counts only. Partial improvement is not a sustained response, and an absent developmental gain is not proof that no benefit exists. The source receipts are on the ledger (batch ORCH-SCIBATCH-DR-20261105), at partial full-text depth.",
+     "pmid": "30361190, 39101447, 28721938, 35573960, 29808465",
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/batch_sci_20261105/a1_wwox_reports/cases_a1.tsv",
+       "anchor": "rows A1-01, A1-02, A1-03, A1-17, A1-18, A1-24, A1-25, A1-26"
+      }
+     ],
+     "locator_status": "DOCUMENT"
     }
    ],
    "inferred": [
@@ -3743,7 +3990,9 @@
    "counter_evidence": [
     "CLAIM 031: cognitive and psychomotor impairment preceded epileptic encephalopathy and did not improve with better seizure control in some cases.",
     "Real-world continuation signal for the ketogenic diet is mixed (3 tried, 1 continued; listed as ineffective in a severe case).",
-    "Riva 2022 (one severe null/null case): cannabidiol, three ACTH cycles and the ketogenic diet are listed among the interventions without effect (DL-MOL-007, CLAIM 001); vigabatrin was recorded as ineffective there yet kept in therapy."
+    "Riva 2022 (one severe null/null case): cannabidiol, three ACTH cycles and the ketogenic diet are listed among the interventions without effect (DL-MOL-007, CLAIM 001); vigabatrin was recorded as ineffective there yet kept in therapy.",
+    "A one-time status with recent developmental gains, not attributed to treatment, in a homozygous missense child on two other drugs (outside the four classes) (A1-32).",
+    "Brainstem or central-tegmental signal is recorded in two children with no vigabatrin in their drug column; neither shows the globus-pallidus-and-thalamus pattern of the exposed pair (A1-32, A1-54)."
    ],
    "sources": {
     "cards": [
@@ -4077,12 +4326,13 @@
     "on": "myelin formation / maturation",
     "rationale": "A structural deficit that is partly prevented when WWOX is restored in neurons at P0-P5; whether an established hypomyelination re-myelinates is unmeasured, and the treated arms of the 2026 paper are unquantified (Fig 6E quantifies MBP for knockout against wild type only). Whether a pharmacological pro-myelinating route works is unresolved: the axonal signal may be absent and activity-dependent myelination may be harmed by NMDAR block.",
     "certainty": "supported_in_WWOX_mouse_model for recovery after the causal rescue; unknown for any pharmacological route",
-    "do_not_assume": "Activity-dependent myelination may be worsened by chronic NMDAR block (unmeasured); the myelin window is early (PND5-21 rat); a pro-myelinating agent may not be able to act if the neuron does not signal."
+    "do_not_assume": "Activity-dependent myelination may be worsened by chronic NMDAR block (unmeasured); the myelin window is early (PND5-21 rat); a pro-myelinating agent may not be able to act if the neuron does not signal. An exposure raising brain GABA during the myelination window is a candidate myelin stressor whose sign is unresolved: GABA-A signalling reduces oligodendrocyte lineage number and myelination while GABA-B signalling promotes precursor differentiation and remyelination (abstract level, not WWOX evidence; B1-44, B1-45, B1-46)."
    },
    "counter_evidence": [
     "N-13: the target is not causally downstream of WWOX in the cell targeted; window closing.",
     "Oligodendrocyte arm of the AAV experiment produced no benefit and no detectable protein, so it is not a negative result about oligodendrocytes (entry 45).",
-    "IT14 P4 (2026-11-01): the developmental myelin deficit is measured beyond transcripts (EM counts and g-ratio, CC1/PDGFRa counts, a callosal conduction-latency proxy, OPC differentiation assays), almost all by one laboratory; it follows neuron-restricted deletion and is restored by neuronal add-back while oligodendrocytes stay WWOX-null, so it is secondary to the neuron for development; whether the neuron-intrinsic signal or seizures and illness carry it is unresolved (every in vivo manipulation also changes seizures, survival and glycaemia). A primary oligodendroglial role appears only under challenge in an unreviewed same-laboratory preprint (PPR1124524, whose remyelination text and bars disagree). No myelin-directed compound has been given to any WWOX system, no post-onset arm exists (all add-back is P0 to P5), and nothing links a myelin gain to function in WWOX. The glia and maturation line is restricted to a role-resolving question; the snRNA deposit GSE158684 supports nothing here (oligodendrocyte-class composition differs between two pools whose cause the data cannot separate)."
+    "IT14 P4 (2026-11-01): the developmental myelin deficit is measured beyond transcripts (EM counts and g-ratio, CC1/PDGFRa counts, a callosal conduction-latency proxy, OPC differentiation assays), almost all by one laboratory; it follows neuron-restricted deletion and is restored by neuronal add-back while oligodendrocytes stay WWOX-null, so it is secondary to the neuron for development; whether the neuron-intrinsic signal or seizures and illness carry it is unresolved (every in vivo manipulation also changes seizures, survival and glycaemia). A primary oligodendroglial role appears only under challenge in an unreviewed same-laboratory preprint (PPR1124524, whose remyelination text and bars disagree). No myelin-directed compound has been given to any WWOX system, no post-onset arm exists (all add-back is P0 to P5), and nothing links a myelin gain to function in WWOX. The glia and maturation line is restricted to a role-resolving question; the snRNA deposit GSE158684 supports nothing here (oligodendrocyte-class composition differs between two pools whose cause the data cannot separate).",
+    "Batch ORCH-SCIBATCH-DR-20261105 (package B1, OTHER_DISEASE_PRECEDENT, not WWOX evidence; rows B1-09, B1-23, B1-25, B1-37, B1-38 of batch_sci_20261105/b1_whitematter/evidence_b1.tsv): the drug-side white-matter question is partly addressed outside WWOX. In the immature rat the myelin content endpoint recovers only partially after a drug-free period while the qualitative images and the vacuolation resolve and regional T2 stays elevated (abstract level); in the one cohort that compared it, a delayed-myelination baseline did not demonstrate an excess of the imaging abnormality (abstract level, graded from routine reports, no stated power; this is not evidence of absence); and no study was found that gave any inactivator of this class to a hypomyelinating or myelin-mutant animal or to any WWOX system (bounded search). The frequency of an imaging abnormality in selected cohorts is not attributable risk in WWOX."
    ],
    "sources": {
     "cards": [
