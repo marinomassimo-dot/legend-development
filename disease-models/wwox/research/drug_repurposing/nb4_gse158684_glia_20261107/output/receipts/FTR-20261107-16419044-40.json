@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-07T15:31:13Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-07T15:31:14Z",
+ "event_id": "FTR-20261107-16419044-40",
+ "evidence_basis": [
+  "abstract analysed in full; no methods, figure or result beyond the abstract is described",
+  "verbatim_locator | proposition: SynCre transgene shows testis expression and germline recombination in progeny of male carriers | Abstract | \"In the majority of cases, progeny of male SynCre mice inherited a germline recombined floxed allele\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb4_gse158684_glia_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/nb4_gse158684_glia_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 16419044 (abstract and metadata as served 2026-11-07); full text not reached by an open route",
+ "study_id": {
+  "doi": "10.1002/gene.20183",
+  "pmid": "16419044"
+ },
+ "workflow": "NB-4 pilot (nb4_gse158684_glia_20261107): recombination profile of the Synapsin I-Cre line, as a decisive gap named by IT14 p1a. Abstract only. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

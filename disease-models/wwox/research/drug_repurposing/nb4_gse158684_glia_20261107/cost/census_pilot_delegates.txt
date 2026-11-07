@@ -1,0 +1,17 @@
+SESSION MODEL CENSUS — read from the transcripts, never from the dispatch
+
+  agent-a2e19b9a2feb9f613.jsonl
+    turns 31 · claude-sonnet-5-5 ×31
+    birth context 17,331 tokens (prompt 543 chars) · peak 118,672
+    cache written 118,670 · cache read 2,248,353 · output 32,487
+    asked model sonnet · asked effort medium · effort read back medium ×31
+  agent-a761754585fbf4ccd.jsonl
+    turns 53 · claude-sonnet-5-5 ×53
+    birth context 18,070 tokens (prompt 2,331 chars) · peak 180,402
+    cache written 171,917 · cache read 5,166,594 · output 66,561
+    asked model sonnet · asked effort high · effort read back high ×53
+
+  TOTAL 2 run(s) · turns 84 · cache written 290,587 · cache read 7,414,947 · output 99,048  (tokens as logged; not a share of any plan)
+
+  2 run(s), each on one model throughout. That is a precondition of a context comparison,
+  not evidence that one was run.
