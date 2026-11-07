@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-07T23:19:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-07T23:25:00Z",
+ "event_id": "FTR-20261107-17850214-99",
+ "evidence_basis": [
+  "partial full text: GSK3 inhibitor section and assay methods",
+  "verbatim_locator | proposition: CT99021 inhibited CDK2-cyclin A about 50-fold less potently and nothing else significantly at 1 micromolar | Results, Inhibitors of GSK3 | \"It inhibited CDK2\u2013cyclin A about 50-fold less potently and did not affect other protein kinases in the panel significantly at 1 \u03bcM\"",
+  "verbatim_locator | proposition: LiCl inhibited other kinases with slightly lower potency than GSK3 | Results, Inhibitors of GSK3 | \"LiCl inhibited a number of other protein kinases with slightly lower potency than GSK3\"",
+  "absence | proposition: the panel lists GSK3 beta and no GSK3 alpha | Methods and table headings | string GSK3 alpha found 0 times in the page text"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/gsk3_inv09_20261107/output/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page text (pmc.ncbi.nlm.nih.gov) fetched 2026-11-07 after Europe PMC returned HTTP 500 and efetch a publisher stub; abstract, the GSK3 inhibitor section, kinase assay Methods and table headings read; other sections and table values not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1042/BJ20070797",
+  "pmid": "17850214"
+ },
+ "workflow": "gk-p INV-09: GSK3 separability, Stage 1 and Stage 2"
+}
