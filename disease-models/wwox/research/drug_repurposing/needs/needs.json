@@ -5073,7 +5073,8 @@
    ],
    "inferred": [
     "That the progenitor shift is causally downstream of WWOX loss in vivo (the radial-glia defect is largely prenatal) is inferred.",
-    "Neuron-promoter rescue corrects neuronal function without correcting radial-glia abnormalities (authors' statement)."
+    "Neuron-promoter rescue corrects neuronal function without correcting radial-glia abnormalities (authors' statement).",
+    "IT33 (NB-1): a WWOX-to-MYC upstream relation exists only outside the brain (a Wwox and Trp53 double deletion raises Myc and WWOX restoration lowers it in mouse bone-marrow cells; breast cancer cell lines at abstract level), so it is a transferred inference, not WWOX-neural evidence; the only model in which lowering MYC changes a progenitor maturation phenotype is a human progenitor system with a different upstream lesion, one donor line."
    ],
    "intervention_direction": {
     "direction": "uncertain",
@@ -5088,7 +5089,10 @@
     "POU5F1 is as prominent as MYC in the knockout radial-glia contrast (Fig 3F: capped significance for both), which fits retained progenitor state without a MYC-specific driver.",
     "The inverse WWOX-MYC relation in the reference datasets is a developmental time course (Fig 3H-I), and MYC is phase-coupled in the knockout only (Fig 4D): maturity and cell-cycle state can explain a MYC rise without a driver role.",
     "MYCN dosage sets cortical size in both directions (loss: microcephaly; gain: megalencephaly; abstracts of PMIDs 15821734 and 37710961), and progressive microcephaly is part of the WOREE picture (4 of 5 in one cohort, PMID 36537114): lowering MYC-family output could shrink the progenitor pool. Not WWOX evidence.",
-    "In mouse, neuron-stage (Synapsin-Cre) deletion reproduces the null phenotype as progenitor-stage (nestin-Cre) deletion does (PMID 33914858), and neuron-stage add-back rescues without correcting radial glia: a radial-glia MYC state is not shown to be needed for the severe mouse endpoints."
+    "In mouse, neuron-stage (Synapsin-Cre) deletion reproduces the null phenotype as progenitor-stage (nestin-Cre) deletion does (PMID 33914858), and neuron-stage add-back rescues without correcting radial glia: a radial-glia MYC state is not shown to be needed for the severe mouse endpoints.",
+    "IT33 (NB-1, independently audited; rows E80 and E81 are the auditor's reading of the figures, not receipted): in the same organoid paper MYC protein is high while MYC binding at early-neuron gene promoters is lost in knockout neural stem cells, and Wnt and p53 are also raised, with the kinase inhibitor acting on Wnt, CKI alpha and CDK7/9: a raised MYC amount is not a raised MYC activity per cell, and the inhibitor experiment is not MYC-selective.",
+    "IT33 (NB-1, E83): the inhibitor experiment lacks a wild-type-plus-tool arm and a knockout-plus-vehicle arm, so it cannot separate a MYC effect from an effect on the other pathways it acts on.",
+    "IT33 (NB-1, chain C11): the gain-of-function tissue models give the opposite sign (MYC gain drives neurogenesis and exhausts the radial-glial pool; loss shrinks or redirects it), whereas the WWOX knockout shows MYC up with fewer neurons: lowering MYC is not assumed to restore neurons, and in several models it shrinks the pool."
    ],
    "sources": {
     "cards": [

@@ -1,0 +1,31 @@
+subject	relation	object	direction	context	status	evidence_id
+WWOX loss	associated_with	MYC transcript in radial glia	up	human cerebral organoids	observed	E01
+WWOX loss	associated_with	MYC-positive fraction of SOX2+ cells	up	organoids, three mutant lines	observed	E02
+MYC elevation	not_sufficient_for	radial-glia expansion	none	SCAR12-class line	observed	E03
+POU5F1	co_rises_with	MYC	up	knockout radial-glia contrast (capped significance; MYC effect about twice POU5F1; per-cell test)	observed_qualified	E06
+MYC target signature	is_not	MYC activity	none	rule; signature up in E23, MYC lowering tested separately	rule	E23;E24
+MYC protein	may_be_consequence_of	cell-cycle and maturity state	up	developmental time course, phase coupling	inferred	E07
+WWOX restoration	lowers	Myc	down	mouse bone-marrow cells, Trp53-null background (non-neural)	observed_other_tissue	E60
+WWOX	negatively_regulates	c-MYC	down	breast cancer cell lines, abstract level	observed_other_tissue	E63
+upstream metabolic lesion (L-2HG)	activates	MYC	up	human progenitors and spheroids	observed_other_disease	E28;E29
+MYC lowering (shRNA)	restores	neurite growth and calcium response	up	human progenitors from another disease, one donor line	observed_other_disease	E24
+sustained MYC lowering	is_required_for	restoration of differentiation	up	same; progenitor-stage-only exposure gave no benefit	observed_other_disease	E25
+microtubule poison (nocodazole) in the other-disease model	uninformative_about	proliferation correction and neuronal differentiation	none	same	uninformative_other_disease	E27
+MYC or MYCN gain	promotes	neurogenesis and depletes progenitor pool	up/down	chick neural tube in tissue (apico-basal division and Notch reporter: c-MYC only)	observed_other_organism	E11
+MYC family loss	reduces	neuron output without changing EdU	down	chick neural tube	observed_other_organism	E10
+MYC in tissue	does_not_act_as	a simple mitogen	none	chick; dissociated cells differ	observed_other_organism	E12
+MYCN loss	is_compensated_by	c-myc	up	chick ventricular zone	observed_other_organism	E14
+dominant-negative MYC rescue by a Notch antagonist	places_Notch_below	MYC in the pathway (authors: Notch repression may participate)	down	chick neural tube	observed_other_organism_qualified	E15
+MYC gain	adds	apoptosis	up	chick neural tube	observed_other_organism	E16
+Myc	promotes	self-renewal and neurogenesis over gliogenesis	up	mouse neurosphere cultures	observed_other_organism	E30
+late c-Myc loss	shifts_timing_of	astrocyte differentiation of glial-biased cells	up	mouse in vivo	observed_other_organism_qualified (null comparisons unpublished in source)	E31
+early c-Myc loss	shrinks	forebrain progenitors and neurons	down	mouse E9.5	observed_other_organism	E32
+p53	controls	fate through a pathway parallel to Myc	none	mouse neurosphere	observed_other_organism	E34
+N-myc loss	reduces	progenitor proliferation and brain mass	down	mouse nestin-Cre, abstract level	observed_abstract	E40
+G1 shortening	favours	self-renewal over differentiation	up	mouse cortex, abstract level	observed_abstract	E50
+MYC activation of quiescent stem cells	requires	mitochondrial remodelling	none	adult hippocampal stem cells	observed_other_stage	E70
+MYC	effect_depends_on	tissue integrity, stage, paralogue and upstream lesion	none	synthesis across rows	inferred	T02
+MYC binding at early-neuron gene promoters	is_lost_in	WWOX-knockout neural stem cells with MYC protein high	down	human organoid-derived NSCs (auditor reading of Fig 4J)	observed_auditor	E80
+MYC gain in tissue models	gives_opposite_sign_to	WWOX-knockout organoid state (MYC up, neurons down)	sign contrast	transfer	inferred	E11;E30;E01;E02
+Wnt (TCF4) and p53	are_raised_alongside	MYC in knockout NSCs	up	human organoid-derived NSCs (auditor reading)	observed_auditor	E81
+EN4 (PMID 32966806)	binds	MYC cysteine 171 (not conserved in MYCN, MYCL)	n/a	biochemistry; not used in WWOX models	observed_other_context	E82

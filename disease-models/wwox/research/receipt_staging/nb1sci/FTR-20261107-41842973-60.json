@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-07T18:05:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-07T18:12:38Z",
+ "event_id": "FTR-20261107-41842973-60",
+ "evidence_basis": [
+  "partial full text analysed (sections as listed in coverage)",
+  "verbatim_locator | proposition: Lowering MYC genetically increases neurogenin-2, doubles neurite length and restores KCl-evoked calcium responses toward the corrected arm | Results, c-MYC depletion restores neuronal differentiation | \"shMYC doubled the average total neurite length in unedited NPCs compared with shSCR controls\"",
+  "verbatim_locator | proposition: Benefit needed continuous exposure through the neuronal differentiation stage | Results, c-MYC depletion restores neuronal differentiation | \"sustained inhibition of c-MYC is necessary to reverse differentiation defects in this model\"",
+  "verbatim_locator | proposition: Stopping proliferation without changing MYC did not restore neurite growth, so correcting proliferation does not by itself correct maturation in this model | Results, c-MYC depletion restores neuronal differentiation | \"This indicates that cell cycle modulation is insufficient to restore neuronal differentiation in L2HGDH-deficient NPCs.\"",
+  "verbatim_locator | proposition: MYCN is not raised in the same cells | Results, Increased MYC expression | \"These findings indicate that MYCN is not the primary driver of altered proliferation and differentiation in L2HGDH-deficient NPCs\"",
+  "methods and supplementary data not read; figures not viewed (legends read)"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb1_myc_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/nb1_myc_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC13132370 full-text XML fetched 2026-11-07 through Europe PMC REST fullTextXML; abstract, introduction, all Results subsections, figure legends and Discussion read; methods and supplement not read; figures not viewed; bytes not saved",
+ "study_id": {
+  "doi": "10.1172/jci197010",
+  "pmid": "41842973"
+ },
+ "workflow": "NB-1 package (nb1_myc_20261107), label nb1-p, Stage 1: MYC in neural progenitors as driver, state, composition or compensation. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

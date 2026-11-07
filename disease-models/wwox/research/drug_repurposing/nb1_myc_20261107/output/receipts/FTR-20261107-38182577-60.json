@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-07T18:07:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-07T18:12:38Z",
+ "event_id": "FTR-20261107-38182577-60",
+ "evidence_basis": [
+  "partial full text analysed (sections as listed in coverage)",
+  "verbatim_locator | proposition: In a Trp53-deleted background, adding Wwox deletion raises Myc and its targets | Results, WWOX loss results in Myc alteration in yBM cells | \"a significant reduction in Myc levels upon WWOX restoration\"",
+  "verbatim_locator | proposition: Human samples with low WWOX expression show higher Myc expression | Results, WWOX loss results in Myc alteration in yBM cells | \"significant increase in Myc expression in human samples with low WWOX expression\"",
+  "verbatim_locator | proposition: Trp53 deletion alone shows low Myc and low Myc targets, so the Myc rise in this model needs Wwox loss on top of p53 loss | Results, WWOX loss results in Myc alteration in yBM cells | \"We found low expression of Myc and its targets in SKO yBM as compared to those in DKO cells.\"",
+  "a prior complete read of this PMID exists; this reading answers a new question (direction of the WWOX to Myc relation) and does not replace it"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb1_myc_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/nb1_myc_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": "FTR-20260810-38182577-02",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC10770339 full-text XML fetched 2026-11-07 through Europe PMC REST fullTextXML; abstract, the Results subsection on WWOX loss and Myc (with its figure legend) and the opening of the Discussion read; other Results subsections and methods not read; figures not viewed; bytes not saved",
+ "study_id": {
+  "doi": "10.1038/s41419-023-06378-8",
+  "pmid": "38182577"
+ },
+ "workflow": "NB-1 package (nb1_myc_20261107), label nb1-p, Stage 2: MYC in neural progenitors as driver, state, composition or compensation. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
