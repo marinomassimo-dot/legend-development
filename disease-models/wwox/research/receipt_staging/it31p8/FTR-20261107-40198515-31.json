@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-07T08:06:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-07T08:14:00Z",
+ "event_id": "FTR-20261107-40198515-31",
+ "evidence_basis": [
+  "An abstract is not a reading; it supports a conditional lead only.",
+  "verbatim_locator | proposition: levetiracetam and perampanel alone failed to attenuate status epilepticus in rats | Abstract | \"The rats treated with TGB, LEV, and PER alone failed to provide behavioral and ictal attenuation.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/aed_compare_it31_20261107/output/comparison.tsv",
+  "disease-models/wwox/research/drug_repurposing/aed_compare_it31_20261107/output/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record retrieved through the PubMed tools on 2026-11-07; abstract text only",
+ "study_id": {
+  "doi": "10.1002/epi4.13141",
+  "pmid": "40198515"
+ },
+ "workflow": "IT31 P8 antiseizure comparators (aed_compare_it31_20261107): question-driven reading of the abstract for general antiseizure mechanism or comparison. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -8,7 +8,7 @@
  "START_UTC": "2026-11-06T23:00:00Z",
  "RESUME": {
   "worktree": ".claude/worktrees/it31b (branch task/it31b)",
-  "next_action": "P7 first (generation: contrasting cases, reverse test), then P4 investigations; P1 delegate use inside the P7 package; P9 after P7/P4 output exists.",
+  "next_action": "Commit, battery on the exact frozen SHA, merge main, safe_push, follow CI; then P6 fetch of the public abstract, P9 dashboard priority wording, P10 radar check; final report A-I.",
   "note": "Zero spend; no e-mail; four current files via BATCH_COMMIT; safe_push only."
  },
  "AUTHORISED_QUEUE_20261106B": {
@@ -29,9 +29,9 @@
    "steps": [
     {
      "step": "P1 Consumption discipline: reconcile census, check legend-delegate",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "note": "census double count fixed with regression (5.02 v 2.57 million on 60 transcripts); legend-delegate loaded and ran once (WO-12 re-audit, sonnet, effort asked medium, read back not available to the delegate): cost comparison against wwox-scout still to measure"
+     "evidence": "census double count fixed with regression (5.02 v 2.57 million output tokens on 60 transcripts); legend-delegate loaded and used for 5 packages in IT31 (sonnet; asked effort medium read back as medium in the transcript census for the WO-12 re-audit, birth context 18,214 tokens; delegates themselves reported 'low' from their own context, which the transcript census contradicts); one active at a time; no recursive delegation"
     }
    ]
   },
@@ -51,9 +51,9 @@
    "steps": [
     {
      "step": "P3 Premises reach the consumers (43 edits, NCC, 97 to 216, RS-R6, WO-06, browser/CI, recipes)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "note": "verification pass over the consumers; most delivered in IT30"
+     "evidence": "premises carried by IT30 verified on main; WO-12 footnote correction and census count added; consumers regenerated after receipts (ledger 1,323 chained; ranking provenance counter regenerated, order digest unchanged)"
     }
    ]
   },
@@ -62,8 +62,9 @@
    "steps": [
     {
      "step": "P4 Investigations as concrete open questions, stable ids, 115-row map reconciled",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "note": "INV-15 (parvalbumin interneurons, premise measurement) and INV-16 (class IIa catalytic inhibition v knockdown at SLC2A1, conditional) added to investigations with stable ids, rank 6 and 7, below the ten-row published line; five-language passages checked. Map of 115: 64 scientific rows, 51 technical or monitor; the remaining uncovered scientific rows are listed in next_batch_it31_20261107/BRIEF.md or have INV cover. Not done: promoting rows above the line"
     }
    ]
   },
@@ -82,8 +83,9 @@
    "steps": [
     {
      "step": "P6 Nappi/Jiang PV interneuron thread",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "2026-11-07 web search (standard) found no Nappi/Jiang abstract and no new public material; the only PV-count source remains the 2019 knockout paper already in the need file (stereological count at 2 weeks); INV-15 carries the six-layer separation and attributes nothing to an abstract; reopening condition: a public abstract or deposit with per-animal data"
     }
    ]
   },
@@ -92,8 +94,9 @@
    "steps": [
     {
      "step": "P7 Generation: contrasting cases, reverse test, spontaneous generation",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "reach_it31_20261107: vorinostat reached from seeds without its name (IT21P2-0031, blocked on attribution), no card/investigation/question for it; transcript layer and literature layer barely meet (2 of 14); levetiracetam in no layer; join not built (yield 2 of 14); no predictive claim"
     }
    ]
   },
@@ -102,8 +105,9 @@
    "steps": [
     {
      "step": "P8 Pharmacological comparisons incl. AEDs",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "aed_compare_it31_20261107: three columns separated; independent blind re-audit corrected levetiracetam and perampanel counts, mechanism negatives and GIRK wording; 7 receipts recorded"
     }
    ]
   },
@@ -132,8 +136,9 @@
    "steps": [
     {
      "step": "P11 Brief for the next broad batch",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "next_batch_it31_20261107/BRIEF.md: four packages NB-1..NB-4 from the investigations and the map, not started (capacity gate)"
     }
    ]
   }

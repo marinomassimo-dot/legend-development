@@ -1,0 +1,11 @@
+query_id	database_or_route	string_or_url	run_at_utc	hits	what_was_done
+Q01	PubMed	levetiracetam synaptic vesicle protein SV2A binding anticonvulsant potency	2026-11-07T08:02Z	8	picked PMID 18552880 (and 25684406/28012162 seen, not used)
+Q02	PubMed	perampanel selective non-competitive AMPA receptor antagonist	2026-11-07T08:02Z	34	titles only; none opened
+Q03	PubMed	ethosuximide T-type calcium channel thalamic absence seizures mechanism	2026-11-07T08:03Z	3	picked 42536722, 22344687
+Q04	PubMed	perampanel AMPA receptor antagonist mechanism partial-onset seizures review Hanada	2026-11-07T08:05Z	1	picked 24559052
+Q05	PubMed	"(ethosuximide AND levetiracetam) AND (absence OR ""spike-wave"" OR GAERS) AND (comparative OR versus OR compared)"	2026-11-07T08:05Z	14 (8 shown)	picked 21635238, 23885176, 31983023 from the shown set; 6 hits not shown, not read
+Q06	PubMed	WWOX epileptic encephalopathy (levetiracetam OR perampanel OR ethosuximide)	2026-11-07T08:04Z	0	bounded null for the WWOX combination
+Q07	PubMed	"(ethosuximide AND levetiracetam AND perampanel) AND (comparison OR ""head-to-head"")"	2026-11-07T08:04Z	3	39073881, 29487964, 28542801 read at title and abstract; none a head-to-head efficacy test
+Q08	PubMed	(perampanel AND levetiracetam) AND (mouse OR rat OR model) AND (compared OR versus OR head-to-head)	2026-11-07T08:05Z	12 (8 shown)	picked 40198515; others clinical or other drugs; 4 not shown
+Q09	module records	cards, cards_early, needs.json, a1_wwox_reports cases_a1.tsv and denominators_a1.tsv, ranking.json investigations INV-01..10; keywords ethosuximide, levetiracetam, perampanel	2026-11-07T08:00Z	see comparison.tsv	levetiracetam 7 rows in A1 as co-therapy; ethosuximide and perampanel 0 A1 rows; ethosuximide in cards EB-ETX-01 and H01; perampanel in F01, F04, P11
+Q10	receipt ledger	framework/scripts/fulltext_receipts.py status --pmid for 39507621, 32000863, 42536722 and the seven new PMIDs	2026-11-07T08:08Z	n/a	held depths read; new PMIDs had no receipt
