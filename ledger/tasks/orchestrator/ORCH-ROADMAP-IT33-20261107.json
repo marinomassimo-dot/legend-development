@@ -40,8 +40,9 @@
    "steps": [
     {
      "step": "P2 Cost where it arises: complete the census of the IT32 delegates, reconcile old figures presented as current, three causes (asked v observed incl. coordinator, too-wide or repeated retrievals, verification that rebuilds the whole search), proportionate verification brief in delegation_budget.md; no new meter, no delegate while the scientific session has one active",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "deterministic work done by the Orchestrator with no new delegation: census of the three IT32 delegates that were missing (NB-3b producer 38,421 output / 35 turns, its verifier 26,325 / 22, a translation job 10,545 / 3), seven IT32 delegates in total 156,382 output tokens and about 9.09 million cache-read tokens, effort and model read back equal to the dispatch for all; the coordinator's own transcript read back: effort medium on 6,799 of 6,813 turns, models mixed (sonnet 6,334, opus 5 422, fable 37), 5.03 million output over all days (perimeters stated, not IT32 alone); stale totals in the protocol's 'Why it exists' and in the delegation record corrected with the perimeter, history kept; three causes addressed in delegation_budget.md: section 8 (a verifier checks decisive propositions, decision-changing numbers, inferences/absence/transfer claims and a declared sample, extending the class when the sample finds an error; decisive premises never reduced), section 9 (narrow retrieval: query list first, hit count before reading, ledger depth first, stop at the first sufficient source, failed route recorded not retried by another route without reason), and the requested-versus-observed rule for the coordinator in section 6; no new meter or scheduler; the NB-4 pilot's figures are quoted as its own perimeter"
     }
    ]
   },
