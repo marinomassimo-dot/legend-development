@@ -9,9 +9,9 @@
  "BASELINE": "development/main ce121d5814b8c83c65721c0709ac4ec2554a5011; same worktree and branch as ORCH-TTYPE-20261107. Receipts exist for 42909904 and 35984507; none for 16476929.",
  "CURRENT_PACKAGE": {
   "id": "I07",
-  "state": "brief written; queued behind INV-05 verifier and INV-06",
-  "delegate_active": "none",
-  "updated": "2026-11-07T22:30:00Z"
+  "state": "producer running (legend-delegate, sonnet/medium)",
+  "delegate_active": "i7-p",
+  "updated": "2026-11-07T23:55:00Z"
  },
  "RESUME": "Folder drug_repurposing/metabolic_inv07_20261107/ (BRIEF.md, output/). Order: producer, census, verifier, correction.",
  "DECISIONS_TAKEN": [

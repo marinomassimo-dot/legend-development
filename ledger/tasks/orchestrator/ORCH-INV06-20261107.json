@@ -9,16 +9,17 @@
  "BASELINE": "development/main ce121d5814b8c83c65721c0709ac4ec2554a5011 (fetched 2026-11-07 after the landing of the GSK3-eIF2B task); same worktree and branch as ORCH-TTYPE-20261107 (.claude/worktrees/ttype-20261107, task/ttype-20261107) to land the queued packages with one battery.",
  "CURRENT_PACKAGE": {
   "id": "M-INV06",
-  "state": "verifier running (legend-delegate, sonnet/high)",
-  "delegate_active": "my-v",
-  "updated": "2026-11-07T23:30:00Z"
+  "state": "complete; lands with ORCH-TTYPE-20261107",
+  "delegate_active": "none",
+  "updated": "2026-11-07T23:55:00Z"
  },
  "RESUME": "Folder drug_repurposing/myelin_inv06_20261107/ (BRIEF.md, output/). Order after the INV-05 package: producer, census, verifier, correction.",
  "DECISIONS_TAKEN": [
   "Queued by the operator beside the running scientific work; one delegate at a time; settings as before (producer sonnet/medium, verifier sonnet/high, legend-delegate)."
  ],
  "DELEGATIONS": [
-  "M producer my-p: asked sonnet/medium, read back claude-sonnet-5-5 x60, medium x60; birth 17,553; 60 turns; ~10 min; output 69,972; cache written 218,061; cache read 8,412,153; peak 226,546; completed README (943 words), evidence (40 rows), levels (12), experiment (X0-X4), queries, 8 staged receipts (validated with DOI check; 3 abstract_only, 5 partial_fulltext_read incl. 2 rereads with prior receipts); 6 of 8 new sources; 21319221 full text unreachable (subscription; stopped); Supp Fig 8 viewed as image"
+  "M producer my-p: asked sonnet/medium, read back claude-sonnet-5-5 x60, medium x60; birth 17,553; 60 turns; ~10 min; output 69,972; cache written 218,061; cache read 8,412,153; peak 226,546; completed README (943 words), evidence (40 rows), levels (12), experiment (X0-X4), queries, 8 staged receipts (validated with DOI check; 3 abstract_only, 5 partial_fulltext_read incl. 2 rereads with prior receipts); 6 of 8 new sources; 21319221 full text unreachable (subscription; stopped); Supp Fig 8 viewed as image",
+  "M verifier my-v: asked sonnet/high, read back claude-sonnet-5-5 x(see cost note), high; blind; all 40 rows checked (28 decisive + 4 sample + 8 extra): 37 supported, 2 overshoot (E10, E12), 1 undershoot (E28); X0 X1 X3 repairs; one Europe PMC image request returned HTTP 403 and the verifier stopped for that source; corrections by the Orchestrator adopting the audit's wording, rechecked by comparison with the audit text"
  ],
  "ESCALATIONS": [],
  "STOP_LOG": [
@@ -34,7 +35,7 @@
    "steps": [
     {
      "step": "producer, census, verifier on decision-changing links, targeted correction, consumer note",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator"
     }
    ]
