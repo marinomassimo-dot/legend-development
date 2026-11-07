@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-07T13:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-07T13:59:00Z",
+ "event_id": "FTR-20261107-22991226-33",
+ "evidence_basis": [
+  "abstract analysed in full; full text not reachable by an open route (not in PMC or Europe PMC full text, publisher host refused a plain request with HTTP 403 on 2026-11-07); nothing about methods, knockdown reagent, statistics or figures is stated",
+  "verbatim_locator | proposition: HDAC5 knockdown in human primary muscle cells reduced GLUT1 (SLC2A1) expression while raising GLUT4 expression and glucose uptake | Abstract | \"associated with reduced GLUT1 (SLC2A1) expression\"",
+  "verbatim_locator | proposition: the drug arm was Scriptaid, a pan-HDAC inhibitor, and its reported outputs name GLUT4, glucose uptake and flux, not GLUT1 | Abstract | \"the pan HDAC inhibitor, Scriptaid\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb3b_action_it32_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/nb3b_action_it32_20261107/output/chain.tsv",
+  "disease-models/wwox/research/drug_repurposing/nb3b_action_it32_20261107/output/controls.tsv"
+ ],
+ "prior_receipt": "FTR-20261105-22991226-04",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 22991226 (abstract and metadata as served 2026-11-07); Europe PMC record checked for open full text: none; bytes not saved",
+ "study_id": {
+  "doi": "10.1530/JME-12-0095",
+  "pmid": "22991226"
+ },
+ "workflow": "IT32 NB-3b (from the target to the biological action needed). Abstract analysed through the PubMed metadata route for the labelled facts. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

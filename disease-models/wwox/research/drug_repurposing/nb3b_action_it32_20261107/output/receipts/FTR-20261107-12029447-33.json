@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-07T13:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-07T13:59:00Z",
+ "event_id": "FTR-20261107-12029447-33",
+ "evidence_basis": [
+  "abstract analysed in full; abstract-level support only for the statement that GLUT1 haploinsufficiency causes a brain glucose transport defect with seizures and developmental delay",
+  "verbatim_locator | proposition: heterozygous GLUT1 mutations causing haploinsufficiency are associated with impaired glucose transport into brain and seizures | Abstract | \"Several heterozygous mutations resulting in GLUT1 haploinsufficiency have been identified.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb3b_action_it32_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/nb3b_action_it32_20261107/output/chain.tsv",
+  "disease-models/wwox/research/drug_repurposing/nb3b_action_it32_20261107/output/controls.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 12029447 (abstract and metadata as served 2026-11-07)",
+ "study_id": {
+  "doi": "10.1007/s00431-002-0939-3",
+  "pmid": "12029447"
+ },
+ "workflow": "IT32 NB-3b (from the target to the biological action needed). Abstract analysed through the PubMed metadata route for the labelled facts. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
