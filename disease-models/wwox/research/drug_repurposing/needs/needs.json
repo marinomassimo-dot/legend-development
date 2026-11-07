@@ -3049,7 +3049,7 @@
     },
     {
      "id": "O4",
-     "statement": "A pannexin blocker (brilliant blue FCF), the only one applied in a WWOX system in the sources read, raised normalised burst frequency to about 2.55 during treatment with no significance marker (a point estimate in the adverse direction, never tested); carbenoxolone suppressed bursts but is not attributable to gap junctions.",
+     "statement": "A pannexin blocker (brilliant blue FCF), the only one applied in a WWOX system in the sources read, raised normalised burst frequency to about 2.55 during treatment with no significance marker (a point estimate in the adverse direction, never tested); carbenoxolone suppressed bursts but is not specific to gap junctions (the paper notes it may block NMDA receptors and the abstract calls the bursts NMDAR- and gap-junction-dependent).",
      "model_type": "mouse_neuron_specific_knockout",
      "species": "mouse",
      "genotype": "Synapsin-Cre Wwox knockout",
@@ -6344,12 +6344,12 @@
     },
     {
      "id": "O3",
-     "statement": "The authors attribute the pyramidal-neuron hyperexcitability to the depolarised resting potential rather than to a change of intrinsic excitability, because the frequency-current slope does not differ once the curves are shifted to rheobase.",
+     "statement": "The authors name control of the pyramidal-neuron resting membrane potential as a factor underlying the hyperexcitability; the frequency-current slope does not differ once the curves are shifted to one step below rheobase (Supplementary Fig S4, not read here).",
      "comparison": "knockout against wild type",
      "readout": "frequency-current slope after alignment to rheobase",
      "readout_level": "functional",
      "direction_observed": "no slope difference after alignment",
-     "limits": "An interpretation by the authors read from the manifest; exemplar firing (about 4, 9 and 13 spikes at one current step in wild type, heterozygote and knockout) shows a gradient that the analysis removes.",
+     "limits": "The manifest phrase 'rather than to a change of intrinsic excitability' is an interpretation that the paper's text does not state (re-audit IT34);  exemplar firing (about 4, 9 and 13 spikes at one current step in wild type, heterozygote and knockout) shows a gradient that the analysis removes.",
      "locators": [
       {
        "kind": "manifest",

@@ -95,9 +95,9 @@
    "steps": [
     {
      "step": "P7 Consumers and dashboard: observation -> relations -> interventions -> counter-evidence -> open question -> next test, observed/inferred/hypothesised distinct, phone and five languages",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "note": "need and INV-18 on the dashboard; no new interaction added (not needed)"
+     "evidence": "need NEED-INTRINSIC-EXCITABILITY in the needs table and INV-18 in the conditional section of the dashboard (five languages, ids anchored, audit PASS); the path observation -> need -> branches -> test -> open question is readable from them with observed, inferred and hypothesised in separate fields; no new graphical interaction added (not needed by the proven path); DisMech licence (BSD-3-Clause) read, nothing copied or installed"
     }
    ]
   },
@@ -106,8 +106,9 @@
    "steps": [
     {
      "step": "P8 Resources, licences, independent verification of decisive premises; one delegate at a time; OpenScientist not a dependency",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "one delegate (legend-delegate, sonnet, effort medium) as a blind verifier of seven decisive items plus a three-item plain sample, Europe PMC full text without a summariser: 5 supported, 2 overshoot (the authors name the resting potential as a factor, not as the alternative to intrinsic excitability; carbenoxolone is not specific to gap junctions rather than not attributable to them); corrections applied in the need, INV-18 (five languages), the README and rechecked at the changed points by string comparison against the audit wording; plain sample clean, so not extended; no external service, no installation; OpenScientist not used; licence BSD-3-Clause read for DisMech; older 2026-08 commit-candidate wording flagged for a BATCH_COMMIT review, not touched"
     }
    ]
   },
@@ -116,8 +117,9 @@
    "steps": [
     {
      "step": "P9 Regressions for the four behaviours, release checks, landing, CI, cleanup, final report A-I",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "note": "regressions added (test_check_needs: uncertain direction states do_not_assume, single-origin need keeps counter-evidence and gives no favourable sign; test_investigations: INV-18 three weakened branches, unresolved); reused: premise-map tests, repeated citations as one origin (nb of PMIDs in the need), limits to the consumer (view passages, audit-shareable); remaining: view suite and targeted tests on the final tree, push after IT33, CI"
     }
    ]
   }
