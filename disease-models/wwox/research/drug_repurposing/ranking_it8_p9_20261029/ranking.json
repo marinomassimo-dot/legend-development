@@ -1266,6 +1266,24 @@
    "rank": 7,
    "status": "premise_measurement",
    "why_now": "Naming these keeps them visible as gaps rather than as silently empty rows. Three of the four have no catalogue association on their targets and one is an endpoint rather than an intervention; none of this is evidence that the biology is unpromising."
+  },
+  {
+   "chembl_ids": "",
+   "decisive_uncertainty": "Driver, marker or consequence. If the MYC difference vanishes within cell-cycle and potency strata it is a marker and this observation alone justifies no lever; if genetic lowering of MYC moves the progenitor shift it is a driver, and the timing of any window is a separate question, not assumed to be prenatal only. MYC dose is two-sided in cortex and the record holds no safe pharmacological formulation for a developing compartment.",
+   "direction_state": "unresolved",
+   "evidence_available": "WWOX-system, one organoid study (PMID 42397075): MYC is the most raised gene in knockout radial glia, which shift toward S and G2M; the fraction of SOX2-positive cells that are MYC-positive is raised in an engineered knockout and two patient-derived lines; one non-selective multi-kinase inhibitor reported to suppress Wnt and MYC lowers the SOX2-positive fraction in knockout organoids; neuron-promoter add-back raises deep-layer fractions. Transcript and cell fractions only: no protein, no manipulation of MYC itself.",
+   "evidence_depth": "Premise measurement: the MYC rise is observed in one organoid study; its role is not measured. (no ranked unit, so no evaluation depth applies: this is not a depth of zero)",
+   "feasibility": "Existing organoid systems; wet-lab measurement, not executable from this module.",
+   "intervention": "No compound: measurement of the role of the MYC rise in WWOX-deficient radial glia",
+   "inv_id": "INV-17",
+   "next_test": "In WWOX-deficient and corrected isogenic organoids or radial-glia cultures: compare MYC within cell-cycle phase strata, then lower MYC by a genetic route with a second construct and read the progenitor fractions and the cell-cycle phase. No compound is needed for this step.",
+   "novelty_perimeter": "Queried on 2026-11-07: the MYC need record, work-order entry WO-33, map row WO-33 and the stage S12 proposal table; a search of this module, not a statement about the literature. A scientific package on this role (NB-1) was in progress and is not used here.",
+   "origin_class": "known_in_wwox",
+   "origin_detail": "Known in the WWOX system: the observations are in the need record (O1 to O4); the row restates work-order question WO-33 as the one question behind the MYC-directed proposals.",
+   "question": "Is the MYC rise in WWOX-deficient radial glia a driver of the progenitor shift, a marker of a retained progenitor state, or a consequence of the cell-cycle shift?",
+   "rank": 7,
+   "status": "premise_measurement",
+   "why_now": "555 of the 994 generated proposals end in a change of MYC, 314 in a harm arm and 241 in a protect arm (123 eligible for hand-over); whether any change of MYC is wanted depends on this role, so one measurement stands behind all of them and no MYC-directed lever is assumed beneficial."
   }
  ],
  "investigations": [
@@ -1666,6 +1684,10 @@
    {
     "inv_id": "INV-16",
     "movement": "new in IT21 (no IT20 position): New row, enters at rank 7. Reasons: it is the one open measurement of the IT28 challenge and it keeps or refutes the premise carried as a limit on the HDAC5-chain proposals. Not rewarded: novelty. Status stays conditional; the myelin counter-premise is a separate open question (CH-IT29-CLASSIIA-CNS-MYELIN). | below the line this evaluation: rank 7 does not fit the ten-row published ceiling"
+   },
+   {
+    "inv_id": "INV-17",
+    "movement": "new in IT21 (no IT20 position): New row, enters at rank 7 below the ten-row line. Reasons: it gates a large share of the generated proposals. Not rewarded: novelty. | below the line this evaluation: rank 7 does not fit the ten-row published ceiling"
    }
   ],
   "ceiling_rule": "risk-flagged and human-report rows are not displaced by conditional probes",
@@ -6045,7 +6067,7 @@
    "records": 44211
   },
   "investigations": {
-   "below_the_line": 6,
+   "below_the_line": 7,
    "below_the_line_note": "rows beyond the ten-row ceiling stay in investigations.tsv with their reason; a tie is kept whole rather than split. Below the line is a ceiling on the page, never a finding that an investigation is unpromising.",
    "below_the_line_rows": [
     {
@@ -6070,19 +6092,25 @@
      "intervention": "No lever available (four needs with no catalogue reach)",
      "inv_id": "INV-11",
      "rank": 7,
-     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 3). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
+     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 4). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
     },
     {
      "intervention": "EZH2 (PRC2) inhibitor GSK343 as a probe in mouse glial systems",
      "inv_id": "INV-14",
      "rank": 7,
-     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 3). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
+     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 4). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
     },
     {
      "intervention": "Class IIa-selective tool compound X against HDAC5 knockdown, with catalytic-dead and localisation-mutant HDAC5 rescue, a class-I-only inhibitor and an HDAC6 inhibitor as controls, in human neural cells",
      "inv_id": "INV-16",
      "rank": 7,
-     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 3). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
+     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 4). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
+    },
+    {
+     "intervention": "No compound: measurement of the role of the MYC rise in WWOX-deficient radial glia",
+     "inv_id": "INV-17",
+     "rank": 7,
+     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 4). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
     }
    ],
    "by_direction_state": {
@@ -6095,13 +6123,13 @@
     "known_in_wwox": 7
    },
    "count": 10,
-   "count_including_below_the_line": 16,
+   "count_including_below_the_line": 17,
    "direction_states": {
     "opposed_risk": "a documented action of this intervention pushes against another need of the same objective",
     "resolved": "the need states an up/down intervention direction",
     "unresolved": "the need's own direction is uncertain: no lever on it can be qualified either way, which is a visible gap and not a negative finding"
    },
-   "order_digest": "b7f569f01de7d394",
+   "order_digest": "7913c3f53f2ec587",
    "origin_classes": {
     "external_transferred": "carried in from another condition or literature by a stated mechanistic analogy",
     "generated_by_legend": "reached from a qualified need through the module's own target and catalogue path, not named in the WWOX material checked",

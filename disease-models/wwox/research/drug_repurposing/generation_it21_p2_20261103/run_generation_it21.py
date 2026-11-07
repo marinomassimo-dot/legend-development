@@ -114,10 +114,11 @@ PREMISES_FILE = Path(__file__).resolve().parent / "investigation_premises_it32.t
 
 
 def shared_premise_investigations(chain, premises):
-    """IT32 P3: the investigations whose premise this proposal's mechanism chain rests on, joined by `; `. Many proposals can share one premise (the HDAC5
-    to SLC2A1 edge has a single muscle origin and 20 proposals ride on it): a premise measurement is then one question for all of them, and each row
-    says so. A curated file maps a chain prefix to an investigation id; nothing is inferred from names."""
-    return "; ".join(sorted({r["inv_id"] for r in premises if chain.startswith(r["chain_prefix"])}))
+    """IT32 P3, widened in IT33 P4: the investigations whose premise this proposal's mechanism chain rests on, joined by `; `. Many proposals can share one
+    premise (20 proposals ride on the single-origin HDAC5 to SLC2A1 edge, 555 on a change of MYC): a premise measurement is then one question for all of
+    them, and each row says so. A curated file maps a regular expression, searched in the chain text, to an investigation id; nothing is inferred
+    from names and no new investigation is made by the generator."""
+    return "; ".join(sorted({r["inv_id"] for r in premises if re.search(r["chain_pattern"], chain)}))
 
 
 # ---- engine ------------------------------------------------------------------------------------------------------------------------------------------

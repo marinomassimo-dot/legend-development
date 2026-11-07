@@ -99,6 +99,10 @@
   "src": "it",
   "text": "Capire se l'aggiunta del gene giova solo se data nei primi giorni di vita (prevenzione) o anche dopo la comparsa del fenotipo, e se la dose intermedia distingue soglia da gradiente."
  },
+ "13d166a37d18": {
+  "src": "en",
+  "text": "Existing organoid systems; wet-lab measurement, not executable from this module."
+ },
  "13e3d1c623c2": {
   "src": "en",
   "text": "Repeat the slice burst assay with the magnesium concentration reported, a partial-block agent beside the tool compound, and the untreated same-genotype comparator."
@@ -259,6 +263,10 @@
   "src": "en",
   "text": "Per need: the observation rows exist, the targets are listed, and the search layer returns no association on them. The glycaemia and growth need carries no target at all because it is an endpoint."
  },
+ "35985c209ba9": {
+  "src": "en",
+  "text": "555 of the 994 generated proposals end in a change of MYC, 314 in a harm arm and 241 in a protect arm (123 eligible for hand-over); whether any change of MYC is wanted depends on this role, so one measurement stands behind all of them and no MYC-directed lever is assumed beneficial."
+ },
  "364bcad629f4": {
   "src": "en",
   "text": "Does a clinically used NMDAR antagonist reproduce the burst suppression obtained with the tool compound, at a stated extracellular magnesium concentration?"
@@ -371,6 +379,10 @@
   "src": "en",
   "text": "The chain as written: that BTK acts in the NPY-producing cell of the WWOX-deficient systems that carry the seed."
  },
+ "471a06c703f4": {
+  "src": "en",
+  "text": "In WWOX-deficient and corrected isogenic organoids or radial-glia cultures: compare MYC within cell-cycle phase strata, then lower MYC by a genetic route with a second construct and read the progenitor fractions and the cell-cycle phase. No compound is needed for this step."
+ },
  "47f65be4fc58": {
   "src": "it",
   "text": "Più alta in organoide, topo e P47T e negli organoidi di pazienti: letture diverse, stessa direzione."
@@ -398,6 +410,10 @@
  "4d6578e29718": {
   "src": "en",
   "text": "INV-13"
+ },
+ "50926e486c94": {
+  "src": "en",
+  "text": "Is the MYC rise in WWOX-deficient radial glia a driver of the progenitor shift, a marker of a retained progenitor state, or a consequence of the cell-cycle shift?"
  },
  "50b28c98d057": {
   "src": "en",
@@ -863,6 +879,10 @@
   "src": "en",
   "text": "IT21 P4a (IT21P2-0057)"
  },
+ "a82ca696fd04": {
+  "src": "en",
+  "text": "Known in the WWOX system: the observations are in the need record (O1 to O4); the row restates work-order question WO-33 as the one question behind the MYC-directed proposals."
+ },
  "a8501c228a81": {
   "src": "en",
   "text": "No lever available (four needs with no catalogue reach)"
@@ -923,6 +943,10 @@
   "src": "en",
   "text": "Named in the WWOX literature and carded: the neonatal AAV9 gene-addition study (cards C01 and C04)."
  },
+ "b0a41fac4624": {
+  "src": "en",
+  "text": "INV-17"
+ },
  "b194cff7573c": {
   "src": "en",
   "text": "Moderate for the observation, none for the lever"
@@ -958,6 +982,10 @@
  "b642851c0b57": {
   "src": "it",
   "text": "una misura di risposta del composto in un sistema neurale umano privo di WWOX, con replica; potenza dal dato ChEMBL di attività; fase II delle firme; un modulo più grande e replicato"
+ },
+ "b7f899d9e94b": {
+  "src": "en",
+  "text": "Queried on 2026-11-07: the MYC need record, work-order entry WO-33, map row WO-33 and the stage S12 proposal table; a search of this module, not a statement about the literature. A scientific package on this role (NB-1) was in progress and is not used here."
  },
  "b8355b6e40c2": {
   "src": "it",
@@ -998,6 +1026,10 @@
  "bc9268a2d703": {
   "src": "en",
   "text": "WWOX-system with a specificity flag: one paper, one laboratory, no drug-by-genotype test, and a wild-type arm whose variability is comparable to the effect."
+ },
+ "bcb4d03cfdea": {
+  "src": "en",
+  "text": "Driver, marker or consequence. If the MYC difference vanishes within cell-cycle and potency strata it is a marker and this observation alone justifies no lever; if genetic lowering of MYC moves the progenitor shift it is a driver, and the timing of any window is a separate question, not assumed to be prenatal only. MYC dose is two-sided in cortex and the record holds no safe pharmacological formulation for a developing compartment."
  },
  "bf214653e458": {
   "src": "en",
@@ -1163,6 +1195,10 @@
   "src": "en",
   "text": "Established model and established vector; the added arm is a timing change, not a new assay."
  },
+ "e35e4c57255e": {
+  "src": "en",
+  "text": "Premise measurement: the MYC rise is observed in one organoid study; its role is not measured. (no ranked unit, so no evaluation depth applies: this is not a depth of zero)"
+ },
  "e364b515333d": {
   "src": "it",
   "text": "Ipereccitabilità di rete o crisi"
@@ -1214,6 +1250,10 @@
  "eacd337144b1": {
   "src": "en",
   "text": "Published assay, approved compounds, three arms added to an existing design."
+ },
+ "ead5edb24edf": {
+  "src": "en",
+  "text": "WWOX-system, one organoid study (PMID 42397075): MYC is the most raised gene in knockout radial glia, which shift toward S and G2M; the fraction of SOX2-positive cells that are MYC-positive is raised in an engineered knockout and two patient-derived lines; one non-selective multi-kinase inhibitor reported to suppress Wnt and MYC lowers the SOX2-positive fraction in knockout organoids; neuron-promoter add-back raises deep-layer fractions. Transcript and cell fractions only: no protein, no manipulation of MYC itself."
  },
  "eb885f4effae": {
   "src": "en",
