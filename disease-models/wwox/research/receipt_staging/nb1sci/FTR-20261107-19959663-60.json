@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-07T18:05:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-07T18:12:38Z",
+ "event_id": "FTR-20261107-19959663-60",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: Shortening G1 in cortical progenitors promotes cell-cycle reentry at the expense of differentiation and later produces supernumerary supragranular neurons | Abstract | \"TG1 reduction promotes cell-cycle reentry at the expense of differentiation and increases the self-renewal capacities of Pax6 precursors\"",
+  "degraded acquisition: Europe PMC fullTextXML returned HTTP 500 and E-utilities efetch returned the abstract only; depth reached is the abstract"
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb1_myc_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/nb1_myc_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed and Europe PMC record for PMID 19959663 (abstract and metadata as served 2026-11-07); full-text XML not obtained (Europe PMC returned HTTP 500; E-utilities returned abstract only); bytes not saved",
+ "study_id": {
+  "doi": "10.1073/pnas.0909894106",
+  "pmid": "19959663"
+ },
+ "workflow": "NB-1 package (nb1_myc_20261107), label nb1-p, Stage 1: MYC in neural progenitors as driver, state, composition or compensation. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

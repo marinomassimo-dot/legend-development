@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-07T18:05:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-07T18:12:38Z",
+ "event_id": "FTR-20261107-12381668-60",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: Deleting N-myc roughly halves brain mass and reduces S-phase and mitotic progenitors with higher p27 and p18 | Abstract | \"in progenitor cell cultures derived from null embryonic brain, we observe a dramatic increase in neuronal differentiation compared with controls\"",
+  "degraded acquisition: Europe PMC fullTextXML returned HTTP 500 and E-utilities efetch returned front matter with a note that the publisher does not allow XML; depth reached is the abstract; no method detail is used"
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb1_myc_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/nb1_myc_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed and Europe PMC record for PMID 12381668 (abstract and metadata as served 2026-11-07); full-text XML not served by the publisher through the E-utilities route (front matter and abstract only returned); bytes not saved",
+ "study_id": {
+  "doi": "10.1101/gad.1021202",
+  "pmid": "12381668"
+ },
+ "workflow": "NB-1 package (nb1_myc_20261107), label nb1-p, Stage 1: MYC in neural progenitors as driver, state, composition or compensation. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
