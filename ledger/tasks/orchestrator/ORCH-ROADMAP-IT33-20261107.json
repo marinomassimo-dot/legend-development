@@ -63,9 +63,9 @@
    "steps": [
     {
      "step": "P4 Generation: freeze the current stage inputs/outputs; MYC case (after NB-1 returns) and a second documented case; relation needed but not executed; minimal link in tables/generator; rerun without naming the compound; baseline v link v link removed; controls only if specificity is claimed; no GO-CAM",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "note": "stage S13 done (generation_it33_p4_20261107: premise map generalised to regular expressions, 3 cases INV-16/INV-14/INV-17, 605 of 994 proposals linked, ablation and tests, README with before/after and the case table; consumption only, no specificity claim); INV-17 added (premise measurement, rank 7, five-language passages). Waiting: NB-1 (scientific session) to update INV-17 evidence; the NB-4 delta on the scientific branch (not on main yet) for P1; frozen reference stage = S12"
+     "evidence": "generation_it33_p4_20261107 (README, test_stage_it33, stage S13 = S12 + column; reference stage frozen = S12 before the change): premise map generalised to regular expressions; three unrelated cases INV-16 (HDAC5 to SLC2A1), INV-14 (EZH2 to glial cytokines and NRF2 tone), INV-17 (any chain ending in a change of MYC; new investigation, premise measurement, rank 7, five-language passages); 605 of 994 proposals now name the one investigation that measures their premise (20 / 30 / 555; 5 of 15 hand-overs); every other column, id, eligibility and hand-over list identical; ablation test removes exactly the added links; criteria written before the run; consumption only: no new row, combination, reopening or hypothesis, no direction chosen for MYC, no specificity or predictive claim, no controls run because none claimed; NB-1 (scientific session) not yet landed: INV-17 evidence to be updated when it does; GO-CAM not adopted (no new advantage)"
     }
    ]
   },
@@ -74,8 +74,9 @@
    "steps": [
     {
      "step": "P5 Consumption: need/investigation, generator premise, proposal or conditional abstention, next experiment, dashboard when reader content changes; before/after and consumer proof per material change",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "material changes reached their consumers with a before/after: NB-4 -> INV-15 text and the contributor table, MYC -> INV-17 and the 555 linked proposals, HDAC5/EZH2 -> the generator column and INV-14/16; dashboard regenerated in five languages (INV-15 and INV-17 in the further-investigations section, ids anchored), audit-shareable PASS, view suite 217 OK; order of investigations unchanged, no efficacy ranking"
     }
    ]
   },
@@ -84,8 +85,9 @@
    "steps": [
     {
      "step": "P6 Validation, integration, closure: targeted tests, batteries coordinated with the scientific session, gate on the pushed SHA, CI, served pages, worktree cleanup, final report A-I",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "note": "targeted tests OK (view 217, scout 76, census, generation 54, stage S12/S13, investigations 51, ranking 71, release surface, runner verdict, routing); the scientific session runs a battery (pid 2569553): mine waits for it to finish; then battery on the frozen SHA, merge/re-fetch, safe_push, CI, served pages, cleanup"
     }
    ]
   }
