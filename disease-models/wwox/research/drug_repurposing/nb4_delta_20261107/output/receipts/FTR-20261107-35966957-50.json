@@ -1,0 +1,44 @@
+{
+ "analysis_at": "2026-11-07T17:54:28Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-07T17:55:58Z",
+ "event_id": "FTR-20261107-35966957-50",
+ "evidence_basis": [
+  "Route: PubMed MCP full-text tool for PMC9353198 returned the text with every italic gene symbol removed; Europe PMC fullTextXML for the same record, fetched 2026-11-07, restored the symbols; both read; bytes not saved; article version 1 (Wellcome Open Research, 8 July 2022); the two reviewer reports attached to the record were also read. Figures were not viewed (captions only); the extended data and underlying data deposits were not fetched; the reference list was opened only for two titles.",
+  "verbatim_locator | proposition: the Syn1-cre line is stock 003966 and uses a rat Synapsin-1 promoter fragment | Methods and Introduction | \"B6.Cg-Tg(Syn1-cre)671Jxm/J (RRID:IMSR_JAX:003966)\"",
+  "verbatim_locator | proposition: reporter activation in the neuronal fraction is partial in whole-brain nuclei of adult males | Results | \"occurred in 36% of NeuN-high nuclei (neurons) for Syn1-cre and 85% for Snap25-IRES2-cre\"",
+  "verbatim_locator | proposition: regional pattern is uneven, cortex incomplete | Results | \"incomplete deletion of the Stop cassette in the cortex, efficient deletion in the dentate gyrus and CA3 region\"",
+  "verbatim_locator | proposition: the authors cannot assign reporter activity in NeuN-low nuclei to neurons or glia | Results | \"Flow cytometry alone does not reveal the cellular origin of recombination in NeuN-low nuclei.\"",
+  "verbatim_locator | proposition: glial reporter signal is intrinsically hard to read | Results | \"neurons which express on average at least six-fold more MeCP2 per cell than glia\"",
+  "What the paper measured is reporter protein activation (Mecp2-mCherry-Stop) and recombined reporter DNA, not excision of a floxed Wwox allele; it contains no parvalbumin, interneuron, Wwox, microglia or progenitor data (bounded keyword search of the version-1 body on 2026-11-07).",
+  "First reading of this PMID with a receipt; an earlier secondary description by an auditor has no receipt and is not backdated."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb4_delta_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/nb4_delta_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC record PMC9353198 text through the PubMed MCP full-text tool and Europe PMC REST fullTextXML, fetched 2026-11-07; figures not viewed; supplement and Zenodo deposits not reached; bytes not saved",
+ "study_id": {
+  "doi": "10.12688/wellcomeopenres.17965.1",
+  "pmid": "35966957"
+ },
+ "workflow": "NB-4 delta (nb4_delta_20261107), check A, actor nb4d-p: direct characterisation of the Synapsin I-Cre line for the recombination premise of INV-15. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
