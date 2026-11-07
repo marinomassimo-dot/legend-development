@@ -8,8 +8,8 @@
  "START_UTC": "2026-11-07T12:00:00Z",
  "RESUME": {
   "worktree": ".claude/worktrees/it32 (branch task/it32)",
-  "next_action": "P0 then P2 (poster text on this host), P1, P3.",
-  "note": "Zero spend; no e-mail or contact; four current files via BATCH_COMMIT; safe_push only. CI on 2bc9e3b0 was in progress at start."
+  "next_action": "Finish view suite; freeze candidate; battery on exact SHA in a clean clone; merge main (re-fetch); safe_push; follow CI; cleanup; final report A-I.",
+  "note": "Zero spend; no e-mail or contact; four current files via BATCH_COMMIT; safe_push only. CI on 2bc9e3b0 was in progress at start. P12 (queued integration on degraded sources and a GO-CAM-style extract for INV-16) starts after the IT32 candidate lands."
  },
  "AUTHORISED_QUEUE_20261107": {
   "MANDATE_STATE": "OPEN",
@@ -18,8 +18,9 @@
    "steps": [
     {
      "step": "P0 Close operational residues: CI on final SHA, stale pointers (stage S10, 1,600 cut), watch continuity",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "CI success on 2bc9e3b0 (the IT31 final SHA); stage pointer in roadmap_current.md now names S11 (checked against the generation folders); the 1,600 cut is stated as historical in test_stage_it29.py and the S11 README (join_limits cuts nothing); the session cron for the watch was recreated after the context change (one scheduler, no second)"
     }
    ]
   },
@@ -28,8 +29,9 @@
    "steps": [
     {
      "step": "P1 Qualify the 2-of-14 reachability comparison: surfaces, resolvers, mention v consumed relation",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "reach_it31_20261107/reach_it32.py + catalogue_ids_it32.tsv: identity resolved through catalogue ids (neighbours such as etiracetam, everolimus, mephobarbital kept separate), whole-identifier matching with a regression (a substring test had matched CHEMBL40 inside longer ids); levetiracetam resolves to CAT:CHEMBL1286 and a DGIdb-only record; absence from the stage is by design (no transcript seed or need target reaches SV2A), not a defect; stage proposals are the only computed layer, cards/questions/investigations are curated text"
     }
    ]
   },
@@ -38,8 +40,9 @@
    "steps": [
     {
      "step": "P2 Recover the Nappi poster 014 from the NINDS programme PDF; depth honest; INV-15 limited to what it states",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "nappi_poster_it32_20261107/README.md: poster 014 of the NINDS Curing the Epilepsies 2026 programme recovered, fresh download hash-checked against the host copy, whole abstract read (abstract level, no ledger receipt possible: no PMID or DOI); it states a programme and no result; INV-15 sentences updated"
     }
    ]
   },
@@ -48,8 +51,9 @@
    "steps": [
     {
      "step": "P3 Generative improvement: smallest link from a diagnosed interruption (vorinostat/INV-16 case), before/after",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "two raccordi: (1) NEED-SEIZURE-CONTROL-SYMPTOMATIC lists 8 intervention targets instead of 2 (generation_it32_p3_20261107/FORWARD_RUN.md: need search 63->236 records, levetiracetam and siblings reached, 0 signed rows before and after); (2) generator column shared_premise_investigation ties the 20 proposals on the single-origin HDAC5->SLC2A1 premise to INV-16 (stage S12 = S11 + that column, test_stage_it32.py, helper tests in test_generation_it21.py). No proposal promoted or withdrawn; no predictive claim"
     }
    ]
   },
@@ -58,8 +62,9 @@
    "steps": [
     {
      "step": "P4 Scientific batch package chosen from the brief, produced, independently verified, consumed",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "NB-3 (nb3_class_iia_it32_20261107): producer (Sonnet, effort medium, 39 turns), blind verifier in a separate context (24 rows, all quotes verbatim; corrections: HDAC4 mutant is mouse not rat, CSCS caveats, merged systems, ischemic tissue), 9 receipts recorded (ledger 1,332); consumed by INV-16 (the statement that no neural HDAC5 catalytic arm exists is out of date: a catalytic-domain mutant exists in rat neurons for other outputs, none reads SLC2A1 in a human neural cell); myelin route: bounded null in the routes searched. Brief wording corrected (marker is not inert; no rescue found is not rescue impossible; developmental window not assumed prenatal; external evidence keeps its origin). NB-4, NB-1, NB-2 remain queued; NB-3b (nb3b_action_it32_20261107, integration 'from target to biological action'): producer + blind verifier in separate contexts, 16 chain steps and 11 controls; outcome 'earlier pharmacological link weakened, molecule question abstained'; the premise source tested knockdown (amount) only and its pan-inhibitor arm names no GLUT1 result; bulk histone acetylation is a weak engagement readout for a class IIa enzyme; class-I-only comparator ambiguous; HDAC6 inhibitor a chemotype comparator, not a negative control; SLC2A1 direction in WWOX-deficient systems unresolved, no direction chosen; 6 receipts recorded (ledger 1,338); consumed by INV-16 (decisive uncertainty, next test, evidence), 3 passages retranslated; verifier corrections applied (HDAC4 sign narrowed, a same-direction hit added, count fixed, second human neural system added)"
     }
    ]
   },
@@ -68,8 +73,9 @@
    "steps": [
     {
      "step": "P5 Forward regeneration after the link without the compound name; criteria fixed before",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "FORWARD_RUN.md: run 1 (need-driven, before/after) and run 2 (S12 v S11) with criteria stated before; reach rose, direction did not, no new hypothesis, no popularity or decoy control run (claim limited to reach)"
     }
    ]
   },
@@ -78,8 +84,9 @@
    "steps": [
     {
      "step": "P6 Full investigations queue explorable (short front summary kept)",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "complete queue explorable: ranking.json further_investigations (INV-15, INV-11 with rank and curated reason), stable id anchors on every ordered, further and conditional row, an index of all 16 ids, five-language strings and 21+2 passages checked; the ten-row ceiling still orders the front list and the order digest is unchanged; tests: test_investigations (51), view suite 216 OK, audit-shareable PASS in five languages, package --check OK"
     }
    ]
   },
@@ -88,8 +95,9 @@
    "steps": [
     {
      "step": "P7 Small public reproducible case from a clean checkout",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "reach_it31_20261107/README.md rerun recipe executed in a fresh git clone without files/ and without LEGEND_CATALOG_CACHE: output identical to the committed table, 3 tests OK; regeneration of the catalogue ids and of the stage tables still needs the local cache (stated)"
     }
    ]
   },
@@ -98,8 +106,9 @@
    "steps": [
     {
      "step": "P8 Meaning preserved to the dashboard: targeted regression on the new path if a gap shows",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "no new infrastructure: the new path (further investigations, shared-premise column) has a regression each; the audit of the neural precedents found an out-of-date statement in INV-16 (a superseded result presented as current), corrected in the row; the SZL-type component was not adopted (boundaries of its proof noted in the mandate)"
     }
    ]
   },
@@ -108,8 +117,9 @@
    "steps": [
     {
      "step": "P9 Contributor entry point linked to an investigation",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "contributor_entry_it32_20261107/README.md linked to INV-15: replicate-structure table of public Wwox deletion datasets, answer/limit/error criteria, licences, no contact"
     }
    ]
   },
@@ -118,8 +128,9 @@
    "steps": [
     {
      "step": "P10 Sustainability: observed settings of real packages; radar/scouting from named gaps",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "observed settings of real packages (session_model_census): all 4 IT32 delegates ran as agent type legend-delegate, model sonnet, asked effort = read-back effort (low or medium); birth context 17.5k to 18.1k tokens; NB-3 producer 39 turns, 38.5k output tokens; blind verifier 19 turns, 18.9k output; delegates' own statements about their effort were wrong in two cases (they reported low/5 while the transcript read medium), so the transcript is the source. Radar: plan run, now names the older table (R1-R9, recovery_it10_p23) it does not read; limit not raised (its open rows are wet-lab or access-blocked); no external resource adopted: no named gap needed one"
     }
    ]
   },
@@ -128,6 +139,16 @@
    "steps": [
     {
      "step": "P11 Integration, learnings in place, cleanup, final report A-I",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P12": {
+   "order": 13,
+   "steps": [
+    {
+     "step": "P12 Queued integration (arXiv 2608.27675, 'Agents for Everyone'): (1) does a degraded source (QUERY_ERROR, NO_MATCH_FOUND, COVERAGE_INCOMPLETE, truncation, failed primary plus partial alternative) stay recognisable from adapter through Scientist and card to the dashboard? diagnose the real path, reuse existing checks, fixtures for complete / correctly empty / failed-primary+partial / usable partial, fix only the first point where information is lost, one controlled agent exercise if sustainable else state the boundary; a failed new acquisition does not erase an earlier verified one. (2) GO-CAM-inspired small extract on INV-16 (protein amount, catalytic activity, localisation, non-catalytic function, SLC2A1/GLUT1 in the system studied; observed / transferred / inferred / unknown; source, locator, system, perturbation, endpoint per relation; GO ids only from official sources; not called GO-CAM-conformant), compared with the current representation; second case before generalising; no compound promoted; no JupyterHub, Noctua, graph database or cloud; OLS, LinkML, AI4Curation only for a named missing function after a licence check. Paper is an external methodological precedent, not WWOX evidence. Runs AFTER the IT32 candidate lands; own resume record if IT32 closure has started; stop when both questions have a verifiable outcome",
      "status": "TODO",
      "owner": "orchestrator"
     }

@@ -1915,6 +1915,26 @@ def conditional_hypotheses(all_rows: list[dict]) -> list[dict]:
     return out
 
 
+FURTHER_COLS = ["rank"] + [c for c in CONDITIONAL_COLS if c != "status_label"]
+
+
+def further_investigations(all_rows: list[dict]) -> list[dict]:
+    """IT32 P6: the open investigations the ten-row ceiling keeps out of the ordered list that are NOT conditional hypotheses (those have their own
+    section). The ceiling is a limit of the first screen, not of the queue: these rows are published whole, with their rank (a tie is kept as it is) and
+    their curated reason, in rank order, so that no open question is reachable only through the tsv. Same validation as the conditional rows."""
+    out = []
+    for r in all_rows:
+        if not r.get("below_the_line") or r.get("status") == "conditional_hypothesis":
+            continue
+        blob = json.dumps({k: r.get(k, "") for k in FURTHER_COLS}).lower()
+        for bad in FORBIDDEN_QUALIFIED:
+            if bad in blob:
+                raise SystemExit(f"further_investigations: {r['inv_id']} claims to be qualified ({bad!r})")
+        out.append({k: (int(r[k]) if k == "rank" else r.get(k, "")) for k in FURTHER_COLS})
+    out.sort(key=lambda x: (x["rank"], x["inv_id"]))
+    return out
+
+
 def investigation_movement(row: dict, prev: dict | None) -> str:
     """Why the position changed since the last snapshot. First evaluation says so; an unchanged position says so."""
     if prev is None or not prev.get("investigations"):
@@ -2108,6 +2128,7 @@ def build_all() -> dict[str, bytes]:
         ing["investigations"] = pub
         ing["investigations_context"] = investigations_context(invs)
         ing["conditional_hypotheses"] = conditional_hypotheses(invs)
+        ing["further_investigations"] = further_investigations(invs)
         summary["investigations"] = investigations_summary(pub, invs)
     files["ranking.json"] = json_bytes(ing)
     # per-unit input digests (for the snapshot / diff mechanism)

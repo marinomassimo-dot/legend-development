@@ -18,7 +18,7 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 12528,
+    "values": 12574,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -118,7 +118,7 @@
    },
    "^\\.needs\\[\\]\\.": {
     "class": "OWN",
-    "values": 1771,
+    "values": 1783,
     "why": "needs records written in this repository"
    },
    "^\\.pairs\\[\\]\\.(l2|l3|l4|x|n|r)(\\.|\\[\\]|$)": {
@@ -193,7 +193,7 @@
    },
    "^\\.ui\\.": {
     "class": "UI",
-    "values": 1390,
+    "values": 1398,
     "why": "Italian orientation text (builder data UI_IT and siblings)"
    }
   },
@@ -203,10 +203,10 @@
    "DOI": 5,
    "HGNC": 12,
    "NCT": 0,
-   "PMID": 138
+   "PMID": 142
   },
   "links": {
-   "distinct_hrefs": 170,
+   "distinct_hrefs": 186,
    "external_public": 88,
    "hosts": [
     "civicdb.org",
@@ -219,12 +219,12 @@
     "www.nlm.nih.gov",
     "www.wwox.org"
    ],
-   "internal_anchors": 77
+   "internal_anchors": 93
   },
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3383,
+    "forbidden-name": 3393,
     "forbidden-wording": 21
    },
    "co_attested_wording": [
@@ -249,7 +249,7 @@
    "forbidden_names": 126046,
    "forbidden_wordings": 2888,
    "pair_unmarked_attested_or_unchecked": {
-    "count": 159,
+    "count": 161,
     "names": [
      "act 709478",
      "apinocaltamide",
@@ -264,7 +264,7 @@
      "px 478",
      "sulfopin"
     ],
-    "unchecked_without_corpus": 159
+    "unchecked_without_corpus": 161
    },
    "suppressed_by_exemption": {
     "bibliographic journal name (validated against the journals of the cache)": 4,
@@ -470,11 +470,11 @@
   "BIBLIO": 2688,
   "COUNT": 11600,
   "ID": 4547,
-  "OWN": 84368,
+  "OWN": 84426,
   "ROWNAME": 2251,
   "SRC_A": 189,
   "SRC_META": 256,
-  "UI": 1390
+  "UI": 1398
  },
  "embedded_sources": [
   {
@@ -529,7 +529,7 @@
   },
   "NOTICE.md": {
    "bytes": 13086,
-   "sha256": "e0070add8c39a47e4aadc0bc37a51f84015c21f880e8ec3b937a3563baa5b308"
+   "sha256": "5ae1e02ccbafec408d2bc06c7e47b89b8c374404c5054e0b98364561fd2b8844"
   },
   "README.md": {
    "bytes": 5072,
@@ -552,24 +552,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 4721524,
-   "sha256": "4e536e9a4fca0be4d4f9800511aa783f10d7b8a30a89c6e61122e2439cb6a341"
+   "bytes": 4746665,
+   "sha256": "01f117f12b4540eb93e8642e666b187e187ff3a75b9602a53a4d78e2d317dfba"
   },
   "es.html": {
-   "bytes": 4706897,
-   "sha256": "22fb42b26093a63e8ee4c29911a6975f086b6d3a68f1c11fd1dbcbf874346d69"
+   "bytes": 4732322,
+   "sha256": "da9f913265e6b4479ee48383a05cac456886a49e0a6375cc7fcf17a4512226e0"
   },
   "fr.html": {
-   "bytes": 4729123,
-   "sha256": "09d102ec348eabce32821cd5fe51be13745960803e649f8297a4e9633c2f25f7"
+   "bytes": 4755310,
+   "sha256": "ad79b8eab033b7c4151285a509a3b74cec98f6820c1f807525dac8fea04ffe19"
   },
   "index.html": {
-   "bytes": 4641304,
-   "sha256": "010c8e3331948ed7b9cf3d155a878bfa54b00f7bdff3225a619b4e7dad531d84"
+   "bytes": 4664785,
+   "sha256": "bd8a58aa065682c5cb19261b3e2eac6477b4e4f6cc8502e7f8be3bb4af6eae9e"
   },
   "it.html": {
-   "bytes": 4683157,
-   "sha256": "3673a3eae05e1d6e65a77865cf7c183bd0f6f633583a409396a518eaa5b5e492"
+   "bytes": 4708337,
+   "sha256": "a363d2ca3d7fdff94d86fe11d53246b757b66c509ac593201fd6da96b42ad48a"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",

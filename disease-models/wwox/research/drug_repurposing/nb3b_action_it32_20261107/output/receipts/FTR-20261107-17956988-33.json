@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-07T13:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-07T13:59:00Z",
+ "event_id": "FTR-20261107-17956988-33",
+ "evidence_basis": [
+  "abstract analysed in full; the PMC full-text route served an empty body on 2026-11-07, so no method or figure is described",
+  "verbatim_locator | proposition: class IIa HDACs are very inefficient enzymes on standard substrates and apparent activity in a typical assay can reflect copurified class I HDACs | Abstract | \"class IIa HDACs are very inefficient enzymes on standard substrates\"",
+  "verbatim_locator | proposition: a His-976-Tyr change in HDAC4 raised catalytic efficiency, extended to HDAC5 and HDAC7 | Abstract | \"gain of function phenotype\" could be extended to HDAC5 and -7"
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb3b_action_it32_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/nb3b_action_it32_20261107/output/chain.tsv",
+  "disease-models/wwox/research/drug_repurposing/nb3b_action_it32_20261107/output/controls.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 17956988 (abstract and metadata as served 2026-11-07)",
+ "study_id": {
+  "doi": "10.1073/pnas.0706487104",
+  "pmid": "17956988"
+ },
+ "workflow": "IT32 NB-3b (from the target to the biological action needed). Abstract analysed through the PubMed metadata route for the labelled facts. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

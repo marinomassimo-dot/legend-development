@@ -1,0 +1,46 @@
+query_name	catalogue_id	catalogue_name	role
+vorinostat	CAT:CHEMBL98	VORINOSTAT	same_substance_or_salt
+vorinostat	CAT:DGIDB:316b73312895	Vorinostat	same_substance_or_salt
+phenobarbital	CAT:CHEMBL149972	PHENOBARBITAL SODIUM	same_substance_or_salt
+phenobarbital	CAT:CHEMBL40	PHENOBARBITAL	same_substance_or_salt
+phenobarbital	CAT:CHEMBL45029	MEPHOBARBITAL	neighbour_not_merged
+phenobarbital	CAT:DGIDB:1dd9e5add469	Mephobarbital	neighbour_not_merged
+phenobarbital	CAT:DGIDB:1e85142c32f0	Phenobarbital	same_substance_or_salt
+bumetanide	CAT:CHEMBL1072	BUMETANIDE	same_substance_or_salt
+bumetanide	CAT:DGIDB:92875b1258c0	Bumetanide	same_substance_or_salt
+rapamycin	CAT:CHEMBL1908360	EVEROLIMUS	neighbour_not_merged
+rapamycin	CAT:CHEMBL2107380	UMIROLIMUS	neighbour_not_merged
+rapamycin	CAT:CHEMBL413	SIROLIMUS	same_substance_or_salt
+rapamycin	CAT:DGIDB:13284e35045a	Sirolimus	same_substance_or_salt
+vigabatrin	CAT:CHEMBL89598	VIGABATRIN	same_substance_or_salt
+vigabatrin	CAT:CHEMBL96	GAMMA-AMINOBUTYRIC ACID	neighbour_not_merged
+vigabatrin	CAT:DGIDB:358b8a817686	Vigabatrin	same_substance_or_salt
+benztropine	CAT:CHEMBL1200383	BENZTROPINE MESYLATE	same_substance_or_salt
+benztropine	CAT:CHEMBL1201203	BENZTROPINE	same_substance_or_salt
+benztropine	CAT:CHEMBL2104273	ETHYBENZTROPINE	neighbour_not_merged
+benztropine	CAT:CHEMBL2146132	CLOBENZTROPINE	neighbour_not_merged
+benztropine	CAT:DGIDB:7655157bdba7	Benztropine	same_substance_or_salt
+benztropine	CAT:DGIDB:f420257d2fca	Benztropine Mesylate	same_substance_or_salt
+clemastine	CAT:CHEMBL1200795	CLEMASTINE FUMARATE	same_substance_or_salt
+clemastine	CAT:CHEMBL1626	CLEMASTINE	same_substance_or_salt
+clemastine	CAT:DGIDB:5e4e85d5b2c8	Clemastine Fumarate	same_substance_or_salt
+clemastine	CAT:DGIDB:f15abd66f8d5	Clemastine	same_substance_or_salt
+clonazepam	CAT:CHEMBL1908326	MECLONAZEPAM	neighbour_not_merged
+clonazepam	CAT:CHEMBL452	CLONAZEPAM	same_substance_or_salt
+clonazepam	CAT:DGIDB:63e6d61ac862	Clonazepam	same_substance_or_salt
+ethosuximide	CAT:CHEMBL696	ETHOSUXIMIDE	same_substance_or_salt
+ethosuximide	CAT:DGIDB:6998a1a2d947	Ethosuximide	same_substance_or_salt
+levetiracetam	CAT:CHEMBL1286	LEVETIRACETAM	same_substance_or_salt
+levetiracetam	CAT:CHEMBL1400561	ETIRACETAM	neighbour_not_merged
+levetiracetam	CAT:DGIDB:66a95baf5bca	Levetiracetam	same_substance_or_salt
+perampanel	CAT:CHEMBL1214124	PERAMPANEL	same_substance_or_salt
+perampanel	CAT:DGIDB:768c891abaa7	Perampanel	same_substance_or_salt
+ifenprodil	CAT:CHEMBL1886888	IFENPRODIL TARTRATE	same_substance_or_salt
+ifenprodil	CAT:CHEMBL305187	IFENPRODIL	same_substance_or_salt
+ifenprodil	CAT:DGIDB:1b7e72bf50c7	Ifenprodil	same_substance_or_salt
+ifenprodil	CAT:DGIDB:2495e977baa1	(R,S)-Ifenprodil	same_substance_or_salt
+memantine	CAT:CHEMBL1699	MEMANTINE HYDROCHLORIDE	same_substance_or_salt
+memantine	CAT:CHEMBL807	MEMANTINE	same_substance_or_salt
+memantine	CAT:DGIDB:d87959cfb914	Memantine Hydrochloride	same_substance_or_salt
+efonidipine	CAT:CHEMBL2074922	EFONIDIPINE	same_substance_or_salt
+efonidipine	CAT:DGIDB:a5f65a8da11f	Efonidipine	same_substance_or_salt

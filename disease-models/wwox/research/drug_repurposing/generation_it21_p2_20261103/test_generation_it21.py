@@ -156,6 +156,26 @@ class HandoffRule(unittest.TestCase):
 
 
 # ---- withdrawn rows are classified, not silently dropped -------------------------------------------------------------------------------------------
+class SharedPremise(unittest.TestCase):
+    """IT32 P3: proposals that ride on one premise are tied to the one investigation that measures it, by a curated chain prefix, never by name."""
+    PREM = [{"inv_id": "INV-16", "chain_prefix": "HDAC5 -T(+)-> SLC2A1", "premise": "x"}]
+
+    def test_every_proposal_on_the_chain_carries_the_investigation_and_others_do_not(self):
+        f = G.shared_premise_investigations
+        self.assertEqual(f("HDAC5 -T(+)-> SLC2A1 [CollecTRI]", self.PREM), "INV-16")
+        self.assertEqual(f("EZH2 -T(+)-> IL6 [CollecTRI]", self.PREM), "")
+        self.assertEqual(f("HDAC5 -T(+)-> SLC2A1X", []), "")
+
+    def test_the_curated_premise_file_names_investigations_that_exist(self):
+        import csv as _csv
+        ids = {r["inv_id"] for r in _csv.DictReader(open(HERE.parent / "ranking_it8_p9_20261029" / "investigations_it20.tsv", encoding="utf-8"), delimiter="\t")}
+        prem = G.rd(G.PREMISES_FILE)
+        self.assertTrue(prem)
+        for r in prem:
+            self.assertIn(r["inv_id"], ids)
+            self.assertTrue(r["chain_prefix"].strip())
+
+
 class WithdrawnClassification(unittest.TestCase):
     def test_causes(self):
         old = dict(family_id="F", edge_chain_main_target_to_seed_1="CACNA1G -T(+)-> X [src]")

@@ -198,6 +198,17 @@ class TheTenRowCeiling(unittest.TestCase):
         if self.summary["below_the_line"]:
             self.assertIn("never a finding", self.summary["below_the_line_note"])
 
+    def test_no_open_question_is_reachable_only_through_the_tsv(self):
+        """IT32 P6: every row beyond the ceiling is published in full, either as a conditional hypothesis or as a further investigation (with its rank)."""
+        ranking = json.loads((HERE / "ranking.json").read_text(encoding="utf-8"))
+        shown = {r["inv_id"] for r in ranking["investigations"]} | {r["inv_id"] for r in ranking["conditional_hypotheses"]} \
+            | {r["inv_id"] for r in ranking["further_investigations"]}
+        self.assertEqual(shown, {r["inv_id"] for r in self.all})
+        for r in ranking["further_investigations"]:
+            self.assertIsInstance(r["rank"], int)
+            self.assertNotEqual(r["status"], "conditional_hypothesis")
+            self.assertTrue(r["next_test"].strip() and r["decisive_uncertainty"].strip())
+
     def test_the_order_digest_covers_the_whole_evaluated_order_not_only_the_published_part(self):
         """The ceiling is a page limit: it must not move the digest the snapshot mechanism compares."""
         self.assertEqual(self.summary["order_digest"], rk.sha16([(r["inv_id"], int(r["rank"])) for r in self.all]))

@@ -2707,6 +2707,26 @@ class It21P7InvestigationsContext(unittest.TestCase):
         with self.assertRaises(SystemExit):
             rv.conditional_hypotheses_view([dict(row, status="carded_thread")], self.CARDS, True, {})
 
+    def test_further_investigations_render_whole_with_a_stable_anchor_and_an_index_of_every_id(self):
+        """IT32 P6: the ten-row ceiling limits the first screen, not the queue. A row beyond it shows its rank and its test, links by id, and the index lists
+        the ordered, further and conditional ids; a row that is not a premise or carded thread, or that calls itself qualified, is refused."""
+        base = {k: v for k, v in self.row().items() if k not in ("tie_group", "movement_reason")}
+        fur = rv.further_investigations_view([dict(base, inv_id="INV-91", status="premise_measurement")], self.CARDS, True, {})
+        self.assertEqual(fur[0]["position"], base["rank"])
+        ordered = rv.investigations_view([dict(self.row(), inv_id="INV-90")], self.CARDS, True, {})
+        h = rv.render_investigations({"source": "full", "cur": {"ranking": {"investigations": ordered, "further_investigations": fur,
+                                                                            "conditional_hypotheses": [], "investigations_context": {}}}})
+        self.assertIn('id="inv-further"', h)
+        self.assertIn('id="INV-91"', h)
+        self.assertIn('id="INV-90"', h)
+        self.assertIn('href="#INV-91"', h)
+        self.assertIn('href="#INV-90"', h)
+        self.assertIn(rv.E(base["next_test"]), h)
+        with self.assertRaises(SystemExit):
+            rv.further_investigations_view([dict(base, inv_id="INV-91", status="conditional_hypothesis")], self.CARDS, True, {})
+        with self.assertRaises(SystemExit):
+            rv.further_investigations_view([dict(base, inv_id="INV-91", status="premise_measurement", why_now="this is qualified")], self.CARDS, True, {})
+
     def test_the_page_says_positions_are_curated_and_the_code_does_not_compute(self):
         t = rv.UI_IT["iv_curated"]
         self.assertIn("non un calcolo predittivo", t)

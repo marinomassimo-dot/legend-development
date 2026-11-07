@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-07T12:42:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-07T12:55:00Z",
+ "event_id": "FTR-20261107-38167120-32",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: in Drosophila mushroom body the HDAC4 phenotype does not need an intact catalytic site | Abstract | \"largely independent of an intact catalytic site\"",
+  "verbatim_locator | proposition: in the eye the catalytic-site mutant reduced the phenotype | Results | \"demonstrating that an intact catalytic site plays an important role in HDAC4-induced developmental defects in the eye\"",
+  "verbatim_locator | proposition: authors allow deacetylase-independent mechanisms | Discussion | \"it is likely that that HDAC4 also acts through deacetylase-independent mechanisms\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb3_class_iia_it32_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/nb3_class_iia_it32_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC10763444 full text served by the PubMed Central tool, fetched 2026-11-07; keyword-directed passages of results and discussion read; methods and figure images not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1186/s12915-023-01800-1",
+  "pmid": "38167120"
+ },
+ "workflow": "IT32 NB-3 (class IIa HDACs, catalytic versus scaffold, myelin). Question-driven read for the passages cited in the evidence table. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

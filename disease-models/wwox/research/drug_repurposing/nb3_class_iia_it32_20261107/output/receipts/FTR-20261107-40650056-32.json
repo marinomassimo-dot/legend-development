@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-07T12:39:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-07T12:55:00Z",
+ "event_id": "FTR-20261107-40650056-32",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: the review's oligodendrocyte passages name SIRT1 and BRG1 and no class IIa HDAC | Discussion | \"Considering histone deacetylases in oligodendrocytes, SIRT1 inactivation contributes to the proliferation of oligodendrocyte progenitor cells (OPCs).\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb3_class_iia_it32_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/nb3_class_iia_it32_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC12250607 full text served by the PubMed Central tool, fetched 2026-11-07; keyword-directed scan only (sentences with oligodendrocyte, OPC or remyelination, and with a class IIa HDAC name); bytes not saved",
+ "study_id": {
+  "doi": "10.3390/ijms26136277",
+  "pmid": "40650056"
+ },
+ "workflow": "IT32 NB-3 (class IIa HDACs, catalytic versus scaffold, myelin). Question-driven read for the passages cited in the evidence table. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
