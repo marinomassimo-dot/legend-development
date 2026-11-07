@@ -3049,7 +3049,7 @@
     },
     {
      "id": "O4",
-     "statement": "A pannexin blocker (brilliant blue FCF), the only one applied in a WWOX system in the sources read, raised normalised burst frequency to about 2.55 during treatment with no significance marker (a point estimate in the adverse direction, never tested); carbenoxolone suppressed bursts but is not attributable to gap junctions.",
+     "statement": "A pannexin blocker (brilliant blue FCF), the only one applied in a WWOX system in the sources read, raised normalised burst frequency to about 2.55 during treatment with no significance marker (a point estimate in the adverse direction, never tested); carbenoxolone suppressed bursts but is not specific to gap junctions (the paper notes it may block NMDA receptors and the abstract calls the bursts NMDAR- and gap-junction-dependent).",
      "model_type": "mouse_neuron_specific_knockout",
      "species": "mouse",
      "genotype": "Synapsin-Cre Wwox knockout",
@@ -6277,6 +6277,203 @@
     "note": "Set by the repurposing module."
    },
    "notes": "Proposed by IT10 P2.2; a draft for orchestrator review, validated only structurally. Integrated 2026-10-31 (IT10 P5) with card L01_nrf2_axis. OVERLAP: observation O1 (fly roGFP2-Orp1) is the same datum as NEED-REDOX-OXIDATIVE-STRESS O1 and must not be counted twice across the two needs; the existing NEED-REDOX-OXIDATIVE-STRESS is the sign-context need (blocks a wrong-sign antioxidant rationale), this need is the NRF2-activation and cytokine-output need.",
+   "basis": "observed"
+  },
+  {
+   "id": "NEED-INTRINSIC-EXCITABILITY",
+   "label": "Depolarised resting potential, larger sag and larger rebound in Wwox-deficient layer II/III pyramidal neurons (HCN-mediated Ih as one proposed node, not established)",
+   "family": "Network excitability",
+   "track": {
+    "value": "A",
+    "basis": "Network lever in a neuron-specific loss; allele-blindness is asserted, not shown."
+   },
+   "goal": {
+    "value": "partial_benefit",
+    "basis": "Network stabilisation; not restoration of WWOX."
+   },
+   "observed": [
+    {
+     "id": "O1",
+     "statement": "Resting membrane potential and sag grade with gene dose (resting potential -79.25 wild type, -75.51 heterozygote, -73.62 knockout mV; sag 1.18, 2.04, 2.57 mV), while input resistance saturates at one allele (102.88, 143.26, 143.03 MOhm: the two mutants are indistinguishable from each other).",
+     "comparison": "knockout against heterozygote against wild type",
+     "readout": "resting membrane potential; sag (at -200 pA); input resistance (Table 1)",
+     "readout_level": "functional",
+     "direction_observed": "mixed: resting potential depolarised and sag larger with dose; input resistance higher in both mutants",
+     "limits": "Table 1 t-tests treat cells as independent (pseudoreplication); sag is a voltage deflection and the recordings read here include no Ih-blocker arm, so its attribution to HCN current is an inference.",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json",
+       "entry": 15,
+       "anchor": "input resistance saturates at one allele"
+      }
+     ],
+     "locator_status": "MANIFEST",
+     "model_type": "mouse_neuron_specific_knockout",
+     "species": "mouse",
+     "genotype": "Synapsin-Cre Wwox knockout versus heterozygote versus wild type",
+     "tissue_or_cells": "neocortical layer II/III pyramidal neurons",
+     "age_stage": "P13-P17",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "pmid": "34634460"
+    },
+    {
+     "id": "O2",
+     "statement": "Rebound depolarisation after hyperpolarisation is significantly larger only in the knockout, not in the heterozygote (Figure 6 panels B and C).",
+     "comparison": "knockout against heterozygote against wild type",
+     "readout": "rebound depolarisation",
+     "readout_level": "functional",
+     "direction_observed": "increased in the knockout only",
+     "limits": "Cells treated as independent; exemplar traces and bar charts; the rebound axis was checked and is not truncated (verified).",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json",
+       "entry": 20,
+       "anchor": "Panels B and C carry the sag and rebound bars"
+      }
+     ],
+     "locator_status": "MANIFEST",
+     "model_type": "mouse_neuron_specific_knockout",
+     "species": "mouse",
+     "genotype": "Synapsin-Cre Wwox knockout versus heterozygote versus wild type",
+     "tissue_or_cells": "neocortical layer II/III pyramidal neurons",
+     "age_stage": "P13-P17",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "pmid": "34634460"
+    },
+    {
+     "id": "O3",
+     "statement": "The authors name control of the pyramidal-neuron resting membrane potential as a factor underlying the hyperexcitability; the frequency-current slope does not differ once the curves are shifted to one step below rheobase (Supplementary Fig S4, not read here).",
+     "comparison": "knockout against wild type",
+     "readout": "frequency-current slope after alignment to rheobase",
+     "readout_level": "functional",
+     "direction_observed": "no slope difference after alignment",
+     "limits": "The manifest phrase 'rather than to a change of intrinsic excitability' is an interpretation that the paper's text does not state (re-audit IT34);  exemplar firing (about 4, 9 and 13 spikes at one current step in wild type, heterozygote and knockout) shows a gradient that the analysis removes.",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json",
+       "entry": 20,
+       "anchor": "attributes the hyperexcitability to a depolarised resting potential"
+      }
+     ],
+     "locator_status": "MANIFEST",
+     "model_type": "mouse_neuron_specific_knockout",
+     "species": "mouse",
+     "genotype": "Synapsin-Cre Wwox knockout versus heterozygote versus wild type",
+     "tissue_or_cells": "neocortical layer II/III pyramidal neurons",
+     "age_stage": "P13-P17",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "pmid": "34634460"
+    },
+    {
+     "id": "O4",
+     "statement": "Slices burst in 36 of 42 knockout recordings, 4 of 23 heterozygote and 0 of 11 wild type, although the heterozygote shares the input-resistance change and is intermediate in resting potential and sag.",
+     "comparison": "knockout against heterozygote against wild type",
+     "readout": "burst incidence per slice",
+     "readout_level": "functional",
+     "direction_observed": "increased in the knockout; graded intrinsic properties do not predict the burst incidence",
+     "limits": "Slice counts, not animals; the heterozygote is pooled with wild type as control in other panels (verified correction); burst and intrinsic recordings are not from the same cells.",
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/function_pharm_verify_it14_p3v_20261101/README.md",
+       "anchor": "HT 4/23, KO 36/42"
+      }
+     ],
+     "locator_status": "DOCUMENT",
+     "model_type": "mouse_neuron_specific_knockout",
+     "species": "mouse",
+     "genotype": "Synapsin-Cre Wwox knockout versus heterozygote versus wild type",
+     "tissue_or_cells": "neocortical layer II/III pyramidal neurons",
+     "age_stage": "P13-P17",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "pmid": "34634460"
+    }
+   ],
+   "inferred": [
+    "That the larger sag is carried by HCN (Ih) current: sag is commonly attributed to it, but the entries read record no Ih-blocker arm and no voltage-clamp current.",
+    "That the intrinsic changes are necessary for the bursts: they are graded or shared in the heterozygote, which rarely bursts, so they are at most necessary, not sufficient.",
+    "Whether the intrinsic state is compensatory, pro-excitatory or a bystander: not decided."
+   ],
+   "intervention_direction": {
+    "direction": "uncertain",
+    "on": "HCN-mediated current and resting membrane potential",
+    "rationale": "Three readings are open and each implies a different sign for an Ih blocker: a compensatory current that restrains excitability (blocking it would worsen events), a pro-excitatory contributor through the depolarised resting potential (blocking it would lower bursts), or a bystander (no effect). The authors discuss discordant Ih-blocker precedents and report that an Ih blocker worsened 4-AP events.",
+    "certainty": "context_dependent: the sign depends on the resting potential, input resistance and cell state of the preparation; one experiment (an Ih-blocker arm with the sag, resting potential and burst incidence read in the same slices) separates the readings",
+    "do_not_assume": "A sag that is larger is not evidence that blocking HCN helps, hurts or does nothing; not an HCN isoform; not a causal role; not a benefit. No HCN blocker is placed in any ranking by this need."
+   },
+   "counter_evidence": [
+    "The heterozygote shares the input-resistance change and is intermediate in resting potential and sag yet bursts in 4 of 23 slices against 36 of 42 in the knockout, so the intrinsic changes do not predict the bursts (O4).",
+    "Table 1 t-tests treat cells as independent, so the stated differences carry pseudoreplication.",
+    "The authors caution that an Ih blocker worsened 4-AP events (as cited in the IT14 P3 reading) and discuss discordant precedents of Ih-directed interventions: the direction of an intervention is not inferable from the sag.",
+    "A depolarised resting potential can raise firing without any change of intrinsic excitability (O3), which a bath-potassium step does not reproduce in input resistance, sag or rebound (IT14 P3): a potassium arm that fails does not refute this need."
+   ],
+   "sources": {
+    "cards": [],
+    "hypotheses": [],
+    "hypotheses_note": "No hypothesis in the ledger has the intrinsic membrane state as its subject; the rival 'R2 intrinsic state' of IT14 P3 lives in the package README, now consumed by this need.",
+    "map_records": [],
+    "documents": [
+     "disease-models/wwox/research/drug_repurposing/function_pharm_it14_p3_20261101/README.md",
+     "disease-models/wwox/research/drug_repurposing/function_pharm_verify_it14_p3v_20261101/README.md"
+    ],
+    "registry_ids": [],
+    "papers": [
+     {
+      "pmid": "34634460",
+      "paper_registry_ids": [
+       "CORPUS P210",
+       "PAPER 031"
+      ]
+     }
+    ]
+   },
+   "targets": [
+    {
+     "symbol": "HCN1",
+     "role": "HCN channel subunit 1 (search key for Ih-acting tools; sign unresolved)",
+     "hgnc_id": "HGNC:4845",
+     "hgnc_name": "hyperpolarization activated cyclic nucleotide gated potassium channel 1",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "HCN2",
+     "role": "HCN channel subunit 2 (as HCN1)",
+     "hgnc_id": "HGNC:4846",
+     "hgnc_name": "hyperpolarization activated cyclic nucleotide gated potassium and sodium channel 2",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "HCN3",
+     "role": "HCN channel subunit 3 (as HCN1)",
+     "hgnc_id": "HGNC:19183",
+     "hgnc_name": "hyperpolarization activated cyclic nucleotide gated potassium channel 3",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "HCN4",
+     "role": "HCN channel subunit 4 (as HCN1)",
+     "hgnc_id": "HGNC:16882",
+     "hgnc_name": "hyperpolarization activated cyclic nucleotide gated potassium channel 4",
+     "target_kind": "intervention_target"
+    }
+   ],
+   "pathways": [
+    {
+     "id": "GO:0042391",
+     "label": "regulation of membrane potential"
+    }
+   ],
+   "evidence_scope": [
+    "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+   ],
+   "coverage": {
+    "status": "NOT_ASSESSED",
+    "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
+   },
+   "notes": "Created in IT34 P3 from the already-read and verified observation of PMID 34634460; no new reading. HGNC ids and GO term resolved from the official services on 2026-11-07, not from memory (two ids recalled from memory were wrong).",
    "basis": "observed"
   }
  ],

@@ -79,7 +79,7 @@ class RealData(unittest.TestCase):
         self.assertEqual(len(self.P["pairs"]), len(self.cm["cells"]))
 
     def test_needs_panel_matches_data(self):
-        self.assertEqual(len(self.P["needs"]), 23)
+        self.assertEqual(len(self.P["needs"]), 24)
         per = self.sm["needs"]["per_need"]
         for n in self.P["needs"]:
             self.assertEqual(n["fam_link"], per[n["id"]]["families_with_documented_link"])
@@ -353,7 +353,7 @@ class Curated(unittest.TestCase):
     def test_units_never_conflated(self):
         n = static_numbers(self.full)
         cur = self.PF["cur"]
-        self.assertEqual(n["cur.needs"], "23")
+        self.assertEqual(n["cur.needs"], "24")
         self.assertEqual(n["cur.cards"], str(len(cur["cands"])))
         self.assertNotEqual(n["cur.cards"], n["funnel.records"])
         for key, unit in (("cur.needs", "bisogni"), ("cur.cards", "schede candidato"), ("cur.threads", "filoni biologici")):
@@ -398,7 +398,7 @@ class Curated(unittest.TestCase):
         n = static_numbers(self.full)
         d, p = n["cur.goal.deep_recovery.cards"], n["cur.goal.partial_benefit.cards"]
         self.assertEqual(int(d) + int(p), len([c for c in self.PF["cur"]["cands"] if c["goal"]]))
-        self.assertEqual(int(n["cur.goal.deep_recovery.needs"]) + int(n["cur.goal.partial_benefit.needs"]), 23)
+        self.assertEqual(int(n["cur.goal.deep_recovery.needs"]) + int(n["cur.goal.partial_benefit.needs"]), 24)
         self.assertEqual(self.full.count('class="goal '), 2)
         self.assertIn("Track (campo separato)", self.full)
         self.assertIn("2026-", re.search(r'data-k="meta.data_date" data-v="([^"]+)"', self.full).group(1))

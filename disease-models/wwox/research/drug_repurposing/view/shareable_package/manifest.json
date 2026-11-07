@@ -18,7 +18,7 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 12605,
+    "values": 12692,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -73,12 +73,12 @@
    },
    "^\\.cur\\.needs\\[\\]\\.obs\\[\\]\\.(cite)$": {
     "class": "BIBLIO",
-    "values": 107,
+    "values": 111,
     "why": "title, journal, year of a cited work"
    },
    "^\\.cur\\.needs\\[\\]\\.obs\\[\\]\\.pmid$": {
     "class": "BIBLIO",
-    "values": 107,
+    "values": 111,
     "why": "PMID of the observation source"
    },
    "^\\.cur\\.ranking\\.units\\[\\]\\.(access|access_cats\\[\\])$": {
@@ -118,17 +118,17 @@
    },
    "^\\.needs\\[\\]\\.": {
     "class": "OWN",
-    "values": 1787,
+    "values": 1848,
     "why": "needs records written in this repository"
    },
    "^\\.pairs\\[\\]\\.(l2|l3|l4|x|n|r)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 36021,
+    "values": 36190,
     "why": "levels 2-4, indices: computed from cards and needs"
    },
    "^\\.pairs\\[\\]\\.l1\\.(state|n_assoc|readout_only|why|stale)$": {
     "class": "OWN",
-    "values": 13745,
+    "values": 13810,
     "why": "level-1 state, association count and note computed by the coverage tool"
    },
    "^\\.pairs\\[\\]\\.l1\\.(targets|pathway)\\[\\]$": {
@@ -143,12 +143,12 @@
    },
    "^\\.pairs\\[\\]\\.l1\\.withheld$": {
     "class": "COUNT",
-    "values": 2749,
+    "values": 2762,
     "why": "number of association rows withheld by the allowlist"
    },
    "^\\.pairs\\[\\]\\.p\\.": {
     "class": "OWN",
-    "values": 17272,
+    "values": 17368,
     "why": "priority criteria computed by the coverage tool"
    },
    "^\\.pairs\\[\\]\\.p\\.cr\\.dir\\[\\]\\[\\]$": {
@@ -158,12 +158,12 @@
    },
    "^\\.rows\\[\\]\\.(dup|rec|tr|w)$": {
     "class": "COUNT",
-    "values": 9536,
+    "values": 9580,
     "why": "record counts of a catalogue row"
    },
    "^\\.rows\\[\\]\\.(id|kind)$": {
     "class": "ID",
-    "values": 4794,
+    "values": 4816,
     "why": "catalogue row identifier and row kind"
    },
    "^\\.rows\\[\\]\\.acc\\[\\]$": {
@@ -178,7 +178,7 @@
    },
    "^\\.rows\\[\\]\\.name$": {
     "class": "ROWNAME",
-    "values": 2397,
+    "values": 2408,
     "why": "card name (own text), opaque identifier, or a class-A name source"
    },
    "^\\.strings\\[\\]$": {
@@ -193,20 +193,20 @@
    },
    "^\\.ui\\.": {
     "class": "UI",
-    "values": 1398,
+    "values": 1399,
     "why": "Italian orientation text (builder data UI_IT and siblings)"
    }
   },
   "identifiers": {
-   "CAT": 2375,
-   "CHEMBL": 369,
+   "CAT": 2386,
+   "CHEMBL": 371,
    "DOI": 5,
    "HGNC": 12,
    "NCT": 0,
    "PMID": 145
   },
   "links": {
-   "distinct_hrefs": 187,
+   "distinct_hrefs": 188,
    "external_public": 88,
    "hosts": [
     "civicdb.org",
@@ -219,12 +219,12 @@
     "www.nlm.nih.gov",
     "www.wwox.org"
    ],
-   "internal_anchors": 94
+   "internal_anchors": 95
   },
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3401,
+    "forbidden-name": 3414,
     "forbidden-wording": 21
    },
    "co_attested_wording": [
@@ -363,11 +363,11 @@
   },
   "excluded_rows_with_names_full": 3,
   "excluded_rows_with_names_shareable": 0,
-  "needs": 23,
-  "pairs_total": 2749,
-  "pairs_with_status_class_full": 1028,
+  "needs": 24,
+  "pairs_total": 2762,
+  "pairs_with_status_class_full": 1034,
   "pairs_with_status_class_shareable": 0,
-  "pairs_with_target_list_full": 2368,
+  "pairs_with_target_list_full": 2381,
   "pairs_with_target_list_shareable": 13,
   "payload_sections": {
    "access": "identical",
@@ -394,14 +394,14 @@
    "strings": "identical",
    "tech": "differs"
   },
-  "rows_named_full": 2383,
+  "rows_named_full": 2394,
   "rows_named_shareable_card_names_only": 52,
-  "rows_total": 2397,
-  "rows_with_access_categories_full": 2370,
+  "rows_total": 2408,
+  "rows_with_access_categories_full": 2381,
   "rows_with_access_categories_shareable": 19,
-  "rows_with_per_row_status_or_modality_full": 2397,
+  "rows_with_per_row_status_or_modality_full": 2408,
   "rows_with_per_row_status_or_modality_shareable": 0,
-  "target_symbols_listed_full": 3145,
+  "target_symbols_listed_full": 3172,
   "target_symbols_listed_shareable": 13
  },
  "counts_only_sources": [
@@ -467,14 +467,14 @@
   "view_schema": "legend.wwox.repurposing_view/2"
  },
  "embedded_field_classes": {
-  "BIBLIO": 2688,
-  "COUNT": 12348,
-  "ID": 4839,
-  "OWN": 89023,
-  "ROWNAME": 2397,
+  "BIBLIO": 2696,
+  "COUNT": 12405,
+  "ID": 4861,
+  "OWN": 89501,
+  "ROWNAME": 2408,
   "SRC_A": 189,
   "SRC_META": 256,
-  "UI": 1398
+  "UI": 1399
  },
  "embedded_sources": [
   {
@@ -509,7 +509,7 @@
  "files": {
   "COMPARISON.md": {
    "bytes": 7423,
-   "sha256": "bfa65122993ce711ced1d00c2c33707f41b87e68b78e9f978ab358866ab0e377"
+   "sha256": "3d1af58cc2cb6918de66c69df8eca0bd0b25ead435296c399e41dfd9d0fe4682"
   },
   "LICENSES/CC-BY-4.0.txt": {
    "bytes": 18657,
@@ -529,7 +529,7 @@
   },
   "NOTICE.md": {
    "bytes": 13087,
-   "sha256": "38d46ce6ee9ac4114997b3b1eb71d4c2aae4d6f5e6e227162c8b8d72032fcdda"
+   "sha256": "7f81a5e6a9d8cb11ff813feb4c9b29547e75cdd2c6029e806e765f1ca9f9f19a"
   },
   "README.md": {
    "bytes": 5072,
@@ -552,24 +552,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 4876498,
-   "sha256": "a88720b0a55b800c556c7b5c0ce0027cc9c9e93afa569c285be9cc3bfe88a78d"
+   "bytes": 4907812,
+   "sha256": "8255870bfd46d0faf8f9a9af016f65835659f8e8498ed2168022a48d87270632"
   },
   "es.html": {
-   "bytes": 4862259,
-   "sha256": "949e5cda7176c06333d4b8cde11bb76060e05619f614296632a601d9ee2c4568"
+   "bytes": 4893603,
+   "sha256": "55051642aed32d456c54d43a4c2e14e913ff09f8a2f64ca627548f41946ff3e7"
   },
   "fr.html": {
-   "bytes": 4885807,
-   "sha256": "e019c47a427c620d328f0b80f6610954fccdd8e48daf2ad7b08b0e5fe9cb19a0"
+   "bytes": 4917493,
+   "sha256": "ff7f54485bddb47cd05a37adfaa14d3c829d6e0397bf1b0ff811a578ff13cf11"
   },
   "index.html": {
-   "bytes": 4793456,
-   "sha256": "970d5b4f99f1a6b2284ec14a9424df7ed3e2c812f06907ed5d1ea928c0f3c90a"
+   "bytes": 4823723,
+   "sha256": "03a3365ebb45f9f214390a864a6a17589c56d254d8d08a198f71eeadc61aed86"
   },
   "it.html": {
-   "bytes": 4838123,
-   "sha256": "bf7e3df3bfeb9bde93eb8bfacdfd1a05a2c143ece39db9a76e5f66b3cfa262a7"
+   "bytes": 4869194,
+   "sha256": "cc8abae6158f20707c901de64aa3ba489758e560733ec717551a5b5f0f78c680"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
@@ -635,7 +635,7 @@
   ],
   "lead_field_redactions": 11,
   "pair_status_rule": "pairs[].p.cr.pha[1] (status classes of the row) is dropped in the shareable build: a status class derives from ChEMBL max_phase, DGIdb approved flags, MATRIX and openFDA together, and the build does not re-derive a class-A-only status per row.",
-  "pairs_status_class_dropped": 1028,
+  "pairs_status_class_dropped": 1034,
   "repository_file_names_described": 0,
   "rule": "IT5 P13 fix. Own analysis stays in the shareable build: a conclusion at the level of a need, a class or a card subject, in our own words, short, attributed to a published work. Withheld: (1) a sentence that states a compound-target(-action) pair together with its database of origin when the pair is asserted only by a class-B/C catalogue source; (2) a compound named in prose whose only provenance in the repository is a class-B/C catalogue row (it appears in no cited full text and is not a card subject); (3) a per-compound status, phase, approval or access statement attributed to a class-B/C source; (4) repository file names, which cannot be used outside the repository. The replacement keeps the research conclusion and names the withheld source class with the phrase in withheld_phrase. The FULL build keeps everything. The audit enforces (1) and (2) by derivation from the catalogue, (3) and (4) by pattern, and every redaction below must match exactly once or more: a stale redaction fails the build.",
   "withheld_phrase": "dato di una fonte non inclusa in questa versione"
