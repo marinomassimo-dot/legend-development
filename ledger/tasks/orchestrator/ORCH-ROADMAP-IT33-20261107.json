@@ -51,8 +51,9 @@
    "steps": [
     {
      "step": "P3 Read recovery_it10_p23 R1-R9 against main: executed / superseded / still useful / blocked by a named datum; radar link only if it names the table without reading its rows; at most one reopening that can change a decision",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "recovery_it10_p23_20261031/STATUS_IT33.md classifies R1-R9 against main (executed: R3, R6; still useful but blocked by a named wet-lab or access datum: R1, R2, R4, R5, R7, R8, R9); one reopening taken, R2/R8: PubMed returns 4 records, all earlier and already read, condition not met; radar link: two of the twelve table slots rotate through older tables by ISO week (pick_tables, cap unchanged, test_scout_daily 76 OK), the plan names tables not read in a run"
     }
    ]
   },
