@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-07T19:16:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-07T19:17:00Z",
+ "event_id": "FTR-20261107-15001529-70",
+ "evidence_basis": [
+  "abstract analysed; degraded acquisition: publisher route blocked, no open full text, depth stays abstract_only",
+  "verbatim_locator | proposition: E09 Ser535 phosphorylation of endogenous eIF2B epsilon fell when GSK3 beta was inhibited; also lower in a rat hypertrophy model in vivo. | Abstract | \"S535 phosphorylation of endogenous eIF2Bepsilon was decreased by LiCl or ISO\"",
+  "verbatim_locator | proposition: E10 Cellular kinase activity toward recombinant eIF2B epsilon rose with GSK-3 beta overexpression and fell with LiCl or isoproterenol. | Abstract | \"Overexpression of GSK-3beta increased the cellular kinase activity toward GST-eIF2Bepsilon in neonatal rat cardiac myocytes\"",
+  "verbatim_locator | proposition: E11 S535A increased cell size as strongly as isoproterenol; the read-out is hypertrophy (cell size), not eIF2B activity or global translation. | Abstract | \"Overexpression of eIF2Bepsilon-S535A, which is not phosphorylated by GSK-3beta, increased cell size\"",
+  "verbatim_locator | proposition: E12 S535A reproduced only part of the isoproterenol phenotype (cytoskeletal change yes, ANF expression no). | Abstract | \"expression of eIF2Bepsilon-S535A partially increased cytoskeletal reorganization, whereas it did not increase expression of atrial natriuretic factor gene\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/gsk3_eif2b_20261107/output/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record abstract (Europe PMC REST search and PubMed tool); full text not reached: the publisher page returned a challenge and Europe PMC holds no full text for this record; bytes not saved",
+ "study_id": {
+  "doi": "10.1161/01.RES.0000124977.59827.80",
+  "pmid": "15001529"
+ },
+ "workflow": "GSK3 beta and eIF2B package (gsk3_eif2b_20261107), role producer, label gsk-p: question-driven abstract reading of GSK3 beta and eIF2B epsilon Ser535 in cardiac myocytes. Staged for the integrator; the ledger was not written by the preparing actor."
+}

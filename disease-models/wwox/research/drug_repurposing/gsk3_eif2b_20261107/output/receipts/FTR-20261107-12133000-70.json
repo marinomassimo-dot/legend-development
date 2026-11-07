@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-07T19:15:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-07T19:16:00Z",
+ "event_id": "FTR-20261107-12133000-70",
+ "evidence_basis": [
+  "abstract analysed; degraded acquisition: full text not reached by any open route tried, depth stays abstract_only",
+  "verbatim_locator | proposition: E05 GSK3 inhibitors dephosphorylated Ser535 of eIF2B epsilon in cells: the site is a GSK3 target in vivo (cell level). | Abstract | \"which strongly indicates that this site is indeed a target for GSK3 in vivo\"",
+  "verbatim_locator | proposition: E06 Despite Ser535 dephosphorylation, eIF2B was not significantly activated; additional inputs are required. | Abstract | \"these compounds did not elicit significant activation of eIF2B\"",
+  "verbatim_locator | proposition: E07 The inhibitors change overall protein synthesis and signalling apparently unrelated to GSK3, so a compound-only attribution to the GSK3-eIF2B axis is unsafe. | Abstract | \"each of the inhibitors used affects overall protein synthesis and have additional effects on translation factors or signalling pathways\"",
+  "verbatim_locator | proposition: E08 The epsilon subunit is a GSK3 substrate in vitro and phosphorylation by GSK3 inhibits eIF2B activity; this is stated as background, not shown in this paper. | Abstract | \"The largest (epsilon) subunit of eIF2B is a substrate for glycogen synthase kinase (GSK)-3 in vitro\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/gsk3_eif2b_20261107/output/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record abstract (PubMed tool, Europe PMC REST search); full text not reached: Europe PMC fullTextXML returned HTTP 500, the PMC article page returned a browser challenge instead of the article, the efetch XML carries no body text because the publisher disallows it, a page summariser returned only the abstract and the cell line; no methods, results, figures or tables read; bytes not saved",
+ "study_id": {
+  "doi": "10.1042/BJ20020677",
+  "pmid": "12133000"
+ },
+ "workflow": "GSK3 beta and eIF2B package (gsk3_eif2b_20261107), role producer, label gsk-p: question-driven abstract reading of the site-specific eIF2B activity result. Staged for the integrator; the ledger was not written by the preparing actor."
+}

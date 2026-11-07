@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-07T19:25:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-07T19:26:00Z",
+ "event_id": "FTR-20261107-29489452-70",
+ "evidence_basis": [
+  "partial full text analysed through section-directed passages; figures not viewed",
+  "verbatim_locator | proposition: E25 ISRIB stabilised destabilised mutant decamers and restored residual exchange activity: it can compensate lesions that lower decamer stability, including mutations in the epsilon subunit. | Abstract | \"ISRIB stabilizes VWMD mutant eIF2B in the decameric form and restores the residual catalytic activity to wild-type levels\"",
+  "verbatim_locator | proposition: E26 Not every eIF2B lesion is corrected: mutants in or near the ISRIB pocket were unresponsive. | Results > ISRIB-resistant mutants with wild-type or VWMD-like properties validate the correlation between decamer stability and GEF activity | \"both mutants were unresponsive to the addition of up to 500 nM ISRIB\"",
+  "verbatim_locator | proposition: E27 Post-translational modification is named as a possible modifier of eIF2B stability and activity; not tested. | Discussion > The eIF2B activator ISRIB promotes decamer formation of VWMD mutant eIF2B complexes and rescues GEF activity | \"Post-translational modifications and metabolites may modify eIF2B stability and activity in cells\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/gsk3_eif2b_20261107/output/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC fullTextXML for the PMC record PMC5829914, fetched 2026-11-07; read: abstract, the Results subsections on mutant exchange activity and on ISRIB-resistant mutants, the ISR-in-cells subsection opening, and the Discussion; Methods and figure images not read; bytes not saved",
+ "study_id": {
+  "doi": "10.7554/eLife.32733",
+  "pmid": "29489452"
+ },
+ "workflow": "GSK3 beta and eIF2B package (gsk3_eif2b_20261107), role producer, label gsk-p: question-driven reading of whether ISRIB corrects eIF2B lesions other than phosphorylated eIF2 inhibition. Staged for the integrator; the ledger was not written by the preparing actor."
+}
