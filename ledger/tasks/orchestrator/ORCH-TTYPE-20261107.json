@@ -1,0 +1,52 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-TTYPE-20261107",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Queued targeted package (operator, 2026-11-07): the T-type thread in WWOX from the pharmacological result to a testable mechanism: rebuild Cheng 2020 Fig 7b, separate benefit / Cav3 mediation / dependence on WWOX loss, check the HIF1-alpha to CaV3.2 residue (PMID 42276303), correct probe identities, propose the simplest discriminating comparison; consequence for INV-03 and INV-04. One producer, one independent verifier on the decision-changing premises; no promotion; no new governance.",
+ "START_UTC": "2026-11-07T21:00:00Z",
+ "BASELINE": "development/main 28c72d7fc40a3a5213950605b5bcdd72261d5b45 (fetched 2026-11-07); worktree .claude/worktrees/ttype-20261107 from main. Queued behind ORCH-GSK3EIF2B-20261107 (battery running on its head). Reused by identifier: IT28 P9 compare (FTR-20261105-32000863-05, figures captions-only), IT10 P2.1 HIF package, manifest of PMID 32000863 and held figure renders. PMID 42276303 and 30189284 have no receipt.",
+ "CURRENT_PACKAGE": {
+  "id": "T-TTYPE",
+  "state": "brief written; producer not launched",
+  "delegate_active": "none",
+  "updated": "2026-11-07T21:00:00Z"
+ },
+ "RESUME": "Order: producer, census, verifier on decision-changing premises, targeted correction. Folder drug_repurposing/ttype_20261107/.",
+ "DECISIONS_TAKEN": [
+  "The external report is not in the repository; a stimulus only.",
+  "One delegate at a time; the G package battery is CPU only at low priority and no delegate is active while this one runs except as sequenced."
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [
+  "No stop for a reserved act."
+ ],
+ "DEFAULTS_TAKEN": [
+  "Condition: settings not restated by the operator for this package. Default: as before (producer sonnet/medium, verifier sonnet/high, legend-delegate). Why safe: reversible; no shared file touched."
+ ],
+ "AUTHORISED_QUEUE_20261107D": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_T": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "T producer, verifier, correction, consumer note",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_U": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "U validation, landing, cleanup, report",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}
