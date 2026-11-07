@@ -1,0 +1,16 @@
+query_id	database_or_route	string_or_url	run_at_utc	hits	what_was_done
+Q01	GEO text pages	acc.cgi acc=GSE158684 targ=self form=text view=full; and acc=GSM4805504 to GSM4805511 same form (9 pages)	2026-11-07T15:26:42Z	9 pages, 3464 and 4388 to 4401 bytes	read in full except submitter contact fields, which were not used or stored; eight GSM pages differ only in title, genotype, SRX, BioSample
+Q02	NCBI E-utilities esummary	db=sra id=11991543,11991544,11991545,11991546,11991547,11991548,11991549,11991550 retmode=json	2026-11-07T15:26:45Z	8 records, 8 status hup, runs empty	one query as briefed; no change since 2026-10-31
+Q03	PubMed (search tool)	Synapsin I-Cre recombination glia astrocytes oligodendrocytes progenitors germline leaky	2026-11-07T15:27Z	0	over-restricted AND query; no result
+Q04	PubMed (search tool)	Syn1-Cre Synapsin-Cre transgenic mice non-neuronal recombination reporter	2026-11-07T15:27Z	0	over-restricted; no result
+Q05	PubMed (search tool)	Synapsin-Cre recombination non-neuronal cells; Syn1-Cre line germline recombination; Cre driver lines neural progenitors Synapsin I promoter glia recombination Zhu 2001	2026-11-07T15:27Z	0 each	over-restricted; no result
+Q06	PubMed (search tool)	Synapsin-Cre	2026-11-07T15:27Z	15	metadata read for 10 PMIDs; none a line-characterisation paper; used only to see what exists (three GLT-1 papers, a VGF paper, an L1 paper, a TrkB paper)
+Q07	PubMed (search tool)	Synapsin I-Cre mice	2026-11-07T15:27Z	5	found 16419044 (germline recombination); 17927825 and 31552299 are knockout papers, not read beyond abstract
+Q08	PubMed (search tool)	Synapsin-Cre AND (astrocytes OR glia OR oligodendrocyte OR ectopic OR germline OR leaky)	2026-11-07T15:28Z	6	no new line-characterisation paper; the GLT-1 neuronal-deletion abstract (25834045) surfaced and was NOT used as evidence (two-source limit)
+Q09	PubMed (search tool)	Cre line characterization neuron-specific Syn-Cre OR Syn1-Cre OR SynCre ectopic expression	2026-11-07T15:28Z	0	no result
+Q10	PubMed (search tool)	Ablation of NF1 function in neurons induces abnormal development of cerebral cortex and reactive gliosis	2026-11-07T15:28Z	1 (11297510)	original Syn-Cre line report found; abstract read
+Q11	paper_packet.py claim	pmid 16419044; 25834045; 11297510 (actor nb4-p, note NB4-PILOT)	2026-11-07T15:28Z	3 claims, no ALSO lines	25834045 was claimed before the decision to leave it out; the claim is not released by this package
+Q12	depth ledger check (scratchpad depth.py)	pmid 16419044; 25834045; 11297510; 33914858	2026-11-07T15:28Z	no receipt for the first three; six receipts for 33914858	33914858 not re-opened; held print text used only to verify verbatim quotes of statements already read
+Q13	Europe PMC REST and NCBI efetch (PMC312666)	europepmc fullTextXML; efetch db=pmc rettype=xml; ptpmcrender pdf	2026-11-07T15:27-15:29Z	fullTextXML HTTP 500 twice; efetch returned a stub whose comment says the publisher does not allow full text XML; pdf render HTTP 403	full text of 11297510 not reached by an open route; abstract_only
+Q14	PubMed (get_full_text_article)	PMC4380995 (25834045)	2026-11-07T15:28Z	empty full_text	not pursued
+Q15	pubmed_identity_check.py	pmid 16419044	2026-11-07T15:29Z	verdict MATCH	DOI 10.1002/gene.20183 confirmed
