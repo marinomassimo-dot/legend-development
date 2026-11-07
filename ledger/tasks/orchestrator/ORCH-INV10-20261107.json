@@ -9,9 +9,9 @@
  "BASELINE": "development/main ce121d5814b8c83c65721c0709ac4ec2554a5011; same worktree and branch as ORCH-TTYPE-20261107. Reused by identifier: A1/A2 packages, CONSUMERS.md, aed_compare_it31, B1 white-matter package, ttype and nmda packages of this branch; PMID 39101447 has a complete read (FTR-20261003-39101447-01).",
  "CURRENT_PACKAGE": {
   "id": "S-INV10",
-  "state": "brief written; queued behind INV-08 and INV-09",
-  "delegate_active": "none",
-  "updated": "2026-11-08T01:00:00Z"
+  "state": "producer running (legend-delegate, sonnet/medium) in the queue2 worktree",
+  "delegate_active": "sz-p",
+  "updated": "2026-11-08T04:00:00Z"
  },
  "RESUME": "Folder drug_repurposing/seizure_function_inv10_20261107/ (BRIEF.md, output/). Order: producer, census, verifier on the decisive propositions, correction.",
  "DECISIONS_TAKEN": [
