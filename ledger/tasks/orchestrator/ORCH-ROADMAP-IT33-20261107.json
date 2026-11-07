@@ -18,8 +18,9 @@
    "steps": [
     {
      "step": "P0 Baseline: CI on the IT32 final SHA, NB-4 integration, staged receipts, worktrees; reconcile 40 skips (IT32 battery) with 9 (pilot): suites, environment, reasons",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "2026-11-07: remote main fb756c52 = local; IT32 and the NB-4 pilot are in main (9713e345, fb756c52); CI 'Public release gate' on fb756c52 was in progress at the start (record-only commit; the IT32 candidate 5d339a7f and 0829fd9c were CI success); skips reconciled: both batteries ran 213 targets; the IT32 clean clone (no gitignored files/) skipped 40 tests, about 31 of them only because the local full-text corpus, the retraction-watch snapshot and the pptx deposits are absent there; the pilot's checkout had the corpus and skipped 9; the 9 residual skips (page-adjudication artefact, pinned HTML artefact, case-sensitive-filesystem test, Stop hook not installed, saved text under files/ of another checkout) occur in both: environment, not regression, not equivalent suites; 2 NB-4 abstract-only receipts were the only staged events not in the ledger (by event_id): trial OK, recorded (ledger 1,340); worktree of the delegation session left alone pending its own check (P0 tail)"
     }
    ]
   },
@@ -28,8 +29,9 @@
    "steps": [
     {
      "step": "P1 Close NB-4 in the consumers: reconcile 2 abstract-only receipts by event_id, INV-15 recombination qualification (what the verified package supports only), note and view; PMID 35966957 and figures are the scientific session's",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "note": "receipts recorded; INV-15 now states the glial signal (neuron-targeted by design, small UMI counts, non-exclusive readings, Synapsin-Cre abstract-level sources, recombination in PV cells unknown, transcript/protein/activity/cell number/circuit function separate) and that a per-animal PV measurement carries its own recombination read-out; position unchanged (rank 6); contributor table gains a Cre/recombination column; views regenerated (3 passages, translations extended). NOT consumed: PMID 35966957 and the supplement figures (the scientific session verifies them) and any reporter percentage"
     }
    ]
   },
