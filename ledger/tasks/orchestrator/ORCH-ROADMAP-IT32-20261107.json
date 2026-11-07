@@ -1,0 +1,137 @@
+{
+ "_schema": "orchestrator-task-v1",
+ "TASK_ID": "ORCH-ROADMAP-IT32-20261107",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "P0",
+ "OBJECTIVE": "IT32: turn the interruptions diagnosed in IT31 into generative capacity (P0-P11, ordered queue). Continues IT31 residues (P4/P9 blocked on the investigations ceiling, now authorised in P6).",
+ "START_UTC": "2026-11-07T12:00:00Z",
+ "RESUME": {
+  "worktree": ".claude/worktrees/it32 (branch task/it32)",
+  "next_action": "P0 then P2 (poster text on this host), P1, P3.",
+  "note": "Zero spend; no e-mail or contact; four current files via BATCH_COMMIT; safe_push only. CI on 2bc9e3b0 was in progress at start."
+ },
+ "AUTHORISED_QUEUE_20261107": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P0 Close operational residues: CI on final SHA, stale pointers (stage S10, 1,600 cut), watch continuity",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "P1 Qualify the 2-of-14 reachability comparison: surfaces, resolvers, mention v consumed relation",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "P2 Recover the Nappi poster 014 from the NINDS programme PDF; depth honest; INV-15 limited to what it states",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "P3 Generative improvement: smallest link from a diagnosed interruption (vorinostat/INV-16 case), before/after",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "P4 Scientific batch package chosen from the brief, produced, independently verified, consumed",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "P5 Forward regeneration after the link without the compound name; criteria fixed before",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "P6 Full investigations queue explorable (short front summary kept)",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "P7 Small public reproducible case from a clean checkout",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P8": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "P8 Meaning preserved to the dashboard: targeted regression on the new path if a gap shows",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P9": {
+   "order": 10,
+   "steps": [
+    {
+     "step": "P9 Contributor entry point linked to an investigation",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P10": {
+   "order": 11,
+   "steps": [
+    {
+     "step": "P10 Sustainability: observed settings of real packages; radar/scouting from named gaps",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P11": {
+   "order": 12,
+   "steps": [
+    {
+     "step": "P11 Integration, learnings in place, cleanup, final report A-I",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}
