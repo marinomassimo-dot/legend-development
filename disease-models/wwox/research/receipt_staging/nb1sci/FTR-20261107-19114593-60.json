@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-07T18:05:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-07T18:12:38Z",
+ "event_id": "FTR-20261107-19114593-60",
+ "evidence_basis": [
+  "partial full text analysed (sections as listed in coverage)",
+  "verbatim_locator | proposition: Myc gain raises self-renewal and neurogenesis at the expense of glia in early cells and re-opens neurogenic capacity in late and adult cells | Results, Regulation of NSC differentiation by Myc and p19ARF | \"c-Myc and N-Myc significantly augmented differentiation of neurons at the expense of astrocytes and oligodendrocytes, whereas dn-Myc suppressed neurogenesis and stimulated gliogenesis\"",
+  "verbatim_locator | proposition: Late loss of c-Myc causes precocious astrocyte differentiation without a change in proliferation, death or neuron and oligodendrocyte differentiation | Results, Conditional inactivation of c-Myc late in development | \"conditional inactivation of c-Myc at a late embryonic stage causes precocious differentiation of astrocytes\"",
+  "verbatim_locator | proposition: p53 acts downstream of p19ARF | Results, p53 acts downstream of p19ARF | \"Myc affected the fate choice of NSCs in the absence of p53, and p53 modulated differentiation independently of Myc.\"",
+  "verbatim_locator | proposition: Early c-Myc loss gives a smaller forebrain, fewer mitotic cells and fewer neurons already before cell death appears | Results, Early neurogenic defect in c-Myc-/- mice | \"a substantial decrease of BrdU+ proliferative cells and TuJ1+ neurons was already evident at E9.5\"",
+  "results sections on gliogenic signal response and growth-factor regulation not read; discussion, methods and supplement not read"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb1_myc_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/nb1_myc_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC2606961 full-text XML fetched 2026-11-07 through Europe PMC REST fullTextXML; abstract, introduction, results (self-renewal, differentiation, p53, early and late c-Myc inactivation) and figure legends read; discussion, methods and supplement not read; figures not viewed; bytes not saved",
+ "study_id": {
+  "doi": "10.1083/jcb.200807130",
+  "pmid": "19114593"
+ },
+ "workflow": "NB-1 package (nb1_myc_20261107), label nb1-p, Stage 1: MYC in neural progenitors as driver, state, composition or compensation. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

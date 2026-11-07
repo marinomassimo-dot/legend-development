@@ -1,0 +1,44 @@
+{
+ "analysis_at": "2026-11-07T17:54:28Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "captions_only",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-07T17:55:58Z",
+ "event_id": "FTR-20261107-33914858-50",
+ "evidence_basis": [
+  "New question outside prior coverage: is there any Rosa26-tdTomato reporter panel, and what do Supplementary Fig 1C and 1D show for the Synapsin-Cre S-KO. Read this session: Methods and Results passages on the conditional lines (held print text), the supplementary legends of File009, and Supplementary Fig 1 on page 7 of File009, rendered with pdftoppm at 150 and 400 dpi and viewed as images with the Read tool. The coverage vocabulary has no partial value, so figures and supplementary stay captions_only: figure images were viewed ONLY for the panels of Supplementary Fig 1 (A to F, page 7); every other main and supplementary figure image was not viewed in this delta. Earlier receipts, including one with figures read (FTR-20261003-33914858-03), are not erased by this one.",
+  "Prior receipts of this PMID: FTR-20260923-33914858-01, FTR-20261003-33914858-02, FTR-20261003-33914858-03, FTR-20261029-33914858-01, FTR-20261029-33914858-04, FTR-20261101-33914858-01; prior_receipt names the latest by event time.",
+  "verbatim_locator | proposition: the reporter allele is stated once, in Methods, and is not shown in a panel I viewed | Methods | \"All conditional models contained the Rosa26-loxp-STOP-tdTomato reporter allele.\"",
+  "verbatim_locator | proposition: the S-KO cortical WWOX loss is marked on arrowed neurons of one representative field | Supplementary Fig 1 legend, C | \"showing loss of WWOX expression (shown with white arrows) in neurons of S-KO brain compared to S-Control at P17.\"",
+  "verbatim_locator | proposition: WWOX is reported intact in CC1-positive cells of S-KO corpus callosum | Supplementary Fig 1 legend, D | \"Intact levels of WWOX are maintained in oligodendrocytes (stained with CC1) in S-KO compared to SControl at P17.\"",
+  "verbatim_locator | proposition: the Cre line stock is the same as in the independent characterisation | Methods | \"Synapsin I-Cre [Stock: 003966, B6.Cg-Tg(Syn1-cre)671Jxm/J]\"",
+  "Image observations (viewed): panel C, S-KO WWOX channel, at least two NeuN-positive cells at the lower left carry visible signal and are not arrowed; panel D, WWOX signal in CC1-positive cells in both genotypes; panels E and F are Olig2-Cre and GFAP-Cre controls; panels A and B are Nestin-Cre. No S-KO astrocyte or parvalbumin panel. One field per panel, n of animals and of cells not stated, no counts. Not seeing a tdTomato panel is not evidence that none exists in unviewed images.",
+  "Text-layer search for tomato, Rosa26 and reporter over the print text, the browser-print text and File009, and over the shared strings of three xlsx supplements, found the reporter only in the Methods sentence."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb4_delta_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/nb4_delta_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": "FTR-20261101-33914858-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "686ebcd80ef3108290877c4b5f39a006100c7528a4408c6e74317124a35c8cab",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File009.pdf",
+ "study_id": {
+  "doi": "10.1093/brain/awab174",
+  "pmid": "33914858"
+ },
+ "workflow": "NB-4 delta (nb4_delta_20261107), check B, actor nb4d-p: Supplementary Fig 1 panels C and D and any tdTomato reporter panel. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
