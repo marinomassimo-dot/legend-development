@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-07T19:20:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-07T19:21:00Z",
+ "event_id": "FTR-20261107-26974342-70",
+ "evidence_basis": [
+  "partial full text analysed through section-directed passages; figures not viewed",
+  "verbatim_locator | proposition: E13 Phospho-Ser535 fell in Gsk3b-deleted neurons, injured or not. | Results > eIF2Bε is required for GSK3β-mediated effects on axon regeneration | \"phospho-eIF2Bε (Ser535) immunoreactivity was markedly reduced in Gsk3b-deleted RGCs\"",
+  "verbatim_locator | proposition: E14 Isoform specificity: Gsk3a deletion did not change phospho-Ser535 in these neurons. | Results > eIF2Bε is required for GSK3β-mediated effects on axon regeneration | \"Gsk3a deletion did not change eIF2Bε phosphorylation\"",
+  "verbatim_locator | proposition: E15 Gsk3b deletion raised new-protein labelling and the catalytically dead eIF2B epsilon largely negated it: the translation gain depended on eIF2B catalytic function in this system. | Results > eIF2Bε is required for GSK3β-mediated effects on axon regeneration | \"Gsk3b deletion resulted in a significant increase in OPP-labeled new synthesized proteins, which was largely negated by eIF2Bε E572A treatment\"",
+  "verbatim_locator | proposition: E16 The phospho-resistant mutant increased protein synthesis, i.e. translation can rise when the GSK3 site is removed in this neuron. | Results > Activation of eIF2Bε promotes axon regeneration | \"expression of eIF2Bε S535A significantly increased protein synthesis in RGCs compared with AAV-GFP injection as a control\"",
+  "verbatim_locator | proposition: E17 Activation did not improve survival; the functional gain was axon regeneration only, so one read-out of benefit does not extend to others. | Results > Activation of eIF2Bε promotes axon regeneration | \"AAV-eIF2Bε S535A injection did not change the rate of RGC survival in comparison with the control injection\"",
+  "verbatim_locator | proposition: E18 Phospho-Ser535 is higher in adult than in the developing retina: the GSK3 brake on eIF2B may depend on stage. | Results > eIF2Bε is required for GSK3β-mediated effects on axon regeneration | \"Phosphorylation of eIF2Bε at Ser535 in RGCs was significantly higher in adult mice in comparison with that in the developing retina\"",
+  "verbatim_locator | proposition: E19 The regenerative effect of S535A was not removed by rapamycin, a control that separates this branch from mTORC1. | Results > Activation of eIF2Bε promotes axon regeneration | \"was not affected by mTORC1 inhibition with rapamycin treatment\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/gsk3_eif2b_20261107/output/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC fullTextXML for the PMC record PMC4805534, fetched 2026-11-07; read: abstract, the Results subsections on eIF2B epsilon requirement and on eIF2B epsilon activation, and the Discussion; the other Results subsections, Methods and figure images not read (results marked not_read because only two of six subsections were read); bytes not saved",
+ "study_id": {
+  "doi": "10.7554/eLife.11903",
+  "pmid": "26974342"
+ },
+ "workflow": "GSK3 beta and eIF2B package (gsk3_eif2b_20261107), role producer, label gsk-p: question-driven reading of GSK3 beta, phospho-Ser535 eIF2B epsilon and protein synthesis in mouse retinal ganglion cells. Staged for the integrator; the ledger was not written by the preparing actor."
+}
