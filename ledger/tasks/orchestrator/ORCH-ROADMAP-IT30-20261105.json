@@ -7,24 +7,19 @@
  "OBJECTIVE": "Iteration 30: executable generative capacity, choice of the next searches (CLM pattern), continuity after compaction; durable ability to work and to change direction",
  "START_UTC": "2026-11-05T22:00:00Z",
  "RESUME": {
-  "worktree": ".claude/worktrees/it30 (branch task/it30), merged with main ea3c069f",
-  "it29_candidate": "landed as main 0845ed06; worktree and branch removed",
-  "it29_battery": "clone /home/desktop/battery_it29, log /home/desktop/battery_it29.log, verdict line 'REGRESSION VERDICT'; the earlier battery on 72a58bfb failed one test (legend above the fold at phone width), fixed in d099a5be",
-  "next_action": "1) freeze the candidate, run the battery in a clean clone, record the verdict (closure-only commit), merge main again if it moved, safe_push, read the 'Public release gate' run for the pushed SHA (annotations show failing suites now), then set IT29 OBJ_P17/OBJ_P18 DONE; 2) write MANDATE_BOUND: ORCH-ROADMAP-IT30-20261105 in a message of its own once the record is on main; 3) S9 and S11 (dashboard presentation of priority reasons, hypotheses v literature v missing premises, comparators) and S14 report remain",
-  "not_to_redo": "engine-dir recipe is in generation_it30_p5_20261105/README.md; carried_limits fix is committed (fa5eb2d2)",
-  "parallel_batch": "ORCH-SCIBATCH-DR-20261105 is COMPLETE; its worktree is removed; the IT30 Orchestrator is the integrator (S16)",
-  "pending_verification": "'Public release gate' on the pushed SHA (API /actions/runs?head_sha=<40 hex>; annotations /check-runs/<job id>/annotations)"
+  "note": "closed 2026-11-07; the open scientific items live in ORCH-ROADMAP-IT31-20261106"
  },
  "AUTHORISED_QUEUE_20261105C": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_S0": {
    "order": 1,
    "steps": [
     {
      "step": "S0 Close IT29: battery on d099a5be, closure record, ff-merge, safe_push, CI, served-site check, cleanup",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "note": "IT29 landed (main 0845ed06, gate PASS, workflow 'Publish the shareable view' success, served site verified in five languages). The workflow 'Public release gate' run 42126538327 on 0845ed06 FAILED at 'Regression tests' (GitHub gives no log without login). A clean-clone rerun of the same command (no files/, no catalogue cache, full history, CI python) on 0845ed06 gave PASS WITH SKIPS (208 targets, 40 skipped), so the cause is CI-specific; working hypothesis: browser layout depends on the runner's fonts and the legend sat 5 px under the fold. Fix in IT30: the translation note moves below the lead (legend bottom 585 px in every language, was 775), and the workflow now repeats the failing suites as annotations so the next red run is readable from outside. IT29 steps P16 and D0-D9 stay IN_PROGRESS until a green run on the landed fix"
+     "note": "IT29 landed (main 0845ed06, gate PASS, workflow 'Publish the shareable view' success, served site verified in five languages). The workflow 'Public release gate' run 42126538327 on 0845ed06 FAILED at 'Regression tests' (GitHub gives no log without login). A clean-clone rerun of the same command (no files/, no catalogue cache, full history, CI python) on 0845ed06 gave PASS WITH SKIPS (208 targets, 40 skipped), so the cause is CI-specific; working hypothesis: browser layout depends on the runner's fonts and the legend sat 5 px under the fold. Fix in IT30: the translation note moves below the lead (legend bottom 585 px in every language, was 775), and the workflow now repeats the failing suites as annotations so the next red run is readable from outside. IT29 steps P16 and D0-D9 stay IN_PROGRESS until a green run on the landed fix",
+     "evidence": "CI 'Public release gate' success on main 25a01f7a (run 42322393022); served site HTTP 200 in en/it/fr/es/de with the Foundation link; verified 2026-11-07"
     }
    ]
   },
@@ -44,8 +39,9 @@
    "steps": [
     {
      "step": "S2 IT29 residues re-checked: manual table v raw converter; hyperexcitability case not consumable; 1,600 cap (DONE fa5eb2d2); stage reproducibility (DONE, recipe in generation_it30_p5); independence by experimental origin",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "SUPERSEDED, not completed here: residues carried to ORCH-ROADMAP-IT31-20261106 P3 (only the premises that change the chosen case)"
     }
    ]
   },
@@ -121,8 +117,9 @@
    "steps": [
     {
      "step": "S9 Emerging hypotheses visible with chain, comparators, priority v strength; check penalty for added pharmacology",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "SUPERSEDED, not completed here: carried to ORCH-ROADMAP-IT31-20261106 P7"
     }
    ]
   },
@@ -142,9 +139,10 @@
    "steps": [
     {
      "step": "S11 Dashboard: priority, chains, counter-evidence; five languages; phone and keyboard; served site",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "note": "legend above the fold in all five languages on a phone (commit 0672016e, test added); not yet done: priority reasons, hypothesis/known/missing premise distinction, comparator display, browser check of the new card text"
+     "note": "legend above the fold in all five languages on a phone (commit 0672016e, test added); not yet done: priority reasons, hypothesis/known/missing premise distinction, comparator display, browser check of the new card text",
+     "evidence": "SUPERSEDED, not completed here: carried to ORCH-ROADMAP-IT31-20261106 P9"
     }
    ]
   },
@@ -164,9 +162,10 @@
    "steps": [
     {
      "step": "S13 Tests, battery on exact SHA, integration, push, CI, cleanup",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "note": "battery on the exact frozen SHA e90ad3fe93224e2debeacdd604dd332ce484eac0, clean clone imitating the CI (no files/, no catalogue cache, full history): REGRESSION VERDICT PASS WITH SKIPS (210 targets, 40 skipped). History kept: runs on 94c77107 and 1cbf4f42 returned FAIL (title cache, ranking not regenerated; depth downgrade by a later shallow receipt, vigabatrin-card assertions missing from the pertinence table, a multi-source observation with a list in the pmid field); each fixed in the next candidate and re-run on its own SHA. This record commit is closure-only; the battery is not attributed to it. Landing, push, CI on the pushed SHA and the served-site check are still to do; the publication gate then refused the push (a record block holding the word biallelic beside two exact variants: needs.json observation O4 genotype); the wording was changed to class level and the gate returned PASS. That one-field change after the battery is not covered by the battery: it was checked by the gate, check_needs, the ranking and view checks and test_ranking_it8, and the full suite runs on the pushed SHA in CI; CI on 97d96ab9 failed in test_repurposing_view only (the chain-node keyboard test, errors in the four classes that inherit it; annotations, now readable, named it); fix in fe506325 (the test waits for its nodes and describes the page on failure, the browser start waits up to 60 s, the browser profile is owned and removed by Cdp.close with a bounded loud retry); test_repurposing_view alone on fe506325 in a clean clone: 211 tests OK. The full suite for the pushed SHA is the CI run"
+     "note": "battery on the exact frozen SHA e90ad3fe93224e2debeacdd604dd332ce484eac0, clean clone imitating the CI (no files/, no catalogue cache, full history): REGRESSION VERDICT PASS WITH SKIPS (210 targets, 40 skipped). History kept: runs on 94c77107 and 1cbf4f42 returned FAIL (title cache, ranking not regenerated; depth downgrade by a later shallow receipt, vigabatrin-card assertions missing from the pertinence table, a multi-source observation with a list in the pmid field); each fixed in the next candidate and re-run on its own SHA. This record commit is closure-only; the battery is not attributed to it. Landing, push, CI on the pushed SHA and the served-site check are still to do; the publication gate then refused the push (a record block holding the word biallelic beside two exact variants: needs.json observation O4 genotype); the wording was changed to class level and the gate returned PASS. That one-field change after the battery is not covered by the battery: it was checked by the gate, check_needs, the ranking and view checks and test_ranking_it8, and the full suite runs on the pushed SHA in CI; CI on 97d96ab9 failed in test_repurposing_view only (the chain-node keyboard test, errors in the four classes that inherit it; annotations, now readable, named it); fix in fe506325 (the test waits for its nodes and describes the page on failure, the browser start waits up to 60 s, the browser profile is owned and removed by Cdp.close with a bounded loud retry); test_repurposing_view alone on fe506325 in a clean clone: 211 tests OK. The full suite for the pushed SHA is the CI run",
+     "evidence": "CI 'Public release gate' success on main 25a01f7a (run 42322393022); served site HTTP 200 in en/it/fr/es/de with the Foundation link; verified 2026-11-07"
     }
    ]
   },
@@ -175,8 +174,9 @@
    "steps": [
     {
      "step": "S14 Final report A-K",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "SUPERSEDED, not completed here: final report is IT31 section A-I"
     }
    ]
   },

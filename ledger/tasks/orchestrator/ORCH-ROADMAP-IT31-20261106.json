@@ -7,9 +7,9 @@
  "OBJECTIVE": "Next interaction: scientific consolidation, pharmacological generation, open questions, sustainable operation (P0-P11, ordered queue, small complete results).",
  "START_UTC": "2026-11-06T23:00:00Z",
  "RESUME": {
-  "worktree": ".claude/worktrees/it31 (branch task/it31)",
-  "next_action": "Wait for the CI result of the pushed head; do not push over it. Meanwhile P3 verification and P4 on the worktree; land only after CI is green or its failure is classified.",
-  "note": "Zero spend; no e-mail; four current files via BATCH_COMMIT only; safe_push only."
+  "worktree": ".claude/worktrees/it31b (branch task/it31b)",
+  "next_action": "P7 first (generation: contrasting cases, reverse test), then P4 investigations; P1 delegate use inside the P7 package; P9 after P7/P4 output exists.",
+  "note": "Zero spend; no e-mail; four current files via BATCH_COMMIT; safe_push only."
  },
  "AUTHORISED_QUEUE_20261106B": {
   "MANDATE_STATE": "OPEN",
@@ -18,9 +18,9 @@
    "steps": [
     {
      "step": "P0 Baseline: fetch, CI per exact SHA, site, worktrees",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "note": "bb4cda40 CI red (chain-node test, Chromium endpoint did not come up on the runner; annotations read); another session pushed 4c20b2d8 (bounded browser start with stderr in the error), run 42312039716 in progress"
+     "evidence": "main 25a01f7a = origin; CI success (42322393022); site 200 x5; it30/it31 worktrees, branches and battery clone removed after ancestry check; IT29/IT30 closed"
     }
    ]
   },

@@ -14,7 +14,7 @@
  ],
  "STOP_LOG": [],
  "AUTHORISED_QUEUE_20261105B": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P1": {
    "order": 1,
    "steps": [
@@ -196,9 +196,9 @@
    "steps": [
     {
      "step": "P16 tests, battery, integration, push, CI, cleanup",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "battery on the exact frozen SHA d099a5be465f91fe7dc8c7f108751fd34f3a242d: REGRESSION VERDICT PASS WITH SKIPS (208 targets, 8 skipped); the earlier run on 72a58bfb failed one test (legend above the fold at phone width), fixed in d099a5be; push, CI, served-site check and cleanup still to do"
+     "evidence": "CI 'Public release gate' success on main 25a01f7a (run 42322393022); served site HTTP 200 in en/it/fr/es/de with the Foundation link; verified 2026-11-07"
     }
    ]
   },
@@ -207,9 +207,9 @@
    "steps": [
     {
      "step": "D0-D9 public dashboard integration (visual hierarchy, entry paths, interactions, graph, cards and comparison, languages, accessibility, performance, README entry points, integrity, browser verification, publication); parallel to the generative path; the frozen battery candidate is never modified, the package lands in the next candidate",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "queued 2026-11-05 on the operator integration message"
+     "evidence": "CI 'Public release gate' success on main 25a01f7a (run 42322393022); served site HTTP 200 in en/it/fr/es/de with the Foundation link; verified 2026-11-07"
     }
    ]
   }

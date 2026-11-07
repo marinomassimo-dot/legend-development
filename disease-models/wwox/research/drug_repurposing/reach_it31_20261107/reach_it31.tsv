@@ -1,0 +1,15 @@
+compound	stage_proposals_it21	handed_over	case1_comparison	conditional_questions	investigations	cards
+vorinostat	1	0	0	0	0	0
+phenobarbital	1	0	0	0	0	1
+bumetanide	0	0	0	1	0	1
+rapamycin	0	0	0	1	0	0
+vigabatrin	0	0	0	1	1	2
+benztropine	0	0	1	1	0	1
+clemastine	0	0	1	1	0	1
+clonazepam	0	0	0	1	0	0
+ethosuximide	0	0	0	0	1	2
+levetiracetam	0	0	0	0	0	0
+perampanel	0	0	0	0	0	3
+ifenprodil	0	0	1	0	0	1
+memantine	0	0	0	0	0	3
+efonidipine	0	0	0	0	1	0
