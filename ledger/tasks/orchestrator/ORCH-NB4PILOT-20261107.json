@@ -1,0 +1,67 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-NB4PILOT-20261107",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Parallel pilot: NB-4 (reading of the Wwox signal in glia-annotated nuclei of GSE158684 for INV-15), one package, one producer and one independent verifier under framework/protocols/delegation_budget.md; measure the observable cost.",
+ "START_UTC": "2026-11-07T00:00:00Z",
+ "BASELINE": "development/main 2bc9e3b0efb3a2a392c66b63a2ba7d0a633b348d (fetched 2026-11-07); local main c448b899 (adds the unpushed IT32 mandate record); worktree .claude/worktrees/nb4-pilot-20261107 from local main. task/it32 and task/it32p12 are read only: they did not start NB-4 (their session evaluation lists it as not started); the contributor entry point for INV-15 exists only on task/it32 (not landed).",
+ "RESUME": "Package folder disease-models/wwox/research/drug_repurposing/nb4_gse158684_glia_20261107/ (BRIEF.md, repro/, output/, verify/). Producer legend-delegate sonnet/medium, then census, then verifier legend-delegate sonnet/high on triples only.",
+ "DECISIONS_TAKEN": [
+  "The brief's wait-for-main-session rule is superseded for this pilot by the operator's explicit authorisation; isolation, scientific discipline and delegation limits stay.",
+  "Most of the descriptive work behind NB-4 exists (IT14 p1a, p1b): glial fold, ambient test, composition, four rivals, an independent verdict (row 8 CONFIRMED). Re-run of identity_checks.py on 2026-11-07, 4.6 s: wwox_glia_ambient, deposit_prefilter_qc and sex_genes_by_arm byte-identical to the committed tables. The distinct remaining sub-question is the recombination profile of the Synapsin I-Cre line (named by p1a as not looked up), plus the current raw-read status and a reconciliation of the six explanations; nothing else is reopened."
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [
+  "No stop for a reserved act."
+ ],
+ "DEFAULTS_TAKEN": [
+  "Condition: the operator fixed the settings (producer sonnet/medium, verifier sonnet/high) and the two-new-source limit. Default: no turn or output ceiling is available as a runtime parameter, so the brief's scope is an operational constraint, not a technical cap. Why safe: reversible, no shared file touched."
+ ],
+ "AUTHORISED_QUEUE_20261107": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_S0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "S0 baseline, de-duplication, reproduction of the existing numbers",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "repro/ byte-identical"
+    }
+   ]
+  },
+  "OBJ_S1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "S1 producer, census",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_S2": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "S2 independent verifier on the decisive propositions, targeted correction",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_S3": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "S3 consumption note, validation, landing, worktree removal",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}
