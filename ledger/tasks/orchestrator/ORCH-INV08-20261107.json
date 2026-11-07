@@ -9,9 +9,9 @@
  "BASELINE": "development/main ce121d5814b8c83c65721c0709ac4ec2554a5011 (fetched 2026-11-07); same worktree and branch as ORCH-TTYPE-20261107. Retraction check done by the Orchestrator: PMID 21690096 and 28159761 occur in no file of main, of this branch or of task/it34 (git grep, excluding the receipt ledger); no Fyn or beta-TrCP chain in L01, the IT11 NRF2 README or the IT22 redox README; no consumer needs the correction.",
  "CURRENT_PACKAGE": {
   "id": "R-INV08",
-  "state": "brief written; queued behind INV-06 verifier and INV-07",
-  "delegate_active": "none",
-  "updated": "2026-11-07T23:30:00Z"
+  "state": "producer running (legend-delegate, sonnet/medium)",
+  "delegate_active": "nr-p",
+  "updated": "2026-11-08T00:45:00Z"
  },
  "RESUME": "Folder drug_repurposing/nrf2_inv08_20261107/ (BRIEF.md, output/). Order: producer, census, verifier, correction.",
  "DECISIONS_TAKEN": [
