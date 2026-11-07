@@ -7,12 +7,10 @@
  "OBJECTIVE": "Next interaction: scientific consolidation, pharmacological generation, open questions, sustainable operation (P0-P11, ordered queue, small complete results).",
  "START_UTC": "2026-11-06T23:00:00Z",
  "RESUME": {
-  "worktree": ".claude/worktrees/it31b (branch task/it31b)",
-  "next_action": "Commit, battery on the exact frozen SHA, merge main, safe_push, follow CI; then P6 fetch of the public abstract, P9 dashboard priority wording, P10 radar check; final report A-I.",
-  "note": "Zero spend; no e-mail; four current files via BATCH_COMMIT; safe_push only."
+  "note": "paused; see STOP_NOTE; next batch brief in next_batch_it31_20261107/BRIEF.md"
  },
  "AUTHORISED_QUEUE_20261106B": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "PAUSED",
   "OBJ_P0": {
    "order": 1,
    "steps": [
@@ -20,7 +18,7 @@
      "step": "P0 Baseline: fetch, CI per exact SHA, site, worktrees",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "main 25a01f7a = origin; CI success (42322393022); site 200 x5; it30/it31 worktrees, branches and battery clone removed after ancestry check; IT29/IT30 closed"
+     "evidence": "main 25a01f7a = origin; CI success (42322393022); site 200 x5; it30/it31 worktrees, branches and battery clone removed after ancestry check; IT29/IT30 closed; final: main f031eddd, battery PASS WITH SKIPS (211 targets, 40 skipped) on b2ccd6c4 (e8b3ad69 failed one test, fixed), CI success, site 200 x5"
     }
    ]
   },
@@ -62,9 +60,9 @@
    "steps": [
     {
      "step": "P4 Investigations as concrete open questions, stable ids, 115-row map reconciled",
-     "status": "IN_PROGRESS",
+     "status": "BLOCKED",
      "owner": "orchestrator",
-     "note": "INV-15 (parvalbumin interneurons, premise measurement) and INV-16 (class IIa catalytic inhibition v knockdown at SLC2A1, conditional) added to investigations with stable ids, rank 6 and 7, below the ten-row published line; five-language passages checked. Map of 115: 64 scientific rows, 51 technical or monitor; the remaining uncovered scientific rows are listed in next_batch_it31_20261107/BRIEF.md or have INV cover. Not done: promoting rows above the line"
+     "note": "INV-15 (parvalbumin interneurons, premise measurement) and INV-16 (class IIa catalytic inhibition v knockdown at SLC2A1, conditional) added to investigations with stable ids, rank 6 and 7, below the ten-row published line; five-language passages checked. Map of 115: 64 scientific rows, 51 technical or monitor; the remaining uncovered scientific rows are listed in next_batch_it31_20261107/BRIEF.md or have INV cover. Not done: promoting rows above the line | Impediment: promotion of INV-15/INV-16 above the ten-row published line is a design decision on the ceiling; not taken here"
     }
    ]
   },
@@ -116,9 +114,9 @@
    "steps": [
     {
      "step": "P9 Dashboard priorities and filters",
-     "status": "TODO",
+     "status": "BLOCKED",
      "owner": "orchestrator",
-     "note": "views regenerated with INV-15/INV-16 in five languages (215 view tests, audit-shareable PASS); both rows sit below the ten-row published line by the existing ceiling, so the priority wording on the front page is unchanged. Not done: a front-page presentation of the new investigations; the ceiling is a design decision for the next package"
+     "note": "views regenerated with INV-15/INV-16 in five languages (215 view tests, audit-shareable PASS); both rows sit below the ten-row published line by the existing ceiling, so the priority wording on the front page is unchanged. Not done: a front-page presentation of the new investigations; the ceiling is a design decision for the next package | Impediment: front-page presentation of new investigations depends on the same ceiling decision"
     }
    ]
   },
@@ -143,6 +141,7 @@
      "evidence": "next_batch_it31_20261107/BRIEF.md: four packages NB-1..NB-4 from the investigations and the map, not started (capacity gate)"
     }
    ]
-  }
+  },
+  "STOP_NOTE": "Stop condition reached 2026-11-07: remaining work is a design decision (investigations ceiling) and the prepared batch next_batch_it31_20261107/BRIEF.md, which needs capacity and a new mandate. Landed f031eddd, CI success."
  }
 }
