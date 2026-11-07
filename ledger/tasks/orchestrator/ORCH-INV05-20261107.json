@@ -9,15 +9,18 @@
  "BASELINE": "development/main ce121d5814b8c83c65721c0709ac4ec2554a5011 (fetched 2026-11-07 after the landing of the GSK3-eIF2B task); same worktree and branch as ORCH-TTYPE-20261107 (.claude/worktrees/ttype-20261107, task/ttype-20261107) to land the queued packages with one battery.",
  "CURRENT_PACKAGE": {
   "id": "N-INV05",
-  "state": "producer running (legend-delegate, sonnet/medium)",
-  "delegate_active": "nm-p",
-  "updated": "2026-11-07T22:15:00Z"
+  "state": "complete; lands with ORCH-TTYPE-20261107",
+  "delegate_active": "none",
+  "updated": "2026-11-07T23:00:00Z"
  },
  "RESUME": "Folder drug_repurposing/nmda_inv05_20261107/ (BRIEF.md, output/). Order: producer, census, verifier, correction.",
  "DECISIONS_TAKEN": [
   "Queued by the operator beside the running scientific work; one delegate at a time; settings as before (producer sonnet/medium, verifier sonnet/high, legend-delegate)."
  ],
- "DELEGATIONS": [],
+ "DELEGATIONS": [
+  "N producer nm-p: asked sonnet/medium, read back claude-sonnet-5-5 x30, medium x30; birth 17,337; 30 turns; ~6 min; output 37,817; cache written 105,245; cache read 1,984,517; peak 113,730; completed README (about 1,170 words, over the 1.5-page cap, not trimmed), evidence (25 rows), probes (7), experiment X0-X6, queries Q01-Q16, 4 staged receipts (validated with DOI check; 3 abstract_only, 1 partial_fulltext_read); Stage 1 only (4 sources); Full texts of 38529699, 39970743 and 24101301 unreachable (403/reCAPTCHA/500; not worked around)",
+  "N verifier nm-v: asked sonnet/high, read back claude-sonnet-5-5 x(see cost note), high; blind; 25 rows (15 decisive + sample): 20 supported, 3 overshoot, 1 undershoot, 1 unverifiable; H1 clause 2 withdrawn; INCIDENT: after curl met a reCAPTCHA on the PMC page the verifier read the page through WebFetch (a different tool) and says so; reads are fragment-level, flagged, and the next brief tells delegates to stop on any challenge; corrections by the Orchestrator adopting the audit's wording"
+ ],
  "ESCALATIONS": [],
  "STOP_LOG": [
   "No stop for a reserved act."
@@ -32,7 +35,7 @@
    "steps": [
     {
      "step": "producer, census, verifier on decision-changing links, targeted correction, consumer note",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator"
     }
    ]

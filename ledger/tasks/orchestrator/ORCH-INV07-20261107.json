@@ -1,0 +1,41 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-INV07-20261107",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Queued targeted package (operator, 2026-11-07): INV-07, identify the metabolic bottleneck without anticipating treatment (pyruvate oxidation, lactate, secondary response); reuse gse156243 predictions, IT24 P4, cards E03 I01 E04, Lucas-Clarke; correct the fly reading (PMID 42909904); qualify PMID 35984507 and 16476929; minimum discriminating comparison.",
+ "START_UTC": "2026-11-07T22:30:00Z",
+ "BASELINE": "development/main ce121d5814b8c83c65721c0709ac4ec2554a5011; same worktree and branch as ORCH-TTYPE-20261107. Receipts exist for 42909904 and 35984507; none for 16476929.",
+ "CURRENT_PACKAGE": {
+  "id": "I07",
+  "state": "brief written; queued behind INV-05 verifier and INV-06",
+  "delegate_active": "none",
+  "updated": "2026-11-07T22:30:00Z"
+ },
+ "RESUME": "Folder drug_repurposing/metabolic_inv07_20261107/ (BRIEF.md, output/). Order: producer, census, verifier, correction.",
+ "DECISIONS_TAKEN": [
+  "Queued by the operator beside the running work; one delegate at a time; settings as before."
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [
+  "No stop for a reserved act."
+ ],
+ "DEFAULTS_TAKEN": [
+  "Condition: settings not restated. Default: as before. Why safe: reversible; no shared file touched."
+ ],
+ "AUTHORISED_QUEUE_20261107F": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "producer, census, verifier on decision-changing links, targeted correction",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}

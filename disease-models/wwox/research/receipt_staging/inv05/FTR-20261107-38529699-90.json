@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-07T22:09:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-07T22:10:00Z",
+ "event_id": "FTR-20261107-38529699-90",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: radiprodil lowered onset and severity of audiogenic seizures dose-dependently in GluN2A N615S mice | Abstract | \"Radiprodil significantly and dose-dependently reduced the onset and severity of AGS in Grin2amice.\"",
+  "verbatim_locator | proposition: efficacy was greater in females than in males | Abstract | \"radiprodil was more effective in female versus male mice\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nmda_inv05_20261107/output/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record (abstract) read 2026-11-07; full text not reachable by an open route (publisher page returned an access challenge, no PMC copy, Europe PMC reports not open access); bytes not saved",
+ "study_id": {
+  "doi": "10.1111/bph.16361",
+  "pmid": "38529699"
+ },
+ "workflow": "nm-p INV-05: NMDA modulation, Stage 1 precedent"
+}
