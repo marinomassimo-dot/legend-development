@@ -71,6 +71,24 @@
    "status": "conditional_hypothesis",
    "status_label": "conditional hypothesis: the role of the observed change is unresolved; kept as a research question and never presented as qualified",
    "why_now": "The HDAC5 to SLC2A1 thread rests on one muscle knockdown observation and has been carried as a limit, not a veto; the premise measurement it needs is the one open step of the IT28 challenge (WO-30). It sits at rank 7 because no neural line with the constructs is held and the readout does not change another row today."
+  },
+  {
+   "chembl_ids": "",
+   "decisive_uncertainty": "Branch A, compensatory Ih: blocking it worsens or leaves bursts; weakened if bursts fall. Branch B, pro-excitatory Ih through the depolarised resting potential: blocking it lowers bursts at matched membrane potential; weakened if bursts do not fall. Branch C, bystander: no effect on bursts although sag falls; weakened by any burst change. The sag itself must first be shown to be Ih (sensitive to the blocker), and a blocker that shifts the resting potential acts on the premises of A and B at once.",
+   "direction_state": "unresolved",
+   "evidence_available": "WWOX-system, one preparation read in full and re-extracted (PMID 34634460, Table 1 and Figure 6): resting potential -79.25, -75.51, -73.62 mV and sag 1.18, 2.04, 2.57 mV grade with gene dose, input resistance saturates at one allele, rebound is larger only in the knockout, and bursts occur in 36 of 42 knockout, 4 of 23 heterozygote and 0 of 11 wild-type slices; the authors attribute the hyperexcitability to the depolarised resting potential and cite discordant Ih-blocker precedents, including worsening of 4-AP events. Compound side: Ih-acting tools exist in the catalogue (a clinically used HCN blocker and several research blockers, identities resolved), found by the need search without naming any; their cellular potency in a cortical pyramidal neuron and their selectivity among HCN isoforms were not assessed here. No Ih-blocker experiment in a Wwox-deficient preparation is recorded in the entries read.",
+   "evidence_depth": "Conditional hypothesis: the observations are verified, the sign of the intervention is open in all three branches, and no Ih-blocker experiment exists in the system. (no ranked unit, so no evaluation depth applies: this is not a depth of zero)",
+   "feasibility": "Ex vivo slice electrophysiology in an existing Wwox neuron-deleted line; tool compounds only; no brain-exposure statement is carried here and none is implied for any clinically used member.",
+   "intervention": "Ih (HCN) channel blockers of at least two chemotypes as a tool arm in Wwox-deficient cortical slices, read with sag, resting potential and burst incidence in the same slices",
+   "inv_id": "INV-18",
+   "next_test": "In knockout, heterozygote and wild-type slices: sag, resting potential, input resistance, rebound and burst incidence before and after two Ih blockers of different chemotypes (the second so that an off-target action is not read as Ih), with a current-clamp step that matches the resting potential, and a voltage-clamp read of the blocker-sensitive current in a subset of cells; animals, not cells, are the replicates.",
+   "novelty_perimeter": "Queried on 2026-11-07: the needs table (no HCN target in any need before this one), the IT14 P3 package, the investigations table, the stage proposals S12 and S13 (no HCN main target or chain) and the catalogue by target and by id; a search of this module, not a statement about the literature.",
+   "origin_class": "known_in_wwox",
+   "origin_detail": "Known in the WWOX system: the observations and the Ih discussion are in PMID 34634460; the rival 'intrinsic state' and its Ih arm were written in IT14 P3 and are consumed here, for the first time, by a need (NEED-INTRINSIC-EXCITABILITY) and an investigation row.",
+   "question": "In Wwox-deficient layer II/III slices, does blocking Ih lower burst incidence, raise it, or leave it unchanged, when sag, resting potential and input resistance are read in the same cells?",
+   "status": "conditional_hypothesis",
+   "status_label": "conditional hypothesis: the role of the observed change is unresolved; kept as a research question and never presented as qualified",
+   "why_now": "The module holds a graded sag, a depolarised resting potential and a larger rebound with no consumer, and the heterozygote shows the same intrinsic changes yet rarely bursts. Three readings give opposite signs for the same drug class, so no Ih-directed compound can be ranked until one measurement separates them."
   }
  ],
  "deepened_cases": [
@@ -1688,6 +1706,10 @@
    {
     "inv_id": "INV-17",
     "movement": "new in IT21 (no IT20 position): New row, enters at rank 7 below the ten-row line. Reasons: it gates a large share of the generated proposals. Not rewarded: novelty. | below the line this evaluation: rank 7 does not fit the ten-row published ceiling"
+   },
+   {
+    "inv_id": "INV-18",
+    "movement": "new in IT21 (no IT20 position): New row, enters at rank 7 below the ten-row line. Reasons: it turns an observation that no consumer used into a discriminating tool experiment with three opposite-sign branches. Not rewarded: novelty. | below the line this evaluation: rank 7 does not fit the ten-row published ceiling"
    }
   ],
   "ceiling_rule": "risk-flagged and human-report rows are not displaced by conditional probes",
@@ -2759,6 +2781,25 @@
     "need_direction": "uncertain",
     "rows": 23
    },
+   "NEED-INTRINSIC-EXCITABILITY": {
+    "abstained_by_class": {
+     "need_direction_not_evaluable": 29
+    },
+    "by_label": {
+     "abstained": 29
+    },
+    "by_target_level": {
+     "gene_listing": {
+      "abstained": 5
+     },
+     "single_protein": {
+      "abstained": 24
+     }
+    },
+    "group_records_held_back": [],
+    "need_direction": "uncertain",
+    "rows": 29
+   },
    "NEED-ISR-ATTENUATION": {
     "abstained_by_class": {
      "need_direction_not_evaluable": 13
@@ -2913,32 +2954,36 @@
    },
    "NEED-SEIZURE-CONTROL-SYMPTOMATIC": {
     "abstained_by_class": {
-     "action_not_stated": 50,
+     "action_not_stated": 109,
      "coupling_not_measured": 32,
+     "no_coupling_row": 439,
      "republished_claim_level_not_carried": 1
     },
     "by_label": {
-     "abstained": 83,
+     "abstained": 581,
      "consistent": 4
     },
     "by_target_level": {
      "gene_listing": {
-      "abstained": 54
+      "abstained": 300
+     },
+     "protein_complex": {
+      "abstained": 3
      },
      "protein_complex_group": {
       "abstained": 10
      },
      "protein_family": {
-      "abstained": 9
+      "abstained": 200
      },
      "single_protein": {
-      "abstained": 10,
+      "abstained": 68,
       "consistent": 4
      }
     },
     "group_records_held_back": [],
     "need_direction": "down",
-    "rows": 87
+    "rows": 585
    },
    "NEED-T-TYPE-CALCIUM": {
     "abstained_by_class": {
@@ -5142,7 +5187,7 @@
    "notes": "broad recovery lists one item because only gene addition has been tested in a WWOX system: this is a statement about test coverage, not about the field | Graph coverage (IT11 P2.1): gene addition is out of the method (a modality, not a molecule), so the graph is silent on it by construction; its WWOX-system result is not a graph result. The five phenotype leads are development inputs, not an independent validation.",
    "objective": "Broad, durable functional recovery (the evidence is prevention or early-window in a null mouse; recovery after onset is not shown)",
    "origin": "known track from before IT9",
-   "pathways_needs": "Systemic metabolic decompensation [C2; effect_observed_in_wwox_system]; Restore WWOX protein in neurons by gene addition [F1; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
+   "pathways_needs": "Systemic metabolic decompensation [C2; effect_observed_in_wwox_system]; Restore WWOX protein in neurons by gene addition [F1; effect_observed_in_wwox_system] -- 2 of 24 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 1,
    "sources_pmids": [
     "33914858",
@@ -5190,7 +5235,7 @@
    "notes": "the one outside-WWOX harm row is class-level (other T-type blockers lowered progenitor viability; ethosuximide was not tested), not ethosuximide data | Graph coverage (IT11 P2.1): the generation graph has no way to speak about this molecule: its signed targets (the T-type channel genes CACNA1G, CACNA1H, CACNA1I) are sink or isolated nodes of the signed network, so no seed set can reach them. The absence of a graph row is not evidence about ethosuximide, and the lead was a development input of the phenotype-first path, not an independent validation of the graph. | IT28 (compare_it28_p9_20261105): the added value over the untreated control is an interaction-tested late-phase effect only; the comparison that would attribute an effect to T-type block is one specificity design (both genotypes treated, concurrent control, drug-by-genotype term) and then a single attribution arm, either a nanomolar pan-Cav3 blocker with measured brain exposure or a Cacna1g occlusion arm. A second antiseizure agent serves as a nonspecificity reference only; its sign in a Wwox pup assay is UNKNOWN. | IT29 (phenotype_first_it29_20261105/case2_lesion_conditional_it29.tsv): no corroboration in epilepsy-model screens of other genotypes; the T-type thread keeps its place on the single pup experiment",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
-   "pathways_needs": "Seizure and spasm control as a symptom-level need [F2; effect_observed_in_wwox_system]; Ethosuximide sensitivity of provoked seizure in Wwox loss [F2; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
+   "pathways_needs": "Seizure and spasm control as a symptom-level need [F2; effect_observed_in_wwox_system]; Ethosuximide sensitivity of provoked seizure in Wwox loss [F2; effect_observed_in_wwox_system] -- 2 of 24 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 2,
    "sources_pmids": [
     "24953239",
@@ -5233,7 +5278,7 @@
    "notes": "Graph coverage (IT11 P2.1, correcting IT10): lithium IS a seed-specific 'mimics' hit in the Q6 set (a gene-expression seed in a human system, rank 67 to 70 of 232), which IT10 missed because it read a truncated candidate list. That hit is about an expression seed and not about the lead's seizure readout: the seizure lowering also occurs in wild-type mice, and the chain rests on two network edges whose neural meaning is unverified (named in the IT11 P2.1 package). It is not support for lithium. For the neurogenic window lithium is a risk flag (Wnt activation in the same direction as the knockout MYC rise; IT11 P2.2, candidate M07); the G01 seizure lead is untouched. A development input, not an independent validation.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
-   "pathways_needs": "GSK3beta de-repression [P3; card_inference_by_mechanism_no_catalogue_row]; Seizure and spasm control as a symptom-level need [F2; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
+   "pathways_needs": "GSK3beta de-repression [P3; card_inference_by_mechanism_no_catalogue_row]; Seizure and spasm control as a symptom-level need [F2; effect_observed_in_wwox_system] -- 2 of 24 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 3,
    "sources_pmids": [
     "22193544",
@@ -5275,7 +5320,7 @@
    "notes": "Graph coverage (IT11 P2.1): the graph returns d-APV only as a direct hit on the GRIN2C transcript in the Q4 direct-search arm (the earlier 'zero score' was the indirect part only); the GRIN2A, GRIN2B and GRIN2D subunits have outgoing edges but no chain reaches a Q4 seed. The hit concerns a mouse transcript, the lead's result is a bursting readout in slices: a level mismatch, not a confirmation. A development input, not an independent validation. | IT13 P3b (2026-10-31): d-APV measured necessity of NMDAR activity for bursting in a neuron-deleted mouse slice (acute, reversible, no wild-type burst control); it is a different system and measure from the only human firing recovery (WWOX add-back in organoids, PMID 42397075), which has no compound arm. No compound or other pharmacological intervention has a firing readout in a human WWOX-deficient neural system (the gene add-back is the only intervention that has).",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
-   "pathways_needs": "Excitatory network gain and bursting [F2; effect_observed_in_wwox_system] -- 1 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
+   "pathways_needs": "Excitatory network gain and bursting [F2; effect_observed_in_wwox_system] -- 1 of 24 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 4,
    "sources_pmids": [
     "10541229",
@@ -5329,7 +5374,7 @@
    "notes": "Graph coverage (IT11 P2.1): the graph cannot return A51 because the name has no catalogue identity (it exists only in the paper); the lookalike BTX-A51 is not attached. A development input, not an independent validation. IT11 P2.2 restatement: the authors read the A51 result as MYC-driven impairment of differentiation (NEUN-positive up, SATB2 mildly up, CTIP2 unchanged); the arm is thin (multi-kinase compound, knockout organoids only, no wild-type-plus-compound group, supplement not available locally), so no candidate is strengthened by it; role of the MYC change stays unknown.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
-   "pathways_needs": "MYC elevation and progenitor-state shift in WWOX-deficient radial glia [C2; effect_observed_in_wwox_system]; Wnt/beta-catenin readout elevated in WWOX-deficient organoids [P3; card_inference_by_mechanism_no_catalogue_row] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
+   "pathways_needs": "MYC elevation and progenitor-state shift in WWOX-deficient radial glia [C2; effect_observed_in_wwox_system]; Wnt/beta-catenin readout elevated in WWOX-deficient organoids [P3; card_inference_by_mechanism_no_catalogue_row] -- 2 of 24 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 5,
    "sources_pmids": [
     "34268881",
@@ -5370,7 +5415,7 @@
    "notes": "Graph coverage (IT11 P2.1): the ketogenic diet is out of the method (a modality, not a molecule), so the graph is silent on it by construction. The five phenotype leads are development inputs, not an independent validation. | IT12 P1-alt caution (dated 2026-10-31): in the same screen SLC2A1 and HK2 loss is worse tolerated by the WWOX-null clone; a caution on direction for glucose-restriction ideas, non-neural and unreplicated, not evidence of harm in neurons.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
-   "pathways_needs": "Pyruvate entry into the TCA cycle [P3; card_inference_by_mechanism_no_catalogue_row]; Seizure and spasm control as a symptom-level need [C2; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
+   "pathways_needs": "Pyruvate entry into the TCA cycle [P3; card_inference_by_mechanism_no_catalogue_row]; Seizure and spasm control as a symptom-level need [C2; effect_observed_in_wwox_system] -- 2 of 24 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 6,
    "sources_pmids": [
     "25012504",
@@ -5416,7 +5461,7 @@
    "notes": "Graph coverage (IT11 P2.1): the generation graph has no path to this molecule: its signed targets (ABAT, SLC32A1) are not nodes of the network, and its action runs through a metabolite (GABA) that the network cannot express. The absence of a graph row is not evidence about vigabatrin; the lead was a development input, not an independent validation.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
-   "pathways_needs": "Inhibitory drive [P3; documented_association_target_listed]; Hypomyelination [C3; other_disease_precedent_plus_wwox_case_level_signal]; Seizure and spasm control as a symptom-level need [C2; effect_observed_in_wwox_system] -- 3 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
+   "pathways_needs": "Inhibitory drive [P3; documented_association_target_listed]; Hypomyelination [C3; other_disease_precedent_plus_wwox_case_level_signal]; Seizure and spasm control as a symptom-level need [C2; effect_observed_in_wwox_system] -- 3 of 24 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 7,
    "sources_pmids": [
     "10840396",
@@ -5500,7 +5545,7 @@
    "notes": "IT28 (compare_it28_p9_20261105): the proposed pair is a convergence and selectivity contrast, not an efficacy comparison; isoform potency, CNS exposure and hERG/QT values are missing for the pair, and Cav3 deletions diverge across models (protective, aggravating, no rescue), so the isoforms are not interchangeable.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
-   "pathways_needs": "Seizure and spasm control as a symptom-level need [F3; documented_association_target_listed]; Ethosuximide sensitivity of provoked seizure in Wwox loss [F3; directionally_compatible_documented_action] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
+   "pathways_needs": "Seizure and spasm control as a symptom-level need [F3; documented_association_target_listed]; Ethosuximide sensitivity of provoked seizure in Wwox loss [F3; directionally_compatible_documented_action] -- 2 of 24 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 8,
    "sources_pmids": [
     "30361190",
@@ -5542,7 +5587,7 @@
    "notes": "broad recovery lists one item because only gene addition has been tested in a WWOX system: this is a statement about test coverage, not about the field | Graph coverage (IT11 P2.1): gene addition is out of the method (a modality, not a molecule), so the graph is silent on it by construction; its WWOX-system result is not a graph result. The five phenotype leads are development inputs, not an independent validation.",
    "objective": "Broad, durable functional recovery (the evidence is prevention or early-window in a null mouse; recovery after onset is not shown)",
    "origin": "known track from before IT9",
-   "pathways_needs": "Systemic metabolic decompensation [C2; effect_observed_in_wwox_system]; Restore WWOX protein in neurons by gene addition [F1; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
+   "pathways_needs": "Systemic metabolic decompensation [C2; effect_observed_in_wwox_system]; Restore WWOX protein in neurons by gene addition [F1; effect_observed_in_wwox_system] -- 2 of 24 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 1,
    "sources_pmids": [
     "33914858",
@@ -5590,7 +5635,7 @@
    "notes": "the one outside-WWOX harm row is class-level (other T-type blockers lowered progenitor viability; ethosuximide was not tested), not ethosuximide data | Graph coverage (IT11 P2.1): the generation graph has no way to speak about this molecule: its signed targets (the T-type channel genes CACNA1G, CACNA1H, CACNA1I) are sink or isolated nodes of the signed network, so no seed set can reach them. The absence of a graph row is not evidence about ethosuximide, and the lead was a development input of the phenotype-first path, not an independent validation of the graph. | IT28 (compare_it28_p9_20261105): the added value over the untreated control is an interaction-tested late-phase effect only; the comparison that would attribute an effect to T-type block is one specificity design (both genotypes treated, concurrent control, drug-by-genotype term) and then a single attribution arm, either a nanomolar pan-Cav3 blocker with measured brain exposure or a Cacna1g occlusion arm. A second antiseizure agent serves as a nonspecificity reference only; its sign in a Wwox pup assay is UNKNOWN. | IT29 (phenotype_first_it29_20261105/case2_lesion_conditional_it29.tsv): no corroboration in epilepsy-model screens of other genotypes; the T-type thread keeps its place on the single pup experiment",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
-   "pathways_needs": "Seizure and spasm control as a symptom-level need [F2; effect_observed_in_wwox_system]; Ethosuximide sensitivity of provoked seizure in Wwox loss [F2; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
+   "pathways_needs": "Seizure and spasm control as a symptom-level need [F2; effect_observed_in_wwox_system]; Ethosuximide sensitivity of provoked seizure in Wwox loss [F2; effect_observed_in_wwox_system] -- 2 of 24 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 1,
    "sources_pmids": [
     "24953239",
@@ -5633,7 +5678,7 @@
    "notes": "Graph coverage (IT11 P2.1, correcting IT10): lithium IS a seed-specific 'mimics' hit in the Q6 set (a gene-expression seed in a human system, rank 67 to 70 of 232), which IT10 missed because it read a truncated candidate list. That hit is about an expression seed and not about the lead's seizure readout: the seizure lowering also occurs in wild-type mice, and the chain rests on two network edges whose neural meaning is unverified (named in the IT11 P2.1 package). It is not support for lithium. For the neurogenic window lithium is a risk flag (Wnt activation in the same direction as the knockout MYC rise; IT11 P2.2, candidate M07); the G01 seizure lead is untouched. A development input, not an independent validation.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
-   "pathways_needs": "GSK3beta de-repression [P3; card_inference_by_mechanism_no_catalogue_row]; Seizure and spasm control as a symptom-level need [F2; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
+   "pathways_needs": "GSK3beta de-repression [P3; card_inference_by_mechanism_no_catalogue_row]; Seizure and spasm control as a symptom-level need [F2; effect_observed_in_wwox_system] -- 2 of 24 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 2,
    "sources_pmids": [
     "22193544",
@@ -5675,7 +5720,7 @@
    "notes": "Graph coverage (IT11 P2.1): the graph returns d-APV only as a direct hit on the GRIN2C transcript in the Q4 direct-search arm (the earlier 'zero score' was the indirect part only); the GRIN2A, GRIN2B and GRIN2D subunits have outgoing edges but no chain reaches a Q4 seed. The hit concerns a mouse transcript, the lead's result is a bursting readout in slices: a level mismatch, not a confirmation. A development input, not an independent validation. | IT13 P3b (2026-10-31): d-APV measured necessity of NMDAR activity for bursting in a neuron-deleted mouse slice (acute, reversible, no wild-type burst control); it is a different system and measure from the only human firing recovery (WWOX add-back in organoids, PMID 42397075), which has no compound arm. No compound or other pharmacological intervention has a firing readout in a human WWOX-deficient neural system (the gene add-back is the only intervention that has).",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
-   "pathways_needs": "Excitatory network gain and bursting [F2; effect_observed_in_wwox_system] -- 1 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
+   "pathways_needs": "Excitatory network gain and bursting [F2; effect_observed_in_wwox_system] -- 1 of 24 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 3,
    "sources_pmids": [
     "10541229",
@@ -5729,7 +5774,7 @@
    "notes": "Graph coverage (IT11 P2.1): the graph cannot return A51 because the name has no catalogue identity (it exists only in the paper); the lookalike BTX-A51 is not attached. A development input, not an independent validation. IT11 P2.2 restatement: the authors read the A51 result as MYC-driven impairment of differentiation (NEUN-positive up, SATB2 mildly up, CTIP2 unchanged); the arm is thin (multi-kinase compound, knockout organoids only, no wild-type-plus-compound group, supplement not available locally), so no candidate is strengthened by it; role of the MYC change stays unknown.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
-   "pathways_needs": "MYC elevation and progenitor-state shift in WWOX-deficient radial glia [C2; effect_observed_in_wwox_system]; Wnt/beta-catenin readout elevated in WWOX-deficient organoids [P3; card_inference_by_mechanism_no_catalogue_row] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
+   "pathways_needs": "MYC elevation and progenitor-state shift in WWOX-deficient radial glia [C2; effect_observed_in_wwox_system]; Wnt/beta-catenin readout elevated in WWOX-deficient organoids [P3; card_inference_by_mechanism_no_catalogue_row] -- 2 of 24 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 4,
    "sources_pmids": [
     "34268881",
@@ -5770,7 +5815,7 @@
    "notes": "Graph coverage (IT11 P2.1): gene addition is out of the method (a modality, not a molecule), so the graph is silent on it by construction; its WWOX-system result is not a graph result. The five phenotype leads are development inputs, not an independent validation.",
    "objective": "Partial or bridge benefit (the evidence is prevention or early-window in a null mouse; recovery after onset is not shown)",
    "origin": "known track from before IT9",
-   "pathways_needs": "Systemic metabolic decompensation [C2; effect_observed_in_wwox_system]; Restore WWOX protein in neurons by gene addition [F1; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
+   "pathways_needs": "Systemic metabolic decompensation [C2; effect_observed_in_wwox_system]; Restore WWOX protein in neurons by gene addition [F1; effect_observed_in_wwox_system] -- 2 of 24 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 5,
    "sources_pmids": [
     "33914858",
@@ -5819,7 +5864,7 @@
    "notes": "Graph coverage (IT11 P2.1): the ketogenic diet is out of the method (a modality, not a molecule), so the graph is silent on it by construction. The five phenotype leads are development inputs, not an independent validation. | IT12 P1-alt caution (dated 2026-10-31): in the same screen SLC2A1 and HK2 loss is worse tolerated by the WWOX-null clone; a caution on direction for glucose-restriction ideas, non-neural and unreplicated, not evidence of harm in neurons.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
-   "pathways_needs": "Pyruvate entry into the TCA cycle [P3; card_inference_by_mechanism_no_catalogue_row]; Seizure and spasm control as a symptom-level need [C2; effect_observed_in_wwox_system] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
+   "pathways_needs": "Pyruvate entry into the TCA cycle [P3; card_inference_by_mechanism_no_catalogue_row]; Seizure and spasm control as a symptom-level need [C2; effect_observed_in_wwox_system] -- 2 of 24 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 6,
    "sources_pmids": [
     "25012504",
@@ -5865,7 +5910,7 @@
    "notes": "Graph coverage (IT11 P2.1): the generation graph has no path to this molecule: its signed targets (ABAT, SLC32A1) are not nodes of the network, and its action runs through a metabolite (GABA) that the network cannot express. The absence of a graph row is not evidence about vigabatrin; the lead was a development input, not an independent validation.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
-   "pathways_needs": "Inhibitory drive [P3; documented_association_target_listed]; Hypomyelination [C3; other_disease_precedent_plus_wwox_case_level_signal]; Seizure and spasm control as a symptom-level need [C2; effect_observed_in_wwox_system] -- 3 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
+   "pathways_needs": "Inhibitory drive [P3; documented_association_target_listed]; Hypomyelination [C3; other_disease_precedent_plus_wwox_case_level_signal]; Seizure and spasm control as a symptom-level need [C2; effect_observed_in_wwox_system] -- 3 of 24 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 7,
    "sources_pmids": [
     "10840396",
@@ -5949,7 +5994,7 @@
    "notes": "IT28 (compare_it28_p9_20261105): the proposed pair is a convergence and selectivity contrast, not an efficacy comparison; isoform potency, CNS exposure and hERG/QT values are missing for the pair, and Cav3 deletions diverge across models (protective, aggravating, no rescue), so the isoforms are not interchangeable.",
    "objective": "Partial or bridge benefit",
    "origin": "known track from before IT9",
-   "pathways_needs": "Seizure and spasm control as a symptom-level need [F3; documented_association_target_listed]; Ethosuximide sensitivity of provoked seizure in Wwox loss [F3; directionally_compatible_documented_action] -- 2 of 23 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
+   "pathways_needs": "Seizure and spasm control as a symptom-level need [F3; documented_association_target_listed]; Ethosuximide sensitivity of provoked seizure in Wwox loss [F3; directionally_compatible_documented_action] -- 2 of 24 needs linked (a count of links, not a share of the disease treated, and it does not raise the group)",
    "position_in_list": 8,
    "sources_pmids": [
     "30361190",
@@ -6014,7 +6059,7 @@
     "catalog.jsonl.gz": "75652786013b931d",
     "catalog_stats.json": "87ac308ce3ab9b3f",
     "measure_next.json": "bca46967510475c5",
-    "needs.json": "afc848913c492c59",
+    "needs.json": "23b835b4aa0be12e",
     "source_artefacts.tsv": "efd24d2cf8eb3fdb",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
@@ -6034,10 +6079,10 @@
    },
    "by_first_order": {
     "Q1": 68,
-    "Q2": 1923,
-    "Q3": 208,
-    "Q4": 14236,
-    "Q5": 23808,
+    "Q2": 2081,
+    "Q3": 207,
+    "Q4": 14083,
+    "Q5": 23804,
     "UNIT": 25
    },
    "distinct_display_names_in_q1": 64,
@@ -6046,14 +6091,14 @@
    "mnet_usable_families": 13379,
    "msig_neural_families": 931,
    "need_linked_by_access_category": {
-    "OTC": 6,
-    "experimental": 192,
-    "prescription": 54,
+    "OTC": 11,
+    "experimental": 206,
+    "prescription": 88,
     "supplement": 22,
-    "unknown/unverified": 2062
+    "unknown/unverified": 2193
    },
-   "need_linked_families_plus_units": 2224,
-   "need_linked_families_q1_q2_q3": 2199,
+   "need_linked_families_plus_units": 2381,
+   "need_linked_families_q1_q2_q3": 2356,
    "q1_by_status": {
     "approved_any_source": 15,
     "approved_any_source,clinical_candidate,phase_unknown": 1,
@@ -6067,7 +6112,7 @@
    "records": 44211
   },
   "investigations": {
-   "below_the_line": 7,
+   "below_the_line": 8,
    "below_the_line_note": "rows beyond the ten-row ceiling stay in investigations.tsv with their reason; a tie is kept whole rather than split. Below the line is a ceiling on the page, never a finding that an investigation is unpromising.",
    "below_the_line_rows": [
     {
@@ -6092,25 +6137,31 @@
      "intervention": "No lever available (four needs with no catalogue reach)",
      "inv_id": "INV-11",
      "rank": 7,
-     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 4). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
+     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 5). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
     },
     {
      "intervention": "EZH2 (PRC2) inhibitor GSK343 as a probe in mouse glial systems",
      "inv_id": "INV-14",
      "rank": 7,
-     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 4). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
+     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 5). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
     },
     {
      "intervention": "Class IIa-selective tool compound X against HDAC5 knockdown, with catalytic-dead and localisation-mutant HDAC5 rescue, a class-I-only inhibitor and an HDAC6 inhibitor as controls, in human neural cells",
      "inv_id": "INV-16",
      "rank": 7,
-     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 4). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
+     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 5). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
     },
     {
      "intervention": "No compound: measurement of the role of the MYC rise in WWOX-deficient radial glia",
      "inv_id": "INV-17",
      "rank": 7,
-     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 4). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
+     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 5). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
+    },
+    {
+     "intervention": "Ih (HCN) channel blockers of at least two chemotypes as a tool arm in Wwox-deficient cortical slices, read with sag, resting potential and burst incidence in the same slices",
+     "inv_id": "INV-18",
+     "rank": 7,
+     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 5). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
     }
    ],
    "by_direction_state": {
@@ -6123,13 +6174,13 @@
     "known_in_wwox": 7
    },
    "count": 10,
-   "count_including_below_the_line": 17,
+   "count_including_below_the_line": 18,
    "direction_states": {
     "opposed_risk": "a documented action of this intervention pushes against another need of the same objective",
     "resolved": "the need states an up/down intervention direction",
     "unresolved": "the need's own direction is uncertain: no lever on it can be qualified either way, which is a visible gap and not a negative finding"
    },
-   "order_digest": "7913c3f53f2ec587",
+   "order_digest": "772ed238a82037bc",
    "origin_classes": {
     "external_transferred": "carried in from another condition or literature by a stated mechanistic analogy",
     "generated_by_legend": "reached from a qualified need through the module's own target and catalogue path, not named in the WWOX material checked",
@@ -6216,7 +6267,7 @@
     "reference_or_control": 11
    }
   },
-  "needs_total": 23,
+  "needs_total": 24,
   "non_assessment_changes": [
    "new_entry",
    "tie_resolution"

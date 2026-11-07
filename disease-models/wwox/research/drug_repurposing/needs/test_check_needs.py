@@ -41,6 +41,24 @@ class Shipped(unittest.TestCase):
         self.assertTrue(cn.SCOPES - {"UNVERIFIED_HYPOTHESIS"} <= set(bridge.EVIDENCE_SCOPES))
 
 
+class UnresolvedDirection(unittest.TestCase):
+    """IT34 P9: a need whose direction is uncertain must say what not to assume, and a premise that rests on one paper is one origin."""
+
+    def test_every_uncertain_need_states_what_must_not_be_assumed(self):
+        for n in DOC["needs"]:
+            if n["intervention_direction"]["direction"] == "uncertain":
+                self.assertTrue(n["intervention_direction"].get("do_not_assume", "").strip(), n["id"])
+                self.assertTrue(n["intervention_direction"]["certainty"].startswith(("context_dependent", "unknown", "inferred")), n["id"])
+
+    def test_the_intrinsic_excitability_need_gives_no_target_a_favourable_sign(self):
+        n = need(DOC, "NEED-INTRINSIC-EXCITABILITY")
+        self.assertEqual(n["intervention_direction"]["direction"], "uncertain")
+        self.assertIn("No HCN blocker is placed in any ranking", n["intervention_direction"]["do_not_assume"])
+        self.assertEqual({o["pmid"] for o in n["observed"]}, {"34634460"})                  # one origin: its four observations are not four confirmations
+        self.assertTrue(any("heterozygote" in c and "do not predict" in c for c in n["counter_evidence"]))   # the counter-evidence travels with the need
+        self.assertEqual({t["target_kind"] for t in n["targets"]}, {"intervention_target"})
+
+
 class Defects(unittest.TestCase):
     def broken(self, fn):
         doc = copy.deepcopy(DOC)

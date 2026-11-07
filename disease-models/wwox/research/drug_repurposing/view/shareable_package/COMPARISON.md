@@ -5,7 +5,7 @@ The full version (`view/index.html` in the repository, local use) and this packa
 ## Same in both
 
 - 39 candidate cards with their six answers, evidence by scope, counter-evidence, next step, public identifiers and F/C/P positions: card text and positions are identical (the only card fields that differ are listed under 'Different').
-- 23 needs and their observations, the threads, groups, goals, funnel, access chart (catalogue-wide counts), matrix summary, dispositions, observations, lead dispositions and the Italian orientation texts.
+- 24 needs and their observations, the threads, groups, goals, funnel, access chart (catalogue-wide counts), matrix summary, dispositions, observations, lead dispositions and the Italian orientation texts.
 - Sections of the data object that are byte-identical: access, dispositions, exploration_flagged, has_distinct, matrix_summary, no_probability, observations, orphan_priorities, pair_unit, ranking_note, schema, strings.
 - Curated sections identical: contexts, evidence_graph, gaps, goals, group_note, groups, hypotheses, predictive, scopes, selection, threads, tracks, work_order.
 
@@ -13,13 +13,13 @@ The full version (`view/index.html` in the repository, local use) and this packa
 
 | What | Full | Shareable |
 |---|---|---|
-| Catalogue rows shown with a name | 2237 | 52 (card names only; the other 2199 rows carry an identifier) |
-| Rows with per-row status class or modality | 2251 | 0 |
-| Rows with a per-row access category | 2224 | 19 (openFDA-stated categories and absence statements only) |
-| Matrix pairs with a target list | 2204 of 2585 | 13 of 2585 |
-| Target symbols listed in pairs | 2727 | 13 |
+| Catalogue rows shown with a name | 2394 | 52 (card names only; the other 2356 rows carry an identifier) |
+| Rows with per-row status class or modality | 2408 | 0 |
+| Rows with a per-row access category | 2381 | 19 (openFDA-stated categories and absence statements only) |
+| Matrix pairs with a target list | 2381 of 2762 | 13 of 2762 |
+| Target symbols listed in pairs | 3172 | 13 |
 | Card actions on targets listed | 45 | 0 |
-| Pair objects carrying a status class | 913 | 0 |
+| Pair objects carrying a status class | 1034 | 0 |
 | Excluded rows listed with compound name and gene | 3 | 0 |
 | Card fields that differ (count of cards) | n/a | {"access": 10, "access_text": 7, "actions": 9, "asserts": 2, "brief": 2, "card_path": 39, "country": 5, "for": 2, "identity": 7, "links": 10, "mechanism": 2, "next_full": 2, "novelty": 2, "pharm": 2, "reopen": 1} |
 | Deepened cases (question, level, system, WWOX evidence, counter-evidence, next experiment) | all fields, with compound names | the same own-text fields with a class label instead of compound names; precedent, pharmacology, its limits and source paths withheld (ChEMBL-graded values are CC BY-SA 3.0, third-party text is not copied) |

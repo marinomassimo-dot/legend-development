@@ -8,7 +8,7 @@
  "START_UTC": "2026-11-07T22:00:00Z",
  "RESUME": {
   "worktree": ".claude/worktrees/it34 (branch task/it34, based on the IT33 candidate)",
-  "next_action": "P1 read-only retrieval of DisMech while the IT33 battery runs; then P2 diagnosis; IT33 must land first for the stage pointer (S13).",
+  "next_action": "P8/P9: view suite and targeted tests on the IT34 worktree; land after IT33 (battery on 039358bd, push, CI); then IT34 push (gate, CI; a dedicated battery only if capacity); cleanup; final reports",
   "note": "Zero spend; no contact; four current files via BATCH_COMMIT only; safe_push only; one delegate at a time; no battery while another session runs one."
  },
  "AUTHORISED_QUEUE_20261107C": {
@@ -18,8 +18,9 @@
    "steps": [
     {
      "step": "P0 Baseline and reconciliation with IT33; stage actually current (S13 after IT33 lands; S12 before) and its recipe",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "remote main fb756c52 at the start, IT33 candidate 039358bd under battery; IT34 worktree based on the IT33 candidate; stage actually current = S13 (IT33), S12 before"
     }
    ]
   },
@@ -28,8 +29,9 @@
    "steps": [
     {
      "step": "P1 DisMech comparison, bounded and updated: current revision SHA and schema version, differences that affect current work only; keep AI narrative / curated YAML / primary papers / LEGEND checks apart; 87 citations = 10 unique PMIDs",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "dismech_it34_20261107/README.md: the WWOX entry at current DisMech main adf2b657afb3 is byte-identical (same SHA-256) to the examined snapshot 825105f4; five commits in between touch no WWOX or schema file; layers kept apart; 87 occurrences = 10 unique PMIDs"
     }
    ]
   },
@@ -38,8 +40,9 @@
    "steps": [
     {
      "step": "P2 Main case: sag, rebound, intrinsic excitability (PMID 34634460) traced observation -> need/premise -> HCN function -> target/action -> catalogue -> proposal -> investigation -> dashboard, with aliases resolved",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "same README: the trace of the sag observation: represented and used (source), represented not structured (one counter-evidence sentence), analysis not consumed (IT14 P3 rival R2 and its Ih arm only in a README), missing (need, HCN targets, investigation), present never asked (catalogue ids resolved for ivabradine and others), data limit (HCN2/HCN3 not in the engine's seed graph), none in S11/S12/S13"
     }
    ]
   },
@@ -48,8 +51,9 @@
    "steps": [
     {
      "step": "P3 Smallest generative link if the diagnosis justifies it; frozen criteria; conditional alternative branches; no new graph, database, ontology, harness or model",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "NEED-INTRINSIC-EXCITABILITY and INV-18 added in existing structures (coverage regenerated, ranking unchanged, five-language passages, views rebuilt, audit PASS); HGNC and GO ids from official services"
     }
    ]
   },
@@ -58,8 +62,9 @@
    "steps": [
     {
      "step": "P4 Second contrasting case (burst dependence on glutamatergic transmission v carbenoxolone, or amount v catalytic function INV-16), reuse of existing work",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "second case (carbenoxolone / glutamatergic burst dependence) kept the four differences with no engine change; same paper as case 1, so a control of generality, not a confirmation"
     }
    ]
   },
@@ -68,8 +73,9 @@
    "steps": [
     {
      "step": "P5 Compare previous method / link / link removed on six measures; classify known thread / new combination / reopening / new hypothesis; no predictive claim from reach",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "before/after/ablation table in the README: 0 -> 14 records / 13 families, all direction_unresolved; ablation back to 0; recovery of a noted thread, no new hypothesis, no predictive or specificity claim"
     }
    ]
   },
@@ -78,8 +84,9 @@
    "steps": [
     {
      "step": "P6 DisMech qualifications re-checked where they bear on the case; confidence 'not assessed' kept; five dimensions kept apart; schema difference measured, pin not bypassed",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "qualifications re-checked against the case; confidence 'not assessed' kept; five dimensions kept apart; schema drift measured (PARTIAL and WRONG_STATEMENT retired, new experiment enums), pin not bypassed, mapping not updated (path does not use those rows)"
     }
    ]
   },
@@ -88,8 +95,9 @@
    "steps": [
     {
      "step": "P7 Consumers and dashboard: observation -> relations -> interventions -> counter-evidence -> open question -> next test, observed/inferred/hypothesised distinct, phone and five languages",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "note": "need and INV-18 on the dashboard; no new interaction added (not needed)"
     }
    ]
   },

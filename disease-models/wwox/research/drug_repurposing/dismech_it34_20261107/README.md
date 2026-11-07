@@ -34,3 +34,37 @@ This is a text-and-structure trace, not a text search for a compound name: ident
 
 ## Consequence for the next steps
 The interruption is between the qualified observation and a need: the intrinsic rival has no consumer. P3 adds the smallest structures that exist for this (a need with an unresolved direction and an investigation with conditional branches), then the existing need-to-catalogue search reaches the tools without being given a name; P4 checks the link on a second case; P5 compares and attributes.
+
+## P3 The smallest link (criteria frozen before the comparison)
+Input and criterion, written before the change: the reference is the current method (the need table of 23 needs and the stage proposals S12/S13, frozen at the IT33 candidate); the measure is whether an Ih-acting tool can be reached **without being named** and whether the unresolved sign is carried as alternative branches rather than as a favourable action.
+Change, in existing structures only (no graph, database, ontology, harness or model): one need, `NEED-INTRINSIC-EXCITABILITY` in `needs/needs.json` (four verified observations with manifest or document locators, three inferences, direction `uncertain` with a `do_not_assume` clause, four counter-evidence statements, targets HCN1 to HCN4 as search keys); one investigation, `INV-18` (conditional hypothesis, three opposite-sign branches each with the result that would weaken it, one discriminating measurement, rank 7 below the ten-row line, five-language passages). HGNC ids and the GO term were taken from the official services on 2026-11-07 (two ids recalled from memory were wrong). The coverage layer was regenerated with its own command; the ranking is unchanged.
+
+## P4 Second case, and why it is a control and not a second confirmation
+Burst dependence on glutamatergic transmission against the carbenoxolone reading (`NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR`). Both cases come from the same paper (PMID 34634460) and are not counted as independent confirmations; they test whether the method keeps four differences. Result with no change to the engine:
+* target and action: carbenoxolone is reached through PANX1 (`direction_unresolved`) and GJA1 (`not_evaluable`); no connexin is chosen;
+* effect of the compound and attribution of the mechanism: the need's own text says carbenoxolone suppressed bursts but is not attributable to gap junctions, has no washout reversal and may block NMDAR;
+* endpoint and benefit: burst frequency in slices is the readout; no benefit is stated;
+* system and transfer: a juvenile slice preparation, one laboratory.
+So for this case the knowledge was already used and the engine does not need to change. The check also confirms that the HCN case differed: there the intrinsic rival had no need and no investigation.
+
+## P5 What changes (consumption and reach only)
+| Measure | Before | With the link | Link removed (HCN targets emptied) |
+|---|---|---|---|
+| need-driven records / families reached for the intrinsic-state question | 0 (no need) | 14 / 13, every row `direction_unresolved`, header "exploration list, not favourable treatments" | 0 / 0 |
+| observations consumed as structured entries | 0 of 4 (one counter-evidence sentence) | 4 | 4 (the observations stay; only the reach disappears) |
+| distinct hypotheses (by biological reason, not by synonym) | 0 as investigation | 3 branches (compensatory Ih, pro-excitatory Ih through the resting potential, bystander) | 3 |
+| counter-evidence and premises carried | in a README | in the need, the investigation and the page | same |
+| next investigation | none | INV-18, with the discriminating arm (two chemotypes, matched resting potential, per-animal replicates) | same |
+| included and excluded with reason | - | ivabradine (approved HCN blocker, non-selective by isoform), zatebradine, cilobradine, ZD7288 (tool), caesium (non-specific), dronedarone (multi-channel, not an HCN tool); tramadol and its metabolite appear only through gene listings (kept, flagged as listing noise) | - |
+Classification of the result: **recovery of a thread already noted** (ivabradine and ZD7288 are named in earlier identity and pre-registration files) made reachable and consumable; not a new combination, not a reopening, not a new hypothesis in the perimeter searched. No compound is promoted, no HCN blocker enters the ranking, and nothing here is a predictive advantage: reach rose from zero because a need exists, not because anything was predicted. WWOX specificity and superiority are not claimed, so no popularity or decoy-gene controls were run.
+
+## P6 DisMech qualifications re-checked against the case, and the schema drift
+* P47T partial-loss mice reach adulthood and do not replace a null WOREE model: LEGEND already carries P47T as a separate, partial-loss system in the needs (transcript level, nominal); it does not bear on the HCN observation.
+* Lithium in the PTZ paradigm does not isolate GSK3-beta and does not validate the chain to cortical bursts: already a counter-evidence line of the seizure needs; unchanged.
+* Carbenoxolone is non-specific and the paper discusses discordant Ih-blocker precedents: both are now carried in the need and in INV-18 (P3, P4).
+* A failed myelin-repair attempt does not exclude myelin; a Hyal-2/WWOX/Smad4 relation from non-neural systems is not a therapeutic direction for WOREE: they do not bear on this case and are not reopened (LEGEND's Hyal-2 audit is reused as it stands).
+* Missing confidence stays "not assessed": LEGEND does not export an omitted `mechanism_confidence`, because the current schema reads omission as ESTABLISHED. Direction of evidence (SUPPORT, REFUTE, NO_EVIDENCE), directness (DIRECT, INDIRECT, UNKNOWN), strength and independence, the sign of an action and the hypothesised usefulness of an intervention stay five separate things; DIRECT is not a probability and shows no benefit.
+* Drift measured against the current schema (`src/dismech/schema/dismech.yaml` at `adf2b657afb3`): `EvidenceItemSupportEnum` is SUPPORT, REFUTE, NO_EVIDENCE with a separate `DirectnessEnum`; LEGEND's pinned export spec (`disease-models/wwox/analysis/dismech_export_spec.md`) still maps a source that states a datum indirectly or in part to `PARTIAL` and the 2026-07-26 figure finding to `WRONG_STATEMENT`: both values are retired, so those rows of the mapping would fail closed or lose meaning (PARTIAL would become SUPPORT with directness INDIRECT; WRONG_STATEMENT has no successor value). New enums for experiment design and executability exist (`ExperimentDesignEnum`, `ExperimentExecutabilityEnum`). The pin was not bypassed and no historical baseline was rewritten; the mapping is not updated because the proven path (observation to need to investigation to page) does not use those rows. Reopening condition: a decision to export a LEGEND observation as a DisMech evidence block.
+
+## P7 Consumers and what the researcher can follow
+The need appears in the needs table of the dashboard (five languages); INV-18 appears in the conditional-hypotheses section with its identifier anchor and in the index of all investigations; the path observation (Table 1) to need to branches to the discriminating test to the open question is readable from the row and the need text, with observed, inferred and hypothesised kept apart by the need's own fields. No new graphical interaction was added: nothing in the proven path needed one. The licence of the external repository (BSD-3-Clause) was read; nothing was copied or installed; OpenScientist is not used.

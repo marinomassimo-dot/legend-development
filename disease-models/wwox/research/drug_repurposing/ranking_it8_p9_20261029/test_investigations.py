@@ -171,6 +171,21 @@ class OrderDoesNotRewardTheWrongThings(unittest.TestCase):
                                 "the investigations order has collapsed onto the evidence-depth order")
 
 
+class UnresolvedDirectionBranches(unittest.TestCase):
+    """IT34 P9: an unresolved direction becomes alternative conditional branches, each with the result that would weaken it; none is a favourable action."""
+
+    def test_inv18_states_three_branches_each_with_its_weakening_result_and_no_favourable_sign(self):
+        rows = {r["inv_id"]: r for r in load_all_rows()}
+        r = rows["INV-18"]
+        self.assertEqual((r["status"], r["direction_state"]), ("conditional_hypothesis", "unresolved"))
+        text = r["decisive_uncertainty"]
+        for branch in ("Branch A", "Branch B", "Branch C"):
+            self.assertIn(branch, text)
+        self.assertEqual(text.count("weakened"), 3)
+        self.assertIn("opposite", r["why_now"])
+        self.assertNotIn("improves", (r["question"] + r["why_now"]).lower())
+
+
 class TheTenRowCeiling(unittest.TestCase):
     """The published list is capped at ten; a row beyond it is kept, flagged and explained, never deleted or judged."""
 
