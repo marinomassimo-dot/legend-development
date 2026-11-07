@@ -1,0 +1,41 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-INV10-20261107",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Queued targeted package (operator, 2026-11-07): INV-10, reconciliation of seizure response, development, function and quality of life in WOREE; correct the causal conclusion and the report's discordances (vigabatrin case 39101447, DEE comparisons, ethosuximide / CBD / perampanel exposures, VABAM safety); keep the benefits distinguishable; priority questions for repurposing; delta for INV-10 and consumers.",
+ "START_UTC": "2026-11-08T01:00:00Z",
+ "BASELINE": "development/main ce121d5814b8c83c65721c0709ac4ec2554a5011; same worktree and branch as ORCH-TTYPE-20261107. Reused by identifier: A1/A2 packages, CONSUMERS.md, aed_compare_it31, B1 white-matter package, ttype and nmda packages of this branch; PMID 39101447 has a complete read (FTR-20261003-39101447-01).",
+ "CURRENT_PACKAGE": {
+  "id": "S-INV10",
+  "state": "brief written; queued behind INV-08 and INV-09",
+  "delegate_active": "none",
+  "updated": "2026-11-08T01:00:00Z"
+ },
+ "RESUME": "Folder drug_repurposing/seizure_function_inv10_20261107/ (BRIEF.md, output/). Order: producer, census, verifier on the decisive propositions, correction.",
+ "DECISIONS_TAKEN": [
+  "Queued by the operator beside the running work; one delegate at a time; settings as before. Reconciliation with a cap of 4 new sources; close without redoing the batch if nothing new changes the qualified conclusions."
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [
+  "No stop for a reserved act."
+ ],
+ "DEFAULTS_TAKEN": [
+  "Condition: settings not restated. Default: as before. Why safe: reversible; no shared file touched."
+ ],
+ "AUTHORISED_QUEUE_20261107I": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "producer, census, verifier on decisive propositions, targeted correction",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}
