@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-07T23:19:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-07T23:25:00Z",
+ "event_id": "FTR-20261107-23099259-99",
+ "evidence_basis": [
+  "full text read as page text; figures not viewed",
+  "verbatim_locator | proposition: knock-in alleles disable the inhibitory serine phosphorylation and keep expression normal | Materials and methods, Animals | \"These mutations disable the inhibitory serine phosphorylation of GSK3, but both isoforms are expressed at normal levels\"",
+  "verbatim_locator | proposition: active GSK3 beta, not alpha, raised the acute stimulant response | Results 3.4 | \"activated GSK3\u03b2 significantly increased the hyperactive locomotor response to acute methylphenidate administration, but active GSK3\u03b1 did not\"",
+  "absence | proposition: no inhibitor or lithium arm is given to knock-in mice; the lithium section is titled for wild-type mice | Results 3.2 and 3.4 | searched strings lithium, inhibitor, knockin in the page text"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/gsk3_inv09_20261107/output/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page text (pmc.ncbi.nlm.nih.gov) fetched 2026-11-07 after the PMC full-text tool and a first Europe PMC attempt; Introduction, Methods, Results and Discussion read; figures not viewed; bytes not saved",
+ "study_id": {
+  "doi": "10.1016/j.ejphar.2012.10.018",
+  "pmid": "23099259"
+ },
+ "workflow": "gk-p INV-09: GSK3 separability, Stage 1 and Stage 2"
+}

@@ -9,15 +9,17 @@
  "BASELINE": "development/main ce121d5814b8c83c65721c0709ac4ec2554a5011; same worktree and branch as ORCH-TTYPE-20261107 (which already merges main). Reused by identifier: G01 card, IT15 QB and its verification, gsk3_eif2b_20261107, myelin_inv06_20261107 (21319221 and 33015737 read there), nmda_inv05_20261107, nb4_delta_20261107. Moved to branch task/queue2-20261108 (worktree .claude/worktrees/queue2-20261108) from the frozen head 893ad6efb886b1eb22dfc858c6d169b11ea31e0d.",
  "CURRENT_PACKAGE": {
   "id": "K-INV09",
-  "state": "producer running (legend-delegate, sonnet/medium) in the queue2 worktree",
-  "delegate_active": "gk-p",
-  "updated": "2026-11-08T02:05:00Z"
+  "state": "verifier running (legend-delegate, sonnet/high)",
+  "delegate_active": "gk-v",
+  "updated": "2026-11-08T03:00:00Z"
  },
  "RESUME": "Folder drug_repurposing/gsk3_inv09_20261107/ (BRIEF.md, output/). Order: producer, census, verifier, correction.",
  "DECISIONS_TAKEN": [
   "Queued by the operator beside the running work; one delegate at a time; settings as before. Placed last in the queue so that the NMDA, myelin, NRF2 and GSK3-eIF2B deliveries exist when it starts."
  ],
- "DELEGATIONS": [],
+ "DELEGATIONS": [
+  "K producer gk-p: asked sonnet/medium, read back claude-sonnet-5-5 x54, medium x54; birth 17,416; 54 turns; ~10 min; output 63,543; cache written 228,490; cache read 7,046,123; peak 228,492; completed README (~910 words), evidence (37 rows incl. 6 reused), separation, probes, experiment X0-X5, queries Q01-Q17, 6 staged receipts (validated with DOI check; 33197065 PMC page returned a reCAPTCHA: stopped, abstract only); 6 of 6 new sources"
+ ],
  "ESCALATIONS": [],
  "STOP_LOG": [
   "No stop for a reserved act."

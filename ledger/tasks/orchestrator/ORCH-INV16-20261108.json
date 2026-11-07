@@ -1,0 +1,41 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-INV16-20261108",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Queued targeted package (operator, 2026-11-07): INV-16, HDAC5, which function is perturbed, and the meaning of SLC2A1; reconcile sign and origin of the edge (22991226), keep the catalytic question open (39923817), desirability without a favoured sign, a stepwise experiment; delta for INV-16, WO-30/WO-32 and dependent proposals.",
+ "START_UTC": "2026-11-08T03:00:00Z",
+ "BASELINE": "development/main cb727195dbb5917c6048659b55d69094c0a6c3c0; branch task/queue2-20261108. Receipts exist for 22991226 (abstract only) and 39923817 (partial).",
+ "CURRENT_PACKAGE": {
+  "id": "H-INV16",
+  "state": "brief written; queued behind INV-09 verifier, INV-10 and INV-15",
+  "delegate_active": "none",
+  "updated": "2026-11-08T03:00:00Z"
+ },
+ "RESUME": "Folder drug_repurposing/hdac5_inv16_20261108/ (BRIEF.md, output/). Order: producer, census, verifier, correction.",
+ "DECISIONS_TAKEN": [
+  "Queued by the operator beside the running work; one delegate at a time; settings as before."
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [
+  "No stop for a reserved act."
+ ],
+ "DEFAULTS_TAKEN": [
+  "Condition: settings not restated. Default: as before. Why safe: reversible; no shared file touched."
+ ],
+ "AUTHORISED_QUEUE_20261108B": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "producer, census, verifier on sign/function/transfer/experiment, targeted correction",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}

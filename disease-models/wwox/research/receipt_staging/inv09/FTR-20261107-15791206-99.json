@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-07T23:19:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-07T23:25:00Z",
+ "event_id": "FTR-20261107-15791206-99",
+ "evidence_basis": [
+  "full text read as page text; figure captions only",
+  "verbatim_locator | proposition: AR-A014418 still activates glycogen synthase in the double knock-in muscle | Results, Effect of insulin on glycogen synthase in GSK3 knockin muscle | \"AR-A014418 induced nearly five-fold activation of glycogen synthase in both the WT and double GSK3\u03b1/\u03b2 21A/21A/9A/9A knockin muscle\"",
+  "verbatim_locator | proposition: Wnt3a did not raise pooled Ser9/Ser21 phosphorylation and acted in knock-in cells | Results, Wnt3a inactivates GSK3 in knockin cells | \"Wnt3a stimulation failed to induce a detectable increase in the phosphorylation of the total cellular pools of GSK3\u03b1 at Ser21\"",
+  "verbatim_locator | proposition: developmental compensation not excluded | Discussion | \"We are unable to rule out that the constitutive knockin of GSK3 isoforms leads to compensatory mechanisms during development\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/gsk3_inv09_20261107/output/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page text (pmc.ncbi.nlm.nih.gov) fetched 2026-11-07; Europe PMC fullTextXML endpoint returned HTTP 500, PMC tool returned an empty body, NCBI efetch returned a publisher stub; Results, Discussion and Methods read; figure captions read, images not viewed; bytes not saved",
+ "study_id": {
+  "doi": "10.1038/sj.emboj.7600633",
+  "pmid": "15791206"
+ },
+ "workflow": "gk-p INV-09: GSK3 separability, Stage 1 and Stage 2"
+}

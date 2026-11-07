@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-07T23:19:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-07T23:25:00Z",
+ "event_id": "FTR-20261107-29515000-99",
+ "evidence_basis": [
+  "partial full text: Introduction, Results, Discussion",
+  "verbatim_locator | proposition: BRD0705 8-fold alpha preference, biochemical | Results | \"displayed increased selectivity for GSK3\u03b1 (8-fold) versus GSK3\u03b2\"",
+  "verbatim_locator | proposition: biochemical window shrinks to more than 4 to 6-fold in live cells | Results | \"translated to a >4\u20136-fold selectivity in intact live 293 cells\"",
+  "verbatim_locator | proposition: selective inhibition of either isoform did not raise nuclear beta-catenin; dual inhibitors including CHIR99021 did | Results | \"an absence of nuclear \u03b2-catenin accumulation after selective inhibition of either GSK3\u03b1 (BRD0705) or GSK3\u03b2 (BRD3731) for 24 hours\"",
+  "verbatim_locator | proposition: isogenic GSK3A knockout clones show no added BRD0705 effect | Results | \"These cells show no additional increase in expression of the differentiation cell surface marker CD11b upon treatment with BRD0705\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/gsk3_inv09_20261107/output/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch PMC XML for the PMC record, fetched 2026-11-07 after the Europe PMC fullTextXML endpoint returned HTTP 500; flattened to text; Introduction, Results and Discussion read; Methods, figures and supplement not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1126/scitranslmed.aam8460",
+  "pmid": "29515000"
+ },
+ "workflow": "gk-p INV-09: GSK3 separability, Stage 1 and Stage 2"
+}
