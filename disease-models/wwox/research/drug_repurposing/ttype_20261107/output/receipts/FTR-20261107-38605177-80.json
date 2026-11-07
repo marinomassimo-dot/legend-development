@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-07T21:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-07T21:48:00Z",
+ "event_id": "FTR-20261107-38605177-80",
+ "evidence_basis": [
+  "Full text delivered by the PubMed/PMC tool for the PMC record on 2026-11-07; degraded text: figures omitted, sub/superscripts stripped; Supplementary figures and tables (potency values) not read",
+  "verbatim_locator | proposition: the authors state these T-type blockers have not yet discriminated between the T-type subtypes | Introduction | \"Although these compounds have yet to discriminate between T-type subtypes\"",
+  "verbatim_locator | proposition: Z944 shares a chemotype with ML218 and TTA-P2 | Results, structural basis for ligand selectivity | \"there is no fluorine atom in the piperidine group of Z944, an analog of ML218 and TTA-P2\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ttype_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/ttype_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC record for the PMC id of this PMID fetched 2026-11-07 through the PubMed full-text tool (sections as listed in coverage; figures and supplements not seen; bytes not saved)",
+ "study_id": {
+  "doi": "10.1038/s41422-024-00959-8",
+  "pmid": "38605177"
+ },
+ "workflow": "T-type thread package (ttype_20261107, label tt-p): question-driven reading for the three questions (benefit, Cav3 mediation, genotype dependence), the HIF to CaV3.2 residue and the probe comparison. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

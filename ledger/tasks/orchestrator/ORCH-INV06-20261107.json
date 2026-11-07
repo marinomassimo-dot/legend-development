@@ -1,0 +1,41 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-INV06-20261107",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Queued targeted package (operator, 2026-11-07): INV-06, functional recovery of myelin and the origin of the defect; correct the WWOX base (Olig2-Cre, GFAP-Cre, DRG co-culture); GSK3 direction (21319221, 33015737); activity and myelination (42334020, 24391468); link with INV-05; comparators clemastine, T3, GSK3 probes, Pdk1.",
+ "START_UTC": "2026-11-07T22:00:00Z",
+ "BASELINE": "development/main ce121d5814b8c83c65721c0709ac4ec2554a5011 (fetched 2026-11-07 after the landing of the GSK3-eIF2B task); same worktree and branch as ORCH-TTYPE-20261107 (.claude/worktrees/ttype-20261107, task/ttype-20261107) to land the queued packages with one battery.",
+ "CURRENT_PACKAGE": {
+  "id": "M-INV06",
+  "state": "brief written; producer not launched; queued behind the previous package",
+  "delegate_active": "none",
+  "updated": "2026-11-07T22:00:00Z"
+ },
+ "RESUME": "Folder drug_repurposing/myelin_inv06_20261107/ (BRIEF.md, output/). Order after the INV-05 package: producer, census, verifier, correction.",
+ "DECISIONS_TAKEN": [
+  "Queued by the operator beside the running scientific work; one delegate at a time; settings as before (producer sonnet/medium, verifier sonnet/high, legend-delegate)."
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [
+  "No stop for a reserved act."
+ ],
+ "DEFAULTS_TAKEN": [
+  "Condition: settings not restated. Default: as the previous packages. Why safe: reversible; no shared file touched."
+ ],
+ "AUTHORISED_QUEUE_20261107E": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "producer, census, verifier on decision-changing links, targeted correction, consumer note",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}

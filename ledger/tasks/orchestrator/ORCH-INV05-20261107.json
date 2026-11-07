@@ -1,0 +1,41 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-INV05-20261107",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Queued targeted package (operator, 2026-11-07): INV-05, from NMDA dependence to a functionally useful modulation; corrections to the external report; precedents PMID 38529699, 39970743, 20720132; minimum informative comparison; delta for the module.",
+ "START_UTC": "2026-11-07T22:00:00Z",
+ "BASELINE": "development/main ce121d5814b8c83c65721c0709ac4ec2554a5011 (fetched 2026-11-07 after the landing of the GSK3-eIF2B task); same worktree and branch as ORCH-TTYPE-20261107 (.claude/worktrees/ttype-20261107, task/ttype-20261107) to land the queued packages with one battery.",
+ "CURRENT_PACKAGE": {
+  "id": "N-INV05",
+  "state": "brief written; producer not launched; queued behind the previous package",
+  "delegate_active": "none",
+  "updated": "2026-11-07T22:00:00Z"
+ },
+ "RESUME": "Folder drug_repurposing/nmda_inv05_20261107/ (BRIEF.md, output/). Order: producer, census, verifier, correction.",
+ "DECISIONS_TAKEN": [
+  "Queued by the operator beside the running scientific work; one delegate at a time; settings as before (producer sonnet/medium, verifier sonnet/high, legend-delegate)."
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [
+  "No stop for a reserved act."
+ ],
+ "DEFAULTS_TAKEN": [
+  "Condition: settings not restated. Default: as the previous packages. Why safe: reversible; no shared file touched."
+ ],
+ "AUTHORISED_QUEUE_20261107E": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "producer, census, verifier on decision-changing links, targeted correction, consumer note",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}

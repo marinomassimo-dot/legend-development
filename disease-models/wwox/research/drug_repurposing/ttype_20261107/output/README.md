@@ -1,0 +1,36 @@
+# T-type thread in WWOX: from the ethosuximide datum to a testable mechanism (package T, label tt-p, 2026-11-07)
+
+Non-canonical research material, public edition, reference genotype class only. Not medical advice: no dose, schedule or preparation is given or recommended; administered amounts in the papers are not reproduced. Nothing here is promoted to a registry. Receipts are staged (suffix 80), not recorded. The external report was not available to me; "corrections" below answer the description in the brief, not the report text.
+
+## Answer first
+
+1. **A. Benefit.** DATO: one experiment (Cheng 2020, Fig 7b, read as an image) shows ethosuximide pretreatment lowering PTZ-provoked seizure stage in Wwox -/- pups, n=6 per arm. INFERENZA: the separation sits in the second half of the hour and is carried by a late rise of the PTZ-alone curve; the first 15 min do not differ visibly. One cohort, acute provoked seizure, no EEG, no development or myelin endpoint. Reproduction is untested.
+2. **B. Cav3 mediation.** NON RISOLTO. DATO: the paper measures no channel; "T-type" is a citation (Methods). Ethosuximide is millimolar at Cav3 and nonselective across isoforms; in a worm PTZ model its protection survives loss of the only T-type ortholog (PMID 30189284, full text). That justifies an alternative-mechanism control; it does not say what acts in the mouse. No source read resolves isoform.
+3. **C. Genotype dependence.** NON RISOLTO. No interaction test; wild type and heterozygote sit at the floor (PTZ-alone about 1 stage, ethosuximide curve overlapping), so their null is unknown, not clean. Lithium (Fig 7d, other cohort) shows a visible effect at similar low baselines in the first minutes, so the floor argument is real but not total. A drug-by-genotype interaction would not identify a target, and its absence would not exclude Cav3 or a shared benefit (which can matter in WOREE).
+4. **HIF1A to CaV3.2 (PMID 42276303).** Abstract only (open full text not reachable). DATO: HIF1A overexpression raises Cacna1h expression, promoter activity (NS20Y reporter) and network firing; OD/R raises firing; authors say "putative". INFERENZA: co-occurrence, not necessity: no CACNA1H perturbation, blocker or current is named in the abstract. HIF may follow activity or culture conditions (alternative at least as compatible). Elsewhere (abstract-level leads beyond the cap) Cav3.2 rises with HIF in rat cardiac, PC12, vascular and spinal systems, while Cav3.1 falls in one cardiac report: the link is isoform- and context-specific. No WWOX to Cacna link found.
+5. **Probes.** DATO: Z944 = ulixacaltamide = PRAX-944 (PubChem CID 44540045; ChEMBL CHEMBL3934636). Z944 Cav3.2 IC50 about 265 nM, Cav1.4 about 31 uM (HEK293T, patch clamp; PMID 41489546, full text). Cav3.1/Cav3.3 values and brain exposure not obtained. The structural paper says these blockers "have yet to discriminate between T-type subtypes" (PMID 38605177). Z944, ML218 and TTA-P2 share a scaffold: not independent chemistry. Z944 gives Cav3 class, not isoform.
+6. **Minimum experiment (IPOTESI).** One concurrent, same-day, blinded acute PTZ comparison in Wwox -/- and +/+ littermates: vehicle, ethosuximide, Z944 at measured brain exposure; late-phase window and interaction term fixed in advance; sedation, survival and seizure score as separate columns. Genetics (occlusion) only after it (`experiment.tsv`).
+
+## Part 1 and corrections (DATO / INFERENZA)
+
+Fig 7b/7d, panel by panel with n and limits: `fig7.tsv`. Held full text and Fig 7 render read 2026-11-07; earlier receipts read figures as captions only.
+* DATO: ethosuximide given once 45 min before PTZ; lithium three times within 1 h; Racine stage per minute; ANOVA only; legend defines only *** while 7d prints ****. Age of the PTZ test not stated (preweaning; spontaneous seizures after P12; blot at P20).
+* INFERENZA: the two PTZ-alone null cohorts (7b, 7d) are different animals with different shapes (late rise v early peak). An ethosuximide v lithium ranking across figures is not a head-to-head; "lithium better" is the authors' reading without an arm that tests it.
+* Corrections to the report as described: (i) the ethosuximide datum is Fig 7b, a separate experiment from the lithium datum (Fig 7d), not one citation for both; (ii) the datum is a behavioural effect of a nonselective drug, not evidence of Cav3 or of an isoform; (iii) "no effect in +/+ and +/-" is a floor-limited null, not specificity.
+
+## Part 3 and what is really added
+
+Existing: `hif_it10_p21_20261031/README.md` registered 42276303 at abstract level, no receipt. Added now: a staged abstract receipt, the explicit link table (`chain.tsv`: L5 and L6 undetermined), the isoform-specific counter-leads (L8), and the finding that no WWOX to T-type link exists in PubMed (L10). Added to Part 4: Z944 Cav3.2 value under one assay, Cav1.4 off-target, class-level isoform statement, identity. Not added: Cav3.1/Cav3.3 potency, mouse exposure, Tringham table (gap below).
+
+## Not resolved and gap
+
+* Stage 1 named a gap in writing: the per-isoform Z944 table (Tringham 2012, abstract only; full text not open) and ChEMBL activities (HTTP 500 on three tries). Reopening condition: an open per-isoform table, a working ChEMBL activity endpoint, or an open source with Z944 brain level in mouse at the pup age. Public checks still possible in silico: X0 in `experiment.tsv`.
+* One priority open question: does a Cav3-class blocker at measured exposure reproduce the late-phase reduction in the null, and does it differ from wild type with an interaction term?
+
+## Consequences (no promotion)
+
+Consumers to update by proposal only: `compare_it28_p9_20261105/README.md` (INV-04 R4 wording "pan-Cav3": class, isoform unresolved; Fig 7b reading from image; floor point; lithium not head-to-head), INV-03 and INV-04 rows of `ranking_it8_p9_20261029/investigations.tsv` (identity verified; no ranking change implied), NEED-T-TYPE-CALCIUM in `needs/needs.json` (add the worm control and the HIF necessity gap), `hif_it10_p21_20261031/README.md` (state "association; necessity not shown at abstract level" beside the CaV3.2 sentence; the MEA readout stays proposed).
+
+## Depth and limits
+
+Sources new to this package: 5 within the cap of 6 (42276303 abstract_only; 30189284 and 41489546 and 38605177 partial full text through the PMC tool, figures and supplements not read, text degraded; 22344687 abstract_only), plus 32000863 reread with Fig 7 viewed. Beyond the cap: 4 search-hit abstracts (and a metadata list) used only as labelled leads (`lead_beyond_cap`, no receipts); the Stage 2 slot used 1 (38605177). Order error: 38605177 was claimed after reading. Queries and failed routes: `queries.tsv`.

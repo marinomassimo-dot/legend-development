@@ -9,9 +9,9 @@
  "BASELINE": "development/main 28c72d7fc40a3a5213950605b5bcdd72261d5b45 (fetched 2026-11-07); worktree .claude/worktrees/ttype-20261107 from main. Queued behind ORCH-GSK3EIF2B-20261107 (battery running on its head). Reused by identifier: IT28 P9 compare (FTR-20261105-32000863-05, figures captions-only), IT10 P2.1 HIF package, manifest of PMID 32000863 and held figure renders. PMID 42276303 and 30189284 have no receipt.",
  "CURRENT_PACKAGE": {
   "id": "T-TTYPE",
-  "state": "brief written; producer not launched",
-  "delegate_active": "none",
-  "updated": "2026-11-07T21:00:00Z"
+  "state": "producer running (legend-delegate, sonnet/medium)",
+  "delegate_active": "tt-p",
+  "updated": "2026-11-07T21:10:00Z"
  },
  "RESUME": "Order: producer, census, verifier on decision-changing premises, targeted correction. Folder drug_repurposing/ttype_20261107/.",
  "DECISIONS_TAKEN": [
