@@ -8,7 +8,7 @@
  "START_UTC": "2026-11-07T12:00:00Z",
  "RESUME": {
   "worktree": ".claude/worktrees/it32 (branch task/it32)",
-  "next_action": "Finish view suite; regenerate stage S12 (recipe in generation_it30_p5 README), before/after vs S11; NB-3 verification then INV-16 consumer; P5 forward run; push.",
+  "next_action": "Finish view suite; freeze candidate; battery on exact SHA in a clean clone; merge main (re-fetch); safe_push; follow CI; cleanup; final report A-I.",
   "note": "Zero spend; no e-mail or contact; four current files via BATCH_COMMIT; safe_push only. CI on 2bc9e3b0 was in progress at start."
  },
  "AUTHORISED_QUEUE_20261107": {
@@ -51,9 +51,9 @@
    "steps": [
     {
      "step": "P3 Generative improvement: smallest link from a diagnosed interruption (vorinostat/INV-16 case), before/after",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "note": "(1) NEED-SEIZURE-CONTROL-SYMPTOMATIC lists only ABAT and CACNA1G: added SV2A, KCNQ2/3, SCN1A/2A/8A as search keys; need->compound search 63->236 records, 61->225 families, levetiracetam and its siblings reached, 0 consistent directions before and after (reach is not direction). (2) 20 proposals share the single-origin HDAC5->SLC2A1 premise, 12 handed over: generator column shared_premise_investigation (curated chain-prefix file), regression added; stage S12 regeneration pending"
+     "evidence": "two raccordi: (1) NEED-SEIZURE-CONTROL-SYMPTOMATIC lists 8 intervention targets instead of 2 (generation_it32_p3_20261107/FORWARD_RUN.md: need search 63->236 records, levetiracetam and siblings reached, 0 signed rows before and after); (2) generator column shared_premise_investigation ties the 20 proposals on the single-origin HDAC5->SLC2A1 premise to INV-16 (stage S12 = S11 + that column, test_stage_it32.py, helper tests in test_generation_it21.py). No proposal promoted or withdrawn; no predictive claim"
     }
    ]
   },
@@ -62,8 +62,9 @@
    "steps": [
     {
      "step": "P4 Scientific batch package chosen from the brief, produced, independently verified, consumed",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "NB-3 (nb3_class_iia_it32_20261107): producer (Sonnet, effort medium, 39 turns), blind verifier in a separate context (24 rows, all quotes verbatim; corrections: HDAC4 mutant is mouse not rat, CSCS caveats, merged systems, ischemic tissue), 9 receipts recorded (ledger 1,332); consumed by INV-16 (the statement that no neural HDAC5 catalytic arm exists is out of date: a catalytic-domain mutant exists in rat neurons for other outputs, none reads SLC2A1 in a human neural cell); myelin route: bounded null in the routes searched. Brief wording corrected (marker is not inert; no rescue found is not rescue impossible; developmental window not assumed prenatal; external evidence keeps its origin). NB-4, NB-1, NB-2 remain queued"
     }
    ]
   },
@@ -72,8 +73,9 @@
    "steps": [
     {
      "step": "P5 Forward regeneration after the link without the compound name; criteria fixed before",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "FORWARD_RUN.md: run 1 (need-driven, before/after) and run 2 (S12 v S11) with criteria stated before; reach rose, direction did not, no new hypothesis, no popularity or decoy control run (claim limited to reach)"
     }
    ]
   },
@@ -84,7 +86,7 @@
      "step": "P6 Full investigations queue explorable (short front summary kept)",
      "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "note": "further_investigations in ranking.json (INV-15, INV-11 with rank and curated reason), stable id anchors on every row, index of all 16 ids, five-language strings and passages, tests added; view suite running"
+     "note": "implemented and rebuilt; view suite rerun in progress after the last text change"
     }
    ]
   },
@@ -93,8 +95,9 @@
    "steps": [
     {
      "step": "P7 Small public reproducible case from a clean checkout",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "reach_it31_20261107/README.md rerun recipe executed in a fresh git clone without files/ and without LEGEND_CATALOG_CACHE: output identical to the committed table, 3 tests OK; regeneration of the catalogue ids and of the stage tables still needs the local cache (stated)"
     }
    ]
   },
@@ -103,8 +106,9 @@
    "steps": [
     {
      "step": "P8 Meaning preserved to the dashboard: targeted regression on the new path if a gap shows",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "no new infrastructure: the new path (further investigations, shared-premise column) has a regression each; the audit of the neural precedents found an out-of-date statement in INV-16 (a superseded result presented as current), corrected in the row; the SZL-type component was not adopted (boundaries of its proof noted in the mandate)"
     }
    ]
   },
@@ -113,8 +117,9 @@
    "steps": [
     {
      "step": "P9 Contributor entry point linked to an investigation",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "contributor_entry_it32_20261107/README.md linked to INV-15: replicate-structure table of public Wwox deletion datasets, answer/limit/error criteria, licences, no contact"
     }
    ]
   },
@@ -123,8 +128,9 @@
    "steps": [
     {
      "step": "P10 Sustainability: observed settings of real packages; radar/scouting from named gaps",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "observed settings of real packages (session_model_census): all 4 IT32 delegates ran as agent type legend-delegate, model sonnet, asked effort = read-back effort (low or medium); birth context 17.5k to 18.1k tokens; NB-3 producer 39 turns, 38.5k output tokens; blind verifier 19 turns, 18.9k output; delegates' own statements about their effort were wrong in two cases (they reported low/5 while the transcript read medium), so the transcript is the source. Radar: plan run, now names the older table (R1-R9, recovery_it10_p23) it does not read; limit not raised (its open rows are wet-lab or access-blocked); no external resource adopted: no named gap needed one"
     }
    ]
   },
