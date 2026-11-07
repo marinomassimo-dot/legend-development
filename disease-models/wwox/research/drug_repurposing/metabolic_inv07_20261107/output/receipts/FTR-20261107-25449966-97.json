@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-07T22:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-07T22:47:00Z",
+ "event_id": "FTR-20261107-25449966-97",
+ "evidence_basis": [
+  "An abstract is not a reading; it supports a conditional lead only.",
+  "verbatim_locator | proposition: respiratory CO2 contributes 3 to 100 percent of extracellular acidification across cell types and substrates | Abstract | \"ranging from 3% to 100% of the total acidification rate\"",
+  "Full text was not requested; no open full text was identified."
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/metabolic_inv07_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/metabolic_inv07_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record retrieved through the PubMed tools on 2026-11-07; abstract text only",
+ "study_id": {
+  "doi": "10.1016/j.bbabio.2014.10.005",
+  "pmid": "25449966"
+ },
+ "workflow": "INV-07 metabolic bottleneck (metabolic_inv07_20261107, label i7-p): question-driven reading of the abstract for the PDH, LDH or acidification question. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

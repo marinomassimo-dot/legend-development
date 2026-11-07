@@ -9,15 +9,17 @@
  "BASELINE": "development/main ce121d5814b8c83c65721c0709ac4ec2554a5011; same worktree and branch as ORCH-TTYPE-20261107. Receipts exist for 42909904 and 35984507; none for 16476929.",
  "CURRENT_PACKAGE": {
   "id": "I07",
-  "state": "producer running (legend-delegate, sonnet/medium)",
-  "delegate_active": "i7-p",
-  "updated": "2026-11-07T23:55:00Z"
+  "state": "verifier running (legend-delegate, sonnet/high)",
+  "delegate_active": "i7-v",
+  "updated": "2026-11-08T00:20:00Z"
  },
  "RESUME": "Folder drug_repurposing/metabolic_inv07_20261107/ (BRIEF.md, output/). Order: producer, census, verifier, correction.",
  "DECISIONS_TAKEN": [
   "Queued by the operator beside the running work; one delegate at a time; settings as before."
  ],
- "DELEGATIONS": [],
+ "DELEGATIONS": [
+  "I7 producer i7-p: asked sonnet/medium, read back claude-sonnet-5-5 x48, medium x48; birth 17,439; 48 turns; ~8 min; output 53,710; cache written 154,201; cache read 4,664,790; peak 162,686; completed README (~840 words), evidence (42 rows), explanations (7), experiment (8 ordered measures), queries (10), 3 staged receipts (abstract_only, validated with DOI check); 3 of 5 new sources; 16476929 full text unreachable (HTTP 403; stopped)"
+ ],
  "ESCALATIONS": [],
  "STOP_LOG": [
   "No stop for a reserved act."
