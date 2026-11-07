@@ -1,0 +1,87 @@
+{
+ "_schema": "orchestrator-task-v1",
+ "TASK_ID": "ORCH-ROADMAP-IT33-20261107",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "P0",
+ "OBJECTIVE": "IT33: consume the science (NB-4 consumers, NB-1 when it returns), improve generation, contain cost. Runs beside a scientific session that verifies the NB-4 residues and runs NB-1: do not duplicate its readings.",
+ "START_UTC": "2026-11-07T18:00:00Z",
+ "RESUME": {
+  "worktree": ".claude/worktrees/it33 (branch task/it33)",
+  "next_action": "P0 then P2 deterministic work, P3, P1 when the scientific artefacts land; NB-1 artefacts checked at milestones, not polled.",
+  "note": "Zero spend; no contact; four current files via BATCH_COMMIT only; safe_push only; no heavy battery while the other session runs one."
+ },
+ "AUTHORISED_QUEUE_20261107B": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P0 Baseline: CI on the IT32 final SHA, NB-4 integration, staged receipts, worktrees; reconcile 40 skips (IT32 battery) with 9 (pilot): suites, environment, reasons",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "P1 Close NB-4 in the consumers: reconcile 2 abstract-only receipts by event_id, INV-15 recombination qualification (what the verified package supports only), note and view; PMID 35966957 and figures are the scientific session's",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "P2 Cost where it arises: complete the census of the IT32 delegates, reconcile old figures presented as current, three causes (asked v observed incl. coordinator, too-wide or repeated retrievals, verification that rebuilds the whole search), proportionate verification brief in delegation_budget.md; no new meter, no delegate while the scientific session has one active",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "P3 Read recovery_it10_p23 R1-R9 against main: executed / superseded / still useful / blocked by a named datum; radar link only if it names the table without reading its rows; at most one reopening that can change a decision",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "P4 Generation: freeze the current stage inputs/outputs; MYC case (after NB-1 returns) and a second documented case; relation needed but not executed; minimal link in tables/generator; rerun without naming the compound; baseline v link v link removed; controls only if specificity is claimed; no GO-CAM",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "P5 Consumption: need/investigation, generator premise, proposal or conditional abstention, next experiment, dashboard when reader content changes; before/after and consumer proof per material change",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "P6 Validation, integration, closure: targeted tests, batteries coordinated with the scientific session, gate on the pushed SHA, CI, served pages, worktree cleanup, final report A-I",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}
