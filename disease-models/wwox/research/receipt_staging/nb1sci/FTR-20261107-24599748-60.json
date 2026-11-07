@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-07T18:05:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-07T18:12:38Z",
+ "event_id": "FTR-20261107-24599748-60",
+ "evidence_basis": [
+  "partial full text analysed (sections as listed in coverage)",
+  "verbatim_locator | proposition: Combined MYC and MYCN knockdown reduces differentiated neurons without changing EdU incorporation | Results and Discussion, MYC proteins control the balance | \"this resulted in a significant reduction in the number of NeuN;GFP double positive (NeuN+; GFP+) differentiated neurons at E4\"",
+  "verbatim_locator | proposition: MYC or MYCN overexpression increases neurons and, by E4, almost exhausts the targeted radial-glial pool | Results and Discussion, MYC proteins control the balance | \"at E4 the pool of double positive RGPs was almost completely exhausted\"",
+  "verbatim_locator | proposition: In tissue MYC overexpression barely changes cell-cycle phase lengths | Results and Discussion, Effects of MYC on neuronal progenitor cell proliferation | \"Overexpression of MYC caused only mild or no effect on the length of cell cycle phases in vivo\"",
+  "verbatim_locator | proposition: Knockdown of MYCN is followed by ectopic c-myc in the ventricular zone (compensation between paralogues) | Results and Discussion, MYC proteins control the balance | \"downregulation of MYCN expression resulted in a compensatory ectopic upregulation of c-myc in the ventricular zone\"",
+  "methods, discussion tail and supplementary figures not read; figures not viewed (legends read)"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb1_myc_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/nb1_myc_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC3989669 full-text XML fetched 2026-11-07 through Europe PMC REST fullTextXML; abstract, introduction, results and figure legends read; methods, discussion tail and supplement not read; figures not viewed; bytes not saved",
+ "study_id": {
+  "doi": "10.1002/embr.201337424",
+  "pmid": "24599748"
+ },
+ "workflow": "NB-1 package (nb1_myc_20261107), label nb1-p, Stage 1: MYC in neural progenitors as driver, state, composition or compensation. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
