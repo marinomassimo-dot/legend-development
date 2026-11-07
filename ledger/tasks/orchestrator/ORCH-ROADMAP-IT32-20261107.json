@@ -7,12 +7,10 @@
  "OBJECTIVE": "IT32: turn the interruptions diagnosed in IT31 into generative capacity (P0-P11, ordered queue). Continues IT31 residues (P4/P9 blocked on the investigations ceiling, now authorised in P6).",
  "START_UTC": "2026-11-07T12:00:00Z",
  "RESUME": {
-  "worktree": ".claude/worktrees/it32 (branch task/it32)",
-  "next_action": "Battery on 5d339a7f: if PASS push it (safe_push), follow CI, then land the P12 commits (view suite + targeted tests first), cleanup, final report A-I.",
-  "note": "Zero spend; no e-mail or contact; four current files via BATCH_COMMIT; safe_push only. CI on 2bc9e3b0 was in progress at start. P12 (queued integration on degraded sources and a GO-CAM-style extract for INV-16) starts after the IT32 candidate lands."
+  "note": "complete 2026-11-07; open items: NB-1 and NB-2 (next_batch_it31_20261107/BRIEF.md), the R1-R9 reopen table named but not read by the radar, GO-CAM-style extract not adopted (reopening condition in its README)"
  },
  "AUTHORISED_QUEUE_20261107": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P0": {
    "order": 1,
    "steps": [
@@ -64,7 +62,7 @@
      "step": "P4 Scientific batch package chosen from the brief, produced, independently verified, consumed",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "NB-3 (nb3_class_iia_it32_20261107): producer (Sonnet, effort medium, 39 turns), blind verifier in a separate context (24 rows, all quotes verbatim; corrections: HDAC4 mutant is mouse not rat, CSCS caveats, merged systems, ischemic tissue), 9 receipts recorded (ledger 1,332); consumed by INV-16 (the statement that no neural HDAC5 catalytic arm exists is out of date: a catalytic-domain mutant exists in rat neurons for other outputs, none reads SLC2A1 in a human neural cell); myelin route: bounded null in the routes searched. Brief wording corrected (marker is not inert; no rescue found is not rescue impossible; developmental window not assumed prenatal; external evidence keeps its origin). NB-4, NB-1, NB-2 remain queued; NB-3b (nb3b_action_it32_20261107, integration 'from target to biological action'): producer + blind verifier in separate contexts, 16 chain steps and 11 controls; outcome 'earlier pharmacological link weakened, molecule question abstained'; the premise source tested knockdown (amount) only and its pan-inhibitor arm names no GLUT1 result; bulk histone acetylation is a weak engagement readout for a class IIa enzyme; class-I-only comparator ambiguous; HDAC6 inhibitor a chemotype comparator, not a negative control; SLC2A1 direction in WWOX-deficient systems unresolved, no direction chosen; 6 receipts recorded (ledger 1,338); consumed by INV-16 (decisive uncertainty, next test, evidence), 3 passages retranslated; verifier corrections applied (HDAC4 sign narrowed, a same-direction hit added, count fixed, second human neural system added)"
+     "evidence": "NB-3 (nb3_class_iia_it32_20261107): producer (Sonnet, effort medium, 39 turns), blind verifier in a separate context (24 rows, all quotes verbatim; corrections: HDAC4 mutant is mouse not rat, CSCS caveats, merged systems, ischemic tissue), 9 receipts recorded (ledger 1,332); consumed by INV-16 (the statement that no neural HDAC5 catalytic arm exists is out of date: a catalytic-domain mutant exists in rat neurons for other outputs, none reads SLC2A1 in a human neural cell); myelin route: bounded null in the routes searched. Brief wording corrected (marker is not inert; no rescue found is not rescue impossible; developmental window not assumed prenatal; external evidence keeps its origin). NB-4, NB-1, NB-2 remain queued; NB-3b (nb3b_action_it32_20261107, integration 'from target to biological action'): producer + blind verifier in separate contexts, 16 chain steps and 11 controls; outcome 'earlier pharmacological link weakened, molecule question abstained'; the premise source tested knockdown (amount) only and its pan-inhibitor arm names no GLUT1 result; bulk histone acetylation is a weak engagement readout for a class IIa enzyme; class-I-only comparator ambiguous; HDAC6 inhibitor a chemotype comparator, not a negative control; SLC2A1 direction in WWOX-deficient systems unresolved, no direction chosen; 6 receipts recorded (ledger 1,338); consumed by INV-16 (decisive uncertainty, next test, evidence), 3 passages retranslated; verifier corrections applied (HDAC4 sign narrowed, a same-direction hit added, count fixed, second human neural system added); NB-4 (glial Wwox signal in GSE158684) was executed meanwhile by a concurrent session as a pilot (nb4_gse158684_glia_20261107, landed on main 9713e345), not duplicated here; NB-1 and NB-2 remain queued in next_batch_it31_20261107/BRIEF.md"
     }
    ]
   },
@@ -139,8 +137,9 @@
    "steps": [
     {
      "step": "P11 Integration, learnings in place, cleanup, final report A-I",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "candidate 5d339a7f: battery PASS WITH SKIPS (213 targets, 40 skipped; the first battery on ae360891 failed one release-runner test, verbosity of two new suites, fixed; log kept), safe_push gate PASS, CI 'Public release gate' success, 'Publish the shareable view' success, served site HTTP 200 in five languages with the further-investigations section and the Foundation link; P12 commit 0829fd9c: view suite 217 OK, targeted tests OK, gate PASS, CI success (no separate battery: disclosed); remote main later moved by a concurrent session (9713e345) and contains both; worktrees it32 and it32p12, their branches and the battery clone removed; the mandate-watch cron cancelled"
     }
    ]
   },
