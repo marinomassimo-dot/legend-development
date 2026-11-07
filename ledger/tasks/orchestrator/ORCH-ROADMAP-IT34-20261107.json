@@ -1,0 +1,127 @@
+{
+ "_schema": "orchestrator-task-v1",
+ "TASK_ID": "ORCH-ROADMAP-IT34-20261107",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "P0",
+ "OBJECTIVE": "IT34: from a functional phenotype to pharmacological generation (observation -> alternative explanations -> action to discriminate -> targets -> tools -> experiment -> open questions), compared with DisMech. Success = a decision or generator behaviour verifiably better, not more nodes, citations or compounds.",
+ "START_UTC": "2026-11-07T22:00:00Z",
+ "RESUME": {
+  "worktree": ".claude/worktrees/it34 (branch task/it34, based on the IT33 candidate)",
+  "next_action": "P8/P9: view suite and targeted tests on the IT34 worktree; land after IT33 (battery on 039358bd, push, CI); then IT34 push (gate, CI; a dedicated battery only if capacity); cleanup; final reports",
+  "note": "Zero spend; no contact; four current files via BATCH_COMMIT only; safe_push only; one delegate at a time; no battery while another session runs one."
+ },
+ "AUTHORISED_QUEUE_20261107C": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P0 Baseline and reconciliation with IT33; stage actually current (S13 after IT33 lands; S12 before) and its recipe",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "remote main fb756c52 at the start, IT33 candidate 039358bd under battery; IT34 worktree based on the IT33 candidate; stage actually current = S13 (IT33), S12 before"
+    }
+   ]
+  },
+  "OBJ_P1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "P1 DisMech comparison, bounded and updated: current revision SHA and schema version, differences that affect current work only; keep AI narrative / curated YAML / primary papers / LEGEND checks apart; 87 citations = 10 unique PMIDs",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "dismech_it34_20261107/README.md: the WWOX entry at current DisMech main adf2b657afb3 is byte-identical (same SHA-256) to the examined snapshot 825105f4; five commits in between touch no WWOX or schema file; layers kept apart; 87 occurrences = 10 unique PMIDs"
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "P2 Main case: sag, rebound, intrinsic excitability (PMID 34634460) traced observation -> need/premise -> HCN function -> target/action -> catalogue -> proposal -> investigation -> dashboard, with aliases resolved",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "same README: the trace of the sag observation: represented and used (source), represented not structured (one counter-evidence sentence), analysis not consumed (IT14 P3 rival R2 and its Ih arm only in a README), missing (need, HCN targets, investigation), present never asked (catalogue ids resolved for ivabradine and others), data limit (HCN2/HCN3 not in the engine's seed graph), none in S11/S12/S13"
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "P3 Smallest generative link if the diagnosis justifies it; frozen criteria; conditional alternative branches; no new graph, database, ontology, harness or model",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "NEED-INTRINSIC-EXCITABILITY and INV-18 added in existing structures (coverage regenerated, ranking unchanged, five-language passages, views rebuilt, audit PASS); HGNC and GO ids from official services"
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "P4 Second contrasting case (burst dependence on glutamatergic transmission v carbenoxolone, or amount v catalytic function INV-16), reuse of existing work",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "second case (carbenoxolone / glutamatergic burst dependence) kept the four differences with no engine change; same paper as case 1, so a control of generality, not a confirmation"
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "P5 Compare previous method / link / link removed on six measures; classify known thread / new combination / reopening / new hypothesis; no predictive claim from reach",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "before/after/ablation table in the README: 0 -> 14 records / 13 families, all direction_unresolved; ablation back to 0; recovery of a noted thread, no new hypothesis, no predictive or specificity claim"
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "P6 DisMech qualifications re-checked where they bear on the case; confidence 'not assessed' kept; five dimensions kept apart; schema difference measured, pin not bypassed",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "qualifications re-checked against the case; confidence 'not assessed' kept; five dimensions kept apart; schema drift measured (PARTIAL and WRONG_STATEMENT retired, new experiment enums), pin not bypassed, mapping not updated (path does not use those rows)"
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "P7 Consumers and dashboard: observation -> relations -> interventions -> counter-evidence -> open question -> next test, observed/inferred/hypothesised distinct, phone and five languages",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "need NEED-INTRINSIC-EXCITABILITY in the needs table and INV-18 in the conditional section of the dashboard (five languages, ids anchored, audit PASS); the path observation -> need -> branches -> test -> open question is readable from them with observed, inferred and hypothesised in separate fields; no new graphical interaction added (not needed by the proven path); DisMech licence (BSD-3-Clause) read, nothing copied or installed"
+    }
+   ]
+  },
+  "OBJ_P8": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "P8 Resources, licences, independent verification of decisive premises; one delegate at a time; OpenScientist not a dependency",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "one delegate (legend-delegate, sonnet, effort medium) as a blind verifier of seven decisive items plus a three-item plain sample, Europe PMC full text without a summariser: 5 supported, 2 overshoot (the authors name the resting potential as a factor, not as the alternative to intrinsic excitability; carbenoxolone is not specific to gap junctions rather than not attributable to them); corrections applied in the need, INV-18 (five languages), the README and rechecked at the changed points by string comparison against the audit wording; plain sample clean, so not extended; no external service, no installation; OpenScientist not used; licence BSD-3-Clause read for DisMech; older 2026-08 commit-candidate wording flagged for a BATCH_COMMIT review, not touched"
+    }
+   ]
+  },
+  "OBJ_P9": {
+   "order": 10,
+   "steps": [
+    {
+     "step": "P9 Regressions for the four behaviours, release checks, landing, CI, cleanup, final report A-I",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "note": "regressions added (test_check_needs: uncertain direction states do_not_assume, single-origin need keeps counter-evidence and gives no favourable sign; test_investigations: INV-18 three weakened branches, unresolved); reused: premise-map tests, repeated citations as one origin (nb of PMIDs in the need), limits to the consumer (view passages, audit-shareable); remaining: view suite and targeted tests on the final tree, push after IT33, CI"
+    }
+   ]
+  }
+ }
+}

@@ -379,6 +379,10 @@
   "src": "it",
   "text": "Esperimento già pubblicato da un solo laboratorio; animali e linea non disponibili (non nota). Denominatori presso gli autori delle serie; contatto fuori ambito."
  },
+ "454ba39f49eb": {
+  "src": "en",
+  "text": "Ex vivo slice electrophysiology in an existing Wwox neuron-deleted line; tool compounds only; no brain-exposure statement is carried here and none is implied for any clinically used member."
+ },
  "468979f1b607": {
   "src": "en",
   "text": "Measure the axonal activity-dependent myelination signal in the WWOX-deficient system against an isogenic control, before any compound; then decide whether the class is orderable. IT29: add an arm in Wwox-null precursor monoculture or the Wwox-null neuron co-culture, with a lipid-synthesis comparator beside the muscarinic one, crossed with a neuronal-activity manipulation."
@@ -414,6 +418,10 @@
  "4d6578e29718": {
   "src": "en",
   "text": "INV-13"
+ },
+ "4ede8e55ca00": {
+  "src": "en",
+  "text": "Conditional hypothesis: the observations are verified, the sign of the intervention is open in all three branches, and no Ih-blocker experiment exists in the system. (no ranked unit, so no evaluation depth applies: this is not a depth of zero)"
  },
  "50926e486c94": {
   "src": "en",
@@ -466,6 +474,10 @@
  "595b2de50fd2": {
   "src": "en",
   "text": "AhR-pathway activation is adverse in neural precursors in toxin studies; the pathway-target transcript is higher while NFE2L2 is lower."
+ },
+ "59d57064757f": {
+  "src": "en",
+  "text": "In knockout, heterozygote and wild-type slices: sag, resting potential, input resistance, rebound and burst incidence before and after two Ih blockers of different chemotypes (the second so that an off-target action is not read as Ih), with a current-clamp step that matches the resting potential, and a voltage-clamp read of the blocker-sensitive current in a subset of cells; animals, not cells, are the replicates."
  },
  "5ba82d5d53ac": {
   "src": "en",
@@ -535,6 +547,10 @@
   "src": "it",
   "text": "Rete con segno (solo risorse esterne) contro riferimento senza segno"
  },
+ "674effb47745": {
+  "src": "en",
+  "text": "INV-18"
+ },
  "6929f2e1854f": {
   "src": "en",
   "text": "An established assay on material the module already uses."
@@ -558,6 +574,10 @@
  "6dcb70653636": {
   "src": "en",
   "text": "A record-level analysis on material already in the module; no experiment."
+ },
+ "6dd37210ca39": {
+  "src": "en",
+  "text": "Queried on 2026-11-07: the needs table (no HCN target in any need before this one), the IT14 P3 package, the investigations table, the stage proposals S12 and S13 (no HCN main target or chain) and the catalogue by target and by id; a search of this module, not a statement about the literature."
  },
  "6e3b73bb3129": {
   "src": "en",
@@ -690,6 +710,10 @@
  "87c5d2d4fd52": {
   "src": "en",
   "text": "IT24 corrected and extended what the generator reads. After a source check, eight signed pairs (one compound on seven sirtuins and another on a caspase) were withheld: each rested on one review-table or trial-listing claim and no primary source supports a direction; no opposite sign was assigned, and none was the main link of any proposal. Chemical identity was recovered for 93 of the 115 rows that IT23 could not compare (89 firm), without merging by name; the comparison with a drug-signature search stays empty on 136 comparable rows. Splitting the calculation by target showed 32 conflicts between targets of one compound, almost all of them small, and 4 handed-over compounds with several favourable targets (two of them paralog pairs). New per-gene lists from public mouse data (a knock-in model and conditional deletions) are candidate pools, not findings. No position in this ranking changed, and none of these steps measures benefit or predictive accuracy."
+ },
+ "87d9beff9b15": {
+  "src": "en",
+  "text": "In Wwox-deficient layer II/III slices, does blocking Ih lower burst incidence, raise it, or leave it unchanged, when sag, resting potential and input resistance are read in the same cells?"
  },
  "87e5073b2c92": {
   "src": "en",
@@ -963,6 +987,10 @@
   "src": "en",
   "text": "Which of the six layers moves, per animal. A lower transcript does not show fewer cells, lower activity or less inhibition; an absent change in GSE158684 is not evidence of no change; the oligodendrocyte-lineage shift could be consequence or cause of an excitation-inhibition change and the data cannot say which. Whether any parvalbumin-cell change is a deficit, a compensation or a delayed maturation is unresolved, so the need direction stays unresolved and no lever sign is derived. Whether recombination reaches parvalbumin cells, and glia, in this deletion is not known from any source read, and a reporter measured in another context does not measure the excision of Wwox in parvalbumin cells."
  },
+ "b341877f3f25": {
+  "src": "en",
+  "text": "Branch A, compensatory Ih: blocking it worsens or leaves bursts; weakened if bursts fall. Branch B, pro-excitatory Ih through the depolarised resting potential: blocking it lowers bursts at matched membrane potential; weakened if bursts do not fall. Branch C, bystander: no effect on bursts although sag falls; weakened by any burst change. The sag itself must first be shown to be Ih (sensitive to the blocker), and a blocker that shifts the resting potential acts on the premises of A and B at once."
+ },
  "b3a38e83ad32": {
   "src": "it",
   "text": "Calo robusto nei progenitori shRNA ma segni opposti altrove; la composizione del tessuto può spiegarlo. Il documento P4 lo legge come non risolto."
@@ -978,6 +1006,10 @@
  "b4c4c771fbc1": {
   "src": "en",
   "text": "Carded axis: the NRF2/KEAP1 need with two conditional arms."
+ },
+ "b58d012f35c4": {
+  "src": "en",
+  "text": "The module holds a graded sag, a depolarised resting potential and a larger rebound with no consumer, and the heterozygote shows the same intrinsic changes yet rarely bursts. Three readings give opposite signs for the same drug class, so no Ih-directed compound can be ranked until one measurement separates them."
  },
  "b5adb8d69b29": {
   "src": "it",
@@ -1050,6 +1082,10 @@
  "c2d4c1ce61dd": {
   "src": "en",
   "text": "The chain was generated, not observed, and one reference cited by the chain itself reports the opposite sign, so the direction is not predicted. The test is feasible in existing mouse systems and one experiment can serve a second kinase-pathway probe. It sits at rank 7, below the ten-row line: the role of the inflammatory change (harm or protection) is unknown and the readout can wait for the glial measurements already planned."
+ },
+ "c3fd40e5e8ef": {
+  "src": "en",
+  "text": "WWOX-system, one preparation read in full and re-extracted (PMID 34634460, Table 1 and Figure 6): resting potential -79.25, -75.51, -73.62 mV and sag 1.18, 2.04, 2.57 mV grade with gene dose, input resistance saturates at one allele, rebound is larger only in the knockout, and bursts occur in 36 of 42 knockout, 4 of 23 heterozygote and 0 of 11 wild-type slices; the authors name control of the resting membrane potential as a factor underlying the hyperexcitability (the frequency-current slope does not differ once the curves are shifted to one step below rheobase; supplement not read) and cite discordant Ih-blocker precedents, including worsening of 4-AP events. Compound side: Ih-acting tools exist in the catalogue (a clinically used HCN blocker and several research blockers, identities resolved), found by the need search without naming any; their cellular potency in a cortical pyramidal neuron and their selectivity among HCN isoforms were not assessed here. No Ih-blocker experiment in a Wwox-deficient preparation is recorded in the entries read."
  },
  "c5a4e3d438da": {
   "src": "en",
@@ -1342,6 +1378,10 @@
  "fb82f4a9b16b": {
   "src": "it",
   "text": "linea shRNA"
+ },
+ "fc813c0373ff": {
+  "src": "en",
+  "text": "Known in the WWOX system: the observations and the Ih discussion are in PMID 34634460; the rival 'intrinsic state' and its Ih arm were written in IT14 P3 and are consumed here, for the first time, by a need (NEED-INTRINSIC-EXCITABILITY) and an investigation row."
  },
  "fdba233e1765": {
   "src": "en",

@@ -7,13 +7,10 @@
  "OBJECTIVE": "IT33: consume the science (NB-4 consumers, NB-1 when it returns), improve generation, contain cost. Runs beside a scientific session that verifies the NB-4 residues and runs NB-1: do not duplicate its readings.",
  "START_UTC": "2026-11-07T18:00:00Z",
  "RESUME": {
-  "worktree": ".claude/worktrees/it33 (branch task/it33)",
-  "next_action": "Refreeze the IT33 candidate (NB-1 included), battery in a clean clone, merge main, safe_push, CI, pages; then IT34 on top (merge the new IT33 head into task/it34), its view suite and targeted tests, push, CI; cleanup; final reports",
-  "note": "candidate 039358bd superseded by the NB-1 consumption commit; the waiting battery job was stopped before it started",
-  "queued_next": "IT34 (queued by the operator, starts after IT33 closure, own record ORCH-ROADMAP-IT34-*, own worktree): from a functional phenotype to pharmacological generation, compared with DisMech (page dismech.monarchinitiative.org .../WWOX-Related_Developmental_and_Epileptic_Encephalopathy.html; external snapshot monarch-initiative/dismech main 825105f4, YAML kb/disorders/WWOX-Related_Developmental_and_Epileptic_Encephalopathy.yaml; existing LEGEND DISMECH_INTEGRATION.md and exporters under disease-models/wwox/analysis/). P0 baseline and stage actually current (S13 after IT33, not S12); P1 bounded DisMech comparison (record SHA and schema version, only differences that affect current work; 87 citations = 10 unique PMIDs, not independent); P2 main case: sag, rebound and intrinsic excitability from PMID 34634460 traced observation -> need -> HCN function -> target -> catalogue -> proposal -> investigation -> dashboard (pointer: no HCN target in two needs, HCN/ZD7288 strings elsewhere, none found in the 994 S12 proposals; verify, resolve aliases, no absence from text search); P3 smallest link if justified, conditional branches for an unresolved direction, no blocker into the ranking automatically; P4 second contrasting case (burst dependence on glutamatergic transmission v carbenoxolone, or amount v catalytic function INV-16); P5 compare previous v link v link removed, no predictive claim from reach; P6 DisMech qualifications to re-check (P47T partial loss, lithium/PTZ not isolating GSK3b, carbenoxolone not attributing to one connexin, failed myelin repair, Hyal-2/WWOX/Smad4 non-neural), missing confidence stays 'not assessed', no implicit ESTABLISHED, measure schema difference vs old exporter, no pin bypass; P7 consumers and dashboard (observation -> relations -> interventions -> counter-evidence -> open question -> next test; observed/inferred/hypothesised visibly distinct); P8 one delegate at a time, compact briefs, OpenScientist is not a dependency, zero spend; P9 regressions for unresolved premise not gaining a sign, no transfer between compounds/contexts, repeated citations not independent, limits surviving to the consumer. Final report A-I per the operator's text."
+  "note": "complete 2026-11-07; open: NB-2 (Tau and beta-catenin pairing) and NB-3/NB-4 follow-ups of the brief; IT34 continues in ORCH-ROADMAP-IT34-20261107"
  },
  "AUTHORISED_QUEUE_20261107B": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P0": {
    "order": 1,
    "steps": [
@@ -85,9 +82,9 @@
    "steps": [
     {
      "step": "P6 Validation, integration, closure: targeted tests, batteries coordinated with the scientific session, gate on the pushed SHA, CI, served pages, worktree cleanup, final report A-I",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "note": "targeted tests OK (view 217, scout 76, census, generation 54, stage S12/S13, investigations 51, ranking 71, release surface, runner verdict, routing); the scientific session runs a battery (pid 2569553): mine waits for it to finish; then battery on the frozen SHA, merge/re-fetch, safe_push, CI, served pages, cleanup"
+     "evidence": "candidate fa06596e: targeted tests OK (view 217 on the previous state, 217 after NB-1 inside the battery, scout 76, census, generation 54, stage S12/S13, investigations 52, ranking 71, release surface, runner verdict, routing); battery coordinated with the scientific session (waited on its PID, mine stopped before starting when NB-1 landed and restarted on the refreshed candidate): PASS WITH SKIPS (214 targets, 40 skipped: environment, the clean clone has no local corpus; the 9 skips of the pilot's checkout recur in both); main had moved (the scientific session integrated NB-1 and its closure commits): the candidate was merged into it cleanly (28c72d7f; the merge differs from the tested tree by one ledger record of the other session), gate PASS, CI 'Public release gate' and 'Publish the shareable view' success on 28c72d7f, site HTTP 200 in five languages with INV-17; worktree, branch and battery clone removed"
     }
    ]
   }

@@ -42,6 +42,7 @@
  "NEED_IT.NEED-GABA-CHLORIDE-GRADIENT": "Gradiente del cloro y polaridad GABA",
  "NEED_IT.NEED-GSK3B-DEREPRESSION": "Desrepresión de GSK3beta",
  "NEED_IT.NEED-INHIBITORY-HYPOFUNCTION": "Control inhibitorio",
+ "NEED_IT.NEED-INTRINSIC-EXCITABILITY": "Potencial de reposo despolarizado, sag y rebote mayores en neuronas piramidales deficientes en Wwox (la corriente Ih como nodo propuesto)",
  "NEED_IT.NEED-ISR-ATTENUATION": "Respuesta integrada al estrés",
  "NEED_IT.NEED-LACTATE-LDH": "Lactato y actividad de la lactato deshidrogenasa",
  "NEED_IT.NEED-MITOCHONDRIAL-RESPIRATION": "Respiración mitocondrial y capacidad de fosforilación oxidativa",
