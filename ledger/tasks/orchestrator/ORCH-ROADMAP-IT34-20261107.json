@@ -7,12 +7,10 @@
  "OBJECTIVE": "IT34: from a functional phenotype to pharmacological generation (observation -> alternative explanations -> action to discriminate -> targets -> tools -> experiment -> open questions), compared with DisMech. Success = a decision or generator behaviour verifiably better, not more nodes, citations or compounds.",
  "START_UTC": "2026-11-07T22:00:00Z",
  "RESUME": {
-  "worktree": ".claude/worktrees/it34 (branch task/it34, based on the IT33 candidate)",
-  "next_action": "P8/P9: view suite and targeted tests on the IT34 worktree; land after IT33 (battery on 039358bd, push, CI); then IT34 push (gate, CI; a dedicated battery only if capacity); cleanup; final reports",
-  "note": "Zero spend; no contact; four current files via BATCH_COMMIT only; safe_push only; one delegate at a time; no battery while another session runs one."
+  "note": "complete 2026-11-07; open: NB-2 (Tau and beta-catenin pairing), review of the 2026-08 carbenoxolone wording for a BATCH_COMMIT, HCN2/HCN3 absent from the seed graph, DisMech exporter mapping rows with retired values (reopen only if exporting an observation)"
  },
  "AUTHORISED_QUEUE_20261107C": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P0": {
    "order": 1,
    "steps": [
@@ -117,9 +115,9 @@
    "steps": [
     {
      "step": "P9 Regressions for the four behaviours, release checks, landing, CI, cleanup, final report A-I",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "note": "regressions added (test_check_needs: uncertain direction states do_not_assume, single-origin need keeps counter-evidence and gives no favourable sign; test_investigations: INV-18 three weakened branches, unresolved); reused: premise-map tests, repeated citations as one origin (nb of PMIDs in the need), limits to the consumer (view passages, audit-shareable); remaining: view suite and targeted tests on the final tree, push after IT33, CI"
+     "evidence": "regressions: test_check_needs (an uncertain-direction need states what not to assume; the intrinsic-excitability need keeps one origin, its counter-evidence and no favourable sign), test_investigations (INV-18 three weakened branches, direction unresolved), premise-map tests reused (S13 ablation, pattern matching); repeated citations: the need's observations share one PMID and the DisMech occurrences are 87 for 10 unique PMIDs; limits to the consumer: need text, INV-18 passages and audit-shareable. Validation: the first view suite failed four tests (three pinned counts of needs 23 and the missing Italian label of the new need: a superseded assumption and a defect of my change, fixed without weakening a check), rerun 217 OK; ranking 71, investigations 52, needs 14, scout 76, generation 54, stage S13, release surface, runner verdict, routing, bridge; battery on the frozen SHA 96870aa2: PASS WITH SKIPS (214 targets, 40 skipped: the clean clone has no local corpus), coordinated by waiting on the other session's PID; main had moved (other sessions integrated); the candidate merged into it cleanly as cb727195 (the merge adds only the other session's package files), gate PASS, CI success on cb727195 ('Public release gate' and 'Publish the shareable view'), site HTTP 200 in five languages with the need and INV-18"
     }
    ]
   }
