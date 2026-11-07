@@ -15,3 +15,15 @@ Columns count rows or files that name the compound: stage proposals (IT21 stage,
 
 ## Consequence for the queue
 No change to ranking or cards. Two actions follow and are carried in the IT31 record: P8 package on seizure comparators (levetiracetam, ethosuximide, perampanel and the antiseizure agents named in WWOX-related reports, with sources for any usage figure), and the HDAC5 premise row proposed in `inv_drafts_it31/` (P4).
+
+## IT32: identity-resolved version, and how to rerun it from a public checkout
+`reach_it32.py` repeats the table with identity resolved through catalogue ids (`catalogue_ids_it32.tsv`: exact substance or salt versus neighbours that are kept separate, for example etiracetam, everolimus, mephobarbital). It matches whole identifiers (a regression, `test_reach_it32.py`, covers the prefix error a substring test made). Findings: all 14 compounds are in the catalogue; only the stage proposals are computed from seeds, the cards, conditional questions and investigations are curated text, so a mention there is not a relation consumed by the generator; levetiracetam has a catalogue record and no stage row because no transcript seed or need target reached SV2A (closed for the seizure need in IT32, see `../generation_it32_p3_20261107/FORWARD_RUN.md`).
+
+**Rerun from a public checkout** (executed 2026-11-07 in a fresh `git clone --no-hardlinks`, no `files/`, `LEGEND_CATALOG_CACHE` unset, plain Python 3 standard library):
+```
+cd disease-models/wwox/research/drug_repurposing/reach_it31_20261107
+python3 reach_it32.py > /tmp/reach.tsv && diff /tmp/reach.tsv reach_it32.tsv     # no difference expected
+python3 test_reach_it32.py
+python3 ../generation_it32_p3_20261107/test_stage_it32.py
+```
+Inputs are committed repository files (stage tables S11 and S12, IT30 conditional questions, `investigations_it20.tsv`, the card JSONs, `catalogue_ids_it32.tsv`). Only regenerating `catalogue_ids_it32.tsv` (`catalog/catalog_build.py query --name <x>`) and regenerating the stage tables need the local catalogue cache, which is not distributed; a missing cache stops those steps and never changes the committed outputs. Redistribution: all inputs are this repository's own derived tables; no third-party raw file is involved.
