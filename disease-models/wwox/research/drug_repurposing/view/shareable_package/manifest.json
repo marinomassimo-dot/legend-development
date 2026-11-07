@@ -18,7 +18,7 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 12595,
+    "values": 12605,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -118,17 +118,17 @@
    },
    "^\\.needs\\[\\]\\.": {
     "class": "OWN",
-    "values": 1783,
+    "values": 1787,
     "why": "needs records written in this repository"
    },
    "^\\.pairs\\[\\]\\.(l2|l3|l4|x|n|r)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 33889,
+    "values": 36021,
     "why": "levels 2-4, indices: computed from cards and needs"
    },
    "^\\.pairs\\[\\]\\.l1\\.(state|n_assoc|readout_only|why|stale)$": {
     "class": "OWN",
-    "values": 12925,
+    "values": 13745,
     "why": "level-1 state, association count and note computed by the coverage tool"
    },
    "^\\.pairs\\[\\]\\.l1\\.(targets|pathway)\\[\\]$": {
@@ -143,12 +143,12 @@
    },
    "^\\.pairs\\[\\]\\.l1\\.withheld$": {
     "class": "COUNT",
-    "values": 2585,
+    "values": 2749,
     "why": "number of association rows withheld by the allowlist"
    },
    "^\\.pairs\\[\\]\\.p\\.": {
     "class": "OWN",
-    "values": 15662,
+    "values": 17272,
     "why": "priority criteria computed by the coverage tool"
    },
    "^\\.pairs\\[\\]\\.p\\.cr\\.dir\\[\\]\\[\\]$": {
@@ -158,12 +158,12 @@
    },
    "^\\.rows\\[\\]\\.(dup|rec|tr|w)$": {
     "class": "COUNT",
-    "values": 8952,
+    "values": 9536,
     "why": "record counts of a catalogue row"
    },
    "^\\.rows\\[\\]\\.(id|kind)$": {
     "class": "ID",
-    "values": 4502,
+    "values": 4794,
     "why": "catalogue row identifier and row kind"
    },
    "^\\.rows\\[\\]\\.acc\\[\\]$": {
@@ -178,7 +178,7 @@
    },
    "^\\.rows\\[\\]\\.name$": {
     "class": "ROWNAME",
-    "values": 2251,
+    "values": 2397,
     "why": "card name (own text), opaque identifier, or a class-A name source"
    },
    "^\\.strings\\[\\]$": {
@@ -198,8 +198,8 @@
    }
   },
   "identifiers": {
-   "CAT": 2229,
-   "CHEMBL": 309,
+   "CAT": 2375,
+   "CHEMBL": 369,
    "DOI": 5,
    "HGNC": 12,
    "NCT": 0,
@@ -224,7 +224,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3395,
+    "forbidden-name": 3401,
     "forbidden-wording": 21
    },
    "co_attested_wording": [
@@ -364,10 +364,10 @@
   "excluded_rows_with_names_full": 3,
   "excluded_rows_with_names_shareable": 0,
   "needs": 23,
-  "pairs_total": 2585,
-  "pairs_with_status_class_full": 913,
+  "pairs_total": 2749,
+  "pairs_with_status_class_full": 1028,
   "pairs_with_status_class_shareable": 0,
-  "pairs_with_target_list_full": 2204,
+  "pairs_with_target_list_full": 2368,
   "pairs_with_target_list_shareable": 13,
   "payload_sections": {
    "access": "identical",
@@ -394,14 +394,14 @@
    "strings": "identical",
    "tech": "differs"
   },
-  "rows_named_full": 2237,
+  "rows_named_full": 2383,
   "rows_named_shareable_card_names_only": 52,
-  "rows_total": 2251,
-  "rows_with_access_categories_full": 2224,
+  "rows_total": 2397,
+  "rows_with_access_categories_full": 2370,
   "rows_with_access_categories_shareable": 19,
-  "rows_with_per_row_status_or_modality_full": 2251,
+  "rows_with_per_row_status_or_modality_full": 2397,
   "rows_with_per_row_status_or_modality_shareable": 0,
-  "target_symbols_listed_full": 2727,
+  "target_symbols_listed_full": 3145,
   "target_symbols_listed_shareable": 13
  },
  "counts_only_sources": [
@@ -468,10 +468,10 @@
  },
  "embedded_field_classes": {
   "BIBLIO": 2688,
-  "COUNT": 11600,
-  "ID": 4547,
-  "OWN": 84447,
-  "ROWNAME": 2251,
+  "COUNT": 12348,
+  "ID": 4839,
+  "OWN": 89023,
+  "ROWNAME": 2397,
   "SRC_A": 189,
   "SRC_META": 256,
   "UI": 1398
@@ -508,8 +508,8 @@
  ],
  "files": {
   "COMPARISON.md": {
-   "bytes": 7422,
-   "sha256": "37bcee1e0d8b7ec00bec72142217c9f48d9030f5a5a4345732644d4921235306"
+   "bytes": 7423,
+   "sha256": "bfa65122993ce711ced1d00c2c33707f41b87e68b78e9f978ab358866ab0e377"
   },
   "LICENSES/CC-BY-4.0.txt": {
    "bytes": 18657,
@@ -528,8 +528,8 @@
    "sha256": "e5dfa90d88e2069a2e4fd13429e8ebaefb7bd92fbbaede065af905656bc7ba87"
   },
   "NOTICE.md": {
-   "bytes": 13086,
-   "sha256": "2925945fb966c9aa89527934d63f1242aac42feb2abba6c5da212212b771f4d0"
+   "bytes": 13087,
+   "sha256": "38d46ce6ee9ac4114997b3b1eb71d4c2aae4d6f5e6e227162c8b8d72032fcdda"
   },
   "README.md": {
    "bytes": 5072,
@@ -552,24 +552,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 4758969,
-   "sha256": "739cc4dd20a8772a3be0360d6c8aa3b50e2fa8f57abebee9cd227b1d06f87b41"
+   "bytes": 4876498,
+   "sha256": "a88720b0a55b800c556c7b5c0ce0027cc9c9e93afa569c285be9cc3bfe88a78d"
   },
   "es.html": {
-   "bytes": 4744754,
-   "sha256": "498b239940cf85f5d7f624a9b7d490d477088ed5dfbee3d087a3bba98ee1398f"
+   "bytes": 4862259,
+   "sha256": "949e5cda7176c06333d4b8cde11bb76060e05619f614296632a601d9ee2c4568"
   },
   "fr.html": {
-   "bytes": 4768178,
-   "sha256": "3cd5936c5ebb0b7559acfbced9ab33e97bcced25fbfc12273b4927133c1c8683"
+   "bytes": 4885807,
+   "sha256": "e019c47a427c620d328f0b80f6610954fccdd8e48daf2ad7b08b0e5fe9cb19a0"
   },
   "index.html": {
-   "bytes": 4676246,
-   "sha256": "a28b309cad81949ba1e86b87a54bb15fed220244e48e4344af6d636216bdd960"
+   "bytes": 4793456,
+   "sha256": "970d5b4f99f1a6b2284ec14a9424df7ed3e2c812f06907ed5d1ea928c0f3c90a"
   },
   "it.html": {
-   "bytes": 4720591,
-   "sha256": "183928df3a22aa22cceb508900e5202ff95c98abe6fc3e8d6ef38175babfc9f9"
+   "bytes": 4838123,
+   "sha256": "bf7e3df3bfeb9bde93eb8bfacdfd1a05a2c143ece39db9a76e5f66b3cfa262a7"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
@@ -635,7 +635,7 @@
   ],
   "lead_field_redactions": 11,
   "pair_status_rule": "pairs[].p.cr.pha[1] (status classes of the row) is dropped in the shareable build: a status class derives from ChEMBL max_phase, DGIdb approved flags, MATRIX and openFDA together, and the build does not re-derive a class-A-only status per row.",
-  "pairs_status_class_dropped": 913,
+  "pairs_status_class_dropped": 1028,
   "repository_file_names_described": 0,
   "rule": "IT5 P13 fix. Own analysis stays in the shareable build: a conclusion at the level of a need, a class or a card subject, in our own words, short, attributed to a published work. Withheld: (1) a sentence that states a compound-target(-action) pair together with its database of origin when the pair is asserted only by a class-B/C catalogue source; (2) a compound named in prose whose only provenance in the repository is a class-B/C catalogue row (it appears in no cited full text and is not a card subject); (3) a per-compound status, phase, approval or access statement attributed to a class-B/C source; (4) repository file names, which cannot be used outside the repository. The replacement keeps the research conclusion and names the withheld source class with the phrase in withheld_phrase. The FULL build keeps everything. The audit enforces (1) and (2) by derivation from the catalogue, (3) and (4) by pattern, and every redaction below must match exactly once or more: a stale redaction fails the build.",
   "withheld_phrase": "dato di una fonte non inclusa in questa versione"
