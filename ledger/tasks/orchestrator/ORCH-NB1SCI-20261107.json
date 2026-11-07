@@ -8,15 +8,16 @@
  "START_UTC": "2026-11-07T18:00:00Z",
  "BASELINE": "development/main fb756c521bf29d60bcee42beb758ef2b9a6ebc74; local main 6773895ea2b19902c67ea135ac8f2b9e3b55dfde (adds the IT33 mandate record, unpushed); worktree .claude/worktrees/nb1-science-20261107 from local main. IT33 works in .claude/worktrees/it33 and consumes NB-4 and NB-1 when they return; NB-3, NB-3b and the NB-4 pilot are done and not repeated.",
  "CURRENT_PACKAGE": {
-  "id": "C-CLOSE",
-  "state": "no delegate active; validation, landing and cleanup",
+  "id": "none",
+  "state": "complete; landing",
   "delegate_active": "none",
-  "updated": "2026-11-07T18:50:00Z"
+  "updated": "2026-11-07T19:55:00Z"
  },
  "RESUME": "Package order, one delegate at a time: A producer, A verifier, NB-1 producer, NB-1 verifier. Folders: drug_repurposing/nb4_delta_20261107/ and drug_repurposing/nb1_myc_20261107/. CURRENT_PACKAGE shows the live one.",
  "DECISIONS_TAKEN": [
   "Coordinator configuration: the prompt asks Sonnet at effort medium 'if configurable'; the runtime cannot be reset by the prompt. The effective configuration is read from the coordinator transcript at close and recorded then (last observed before this session: claude-sonnet-5-5, effort high).",
-  "Coordinator observed configuration for this session: claude-sonnet-5-5, effort high on all 29 responses of the window (requested medium 'if configurable'; not configurable from a prompt). Recorded, not declared medium."
+  "Coordinator observed configuration for this session: claude-sonnet-5-5, effort high on all 29 responses of the window (requested medium 'if configurable'; not configurable from a prompt). Recorded, not declared medium.",
+  "Battery on a no-hardlinks clone of 27093d10bc5719db0fd46cede99206bbf8c50d1e, run at nice 19 while no other battery was running: REGRESSION VERDICT PASS WITH SKIPS (213 targets, 9 skipped, environment). Not attributed to the closure commit that records it."
  ],
  "DELEGATIONS": [
   "A producer nb4d-p: asked sonnet/medium, read back claude-sonnet-5-5 x28, medium x28; birth 17,292; 28 turns; ~5 min; output 34,413; cache written 109,708; cache read 1,880,971; peak 109,710; completed README, evidence.tsv (21 rows), queries.tsv, 2 staged receipts (both validated with DOI check; partial_fulltext_read; figures captions_only by the closed vocabulary although Supp Fig 1 page was viewed as an image)",
@@ -32,7 +33,7 @@
   "Condition: the operator fixed settings (producer sonnet/medium, verifier sonnet/high, legend-delegate, one active at a time). Default: no runtime turn or output ceiling is available, so the brief scope is an operational limit. Why safe: reversible, nothing shared touched."
  ],
  "AUTHORISED_QUEUE_20261107B": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_A": {
    "order": 1,
    "steps": [
@@ -58,8 +59,9 @@
    "steps": [
     {
      "step": "C consumption note, validation, landing, worktree removal, final report A-F",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "gate PASS 0 blocks, LINT WARN no BLOCK, receipts verify OK (1338), 10 staged receipts validated with DOI check, battery PASS WITH SKIPS on 27093d10"
     }
    ]
   }
