@@ -789,13 +789,18 @@ def _extract(path: str, text: str):
     return parse_reopen(text, path), [], []
 
 
-def _tables(runner, sha: str) -> list[str]:
-    """Reopen/decision tables of the module at `sha`: one listing call, newest packages first, bounded."""
+def _all_tables(runner, sha: str) -> list[str]:
+    """Every reopen/decision table of the module at `sha`, newest packages first: one listing call."""
     code, out = runner(["ls-tree", "-r", "--name-only", sha, MODULE + "/"])
     if code != 0:
         return []
     names = [p for p in out.split("\n") if TABLE_NAME.search(p)]
-    return sorted(names, key=lambda p: (-int(m.group(1)) if (m := re.search(r"_it(\d+)", p)) else 0, p))[:TABLE_LIMIT]
+    return sorted(names, key=lambda p: (-int(m.group(1)) if (m := re.search(r"_it(\d+)", p)) else 0, p))
+
+
+def _tables(runner, sha: str) -> list[str]:
+    """The newest `TABLE_LIMIT` tables; the rest are not read and the plan says so (`resolve_plan`)."""
+    return _all_tables(runner, sha)[:TABLE_LIMIT]
 
 
 def _latest(runner, sha: str, directory: str, pattern: str):
@@ -830,7 +835,11 @@ def resolve_plan(cached: dict | None, extracts: dict | None, ctx: dict, runner=g
     else:
         reasons.append("no diagnosis_it* directory at this revision")
     inputs, items, reread = {}, [], 0
-    todo = list(paths.items()) + [("reopen", t) for t in _tables(runner, sha)]
+    every_table = _all_tables(runner, sha)
+    if len(every_table) > TABLE_LIMIT:      # a silent drop hid a whole reopen table before (map row EN-01)
+        reasons.append(f"{len(every_table) - TABLE_LIMIT} older reopen/decision table(s) not read (TABLE_LIMIT {TABLE_LIMIT}): "
+                       + ", ".join(every_table[TABLE_LIMIT:]))
+    todo = list(paths.items()) + [("reopen", t) for t in every_table[:TABLE_LIMIT]]
     seen_paths = set()
     while todo:
         kind, path = todo.pop(0)

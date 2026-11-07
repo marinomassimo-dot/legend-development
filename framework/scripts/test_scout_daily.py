@@ -1085,6 +1085,13 @@ def derive_tables(table_text=TABLE_TEXT, extra=None):
 class ReopenTables(unittest.TestCase):
     """IT18 P1.1: the open conditions the module keeps as tables reach the plan; closed ones do not."""
 
+    def test_a_table_beyond_the_read_limit_is_named_in_the_plan_not_dropped_silently(self):
+        extra = {f"{sd.MODULE}/pkg_it{n}_p1_2026/reopen_searches.tsv": TABLE_TEXT for n in range(1, sd.TABLE_LIMIT + 3)}
+        plan, _ = derive_tables(extra=extra)
+        notes = " ".join(plan.get("provisional") or [])
+        self.assertIn("older reopen/decision table(s) not read", notes)
+        self.assertIn("pkg_it1_p1_2026/reopen_searches.tsv", notes)
+
     def test_an_open_row_becomes_a_question_and_an_answered_or_conditionless_row_does_not(self):
         plan, _ = derive_tables()
         ids = [k for k in by_id(plan) if k.startswith("reopen:pkg_it14")]

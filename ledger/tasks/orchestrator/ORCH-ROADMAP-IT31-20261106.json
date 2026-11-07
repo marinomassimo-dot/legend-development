@@ -117,7 +117,8 @@
     {
      "step": "P9 Dashboard priorities and filters",
      "status": "TODO",
-     "owner": "orchestrator"
+     "owner": "orchestrator",
+     "note": "views regenerated with INV-15/INV-16 in five languages (215 view tests, audit-shareable PASS); both rows sit below the ten-row published line by the existing ceiling, so the priority wording on the front page is unchanged. Not done: a front-page presentation of the new investigations; the ceiling is a design decision for the next package"
     }
    ]
   },
@@ -126,8 +127,9 @@
    "steps": [
     {
      "step": "P10 Radar and capability growth",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "radar check 2026-11-07: no scheduler runs scout_daily.py (the session cron list was empty; the radar ran inside iteration packages, last IT28 P12 on 2026-11-05); defect EN-01 found by the map: the plan read only the 12 newest reopen/decision tables and dropped older ones silently; now the plan names every table beyond TABLE_LIMIT (test_scout_daily, 75 tests OK); the cap is not raised. The session mandate-watch cron was found missing after the context change and recreated (every hour at :37). No new external resource adopted: no named gap needed one"
     }
    ]
   },
