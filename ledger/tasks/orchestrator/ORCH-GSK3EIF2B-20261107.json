@@ -8,17 +8,21 @@
  "START_UTC": "2026-11-07T19:30:00Z",
  "BASELINE": "development/main fb756c521bf29d60bcee42beb758ef2b9a6ebc74; local main 6773895ea2b19902c67ea135ac8f2b9e3b55dfde; worktree .claude/worktrees/gsk3-eif2b-20261107 from local main. Queued beside ORCH-NB1SCI-20261107 (battery running on its head; not interrupted). Reused by identifier: PMID 32000863 (complete read FTR-20260804-32000863-01), IT15 QB GSK3 and its verification, IT28 ISR role, IT30 WO-06, card E01, needs NEED-GSK3B-DEREPRESSION and NEED-ISR-ATTENUATION. PMID 12133000 and 15001529 have no receipt.",
  "CURRENT_PACKAGE": {
-  "id": "G-GSK3-EIF2B",
-  "state": "brief written; producer not launched",
+  "id": "H-CLOSE",
+  "state": "no delegate active; waiting for the concurrent battery to finish before ours",
   "delegate_active": "none",
-  "updated": "2026-11-07T19:30:00Z"
+  "updated": "2026-11-07T20:00:00Z"
  },
  "RESUME": "Order: producer, census, verifier on decision-changing links, targeted correction. Folder drug_repurposing/gsk3_eif2b_20261107/.",
  "DECISIONS_TAKEN": [
   "The external OpenScientist report is not in the repository; treated as a question generator only; not needed by the delegates.",
-  "One delegate at a time; the battery of the previous task is CPU only and runs at low priority."
+  "One delegate at a time; the battery of the previous task is CPU only and runs at low priority.",
+  "PMID 10216953: an abstract came back in a metadata call during triage; not used, not cited, not counted as a seventh source. Title-only leads (38352041, 11756553, 11500362, 11311121) are reopening candidates, not read."
  ],
- "DELEGATIONS": [],
+ "DELEGATIONS": [
+  "G producer gsk-p: asked sonnet/medium, read back claude-sonnet-5-5 x58, medium x58; birth 17,344; 58 turns; ~18 min; output 79,513; cache written 191,880; cache read 5,942,042; peak 191,882; completed README, chain.tsv (13), evidence.tsv (28), residues.tsv, hypotheses.tsv (5), experiment.tsv, queries.tsv, 6 staged receipts (validated with DOI check; 3 abstract_only, 3 partial_fulltext_read); six new sources (limit); 12133000 and 15001529 full text unreachable (HTTP 500/403/bot check); a retry of a PMC page was refused by the auto-mode classifier as bot-check circumvention and the producer stopped (not worked around)",
+  "G verifier gsk-v: asked sonnet/high, read back claude-sonnet-5-5 x47, high x47; birth 18,112; 47 turns; ~9 min; output 56,043; cache written 175,053; cache read 5,030,877; peak 183,538; blind, items only; 23 rows asked (20 decisive + 3 plain sample): 22 supported, 1 overshoot (E02); residue RS02 offset corrected; H1 H2 absence claims held with two routes; corrections adopt the audit's wording, rechecked by comparison with the audit text, not a second blind pass"
+ ],
  "ESCALATIONS": [],
  "STOP_LOG": [
   "No stop for a reserved act."
@@ -33,7 +37,7 @@
    "steps": [
     {
      "step": "G producer, verifier, correction, consumer note",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator"
     }
    ]
