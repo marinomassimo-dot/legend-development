@@ -1065,6 +1065,7 @@ NEED_IT = {
     "NEED-GABA-CHLORIDE-GRADIENT": "Gradiente del cloro e polarità GABA",
     "NEED-SEIZURE-CONTROL-SYMPTOMATIC": "Controllo di crisi e spasmi come bisogno sintomatico",
     "NEED-T-TYPE-CALCIUM": "Sensibilità all'etosuccimide della crisi provocata nella perdita di Wwox",
+    "NEED-INTRINSIC-EXCITABILITY": "Potenziale di riposo depolarizzato, sag e rebound maggiori nei neuroni piramidali carenti di Wwox (la corrente Ih come nodo proposto)",
     "NEED-MYELINATION": "Ipomielinizzazione",
     "NEED-GSK3B-DEREPRESSION": "Derepressione di GSK3beta",
     "NEED-WNT-BETA-CATENIN": "Segnale Wnt/beta-catenina elevato negli organoidi privi di WWOX",
