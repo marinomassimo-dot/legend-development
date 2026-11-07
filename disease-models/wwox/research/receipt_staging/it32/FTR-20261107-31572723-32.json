@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-07T12:41:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-07T12:55:00Z",
+ "event_id": "FTR-20261107-31572723-32",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: MC1568 increased neurite growth in SH-SY5Y cells beside HDAC5 and HDAC9 siRNA | Results | \"treatment with MC1568 also led to an increase in neurite growth\"",
+  "verbatim_locator | proposition: MC1568 rather than siRNA was used for the BMP2 expression readout because of transfection efficiency | Results | \"A pharmacological approach was used rather than siRNA due to the low transfection efficiency of SH-SY5Y cells\"",
+  "verbatim_locator | proposition: nuclear-restricted HDAC5 lowered histone acetylation | Results | \"Cells expressing nuclear-restricted HDAC5 had significantly lower levels of acetylated histone 3\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb3_class_iia_it32_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/nb3_class_iia_it32_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC6753186 full text served by the PubMed Central tool, fetched 2026-11-07; text read in full; figure legends read, images not viewed; bytes not saved",
+ "study_id": {
+  "doi": "10.3389/fcell.2019.00191",
+  "pmid": "31572723"
+ },
+ "workflow": "IT32 NB-3 (class IIa HDACs, catalytic versus scaffold, myelin). Question-driven read for the passages cited in the evidence table. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

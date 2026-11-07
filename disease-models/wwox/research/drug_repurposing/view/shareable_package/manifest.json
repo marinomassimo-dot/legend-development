@@ -203,7 +203,7 @@
    "DOI": 5,
    "HGNC": 12,
    "NCT": 0,
-   "PMID": 138
+   "PMID": 142
   },
   "links": {
    "distinct_hrefs": 186,
@@ -529,7 +529,7 @@
   },
   "NOTICE.md": {
    "bytes": 13086,
-   "sha256": "e0070add8c39a47e4aadc0bc37a51f84015c21f880e8ec3b937a3563baa5b308"
+   "sha256": "5ae1e02ccbafec408d2bc06c7e47b89b8c374404c5054e0b98364561fd2b8844"
   },
   "README.md": {
    "bytes": 5072,
@@ -552,24 +552,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 4742737,
-   "sha256": "4b83b5164dd1a61e7f86fca9505900957837da61f2155e99e0e2d08cd1cdcdec"
+   "bytes": 4744493,
+   "sha256": "424adaf78e5f03db5f45d736daed1d8ccd62807bb1ddbad5dd268d48074b6a0f"
   },
   "es.html": {
-   "bytes": 4728340,
-   "sha256": "585f1acf204cbe866134b0926fd7b0d45d51eeb043eec0102b392404d6de6687"
+   "bytes": 4730081,
+   "sha256": "d3ae6393239115d1a3b9b8f39eb8248299cdc88b85113e3a93b2d3e57dd3ba18"
   },
   "fr.html": {
-   "bytes": 4751115,
-   "sha256": "39868e240d1443812fbd37d454adbb82034f681360dc25b8f9ef0cf12df186b1"
+   "bytes": 4752968,
+   "sha256": "8fd5ed9e3d1a4e7e6e5011793d46b14f38c42c04979b8ce46330cd7c03ee8196"
   },
   "index.html": {
-   "bytes": 4661099,
-   "sha256": "e8604176cbf5509f58f02b073bacef6ca30544b9a245dcadb7d9d6c417a3351b"
+   "bytes": 4662733,
+   "sha256": "14104d05cb5fbb3162f2deba3317c3dd60791a361b43534f5c0f072e95ffa0b5"
   },
   "it.html": {
-   "bytes": 4704308,
-   "sha256": "6a35f1cbc404fd92caa2a927396f2433432f9470e68e525b0bb752e5d4e5652c"
+   "bytes": 4706140,
+   "sha256": "4136aa77b0ba53fe089cfb19f6725bee8b3d5c9191039cd93786fdba5b0b7f28"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
