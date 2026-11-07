@@ -1,0 +1,41 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-INV08-20261107",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Queued targeted package (operator, 2026-11-07): INV-08, NRF2 biological role and possible benefit in WWOX; verify the retraction (21690096 / notice 28159761) and whether LEGEND uses it; qualify the GSK3-beta-TrCP-NRF2 route (21245377, 22751928); reconcile WWOX observations; six hypotheses; minimum discriminating comparison.",
+ "START_UTC": "2026-11-07T23:30:00Z",
+ "BASELINE": "development/main ce121d5814b8c83c65721c0709ac4ec2554a5011 (fetched 2026-11-07); same worktree and branch as ORCH-TTYPE-20261107. Retraction check done by the Orchestrator: PMID 21690096 and 28159761 occur in no file of main, of this branch or of task/it34 (git grep, excluding the receipt ledger); no Fyn or beta-TrCP chain in L01, the IT11 NRF2 README or the IT22 redox README; no consumer needs the correction.",
+ "CURRENT_PACKAGE": {
+  "id": "R-INV08",
+  "state": "brief written; queued behind INV-06 verifier and INV-07",
+  "delegate_active": "none",
+  "updated": "2026-11-07T23:30:00Z"
+ },
+ "RESUME": "Folder drug_repurposing/nrf2_inv08_20261107/ (BRIEF.md, output/). Order: producer, census, verifier, correction.",
+ "DECISIONS_TAKEN": [
+  "Queued by the operator beside the running work; one delegate at a time; settings as before. The retraction question was answered first, mechanically, at the first window: no LEGEND file cites the retracted paper, so no attribution to correct and nothing to propagate; the notice itself is read in the package."
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [
+  "No stop for a reserved act."
+ ],
+ "DEFAULTS_TAKEN": [
+  "Condition: settings not restated. Default: as before. Why safe: reversible; no shared file touched."
+ ],
+ "AUTHORISED_QUEUE_20261107G": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "producer, census, verifier on decision-changing links, targeted correction",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-07T22:25:39Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "captions_only",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-07T22:29:39Z",
+ "event_id": "FTR-20261107-33914858-95",
+ "evidence_basis": [
+  "Reopened for the validation and phenotype limits of the Olig2-Cre and GFAP-Cre lines and the co-culture design. Read: supplement legends for Supp Fig 1 and Supp Fig 8 (File009 text), Supp Fig 8 on page 14 rendered at 80 dpi and viewed as an image; Methods and Results passages on the co-culture and the conditional lines in the held print text. Supp Fig 1 panels were not re-viewed here (viewed in the nb4_delta package, staged receipt FTR-20261107-33914858-50).",
+  "verbatim_locator | proposition: Olig2-Cre validation is one representative field of CC1-positive cells | Supplementary Fig 1 legend E | \"showing absence of WWOX in CC1 positive cells of O-KO (shown with arrow heads)\"",
+  "verbatim_locator | proposition: Olig2-Cre MBP result at P17 is qualitative | Results | \"staining in O-KO and control littermates at P17 and found no major changes (Supplementary Fig. 8)\"",
+  "verbatim_locator | proposition: co-culture neurons were embryonic DRG neurons | Methods | \"DRG neurons were isolated from mouse embryos at embryonic Day 13.5\"",
+  "Strings conditioned, transwell, supernatant, soluble, secreted found zero times in the main-text surfaces read: not found in the text read, not evidence that no such arm exists in unviewed figures."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/myelin_inv06_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/myelin_inv06_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": "FTR-20261101-33914858-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "686ebcd80ef3108290877c4b5f39a006100c7528a4408c6e74317124a35c8cab",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File009.pdf",
+ "study_id": {
+  "doi": "10.1093/brain/awab174",
+  "pmid": "33914858"
+ },
+ "workflow": "INV-06 myelin recovery delta (myelin_inv06_20261107), actor my-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
