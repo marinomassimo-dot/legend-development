@@ -84,9 +84,9 @@
    "steps": [
     {
      "step": "P6 Full investigations queue explorable (short front summary kept)",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "note": "implemented and rebuilt; view suite rerun in progress after the last text change"
+     "evidence": "complete queue explorable: ranking.json further_investigations (INV-15, INV-11 with rank and curated reason), stable id anchors on every ordered, further and conditional row, an index of all 16 ids, five-language strings and 21+2 passages checked; the ten-row ceiling still orders the front list and the order digest is unchanged; tests: test_investigations (51), view suite 216 OK, audit-shareable PASS in five languages, package --check OK"
     }
    ]
   },
