@@ -110,6 +110,16 @@ def write_tsv(path, rows, cols=None):
             w.writerow({k: ("" if r.get(k) is None else r.get(k)) for k in cols})
 
 
+PREMISES_FILE = Path(__file__).resolve().parent / "investigation_premises_it32.tsv"
+
+
+def shared_premise_investigations(chain, premises):
+    """IT32 P3: the investigations whose premise this proposal's mechanism chain rests on, joined by `; `. Many proposals can share one premise (the HDAC5
+    to SLC2A1 edge has a single muscle origin and 20 proposals ride on it): a premise measurement is then one question for all of them, and each row
+    says so. A curated file maps a chain prefix to an investigation id; nothing is inferred from names."""
+    return "; ".join(sorted({r["inv_id"] for r in premises if chain.startswith(r["chain_prefix"])}))
+
+
 # ---- engine ------------------------------------------------------------------------------------------------------------------------------------------
 def cmd_engine(a):
     out = Path(a.engine_dir)
@@ -788,6 +798,9 @@ def cmd_propose(a):
             proposals[-1]["max_phase"] = phase_of[sib]
         if ok:
             elig_rows.append(proposals[-1])
+    premises_ = rd(PREMISES_FILE) if PREMISES_FILE.exists() else []
+    for p_ in proposals:
+        p_["shared_premise_investigation"] = shared_premise_investigations(p_["chain"], premises_)
     assign_ids(proposals, R / "proposals_it21.tsv")
     # H8 (IT22 P1): an earlier decision on a cluster member reaches another member only inside its own scope
     scopes = load_decision_scopes() if v1 else {}
@@ -885,7 +898,7 @@ def cmd_propose(a):
             intended_effect_on_seed_readout=intended_effect(hyp, (p["contributing_seed_1"].split("|") + ["", "", ""])[2]),
             target_axis_named_in_legend_material=p["target_named_in_legend_material"],
             abstentions=(f"{len(wh)} withheld row(s) on this record ({collections.Counter(r['reason_class'] for r in wh).most_common(1)[0][0]})" if wh else "none on this record"),
-            earlier_thread=p["earlier_thread"],
+            earlier_thread=p["earlier_thread"], shared_premise_investigation=p.get("shared_premise_investigation", ""),
             carried_limits_from_cluster=p.get("carried_limits", ""), seed_guards=p.get("seed_guards", ""),
             route_class_note=route_class_note(atc_of.get(p["family_id"], ())),
             direct_acting_hits_same_set=direct_hits.get(p["seed_set"], ""),
@@ -899,7 +912,7 @@ def cmd_propose(a):
     for p in proposals:
         check_status(p["status"])
     if not v1:                       # --no-v1 must reproduce the committed P2 tables byte for byte: the IT22 columns exist only on the production path
-        it22_cols = ("harm_signal_faers_seizure", "cluster_work_done", "carried_limits", "blocker_detail", "seed_guards", "seed_support_limited", "carried_limits_from_cluster", "route_class_note", "direct_acting_hits_same_set")
+        it22_cols = ("shared_premise_investigation", "harm_signal_faers_seizure", "cluster_work_done", "carried_limits", "blocker_detail", "seed_guards", "seed_support_limited", "carried_limits_from_cluster", "route_class_note", "direct_acting_hits_same_set")
         for row_ in proposals + handoff:
             for k_ in it22_cols:
                 row_.pop(k_, None)

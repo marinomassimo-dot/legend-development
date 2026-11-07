@@ -8,7 +8,7 @@
  "START_UTC": "2026-11-07T12:00:00Z",
  "RESUME": {
   "worktree": ".claude/worktrees/it32 (branch task/it32)",
-  "next_action": "P0 then P2 (poster text on this host), P1, P3.",
+  "next_action": "Finish view suite; regenerate stage S12 (recipe in generation_it30_p5 README), before/after vs S11; NB-3 verification then INV-16 consumer; P5 forward run; push.",
   "note": "Zero spend; no e-mail or contact; four current files via BATCH_COMMIT; safe_push only. CI on 2bc9e3b0 was in progress at start."
  },
  "AUTHORISED_QUEUE_20261107": {
@@ -18,8 +18,9 @@
    "steps": [
     {
      "step": "P0 Close operational residues: CI on final SHA, stale pointers (stage S10, 1,600 cut), watch continuity",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "CI success on 2bc9e3b0 (the IT31 final SHA); stage pointer in roadmap_current.md now names S11 (checked against the generation folders); the 1,600 cut is stated as historical in test_stage_it29.py and the S11 README (join_limits cuts nothing); the session cron for the watch was recreated after the context change (one scheduler, no second)"
     }
    ]
   },
@@ -28,8 +29,9 @@
    "steps": [
     {
      "step": "P1 Qualify the 2-of-14 reachability comparison: surfaces, resolvers, mention v consumed relation",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "reach_it31_20261107/reach_it32.py + catalogue_ids_it32.tsv: identity resolved through catalogue ids (neighbours such as etiracetam, everolimus, mephobarbital kept separate), whole-identifier matching with a regression (a substring test had matched CHEMBL40 inside longer ids); levetiracetam resolves to CAT:CHEMBL1286 and a DGIdb-only record; absence from the stage is by design (no transcript seed or need target reaches SV2A), not a defect; stage proposals are the only computed layer, cards/questions/investigations are curated text"
     }
    ]
   },
@@ -38,8 +40,9 @@
    "steps": [
     {
      "step": "P2 Recover the Nappi poster 014 from the NINDS programme PDF; depth honest; INV-15 limited to what it states",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "nappi_poster_it32_20261107/README.md: poster 014 of the NINDS Curing the Epilepsies 2026 programme recovered, fresh download hash-checked against the host copy, whole abstract read (abstract level, no ledger receipt possible: no PMID or DOI); it states a programme and no result; INV-15 sentences updated"
     }
    ]
   },
@@ -48,8 +51,9 @@
    "steps": [
     {
      "step": "P3 Generative improvement: smallest link from a diagnosed interruption (vorinostat/INV-16 case), before/after",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "note": "(1) NEED-SEIZURE-CONTROL-SYMPTOMATIC lists only ABAT and CACNA1G: added SV2A, KCNQ2/3, SCN1A/2A/8A as search keys; need->compound search 63->236 records, 61->225 families, levetiracetam and its siblings reached, 0 consistent directions before and after (reach is not direction). (2) 20 proposals share the single-origin HDAC5->SLC2A1 premise, 12 handed over: generator column shared_premise_investigation (curated chain-prefix file), regression added; stage S12 regeneration pending"
     }
    ]
   },
@@ -78,8 +82,9 @@
    "steps": [
     {
      "step": "P6 Full investigations queue explorable (short front summary kept)",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "note": "further_investigations in ranking.json (INV-15, INV-11 with rank and curated reason), stable id anchors on every row, index of all 16 ids, five-language strings and passages, tests added; view suite running"
     }
    ]
   },

@@ -1,0 +1,10 @@
+query_id	database_or_route	string_or_url	run_at_utc	hits	what_was_done
+Q01	PubMed (MCP search_articles)	(Hdac4 OR Hdac5 OR Hdac7 OR Hdac9 OR HDAC4 OR HDAC5 OR HDAC7 OR HDAC9) AND (oligodendrocyte OR myelin OR myelination OR remyelination OR OPC) AND (neuron OR axon OR neuronal OR axonal)	PENDING	PENDING	bears_on B; written before reading hits
+Q02	PubMed (MCP search_articles)	"class IIa" AND (myelin OR myelination OR oligodendrocyte)	PENDING	PENDING	bears_on B; written before reading hits
+Q03	PubMed (MCP search_articles)	(HDAC4 OR HDAC5 OR HDAC7 OR HDAC9) AND (oligodendrocyte OR myelination)	PENDING	PENDING	bears_on B; written before reading hits
+Q04	PubMed (MCP search_articles)	(TMP269 OR TMP195 OR MC1568 OR LMK235 OR LMK-235) AND (myelin OR oligodendrocyte OR white matter)	PENDING	PENDING	bears_on B; written before reading hits
+Q05	PubMed (MCP search_articles)	(HDAC4 OR HDAC5 OR HDAC9 OR HDAC7) AND (conditional knockout OR Nestin-Cre OR Olig2-Cre OR Sox10-Cre OR CNP-Cre) AND (brain OR white matter)	PENDING	PENDING	bears_on B; written before reading hits
+Q06	PubMed (MCP search_articles)	(HDAC4 OR HDAC5 OR HDAC7 OR HDAC9) AND (catalytic dead OR catalytically inactive OR catalytic mutant OR deacetylase-independent OR deacetylase activity) AND (neuron OR astrocyte OR microglia OR oligodendrocyte OR neural)	PENDING	PENDING	bears_on A; written before reading hits
+Q07	PubMed (MCP search_articles)	(TMP269 OR TMP195 OR LMK235 OR LMK-235 OR MC1568) AND (HDAC4 OR HDAC5 OR HDAC9) AND (knockdown OR siRNA OR shRNA OR knockout) AND (neuron OR microglia OR astrocyte OR neural OR glia)	PENDING	PENDING	bears_on A; written before reading hits
+Q08	PubMed (MCP search_articles)	(HDAC4 OR HDAC5) AND (MEF2) AND (neuron OR neuronal) AND (nuclear export OR phosphorylation mutant OR 14-3-3 OR NCoR OR HDAC3)	PENDING	PENDING	bears_on A; written before reading hits
+Q09	PubMed (MCP search_articles)	HDAC9 AND (microglia OR astrocyte OR glia) AND (inhibitor OR knockout OR knockdown)	PENDING	PENDING	bears_on A; written before reading hits
