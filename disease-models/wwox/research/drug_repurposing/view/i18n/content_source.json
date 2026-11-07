@@ -167,6 +167,10 @@
   "src": "en",
   "text": "A decision about one molecule no longer blocks every molecule that shares its target: it travels only as far as its own reason (the molecule's own potency or label stays with it; a refuted premise still closes the arm it belongs to). 69 proposals were blocked by the old rule; 24 stay closed (premise refuted), 45 are released to be judged on their own data, none promoted."
  },
+ "1f670c38e9be": {
+  "src": "en",
+  "text": "Conditional hypothesis: the edge has one muscle origin read at abstract level and the compound side is compiled data; a catalytic-domain mutant of HDAC5 exists in rat neurons for other outputs (PMID 39923817) but none reads SLC2A1 in a human neural cell (no ranked unit, so no evaluation depth applies: this is not a depth of zero)"
+ },
  "1fb921424dfb": {
   "src": "en",
   "text": "WWOX-system: a T-type blocker suppressed the late phase of the provoked seizure score in the null mouse, one experiment, genotype specificity not established by an interaction. Catalogue: direction-coherent blocker actions on CACNA1G, CACNA1H and CACNA1I, at group and single-protein level, from curated mechanism rows."
@@ -214,10 +218,6 @@
  "287cc6f5b57a": {
   "src": "it",
   "text": "Dentro il rumore in ogni contesto misurato."
- },
- "2a58818722ad": {
-  "src": "en",
-  "text": "Conditional hypothesis: the edge has one muscle origin read at abstract level and the compound side is compiled data; no catalytic-dead or localisation datum for HDAC5 exists in a neural cell in the files read (no ranked unit, so no evaluation depth applies: this is not a depth of zero)"
  },
  "2bbdf11dd6e5": {
   "src": "it",
@@ -1011,10 +1011,6 @@
   "src": "en",
   "text": "The chain was generated, not observed, and one reference cited by the chain itself reports the opposite sign, so the direction is not predicted. The test is feasible in existing mouse systems and one experiment can serve a second kinase-pathway probe. It sits at rank 7, below the ten-row line: the role of the inflammatory change (harm or protection) is unknown and the readout can wait for the glial measurements already planned."
  },
- "c3c240540c35": {
-  "src": "en",
-  "text": "Edge: HDAC5 to SLC2A1 traces to one origin, human primary muscle cells, where HDAC5 knockdown reduced GLUT1 expression (PMID 22991226, abstract level); the one drug tested there was pan-HDAC and was reported for GLUT4 only. Class IIa enzymes have very low intrinsic activity on standard substrates and repress largely as scaffolds; in neurons the separating experiments exist for HDAC4, not HDAC5; cardiomyocyte data show catalytic activity mattering for HDAC5 with the opposite sign (inhibition raises the output). Compound side: Compound X identity confirmed by full InChIKey (CHEMBL3110004); ChEMBL values from one paper, HDAC4 130, HDAC5 80, HDAC7 40, HDAC9 20 nM, in a recombinant catalytic-domain assay, cross-paper values vary and whether each was measured or quoted was not checked; whether compound X engages HDAC5 in cells at the cited exposures is not determined. Attribution gap of the pan-class comparator in this thread: vorinostat is held on main_target_weak_attribution (HDAC5 Ki 3600 against HDAC1 1.3 nM, fold 2769.2), so an effect of that compound would read as class I. Counter-premise carried in the generator: class I and pan-HDAC inhibition are signed adverse for oligodendrocyte maturation; for class IIa the CNS sign is unknown, the only myelin datum is a peripheral Schwann-cell double mutant of Hdac4 and Hdac5 (PMID 29472387, partial full text), and WWOX neuron-deleted mice are hypomyelinated. WWOX-system: HDAC5 mRNA nominally lower and SLC2A1 nominally higher in the P47T mouse, an mRNA association only; the human organoid shows SLC2A1 higher on transcript."
- },
  "c5a4e3d438da": {
   "src": "en",
   "text": "The same provoked-seizure design with both genotypes treated and an interaction term, powered on the published effect size."
@@ -1198,6 +1194,10 @@
  "e9520227b9c9": {
   "src": "en",
   "text": "Development feasibility: a tool compound for in vitro and mouse work only; brain entry is restricted by efflux in vitro and there is no human exposure statement."
+ },
+ "e98dfaad55bb": {
+  "src": "en",
+  "text": "Edge: HDAC5 to SLC2A1 traces to one origin, human primary muscle cells, where HDAC5 knockdown reduced GLUT1 expression (PMID 22991226, abstract level); the one drug tested there was pan-HDAC and was reported for GLUT4 only. Class IIa enzymes have very low intrinsic activity on standard substrates and repress largely as scaffolds; in neurons the separating experiments exist for HDAC4, not HDAC5; cardiomyocyte data show catalytic activity mattering for HDAC5 with the opposite sign (inhibition raises the output). Compound side: Compound X identity confirmed by full InChIKey (CHEMBL3110004); ChEMBL values from one paper, HDAC4 130, HDAC5 80, HDAC7 40, HDAC9 20 nM, in a recombinant catalytic-domain assay, cross-paper values vary and whether each was measured or quoted was not checked; whether compound X engages HDAC5 in cells at the cited exposures is not determined. Attribution gap of the pan-class comparator in this thread: vorinostat is held on main_target_weak_attribution (HDAC5 Ki 3600 against HDAC1 1.3 nM, fold 2769.2), so an effect of that compound would read as class I. Counter-premise carried in the generator: class I and pan-HDAC inhibition are signed adverse for oligodendrocyte maturation; for class IIa the CNS sign is unknown, the only myelin datum is a peripheral Schwann-cell double mutant of Hdac4 and Hdac5 (PMID 29472387, partial full text), and WWOX neuron-deleted mice are hypomyelinated. WWOX-system: HDAC5 mRNA nominally lower and SLC2A1 nominally higher in the P47T mouse, an mRNA association only; the human organoid shows SLC2A1 higher on transcript. IT32 reading of neural precedents: a catalytic-domain mutant of HDAC5 (two cysteines) lost deacetylase activity in vitro and abolished the effect of nuclear HDAC5 on one transcript and on a behaviour in rat nucleus accumbens (PMID 39923817, full text; no SLC2A1 or glucose readout, and loss of binding to another factor is not excluded), so the earlier statement that no neural catalytic arm exists is out of date; a catalytic-site mutant of the paralog HDAC4 rescued survival like the wild type in mouse cortical neurons (PMID 23141539); an inhibitor matched knockdown on neurite growth in neural cells but was inert where knockdown of HDAC7 acted (PMID 31572723; PMID 41962726, abstract only). Catalytic dependence is therefore specific to paralog, cell type and output."
  },
  "e9d2ada2a64c": {
   "src": "en",

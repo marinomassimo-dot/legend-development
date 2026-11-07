@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-07T12:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-07T12:55:00Z",
+ "event_id": "FTR-20261107-41962726-32",
+ "evidence_basis": [
+  "abstract analysed in full; the statement is abstract-level and carries no method, figure or table detail",
+  "verbatim_locator | proposition: TMP269 did not reproduce HDAC7 knockdown, read by the authors as deacetylase-independent | Abstract | \"pharmacological inhibition of the enzymatic activity of class IIa HDACs with TMP269 failed to attenuate ferroptosis\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb3_class_iia_it32_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/nb3_class_iia_it32_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 41962726 (abstract and metadata as served 2026-11-07)",
+ "study_id": {
+  "doi": "10.1016/j.cellsig.2026.112531",
+  "pmid": "41962726"
+ },
+ "workflow": "IT32 NB-3 (class IIa HDACs, catalytic versus scaffold, myelin). Abstract analysed through the PubMed metadata route for one labelled fact. Prepared as a JSON file for the integrator; not appended by the preparing actor."
+}

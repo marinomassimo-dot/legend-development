@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-07T12:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-07T12:55:00Z",
+ "event_id": "FTR-20261107-31696766-32",
+ "evidence_basis": [
+  "abstract analysed in full; the statement is abstract-level and carries no method, figure or table detail",
+  "verbatim_locator | proposition: MC1568 raised the NCX3 output, MS-275 did not, beside HDAC4/HDAC5 knockdown | Abstract | \"MC1568 (class IIa HDACs inhibitor), but not MS-275 (class I HDACs inhibitor) increased NCX3 promoter activity, gene and protein expression.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb3_class_iia_it32_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/nb3_class_iia_it32_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 31696766 (abstract and metadata as served 2026-11-07)",
+ "study_id": {
+  "doi": "10.1177/0271678X19884742",
+  "pmid": "31696766"
+ },
+ "workflow": "IT32 NB-3 (class IIa HDACs, catalytic versus scaffold, myelin). Abstract analysed through the PubMed metadata route for one labelled fact. Prepared as a JSON file for the integrator; not appended by the preparing actor."
+}
