@@ -8,17 +8,18 @@
  "START_UTC": "2026-11-08T01:00:00Z",
  "BASELINE": "development/main ce121d5814b8c83c65721c0709ac4ec2554a5011; same worktree and branch as ORCH-TTYPE-20261107. Reused by identifier: A1/A2 packages, CONSUMERS.md, aed_compare_it31, B1 white-matter package, ttype and nmda packages of this branch; PMID 39101447 has a complete read (FTR-20261003-39101447-01).",
  "CURRENT_PACKAGE": {
-  "id": "S-INV10",
-  "state": "verifier running (legend-delegate, sonnet/high)",
-  "delegate_active": "sz-v",
-  "updated": "2026-11-08T05:00:00Z"
+  "id": "P-INV15",
+  "state": "INV-10 complete; INV-15 producer running (see ORCH-INV15-20261108)",
+  "delegate_active": "pv-p",
+  "updated": "2026-11-08T05:40:00Z"
  },
  "RESUME": "Folder drug_repurposing/seizure_function_inv10_20261107/ (BRIEF.md, output/). Order: producer, census, verifier on the decisive propositions, correction.",
  "DECISIONS_TAKEN": [
   "Queued by the operator beside the running work; one delegate at a time; settings as before. Reconciliation with a cap of 4 new sources; close without redoing the batch if nothing new changes the qualified conclusions."
  ],
  "DELEGATIONS": [
-  "S producer sz-p: asked sonnet/medium, read back claude-sonnet-5-5 x47, medium x47; birth 17,487; 47 turns; ~10 min; output 46,483; cache written 157,133; cache read 4,962,629; peak 165,618; completed README (~970 words), evidence (26 rows), proposition_map, questions (7), queries (11), 4 staged receipts (abstract/text level, validated with DOI check); 2 of 4 new sources; full text of 39039877 not reachable; INCIDENT: the producer started a background public_release_gate run that outlived it (read-only; ran about 3 minutes and ended by itself) - verifier briefs now say not to start background jobs"
+  "S producer sz-p: asked sonnet/medium, read back claude-sonnet-5-5 x47, medium x47; birth 17,487; 47 turns; ~10 min; output 46,483; cache written 157,133; cache read 4,962,629; peak 165,618; completed README (~970 words), evidence (26 rows), proposition_map, questions (7), queries (11), 4 staged receipts (abstract/text level, validated with DOI check); 2 of 4 new sources; full text of 39039877 not reachable; INCIDENT: the producer started a background public_release_gate run that outlived it (read-only; ran about 3 minutes and ended by itself) - verifier briefs now say not to start background jobs",
+  "S verifier sz-v: asked sonnet/high, read back claude-sonnet-5-5 high; blind; 21 rows checked (18 decisive + 3 sample): 17 supported, 3 undershoot (E04, E09, E24), 1 overshoot (E10); proposition-map items P-b P-c P-d P-d2 B4 overshoot, B2 undershoot; the producer's headline recode of the 2024 vigabatrin case (four to three discordant children) WITHDRAWN; one Europe PMC XML 500 then one PMC page read with a second tool (server error, no challenge); corrections by the Orchestrator adopting the audit's wording"
  ],
  "ESCALATIONS": [],
  "STOP_LOG": [
@@ -34,7 +35,7 @@
    "steps": [
     {
      "step": "producer, census, verifier on decisive propositions, targeted correction",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator"
     }
    ]
