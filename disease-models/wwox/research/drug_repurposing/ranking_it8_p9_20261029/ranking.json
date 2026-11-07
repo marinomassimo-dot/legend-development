@@ -1233,14 +1233,14 @@
  "further_investigations": [
   {
    "chembl_ids": "",
-   "decisive_uncertainty": "Which of the six layers moves, per animal. A lower transcript does not show fewer cells, lower activity or less inhibition; an absent change in GSE158684 is not evidence of no change; the oligodendrocyte-lineage shift could be consequence or cause of an excitation-inhibition change and the data cannot say which. Whether any parvalbumin-cell change is a deficit, a compensation or a delayed maturation is unresolved, so the need direction stays unresolved and no lever sign is derived.",
+   "decisive_uncertainty": "Which of the six layers moves, per animal. A lower transcript does not show fewer cells, lower activity or less inhibition; an absent change in GSE158684 is not evidence of no change; the oligodendrocyte-lineage shift could be consequence or cause of an excitation-inhibition change and the data cannot say which. Whether any parvalbumin-cell change is a deficit, a compensation or a delayed maturation is unresolved, so the need direction stays unresolved and no lever sign is derived. Whether recombination reaches parvalbumin cells, and glia, in this deletion is not known from any source read, and a reporter measured in another context does not measure the excision of Wwox in parvalbumin cells.",
    "direction_state": "unresolved",
-   "evidence_available": "WWOX-system, transcript: a lower Pvalb transcript in the neuron-targeted deletion in bulk hippocampus (log2 -1.70, GSE158681 S contrast, as quoted in IT13b) and about half that size in the nuclear data (GSE158684: Pvalb 70 against 37 UMI in 3182 against 2920 nuclei; nuclei Pvalb share ratio 0.59). GSE158684 holds one pooled library per arm (library and animal index absent; the paper states n = 1 per arm), so nuclei are not biological replicates and the GSM records of the series are not independent experiments; PV-class nuclei number 12 to 19 per arm under the producer rules, the independent recompute disagrees on the specific counts, and PV composition and Pvalb per cell are undecidable under every rule tried. Kcnc1 is lower in inhibitory nuclei (one pool, not a replicate result). Immature-neuron markers (Sox11, Dcx, Igfbpl1) are higher in knockout neurons in direction; the larger composition change is oligodendrocyte-class nuclei, about 3- to 5-fold fewer. Wwox also falls in glia-called nuclei, unexplained. Protein and function, from the need file: PV-positive counts reduced by 44 percent in the whole hippocampus of a systemic constitutive knockout (PMID 30290271) and spontaneous inhibitory current amplitude more than halved in layer II/III pyramidal neurons of the neuron-specific knockout (PMID 34634460; pooled events, not animals). Raw reads of the eight snRNA experiments (SRX9206272 to SRX9206279) carried NCBI status hup on 2026-10-31. A public conference abstract (poster 014, Curing the Epilepsies 2026 programme, NINDS; the whole abstract was read, abstract level) describes a programme that combines genetic mouse models, in vivo electrophysiology, ex vivo slice recordings, cell type-specific manipulations and targeted pharmacological modulation of neuronal activity in WWOX deficiency, and names parvalbumin interneurons as the population of interest; it reports no quantitative result, no molecule, no rescue and no target.",
+   "evidence_available": "WWOX-system, transcript: a lower Pvalb transcript in the neuron-targeted deletion in bulk hippocampus (log2 -1.70, GSE158681 S contrast, as quoted in IT13b) and about half that size in the nuclear data (GSE158684: Pvalb 70 against 37 UMI in 3182 against 2920 nuclei; nuclei Pvalb share ratio 0.59). GSE158684 holds one pooled library per arm (library and animal index absent; the paper states n = 1 per arm), so nuclei are not biological replicates and the GSM records of the series are not independent experiments; PV-class nuclei number 12 to 19 per arm under the producer rules, the independent recompute disagrees on the specific counts, and PV composition and Pvalb per cell are undecidable under every rule tried. Kcnc1 is lower in inhibitory nuclei (one pool, not a replicate result). Immature-neuron markers (Sox11, Dcx, Igfbpl1) are higher in knockout neurons in direction; the larger composition change is oligodendrocyte-class nuclei, about 3- to 5-fold fewer. Wwox also falls in glia-called nuclei, unexplained. Protein and function, from the need file: PV-positive counts reduced by 44 percent in the whole hippocampus of a systemic constitutive knockout (PMID 30290271) and spontaneous inhibitory current amplitude more than halved in layer II/III pyramidal neurons of the neuron-specific knockout (PMID 34634460; pooled events, not animals). Raw reads of the eight snRNA experiments (SRX9206272 to SRX9206279) carried NCBI status hup on 2026-10-31. A public conference abstract (poster 014, Curing the Epilepsies 2026 programme, NINDS; the whole abstract was read, abstract level) describes a programme that combines genetic mouse models, in vivo electrophysiology, ex vivo slice recordings, cell type-specific manipulations and targeted pharmacological modulation of neuronal activity in WWOX deficiency, and names parvalbumin interneurons as the population of interest; it reports no quantitative result, no molecule, no rescue and no target. IT33 reading of the glial signal (NB-4 pilot, independently audited): the deletion is neuron-targeted by design (Synapsin-Cre) and a lower Wwox transcript also appears in glia-annotated nuclei of one pool (oligodendrocyte-called 193 to 1 UMI, astrocyte-called 156 to 9: very small counts on the deleted side, one pool per arm, so a count of cells or a statement of glial loss is not supported); the readings are several and not exclusive (lower transcript in the annotated class, class definition and detectability, ambient RNA, recombination beyond the expected cells, a change of state or composition), and none is isolated. Two abstract-level sources describe the Synapsin-Cre line: germline recombination through male carriers (PMID 16419044) and non-cell-autonomous astrogliosis after a neuronal deletion of another gene (PMID 11297510); neither shows or excludes recombination in glia or in parvalbumin cells of this deletion. IT33 verified delta (independent audit, 19 of 21 rows supported, two narrowed): an independent characterisation of the same Cre line with an X-linked Mecp2 reporter in adult male mice (PMID 35966957, full text without the figures) found reporter activation in 36 percent of NeuN-high brain nuclei, incomplete in cortex and minimal in cerebellum, and could not exclude activity in a subset of glia; the reporter, locus, age and cross differ from the Wwox deletion, so these percentages are not carried to the excision of Wwox or to parvalbumin cells; in the Wwox paper's P17 cortical field WWOX is retained in some NeuN-positive cells, and in one callosal field in some CC1-positive cells of the knockout; no tdTomato panel was found in the surfaces read.",
    "evidence_depth": "Premise measurement: the transcript deficit is observed in bulk and in one nuclear pool per arm; cell number, identity, intrinsic properties, synaptic input and circuit function are not measured at animal level by any file read here (no ranked unit, so no evaluation depth applies: this is not a depth of zero)",
    "feasibility": "Not executable from this module: no animals or tissue are held and the raw reads are not public. Feasible only by data holders or a new dataset; nothing is sent to anyone from here. Zero-spend preparation is limited to fixing the readout table before any data arrive.",
    "intervention": "No compound: measurement of the parvalbumin interneuron population in neuron-targeted Wwox deletion, with cell number, identity and maturation, marker expression, intrinsic properties, synaptic input and circuit function read as six separate questions",
    "inv_id": "INV-15",
-   "next_test": "Per-animal parvalbumin cell counts by immunostaining in neuron-targeted Wwox deletion against Cre-only controls, at least 3 animals per arm (reopening condition (c) of NP3A1), read together with a maturation and identity marker panel in the same animals, and, where the data holders allow, intrinsic-property and inhibitory-input recordings from labelled parvalbumin cells and a circuit-level read. Alternatives that also reopen it: a deposited library or animal index for GSE158684, or an independent neuron-targeted deletion dataset with at least 3 animals per arm and a parvalbumin-enriched capture. The result is read as six separate rows (number, identity and maturation, marker expression, intrinsic properties, synaptic input, circuit function); a change in one is not carried to another.",
+   "next_test": "Per-animal parvalbumin cell counts by immunostaining in neuron-targeted Wwox deletion against Cre-only controls, at least 3 animals per arm (reopening condition (c) of NP3A1), read together with a maturation and identity marker panel in the same animals, and, where the data holders allow, intrinsic-property and inhibitory-input recordings from labelled parvalbumin cells and a circuit-level read. Alternatives that also reopen it: a deposited library or animal index for GSE158684, or an independent neuron-targeted deletion dataset with at least 3 animals per arm and a parvalbumin-enriched capture. The result is read as six separate rows (number, identity and maturation, marker expression, intrinsic properties, synaptic input, circuit function); a change in one is not carried to another. In every animal used (P14 to P17, matching the phenotype window), on the same sections: a parvalbumin marker, the Rosa26 tdTomato reporter and a Wwox read-out, reporting per animal the fraction of parvalbumin cells reporter-positive, the fraction Wwox-negative and their concordance, beside cell number, identity and marker expression; transcript, protein, activity, cell number and circuit function stay separate results.",
    "novelty_perimeter": "Queried on 2026-11-07: the IT13b, IT14 P1a and IT14 P1b records of this module, the NP3A1 row of the reopening table, and the need file; the public programme abstract of poster 014 (Curing the Epilepsies 2026, NINDS) was read at abstract level on 2026-11-07; it states a programme, not a result, so nothing quantitative is attributed to it. A search of this module, not a statement about the literature.",
    "origin_class": "known_in_wwox",
    "origin_detail": "Known in the WWOX system: the parvalbumin marker deficit is already a named need observation and the NP3A1 reopening trigger; the row restates the open question as six separable layers (IT13b, IT14 P1a, IT14 P1b, reopening table row NP3A1).",
@@ -1266,6 +1266,24 @@
    "rank": 7,
    "status": "premise_measurement",
    "why_now": "Naming these keeps them visible as gaps rather than as silently empty rows. Three of the four have no catalogue association on their targets and one is an endpoint rather than an intervention; none of this is evidence that the biology is unpromising."
+  },
+  {
+   "chembl_ids": "",
+   "decisive_uncertainty": "Driver, marker or consequence. If the MYC difference vanishes within cell-cycle and potency strata it is a marker and this observation alone justifies no lever; if genetic lowering of MYC moves the progenitor shift it is a driver, and the timing of any window is a separate question, not assumed to be prenatal only. MYC dose is two-sided in cortex and the record holds no safe pharmacological formulation for a developing compartment. Raised MYC cannot be called harmful and lowering it cannot be called therapeutic on this evidence; a MYC-directed lever carries an unmeasured risk in a developing compartment.",
+   "direction_state": "unresolved",
+   "evidence_available": "WWOX-system, one organoid study (PMID 42397075): MYC is the most raised gene in knockout radial glia, which shift toward S and G2M; the fraction of SOX2-positive cells that are MYC-positive is raised in an engineered knockout and two patient-derived lines; one non-selective multi-kinase inhibitor reported to suppress Wnt and MYC lowers the SOX2-positive fraction in knockout organoids; neuron-promoter add-back raises deep-layer fractions. Transcript and cell fractions only: no protein, no manipulation of MYC itself. IT33 reading (NB-1, independently audited, corrections applied): no MYC-selective perturbation of a WWOX system was found in the routes searched, the one non-selective perturbation being the multi-kinase inhibitor inside the same study; the only model in which lowering MYC changes a progenitor maturation phenotype is a human progenitor system with a different upstream lesion (one donor line), so the evidence for a driver role is transferred, not WWOX evidence; elsewhere MYC is not simply a maintenance factor (in some models lowering shrinks or redirects the progenitor pool); the SCAR12-class line shows MYC up with a wild-type-like radial-glia fraction; a WWOX-to-MYC relation is known only outside the brain; in the same study MYC protein is high while MYC binding at early-neuron gene promoters is lost in knockout neural stem cells.",
+   "evidence_depth": "Premise measurement: the MYC rise is observed in one organoid study; its role is not measured. (no ranked unit, so no evaluation depth applies: this is not a depth of zero)",
+   "feasibility": "Existing organoid systems; wet-lab measurement, not executable from this module.",
+   "intervention": "No compound: measurement of the role of the MYC rise in WWOX-deficient radial glia",
+   "inv_id": "INV-17",
+   "next_test": "In WWOX-deficient and corrected isogenic organoids or radial-glia cultures: compare MYC within cell-cycle phase strata, then lower MYC by a genetic route with a second construct and read the progenitor fractions and the cell-cycle phase. No compound is needed for this step. Refinement from NB-1: lowering is graded and MYC-specific (not MYCN or MYCL unless measured), in two windows (radial-glia phase; neuron stage only), reading absolute counts of SOX2-, NEUN-, CTIP2- and SATB2-positive cells, cell death, glia and MYCN, in factorial design against restoring cell-cycle timing without touching MYC; the reading is wrong if markers do not move, the pool shrinks, glia rise, or the same lowering in the corrected line gives the same shift.",
+   "novelty_perimeter": "Queried on 2026-11-07: the MYC need record, work-order entry WO-33, map row WO-33 and the stage S12 proposal table; a search of this module, not a statement about the literature. The audited scientific package on this role (NB-1) is used: its result is in the evidence line.",
+   "origin_class": "known_in_wwox",
+   "origin_detail": "Known in the WWOX system: the observations are in the need record (O1 to O4); the row restates work-order question WO-33 as the one question behind the MYC-directed proposals.",
+   "question": "Is the MYC rise in WWOX-deficient radial glia a driver of the progenitor shift, a marker of a retained progenitor state, or a consequence of the cell-cycle shift?",
+   "rank": 7,
+   "status": "premise_measurement",
+   "why_now": "555 of the 994 generated proposals end in a change of MYC, 314 in a harm arm and 241 in a protect arm (123 eligible for hand-over); whether any change of MYC is wanted depends on this role, so one measurement stands behind all of them and no MYC-directed lever is assumed beneficial."
   }
  ],
  "investigations": [
@@ -1666,6 +1684,10 @@
    {
     "inv_id": "INV-16",
     "movement": "new in IT21 (no IT20 position): New row, enters at rank 7. Reasons: it is the one open measurement of the IT28 challenge and it keeps or refutes the premise carried as a limit on the HDAC5-chain proposals. Not rewarded: novelty. Status stays conditional; the myelin counter-premise is a separate open question (CH-IT29-CLASSIIA-CNS-MYELIN). | below the line this evaluation: rank 7 does not fit the ten-row published ceiling"
+   },
+   {
+    "inv_id": "INV-17",
+    "movement": "new in IT21 (no IT20 position): New row, enters at rank 7 below the ten-row line. Reasons: it gates a large share of the generated proposals. Not rewarded: novelty. | below the line this evaluation: rank 7 does not fit the ten-row published ceiling"
    }
   ],
   "ceiling_rule": "risk-flagged and human-report rows are not displaced by conditional probes",
@@ -2891,32 +2913,36 @@
    },
    "NEED-SEIZURE-CONTROL-SYMPTOMATIC": {
     "abstained_by_class": {
-     "action_not_stated": 50,
+     "action_not_stated": 109,
      "coupling_not_measured": 32,
+     "no_coupling_row": 439,
      "republished_claim_level_not_carried": 1
     },
     "by_label": {
-     "abstained": 83,
+     "abstained": 581,
      "consistent": 4
     },
     "by_target_level": {
      "gene_listing": {
-      "abstained": 54
+      "abstained": 300
+     },
+     "protein_complex": {
+      "abstained": 3
      },
      "protein_complex_group": {
       "abstained": 10
      },
      "protein_family": {
-      "abstained": 9
+      "abstained": 200
      },
      "single_protein": {
-      "abstained": 10,
+      "abstained": 68,
       "consistent": 4
      }
     },
     "group_records_held_back": [],
     "need_direction": "down",
-    "rows": 87
+    "rows": 585
    },
    "NEED-T-TYPE-CALCIUM": {
     "abstained_by_class": {
@@ -5992,11 +6018,11 @@
     "catalog.jsonl.gz": "75652786013b931d",
     "catalog_stats.json": "87ac308ce3ab9b3f",
     "measure_next.json": "bca46967510475c5",
-    "needs.json": "afc848913c492c59",
+    "needs.json": "f38325a04e174f2d",
     "source_artefacts.tsv": "efd24d2cf8eb3fdb",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
-   "receipt_ledger_lines": 1338
+   "receipt_ledger_lines": 1350
   },
   "inventory": {
    "all_families_by_access_category": {
@@ -6012,10 +6038,10 @@
    },
    "by_first_order": {
     "Q1": 68,
-    "Q2": 1923,
-    "Q3": 208,
-    "Q4": 14236,
-    "Q5": 23808,
+    "Q2": 2070,
+    "Q3": 207,
+    "Q4": 14093,
+    "Q5": 23805,
     "UNIT": 25
    },
    "distinct_display_names_in_q1": 64,
@@ -6024,14 +6050,14 @@
    "mnet_usable_families": 13379,
    "msig_neural_families": 931,
    "need_linked_by_access_category": {
-    "OTC": 6,
-    "experimental": 192,
-    "prescription": 54,
+    "OTC": 11,
+    "experimental": 205,
+    "prescription": 87,
     "supplement": 22,
-    "unknown/unverified": 2062
+    "unknown/unverified": 2183
    },
-   "need_linked_families_plus_units": 2224,
-   "need_linked_families_q1_q2_q3": 2199,
+   "need_linked_families_plus_units": 2370,
+   "need_linked_families_q1_q2_q3": 2345,
    "q1_by_status": {
     "approved_any_source": 15,
     "approved_any_source,clinical_candidate,phase_unknown": 1,
@@ -6045,7 +6071,7 @@
    "records": 44211
   },
   "investigations": {
-   "below_the_line": 6,
+   "below_the_line": 7,
    "below_the_line_note": "rows beyond the ten-row ceiling stay in investigations.tsv with their reason; a tie is kept whole rather than split. Below the line is a ceiling on the page, never a finding that an investigation is unpromising.",
    "below_the_line_rows": [
     {
@@ -6070,19 +6096,25 @@
      "intervention": "No lever available (four needs with no catalogue reach)",
      "inv_id": "INV-11",
      "rank": 7,
-     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 3). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
+     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 4). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
     },
     {
      "intervention": "EZH2 (PRC2) inhibitor GSK343 as a probe in mouse glial systems",
      "inv_id": "INV-14",
      "rank": 7,
-     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 3). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
+     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 4). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
     },
     {
      "intervention": "Class IIa-selective tool compound X against HDAC5 knockdown, with catalytic-dead and localisation-mutant HDAC5 rescue, a class-I-only inhibitor and an HDAC6 inhibitor as controls, in human neural cells",
      "inv_id": "INV-16",
      "rank": 7,
-     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 3). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
+     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 4). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
+    },
+    {
+     "intervention": "No compound: measurement of the role of the MYC rise in WWOX-deficient radial glia",
+     "inv_id": "INV-17",
+     "rank": 7,
+     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 4). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
     }
    ],
    "by_direction_state": {
@@ -6095,13 +6127,13 @@
     "known_in_wwox": 7
    },
    "count": 10,
-   "count_including_below_the_line": 16,
+   "count_including_below_the_line": 17,
    "direction_states": {
     "opposed_risk": "a documented action of this intervention pushes against another need of the same objective",
     "resolved": "the need states an up/down intervention direction",
     "unresolved": "the need's own direction is uncertain: no lever on it can be qualified either way, which is a visible gap and not a negative finding"
    },
-   "order_digest": "b7f569f01de7d394",
+   "order_digest": "7913c3f53f2ec587",
    "origin_classes": {
     "external_transferred": "carried in from another condition or literature by a stated mechanistic analogy",
     "generated_by_legend": "reached from a qualified need through the module's own target and catalogue path, not named in the WWOX material checked",
@@ -8620,7 +8652,7 @@
    "inputs": {
     "T1_cards": "3692e2efc56a356a",
     "T2_pertinence": "59d15d3c06233d6c",
-    "T3_receipts": "5565af0c294c2b12",
+    "T3_receipts": "5273f410f573e886",
     "T4_needs": "4fa5821159bd91b8",
     "T5_pharmacology": "c8ec35a5f404ccca",
     "T6_identity": "186bd57e16d4aa8b"
@@ -8742,7 +8774,7 @@
     "42422765",
     "42587157"
    ],
-   "receipts_on_cited_pmids": 36,
+   "receipts_on_cited_pmids": 37,
    "research_objective": "broad_durable_recovery",
    "tracks": [
     "A"
@@ -9463,7 +9495,7 @@
      "wwox_assertions": 2
     },
     "X_counter_evidence": {
-     "need_level_counter_items": 9,
+     "need_level_counter_items": 12,
      "need_level_counter_items_note": "over 2 linked need(s); items of the need record, not of the intervention",
      "opposed_action_needs": [],
      "outside_wwox_null_or_harm": 0,
@@ -9491,7 +9523,7 @@
     "T1_cards": "cf6d65e8b7adfad8",
     "T2_pertinence": "8e52657c67b7cf9d",
     "T3_receipts": "9704e0c37800b5d7",
-    "T4_needs": "b1224f7ee3d5a2f3",
+    "T4_needs": "a7a80e55c71b1e22",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "2302f3b36a077aa0"
    },
@@ -12786,7 +12818,7 @@
    "inputs": {
     "T1_cards": "50d5f4fc39e6469f",
     "T2_pertinence": "40d3f822d9a26184",
-    "T3_receipts": "b4c6480d4bc626a9",
+    "T3_receipts": "2f23115a87276a2d",
     "T4_needs": "98de133ad523d5dd",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "30921a9013e88d22"
@@ -13047,7 +13079,7 @@
     "42735667",
     "9168839"
    ],
-   "receipts_on_cited_pmids": 105,
+   "receipts_on_cited_pmids": 106,
    "research_objective": "",
    "tracks": [
     "A"
@@ -13802,7 +13834,7 @@
    "inputs": {
     "T1_cards": "410cdeced221b8cf",
     "T2_pertinence": "c124efeb8d5edb82",
-    "T3_receipts": "88c3569a28b9c69a",
+    "T3_receipts": "dc543f3a487989f7",
     "T4_needs": "c3cb663b4a8f81ca",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "1b6967b150a8ef31"
@@ -13868,7 +13900,7 @@
     "42397075",
     "42422765"
    ],
-   "receipts_on_cited_pmids": 58,
+   "receipts_on_cited_pmids": 59,
    "research_objective": "",
    "tracks": [
     "A"
@@ -15080,7 +15112,7 @@
    "inputs": {
     "T1_cards": "b7004c6ce80f3d6e",
     "T2_pertinence": "c124efeb8d5edb82",
-    "T3_receipts": "b8cf46990840f474",
+    "T3_receipts": "478912993b469d56",
     "T4_needs": "34001ad580d89a15",
     "T5_pharmacology": "39d3e6c4d9daea9a",
     "T6_identity": "b9cf666861d789c0"
@@ -15156,7 +15188,7 @@
     "42111266",
     "42422765"
    ],
-   "receipts_on_cited_pmids": 49,
+   "receipts_on_cited_pmids": 50,
    "research_objective": "useful_partial_benefit",
    "tracks": [
     "A"
@@ -16979,7 +17011,7 @@
      "wwox_assertions": 0
     },
     "X_counter_evidence": {
-     "need_level_counter_items": 6,
+     "need_level_counter_items": 9,
      "need_level_counter_items_note": "over 1 linked need(s); items of the need record, not of the intervention",
      "opposed_action_needs": [],
      "outside_wwox_null_or_harm": 2,
@@ -17006,8 +17038,8 @@
    "inputs": {
     "T1_cards": "61c215efa58f47c5",
     "T2_pertinence": "403956ddfaf8ef49",
-    "T3_receipts": "026d7c8fa392ad46",
-    "T4_needs": "e3d9478eddf1541c",
+    "T3_receipts": "67e888d223260c5f",
+    "T4_needs": "492f1e05d520cfd1",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "7de12fe35682551b"
    },
@@ -17208,7 +17240,7 @@
     "40092791",
     "42397075"
    ],
-   "receipts_on_cited_pmids": 19,
+   "receipts_on_cited_pmids": 21,
    "research_objective": "",
    "tracks": [
     "A"

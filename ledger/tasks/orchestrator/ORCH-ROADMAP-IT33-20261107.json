@@ -8,8 +8,9 @@
  "START_UTC": "2026-11-07T18:00:00Z",
  "RESUME": {
   "worktree": ".claude/worktrees/it33 (branch task/it33)",
-  "next_action": "P0 then P2 deterministic work, P3, P1 when the scientific artefacts land; NB-1 artefacts checked at milestones, not polled.",
-  "note": "Zero spend; no contact; four current files via BATCH_COMMIT only; safe_push only; no heavy battery while the other session runs one."
+  "next_action": "Refreeze the IT33 candidate (NB-1 included), battery in a clean clone, merge main, safe_push, CI, pages; then IT34 on top (merge the new IT33 head into task/it34), its view suite and targeted tests, push, CI; cleanup; final reports",
+  "note": "candidate 039358bd superseded by the NB-1 consumption commit; the waiting battery job was stopped before it started",
+  "queued_next": "IT34 (queued by the operator, starts after IT33 closure, own record ORCH-ROADMAP-IT34-*, own worktree): from a functional phenotype to pharmacological generation, compared with DisMech (page dismech.monarchinitiative.org .../WWOX-Related_Developmental_and_Epileptic_Encephalopathy.html; external snapshot monarch-initiative/dismech main 825105f4, YAML kb/disorders/WWOX-Related_Developmental_and_Epileptic_Encephalopathy.yaml; existing LEGEND DISMECH_INTEGRATION.md and exporters under disease-models/wwox/analysis/). P0 baseline and stage actually current (S13 after IT33, not S12); P1 bounded DisMech comparison (record SHA and schema version, only differences that affect current work; 87 citations = 10 unique PMIDs, not independent); P2 main case: sag, rebound and intrinsic excitability from PMID 34634460 traced observation -> need -> HCN function -> target -> catalogue -> proposal -> investigation -> dashboard (pointer: no HCN target in two needs, HCN/ZD7288 strings elsewhere, none found in the 994 S12 proposals; verify, resolve aliases, no absence from text search); P3 smallest link if justified, conditional branches for an unresolved direction, no blocker into the ranking automatically; P4 second contrasting case (burst dependence on glutamatergic transmission v carbenoxolone, or amount v catalytic function INV-16); P5 compare previous v link v link removed, no predictive claim from reach; P6 DisMech qualifications to re-check (P47T partial loss, lithium/PTZ not isolating GSK3b, carbenoxolone not attributing to one connexin, failed myelin repair, Hyal-2/WWOX/Smad4 non-neural), missing confidence stays 'not assessed', no implicit ESTABLISHED, measure schema difference vs old exporter, no pin bypass; P7 consumers and dashboard (observation -> relations -> interventions -> counter-evidence -> open question -> next test; observed/inferred/hypothesised visibly distinct); P8 one delegate at a time, compact briefs, OpenScientist is not a dependency, zero spend; P9 regressions for unresolved premise not gaining a sign, no transfer between compounds/contexts, repeated citations not independent, limits surviving to the consumer. Final report A-I per the operator's text."
  },
  "AUTHORISED_QUEUE_20261107B": {
   "MANDATE_STATE": "OPEN",
@@ -18,8 +19,9 @@
    "steps": [
     {
      "step": "P0 Baseline: CI on the IT32 final SHA, NB-4 integration, staged receipts, worktrees; reconcile 40 skips (IT32 battery) with 9 (pilot): suites, environment, reasons",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "2026-11-07: remote main fb756c52 = local; IT32 and the NB-4 pilot are in main (9713e345, fb756c52); CI 'Public release gate' on fb756c52 was in progress at the start (record-only commit; the IT32 candidate 5d339a7f and 0829fd9c were CI success); skips reconciled: both batteries ran 213 targets; the IT32 clean clone (no gitignored files/) skipped 40 tests, about 31 of them only because the local full-text corpus, the retraction-watch snapshot and the pptx deposits are absent there; the pilot's checkout had the corpus and skipped 9; the 9 residual skips (page-adjudication artefact, pinned HTML artefact, case-sensitive-filesystem test, Stop hook not installed, saved text under files/ of another checkout) occur in both: environment, not regression, not equivalent suites; 2 NB-4 abstract-only receipts were the only staged events not in the ledger (by event_id): trial OK, recorded (ledger 1,340); worktree of the delegation session left alone pending its own check (P0 tail)"
     }
    ]
   },
@@ -28,8 +30,9 @@
    "steps": [
     {
      "step": "P1 Close NB-4 in the consumers: reconcile 2 abstract-only receipts by event_id, INV-15 recombination qualification (what the verified package supports only), note and view; PMID 35966957 and figures are the scientific session's",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "NB-4 consumed in two steps. (1) Pilot package: its 2 abstract-only receipts recorded by event_id (ledger 1,340); INV-15 states the glial reading (neuron-targeted by design, tiny UMI counts, non-exclusive readings, Synapsin-Cre abstract-level sources). (2) The scientific session's verified delta (branch commit 7052f448 merged unchanged; independent audit: 19 of 21 rows supported, two narrowed): its 2 receipts (PMID 35966957 partial full text, figures as captions; PMID 33914858 reread) recorded by event_id (ledger 1,342; trial OK; five units' T3 receipt input changed, groups unchanged, snapshot recorded with reason new_evidence); INV-15 now carries the verified wording: 36 percent of NeuN-high nuclei for an Mecp2 reporter in adult males is not carried to Wwox excision or to PV cells, WWOX retained in some NeuN-positive and CC1-positive cells in the cited fields, no tdTomato panel found in the surfaces read, and the per-animal control (parvalbumin marker + Rosa26 tdTomato + Wwox read-out, P14-P17, per-animal concordance); transcript, protein, activity, cell number and circuit function stay separate; rank unchanged (6), canonical registers untouched; views regenerated in five languages, audit PASS"
     }
    ]
   },
@@ -38,8 +41,9 @@
    "steps": [
     {
      "step": "P2 Cost where it arises: complete the census of the IT32 delegates, reconcile old figures presented as current, three causes (asked v observed incl. coordinator, too-wide or repeated retrievals, verification that rebuilds the whole search), proportionate verification brief in delegation_budget.md; no new meter, no delegate while the scientific session has one active",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "deterministic work done by the Orchestrator with no new delegation: census of the three IT32 delegates that were missing (NB-3b producer 38,421 output / 35 turns, its verifier 26,325 / 22, a translation job 10,545 / 3), seven IT32 delegates in total 156,382 output tokens and about 9.09 million cache-read tokens, effort and model read back equal to the dispatch for all; the coordinator's own transcript read back: effort medium on 6,799 of 6,813 turns, models mixed (sonnet 6,334, opus 5 422, fable 37), 5.03 million output over all days (perimeters stated, not IT32 alone); stale totals in the protocol's 'Why it exists' and in the delegation record corrected with the perimeter, history kept; three causes addressed in delegation_budget.md: section 8 (a verifier checks decisive propositions, decision-changing numbers, inferences/absence/transfer claims and a declared sample, extending the class when the sample finds an error; decisive premises never reduced), section 9 (narrow retrieval: query list first, hit count before reading, ledger depth first, stop at the first sufficient source, failed route recorded not retried by another route without reason), and the requested-versus-observed rule for the coordinator in section 6; no new meter or scheduler; the NB-4 pilot's figures are quoted as its own perimeter"
     }
    ]
   },
@@ -48,8 +52,9 @@
    "steps": [
     {
      "step": "P3 Read recovery_it10_p23 R1-R9 against main: executed / superseded / still useful / blocked by a named datum; radar link only if it names the table without reading its rows; at most one reopening that can change a decision",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "recovery_it10_p23_20261031/STATUS_IT33.md classifies R1-R9 against main (executed: R3, R6; still useful but blocked by a named wet-lab or access datum: R1, R2, R4, R5, R7, R8, R9); one reopening taken, R2/R8: PubMed returns 4 records, all earlier and already read, condition not met; radar link: two of the twelve table slots rotate through older tables by ISO week (pick_tables, cap unchanged, test_scout_daily 76 OK), the plan names tables not read in a run"
     }
    ]
   },
@@ -58,8 +63,9 @@
    "steps": [
     {
      "step": "P4 Generation: freeze the current stage inputs/outputs; MYC case (after NB-1 returns) and a second documented case; relation needed but not executed; minimal link in tables/generator; rerun without naming the compound; baseline v link v link removed; controls only if specificity is claimed; no GO-CAM",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "generation_it33_p4_20261107 (README, test_stage_it33, stage S13 = S12 + column; reference stage frozen = S12 before the change): premise map generalised to regular expressions; three unrelated cases INV-16 (HDAC5 to SLC2A1), INV-14 (EZH2 to glial cytokines and NRF2 tone), INV-17 (any chain ending in a change of MYC; new investigation, premise measurement, rank 7, five-language passages); 605 of 994 proposals now name the one investigation that measures their premise (20 / 30 / 555; 5 of 15 hand-overs); every other column, id, eligibility and hand-over list identical; ablation test removes exactly the added links; criteria written before the run; consumption only: no new row, combination, reopening or hypothesis, no direction chosen for MYC, no specificity or predictive claim, no controls run because none claimed; NB-1 (scientific session) not yet landed: INV-17 evidence to be updated when it does; GO-CAM not adopted (no new advantage); NB-1 (MYC role, scientific session, independent audit: 29 items, 20 supported, 8 narrowed, 1 unverifiable) merged from its branch unchanged and consumed: its 8 receipts recorded by event_id (ledger 1,350, trial OK, snapshot reason new_evidence), the MYC need gains the audited counter-evidence and the non-neural WWOX-to-MYC inference (needs checker OK, coverage regenerated), INV-17 carries the audited evidence (no MYC-selective perturbation of a WWOX system in the routes searched; driver evidence is transferred; MYC protein high while binding at early-neuron promoters is lost; lowering can shrink or redirect pools), the unresolved role, and the graded two-window genetic design L1 with the factorial L2; no direction chosen, no compound justified; the generator relations that NB-1 lists (sign contrast, uninformative microtubule result, binding lost at neuronal genes) are not representable in the stage rows: they travel in the need and INV-17 only"
     }
    ]
   },
@@ -68,8 +74,9 @@
    "steps": [
     {
      "step": "P5 Consumption: need/investigation, generator premise, proposal or conditional abstention, next experiment, dashboard when reader content changes; before/after and consumer proof per material change",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "material changes reached their consumers with a before/after: NB-4 -> INV-15 text and the contributor table, MYC -> INV-17 and the 555 linked proposals, HDAC5/EZH2 -> the generator column and INV-14/16; dashboard regenerated in five languages (INV-15 and INV-17 in the further-investigations section, ids anchored), audit-shareable PASS, view suite 217 OK; order of investigations unchanged, no efficacy ranking"
     }
    ]
   },
@@ -78,8 +85,9 @@
    "steps": [
     {
      "step": "P6 Validation, integration, closure: targeted tests, batteries coordinated with the scientific session, gate on the pushed SHA, CI, served pages, worktree cleanup, final report A-I",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "note": "targeted tests OK (view 217, scout 76, census, generation 54, stage S12/S13, investigations 51, ranking 71, release surface, runner verdict, routing); the scientific session runs a battery (pid 2569553): mine waits for it to finish; then battery on the frozen SHA, merge/re-fetch, safe_push, CI, served pages, cleanup"
     }
    ]
   }
