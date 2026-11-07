@@ -1,0 +1,5 @@
+event_id	pmid	evidence_depth	prior_receipt	validated_ok
+FTR-20261107-39039877-93	39039877	abstract_only	null	yes (staged_receipt_check OK with --check-doi, 2026-11-07T23:45Z)
+FTR-20261107-39101447-93	39101447	partial_fulltext_read	FTR-20261105-39101447-21	yes (same)
+FTR-20261107-40775196-93	40775196	abstract_only	null	yes (same)
+FTR-20261107-42193054-93	42193054	partial_fulltext_read	FTR-20261003-42193054-01	yes (same)

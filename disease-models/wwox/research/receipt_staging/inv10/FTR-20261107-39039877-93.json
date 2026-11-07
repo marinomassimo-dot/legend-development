@@ -1,0 +1,39 @@
+{
+ "analysis_time_precision": "minute",
+ "event_at": "2026-11-07T23:45:00Z",
+ "record_kind": "contemporaneous_receipt",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/seizure_function_inv10_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/seizure_function_inv10_20261107/output/evidence.tsv"
+ ],
+ "analysis_at": "2026-11-07T23:42:00Z",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_id": "FTR-20261107-39039877-93",
+ "evidence_basis": [
+  "An abstract is not a reading; it supports a conditional lead only. Full text not reachable: Europe PMC lists no full text, the publisher redirect page returned only a loading placeholder (no challenge page met, no other tool tried).",
+  "verbatim_locator | proposition: two of twelve children were seizure-free and nine still had seizures at last follow-up | Abstract | \"2 cases were seizure-free, and 9 cases still had seizures after multiple anti-seizure medications\"",
+  "verbatim_locator | proposition: all twelve had global developmental delay, timing not stated | Abstract | \"All 12 cases showed microcephaly and global developmental delay.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record retrieved through the PubMed tools on 2026-11-07; abstract text only",
+ "study_id": {
+  "doi": "10.3760/cma.j.cn112140-20240229-00135",
+  "pmid": "39039877"
+ },
+ "workflow": "INV-10 package (label sz-p): Stage 1 source, abstract read for treatment outcome and development. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

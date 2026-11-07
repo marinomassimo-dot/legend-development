@@ -9,15 +9,17 @@
  "BASELINE": "development/main ce121d5814b8c83c65721c0709ac4ec2554a5011; same worktree and branch as ORCH-TTYPE-20261107. Reused by identifier: A1/A2 packages, CONSUMERS.md, aed_compare_it31, B1 white-matter package, ttype and nmda packages of this branch; PMID 39101447 has a complete read (FTR-20261003-39101447-01).",
  "CURRENT_PACKAGE": {
   "id": "S-INV10",
-  "state": "producer running (legend-delegate, sonnet/medium) in the queue2 worktree",
-  "delegate_active": "sz-p",
-  "updated": "2026-11-08T04:00:00Z"
+  "state": "verifier running (legend-delegate, sonnet/high)",
+  "delegate_active": "sz-v",
+  "updated": "2026-11-08T05:00:00Z"
  },
  "RESUME": "Folder drug_repurposing/seizure_function_inv10_20261107/ (BRIEF.md, output/). Order: producer, census, verifier on the decisive propositions, correction.",
  "DECISIONS_TAKEN": [
   "Queued by the operator beside the running work; one delegate at a time; settings as before. Reconciliation with a cap of 4 new sources; close without redoing the batch if nothing new changes the qualified conclusions."
  ],
- "DELEGATIONS": [],
+ "DELEGATIONS": [
+  "S producer sz-p: asked sonnet/medium, read back claude-sonnet-5-5 x47, medium x47; birth 17,487; 47 turns; ~10 min; output 46,483; cache written 157,133; cache read 4,962,629; peak 165,618; completed README (~970 words), evidence (26 rows), proposition_map, questions (7), queries (11), 4 staged receipts (abstract/text level, validated with DOI check); 2 of 4 new sources; full text of 39039877 not reachable; INCIDENT: the producer started a background public_release_gate run that outlived it (read-only; ran about 3 minutes and ended by itself) - verifier briefs now say not to start background jobs"
+ ],
  "ESCALATIONS": [],
  "STOP_LOG": [
   "No stop for a reserved act."
