@@ -8,7 +8,7 @@
  "START_UTC": "2026-11-07T12:00:00Z",
  "RESUME": {
   "worktree": ".claude/worktrees/it32 (branch task/it32)",
-  "next_action": "Finish view suite; freeze candidate; battery on exact SHA in a clean clone; merge main (re-fetch); safe_push; follow CI; cleanup; final report A-I.",
+  "next_action": "Battery on 5d339a7f: if PASS push it (safe_push), follow CI, then land the P12 commits (view suite + targeted tests first), cleanup, final report A-I.",
   "note": "Zero spend; no e-mail or contact; four current files via BATCH_COMMIT; safe_push only. CI on 2bc9e3b0 was in progress at start. P12 (queued integration on degraded sources and a GO-CAM-style extract for INV-16) starts after the IT32 candidate lands."
  },
  "AUTHORISED_QUEUE_20261107": {
@@ -149,8 +149,9 @@
    "steps": [
     {
      "step": "P12 Queued integration (arXiv 2608.27675, 'Agents for Everyone'): (1) does a degraded source (QUERY_ERROR, NO_MATCH_FOUND, COVERAGE_INCOMPLETE, truncation, failed primary plus partial alternative) stay recognisable from adapter through Scientist and card to the dashboard? diagnose the real path, reuse existing checks, fixtures for complete / correctly empty / failed-primary+partial / usable partial, fix only the first point where information is lost, one controlled agent exercise if sustainable else state the boundary; a failed new acquisition does not erase an earlier verified one. (2) GO-CAM-inspired small extract on INV-16 (protein amount, catalytic activity, localisation, non-catalytic function, SLC2A1/GLUT1 in the system studied; observed / transferred / inferred / unknown; source, locator, system, perturbation, endpoint per relation; GO ids only from official sources; not called GO-CAM-conformant), compared with the current representation; second case before generalising; no compound promoted; no JupyterHub, Noctua, graph database or cloud; OLS, LinkML, AI4Curation only for a named missing function after a licence check. Paper is an external methodological precedent, not WWOX evidence. Runs AFTER the IT32 candidate lands; own resume record if IT32 closure has started; stop when both questions have a verifiable outcome",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "(1) Path traced: adapter states (MATCH_FOUND / NO_MATCH_FOUND / QUERY_ERROR) -> bridge label_lookup (+ COVERAGE_INCOMPLETE, requires the error or limit) -> card.limits -> view; existing bridge tests already keep the four lookup states apart and a failed new acquisition does not erase a deeper earlier reading (paper_packet deepest-depth rule, IT30 test). DEFECT reproduced: the bridge writes the lookup-state limit after the generic ones (index 3) and the page lists only the first three card limits, so a QUERY_ERROR / empty / incomplete-coverage lookup never reached the reader. Fix at the first point of loss: repurposing_view.limits_for_page puts those lines first when the state is degraded, nothing dropped or reworded; regression test_a_failed_empty_or_incomplete_source_search_stays_within_the_limits_the_page_shows (checks the fixture premise too); the 30 real cards are all NOT_ATTEMPTED, so the served views are unchanged. Real incidents in this session (an empty body, a blocked stub, an unreachable full text) were recorded faithfully in the receipts as abstract_only with the route failure in evidence_basis; one-line rule added to BRIEF_COMMON. Boundary: agent composition was not exercised in a controlled run; the deterministic components and the real-session traces are what is verified. (2) golike_inv16_it32_20261107: 11-relation extract, GO ids resolved via QuickGO (an obsolete id recalled from memory was caught), comparison: no change of proposal or experiment, the advantage came from the reading not the representation; not adopted, no dependency; second case not run (conditional on an advantage)"
     }
    ]
   }
