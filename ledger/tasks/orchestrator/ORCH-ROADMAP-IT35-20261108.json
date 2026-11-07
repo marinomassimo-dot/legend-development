@@ -28,8 +28,9 @@
    "steps": [
     {
      "step": "P1 Close imprecisions: (1) 'at most necessary, not sufficient' wording in IT34 consumers; (2) live uses of 'not attributable to gap junctions' (history kept; BATCH_COMMIT only if a canonical register carries it); (3) 40 v 9 skips per suite with the local corpus run separately",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "(1) 'at most necessary, not sufficient' corrected in the live consumers (the need's inference and the IT34 README): the genotype comparison does not isolate necessity or sufficiency of any intrinsic property (input resistance shared by HT and KO; resting potential and sag intermediate in HT with HT against KO untested in Table 1; rebound KO-only; bursts rare in HT); original observations and limits kept; coverage regenerated. (2) carbenoxolone: classified: the needs text was corrected in IT34; the canonical register (working model CLAIM 021) says the gap-junction half is 'withdrawn as not attributable ... Not uninvolved, untested' and the mechanism map says 'untested node' - qualified wording consistent with the audit ('not specific to gap junctions'; the paper does not exclude them), so no BATCH_COMMIT was needed; the 2026-08 commit-candidate and repair-package texts are historical and untouched; no live consumer (needs, cards, investigations, work order, view passages) carries the stronger wording. (3) skips reconciled per suite from the battery logs: the 40 skips of the clean clone sit in 12 suites, the 9 of the corpus checkout in 7; the difference is seven suites (deepdive_manifest 5, dependency_integrity 2, figure_ppi_preflight 1, paper_packet 21 v 3, recapture_snippets 1, regenerate_adjudications 1, surface_census 4 v 1); those seven were run separately in a clone with the local corpus hard-linked (files/ only) at main bb4e34bf: all OK (208, 80, 4, 99, 18, 15, 35 tests); the remaining skips (paper_packet 3, surface_census 1, plus case-sensitive filesystem, Stop hook not installed, saved text under another checkout's files/) run in neither configuration: not exercised are the page-adjudication artefact of one paper, the pinned HTML artefact of PMID 17803050, and the Stop-hook wiring"
     }
    ]
   },

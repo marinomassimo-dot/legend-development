@@ -6394,7 +6394,7 @@
    ],
    "inferred": [
     "That the larger sag is carried by HCN (Ih) current: sag is commonly attributed to it, but the entries read record no Ih-blocker arm and no voltage-clamp current.",
-    "That the intrinsic changes are necessary for the bursts: they are graded or shared in the heterozygote, which rarely bursts, so they are at most necessary, not sufficient.",
+    "What the intrinsic changes do for the bursts is not decided, and the genotype comparison cannot decide it: input resistance is shared by the heterozygote and the knockout, resting potential and sag are intermediate in the heterozygote (heterozygote against knockout is not tested in Table 1), rebound is larger in the knockout only, and bursts are rare in the heterozygote; the four properties differ from each other, so none of them is shown to be necessary or sufficient, and the role (compensatory, pro-excitatory, bystander, or mixed) remains to be discriminated by a perturbation.",
     "Whether the intrinsic state is compensatory, pro-excitatory or a bystander: not decided."
    ],
    "intervention_direction": {
