@@ -1,0 +1,117 @@
+{
+ "_schema": "orchestrator-task-v1",
+ "TASK_ID": "ORCH-ROADMAP-IT34-20261107",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "P0",
+ "OBJECTIVE": "IT34: from a functional phenotype to pharmacological generation (observation -> alternative explanations -> action to discriminate -> targets -> tools -> experiment -> open questions), compared with DisMech. Success = a decision or generator behaviour verifiably better, not more nodes, citations or compounds.",
+ "START_UTC": "2026-11-07T22:00:00Z",
+ "RESUME": {
+  "worktree": ".claude/worktrees/it34 (branch task/it34, based on the IT33 candidate)",
+  "next_action": "P1 read-only retrieval of DisMech while the IT33 battery runs; then P2 diagnosis; IT33 must land first for the stage pointer (S13).",
+  "note": "Zero spend; no contact; four current files via BATCH_COMMIT only; safe_push only; one delegate at a time; no battery while another session runs one."
+ },
+ "AUTHORISED_QUEUE_20261107C": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P0 Baseline and reconciliation with IT33; stage actually current (S13 after IT33 lands; S12 before) and its recipe",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "P1 DisMech comparison, bounded and updated: current revision SHA and schema version, differences that affect current work only; keep AI narrative / curated YAML / primary papers / LEGEND checks apart; 87 citations = 10 unique PMIDs",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "P2 Main case: sag, rebound, intrinsic excitability (PMID 34634460) traced observation -> need/premise -> HCN function -> target/action -> catalogue -> proposal -> investigation -> dashboard, with aliases resolved",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "P3 Smallest generative link if the diagnosis justifies it; frozen criteria; conditional alternative branches; no new graph, database, ontology, harness or model",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "P4 Second contrasting case (burst dependence on glutamatergic transmission v carbenoxolone, or amount v catalytic function INV-16), reuse of existing work",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "P5 Compare previous method / link / link removed on six measures; classify known thread / new combination / reopening / new hypothesis; no predictive claim from reach",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "P6 DisMech qualifications re-checked where they bear on the case; confidence 'not assessed' kept; five dimensions kept apart; schema difference measured, pin not bypassed",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "P7 Consumers and dashboard: observation -> relations -> interventions -> counter-evidence -> open question -> next test, observed/inferred/hypothesised distinct, phone and five languages",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P8": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "P8 Resources, licences, independent verification of decisive premises; one delegate at a time; OpenScientist not a dependency",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P9": {
+   "order": 10,
+   "steps": [
+    {
+     "step": "P9 Regressions for the four behaviours, release checks, landing, CI, cleanup, final report A-I",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}
