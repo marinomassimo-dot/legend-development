@@ -1,0 +1,52 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-GSK3EIF2B-20261107",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Queued targeted package (operator, 2026-11-07): the WWOX, GSK3 beta, eIF2B chain link by link; whether it yields pharmacological hypotheses distinct from generic ISR inhibition; minimum discriminating experiment. One producer, one independent verifier on the decision-changing links; no promotion in any ranking; no new governance.",
+ "START_UTC": "2026-11-07T19:30:00Z",
+ "BASELINE": "development/main fb756c521bf29d60bcee42beb758ef2b9a6ebc74; local main 6773895ea2b19902c67ea135ac8f2b9e3b55dfde; worktree .claude/worktrees/gsk3-eif2b-20261107 from local main. Queued beside ORCH-NB1SCI-20261107 (battery running on its head; not interrupted). Reused by identifier: PMID 32000863 (complete read FTR-20260804-32000863-01), IT15 QB GSK3 and its verification, IT28 ISR role, IT30 WO-06, card E01, needs NEED-GSK3B-DEREPRESSION and NEED-ISR-ATTENUATION. PMID 12133000 and 15001529 have no receipt.",
+ "CURRENT_PACKAGE": {
+  "id": "G-GSK3-EIF2B",
+  "state": "brief written; producer not launched",
+  "delegate_active": "none",
+  "updated": "2026-11-07T19:30:00Z"
+ },
+ "RESUME": "Order: producer, census, verifier on decision-changing links, targeted correction. Folder drug_repurposing/gsk3_eif2b_20261107/.",
+ "DECISIONS_TAKEN": [
+  "The external OpenScientist report is not in the repository; treated as a question generator only; not needed by the delegates.",
+  "One delegate at a time; the battery of the previous task is CPU only and runs at low priority."
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [
+  "No stop for a reserved act."
+ ],
+ "DEFAULTS_TAKEN": [
+  "Condition: settings not restated by the operator for this package. Default: the same as the previous packages (producer sonnet/medium, verifier sonnet/high, legend-delegate). Why safe: reversible; no shared file touched."
+ ],
+ "AUTHORISED_QUEUE_20261107C": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_G": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "G producer, verifier, correction, consumer note",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_H": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "H validation, landing, cleanup, report",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}
