@@ -9,16 +9,17 @@
  "BASELINE": "development/main ce121d5814b8c83c65721c0709ac4ec2554a5011 (fetched 2026-11-07); same worktree and branch as ORCH-TTYPE-20261107. Retraction check done by the Orchestrator: PMID 21690096 and 28159761 occur in no file of main, of this branch or of task/it34 (git grep, excluding the receipt ledger); no Fyn or beta-TrCP chain in L01, the IT11 NRF2 README or the IT22 redox README; no consumer needs the correction.",
  "CURRENT_PACKAGE": {
   "id": "R-INV08",
-  "state": "verifier running (legend-delegate, sonnet/high)",
-  "delegate_active": "nr-v",
-  "updated": "2026-11-08T01:10:00Z"
+  "state": "complete; lands with ORCH-TTYPE-20261107",
+  "delegate_active": "none",
+  "updated": "2026-11-08T01:40:00Z"
  },
  "RESUME": "Folder drug_repurposing/nrf2_inv08_20261107/ (BRIEF.md, output/). Order: producer, census, verifier, correction.",
  "DECISIONS_TAKEN": [
   "Queued by the operator beside the running work; one delegate at a time; settings as before. The retraction question was answered first, mechanically, at the first window: no LEGEND file cites the retracted paper, so no attribution to correct and nothing to propagate; the notice itself is read in the package."
  ],
  "DELEGATIONS": [
-  "R producer nr-p: asked sonnet/medium, read back claude-sonnet-5-5 x31, medium x31; birth 17,417; 31 turns; ~6 min; output 34,013; cache written 93,048; cache read 1,818,108; peak 101,533; completed README (~940 words), evidence (21), wwox_table (10), hypotheses (H1-H6), experiment (X0-X4), queries, 5 staged receipts (all abstract-level, validated with DOI check); 5 of 6 new sources; the retraction notice page returned a reCAPTCHA and publisher pages Cloudflare: stopped for those sources, reason for retraction unknown; second route for the WWOX x NRF2 absence not run"
+  "R producer nr-p: asked sonnet/medium, read back claude-sonnet-5-5 x31, medium x31; birth 17,417; 31 turns; ~6 min; output 34,013; cache written 93,048; cache read 1,818,108; peak 101,533; completed README (~940 words), evidence (21), wwox_table (10), hypotheses (H1-H6), experiment (X0-X4), queries, 5 staged receipts (all abstract-level, validated with DOI check); 5 of 6 new sources; the retraction notice page returned a reCAPTCHA and publisher pages Cloudflare: stopped for those sources, reason for retraction unknown; second route for the WWOX x NRF2 absence not run",
+  "R verifier nr-v: asked sonnet/high, read back claude-sonnet-5-5 high; blind; 21 rows: 19 supported, 1 not in source as cited (E16 locator), 1 overshoot (E20); W02 W06 W07 W10 notes; W11 added; no access challenge in this run; corrections by the Orchestrator adopting the audit's wording"
  ],
  "ESCALATIONS": [],
  "STOP_LOG": [
@@ -34,7 +35,7 @@
    "steps": [
     {
      "step": "producer, census, verifier on decision-changing links, targeted correction",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator"
     }
    ]
