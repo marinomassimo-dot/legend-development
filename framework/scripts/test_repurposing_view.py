@@ -1175,6 +1175,32 @@ class ItalianFix(unittest.TestCase):
         self.assertIn("T.ex_lim_card", js)
         self.assertEqual(rv.UI_IT["ex_lim_card"].count("inglese"), 1)
 
+    def test_a_failed_empty_or_incomplete_source_search_stays_within_the_limits_the_page_shows(self):
+        """IT32 P12: the page lists the first three limits of a card. The bridge writes the lookup-state limit after the generic ones, so a QUERY_ERROR,
+        an empty answer or incomplete coverage was cut. It must come first when the state is degraded, unchanged and in place otherwise."""
+        import copy
+        sys.path.insert(0, str(Path(rv.__file__).resolve().parent))
+        import test_repurposing_bridge as tb
+        from repurposing_bridge import build_card
+        base = tb.packet()
+        lookup = {"status": "NO_MATCH_FOUND", "queries": ["synthetic"], "source": "synthetic-archive", "retrieved_at": "2026-10-20",
+                  "client_version": "fixture-0", "method": "primary_then_alternative"}
+        for state, marker in (({"status": "QUERY_ERROR", "error": "HTTP 503 from fixture"}, "QUERY_ERROR is a failed search"),
+                              ({"status": "NO_MATCH_FOUND"}, "NO_MATCH_FOUND is information not available"),
+                              ({"coverage": "COVERAGE_INCOMPLETE", "coverage_limit": "alternative search unavailable"}, "Coverage is incomplete")):
+            p = copy.deepcopy(base)
+            p["label_lookup"] = dict(lookup, **state)
+            card = build_card(p)
+            self.assertFalse(any(marker in t for t in card["limits"][:3]), "fixture premise: the bridge puts it beyond the cut")
+            shown = rv.limits_for_page(card)[:3]
+            self.assertTrue(any(marker in t for t in shown), marker)
+            self.assertEqual(sorted(rv.limits_for_page(card)), sorted(card["limits"]))      # nothing dropped or reworded
+        plain = build_card(copy.deepcopy(base))                     # not attempted: the bridge's order is kept
+        self.assertEqual(rv.limits_for_page(plain), plain["limits"])
+        done = copy.deepcopy(base)
+        done["label_lookup"] = dict(lookup, status="MATCH_FOUND", spl_id="SPL-FIXTURE-1")
+        self.assertEqual(rv.limits_for_page(build_card(done)), build_card(done)["limits"])
+
     def test_wwox_material_is_kept_out_of_the_external_precedent_section(self):
         js = (DR / "view/assets/curated.js").read_text(encoding="utf-8")
         self.assertIn("wwoxAssert", js)

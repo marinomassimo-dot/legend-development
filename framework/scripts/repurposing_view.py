@@ -1251,6 +1251,22 @@ def pf(card: dict) -> dict:
     return card["input"].get("p4_card") or card["input"].get("p4_roadmap_fields") or {}
 
 
+DEGRADED_LOOKUP_LIMITS = ("QUERY_ERROR is", "NO_MATCH_FOUND is", "Coverage is incomplete")
+
+
+def limits_for_page(card: dict) -> list:
+    """The card's limits for the page, which shows only the first few. The limit that says a source search FAILED, came back EMPTY or covered LESS than
+    asked is written by the bridge after the generic limits, so it sat beyond the cut and never reached the reader (IT32 P12: a QUERY_ERROR card showed
+    three generic lines). It is moved to the front, in its original order, when the label lookup is in one of those states; nothing is dropped or
+    reworded, and a card whose lookup was complete or not attempted keeps the bridge's order."""
+    limits = list(card.get("limits") or [])
+    ll = card.get("label_lookup") or {}
+    if ll.get("status") not in ("QUERY_ERROR", "NO_MATCH_FOUND") and ll.get("coverage") != "COVERAGE_INCOMPLETE":
+        return limits
+    front = [t for t in limits if str(t).startswith(DEGRADED_LOOKUP_LIMITS)]
+    return front + [t for t in limits if t not in front]
+
+
 def card_status(card: dict) -> tuple[str, str]:
     """(normalised research status, raw text). The early axis cards write the status in Italian-vocabulary prose; both are kept."""
     raw = str(pf(card).get("status") or ("abstention" if card.get("abstention") else "hypothesis"))
@@ -2310,7 +2326,7 @@ def build_curated(dr: Path, ctx: dict) -> dict:
             "expected": clip(f.get("expected_contribution"), 200), "access_text": clip(f.get("time_to_access"), 240), "pharm": clip(f.get("pharmacology"), 360),
             "against": against, "against_note": against_note, "for": for_, "transfer_limits": efa.get("transfer_limits"), "not_known": nk,
             "missing": absd.get("missing_datum") if absd.get("missing_datum") else (nk[0] if nk else None), "reopen": clip(absd.get("search_record"), 260) if absd.get("search_record") else None,
-            "next": clip(nxt, 360), "next_full": nxt, "limits": card.get("limits") or [], "asserts": asserts, "n_disease_assertions": len(inp.get("disease_assertions") or ([inp["disease_assertion"]] if inp.get("disease_assertion") else [])),
+            "next": clip(nxt, 360), "next_full": nxt, "limits": limits_for_page(card), "asserts": asserts, "n_disease_assertions": len(inp.get("disease_assertions") or ([inp["disease_assertion"]] if inp.get("disease_assertion") else [])),
             "access": acc, "country": ("US evidence found" if acc and acc != ["unknown/unverified"] else "no country evidence obtained"), "chembl": chembl, "actions": act,
             "pmids": [{"id": k, "role": v, "title": (titles.get(k) or {}).get("title"), "journal": (titles.get(k) or {}).get("journal"), "year": (titles.get(k) or {}).get("year")} for k, v in sorted(pm.items())], "dois": dois, "scope_counts": scope_counts,
             "card_path": (f"../{folder}/{cid}.card.json" if not shareable else UI_IT["card_file_note"].format(id=cid)), "n_prio": sum(len(prio_by_row.get(r["row_id"], [])) for r in rws),

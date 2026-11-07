@@ -14,6 +14,7 @@ This batch runs beside two other sessions (IT29 and IT30, branches `task/it29` a
 * **Epistemic labels.** In every decision statement mark DATO (a source reports it), INFERENZA (you derived it from DATO), IPOTESI (a proposal with the test that would discriminate it). Keep "what the source says" apart from "what I conclude". A knockout is not an inhibitor; an association is not modulation; a symptom response is not developmental protection; a compound effect is not attributed to a target without a target-specific control in the source.
 * **Seek the counter-evidence on purpose.** For every support you record, spend a search on the opposite: the null, the adverse, the context where it fails. Record them as rows with `role = counter`.
 * **Prefer decisive sources over many.** 6 to 12 well-read sources beat 40 abstracts. Stop when the sub-question is answered or the route is exhausted, and say which. If a full text is not reachable by an open route, say so and do not infer methods from an abstract.
+* **Degraded acquisition stays visible (IT32).** When a route fails or returns less than the source (an error, an empty body, an access stub, truncation, or a page summariser instead of the raw text), write in the receipt's `evidence_basis` and in your README which route, what came back and the depth actually reached. Never fill the gap with plausible text, never turn the gap into an absence or a null, and note that a later failed attempt does not erase an earlier deeper reading.
 
 ## Using the repository (do not grep the two large registries)
 
