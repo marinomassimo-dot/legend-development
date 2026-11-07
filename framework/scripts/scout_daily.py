@@ -798,9 +798,26 @@ def _all_tables(runner, sha: str) -> list[str]:
     return sorted(names, key=lambda p: (-int(m.group(1)) if (m := re.search(r"_it(\d+)", p)) else 0, p))
 
 
-def _tables(runner, sha: str) -> list[str]:
-    """The newest `TABLE_LIMIT` tables; the rest are not read and the plan says so (`resolve_plan`)."""
-    return _all_tables(runner, sha)[:TABLE_LIMIT]
+TABLE_ROTATING = 2   # of the TABLE_LIMIT slots, this many go to older tables in turn (by ISO week), so no table is dropped for good
+
+
+def pick_tables(every: list[str], week: int) -> tuple[list[str], list[str]]:
+    """(read this run, not read this run). The newest `TABLE_LIMIT - TABLE_ROTATING` tables are always read; the remaining slots rotate through the older
+    tables by ISO week. The cap on tables read is unchanged. Before this, the Q1-complement table R1-R9, older than twelve packages, was never read."""
+    if len(every) <= TABLE_LIMIT:
+        return list(every), []
+    newest, older = every[:TABLE_LIMIT - TABLE_ROTATING], every[TABLE_LIMIT - TABLE_ROTATING:]
+    chosen = []
+    for j in range(TABLE_ROTATING):
+        t = older[(week * TABLE_ROTATING + j) % len(older)]
+        if t not in chosen:
+            chosen.append(t)
+    return newest + chosen, [t for t in older if t not in chosen]
+
+
+def _tables(runner, sha: str, week: int = 0) -> list[str]:
+    """The tables read this run (`pick_tables`); the rest are named in the plan (`resolve_plan`)."""
+    return pick_tables(_all_tables(runner, sha), week)[0]
 
 
 def _latest(runner, sha: str, directory: str, pattern: str):
@@ -835,11 +852,11 @@ def resolve_plan(cached: dict | None, extracts: dict | None, ctx: dict, runner=g
     else:
         reasons.append("no diagnosis_it* directory at this revision")
     inputs, items, reread = {}, [], 0
-    every_table = _all_tables(runner, sha)
-    if len(every_table) > TABLE_LIMIT:      # a silent drop hid a whole reopen table before (map row EN-01)
-        reasons.append(f"{len(every_table) - TABLE_LIMIT} older reopen/decision table(s) not read (TABLE_LIMIT {TABLE_LIMIT}): "
-                       + ", ".join(every_table[TABLE_LIMIT:]))
-    todo = list(paths.items()) + [("reopen", t) for t in every_table[:TABLE_LIMIT]]
+    read_tables, unread_tables = pick_tables(_all_tables(runner, sha), now.isocalendar()[1])
+    if unread_tables:      # a silent drop hid a whole reopen table before (map row EN-01); the slots now rotate, the rest are named
+        reasons.append(f"{len(unread_tables)} older reopen/decision table(s) not read this run (TABLE_LIMIT {TABLE_LIMIT}, {TABLE_ROTATING} slots rotate by ISO week): "
+                       + ", ".join(unread_tables))
+    todo = list(paths.items()) + [("reopen", t) for t in read_tables]
     seen_paths = set()
     while todo:
         kind, path = todo.pop(0)

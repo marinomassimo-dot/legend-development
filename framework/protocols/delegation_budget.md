@@ -7,7 +7,8 @@
 
 **Why it exists.** The parallel batch of 2026-11-05/06 ran 21 delegates, every one at the maximum
 effort the session happened to have, 3,400 turns, about 830 million cache-read tokens and 7.5 million
-output tokens as logged (`session_model_census.py --dir <subagents directory>`). Six of the twelve
+output tokens as first logged (`session_model_census.py --dir <subagents directory>`; the first census counted repeated
+rows of one response several times, so these totals are about twice the real ones: see the reconciliation in section 6). Six of the twelve
 delegates dispatched as `fable` ran no fable turn. Two account usage limits killed every in-flight
 agent, and the main session shared the same account. The scientific yield was real; the shape of the
 spend was not chosen by anyone.
@@ -64,6 +65,16 @@ read, the file(s) completed. Tokens are reported as logged. They are not convert
 plan, and no additional spend is enabled to make a package fit.
 
 **Reconciliation of the 7.5 million figure (2026-11-06).** A transcript writes one API response as several rows (one per content block) that repeat the same usage block, and the census summed every row. On 60 real delegate transcripts this gave 5.02 million output tokens against 2.57 million once each response id is counted once (2,855 of 6,272 rows were repeats). The census now counts a response once and keeps its largest output; the 7.5 million above is therefore an over-count by roughly a factor of two and the 3.24 million analysis is the nearer one. Cache read and cache creation were over-counted the same way. Rows without an id are not merged. Regression: `test_session_model_census.py`.
+
+**Measured in IT32 (2026-11-07), each perimeter stated.** (a) The seven IT32 delegate transcripts (three translation jobs, two producers, two verifiers; census with the one-response-once rule): 156,382 output tokens, about 9.09 million cache-read tokens; for every one the effort and model read back equal the dispatch (sonnet; low or medium), birth context 17.5k to 18.1k tokens; the delegates' own statements about their effort were wrong twice, so the transcript is the source. Producers 38.5k and 38.4k output (35 to 39 turns), verifiers 18.9k and 26.3k, translation jobs 6.2k to 17.4k. (b) The coordinator is the main session transcript over all its days and iterations, not IT32 alone: 6,813 turns, effort read back `medium` on 6,799 of them, models sonnet 5.5 (6,334 turns), opus 5 (422), fable 5.1 (37) and others, 5.03 million output tokens: a coordinator can change model mid-run and the dispatch line cannot see it, so the census line is the record. (c) The NB-4 pilot reported its own perimeter (coordinator 27,688 output tokens at effort high, producer 32,487, verifier 66,561, total 126,736): a different session, different counts, not comparable with (a) or (b) and not a share of any plan. The verifier cost twice the producer there; the next two sections address that and wide retrieval.
+
+## 8 · A verifier checks what decides, not the whole search
+
+The verifier gets the decisive statements as (statement, source, locator) triples, not the producer's reasoning, and is asked to check: every proposition a decision rests on; every number that would change a decision; every inference, claim of absence and transfer of context (species, cell type, paralog, disease); and a declared sample of the simple non-decisive controls (say which rows and how many). It does not rebuild the retrieval. If the sample shows an error, the verification extends to that class (for example every quote of that source type); the decisive premises are never reduced to save cost. A correction of substance made after the review is checked again by the same verifier or another.
+
+## 9 · A producer retrieves narrowly
+
+Before reading hits, write the query list; group OR clauses and read the hit count first (a string with 225,128 hits is a query defect, not a search); check the receipt ledger depth before opening a PMID; stop at the first source that answers the stated question or when the route is exhausted, and say which. A failed or partial route is written into the receipt (see the common brief) and is not retried by another route without a stated reason.
 
 ## 7 · Not changed
 

@@ -1089,8 +1089,18 @@ class ReopenTables(unittest.TestCase):
         extra = {f"{sd.MODULE}/pkg_it{n}_p1_2026/reopen_searches.tsv": TABLE_TEXT for n in range(1, sd.TABLE_LIMIT + 3)}
         plan, _ = derive_tables(extra=extra)
         notes = " ".join(plan.get("provisional") or [])
-        self.assertIn("older reopen/decision table(s) not read", notes)
-        self.assertIn("pkg_it1_p1_2026/reopen_searches.tsv", notes)
+        self.assertIn("older reopen/decision table(s) not read this run", notes)
+
+    def test_the_older_tables_take_turns_in_the_rotating_slots_and_the_cap_is_unchanged(self):
+        every = [f"t{n:02d}" for n in range(20, 0, -1)]            # newest first
+        seen = set()
+        for week in range(1, 54):
+            read, unread = sd.pick_tables(every, week)
+            self.assertEqual(len(read), sd.TABLE_LIMIT)
+            self.assertEqual(read[:sd.TABLE_LIMIT - sd.TABLE_ROTATING], every[:sd.TABLE_LIMIT - sd.TABLE_ROTATING])
+            seen.update(read)
+        self.assertEqual(seen, set(every))                          # across a year no table is dropped for good
+        self.assertEqual(sd.pick_tables(every[:sd.TABLE_LIMIT], 7), (every[:sd.TABLE_LIMIT], []))
 
     def test_an_open_row_becomes_a_question_and_an_answered_or_conditionless_row_does_not(self):
         plan, _ = derive_tables()

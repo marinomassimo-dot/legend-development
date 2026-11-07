@@ -1,0 +1,154 @@
+question	hypothesis	main_target	n_families	n_base_names	n_eligible	tie_size	handed_over	target_named_in_legend_material	earlier_decisions_in_cluster	examples
+Q2	H_HARM	HDAC5	20	20	12	1	1	yes	NANATINOSTAT: REJECTED_INFORMATIVE (qualification_it21_p4a_20261103/qualification_it21_p4a.tsv#IT21P2-0006)	4-Phenylbutyric Acid; Abexinostat; Belinostat; CUDC-101; Dacinostat; Givinostat
+Q2	H_HARM	HIF1A	3	3	0	0	0	yes	Px-478: KEEP (ranking_it8_p9_20261029/it9_records.tsv#E-01)	Anti-Hif-1Alpha Lna Antisense Oligonucleotide Ezn-2968; Nitroglycerin; Px-478
+Q2	H_HARM	KDM4C	2	2	0	0	0	no	Iox1: REJECTED_INFORMATIVE (qualification_it21_p4a_20261103/qualification_it21_p4a.tsv#IT21P2-0008)	Iox1; Zavondemstat
+Q2	H_HARM	TAF1	1	1	0	0	0	no		Bay-299
+Q2	H_HARM	XIAP	8	8	3	3	1	no		ASTX-660; Azd5582; Bv-6; GDC-0152; Idronoxil; Sm-122
+Q2	H_PROTECT	EGLN2	6	5	4	1	1	no	Roxadustat: DROP (ranking_it8_p9_20261029/it9_records.tsv#E-02)	Compound 6Ee [Pmid: 22364528]; Desidustat; MOLIDUSTAT; Roxadustat; VADADUSTAT; Vadadustat
+Q2	H_PROTECT	ESRRA	2	2	0	0	0	no		1-Cyclohexyl-N-{[1-(4-Methylphenyl)-1H-Indol-3-Yl]Methyl}Methanamine; Xct790
+Q2	H_PROTECT	GRK5	1	1	0	0	0	no		Compound 1O [Pmid: 24210504]
+Q2	H_PROTECT	PRKCA	2	2	0	0	0	no		G&Ouml; 6976; G&Ouml; 6983
+Q2	H_PROTECT	TYRO3	4	4	0	0	0	no		Compound 21 [Pmid: 23312943]; Ldc1267; Slc-391; Unc4203
+Q4	H_HARM	BTK	57	44	0	0	0	no	Cgi1746: REJECTED_INFORMATIVE (qualification_it21_p4a_20261103/qualification_it21_p4a.tsv#IT21P2-0057)	ABIVERTINIB; ACALABRUTINIB; ATUZABRUTINIB; Abivertinib; BMS-986142; BRANEBRUTINIB
+Q4	H_HARM	GRK2	1	1	0	0	0	no		Ccg258747
+Q4	H_HARM	MAPKAPK2	5	5	1	1	1	yes	Gamcemetinib: INCONCLUSIVE (ranking_it8_p9_20261029/it9_records.tsv#P4CD-05)	(10R)-10-Methyl-3-(6-Methylpyridin-3-Yl)-9,10,11,12-Tetrahydro-8H-[1,4]Diazepino[5',6':4,5]Thieno[3,2-F]Quinolin-8-One; AT-13148; Compound 8 [Pmid: 17480064]; Gamcemetinib; Mk2A Inhibitor
+Q4	H_HARM	PTPRM	1	1	0	0	0	no		Compound 8A [Pmid: 23713581]
+Q4	H_PROTECT	ATR	13	10	0	0	0	no	CERALASERTIB: DROP (ranking_it8_p9_20261029/it9_records.tsv#P4CD-06) | Ceralasertib: DROP (ranking_it8_p9_20261029/it9_records.tsv#P4CD-06)	Az20; BERZOSERTIB; Berzosertib; CERALASERTIB; Camonsertib; Ceralasertib
+Q4	H_PROTECT	CLK4	2	2	0	0	0	no		Kinase Inhibitor 2 [Pmid: 30199702]; Tomivosertib
+Q4	H_PROTECT	STAT3	8	8	0	0	0	yes		C-188-9; Compound 6F [Pmid: 35476936]; Compound 8U [Pmid: 31999451]; Lll12; Sd-36; Sd-91
+Q5	H_HARM	ALDH2	2	2	1	1	0	no		DISULFIRAM; Prunetin
+Q5	H_HARM	BRD3	1	1	0	0	0	no		Ms363
+Q5	H_HARM	BRD4	43	43	13	1	0	yes	Apabetalone: KEEP (ranking_it8_p9_20261029/it9_records.tsv#P4CD-01)	(+)-Jq1; AMREDOBRESIB; Apabetalone; Arv-771; BI-2536; Bms-986158
+Q5	H_HARM	EP300	2	2	0	0	0	no	CURCUMIN: DROP (ranking_it8_p9_20261029/it9_records.tsv#P3-07)	C646; CURCUMIN
+Q5	H_HARM	ESR2	1	1	0	0	0	no		Estradiol Valerate
+Q5	H_HARM	EZH2	15	14	4	4	0	yes	Gsk343: KEPT_CONDITIONAL (qualification_it21_p4a_20261103/qualification_it21_p4a.tsv#IT21P2-0195)	Cpi-1205; Ebi-2511; Ei1; Epz005687; Epz011989; GSK2816126
+Q5	H_HARM	HDAC3	5	5	0	0	0	yes		Compound 30 [Pmid: 37057760]; Droxinostat; Resminostat; Rgfp109; Rgfp966
+Q5	H_HARM	HMGB1	1	1	0	0	0	yes		CD24FC
+Q5	H_HARM	HNF4A	1	1	0	0	0	no		Bi6015
+Q5	H_HARM	INPP5D	1	1	0	0	0	no		3 Alpha-Aminocholestane
+Q5	H_HARM	LY96	1	1	0	0	0	no		L6H21
+Q5	H_HARM	NFE2L2	2	1	0	0	0	yes	OMAVELOXOLONE: KEEP (ranking_it8_p9_20261029/it10_records.tsv#P22-01) | Omaveloxolone: KEEP (ranking_it8_p9_20261029/it10_records.tsv#P22-01)	OMAVELOXOLONE; Omaveloxolone
+Q5	H_HARM	NR1D1	1	1	0	0	0	no		Gsk4112
+Q5	H_HARM	NR1I2	11	10	4	1	0	no		(+)-S20; 5&Beta;-Cholestane-3&Alpha;,7&Alpha;,12&Alpha;-Triol; Garcinoic Acid; Hyperforin; Lovastatin; Nifedipine
+Q5	H_HARM	NR1I3	1	1	1	1	0	no		Clotrimazole
+Q5	H_HARM	PIM2	9	9	2	1	1	no		Azd1208; Compound 14K [Pmid: 21982499]; Compound 28 [Pmid: 30624936]; Cx-6258; Gdc-0339; LGH-447
+Q5	H_HARM	PIM3	1	1	0	0	0	no		Compound 20 [Pmid: 22136433]
+Q5	H_HARM	PINK1	1	1	0	0	0	no		Mtk458
+Q5	H_HARM	PPP3CA	1	1	0	0	0	no	VOCLOSPORIN: DROP (ranking_it8_p9_20261029/it10_records.tsv#P22-04)	VOCLOSPORIN
+Q5	H_HARM	PTPRB	3	2	2	2	1	no		Compound 13E [Pmid: 16759857]; RAZUPROTAFIB; Razuprotafib
+Q5	H_HARM	PTPRG	1	1	0	0	0	no		Compound 1 [Pmid: 21882820]
+Q5	H_HARM	ROCK2	20	20	4	4	1	no		BELUMOSUDIL; Compound 11D [Doi: 10.1039/C0Md00194E]; Compound 22 [Pmid: 20462760]; Compound 23 [Pmid: 35816678]; Compound 32 [Pmid: 20471253]; Compound 35 [Pmid: 20684608]
+Q5	H_HARM	RORA	3	2	1	1	0	no		7-Hydroxycholesterol; Cholesterol; Cholesterol Sulphate
+Q5	H_HARM	RORC	2	2	0	0	0	no	JTE-151: INCONCLUSIVE (ranking_it8_p9_20261029/it9_records.tsv#P3-09)	Alrt 1550; JTE-151
+Q5	H_HARM	RPS6KA3	2	2	1	1	0	no		Bix 02565; Fmk
+Q5	H_HARM	SIRT1	4	3	0	0	0	no	SRT-2104: INCONCLUSIVE (qualification_it21_p4a_20261103/qualification_it21_p4a.tsv#IT21P2-0512) | Srt2104: INCONCLUSIVE (qualification_it21_p4a_20261103/qualification_it21_p4a.tsv#IT21P2-0512)	SRT-2104; Sirt1 Activator 3; Srt1720; Srt2104
+Q5	H_HARM	TEK	3	2	3	2	0	no		ALTIRATINIB; Altiratinib; FORETINIB
+Q5	H_HARM	VDR	2	2	0	0	0	no		3-Keto-Lithocholic Acid; Lithocholic Acid
+Q5	H_PROTECT	AKT2	1	1	0	0	0	no		Pht-427
+Q5	H_PROTECT	BCL3	1	1	0	0	0	no		Bcl3 Inhibitor Js6
+Q5	H_PROTECT	EIF2AK3	2	2	1	1	0	yes		Gsk2606414; Gsk2656157
+Q5	H_PROTECT	FGFR3	21	20	5	5	0	no		ASP-5878; Azd-4547; Blu-9931; Compound 29 [Pmid: 36356320]; Compound 7 [Nguyen Et Al., 2023]; DOVITINIB LACTATE
+Q5	H_PROTECT	HNF4A	1	1	1	1	0	no		ALVERINE CITRATE
+Q5	H_PROTECT	IFNGR1	1	1	0	0	0	no		INTERFERON GAMMA-1B
+Q5	H_PROTECT	IL33R	1	1	0	0	0	no		ASTEGOLIMAB
+Q5	H_PROTECT	INPP5D	2	1	1	1	0	no		ROSIPTOR ACETATE; Rosiptor
+Q5	H_PROTECT	LY96	1	1	0	0	0	no		Neoceptin-3
+Q5	H_PROTECT	MAP3K7	7	7	1	1	0	no		5Z-7-Oxozeaenol; CEP-11981; Compound 12 [Pmid: 27448772]; Compound 17D [Pmid: 23099093]; Compound 25 [Pmid: 28038940]; Compound 5 [Pmid: 28038940]
+Q5	H_PROTECT	MAPK1	9	9	1	1	1	no	TIZATERKIB: INCONCLUSIVE (qualification_it21_p4a_20261103/qualification_it21_p4a.tsv#IT21P2-0374)	Astx029; Compound 27 [Pmid: 29775310]; Edaxeterkib; Erk Inhibitor Iii; Laduviglusib; Rineterkib
+Q5	H_PROTECT	MAPK3	7	4	4	4	1	no		5-(2-Phenylpyrazolo[1,5-A]Pyridin-3-Yl)-1H-Pyrazolo[3,4-C]Pyridazin-3-Amine; MK-8353; Mk-8353; RAVOXERTINIB; Ravoxertinib; ULIXERTINIB
+Q5	H_PROTECT	MDM2	3	3	3	3	0	no		Milademetan; Navtemadlin; Ro-5045337
+Q5	H_PROTECT	NFE2L2	1	1	0	0	0	yes		Ml385
+Q5	H_PROTECT	NR1D1	1	1	0	0	0	no		Sr8278
+Q5	H_PROTECT	NR1I3	1	1	0	0	0	no		Citco
+Q5	H_PROTECT	NR2C2	1	1	0	0	0	no		Vitamin A
+Q5	H_PROTECT	PAK2	2	2	0	0	0	no		Il-94; Pqa-18
+Q5	H_PROTECT	RARB	6	6	2	1	1	no		Ac261066; Ac55649; Bms641; Kcl-286; TAMIBAROTENE; Tretinoin
+Q5	H_PROTECT	RIPK2	6	6	0	0	0	no		Gsk583; Od36; Pn10; Ripk2 Inhibitor 5; Ripk2 Inhibitor 8; Src Kinase Inhibitor I
+Q5	H_PROTECT	RORC	15	15	0	0	0	no		25-Hydroxycholesterol; Azd0284; Cintirorgon; Compound 14 [Schnute Et Al., 2023]; Compound 32 [Pmid: 31638797]; Gne-3500
+Q5	H_PROTECT	RPS6KA6	2	2	0	0	0	no	At-9283: REFERENCE (ranking_it8_p9_20261029/it9_records.tsv#P3-20)	At-9283; Bay-985
+Q5	H_PROTECT	SIRT1	4	4	1	1	0	no		Compound 17 [Pmid: 23570514]; EX-527; Selisistat; Splitomicin
+Q5	H_PROTECT	SYK	31	25	12	10	0	no		Bay 61-3606; CERDULATINIB; Cerdulatinib; Compound 23 [Pmid: 17600705]; Compound 7 [Pmid: 22464456]; ENTOSPLETINIB
+Q5	H_PROTECT	TGFB1	3	3	0	0	0	no		FRESOLIMUMAB; LY-2382770; METELIMUMAB
+Q5	H_PROTECT	TTK	10	10	3	3	0	no		Az3146; BAY-1161909; BAY-1217389; Compound 27F [Pmid: 25625617]; Compound 34H [Pmid: 27055065]; Empesertib
+Q5	H_PROTECT	ULK2	1	1	0	0	0	no		Sbp-7455
+Q6	H_HARM	ACVR1	1	1	0	0	0	no		Fidrisertib
+Q6	H_HARM	AHR	1	1	1	1	0	no		Ezutromid
+Q6	H_HARM	APH1A	7	7	4	4	0	no	NIROGACESTAT: DROP (ranking_it8_p9_20261029/it9_records.tsv#E-03)	AVAGACESTAT; BEGACESTAT; Mk-0752; NIROGACESTAT; Osugacestat; RG-4733
+Q6	H_HARM	AURKB	38	35	10	2	1	no	AT-9283: REFERENCE (ranking_it8_p9_20261029/it9_records.tsv#P3-20) | At-9283: REFERENCE (ranking_it8_p9_20261029/it9_records.tsv#P3-20) | Barasertib: DROP (ranking_it8_p9_20261029/it9_records.tsv#P3-12) | DEFOSBARASERTIB: DROP (ranking_it8_p9_20261029/it9_records.tsv#P3-12)	AMG-900; AT-9283; At-9283; Aurora Kinase Inhibitor Ii; BI-811283; Barasertib
+Q6	H_HARM	BMPR1A	6	6	0	0	0	no		Compound 13A [Pmid: 23639540]; Compound 13D [Pmid: 23639540]; Compound 13R [Pmid: 23639540]; Ldn-214117; Ml347; Zilurgisertib
+Q6	H_HARM	BMPR2	1	1	0	0	0	no		Deucravacitinib
+Q6	H_HARM	BRD3	1	1	0	0	0	no		Ms363
+Q6	H_HARM	CASP3	4	4	0	0	0	no		Ac-Devd-Cho; Az10417808; Z-Devd-Fmk; Z-Dqmd-Fmk
+Q6	H_HARM	CASP9	2	2	0	0	0	no		NIVOCASAN; Z-Lehd-Fmk
+Q6	H_HARM	CCND1	1	1	1	1	0	no		BRICICLIB
+Q6	H_HARM	CDK4	23	19	7	5	0	yes	ABEMACICLIB: REFERENCE (ranking_it8_p9_20261029/it11_records.tsv#M05) | Abemaciclib: REFERENCE (ranking_it8_p9_20261029/it11_records.tsv#M05) | PALBOCICLIB: REFERENCE (ranking_it8_p9_20261029/it11_records.tsv#M05) | Palbociclib: REFERENCE (ranking_it8_p9_20261029/it11_records.tsv#M05)	ABEMACICLIB; Abemaciclib; Bsj-03-123; Bsj-03-204; Bsj-04-132; CROZBACICLIB
+Q6	H_HARM	CREBBP	4	4	0	0	0	no		Compound 50 [Pmid: 24313754]; I-Cbp112; Ischemin; Sgc-Cbp30
+Q6	H_HARM	CSK	2	2	1	1	0	no		Ng-25; Rivoceranib
+Q6	H_HARM	DOT1L	5	5	1	1	1	yes	Pinometostat: DROP (ranking_it8_p9_20261029/it9_records.tsv#P3-13)	Bromo-Deaza-Sah; Compound 13 [Chen Et Al., 2016]; Epz004777; Pinometostat; Sgc0946
+Q6	H_HARM	EP300	2	2	0	0	0	no	CURCUMIN: DROP (ranking_it8_p9_20261029/it9_records.tsv#P3-07)	C646; CURCUMIN
+Q6	H_HARM	HCK	1	1	0	0	0	no		Compound 2 [Pmid: 15546730]
+Q6	H_HARM	IL31RA	1	1	0	0	0	no		NEMOLIZUMAB
+Q6	H_HARM	JAK2	43	39	18	8	1	yes		2-Tert-Butyl-9-Fluoro-1,6-Dihydrobenzo[H]Imidazo[4,5-F]Isoquinolin-7-One; AC-430; AZD-1480; Abrocitinib; Ac430; Az960
+Q6	H_HARM	KIT	4	3	0	0	0	no		DOVITINIB LACTATE; MASITINIB; Masitinib; PAZOPANIB HYDROCHLORIDE
+Q6	H_HARM	METTL3	2	2	0	0	0	yes	Stm2457: DROP (ranking_it8_p9_20261029/it9_records.tsv#E-04)	Stc-15; Stm2457
+Q6	H_HARM	NOTCH1	3	3	0	0	0	no		BRONTICTUZUMAB; Imr-1; Ro4929097
+Q6	H_HARM	NOTCH3	1	1	0	0	0	no		TAREXTUMAB
+Q6	H_HARM	NR1H3	1	1	0	0	0	no		Paxilline
+Q6	H_HARM	NR3C1	74	60	65	63	0	no		ALCLOMETASONE DIPROPIONATE; AMCINONIDE; Abbv-3373; Azd2906; BETAMETHASONE BENZOATE; BETAMETHASONE DIPROPIONATE
+Q6	H_HARM	PAK1	1	1	0	0	0	no		Ipa-3
+Q6	H_HARM	PGR	6	6	3	3	0	no		Apr19; Asoprisnil; LONAPRISAN; ONAPRISTONE; PF-05019702; Way-255348
+Q6	H_HARM	PIK3CB	6	6	3	3	0	no		AMDIZALISIB; AZD-8186; Compound 20F [Pmid: 28520415]; GSK-2636771; Pi-3065; Tgx-221
+Q6	H_HARM	PIM1	5	5	0	0	0	no		Akt Inhibitor X; Cx-5011; Cx-5279; Leucettine L41; Xl413
+Q6	H_HARM	PIM2	10	10	2	1	0	no		Azd1208; Compound 14K [Pmid: 21982499]; Compound 28 [Pmid: 30624936]; Cx-6258; Gdc-0339; LGH-447
+Q6	H_HARM	PIM3	1	1	0	0	0	no		Compound 20 [Pmid: 22136433]
+Q6	H_HARM	PIN1	5	5	0	0	0	yes	Sulfopin: KEEP (ranking_it8_p9_20261029/it9_records.tsv#E-06)	Ag-122018; Ag-17724; Bjp-06-005-3; Compound 20 [Pmid: 25091930]; Sulfopin
+Q6	H_HARM	PRKD2	2	2	0	0	0	no		Bpkdi; Crt 0066101
+Q6	H_HARM	PSEN1	6	6	2	2	0	no		Avagacestat; Az4800; Begacestat; Chf-5074; Elnd006; Sch-900229
+Q6	H_HARM	PTPRF	1	1	0	0	0	no		Illudalic Acid
+Q6	H_HARM	RARA	3	3	0	0	0	no		Bms-189532; Bms614; Ro 41-5253
+Q6	H_HARM	ROCK1	10	10	0	0	0	no		BELUMOSUDIL; Compound 22 [Pmid: 20462760]; Compound 8 [Pmid: 25898023]; Fasudil; Gsk269962A; Hsd1590
+Q6	H_HARM	ROCK2	19	19	4	1	0	no		BELUMOSUDIL; Compound 11D [Doi: 10.1039/C0Md00194E]; Compound 22 [Pmid: 20462760]; Compound 23 [Pmid: 35816678]; Compound 32 [Pmid: 20471253]; Compound 35 [Pmid: 20684608]
+Q6	H_HARM	SIRT1	4	3	0	0	0	no	SRT-2104: INCONCLUSIVE (qualification_it21_p4a_20261103/qualification_it21_p4a.tsv#IT21P2-0512) | Srt2104: INCONCLUSIVE (qualification_it21_p4a_20261103/qualification_it21_p4a.tsv#IT21P2-0512)	SRT-2104; Sirt1 Activator 3; Srt1720; Srt2104
+Q6	H_HARM	TGFBR1	4	4	1	1	0	no		GALUNISERTIB; Sb-431542; Sd-208; Tgf-Beta Ri Inhibitor Iii
+Q6	H_HARM	TGFBR2	2	2	0	0	0	no		Compound 15B [Pmid: 16539403]; Ly2109761
+Q6	H_HARM	ULK2	1	1	0	0	0	no		Sbp-7455
+Q6	H_PROTECT	ACVR1B	2	2	0	0	0	no		Bms-986260; VACTOSERTIB
+Q6	H_PROTECT	AHR	3	2	0	0	0	no		TAPINAROF; Tapinarof; Tcdd
+Q6	H_PROTECT	AKT1	19	18	0	0	0	no		(2S)-1-(1H-Indol-3-Yl)-3-{[5-(3-Methyl-1H-Indazol-5-Yl)Pyridin-3-Yl]Oxy}Propan-2-Amine; Afuresertib; Afuresertib Hydrochloride; Akt Inhibitor Mk2206; BAY-1125976; Capivasertib
+Q6	H_PROTECT	ALDH2	2	2	0	0	0	no		DISULFIRAM; Prunetin
+Q6	H_PROTECT	BCL6	4	4	0	0	0	no		Bcl6 Protac 15; Compound 8C [Pmid: 28760529]; Fx1; Jnj-65234637
+Q6	H_PROTECT	BMPR1A	2	2	0	0	0	no		DIBOTERMIN ALFA; EPTOTERMIN ALFA
+Q6	H_PROTECT	BRD4	38	38	0	0	0	yes	Apabetalone: KEEP (ranking_it8_p9_20261029/it9_records.tsv#P4CD-01)	(+)-Jq1; AMREDOBRESIB; Apabetalone; Arv-771; BI-2536; Bms-986158
+Q6	H_PROTECT	CAPN1	3	3	0	0	0	no		Calpeptin; Gc-376; Uawj9-36-3
+Q6	H_PROTECT	CAPN2	1	1	0	0	0	no		Compound 19 [Pmid: 8831774]
+Q6	H_PROTECT	CASP3	2	2	0	0	0	no		Pac1; Petcm
+Q6	H_PROTECT	CDK19	5	5	0	0	0	no		Cct251545; Compound 51 [Mallinger Et Al., 2016]; Jh-Viii-49; Linifanib; Pexidartinib
+Q6	H_PROTECT	CDK2	12	12	0	0	0	no		AZD-5438; Aloisine; Bms-265246; Bohemine; CYC-065; Cdk2 Inhibitor Iii
+Q6	H_PROTECT	CDK8	3	3	0	0	0	no		Compound 20 [Bergeron Et Al., 2016]; Ds96432529; Jh-Xi-10-02
+Q6	H_PROTECT	CDKL1	1	1	0	0	0	no		Compound 9B [Pmid: 18986805]
+Q6	H_PROTECT	CREBBP	1	1	0	0	0	no		Ttk21
+Q6	H_PROTECT	CSNK1A1	3	3	0	0	0	yes	D4476: DROP (ranking_it8_p9_20261029/it9_records.tsv#E-05)	Compound 14 [Pmid: 24900428]; D4476; Ic261
+Q6	H_PROTECT	CSNK1E	4	4	0	0	0	no		4-(3-Pyridin-2-Yl-1H-Pyrazol-4-Yl)Quinoline; Pf-4800567; Sr-4133; Umbralisib
+Q6	H_PROTECT	DYRK1A	18	13	0	0	0	no	Harmine: DROP (ranking_it8_p9_20261029/it9_records.tsv#P3-10)	(S)-Cr8; CIRTUVIVINT; Compound 2-2C [Pmid: 32003560]; Compound 3B [Pmid: 23454515]; Compound 68 [Pmid: 24900699]; Compound 72 [Wo2013026806]
+Q6	H_PROTECT	GSK3A	10	9	0	0	0	no	LITHIUM CARBONATE: CONDITIONAL (ranking_it8_p9_20261029/it11_records.tsv#M07)	6-Phenyl[5H]Pyrrolo[2,3-B]Pyrazine; AZD-1080; Azd1080; Chir-98014; LITHIUM CARBONATE; LITHIUM CITRATE ANHYDROUS
+Q6	H_PROTECT	GSK3B	22	20	0	0	0	yes	Lithium Carbonate: CONDITIONAL (ranking_it8_p9_20261029/it11_records.tsv#M07)	(7S)-2-(2-Aminopyrimidin-4-Yl)-7-(2-Fluoroethyl)-1,5,6,7-Tetrahydro-4H-Pyrrolo[3,2-C]Pyridin-4-One; 2-({6-[(3-Chlorophenyl)Amino]-9-Isopropyl-9H-Purin-2-Yl}Amino)Ethanol; Alsterpaullone; Alsterpaullone 2-Cyanoethyl; Ar-Ao-14418; Azd2858
+Q6	H_PROTECT	HDAC3	5	5	0	0	0	yes		Compound 30 [Pmid: 37057760]; Droxinostat; Resminostat; Rgfp109; Rgfp966
+Q6	H_PROTECT	KAT5	1	1	0	0	0	no		Mg149
+Q6	H_PROTECT	MAPK8	4	4	0	0	0	no		Compound 11 [Pmid: 26431428]; Compound 35 [Pmid: 23916259]; Halicin; Jnk Inhibitor 9L
+Q6	H_PROTECT	NLK	1	1	0	0	0	no		Compound 25 [Pmid: 17935989]
+Q6	H_PROTECT	NR3C1	6	6	0	0	0	no		Azd-5423; CORT 108297; Mifepristone; Miricorilant; ORG-34517; RELACORILANT
+Q6	H_PROTECT	PGR	24	20	0	0	0	no		ALLYLESTRENOL; CYPROTERONE ACETATE; DANAZOL; DYDROGESTERONE; Dydrogesterone; ETONOGESTREL
+Q6	H_PROTECT	PIK3C3	8	8	0	0	0	no		Compound 41 [Pmid: 31855425]; Compound 5 [Pmid: 34779204]; Gsk-2636771; Pik-Iii; Pilaralisib; SAR-260301
+Q6	H_PROTECT	PIK3CA	18	18	0	0	0	no		ALPELISIB; As-252424; COPANLISIB; Compound 22 [Pmid: 24754609]; Compound 52 [Pmid: 28541707]; GSK-1059615
+Q6	H_PROTECT	RARA	3	3	0	0	0	no		Agn193836; Bms753; NRX195183
+Q6	H_PROTECT	RPS6KA3	2	2	0	0	0	no		Bix 02565; Fmk
+Q6	H_PROTECT	RPS6KA6	2	2	0	0	0	no	At-9283: REFERENCE (ranking_it8_p9_20261029/it9_records.tsv#P3-20)	At-9283; Bay-985
+Q6	H_PROTECT	SGK1	4	4	0	0	0	no		Compound 14N [Pmid: 25589934]; Emd638683; Gsk650394; Po-322
+Q6	H_PROTECT	SIRT1	4	4	0	0	0	no		Compound 17 [Pmid: 23570514]; EX-527; Selisistat; Splitomicin
+Q6	H_PROTECT	SKP2	1	1	0	0	0	no		Compound 14I [Pmid: 37204466]
+Q6	H_PROTECT	TGFBR2	2	2	0	0	0	no		H. Polygyrus Tgf-&Beta; Mimic; Tgf&Beta;3
+Q6	H_PROTECT	XPO1	3	2	0	0	0	no		Eltanexor; SELINEXOR; Selinexor
+Q8	H_HARM	AHR	3	2	2	2	1	no		TAPINAROF; Tapinarof; Tcdd
+Q8	H_HARM	EZH2	15	14	4	4	1	yes	Gsk343: KEPT_CONDITIONAL (qualification_it21_p4a_20261103/qualification_it21_p4a.tsv#IT21P2-0195)	Cpi-1205; Ebi-2511; Ei1; Epz005687; Epz011989; GSK2816126
+Q8	H_PROTECT	AHR	1	1	0	0	0	no		Ezutromid
+Q8	H_PROTECT	FYN	1	1	0	0	0	no		Pp2

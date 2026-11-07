@@ -17,7 +17,7 @@
  "event_id": "FTR-20261107-34429397-60",
  "evidence_basis": [
   "partial full text analysed (sections as listed in coverage)",
-  "verbatim_locator | proposition: In adult stem cells MYC gain activates quiescent cells and MYC knockdown arrests activated cells | Body, paragraph on mitochondrial remodelling | \"both PGC-1α, a regulator of mitochondrial biogenesis and NaN3, an inhibitor of mitochondrial activity, effectively abolished c-Myc-mediated NSC activation\"",
+  "verbatim_locator | proposition: In adult stem cells MYC gain activates quiescent cells and MYC knockdown arrests activated cells | Body, paragraph on mitochondrial remodelling | \"both PGC-1\u03b1, a regulator of mitochondrial biogenesis and NaN3, an inhibitor of mitochondrial activity, effectively abolished c-Myc-mediated NSC activation\"",
   "verbatim_locator | proposition: In vivo MYC gain increased and MYC knockdown decreased proliferation of hippocampal stem cells over three days | Body, paragraph on in vivo lentivirus injection | \"c-Myc OV drastically increased proliferation and c-Myc KD had the opposite effect\"",
   "the letter has no separate methods, results or discussion sections; its body was read in full; supplementary data and figures not read"
  ],

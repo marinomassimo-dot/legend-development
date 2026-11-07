@@ -157,8 +157,9 @@ class HandoffRule(unittest.TestCase):
 
 # ---- withdrawn rows are classified, not silently dropped -------------------------------------------------------------------------------------------
 class SharedPremise(unittest.TestCase):
-    """IT32 P3: proposals that ride on one premise are tied to the one investigation that measures it, by a curated chain prefix, never by name."""
-    PREM = [{"inv_id": "INV-16", "chain_prefix": "HDAC5 -T(+)-> SLC2A1", "premise": "x"}]
+    """IT32 P3 / IT33 P4: proposals that ride on one premise are tied to the one investigation that measures it, by a curated pattern on the chain, never by name."""
+    PREM = [{"inv_id": "INV-16", "chain_pattern": r"^HDAC5 -T\(\+\)-> SLC2A1", "premise": "x"},
+            {"inv_id": "INV-17", "chain_pattern": r"-> MYC(?= \[|;|$)", "premise": "y"}]
 
     def test_every_proposal_on_the_chain_carries_the_investigation_and_others_do_not(self):
         f = G.shared_premise_investigations
@@ -166,14 +167,28 @@ class SharedPremise(unittest.TestCase):
         self.assertEqual(f("EZH2 -T(+)-> IL6 [CollecTRI]", self.PREM), "")
         self.assertEqual(f("HDAC5 -T(+)-> SLC2A1X", []), "")
 
-    def test_the_curated_premise_file_names_investigations_that_exist(self):
-        import csv as _csv
+    def test_a_change_of_myc_matches_only_as_the_end_of_an_edge(self):
+        f = G.shared_premise_investigations
+        for chain in ("NR3C1 -T(-)-> MYC [CollecTRI;TRRUST]", "JAK2 -P(+)-> MYC", "A -> B [x]; B -T(+)-> MYC [y]"):
+            self.assertEqual(f(chain, self.PREM), "INV-17", chain)
+        for chain in ("MYC -T(+)-> CCND1 [CollecTRI]", "X -T(+)-> MYCN [CollecTRI]", "X -T(+)-> MYCBP [z]"):
+            self.assertEqual(f(chain, self.PREM), "", chain)
+
+    def test_two_premises_on_one_chain_are_both_named_and_the_ablation_is_empty(self):
+        f = G.shared_premise_investigations
+        both = f("HDAC5 -T(+)-> SLC2A1 [a]; SLC2A1 -T(+)-> MYC [b]", self.PREM)
+        self.assertEqual(both, "INV-16; INV-17")
+        self.assertEqual(f("HDAC5 -T(+)-> SLC2A1 [a]; SLC2A1 -T(+)-> MYC [b]", []), "")      # removing the added relation removes the link
+
+    def test_the_curated_premise_file_names_investigations_that_exist_and_patterns_that_compile(self):
+        import csv as _csv, re as _re
         ids = {r["inv_id"] for r in _csv.DictReader(open(HERE.parent / "ranking_it8_p9_20261029" / "investigations_it20.tsv", encoding="utf-8"), delimiter="\t")}
         prem = G.rd(G.PREMISES_FILE)
         self.assertTrue(prem)
         for r in prem:
             self.assertIn(r["inv_id"], ids)
-            self.assertTrue(r["chain_prefix"].strip())
+            _re.compile(r["chain_pattern"])
+            self.assertTrue(r["chain_pattern"].strip())
 
 
 class WithdrawnClassification(unittest.TestCase):
