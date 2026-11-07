@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-07T13:58:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-07T14:02:00Z",
+ "event_id": "FTR-20261107-32236769-33",
+ "evidence_basis": [
+  "abstract analysed in full; abstract-level only, no method, figure or table described; HDAC4, not HDAC5, and a non-neural system",
+  "verbatim_locator | proposition: in mouse heart failure, exercise raised GLUT1 through AMPK-phosphorylated HDAC4 releasing MEF2a; HDAC4 inhibition accompanied higher GLUT1 | Abstract | \"modulated the GLUT1 expression through reducing its inhibition on MEF2a\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb3b_action_it32_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/nb3b_action_it32_20261107/output/chain.tsv",
+  "disease-models/wwox/research/drug_repurposing/nb3b_action_it32_20261107/output/controls.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 32236769 (abstract and metadata as served 2026-11-07)",
+ "study_id": {
+  "doi": "10.1007/s00395-020-0787-1",
+  "pmid": "32236769"
+ },
+ "workflow": "IT32 NB-3b (from the target to the biological action needed). Abstract analysed through the PubMed metadata route for the labelled facts. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
