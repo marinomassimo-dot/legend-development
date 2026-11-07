@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-07T21:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-07T21:48:00Z",
+ "event_id": "FTR-20261107-42276303-80",
+ "evidence_basis": [
+  "An abstract is not a reading; it supports a conditional lead only. Open full text not reachable (Europe PMC: not open access, no PMC id); doi landing status only, body discarded, no access challenge met, nothing further attempted.",
+  "verbatim_locator | proposition: the authors call CaV3.2 a putative transcriptional target of HIF1A | Abstract | \"identify the T-type calcium channel CaV3.2 (encoded by Cacna1h) as a putative transcriptional target of HIF1α\"",
+  "verbatim_locator | proposition: HIF1A overexpression elevated network activity in primary cortical neurons, as OD/R did | Abstract | \"HIF1α overexpression also elevated network activity measured by multielectrode array recordings, replicating the effect of the OD/R model\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ttype_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/ttype_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record retrieved through the PubMed tools on 2026-11-07; abstract text only; Europe PMC record checked for open full text and none exists",
+ "study_id": {
+  "doi": "10.1016/j.nbd.2026.107482",
+  "pmid": "42276303"
+ },
+ "workflow": "T-type thread package (ttype_20261107, label tt-p): question-driven reading for the three questions (benefit, Cav3 mediation, genotype dependence), the HIF to CaV3.2 residue and the probe comparison. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

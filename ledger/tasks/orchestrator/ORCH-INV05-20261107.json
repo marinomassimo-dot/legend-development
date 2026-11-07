@@ -9,9 +9,9 @@
  "BASELINE": "development/main ce121d5814b8c83c65721c0709ac4ec2554a5011 (fetched 2026-11-07 after the landing of the GSK3-eIF2B task); same worktree and branch as ORCH-TTYPE-20261107 (.claude/worktrees/ttype-20261107, task/ttype-20261107) to land the queued packages with one battery.",
  "CURRENT_PACKAGE": {
   "id": "N-INV05",
-  "state": "brief written; producer not launched; queued behind the previous package",
-  "delegate_active": "none",
-  "updated": "2026-11-07T22:00:00Z"
+  "state": "producer running (legend-delegate, sonnet/medium)",
+  "delegate_active": "nm-p",
+  "updated": "2026-11-07T22:15:00Z"
  },
  "RESUME": "Folder drug_repurposing/nmda_inv05_20261107/ (BRIEF.md, output/). Order: producer, census, verifier, correction.",
  "DECISIONS_TAKEN": [
