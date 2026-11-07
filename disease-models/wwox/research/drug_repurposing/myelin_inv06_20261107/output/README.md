@@ -40,7 +40,7 @@ Priority: is the null-neuron deficit carried by contact or substrate, a soluble 
 IT29 P3-C C04: validations are single fields; co-culture does not separate contact from soluble. Signed-coupling table: GSK3 differentiation sign `undetermined`, level and arm beside it. Clemastine card: conduction discordance as a design requirement. INV-05: adopt X2.
 
 ## Not reached
-Azim and Butt full text (subscription, stopped). Stage 2 abstracts only (29761559, 25080600; gap named in Q8). New-source figures not viewed. `../gsk3_eif2b_20261107/` absent in this worktree; GSK3 background from `../target_first_it15_qb_gsk3_20261101/README.md` by identifier only. New sources 6 of 8. Receipts: `receipts/INDEX.tsv`.
+Azim and Butt full text (subscription, stopped). Stage 2 abstracts only (29761559, 25080600; gap named in Q8). New-source figures not viewed. The GSK3-eIF2B package was not in the producer's tree; GSK3 background taken from the IT15 QB GSK3 README (`target_first_it15_qb_gsk3_20261101/README.md`) by identifier only. New sources 6 of 8. Receipts: `receipts/INDEX.tsv`.
 
 ## Added after the independent audit (`../verify/audit_m.md`: 40 rows, 37 supported, 2 overshoot, 1 undershoot)
 
