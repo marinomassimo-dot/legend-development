@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-07T22:25:39Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-07T22:29:39Z",
+ "event_id": "FTR-20261107-21319221-95",
+ "evidence_basis": [
+  "Abstract read in full. No method, count, age or control detail beyond the abstract is used. Rows E19-E22 are abstract-level and say so.",
+  "verbatim_locator | proposition: GSK3 beta inhibition increases oligodendrocyte differentiation while Wnt3a inhibits it | abstract | \"GSK3β inhibition strikingly increases OL differentiation, whereas Wnt3a inhibits OL differentiation.\"",
+  "Degraded acquisition: Europe PMC returned a subscription-required stub for the DOI route; no other client was tried for the same page. The gap is not an absence."
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/myelin_inv06_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/myelin_inv06_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 21319221 (abstract and metadata served 2026-11-07 through the PubMed tool); full text: Europe PMC record states subscription required, no open route, stopped for this source",
+ "study_id": {
+  "doi": "10.1002/glia.21122",
+  "pmid": "21319221"
+ },
+ "workflow": "INV-06 myelin recovery delta (myelin_inv06_20261107), actor my-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

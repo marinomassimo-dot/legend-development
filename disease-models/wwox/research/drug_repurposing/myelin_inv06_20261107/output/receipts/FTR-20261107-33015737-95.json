@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-07T22:25:39Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-07T22:29:39Z",
+ "event_id": "FTR-20261107-33015737-95",
+ "evidence_basis": [
+  "Introduction, Methods, Results and Discussion read as text; figure images and captions not viewed. Quotes verified against the Europe PMC XML.",
+  "verbatim_locator | proposition: SB216763 reversed the beta-catenin fall caused by Foxg1 knockdown | Results | \"The GSK-3β inhibitor SB216763 reversed the decrease in β-catenin induced by Foxg1 knockdown\"",
+  "verbatim_locator | proposition: the paper cites GSK-3 beta activation as promoting differentiation | Introduction | \"Recent studies have demonstrated that GSK-3β activation promotes OPC differentiation\"",
+  "verbatim_locator | proposition: Western antibodies named include total GSK-3 beta and no phospho-GSK3 antibody | Methods | \"anti-Foxg1 (1:800, Sigma-Aldrich), anti-GSK-3β (1:600, Sigma-Aldrich), anti-β-actin\"",
+  "Degraded route: the PubMed tool text had symbols and units stripped; the XML route recovered them. Figures not read, so figure-level counts and the SB216763-alone question are unresolved."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/myelin_inv06_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/myelin_inv06_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC7811968 full text through the PubMed tool (gene symbols stripped) and Europe PMC fullTextXML (symbols preserved), fetched 2026-11-07; bytes not saved",
+ "study_id": {
+  "doi": "10.1007/s12264-020-00583-7",
+  "pmid": "33015737"
+ },
+ "workflow": "INV-06 myelin recovery delta (myelin_inv06_20261107), actor my-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

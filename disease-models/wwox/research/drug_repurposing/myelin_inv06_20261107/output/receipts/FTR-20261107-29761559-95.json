@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-07T22:25:39Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-07T22:29:39Z",
+ "event_id": "FTR-20261107-29761559-95",
+ "evidence_basis": [
+  "Abstract read in full; no full text acquired (Stage 2 gap source, depth chosen by the staging limit).",
+  "verbatim_locator | proposition: genetic GSK3 beta depletion in mature oligodendrocytes raises survival under cuprizone | abstract | \"While depletion of GSK3b has no effect on survival of uninjured OL, it increases survival of mature OL exposed to cuprizone.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/myelin_inv06_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/myelin_inv06_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 29761559 (abstract and metadata served 2026-11-07 through the PubMed tool)",
+ "study_id": {
+  "doi": "10.1002/glia.23453",
+  "pmid": "29761559"
+ },
+ "workflow": "INV-06 myelin recovery delta (myelin_inv06_20261107), actor my-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
