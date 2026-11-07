@@ -14,7 +14,7 @@ The prompt asked for a coordinator at Sonnet, effort medium, "if configurable". 
 | A producer | 17,292 | 109,710 | 28 | ~5 min | 34,413 | 109,708 | 1,880,971 | README, 21 rows, 12 queries, 2 receipts |
 | A verifier | 17,989 | 105,088 | 34 | ~5 min | 35,823 | 96,603 | 2,191,267 | 21 rows + H1-H4, audit file |
 | B producer | 17,357 | 186,856 | 49 | ~10 min | 70,063 | 178,371 | 4,757,545 | README, 41 rows, chain 10, levers 2, 26 relations, 25 queries, 8 receipts |
-| B verifier | ~18,000 | 234,972 | 66 | ~11 min | 83,377 | 226,487 | 8,182,903 | 29 items + chain + levers + H1-H3, audit file |
+| B verifier | 18,156 | 234,972 | 66 | ~11 min | 83,377 | 226,487 | 8,182,903 | 29 items + chain + levers + H1-H3, audit file |
 | Delegates total | | | 177 | | 223,676 | 611,169 | 17,012,686 | |
 
 ## Against the NB-4 pilot (same settings, same agent type)
