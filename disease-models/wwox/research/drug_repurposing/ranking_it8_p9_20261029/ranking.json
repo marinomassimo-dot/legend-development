@@ -1235,12 +1235,12 @@
    "chembl_ids": "",
    "decisive_uncertainty": "Which of the six layers moves, per animal. A lower transcript does not show fewer cells, lower activity or less inhibition; an absent change in GSE158684 is not evidence of no change; the oligodendrocyte-lineage shift could be consequence or cause of an excitation-inhibition change and the data cannot say which. Whether any parvalbumin-cell change is a deficit, a compensation or a delayed maturation is unresolved, so the need direction stays unresolved and no lever sign is derived. Whether recombination reaches parvalbumin cells, and glia, in this deletion is not known from any source read, and a reporter measured in another context does not measure the excision of Wwox in parvalbumin cells.",
    "direction_state": "unresolved",
-   "evidence_available": "WWOX-system, transcript: a lower Pvalb transcript in the neuron-targeted deletion in bulk hippocampus (log2 -1.70, GSE158681 S contrast, as quoted in IT13b) and about half that size in the nuclear data (GSE158684: Pvalb 70 against 37 UMI in 3182 against 2920 nuclei; nuclei Pvalb share ratio 0.59). GSE158684 holds one pooled library per arm (library and animal index absent; the paper states n = 1 per arm), so nuclei are not biological replicates and the GSM records of the series are not independent experiments; PV-class nuclei number 12 to 19 per arm under the producer rules, the independent recompute disagrees on the specific counts, and PV composition and Pvalb per cell are undecidable under every rule tried. Kcnc1 is lower in inhibitory nuclei (one pool, not a replicate result). Immature-neuron markers (Sox11, Dcx, Igfbpl1) are higher in knockout neurons in direction; the larger composition change is oligodendrocyte-class nuclei, about 3- to 5-fold fewer. Wwox also falls in glia-called nuclei, unexplained. Protein and function, from the need file: PV-positive counts reduced by 44 percent in the whole hippocampus of a systemic constitutive knockout (PMID 30290271) and spontaneous inhibitory current amplitude more than halved in layer II/III pyramidal neurons of the neuron-specific knockout (PMID 34634460; pooled events, not animals). Raw reads of the eight snRNA experiments (SRX9206272 to SRX9206279) carried NCBI status hup on 2026-10-31. A public conference abstract (poster 014, Curing the Epilepsies 2026 programme, NINDS; the whole abstract was read, abstract level) describes a programme that combines genetic mouse models, in vivo electrophysiology, ex vivo slice recordings, cell type-specific manipulations and targeted pharmacological modulation of neuronal activity in WWOX deficiency, and names parvalbumin interneurons as the population of interest; it reports no quantitative result, no molecule, no rescue and no target. IT33 reading of the glial signal (NB-4 pilot, independently audited): the deletion is neuron-targeted by design (Synapsin-Cre) and a lower Wwox transcript also appears in glia-annotated nuclei of one pool (oligodendrocyte-called 193 to 1 UMI, astrocyte-called 156 to 9: very small counts on the deleted side, one pool per arm, so a count of cells or a statement of glial loss is not supported); the readings are several and not exclusive (lower transcript in the annotated class, class definition and detectability, ambient RNA, recombination beyond the expected cells, a change of state or composition), and none is isolated. Two abstract-level sources describe the Synapsin-Cre line: germline recombination through male carriers (PMID 16419044) and non-cell-autonomous astrogliosis after a neuronal deletion of another gene (PMID 11297510); neither shows or excludes recombination in glia or in parvalbumin cells of this deletion.",
+   "evidence_available": "WWOX-system, transcript: a lower Pvalb transcript in the neuron-targeted deletion in bulk hippocampus (log2 -1.70, GSE158681 S contrast, as quoted in IT13b) and about half that size in the nuclear data (GSE158684: Pvalb 70 against 37 UMI in 3182 against 2920 nuclei; nuclei Pvalb share ratio 0.59). GSE158684 holds one pooled library per arm (library and animal index absent; the paper states n = 1 per arm), so nuclei are not biological replicates and the GSM records of the series are not independent experiments; PV-class nuclei number 12 to 19 per arm under the producer rules, the independent recompute disagrees on the specific counts, and PV composition and Pvalb per cell are undecidable under every rule tried. Kcnc1 is lower in inhibitory nuclei (one pool, not a replicate result). Immature-neuron markers (Sox11, Dcx, Igfbpl1) are higher in knockout neurons in direction; the larger composition change is oligodendrocyte-class nuclei, about 3- to 5-fold fewer. Wwox also falls in glia-called nuclei, unexplained. Protein and function, from the need file: PV-positive counts reduced by 44 percent in the whole hippocampus of a systemic constitutive knockout (PMID 30290271) and spontaneous inhibitory current amplitude more than halved in layer II/III pyramidal neurons of the neuron-specific knockout (PMID 34634460; pooled events, not animals). Raw reads of the eight snRNA experiments (SRX9206272 to SRX9206279) carried NCBI status hup on 2026-10-31. A public conference abstract (poster 014, Curing the Epilepsies 2026 programme, NINDS; the whole abstract was read, abstract level) describes a programme that combines genetic mouse models, in vivo electrophysiology, ex vivo slice recordings, cell type-specific manipulations and targeted pharmacological modulation of neuronal activity in WWOX deficiency, and names parvalbumin interneurons as the population of interest; it reports no quantitative result, no molecule, no rescue and no target. IT33 reading of the glial signal (NB-4 pilot, independently audited): the deletion is neuron-targeted by design (Synapsin-Cre) and a lower Wwox transcript also appears in glia-annotated nuclei of one pool (oligodendrocyte-called 193 to 1 UMI, astrocyte-called 156 to 9: very small counts on the deleted side, one pool per arm, so a count of cells or a statement of glial loss is not supported); the readings are several and not exclusive (lower transcript in the annotated class, class definition and detectability, ambient RNA, recombination beyond the expected cells, a change of state or composition), and none is isolated. Two abstract-level sources describe the Synapsin-Cre line: germline recombination through male carriers (PMID 16419044) and non-cell-autonomous astrogliosis after a neuronal deletion of another gene (PMID 11297510); neither shows or excludes recombination in glia or in parvalbumin cells of this deletion. IT33 verified delta (independent audit, 19 of 21 rows supported, two narrowed): an independent characterisation of the same Cre line with an X-linked Mecp2 reporter in adult male mice (PMID 35966957, full text without the figures) found reporter activation in 36 percent of NeuN-high brain nuclei, incomplete in cortex and minimal in cerebellum, and could not exclude activity in a subset of glia; the reporter, locus, age and cross differ from the Wwox deletion, so these percentages are not carried to the excision of Wwox or to parvalbumin cells; in the Wwox paper's P17 cortical field WWOX is retained in some NeuN-positive cells, and in one callosal field in some CC1-positive cells of the knockout; no tdTomato panel was found in the surfaces read.",
    "evidence_depth": "Premise measurement: the transcript deficit is observed in bulk and in one nuclear pool per arm; cell number, identity, intrinsic properties, synaptic input and circuit function are not measured at animal level by any file read here (no ranked unit, so no evaluation depth applies: this is not a depth of zero)",
    "feasibility": "Not executable from this module: no animals or tissue are held and the raw reads are not public. Feasible only by data holders or a new dataset; nothing is sent to anyone from here. Zero-spend preparation is limited to fixing the readout table before any data arrive.",
    "intervention": "No compound: measurement of the parvalbumin interneuron population in neuron-targeted Wwox deletion, with cell number, identity and maturation, marker expression, intrinsic properties, synaptic input and circuit function read as six separate questions",
    "inv_id": "INV-15",
-   "next_test": "Per-animal parvalbumin cell counts by immunostaining in neuron-targeted Wwox deletion against Cre-only controls, at least 3 animals per arm (reopening condition (c) of NP3A1), read together with a maturation and identity marker panel in the same animals, and, where the data holders allow, intrinsic-property and inhibitory-input recordings from labelled parvalbumin cells and a circuit-level read. Alternatives that also reopen it: a deposited library or animal index for GSE158684, or an independent neuron-targeted deletion dataset with at least 3 animals per arm and a parvalbumin-enriched capture. The result is read as six separate rows (number, identity and maturation, marker expression, intrinsic properties, synaptic input, circuit function); a change in one is not carried to another. The per-animal measurement carries its own recombination read-out in the parvalbumin cells (reporter or genotype of the sorted or labelled cells) beside cell number, identity and marker expression; transcript, protein, activity, cell number and circuit function stay separate results.",
+   "next_test": "Per-animal parvalbumin cell counts by immunostaining in neuron-targeted Wwox deletion against Cre-only controls, at least 3 animals per arm (reopening condition (c) of NP3A1), read together with a maturation and identity marker panel in the same animals, and, where the data holders allow, intrinsic-property and inhibitory-input recordings from labelled parvalbumin cells and a circuit-level read. Alternatives that also reopen it: a deposited library or animal index for GSE158684, or an independent neuron-targeted deletion dataset with at least 3 animals per arm and a parvalbumin-enriched capture. The result is read as six separate rows (number, identity and maturation, marker expression, intrinsic properties, synaptic input, circuit function); a change in one is not carried to another. In every animal used (P14 to P17, matching the phenotype window), on the same sections: a parvalbumin marker, the Rosa26 tdTomato reporter and a Wwox read-out, reporting per animal the fraction of parvalbumin cells reporter-positive, the fraction Wwox-negative and their concordance, beside cell number, identity and marker expression; transcript, protein, activity, cell number and circuit function stay separate results.",
    "novelty_perimeter": "Queried on 2026-11-07: the IT13b, IT14 P1a and IT14 P1b records of this module, the NP3A1 row of the reopening table, and the need file; the public programme abstract of poster 014 (Curing the Epilepsies 2026, NINDS) was read at abstract level on 2026-11-07; it states a programme, not a result, so nothing quantitative is attributed to it. A search of this module, not a statement about the literature.",
    "origin_class": "known_in_wwox",
    "origin_detail": "Known in the WWOX system: the parvalbumin marker deficit is already a named need observation and the NP3A1 reopening trigger; the row restates the open question as six separable layers (IT13b, IT14 P1a, IT14 P1b, reopening table row NP3A1).",
@@ -6018,7 +6018,7 @@
     "source_artefacts.tsv": "efd24d2cf8eb3fdb",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
-   "receipt_ledger_lines": 1340
+   "receipt_ledger_lines": 1342
   },
   "inventory": {
    "all_families_by_access_category": {
@@ -8648,7 +8648,7 @@
    "inputs": {
     "T1_cards": "3692e2efc56a356a",
     "T2_pertinence": "59d15d3c06233d6c",
-    "T3_receipts": "5565af0c294c2b12",
+    "T3_receipts": "5273f410f573e886",
     "T4_needs": "4fa5821159bd91b8",
     "T5_pharmacology": "c8ec35a5f404ccca",
     "T6_identity": "186bd57e16d4aa8b"
@@ -8770,7 +8770,7 @@
     "42422765",
     "42587157"
    ],
-   "receipts_on_cited_pmids": 36,
+   "receipts_on_cited_pmids": 37,
    "research_objective": "broad_durable_recovery",
    "tracks": [
     "A"
@@ -12814,7 +12814,7 @@
    "inputs": {
     "T1_cards": "50d5f4fc39e6469f",
     "T2_pertinence": "40d3f822d9a26184",
-    "T3_receipts": "b4c6480d4bc626a9",
+    "T3_receipts": "2f23115a87276a2d",
     "T4_needs": "98de133ad523d5dd",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "30921a9013e88d22"
@@ -13075,7 +13075,7 @@
     "42735667",
     "9168839"
    ],
-   "receipts_on_cited_pmids": 105,
+   "receipts_on_cited_pmids": 106,
    "research_objective": "",
    "tracks": [
     "A"
@@ -13830,7 +13830,7 @@
    "inputs": {
     "T1_cards": "410cdeced221b8cf",
     "T2_pertinence": "c124efeb8d5edb82",
-    "T3_receipts": "88c3569a28b9c69a",
+    "T3_receipts": "dc543f3a487989f7",
     "T4_needs": "c3cb663b4a8f81ca",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "1b6967b150a8ef31"
@@ -13896,7 +13896,7 @@
     "42397075",
     "42422765"
    ],
-   "receipts_on_cited_pmids": 58,
+   "receipts_on_cited_pmids": 59,
    "research_objective": "",
    "tracks": [
     "A"
@@ -15108,7 +15108,7 @@
    "inputs": {
     "T1_cards": "b7004c6ce80f3d6e",
     "T2_pertinence": "c124efeb8d5edb82",
-    "T3_receipts": "b8cf46990840f474",
+    "T3_receipts": "478912993b469d56",
     "T4_needs": "34001ad580d89a15",
     "T5_pharmacology": "39d3e6c4d9daea9a",
     "T6_identity": "b9cf666861d789c0"
@@ -15184,7 +15184,7 @@
     "42111266",
     "42422765"
    ],
-   "receipts_on_cited_pmids": 49,
+   "receipts_on_cited_pmids": 50,
    "research_objective": "useful_partial_benefit",
    "tracks": [
     "A"
@@ -17034,7 +17034,7 @@
    "inputs": {
     "T1_cards": "61c215efa58f47c5",
     "T2_pertinence": "403956ddfaf8ef49",
-    "T3_receipts": "026d7c8fa392ad46",
+    "T3_receipts": "1a8a3a1ababc5c48",
     "T4_needs": "e3d9478eddf1541c",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "7de12fe35682551b"
@@ -17236,7 +17236,7 @@
     "40092791",
     "42397075"
    ],
-   "receipts_on_cited_pmids": 19,
+   "receipts_on_cited_pmids": 20,
    "research_objective": "",
    "tracks": [
     "A"

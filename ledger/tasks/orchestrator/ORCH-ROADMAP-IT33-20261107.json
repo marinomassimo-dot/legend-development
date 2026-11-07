@@ -29,9 +29,9 @@
    "steps": [
     {
      "step": "P1 Close NB-4 in the consumers: reconcile 2 abstract-only receipts by event_id, INV-15 recombination qualification (what the verified package supports only), note and view; PMID 35966957 and figures are the scientific session's",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "note": "receipts recorded; INV-15 now states the glial signal (neuron-targeted by design, small UMI counts, non-exclusive readings, Synapsin-Cre abstract-level sources, recombination in PV cells unknown, transcript/protein/activity/cell number/circuit function separate) and that a per-animal PV measurement carries its own recombination read-out; position unchanged (rank 6); contributor table gains a Cre/recombination column; views regenerated (3 passages, translations extended). NOT consumed: PMID 35966957 and the supplement figures (the scientific session verifies them) and any reporter percentage"
+     "evidence": "NB-4 consumed in two steps. (1) Pilot package: its 2 abstract-only receipts recorded by event_id (ledger 1,340); INV-15 states the glial reading (neuron-targeted by design, tiny UMI counts, non-exclusive readings, Synapsin-Cre abstract-level sources). (2) The scientific session's verified delta (branch commit 7052f448 merged unchanged; independent audit: 19 of 21 rows supported, two narrowed): its 2 receipts (PMID 35966957 partial full text, figures as captions; PMID 33914858 reread) recorded by event_id (ledger 1,342; trial OK; five units' T3 receipt input changed, groups unchanged, snapshot recorded with reason new_evidence); INV-15 now carries the verified wording: 36 percent of NeuN-high nuclei for an Mecp2 reporter in adult males is not carried to Wwox excision or to PV cells, WWOX retained in some NeuN-positive and CC1-positive cells in the cited fields, no tdTomato panel found in the surfaces read, and the per-animal control (parvalbumin marker + Rosa26 tdTomato + Wwox read-out, P14-P17, per-animal concordance); transcript, protein, activity, cell number and circuit function stay separate; rank unchanged (6), canonical registers untouched; views regenerated in five languages, audit PASS"
     }
    ]
   },
