@@ -8,16 +8,17 @@
  "START_UTC": "2026-11-07T19:30:00Z",
  "BASELINE": "development/main fb756c521bf29d60bcee42beb758ef2b9a6ebc74; local main 6773895ea2b19902c67ea135ac8f2b9e3b55dfde; worktree .claude/worktrees/gsk3-eif2b-20261107 from local main. Queued beside ORCH-NB1SCI-20261107 (battery running on its head; not interrupted). Reused by identifier: PMID 32000863 (complete read FTR-20260804-32000863-01), IT15 QB GSK3 and its verification, IT28 ISR role, IT30 WO-06, card E01, needs NEED-GSK3B-DEREPRESSION and NEED-ISR-ATTENUATION. PMID 12133000 and 15001529 have no receipt.",
  "CURRENT_PACKAGE": {
-  "id": "H-CLOSE",
-  "state": "no delegate active; waiting for the concurrent battery to finish before ours",
+  "id": "none",
+  "state": "complete; landing",
   "delegate_active": "none",
-  "updated": "2026-11-07T20:00:00Z"
+  "updated": "2026-11-07T21:55:00Z"
  },
  "RESUME": "Order: producer, census, verifier on decision-changing links, targeted correction. Folder drug_repurposing/gsk3_eif2b_20261107/.",
  "DECISIONS_TAKEN": [
   "The external OpenScientist report is not in the repository; treated as a question generator only; not needed by the delegates.",
   "One delegate at a time; the battery of the previous task is CPU only and runs at low priority.",
-  "PMID 10216953: an abstract came back in a metadata call during triage; not used, not cited, not counted as a seventh source. Title-only leads (38352041, 11756553, 11500362, 11311121) are reopening candidates, not read."
+  "PMID 10216953: an abstract came back in a metadata call during triage; not used, not cited, not counted as a seventh source. Title-only leads (38352041, 11756553, 11500362, 11311121) are reopening candidates, not read.",
+  "Battery on a no-hardlinks clone of 1138d52217e5cb791ae36fab972eef18f7a5989c, started after another session's battery had finished and run at nice 19: REGRESSION VERDICT PASS WITH SKIPS (213 targets, 9 skipped, environment). Not attributed to the closure commit that records it."
  ],
  "DELEGATIONS": [
   "G producer gsk-p: asked sonnet/medium, read back claude-sonnet-5-5 x58, medium x58; birth 17,344; 58 turns; ~18 min; output 79,513; cache written 191,880; cache read 5,942,042; peak 191,882; completed README, chain.tsv (13), evidence.tsv (28), residues.tsv, hypotheses.tsv (5), experiment.tsv, queries.tsv, 6 staged receipts (validated with DOI check; 3 abstract_only, 3 partial_fulltext_read); six new sources (limit); 12133000 and 15001529 full text unreachable (HTTP 500/403/bot check); a retry of a PMC page was refused by the auto-mode classifier as bot-check circumvention and the producer stopped (not worked around)",
@@ -31,7 +32,7 @@
   "Condition: settings not restated by the operator for this package. Default: the same as the previous packages (producer sonnet/medium, verifier sonnet/high, legend-delegate). Why safe: reversible; no shared file touched."
  ],
  "AUTHORISED_QUEUE_20261107C": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_G": {
    "order": 1,
    "steps": [
@@ -47,8 +48,9 @@
    "steps": [
     {
      "step": "H validation, landing, cleanup, report",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "gate PASS 0 blocks, LINT WARN no BLOCK, receipts verify OK, 6 staged receipts validated with DOI check, battery PASS WITH SKIPS on 1138d522"
     }
    ]
   }
