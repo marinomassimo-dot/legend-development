@@ -23,7 +23,7 @@ class T(unittest.TestCase):
         self.assertEqual(h("generation_it28_p6_20261105/results_s9"), h("generation_it29_p5_20261105/results_s10"))
 
     def test_the_oligodendrocyte_hdac_limit_reaches_hdac3_and_hdac5_proposals_only_and_keeps_its_scope_clause(self):
-        # carried_limits is capped at 1600 characters by the generator (cap not raised): the scope clause comes first in each sentence so a cut loses the tail, not the scope
+        # historical stage: S10 cut carried_limits at 1,600 characters (33 rows sat at the cut); the generator no longer cuts (S11, join_limits) and this test still reads the S10 tables as they are. The scope clause stays first in each sentence because it reads best there.
         moved = [p for p in S9 if S9[p] != S10[p]]
         self.assertEqual({S10[p]["main_target"] for p in moved}, {"HDAC3", "HDAC5"})
         for p in moved:

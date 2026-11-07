@@ -4049,6 +4049,48 @@
      "hgnc_id": "HGNC:1394",
      "hgnc_name": "calcium voltage-gated channel subunit alpha1 G",
      "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "SV2A",
+     "role": "synaptic vesicle glycoprotein 2A (target of an established antiseizure agent that the module held in no layer; an antiseizure comparator, not a WWOX-specific rationale)",
+     "hgnc_id": "HGNC:20566",
+     "hgnc_name": "synaptic vesicle glycoprotein 2A",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "KCNQ2",
+     "role": "Kv7.2 (the Kv7-opener agent class; its sign differs by lesion class in the case-2 table, so a target here is a search key, not a direction)",
+     "hgnc_id": "HGNC:6296",
+     "hgnc_name": "potassium voltage-gated channel subfamily Q member 2",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "KCNQ3",
+     "role": "Kv7.3 (as KCNQ2)",
+     "hgnc_id": "HGNC:6297",
+     "hgnc_name": "potassium voltage-gated channel subfamily Q member 3",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "SCN1A",
+     "role": "Nav1.1 (sodium-channel-blocking agent class; sign differs by lesion class in the case-2 table; a target here is a search key, not a direction)",
+     "hgnc_id": "HGNC:10585",
+     "hgnc_name": "sodium voltage-gated channel alpha subunit 1",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "SCN2A",
+     "role": "Nav1.2 (as SCN1A)",
+     "hgnc_id": "HGNC:10588",
+     "hgnc_name": "sodium voltage-gated channel alpha subunit 2",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "SCN8A",
+     "role": "Nav1.6 (as SCN1A)",
+     "hgnc_id": "HGNC:10596",
+     "hgnc_name": "sodium voltage-gated channel alpha subunit 8",
+     "target_kind": "intervention_target"
     }
    ],
    "pathways": [],

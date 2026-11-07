@@ -1230,6 +1230,44 @@
    "wwox_observations_on_best_need": 1
   }
  ],
+ "further_investigations": [
+  {
+   "chembl_ids": "",
+   "decisive_uncertainty": "Which of the six layers moves, per animal. A lower transcript does not show fewer cells, lower activity or less inhibition; an absent change in GSE158684 is not evidence of no change; the oligodendrocyte-lineage shift could be consequence or cause of an excitation-inhibition change and the data cannot say which. Whether any parvalbumin-cell change is a deficit, a compensation or a delayed maturation is unresolved, so the need direction stays unresolved and no lever sign is derived.",
+   "direction_state": "unresolved",
+   "evidence_available": "WWOX-system, transcript: a lower Pvalb transcript in the neuron-targeted deletion in bulk hippocampus (log2 -1.70, GSE158681 S contrast, as quoted in IT13b) and about half that size in the nuclear data (GSE158684: Pvalb 70 against 37 UMI in 3182 against 2920 nuclei; nuclei Pvalb share ratio 0.59). GSE158684 holds one pooled library per arm (library and animal index absent; the paper states n = 1 per arm), so nuclei are not biological replicates and the GSM records of the series are not independent experiments; PV-class nuclei number 12 to 19 per arm under the producer rules, the independent recompute disagrees on the specific counts, and PV composition and Pvalb per cell are undecidable under every rule tried. Kcnc1 is lower in inhibitory nuclei (one pool, not a replicate result). Immature-neuron markers (Sox11, Dcx, Igfbpl1) are higher in knockout neurons in direction; the larger composition change is oligodendrocyte-class nuclei, about 3- to 5-fold fewer. Wwox also falls in glia-called nuclei, unexplained. Protein and function, from the need file: PV-positive counts reduced by 44 percent in the whole hippocampus of a systemic constitutive knockout (PMID 30290271) and spontaneous inhibitory current amplitude more than halved in layer II/III pyramidal neurons of the neuron-specific knockout (PMID 34634460; pooled events, not animals). Raw reads of the eight snRNA experiments (SRX9206272 to SRX9206279) carried NCBI status hup on 2026-10-31. A public conference abstract (poster 014, Curing the Epilepsies 2026 programme, NINDS; the whole abstract was read, abstract level) describes a programme that combines genetic mouse models, in vivo electrophysiology, ex vivo slice recordings, cell type-specific manipulations and targeted pharmacological modulation of neuronal activity in WWOX deficiency, and names parvalbumin interneurons as the population of interest; it reports no quantitative result, no molecule, no rescue and no target.",
+   "evidence_depth": "Premise measurement: the transcript deficit is observed in bulk and in one nuclear pool per arm; cell number, identity, intrinsic properties, synaptic input and circuit function are not measured at animal level by any file read here (no ranked unit, so no evaluation depth applies: this is not a depth of zero)",
+   "feasibility": "Not executable from this module: no animals or tissue are held and the raw reads are not public. Feasible only by data holders or a new dataset; nothing is sent to anyone from here. Zero-spend preparation is limited to fixing the readout table before any data arrive.",
+   "intervention": "No compound: measurement of the parvalbumin interneuron population in neuron-targeted Wwox deletion, with cell number, identity and maturation, marker expression, intrinsic properties, synaptic input and circuit function read as six separate questions",
+   "inv_id": "INV-15",
+   "next_test": "Per-animal parvalbumin cell counts by immunostaining in neuron-targeted Wwox deletion against Cre-only controls, at least 3 animals per arm (reopening condition (c) of NP3A1), read together with a maturation and identity marker panel in the same animals, and, where the data holders allow, intrinsic-property and inhibitory-input recordings from labelled parvalbumin cells and a circuit-level read. Alternatives that also reopen it: a deposited library or animal index for GSE158684, or an independent neuron-targeted deletion dataset with at least 3 animals per arm and a parvalbumin-enriched capture. The result is read as six separate rows (number, identity and maturation, marker expression, intrinsic properties, synaptic input, circuit function); a change in one is not carried to another.",
+   "novelty_perimeter": "Queried on 2026-11-07: the IT13b, IT14 P1a and IT14 P1b records of this module, the NP3A1 row of the reopening table, and the need file; the public programme abstract of poster 014 (Curing the Epilepsies 2026, NINDS) was read at abstract level on 2026-11-07; it states a programme, not a result, so nothing quantitative is attributed to it. A search of this module, not a statement about the literature.",
+   "origin_class": "known_in_wwox",
+   "origin_detail": "Known in the WWOX system: the parvalbumin marker deficit is already a named need observation and the NP3A1 reopening trigger; the row restates the open question as six separable layers (IT13b, IT14 P1a, IT14 P1b, reopening table row NP3A1).",
+   "question": "In the neuron-targeted Wwox-deletion mouse, is the lower Pvalb transcript due to fewer parvalbumin interneurons, to immature or altered identity, to lower marker expression in a normal number of cells, to changed intrinsic properties, to less synaptic input onto or from them, or to a circuit-level change, and which of these is measured per animal?",
+   "rank": 6,
+   "status": "premise_measurement",
+   "why_now": "It decides whether any parvalbumin-directed pharmacology, positive modulation or another kind, can be thought about at all, and which of the inhibitory-hypofunction contrasts to run first. Its direction is not assumed: raising parvalbumin-cell activity is not taken to be the right direction. It enters at rank 6 as a premise measurement because the nucleus-level route was closed by the replicate structure of the deposit and what remains is a per-animal measurement."
+  },
+  {
+   "chembl_ids": "",
+   "decisive_uncertainty": "Whether the absence is a catalogue coverage limit, a target-listing limit, or a genuine absence of pharmacology. This package did not separate those three.",
+   "direction_state": "unresolved",
+   "evidence_available": "Per need: the observation rows exist, the targets are listed, and the search layer returns no association on them. The glycaemia and growth need carries no target at all because it is an endpoint.",
+   "evidence_depth": "no ranked unit: the investigation is a premise measurement, so no evaluation depth applies (this is not a depth of zero)",
+   "feasibility": "A catalogue query, no new data.",
+   "intervention": "No lever available (four needs with no catalogue reach)",
+   "inv_id": "INV-11",
+   "next_test": "Separate the three causes for one of the four needs: check whether the listed targets carry any catalogued action anywhere, then whether the module's target list is the limit.",
+   "novelty_perimeter": "Queried: the search layer over every target of all 23 needs. Three needs returned zero associations and one carries no target. That is a measured property of this catalogue and this target list on this date, not a statement that no pharmacology exists for these processes.",
+   "origin_class": "generated_by_legend",
+   "origin_detail": "Generated by LEGEND as a gap statement over four needs without catalogue reach (IT20).",
+   "question": "For the four needs on which the catalogue returns nothing at all, what would have to exist before any compound question could be asked?",
+   "rank": 7,
+   "status": "premise_measurement",
+   "why_now": "Naming these keeps them visible as gaps rather than as silently empty rows. Three of the four have no catalogue association on their targets and one is an endpoint rather than an intervention; none of this is evidence that the biology is unpromising."
+  }
+ ],
  "investigations": [
   {
    "below_the_line": "",
@@ -1615,7 +1653,7 @@
    },
    {
     "inv_id": "INV-15",
-    "movement": "new in IT21 (no IT20 position): New row, enters at rank 6. Reasons: it gates every parvalbumin-directed lever question and the order of the inhibitory-hypofunction contrasts. Not rewarded: novelty. A public conference abstract on this population could change the evidence once a record of it is in the module; none is there now. | below the line this evaluation: rank 6 does not fit the ten-row published ceiling"
+    "movement": "new in IT21 (no IT20 position): New row, enters at rank 6. Reasons: it gates every parvalbumin-directed lever question and the order of the inhibitory-hypofunction contrasts. Not rewarded: novelty. The public programme abstract (poster 014) names parvalbumin interneurons and slice and in vivo recordings as approaches and supplies no result, so the position is unchanged; per-animal data from that programme would reopen it. | below the line this evaluation: rank 6 does not fit the ten-row published ceiling"
    },
    {
     "inv_id": "INV-11",

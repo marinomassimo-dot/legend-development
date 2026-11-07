@@ -3920,6 +3920,7 @@ def build_ranking(dr: Path, cur: dict, source: str):
         "investigations": investigations_view(J.get("investigations"), cur["cands"], full, load_allowlist(dr)),
         "investigations_context": investigations_context_view(J.get("investigations_context"), full),
         "conditional_hypotheses": conditional_hypotheses_view(J.get("conditional_hypotheses"), cur["cands"], full, load_allowlist(dr)),
+        "further_investigations": further_investigations_view(J.get("further_investigations"), cur["cands"], full, load_allowlist(dr)),
         # IT19 P6: full edition every field; shareable edition class labels, codes and counts only (no compound, ChEMBL action, record id, locator or note)
         "matching_direction": J.get("matching_direction", {}) if full else shareable_matching_direction(J.get("matching_direction", {})),
         "selections": {v: {"top": s["top"], "groups": s["top_groups"], "objective": s["top_objective"], "apart": [{"id": a["unit_id"], "group": a["group"], "objective": a["objective"]} for a in s["not_in_top_listed_apart"]], "n_listed": s["n_listed"], "cut_rule": s["cut_rule"]}
@@ -4288,7 +4289,7 @@ def render_funnel18(P: dict) -> str:
 INV_FIELDS = ("rank", "tie_group", "intervention", "question", "why_now", "evidence_available", "evidence_depth", "decisive_uncertainty", "next_test", "origin_class", "novelty_perimeter", "movement_reason")
 INV_ORIGINS = ("known_in_wwox", "generated_by_legend", "external_transferred")
 INV_MAX = 10
-INV_OPTIONAL = ("origin_detail", "feasibility", "status", "status_label", "chembl_ids")   # IT21 P7: shown when present, never required (older payloads stay valid)
+INV_OPTIONAL = ("inv_id", "origin_detail", "feasibility", "status", "status_label", "chembl_ids")   # IT21 P7: shown when present, never required (older payloads stay valid)
 NEG_FIELDS_FULL = ("neg_id", "package", "subject_full", "subject_label", "ruled_out", "reason", "detail_full", "reopen", "chembl_ids")
 NEG_FIELDS_SHARE = ("neg_id", "package", "subject_label", "ruled_out", "reason", "reopen", "chembl_ids")
 UI_IT20B = {
@@ -4328,6 +4329,14 @@ UI_IT20B = {
     "iv_it22_h": "Che cosa cambia rispetto a IT21", "iv_it22_lead": "Cambiamenti di IT22 nel modo in cui il generatore usa ciò che il repository già conteneva, con il conteggio che li dimostra. Nessuna di queste righe è un risultato scientifico sul beneficio.",
     "iv_pb_h": "Beneficio parziale: selezione dedicata", "iv_pb_lead": "Quale funzione si vorrebbe migliorare, perché, con quali possibili effetti opposti e con quale esperimento discriminante. Selezione curata dall'agente, non un punteggio: nessuna riga è qualificata e l'ordine non è una classifica; novità, solidità dell'evidenza, pertinenza WWOX e fattibilità restano separate.",
     "iv_pb_fn": "Funzione da migliorare", "iv_pb_why": "Perché", "iv_pb_cand": "Classe candidata", "iv_pb_opp": "Possibili effetti opposti", "iv_pb_exp": "Esperimento discriminante", "iv_pb_close": "Lo chiuderebbe", "iv_pb_nov": "Novità", "iv_pb_ev": "Solidità dell'evidenza", "iv_pb_rel": "Pertinenza WWOX", "iv_pb_feas": "Fattibilità",
+    "iv_fur_h": "Altre indagini aperte, oltre le dieci dell'elenco",
+    "iv_fur_lead": "Il limite di dieci righe vale per l'elenco ordinato in cima, non per la coda delle indagini: queste restano aperte con la loro domanda, la loro posizione e il loro test. La posizione indica la priorità di ricerca, non l'efficacia di un intervento, e stare oltre il limite non significa essere meno promettenti.",
+    "iv_fur_pos": "oltre il limite dell'elenco",
+    "iv_idx_h": "Tutte le indagini aperte (indice con collegamenti permanenti)",
+    "iv_idx_lead": "Ogni identificativo resta lo stesso quando l'ordine cambia: il collegamento punta all'indagine, non alla sua posizione in elenco.",
+    "iv_idx_ord": "Nell'elenco ordinato",
+    "iv_idx_fur": "Oltre il limite dell'elenco",
+    "iv_idx_cond": "Ipotesi condizionali",
     "iv_cond_h": "Ipotesi condizionali generate (non in graduatoria)",
     "iv_cond_lead": "Proposte condizionate mostrate accanto all'elenco ordinato, non al suo interno: il limite di dieci righe le tiene fuori dalla numerazione, e nessuna posizione è implicata né dall'ordine in cui compaiono né dalla loro assenza dalla lista. Ogni riga è una domanda di ricerca con una sonda, non una cura né un'ipotesi qualificata: ciò che non si sa non è inefficace.",
     "iv_cond_id": "Riferimento",
@@ -4444,6 +4453,52 @@ def conditional_hypotheses_view(rows, cands: list, full: bool, allow: dict):
     return res
 
 
+FUR_FIELDS = ("inv_id", "rank", "intervention", "question", "why_now", "decisive_uncertainty", "next_test", "origin_class", "status")
+FUR_OPTIONAL = ("origin_detail", "feasibility", "evidence_available", "evidence_depth", "novelty_perimeter", "chembl_ids")
+
+
+def further_investigations_view(rows, cands: list, full: bool, allow: dict):
+    """IT32 P6 projection of ranking.json["further_investigations"]: the open investigations the ten-row ceiling keeps out of the ordered list that are
+    not conditional hypotheses. They are published whole, with their rank, beside the list; the ceiling limits the first screen, not the queue. The
+    shareable edition uses the same class-label rule as the ordered rows. None when the key is absent."""
+    if rows is None:
+        return None
+    if not isinstance(rows, list):
+        raise SystemExit("ranking.json further_investigations must be a list")
+    errs, out = [], []
+    for i, r in enumerate(rows):
+        miss = [k for k in FUR_FIELDS if k not in r]
+        if miss:
+            errs.append(f"row {i}: missing {', '.join(miss)}")
+            continue
+        if r["status"] not in ("carded_thread", "premise_measurement"):
+            errs.append(f"row {i}: status {r['status']!r} belongs in the ordered list or in conditional_hypotheses")
+        if r["origin_class"] not in INV_ORIGINS:
+            errs.append(f"row {i}: origin_class {r['origin_class']!r} not in {INV_ORIGINS}")
+        if not isinstance(r["rank"], int) or r["rank"] < 1:
+            errs.append(f"row {i}: rank must be a positive integer")
+        blob = json.dumps(r).lower()
+        errs += [f"row {i}: claims to be qualified ({b!r})" for b in COND_BAD if b in blob]
+        out.append({("position" if k == "rank" else k): r[k] for k in FUR_FIELDS} | {k: r[k] for k in FUR_OPTIONAL if k in r})
+    if errs:
+        raise SystemExit("ranking.json further_investigations are invalid:\n  " + "\n  ".join(errs))
+    if full:
+        return out
+    own = {str(x).strip().lower() for c in cands for x in (c["short"], c["name"])}
+    labels = ((allow.get("investigations_shareable") or {}).get("class_labels")) or {}
+    res = []
+    for r in out:
+        name = str(r["intervention"]).strip()
+        if name.lower() in own:
+            res.append(r)
+            continue
+        lab = labels.get(name) or UI_IT["iv_withheld"]
+        e = {k: (re.sub(re.escape(name), lab, v, flags=re.I) if isinstance(v, str) and name else v) for k, v in r.items()}
+        e["intervention"] = lab
+        res.append(e)
+    return res
+
+
 def investigations_context_view(ctx, full: bool):
     """IT21 P7 projection of ranking.json["investigations_context"]: how positions are made, the funnel, the movement against IT20, the
     informative negatives and the slot for the WWOX-contribution measurement. The shareable edition drops the compound name and the values
@@ -4488,7 +4543,7 @@ def render_investigations(P: dict) -> str:
         badge = f' <span class="stt stt-{E(st)}">{E(U["iv_st_" + st])}</span>' if st in ("carded_thread", "premise_measurement", "conditional_hypothesis") else ""
         n_row = len(items) + 1
         items.append(f'<li class="inv-row" id="inv-{n_row}" data-rank="{E(str(r["position"]))}" data-origin="{E(r["origin_class"])}"' + (f' data-status="{E(st)}"' if st else "") +
-                     f'><div class="inv-h"><span class="inv-pos" aria-label="{E(U["iv_pos"])} {E(str(r["position"]))}">{E(str(r["position"]))}</span>{tie} '
+                     f'><div class="inv-h">' + (f'<a id="{E(r["inv_id"])}" class="inv-anchor" aria-hidden="true"></a>' if r.get("inv_id") else "") + f'<span class="inv-pos" aria-label="{E(U["iv_pos"])} {E(str(r["position"]))}">{E(str(r["position"]))}</span>{tie} '
                      f'{lx(r["intervention"], "b")} <span class="org org-{E(r["origin_class"])}">{E(U["iv_o_" + r["origin_class"]])}</span>{badge}<a class="plink" href="#inv-{n_row}" aria-label="{E(U["iv_link"])}" title="{E(U["iv_link"])}">#</a></div>'
                      f'<dl class="qk-dl inv-glance">{gl}</dl><details class="inv-more"><summary>{E(U["iv_more"])}</summary><dl class="qk-dl">{dl}</dl></details></li>')
     out = head + f'<p class="lead inv-purpose"><b>{E(U["iv_purpose"])}</b></p><p class="mini mut">{E(U["iv_lead"])}</p>'
@@ -4511,11 +4566,35 @@ def render_investigations(P: dict) -> str:
             cids = [x for x in str(r.get("chembl_ids") or "").split(";") if x]
             if cids:
                 cdl += f'<dt>{E(U["iv_h_chembl"])}</dt><dd><span class="mini">{E(", ".join(cids))}</span> <span class="mini mut">({E(U["iv_chembl_full"] if full else U["iv_chembl_share"])}).</span></dd>'
-            ci.append(f'<li class="inv-row inv-cond" data-inv="{E(r["inv_id"])}" data-origin="{E(r["origin_class"])}" data-status="conditional_hypothesis"><div class="inv-h">'
+            ci.append(f'<li class="inv-row inv-cond" id="{E(r["inv_id"])}" data-inv="{E(r["inv_id"])}" data-origin="{E(r["origin_class"])}" data-status="conditional_hypothesis"><div class="inv-h">'
                       f'{lx(r["intervention"], "b")} <span class="org org-{E(r["origin_class"])}">{E(U["iv_o_" + r["origin_class"]])}</span> '
                       f'<span class="stt stt-conditional_hypothesis">{E(U["iv_st_conditional_hypothesis"])}</span></div><dl class="qk-dl">{cdl}</dl></li>')
         out += (f'<section id="inv-conditional" class="inl" aria-labelledby="h-inv-cond"><h3 id="h-inv-cond">{E(U["iv_cond_h"])} ({len(conds)})</h3>'
                 f'<p class="note">{E(U["iv_cond_lead"])}</p><ul class="inv-list inv-cond-list">{"".join(ci)}</ul></section>')
+    furs = rk.get("further_investigations") or []
+    if furs:
+        fi = []
+        for r in furs:
+            fspec = [("iv_cond_id", "inv_id"), ("iv_q", "question"), ("iv_h_origin", "origin_detail"), ("iv_why", "why_now"), ("iv_ev", "evidence_available"),
+                     ("iv_depth", "evidence_depth"), ("iv_unc", "decisive_uncertainty"), ("iv_next", "next_test"), ("iv_h_feas", "feasibility"), ("iv_nov", "novelty_perimeter")]
+            fdl = "".join(f'<dt>{E(U[k])}</dt><dd>{lx(r[f])}</dd>' for k, f in fspec if str(r.get(f) or "").strip())
+            fids = [x for x in str(r.get("chembl_ids") or "").split(";") if x]
+            if fids:
+                fdl += f'<dt>{E(U["iv_h_chembl"])}</dt><dd><span class="mini">{E(", ".join(fids))}</span> <span class="mini mut">({E(U["iv_chembl_full"] if full else U["iv_chembl_share"])}).</span></dd>'
+            st = r.get("status")
+            fb = f' <span class="stt stt-{E(st)}">{E(U["iv_st_" + st])}</span>' if st in ("carded_thread", "premise_measurement") else ""
+            fi.append(f'<li class="inv-row inv-further" id="{E(r["inv_id"])}" data-inv="{E(r["inv_id"])}" data-origin="{E(r["origin_class"])}" data-status="{E(str(st))}"><div class="inv-h">'
+                      f'<span class="inv-pos" aria-label="{E(U["iv_pos"])} {E(str(r["position"]))}">{E(str(r["position"]))}</span> <span class="mini">({E(U["iv_fur_pos"])})</span> '
+                      f'{lx(r["intervention"], "b")} <span class="org org-{E(r["origin_class"])}">{E(U["iv_o_" + r["origin_class"]])}</span>{fb}</div><dl class="qk-dl">{fdl}</dl></li>')
+        out += (f'<section id="inv-further" class="inl" aria-labelledby="h-inv-fur"><h3 id="h-inv-fur">{E(U["iv_fur_h"])} ({len(furs)})</h3>'
+                f'<p class="note">{E(U["iv_fur_lead"])}</p><ul class="inv-list inv-fur-list">{"".join(fi)}</ul></section>')
+    if rows is not None:
+        groups = [(U["iv_idx_ord"], [(r.get("inv_id"), r["intervention"]) for r in rows if r.get("inv_id")]),
+                  (U["iv_idx_fur"], [(r["inv_id"], r["intervention"]) for r in furs]),
+                  (U["iv_idx_cond"], [(r["inv_id"], r["intervention"]) for r in conds])]
+        n_all = sum(len(g) for _, g in groups)
+        out += (f'<details class="inl inv-index" id="inv-index"><summary>{E(U["iv_idx_h"])} ({n_all})</summary><p class="mini">{E(U["iv_idx_lead"])}</p>'
+                + "".join(f'<p class="mini"><b>{E(h)}.</b> ' + "; ".join(f'<a href="#{E(i)}">{E(i)}</a>' for i, _ in g) + '</p>' for h, g in groups if g) + '</details>')
     chg = ctx.get("it22_changes") or []
     if chg:
         out += (f'<section id="inv-it22" class="inl" aria-labelledby="h-inv-it22"><h3 id="h-inv-it22">{E(U["iv_it22_h"])}</h3><p class="note">{E(U["iv_it22_lead"])}</p>'

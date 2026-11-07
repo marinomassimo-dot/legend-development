@@ -3,6 +3,10 @@
   "src": "en",
   "text": "Conditional hypothesis: the drug-side action is curated and its one reference was read at abstract level; no measurement in a WWOX-deficient neural cell connects the lysosomal step to the allele (no ranked unit, so no evaluation depth applies: this is not a depth of zero)"
  },
+ "00a29618cbc1": {
+  "src": "en",
+  "text": "Not executable from this module: no animals or tissue are held and the raw reads are not public. Feasible only by data holders or a new dataset; nothing is sent to anyone from here. Zero-spend preparation is limited to fixing the readout table before any data arrive."
+ },
  "01fe147e4f17": {
   "src": "en",
   "text": "A peptide inhibitor of the chaperone HSC70 (HSPA8) used as a cell-level probe, with lysosomal and genetic controls (identified by its ChEMBL record below)"
@@ -114,6 +118,10 @@
  "168c2068833c": {
   "src": "en",
   "text": "EXECUTED 2026-11-05: the published same-genotype cases with both a symptomatic and a developmental endpoint were assembled (6 children with both endpoints; a discordance rate is not computable at n below 10, so counts are given instead). Vigabatrin fired the 5-or-more branch (counts with sources); hormonal therapy, diet and cannabidiol fired the fewer-than-5 branch (not computable from the public record). Next: read these counts against the stratum base rates in un registro del repository (non incluso in questo pacchetto) section 1.3; only a WWOX-DEE responder rate with a favourable or improving developmental course clearly above the genetic-DEE base rate would be a WWOX finding. Denominator request, without contact: for each WWOX-DEE series that reports an intervention, the number exposed, the response definition, and a dated developmental instrument before and after a sustained response; where a source gives one, compare within-child continuous scores, since a cut at 70 cannot discriminate. The five-patient series and Choi 2026 come first, and the seven-child series (PMID 42721537) is read when an open route exists. No new exposure is proposed."
+ },
+ "176dea8b576c": {
+  "src": "en",
+  "text": "Naming these keeps them visible as gaps rather than as silently empty rows. Three of the four have no catalogue association on their targets and one is an endpoint rather than an intervention; none of this is evidence that the biology is unpromising."
  },
  "177992f07455": {
   "src": "en",
@@ -251,6 +259,10 @@
   "src": "en",
   "text": "A concentration window with H3K9me3 up, HIF1alpha unchanged and glycolytic genes down, reproduced by KDM4 knockdown (only if the role of HIF is first shown protective)."
  },
+ "356679031808": {
+  "src": "en",
+  "text": "Per need: the observation rows exist, the targets are listed, and the search layer returns no association on them. The glycaemia and growth need carries no target at all because it is an endpoint."
+ },
  "364bcad629f4": {
   "src": "en",
   "text": "Does a clinically used NMDAR antagonist reproduce the burst suppression obtained with the tool compound, at a stated extracellular magnesium concentration?"
@@ -371,6 +383,10 @@
   "src": "en",
   "text": "Development feasibility: low as a drug (a peptide whose one distribution study shows lungs and spleen, with no CNS exposure) and high as a cell-level probe. It depends on the allele and cannot serve a variant that makes no protein."
  },
+ "49d1235d69a9": {
+  "src": "en",
+  "text": "Queried: the search layer over every target of all 23 needs. Three needs returned zero associations and one carries no target. That is a measured property of this catalogue and this target list on this date, not a statement that no pharmacology exists for these processes."
+ },
  "4a0535568293": {
   "src": "it",
   "text": "Caso più forte oggi, specifico per WWOX (nel topo nullo)."
@@ -390,6 +406,10 @@
  "50b28c98d057": {
   "src": "en",
   "text": "position unchanged from IT20 (rank 3): No IT21 input changes the position."
+ },
+ "52e5833cc9ed": {
+  "src": "en",
+  "text": "Which of the six layers moves, per animal. A lower transcript does not show fewer cells, lower activity or less inhibition; an absent change in GSE158684 is not evidence of no change; the oligodendrocyte-lineage shift could be consequence or cause of an excitation-inhibition change and the data cannot say which. Whether any parvalbumin-cell change is a deficit, a compensation or a delayed maturation is unresolved, so the need direction stays unresolved and no lever sign is derived."
  },
  "53e618810345": {
   "src": "it",
@@ -434,6 +454,10 @@
  "595b2de50fd2": {
   "src": "en",
   "text": "AhR-pathway activation is adverse in neural precursors in toxin studies; the pathway-target transcript is higher while NFE2L2 is lower."
+ },
+ "5b906bd721c1": {
+  "src": "en",
+  "text": "Per-animal parvalbumin cell counts by immunostaining in neuron-targeted Wwox deletion against Cre-only controls, at least 3 animals per arm (reopening condition (c) of NP3A1), read together with a maturation and identity marker panel in the same animals, and, where the data holders allow, intrinsic-property and inhibitory-input recordings from labelled parvalbumin cells and a circuit-level read. Alternatives that also reopen it: a deposited library or animal index for GSE158684, or an independent neuron-targeted deletion dataset with at least 3 animals per arm and a parvalbumin-enriched capture. The result is read as six separate rows (number, identity and maturation, marker expression, intrinsic properties, synaptic input, circuit function); a change in one is not carried to another."
  },
  "5ba82d5d53ac": {
   "src": "en",
@@ -490,6 +514,10 @@
  "63a54671a54d": {
   "src": "en",
   "text": "The chain that motivates this lever predicts a PDH block, and the two available data point the other way: the kinase transcript is down and the one human activity measurement shows no difference. Ordering the compound before the premise is measured is how a plausible chain becomes a wasted experiment."
+ },
+ "6443c1796cd7": {
+  "src": "en",
+  "text": "Whether the absence is a catalogue coverage limit, a target-listing limit, or a genuine absence of pharmacology. This package did not separate those three."
  },
  "668145b942f2": {
   "src": "it",
@@ -591,9 +619,17 @@
   "src": "it",
   "text": "un contrasto umano neurale privo di WWOX, replicato, con lettura proteica o di attività appaiata; una coorte P47T più grande"
  },
+ "7c9072e771cd": {
+  "src": "en",
+  "text": "INV-15"
+ },
  "7d03763d1251": {
   "src": "en",
   "text": "Whether the block is receptor-responsive and causal, or a consequence of seizures, or of the neuron's own signal being absent (the pro-myelinating-class row asks the premise from the signal side). The agent also has systemic actions that oppose the glycaemia need; an effect on seizure threshold was not looked up. IT22: the seizure-threshold question is now looked up and is mixed, not closed."
+ },
+ "7d17bc5207e0": {
+  "src": "en",
+  "text": "no ranked unit: the investigation is a premise measurement, so no evaluation depth applies (this is not a depth of zero)"
  },
  "7d345e9c6100": {
   "src": "en",
@@ -675,6 +711,10 @@
   "src": "en",
   "text": "Cytokine transcripts up in two mouse Wwox-deficient preparations (one significant in the null hippocampus)."
  },
+ "8fb812a48744": {
+  "src": "en",
+  "text": "INV-11"
+ },
  "901192e89719": {
   "src": "it",
   "text": "Trascritti della traduzione mitocondriale"
@@ -686,6 +726,10 @@
  "918960204483": {
   "src": "it",
   "text": "Solo segni non risolti: nel topo cala in tutti e quattro i contrasti ma la differenza poggia in parte sul gruppo di controllo; non è una misura dell'attività."
+ },
+ "9198a840a7f2": {
+  "src": "en",
+  "text": "Queried on 2026-11-07: the IT13b, IT14 P1a and IT14 P1b records of this module, the NP3A1 row of the reopening table, and the need file; the public programme abstract of poster 014 (Curing the Epilepsies 2026, NINDS) was read at abstract level on 2026-11-07; it states a programme, not a result, so nothing quantitative is attributed to it. A search of this module, not a statement about the literature."
  },
  "9202fca605a7": {
   "src": "it",
@@ -711,6 +755,10 @@
   "src": "en",
   "text": "The sign: falling cytokines reproduced by controls keeps the proposal conditional; rising cytokines reject the harm arm for this axis. The role of the cytokine change in the knockout is itself unmeasured. The compound is a substrate of efflux transporters in vitro and has no human exposure."
  },
+ "96f85cc03e8a": {
+  "src": "en",
+  "text": "A catalogue query, no new data."
+ },
  "9771a0390514": {
   "src": "en",
   "text": "WWOX-system, read beyond the abstract: the high-dose arm reaches a survival plateau to day 300 and lowers spike-wave discharges to a wild-type-indistinguishable level; weight is ordered against wild type and the untreated knockout (equal to the high dose at P30 only), and glycaemia is NOT shown to be prevented: at P10 the treated arms are not significantly different from the untreated knockout (high dose about 113, low dose about 105, untreated knockout about 95; Figure 3E, card C04 DR-AAV-GLU10-HD and DR-AAV-GLU10-LD), at P20 the untreated-knockout comparator is absent because those animals are dead (Figure 3F, DR-AAV-GLU20-LD and DR-AAV-GLU20-HD, direction UNKNOWN) and the P20 result is dose-graded against wild type only, and by P30 the dose separation has closed (Figure 3G); the paper's own text states that both doses partially corrected hypoglycaemia, while the panel does not support it (card C04 records this: the treated arms are not significantly different from the untreated knockout at P10); the glucose result depends on age, dose and comparison, and a non-significant difference at P10 is not evidence of no benefit. Every treated arm was injected in the stated neonatal window."
@@ -718,6 +766,10 @@
  "97c9a0c40034": {
   "src": "it",
   "text": "Linea cellulare con la variante non disponibile; disegno completo ma il righello di funzione non è ancora validato."
+ },
+ "9810f4305106": {
+  "src": "en",
+  "text": "Generated by LEGEND as a gap statement over four needs without catalogue reach (IT20)."
  },
  "988eee7a8c84": {
   "src": "it",
@@ -747,6 +799,10 @@
   "src": "en",
   "text": "PDH activity and flux in a WWOX-deficient human neural cell against an isogenic control, with the glycolytic readout measured in the same material."
  },
+ "9b1360b42239": {
+  "src": "en",
+  "text": "In the neuron-targeted Wwox-deletion mouse, is the lower Pvalb transcript due to fewer parvalbumin interneurons, to immature or altered identity, to lower marker expression in a normal number of cells, to changed intrinsic properties, to less synaptic input onto or from them, or to a circuit-level change, and which of these is measured per animal?"
+ },
  "9bc3d7f67697": {
   "src": "en",
   "text": "Development feasibility: a cell-level probe is feasible now, and an approved thyroid-hormone molecule and a clinical-stage analogue exist; systemic hormone action, the early treatment window and the lack of a brain-exposure datum for the analogue limit any later use."
@@ -774,6 +830,10 @@
  "a38eb56059b7": {
   "src": "en",
   "text": "WWOX-system: a glycolytic signature; the kinase transcript lower in the organoid; no difference in the one human PDH activity measurement. The kinase-to-PDH link has no WWOX observation."
+ },
+ "a396eedef330": {
+  "src": "en",
+  "text": "For the four needs on which the catalogue returns nothing at all, what would have to exist before any compound question could be asked?"
  },
  "a4f994f57698": {
   "src": "it",
@@ -807,6 +867,10 @@
   "src": "en",
   "text": "IT21 P4a (IT21P2-0057)"
  },
+ "a8501c228a81": {
+  "src": "en",
+  "text": "No lever available (four needs with no catalogue reach)"
+ },
  "a884fdfd0770": {
   "src": "en",
   "text": "Inhibitors of the DNA-damage response as levers"
@@ -822,6 +886,10 @@
  "a8db6cde1c2c": {
   "src": "it",
   "text": "Più bassi in cinque contesti ma non specifici (controlli non correlati si muovono quanto): non letti come segnale respiratorio."
+ },
+ "a8fbe1492038": {
+  "src": "en",
+  "text": "Premise measurement: the transcript deficit is observed in bulk and in one nuclear pool per arm; cell number, identity, intrinsic properties, synaptic input and circuit function are not measured at animal level by any file read here (no ranked unit, so no evaluation depth applies: this is not a depth of zero)"
  },
  "ab1a6c5c29fc": {
   "src": "it",
@@ -1055,6 +1123,10 @@
   "src": "en",
   "text": "The position of this thread rests on a single laboratory and a single paper in which the comparison drug acted better, and the specificity flag is an unknown rather than a clean reading. The thread is already ordered, so the result changes a standing position rather than adding a new one."
  },
+ "d8bcf6b0301e": {
+  "src": "en",
+  "text": "Known in the WWOX system: the parvalbumin marker deficit is already a named need observation and the NP3A1 reopening trigger; the row restates the open question as six separable layers (IT13b, IT14 P1a, IT14 P1b, reopening table row NP3A1)."
+ },
  "d99712f30874": {
   "src": "en",
   "text": "Seizure-free neuron plus precursor co-culture, WWOX-deficient versus corrected neurons, hormone-depleted medium, isoform control."
@@ -1074,6 +1146,10 @@
  "dd12a8b7fdb5": {
   "src": "en",
   "text": "Queried: the two gene-addition cards (C01, C04) and their assertion rows; the deepdive manifest of the source; the work-order statements for this need. Checked for a post-onset arm and found none. Not a statement about the literature beyond the sources this module has read. Extended on 2026-11-05/06 by two bounded external searches (batch_sci_20261105, r1 and r2 query logs, 66 queries in all): conditional, antisense and vector restoration after onset in Mecp2, Ube3a, Fmr1, Tsc1, Pten, Syngap1, Cdkl5, Shank3, Tcf4, Scn1a, Scn1b, Kcnt1, Scn8a and leukodystrophy models. The earlier of the two searches was anchored on gene names and could not reach enzyme, connexin, tubulin or astrocyte-transporter leukodystrophies; an independent review found post-onset white-matter arms there. Bounded searches, not a statement that none exists."
+ },
+ "dd2c3ac3a06f": {
+  "src": "en",
+  "text": "Separate the three causes for one of the four needs: check whether the listed targets carry any catalogued action anywhere, then whether the module's target list is the limit."
  },
  "e22f10004a65": {
   "src": "en",
@@ -1135,6 +1211,10 @@
   "src": "en",
   "text": "Published assay, approved compounds, three arms added to an existing design."
  },
+ "eb617dec55f1": {
+  "src": "en",
+  "text": "WWOX-system, transcript: a lower Pvalb transcript in the neuron-targeted deletion in bulk hippocampus (log2 -1.70, GSE158681 S contrast, as quoted in IT13b) and about half that size in the nuclear data (GSE158684: Pvalb 70 against 37 UMI in 3182 against 2920 nuclei; nuclei Pvalb share ratio 0.59). GSE158684 holds one pooled library per arm (library and animal index absent; the paper states n = 1 per arm), so nuclei are not biological replicates and the GSM records of the series are not independent experiments; PV-class nuclei number 12 to 19 per arm under the producer rules, the independent recompute disagrees on the specific counts, and PV composition and Pvalb per cell are undecidable under every rule tried. Kcnc1 is lower in inhibitory nuclei (one pool, not a replicate result). Immature-neuron markers (Sox11, Dcx, Igfbpl1) are higher in knockout neurons in direction; the larger composition change is oligodendrocyte-class nuclei, about 3- to 5-fold fewer. Wwox also falls in glia-called nuclei, unexplained. Protein and function, from the need file: PV-positive counts reduced by 44 percent in the whole hippocampus of a systemic constitutive knockout (PMID 30290271) and spontaneous inhibitory current amplitude more than halved in layer II/III pyramidal neurons of the neuron-specific knockout (PMID 34634460; pooled events, not animals). Raw reads of the eight snRNA experiments (SRX9206272 to SRX9206279) carried NCBI status hup on 2026-10-31. A public conference abstract (poster 014, Curing the Epilepsies 2026 programme, NINDS; the whole abstract was read, abstract level) describes a programme that combines genetic mouse models, in vivo electrophysiology, ex vivo slice recordings, cell type-specific manipulations and targeted pharmacological modulation of neuronal activity in WWOX deficiency, and names parvalbumin interneurons as the population of interest; it reports no quantitative result, no molecule, no rescue and no target."
+ },
  "eb885f4effae": {
   "src": "en",
   "text": "In human neural progenitors or neurons, does catalytic inhibition of class IIa HDACs lower the output of HDAC5 at SLC2A1 the way HDAC5 knockdown does, or does it leave it unchanged or raise it?"
@@ -1182,6 +1262,10 @@
  "f3d66e9fd0ff": {
   "src": "en",
   "text": "Integrated-stress-response modulators (a class; no single compound)"
+ },
+ "f47ca448e0b7": {
+  "src": "en",
+  "text": "It decides whether any parvalbumin-directed pharmacology, positive modulation or another kind, can be thought about at all, and which of the inhibitory-hypofunction contrasts to run first. Its direction is not assumed: raising parvalbumin-cell activity is not taken to be the right direction. It enters at rank 6 as a premise measurement because the nucleus-level route was closed by the replicate structure of the deposit and what remains is a per-animal measurement."
  },
  "f5a4dd769acf": {
   "src": "en",

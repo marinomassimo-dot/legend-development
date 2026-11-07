@@ -1,0 +1,15 @@
+compound	catalogue_records	neighbours_not_merged	stage_by_family_id	stage_by_name_only	handed_over	cards_mentioning	conditional_questions	investigations
+vorinostat	2	0	1	0	0	0	0	1
+phenobarbital	3	2	1	0	0	2	0	0
+bumetanide	2	0	0	0	0	1	1	0
+rapamycin	2	2	0	0	0	0	1	0
+vigabatrin	2	1	0	0	0	2	1	1
+benztropine	4	2	0	0	0	1	1	0
+clemastine	4	0	0	0	0	1	1	0
+clonazepam	2	1	0	0	0	0	1	0
+ethosuximide	2	0	0	0	0	2	0	1
+levetiracetam	2	1	0	0	0	0	0	0
+perampanel	2	0	0	0	0	3	0	0
+ifenprodil	4	0	0	0	0	1	0	0
+memantine	3	0	0	0	0	3	0	0
+efonidipine	2	0	0	0	0	0	0	1
