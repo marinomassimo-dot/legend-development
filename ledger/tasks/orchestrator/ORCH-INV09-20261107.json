@@ -1,0 +1,41 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-INV09-20261107",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Queued targeted package (operator, 2026-11-07): INV-09, separate the possible benefits of GSK3 from its other actions (lithium vs GSK3; alpha vs beta; substrates; seizures vs development; benefit vs suppression); S9A and selectivity premises; PMIDs 15791206, 33197065, 32463939; smallest informative experiment; delta for G01, INV-09 and linked needs. Runs after the NMDA, myelin, NRF2 and GSK3-eIF2B packages so it can reuse them.",
+ "START_UTC": "2026-11-08T00:00:00Z",
+ "BASELINE": "development/main ce121d5814b8c83c65721c0709ac4ec2554a5011; same worktree and branch as ORCH-TTYPE-20261107 (which already merges main). Reused by identifier: G01 card, IT15 QB and its verification, gsk3_eif2b_20261107, myelin_inv06_20261107 (21319221 and 33015737 read there), nmda_inv05_20261107, nb4_delta_20261107.",
+ "CURRENT_PACKAGE": {
+  "id": "K-INV09",
+  "state": "brief written; queued behind INV-07 and INV-08",
+  "delegate_active": "none",
+  "updated": "2026-11-08T00:00:00Z"
+ },
+ "RESUME": "Folder drug_repurposing/gsk3_inv09_20261107/ (BRIEF.md, output/). Order: producer, census, verifier, correction.",
+ "DECISIONS_TAKEN": [
+  "Queued by the operator beside the running work; one delegate at a time; settings as before. Placed last in the queue so that the NMDA, myelin, NRF2 and GSK3-eIF2B deliveries exist when it starts."
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [
+  "No stop for a reserved act."
+ ],
+ "DEFAULTS_TAKEN": [
+  "Condition: settings not restated. Default: as before. Why safe: reversible; no shared file touched."
+ ],
+ "AUTHORISED_QUEUE_20261107H": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "producer, census, verifier on decision-changing links, targeted correction",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}
