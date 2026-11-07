@@ -11,7 +11,8 @@
  "DECISIONS_TAKEN": [
   "The brief's wait-for-main-session rule is superseded for this pilot by the operator's explicit authorisation; isolation, scientific discipline and delegation limits stay.",
   "Most of the descriptive work behind NB-4 exists (IT14 p1a, p1b): glial fold, ambient test, composition, four rivals, an independent verdict (row 8 CONFIRMED). Re-run of identity_checks.py on 2026-11-07, 4.6 s: wwox_glia_ambient, deposit_prefilter_qc and sex_genes_by_arm byte-identical to the committed tables. The distinct remaining sub-question is the recombination profile of the Synapsin I-Cre line (named by p1a as not looked up), plus the current raw-read status and a reconciliation of the six explanations; nothing else is reopened.",
-  "Census used is the deduplicating implementation of main (IT31); the WO-12 figures recorded in ORCH-DELEGBUDGET-20261106 predate it and are restated in PILOT_ASSESSMENT.md. The stray reading-claim marker for PMID 25834045 (actor nb4-p) is removed at close."
+  "Census used is the deduplicating implementation of main (IT31); the WO-12 figures recorded in ORCH-DELEGBUDGET-20261106 predate it and are restated in PILOT_ASSESSMENT.md. The stray reading-claim marker for PMID 25834045 (actor nb4-p) is removed at close.",
+  "Battery on a no-hardlinks clone of a42edcb2fa05c950ea805aed249b2d6e0ed4ec0d, run at nice 19 to leave the main session its CPU (about 90 minutes wall instead of about 55 when the host was quiet): REGRESSION VERDICT PASS WITH SKIPS (213 targets, 9 skipped, environment). Not attributed to the closure commit that records it."
  ],
  "DELEGATIONS": [
   "producer nb4-p: legend-delegate, asked sonnet/medium, read back claude-sonnet-5-5 x31 and effort medium x31; birth context 17,331; 31 turns; 5.3 min; output 32,487; cache written 118,670; cache read 2,248,353; peak 118,672; completed README, samples.tsv (8 GSM), explanations.tsv, evidence.tsv, queries.tsv, 2 staged abstract-only receipts (validated with DOI check)",
@@ -27,7 +28,7 @@
   "Condition: the operator fixed the settings (producer sonnet/medium, verifier sonnet/high) and the two-new-source limit. Default: no turn or output ceiling is available as a runtime parameter, so the brief's scope is an operational constraint, not a technical cap. Why safe: reversible, no shared file touched."
  ],
  "AUTHORISED_QUEUE_20261107": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_S0": {
    "order": 1,
    "steps": [
@@ -64,8 +65,9 @@
    "steps": [
     {
      "step": "S3 consumption note, validation, landing, worktree removal",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "gate PASS 0 blocks, LINT WARN no BLOCK, receipts verify OK, staged receipts validated with DOI check, battery PASS WITH SKIPS on a42edcb2"
     }
    ]
   }
