@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Collect the 16 DREAM-1 runs: mechanical retrieval measures, census numbers and a blinded grading packet.
 
     python3 collect.py <tasks dir> <census script> <packet out> <key out>

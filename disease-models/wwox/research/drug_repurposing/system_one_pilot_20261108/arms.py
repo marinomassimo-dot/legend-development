@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Prompts for the model arms, the simple-rule arm (B) and the scorer.
 
   python3 arms.py prompt A|C|V [--reverse]   print the chooser prompt for the 16 cases (stdout)

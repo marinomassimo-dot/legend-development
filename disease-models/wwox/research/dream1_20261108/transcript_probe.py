@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Mechanical retrieval measures from one delegate transcript (no judgement).
 
     python3 transcript_probe.py <agent.jsonl> --anchors a1 a2 ...
