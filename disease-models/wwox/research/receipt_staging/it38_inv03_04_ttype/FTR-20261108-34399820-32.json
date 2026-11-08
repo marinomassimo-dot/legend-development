@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-08T18:06:00Z",
+ "analysis_time_precision": "minute",
+ "event_at": "2026-11-08T18:07:00Z",
+ "record_kind": "contemporaneous_receipt",
+ "source_fingerprint": null,
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv03_04_ttype/README.md",
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv03_04_ttype/evidence.tsv"
+ ],
+ "workflow": "INV-03/04 T-type full-input repeat (openscientist_retest_20261108, label os-03): reading for the propositions in decisive.tsv. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor.",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_id": "FTR-20261108-34399820-32",
+ "evidence_basis": [
+  "Main text delivered by Europe PMC REST on 2026-11-08; figures captions only; Methods not in the delivered body; supplementary table not read.",
+  "verbatim_locator | proposition: the authors state CACNA1H has not previously been associated with DEE | Discussion | \"CACNA1H has never been associated with DEEs.\"",
+  "verbatim_locator | proposition: the inherited CACNA1H variant came from an asymptomatic parent and the authors doubt a major independent contribution | Discussion | \"the father from whom the child inherited this variant was asymptomatic\"",
+  "verbatim_locator | proposition: the CACNA1H variant shifted activation by a few millivolts with no change in conductance and is described as loss-of-function direction | Results | \"shifted toward more positive potentials by + 4.3 mV\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC fullTextXML for PMC8365958 fetched 2026-11-08 (HTTP 200); main-text body read (Results and Discussion in one block, Figure 1 legend); the XML carried no Methods section; supplement and figure images not read; bytes not saved.",
+ "study_id": {
+  "doi": "10.1186/s13041-021-00838-y",
+  "pmid": "34399820"
+ }
+}

@@ -1,0 +1,13 @@
+# INV-15 PV interneurons: Phase 1 note
+
+Anchors are line numbers of `INV-15_PV.txt` (143 lines per the audit: the heading "Bottom line" is L142 and its text L143; read in full).
+
+1. What it is: an AI-generated report answering a question about what is altered in parvalbumin (PV) interneurons in WWOX deficiency (WOREE). It is mostly an argument about what is not known.
+2. Structure: question and UI furniture (L1-3), title and summary (L4-14), five Key Findings (L16-57), a mechanistic model with two text diagrams (L59-100), an evidence table of five PMIDs (L102-109), limitations (L111-118), nine follow-up experiments plus a decision rule (L119-140), bottom line (L142).
+3. Measured versus reasoned: nothing in the report is measured by the report. All wet-lab content is attributed to one paper (reduced IPSC frequency and amplitude on L2/3 pyramidal cells, P13-17) quoted through a "knowledge base". The six explanations A-F, the predicted IPSC effects, the drug classes and the amplitude argument are reasoning. The hyaluronan/PNN route is explicitly the report's own new hypothesis (L48).
+4. The report's own absence claims (no PV/GAD67/SST/Kv3.1/PNN data; zero PubMed hits for WWOX with parvalbumin or interneuron) have an unstated perimeter: the knowledge base entry, and PubMed queries without strings or dates (L20, L118).
+5. Internal tensions in the text: (a) L39 says only explanation F predicts the amplitude drop, but the table (L34) and diagram (L80) let explanation B lower amplitude too; (b) L12 and L30 say "five plus a sixth" explanations while the table lists six lettered rows and C does not itself explain the observed IPSC fall; (c) 33914858 is cited both for the Synapsin I-Cre mouse model and for the human organoid (L25, L55, L105); (d) the model of 34634460 is called "global in-vitro knockout" (L27, L54) with unclear meaning; (e) "almost certainly a composite" (L39) is firmer than the argument; (f) the decision rule (L140) gates on experiments 1-3 and 5 only, while L27 and L132-136 treat cell autonomy and counts as prerequisites.
+6. The hyaluronan step rests on a non-neuronal system and is labelled KB-derived; the PV-PNN step is labelled verified against an abstract. No full-text reading is claimed for any source.
+7. Drug content is class-level only (Kv3 modulators, GABA-A positive allosteric modulators, AMPA-kinetics modulation, PNN-modifying agents); no compound, dose or concentration is named.
+8. Sentences addressed to a reader or agent: only the interface text "View full report" (L2) and a collapse glyph (L3). The follow-up section is phrased as proposals for experimenters, not as instructions to an agent; none was acted on.
+9. Not done in Phase 1: no source checked, no repository file opened.

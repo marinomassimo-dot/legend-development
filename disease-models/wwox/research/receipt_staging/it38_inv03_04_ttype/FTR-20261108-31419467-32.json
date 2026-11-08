@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-08T18:06:00Z",
+ "analysis_time_precision": "minute",
+ "event_at": "2026-11-08T18:07:00Z",
+ "record_kind": "contemporaneous_receipt",
+ "source_fingerprint": null,
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv03_04_ttype/README.md",
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv03_04_ttype/evidence.tsv"
+ ],
+ "workflow": "INV-03/04 T-type full-input repeat (openscientist_retest_20261108, label os-03): reading for the propositions in decisive.tsv. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor.",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_id": "FTR-20261108-31419467-32",
+ "evidence_basis": [
+  "An abstract is not a reading; it supports a conditional lead only.",
+  "verbatim_locator | proposition: Z944 is described by its authors as a potent and selective T-type antagonist, a class statement with no isoform statement in the abstract | Abstract | \"Z944, a potent and selective antagonist\"",
+  "verbatim_locator | proposition: Z944 reduced seizures in a rat kainate status epilepticus model; levetiracetam comparator | Abstract | \"the Z944 group manifest reduced number of seizures\""
+ ],
+ "evidence_depth": "abstract_only",
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "source_kind": "abstract",
+ "source_locator": "PubMed record retrieved through the PubMed tools on 2026-11-08; abstract text only. Read after the claim was placed; the read order was reversed by mistake and is recorded here.",
+ "study_id": {
+  "doi": "10.1016/j.pneurobio.2019.101677",
+  "pmid": "31419467"
+ }
+}

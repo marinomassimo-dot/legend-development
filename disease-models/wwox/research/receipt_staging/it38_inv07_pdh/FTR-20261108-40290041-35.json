@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-08T19:06:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-08T19:09:00Z",
+ "event_id": "FTR-20261108-40290041-35",
+ "evidence_basis": [
+  "verbatim_locator | proposition: PDCD is classed among absolute indications for the ketogenic diet in this narrative review | Abstract | \"with absolute indications including glucose transporter type 1 deficiency syndrome (GLUT1DS) and pyruvate dehydrogenase complex deficiency (PDCD)\"",
+  "verbatim_locator | proposition: the source is a narrative review and the read text names no WWOX-related epilepsy | Abstract | \"In this narrative review, we examine the clinical efficacy and safety of the classic ketogenic diet\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv07_pdh/README.md",
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv07_pdh/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC11945077 full text retrieved on 2026-11-08 through the PubMed Central full-text tool; narrative review; figures not viewed; bytes not saved",
+ "study_id": {
+  "doi": "10.3390/nu17060979",
+  "pmid": "40290041"
+ },
+ "workflow": "INV-07 full-input repeat (openscientist_retest_20261108, label os-07): question-driven reading for the PDH, pyruvate and lactate decision propositions. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

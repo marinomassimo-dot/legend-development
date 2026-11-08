@@ -1,0 +1,5 @@
+event_id	pmid	evidence_depth	prior_receipt	validated_ok
+FTR-20261108-39933386-38	39933386	abstract_only	null	yes (staged_receipt_check OK, 2026-11-08T20:20Z)
+FTR-20261108-42949433-38	42949433	abstract_only	null	yes (staged_receipt_check OK, 2026-11-08T20:20Z)
+FTR-20261108-42520581-38	42520581	abstract_only	null	yes (staged_receipt_check OK, 2026-11-08T20:20Z)
+FTR-20261108-34634460-38	34634460	partial_fulltext_read	FTR-20260810-34634460-02	yes (staged_receipt_check OK, 2026-11-08T20:20Z)

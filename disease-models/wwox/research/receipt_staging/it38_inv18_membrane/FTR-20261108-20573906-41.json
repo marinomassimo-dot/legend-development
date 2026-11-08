@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-08T21:04:23Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_present"
+ },
+ "event_at": "2026-11-08T21:06:55Z",
+ "event_id": "FTR-20261108-20573906-41",
+ "evidence_basis": [
+  "Abstract only; no methods, results or figures read.",
+  "verbatim_locator | proposition: bumetanide had no significant effect on development of spontaneous seizures after pilocarpine status epilepticus in adult female rats | Abstract | \"Bumetanide did not exert any significant effects on development of spontaneous seizures\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv18_membrane/README.md",
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv18_membrane/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "41571eca382dbfaf1cf997bdabc2bfc755808fc0a7127f3bad6d86b0925a93c9",
+ "source_kind": "abstract",
+ "source_locator": "PubMed record (abstract); the PMC fetch returned an abstract-sized stub only, fetched 2026-11-08",
+ "study_id": {
+  "doi": "10.1523/JNEUROSCI.0633-10.2010",
+  "pmid": "20573906"
+ },
+ "workflow": "INV-18 full-input repeat (openscientist_retest_20261108), producer os-18, Phase 2. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

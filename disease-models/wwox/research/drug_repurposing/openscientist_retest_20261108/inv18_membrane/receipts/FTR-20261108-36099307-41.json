@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-08T21:04:23Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_present",
+  "limitations": "not_present"
+ },
+ "event_at": "2026-11-08T21:06:55Z",
+ "event_id": "FTR-20261108-36099307-41",
+ "evidence_basis": [
+  "Abstract and Results 3.1 read; the paper is a computational model of layer V pyramidal cells, not recordings; remainder searched by pattern only.",
+  "verbatim_locator | proposition: modelled Ih facilitates proximal and hinders distal dendritic drive in layer V cells | Abstract | \"I h channels facilitate the action potentials of layer V pyramidal cells in response to proximal dendritic stimulus\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv18_membrane/README.md",
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv18_membrane/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "e9e06fc86d6b4b68648791c7a7862f3c92a33dd23ffe8ee9145e493d3fa1d7f7",
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC fullTextXML for the PMC record, fetched 2026-11-08; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1371/journal.pcbi.1010506",
+  "pmid": "36099307"
+ },
+ "workflow": "INV-18 full-input repeat (openscientist_retest_20261108), producer os-18, Phase 2. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

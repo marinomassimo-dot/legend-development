@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-08T20:34:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "event_at": "2026-11-08T20:46:00Z",
+ "event_id": "FTR-20261108-40478640-40",
+ "evidence_basis": [
+  "verbatim_locator | proposition: SPR gives nanomolar affinity pooled across HDAC4/5/7/9 for MEF2A | Results 2.5 | \"fairly comparable nanomolar affinity (3.5 nM to 19.1 nM)\"",
+  "verbatim_locator | proposition: SPR used purchased proteins, MEF2A immobilised; per-HDAC values sit in a table not rendered in the text read | Methods 3.1 | \"HDAC4 (catalog no. MBS953633), HDAC5 (catalog no. MBS388238)\"",
+  "verbatim_locator | proposition: the simulations used truncated class IIa regions, not full-length proteins | Introduction | \"we selected only truncated class IIa HDAC regions and did not include DNA\"",
+  "tables and figure images were not rendered in the extracted text; supplement not read"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv16_hdac5/README.md",
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv16_hdac5/decisive.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC record PMC12199305 full text as returned by the PubMed Central tool, fetched 2026-11-08; tables and figures not rendered; bytes not saved",
+ "study_id": {
+  "doi": "10.1021/acs.jcim.5c00858",
+  "pmid": "40478640"
+ },
+ "workflow": "INV-16 OpenScientist full-input repeat, producer os-16. Question-driven read for the decisive propositions; prepared as a staged JSON for the integrator; the ledger was not written by the preparing actor."
+}

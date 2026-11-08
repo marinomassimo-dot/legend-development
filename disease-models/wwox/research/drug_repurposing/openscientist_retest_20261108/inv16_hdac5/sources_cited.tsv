@@ -1,0 +1,18 @@
+src_id	as_written	pmid_or_doi_as_written	used_for	anchor	note
+S01	PMID: 15194749	15194749	E04,E25	L22, L93	title in table 'Class II HDACs & ICP0 of HSV-1' looks unrelated to MEF2 sequestration claim; doubt only
+S02	PMID: 18308563	18308563	E26,E27	L24, L94	
+S03	PMID: 32236769	32236769	E22,E23	L20, L95	exercise/AMPK/HDAC4/GLUT1 myocardial infarction
+S04	PMID: 33164260	33164260	E24	L20, L96	mouse cardiac (ischaemia-reperfusion); HDAC4; the report counts it as an independent axis
+S05	PMID: 40478640	40478640	E28	L29, L97	
+S06	PMID: 12641737	12641737	E06,E29,E30	L31, L98	abstract names no species
+S07	PMID: 23916482	23916482	E31,E32,E39	L33, L99	
+S08	PMID: 27308416	27308416	E15,E17,E19,E57	L36, L45, L100, L108	commentary; abstract names HIF1alpha, not GLUT1
+S09	PMID: 41830506	41830506	E20,E21	L36, L101	
+S10	PMID: 25491415	25491415	E10	L41, L102	table title 'WWOX modulates cell metabolism'
+S11	PMID: 34747138	34747138	E11	L41, L103	also 'curated in the WWOX-DEE knowledge base'
+S12	PMID: 40754252	40754252	E12,E14	L43, L104	
+S13	PMID: 28106060	28106060	E13,E14	L43, L105	
+S14	PMID: 40667573	40667573	E34	L48, L106	
+S15	PMID: 39049738	39049738	E35,E36,E37,E38	L48, L107, L122	
+S16	WWOX-DEE knowledge base entry	none	E11,E18	L36, L41	internal KB, no identifier; source of GSK-3beta/lithium/PTZ statement with no PMID
+S17	MONDO:0014533	MONDO:0014533	E02	L5	ontology id, not a paper

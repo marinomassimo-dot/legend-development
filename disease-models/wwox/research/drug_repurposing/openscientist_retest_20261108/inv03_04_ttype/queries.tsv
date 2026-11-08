@@ -1,0 +1,12 @@
+query_id	database_or_route	string_or_url	run_at_utc	hits	what_was_done
+Q01	pubmed_identity_check.py	--pmid for 17 report PMIDs (42276303 42309484 42538876 42954437 34747138 30356099 31271653 30189284 19052226 25071191 22344687 31419467 38605177 24277868 34399820 37391087 29588962)	2026-11-08T18:02Z	17 of 17 verdict MATCH	identity of each cited PMID against its stored DOI; title overlaps 0.78 to 1.0; no content checked
+Q02	PubMed convert_article_ids tool	25071191 24277868 42276303 19052226 34399820	2026-11-08T18:04Z	4 PMC ids; 42276303 none	chose full-text routes
+Q03	PubMed get_article_metadata tool	25071191 24277868 42276303 19052226 34399820; later 31419467 and 41510857	2026-11-08T18:05Z	7 records	abstracts read
+Q04	Europe PMC REST fullTextXML	PMC8365958; PMC3934715; PMC4136605; PMC6671595 (two tries each)	2026-11-08T18:04Z	PMC8365958 HTTP 200; the other three HTTP 500 twice	read main text of 34399820 only; the others stay abstract_only; PMC full-text tool returned an empty body for PMC3934715
+Q05	PubMed tool	(WWOX OR WOREE) AND (CACNA1H OR CACNA1G OR CACNA1I OR "T-type" OR Cav3 OR "calcium channel, T-type"[MeSH])	2026-11-08T18:06Z	1 (PMID 41510857)	absence perimeter; hit is a gene-list cohort abstract
+Q06	PubMed tool	(Wwox OR WWOX) AND ethosuximide	2026-11-08T18:06Z	0	as the prior package: the tool cannot see the full text of the Cheng 2020 report of ethosuximide in Wwox mice
+Q07	Europe PMC REST search	(TITLE_ABS:WWOX OR TITLE_ABS:WOREE) AND (TITLE_ABS:CACNA1H OR CACNA1G OR CACNA1I OR "T-type" OR Cav3)	2026-11-08T18:06Z	1 (the same cohort abstract)	second route for Q05
+Q08	Europe PMC REST search	(WWOX OR WOREE) AND (CACNA1H OR CACNA1G OR CACNA1I OR "T-type" OR Cav3), full text	2026-11-08T18:05Z	89	count only; not screened
+Q09	Europe PMC REST search	(WWOX OR WOREE) AND ulixacaltamide; (WWOX OR WOREE) AND CACNA1I	2026-11-08T18:06Z	0; 15 (full text, not screened)	probe and isoform perimeter
+Q10	paper_packet.py claim / fulltext_receipts.py status	PMIDs 25071191 24277868 42276303 19052226 34399820 31419467	2026-11-08T18:03Z	42276303 had one prior receipt; the others none	ALSO line: ttype_20261107 claim on 42276303; claim for 31419467 placed after reading (order error)
+Q11	git grep in the worktree	Orai; mibefradil; Z941; TTA-P2; enantiomer; hypomorph; hypoglyc; CACNA1I	2026-11-08T18:08Z	see reconcile.tsv	perimeter for new_to_legend rows

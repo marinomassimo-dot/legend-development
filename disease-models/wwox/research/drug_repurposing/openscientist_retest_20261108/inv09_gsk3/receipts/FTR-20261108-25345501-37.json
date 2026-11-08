@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-08T19:46:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-08T19:46:30Z",
+ "event_id": "FTR-20261108-25345501-37",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: inositol synthesis inhibition (INO1 knockdown) inactivates GSK-3 alpha by increased inhibitory phosphorylation in SK-N-SH cells | Abstract | \"led to the inactivation of GSK-3α by increasing the inhibitory phosphorylation of this kinase\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv09_gsk3/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record (abstract) read 2026-11-08 through the PubMed metadata tool; no full text sought; bytes not saved",
+ "study_id": {
+  "doi": "10.1111/jnc.12978",
+  "pmid": "25345501"
+ },
+ "workflow": "os-09 INV-09 GSK3 full-input repeat Phase 2"
+}

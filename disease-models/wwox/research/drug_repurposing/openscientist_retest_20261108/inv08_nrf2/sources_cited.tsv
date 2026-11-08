@@ -1,0 +1,21 @@
+src_id	as_written	pmid_or_doi_as_written	used_for	anchor	note
+S01	KEAP1 inhibition neuroprotective, suppresses epilepsy	PMID 29538645	E33 E34 E69	L17, L96	
+S02	Sulforaphane/Nrf2 in TLE model	PMID 34829573	E35 E36	L17, L97	
+S03	Combination antioxidant therapy, epileptogenesis	PMID 31382215	E37	L17, L98	
+S04	Reductive stress, ER stress, cardiomyopathy	PMID 40729961	E39 E41 E54	L22, L99	
+S05	Nrf2 clears ubiquitinated proteins	PMID 24747945	E40 E41	L22, L100	
+S06	Wwox deletion -> reduced interneurons, neuroinflammation	PMID 30290271	E15 E19	L27, L35, L101	
+S07	WWOX-mitochondria interaction, ROS	PMID 35984507	E16	L27, L102	
+S08	GSK-3beta / lithium abolishes Wwox seizures	PMID 32000863	E03 E04 E09 E11 E12 E63 E71	L30, L103, L129	
+S09	Src kinases export/degrade Nrf2	PMID 21690096	E05 E06 E07 E09	L30, L104	
+S10	Zn deficiency, Fyn, Nrf2 down-regulation	PMID 23251339	E08 E09	L30, L105	
+S11	Gclm-KO PV vulnerability, NAC rescue	PMID 23140664	E20 E24 E25 E32	L35, L42, L106	
+S12	NAC preserves PV/PNN after TBI	PMID 36130098	E21 E24 E25 E32	L35, L42, L107	
+S13	Perineuronal nets protect fast-spiking cells	PMID 23671099	E22 E24	L35, L108	
+S14	Redox-mito-immune framework (schizophrenia)	PMID 42439630	E23 E24 E60	L35, L109, L123	Identifier as written; not checked in Phase 1
+S15	Sulforaphane, white matter, Nrf2-dependent	PMID 36244590	E26 E28 E44 E46	L40, L44, L110	
+S16	SFN Nrf2-dependent AND -independent	PMID 27401964	E29 E30	L41, L111	
+S17	tBHQ/SFN ARE, Nrf2-KO + adenoviral rescue	PMID 14762128	E27 E28	L40, L112	
+S18	miR-155-5p binds Nrf2 3'UTR in OPCs	PMID 40902898	E43 E46	L44, L113	Identifier as written; not checked in Phase 1
+S19	Neuronal Wwox deletion -> epilepsy, myelin defects	PMID 33914858	E19 E45 E46	L35, L44, L114	
+S20	curated WWOX-DEE dismech entry (keyword audit)	none given	E13 E14	L27	Source of knowledge-base claims is not identified by identifier
