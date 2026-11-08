@@ -608,16 +608,47 @@ def links_for_target(idx: Index, tgt: dict) -> tuple[list, list, list]:
     return idx.chembl_human.get(sym, []), idx.dgidb.get(h, []), idx.chembl_nonhuman.get(sym, [])
 
 
-DEFAULT_BRIDGES = DR / "needs/bridges_it35.tsv"
+BRIDGE_FIELDS = ("gene_a", "hgnc_a", "relation", "gene_b", "hgnc_b", "status", "context", "evidence_ref", "note")
+BRIDGE_STATUS = {"observed_other_context", "observed_other_tissue", "observed_other_disease", "observed_other_organism", "observed_abstract", "inferred", "hypothesised"}
+BRIDGE_WORD = "packages"      # `--bridges packages`: every package's own output/bridges.tsv (IT36 P3), not a second table kept by hand
 
 
-def load_bridges(path: Path | None) -> list[dict]:
-    """IT35 P6: curated precedent relations between two genes (one is a target of a need), each with its status, context and evidence pointer.
-    A relation here is a HYPOTHESISED BRIDGE for the need that uses it: it is never an observed link in a WWOX system and carries no sign."""
-    if path is None or not Path(path).exists():
+def bridge_files(dr: Path | None = None) -> list[Path]:
+    """The relation tables the packages themselves deliver (IT36 P3): `<package>/output/bridges.tsv`, written by whoever read the sources."""
+    return sorted((DR if dr is None else Path(dr)).glob("*/output/bridges.tsv"))
+
+
+def check_bridge_row(r: dict, where: str) -> dict:
+    """A bridge names two genes by symbol and HGNC id, a relation in words, the status of the evidence and a pointer; it has no sign column. Refuses a row that does not."""
+    if any(("sign" in k or "direction" in k) for k in r):
+        raise ValueError(f"{where}: a bridge carries no sign or direction column")
+    for k in BRIDGE_FIELDS:
+        if not (r.get(k) or "").strip():
+            raise ValueError(f"{where}: empty field {k}")
+    if not (r["hgnc_a"].startswith("HGNC:") and r["hgnc_b"].startswith("HGNC:")):
+        raise ValueError(f"{where}: genes must carry an HGNC id")
+    if r["status"] not in BRIDGE_STATUS:
+        raise ValueError(f"{where}: status {r['status']!r} is not one of {sorted(BRIDGE_STATUS)}")
+    return r
+
+
+def load_bridges(path) -> list[dict]:
+    """IT35 P6, IT36 P3: curated precedent relations between two genes (one is a target of a need), each with its status, context and evidence pointer.
+    `path` is a file, the word `packages` (every package's own bridges.tsv) or a list of these. A relation here is a HYPOTHESISED BRIDGE for the need that uses it:
+    it is never an observed link in a WWOX system and carries no sign. Each row remembers the file it came from."""
+    if path is None:
         return []
-    with open(path, encoding="utf-8", newline="") as fh:
-        return [r for r in csv.DictReader(fh, delimiter="\t")]
+    if isinstance(path, (list, tuple)):
+        return [r for p in path for r in load_bridges(p)]
+    files = bridge_files() if str(path) == BRIDGE_WORD else [Path(path)]
+    out = []
+    for f in files:
+        if not f.exists():
+            continue
+        with open(f, encoding="utf-8", newline="") as fh:
+            for i, r in enumerate(csv.DictReader(fh, delimiter="\t"), 2):
+                out.append(dict(check_bridge_row(r, f"{f.parent.parent.name if f.parent.name == 'output' else f.name} line {i}"), source_file=str(f.relative_to(DR)) if f.is_relative_to(DR) else f.name))
+    return out
 
 
 def targets_with_bridges(need: dict, bridges: list[dict] | None) -> list[dict]:
@@ -841,7 +872,7 @@ def main(argv=None) -> int:
     n.add_argument("need_id")
     n.add_argument("--limit", type=int, default=30)
     n.add_argument("--json", action="store_true")
-    n.add_argument("--bridges", type=Path, default=None, help="curated precedent relations (needs/bridges_it35.tsv) widening the list with pathway members; off by default")
+    n.add_argument("--bridges", action="append", default=None, help="curated precedent relations (a file, or `packages` for every package output/bridges.tsv) widening the list with pathway members; off by default")
     c = sub.add_parser("compound")
     c.add_argument("query")
     c.add_argument("--json", action="store_true")

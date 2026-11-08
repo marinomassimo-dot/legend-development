@@ -2,8 +2,10 @@
 """IT35 P6: precedent relations (bridges) widen the need search with pathway members; they never change the headline links and never carry a sign."""
 from __future__ import annotations
 
+import csv
 import os
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -31,13 +33,35 @@ class Bridges(unittest.TestCase):
         self.assertEqual(rs.targets_with_bridges(NEED, None), NEED["targets"])
 
     def test_the_shipped_bridge_table_is_well_formed_and_makes_no_wwox_claim(self):
-        rows = rs.load_bridges(rs.DEFAULT_BRIDGES)
+        rows = rs.load_bridges(rs.BRIDGE_WORD)
         self.assertTrue(rows)
         for r in rows:
             self.assertRegex(r["hgnc_a"], r"^HGNC:\d+$")
             self.assertRegex(r["hgnc_b"], r"^HGNC:\d+$")
             self.assertTrue(r["status"].startswith(("observed_other_context", "inferred", "hypothesised")), r["status"])
             self.assertIn("not shown in", r["note"])                          # every bridge says what is not shown
+
+    def test_the_packages_deliver_their_own_bridges_and_nothing_is_kept_twice(self):
+        files = rs.bridge_files()
+        self.assertGreaterEqual(len(files), 2)
+        rows = rs.load_bridges(rs.BRIDGE_WORD)
+        self.assertEqual({(r["gene_a"], r["gene_b"]) for r in rows} >= {("GSK3B", "EIF2B5"), ("HDAC5", "SLC2A1")}, True)
+        self.assertTrue(all(r["source_file"].endswith("output/bridges.tsv") for r in rows))
+        self.assertFalse((rs.DR / "needs/bridges_it35.tsv").exists())        # the hand-kept copy is gone
+
+    def test_a_malformed_bridge_is_refused_not_guessed(self):
+        def write(rows):
+            f = Path(tempfile.mkdtemp()) / "bridges.tsv"
+            with open(f, "w", newline="", encoding="utf-8") as fh:
+                w = csv.DictWriter(fh, fieldnames=list(rows[0]), delimiter="\t")
+                w.writeheader()
+                w.writerows(rows)
+            return f
+        good = dict(BR[0])
+        self.assertEqual(len(rs.load_bridges(write([good]))), 1)
+        for bad in (dict(good, sign="up"), dict(good, direction="down"), dict(good, hgnc_a="4617"), dict(good, status="proven"), dict(good, evidence_ref="")):
+            with self.assertRaises(ValueError):
+                rs.load_bridges(write([bad]))
 
     @unittest.skipUnless(os.environ.get("LEGEND_CATALOG_CACHE"), "needs the local catalogue cache (not distributed)")
     def test_bridged_rows_leave_the_headline_unchanged_and_carry_no_sign(self):
@@ -47,7 +71,7 @@ class Bridges(unittest.TestCase):
         roles = rs.load_roles(rs.DEFAULT_ROLES)
         need = next(n for n in needs if n["id"] == "NEED-ISR-ATTENUATION")
         plain = rs.associations_for_need(need, idx, roles)
-        bridged = rs.associations_for_need(need, idx, roles, bridges=rs.load_bridges(rs.DEFAULT_BRIDGES))
+        bridged = rs.associations_for_need(need, idx, roles, bridges=rs.load_bridges(rs.BRIDGE_WORD))
         head = lambda r: sorted({(a["catalogue_id"], a["target"]) for a in r["associations"] if not a["excluded_from_counts"] and a["target_kind"] in rs.LINK_KINDS})
         self.assertEqual(head(plain), head(bridged))
         extra = [a for a in bridged["associations"] if a["bridge"]]
