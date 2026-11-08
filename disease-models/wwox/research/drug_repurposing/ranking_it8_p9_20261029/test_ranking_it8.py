@@ -120,6 +120,32 @@ class SyntheticRule(unittest.TestCase):
         self.assertNotEqual(k("Ketamine"), k("Esketamine"))     # stereoisomers are pharmacologically different and are not merged by this display key
 
 
+class AsOfDate(unittest.TestCase):
+    """IT36 P2B: the date shown is the date of the evidence read, not of any dated folder name found beside the module."""
+
+    def run_in(self, extra_dirs=(), ledger_lines=()):
+        with tempfile.TemporaryDirectory() as t:
+            dr = Path(t)
+            src = dr / "mod.py"
+            src.write_text('X = DR / "consumed_20261031"\n', encoding="utf-8")
+            (dr / "consumed_20261031").mkdir()
+            for d in extra_dirs:
+                (dr / d).mkdir()
+            led = dr / "ledger.jsonl"
+            led.write_text("".join(ln + "\n" for ln in ledger_lines), encoding="utf-8")
+            return rk.as_of_date({}, dr=dr, receipts=led, source=str(src))
+
+    def test_an_unconsumed_folder_does_not_move_the_date(self):
+        self.assertEqual(self.run_in(), "2026-10-31")
+        self.assertEqual(self.run_in(extra_dirs=["stranger_20261209", "renamed_20270101.md"]), "2026-10-31")
+
+    def test_a_newer_receipt_moves_it(self):
+        self.assertEqual(self.run_in(ledger_lines=['{"analysis_at": "2026-11-08T00:55:00Z"}']), "2026-11-08")
+
+    def test_the_real_module_still_answers_with_a_date(self):
+        self.assertRegex(rk.as_of_date({}), r"^20\d\d-\d\d-\d\d$")
+
+
 class ReplicationText(unittest.TestCase):
     """IT18 P5: zero resolved source PMIDs is 'not computable', never 'one source paper'; one origin counts once."""
 
