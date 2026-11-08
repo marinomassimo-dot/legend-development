@@ -17,7 +17,7 @@
  "event_id": "FTR-20261107-25080600-95",
  "evidence_basis": [
   "Abstract read in full; full text exists in PMC (PMC4115145) but was not read (Stage 2 staging limit).",
-  "verbatim_locator | proposition: failed remyelination in Cdk5 deletion came with higher GSK-3 beta signalling | abstract | \"an enhancement of Gsk-3β signaling pathways\""
+  "verbatim_locator | proposition: failed remyelination in Cdk5 deletion came with higher GSK-3 beta signalling | abstract | \"an enhancement of Gsk-3\u03b2 signaling pathways\""
  ],
  "evidence_depth": "abstract_only",
  "outputs": [

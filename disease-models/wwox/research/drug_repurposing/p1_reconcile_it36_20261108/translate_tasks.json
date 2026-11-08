@@ -1,0 +1,117 @@
+{
+ "keymap": {
+  "011d02c8e974": "9aec2f69f7c9",
+  "0e7dc67fbe4e": "ca1fbcc61aeb",
+  "2650364c2741": "baea8a26ea41",
+  "2a932a164144": "468979f1b607",
+  "2f71bb45ed56": "0d7cc1bfbe47",
+  "31fbc9629e08": "13e3d1c623c2",
+  "3cbb7f17a1d6": "f26302ef4988",
+  "4398e9545883": "163545e4bfce",
+  "4aad77323ff8": "2e8aa799280e",
+  "8461ad4cd694": "3cbfb8ec2003",
+  "8ea04146ff72": "5ff1be97b7ac",
+  "a419572c6fac": "770d346f88ca",
+  "abc2c9998138": "168c2068833c",
+  "d23f1af1ac7e": "a50ceba18e8b",
+  "dce2c85fd6e6": "a38eb56059b7",
+  "deb5d068d8fa": "7f6ef8d06b05",
+  "e837ad9b729d": "1aca06c1e648",
+  "fce4f6168e58": "40b5ef7c03bb"
+ },
+ "tasks": [
+  {
+   "key": "011d02c8e974",
+   "mode": "ADD",
+   "english": "[IT36] ECAR is not a lactate readout without an oxygen correction; measure lactate and pyruvate directly with redox state."
+  },
+  {
+   "key": "0e7dc67fbe4e",
+   "mode": "ADD",
+   "english": "[IT36] the abstract reports GLUT4 promoter activity and no GLUT1 promoter result; sign is paralogue- and tissue-dependent; HDAC4 results are never carried to HDAC5."
+  },
+  {
+   "key": "2650364c2741",
+   "mode": "ADD",
+   "english": "[IT36] H1006Y is a direction control (activity up), not a catalytic-dead arm; a catalytic-dead mutant must show expression, stability, localisation, HDAC3 and MEF2 binding intact."
+  },
+  {
+   "key": "2a932a164144",
+   "mode": "ADD",
+   "english": "[IT36] existing co-culture separates neither contact or substrate integrity nor a soluble product; peripheral seizure-free DRG neurons; add a fixed-neuron arm and a factor arm."
+  },
+  {
+   "key": "2f71bb45ed56",
+   "mode": "ADD",
+   "english": "[IT36] A GluN2B NAM effect would show participation of GluN2B-containing receptors in sustaining bursts, not that the lesion lies in GluN2B; it needs a target-specific control (matched-current d-APV)."
+  },
+  {
+   "key": "31fbc9629e08",
+   "mode": "EDIT",
+   "old_english": "Repeat the slice burst assay with the magnesium concentration reported, a partial-block agent beside the tool compound, and the untreated same-genotype comparator.",
+   "new_english": "Repeat the slice burst assay with the magnesium concentration reported, a d-APV arm and a GluN2B NAM arm, each at matched measured NMDAR-current reduction (two unrelated NAMs), vehicle time-matched, animal as the unit; memantine only afterwards, with the magnesium concentration and holding voltage stated, beside the tool compound, and the untreated same-genotype comparator."
+  },
+  {
+   "key": "3cbb7f17a1d6",
+   "mode": "ADD",
+   "english": "[IT36] selectivity is biochemical and does not carry to cells (4-6-fold in live cells); attribution needs an isogenic isoform-knockout check per compound or convergent pharmacology. [IT36] in rat organotypic CA1 the GSK3-PI4KIIalpha branch sets synaptic NMDAR current; compare GSK3-route compounds with d-APV at matched NMDAR-current reduction; double GSK3A/B depletion needed."
+  },
+  {
+   "key": "4398e9545883",
+   "mode": "ADD",
+   "english": "[IT36] precedent for a non-cell-autonomous (astrocyte) route exists in another system with an Nrf2-null control and rescue; KEAP1 knockdown needs an NFE2L2-loss cross; composition is not astrocyte-mediated benefit."
+  },
+  {
+   "key": "4aad77323ff8",
+   "mode": "EDIT",
+   "old_english": "Clinical reports only. Children counted once across 14 reports: 36 to 38 exposed to at least one of vigabatrin, hormonal therapy, ketogenic diet or cannabidiol (partial full-text depth in 11 reports, one source at abstract level). Both a symptomatic and a developmental outcome are recorded for 6. In 4 of them, a partial or transient improvement came with development unchanged; in 2, neither moved. No sustained, instrumented response is recorded, and no developmental gain follows any of the four classes. Vigabatrin: 5 children with both endpoints in 4 reports (4 discordant, 1 concordant non-response); these are not independent of the other classes, since three of the five also supply them and all five were on co-therapy. Children with both endpoints, by class, of those exposed: hormonal 3 of 11; ketogenic diet 2 of 12; cannabidiol 1 of 7. Counts only, no percentage (n below 10). Developmental statements are clinical narratives without a scale. A brain-imaging safety signal is recorded beside them in two children (abstract level, a report selected for the finding), so it is not a frequency. No WWOX child is recorded with a developmental gain after a symptomatic improvement. Four children in three reports (two of them in one report) had a partial, transient or clinically-defined improvement with development not progressing; two had neither. That is what the baseline in other genetic and structural early-onset encephalopathies predicts (a responder with poor development is the majority outcome in infantile spasms and near-universal in genetic strata), so it is not by itself a WWOX-specific feature. The comparison holds only as a binary: the baseline uses standardised scores with a cut, every WWOX developmental statement is a clinician narrative, and no WWOX child had a sustained, instrumented response. Non-WWOX DEE baseline (batch_sci_20261105 a2_baseline; not WWOX evidence): in a prospective IESS cohort read at partial full-text depth, 72 percent of responders (126 of 175, computed from its Table 1) were below the developmental cut at 3 years, and no genetic-aetiology child reached a favourable outcome (0 of 49, a count over all genetic-aetiology children, not a responder rate). In two randomised IESS trials (abstract level), arms that raised early spasm cessation by 15 to 19 points showed no demonstrated developmental difference, with about one chance in four of detecting the difference that full mediation would predict. In TSC, two randomised trials of pre-onset prevention changed seizure endpoints without changing development to 36 months; they test prevention before onset, not response after onset. The person-level association (ICISS, abstract level: 15.9 VABS points higher with early cessation) is carried by unknown aetiology and a normal first neurological examination.",
+   "new_english": "Clinical reports only. Children counted once across 14 reports: 36 to 38 exposed to at least one of vigabatrin, hormonal therapy, ketogenic diet or cannabidiol (partial full-text depth in 11 reports, one source at abstract level). Both a symptomatic and a developmental outcome are recorded for 6. In 4 of them, a partial or transient improvement came with no developmental progress recorded; in 2, neither moved. No sustained, instrumented response is recorded, and no developmental gain follows any of the four classes. Vigabatrin: 5 children with both endpoints in 4 reports (4 discordant, 1 concordant non-response); these are not independent of the other classes, since three of the five also supply them and all five were on co-therapy. Children with both endpoints, by class, of those exposed: hormonal 3 of 11; ketogenic diet 2 of 12; cannabidiol 1 of 7. Counts only, no percentage (n below 10). Developmental statements are clinical narratives without a scale. A brain-imaging safety signal is recorded beside them in two children (abstract level, a report selected for the finding), so it is not a frequency. No WWOX child is recorded with a developmental gain after a symptomatic improvement. Four children in three reports (two of them in one report) had a partial, transient or clinically-defined improvement with development not progressing; two had neither. That is what the baseline in other genetic and structural early-onset encephalopathies predicts (a responder with poor development is the majority outcome in infantile spasms and near-universal in genetic strata), so it is not by itself a WWOX-specific feature. The comparison holds only as a binary: the baseline uses standardised scores with a cut, every WWOX developmental statement is a clinician narrative, and no WWOX child had a sustained, instrumented response. Non-WWOX DEE baseline (batch_sci_20261105 a2_baseline; not WWOX evidence): in a prospective IESS cohort read at partial full-text depth, 72 percent of responders (126 of 175, computed from its Table 1) were below the developmental cut at 3 years, and no genetic-aetiology child reached a favourable outcome (0 of 49, a count over all genetic-aetiology children, not a responder rate). In two randomised IESS trials (abstract level), arms that raised early spasm cessation by 15 to 19 points showed no demonstrated developmental difference, with about one chance in four of detecting the difference that full mediation would predict. In TSC, two randomised trials of pre-onset prevention changed seizure endpoints without changing development to 36 months; they test prevention before onset, not response after onset. The person-level association (ICISS, abstract level: 15.9 VABS points higher with early cessation) is carried by unknown aetiology and a normal first neurological examination. [IT36] the 2024 vigabatrin case: developmental statements uninstrumented, stall from spasm onset before drug; seizure-free at home while video-EEG still showed events."
+  },
+  {
+   "key": "8461ad4cd694",
+   "mode": "ADD",
+   "english": "[IT36] ZD7288 at 50 uM is about 40 times its sodium-current IC50 in DRG neurons (age not stated); read a second chemotype and the blocker-sensitive current in voltage clamp; nickel/Z944 and Kv7 arms separate."
+  },
+  {
+   "key": "8ea04146ff72",
+   "mode": "ADD",
+   "english": "[IT36] Memantine block of extrasynaptic current was about 1.9-fold that of synaptic in one autaptic design; a later paper in culture found little extrasynaptic selectivity at 2 uM; preference is not exclusion and the minutes-scale premise is untested at WWOX burst durations. [IT36] burst duration median 0.66 s (Supplementary Table S1), intermediate between a synaptic pulse and the minutes-scale activation of the memantine premise; the premise is untested at this scale."
+  },
+  {
+   "key": "a419572c6fac",
+   "mode": "ADD",
+   "english": "[IT36] Z944 was measured on Cav3.2 only in the source read (human clone, HEK293T, whole cell); Cav3.1 and Cav3.3 values and mouse brain exposure are not obtained; the blocker class has not discriminated between isoforms."
+  },
+  {
+   "key": "abc2c9998138",
+   "mode": "ADD",
+   "english": "[IT36] the 12-child series (2 seizure-free, 9 continuing, 1 death) is unread for treatment; its two seizure-free children are the first candidates for a sustained response."
+  },
+  {
+   "key": "d23f1af1ac7e",
+   "mode": "ADD",
+   "english": "[IT36] caregiver-rated global improvement anchored at about 31 percent reduction (slight) and 49.6 percent (much) in Lennox-Gastaut; not WWOX evidence."
+  },
+  {
+   "key": "dce2c85fd6e6",
+   "mode": "EDIT",
+   "old_english": "WWOX-system: a glycolytic signature; the kinase transcript lower in the organoid; no difference in the one human PDH activity measurement. The kinase-to-PDH link has no WWOX observation.",
+   "new_english": "WWOX-system: a glycolytic signature; the kinase transcript lower in the organoid; no difference in the one human PDH activity measurement, which is a non-neural fibroblast pool with partial WWOX depletion (n not stated) and says nothing about neurons. The kinase-to-PDH link has no WWOX observation."
+  },
+  {
+   "key": "deb5d068d8fa",
+   "mode": "ADD",
+   "english": "[IT36] no evidence of early hyperactivity exists for the neuronal-deletion model before P13; activity effects on markers in the neonate (P0-P8) do not speak to the burst window."
+  },
+  {
+   "key": "e837ad9b729d",
+   "mode": "ADD",
+   "english": "[IT36] no WWOX bridge to hyaluronan nets found (PubMed 0 hits; Europe PMC titles only); the only lead (HYAL2/WWOX complex) concerns neuronal death, not nets."
+  },
+  {
+   "key": "fce4f6168e58",
+   "mode": "ADD",
+   "english": "[IT36] GSK3 sign on oligodendrocyte differentiation is divided (inhibitors raise it in one source, lower it in another after Foxg1 knockdown; genetic loss in mature cells changed survival); recorded as undetermined."
+  }
+ ]
+}

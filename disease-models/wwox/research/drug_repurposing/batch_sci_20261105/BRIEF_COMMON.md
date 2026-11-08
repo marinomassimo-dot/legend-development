@@ -43,6 +43,7 @@ Follow the shape of `disease-models/wwox/research/drug_repurposing/compare_it28_
 5. `receipts/`: staged receipts as above, plus `receipts/INDEX.tsv` (`event_id, pmid, evidence_depth, prior_receipt, validated_ok`).
 6. No scripts unless a count cannot be reproduced otherwise; if you keep one, no shebang line, a `--help` guard in its first lines (print the docstring and exit before any network call or file write), no symlinks anywhere.
 7. Any hash you write is written in full length. Do not write strings that look like an e-mail address. Do not name a 7-character abbreviated hash.
+8. Optional, only when your package states such relations: `bridges.tsv` (precedent relations between two genes that touch a need's targets) and `probe_links.tsv` (a compound the catalogue lacks a mechanism row for). The search joins them from the package folder; nobody copies them into a shared table. Columns and rules are the validators `check_bridge_row` and `check_probe_row` in `framework/scripts/repurposing_search.py`: HGNC ids, a status from the closed list, an evidence pointer, no sign or direction column, a probe target given as a group with its member genes. Do not write a relation you did not read in a source; an empty file is not delivered.
 
 ## Final message to the Orchestrator (this is all it sees of your work)
 

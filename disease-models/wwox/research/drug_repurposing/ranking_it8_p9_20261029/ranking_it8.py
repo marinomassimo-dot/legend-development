@@ -1651,12 +1651,23 @@ def selection_table(uni: dict, sel: dict, as_of: str, units_by_id: dict) -> list
     return rows
 
 
-def as_of_date(ctx: dict) -> str:
+def as_of_date(ctx: dict, dr: Path | None = None, receipts: Path | None = None, source: str | None = None) -> str:
+    """The date of the latest evidence the ranking reads: the newest dated folder this module itself names, or the newest analysis date in the receipt ledger it counts.
+    A folder the module does not name, created or renamed beside it, is not an input and cannot move this date (IT36 P2B; before, any dated name in the module counted)."""
+    dr = DR if dr is None else dr
+    receipts = RECEIPTS if receipts is None else receipts
+    text = Path(source or __file__).read_text(encoding="utf-8")
     dates = []
-    for p in DR.iterdir():
-        m = re.search(r"_(20\d\d)(\d\d)(\d\d)(?:\.\w+)?$", p.name)
-        if m:
+    for name in set(re.findall(r"""["']([A-Za-z0-9_]+_20\d{6})["']""", text)):
+        if (dr / name).exists():
+            m = re.search(r"_(20\d\d)(\d\d)(\d\d)$", name)
             dates.append("-".join(m.groups()))
+    if receipts.exists():
+        with open(receipts, encoding="utf-8") as f:
+            for line in f:
+                m = re.search(r'"analysis_at":\s*"(20\d\d-\d\d-\d\d)', line)
+                if m:
+                    dates.append(m.group(1))
     return max(dates) if dates else "UNKNOWN"
 
 
