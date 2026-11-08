@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-08T08:40:17Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-08T08:41:17Z",
+ "event_id": "FTR-20261108-19071119-96",
+ "evidence_basis": [
+  "abstract analysed; methods, cell line, hypoxia condition, reporter and controls not read and not inferred",
+  "verbatim_locator | proposition: HDAC4 and HDAC5 raise HIF-1alpha transactivation without raising its amount | Abstract | \"HDAC4 and HDAC5 enhanced transactivation by HIF-1alpha without stabilizing HIF-1alpha.\"",
+  "verbatim_locator | proposition: HDAC4 and HDAC5 shift HIF-1alpha binding from FIH-1 toward p300 | Abstract | \"binding of HIF-1alpha to FIH-1 decreased, whereas binding to p300 increased\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/decisive_rechecks_it36_20261108/output/hdac5_hif.tsv",
+  "disease-models/wwox/research/drug_repurposing/decisive_rechecks_it36_20261108/output/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 19071119 (abstract and metadata as served 2026-11-08); no PMC record; full text not reached",
+ "study_id": {
+  "doi": "10.1016/j.febslet.2008.11.044",
+  "pmid": "19071119"
+ },
+ "workflow": "IT36 science session, package P1 (decisive_rechecks_it36_20261108), producer it36-p1. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

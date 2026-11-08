@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-08T08:40:17Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "captions_only",
+  "tables": "read"
+ },
+ "event_at": "2026-11-08T08:41:17Z",
+ "event_id": "FTR-20261108-34634460-96",
+ "evidence_basis": [
+  "figure images not viewed; supplement text searched for the table of N's only (it lists bursts, slices and animals of field recordings); held tags stripped for reading",
+  "verbatim_locator | proposition: recordings were compared with a Kolmogorov-Smirnov test whose sampling unit is not declared, with cells and animals declared per panel | Results, Fig. 4 legend | \"S-CTLs n = 14 cells from 7 animals; S-KOs n = 9 cells from 5 animals\"",
+  "verbatim_locator | proposition: cumulative plots are empirical distribution functions of an undescribed input | Methods 6.5 | \"generated using ecdf.m function in Matlab, which computes the Kaplan-Meier estimate of the cumulative distribution function of the input\"",
+  "verbatim_locator | proposition: statistical tests named are t-test, rank-sum and Bonferroni, KS is not named in Methods | Methods 6.7 | \"A Bonferroni post-hoc correction was applied in each case for tests of multiple comparisons.\"",
+  "verbatim_locator | proposition: sag is measured at a fixed -200 pA step from the most negative deflection | Methods 6.6 | \"The sag voltage was measured by subtracting the most negative membrane deflection from its return to steady state\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/decisive_rechecks_it36_20261108/output/ephys_claims.tsv",
+  "disease-models/wwox/research/drug_repurposing/decisive_rechecks_it36_20261108/output/README.md"
+ ],
+ "prior_receipt": "FTR-20261029-34634460-05",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "b01bfa4f6a9cb9cc1d39c167b9953e679639913d56ef74b19b4d59cc05399e02",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID34634460_Wwox_osc2021_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1016/j.nbd.2021.105529",
+  "pmid": "34634460"
+ },
+ "workflow": "IT36 science session, package P1 (decisive_rechecks_it36_20261108), producer it36-p1. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

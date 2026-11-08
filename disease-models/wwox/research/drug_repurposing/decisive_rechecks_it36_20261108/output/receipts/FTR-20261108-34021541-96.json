@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-08T08:40:17Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-08T08:41:17Z",
+ "event_id": "FTR-20261108-34021541-96",
+ "evidence_basis": [
+  "verbatim_locator | proposition: HDAC5 silencing lowered HIF1A and PFKFB3 expression in the epilepsy-model neurons | Results | \"HDAC5 silencing reduced HIF1α and PFKFB3 expression in epileptic cells\"",
+  "verbatim_locator | proposition: overexpressed HDAC5 co-immunoprecipitated more HIF1A than control | Results | \"IP detected the binding of HDAC5 to HIF1α, and the results showed that oe-HDAC5 combined more HIF1α than oe-NC\"",
+  "section note: ChIP in this paper concerns PFKFB3 promoter only; no SLC2A1 read-out; Methods hold a placeholder 'X of 90 mice died' and the abstract says rat while Methods say mice"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/decisive_rechecks_it36_20261108/output/hdac5_hif.tsv",
+  "disease-models/wwox/research/drug_repurposing/decisive_rechecks_it36_20261108/output/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC record PMC8202868 text returned by the PubMed MCP full-text tool on 2026-11-08 (Results, Discussion, Materials and Methods, figure titles and legends); figure images not viewed; supplementary figures not read; bytes not saved",
+ "study_id": {
+  "doi": "10.18632/aging.203058",
+  "pmid": "34021541"
+ },
+ "workflow": "IT36 science session, package P1 (decisive_rechecks_it36_20261108), producer it36-p1. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
