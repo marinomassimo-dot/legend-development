@@ -1,0 +1,38 @@
+{
+ "analysis_time_precision": "minute",
+ "event_at": "2026-11-07T23:45:00Z",
+ "record_kind": "contemporaneous_receipt",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/seizure_function_inv10_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/seizure_function_inv10_20261107/output/evidence.tsv"
+ ],
+ "analysis_at": "2026-11-07T23:41:00Z",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_id": "FTR-20261107-42193054-93",
+ "evidence_basis": [
+  "Re-read through the PubMed/PMC full-text tool (text only; tables and figures not delivered) to check whether the report adds a treatment-outcome row; it does not. Not counted as a new source.",
+  "verbatim_locator | proposition: the infant died before any developmental assessment and no treatment-step outcome is reported | Results, case presentation | \"Unfortunately, the infant passed away from cardiac arrest after three months of age due to pulmonary infections and respiratory failure\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "prior_receipt": "FTR-20261003-42193054-01",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC record for the PMC id of this PMID fetched 2026-11-07 through the PubMed full-text tool; tables and figures not delivered; bytes not saved",
+ "study_id": {
+  "doi": "10.3390/cimb48050449",
+  "pmid": "42193054"
+ },
+ "workflow": "INV-10 package (label sz-p): question-driven re-read for treatment outcome and development. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

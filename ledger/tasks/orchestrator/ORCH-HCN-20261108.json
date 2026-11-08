@@ -1,0 +1,46 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-HCN-20261108",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Queued targeted package (operator, 2026-11-07): membrane physiology, HCN/Ih and pharmacological hypotheses; correct the electrophysiological premise (sag, input resistance, genotypes); refutation criteria; bounded lipid, trafficking and prior-activity leads (39548079, 24403084, 33547341); minimum discriminating comparison; up to three hypotheses.",
+ "START_UTC": "2026-11-08T04:30:00Z",
+ "BASELINE": "development/main cb727195dbb5917c6048659b55d69094c0a6c3c0; branch task/queue2-20261108. Reuses the IT13/IT14/IT29 function packages and the T-type, NMDA, PV and GSK3 deliveries by identifier.",
+ "CURRENT_PACKAGE": {
+  "id": "none",
+  "state": "complete; landing with queue2",
+  "delegate_active": "none",
+  "updated": "2026-11-08T09:00:00Z"
+ },
+ "RESUME": "Folder drug_repurposing/hcn_20261107/ (BRIEF.md, output/). Order: producer, census, verifier, correction.",
+ "DECISIONS_TAKEN": [
+  "Queued by the operator beside the running work; one delegate at a time; settings as before. Placed after the PV package it consumes.",
+  "Folder renamed from the _20261108 suffix to _20261107 before landing: ranking_it8.py derives its as-of date from the newest _YYYYMMDD directory name in drug_repurposing/, so a package directory dated 2026-11-08 changed the regenerated selections.tsv (11-07 to 11-08) and test_ranking_it8 failed in the battery on this branch; regeneration of the ranking derivatives is the integrating session's job and is not done here. The folder date is the date of the request (the user's day), not the date of the last write; the receipts keep their real event dates.",
+  "Battery on a no-hardlinks clone of 3c13b8acf0cd34b5d589b583d6a3a897622e1e38 (the tip of task/queue2-20261108 carrying INV-09, INV-10, INV-15, INV-16 and HCN/Ih), run at nice 19 while another session's battery was also running: the first run on 0cc96bb9 stopped on one real failure (test_ranking_it8: package folders dated 20261108 moved the as-of date derived from directory names; folders renamed to 20261107), the second run REGRESSION VERDICT PASS WITH SKIPS (214 targets, 9 skipped, environment). Not attributed to the closure commit that records it."
+ ],
+ "DELEGATIONS": [
+  "C producer hc-p: asked sonnet/medium, read back claude-sonnet-5-5 x50, medium x50; birth 17,484; 50 turns; ~10 min; output 55,260; cache written 178,251; cache read 5,384,098; peak 186,736; completed README (849 words), evidence (41), physiology (9), hypotheses (3), probes (7), experiment (6), queries (12), 5 staged receipts (validated with DOI check; partial_fulltext_read x4, one more); 4 new sources of 5; Europe PMC XML 500 for two records, the open PMC pages read once each (no challenge)",
+  "C verifier hc-v: asked sonnet/high, read back claude-sonnet-5-5 x47, high x47; birth 18,029; 47 turns; ~10 min; output 58,741; cache written 155,359; cache read 4,352,704; peak 163,844; blind; 41 rows: 35 supported, 6 overshoot (E13, E19, E20, E39, E40, E41); H1 arithmetic confirmed exactly with corrections of reading; Table 1 p values not reproducible from the printed means +/- SEM; corrections by the Orchestrator adopting the audit's wording"
+ ],
+ "ESCALATIONS": [],
+ "STOP_LOG": [
+  "No stop for a reserved act."
+ ],
+ "DEFAULTS_TAKEN": [
+  "Condition: settings not restated. Default: as before. Why safe: reversible; no shared file touched."
+ ],
+ "AUTHORISED_QUEUE_20261108C": {
+  "MANDATE_STATE": "COMPLETE",
+  "OBJ_1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "producer, census, verifier on premise/attribution/source independence/refutation logic, targeted correction",
+     "status": "DONE",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}

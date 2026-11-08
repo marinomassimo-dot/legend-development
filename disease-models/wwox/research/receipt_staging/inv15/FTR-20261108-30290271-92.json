@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-08T00:04:59Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-08T00:06:29Z",
+ "event_id": "FTR-20261108-30290271-92",
+ "evidence_basis": [
+  "Reopened for decisive details only (INV-15 delta, label pv-p): what the PV-positive and NPY-positive stereological counts identify and what they cannot show. Complete reads exist (FTR-20260806-30290271-01 and others); this receipt does not replace them.",
+  "verbatim_locator | proposition: PV-positive count 44 percent lower across the whole hippocampus of the global knockout | Results 3.1 | \"The overall reduction of PV+ interneurons in Wwox KO mice amounted to 44% when the hippocampus was taken in its entirety\"",
+  "verbatim_locator | proposition: counts are by optical fractionator, i.e. estimate marker-positive cells | Methods 2.4 | \"the optical fractionator method available in the StereoInvestigator system\"",
+  "verbatim_locator | proposition: some areas show no PV-positive cells at all | Results 3.1 | \"Some hippocampal areas in Wwox KO mice showed a complete absence of such cells\"",
+  "Absence statement: strings apopto, cell death, neuronal death returned 0 matches in the held XML; death is neither shown nor excluded. Figure images were not viewed in this re-read (captions only); the earlier receipt covers them."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pv_inv15_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/pv_inv15_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": "FTR-20261029-30290271-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "3672e628fd6f8d71bbc5512c214a9aedf81fe73a297bed2e1c0a7ee7f73aa1a7",
+ "source_kind": "fulltext_local",
+ "source_locator": "Held PMC author-manuscript XML for this PMID in the shared full-text store, re-read in part on 2026-11-08; bytes not copied",
+ "study_id": {
+  "doi": "10.1016/j.nbd.2018.09.026",
+  "pmid": "30290271"
+ },
+ "workflow": "INV-15 delta (pv_inv15_20261107), producer pv-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

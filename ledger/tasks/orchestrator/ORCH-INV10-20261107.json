@@ -8,16 +8,20 @@
  "START_UTC": "2026-11-08T01:00:00Z",
  "BASELINE": "development/main ce121d5814b8c83c65721c0709ac4ec2554a5011; same worktree and branch as ORCH-TTYPE-20261107. Reused by identifier: A1/A2 packages, CONSUMERS.md, aed_compare_it31, B1 white-matter package, ttype and nmda packages of this branch; PMID 39101447 has a complete read (FTR-20261003-39101447-01).",
  "CURRENT_PACKAGE": {
-  "id": "S-INV10",
-  "state": "brief written; queued behind INV-08 and INV-09",
+  "id": "none",
+  "state": "complete; landing with queue2",
   "delegate_active": "none",
-  "updated": "2026-11-08T01:00:00Z"
+  "updated": "2026-11-08T09:00:00Z"
  },
  "RESUME": "Folder drug_repurposing/seizure_function_inv10_20261107/ (BRIEF.md, output/). Order: producer, census, verifier on the decisive propositions, correction.",
  "DECISIONS_TAKEN": [
-  "Queued by the operator beside the running work; one delegate at a time; settings as before. Reconciliation with a cap of 4 new sources; close without redoing the batch if nothing new changes the qualified conclusions."
+  "Queued by the operator beside the running work; one delegate at a time; settings as before. Reconciliation with a cap of 4 new sources; close without redoing the batch if nothing new changes the qualified conclusions.",
+  "Battery on a no-hardlinks clone of 3c13b8acf0cd34b5d589b583d6a3a897622e1e38 (the tip of task/queue2-20261108 carrying INV-09, INV-10, INV-15, INV-16 and HCN/Ih), run at nice 19 while another session's battery was also running: the first run on 0cc96bb9 stopped on one real failure (test_ranking_it8: package folders dated 20261108 moved the as-of date derived from directory names; folders renamed to 20261107), the second run REGRESSION VERDICT PASS WITH SKIPS (214 targets, 9 skipped, environment). Not attributed to the closure commit that records it."
  ],
- "DELEGATIONS": [],
+ "DELEGATIONS": [
+  "S producer sz-p: asked sonnet/medium, read back claude-sonnet-5-5 x47, medium x47; birth 17,487; 47 turns; ~10 min; output 46,483; cache written 157,133; cache read 4,962,629; peak 165,618; completed README (~970 words), evidence (26 rows), proposition_map, questions (7), queries (11), 4 staged receipts (abstract/text level, validated with DOI check); 2 of 4 new sources; full text of 39039877 not reachable; INCIDENT: the producer started a background public_release_gate run that outlived it (read-only; ran about 3 minutes and ended by itself) - verifier briefs now say not to start background jobs",
+  "S verifier sz-v: asked sonnet/high, read back claude-sonnet-5-5 high; blind; 21 rows checked (18 decisive + 3 sample): 17 supported, 3 undershoot (E04, E09, E24), 1 overshoot (E10); proposition-map items P-b P-c P-d P-d2 B4 overshoot, B2 undershoot; the producer's headline recode of the 2024 vigabatrin case (four to three discordant children) WITHDRAWN; one Europe PMC XML 500 then one PMC page read with a second tool (server error, no challenge); corrections by the Orchestrator adopting the audit's wording"
+ ],
  "ESCALATIONS": [],
  "STOP_LOG": [
   "No stop for a reserved act."
@@ -26,13 +30,13 @@
   "Condition: settings not restated. Default: as before. Why safe: reversible; no shared file touched."
  ],
  "AUTHORISED_QUEUE_20261107I": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_1": {
    "order": 1,
    "steps": [
     {
      "step": "producer, census, verifier on decisive propositions, targeted correction",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator"
     }
    ]

@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-07T23:19:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-07T23:25:00Z",
+ "event_id": "FTR-20261107-32463939-99",
+ "evidence_basis": [
+  "full text read; figure captions only",
+  "verbatim_locator | proposition: knock-down halves the isolated synaptic NMDAR EPSC | Results | \"a substantial 50 \u00b1 4% reduction in the amplitude of EPSC\u2010N in transfected (41 \u00b1 4 pA) compared to non\u2010transfected\"",
+  "verbatim_locator | proposition: CT99021 lowers the isolated NMDAR EPSC in control neurons | Results | \"CT99021 (1\u03bcM) reduced EPSC\u2010N in control neurons to 57 \u00b1 4% (n = 17) of baseline responses\"",
+  "verbatim_locator | proposition: shRNA-resistant wild type rescues, the S9/51A mutant does not | Results | \"a mutated shRNA\u2010resistant PI4KII\u03b1 that could not be phosphorylated by GSK\u20103\u03b2 (S9/51A) was not able to rescue the reduction in EPSC\u2010N\"",
+  "verbatim_locator | proposition: plasmids rest on an earlier paper | Results | \"we utilized three previously validated plasmids\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/gsk3_inv09_20261107/output/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC fullTextXML for the PMC record, fetched 2026-11-07; flattened to section-labelled text; Introduction, Methods, Results, Discussion and figure captions read; figure images not viewed; bytes not saved",
+ "study_id": {
+  "doi": "10.1111/ejn.14841",
+  "pmid": "32463939"
+ },
+ "workflow": "gk-p INV-09: GSK3 separability, Stage 1 and Stage 2"
+}

@@ -1,0 +1,39 @@
+{
+ "analysis_time_precision": "minute",
+ "event_at": "2026-11-07T23:45:00Z",
+ "record_kind": "contemporaneous_receipt",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/seizure_function_inv10_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/seizure_function_inv10_20261107/output/evidence.tsv"
+ ],
+ "analysis_at": "2026-11-07T23:43:00Z",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_id": "FTR-20261107-40775196-93",
+ "evidence_basis": [
+  "An abstract is not a reading; it supports a conditional lead only.",
+  "verbatim_locator | proposition: a seizure reduction of about 31 percent was the best threshold for caregiver-rated improvement | Abstract | \"the best threshold for a clinically important response in drop seizure reduction was - 30.6%\"",
+  "verbatim_locator | proposition: the correlation of caregiver impression with seizure reduction is moderate | Abstract | \"Spearman's correlation was 0.47.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record retrieved through the PubMed tools on 2026-11-07; abstract text only",
+ "study_id": {
+  "doi": "10.1007/s40263-025-01201-8",
+  "pmid": "40775196"
+ },
+ "workflow": "INV-10 package (label sz-p): Stage 1 source, abstract read for a benefit measure anchored to seizure reduction in a related disease. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

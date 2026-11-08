@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-08T00:20:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-08T00:21:00Z",
+ "event_id": "FTR-20261108-17956988-91",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: vertebrate class IIa HDACs carry His where other HDACs carry the catalytic Tyr | Abstract | \"A catalytic Tyr is conserved in all HDACs except for vertebrate class IIa enzymes where it is replaced by His.\"",
+  "verbatim_locator | proposition: Tyr in the His position raises catalytic efficiency in HDAC4 | Abstract | \"a His-976-Tyr mutation in HDAC4 produced an enzyme with a catalytic efficiency 1,000-fold higher than WT\"",
+  "verbatim_locator | proposition: the gain of activity extends to HDAC5 H1006Y purified from mammalian cells (data in SI Fig. 11, not read) | Results | \"Again Y mutants exhibited strongly increased activity compared with WT and, like the HDAC4 mutant, could be inhibited by LAQ824 but were resistant to apicidin.\"",
+  "verbatim_locator | proposition: higher HDAC4 activity did not raise reporter repression | Results | \"The H976Y mutation did not enhance HDAC4 transcriptional inhibitory activity, despite its clear effect on the enzymatic activity in vitro\"",
+  "verbatim_locator | proposition: HDAC4 H976F kept the HDAC3-NCoR interaction | Results | \"Interestingly, the F mutant preserved WT interactions with the endogenous HDAC3–N–CoR complex\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/hdac5_inv16_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/hdac5_inv16_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": "FTR-20261107-17956988-33",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC record PMC2077257 article page served as an open web page, fetched once 2026-11-08 after Europe PMC fullTextXML returned a server error and the NCBI XML copy was withheld by the publisher; text extracted in scratch; bytes not saved; supplementary files and figure images not read",
+ "study_id": {
+  "doi": "10.1073/pnas.0706487104",
+  "pmid": "17956988"
+ },
+ "workflow": "INV-16 Package H (HDAC5 and SLC2A1), producer hd-p. Question-driven read for the passages cited in the evidence table. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

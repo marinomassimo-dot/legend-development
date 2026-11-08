@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-08T00:04:59Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-08T00:06:29Z",
+ "event_id": "FTR-20261108-34634460-92",
+ "evidence_basis": [
+  "Reopened for decisive details only (INV-15 delta): identity of the model, sIPSC against mIPSC and mEPSC, internal solutions, recorded-cell identity, numbers per comparison and the unit of the tests. Earlier complete reads exist; figure images were not viewed in this re-read.",
+  "verbatim_locator | proposition: recordings of IPSCs used a high-chloride internal | Methods 5.3 | \"a high-chloride intracellular solution was used, in order to enhance the chemical gradient of chloride\"",
+  "verbatim_locator | proposition: declared n for sIPSC controls does not add up from its components | Figure 4 legend | \"S-CTLs n = 14 cells from 7 animals; S-KOs n = 9 cells from 5 animals; s-WT N = 7 cells, 4 animals\"",
+  "verbatim_locator | proposition: interneuron groups are small and not PV-identified | Table 1 | \"N's (# cells/# animals) 13/5 15/6 40/15 5/4 6/5\"",
+  "verbatim_locator | proposition: the authors leave a lower interneuron number open | Discussion 3.3 | \"or reflect a WWOX-dependent decrease in the interneuron population (Hussain et al., 2019 ) for which we did not account\"",
+  "Absence statements: strings mIPSC, parvalbumin, CNQX, DNQX, NBQX, picro, bicuc returned 0 matches in the held XML."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pv_inv15_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/pv_inv15_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": "FTR-20261029-34634460-05",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "934b4e1a42ac19f5cd8912994fb171beabdeb94a6631b23d9a383dab1db906aa",
+ "source_kind": "fulltext_local",
+ "source_locator": "Held PMC XML for this PMID in the shared full-text store, re-read in part on 2026-11-08; bytes not copied",
+ "study_id": {
+  "doi": "10.1016/j.nbd.2021.105529",
+  "pmid": "34634460"
+ },
+ "workflow": "INV-15 delta (pv_inv15_20261107), producer pv-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
