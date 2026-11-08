@@ -1,0 +1,13 @@
+query_id	database_or_route	string_or_url	run_at_utc	hits	what_was_done
+Q1	PubMed tool	WWOX neuron deletion hypomyelination oligodendrocyte precursor corpus callosum	2026-11-08T09:00:00Z	0	conjunctive; too strict, rerun simpler
+Q2	PubMed tool	seizures neuronal activity oligodendrocyte precursor differentiation myelination epilepsy hypomyelination	2026-11-08T09:01:00Z	0	too strict
+Q3	PubMed tool	thyroid hormone oligodendrocyte precursor differentiation myelination hypomyelination organoid	2026-11-08T09:01:00Z	0	too strict
+Q4	PubMed tool	WWOX myelination	2026-11-08T09:02:00Z	9	found original paper 33914858 and companions 34747138, 42422765; metadata read for 9
+Q5	PubMed tool	neuronal activity regulates oligodendrocyte precursor proliferation myelination optogenetic	2026-11-08T09:03:00Z	3	24727982 kept
+Q6	PubMed tool	thyroid hormone oligodendrocyte differentiation myelination	2026-11-08T09:03:00Z	129	top 6 listed, none read
+Q7	PubMed tool	axonal energy metabolism oligodendrocyte lactate myelin hypoxia seizures	2026-11-08T09:04:00Z	0	too strict
+Q8	PubMed tool	WWOX oligodendrocyte hypomyelination organoids	2026-11-08T09:05:00Z	1	33914858
+Q9	PubMed tool	seizures impair oligodendrocyte myelination developing brain	2026-11-08T09:05:00Z	21	8 listed; Glut1 42686079 read; none on seizure-induced OPC change retained
+Q10	PubMed tool	thyroid hormone oligodendrocyte precursor myelination (to 2022)	2026-11-08T09:06:00Z	56	37307933 and 37765015 viewed; 37765015 not used
+Q11	PubMed tool	seizure oligodendrocyte precursor cells proliferation myelin neonatal kainate	2026-11-08T09:08:00Z	0	seizure-to-myelin causal source NOT found
+Q12	PubMed tool	Mct8 Oatp1c1 hypomyelination thyroid hormone replacement oligodendrocyte maturation rescue	2026-11-08T09:08:00Z	0	rescue-by-hormone source not found
