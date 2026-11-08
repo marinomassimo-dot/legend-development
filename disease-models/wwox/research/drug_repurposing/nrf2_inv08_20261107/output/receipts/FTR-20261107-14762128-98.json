@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-07T22:59:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable",
+  "abstract": "read"
+ },
+ "event_at": "2026-11-07T23:01:00Z",
+ "event_id": "FTR-20261107-14762128-98",
+ "evidence_basis": [
+  "abstract analysed in full; concentrations, n, array details not read",
+  "verbatim_locator | proposition: neuronal gene changes after tBHQ depended on Nrf2 activity in astrocytes | Abstract | \"Strikingly, the change in neuronal gene expression after tBHQ treatment was dependent on Nrf2 activity in the astrocytes.\"",
+  "degraded acquisition: full-text routes failed or were challenged; depth is abstract only"
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nrf2_inv08_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/nrf2_inv08_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 14762128 as served through Europe PMC search core and the PubMed tool 2026-11-07; full text not reached (HTTP 500, stub, Cloudflare check); bytes not saved",
+ "study_id": {
+  "doi": "10.1523/JNEUROSCI.3817-03.2004",
+  "pmid": "14762128"
+ },
+ "workflow": "INV-08 NRF2 package (nrf2_inv08_20261107), label nr-p. Prepared as a JSON file for the integrator; not recorded by the producer."
+}

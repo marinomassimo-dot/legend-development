@@ -1,0 +1,45 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-INV06-20261107",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Queued targeted package (operator, 2026-11-07): INV-06, functional recovery of myelin and the origin of the defect; correct the WWOX base (Olig2-Cre, GFAP-Cre, DRG co-culture); GSK3 direction (21319221, 33015737); activity and myelination (42334020, 24391468); link with INV-05; comparators clemastine, T3, GSK3 probes, Pdk1.",
+ "START_UTC": "2026-11-07T22:00:00Z",
+ "BASELINE": "development/main ce121d5814b8c83c65721c0709ac4ec2554a5011 (fetched 2026-11-07 after the landing of the GSK3-eIF2B task); same worktree and branch as ORCH-TTYPE-20261107 (.claude/worktrees/ttype-20261107, task/ttype-20261107) to land the queued packages with one battery.",
+ "CURRENT_PACKAGE": {
+  "id": "none",
+  "state": "complete; landed with the rest of the queue-1 branch",
+  "delegate_active": "none",
+  "updated": "2026-11-08T08:50:00Z"
+ },
+ "RESUME": "Folder drug_repurposing/myelin_inv06_20261107/ (BRIEF.md, output/). Order after the INV-05 package: producer, census, verifier, correction.",
+ "DECISIONS_TAKEN": [
+  "Queued by the operator beside the running scientific work; one delegate at a time; settings as before (producer sonnet/medium, verifier sonnet/high, legend-delegate).",
+  "Battery on a no-hardlinks clone of cc203e73f5f1b2bc6bfd03b867f3c55887efb423 (the tip of task/ttype-20261107 carrying the T-type, INV-05, INV-06, INV-07 and INV-08 packages), run at nice 19 while no other battery was running: first run on 893ad6ef stopped on one real failure (test_fresh_clone_reader_journey: an inline path in the INV-06 README that did not resolve from its folder), fixed; second run REGRESSION VERDICT PASS WITH SKIPS (214 targets, 9 skipped, environment). Not attributed to the closure commit that records it."
+ ],
+ "DELEGATIONS": [
+  "M producer my-p: asked sonnet/medium, read back claude-sonnet-5-5 x60, medium x60; birth 17,553; 60 turns; ~10 min; output 69,972; cache written 218,061; cache read 8,412,153; peak 226,546; completed README (943 words), evidence (40 rows), levels (12), experiment (X0-X4), queries, 8 staged receipts (validated with DOI check; 3 abstract_only, 5 partial_fulltext_read incl. 2 rereads with prior receipts); 6 of 8 new sources; 21319221 full text unreachable (subscription; stopped); Supp Fig 8 viewed as image",
+  "M verifier my-v: asked sonnet/high, read back claude-sonnet-5-5 x(see cost note), high; blind; all 40 rows checked (28 decisive + 4 sample + 8 extra): 37 supported, 2 overshoot (E10, E12), 1 undershoot (E28); X0 X1 X3 repairs; one Europe PMC image request returned HTTP 403 and the verifier stopped for that source; corrections by the Orchestrator adopting the audit's wording, rechecked by comparison with the audit text"
+ ],
+ "ESCALATIONS": [],
+ "STOP_LOG": [
+  "No stop for a reserved act."
+ ],
+ "DEFAULTS_TAKEN": [
+  "Condition: settings not restated. Default: as the previous packages. Why safe: reversible; no shared file touched."
+ ],
+ "AUTHORISED_QUEUE_20261107E": {
+  "MANDATE_STATE": "COMPLETE",
+  "OBJ_1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "producer, census, verifier on decision-changing links, targeted correction, consumer note",
+     "status": "DONE",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}

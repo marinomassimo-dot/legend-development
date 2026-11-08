@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-07T21:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-07T21:48:00Z",
+ "event_id": "FTR-20261107-32000863-80",
+ "evidence_basis": [
+  "passages analysed (keyword-directed), not a line-by-line read; Figure 7 (panels a to d) inspected as an image together with its legend and axes; other figures not_read",
+  "verbatim_locator | proposition: ethosuximide pretreatment had no effect on behaviour in +/+ and +/- at a low PTZ dose, while it suppressed PTZ seizure activity in the null | Results, section on Fig. 7b | \"ethosuximide pretreatment had no effects on the behavior changes in Wwox +/+ and Wwox +/− mice treated with a low dose of PTZ\"",
+  "verbatim_locator | proposition: only one-way ANOVA is named for group comparison, no drug-by-genotype term | Methods, Statistical analysis | \"We performed statistical tests with one-way analysis of variance (ANOVA) to compare the difference among groups.\"",
+  "verbatim_locator | proposition: ethosuximide was given once 45 min before PTZ and is called a T-type blocker by citation | Methods, Induction of seizure | \"was injected into mice 45 min before PTZ-induced clonic seizures\"",
+  "verbatim_locator | proposition: the authors rank lithium above ethosuximide | Discussion | \"its efficacy is better than the commonly used anticonvulsant drug ethosuximide\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ttype_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/ttype_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": "FTR-20261105-32000863-05",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "9bebe47d5068de97033828d33254a369bd63dd95874b66dd046c0ea419ecfb3a",
+ "source_kind": "fulltext_local",
+ "source_locator": "held PMC XML copy PMID32000863_Cheng2020_PMC_r2.xml and held Figure 7 render PMID32000863_r2 in the shared held-artefacts store, read 2026-11-07; the Fig 7 render fingerprint is the sha256 given in source_fingerprint for the Fig 7 JPEG; the XML is sha256 792b5b296863674d0295a7dba918ee7c59ade8cdff64ee8ec9d8f01bd12f00f5",
+ "study_id": {
+  "doi": "10.1186/s40478-020-0883-3",
+  "pmid": "32000863"
+ },
+ "workflow": "T-type thread package (ttype_20261107, label tt-p): question-driven reading for the three questions (benefit, Cav3 mediation, genotype dependence), the HIF to CaV3.2 residue and the probe comparison. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-07T22:25:39Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "captions_only",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-07T22:29:39Z",
+ "event_id": "FTR-20261107-42334020-95",
+ "evidence_basis": [
+  "Introduction, Methods, Results, Discussion and supplementary legends read as text; figure images not viewed. Quotes verified in the Europe PMC XML.",
+  "verbatim_locator | proposition: more neuronal activity reduced premyelinating cells at P8 | Results 3.3 | \"increased neuronal activity reduced the number of BCAS1+ and TCF7+ premyelinating cells\"",
+  "verbatim_locator | proposition: AMPA receptor block promoted differentiation in slice | Results 3.5 | \"pharmacological inhibition of AMPARs with NBQX for 48 h similarly promoted oligodendrocyte differentiation\"",
+  "verbatim_locator | proposition: authors list that other receptors or cells could mediate | Discussion | \"neurons could signal through different glutamate receptors on oligodendrocytes\"",
+  "Single-cell RNA-seq used pools of 3 and 2 animals (Methods); cells are not replicates."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/myelin_inv06_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/myelin_inv06_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC13288302 full text through the PubMed tool and Europe PMC fullTextXML, fetched 2026-11-07; bytes not saved",
+ "study_id": {
+  "doi": "10.1002/glia.70157",
+  "pmid": "42334020"
+ },
+ "workflow": "INV-06 myelin recovery delta (myelin_inv06_20261107), actor my-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

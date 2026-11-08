@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-07T22:59:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable",
+  "abstract": "not_present"
+ },
+ "event_at": "2026-11-07T23:01:00Z",
+ "event_id": "FTR-20261107-28159761-98",
+ "evidence_basis": [
+  "metadata only; a retraction notice has no abstract; abstract coverage not_present",
+  "verbatim_locator | proposition: the notice is a retraction of the whole 2011 article (PMID 21690096), with an earlier expression of concern and correction listed in Crossref | Crossref title | \"Retraction: Src subfamily kinases regulate nuclear export and degradation of transcription factor Nrf2\"",
+  "reason for retraction not reached; no inference made",
+  "degraded acquisition: reCAPTCHA on the PMC page, stopped for that source"
+ ],
+ "evidence_depth": "queried_not_full_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nrf2_inv08_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/nrf2_inv08_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record and PMC front-matter XML (E-utilities) and Crossref metadata for PMID 28159761, fetched 2026-11-07; the PMC page returned a reCAPTCHA check page and the notice body (a PDF) was not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1074/jbc.A117.255042",
+  "pmid": "28159761"
+ },
+ "workflow": "INV-08 NRF2 package (nrf2_inv08_20261107), label nr-p. Prepared as a JSON file for the integrator; not recorded by the producer."
+}

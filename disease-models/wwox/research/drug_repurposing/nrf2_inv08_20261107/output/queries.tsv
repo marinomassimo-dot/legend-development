@@ -1,0 +1,11 @@
+query_id	database_or_route	string_or_url	run_at_utc	hits	what_was_done
+Q01	PubMed via search tool	(WWOX OR Wwox) AND (NRF2 OR NFE2L2 OR Nrf2)	~2026-11-07T22:59:50Z	1	OR and parentheses are honoured (query translation shows both OR groups kept and the AND between them). Hit 39894307 read at abstract level (Stage 2, gap written in README). Scope: PubMed only; second route Q02.
+Q02	not run	second route (Europe PMC full-text search) for WWOX with NRF2 or NFE2L2 in neural cells was not run in this package	n/a	n/a	Gap: "not found" for WWOX x NRF2 in neural cells rests on Q01 plus the module record (NEED-REDOX-NRF2, 2026-10-31); it is not a bounded null until a second route is run.
+Q03	PubMed via search tool	(GSK-3 OR "glycogen synthase kinase 3") AND (Nrf2 OR NFE2L2) AND (TrCP OR "Neh6") AND brain	~2026-11-07T22:59:55Z	1	One hit (not opened: Stage 2 not needed because the distinction Fyn/Src versus beta-TrCP is already fixed by the two Stage 1 sources; replication inside a different group is not needed for the decision).
+Q04	Europe PMC REST search core	EXT_ID for the four Stage 1 PMIDs	~2026-11-07T22:58:00Z	4	abstracts and comment-correction field (retraction link).
+Q05	Europe PMC REST fullTextXML	PMC records of 21245377, 22751928, 14762128, 28159761	~2026-11-07T22:58:05Z / 22:59:32Z	0 bodies	HTTP 500 on all, two attempts; reported, no inference. 
+Q06	PubMed tool full text	four PMC records	~2026-11-07T22:58:30Z	0 bodies	empty full_text; abstract returned.
+Q07	NCBI E-utilities efetch db=pmc	same	~2026-11-07T22:58:50Z	stub	publisher disallows XML download; front matter only (for 28159761 sufficient to see article-type retraction and related-article link).
+Q08	PMC page, then publisher pages via the DOI resolver	PMC5290975; three DOI landing pages	~2026-11-07T22:58:40Z / 22:59:00Z	0	reCAPTCHA check page (PMC) and Cloudflare "Just a moment" pages (publisher): stopped for those sources, no other tool or client tried on them.
+Q09	Crossref REST works	10.1074/jbc.A117.255042 and 10.1074/jbc.M111.255042	~2026-11-07T22:59:10Z	2	metadata only: retraction, expression of concern, correction; no reason text.
+Q10	PubMed identity check	five PMIDs	~2026-11-07T23:00:00Z	5	verdict MATCH for all.

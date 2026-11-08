@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-07T22:44:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-07T22:47:00Z",
+ "event_id": "FTR-20261107-16476929-97",
+ "evidence_basis": [
+  "An abstract is not a reading; it supports a conditional lead only.",
+  "verbatim_locator | proposition: 15 of 15 randomised to the PDK inhibitor were taken off study medication against 4 of 15 on placebo | Abstract | \"15 of 15 patients randomized to DCA were taken off study medication, compared to 4 of 15 patients randomized to placebo\"",
+  "verbatim_locator | proposition: discontinuation was mostly for peripheral neuropathy (17 of 19 discontinuations) | Abstract | \"Study medication was discontinued in 17 of 19 patients because of onset or worsening of peripheral neuropathy.\"",
+  "Full text not reached: the publisher page returned HTTP 403 and Europe PMC reports no open full text; the route was stopped, not worked around."
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/metabolic_inv07_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/metabolic_inv07_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record retrieved through the PubMed tools on 2026-11-07; abstract text only; publisher full-text page returned HTTP 403 and was not retried by another client",
+ "study_id": {
+  "doi": "10.1212/01.wnl.0000196641.05913.27",
+  "pmid": "16476929"
+ },
+ "workflow": "INV-07 metabolic bottleneck (metabolic_inv07_20261107, label i7-p): question-driven reading of the abstract for the PDH, LDH or acidification question. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

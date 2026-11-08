@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-07T22:59:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable",
+  "abstract": "read"
+ },
+ "event_at": "2026-11-07T23:01:00Z",
+ "event_id": "FTR-20261107-21245377-98",
+ "evidence_basis": [
+  "abstract analysed in full; methods, controls, n and measured levels per panel not read",
+  "verbatim_locator | proposition: GSK-3 inhibitors stabilise Nrf2 in Keap1-null mouse fibroblasts | Abstract | \"Nrf2 was stabilized by GSK-3 inhibitors in Keap1-null mouse embryo fibroblasts.\"",
+  "degraded acquisition: full-text routes failed or were challenged; depth is abstract only"
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nrf2_inv08_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/nrf2_inv08_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 21245377 as served through Europe PMC search core and the PubMed tool 2026-11-07; full text not reached (Europe PMC fullTextXML HTTP 500, E-utilities stub, publisher page behind a Cloudflare check); bytes not saved",
+ "study_id": {
+  "doi": "10.1128/MCB.01204-10",
+  "pmid": "21245377"
+ },
+ "workflow": "INV-08 NRF2 package (nrf2_inv08_20261107), label nr-p. Prepared as a JSON file for the integrator; not recorded by the producer."
+}

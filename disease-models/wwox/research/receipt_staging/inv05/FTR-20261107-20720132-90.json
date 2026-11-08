@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-07T22:09:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-07T22:10:00Z",
+ "event_id": "FTR-20261107-20720132-90",
+ "evidence_basis": [
+  "full text, Introduction to Discussion by page text",
+  "verbatim_locator | proposition: 1 micromolar memantine blocked about a quarter of the synaptic NMDAR EPSC and about one half of the extrasynaptic current at -70 mV | Results | \"memantine inhibited approximately one-half of the extrasynaptic NMDAR-mediated current at a holding potential of −70 mV (50.4 ± 1.3%; n = 24)\"",
+  "verbatim_locator | proposition: extrasynaptic currents were bath-applied NMDA with glycine after MK-801 occluded synaptic receptors | Methods | \"extrasynaptic NMDAR-mediated responses induced by bath application of NMDA (100 μ m ) in conjunction with coagonist glycine (10 μ m )\"",
+  "verbatim_locator | proposition: open-channel argument is for prolonged activation (minutes or longer) | Discussion | \"prolonged elevation of glutamate concentration or prolonged channel activity (on the scale of tens of minutes or longer)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nmda_inv05_20261107/output/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page text (pmc.ncbi.nlm.nih.gov) fetched 2026-11-07; Introduction, Materials and Methods, Results and Discussion read; figures not viewed; bytes not saved",
+ "study_id": {
+  "doi": "10.1523/JNEUROSCI.2488-10.2010",
+  "pmid": "20720132"
+ },
+ "workflow": "nm-p INV-05: NMDA modulation, Stage 1 precedent"
+}

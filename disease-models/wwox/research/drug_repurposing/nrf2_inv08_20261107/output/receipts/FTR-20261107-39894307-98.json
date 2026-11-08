@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-07T22:59:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable",
+  "abstract": "read"
+ },
+ "event_at": "2026-11-07T23:01:00Z",
+ "event_id": "FTR-20261107-39894307-98",
+ "evidence_basis": [
+  "abstract analysed in full",
+  "verbatim_locator | proposition: in this cancer-cell system drug-induced WWOX activity lowers NRF2 nuclear translocation by ubiquitination | Abstract | \"impeded the nuclear translocation of NRF2 by inducing its ubiquitination degradation\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nrf2_inv08_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/nrf2_inv08_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 39894307 as served through the PubMed tool 2026-11-07; no full text sought; bytes not saved",
+ "study_id": {
+  "doi": "10.1016/j.bcp.2025.116790",
+  "pmid": "39894307"
+ },
+ "workflow": "INV-08 NRF2 package (nrf2_inv08_20261107), label nr-p. Prepared as a JSON file for the integrator; not recorded by the producer."
+}

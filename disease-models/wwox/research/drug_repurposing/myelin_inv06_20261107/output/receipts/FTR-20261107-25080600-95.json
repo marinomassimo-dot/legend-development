@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-07T22:25:39Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-07T22:29:39Z",
+ "event_id": "FTR-20261107-25080600-95",
+ "evidence_basis": [
+  "Abstract read in full; full text exists in PMC (PMC4115145) but was not read (Stage 2 staging limit).",
+  "verbatim_locator | proposition: failed remyelination in Cdk5 deletion came with higher GSK-3 beta signalling | abstract | \"an enhancement of Gsk-3β signaling pathways\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/myelin_inv06_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/myelin_inv06_20261107/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 25080600 (abstract and metadata served 2026-11-07 through the PubMed tool)",
+ "study_id": {
+  "doi": "10.1523/JNEUROSCI.0710-14.2014",
+  "pmid": "25080600"
+ },
+ "workflow": "INV-06 myelin recovery delta (myelin_inv06_20261107), actor my-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

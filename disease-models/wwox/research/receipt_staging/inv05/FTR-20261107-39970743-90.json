@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-07T22:09:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-07T22:10:00Z",
+ "event_id": "FTR-20261107-39970743-90",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: seizure-free after memantine was added to ketamine in one infant | Abstract | \"Her seizure was partially responsive to ketamine, and she became seizure-free when memantine, another NMDA receptor blocker, was added to the treatment.\"",
+  "verbatim_locator | proposition: genetic result arrived during memantine treatment | Abstract | \"Her WES analysis was completed during the second week of memantine treatment\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nmda_inv05_20261107/output/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record (abstract) read 2026-11-07; full text not reachable by an open route (publisher page returned an access challenge, no PMC copy); bytes not saved",
+ "study_id": {
+  "doi": "10.1016/j.seizure.2025.02.002",
+  "pmid": "39970743"
+ },
+ "workflow": "nm-p INV-05: NMDA modulation, Stage 1 precedent"
+}
