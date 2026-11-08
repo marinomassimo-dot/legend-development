@@ -8,17 +8,18 @@
  "START_UTC": "2026-11-08T03:00:00Z",
  "BASELINE": "development/main cb727195dbb5917c6048659b55d69094c0a6c3c0; branch task/queue2-20261108. Receipts exist for 22991226 (abstract only) and 39923817 (partial).",
  "CURRENT_PACKAGE": {
-  "id": "H-INV16",
-  "state": "verifier running (legend-delegate, sonnet/high)",
-  "delegate_active": "hd-v",
-  "updated": "2026-11-08T07:30:00Z"
+  "id": "C-HCN",
+  "state": "INV-16 complete; HCN producer running (see ORCH-HCN-20261108)",
+  "delegate_active": "hc-p",
+  "updated": "2026-11-08T08:00:00Z"
  },
  "RESUME": "Folder drug_repurposing/hdac5_inv16_20261108/ (BRIEF.md, output/). Order: producer, census, verifier, correction.",
  "DECISIONS_TAKEN": [
   "Queued by the operator beside the running work; one delegate at a time; settings as before."
  ],
  "DELEGATIONS": [
-  "H producer hd-p: asked sonnet/medium, read back claude-sonnet-5-5 x25, medium x25; birth 17,446; 25 turns; ~5 min; output 29,544; cache written 93,297; cache read 1,544,391; peak 101,782; completed README (~900 words), evidence (17), three_questions, tools (10), experiment (4 steps), queries (10), 3 staged receipts (validated with DOI check, re-run after the producer shifted the timestamps back about a minute: still OK, event_at earlier than the real time); 3 of 4 new sources; Europe PMC XML 500 for one record, the open PMC page then served the text (no challenge)"
+  "H producer hd-p: asked sonnet/medium, read back claude-sonnet-5-5 x25, medium x25; birth 17,446; 25 turns; ~5 min; output 29,544; cache written 93,297; cache read 1,544,391; peak 101,782; completed README (~900 words), evidence (17), three_questions, tools (10), experiment (4 steps), queries (10), 3 staged receipts (validated with DOI check, re-run after the producer shifted the timestamps back about a minute: still OK, event_at earlier than the real time); 3 of 4 new sources; Europe PMC XML 500 for one record, the open PMC page then served the text (no challenge)",
+  "H verifier hd-v: asked sonnet/high, read back claude-sonnet-5-5 high; blind; 17 rows: 13 supported, 3 overshoot (H02, H11, H14), 1 undershoot (H07); H14 and question 2 corrected in substance (three abstract-level reports link HDAC5 to HIF-1alpha); INCIDENT: one curl with a browser user-agent to a PMC page was refused by the permission classifier as bot-check circumvention (verifier's own account: its mistake), not repeated; open PMC pages then read through a summariser (fragments); corrections by the Orchestrator adopting the audit's wording"
  ],
  "ESCALATIONS": [],
  "STOP_LOG": [
@@ -34,7 +35,7 @@
    "steps": [
     {
      "step": "producer, census, verifier on sign/function/transfer/experiment, targeted correction",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator"
     }
    ]

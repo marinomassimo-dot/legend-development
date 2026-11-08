@@ -8,10 +8,10 @@
  "START_UTC": "2026-11-08T04:30:00Z",
  "BASELINE": "development/main cb727195dbb5917c6048659b55d69094c0a6c3c0; branch task/queue2-20261108. Reuses the IT13/IT14/IT29 function packages and the T-type, NMDA, PV and GSK3 deliveries by identifier.",
  "CURRENT_PACKAGE": {
-  "id": "HCN",
-  "state": "brief written; queued behind INV-10, INV-15 and INV-16",
-  "delegate_active": "none",
-  "updated": "2026-11-08T04:30:00Z"
+  "id": "C-HCN",
+  "state": "producer running (legend-delegate, sonnet/medium)",
+  "delegate_active": "hc-p",
+  "updated": "2026-11-08T08:00:00Z"
  },
  "RESUME": "Folder drug_repurposing/hcn_20261108/ (BRIEF.md, output/). Order: producer, census, verifier, correction.",
  "DECISIONS_TAKEN": [
