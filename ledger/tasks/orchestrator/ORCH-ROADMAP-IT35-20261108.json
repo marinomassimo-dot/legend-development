@@ -50,8 +50,9 @@
    "steps": [
     {
      "step": "P3 Generative capacity diagnosis on few contrasting cases from more than one experimental origin; classify the break point (knowledge not retrieved / relation not represented / tool not called / action unresolved / graph gap / no probe / scientific limit); manual target addition is a correction, not generation",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "generation_it35_20261108/README.md: five cases from different origins classified (sag: relation not represented, fixed by manual structure in IT34, declared; GSK3-eIF2B and HDAC5-SLC2A1: relation not represented, fixed by the bridge table; MYC: scientific limit; ISR tool compound: no probe in the source the catalogue is built from - ChEMBL has the molecule and the target but no curated mechanism)"
     }
    ]
   },
@@ -60,8 +61,9 @@
    "steps": [
     {
      "step": "P4 OpenScientist strengths via existing tools: phenotype -> alternatives; relations beyond pathways (trafficking, membrane/lipids, ECM, substrates/cofactors/complexes, circuits/cell types/stage); adjacent literature; predictions before results; verdicts not imported as facts",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "phenotype -> alternatives -> relations beyond pathways -> adjacent literature -> predictions run as the unguided condition by one delegate (no repository file, abstracts, no WWOX in mechanism queries); verdicts not imported: a verifier checked 5 decisive items and 2 plain; corrections applied; OpenScientist reports not used as evidence"
     }
    ]
   },
@@ -70,8 +72,9 @@
    "steps": [
     {
      "step": "P5 Autonomy measurement: phenotype+context question without compound names, freeze proposals and trace, then add suggestions; distinct rationales, supported/transferred/hypothetical links, actions defined, compounds with identity, steps emerging only after a hint, falsifiers, cost",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "guided against unguided on one phenotype, measured in the README (7 unguided rationales; one constraint emerged only unguided - higher input resistance is the opposite of a larger Ih alone - now Branch D of INV-18; the search tool leaked the source paper's abstract: stated limit; no prospective claim)"
     }
    ]
   },
@@ -80,8 +83,9 @@
    "steps": [
     {
      "step": "P6 Smallest general link chosen by the audit; before/after and ablation; reach v new relation v prediction kept apart",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "precedent-bridge table and --bridges option of the need search (pathway members, no sign across a bridge, off by default); headline unchanged (12/12, 8/8, 81/80), rows listed 78->171 and 209->293, ablation identical; tests added; reach only, declared as a curator's addition"
     }
    ]
   },
@@ -90,8 +94,9 @@
    "steps": [
     {
      "step": "P7 Consume the science in progress: accepted/published deliveries, verified deltas, post-review corrections; NB-2 (Tau/beta-catenin pairing) if not done; HCN, lipids, hyaluronan-PNN, HDAC5 as comparison cases not repeated",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "note": "gsk3_eif2b package consumed (6 receipts recorded, ledger 1,356; GSK3 need O1 limits and a downstream inference, ISR need counter-evidence, INV-02 test additions, snapshot context_change; five-language passage extended); NB-2 (Tau and beta-catenin pairing) not yet assigned"
     }
    ]
   },

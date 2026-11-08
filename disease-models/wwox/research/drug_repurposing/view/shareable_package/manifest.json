@@ -18,7 +18,7 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 12692,
+    "values": 12699,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -118,7 +118,7 @@
    },
    "^\\.needs\\[\\]\\.": {
     "class": "OWN",
-    "values": 1848,
+    "values": 1851,
     "why": "needs records written in this repository"
    },
    "^\\.pairs\\[\\]\\.(l2|l3|l4|x|n|r)(\\.|\\[\\]|$)": {
@@ -203,7 +203,7 @@
    "DOI": 5,
    "HGNC": 12,
    "NCT": 0,
-   "PMID": 145
+   "PMID": 146
   },
   "links": {
    "distinct_hrefs": 188,
@@ -224,7 +224,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3414,
+    "forbidden-name": 3421,
     "forbidden-wording": 21
    },
    "co_attested_wording": [
@@ -462,7 +462,7 @@
  ],
  "data": {
   "catalogue_generated": "2026-10-31T07:28:37Z",
-  "data_date": "2026-11-07",
+  "data_date": "2026-11-08",
   "dgidb_export": "2024-06-10",
   "view_schema": "legend.wwox.repurposing_view/2"
  },
@@ -470,7 +470,7 @@
   "BIBLIO": 2696,
   "COUNT": 12405,
   "ID": 4861,
-  "OWN": 89501,
+  "OWN": 89511,
   "ROWNAME": 2408,
   "SRC_A": 189,
   "SRC_META": 256,
@@ -529,11 +529,11 @@
   },
   "NOTICE.md": {
    "bytes": 13087,
-   "sha256": "7f81a5e6a9d8cb11ff813feb4c9b29547e75cdd2c6029e806e765f1ca9f9f19a"
+   "sha256": "ec43fb3a8e81d7c5cbf09ce47e20ffb9e11081200f04143a593c81482d23ea66"
   },
   "README.md": {
    "bytes": 5072,
-   "sha256": "359cf596924cc8672f910ea48ef072366c700ddd5c166d89db0b7c570ca44d71"
+   "sha256": "28ad90d1430e5e1f93c62563a5d723ae211c93ab596b33dbd078cf708a266c84"
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 1999,
@@ -552,24 +552,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 4908640,
-   "sha256": "1da7f491a7bb3a2c057f35d91fcef71fa297f97b65d5c0dcd8220ea05a353612"
+   "bytes": 4914807,
+   "sha256": "1bc8feece2937bfe614e241ce6e84fb7324cb81329a759d3c11dcafe84eac4b8"
   },
   "es.html": {
-   "bytes": 4894431,
-   "sha256": "44ef7c59c063d4ea835616271419111a017b9cc1e08f18f70b8b5bc80aec7696"
+   "bytes": 4900654,
+   "sha256": "9f985fab7825c8691ba5beb67f9227ce004c169d7197ae9bcab1cadb42977175"
   },
   "fr.html": {
-   "bytes": 4918321,
-   "sha256": "304c9c6b6db87db0f2d58fc8dd90e383fdca3528ed11b483c2cfa50a52cc4043"
+   "bytes": 4924660,
+   "sha256": "aaedca7ac0cb8595e99682b7ca39e78dc45fd3fbff7eaa3b8a4abc6f79ebde84"
   },
   "index.html": {
-   "bytes": 4824551,
-   "sha256": "3173c12b0d6fbf123ae3abadc3cb08fc3ac20556b09dbafa086f4733b321e131"
+   "bytes": 4830562,
+   "sha256": "8c50dd85e530ec1c5de9cff455ea2c91bc0cc20e5dd1dc005b6e744c693d7e51"
   },
   "it.html": {
-   "bytes": 4870022,
-   "sha256": "599f54f9e3f47b2869c934b6b81d582fdfc37e930608b7e628596ce4f179949d"
+   "bytes": 4876278,
+   "sha256": "3a8be03ea58d913cf0c04c6e7d6f746ce5711847168f48c3163953642d7c33da"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
