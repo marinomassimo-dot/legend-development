@@ -1,0 +1,75 @@
+{
+ "_schema": "orchestrator-task-v1",
+ "TASK_ID": "ORCH-ROADMAP-IT38-20261108",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "P0",
+ "OBJECTIVE": "IT38: from available knowledge to effective generation: MYC relations of NB-1 reach the generator's carried limits; seven card corrections rebuilt from authoritative inputs; shareable-audit false positives fixed at the root.",
+ "START_UTC": "2026-11-08T20:00:00Z",
+ "RESUME": {
+  "note": "start: remote main 0f6aff0c (IT36/IT37 integrated, CI green on 4a783cd4). Decisive files: nb1_myc_20261107/output/generator_relations.tsv, generation_it21_p2_20261103/run_generation_it21.py (relation_use_it38.tsv), p1_reconcile_it36_20261108/output/map.tsv, framework/scripts/repurposing_shareable_audit.py. Do not repeat DREAM-2 fixes (Harness); do not duplicate Dismech reads (science session)."
+ },
+ "AUTHORISED_QUEUE_20261108": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Baseline: remote, consumers; separate search / generator / qualification / cards-investigations-ranking-dashboard",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "MYC relations: trace the path, link qualified relations to the generator's carried limits with status and use; verify source depth",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "Measure before/after on real cases (sign transfer, uninformative result, amount vs occupancy, unrelated control) and the execution of the path",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "Seven card corrections (map rows 5, 6, 15, 19, 21, 22, 25): authoritative inputs, rebuild, input_sha256 coherence; superseded ISRIB wording in consultable documents",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "Shareable-audit false positives: reproduce, distinguish common words from compound names, fix in the existing path with multilingual cases and a positive control",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "Close: regenerate consumers in order, checks, battery, push, CI, site; attribute each result to its SHA",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}
