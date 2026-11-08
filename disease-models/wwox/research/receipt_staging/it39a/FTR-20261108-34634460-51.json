@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-08T22:24:30Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "read",
+  "results": "read",
+  "supplementary": "read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-08T22:36:00Z",
+ "event_id": "FTR-20261108-34634460-51",
+ "evidence_basis": [
+  "Reread for membrane-property questions with the full Methods (solutions, junction potential, cell selection, access resistance, definitions of Rin, tau, sag, rebound), Table 1, Results 2.1 and 2.6, Discussion, the reference list entry for the cited ZD7288 neocortical study, and the supplementary docx (text). Images viewed: Fig 6 (panels A-C) and Supplementary Fig S4 and S2. Figs 1-5 and Supp S1 and S3 images were not viewed; they bear on bursting and synaptic currents, not on the membrane numbers used. Coverage for figures is declared captions_only because not every figure was viewed; the depth is partial for that reason.",
+  "verbatim_locator | proposition: input resistance was measured from the I-V slope | Methods | \"Input resistance was measured by the slope of the computed I-V plot.\"",
+  "verbatim_locator | proposition: junction potential was not corrected | Methods | \"We did not correct for liquid junction potential since all results central to the hypothesis were measured against a change from wildtype littermate controls.\"",
+  "verbatim_locator | proposition: Rin and tau are among the criteria that confirm pyramidal identity | Methods | \"They were later confirmed based on comparison of the spike-half width, input resistance, and membrane time constant.\"",
+  "verbatim_locator | proposition: access resistance exclusion limit | Methods | \"Cells were not used if the access resistance was >40 MΩ and if they had an unstable membrane potential.\"",
+  "verbatim_locator | proposition: spontaneous bursting in KO slices | Results 2.1 | \"4 of n = 23 slices from 14 S-HT mice; 36 of n = 42 slices from 24 S-KO mice\"",
+  "verbatim_locator | proposition: F-I slope unchanged when aligned to rheobase | Results 2.6 | \"there was no significant difference in the slope of the curve in the S-KOs as compared to the S-WTs and S-HTs\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/membrane_hypotheses_20261108/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/membrane_hypotheses_20261108/output/observations.tsv"
+ ],
+ "prior_receipt": "FTR-20261019-34634460-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "b01bfa4f6a9cb9cc1d39c167b9953e679639913d56ef74b19b4d59cc05399e02",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch XML for the PMC record, fetched 2026-11-08, plus the Europe PMC supplementary archive (six figure images and one docx) fetched the same day; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1016/j.nbd.2021.105529",
+  "pmid": "34634460"
+ },
+ "workflow": "Package A membrane physiology to pharmacological hypotheses (ORCH-IT39OS-20261108), producer mh-a, Phase 1. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

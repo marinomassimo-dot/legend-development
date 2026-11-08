@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-08T23:10:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-08T23:13:30Z",
+ "event_id": "FTR-20261108-40994429-61",
+ "evidence_basis": [
+  "Abstract, Introduction, Methods, Results, Discussion, tables 1 to 3 and figure legends read as text; supplementary materials and figure images not reached. Earlier staged abstract-only receipts for this paper exist in another worktree and are not in the ledger; this is the first full-text read.",
+  "verbatim_locator | proposition: subunit selectivity | Results | \"Radiprodil was without effect on GluN2A, GluN2C, and GluN2D diheteromeric receptors\"",
+  "verbatim_locator | proposition: incomplete inhibition | Results | \"The application of saturating concentrations of radiprodil does not fully inhibit NMDARs.\"",
+  "verbatim_locator | proposition: slow washout | Results | \"only a small amount of current was recovered (4.7 ± 1.2%) after 3 minutes of radiprodil washout\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/observations.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/alternatives.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/probes.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/figure_notes.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "856e30672a29003a8a93a5fa51a5cf57ae1b7194b4b82e8c9c646338c32242d7",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket text rendering of the PMC record, fetched with plain curl on 2026-11-08; the bucket holds no figure images or supplement for this record; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1093/brain/awaf355",
+  "pmid": "40994429"
+ },
+ "workflow": "Package B AMPA, NMDAR composition and carbenoxolone discrimination (ORCH-IT39OS-20261108), producer an-b, Phase 1. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

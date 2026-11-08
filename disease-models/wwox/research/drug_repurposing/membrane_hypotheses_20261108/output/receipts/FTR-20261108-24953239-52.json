@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-08T22:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "read",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "read"
+ },
+ "event_at": "2026-11-08T22:57:07Z",
+ "event_id": "FTR-20261108-24953239-52",
+ "evidence_basis": [
+  "Supersedes the figure coverage of the -51 receipt: all six figure images were viewed (Fig 1 Rin and Vrest, Fig 2 long-step bursts, Fig 3 Ih density, Fig 4 HCN blots, Fig 5 T-type currents and Z944, Fig 6 ZD7288 Rin and Vrest). References were not read, so the depth stays partial.",
+  "verbatim_locator | proposition: ZD7288 lowered input resistance | Results | \"decreased the input resistance (Fig. 6d) which is unexpected for blockade of a depolarizing Ih conductance basally active at resting membrane potentials\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/membrane_hypotheses_20261108/output/figure_notes.tsv",
+  "disease-models/wwox/research/drug_repurposing/membrane_hypotheses_20261108/output/observations.tsv"
+ ],
+ "prior_receipt": "FTR-20261108-24953239-51",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "e740709956fa13e6ce38dedc976a6775aa83f47287afa87a52d262c4ea953f5e",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch XML for the PMC record, fetched 2026-11-08, plus the six figure images from the public PMC open-data bucket, fetched 2026-11-08; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1007/s00424-014-1549-4",
+  "pmid": "24953239"
+ },
+ "workflow": "Package A (ORCH-IT39OS-20261108), producer mh-a, figure completion after the blind audit. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

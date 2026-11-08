@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-08T22:27:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-08T22:36:12Z",
+ "event_id": "FTR-20261108-11466425-51",
+ "evidence_basis": [
+  "PubMed record abstract only, read through the PubMed metadata tool; no full text, no figures.",
+  "verbatim_locator | proposition: retigabine shifts activation of native M channels | Abstract | \"Retigabine also produced a hyperpolarizing shift in the activation curve for native M channels in rat sympathetic neurons.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/membrane_hypotheses_20261108/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/membrane_hypotheses_20261108/output/observations.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for the PMID, fetched 2026-11-08 through the PubMed metadata tool; no full text reached",
+ "study_id": {
+  "doi": "10.1523/JNEUROSCI.21-15-05535.2001",
+  "pmid": "11466425"
+ },
+ "workflow": "Package A membrane physiology to pharmacological hypotheses (ORCH-IT39OS-20261108), producer mh-a, Phase 1. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

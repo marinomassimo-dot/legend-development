@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-08T22:27:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-08T22:36:15Z",
+ "event_id": "FTR-20261108-31063701-51",
+ "evidence_basis": [
+  "PubMed record abstract only, read through the PubMed metadata tool; no full text, no figures.",
+  "verbatim_locator | proposition: SCR2682 activates native M-current and hyperpolarises neurons | Abstract | \"SCR2682 also activates the native M-current in rat hippocampal or cortical neurons, causing marked hyperpolarization and potent inhibition of neuronal firings.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/membrane_hypotheses_20261108/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/membrane_hypotheses_20261108/output/observations.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for the PMID, fetched 2026-11-08 through the PubMed metadata tool; no full text reached",
+ "study_id": {
+  "doi": "10.1096/fj.201802848RR",
+  "pmid": "31063701"
+ },
+ "workflow": "Package A membrane physiology to pharmacological hypotheses (ORCH-IT39OS-20261108), producer mh-a, Phase 1. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

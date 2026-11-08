@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-08T22:24:30Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "not_present",
+  "references": "not_read",
+  "results": "not_present",
+  "supplementary": "not_present",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-08T22:36:09Z",
+ "event_id": "FTR-20261108-37982354-51",
+ "evidence_basis": [
+  "Review. Sections read as text: Introduction paragraph on selectivity and reversal, the resting viewpoint, the negative-feedback viewpoint, sag, rebound and temporal summation, the interactions viewpoint, the plasticity viewpoint (first paragraphs). Not read: channel structure, impedance and resonance, classes of excitability, spatial viewpoint, the future section. Figures captions only.",
+  "verbatim_locator | proposition: open HCN channels depolarise rest | Resting viewpoint | \"which results in a depolarization of RMP in the presence of HCN channels\"",
+  "verbatim_locator | proposition: sag and rebound can be modulated by co-expressed channels | Dynamic viewpoint: sag, rebound | \"interactions with other ion channels that co-express with HCN channels can also modulate the ability of neurons to manifest sag or rebound\"",
+  "verbatim_locator | proposition: report at multiple voltages | Interactions viewpoint | \"we suggest reporting of measurements at multiple voltages and not just one single voltage\"",
+  "verbatim_locator | proposition: reversal potential statement | Introduction | \"setting their reversal potential (the voltage at which the current reverses its direction) to be unique at around −20 to −30 mV\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/membrane_hypotheses_20261108/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/membrane_hypotheses_20261108/output/observations.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "fd59c370c8f7276a05d2dcc2d7295175232706f65b1f4f26059e331b02d18597",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch XML for the PMC record, fetched 2026-11-08; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1002/prot.26643",
+  "pmid": "37982354"
+ },
+ "workflow": "Package A membrane physiology to pharmacological hypotheses (ORCH-IT39OS-20261108), producer mh-a, Phase 1. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-08T22:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "read",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-08T22:57:07Z",
+ "event_id": "FTR-20261108-34018186-52",
+ "evidence_basis": [
+  "Supersedes the figure coverage of the -51 receipt: all five figure images were viewed (Fig 1 levels, Fig 2 oral dose-response, Fig 3 VB injection, Fig 4 CIN injection, Fig 5 sag and resting potential). References were not read, so the depth stays partial.",
+  "verbatim_locator | proposition: ivabradine reduced the sag in cortical neurons (partial, not abolished; about 2.65 to 1.4 mV read from Fig 5) | Fig 5 legend | \"Note the decreased depolarizing sag in the presence of IVA.\"",
+  "verbatim_locator | proposition: ivabradine hyperpolarised both neuron types | Results | \"IVA hyperpolarized the membrane potential of both neuronal types\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/membrane_hypotheses_20261108/output/figure_notes.tsv",
+  "disease-models/wwox/research/drug_repurposing/membrane_hypotheses_20261108/output/observations.tsv"
+ ],
+ "prior_receipt": "FTR-20261108-34018186-51",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "ed1de0c5e40b3bc9a9a1e7c64316ae280d82ab5adc3bcb6904a5e1238b772a4d",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch XML for the PMC record, fetched 2026-11-08, plus the five figure images from the public PMC open-data bucket, fetched 2026-11-08; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1111/epi.16926",
+  "pmid": "34018186"
+ },
+ "workflow": "Package A (ORCH-IT39OS-20261108), producer mh-a, figure completion after the blind audit. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

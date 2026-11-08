@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-08T22:27:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-08T22:36:21Z",
+ "event_id": "FTR-20261108-14575712-51",
+ "evidence_basis": [
+  "PubMed record abstract only, read through the PubMed metadata tool; no full text, no figures. The reading claim for this PMID was placed after its abstract had already appeared in a batch metadata call (late claim, disclosed in queries.tsv Q09).",
+  "verbatim_locator | proposition: ZD7288 blocks native T-type current in mouse spermatogenic cells | Abstract | \"ZD7288 blocked native T-type Ca(2+) currents in mouse spermatogenic cells with an IC(50) of about 100 microM.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/membrane_hypotheses_20261108/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/membrane_hypotheses_20261108/output/observations.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for the PMID, fetched 2026-11-08 through the PubMed metadata tool; no full text reached",
+ "study_id": {
+  "doi": "10.1016/j.bbrc.2003.09.197",
+  "pmid": "14575712"
+ },
+ "workflow": "Package A membrane physiology to pharmacological hypotheses (ORCH-IT39OS-20261108), producer mh-a, Phase 1. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
