@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-08T12:36:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-08T12:44:00Z",
+ "event_id": "FTR-20261108-18160716-81",
+ "evidence_basis": [
+  "An abstract is not a reading; it supports a conditional lead only.",
+  "verbatim_locator | proposition: another regulated epsilon serine exists | Abstract | \"We identify this site as Ser525, located adjacent to the known phosphoregulatory region in eIF2Bepsilon.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/isrib_discrim_20261108/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/isrib_discrim_20261108/output/phosphosite.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record retrieved through the PubMed tools on 2026-11-08; abstract text only",
+ "study_id": {
+  "doi": "10.1128/MCB.01512-07",
+  "pmid": "18160716"
+ },
+ "workflow": "IT37 Package A (isrib_discrim_20261108): abstract read for the numbering of the eIF2Bepsilon serines and for alternative GSK3 substrates. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
