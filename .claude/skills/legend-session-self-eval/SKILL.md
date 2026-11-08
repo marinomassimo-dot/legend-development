@@ -24,7 +24,8 @@ is documentation. This skill exists so the diagnosis has a name the operator can
    the machine verdict, because knowing the verdict changes what you are willing to claim.
 2. **Judgement second**, in writing, against the template.
 3. **Micro-upgrade third**, derived from the weakest answer.
-4. *Then* `legend-capability-scout`, *then* `legend-session-takeaways`.
+4. **Dream pass, only if something material changed** (a verified result, a corrected premise, a moved limit, a repeated error, a resolved question): [`legend-dream`](../legend-dream/SKILL.md). `dream_pass.py quiet` first; if nothing changed it ends in one line.
+5. *Then* `legend-capability-scout`, *then* `legend-session-takeaways`.
 
 ## Part 1 — run these; do not answer them
 
