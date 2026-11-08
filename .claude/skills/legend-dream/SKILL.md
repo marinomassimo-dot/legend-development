@@ -21,6 +21,8 @@ python3 framework/scripts/dream_pass.py pointers                        # unsent
 python3 framework/scripts/dream_pass.py pairs GENE_A GENE_B             # lines naming both, verbatim, table header above each hit
 ```
 
+`quiet` reports uncommitted changes under its path and says it checks only that path; a git error exits non-zero and is never read as "nothing changed". `pairs` cuts long lines at `--width` and marks how much was omitted with `file:line`; read the full line (`--full`) before relying on a context or a limit.
+
 A folder nobody cites is a place to look, not proof it was ignored (a ledger event or a view may consume it). A co-occurrence orients retrieval; it has no sign and no count is evidence.
 
 ## Three ways of reasoning in one pass

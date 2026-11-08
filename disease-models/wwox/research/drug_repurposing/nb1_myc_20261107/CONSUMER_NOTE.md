@@ -20,3 +20,21 @@ Open and not done: all supplements; figures as images for the sources of this ba
 - **Consumed:** `needs/needs.json`, `NEED-MYC-PROGENITOR-PROLIFERATION` already carries the counter-evidence and the inferred line proposed above (SCAR12-class MYC rise without the composition phenotype, POU5F1 as prominent as MYC, the Fig 3H-I time course, the non-neural WWOX-to-MYC relation, direction `uncertain`). The card is not re-checked here.
 - **Not consumed:** the three generator relations flagged in the Generator row (E11/E30/E01/E02 sign contrast; E27 uninformative; E80 binding lost with MYC protein high) exist only in `output/generator_relations.tsv`; no generation input reads that file, so the 555 proposals ending in MYC (investigation INV-17) were not produced with them. Whether they should enter is the Orchestrator's choice; they are labelled `observed_auditor` (E80, a figure reading, no receipt) or `inferred` (the sign contrast).
 - **New exploratory lead built from E03, E80 and E06:** `lead_staging/plan/lead_dream2_myc.json`, appended as DL-MECH-179 (MYC level versus MYC occupancy at early-neuron genes across the knockout, SCAR12-class and corrected lines). It changes neither INV-17 nor the need; see `../../dream2_20261108/README.md`.
+
+## Hand-off to the Orchestrator, 2026-11-08 (precise form; supersedes the loose wording above, which stays as written)
+
+Rows of `output/generator_relations.tsv` that no reader opens (the retrieval readers glob `*/output/bridges.tsv` and `*/output/probe_links.tsv` only, `framework/scripts/repurposing_search.py` lines 613-618 and 659-660; the generator reads neither this file nor a mirror of it):
+
+| Line | Evidence id | Relation | Status in the file |
+|---|---|---|---|
+| 29 | E11; E30; E01; E02 | MYC gain in tissue models gives the opposite sign to the knockout organoid state (MYC up, neurons down) | `inferred` |
+| 13 | E27 | a microtubule poison in the other-disease model is uninformative about proliferation correction and neuronal differentiation | `uninformative_other_disease` |
+| 28 | E80 | MYC binding at early-neuron gene promoters is lost in knockout neural stem cells with MYC protein high | `observed_auditor` (figure reading, no receipt) |
+| 14, 20 | E11, E30 | MYC or MYCN gain promotes neurogenesis (chick; mouse neurosphere) | `observed_other_organism` (the two inputs of line 29) |
+
+Three different things, kept apart:
+1. **Retrieval.** These are not gene-to-gene precedent edges, so they do not fit the `bridges.tsv` shape (gene_a, relation, gene_b, status, context). Making them findable needs either a small `output/bridges.tsv` for the one row that is an edge (line 14/20 as MYC to a neurogenesis readout would be a pathway claim, not an expression edge: not recommended) or, more simply, a pointer from the consumers below to this file. That is a choice about the reader, not a scientific one.
+2. **Qualification.** Line 28 stands on an auditor's reading of one figure and needs a receipted read of the paper figure before it may bear on anything; line 29 is an inference from other-organism gain-of-function and a transfer, not a WWOX observation; line 13 only limits what a compound result means.
+3. **Effect on proposals.** Not measured. The 555 proposals ending in MYC (investigation INV-17; `generation_it33_p4_20261107/README.md`) assume a direction for MYC; line 29 and line 28 bear on that assumption, line 13 on none. Whether any proposal changes is unknown until the generator is rerun with them, and that rerun is the Orchestrator's to schedule.
+
+Consumers concerned: `needs/needs.json` `NEED-MYC-PROGENITOR-PROLIFERATION` (already carries the context-dependent direction; lines 28 and 29 would sit in `counter_evidence` and `inferred` once qualified), `ranking_it8_p9_20261029/investigations_it20.tsv` row INV-17 (its decisive-uncertainty field), and the DL-MECH-179 lead.
