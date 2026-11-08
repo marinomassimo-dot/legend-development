@@ -6055,7 +6055,7 @@
    "coverage_generated_from": {
     "assertion_pertinence.tsv": "c9a9c8fa92207fb3",
     "card_links.json": "2aac19ca3b0b7686",
-    "cards_and_packets": "28e586aafd0bad17",
+    "cards_and_packets": "fd966d061d5ed483",
     "catalog.jsonl.gz": "75652786013b931d",
     "catalog_stats.json": "87ac308ce3ab9b3f",
     "measure_next.json": "bca46967510475c5",
@@ -7064,7 +7064,7 @@
    ],
    "exploratory_it7": "None. Not in the P3 universe (card-linked families were firewalled out of every method) and P3 tested a transcript module, not protein fate. P2: a class with a catalogued target row only for HDAC at enzyme level; no chaperone target row in ChEMBL, GtoPdb or DGIdb.",
    "inputs": {
-    "T1_cards": "5bd23994c425f7c1",
+    "T1_cards": "acd520c9f22b6d59",
     "T2_pertinence": "91e62b924fe30a2a",
     "T3_receipts": "bb42cf66c0eeefbc",
     "T4_needs": "9ae567485b16c45c",
@@ -7362,7 +7362,7 @@
    ],
    "exploratory_it7": "None; outside the P3 universe and not a transcript question.",
    "inputs": {
-    "T1_cards": "80fc156a58f22fff",
+    "T1_cards": "1e4aafe117f653bd",
     "T2_pertinence": "a99cbab9e0538513",
     "T3_receipts": "3bc6767930a125a4",
     "T4_needs": "9ae567485b16c45c",
@@ -7615,7 +7615,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "a8e370966034aad7",
+    "T1_cards": "d7fcc3d83f5a198e",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "2985f0604e1f1074",
     "T4_needs": "9ae567485b16c45c",
@@ -7846,7 +7846,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "51a98aea5dad230d",
+    "T1_cards": "050a239ada4bbdba",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "f2357c73cbfbf215",
     "T4_needs": "9ae567485b16c45c",
@@ -8076,7 +8076,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "4c75691c4256446c",
+    "T1_cards": "b63cb5c28f7197de",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "f2357c73cbfbf215",
     "T4_needs": "9ae567485b16c45c",
@@ -8342,7 +8342,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "18884e9af2c68194",
+    "T1_cards": "80dcd3024a050187",
     "T2_pertinence": "e8ab801c472fdfe7",
     "T3_receipts": "0efa01184c6ba643",
     "T4_needs": "aa528d3f09f497b0",
@@ -8697,7 +8697,7 @@
    ],
    "exploratory_it7": "None. Gene addition is not a compound question; P2 counts it as direction-evaluable by target only (zero signed records on the need target) and P3 did not touch it.",
    "inputs": {
-    "T1_cards": "3692e2efc56a356a",
+    "T1_cards": "984e98ac24bc346d",
     "T2_pertinence": "59d15d3c06233d6c",
     "T3_receipts": "416db5019ee207c2",
     "T4_needs": "4fa5821159bd91b8",
@@ -9092,7 +9092,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "cd1513b326e1339d",
+    "T1_cards": "f2fbf5ba01fc0bea",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "4c5d7ee4b7cf4a15",
     "T4_needs": "66cebf15a40b040e",
@@ -9323,7 +9323,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "f92b926f631638f1",
+    "T1_cards": "edd78f3a285d93fd",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "7c3470b08271512e",
     "T4_needs": "10a1be2af4314710",
@@ -9567,7 +9567,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "cf6d65e8b7adfad8",
+    "T1_cards": "c1b348fefc44adb3",
     "T2_pertinence": "8e52657c67b7cf9d",
     "T3_receipts": "9704e0c37800b5d7",
     "T4_needs": "a7a80e55c71b1e22",
@@ -9920,7 +9920,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "df32c0ed8e3ba3ab",
+    "T1_cards": "9f6af4516a9cba76",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "b2bf3fd5e57734f5",
     "T4_needs": "55ff62f47762bab4",
@@ -10206,7 +10206,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "57b1ff27d64c5b9e",
+    "T1_cards": "f7c768e5eff4e340",
     "T2_pertinence": "079230f81c69cb2e",
     "T3_receipts": "f08c8c4a8c730c12",
     "T4_needs": "ac27518af19cc333",
@@ -10498,7 +10498,7 @@
    ],
    "exploratory_it7": "P3 (IT7, exploratory, minimum detectable effect about rho 0.15, independently verified): NO ADDED VALUE of a signed external network (rho 0.047) or a WWOX-enriched network (difference -0.0015) for ranking compounds by opposition of the six-gene module; the signature route is effect not detected, not excluded (rho 0.143, 0.007 under the 0.15 threshold, 90 pe…",
    "inputs": {
-    "T1_cards": "8dec24eb2433d627",
+    "T1_cards": "42ae77736f8b17bc",
     "T2_pertinence": "1959a04e90dbf178",
     "T3_receipts": "40c5fc3d2f7c6cff",
     "T4_needs": "a3face7aa0d2e275",
@@ -10896,7 +10896,7 @@
    ],
    "exploratory_it7": "P3 (IT7, exploratory, independently verified): the same result as CMP-04 - network routes NO ADDED VALUE, signature route not detected and not excluded (weak positive counter-evidence: lower bound 0.039, top-decile hit rate 15 percent); module transfer inconclusive (null 95th percentile 0.389 and p 0.060 on the producer's draw, 0.396 and 0.0595 on the verif…",
    "inputs": {
-    "T1_cards": "9e7570ff71a44c94",
+    "T1_cards": "0c8dd1d7ec2d2484",
     "T2_pertinence": "4f588d870d868008",
     "T3_receipts": "187860b87a45d693",
     "T4_needs": "364bca1d317075b9",
@@ -11312,7 +11312,7 @@
    ],
    "exploratory_it7": "None. A diet has no compound target row, so neither P2 method applies, and the P3 negative says nothing about it.",
    "inputs": {
-    "T1_cards": "48172ac802ceccf5",
+    "T1_cards": "6e981814160bfe8e",
     "T2_pertinence": "d95f7e8dcd00a63d",
     "T3_receipts": "0e112185590bfb85",
     "T4_needs": "744c0fd8813698d6",
@@ -11635,7 +11635,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "94dd067a023bf7be",
+    "T1_cards": "2f20369ba7f9a57f",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "f0f0ae5de56ab3dc",
     "T4_needs": "c2293d59cfe3febe",
@@ -11939,7 +11939,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "5d41e4aa41b82b23",
+    "T1_cards": "e1af52fc7a3c0459",
     "T2_pertinence": "8b0a047e9ce40434",
     "T3_receipts": "256e7c7a300874a1",
     "T4_needs": "dc35a1594f973b2c",
@@ -12290,7 +12290,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "3388d60b6e1724df",
+    "T1_cards": "a8730964b1cea019",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "f0f0ae5de56ab3dc",
     "T4_needs": "c2293d59cfe3febe",
@@ -12538,7 +12538,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "2cd25660055e1fc6",
+    "T1_cards": "cbd5e9d29a82556f",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "004bf101de3feb3f",
     "T4_needs": "e47c99263fff82cc",
@@ -12863,7 +12863,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "50d5f4fc39e6469f",
+    "T1_cards": "302e1c9e99064cd1",
     "T2_pertinence": "40d3f822d9a26184",
     "T3_receipts": "a9ec23bae5d5e8b5",
     "T4_needs": "98de133ad523d5dd",
@@ -13425,7 +13425,7 @@
    ],
    "exploratory_it7": "None from P3 (a receptor-physiology question, not a transcript module; memantine and perampanel are card-linked and firewalled). P2: memantine and perampanel are usable by the network method (signed antagonist actions on GRIN and GRIA targets) and have no neural LINCS signature, so the signature method does not apply; the need has 179 linked records by targ…",
    "inputs": {
-    "T1_cards": "1e90bceb6bad0564",
+    "T1_cards": "a1c8b35776ecbf8c",
     "T2_pertinence": "4744af9e5e721d31",
     "T3_receipts": "3d0b5ece173e42e6",
     "T4_needs": "8816252467c929c0",
@@ -13879,7 +13879,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "410cdeced221b8cf",
+    "T1_cards": "a0bb0cc6ceda1b41",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "855a2f47751f07b3",
     "T4_needs": "c3cb663b4a8f81ca",
@@ -14132,7 +14132,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "adef3e5729eefc23",
+    "T1_cards": "7bf741246c8e5fbf",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d922cf96e068135e",
     "T4_needs": "6607eb58bf62a894",
@@ -14465,7 +14465,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "754dc6d56c7bea8b",
+    "T1_cards": "abab8d3f05ee3aee",
     "T2_pertinence": "db0343ccb25dda32",
     "T3_receipts": "f7b143ac97234fd0",
     "T4_needs": "5f1fd60b12ed4ae7",
@@ -14820,7 +14820,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "7923de7201748e33",
+    "T1_cards": "3d865d7ff4a2af99",
     "T2_pertinence": "904f40dca9a2c7f5",
     "T3_receipts": "363c5784f1f8ac96",
     "T4_needs": "dc35a1594f973b2c",
@@ -15157,7 +15157,7 @@
    ],
    "exploratory_it7": "None from P3 (not the glycolysis module). P2: the need is exploration-only (direction uncertain) with 521 linked records by target association, 331 usable by the network method and 4 neural-signature records among them; association only, no direction toward a need, nothing evaluated.",
    "inputs": {
-    "T1_cards": "b7004c6ce80f3d6e",
+    "T1_cards": "7f62e5969c862940",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "ee633eda510e3d76",
     "T4_needs": "34001ad580d89a15",
@@ -15454,7 +15454,7 @@
    ],
    "exploratory_it7": "None. An ion has no signed target row for the network method and no neural LINCS perturbation; the P3 negative does not apply.",
    "inputs": {
-    "T1_cards": "ce049bc355ce099d",
+    "T1_cards": "9eb0d181b964914e",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "fa3a2a9afb6acd93",
     "T4_needs": "8816252467c929c0",
@@ -15783,7 +15783,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "d8b934ed52c8ba92",
+    "T1_cards": "941bff44f709f9a6",
     "T2_pertinence": "419afd58578b735f",
     "T3_receipts": "426c49feed3ec7e7",
     "T4_needs": "bbaa10de8747dfa1",
@@ -16112,7 +16112,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "2415956a9904cfa7",
+    "T1_cards": "851a6de3584a49f0",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "f0f0ae5de56ab3dc",
     "T4_needs": "c2293d59cfe3febe",
@@ -16274,7 +16274,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "d69638cfdab10991",
+    "T1_cards": "3c011722f3675fa5",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "b000efe24b200afe",
     "T4_needs": "c156cede56e9ac9b",
@@ -16434,7 +16434,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "2ee7c4d7fb955da8",
+    "T1_cards": "a4b250d7d4fd9622",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "c124efeb8d5edb82",
     "T4_needs": "97e5657152aa720b",
@@ -16627,7 +16627,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "c94116b4d31e768a",
+    "T1_cards": "45337a44c679ff85",
     "T2_pertinence": "1d8e37b50e10f4e0",
     "T3_receipts": "d9ee25c41d17edbd",
     "T4_needs": "2fa442aa63e75191",
@@ -17083,7 +17083,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "61c215efa58f47c5",
+    "T1_cards": "d385722fddb20b70",
     "T2_pertinence": "403956ddfaf8ef49",
     "T3_receipts": "5b7c9accc2ff20bd",
     "T4_needs": "492f1e05d520cfd1",
