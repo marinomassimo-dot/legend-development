@@ -2,6 +2,13 @@
 
 Non-canonical research material. Not medical advice; no administered dose, schedule or route; no efficacy claim; ISRIB is a research probe here, not a candidate. Nothing was recorded in a ledger; receipts are staged (suffix 97). Tables: `probe_entry.tsv` (16 rows in the four layers `identity`, `mechanism`, `function`, `wwox_transfer`), `evidence_isrib.tsv` (33 rows: 16 support, 11 counter, 6 context), `queries_isrib.tsv`.
 
+## Current state (IT38, after the IT37 audit of `../../isrib_discrim_20261108/`)
+
+Three statements below are **superseded**; they stay in place as history, each marked `[superseded]`:
+1. WWOX bullet: the gap is the chain from GSK3 to eIF2B epsilon and translation, and ISRIB or eIF2B in a WWOX system. GSK3 itself has been observed in WWOX systems (phospho-Ser9 of GSK3beta lower in the null mouse brain, one lane per genotype; lithium lowers a provoked-seizure score in the null and equally in controls).
+2. The 2013 blot labelled S539 is of undetermined site (human residue 539 of EIF2B5 is Asp), and it is not a GSK3-site test.
+3. The pattern called "the only one ISRIB discriminates cleanly" is withdrawn: ISRIB giving little is the expected result when phospho-eIF2 alpha is not raised, so it does not separate the GSK3 serine from other explanations; the first fork is whether phospho-eIF2 alpha is raised and ISRIB-reversible in deficient versus corrected cells (`../../isrib_discrim_20261108/output/grid.tsv`, G02 and G10).
+
 ## Answer first
 
 * DATO (identity): the first report (PMID 23741617, text read) describes ISRIB as a symmetric bis-glycolamide with a central cyclohexane in cis and trans forms, gives the trans isomer the descriptors (1r,4r) in its synthesis section, and finds trans about 100-fold more potent in the cell reporter. This matches the registry title (trans-1,4-cyclohexanediyl bis-amide) on the branch `task/isrib-identity`, which I reuse as given. INFERENZA: the paper's text is not an independent derivation of the registry copies in any demonstrable sense (a registry may have taken its structure from this literature); it is a primary source for the structure, not a second check on the InChIKey. The drawn structure (Figure 2A) was not looked at. One flag: the 2018 structure paper (29599213) says the modelled side chains project "to the same face" of the cyclohexane ring; without its figure this cannot be read as cis or trans, so it is neither a contradiction nor a confirmation (row EI19).
@@ -10,7 +17,7 @@ Non-canonical research material. Not medical advice; no administered dose, sched
 * DATO (what the drug does with the ISR off): the sources disagree on the basal exchange effect. A partially purified rabbit eIF2B extract gave a three-fold rise without phosphorylated eIF2 (EI11); the recombinant decamer showed no significant activation (EI15) and the module's earlier row E21 says only minimal acceleration. In animals, the authors of 33531382 report no noticeable effect in wild-type mice (EI26). Reversibility after withdrawal was not found in the passages read: NON RISOLTO.
 * DATO (dose-response, source facts only): bell-shaped in the tetramer system in vitro (assembly at 1 micromolar, none at 10 micromolar, EI17); neuronal survival rose over a wide range in 32457286 (EI21). Not a rule for any other system.
 * DATO (function in neural systems): in primary rat cortical neurons with mutant SOD1, ISRIB raised survival and lowered a UPR reporter (readouts: longitudinal survival, UPR reporter), but in the same neurons it did not lower ATF4 under thapsigargin, unlike HEK293 (EI21, EI22), and it did not help neurons with the other toxic protein tested (EI23). In AD-model mouse hippocampus it corrected the oligomer-driven fall in protein synthesis (readout SUnSET, EI25). INFERENZA: ATF4 is not a safe engagement readout in cultured neurons; global translation labelling is.
-* DATO (WWOX): no source tests ISRIB, GSK3 or eIF2B in a WWOX system; the module's own summary is "The chain is not established." (EI32). IPOTESI only below.
+* [superseded, see Current state] DATO (WWOX): no source tests ISRIB, GSK3 or eIF2B in a WWOX system; the module's own summary is "The chain is not established." (EI32). IPOTESI only below.
 
 ## The four links, kept separate
 
@@ -18,7 +25,7 @@ Non-canonical research material. Not medical advice; no administered dose, sched
 |---|---|---|
 | Binding to the eIF2B complex (beta-delta interface, decamer stabilisation) | 25875391 (activation, assembly), 29599245, 29599213 | nothing here argues against it |
 | Action on the single subunit EIF2B5 (epsilon) | 25875391 shows eIF2B5 knock-down lowers the response (an abundance requirement) | all binding data: pocket on beta and delta; epsilon catalytic domain unresolved (EI14, EI18) |
-| Effect on the phosphorylation state of the GSK3 serine of epsilon (rat Ser535, human Ser540) | one measurement: 23741617 states that ISRIB 'did not reduce phosphorylation of S539' of epsilon (HEK293T, ER stress; direction only, figure not viewed); whether S539 is the GSK3 serine (rat 535, human 540) is open | everything read; the module's audit |
+| Effect on the phosphorylation state of the GSK3 serine of epsilon (rat Ser535, human Ser540) | one measurement: 23741617 states that ISRIB 'did not reduce phosphorylation of S539' of epsilon (HEK293T, ER stress; direction only, figure not viewed); [superseded: site undetermined] whether S539 is the GSK3 serine (rat 535, human 540) is open | everything read; the module's audit |
 | Functional rescue in a WWOX system | nothing | no WWOX measurement found (module Q03, Q-E1, Q-E3, Q-E4) |
 
 ## Probe use: which ISRIB result would discriminate (IPOTESI; no source tests this)
@@ -28,7 +35,7 @@ Same preparation (isogenic WWOX-deficient and corrected human neurons, or the cl
 | Observation | Reading |
 |---|---|
 | Phospho-eIF2 alpha and the ISR markers are raised at baseline; ISRIB restores translation; engagement control works | phospho-eIF2-driven ISR in that preparation; says nothing on GSK3 |
-| Phospho-eIF2 alpha not raised, phospho-epsilon at the GSK3 serine raised, translation lowered; a GSK3 inhibitor of two classes raises translation; ISRIB gives little although the engagement control shows it works | the GSK3 to eIF2B-epsilon route is the better reading; this is the only pattern ISRIB discriminates cleanly |
+| Phospho-eIF2 alpha not raised, phospho-epsilon at the GSK3 serine raised, translation lowered; a GSK3 inhibitor of two classes raises translation; ISRIB gives little although the engagement control shows it works | the GSK3 to eIF2B-epsilon route is the better reading; [superseded: withdrawn, see Current state] this is the only pattern ISRIB discriminates cleanly |
 | Phospho-eIF2 alpha not raised, translation lowered, ISRIB raises translation | not discriminating: ISRIB may raise eIF2B activity generally (EI11) or compensate a destabilised complex (EI29); it does not exclude the GSK3 route |
 | Phospho-eIF2 alpha not raised, translation not lowered | no eIF2B-limited defect in this preparation; the premise fails |
 | ISRIB gives nothing and the engagement control also fails | uninformative (dose, bell-shaped response, resistance) |
