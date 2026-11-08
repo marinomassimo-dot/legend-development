@@ -1,0 +1,38 @@
+{
+ "analysis_time_precision": "minute",
+ "record_kind": "contemporaneous_receipt",
+ "source_fingerprint": null,
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv02_isr/README.md"
+ ],
+ "analysis_at": "2026-11-08T17:47:00Z",
+ "event_at": "2026-11-08T17:48:00Z",
+ "event_id": "FTR-20261108-42097410-31",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "evidence_basis": [
+  "abstract analysed; no full text opened for this PMID (review; no PMC copy)",
+  "verbatim_locator | proposition: the review frames acute ISR activation as protective and chronic activation as hypo-plastic in aging-related cognitive disorders | Abstract | \"Acute ISR activation can be protective, while chronic ISR activation may confine neurons and glial cells to hypo-plastic states\"",
+  "verbatim_locator | proposition: ISRIB is described as an eIF2B activator for tuning ISR output | Abstract | \"ISRIB is a prototype small molecule that activates eIF2B and restores translation homeostasis\""
+ ],
+ "evidence_depth": "abstract_only",
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "source_kind": "abstract",
+ "source_locator": "PubMed record fetched 2026-11-08 through the PubMed tool; no PMC copy; bytes not saved",
+ "study_id": {
+  "doi": "10.1016/j.phrs.2026.108228",
+  "pmid": "42097410"
+ },
+ "workflow": "INV-02 retest: identity and wording check of the report's quotations (os-02). Staged for the integrator; the ledger was not written by the preparing actor."
+}

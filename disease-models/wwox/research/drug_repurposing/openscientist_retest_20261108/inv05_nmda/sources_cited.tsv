@@ -1,0 +1,25 @@
+src_id	as_written	pmid_or_doi_as_written	used_for	anchor	note
+S01	PMID: 34634460 ("These bursts were NMDAR and gap junction dependent.")	PMID: 34634460	E01,E04,E05,E52,E70	L30,L97,L132	Source of the Wwox-KO slice phenotype; no author, year or journal given.
+S02	PMID: 15717010 (memantine "enters the receptor-associated ion channel preferentially when it is excessively open")	PMID: 15717010	E07,E30,E31,E32	L30,L45,L98	Memantine mechanism.
+S03	PMID: 21896318 (NR1/NR2B main extrasynaptic subunit, Y1336 phosphorylation in immature brain)	PMID: 21896318	E25,E27,E84,E86	L33,L99	Species/region not stated by the report.
+S04	PMID: 28782587 (neonatal cortex EPSCs "largely mediated by GluN2B-containing NMDARs")	PMID: 28782587	E26,E27,E84	L33,L100	none
+S05	PMID: 40994429 (radiprodil "with high potency and selectivity and appears to be safe in humans")	PMID: 40994429	E12,E13,E16	L36,L101	Also attached to claim about majority of GRIN1/GRIN2B variants.
+S06	PMID: 38529699 (radiprodil in GluN2A(N615S) mice)	PMID: 38529699	E15	L36,L102	Report states GluN2A GoF model.
+S07	PMID: 12520755 (NMDAR blockade "triggers neuronal suicide (apoptosis)")	PMID: 12520755	E36,E74	L38,L103	none
+S08	PMID: 17312200 (NMDA antagonists incl. ketamine "induce neurodegeneration in the developing brain")	PMID: 17312200	E37,E67	L38,L104,L149	none
+S09	PMID: 19204407 (MgSO4 caspase-3-positive developmental apoptosis)	PMID: 19204407	E38,E67,E88	L38,L105,L149	none
+S10	PMID: 23395831 (ketamine block "more extensive inhibition... in neonatal neurons than in adult neurons")	PMID: 23395831	E39	L38,L45,L106	none
+S11	PMID: 12849400 (Ikonomidou & Turski; "blockade of synaptic transmission mediated by NMDA receptors hinders neuronal survival")	PMID: 12849400	E20,E24,E21	L42,L107	Only source for which authors are named.
+S12	PMID: 15335108 (selfotel phase III aborted)	PMID: 15335108	E18,E19,E22,E76	L42,L108,L161	none
+S13	PMID: 15772895 (allosteric modulators improved safety/therapeutic indices)	PMID: 15772895	E22,E23	L42,L109	none
+S14	PMID: 12365832 (competitive and non-competitive antagonists failed stroke trials)	PMID: 12365832	E20,E21	L42,L110	none
+S15	PMID: 41409370 (ketamine refractory SE "56% (95% CI: 51-61)")	PMID: 41409370	E08,E42,E46,E55,E69,E87	L48,L111,L153	none
+S16	PMID: 37334223 (ketamine neonatal SE; sequelae 4/5 survivors)	PMID: 37334223	E43,E46	L48,L112	none
+S17	PMID: 39970743 (ATP1A2-related DEE; ketamine then memantine)	PMID: 39970743	E44,E46,E54,E66	L48,L113,L147	none
+S18	PMID: 22261077 (neonatal NKH; ketamine/dextromethorphan outcome usually poor)	PMID: 22261077	E45,E46,E69	L48,L114,L153	none
+S19	PMID: 34747138 ("Response to antiepileptic drugs of these syndromes is very poor...")	PMID: 34747138	E48	L51,L115	none
+S20	PMID: 30356099 ("early-onset drug-resistant seizures")	PMID: 30356099	E48	L51,L116	none
+S21	PMID: 32000863 (lithium/GSK-3beta, PTZ seizures in Wwox-null mice)	PMID: 32000863	E49,E50,E51,E68	L51,L117,L151	none
+S22	MONDO:0014533 (WOREE / DEE28)	MONDO:0014533	E81	L6	Disease identifier, not a reference. Report labels WOREE and DEE28 as the same entity.
+S23	WWOX dismech knowledge base (three treatment nodes)	none	E47,E49,E52,E53	L51	Named resource without identifier or version.
+S24	Ikonomidou & Turski (author attribution inside F005)	none	E24	L42	Same article as S11 presumably; no year or title given.

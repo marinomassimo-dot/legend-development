@@ -1,0 +1,37 @@
+{
+ "analysis_time_precision": "minute",
+ "record_kind": "contemporaneous_receipt",
+ "source_fingerprint": null,
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv02_isr/README.md"
+ ],
+ "analysis_at": "2026-11-08T17:47:00Z",
+ "event_at": "2026-11-08T17:48:00Z",
+ "event_id": "FTR-20261108-28696288-31",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "evidence_basis": [
+  "abstract analysed; no full text opened for this PMID",
+  "verbatim_locator | proposition: ISRIB reversed hippocampal-dependent deficits after TBI in two adult mouse injury models, and the abstract reports persistent ISR activation after injury | Abstract | \"reversed the hippocampal-dependent cognitive deficits induced by TBI in two different injury mouse models\""
+ ],
+ "evidence_depth": "abstract_only",
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "source_kind": "abstract",
+ "source_locator": "PubMed record fetched 2026-11-08 through the PubMed tool; PMC copy exists but was not opened; bytes not saved",
+ "study_id": {
+  "doi": "10.1073/pnas.1707661114",
+  "pmid": "28696288"
+ },
+ "workflow": "INV-02 retest: wording check of the report's TBI quotation (os-02). Staged for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,22 @@
+src_id	as_written	pmid_or_doi_as_written	used_for	anchor	note
+S01	WWOX-deletion human brain organoids	PMID: 33914858	E06; E33; E51; E52	L22; L81-82; L102	Quoted sentence includes "also revealed"; study type not stated.
+S02	ISR and oligodendrocyte maturation (elvitegravir/raltegravir, cuprizone)	PMID: 32894619	E08	L24; L103	
+S03	ISRIB as eIF2B activator (review)	PMID: 42097410	E09; E10; E15; E34	L24; L29; L94; L104	Identifier is high-numbered; not checked.
+S04	ISRIB in AD models (salubrinal comparison)	PMID: 33531382	E11; E12; E17; E18	L27; L105	
+S05	ISRIB in TBI	PMID: 28696288	E13	L27; L106	
+S06	ISRIB in MEHMO patient iPSCs	PMID: 31836389	E14	L29; L107	
+S07	GSK-3b in Wwox-/- mice (lithium, PTZ)	PMID: 32000863	E19; E20; E24; E46; E48	L34; L108; L153	
+S08	GSK-3 phosphorylates eIF2Be	PMID: 12133000	E21; E23; E25	L36; L109	
+S09	GSK-3b / eIF2Be-S535, LiCl or ISO	PMID: 15001529	E22; E24; E46	L36; L110; L153	ISO not expanded in report.
+S10	ISRIB in VWM human organoids	PMID: 40296303	E26; E27; E28; E42	L41; L43; L111; L142	Same ID is used for the VWM definition quote and the ISRIB quote.
+S11	WWOX suppresses autophagy (tumour cells)	PMID: 33300063	E30	L46; L112	
+S12	supporting GSK-3b->eIF2B biochemistry, other tissue	PMID: 18701453	E36; E49	L113	Tissue mapping not given.
+S13	supporting GSK-3b->eIF2B biochemistry, other tissue	PMID: 18252708	E36; E49	L113	
+S14	supporting GSK-3b->eIF2B biochemistry, other tissue	PMID: 17901358	E36; E49	L113	
+S15	supporting GSK-3b->eIF2B biochemistry, other tissue	PMID: 12376332	E36; E49	L113	
+S16	supporting GSK-3b->eIF2B biochemistry, other tissue	PMID: 16545079	E36; E49	L113	
+S17	supporting GSK-3b->eIF2B biochemistry, other tissue	PMID: 18583310	E36; E49	L113	
+S18	WWOX neural-expression / GABAergic context	PMID: 15026124	E50	L113	Not described.
+S19	WWOX neural-expression / E-I context	PMID: 30290271	E50	L113	Not described.
+S20	dismech WOREE/DEE28 knowledge base	MONDO:0014533	E02; E03	L6; L9; L17	Database, not a paper.
+S21	targeted PubMed queries (four strings)	none	E04	L17	No date, no hit counts.

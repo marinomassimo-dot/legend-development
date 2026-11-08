@@ -1,0 +1,40 @@
+{
+ "analysis_time_precision": "minute",
+ "event_at": "2026-11-08T20:08:00Z",
+ "analysis_at": "2026-11-08T20:05:00Z",
+ "record_kind": "contemporaneous_receipt",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv10_seizures/README.md",
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv10_seizures/evidence.tsv"
+ ],
+ "source_fingerprint": null,
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_id": "FTR-20261108-42949433-38",
+ "evidence_basis": [
+  "An abstract is not a reading; it supports a conditional lead only.",
+  "verbatim_locator | proposition: seizure freedom occurred in a subset, particularly KCNQ2-related DEE | Abstract, Results | \"Seizure freedom was achieved in a subset of patients, particularly those with KCNQ2-related DEE.\"",
+  "verbatim_locator | proposition: severe-to-profound disability persisted among seizure-free children; cohort-level figure, not KCNQ2-specific | Abstract, Results | \"persisted even among those who became seizure-free, suggesting that neurodevelopmental outcomes are influenced by factors beyond seizure burden\"",
+  "verbatim_locator | proposition: the authors exclude causal inference | Abstract, Results | \"the marked variability observed precludes any causal inference from these data\""
+ ],
+ "evidence_depth": "abstract_only",
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "source_kind": "abstract",
+ "source_locator": "PubMed record retrieved through the PubMed tools on 2026-11-08; abstract text only",
+ "study_id": {
+  "doi": "10.1002/epi4.70375",
+  "pmid": "42949433"
+ },
+ "workflow": "INV-10 OpenScientist full-input repeat (label os-10): question-driven read of a source the report cites, to test a stated proposition. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

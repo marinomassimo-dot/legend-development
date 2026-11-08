@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-08T18:06:00Z",
+ "analysis_time_precision": "minute",
+ "event_at": "2026-11-08T18:07:00Z",
+ "record_kind": "contemporaneous_receipt",
+ "source_fingerprint": null,
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv03_04_ttype/README.md",
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv03_04_ttype/evidence.tsv"
+ ],
+ "workflow": "INV-03/04 T-type full-input repeat (openscientist_retest_20261108, label os-03): reading for the propositions in decisive.tsv. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor.",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_id": "FTR-20261108-24277868-32",
+ "evidence_basis": [
+  "An abstract is not a reading; it supports a conditional lead only. Full text not reached (PMC tool returned an empty body; Europe PMC HTTP 500).",
+  "verbatim_locator | proposition: ethosuximide or TTA-P2 reversed effects of the C456S Cav3.2 variant in cultured neurons; which effects is not resolved at abstract level | Abstract | \"These effects were reversed to normal by either the absence epilepsy drug ethosuximide or a novel T-channel blocker, TTA-P2.\"",
+  "verbatim_locator | proposition: the variant raised spontaneous firing and lowered the rebound-burst threshold in cultured neurons | Abstract | \"increased the excitability of cultured neurons by increasing the spontaneous firing rate\""
+ ],
+ "evidence_depth": "abstract_only",
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "source_kind": "abstract",
+ "source_locator": "PubMed record retrieved through the PubMed tools on 2026-11-08; abstract text only. The PMC full-text tool returned an empty full_text field for PMC3934715; Europe PMC fullTextXML returned HTTP 500 on two tries.",
+ "study_id": {
+  "doi": "10.1113/jphysiol.2013.264176",
+  "pmid": "24277868"
+ }
+}

@@ -1,0 +1,39 @@
+{
+ "analysis_time_precision": "minute",
+ "record_kind": "contemporaneous_receipt",
+ "source_fingerprint": null,
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv02_isr/README.md"
+ ],
+ "analysis_at": "2026-11-08T17:47:00Z",
+ "event_at": "2026-11-08T17:48:00Z",
+ "event_id": "FTR-20261108-40296303-31",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "figures": "captions_only",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "evidence_basis": [
+  "verbatim_locator | proposition: the sentence the report quotes is a background statement in the Introduction, and it says ISRIB inhibits eIF2 phosphorylation | Introduction | \"ISRIB is a specific eIF2B activator that inhibits the phosphorylation of eIF2\"",
+  "verbatim_locator | proposition: mutant VWM organoids showed lower MBP-positive area and sparse myelin with higher g-ratio than wild type at week 10 | Results 3.4 | \"the mutant organoids showed sparse myelin sheaths\"",
+  "verbatim_locator | proposition: after ISRIB the g-ratio of mutant organoids fell and MBP rose, read by the authors as improved myelin development | Results 3.7 | \"the G-ratio of mutant organoids calculated by ImageJ decreased significantly after ISRIB treatment\"",
+  "verbatim_locator | proposition: authors state two patient lines and two control lines only | Discussion | \"the small sample size may reduce the representability of research results to some extent\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "prior_receipt": "FTR-20261105-40296303-04",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC12037694 full text fetched 2026-11-08 through the PubMed tool get_full_text_article; sections listed read as text, figure images not viewed (captions only); bytes not saved",
+ "study_id": {
+  "doi": "10.1111/cns.70398",
+  "pmid": "40296303"
+ },
+ "workflow": "INV-02 retest: the myelination readout behind the report's VWM precedent (os-02). Targeted passages; Methods concentration stated by the paper as 500 micromolar (source fact as written). Staged for the integrator; the ledger was not written by the preparing actor."
+}

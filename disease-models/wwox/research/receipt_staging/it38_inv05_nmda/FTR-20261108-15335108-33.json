@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-08T18:27:07Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-08T18:28:07Z",
+ "event_id": "FTR-20261108-15335108-33",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: the selfotel head-injury trial was stopped because of deaths seen in concurrent stroke studies | Abstract | \"had to be prematurely aborted, since concurrent stroke studies with enrollment of nonintubated patients on low-dose selfotel revealed an increased number of deaths\"",
+  "verbatim_locator | proposition: a retrospective analysis did not confirm increased mortality in the head-injury trial | Abstract | \"A retrospective analysis did not confirm that Selfotel was associated with an increased mortality in TBI\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv05_nmda/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record (abstract) read 2026-11-08; no full text sought; bytes not saved",
+ "study_id": {
+  "doi": "10.1007/978-3-7091-0603-7_14",
+  "pmid": "15335108"
+ },
+ "workflow": "os-05 INV-05 NMDA full-input repeat Phase 2"
+}

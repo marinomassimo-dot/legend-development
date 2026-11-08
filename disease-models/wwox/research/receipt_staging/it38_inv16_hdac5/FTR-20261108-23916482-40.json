@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-08T20:34:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "event_at": "2026-11-08T20:46:00Z",
+ "event_id": "FTR-20261108-23916482-40",
+ "evidence_basis": [
+  "abstract analysed in full; abstract-level statements only",
+  "verbatim_locator | proposition: class II inhibition derepressed Bdnf quickly in rat primary neurons | Abstract | \"inhibition of class II HDACs resulted in rapid upregulation of Bdnf mRNA levels\"",
+  "verbatim_locator | proposition: HDAC4 and HDAC5 repressed the promoter IV reporter | Abstract | \"HDAC4 and HDAC5 repressed Bdnf promoter IV activity\"",
+  "verbatim_locator | proposition: MEF2 element not required for promoter IV induction by inhibitors | Abstract | \"MEF2-binding CaRE1 element was not necessary for promoter IV induction by HDAC inhibition\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv16_hdac5/README.md",
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv16_hdac5/decisive.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 23916482 (abstract and metadata as served 2026-11-08)",
+ "study_id": {
+  "doi": "10.1016/j.neuropharm.2013.07.015",
+  "pmid": "23916482"
+ },
+ "workflow": "INV-16 OpenScientist full-input repeat, producer os-16. Question-driven read for the decisive propositions; prepared as a staged JSON for the integrator; the ledger was not written by the preparing actor."
+}

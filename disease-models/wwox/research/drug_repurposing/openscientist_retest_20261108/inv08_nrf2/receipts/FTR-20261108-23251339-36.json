@@ -1,0 +1,38 @@
+{
+ "analysis_time_precision": "minute",
+ "record_kind": "contemporaneous_receipt",
+ "source_fingerprint": null,
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv08_nrf2/README.md"
+ ],
+ "analysis_at": "2026-11-08T19:20:00Z",
+ "event_at": "2026-11-08T19:27:00Z",
+ "event_id": "FTR-20261108-23251339-36",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "evidence_basis": [
+  "abstract analysed; no full text opened for this PMID",
+  "verbatim_locator | proposition: mouse liver in diabetes with zinc chelation: Nrf2 lower, GSK-3beta phosphorylation lower and nuclear Fyn higher as co-occurring changes; liver, not a neural system, and no test of GSK-3beta driving Fyn | Abstract | \"Diabetes/TPEN group also showed a significant decrease in nuclear factor-erythroid 2-related factor 2 (Nrf2) expression\"",
+  "verbatim_locator | proposition: second abstract sentence checked for the same proposition | Abstract | \"increase in nuclear accumulation of Fyn (a Nrf2 negative regulator)\""
+ ],
+ "evidence_depth": "abstract_only",
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "source_kind": "abstract",
+ "source_locator": "PubMed record fetched 2026-11-08 through the PubMed tool; any PMC copy was not opened; bytes not saved",
+ "study_id": {
+  "doi": "10.1371/journal.pone.0049257",
+  "pmid": "23251339"
+ },
+ "workflow": "INV-08 retest: wording and system check of the report's use of this source (os-08). Staged for the integrator; the ledger was not written by the preparing actor."
+}

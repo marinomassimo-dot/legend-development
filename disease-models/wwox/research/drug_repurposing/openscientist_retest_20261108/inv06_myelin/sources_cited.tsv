@@ -1,0 +1,20 @@
+src_id	as_written	pmid_or_doi_as_written	used_for	anchor	note
+S01	Neuronal Wwox deletion, reduced OL maturation, fewer myelinated axons, impaired conductivity	PMID: 33914858	E01 E02 E23 E33 E43 E47	L17, L59, L121, L142	foundational; cited as "KB" at several places
+S02	WWOX loss, GSK-3beta hyperactivation, lithium abolishes Wwox-/- seizures	PMID: 32000863	E06 E07 E13 E15 E46 E48	L22, L64, L69, L122	title is the report's abbreviation
+S03	GSK3beta negatively regulates oligodendrocyte differentiation and myelination in vivo	PMID: 21319221	E12 E13 E15 E16	L67, L123	
+S04	PI3K/Akt/mTOR and Wnt/GSK-3beta in OL differentiation (review)	PMID: 42274605	E08 E19 E48	L22, L64, L124	identifier as written; report says "review"
+S05	Glycyrrhizic acid drives functional remyelination	PMID: 31808502	E09 E17	L22, L125	
+S06	Naringin remyelination mechanism	PMID: 28469664	E10 E17	L22, L126	
+S07	Neuregulin/BDNF to NMDA-dependent myelination	PMID: 24391468	E20 E21 E44 E45	L27, L61, L127, L137	table title mentions BDNF; quoted sentence mentions neuregulin only
+S08	Clemastine rescues genetic myelination defect (Pdk1 icKO)	PMID: 41980417	E25 E26	L29, L128	
+S09	T3 and cuprizone remyelination	PMID: 26725831	E29 E28	L32, L129	
+S10	T3 ameliorates S-ketamine hypomyelination via PPARalpha	PMID: 40246008	E31 E49	L32, L64, L130	
+S11	Thyroid hormones and brain development	PMID: 16112266	E30 E28	L32, L131	
+S12	Early developmental activity impacts OL differentiation via AMPARs	PMID: 42334020	E41 E42 E44 E45	L59, L132	
+S13	WWOX-null cortex hyperexcitability (E/I imbalance)	PMID: 34634460	E23 E43	L27, L59, L133	
+S14	AAV9-SynI-WWOX gene therapy rescues myelination	PMID: 34747138	E35 E36	L37, L134	
+S15	Foxg1 deletion accelerates remyelination via GSK-3beta/Wnt (SB216763)	PMID: 33015737	E56	L135	no title row
+S16	Enriched-environment remyelination via PI3K/AKT/GSK3beta	PMID: 38423189	E57	L135	no title row
+S17	BSYS-exosome remyelination via miR-15b/Wnt/beta-catenin	PMID: 39733800	E58	L135	no title row
+S18	Clemastine preserves white matter and neurons after stroke	PMID: 38289861	E27	L135	no title row
+S19	dismech knowledge base / pathograph (MONDO:0014533, GO:0048709, GO:0042552, INDIRECT_UNKNOWN_INTERMEDIATES)	MONDO:0014533; GO:0048709; GO:0042552	E03 E34 E55	L6, L9, L37, L150	internal KB, not a literature reference; ids as written
