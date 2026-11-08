@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-08T08:40:17Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-08T08:41:17Z",
+ "event_id": "FTR-20261108-36124413-96",
+ "evidence_basis": [
+  "abstract analysed; counter-evidence row",
+  "verbatim_locator | proposition: HDAC5 overexpression suppressed HIF-1alpha/VEGFA/VEGFR2 signalling in PCOS mouse ovaries | Abstract | \"HDAC5 suppressed activation of angiogenesis-related HIF-1α/VEGFA/VEGFR2 signaling in PCOS ovaries partly via inhibiting VEGFR2 acetylation.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/decisive_rechecks_it36_20261108/output/hdac5_hif.tsv",
+  "disease-models/wwox/research/drug_repurposing/decisive_rechecks_it36_20261108/output/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 36124413 (abstract and metadata as served 2026-11-08); no PMC record; full text not reached",
+ "study_id": {
+  "doi": "10.5603/FHC.a2022.0024",
+  "pmid": "36124413"
+ },
+ "workflow": "IT36 science session, package P1 (decisive_rechecks_it36_20261108), producer it36-p1. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

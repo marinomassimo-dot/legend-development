@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-08T08:40:17Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-08T08:41:17Z",
+ "event_id": "FTR-20261108-42413489-96",
+ "evidence_basis": [
+  "abstract analysed; counter-evidence row, direction opposite to the support rows",
+  "verbatim_locator | proposition: in HDAC5-loss pancreatic cancer, hyperacetylated FOXA1 is redirected to HIF1alpha-target genes | Abstract | \"In HDAC5-loss PDAC, K270 hyper-acetylated FOXA1 is reprogrammed to the transcription start sites (TSSs) of HIF1α-targeted genes\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/decisive_rechecks_it36_20261108/output/hdac5_hif.tsv",
+  "disease-models/wwox/research/drug_repurposing/decisive_rechecks_it36_20261108/output/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 42413489 (abstract and metadata as served 2026-11-08); no PMC record; full text not reached",
+ "study_id": {
+  "doi": "10.1016/j.molcel.2026.06.022",
+  "pmid": "42413489"
+ },
+ "workflow": "IT36 science session, package P1 (decisive_rechecks_it36_20261108), producer it36-p1. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

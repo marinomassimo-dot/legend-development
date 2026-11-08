@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-08T09:13Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "event_at": "2026-11-08T09:32Z",
+ "event_id": "FTR-20261108-34747138-99",
+ "evidence_basis": [
+  "New question outside prior coverage: when glucose was low, how it was measured, and whether any brain lactate or glucose was measured. Text of the held PMC XML searched by keyword and the passages read; figures not viewed.",
+  "verbatim_locator | proposition: hypoglycemia is documented from the second week in the null and control-vector mice | Results | \"were hypoglycemic from the second week until they succumbed\"",
+  "verbatim_locator | proposition: neuron-targeted restoration normalised blood glucose | Results | \"had normal blood glucose levels when compared to the\"",
+  "bounded search: string lactate in the held text gave 0 hits; no brain glucose or lactate measurement found after that search on 2026-11-08; blood glucose was read with a tail-prick glucometer per Methods"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/myelin_generative_it36_20261108/levers_bc/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/myelin_generative_it36_20261108/levers_bc/output/evidence.tsv"
+ ],
+ "prior_receipt": "FTR-20261029-34747138-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "c430d5d2771bb0cc9cced8e27c095cab1947f1299e71ddd7bba156fd47689b46",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID34747138_Repudi2021_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.15252/emmm.202114599",
+  "pmid": "34747138"
+ },
+ "workflow": "IT36 P4 phase C, hypothesis H2: timing and measurement of glucose in the neuronal-restoration paper. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

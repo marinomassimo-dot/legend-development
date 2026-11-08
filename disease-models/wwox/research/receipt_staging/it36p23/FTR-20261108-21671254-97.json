@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-08T08:54:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "figures": "captions_only",
+  "tables": "read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-08T09:00:00Z",
+ "event_id": "FTR-20261108-21671254-97",
+ "evidence_basis": [
+  "partial full text analysed through section-directed passages; figures not viewed; route and depth as stated in source_locator",
+  "verbatim_locator | proposition: E-N1 LiCl lowered basal pT181 and attenuated the MT-2 rise; TDZD-8 was not read on tau | Results > Effect of GSK3-beta Inhibition on Neurite Retraction | \"Control cell preincubation with LiCl led to a significant decrease in T181 phosphorylation\"",
+  "verbatim_locator | proposition: E-N2 beta-catenin was blotted only for MT-2 versus control supernatant, no inhibitor | Results > Effect of MT-2 Supernatant on GSK3-beta Phosphorylation | \"We observed no change in either phosphorylation or β-catenin (Fig. 4)\"",
+  "verbatim_locator | proposition: E-N3 neither LiCl nor TDZD-8 prevented neurite retraction | Results > Effect of GSK3-beta Inhibition on Neurite Retraction | \"Neither LiCl nor TDZ-8 preincubations prevented the neurite retraction in SH-SY5Y cells treated with MT-2 cell supernatant\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb2_isrib_it36_20261108/output/README_nb2.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Efetch of the PMC record PMC3381896 from NCBI E-utilities, fetched 2026-11-08 (the Europe PMC fullTextXML route returned HTTP 500 for the records tried); bytes not saved; read: abstract, Introduction, Methods, Results, Discussion, Table I, figure captions; figure images not looked at",
+ "study_id": {
+  "doi": "10.1002/jnr.22678",
+  "pmid": "21671254"
+ },
+ "workflow": "IT36 P2 NB-2 full-text attempt: paired Tau and beta-catenin under GSK3 inhibitor classes. Staged for the integrator; the ledger was not written by the preparing actor."
+}

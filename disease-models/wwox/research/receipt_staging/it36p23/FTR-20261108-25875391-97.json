@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-08T08:54:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-08T09:00:00Z",
+ "event_id": "FTR-20261108-25875391-97",
+ "evidence_basis": [
+  "partial full text analysed through section-directed passages; figures not viewed; route and depth as stated in source_locator",
+  "verbatim_locator | proposition: EI07 ISRIB reported as an activator of eIF2B | Abstract | \"We now report that ISRIB is an activator of eIF2B.\"",
+  "verbatim_locator | proposition: EI09 knock-down of eIF2B4 and eIF2B5 lowered sensitivity to ISRIB | Results > shRNA screen | \"two subunits of eIF2B, eIF2B4 and eIF2B5, that significantly reduced the sensitivity\"",
+  "verbatim_locator | proposition: EI10 ISRIB gave hardly any stimulation when phosphorylated eIF2 equalled substrate | Results > exchange assays | \"whereas we observed hardly any stimulation at the 1:1 ratio\"",
+  "verbatim_locator | proposition: EI11 basal exchange three-fold faster in the partially purified assay | Results > exchange assays | \"GDP release was threefold faster upon addition of ISRIB (t1/2 = 1.1 min)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb2_isrib_it36_20261108/output/README_isrib.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Efetch of the PMC record PMC4426669 from NCBI E-utilities, fetched 2026-11-08 (the Europe PMC fullTextXML route returned HTTP 500 for the records tried); bytes not saved; read: abstract and section-directed passages of Results and Discussion; Methods and figure images not read",
+ "study_id": {
+  "doi": "10.7554/eLife.07314",
+  "pmid": "25875391"
+ },
+ "workflow": "IT36 P3 ISRIB qualified entry: mechanism layer. Staged for the integrator; the ledger was not written by the preparing actor."
+}

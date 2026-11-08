@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-08T08:54:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-08T09:00:00Z",
+ "event_id": "FTR-20261108-29599213-97",
+ "evidence_basis": [
+  "partial full text analysed through section-directed passages; figures not viewed; route and depth as stated in source_locator",
+  "verbatim_locator | proposition: EI15 ISRIB did not significantly activate the recombinant decamer | Results > ISRIB stabilizes decameric eIF2B | \"ISRIB did not significantly activate the recombinant eIF2B decamer\"",
+  "verbatim_locator | proposition: EI16 cross-bridging of the symmetry interface | Abstract | \"ISRIB promoted this step by cross-bridging a central symmetry interface\"",
+  "verbatim_locator | proposition: EI17 bell-shaped assembly in vitro | Results | \"ISRIB promoted eIF2B(βγδε)2 assembly at 1 μM but failed to do so at 10 μM\"",
+  "verbatim_locator | proposition: EI18 catalytic HEAT domain of epsilon not resolved | Results > ISRIB binds in a deep cleft | \"the catalytic HEAT domains of the ε subunits were not resolved\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb2_isrib_it36_20261108/output/README_isrib.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Efetch of the PMC record PMC6120582 from NCBI E-utilities, fetched 2026-11-08 (the Europe PMC fullTextXML route returned HTTP 500 for the records tried); bytes not saved; read: abstract, Introduction, Results (assays, structure, mutants), later Results and Discussion by selected passages; Methods, supplement and figure images not read",
+ "study_id": {
+  "doi": "10.1126/science.aaq0939",
+  "pmid": "29599213"
+ },
+ "workflow": "IT36 P3 ISRIB qualified entry: mechanism layer. Staged for the integrator; the ledger was not written by the preparing actor."
+}
