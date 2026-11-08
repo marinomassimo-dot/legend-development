@@ -13,7 +13,7 @@ Task record: `ledger/tasks/orchestrator/ORCH-IT38OS-20261108.json`. Method per r
 | Primary sources newly read and receipted | 49 | 12 partial full texts (Europe PMC/PMC/NCBI text; figures mostly not viewed), 37 abstract only, 0 complete full-text reads |
 | Further sources read by verifiers or reused from earlier receipts | not receipted | verifier reads were often full text (stated per audit) but carry no receipt; earlier receipts were reused only where proposition, source and context matched |
 | Decisive propositions verified | 153 | independent blind verdicts; none "not supported", none "unverifiable" at proposition level; sub-claims left unreachable are listed per audit |
-| Proposals delivered | 27 lines in `consumer_delta.md` | wording additions, repairs of earlier files, one design arm |
+| Proposals delivered | 15 consumer entries in `consumer_delta.md` | wording additions, repairs of earlier files, one design arm |
 | Modifications applied to consumers (needs, investigations, cards, ranking, views, registries, ledger) | **0** | the proposals are still only in `consumer_delta.md`; staged receipts are not recorded in the ledger |
 
 ## 1 · Coverage
