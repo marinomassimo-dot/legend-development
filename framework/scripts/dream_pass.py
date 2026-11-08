@@ -29,9 +29,22 @@ ID_RE = re.compile(r"\b(E-MTAB-\d+|GSE\d{4,}|PRJ[A-Z]{2}\d+|CHEMBL\d+|NCT\d{8})\
 MARK_RE = re.compile(r"NOT SENT|FOR THE OPERATOR|for the operator|draft for the operator", re.I)
 
 
+class GitError(Exception):
+    pass
+
+
 def git(*args):
+    """Run git; a failed command raises, so an unknown ref never reads as 'nothing changed'."""
     r = subprocess.run(["git", *args], capture_output=True, text=True)
+    if r.returncode != 0 and not (args and args[0] == "grep" and r.returncode == 1):
+        raise GitError(f"git {' '.join(args[:3])}: {r.stderr.strip() or 'exit ' + str(r.returncode)}")
     return r.stdout
+
+
+def worktree_changes(root):
+    """Uncommitted paths under root: ('M'|'A'|'D'|'?', path). Untracked folders are expanded to files."""
+    out = git("status", "--porcelain", "--untracked-files=all", "--", root)
+    return [(ln[:2].strip()[:1] or "M", ln[3:]) for ln in out.splitlines() if ln.strip()]
 
 
 def since_args(since):
@@ -64,6 +77,15 @@ def citing_files(name, exclude_prefix):
 
 def cmd_consumers(a):
     dirs = added_dirs(a.since, a.root)
+    depth = len(a.root.split("/"))
+    for st, f in worktree_changes(a.root):
+        parts = f.split("/")
+        if st in ("?", "A") and len(parts) > depth + 1:
+            cut = depth + 2 if parts[depth] == "drug_repurposing" and len(parts) > depth + 2 else depth + 1
+            d = "/".join(parts[:cut])
+            if os.path.isdir(d):
+                dirs[d] = dirs.get(d, 0) + 1
+    print("# scope: committed history since the given date or ref, plus uncommitted new files in the working tree")
     if not dirs:
         print(f"quiet: no research folder added since {a.since}")
         return 0
@@ -100,6 +122,13 @@ def cmd_pointers(a):
     return 0
 
 
+def clip(text, width, full, path, lineno):
+    """Cut an economical view, but say how much was left out and where to read all of it."""
+    if full or len(text) <= width:
+        return text
+    return f"{text[:width]} [+{len(text) - width} chars omitted: {path}:{lineno}, or --full]"
+
+
 def cmd_pairs(a):
     pat_a = re.compile(r"\b" + re.escape(a.a) + r"\b", re.I)
     pat_b = re.compile(r"\b" + re.escape(a.b) + r"\b", re.I)
@@ -116,18 +145,29 @@ def cmd_pairs(a):
             continue
         print(f"## {f}")
         if f.endswith(".tsv") and lines:
-            print("   header: " + lines[0][:300])
+            print("   header: " + clip(lines[0], a.width, a.full, f, 1))
         for i in hits[: a.show]:
-            print(f"   {i + 1}: {lines[i][:600]}")
+            print(f"   {i + 1}: " + clip(lines[i], a.width, a.full, f, i + 1))
             shown += 1
-    print(f"# {shown} lines shown")
+        if len(hits) > a.show:
+            print(f"   [{len(hits) - a.show} more matching lines in {f} not shown; --show N or grep -n]")
+    print(f"# {shown} lines shown; a line cut at --width is marked, and --full prints every line whole")
     return 0
 
 
 def cmd_quiet(a):
     out = git("log", *since_args(a.since), "--format=%h", "--", a.root)
     n = len(out.split())
-    print(f"quiet: no commit touched {a.root} since {a.since}" if n == 0 else f"material: {n} commits touched {a.root} since {a.since}")
+    wt = worktree_changes(a.root)
+    if n == 0 and not wt:
+        print(f"quiet: no commit since {a.since} and no uncommitted change under {a.root} "
+              "(this checks files under that path only; a change elsewhere, in chat or in another checkout is not seen)")
+    else:
+        print(f"material: {n} commits since {a.since}; {len(wt)} uncommitted paths under {a.root}")
+        for st, f in wt[:10]:
+            print(f"    {st} {f}")
+        if len(wt) > 10:
+            print(f"    ... {len(wt) - 10} more (git status --porcelain -- {a.root})")
     return 0
 
 
@@ -145,9 +185,15 @@ def main():
     s.add_argument("b")
     s.add_argument("--root", default=ROOT_DEFAULT)
     s.add_argument("--show", type=int, default=3, help="lines shown per file")
+    s.add_argument("--width", type=int, default=300, help="characters per line before an omission marker")
+    s.add_argument("--full", action="store_true", help="print lines and headers whole")
     s.set_defaults(fn=cmd_pairs)
     a = p.parse_args()
-    return a.fn(a)
+    try:
+        return a.fn(a)
+    except GitError as e:
+        print(f"ERROR: {e}\nThis is not 'nothing changed': fix the reference or check the change by hand.", file=sys.stderr)
+        return 2
 
 
 if __name__ == "__main__":
