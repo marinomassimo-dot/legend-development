@@ -49,7 +49,7 @@ Three facts bind before you have finished reading anything else:
 |---|---|
 | How LEGEND thinks; gates, blocking strings, commit rules, recovery order | [`framework/instruction/LEGEND_CORE.md`](framework/instruction/LEGEND_CORE.md) |
 | Claim classification, premises and negatives, revival triggers | [`framework/instruction/epistemic_discipline.md`](framework/instruction/epistemic_discipline.md) |
-| Parity of sources; what counts as having read something (rules 1–8, 5b–5e) | [`framework/master/gold_is_in_the_details.md`](framework/master/gold_is_in_the_details.md) |
+| Parity of sources; complete originals across delegation and comparison; what counts as having read something | [`framework/master/gold_is_in_the_details.md`](framework/master/gold_is_in_the_details.md) |
 | Designing for a system that never stops growing | [`framework/master/designed_for_growth.md`](framework/master/designed_for_growth.md) |
 | How the harness is allowed to change: agility, no gates, need-driven micro-upgrades, discovery before rigor | [`framework/master/harness_development_principles.md`](framework/master/harness_development_principles.md) |
 | `FULLTEXT_READ_RECEIPT` on every full-text route; `verbatim_locators` and persistence | [`framework/protocols/fulltext_read_receipt.md`](framework/protocols/fulltext_read_receipt.md) |

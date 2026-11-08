@@ -48,7 +48,10 @@ A general-purpose delegate is born with about 40,000 tokens of context; a typed 
 tool list (`wwox-scout`, measured 2026-11-06) is born with about 15,700. Dispatch scientific delegates
 as `legend-delegate` ([`.claude/agents/legend-delegate.md`](../../.claude/agents/legend-delegate.md)), which carries
 only the tools a reading package uses and loads this file and the brief by pointer. Point at files; do not paste them into the
-dispatch. Reuse a verified artefact rather than rebuilding it, and verify a narrow correction narrowly
+dispatch. Original inputs remain accessible to the delegate under
+[complete originals across delegation](../master/gold_is_in_the_details.md#complete-originals-across-delegation);
+context savings do not come from replacing a report being compared with its summary.
+Reuse a verified artefact rather than rebuilding it, and verify a narrow correction narrowly
 (the changed rows), unless a wider effect is argued in the record.
 
 ## 5 · Small packages to the end

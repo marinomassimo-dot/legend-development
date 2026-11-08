@@ -1,0 +1,36 @@
+{
+  "_schema": "orchestrator-task-v1",
+  "TASK_ID": "ORCH-AUTONOMY-ORIGINALS-20261108",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "RUNTIME": "Codex",
+  "PRIORITY": "HIGH",
+  "OBJECTIVE": "Operator mandate: durable autonomous completion and complete original inputs across delegation; generalise and verify the existing hourly watch, no new scheduler or approval gate.",
+  "START_UTC": "2026-11-08T19:22:24.263455+00:00",
+  "AUTHORISED_QUEUE_20261108": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_1": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "Fix standing original-input and objective-completion instructions in their existing homes",
+          "status": "DONE",
+          "evidence": "gold_is_in_the_details.md, cross_session_transport.md, roles/orchestrator.md and delegate/scientist routes updated"
+        },
+        {
+          "step": "Correct actor discovery, closure recovery and observable hourly-watch status; regressions",
+          "status": "DONE",
+          "evidence": "framework/scripts/test_mandate_watch.py: 22 tests pass, including all actors, independent work, closure evidence and one runtime lookup; test_mandate_continuity.py: 68 tests, 1 environment skip"
+        },
+        {
+          "step": "Required release checks on the candidate and integrate into main",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "step": "Push, verify remote and report actual scheduler coverage and limits",
+          "status": "TODO"
+        }
+      ]
+    }
+  }
+}

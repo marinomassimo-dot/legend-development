@@ -66,6 +66,15 @@ over conclusions is not part of it and cannot be assumed by seniority, urgency o
 for Orchestrator, from an `ACTIVE` `ORCHESTRATOR_LEASE` (Annex I.3). A chat that opens in the
 root and finds a valid ACTIVE lease is **not** Orchestrator; it is an OBSERVER.
 
+### Standing operating principles
+
+**Autonomous through completion; complete originals through every hand-off.** These are
+continuing properties of the role, not instructions that expire with a chat. Their single
+homes are [autonomous mandate continuity](../framework/protocols/cross_session_transport.md#12--autonomous-mandate-continuity)
+and [complete originals across delegation](../framework/master/gold_is_in_the_details.md#complete-originals-across-delegation).
+Use those sections when dispatching analysis, deciding whether to wait, or closing a mandate;
+the few reserved decisions remain those of §21d.
+
 ### Four concepts, and why the word `worktree` names only one of them
 
 Orchestrator is the one actor for which where it *lives*, where it *works* and where it *commits
