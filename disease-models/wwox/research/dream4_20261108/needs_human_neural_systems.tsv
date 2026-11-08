@@ -1,0 +1,16 @@
+need	human_neural_obs	systems	readout_levels	obs_with_composition_or_maturity_caveat
+WWOX-SPLICE-CORRECTION	1	other human neural	transcript	0 of 1
+WWOX-MISSENSE-PROTEIN-RESCUE	1	patient fibroblasts	protein	0 of 1
+WWOX-ENDOGENOUS-BOOST	1	patient fibroblasts	protein	0 of 1
+ISR-ATTENUATION	3	hNPC shRNA CAGE (GSE126075, 1 library/arm) | organoid bulk wk15 (GSE156243, WiBR3 KO 4 v WT 2)	transcript	1 of 3
+PDH-PYRUVATE-AXIS	3	hNPC shRNA CAGE (GSE126075, 1 library/arm) | organoid bulk wk15 (GSE156243, WiBR3 KO 4 v WT 2)	transcript	2 of 3
+LACTATE-LDH	2	hNPC shRNA CAGE (GSE126075, 1 library/arm) | organoid bulk wk15 (GSE156243, WiBR3 KO 4 v WT 2)	transcript	2 of 2
+MITOCHONDRIAL-RESPIRATION	4	hNPC shRNA CAGE (GSE126075, 1 library/arm) | organoid bulk wk15 (GSE156243, WiBR3 KO 4 v WT 2)	functional, transcript	2 of 4
+INHIBITORY-HYPOFUNCTION	2	organoid bulk wk15 (GSE156243, WiBR3 KO 4 v WT 2)	transcript	1 of 2
+GABA-CHLORIDE-GRADIENT	1	organoid bulk wk15 (GSE156243, WiBR3 KO 4 v WT 2)	transcript	1 of 1
+MYELINATION	1	organoid scRNA/IF (PMID 42397075, WiBR3 KO + WOREE + SCAR12)	transcript	0 of 1
+WNT-BETA-CATENIN	4	organoid bulk wk15 (GSE156243, WiBR3 KO 4 v WT 2) | organoid scRNA/IF (PMID 42397075, WiBR3 KO + WOREE + SCAR12) | other human neural	transcript	2 of 4
+MYC-PROGENITOR-PROLIFERATION	4	organoid scRNA/IF (PMID 42397075, WiBR3 KO + WOREE + SCAR12)	cellular (immunostained cell fractions), protein, transcript	2 of 4
+MTOR-AUTOPHAGY	1	organoid bulk wk15 (GSE156243, WiBR3 KO 4 v WT 2)	transcript	0 of 1
+NEUROINFLAMMATION-GLIA	1	organoid bulk wk15 (GSE156243, WiBR3 KO 4 v WT 2)	transcript	1 of 1
+REDOX-NRF2	1	organoid bulk wk15 (GSE156243, WiBR3 KO 4 v WT 2)	transcript	0 of 1

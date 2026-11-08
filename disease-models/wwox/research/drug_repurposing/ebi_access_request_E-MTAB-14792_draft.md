@@ -37,3 +37,11 @@ whether the release is pending on their side. That is a scientific courtesy cont
 ## What is being asked for and what is not
 Only the release status, and, once public, the processed count matrix and cell annotation. Not the raw reads, not any controlled-access
 material, and nothing that is not already stated in the article as deposited.
+
+---
+
+## Operator note, 2026-11-08 (DREAM-4): what a release would decide beyond Wnt
+
+The request text above is unchanged and **has not been sent**; whether, to whom and in what words remains the operator's decision. This note only records what the answer would be worth.
+
+The sentence "a comparison of Wnt-pathway genes within matched cell populations" names one use. The same single-cell record (JH-iPS11 wild type, knockout, SCAR12-class, WOREE-class and the add-back library; one library per condition in the preprint methods) is the only held-out route to test, within radial glia and neurons, whether the transcript signatures behind the ISR, PDH, lactate, mitochondrial, GABA, glia and NRF2 needs also appear in patient-derived lines or only in the engineered knockout. Those needs lean on a bulk week-15 deposit of a different knockout background (WiBR3 hESC) whose composition cannot be separated from genotype. Detail, limits and the reading rule: `disease-models/wwox/research/dream4_20261108/README.md` and lead `DL-MECH-181`.
