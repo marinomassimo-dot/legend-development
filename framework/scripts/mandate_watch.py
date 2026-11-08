@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Hourly watch over an open Orchestrator mandate: is the authorised work running, and if it
+"""Hourly watch over an actor's open mandate: is the authorised work running, and if it
 stopped while work remains, ask the bound session to continue.
 
     python3 framework/scripts/mandate_watch.py check --task ORCH-ROADMAP-IT4-20261028
@@ -71,6 +71,7 @@ QUIET_MINUTES = 25            # idle and silent for this long before a session c
 REREQUEST_MINUTES = 180       # a pending request with no progress is repeated no sooner than this
 EVENTS_FILE = "events.jsonl"
 EVENTS_MAX_BYTES = 256 * 1024
+_SESSIONS_UNSET = object()
 
 
 def claude_bin() -> str:
@@ -349,6 +350,10 @@ def classify(status: dict, session: dict | None, session_list_ok: bool, bound: b
         v = "CONTINUE"
     if v == "ALL_BLOCKED":
         return {"state": "BLOCKED", "action": "NONE", "why": status.get("message", "all steps blocked")}
+    if v in ("EVIDENCE_PENDING", "INCONSISTENT_COMPLETE"):
+        # These are known unfinished closure obligations, not an unreadable runtime.
+        # A bound session can supply the missing pointers without repeating the science.
+        v = "CONTINUE"
     if v != "CONTINUE":
         return {"state": "UNKNOWN", "action": "NONE", "why": f"record verdict {v}: {status.get('message', '')}"[:300]}
     if not bound:
@@ -382,19 +387,22 @@ def request_text(task: str, status: dict, record_path: str = "") -> str:
             "choose the next useful authorised step yourself, and keep going until the record releases "
             "the mandate. Before starting any job check `mandate_watch.py job list --task <id>` and the worktree list: "
             "never start a second execution of work that is already running or a second integrator. "
+            "If only closure evidence is missing, supply the verified pointers; do not repeat completed science. "
             "Do not ask the operator for anything the mandate already authorises.")
 
 
 # ---------------------------------------------------------------- command
 def check(task: str, *, root: Path = ROOT, deliver: str = "none", quiet_minutes: int = QUIET_MINUTES, resume_args: tuple = (),
           projects_dir: Path | None = None, tasks_root: Path | None = None,
-          sessions: list[dict] | None = None, now: float | None = None, runner=None, self_call: bool = False) -> dict:
+          sessions=_SESSIONS_UNSET, now: float | None = None, runner=None, self_call: bool = False) -> dict:
     now = time.time() if now is None else now
     status = mc.status_for(root, task)
     rec_rel = status.get("record")
     signature = mc._queue_signature(root, rec_rel)
     transcript = find_bound_transcript(task, projects_dir)
-    live = sessions if sessions is not None else list_sessions()
+    # None is an observed listing failure. Do not repeat a runtime query per mandate
+    # in --all; only the default sentinel requests a fresh observation.
+    live = list_sessions() if sessions is _SESSIONS_UNSET else sessions
     sid = transcript.stem if transcript else None
     session = next((s for s in (live or []) if s.get("sessionId") == sid), None) if sid else None
     if self_call and session is not None:
@@ -412,7 +420,8 @@ def check(task: str, *, root: Path = ROOT, deliver: str = "none", quiet_minutes:
         push_missing = push_confirmation_missing(root, rec_rel)
     out = classify(status, session, live is not None, transcript is not None, idle, pend, signature, now, quiet_minutes,
                    jobs=jobs, push_missing=push_missing)
-    out.update({"task": task, "session": sid, "signature": signature[:12]})
+    out.update({"task": task, "session": sid, "signature": signature[:12],
+                "record_verdict": status.get("verdict")})
     if out["action"] == "RESUME" and deliver == "resume":
         if session is not None:
             out["delivery"] = "not sent: the session is alive; the in-session cron delivers to a live session"
@@ -440,27 +449,72 @@ def check(task: str, *, root: Path = ROOT, deliver: str = "none", quiet_minutes:
 
 
 def open_tasks(root: Path) -> list[str]:
-    """TASK_IDs of orchestrator records with an OPEN queue block, or a COMPLETE one touched in the last 3 days."""
-    ids = []
-    for p in sorted((root / "ledger" / "tasks" / "orchestrator").glob("*.json")):
+    """Mandates of every actor with an OPEN queue, or a recently touched COMPLETE queue.
+
+    Delivery still needs an explicitly bound Claude Code session; a record directory
+    is not an identity or permission to start one.
+    """
+    ids = set()
+    for p in sorted((root / "ledger" / "tasks").glob("*/*.json")):
         try:
             rec = json.loads(p.read_text(encoding="utf-8"))
             blocks = [mc.block_state(b) for _, b in mc.load_blocks(rec)]
             recent = time.time() - p.stat().st_mtime < 3 * 86400
             if "OPEN" in blocks or ("COMPLETE" in blocks and recent):     # a recent COMPLETE may still lack its push
-                ids.append(str(rec.get("TASK_ID") or p.stem))
+                ids.add(str(rec.get("TASK_ID") or p.stem))
         except (OSError, ValueError, mc.Malformed, AttributeError):
             continue
-    return ids
+    return sorted(ids)
+
+
+def registered_worktrees(root: Path) -> list[Path]:
+    """Registered views of this repository, not arbitrary directories on the host."""
+    roots = [root]
+    try:
+        result = subprocess.run(["git", "-C", str(root), "worktree", "list", "--porcelain"],
+                                capture_output=True, text=True, timeout=10)
+        if result.returncode == 0:
+            for line in result.stdout.splitlines():
+                if line.startswith("worktree "):
+                    tree = Path(line[len("worktree "):])
+                    if tree.is_dir() and tree not in roots:
+                        roots.append(tree)
+    except (OSError, subprocess.SubprocessError):
+        pass
+    return roots
 
 
 def _check_all(a) -> int:
     sessions = list_sessions()
-    for task in open_tasks(Path(a.root)):
-        out = check(task, root=Path(a.root), deliver=a.deliver, quiet_minutes=a.quiet_minutes,
+    results = []
+    root = Path(a.root)
+    candidates = {}
+    for tree in registered_worktrees(root):
+        for task in open_tasks(tree):
+            candidates.setdefault(task, []).append(tree)
+    for task, trees in sorted(candidates.items()):
+        # Main's record wins over stale OPEN copies in old worktrees (including PAUSED
+        # or CANCELLED main records). A new, uniquely located task can be watched before
+        # landing; identity still requires its own transcript binding in check().
+        if mc.find_records(root, task):
+            record_root = root
+        elif len(trees) == 1:
+            record_root = trees[0]
+        else:
+            out = {"task": task, "state": "UNKNOWN", "action": "NONE",
+                   "why": "multiple unmerged task records; no authoritative root copy",
+                   "record_roots": [str(t) for t in trees]}
+            results.append(out)
+            log_event("check", **out)
+            continue
+        out = check(task, root=record_root, deliver=a.deliver, quiet_minutes=a.quiet_minutes,
                     sessions=sessions, resume_args=tuple(a.resume_arg))
-        if out["action"] == "RESUME":      # UNKNOWN / BLOCKED / RUNNING are logged by check(), not printed
+        out["record_root"] = str(record_root)
+        results.append(out)
+        if not getattr(a, "json", False) and out["action"] == "RESUME":
             print(f"{out['state']} {out['action']} {task}: {out['why']}" + (f" [{out['delivery']}]" if out.get("delivery") else ""))
+    if getattr(a, "json", False):
+        print(json.dumps(results, indent=2, sort_keys=True))
     return 0
 
 
@@ -468,8 +522,8 @@ def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     sub = ap.add_subparsers(dest="cmd", required=True)
     c = sub.add_parser("check", help="classify the mandate and, when allowed, request a restart")
-    c.add_argument("--task", help="a TASK_ID; with --all every open orchestrator record is checked")
-    c.add_argument("--all", action="store_true")
+    c.add_argument("--task", help="a TASK_ID; --all checks mandates of every actor")
+    c.add_argument("--all", action="store_true", help="check mandates under every actor in ledger/tasks/*/")
     c.add_argument("--deliver", choices=("none", "resume"), default="none")
     c.add_argument("--quiet-minutes", type=int, default=QUIET_MINUTES)
     c.add_argument("--resume-arg", action="append", default=[], help="extra claude option for the revival command, e.g. --permission-mode (never a permission bypass)")

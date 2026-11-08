@@ -39,6 +39,11 @@ Then write `TASK_ACK` and a durable `TASK_CLAIM` into your task JSON (Annex A.2 
 
 ---
 
+Complete supplied reports and comparison inputs travel with the task, not only their
+summaries: [complete originals across delegation](../master/gold_is_in_the_details.md#complete-originals-across-delegation).
+Open them before calling the comparison complete; report an unavailable original as a
+reading gap, using the existing notes and source locators.
+
 ## 1 · The operator may be away. §21c governs.
 
 You stop only for an act reserved to the operator or a condition with **no safe default**.

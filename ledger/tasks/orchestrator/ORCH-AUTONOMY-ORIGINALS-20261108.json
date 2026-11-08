@@ -1,0 +1,44 @@
+{
+  "_schema": "orchestrator-task-v1",
+  "TASK_ID": "ORCH-AUTONOMY-ORIGINALS-20261108",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "RUNTIME": "Codex",
+  "PRIORITY": "HIGH",
+  "OBJECTIVE": "Operator mandate: durable autonomous completion and complete original inputs across delegation; generalise and verify the existing hourly watch, no new scheduler or approval gate.",
+  "START_UTC": "2026-11-08T19:22:24.263455+00:00",
+  "AUTHORISED_QUEUE_20261108": {
+    "MANDATE_STATE": "COMPLETE",
+    "OBJ_1": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "Fix standing original-input and objective-completion instructions in their existing homes",
+          "status": "DONE",
+          "evidence": "gold_is_in_the_details.md, cross_session_transport.md, roles/orchestrator.md and delegate/scientist routes updated"
+        },
+        {
+          "step": "Correct actor discovery, closure recovery and observable hourly-watch status; regressions",
+          "status": "DONE",
+          "evidence": "framework/scripts/test_mandate_watch.py: 25 tests pass, including all actors, new unmerged mandates, paused-main precedence and ambiguity; test_mandate_continuity.py: 68 tests, 1 environment skip"
+        },
+        {
+          "step": "Required release checks on the candidate and integrate into main",
+          "status": "DONE",
+          "evidence": "Frozen clean-clone battery on e39eb937ee48da2254938babe67a0290b6d96c11: PASS WITH SKIPS, 216 targets, 10 skipped, exit 0. All skips traced to environment or unavailable local artefacts/cache; the summary's unexplained attribution skip is catalogue cache absent. Main fast-forwarded to the identical candidate. Preliminary interrupted/superseded runs are not counted as passes."
+        },
+        {
+          "step": "Push, verify remote and report actual scheduler coverage and limits",
+          "status": "DONE",
+          "evidence": "safe_push.py origin main --expect-sha e39eb937ee48da2254938babe67a0290b6d96c11: gate PASS, PUBLISHED, verified by ls-remote. Host cron already installed hourly at minute 37. Read-only production check with the new code: 63 records, 44 COMPLETE, 2 BLOCKED, 17 UNKNOWN; no revival or message sent. Current IT38 and IT38OS lack a recognised explicit session binding and are not automatically resumable. The delivery adapter is Claude Code; a live idle session also needs its existing in-session recall."
+        }
+      ]
+    }
+  },
+  "RELEASE_ATTRIBUTION": "The full local battery applies to e39eb937. This closure changes only this task record; post-push CI is a separate observation, not implied by the local PASS.",
+  "DECLARED_GAPS": [
+    "Current IT38 and IT38OS session bindings remain unrecognised. Standing instructions now require binding and a diagnostic check on accepting a continuing mandate; the watcher never guesses identity.",
+    "Automatic revival is not implemented for Codex. Busy sessions and running jobs remain untouched; quota exhaustion or a powered-off host cannot be bypassed.",
+    "No new scientific conclusion was produced. The full-original OpenScientist retest is owned by the separate scientific session."
+  ]
+}

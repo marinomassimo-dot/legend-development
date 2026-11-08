@@ -79,6 +79,62 @@ class Controls(Repo):
         self.assertNotIn("gone", out)
 
 
+class Corrections(Repo):
+    def test_unknown_reference_is_an_error_not_quiet(self):
+        self.put(f"{ROOT}/a.md", "x\n")
+        self.commit()
+        r = run(self.d, "quiet", "--since", "nosuchref")
+        self.assertNotEqual(r.returncode, 0)
+        self.assertIn("ERROR", r.stderr)
+        self.assertNotIn("quiet:", r.stdout)
+
+    def test_uncommitted_modification_and_new_file_are_material(self):
+        self.put(f"{ROOT}/a.md", "x\n")
+        self.commit()
+        self.put(f"{ROOT}/a.md", "changed\n")
+        self.put(f"{ROOT}/new_note.md", "new\n")
+        out = run(self.d, "quiet", "--since", "HEAD").stdout
+        self.assertTrue(out.startswith("material:"), out)
+        self.assertIn("2 uncommitted", out)
+        self.assertIn("new_note.md", out)
+
+    def test_quiet_states_its_scope(self):
+        self.put(f"{ROOT}/a.md", "x\n")
+        self.commit()
+        out = run(self.d, "quiet", "--since", "HEAD").stdout
+        self.assertIn("quiet:", out)
+        self.assertIn("under that path only", out)
+
+    def test_uncommitted_new_folder_is_listed_by_consumers(self):
+        self.put(f"{ROOT}/drug_repurposing/old/a.md", "x\n")
+        self.commit()
+        self.put(f"{ROOT}/drug_repurposing/fresh/b.md", "y\n")
+        out = run(self.d, "consumers", "--since", "HEAD").stdout
+        self.assertIn("drug_repurposing/fresh", out)
+
+    def test_long_row_keeps_context_and_limit_recoverable(self):
+        """A limit written after the cut point is reported as omitted and printed by --full."""
+        limit = "LIMIT_DECISIVE_ONLY_ONE_STUDY"
+        row = "GENEA\tlowers\tGENEB\t" + ("filler " * 120) + "\tcontext_human_muscle\t" + limit
+        header = "gene_a\trelation\tgene_b\t" + ("col " * 120) + "\tcontext\tlimit"
+        self.put(f"{ROOT}/b.tsv", header + "\n" + row + "\n")
+        self.commit()
+        short = run(self.d, "pairs", "GENEA", "GENEB").stdout
+        self.assertNotIn(limit, short)
+        self.assertIn("chars omitted", short)
+        self.assertIn("b.tsv:2", short)
+        full = run(self.d, "pairs", "GENEA", "GENEB", "--full").stdout
+        self.assertIn(limit, full)
+        self.assertIn("\tcontext\tlimit", full)
+        self.assertNotIn("chars omitted", full)
+
+    def test_lines_beyond_show_are_counted(self):
+        self.put(f"{ROOT}/c.md", "".join(f"GENEA GENEB line {i}\n" for i in range(6)))
+        self.commit()
+        out = run(self.d, "pairs", "GENEA", "GENEB", "--show", "2").stdout
+        self.assertIn("4 more matching lines", out)
+
+
 class Pointers(Repo):
     def test_draft_without_route_is_reported(self):
         self.put(f"{ROOT}/drug_repurposing/req_E-MTAB-1_draft.md", "# Draft: ask about E-MTAB-1 - NOT SENT\n\nbody E-MTAB-1\n")
@@ -98,4 +154,4 @@ class Pointers(Repo):
 
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(verbosity=2)
