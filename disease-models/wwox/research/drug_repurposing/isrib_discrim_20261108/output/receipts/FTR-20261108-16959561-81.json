@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-08T12:36:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-08T12:44:00Z",
+ "event_id": "FTR-20261108-16959561-81",
+ "evidence_basis": [
+  "An abstract is not a reading; it supports a conditional lead only.",
+  "verbatim_locator | proposition: GSK3 acts on TSC2 to restrain mTOR (commentary) | Abstract | \"the kinases GSK3 and AMPK cooperate in the activation of TSC2 to inhibit mTOR activity\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/isrib_discrim_20261108/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/isrib_discrim_20261108/output/phosphosite.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record retrieved through the PubMed tools on 2026-11-08; abstract text only",
+ "study_id": {
+  "doi": "10.1016/j.cell.2006.08.025",
+  "pmid": "16959561"
+ },
+ "workflow": "IT37 Package A (isrib_discrim_20261108): abstract read for the numbering of the eIF2Bepsilon serines and for alternative GSK3 substrates. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

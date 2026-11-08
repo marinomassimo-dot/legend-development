@@ -1,0 +1,71 @@
+{
+  "_schema": "task record, Annex A.1c",
+  "TASK_ID": "ORCH-IT37SCI-20261108",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "HIGH",
+  "OBJECTIVE": "Targeted science batch (operator mandate pasted 2026-11-08): A) ISRIB / GSK3 / eIF2B: resolve the phospho-site ambiguity of PMID 23741617 (S539 versus the rat GSK3 site 535 and priming site 539), separate four evidence levels, correct the discrimination grid, give a minimal first-fork design; B) myelination H1 (thyroid) and H2 (energy): reconstruct the culture media without inventing a deficiency, check feasibility of re-analyses, compare pharmacological levers in a few cards. Two packages, producer then verifier each, one delegate at a time. Staged receipts only; no shared consumer, ranking, dashboard, registry or ledger-of-receipts edit.",
+  "START_UTC": "2026-11-08T12:30:00Z",
+  "BASELINE": "development/main b316b28d; local main e687b671 (contains b316b28d, adds System One pilot closure). Worktree .claude/worktrees/it36sci2, branch task/it36sci2. IT36 has applied the earlier science deliveries as [IT36]-tagged sentences in investigations_it20.tsv and needs.json (p1_reconcile_it36_20261108/STATUS.md); rows 39, 40, 45, 47, 48 (statistics and HDAC5-HIF) were held for the science session and are delivered in decisive_rechecks_it36_20261108. Probe row ISRIB joined at read time (probes_it36_20261108). Old worktrees it36sci and isrib-identity remain (removal refused by the classifier); not touched.",
+  "P0_ANSWERS": {
+    "question_A": "Which results separate the phospho-eIF2alpha route, a GSK3 to eIF2B-epsilon route and other explanations in a GSK3/ISRIB comparison; which residue does the 'S539' blot in PMID 23741617 measure?",
+    "decision_A": "Whether the ISRIB arm can discriminate GSK3-route from phospho-eIF2alpha-route at all, and what the first fork of the minimal design is.",
+    "question_B": "Can the thyroid (H1) and energy (H2) premises be qualified now: culture media composition, feasibility of re-analysis of deposited data, and which lever comparisons are reasonable?",
+    "decision_B": "Whether INV-12's agonist test is interpretable as written, whether EX1/EX5 re-analyses are worth running, and which compound-action-context cards are fit for the investigations view.",
+    "material_available": "gsk3_eif2b_20261107 (residues.tsv, chain.tsv, hypotheses.tsv); nb2_isrib_it36_20261108 (probe_entry.tsv, README_isrib.md, evidence_isrib.tsv); identity_isrib_20261108; myelin_generative_it36_20261108/levers_bc; myelin_inv06_20261107; held full text of PMID 33914858 and its supplement; PMC XML of 23741617 fetched through NCBI efetch.",
+    "first_check": "A: Methods, antibody and Figure 3-figure supplement 1 of 23741617 and the numbering of its cited references; B: Methods of 33914858 for media and the vendor documentation of B27 and N2 (formulation current versus used)."
+  },
+  "CURRENT_PACKAGE": {
+    "id": "landing",
+    "state": "packages delivered and audited; landing",
+    "delegate_active": "none",
+    "updated": "2026-11-08T15:05:00Z"
+  },
+  "RESUME": "Folders drug_repurposing/isrib_discrim_20261108/ (A) and myelin_premises_20261108/ (B) in worktree it36sci2. Order: A producer, A verifier, B producer, B verifier, delivery.",
+  "DECISIONS_TAKEN": [
+    "Folders carry the true date 20261108; no rename; ranking as-of effects reported to IT36 (IT36 P2B made as_of evidence-based, so none expected).",
+    "One delegate at a time; producer then verifier per package; legend-delegate typed agent; no gate, LINT or repo test for delegates.",
+    "2026-11-08T15:05Z battery on frozen candidate 4247df3c: REGRESSION VERDICT FAIL (215 suites): scripts/test_section_references.py (5 PREREG section references into system_one_pilot_20261108) and scripts/test_release_surface.py (arms.py, build_cases.py shebang without executable mode); both are other sessions' files and neither touches this mandate. Attributed to 4247df3c only. Main then advanced (PREREG renamed to PRE_REGISTRATION, shebangs removed); merged as d2f09928 and both suites rerun alone on that tree: OK. The rerun does not turn the 4247df3c battery into PASS; no full battery was run on the merged tree."
+  ],
+  "DELEGATIONS": [
+    "A producer: asked sonnet/medium, read back medium x54; 54 turns; output 69,556; cache read 4,890,740; peak 172,705; site undetermined, grid corrected; 7 sources against a cap of 6.",
+    "A verifier: asked sonnet/high, read back high x50; 50 turns; output 50,270; cache read 4,518,308; peak 160,668; U1-U4 supported, 3 overshoot rows and G-pattern notes; corrections applied; reply-letter sentence rechecked by the Orchestrator in the PMC text.",
+    "B producer: asked sonnet/medium, read back medium x69; 69 turns; output 85,086; cache read 8,775,279; peak 221,511; media, feasibility, 3 cards.",
+    "B verifier: asked sonnet/high, read back high x77; 77 turns; output 61,056; cache read 8,163,842; peak 191,870; 45 supported, 4 overshoot, 1 undershoot; S16 rechecked by the Orchestrator on the raw vendor page (one plain request)."
+  ],
+  "ESCALATIONS": [],
+  "STOP_LOG": [],
+  "DEFAULTS_TAKEN": [],
+  "AUTHORISED_QUEUE_20261108D": {
+    "MANDATE_STATE": "COMPLETE",
+    "OBJ_1": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "P0 baseline and record",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "this record, P0_ANSWERS"
+        },
+        {
+          "step": "Package A: ISRIB / phospho-site / discrimination grid (producer, verifier)",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "disease-models/wwox/research/drug_repurposing/isrib_discrim_20261108/verify/audit_a.md"
+        },
+        {
+          "step": "Package B: myelin media, re-analysis feasibility, lever cards (producer, verifier)",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "disease-models/wwox/research/drug_repurposing/myelin_premises_20261108/verify/audit_b.md"
+        },
+        {
+          "step": "Delivery, consumer delta, checks, landing",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "disease-models/wwox/research/drug_repurposing/it37_science_delivery_20261108/README.md"
+        }
+      ]
+    }
+  }
+}

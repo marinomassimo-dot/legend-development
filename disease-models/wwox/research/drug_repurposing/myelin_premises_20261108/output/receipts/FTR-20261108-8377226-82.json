@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-08T12:54:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-08T13:06:00Z",
+ "event_id": "FTR-20261108-8377226-82",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: B27 is a defined supplement optimised over 20 components; the abstract names no hormone | Abstract | \"We have systematically optimized the concentrations of 20 components of a previously published serum-free medium\"",
+  "full text of the 1993 paper not acquired in this package; composition table not read; nothing about T3 is inferred from the abstract"
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/myelin_premises_20261108/output/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 8377226 (abstract and metadata as served 2026-11-08)",
+ "study_id": {
+  "doi": "10.1002/jnr.490350513",
+  "pmid": "8377226"
+ },
+ "workflow": "IT37 package B: original description of B27, read at abstract level only."
+}

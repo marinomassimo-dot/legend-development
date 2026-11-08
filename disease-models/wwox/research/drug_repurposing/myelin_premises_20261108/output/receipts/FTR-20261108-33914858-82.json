@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-08T12:54:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-08T13:06:00Z",
+ "event_id": "FTR-20261108-33914858-82",
+ "evidence_basis": [
+  "verbatim_locator | proposition: DRG neurons are plated in NB medium containing B27 before OPCs are added | Methods, Cell culture and plasmids | \"resuspended in NB medium (Neurobasal, B27 supplement, 0.5 mM L-glutamine, and penicillin-streptomycin)\"",
+  "verbatim_locator | proposition: spheroid neural medium carries 2 percent B27 supplement | Methods, Oligocortical spheroid generation | \"2% B27 supplement\"",
+  "verbatim_locator | proposition: T3 is added to the oligo maturation medium to make the differentiation medium | Methods | \"oligo maturation medium was supplemented with 40 ng/ml T3 (Sigma; T2877), making up the oligo differentiation medium\"",
+  "verbatim_locator | proposition: from Day 71 the spheroids are in oligo maturation medium; no removal of B27 is stated | Methods | \"from Day 71 onward, spheroids were cultured in oligo maturation medium, with complete medium changes every 2 days\"",
+  "verbatim_locator | proposition: the paper gives no repository accession | Data and code availability | \"available from the corresponding author upon reasonable request\"",
+  "supplement File009 text searched for medium composition strings (none found); Supplementary Fig 9A viewed as a rendered page (scheme with T3 at Days 60-70); other supplementary figures not viewed; main-text Results and figures not re-read in this package"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/myelin_premises_20261108/output/README.md"
+ ],
+ "prior_receipt": "FTR-20261107-33914858-95",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "de91c590783a38916f12b8a127813ef2d0f26c14be6f00e67aa0b23b342aa12d",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID33914858_Repudi2021_OUP_browserprint_pdftotext.txt",
+ "study_id": {
+  "doi": "10.1093/brain/awab174",
+  "pmid": "33914858"
+ },
+ "workflow": "IT37 package B (myelin_premises_20261108): reconstruct culture media from Methods and the supplement; targeted passages only. Prepared as a staged JSON for the integrator, not recorded by the preparing actor."
+}
