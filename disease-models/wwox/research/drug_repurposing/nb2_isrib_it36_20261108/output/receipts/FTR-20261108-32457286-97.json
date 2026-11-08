@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-08T08:54:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-08T09:00:00Z",
+ "event_id": "FTR-20261108-32457286-97",
+ "evidence_basis": [
+  "partial full text analysed through section-directed passages; figures not viewed; route and depth as stated in source_locator",
+  "verbatim_locator | proposition: EI21 ISRIB enhanced survival of mutant-SOD1 neurons | Abstract | \"significantly enhanced the survival of G93A SOD1-expressing neurons\"",
+  "verbatim_locator | proposition: EI22 ISRIB did not reduce ATF4 in thapsigargin-treated neurons | Results > ISRIB tunes neuronal PERK signaling | \"unlike in HEK293 cells, ISRIB did not reduce ATF4 expression in Thap-treated neuronal cultures\"",
+  "verbatim_locator | proposition: EI23 survival effect did not extend to the alpha-synuclein variant | Results > ISRIB decreases G93A SOD1-dependent neuronal death | \"ISRIB did not improve the survival of E46K aSyn expressing neurons\"",
+  "verbatim_locator | proposition: EI24 cited threshold of phosphorylated eIF2 alpha | Discussion | \"ISRIB antagonizes the ISR only when p-eIF2α levels are below a critical threshold\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb2_isrib_it36_20261108/output/README_isrib.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Efetch of the PMC record PMC7250913 from NCBI E-utilities, fetched 2026-11-08 (the Europe PMC fullTextXML route returned HTTP 500 for the records tried); bytes not saved; read: abstract and section-directed passages of Results and Discussion, two Methods lines; figure images not read",
+ "study_id": {
+  "doi": "10.1038/s41419-020-2601-2",
+  "pmid": "32457286"
+ },
+ "workflow": "IT36 P3 ISRIB qualified entry: function layer. Staged for the integrator; the ledger was not written by the preparing actor."
+}

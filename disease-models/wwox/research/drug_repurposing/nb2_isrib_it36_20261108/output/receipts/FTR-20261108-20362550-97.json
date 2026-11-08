@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-08T08:54:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-08T09:00:00Z",
+ "event_id": "FTR-20261108-20362550-97",
+ "evidence_basis": [
+  "abstract analysed; no full text opened for this PMID (no PMC copy; PubMed record only)",
+  "verbatim_locator | proposition: E-N6 lithium and 6-BIO both reversed okadaic-acid induced phosphorylation of tau, beta-catenin and CRMP2 in rat neurons | Abstract | \"GSK3beta inhibitors such as lithium chloride and 6-bromoindirubin-3'-monoxime (6-BIO) reversed those phosphorylation events and protected neurons\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb2_isrib_it36_20261108/output/README_nb2.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record fetched 2026-11-08 through NCBI E-utilities efetch; bytes not saved",
+ "study_id": {
+  "doi": "10.1016/j.bbrc.2010.03.163",
+  "pmid": "20362550"
+ },
+ "workflow": "IT36 P2 NB-2 extra search. Staged for the integrator; the ledger was not written by the preparing actor."
+}

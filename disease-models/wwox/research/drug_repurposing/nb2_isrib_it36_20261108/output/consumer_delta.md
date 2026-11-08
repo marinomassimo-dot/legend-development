@@ -1,0 +1,12 @@
+# Consumer delta (IT36 P2 and P3): proposals only, nothing was changed
+
+Not medical advice. Each line is a proposal for the Orchestrator; the producer changed no consumer file.
+
+| Consumer file | Proposed change | Reason (evidence) |
+|---|---|---|
+| `disease-models/wwox/research/drug_repurposing/needs/needs.json` entry `NEED-GSK3B-DEREPRESSION` (INV-09 discriminator) | Replace "precedent for a Tau-versus-catenin dissociation: none" by classification (3) with the new perimeter, and add that two-class both-readout papers exist at abstract level and show the readouts moving together (20362550) and a GS versus Tau/catenin split by inhibitory mode (11696357). Add the design table of `README_nb2.md` as the discriminating experiment; require the catenin pool to be named (total, nuclear, active). | NB-2: rows N6, N7, N1 to N3 |
+| `disease-models/wwox/research/drug_repurposing/needs/needs.json` entry `NEED-ISR-ATTENUATION` and card `disease-models/wwox/research/drug_repurposing/cards/E01_isr_modulators.card.json` | Add the ISRIB probe entry (`probe_entry.tsv`) as a probe, not a candidate; add that an ISRIB arm needs a phospho-eIF2 alpha readout, an engagement control in the same culture, and a translation readout, because ATF4 did not follow ISRIB in cultured neurons and ISRIB leaves phospho-eIF2 alpha unchanged. | rows EI04, EI22, EI26, EI27 |
+| `disease-models/wwox/research/drug_repurposing/needs/bridges_it35.tsv` (GSK3B with EIF2B5 bridge) | Add to "what is not shown": ISRIB binds the beta-delta interface, not epsilon; no source ties ISRIB to the GSK3 serine; the second-route attempt for 12133000 still reached only the abstract. | rows EI13, EI18, EI30; links table in `README_isrib.md` |
+| identity record on branch `task/isrib-identity` | Optionally cite 23741617 (trans name with (1r,4r) in its synthesis section) as the primary source of the structure, stating it is not independent of the registry copies; and note the "same face" wording of 29599213 as an unresolved figure check. | rows EI02, EI19 |
+| `disease-models/wwox/research/drug_repurposing/gsk3_eif2b_20261107/output/hypotheses.tsv` H4 | Add the outcome grid of `README_isrib.md` (the one pattern ISRIB discriminates; the rest non-discriminating) and the bell-shaped in-vitro dose-response caution. | `probe_entry.tsv` wwox_transfer rows |
+| coverage / reading state | The eleven staged receipts (`receipts/INDEX.tsv`, suffix 97) are for trial-recording by the Orchestrator; 23741617 carries prior receipt FTR-20261105-23741617-04. | receipts |
