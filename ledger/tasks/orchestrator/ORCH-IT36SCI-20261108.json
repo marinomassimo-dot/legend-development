@@ -18,17 +18,26 @@
   "first_step": "Producer 1 (legend-delegate sonnet/medium): P1A+P1B decisive deltas, then its verifier (sonnet/high); then P2+P3 pair; then P4 unguided expansion, LEGEND-side comparison and levers, verifier"
  },
  "CURRENT_PACKAGE": {
-  "id": "P0",
-  "state": "baseline read; no delegate yet",
+  "id": "landing",
+  "state": "packages delivered and audited; checks and landing pending",
   "delegate_active": "none",
-  "updated": "2026-11-08T08:34:00Z"
+  "updated": "2026-11-08T10:05:00Z"
  },
  "RESUME": "Folders drug_repurposing/<name>_20261108/ in worktree it36sci. Order: P1 producer, P1 verifier, P2/P3 producer, verifier, P4 unguided, P4 LEGEND-side producer, verifier, delivery.",
  "DECISIONS_TAKEN": [
   "Folders carry the true date 20261108; no rename to influence the ranking as-of date; any effect is reported to IT36 in the delivery record (mandate).",
-  "One delegate at a time; producer then verifier; no recursive delegation; legend-delegate typed agent; escalation only on a decisive uncertainty, written first."
+  "One delegate at a time; producer then verifier; no recursive delegation; legend-delegate typed agent; escalation only on a decisive uncertainty, written first.",
+  "Coordinator for this block: 71 responses, output 58,424, cache read 10,649,237, peak context 219,242 (sonnet-5-5); delegates total 273 turns, output 371,168, cache read 27,985,934. See it36_science_delivery_20261108/COST_NOTE.md."
  ],
- "DELEGATIONS": [],
+ "DELEGATIONS": [
+  "P1 producer: asked sonnet/medium, read back claude-sonnet-5-5 x39, medium x39; birth 17,507; 39 turns; output 63,794; cache read 4,156,747; peak 186,253; completed (HDAC5-HIF, ephys deltas, 7 receipts suffix 96).",
+  "P1 verifier: asked sonnet/high, read back high x23; 23 turns; output 47,271; cache read 2,143,122; peak 153,510; 29 items, 28 supported, 1 overshoot; correction applied and rechecked at the modified point (Fig 6B legend found in held XML).",
+  "P2/P3 producer: asked sonnet/medium, read back medium x56; 56 turns; output 72,079; cache read 5,744,224; peak 191,201; completed; incident: started public_release_gate.py in background (ended by its own timeout, not used).",
+  "P2/P3 verifier: asked sonnet/high, read back high x42; 42 turns; output 38,082; cache read 3,877,215; peak 143,544; corrections applied; S539 sentence rechecked by the Orchestrator in the PMC XML.",
+  "P4 phase A unguided producer: asked sonnet/medium, read back medium x16; 16 turns; output 15,425; cache read 861,133; peak 83,134; met the originating paper by search (declared); skipped claim/prior-receipt lookup; prior_receipt then set by the Orchestrator for 3 PMIDs.",
+  "P4 B/C producer: asked sonnet/medium, read back medium x56; 56 turns; output 96,422; cache read 7,688,992; peak 252,014; reconstructed query times flagged; 5 claims on unopened PMIDs listed in the delivery record.",
+  "P4 B/C verifier: asked sonnet/high, read back high x41; 41 turns; output 38,095; cache read 3,514,501; peak 163,403; N14 misapplied and N17 overshoot corrected, N14 rechecked against the PMC text by the Orchestrator."
+ ],
  "ESCALATIONS": [],
  "STOP_LOG": [],
  "DEFAULTS_TAKEN": [],
@@ -44,17 +53,17 @@
     },
     {
      "step": "P1 HDAC5-HIF and PV/HCN deltas (producer, verifier)",
-     "status": "QUEUED",
+     "status": "DONE",
      "owner": "orchestrator"
     },
     {
      "step": "P2 NB-2 full texts and P3 ISRIB entry (producer, verifier)",
-     "status": "QUEUED",
+     "status": "DONE",
      "owner": "orchestrator"
     },
     {
      "step": "P4-P5 myelination generative case (unguided, LEGEND comparison, levers, experiments; verifier)",
-     "status": "QUEUED",
+     "status": "DONE",
      "owner": "orchestrator"
     },
     {
