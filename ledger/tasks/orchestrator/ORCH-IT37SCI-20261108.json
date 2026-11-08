@@ -1,0 +1,62 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-IT37SCI-20261108",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Targeted science batch (operator mandate pasted 2026-11-08): A) ISRIB / GSK3 / eIF2B: resolve the phospho-site ambiguity of PMID 23741617 (S539 versus the rat GSK3 site 535 and priming site 539), separate four evidence levels, correct the discrimination grid, give a minimal first-fork design; B) myelination H1 (thyroid) and H2 (energy): reconstruct the culture media without inventing a deficiency, check feasibility of re-analyses, compare pharmacological levers in a few cards. Two packages, producer then verifier each, one delegate at a time. Staged receipts only; no shared consumer, ranking, dashboard, registry or ledger-of-receipts edit.",
+ "START_UTC": "2026-11-08T12:30:00Z",
+ "BASELINE": "development/main b316b28d; local main e687b671 (contains b316b28d, adds System One pilot closure). Worktree .claude/worktrees/it36sci2, branch task/it36sci2. IT36 has applied the earlier science deliveries as [IT36]-tagged sentences in investigations_it20.tsv and needs.json (p1_reconcile_it36_20261108/STATUS.md); rows 39, 40, 45, 47, 48 (statistics and HDAC5-HIF) were held for the science session and are delivered in decisive_rechecks_it36_20261108. Probe row ISRIB joined at read time (probes_it36_20261108). Old worktrees it36sci and isrib-identity remain (removal refused by the classifier); not touched.",
+ "P0_ANSWERS": {
+  "question_A": "Which results separate the phospho-eIF2alpha route, a GSK3 to eIF2B-epsilon route and other explanations in a GSK3/ISRIB comparison; which residue does the 'S539' blot in PMID 23741617 measure?",
+  "decision_A": "Whether the ISRIB arm can discriminate GSK3-route from phospho-eIF2alpha-route at all, and what the first fork of the minimal design is.",
+  "question_B": "Can the thyroid (H1) and energy (H2) premises be qualified now: culture media composition, feasibility of re-analysis of deposited data, and which lever comparisons are reasonable?",
+  "decision_B": "Whether INV-12's agonist test is interpretable as written, whether EX1/EX5 re-analyses are worth running, and which compound-action-context cards are fit for the investigations view.",
+  "material_available": "gsk3_eif2b_20261107 (residues.tsv, chain.tsv, hypotheses.tsv); nb2_isrib_it36_20261108 (probe_entry.tsv, README_isrib.md, evidence_isrib.tsv); identity_isrib_20261108; myelin_generative_it36_20261108/levers_bc; myelin_inv06_20261107; held full text of PMID 33914858 and its supplement; PMC XML of 23741617 fetched through NCBI efetch.",
+  "first_check": "A: Methods, antibody and Figure 3-figure supplement 1 of 23741617 and the numbering of its cited references; B: Methods of 33914858 for media and the vendor documentation of B27 and N2 (formulation current versus used)."
+ },
+ "CURRENT_PACKAGE": {
+  "id": "P0",
+  "state": "baseline read; no delegate yet",
+  "delegate_active": "none",
+  "updated": "2026-11-08T12:33:00Z"
+ },
+ "RESUME": "Folders drug_repurposing/isrib_discrim_20261108/ (A) and myelin_premises_20261108/ (B) in worktree it36sci2. Order: A producer, A verifier, B producer, B verifier, delivery.",
+ "DECISIONS_TAKEN": [
+  "Folders carry the true date 20261108; no rename; ranking as-of effects reported to IT36 (IT36 P2B made as_of evidence-based, so none expected).",
+  "One delegate at a time; producer then verifier per package; legend-delegate typed agent; no gate, LINT or repo test for delegates."
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "AUTHORISED_QUEUE_20261108D": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P0 baseline and record",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "this record, P0_ANSWERS"
+    },
+    {
+     "step": "Package A: ISRIB / phospho-site / discrimination grid (producer, verifier)",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Package B: myelin media, re-analysis feasibility, lever cards (producer, verifier)",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Delivery, consumer delta, checks, landing",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}
