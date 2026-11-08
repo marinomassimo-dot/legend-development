@@ -56,5 +56,26 @@ class RelationUse(unittest.TestCase):
             g.load_relation_uses(t)
 
 
+class PremiseTest(unittest.TestCase):
+    """IT39: the measurement that resolves a premise travels with the proposal that rests on it (presentation of the qualification; selection is untouched)."""
+    INV = {"INV-17": {"inv_id": "INV-17", "decisive_uncertainty": "whether the MYC rise is a driver", "next_test": "graded genetic MYC lowering in two windows"},
+           "INV-99": {"inv_id": "INV-99", "decisive_uncertainty": "x", "next_test": ""}}
+
+    def test_a_mapped_premise_brings_its_open_question_and_its_test(self):
+        t = g.premise_decisive_test("INV-17", self.INV)
+        self.assertIn("open: whether the MYC rise is a driver", t)
+        self.assertIn("resolved by: graded genetic MYC lowering", t)
+
+    def test_no_premise_or_an_investigation_without_a_test_adds_nothing(self):
+        self.assertEqual(g.premise_decisive_test("", self.INV), "")
+        self.assertEqual(g.premise_decisive_test("INV-99", self.INV), "")
+        self.assertEqual(g.premise_decisive_test("INV-404", self.INV), "")
+
+    def test_two_premises_are_both_listed(self):
+        inv = dict(self.INV, **{"INV-16": {"inv_id": "INV-16", "decisive_uncertainty": "q", "next_test": "catalytic-dead rescue"}})
+        t = g.premise_decisive_test("INV-16; INV-17", inv)
+        self.assertEqual(t.count("resolved by"), 2)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

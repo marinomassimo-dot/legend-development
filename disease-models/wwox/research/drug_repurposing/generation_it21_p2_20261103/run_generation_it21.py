@@ -121,6 +121,27 @@ def shared_premise_investigations(chain, premises):
     return "; ".join(sorted({r["inv_id"] for r in premises if re.search(r["chain_pattern"], chain)}))
 
 
+INVESTIGATIONS_FILE = DR / "ranking_it8_p9_20261029" / "investigations_it20.tsv"
+
+
+def load_investigations(path=None):
+    """inv_id -> row of the investigations table (read only; no registry of its own: the table that orders the research questions is the one place the decisive measurement lives)."""
+    path = Path(path or INVESTIGATIONS_FILE)
+    return {r["inv_id"]: r for r in rd(path)} if path.exists() else {}
+
+
+def premise_decisive_test(shared, invs, limit=320):
+    """IT39: for a proposal whose chain rests on a premise measured by an investigation, the open question and the measurement that resolves it, taken from that investigation's own
+    `decisive_uncertainty` and `next_test`. It is carried beside the proposal's own discriminating experiment; it does not change eligibility, selection or any status."""
+    out = []
+    for iid in [x for x in (shared or "").split("; ") if x]:
+        r = invs.get(iid)
+        if r and r.get("next_test"):
+            q = (r.get("decisive_uncertainty") or "").strip()
+            out.append(f"{iid}: open: {q[:limit]} | resolved by: {r['next_test'].strip()[:limit]}")
+    return " || ".join(out)
+
+
 RELATION_USE_FILE = Path(__file__).resolve().parent / "relation_use_it38.tsv"
 RELATION_STATUS_LABEL = {"observed": "OBSERVED", "observed_qualified": "OBSERVED, qualified", "inferred": "INFERRED (not measured)",
                          "observed_auditor": "EXPLORATORY (an auditor's reading of a figure, no receipt, visual estimate)",
@@ -849,6 +870,7 @@ def cmd_propose(a):
             elig_rows.append(proposals[-1])
     premises_ = rd(PREMISES_FILE) if PREMISES_FILE.exists() else []
     relation_uses = load_relation_uses() if v1 else []
+    investigations_ = load_investigations() if v1 else {}
     for p_ in proposals:
         p_["shared_premise_investigation"] = shared_premise_investigations(p_["chain"], premises_)
     assign_ids(proposals, R / "proposals_it21.tsv")
@@ -893,6 +915,7 @@ def cmd_propose(a):
             p["carried_limits"] = " | ".join(([p["carried_limits"]] if p["carried_limits"] else []) + ["SOURCE_CONFLICT: " + x for x in cf])
         rl_, rt_ = relation_limits(p, relation_uses) if v1 else ([], [])
         p["relation_use"] = "; ".join(rt_)
+        p["premise_decisive_test"] = premise_decisive_test(p.get("shared_premise_investigation", ""), investigations_) if v1 else ""
         if rl_:                                       # IT38: qualified relations of the packages reach the proposal as carried limits (never a veto)
             p["carried_limits"] = join_limits(([p["carried_limits"]] if p["carried_limits"] else []) + rl_)
         if not p["cluster_earlier_decisions"] and not (v1 and global_dec):
@@ -952,7 +975,7 @@ def cmd_propose(a):
             intended_effect_on_seed_readout=intended_effect(hyp, (p["contributing_seed_1"].split("|") + ["", "", ""])[2]),
             target_axis_named_in_legend_material=p["target_named_in_legend_material"],
             abstentions=(f"{len(wh)} withheld row(s) on this record ({collections.Counter(r['reason_class'] for r in wh).most_common(1)[0][0]})" if wh else "none on this record"),
-            earlier_thread=p["earlier_thread"], shared_premise_investigation=p.get("shared_premise_investigation", ""),
+            earlier_thread=p["earlier_thread"], shared_premise_investigation=p.get("shared_premise_investigation", ""), premise_decisive_test=p.get("premise_decisive_test", ""),
             carried_limits_from_cluster=p.get("carried_limits", ""), seed_guards=p.get("seed_guards", ""),
             route_class_note=route_class_note(atc_of.get(p["family_id"], ())),
             direct_acting_hits_same_set=direct_hits.get(p["seed_set"], ""),
@@ -966,7 +989,7 @@ def cmd_propose(a):
     for p in proposals:
         check_status(p["status"])
     if not v1:                       # --no-v1 must reproduce the committed P2 tables byte for byte: the IT22 columns exist only on the production path
-        it22_cols = ("relation_use", "shared_premise_investigation", "harm_signal_faers_seizure", "cluster_work_done", "carried_limits", "blocker_detail", "seed_guards", "seed_support_limited", "carried_limits_from_cluster", "route_class_note", "direct_acting_hits_same_set")
+        it22_cols = ("premise_decisive_test", "relation_use", "shared_premise_investigation", "harm_signal_faers_seizure", "cluster_work_done", "carried_limits", "blocker_detail", "seed_guards", "seed_support_limited", "carried_limits_from_cluster", "route_class_note", "direct_acting_hits_same_set")
         for row_ in proposals + handoff:
             for k_ in it22_cols:
                 row_.pop(k_, None)
