@@ -1,6 +1,6 @@
 # System One pilot: choosing the next piece of work (2026-11-08)
 
-Non-canonical research material. Not medical advice. Zero spend: no paid API, credit, cloud GPU or metered service was used. Nothing here edits a scientific current file, a card, a need, a ranking, a ledger or a registry, and nothing adds a gate, a service or a mandatory step. Pre-registration: [`PREREG.md`](PREREG.md) (frozen in commit 22d11c24 before any model arm ran).
+Non-canonical research material. Not medical advice. Zero spend: no paid API, credit, cloud GPU or metered service was used. Nothing here edits a scientific current file, a card, a need, a ranking, a ledger or a registry, and nothing adds a gate, a service or a mandatory step. Pre-registration: [`PRE_REGISTRATION.md`](PRE_REGISTRATION.md) (frozen in commit 22d11c24 before any model arm ran).
 
 ## Answer first
 
@@ -67,4 +67,4 @@ Only this folder: cases, scorer, pre-registration, results. Nothing integrated i
 
 ## Reproduce
 
-`python3 build_cases.py` (rewrites the two case files; hashes in `PREREG.md`), `python3 arms.py rule`, `python3 arms.py score results/arm_C.tsv`. Reversed arms: add `--reverse`. Prompts for the model arms: `python3 arms.py prompt A|C|V [--reverse]`.
+`python3 build_cases.py` (rewrites the two case files; hashes in `PRE_REGISTRATION.md`), `python3 arms.py rule`, `python3 arms.py score results/arm_C.tsv`. Reversed arms: add `--reverse`. Prompts for the model arms: `python3 arms.py prompt A|C|V [--reverse]`.
