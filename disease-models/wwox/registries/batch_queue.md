@@ -83,8 +83,8 @@ time; it does not redistribute or license the article text.
 |---|---:|---:|
 | **Not found by identifier** — run the intake gate | 260 | 37% |
 | **Catalogued, never processed** — the reading debt | 123 | 17% |
-| Known to the tracking log only | 80 | 11% |
-| Processed from the abstract | 8 | 1% |
+| Known to the tracking log only | 78 | 11% |
+| Processed from the abstract | 10 | 1% |
 | Partial full text read | 69 | 10% |
 | Full text read | 166 | 24% |
 
@@ -321,9 +321,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [17704139](https://pubmed.ncbi.nlm.nih.gov/17704139/) | 2007 | ✅ | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't; Research Support, U.S. Gov't, Non-P.H.S. | screened | Wwox suppresses prostate cancer cell growth through modulation of ErbB2-mediated androgen receptor signaling. |
 | [16818616](https://pubmed.ncbi.nlm.nih.gov/16818616/) | 2006 | ✅ | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't; Research Support, U.S. Gov't, Non-P.H.S. | screened | A role for the WWOX gene in prostate cancer. |
 | [41443103](https://pubmed.ncbi.nlm.nih.gov/41443103/) | 2026 | — | Journal Article | screened | WWOX protects against ferroptosis to alleviate acute lung injury by mediating p53 deacetylation. |
-| [39894307](https://pubmed.ncbi.nlm.nih.gov/39894307/) | 2025 | — | Journal Article; Research Support, Non-U.S. Gov't | screened | WWOX-mediated p53/SAT1 and NRF2/FPN1 axis contribute to toosendanin-induced ferroptosis in hepatocellular carcinoma. |
 | [37615513](https://pubmed.ncbi.nlm.nih.gov/37615513/) | 2024 | — | Journal Article; Research Support, Non-U.S. Gov't | screened | Remote modulation of WWOX by an intronic variant associated with survival of Chinese gastric cancer patients. |
-| [39039877](https://pubmed.ncbi.nlm.nih.gov/39039877/) | 2024 | — | English Abstract; Journal Article | screened | [Genotype and phenotype of WWOX gene related developmental and epileptic encephalopathy]. |
 | [36621327](https://pubmed.ncbi.nlm.nih.gov/36621327/) | 2023 | — | Journal Article | screened | WWOX activates autophagy to alleviate lipopolysaccharide-induced acute lung injury by regulating mTOR. |
 | [36257459](https://pubmed.ncbi.nlm.nih.gov/36257459/) | 2022 | — | Journal Article | screened | Albendazole exerts an anti-hepatocellular carcinoma effect through a WWOX-dependent pathway. |
 | [34015398](https://pubmed.ncbi.nlm.nih.gov/34015398/) | 2021 | — | Journal Article; Research Support, Non-U.S. Gov't | screened | WWOX activation by toosendanin suppresses hepatocellular carcinoma metastasis through JAK2/Stat3 and Wnt/β-catenin signaling. |
@@ -568,7 +566,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [41776383](https://pubmed.ncbi.nlm.nih.gov/41776383/) | 2026 | — | Journal Article; Multicenter Study | screened | Pharmacogenomics of response to interferon-beta and glatiramer acetate in Multiple Sclerosis: A multi-centric study. |
 | [28151481](https://pubmed.ncbi.nlm.nih.gov/28151481/) | 2017 | ✅ | Journal Article; Retracted Publication | screened | 🛑 RETRACTED — Epigenetic regulation of HGF/Met receptor axis is critical for the outgrowth of bone metastasis from breast carcinoma. |
 
-*(showing all 463 outstanding records)*
+*(showing all 461 outstanding records)*
 
 ## Already processed from this seed
 
@@ -580,7 +578,9 @@ for an entirely unprocessed record.
 |---|---:|:---:|---|---|---|
 | [28373548](https://pubmed.ncbi.nlm.nih.gov/28373548/) | 2017 | ✅ | full text | receipt FTR-20260909-28373548-01 | ℹ️ EXPRESSION-OF-CONCERN NOTICE — Editorial Expression of Concern: WWOX gene restoration prevents lung cancer growth in vitro and in vivo. |
 | [31752354](https://pubmed.ncbi.nlm.nih.gov/31752354/) | 2019 | ✅ | abstract only | receipt FTR-20260920-31752354-01 | WWOX Possesses N-Terminal Cell Surface-Exposed Epitopes WWOX7-21 and WWOX7-11 for Signaling Cancer Growth Suppression and Prevention In Vivo. |
+| [39894307](https://pubmed.ncbi.nlm.nih.gov/39894307/) | 2025 | — | abstract only | receipt FTR-20261107-39894307-98 | WWOX-mediated p53/SAT1 and NRF2/FPN1 axis contribute to toosendanin-induced ferroptosis in hepatocellular carcinoma. |
 | [38407561](https://pubmed.ncbi.nlm.nih.gov/38407561/) | 2024 | — | abstract only | receipt FTR-20261105-38407561-21 | Identification of a novel splice-site WWOX variant with paternal uniparental isodisomy in a patient with infantile epileptic encephalopathy. |
+| [39039877](https://pubmed.ncbi.nlm.nih.gov/39039877/) | 2024 | — | abstract only | receipt FTR-20261107-39039877-93 | [Genotype and phenotype of WWOX gene related developmental and epileptic encephalopathy]. |
 | [34998176](https://pubmed.ncbi.nlm.nih.gov/34998176/) | 2022 | — | abstract only | receipt FTR-20261106-34998176-26 | Interaction of Wwox with Brca1 and associated complex proteins prevents premature resection at double-strand breaks and aberrant homologous recombination. |
 | [30622118](https://pubmed.ncbi.nlm.nih.gov/30622118/) | 2019 | — | abstract only | receipt FTR-20261107-30622118-60 | ✎ corrected — WWOX Inhibits Metastasis of Triple-Negative Breast Cancer Cells via Modulation of miRNAs. |
 | [26390919](https://pubmed.ncbi.nlm.nih.gov/26390919/) | 2015 | — | abstract only | receipt FTR-20261106-26390919-26 | Tumor suppressor WWOX moderates the mitochondrial respiratory complex. |
@@ -822,7 +822,7 @@ for an entirely unprocessed record.
 | [21476439](https://pubmed.ncbi.nlm.nih.gov/21476439/) | 2011 | — | full text | PAPER 244 | WWOX oxidoreductase--substrate and enzymatic characterization. |
 | [16288044](https://pubmed.ncbi.nlm.nih.gov/16288044/) | 2005 | — | full text | PAPER 569 | Activated tyrosine kinase Ack1 promotes prostate tumorigenesis: role of Ack1 in polyubiquitination of tumor suppressor Wwox. |
 
-*(showing all 243 processed records from the seed)*
+*(showing all 245 processed records from the seed)*
 
 ## How to work one
 

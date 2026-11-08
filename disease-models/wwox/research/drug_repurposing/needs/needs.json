@@ -3201,7 +3201,7 @@
     "on": "postsynaptic glutamatergic gain (NMDAR, possibly AMPAR)",
     "rationale": "A perturbation result, not a reversal inference: blocking NMDAR with d-APV abolished the burst in the WWOX-deficient slice (one drug, one preparation).",
     "certainty": "supported_in_WWOX_mouse_model for the tool compound; unknown for any clinically used antagonist",
-    "do_not_assume": "Full competitive block is not a partial block. Memantine and perampanel were not found to have been given to a WWOX system in the sources read. Chronic NMDAR block may cost activity-dependent myelination (unmeasured). Raising extracellular Mg2+ is the physiological way to lower NMDAR gain, but no Mg2+ manipulation has been done in a WWOX system, the incubation ACSF already contains magnesium and the recording bath is not stated (O7), and the one mouse study read found that an oral magnesium sulfate left cerebrospinal-fluid magnesium unchanged: do not equate a supplement with a bath concentration, and do not treat the open-label infant trials of magnesium sulfate with ACTH as evidence about this node. A pore blocker's potency depends on voltage, extracellular Mg2+ and intracellular Ca2+, so a memantine result at the Mg2+ level of the incubation solution (1.3 mM; the recording bath is not stated) is not a GluN2A/2B block unless the Mg2+ level is reported; an effect of a subunit-selective tool (a GluN2B NAM) is an effect of that tool, not of a different drug (F04)."
+    "do_not_assume": "Full competitive block is not a partial block. Memantine and perampanel were not found to have been given to a WWOX system in the sources read. Chronic NMDAR block may cost activity-dependent myelination (unmeasured). Raising extracellular Mg2+ is the physiological way to lower NMDAR gain, but no Mg2+ manipulation has been done in a WWOX system, the incubation ACSF already contains magnesium and the recording bath is not stated (O7), and the one mouse study read found that an oral magnesium sulfate left cerebrospinal-fluid magnesium unchanged: do not equate a supplement with a bath concentration, and do not treat the open-label infant trials of magnesium sulfate with ACTH as evidence about this node. A pore blocker's potency depends on voltage, extracellular Mg2+ and intracellular Ca2+, so a memantine result at the Mg2+ level of the incubation solution (1.3 mM; the recording bath is not stated) is not a GluN2A/2B block unless the Mg2+ level is reported; an effect of a subunit-selective tool (a GluN2B NAM) is an effect of that tool, not of a different drug (F04). [IT36] Perampanel exposure in WWOX patients is reported (two children of one series, one adult; polytherapy; no attributable outcome), so 'not given' above refers to WWOX systems (slice or model); no WWOX slice or model study of memantine or perampanel was found."
    },
    "counter_evidence": [
     "Only a full competitive block (d-APV) has been tried; whether the dependence is permissive or a gain is untested.",
@@ -3376,7 +3376,7 @@
      "readout_level": "functional",
      "direction_observed": "decreased",
      "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-     "limits": "Pooled events, not animals; amplitude, not GABA concentration or reversal potential; the authors caution that this age group may mimic a late-stage disorder (map CHAIN B).",
+     "limits": "Pooled events, not animals; amplitude, not GABA concentration or reversal potential; the authors caution that this age group may mimic a late-stage disorder (map CHAIN B). [IT36] mIPSC not recorded; 140 mM KCl internal; no antagonist named for isolation; recorded interneurons (5 cells, 4 animals) not PV-identified; presynaptic, postsynaptic or cell-number change all fit.",
      "pmid": "34634460",
      "locators": [
       {
@@ -4131,7 +4131,7 @@
      "readout_level": "functional",
      "direction_observed": "decreased with drug in null only",
      "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-     "limits": "Small groups (null PTZ-alone N 6, drug N 6), no interaction test; the late-phase contrast is the card's graphical reading (labelled INFERENZA); the wild-type PTZ response decays to about 0.2 to 0.3 stage within 30 to 60 minutes, so a floor effect could hide a drug effect in wild type; lithium suppressed in all three genotypes in the same paper.",
+     "limits": "Small groups (null PTZ-alone N 6, drug N 6), no interaction test; the late-phase contrast is the card's graphical reading (labelled INFERENZA); the wild-type PTZ response decays to about 0.2 to 0.3 stage within 30 to 60 minutes, so a floor effect could hide a drug effect in wild type; lithium suppressed in all three genotypes in the same paper. [IT36] one dose for all genotypes; ANOVA only, no post hoc test named and statistical unit not stated; in wild type the drug arm crosses the PTZ-alone arm; wild-type null is floor-limited, so unknown, not clean.",
      "pmid": "32000863",
      "locators": [
       {
@@ -4176,7 +4176,9 @@
    "counter_evidence": [
     "Lithium also suppressed in wild-type mice, so a drug effect in a seizing animal is not a WWOX-specific rescue.",
     "No drug-by-genotype interaction test and no concurrent same-day PTZ-alone control in the card's reading.",
-    "IT13 P3a (2026-10-31; transcript level only, independently recomputed): in the P17 Wwox-deletion mouse deposits (GSE158681 hippocampus, GSE158682 cortex; 2 to 4 animals per arm) Cacna1g and Cacna1h mRNA are lower or flat (Cacna1h -0.15 to -0.68 log2; Cacna1g +0.08 to -1.01) and Kcnj6 is flat, all inside the control-line background at this n, so they neither support nor refute a T-type node. The catalogue mechanism record of ethosuximide lists T-type block only, while the source paper's own oocyte data show a GIRK block at exposures near the labelled band (a GIRK route would predict the opposite sign; prior knowledge, not checked here): the attribution of the late-phase effect to T-type channels is not supported by any measurement in Wwox tissue."
+    "IT13 P3a (2026-10-31; transcript level only, independently recomputed): in the P17 Wwox-deletion mouse deposits (GSE158681 hippocampus, GSE158682 cortex; 2 to 4 animals per arm) Cacna1g and Cacna1h mRNA are lower or flat (Cacna1h -0.15 to -0.68 log2; Cacna1g +0.08 to -1.01) and Kcnj6 is flat, all inside the control-line background at this n, so they neither support nor refute a T-type node. The catalogue mechanism record of ethosuximide lists T-type block only, while the source paper's own oocyte data show a GIRK block at exposures near the labelled band (a GIRK route would predict the opposite sign; prior knowledge, not checked here): the attribution of the late-phase effect to T-type channels is not supported by any measurement in Wwox tissue.",
+    "[IT36] the cited reference tests anticonvulsant effect in PTZ mice, not channel block; no channel was measured in the Wwox paper.",
+    "[IT36] In a worm PTZ model ethosuximide protection persisted in a cca-1 loss-of-function double mutant (one saturating concentration, n 13-15, no equivalence test); this justifies an alternative-mechanism control and does not say what acts in the mouse."
    ],
    "sources": {
     "cards": [
@@ -4268,7 +4270,7 @@
      "readout_level": "functional",
      "direction_observed": "decreased",
      "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-     "limits": "Field-level pseudoreplication, three mice per genotype.",
+     "limits": "Field-level pseudoreplication, three mice per genotype. [IT36] (Cre validation: one field each, no count or efficiency; Olig2-Cre P17 MBP qualitative; EM, node, conduction and challenge phenotypes not excluded).",
      "pmid": "33914858",
      "locators": [
       {

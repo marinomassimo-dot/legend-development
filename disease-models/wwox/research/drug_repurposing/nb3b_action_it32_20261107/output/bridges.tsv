@@ -1,0 +1,2 @@
+gene_a	hgnc_a	relation	gene_b	hgnc_b	status	context	evidence_ref	note
+HDAC5	HGNC:14068	is followed by lower expression of	SLC2A1	HGNC:11005	observed_other_context	human primary muscle cells, HDAC5 knockdown (abstract level); knockdown is not catalytic inhibition	nb3b_action_it32_20261107 chain.tsv C01	not shown in any neural cell; the sign for the paralog HDAC4 differs between systems

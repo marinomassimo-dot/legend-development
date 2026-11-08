@@ -19,7 +19,7 @@
   "Degraded acquisition: Europe PMC fullTextXML HTTP 500 (also on one retry); NCBI efetch for the PMC record returned a stub carrying the note that the publisher does not allow XML download; the PubMed tool returned an empty full_text field. The PMC article page (HTTP 200, ordinary page, no access challenge) was then read once: Methods (current-clamp and sag ratio definition), the Discussion, and the legends of Fig 8 and Fig 9; the Results text proper was only partly read and is marked not_read; figure images not viewed.",
   "verbatim_locator | proposition: decoy peptide raises Ih density in hippocampal neurons | Discussion/Results | \"myr-22-treated neurons possessed a significantly larger I h density\"",
   "verbatim_locator | proposition: sag and Ih change without change in Rin or rest | Discussion | \"This suggested that regulation of I h by FLNa may alter basic neuronal properties primarily at hyperpolarized potentials rather than at rest.\"",
-  "verbatim_locator | proposition: sag ratio normalises to the deflection | Methods | \"Sag ratio was calculated as 100·( V ss − V peak )/(RMP − V peak ) (%)\"",
+  "verbatim_locator | proposition: sag ratio normalises to the deflection | Methods | \"Sag ratio was calculated as 100\u00b7( V ss \u2212 V peak )/(RMP \u2212 V peak ) (%)\"",
   "verbatim_locator | proposition: scrambled peptide control leaves Ih and sag unchanged | Fig 9 legend | \"Both I h density ( I ) and sag ratio ( J ) remained unaltered.\""
  ],
  "evidence_depth": "partial_fulltext_read",

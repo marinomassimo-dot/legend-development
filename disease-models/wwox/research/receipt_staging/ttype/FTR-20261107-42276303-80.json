@@ -17,8 +17,8 @@
  "event_id": "FTR-20261107-42276303-80",
  "evidence_basis": [
   "An abstract is not a reading; it supports a conditional lead only. Open full text not reachable (Europe PMC: not open access, no PMC id); doi landing status only, body discarded, no access challenge met, nothing further attempted.",
-  "verbatim_locator | proposition: the authors call CaV3.2 a putative transcriptional target of HIF1A | Abstract | \"identify the T-type calcium channel CaV3.2 (encoded by Cacna1h) as a putative transcriptional target of HIF1α\"",
-  "verbatim_locator | proposition: HIF1A overexpression elevated network activity in primary cortical neurons, as OD/R did | Abstract | \"HIF1α overexpression also elevated network activity measured by multielectrode array recordings, replicating the effect of the OD/R model\""
+  "verbatim_locator | proposition: the authors call CaV3.2 a putative transcriptional target of HIF1A | Abstract | \"identify the T-type calcium channel CaV3.2 (encoded by Cacna1h) as a putative transcriptional target of HIF1\u03b1\"",
+  "verbatim_locator | proposition: HIF1A overexpression elevated network activity in primary cortical neurons, as OD/R did | Abstract | \"HIF1\u03b1 overexpression also elevated network activity measured by multielectrode array recordings, replicating the effect of the OD/R model\""
  ],
  "evidence_depth": "abstract_only",
  "outputs": [

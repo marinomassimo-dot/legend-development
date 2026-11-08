@@ -1,6 +1,6 @@
 {
- "analysis_at": "2026-11-08T00:20:00Z",
- "analysis_time_precision": "minute",
+ "analysis_at": "2026-11-08T00:19:09Z",
+ "analysis_time_precision": "second",
  "coverage": {
   "abstract": "read",
   "discussion": "unavailable",
@@ -13,7 +13,7 @@
   "supplementary": "unavailable",
   "tables": "unavailable"
  },
- "event_at": "2026-11-08T00:21:00Z",
+ "event_at": "2026-11-08T00:21:27Z",
  "event_id": "FTR-20261108-32789766-91",
  "evidence_basis": [
   "abstract analysed in full; the statements are abstract-level and carry no method, figure or table detail",
