@@ -1,0 +1,68 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-IT36SCI-20261108",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Scientific session for IT36 (operator mandate pasted 2026-11-08): P1 decisive re-checks (HDAC5-HIF relation; PV/HCN electrophysiology numbers and statistics), P2 NB-2 full texts (PMID 16014628, 33621689), P3 ISRIB qualified entry (identity row already on branch task/isrib-identity by another session; mechanism and WWOX transfer here), P4-P5 second generative case from a phenotype (myelination after neuronal WWOX loss; unguided expansion, comparison with LEGEND, levers, discriminating experiments), P6 proportionate independent verification, P7 consumable delivery. Staged receipts only; no shared consumer, ranking, dashboard, registry or ledger-of-receipts edit.",
+ "START_UTC": "2026-11-08T08:35:00Z",
+ "BASELINE": "main 0a3a34f9 (fetched 2026-11-08 08:30Z, remote identical). No IT36 mandate record found on main; the pasted mandate is the authority. Worktree .claude/worktrees/it36sci, branch task/it36sci. Another session holds .claude/worktrees/isrib-identity (964deb34, unmerged): not touched.",
+ "P0_ANSWERS": {
+  "P1A": "Question: which HDAC5-HIF-1a relation may a generator use (perturbation, system, what changes in HIF-1a; catalytic vs scaffold vs localisation vs amount)? Decision: whether INV-16 keeps an HDAC5 to HIF to SLC2A1 route as a hypothesis.",
+  "P1B": "Question: do the quantitative claims behind INV-15/INV-18 (n, cells vs animals vs events, test, dispersion, independence; sag vs resistance at fixed current vs matched voltage) survive, and how far do aggregate statistics reconstruct? Decision: wording of INV-15/18 premises.",
+  "P2": "Question: any neuronal system with p-Tau and beta-catenin under two or more GSK3 inhibitor classes in the same preparation? Decision: design of the Tau-vs-catenin discriminator for NEED-GSK3B-DEREPRESSION / INV-09.",
+  "P3": "Question: identity, molecular target, nature of action and limits of ISRIB as a discriminating probe, four layers (identity, mechanism, function, WWOX transfer). Decision: whether the ISR need may carry ISRIB as a probe.",
+  "P4": "Question: from the myelination phenotype alone, which alternative explanations exist, and which are held, unused, new, unsupported, lever-bearing. Decision: which of up to three hypotheses reach the investigations view.",
+  "sources_available": "nb2_tau_catenin_it35_20261108 (abstract-level, 4 staged receipts), gsk3_eif2b_20261107, hdac5_inv16_20261107 + verify, pv_inv15_20261107, hcn_20261107, myelin_inv06_20261107, generation_it35_20261108, identity_isrib (branch task/isrib-identity)",
+  "reading_still_needed": "full texts for 16014628 and 33621689 by open routes; the three HDAC5-HIF works named by the INV-16 verifier; PV/HCN papers' methods and tables; ISRIB primary mechanism papers; myelin phenotype source papers",
+  "first_step": "Producer 1 (legend-delegate sonnet/medium): P1A+P1B decisive deltas, then its verifier (sonnet/high); then P2+P3 pair; then P4 unguided expansion, LEGEND-side comparison and levers, verifier"
+ },
+ "CURRENT_PACKAGE": {
+  "id": "P0",
+  "state": "baseline read; no delegate yet",
+  "delegate_active": "none",
+  "updated": "2026-11-08T08:40:00Z"
+ },
+ "RESUME": "Folders drug_repurposing/<name>_20261108/ in worktree it36sci. Order: P1 producer, P1 verifier, P2/P3 producer, verifier, P4 unguided, P4 LEGEND-side producer, verifier, delivery.",
+ "DECISIONS_TAKEN": [
+  "Folders carry the true date 20261108; no rename to influence the ranking as-of date; any effect is reported to IT36 in the delivery record (mandate).",
+  "One delegate at a time; producer then verifier; no recursive delegation; legend-delegate typed agent; escalation only on a decisive uncertainty, written first."
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "AUTHORISED_QUEUE_20261108C": {
+  "MANDATE_STATE": "ACTIVE",
+  "OBJ_1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P0 baseline and record",
+     "status": "DONE",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "P1 HDAC5-HIF and PV/HCN deltas (producer, verifier)",
+     "status": "QUEUED",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "P2 NB-2 full texts and P3 ISRIB entry (producer, verifier)",
+     "status": "QUEUED",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "P4-P5 myelination generative case (unguided, LEGEND comparison, levers, experiments; verifier)",
+     "status": "QUEUED",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "P7 delivery, consumer notes, small readability test, land",
+     "status": "QUEUED",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}
