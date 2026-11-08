@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-08T18:06:00Z",
+ "analysis_time_precision": "minute",
+ "event_at": "2026-11-08T18:07:00Z",
+ "record_kind": "contemporaneous_receipt",
+ "source_fingerprint": null,
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv03_04_ttype/README.md",
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv03_04_ttype/evidence.tsv"
+ ],
+ "workflow": "INV-03/04 T-type full-input repeat (openscientist_retest_20261108, label os-03): reading for the propositions in decisive.tsv. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor.",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_id": "FTR-20261108-19052226-32",
+ "evidence_basis": [
+  "An abstract is not a reading; it supports a conditional lead only. Full text not reached (Europe PMC HTTP 500).",
+  "verbatim_locator | proposition: Cav3.2 knockout mice lack the post-status-epilepticus functional changes and show far fewer spontaneous seizures | Abstract | \"In addition, the appearance of spontaneous seizures was dramatically reduced in these mice.\"",
+  "verbatim_locator | proposition: the model is pilocarpine status epilepticus with transient Cav3.2 upregulation | Abstract | \"transient and selective upregulation of Cav3.2 subunits on the mRNA and protein levels after status epilepticus\""
+ ],
+ "evidence_depth": "abstract_only",
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "source_kind": "abstract",
+ "source_locator": "PubMed record retrieved through the PubMed tools on 2026-11-08; abstract text only. Europe PMC fullTextXML for PMC6671595 returned HTTP 500 on two tries.",
+ "study_id": {
+  "doi": "10.1523/JNEUROSCI.1421-08.2008",
+  "pmid": "19052226"
+ }
+}

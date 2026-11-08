@@ -1,0 +1,20 @@
+src_id	as_written	pmid_or_doi_as_written	used_for	anchor	note
+S01	dismech knowledge base entry for WOREE (WOREE YAML, about 1,800 lines)	none	E02,E03,E07,E15,E33	L8,L16	No identifier; MONDO:0014533 given for disorder at L5.
+S02	AAV9-SynI-WWOX gene replacement; metabolic stress/hypoglycemia rescued by neuronal WWOX	PMID:34747138	E06,E31,E72	L16,L41,L63	-
+S03	Seizure semiology source (knowledge base, from)	PMID:30356099	E15	L25	Cited only inside knowledge-base attribution; not in evidence table.
+S04	T-type Ca channel blockers: review (2018-2025)	PMID: 42538876	E10,E11	L19,L83	PMID value unusually high; not checked in Phase 1.
+S05	Mibefradil, a T-type Ca blocker...	PMID: 31271653	E12,E65,E75	L19,L84	-
+S06	C. elegans antiepileptic drug assay	PMID: 30189284	E13,E64	L19,L22,L85	-
+S07	Transcriptional upregulation of Cav3.2 in epileptogenesis (pilocarpine)	PMID: 19052226	E30,E48,E73	L22,L41,L77,L86	Also written PMID:19052226 at L77.
+S08	Rebound burst firing in reticular thalamus... (CaV3.3/CaV3.2)	PMID: 25071191	E36	L22,L87	-
+S09	Serotonergic modulation in absence epilepsy	PMID: 42954437	E16	L25,L88	PMID value unusually high; not checked.
+S10	De novo CACNA1G variant...	PMID: 42309484	E18,E47,E74	L25,L89	PMID value unusually high; not checked.
+S11	T-type blockers attenuating thalamic burst firing (Z941, Z944)	PMID: 22344687	E38,E66,E67,E70	L28,L90	-
+S12	Disease-modifying effects of Z944	PMID: 31419467	E40,E63,E66	L28,L91,L98	Flagged mismatch by the report.
+S13	Structural basis for human Cav3...	PMID: 38605177	E41	L28,L92	-
+S14	HIF1alpha and CaV3.2 expression / hyperexcitability	PMID: 42276303	E29,E73,E77,E78	L41,L66,L93	PMID value unusually high; not checked.
+S15	CACNA1H mutation increases seizure susceptibility	PMID: 24277868	E43,E44,E68,E82	L44,L94	Cited at L44 for both surface expression and the reversal by ethosuximide or TTA-P2.
+S16	SCN8A + CACNA1H in severe DEE	PMID: 34399820	E42,E63	L44,L95,L98	Flagged mismatch by the report.
+S17	CACNA1H Cav3.2 R1584P mutation	PMID: 37391087	E45	L44,L96	-
+S18	Functional variants in GGE	PMID: 29588962	E43	L44,L97	-
+S19	MONDO:0014533 (WOREE disorder identifier)	MONDO:0014533	E56,E84	L5	Disease ontology identifier, not a literature source.

@@ -1,0 +1,16 @@
+src_id	as_written	pmid_or_doi_as_written	used_for	anchor	note
+S01	PMID 25012504 (Tumor suppressor WWOX regulates glucose metabolism via HIF1a modulation)	25012504	E04 E07 E08 E39 E52 E70	L17, L19, L50, L69, L86	Not checked in Phase 1
+S02	PMID 27308416 (WWOX loss activates aerobic glycolysis, review)	27308416	E04 E52	L17, L50, L88	Not checked
+S03	PMID 16517405 (HIF-1-mediated expression of PDK: a metabolic switch for hypoxia)	16517405	E05 E06 E27 E28	L17, L26, L50, L69, L87	Not checked
+S04	PMID 16476929 (DCA causes toxic neuropathy in MELAS: RCT)	16476929	E25 E63	L24, L89	Not checked; trial dose and 17/19 as written
+S05	PMID 23611579 (Long-term safety of DCA in congenital lactic acidosis)	23611579	E26 E63	L24, L90	Not checked
+S06	PMID 42559713 (Outcomes in PDH complex deficiency)	42559713	E32 E35 E63	L29, L91	Identifier in high range; not checked
+S07	PMID 40290041 (KD in genetic drug-resistant epilepsy)	40290041	E33 E35 E63	L29, L92	Not checked
+S08	PMID 42012479 (KD in paediatric inborn errors of metabolism)	42012479	E34 E35	L29, L93	Identifier in high range; not checked
+S09	PMID 35984507 (WWOX inhibition by Zfra1-31 restores mitochondrial homeostasis in neurons)	35984507	E13 E14 E43 E44 E53 E69	L32, L60, L74, L94	Not checked
+S10	PMID 41710159 (Metabolic interactions in the brain: neurons, astrocytes, microglia)	41710159	E36 E38	L35, L72, L95	Identifier in high range; not checked
+S11	PMID 42955568 (Mitochondrial lactate signaling and protein lactylation)	42955568	E37 E38	L35, L72, L96	Identifier in high range; not checked
+S12	PMID 42909904 (WWOX as Alzheimer's risk gene, Drosophila)	42909904	E15 E16 E17 E18 E19 E20 E21 E22 E60 E68	L38, L57, L72-73, L97	Title abbreviated by report; dated 2026 in text; high identifier; not checked
+S13	PMID:34747138 (rescue data, as written in text)	34747138	E11	L32	Written with colon and no space; no title given
+S14	dismech WOREE YAML (knowledge-base entry)	none	E09 E10 E11	L9, L21, L32, L112	Not a literature identifier; no file path or version given
+S15	MONDO:0014533 (WOREE)	MONDO:0014533	E67	L6	Ontology id, not checked

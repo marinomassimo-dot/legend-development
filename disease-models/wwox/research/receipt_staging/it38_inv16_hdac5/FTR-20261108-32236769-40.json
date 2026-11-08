@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-08T20:34:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "event_at": "2026-11-08T20:46:00Z",
+ "event_id": "FTR-20261108-32236769-40",
+ "evidence_basis": [
+  "abstract analysed in full; abstract-level statements only",
+  "verbatim_locator | proposition: AMPK phosphorylation of HDAC4 relieves MEF2a inhibition of GLUT1 in mouse heart; mislocalisation is not stated in the abstract | Abstract | \"phosphorylated histone deacetylase 4 (HDAC4), and thereby modulated the GLUT1 expression through reducing its inhibition on MEF2a\"",
+  "verbatim_locator | proposition: MEF2a to GLUT1 association shown by ChIP-PCR in heart | Abstract | \"Results of ChIP-PCR revealed a novel interaction between transcription factor myocyte enhancer factor 2a (MEF2a) and GLUT1\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv16_hdac5/README.md",
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv16_hdac5/decisive.tsv"
+ ],
+ "prior_receipt": "FTR-20261107-32236769-33",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 32236769 (abstract and metadata as served 2026-11-08)",
+ "study_id": {
+  "doi": "10.1007/s00395-020-0787-1",
+  "pmid": "32236769"
+ },
+ "workflow": "INV-16 OpenScientist full-input repeat, producer os-16. Question-driven read for the decisive propositions; prepared as a staged JSON for the integrator; the ledger was not written by the preparing actor."
+}

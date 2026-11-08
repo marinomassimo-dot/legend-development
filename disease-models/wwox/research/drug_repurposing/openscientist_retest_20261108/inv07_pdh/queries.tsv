@@ -1,0 +1,13 @@
+query_id	database_or_route	string_or_url	run_at_utc	hits	what_was_done
+Q01	paper_packet.py claim	pmid 42559713, 40290041, 42012479, 16517405, 36537114 label os-07	2026-11-08T19:07:00Z	5 claims; ALSO lines on 36537114 only	claimed before opening
+Q02	pubmed_identity_check.py	13 PMIDs cited by the report (25012504, 27308416, 16517405, 16476929, 23611579, 42559713, 40290041, 42012479, 35984507, 41710159, 42955568, 42909904, 34747138)	2026-11-08T19:06:00Z	13 of 13 verdict MATCH	identity only
+Q03	fulltext_receipts.py status	per PMID, 10 PMIDs	2026-11-08T19:06:30Z	receipts for 25012504, 16476929, 23611579, 34747138, 42909904, 35984507; none for 16517405, 42559713, 40290041, 42012479	prior depth
+Q04	Europe PMC REST search	(TITLE_ABS:WWOX OR Wwox) AND (pyruvate dehydrogenase OR PDK1 OR PDHA1 OR dichloroacetate)	2026-11-08T19:08:45Z	1	33629572 not opened
+Q05	Europe PMC REST search	(WWOX OR Wwox) AND (lactate OR lactic) in title/abstract	2026-11-08T19:08:45Z	4	fly paper, its preprint, 35328751, one unrelated
+Q06	Europe PMC REST search	(WWOX OR Wwox) AND ketogenic in title/abstract	2026-11-08T19:08:45Z	1	36537114 found
+Q07	Europe PMC REST search	(WWOX OR Wwox) AND (ATF4 OR integrated stress) in title/abstract	2026-11-08T19:08:45Z	2	fly paper and preprint
+Q08	PubMed tool search	WWOX AND (pyruvate dehydrogenase kinase OR PDK1 OR PDHA1 OR dichloroacetate)[Title/Abstract]	2026-11-08T19:09:00Z	1	33629572
+Q09	Europe PMC fullTextXML	PMC13445312 and PMC11945077	2026-11-08T19:07:40Z	HTTP 500 body	route failed; fallback below
+Q10	PubMed Central full-text tool	PMC13445312; PMC11945077	2026-11-08T19:08:00Z	2 full texts	read as full text, figures not viewed
+Q11	PubMed tool metadata	42012479, 16517405, 36537114	2026-11-08T19:08:30Z	3 abstracts	abstract_only
+Q12	repository reads	metabolic_inv07_20261107 BRIEF and README; myelin_premises output README and cards; ranking investigations INV-07; needs.json NEED-PDH-PYRUVATE-AXIS; cards G01 and I01	2026-11-08T19:06:00Z	n/a	reconcile

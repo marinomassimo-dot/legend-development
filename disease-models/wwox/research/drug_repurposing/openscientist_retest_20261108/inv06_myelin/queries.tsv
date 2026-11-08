@@ -1,0 +1,9 @@
+query_id	database_or_route	string_or_url	run_at_utc	hits	what_was_done
+Q01	git grep	git grep -l INV-06 -- disease-models ledger	2026-11-08T18:41Z	about 40 files	located the earlier packages myelin_inv06, myelin_premises, myelin_generative_it36, gsk3_inv09
+Q02	pubmed_identity_check.py	--pmid for 18 cited PMIDs (33914858 32000863 21319221 42274605 31808502 28469664 24391468 41980417 26725831 40246008 16112266 42334020 34634460 34747138 33015737 38423189 39733800 38289861)	2026-11-08T18:43Z	17 MATCH, 1 AUTHOR_MISMATCH	28469664: same title and DOI, Crossref first author differs from PubMed (Rong v Xiao): bibliographic, not an identity failure
+Q03	fulltext_receipts.py status	--pmid for 32000863 34634460 34747138 42274605 31808502 28469664 26725831 40246008 16112266 38289861 38423189	2026-11-08T18:44Z	32000863, 34634460, 34747138 have receipts; the rest none	chose which sources to read
+Q04	PubMed tool get_article_metadata	34634460, 32000863	2026-11-08T18:45Z	2 records	abstracts re-viewed for a decisive detail
+Q05	PubMed tool convert_article_ids	21319221 42274605 28469664 31808502 40246008 26725831	2026-11-08T18:46Z	PMC ids for 42274605 and 28469664 only	route for full text
+Q06	paper_packet.py claim	--pmid 42274605 28469664 31808502 40246008 26725831 --actor os-06	2026-11-08T18:46Z	5 claimed	before opening
+Q07	PubMed tool get_full_text_article	PMC5399727, PMC13257079	2026-11-08T18:46Z	2 full texts	read for GSK-3beta details
+Q08	PubMed tool get_article_metadata	31808502, 40246008, 26725831	2026-11-08T18:47Z	3 abstracts	read for T3 and GA details

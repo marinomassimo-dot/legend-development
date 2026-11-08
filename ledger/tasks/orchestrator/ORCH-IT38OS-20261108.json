@@ -1,0 +1,137 @@
+{
+  "_schema": "task record, Annex A.1c",
+  "TASK_ID": "ORCH-IT38OS-20261108",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "HIGH",
+  "OBJECTIVE": "Operator mandate pasted 2026-11-08: repeat the assessment of the eleven OpenScientist/Dismech reports from the complete original texts (not from the previous briefs). Per report: a producer in a separate context reads the whole text first and extracts every distinct observation, inference, mechanism, hypothesis, alternative, compound, target, link, counter-evidence, limit, experiment and citation with anchors; proposals are rebuilt as observation, relation, action, context, benefit; only then is the extraction compared with the repository and the previous batch; an independent verifier checks the decisive premises, favourable and unfavourable; findings go to existing consumers. Central question: which proposals or links emerge from the originals that the briefs had lost or narrowed.",
+  "START_UTC": "2026-11-08T17:41:00Z",
+  "BASELINE": "development/main 4a783cd4 (local main 118ffaaa contains it). Worktree .claude/worktrees/it38os, branch task/it38os. Originals: /tmp/legend-openscientist-retest-20261108/ (manifest SHA-256 verified for all 11) and a copy in the gitignored files/openscientist_retest_20261108/ of the main checkout. Previous batch folders *_20261107 hold its results.",
+  "CURRENT_PACKAGE": {
+    "id": "delivery",
+    "state": "synthesis, consumer delta, checks, landing",
+    "delegate_active": "none",
+    "updated": "2026-11-08T21:24:00Z"
+  },
+  "RESUME": "Package folder drug_repurposing/openscientist_retest_20261108/<topic>/ per report; BRIEF_COMMON.md there. Order of reports as the mandate lists them; one delegate at a time; producer phase 1 (extraction, blind to prior work) then phase 2 (reconcile with LEGEND) by SendMessage to the same producer, then blind verifier, then corrections.",
+  "DECISIONS_TAKEN": [
+    "One delegate at a time, no recursive delegation, producer then verifier per report; legend-delegate typed agent; sonnet/medium producer, sonnet/high verifier, read back from the census after each.",
+    "Originals are external material: copies stay in files/ (gitignored); the repository holds digests, anchors by line number, and quotes of at most 25 words.",
+    "Mandate's reuse rule: a previous verification is reused only if it covers the same proposition, source and context; otherwise the source is reopened.",
+    "2026-11-08 INV-02 evidence.tsv was truncated by a defective local patch helper (csv.writer opened the file for write before failing on a quote); restored exactly from the producer's heredoc, confirmed by git diff against the staged copy: only the intended audit corrections differ. Patch helper rewritten (tab split, assertion before write); lesson: git add before patching.",
+    "2026-11-08 INV-08 verifier attempted once a request with a browser-style client header to read a retraction notice; the session classifier refused it as bot-check circumvention; the delegate did not repeat it, nothing was obtained that way, and nothing rests on it. VERIFIER_COMMON.md now states the rule explicitly (plain curl default user agent only). Reported to the operator in the final report."
+  ],
+  "DELEGATIONS": [
+    "INV-02 producer: asked sonnet/medium, read back medium x32 (phases 1 and 2); 32 turns; output 48,231; cache read 2,967,527; peak 142,915; 57 items, 14 decisive propositions, 4 sources newly read of cap 5.",
+    "INV-02 verifier: asked sonnet/high, read back high x59; 59 turns; output 46,811; cache read 7,410,474; peak 207,565; 13 SUPPORTED, 1 PARTLY, coverage 10 present/2 narrowed/0 missing of 12.",
+    "INV-03/04 producer: asked sonnet/medium, read back medium x43 (phases 1, 2 and corrections); output 79,016; cache read 4,264,355; peak 186,574; 84 items, 14 decisive propositions, 5 sources newly read of cap 5.",
+    "INV-03/04 verifier: asked sonnet/high, read back high x30; output 38,112; cache read 2,868,497; peak 158,324; 12 SUPPORTED, 2 PARTLY, coverage 10 present/1 narrowed/1 missing of 12; verifier read two Results through a web-fetch summary (moderate confidence, recorded).",
+    "INV-05 producer: asked sonnet/medium, read back medium x36 (phases 1, 2 and corrections); output 61,759; cache read 3,449,370; peak 165,035; 91 items, 15 decisive propositions, 5 sources newly read (all abstract_only) of cap 5.",
+    "INV-05 verifier: asked sonnet/high, read back high x29; output 43,041; cache read 3,221,820; peak 189,282; 13 SUPPORTED, 1 PARTLY (audit text says 12/1 over 14, table shows 13/1), coverage 8 present/3 narrowed/1 missing of 12; proposed D15 (class GluN2B NAMs are activity-dependent, report says not).",
+    "INV-06 producer: asked sonnet/medium, read back medium x31 (phases 1, 2 and corrections); output 56,195; cache read 2,927,386; peak 160,424; 67 items, 14 decisive propositions, 5 sources newly read (2 partial full text, 3 abstract) of cap 5.",
+    "INV-06 verifier: asked sonnet/high, read back high x51; output 52,985; cache read 6,759,193; peak 221,141; 12 SUPPORTED, 2 PARTLY, coverage 10 present/1 narrowed/1 missing of 12; confirmed Foxg1/SB216763 runs opposite to the report's use and that 33914858 already holds Olig2-Cre and GFAP-Cre arms.",
+    "INV-07 producer: asked sonnet/medium, read back medium x32 (phases 1, 2 and corrections); output 56,694; cache read 2,689,000; peak 151,936; 70 items, 14 decisive propositions, 5 sources newly read (2 partial full text, 3 abstract) of cap 5.",
+    "INV-07 verifier: asked sonnet/high, read back high x57; output 48,287; cache read 6,405,540; peak 204,095; 13 SUPPORTED (P11 with refinements), 1 PARTLY, coverage 10 present/1 narrowed/1 missing of 12; found a WWOX Pdk1 transcript and serum-lactate datum (PMID 25012504, non-neural) that the report and one reconcile row had dismissed, and that the DCA 17-of-19 is a share of discontinuations (30 randomised).",
+    "INV-08 producer: asked sonnet/medium, read back medium x29 (phases 1, 2 and corrections); output 46,694; cache read 2,356,118; peak 131,029; 76 items, 14 decisive propositions, 5 sources newly read (all abstract_only) of cap 5.",
+    "INV-08 verifier: asked sonnet/high, read back high x41; output 56,382; cache read 4,947,709; peak 220,077; 11 SUPPORTED, 3 PARTLY, coverage 11 present/1 narrowed/0 missing of 12; confirmed at record level that PMID 21690096 (cited for the Src/Fyn-NRF2 link) is a Retracted Publication (notice 28159761); reason unreached.",
+    "INV-09 producer: asked sonnet/medium, read back medium x31 (phases 1, 2 and corrections); output 62,555; cache read 2,954,018; peak 159,734; 85 items, 14 decisive propositions, 5 sources newly read (all abstract_only) of cap 5.",
+    "INV-09 verifier: asked sonnet/high, read back high x45; output 50,438; cache read 4,769,077; peak 201,128; 11 SUPPORTED (5 with additions), 1 PARTLY, coverage 10 present/2 narrowed/0 missing of 12; reconciled the two packages' readings of review 42274605 (both read correctly; the review holds Wnt-negative and GSK-3-inhibition-favourable statements side by side).",
+    "INV-10 producer: asked sonnet/medium, read back medium x39 (phases 1, 2 and corrections); output 55,532; cache read 3,365,607; peak 150,006; 67 items, 13 decisive propositions, 4 sources newly read (3 abstract, 1 partial full text) of cap 5.",
+    "INV-10 verifier: asked sonnet/high, read back high x50; output 59,936; cache read 6,098,870; peak 202,436; 8 SUPPORTED, 5 PARTLY, coverage 10 present/2 narrowed/0 missing of 12; confirmed no AMPA-antagonist experiment in PMID 34634460 and that the report's statement that no WWOX model was treated with an NMDAR or gap-junction agent is false as worded.",
+    "INV-15 producer: asked sonnet/medium, read back medium x30 (phases 1, 2 and corrections); output 56,216; cache read 2,768,598; peak 157,274; 61 items, 14 decisive propositions, 1 source newly read (abstract only) of cap 5.",
+    "INV-15 verifier: asked sonnet/high, read back high x49; output 51,837; cache read 5,546,107; peak 221,950; 13 SUPPORTED, 1 PARTLY, coverage 11 present/1 narrowed/0 missing of 12; confirmed the 44% PV reduction (30290271), that 34634460 recorded no PV-identified interneurons and no mIPSC, and that no contradiction of the paper's statistics is asserted (unit of KS tests undeclared).",
+    "INV-16 producer: asked sonnet/medium, read back medium x23 (phases 1, 2 and corrections); output 47,158; cache read 2,113,251; peak 170,808; 60 items, 13 decisive propositions, 5 sources newly read (1 partial full text, 4 abstract) of cap 5; disclosed ~12 further abstract views without receipts and claims run after viewing.",
+    "INV-16 verifier: asked sonnet/high, read back high x37; output 59,700; cache read 4,603,304; peak 224,710; 10 SUPPORTED, 3 PARTLY, coverage 11 present/1 narrowed/0 missing of 12; confirmed the human muscle HDAC5 knockdown lowers GLUT1 expression (opposite sign to the report's prediction) and that the knockdown, not the inhibitor, supports lower HIF-1a/GLUT1 mRNA in hypoxic cancer lines.",
+    "INV-18 producer: asked sonnet/medium, read back medium x44 (phases 1, 2 and corrections); output 66,498; cache read 4,672,689; peak 195,094; 59 items, 14 decisive propositions, 5 sources newly read (4 partial full text, 1 abstract) of cap 5; 14 further abstract views without receipts and late claims, disclosed.",
+    "INV-18 verifier: asked sonnet/high, read back high x53; output 80,715; cache read 8,359,397; peak 262,856; 13 SUPPORTED (4 with caveat), 1 PARTLY, coverage 12 present/0 narrowed/0 missing of 12; confirmed input resistance ~40 percent higher in both mutants (Table 1 of PMID 34634460) and that the producer's statistics wording respects the operator rule."
+  ],
+  "ESCALATIONS": [],
+  "STOP_LOG": [],
+  "DEFAULTS_TAKEN": [],
+  "AUTHORISED_QUEUE_20261108E": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_1": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "P0 baseline, record, brief",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "this record, BRIEF_COMMON.md, VERIFIER_COMMON.md"
+        },
+        {
+          "step": "Report INV-02 ISR: first complete read, reconciliation, independent verification, correction",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv02_isr/verify/audit.md"
+        },
+        {
+          "step": "Report INV-03/04 T-type: first complete read, reconciliation, independent verification, correction",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv03_04_ttype/verify/audit.md"
+        },
+        {
+          "step": "Report INV-05 NMDA: first complete read, reconciliation, independent verification, correction",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv05_nmda/verify/audit.md"
+        },
+        {
+          "step": "Report INV-06 myelination: first complete read, reconciliation, independent verification, correction",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv06_myelin/verify/audit.md"
+        },
+        {
+          "step": "Report INV-07 PDH/pyruvate/lactate: first complete read, reconciliation, independent verification, correction",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv07_pdh/verify/audit.md"
+        },
+        {
+          "step": "Report INV-08 NRF2: first complete read, reconciliation, independent verification, correction",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv08_nrf2/verify/audit.md"
+        },
+        {
+          "step": "Report INV-09 GSK3: first complete read, reconciliation, independent verification, correction",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv09_gsk3/verify/audit.md"
+        },
+        {
+          "step": "Report INV-10 seizures vs development / quality of life: first complete read, reconciliation, independent verification, correction",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv10_seizures/verify/audit.md"
+        },
+        {
+          "step": "Report INV-15 PV interneurons: first complete read, reconciliation, independent verification, correction",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv15_pv/verify/audit.md"
+        },
+        {
+          "step": "Report INV-16 HDAC5: first complete read, reconciliation, independent verification, correction",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv16_hdac5/verify/audit.md"
+        },
+        {
+          "step": "Report INV-18 membrane physiology / HCN / alternatives: first complete read, reconciliation, independent verification, correction",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv18_membrane/verify/audit.md"
+        },
+        {
+          "step": "Integration of verified results into existing consumers, delivery, checks, landing",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    }
+  }
+}

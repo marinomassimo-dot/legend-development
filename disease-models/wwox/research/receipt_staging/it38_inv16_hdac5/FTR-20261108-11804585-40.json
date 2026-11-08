@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-08T20:34:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "event_at": "2026-11-08T20:46:00Z",
+ "event_id": "FTR-20261108-11804585-40",
+ "evidence_basis": [
+  "abstract analysed in full; abstract-level statements only",
+  "verbatim_locator | proposition: enzymatic activity associated with class II HDACs comes from the SMRT/N-CoR-HDAC3 complex (HDAC4 catalytic domain tested, other class II in vitro) | Abstract | \"class II HDACs regulate transcription by bridging the enzymatically active SMRT/N-CoR-HDAC3 complex and select transcription factors independently of any intrinsic HDAC activity\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv16_hdac5/README.md",
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv16_hdac5/decisive.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 11804585 (abstract and metadata as served 2026-11-08)",
+ "study_id": {
+  "doi": "10.1016/s1097-2765(01)00429-4",
+  "pmid": "11804585"
+ },
+ "workflow": "INV-16 OpenScientist full-input repeat, producer os-16. Question-driven read for the decisive propositions; prepared as a staged JSON for the integrator; the ledger was not written by the preparing actor."
+}

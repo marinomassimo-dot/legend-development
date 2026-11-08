@@ -1,0 +1,39 @@
+{
+ "analysis_time_precision": "minute",
+ "event_at": "2026-11-08T20:08:00Z",
+ "analysis_at": "2026-11-08T20:05:00Z",
+ "record_kind": "contemporaneous_receipt",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv10_seizures/README.md",
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv10_seizures/evidence.tsv"
+ ],
+ "source_fingerprint": null,
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_id": "FTR-20261108-39933386-38",
+ "evidence_basis": [
+  "An abstract is not a reading; it supports a conditional lead only.",
+  "verbatim_locator | proposition: developmental delay preceded seizure onset in all patients of the IESS genetic-etiology group | Abstract, Results | \"Developmental delay preceded seizure onset in all patients, persisting or worsening thereafter.\"",
+  "verbatim_locator | proposition: WWOX is one of several genes in the series, share of WWOX patients not stated | Abstract, Results | \"Identified variants included 7/13 (53.8 %) single nucleotide variants in KCNQ2, STXBP1, SCN8A, CDKL5, UGDH, and WWOX\""
+ ],
+ "evidence_depth": "abstract_only",
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "source_kind": "abstract",
+ "source_locator": "PubMed record retrieved through the PubMed tools on 2026-11-08; abstract text only",
+ "study_id": {
+  "doi": "10.1016/j.seizure.2025.01.025",
+  "pmid": "39933386"
+ },
+ "workflow": "INV-10 OpenScientist full-input repeat (label os-10): question-driven read of a source the report cites, to test a stated proposition. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

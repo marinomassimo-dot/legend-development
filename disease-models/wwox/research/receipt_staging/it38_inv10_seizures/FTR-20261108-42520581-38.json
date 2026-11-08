@@ -1,0 +1,39 @@
+{
+ "analysis_time_precision": "minute",
+ "event_at": "2026-11-08T20:08:00Z",
+ "analysis_at": "2026-11-08T20:05:00Z",
+ "record_kind": "contemporaneous_receipt",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv10_seizures/README.md",
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv10_seizures/evidence.tsv"
+ ],
+ "source_fingerprint": null,
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_id": "FTR-20261108-42520581-38",
+ "evidence_basis": [
+  "An abstract is not a reading; it supports a conditional lead only.",
+  "verbatim_locator | proposition: the review covers DEEs and treatment-resistant epilepsies other than three named syndromes | Abstract, Background | \"other than LGS, DS, and TSC\"",
+  "verbatim_locator | proposition: the evidence is observational with moderate to high bias risk | Abstract, Conclusions | \"This SLR mainly identified observational studies with moderate to high bias risk.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "source_kind": "abstract",
+ "source_locator": "PubMed record retrieved through the PubMed tools on 2026-11-08; abstract text only",
+ "study_id": {
+  "doi": "10.1016/j.eplepsyres.2026.107873",
+  "pmid": "42520581"
+ },
+ "workflow": "INV-10 OpenScientist full-input repeat (label os-10): question-driven read of a source the report cites, to test a stated proposition. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
