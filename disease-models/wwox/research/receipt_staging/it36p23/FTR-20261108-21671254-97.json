@@ -18,7 +18,7 @@
  "evidence_basis": [
   "partial full text analysed through section-directed passages; figures not viewed; route and depth as stated in source_locator",
   "verbatim_locator | proposition: E-N1 LiCl lowered basal pT181 and attenuated the MT-2 rise; TDZD-8 was not read on tau | Results > Effect of GSK3-beta Inhibition on Neurite Retraction | \"Control cell preincubation with LiCl led to a significant decrease in T181 phosphorylation\"",
-  "verbatim_locator | proposition: E-N2 beta-catenin was blotted only for MT-2 versus control supernatant, no inhibitor | Results > Effect of MT-2 Supernatant on GSK3-beta Phosphorylation | \"We observed no change in either phosphorylation or β-catenin (Fig. 4)\"",
+  "verbatim_locator | proposition: E-N2 beta-catenin was blotted only for MT-2 versus control supernatant, no inhibitor | Results > Effect of MT-2 Supernatant on GSK3-beta Phosphorylation | \"We observed no change in either phosphorylation or \u03b2-catenin (Fig. 4)\"",
   "verbatim_locator | proposition: E-N3 neither LiCl nor TDZD-8 prevented neurite retraction | Results > Effect of GSK3-beta Inhibition on Neurite Retraction | \"Neither LiCl nor TDZ-8 preincubations prevented the neurite retraction in SH-SY5Y cells treated with MT-2 cell supernatant\""
  ],
  "evidence_depth": "partial_fulltext_read",

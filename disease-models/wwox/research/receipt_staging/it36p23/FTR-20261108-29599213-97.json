@@ -19,8 +19,8 @@
   "partial full text analysed through section-directed passages; figures not viewed; route and depth as stated in source_locator",
   "verbatim_locator | proposition: EI15 ISRIB did not significantly activate the recombinant decamer | Results > ISRIB stabilizes decameric eIF2B | \"ISRIB did not significantly activate the recombinant eIF2B decamer\"",
   "verbatim_locator | proposition: EI16 cross-bridging of the symmetry interface | Abstract | \"ISRIB promoted this step by cross-bridging a central symmetry interface\"",
-  "verbatim_locator | proposition: EI17 bell-shaped assembly in vitro | Results | \"ISRIB promoted eIF2B(βγδε)2 assembly at 1 μM but failed to do so at 10 μM\"",
-  "verbatim_locator | proposition: EI18 catalytic HEAT domain of epsilon not resolved | Results > ISRIB binds in a deep cleft | \"the catalytic HEAT domains of the ε subunits were not resolved\""
+  "verbatim_locator | proposition: EI17 bell-shaped assembly in vitro | Results | \"ISRIB promoted eIF2B(\u03b2\u03b3\u03b4\u03b5)2 assembly at 1 \u03bcM but failed to do so at 10 \u03bcM\"",
+  "verbatim_locator | proposition: EI18 catalytic HEAT domain of epsilon not resolved | Results > ISRIB binds in a deep cleft | \"the catalytic HEAT domains of the \u03b5 subunits were not resolved\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

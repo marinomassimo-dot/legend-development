@@ -17,7 +17,7 @@
  "event_id": "FTR-20261108-35704695-96",
  "evidence_basis": [
   "Degraded acquisition: PMC full-text tool returned an empty body for PMC9359641; depth is the abstract; the gap is not turned into a statement about the paper's methods",
-  "verbatim_locator | proposition: loss or dephosphorylation of HDAC5 under intermittent hypoxia accompanied higher HIF-1alpha protein and activity in PC12 cells | Abstract | \"HDAC5 dephosphorylation by IH lead to augmented hypoxia-inducible factor (HIF)-1α protein and an increase in its transcriptional activity.\""
+  "verbatim_locator | proposition: loss or dephosphorylation of HDAC5 under intermittent hypoxia accompanied higher HIF-1alpha protein and activity in PC12 cells | Abstract | \"HDAC5 dephosphorylation by IH lead to augmented hypoxia-inducible factor (HIF)-1\u03b1 protein and an increase in its transcriptional activity.\""
  ],
  "evidence_depth": "abstract_only",
  "outputs": [
