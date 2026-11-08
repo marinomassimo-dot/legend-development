@@ -15,7 +15,8 @@
  },
  "RESUME": "Folder drug_repurposing/gsk3_inv09_20261107/ (BRIEF.md, output/). Order: producer, census, verifier, correction.",
  "DECISIONS_TAKEN": [
-  "Queued by the operator beside the running work; one delegate at a time; settings as before. Placed last in the queue so that the NMDA, myelin, NRF2 and GSK3-eIF2B deliveries exist when it starts."
+  "Queued by the operator beside the running work; one delegate at a time; settings as before. Placed last in the queue so that the NMDA, myelin, NRF2 and GSK3-eIF2B deliveries exist when it starts.",
+  "Battery on a no-hardlinks clone of 3c13b8acf0cd34b5d589b583d6a3a897622e1e38 (the tip of task/queue2-20261108 carrying INV-09, INV-10, INV-15, INV-16 and HCN/Ih), run at nice 19 while another session's battery was also running: the first run on 0cc96bb9 stopped on one real failure (test_ranking_it8: package folders dated 20261108 moved the as-of date derived from directory names; folders renamed to 20261107), the second run REGRESSION VERDICT PASS WITH SKIPS (214 targets, 9 skipped, environment). Not attributed to the closure commit that records it."
  ],
  "DELEGATIONS": [
   "K producer gk-p: asked sonnet/medium, read back claude-sonnet-5-5 x54, medium x54; birth 17,416; 54 turns; ~10 min; output 63,543; cache written 228,490; cache read 7,046,123; peak 228,492; completed README (~910 words), evidence (37 rows incl. 6 reused), separation, probes, experiment X0-X5, queries Q01-Q17, 6 staged receipts (validated with DOI check; 33197065 PMC page returned a reCAPTCHA: stopped, abstract only); 6 of 6 new sources",
