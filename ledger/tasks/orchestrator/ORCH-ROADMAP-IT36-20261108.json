@@ -7,17 +7,18 @@
  "OBJECTIVE": "IT36: from qualified knowledge to effective generation: integrate the delivered science, link existing structured relations to the generator, fix two provenance fragilities, measure improvement. Horizon 8-10 hours, duration is not a goal.",
  "START_UTC": "2026-11-08T12:00:00Z",
  "RESUME": {
-  "note": "start: remote main 0a3a34f9 = local. Done before: IT35 (bridges, --expect-sha, INV-18 branch D). First open step P0/P2. Decisive files: needs/bridges_it35.tsv, generation_it35_20261108/README.md, ranking_it8.py as_of, receipt_staging. Science session owns ISRIB identity (worktree isrib-identity) and it36sci; do not touch."
+  "note": "complete 2026-11-08; open: Harness Engineering lands the PREREG rename; card edits (7 rows in p1 map) wait for a card rebuild path; shareable-audit name matcher flags everyday words of other languages (root fix not done); science session follow-up on ISRIB/GSK3 and myelin to be integrated when delivered"
  },
  "AUTHORISED_QUEUE_20261108": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P0": {
    "order": 1,
    "steps": [
     {
      "step": "Baseline and compact resume: remote, worktrees (isrib-identity and it36sci belong to the science session), CI, queue",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "remote main 0a3a34f9 = local at start; science session worktrees (isrib-identity, it36sci) not touched; compact resume in RESUME.note; later main moves (science session, Harness Engineering) were merged, never overwritten"
     }
    ]
   },
@@ -26,8 +27,9 @@
    "steps": [
     {
      "step": "Reconcile the science batch with consumers: map package -> verified conclusion -> consumer -> state; integrate only real deltas",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "map of 49 rows built by a delegate (census: 34 turns, 41,858 output tokens) and applied to needs.json and investigations_it20.tsv with [IT36] tags in five languages; statistics rows and HDAC5-HIF replaced by the science session's decisive re-check wording; 84 staged receipts (48 + 36) recorded after scratch-clone trials, ledger 1,360 to 1,444, one missing parent link set from the ledger; cards not hand-edited (generated from packets), rows kept in p1_reconcile_it36_20261108/output/map.tsv"
     }
    ]
   },
@@ -36,8 +38,9 @@
    "steps": [
     {
      "step": "Receipt timestamps: reconstruct the three back-dated staged events from logs; correct by the ledger correction procedure",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "the three INV-16 staged receipts: the producer moved planned times back one minute without rerunning the checker; analysis_at restored per receipt from the producer transcript (second precision), preparation time 00:21:27Z in hdac5_inv16_20261107/TIMESTAMP_PROVENANCE.md; they were not yet in the ledger, so no correction record; the ledger writer sets event_at to the recording time"
     }
    ]
   },
@@ -46,8 +49,9 @@
    "steps": [
     {
      "step": "Ranking as_of_date from inputs, not folder names; regression for an unconsumed folder",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "ranking_it8.py as_of_date reads the dated folders the module names and the newest analysis_at in the receipt ledger; three regression tests (AsOfDate); value unchanged 2026-11-08; README note"
     }
    ]
   },
@@ -56,8 +60,9 @@
    "steps": [
     {
      "step": "Smallest general link from existing qualified relations to generation; trace contrasting cases",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "traced cases: ISRIB (identity absent from the catalogue), GSK3B-EIF2B5 and HDAC5-SLC2A1 (bridges), HIF1A and ERBB4 bridges from the science delivery (no reach, not ingested), myelin energy thread (process-level, not gene-to-gene); smallest link: package-owned bridges.tsv and probe_links.tsv with validators and tests; hand-kept needs/bridges_it35.tsv removed; reach identical (78 to 171, 209 to 293)"
     }
    ]
   },
@@ -66,8 +71,9 @@
    "steps": [
     {
      "step": "ISR probe: consume the primary-source probe entry through the normal need->intervention flow; measure the stage reached",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "probes_it36_20261108/output/probe_links.tsv: ISRIB as one row for the eIF2B complex (5 of 5 subunits matched under NEED-ISR-ATTENUATION), catalogue_id NOT_IN_CATALOGUE, no raw data altered; test on the real need; stops at the need stage, no WWOX experiment"
     }
    ]
   },
@@ -76,8 +82,9 @@
    "steps": [
     {
      "step": "Measure generation: A previous / B with link / C simple baseline; second phenotype (neuron-dependent myelination); declared retrospective",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "generation_it36_20261108/README.md: A before / B with links / C symbol baseline for ISR, PDH, myelination, lactate; second phenotype (myelination) produced by the science session with an unguided and an informed step, 5 of 6 alternatives already represented, one new thread (energy supply, sign undetermined); retrospective and not isolated, stated"
     }
    ]
   },
@@ -86,8 +93,9 @@
    "steps": [
     {
      "step": "Carry outcomes to investigations and dashboard (five languages, shareable limits)",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "needs, investigations (INV-03, 05, 06, 07, 09, 10, 12, 15, 16, 18) and five-language views updated; wording narrowed per the coordination note (GSK3 step only, hormone not declared is not absent, ISRIB grid compatible with several mechanisms); ranking: no group moved (snapshot new_evidence), so the order is unchanged and explained"
     }
    ]
   },
@@ -96,8 +104,9 @@
    "steps": [
     {
      "step": "Durable capabilities, one home per method, remove duplicate tables",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "BRIEF_COMMON item 8, scripts README line, one home per method (repurposing_search.py validators); duplicate table removed; self-evaluation 2026-11-08_it36.md"
     }
    ]
   },
@@ -106,8 +115,9 @@
    "steps": [
     {
      "step": "Battery on frozen candidate, gate, CI, site, cleanup, final report",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "battery d43bb4da: FAIL with two red targets, both System One pilot files already on remote main (shebang without executable bit; a PREREG section reference), fixed by Harness Engineering in 3e219085; merged tree b0dfaa41 re-ran those two targets green and the gate passed; earlier candidate 8431fd38 PASS WITH SKIPS (215 targets, 41 skipped); b0dfaa41 pushed with --expect-sha, ls-remote verified; CI success for Public release gate and Publish the shareable view; site 200 in five languages with IT36 text; the later record-only commit is attributed to gate only"
     }
    ]
   }
