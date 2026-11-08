@@ -1,0 +1,8 @@
+query_id	database_or_route	string_or_url	run_at_utc	hits	what_was_done
+QB1	git show task/isrib-identity	identity_isrib_20261108/README.md and identity.tsv	2026-11-08T08:57Z	2 files	identity row reused as given
+QB2	repository modules read	gsk3_eif2b_20261107/output/README.md, evidence.tsv; generation_it35_20261108/README.md	2026-11-08T08:57Z	3 files	module rows E20 to E28 carried; not re-read except as listed
+QB3	PubMed tool	ISRIB integrated stress response inhibitor eIF2B	2026-11-08T08:58Z	31 (25 returned)	the date filter I passed (to 2019) was not applied by the tool (2026 papers returned); I chose the primary papers from the list by title: 23741617, 25875391, 29599245, 29599213
+QB4	PubMed tool	ISRIB neurons ATF4 OR CHOP OR "phosphorylated eIF2" neurodegeneration OR neuronal	2026-11-08T08:58Z	1,059,818	DISCARDED: unparenthesised OR broke the precedence (the query translation shows it); no result used
+QB5	PubMed tool	ISRIB AND (neurons[MeSH Terms]) AND (ATF4 OR CHOP OR eIF2alpha)	2026-11-08T08:59Z	18	two read in full text (32457286, 33531382); eight others seen by title only (28861811, 28721361, 28584287, 27960077, 27569458, 32378057, 31836389, 34347195): not read, not used
+QB6	NCBI E-utilities efetch	db=pmc for PMC3667625, PMC4426669, PMC5889100, PMC6120582, PMC7250913, PMC8317334, PMC1222905	2026-11-08T08:53Z to 08:58Z	7 x HTTP 200	six bodies read in the depth stated in the receipts; PMC1222905 (12133000, optional) returned 6,690 bytes holding the abstract and no body
+QB7	paper_packet.py claim	--actor it36-p2 for each PMID before opening	2026-11-08T08:52Z to 08:58Z	14 claims	another actor's claim existed only for 12133000 (gsk-p, a previous package); I did not reread its body
