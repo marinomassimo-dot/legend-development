@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-08T00:31:50Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "not_read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_present"
+ },
+ "event_at": "2026-11-08T00:38:07Z",
+ "event_id": "FTR-20261108-24403084-94",
+ "evidence_basis": [
+  "Degraded acquisition: Europe PMC fullTextXML HTTP 500 (also on one retry); NCBI efetch for the PMC record returned a stub carrying the note that the publisher does not allow XML download; the PubMed tool returned an empty full_text field. The PMC article page (HTTP 200, ordinary page, no access challenge) was then read once: Methods (current-clamp and sag ratio definition), the Discussion, and the legends of Fig 8 and Fig 9; the Results text proper was only partly read and is marked not_read; figure images not viewed.",
+  "verbatim_locator | proposition: decoy peptide raises Ih density in hippocampal neurons | Discussion/Results | \"myr-22-treated neurons possessed a significantly larger I h density\"",
+  "verbatim_locator | proposition: sag and Ih change without change in Rin or rest | Discussion | \"This suggested that regulation of I h by FLNa may alter basic neuronal properties primarily at hyperpolarized potentials rather than at rest.\"",
+  "verbatim_locator | proposition: sag ratio normalises to the deflection | Methods | \"Sag ratio was calculated as 100·( V ss − V peak )/(RMP − V peak ) (%)\"",
+  "verbatim_locator | proposition: scrambled peptide control leaves Ih and sag unchanged | Fig 9 legend | \"Both I h density ( I ) and sag ratio ( J ) remained unaltered.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/hcn_20261108/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/hcn_20261108/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "74d327edf61bc0ad1a026dff6847db4852897b2b78d7a2a6ec6772fd29e58cc5",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page text for the PMC record, fetched 2026-11-08 after Europe PMC XML returned HTTP 500 and the publisher withheld XML; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1074/jbc.M113.522060",
+  "pmid": "24403084"
+ },
+ "workflow": "HCN/Ih delta (hcn_20261108), producer hc-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

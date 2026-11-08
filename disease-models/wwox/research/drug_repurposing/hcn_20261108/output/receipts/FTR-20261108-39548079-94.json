@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-08T00:30:27Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_present"
+ },
+ "event_at": "2026-11-08T00:38:07Z",
+ "event_id": "FTR-20261108-39548079-94",
+ "evidence_basis": [
+  "Results read in full including figure legends (images not viewed); the opening of the Discussion read; Methods, Supplementary Information and references not read. Question outside prior coverage: does the lipid-nanodomain/HCN precedent bear on cortical WWOX-deficient neurons.",
+  "verbatim_locator | proposition: lipid-domain disruption facilitates opening of native HCN channels in DRG nociceptors | abstract | \"Disruption of OMDs potentiated action potential firing in nociceptor DRG neurons and facilitated the opening of native hyperpolarization-activated cyclic nucleotide-gated (HCN) pacemaker channels.\"",
+  "verbatim_locator | proposition: the voltage-sensor effect is isoform-specific, little for HCN1 | Results (Fig 6 text) | \"minimal FRET change was detected between comparable sites in hHCN1 channels following β-CD treatment\"",
+  "verbatim_locator | proposition: domain size falls after nerve injury in small DRG neurons | Results (Fig 7 text) | \"decreased from 10.8 ± 1.1% for the control neurons on the contralateral side of the injury to 4.4 ± 0.4%\"",
+  "string search of the retrieved text found no hit for cortex, cortical, neocortical, epilep or WWOX: the study is in peripheral sensory neurons and heterologous cells."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/hcn_20261108/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/hcn_20261108/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "f98da8bbae6834ca7ff8f0833d5222eb84277e5fba6e85317ac1914fa30ad38e",
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC fullTextXML for the PMC record, fetched 2026-11-08; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1038/s41467-024-54053-z",
+  "pmid": "39548079"
+ },
+ "workflow": "HCN/Ih delta (hcn_20261108), producer hc-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

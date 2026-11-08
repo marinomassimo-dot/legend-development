@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-08T00:30:27Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_present"
+ },
+ "event_at": "2026-11-08T00:38:07Z",
+ "event_id": "FTR-20261108-33547341-94",
+ "evidence_basis": [
+  "Results read from the first section through the TRIP8b paragraph (about two thirds; marked not_read because the organotypic-slice and modelling sections were not read), the Discussion read in full, legends of Figs 1-5 read, images not viewed, Methods and Supplementary not read. The ZD7288 T-current statement refers to a Supplementary figure that was not read.",
+  "verbatim_locator | proposition: activity deprivation raises sag and rebound in cultured hippocampal neurons | Results/Discussion | \"2 days of activity-deprivation induced a compensatory increase in intrinsic excitability in dissociated hippocampal neurons\"",
+  "verbatim_locator | proposition: nickel removes the T-type bump and leaves sag | Results (Fig 4 text) | \"NiCl 2 rapidly eliminated the post-inhibitory bump while leaving much of the negative current response and voltage sag intact\"",
+  "verbatim_locator | proposition: sag rose without a change in HCN mRNA or total protein | Discussion | \"we failed to detect TTX-induced changes in HCN mRNA or protein levels in culture lysates, despite of the higher number of cells possessing voltage sag\"",
+  "verbatim_locator | proposition: blocking HCN and T-type channels lowered burst frequency in the deprived network | Discussion | \"selective blocking of these channels decreased burst frequency\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/hcn_20261108/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/hcn_20261108/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "3d26c65da68a3984da2a18a02199c50c9ef2b9f075a3501c6224b6ad8022a8bb",
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC fullTextXML for the PMC record, fetched 2026-11-08; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1038/s41598-021-82775-3",
+  "pmid": "33547341"
+ },
+ "workflow": "HCN/Ih delta (hcn_20261108), producer hc-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
