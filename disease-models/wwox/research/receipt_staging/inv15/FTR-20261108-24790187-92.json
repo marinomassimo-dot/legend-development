@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-08T00:04:59Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_present",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "not_present",
+  "references": "not_read",
+  "results": "not_present",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-08T00:06:29Z",
+ "event_id": "FTR-20261108-24790187-92",
+ "evidence_basis": [
+  "Abstract only. Full-text routes failed or returned less than the source: the PMC tool returned an empty full_text field; Europe PMC fullTextXML returned HTTP 500; NCBI E-utilities efetch for the PMC record returned a stub of 10,779 bytes (about 4,000 characters of text, no body). No method, figure or table of this paper was read; the abstract names no PV or net endpoint, which is not evidence that the paper has none.",
+  "verbatim_locator | proposition: hyaluronan synthase 3 loss gives epileptiform activity in slices | abstract | \"Has3(-/-) brain slices demonstrated spontaneous epileptiform activity in CA1 pyramidal neurons\"",
+  "verbatim_locator | proposition: authors report a causal link between extracellular space volume and epileptiform activity | abstract | \"provided evidence for a causal link between ECS volume and epileptiform activity\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pv_inv15_20261108/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/pv_inv15_20261108/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "5c8d897ad220bcc3b8cdf5cb825e1bdd195897abe6c78f06363c4a845024c236",
+ "source_kind": "abstract",
+ "source_locator": "PubMed record, retrieved 2026-11-08 through the PubMed tool",
+ "study_id": {
+  "doi": "10.1523/JNEUROSCI.3458-13.2014",
+  "pmid": "24790187"
+ },
+ "workflow": "INV-15 delta (pv_inv15_20261108), producer pv-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

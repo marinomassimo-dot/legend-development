@@ -9,15 +9,17 @@
  "BASELINE": "development/main cb727195dbb5917c6048659b55d69094c0a6c3c0; branch task/queue2-20261108 from the frozen head 893ad6efb886b1eb22dfc858c6d169b11ea31e0d of task/ttype-20261107 (whose battery runs in parallel at low priority); queue2 holds the remaining queued packages INV-09, INV-10 and INV-15 so the tested head can land unchanged. Receipts exist for 30290271 (complete), 34634460 (complete), 27845895 (partial); none for 42812881.",
  "CURRENT_PACKAGE": {
   "id": "P-INV15",
-  "state": "producer running (legend-delegate, sonnet/medium)",
-  "delegate_active": "pv-p",
-  "updated": "2026-11-08T05:40:00Z"
+  "state": "verifier running (legend-delegate, sonnet/high)",
+  "delegate_active": "pv-v",
+  "updated": "2026-11-08T06:30:00Z"
  },
  "RESUME": "Folder drug_repurposing/pv_inv15_20261108/ (BRIEF.md, output/). Order: producer, census, verifier, correction.",
  "DECISIONS_TAKEN": [
   "Queued by the operator beside the running work; one delegate at a time; settings as before."
  ],
- "DELEGATIONS": [],
+ "DELEGATIONS": [
+  "P producer pv-p: asked sonnet/medium, read back claude-sonnet-5-5 x49, medium x49; birth 17,464; 49 turns; ~9 min; output 61,557; cache written 167,590; cache read 5,194,686; peak 176,075; completed README (892 words), evidence (44 rows), alternatives (8), currents (7), experiment (10 steps), queries (13), 4 staged receipts (validated with DOI check); 2 of 4 new sources; Europe PMC returned 503 for two queries (not retried): the second route for the absence claims is partial; the producer found declared-count inconsistencies in the electrophysiology paper (to be verified)"
+ ],
  "ESCALATIONS": [],
  "STOP_LOG": [
   "No stop for a reserved act."

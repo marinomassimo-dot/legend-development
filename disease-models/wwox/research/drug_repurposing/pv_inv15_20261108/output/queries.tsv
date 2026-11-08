@@ -1,0 +1,14 @@
+query_id	database_or_route	string_or_url	run_at_utc	hits	what_was_done
+Q0	repository	registry_records get for 27845895; depth lookup for 30290271, 34634460, 27845895, 42812881, 24790187; paper_packet claim for 30290271, 34634460, 27845895, 42812881, 24790187, 40507943 (the last claimed after its record was seen as a search hit)	2026-11-07T23:58Z to 2026-11-08T00:05Z (not stamped individually)	n/a	prior reading depth and claims checked; 40507943 already has a complete read and its abstract only was seen in a hit list, no new receipt
+Q1	PubMed (tool), OR and parentheses test	(WWOX OR Wwox) AND (perineuronal OR hyaluronan OR hyaluronic OR "extracellular matrix" OR parvalbumin)	2026-11-08T00:00Z (approx)	22	OR groups and parentheses are honoured by the tool (query translation shown by the tool); hits scanned, only 30290271, 27845895 and the already-read reviews relevant
+Q2	PubMed (tool)	Has3 hyaluronan synthase knockout seizures extracellular space	2026-11-08T00:00Z (approx)	1	found PMID 24790187
+Q3	PubMed (tool)	(WWOX OR Wwox) AND (Has2 OR Has3 OR Hapln1 OR aggrecan OR brevican OR neurocan OR chondroitin OR "Wisteria floribunda")	2026-11-08T00:01Z (approx)	0	not found at abstract and index level
+Q4	PubMed (tool)	(WWOX OR Wwox) AND (perineuronal net OR "perineuronal nets")	2026-11-08T00:01Z (approx)	0	not found at abstract and index level
+Q5	PubMed (tool)	(WWOX OR Wwox OR WOREE) AND (parvalbumin OR interneuron OR interneurons OR GABAergic) AND (neuron OR cortex OR hippocampus)	2026-11-08T00:01Z (approx)	3	30290271 plus two reviews already read in the repository (34359949, 33255508)
+Q6	Europe PMC REST search	(WWOX OR Wwox) AND ("perineuronal" OR "perineuronal net" OR "perineuronal nets")	2026-11-08T00:01Z	none (HTTP 503)	server error, not an access challenge; not retried
+Q7	Europe PMC REST search (full-text index)	(WWOX OR Wwox) AND ("Hapln1" OR "Has3" OR "Has2" OR "aggrecan" OR "brevican")	2026-11-08T00:01Z	63	first 25 titles inspected: hyaluronan and cancer items, the HYAL2-WWOX-SMAD4 reviews, and unrelated matches; no neural matrix primary with WWOX; titles only
+Q8	Europe PMC REST search	(WWOX OR Wwox) AND (Pvalb OR parvalbumin) AND (Kcnc1 OR Kv3)	2026-11-08T00:01Z	none (HTTP 503)	server error; not retried; PubMed Q5 covers the abstract level
+Q9	PMC tool, full text	PMC13620914 (PMID 42812881)	2026-11-08T00:00Z (approx)	1 article	93,708 characters after tag removal; read in sections 2.3, 2.4, 3.4, 6 and 6.2, abstract; other sections not read
+Q10	PMC tool, full text	PMC4004806 (PMID 24790187)	2026-11-08T00:00Z (approx)	1 article	full_text field empty; abstract only
+Q11	Europe PMC fullTextXML	PMC4004806	2026-11-08T00:00:03Z	none (HTTP 500)	server error, not an access challenge
+Q12	NCBI E-utilities efetch db=pmc	PMC4004806 (second route because Q11 was a server fault)	2026-11-08T00:00Z (approx)	stub, 10,779 bytes	about 4,000 characters of text, none on parvalbumin or nets; not a full text; depth stays abstract_only
