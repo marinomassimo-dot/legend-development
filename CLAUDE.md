@@ -93,6 +93,7 @@ Three facts bind before you have finished reading anything else:
 | Whenever the sweep runs | [`legend-proband-priority-matrix`](.claude/skills/legend-proband-priority-matrix/SKILL.md) |
 | Every analytical batch or completed full-text read, **before** takeaways | [`legend-session-self-eval`](.claude/skills/legend-session-self-eval/SKILL.md) — the upgrade is the answer, not the promise of one |
 | Every session, before closing — record a capability gap if one emerged; `CHANGE = NONE` is valid | [`legend-capability-scout`](.claude/skills/legend-capability-scout/SKILL.md) |
+| A session or batch changed something material (verified result, corrected premise, moved limit, repeated error, resolved question) — or "dream" / "what was not consumed" on request | [`legend-dream`](.claude/skills/legend-dream/SKILL.md) — called from self-eval; ends in one line when nothing changed |
 | Every session, final response | [`legend-session-takeaways`](.claude/skills/legend-session-takeaways/SKILL.md) |
 | ⚪ **Optional, never required** — about to write *first / novel / absent / untested / unique*; one mechanism reached too fast; an adjacent literature may hold the assay; a prediction should be fixed before searching; an experiment must discriminate rather than measure; a new question makes a read paper worth reopening | [`legend-discovery-method`](.claude/skills/legend-discovery-method/SKILL.md) — pick one primitive; using one alone is the normal case |
 

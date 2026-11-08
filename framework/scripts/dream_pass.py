@@ -8,9 +8,13 @@ decides nothing: its output is a list of places to look at, never a finding.
               cite it by name (none outside = nothing downstream has read it yet)
   pointers    drafts and hand-offs marked NOT SENT / FOR THE OPERATOR, the identifiers they
               carry, and the files that name the same identifier without naming the draft
+  pairs       the lines, verbatim, where two entities occur together, with the table header above
+              each tsv hit so context, status and limit columns stay attached; a co-occurrence
+              orients retrieval and carries no sign, no count is evidence
   quiet       exit 0 and print one line when nothing material changed, so the pass can end fast
 
 Usage: python3 framework/scripts/dream_pass.py consumers --since 2026-11-05
+       python3 framework/scripts/dream_pass.py pairs HDAC5 SLC2A1
        python3 framework/scripts/dream_pass.py pointers
        python3 framework/scripts/dream_pass.py quiet --since HEAD~5
 """
@@ -86,13 +90,37 @@ def cmd_pointers(a):
         for i in ids:
             mention = set(git("grep", "-l", "-F", "--", i).splitlines())
             named = set(git("grep", "-l", "-F", "--", base).splitlines())
-            gap = sorted(mention - named - {f})
+            gap = sorted(x for x in mention - named - {f} if x.endswith(".md"))
             rows.append((f, i, len(mention), len(gap), gap))
-    print("draft\tidentifier\tfiles_naming_id\tfiles_naming_id_without_the_draft")
+    print("draft\tidentifier\tfiles_naming_id\tprose_files_naming_id_without_the_draft")
     for f, i, m, g, gap in rows:
         print(f"{f}\t{i}\t{m}\t{g}")
         for x in gap[: a.show]:
             print(f"    {x}")
+    return 0
+
+
+def cmd_pairs(a):
+    pat_a = re.compile(r"\b" + re.escape(a.a) + r"\b", re.I)
+    pat_b = re.compile(r"\b" + re.escape(a.b) + r"\b", re.I)
+    files = [f for f in git("ls-files", a.root).splitlines() if f.endswith((".tsv", ".md"))]
+    shown = 0
+    print(f"# lines naming both {a.a} and {a.b}; orients retrieval only, carries no sign, no count is evidence")
+    for f in files:
+        try:
+            lines = open(f, encoding="utf-8", errors="replace").read().splitlines()
+        except OSError:
+            continue
+        hits = [i for i, ln in enumerate(lines) if pat_a.search(ln) and pat_b.search(ln)]
+        if not hits:
+            continue
+        print(f"## {f}")
+        if f.endswith(".tsv") and lines:
+            print("   header: " + lines[0][:300])
+        for i in hits[: a.show]:
+            print(f"   {i + 1}: {lines[i][:600]}")
+            shown += 1
+    print(f"# {shown} lines shown")
     return 0
 
 
@@ -112,6 +140,12 @@ def main():
         s.add_argument("--root", default=ROOT_DEFAULT)
         s.add_argument("--show", type=int, default=6, help="pointers: files listed per identifier")
         s.set_defaults(fn=fn)
+    s = sub.add_parser("pairs")
+    s.add_argument("a")
+    s.add_argument("b")
+    s.add_argument("--root", default=ROOT_DEFAULT)
+    s.add_argument("--show", type=int, default=3, help="lines shown per file")
+    s.set_defaults(fn=cmd_pairs)
     a = p.parse_args()
     return a.fn(a)
 

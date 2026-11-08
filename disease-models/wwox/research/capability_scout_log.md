@@ -1786,3 +1786,5 @@ independent-reproduction label for any candidate, supplements and corrections lo
 **Proof.** https://api.github.com/repos/dr-ronak/Ontology-Bridged-Drug-Repurposing-Multi-Agent-GraphRAG/readme (README lines 1, 666, 674, 691, 797)
 
 **Outcome.** DISCARD for this question (examined, no trial needed); not integrated
+
+- **Pointer added 2026-11-08 (DREAM-2):** the E-MTAB-14792 access gap above has an unsent request drafted for the operator: [`drug_repurposing/ebi_access_request_E-MTAB-14792_draft.md`](drug_repurposing/ebi_access_request_E-MTAB-14792_draft.md). The route is a re-check of the public status, then the operator's decision; it is not sent from the module, and no e-mail address is given to any service. Nothing else in this log changes.

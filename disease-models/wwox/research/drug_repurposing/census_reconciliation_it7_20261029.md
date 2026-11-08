@@ -198,3 +198,5 @@ its scratch-clone trial. PMID 25012504 was read at abstract level only (no recei
 
 
 > **Dated correction (2026-10-31, IT12 P6).** Row 14 (GSE215425, P47T knock-in): read "counts accessible; reanalysed for HIF and NRF2 target sets in IT12 (`p47t_it12_20261031/`); the authors' hippocampal differential-expression list is not reproducible from the deposit (cause unverifiable)" in place of "transcript only; not adequate".
+
+> Pointer added 2026-11-08: the unsent release question for E-MTAB-14792 is [`ebi_access_request_E-MTAB-14792_draft.md`](ebi_access_request_E-MTAB-14792_draft.md); it goes to the operator, who decides whether and whom to ask. A 403 from the public API is not evidence that the data do not exist.

@@ -14,3 +14,9 @@ Non-canonical, not medical advice. Package `nb1_myc_20261107/`; verified by `ver
 | Not receipted, labelled in the tables | Rows E80 to E83 and the figure readings of PMID 42397075 come from the auditor; PMID 32966806 was read by the auditor only. |
 
 Open and not done: all supplements; figures as images for the sources of this batch; PubChem and ChEMBL identity of EN4; searches beyond titles and abstracts; MYCN and MYCL in any WWOX system; the window (not assumed prenatal only).
+
+## Update 2026-11-08 (DREAM-2 consumer check; the table above is not edited)
+
+- **Consumed:** `needs/needs.json`, `NEED-MYC-PROGENITOR-PROLIFERATION` already carries the counter-evidence and the inferred line proposed above (SCAR12-class MYC rise without the composition phenotype, POU5F1 as prominent as MYC, the Fig 3H-I time course, the non-neural WWOX-to-MYC relation, direction `uncertain`). The card is not re-checked here.
+- **Not consumed:** the three generator relations flagged in the Generator row (E11/E30/E01/E02 sign contrast; E27 uninformative; E80 binding lost with MYC protein high) exist only in `output/generator_relations.tsv`; no generation input reads that file, so the 555 proposals ending in MYC (investigation INV-17) were not produced with them. Whether they should enter is the Orchestrator's choice; they are labelled `observed_auditor` (E80, a figure reading, no receipt) or `inferred` (the sign contrast).
+- **New exploratory lead built from E03, E80 and E06:** `lead_staging/plan/lead_dream2_myc.json` (MYC level versus MYC occupancy at early-neuron genes across the knockout, SCAR12-class and corrected lines). It changes neither INV-17 nor the need; see `../../dream2_20261108/README.md`.
