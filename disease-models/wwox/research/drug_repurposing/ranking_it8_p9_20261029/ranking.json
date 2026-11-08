@@ -9,7 +9,7 @@
    "feasibility": "Development feasibility: a cell-level probe is feasible now, and an approved thyroid-hormone molecule and a clinical-stage analogue exist; systemic hormone action, the early treatment window and the lack of a brain-exposure datum for the analogue limit any later use.",
    "intervention": "Agonist probe for the receptors of thyroid hormone (tiratricol, with liothyronine as comparator)",
    "inv_id": "INV-12",
-   "next_test": "Seizure-free neuron plus precursor co-culture with wild-type and WWOX-deficient neurons: the agonist against vehicle and against hormone-depleted medium, with a receptor-isoform-selective control; read precursor and mature-cell counts. Correction in both genotypes means non-specific maturation; correction only in the deficient condition opens a pre-onset in vivo question; no change closes the route. [IT36] Before the agonist arms, measure the hormone content of the co-culture medium: the defined medium names B27 and N2 and declares no hormone; not declared is not absent, so a hormone-depleted arm cannot be read without a measured baseline.",
+   "next_test": "Seizure-free neuron plus precursor co-culture with wild-type and WWOX-deficient neurons: first measure T3 and T4 in the complete co-culture and spheroid media (B27 and N2 are present and the B27 formulation can carry T3), then the agonist against vehicle, with the native hormone as the primary receptor comparator and a transport-independent agonist as the second comparator; a depleted-medium arm only when a defined medium exists and its effect on the neurons is checked; a null agonist result in complete medium may be a ceiling effect, with a receptor-isoform-selective control; read precursor and mature-cell counts. Correction in both genotypes means non-specific maturation; correction only in the deficient condition opens a pre-onset in vivo question; no change closes the route. [IT36] Before the agonist arms, measure the hormone content of the co-culture medium: the defined medium names B27 and N2 and declares no hormone; not declared is not absent, so a hormone-depleted arm cannot be read without a measured baseline.",
    "novelty_perimeter": "Queried: a whole-word name search of this module and its registries on 2026-11-03 (no hit for either molecule) and the compound-to-WWOX path of IT21 P3b. A name search in this module, not a statement about the literature.",
    "origin_class": "external_transferred",
    "origin_detail": "Carried in from another condition by a stated mechanistic analogy (a hormone-uptake defect with myelin and interneuron rescue) and reached through the compound-to-WWOX path (IT21 P3b, proposal G03, partial-benefit path; a related receptor arm, G10, was left inconclusive).",
@@ -6059,11 +6059,11 @@
     "catalog.jsonl.gz": "75652786013b931d",
     "catalog_stats.json": "87ac308ce3ab9b3f",
     "measure_next.json": "bca46967510475c5",
-    "needs.json": "16949164c6892456",
+    "needs.json": "14d21e2345764275",
     "source_artefacts.tsv": "efd24d2cf8eb3fdb",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
-   "receipt_ledger_lines": 1444
+   "receipt_ledger_lines": 1457
   },
   "inventory": {
    "all_families_by_access_category": {
@@ -8699,7 +8699,7 @@
    "inputs": {
     "T1_cards": "3692e2efc56a356a",
     "T2_pertinence": "59d15d3c06233d6c",
-    "T3_receipts": "c8518ab35a017e82",
+    "T3_receipts": "416db5019ee207c2",
     "T4_needs": "4fa5821159bd91b8",
     "T5_pharmacology": "c8ec35a5f404ccca",
     "T6_identity": "186bd57e16d4aa8b"
@@ -8821,7 +8821,7 @@
     "42422765",
     "42587157"
    ],
-   "receipts_on_cited_pmids": 42,
+   "receipts_on_cited_pmids": 43,
    "research_objective": "broad_durable_recovery",
    "tracks": [
     "A"
@@ -12865,7 +12865,7 @@
    "inputs": {
     "T1_cards": "50d5f4fc39e6469f",
     "T2_pertinence": "40d3f822d9a26184",
-    "T3_receipts": "ae7a1d5ec7325938",
+    "T3_receipts": "a9ec23bae5d5e8b5",
     "T4_needs": "98de133ad523d5dd",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "30921a9013e88d22"
@@ -13126,7 +13126,7 @@
     "42735667",
     "9168839"
    ],
-   "receipts_on_cited_pmids": 116,
+   "receipts_on_cited_pmids": 117,
    "research_objective": "",
    "tracks": [
     "A"
@@ -13881,7 +13881,7 @@
    "inputs": {
     "T1_cards": "410cdeced221b8cf",
     "T2_pertinence": "c124efeb8d5edb82",
-    "T3_receipts": "7586a8a482770106",
+    "T3_receipts": "855a2f47751f07b3",
     "T4_needs": "c3cb663b4a8f81ca",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "1b6967b150a8ef31"
@@ -13947,7 +13947,7 @@
     "42397075",
     "42422765"
    ],
-   "receipts_on_cited_pmids": 66,
+   "receipts_on_cited_pmids": 67,
    "research_objective": "",
    "tracks": [
     "A"
@@ -15159,7 +15159,7 @@
    "inputs": {
     "T1_cards": "b7004c6ce80f3d6e",
     "T2_pertinence": "c124efeb8d5edb82",
-    "T3_receipts": "3468aaec27d0d166",
+    "T3_receipts": "ee633eda510e3d76",
     "T4_needs": "34001ad580d89a15",
     "T5_pharmacology": "39d3e6c4d9daea9a",
     "T6_identity": "b9cf666861d789c0"
@@ -15235,7 +15235,7 @@
     "42111266",
     "42422765"
    ],
-   "receipts_on_cited_pmids": 56,
+   "receipts_on_cited_pmids": 57,
    "research_objective": "useful_partial_benefit",
    "tracks": [
     "A"
@@ -17085,7 +17085,7 @@
    "inputs": {
     "T1_cards": "61c215efa58f47c5",
     "T2_pertinence": "403956ddfaf8ef49",
-    "T3_receipts": "850ff414fa4258e6",
+    "T3_receipts": "5b7c9accc2ff20bd",
     "T4_needs": "492f1e05d520cfd1",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "7de12fe35682551b"
@@ -17287,7 +17287,7 @@
     "40092791",
     "42397075"
    ],
-   "receipts_on_cited_pmids": 24,
+   "receipts_on_cited_pmids": 25,
    "research_objective": "",
    "tracks": [
     "A"

@@ -17,7 +17,7 @@
  "event_id": "FTR-20261108-36091130-81",
  "evidence_basis": [
   "one introductory passage found by keyword, not a reading of the article; rest not read",
-  "verbatim_locator | proposition: the label S539 is used for the inhibitory epsilon site | Introduction | \"Decreased phosphorylation of eIF2Bϵ at S539 increases the GDP/GTP exchange activity of eIF2B\""
+  "verbatim_locator | proposition: the label S539 is used for the inhibitory epsilon site | Introduction | \"Decreased phosphorylation of eIF2B\u03f5 at S539 increases the GDP/GTP exchange activity of eIF2B\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

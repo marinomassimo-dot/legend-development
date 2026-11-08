@@ -16,8 +16,8 @@
  "event_at": "2026-11-08T13:06:00Z",
  "event_id": "FTR-20261108-30551998-82",
  "evidence_basis": [
-  "verbatim_locator | proposition: the cited co-culture protocol uses B27 and N2 with N-acetyl-cysteine and forskolin | STAR Methods, Primary cultures | \"DMEM containing B27 and N2 supplements, 5μg/ml N-Acetyl-Cysteine, 5μM forskolin, penicillin-streptomycin\"",
-  "verbatim_locator | proposition: isolated oligodendrocyte cultures of this paper name T3 and T4 explicitly | STAR Methods | \"Sato medium (DMEM containing B-27 supplement, Glutamax, penicillin-streptomycin, 1% horse serum, sodium pyruvate, 0.34μg/ml T3 and 0.4 μg/ml T4)\"",
+  "verbatim_locator | proposition: the cited co-culture protocol uses B27 and N2 with N-acetyl-cysteine and forskolin | STAR Methods, Primary cultures | \"DMEM containing B27 and N2 supplements, 5\u03bcg/ml N-Acetyl-Cysteine, 5\u03bcM forskolin, penicillin-streptomycin\"",
+  "verbatim_locator | proposition: isolated oligodendrocyte cultures of this paper name T3 and T4 explicitly | STAR Methods | \"Sato medium (DMEM containing B-27 supplement, Glutamax, penicillin-streptomycin, 1% horse serum, sodium pyruvate, 0.34\u03bcg/ml T3 and 0.4 \u03bcg/ml T4)\"",
   "Methods and key resources table read for media; Introduction, Results and Discussion not read for this question; figures absent from the returned text"
  ],
  "evidence_depth": "partial_fulltext_read",

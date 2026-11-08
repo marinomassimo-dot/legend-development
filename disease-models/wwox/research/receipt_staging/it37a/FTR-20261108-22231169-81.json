@@ -18,8 +18,8 @@
  "evidence_basis": [
   "keyword-directed passages (S539, antibody, GSK, DYRK, Eif2be), not a line-by-line read; figures captions only; the Methods section is absent from the retrieved text so no antibody could be read",
   "verbatim_locator | proposition: the site is named by the kinase, not by a residue number | Results, first paragraph on eIF2B | \"termed Ser GSK after the kinase that can phosphorylate it\"",
-  "verbatim_locator | proposition: LPS partly lowers the phospho form | Results | \"LPS pre-treatment partially decreased the pSer GSK -eIF2Bε\"",
-  "verbatim_locator | proposition: a drop of GSK3 activity was excluded as the cause for LPS | Results | \"we found that LPS did not increase the inactive phosphorylated form of GSK3β\""
+  "verbatim_locator | proposition: LPS partly lowers the phospho form | Results | \"LPS pre-treatment partially decreased the pSer GSK -eIF2B\u03b5\"",
+  "verbatim_locator | proposition: a drop of GSK3 activity was excluded as the cause for LPS | Results | \"we found that LPS did not increase the inactive phosphorylated form of GSK3\u03b2\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

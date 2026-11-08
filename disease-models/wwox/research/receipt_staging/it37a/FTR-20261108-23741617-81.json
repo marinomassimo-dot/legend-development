@@ -17,8 +17,8 @@
  "event_id": "FTR-20261108-23741617-81",
  "evidence_basis": [
   "keyword-directed passages (S539, antibody, 535), not a line-by-line read; one image (Figure 3 figure supplement 1) viewed, all other figures captions only; supplement none",
-  "verbatim_locator | proposition: the phospho-S539 blot used an Abcam antibody | Methods, antibody list | \"phospho-S539 eIF2Bε (1/1000) (Abcam)\"",
-  "verbatim_locator | proposition: the text reports ISRIB did not reduce the S539 signal | Discussion | \"ISRIB did not reduce phosphorylation of S539 in the eIF2B ε-subunit\"",
+  "verbatim_locator | proposition: the phospho-S539 blot used an Abcam antibody | Methods, antibody list | \"phospho-S539 eIF2B\u03b5 (1/1000) (Abcam)\"",
+  "verbatim_locator | proposition: the text reports ISRIB did not reduce the S539 signal | Discussion | \"ISRIB did not reduce phosphorylation of S539 in the eIF2B \u03b5-subunit\"",
   "verbatim_locator | proposition: the authors say they queried only one site and gloss it as GSK-phosphorylated | Decision-letter reply inside the PMC record | \"This site is constitutively phosphorylated by GSK and negative regulates eIF2B activity.\"",
   "verbatim_locator | proposition: no other commercial phospho-specific eIF2B antibodies were available to the authors | Decision-letter reply inside the PMC record | \"To our knowledge no other phospho-specific antibodies are commercially available for eIF2B putative regulatory phosphorylation sites.\"",
   "image_observation | proposition: in Figure 3 figure supplement 1 the thapsigargin panel carries PERK, XBP1s, ATF4 and total eIF2alpha rows and no phospho-S539 row, while the caption names thapsigargin for the phospho-S539 blot | figure image viewed at 447 x 228 pixels | observation by the reader, not a quotation"

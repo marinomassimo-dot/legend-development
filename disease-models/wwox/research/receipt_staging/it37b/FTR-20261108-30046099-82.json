@@ -16,7 +16,7 @@
  "event_at": "2026-11-08T13:06:00Z",
  "event_id": "FTR-20261108-30046099-82",
  "evidence_basis": [
-  "verbatim_locator | proposition: T3 is added from day 60 for 10 days in the original spheroid protocol | Online Methods, Oligocortical Spheroid Differentiation | \"on day 60, 40 ng/ml 3,3’,5-triiodothronine (T3, Sigma #ST2877) was added to the every-other-day media changes for 10 days\"",
+  "verbatim_locator | proposition: T3 is added from day 60 for 10 days in the original spheroid protocol | Online Methods, Oligocortical Spheroid Differentiation | \"on day 60, 40 ng/ml 3,3\u2019,5-triiodothronine (T3, Sigma #ST2877) was added to the every-other-day media changes for 10 days\"",
   "verbatim_locator | proposition: after day 70 the spheroids stay in a spheroid medium carrying B-27 | Online Methods | \"After day 70, spheroids were matured and maintained in Neurobasal-A spheroid media\"",
   "verbatim_locator | proposition: the original medium uses a B-27 without vitamin A | Online Methods | \"Neurobasal-A medium (Invitrogen #10888022) with added B-27 serum substitute without vitamin A (Invitrogen #12587)\"",
   "Methods and the oligocortical-spheroid Results read for media timing; discussion and figures not read"
