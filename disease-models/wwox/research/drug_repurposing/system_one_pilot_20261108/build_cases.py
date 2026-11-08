@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Build the 16 pre-registered decision cases of the System One pilot (2026-11-08).
 
 Writes, next to this file:
