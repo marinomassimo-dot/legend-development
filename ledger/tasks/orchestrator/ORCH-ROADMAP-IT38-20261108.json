@@ -16,8 +16,9 @@
    "steps": [
     {
      "step": "Baseline: remote, consumers; separate search / generator / qualification / cards-investigations-ranking-dashboard",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "remote 0f6aff0c at start; four layers separated in generation_it38_20261108/README.md; IT36 record COMPLETE, IT37 science delivery integrated before"
     }
    ]
   },
@@ -26,8 +27,9 @@
    "steps": [
     {
      "step": "MYC relations: trace the path, link qualified relations to the generator's carried limits with status and use; verify source depth",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "relation_use_it38.tsv + load_relation_uses/relation_limits in run_generation_it21.py: three NB-1 relations (sign contrast inferred, nocodazole uninformative, E80 auditor reading exploratory) reach the 555 INV-17 proposals as carried limits with status labels and a relation_use column; source depth checked in evidence.tsv; nothing converted into bridges"
     }
    ]
   },
@@ -36,8 +38,9 @@
    "steps": [
     {
      "step": "Measure before/after on real cases (sign transfer, uninformative result, amount vs occupancy, unrelated control) and the execution of the path",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "stage S14 regenerated end to end (about 6 minutes) and compared with S13: 994 proposals, 220 eligible, 15 hand-overs identical; carried_limits changed in exactly the 555; 0 elsewhere; 10 GSK3A rows turn target_named_in_legend_material from corpus drift, reported apart; test_stage_it38.py and test_relation_use_it38.py"
     }
    ]
   },
@@ -46,8 +49,9 @@
    "steps": [
     {
      "step": "Seven card corrections (map rows 5, 6, 15, 19, 21, 22, 25): authoritative inputs, rebuild, input_sha256 coherence; superseded ISRIB wording in consultable documents",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "packets of K01, F02, E03, L01 edited and cards rebuilt by repurposing_bridge.py (check_cards.py: 30 packets, 0 problems); row 21 needed no edit (re-checked against the PubMed abstract); superseded ISRIB wording marked as history in README_isrib.md and the H4 statement qualified"
     }
    ]
   },
@@ -56,8 +60,9 @@
    "steps": [
     {
      "step": "Shareable-audit false positives: reproduce, distinguish common words from compound names, fix in the existing path with multilingual cases and a positive control",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "defect reproduced (single everyday words and a translation spelling of an INN refused on translated pages); rule: a single word is excused only if verifiably in the authorised translation of that language, absent from the English source and the page's neutral data, letters only; same function on data, page and rendered surfaces; 9 tests incl. real editions in five languages with visible-HTML insertions; a first version excused by absence from the English vocabulary alone and made the CLI mutation test return 0 for 1: caught by battery 57f0e784 (original FAIL kept, scratchpad bat_it38_original_FAIL.log) and replaced"
     }
    ]
   },
@@ -66,7 +71,7 @@
    "steps": [
     {
      "step": "Close: regenerate consumers in order, checks, battery, push, CI, site; attribute each result to its SHA",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator"
     }
    ]
