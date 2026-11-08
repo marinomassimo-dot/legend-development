@@ -1,6 +1,6 @@
 # DREAM-1: does consolidated experience change what a fresh session retrieves and does? (2026-11-08)
 
-Non-canonical research material, descriptive notes only. Not medical advice. Zero spend: the Dreams service was not used; delegates ran inside the existing session quota. No ledger, scientific current file, role, authorisation or gate was changed. Pre-registration: [`PREREG.md`](PREREG.md) (commit d21d9900, before any run).
+Non-canonical research material, descriptive notes only. Not medical advice. Zero spend: the Dreams service was not used; delegates ran inside the existing session quota. No ledger, scientific current file, role, authorisation or gate was changed. Pre-registration: [`PRE_REGISTRATION.md`](PRE_REGISTRATION.md) (commit d21d9900, before any run).
 
 ## Answer first
 
