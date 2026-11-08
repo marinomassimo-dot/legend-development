@@ -1,0 +1,10 @@
+[
+ {"case":"D1","cond":"k1","agent":"a238b8f18d8ab5386"},{"case":"D1","cond":"k2","agent":"af8386a786f2abd31"},
+ {"case":"D2","cond":"k2","agent":"ac10e348f0dc369cd"},{"case":"D2","cond":"k1","agent":"ac9ed0162b53640ae"},
+ {"case":"D3","cond":"k1","agent":"aa023f6902459557f"},{"case":"D3","cond":"k2","agent":"a3c1b1a878551040b"},
+ {"case":"D4","cond":"k2","agent":"aceeba02649a1f229"},{"case":"D4","cond":"k1","agent":"a10b5c7867ceb90fe"},
+ {"case":"D5","cond":"k1","agent":"a87791fe3ae7b3990"},{"case":"D5","cond":"k2","agent":"a2feaa6d9b133c731"},
+ {"case":"D6","cond":"k2","agent":"afcc7d382d287b182"},{"case":"D6","cond":"k1","agent":"aa7e249d816ce81a3"},
+ {"case":"D7","cond":"k1","agent":"ad06cbd09a77c6b7f"},{"case":"D7","cond":"k2","agent":"a3f6e0357790b3676"},
+ {"case":"D8","cond":"k2","agent":"ae241509a4e5ee7ec"},{"case":"D8","cond":"k1","agent":"a7e54422857b07121"}
+]
