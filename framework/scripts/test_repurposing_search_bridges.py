@@ -111,5 +111,17 @@ class Probes(unittest.TestCase):
                 rs.check_probe_row(bad, "t")
 
 
+    def test_the_isrib_row_reaches_the_isr_need_once_and_not_through_epsilon_alone(self):
+        needs = {n["id"]: n for n in rs.load_needs(rs.DEFAULT_NEEDS)["needs"]}
+        probes = rs.load_probes(rs.BRIDGE_WORD)
+        self.assertIn("ISRIB", [p["probe"] for p in probes])
+        rows = [r for r in rs.probes_for_need(needs["NEED-ISR-ATTENUATION"], probes) if r["probe"] == "ISRIB"]
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["matched_in_need"], ["EIF2B1", "EIF2B2", "EIF2B3", "EIF2B4", "EIF2B5"])
+        self.assertEqual(rows[0]["catalogue_id"], "NOT_IN_CATALOGUE")
+        for other in ("NEED-GSK3B-DEREPRESSION", "NEED-PDH-PYRUVATE-AXIS"):
+            self.assertFalse([r for r in rs.probes_for_need(needs[other], probes) if r["probe"] == "ISRIB"], other)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
