@@ -1,0 +1,17 @@
+case	cond	birth	peak	output	cache_read	turns	tool_calls	files_read	anchors_in_context
+D1	k1	17079	21535	911	36474	3	7	1	delegation_budget.md,session_model_census
+D1	k2	16785	21697	822	25150	2	5	1	delegation_budget.md,session_model_census
+D2	k2	16827	21281	1056	44576	3	5	0	fulltext_read_receipts.jsonl,fulltext_receipts.py
+D2	k1	16827	22213	1507	66544	4	9	1	fulltext_read_receipts.jsonl,fulltext_receipts.py
+D3	k1	16752	29899	2227	174059	8	15	0	wwox_data_census
+D3	k2	16752	21257	1436	83138	5	9	0	wwox_data_census
+D4	k2	16769	20884	1032	44660	3	7	1	get_drawings,pdfimages
+D4	k1	16769	23280	1585	89292	5	11	1	-
+D5	k1	16742	21361	1524	83934	5	9	0	no-hardlinks,process_wait.py
+D5	k2	16742	19215	703	25107	2	3	0	no-hardlinks,process_wait.py
+D6	k2	16752	19821	712	25117	2	3	0	${VAR:?}
+D6	k1	16752	22220	1383	66647	4	9	1	-
+D7	k1	16793	34437	1869	146312	6	13	1	bridges_it35.tsv,--bridges
+D7	k2	16793	34825	1967	137739	6	13	1	bridges_it35.tsv,--bridges
+D8	k2	16738	20060	887	25103	2	5	1	evidence_presence.py
+D8	k1	16738	25378	979	49764	3	5	0	evidence_presence.py

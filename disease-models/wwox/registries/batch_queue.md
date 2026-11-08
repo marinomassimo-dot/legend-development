@@ -82,9 +82,9 @@ time; it does not redistribute or license the article text.
 | Status | Records | Share |
 |---|---:|---:|
 | **Not found by identifier** — run the intake gate | 260 | 37% |
-| **Catalogued, never processed** — the reading debt | 123 | 17% |
+| **Catalogued, never processed** — the reading debt | 122 | 17% |
 | Known to the tracking log only | 78 | 11% |
-| Processed from the abstract | 10 | 1% |
+| Processed from the abstract | 11 | 2% |
 | Partial full text read | 69 | 10% |
 | Full text read | 166 | 24% |
 
@@ -266,7 +266,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [18953870](https://pubmed.ncbi.nlm.nih.gov/18953870/) | 2008 | — | Journal Article; Research Support, Non-U.S. Gov't | catalogued only | [Effects of WWOX gene transfection on cell growth of epithelial ovarian cancer]. |
 | [17140807](https://pubmed.ncbi.nlm.nih.gov/17140807/) | 2007 | — | Journal Article; Research Support, Non-U.S. Gov't; Research Support, U.S. Gov't, Non-P.H.S.; Review | catalogued only | Large common fragile site genes and cancer. |
 | [17200365](https://pubmed.ncbi.nlm.nih.gov/17200365/) | 2007 | — | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't; Research Support, U.S. Gov't, Non-P.H.S. | catalogued only | Inhibition of breast cancer cell growth in vitro and in vivo: effect of restoration of Wwox expression. |
-| [17909041](https://pubmed.ncbi.nlm.nih.gov/17909041/) | 2007 | — | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't | catalogued only | Association of Wwox with ErbB4 in breast cancer. |
 | [16242840](https://pubmed.ncbi.nlm.nih.gov/16242840/) | 2006 | — | Journal Article; Research Support, Non-U.S. Gov't; Review | catalogued only | Common chromosomal fragile sites and cancer: focus on FRA16D. |
 | [16378185](https://pubmed.ncbi.nlm.nih.gov/16378185/) | 2006 | — | Journal Article; Review | catalogued only | Common fragile genes and digestive tract cancers. |
 | [15674328](https://pubmed.ncbi.nlm.nih.gov/15674328/) | 2005 | — | Journal Article; Research Support, U.S. Gov't, P.H.S. | catalogued only | Fragile genes as biomarkers: epigenetic control of WWOX and FHIT in lung, breast and bladder cancer. |
@@ -566,7 +565,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [41776383](https://pubmed.ncbi.nlm.nih.gov/41776383/) | 2026 | — | Journal Article; Multicenter Study | screened | Pharmacogenomics of response to interferon-beta and glatiramer acetate in Multiple Sclerosis: A multi-centric study. |
 | [28151481](https://pubmed.ncbi.nlm.nih.gov/28151481/) | 2017 | ✅ | Journal Article; Retracted Publication | screened | 🛑 RETRACTED — Epigenetic regulation of HGF/Met receptor axis is critical for the outgrowth of bone metastasis from breast carcinoma. |
 
-*(showing all 461 outstanding records)*
+*(showing all 460 outstanding records)*
 
 ## Already processed from this seed
 
@@ -584,6 +583,7 @@ for an entirely unprocessed record.
 | [34998176](https://pubmed.ncbi.nlm.nih.gov/34998176/) | 2022 | — | abstract only | receipt FTR-20261106-34998176-26 | Interaction of Wwox with Brca1 and associated complex proteins prevents premature resection at double-strand breaks and aberrant homologous recombination. |
 | [30622118](https://pubmed.ncbi.nlm.nih.gov/30622118/) | 2019 | — | abstract only | receipt FTR-20261107-30622118-60 | ✎ corrected — WWOX Inhibits Metastasis of Triple-Negative Breast Cancer Cells via Modulation of miRNAs. |
 | [26390919](https://pubmed.ncbi.nlm.nih.gov/26390919/) | 2015 | — | abstract only | receipt FTR-20261106-26390919-26 | Tumor suppressor WWOX moderates the mitochondrial respiratory complex. |
+| [17909041](https://pubmed.ncbi.nlm.nih.gov/17909041/) | 2007 | — | abstract only | receipt FTR-20261108-17909041-99 | Association of Wwox with ErbB4 in breast cancer. |
 | [41124647](https://pubmed.ncbi.nlm.nih.gov/41124647/) | 2026 | ✅ | partial full text | receipt FTR-20261004-41124647-03 | Genetic and Functional Evidence Links Germline Biallelic Inactivating Variants in WWOX to Histological Mixed-Type Thyroid Cancer. |
 | [42523332](https://pubmed.ncbi.nlm.nih.gov/42523332/) | 2026 | ✅ | partial full text | PAPER 542 | Golgi CATCHR complexes function as organizing hubs for vesicle tethering and fusion. |
 | [41228229](https://pubmed.ncbi.nlm.nih.gov/41228229/) | 2025 | ✅ | partial full text | receipt FTR-20260921-41228229-01 | The Role of WWOX in Cancer Progression: Mechanisms and Therapeutic Potential. |
@@ -822,7 +822,7 @@ for an entirely unprocessed record.
 | [21476439](https://pubmed.ncbi.nlm.nih.gov/21476439/) | 2011 | — | full text | PAPER 244 | WWOX oxidoreductase--substrate and enzymatic characterization. |
 | [16288044](https://pubmed.ncbi.nlm.nih.gov/16288044/) | 2005 | — | full text | PAPER 569 | Activated tyrosine kinase Ack1 promotes prostate tumorigenesis: role of Ack1 in polyubiquitination of tumor suppressor Wwox. |
 
-*(showing all 245 processed records from the seed)*
+*(showing all 246 processed records from the seed)*
 
 ## How to work one
 

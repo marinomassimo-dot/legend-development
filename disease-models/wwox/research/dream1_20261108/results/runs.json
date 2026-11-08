@@ -1,0 +1,370 @@
+[
+ {
+  "case": "D1",
+  "cond": "k1",
+  "agent": "a238b8f18d8ab5386",
+  "tool_calls": 7,
+  "files_read": 1,
+  "anchors": {
+   "delegation_budget.md": {
+    "in_context": true,
+    "in_own_input_only": false
+   },
+   "session_model_census": {
+    "in_context": true,
+    "in_own_input_only": false
+   }
+  },
+  "final": "ACTION: Run `python3 framework/scripts/session_model_census.py --dir <subagents directory>` (or per delegate `<subagents>/agent-<id>.jsonl`) on the batch's delegate transcripts. It counts each API response once, using its largest output. Put that sum in the report as output tokens, labelled \"as logged by the census\", with the perimeter stated (which transcripts, delegates only or coordinator too). Add one line per delegate: role, model and effort read back, turns, output tokens, cache read. Do not use the notice figure. Treat the 7.5M as superseded: it is the first census, which counted repeated rows, so it is about twice the real total. Cite the reconciliation and don't repeat the figure as fact. Don't convert tokens to a share of any plan.\nSOURCES: framework/protocols/delegation_budget.md (section 0 \"Why it exists\", section 6 incl. \"Reconciliation of the 7.5 million figure\" and \"Which figure is output\"); framework/scripts/session_model_census.py.\nLIMITS: I did not run the census, since the transcripts are not available here, so I give no number. 49,600 is a notice total that includes context, not output. Also do not claim a halving factor of exactly 2. It was about 5.02M raw against 2.57M on 60 transcripts.\nDIRECT: yes",
+  "birth": 17079,
+  "peak": 21535,
+  "output": 911,
+  "cache_read": 36474,
+  "turns": 3
+ },
+ {
+  "case": "D1",
+  "cond": "k2",
+  "agent": "af8386a786f2abd31",
+  "tool_calls": 5,
+  "files_read": 1,
+  "anchors": {
+   "delegation_budget.md": {
+    "in_context": true,
+    "in_own_input_only": false
+   },
+   "session_model_census": {
+    "in_context": true,
+    "in_own_input_only": false
+   }
+  },
+  "final": "ACTION:\n1. Report neither figure. Take output tokens from each delegate's own transcript: `python3 framework/scripts/session_model_census.py <subagents>/agent-<id>.jsonl` (or `--dir <subagents directory>` for the whole batch). The census counts each API response once.\n2. Write one line per delegate in the task record: role, model and effort asked, model and effort read back, turns, output tokens, cache read, files completed. Sum those lines for the batch figure and state the perimeter, for example which transcripts and whether the coordinator is included.\n3. The 49,600 notice figure is `subagent_tokens`. That is a total that includes context, so it is not output. Don't quote it as output.\n4. The 7.5 million figure is the first census, which counted repeated rows. It is about twice too high; the corrected total on 60 transcripts was 2.57 million. Don't carry it forward. Mention it only as a superseded figure, if at all.\n5. If the batch's transcripts are unavailable, give no output figure. Say so.\n\nSOURCES: framework/protocols/delegation_budget.md (\u00a76 \"Which figure is output\" and the 7.5 million reconciliation; \u00a72 and \u00a77); CLAUDE.md (router).\n\nLIMITS: I didn't run the census, so I have no actual figure for this batch. The notice figure can't be converted into an output number. The corrected figures in the protocol (2.57 million, 7,309 for IT34) belong to other batches and aren't this batch's number. Tokens are reported as logged, not as a share of any plan.\n\nDIRECT: yes",
+  "birth": 16785,
+  "peak": 21697,
+  "output": 822,
+  "cache_read": 25150,
+  "turns": 2
+ },
+ {
+  "case": "D2",
+  "cond": "k2",
+  "agent": "ac10e348f0dc369cd",
+  "tool_calls": 5,
+  "files_read": 0,
+  "anchors": {
+   "fulltext_read_receipts.jsonl": {
+    "in_context": true,
+    "in_own_input_only": false
+   },
+   "fulltext_receipts.py": {
+    "in_context": true,
+    "in_own_input_only": false
+   }
+  },
+  "final": "ACTION: Do not record anything. First check the ledger, not the note: `grep -c \"FTR-20261107-<id>-70\" disease-models/wwox/registries/fulltext_receipts.jsonl` for each of the six IDs. Each returns 1, so all six are already recorded. `python3 framework/scripts/fulltext_receipts.py verify` returns OK (1408 chained receipts, tail anchored). Recording again would duplicate events and risk the hash chain. Leave the staged copies in receipt_staging/gsk3eif2b/ alone. The note itself already carries an \"Update 2026-11-08\" saying the six are in the ledger, nothing is staged any more, and none is to be recorded again. So \"Receipts to record\" is stale history and I would not edit it. If I wanted a pointer, I would add a short line on a task branch and land it on main. Then I report that the job was already done.\nSOURCES: disease-models/wwox/research/drug_repurposing/gsk3_eif2b_20261107/CONSUMER_NOTE.md; disease-models/wwox/registries/fulltext_read_receipts.jsonl (receipts also listed in output/receipts/INDEX.tsv); framework/scripts/fulltext_receipts.py (verify).\nLIMITS: I checked only that each ID appears once and that the chain verifies. I did not check that the ledger events match the staged JSON contents. I did not read the protocol docs. I changed nothing.\nDIRECT: yes, the note's update line told me, and I confirmed it in the ledger.",
+  "birth": 16827,
+  "peak": 21281,
+  "output": 1056,
+  "cache_read": 44576,
+  "turns": 3
+ },
+ {
+  "case": "D2",
+  "cond": "k1",
+  "agent": "ac9ed0162b53640ae",
+  "tool_calls": 9,
+  "files_read": 1,
+  "anchors": {
+   "fulltext_read_receipts.jsonl": {
+    "in_context": true,
+    "in_own_input_only": false
+   },
+   "fulltext_receipts.py": {
+    "in_context": true,
+    "in_own_input_only": false
+   }
+  },
+  "final": "ACTION:\n1. Do not record anything yet. Check the ledger first, because the note may be stale.\n2. I ran `python3 framework/scripts/fulltext_receipts.py --root . verify`. It returned OK with 1408 chained receipts and the tail anchored in the state manifest.\n3. I grepped the ledger `disease-models/wwox/registries/fulltext_read_receipts.jsonl`. All six event_ids (12133000, 15001529, 15126504, 26974342, 33220178, 29489452) are already there. The note's \"to record (staged)\" is stale, so there is nothing to record. Re-running `record` would duplicate them.\n4. Don't hand-edit the ledger (breaks the hash chain).\n5. For the note, I would not rewrite its history. I'd add a short dated line to `gsk3_eif2b_20261107/CONSUMER_NOTE.md` saying the six receipts are recorded, with the ledger as the authority.\n6. I'd also check that the staged copies in `receipt_staging/gsk3eif2b/` match the ledger entries.\n\nSOURCES: CLAUDE.md (\u00a73, ledger rule); `disease-models/wwox/research/drug_repurposing/gsk3_eif2b_20261107/CONSUMER_NOTE.md`; `disease-models/wwox/registries/fulltext_read_receipts.jsonl`; `framework/scripts/fulltext_receipts.py`.\n\nLIMITS: I didn't compare ledger content against the staged JSONs. I didn't confirm that the receipts are scientifically adequate. The `record` ledger-writing step is the one I'd skip, so I can't say how it behaves.\n\nDIRECT: yes. CLAUDE.md and the receipt tool document the append-only ledger. The stale-note finding came from running verify and grepping the ledger, not from a rule.",
+  "birth": 16827,
+  "peak": 22213,
+  "output": 1507,
+  "cache_read": 66544,
+  "turns": 4
+ },
+ {
+  "case": "D3",
+  "cond": "k1",
+  "agent": "aa023f6902459557f",
+  "tool_calls": 15,
+  "files_read": 0,
+  "anchors": {
+   "ebi_access_request_E-MTAB-14792_draft.md": {
+    "in_context": false,
+    "in_own_input_only": false
+   },
+   "wwox_data_census": {
+    "in_context": true,
+    "in_own_input_only": false
+   }
+  },
+  "final": "ACTION: Yes, but only by re-checking the same public route. Nothing else is legitimate.\n1. Re-query the public BioStudies API, read-only: `curl -s -o /dev/null -w \"%{http_code}\" https://www.ebi.ac.uk/biostudies/api/v1/studies/E-MTAB-14792`, and the same with `/info`. I also tried the FTP-style path for the accession, which returned 404 on 10-29. Record the date and result.\n2. The 403 body is \"Study not accessible\". The scout log says reopening needs a data-holder release or a later fetch. So look for a release date in the paper's data-availability text or in Europe PMC.\n3. If it is still 403, mark the package's single-cell arm as closed and dated. Make it a dated FAILED line, not an absence claim. Use the GSE158684 snRNA matrices (readable since 10-31) only as a separate, labelled substitute.\n4. Do not bypass, scrape mirrors, use credentials, or email anyone.\n\nSOURCES: disease-models/wwox/research/drug_repurposing/census_reconciliation_it7_20261029.md; disease-models/wwox/research/drug_repurposing/bench_followup_it13b_20261031/README.md; disease-models/wwox/research/capability_scout_log.md; framework/protocols/fulltext_read_receipt.md (FAILED_<cause> convention)\n\nLIMITS: A 403 is not evidence the data are absent. I did not run any network check (read-only, no network allowed). The repository holds no stated release date. The memory note says never send the operator's email to a service. I did not verify that note in the repository, and email is not part of the route above.\n\nDIRECT: yes. The 403 history and the \"nothing bypassed\" rule come from repository files. The re-check steps are my reasoning from them.",
+  "birth": 16752,
+  "peak": 29899,
+  "output": 2227,
+  "cache_read": 174059,
+  "turns": 8
+ },
+ {
+  "case": "D3",
+  "cond": "k2",
+  "agent": "a3c1b1a878551040b",
+  "tool_calls": 9,
+  "files_read": 0,
+  "anchors": {
+   "ebi_access_request_E-MTAB-14792_draft.md": {
+    "in_context": false,
+    "in_own_input_only": false
+   },
+   "wwox_data_census": {
+    "in_context": true,
+    "in_own_input_only": false
+   }
+  },
+  "final": "ACTION: Yes, a legitimate route exists, and it is a re-check, not a workaround.\n1. Re-test the ArrayExpress/BioStudies record for E-MTAB-14792 once today with a plain, unauthenticated fetch, and record the dated outcome. The last status was 'Study not accessible' on 2026-10-31, so it is probably still unreleased.\n2. Search Europe PMC for a linked paper or supplement and for a mirror (GEO/ENA, or a data-availability statement with a different accession).\n3. Look for a paper-hosted copy of the data.\n4. If the study is still closed, log it as an access gap and say it reopens on data-holder release or a later fetch.\n\nSOURCES: disease-models/wwox/research/capability_scout_log.md (lines ~1613, 1620); framework/protocols/fulltext_read_receipt.md (~l.266, the FAILED_<cause> vocabulary); framework/protocols/scientist_standing_brief.md (~l.82, no e-mail-looking strings and none sent); CC-20261004W10-Y-ORGANOID-GLIA-01.md (names the accession).\n\nLIMITS: Do not conclude the data are absent, or that the paper's claims are unsupported. A 403 or 'not accessible' only means the data could not be read. Do not circumvent the block (no proxies, no bot-check evasion, no credentials). Do not send the operator's e-mail to any service. Do not treat abstracts or a registry label as a read. Do not invent data.\n\nDIRECT: yes. The scout log and the protocols state the no-circumvention rule and the reopening condition. The numbered re-check steps are my own reasoning.",
+  "birth": 16752,
+  "peak": 21257,
+  "output": 1436,
+  "cache_read": 83138,
+  "turns": 5
+ },
+ {
+  "case": "D4",
+  "cond": "k2",
+  "agent": "aceeba02649a1f229",
+  "tool_calls": 7,
+  "files_read": 1,
+  "anchors": {
+   "get_drawings": {
+    "in_context": true,
+    "in_own_input_only": false
+   },
+   "pdfimages": {
+    "in_context": true,
+    "in_own_input_only": false
+   }
+  },
+  "final": "ACTION: Do not accept the note yet. (1) Confirm the PDF matches its fingerprint (SHA-256). (2) Test whether Fig. S2 is vector: `pdfimages -list <pdf>` shows no image on that page, and `pdftotext -layout` returns the axis labels. (3) If vector, measure geometry in PyMuPDF with `page.get_drawings()`. Bar tops are filled rects; error-bar caps are stroked paths. Calibrate against the axis ticks (tick pixel/pt position to tick value), then compute each bar height from rect top minus baseline. (4) Optionally run `python3 framework/scripts/paper_packet.py rank --pmid <PMID>`, which flags probably-vector figures. (5) Record the measurement with its calibration and locators. Do not adopt one reading as the value without the usual corroboration.\nSOURCES: framework/scripts/README.md (row at line 277, \"not separable at the resolution used\"; also line 44); framework/protocols/scientist_standing_brief.md (~line 116); framework/scripts/paper_packet.py.\nLIMITS: This applies only to vector panels. If the panel is a raster image, it stays raster and \"unresolved\" may stand, perhaps after trying a higher-resolution render. Do not conclude a value from one reading. Check axis calibration, log scales and broken axes. I did not run anything on the actual PDF.\nDIRECT: yes",
+  "birth": 16769,
+  "peak": 20884,
+  "output": 1032,
+  "cache_read": 44660,
+  "turns": 3
+ },
+ {
+  "case": "D4",
+  "cond": "k1",
+  "agent": "a10b5c7867ceb90fe",
+  "tool_calls": 11,
+  "files_read": 1,
+  "anchors": {
+   "get_drawings": {
+    "in_context": false,
+    "in_own_input_only": true
+   },
+   "pdfimages": {
+    "in_context": false,
+    "in_own_input_only": true
+   }
+  },
+  "final": "ACTION:\n1. Confirm the PDF is on disk and matches its fingerprint (SHA-256), then run `python3 framework/scripts/paper_packet.py rank --pmid <PMID>`. It reports measured effective ppi per surface and flags figures that are probably VECTOR.\n2. If S2 is vector, a 300-dpi render is an arbitrary choice and says nothing about the limit. Parse the PDF's drawing operators (e.g. PyMuPDF `page.get_drawings()`, or pdfplumber rects). Read the bar rectangle coordinates and the axis tick positions, fit a linear scale (log scale if the axis is log), and compute the bar values with their error.\n3. If S2 is a raster, look for a higher-resolution surface (a PMC figure JPEG or the publisher PDF). Otherwise render the page at a much higher dpi.\n4. Record the measured values as locators, with method and tick calibration. Run `paper_packet.py check`.\n\nSOURCES: framework/scripts/README.md (paper_packet.py rank row); framework/protocols/scientist_standing_brief.md (M2, lines 110-120); framework/scripts/figure_ppi_preflight.py. The memory index entry \"Vector figures before pixels\" was in my context, not a file I opened.\n\nLIMITS: I did not run anything and had no PDF or PMID, so I can't say whether S2 is vector. If it is a low-resolution raster, \"unresolved\" may be correct. Do not call a value unresolvable before measuring. Do not give a precision tighter than the tick calibration supports. Vector coordinates could still be rounded or clipped.\n\nDIRECT: yes for the rank and vector-versus-raster principle; no for the exact get_drawings recipe, which I reasoned without a repository source.",
+  "birth": 16769,
+  "peak": 23280,
+  "output": 1585,
+  "cache_read": 89292,
+  "turns": 5
+ },
+ {
+  "case": "D5",
+  "cond": "k1",
+  "agent": "a87791fe3ae7b3990",
+  "tool_calls": 9,
+  "files_read": 0,
+  "anchors": {
+   "no-hardlinks": {
+    "in_context": true,
+    "in_own_input_only": false
+   },
+   "process_wait.py": {
+    "in_context": true,
+    "in_own_input_only": false
+   }
+  },
+  "final": "ACTION:\n1. From the real repo: `git clone --no-hardlinks <repo> $SCRATCH/battery_clone`. A plain `cp -al` or a hard-linked clone lets tests rewrite the real checkout. If the repo has a large `files/` directory, hard-link only that: `cp -al <repo>/files $SCRATCH/battery_clone/files`.\n2. In the clone: `cd $SCRATCH/battery_clone`, then `python3 scripts/run_release_regressions.py --pid-file $SCRATCH/battery.pid > $SCRATCH/battery.log 2>&1 &`. Add `--list` first if you want the inventory.\n3. Wait on the PID or the pid-file, never by process name: `python3 framework/scripts/process_wait.py --pid-file $SCRATCH/battery.pid --timeout 3600`.\n4. Read the verdict at the end of the log. Do not use a pipe to `tail`, which hides the exit code and can reorder the stdout and stderr streams.\n5. Do not edit the tracked files in the clone while it runs.\n\nExpect a verdict such as `PASS WITH SKIPS (N targets, M skipped)`. The last such verdict I found had 157 targets and 12 skipped. An empty log means failure. An `UNATTRIBUTED WRITE` line means a write to a tracked file. A re-run on a quiescent tree settles it.\n\nSOURCES: framework/scripts/README.md \u00a78; scripts/run_release_regressions.py --help; framework/scripts/process_wait.py --help; disease-models/wwox/research/drug_repurposing/README.md line 581. My memory notes cover the clone method, the \"empty log is a failure\" rule and the pipe pitfalls. I did not read the memory files.\n\nLIMITS: The `--no-hardlinks` clone with a hard-linked `files/` comes from a README line and my memory notes, not from a protocol I read. I did not run anything. The timeout and the skip counts are guesses. A PASS covers the clone's commit only, so uncommitted work needs committing first.\n\nDIRECT: partly. The runner flags, the wait tool and the `--no-hardlinks` clone are in repository files. The exact command lines are my assembly.",
+  "birth": 16742,
+  "peak": 21361,
+  "output": 1524,
+  "cache_read": 83934,
+  "turns": 5
+ },
+ {
+  "case": "D5",
+  "cond": "k2",
+  "agent": "a2feaa6d9b133c731",
+  "tool_calls": 3,
+  "files_read": 0,
+  "anchors": {
+   "no-hardlinks": {
+    "in_context": true,
+    "in_own_input_only": false
+   },
+   "process_wait.py": {
+    "in_context": true,
+    "in_own_input_only": false
+   }
+  },
+  "final": "ACTION:\n1. D=<new empty dir outside the checkout>\n2. From the real checkout: `git clone -q --no-hardlinks . $D && cp -al files $D/files && git -C $D checkout -q <sha>`. Only files/ is hard-linked.\n3. In $D, start `python3 scripts/run_release_regressions.py` in the background and record the python PID.\n4. Wait with `python3 framework/scripts/process_wait.py --pid <PID>`. Never wait by process name.\n5. If a peer actor is writing a tracked file, add `--expect-write \"<glob>\"`. Otherwise re-run on a quiet tree.\nExpect about 30 minutes. A passing run prints no FAIL summary. An empty test log counts as a failure.\n\nSOURCES: CLAUDE.md; framework/scripts/README.md (line 276 gives the clone recipe and the 30 minutes; line 212 gives --expect-write); framework/scripts/process_wait.py. The wait step and the empty-log rule come from my memory notes, not from files I opened.\n\nLIMITS: I did not run anything. I did not open delegation_budget.md or the battery script. The 30-minute figure is approximate. An UNATTRIBUTED WRITE failure may come from a peer, not from a test. New .py files with a shebang must be executable and have a safe --help, or release tests fail. A `cp -al` of the whole checkout once let a test rewrite a tracked file in the real checkout.\n\nDIRECT: yes",
+  "birth": 16742,
+  "peak": 19215,
+  "output": 703,
+  "cache_read": 25107,
+  "turns": 2
+ },
+ {
+  "case": "D6",
+  "cond": "k2",
+  "agent": "afcc7d382d287b182",
+  "tool_calls": 3,
+  "files_read": 0,
+  "anchors": {
+   "Irreversible Local": {
+    "in_context": false,
+    "in_own_input_only": false
+   },
+   "dangerouslyDisableSandbox": {
+    "in_context": false,
+    "in_own_input_only": false
+   },
+   "${VAR:?}": {
+    "in_context": true,
+    "in_own_input_only": false
+   }
+  },
+  "final": "ACTION: Stop; do not retry or work around. Confirm the worktree is clean and integrated (git status inside it; branch landed on main). Then ask the operator once, in the conversation, to authorise that specific removal in writing. After that, retry the identical command: `git worktree remove .claude/worktrees/<name>`. Git itself refuses a dirty tree, which is the safety check. Then delete the task branch. If an rm is needed, write the target as \"${VAR:?}\" or a literal path.\nMust not: add the sandbox-bypass flag (refused separately, whatever the authorisation). Don't substitute a loop `rm -rf $DIR/*`, `--force`, prune, or other destructive routes to dodge the refusal. Don't remove it on your own initiative: BATCH_20261019_017 recorded exactly that as a violation.\nSOURCES: framework/scripts/README.md (line 279 row); framework/protocols/legend_operating_convention_v1.md (~337-341); framework/instruction/LEGEND_CORE.md (~558); ledger/tasks/integrator/BATCH_20261019_017.json; disease-models/wwox/research/batch_report_BATCH_20261019_017.md.\nLIMITS: Operator authorisation must be explicit and for that act; a general or earlier \"go ahead\" may not count. The convention file lists removing one's own clean worktree as allowed, but the README row says to ask when the check refuses. I did not read LEGEND_CORE \u00a721d in full.\nDIRECT: yes",
+  "birth": 16752,
+  "peak": 19821,
+  "output": 712,
+  "cache_read": 25117,
+  "turns": 2
+ },
+ {
+  "case": "D6",
+  "cond": "k1",
+  "agent": "aa7e249d816ce81a3",
+  "tool_calls": 9,
+  "files_read": 1,
+  "anchors": {
+   "Irreversible Local": {
+    "in_context": false,
+    "in_own_input_only": false
+   },
+   "dangerouslyDisableSandbox": {
+    "in_context": false,
+    "in_own_input_only": true
+   },
+   "${VAR:?}": {
+    "in_context": false,
+    "in_own_input_only": false
+   }
+  },
+  "final": "ACTION: Do not retry the refused command, do not widen it, and do not work around it. Per LEGEND_CORE \u00a721e item 3, removing one's own clean, landed worktree is ordinary, but here the permission check refused it. Operator authorisation is therefore needed.\n1. Leave the worktree in place. Make sure the branch is landed (`task_close.py`, or `--remove-worktree` if the permission allows it).\n2. Report in the final message that the worktree is landed and clean, and name its path.\n3. Ask for written operator authorisation to run `git worktree remove .claude/worktrees/<name>`, then `git worktree prune`.\n4. Meanwhile the worktree is a stale checkout, which is harmless if left alone.\nMUST NOT: add the sandbox-bypass flag (`dangerouslyDisableSandbox`) or use `--force`. Do not use `rm -rf` loops or globs on directories. Do not remove other sessions' worktrees or run prune sweeps. Do not treat the earlier refusal as permission to try another route.\nSOURCES: framework/instruction/LEGEND_CORE.md \u00a721e; framework/protocols/legend_operating_convention_v1.md S.6.3; disease-models/wwox/research/batch_report_BATCH_20261019_017.md (STOP_LOG).\nLIMITS: A permission refusal does not mean the worktree is dirty. I did not run the commands. The operator-authorisation rule is from memory plus the batch report, not a standalone rule file.\nDIRECT: partly. A repository file says own-clean-worktree removal is ordinary, and another records that removal without authorisation was an unauthorised act. No repository file describes the case where the permission check refuses; that part is my reasoning.",
+  "birth": 16752,
+  "peak": 22220,
+  "output": 1383,
+  "cache_read": 66647,
+  "turns": 4
+ },
+ {
+  "case": "D7",
+  "cond": "k1",
+  "agent": "ad06cbd09a77c6b7f",
+  "tool_calls": 13,
+  "files_read": 1,
+  "anchors": {
+   "bridges_it35.tsv": {
+    "in_context": true,
+    "in_own_input_only": false
+   },
+   "--bridges": {
+    "in_context": true,
+    "in_own_input_only": false
+   }
+  },
+  "final": "ACTION: The search layer's bridge join is the mechanism. Default `need` output is only the need's own targets, so HDAC5 is absent. Bridges widen it with pathway members. I ran:\n`python3 framework/scripts/repurposing_search.py need NEED-PDH-PYRUVATE-AXIS --bridges packages --limit 400`\n`--bridges packages` loads every package's output/bridges.tsv. One row there is HDAC5 -> SLC2A1 (nb3b_action_it32_20261107, C01). HDAC5 compounds (abexinostat, quisinostat, entinostat and others) then appear as pathway_member rows. Read the \"limits\" text on those rows. `--probes packages` adds probe links in the same way. A custom file path also works.\nSOURCES: CLAUDE.md; framework/scripts/README.md (search layer row); framework/scripts/repurposing_search.py (load_bridges, targets_with_bridges); disease-models/wwox/research/drug_repurposing/nb3b_action_it32_20261107/output/bridges.tsv; disease-models/wwox/research/drug_repurposing/it36_science_delivery_20261108/README.md.\nLIMITS: The rows are hypothesised bridges, not observed links in a WWOX system. The list is an EXPLORATION list, not favourable treatments. Direction is `direction_unresolved`, because bridges carry no sign. The source is HDAC5 knockdown in human primary muscle cells at abstract level; knockdown is not catalytic inhibition, and the sign for HDAC4 differs between systems. It was not shown in neural cells. A catalogue entry is a source-level record, not a distinct drug. The compounds are pan-HDAC or class inhibitors (ChEMBL shows protein_family 0/11), so they are not HDAC5-selective. Not medical advice.\nDIRECT: yes",
+  "birth": 16793,
+  "peak": 34437,
+  "output": 1869,
+  "cache_read": 146312,
+  "turns": 6
+ },
+ {
+  "case": "D7",
+  "cond": "k2",
+  "agent": "a3f6e0357790b3676",
+  "tool_calls": 13,
+  "files_read": 1,
+  "anchors": {
+   "bridges_it35.tsv": {
+    "in_context": true,
+    "in_own_input_only": false
+   },
+   "--bridges": {
+    "in_context": true,
+    "in_own_input_only": false
+   }
+  },
+  "final": "ACTION: Use the precedent-bridge option of the need search. It is off by default.\n1. Run `python3 framework/scripts/repurposing_search.py need NEED-PDH-PYRUVATE-AXIS --bridges packages [--limit N] [--json]`.\n2. `packages` reads every package's `output/bridges.tsv`. The relevant file is `disease-models/wwox/research/drug_repurposing/nb3b_action_it32_20261107/output/bridges.tsv`. It holds the HDAC5 to SLC2A1 row, status `observed_other_context`.\n3. HDAC5 is added as a pathway member of the need, because SLC2A1 is a need target. The IT35 README reports 209 rows without bridges and 293 with them. The 8 headline links are unchanged.\n4. If the relation is missing, add a row to a package `bridges.tsv`. The columns are checked by `check_bridge_row` in `repurposing_search.py`.\nSOURCES: disease-models/wwox/research/drug_repurposing/generation_it35_20261108/README.md (P6); .../nb3b_action_it32_20261107/output/bridges.tsv; .../it36_science_delivery_20261108/README.md; .../batch_sci_20261105/BRIEF_COMMON.md; framework/scripts/repurposing_search.py (`need --help`).\nLIMITS: Do not conclude any of these.\n- That the HDAC5 compounds are an observed link in a WWOX system. The output is labelled HYPOTHESISED BRIDGE.\n- That the compounds are consistent with or opposed to the need. No sign crosses a bridge (`direction_unresolved`).\n- That a compound inhibits HDAC5 catalytically. The source is a human primary muscle HDAC5 knockdown, at abstract level, which is not catalytic inhibition.\n- That the effect holds in neural cells. It is not shown in any, and the HDAC4 sign differs between systems.\nThis is reach, not prediction or ranking. It is a curator's addition, and it is not medical advice.\nDIRECT: yes",
+  "birth": 16793,
+  "peak": 34825,
+  "output": 1967,
+  "cache_read": 137739,
+  "turns": 6
+ },
+ {
+  "case": "D8",
+  "cond": "k2",
+  "agent": "ae241509a4e5ee7ec",
+  "tool_calls": 5,
+  "files_read": 1,
+  "anchors": {
+   "evidence_presence.py": {
+    "in_context": true,
+    "in_own_input_only": false
+   }
+  },
+  "final": "ACTION: Do not leave it deferred on \"absent\" alone. The artefact is often misplaced, not missing. Steps:\n1. In the clone, run `python3 framework/scripts/evidence_presence.py --disease wwox --pmid <PMID> --json`. It reports whether the bytes the manifest fingerprints are present and whether they match the declared SHA-256.\n2. Search for the declared digest in other places: `python3 framework/scripts/evidence_presence.py --search <DIR>` (repeatable). Candidate DIRs are the uploads cache and the Europe PMC supplementaryFiles. This is report-only.\n3. If an exact digest match turns up, run it again with `--restore`. That copies the file to its declared path and never overwrites.\n4. Re-run the presence check, then re-evaluate the candidate.\n5. If nothing matches anywhere, defer, and record that the search was done.\nSOURCES: framework/scripts/evidence_presence.py (its --help output). The memory note \"Absent artefact is often misplaced\" (absent-artefact-is-often-misplaced.md) names the uploads cache and Europe PMC supplementaryFiles. I only saw that note in my context, not as a file in this repository.\nLIMITS: A failed search does not show the artefact never existed. A DIGEST_MISMATCH is a different problem from absence. I did not run the search, so I don't know which DIRs hold a match. I did not read the protocol text beyond --help.\nDIRECT: yes. The script's --help describes the search and restore steps. The pointer to the uploads cache and Europe PMC comes from the memory note, not from a repository file I read.",
+  "birth": 16738,
+  "peak": 20060,
+  "output": 887,
+  "cache_read": 25103,
+  "turns": 2
+ },
+ {
+  "case": "D8",
+  "cond": "k1",
+  "agent": "a7e54422857b07121",
+  "tool_calls": 5,
+  "files_read": 0,
+  "anchors": {
+   "evidence_presence.py": {
+    "in_context": true,
+    "in_own_input_only": false
+   }
+  },
+  "final": "ACTION: Before leaving it deferred, check whether the file is merely misplaced, not truly absent.\n1. `python3 framework/scripts/evidence_presence.py --disease wwox --pmid <PMID>` to confirm ABSENT versus DIGEST_MISMATCH.\n2. Search by the declared SHA-256 in plausible places: `python3 framework/scripts/evidence_presence.py --pmid <PMID> --search <DIR>` (repeatable). Candidate places are the session scratchpad, uploads cache and other checkouts. I could not run this search, because the sandbox rules bar reading other directories.\n3. If an exact digest match turns up, rerun with `--restore`. It copies exact matches only and never overwrites.\n4. Re-verify the digest, then re-evaluate the candidate.\n5. If nothing is found, keep DEFERRED. Record that the host-wide SHA-256 search was done and recovered nothing. Consider a lawful free re-acquisition.\nSOURCES: framework/scripts/README.md (line 84); `framework/scripts/evidence_presence.py --help`; the CC-20260826 provenance note in disease-models/wwox/registries/claim_registry_current.md, which shows the pattern of a host-wide search before deferring.\nLIMITS: Absence in the checkout does not mean the bytes are lost. Only a search that finds nothing supports \"absent\". A re-acquired file with a different digest is not the same artefact. I did not run the search.\nDIRECT: yes",
+  "birth": 16738,
+  "peak": 25378,
+  "output": 979,
+  "cache_read": 49764,
+  "turns": 3
+ }
+]

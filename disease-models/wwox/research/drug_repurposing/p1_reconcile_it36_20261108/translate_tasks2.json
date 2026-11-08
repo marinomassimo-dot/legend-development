@@ -1,0 +1,82 @@
+{
+ "keymap": {
+  "0c7b9ad59f54": "d6d790703b31",
+  "1727cb310ba4": "23df7fae7383",
+  "60eda572b4ff": "deb5d068d8fa",
+  "6d8c855c5e20": "b8fd55715efe",
+  "80327935bd99": "b2bfdc0d65f4",
+  "9314d70ef04d": "0e7dc67fbe4e",
+  "940cff2aaec5": "c3fd40e5e8ef",
+  "9f20a9217bd4": "4063d0f09dbe",
+  "b4a38f2eeb65": "18bd2a7d815a",
+  "ba92d773997b": "b58d012f35c4",
+  "db88c5a339b0": "898eac047cf8",
+  "f1daa8db7ed6": "2650364c2741"
+ },
+ "tasks": [
+  {
+   "key": "0c7b9ad59f54",
+   "mode": "EDIT",
+   "old_english": "WWOX-system, transcript: a lower Pvalb transcript in the neuron-targeted deletion in bulk hippocampus (log2 -1.70, GSE158681 S contrast, as quoted in IT13b) and about half that size in the nuclear data (GSE158684: Pvalb 70 against 37 UMI in 3182 against 2920 nuclei; nuclei Pvalb share ratio 0.59). GSE158684 holds one pooled library per arm (library and animal index absent; the paper states n = 1 per arm), so nuclei are not biological replicates and the GSM records of the series are not independent experiments; PV-class nuclei number 12 to 19 per arm under the producer rules, the independent recompute disagrees on the specific counts, and PV composition and Pvalb per cell are undecidable under every rule tried. Kcnc1 is lower in inhibitory nuclei (one pool, not a replicate result). Immature-neuron markers (Sox11, Dcx, Igfbpl1) are higher in knockout neurons in direction; the larger composition change is oligodendrocyte-class nuclei, about 3- to 5-fold fewer. Wwox also falls in glia-called nuclei, unexplained. Protein and function, from the need file: PV-positive counts reduced by 44 percent in the whole hippocampus of a systemic constitutive knockout (PMID 30290271) and spontaneous inhibitory current amplitude more than halved in layer II/III pyramidal neurons of the neuron-specific knockout (PMID 34634460; pooled events, not animals). Raw reads of the eight snRNA experiments (SRX9206272 to SRX9206279) carried NCBI status hup on 2026-10-31. A public conference abstract (poster 014, Curing the Epilepsies 2026 programme, NINDS; the whole abstract was read, abstract level) describes a programme that combines genetic mouse models, in vivo electrophysiology, ex vivo slice recordings, cell type-specific manipulations and targeted pharmacological modulation of neuronal activity in WWOX deficiency, and names parvalbumin interneurons as the population of interest; it reports no quantitative result, no molecule, no rescue and no target. IT33 reading of the glial signal (NB-4 pilot, independently audited): the deletion is neuron-targeted by design (Synapsin-Cre) and a lower Wwox transcript also appears in glia-annotated nuclei of one pool (oligodendrocyte-called 193 to 1 UMI, astrocyte-called 156 to 9: very small counts on the deleted side, one pool per arm, so a count of cells or a statement of glial loss is not supported); the readings are several and not exclusive (lower transcript in the annotated class, class definition and detectability, ambient RNA, recombination beyond the expected cells, a change of state or composition), and none is isolated. Two abstract-level sources describe the Synapsin-Cre line: germline recombination through male carriers (PMID 16419044) and non-cell-autonomous astrogliosis after a neuronal deletion of another gene (PMID 11297510); neither shows or excludes recombination in glia or in parvalbumin cells of this deletion. IT33 verified delta (independent audit, 19 of 21 rows supported, two narrowed): an independent characterisation of the same Cre line with an X-linked Mecp2 reporter in adult male mice (PMID 35966957, full text without the figures) found reporter activation in 36 percent of NeuN-high brain nuclei, incomplete in cortex and minimal in cerebellum, and could not exclude activity in a subset of glia; the reporter, locus, age and cross differ from the Wwox deletion, so these percentages are not carried to the excision of Wwox or to parvalbumin cells; in the Wwox paper's P17 cortical field WWOX is retained in some NeuN-positive cells, and in one callosal field in some CC1-positive cells of the knockout; no tdTomato panel was found in the surfaces read. [IT36] no WWOX bridge to the perineuronal-net matrix found (PubMed 0 hits; Europe PMC titles only); the only lead (HYAL2/WWOX complex) concerns neuronal death, not nets.",
+   "new_english": "WWOX-system, transcript: a lower Pvalb transcript in the neuron-targeted deletion in bulk hippocampus (log2 -1.70, GSE158681 S contrast, as quoted in IT13b) and about half that size in the nuclear data (GSE158684: Pvalb 70 against 37 UMI in 3182 against 2920 nuclei; nuclei Pvalb share ratio 0.59). GSE158684 holds one pooled library per arm (library and animal index absent; the paper states n = 1 per arm), so nuclei are not biological replicates and the GSM records of the series are not independent experiments; PV-class nuclei number 12 to 19 per arm under the producer rules, the independent recompute disagrees on the specific counts, and PV composition and Pvalb per cell are undecidable under every rule tried. Kcnc1 is lower in inhibitory nuclei (one pool, not a replicate result). Immature-neuron markers (Sox11, Dcx, Igfbpl1) are higher in knockout neurons in direction; the larger composition change is oligodendrocyte-class nuclei, about 3- to 5-fold fewer. Wwox also falls in glia-called nuclei, unexplained. Protein and function, from the need file: PV-positive counts reduced by 44 percent in the whole hippocampus of a systemic constitutive knockout (PMID 30290271) and spontaneous inhibitory current amplitude more than halved in layer II/III pyramidal neurons of the neuron-specific knockout (PMID 34634460; unit of the KS test not declared; the size of the p values is compatible with events and not with one value per cell). Raw reads of the eight snRNA experiments (SRX9206272 to SRX9206279) carried NCBI status hup on 2026-10-31. A public conference abstract (poster 014, Curing the Epilepsies 2026 programme, NINDS; the whole abstract was read, abstract level) describes a programme that combines genetic mouse models, in vivo electrophysiology, ex vivo slice recordings, cell type-specific manipulations and targeted pharmacological modulation of neuronal activity in WWOX deficiency, and names parvalbumin interneurons as the population of interest; it reports no quantitative result, no molecule, no rescue and no target. IT33 reading of the glial signal (NB-4 pilot, independently audited): the deletion is neuron-targeted by design (Synapsin-Cre) and a lower Wwox transcript also appears in glia-annotated nuclei of one pool (oligodendrocyte-called 193 to 1 UMI, astrocyte-called 156 to 9: very small counts on the deleted side, one pool per arm, so a count of cells or a statement of glial loss is not supported); the readings are several and not exclusive (lower transcript in the annotated class, class definition and detectability, ambient RNA, recombination beyond the expected cells, a change of state or composition), and none is isolated. Two abstract-level sources describe the Synapsin-Cre line: germline recombination through male carriers (PMID 16419044) and non-cell-autonomous astrogliosis after a neuronal deletion of another gene (PMID 11297510); neither shows or excludes recombination in glia or in parvalbumin cells of this deletion. IT33 verified delta (independent audit, 19 of 21 rows supported, two narrowed): an independent characterisation of the same Cre line with an X-linked Mecp2 reporter in adult male mice (PMID 35966957, full text without the figures) found reporter activation in 36 percent of NeuN-high brain nuclei, incomplete in cortex and minimal in cerebellum, and could not exclude activity in a subset of glia; the reporter, locus, age and cross differ from the Wwox deletion, so these percentages are not carried to the excision of Wwox or to parvalbumin cells; in the Wwox paper's P17 cortical field WWOX is retained in some NeuN-positive cells, and in one callosal field in some CC1-positive cells of the knockout; no tdTomato panel was found in the surfaces read. [IT36] no WWOX bridge to the perineuronal-net matrix found (PubMed 0 hits; Europe PMC titles only); the only lead (HYAL2/WWOX complex) concerns neuronal death, not nets. [IT36] The mean of the declared inhibitory current amplitude comes from events of 9 to 14 cells and 5 to 7 animals; no animal-level statistic is given for current amplitudes; 10 of 18 reported KS p values lie below the one-value-per-cell floor and 8 do not, and no contradiction of the paper is asserted."
+  },
+  {
+   "key": "1727cb310ba4",
+   "mode": "ADD",
+   "english": "[IT36] Before the agonist arms, measure the hormone content of the co-culture medium: the defined medium names B27 and N2 and no hormone, so a hormone-depleted arm cannot be read without a measured baseline."
+  },
+  {
+   "key": "60eda572b4ff",
+   "mode": "ADD",
+   "english": "[IT36] The cue from the neuron to the precursor is not sourced; the neuregulin-ErbB version is counter-evidenced in vivo to postnatal day 11."
+  },
+  {
+   "key": "6d8c855c5e20",
+   "mode": "ADD",
+   "english": "[IT36] The early-window result is now read at partial full text; a hormone-deprived brain also shows low parvalbumin counts; the receptor-isoform sentence of the source is contested and is not carried."
+  },
+  {
+   "key": "80327935bd99",
+   "mode": "ADD",
+   "english": "[IT36] Whether the parvalbumin deficit and the maturation block of the myelin model share a cause is open."
+  },
+  {
+   "key": "9314d70ef04d",
+   "mode": "ADD",
+   "english": "[IT36] HDAC5 and HIF-1alpha: knockdown or inhibition lowers hypoxic HIF-1alpha and GLUT1/CA9 mRNA in human cancer cell lines through a cytosolic, catalytic route (PMID 26061431, full text); association with the inhibitory domain raises transactivation without stabilisation (PMID 19071119, abstract); HDAC5 silencing lowers HIF1A in an epilepsy-model neuron (PMID 34021541); opposite-sign reports exist (abstracts). Scaffold and catalytic readings are both reported and the sign is context-dependent; HIF-1alpha is a candidate mediator of undetermined sign in neural cells; no therapeutic link in WWOX is shown."
+  },
+  {
+   "key": "940cff2aaec5",
+   "mode": "EDIT",
+   "old_english": "WWOX-system, one preparation read in full and re-extracted (PMID 34634460, Table 1 and Figure 6): resting potential -79.25, -75.51, -73.62 mV and sag 1.18, 2.04, 2.57 mV grade with gene dose, input resistance saturates at one allele, rebound is larger only in the knockout, and bursts occur in 36 of 42 knockout, 4 of 23 heterozygote and 0 of 11 wild-type slices; the authors name control of the resting membrane potential as a factor underlying the hyperexcitability (the frequency-current slope does not differ once the curves are shifted to one step below rheobase; supplement not read) and cite discordant Ih-blocker precedents, including worsening of 4-AP events. Compound side: Ih-acting tools exist in the catalogue (a clinically used HCN blocker and several research blockers, identities resolved), found by the need search without naming any; their cellular potency in a cortical pyramidal neuron and their selectivity among HCN isoforms were not assessed here. No Ih-blocker experiment in a Wwox-deficient preparation is recorded in the entries read.",
+   "new_english": "WWOX-system, one preparation read in full and re-extracted (PMID 34634460, Table 1 and Figure 6): resting potential -79.25, -75.51, -73.62 mV and sag at a fixed -200 pA step 1.18, 2.04, 2.57 mV grade with gene dose, input resistance saturates at one allele, rebound is marked larger only in the knockout (the printed p cannot be reproduced from the Table 1 means and dispersion under stated assumptions), and bursts occur in 36 of 42 knockout, 4 of 23 heterozygote and 0 of 11 wild-type slices; the authors name control of the resting membrane potential as a factor underlying the hyperexcitability (the frequency-current slope does not differ once the curves are shifted to one step below rheobase; supplement not read) and cite discordant Ih-blocker precedents, including worsening of 4-AP events. Compound side: Ih-acting tools exist in the catalogue (a clinically used HCN blocker and several research blockers, identities resolved), found by the need search without naming any; their cellular potency in a cortical pyramidal neuron and their selectivity among HCN isoforms were not assessed here. No Ih-blocker experiment in a Wwox-deficient preparation is recorded in the entries read."
+  },
+  {
+   "key": "9f20a9217bd4",
+   "mode": "ADD",
+   "english": "[IT36] An energy-to-myelin link (glucose or lactate supply to the oligodendrocyte lineage) is a new thread with undetermined sign: WWOX-side lactate data point up, and when glucose falls in the neuron-targeted line is not measured (hypothesis H2 and open question OQ3 of myelin_generative_it36_20261108)."
+  },
+  {
+   "key": "b4a38f2eeb65",
+   "mode": "EDIT",
+   "old_english": "In knockout, heterozygote and wild-type slices: sag, resting potential, input resistance, rebound and burst incidence before and after two Ih blockers of different chemotypes (the second so that an off-target action is not read as Ih), with a current-clamp step that matches the resting potential, and a voltage-clamp read of the blocker-sensitive current in a subset of cells; animals, not cells, are the replicates. Branch D adds the potassium-current arm: the potassium currents sensitive to a Kv7 blocker and to a Kir-channel blocker in voltage clamp, and input resistance read with synaptic transmission blocked. [IT36] A first-generation Ih blocker at 50 uM is about 40 times its sodium-current IC50 in DRG neurons (age not stated); read a second chemotype and the blocker-sensitive current in voltage clamp; nickel/Z944 and Kv7 arms separate.",
+   "new_english": "In knockout, heterozygote and wild-type slices: sag, resting potential, input resistance, rebound and burst incidence before and after two Ih blockers of different chemotypes (the second so that an off-target action is not read as Ih), with a current-clamp step that matches the resting potential and the peak potential, with a smaller cell or immature membrane listed as its own candidate beside branch D, and a voltage-clamp read of the blocker-sensitive current in a subset of cells; animals, not cells, are the replicates. Branch D adds the potassium-current arm: the potassium currents sensitive to a Kv7 blocker and to a Kir-channel blocker in voltage clamp, and input resistance read with synaptic transmission blocked. [IT36] A first-generation Ih blocker at 50 uM is about 40 times its sodium-current IC50 in DRG neurons (age not stated); read a second chemotype and the blocker-sensitive current in voltage clamp; nickel/Z944 and Kv7 arms separate."
+  },
+  {
+   "key": "ba92d773997b",
+   "mode": "EDIT",
+   "old_english": "The module holds a graded sag, a depolarised resting potential and a larger rebound with no consumer, and the heterozygote shows the same intrinsic changes yet rarely bursts. Three readings give opposite signs for the same drug class, so no Ih-directed compound can be ranked until one measurement separates them.",
+   "new_english": "The module holds a graded sag, a depolarised resting potential and a larger rebound with no consumer, and the heterozygote shows several of the same intrinsic changes versus wild type (rebound excepted; heterozygote versus knockout untested) yet rarely bursts. Three readings give opposite signs for the same drug class, so no Ih-directed compound can be ranked until one measurement separates them."
+  },
+  {
+   "key": "db88c5a339b0",
+   "mode": "ADD",
+   "english": "[IT36] The ISR tool compound binds the eIF2B complex at the beta-delta interface and is a probe, not a candidate; the NB-2 discriminator by inhibitor class has partial precedents at abstract level and the two prime sources remain unread beyond abstracts."
+  },
+  {
+   "key": "f1daa8db7ed6",
+   "mode": "ADD",
+   "english": "[IT36] Add a HIF1A or EPAS1 knockdown arm for the SLC2A1 readout, and a cytosol-locked and a nuclear-locked HDAC5 beside the catalytic pair, with expression and partner binding shown."
+  }
+ ]
+}

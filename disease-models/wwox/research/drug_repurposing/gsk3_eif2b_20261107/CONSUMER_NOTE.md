@@ -15,3 +15,5 @@ Non-canonical, not medical advice. Package `gsk3_eif2b_20261107/`; verified by `
 Condition to reopen the unreachable decisive datum: the full text of PMID 12133000 (the eIF2B activity result) and of 15001529 by a route the repository may use; or a deposited Wwox-null phosphoproteome or translatome (public-dataset search not run here; LEGEND can do it in silico). Title-only or unread leads: 32512016 (GSK-3 with PKR), 38352041, 11756553, 11500362, 11311121, 36572560, 34058790, 22193544. Everything beyond the residue table and that dataset search needs a laboratory (`output/experiment.tsv`).
 
 Incident to know: a retry of a PMC page after a browser challenge was refused by the auto-mode classifier as bot-check circumvention; the producer stopped, nothing was worked around.
+
+**Update 2026-11-08:** the six receipts named in the table above are in the ledger (one event each, checked by event ID); nothing is staged any more, and none is to be recorded again. The line "Receipts to record" describes the state at 2026-11-07.
