@@ -25,7 +25,14 @@ the two in time -- not to the same commit. This tool makes both couplings struct
 is refused before the gate or git runs: `safe_push.py --help` used to take `--help` as the
 remote name and walk the whole push workflow (2026-09-24; nothing was published).
 
-Usage: safe_push.py <remote> [<branch>]      (default branch: main)
+  7. `--expect-sha <rev>` binds the caller's INTENTION to the commit: when given, the push is refused
+     before the gate runs unless HEAD is exactly that commit. Without it the tool publishes whatever HEAD
+     is, which on 2026-11-07 was another session's integration commit: the caller's
+     `git merge --ff-only <candidate>` had failed because main moved, the next command ran anyway, and
+     the push published the commit that was checked out (gate PASS on the SHA published, but not the SHA
+     meant). Callers that merge or check out a candidate first should pass it.
+
+Usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>]      (default branch: main)
 """
 from __future__ import annotations
 import os, subprocess, sys
@@ -51,9 +58,21 @@ def main(argv: list[str]) -> int:
     if any(arg in ("-h", "--help") for arg in argv[1:]):
         print(__doc__)
         return 0
-    if not 2 <= len(argv) <= 3:
-        return fail("usage: safe_push.py <remote> [<branch>]")
-    remote, branch = argv[1], (argv[2] if len(argv) == 3 else "main")
+    args, expect = list(argv[1:]), None
+    for i, a in enumerate(args):
+        if a == "--expect-sha":
+            if i + 1 >= len(args) or args[i + 1].startswith("-"):
+                return fail("--expect-sha needs a revision")
+            expect = args[i + 1]
+            del args[i:i + 2]
+            break
+        if a.startswith("--expect-sha="):
+            expect = a.split("=", 1)[1]
+            del args[i]
+            break
+    if not 1 <= len(args) <= 2:
+        return fail("usage: safe_push.py <remote> [<branch>] [--expect-sha <rev>]")
+    remote, branch = args[0], (args[1] if len(args) == 2 else "main")
 
     for bad in ("+", "--force", "-f", "--force-with-lease"):
         if bad in remote or bad in branch:
@@ -68,6 +87,13 @@ def main(argv: list[str]) -> int:
 
     before = run("git", "rev-parse", "HEAD").stdout.strip()
     print(f"HEAD before gate: {before}")
+    if expect is not None:
+        want = run("git", "rev-parse", "--verify", "--quiet", f"{expect}^{{commit}}").stdout.strip()
+        if not want:
+            return fail(f"--expect-sha {expect!r} is not a commit of this repository. Nothing was gated or pushed.")
+        if want != before:
+            return fail(f"HEAD is {before} but the caller expected {want} (a failed merge or checkout before this call?). "
+                        "Nothing was gated or pushed.")
 
     gate = run(sys.executable, str(GATE))
     verdict = [l for l in gate.stdout.splitlines() if l.startswith("VERDICT")]

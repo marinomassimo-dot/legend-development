@@ -555,6 +555,7 @@
  "UI_IT.iv_ev": "Evidencia disponible",
  "UI_IT.iv_f_all": "Todas",
  "UI_IT.iv_f_h": "Mostrar",
+ "UI_IT.iv_fs_h": "Tipo de fila",
  "UI_IT.iv_funnel": "El generador produjo {g} propuestas condicionales, {h} entregadas a la calificación; de estas, {a4} fueron calificadas en profundidad en IT21 ({k4} mantenida condicional, {r4} rechazadas con resultado informativo, {i4} no concluyentes). La vía compuesto-hacia-WWOX produjo {p} propuestas: {k3} mantenidas condicionales, {r3} rechazadas con resultado informativo, {i3} no concluyentes; {q3} fueron calificadas en profundidad. Hipótesis calificadas: {q}. Una propuesta condicional sigue siendo una pregunta de investigación mientras no haya una medición en un sistema con WWOX alterado.",
  "UI_IT.iv_funnel_h": "De dónde vienen las propuestas nuevas",
  "UI_IT.iv_fur_h": "Otras investigaciones abiertas, además de las diez de la lista",

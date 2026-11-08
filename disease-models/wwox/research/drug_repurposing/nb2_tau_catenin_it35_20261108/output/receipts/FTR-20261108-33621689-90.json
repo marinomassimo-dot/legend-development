@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-08T00:55:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-08T00:58:00Z",
+ "event_id": "FTR-20261108-33621689-90",
+ "evidence_basis": [
+  "abstract analysed; full text not reachable by an open route (Europe PMC lists no open full text for this PMID; publisher page returned an access error or is paywalled)",
+  "verbatim_locator | proposition: arsenite reduced beta-catenin in membrane fraction as GSK3 activity marker; BIO, SB216763 and lithium reversed the Tau 1 reduction; beta-catenin not reported under the inhibitors in the abstract | Abstract | \"GSK3 inhibitors, BIO, SB216763, and lithium, reversed the Tau 1 reduction by sodium arsenite\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb2_tau_catenin_it35_20261108/output/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record fetched 2026-11-08 through the PubMed tools; bytes not saved",
+ "study_id": {
+  "doi": "10.1016/j.etap.2021.103626",
+  "pmid": "33621689"
+ },
+ "workflow": "IT35 P7 NB-2 paired Tau and beta-catenin readouts by GSK3 inhibitor class. Staged for the integrator; the ledger was not written by the preparing actor."
+}

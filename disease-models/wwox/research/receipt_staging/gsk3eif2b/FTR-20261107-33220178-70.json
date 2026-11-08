@@ -17,11 +17,11 @@
  "event_id": "FTR-20261107-33220178-70",
  "evidence_basis": [
   "partial full text analysed through section-directed passages; figures not viewed",
-  "verbatim_locator | proposition: E20 ISRIB action depends on phosphorylated eIF2: it antagonises that inhibition and is weak without it. | Abstract | \"ISRIB’s efficacy as an ISR inhibitor in cells also depends on presence of eIF2(αP)\"",
-  "verbatim_locator | proposition: E21 Without phosphorylated eIF2 ISRIB barely accelerates exchange: an eIF2B defect that is not phospho-eIF2 inhibition is not shown to be corrected by ISRIB in this assay. | Results > ISRIB Accelerates eIF2B Guanine Nucleotide Exchange Activity in Presence of eIF2(αP) | \"ISRIB only minimally accelerated the exchange of nucleotide mediated by eIF2B in an assay devoid of eIF2(αP)\"",
-  "verbatim_locator | proposition: E22 With eIF2B depleted and no phosphorylated eIF2, ISRIB had little effect on the induced ISR. | Results > Attenuated ISRIB Action in Cells Lacking eIF2(αP) | \"ISRIB had only a very modest (albeit statistically significant) inhibitory effect on the magnitude of the ISR induced by eIF2B subunit depletion\"",
+  "verbatim_locator | proposition: E20 ISRIB action depends on phosphorylated eIF2: it antagonises that inhibition and is weak without it. | Abstract | \"ISRIB\u2019s efficacy as an ISR inhibitor in cells also depends on presence of eIF2(\u03b1P)\"",
+  "verbatim_locator | proposition: E21 Without phosphorylated eIF2 ISRIB barely accelerates exchange: an eIF2B defect that is not phospho-eIF2 inhibition is not shown to be corrected by ISRIB in this assay. | Results > ISRIB Accelerates eIF2B Guanine Nucleotide Exchange Activity in Presence of eIF2(\u03b1P) | \"ISRIB only minimally accelerated the exchange of nucleotide mediated by eIF2B in an assay devoid of eIF2(\u03b1P)\"",
+  "verbatim_locator | proposition: E22 With eIF2B depleted and no phosphorylated eIF2, ISRIB had little effect on the induced ISR. | Results > Attenuated ISRIB Action in Cells Lacking eIF2(\u03b1P) | \"ISRIB had only a very modest (albeit statistically significant) inhibitory effect on the magnitude of the ISR induced by eIF2B subunit depletion\"",
   "verbatim_locator | proposition: E23 The authors list regulation of eIF2B by subunit phosphorylation as a context where decamer stabilisation by ISRIB might matter: named as open, not tested. | Discussion > Limitations of Study | \"such as regulation of eIF2B by subunit phosphorylation\"",
-  "verbatim_locator | proposition: E24 Phosphorylated eIF2 and ISRIB are incompatible ligands of eIF2B: they act on one site of the machine through opposing conformations, a different mechanism from a kinase site on epsilon. | Discussion | \"eIF2(αP) and ISRIB are incompatible ligands of eIF2B\""
+  "verbatim_locator | proposition: E24 Phosphorylated eIF2 and ISRIB are incompatible ligands of eIF2B: they act on one site of the machine through opposing conformations, a different mechanism from a kinase site on epsilon. | Discussion | \"eIF2(\u03b1P) and ISRIB are incompatible ligands of eIF2B\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

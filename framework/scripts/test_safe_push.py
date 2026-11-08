@@ -141,6 +141,31 @@ class SafePushRefusals(unittest.TestCase):
             self.assertIn("git push exited", r.stderr)
             self.assertEqual(self._remote_main(bare), published)
 
+    def test_a_moved_main_cannot_publish_a_commit_the_caller_did_not_mean(self) -> None:
+        """IT35 P2: the 2026-11-07 incident. Main holds another session's unpublished integration commit; the caller wanted a candidate that
+        `git merge --ff-only` could not bring in. Without the expectation the tool publishes HEAD (gate PASS on what it pushes); with it, the
+        push is refused before the gate and the remote is unchanged."""
+        with TemporaryDirectory() as td:
+            root, bare = self._with_bare_remote(td)
+            base = subprocess.run(["git", "-C", str(root), "rev-parse", "HEAD"], check=True, capture_output=True, text=True).stdout.strip()
+            subprocess.run(["git", "-C", str(root), "checkout", "-q", "-b", "candidate"], check=True)
+            candidate = self._commit(root, "candidate.txt")
+            subprocess.run(["git", "-C", str(root), "checkout", "-q", "main"], check=True)
+            other = self._commit(root, "other_session.txt")                      # the unpublished integration commit now at HEAD
+            ff = subprocess.run(["git", "-C", str(root), "merge", "--ff-only", candidate], capture_output=True, text=True)
+            self.assertNotEqual(ff.returncode, 0)                                # the integration the caller expected fails
+            r = self._run(root, "origin", "main", "--expect-sha", candidate)
+            self.assertEqual(r.returncode, 1)
+            self.assertIn("caller expected", r.stderr)
+            self.assertNotIn("PUBLISHED", r.stdout)
+            self.assertEqual(self._remote_main(bare), base)
+            ok = self._run(root, "origin", "main", f"--expect-sha={other[:12]}")  # the intended commit, abbreviated: accepted
+            self.assertEqual(ok.returncode, 0, ok.stderr)
+            self.assertEqual(self._remote_main(bare), other)
+            bad = self._run(root, "origin", "main", "--expect-sha", "no-such-rev")
+            self.assertEqual(bad.returncode, 1)
+            self.assertIn("not a commit", bad.stderr)
+
     def test_a_passing_gate_reaches_the_push_step(self) -> None:
         """Control: the PASS path is not refused early — it fails at the absent remote instead."""
         with TemporaryDirectory() as td:

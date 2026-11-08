@@ -662,22 +662,27 @@ renderAll();
 fromHash();
 document.body.setAttribute('data-cur-ready', '1');
 })();
-(function () {   // IT24 P15: filter of the main investigations by origin; the buttons exist only when this runs, so the list is complete without JavaScript
-  var bar = document.querySelector('#investigations .inv-filter'); if (!bar) return;
-  bar.hidden = false;
-  var rows = document.querySelectorAll('#investigations .inv-list > .inv-row');
-  bar.addEventListener('click', function (e) {
-    var b = e.target.closest('button[data-f]'); if (!b) return;
-    var f = b.getAttribute('data-f');
-    bar.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
-    rows.forEach(function (r) { r.hidden = !!f && r.getAttribute('data-origin') !== f; });
+(function () {   // IT24 P15, widened in IT35: filters of the WHOLE investigations queue by origin and by kind of row; the buttons exist only when this runs, so every list is complete without JavaScript
+  var bars = document.querySelectorAll('#investigations .inv-filter'); if (!bars.length) return;
+  var rows = document.querySelectorAll('#investigations .inv-row');
+  var state = { f: '', fs: '' };
+  function apply() { rows.forEach(function (r) { r.hidden = (!!state.f && r.getAttribute('data-origin') !== state.f) || (!!state.fs && r.getAttribute('data-status') !== state.fs); }); }
+  bars.forEach(function (bar) {
+    bar.hidden = false;
+    bar.addEventListener('click', function (e) {
+      var b = e.target.closest('button'); if (!b) return;
+      var key = b.hasAttribute('data-fs') ? 'fs' : 'f';
+      state[key] = b.getAttribute(key === 'fs' ? 'data-fs' : 'data-f');
+      bar.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      apply();
+    });
   });
 })();
-(function () {   // IT29: a link to one main investigation (#inv-N) shows it even when the origin filter hides it, opens its detail and moves focus to it
+(function () {   // IT29, widened in IT35: a link to one investigation (#inv-N by position, #INV-nn by stable identifier) shows it even when a filter hides it, opens its detail and moves focus to it
   function open() {
-    var m = (location.hash || '').match(/^#(inv-\d+)$/); if (!m) return;
-    var r = document.getElementById(m[1]); if (!r || !r.classList.contains('inv-row')) return;
-    if (r.hidden) { var all = document.querySelector('#investigations .inv-filter button[data-f=""]'); if (all) all.click(); r.hidden = false; }
+    var m = (location.hash || '').match(/^#((?:inv-\d+)|(?:INV-\d+))$/); if (!m) return;
+    var el = document.getElementById(m[1]); var r = el && el.closest ? el.closest('.inv-row') : null; if (!r) return;
+    if (r.hidden) { document.querySelectorAll('#investigations .inv-filter').forEach(function (bar) { var all = bar.querySelector('button[data-f=""], button[data-fs=""]'); if (all) all.click(); }); r.hidden = false; }
     var d = r.querySelector('details.inv-more'); if (d) d.open = true;
     r.setAttribute('tabindex', '-1'); r.scrollIntoView(); r.focus({ preventScroll: true });
   }

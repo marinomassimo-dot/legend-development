@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-08T00:55:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-08T00:58:00Z",
+ "event_id": "FTR-20261108-39798400-90",
+ "evidence_basis": [
+  "abstract analysed; full text not reachable by an open route (Europe PMC lists no open full text for this PMID; publisher page returned an access error or is paywalled)",
+  "verbatim_locator | proposition: one pyrrolopyridine compound decreased p-tau-Ser396 and up-regulated beta-catenin in SH-SY5Y; one inhibitor class only | Abstract | \"41 up-regulated β-catenin and neurogenesis-related markers (GAP43 and MAP-2), thereby promoting neurite outgrowth of neurons in SH-SY5Y cells\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb2_tau_catenin_it35_20261108/output/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record fetched 2026-11-08 through the PubMed tools; bytes not saved",
+ "study_id": {
+  "doi": "10.1016/j.ejmech.2025.117236",
+  "pmid": "39798400"
+ },
+ "workflow": "IT35 P7 NB-2 paired Tau and beta-catenin readouts by GSK3 inhibitor class. Staged for the integrator; the ledger was not written by the preparing actor."
+}

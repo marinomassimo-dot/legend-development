@@ -608,11 +608,38 @@ def links_for_target(idx: Index, tgt: dict) -> tuple[list, list, list]:
     return idx.chembl_human.get(sym, []), idx.dgidb.get(h, []), idx.chembl_nonhuman.get(sym, [])
 
 
-def associations_for_need(need: dict, idx: Index, roles: dict, module_symbols: set[str] | None = None) -> dict:
+DEFAULT_BRIDGES = DR / "needs/bridges_it35.tsv"
+
+
+def load_bridges(path: Path | None) -> list[dict]:
+    """IT35 P6: curated precedent relations between two genes (one is a target of a need), each with its status, context and evidence pointer.
+    A relation here is a HYPOTHESISED BRIDGE for the need that uses it: it is never an observed link in a WWOX system and carries no sign."""
+    if path is None or not Path(path).exists():
+        return []
+    with open(path, encoding="utf-8", newline="") as fh:
+        return [r for r in csv.DictReader(fh, delimiter="\t")]
+
+
+def targets_with_bridges(need: dict, bridges: list[dict] | None) -> list[dict]:
+    """The need's own targets plus, for each bridge that touches one of them, the OTHER gene as a `pathway_member` carrying the bridge.
+    Pathway members are counted apart from the headline links (LINK_KINDS), so a bridge widens the list a researcher sees without
+    changing what is counted as a link of the need."""
+    targets = list(need["targets"])
+    have = {t["symbol"].upper() for t in targets}
+    for b in bridges or []:
+        for here, other, other_hgnc in ((b["gene_a"], b["gene_b"], b["hgnc_b"]), (b["gene_b"], b["gene_a"], b["hgnc_a"])):
+            if here.upper() in have and other.upper() not in have:
+                targets.append({"symbol": other, "hgnc_id": other_hgnc, "target_kind": "pathway_member", "bridge": dict(b, via=here),
+                                "role": f"hypothesised bridge: {b['gene_a']} {b['relation']} {b['gene_b']} ({b['status']})"})
+                have.add(other.upper())
+    return targets
+
+
+def associations_for_need(need: dict, idx: Index, roles: dict, module_symbols: set[str] | None = None, bridges: list[dict] | None = None) -> dict:
     nd = need_direction(need)
     module_symbols = module_symbols or getattr(idx, "module_symbols", None)
     assoc, guards, nonhuman = [], [], 0
-    for tgt in need["targets"]:
+    for tgt in targets_with_bridges(need, bridges):
         ch, dg, nh = links_for_target(idx, tgt)
         nonhuman += len(nh)
         rows = [("ChEMBL curated mechanism", e, t) for e, t in ch] + [("DGIdb interaction", e, t) for e, t in dg]
@@ -639,6 +666,8 @@ def associations_for_need(need: dict, idx: Index, roles: dict, module_symbols: s
             scope, subsel, src_sel = evidence_scope(src, t)
             kind = relation_kind(src, t)
             elsewhere = src.startswith("DGIdb") and kind not in CURATED_KINDS and ad == "unresolved" and curated_elsewhere(e, t, {tgt["symbol"].upper()})
+            if tgt.get("bridge") and label in ("consistent", "opposed"):
+                label, why = "direction_unresolved", "reached through a hypothesised bridge: no sign is carried across it"
             if label in ("consistent", "opposed") and subsel == "not_established" and scope != "unspecified":
                 why += f" [evidence scope: {scope}; subunit selectivity not established]"
             limits = []
@@ -666,6 +695,10 @@ def associations_for_need(need: dict, idx: Index, roles: dict, module_symbols: s
                 limits.append("the gene is an effector constraint of the need (the record argues against manipulating it): listed beside, never a link")
             if tgt["target_kind"] == "pathway_member":
                 limits.append("pathway member: counted apart from intervention-target links, never in the headline")
+            if tgt.get("bridge"):
+                bb = tgt["bridge"]
+                limits.append(f"HYPOTHESISED BRIDGE (not an observed link in a WWOX system): {bb['gene_a']} {bb['relation']} {bb['gene_b']}; {bb['status']}; "
+                              f"{bb['context']}; evidence {bb['evidence_ref']}; {bb['note']}")
             if waiver:
                 limits.append(waiver[0])
             if prov:
@@ -689,6 +722,7 @@ def associations_for_need(need: dict, idx: Index, roles: dict, module_symbols: s
                 "assertion_key": assertion_key(e, src, t, prov),
                 "record_components": n_comp, "components_in_module_targets": n_in, "abstention_class": abstention_class(label, why, excl),
                 "need": need["id"], "target": tgt["symbol"], "hgnc_id": tgt.get("hgnc_id"), "target_kind": tgt["target_kind"],
+                "bridge": ({k: tgt["bridge"][k] for k in ("gene_a", "relation", "gene_b", "status", "evidence_ref", "via")} if tgt.get("bridge") else None),
                 "catalogue_id": e["id"], "compound": e["name"], "family": idx.family[e["id"]],
                 "link_source": src, "action_raw": raw, "action_on_target": ad,
                 "need_direction": nd, "consistency": label, "consistency_why": why,
@@ -807,6 +841,7 @@ def main(argv=None) -> int:
     n.add_argument("need_id")
     n.add_argument("--limit", type=int, default=30)
     n.add_argument("--json", action="store_true")
+    n.add_argument("--bridges", type=Path, default=None, help="curated precedent relations (needs/bridges_it35.tsv) widening the list with pathway members; off by default")
     c = sub.add_parser("compound")
     c.add_argument("query")
     c.add_argument("--json", action="store_true")
@@ -831,7 +866,7 @@ def main(argv=None) -> int:
         if nd is None:
             print(f"unknown need {a.need_id}", file=sys.stderr)
             return 2
-        r = associations_for_need(nd, idx, roles)
+        r = associations_for_need(nd, idx, roles, bridges=load_bridges(a.bridges))
         if a.json:
             print(json.dumps(r, indent=1, ensure_ascii=False))
             return 0
