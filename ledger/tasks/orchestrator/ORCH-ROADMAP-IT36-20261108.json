@@ -1,0 +1,115 @@
+{
+ "_schema": "orchestrator-task-v1",
+ "TASK_ID": "ORCH-ROADMAP-IT36-20261108",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "P0",
+ "OBJECTIVE": "IT36: from qualified knowledge to effective generation: integrate the delivered science, link existing structured relations to the generator, fix two provenance fragilities, measure improvement. Horizon 8-10 hours, duration is not a goal.",
+ "START_UTC": "2026-11-08T12:00:00Z",
+ "RESUME": {
+  "note": "start: remote main 0a3a34f9 = local. Done before: IT35 (bridges, --expect-sha, INV-18 branch D). First open step P0/P2. Decisive files: needs/bridges_it35.tsv, generation_it35_20261108/README.md, ranking_it8.py as_of, receipt_staging. Science session owns ISRIB identity (worktree isrib-identity) and it36sci; do not touch."
+ },
+ "AUTHORISED_QUEUE_20261108": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Baseline and compact resume: remote, worktrees (isrib-identity and it36sci belong to the science session), CI, queue",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Reconcile the science batch with consumers: map package -> verified conclusion -> consumer -> state; integrate only real deltas",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P2A": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "Receipt timestamps: reconstruct the three back-dated staged events from logs; correct by the ledger correction procedure",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P2B": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "Ranking as_of_date from inputs, not folder names; regression for an unconsumed folder",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "Smallest general link from existing qualified relations to generation; trace contrasting cases",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "ISR probe: consume the primary-source probe entry through the normal need->intervention flow; measure the stage reached",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "Measure generation: A previous / B with link / C simple baseline; second phenotype (neuron-dependent myelination); declared retrospective",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "Carry outcomes to investigations and dashboard (five languages, shareable limits)",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "Durable capabilities, one home per method, remove duplicate tables",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P8": {
+   "order": 10,
+   "steps": [
+    {
+     "step": "Battery on frozen candidate, gate, CI, site, cleanup, final report",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}
