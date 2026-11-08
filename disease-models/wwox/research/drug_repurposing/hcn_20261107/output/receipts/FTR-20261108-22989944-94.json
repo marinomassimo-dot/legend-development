@@ -23,8 +23,8 @@
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [
-  "disease-models/wwox/research/drug_repurposing/hcn_20261108/output/README.md",
-  "disease-models/wwox/research/drug_repurposing/hcn_20261108/output/evidence.tsv"
+  "disease-models/wwox/research/drug_repurposing/hcn_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/hcn_20261107/output/evidence.tsv"
  ],
  "prior_receipt": null,
  "record_kind": "contemporaneous_receipt",
@@ -36,5 +36,5 @@
   "doi": "10.4161/chan.22209",
   "pmid": "22989944"
  },
- "workflow": "HCN/Ih delta (hcn_20261108), producer hc-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+ "workflow": "HCN/Ih delta (hcn_20261107), producer hc-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
 }

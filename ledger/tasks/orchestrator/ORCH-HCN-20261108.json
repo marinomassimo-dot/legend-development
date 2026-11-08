@@ -13,9 +13,10 @@
   "delegate_active": "none",
   "updated": "2026-11-08T09:00:00Z"
  },
- "RESUME": "Folder drug_repurposing/hcn_20261108/ (BRIEF.md, output/). Order: producer, census, verifier, correction.",
+ "RESUME": "Folder drug_repurposing/hcn_20261107/ (BRIEF.md, output/). Order: producer, census, verifier, correction.",
  "DECISIONS_TAKEN": [
-  "Queued by the operator beside the running work; one delegate at a time; settings as before. Placed after the PV package it consumes."
+  "Queued by the operator beside the running work; one delegate at a time; settings as before. Placed after the PV package it consumes.",
+  "Folder renamed from the _20261108 suffix to _20261107 before landing: ranking_it8.py derives its as-of date from the newest _YYYYMMDD directory name in drug_repurposing/, so a package directory dated 2026-11-08 changed the regenerated selections.tsv (11-07 to 11-08) and test_ranking_it8 failed in the battery on this branch; regeneration of the ranking derivatives is the integrating session's job and is not done here. The folder date is the date of the request (the user's day), not the date of the last write; the receipts keep their real event dates."
  ],
  "DELEGATIONS": [
   "C producer hc-p: asked sonnet/medium, read back claude-sonnet-5-5 x50, medium x50; birth 17,484; 50 turns; ~10 min; output 55,260; cache written 178,251; cache read 5,384,098; peak 186,736; completed README (849 words), evidence (41), physiology (9), hypotheses (3), probes (7), experiment (6), queries (12), 5 staged receipts (validated with DOI check; partial_fulltext_read x4, one more); 4 new sources of 5; Europe PMC XML 500 for two records, the open PMC pages read once each (no challenge)",

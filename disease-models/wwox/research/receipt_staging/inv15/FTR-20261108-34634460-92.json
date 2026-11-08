@@ -25,8 +25,8 @@
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [
-  "disease-models/wwox/research/drug_repurposing/pv_inv15_20261108/output/README.md",
-  "disease-models/wwox/research/drug_repurposing/pv_inv15_20261108/output/evidence.tsv"
+  "disease-models/wwox/research/drug_repurposing/pv_inv15_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/pv_inv15_20261107/output/evidence.tsv"
  ],
  "prior_receipt": "FTR-20261029-34634460-05",
  "record_kind": "contemporaneous_receipt",
@@ -38,5 +38,5 @@
   "doi": "10.1016/j.nbd.2021.105529",
   "pmid": "34634460"
  },
- "workflow": "INV-15 delta (pv_inv15_20261108), producer pv-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+ "workflow": "INV-15 delta (pv_inv15_20261107), producer pv-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
 }

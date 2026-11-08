@@ -25,8 +25,8 @@
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [
-  "disease-models/wwox/research/drug_repurposing/hdac5_inv16_20261108/output/README.md",
-  "disease-models/wwox/research/drug_repurposing/hdac5_inv16_20261108/output/evidence.tsv"
+  "disease-models/wwox/research/drug_repurposing/hdac5_inv16_20261107/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/hdac5_inv16_20261107/output/evidence.tsv"
  ],
  "prior_receipt": "FTR-20261107-17956988-33",
  "record_kind": "contemporaneous_receipt",
