@@ -7,7 +7,7 @@
  "OBJECTIVE": "IT36: from qualified knowledge to effective generation: integrate the delivered science, link existing structured relations to the generator, fix two provenance fragilities, measure improvement. Horizon 8-10 hours, duration is not a goal.",
  "START_UTC": "2026-11-08T12:00:00Z",
  "RESUME": {
-  "note": "complete 2026-11-08; open: Harness Engineering lands the PREREG rename; card edits (7 rows in p1 map) wait for a card rebuild path; shareable-audit name matcher flags everyday words of other languages (root fix not done); science session follow-up on ISRIB/GSK3 and myelin to be integrated when delivered"
+  "note": "complete 2026-11-08 including the IT37 science delivery; open: card edits (7 rows in the p1 map) wait for a card rebuild path; shareable-audit name matcher flags everyday words of other languages (root fix not done); further science follow-ups to integrate when delivered"
  },
  "AUTHORISED_QUEUE_20261108": {
   "MANDATE_STATE": "COMPLETE",
@@ -117,7 +117,7 @@
      "step": "Battery on frozen candidate, gate, CI, site, cleanup, final report",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "battery d43bb4da: FAIL with two red targets, both System One pilot files already on remote main (shebang without executable bit; a PREREG section reference), fixed by Harness Engineering in 3e219085; merged tree b0dfaa41 re-ran those two targets green and the gate passed; earlier candidate 8431fd38 PASS WITH SKIPS (215 targets, 41 skipped); b0dfaa41 pushed with --expect-sha, ls-remote verified; CI success for Public release gate and Publish the shareable view; site 200 in five languages with IT36 text; the later record-only commit is attributed to gate only"
+     "evidence": "battery d43bb4da: FAIL with two red targets, both System One pilot files already on remote main (shebang without executable bit; a PREREG section reference), fixed by Harness Engineering in 3e219085; merged tree b0dfaa41 re-ran those two targets green and the gate passed; earlier candidate 8431fd38 PASS WITH SKIPS (215 targets, 41 skipped); b0dfaa41 pushed with --expect-sha, ls-remote verified; CI success for Public release gate and Publish the shareable view; site 200 in five languages with IT36 text; the later record-only commit is attributed to gate only; second round (science IT37 delivery): 13 receipts recorded (ledger 1,457), ISRIB grid correction, GSK3 narrowing and INV-12 step 0 applied in five languages; battery on 4a783cd4 PASS WITH SKIPS (215 targets, 41 skipped); pushed with --expect-sha, gate PASS; CI success for Public release gate and Publish the shareable view; site 200 in five languages; record-only commits after 4a783cd4 are attributed to the gate"
     }
    ]
   }
