@@ -555,6 +555,7 @@
  "UI_IT.iv_ev": "Verfügbare Evidenz",
  "UI_IT.iv_f_all": "Alle",
  "UI_IT.iv_f_h": "Anzeigen",
+ "UI_IT.iv_fs_h": "Art der Zeile",
  "UI_IT.iv_funnel": "Der Generator hat {g} bedingte Vorschläge erzeugt, {h} wurden an die Qualifizierung übergeben; davon wurden {a4} in IT21 in der Tiefe qualifiziert ({k4} bedingt beibehalten, {r4} mit informativem Ergebnis verworfen, {i4} nicht schlüssig). Der Weg von der Verbindung zu WWOX hat {p} Vorschläge erzeugt: {k3} bedingt beibehalten, {r3} mit informativem Ergebnis verworfen, {i3} nicht schlüssig; {q3} wurden in der Tiefe qualifiziert. Qualifizierte Hypothesen: {q}. Ein bedingter Vorschlag bleibt eine Forschungsfrage, solange es keine Messung in einem System mit verändertem WWOX gibt.",
  "UI_IT.iv_funnel_h": "Woher die neuen Vorschläge stammen",
  "UI_IT.iv_fur_h": "Weitere offene Untersuchungen jenseits der zehn der Liste",

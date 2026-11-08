@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-08T00:55:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-08T00:58:00Z",
+ "event_id": "FTR-20261108-16014628-90",
+ "evidence_basis": [
+  "abstract analysed; full text not reachable by an open route (Europe PMC lists no open full text for this PMID; publisher page returned an access error or is paywalled)",
+  "verbatim_locator | propositions: LiCl-induced beta-catenin nuclear translocation with decreased tau phosphorylation in CHO and rat cultured neurons; SB415286 also induced beta-catenin nuclear translocation (tau readout for SB415286 not stated in abstract) | Abstract | \"the inhibition of GSK3 by LiCl induced the nuclear translocation of beta-catenin in Chinese hamster ovary cells and rat cultured neurons, in which a decrease in tau phosphorylation was observed\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb2_tau_catenin_it35_20261108/output/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record fetched 2026-11-08 through the PubMed tools; bytes not saved",
+ "study_id": {
+  "doi": "10.1074/jbc.M501610200",
+  "pmid": "16014628"
+ },
+ "workflow": "IT35 P7 NB-2 paired Tau and beta-catenin readouts by GSK3 inhibitor class. Staged for the integrator; the ledger was not written by the preparing actor."
+}

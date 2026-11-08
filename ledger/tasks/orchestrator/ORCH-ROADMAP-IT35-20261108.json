@@ -8,7 +8,7 @@
  "START_UTC": "2026-11-08T00:00:00Z",
  "RESUME": {
   "worktree": ".claude/worktrees/it35 (branch task/it35)",
-  "next_action": "P1 imprecisions, then P2, P3.",
+  "next_action": "Commit; freeze; view suite and targeted tests; battery on the exact SHA in a clean clone if no other battery runs; merge main; safe_push --expect-sha; CI; site; cleanup; final report A-I",
   "note": "Zero spend; no contact; four current files via BATCH_COMMIT only (carbenoxolone wording if a register carries it); safe_push only; one delegate at a time; no battery while another session runs one; queue2 and ttype belong to other sessions."
  },
  "AUTHORISED_QUEUE_20261108": {
@@ -94,9 +94,9 @@
    "steps": [
     {
      "step": "P7 Consume the science in progress: accepted/published deliveries, verified deltas, post-review corrections; NB-2 (Tau/beta-catenin pairing) if not done; HCN, lipids, hyaluronan-PNN, HDAC5 as comparison cases not repeated",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "note": "gsk3_eif2b package consumed (6 receipts recorded, ledger 1,356; GSK3 need O1 limits and a downstream inference, ISR need counter-evidence, INV-02 test additions, snapshot context_change; five-language passage extended); NB-2 (Tau and beta-catenin pairing) not yet assigned"
+     "evidence": "deliveries reconstructed from main and the other sessions' branches (not from chat): NB-4 pilot and delta, NB-1 (IT33), GSK3-eIF2B (this iteration: 6 receipts, ledger 1,356; GSK3 need O1 limits and inference, ISR need counter-evidence, INV-02 test additions, snapshot context_change, five-language passage), NB-2 (assigned a circumscribed question, producer + blind verifier; 4 receipts recorded, ledger 1,360; null narrowed to abstract-level routes: no PubMed record in a neuronal system reports both phospho-Tau and beta-catenin under two or more GSK3 classes; 14511119 is astrocytic; full texts of 16014628 and 33621689 are the possible counterexamples; consumed in the GSK3 need); HCN (queue2) and T-type (ttype) belong to running sessions and were not touched or repeated"
     }
    ]
   },
@@ -105,8 +105,9 @@
    "steps": [
     {
      "step": "P8 Surviving hypotheses to research decisions: compound/family, action, cell/system/stage, benefit, WWOX observations, external precedents, hypothetical bridges, counter-evidence, next experiment, priority-changing result; group investigations by shared premise",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "each surviving hypothesis is readable in INV-18 (compound/family reached by the need search, action, system and stage, benefit, WWOX observations, external precedents, hypothetical bridges, counter-evidence, next experiment, the result that would weaken each of four branches); questions sharing a premise are grouped by the premise map (605 of 994 proposals name 3 investigations; 555 on MYC are one premise); partial benefit and broad recovery kept apart; no candidate compared with a reference because none emerged"
     }
    ]
   },
@@ -115,8 +116,9 @@
    "steps": [
     {
      "step": "P9 Dashboard: priority investigations with reason, decisive uncertainty, next step; chain expansion or filter by evidence/intervention type; five languages, phone; published site verified",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "the investigations filters now act on the whole queue (origin) and add a kind-of-row filter (carded thread / premise measurement / conditional hypothesis); #INV-nn stable links reopen a row a filter hides; five-language strings; string test and a browser test (390 px, filter hides rows across lists, stable link reopens the row); the earlier sections (further investigations, index, ids) kept; no efficacy percentages"
     }
    ]
   },
@@ -125,8 +127,9 @@
    "steps": [
     {
      "step": "P10 Targeted scouting only for a named gap (GitHub, Hugging Face, Nature); licences separate; durable method in existing places; one home per rule",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "scouting not run: the audit named one gap that the radar cannot fix (an ISR tool compound without a name or mechanism in ChEMBL, the source the catalogue is built from) and it is a data-entry question, not a missing tool; no installation; nothing adopted; reopening: an identity-checked tool-compound entry"
     }
    ]
   },
@@ -137,7 +140,7 @@
      "step": "P11 Cost: IT34 verification cost diagnosed (startup, reads, reasoning, delivery); landing, cleanup, final report A-I",
      "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "note": "cost diagnosis done: the IT34 verifier's 'about 40k' was the notice's all-token field; census: 8 responses, 7,309 output tokens, birth context 18.5k, peak 38.6k, cache read 192k, more than half of the output is the audit file and final message; rule added to delegation_budget.md; the unguided producer 13,975 and its verifier 4,920 output; remaining: landing, cleanup, final report"
+     "note": "cost diagnosis done (the IT34 verifier's figure was the notice's all-token field; census output 7,309); remaining: view suite, targeted tests, battery on the frozen SHA (coordinate), push with --expect-sha, CI, deploy check, cleanup, final report"
     }
    ]
   }

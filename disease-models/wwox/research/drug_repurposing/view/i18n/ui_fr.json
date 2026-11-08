@@ -555,6 +555,7 @@
  "UI_IT.iv_ev": "Preuve disponible",
  "UI_IT.iv_f_all": "Toutes",
  "UI_IT.iv_f_h": "Afficher",
+ "UI_IT.iv_fs_h": "Type de ligne",
  "UI_IT.iv_funnel": "Le générateur a produit {g} propositions conditionnelles, {h} remises à la qualification ; parmi elles, {a4} ont été qualifiées en profondeur dans IT21 ({k4} maintenue conditionnelle, {r4} rejetées avec résultat informatif, {i4} non concluantes). La voie composé-vers-WWOX a produit {p} propositions : {k3} maintenues conditionnelles, {r3} rejetées avec résultat informatif, {i3} non concluantes ; {q3} ont été qualifiées en profondeur. Hypothèses qualifiées : {q}. Une proposition conditionnelle reste une question de recherche tant qu'il n'y a pas de mesure dans un système avec WWOX altéré.",
  "UI_IT.iv_funnel_h": "D'où viennent les propositions nouvelles",
  "UI_IT.iv_fur_h": "Autres investigations ouvertes, au-delà des dix de la liste",

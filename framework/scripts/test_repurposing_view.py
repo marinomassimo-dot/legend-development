@@ -1434,6 +1434,37 @@ class RealViewports(unittest.TestCase):
                         self.skipTest("viewport emulation unavailable: " + str(e)[:120])
                     self.assertLess(b, h, f"{lang} {w}x{h}: the F/C/P legend must sit above the fold")
 
+    def test_the_kind_filter_hides_rows_across_the_queue_and_a_stable_id_link_reopens_the_row(self):
+        """IT35 P9, in the browser: the kind-of-row filter hides rows in every list; #INV-nn then shows a hidden row again; the lists stay complete without a click."""
+        if not rv.find_chromium():
+            self.skipTest("no Chromium binary: the filter was NOT exercised")
+        with tempfile.TemporaryDirectory() as td:
+            f = Path(td) / "v.html"
+            f.write_text(rv.build(DR, "shareable", "it"), encoding="utf-8")
+            try:
+                c = rv.Cdp(rv.find_chromium(), td)
+                try:
+                    c.call("Page.enable"); c.call("Emulation.setDeviceMetricsOverride", width=390, height=844, deviceScaleFactor=1, mobile=True)
+                    c.call("Page.navigate", url="file://" + str(f)); c.wait_for("!!document.querySelector('[data-cur-ready]')", 60); c.settle()
+                    total = c.evaluate("document.querySelectorAll('#investigations .inv-row').length")
+                    hidden0 = c.evaluate("document.querySelectorAll('#investigations .inv-row[hidden]').length")
+                    bar = c.evaluate("!!document.querySelector('#investigations .inv-filter-st') && !document.querySelector('#investigations .inv-filter-st').hidden")
+                    c.evaluate("document.querySelector('#investigations .inv-filter-st button[data-fs=\"conditional_hypothesis\"]').click(); 1")
+                    shown = c.evaluate("Array.from(document.querySelectorAll('#investigations .inv-row')).filter(function (r) { return !r.hidden; }).every(function (r) { return r.getAttribute('data-status') === 'conditional_hypothesis'; })")
+                    n_hidden = c.evaluate("document.querySelectorAll('#investigations .inv-row[hidden]').length")
+                    c.evaluate("location.hash = '#INV-15'; 1"); c.wait_for("!document.getElementById('INV-15').closest('.inv-row').hidden", 10)
+                    reopened = c.evaluate("!document.getElementById('INV-15').closest('.inv-row').hidden")
+                finally:
+                    c.close()
+            except Exception as e:
+                self.skipTest("browser could not be driven: " + str(e)[:120])
+        self.assertGreaterEqual(total, 16)                     # the whole queue is on the page, not ten rows
+        self.assertEqual(hidden0, 0)                           # nothing is hidden before a click
+        self.assertTrue(bar)
+        self.assertTrue(shown)
+        self.assertGreater(n_hidden, 0)
+        self.assertTrue(reopened)
+
     def test_no_horizontal_overflow_at_360_and_390(self):
         if not rv.find_chromium():
             self.skipTest("no Chromium binary: viewports were NOT measured")
@@ -2752,6 +2783,26 @@ class It21P7InvestigationsContext(unittest.TestCase):
             rv.further_investigations_view([dict(base, inv_id="INV-91", status="conditional_hypothesis")], self.CARDS, True, {})
         with self.assertRaises(SystemExit):
             rv.further_investigations_view([dict(base, inv_id="INV-91", status="premise_measurement", why_now="this is qualified")], self.CARDS, True, {})
+
+    def test_the_filters_cover_the_whole_queue_and_a_stable_id_link_reaches_any_row(self):
+        """IT35 P9: the origin filter and the kind-of-row filter act on every investigation row (ordered, further, conditional), each row carries its
+        origin and status, and a #INV-nn link opens a row a filter hides. The buttons exist only with JavaScript, so the lists stay complete without it."""
+        base = {k: v for k, v in self.row().items() if k not in ("tie_group", "movement_reason")}
+        ordered = rv.investigations_view([dict(self.row(), inv_id="INV-90", origin_class="known_in_wwox")], self.CARDS, True, {})
+        fur = rv.further_investigations_view([dict(base, inv_id="INV-91", status="premise_measurement", origin_class="generated_by_legend")], self.CARDS, True, {})
+        cond = rv.conditional_hypotheses_view([{k: v for k, v in base.items() if k != "rank"} | {"inv_id": "INV-92", "status": "conditional_hypothesis", "origin_class": "external_transferred"}], self.CARDS, True, {})
+        h = rv.render_investigations({"source": "full", "cur": {"ranking": {"investigations": ordered, "further_investigations": fur, "conditional_hypotheses": cond, "investigations_context": {}}}})
+        self.assertIn('class="inv-filter inv-filter-st"', h)
+        for o in ("known_in_wwox", "generated_by_legend", "external_transferred"):
+            self.assertIn(f'data-f="{o}"', h)                              # origins present only in the further and conditional rows are offered
+        for st in ("premise_measurement", "conditional_hypothesis"):
+            self.assertIn(f'data-fs="{st}"', h)
+            self.assertIn(f'data-status="{st}"', h)
+        for i in ("INV-90", "INV-91", "INV-92"):
+            self.assertIn(f'id="{i}"', h)
+        js = (DR / "view/assets/curated.js").read_text(encoding="utf-8")
+        self.assertIn("#investigations .inv-row", js)
+        self.assertIn("INV-\\d+", js)
 
     def test_the_page_says_positions_are_curated_and_the_code_does_not_compute(self):
         t = rv.UI_IT["iv_curated"]

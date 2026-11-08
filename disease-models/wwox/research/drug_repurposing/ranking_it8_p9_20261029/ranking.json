@@ -6059,11 +6059,11 @@
     "catalog.jsonl.gz": "75652786013b931d",
     "catalog_stats.json": "87ac308ce3ab9b3f",
     "measure_next.json": "bca46967510475c5",
-    "needs.json": "5df360f13eb03500",
+    "needs.json": "41620852738d0ed6",
     "source_artefacts.tsv": "efd24d2cf8eb3fdb",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
-   "receipt_ledger_lines": 1356
+   "receipt_ledger_lines": 1360
   },
   "inventory": {
    "all_families_by_access_category": {

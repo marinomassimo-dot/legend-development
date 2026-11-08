@@ -555,6 +555,7 @@
  "UI_IT.iv_ev": "Evidenza disponibile",
  "UI_IT.iv_f_all": "Tutte",
  "UI_IT.iv_f_h": "Mostra",
+ "UI_IT.iv_fs_h": "Tipo di riga",
  "UI_IT.iv_funnel": "Il generatore ha prodotto {g} proposte condizionate, {h} consegnate alla qualificazione; di queste {a4} sono state qualificate in profondità in IT21 ({k4} mantenuta condizionata, {r4} respinte con esito informativo, {i4} non conclusive). La via composto-verso-WWOX ha prodotto {p} proposte: {k3} mantenute condizionate, {r3} respinte con esito informativo, {i3} non conclusive; {q3} sono state qualificate in profondità. Ipotesi qualificate: {q}. Una proposta condizionata resta una domanda di ricerca finché non c'è una misura in un sistema con WWOX alterato.",
  "UI_IT.iv_funnel_h": "Da dove vengono le proposte nuove",
  "UI_IT.iv_fur_h": "Altre indagini aperte, oltre le dieci dell'elenco",

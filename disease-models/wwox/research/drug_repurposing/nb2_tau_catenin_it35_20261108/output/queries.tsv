@@ -1,0 +1,7 @@
+query_id	database_or_route	string_or_url	run_at_utc	hits	what_was_done
+Q1	PubMed (PubMed tool)	(GSK-3 inhibitor OR lithium OR tideglusib OR SB216763 OR CHIR99021 OR AR-A014418) AND (tau phosphorylation) AND (beta-catenin) AND (neuron OR neuronal OR SH-SY5Y OR neuroblastoma)	2026-11-08T00:57Z	35	title and abstract read for 10 of the first 30 chosen by title relevance; remaining hits listed, not read
+Q2	PubMed	lithium AND (SB216763 OR SB415286 OR AR-A014418 OR kenpaullone) AND tau AND beta-catenin AND neurons	2026-11-08T00:57Z	3	all 3 abstracts read
+Q3	PubMed	(L803-mts OR TDZD-8 OR tideglusib OR GSK-3 inhibitor) AND lithium AND tau AND catenin AND (cortical neurons OR hippocampal neurons OR primary neurons OR SH-SY5Y)	2026-11-08T00:58Z	0	substrate-competitive/allosteric class probe; zero hits
+Q4	Europe PMC REST search by EXT_ID for PMIDs 16014628, 14511119, 39798400	EXT_ID:<pmid> AND SRC:MED, fields pmcid, isOpenAccess	2026-11-08T00:58Z	3	no PMC copy and no open access flag for any of the three
+Q5	publisher page (JBC)	fulltext page of the 2005 JBC article	2026-11-08T00:58Z	1	HTTP 403, 5,505 bytes (access stub); no text read; not retried by another route (J Neurochem pages are subscription)
+Q6	receipt ledger	fulltext_receipts.py status --pmid 39798400	2026-11-08T00:58Z	0	no prior receipt
