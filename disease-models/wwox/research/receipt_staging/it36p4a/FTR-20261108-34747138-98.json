@@ -1,36 +1,36 @@
 {
- "analysis_at": "2026-11-08T09:10:00Z",
- "analysis_time_precision": "minute",
- "coverage": {
-  "abstract": "read",
-  "introduction": "not_read",
-  "methods": "not_read",
-  "results": "not_read",
-  "figures": "not_read",
-  "tables": "not_read",
-  "discussion": "not_read",
-  "limitations": "not_read",
-  "supplementary": "not_read"
- },
- "event_at": "2026-11-08T09:20:00Z",
- "event_id": "FTR-20261108-34747138-98",
- "evidence_basis": [
-  "route: PubMed record via the PubMed metadata tool on 2026-11-08; abstract only; no full text, methods, figures or tables read",
-  "verbatim_locator | proposition: abstract statement relevant to myelin readout | abstract | \"neuronal restoration of WWOX expression rescued brain hyperexcitability and seizures, hypoglycemia, myelination deficits\""
- ],
- "evidence_depth": "abstract_only",
- "outputs": [
-  "relations.tsv"
- ],
- "prior_receipt": "FTR-20261029-34747138-01",
- "record_kind": "contemporaneous_receipt",
- "reread_reason": "new_question_outside_prior_coverage",
- "source_fingerprint": null,
- "source_kind": "abstract",
- "source_locator": "PubMed record for PMID 34747138, fetched 2026-11-08; bytes not saved",
- "study_id": {
-  "doi": "10.15252/emmm.202114599",
-  "pmid": "34747138"
- },
- "workflow": "unguided_phenotype_expansion_it36_p4a"
+  "analysis_at": "2026-11-08T09:10:00Z",
+  "analysis_time_precision": "minute",
+  "coverage": {
+    "abstract": "read",
+    "introduction": "not_read",
+    "methods": "not_read",
+    "results": "not_read",
+    "figures": "not_read",
+    "tables": "not_read",
+    "discussion": "not_read",
+    "limitations": "not_read",
+    "supplementary": "not_read"
+  },
+  "event_at": "2026-11-08T09:20:00Z",
+  "event_id": "FTR-20261108-34747138-98",
+  "evidence_basis": [
+    "route: PubMed record via the PubMed metadata tool on 2026-11-08; abstract only; no full text, methods, figures or tables read",
+    "verbatim_locator | proposition: abstract statement relevant to myelin readout | abstract | \"neuronal restoration of WWOX expression rescued brain hyperexcitability and seizures, hypoglycemia, myelination deficits\""
+  ],
+  "evidence_depth": "abstract_only",
+  "outputs": [
+    "relations.tsv"
+  ],
+  "prior_receipt": "FTR-20261029-34747138-01",
+  "record_kind": "contemporaneous_receipt",
+  "reread_reason": "new_question_outside_prior_coverage",
+  "source_fingerprint": null,
+  "source_kind": "abstract",
+  "source_locator": "PubMed record for PMID 34747138, fetched 2026-11-08; bytes not saved",
+  "study_id": {
+    "doi": "10.15252/emmm.202114599",
+    "pmid": "34747138"
+  },
+  "workflow": "unguided_phenotype_expansion_it36_p4a"
 }

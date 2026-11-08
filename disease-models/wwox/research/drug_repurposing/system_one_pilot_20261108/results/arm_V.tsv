@@ -1,0 +1,16 @@
+N01	A=U,B=W,C=R,D=W,E=W	no
+N02	A=U,B=W,C=U,D=R,E=W	no
+N03	A=W,B=U,C=W,D=W,E=R	no
+N04	A=U,B=W,C=U,D=W,E=R	no
+N05	A=U,B=R,C=R,D=U,E=U	no
+N06	A=R,B=W,C=R,D=U,E=W	no
+N07	A=U,B=R,C=W,D=R,E=U	no
+N08	A=W,B=W,C=U,D=U,E=R	no
+N09	A=U,B=U,C=R,D=W,E=W	no
+N10	A=W,B=W,C=R,D=U,E=U	no
+N11	A=U,B=R,C=U,D=U,E=W	no
+N12	A=W,B=U,C=W,D=R,E=U	no
+N13	A=U,B=R,C=W,D=R,E=U	no
+N14	A=W,B=W,C=R,D=U,E=U	no
+N15	A=W,B=U,C=U,D=W,E=U	yes
+N16	A=U,B=U,C=W,D=U,E=W	yes

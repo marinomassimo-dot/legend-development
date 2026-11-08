@@ -17,10 +17,10 @@
  "event_id": "FTR-20261108-26061431-96",
  "evidence_basis": [
   "Degraded acquisition: the tool returns running text without figure legends or images; every statement about a panel rests on the sentence in the Results, not on the figure",
-  "verbatim_locator | proposition: among HDAC1, 3, 5 and 6 knockdowns only HDAC5 impaired hypoxic HIF-1alpha accumulation | Results | \"only HDAC5 knockdown remarkably impaired hypoxic accumulation of HIF-1\u03b1\"",
+  "verbatim_locator | proposition: among HDAC1, 3, 5 and 6 knockdowns only HDAC5 impaired hypoxic HIF-1alpha accumulation | Results | \"only HDAC5 knockdown remarkably impaired hypoxic accumulation of HIF-1α\"",
   "verbatim_locator | proposition: HDAC5 knockdown blunted hypoxic induction of CA9 and SLC2A1 (GLUT1) mRNA | Results | \"only HDAC5 knockdown significantly blunted the hypoxic upregulation of CA-IX (p = 0.0035,) and GLUT1 (p = 0.0014,)\"",
-  "verbatim_locator | proposition: a catalytic-site mutant of HDAC5 did not stabilise HIF-1alpha | Results | \"the HDAC5-C698/H704A mutant was unable to stabilize HIF-1\u03b1\"",
-  "verbatim_locator | proposition: HIF-1alpha acetylation itself was not changed by HDAC5 knockdown | Results | \"HIF-1\u03b1 acetylation levels did not seem to be affected by HDAC5 knockdown either\""
+  "verbatim_locator | proposition: a catalytic-site mutant of HDAC5 did not stabilise HIF-1alpha | Results | \"the HDAC5-C698/H704A mutant was unable to stabilize HIF-1α\"",
+  "verbatim_locator | proposition: HIF-1alpha acetylation itself was not changed by HDAC5 knockdown | Results | \"HIF-1α acetylation levels did not seem to be affected by HDAC5 knockdown either\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

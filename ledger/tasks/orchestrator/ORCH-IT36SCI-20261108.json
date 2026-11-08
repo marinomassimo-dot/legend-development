@@ -18,16 +18,17 @@
   "first_step": "Producer 1 (legend-delegate sonnet/medium): P1A+P1B decisive deltas, then its verifier (sonnet/high); then P2+P3 pair; then P4 unguided expansion, LEGEND-side comparison and levers, verifier"
  },
  "CURRENT_PACKAGE": {
-  "id": "landing",
-  "state": "packages delivered and audited; checks and landing pending",
+  "id": "none",
+  "state": "complete; landing",
   "delegate_active": "none",
-  "updated": "2026-11-08T09:44:00Z"
+  "updated": "2026-11-08T11:27:00Z"
  },
  "RESUME": "Folders drug_repurposing/<name>_20261108/ in worktree it36sci. Order: P1 producer, P1 verifier, P2/P3 producer, verifier, P4 unguided, P4 LEGEND-side producer, verifier, delivery.",
  "DECISIONS_TAKEN": [
   "Folders carry the true date 20261108; no rename to influence the ranking as-of date; any effect is reported to IT36 in the delivery record (mandate).",
   "One delegate at a time; producer then verifier; no recursive delegation; legend-delegate typed agent; escalation only on a decisive uncertainty, written first.",
-  "Coordinator for this block: 71 responses, output 58,424, cache read 10,649,237, peak context 219,242 (sonnet-5-5); delegates total 273 turns, output 371,168, cache read 27,985,934. See it36_science_delivery_20261108/COST_NOTE.md."
+  "Coordinator for this block: 71 responses, output 58,424, cache read 10,649,237, peak context 219,242 (sonnet-5-5); delegates total 273 turns, output 371,168, cache read 27,985,934. See it36_science_delivery_20261108/COST_NOTE.md.",
+  "Gate on 580dab80: PASS, 0 blocks. LINT no BLOCK. fulltext_receipts verify OK (1360). growth_anchors PASS. Battery (fresh no-hardlinks clone of 580dab80, after IT36's own battery had finished): 214 of 215 suites passed, 1 failed: test_mandate_continuity, because this record carried MANDATE_STATE 'ACTIVE' (allowed: OPEN / COMPLETE / PAUSED / CANCELLED). Fixed by setting COMPLETE at the end of the work; that suite was rerun alone on the corrected record; the other suites were not rerun (the change touches no code or data they read). The battery verdict belongs to 580dab80, not to the closing commit."
  ],
  "DELEGATIONS": [
   "P1 producer: asked sonnet/medium, read back claude-sonnet-5-5 x39, medium x39; birth 17,507; 39 turns; output 63,794; cache read 4,156,747; peak 186,253; completed (HDAC5-HIF, ephys deltas, 7 receipts suffix 96).",
@@ -42,34 +43,39 @@
  "STOP_LOG": [],
  "DEFAULTS_TAKEN": [],
  "AUTHORISED_QUEUE_20261108C": {
-  "MANDATE_STATE": "ACTIVE",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_1": {
    "order": 1,
    "steps": [
     {
      "step": "P0 baseline and record",
      "status": "DONE",
-     "owner": "orchestrator"
+     "owner": "orchestrator",
+     "evidence": "this record, BASELINE and P0_ANSWERS fields"
     },
     {
      "step": "P1 HDAC5-HIF and PV/HCN deltas (producer, verifier)",
      "status": "DONE",
-     "owner": "orchestrator"
+     "owner": "orchestrator",
+     "evidence": "disease-models/wwox/research/drug_repurposing/decisive_rechecks_it36_20261108/verify/audit_p1.md"
     },
     {
      "step": "P2 NB-2 full texts and P3 ISRIB entry (producer, verifier)",
      "status": "DONE",
-     "owner": "orchestrator"
+     "owner": "orchestrator",
+     "evidence": "disease-models/wwox/research/drug_repurposing/nb2_isrib_it36_20261108/verify/audit_p23.md"
     },
     {
      "step": "P4-P5 myelination generative case (unguided, LEGEND comparison, levers, experiments; verifier)",
      "status": "DONE",
-     "owner": "orchestrator"
+     "owner": "orchestrator",
+     "evidence": "disease-models/wwox/research/drug_repurposing/myelin_generative_it36_20261108/levers_bc/verify/audit_p4.md"
     },
     {
      "step": "P7 delivery, consumer notes, small readability test, land",
-     "status": "QUEUED",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "disease-models/wwox/research/drug_repurposing/it36_science_delivery_20261108/README.md"
     }
    ]
   }

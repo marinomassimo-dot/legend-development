@@ -16,8 +16,8 @@
  "event_at": "2026-11-08T08:41:17Z",
  "event_id": "FTR-20261108-34021541-96",
  "evidence_basis": [
-  "verbatim_locator | proposition: HDAC5 silencing lowered HIF1A and PFKFB3 expression in the epilepsy-model neurons | Results | \"HDAC5 silencing reduced HIF1\u03b1 and PFKFB3 expression in epileptic cells\"",
-  "verbatim_locator | proposition: overexpressed HDAC5 co-immunoprecipitated more HIF1A than control | Results | \"IP detected the binding of HDAC5 to HIF1\u03b1, and the results showed that oe-HDAC5 combined more HIF1\u03b1 than oe-NC\"",
+  "verbatim_locator | proposition: HDAC5 silencing lowered HIF1A and PFKFB3 expression in the epilepsy-model neurons | Results | \"HDAC5 silencing reduced HIF1α and PFKFB3 expression in epileptic cells\"",
+  "verbatim_locator | proposition: overexpressed HDAC5 co-immunoprecipitated more HIF1A than control | Results | \"IP detected the binding of HDAC5 to HIF1α, and the results showed that oe-HDAC5 combined more HIF1α than oe-NC\"",
   "section note: ChIP in this paper concerns PFKFB3 promoter only; no SLC2A1 read-out; Methods hold a placeholder 'X of 90 mice died' and the abstract says rat while Methods say mice"
  ],
  "evidence_depth": "partial_fulltext_read",

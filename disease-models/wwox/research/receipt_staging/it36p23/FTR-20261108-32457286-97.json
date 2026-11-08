@@ -20,7 +20,7 @@
   "verbatim_locator | proposition: EI21 ISRIB enhanced survival of mutant-SOD1 neurons | Abstract | \"significantly enhanced the survival of G93A SOD1-expressing neurons\"",
   "verbatim_locator | proposition: EI22 ISRIB did not reduce ATF4 in thapsigargin-treated neurons | Results > ISRIB tunes neuronal PERK signaling | \"unlike in HEK293 cells, ISRIB did not reduce ATF4 expression in Thap-treated neuronal cultures\"",
   "verbatim_locator | proposition: EI23 survival effect did not extend to the alpha-synuclein variant | Results > ISRIB decreases G93A SOD1-dependent neuronal death | \"ISRIB did not improve the survival of E46K aSyn expressing neurons\"",
-  "verbatim_locator | proposition: EI24 cited threshold of phosphorylated eIF2 alpha | Discussion | \"ISRIB antagonizes the ISR only when p-eIF2\u03b1 levels are below a critical threshold\""
+  "verbatim_locator | proposition: EI24 cited threshold of phosphorylated eIF2 alpha | Discussion | \"ISRIB antagonizes the ISR only when p-eIF2α levels are below a critical threshold\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

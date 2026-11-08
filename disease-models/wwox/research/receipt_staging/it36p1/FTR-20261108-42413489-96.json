@@ -17,7 +17,7 @@
  "event_id": "FTR-20261108-42413489-96",
  "evidence_basis": [
   "abstract analysed; counter-evidence row, direction opposite to the support rows",
-  "verbatim_locator | proposition: in HDAC5-loss pancreatic cancer, hyperacetylated FOXA1 is redirected to HIF1alpha-target genes | Abstract | \"In HDAC5-loss PDAC, K270 hyper-acetylated FOXA1 is reprogrammed to the transcription start sites (TSSs) of HIF1\u03b1-targeted genes\""
+  "verbatim_locator | proposition: in HDAC5-loss pancreatic cancer, hyperacetylated FOXA1 is redirected to HIF1alpha-target genes | Abstract | \"In HDAC5-loss PDAC, K270 hyper-acetylated FOXA1 is reprogrammed to the transcription start sites (TSSs) of HIF1α-targeted genes\""
  ],
  "evidence_depth": "abstract_only",
  "outputs": [

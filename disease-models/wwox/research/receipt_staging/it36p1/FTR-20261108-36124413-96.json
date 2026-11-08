@@ -17,7 +17,7 @@
  "event_id": "FTR-20261108-36124413-96",
  "evidence_basis": [
   "abstract analysed; counter-evidence row",
-  "verbatim_locator | proposition: HDAC5 overexpression suppressed HIF-1alpha/VEGFA/VEGFR2 signalling in PCOS mouse ovaries | Abstract | \"HDAC5 suppressed activation of angiogenesis-related HIF-1\u03b1/VEGFA/VEGFR2 signaling in PCOS ovaries partly via inhibiting VEGFR2 acetylation.\""
+  "verbatim_locator | proposition: HDAC5 overexpression suppressed HIF-1alpha/VEGFA/VEGFR2 signalling in PCOS mouse ovaries | Abstract | \"HDAC5 suppressed activation of angiogenesis-related HIF-1α/VEGFA/VEGFR2 signaling in PCOS ovaries partly via inhibiting VEGFR2 acetylation.\""
  ],
  "evidence_depth": "abstract_only",
  "outputs": [

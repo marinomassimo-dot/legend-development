@@ -19,7 +19,7 @@
   "partial full text analysed through section-directed passages; figures not viewed; route and depth as stated in source_locator",
   "verbatim_locator | proposition: EI01 ISRIB is a symmetric bis-glycolamide with a central cyclohexane in cis and trans forms | Results > Design of cell-based screen | \"symmetric bis-glycolamide, containing a central bi-substituted cyclohexane, and can exist as two diastereomers, cis and trans\"",
   "verbatim_locator | proposition: EI02 trans-ISRIB named with (1r,4r) descriptors | Methods > Chemical synthesis | \"trans-ISRIB: 2-(4-Chlorophenoxy)-N-[(1r,4r)-4-[2-(4-chlorophenoxy)acetamido] cyclohexyl] acetamide\"",
-  "verbatim_locator | proposition: EI04 ISRIB does not block eIF2 alpha phosphorylation | Results > ISRIB-treated cells are resistant to eIF2-alpha phosphorylation | \"Unexpectedly, ISRIB did not block eIF2\u03b1 phosphorylation under either of these ER stress-inducing conditions.\"",
+  "verbatim_locator | proposition: EI04 ISRIB does not block eIF2 alpha phosphorylation | Results > ISRIB-treated cells are resistant to eIF2-alpha phosphorylation | \"Unexpectedly, ISRIB did not block eIF2α phosphorylation under either of these ER stress-inducing conditions.\"",
   "verbatim_locator | proposition: EI05 ISRIB did not reverse an mTOR-inhibitor translation block | Results | \"addition of ISRIB did not reverse the effect of Torin-1 on translation\""
  ],
  "evidence_depth": "partial_fulltext_read",

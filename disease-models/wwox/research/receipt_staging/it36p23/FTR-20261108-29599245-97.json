@@ -17,8 +17,8 @@
  "event_id": "FTR-20261108-29599245-97",
  "evidence_basis": [
   "partial full text analysed through section-directed passages; figures not viewed; route and depth as stated in source_locator",
-  "verbatim_locator | proposition: EI13 ISRIB bound at the beta-delta interface | Abstract | \"with an ISRIB molecule bound at the interface between the \u03b2 and \u03b4 regulatory subunits\"",
-  "verbatim_locator | proposition: EI14 catalytic epsilon domain unresolved in both structures | Discussion | \"the critical catalytic domain of the \u03b5 subunit is resolved in neither structure\""
+  "verbatim_locator | proposition: EI13 ISRIB bound at the beta-delta interface | Abstract | \"with an ISRIB molecule bound at the interface between the β and δ regulatory subunits\"",
+  "verbatim_locator | proposition: EI14 catalytic epsilon domain unresolved in both structures | Discussion | \"the critical catalytic domain of the ε subunit is resolved in neither structure\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [
