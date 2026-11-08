@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-08T09:12Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "event_at": "2026-11-08T09:32Z",
+ "event_id": "FTR-20261108-42422765-99",
+ "evidence_basis": [
+  "New question outside prior coverage: does the paper report a within-animal wild-type neighbour comparison, and how strong was expression in the oligodendrocyte-promoter arm. Keyword search of the held PMC XML (mosaic, neighbo, Olig2, MBP) and the Results passage on promoter comparison read; figures not viewed.",
+  "verbatim_locator | proposition: the treated animals are global-null mice given vector, and the abstract sentence is about hyperexcitability after treatment | abstract | \"Early neuronal hyperexcitability was suppressed following treatment.\"",
+  "verbatim_locator | proposition: the oligodendrocyte-promoter arm had weak expression, so it is not a test of oligodendrocyte-directed restoration | Results | \"oligodendrocyte-specific WWOX expression driven by the MBP promoter resulted in weak expression and no phenotypic improvement\"",
+  "bounded search: strings mosaic and neighbo gave 0 hits in the held text; no mosaic or neighbour comparison found after that search on 2026-11-08"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/myelin_generative_it36_20261108/levers_bc/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/myelin_generative_it36_20261108/levers_bc/output/evidence.tsv"
+ ],
+ "prior_receipt": "FTR-20261029-42422765-02",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "7bea83346b708e541d2c432e5da4029f69673e1abc3c6fe70926ad0e3ec2eef2",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID42422765_Obeid2026_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1016/j.omta.2026.201791",
+  "pmid": "42422765"
+ },
+ "workflow": "IT36 P4 phase B: whether the paper contains a mosaic or neighbour comparison and what the oligodendrocyte-promoter arm shows. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
