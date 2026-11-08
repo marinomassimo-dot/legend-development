@@ -9,6 +9,9 @@ import sys
 import tempfile
 import time
 import unittest
+from unittest import mock
+import contextlib
+import io
 from pathlib import Path
 from types import SimpleNamespace
 
@@ -75,6 +78,106 @@ class Watch(unittest.TestCase):
         e = self.env(record())
         r = e.check([{"sessionId": SID, "status": "busy"}], deliver="resume")
         self.assertEqual((r["state"], r["action"]), ("RUNNING", "NONE"))
+
+    def test_all_discovers_mandates_for_every_actor(self):
+        e = self.env(record())
+        for actor in ("plan", "scientist-a"):
+            p = e.root / "ledger" / "tasks" / actor / f"{actor}-work.json"
+            p.parent.mkdir(parents=True)
+            rec = record()
+            rec.update(TASK_ID=f"{actor}-work", ACTOR_ID=actor)
+            p.write_text(json.dumps(rec))
+        self.assertEqual(set(mw.open_tasks(e.root)), {TASK, "plan-work", "scientist-a-work"})
+
+    def test_all_observes_failed_runtime_once_and_reports_json_without_revival(self):
+        e = self.env(record())
+        args = SimpleNamespace(root=str(e.root), deliver="resume", quiet_minutes=25, resume_arg=[], json=True)
+        output = io.StringIO()
+        with mock.patch.object(mw, "open_tasks", return_value=[TASK, "OTHER"]), \
+                mock.patch.object(mw, "registered_worktrees", return_value=[e.root]), \
+                mock.patch.object(mw, "list_sessions", return_value=None) as listing, \
+                mock.patch.object(mw, "find_bound_transcript", return_value=None), \
+                mock.patch.object(mw.subprocess, "run") as process, contextlib.redirect_stdout(output):
+            self.assertEqual(mw._check_all(args), 0)
+        self.assertEqual(listing.call_count, 1)
+        process.assert_not_called()
+        rows = json.loads(output.getvalue())
+        self.assertEqual(len(rows), 2)
+        self.assertTrue(all(r["state"] == "UNKNOWN" for r in rows))
+
+    def test_new_unmerged_task_is_checked_in_its_registered_worktree(self):
+        e = self.env(record())
+        tree = Path(e.tmp.name) / "science-worktree"
+        p = tree / "ledger/tasks/scientist-a/SCI-NEW.json"
+        p.parent.mkdir(parents=True)
+        rec = record()
+        rec.update(TASK_ID="SCI-NEW", ACTOR_ID="scientist-a")
+        p.write_text(json.dumps(rec))
+        args = SimpleNamespace(root=str(e.root), deliver="none", quiet_minutes=25, resume_arg=[], json=True)
+        with mock.patch.object(mw, "registered_worktrees", return_value=[e.root, tree]), \
+                mock.patch.object(mw, "list_sessions", return_value=[]), \
+                mock.patch.object(mw, "check", return_value={"state": "UNKNOWN", "action": "NONE"}) as checked, \
+                contextlib.redirect_stdout(io.StringIO()):
+            mw._check_all(args)
+        roots = {c.args[0]: c.kwargs["root"] for c in checked.call_args_list}
+        self.assertEqual(roots["SCI-NEW"], tree)
+        self.assertEqual(roots[TASK], e.root)
+
+    def test_stale_open_worktree_does_not_reopen_a_paused_main_record(self):
+        e = self.env(record("PAUSED"))
+        tree = Path(e.tmp.name) / "old-worktree"
+        p = tree / "ledger/tasks/orchestrator" / f"{TASK}.json"
+        p.parent.mkdir(parents=True)
+        p.write_text(json.dumps(record()))
+        args = SimpleNamespace(root=str(e.root), deliver="resume", quiet_minutes=25, resume_arg=[], json=True)
+        output = io.StringIO()
+        with mock.patch.object(mw, "registered_worktrees", return_value=[e.root, tree]), \
+                mock.patch.object(mw, "list_sessions", return_value=[]), \
+                mock.patch.object(mw, "find_bound_transcript", return_value=None), \
+                contextlib.redirect_stdout(output):
+            mw._check_all(args)
+        rows = json.loads(output.getvalue())
+        self.assertEqual((rows[0]["state"], rows[0]["action"]), ("PAUSED", "NONE"))
+        self.assertEqual(rows[0]["record_root"], str(e.root))
+
+    def test_ambiguous_unmerged_records_never_start_a_session(self):
+        e = self.env(record())
+        (e.root / "ledger/tasks/orchestrator" / f"{TASK}.json").unlink()
+        trees = []
+        for name in ("copy-a", "copy-b"):
+            tree = Path(e.tmp.name) / name
+            p = tree / "ledger/tasks/plan" / f"{TASK}.json"
+            p.parent.mkdir(parents=True)
+            p.write_text(json.dumps(record()))
+            trees.append(tree)
+        args = SimpleNamespace(root=str(e.root), deliver="resume", quiet_minutes=25, resume_arg=[], json=True)
+        output = io.StringIO()
+        with mock.patch.object(mw, "registered_worktrees", return_value=[e.root, *trees]), \
+                mock.patch.object(mw, "list_sessions", return_value=[]), \
+                mock.patch.object(mw, "check") as checked, contextlib.redirect_stdout(output):
+            mw._check_all(args)
+        checked.assert_not_called()
+        row = json.loads(output.getvalue())[0]
+        self.assertEqual((row["state"], row["action"]), ("UNKNOWN", "NONE"))
+        self.assertIn("multiple unmerged", row["why"])
+
+    def test_waiting_for_science_does_not_block_an_independent_step(self):
+        rec = record(steps=("BLOCKED", "TODO"))
+        rec["AUTHORISED_QUEUE_X"]["OBJ_A"]["steps"][0]["blocker"] = "waiting for the science batch"
+        e = self.env(rec)
+        r = e.check([])
+        self.assertEqual((r["state"], r["action"]), ("STOPPED_RESUMABLE", "RESUME"))
+        self.assertIn("s1", r["why"])
+
+    def test_bound_session_reconciles_missing_evidence_instead_of_unknown(self):
+        for state in ("OPEN", "COMPLETE"):
+            rec = record(state, ("DONE",))
+            rec["AUTHORISED_QUEUE_X"]["OBJ_A"]["steps"][0].pop("evidence")
+            e = self.env(rec)
+            r = e.check([])
+            self.assertEqual((r["state"], r["action"]), ("STOPPED_RESUMABLE", "RESUME"))
+            self.assertIn(r["record_verdict"], ("EVIDENCE_PENDING", "INCONSISTENT_COMPLETE"))
+            e.close()
 
     def test_a_running_mandate_still_leaves_a_trace_in_the_event_log(self):
         e = self.env(record())

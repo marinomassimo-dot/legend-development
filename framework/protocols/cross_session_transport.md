@@ -490,6 +490,21 @@ in the loop; a human who has to wake the coordinator is the bottleneck this sect
 Authority and scientific guarantees stay those of `LEGEND_CORE.md` §21c–§21e, and an explicit
 single-turn or narrower operator mandate still wins.
 
+### Complete the authorised objective, not only the recorded wave
+
+Autonomy is LEGEND's default. Before declaring a mandate complete, the Orchestrator
+reconciles its **authorised objective** with delivered packages, consumer notes and the
+remaining work in its own report, not just with the steps it happened to record. Executable
+work within that objective goes into the existing `AUTHORISED_QUEUE*` and is pursued in
+the same session; a finished wave does not require a new operator prompt. Do not close a
+queue while parking its executable remainder only in prose or a list of future actions.
+
+Waiting for a scientific delivery, a CI run or a reserved decision blocks only the steps
+that depend on it. Continue independent work within scope. A new task outside the
+operator's mandate is not authorised by this rule, and a genuinely completed objective
+does not call for invented work or an endless busy loop. Existing budget limits and
+§21c–§21e still apply; there is no additional approval or closing ceremony.
+
 ### Decision table — apply it before ending any turn
 
 | Observed condition | Action |
@@ -526,6 +541,24 @@ The mandate lives in the task record as an `AUTHORISED_QUEUE*` block (Annex A.1c
 `CONTINUE` with the next step, `ALL_BLOCKED`, `COMPLETE_PENDING`, `RELEASED`, or a hold
 (`EVIDENCE_PENDING`, `INCONSISTENT_COMPLETE`, `MALFORMED`). Run it at bootstrap, after every
 milestone, after every compaction and on every recall, and update the statuses as work lands.
+
+### Hourly watch: actors, binding and runtime limits
+
+The existing host cron runs `mandate_watch.py check --all --deliver resume` hourly.
+`--all` discovers task records under **every actor** in `ledger/tasks/*/`, including new
+mandates in registered worktrees before they land. The main record takes precedence over
+stale copies; multiple unmerged copies without one authoritative main record remain
+`UNKNOWN`, never a guessed owner. Its decision still comes from recorded queues: it cannot discover
+authorised work omitted from them. On accepting a continuing mandate, keep its queue and
+the session binding current and check `--task <ID> --deliver none --json` once; an
+`UNKNOWN` binding is a visible coverage gap, not proof the session is monitored.
+
+The present delivery adapter is **Claude Code**, not every runtime. A dead bound session
+can be resumed under its own id. An alive idle session needs the existing in-session
+hourly recall; the host must not start a duplicate of it. A busy session or live job is
+left alone. Closed, paused or cancelled mandates are not reopened by this watch. Workspace
+trust, a powered-off host and an actually exhausted runtime quota remain explicit limits.
+No second scheduler, extra agent, approval gate or new Stop hook is introduced here.
 
 ### The bounded Stop hook
 
