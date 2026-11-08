@@ -18,7 +18,7 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 12692,
+    "values": 12700,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -118,7 +118,7 @@
    },
    "^\\.needs\\[\\]\\.": {
     "class": "OWN",
-    "values": 1848,
+    "values": 1852,
     "why": "needs records written in this repository"
    },
    "^\\.pairs\\[\\]\\.(l2|l3|l4|x|n|r)(\\.|\\[\\]|$)": {
@@ -193,7 +193,7 @@
    },
    "^\\.ui\\.": {
     "class": "UI",
-    "values": 1399,
+    "values": 1400,
     "why": "Italian orientation text (builder data UI_IT and siblings)"
    }
   },
@@ -203,7 +203,7 @@
    "DOI": 5,
    "HGNC": 12,
    "NCT": 0,
-   "PMID": 145
+   "PMID": 148
   },
   "links": {
    "distinct_hrefs": 188,
@@ -224,7 +224,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3414,
+    "forbidden-name": 3427,
     "forbidden-wording": 21
    },
    "co_attested_wording": [
@@ -462,7 +462,7 @@
  ],
  "data": {
   "catalogue_generated": "2026-10-31T07:28:37Z",
-  "data_date": "2026-11-07",
+  "data_date": "2026-11-08",
   "dgidb_export": "2024-06-10",
   "view_schema": "legend.wwox.repurposing_view/2"
  },
@@ -470,11 +470,11 @@
   "BIBLIO": 2696,
   "COUNT": 12405,
   "ID": 4861,
-  "OWN": 89501,
+  "OWN": 89513,
   "ROWNAME": 2408,
   "SRC_A": 189,
   "SRC_META": 256,
-  "UI": 1399
+  "UI": 1400
  },
  "embedded_sources": [
   {
@@ -529,11 +529,11 @@
   },
   "NOTICE.md": {
    "bytes": 13087,
-   "sha256": "7f81a5e6a9d8cb11ff813feb4c9b29547e75cdd2c6029e806e765f1ca9f9f19a"
+   "sha256": "569e146f9f4f2dcd0975b9c2a6870a8e2207d197ef8c99e1387e432d15d59ee7"
   },
   "README.md": {
    "bytes": 5072,
-   "sha256": "359cf596924cc8672f910ea48ef072366c700ddd5c166d89db0b7c570ca44d71"
+   "sha256": "28ad90d1430e5e1f93c62563a5d723ae211c93ab596b33dbd078cf708a266c84"
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 1999,
@@ -552,24 +552,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 4907812,
-   "sha256": "8255870bfd46d0faf8f9a9af016f65835659f8e8498ed2168022a48d87270632"
+   "bytes": 4918416,
+   "sha256": "6af475b5b22c09aec3425da1aee7e46b5bd01f1b8ea7f584b0da907a28631ad9"
   },
   "es.html": {
-   "bytes": 4893603,
-   "sha256": "55051642aed32d456c54d43a4c2e14e913ff09f8a2f64ca627548f41946ff3e7"
+   "bytes": 4904206,
+   "sha256": "101ee00ff807fe5745ea0b52ce0cd49dccc73d1a587bbda7f6f63a8b708f48c7"
   },
   "fr.html": {
-   "bytes": 4917493,
-   "sha256": "ff7f54485bddb47cd05a37adfaa14d3c829d6e0397bf1b0ff811a578ff13cf11"
+   "bytes": 4928251,
+   "sha256": "2ee7c1e8f855e7f026a47f2941159fd3a0f0dddee3b8d67efaee3e62ab1706d8"
   },
   "index.html": {
-   "bytes": 4823723,
-   "sha256": "03a3365ebb45f9f214390a864a6a17589c56d254d8d08a198f71eeadc61aed86"
+   "bytes": 4834124,
+   "sha256": "6753860ee613b6a224008dcd767608ecb072c6e58d906b2b6b8e1ddc533c2d35"
   },
   "it.html": {
-   "bytes": 4869194,
-   "sha256": "cc8abae6158f20707c901de64aa3ba489758e560733ec717551a5b5f0f78c680"
+   "bytes": 4879832,
+   "sha256": "79f2f077dd0efaf3ef61149471048cae9fe71be7b12b88e9486192608077378b"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",

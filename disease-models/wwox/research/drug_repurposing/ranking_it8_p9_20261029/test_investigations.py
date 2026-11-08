@@ -179,9 +179,9 @@ class UnresolvedDirectionBranches(unittest.TestCase):
         r = rows["INV-18"]
         self.assertEqual((r["status"], r["direction_state"]), ("conditional_hypothesis", "unresolved"))
         text = r["decisive_uncertainty"]
-        for branch in ("Branch A", "Branch B", "Branch C"):
+        for branch in ("Branch A", "Branch B", "Branch C", "Branch D"):
             self.assertIn(branch, text)
-        self.assertEqual(text.count("weakened"), 3)
+        self.assertEqual(text.count("weakened"), 4)
         self.assertIn("opposite", r["why_now"])
         self.assertNotIn("improves", (r["question"] + r["why_now"]).lower())
 

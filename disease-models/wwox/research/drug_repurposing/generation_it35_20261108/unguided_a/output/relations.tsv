@@ -1,0 +1,14 @@
+subject	relation	object	status	context	source_pmid	depth
+neuronal Wwox deletion	associated with spontaneous NMDA-receptor and gap-junction dependent bursting	neocortex layer II/III to V	observed	mouse slice	34634460	abstract_only
+neuronal Wwox deletion	associated with depolarised, higher-firing, larger-sag, larger-rebound layer II/III neurons	intrinsic state	observed	mouse slice	34634460	abstract_only
+neuronal Wwox deletion	associated with larger EPSC amplitude and smaller, rarer IPSCs	synaptic balance	observed	mouse slice	34634460	abstract_only
+Wwox knockout	associated with fewer PV and NPY interneurons and lower GAD65/67	hippocampus, 2 weeks	observed	mouse, whole-body knockout	30290271	abstract_only
+HCN channel	sets	input resistance and resting potential	transferred	cortical pyramidal neurons (review)	24756635	abstract_only
+TRIP8b	traffics HCN channels to dendrites; loss reduces surface HCN and Ih	channel localisation	transferred	mouse hippocampus; knockout	21593326	abstract_only
+neuroinflammation (LPS)	lowers dendritic HCN1 and TRIP8b	channel localisation	transferred	rat CA1, adult	29427087	abstract_only
+reduced Ih	produces hyperpolarised rest, higher Rin and less sag	direction opposite to Wwox state	transferred	rat cortical dysplasia, layer 5	21795624	abstract_only
+HCN1 gain-of-function variant	causes epileptiform spiking; sodium-channel blockers and retigabine increased it, valproate reduced it	drug sensitivity	transferred	mouse in vivo	36300716	abstract_only
+cholesterol	modulates HCN2 and HCN4 gating more than HCN1	membrane lipid	transferred	CHO cells, human isoforms	26404789	abstract_only
+postsynaptic spiking elevation	up-regulates inhibitory synapses via BDNF	homeostasis	transferred	cultured hippocampal neurons	21123568	abstract_only
+higher Rin with larger sag	is not explained by Ih gain alone	needs second change (leak K+, size, or lost shunt)	inferred	biophysics argument	none	not_read
+extracellular matrix and perineuronal nets in Wwox neurons	no relation found	cell-cell communication	undetermined	search returned two unrelated hits, not opened	none	not_read

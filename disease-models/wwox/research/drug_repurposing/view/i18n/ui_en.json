@@ -555,6 +555,7 @@
  "UI_IT.iv_ev": "Available evidence",
  "UI_IT.iv_f_all": "All",
  "UI_IT.iv_f_h": "Show",
+ "UI_IT.iv_fs_h": "Kind of row",
  "UI_IT.iv_funnel": "The generator produced {g} conditional proposals, {h} handed to qualification; of these {a4} were qualified in depth in IT21 ({k4} kept conditional, {r4} rejected with an informative outcome, {i4} inconclusive). The compound-to-WWOX route produced {p} proposals: {k3} kept conditional, {r3} rejected with an informative outcome, {i3} inconclusive; {q3} were qualified in depth. Qualified hypotheses: {q}. A conditional proposal remains a research question until there is a measurement in a system with altered WWOX.",
  "UI_IT.iv_funnel_h": "Where the new proposals come from",
  "UI_IT.iv_fur_h": "Other open investigations, beyond the ten in the list",

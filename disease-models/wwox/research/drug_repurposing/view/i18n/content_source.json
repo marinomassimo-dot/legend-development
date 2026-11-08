@@ -303,6 +303,10 @@
   "src": "en",
   "text": "position unchanged from IT20 (rank 1): IT28 challenge CH-IT28-ISR-ROLE (batches on the neuronal and the glial/myelin literature) changes what the test must measure and which result would discriminate, not the position."
  },
+ "3cbfb8ec2003": {
+  "src": "en",
+  "text": "In knockout, heterozygote and wild-type slices: sag, resting potential, input resistance, rebound and burst incidence before and after two Ih blockers of different chemotypes (the second so that an off-target action is not read as Ih), with a current-clamp step that matches the resting potential, and a voltage-clamp read of the blocker-sensitive current in a subset of cells; animals, not cells, are the replicates. Branch D adds the potassium-current arm: the potassium currents sensitive to a Kv7 blocker and to a Kir-channel blocker in voltage clamp, and input resistance read with synaptic transmission blocked."
+ },
  "3d05ab636d8d": {
   "src": "it",
   "text": "Capire se la sensibilità all'etosuccimide riflette il canale T, dato che non esiste alcuna misura del canale T. IT13: il catalogo elenca solo il canale T, ma i dati dello stesso articolo mostrano anche blocco GIRK; i trascritti P17 non decidono."
@@ -314,6 +318,10 @@
  "3e043aae172d": {
   "src": "en",
   "text": "What did not change: the number of generated proposals from the old inputs (980, only selection changed), the absence of any qualified hypothesis, and the earlier retrospective result (WWOX seed identity not separable from matched random sets on the measured properties only)."
+ },
+ "3e1898dcc3b8": {
+  "src": "en",
+  "text": "Branch A, compensatory Ih: blocking it worsens or leaves bursts; weakened if bursts fall. Branch B, pro-excitatory Ih through the depolarised resting potential: blocking it lowers bursts at matched membrane potential; weakened if bursts do not fall. Branch C, bystander: no effect on bursts although sag falls; weakened by any burst change. The sag itself must first be shown to be Ih (sensitive to the blocker), and a blocker that shifts the resting potential acts on the premises of A and B at once. Branch D, added from an unguided expansion (IT35): the higher input resistance of the knockout and the heterozygote is the opposite of what a larger Ih alone would give (in a rat cortical dysplasia model reduced Ih came with a higher input resistance, reversed by an Ih blocker, PMID 21795624; there the resting potential is hyperpolarised, so it is not a mirror image), so a second or alternative change, such as loss of a resting potassium conductance (Kir, K2P or Kv7 channels), is a rival explanation; weakened if blocker-sensitive potassium currents do not differ."
  },
  "3e893fac5fec": {
   "src": "en",
@@ -474,10 +482,6 @@
  "595b2de50fd2": {
   "src": "en",
   "text": "AhR-pathway activation is adverse in neural precursors in toxin studies; the pathway-target transcript is higher while NFE2L2 is lower."
- },
- "59d57064757f": {
-  "src": "en",
-  "text": "In knockout, heterozygote and wild-type slices: sag, resting potential, input resistance, rebound and burst incidence before and after two Ih blockers of different chemotypes (the second so that an off-target action is not read as Ih), with a current-clamp step that matches the resting potential, and a voltage-clamp read of the blocker-sensitive current in a subset of cells; animals, not cells, are the replicates."
  },
  "5ba82d5d53ac": {
   "src": "en",
@@ -787,6 +791,10 @@
   "src": "en",
   "text": "It is the role-resolving question the glia and myelin work left open (IT14): the maturation block is receptor-responsive or it is not, and one co-culture answers that before any in vivo question is asked. It enters at rank 6, below the ten-row line and behind the lithium and GABA-T rows (which carry a risk flag and human clinical reports and are not displaced by conditional probes), because the test is cell-level and inexpensive and an approved molecule exists for any later step, not because it is new: the precedent comes from a hormone-uptake defect in another disease and does not transfer by itself, and it sits below the two premise measurements (the dichloroacetate and NRF2 rows)."
  },
+ "95c3bbbfbe99": {
+  "src": "en",
+  "text": "ATF4 protein, total and phosphorylated eIF2-alpha and per-cell translation (nascent-protein labelling) in a WWOX-deficient human neural line against an isogenic control, at one differentiation stage and by cell type, no compound involved. Only if the sign is high, a pre-registered panel: an eIF2B activator and kinase-level loss against genetic PPP1R15A loss, with a second-stressor arm and a functional endpoint. IT30 (design hypothesis only, from the residues of CH-IT28-ISR-ROLE read in wo06_it30_20261106 and independently checked): keep a network-activity or seizure-relevant readout beside the protein-level sign; if a potentiation arm is tried, make it genetic (a PPP1R15B knockdown) or chemical with measured p-eIF2alpha and an alpha-2 control (guanabenz acts on alpha-2 receptors and Sephin1 and guanabenz were not shown to inhibit PPP1R15A-PP1); the only mammalian seizure-endpoint precedent for a potentiator is two studies of one eIF2-alpha phosphatase inhibitor with opposite signs, so no arm is promoted. IT35 (gsk3_eif2b_20261107, audited): add phosphorylation of eIF2B epsilon at the GSK3 site, eIF2B exchange activity and per-cell translation beside phospho-eIF2 alpha and ATF4, and include a phospho-eIF2 alpha-independent arm; a GSK3 route is not read as equivalent to phospho-eIF2 alpha inhibition; no arm is promoted and no compound is justified by this package."
+ },
  "95f673af346c": {
   "src": "it",
   "text": "Elettrofisiologia su fette del knockout neurone-specifico dell'articolo originale: la linea non è disponibile qui, se sia ottenibile non nota; magnesio: etichette USA per nome, Italia non verificata."
@@ -986,10 +994,6 @@
  "b2bfdc0d65f4": {
   "src": "en",
   "text": "Which of the six layers moves, per animal. A lower transcript does not show fewer cells, lower activity or less inhibition; an absent change in GSE158684 is not evidence of no change; the oligodendrocyte-lineage shift could be consequence or cause of an excitation-inhibition change and the data cannot say which. Whether any parvalbumin-cell change is a deficit, a compensation or a delayed maturation is unresolved, so the need direction stays unresolved and no lever sign is derived. Whether recombination reaches parvalbumin cells, and glia, in this deletion is not known from any source read, and a reporter measured in another context does not measure the excision of Wwox in parvalbumin cells."
- },
- "b341877f3f25": {
-  "src": "en",
-  "text": "Branch A, compensatory Ih: blocking it worsens or leaves bursts; weakened if bursts fall. Branch B, pro-excitatory Ih through the depolarised resting potential: blocking it lowers bursts at matched membrane potential; weakened if bursts do not fall. Branch C, bystander: no effect on bursts although sag falls; weakened by any burst change. The sag itself must first be shown to be Ih (sensitive to the blocker), and a blocker that shifts the resting potential acts on the premises of A and B at once."
  },
  "b3a38e83ad32": {
   "src": "it",
@@ -1306,10 +1310,6 @@
  "f136b8ca088b": {
   "src": "en",
   "text": "IT21 P3b (G02)"
- },
- "f1d103f32dce": {
-  "src": "en",
-  "text": "ATF4 protein, total and phosphorylated eIF2-alpha and per-cell translation (nascent-protein labelling) in a WWOX-deficient human neural line against an isogenic control, at one differentiation stage and by cell type, no compound involved. Only if the sign is high, a pre-registered panel: an eIF2B activator and kinase-level loss against genetic PPP1R15A loss, with a second-stressor arm and a functional endpoint. IT30 (design hypothesis only, from the residues of CH-IT28-ISR-ROLE read in wo06_it30_20261106 and independently checked): keep a network-activity or seizure-relevant readout beside the protein-level sign; if a potentiation arm is tried, make it genetic (a PPP1R15B knockdown) or chemical with measured p-eIF2alpha and an alpha-2 control (guanabenz acts on alpha-2 receptors and Sephin1 and guanabenz were not shown to inhibit PPP1R15A-PP1); the only mammalian seizure-endpoint precedent for a potentiator is two studies of one eIF2-alpha phosphatase inhibitor with opposite signs, so no arm is promoted."
  },
  "f22be07d79af": {
   "src": "en",

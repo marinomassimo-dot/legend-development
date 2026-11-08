@@ -1585,7 +1585,8 @@
     "Without amyloid the fly Atf4 comparison was not significant (6 vs 6; an effect as large as the amyloid-arm one is not excluded, and no interaction test was run); the organoid ISR set is lower than chance.",
     "Adult ALS trial: eIF2B activation engaged its target with no clinical benefit (abstract-level); a PERK inhibitor showed signs of pancreatic toxicity in a mouse model (card E01, evidence against; abstract-level, not located to a manifest).",
     "The only paediatric dataset is in vanishing white matter, a disease of eIF2B itself, with serious adverse events in about three quarters of 33 children and hallucinations in over half (abstract-level); the card does not state that the agent is an eIF2B activator, and the dataset is not suitability for WWOX-DEE.",
-    "In the AFG3L2 precedent the ISR is reported as protective and its potentiation as beneficial (O9), contrary to the premise of attenuation; the premise of this need (a harmful over-activation) rests on one fly paper whose Atf4 rise needs amyloid and on the PARS2 fly."
+    "In the AFG3L2 precedent the ISR is reported as protective and its potentiation as beneficial (O9), contrary to the premise of attenuation; the premise of this need (a harmful over-activation) rests on one fly paper whose Atf4 rise needs amyloid and on the PARS2 fly.",
+    "IT35 (gsk3_eif2b_20261107): an ISR-attenuation arm does not test the GSK3-eIF2B link, and a GSK3 route is not equivalent to phospho-eIF2 alpha inhibition: the integrated-stress-response modulator named in the thread acts through phosphorylated eIF2 and is small without it, and no source tests it against a lesion at the GSK3 site of eIF2B epsilon; any design needs a phospho-eIF2 alpha-independent arm. The catalogue holds no record of that modulator by name and EIF2B2 to EIF2B5 have no catalogue records (EIF2B1 has two), so the generator cannot reach the tool."
    ],
    "sources": {
     "cards": [
@@ -4515,7 +4516,7 @@
      "readout_level": "phospho",
      "direction_observed": "pSer9 decreased; total unchanged",
      "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-     "limits": "A systemic null: expected to be metabolically compromised (CLAIM 036), but that was measured in another knockout at P18 (a different Cre); it was not measured in this paper's knockout. The phospho-S9 readout is not the docking mechanism.",
+     "limits": "A systemic null: expected to be metabolically compromised (CLAIM 036), but that was measured in another knockout at P18 (a different Cre); it was not measured in this paper's knockout. The phospho-S9 readout is not the docking mechanism. IT35 (package gsk3_eif2b_20261107, independently audited: 22 of 23 rows supported, 1 overshoot): Ser9 phosphorylation is an inhibitory-site proxy read from one lane per genotype per region at one stage (P20, after seizure onset in a malformed brain, so the change may be secondary), with no activity assay and a heterozygote that is not intermediate on the printed densitometry; the manifest's 'in every region' sentence is false in two of three regions.",
      "pmid": "32000863",
      "locators": [
       {
@@ -4567,7 +4568,9 @@
    ],
    "inferred": [
     "That a docking-site (Axin-site) ligand could separate GSK3 isoforms is an isoform-selectivity argument from adjacent literature, untested for WWOX.",
-    "CLAIM 016 (pSer9 falls) and CLAIM 035 (S9-independent docking) exclude each other on the S9 axis; which reading carries the disease is unresolved."
+    "CLAIM 016 (pSer9 falls) and CLAIM 035 (S9-independent docking) exclude each other on the S9 axis; which reading carries the disease is unresolved.",
+    "IT35 (gsk3_eif2b_20261107): a downstream read-out for the GSK3 route would be phosphorylation of eIF2B epsilon at the GSK3 site (rat Ser535 = human Ser540 = mouse Ser536) together with the GSK3 isoform (GSK3B deletion lowers it in retinal ganglion cells, GSK3A deletion does not); that GSK3 phosphorylates eIF2B epsilon is supported only outside WWOX (CHO cells and rat cardiac myocytes at abstract level, mouse retinal ganglion cells at partial full text), and one abstract-level source says the dephosphorylated site did not give significant eIF2B activation. Whether GSK3 activity, phospho-epsilon, exchange activity or translation change in any WWOX-deficient neural system is unmeasured.",
+    "IT35 (NB-2, nb2_tau_catenin_it35_20261108, blind re-audit at abstract depth): the Tau-versus-catenin discriminator by inhibitor class has no demonstrated precedent in the abstract-level routes searched: no PubMed record in a neuronal system reports both a phosphorylated-Tau and a beta-catenin or Wnt-reporter readout under two or more GSK3 inhibitor classes; the nearest is a CHO and rat-cultured-neuron paper (PMID 16014628) in which lithium gave beta-catenin nuclear translocation with decreased Tau phosphorylation and a second, ATP-competitive compound gave translocation with its Tau readout not stated in the abstract (full text needed); a 2025 SH-SY5Y series is one compound in one class; the astrocyte paper (PMID 14511119) is outside the neuronal rows. Not an absence from the primary literature: full texts, substrate-competitive and allosteric compounds were not screened. A design needs its own arms (lithium, an ATP-competitive, a substrate-competitive or allosteric compound), each with phospho-Tau and a Wnt reporter in the same neuronal culture."
    ],
    "intervention_direction": {
     "direction": "uncertain",
@@ -6394,8 +6397,9 @@
    ],
    "inferred": [
     "That the larger sag is carried by HCN (Ih) current: sag is commonly attributed to it, but the entries read record no Ih-blocker arm and no voltage-clamp current.",
-    "That the intrinsic changes are necessary for the bursts: they are graded or shared in the heterozygote, which rarely bursts, so they are at most necessary, not sufficient.",
-    "Whether the intrinsic state is compensatory, pro-excitatory or a bystander: not decided."
+    "What the intrinsic changes do for the bursts is not decided, and the genotype comparison cannot decide it: input resistance is shared by the heterozygote and the knockout, resting potential and sag are intermediate in the heterozygote (heterozygote against knockout is not tested in Table 1), rebound is larger in the knockout only, and bursts are rare in the heterozygote; the four properties differ from each other, so none of them is shown to be necessary or sufficient, and the role (compensatory, pro-excitatory, bystander, or mixed) remains to be discriminated by a perturbation.",
+    "Whether the intrinsic state is compensatory, pro-excitatory or a bystander: not decided.",
+    "IT35 (unguided expansion, audited at abstract level): a larger Ih alone would be expected to lower input resistance, whereas input resistance is higher in both mutants; in a rat cortical dysplasia model reduced Ih came with a higher input resistance, reversed by an Ih blocker (PMID 21795624), so the observation points to a second or alternative change (a resting potassium conductance) or to cell state; the mechanism and voltage range of the relation are background knowledge, not sourced here."
    ],
    "intervention_direction": {
     "direction": "uncertain",

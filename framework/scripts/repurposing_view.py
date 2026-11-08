@@ -4317,7 +4317,7 @@ UI_IT20B = {
     "iv_pending": "In preparazione: l'elenco è generato da un'analisi in corso e non è ancora nei dati di questa versione. Nessuna voce viene mostrata al suo posto.",
     "iv_pos": "Posizione", "iv_tie": "pari merito", "iv_int": "Composto o intervento", "iv_q": "Domanda", "iv_why": "Motivo della priorità", "iv_ev": "Evidenza disponibile",
     "iv_depth": "Solidità dell'evidenza (profondità di lettura)", "iv_unc": "Incertezza decisiva", "iv_next": "Prossimo test", "iv_nov": "Novità, nel perimetro verificato", "iv_move": "Motivo dello spostamento",
-    "iv_more": "Dettagli scientifici della riga", "iv_f_h": "Mostra", "iv_f_all": "Tutte", "iv_legend_h": "Come leggere l'origine di ogni riga",
+    "iv_more": "Dettagli scientifici della riga", "iv_fs_h": "Tipo di riga", "iv_f_h": "Mostra", "iv_f_all": "Tutte", "iv_legend_h": "Come leggere l'origine di ogni riga",
     "iv_ol_known_in_wwox": "parte da un risultato già osservato in un sistema WWOX (letteratura WWOX o scheda)",
     "iv_ol_generated_by_legend": "nata dal calcolo di LEGEND: ipotesi generata, senza conferma sperimentale",
     "iv_ol_external_transferred": "precedente di un'altra malattia o di un altro sistema, trasferito al contesto WWOX: la rilevanza per WWOX è da verificare",
@@ -4568,10 +4568,14 @@ def render_investigations(P: dict) -> str:
         mv = ctx.get("published_vs_it20") or {}
         out += (f'<details class="note inv-how"><summary>{E(U["iv_curated_h"])}</summary>{E(U["iv_curated"])}<br><b>{E(U["iv_axes_h"])}.</b> {E(U["iv_axes"])}</details>'
                 f'<p class="inv-vs"><b>{E(U["iv_vs_h"])}.</b> {E(U["iv_vs"].format(u=mv.get("unchanged", 0), m=mv.get("moved", 0), n=mv.get("new", 0)))}</p>')
-    present = [o for o in ("known_in_wwox", "generated_by_legend", "external_transferred") if any(r["origin_class"] == o for r in rows)]
+    every = list(rows) + list(rk.get("further_investigations") or []) + list(rk.get("conditional_hypotheses") or [])      # IT35: the filters cover the whole queue
+    present = [o for o in ("known_in_wwox", "generated_by_legend", "external_transferred") if any(r["origin_class"] == o for r in every)]
+    present_st = [x for x in ("carded_thread", "premise_measurement", "conditional_hypothesis") if any(r.get("status") == x for r in every)]
     out += (f'<ul class="inv-legend" aria-label="{E(U["iv_legend_h"])}">' + "".join(f'<li><span class="org org-{o}">{E(U["iv_o_" + o])}</span> {E(U["iv_ol_" + o])}</li>' for o in present) + '</ul>'
             f'<div class="inv-filter" hidden role="group" aria-label="{E(U["iv_f_h"])}"><span class="mini">{E(U["iv_f_h"])}:</span> <button type="button" data-f="" aria-pressed="true">{E(U["iv_f_all"])}</button>'
-            + "".join(f'<button type="button" data-f="{o}" aria-pressed="false">{E(U["iv_o_" + o])}</button>' for o in present) + '</div>')
+            + "".join(f'<button type="button" data-f="{o}" aria-pressed="false">{E(U["iv_o_" + o])}</button>' for o in present) + '</div>'
+            f'<div class="inv-filter inv-filter-st" hidden role="group" aria-label="{E(U["iv_fs_h"])}"><span class="mini">{E(U["iv_fs_h"])}:</span> <button type="button" data-fs="" aria-pressed="true">{E(U["iv_f_all"])}</button>'
+            + "".join(f'<button type="button" data-fs="{x}" aria-pressed="false">{E(U["iv_st_" + x])}</button>' for x in present_st) + '</div>')
     out += f'<p class="mini mut">{E(U["iv_text_en"])}</p><ol class="inv-list">{"".join(items)}</ol>'
     conds = rk.get("conditional_hypotheses") or []
     if conds:
