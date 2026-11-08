@@ -385,8 +385,10 @@ def classify_paths(P: dict, rep: Report) -> None:
                 rep.bad("unclassified-field", path, val)
 
 
-def scan_strings(items: list[tuple[str, str]], ref: Reference, rep: Report, label: str) -> None:
-    """Forbidden names, wording and identifiers in a list of (where, string)."""
+def scan_strings(items: list[tuple[str, str]], ref: Reference, rep: Report, label: str, source_vocab: set | None = None) -> None:
+    """Forbidden names, wording and identifiers in a list of (where, string). `source_vocab` (IT38): the words of the audited English edition; given for a translated page, a
+    SINGLE-word catalogue-name hit that the English source never contains is a word of the page's language (Spanish "casa", German "neuer"), not a name copied from the source,
+    and is counted as suppressed; a word the source does contain, and every multi-word hit, is still judged as before."""
     names, texts = ref.names, ref.texts
     long_names = {k: v for k, v in names.items() if len(k.split()) > GRAM}
     long_first = defaultdict(list)
@@ -445,6 +447,9 @@ def scan_strings(items: list[tuple[str, str]], ref: Reference, rep: Report, labe
                 continue
             if any(hit[1] in t for t in ref.titles):   # a PDF text layer breaks lines inside a title: the hit is part of a bibliographic title
                 rep.suppressed["inside a bibliographic title (line-broken text layer)"] += 1
+                continue
+            if source_vocab is not None and hit[0] == "forbidden-name" and len(hit[1].split()) == 1 and hit[1] not in source_vocab:
+                rep.suppressed["a single word of the page's language that the audited English source does not contain"] += 1
                 continue
             rep.bad(hit[0], f"{label}:{where}", f"{hit[1]!r} ({hit[2]})")
         for m in id_rx.finditer(s):
@@ -623,8 +628,21 @@ def identifier_census(text: str) -> dict:
     return {k: len(set(re.findall(rx, text))) for k, rx in kinds.items()}
 
 
-def audit_html(text: str, dr: Path, ref: Reference | None = None, extra_surfaces: list[tuple[str, str]] | None = None, literature=None) -> tuple[Report, Reference]:
+def source_vocabulary(text: str) -> set:
+    """The words of an audited page (data strings and visible surfaces): the vocabulary a translation of it can draw a name from."""
+    P = extract_payload(text)
+    words = set()
+    for _, val, _ in walk(dict(P, pairs=named_pairs(P))):
+        if isinstance(val, str):
+            words.update(tokens(val))
+    for _, v in visible_surfaces(text):
+        words.update(tokens(v))
+    return words
+
+
+def audit_html(text: str, dr: Path, ref: Reference | None = None, extra_surfaces: list[tuple[str, str]] | None = None, literature=None, source_text: str | None = None) -> tuple[Report, Reference]:
     rep = Report()
+    vocab = source_vocabulary(source_text) if source_text else None
     ref = ref or Reference(dr)
     P = extract_payload(text)
     if P.get("source") != "shareable":
@@ -636,9 +654,9 @@ def audit_html(text: str, dr: Path, ref: Reference | None = None, extra_surfaces
     for path, val, is_key in walk(P2):
         if isinstance(val, str):
             items.append((path + ("#key" if is_key else ""), val))
-    scan_strings(items, ref, rep, "data")
+    scan_strings(items, ref, rep, "data", vocab)
     vis = visible_surfaces(text)
-    scan_strings(vis, ref, rep, "page")
+    scan_strings(vis, ref, rep, "page", vocab)
     pair_scan(items, ref, rep, "data", literature)
     pair_scan(vis, ref, rep, "page", literature)
     file_token_scan(items, rep, "data")
@@ -924,8 +942,15 @@ def main(argv=None) -> int:
     ref = Reference(a.dr)
     corpus_cache: dict = {}
     rc, reports = 0, {}
+    en_files = {a.dr / "view" / rv.out_name("shareable", "en"), a.dr / "view/shareable_package" / rv.LANG_FILE["en"]}
+
+    def english_of(f: Path):
+        cand = (f.parent / rv.LANG_FILE["en"]) if f.parent.name == "shareable_package" else (a.dr / "view" / rv.out_name("shareable", "en"))
+        return cand if cand.exists() and f not in en_files else None
+
     for f in files:
         text = f.read_text(encoding="utf-8")
+        en_ = english_of(f)
         P = extract_payload(text)
         extra, dinfo = ([], {})
         if a.dynamic:
@@ -936,7 +961,7 @@ def main(argv=None) -> int:
         if dirs and corpus_cache.get("dirs") != dirs:
             corpus_cache.update(dirs=dirs, texts=read_corpus(dirs))
             corpus_cache["lit"] = Literature(corpus_cache["texts"])
-        rep, _ = audit_html(text, a.dr, ref, extra, corpus_cache.get("lit") if dirs else None)
+        rep, _ = audit_html(text, a.dr, ref, extra, corpus_cache.get("lit") if dirs else None, source_text=en_.read_text(encoding="utf-8") if en_ else None)
         rep.info["dynamic"] = dinfo
         if not a.no_text:
             if dirs:
