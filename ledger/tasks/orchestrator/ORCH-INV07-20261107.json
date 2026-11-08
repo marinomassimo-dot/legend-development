@@ -8,14 +8,15 @@
  "START_UTC": "2026-11-07T22:30:00Z",
  "BASELINE": "development/main ce121d5814b8c83c65721c0709ac4ec2554a5011; same worktree and branch as ORCH-TTYPE-20261107. Receipts exist for 42909904 and 35984507; none for 16476929.",
  "CURRENT_PACKAGE": {
-  "id": "I07",
-  "state": "complete; lands with ORCH-TTYPE-20261107",
+  "id": "none",
+  "state": "complete; landed with the rest of the queue-1 branch",
   "delegate_active": "none",
-  "updated": "2026-11-08T00:45:00Z"
+  "updated": "2026-11-08T08:50:00Z"
  },
  "RESUME": "Folder drug_repurposing/metabolic_inv07_20261107/ (BRIEF.md, output/). Order: producer, census, verifier, correction.",
  "DECISIONS_TAKEN": [
-  "Queued by the operator beside the running work; one delegate at a time; settings as before."
+  "Queued by the operator beside the running work; one delegate at a time; settings as before.",
+  "Battery on a no-hardlinks clone of cc203e73f5f1b2bc6bfd03b867f3c55887efb423 (the tip of task/ttype-20261107 carrying the T-type, INV-05, INV-06, INV-07 and INV-08 packages), run at nice 19 while no other battery was running: first run on 893ad6ef stopped on one real failure (test_fresh_clone_reader_journey: an inline path in the INV-06 README that did not resolve from its folder), fixed; second run REGRESSION VERDICT PASS WITH SKIPS (214 targets, 9 skipped, environment). Not attributed to the closure commit that records it."
  ],
  "DELEGATIONS": [
   "I7 producer i7-p: asked sonnet/medium, read back claude-sonnet-5-5 x48, medium x48; birth 17,439; 48 turns; ~8 min; output 53,710; cache written 154,201; cache read 4,664,790; peak 162,686; completed README (~840 words), evidence (42 rows), explanations (7), experiment (8 ordered measures), queries (10), 3 staged receipts (abstract_only, validated with DOI check); 3 of 5 new sources; 16476929 full text unreachable (HTTP 403; stopped)",
@@ -29,7 +30,7 @@
   "Condition: settings not restated. Default: as before. Why safe: reversible; no shared file touched."
  ],
  "AUTHORISED_QUEUE_20261107F": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_1": {
    "order": 1,
    "steps": [

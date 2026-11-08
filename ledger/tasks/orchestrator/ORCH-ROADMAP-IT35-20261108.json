@@ -1,0 +1,137 @@
+{
+ "_schema": "orchestrator-task-v1",
+ "TASK_ID": "ORCH-ROADMAP-IT35-20261108",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "P0",
+ "OBJECTIVE": "IT35: phenotype-guided pharmacological generation, use of available knowledge, continuous improvement; close known imprecisions; locate where knowledge stops feeding generation; smallest general link; contrasting-case measurement; dashboard. Horizon 8-10 hours, duration is not a goal.",
+ "START_UTC": "2026-11-08T00:00:00Z",
+ "RESUME": {
+  "worktree": ".claude/worktrees/it35 (branch task/it35)",
+  "next_action": "P1 imprecisions, then P2, P3.",
+  "note": "Zero spend; no contact; four current files via BATCH_COMMIT only (carbenoxolone wording if a register carries it); safe_push only; one delegate at a time; no battery while another session runs one; queue2 and ttype belong to other sessions."
+ },
+ "AUTHORISED_QUEUE_20261108": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P0 Baseline: remote, CI per SHA, other sessions (queue2, ttype untouched), resumable queue",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "P1 Close imprecisions: (1) 'at most necessary, not sufficient' wording in IT34 consumers; (2) live uses of 'not attributable to gap junctions' (history kept; BATCH_COMMIT only if a canonical register carries it); (3) 40 v 9 skips per suite with the local corpus run separately",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "P2 Push concurrency: reproduce in a throwaway fixture (main moves, ff fails, caller publishes another commit); minimal fix (expected SHA) and regression",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "P3 Generative capacity diagnosis on few contrasting cases from more than one experimental origin; classify the break point (knowledge not retrieved / relation not represented / tool not called / action unresolved / graph gap / no probe / scientific limit); manual target addition is a correction, not generation",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "P4 OpenScientist strengths via existing tools: phenotype -> alternatives; relations beyond pathways (trafficking, membrane/lipids, ECM, substrates/cofactors/complexes, circuits/cell types/stage); adjacent literature; predictions before results; verdicts not imported as facts",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "P5 Autonomy measurement: phenotype+context question without compound names, freeze proposals and trace, then add suggestions; distinct rationales, supported/transferred/hypothetical links, actions defined, compounds with identity, steps emerging only after a hint, falsifiers, cost",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "P6 Smallest general link chosen by the audit; before/after and ablation; reach v new relation v prediction kept apart",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "P7 Consume the science in progress: accepted/published deliveries, verified deltas, post-review corrections; NB-2 (Tau/beta-catenin pairing) if not done; HCN, lipids, hyaluronan-PNN, HDAC5 as comparison cases not repeated",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P8": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "P8 Surviving hypotheses to research decisions: compound/family, action, cell/system/stage, benefit, WWOX observations, external precedents, hypothetical bridges, counter-evidence, next experiment, priority-changing result; group investigations by shared premise",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P9": {
+   "order": 10,
+   "steps": [
+    {
+     "step": "P9 Dashboard: priority investigations with reason, decisive uncertainty, next step; chain expansion or filter by evidence/intervention type; five languages, phone; published site verified",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P10": {
+   "order": 11,
+   "steps": [
+    {
+     "step": "P10 Targeted scouting only for a named gap (GitHub, Hugging Face, Nature); licences separate; durable method in existing places; one home per rule",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P11": {
+   "order": 12,
+   "steps": [
+    {
+     "step": "P11 Cost: IT34 verification cost diagnosed (startup, reads, reasoning, delivery); landing, cleanup, final report A-I",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}
