@@ -21,7 +21,7 @@
   "id": "landing",
   "state": "packages delivered and audited; checks and landing pending",
   "delegate_active": "none",
-  "updated": "2026-11-08T10:05:00Z"
+  "updated": "2026-11-08T09:44:00Z"
  },
  "RESUME": "Folders drug_repurposing/<name>_20261108/ in worktree it36sci. Order: P1 producer, P1 verifier, P2/P3 producer, verifier, P4 unguided, P4 LEGEND-side producer, verifier, delivery.",
  "DECISIONS_TAKEN": [
