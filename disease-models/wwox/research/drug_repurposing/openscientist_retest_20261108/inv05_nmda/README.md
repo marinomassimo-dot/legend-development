@@ -13,7 +13,7 @@ Not medical advice. No dose, schedule or route appears. Source cap for Phase 2: 
 ## (a) Coverage
 
 * Items: 91 (E91 added after the audit). By kind: observation 19, compound 13, inference 10, limit 10, counter_evidence 9, other 7, experiment 6, target 5, hypothesis_favourable 4, recommendation 3, mechanism_step 2, open_question 2, alternative_explanation 1.
-* By `legend_class` (per item): already_present_and_used 23, present_not_used 33, verified_or_corrected 15, new_to_legend 5, unverified 10, superseded_or_contradicted 4 (E11 nitrous oxide reclassified after the audit; E91 not yet classified in `reconcile.tsv`: unlabelled uncited matrix scores, same treatment as E57).
+* By `legend_class` (per item): already_present_and_used 23, present_not_used 33, verified_or_corrected 15, new_to_legend 5, unverified 11, superseded_or_contradicted 4 (E11 nitrous oxide reclassified after the audit; E91, the unlabelled uncited matrix scores, was reconciled by the Orchestrator after the audit as `unverified` with fate not assessed, same treatment as E57).
 * By `prior_brief_fate` (per item): kept 22, modified 29, narrowed 12, omitted 23 (E13 "not addressed" counted with omitted; three items not applicable).
 * Sources: 24 rows; identity check run on all 21 PMIDs (`queries.tsv` Q01).
 

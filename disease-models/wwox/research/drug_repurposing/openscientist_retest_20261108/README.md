@@ -4,6 +4,18 @@ Non-canonical research material. Not medical advice; no dose, schedule, route or
 
 Task record: `ledger/tasks/orchestrator/ORCH-IT38OS-20261108.json`. Method per report: a producer in a separate context read the whole text first (Phase 1, repository closed to it) and extracted every distinct item with anchors and proposal chains; only then (Phase 2, same conversation) compared with the repository and the 2026-11-07 package, listed 13–15 decisive propositions (favourable and unfavourable), and reopened at most five sources; a different blind verifier checked the propositions, a twelve-point coverage sample of the extraction against the original text, eight reconciliation rows and the evidence quotes; the producer then applied the verifier's corrections. One delegate was active at a time. Settings and read-backs are in the task record and `COST_NOTE.md`.
 
+## 0 · What exists, at what level (nothing here is applied to a consumer)
+
+| Layer | Count | Level |
+|---|---|---|
+| Reports examined in full text | 11 | each read end to end by a producer (Phase 1, repository closed) and again by a blind verifier |
+| Items extracted and reconciled | 778 | one `reconcile.tsv` row per item, set-checked |
+| Primary sources newly read and receipted | 49 | 12 partial full texts (Europe PMC/PMC/NCBI text; figures mostly not viewed), 37 abstract only, 0 complete full-text reads |
+| Further sources read by verifiers or reused from earlier receipts | not receipted | verifier reads were often full text (stated per audit) but carry no receipt; earlier receipts were reused only where proposition, source and context matched |
+| Decisive propositions verified | 153 | independent blind verdicts; none "not supported", none "unverifiable" at proposition level; sub-claims left unreachable are listed per audit |
+| Proposals delivered | 27 lines in `consumer_delta.md` | wording additions, repairs of earlier files, one design arm |
+| Modifications applied to consumers (needs, investigations, cards, ranking, views, registries, ledger) | **0** | the proposals are still only in `consumer_delta.md`; staged receipts are not recorded in the ledger |
+
 ## 1 · Coverage
 
 | Report | Folder | Items extracted | Decisive propositions | Newly read sources (cap 5) | Staged receipts | Verifier verdicts | Coverage sample (present / narrowed / missing of 12) |
@@ -30,7 +42,7 @@ Item-level reconciliation over the 778 items (`reconcile.tsv`, recomputed from t
 | already present and used | 299 |
 | verified or corrected | 169 |
 | present but not used | 102 |
-| unverified | 102 |
+| unverified | 103 |
 | new to LEGEND | 61 |
 | superseded or contradicted | 44 |
 
@@ -40,7 +52,7 @@ Item-level reconciliation over the 778 items (`reconcile.tsv`, recomputed from t
 | modified | 225 |
 | narrowed | 130 |
 | omitted | 204 (26 percent) |
-| not applicable | 6 |
+| not applicable or not assessed | 7 |
 
 "New to LEGEND" means new to this repository's package, not new to the literature: `literature_novelty` is `not assessed` throughout, because no systematic literature-novelty search was run (a bounded absence search is stated per proposition where one was made). The `legend_class` column mixes verification state with repository novelty in some packages (stated in `inv08_nrf2/README.md` and `inv18_membrane/README.md`).
 
