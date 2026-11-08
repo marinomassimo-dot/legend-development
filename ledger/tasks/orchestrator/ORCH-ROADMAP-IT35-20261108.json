@@ -135,8 +135,9 @@
    "steps": [
     {
      "step": "P11 Cost: IT34 verification cost diagnosed (startup, reads, reasoning, delivery); landing, cleanup, final report A-I",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "note": "cost diagnosis done: the IT34 verifier's 'about 40k' was the notice's all-token field; census: 8 responses, 7,309 output tokens, birth context 18.5k, peak 38.6k, cache read 192k, more than half of the output is the audit file and final message; rule added to delegation_budget.md; the unguided producer 13,975 and its verifier 4,920 output; remaining: landing, cleanup, final report"
     }
    ]
   }
