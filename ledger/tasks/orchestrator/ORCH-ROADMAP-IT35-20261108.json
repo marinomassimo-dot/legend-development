@@ -39,8 +39,9 @@
    "steps": [
     {
      "step": "P2 Push concurrency: reproduce in a throwaway fixture (main moves, ff fails, caller publishes another commit); minimal fix (expected SHA) and regression",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "reproduced in a throwaway repository with a bare remote (test_a_moved_main_cannot_publish_a_commit_the_caller_did_not_mean): main holds another session's unpublished integration commit, the caller's `git merge --ff-only <candidate>` fails, the next command runs, and safe_push publishes HEAD. The tool already gated and pushed the same SHA; the lost link was the caller's intention. Minimal fix in the existing tool: optional `--expect-sha <rev>` (also `=`), refused before the gate unless HEAD is that commit, unknown revisions refused; one line in framework/scripts/README.md; no lock, service or flow; 10 tests OK (the 9 earlier refusal paths unchanged)"
     }
    ]
   },
