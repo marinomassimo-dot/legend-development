@@ -1,0 +1,18 @@
+query_id	database_or_route	string_or_url	run_at_utc	hits	what_was_done
+PQ1	PubMed tool	Brewer optimized survival of hippocampal neurons in B27-supplemented Neurobasal	2026-11-08T12:55Z	1	found PMID8377226; abstract only
+PQ2	PubMed tool	Elazar Axoglial adhesion by Cadm4 regulates CNS myelination	2026-11-08T12:55Z	1	found PMID30551998; PMC full text via the tool
+PQ3	PubMed tool	Madhavan M[Author] AND Nat Methods[Journal] AND 2018 AND oligodendrocytes spheroids (a free-text first string returned 0 hits)	2026-11-08T12:55Z	1	found PMID30046099; PMC full text via the tool
+PQ4	PubMed tool	two strings joining B27, triiodothyronine, composition and oligodendrocyte	2026-11-08T12:56Z	0	over-constrained, no result; replaced by PQ5
+PQ5	Europe PMC REST search	B27 AND triiodothyronine AND (B27 contains OR B-27 contains OR contained in B27 OR present in B27)	2026-11-08T12:56Z	8	one hit's text searched (PMID31396286); two PMC XML requests answered HTTP 500 and were dropped, no second client
+V1	Thermo Fisher product page 17504044 (fetch tool)	order/catalog/product/17504044	2026-11-08T12:57Z	1 page	no composition on page
+V2	Thermo Fisher manual PDF (fetch tool)	documents host B27supplement_man.pdf	2026-11-08T12:57Z	0	HTTP 403, stopped for that source, not retried
+V3	Thermo Fisher media formulation page (fetch tool)	media-formulation.250.html	2026-11-08T12:58Z	1 page	T3 listed in B-27 formulation; summariser relay
+V4	Thermo Fisher media formulation page (fetch tool)	media-formulation.113.html	2026-11-08T12:58Z	1 page	wrong product (a guess of the page number); discarded, no data
+V5	Thermo Fisher product page 17502048 (fetch tool)	order/catalog/product/17502048	2026-11-08T12:58Z	1 page	no components listed
+G1	GEO acc.cgi text, brief view	GSE158684	2026-11-08T12:59Z	1 series	design, file list, no publication line
+G2	NCBI esummary db=sra	ids 11991543 to 11991550	2026-11-08T12:59Z	8	all status hup
+G3	GEO acc.cgi text, brief view	GSE158681	2026-11-08T12:59Z	1 series	design, sample list, file name
+G4	GEO FTP HEAD and GET	GSE158681 and GSE158682 TPM tables	2026-11-08T12:59Z	2 files	sizes 4,819,338 and 2,614,428 bytes; checksums equal to the module's; headers read, no analysis
+G5	Ensembl REST lookup	symbol lookup for 34 genes with expanded transcripts	2026-11-08T13:00Z	0	HTTP 500 for every call; route dropped; 50 MB cDNA download not taken
+L1	local held matrices (GSE158684)	own detection and per-nucleus counts, 33 genes, no test	2026-11-08T12:58Z	n/a	evidence rows G05 and G06
+L2	git grep in the module	strings Slc16a1 Slc2a1 Slc16a7 Klf9 Dio3 Slc16a2 with nuclei and 158684; then threshold tables for 27 genes	2026-11-08T12:58Z	see rows T01 to T04	bounded: this module only
