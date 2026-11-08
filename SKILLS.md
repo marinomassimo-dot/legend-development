@@ -1,6 +1,6 @@
 # Skills & agents — what this system can actually do
 
-The reasoning power of LEGEND does not live in one big prompt. It lives in **23 composable skills** and **5 reusable subagents** that call each other in a defined order, each with its own gate, its own output contract and — where it exists — its own runnable code.
+The reasoning power of LEGEND does not live in one big prompt. It lives in **24 composable skills** and **5 reusable subagents** that call each other in a defined order, each with its own gate, its own output contract and — where it exists — its own runnable code.
 
 This page is the catalogue. It exists because a skill is only useful if you can find it.
 
