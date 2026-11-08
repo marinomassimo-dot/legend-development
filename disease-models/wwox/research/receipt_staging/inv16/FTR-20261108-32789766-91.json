@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-08T00:20:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-08T00:21:00Z",
+ "event_id": "FTR-20261108-32789766-91",
+ "evidence_basis": [
+  "abstract analysed in full; the statements are abstract-level and carry no method, figure or table detail",
+  "verbatim_locator | proposition: GLUT1 delivers glucose across the barrier and onward to astrocytes and neurons | Abstract | \"The glucose transporters mediate uptake of D-glucose across the blood-brain barrier and delivery of D-glucose to astrocytes and neurons.\"",
+  "verbatim_locator | proposition: GLUT1 deficiency syndrome is a loss-of-function lesion of GLUT1 | Abstract | \"GLUT1-SD is caused by defect mutations in GLUT1.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/hdac5_inv16_20261108/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/hdac5_inv16_20261108/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 32789766 (abstract and metadata as served 2026-11-08)",
+ "study_id": {
+  "doi": "10.1007/s00424-020-02441-x",
+  "pmid": "32789766"
+ },
+ "workflow": "INV-16 Package H (HDAC5 and SLC2A1), producer hd-p. Question-driven read for the passages cited in the evidence table. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

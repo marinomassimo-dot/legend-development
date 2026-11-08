@@ -9,15 +9,17 @@
  "BASELINE": "development/main cb727195dbb5917c6048659b55d69094c0a6c3c0; branch task/queue2-20261108. Receipts exist for 22991226 (abstract only) and 39923817 (partial).",
  "CURRENT_PACKAGE": {
   "id": "H-INV16",
-  "state": "producer running (legend-delegate, sonnet/medium)",
-  "delegate_active": "hd-p",
-  "updated": "2026-11-08T07:00:00Z"
+  "state": "verifier running (legend-delegate, sonnet/high)",
+  "delegate_active": "hd-v",
+  "updated": "2026-11-08T07:30:00Z"
  },
  "RESUME": "Folder drug_repurposing/hdac5_inv16_20261108/ (BRIEF.md, output/). Order: producer, census, verifier, correction.",
  "DECISIONS_TAKEN": [
   "Queued by the operator beside the running work; one delegate at a time; settings as before."
  ],
- "DELEGATIONS": [],
+ "DELEGATIONS": [
+  "H producer hd-p: asked sonnet/medium, read back claude-sonnet-5-5 x25, medium x25; birth 17,446; 25 turns; ~5 min; output 29,544; cache written 93,297; cache read 1,544,391; peak 101,782; completed README (~900 words), evidence (17), three_questions, tools (10), experiment (4 steps), queries (10), 3 staged receipts (validated with DOI check, re-run after the producer shifted the timestamps back about a minute: still OK, event_at earlier than the real time); 3 of 4 new sources; Europe PMC XML 500 for one record, the open PMC page then served the text (no challenge)"
+ ],
  "ESCALATIONS": [],
  "STOP_LOG": [
   "No stop for a reserved act."

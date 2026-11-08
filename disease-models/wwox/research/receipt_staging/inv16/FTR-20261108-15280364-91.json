@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-08T00:20:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-08T00:21:00Z",
+ "event_id": "FTR-20261108-15280364-91",
+ "evidence_basis": [
+  "abstract analysed in full; the statements are abstract-level and carry no method, figure or table detail",
+  "verbatim_locator | proposition: HDAC7 raises HIF-1alpha transcriptional activity through a complex with p300 | Abstract | \"HDAC7 increased transcriptional activity of HIF-1alpha through the formation of a complex with HIF-1alpha, HDAC7, and p300\"",
+  "verbatim_locator | proposition: within class II the HIF-1alpha interaction was HDAC7-specific | Abstract | \"whereas HIF-1alpha only interacted with HDAC7 in the class II HDAC family\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/hdac5_inv16_20261108/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/hdac5_inv16_20261108/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 15280364 (abstract and metadata as served 2026-11-08)",
+ "study_id": {
+  "doi": "10.1074/jbc.M406320200",
+  "pmid": "15280364"
+ },
+ "workflow": "INV-16 Package H (HDAC5 and SLC2A1), producer hd-p. Question-driven read for the passages cited in the evidence table. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
