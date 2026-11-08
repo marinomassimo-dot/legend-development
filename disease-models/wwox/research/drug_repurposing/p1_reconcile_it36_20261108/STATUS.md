@@ -8,7 +8,7 @@ Basis for applying a row: the package conclusion was already checked against its
 | Applied | 1, 2, 3 (T-type), 12 (myelination), 34 (perampanel exposure is in patients, not in a WWOX system), 38 (inhibitory hypofunction limits) | `needs/needs.json` |
 | Already in the consumer, or the package itself says no change | 7, 17, 20, 24 (NRF2: the retracted reference is not in the repository, nothing to correct), 27, 28, 31, 41, 46 | none |
 | Held for the science session's decisive re-check (statistics and the HDAC5-HIF relation) | 39, 40, 47, 48 (p-value arithmetic and counts, PMID 34634460), 45 (HDAC5-HIF) | not applied |
-| Cards, not yet edited | 5, 6, 15, 19, 21, 22, 25 | the wording is in `map.tsv`; card edits move card hashes and were left out of this pass |
+| Cards, not edited | 5, 6, 15, 19, 21, 22, 25 | cards are generated from packets and carry `input_sha256`; a hand edit would break that tie, so the wording stays in `map.tsv` for the next card rebuild. The same caveats already reach readers through the need and investigation texts above |
 | Skipped | 37 (the current evidence text does not contain the "PV loss" wording the row replaces) | none |
 
 Two guard messages from the ranking tool were met and respected: an investigation table may not carry dose, route, schedule or preparation words, so "Mg2+" and "titration" were reworded.
