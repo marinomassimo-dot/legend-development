@@ -311,7 +311,7 @@ def build_files(dr: Path, corpus_dirs: list[Path] | None = None, recompute_text:
         raise SystemExit("the shareable build fails its audit; no package is written:\n" + au.render_report(rep, "audit"))
     for lg, page in htmls.items():
         if lg != "en":
-            r_lg, _ = au.audit_html(page, dr, source_text=html)
+            r_lg, _ = au.audit_html(page, dr)
             if not r_lg.ok:
                 raise SystemExit(f"the shareable build in {lg} fails its audit; no package is written:\n" + au.render_report(r_lg, "audit"))
     chembl = chembl_records(dr, allow)
