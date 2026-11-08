@@ -8,10 +8,10 @@
  "START_UTC": "2026-11-08T03:00:00Z",
  "BASELINE": "development/main cb727195dbb5917c6048659b55d69094c0a6c3c0; branch task/queue2-20261108. Receipts exist for 22991226 (abstract only) and 39923817 (partial).",
  "CURRENT_PACKAGE": {
-  "id": "C-HCN",
-  "state": "INV-16 complete; HCN producer running (see ORCH-HCN-20261108)",
-  "delegate_active": "hc-p",
-  "updated": "2026-11-08T08:00:00Z"
+  "id": "none",
+  "state": "complete; landing with queue2",
+  "delegate_active": "none",
+  "updated": "2026-11-08T09:00:00Z"
  },
  "RESUME": "Folder drug_repurposing/hdac5_inv16_20261108/ (BRIEF.md, output/). Order: producer, census, verifier, correction.",
  "DECISIONS_TAKEN": [
@@ -29,7 +29,7 @@
   "Condition: settings not restated. Default: as before. Why safe: reversible; no shared file touched."
  ],
  "AUTHORISED_QUEUE_20261108B": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_1": {
    "order": 1,
    "steps": [

@@ -8,10 +8,10 @@
  "START_UTC": "2026-11-08T02:00:00Z",
  "BASELINE": "development/main cb727195dbb5917c6048659b55d69094c0a6c3c0; branch task/queue2-20261108 from the frozen head 893ad6efb886b1eb22dfc858c6d169b11ea31e0d of task/ttype-20261107 (whose battery runs in parallel at low priority); queue2 holds the remaining queued packages INV-09, INV-10 and INV-15 so the tested head can land unchanged. Receipts exist for 30290271 (complete), 34634460 (complete), 27845895 (partial); none for 42812881.",
  "CURRENT_PACKAGE": {
-  "id": "H-INV16",
-  "state": "INV-15 complete; INV-16 producer running (see ORCH-INV16-20261108)",
-  "delegate_active": "hd-p",
-  "updated": "2026-11-08T07:00:00Z"
+  "id": "none",
+  "state": "complete; landing with queue2",
+  "delegate_active": "none",
+  "updated": "2026-11-08T09:00:00Z"
  },
  "RESUME": "Folder drug_repurposing/pv_inv15_20261108/ (BRIEF.md, output/). Order: producer, census, verifier, correction.",
  "DECISIONS_TAKEN": [
@@ -29,7 +29,7 @@
   "Condition: settings not restated. Default: as before. Why safe: reversible; no shared file touched."
  ],
  "AUTHORISED_QUEUE_20261108A": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_1": {
    "order": 1,
    "steps": [

@@ -8,10 +8,10 @@
  "START_UTC": "2026-11-08T01:00:00Z",
  "BASELINE": "development/main ce121d5814b8c83c65721c0709ac4ec2554a5011; same worktree and branch as ORCH-TTYPE-20261107. Reused by identifier: A1/A2 packages, CONSUMERS.md, aed_compare_it31, B1 white-matter package, ttype and nmda packages of this branch; PMID 39101447 has a complete read (FTR-20261003-39101447-01).",
  "CURRENT_PACKAGE": {
-  "id": "P-INV15",
-  "state": "INV-10 complete; INV-15 producer running (see ORCH-INV15-20261108)",
-  "delegate_active": "pv-p",
-  "updated": "2026-11-08T05:40:00Z"
+  "id": "none",
+  "state": "complete; landing with queue2",
+  "delegate_active": "none",
+  "updated": "2026-11-08T09:00:00Z"
  },
  "RESUME": "Folder drug_repurposing/seizure_function_inv10_20261107/ (BRIEF.md, output/). Order: producer, census, verifier on the decisive propositions, correction.",
  "DECISIONS_TAKEN": [
@@ -29,7 +29,7 @@
   "Condition: settings not restated. Default: as before. Why safe: reversible; no shared file touched."
  ],
  "AUTHORISED_QUEUE_20261107I": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_1": {
    "order": 1,
    "steps": [

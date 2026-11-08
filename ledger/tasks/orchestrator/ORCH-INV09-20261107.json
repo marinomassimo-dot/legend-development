@@ -8,10 +8,10 @@
  "START_UTC": "2026-11-08T00:00:00Z",
  "BASELINE": "development/main ce121d5814b8c83c65721c0709ac4ec2554a5011; same worktree and branch as ORCH-TTYPE-20261107 (which already merges main). Reused by identifier: G01 card, IT15 QB and its verification, gsk3_eif2b_20261107, myelin_inv06_20261107 (21319221 and 33015737 read there), nmda_inv05_20261107, nb4_delta_20261107. Moved to branch task/queue2-20261108 (worktree .claude/worktrees/queue2-20261108) from the frozen head 893ad6efb886b1eb22dfc858c6d169b11ea31e0d.",
  "CURRENT_PACKAGE": {
-  "id": "S-INV10",
-  "state": "INV-09 complete; INV-10 producer running",
-  "delegate_active": "sz-p",
-  "updated": "2026-11-08T04:00:00Z"
+  "id": "none",
+  "state": "complete; landing with queue2",
+  "delegate_active": "none",
+  "updated": "2026-11-08T09:00:00Z"
  },
  "RESUME": "Folder drug_repurposing/gsk3_inv09_20261107/ (BRIEF.md, output/). Order: producer, census, verifier, correction.",
  "DECISIONS_TAKEN": [
@@ -29,7 +29,7 @@
   "Condition: settings not restated. Default: as before. Why safe: reversible; no shared file touched."
  ],
  "AUTHORISED_QUEUE_20261107H": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_1": {
    "order": 1,
    "steps": [

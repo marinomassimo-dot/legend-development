@@ -8,16 +8,19 @@
  "START_UTC": "2026-11-08T04:30:00Z",
  "BASELINE": "development/main cb727195dbb5917c6048659b55d69094c0a6c3c0; branch task/queue2-20261108. Reuses the IT13/IT14/IT29 function packages and the T-type, NMDA, PV and GSK3 deliveries by identifier.",
  "CURRENT_PACKAGE": {
-  "id": "C-HCN",
-  "state": "producer running (legend-delegate, sonnet/medium)",
-  "delegate_active": "hc-p",
-  "updated": "2026-11-08T08:00:00Z"
+  "id": "none",
+  "state": "complete; landing with queue2",
+  "delegate_active": "none",
+  "updated": "2026-11-08T09:00:00Z"
  },
  "RESUME": "Folder drug_repurposing/hcn_20261108/ (BRIEF.md, output/). Order: producer, census, verifier, correction.",
  "DECISIONS_TAKEN": [
   "Queued by the operator beside the running work; one delegate at a time; settings as before. Placed after the PV package it consumes."
  ],
- "DELEGATIONS": [],
+ "DELEGATIONS": [
+  "C producer hc-p: asked sonnet/medium, read back claude-sonnet-5-5 x50, medium x50; birth 17,484; 50 turns; ~10 min; output 55,260; cache written 178,251; cache read 5,384,098; peak 186,736; completed README (849 words), evidence (41), physiology (9), hypotheses (3), probes (7), experiment (6), queries (12), 5 staged receipts (validated with DOI check; partial_fulltext_read x4, one more); 4 new sources of 5; Europe PMC XML 500 for two records, the open PMC pages read once each (no challenge)",
+  "C verifier hc-v: asked sonnet/high, read back claude-sonnet-5-5 x47, high x47; birth 18,029; 47 turns; ~10 min; output 58,741; cache written 155,359; cache read 4,352,704; peak 163,844; blind; 41 rows: 35 supported, 6 overshoot (E13, E19, E20, E39, E40, E41); H1 arithmetic confirmed exactly with corrections of reading; Table 1 p values not reproducible from the printed means +/- SEM; corrections by the Orchestrator adopting the audit's wording"
+ ],
  "ESCALATIONS": [],
  "STOP_LOG": [
   "No stop for a reserved act."
@@ -26,13 +29,13 @@
   "Condition: settings not restated. Default: as before. Why safe: reversible; no shared file touched."
  ],
  "AUTHORISED_QUEUE_20261108C": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_1": {
    "order": 1,
    "steps": [
     {
      "step": "producer, census, verifier on premise/attribution/source independence/refutation logic, targeted correction",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator"
     }
    ]
