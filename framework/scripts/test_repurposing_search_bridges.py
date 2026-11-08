@@ -82,5 +82,34 @@ class Bridges(unittest.TestCase):
             self.assertTrue(any("HYPOTHESISED BRIDGE" in l for l in a["limits"]))
 
 
+PROBE = {"probe": "ISRIB-like", "catalogue_id": "CHEMBL0", "identity_key": "KEY", "identity_source": "a record", "target_group": "eIF2B complex (five subunit genes)",
+         "target_members": "EIF2B1;EIF2B2;EIF2B3;EIF2B4;EIF2B5", "action_term": "as the source words it", "kind": "experimental_tool", "evidence_ref": "x", "limits": "l", "not_shown": "n"}
+ISR = {"id": "N2", "targets": [{"symbol": f"EIF2B{i}", "hgnc_id": f"HGNC:{i}", "target_kind": "intervention_target"} for i in (1, 2, 3, 4, 5)]
+       + [{"symbol": "ATF4", "hgnc_id": "HGNC:9", "target_kind": "pathway_member"}]}
+
+
+class Probes(unittest.TestCase):
+    """IT36 P4: a probe the catalogue holds without a mechanism row is joined at read time, as one row for its target group."""
+
+    def test_a_complex_probe_is_one_row_with_every_matched_subunit_and_no_member_chosen(self):
+        rows = rs.probes_for_need(ISR, [PROBE])
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["matched_in_need"], ["EIF2B1", "EIF2B2", "EIF2B3", "EIF2B4", "EIF2B5"])
+        self.assertFalse(rows[0]["counted_in_headline"])
+        self.assertEqual(rows[0]["consistency"], "not_assessed")
+        self.assertIn("not a treatment", rows[0]["label"])
+
+    def test_a_probe_does_not_reach_a_need_through_a_pathway_member_or_an_unrelated_gene(self):
+        only_member = dict(PROBE, target_members="ATF4")
+        self.assertEqual(rs.probes_for_need(ISR, [only_member]), [])
+        self.assertEqual(rs.probes_for_need(NEED, [PROBE]), [])
+        self.assertEqual(rs.probes_for_need(ISR, None), [])
+
+    def test_a_probe_row_with_a_sign_or_a_missing_identity_is_refused(self):
+        for bad in (dict(PROBE, sign="up"), dict(PROBE, identity_key=""), dict(PROBE, kind="drug"), dict(PROBE, target_members="the complex")):
+            with self.assertRaises(ValueError):
+                rs.check_probe_row(bad, "t")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

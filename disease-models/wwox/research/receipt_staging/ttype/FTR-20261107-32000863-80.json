@@ -17,7 +17,7 @@
  "event_id": "FTR-20261107-32000863-80",
  "evidence_basis": [
   "passages analysed (keyword-directed), not a line-by-line read; Figure 7 (panels a to d) inspected as an image together with its legend and axes; other figures not_read",
-  "verbatim_locator | proposition: ethosuximide pretreatment had no effect on behaviour in +/+ and +/- at a low PTZ dose, while it suppressed PTZ seizure activity in the null | Results, section on Fig. 7b | \"ethosuximide pretreatment had no effects on the behavior changes in Wwox +/+ and Wwox +/− mice treated with a low dose of PTZ\"",
+  "verbatim_locator | proposition: ethosuximide pretreatment had no effect on behaviour in +/+ and +/- at a low PTZ dose, while it suppressed PTZ seizure activity in the null | Results, section on Fig. 7b | \"ethosuximide pretreatment had no effects on the behavior changes in Wwox +/+ and Wwox +/\u2212 mice treated with a low dose of PTZ\"",
   "verbatim_locator | proposition: only one-way ANOVA is named for group comparison, no drug-by-genotype term | Methods, Statistical analysis | \"We performed statistical tests with one-way analysis of variance (ANOVA) to compare the difference among groups.\"",
   "verbatim_locator | proposition: ethosuximide was given once 45 min before PTZ and is called a T-type blocker by citation | Methods, Induction of seizure | \"was injected into mice 45 min before PTZ-induced clonic seizures\"",
   "verbatim_locator | proposition: the authors rank lithium above ethosuximide | Discussion | \"its efficacy is better than the commonly used anticonvulsant drug ethosuximide\""

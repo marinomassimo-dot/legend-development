@@ -19,7 +19,7 @@
   "Degraded acquisition: Europe PMC fullTextXML HTTP 500; the PMC article page (HTTP 200, no access challenge) was read once: Introduction, Results, Discussion and figure legends; Materials and Methods not read; figure images not viewed. Short report, few cells per concentration (3 to 4).",
   "verbatim_locator | proposition: ZD7288 blocks sodium current in DRG neurons and recombinant Nav1.4 | abstract | \"ZD7288 inhibits not only HCN channel currents, but also Na + currents in DRG neurons\"",
   "verbatim_locator | proposition: sodium-current potency exceeds HCN-current potency in the same neurons | Results | \"indicating that HCN channels are blocked less effectively than sodium channels\"",
-  "verbatim_locator | proposition: calcium-channel block reported only at much higher concentration | Discussion | \"but only at very high concentrations (i.e., with an IC 50 of over 100 μM)\""
+  "verbatim_locator | proposition: calcium-channel block reported only at much higher concentration | Discussion | \"but only at very high concentrations (i.e., with an IC 50 of over 100 \u03bcM)\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

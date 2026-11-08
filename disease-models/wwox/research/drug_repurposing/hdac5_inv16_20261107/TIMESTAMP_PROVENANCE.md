@@ -13,3 +13,5 @@ Reconstruction (producer transcript, tool-call timestamps; second precision, the
 | 32789766 | 00:19:09Z, PubMed metadata | 00:21:27Z |
 
 Limits. `analysis_at` is the start of the access call, not the end of the reading; the span of reading each source is not recoverable below that. The files in `output/receipts/` and in `receipt_staging/inv16/` carry the same values. The checker passes on the corrected files.
+
+Recorded (IT36, 2026-11-08): the ledger writer sets `event_at` to the moment of recording (about 08:52Z) for every receipt it appends, so the ledger rows carry the recording time as `event_at` and the corrected source-access time as `analysis_at` (second precision). The preparation time, 00:21:27Z, is kept only in this note.

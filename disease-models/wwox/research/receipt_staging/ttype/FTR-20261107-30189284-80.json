@@ -19,7 +19,7 @@
   "Full text delivered by the PubMed/PMC tool for the PMC record on 2026-11-07; degraded text: figures omitted, gene symbols and sub/superscripts partly stripped; the cca-1 and unc-49 identities were read from the abstract and the surviving words",
   "verbatim_locator | proposition: ethosuximide protection from PTZ convulsions in the worm was independent of the T-type calcium channel | Abstract | \"This protective activity was independent of ethosuximide's suggested target, the T-type calcium channel\"",
   "verbatim_locator | proposition: an inert analogue gave no protection, so the effect is drug-specific in the worm | Results, section 3.3 | \"the same concentration of the chemically similar but biologically inert molecule succinimide conferred no protection from PTZ-induced convulsions\"",
-  "verbatim_locator | proposition: the authors have not identified the molecular target | Discussion | \"we have not yet identified ethosuximide’s molecular target\""
+  "verbatim_locator | proposition: the authors have not identified the molecular target | Discussion | \"we have not yet identified ethosuximide\u2019s molecular target\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

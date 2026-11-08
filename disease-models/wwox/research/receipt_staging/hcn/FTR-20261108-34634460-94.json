@@ -18,9 +18,9 @@
  "evidence_basis": [
   "Reopened for decisive details only (HCN/Ih delta): definitions of sag, rebound and input resistance, the Table 1 values, the recording conditions and the Discussion paragraph on rebound and ZD7288. Earlier complete reads exist; figure images were not viewed in this re-read. analysis_at is the first logged time of the session (the exact earlier minute of the first look at this held file was not captured).",
   "verbatim_locator | proposition: sag is a deflection within a fixed current step | Methods 6.x | \"The sag voltage was measured by subtracting the most negative membrane deflection from its return to steady state\"",
-  "verbatim_locator | proposition: input resistance is higher in HT and KO | Table 1 | \"Input resistance (Mohm) 102.88 ± 11.74 143.26 ± 15.49* 143.03 ± 8.88*\"",
-  "verbatim_locator | proposition: sag larger in HT and KO | Table 1 | \"Sag (at −200 pA) 1.18 ± 0.24 2.04 ± 0.44* 2.57 ± 0.42*\"",
-  "verbatim_locator | proposition: rebound larger in KO only | Table 1 | \"Post-inhibitory rebound (mV) 0.96 ± 0.19 1.24 ± 0.58 1.86 ± 0.44*\"",
+  "verbatim_locator | proposition: input resistance is higher in HT and KO | Table 1 | \"Input resistance (Mohm) 102.88 \u00b1 11.74 143.26 \u00b1 15.49* 143.03 \u00b1 8.88*\"",
+  "verbatim_locator | proposition: sag larger in HT and KO | Table 1 | \"Sag (at \u2212200 pA) 1.18 \u00b1 0.24 2.04 \u00b1 0.44* 2.57 \u00b1 0.42*\"",
+  "verbatim_locator | proposition: rebound larger in KO only | Table 1 | \"Post-inhibitory rebound (mV) 0.96 \u00b1 0.19 1.24 \u00b1 0.58 1.86 \u00b1 0.44*\"",
   "verbatim_locator | proposition: the authors infer an elevated Ih from the larger hyperpolarisation | Results (Fig 6 text) | \"the hyperpolarization activated potassium current was elevated, as evidenced by a larger hyperpolarization in response to a negative current injection\"",
   "verbatim_locator | proposition: cited neocortical ZD7288 effects and 4-AP worsening | Discussion 3.5 | \"ZD7288 hyperpolarized the membrane potential, eliminated sag voltage, increased input resistance, but did not alter the properties of the action potentials\""
  ],

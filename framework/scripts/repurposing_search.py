@@ -651,6 +651,64 @@ def load_bridges(path) -> list[dict]:
     return out
 
 
+PROBE_FIELDS = ("probe", "catalogue_id", "identity_key", "identity_source", "target_group", "target_members", "action_term", "kind", "evidence_ref", "limits", "not_shown")
+PROBE_KINDS = {"experimental_tool", "clinical_candidate", "approved_drug"}
+
+
+def probe_files(dr: Path | None = None) -> list[Path]:
+    """Probe entries the packages deliver (IT36 P4): `<package>/output/probe_links.tsv`. A probe is a compound the catalogue holds without the curated mechanism row that would make the need search reach it."""
+    return sorted((DR if dr is None else Path(dr)).glob("*/output/probe_links.tsv"))
+
+
+def check_probe_row(r: dict, where: str) -> dict:
+    """One probe, one row. The target is a GROUP (a complex or a family) with its member genes; the row does not pick a member. `kind` says what the compound is; the action is the source's own term."""
+    for k in PROBE_FIELDS:
+        if not (r.get(k) or "").strip():
+            raise ValueError(f"{where}: empty field {k}")
+    if r["kind"] not in PROBE_KINDS:
+        raise ValueError(f"{where}: kind {r['kind']!r} is not one of {sorted(PROBE_KINDS)}")
+    members = [m.strip() for m in r["target_members"].split(";") if m.strip()]
+    if len(members) < 1 or any(" " in m for m in members):
+        raise ValueError(f"{where}: target_members must be gene symbols separated by ';'")
+    if "sign" in r or "direction" in r:
+        raise ValueError(f"{where}: a probe row carries no sign column; the action is the source's term")
+    return r
+
+
+def load_probes(path) -> list[dict]:
+    """A file, the word `packages`, or a list of these. Nothing is read from or written to the catalogue: the supplement is joined at read time and labelled as such."""
+    if path is None:
+        return []
+    if isinstance(path, (list, tuple)):
+        return [r for p in path for r in load_probes(p)]
+    files = probe_files() if str(path) == BRIDGE_WORD else [Path(path)]
+    out = []
+    for f in files:
+        if not f.exists():
+            continue
+        with open(f, encoding="utf-8", newline="") as fh:
+            for i, r in enumerate(csv.DictReader(fh, delimiter="\t"), 2):
+                out.append(dict(check_probe_row(r, f"{f.parent.parent.name if f.parent.name == 'output' else f.name} line {i}"), source_file=str(f.relative_to(DR)) if f.is_relative_to(DR) else f.name))
+    return out
+
+
+def probes_for_need(need: dict, probes: list[dict] | None) -> list[dict]:
+    """The probes whose target group shares at least one member with the need's intervention targets. One row per probe (not per subunit); the matched subunits are listed, the
+    group is kept whole, no member is promoted to 'the' target, and the row is never counted among the headline links and is not given a consistency label."""
+    mine = {t["symbol"].upper(): t["symbol"] for t in need["targets"] if t["target_kind"] in LINK_KINDS}
+    out = []
+    for p in probes or []:
+        members = [m.strip() for m in p["target_members"].split(";") if m.strip()]
+        hit = [mine[m.upper()] for m in members if m.upper() in mine]
+        if hit:
+            out.append({"need": need["id"], "probe": p["probe"], "catalogue_id": p["catalogue_id"], "identity_key": p["identity_key"], "identity_source": p["identity_source"],
+                        "target_group": p["target_group"], "group_members": members, "matched_in_need": hit, "action_term_in_source": p["action_term"], "kind": p["kind"],
+                        "evidence_ref": p["evidence_ref"], "limits": p["limits"], "not_shown": p["not_shown"], "source_file": p.get("source_file"),
+                        "counted_in_headline": False, "consistency": "not_assessed",
+                        "label": "RESEARCH PROBE joined from a package table, not a catalogue mechanism row; not a treatment" if p["kind"] == "experimental_tool" else "supplement row joined from a package table, not a catalogue mechanism row"})
+    return out
+
+
 def targets_with_bridges(need: dict, bridges: list[dict] | None) -> list[dict]:
     """The need's own targets plus, for each bridge that touches one of them, the OTHER gene as a `pathway_member` carrying the bridge.
     Pathway members are counted apart from the headline links (LINK_KINDS), so a bridge widens the list a researcher sees without
@@ -666,7 +724,7 @@ def targets_with_bridges(need: dict, bridges: list[dict] | None) -> list[dict]:
     return targets
 
 
-def associations_for_need(need: dict, idx: Index, roles: dict, module_symbols: set[str] | None = None, bridges: list[dict] | None = None) -> dict:
+def associations_for_need(need: dict, idx: Index, roles: dict, module_symbols: set[str] | None = None, bridges: list[dict] | None = None, probes: list[dict] | None = None) -> dict:
     nd = need_direction(need)
     module_symbols = module_symbols or getattr(idx, "module_symbols", None)
     assoc, guards, nonhuman = [], [], 0
@@ -772,7 +830,7 @@ def associations_for_need(need: dict, idx: Index, roles: dict, module_symbols: s
     assoc.sort(key=lambda a: (a["target"], a["catalogue_id"], a["link_source"], a["action_raw"] or ""))
     return {"need": need["id"], "label": need["label"], "need_direction": nd,
             "exploration_only": nd in ("uncertain", "modulate"), "associations": assoc,
-            "identity_guard_hits": guards, "nonhuman_chembl_rows_set_aside": nonhuman}
+            "identity_guard_hits": guards, "nonhuman_chembl_rows_set_aside": nonhuman, "probes": probes_for_need(need, probes)}
 
 
 def resolve_compound(idx: Index, query: str) -> list[dict]:
@@ -873,6 +931,7 @@ def main(argv=None) -> int:
     n.add_argument("--limit", type=int, default=30)
     n.add_argument("--json", action="store_true")
     n.add_argument("--bridges", action="append", default=None, help="curated precedent relations (a file, or `packages` for every package output/bridges.tsv) widening the list with pathway members; off by default")
+    n.add_argument("--probes", action="append", default=None, help="probe entries joined at read time (a file, or `packages` for every package output/probe_links.tsv); off by default")
     c = sub.add_parser("compound")
     c.add_argument("query")
     c.add_argument("--json", action="store_true")
@@ -897,7 +956,7 @@ def main(argv=None) -> int:
         if nd is None:
             print(f"unknown need {a.need_id}", file=sys.stderr)
             return 2
-        r = associations_for_need(nd, idx, roles, bridges=load_bridges(a.bridges))
+        r = associations_for_need(nd, idx, roles, bridges=load_bridges(a.bridges), probes=load_probes(a.probes))
         if a.json:
             print(json.dumps(r, indent=1, ensure_ascii=False))
             return 0
@@ -908,6 +967,8 @@ def main(argv=None) -> int:
               f"identity_guard_hits={len(r['identity_guard_hits'])} nonhuman_chembl_set_aside={r['nonhuman_chembl_rows_set_aside']}")
         for x in r["associations"][: a.limit]:
             print(_print_assoc(x))
+        for x in r["probes"]:
+            print(f"# PROBE\t{x['probe']}\t{x['catalogue_id']}\t{x['target_group']} (matched {', '.join(x['matched_in_need'])} of {len(x['group_members'])})\t{x['action_term_in_source']}\t{x['kind']}\t{x['label']}")
         return 0
     if a.cmd == "compound":
         cands = resolve_compound(idx, a.query)

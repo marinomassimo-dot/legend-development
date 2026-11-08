@@ -18,7 +18,7 @@
  "evidence_basis": [
   "Full text delivered by the PubMed/PMC tool for the PMC record on 2026-11-07; degraded text: figures and tables omitted, sub/superscripts stripped (channel names read as Ca3.2 and Ca1.4); no value was taken from a panel",
   "verbatim_locator | proposition: Z944 inhibits human Cav3.2 current, IC50 about 265 nM, in HEK293T under the same conditions as ML218 | Results, first section | \"Z944 inhibited Ca3.2 Cacurrents (; IC~ 265 nM\"",
-  "verbatim_locator | proposition: Z944 inhibits Cav1.4 about 100-fold less potently than Cav3.2 | Results | \"Z944 inhibited Ca1.4 with an IC(~31 μM) that was ~100-fold higher than that for Ca3.2\"",
+  "verbatim_locator | proposition: Z944 inhibits Cav1.4 about 100-fold less potently than Cav3.2 | Results | \"Z944 inhibited Ca1.4 with an IC(~31 \u03bcM) that was ~100-fold higher than that for Ca3.2\"",
   "verbatim_locator | proposition: the authors caution about systemic use of Cav3 blockers and behavioural endpoints | Discussion | \"should consider the potentially confounding effects of antagonizing retinal or pineal Ca1.4 channels\""
  ],
  "evidence_depth": "partial_fulltext_read",

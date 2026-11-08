@@ -17,7 +17,7 @@
  "event_id": "FTR-20261107-21319221-95",
  "evidence_basis": [
   "Abstract read in full. No method, count, age or control detail beyond the abstract is used. Rows E19-E22 are abstract-level and say so.",
-  "verbatim_locator | proposition: GSK3 beta inhibition increases oligodendrocyte differentiation while Wnt3a inhibits it | abstract | \"GSK3β inhibition strikingly increases OL differentiation, whereas Wnt3a inhibits OL differentiation.\"",
+  "verbatim_locator | proposition: GSK3 beta inhibition increases oligodendrocyte differentiation while Wnt3a inhibits it | abstract | \"GSK3\u03b2 inhibition strikingly increases OL differentiation, whereas Wnt3a inhibits OL differentiation.\"",
   "Degraded acquisition: Europe PMC returned a subscription-required stub for the DOI route; no other client was tried for the same page. The gap is not an absence."
  ],
  "evidence_depth": "abstract_only",

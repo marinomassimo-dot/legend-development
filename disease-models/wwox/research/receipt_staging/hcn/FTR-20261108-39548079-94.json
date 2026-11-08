@@ -18,8 +18,8 @@
  "evidence_basis": [
   "Results read in full including figure legends (images not viewed); the opening of the Discussion read; Methods, Supplementary Information and references not read. Question outside prior coverage: does the lipid-nanodomain/HCN precedent bear on cortical WWOX-deficient neurons.",
   "verbatim_locator | proposition: lipid-domain disruption facilitates opening of native HCN channels in DRG nociceptors | abstract | \"Disruption of OMDs potentiated action potential firing in nociceptor DRG neurons and facilitated the opening of native hyperpolarization-activated cyclic nucleotide-gated (HCN) pacemaker channels.\"",
-  "verbatim_locator | proposition: the voltage-sensor effect is isoform-specific, little for HCN1 | Results (Fig 6 text) | \"minimal FRET change was detected between comparable sites in hHCN1 channels following β-CD treatment\"",
-  "verbatim_locator | proposition: domain size falls after nerve injury in small DRG neurons | Results (Fig 7 text) | \"decreased from 10.8 ± 1.1% for the control neurons on the contralateral side of the injury to 4.4 ± 0.4%\"",
+  "verbatim_locator | proposition: the voltage-sensor effect is isoform-specific, little for HCN1 | Results (Fig 6 text) | \"minimal FRET change was detected between comparable sites in hHCN1 channels following \u03b2-CD treatment\"",
+  "verbatim_locator | proposition: domain size falls after nerve injury in small DRG neurons | Results (Fig 7 text) | \"decreased from 10.8 \u00b1 1.1% for the control neurons on the contralateral side of the injury to 4.4 \u00b1 0.4%\"",
   "string search of the retrieved text found no hit for cortex, cortical, neocortical, epilep or WWOX: the study is in peripheral sensory neurons and heterologous cells."
  ],
  "evidence_depth": "partial_fulltext_read",
