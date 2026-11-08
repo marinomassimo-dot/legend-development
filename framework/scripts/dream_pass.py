@@ -36,7 +36,7 @@ def git(*args):
 
 def since_args(since):
     if re.match(r"^\d{4}-\d{2}-\d{2}$", since):
-        return ["--since", since]
+        return ["--since", since + " 00:00"]
     return [f"{since}..HEAD"]
 
 
