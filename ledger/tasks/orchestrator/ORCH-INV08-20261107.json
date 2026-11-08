@@ -8,14 +8,15 @@
  "START_UTC": "2026-11-07T23:30:00Z",
  "BASELINE": "development/main ce121d5814b8c83c65721c0709ac4ec2554a5011 (fetched 2026-11-07); same worktree and branch as ORCH-TTYPE-20261107. Retraction check done by the Orchestrator: PMID 21690096 and 28159761 occur in no file of main, of this branch or of task/it34 (git grep, excluding the receipt ledger); no Fyn or beta-TrCP chain in L01, the IT11 NRF2 README or the IT22 redox README; no consumer needs the correction.",
  "CURRENT_PACKAGE": {
-  "id": "R-INV08",
-  "state": "complete; lands with ORCH-TTYPE-20261107",
+  "id": "none",
+  "state": "complete; landed with the rest of the queue-1 branch",
   "delegate_active": "none",
-  "updated": "2026-11-08T01:40:00Z"
+  "updated": "2026-11-08T08:50:00Z"
  },
  "RESUME": "Folder drug_repurposing/nrf2_inv08_20261107/ (BRIEF.md, output/). Order: producer, census, verifier, correction.",
  "DECISIONS_TAKEN": [
-  "Queued by the operator beside the running work; one delegate at a time; settings as before. The retraction question was answered first, mechanically, at the first window: no LEGEND file cites the retracted paper, so no attribution to correct and nothing to propagate; the notice itself is read in the package."
+  "Queued by the operator beside the running work; one delegate at a time; settings as before. The retraction question was answered first, mechanically, at the first window: no LEGEND file cites the retracted paper, so no attribution to correct and nothing to propagate; the notice itself is read in the package.",
+  "Battery on a no-hardlinks clone of cc203e73f5f1b2bc6bfd03b867f3c55887efb423 (the tip of task/ttype-20261107 carrying the T-type, INV-05, INV-06, INV-07 and INV-08 packages), run at nice 19 while no other battery was running: first run on 893ad6ef stopped on one real failure (test_fresh_clone_reader_journey: an inline path in the INV-06 README that did not resolve from its folder), fixed; second run REGRESSION VERDICT PASS WITH SKIPS (214 targets, 9 skipped, environment). Not attributed to the closure commit that records it."
  ],
  "DELEGATIONS": [
   "R producer nr-p: asked sonnet/medium, read back claude-sonnet-5-5 x31, medium x31; birth 17,417; 31 turns; ~6 min; output 34,013; cache written 93,048; cache read 1,818,108; peak 101,533; completed README (~940 words), evidence (21), wwox_table (10), hypotheses (H1-H6), experiment (X0-X4), queries, 5 staged receipts (all abstract-level, validated with DOI check); 5 of 6 new sources; the retraction notice page returned a reCAPTCHA and publisher pages Cloudflare: stopped for those sources, reason for retraction unknown; second route for the WWOX x NRF2 absence not run",
@@ -29,7 +30,7 @@
   "Condition: settings not restated. Default: as before. Why safe: reversible; no shared file touched."
  ],
  "AUTHORISED_QUEUE_20261107G": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_1": {
    "order": 1,
    "steps": [

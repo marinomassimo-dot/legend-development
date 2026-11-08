@@ -8,15 +8,16 @@
  "START_UTC": "2026-11-07T21:00:00Z",
  "BASELINE": "development/main 28c72d7fc40a3a5213950605b5bcdd72261d5b45 (fetched 2026-11-07); worktree .claude/worktrees/ttype-20261107 from main. Queued behind ORCH-GSK3EIF2B-20261107 (battery running on its head). Reused by identifier: IT28 P9 compare (FTR-20261105-32000863-05, figures captions-only), IT10 P2.1 HIF package, manifest of PMID 32000863 and held figure renders. PMID 42276303 and 30189284 have no receipt.",
  "CURRENT_PACKAGE": {
-  "id": "N-INV05",
-  "state": "T done; INV-05 producer running (see ORCH-INV05-20261107)",
-  "delegate_active": "nm-p",
-  "updated": "2026-11-07T22:15:00Z"
+  "id": "none",
+  "state": "complete; landed with the rest of the queue-1 branch",
+  "delegate_active": "none",
+  "updated": "2026-11-08T08:50:00Z"
  },
  "RESUME": "Order: producer, census, verifier on decision-changing premises, targeted correction. Folder drug_repurposing/ttype_20261107/.",
  "DECISIONS_TAKEN": [
   "The external report is not in the repository; a stimulus only.",
-  "One delegate at a time; the G package battery is CPU only at low priority and no delegate is active while this one runs except as sequenced."
+  "One delegate at a time; the G package battery is CPU only at low priority and no delegate is active while this one runs except as sequenced.",
+  "Battery on a no-hardlinks clone of cc203e73f5f1b2bc6bfd03b867f3c55887efb423 (the tip of task/ttype-20261107 carrying the T-type, INV-05, INV-06, INV-07 and INV-08 packages), run at nice 19 while no other battery was running: first run on 893ad6ef stopped on one real failure (test_fresh_clone_reader_journey: an inline path in the INV-06 README that did not resolve from its folder), fixed; second run REGRESSION VERDICT PASS WITH SKIPS (214 targets, 9 skipped, environment). Not attributed to the closure commit that records it."
  ],
  "DELEGATIONS": [
   "T producer tt-p: asked sonnet/medium, read back claude-sonnet-5-5 x36, medium x36; birth 17,298; 36 turns; ~10 min; output 50,649; cache written 182,502; cache read 3,935,505; peak 182,504; completed README, fig7.tsv (Fig 7 viewed as image), evidence (29), chain, probes, experiment, queries, 6 staged receipts (all validated with DOI check; 2 abstract_only, 4 partial_fulltext_read); five new sources plus four labelled leads beyond the cap (no receipts)",
@@ -30,7 +31,7 @@
   "Condition: settings not restated by the operator for this package. Default: as before (producer sonnet/medium, verifier sonnet/high, legend-delegate). Why safe: reversible; no shared file touched."
  ],
  "AUTHORISED_QUEUE_20261107D": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_T": {
    "order": 1,
    "steps": [
@@ -46,7 +47,7 @@
    "steps": [
     {
      "step": "U validation, landing, cleanup, report",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator"
     }
    ]
