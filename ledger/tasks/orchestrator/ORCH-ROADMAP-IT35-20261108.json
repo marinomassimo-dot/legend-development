@@ -7,12 +7,10 @@
  "OBJECTIVE": "IT35: phenotype-guided pharmacological generation, use of available knowledge, continuous improvement; close known imprecisions; locate where knowledge stops feeding generation; smallest general link; contrasting-case measurement; dashboard. Horizon 8-10 hours, duration is not a goal.",
  "START_UTC": "2026-11-08T00:00:00Z",
  "RESUME": {
-  "worktree": ".claude/worktrees/it35 (branch task/it35)",
-  "next_action": "Commit; freeze; view suite and targeted tests; battery on the exact SHA in a clean clone if no other battery runs; merge main; safe_push --expect-sha; CI; site; cleanup; final report A-I",
-  "note": "Zero spend; no contact; four current files via BATCH_COMMIT only (carbenoxolone wording if a register carries it); safe_push only; one delegate at a time; no battery while another session runs one; queue2 and ttype belong to other sessions."
+  "note": "complete 2026-11-08; open: full texts of PMID 16014628 and 33621689 (NB-2 counterexample candidates), an identity-checked entry for the ISR tool compound, HCN2/HCN3 absent from the seed graph, a real cost study of a verifier that rebuilds less; queue2 (HCN) and ttype/INV-10 results belong to their sessions"
  },
  "AUTHORISED_QUEUE_20261108": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P0": {
    "order": 1,
    "steps": [
@@ -138,9 +136,9 @@
    "steps": [
     {
      "step": "P11 Cost: IT34 verification cost diagnosed (startup, reads, reasoning, delivery); landing, cleanup, final report A-I",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "note": "cost diagnosis done (the IT34 verifier's figure was the notice's all-token field; census output 7,309); remaining: view suite, targeted tests, battery on the frozen SHA (coordinate), push with --expect-sha, CI, deploy check, cleanup, final report"
+     "evidence": "cost diagnosis (the IT34 verifier's 'about 40k' was the notice's all-token field; census output 7,309; rule in delegation_budget.md); candidate 225c0e96: battery PASS WITH SKIPS (215 targets, 41 skipped: the 40 of the clean clone plus one new skip, the catalogue-dependent bridge test without the local cache), run after the other session's battery ended and while a second one of theirs started after mine (no memory pressure); view suite and targeted tests OK before the battery (view 217 earlier plus the new filter tests, search bridges, safe_push with the incident regression, needs, investigations, scout, generation, stage S13, release surface, runner verdict, routing); main had moved (another session integrated): the candidate was merged cleanly as 4d5966d0, consistency checks OK (ranking, needs, coverage, view, i18n, receipts), pushed with safe_push --expect-sha 4d5966d0 (gate PASS), CI 'Public release gate' and 'Publish the shareable view' success on 4d5966d0, site HTTP 200 in five languages with the new filter, INV-18 and the Foundation link; worktree, branch, battery clone and cron removed"
     }
    ]
   }
