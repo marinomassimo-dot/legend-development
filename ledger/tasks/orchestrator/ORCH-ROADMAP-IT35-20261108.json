@@ -16,8 +16,9 @@
    "steps": [
     {
      "step": "P0 Baseline: remote, CI per SHA, other sessions (queue2, ttype untouched), resumable queue",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "start of IT35: remote main 168ad708 = local; CI 'Public release gate' on 168ad708 was in progress (record-only), success on cb727195 and 28c72d7f earlier; other sessions' worktrees (queue2, ttype) not touched; the queue was recorded in this file and updated at each checkpoint; frozen candidate 225c0e96 attributed its own battery; later merges (4d5966d0, 92f1ad6b) are attributed to gate and CI, not to the battery"
     }
    ]
   },
