@@ -5,7 +5,7 @@
  "ACTOR_ID": "orchestrator",
  "PRIORITY": "HIGH",
  "OBJECTIVE": "Scientific session for IT36 (operator mandate pasted 2026-11-08): P1 decisive re-checks (HDAC5-HIF relation; PV/HCN electrophysiology numbers and statistics), P2 NB-2 full texts (PMID 16014628, 33621689), P3 ISRIB qualified entry (identity row already on branch task/isrib-identity by another session; mechanism and WWOX transfer here), P4-P5 second generative case from a phenotype (myelination after neuronal WWOX loss; unguided expansion, comparison with LEGEND, levers, discriminating experiments), P6 proportionate independent verification, P7 consumable delivery. Staged receipts only; no shared consumer, ranking, dashboard, registry or ledger-of-receipts edit.",
- "START_UTC": "2026-11-08T08:35:00Z",
+ "START_UTC": "2026-11-08T08:30:00Z",
  "BASELINE": "main 0a3a34f9 (fetched 2026-11-08 08:30Z, remote identical). No IT36 mandate record found on main; the pasted mandate is the authority. Worktree .claude/worktrees/it36sci, branch task/it36sci. Another session holds .claude/worktrees/isrib-identity (964deb34, unmerged): not touched.",
  "P0_ANSWERS": {
   "P1A": "Question: which HDAC5-HIF-1a relation may a generator use (perturbation, system, what changes in HIF-1a; catalytic vs scaffold vs localisation vs amount)? Decision: whether INV-16 keeps an HDAC5 to HIF to SLC2A1 route as a hypothesis.",
@@ -21,7 +21,7 @@
   "id": "P0",
   "state": "baseline read; no delegate yet",
   "delegate_active": "none",
-  "updated": "2026-11-08T08:40:00Z"
+  "updated": "2026-11-08T08:34:00Z"
  },
  "RESUME": "Folders drug_repurposing/<name>_20261108/ in worktree it36sci. Order: P1 producer, P1 verifier, P2/P3 producer, verifier, P4 unguided, P4 LEGEND-side producer, verifier, delivery.",
  "DECISIONS_TAKEN": [
