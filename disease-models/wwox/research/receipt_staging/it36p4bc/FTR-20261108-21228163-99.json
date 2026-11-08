@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-08T09:20Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "event_at": "2026-11-08T09:32Z",
+ "event_id": "FTR-20261108-21228163-99",
+ "evidence_basis": [
+  "route: PubMed record; full text not reachable (empty body from the PMC tool, publisher-blocked XML at NCBI efetch); depth is abstract only and no methods, glucose concentrations, inhibitors or figures are described",
+  "verbatim_locator | proposition: low glucose lowered oligodendrocyte-lineage cell number and myelination in cultured cortical slices | abstract | \"a low glucose concentration reduces the number of oligodendrocyte lineage cells and myelination\"",
+  "verbatim_locator | proposition: white-matter oligodendrocytes take up lactate through monocarboxylate transporters | abstract | \"oligodendrocytes in the white matter of the rat cerebellum and corpus callosum take up lactate via monocarboxylate transporters (MCTs)\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/myelin_generative_it36_20261108/levers_bc/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/myelin_generative_it36_20261108/levers_bc/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 21228163, fetched 2026-11-08; the PubMed Central retrieval tool returned an empty full-text field and the NCBI efetch record for the PMC copy carried a notice that the publisher does not allow XML download, so only the abstract was read; bytes not saved",
+ "study_id": {
+  "doi": "10.1523/JNEUROSCI.3516-10.2011",
+  "pmid": "21228163"
+ },
+ "workflow": "IT36 P4 phase C, hypothesis H2: glucose and lactate supply to the oligodendrocyte lineage. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

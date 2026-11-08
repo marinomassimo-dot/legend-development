@@ -1,0 +1,25 @@
+query_id	database_or_route	string_or_url	run_at_utc	hits	what_was_done
+Q1	PubMed tool	Mct8 Oatp1c1 double knockout myelination thyroid hormone analog oligodendrocyte	2026-11-08T09:16Z (approx; reconstructed, minute not logged)	0	conjunctive translation too strict; simpler strings next
+Q2	PubMed tool	WWOX ErbB4 neuregulin oligodendrocyte myelination	2026-11-08T09:16Z (approx; reconstructed, minute not logged)	0	too strict
+Q3	PubMed tool	neuron oligodendrocyte lactate monocarboxylate transporter myelination axonal energy	2026-11-08T09:16Z (approx; reconstructed, minute not logged)	12 (8 listed)	titles only; none opened (claims were placed on four of them, not read)
+Q4	PubMed tool	Sob-AM2 Mct8 Oatp1c1 myelination	2026-11-08T09:18Z (approx; reconstructed, minute not logged)	0	too strict
+Q5	PubMed tool	WWOX ERBB4 intracellular domain	2026-11-08T09:18Z (approx; reconstructed, minute not logged)	4	three abstracts opened; two used (N18, N19), one cancer-prognosis abstract viewed, not used
+Q6	PubMed tool	thyroid hormone receptor beta agonist oligodendrocyte precursor differentiation	2026-11-08T09:18Z (approx; reconstructed, minute not logged)	1	PMID37765015 read in full text via the PMC tool
+Q7	PubMed tool	MCT8 deficiency myelination thyroid hormone analogue treatment	2026-11-08T09:19Z (approx; reconstructed, minute not logged)	7	abstracts of all seven opened; used PMID36834863 (then full text), PMID27664134, PMID32477268; viewed not used PMID35929549, PMID32746752, PMID29111262, PMID25255244
+Q8	PubMed tool	WWOX ErbB4	2026-11-08T09:19Z (approx; reconstructed, minute not logged)	12 (10 listed)	no new item beyond Q5
+Q9	PubMed tool	oligodendrocyte monocarboxylate transporter 1 lactate myelin axon	2026-11-08T09:19Z (approx; reconstructed, minute not logged)	14 (10 listed)	titles only; none opened
+Q10	PubMed tool	Rinholm regulation of oligodendrocyte development and myelination by glucose and lactate	2026-11-08T09:20Z (approx; reconstructed, minute not logged)	1	PMID21228163 abstract read; full text not reachable (Q17, Q18)
+Q11	PubMed tool	Sob-AM2 oligodendrocyte myelination	2026-11-08T09:20Z (approx; reconstructed, minute not logged)	5	titles only; none opened
+Q12	PubMed tool	neuregulin-1 ErbB signaling distinct functions myelination PNS and CNS	2026-11-08T09:19Z (approx; reconstructed, minute not logged)	1	PMID18760695 abstract read (counter row)
+Q13	PubMed tool	Wwox thyroid hormone	2026-11-08T09:25Z (approx; reconstructed, minute not logged)	1	one human GWAS abstract viewed, not used; bounded null for a WWOX-thyroid mechanism source (N20)
+Q14	PubMed tool	Wwox lactate glucose oligodendrocyte myelin energy	2026-11-08T09:25Z (approx; reconstructed, minute not logged)	0	bounded null
+Q15	Europe PMC REST search	query EXT_ID:<PMID> AND SRC:MED, resultType lite, for 42686079 37307933 37765015 21228163 36834863	2026-11-08T09:20Z (approx; reconstructed, minute not logged)	5 records	open-access flags: 42686079 and 37307933 not open access; the other three in Europe PMC
+Q16	Europe PMC REST fullTextXML	PMC9966820, PMC10534456, PMC3044866, PMC5117236 (first try); PMC9966820 and PMC3906126 (retry)	2026-11-08T09:21Z (approx; reconstructed, minute not logged)	HTTP 500 on all six	route failed twice (error body, no text); stopped on that route; no second client on the host
+Q17	PubMed Central retrieval tool	PMC9966820; PMC10534456	2026-11-08T09:23Z (approx; reconstructed, minute not logged)	2 full texts	read in full (text), figures not viewed
+Q18	PubMed Central retrieval tool	PMC3044866	2026-11-08T09:22Z (approx; reconstructed, minute not logged)	empty full-text field	abstract only for PMID21228163
+Q19	NCBI E-utilities efetch db=pmc	id 3044866, rettype xml	2026-11-08T09:22Z (approx; reconstructed, minute not logged)	stub	notice that the publisher does not allow XML download; route closed
+Q20	repurposing_search.py compound	sobetirome; tiratricol; triac; ditpa; thyroid hormone; liothyronine; lactate; eprotirome; TG68; neuregulin	2026-11-08T09:15Z (approx; reconstructed, minute not logged)	identifiers found for all except TG68 and the generic thyroid hormone string	CHEMBL107400, CHEMBL41632, CHEMBL2348292, CHEMBL1544, CHEMBL2035874, EC 01903; TG68 absent
+Q21	repurposing_search.py target	THRB; SLC16A1; ERBB4; SLC2A1	2026-11-08T09:15Z (approx; reconstructed, minute not logged)	11 / 0 / 15 / 0 mechanism rows	used for identity only
+Q22	repurposing_search.py need	NEED-MYELINATION --limit 15	2026-11-08T09:12Z (approx; reconstructed, minute not logged)	546 rows listed	confirmed that the need carries muscarinic-class rows with unresolved direction; no thyroid, MCT or ErbB row
+Q23	git grep in the module (needs, ranking, cards)	thyroid|THRB|triiodothyr ; SLC16A1|monocarboxylate ; lactate	2026-11-08T09:13Z (approx; reconstructed, minute not logged)	INV-12 found; lactate axis card and PDH-axis need found	basis of comparison.tsv pointers
+Q24	held texts (PMID33914858, PMID34747138, PMID42422765)	keyword searches: T3, thyroid, forskolin, glucose, glycemi, hypoglyc, lactate, mosaic, neighbo, MBP, Olig2	2026-11-08 (09:20Z to 09:30Z, minute not logged)	see evidence rows C01 to C09	read passages around each match

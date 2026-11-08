@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-08T09:22Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "event_at": "2026-11-08T09:32Z",
+ "event_id": "FTR-20261108-36834863-99",
+ "evidence_basis": [
+  "route: PubMed Central retrieval tool for PMC9966820 on 2026-11-08; Europe PMC fullTextXML returned HTTP 500 twice and was not used; the whole text body was read, figures and tables were not viewed",
+  "verbatim_locator | proposition: early treatment normalised parvalbumin cell numbers and callosal myelin staining | Results 2.5 | \"Only Dko mice that received Triac during the first 3 postnatal weeks showed a full normalization of PV+ cell numbers\"",
+  "verbatim_locator | proposition: late-start treatment did not improve callosal myelination | Results 2.5 | \"in Dko mice that received Triac only between postnatal week 3 and 6, myelination was not improved\"",
+  "verbatim_locator | proposition: the transport-deficient mice have fewer parvalbumin-positive interneurons | Results 2.1 | \"Dko mice exhibited a highly reduced number of PV+ cells in both regions\"",
+  "verbatim_locator | proposition: the effective exposure suppressed the thyroid axis | Discussion | \"The high concentration of Triac needed for effective normalization of brain parameters in our mouse model resulted in a fully downregulated HPT axis\"",
+  "verbatim_locator | proposition: the human Triac trial had no neurodevelopmental endpoint | Discussion | \"This Triac trial was not designed to detect any impact of the treatment on neurodevelopmental outcomes in human MCT8 deficiency\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/myelin_generative_it36_20261108/levers_bc/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/myelin_generative_it36_20261108/levers_bc/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC9966820 full text through the PubMed Central retrieval tool, fetched 2026-11-08 (Europe PMC fullTextXML returned HTTP 500 on two attempts); text of all sections read, figures and tables not viewed; bytes not saved",
+ "study_id": {
+  "doi": "10.3390/ijms24043452",
+  "pmid": "36834863"
+ },
+ "workflow": "IT36 P4 phase C, hypothesis H1: window and endpoints of a thyromimetic rescue in a thyroid-hormone-transport-deficient mouse. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

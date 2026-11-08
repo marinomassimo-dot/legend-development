@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-08T08:54:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-08T09:00:00Z",
+ "event_id": "FTR-20261108-18266928-97",
+ "evidence_basis": [
+  "abstract analysed; no full text opened for this PMID (no PMC copy; PubMed record only)",
+  "verbatim_locator | proposition: E-N10 TRAIL raises tau phosphorylation and cytoplasmic beta-catenin degradation in SH-SY5Y | Abstract | \"both phosphorylation of glycogen synthase kinase 3 beta and degradation of cytoplasmic beta-catenin were increased, as well as phosphorylation of the tau protein\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb2_isrib_it36_20261108/output/README_nb2.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record fetched 2026-11-08 through NCBI E-utilities efetch; bytes not saved",
+ "study_id": {
+  "doi": "10.1111/j.1471-4159.2008.05291.x",
+  "pmid": "18266928"
+ },
+ "workflow": "IT36 P2 NB-2 extra search. Staged for the integrator; the ledger was not written by the preparing actor."
+}

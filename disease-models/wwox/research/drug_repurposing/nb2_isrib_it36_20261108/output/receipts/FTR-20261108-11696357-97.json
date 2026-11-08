@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-08T08:54:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-08T09:00:00Z",
+ "event_id": "FTR-20261108-11696357-97",
+ "evidence_basis": [
+  "abstract analysed; no full text opened for this PMID (no PMC copy; PubMed record only)",
+  "verbatim_locator | proposition: E-N7 FRAT1 inhibits GSK3 activity towards Tau and beta-catenin but not glycogen synthase | Abstract | \"inhibition of GSK-3 activity towards Tau and beta-catenin, but not modulation of glycogen synthase (GS) activity\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb2_isrib_it36_20261108/output/README_nb2.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record fetched 2026-11-08 through NCBI E-utilities efetch; bytes not saved",
+ "study_id": {
+  "doi": "10.1016/s0014-5793(01)02990-8",
+  "pmid": "11696357"
+ },
+ "workflow": "IT36 P2 NB-2 extra search on classes not covered. Staged for the integrator; the ledger was not written by the preparing actor."
+}

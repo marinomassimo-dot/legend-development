@@ -1,0 +1,36 @@
+{
+ "analysis_at": "2026-11-08T09:10:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-08T09:20:00Z",
+ "event_id": "FTR-20261108-42686079-98",
+ "evidence_basis": [
+  "route: PubMed record via the PubMed metadata tool on 2026-11-08; abstract only; no full text, methods, figures or tables read",
+  "verbatim_locator | proposition: abstract statement relevant to myelin readout | abstract | \"coordinated downregulation of genes involved in oligodendrocyte function, myelination, and galactolipid biosynthesis\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "relations.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 42686079, fetched 2026-11-08; bytes not saved",
+ "study_id": {
+  "doi": "10.1016/j.nbd.2026.107594",
+  "pmid": "42686079"
+ },
+ "workflow": "unguided_phenotype_expansion_it36_p4a"
+}

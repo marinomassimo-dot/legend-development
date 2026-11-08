@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-08T09:17Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "event_at": "2026-11-08T09:32Z",
+ "event_id": "FTR-20261108-18760695-99",
+ "evidence_basis": [
+  "route: PubMed record; abstract only, no methods or figures read",
+  "verbatim_locator | proposition: conditional neuregulin-1 null mice assemble normal amounts of myelin | abstract | \"Unexpectedly, these mice assemble normal amounts of myelin.\"",
+  "verbatim_locator | proposition: oligodendroglial ErbB3/ErbB4 double mutants myelinate | abstract | \"double mutants lacking oligodendroglial ErbB3 and ErbB4 become myelinated in the absence of any stimulation by neuregulins\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/myelin_generative_it36_20261108/levers_bc/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/myelin_generative_it36_20261108/levers_bc/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 18760695, fetched 2026-11-08; bytes not saved",
+ "study_id": {
+  "doi": "10.1016/j.neuron.2008.06.028",
+  "pmid": "18760695"
+ },
+ "workflow": "IT36 P4 phase C, cue line: whether neuregulin-ErbB signalling is required for developmental CNS myelination. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

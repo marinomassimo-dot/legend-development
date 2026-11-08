@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-08T09:21Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "event_at": "2026-11-08T09:32Z",
+ "event_id": "FTR-20261108-37765015-99",
+ "evidence_basis": [
+  "route: PubMed Central retrieval tool for PMC10534456 on 2026-11-08; whole text body read, figures and tables not viewed",
+  "verbatim_locator | proposition: T3 did not rescue the cytokine-induced block in this in vitro model | Results 2.3 | \"Cytokine exposure generated a reduction in the number of early-mature OLs in the cultures not rescued by T3\"",
+  "verbatim_locator | proposition: the prodrug compound has activity beyond the receptor, so attribution to the receptor needs a control | Discussion 3.1 | \"Preliminary investigations have revealed the polypharmacology of both compounds tested in this study and, most importantly, the significant activity of TG68 on AMPK activation.\"",
+  "verbatim_locator | proposition: a receptor-beta prodrug restored differentiation in the cytokine block where T3 did not | Results 2.3 | \"TG68 rescued the cytokine differentiation block almost completely\"",
+  "verbatim_locator | proposition: thyroid hormone is a component of the standard differentiation medium of this protocol | Results 2.1 | \"the differentiation medium containing CNTF, NAC, and T3, the main trigger of OPC differentiation\"",
+  "verbatim_locator | proposition: the clinical record of thyromimetics for myelin repair is poor | Discussion 3.2 | \"most thyromimetic drugs proposed for the promotion of OPC differentiation in demyelinating diseases have not passed clinical trials\"",
+  "verbatim_locator | proposition: isoform responsibility is stated as a belief | Discussion 3.1 | \"the latter believed to be the isoform chiefly responsible for T3-mediated differentiation induction\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/myelin_generative_it36_20261108/levers_bc/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/myelin_generative_it36_20261108/levers_bc/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC10534456 full text through the PubMed Central retrieval tool, fetched 2026-11-08; text of all sections read, figures and tables not viewed; bytes not saved",
+ "study_id": {
+  "doi": "10.3390/ph16091207",
+  "pmid": "37765015"
+ },
+ "workflow": "IT36 P4 phase C, hypothesis H1: identity, selectivity and limits of thyroid-receptor-beta ligands in an in vitro OPC differentiation model. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

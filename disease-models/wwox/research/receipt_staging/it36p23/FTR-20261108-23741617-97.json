@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-08T08:54:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "figures": "captions_only",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-08T09:00:00Z",
+ "event_id": "FTR-20261108-23741617-97",
+ "evidence_basis": [
+  "partial full text analysed through section-directed passages; figures not viewed; route and depth as stated in source_locator",
+  "verbatim_locator | proposition: EI01 ISRIB is a symmetric bis-glycolamide with a central cyclohexane in cis and trans forms | Results > Design of cell-based screen | \"symmetric bis-glycolamide, containing a central bi-substituted cyclohexane, and can exist as two diastereomers, cis and trans\"",
+  "verbatim_locator | proposition: EI02 trans-ISRIB named with (1r,4r) descriptors | Methods > Chemical synthesis | \"trans-ISRIB: 2-(4-Chlorophenoxy)-N-[(1r,4r)-4-[2-(4-chlorophenoxy)acetamido] cyclohexyl] acetamide\"",
+  "verbatim_locator | proposition: EI04 ISRIB does not block eIF2 alpha phosphorylation | Results > ISRIB-treated cells are resistant to eIF2-alpha phosphorylation | \"Unexpectedly, ISRIB did not block eIF2α phosphorylation under either of these ER stress-inducing conditions.\"",
+  "verbatim_locator | proposition: EI05 ISRIB did not reverse an mTOR-inhibitor translation block | Results | \"addition of ISRIB did not reverse the effect of Torin-1 on translation\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nb2_isrib_it36_20261108/output/README_isrib.md"
+ ],
+ "prior_receipt": "FTR-20261105-23741617-04",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Efetch of the PMC record PMC3667625 from NCBI E-utilities, fetched 2026-11-08 (the Europe PMC fullTextXML route returned HTTP 500 for the records tried); bytes not saved; read: abstract, Results (screen, ISRIB identity, phospho-eIF2 independence, Torin-1, memory), Discussion, Methods chemistry, one figure-supplement caption; figure images not looked at",
+ "study_id": {
+  "doi": "10.7554/eLife.00498",
+  "pmid": "23741617"
+ },
+ "workflow": "IT36 P3 ISRIB qualified entry: identity layer (structure as first reported). Staged for the integrator; the ledger was not written by the preparing actor."
+}
