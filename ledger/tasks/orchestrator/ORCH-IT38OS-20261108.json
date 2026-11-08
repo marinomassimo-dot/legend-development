@@ -8,10 +8,10 @@
   "START_UTC": "2026-11-08T17:41:00Z",
   "BASELINE": "development/main 4a783cd4 (local main 118ffaaa contains it). Worktree .claude/worktrees/it38os, branch task/it38os. Originals: /tmp/legend-openscientist-retest-20261108/ (manifest SHA-256 verified for all 11) and a copy in the gitignored files/openscientist_retest_20261108/ of the main checkout. Previous batch folders *_20261107 hold its results.",
   "CURRENT_PACKAGE": {
-    "id": "delivery",
-    "state": "synthesis, consumer delta, checks, landing",
+    "id": "landing",
+    "state": "eleven reports delivered, audited and corrected; battery on the frozen candidate",
     "delegate_active": "none",
-    "updated": "2026-11-08T21:24:00Z"
+    "updated": "2026-11-08T21:35:00Z"
   },
   "RESUME": "Package folder drug_repurposing/openscientist_retest_20261108/<topic>/ per report; BRIEF_COMMON.md there. Order of reports as the mandate lists them; one delegate at a time; producer phase 1 (extraction, blind to prior work) then phase 2 (reconcile with LEGEND) by SendMessage to the same producer, then blind verifier, then corrections.",
   "DECISIONS_TAKEN": [
@@ -19,7 +19,8 @@
     "Originals are external material: copies stay in files/ (gitignored); the repository holds digests, anchors by line number, and quotes of at most 25 words.",
     "Mandate's reuse rule: a previous verification is reused only if it covers the same proposition, source and context; otherwise the source is reopened.",
     "2026-11-08 INV-02 evidence.tsv was truncated by a defective local patch helper (csv.writer opened the file for write before failing on a quote); restored exactly from the producer's heredoc, confirmed by git diff against the staged copy: only the intended audit corrections differ. Patch helper rewritten (tab split, assertion before write); lesson: git add before patching.",
-    "2026-11-08 INV-08 verifier attempted once a request with a browser-style client header to read a retraction notice; the session classifier refused it as bot-check circumvention; the delegate did not repeat it, nothing was obtained that way, and nothing rests on it. VERIFIER_COMMON.md now states the rule explicitly (plain curl default user agent only). Reported to the operator in the final report."
+    "2026-11-08 INV-08 verifier attempted once a request with a browser-style client header to read a retraction notice; the session classifier refused it as bot-check circumvention; the delegate did not repeat it, nothing was obtained that way, and nothing rests on it. VERIFIER_COMMON.md now states the rule explicitly (plain curl default user agent only). Reported to the operator in the final report.",
+    "2026-11-08 Harness Engineering landed a complete-original rule and copied the eleven originals into files/external_reports/openscientist_20261108/ (shared, ignored); this mandate keeps its own verified copy in files/openscientist_retest_20261108/ (SHA-256 identical to the operator bundle). Consumers were not edited: proposals are in consumer_delta.md."
   ],
   "DELEGATIONS": [
     "INV-02 producer: asked sonnet/medium, read back medium x32 (phases 1 and 2); 32 turns; output 48,231; cache read 2,967,527; peak 142,915; 57 items, 14 decisive propositions, 4 sources newly read of cap 5.",
@@ -49,7 +50,7 @@
   "STOP_LOG": [],
   "DEFAULTS_TAKEN": [],
   "AUTHORISED_QUEUE_20261108E": {
-    "MANDATE_STATE": "OPEN",
+    "MANDATE_STATE": "COMPLETE",
     "OBJ_1": {
       "order": 1,
       "steps": [
@@ -127,9 +128,9 @@
         },
         {
           "step": "Integration of verified results into existing consumers, delivery, checks, landing",
-          "status": "TODO",
+          "status": "DONE",
           "owner": "orchestrator",
-          "evidence": ""
+          "evidence": "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/README.md"
         }
       ]
     }
