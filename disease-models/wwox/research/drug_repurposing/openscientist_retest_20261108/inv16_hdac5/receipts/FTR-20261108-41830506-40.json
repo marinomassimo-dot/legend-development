@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-08T20:34:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "event_at": "2026-11-08T20:46:00Z",
+ "event_id": "FTR-20261108-41830506-40",
+ "evidence_basis": [
+  "abstract analysed in full; abstract-level statements only",
+  "verbatim_locator | proposition: the paper's finding is incomplete seizure control on ketogenic therapy in Glut1DS | Abstract | \"Recent evidence indicates insufficient seizure control in Glut1DS patients despite adequate KDT and ketosis.\"",
+  "verbatim_locator | proposition: 61 percent of epilepsy patients were responders on monotherapy | Abstract | \"On KDT monotherapy 27/44 (61%) patients became >90% seizure free\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv16_hdac5/README.md",
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv16_hdac5/decisive.tsv"
+ ],
+ "prior_receipt": "FTR-20261019-41830506-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 41830506 (abstract and metadata as served 2026-11-08)",
+ "study_id": {
+  "doi": "10.1002/epi4.70243",
+  "pmid": "41830506"
+ },
+ "workflow": "INV-16 OpenScientist full-input repeat, producer os-16. Question-driven read for the decisive propositions; prepared as a staged JSON for the integrator; the ledger was not written by the preparing actor."
+}

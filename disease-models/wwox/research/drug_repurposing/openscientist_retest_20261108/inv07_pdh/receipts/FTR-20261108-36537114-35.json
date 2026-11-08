@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-08T19:06:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-08T19:09:00Z",
+ "event_id": "FTR-20261108-36537114-35",
+ "evidence_basis": [
+  "An abstract is not a reading; it supports a conditional lead only.",
+  "verbatim_locator | proposition: epilepsy responded to a ketogenic diet in three of five reported WOREE individuals | Abstract | \"epilepsy that responded to a ketogenic diet in three patients\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv07_pdh/README.md",
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv07_pdh/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record retrieved through the PubMed tools on 2026-11-08; abstract text only; no full text sought; other actors hold reading claims on this paper",
+ "study_id": {
+  "doi": "10.1002/ajmg.a.63074",
+  "pmid": "36537114"
+ },
+ "workflow": "INV-07 full-input repeat (openscientist_retest_20261108, label os-07): question-driven reading for the PDH, pyruvate and lactate decision propositions. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

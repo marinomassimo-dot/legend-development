@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-08T18:27:07Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-08T18:28:07Z",
+ "event_id": "FTR-20261108-12365832-33",
+ "evidence_basis": [
+  "abstract analysed",
+  "verbatim_locator | proposition: stroke trials of competitive and non-competitive NMDA antagonists gave no clinical improvement; the compounds are named | Abstract | \"No improvement in clinical outcome of stroke has been seen with competitive NMDA antagonists (selfotel) and non-competitive NMDA antagonists\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv05_nmda/README.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record (abstract) read 2026-11-08; no full text sought; bytes not saved",
+ "study_id": {
+  "doi": "10.1185/030079902125000660",
+  "pmid": "12365832"
+ },
+ "workflow": "os-05 INV-05 NMDA full-input repeat Phase 2"
+}

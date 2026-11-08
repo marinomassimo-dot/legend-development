@@ -1,0 +1,20 @@
+src_id	as_written	pmid_or_doi_as_written	used_for	anchor	note
+S01	"PMID: 32000863" (KB, lithium abolishes PTZ seizures in Wwox-/- mice)	PMID: 32000863	E01,E02,E22,E23,E32,E44,E69	L18, L30, L45, L65, L113	Report cites it as knowledge-base content.
+S02	"PMID: 19442155" (pharmacodynamics review)	PMID: 19442155	E03,E50,E66,E80	L18, L77, L114	
+S03	"PMID: 27922641"	PMID: 27922641	E05,E80	L20, L115	Only the claim "inositol synthesis inhibition inactivates GSK-3" attached; no title.
+S04	"PMID: 25345501"	PMID: 25345501	E05,E80	L20, L115	As above.
+S05	"PMID: 39901291" (substrate-competitive GSK-3β peptide inhibitor, nuclear β-catenin)	PMID: 39901291	E10,E72	L23, L116	
+S06	"PMID: 38123002" (Wnt inhibition and CPZ OPC differentiation)	PMID: 38123002	E12,E15,E46,E58,E77	L25, L67, L117, L131	
+S07	"PMID: 42274605" (Wnt/GSK-3β and OL differentiation)	PMID: 42274605	E13,E77	L25, L118	Unusually high PMID number; not checked here.
+S08	"KB PMID: 33914858" (oligodendrocyte maturation, hypomyelination; neuronal Nex/Nestin-Cre mice)	PMID: 33914858	E14,E22,E23,E32	L25, L30, L45	Report also uses it for perinatal windows.
+S09	"PMID: 23369789" (substrate-competitive GSK-3 inhibitors, moderate inhibition)	PMID: 23369789	E19,E20,E21,E35,E50,E71	L28, L51, L76, L119	Also credited to the L803-mts peptide (L51).
+S10	"PMID: 32463939" (GSK-3β, PI4KIIα, NMDAR/AMPAR, CT99021)	PMID: 32463939	E18,E24,E25,E34,E50,E55,E67,E70,E78	L33, L50, L75, L120	
+S11	"PMID: 33197065" (GSK3α not GSK3β required for LTD)	PMID: 33197065	E26,E55,E57,E65	L35, L121, L137	
+S12	"PMID: 19303846" (DISC1, GSK3β, progenitor proliferation)	PMID: 19303846	E15,E29,E30,E31,E46,E58,E79	L38, L67, L122, L131	
+S13	"PMID: 23099259" (constitutively active GSK3β not GSK3α)	PMID: 23099259	E39,E73	L55, L123	Report calls S9A "β-specific".
+S14	"PMID: 18566399" (lithium in EAE)	PMID: 18566399	E47,E69	L68, L124, L135	
+S15	"PMID: 34747138" (neonatal neuronal AAV9-WWOX)	PMID: 34747138	E17,E48,E49,E50,E61,E75	L71, L74, L125, L149	
+S16	KB: "Altered neocortical oscillations... Wwox knockout"	none	E27,E45	L35, L66	Knowledge-base entry title without identifier.
+S17	KB gap_gsk3b_as_a_druggable_node	none	E07,E28,E45	L66	Knowledge-base gap identifier as written (the report lists it with F007).
+S18	KB (conventional anti-seizure medicines fail about 95% of WOREE patients)	none	E51	L78	Unreferenced KB claim.
+S19	MONDO:0014533	MONDO:0014533	E81	L5	Disease identifier, not a reference.

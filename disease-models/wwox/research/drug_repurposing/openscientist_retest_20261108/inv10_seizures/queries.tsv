@@ -1,0 +1,9 @@
+query_id	database_or_route	string_or_url	run_at_utc	hits	what_was_done
+Q01	pubmed_identity_check.py	--pmid for 17 PMIDs (16 cited by the report plus 32000863)	2026-11-08T19:50:00Z	17	All titles agree with the report descriptions; 15658788 is a topical review of cognitive and behavioural correlates of TSC, not a seizure-control outcome study.
+Q02	fulltext_receipts.py status	--pmid for 17 PMIDs	2026-11-08T19:55:00Z	17	Receipts exist for 42721537 (abstract), 39101447, 41442931 (abstract), 34747138, 42422765, 34634460, 32000863, 42128308; none for 39933386, 42949433, 42520581, 12040897, 19362867, 42953089, 40088508, 42237860, 15658788.
+Q03	PubMed tool	WWOX genotype phenotype correlation null variants missense WOREE SCAR12 severity	2026-11-08T20:00:00Z	0	Over-specified; translation ANDs every term. No finding.
+Q04	PubMed tool	WWOX epileptic encephalopathy genotype phenotype	2026-11-08T20:01:00Z	23	Top 10 titles not individually opened; module CLAIM 033 already cites three papers for the genotype-mortality statement; no dedicated paper for genotype-stratified seizure or developmental prognosis identified.
+Q05	PubMed tool get_article_metadata	39933386, 42949433, 42520581	2026-11-08T20:03:00Z	3	Abstracts read; staged receipts abstract_only.
+Q06	PubMed tool get_article_metadata	42721537, 41442931	2026-11-08T20:04:00Z	2	Abstracts re-read for wording only (receipts exist in the ledger); no new receipt.
+Q07	Europe PMC REST	https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8609180/fullTextXML	2026-11-08T20:07:00Z	1	Full-text XML for PMID 34634460 fetched to scratch; keyword search AMPA 1 hit, NBQX 0, CNQX 0, felbamate 0, perampanel 0; bytes not kept in the repository.
+Q08	git grep / needs.json / registry text	INV-10, AMPA, felbamate, fenfluramine, lithium, genotype strings in module files	2026-11-08T19:45:00Z	several	Located CLAIM 031, 033, 035, needs ids, investigation INV-10 row, prior packages.

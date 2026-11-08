@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-08T21:04:23Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_present",
+  "limitations": "not_present"
+ },
+ "event_at": "2026-11-08T21:06:55Z",
+ "event_id": "FTR-20261108-34018186-41",
+ "evidence_basis": [
+  "Abstract, Introduction, Results and Discussion searched by pattern (elacridar, ZD7288, sag, cortical initiation network); Methods not read; images not viewed.",
+  "verbatim_locator | proposition: oral ivabradine was given with the P-glycoprotein inhibitor elacridar because of limited brain availability | Abstract | \"due to their limited brain availability\"",
+  "verbatim_locator | proposition: ivabradine blocked the depolarizing sag in normal cortical layer 5/6 pyramidal neurons and hyperpolarized them | Results (Fig 5) | \"IVA (3 µmol·L –1) blocked the characteristic depolarizing sag elicited in these neurons\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv18_membrane/README.md",
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv18_membrane/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "ad91b9a465d544dad36c9bc1f6ea48bffc4fdc099b674be143785966293c74cf",
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC fullTextXML for the PMC record, fetched 2026-11-08; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1111/epi.16926",
+  "pmid": "34018186"
+ },
+ "workflow": "INV-18 full-input repeat (openscientist_retest_20261108), producer os-18, Phase 2. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

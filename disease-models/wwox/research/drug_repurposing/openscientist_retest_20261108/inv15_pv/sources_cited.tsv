@@ -1,0 +1,7 @@
+src_id	as_written	pmid_or_doi_as_written	used_for	anchor	note
+S01	PMID: 34634460	34634460	E01,E02,E11,E13,E43,E44	L10, L18, L54, L104, L109	Sole inhibitory source; the report cites it through the knowledge base entry, not as a paper read.
+S02	PMID: 33914858	33914858	E09,E10,E41	L25, L55, L105, L109	Cited both for the Synapsin I-Cre model and for the human WWOX-deleted organoid; possible conflation of two models under one identifier.
+S03	PMID: 34747138	34747138	E42,E45	L56, L106, L109	Neonatal AAV9-SynI-WWOX gene therapy.
+S04	PMID: 27845895	27845895	E31,E32,E35,E39,E40	L42, L90, L107, L109, L117	Report labels it knowledge-base-derived, not independently confirmed.
+S05	PMID: 42812881	42812881	E33,E34,E35,E37,E39	L44, L96, L108, L109	Report says verified against the abstract only; identifier not corrected here.
+S06	MONDO:0014533	MONDO:0014533	E59	L7	Disease identifier, not a literature source.
