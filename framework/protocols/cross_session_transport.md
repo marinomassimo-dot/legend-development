@@ -545,8 +545,10 @@ milestone, after every compaction and on every recall, and update the statuses a
 ### Hourly watch: actors, binding and runtime limits
 
 The existing host cron runs `mandate_watch.py check --all --deliver resume` hourly.
-`--all` discovers task records under **every actor** in `ledger/tasks/*/`, not only the
-Orchestrator. Its decision still comes from their recorded queues: it cannot discover
+`--all` discovers task records under **every actor** in `ledger/tasks/*/`, including new
+mandates in registered worktrees before they land. The main record takes precedence over
+stale copies; multiple unmerged copies without one authoritative main record remain
+`UNKNOWN`, never a guessed owner. Its decision still comes from recorded queues: it cannot discover
 authorised work omitted from them. On accepting a continuing mandate, keep its queue and
 the session binding current and check `--task <ID> --deliver none --json` once; an
 `UNKNOWN` binding is a visible coverage gap, not proof the session is monitored.

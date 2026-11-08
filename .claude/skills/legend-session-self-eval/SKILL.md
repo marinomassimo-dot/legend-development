@@ -25,7 +25,7 @@ is documentation. This skill exists so the diagnosis has a name the operator can
 2. **Judgement second**, in writing, against the template.
 3. **Micro-upgrade third**, derived from the weakest answer.
 4. **Dream pass, only if something material changed** (a verified result, a corrected premise, a moved limit, a repeated error, a resolved question): [`legend-dream`](../legend-dream/SKILL.md). `dream_pass.py quiet` first; if nothing changed it ends in one line.
-5. *Then* `legend-capability-scout`, *then* `legend-session-takeaways`.
+5. Reconcile the authorised objective and its remaining work under [autonomous mandate continuity](../../../framework/protocols/cross_session_transport.md#12--autonomous-mandate-continuity). *Then* `legend-capability-scout`, *then* `legend-session-takeaways`; the closing report does not release executable work.
 
 ## Part 1 — run these; do not answer them
 

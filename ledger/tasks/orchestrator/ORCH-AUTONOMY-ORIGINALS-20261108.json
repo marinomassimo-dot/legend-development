@@ -20,7 +20,7 @@
         {
           "step": "Correct actor discovery, closure recovery and observable hourly-watch status; regressions",
           "status": "DONE",
-          "evidence": "framework/scripts/test_mandate_watch.py: 22 tests pass, including all actors, independent work, closure evidence and one runtime lookup; test_mandate_continuity.py: 68 tests, 1 environment skip"
+          "evidence": "framework/scripts/test_mandate_watch.py: 25 tests pass, including all actors, new unmerged mandates, paused-main precedence and ambiguity; test_mandate_continuity.py: 68 tests, 1 environment skip"
         },
         {
           "step": "Required release checks on the candidate and integrate into main",

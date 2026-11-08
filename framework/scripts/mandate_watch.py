@@ -467,12 +467,49 @@ def open_tasks(root: Path) -> list[str]:
     return sorted(ids)
 
 
+def registered_worktrees(root: Path) -> list[Path]:
+    """Registered views of this repository, not arbitrary directories on the host."""
+    roots = [root]
+    try:
+        result = subprocess.run(["git", "-C", str(root), "worktree", "list", "--porcelain"],
+                                capture_output=True, text=True, timeout=10)
+        if result.returncode == 0:
+            for line in result.stdout.splitlines():
+                if line.startswith("worktree "):
+                    tree = Path(line[len("worktree "):])
+                    if tree.is_dir() and tree not in roots:
+                        roots.append(tree)
+    except (OSError, subprocess.SubprocessError):
+        pass
+    return roots
+
+
 def _check_all(a) -> int:
     sessions = list_sessions()
     results = []
-    for task in open_tasks(Path(a.root)):
-        out = check(task, root=Path(a.root), deliver=a.deliver, quiet_minutes=a.quiet_minutes,
+    root = Path(a.root)
+    candidates = {}
+    for tree in registered_worktrees(root):
+        for task in open_tasks(tree):
+            candidates.setdefault(task, []).append(tree)
+    for task, trees in sorted(candidates.items()):
+        # Main's record wins over stale OPEN copies in old worktrees (including PAUSED
+        # or CANCELLED main records). A new, uniquely located task can be watched before
+        # landing; identity still requires its own transcript binding in check().
+        if mc.find_records(root, task):
+            record_root = root
+        elif len(trees) == 1:
+            record_root = trees[0]
+        else:
+            out = {"task": task, "state": "UNKNOWN", "action": "NONE",
+                   "why": "multiple unmerged task records; no authoritative root copy",
+                   "record_roots": [str(t) for t in trees]}
+            results.append(out)
+            log_event("check", **out)
+            continue
+        out = check(task, root=record_root, deliver=a.deliver, quiet_minutes=a.quiet_minutes,
                     sessions=sessions, resume_args=tuple(a.resume_arg))
+        out["record_root"] = str(record_root)
         results.append(out)
         if not getattr(a, "json", False) and out["action"] == "RESUME":
             print(f"{out['state']} {out['action']} {task}: {out['why']}" + (f" [{out['delivery']}]" if out.get("delivery") else ""))
