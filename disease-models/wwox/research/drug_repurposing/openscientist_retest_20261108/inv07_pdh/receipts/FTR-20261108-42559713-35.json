@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-08T19:06:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-08T19:09:00Z",
+ "event_id": "FTR-20261108-42559713-35",
+ "evidence_basis": [
+  "verbatim_locator | proposition: seizure frequency fell in 8 of 9 PDCD individuals with epilepsy given a ketogenic diet (retrospective, physician-rated) | Abstract | \"Seizure frequency decreased in individuals with epilepsy (8/9; 89%)\"",
+  "verbatim_locator | proposition: the efficacy data were collected retrospectively in a small sample | Discussion | \"Another limitation is that the sample size was small, and data on treatment efficacy were collected retrospectively.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv07_pdh/README.md",
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv07_pdh/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC13445312 full text retrieved on 2026-11-08 through the PubMed Central full-text tool; Europe PMC fullTextXML returned HTTP 500 for the same record, so that route was not used; figures not viewed; supplement not read; bytes not saved",
+ "study_id": {
+  "doi": "10.1002/acn3.70510",
+  "pmid": "42559713"
+ },
+ "workflow": "INV-07 full-input repeat (openscientist_retest_20261108, label os-07): question-driven reading for the PDH, pyruvate and lactate decision propositions. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-08T18:47:10Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "unavailable",
+  "figures": "unavailable",
+  "introduction": "unavailable",
+  "limitations": "unavailable",
+  "methods": "unavailable",
+  "references": "unavailable",
+  "results": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-08T18:47:30Z",
+ "event_id": "FTR-20261108-26725831-34",
+ "evidence_basis": [
+  "Abstract read in full. Adult mice, 12 weeks of cuprizone, chronic lesions.",
+  "verbatim_locator | proposition: T3 left the progenitor marker unchanged and raised mature cells | abstract | \"platelet derived growth factor-α receptor was not affected by T3 administration\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv06_myelin/README.md",
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv06_myelin/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 26725831 (abstract and metadata served 2026-11-08 through the PubMed tool); full text not opened",
+ "study_id": {
+  "doi": "10.1007/s11011-015-9781-y",
+  "pmid": "26725831"
+ },
+ "workflow": "INV-06 OpenScientist retest 2026-11-08, actor os-06. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

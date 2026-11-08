@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-08T20:27:31Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_present",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "not_present",
+  "references": "not_read",
+  "results": "not_present",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-08T20:27:33Z",
+ "event_id": "FTR-20261108-42583891-39",
+ "evidence_basis": [
+  "Abstract only, read through the PubMed tool; the PMC record was not opened. No method, figure or table was read. Read for one purpose: which system supplies the Kv3 positive-modulator class lever named by an external report for WWOX.",
+  "verbatim_locator | proposition: Kv3.1/3.2 channels sit mainly on PV interneurons (authors' premise) | abstract | \"Kv3.1 and KV3.2 potassium channels are mainly located on parvalbumin (PV) containing interneurons\"",
+  "verbatim_locator | proposition: the modulator attenuated deficits in a rat phencyclidine model, a schizophrenia-symptom model and not an epilepsy or WWOX system | abstract | \"significantly attenuated by AUT00206 (10 and 30 mg/kg) in the three behavioural tasks\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv15_pv/README.md",
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv15_pv/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "442889d496ea1244df0d39baeeabb980e2ba2a694fb21caa7f1371de9692042b",
+ "source_kind": "abstract",
+ "source_locator": "PubMed record, retrieved 2026-11-08 through the PubMed tool",
+ "study_id": {
+  "doi": "10.1177/02698811261473459",
+  "pmid": "42583891"
+ },
+ "workflow": "INV-15 retest Phase 2 (openscientist_retest_20261108), producer os-15. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

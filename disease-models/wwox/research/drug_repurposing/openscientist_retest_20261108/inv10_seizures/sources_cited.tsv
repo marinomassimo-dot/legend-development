@@ -1,0 +1,20 @@
+src_id	as_written	pmid_or_doi_as_written	used_for	anchor	note
+S01	WOREE: case series of seven patients from Argentina	PMID: 42721537	E01,E02,E03,E09,E11	L18, L92	Cited as "Argentine series"; identifier not checked.
+S02	DEE from homozygous WWOX c.172+1G>C (You et al.), 2024 case report	PMID: 39101447	E01,E08,E09,E34,E48,E50	L41, L93	Single vigabatrin-responsive case.
+S03	IESS: clinical and genetic variability (Argentina)	PMID: 39933386	E10,E11,E48	L43, L94	
+S04	Genetic epilepsies in infancy/toddlerhood (India)	PMID: 40088508	E12,E13	L43, L95	Country given only in Evidence Base.
+S05	Neonatal-onset DEE cohort (S. Europe)	PMID: 42949433	E14,E18,E19	L21, L96	
+S06	Developmental outcome with/without intervention (infantile spasms surgical data)	PMID: 12040897	E15,E18	L21, L97	Old-format PMID unlike the 42xxxxxx series; no doubt about it per se.
+S07	Favourable prognostic factors with infantile spasms	PMID: 19362867	E16,E18	L23, L98	
+S08	Beyond seizures: hidden burden of DEEs	PMID: 42953089	E20	L23, L99	
+S09	VABAM in two WWOX children	PMID: 41442931	E30,E31,E32,E33	L28, L100	
+S10	Neonatal neuronal WWOX gene therapy rescues null phenotypes	PMID: 34747138	E35,E37,E57,E60	L28, L101	
+S11	Neuron-specific WWOX gene therapy, dose-dependent durable rescue	PMID: 42422765	E36,E37,E57	L82, L102	Appears in the Classification table and Evidence Base, not in a Finding.
+S12	WWOX neocortical excitability (in vitro)	PMID: 34634460	E24,E25,E26,E27,E28,E56	L36, L103	
+S13	Systematic review: CBD non-seizure outcomes in DEEs (32 studies, 1,343 patients)	PMID: 42520581	E39,E41,E43,E59	L31, L104	
+S14	Beyond seizures in LGS, Italian experts	PMID: 42237860	E40,E41,E44,E59	L31, L105	
+S15	WWOX in brain development and disease (review)	PMID: 42128308	E46,E49	L106	Appears only in the closing paragraph of the Evidence Base.
+S16	TSC literature (e.g., PMID: 15658788)	PMID: 15658788	E17	L106	Given as an example; no title.
+S17	dismech knowledge-base antiseizure-medication entry	none	E07	L16	No identifier or URL.
+S18	WWOX cohorts / dismech KB	none	E06	L78	No identifier.
+S19	Wwox-null mouse studies	none	E21,E22	L79	No identifier; lithium/PTZ/GSK-3beta result is attributed to unnamed studies.

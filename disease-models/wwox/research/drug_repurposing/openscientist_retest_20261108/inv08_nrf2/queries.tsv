@@ -1,0 +1,8 @@
+query_id	database_or_route	string_or_url	run_at_utc	hits	what_was_done
+Q01	PubMed via search tool	(WWOX OR Wwox) AND (NRF2 OR Nrf2 OR NFE2L2 OR KEAP1)	2026-11-08T19:26:50Z	1	hit is PMID 39894307 (hepatocellular cancer cells, already known); query translation shows OR groups kept
+Q02	Europe PMC REST search	(TITLE_ABS:"WWOX" OR TITLE_ABS:"Wwox") AND (TITLE_ABS:"NRF2" OR "Nrf2" OR "NFE2L2" OR "KEAP1")	2026-11-08T19:27:05Z	1	same hit 39894307; second route for the absence claim
+Q03	Europe PMC REST search	(WWOX OR Wwox) AND (oxidative stress OR glutathione OR antioxidant) AND (neuron* OR brain OR oligodendro*) in title/abstract	2026-11-08T19:27:15Z	3	35984507 and two Alzheimer's WWOX/WOX1 reviews; none measures NRF2; not opened
+Q04	pubmed_identity_check.py	19 report PMIDs plus 21690096	2026-11-08T19:24:00Z	20	all resolve to DOI and title; titles consistent with stated roles; see README for wording differences
+Q05	fulltext_receipts.py status	23251339 40902898 35984507 27401964 29538645 36244590 40729961 21690096 32000863	2026-11-08T19:25:00Z	9	only 35984507 and 32000863 have receipts; the five without were read at abstract depth
+Q06	PubMed tool get_article_metadata and convert_article_ids	23251339 40902898 27401964 29538645 36244590	2026-11-08T19:26:00Z	5	abstracts read; PMC ids exist for 23251339, 27401964, 36244590 but not opened; none for 40902898 and 29538645 in the converter
+Q07	git grep over disease-models	PMIDs of the report's sources; sulforaphane; tBHQ; RTA 408; reductive stress	2026-11-08T19:25:30Z	see README	only 21690096 (retraction text), 35984507 and 32000863 appear in earlier records; omaveloxolone/RTA 408 in L01 card

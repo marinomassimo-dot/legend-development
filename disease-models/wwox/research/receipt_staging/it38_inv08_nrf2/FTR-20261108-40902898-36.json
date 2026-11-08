@@ -1,0 +1,38 @@
+{
+ "analysis_time_precision": "minute",
+ "record_kind": "contemporaneous_receipt",
+ "source_fingerprint": null,
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv08_nrf2/README.md"
+ ],
+ "analysis_at": "2026-11-08T19:20:00Z",
+ "event_at": "2026-11-08T19:27:00Z",
+ "event_id": "FTR-20261108-40902898-36",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "evidence_basis": [
+  "abstract analysed; no full text opened for this PMID",
+  "verbatim_locator | proposition: microglial exosomal miR-155-5p binds the Nrf2 3'UTR in OPCs and inhibits differentiation; cuprizone demyelination model, remyelination after blocking miR-155-5p in microglia | Abstract | \"This miRNA binds to the 3' UTR of the transcription factor Nrf2 in OPCs, inhibiting their differentiation.\"",
+  "verbatim_locator | proposition: second abstract sentence checked for the same proposition | Abstract | \"inhibiting miR-155-5p in microglia led to improved motor function recovery, increased the number of mature oligodendrocytes and promoted remyelination\""
+ ],
+ "evidence_depth": "abstract_only",
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "source_kind": "abstract",
+ "source_locator": "PubMed record fetched 2026-11-08 through the PubMed tool; any PMC copy was not opened; bytes not saved",
+ "study_id": {
+  "doi": "10.1016/j.bbi.2025.106092",
+  "pmid": "40902898"
+ },
+ "workflow": "INV-08 retest: wording and system check of the report's use of this source (os-08). Staged for the integrator; the ledger was not written by the preparing actor."
+}

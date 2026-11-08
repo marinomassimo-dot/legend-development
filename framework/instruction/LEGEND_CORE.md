@@ -486,7 +486,8 @@ Operator decisions already taken (2026-09-03), retiring class-2 stops:
     spelling and no `+` refspec; it names exactly one ref; `public_release_gate` has been run
     against the exact SHA pushed and is PASS with zero blocks; LINT has no BLOCK and
     `fulltext_receipts.py verify` is OK; the release battery run on a fresh clone of the
-    pushed ref turns no green suite red; no backup branch, snapshot, gitignored file or
+    pushed ref (in a box made by `owned_scratch.py --make`, never a directory named by hand)
+    turns no green suite red; no backup branch, snapshot, gitignored file or
     private material is pushed; and the session report records branch, SHA, gate result and
     actor. `main` is included: agents fast-forward and push it under these conditions
     (operator decision 2026-09-26, `DEC-20260926-DAILY-DEVELOPMENT-PUSH`). No work stays

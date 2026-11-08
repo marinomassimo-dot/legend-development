@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-08T19:06:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-08T19:09:00Z",
+ "event_id": "FTR-20261108-16517405-35",
+ "evidence_basis": [
+  "An abstract is not a reading; it supports a conditional lead only.",
+  "verbatim_locator | proposition: forced PDK1 expression in hypoxic HIF-1alpha null cells raises ATP and lowers ROS and apoptosis | Abstract | \"Forced PDK1 expression in hypoxic HIF-1alpha null cells increases ATP levels, attenuates hypoxic ROS generation, and rescues these cells from hypoxia-induced apoptosis.\"",
+  "verbatim_locator | proposition: HIF-1 transactivates PDK1 which inactivates PDH | Abstract | \"directly trans-activating the gene encoding pyruvate dehydrogenase kinase 1 (PDK1)\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv07_pdh/README.md",
+  "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv07_pdh/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record retrieved through the PubMed tools on 2026-11-08; abstract text only; no full text sought",
+ "study_id": {
+  "doi": "10.1016/j.cmet.2006.02.002",
+  "pmid": "16517405"
+ },
+ "workflow": "INV-07 full-input repeat (openscientist_retest_20261108, label os-07): question-driven reading for the PDH, pyruvate and lactate decision propositions. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
