@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-08T09:18Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "event_at": "2026-11-08T09:32Z",
+ "event_id": "FTR-20261108-32477268-99",
+ "evidence_basis": [
+  "route: PubMed record; review abstract only; no cited primary source opened",
+  "verbatim_locator | proposition: clinical trials did not show neurological improvement | abstract | \"A recurrent observation in clinical trials is the absence of neurological improvement.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/myelin_generative_it36_20261108/levers_bc/output/README.md",
+  "disease-models/wwox/research/drug_repurposing/myelin_generative_it36_20261108/levers_bc/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for PMID 32477268, fetched 2026-11-08; bytes not saved",
+ "study_id": {
+  "doi": "10.3389/fendo.2020.00283",
+  "pmid": "32477268"
+ },
+ "workflow": "IT36 P4 phase C, hypothesis H1: clinical record of thyromimetic treatment for hypomyelination in a transport defect. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
