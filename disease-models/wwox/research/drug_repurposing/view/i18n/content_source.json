@@ -219,10 +219,6 @@
   "src": "it",
   "text": "Capire se vigabatrin o CPP-115 aggiungono danno alla mielina in un modello giovanile privo di Wwox."
  },
- "2c464c171a0a": {
-  "src": "en",
-  "text": "In WWOX-deficient and corrected isogenic organoids or radial-glia cultures: compare MYC within cell-cycle phase strata, then lower MYC by a genetic route with a second construct and read the progenitor fractions and the cell-cycle phase. No compound is needed for this step. Refinement from NB-1: lowering is graded and MYC-specific (not MYCN or MYCL unless measured), in two windows (radial-glia phase; neuron stage only), reading absolute counts of SOX2-, NEUN-, CTIP2- and SATB2-positive cells, cell death, glia and MYCN, in factorial design against restoring cell-cycle timing without touching MYC; the reading is wrong if markers do not move, the pool shrinks, glia rise, or the same lowering in the corrected line gives the same shift. [IT39 dream] In the same lines, read the HIF and glycolytic target genes beside the neuronal genes, and add a HIF1A or EPAS1 knockdown arm for the glycolytic readout: a MYC to HIF1A edge exists at database level (sign context-dependent) and HIF-axis data exist in WWOX cells (non-neural), so the MYC change could act on glycolysis, be reached from it, or follow a shared maturation or composition change; the measurement separates these (exploratory, no compound)."
- },
  "2e055fd6bb53": {
   "src": "it",
   "text": "Rami della risposta UPR, trascritti"
@@ -1190,6 +1186,10 @@
  "d8bcf6b0301e": {
   "src": "en",
   "text": "Known in the WWOX system: the parvalbumin marker deficit is already a named need observation and the NP3A1 reopening trigger; the row restates the open question as six separable layers (IT13b, IT14 P1a, IT14 P1b, reopening table row NP3A1)."
+ },
+ "d8edf429d959": {
+  "src": "en",
+  "text": "In WWOX-deficient and corrected isogenic organoids or radial-glia cultures: compare MYC within cell-cycle phase strata, then lower MYC by a genetic route with a second construct and read the progenitor fractions and the cell-cycle phase. No compound is needed for this step. Refinement from NB-1: lowering is graded and MYC-specific (not MYCN or MYCL unless measured), in two windows (radial-glia phase; neuron stage only), reading absolute counts of SOX2-, NEUN-, CTIP2- and SATB2-positive cells, cell death, glia and MYCN, in factorial design against restoring cell-cycle timing without touching MYC; the reading is wrong if markers do not move, the pool shrinks, glia rise, or the same lowering in the corrected line gives the same shift. [IT39 dream] In the same lines, read the HIF and glycolytic target genes beside the neuronal genes, and add a HIF1A or EPAS1 knockdown arm for the glycolytic readout: a MYC to HIF1A edge exists at database level (sign context-dependent) and HIF-axis data exist in WWOX cells (non-neural), so the MYC change could act on glycolysis, be reached from it, or follow a shared maturation or composition change; the measurement separates these only if each side is perturbed and the other read, in both directions and in time order: an unchanged readout after one perturbation shows that the first factor is not needed for that readout, not a causal direction (exploratory, no compound)."
  },
  "d99712f30874": {
   "src": "en",
