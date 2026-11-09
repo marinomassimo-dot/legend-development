@@ -1354,10 +1354,15 @@ class CdpStartup(unittest.TestCase):
             self.assertIn(binary, str(caught.exception))
 
     def test_unresponsive_endpoint_obeys_deadline_and_reaps_browser(self):
+        """The fixture writes its PID first (before any import, so a slow interpreter start cannot delay it) and a `.ready` marker only once its socket is listening and will never answer.
+        The test then asserts both facts: the endpoint really was up and unresponsive when the deadline fired (the case exercised what it claims), and the process is gone afterwards.
+        The deadline is 2.5 s, not 0.8 s: with 0.8 s a loaded host could reap the child before it had written its PID (CI run 42554737434: FileNotFoundError on browser.pid), which tests the host, not the code."""
         import os
         import time
-        body = """import http.server, os, pathlib, sys, time
-pathlib.Path(__file__).with_suffix('.pid').write_text(str(os.getpid()))
+        body = """import os, pathlib
+pid_file = pathlib.Path(__file__).with_suffix('.pid')
+pid_file.write_text(str(os.getpid()))
+import http.server, sys, time
 port = int(next(a.split('=', 1)[1] for a in sys.argv if a.startswith('--remote-debugging-port=')))
 class Handler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
@@ -1365,14 +1370,19 @@ class Handler(http.server.BaseHTTPRequestHandler):
         self.send_header('Content-Length', '100')
         self.end_headers()
         time.sleep(60)
-http.server.HTTPServer(('127.0.0.1', port), Handler).serve_forever()
+server = http.server.HTTPServer(('127.0.0.1', port), Handler)
+pathlib.Path(__file__).with_suffix('.ready').write_text('listening')
+server.serve_forever()
 """
+        deadline = 2.5
         with tempfile.TemporaryDirectory() as td:
             binary = self.browser(td, body)
             started = time.monotonic()
-            with self.assertRaisesRegex(RuntimeError, "startup_timeout=0.8s"):
-                rv.Cdp(binary, td, startup_timeout=0.8)
-            self.assertLess(time.monotonic() - started, 4)
+            with self.assertRaisesRegex(RuntimeError, "startup_timeout=2.5s"):
+                rv.Cdp(binary, td, startup_timeout=deadline)
+            elapsed = time.monotonic() - started
+            self.assertLess(elapsed, deadline + 3.5, "the deadline was not obeyed")
+            self.assertTrue(Path(binary).with_suffix('.ready').exists(), "the fixture never reached the listening state: the unresponsive endpoint was not exercised")
             pid = int(Path(binary).with_suffix('.pid').read_text())
             with self.assertRaises(ProcessLookupError):
                 os.kill(pid, 0)
