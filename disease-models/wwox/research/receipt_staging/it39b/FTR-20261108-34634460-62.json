@@ -1,0 +1,46 @@
+{
+ "analysis_at": "2026-11-08T23:34:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "read",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-08T23:38:00Z",
+ "event_id": "FTR-20261108-34634460-62",
+ "evidence_basis": [
+  "Re-read for the AMPA, NMDAR composition, general excitatory drive and carbenoxolone question: Methods in full (slice preparation, ACSF, temperature, pharmacology, burst detection, statistics), Results 2.1 to 2.6, Discussion, Table 1, all six figure images viewed (Figs 1-6), the supplementary docx text (Table S1, legends of Figs S1-S4) and its four images viewed. The reference list was not read; cited papers for carbenoxolone were taken from the Discussion sentence only. Depth is declared partial only because the reference list was not read; every other section, every figure and every supplementary item carrying a number used here was read or viewed. Correction receipt: the last locator of the -61 receipt elided the full chemical name of d-APV and is restored here verbatim; Fig 1D (inter-burst histogram) was re-viewed enlarged in Phase 3, with no change in coverage.",
+  "verbatim_locator | proposition: bursts abolished by d-APV | Results 2.2 | \"Blocking glutamatergic neurotransmission with d-APV (50 μM) eliminated the spontaneous bursting events\"",
+  "verbatim_locator | proposition: carbenoxolone effect size | Results 2.2 | \"CBX (100 μM) decreased the frequency of the events by 87% (p = 0.008) and their duration by 18% (p = 0.0274\"",
+  "verbatim_locator | proposition: mEPSC decay unchanged | Results 2.3 | \"there were no significant changes in the decay time constant of mEPSCs\"",
+  "verbatim_locator | proposition: incubation medium only | Methods 5.2 | \"123 NaCl, 25 NaHCO3, 10 glucose, 3.5 KCl, 1.3 MgSO4-7H2O\"",
+  "verbatim_locator | proposition: delayed evoked response sensitive to d-APV | Results 2.2 | \"This delayed response was NMDA receptor mediated, as addition of d-APV reversibly suppressed the response\"",
+  "verbatim_locator | proposition: complete pharmacology list | Methods 5.4 | \"tetrodotoxin (TTX), 2-amino-5-phosphonopentanoic acid (d-APV), carbenoxolone (CBX) and brilliant blue FCF (BB-FCF)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/observations.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/alternatives.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/probes.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/figure_notes.tsv"
+ ],
+ "prior_receipt": "FTR-20261108-34634460-61",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "receipt_correction",
+ "source_fingerprint": "135eab3d0c940e927f538eb6766581b262426d2d55034ea2cbd0deb538c61b5c",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket text rendering of the PMC record plus the supplementary docx and the six figure images, fetched with plain curl on 2026-11-08; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1016/j.nbd.2021.105529",
+  "pmid": "34634460"
+ },
+ "workflow": "Package B AMPA, NMDAR composition and carbenoxolone discrimination (ORCH-IT39OS-20261108), producer an-b, Phase 3 (corrections after the independent audit; replaces the evidence_basis of the -61 receipt, which is not edited). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

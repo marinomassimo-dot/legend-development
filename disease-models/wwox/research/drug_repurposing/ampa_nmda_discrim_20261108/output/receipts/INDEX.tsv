@@ -1,0 +1,11 @@
+event_id	pmid	evidence_depth	prior_receipt	validated_ok
+FTR-20261108-34634460-61	34634460	partial_fulltext_read	FTR-20261019-34634460-01	yes
+FTR-20261108-19535488-61	19535488	partial_fulltext_read	null	yes
+FTR-20261108-23589583-61	23589583	partial_fulltext_read	null	yes
+FTR-20261108-22553026-61	22553026	partial_fulltext_read	null	yes
+FTR-20261108-40994429-61	40994429	partial_fulltext_read	null	yes
+FTR-20261108-25229608-61	25229608	partial_fulltext_read	null	yes
+FTR-20261108-20940167-61	20940167	partial_fulltext_read	null	yes
+FTR-20261108-15297615-61	15297615	abstract_only	null	yes
+FTR-20261108-34634460-62	34634460	partial_fulltext_read	FTR-20261108-34634460-61	yes
+FTR-20261108-19535488-62	19535488	partial_fulltext_read	FTR-20261108-19535488-61	yes

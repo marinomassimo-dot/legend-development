@@ -1,0 +1,66 @@
+{
+  "_schema": "task record, Annex A.1c",
+  "TASK_ID": "ORCH-IT39OS-20261108",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "HIGH",
+  "OBJECTIVE": "Operator mandate pasted 2026-11-08 (follow-up to the full-input retest): (1) complete the IT38 delivery: collect the battery verdict on the frozen candidate 7ded708b, handle failures, publish and verify, attribute each result to its SHA; separate reports examined, primary sources actually read, verified results, proposals delivered and modifications really applied to consumers; fix the 778 versus 777 sum and the NMDA E91 description; (2) Package A: from the qualified WWOX observations on resting potential, input resistance, sag and rebound, compare HCN, potassium/leak conductances, passive properties and cellular/maturational context; complete the decisive primary sources including Methods, figures and supplements; deepen the cortical precedent of PMID 34018186 and the alternative-probe sources; at most three distinct hypotheses with chain, action, compound or probe if justified, competing explanation, weakening result and discriminating experiment; (3) Package B: deepen the burst preparation and the supplementary parts of PMID 34634460; define comparisons that would separate AMPA dependence, general reduction of excitatory transmission, NMDAR composition and carbenoxolone side effects; verify compound mechanism in primary sources and keep age, preparation, exposure and endpoint; the aim is a more discriminating pharmacological question, not another antagonist list; (4) deliver generator-usable chains (observation, relation, action, context, expected benefit, evidence versus inference), what LEGEND held but did not use, where the engine should consume it, the precise format limit for the Orchestrator if it does not fit, and point deltas for investigations, cards and open questions with source and read depth; no automatic ranking promotion; no gene-gene link invented; one complete package at a time with independent verification and the existing cost discipline; fewer primary sources read well rather than filling a cap with abstracts; abstention must name the datum that would change the decision.",
+  "START_UTC": "2026-11-08T22:22:00Z",
+  "BASELINE": "development/main b05c8a9b (local main same). Worktree .claude/worktrees/it39os, branch task/it39os. The IT38 delivery stays in worktree it38os / branch task/it38os (frozen candidate 7ded708b3382520c5a64101571975b294493e861 under battery PID 3768066, clone /tmp/bat_it38os).",
+  "CURRENT_PACKAGE": {
+    "id": "landing",
+    "state": "packages A and B delivered, audited and corrected; checks and battery",
+    "delegate_active": "none",
+    "updated": "2026-11-08T23:43:00Z"
+  },
+  "RESUME": "Packages in drug_repurposing/membrane_hypotheses_20261108/ and drug_repurposing/ampa_nmda_discrim_20261108/. Producer sonnet/medium reads sources fully including figures and supplements; blind verifier sonnet/high; corrections by SendMessage to the producer. One delegate at a time. Never use a /tmp directory that already exists; names unique to the task.",
+  "DECISIONS_TAKEN": [
+    "Work for the new packages starts in a new worktree off main while the IT38 battery runs; the IT38 delivery lands first and is merged into this branch before this branch lands.",
+    "Package-owned files only; consumers get proposals in consumer_delta.md; nothing is promoted in the ranking.",
+    "2026-11-08 IT38 landing facts: candidate 7ded708b under battery FAIL (two suites, my wording of the generated marker); fix in 92935b06; merge result 6b8a6776 passed LINT (WARN no BLOCK), receipts verify OK, growth anchors PASS, and six targeted suites OK; task_close MERGED_MAIN 2d3d4b133926480255f2aa70efdbe713b81eb521; safe_push gate PASS on that exact SHA, published. No full battery was run on the merged tree.",
+    "2026-11-08 23:5xZ battery on the frozen candidate 6226b1d30b1022cbd5f7f062f13658cee4cb8060 started in /tmp/bat_it39os (unique name, checked absent before cloning), PID 3938397, log /tmp/bat_it39os.log. Another actor's battery (PID 3934013, Harness) runs at the same time; mine is niced.",
+    "2026-11-09 battery on the frozen candidate 6226b1d30b1022cbd5f7f062f13658cee4cb8060: REGRESSION VERDICT PASS WITH SKIPS (217 targets, 10 skipped, all skips environmental: corpus artefacts absent in the clone, Stop hook not installed, catalogue cache not distributed). The verdict belongs to 6226b1d3 only; the landing SHA differs by this record line and by the merge of the 29 development/main commits that arrived meanwhile, and is covered by the gate on its exact SHA plus LINT, receipts, growth and targeted suites, not by a full battery."
+  ],
+  "DELEGATIONS": [
+    "Package A producer: asked sonnet/medium; see census in the cost note; phases 1, 2 and corrections with figure reading through the public PMC open-data bucket.",
+    "Package A producer: asked sonnet/medium, read back medium on every turn; 83 turns; output 136,708; cache read 15,485,929; peak 368,077; 9 sources newly read (cap 8, two abstract-only extras), 11 staged receipts.",
+    "Package A verifier: asked sonnet/high, read back high; 91 turns; output 113,145; cache read 16,261,113; peak 333,925; first pass 33 supported, 8 partly, 2 not supported, 2 unverifiable; recheck after corrections found one new overstatement and seven small leftovers.",
+    "Package B producer: asked sonnet/medium, read back medium; 117 turns; output 183,302; cache read 27,759,505; peak 443,582; 8 sources newly read (cap 8), 10 staged receipts.",
+    "Package B verifier: asked sonnet/high, read back high; 80 turns; output 90,638; cache read 14,250,718; peak 338,448; hypotheses all partly; ten substantive corrections, recheck found five residual."
+  ],
+  "ESCALATIONS": [],
+  "STOP_LOG": [],
+  "DEFAULTS_TAKEN": [],
+  "AUTHORISED_QUEUE_20261108F": {
+    "MANDATE_STATE": "COMPLETE",
+    "OBJ_1": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "P0 close the IT38 delivery: battery verdict on 7ded708b, count/description fixes, landing (separate worktree it38os)",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "IT38 delivery landed as 2d3d4b133926480255f2aa70efdbe713b81eb521 (gate PASS on that SHA); battery on 7ded708b3382520c5a64101571975b294493e861 FAIL (generated-marker wording, corrected, two suites rerun OK on the corrected tree); counts and E91/E58 descriptions corrected"
+        },
+        {
+          "step": "Package A: membrane physiology to at most three pharmacological hypotheses (producer, verifier, correction)",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "disease-models/wwox/research/drug_repurposing/membrane_hypotheses_20261108/verify/audit.md"
+        },
+        {
+          "step": "Package B: separating AMPA, NMDAR composition, general excitatory transmission and carbenoxolone effects in the WWOX burst preparation (producer, verifier, correction)",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/verify/audit.md"
+        },
+        {
+          "step": "Delivery for the generator: chains, deltas for investigations, cards and open questions, cost, checks, landing",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "disease-models/wwox/research/drug_repurposing/it39_science_delivery_20261108/README.md"
+        }
+      ]
+    }
+  }
+}

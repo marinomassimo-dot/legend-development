@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-08T23:10:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "read"
+ },
+ "event_at": "2026-11-08T23:13:20Z",
+ "event_id": "FTR-20261108-23589583-61",
+ "evidence_basis": [
+  "Abstract, Introduction, Methods, Results and legends read; Fig 2 and Fig 6 images viewed; Figs 1, 3, 4, 5 and 7 captions only (hence the declared figure coverage).",
+  "verbatim_locator | proposition: BB FCF Panx1 potency | Abstract | \"BB FCF is a selective inhibitor of Panx1 channels, with an IC50 of 0.27 µM.\"",
+  "verbatim_locator | proposition: connexin hemichannels unaffected | Fig 5 legend | \"100 µM BB FCF did not affect the currents carried by either connexin\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/observations.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/alternatives.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/probes.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/figure_notes.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "e673c5e3251b50e80bcefa28895d2c58daf028e62a3d78df8b6c2a5b59951488",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket text rendering of the PMC record with figure images, fetched with plain curl on 2026-11-08; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1085/jgp.201310966",
+  "pmid": "23589583"
+ },
+ "workflow": "Package B AMPA, NMDAR composition and carbenoxolone discrimination (ORCH-IT39OS-20261108), producer an-b, Phase 1. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

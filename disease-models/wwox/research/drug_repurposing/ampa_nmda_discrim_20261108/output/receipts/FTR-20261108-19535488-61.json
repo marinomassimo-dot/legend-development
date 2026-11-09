@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-08T23:10:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "read"
+ },
+ "event_at": "2026-11-08T23:13:15Z",
+ "event_id": "FTR-20261108-19535488-61",
+ "evidence_basis": [
+  "Abstract, Introduction, Methods, Results, Discussion and the five figure legends read as text; figure images were not opened. Reference list skimmed for the cited carbenoxolone NMDAR paper (not read).",
+  "verbatim_locator | proposition: CBX reduces AMPA EPSC | Results | \"CBX (100 μM) reduced AMPA receptor–mediated EPSCs to 63.3 ± 4.5% of the control amplitude (n = 28)\"",
+  "verbatim_locator | proposition: CBX reduces NMDAR EPSC | Results | \"the NMDA receptor–mediated EPSC was reduced to 69.1 ± 3.2% of control (n = 14)\"",
+  "verbatim_locator | proposition: gap junction inference caution | Discussion | \"should not be used to assess the role of gap junctions on network activity\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/observations.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/alternatives.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/probes.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/figure_notes.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "cd7bfecaff003e9fa79f1e13a1bb36503894a8359eafa17c385ff33699d4ad89",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page for the PMC record, fetched with plain curl on 2026-11-08 and converted to text locally; the publisher does not allow XML download and the open-data bucket holds no copy; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1152/jn.00060.2009",
+  "pmid": "19535488"
+ },
+ "workflow": "Package B AMPA, NMDAR composition and carbenoxolone discrimination (ORCH-IT39OS-20261108), producer an-b, Phase 1. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

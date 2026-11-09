@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-08T22:24:30Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "read"
+ },
+ "event_at": "2026-11-08T22:36:06Z",
+ "event_id": "FTR-20261108-24953239-51",
+ "evidence_basis": [
+  "Reread for the Ih, Rin, RMP, sag and ZD7288 numbers: full text as text including Methods and Table 1. Images viewed: Fig 1 (Rin and RMP bars) and Fig 3 (Ih density, normalised activation). Figs 2 and 5 were extracted from a truncated archive but not viewed; Figs 4 and 6 were not recoverable (Fig 6 carries the ZD7288 Rin and RMP panels, read here from the text only). An earlier complete receipt exists.",
+  "verbatim_locator | proposition: Ih density increased in GAERS VB neurons | Results | \"Ih current density was significantly increased in both P15–P20 and adult GAERS VB neurons compared to NEC\"",
+  "verbatim_locator | proposition: resting potential unchanged | Results | \"measurements of resting membrane potential were not significantly different between NEC and GAERS in either P15–P20 or adult VB neurons\"",
+  "verbatim_locator | proposition: ZD7288 lowered input resistance | Results | \"decreased the input resistance (Fig. 6d) which is unexpected for blockade of a depolarizing Ih conductance basally active at resting membrane potentials\"",
+  "verbatim_locator | proposition: sag unchanged with more Ih | Discussion | \"the resulting membrane potential sag on rebound, and the membrane potential from which the burst initiates are all unaltered\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/membrane_hypotheses_20261108/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/membrane_hypotheses_20261108/output/observations.tsv"
+ ],
+ "prior_receipt": "FTR-20261022-24953239-02",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "e740709956fa13e6ce38dedc976a6775aa83f47287afa87a52d262c4ea953f5e",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch XML for the PMC record, fetched 2026-11-08, plus a truncated Europe PMC supplementary archive of figure files; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1007/s00424-014-1549-4",
+  "pmid": "24953239"
+ },
+ "workflow": "Package A membrane physiology to pharmacological hypotheses (ORCH-IT39OS-20261108), producer mh-a, Phase 1. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-08T23:10:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "read"
+ },
+ "event_at": "2026-11-08T23:13:25Z",
+ "event_id": "FTR-20261108-22553026-61",
+ "evidence_basis": [
+  "Abstract, Introduction, Methods, Results and Discussion read as text; figure images unavailable in the bucket and not opened elsewhere.",
+  "verbatim_locator | proposition: GluN2A selectivity of TCN-201 | Results | \"TCN-201 displays strong selectivity, estimated to be >1000-fold, for GluN2A-containing NMDA receptors at a glycine concentration of 3 μM\"",
+  "verbatim_locator | proposition: glycine dependence | Results | \"There was no detectable inhibition of GluN1/GluN2A by 10 μM TCN-201 in the presence of 300 μM glycine\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/observations.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/alternatives.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/probes.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/figure_notes.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "1c1457f29c033d1b29f1d2189c8bafa23dabcfda0ab47205ea931012e8493f5b",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket text rendering of the PMC record, fetched with plain curl on 2026-11-08; the bucket holds no figure images for this record; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1523/JNEUROSCI.5757-11.2012",
+  "pmid": "22553026"
+ },
+ "workflow": "Package B AMPA, NMDAR composition and carbenoxolone discrimination (ORCH-IT39OS-20261108), producer an-b, Phase 1. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-08T23:10:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "read"
+ },
+ "event_at": "2026-11-08T23:13:35Z",
+ "event_id": "FTR-20261108-25229608-61",
+ "evidence_basis": [
+  "Abstract, Introduction, Methods, Results, Discussion and Table 1 read as text; Fig 1 and Fig 5 images viewed; Figs 2 to 4 captions only.",
+  "verbatim_locator | proposition: mechanism class | Abstract | \"Perampanel is a selective negative allosteric AMPA receptor antagonist of high-affinity and slow blocking kinetics.\"",
+  "verbatim_locator | proposition: NMDA currents unaffected | Results | \"failed to affect the mean amplitudes of the peak (Fig. 5B) or late (Fig. 5C) NMDA-evoked current\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/observations.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/alternatives.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/probes.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/figure_notes.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "ab9bee7d579eb0c68fc79e282e826d8f3f10081070ef47db4b15a76b00927a2b",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket text rendering of the PMC record with figure images, fetched with plain curl on 2026-11-08; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1371/journal.pone.0108021",
+  "pmid": "25229608"
+ },
+ "workflow": "Package B AMPA, NMDAR composition and carbenoxolone discrimination (ORCH-IT39OS-20261108), producer an-b, Phase 1. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
