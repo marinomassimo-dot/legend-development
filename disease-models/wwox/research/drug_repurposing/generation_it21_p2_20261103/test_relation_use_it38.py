@@ -71,6 +71,12 @@ class PremiseTest(unittest.TestCase):
         self.assertEqual(g.premise_decisive_test("INV-99", self.INV), "")
         self.assertEqual(g.premise_decisive_test("INV-404", self.INV), "")
 
+    def test_the_premise_the_proposal_assumes_comes_first_when_a_mapping_row_matched_its_chain(self):
+        prem = [{"inv_id": "INV-17", "chain_pattern": "-> MYC", "premise": "assumes a direction for MYC"}, {"inv_id": "INV-16", "chain_pattern": "HIF1A", "premise": "assumes HIF1A drives HK2"}]
+        t = g.premise_decisive_test("INV-17", self.INV, chain="X -P(+)-> MYC", premises=prem)
+        self.assertTrue(t.startswith("INV-17: assumed: assumes a direction for MYC | open: "))
+        self.assertNotIn("assumed:", g.premise_decisive_test("INV-17", self.INV, chain="X -P(+)-> Y", premises=prem))      # no matching row: no assumed text invented
+
     def test_two_premises_are_both_listed(self):
         inv = dict(self.INV, **{"INV-16": {"inv_id": "INV-16", "decisive_uncertainty": "q", "next_test": "catalytic-dead rescue"}})
         t = g.premise_decisive_test("INV-16; INV-17", inv)

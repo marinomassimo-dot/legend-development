@@ -43,6 +43,37 @@ class StageS15(unittest.TestCase):
         self.assertEqual({r["shared_premise_investigation"] for r in n}, {"INV-14", "INV-16", "INV-17"})
 
 
+C = rd(HERE / "results_s16/proposals_it21.tsv")
+HC = list(csv.DictReader(open(HERE / "results_s16/handoff_it21.tsv", encoding="utf-8"), delimiter="\t"))
+
+
+class StageS16(unittest.TestCase):
+    """P5 real test: chains through HIF1A to HK2 rested on a premise no investigation was linked to; one mapping row links them. Baseline S15, after S16."""
+
+    def test_only_the_premise_link_and_the_text_derived_from_it_change(self):
+        self.assertEqual(set(B), set(C))
+        changed = {c for c in B[next(iter(B))] for i in B if B[i][c] != C[i][c]}
+        self.assertEqual(changed, {"shared_premise_investigation", "premise_decisive_test"})
+
+    def test_exactly_the_hif1a_to_hk2_chains_gain_the_link_and_nothing_else_moves(self):
+        gained = {i for i in B if B[i]["shared_premise_investigation"] != C[i]["shared_premise_investigation"]}
+        self.assertEqual(len(gained), 10)
+        for i in gained:
+            self.assertIn("HIF1A -T(+)-> HK2", C[i]["chain"])
+            self.assertEqual(C[i]["shared_premise_investigation"], "INV-16")
+            self.assertIn("assumed: the proposal assumes that HIF1A drives the glycolytic module", C[i]["premise_decisive_test"])
+        for i in B:                                   # eligibility, status, hypothesis, selection are identical
+            for k in ("handoff_eligible", "handoff_blocker", "status", "hypothesis", "carried_limits"):
+                self.assertEqual(B[i][k], C[i][k], (i, k))
+        self.assertEqual([r["proposal_id"] for r in HB], [r["proposal_id"] for r in HC])
+
+    def test_one_more_hand_over_now_carries_the_measurement_and_the_assumption(self):
+        self.assertEqual(sum(1 for r in HB if r.get("premise_decisive_test")), 5)
+        self.assertEqual(sum(1 for r in HC if r.get("premise_decisive_test")), 6)
+        r = next(r for r in HC if r["proposal_id"] == "IT21P2-0014")
+        self.assertIn("HIF1A or EPAS1 knockdown arm", r["premise_decisive_test"])
+
+
 class Dossiers(unittest.TestCase):
     def test_the_question_dossiers_are_what_the_builder_produces_from_the_two_tables(self):
         import importlib.util

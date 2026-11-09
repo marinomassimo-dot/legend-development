@@ -2,3 +2,4 @@ inv_id	chain_pattern	premise
 INV-16	^HDAC5 -T\(\+\)-> SLC2A1	HDAC5 raises SLC2A1 output (one muscle knockdown origin); whether catalytic inhibition reproduces knockdown in a human neural cell is the open measurement
 INV-14	^EZH2 -T\([+-]\)-> (IL6|NFE2L2)	the sign of EZH2 inhibition on glial cytokines and NRF2 tone is contested inside its own reference list; one glial cell test decides the harm arm
 INV-17	-> MYC(?= \[|;|$)	every proposal that ends in a change of MYC assumes a direction for MYC; whether the MYC rise in WWOX-deficient radial glia is a driver, a marker or a consequence is the open measurement
+INV-16	HIF1A -T\(\+\)-> HK2	the proposal assumes that HIF1A drives the glycolytic module (here HK2) in WWOX-deficient neural cells; the sign of the HDAC5 to HIF1A relation is mixed between systems, WWOX-side HIF data are non-neural, and a HIF1A or EPAS1 knockdown arm for the glycolytic readout is the open measurement

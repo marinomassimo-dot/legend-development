@@ -130,15 +130,17 @@ def load_investigations(path=None):
     return {r["inv_id"]: r for r in rd(path)} if path.exists() else {}
 
 
-def premise_decisive_test(shared, invs, limit=320):
-    """IT39: for a proposal whose chain rests on a premise measured by an investigation, the open question and the measurement that resolves it, taken from that investigation's own
-    `decisive_uncertainty` and `next_test`. It is carried beside the proposal's own discriminating experiment; it does not change eligibility, selection or any status."""
+def premise_decisive_test(shared, invs, limit=320, chain="", premises=()):
+    """IT39: for a proposal whose chain rests on a premise measured by an investigation, what the proposal assumes (the premise sentence of the mapping row that matched its chain), the
+    investigation's open question and the measurement that resolves it (its own `decisive_uncertainty` and `next_test`). Carried beside the proposal's own discriminating experiment; it changes
+    no eligibility, selection or status."""
     out = []
     for iid in [x for x in (shared or "").split("; ") if x]:
         r = invs.get(iid)
         if r and r.get("next_test"):
+            assumed = next((pr["premise"] for pr in premises if pr["inv_id"] == iid and re.search(pr["chain_pattern"], chain or "")), "")
             q = (r.get("decisive_uncertainty") or "").strip()
-            out.append(f"{iid}: open: {q[:limit]} | resolved by: {r['next_test'].strip()[:limit]}")
+            out.append(f"{iid}: " + (f"assumed: {assumed[:limit]} | " if assumed else "") + f"open: {q[:limit]} | resolved by: {r['next_test'].strip()[:limit]}")
     return " || ".join(out)
 
 
@@ -915,7 +917,7 @@ def cmd_propose(a):
             p["carried_limits"] = " | ".join(([p["carried_limits"]] if p["carried_limits"] else []) + ["SOURCE_CONFLICT: " + x for x in cf])
         rl_, rt_ = relation_limits(p, relation_uses) if v1 else ([], [])
         p["relation_use"] = "; ".join(rt_)
-        p["premise_decisive_test"] = premise_decisive_test(p.get("shared_premise_investigation", ""), investigations_) if v1 else ""
+        p["premise_decisive_test"] = premise_decisive_test(p.get("shared_premise_investigation", ""), investigations_, chain=p.get("chain", ""), premises=premises_) if v1 else ""
         if rl_:                                       # IT38: qualified relations of the packages reach the proposal as carried limits (never a veto)
             p["carried_limits"] = join_limits(([p["carried_limits"]] if p["carried_limits"] else []) + rl_)
         if not p["cluster_earlier_decisions"] and not (v1 and global_dec):

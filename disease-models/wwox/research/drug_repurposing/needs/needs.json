@@ -1720,7 +1720,7 @@
     "status": "NOT_ASSESSED",
     "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
    },
-   "notes": "ISRIB-class compounds target the eIF2B complex (five genes); they act downstream of eIF2alpha phosphorylation, so 'ATF4 up' is not the compound's direct target.",
+   "notes": "ISRIB-class compounds target the eIF2B complex (five genes); they act downstream of eIF2alpha phosphorylation, so 'ATF4 up' is not the compound's direct target. [IT39, DREAM-4] Its human-neural transcript rests in part on the week-15 bulk organoid deposit GSE156243 (WiBR3 hESC knockout, 4 libraries against 2), whose composition differs from wild type and cannot be separated from genotype by adjustment (gse156243/independent_reanalysis_wnt_vs_maturation_20261025.md). Where this need names a gene set from that deposit, a within-cell-type contrast of the single-cell record E-MTAB-14792 (a different background, JH-iPS11; one library per condition in the preprint methods; not accessible) would replicate or fail to replicate it; see DL-MECH-181.",
    "basis": "observed"
   },
   {
@@ -2269,7 +2269,7 @@
     "status": "NOT_ASSESSED",
     "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
    },
-   "notes": "Collision flagged: PDK1 vs PDPK1 (see targets). The need is the PDH node, not any one compound class (DCA, ketogenic diet, HIF1A inhibitors are routes). Restated 2026-10-31 (IT10 P5 integrating IT10 P2.1 and an independent verification): O2, O4, O7 extended; O8 to O10 added; rival explanations added as inferences; direction stays uncertain. IT12 (2026-10-31): O10 restated after the P47T reanalysis; no HIF protein, activity, lactate or oxygen-condition datum exists for any mammalian WWOX-deficient neural tissue, and the P47T datum is a transcript observation in a seizing, gliotic, partial-loss brain that cannot separate a WWOX-specific HIF effect from activity or composition. Counter-evidence added from IT12 P1-alt (GSE298081).",
+   "notes": "Collision flagged: PDK1 vs PDPK1 (see targets). The need is the PDH node, not any one compound class (DCA, ketogenic diet, HIF1A inhibitors are routes). Restated 2026-10-31 (IT10 P5 integrating IT10 P2.1 and an independent verification): O2, O4, O7 extended; O8 to O10 added; rival explanations added as inferences; direction stays uncertain. IT12 (2026-10-31): O10 restated after the P47T reanalysis; no HIF protein, activity, lactate or oxygen-condition datum exists for any mammalian WWOX-deficient neural tissue, and the P47T datum is a transcript observation in a seizing, gliotic, partial-loss brain that cannot separate a WWOX-specific HIF effect from activity or composition. Counter-evidence added from IT12 P1-alt (GSE298081). [IT39, DREAM-4] Its human-neural transcript rests in part on the week-15 bulk organoid deposit GSE156243 (WiBR3 hESC knockout, 4 libraries against 2), whose composition differs from wild type and cannot be separated from genotype by adjustment (gse156243/independent_reanalysis_wnt_vs_maturation_20261025.md). Where this need names a gene set from that deposit, a within-cell-type contrast of the single-cell record E-MTAB-14792 (a different background, JH-iPS11; one library per condition in the preprint methods; not accessible) would replicate or fail to replicate it; see DL-MECH-181.",
    "basis": "observed"
   },
   {
@@ -2593,7 +2593,7 @@
     "status": "NOT_ASSESSED",
     "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
    },
-   "notes": " IT12 P2-P47T (2026-10-31): P47T forebrain Ldha +0.4 to +0.6 log2, Ldhb -0.1 to -0.2 (guard-scope readout genes, observation only, transcripts); the intervention direction is unchanged. IT12 P1-alt: HAP1 shows no LDHA/LDHB interaction (qGI +0.016 and -0.113, FDR 0.88 and 0.79) in the one unreplicated WWOX-null screen.",
+   "notes": " IT12 P2-P47T (2026-10-31): P47T forebrain Ldha +0.4 to +0.6 log2, Ldhb -0.1 to -0.2 (guard-scope readout genes, observation only, transcripts); the intervention direction is unchanged. IT12 P1-alt: HAP1 shows no LDHA/LDHB interaction (qGI +0.016 and -0.113, FDR 0.88 and 0.79) in the one unreplicated WWOX-null screen. [IT39, DREAM-4] Its human-neural transcript rests in part on the week-15 bulk organoid deposit GSE156243 (WiBR3 hESC knockout, 4 libraries against 2), whose composition differs from wild type and cannot be separated from genotype by adjustment (gse156243/independent_reanalysis_wnt_vs_maturation_20261025.md). Where this need names a gene set from that deposit, a within-cell-type contrast of the single-cell record E-MTAB-14792 (a different background, JH-iPS11; one library per condition in the preprint methods; not accessible) would replicate or fail to replicate it; see DL-MECH-181.",
    "basis": "observed"
   },
   {
@@ -2931,7 +2931,7 @@
     "status": "NOT_ASSESSED",
     "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
    },
-   "notes": "Kept because the record's own candidate-drug evidence (stiripentol) shows complex I engagement; the need exists to prevent a wrong-direction compound from being scored as helpful.",
+   "notes": "Kept because the record's own candidate-drug evidence (stiripentol) shows complex I engagement; the need exists to prevent a wrong-direction compound from being scored as helpful. [IT39, DREAM-4] Its human-neural transcript rests in part on the week-15 bulk organoid deposit GSE156243 (WiBR3 hESC knockout, 4 libraries against 2), whose composition differs from wild type and cannot be separated from genotype by adjustment (gse156243/independent_reanalysis_wnt_vs_maturation_20261025.md). Where this need names a gene set from that deposit, a within-cell-type contrast of the single-cell record E-MTAB-14792 (a different background, JH-iPS11; one library per condition in the preprint methods; not accessible) would replicate or fail to replicate it; see DL-MECH-181.",
    "basis": "observed"
   },
   {
@@ -3673,7 +3673,7 @@
     "status": "NOT_ASSESSED",
     "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
    },
-   "notes": "Direction for any compound class must be argued separately; the record forbids collapsing 'GABA axis' into a single sign.",
+   "notes": "Direction for any compound class must be argued separately; the record forbids collapsing 'GABA axis' into a single sign. [IT39, DREAM-4] Its human-neural transcript rests in part on the week-15 bulk organoid deposit GSE156243 (WiBR3 hESC knockout, 4 libraries against 2), whose composition differs from wild type and cannot be separated from genotype by adjustment (gse156243/independent_reanalysis_wnt_vs_maturation_20261025.md). Where this need names a gene set from that deposit, a within-cell-type contrast of the single-cell record E-MTAB-14792 (a different background, JH-iPS11; one library per condition in the preprint methods; not accessible) would replicate or fail to replicate it; see DL-MECH-181.",
    "basis": "observed"
   },
   {
@@ -3823,7 +3823,7 @@
     "status": "NOT_ASSESSED",
     "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
    },
-   "notes": "NO_OBSERVATION in a WWOX system: a need kept to prevent a textbook premise from being used as if observed.",
+   "notes": "NO_OBSERVATION in a WWOX system: a need kept to prevent a textbook premise from being used as if observed. [IT39, DREAM-4] Its human-neural transcript rests in part on the week-15 bulk organoid deposit GSE156243 (WiBR3 hESC knockout, 4 libraries against 2), whose composition differs from wild type and cannot be separated from genotype by adjustment (gse156243/independent_reanalysis_wnt_vs_maturation_20261025.md). Where this need names a gene set from that deposit, a within-cell-type contrast of the single-cell record E-MTAB-14792 (a different background, JH-iPS11; one library per condition in the preprint methods; not accessible) would replicate or fail to replicate it; see DL-MECH-181.",
    "basis": "exploratory_question"
   },
   {
@@ -4757,7 +4757,7 @@
      "readout_level": "transcript",
      "direction_observed": "Wnt higher in early cells; knockout composition: fewer neurons, more radial glia (engineered knockout only)",
      "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT",
-     "limits": "The stage panel carries no genotype comparison. The same figure series shows both patient lines inverting the early/late neuronal balance elsewhere (entry 2 qualifier), so the composition panel is not a statement that patient lines have no phenotype.",
+     "limits": "The stage panel carries no genotype comparison. The same figure series shows both patient lines inverting the early/late neuronal balance elsewhere (entry 2 qualifier), so the composition panel is not a statement that patient lines have no phenotype. [IT39, DREAM-4] The composition panel is of the JH-iPS11 iPSC knockout (clones WKO-1C and WKO-2C) in PMID 42397075 (scRNA-seq, week 16; immunostained SOX2-positive share graded WT about 13, patient lines about 43-48, knockout about 77 percent at week 7, hand readings of Figure 1F); the bulk deposit of O1 and O4 is the WiBR3 hESC knockout of PMID 34268881. Different parental backgrounds: the 2026 composition does not adjust the 2021 bulk, and the 2026 text reports a similar imbalance in the WiBR3 knockout at week 15 only by immunostaining (Supplementary Fig. 4I-J, not held).",
      "pmid": "42397075",
      "locators": [
       {
@@ -4819,7 +4819,7 @@
    "counter_evidence": [
     "Four constraints on HYP-20261025-09 (maturity confound; blind reanalysis; signature reversal selects no axis; rescue arm cannot reach the compartment).",
     "Paediatric safety flag red in both directions (Wnt governs patterning).",
-    "Patient-derived lines (the two other genotypes of the same organoid study) sit within about 0.3 of wild type on cell composition, so the knockout-versus-immaturity discussion rests on the engineered knockout (PMID 42397075 entry 2)."
+    "Patient-derived lines (the two other genotypes of the same organoid study) sit within about 0.3 of wild type on cell composition, so the knockout-versus-immaturity discussion rests on the engineered knockout (PMID 42397075 entry 2). [IT39, DREAM-4] That is the week-16 scRNA fraction; at week 7 the immunostained SOX2-positive share is intermediate in both patient lines, so they are a graded comparator, not a composition-matched control."
    ],
    "sources": {
     "cards": [
@@ -4942,7 +4942,7 @@
     "status": "NOT_ASSESSED",
     "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
    },
-   "notes": "Parked hypothesis, open biology. Kept as a need because the observation and its direction exist; the intervention direction is deliberately 'uncertain'.",
+   "notes": "Parked hypothesis, open biology. Kept as a need because the observation and its direction exist; the intervention direction is deliberately 'uncertain'. [IT39, DREAM-4] Its human-neural transcript rests in part on the week-15 bulk organoid deposit GSE156243 (WiBR3 hESC knockout, 4 libraries against 2), whose composition differs from wild type and cannot be separated from genotype by adjustment (gse156243/independent_reanalysis_wnt_vs_maturation_20261025.md). Where this need names a gene set from that deposit, a within-cell-type contrast of the single-cell record E-MTAB-14792 (a different background, JH-iPS11; one library per condition in the preprint methods; not accessible) would replicate or fail to replicate it; see DL-MECH-181.",
    "basis": "observed"
   },
   {
@@ -5304,7 +5304,7 @@
     "status": "NOT_ASSESSED",
     "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
    },
-   "notes": "Included to stop a reflex repurposing move; infant-safety record exists for sirolimus (card), and is not suitability for WWOX-DEE.",
+   "notes": "Included to stop a reflex repurposing move; infant-safety record exists for sirolimus (card), and is not suitability for WWOX-DEE. [IT39, DREAM-4] Its human-neural transcript rests in part on the week-15 bulk organoid deposit GSE156243 (WiBR3 hESC knockout, 4 libraries against 2), whose composition differs from wild type and cannot be separated from genotype by adjustment (gse156243/independent_reanalysis_wnt_vs_maturation_20261025.md). Where this need names a gene set from that deposit, a within-cell-type contrast of the single-cell record E-MTAB-14792 (a different background, JH-iPS11; one library per condition in the preprint methods; not accessible) would replicate or fail to replicate it; see DL-MECH-181.",
    "basis": "observed"
   },
   {
@@ -5859,7 +5859,7 @@
     "status": "NOT_ASSESSED",
     "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
    },
-   "notes": "No card exists for this need in cards/; a card for the glial thread was written in the P10 cycle directory (J01_glial_reactivity_modulation) and is to be placed under cards/ by the orchestrator and then cited in sources.cards. The join's query Q-R-06 is the only machine route besides it. Added 2026-10-29 (P10): O4 to O10, two inferences, three counter-evidence lines, targets IL1R1 and CASP1. Correction 2026-10-31 (IT10 P5 integrating IT10 P2.2): O1 restated (Il6 significant, Tnf-a not; authors' contrary claim recorded); counter-evidence added.",
+   "notes": "No card exists for this need in cards/; a card for the glial thread was written in the P10 cycle directory (J01_glial_reactivity_modulation) and is to be placed under cards/ by the orchestrator and then cited in sources.cards. The join's query Q-R-06 is the only machine route besides it. Added 2026-10-29 (P10): O4 to O10, two inferences, three counter-evidence lines, targets IL1R1 and CASP1. Correction 2026-10-31 (IT10 P5 integrating IT10 P2.2): O1 restated (Il6 significant, Tnf-a not; authors' contrary claim recorded); counter-evidence added. [IT39, DREAM-4] Its human-neural transcript rests in part on the week-15 bulk organoid deposit GSE156243 (WiBR3 hESC knockout, 4 libraries against 2), whose composition differs from wild type and cannot be separated from genotype by adjustment (gse156243/independent_reanalysis_wnt_vs_maturation_20261025.md). Where this need names a gene set from that deposit, a within-cell-type contrast of the single-cell record E-MTAB-14792 (a different background, JH-iPS11; one library per condition in the preprint methods; not accessible) would replicate or fail to replicate it; see DL-MECH-181.",
    "basis": "observed"
   },
   {
@@ -6288,7 +6288,7 @@
     "status": "NOT_ASSESSED",
     "note": "Set by the repurposing module."
    },
-   "notes": "Proposed by IT10 P2.2; a draft for orchestrator review, validated only structurally. Integrated 2026-10-31 (IT10 P5) with card L01_nrf2_axis. OVERLAP: observation O1 (fly roGFP2-Orp1) is the same datum as NEED-REDOX-OXIDATIVE-STRESS O1 and must not be counted twice across the two needs; the existing NEED-REDOX-OXIDATIVE-STRESS is the sign-context need (blocks a wrong-sign antioxidant rationale), this need is the NRF2-activation and cytokine-output need.",
+   "notes": "Proposed by IT10 P2.2; a draft for orchestrator review, validated only structurally. Integrated 2026-10-31 (IT10 P5) with card L01_nrf2_axis. OVERLAP: observation O1 (fly roGFP2-Orp1) is the same datum as NEED-REDOX-OXIDATIVE-STRESS O1 and must not be counted twice across the two needs; the existing NEED-REDOX-OXIDATIVE-STRESS is the sign-context need (blocks a wrong-sign antioxidant rationale), this need is the NRF2-activation and cytokine-output need. [IT39, DREAM-4] Its human-neural transcript rests in part on the week-15 bulk organoid deposit GSE156243 (WiBR3 hESC knockout, 4 libraries against 2), whose composition differs from wild type and cannot be separated from genotype by adjustment (gse156243/independent_reanalysis_wnt_vs_maturation_20261025.md). Where this need names a gene set from that deposit, a within-cell-type contrast of the single-cell record E-MTAB-14792 (a different background, JH-iPS11; one library per condition in the preprint methods; not accessible) would replicate or fail to replicate it; see DL-MECH-181.",
    "basis": "observed"
   },
   {

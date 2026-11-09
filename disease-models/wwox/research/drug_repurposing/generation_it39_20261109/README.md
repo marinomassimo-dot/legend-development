@@ -30,3 +30,21 @@ What this shows: a researcher reading a hand-over now sees, beside "premise open
 ## Cost
 
 Stage regenerated once end to end (about 6 minutes, 4 GB cap). No delegate for this part.
+
+## P5, a real test: where the path stopped before combining relevant knowledge (S15 baseline, S16 after)
+
+**Question.** The HIF axis: ten H_HARM proposals (three eligible, one hand-over, IT21P2-0014) have the chain `XIAP or KDM4C ... -P(+)-> HIF1A; HIF1A -T(+)-> HK2`. They assume that HIF1A drives the glycolytic module in WWOX-deficient neural cells. Investigation INV-16 already holds the sign problem of the HDAC5 to HIF1A relation (mixed between systems), and its test carries a HIF1A or EPAS1 knockdown arm for the glycolytic readout. **Before:** no premise row mapped those chains, so the proposals carried no investigation and no measurement (the repository held both pieces and joined nothing). **Stopping point:** composition (the premise map), not retrieval and not the model.
+
+**Minimal change.** One row in `generation_it21_p2_20261103/investigation_premises_it32.tsv` (INV-16, the pattern `HIF1A -T(+)-> HK2`, the premise sentence), and `premise_decisive_test` now begins with what the proposal assumes (the matched row's premise) before the open question and the resolving measurement.
+
+**After (`StageS16` in `test_stage_it39.py`).** Ten proposals gain `INV-16`; the hand-over IT21P2-0014 now shows the assumption and the HIF1A or EPAS1 knockdown arm; hand-overs with a premise measurement go from 5 to 6 of 15. Status, hypothesis, eligibility, carried limits, selection and the hand-over ids are identical. **What changed:** one experiment shown beside one hand-over, and ten premise links. **What did not:** the search in the catalogue, the hypothesis and the compound list. No compound is forced.
+
+**The 13th HIF1A chain** (`HIF1A -T(+)-> BNIP3`, three proposals) is not mapped: BNIP3 is a mitophagy gene, and no investigation measures that premise. Left explicit, not forced.
+
+## MYC and HIF, the correspondence of results and explanations (review)
+
+An MYC occupancy that stays the same after a HIF1A perturbation does not show the direction proposed in the Dream chain: it shows only that HIF1A is not needed for that readout. The chain note and INV-17's sentence now require perturbing each side and reading the other, in both directions and in time order.
+
+## DREAM-4 (verified before applying)
+
+`dream4_20261108/DELTA_FOR_IT39.md` was not applied (the needs did not name DL-MECH-181). Applied now: A (WNT O3 limits and the third counter-evidence string) and B (the one sentence in the notes of the ten needs that lean on GSE156243; for MTOR-AUTOPHAGY and REDOX-NRF2 the keyword pass found no composition caveat, which is why the sentence is needed there). Not applied: C (the open-question map has a 200-character cap on the decision column and is derived) and D (nothing to change: the generator already carries `SECOND_SYSTEM_PROGENITOR_GATE_FAILED` and `NPY_SIGN_CONTESTED` as support-limiting seed guards). Separate: the unsent EBI draft stays with the operator.
