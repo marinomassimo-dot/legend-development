@@ -7,7 +7,7 @@
  "OBJECTIVE": "IT39 principale: from recovered knowledge to effective pharmacological generation. Queued behind IT38 (battery on d85bcdd1 running). Not IT39OS (OpenScientist repeat).",
  "START_UTC": "2026-11-08T23:00:00Z",
  "RESUME": {
-  "note": "reconciled 2026-11-09: P5, P10, P12 in progress; CI diagnosis of c7602b91 corrected (CdpStartup test, see step notes); next: CdpStartup fixture, P10 filters, P5 real test, stop-behaviour root cause"
+  "note": "IT39 all steps done except P12 final closure (final candidate, battery on its frozen copy, publication, CI, site, shared checkout reconciliation)"
  },
  "AUTHORISED_QUEUE_20261108": {
   "MANDATE_STATE": "OPEN",
@@ -71,10 +71,11 @@
    "steps": [
     {
      "step": "Mechanism-oriented generation on a few questions",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
      "delivered_so_far": "limited scope, stated: generation_it39_20261109/questions_it39.md (built mechanically by build_questions.py from the investigations and comparator tables; four dossiers INV-17, INV-18, INV-05, INV-03 with observed state, deciding premise, next test and comparators by role; INV-17 has no comparator in the files, which is a finding) plus the Dream chain (MYC x HIF axis, a new combination in the repository); no new generation run beyond S15; competing explanations kept as stated in the investigations (INV-18 branches A to D)",
-     "reopened": "P5 was recorded DONE although the delivery was dossiers assembled from tables and no mechanism-oriented generation run; reopened by the operator's reconciliation; the delivered part stays visible in delivered_so_far"
+     "reopened": "P5 was recorded DONE although the delivery was dossiers assembled from tables and no mechanism-oriented generation run; reopened by the operator's reconciliation; the delivered part stays visible in delivered_so_far",
+     "evidence": "real test, S15 baseline against S16: ten H_HARM proposals through HIF1A to HK2 had no premise link (stopping point: composition, not retrieval or model); one mapping row (INV-16) and a premise-first premise_decisive_test; ten proposals gain INV-16, one hand-over (IT21P2-0014) now shows the assumption and the HIF1A or EPAS1 knockdown arm (hand-overs with a premise measurement 5 to 6 of 15); status, hypothesis, eligibility, carried limits, selection and hand-over ids identical; the BNIP3 chain left unmapped on purpose; MYC x HIF correspondence reviewed (an unchanged readout after one perturbation gives no causal direction; chain note and INV-17 corrected); DREAM-4 deltas A and B applied after checking they were not (C and D explained); tests StageS16 and PremiseTest; delivered earlier: dossiers for four questions"
     }
    ]
   },
@@ -127,9 +128,10 @@
    "steps": [
     {
      "step": "Dashboard: hypotheses, priorities, changes",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "note": "not done: dashboard exploration of emerging hypotheses; the view round updated texts and translations only"
+     "note": "not done: dashboard exploration of emerging hypotheses; the view round updated texts and translations only",
+     "evidence": "comparators in the view from the comparator table: per-row data-cmp, a comparator filter (with a mechanism-separating comparator / functional-outcome only / none in the files), a progressive detail per investigation (full edition: each comparator with role, target and action, selectivity limits and source; shareable edition: counts and a statement that names are not included), an explicit note that 'new combination' and 'weakened or reopened' cannot be determined from origin_class and status and are not shown; origin_class and status keep their own meanings; five languages, 13 UI strings added; browser test at 390 px, string test, audit of the shareable edition PASS; only the rows spot-checked earlier are described as such (Ro 25-6981, ifenprodil, d-APV, memantine, ethosuximide, perampanel), the others are shown with their own qualification"
     }
    ]
   },
@@ -156,5 +158,6 @@
     }
    ]
   }
- }
+ },
+ "STOP_BEHAVIOUR_ROOT_CAUSE": "2026-11-09: the standing text for the hourly in-session check (cross_session_transport 12) gave the command without --self-call, which mandate_watch.py itself documents as the flag for the session's own turn; without it the watch answered RUNNING ('session busy') for a session that was only waiting on a monitor, and that answer was read as progress while the record listed executable steps. Corrected at the source: the transport note names --self-call, the busy answer now states how many executable steps the record still lists and that busy is not progress (2 tests), and the hourly prompt of this session was recreated once with --self-call (no second session started)."
 }
