@@ -1,0 +1,4 @@
+hyp_id	kind	need_id	inv_id	card_ids	link_state	carried_check	source
+BH1	physiological_hypothesis	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	INV-05	F01_glutamate_receptor_node;F04_nmdar_intervention_class	PROPOSED_NOT_APPLIED		engine_consumption.md
+BH2	physiological_hypothesis	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	INV-05	F04_nmdar_intervention_class;P11_magnesium_nmdar_gate	CARRIED_IN_TEXT	next_test:d-APV;next_test:GluN2B NAM	engine_consumption.md
+BH3	physiological_hypothesis	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	INV-05	F04_nmdar_intervention_class	PROPOSED_NOT_APPLIED		engine_consumption.md
