@@ -12,11 +12,11 @@
  "branch": "task/hpkg",
  "CURRENT_STATE": "IN_PROGRESS",
  "CHECKPOINT": {
-  "last_verified_result": "identity package gate 0 BLOCK, LINT 0 BLOCK, 10 identity + 22 reader regressions; commits 1e011056 (on local main 7586bfe0, unpublished), 12602082 and bf57b69a on task/hpkg",
+  "last_verified_result": "merged candidate = task/hpkg 37468be3 (identity + reader + H6 + origin/main 31919734): 22 reader and 10 identity regressions OK on the IT40 data",
   "first_incomplete_work": "publish identity (push --expect-sha 7586bfe0) then land task/hpkg; H5 depends on IT41 package A",
-  "active_processes": "release battery on frozen SHA 7586bfe0: PID 456389 in box /tmp/legend-battery-w6cjy28w (log copied to /tmp/idfix_battery_7586bfe0.log when it exits); an earlier wait on PID 404329 was the wrong process",
+  "active_processes": "none of mine; other sessions' batteries are running and untouched",
   "real_dependencies": "IT40 landing (matrix_column data); IT41 package A output for H5",
-  "next_executable_step": "on battery exit 0: python3 framework/scripts/safe_push.py development main --expect-sha 7586bfe0; then task_close hpkg and push"
+  "next_executable_step": "gate + LINT on the merged tree, release battery on the frozen SHA, task_close, safe_push --expect-sha"
  },
  "AUTHORISED_QUEUE_20261109": {
   "MANDATE_STATE": "OPEN",
@@ -64,7 +64,7 @@
      "step": "Publish after release battery on the frozen SHA 7586bfe0",
      "status": "IN_PROGRESS",
      "owner": "plan",
-     "evidence": "battery running in the background from the main checkout; push with safe_push --expect-sha 7586bfe0 when it exits 0"
+     "evidence": "remote moved (IT40 landed, 18 commits): the battery on 7586bfe0 was stopped at ~83 targets (partial log /tmp/idfix_battery_7586bfe0_STOPPED_PARTIAL.log, not a verdict); one battery on the merged candidate instead"
     },
     {
      "step": "Send the published SHA to the Orchestrator (package A)",
@@ -104,9 +104,9 @@
     },
     {
      "step": "Run against the IT40 data once it is on main (BH1 and BH3 columns)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "depends on the Orchestrator landing IT40"
+     "evidence": "IT40 landed (origin/main 31919734); BH1 reaches AB01-AB04,AB11,AB12 and BH3 AB07-AB10 by matrix_column; after_it40_INV-05.txt"
     }
    ]
   },
@@ -129,9 +129,9 @@
    "steps": [
     {
      "step": "Entrypoint executability, skip reasons, derived surfaces, unique temp dirs in recipes",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": "only after H2-H5"
+     "evidence": "scanned: no shebang/executable mismatch in framework/scripts and scripts (0 of both); one hidden skip reason (test_attribution_it21 ran at verbosity=1) now shows 'catalogue cache absent' through the runner's own parser; unique boxes and PID waits already follow the owned_scratch recipe in this mandate's battery"
     }
    ]
   },
