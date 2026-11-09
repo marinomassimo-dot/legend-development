@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-09T23:24:47Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "unavailable",
+  "methods": "unavailable",
+  "results": "unavailable",
+  "discussion": "unavailable",
+  "limitations": "unavailable",
+  "references": "unavailable",
+  "figures": "unavailable",
+  "supplementary": "unavailable",
+  "tables": "unavailable"
+ },
+ "event_at": "2026-11-09T23:26:47Z",
+ "event_id": "FTR-20261109-42323821-82",
+ "evidence_basis": [
+  "abstract analysed; methods, cell type of the HIF1A to BNIP3 evidence and figures not read and not inferred",
+  "verbatim_locator | proposition: HIF1A or BNIP3 silencing abrogated the protection of EGR1 deficiency (abstract level) | Abstract | \"silencing HIF1A or BNIP3 abrogated the neuroprotective effects of EGR1 deficiency.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/hif1a_bnip3_it41_20261109/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/hif1a_bnip3_it41_20261109/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for the PMID (abstract and metadata as served 2026-11-09); full text unreachable: Europe PMC returned an error, the PMC XML is withheld by the publisher, the PMC article page returned a recaptcha challenge page; not retried by another route",
+ "study_id": {
+  "doi": "10.1080/15548627.2026.2693261",
+  "pmid": "42323821"
+ },
+ "workflow": "IT41 package B (hif1a_bnip3_it41_20261109), producer ib-p, task ORCH-IT41-20261109. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

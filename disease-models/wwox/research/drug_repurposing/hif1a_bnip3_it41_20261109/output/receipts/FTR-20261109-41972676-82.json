@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-09T23:24:47Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "references": "not_read",
+  "figures": "captions_only",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-09T23:26:47Z",
+ "event_id": "FTR-20261109-41972676-82",
+ "evidence_basis": [
+  "Methods 2.1 to 2.19 (partly), Results, Discussion read; Fig 2 and Fig 3 viewed (Figs 1 and 4 to 8 not viewed, so figures marked captions_only); Introduction and supplement not read",
+  "verbatim_locator | proposition: BNIP3 knockdown worsens OGD injury in HT22 | Results 3.4 | \"siBNIP3 further potentiated this effect\"",
+  "verbatim_locator | proposition: BNIP3 protein is lower in BCCAO hippocampus | Results 3.2 | \"significant downregulation of BNIP3/BNIP3L (Figure 2J,K)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/hif1a_bnip3_it41_20261109/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/hif1a_bnip3_it41_20261109/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC fullTextXML for the PMC record, fetched 2026-11-09; bytes not saved; figures 2 and 3 from the PMC open-data bucket viewed",
+ "study_id": {
+  "doi": "10.3390/cells15070585",
+  "pmid": "41972676"
+ },
+ "workflow": "IT41 package B (hif1a_bnip3_it41_20261109), producer ib-p, task ORCH-IT41-20261109. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

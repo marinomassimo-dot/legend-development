@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-09T23:24:47Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "references": "not_read",
+  "figures": "captions_only",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-09T23:26:47Z",
+ "event_id": "FTR-20261109-38443598-82",
+ "evidence_basis": [
+  "Results and Discussion read; Fig 4 viewed (figures marked captions_only because Figs 1 to 3 and 5 to 7 were not viewed); Methods and supplement not read",
+  "verbatim_locator | proposition: stress raises ectopic BNIP3 protein through Mst1/2 | Results BNIP3 section | \"the levels of both the monomeric and dimeric forms of ectopically expressed BNIP3 increased approximately 1.6-fold and 1.7-fold, respectively\"",
+  "verbatim_locator | proposition: BNIP3 required for part of stress-induced mitophagy | Results BNIP3 section | \"knockdown of BNIP3 suppressed mitophagy induction upon treatment with CCCP or DFP by approximately 40% and 42%, respectively\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/hif1a_bnip3_it41_20261109/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/hif1a_bnip3_it41_20261109/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC fullTextXML for the PMC record, fetched 2026-11-09; bytes not saved; figure 4 from the PMC open-data bucket viewed",
+ "study_id": {
+  "doi": "10.1038/s12276-024-01198-y",
+  "pmid": "38443598"
+ },
+ "workflow": "IT41 package B (hif1a_bnip3_it41_20261109), producer ib-p, task ORCH-IT41-20261109. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
