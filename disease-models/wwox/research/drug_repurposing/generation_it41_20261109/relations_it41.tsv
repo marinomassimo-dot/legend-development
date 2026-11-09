@@ -1,0 +1,5 @@
+relation_id	case	action_label	target_symbols	wanted_actions	context	hypothesised_benefit	status
+S1	1	negative modulation of GluN2B-containing NMDA receptors (ifenprodil site first)	GRIN2B	Antagonist;Negative;Inhibition;Channel blocker	burst slice, Wwox-deficient layer II/III cortex, P13-P17	burst falls at a smaller measured fraction of isolated NMDA-receptor current than d-APV needs (IPOTESI)	searched
+S2	2	Ih (HCN) channel blockade as a tool arm	HCN1;HCN2;HCN3;HCN4	Antagonist;Negative;Inhibition;Channel blocker;Pore blocker	same; matched potential and deflection	tool response only; shows contribution, not a defect	listed to show what is not nominated
+S3	4	Kv7 (KCNQ) opening	KCNQ2;KCNQ3;KCNQ4;KCNQ5	Positive;Activator;Agonist	same	none nominated	listed to show what is not proposed
+S4	4	connexin / pannexin channel block	GJD2;PANX1	Antagonist;Inhibition;Channel blocker;Negative	same	attribution of the carbenoxolone fall not supported on present data	listed to show what is not proposed

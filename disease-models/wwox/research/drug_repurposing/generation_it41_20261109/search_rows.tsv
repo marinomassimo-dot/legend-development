@@ -1,0 +1,200 @@
+relation_id	source	molecule	name	catalogue_id	species	action	direction	site_or_granularity	primary_target	selectivity_comment	affinity	assay_or_note	pubmed	target_symbol
+S1	ChEMBL curated mechanism	CAT:CHEMBL1094	FELBAMATE	CAT:CHEMBL1094	Homo sapiens	ANTAGONIST	down	family_record_subunit_unresolved				Glutamate [NMDA] receptor antagonist		GRIN2B
+S1	ChEMBL curated mechanism	CAT:CHEMBL900	ORPHENADRINE CITRATE	CAT:CHEMBL1200395	Homo sapiens	ANTAGONIST	down	family_record_subunit_unresolved				Glutamate [NMDA] receptor antagonist		GRIN2B
+S1	ChEMBL curated mechanism	CAT:CHEMBL900	ORPHENADRINE HYDROCHLORIDE	CAT:CHEMBL1201023	Homo sapiens	ANTAGONIST	down	family_record_subunit_unresolved				Glutamate [NMDA] receptor antagonist		GRIN2B
+S1	ChEMBL curated mechanism	CAT:CHEMBL1207366	GW468816	CAT:CHEMBL1207366	Homo sapiens	ANTAGONIST	down	family_record_subunit_unresolved				Glutamate [NMDA] receptor antagonist		GRIN2B
+S1	ChEMBL curated mechanism	CAT:CHEMBL1255840	NEBOGLAMINE	CAT:CHEMBL1255840	Homo sapiens	POSITIVE ALLOSTERIC MODULATOR	up	family_record_subunit_unresolved				Glutamate [NMDA] receptor positive allosteric modulator		GRIN2B
+S1	ChEMBL curated mechanism	CAT:CHEMBL660	AMANTADINE HYDROCHLORIDE	CAT:CHEMBL1569	Homo sapiens	ANTAGONIST	down	family_record_subunit_unresolved				Glutamate [NMDA] receptor antagonist		GRIN2B
+S1	ChEMBL curated mechanism	CAT:CHEMBL807	MEMANTINE HYDROCHLORIDE	CAT:CHEMBL1699	Homo sapiens	NEGATIVE ALLOSTERIC MODULATOR	down	family_record_subunit_unresolved				Glutamate [NMDA] receptor negative allosteric modulator		GRIN2B
+S1	ChEMBL curated mechanism	CAT:CHEMBL742	KETAMINE HYDROCHLORIDE	CAT:CHEMBL1714	Homo sapiens	NEGATIVE ALLOSTERIC MODULATOR	down	family_record_subunit_unresolved				Glutamate [NMDA] receptor negative allosteric modulator		GRIN2B
+S1	ChEMBL curated mechanism	CAT:CHEMBL17350	TRAXOPRODIL	CAT:CHEMBL17350	Homo sapiens	ANTAGONIST	down	two_gene_assembly_record				Glutamate NMDA receptor; GRIN1/GRIN2B antagonist		GRIN2B
+S1	ChEMBL curated mechanism	CAT:CHEMBL182066	RADIPRODIL	CAT:CHEMBL182066	Homo sapiens	ANTAGONIST	down	two_gene_assembly_record				Glutamate NMDA receptor; GRIN1/GRIN2B antagonist		GRIN2B
+S1	ChEMBL curated mechanism	CAT:CHEMBL1201293	ACAMPROSATE CALCIUM	CAT:CHEMBL2068724	Homo sapiens	ANTAGONIST	down	family_record_subunit_unresolved				Glutamate [NMDA] receptor antagonist		GRIN2B
+S1	ChEMBL curated mechanism	CAT:CHEMBL2068839	RISLENEMDAZ	CAT:CHEMBL2068839	Homo sapiens	ANTAGONIST	down	two_gene_assembly_record				Glutamate NMDA receptor; GRIN1/GRIN2B antagonist		GRIN2B
+S1	ChEMBL curated mechanism	CAT:CHEMBL2110814	DELUCEMINE HYDROCHLORIDE	CAT:CHEMBL2106165	Homo sapiens	ANTAGONIST	down	family_record_subunit_unresolved				Glutamate [NMDA] receptor antagonist		GRIN2B
+S1	ChEMBL curated mechanism	CAT:CHEMBL2110954	NERAMEXANE MESYLATE	CAT:CHEMBL2106798	Homo sapiens	ANTAGONIST	down	family_record_subunit_unresolved				Glutamate [NMDA] receptor antagonist		GRIN2B
+S1	ChEMBL curated mechanism	CAT:CHEMBL2107771	RALFINAMIDE	CAT:CHEMBL2107771	Homo sapiens	ANTAGONIST	down	family_record_subunit_unresolved				Glutamate [NMDA] receptor antagonist		GRIN2B
+S1	ChEMBL curated mechanism	CAT:CHEMBL2110814	DELUCEMINE	CAT:CHEMBL2110814	Homo sapiens	ANTAGONIST	down	family_record_subunit_unresolved				Glutamate [NMDA] receptor antagonist		GRIN2B
+S1	ChEMBL curated mechanism	CAT:CHEMBL395091	ESKETAMINE HYDROCHLORIDE	CAT:CHEMBL2364609	Homo sapiens	NEGATIVE ALLOSTERIC MODULATOR	down	family_record_subunit_unresolved				Glutamate [NMDA] receptor negative allosteric modulator		GRIN2B
+S1	ChEMBL curated mechanism	CAT:CHEMBL3544917	RAPASTINEL	CAT:CHEMBL3544917	Homo sapiens	PARTIAL AGONIST	up	family_record_subunit_unresolved				Glutamate [NMDA] receptor partial agonist		GRIN2B
+S1	ChEMBL curated mechanism	CAT:CHEMBL3545350	EVT-101	CAT:CHEMBL3545349	Homo sapiens	ANTAGONIST	down	two_gene_assembly_record				Glutamate NMDA receptor; GRIN1/GRIN2B antagonist		GRIN2B
+S1	ChEMBL curated mechanism	CAT:CHEMBL3545351	AV-101	CAT:CHEMBL3545351	Homo sapiens	ANTAGONIST	down	family_record_subunit_unresolved				Glutamate [NMDA] receptor antagonist		GRIN2B
+S1	ChEMBL curated mechanism	CAT:CHEMBL3707355	AZD8108	CAT:CHEMBL3707355	Homo sapiens	ANTAGONIST	down	family_record_subunit_unresolved				Glutamate [NMDA] receptor antagonist		GRIN2B
+S1	ChEMBL curated mechanism	CAT:CHEMBL3707400	INDANTADOL	CAT:CHEMBL3707400	Homo sapiens	ANTAGONIST	down	family_record_subunit_unresolved				Glutamate [NMDA] receptor antagonist		GRIN2B
+S1	ChEMBL curated mechanism	CAT:CHEMBL395091	ESKETAMINE	CAT:CHEMBL395091	Homo sapiens	NEGATIVE ALLOSTERIC MODULATOR	down	family_record_subunit_unresolved				Glutamate [NMDA] receptor negative allosteric modulator		GRIN2B
+S1	ChEMBL curated mechanism	CAT:CHEMBL17350	TRAXOPRODIL MESYLATE	CAT:CHEMBL3989673	Homo sapiens	ANTAGONIST	down	two_gene_assembly_record				Glutamate NMDA receptor; GRIN1/GRIN2B antagonist		GRIN2B
+S1	ChEMBL curated mechanism	CAT:CHEMBL3989872	APIMOSTINEL	CAT:CHEMBL3989872	Homo sapiens	PARTIAL AGONIST	up	family_record_subunit_unresolved				Glutamate [NMDA] receptor partial agonist		GRIN2B
+S1	ChEMBL curated mechanism	CAT:CHEMBL41306	CNS-5161	CAT:CHEMBL41306	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Glutamate [NMDA] receptor blocker		GRIN2B
+S1	ChEMBL curated mechanism	CAT:CHEMBL452461	PERZINFOTEL	CAT:CHEMBL452461	Homo sapiens	ANTAGONIST	down	family_record_subunit_unresolved				Glutamate [NMDA] receptor antagonist		GRIN2B
+S1	ChEMBL curated mechanism	CAT:CHEMBL467084	LANICEMINE	CAT:CHEMBL467084	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Glutamate [NMDA] receptor blocker		GRIN2B
+S1	GtoPdb interaction	GTOPDB:6511	D-aspartic acid		Human	Agonist/Agonist	up	glutamate site	false	Non-selective | GluN2D > GluN2C = GluN2B > GluN2A	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:4171	D-serine		Human	Agonist/Agonist	up	glycine site	false	Non-selective | GluN2D > GluN2C > GluN2B > GluN2A	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:727	glycine		Human	Agonist/Agonist	up	glycine site	false	Non-selective | GluN2D > GluN2C > GluN2B > GluN2A	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:3309	L-aspartic acid		Human	Agonist/Agonist	up	glutamate site	false	Non-selective | GluN2D = GluN2B > GluN2C = GluN2A	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:4084	[<sup>3</sup>H]glycine		Human	Agonist/Agonist	up	glycine site	false	Non-selective	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:4216	homoquinolinic acid		Human	Agonist/Full agonist	up	glutamate site	false	Non-selective | GluN2B &ge; GluN2A &ge; GluN2D > GluN2C; partial agonist at GluN2A and GluN2C	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:4068	(<i>RS</i>)-(tetrazol-5-yl)glycine		Human	Agonist/Full agonist	up	glutamate site	false	Non-selective | GluN2D > GluN2C = GluN2B > GluN2A	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:4268	NMDA		Human	Agonist/Full agonist	up	glutamate site	false	Non-selective | GluN2D > GluN2C > GluN2B > GluN2A	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:4066	(+)-HA966		Human	Agonist/Partial agonist	up	glycine site	false	Non-selective | GluN2B > GluN2A	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:7843	DQP-1105		Rat	Allosteric modulator/Negative	down		false	Not Determined	6.949999809265137 pIC50 (=)	Measured using recombinant GluN1-1a NMDA subunits co-expressed with GluN2C subunits.	21807990	Grin2b
+S1	GtoPdb interaction	GTOPDB:12156	onfasprodil		Human	Allosteric modulator/Negative	down		false	Not Determined	8.079999923706055 pIC50 (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:12050	SAGE-718		Human	Allosteric modulator/Positive	up		false	Not Determined	7.099999904632568 pEC50 (=)	Value obtained using automated patch clamp electrophysiology in HEK293 cells stably expressing recombinant human GluN1/GluN2B Rs	35785990	GRIN2B
+S1	GtoPdb interaction	GTOPDB:2361	5,7-dichlorokynurenic acid		Human	Antagonist/Antagonist	down	glycine site	false	Selective	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:4154	CGP37849		Human	Antagonist/Antagonist	down	glutamate site	false	Selective	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:4161	conantokin-G		Human	Antagonist/Antagonist	down	glutamate site	false	Selective | GluN2B > GluN2D = GluN2C = GluN2A	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:4168	d-AP5		Human	Antagonist/Antagonist	down	glutamate site	false	Selective	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:4170	d-CCPene		Human	Antagonist/Antagonist	down	glutamate site	false	Selective | GluN2A = GluN2B > GluN2C = GluN2D	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:4208	GV196771A		Human	Antagonist/Antagonist	down	glycine site	false	Selective	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:4239	L689560		Human	Antagonist/Antagonist	down	glycine site	false	Selective	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:4240	L701324		Human	Antagonist/Antagonist	down	glycine site	false	Selective	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:4243	LY233053		Human	Antagonist/Antagonist	down	glutamate site	false	Selective	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:4276	NVP-AAM077		Human	Antagonist/Antagonist	down	glutamate site	false	Selective | GluN2A > GluN2B (human), but weakly selective for rat GluN2A versus GluN2B	- (=)		11909726|14718249|16778008|16452656	GRIN2B
+S1	GtoPdb interaction	GTOPDB:11720	S-deschloroketamine		Human	Antagonist/Antagonist	down		false	Not Determined	5.440000057220459 pKd (=)	Binding affinity for hGluN1/hGluN2B receptors expressed in HEK293 cells	34519023	GRIN2B
+S1	GtoPdb interaction	GTOPDB:4155	selfotel		Human	Antagonist/Antagonist	down	glutamate site	false	Selective	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:4078	[<sup>3</sup>H]CGP39653		Human	Antagonist/Antagonist	down	glutamate site	false	Non-selective	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:4079	[<sup>3</sup>H]CGP61594		Human	Antagonist/Antagonist	down	glycine site	false	Non-selective | photoaffinity ligand	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:4080	[<sup>3</sup>H]CGS19755		Human	Antagonist/Antagonist	down	glutamate site	false	Non-selective	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:4082	[<sup>3</sup>H]CPP		Human	Antagonist/Antagonist	down	glutamate site	false	Non-selective	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:4086	[<sup>3</sup>H]L689560		Human	Antagonist/Antagonist	down	glycine site	false	Non-selective	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:4088	[<sup>3</sup>H]MDL105519		Human	Antagonist/Antagonist	down	glycine site	false	Non-selective	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:4332	UBP141		Human	Antagonist/Antagonist	down	glutamate site	false	Selective | GluN2D &ge; GluN2C > GluN2A &ge; GluN2B	- (=)		15801853	GRIN2B
+S1	GtoPdb interaction	GTOPDB:4128	amantadine		Human	Channel blocker/None	down		true	Non-selective | GluN2C = GluN2D &ge; GluN2B &ge; GluN2A	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:2403	dizocilpine		Human	Channel blocker/None	down		false	Non-selective	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:4233	ketamine		Human	Channel blocker/None	down		true	Non-selective	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:708	Mg<sup>2+</sup>		Human	Channel blocker/None	down		false	Non-selective | GluN2A = GluN2B > GluN2C = GluN2D	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:4260	N<sup>1</sup>-dansyl-spermine		Human	Channel blocker/None	down		false	Non-selective | GluN2A = GluN2B >> GluN2C = GluN2D	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:4282	phencyclidine		Human	Channel blocker/None	down		false	Non-selective	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:4089	[<sup>3</sup>H]dizocilpine		Human	Channel blocker/None	down	cation channel	false	Non-selective	- (=)			GRIN2B
+S1	GtoPdb interaction	GTOPDB:13847	NP10679		Human	None/Inhibition	down		false	Not Determined	7.639999866485596 pIC50 (=)	Inhibition of hGluN2B in the presence of glutamate  and glycine, measured using two-electrode voltage-clamp recordings in Xenopus oocytes expressing hGluN2B, at pH 6.9.	34493631	GRIN2B
+S2	ChEMBL curated mechanism	CAT:CHEMBL184412	DRONEDARONE HYDROCHLORIDE	CAT:CHEMBL1201729	Homo sapiens	BLOCKER	down	single_protein_record				Potassium/sodium hyperpolarization-activated cyclic nucleotide-gated channel 4 blocker		HCN4
+S2	ChEMBL curated mechanism	CAT:CHEMBL471737	IVABRADINE HYDROCHLORIDE	CAT:CHEMBL2145077	Homo sapiens	BLOCKER	down	single_protein_record				Potassium/sodium hyperpolarization-activated cyclic nucleotide-gated channel 4 blocker		HCN4
+S2	ChEMBL curated mechanism	CAT:CHEMBL471737	IVABRADINE	CAT:CHEMBL471737	Homo sapiens	BLOCKER	down	single_protein_record				Potassium/sodium hyperpolarization-activated cyclic nucleotide-gated channel 4 blocker		HCN4
+S2	GtoPdb interaction	GTOPDB:2352	cyclic AMP		Mouse	Activator/Agonist	up		false	Not Determined	7.199999809265137 pKd (=)		11331358|11524455	Hcn1
+S2	GtoPdb interaction	GTOPDB:2355	cilobradine		Human	Channel blocker/Antagonist	down		false		5.9 pIC50		16387796	HCN1
+S2	GtoPdb interaction	GTOPDB:516	clonidine		Mouse	Channel blocker/Antagonist	down		false		4.4 pIC50		17261653	Hcn1
+S2	GtoPdb interaction	GTOPDB:2356	Cs<sup>+</sup>		Human	Channel blocker/Antagonist	down		false	Non-selective	3.700000047683716 pIC50 (=)		16043489	HCN1
+S2	GtoPdb interaction	GTOPDB:2357	ivabradine		Human	Channel blocker/Antagonist	down		false	Non-selective	5.699999809265137 pIC50 (=)		16387796	HCN1
+S2	GtoPdb interaction	GTOPDB:2357	ivabradine		Mouse	Channel blocker/Antagonist	down		false		6.0 pIC50		16484306	Hcn1
+S2	GtoPdb interaction	GTOPDB:2358	zatebradine		Human	Channel blocker/Antagonist	down		false		5.7 pIC50		16387796	HCN1
+S2	GtoPdb interaction	GTOPDB:2359	ZD7288		Human	Channel blocker/Antagonist	down		false	Non-selective	4.699999809265137 pIC50 (=)		16043489	HCN1
+S2	GtoPdb interaction	GTOPDB:6262	EC18		Mouse	Channel blocker/None	down		false	Not Determined	4.679999828338623 pEC50 (=)		22091830	Hcn1
+S2	GtoPdb interaction	GTOPDB:6260	MEL57A		Mouse	Channel blocker/None	down		false	Not Determined	6.489999771118164 pEC50 (=)		22091830	Hcn1
+S2	GtoPdb interaction	GTOPDB:708	Mg<sup>2+</sup>		Mouse	Channel blocker/None	down		false	Not Determined	3.3 pIC50 (=)		18579800	Hcn1
+S2	GtoPdb interaction	GTOPDB:5464	propofol		Mouse	Channel blocker/None	down		false	Not Determined	5.2 pIC50 (=)		16033909|17569731	Hcn1
+S2	GtoPdb interaction	GTOPDB:2352	cyclic AMP		Mouse	Activator/Agonist	up		false		6.3 pKi		9634236	Hcn2
+S2	GtoPdb interaction	GTOPDB:2347	cyclic GMP		Mouse	Activator/Agonist	up		false		5.2 pKi		9634236	Hcn2
+S2	GtoPdb interaction	GTOPDB:6261	cyclic CMP		Mouse	Activator/None	up		false	Not Determined	4.52 pEC50 (=)		22715094	Hcn2
+S2	GtoPdb interaction	GTOPDB:2387	PIP<sub>2</sub>		Mouse	Activator/None	up		false	Not Determined	4.96 pEC50 (=)		17074978	Hcn2
+S2	GtoPdb interaction	GTOPDB:2355	cilobradine		Human	Channel blocker/Antagonist	down		false	Not Determined	5.099999904632568 pIC50 (=)		16387796	HCN2
+S2	GtoPdb interaction	GTOPDB:516	clonidine		Mouse	Channel blocker/Antagonist	down		false	Not Determined	5.090000152587891 pIC50 (=)		17261653	Hcn2
+S2	GtoPdb interaction	GTOPDB:2356	Cs<sup>+</sup>		Human	Channel blocker/Antagonist	down		false	Non-selective	3.700000047683716 pIC50 (=)		16043489	HCN2
+S2	GtoPdb interaction	GTOPDB:2357	ivabradine		Mouse	Channel blocker/Antagonist	down		false	Non-selective	5.599999904632568 pIC50 (=)		16387796	Hcn2
+S2	GtoPdb interaction	GTOPDB:2358	zatebradine		Human	Channel blocker/Antagonist	down		false		5.7 pIC50		16387796	HCN2
+S2	GtoPdb interaction	GTOPDB:2359	ZD7288		Human	Channel blocker/Antagonist	down		false	Non-selective	4.400000095367432 pIC50 (=)		16043489	HCN2
+S2	GtoPdb interaction	GTOPDB:6262	EC18		Mouse	Channel blocker/None	down		false	Not Determined	4.710000038146973 pEC50 (=)		22091830	Hcn2
+S2	GtoPdb interaction	GTOPDB:6260	MEL57A		Mouse	Channel blocker/None	down		false	Not Determined	4.900000095367432 pEC50 (=)		22091830	Hcn2
+S2	GtoPdb interaction	GTOPDB:708	Mg<sup>2+</sup>		Mouse	Channel blocker/None	down		false	Not Determined	3.2 pIC50 (=)		18579800	Hcn2
+S2	GtoPdb interaction	GTOPDB:2355	cilobradine		Human	Channel blocker/Antagonist	down		false		6.0 pIC50		16387796	HCN3
+S2	GtoPdb interaction	GTOPDB:2356	Cs<sup>+</sup>		Human	Channel blocker/Antagonist	down		false	Non-selective	3.799999952316284 pIC50 (=)		16043489	HCN3
+S2	GtoPdb interaction	GTOPDB:2357	ivabradine		Human	Channel blocker/Antagonist	down		false	Non-selective	5.699999809265137 pIC50 (=)		16387796	HCN3
+S2	GtoPdb interaction	GTOPDB:2358	zatebradine		Human	Channel blocker/Antagonist	down		false		5.7 pIC50		16387796	HCN3
+S2	GtoPdb interaction	GTOPDB:2359	ZD7288		Human	Channel blocker/Antagonist	down		false	Non-selective	4.5 pIC50 (=)		16043489	HCN3
+S2	GtoPdb interaction	GTOPDB:2355	cilobradine		Human	Channel blocker/Antagonist	down		false		6.0 pIC50		16387796	HCN4
+S2	GtoPdb interaction	GTOPDB:516	clonidine		Mouse	Channel blocker/Antagonist	down		false	Not Determined	5.010000228881836 pIC50 (=)		17261653	Hcn4
+S2	GtoPdb interaction	GTOPDB:2356	Cs<sup>+</sup>		Human	Channel blocker/Antagonist	down		false	Non-selective	3.799999952316284 pIC50 (=)		16043489	HCN4
+S2	GtoPdb interaction	GTOPDB:2357	ivabradine		Human	Channel blocker/Antagonist	down		false	Non-selective	5.699999809265137 pIC50 (=)		16387796	HCN4
+S2	GtoPdb interaction	GTOPDB:2358	zatebradine		Human	Channel blocker/Antagonist	down		false		5.7 pIC50		16387796	HCN4
+S2	GtoPdb interaction	GTOPDB:2359	ZD7288		Human	Channel blocker/Antagonist	down		false	Non-selective	4.699999809265137 pIC50 (=)		16043489	HCN4
+S2	GtoPdb interaction	GTOPDB:6262	EC18		Human	Channel blocker/None	down		false	Not Determined	5.400000095367432 pEC50 (=)		22091830	HCN4
+S2	GtoPdb interaction	GTOPDB:6260	MEL57A		Human	Channel blocker/None	down		false	Not Determined	4.119999885559082 pEC50 (=)		22091830	HCN4
+S3	ChEMBL curated mechanism	CAT:CHEMBL113461	TEDISAMIL	CAT:CHEMBL113461	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ4
+S3	ChEMBL curated mechanism	CAT:CHEMBL821	GUANIDINE HYDROCHLORIDE	CAT:CHEMBL1200728	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ4
+S3	ChEMBL curated mechanism	CAT:CHEMBL113461	TEDISAMIL SESQUIFUMARATE	CAT:CHEMBL2107378	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ4
+S3	ChEMBL curated mechanism	CAT:CHEMBL2107762	NERISPIRDINE	CAT:CHEMBL2107762	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ4
+S3	ChEMBL curated mechanism	CAT:CHEMBL266510	FLINDOKALNER	CAT:CHEMBL266510	Homo sapiens	ACTIVATOR	up	single_protein_record				Voltage-gated potassium channel subunit Kv7.4 activator		KCNQ4
+S3	ChEMBL curated mechanism	CAT:CHEMBL266510	FLINDOKALNER	CAT:CHEMBL266510	Homo sapiens	ACTIVATOR	up	two_gene_assembly_record				Voltage-gated potassium channel KCNQ3/KCNQ4 activator		KCNQ4
+S3	ChEMBL curated mechanism	CAT:CHEMBL284348	DALFAMPRIDINE	CAT:CHEMBL284348	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ4
+S3	ChEMBL curated mechanism	CAT:CHEMBL354077	AMIFAMPRIDINE PHOSPHATE	CAT:CHEMBL3301611	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ4
+S3	ChEMBL curated mechanism	CAT:CHEMBL354077	AMIFAMPRIDINE	CAT:CHEMBL354077	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ4
+S3	ChEMBL curated mechanism	CAT:CHEMBL41355	EZOGABINE	CAT:CHEMBL41355	Homo sapiens	OPENER	up	family_record_subunit_unresolved				KCNQ (Kv7) potassium channel opener		KCNQ4
+S3	ChEMBL curated mechanism	CAT:CHEMBL113461	TEDISAMIL	CAT:CHEMBL113461	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ5
+S3	ChEMBL curated mechanism	CAT:CHEMBL821	GUANIDINE HYDROCHLORIDE	CAT:CHEMBL1200728	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ5
+S3	ChEMBL curated mechanism	CAT:CHEMBL113461	TEDISAMIL SESQUIFUMARATE	CAT:CHEMBL2107378	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ5
+S3	ChEMBL curated mechanism	CAT:CHEMBL2107762	NERISPIRDINE	CAT:CHEMBL2107762	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ5
+S3	ChEMBL curated mechanism	CAT:CHEMBL266510	FLINDOKALNER	CAT:CHEMBL266510	Homo sapiens	ACTIVATOR	up	single_protein_record				Voltage-gated potassium channel subunit Kv7.5 activator		KCNQ5
+S3	ChEMBL curated mechanism	CAT:CHEMBL284348	DALFAMPRIDINE	CAT:CHEMBL284348	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ5
+S3	ChEMBL curated mechanism	CAT:CHEMBL354077	AMIFAMPRIDINE PHOSPHATE	CAT:CHEMBL3301611	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ5
+S3	ChEMBL curated mechanism	CAT:CHEMBL354077	AMIFAMPRIDINE	CAT:CHEMBL354077	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ5
+S3	ChEMBL curated mechanism	CAT:CHEMBL41355	EZOGABINE	CAT:CHEMBL41355	Homo sapiens	OPENER	up	family_record_subunit_unresolved				KCNQ (Kv7) potassium channel opener		KCNQ5
+S3	ChEMBL curated mechanism	CAT:CHEMBL113461	TEDISAMIL	CAT:CHEMBL113461	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ2
+S3	ChEMBL curated mechanism	CAT:CHEMBL821	GUANIDINE HYDROCHLORIDE	CAT:CHEMBL1200728	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ2
+S3	ChEMBL curated mechanism	CAT:CHEMBL113461	TEDISAMIL SESQUIFUMARATE	CAT:CHEMBL2107378	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ2
+S3	ChEMBL curated mechanism	CAT:CHEMBL2107762	NERISPIRDINE	CAT:CHEMBL2107762	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ2
+S3	ChEMBL curated mechanism	CAT:CHEMBL266510	FLINDOKALNER	CAT:CHEMBL266510	Homo sapiens	ACTIVATOR	up	single_protein_record				Voltage-gated potassium channel subunit Kv7.2 activator		KCNQ2
+S3	ChEMBL curated mechanism	CAT:CHEMBL266510	FLINDOKALNER	CAT:CHEMBL266510	Homo sapiens	ACTIVATOR	up	two_gene_assembly_record				Voltage-gated potassium channel, KQT; KCNQ2(Kv7.2)/KCNQ3(Kv7.3) activator		KCNQ2
+S3	ChEMBL curated mechanism	CAT:CHEMBL284348	DALFAMPRIDINE	CAT:CHEMBL284348	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ2
+S3	ChEMBL curated mechanism	CAT:CHEMBL354077	AMIFAMPRIDINE PHOSPHATE	CAT:CHEMBL3301611	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ2
+S3	ChEMBL curated mechanism	CAT:CHEMBL354077	AMIFAMPRIDINE	CAT:CHEMBL354077	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ2
+S3	ChEMBL curated mechanism	CAT:CHEMBL41355	EZOGABINE	CAT:CHEMBL41355	Homo sapiens	OPENER	up	family_record_subunit_unresolved				KCNQ (Kv7) potassium channel opener		KCNQ2
+S3	ChEMBL curated mechanism	CAT:CHEMBL113461	TEDISAMIL	CAT:CHEMBL113461	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ3
+S3	ChEMBL curated mechanism	CAT:CHEMBL821	GUANIDINE HYDROCHLORIDE	CAT:CHEMBL1200728	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ3
+S3	ChEMBL curated mechanism	CAT:CHEMBL113461	TEDISAMIL SESQUIFUMARATE	CAT:CHEMBL2107378	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ3
+S3	ChEMBL curated mechanism	CAT:CHEMBL2107762	NERISPIRDINE	CAT:CHEMBL2107762	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ3
+S3	ChEMBL curated mechanism	CAT:CHEMBL266510	FLINDOKALNER	CAT:CHEMBL266510	Homo sapiens	ACTIVATOR	up	two_gene_assembly_record				Voltage-gated potassium channel, KQT; KCNQ2(Kv7.2)/KCNQ3(Kv7.3) activator		KCNQ3
+S3	ChEMBL curated mechanism	CAT:CHEMBL266510	FLINDOKALNER	CAT:CHEMBL266510	Homo sapiens	ACTIVATOR	up	two_gene_assembly_record				Voltage-gated potassium channel KCNQ3/KCNQ4 activator		KCNQ3
+S3	ChEMBL curated mechanism	CAT:CHEMBL284348	DALFAMPRIDINE	CAT:CHEMBL284348	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ3
+S3	ChEMBL curated mechanism	CAT:CHEMBL354077	AMIFAMPRIDINE PHOSPHATE	CAT:CHEMBL3301611	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ3
+S3	ChEMBL curated mechanism	CAT:CHEMBL354077	AMIFAMPRIDINE	CAT:CHEMBL354077	Homo sapiens	BLOCKER	down	family_record_subunit_unresolved				Voltage-gated potassium channel blocker		KCNQ3
+S3	ChEMBL curated mechanism	CAT:CHEMBL41355	EZOGABINE	CAT:CHEMBL41355	Homo sapiens	OPENER	up	family_record_subunit_unresolved				KCNQ (Kv7) potassium channel opener		KCNQ3
+S3	GtoPdb interaction	GTOPDB:12650	azetukalner		Human	Activator/Activation	up		false	Not Determined	- (=)			KCNQ2
+S3	GtoPdb interaction	GTOPDB:14475	opakalim		Human	Activator/Activation	up		false	Not Determined	- (=)			KCNQ2
+S3	GtoPdb interaction	GTOPDB:2307	flindokalner		Human	Activator/None	up		false		5.0 pEC50		11378159	KCNQ2
+S3	GtoPdb interaction	GTOPDB:2598	flupirtine		Human	Activator/None	up		false		5.0 pEC50		14736843	KCNQ2
+S3	GtoPdb interaction	GTOPDB:14111	ICA-069673		Human	Activator/None	up		false	Selective	6.159999847412109 pEC50 (=)	Assessed as activation of KCNQ2/KCNQ3 channels expressed in CHO.	24900334	KCNQ2
+S3	GtoPdb interaction	GTOPDB:7667	ICA-27243		Human	Activator/None	up		false	Not Determined	6.300000190734863 pEC50 (=)		19733209	KCNQ2
+S3	GtoPdb interaction	GTOPDB:2387	PIP<sub>2</sub>		Human	Activator/None	up		false		3.7 pEC50		16251430	KCNQ2
+S3	GtoPdb interaction	GTOPDB:7669	QO-58		Human	Activator/None	up		false	Not Determined	6.300000190734863 pEC50 (=)		23013484	KCNQ2
+S3	GtoPdb interaction	GTOPDB:2600	(S)-N-[1-(3-morpholin-4-yl-phenyl)-ethyl]-3-phenyl-acrylamide		Human	Activator/None	up		false		5.5 pEC50		12852750|16904708	KCNQ2
+S3	GtoPdb interaction	GTOPDB:2597	zinc pyrithione		Human	Activator/None	up		false		5.8 pEC50		17435769	KCNQ2
+S3	GtoPdb interaction	GTOPDB:2601	retigabine		Human	Allosteric modulator/Activation	up		true	Non-selective	5.599999904632568 pEC50 (=)		11466425|32884139	KCNQ2
+S3	GtoPdb interaction	GTOPDB:2592	L735821		Human	Channel blocker/None	down		false		5.8 pIC50		9827540	KCNQ2
+S3	GtoPdb interaction	GTOPDB:2343	tetraethylammonium		Human	Channel blocker/None	down		false	Non-selective	pIC50 (=)		10711337|10953053	KCNQ2
+S3	GtoPdb interaction	GTOPDB:2599	linopirdine		Human	Inhibitor/None	down		false	Non-selective	5.300000190734863 pIC50 (=)		9836639	KCNQ2
+S3	GtoPdb interaction	GTOPDB:14112	ML252		Human	Inhibitor/None	down		false	Not Determined	7.150000095367432 pIC50 (=)	Inhibitor activity at KCNQ2 channels expressed in CHO cells in a patch clamp assay	22793372	KCNQ2
+S3	GtoPdb interaction	GTOPDB:2596	XE991		Human	Inhibitor/None	down		false	Non-selective	6.150000095367432 pIC50 (=)		9836639	KCNQ2
+S3	GtoPdb interaction	GTOPDB:12650	azetukalner		Human	Activator/Activation	up		false	Not Determined	- (=)			KCNQ3
+S3	GtoPdb interaction	GTOPDB:5483	gabapentin		Human	Activator/Activation	up		false	Not Determined	8.279999732971191 pEC50 (=)		30021858	KCNQ3
+S3	GtoPdb interaction	GTOPDB:14136	JNJ-37822681		Human	Activator/Activation	up		false	Not Determined	5.699999809265137 pEC50 (=)	Determined in CHO cells expressing KCNQ3<sup>A315T</sup> K<sub>v</sub>7.3 channel subunits	40702669	KCNQ3
+S3	GtoPdb interaction	GTOPDB:14475	opakalim		Human	Activator/Activation	up		false	Not Determined	- (=)			KCNQ3
+S3	GtoPdb interaction	GTOPDB:2601	retigabine		Human	Activator/None	up		true	Non-selective	6.199999809265137 pEC50 (=)		11466425	KCNQ3
+S3	GtoPdb interaction	GTOPDB:2343	tetraethylammonium		Human	Channel blocker/None	down		false		1.5 pIC50		10711337	KCNQ3
+S3	GtoPdb interaction	GTOPDB:2599	linopirdine		Rat	Inhibitor/None	down		false	Non-selective	5.400000095367432 pIC50 (=)		9836639	Kcnq3
+S3	GtoPdb interaction	GTOPDB:7665	ML213		Human	Activator/Activation	up		false	Not Determined	6.300000190734863 pEC50 (=)		22125664	KCNQ4
+S3	GtoPdb interaction	GTOPDB:7664	NC00075159		Human	Activator/Activation	up		false	Not Determined	5.0 pEC50 (=)		21782781	KCNQ4
+S3	GtoPdb interaction	GTOPDB:2307	flindokalner		Human	Activator/None	up		false		5.0 pEC50		11245603	KCNQ4
+S3	GtoPdb interaction	GTOPDB:2387	PIP<sub>2</sub>		Human	Activator/None	up		false		3.7 pEC50		16251430	KCNQ4
+S3	GtoPdb interaction	GTOPDB:2601	retigabine		Human	Activator/None	up		true	Non-selective	5.199999809265137 pEC50 (=)		11466425	KCNQ4
+S3	GtoPdb interaction	GTOPDB:11479	retigabine derivative 10g		Human	Activator/None	up		false	Selective	6.0 pEC50 (=)		30655942	KCNQ4
+S3	GtoPdb interaction	GTOPDB:2600	(S)-N-[1-(3-morpholin-4-yl-phenyl)-ethyl]-3-phenyl-acrylamide		Human	Activator/None	up		false	Non-selective	5.0 pIC50 (=)		16904708	KCNQ4
+S3	GtoPdb interaction	GTOPDB:2597	zinc pyrithione		Human	Activator/None	up		false		5.0 pEC50		17435769	KCNQ4
+S3	GtoPdb interaction	GTOPDB:2337	bepridil		Human	Channel blocker/None	down		false		5.0 pIC50		11245603	KCNQ4
+S3	GtoPdb interaction	GTOPDB:2343	tetraethylammonium		Human	Channel blocker/None	down		false	Non-selective	1.2999999523162842 pIC50 (=)		18786918	KCNQ4
+S3	GtoPdb interaction	GTOPDB:2599	linopirdine		Human	Inhibitor/None	down		false	Non-selective	4.900000095367432 pIC50 (=)		11245603	KCNQ4
+S3	GtoPdb interaction	GTOPDB:14112	ML252		Human	Inhibitor/None	down		false	Not Determined	6.699999809265137 pIC50 (=)	Inhibitor activity at KCNQ4 channels expressed in CHO cells in a patch clamp assay	22793372	KCNQ4
+S3	GtoPdb interaction	GTOPDB:2596	XE991		Human	Inhibitor/None	down		false	Non-selective	5.300000190734863 pIC50 (=)		11245603	KCNQ4
+S3	GtoPdb interaction	GTOPDB:5483	gabapentin		Human	Activator/Activation	up		false	Selective	8.720000267028809 pEC50 (=)		30021858	KCNQ5
+S3	GtoPdb interaction	GTOPDB:2307	flindokalner		Human	Activator/None	up		false		5.6 pEC50		11890900	KCNQ5
+S3	GtoPdb interaction	GTOPDB:2601	retigabine		Human	Activator/None	up		true	Non-selective	5.0 pEC50 (=)		11890900	KCNQ5
+S3	GtoPdb interaction	GTOPDB:11479	retigabine derivative 10g		Human	Activator/None	up		false	Selective	6.0 pEC50 (=)		30655942	KCNQ5
+S3	GtoPdb interaction	GTOPDB:2600	(S)-N-[1-(3-morpholin-4-yl-phenyl)-ethyl]-3-phenyl-acrylamide		Human	Activator/None	up		false		-		16904708	KCNQ5
+S3	GtoPdb interaction	GTOPDB:2597	zinc pyrithione		Human	Activator/None	up		false		5.0 pEC50		17435769	KCNQ5
+S3	GtoPdb interaction	GTOPDB:2343	tetraethylammonium		Human	Channel blocker/None	down		false		pIC50		10787416|10816588	KCNQ5
+S3	GtoPdb interaction	GTOPDB:2599	linopirdine		Human	Inhibitor/None	down		false	Non-selective	4.800000190734863 pKd (=)		10787416	KCNQ5
+S3	GtoPdb interaction	GTOPDB:2596	XE991		Human	Inhibitor/None	down		false	Family selective	4.199999809265137 pIC50 (=)		10816588	KCNQ5
+S4	GtoPdb interaction	GTOPDB:4151	carbenoxolone		Human	Inhibitor/None	down		false	Non-selective	-			GJD2
+S4	GtoPdb interaction	GTOPDB:707	Ca<sup>2+</sup>		Human	Inhibitor/None	down		false	Non-selective | blocked by raising external Ca<sup>2+</sup>	-			GJD2
+S4	GtoPdb interaction	GTOPDB:2447	flufenamic acid		Human	Inhibitor/None	down		false	Non-selective	-			GJD2
+S4	GtoPdb interaction	GTOPDB:4278	octanol		Human	Inhibitor/None	down		false	Non-selective	-			GJD2
+S4	GtoPdb interaction	GTOPDB:4151	carbenoxolone		Human	Inhibitor/None	down		false	Non-selective	-			PANX1
+S4	GtoPdb interaction	GTOPDB:13604	EG-2184		Human	Inhibitor/None	down		false	Not Determined	7.269999980926514 pIC50 (=)		39048565	PANX1
+S4	GtoPdb interaction	GTOPDB:2447	flufenamic acid		Human	Inhibitor/None	down		false	Non-selective | little block by flufenamic acid	-			PANX1
