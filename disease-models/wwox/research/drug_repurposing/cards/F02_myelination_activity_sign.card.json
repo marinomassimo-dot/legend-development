@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "60d2223e41fc68c321493dd27458e7db5ebb332af8fb24b6a691bf9d8d077329",
+  "input_sha256": "c04f88dba9a3073ff5602248f770c24d254d7aadc8f6a8aa2bb2a0d7c8bdafad",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -190,7 +190,8 @@
       "The oligodendrocyte-promoter AAV arm gave no detectable protein, so it neither supports nor refutes oligodendroglial relevance.",
       "In a seizure network, activity drives maladaptive myelination in the other-disease precedent: suppressing activity may lower or raise myelin depending on the system; the sign here is unmeasured.",
       "Oligodendroglial NMDA receptors support axonal energy metabolism in the other-disease precedent, so chronic NMDAR block (F01) has a myelin-side cost that is unmeasured.",
-      "The myelin window closes early."
+      "The myelin window closes early.",
+      "Any enhancer arm needs conduction, electron microscopy and a wild-type arm: wild-type neonatal clemastine raised differentiation markers yet slowed callosal conduction."
     ],
     "bridge_gaps_exposed": [
       "No drug assertion exists, so no comparison is formed."

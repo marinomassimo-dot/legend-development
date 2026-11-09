@@ -385,8 +385,10 @@ def classify_paths(P: dict, rep: Report) -> None:
                 rep.bad("unclassified-field", path, val)
 
 
-def scan_strings(items: list[tuple[str, str]], ref: Reference, rep: Report, label: str) -> None:
-    """Forbidden names, wording and identifiers in a list of (where, string)."""
+def scan_strings(items: list[tuple[str, str]], ref: Reference, rep: Report, label: str, excuse=None) -> None:
+    """Forbidden names, wording and identifiers in a list of (where, string). `excuse` (IT38): for a TRANSLATED page, a callable(word) -> bool that is true only when the word is
+    verifiably a word of the repository's authorised translation of that page's language (a committed file), is not in the audited English source and not in the page's
+    language-neutral data. It applies to SINGLE-word catalogue-name hits only; a name typed into the visible HTML, a row or a brief is in none of those places and is still refused."""
     names, texts = ref.names, ref.texts
     long_names = {k: v for k, v in names.items() if len(k.split()) > GRAM}
     long_first = defaultdict(list)
@@ -445,6 +447,9 @@ def scan_strings(items: list[tuple[str, str]], ref: Reference, rep: Report, labe
                 continue
             if any(hit[1] in t for t in ref.titles):   # a PDF text layer breaks lines inside a title: the hit is part of a bibliographic title
                 rep.suppressed["inside a bibliographic title (line-broken text layer)"] += 1
+                continue
+            if excuse is not None and hit[0] == "forbidden-name" and len(hit[1].split()) == 1 and excuse(hit[1]):
+                rep.suppressed["a single word of the authorised translation, absent from the English source and from the page's neutral data"] += 1
                 continue
             rep.bad(hit[0], f"{label}:{where}", f"{hit[1]!r} ({hit[2]})")
         for m in id_rx.finditer(s):
@@ -623,8 +628,51 @@ def identifier_census(text: str) -> dict:
     return {k: len(set(re.findall(rx, text))) for k, rx in kinds.items()}
 
 
-def audit_html(text: str, dr: Path, ref: Reference | None = None, extra_surfaces: list[tuple[str, str]] | None = None, literature=None) -> tuple[Report, Reference]:
+PAGE_LANG_RX = re.compile(r'<html[^>]*\blang="(\w+)"')
+TRANSLATED_KEYS = ("ui", "strings")        # payload parts that are rendered per language; everything else is the language-neutral data of the edition
+
+
+def _words(o, acc: set) -> set:
+    if isinstance(o, str):
+        acc.update(tokens(o))
+    elif isinstance(o, dict):
+        for v in o.values():
+            _words(v, acc)
+    elif isinstance(o, list):
+        for v in o:
+            _words(v, acc)
+    return acc
+
+
+def translation_excuse(dr: Path, P: dict, lang: str, extra_text: str | None = None):
+    """The exemption function for a translated page, or None for English. A word is excused when (1) it occurs in the committed translation files of `lang`
+    (`view/i18n/content_<lang>.json`, `ui_<lang>.json`), (2) it does not occur in the English source files nor (3) in the language-neutral data of the page (everything but `ui`
+    and `strings`, so a name put into a row, a brief or a lead is never excused), and (4) it is plain letters (an identifier such as ZD7288 never is)."""
+    if lang == "en":
+        return None
+    base = Path(dr) / "view" / "i18n"
+
+    def load(names):
+        acc: set = set()
+        for n in names:
+            fp = base / n
+            if fp.exists():
+                _words(json.loads(fp.read_text(encoding="utf-8")), acc)
+        return acc
+    trans = load([f"content_{lang}.json", f"ui_{lang}.json"])
+    english = load(["content_source.json", "ui_source.json"])
+    neutral = _words({k: v for k, v in dict(P, pairs=named_pairs(P)).items() if k not in TRANSLATED_KEYS}, set())
+    if extra_text:
+        for _, val, _ in walk(extract_payload(extra_text)):
+            _words(val, neutral)
+    return lambda w: w.isalpha() and w in trans and w not in english and w not in neutral
+
+
+def audit_html(text: str, dr: Path, ref: Reference | None = None, extra_surfaces: list[tuple[str, str]] | None = None, literature=None, source_text: str | None = None) -> tuple[Report, Reference]:
+    """`source_text` (optional): another audited page whose data also counts as neutral. A page that declares a language other than English is judged with `translation_excuse` (IT38)."""
     rep = Report()
+    lang_ = (PAGE_LANG_RX.search(text) or [None, "en"])[1]
+    vocab = translation_excuse(dr, extract_payload(text), lang_, source_text)
     ref = ref or Reference(dr)
     P = extract_payload(text)
     if P.get("source") != "shareable":
@@ -636,9 +684,9 @@ def audit_html(text: str, dr: Path, ref: Reference | None = None, extra_surfaces
     for path, val, is_key in walk(P2):
         if isinstance(val, str):
             items.append((path + ("#key" if is_key else ""), val))
-    scan_strings(items, ref, rep, "data")
+    scan_strings(items, ref, rep, "data", vocab)
     vis = visible_surfaces(text)
-    scan_strings(vis, ref, rep, "page")
+    scan_strings(vis, ref, rep, "page", vocab)
     pair_scan(items, ref, rep, "data", literature)
     pair_scan(vis, ref, rep, "page", literature)
     file_token_scan(items, rep, "data")
@@ -647,7 +695,7 @@ def audit_html(text: str, dr: Path, ref: Reference | None = None, extra_surfaces
     if extra_surfaces:
         rhrefs = [h for w, v in extra_surfaces if w.startswith("rendered-href") for h in v.split("\n") if h]
         rendered = [x for x in extra_surfaces if not x[0].startswith("rendered-href")]
-        scan_strings(rendered, ref, rep, "rendered")
+        scan_strings(rendered, ref, rep, "rendered", vocab)
         pair_scan(rendered, ref, rep, "rendered", literature)
         file_token_scan(rendered, rep, "rendered")
     link_checks(text, rep, rhrefs)

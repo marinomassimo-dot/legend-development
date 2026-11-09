@@ -1,0 +1,145 @@
+{
+ "_schema": "orchestrator-task-v1",
+ "TASK_ID": "ORCH-ROADMAP-IT39-20261108",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "P0",
+ "OBJECTIVE": "IT39 principale: from recovered knowledge to effective pharmacological generation. Queued behind IT38 (battery on d85bcdd1 running). Not IT39OS (OpenScientist repeat).",
+ "START_UTC": "2026-11-08T23:00:00Z",
+ "RESUME": {
+  "note": "queued behind IT38: its final candidate d85bcdd1 is in battery at /tmp/bat_it38f (do not touch). Permanent instructions live in CLAUDE.md, delegation_budget.md and the standing method; not repeated here. First open step: P0/P1."
+ },
+ "AUTHORISED_QUEUE_20261108": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Baseline, continuity, record and binding; residuals of the previous mandate",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Close and consume IT38 correctly: reconcile landed state, keep failure attribution, MYC four-level distinction",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "Integrate verified science deliveries (OpenScientist/Dismech retest, membrane physiology, AMPA/NMDA when delivered); receipts, deltas, derivatives",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "Contrasting real cases and the true stopping point of generation",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "Micro-upgrade of the generator at the demonstrated limit",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "Mechanism-oriented generation on a few questions",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "Dream pass on current material, consume Harness's skill",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "Controlled before/after comparison",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P8": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "Pharmacological comparators for priority hypotheses (antiseizure drugs separated)",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P9": {
+   "order": 10,
+   "steps": [
+    {
+     "step": "Open questions as main output; next scientific brief",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P10": {
+   "order": 11,
+   "steps": [
+    {
+     "step": "Dashboard: hypotheses, priorities, changes",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P11": {
+   "order": 12,
+   "steps": [
+    {
+     "step": "External improvement only if it resolves a named gap (CHANGE = NONE acceptable)",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_P12": {
+   "order": 13,
+   "steps": [
+    {
+     "step": "Persistence, verification, battery on the frozen copy, publication, CI, site, cleanup",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ }
+}

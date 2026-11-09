@@ -1,0 +1,4 @@
+inv_id	relations_file	relation_ids	use	applies_chain	applies_hypothesis
+INV-17	nb1_myc_20261107/output/generator_relations.tsv	E11;E30;E01;E02	context_limit		
+INV-17	nb1_myc_20261107/output/generator_relations.tsv	E80	occupancy_not_amount		
+INV-17	nb1_myc_20261107/output/generator_relations.tsv	E27	uninformative_not_negative		^H_PROTECT$
