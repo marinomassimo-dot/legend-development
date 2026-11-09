@@ -42,3 +42,11 @@ States: **applied** (done in IT40), **applied, corrected** (applied with a chang
 ## Receipts (21 staged, none a complete read)
 
 Trial in a throwaway clone failed first on six receipts: three re-reads without a parent (34018186, 37982354, 40994429: parents set from the ledger to `-41`, `-41`, `-33`, reason `new_question_outside_prior_coverage`), and two `receipt_correction` events whose `analysis_at` differed from the corrected event (set equal to it). One cascade error (`-52` prior) cleared with its parent. No duplicate events; parallel readings of 34634460 (`-51` and `-61`) share the original parent `FTR-20261019-34634460-01`, `-62` corrects `-61`. Coverage vocabulary is unchanged: references are `not_read` in 18 of 21; 6 are abstract-only. No partial reading was recorded as complete.
+
+## Independent verification of the applied texts (IT40, sonnet/high, `generation_it40_20261109/verify/VERDICTS.md`)
+
+Corrected after it: A1 now carries the single-compartment assumption and the fit-window caveat; B3 restores the dropped items of the disagreement list; B4 restores "the EPSC reduction recovered incompletely while the IPSC reduction was rapidly and fully reversible" with the preparation; B7 keeps "from submicromolar to just above one micromolar". Other finding kept as a correction column in the conditional proposals: the producer's standard-error multiples for the flat time constant (3.9 and 2.9) were not reproduced (about 1.1–1.4 by an independent recomputation, assuming ± is SEM).
+
+## Correction to an earlier statement (IT39 README, DREAM-4 C)
+
+IT39 wrote that the open-question map "is derived" and that its 200-character cap blocked delta C. Checked in IT40: the map is a hand-edited TSV produced once by a delegate; nothing regenerates it and the cap is a column-name convention of the brief (no row exceeded it). Delta C is therefore applied in the map itself (`batch_sci_20261105/map/dream4_delta_c_it40.md` holds the full text).

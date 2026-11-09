@@ -1,0 +1,11 @@
+case	metric	current generator path	simple baseline	new path	note
+1 physiological hypothesis, no gene pair (membrane MH1)	generator proposals whose main target is a receptor/channel of these hypotheses	0 of 994	0 of 994	6 conditional records (3 membrane, 3 AMPA/NMDA)	the gene-graph generator has no representation for them; unchanged by IT40
+1	chars of the hypothesis chain, rivals, expected results reaching a consumer	INV-18 next_test+decisive_uncertainty cells only	same	MH1 record: chain 2045, rivals 815, expected results 567 chars, nomination ABSTAIN	
+2 AMPA/NMDA with competing explanations (BH1-3)	expected-result cells (arm x explanation) a consumer can read	0	0 (INV-05 free text names d-APV and GluN2B NAM arms)	119	ablation without the package link: 0 (conditional_proposals_nolink.tsv)
+2	competing explanations reachable by id	0	names in free text	4 alternative-id mentions + the hypothesis cell text	BH1 rivals are reachable only through the matrix column map added in IT40
+2b GluN2B-directed comparison	molecules returned for the symbol GRIN2B	24 (simple lookup)	24	24 listed; 4 with a GluN1/GluN2B assembly record (max phase 2); the rest with a family record, subunit unresolved	granularity of the catalogue record, not selectivity
+2b	entries that RAISE receptor activity inside a request for antagonists	not separated	not separated	3 molecules flagged by direction	
+2c AMPA/kainate antagonism	rows -> distinct molecules -> antagonists	74 rows	74 rows	15 molecules, 9 antagonists	one record is repeated per gene symbol
+3 premise already consumed (HIF1A->HK2; ISRIB)	columns changed in 994 proposals, S16 vs S17 regenerated with IT40 inputs	-	0	0	nothing is added where nothing is needed; hand-overs identical (15), eligible 220
+4 abstention (Kv7 / resting K+ conductance)	compounds offered	7 molecules on KCNQ2-5, 2 openers (simple lookup)	7	0 nominated: ABSTAIN; reason: a drug response would not show a leak deficit	the knowledge that decides it: Rin up with flat tau (inference), recording without blockade, E_K arithmetic
+5 identity of tools named by the packages	tools with a catalogue record carrying the intended target	14 of 15 found by name	14	11 confirmed; 4 not (not in catalogue, record without the intended target, or name mismatch)	the verifier corrected two first verdicts (d-APV present as D-Ap5; ivabradine HCN1)
