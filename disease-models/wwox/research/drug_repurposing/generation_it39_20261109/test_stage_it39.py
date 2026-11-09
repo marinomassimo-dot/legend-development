@@ -43,5 +43,17 @@ class StageS15(unittest.TestCase):
         self.assertEqual({r["shared_premise_investigation"] for r in n}, {"INV-14", "INV-16", "INV-17"})
 
 
+class Dossiers(unittest.TestCase):
+    def test_the_question_dossiers_are_what_the_builder_produces_from_the_two_tables(self):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("bq", HERE / "build_questions.py")
+        m = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(m)
+        self.assertEqual((HERE / "questions_it39.md").read_text(encoding="utf-8"), m.build())
+        text = m.build()
+        for inv in ("INV-17", "INV-18", "INV-05", "INV-03"):
+            self.assertIn("## " + inv, text)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

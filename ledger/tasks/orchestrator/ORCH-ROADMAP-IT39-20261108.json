@@ -7,7 +7,7 @@
  "OBJECTIVE": "IT39 principale: from recovered knowledge to effective pharmacological generation. Queued behind IT38 (battery on d85bcdd1 running). Not IT39OS (OpenScientist repeat).",
  "START_UTC": "2026-11-08T23:00:00Z",
  "RESUME": {
-  "note": "IT39 partly done: open P5 (mechanism-oriented generation on new questions) and P10 (dashboard exploration of emerging hypotheses); published 1c933fc5 (gate PASS); battery 0c14e92c PASS WITH SKIPS; f2744920 FAIL kept; CI of 1c933fc5 to be read"
+  "note": "IT39: only P10 open (dashboard exploration of emerging hypotheses); published c7602b91 (gate PASS); CI of c7602b91 failed in the browser-startup step in 7 seconds (cause unreadable without logs), 1c933fc5 CI pending; battery 0c14e92c PASS WITH SKIPS, f2744920 FAIL kept"
  },
  "AUTHORISED_QUEUE_20261108": {
   "MANDATE_STATE": "OPEN",
@@ -71,9 +71,9 @@
    "steps": [
     {
      "step": "Mechanism-oriented generation on a few questions",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "note": "not done: mechanism-oriented generation on new questions beyond the traced cases"
+     "evidence": "limited scope, stated: generation_it39_20261109/questions_it39.md (built mechanically by build_questions.py from the investigations and comparator tables; four dossiers INV-17, INV-18, INV-05, INV-03 with observed state, deciding premise, next test and comparators by role; INV-17 has no comparator in the files, which is a finding) plus the Dream chain (MYC x HIF axis, a new combination in the repository); no new generation run beyond S15; competing explanations kept as stated in the investigations (INV-18 branches A to D)"
     }
    ]
   },
