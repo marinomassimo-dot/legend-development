@@ -7,7 +7,7 @@
  "OBJECTIVE": "IT39 principale: from recovered knowledge to effective pharmacological generation. Queued behind IT38 (battery on d85bcdd1 running). Not IT39OS (OpenScientist repeat).",
  "START_UTC": "2026-11-08T23:00:00Z",
  "RESUME": {
-  "note": "IT39 all steps done except P12 final closure (final candidate, battery on its frozen copy, publication, CI, site, shared checkout reconciliation)"
+  "note": "IT39: all objectives done; P12 final: publication from an isolated clone, CI, site, shared checkout reconciliation, then COMPLETE"
  },
  "AUTHORISED_QUEUE_20261108": {
   "MANDATE_STATE": "OPEN",
@@ -154,7 +154,8 @@
      "status": "IN_PROGRESS",
      "owner": "orchestrator",
      "interim_publications": "1c933fc5 (gate PASS, CI success), c7602b91 and 4d10771c (data-only deltas); battery 0c14e92c PASS WITH SKIPS; f2744920 FAIL kept",
-     "final_closure": "open: final candidate, battery on its frozen copy, publication, CI, site and shared checkout reconciliation after P5 and P10"
+     "final_closure": "open: final candidate, battery on its frozen copy, publication, CI, site and shared checkout reconciliation after P5 and P10",
+     "final_candidate_verification": "batteries, each attributed to its SHA: f2744920 FAIL (three view tests: published date followed folder names; fixed at the root); 0c14e92c PASS WITH SKIPS (222 targets, 42 skipped); 97b20f57 FAIL (one suite, test_stage_it33, pinned to the live premise mapping; log kept in the session scratchpad); final candidate 84aeb928 PASS WITH SKIPS (222 targets, 42 skipped). The merge with remote main afterwards (d96aa90c) changed only another session's task record. Skip reconciliation: the same 42 skips as the previous PASS (corpus-dependent suites absent from a clean clone)."
     }
    ]
   }
