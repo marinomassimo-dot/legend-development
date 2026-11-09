@@ -1,0 +1,65 @@
+{
+  "_schema": "task record, Annex A.1c",
+  "TASK_ID": "ORCH-IT40INV05-20261109",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "HIGH",
+  "OBJECTIVE": "Operator mandate pasted 2026-11-09 (INV-05 narrow pharmacological comparison feeding IT40): one scientific package qualifying the comparison between general reduction of excitation, NMDA antagonism and modulation of NMDAR composition in the WWOX-deficient burst preparation. Start from the verified IT39 B package; reconcile with main; choose the smallest documentary gap that blocks the comparison; deep-read only the open decisive premises (originals, figures, supplements); one producer and one independent verifier in sequence, no recursive delegation, recheck only substantive corrections; compact delivery with consumable tables and exact rows that change; no parallel edit of ranking, dashboards or needs assigned to IT40; do not widen to ISR, myelin, NRF2 or other threads. New experimental measurements are stated, never replaced by literature.",
+  "START_UTC": "2026-11-09T19:00:00Z",
+  "BASELINE": "main edfa347f (development/main same). Worktree .claude/worktrees/it40inv05, branch task/it40inv05. IT40 orchestrator session (legend-development-4e) consumes the IT39 deliveries on base edfa347f in its own worktree it40 and was told the point and folder.",
+  "CURRENT_PACKAGE": {
+    "id": "landing",
+    "state": "package delivered, verified, corrections applied and rechecked; checks and battery",
+    "delegate_active": "none",
+    "updated": "2026-11-09T21:10:00Z"
+  },
+  "RESUME": "Package folder disease-models/wwox/research/drug_repurposing/nmda_composition_discrim_20261109/. Producer sonnet/medium, then blind verifier sonnet/high, corrections by SendMessage, one recheck only for substantive corrections. Unique /tmp names; never touch other sessions' directories.",
+  "DECISIONS_TAKEN": [
+    "2026-11-09 gap chosen after reading the IT39 delivery README and the whole ampa_nmda_discrim_20261108/output tables: the GluN2B NAM arm (BH2/M05) rests on radiprodil in oocytes (45 percent maximum on GluN2A/GluN2B triheteromers) and on Ro 25-6981 and ifenprodil values compiled from reviews, with the primary papers unread and no native-cortex precedent for the NAM-sensitive fraction at P13-P17; without it the matched-percent NAM-versus-d-APV arm has no known dynamic range and no qualified second NAM. The AMPA arm and the carbenoxolone question are not reopened.",
+    "2026-11-09 delivery written (README, consumer_delta with 9 proposals, COST_NOTE); nothing applied to any consumer; IT40 orchestrator informed of the point and folder before the work started. Staged receipts in research/receipt_staging/it40inv05/ are not recorded."
+  ],
+  "DELEGATIONS": [
+    "Producer: asked sonnet/medium, read back medium on every turn; 57 turns; output 59,447; cache read 7,320,762; peak 222,723; 5 sources newly read (cap 6; 3 partial full text, 2 abstract only), 5 staged receipts, all validated.",
+    "Verifier: asked sonnet/high, read back high on every turn; 44 turns; output 42,362; cache read 3,903,644; peak 166,816; first pass 10 supported / 2 partly / 0 not supported / 0 unverifiable of 12; 11 corrections (three substantive: Table 2 values for D07, rat 82 against 45 for D10, 3 uM glycine for D04); recheck of the corrections: all OK except one stale number and four stale wordings, fixed by the Orchestrator."
+  ],
+  "ESCALATIONS": [],
+  "STOP_LOG": [],
+  "DEFAULTS_TAKEN": [],
+  "AUTHORISED_QUEUE_20261109A": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_1": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "S0 reconcile IT39 B package with main and choose the smallest gap",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "decision line in DECISIONS_TAKEN"
+        },
+        {
+          "step": "S1 producer: primary reading of the decisive NAM sources and compact comparison tables",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "producer report 2026-11-09, 12 decisive propositions, 5 staged receipts validated"
+        },
+        {
+          "step": "S2 independent blind verification of the decisive propositions",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "verifier audit verify/audit.md, 12 propositions"
+        },
+        {
+          "step": "S3 corrections and one recheck of substantive corrections",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "11 corrections applied by the producer; recheck section in audit.md; residual wording fixed"
+        },
+        {
+          "step": "S4 delivery (README, consumer_delta, cost note), checks, landing, push",
+          "status": "TODO",
+          "owner": "orchestrator"
+        }
+      ]
+    }
+  }
+}

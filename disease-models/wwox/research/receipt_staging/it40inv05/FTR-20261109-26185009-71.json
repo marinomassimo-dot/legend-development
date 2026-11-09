@@ -1,0 +1,38 @@
+{
+ "analysis_time_precision": "second",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nmda_composition_discrim_20261109/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/nmda_composition_discrim_20261109/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "workflow": "INV-05 narrow comparison (nmda_composition_discrim_20261109), producer nc-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor.",
+ "analysis_at": "2026-11-09T19:01:00Z",
+ "event_at": "2026-11-09T19:04:52Z",
+ "event_id": "FTR-20261109-26185009-71",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "tables": "read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_present"
+ },
+ "evidence_basis": [
+  "Methods, Results, Discussion read; Tables 1-3 read (Table 2 holds the N/A ratios used); Fig 4 viewed; Figs 1-3, 5-7 captions only; supplement not read.",
+  "verbatim_locator | proposition: slices were pre-incubated in 3 uM ifenprodil and recorded at room temperature | Methods (Electrophysiology) | \"slice were incubated in artificial cerebrospinal fluid with 3 µM ifenprodil\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "source_fingerprint": "7dcef9fe17115fb7a203d282a8e07ee4b6f735938dbd61c3529d3051150ce114",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC4670611 XML from the public PMC open-data bucket (Methods, Results, Discussion, figure legends) and Fig 4 viewed from the PMC figure blob, 2026-11-09; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1016/j.biopsych.2015.05.018",
+  "pmid": "26185009"
+ }
+}

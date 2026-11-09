@@ -1,0 +1,38 @@
+{
+ "analysis_time_precision": "second",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nmda_composition_discrim_20261109/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/nmda_composition_discrim_20261109/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "workflow": "INV-05 narrow comparison (nmda_composition_discrim_20261109), producer nc-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor.",
+ "analysis_at": "2026-11-09T19:01:00Z",
+ "event_at": "2026-11-09T19:04:52Z",
+ "event_id": "FTR-20261109-11182088-71",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_present",
+  "limitations": "not_present"
+ },
+ "evidence_basis": [
+  "Abstract only; no methods, results or figures read.",
+  "verbatim_locator | proposition: visual experience lowers the proportion of NR2B-only receptors at layer 2/3 pyramidal synapses in young rat visual cortex | Abstract | \"Visual experience decreases the proportion of NR2B-only receptors\""
+ ],
+ "evidence_depth": "abstract_only",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "Europe PMC record abstract and PubMed identity check, 2026-11-09; full text behind a publisher bot check, not retried",
+ "study_id": {
+  "doi": "10.1016/s0896-6273(01)00187-8",
+  "pmid": "11182088"
+ }
+}

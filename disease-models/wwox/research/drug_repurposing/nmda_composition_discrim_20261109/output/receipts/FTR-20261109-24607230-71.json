@@ -1,0 +1,39 @@
+{
+ "analysis_time_precision": "second",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nmda_composition_discrim_20261109/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/nmda_composition_discrim_20261109/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "workflow": "INV-05 narrow comparison (nmda_composition_discrim_20261109), producer nc-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor.",
+ "analysis_at": "2026-11-09T19:01:00Z",
+ "event_at": "2026-11-09T19:04:52Z",
+ "event_id": "FTR-20261109-24607230-71",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "tables": "read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_present"
+ },
+ "evidence_basis": [
+  "Results, Discussion, Table 1, Table 2 read; Figs 2 and 3 viewed; Figs 1, 4, 5 captions only; the full Experimental Procedures and the supplement (pH and agonist levels for the TCN-201 and ifenprodil assays) not read; only the Experimental Procedures stub in the PMC text was available. Coverage 'figures' is set to the weaker value because Figs 1, 4, 5 were captions only; Figs 2 and 3 were viewed.",
+  "verbatim_locator | proposition: ifenprodil maximal inhibition of GluN1/GluN2A/GluN2B triheteromers in oocytes was 32 percent | Results (inhibition of triheteromers by GluN2B-selective modulators) | \"maximal inhibition was 32 ± 1% (N = 16)\"",
+  "verbatim_locator | proposition: extracellular Zn2+ raised maximal ifenprodil inhibition of triheteromers | Results | \"Maximal ifenprodil inhibition increased from 32 ± 1% (N = 16) in the absence of Zn2+ to 50 ± 2%\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "source_fingerprint": "6ff59977f27a00ea92fc28238e06bb13a9bf728373f8f28cbafa4e33439a4d3b",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC3957490 plain text from the public PMC open-data bucket (Results, Discussion, Experimental Procedures stub, Table 1 and Table 2 from the XML) and Figs 2 and 3 viewed from the PMC figure blobs, 2026-11-09; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1016/j.neuron.2014.01.035",
+  "pmid": "24607230"
+ }
+}
