@@ -37,3 +37,30 @@ Each hypothesis record has `kind` (`physiological_hypothesis`), `gene_arc` (alwa
 ## Removal
 
 Delete `hypothesis_package.py`, its test, the README row in `framework/scripts/README.md` and the two `consumer_links.tsv` files. Nothing else reads them.
+
+## Reporting closure (2026-11-09, added after publication of efedf18e)
+
+**Release battery on efedf18e** (fresh no-hardlinks clone of that exact SHA). Exit code 0. The box, and with it the full battery log, was released before the verdict line and the target count were read, so those two are **not recoverable** and are not reconstructed here from the exit code, the CI or the earlier battery on a2cec3ab. What survives is the tail the run printed: six skipped suites, with the reasons given:
+
+* `disease-models/wwox/analysis/scripts/test_derive_dismech_sidecar.py`: local full-text corpus not present in this checkout
+* `disease-models/wwox/research/drug_repurposing/generation_it21_p2_20261103/test_attribution_it21.py`: reason unavailable
+* `disease-models/wwox/research/drug_repurposing/qualification_it21_p4a_20261103/test_qualify_p4a_it21.py`: saved text is under the gitignored files/ tree of the checkout that fetched it
+* `framework/scripts/test_mandate_continuity.py`: Stop hook not installed in .claude/settings.json on this checkout
+* `framework/scripts/test_repurposing_search_bridges.py`: needs the local catalogue cache (not distributed)
+* `framework/scripts/test_shareable_audit_languages.py`: needs the local catalogue cache and the built editions
+
+The skip list was printed as the last six lines of the log, so it may be longer than six. CI on efedf18e was not read (no `gh` here).
+
+**Observed cost of this mandate**, read with `framework/scripts/session_model_census.py` from the session transcript, sliced from the mandate message (2026-11-09T18:54:07Z) to the push (last record 21:49:21Z, about 2 h 55 min wall clock, most of it waiting on the gate and the battery):
+
+| | |
+|---|---|
+| turns | 58, all `claude-sonnet-5-5`, effort read back `medium` |
+| birth context | 71,925 tokens (includes the inherited preamble and memory index) |
+| peak context | 151,791 tokens |
+| cache written | 126,139 tokens |
+| cache read | 7,235,926 tokens (context re-read across turns, not distinct work) |
+| output | 37,819 tokens |
+| delegates | none (no Agent call in the slice) |
+
+**Not separable and not measured**: the Orchestrator session's own cost; CPU and wall time of the gate and the battery as compute; the turns of this reporting closure; any subscription share, which the transcripts do not carry (no estimate or percentage is given). The whole-session census (492 turns, includes earlier mandates) is not this mandate's cost.
