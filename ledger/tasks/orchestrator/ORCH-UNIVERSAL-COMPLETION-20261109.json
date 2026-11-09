@@ -21,7 +21,7 @@
   "DEFAULTS_TAKEN": [],
   "STOP_LOG": [],
   "AUTHORISED_QUEUE_20261109": {
-    "MANDATE_STATE": "OPEN",
+    "MANDATE_STATE": "COMPLETE",
     "OBJ_1": {
       "order": 1,
       "steps": [
@@ -39,8 +39,9 @@
         },
         {
           "step": "Complete clean-copy release verification, integrate, publish, verify CI and remove only this task worktree",
-          "status": "IN_PROGRESS",
-          "owner": "orchestrator"
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "Clean-copy full battery PASS WITH SKIPS on exact body commit 7f1e6228 (222 targets, 42 environmental/corpus/cache skips; 3318.6 seconds). Integrated fe56dca7 published with safe_push gate PASS, 0 blocks, ls-remote verified. CI run 42579349977 completed success on fe56dca7: browser, regression tests, lint and public release gate all successful. Only this task worktree removed after preserving its unique checkpoint. The closing record is metadata only; the earlier battery and CI are not attributed to its later commit."
         }
       ]
     }
@@ -51,7 +52,7 @@
   "INTERACTION_MODE": "AUTONOMOUS_COMPLETE",
   "SESSION_PROFILE": "HARNESS",
   "RESUME": {
-    "note": "Frozen body 7f1e6228 passed the full clean-clone battery (222 targets, 42 environment/corpus/cache skips), gate PASS, LINT no BLOCK, receipts OK. Remaining: integrate and publish this task, observe CI on the integrated commit, then close the record and remove only this task worktree. Later evidence-only edits are not attributed to that body battery."
+    "note": "Complete. Universal rules and existing routes are published on main; clean-copy body battery and integrated-tree CI successful; own task worktree removed. No executable work remains in this assignment."
   },
   "RELEASE_EVIDENCE": {
     "body_commit": "7f1e6228c2b7e5830d982eb1c807a52079d96c62",
@@ -64,6 +65,16 @@
     "gate_on_body": "PASS, 0 blocks",
     "lint": "WARN, no BLOCK",
     "receipts": "verify OK, 1506 events",
-    "clone_cleanup": "Owned release clone removed after its successful battery; evidence log retained."
-  }
+    "clone_cleanup": "Owned release clone removed after its successful battery; evidence log retained.",
+    "integrated_commit": "fe56dca7dd2857c18179c1719a5518f02398d96e",
+    "publication": "safe_push origin main --expect-sha fe56dca7: gate PASS, zero blocks; PUBLISHED verified by ls-remote",
+    "ci_run_id": 42579349977,
+    "ci_url": "https://github.com/marinomassimo-dot/legend-development/actions/runs/42579349977",
+    "ci_observed_status": "completed",
+    "task_worktree_cleanup": "Only /tmp/legend-universal-completion-20261109 removed with git worktree remove after preserving its unique task-record checkpoint; only generated ignored Python caches deleted. Other sessions untouched.",
+    "ci_conclusion": "success",
+    "ci_completed_utc": "2026-11-09T08:37:59Z",
+    "ci_scope": "Integrated tree fe56dca7dd2857c18179c1719a5518f02398d96e; no claim that this CI ran on the later metadata-only closing commit."
+  },
+  "COMPLETED_UTC": "2026-11-09T08:38:59+00:00"
 }
