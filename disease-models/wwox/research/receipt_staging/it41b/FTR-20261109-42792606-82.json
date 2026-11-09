@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-09T23:24:47Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "references": "not_read",
+  "figures": "captions_only",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-09T23:26:47Z",
+ "event_id": "FTR-20261109-42792606-82",
+ "evidence_basis": [
+  "Methods, Results, Discussion read; Fig 4 and Fig 5 viewed (figures marked captions_only because Figs 1 to 3 were not viewed); uncropped blots in the supplement not read; references not read",
+  "verbatim_locator | proposition: Bnip3 transcript rises early in HT22 under 1 percent oxygen | Results 3.4 | \"Bnip3 demonstrated the most robust transcriptional response, with significant elevation detected as early as 6 h\"",
+  "verbatim_locator | proposition: HIF dependence was not tested | Discussion 4.3 | \"our current data do not distinguish whether the observed mitophagy is initiated by OXPHOS failure or through HIF-dependent activation\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/hif1a_bnip3_it41_20261109/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/hif1a_bnip3_it41_20261109/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "9715ce942d6c8404cbc3fe4ed7f666dbe358ea42af38be08fa51be70d22494df",
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC fullTextXML for the PMC record, fetched 2026-11-09; bytes not saved; figure images 4 and 5 from the PMC open-data bucket viewed",
+ "study_id": {
+  "doi": "10.3390/biology15181659",
+  "pmid": "42792606"
+ },
+ "workflow": "IT41 package B (hif1a_bnip3_it41_20261109), producer ib-p, task ORCH-IT41-20261109. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
