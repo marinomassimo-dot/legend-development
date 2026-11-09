@@ -1,0 +1,38 @@
+{
+ "analysis_time_precision": "second",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nmda_composition_discrim_20261109/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/nmda_composition_discrim_20261109/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "workflow": "INV-05 narrow comparison (nmda_composition_discrim_20261109), producer nc-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor.",
+ "analysis_at": "2026-11-09T19:01:00Z",
+ "event_at": "2026-11-09T19:04:52Z",
+ "event_id": "FTR-20261109-30946007-71",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "figures": "read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_present"
+ },
+ "evidence_basis": [
+  "Results on NMDAR-EPSCs and Ro 25-6981 (Fig 3), the related Methods paragraph, the Discussion paragraphs on triheteromers read by pattern search; Fig 3 viewed; biochemistry, calcium imaging and spine sections not read.",
+  "verbatim_locator | proposition: Ro 25-6981 3 uM was bath-applied for 30 min and the read-out was percent inhibition of the weighted decay time | Results | \"bath infusion of Ro 25–6981 (30 min, 3μM), then compared the percent inhibition (τw percent of baseline)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "source_fingerprint": "eb84b445ad9b3fce312b796c08d5f28440227e65a489e0ccbdb1c7f2595f8d78",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC6464704 plain text from the public PMC open-data bucket and Fig 3 viewed from the bucket jpg, 2026-11-09; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.7554/eLife.40316",
+  "pmid": "30946007"
+ }
+}
