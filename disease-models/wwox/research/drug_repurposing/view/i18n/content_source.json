@@ -235,6 +235,10 @@
   "src": "it",
   "text": "Capire se vigabatrin o CPP-115 aggiungono danno alla mielina in un modello giovanile privo di Wwox."
  },
+ "2c958656b721": {
+  "src": "en",
+  "text": "Capacitance and time constant measured in the same cells, or a Ba2+- or Kv7-blocker-sensitive difference current in Wwox neurons, would decide whether any pharmacological arm is needed."
+ },
  "2d0bcfbcaf77": {
   "src": "en",
   "text": "A curve shifted to the left of the full-antagonist curve, with a measured sensitive fraction, makes the GluN2B-directed comparison the better question."
@@ -383,6 +387,10 @@
   "src": "en",
   "text": "An inhibitor of the kinase BTK proposed to restore NPY through STAT3"
  },
+ "42cadd702298": {
+  "src": "en",
+  "text": "Under a single-compartment assumption the numbers do not fit a pure loss of resting K+ conductance at constant capacitance; smaller cells plus a conductance change is one reading. Capacitance is not an established difference. No drug is proposed."
+ },
  "437a9b30f72e": {
   "src": "it",
   "text": "Il modulo si trasferisce a un contrasto indipendente di perdita di WWOX (topo P47T, ippocampo)"
@@ -450,10 +458,6 @@
  "4d6578e29718": {
   "src": "en",
   "text": "INV-13"
- },
- "4ea9ffac88e8": {
-  "src": "en",
-  "text": "The numbers do not fit a pure loss of resting K+ conductance at constant capacitance; smaller cells plus a conductance change is one reading. Capacitance is not an established difference. No drug is proposed."
  },
  "4ede8e55ca00": {
   "src": "en",
@@ -846,10 +850,6 @@
  "9202fca605a7": {
   "src": "it",
   "text": "Più basso nella linea shRNA (resazurina grezza), più alto nella mosca con amiloide; nessuna misura di flusso in cellule neurali."
- },
- "929dc08517c1": {
-  "src": "en",
-  "text": "Capacitance and time constant measured in the same cells, or a Ba2+- or XE991-sensitive difference current in Wwox neurons, would decide whether any pharmacological arm is needed."
  },
  "92ea76c9db7b": {
   "src": "it",

@@ -12,7 +12,7 @@ LANGS = ("it", "fr", "es", "de")
 src = json.load(open(I18N / "content_source.json"))
 cur = {l: json.load(open(I18N / f"content_{l}.json")) for l in LANGS}
 def head_source():
-    out = subprocess.run(["git", "show", "HEAD:disease-models/wwox/research/drug_repurposing/view/i18n/content_source.json"], capture_output=True, text=True, cwd=HERE.parents[4], check=True).stdout
+    out = subprocess.run(["git", "show", "edfa347f:disease-models/wwox/research/drug_repurposing/view/i18n/content_source.json"], capture_output=True, text=True, cwd=HERE.parents[4], check=True).stdout
     return json.loads(out)
 def tasks():
     old = head_source(); T = {}

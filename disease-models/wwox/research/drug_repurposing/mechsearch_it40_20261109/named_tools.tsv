@@ -1,5 +1,5 @@
 package_name	role	used_for	catalogue_hits_by_name	n_hits
-d-APV	tool	BH1/BH2 positive control	NOT_IN_CATALOGUE	0
+D-Ap5	tool	BH1/BH2 positive control (the package writes d-APV)	CAT:DGIDB:b0ca5cf2303c=D-Ap5	1
 perampanel	therapeutic_class_to_study	R3	CAT:CHEMBL1214124=PERAMPANEL;CAT:DGIDB:768c891abaa7=Perampanel	2
 NBQX	tool	R3 use-only	CAT:DGIDB:ca4c6814d8f6=Nbqx	1
 GYKI 52466	tool	R3 use-only	CAT:DGIDB:9abeaf54a97b=Gyki53784	1
