@@ -15,6 +15,10 @@ This skill does not modify canonical current files and creates no claims. It is 
 
 Before composing the closing, apply [autonomous mandate continuity](../../../framework/protocols/cross_session_transport.md#12--autonomous-mandate-continuity): reconcile the authorised objective and remaining work. This report is not a place to park executable next steps or to wait for a delivery while independent work remains.
 
+Use [operational results and causal attribution](../../../framework/instruction/epistemic_discipline.md#operational-results-and-causal-attribution)
+for technical outcomes too. Completion and diagnosis have the same evidential discipline for
+every actor; a clean check is not a substitute for an unfinished objective.
+
 At the end of every LEGEND session, beyond the completed technical tasks, return a final `Session takeaway` section.
 
 For an analytical batch or full-text run, this skill is downstream of
