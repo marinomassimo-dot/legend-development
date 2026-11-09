@@ -141,12 +141,12 @@ def load_package(pkg: Path) -> dict:
 
 
 def load_comparison(pkg: Path) -> dict:
-    """A pharmacological comparison: comparison.tsv rows (keyed by the text before ' ('), new_measurements.tsv, decisive.tsv."""
+    """A pharmacological comparison: comparison.tsv rows (keyed by the first column, the text before ' ('), new_measurements.tsv, decisive.tsv."""
     pkg = Path(pkg)
     out = pkg / "output" if (pkg / "output").is_dir() else pkg
     refs, rows, meas, dec = {}, {}, {}, {}
     for r, ref in _tsv_lined(out / "comparison.tsv"):
-        k = r["hyp_id"].split(" (")[0].strip()
+        k = r[next(iter(r))].split(" (")[0].strip()   # the first column is the row key (hyp_id in one package, row_id in another)
         rows[k] = r
         refs[f"cmp:{k}"] = ref
     for r, ref in _tsv_lined(out / "new_measurements.tsv"):

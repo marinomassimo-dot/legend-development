@@ -17,12 +17,12 @@ Inputs read: `mechsearch_it40_20261109/identity_check.tsv` (IT40), the catalogue
 
 `framework/scripts/compound_identity.py` (`resolve`, `target_evidence`, CLI `python3 framework/scripts/compound_identity.py "<name>" --genes G1,G2 [--offline]`). It adds, over the existing catalogue, reconciliation and chembl adapter:
 
-* the match kind (`NAME_EXACT`, `SYNONYM_EXACT`, `NAME_PARTIAL`, `SYNONYM_PARTIAL`, `DECLARED`, `NOT_FOUND_BY_NAME`), the record name beside the query, the ChEMBL references with their basis and whether they are in the catalogue;
-* identity declarations with basis, source and date (`catalog/tool_identity_declarations.tsv`, six rows, including `distinct_from` and `label_conflict`) as the qualified addition path for a nameless record; there is no other exception list;
+* the match kind (`NAME_EXACT`, `SYNONYM_EXACT`, `SEPARATOR_VARIANT`, `NAME_PARTIAL`, `SYNONYM_PARTIAL`, `DECLARED`, `NOT_FOUND_BY_NAME`), the record name beside the query, the ChEMBL references with their basis and whether they are in the catalogue;
+* identity declarations with basis, source and date (`catalog/tool_identity_declarations.tsv`, nine rows, including `distinct_from` and `label_conflict`) as the qualified addition path for a nameless record; there is no other exception list;
 * per expected gene the highest evidence level read: `CURATED_MECHANISM`, `SOURCE_INTERACTION`, `MEASURED_ACTIVITY_HUMAN`, `MEASURED_ACTIVITY_OTHER_SPECIES`, and the three non-evidence states `EMPTY_RESULT`, `NOT_READ`, `READ_ERROR`; selectivity is always `NOT_ASSESSED` and the other genes seen are listed;
 * a label conflict keeps the conflicted record's source rows out of the attribution (listed as `unattributed_source_rows`).
 
-Nine offline regressions: `framework/scripts/test_compound_identity.py`.
+Ten offline regressions: `framework/scripts/test_compound_identity.py`.
 
 ## Fixed inputs for IT41: `identity_table.tsv` (live ChEMBL read 2026-11-09)
 
@@ -31,6 +31,7 @@ Nine offline regressions: `framework/scripts/test_compound_identity.py`.
 | GYKI 52466 | `SYNONYM_EXACT` via the record named Gyki53784; declared `CHEMBL275006`; label conflict | GRIA1: measured, other species (7); GRIA2: measured, human (9). The DGIdb rows are not attributed |
 | NBQX | `NAME_EXACT` (record Nbqx, `CHEMBL222519`) | GRIA1, GRIA2: source interaction (39, 40) |
 | perampanel | `NAME_EXACT` (`CHEMBL1214124`) | GRIA1, GRIA2: curated mechanism |
+| GYKI 53655 | `DECLARED` (`CHEMBL267450`), with the catalogue record Gyki53655 (`CAT:DGIDB:8111763ff62c`) found as `SEPARATOR_VARIANT`; **distinct from GYKI 52466** (C19H20N4O3 against C17H15N3O2) | GRIA1, GRIA2: source interaction (3 DGIdb rows each); ChEMBL holds 4 measured activity rows in total. This is the compound the IT41 slice papers name; evidence for one of the two GYKI compounds is not evidence for the other |
 | Ro 25-6981 | `SYNONYM_EXACT` via the DGIdb record of `CHEMBL305195`; declared | GRIN2B: measured, human (20 rows). Not curated; not shown selective (GRIN2A, alpha-1 adrenergic and DRD1 also measured) |
 | ifenprodil | `NAME_EXACT` (`CHEMBL305187`; the tartrate `CHEMBL1886888` is a separate partial hit) | GRIN2B: measured, human (36). Sigma-1, TMEM97, EBP and alpha-1 measured too |
 | Brilliant Blue FCF | `DECLARED` (`CHEMBL3184128`; distinct from Brilliant Blue G) | PANX1: measured, mouse (1 row) |
@@ -45,3 +46,7 @@ Nine offline regressions: `framework/scripts/test_compound_identity.py`.
 ## Removal
 
 Delete `compound_identity.py`, its test, `catalog/tool_identity_declarations.tsv`, this folder and the README row in `framework/scripts/README.md`. Nothing else reads them.
+
+## Added with the second push (IT41 package A)
+
+The slice papers in `ampa_comparison_it41_20261109/output/names_used.tsv` name **GYKI 53655**, not GYKI 52466. The first name lookup missed its record because the catalogue spells it `Gyki53655` without a space: `SEPARATOR_VARIANT` now finds it (a reproducible defect of space-sensitive normalisation, shared by `compound_catalog.find`, left unchanged there). Two `distinct_from` declarations keep the two GYKI compounds apart in both directions. Unresolved here: `d-APV` is stored as `D-Ap5` and is not found by that name (`NOT_FOUND_BY_NAME`); IT40's identity_check handles it as `d-APV (D-Ap5)` and no declaration was written because the equivalence of the spelling was not re-read in a registry in this package.

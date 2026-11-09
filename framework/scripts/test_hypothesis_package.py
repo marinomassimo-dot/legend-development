@@ -221,6 +221,20 @@ class Reader(unittest.TestCase):
             self.assertTrue(any("H_zzz" in e for e in hp.validate(c, invs={"INV-9": {}})))             # a block on no key is refused
             self.assertEqual(hp.comparison_for([c], "INV-0")["state"], "NO_COMPARISON_LISTED")
 
+    def test_comparison_key_column_may_be_row_id(self):
+        with tempfile.TemporaryDirectory() as t:
+            o = Path(t) / "c" / "output"
+            o.mkdir(parents=True)
+            (o / "comparison.tsv").write_text("row_id\tcompound_or_probe\tidentity_status\nC1\tNBQX\tunresolved\nC2\tGYKI 53655\tname_mismatch\n")
+            (o / "new_measurements.tsv").write_text("meas_id\tmeasurement\tblocks_which_comparison_row\nM-A1\tm\tC1; C2\n")
+            c = hp.load_comparison(Path(t) / "c")
+            c["inv_id"] = "INV-9"
+            rows = {r["key"]: r for r in hp.comparison_for([c], "INV-9")["rows"]}
+            self.assertEqual(sorted(rows), ["C1", "C2"])
+            self.assertEqual(rows["C2"]["row"]["identity_status"], "name_mismatch")   # the qualifier survives verbatim
+            self.assertEqual([m["meas_id"] for m in rows["C2"]["new_measurements"]], ["M-A1"])
+            self.assertEqual(hp.validate(c, invs={"INV-9": {}}), [])
+
     def test_only_manifest_packages_are_read(self):
         listed = {m["dir"] for m in hp.read_manifest()}
         self.assertEqual({p["dir"].parent.name for p in hp.load_all()}, listed)

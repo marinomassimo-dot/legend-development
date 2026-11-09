@@ -31,6 +31,7 @@ ES = [
     entry("CAT:C", "Gyki53784", syn=["GYKI-52466"], targets=[DG("GRIA1")]),
     entry("CAT:D", "BRILLIANT BLUE G", chembl="CHEMBL4"),
     entry("CAT:E", "MEMANTINE", chembl="CHEMBL5", targets=[CM("GRIN2B")]),
+    entry("CAT:F", "Gyki53655", chembl="CHEMBL6"),
 ]
 RECON = [{"candidate": "CAT:C", "chembl_ref": "CHEMBL275006", "chembl_ref_in_catalogue": "no", "decision": "out_of_selection", "gtopdb_inchikey": "K"}]
 DECL = [
@@ -73,6 +74,11 @@ class Identity(unittest.TestCase):
         self.assertEqual(r["candidates"], [])
         self.assertIn("CHEMBL4173394", [d["chembl_id"] for d in r["declarations"] if d["role"] == "distinct_from"])
         self.assertEqual(ci._chembl_ids(r), ["CHEMBL3184128"])
+
+    def test_separator_variant_is_found_and_labelled_not_called_exact(self):
+        r = res("GYKI 53655")                              # the record is named Gyki53655: no space
+        self.assertEqual((r["identity_state"], r["candidates"][0]["match_kind"]), ("SEPARATOR_VARIANT", "SEPARATOR_VARIANT"))
+        self.assertEqual(res("GYKI 52466")["candidates"][0]["match_kind"], "SYNONYM_EXACT")   # a synonym stays a synonym
 
     def test_unknown_name_says_nothing_about_the_compound(self):
         r = res("no such tool")
