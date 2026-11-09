@@ -7,7 +7,7 @@
  "OBJECTIVE": "IT39 principale: from recovered knowledge to effective pharmacological generation. Queued behind IT38 (battery on d85bcdd1 running). Not IT39OS (OpenScientist repeat).",
  "START_UTC": "2026-11-08T23:00:00Z",
  "RESUME": {
-  "note": "IT39 partly done: P5, P8, P10 open (see notes on the steps); battery 0c14e92c PASS WITH SKIPS; push and CI after publication"
+  "note": "IT39 partly done: open P5 (mechanism-oriented generation on new questions) and P10 (dashboard exploration of emerging hypotheses); published 1c933fc5 (gate PASS); battery 0c14e92c PASS WITH SKIPS; f2744920 FAIL kept; CI of 1c933fc5 to be read"
  },
  "AUTHORISED_QUEUE_20261108": {
   "MANDATE_STATE": "OPEN",
@@ -104,9 +104,9 @@
    "steps": [
     {
      "step": "Pharmacological comparators for priority hypotheses (antiseizure drugs separated)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "note": "not done: pharmacological comparators for priority hypotheses (antiseizure drugs kept separate from a WWOX rationale)"
+     "evidence": "comparators_it39_20261109/output/{comparators,antiseizure}.tsv: 38 comparator rows (functional_outcome versus mechanism_separating per investigation; INV-10 has no mechanism-separating comparator in the files) and 15 antiseizure rows (general anticonvulsant activity kept apart from any WWOX rationale; outcome domain per row); built from repository files only by one delegate (sonnet, medium requested; effort not readable from inside the runtime), spot-checked against the NMDA and T-type source tables (Ro 25-6981, ifenprodil, d-APV, memantine, ethosuximide, perampanel); not wired into the view"
     }
    ]
   },
