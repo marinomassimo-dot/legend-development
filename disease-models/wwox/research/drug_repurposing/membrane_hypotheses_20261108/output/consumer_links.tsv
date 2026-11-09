@@ -1,4 +1,4 @@
 hyp_id	kind	need_id	inv_id	card_ids	link_state	carried_check	source
-MH1	physiological_hypothesis	NEED-INTRINSIC-EXCITABILITY	INV-18		PROPOSED_NOT_APPLIED		engine_consumption.md
+MH1	physiological_hypothesis	NEED-INTRINSIC-EXCITABILITY	INV-18		CARRIED_IN_TEXT	decisive_uncertainty:matched potential and matched deflection;next_test:capacitance by genotype	engine_consumption.md
 MH2	physiological_hypothesis	NEED-INTRINSIC-EXCITABILITY	INV-18		CARRIED_IN_TEXT	intervention:Ih (HCN) channel blockers	engine_consumption.md
-MH3	physiological_hypothesis	NEED-INTRINSIC-EXCITABILITY	INV-18		PROPOSED_NOT_APPLIED		engine_consumption.md
+MH3	physiological_hypothesis	NEED-INTRINSIC-EXCITABILITY	INV-18		CARRIED_IN_TEXT	decisive_uncertainty:synaptic blockade	engine_consumption.md

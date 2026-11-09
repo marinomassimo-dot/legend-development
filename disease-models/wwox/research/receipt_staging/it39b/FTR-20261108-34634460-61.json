@@ -17,8 +17,8 @@
  "event_id": "FTR-20261108-34634460-61",
  "evidence_basis": [
   "Re-read for the AMPA, NMDAR composition, general excitatory drive and carbenoxolone question: Methods in full (slice preparation, ACSF, temperature, pharmacology, burst detection, statistics), Results 2.1 to 2.6, Discussion, Table 1, all six figure images viewed (Figs 1-6), the supplementary docx text (Table S1, legends of Figs S1-S4) and its four images viewed. The reference list was not read; cited papers for carbenoxolone were taken from the Discussion sentence only. Depth is declared partial only because the reference list was not read; every other section, every figure and every supplementary item carrying a number used here was read or viewed.",
-  "verbatim_locator | proposition: bursts abolished by d-APV | Results 2.2 | \"Blocking glutamatergic neurotransmission with d-APV (50 μM) eliminated the spontaneous bursting events\"",
-  "verbatim_locator | proposition: carbenoxolone effect size | Results 2.2 | \"CBX (100 μM) decreased the frequency of the events by 87% (p = 0.008) and their duration by 18% (p = 0.0274\"",
+  "verbatim_locator | proposition: bursts abolished by d-APV | Results 2.2 | \"Blocking glutamatergic neurotransmission with d-APV (50 \u03bcM) eliminated the spontaneous bursting events\"",
+  "verbatim_locator | proposition: carbenoxolone effect size | Results 2.2 | \"CBX (100 \u03bcM) decreased the frequency of the events by 87% (p = 0.008) and their duration by 18% (p = 0.0274\"",
   "verbatim_locator | proposition: mEPSC decay unchanged | Results 2.3 | \"there were no significant changes in the decay time constant of mEPSCs\"",
   "verbatim_locator | proposition: incubation medium only | Methods 5.2 | \"123 NaCl, 25 NaHCO3, 10 glucose, 3.5 KCl, 1.3 MgSO4-7H2O\"",
   "verbatim_locator | proposition: delayed evoked response sensitive to d-APV | Results 2.2 | \"This delayed response was NMDA receptor mediated, as addition of d-APV reversibly suppressed the response\"",

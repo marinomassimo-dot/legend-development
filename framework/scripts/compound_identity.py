@@ -10,7 +10,7 @@ each row carrying its basis, source and date.
 
 Two answers, never merged:
 
-  identity   NAME_EXACT / SYNONYM_EXACT / NAME_PARTIAL / SYNONYM_PARTIAL / DECLARED (a declaration row) /
+  identity   NAME_EXACT / SYNONYM_EXACT / SEPARATOR_VARIANT (equal only without spaces and hyphens) / NAME_PARTIAL / SYNONYM_PARTIAL / DECLARED (a declaration row) /
              NOT_FOUND_BY_NAME (says nothing about the compound), plus the ChEMBL ids the record points at, whether
              they are in the catalogue, and a `label_conflict` when a declaration says the label sits on two structures.
   target     per expected gene, the highest evidence LEVEL that was read: CURATED_MECHANISM (ChEMBL mechanism table),
@@ -58,6 +58,9 @@ def match_kind(entry: dict, name: str) -> str | None:
     syn = [cc._norm(s) for s in entry.get("synonyms", [])]
     if q in syn:
         return "SYNONYM_EXACT"
+    compact = q.replace(" ", "")
+    if compact == cc._norm(entry.get("name") or "").replace(" ", "") or compact in [x.replace(" ", "") for x in syn]:
+        return "SEPARATOR_VARIANT"   # equal only after removing spaces and hyphens: Gyki53655 for GYKI 53655
     if q in cc._norm(entry.get("name") or ""):
         return "NAME_PARTIAL"
     if any(q in s for s in syn):
@@ -87,12 +90,12 @@ def resolve(es: list[dict], name: str, recon: list[dict] | None = None, declarat
         cands.append({"catalogue_id": e["id"], "record_name": e.get("name"), "match_kind": k, "origin": e.get("origin"),
                       "parent": (e.get("relations") or {}).get("parent"), "chembl_refs": refs})
     decl = [d for d in declarations if cc._norm(d["query_name"]) == cc._norm(name)]
-    rank = {"NAME_EXACT": 0, "SYNONYM_EXACT": 1, "NAME_PARTIAL": 2, "SYNONYM_PARTIAL": 3}
+    rank = {"NAME_EXACT": 0, "SYNONYM_EXACT": 1, "SEPARATOR_VARIANT": 2, "NAME_PARTIAL": 3, "SYNONYM_PARTIAL": 4}
     cands.sort(key=lambda c: (rank[c["match_kind"]], c["catalogue_id"]))
     best = cands[0]["match_kind"] if cands else None
     declared = [d for d in decl if d["role"] == "identity"]
     state = best or ("DECLARED" if declared else "NOT_FOUND_BY_NAME")
-    if best in ("NAME_PARTIAL", "SYNONYM_PARTIAL") and declared:
+    if best in ("NAME_PARTIAL", "SYNONYM_PARTIAL", "SEPARATOR_VARIANT") and declared:
         state = "DECLARED"
     return {"query": name, "identity_state": state, "candidates": cands, "declarations": decl,
             "label_conflict": [d for d in decl if d["role"] == "label_conflict"],
@@ -103,7 +106,7 @@ def _chembl_ids(res: dict) -> list[str]:
     """ChEMBL ids to read: declared identities first (they are the reviewed ones), then the references of the best match kind."""
     ids = [d["chembl_id"] for d in res["declarations"] if d["role"] == "identity"]
     best = res["candidates"][0]["match_kind"] if res["candidates"] else None
-    if best in ("NAME_EXACT", "SYNONYM_EXACT"):
+    if best in ("NAME_EXACT", "SYNONYM_EXACT", "SEPARATOR_VARIANT"):
         ids += [r["chembl_id"] for c in res["candidates"] if c["match_kind"] == best for r in c["chembl_refs"]]
     return list(dict.fromkeys(i for i in ids if i and i != "-"))
 
@@ -119,7 +122,7 @@ def target_evidence(res: dict, genes: list[str], es: list[dict], chembl_query=No
     read = []
     # catalogue rows (already in hand): curated mechanism and source interaction
     best = res["candidates"][0]["match_kind"] if res["candidates"] else None
-    for c in (c for c in res["candidates"] if c["match_kind"] == best and best in ("NAME_EXACT", "SYNONYM_EXACT")):
+    for c in (c for c in res["candidates"] if c["match_kind"] == best and best in ("NAME_EXACT", "SYNONYM_EXACT", "SEPARATOR_VARIANT")):
         e = next(x for x in es if x["id"] == c["catalogue_id"])
         for t in e.get("targets", []):
             syms = {s.upper() for s in (t.get("gene_symbols") or [])} | ({t["gene"].upper()} if t.get("gene") else set())

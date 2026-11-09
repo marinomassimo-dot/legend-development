@@ -3943,6 +3943,7 @@ def build_ranking(dr: Path, cur: dict, source: str):
         "investigations": investigations_view(J.get("investigations"), cur["cands"], full, load_allowlist(dr)),
         "investigations_context": investigations_context_view(J.get("investigations_context"), full),
         "investigation_comparators": comparators_view(dr, full),     # IT39 P10: comparators by investigation; names and details only in the full edition, counts in both
+        "investigation_physiological": physiological_view(dr),     # IT40 P9: conditional physiological hypotheses by investigation (observed, hypothesised, alternatives, what strengthens, what weakens)
         "conditional_hypotheses": conditional_hypotheses_view(J.get("conditional_hypotheses"), cur["cands"], full, load_allowlist(dr)),
         "further_investigations": further_investigations_view(J.get("further_investigations"), cur["cands"], full, load_allowlist(dr)),
         # IT19 P6: full edition every field; shareable edition class labels, codes and counts only (no compound, ChEMBL action, record id, locator or note)
@@ -4329,6 +4330,23 @@ def comparators_view(dr: Path, full: bool) -> dict:
     return out
 
 
+PHYSIO_FILE = "generation_it40_20261109/reader_view.tsv"
+PHYSIO_FIELDS = ("label", "observed", "hypothesised", "alternatives", "strengthen", "weaken")
+
+
+def physiological_view(dr: Path) -> dict:
+    """IT40 P9: conditional physiological hypotheses by investigation ({inv_id: [rows]}), from the reader-view table whose every row cites its source rows in the packages.
+    No compound name and no gene arc is in the table, so both editions carry it whole. Absent file: an empty map and the page shows nothing."""
+    fp = Path(dr) / PHYSIO_FILE
+    if not fp.exists():
+        return {}
+    out: dict = {}
+    with open(fp, encoding="utf-8", newline="") as fh:
+        for r in csv.DictReader(fh, delimiter="\t"):
+            out.setdefault(r["inv_id"], []).append({k: r[k] for k in ("hyp_id",) + PHYSIO_FIELDS + ("source_rows",)})
+    return out
+
+
 INV_FIELDS = ("rank", "tie_group", "intervention", "question", "why_now", "evidence_available", "evidence_depth", "decisive_uncertainty", "next_test", "origin_class", "novelty_perimeter", "movement_reason")
 INV_ORIGINS = ("known_in_wwox", "generated_by_legend", "external_transferred")
 INV_MAX = 10
@@ -4343,7 +4361,7 @@ UI_IT20B = {
     "iv_pending": "In preparazione: l'elenco è generato da un'analisi in corso e non è ancora nei dati di questa versione. Nessuna voce viene mostrata al suo posto.",
     "iv_pos": "Posizione", "iv_tie": "pari merito", "iv_int": "Composto o intervento", "iv_q": "Domanda", "iv_why": "Motivo della priorità", "iv_ev": "Evidenza disponibile",
     "iv_depth": "Solidità dell'evidenza (profondità di lettura)", "iv_unc": "Incertezza decisiva", "iv_next": "Prossimo test", "iv_nov": "Novità, nel perimetro verificato", "iv_move": "Motivo dello spostamento",
-    "iv_more": "Dettagli scientifici della riga", "iv_fs_h": "Tipo di riga", "iv_fc_h": "Comparatori", "iv_fc_mech": "Con comparatore che separa il meccanismo", "iv_fc_func": "Solo comparatori dell'esito funzionale", "iv_fc_none": "Nessun comparatore nei file", "iv_cmp_h": "Comparatori", "iv_cmp_sum": "{f} dell'esito funzionale, {m} che separano il meccanismo", "iv_cmp_none": "Nessun comparatore nei file consultati per questa indagine.", "iv_cmp_role_functional_outcome": "esito funzionale", "iv_cmp_role_mechanism_separating": "separa il meccanismo", "iv_cmp_limits": "limiti di selettività", "iv_cmp_src": "fonte", "iv_cmp_names_hidden": "i nomi dei composti non sono nell'edizione condivisibile", "iv_class_note": "Le categorie «nuova combinazione» e «indebolita o riaperta» non sono determinabili dai campi disponibili e non sono mostrate; la riga indica soltanto origine e tipo di riga.", "iv_f_h": "Mostra", "iv_f_all": "Tutte", "iv_legend_h": "Come leggere l'origine di ogni riga",
+    "iv_more": "Dettagli scientifici della riga", "iv_fs_h": "Tipo di riga", "iv_fc_h": "Comparatori", "iv_fc_mech": "Con comparatore che separa il meccanismo", "iv_fc_func": "Solo comparatori dell'esito funzionale", "iv_fc_none": "Nessun comparatore nei file", "iv_ph_h": "Ipotesi fisiologiche condizionali", "iv_ph_sum": "{n} ipotesi condizionali, con alternative e criteri per rafforzarle o indebolirle", "iv_ph_note": "Sono domande formulate con le loro condizioni, non dati acquisiti: nessun composto è proposto qui e nessun legame fra geni è dedotto. L'assenza di un esperimento non è un danno dimostrato.", "iv_ph_status": "ipotesi esplorativa", "iv_ph_obs": "Che cosa è osservato", "iv_ph_hyp": "Che cosa è ipotizzato", "iv_ph_alt": "Alternative che restano", "iv_ph_str": "Che cosa la rafforzerebbe", "iv_ph_weak": "Che cosa la indebolirebbe", "iv_cmp_h": "Comparatori", "iv_cmp_sum": "{f} dell'esito funzionale, {m} che separano il meccanismo", "iv_cmp_none": "Nessun comparatore nei file consultati per questa indagine.", "iv_cmp_role_functional_outcome": "esito funzionale", "iv_cmp_role_mechanism_separating": "separa il meccanismo", "iv_cmp_limits": "limiti di selettività", "iv_cmp_src": "fonte", "iv_cmp_names_hidden": "i nomi dei composti non sono nell'edizione condivisibile", "iv_class_note": "Le categorie «nuova combinazione» e «indebolita o riaperta» non sono determinabili dai campi disponibili e non sono mostrate; la riga indica soltanto origine e tipo di riga.", "iv_f_h": "Mostra", "iv_f_all": "Tutte", "iv_legend_h": "Come leggere l'origine di ogni riga",
     "iv_ol_known_in_wwox": "parte da un risultato già osservato in un sistema WWOX (letteratura WWOX o scheda)",
     "iv_ol_generated_by_legend": "nata dal calcolo di LEGEND: ipotesi generata, senza conferma sperimentale",
     "iv_ol_external_transferred": "precedente di un'altra malattia o di un altro sistema, trasferito al contesto WWOX: la rilevanza per WWOX è da verificare",
@@ -4582,6 +4600,19 @@ def render_investigations(P: dict) -> str:
                       f'<span class="mini mut">{E(U["iv_cmp_limits"])}: {lx(c["selectivity_limits"])}; {E(U["iv_cmp_src"])}: {E(c["source_file_and_row"].split(";")[0].strip())}</span></li>' for c in d["items"])
         return f'<dt>{E(U["iv_cmp_h"])}</dt><dd><details class="inv-cmp"><summary>{E(summ)}</summary><ul class="inv-cmp-list">{lis}</ul></details></dd>'
 
+    ph = rk.get("investigation_physiological") or {}
+
+    def phys_dt(iid):
+        """IT40 P9: the conditional physiological hypotheses of one investigation as a progressive detail. Each is a condition-stated question with its observation, the hypothesis, the rivals that stay,
+        and what would strengthen or weaken it; it is not an acquired datum, names no compound and draws no gene-to-gene link."""
+        hs = ph.get(iid)
+        if not hs:
+            return ""
+        lis = "".join(f'<li class="inv-phys-i"><b>{lx(h["label"])}</b> <span class="mini mut">({E(h["hyp_id"])}; {E(U["iv_ph_status"])})</span><dl class="qk-dl inv-phys-dl">'
+                      f'<dt>{E(U["iv_ph_obs"])}</dt><dd>{lx(h["observed"])}</dd><dt>{E(U["iv_ph_hyp"])}</dt><dd>{lx(h["hypothesised"])}</dd><dt>{E(U["iv_ph_alt"])}</dt><dd>{lx(h["alternatives"])}</dd>'
+                      f'<dt>{E(U["iv_ph_str"])}</dt><dd>{lx(h["strengthen"])}</dd><dt>{E(U["iv_ph_weak"])}</dt><dd>{lx(h["weaken"])}</dd></dl></li>' for h in hs)
+        return f'<dt>{E(U["iv_ph_h"])}</dt><dd><details class="inv-phys"><summary>{E(U["iv_ph_sum"].format(n=len(hs)))}</summary><p class="mini mut">{E(U["iv_ph_note"])}</p><ul class="inv-phys-list">{lis}</ul></details></dd>'
+
     head = f'<section id="investigations" class="inv" aria-labelledby="h-inv"><h2 id="h-inv">{E(U["iv_h"])}</h2>'
     if rows is None:
         return head + f'<p class="note" data-state="pending">{E(U["iv_pending"])}</p></section>'
@@ -4601,7 +4632,7 @@ def render_investigations(P: dict) -> str:
         if ids:
             note = U["iv_chembl_full"] if full else U["iv_chembl_share"]
             dl += f'<dt>{E(U["iv_h_chembl"])}</dt><dd><span class="mini">{E(", ".join(ids))}</span> <span class="mini mut">({E(note)})</span></dd>'
-        dl += cmp_dt(r.get("inv_id"))
+        dl += cmp_dt(r.get("inv_id")) + phys_dt(r.get("inv_id"))
         st = r.get("status")
         badge = f' <span class="stt stt-{E(st)}">{E(U["iv_st_" + st])}</span>' if st in ("carded_thread", "premise_measurement", "conditional_hypothesis") else ""
         n_row = len(items) + 1
@@ -4636,7 +4667,7 @@ def render_investigations(P: dict) -> str:
             cids = [x for x in str(r.get("chembl_ids") or "").split(";") if x]
             if cids:
                 cdl += f'<dt>{E(U["iv_h_chembl"])}</dt><dd><span class="mini">{E(", ".join(cids))}</span> <span class="mini mut">({E(U["iv_chembl_full"] if full else U["iv_chembl_share"])}).</span></dd>'
-            cdl += cmp_dt(r["inv_id"])
+            cdl += cmp_dt(r["inv_id"]) + phys_dt(r["inv_id"])
             ci.append(f'<li class="inv-row inv-cond" id="{E(r["inv_id"])}" data-inv="{E(r["inv_id"])}" data-origin="{E(r["origin_class"])}" data-cmp="{cmp_state(r["inv_id"])}" data-status="conditional_hypothesis"><div class="inv-h">'
                       f'{lx(r["intervention"], "b")} <span class="org org-{E(r["origin_class"])}">{E(U["iv_o_" + r["origin_class"]])}</span> '
                       f'<span class="stt stt-conditional_hypothesis">{E(U["iv_st_conditional_hypothesis"])}</span></div><dl class="qk-dl">{cdl}</dl></li>')
@@ -4652,7 +4683,7 @@ def render_investigations(P: dict) -> str:
             fids = [x for x in str(r.get("chembl_ids") or "").split(";") if x]
             if fids:
                 fdl += f'<dt>{E(U["iv_h_chembl"])}</dt><dd><span class="mini">{E(", ".join(fids))}</span> <span class="mini mut">({E(U["iv_chembl_full"] if full else U["iv_chembl_share"])}).</span></dd>'
-            fdl += cmp_dt(r["inv_id"])
+            fdl += cmp_dt(r["inv_id"]) + phys_dt(r["inv_id"])
             st = r.get("status")
             fb = f' <span class="stt stt-{E(st)}">{E(U["iv_st_" + st])}</span>' if st in ("carded_thread", "premise_measurement") else ""
             fi.append(f'<li class="inv-row inv-further" id="{E(r["inv_id"])}" data-inv="{E(r["inv_id"])}" data-origin="{E(r["origin_class"])}" data-cmp="{cmp_state(r["inv_id"])}" data-status="{E(str(st))}"><div class="inv-h">'

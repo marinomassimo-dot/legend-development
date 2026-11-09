@@ -19,7 +19,7 @@
   "Abstract, Introduction, Methods, Results, Discussion, tables 1 to 3 and figure legends read as text; supplementary materials and figure images not reached. Earlier staged abstract-only receipts for this paper exist in another worktree and are not in the ledger; this is the first full-text read.",
   "verbatim_locator | proposition: subunit selectivity | Results | \"Radiprodil was without effect on GluN2A, GluN2C, and GluN2D diheteromeric receptors\"",
   "verbatim_locator | proposition: incomplete inhibition | Results | \"The application of saturating concentrations of radiprodil does not fully inhibit NMDARs.\"",
-  "verbatim_locator | proposition: slow washout | Results | \"only a small amount of current was recovered (4.7 ± 1.2%) after 3 minutes of radiprodil washout\""
+  "verbatim_locator | proposition: slow washout | Results | \"only a small amount of current was recovered (4.7 \u00b1 1.2%) after 3 minutes of radiprodil washout\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [
@@ -29,9 +29,9 @@
   "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/evidence.tsv",
   "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/figure_notes.tsv"
  ],
- "prior_receipt": null,
+ "prior_receipt": "FTR-20261108-40994429-33",
  "record_kind": "contemporaneous_receipt",
- "reread_reason": "first_read",
+ "reread_reason": "new_question_outside_prior_coverage",
  "source_fingerprint": "856e30672a29003a8a93a5fa51a5cf57ae1b7194b4b82e8c9c646338c32242d7",
  "source_kind": "fulltext_remote",
  "source_locator": "PMC open-data bucket text rendering of the PMC record, fetched with plain curl on 2026-11-08; the bucket holds no figure images or supplement for this record; bytes not saved in the repository",

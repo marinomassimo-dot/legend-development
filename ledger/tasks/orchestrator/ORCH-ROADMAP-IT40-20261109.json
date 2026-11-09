@@ -1,0 +1,148 @@
+{
+ "_schema": "orchestrator-task-v1",
+ "TASK_ID": "ORCH-ROADMAP-IT40-20261109",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "P0",
+ "OBJECTIVE": "IT40: from available knowledge to effective pharmacological generation; membrane and AMPA/NMDA deliveries consumed, DREAM-4 C, conditional hypotheses, mechanism-first search, measured contribution.",
+ "START_UTC": "2026-11-09T12:00:00Z",
+ "RESUME": {
+  "note": "IT40 P12: publish record commit over 560601df with --expect-sha, then CI, site, closure; IT41 queued (ORCH-ROADMAP-IT41-20261109)"
+ },
+ "AUTHORISED_QUEUE_20261108": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Baseline: remote main, state, active tasks, binding, monitor with --self-call",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "remote main edfa347f verified equal to local; mandate bound (MANDATE_BOUND), no new automation; worktree task/it40; Harness delivered hypothesis_package.py (commit 3b03ae00, merged locally, landing by Harness), science session works INV-05 GluN2B range in nmda_composition_discrim_20261109 (nothing applied by me from it)"
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Reconcile membrane (7) and AMPA/NMDA (12) proposals with consumers; staged receipts; apply via existing paths",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "19 proposals reconciled in consume_it40_20261109/RECONCILIATION.md (applied 17, corrected 3 of them, open-question rows 3, out of scope 1); 21 staged receipts recorded (ledger 1,506 to 1,527, parents set from the ledger, none forced); verifier corrections applied"
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "DREAM-4: verify A,B; complete C at the true source of the open-questions map (200-char limit); check D",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "A,B verified applied; C applied in the map (batch_sci_20261105/map/open_questions_map.tsv + dream4_delta_c_it40.md); the 200-char cap is a column convention of a hand-edited table, not a regenerating derivative (IT39 statement corrected); D: generator reads no such field, nothing to add; EBI draft untouched"
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "Baseline of generative capacity on contrasting cases (before changes)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "generation_it40_20261109/README.md and measure_it40.tsv: S17 regenerated, identical to S16 on all 994 rows; stopping points: representation (0 of 994 proposals on receptor/channel targets), composition/propagation (matrix without consumer), selection (Kv7 offered without reason)"
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "Conditional hypotheses consumable (Harness link if delivered); representation without invented gene-gene arcs",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "conditional_proposals.py + conditional_proposals_it40.tsv (6 records, seven fields kept, abstain for MH1 and MH3, no gene arc), via Harness reader; link_states set CARRIED_IN_TEXT with real substrings; matrix_column added to alternatives.tsv"
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "Mechanism-first pharmacological search on at least one complete case",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "mechsearch_it40_20261109: six action-context-benefit relations searched before compound names; distinct molecules, direction, record granularity, identity check of 15 named tools (11 confirmed, 4 not)"
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "Measure: current vs simple baseline vs new path, ablation on same inputs",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "measure_it40.tsv: current path vs simple baseline vs new path, ablation without the link; no predictive claim"
+    }
+   ]
+  },
+  "OBJ_P8": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "Independent verification of decisive conclusions with originals",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "independent sonnet/high verifier with originals (generation_it40_20261109/verify/VERDICTS.md): overturned five items, all corrected"
+    }
+   ]
+  },
+  "OBJ_P9": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "Dashboard: updated investigations and conditional hypotheses, five languages, real publication",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "six conditional physiological hypotheses under INV-05 and INV-18, five languages, both editions, no compound name; test_stage_it40.py renders-check; shareable audit required rewording of compound names (done)"
+    }
+   ]
+  },
+  "OBJ_P10": {
+   "order": 10,
+   "steps": [
+    {
+     "step": "Open questions: in-silico / new measure / ill-posed; next package",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "generation_it40_20261109/next_investigations_it40.md: in-silico/public vs new measure vs not yet posed, ordered by decision changed, importance, documented cost; map rows IT40-Q01..03"
+    }
+   ]
+  },
+  "OBJ_P11": {
+   "order": 11,
+   "steps": [
+    {
+     "step": "Queue after main proof: second hypothesis type, relations beyond NB-1, HIF1A-BNIP3, identity blockers, short Dream",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "relations beyond NB-1: only one generator_relations.tsv exists; HIF1A to BNIP3 not started; identity blockers listed (GYKI 52466, Ro 25-6981, Brilliant Blue FCF) not resolved; short Dream pass folded into the self-evaluation"
+    }
+   ]
+  },
+  "OBJ_P12": {
+   "order": 12,
+   "steps": [
+    {
+     "step": "Persistence, battery on frozen SHA, publish with SHA check, CI, site, cleanup, final report",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "Batteries by SHA: 1dd89027 FAIL (3 own suites: test_release_runner_verdict, test_release_surface, test_stage_it39; log kept /tmp/bat_it40_1dd89027_FAIL.log; causes: unittest.main without verbosity=2, 8 new scripts with shebang and no +x, questions_it39.md surface not regenerated after investigation text changed; fixed, not rerun on that SHA); 560601df PASS WITH SKIPS (224 targets, 11 skipped, local catalogue cache). Includes Harness e53950a3 and science closing pass 5ba94fd0 (already on development/main as 30382215). Publish, CI and site pending."
+    }
+   ]
+  }
+ },
+ "SELF_CALL_CHECK": "mandate_watch.py check --self-call from inside the session returned RESUME ('the caller is the session: continue now') with the record listing an executable step; without --self-call it returned RUNNING 'session busy; busy is not progress' (2026-11-09)"
+}
