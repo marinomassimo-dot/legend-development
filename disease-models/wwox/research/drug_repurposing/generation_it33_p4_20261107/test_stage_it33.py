@@ -15,7 +15,10 @@ def rd(p):
 
 S12 = {r["proposal_id"]: r for r in rd(DR / "generation_it32_p3_20261107/results_s12/proposals_it21.tsv")}
 S13 = {r["proposal_id"]: r for r in rd(DR / "generation_it33_p4_20261107/results_s13/proposals_it21.tsv")}
-PREM = rd(DR / "generation_it21_p2_20261103/investigation_premises_it32.tsv")
+# S13 was built with the three mapping rows that existed then; rows added later (IT39: INV-16 for HIF1A to HK2) belong to later stages (S16) and are tested there.
+S13_ROWS = {("INV-17", "-> MYC(?= \\[|;|$)"), ("INV-16", "^HDAC5 -T\\(\\+\\)-> SLC2A1"), ("INV-14", "^EZH2 -T\\([+-]\\)-> (IL6|NFE2L2)")}
+PREM = [m for m in rd(DR / "generation_it21_p2_20261103/investigation_premises_it32.tsv") if (m["inv_id"], m["chain_pattern"]) in S13_ROWS]
+assert len(PREM) == 3, "the mapping rows of S13 must all still exist"
 COL = "shared_premise_investigation"
 
 
