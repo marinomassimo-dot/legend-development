@@ -1,0 +1,165 @@
+{
+ "_schema": "orchestrator-task-v1",
+ "TASK_ID": "ORCH-ROADMAP-IT41-20261109",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "P0",
+ "OBJECTIVE": "IT41: from mechanism to compounds: conditional generation, comparison and research priorities. Queued behind IT40 (closure not interrupted); includes the common-integration message (continuity, checkpoint, close only what is concluded).",
+ "START_UTC": "2026-11-09T22:00:00Z",
+ "RESUME": {
+  "checkpoint": {
+   "last_verified_result": "IT40 battery on 1dd89027 FAIL (3 own suites, fixed); IT40 candidate 560601df (task/it40) battery running in /tmp/bat_it40b, wait by PID 404329; origin/development main 38a5f73b at last fetch",
+   "first_incomplete": "IT40 P12: battery result, publish with --expect-sha (include Harness e53950a3 already merged), CI, site; then IT41 P0",
+   "files_to_open": "ledger/tasks/orchestrator/ORCH-ROADMAP-IT40-20261109.json; disease-models/wwox/research/drug_repurposing/generation_it40_20261109/README.md and next_investigations_it40.md",
+   "active_processes": "battery PID 404329 (bat_it40b); cron 9893cd67 hourly :17 session-only (not durable; expires in 7 days; fires only when idle)",
+   "real_dependencies": "IT41 P5 needs Harness identity delivery; P10 HIF1A-BNIP3 needs the science package; neither blocks P2-P4, P6",
+   "next_step": "wait for battery; IT41 P2 case definition on fixed IT40 refs can be drafted meanwhile in an isolated folder"
+  }
+ },
+ "AUTHORISED_QUEUE_20261108": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Reconcile IT40 from record, artefacts and the actual remote main before attributing results; keep FAILs by SHA",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Collaboration: Orchestrator generation/priorities/dashboard; Harness identity+reusable links+defects; science: AMPA pharmacological qualification, then HIF1A-BNIP3",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "Four contrasting cases with question, alternatives, universe, necessary conditions, decision (fixed before searching)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "Executable path observation->rivals->conditional action->catalogue search->comparison->next experiment; premise kept; identity/action/context separated",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "Complete action-and-context-guided search beyond known names; distinct molecules, salts, stereoisomers; maximum effect vs potency; exposure; limits",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "Consume Harness identity delivery: GYKI 52466/53784, Ro 25-6981, ifenprodil, Brilliant Blue FCF; qualified catalogue additions via the existing path",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "Explicit comparisons (reference, alternative, functional control, mechanism-separating control); INV-05 plateau rule; minimum interpretable experiment",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "Measure contribution: previous path vs simple baseline vs new, ablation, cost/time; separate new-for-LEGEND / new combination / known / novelty vs literature",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P8": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "Independent verification of decisive conclusions with originals; re-check corrections on modified rows only",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P9": {
+   "order": 10,
+   "steps": [
+    {
+     "step": "Dashboard: short ordered view of compounds and hypotheses with distinguishing marks, five languages, phone-readable, published site; diagnose any licence omissions",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P10": {
+   "order": 11,
+   "steps": [
+    {
+     "step": "Investigations updated (question, decision, in-silico, new measure, reopen condition, priority); HIF1A-BNIP3 package if delivered; two short collaboration questions (fly assay feasibility; public variant case review) without private correspondence",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P11": {
+   "order": 12,
+   "steps": [
+    {
+     "step": "Queue: second biological family; packages consumable without code lists; one catalogue gap; radar signal only if it answers an observed gap; brief Dream pass",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P12": {
+   "order": 13,
+   "steps": [
+    {
+     "step": "Resources, persistence, battery on frozen SHA, publish with SHA check, CI, site, record only delivered results, final report",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  }
+ }
+}

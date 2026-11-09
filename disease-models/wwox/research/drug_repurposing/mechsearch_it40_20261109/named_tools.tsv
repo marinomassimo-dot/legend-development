@@ -1,0 +1,16 @@
+package_name	role	used_for	catalogue_hits_by_name	n_hits
+D-Ap5	tool	BH1/BH2 positive control (the package writes d-APV)	CAT:DGIDB:b0ca5cf2303c=D-Ap5	1
+perampanel	therapeutic_class_to_study	R3	CAT:CHEMBL1214124=PERAMPANEL;CAT:DGIDB:768c891abaa7=Perampanel	2
+NBQX	tool	R3 use-only	CAT:DGIDB:ca4c6814d8f6=Nbqx	1
+GYKI 52466	tool	R3 use-only	CAT:DGIDB:9abeaf54a97b=Gyki53784	1
+ifenprodil	tool	R1	CAT:CHEMBL1886888=IFENPRODIL TARTRATE;CAT:CHEMBL305187=IFENPRODIL;CAT:DGIDB:1b7e72bf50c7=Ifenprodil;CAT:DGIDB:2495e977baa1=(R,S)-Ifenprodil	4
+Ro 25-6981	tool	R1	CAT:DGIDB:f98b32d5fbc4=Chembl:Chembl305195	1
+radiprodil	tool_or_candidate	R1	CAT:CHEMBL182066=RADIPRODIL	1
+TCN-201	tool	R2	CAT:DGIDB:3edafe18a179=Tcn-201	1
+memantine	therapeutic_class_to_study	NMDAR pore block	CAT:CHEMBL1699=MEMANTINE HYDROCHLORIDE;CAT:CHEMBL807=MEMANTINE;CAT:DGIDB:d87959cfb914=Memantine Hydrochloride	3
+ZD7288	tool	R4	CAT:DGIDB:5dad25f2b336=Zd7288	1
+ivabradine	therapeutic_class_to_study	R4	CAT:CHEMBL2145077=IVABRADINE HYDROCHLORIDE;CAT:CHEMBL471737=IVABRADINE;CAT:DGIDB:69500b506e04=Ivabradine Hydrochloride;CAT:DGIDB:fcc164e2d2b6=Ivabradine	4
+retigabine	tool_or_withdrawn_drug	R5	CAT:CHEMBL41355=EZOGABINE;CAT:DGIDB:0986d2506c1a=Ezogabine;CAT:DGIDB:45c82cc94b86=Retigabine Derivative 10G	3
+XE991	tool	R5 difference current	CAT:DGIDB:6067b4b58fc4=Xe991	1
+carbenoxolone	tool_not_gap_junction_specific	R6	CAT:CHEMBL1697717=CARBENOXOLONE SODIUM;CAT:CHEMBL499915=CARBENOXOLONE;CAT:DGIDB:ea45bb50fb31=Carbenoxolone	3
+brilliant blue FCF	tool	R6 Panx1 arm	NOT_IN_CATALOGUE	0

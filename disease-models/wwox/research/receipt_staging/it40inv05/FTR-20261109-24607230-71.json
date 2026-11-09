@@ -25,8 +25,8 @@
  },
  "evidence_basis": [
   "Results, Discussion, Table 1, Table 2 read; Figs 2 and 3 viewed; Figs 1, 4, 5 captions only; the full Experimental Procedures and the supplement (pH and agonist levels for the TCN-201 and ifenprodil assays) not read; only the Experimental Procedures stub in the PMC text was available. Coverage 'figures' is set to the weaker value because Figs 1, 4, 5 were captions only; Figs 2 and 3 were viewed.",
-  "verbatim_locator | proposition: ifenprodil maximal inhibition of GluN1/GluN2A/GluN2B triheteromers in oocytes was 32 percent | Results (inhibition of triheteromers by GluN2B-selective modulators) | \"maximal inhibition was 32 ± 1% (N = 16)\"",
-  "verbatim_locator | proposition: extracellular Zn2+ raised maximal ifenprodil inhibition of triheteromers | Results | \"Maximal ifenprodil inhibition increased from 32 ± 1% (N = 16) in the absence of Zn2+ to 50 ± 2%\""
+  "verbatim_locator | proposition: ifenprodil maximal inhibition of GluN1/GluN2A/GluN2B triheteromers in oocytes was 32 percent | Results (inhibition of triheteromers by GluN2B-selective modulators) | \"maximal inhibition was 32 \u00b1 1% (N = 16)\"",
+  "verbatim_locator | proposition: extracellular Zn2+ raised maximal ifenprodil inhibition of triheteromers | Results | \"Maximal ifenprodil inhibition increased from 32 \u00b1 1% (N = 16) in the absence of Zn2+ to 50 \u00b1 2%\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "source_fingerprint": "6ff59977f27a00ea92fc28238e06bb13a9bf728373f8f28cbafa4e33439a4d3b",
