@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-09T22:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-09T22:53:00Z",
+ "event_id": "FTR-20261109-27618672-81",
+ "evidence_basis": [
+  "Abstract, Introduction, Results and Discussion (combined section), Experimental Procedures and all figure captions read as text from the NCBI efetch PMC XML; figure images are not in the PMC open-data bucket (listing: json, txt, xml), so figures are captions_only; Table 1 (crystallography statistics) and the supplement (seven figures) not read.",
+  "verbatim_locator | proposition: inhibition voltage independent | Results, Functional Characterization | \"Typical of noncompetitive antagonists, inhibition of currents by GYKI, PMP, and CP was voltage independent\"",
+  "verbatim_locator | proposition: GYKI in this paper is GYKI 53655 | Introduction | \"such as GYKI 53655 (GYKI)\"",
+  "verbatim_locator | proposition: one pocket for three inhibitors | Results, Structures | \"All three structures reveal additional electron densities at four equivalent positions at the interface between the ion channel and linkers\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/comparison.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/figure_notes.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/names_used.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "58712f3b078430c08e61ef6c23844e3623bebf7a40f069f2b7d8dadd94cb2016",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch (db=pmc, PMC5033713, NIH author manuscript XML) fetched with plain curl on 2026-11-09; converted to text in the scratchpad; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1016/j.neuron.2016.08.012",
+  "pmid": "27618672"
+ },
+ "workflow": "IT41 package A, the AMPA comparison (ORCH-IT41-20261109), producer ia-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

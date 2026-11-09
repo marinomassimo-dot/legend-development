@@ -1,0 +1,21 @@
+pmid	paper	compound_as_named	abbreviation_or_variant_in_text	chemical_name_or_salt_stated	supplier_or_source_stated	other_names_stated	locator	depth
+27618672	Yelshanskaya 2016 Neuron	perampanel	PMP; Eisai	no chemical name or salt	Eisai (gift, Acknowledgments)	none	Introduction; Acknowledgments	partial_fulltext_read
+27618672	Yelshanskaya 2016 Neuron	GYKI 53655	GYKI (defined as GYKI 53655 in the Introduction); GYKI-Br (brominated derivative synthesised by the authors)	no chemical name or salt	Dr Yael Stern-Bach (gift of 'GYKI and CP')	GYKI 52466 named as the originally discovered prototype, not used	Introduction; Results; Acknowledgments	partial_fulltext_read
+27618672	Yelshanskaya 2016 Neuron	CP 465022	CP	no chemical name or salt (described as a quinazoline-4-one)	Dr Yael Stern-Bach (gift)	none	Introduction	partial_fulltext_read
+27838344	Digby 2017 Neuropharmacology	GYKI-53655	GYKI-53655; keyword list gives a PubChem compound number	1-(4-Aminophenyl)-3-methylcarbamyl-4-methyl-3,4-dihydro-7,8-methylenedioxy-5H-2,3-benzo-diazepine hydrochloride (as typeset; hydrochloride salt)	Tocris	none (no LY number)	Methods 2.4 Chemicals; Keywords	partial_fulltext_read
+27838344	Digby 2017 Neuropharmacology	CNQX	CNQX	6-cyano-7-nitroquinoxaline-2,3-dione	Tocris	none	Methods 2.4	partial_fulltext_read
+27838344	Digby 2017 Neuropharmacology	NBQX (not used; earlier studies only)	NBQX	2,3-dihydroxy-6-nitro-7-sulfamoyl-benzo[f]quinoxaline-2,3-dione (as typeset in Discussion 4.6)	not applicable (not purchased)	none	Discussion 4.6	partial_fulltext_read
+35103859	Dominguez-Sala 2022 Brain Struct Funct	GYKI53655	GYKI53655 (no hyphen); 'selective AMPA receptor blocker'	not stated	Sigma-Aldrich	none	Methods, Electrophysiological recordings; Results	partial_fulltext_read
+35103859	Dominguez-Sala 2022 Brain Struct Funct	CNQX	CNQX	not stated; salt not stated	Sigma-Aldrich	none	Methods	partial_fulltext_read
+36857176	Gangwar 2023 Cell Rep	perampanel	PMP	not stated	Cayman (reseller entry in the key resources table, catalogue number printed there)	none	Key resources table; Results	partial_fulltext_read
+36857176	Gangwar 2023 Cell Rep	DNQX	DNQX	disodium salt (key resources table)	Tocris	none	Key resources table	partial_fulltext_read
+36857176	Gangwar 2023 Cell Rep	GYKI-52466 and GYKI-53655 (named in the Introduction, not used)	GYKI-52466; GYKI-53655; CP-465022	not stated	not applicable	none	Introduction	partial_fulltext_read
+25229608	Chen 2014 PLoS One	perampanel	as recorded in the earlier package	not re-read here	not re-read here	not re-read here	earlier staged receipt FTR-20261108-25229608-61	partial_fulltext_read (reuse)
+8732274	Yamada and Turetsky 1996 Br J Pharmacol	GYKI 52466 and NBQX	GYKI52466 (GYKI); NBQX	NBQX spelled out as 2,3-dihydroxy-6-nitro-7-sulphamoyl-benzo (F) quinoxaline	not read (abstract only)	none in abstract	Abstract	abstract_only
+38834914	Hale 2024 Nat Struct Mol Biol	GYKI-52466	GYKI-52466	not read	not read	none in abstract	Abstract	abstract_only
+2154034	Sheardown 1990 Science	NBQX	NBQX; title gives 2,3-Dihydroxy-6-nitro-7-sulfamoyl-benzo(F)quinoxaline	not read beyond title and abstract; salt unknown	not reached	none	Title and abstract via PubMed	abstract_only (full text not_reached)
+9863655	Potschka 1998 Br J Pharmacol	NBQX	NBQX	2,3-dihydroxy-6-nitro-7-sulphamoyl-benzo[f]quinoxaline (abstract)	not read	none	Abstract via PubMed	abstract_only
+9076748	Bleakman 1996 Neuropharmacology	GYKI 52466, LY293606, LY300168, LY303070 (as listed in the brief; paper not opened)	not verified here	not reached	not reached	The brief states GYKI 53405 = LY293606, GYKI 53655 = LY300168; not verified by this producer; Digby and Dominguez-Sala (read) state no LY number for GYKI-53655	not reached	not_reached
+7678966	Donevan and Rogawski 1993 Neuron	GYKI 52466 (title)	not read	not reached	not reached	none	Title only	not_reached
+21635236	Hanada 2011 Epilepsia	perampanel (title)	not read	not reached	not reached	none	Title and PubMed record only	not_reached
+35955932	Chalupnik 2022 Int J Mol Sci	NBQX	NBQX (reference antagonist)	not stated (no salt or chemical name found in the text read)	not stated for NBQX in the text read	none	Table 1; Ca2+ imaging figure caption	partial_fulltext_read
