@@ -17,7 +17,7 @@
  "event_id": "FTR-20261108-38123002-37",
  "evidence_basis": [
   "abstract analysed",
-  "verbatim_locator | proposition: solifenacin (M3 antagonist) inhibited Wnt/beta-catenin and promoted OPC differentiation in cuprizone mice | Abstract | \"Sol treatment inhibited the Wnt/β-catenin signaling pathway and reversed the effects of CPZ on OPCs differentiation\""
+  "verbatim_locator | proposition: solifenacin (M3 antagonist) inhibited Wnt/beta-catenin and promoted OPC differentiation in cuprizone mice | Abstract | \"Sol treatment inhibited the Wnt/\u03b2-catenin signaling pathway and reversed the effects of CPZ on OPCs differentiation\""
  ],
  "evidence_depth": "abstract_only",
  "outputs": [

@@ -19,7 +19,7 @@
   "Text read: all sections of the review; figures and the compound table not shown by the tool; references not read.",
   "verbatim_locator | proposition: the review itself says beta-catenin signalling inhibits OPC differentiation | section 3 | \"Continuous Wnt signaling reduces differentiation of oligodendrocyte progenitor cells into myelinating oligodendrocytes\"",
   "verbatim_locator | proposition: lithium trials in patients show immune effects, not remyelination | section 6 | \"direct evidence of remyelination has not been established\"",
-  "verbatim_locator | proposition: the report's quote is the abstract sentence | abstract | \"inhibition of GSK-3β affects β-catenin stability and is associated with oligodendrocyte differentiation\""
+  "verbatim_locator | proposition: the report's quote is the abstract sentence | abstract | \"inhibition of GSK-3\u03b2 affects \u03b2-catenin stability and is associated with oligodendrocyte differentiation\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

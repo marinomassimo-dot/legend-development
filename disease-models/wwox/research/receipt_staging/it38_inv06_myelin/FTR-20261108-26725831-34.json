@@ -17,7 +17,7 @@
  "event_id": "FTR-20261108-26725831-34",
  "evidence_basis": [
   "Abstract read in full. Adult mice, 12 weeks of cuprizone, chronic lesions.",
-  "verbatim_locator | proposition: T3 left the progenitor marker unchanged and raised mature cells | abstract | \"platelet derived growth factor-α receptor was not affected by T3 administration\""
+  "verbatim_locator | proposition: T3 left the progenitor marker unchanged and raised mature cells | abstract | \"platelet derived growth factor-\u03b1 receptor was not affected by T3 administration\""
  ],
  "evidence_depth": "abstract_only",
  "outputs": [

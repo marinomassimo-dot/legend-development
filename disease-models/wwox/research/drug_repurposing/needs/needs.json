@@ -3215,7 +3215,8 @@
     "The d-APV arm carries no significance marker in Fig 3D, the tests are on bursts not animals, and the baseline burst frequency is printed twice with different values (O8).",
     "IT13 P3b (2026-10-31): the only human firing recovery (neuron-promoter AAV9-WWOX at week 10, read at week 16, PMID 42397075 Fig 6, independently re-read) has five arms and no wild-type + WWOX arm and no mutant-WWOX arm, so the recovery is not shown to be WWOX-function-specific; the 'similar to wild type' statement holds for event rate only; in WOREE active ROIs (70 versus 45 percent) and amplitude (0.044 versus 0.023) stay above wild type, and in SCAR12 the untreated arm sits at a 100 percent ceiling so the gap is not measurable (active ROIs 100 to 60 percent, amplitude 0.061 to 0.013); unit of testing unclear for the CTIP2/SATB2 panels; no randomisation or blinding. No compound or other pharmacological intervention has a firing readout in a human WWOX-deficient neural system (the gene add-back is the only intervention that has), and d-APV (acute, mouse slice) measures necessity in a different system and measure, not the recovered readout.",
     "IT14 P3 (2026-11-01): in the same preparation mEPSC amplitude (heterozygote against knockout, KS p 1.3e-6) and sEPSC amplitude (p 5e-26) differ and rebound is significant only in the knockout, so an excitatory-gain reading is knockout-specific at the same evidence level as the inhibitory loss, with a smaller stated effect (about +6 percent sEPSC amplitude); the design has no AMPAR arm yet, and the NMDA:AMPA decay-time argument of the source (p 0.30) is not a measure of either current.",
-    "IT15 Q-A (independently verified): the NMDAR current in the neuron-deleted slice is unmeasured, so the GluN2B share of it is unknown; pore blockers show no subunit selectivity detected (ratios of 4x or less, inside assay noise); GluN2B-NAM subunit windows rest on two independent oocyte papers compiled in a review under different conditions, and the expected current fall is an upper bound. Burst reduction by any NMDAR antagonist is expected whichever reading holds."
+    "IT15 Q-A (independently verified): the NMDAR current in the neuron-deleted slice is unmeasured, so the GluN2B share of it is unknown; pore blockers show no subunit selectivity detected (ratios of 4x or less, inside assay noise); GluN2B-NAM subunit windows rest on two independent oocyte papers compiled in a review under different conditions, and the expected current fall is an upper bound. Burst reduction by any NMDAR antagonist is expected whichever reading holds.",
+    "[IT39] AMPA dependence was not tested in the neuron-deleted burst slice paper (one AMPA mention, miniature EPSC decay); an AMPA-antagonist arm beside d-APV is the cheapest discriminator for any felbamate or perampanel nomination."
    ],
    "sources": {
     "cards": [
@@ -4179,7 +4180,8 @@
     "No drug-by-genotype interaction test and no concurrent same-day PTZ-alone control in the card's reading.",
     "IT13 P3a (2026-10-31; transcript level only, independently recomputed): in the P17 Wwox-deletion mouse deposits (GSE158681 hippocampus, GSE158682 cortex; 2 to 4 animals per arm) Cacna1g and Cacna1h mRNA are lower or flat (Cacna1h -0.15 to -0.68 log2; Cacna1g +0.08 to -1.01) and Kcnj6 is flat, all inside the control-line background at this n, so they neither support nor refute a T-type node. The catalogue mechanism record of ethosuximide lists T-type block only, while the source paper's own oocyte data show a GIRK block at exposures near the labelled band (a GIRK route would predict the opposite sign; prior knowledge, not checked here): the attribution of the late-phase effect to T-type channels is not supported by any measurement in Wwox tissue.",
     "[IT36] the cited reference tests anticonvulsant effect in PTZ mice, not channel block; no channel was measured in the Wwox paper.",
-    "[IT36] In a worm PTZ model ethosuximide protection persisted in a cca-1 loss-of-function double mutant (one saturating concentration, n 13-15, no equivalence test); this justifies an alternative-mechanism control and does not say what acts in the mouse."
+    "[IT36] In a worm PTZ model ethosuximide protection persisted in a cca-1 loss-of-function double mutant (one saturating concentration, n 13-15, no equivalence test); this justifies an alternative-mechanism control and does not say what acts in the mouse.",
+    "[IT39] The cited seizure paper (CaV3.3 knockout, TRN-silenced CaV3.3, double knockout) contains no single CaV3.2 knockout; the CACNA1H variant in the cited DEE case report was inherited from an asymptomatic parent and its authors write that CACNA1H has never been associated with DEEs."
    ],
    "sources": {
     "cards": [
@@ -4588,7 +4590,8 @@
     "Lithium suppressed PTZ-induced seizures in all three genotypes, wild type included: no WWOX-specific rescue (CLAIM 016 evidence boundary).",
     "Direction conflicts with NEED-WNT-BETA-CATENIN: one compound cannot be scored on its best axis.",
     "Tau is the effector of the benefit in the one system tested (N-17).",
-    "IT15 Q-B (independently verified, partial abstention): the de-repression rests on one pSer9 blot (one lane per genotype per region, no n or statistics) and no kinase-activity assay exists in a WWOX system; lithium acted equally in wild type; Wnt signalling does not use Ser9, so the Ser9-down versus Wnt-up conflict is weaker than first stated; every GSK3 compound is a tool for one discriminating experiment, not a candidate."
+    "IT15 Q-B (independently verified, partial abstention): the de-repression rests on one pSer9 blot (one lane per genotype per region, no n or statistics) and no kinase-activity assay exists in a WWOX system; lithium acted equally in wild type; Wnt signalling does not use Ser9, so the Ser9-down versus Wnt-up conflict is weaker than first stated; every GSK3 compound is a tool for one discriminating experiment, not a candidate.",
+    "[IT39] An inositol-depletion arm is not GSK-3-free (GSK-3 alpha inactivated, beta not significantly altered; one paper, one isoform); the S9A cross is not an attribution control; time-gated dosing has no timing source."
    ],
    "sources": {
     "cards": [
@@ -6230,7 +6233,8 @@
     "Human organoid shows no cytokine-expressing cells and no coherent NRF2 signature.",
     "Early-passage redox transcripts are already higher in Wwox-null MEFs (possible ceiling).",
     "Rat lde/lde glia are lower than wild type; null-hippocampus Tnf-a is not significant.",
-    "The omaveloxolone and fumarate arms do not separate NRF2 dependence from electrophile-class actions: omaveloxolone and dimethyl fumarate are both cysteine-reactive electrophiles, monomethyl fumarate is a different compound with an HCAR2 rationale and did not activate NRF2 in primary neurons in one source (PMID 39684792), and omaveloxolone has an in-vitro concentration window (low-nM NRF2-linked suppression; NF-kB, JNK and growth effects at hundreds of nM). Only NFE2L2 loss controls for this; 'Tnf unchanged' was observed only with genetic Keap1 deletion, so TNF is a discriminator (IT11 P2.3)."
+    "The omaveloxolone and fumarate arms do not separate NRF2 dependence from electrophile-class actions: omaveloxolone and dimethyl fumarate are both cysteine-reactive electrophiles, monomethyl fumarate is a different compound with an HCAR2 rationale and did not activate NRF2 in primary neurons in one source (PMID 39684792), and omaveloxolone has an in-vitro concentration window (low-nM NRF2-linked suppression; NF-kB, JNK and growth effects at hundreds of nM). Only NFE2L2 loss controls for this; 'Tnf unchanged' was observed only with genetic Keap1 deletion, so TNF is a discriminator (IT11 P2.3).",
+    "[IT39] A chain from Src and Fyn to NRF2 in an external report rests on a retracted article (21690096); it is not used here and must be marked retracted wherever it appears; reductive stress is a transfer from cardiac models."
    ],
    "sources": {
     "cards": [
@@ -6417,7 +6421,8 @@
     "The heterozygote shares the input-resistance change and is intermediate in resting potential and sag yet bursts in 4 of 23 slices against 36 of 42 in the knockout, so the intrinsic changes do not predict the bursts (O4).",
     "Table 1 t-tests treat cells as independent, so the stated differences carry pseudoreplication.",
     "The authors caution that an Ih blocker worsened 4-AP events (as cited in the IT14 P3 reading) and discuss discordant precedents of Ih-directed interventions: the direction of an intervention is not inferable from the sag.",
-    "A depolarised resting potential can raise firing without any change of intrinsic excitability (O3), which a bath-potassium step does not reproduce in input resistance, sag or rebound (IT14 P3): a potassium arm that fails does not refute this need."
+    "A depolarised resting potential can raise firing without any change of intrinsic excitability (O3), which a bath-potassium step does not reproduce in input resistance, sag or rebound (IT14 P3): a potassium arm that fails does not refute this need.",
+    "[IT39] Ivabradine blocks sag and hyperpolarises cortical L5 and L6 neurons in normal rat slices, and somatosensory-cortex injection cut absence-seizure time by 96 percent against 40 percent in thalamic VB (abstract level); the GAERS authors read Ih as not an adaptive response to spike-wave discharges (input resistance fell, resting potential and sag unchanged)."
    ],
    "sources": {
     "cards": [],

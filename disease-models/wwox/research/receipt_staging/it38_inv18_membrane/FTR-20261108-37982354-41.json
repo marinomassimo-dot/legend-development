@@ -17,7 +17,7 @@
  "event_id": "FTR-20261108-37982354-41",
  "evidence_basis": [
   "Whole review text searched for the reversal potential, sag, rebound and the interaction passages; figures captions only; searched by pattern, not read line by line.",
-  "verbatim_locator | proposition: HCN channels reverse near -20 to -30 mV | Section 2 (channel properties) | \"setting their reversal potential ... to be unique at around −20 to −30 mV\"",
+  "verbatim_locator | proposition: HCN channels reverse near -20 to -30 mV | Section 2 (channel properties) | \"setting their reversal potential ... to be unique at around \u221220 to \u221230 mV\"",
   "verbatim_locator | proposition: absence of sag does not exclude HCN and sag depends on interactions with other channels | Section 5 | \"the absence of sag or resonance thus should not be construed as evidence for the absence of HCN channels\""
  ],
  "evidence_depth": "partial_fulltext_read",

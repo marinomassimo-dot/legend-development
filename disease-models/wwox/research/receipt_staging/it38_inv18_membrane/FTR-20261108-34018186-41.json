@@ -18,7 +18,7 @@
  "evidence_basis": [
   "Abstract, Introduction, Results and Discussion searched by pattern (elacridar, ZD7288, sag, cortical initiation network); Methods not read; images not viewed.",
   "verbatim_locator | proposition: oral ivabradine was given with the P-glycoprotein inhibitor elacridar because of limited brain availability | Abstract | \"due to their limited brain availability\"",
-  "verbatim_locator | proposition: ivabradine blocked the depolarizing sag in normal cortical layer 5/6 pyramidal neurons and hyperpolarized them | Results (Fig 5) | \"IVA (3 µmol·L –1) blocked the characteristic depolarizing sag elicited in these neurons\""
+  "verbatim_locator | proposition: ivabradine blocked the depolarizing sag in normal cortical layer 5/6 pyramidal neurons and hyperpolarized them | Results (Fig 5) | \"IVA (3 \u00b5mol\u00b7L \u20131) blocked the characteristic depolarizing sag elicited in these neurons\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

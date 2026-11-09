@@ -15,6 +15,10 @@
   "src": "en",
   "text": "A peptide inhibitor of the chaperone HSC70 (HSPA8) used as a cell-level probe, with lysosomal and genetic controls (identified by its ChEMBL record below)"
  },
+ "028c442d8086": {
+  "src": "en",
+  "text": "WWOX-system: blocking NMDAR abolished the burst in the WWOX-deficient slice, one drug, one preparation. The recording bath magnesium is not stated in the source, and the incubation solution already contains magnesium. [IT36] Memantine block of extrasynaptic current was about 1.9-fold that of synaptic in one autaptic design; a later paper in culture found little extrasynaptic selectivity at 2 uM; preference is not exclusion and the minutes-scale premise is untested at WWOX burst durations. [IT36] burst duration median 0.66 s (Supplementary Table S1), intermediate between a synaptic pulse and the minutes-scale activation of the memantine premise; the premise is untested at this scale. [IT39] Selfotel: the head-injury trial was stopped after a signal in a stroke study, and a later analysis did not confirm excess mortality in head injury (abstract level). Perzinfotel is NR2A-preferring. The carbenoxolone half of the gap-junction logic carries its own caveat (it is not specific to gap junctions)."
+ },
  "03f48d9b64a8": {
   "src": "it",
   "text": "Capire se l'aumento di MYC nella glia radiale e' una causa, un marcatore dello stato progenitore o una conseguenza del ciclo cellulare, e se il deficit dei marcatori di strato corretto dal gene nei neuroni indica un compartimento raggiungibile dopo la nascita."
@@ -71,13 +75,13 @@
   "src": "it",
   "text": "dataset murino (P17)"
  },
- "0c7b9ad59f54": {
-  "src": "en",
-  "text": "WWOX-system, transcript: a lower Pvalb transcript in the neuron-targeted deletion in bulk hippocampus (log2 -1.70, GSE158681 S contrast, as quoted in IT13b) and about half that size in the nuclear data (GSE158684: Pvalb 70 against 37 UMI in 3182 against 2920 nuclei; nuclei Pvalb share ratio 0.59). GSE158684 holds one pooled library per arm (library and animal index absent; the paper states n = 1 per arm), so nuclei are not biological replicates and the GSM records of the series are not independent experiments; PV-class nuclei number 12 to 19 per arm under the producer rules, the independent recompute disagrees on the specific counts, and PV composition and Pvalb per cell are undecidable under every rule tried. Kcnc1 is lower in inhibitory nuclei (one pool, not a replicate result). Immature-neuron markers (Sox11, Dcx, Igfbpl1) are higher in knockout neurons in direction; the larger composition change is oligodendrocyte-class nuclei, about 3- to 5-fold fewer. Wwox also falls in glia-called nuclei, unexplained. Protein and function, from the need file: PV-positive counts reduced by 44 percent in the whole hippocampus of a systemic constitutive knockout (PMID 30290271) and spontaneous inhibitory current amplitude more than halved in layer II/III pyramidal neurons of the neuron-specific knockout (PMID 34634460; unit of the KS test not declared; the size of the p values is compatible with events and not with one value per cell). Raw reads of the eight snRNA experiments (SRX9206272 to SRX9206279) carried NCBI status hup on 2026-10-31. A public conference abstract (poster 014, Curing the Epilepsies 2026 programme, NINDS; the whole abstract was read, abstract level) describes a programme that combines genetic mouse models, in vivo electrophysiology, ex vivo slice recordings, cell type-specific manipulations and targeted pharmacological modulation of neuronal activity in WWOX deficiency, and names parvalbumin interneurons as the population of interest; it reports no quantitative result, no molecule, no rescue and no target. IT33 reading of the glial signal (NB-4 pilot, independently audited): the deletion is neuron-targeted by design (Synapsin-Cre) and a lower Wwox transcript also appears in glia-annotated nuclei of one pool (oligodendrocyte-called 193 to 1 UMI, astrocyte-called 156 to 9: very small counts on the deleted side, one pool per arm, so a count of cells or a statement of glial loss is not supported); the readings are several and not exclusive (lower transcript in the annotated class, class definition and detectability, ambient RNA, recombination beyond the expected cells, a change of state or composition), and none is isolated. Two abstract-level sources describe the Synapsin-Cre line: germline recombination through male carriers (PMID 16419044) and non-cell-autonomous astrogliosis after a neuronal deletion of another gene (PMID 11297510); neither shows or excludes recombination in glia or in parvalbumin cells of this deletion. IT33 verified delta (independent audit, 19 of 21 rows supported, two narrowed): an independent characterisation of the same Cre line with an X-linked Mecp2 reporter in adult male mice (PMID 35966957, full text without the figures) found reporter activation in 36 percent of NeuN-high brain nuclei, incomplete in cortex and minimal in cerebellum, and could not exclude activity in a subset of glia; the reporter, locus, age and cross differ from the Wwox deletion, so these percentages are not carried to the excision of Wwox or to parvalbumin cells; in the Wwox paper's P17 cortical field WWOX is retained in some NeuN-positive cells, and in one callosal field in some CC1-positive cells of the knockout; no tdTomato panel was found in the surfaces read. [IT36] no WWOX bridge to the perineuronal-net matrix found (PubMed 0 hits; Europe PMC titles only); the only lead (HYAL2/WWOX complex) concerns neuronal death, not nets. [IT36] The mean of the declared inhibitory current amplitude comes from events of 9 to 14 cells and 5 to 7 animals; no animal-level statistic is given for current amplitudes; 10 of 18 reported KS p values lie below the one-value-per-cell floor and 8 do not, and no contradiction of the paper is asserted."
- },
  "0ce1153dc28b": {
   "src": "it",
   "text": "solo se esistono archi WWOX curati che raggiungono i bersagli dei composti"
+ },
+ "0d49c490f477": {
+  "src": "en",
+  "text": "WWOX-system: a glycolytic signature; the kinase transcript lower in the organoid; no difference in the one human PDH activity measurement, which is a non-neural fibroblast pool with partial WWOX depletion (n not stated) and says nothing about neurons. The kinase-to-PDH link has no WWOX observation. [IT39] A ketogenic-diet response is reported in 3 of 5 WOREE individuals (lactate 2.4 to 3.3 mmol/L in one individual); the Pdk1 transcript and serum-lactate datum in the Wwox-null MEF and mouse paper is non-neural and measures no PDH."
  },
  "0d73fdef9cdc": {
   "src": "en",
@@ -171,10 +175,6 @@
   "src": "en",
   "text": "Conditional hypothesis: the edge has one muscle origin read at abstract level and the compound side is compiled data; a catalytic-domain mutant of HDAC5 exists in rat neurons for other outputs (PMID 39923817) but none reads SLC2A1 in a human neural cell (no ranked unit, so no evaluation depth applies: this is not a depth of zero)"
  },
- "1fb921424dfb": {
-  "src": "en",
-  "text": "WWOX-system: a T-type blocker suppressed the late phase of the provoked seizure score in the null mouse, one experiment, genotype specificity not established by an interaction. Catalogue: direction-coherent blocker actions on CACNA1G, CACNA1H and CACNA1I, at group and single-protein level, from curated mechanism rows."
- },
  "21f40746c911": {
   "src": "it",
   "text": "Stesso laboratorio e stesso topo dell'aggiunta del gene; disponibilità non nota."
@@ -219,6 +219,10 @@
   "src": "it",
   "text": "Capire se vigabatrin o CPP-115 aggiungono danno alla mielina in un modello giovanile privo di Wwox."
  },
+ "2c464c171a0a": {
+  "src": "en",
+  "text": "In WWOX-deficient and corrected isogenic organoids or radial-glia cultures: compare MYC within cell-cycle phase strata, then lower MYC by a genetic route with a second construct and read the progenitor fractions and the cell-cycle phase. No compound is needed for this step. Refinement from NB-1: lowering is graded and MYC-specific (not MYCN or MYCL unless measured), in two windows (radial-glia phase; neuron stage only), reading absolute counts of SOX2-, NEUN-, CTIP2- and SATB2-positive cells, cell death, glia and MYCN, in factorial design against restoring cell-cycle timing without touching MYC; the reading is wrong if markers do not move, the pool shrinks, glia rise, or the same lowering in the corrected line gives the same shift. [IT39 dream] In the same lines, read the HIF and glycolytic target genes beside the neuronal genes, and add a HIF1A or EPAS1 knockdown arm for the glycolytic readout: a MYC to HIF1A edge exists at database level (sign context-dependent) and HIF-axis data exist in WWOX cells (non-neural), so the MYC change could act on glycolysis, be reached from it, or follow a shared maturation or composition change; the measurement separates these (exploratory, no compound)."
+ },
  "2e055fd6bb53": {
   "src": "it",
   "text": "Rami della risposta UPR, trascritti"
@@ -234,6 +238,10 @@
  "2f8732bc88cb": {
   "src": "en",
   "text": "New molecule for LEGEND in a known thread"
+ },
+ "30f82b387e40": {
+  "src": "en",
+  "text": "WWOX-system, transcript: a lower Pvalb transcript in the neuron-targeted deletion in bulk hippocampus (log2 -1.70, GSE158681 S contrast, as quoted in IT13b) and about half that size in the nuclear data (GSE158684: Pvalb 70 against 37 UMI in 3182 against 2920 nuclei; nuclei Pvalb share ratio 0.59). GSE158684 holds one pooled library per arm (library and animal index absent; the paper states n = 1 per arm), so nuclei are not biological replicates and the GSM records of the series are not independent experiments; PV-class nuclei number 12 to 19 per arm under the producer rules, the independent recompute disagrees on the specific counts, and PV composition and Pvalb per cell are undecidable under every rule tried. Kcnc1 is lower in inhibitory nuclei (one pool, not a replicate result). Immature-neuron markers (Sox11, Dcx, Igfbpl1) are higher in knockout neurons in direction; the larger composition change is oligodendrocyte-class nuclei, about 3- to 5-fold fewer. Wwox also falls in glia-called nuclei, unexplained. Protein and function, from the need file: PV-positive counts reduced by 44 percent in the whole hippocampus of a systemic constitutive knockout (PMID 30290271) and spontaneous inhibitory current amplitude more than halved in layer II/III pyramidal neurons of the neuron-specific knockout (PMID 34634460; unit of the KS test not declared; the size of the p values is compatible with events and not with one value per cell). Raw reads of the eight snRNA experiments (SRX9206272 to SRX9206279) carried NCBI status hup on 2026-10-31. A public conference abstract (poster 014, Curing the Epilepsies 2026 programme, NINDS; the whole abstract was read, abstract level) describes a programme that combines genetic mouse models, in vivo electrophysiology, ex vivo slice recordings, cell type-specific manipulations and targeted pharmacological modulation of neuronal activity in WWOX deficiency, and names parvalbumin interneurons as the population of interest; it reports no quantitative result, no molecule, no rescue and no target. IT33 reading of the glial signal (NB-4 pilot, independently audited): the deletion is neuron-targeted by design (Synapsin-Cre) and a lower Wwox transcript also appears in glia-annotated nuclei of one pool (oligodendrocyte-called 193 to 1 UMI, astrocyte-called 156 to 9: very small counts on the deleted side, one pool per arm, so a count of cells or a statement of glial loss is not supported); the readings are several and not exclusive (lower transcript in the annotated class, class definition and detectability, ambient RNA, recombination beyond the expected cells, a change of state or composition), and none is isolated. Two abstract-level sources describe the Synapsin-Cre line: germline recombination through male carriers (PMID 16419044) and non-cell-autonomous astrogliosis after a neuronal deletion of another gene (PMID 11297510); neither shows or excludes recombination in glia or in parvalbumin cells of this deletion. IT33 verified delta (independent audit, 19 of 21 rows supported, two narrowed): an independent characterisation of the same Cre line with an X-linked Mecp2 reporter in adult male mice (PMID 35966957, full text without the figures) found reporter activation in 36 percent of NeuN-high brain nuclei, incomplete in cortex and minimal in cerebellum, and could not exclude activity in a subset of glia; the reporter, locus, age and cross differ from the Wwox deletion, so these percentages are not carried to the excision of Wwox or to parvalbumin cells; in the Wwox paper's P17 cortical field WWOX is retained in some NeuN-positive cells, and in one callosal field in some CC1-positive cells of the knockout; no tdTomato panel was found in the surfaces read. [IT36] no WWOX bridge to the perineuronal-net matrix found (PubMed 0 hits; Europe PMC titles only); the only lead (HYAL2/WWOX complex) concerns neuronal death, not nets. [IT36] The mean of the declared inhibitory current amplitude comes from events of 9 to 14 cells and 5 to 7 animals; no animal-level statistic is given for current amplitudes; 10 of 18 reported KS p values lie below the one-value-per-cell floor and 8 do not, and no contradiction of the paper is asserted. [IT39] Model identity of the conditional line is Synapsin-Cre; a statement of zero hits for parvalbumin loss is wrong (about 44 percent fewer PV-positive cells in the 2-week full-knockout hippocampus); perineuronal-net counter-evidence exists and two explanations of an external report are mutually inconsistent."
  },
  "3168a29cd7dc": {
   "src": "it",
@@ -271,6 +279,10 @@
   "src": "en",
   "text": "Does a clinically used NMDAR antagonist reproduce the burst suppression obtained with the tool compound, at a stated extracellular magnesium concentration?"
  },
+ "375c36b55dc4": {
+  "src": "en",
+  "text": "Outside WWOX for the pharmacology; WWOX-system only for the raised reactive-oxygen readouts, whose sign differs by context between a fly and late-passage fibroblasts and does not reconcile. IT22: the organoid NFE2L2 transcript (0.75x) is now a generator input (new question, role unknown, second system failed its control); the generator returns a topical AhR-pathway agent and agents that block EZH2 as conditional rows, and the canonical NRF2 activators only as diagnostic direct hits on the seed gene itself. [IT39] The Src and Fyn chain to NRF2 from an external report rests on a retracted article (21690096); no consumer carries the chain now, its other support is a 2007 paper from the same laboratory line (not independent), and reductive stress is a transfer from cardiac models."
+ },
  "3799ce5fa621": {
   "src": "en",
   "text": "Its strongest documented actions are on other deacetylases than the one the chain needs, the single reference for the edge is a knockdown in non-neural cells, so the attribution fails as written. (The two transcripts also move in opposite directions in the organoid, but that is a descriptive ratio that says nothing about enzyme activity and is not a reason.) This says nothing about whether the compound is inactive."
@@ -306,6 +318,10 @@
  "3d3c8dccc85e": {
   "src": "en",
   "text": "Step 0: nuclear NRF2, NQO1 activity and a ROS reporter in isogenic WWOX-deficient versus corrected neural cultures at baseline and after an oxidative challenge; then probe versus NFE2L2 knockdown."
+ },
+ "3d7a099f8b47": {
+  "src": "en",
+  "text": "WWOX-system transcript-level only and contradictory: the knockout organoid shows the ISR target set lower, one shRNA library per arm shows it higher, and the designs are not comparable. No ATF4 protein and no eIF2-alpha phosphorylation measurement exists in the sources read. [IT39] Transfer context only: two further ISR reports (VWM line, myelin readouts read in one) do not test WWOX; the biochemical report used as the bridge runs against its use; for human neural cells the absence is 'none found in two PubMed strings', the fly datum is conditional on neuronal Abeta42, and a non-neural WWOX paper links PERK and IRE1."
  },
  "3e043aae172d": {
   "src": "en",
@@ -350,10 +366,6 @@
  "4398e9545883": {
   "src": "en",
   "text": "Genetic KEAP1 lowering with a functional readout in the WWOX-deficient neural system, isogenic control, before any electrophile is compared. [IT36] precedent for a non-cell-autonomous (astrocyte) route exists in another system with an Nrf2-null control and rescue; KEAP1 knockdown needs an NFE2L2-loss cross; composition is not astrocyte-mediated benefit."
- },
- "43f23e7d0884": {
-  "src": "en",
-  "text": "WWOX-system transcript-level only and contradictory: the knockout organoid shows the ISR target set lower, one shRNA library per arm shows it higher, and the designs are not comparable. No ATF4 protein and no eIF2-alpha phosphorylation measurement exists in the sources read."
  },
  "444e8904b150": {
   "src": "it",
@@ -402,10 +414,6 @@
  "4a6fd650fb3a": {
   "src": "it",
   "text": "IL-1-axis and JAK-STAT agents as a class (IL-1 receptor antagonist via IL1R1; caspase-1 inhibitor via CASP1; IL-1beta antibodies; NLRP3 inhibitor; JAK2 inhibitors)"
- },
- "4aad77323ff8": {
-  "src": "en",
-  "text": "Clinical reports only. Children counted once across 14 reports: 36 to 38 exposed to at least one of vigabatrin, hormonal therapy, ketogenic diet or cannabidiol (partial full-text depth in 11 reports, one source at abstract level). Both a symptomatic and a developmental outcome are recorded for 6. In 4 of them, a partial or transient improvement came with no developmental progress recorded; in 2, neither moved. No sustained, instrumented response is recorded, and no developmental gain follows any of the four classes. Vigabatrin: 5 children with both endpoints in 4 reports (4 discordant, 1 concordant non-response); these are not independent of the other classes, since three of the five also supply them and all five were on co-therapy. Children with both endpoints, by class, of those exposed: hormonal 3 of 11; ketogenic diet 2 of 12; cannabidiol 1 of 7. Counts only, no percentage (n below 10). Developmental statements are clinical narratives without a scale. A brain-imaging safety signal is recorded beside them in two children (abstract level, a report selected for the finding), so it is not a frequency. No WWOX child is recorded with a developmental gain after a symptomatic improvement. Four children in three reports (two of them in one report) had a partial, transient or clinically-defined improvement with development not progressing; two had neither. That is what the baseline in other genetic and structural early-onset encephalopathies predicts (a responder with poor development is the majority outcome in infantile spasms and near-universal in genetic strata), so it is not by itself a WWOX-specific feature. The comparison holds only as a binary: the baseline uses standardised scores with a cut, every WWOX developmental statement is a clinician narrative, and no WWOX child had a sustained, instrumented response. Non-WWOX DEE baseline (batch_sci_20261105 a2_baseline; not WWOX evidence): in a prospective IESS cohort read at partial full-text depth, 72 percent of responders (126 of 175, computed from its Table 1) were below the developmental cut at 3 years, and no genetic-aetiology child reached a favourable outcome (0 of 49, a count over all genetic-aetiology children, not a responder rate). In two randomised IESS trials (abstract level), arms that raised early spasm cessation by 15 to 19 points showed no demonstrated developmental difference, with about one chance in four of detecting the difference that full mediation would predict. In TSC, two randomised trials of pre-onset prevention changed seizure endpoints without changing development to 36 months; they test prevention before onset, not response after onset. The person-level association (ICISS, abstract level: 15.9 VABS points higher with early cessation) is carried by unknown aetiology and a normal first neurological examination. [IT36] the 2024 vigabatrin case: developmental statements uninstrumented, stall from spasm onset before drug; seizure-free at home while video-EEG still showed events."
  },
  "4ae99e2edac2": {
   "src": "en",
@@ -639,10 +647,6 @@
   "src": "it",
   "text": "; 95° percentile della distribuzione nulla appaiata, circa 0,39 (estrazione del produttore)"
  },
- "7c190faff741": {
-  "src": "en",
-  "text": "Outside WWOX for the pharmacology; WWOX-system only for the raised reactive-oxygen readouts, whose sign differs by context between a fly and late-passage fibroblasts and does not reconcile. IT22: the organoid NFE2L2 transcript (0.75x) is now a generator input (new question, role unknown, second system failed its control); the generator returns a topical AhR-pathway agent and agents that block EZH2 as conditional rows, and the canonical NRF2 activators only as diagnostic direct hits on the seed gene itself."
- },
  "7c63d75ce699": {
   "src": "it",
   "text": "un contrasto umano neurale privo di WWOX, replicato, con lettura proteica o di attività appaiata; una coorte P47T più grande"
@@ -699,10 +703,6 @@
   "src": "en",
   "text": "Reached from the T-type calcium need through the catalogue path; the proposed pair is a proposal to verify (IT20)."
  },
- "876203c73520": {
-  "src": "en",
-  "text": "Whether any part of the carded effect is attributable to the named kinase rather than to the agent's other actions, and whether the opposing push on the second need is tolerable."
- },
  "87c5d2d4fd52": {
   "src": "en",
   "text": "IT24 corrected and extended what the generator reads. After a source check, eight signed pairs (one compound on seven sirtuins and another on a caspase) were withheld: each rested on one review-table or trial-listing claim and no primary source supports a direction; no opposite sign was assigned, and none was the main link of any proposal. Chemical identity was recovered for 93 of the 115 rows that IT23 could not compare (89 firm), without merging by name; the comparison with a drug-signature search stays empty on 136 comparable rows. Splitting the calculation by target showed 32 conflicts between targets of one compound, almost all of them small, and 4 handed-over compounds with several favourable targets (two of them paralog pairs). New per-gene lists from public mouse data (a knock-in model and conditional deletions) are candidate pools, not findings. No position in this ranking changed, and none of these steps measures benefit or predictive accuracy."
@@ -735,10 +735,6 @@
   "src": "it",
   "text": "la stessa rete con quattro archi HIF1A duplicati (già presenti nella rete esterna; non rappresenta il patrimonio WWOX)"
  },
- "8ea04146ff72": {
-  "src": "en",
-  "text": "WWOX-system: blocking NMDAR abolished the burst in the WWOX-deficient slice, one drug, one preparation. The recording bath magnesium is not stated in the source, and the incubation solution already contains magnesium. [IT36] Memantine block of extrasynaptic current was about 1.9-fold that of synaptic in one autaptic design; a later paper in culture found little extrasynaptic selectivity at 2 uM; preference is not exclusion and the minutes-scale premise is untested at WWOX burst durations. [IT36] burst duration median 0.66 s (Supplementary Table S1), intermediate between a synaptic pulse and the minutes-scale activation of the memantine premise; the premise is untested at this scale."
- },
  "8f8b3380a169": {
   "src": "en",
   "text": "Cytokine transcripts up in two mouse Wwox-deficient preparations (one significant in the null hippocampus)."
@@ -767,25 +763,13 @@
   "src": "it",
   "text": "Più basso nella linea shRNA (resazurina grezza), più alto nella mosca con amiloide; nessuna misura di flusso in cellule neurali."
  },
- "9249d778dc6e": {
-  "src": "en",
-  "text": "In WWOX-deficient and corrected isogenic organoids or radial-glia cultures: compare MYC within cell-cycle phase strata, then lower MYC by a genetic route with a second construct and read the progenitor fractions and the cell-cycle phase. No compound is needed for this step. Refinement from NB-1: lowering is graded and MYC-specific (not MYCN or MYCL unless measured), in two windows (radial-glia phase; neuron stage only), reading absolute counts of SOX2-, NEUN-, CTIP2- and SATB2-positive cells, cell death, glia and MYCN, in factorial design against restoring cell-cycle timing without touching MYC; the reading is wrong if markers do not move, the pool shrinks, glia rise, or the same lowering in the corrected line gives the same shift."
- },
  "92ea76c9db7b": {
   "src": "it",
   "text": "sconosciute. Le sconosciute sono lacune, non zeri. Contando i modelli e non le colonne, i sistemi indipendenti sono circa"
  },
- "9314d70ef04d": {
-  "src": "en",
-  "text": "Edge: HDAC5 to SLC2A1 traces to one origin, human primary muscle cells, where HDAC5 knockdown reduced GLUT1 expression (PMID 22991226, abstract level); the one drug tested there was pan-HDAC and was reported for GLUT4 only. Class IIa enzymes have very low intrinsic activity on standard substrates and repress largely as scaffolds; in neurons the separating experiments exist for HDAC4, not HDAC5; cardiomyocyte data show catalytic activity mattering for HDAC5 with the opposite sign (inhibition raises the output). Compound side: Compound X identity confirmed by full InChIKey (CHEMBL3110004); ChEMBL values from one paper, HDAC4 130, HDAC5 80, HDAC7 40, HDAC9 20 nM, in a recombinant catalytic-domain assay, cross-paper values vary and whether each was measured or quoted was not checked; whether compound X engages HDAC5 in cells at the cited exposures is not determined. Attribution gap of the pan-class comparator in this thread: vorinostat is held on main_target_weak_attribution (HDAC5 Ki 3600 against HDAC1 1.3 nM, fold 2769.2), so an effect of that compound would read as class I. Counter-premise carried in the generator: class I and pan-HDAC inhibition are signed adverse for oligodendrocyte maturation; for class IIa the CNS sign is unknown, the only myelin datum is a peripheral Schwann-cell double mutant of Hdac4 and Hdac5 (PMID 29472387, partial full text), and WWOX neuron-deleted mice are hypomyelinated. WWOX-system: HDAC5 mRNA nominally lower and SLC2A1 nominally higher in the P47T mouse, an mRNA association only; the human organoid shows SLC2A1 higher on transcript. IT32 reading of neural precedents: a catalytic-domain mutant of HDAC5 (two cysteines) lost deacetylase activity in vitro and abolished the effect of nuclear HDAC5 on one transcript and on a behaviour in rat nucleus accumbens (PMID 39923817, full text; no SLC2A1 or glucose readout, and loss of binding to another factor is not excluded), so the earlier statement that no neural catalytic arm exists is out of date; a catalytic-site mutant of the paralog HDAC4 rescued survival like the wild type in mouse cortical neurons (PMID 23141539); an inhibitor matched knockdown on neurite growth in neural cells but was inert where knockdown of HDAC7 acted (PMID 31572723; PMID 41962726, abstract only). Catalytic dependence is therefore specific to paralog, cell type and output. IT32 action-level reading (NB-3b): the premise source tested knockdown only, that is protein amount, and its pan-inhibitor arm names no GLUT1 result (abstract level); results for the paralog HDAC4 on GLUT1 go in both directions in non-neural cells; the direction of SLC2A1 in WWOX-deficient systems differs between the organoid, mouse brain and shWWOX neural cells, and no source reads SLC2A1 after HDAC5 manipulation in a neural cell. [IT36] the abstract reports GLUT4 promoter activity and no GLUT1 promoter result; sign is paralogue- and tissue-dependent; HDAC4 results are never carried to HDAC5. [IT36] HDAC5 and HIF-1alpha: knockdown or inhibition lowers hypoxic HIF-1alpha and GLUT1/CA9 mRNA in human cancer cell lines through a cytosolic, catalytic route (PMID 26061431, full text); association with the inhibitory domain raises transactivation without stabilisation (PMID 19071119, abstract); HDAC5 silencing lowers HIF1A in an epilepsy-model neuron (PMID 34021541); opposite-sign reports exist (abstracts). Scaffold and catalytic readings are both reported and the sign is context-dependent; HIF-1alpha is a candidate mediator of undetermined sign in neural cells; no therapeutic link in WWOX is shown."
- },
  "93f1ef260d11": {
   "src": "en",
   "text": "This need carries 318 catalogue associations and not one of them is direction-coherent: a restore-type need has no action vocabulary in the catalogue to match, so the slice looks empty for a structural reason, not a biological one. The premise question is cheaper than any compound test and decides whether the axis is a target or a consequence."
- },
- "940cff2aaec5": {
-  "src": "en",
-  "text": "WWOX-system, one preparation read in full and re-extracted (PMID 34634460, Table 1 and Figure 6): resting potential -79.25, -75.51, -73.62 mV and sag at a fixed -200 pA step 1.18, 2.04, 2.57 mV grade with gene dose, input resistance saturates at one allele, rebound is marked larger only in the knockout (the printed p cannot be reproduced from the Table 1 means and dispersion under stated assumptions), and bursts occur in 36 of 42 knockout, 4 of 23 heterozygote and 0 of 11 wild-type slices; the authors name control of the resting membrane potential as a factor underlying the hyperexcitability (the frequency-current slope does not differ once the curves are shifted to one step below rheobase; supplement not read) and cite discordant Ih-blocker precedents, including worsening of 4-AP events. Compound side: Ih-acting tools exist in the catalogue (a clinically used HCN blocker and several research blockers, identities resolved), found by the need search without naming any; their cellular potency in a cortical pyramidal neuron and their selectivity among HCN isoforms were not assessed here. No Ih-blocker experiment in a Wwox-deficient preparation is recorded in the entries read."
  },
  "942d686b27d0": {
   "src": "en",
@@ -834,6 +818,10 @@
  "9957585641c0": {
   "src": "it",
   "text": "Famiglia PDK e PDK1, trascritti"
+ },
+ "996d51daea80": {
+  "src": "en",
+  "text": "Clinical reports only. Children counted once across 14 reports: 36 to 38 exposed to at least one of vigabatrin, hormonal therapy, ketogenic diet or cannabidiol (partial full-text depth in 11 reports, one source at abstract level). Both a symptomatic and a developmental outcome are recorded for 6. In 4 of them, a partial or transient improvement came with no developmental progress recorded; in 2, neither moved. No sustained, instrumented response is recorded, and no developmental gain follows any of the four classes. Vigabatrin: 5 children with both endpoints in 4 reports (4 discordant, 1 concordant non-response); these are not independent of the other classes, since three of the five also supply them and all five were on co-therapy. Children with both endpoints, by class, of those exposed: hormonal 3 of 11; ketogenic diet 2 of 12; cannabidiol 1 of 7. Counts only, no percentage (n below 10). Developmental statements are clinical narratives without a scale. A brain-imaging safety signal is recorded beside them in two children (abstract level, a report selected for the finding), so it is not a frequency. No WWOX child is recorded with a developmental gain after a symptomatic improvement. Four children in three reports (two of them in one report) had a partial, transient or clinically-defined improvement with development not progressing; two had neither. That is what the baseline in other genetic and structural early-onset encephalopathies predicts (a responder with poor development is the majority outcome in infantile spasms and near-universal in genetic strata), so it is not by itself a WWOX-specific feature. The comparison holds only as a binary: the baseline uses standardised scores with a cut, every WWOX developmental statement is a clinician narrative, and no WWOX child had a sustained, instrumented response. Non-WWOX DEE baseline (batch_sci_20261105 a2_baseline; not WWOX evidence): in a prospective IESS cohort read at partial full-text depth, 72 percent of responders (126 of 175, computed from its Table 1) were below the developmental cut at 3 years, and no genetic-aetiology child reached a favourable outcome (0 of 49, a count over all genetic-aetiology children, not a responder rate). In two randomised IESS trials (abstract level), arms that raised early spasm cessation by 15 to 19 points showed no demonstrated developmental difference, with about one chance in four of detecting the difference that full mediation would predict. In TSC, two randomised trials of pre-onset prevention changed seizure endpoints without changing development to 36 months; they test prevention before onset, not response after onset. The person-level association (ICISS, abstract level: 15.9 VABS points higher with early cessation) is carried by unknown aetiology and a normal first neurological examination. [IT36] the 2024 vigabatrin case: developmental statements uninstrumented, stall from spasm onset before drug; seizure-free at home while video-EEG still showed events. [IT39] The transfer from KCNQ2 and TSC is analogy; genotype stratification is established for mortality only; lithium is not the only existing-drug node (ethosuximide was also tested)."
  },
  "99973bd6aa30": {
   "src": "en",
@@ -967,6 +955,10 @@
   "src": "it",
   "text": "Lattato, flusso o ATP (funzionale)"
  },
+ "aca79cf8612e": {
+  "src": "en",
+  "text": "WWOX-system: a T-type blocker suppressed the late phase of the provoked seizure score in the null mouse, one experiment, genotype specificity not established by an interaction. Catalogue: direction-coherent blocker actions on CACNA1G, CACNA1H and CACNA1I, at group and single-protein level, from curated mechanism rows. [IT39] The panel of 'structurally unrelated' antagonists is not independent: two of the listed antagonists are the same molecule under different names (one of them is Z944), and Z944 and TTA-P2 share a core chemical scaffold."
+ },
  "ad96353e723f": {
   "src": "en",
   "text": "The need's direction is unresolved and the two available readouts disagree by design, so no compound on this axis can be qualified either way. Resolving the sign is the cheapest act that converts the largest blocked slice of the catalogue into an orderable or a refused question; leaving it unresolved keeps that slice invisible rather than negative."
@@ -1099,6 +1091,10 @@
   "src": "en",
   "text": "A measurement in an existing system; no compound and no new model."
  },
+ "c9f8d6f8ad54": {
+  "src": "en",
+  "text": "Whether any part of the carded effect is attributable to the named kinase rather than to the agent's other actions, and whether the opposing push on the second need is tolerable. [IT39] An inositol-depletion arm is not GSK-3-free (GSK-3 alpha inactivated, beta not significantly altered; one paper, one isoform); the S9A cross is not an attribution control; time-gated dosing has no timing source."
+ },
  "ca1a44149841": {
   "src": "en",
   "text": "WWOX-system: the Q230P class shows no protein band with a normal transcript; a different missense (P252A) over-expressed in non-neural cells is cleared faster and restored by lysosomal inhibitors but not by a proteasome inhibitor. Compound side: a curated inhibitor action on HSPA8 exists; the one reference reports impaired HSC70 refolding and lower lysosomal degradation in lupus-mouse B cells (abstract-level reading). Nothing shows that the route and the allele are the same. IT22 P6: the peptide's measured binding is micromolar (7.32 uM by surface plasmon resonance), refolding is inhibited at 40 uM, and its own paper reads its action as flux slowing like a lysosomal-acidification inhibitor; the one measured rescue of a WWOX missense is over-expressed P252A in non-neural cells."
@@ -1211,10 +1207,6 @@
   "src": "en",
   "text": "position unchanged from IT20 (rank 3): No IT21 input changes the position. The thyroid-hormone probe row asks the receptor-responsiveness question on the same axis; the two are not merged because one measures the neuron's signal and the other the precursor cell's response. IT29 (phenotype-first table): position unchanged; the added evidence is transferred from non-WWOX systems and conditional."
  },
- "dce2c85fd6e6": {
-  "src": "en",
-  "text": "WWOX-system: a glycolytic signature; the kinase transcript lower in the organoid; no difference in the one human PDH activity measurement, which is a non-neural fibroblast pool with partial WWOX depletion (n not stated) and says nothing about neurons. The kinase-to-PDH link has no WWOX observation."
- },
  "dd12a8b7fdb5": {
   "src": "en",
   "text": "Queried: the two gene-addition cards (C01, C04) and their assertion rows; the deepdive manifest of the source; the work-order statements for this need. Checked for a post-onset arm and found none. Not a statement about the literature beyond the sources this module has read. Extended on 2026-11-05/06 by two bounded external searches (batch_sci_20261105, r1 and r2 query logs, 66 queries in all): conditional, antisense and vector restoration after onset in Mecp2, Ube3a, Fmr1, Tsc1, Pten, Syngap1, Cdkl5, Shank3, Tcf4, Scn1a, Scn1b, Kcnt1, Scn8a and leukodystrophy models. The earlier of the two searches was anchored on gene names and could not reach enzyme, connexin, tubulin or astrocyte-transporter leukodystrophies; an independent review found post-onset white-matter arms there. Bounded searches, not a statement that none exists."
@@ -1222,6 +1214,10 @@
  "dd2c3ac3a06f": {
   "src": "en",
   "text": "Separate the three causes for one of the four needs: check whether the listed targets carry any catalogued action anywhere, then whether the module's target list is the limit."
+ },
+ "dd79afec8e2f": {
+  "src": "en",
+  "text": "WWOX-system: the myelin deficit is partly prevented when WWOX is restored in neurons in the neonatal window; the treated arms of the source are unquantified, and whether an established deficit re-myelinates is unmeasured. IT29: perturbation evidence from other systems signs several intrinsic precursor-differentiation routes (muscarinic-receptor, lipid-synthesis, thyroid- and RXR-type receptor) in wild-type or injury settings and none in a neuron-driven hypomyelination model; HDAC3 loss is adverse for maturation; an independent screen disagrees with some signs. [IT36] GSK3 sign on oligodendrocyte differentiation is divided (inhibitors raise it in one source, lower it in another after Foxg1 knockdown; genetic loss in mature cells changed survival); recorded as undetermined. [IT39] GSK3 context rows: a GSK3 inhibitor run after Foxg1 knockdown goes the opposite way to the inhibitor-raises-differentiation reports, and a 2026 review holds both directions; the slice paper's finding is neuron-specific wording, not oligodendrocyte-wide."
  },
  "e22f10004a65": {
   "src": "en",
@@ -1263,6 +1259,10 @@
   "src": "en",
   "text": "No arm exists in which treatment begins after the phenotype is established; the window is stated, not measured against a later start, and P300 readouts are survivor-selected."
  },
+ "e6e1027770e5": {
+  "src": "en",
+  "text": "Edge: HDAC5 to SLC2A1 traces to one origin, human primary muscle cells, where HDAC5 knockdown reduced GLUT1 expression (PMID 22991226, abstract level); the one drug tested there was pan-HDAC and was reported for GLUT4 only. Class IIa enzymes have very low intrinsic activity on standard substrates and repress largely as scaffolds; in neurons the separating experiments exist for HDAC4, not HDAC5; cardiomyocyte data show catalytic activity mattering for HDAC5 with the opposite sign (inhibition raises the output). Compound side: Compound X identity confirmed by full InChIKey (CHEMBL3110004); ChEMBL values from one paper, HDAC4 130, HDAC5 80, HDAC7 40, HDAC9 20 nM, in a recombinant catalytic-domain assay, cross-paper values vary and whether each was measured or quoted was not checked; whether compound X engages HDAC5 in cells at the cited exposures is not determined. Attribution gap of the pan-class comparator in this thread: vorinostat is held on main_target_weak_attribution (HDAC5 Ki 3600 against HDAC1 1.3 nM, fold 2769.2), so an effect of that compound would read as class I. Counter-premise carried in the generator: class I and pan-HDAC inhibition are signed adverse for oligodendrocyte maturation; for class IIa the CNS sign is unknown, the only myelin datum is a peripheral Schwann-cell double mutant of Hdac4 and Hdac5 (PMID 29472387, partial full text), and WWOX neuron-deleted mice are hypomyelinated. WWOX-system: HDAC5 mRNA nominally lower and SLC2A1 nominally higher in the P47T mouse, an mRNA association only; the human organoid shows SLC2A1 higher on transcript. IT32 reading of neural precedents: a catalytic-domain mutant of HDAC5 (two cysteines) lost deacetylase activity in vitro and abolished the effect of nuclear HDAC5 on one transcript and on a behaviour in rat nucleus accumbens (PMID 39923817, full text; no SLC2A1 or glucose readout, and loss of binding to another factor is not excluded), so the earlier statement that no neural catalytic arm exists is out of date; a catalytic-site mutant of the paralog HDAC4 rescued survival like the wild type in mouse cortical neurons (PMID 23141539); an inhibitor matched knockdown on neurite growth in neural cells but was inert where knockdown of HDAC7 acted (PMID 31572723; PMID 41962726, abstract only). Catalytic dependence is therefore specific to paralog, cell type and output. IT32 action-level reading (NB-3b): the premise source tested knockdown only, that is protein amount, and its pan-inhibitor arm names no GLUT1 result (abstract level); results for the paralog HDAC4 on GLUT1 go in both directions in non-neural cells; the direction of SLC2A1 in WWOX-deficient systems differs between the organoid, mouse brain and shWWOX neural cells, and no source reads SLC2A1 after HDAC5 manipulation in a neural cell. [IT36] the abstract reports GLUT4 promoter activity and no GLUT1 promoter result; sign is paralogue- and tissue-dependent; HDAC4 results are never carried to HDAC5. [IT36] HDAC5 and HIF-1alpha: knockdown or inhibition lowers hypoxic HIF-1alpha and GLUT1/CA9 mRNA in human cancer cell lines through a cytosolic, catalytic route (PMID 26061431, full text); association with the inhibitory domain raises transactivation without stabilisation (PMID 19071119, abstract); HDAC5 silencing lowers HIF1A in an epilepsy-model neuron (PMID 34021541); opposite-sign reports exist (abstracts). Scaffold and catalytic readings are both reported and the sign is context-dependent; HIF-1alpha is a candidate mediator of undetermined sign in neural cells; no therapeutic link in WWOX is shown. [IT39] Corrections carried from the repeat: the ketogenic paper, the MC1568 and Bdnf statement, the pooled SPR range, lithium specificity and the source type of ICP0 were each misstated in an external report; human primary muscle cells with HDAC5 knockdown show lower GLUT1 expression (opposite in sign to that report's table); a route through HDAC4, MEF2A and GLUT1 exists."
+ },
  "e7d6e650a5ef": {
   "src": "en",
   "text": "Thyroid-axis suppression and peripheral thyrotoxicosis at the effective mouse dose; seizure worsening reported in a few patients with prior seizures; premature differentiation."
@@ -1294,6 +1294,10 @@
  "eba7e8903360": {
   "src": "en",
   "text": "Weak; edge supported outside neural cells; no CNS exposure data for the topical drug"
+ },
+ "ec3b8d38c180": {
+  "src": "en",
+  "text": "WWOX-system, one preparation read in full and re-extracted (PMID 34634460, Table 1 and Figure 6): resting potential -79.25, -75.51, -73.62 mV and sag at a fixed -200 pA step 1.18, 2.04, 2.57 mV grade with gene dose, input resistance saturates at one allele, rebound is marked larger only in the knockout (the printed p cannot be reproduced from the Table 1 means and dispersion under stated assumptions), and bursts occur in 36 of 42 knockout, 4 of 23 heterozygote and 0 of 11 wild-type slices; the authors name control of the resting membrane potential as a factor underlying the hyperexcitability (the frequency-current slope does not differ once the curves are shifted to one step below rheobase; supplement not read) and cite discordant Ih-blocker precedents, including worsening of 4-AP events. Compound side: Ih-acting tools exist in the catalogue (a clinically used HCN blocker and several research blockers, identities resolved), found by the need search without naming any; their cellular potency in a cortical pyramidal neuron and their selectivity among HCN isoforms were not assessed here. No Ih-blocker experiment in a Wwox-deficient preparation is recorded in the entries read. [IT39] Ivabradine blocks sag and hyperpolarises cortical L5 and L6 neurons in normal rat slices, and injection into somatosensory cortex cut absence-seizure time by 96 percent against 40 percent in thalamic VB (abstract); the GAERS authors read Ih as not an adaptive response to spike-wave discharges (input resistance fell, resting potential and sag unchanged), which sits beside the discordant precedents."
  },
  "ee335183c025": {
   "src": "en",
@@ -1378,10 +1382,6 @@
  "fc813c0373ff": {
   "src": "en",
   "text": "Known in the WWOX system: the observations and the Ih discussion are in PMID 34634460; the rival 'intrinsic state' and its Ih arm were written in IT14 P3 and are consumed here, for the first time, by a need (NEED-INTRINSIC-EXCITABILITY) and an investigation row."
- },
- "fce4f6168e58": {
-  "src": "en",
-  "text": "WWOX-system: the myelin deficit is partly prevented when WWOX is restored in neurons in the neonatal window; the treated arms of the source are unquantified, and whether an established deficit re-myelinates is unmeasured. IT29: perturbation evidence from other systems signs several intrinsic precursor-differentiation routes (muscarinic-receptor, lipid-synthesis, thyroid- and RXR-type receptor) in wild-type or injury settings and none in a neuron-driven hypomyelination model; HDAC3 loss is adverse for maturation; an independent screen disagrees with some signs. [IT36] GSK3 sign on oligodendrocyte differentiation is divided (inhibitors raise it in one source, lower it in another after Foxg1 knockdown; genetic loss in mature cells changed survival); recorded as undetermined."
  },
  "fdba233e1765": {
   "src": "en",
