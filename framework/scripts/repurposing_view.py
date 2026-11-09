@@ -2123,12 +2123,18 @@ def build_it7(dr: Path, funnel: dict, mx: dict, units: dict, cur: dict) -> dict:
 
 
 def research_update_date(dr: Path, *dates) -> str | None:
-    """Date of the newest research content, kept apart from the needs-register date and from the catalogue build date: the latest of the dates given (needs register, work order, graph) and of the dated cycle records of the module (a file or directory name ending _YYYYMMDD)."""
+    """Date of the newest research content, kept apart from the needs-register date and from the catalogue build date: the latest of the dates given (needs register, work order, graph)
+    and of the newest `analysis_at` in the receipt ledger, that is, of the newest evidence actually read. IT39: it no longer takes the newest date found in a folder NAME beside the module,
+    so creating or renaming a folder (a stage table, a brief) cannot move the published date; the same rule as the ranking's `as_of`."""
     found = [d for d in dates if d]
-    for p in sorted(dr.iterdir()):
-        m = re.search(r"_(20\d\d)(\d\d)(\d\d)(?:\.\w+)?$", p.name)
-        if m:
-            found.append("-".join(m.groups()))
+    ledger = Path(dr).resolve().parents[1] / "registries" / "fulltext_read_receipts.jsonl"
+    if ledger.exists():
+        rx = re.compile(r'"analysis_at":\s*"(20\d\d-\d\d-\d\d)')
+        with open(ledger, encoding="utf-8") as fh:
+            for line in fh:
+                m = rx.search(line)
+                if m:
+                    found.append(m.group(1))
     return max(found) if found else None
 
 
