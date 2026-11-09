@@ -8,12 +8,12 @@
   "START_UTC": "2026-11-09T22:30:00Z",
   "BASELINE": "main 30382215 (development/main same). Worktree .claude/worktrees/it41a, branch task/it41a. IT40 is in its own worktree (task/it40, not yet on main); its final report was not available at S0. Harness identity delivery (worktree idfix) had no commit at S0.",
   "CURRENT_PACKAGE": {
-    "id": "A-landing",
-    "state": "package A delivered and verified; checks, battery on a frozen candidate, landing; package B next",
-    "delegate_active": "none",
-    "updated": "2026-11-09T23:55:00Z"
+    "id": "A-battery+B-producer",
+    "state": "A: battery running on frozen candidate fb6454b93d71a78645ae8ef38511cba6ee2206fa (clone /tmp/bat_it41a, PID 490108, log /tmp/bat_it41a.log); B: producer running in worktree it41b",
+    "delegate_active": "producer B a6396ff9ef6272f2e (sonnet/medium)",
+    "updated": "2026-11-09T23:30:00Z"
   },
-  "RESUME": "CHECKPOINT 2026-11-09T23:55Z: last verified result = package A delivered on task/it41a (candidate commit to be frozen for the battery). First incomplete work = A4 landing (checks, battery on unique clone, task_close, safe_push development main), then package B (HIF1A to BNIP3): write BRIEF, producer sonnet/medium, blind verifier sonnet/high. Active processes: none until the battery starts. Dependencies: Harness identity delivery (identity_it41_20261109, lands on main; pass names_used.tsv to Harness, do not rebuild); IT41 integrates consumers. Folder: disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/.",
+  "RESUME": "CHECKPOINT 2026-11-09T23:30Z: last verified result = package A delivered and verified on task/it41a, candidate fb6454b9 (LINT WARN no BLOCK, receipts OK 1506, growth PASS, gate PASS). Active processes: battery PID 490108 (cwd /tmp/bat_it41a, wait with process_wait.py --pid 490108, do not touch the clone); producer B agent a6396ff9ef6272f2e writing in worktree .claude/worktrees/it41b (brief committed b6e25189 on task/it41b). First incomplete work: collect battery verdict then task_close + safe_push for A (record the verdict line first as a record-only commit); then B verifier (write VERIFIER_BRIEF.md in hif1a_bnip3_it41_20261109/), recheck, README/consumer_delta/COST_NOTE, checks, landing. Dependencies: Harness identity delivery for the AMPA names (names_used.tsv); IT41 integrates consumers.",
   "DECISIONS_TAKEN": [
     "2026-11-09 S0: the INV-05 closing pass was already delivered and published (30382215); nothing pending. IT40 final report not found in any worktree at S0 (IT40 is unmerged); next_investigations_it40.md read in place from the it40 worktree (read-only): A1 and A2 rows (primary mechanism papers for NBQX and GYKI 52466; catalogue identity of GYKI 52466) are the open needs this package addresses; B3 (BE1) is the experiment the comparison serves. Harness identity delivery not yet available: names used by each paper are recorded so the match can be made without rebuilding the search.",
     "2026-11-09 A1 design written and committed before any source was opened, including the five demonstrations the block control must give, what the result does not separate, and the A3 rule (alternative only by missing property).",
