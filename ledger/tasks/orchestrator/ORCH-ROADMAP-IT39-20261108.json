@@ -7,7 +7,7 @@
  "OBJECTIVE": "IT39 principale: from recovered knowledge to effective pharmacological generation. Queued behind IT38 (battery on d85bcdd1 running). Not IT39OS (OpenScientist repeat).",
  "START_UTC": "2026-11-08T23:00:00Z",
  "RESUME": {
-  "note": "queued behind IT38: its final candidate d85bcdd1 is in battery at /tmp/bat_it38f (do not touch). Permanent instructions live in CLAUDE.md, delegation_budget.md and the standing method; not repeated here. First open step: P0/P1."
+  "note": "IT39: only P10 open (dashboard exploration of emerging hypotheses); published c7602b91 (gate PASS); CI of c7602b91 failed in the browser-startup step in 7 seconds (cause unreadable without logs), 1c933fc5 CI pending; battery 0c14e92c PASS WITH SKIPS, f2744920 FAIL kept"
  },
  "AUTHORISED_QUEUE_20261108": {
   "MANDATE_STATE": "OPEN",
@@ -16,8 +16,9 @@
    "steps": [
     {
      "step": "Baseline, continuity, record and binding; residuals of the previous mandate",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "IT39 principale registered, session bound (MANDATE_BOUND), hourly check created once; IT38 closed first with its original FAIL kept"
     }
    ]
   },
@@ -26,8 +27,9 @@
    "steps": [
     {
      "step": "Close and consume IT38 correctly: reconcile landed state, keep failure attribution, MYC four-level distinction",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "IT38 landed as 6435f782 (battery on d85bcdd1 PASS WITH SKIPS; CI Public release gate FAIL inherited from test_stop_policy, restored by 2b2ef5fc, CI success on 5ff2a5b0); MYC four levels stated in session_evaluations/2026-11-09_it39.md: selection byte-identical, no decision use claimed"
     }
    ]
   },
@@ -36,8 +38,9 @@
    "steps": [
     {
      "step": "Integrate verified science deliveries (OpenScientist/Dismech retest, membrane physiology, AMPA/NMDA when delivered); receipts, deltas, derivatives",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "OpenScientist retest (11 reports, 778 items, 49 staged receipts, 153 verified propositions): 49 receipts recorded (ledger 1,457 to 1,506, two parent links set from the ledger), 15 deltas applied as limits and context to five needs, ten investigations, two cards (rebuilt, check_cards 0 problems); membrane physiology and AMPA/NMDA remain with the science session"
     }
    ]
   },
@@ -46,8 +49,9 @@
    "steps": [
     {
      "step": "Contrasting real cases and the true stopping point of generation",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "five contrasting cases traced to their true stopping points in generation_it39_20261109/README.md (propagation, composition; guards and consumed cases unchanged)"
     }
    ]
   },
@@ -56,8 +60,9 @@
    "steps": [
     {
      "step": "Micro-upgrade of the generator at the demonstrated limit",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "premise_decisive_test: the hand-over carries the open question and the resolving measurement from the investigations table; 605 proposals, 5 of 15 hand-overs; no existing column changed (S15 against S14); tests"
     }
    ]
   },
@@ -66,8 +71,9 @@
    "steps": [
     {
      "step": "Mechanism-oriented generation on a few questions",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "limited scope, stated: generation_it39_20261109/questions_it39.md (built mechanically by build_questions.py from the investigations and comparator tables; four dossiers INV-17, INV-18, INV-05, INV-03 with observed state, deciding premise, next test and comparators by role; INV-17 has no comparator in the files, which is a finding) plus the Dream chain (MYC x HIF axis, a new combination in the repository); no new generation run beyond S15; competing explanations kept as stated in the investigations (INV-18 branches A to D)"
     }
    ]
   },
@@ -76,8 +82,9 @@
    "steps": [
     {
      "step": "Dream pass on current material, consume Harness's skill",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Dream pass: one chain (MYC occupancy x HIF axis), classed as a new combination in the repository, applied as one sentence in INV-17; Harness's skill and dream_pass helper consumed, no second one"
     }
    ]
   },
@@ -86,8 +93,9 @@
    "steps": [
     {
      "step": "Controlled before/after comparison",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "S14 against S15 compared on identical inputs: reach, qualification and selection identical, one added column; claims limited accordingly"
     }
    ]
   },
@@ -96,8 +104,9 @@
    "steps": [
     {
      "step": "Pharmacological comparators for priority hypotheses (antiseizure drugs separated)",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "comparators_it39_20261109/output/{comparators,antiseizure}.tsv: 38 comparator rows (functional_outcome versus mechanism_separating per investigation; INV-10 has no mechanism-separating comparator in the files) and 15 antiseizure rows (general anticonvulsant activity kept apart from any WWOX rationale; outcome domain per row); built from repository files only by one delegate (sonnet, medium requested; effort not readable from inside the runtime), spot-checked against the NMDA and T-type source tables (Ro 25-6981, ifenprodil, d-APV, memantine, ethosuximide, perampanel); not wired into the view"
     }
    ]
   },
@@ -106,8 +115,9 @@
    "steps": [
     {
      "step": "Open questions as main output; next scientific brief",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "investigations updated (INV-02 03 05 06 07 08 09 10 15 16 17 18) and next_batch_it39_20261109/BRIEF.md prepared; no duplicate search started"
     }
    ]
   },
@@ -117,7 +127,8 @@
     {
      "step": "Dashboard: hypotheses, priorities, changes",
      "status": "TODO",
-     "owner": "orchestrator"
+     "owner": "orchestrator",
+     "note": "not done: dashboard exploration of emerging hypotheses; the view round updated texts and translations only"
     }
    ]
   },
@@ -126,8 +137,9 @@
    "steps": [
     {
      "step": "External improvement only if it resolves a named gap (CHANGE = NONE acceptable)",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "CHANGE = NONE: no external resource was needed to resolve the named gaps"
     }
    ]
   },
@@ -136,8 +148,9 @@
    "steps": [
     {
      "step": "Persistence, verification, battery on the frozen copy, publication, CI, site, cleanup",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "battery f2744920 FAIL (three view tests: published date followed folder names; fixed at the root, 3 tests); candidate 0c14e92c PASS WITH SKIPS (222 targets, 42 skipped); push and CI recorded after publication"
     }
    ]
   }

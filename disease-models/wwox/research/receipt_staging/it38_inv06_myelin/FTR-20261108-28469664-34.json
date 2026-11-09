@@ -17,8 +17,8 @@
  "event_id": "FTR-20261108-28469664-34",
  "evidence_basis": [
   "Text read: Introduction, Methods, Results, Discussion with figure captions; figures not viewed; references not read; the tool returned the text, not the page.",
-  "verbatim_locator | proposition: the abstract and the Results disagree on the direction of phospho-GSK-3beta and beta-catenin | abstract | \"inhibited β-catenin expression and glycogen synthase kinase-3β (GSK-3β) phosphorylation\"",
-  "verbatim_locator | proposition: Results report the opposite direction (more Ser9 phospho-GSK-3beta, more beta-catenin) | Results, effect on GSK-3beta and beta-catenin | \"naringin treatment significantly increased GSK-3β phosphorylation at Ser9\"",
+  "verbatim_locator | proposition: the abstract and the Results disagree on the direction of phospho-GSK-3beta and beta-catenin | abstract | \"inhibited \u03b2-catenin expression and glycogen synthase kinase-3\u03b2 (GSK-3\u03b2) phosphorylation\"",
+  "verbatim_locator | proposition: Results report the opposite direction (more Ser9 phospho-GSK-3beta, more beta-catenin) | Results, effect on GSK-3beta and beta-catenin | \"naringin treatment significantly increased GSK-3\u03b2 phosphorylation at Ser9\"",
   "verbatim_locator | proposition: the GSK-3beta link is an association in whole spinal tissue with no GSK-3beta manipulation | Discussion | \"Thus, treatment with naringin may promote the survival of oligodendrocytes\""
  ],
  "evidence_depth": "partial_fulltext_read",

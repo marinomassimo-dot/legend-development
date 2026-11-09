@@ -7,10 +7,10 @@
  "OBJECTIVE": "IT38: from available knowledge to effective generation: MYC relations of NB-1 reach the generator's carried limits; seven card corrections rebuilt from authoritative inputs; shareable-audit false positives fixed at the root.",
  "START_UTC": "2026-11-08T20:00:00Z",
  "RESUME": {
-  "note": "start: remote main 0f6aff0c (IT36/IT37 integrated, CI green on 4a783cd4). Decisive files: nb1_myc_20261107/output/generator_relations.tsv, generation_it21_p2_20261103/run_generation_it21.py (relation_use_it38.tsv), p1_reconcile_it36_20261108/output/map.tsv, framework/scripts/repurposing_shareable_audit.py. Do not repeat DREAM-2 fixes (Harness); do not duplicate Dismech reads (science session)."
+  "note": "complete 2026-11-09; hand-off to IT39: CI of main after 2b2ef5fc to be read; relation_use rows for other packages; per-card hash would make card edits explain themselves"
  },
  "AUTHORISED_QUEUE_20261108": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P1": {
    "order": 1,
    "steps": [
@@ -71,8 +71,9 @@
    "steps": [
     {
      "step": "Close: regenerate consumers in order, checks, battery, push, CI, site; attribute each result to its SHA",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "battery 57f0e784: REGRESSION VERDICT FAIL, kept as the original verdict (log preserved); of its failures the audit ones reproduced outside the interference window and came from my code and the restored natural wording (the CLI mutation test returned 0 for 1 under a first rule that excused by absence from the English vocabulary), the two i18n ones did not reproduce on rerun; rule replaced by a verifiable one (authorised translation of that language, absent from the English source and the page's neutral data, letters only; same function on data, page and rendered surfaces; 9 tests incl. real editions in five languages with visible-HTML insertions); 69 targeted tests OK on the corrected code; frozen candidate d85bcdd1: PASS WITH SKIPS (219 targets, 42 skipped). Merged with remote main (delta in packages, skills and scripts, none in needs, ranking, view, cards, generation, catalogue; targeted suites OK) and published as 6435f782 with the gate PASS from an isolated clone. CI on 6435f782: Publish the shareable view success; Public release gate FAILURE in scripts/test_stop_policy.py (LEGEND_CORE 21d text), inherited: the same test failed on the remote parent 2d3d4b13 (another session's edit), restored by 2b2ef5fc, present on remote main 5ff2a5b0; not attributed to the IT38 candidate. The CI result of the restored main is read in IT39."
     }
    ]
   }

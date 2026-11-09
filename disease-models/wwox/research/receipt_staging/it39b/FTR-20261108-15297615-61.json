@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-08T23:10:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-08T23:13:45Z",
+ "event_id": "FTR-20261108-15297615-61",
+ "evidence_basis": [
+  "PubMed record abstract only; no full text, no figures.",
+  "verbatim_locator | proposition: mefloquine blocks neocortical interneuron coupling at 25 uM | Abstract | \"Mefloquine, at 25 microM, blocked gap junctional coupling between interneurons in neocortical slices, with minimal nonspecific actions.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/observations.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/alternatives.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/probes.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_nmda_discrim_20261108/output/figure_notes.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for the PMID, fetched 2026-11-08 through the PubMed metadata tool; the full text page returned a reCAPTCHA check and was not retried",
+ "study_id": {
+  "doi": "10.1073/pnas.0402044101",
+  "pmid": "15297615"
+ },
+ "workflow": "Package B AMPA, NMDAR composition and carbenoxolone discrimination (ORCH-IT39OS-20261108), producer an-b, Phase 1. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
