@@ -1,0 +1,147 @@
+{
+ "_schema": "orchestrator-task-v1",
+ "TASK_ID": "ORCH-ROADMAP-IT40-20261109",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "P0",
+ "OBJECTIVE": "IT40: from available knowledge to effective pharmacological generation; membrane and AMPA/NMDA deliveries consumed, DREAM-4 C, conditional hypotheses, mechanism-first search, measured contribution.",
+ "START_UTC": "2026-11-09T12:00:00Z",
+ "RESUME": {
+  "note": "baseline edfa347f"
+ },
+ "AUTHORISED_QUEUE_20261108": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Baseline: remote main, state, active tasks, binding, monitor with --self-call",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Reconcile membrane (7) and AMPA/NMDA (12) proposals with consumers; staged receipts; apply via existing paths",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "DREAM-4: verify A,B; complete C at the true source of the open-questions map (200-char limit); check D",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "Baseline of generative capacity on contrasting cases (before changes)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "Conditional hypotheses consumable (Harness link if delivered); representation without invented gene-gene arcs",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "Mechanism-first pharmacological search on at least one complete case",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "Measure: current vs simple baseline vs new path, ablation on same inputs",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P8": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "Independent verification of decisive conclusions with originals",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P9": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "Dashboard: updated investigations and conditional hypotheses, five languages, real publication",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P10": {
+   "order": 10,
+   "steps": [
+    {
+     "step": "Open questions: in-silico / new measure / ill-posed; next package",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P11": {
+   "order": 11,
+   "steps": [
+    {
+     "step": "Queue after main proof: second hypothesis type, relations beyond NB-1, HIF1A-BNIP3, identity blockers, short Dream",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P12": {
+   "order": 12,
+   "steps": [
+    {
+     "step": "Persistence, battery on frozen SHA, publish with SHA check, CI, site, cleanup, final report",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  }
+ }
+}
