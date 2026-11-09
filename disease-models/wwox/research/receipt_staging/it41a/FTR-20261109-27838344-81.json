@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-09T22:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-09T22:53:00Z",
+ "event_id": "FTR-20261109-27838344-81",
+ "evidence_basis": [
+  "Abstract, Introduction, Methods, Results 3.1-3.6, Discussion 4.1-4.7 and all figure captions read; the GYKI-53655 dose-response and Up-state figure (file gr5) viewed as an image; the other seven figures captions only; tables and references not read.",
+  "verbatim_locator | proposition: GYKI-53655 block fraction in slice | Results 3.4 | \"GYKI-53655 (10 μM) blocked more than 80% of the synaptically evoked peak inward current in mEC layer III neurons (IC50, 2.5 μM\"",
+  "verbatim_locator | proposition: BC evoked Up states survive GYKI-53655 | Results 3.4 | \"not altered by 10 μM GYKI-53655 (control, 0.81 ± 0.1 s vs GYKI, 0.86 ± 0.14 s\"",
+  "verbatim_locator | proposition: stimulus supplied depolarisation | Discussion 4.6 | \"our stimulating pulse to evoke the Up state likely generated sufficient direct depolarisation to allow such NMDA receptor activation\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/comparison.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/figure_notes.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/names_used.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "6bce73adfb8be3e81ee84c4eed9d20cd8ac8755270be1b70bcdfe1ac34a96064",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch (db=pmc, PMC5154331) and PMC open-data bucket figure gr5, fetched with plain curl on 2026-11-09; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1016/j.neuropharm.2016.11.009",
+  "pmid": "27838344"
+ },
+ "workflow": "IT41 package A, the AMPA comparison (ORCH-IT41-20261109), producer ia-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

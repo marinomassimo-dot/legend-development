@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-09T22:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-09T22:53:00Z",
+ "event_id": "FTR-20261109-35103859-81",
+ "evidence_basis": [
+  "Abstract, the Methods paragraphs on animals, slices and recording, the Results on AMPA-receptor drugs and the Discussion paragraph on them read; the Introduction, the other Results, tables and references not read; Fig 6 viewed as an image, the other figures captions only; the experiments on propagation velocity, immunohistochemistry and western blots were not read in detail because they carry no number used here.",
+  "verbatim_locator | proposition: reversible dose-dependent latency effect | Results | \"bath application of GYKI53655 resulted in a reversible, dose-dependent increase in the latency of epileptiform discharges\"",
+  "verbatim_locator | proposition: age of slices | Methods | \"Mice (14–16 postnatal days)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/comparison.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/figure_notes.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/names_used.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "af0fa91686e0b01a1260694f4a70b47f92313c31e30185be873584500f9b0ca5",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch (db=pmc, PMC9098610) and PMC open-data bucket figure Fig6, fetched with plain curl on 2026-11-09; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1007/s00429-022-02458-1",
+  "pmid": "35103859"
+ },
+ "workflow": "IT41 package A, the AMPA comparison (ORCH-IT41-20261109), producer ia-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
