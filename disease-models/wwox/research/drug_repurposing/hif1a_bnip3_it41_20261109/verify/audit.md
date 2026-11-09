@@ -109,3 +109,28 @@ Files fetched with plain curl from the GEO FTP: `GSE126075_TPMexpression_all_gen
 
 * GSE158681 and GSE158682 (mouse P17) were not re-derived (module table only). 27692180, 18054315, 23568341 and 15026543 were not opened. Fig 6, 7 of 38443598, Fig 11 of 41324728 and all supplements (including Fig S2 of 41972676, Supplementary Fig S3 of 25012504) were not viewed. 42323821: abstract only (full text embargoed; one attempt, no second route). bioRxiv and medRxiv searches were not possible (connector needs authorisation); Europe PMC hit lists beyond titles were not screened. The four PMIDs I did not read in full (38043200, 34475505, 40541802, 42874824) are abstract-level leads only.
 * Own slip to declare: my first call to the ID converter failed (API error) and I used the NCBI idconv endpoint instead; no effect on results. I claimed PMIDs 41324728, 42792606, 38443598, 41972676, 25012504, 42323821, 10922063 and 27692180 as `ib-v` (27692180 was never opened).
+
+## Recheck (ib-v, after producer commit b389cb69; substantive rows only, against the sources and deposits already opened; no new search)
+
+Rows renumbered D01 to D14 (old D10 to D15 are now D09 to D14); I checked the new numbering.
+
+| Item | Result |
+|---|---|
+| D01 | Corrected: padj 0.0587 and log2FC +0.38 in the deposit up-file, "smaller than the five named genes", verifier ratios stated. Matches my recomputation. |
+| D02 | Corrected: column totals 264,496 v 89,581 (log2 -1.56), raw -0.921 a scale artefact, sum-rescaled +0.60, centred +0.398, tag-centred +0.50, 75th to 82nd percentile, one library per arm. All values match my computation. |
+| D04 | Corrected ("a primary record among about 200 CollecTRI references"). |
+| D07 | Mostly corrected: vehicle-injected controls, pre-treatment 24 h before pilocarpine with sampling weeks later, Fig 6C about 0.65, protective reading, seizure count unchanged (Results) v Discussion, 4E-BP and S6K. STILL MISSING in the row: the timing statement (BNIP3 about 2.6-fold already at 30 min to 2 h, before HIF-1alpha fell at 1.5 to 2 h, significant only at 24 h). Only E1 carries "BNIP3 rose before HIF-1alpha fell", without the figures or the significance point. |
+| D08 | Corrected: reference normoxia at 6 h = 1, matched-time about 25, 27, 80, 4; scale argument limited to 6 h and 24 h; glucose not stated. FN01 also corrected. Matches Fig 4A. |
+| Old D12 (now D11) | Corrected (aggravates OGD injury, no effect in normoxia, BCCAO correlative, Fig 3D about 65 v text above 70, Fig S2 text only). |
+| Old D13 (now D12) | Corrected (DATO opposite directions; INFERENZA glucose one candidate among several). |
+| E1 | Corrected: EGR1 -1.04 padj 0.038 labelled IPOTESI with the recompute check, BNIP3L -0.19, NDRG1, CA9, PGK1 flat, EPAS1 +1.97, two neural sources read HIF inhibition as protective, pre-treatment, EGR1 moved here. Stale wording left in the prediction cell: "neural BNIP3 rise is the smallest of the set" (should read "smaller than the five named genes", as D01 now does). |
+| E2 | Corrected: EGR1 removed; BNIP3 fall attributed to Mst1/2 knockdown; XMU-MP-1 not measured at BNIP3; KC7F2 through 4E-BP and S6K; FOXO3, p53, E2F1, NF-kB "NOT REACHED, not none exists" with the two abstract-level leads. |
+| Receipt fingerprints | Verified. I fetched the Europe PMC fullTextXML for PMC10984967 and PMC13604653 and the SHA-256 values equal the receipt values (38443598: 165213b9e8e180111d996131db11888d924476b94276c6a6bf55f2a21d493b1f; 42792606: 9715ce942d6c8404cbc3fe4ed7f666dbe358ea42af38be08fa51be70d22494df). The 41324728 value equals the held artefact (d6882c35...3eed). My own NCBI efetch XML hashes differ because that route renders the XML differently, so it was not used for the comparison. The 41972676 value (6ffe255a...1499) I did not re-fetch: not verified. |
+| INDEX note and Q09 for 42323821 | Corrected (Q09 now records the embargo notice, HTTP 403, available June 28, 2027). INDEX note for 42323821 reads "abstract only, no full-text artefact" and is right. |
+
+Still wrong or stale (all small):
+1. `output/decisive.tsv` D13: "Full text not reached (bot-check page; publisher blocks XML)" should read "full text embargoed (PMC notice, HTTP 403, available June 28, 2027) and publisher XML withheld"; the producer-side bot-check description is not supported by my observation.
+2. `output/decisive.tsv` D07: add the 30 min to 2 h about 2.6-fold, HIF-1alpha fall at 1.5 to 2 h, BNIP3 significant only at 24 h.
+3. `output/explanations.tsv` E1 prediction cell: "smallest of the set" (see above); E4 level cell still says "centring-dependent sign in neurons", which should read "raw neuron sign is a deposit-scale artefact; centred +0.4 to +0.6".
+4. `output/receipts/*.json`: all five still carry the identical `analysis_at` 23:24:47Z and `event_at` 23:26:47Z (editorial; flagged earlier).
+Not re-checked (not requested): 41972676 fingerprint, EV01/EV02/EV20 notes beyond what the commit shows.
