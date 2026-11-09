@@ -8,18 +8,22 @@
   "START_UTC": "2026-11-09T22:30:00Z",
   "BASELINE": "main 30382215 (development/main same). Worktree .claude/worktrees/it41a, branch task/it41a. IT40 is in its own worktree (task/it40, not yet on main); its final report was not available at S0. Harness identity delivery (worktree idfix) had no commit at S0.",
   "CURRENT_PACKAGE": {
-    "id": "A",
-    "state": "producer delivered 4 sources; resumed once for a targeted NBQX primary-text step (open routes only); verifier next",
-    "delegate_active": "producer add2f17bba2ea62ff (sonnet/medium), resumed 2026-11-09T23:05Z",
-    "updated": "2026-11-09T23:05Z"
+    "id": "A-landing",
+    "state": "package A delivered and verified; checks, battery on a frozen candidate, landing; package B next",
+    "delegate_active": "none",
+    "updated": "2026-11-09T23:55:00Z"
   },
-  "RESUME": "CHECKPOINT 2026-11-09T23:05Z: last verified result = INV-05 closing pass published at 30382215; IT41 design committed 00adbdd3 (task/it41a, worktree .claude/worktrees/it41a). First incomplete work = package A: producer output in disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/ (decisive.tsv 14, comparison.tsv C1-C3, names_used.tsv, 4 staged receipts -81, uncommitted) awaiting the NBQX step, then blind verifier sonnet/high (VERIFIER_BRIEF.md to write), recheck of substantive corrections, then README/consumer_delta/COST_NOTE, checks, landing. Active process: producer agent add2f17bba2ea62ff only. Real dependencies: Harness identity delivery (identity_it41_20261109, lands on main within the hour; reuse, do not rebuild). Next executable step: collect producer report, write VERIFIER_BRIEF.md, dispatch verifier. Package B (HIF1A to BNIP3) follows without a new prompt; light queue only after A and B.",
+  "RESUME": "CHECKPOINT 2026-11-09T23:55Z: last verified result = package A delivered on task/it41a (candidate commit to be frozen for the battery). First incomplete work = A4 landing (checks, battery on unique clone, task_close, safe_push development main), then package B (HIF1A to BNIP3): write BRIEF, producer sonnet/medium, blind verifier sonnet/high. Active processes: none until the battery starts. Dependencies: Harness identity delivery (identity_it41_20261109, lands on main; pass names_used.tsv to Harness, do not rebuild); IT41 integrates consumers. Folder: disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/.",
   "DECISIONS_TAKEN": [
     "2026-11-09 S0: the INV-05 closing pass was already delivered and published (30382215); nothing pending. IT40 final report not found in any worktree at S0 (IT40 is unmerged); next_investigations_it40.md read in place from the it40 worktree (read-only): A1 and A2 rows (primary mechanism papers for NBQX and GYKI 52466; catalogue identity of GYKI 52466) are the open needs this package addresses; B3 (BE1) is the experiment the comparison serves. Harness identity delivery not yet available: names used by each paper are recorded so the match can be made without rebuilding the search.",
     "2026-11-09 A1 design written and committed before any source was opened, including the five demonstrations the block control must give, what the result does not separate, and the A3 rule (alternative only by missing property).",
-    "2026-11-09 monitor verified concretely: host cron has the hourly mandate_watch --all --deliver resume (37 * * * *); the session wrote MANDATE_BOUND for this task and mandate_watch check --self-call then returned this session id (state STOPPED_RESUMABLE because the caller is idle by definition, action RESUME); no in-session recall existed, so one session-only hourly recall (17 * * * *, job 40c5c308, expires in 7 days) was created; the old mandate ORCH-IT40INV05 is COMPLETE/RELEASED and needs none. Automatic resume of a dead session is configured, not proven by a test; in-session cron fires only while the REPL is idle."
+    "2026-11-09 monitor verified concretely: host cron has the hourly mandate_watch --all --deliver resume (37 * * * *); the session wrote MANDATE_BOUND for this task and mandate_watch check --self-call then returned this session id (state STOPPED_RESUMABLE because the caller is idle by definition, action RESUME); no in-session recall existed, so one session-only hourly recall (17 * * * *, job 40c5c308, expires in 7 days) was created; the old mandate ORCH-IT40INV05 is COMPLETE/RELEASED and needs none. Automatic resume of a dead session is configured, not proven by a test; in-session cron fires only while the REPL is idle.",
+    "2026-11-09 A3 not triggered: the verifier checked the five demonstrations of A1 against the known options and none is defeated; the producer's premise (a higher concentration was not tested) was wrong and was corrected. No new molecule. Package A delivered (README, consumer_delta with 10 proposals, COST_NOTE); nothing applied to any consumer; staged receipts in research/receipt_staging/it41a/ not recorded."
   ],
-  "DELEGATIONS": [],
+  "DELEGATIONS": [
+    "Package A producer: asked sonnet/medium, read back medium on every turn; 76 turns; output 95,239; cache read 9,332,864; peak 253,785; 6 sources newly read (partial full text), 6 staged receipts validated, 4 publisher texts unreached (bot checks), 1 targeted NBQX step on open routes, 15 audit corrections applied.",
+    "Package A verifier: asked sonnet/high, read back high on every turn; 62 turns; output 70,647; cache read 8,081,133; peak 239,104; first pass 9 supported / 7 partly / 0 not supported of 16, 3 defective evidence rows of 40; recheck of substantive rows 11 of 11 correct, three cosmetic leftovers fixed by the Orchestrator."
+  ],
   "ESCALATIONS": [],
   "STOP_LOG": [],
   "DEFAULTS_TAKEN": [],
@@ -42,18 +46,21 @@
         },
         {
           "step": "A2-A3 producer reads decisive sources; alternative only if a decisive limit exists",
-          "status": "IN_PROGRESS",
-          "owner": "orchestrator"
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "producer output ampa_comparison_it41_20261109/output (20 decisive rows, 6 staged receipts); A3 not triggered (decision line)"
         },
         {
           "step": "A2 independent verification and one recheck of substantive corrections",
-          "status": "TODO",
-          "owner": "orchestrator"
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "verify/audit.md: first pass and Recheck (11 of 11 substantive rows correct)"
         },
         {
           "step": "A4 delivery (README, consumer_delta, cost note), checks, landing, push",
-          "status": "TODO",
-          "owner": "orchestrator"
+          "status": "IN_PROGRESS",
+          "owner": "orchestrator",
+          "evidence": "README, consumer_delta, COST_NOTE written; checks and battery next"
         }
       ]
     },
