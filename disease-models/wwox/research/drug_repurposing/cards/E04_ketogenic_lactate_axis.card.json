@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "d5a483768d287f068043b0bec9778b8549ff09d7db7ad530e4c8bce03b0497be",
+  "input_sha256": "950bf2581f3d40908e7808df07c3173240317192348c3db97c82fb5f2059c8e5",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -197,7 +197,8 @@
     },
     "not_known": [
       "Whether a WWOX-deficient human neural cell has a measurable bioenergetic defect that a ketone substrate would bypass.",
-      "Whether lactate is raised, normal or low in WWOX-deficient human brain across ages and contexts."
+      "Whether lactate is raised, normal or low in WWOX-deficient human brain across ages and contexts.",
+      "A ketogenic-diet response is reported in 3 of 5 WOREE individuals (lactate 2.4 to 3.3 mmol/L in one individual); the Pdk1 transcript and serum-lactate datum in the Wwox-null MEF and mouse paper is non-neural and measures no PDH."
     ],
     "evidence_against": [
       "Four sources report normal human metabolism in WWOX deficiency (DL-BIO-009); one MRS report has lactate extremely low (DL-BIO-008).",

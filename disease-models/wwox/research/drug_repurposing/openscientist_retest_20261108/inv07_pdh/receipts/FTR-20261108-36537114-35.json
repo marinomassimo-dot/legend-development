@@ -24,9 +24,9 @@
   "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv07_pdh/README.md",
   "disease-models/wwox/research/drug_repurposing/openscientist_retest_20261108/inv07_pdh/evidence.tsv"
  ],
- "prior_receipt": null,
+ "prior_receipt": "FTR-20261105-36537114-21",
  "record_kind": "contemporaneous_receipt",
- "reread_reason": "first_read",
+ "reread_reason": "new_question_outside_prior_coverage",
  "source_fingerprint": null,
  "source_kind": "abstract",
  "source_locator": "PubMed record retrieved through the PubMed tools on 2026-11-08; abstract text only; no full text sought; other actors hold reading claims on this paper",

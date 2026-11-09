@@ -282,7 +282,8 @@
   "NRF2 protein, target activity and ROS in any WWOX-deficient mammalian neural cell.",
   "Cytokine protein, caspase-1 maturation or NFAT activity in any WWOX-deficient neural system.",
   "Whether reactivity, ROS or NRF2 tone is protective, harmful, mixed or composition in WWOX-deficient brain.",
-  "Whether omaveloxolone or monomethyl fumarate acts on Il6/Il1b in microglia at tolerable exposure."
+  "Whether omaveloxolone or monomethyl fumarate acts on Il6/Il1b in microglia at tolerable exposure.",
+  "GSK3 to NRF2 through the Neh6 and beta-TrCP phosphodegron is reported in two papers from one laboratory line (abstract level); no WWOX measurement; lithium acts in wild type too."
  ],
  "evidence_against": [
   "Tnf-a is not significant in the null hippocampus (Il6 only).",

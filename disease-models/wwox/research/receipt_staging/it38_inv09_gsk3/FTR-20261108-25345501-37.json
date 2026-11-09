@@ -17,7 +17,7 @@
  "event_id": "FTR-20261108-25345501-37",
  "evidence_basis": [
   "abstract analysed",
-  "verbatim_locator | proposition: inositol synthesis inhibition (INO1 knockdown) inactivates GSK-3 alpha by increased inhibitory phosphorylation in SK-N-SH cells | Abstract | \"led to the inactivation of GSK-3α by increasing the inhibitory phosphorylation of this kinase\""
+  "verbatim_locator | proposition: inositol synthesis inhibition (INO1 knockdown) inactivates GSK-3 alpha by increased inhibitory phosphorylation in SK-N-SH cells | Abstract | \"led to the inactivation of GSK-3\u03b1 by increasing the inhibitory phosphorylation of this kinase\""
  ],
  "evidence_depth": "abstract_only",
  "outputs": [

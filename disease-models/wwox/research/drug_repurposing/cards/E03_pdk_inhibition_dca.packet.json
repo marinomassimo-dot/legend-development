@@ -31,7 +31,7 @@
     "cell_type": "adult fly head or brain (whole head for metabolomics and RNA-seq)",
     "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
    },
-   "measured_result_note": "The study measured no pyruvate, PDH, PDK, flux, oxygen consumption or NAD/NADH. Whether pyruvate was tested is unknown; the MetaboLights deposit is not publicly retrievable (mtbls12344.md). Pdk, Pdha, Pdhb are absent from the significant gene lists, which is not a test. The paper's own heading and abstract speak of pyruvate metabolism, but that rests on transcript pathway over-representation (KEGG, including Ldh itself; Pepck2, CG11052 and Adh lower), not on a pyruvate, PDH or PDK measurement.",
+   "measured_result_note": "The study reports no pyruvate, PDH, PDK, flux, oxygen consumption or NAD/NADH (omics: top 200 variance features; the supplement lists significant metabolites only; detection not established). Whether pyruvate was tested is unknown; the MetaboLights deposit is not publicly retrievable (mtbls12344.md). Pdk, Pdha, Pdhb are absent from the significant gene lists, which is not a test. The paper's own heading and abstract speak of pyruvate metabolism, but that rests on transcript pathway over-representation (KEGG, including Ldh itself; Pepck2, CG11052 and Adh lower), not on a pyruvate, PDH or PDK measurement.",
    "receipt": "FTR-20261026-42909904-01",
    "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
   },
@@ -115,8 +115,8 @@
   }
  ],
  "p4_fields": {
-  "endpoint_pursued": "A WWOX-linked PDH readout that a PDK inhibitor moves: PDH activity (or PDHA1 serine phosphorylation) and pyruvate fate (labelled glucose into acetyl-CoA, citrate, lactate) in WWOX-deficient versus isogenic human neural cells; only then a functional endpoint.",
-  "functional_evidence_available": "None for WWOX at the activity level. The Lucas-Clarke study measured no pyruvate, PDH, PDK or flux. In the human knockout organoid PDK1 is lower in sign only (inside the single-gene null, p about 0.30; not a demonstrated decrease), the PDK/PDH set is not different from chance and the LDH-to-PDH ratio is not shifted (transcripts).",
+  "endpoint_pursued": "A WWOX-linked PDH readout that a PDK inhibitor moves: PDH activity with phosphorylation at all three E1 sites and activity before and after dephosphorylation, and pyruvate fate (labelled glucose into acetyl-CoA, citrate, lactate) in WWOX-deficient versus isogenic human neural cells; only then a functional endpoint.",
+  "functional_evidence_available": "None for WWOX at the activity level. The Lucas-Clarke study reports no pyruvate (omics: top 200 variance features; the supplement lists significant metabolites only; detection not established), PDH, PDK or flux. In the human knockout organoid PDK1 is lower in sign only (inside the single-gene null, p about 0.30; not a demonstrated decrease), the PDK/PDH set is not different from chance and the LDH-to-PDH ratio is not shifted (transcripts).",
   "temporal_or_model_limit": "Fly study with no measurement in this branch; transcripts from one organoid deposit; compound statements are database rows.",
   "cellular_context": {
    "target_expression": "PDK isoforms are expressed in brain; the WWOX-dependent level is UNKNOWN.",

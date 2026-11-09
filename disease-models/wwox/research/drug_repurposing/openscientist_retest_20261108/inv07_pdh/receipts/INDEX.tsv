@@ -3,4 +3,4 @@ FTR-20261108-42559713-35	42559713	partial_fulltext_read	null	yes
 FTR-20261108-40290041-35	40290041	partial_fulltext_read	null	yes
 FTR-20261108-42012479-35	42012479	abstract_only	null	yes
 FTR-20261108-16517405-35	16517405	abstract_only	null	yes
-FTR-20261108-36537114-35	36537114	abstract_only	null	yes
+FTR-20261108-36537114-35	36537114	abstract_only	FTR-20261105-36537114-21	yes

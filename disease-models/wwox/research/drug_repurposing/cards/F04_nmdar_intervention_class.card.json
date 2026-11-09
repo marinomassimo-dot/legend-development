@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "e91419d6cbb6d73499cbf14d5e3f8510ab0f506f4b20420407f036b859881db6",
+  "input_sha256": "9da6db9e196b2069ad7a952d7ec4834db86e6666f5f851748d798ba8335abc29",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -564,7 +564,8 @@
       "The bursting is cortical; hippocampal slices of the same mice do not burst.",
       "A competitive full-block antagonist (selfotel) failed with a harm signal in adults; NMDAR blockade in the developing rat brain triggers apoptosis (abstract level); memantine has no paediatric effectiveness on its label.",
       "Potency tables are heterogeneous: voltage, Mg2+, Ca2+, glycine, assay type and species change the number by orders of magnitude, row counts overstate independence, and subunit selectivity is assay-conditional.",
-      "Every clinical-stage GluN2B NAM study is in gain-of-function GRIN disease, where the sign is known; WWOX has no receptor-level datum."
+      "Every clinical-stage GluN2B NAM study is in gain-of-function GRIN disease, where the sign is known; WWOX has no receptor-level datum.",
+      "Selfotel: the head-injury trial was stopped after a signal in a stroke study, and a later analysis did not confirm excess mortality in head injury (abstract level); perzinfotel is NR2A-preferring; the carbenoxolone half of the gap-junction logic is not specific to gap junctions."
     ],
     "bridge_gaps_exposed": [
       "d-APV is carried by F01 only; this card carries no assertion on d-APV, so the bridge forms no sign comparison against the disease rows of this card.",

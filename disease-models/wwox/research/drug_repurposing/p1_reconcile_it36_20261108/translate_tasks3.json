@@ -1,0 +1,78 @@
+{
+ "keymap": {
+  "028c442d8086": "8ea04146ff72",
+  "0d49c490f477": "dce2c85fd6e6",
+  "2c464c171a0a": "9249d778dc6e",
+  "30f82b387e40": "0c7b9ad59f54",
+  "375c36b55dc4": "7c190faff741",
+  "3d7a099f8b47": "43f23e7d0884",
+  "996d51daea80": "4aad77323ff8",
+  "aca79cf8612e": "1fb921424dfb",
+  "c9f8d6f8ad54": "876203c73520",
+  "dd79afec8e2f": "fce4f6168e58",
+  "e6e1027770e5": "9314d70ef04d",
+  "ec3b8d38c180": "940cff2aaec5"
+ },
+ "tasks": [
+  {
+   "key": "028c442d8086",
+   "mode": "ADD",
+   "english": "[IT39] Selfotel: the head-injury trial was stopped after a signal in a stroke study, and a later analysis did not confirm excess mortality in head injury (abstract level). Perzinfotel is NR2A-preferring. The carbenoxolone half of the gap-junction logic carries its own caveat (it is not specific to gap junctions)."
+  },
+  {
+   "key": "0d49c490f477",
+   "mode": "ADD",
+   "english": "[IT39] A ketogenic-diet response is reported in 3 of 5 WOREE individuals (lactate 2.4 to 3.3 mmol/L in one individual); the Pdk1 transcript and serum-lactate datum in the Wwox-null MEF and mouse paper is non-neural and measures no PDH."
+  },
+  {
+   "key": "2c464c171a0a",
+   "mode": "ADD",
+   "english": "[IT39 dream] In the same lines, read the HIF and glycolytic target genes beside the neuronal genes, and add a HIF1A or EPAS1 knockdown arm for the glycolytic readout: a MYC to HIF1A edge exists at database level (sign context-dependent) and HIF-axis data exist in WWOX cells (non-neural), so the MYC change could act on glycolysis, be reached from it, or follow a shared maturation or composition change; the measurement separates these (exploratory, no compound)."
+  },
+  {
+   "key": "30f82b387e40",
+   "mode": "ADD",
+   "english": "[IT39] Model identity of the conditional line is Synapsin-Cre; a statement of zero hits for parvalbumin loss is wrong (about 44 percent fewer PV-positive cells in the 2-week full-knockout hippocampus); perineuronal-net counter-evidence exists and two explanations of an external report are mutually inconsistent."
+  },
+  {
+   "key": "375c36b55dc4",
+   "mode": "ADD",
+   "english": "[IT39] The Src and Fyn chain to NRF2 from an external report rests on a retracted article (21690096); no consumer carries the chain now, its other support is a 2007 paper from the same laboratory line (not independent), and reductive stress is a transfer from cardiac models."
+  },
+  {
+   "key": "3d7a099f8b47",
+   "mode": "ADD",
+   "english": "[IT39] Transfer context only: two further ISR reports (VWM line, myelin readouts read in one) do not test WWOX; the biochemical report used as the bridge runs against its use; for human neural cells the absence is 'none found in two PubMed strings', the fly datum is conditional on neuronal Abeta42, and a non-neural WWOX paper links PERK and IRE1."
+  },
+  {
+   "key": "996d51daea80",
+   "mode": "ADD",
+   "english": "[IT39] The transfer from KCNQ2 and TSC is analogy; genotype stratification is established for mortality only; lithium is not the only existing-drug node (ethosuximide was also tested)."
+  },
+  {
+   "key": "aca79cf8612e",
+   "mode": "ADD",
+   "english": "[IT39] The panel of 'structurally unrelated' antagonists is not independent: two of the listed antagonists are the same molecule under different names (one of them is Z944), and Z944 and TTA-P2 share a core chemical scaffold."
+  },
+  {
+   "key": "c9f8d6f8ad54",
+   "mode": "ADD",
+   "english": "[IT39] An inositol-depletion arm is not GSK-3-free (GSK-3 alpha inactivated, beta not significantly altered; one paper, one isoform); the S9A cross is not an attribution control; time-gated dosing has no timing source."
+  },
+  {
+   "key": "dd79afec8e2f",
+   "mode": "ADD",
+   "english": "[IT39] GSK3 context rows: a GSK3 inhibitor run after Foxg1 knockdown goes the opposite way to the inhibitor-raises-differentiation reports, and a 2026 review holds both directions; the slice paper's finding is neuron-specific wording, not oligodendrocyte-wide."
+  },
+  {
+   "key": "e6e1027770e5",
+   "mode": "ADD",
+   "english": "[IT39] Corrections carried from the repeat: the ketogenic paper, the MC1568 and Bdnf statement, the pooled SPR range, lithium specificity and the source type of ICP0 were each misstated in an external report; human primary muscle cells with HDAC5 knockdown show lower GLUT1 expression (opposite in sign to that report's table); a route through HDAC4, MEF2A and GLUT1 exists."
+  },
+  {
+   "key": "ec3b8d38c180",
+   "mode": "ADD",
+   "english": "[IT39] Ivabradine blocks sag and hyperpolarises cortical L5 and L6 neurons in normal rat slices, and injection into somatosensory cortex cut absence-seizure time by 96 percent against 40 percent in thalamic VB (abstract); the GAERS authors read Ih as not an adaptive response to spike-wave discharges (input resistance fell, resting potential and sag unchanged), which sits beside the discordant precedents."
+  }
+ ]
+}

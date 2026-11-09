@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "f4845396f79a676b575b0b8d479f477ed33274c94ee546b7f013d904f5eb4607",
+  "input_sha256": "e707863380ddf3133675c33dab3858e6eb30bbb05daed5f4b17f6a82681f06d0",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -363,7 +363,7 @@
           "cell_type": "whole animal and cultured neurons",
           "developmental_stage": "adult and in vitro"
         },
-        "measured_result_note": "Two-sided: a HIF agonist (DMOG) delayed epileptogenesis in the chronic phase and an inhibitor did the opposite, with no acute effect; HIF-1alpha overexpression raised CaV3.2 promoter activity and network firing; lowering HIF-1alpha, HDAC5 and PFKFB3 together accompanied fewer seizures; chronic neuronal activity itself raises LDHA through AMPK and HIF-1alpha. A glycolytic shift in a hyperactive network need not be WWOX-dependent. Abstract level for most rows; both agonist and inhibitor are non-selective.",
+        "measured_result_note": "Two-sided: a HIF agonist (DMOG) delayed epileptogenesis in the chronic phase and an inhibitor did the opposite, with no acute effect; HIF-1alpha overexpression raised CaV3.2 promoter activity and network firing; lowering HIF-1alpha, HDAC5 and PFKFB3 together accompanied fewer seizures; chronic neuronal activity itself raises LDHA through AMPK and HIF-1alpha. A glycolytic shift in a hyperactive network need not be WWOX-dependent. Abstract level for most rows; both agonist and inhibitor are non-selective. (abstract level; HIF gain of function raises firing in cultured neurons; mediation by CaV3.2 is not tested in the abstract, although the authors' closing sentence is causal; no WWOX to CACNA link found)",
         "evidence_scope": "OTHER_DISEASE_PRECEDENT"
       }
     ],
@@ -451,7 +451,8 @@
       "Mouse P17 brain shows no elevation of HIF-axis transcripts.",
       "No activity annotation in the compound database, a mustard alert and no CNS data for the one named compound.",
       "The organoid glycolytic genes also fall with culture time (maturity or composition).",
-      "IT12 P2-P47T: the selective hypoxia-response pattern of the human organoid is not reproduced in adult P47T forebrain or in the four P17 deletion contrasts (transcripts; partial-loss allele; seizure, activity and composition rivals not excluded)."
+      "IT12 P2-P47T: the selective hypoxia-response pattern of the human organoid is not reproduced in adult P47T forebrain or in the four P17 deletion contrasts (transcripts; partial-loss allele; seizure, activity and composition rivals not excluded).",
+      "Reports of HIF-linked calcium-channel expression are isoform- and context-specific (Cav3.2 up in three, Cav3.1 down in one; rat cardiac, PC12 and spinal systems, abstract level); no WWOX to T-type link in PubMed title, abstract or MeSH on two routes; full text not searched."
     ],
     "bridge_gaps_exposed": [
       "The WWOX-side rows are non-neural or transcript-level and the compound rows are cancer-model abstracts: no comparison is formed where target, endpoint and every context dimension must match."

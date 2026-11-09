@@ -81,10 +81,10 @@ time; it does not redistribute or license the article text.
 
 | Status | Records | Share |
 |---|---:|---:|
-| **Not found by identifier** — run the intake gate | 260 | 37% |
+| **Not found by identifier** — run the intake gate | 259 | 37% |
 | **Catalogued, never processed** — the reading debt | 122 | 17% |
 | Known to the tracking log only | 78 | 11% |
-| Processed from the abstract | 11 | 2% |
+| Processed from the abstract | 12 | 2% |
 | Partial full text read | 69 | 10% |
 | Full text read | 166 | 24% |
 
@@ -534,7 +534,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [42464650](https://pubmed.ncbi.nlm.nih.gov/42464650/) | 2026 | ✅ | Journal Article; Retraction Notice | unmatched | ℹ️ RETRACTION NOTICE — [Retracted] p73 participates in WWOX-mediated apoptosis in leukemia cells. |
 | [40263068](https://pubmed.ncbi.nlm.nih.gov/40263068/) | 2025 | ✅ | Published Erratum | unmatched | ℹ️ CORRECTION NOTICE — Corrigendum to "WWOX attenuates the progression of gallbladder cancer by suppressing cellular glycolysis through the modulation of the P73/HIF-1a signaling pathway" [Tissue Cell 95 (2025) 102885]. |
 | [40006511](https://pubmed.ncbi.nlm.nih.gov/40006511/) | 2025 | ✅ | Journal Article | unmatched | Novel Hydrogel-Mediated Lentiviral Gene Delivery via Intravesical Administration for Bladder Cancer Treatment. |
-| [39933386](https://pubmed.ncbi.nlm.nih.gov/39933386/) | 2025 | ✅ | Journal Article | unmatched | Infantile Epileptic Spasms Syndrome: Unveiling clinical and genetic variability in a case series from Argentina. |
 | [33074286](https://pubmed.ncbi.nlm.nih.gov/33074286/) | 2021 | ✅ | Journal Article; Meta-Analysis; Research Support, N.I.H., Extramural | unmatched | ✎ corrected — Novel Alzheimer Disease Risk Loci and Pathways in African American Individuals Using the African Genome Resources Panel: A Meta-analysis. |
 | [30820047](https://pubmed.ncbi.nlm.nih.gov/30820047/) | 2019 | ✅ | Journal Article; Meta-Analysis; Research Support, Non-U.S. Gov't | unmatched | ✎ corrected — Genetic meta-analysis of diagnosed Alzheimer's disease identifies new risk loci and implicates Aβ, tau, immunity and lipid processing. |
 | [28742274](https://pubmed.ncbi.nlm.nih.gov/28742274/) | 2017 | ✅ | Journal Article | unmatched | Whole exome sequencing identified genetic variations in Chinese hemangioblastoma patients. |
@@ -565,7 +564,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [41776383](https://pubmed.ncbi.nlm.nih.gov/41776383/) | 2026 | — | Journal Article; Multicenter Study | screened | Pharmacogenomics of response to interferon-beta and glatiramer acetate in Multiple Sclerosis: A multi-centric study. |
 | [28151481](https://pubmed.ncbi.nlm.nih.gov/28151481/) | 2017 | ✅ | Journal Article; Retracted Publication | screened | 🛑 RETRACTED — Epigenetic regulation of HGF/Met receptor axis is critical for the outgrowth of bone metastasis from breast carcinoma. |
 
-*(showing all 460 outstanding records)*
+*(showing all 459 outstanding records)*
 
 ## Already processed from this seed
 
@@ -623,6 +622,7 @@ for an entirely unprocessed record.
 | [15692750](https://pubmed.ncbi.nlm.nih.gov/15692750/) | 2005 | ✅ | full text | CORPUS P324 | Frequent loss of WWOX expression in breast cancer: correlation with estrogen receptor status. |
 | [15266310](https://pubmed.ncbi.nlm.nih.gov/15266310/) | 2004 | ✅ | full text | CORPUS P244 | Frequent downregulation and loss of WWOX gene expression in human hepatocellular carcinoma. |
 | [30470736](https://pubmed.ncbi.nlm.nih.gov/30470736/) | 2018 | ✅ | full text | receipt FTR-20260909-30470736-01 | ℹ️ CORRECTION NOTICE — Author Correction: WWOX controls hepatic HIF1α to suppress hepatocyte proliferation and neoplasia. |
+| [39933386](https://pubmed.ncbi.nlm.nih.gov/39933386/) | 2025 | ✅ | abstract only | receipt FTR-20261108-39933386-38 | Infantile Epileptic Spasms Syndrome: Unveiling clinical and genetic variability in a case series from Argentina. |
 | [15126504](https://pubmed.ncbi.nlm.nih.gov/15126504/) | 2004 | ✅ | abstract only | receipt FTR-20261107-15126504-70 | Down-regulation of WW domain-containing oxidoreductase induces Tau phosphorylation in vitro. A potential role in Alzheimer's disease. |
 | [30783266](https://pubmed.ncbi.nlm.nih.gov/30783266/) | 2019 | ✅ | partial full text | receipt FTR-20260921-30783266-01 | ℹ️ CORRECTION NOTICE — Correction: The phenotypic spectrum of WWOX-related disorders: 20 additional cases of WOREE syndrome and review of the literature. |
 | [41442931](https://pubmed.ncbi.nlm.nih.gov/41442931/) | 2026 | — | abstract only | PAPER 003 | Vigabatrin-Associated Brain Magnetic Resonance Imaging Abnormalities in Two Children With WW domain-containing oxidoreductase-Related Epileptic Encephalopathy Syndrome. |
@@ -822,7 +822,7 @@ for an entirely unprocessed record.
 | [21476439](https://pubmed.ncbi.nlm.nih.gov/21476439/) | 2011 | — | full text | PAPER 244 | WWOX oxidoreductase--substrate and enzymatic characterization. |
 | [16288044](https://pubmed.ncbi.nlm.nih.gov/16288044/) | 2005 | — | full text | PAPER 569 | Activated tyrosine kinase Ack1 promotes prostate tumorigenesis: role of Ack1 in polyubiquitination of tumor suppressor Wwox. |
 
-*(showing all 246 processed records from the seed)*
+*(showing all 247 processed records from the seed)*
 
 ## How to work one
 
