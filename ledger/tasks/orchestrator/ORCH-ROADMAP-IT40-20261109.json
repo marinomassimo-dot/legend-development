@@ -16,9 +16,9 @@
    "steps": [
     {
      "step": "Baseline: remote main, state, active tasks, binding, monitor with --self-call",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "remote main edfa347f verified equal to local; mandate bound (MANDATE_BOUND), no new automation; worktree task/it40; Harness delivered hypothesis_package.py (commit 3b03ae00, merged locally, landing by Harness), science session works INV-05 GluN2B range in nmda_composition_discrim_20261109 (nothing applied by me from it)"
     }
    ]
   },
@@ -27,9 +27,9 @@
    "steps": [
     {
      "step": "Reconcile membrane (7) and AMPA/NMDA (12) proposals with consumers; staged receipts; apply via existing paths",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "19 proposals reconciled in consume_it40_20261109/RECONCILIATION.md (applied 17, corrected 3 of them, open-question rows 3, out of scope 1); 21 staged receipts recorded (ledger 1,506 to 1,527, parents set from the ledger, none forced); verifier corrections applied"
     }
    ]
   },
@@ -38,9 +38,9 @@
    "steps": [
     {
      "step": "DREAM-4: verify A,B; complete C at the true source of the open-questions map (200-char limit); check D",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "A,B verified applied; C applied in the map (batch_sci_20261105/map/open_questions_map.tsv + dream4_delta_c_it40.md); the 200-char cap is a column convention of a hand-edited table, not a regenerating derivative (IT39 statement corrected); D: generator reads no such field, nothing to add; EBI draft untouched"
     }
    ]
   },
@@ -49,9 +49,9 @@
    "steps": [
     {
      "step": "Baseline of generative capacity on contrasting cases (before changes)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "generation_it40_20261109/README.md and measure_it40.tsv: S17 regenerated, identical to S16 on all 994 rows; stopping points: representation (0 of 994 proposals on receptor/channel targets), composition/propagation (matrix without consumer), selection (Kv7 offered without reason)"
     }
    ]
   },
@@ -60,9 +60,9 @@
    "steps": [
     {
      "step": "Conditional hypotheses consumable (Harness link if delivered); representation without invented gene-gene arcs",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "conditional_proposals.py + conditional_proposals_it40.tsv (6 records, seven fields kept, abstain for MH1 and MH3, no gene arc), via Harness reader; link_states set CARRIED_IN_TEXT with real substrings; matrix_column added to alternatives.tsv"
     }
    ]
   },
@@ -71,9 +71,9 @@
    "steps": [
     {
      "step": "Mechanism-first pharmacological search on at least one complete case",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "mechsearch_it40_20261109: six action-context-benefit relations searched before compound names; distinct molecules, direction, record granularity, identity check of 15 named tools (11 confirmed, 4 not)"
     }
    ]
   },
@@ -82,9 +82,9 @@
    "steps": [
     {
      "step": "Measure: current vs simple baseline vs new path, ablation on same inputs",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "measure_it40.tsv: current path vs simple baseline vs new path, ablation without the link; no predictive claim"
     }
    ]
   },
@@ -93,9 +93,9 @@
    "steps": [
     {
      "step": "Independent verification of decisive conclusions with originals",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "independent sonnet/high verifier with originals (generation_it40_20261109/verify/VERDICTS.md): overturned five items, all corrected"
     }
    ]
   },
@@ -104,9 +104,9 @@
    "steps": [
     {
      "step": "Dashboard: updated investigations and conditional hypotheses, five languages, real publication",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "six conditional physiological hypotheses under INV-05 and INV-18, five languages, both editions, no compound name; test_stage_it40.py renders-check; shareable audit required rewording of compound names (done)"
     }
    ]
   },
@@ -115,9 +115,9 @@
    "steps": [
     {
      "step": "Open questions: in-silico / new measure / ill-posed; next package",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "generation_it40_20261109/next_investigations_it40.md: in-silico/public vs new measure vs not yet posed, ordered by decision changed, importance, documented cost; map rows IT40-Q01..03"
     }
    ]
   },
@@ -126,9 +126,9 @@
    "steps": [
     {
      "step": "Queue after main proof: second hypothesis type, relations beyond NB-1, HIF1A-BNIP3, identity blockers, short Dream",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "relations beyond NB-1: only one generator_relations.tsv exists; HIF1A to BNIP3 not started; identity blockers listed (GYKI 52466, Ro 25-6981, Brilliant Blue FCF) not resolved; short Dream pass folded into the self-evaluation"
     }
    ]
   },

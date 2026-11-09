@@ -14,6 +14,10 @@ cur = {l: json.load(open(I18N / f"content_{l}.json")) for l in LANGS}
 def head_source():
     out = subprocess.run(["git", "show", "edfa347f:disease-models/wwox/research/drug_repurposing/view/i18n/content_source.json"], capture_output=True, text=True, cwd=HERE.parents[4], check=True).stdout
     return json.loads(out)
+def base_trans(l):
+    out = subprocess.run(["git", "show", f"edfa347f:disease-models/wwox/research/drug_repurposing/view/i18n/content_{l}.json"], capture_output=True, text=True, cwd=HERE.parents[4], check=True).stdout
+    return json.loads(out)
+BASE = {l: base_trans(l) for l in LANGS}
 def tasks():
     old = head_source(); T = {}
     for k, v in src.items():
@@ -23,7 +27,7 @@ def tasks():
         new = v["text"]
         best = None
         for ok, ov in old.items():
-            if ov.get("src") == "en" and ov["text"] != new and new.startswith(ov["text"].rstrip()[:max(40, len(ov["text"].rstrip()) - 1)]) and ok in cur["fr"]:
+            if ov.get("src") == "en" and ov["text"] != new and new.startswith(ov["text"].rstrip()[:max(40, len(ov["text"].rstrip()) - 1)]) and ok in BASE["fr"]:
                 if best is None or len(ov["text"]) > len(old[best]["text"]): best = ok
         if best and not new.startswith(old[best]["text"].rstrip()): best = None
         if best:
@@ -39,7 +43,7 @@ def merge(fp):
             if l not in t["langs"] or k not in tr or l not in tr[k]: continue
             text = tr[k][l]
             if t["mode"] == "EDIT":
-                text = cur[l][t["old_key"]].rstrip() + " " + text
+                text = (cur[l].get(t["old_key"]) or BASE[l][t["old_key"]]).rstrip() + " " + text
             cur[l][k] = text; n += 1
     for l in LANGS:
         json.dump(cur[l], open(I18N / f"content_{l}.json", "w"), indent=1, ensure_ascii=False, sort_keys=True)

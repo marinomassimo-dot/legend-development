@@ -86,5 +86,24 @@ class ReaderView(unittest.TestCase):
         m = rv.physiological_view(DR)
         self.assertEqual({k: len(v) for k, v in m.items()}, {"INV-05": 3, "INV-18": 3})
 
+class Rendered(unittest.TestCase):
+    """The built pages: both editions, all five languages, carry the block under both investigations, with the language's own heading and no compound name."""
+    HEAD = {"it": "Ipotesi fisiologiche condizionali", "en": "Conditional physiological hypotheses", "fr": "Hypothèses physiologiques conditionnelles", "es": "Hipótesis fisiológicas condicionales", "de": "Bedingte physiologische Hypothesen"}
+
+    def test_pages(self):
+        seen = set()
+        for p in sorted((DR / "view").glob("index*.html")):
+            h = p.read_text(encoding="utf-8")
+            lang = re.search(r'<html lang="(\w+)"', h).group(1)
+            seen.add((p.name.startswith("index_shareable"), lang))
+            self.assertEqual(h.count('class="inv-phys"'), 2, p.name)
+            self.assertIn(self.HEAD[lang], h, p.name)
+            blocks = re.findall(r'<details class="inv-phys">.*?</details>', h, re.S)
+            self.assertEqual(len(blocks), 2)
+            for b in blocks:
+                self.assertIsNone(NAMES.search(re.sub(r"<[^>]+>", " ", b)), p.name)
+        self.assertEqual(len(seen), 10, sorted(seen))
+
+
 if __name__ == "__main__":
     unittest.main()
