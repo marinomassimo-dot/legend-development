@@ -1,0 +1,80 @@
+{
+  "_schema": "task record, Annex A.1c",
+  "TASK_ID": "ORCH-IT41-20261109",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "HIGH",
+  "OBJECTIVE": "Operator mandate pasted 2026-11-09 (IT41 scientific session): usable pharmacological comparisons and one new mechanistic premise, in sequential packages. Package A: the AMPA comparison (NBQX, GYKI 52466, perampanel already read), design fixed before the search, original sources, a small alternative only when a decisive limit exists. Package B (after A is delivered, if sustainable): HIF1A to BNIP3 as a premise distinct from HIF1A to HK2, three proposals without an investigation. Light queue only after A and B: public feasibility of a Drosophila Wwox-loss model. One producer and one independent verifier in sequence per package, no recursive delegation, reuse the verifier for targeted corrections. Harness verifies problematic chemical identities; the Orchestrator reuses that delivery. Nothing is applied to a consumer; IT41 integrates.",
+  "START_UTC": "2026-11-09T22:30:00Z",
+  "BASELINE": "main 30382215 (development/main same). Worktree .claude/worktrees/it41a, branch task/it41a. IT40 is in its own worktree (task/it40, not yet on main); its final report was not available at S0. Harness identity delivery (worktree idfix) had no commit at S0.",
+  "CURRENT_PACKAGE": {
+    "id": "A",
+    "state": "design fixed (A1_design_before_search.md), producer brief written, dispatch next",
+    "delegate_active": "none",
+    "updated": "2026-11-09T22:30:00Z"
+  },
+  "RESUME": "Package folder disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/. Producer sonnet/medium, then blind verifier sonnet/high, corrections by SendMessage, one recheck only for substantive corrections. Unique /tmp names; never touch other sessions' directories.",
+  "DECISIONS_TAKEN": [
+    "2026-11-09 S0: the INV-05 closing pass was already delivered and published (30382215); nothing pending. IT40 final report not found in any worktree at S0 (IT40 is unmerged); next_investigations_it40.md read in place from the it40 worktree (read-only): A1 and A2 rows (primary mechanism papers for NBQX and GYKI 52466; catalogue identity of GYKI 52466) are the open needs this package addresses; B3 (BE1) is the experiment the comparison serves. Harness identity delivery not yet available: names used by each paper are recorded so the match can be made without rebuilding the search.",
+    "2026-11-09 A1 design written and committed before any source was opened, including the five demonstrations the block control must give, what the result does not separate, and the A3 rule (alternative only by missing property)."
+  ],
+  "DELEGATIONS": [],
+  "ESCALATIONS": [],
+  "STOP_LOG": [],
+  "DEFAULTS_TAKEN": [],
+  "AUTHORISED_QUEUE_20261109B": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_1": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "S0 close INV-05 residuals and reconcile the baseline",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "INV-05 closing pass published at 30382215; baseline and IT40 material read; decision line in DECISIONS_TAKEN"
+        },
+        {
+          "step": "A1 fix the AMPA comparison before searching",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "ampa_comparison_it41_20261109/A1_design_before_search.md"
+        },
+        {
+          "step": "A2-A3 producer reads decisive sources; alternative only if a decisive limit exists",
+          "status": "TODO",
+          "owner": "orchestrator"
+        },
+        {
+          "step": "A2 independent verification and one recheck of substantive corrections",
+          "status": "TODO",
+          "owner": "orchestrator"
+        },
+        {
+          "step": "A4 delivery (README, consumer_delta, cost note), checks, landing, push",
+          "status": "TODO",
+          "owner": "orchestrator"
+        }
+      ]
+    },
+    "OBJ_2": {
+      "order": 2,
+      "steps": [
+        {
+          "step": "B HIF1A to BNIP3 premise package (after A is delivered, if sustainable)",
+          "status": "TODO",
+          "owner": "orchestrator"
+        }
+      ]
+    },
+    "OBJ_3": {
+      "order": 3,
+      "steps": [
+        {
+          "step": "Light queue: public feasibility of a Wwox-loss Drosophila model (only after A and B)",
+          "status": "TODO",
+          "owner": "orchestrator"
+        }
+      ]
+    }
+  }
+}
