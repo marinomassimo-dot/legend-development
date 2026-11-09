@@ -7,7 +7,7 @@
  "OBJECTIVE": "IT40: from available knowledge to effective pharmacological generation; membrane and AMPA/NMDA deliveries consumed, DREAM-4 C, conditional hypotheses, mechanism-first search, measured contribution.",
  "START_UTC": "2026-11-09T12:00:00Z",
  "RESUME": {
-  "note": "battery on 1dd89027 FAIL (3 own suites: test_release_runner_verdict, test_release_surface, test_stage_it39: unittest.main without verbosity=2 in the new test, 8 new scripts with a shebang and no +x, questions_it39.md surface not regenerated after INV text changed); fixed; IT40b (INV-05 delivery 38a5f73b) applied on top; new final candidate to be battery-tested"
+  "note": "IT40 P12: publish record commit over 560601df with --expect-sha, then CI, site, closure; IT41 queued (ORCH-ROADMAP-IT41-20261109)"
  },
  "AUTHORISED_QUEUE_20261108": {
   "MANDATE_STATE": "OPEN",
@@ -137,9 +137,9 @@
    "steps": [
     {
      "step": "Persistence, battery on frozen SHA, publish with SHA check, CI, site, cleanup, final report",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Batteries by SHA: 1dd89027 FAIL (3 own suites: test_release_runner_verdict, test_release_surface, test_stage_it39; log kept /tmp/bat_it40_1dd89027_FAIL.log; causes: unittest.main without verbosity=2, 8 new scripts with shebang and no +x, questions_it39.md surface not regenerated after investigation text changed; fixed, not rerun on that SHA); 560601df PASS WITH SKIPS (224 targets, 11 skipped, local catalogue cache). Includes Harness e53950a3 and science closing pass 5ba94fd0 (already on development/main as 30382215). Publish, CI and site pending."
     }
    ]
   }
