@@ -3943,6 +3943,7 @@ def build_ranking(dr: Path, cur: dict, source: str):
         "investigations": investigations_view(J.get("investigations"), cur["cands"], full, load_allowlist(dr)),
         "investigations_context": investigations_context_view(J.get("investigations_context"), full),
         "investigation_comparators": comparators_view(dr, full),     # IT39 P10: comparators by investigation; names and details only in the full edition, counts in both
+        "compound_view": compound_view(dr, full),     # IT41 P9: short list of compounds and hypotheses by research order, kinds marked; names and registry notes only in the full edition
         "investigation_physiological": physiological_view(dr),     # IT40 P9: conditional physiological hypotheses by investigation (observed, hypothesised, alternatives, what strengthens, what weakens)
         "conditional_hypotheses": conditional_hypotheses_view(J.get("conditional_hypotheses"), cur["cands"], full, load_allowlist(dr)),
         "further_investigations": further_investigations_view(J.get("further_investigations"), cur["cands"], full, load_allowlist(dr)),
@@ -4347,6 +4348,32 @@ def physiological_view(dr: Path) -> dict:
     return out
 
 
+COMPOUND_FILE = "generation_it41_20261109/compound_view.tsv"
+COMPOUND_KINDS = ("control", "probe", "known_requalified", "emerged", "unresolved", "weakened")
+COMPOUND_TEXT = ("label", "action", "rationale", "open_premise", "counter", "next_test")
+
+
+def compound_view(dr: Path, full: bool) -> list:
+    """IT41 P9: the short list of compounds and hypotheses to investigate, in research order (the order of the next investigation, not an efficacy order). The full edition carries the compound
+    names and the registry-derived notes (ChEMBL: CC BY-SA 3.0; GtoPdb 2026.3.1: ODbL / CC BY-SA 4.0); the shareable edition carries only the own-text fields and the kind: names and registry
+    values stay out, as the licence reading in catalog/README.md requires. Absent file: an empty list."""
+    fp = Path(dr) / COMPOUND_FILE
+    if not fp.exists():
+        return []
+    out = []
+    with open(fp, encoding="utf-8", newline="") as fh:
+        for r in csv.DictReader(fh, delimiter="\t"):
+            if r["kind"] not in COMPOUND_KINDS:
+                raise SystemExit(f"compound_view: unknown kind {r['kind']!r} in {r['item_id']}")
+            d = {"order": int(r["order"]), "item_id": r["item_id"], "inv_id": r["inv_id"], "kind": r["kind"]}
+            d.update({k: r[k] for k in COMPOUND_TEXT})
+            if full:
+                d["name_full"] = r["name_full"]
+                d["registry_note"] = r["registry_note"]
+            out.append(d)
+    return sorted(out, key=lambda x: x["order"])
+
+
 INV_FIELDS = ("rank", "tie_group", "intervention", "question", "why_now", "evidence_available", "evidence_depth", "decisive_uncertainty", "next_test", "origin_class", "novelty_perimeter", "movement_reason")
 INV_ORIGINS = ("known_in_wwox", "generated_by_legend", "external_transferred")
 INV_MAX = 10
@@ -4361,7 +4388,7 @@ UI_IT20B = {
     "iv_pending": "In preparazione: l'elenco è generato da un'analisi in corso e non è ancora nei dati di questa versione. Nessuna voce viene mostrata al suo posto.",
     "iv_pos": "Posizione", "iv_tie": "pari merito", "iv_int": "Composto o intervento", "iv_q": "Domanda", "iv_why": "Motivo della priorità", "iv_ev": "Evidenza disponibile",
     "iv_depth": "Solidità dell'evidenza (profondità di lettura)", "iv_unc": "Incertezza decisiva", "iv_next": "Prossimo test", "iv_nov": "Novità, nel perimetro verificato", "iv_move": "Motivo dello spostamento",
-    "iv_more": "Dettagli scientifici della riga", "iv_fs_h": "Tipo di riga", "iv_fc_h": "Comparatori", "iv_fc_mech": "Con comparatore che separa il meccanismo", "iv_fc_func": "Solo comparatori dell'esito funzionale", "iv_fc_none": "Nessun comparatore nei file", "iv_ph_h": "Ipotesi fisiologiche condizionali", "iv_ph_sum": "{n} ipotesi condizionali, con alternative e criteri per rafforzarle o indebolirle", "iv_ph_note": "Sono domande formulate con le loro condizioni, non dati acquisiti: nessun composto è proposto qui e nessun legame fra geni è dedotto. L'assenza di un esperimento non è un danno dimostrato.", "iv_ph_status": "ipotesi esplorativa", "iv_ph_obs": "Che cosa è osservato", "iv_ph_hyp": "Che cosa è ipotizzato", "iv_ph_alt": "Alternative che restano", "iv_ph_str": "Che cosa la rafforzerebbe", "iv_ph_weak": "Che cosa la indebolirebbe", "iv_cmp_h": "Comparatori", "iv_cmp_sum": "{f} dell'esito funzionale, {m} che separano il meccanismo", "iv_cmp_none": "Nessun comparatore nei file consultati per questa indagine.", "iv_cmp_role_functional_outcome": "esito funzionale", "iv_cmp_role_mechanism_separating": "separa il meccanismo", "iv_cmp_limits": "limiti di selettività", "iv_cmp_src": "fonte", "iv_cmp_names_hidden": "i nomi dei composti non sono nell'edizione condivisibile", "iv_class_note": "Le categorie «nuova combinazione» e «indebolita o riaperta» non sono determinabili dai campi disponibili e non sono mostrate; la riga indica soltanto origine e tipo di riga.", "iv_f_h": "Mostra", "iv_f_all": "Tutte", "iv_legend_h": "Come leggere l'origine di ogni riga",
+    "iv_more": "Dettagli scientifici della riga", "iv_fs_h": "Tipo di riga", "iv_fc_h": "Comparatori", "iv_fc_mech": "Con comparatore che separa il meccanismo", "iv_fc_func": "Solo comparatori dell'esito funzionale", "iv_fc_none": "Nessun comparatore nei file", "cv_h": "Composti e ipotesi da indagare", "cv_lead": "Breve elenco in ordine di ricerca: il numero indica quale indagine conviene fare prima per cambiare una decisione, non quanto un composto sia efficace. Non è una graduatoria di cure e non è una top-five: contiene quello che il lavoro ha prodotto.", "cv_order": "Ordine di ricerca", "cv_more": "Azione, motivo, premessa aperta, controevidenze e prossimo test", "cv_act": "Azione", "cv_rat": "Perché indagarlo", "cv_prem": "Premessa aperta", "cv_cnt": "Controevidenze e limiti", "cv_next": "Prossimo test e comparatore", "cv_reg": "Note dai registri (solo edizione completa)", "cv_legend_h": "Come leggere i tipi di voce", "cv_lic": "In questa edizione mancano i nomi dei composti e i valori derivati dai registri: ChEMBL (licenza CC BY-SA 3.0) e Guide to Pharmacology 2026.3.1 (ODbL / CC BY-SA 4.0) impongono condizioni di ridistribuzione sulle righe e sui valori. Restano il testo originale, l'azione e il tipo di voce; l'edizione completa porta nomi, valori e fonti.", "cv_kind_control": "controllo", "cv_kind_probe": "sonda", "cv_kind_known_requalified": "candidato già noto, riqualificato", "cv_kind_emerged": "emersa dalla ricerca", "cv_kind_unresolved": "ancora irrisolta", "cv_kind_weakened": "indebolita o da non trasferire", "cv_kd_control": "riferimento con cui si leggono gli altri bracci", "cv_kd_probe": "strumento sperimentale, non un candidato", "cv_kd_known_requalified": "composto già presente nei materiali, con qualificazione aggiornata", "cv_kd_emerged": "trovata dalla ricerca per azione e contesto; nuova per LEGEND o nuova combinazione, non verificata come novità nella letteratura", "cv_kd_unresolved": "mancano identità, meccanismo o massimo effetto", "cv_kd_weakened": "una lettura precedente o una riga di registro che non regge; tenuta per non essere scambiata per evidenza", "iv_ph_h": "Ipotesi fisiologiche condizionali", "iv_ph_sum": "{n} ipotesi condizionali, con alternative e criteri per rafforzarle o indebolirle", "iv_ph_note": "Sono domande formulate con le loro condizioni, non dati acquisiti: nessun composto è proposto qui e nessun legame fra geni è dedotto. L'assenza di un esperimento non è un danno dimostrato.", "iv_ph_status": "ipotesi esplorativa", "iv_ph_obs": "Che cosa è osservato", "iv_ph_hyp": "Che cosa è ipotizzato", "iv_ph_alt": "Alternative che restano", "iv_ph_str": "Che cosa la rafforzerebbe", "iv_ph_weak": "Che cosa la indebolirebbe", "iv_cmp_h": "Comparatori", "iv_cmp_sum": "{f} dell'esito funzionale, {m} che separano il meccanismo", "iv_cmp_none": "Nessun comparatore nei file consultati per questa indagine.", "iv_cmp_role_functional_outcome": "esito funzionale", "iv_cmp_role_mechanism_separating": "separa il meccanismo", "iv_cmp_limits": "limiti di selettività", "iv_cmp_src": "fonte", "iv_cmp_names_hidden": "i nomi dei composti non sono nell'edizione condivisibile", "iv_class_note": "Le categorie «nuova combinazione» e «indebolita o riaperta» non sono determinabili dai campi disponibili e non sono mostrate; la riga indica soltanto origine e tipo di riga.", "iv_f_h": "Mostra", "iv_f_all": "Tutte", "iv_legend_h": "Come leggere l'origine di ogni riga",
     "iv_ol_known_in_wwox": "parte da un risultato già osservato in un sistema WWOX (letteratura WWOX o scheda)",
     "iv_ol_generated_by_legend": "nata dal calcolo di LEGEND: ipotesi generata, senza conferma sperimentale",
     "iv_ol_external_transferred": "precedente di un'altra malattia o di un altro sistema, trasferito al contesto WWOX: la rilevanza per WWOX è da verificare",
@@ -4600,6 +4627,27 @@ def render_investigations(P: dict) -> str:
                       f'<span class="mini mut">{E(U["iv_cmp_limits"])}: {lx(c["selectivity_limits"])}; {E(U["iv_cmp_src"])}: {E(c["source_file_and_row"].split(";")[0].strip())}</span></li>' for c in d["items"])
         return f'<dt>{E(U["iv_cmp_h"])}</dt><dd><details class="inv-cmp"><summary>{E(summ)}</summary><ul class="inv-cmp-list">{lis}</ul></details></dd>'
 
+    cv = rk.get("compound_view") or []
+
+    def compound_section():
+        """IT41 P9: 'Composti e ipotesi da indagare'. Each item is a closed card with the kind marked (emerged from the search, known candidate requalified, probe, control, weakened, unresolved), a research
+        order number (not an efficacy order), and the action, rationale, open premise, counter-evidence and next test behind a detail. No top-five: the list has as many items as the work produced."""
+        if not cv:
+            return ""
+        lis = []
+        for c in cv:
+            nm = f' <span class="cv-name">{E(c["name_full"])}</span>' if full and c.get("name_full") else ""
+            reg = f'<dt>{E(U["cv_reg"])}</dt><dd>{lx(c["registry_note"])}</dd>' if full and c.get("registry_note") else ""
+            lis.append(f'<li class="cv-i cv-k-{E(c["kind"])}" data-kind="{E(c["kind"])}" id="cv-{E(c["item_id"])}"><div class="cv-h"><span class="inv-pos" aria-label="{E(U["cv_order"])} {c["order"]}">{c["order"]}</span> '
+                       f'<span class="cv-kind">{E(U["cv_kind_" + c["kind"]])}</span> {lx(c["label"], "b")}{nm}</div>'
+                       f'<details class="cv-more"><summary>{E(U["cv_more"])}</summary><dl class="qk-dl">'
+                       f'<dt>{E(U["cv_act"])}</dt><dd>{lx(c["action"])}</dd><dt>{E(U["cv_rat"])}</dt><dd>{lx(c["rationale"])}</dd><dt>{E(U["cv_prem"])}</dt><dd>{lx(c["open_premise"])}</dd>'
+                       f'<dt>{E(U["cv_cnt"])}</dt><dd>{lx(c["counter"])}</dd><dt>{E(U["cv_next"])}</dt><dd>{lx(c["next_test"])}</dd>{reg}</dl></details></li>')
+        lic = "" if full else f'<p class="mini mut">{E(U["cv_lic"])}</p>'
+        legend = "".join(f'<li><span class="cv-kind cv-kl-{k}">{E(U["cv_kind_" + k])}</span> {E(U["cv_kd_" + k])}</li>' for k in COMPOUND_KINDS)
+        return (f'<section id="compound-view" class="cv" aria-labelledby="h-cv"><h3 id="h-cv">{E(U["cv_h"])}</h3><p class="note">{E(U["cv_lead"])}</p>{lic}'
+                f'<details class="cv-legend"><summary>{E(U["cv_legend_h"])}</summary><ul>{legend}</ul></details><ol class="cv-list">{"".join(lis)}</ol></section>')
+
     ph = rk.get("investigation_physiological") or {}
 
     def phys_dt(iid):
@@ -4640,7 +4688,7 @@ def render_investigations(P: dict) -> str:
                      f'><div class="inv-h">' + (f'<a id="{E(r["inv_id"])}" class="inv-anchor" aria-hidden="true"></a>' if r.get("inv_id") else "") + f'<span class="inv-pos" aria-label="{E(U["iv_pos"])} {E(str(r["position"]))}">{E(str(r["position"]))}</span>{tie} '
                      f'{lx(r["intervention"], "b")} <span class="org org-{E(r["origin_class"])}">{E(U["iv_o_" + r["origin_class"]])}</span>{badge}<a class="plink" href="#inv-{n_row}" aria-label="{E(U["iv_link"])}" title="{E(U["iv_link"])}">#</a></div>'
                      f'<dl class="qk-dl inv-glance">{gl}</dl><details class="inv-more"><summary>{E(U["iv_more"])}</summary><dl class="qk-dl">{dl}</dl></details></li>')
-    out = head + f'<p class="lead inv-purpose"><b>{E(U["iv_purpose"])}</b></p><p class="mini mut">{E(U["iv_lead"])}</p>'
+    out = head + f'<p class="lead inv-purpose"><b>{E(U["iv_purpose"])}</b></p><p class="mini mut">{E(U["iv_lead"])}</p>' + compound_section()
     if ctx:
         mv = ctx.get("published_vs_it20") or {}
         out += (f'<details class="note inv-how"><summary>{E(U["iv_curated_h"])}</summary>{E(U["iv_curated"])}<br><b>{E(U["iv_axes_h"])}.</b> {E(U["iv_axes"])}</details>'

@@ -1,0 +1,602 @@
+{
+ "021013ae30df": {
+  "mode": "NEW",
+  "english": "None; kept so the filing is not mistaken for evidence.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "0e36f1643568": {
+  "mode": "NEW",
+  "english": "The registry row's assay was on another subunit; the value is not a GluN2B measurement.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "122e86a3ca93": {
+  "mode": "NEW",
+  "english": "Class recorded on a GluN1/GluN2B assembly record, no maximum effect",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "138c33d59c7f": {
+  "mode": "NEW",
+  "english": "Full competitive NMDA-receptor block, the reference control",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "14b346bc63cc": {
+  "mode": "NEW",
+  "english": "Block of AMPA and kainate receptors to test whether the burst survives.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "18d5f4328934": {
+  "mode": "NEW",
+  "english": "Registry row under GluN2B whose assay was on GluN2C",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "1c3755c6628d": {
+  "mode": "NEW",
+  "english": "Nominate nothing before a difference current reversing near the potassium equilibrium potential and a matched-effect control that fails to reproduce the fall.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "20b6ea0788d3": {
+  "mode": "NEW",
+  "english": "The compound's GluN2B rows are measured activities, not a curated mechanism, and other targets are also measured; selectivity is not assessed.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "2923acfd51a8": {
+  "mode": "NEW",
+  "english": "Find a primary source stating its site and maximum effect on triheteromers (public, in silico); until then it is not a same-site control.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "29a1f4098294": {
+  "mode": "NEW",
+  "english": "Measure its removable fraction in the isolated NMDA-receptor current first; compare with the control only up to that fraction. A second modulator of the same site controls chemotype only.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "29b69cbbccdc": {
+  "mode": "NEW",
+  "english": "None for the GluN2B comparison.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "312381e7bb11": {
+  "mode": "NEW",
+  "english": "Negative allosteric modulation of GluN2B-containing receptors at the ifenprodil site.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "5e6ff20bb1b1": {
+  "mode": "NEW",
+  "english": "That the ceiling seen in oocytes holds in the slice; its washout is very slow in oocytes.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "6151d89ccc8b": {
+  "mode": "NEW",
+  "english": "Ifenprodil-site GluN2B negative modulator, used as a tool",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "67b414367108": {
+  "mode": "NEW",
+  "english": "Ih (HCN) blocker as a tool arm, after matched-condition recordings",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "67fe3b1d1a41": {
+  "mode": "NEW",
+  "english": "Whether any HCN contribution remains after matching; no benefit is claimed.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "6aea8ba0d960": {
+  "mode": "NEW",
+  "english": "Whether ifenprodil-site modulators in general depend on pH enough to matter in the slice.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "6b35adafc84b": {
+  "mode": "NEW",
+  "english": "Recorded as a negative modulator under a GluN2B entry.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "6fb9853d33bc": {
+  "mode": "NEW",
+  "english": "That the burst needs NMDA-receptor activity does not show a gain of receptor function.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "712bbfd48945": {
+  "mode": "NEW",
+  "english": "That a leak deficit or coupling drives the burst: neither is shown; the burst fall under the gap-junction tool has no supporting datum for coupling.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "80f1ec09df60": {
+  "mode": "NEW",
+  "english": "Abstract-level source only: a phase 2 study in adults with depression.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "80ff6658f81a": {
+  "mode": "NEW",
+  "english": "It shows that GluN2B-directed potency can depend on the bath pH.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "848bb09c8ce2": {
+  "mode": "NEW",
+  "english": "Phase 1 in healthy volunteers only (abstract).",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "84cb78f1f49d": {
+  "mode": "NEW",
+  "english": "pH-dependent GluN2B modulator: a condition to state, not a candidate",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "8659ddf5881e": {
+  "mode": "NEW",
+  "english": "No maximum effect, species or assay context in the catalogue; none approved.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "87ff4b447ed4": {
+  "mode": "NEW",
+  "english": "Survival of the burst under a verified block would remove an AMPA contribution; abolition alone cannot separate AMPA drive from loss of magnesium relief.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "89017defe8da": {
+  "mode": "NEW",
+  "english": "The selectivity statement rests on a supplementary figure that was not read; slice precedent is a different region and age.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "8955d170b489": {
+  "mode": "NEW",
+  "english": "Two GYKI compounds are registered under one label (different structures); the mechanism papers of two tools are unread; kainate is not separated.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "8a11c0989f9a": {
+  "mode": "NEW",
+  "english": "Whether an AMPA-dependent component exists at all.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "8edbc79d22af": {
+  "mode": "NEW",
+  "english": "State and match the bath pH in every arm; check the literature on pH dependence of the tool actually used.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "8eedc45e7594": {
+  "mode": "NEW",
+  "english": "Use only after V02 shows a removable fraction; read the fraction at the burst, not in oocytes.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "92be390b33bb": {
+  "mode": "NEW",
+  "english": "Possible chemotype controls if V02 and V05 do not give one.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "9337026fc7a1": {
+  "mode": "NEW",
+  "english": "A compound with human exposure that could serve as the in-slice modulator once the tool result is in.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "9a3b125b4b5f": {
+  "mode": "NEW",
+  "english": "Read primary sources for maximum effect and site only if a further chemotype is needed.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "9a753a5daea3": {
+  "mode": "NEW",
+  "english": "Inhibition of GluN2B-containing receptors, stronger at acidic pH.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "a0ea190a3127": {
+  "mode": "NEW",
+  "english": "Qualify tool identity and selectivity first (science package in progress), then test survival under a block verified by the fast current.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "a87c3e8c8d54": {
+  "mode": "NEW",
+  "english": "Smaller cells with a seal leak and effects on synaptic currents explain the same observations.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "ac21398659f9": {
+  "mode": "NEW",
+  "english": "Run the matched-condition recording with capacitance and access resistance first; no HCN compound is nominated before it.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "aed91b9c5ada": {
+  "mode": "NEW",
+  "english": "That an assembly record means subunit selectivity: it names where the mechanism was attached, not how selective the molecule is.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "c061ece9f84d": {
+  "mode": "NEW",
+  "english": "Negative modulation of the GluN2B subunit; the receptor site is not recorded.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "c08f350b1a34": {
+  "mode": "NEW",
+  "english": "Kv7 opening and gap-junction block: abstain",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "c10356962f01": {
+  "mode": "NEW",
+  "english": "The removable share of such a modulator is bounded by receptor composition and zinc, so a plateau below the control is unresolved, not support for total gain.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "c52f02211fa9": {
+  "mode": "NEW",
+  "english": "AMPA/kainate block arm, tools not yet qualified",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "cd2f4c459d6b": {
+  "mode": "NEW",
+  "english": "Competitive block of the glutamate site: the control against which any negative modulator is read.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "ce2354d6f7db": {
+  "mode": "NEW",
+  "english": "Whether it shares the ifenprodil site and the triheteromer ceiling; the registry gives no receptor site.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "ceff2245e0c8": {
+  "mode": "NEW",
+  "english": "Human-exposure GluN2B negative modulator found by the search, site not recorded",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "cf6f4b2cf51e": {
+  "mode": "NEW",
+  "english": "A second modulator with human exposure could extend the comparison, if it acts at the ifenprodil site.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "d28f83ebd50b": {
+  "mode": "NEW",
+  "english": "Filing under a target does not make the measurement the target's; no transfer is made.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "d674c4c0b3d7": {
+  "mode": "NEW",
+  "english": "A response would not show a defect of the target in these cells.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "d8f74c2b8b68": {
+  "mode": "NEW",
+  "english": "Block of the hyperpolarisation-activated current, two chemotypes, engagement shown first.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "dd59c554d642": {
+  "mode": "NEW",
+  "english": "Only worth running if sag and rebound stay larger at matched potential and deflection.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "def9e8fde8fe": {
+  "mode": "NEW",
+  "english": "A burst effect at a smaller removed fraction than the control needs would make a GluN2B-directed comparison the better question.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "e21a2c4dd8c2": {
+  "mode": "NEW",
+  "english": "Measure the abolition threshold (percent of isolated NMDA-receptor current removed) with measured bath magnesium; this is the first number every NAM comparison needs.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "e590949996c2": {
+  "mode": "NEW",
+  "english": "Opening of Kv7 channels, or block of connexin and pannexin channels, proposed in earlier readings.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "e9ef048fa3a7": {
+  "mode": "NEW",
+  "english": "Against the wild-type floor about 20 percent of the delayed evoked response remains under it, which is not evidence of incomplete block.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "eb0270547963": {
+  "mode": "NEW",
+  "english": "Antagonism recorded on the two-gene GRIN1/GRIN2B record of a curated mechanism table.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "ec03b76feb89": {
+  "mode": "NEW",
+  "english": "A blocker response shows contribution as in normal cortex, not a defect; the passive-size reading is the rival; the sodium action of one tool is an off-target.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "f0dc6038ffa7": {
+  "mode": "NEW",
+  "english": "It abolishes the spontaneous bursts, so it fixes how much NMDA-receptor current must go before the burst stops.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "f2679c79a71f": {
+  "mode": "NEW",
+  "english": "Negative modulation of GluN2B-containing receptors; maximum inhibition 82 percent on rat GluN1/GluN2B against 45 percent on rat triheteromers (human GluN1/GluN2B 91 percent).",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "f9d9760c80a3": {
+  "mode": "NEW",
+  "english": "Clinical-stage GluN2B negative modulator with species-dependent maximum",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ }
+}

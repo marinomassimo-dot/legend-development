@@ -15,6 +15,10 @@
   "src": "en",
   "text": "A peptide inhibitor of the chaperone HSC70 (HSPA8) used as a cell-level probe, with lysosomal and genetic controls (identified by its ChEMBL record below)"
  },
+ "021013ae30df": {
+  "src": "en",
+  "text": "None; kept so the filing is not mistaken for evidence."
+ },
  "028c442d8086": {
   "src": "en",
   "text": "WWOX-system: blocking NMDAR abolished the burst in the WWOX-deficient slice, one drug, one preparation. The recording bath magnesium is not stated in the source, and the incubation solution already contains magnesium. [IT36] Memantine block of extrasynaptic current was about 1.9-fold that of synaptic in one autaptic design; a later paper in culture found little extrasynaptic selectivity at 2 uM; preference is not exclusion and the minutes-scale premise is untested at WWOX burst durations. [IT36] burst duration median 0.66 s (Supplementary Table S1), intermediate between a synaptic pulse and the minutes-scale activation of the memantine premise; the premise is untested at this scale. [IT39] Selfotel: the head-injury trial was stopped after a signal in a stroke study, and a later analysis did not confirm excess mortality in head injury (abstract level). Perzinfotel is NR2A-preferring. The carbenoxolone half of the gap-junction logic carries its own caveat (it is not specific to gap junctions)."
@@ -95,6 +99,10 @@
   "src": "en",
   "text": "Potency is compared only between measures of the same type; unlike measures are kept side by side and never turned into an exclusion. 20 proposals blocked on weak target attribution became 5 (the verifier's lower-bound rule restored one); the cautious case (a pan-HDAC inhibitor 2,769-fold weaker at the listed target, same measure type) stays blocked."
  },
+ "0e36f1643568": {
+  "src": "en",
+  "text": "The registry row's assay was on another subunit; the value is not a GluN2B measurement."
+ },
  "0fc1e5c79db3": {
   "src": "en",
   "text": "Before any ISR-attenuating compound can be ordered: in a WWOX-deficient HUMAN neural system, does the ISR run high or low?"
@@ -102,6 +110,10 @@
  "11260e3b1080": {
   "src": "it",
   "text": "Capire se la risposta integrata allo stress è attiva nelle cellule neurali prive di WWOX, se compensa o danneggia e quanto dipende dall'attività di rete: oggi il segno è discordante."
+ },
+ "122e86a3ca93": {
+  "src": "en",
+  "text": "Class recorded on a GluN1/GluN2B assembly record, no maximum effect"
  },
  "126057ff44ff": {
   "src": "en",
@@ -111,6 +123,10 @@
   "src": "it",
   "text": "Capire se l'aggiunta del gene giova solo se data nei primi giorni di vita (prevenzione) o anche dopo la comparsa del fenotipo, e se la dose intermedia distingue soglia da gradiente."
  },
+ "138c33d59c7f": {
+  "src": "en",
+  "text": "Full competitive NMDA-receptor block, the reference control"
+ },
  "13d166a37d18": {
   "src": "en",
   "text": "Existing organoid systems; wet-lab measurement, not executable from this module."
@@ -118,6 +134,10 @@
  "1432bb0534ad": {
   "src": "it",
   "text": "Linee cellulari e stock di mosca: non nota; nessuna richiesta o contatto eseguiti da qui."
+ },
+ "14b346bc63cc": {
+  "src": "en",
+  "text": "Block of AMPA and kainate receptors to test whether the burst survives."
  },
  "1509c69108ad": {
   "src": "en",
@@ -138,6 +158,10 @@
  "17ac70f56535": {
   "src": "it",
   "text": "Più alto in organoide e in mosca con amiloide, nessun segno opposto; nel topo nessun segno risolto. Il verdetto prudente del documento P4 è «non risolto tra specie»."
+ },
+ "18d5f4328934": {
+  "src": "en",
+  "text": "Registry row under GluN2B whose assay was on GluN2C"
  },
  "18f5ff936c8e": {
   "src": "it",
@@ -163,6 +187,10 @@
   "src": "en",
   "text": "Queried: this need's eleven observation rows and their readout levels; the ISR card and its assertions; the search layer over the eight ISR targets (78 associations, 56 families, none direction-coherent because the need direction is unresolved). The gap is a missing measurement in the sources this module has read, not a claim about the ISR literature."
  },
+ "1c3755c6628d": {
+  "src": "en",
+  "text": "Nominate nothing before a difference current reversing near the potassium equilibrium potential and a matched-effect control that fails to reproduce the fall."
+ },
  "1ce3795a7d2b": {
   "src": "en",
   "text": "INV-14"
@@ -186,6 +214,10 @@
  "1f670c38e9be": {
   "src": "en",
   "text": "Conditional hypothesis: the edge has one muscle origin read at abstract level and the compound side is compiled data; a catalytic-domain mutant of HDAC5 exists in rat neurons for other outputs (PMID 39923817) but none reads SLC2A1 in a human neural cell (no ranked unit, so no evaluation depth applies: this is not a depth of zero)"
+ },
+ "20b6ea0788d3": {
+  "src": "en",
+  "text": "The compound's GluN2B rows are measured activities, not a curated mechanism, and other targets are also measured; selectivity is not assessed."
  },
  "21f40746c911": {
   "src": "it",
@@ -227,6 +259,18 @@
   "src": "it",
   "text": "Dentro il rumore in ogni contesto misurato."
  },
+ "2923acfd51a8": {
+  "src": "en",
+  "text": "Find a primary source stating its site and maximum effect on triheteromers (public, in silico); until then it is not a same-site control."
+ },
+ "29a1f4098294": {
+  "src": "en",
+  "text": "Measure its removable fraction in the isolated NMDA-receptor current first; compare with the control only up to that fraction. A second modulator of the same site controls chemotype only."
+ },
+ "29b69cbbccdc": {
+  "src": "en",
+  "text": "None for the GluN2B comparison."
+ },
  "2a932a164144": {
   "src": "en",
   "text": "Measure the axonal activity-dependent myelination signal in the WWOX-deficient system against an isogenic control, before any compound; then decide whether the class is orderable. IT29: add an arm in Wwox-null precursor monoculture or the Wwox-null neuron co-culture, with a lipid-synthesis comparator beside the muscarinic one, crossed with a neuronal-activity manipulation. [IT36] existing co-culture separates neither contact or substrate integrity nor a soluble product; peripheral seizure-free DRG neurons; add a fixed-neuron arm and a factor arm."
@@ -266,6 +310,10 @@
  "30f82b387e40": {
   "src": "en",
   "text": "WWOX-system, transcript: a lower Pvalb transcript in the neuron-targeted deletion in bulk hippocampus (log2 -1.70, GSE158681 S contrast, as quoted in IT13b) and about half that size in the nuclear data (GSE158684: Pvalb 70 against 37 UMI in 3182 against 2920 nuclei; nuclei Pvalb share ratio 0.59). GSE158684 holds one pooled library per arm (library and animal index absent; the paper states n = 1 per arm), so nuclei are not biological replicates and the GSM records of the series are not independent experiments; PV-class nuclei number 12 to 19 per arm under the producer rules, the independent recompute disagrees on the specific counts, and PV composition and Pvalb per cell are undecidable under every rule tried. Kcnc1 is lower in inhibitory nuclei (one pool, not a replicate result). Immature-neuron markers (Sox11, Dcx, Igfbpl1) are higher in knockout neurons in direction; the larger composition change is oligodendrocyte-class nuclei, about 3- to 5-fold fewer. Wwox also falls in glia-called nuclei, unexplained. Protein and function, from the need file: PV-positive counts reduced by 44 percent in the whole hippocampus of a systemic constitutive knockout (PMID 30290271) and spontaneous inhibitory current amplitude more than halved in layer II/III pyramidal neurons of the neuron-specific knockout (PMID 34634460; unit of the KS test not declared; the size of the p values is compatible with events and not with one value per cell). Raw reads of the eight snRNA experiments (SRX9206272 to SRX9206279) carried NCBI status hup on 2026-10-31. A public conference abstract (poster 014, Curing the Epilepsies 2026 programme, NINDS; the whole abstract was read, abstract level) describes a programme that combines genetic mouse models, in vivo electrophysiology, ex vivo slice recordings, cell type-specific manipulations and targeted pharmacological modulation of neuronal activity in WWOX deficiency, and names parvalbumin interneurons as the population of interest; it reports no quantitative result, no molecule, no rescue and no target. IT33 reading of the glial signal (NB-4 pilot, independently audited): the deletion is neuron-targeted by design (Synapsin-Cre) and a lower Wwox transcript also appears in glia-annotated nuclei of one pool (oligodendrocyte-called 193 to 1 UMI, astrocyte-called 156 to 9: very small counts on the deleted side, one pool per arm, so a count of cells or a statement of glial loss is not supported); the readings are several and not exclusive (lower transcript in the annotated class, class definition and detectability, ambient RNA, recombination beyond the expected cells, a change of state or composition), and none is isolated. Two abstract-level sources describe the Synapsin-Cre line: germline recombination through male carriers (PMID 16419044) and non-cell-autonomous astrogliosis after a neuronal deletion of another gene (PMID 11297510); neither shows or excludes recombination in glia or in parvalbumin cells of this deletion. IT33 verified delta (independent audit, 19 of 21 rows supported, two narrowed): an independent characterisation of the same Cre line with an X-linked Mecp2 reporter in adult male mice (PMID 35966957, full text without the figures) found reporter activation in 36 percent of NeuN-high brain nuclei, incomplete in cortex and minimal in cerebellum, and could not exclude activity in a subset of glia; the reporter, locus, age and cross differ from the Wwox deletion, so these percentages are not carried to the excision of Wwox or to parvalbumin cells; in the Wwox paper's P17 cortical field WWOX is retained in some NeuN-positive cells, and in one callosal field in some CC1-positive cells of the knockout; no tdTomato panel was found in the surfaces read. [IT36] no WWOX bridge to the perineuronal-net matrix found (PubMed 0 hits; Europe PMC titles only); the only lead (HYAL2/WWOX complex) concerns neuronal death, not nets. [IT36] The mean of the declared inhibitory current amplitude comes from events of 9 to 14 cells and 5 to 7 animals; no animal-level statistic is given for current amplitudes; 10 of 18 reported KS p values lie below the one-value-per-cell floor and 8 do not, and no contradiction of the paper is asserted. [IT39] Model identity of the conditional line is Synapsin-Cre; a statement of zero hits for parvalbumin loss is wrong (about 44 percent fewer PV-positive cells in the 2-week full-knockout hippocampus); perineuronal-net counter-evidence exists and two explanations of an external report are mutually inconsistent."
+ },
+ "312381e7bb11": {
+  "src": "en",
+  "text": "Negative allosteric modulation of GluN2B-containing receptors at the ifenprodil site."
  },
  "3168a29cd7dc": {
   "src": "it",
@@ -535,6 +583,10 @@
   "src": "it",
   "text": "Le famiglie sono scelte per disponibilità di dati, non per un'analisi del catalogo; una sola concentrazione e poche misure nel tempo."
  },
+ "5e6ff20bb1b1": {
+  "src": "en",
+  "text": "That the ceiling seen in oocytes holds in the slice; its washout is very slow in oocytes."
+ },
  "5ef585ced049": {
   "src": "en",
   "text": "Which T-type isoform carries the suppression of the provoked seizure phase, and does the effect depend on the genotype?"
@@ -562,6 +614,10 @@
  "61503ef49d53": {
   "src": "en",
   "text": "Conditional; human precedent is a hormone-entry defect without a neurodevelopmental endpoint"
+ },
+ "6151d89ccc8b": {
+  "src": "en",
+  "text": "Ifenprodil-site GluN2B negative modulator, used as a tool"
  },
  "61d2572e7d46": {
   "src": "it",
@@ -599,6 +655,14 @@
   "src": "en",
   "text": "INV-18"
  },
+ "67b414367108": {
+  "src": "en",
+  "text": "Ih (HCN) blocker as a tool arm, after matched-condition recordings"
+ },
+ "67fe3b1d1a41": {
+  "src": "en",
+  "text": "Whether any HCN contribution remains after matching; no benefit is claimed."
+ },
  "681925371373": {
   "src": "en",
   "text": "An HCN contribution may remain after matching conditions. This is a tool arm only: two blocker chemotypes, engagement first. No candidate drug and no in-vivo claim."
@@ -622,6 +686,14 @@
  "6a7132220b2b": {
   "src": "it",
   "text": "Imbuto dal catalogo ai valutati: che cosa è contato, in quale unità"
+ },
+ "6aea8ba0d960": {
+  "src": "en",
+  "text": "Whether ifenprodil-site modulators in general depend on pH enough to matter in the slice."
+ },
+ "6b35adafc84b": {
+  "src": "en",
+  "text": "Recorded as a negative modulator under a GluN2B entry."
  },
  "6cfea8d609e4": {
   "src": "it",
@@ -654,6 +726,14 @@
  "6fabb5546b60": {
   "src": "en",
   "text": "BTK is barely detected in the WWOX-deficient organoid and is not in the human progenitor table (a table-membership fact, not a measured zero), NPY is near zero where it was measured, both edges come from other cell types, and the compound has documented actions on unrelated proteins. A proposal can be unreadable where it was generated."
+ },
+ "6fb9853d33bc": {
+  "src": "en",
+  "text": "That the burst needs NMDA-receptor activity does not show a gain of receptor function."
+ },
+ "712bbfd48945": {
+  "src": "en",
+  "text": "That a leak deficit or coupling drives the burst: neither is shown; the burst fall under the gap-junction tool has no supporting datum for coupling."
  },
  "714571f82c43": {
   "src": "it",
@@ -755,9 +835,17 @@
   "src": "en",
   "text": "Repeat the slice burst assay with the magnesium concentration reported, a d-APV arm and a GluN2B NAM arm, each at matched measured NMDAR-current reduction (one ifenprodil-site GluN2B NAM; a second NAM controls chemotype only, same site and same triheteromer ceiling; compare with d-APV only up to the NAM's measured removable share; measure the d-APV abolition threshold x and the NAM removable fraction first), vehicle time-matched, animal as the unit; memantine only afterwards, with the magnesium concentration and holding voltage stated, beside the tool compound, and the untreated same-genotype comparator. [IT40] B6 Report bath magnesium, K+, temperature and blockers actually present as measured values; use a within-slice paired design; add an AMPA/kainate block arm verified by the fast EPSC (abolition alone is not informative, because loss of magnesium relief would abolish an NMDAR-regenerative burst too); add a matched-effect control read on at least two metrics with a receptor-agnostic release-reducing control; add a GABA-A arm because the sIPSC amplitude is halved; state the order of application and washout as part of the design."
  },
+ "80f1ec09df60": {
+  "src": "en",
+  "text": "Abstract-level source only: a phase 2 study in adults with depression."
+ },
  "80fa15bc6765": {
   "src": "en",
   "text": "Reduced release or altered excitability; direct NMDA-receptor channel block (neither shown nor excluded); neuronal electrical coupling; pannexin-1; run-down or a recording artefact."
+ },
+ "80ff6658f81a": {
+  "src": "en",
+  "text": "It shows that GluN2B-directed potency can depend on the bath pH."
  },
  "81fba8b46d33": {
   "src": "en",
@@ -775,6 +863,14 @@
   "src": "en",
   "text": "In knockout, heterozygote and wild-type slices: sag, resting potential, input resistance, rebound and burst incidence before and after two Ih blockers of different chemotypes (the second so that an off-target action is not read as Ih), with a current-clamp step that matches the resting potential and the peak potential, with a smaller cell or immature membrane listed as its own candidate beside branch D, and a voltage-clamp read of the blocker-sensitive current in a subset of cells; animals, not cells, are the replicates. Branch D adds the potassium-current arm: the potassium currents sensitive to a Kv7 blocker and to a Kir-channel blocker in voltage clamp, and input resistance read with synaptic transmission blocked. [IT36] A first-generation Ih blocker at 50 uM is about 40 times its sodium-current IC50 in DRG neurons (age not stated); read a second chemotype and the blocker-sensitive current in voltage clamp; nickel/Z944 and Kv7 arms separate. [IT40] A4 Report access resistance, bridge balance and capacitance by genotype; add a Ba2+- or Kv7-blocker-sensitive difference current with its zero-crossing against E_K (about -97 to -98 mV from the declared solutions; the recorded potentials need a junction correction of about -13 mV that 34634460 did not measure, which puts the estimated sag peaks about 16-21 mV below E_K, so the prediction applies to the voltage-clamp difference current, not to the sag peak)."
  },
+ "848bb09c8ce2": {
+  "src": "en",
+  "text": "Phase 1 in healthy volunteers only (abstract)."
+ },
+ "84cb78f1f49d": {
+  "src": "en",
+  "text": "pH-dependent GluN2B modulator: a condition to state, not a candidate"
+ },
  "85aad315b6fd": {
   "src": "it",
   "text": "Marcatori dei progenitori (glia radiale)"
@@ -782,6 +878,10 @@
  "85ab04c15263": {
   "src": "en",
   "text": "Reached from the T-type calcium need through the catalogue path; the proposed pair is a proposal to verify (IT20)."
+ },
+ "8659ddf5881e": {
+  "src": "en",
+  "text": "No maximum effect, species or assay context in the catalogue; none approved."
  },
  "87177877f044": {
   "src": "en",
@@ -799,6 +899,18 @@
   "src": "en",
   "text": "E4 - card reviewed, 1 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)"
  },
+ "87ff4b447ed4": {
+  "src": "en",
+  "text": "Survival of the burst under a verified block would remove an AMPA contribution; abolition alone cannot separate AMPA drive from loss of magnesium relief."
+ },
+ "89017defe8da": {
+  "src": "en",
+  "text": "The selectivity statement rests on a supplementary figure that was not read; slice precedent is a different region and age."
+ },
+ "8955d170b489": {
+  "src": "en",
+  "text": "Two GYKI compounds are registered under one label (different structures); the mechanism papers of two tools are unread; kainate is not separated."
+ },
  "896cd43acd21": {
   "src": "en",
   "text": "Coincident curves make total NMDA-receptor reduction (with the bath magnesium and voltage) the question; a plateau below abolition moves it to GluN2A-containing receptors. None of this can come from other preparations."
@@ -815,6 +927,10 @@
   "src": "en",
   "text": "Selective tool compounds exist; the assay is the carded one."
  },
+ "8a11c0989f9a": {
+  "src": "en",
+  "text": "Whether an AMPA-dependent component exists at all."
+ },
  "8c0bcfdd6eff": {
   "src": "en",
   "text": "A GluN2B-selective negative modulator may remove the bursts at a smaller measured fraction of the isolated NMDA-receptor current than the full antagonist needs. Exploratory."
@@ -826,6 +942,14 @@
  "8d3f28942f92": {
   "src": "it",
   "text": "la stessa rete con quattro archi HIF1A duplicati (già presenti nella rete esterna; non rappresenta il patrimonio WWOX)"
+ },
+ "8edbc79d22af": {
+  "src": "en",
+  "text": "State and match the bath pH in every arm; check the literature on pH dependence of the tool actually used."
+ },
+ "8eedc45e7594": {
+  "src": "en",
+  "text": "Use only after V02 shows a removable fraction; read the fraction at the burst, not in oocytes."
  },
  "8f8b3380a169": {
   "src": "en",
@@ -855,9 +979,17 @@
   "src": "it",
   "text": "Più basso nella linea shRNA (resazurina grezza), più alto nella mosca con amiloide; nessuna misura di flusso in cellule neurali."
  },
+ "92be390b33bb": {
+  "src": "en",
+  "text": "Possible chemotype controls if V02 and V05 do not give one."
+ },
  "92ea76c9db7b": {
   "src": "it",
   "text": "sconosciute. Le sconosciute sono lacune, non zeri. Contando i modelli e non le colonne, i sistemi indipendenti sono circa"
+ },
+ "9337026fc7a1": {
+  "src": "en",
+  "text": "A compound with human exposure that could serve as the in-slice modulator once the tool result is in."
  },
  "93f1ef260d11": {
   "src": "en",
@@ -923,6 +1055,14 @@
   "src": "en",
   "text": "A WWOX-deficient neural measurement showing over-active checkpoint signalling that harms the cell."
  },
+ "9a3b125b4b5f": {
+  "src": "en",
+  "text": "Read primary sources for maximum effect and site only if a further chemotype is needed."
+ },
+ "9a753a5daea3": {
+  "src": "en",
+  "text": "Inhibition of GluN2B-containing receptors, stronger at acidic pH."
+ },
  "9aa65bd593d4": {
   "src": "en",
   "text": "Standard genetic perturbation; the readout is the constraint, not the reagent."
@@ -958,6 +1098,10 @@
  "9f6ea7ef32cb": {
   "src": "it",
   "text": "Misure biochimiche su tessuto o cellule dei laboratori d'origine; il materiale non è disponibile qui."
+ },
+ "a0ea190a3127": {
+  "src": "en",
+  "text": "Qualify tool identity and selectivity first (science package in progress), then test survival under a block verified by the fast current."
  },
  "a32410816420": {
   "src": "it",
@@ -1011,6 +1155,10 @@
   "src": "en",
   "text": "No lever available (four needs with no catalogue reach)"
  },
+ "a87c3e8c8d54": {
+  "src": "en",
+  "text": "Smaller cells with a seal leak and effects on synaptic currents explain the same observations."
+ },
  "a884fdfd0770": {
   "src": "en",
   "text": "Inhibitors of the DNA-damage response as levers"
@@ -1055,6 +1203,10 @@
   "src": "it",
   "text": "Lattato, flusso o ATP (funzionale)"
  },
+ "ac21398659f9": {
+  "src": "en",
+  "text": "Run the matched-condition recording with capacitance and access resistance first; no HCN compound is nominated before it."
+ },
  "aca79cf8612e": {
   "src": "en",
   "text": "WWOX-system: a T-type blocker suppressed the late phase of the provoked seizure score in the null mouse, one experiment, genotype specificity not established by an interaction. Catalogue: direction-coherent blocker actions on CACNA1G, CACNA1H and CACNA1I, at group and single-protein level, from curated mechanism rows. [IT39] The panel of 'structurally unrelated' antagonists is not independent: two of the listed antagonists are the same molecule under different names (one of them is Z944), and Z944 and TTA-P2 share a core chemical scaffold."
@@ -1066,6 +1218,10 @@
  "ad96dba77e60": {
   "src": "en",
   "text": "Known thread re-emitted with a corrected counter-evidence and a new hazard"
+ },
+ "aed91b9c5ada": {
+  "src": "en",
+  "text": "That an assembly record means subunit selectivity: it names where the mechanism was attached, not how selective the molecule is."
  },
  "aedc0c4f5ce9": {
   "src": "en",
@@ -1167,6 +1323,18 @@
   "src": "it",
   "text": "Ogni caso risponde alle stesse domande. Il livello dice che tipo di sostegno esiste, non quanto il composto sia promettente: nessun livello è un punteggio di efficacia e la copertura di un percorso descrive collegamenti, non una quota di malattia trattata. Una misura funzionale può essere non specifica (per esempio ridurre le crisi anche nel tipo selvatico). Sconosciuto non significa negativo."
  },
+ "c061ece9f84d": {
+  "src": "en",
+  "text": "Negative modulation of the GluN2B subunit; the receptor site is not recorded."
+ },
+ "c08f350b1a34": {
+  "src": "en",
+  "text": "Kv7 opening and gap-junction block: abstain"
+ },
+ "c10356962f01": {
+  "src": "en",
+  "text": "The removable share of such a modulator is bounded by receptor composition and zinc, so a plateau below the control is unresolved, not support for total gain."
+ },
  "c1851c47199a": {
   "src": "en",
   "text": "Carded thread: the T-type suppression of the provoked seizure phase in the null mouse."
@@ -1186,6 +1354,10 @@
  "c49c9b6c64b0": {
   "src": "en",
   "text": "Were the intrinsic recordings made under conditions that bias the genotype contrast?"
+ },
+ "c52f02211fa9": {
+  "src": "en",
+  "text": "AMPA/kainate block arm, tools not yet qualified"
  },
  "c5a4e3d438da": {
   "src": "en",
@@ -1227,6 +1399,14 @@
   "src": "it",
   "text": "; intervallo di confidenza al 90% di SIG, estremo inferiore"
  },
+ "cd2f4c459d6b": {
+  "src": "en",
+  "text": "Competitive block of the glutamate site: the control against which any negative modulator is read."
+ },
+ "ce2354d6f7db": {
+  "src": "en",
+  "text": "Whether it shares the ifenprodil site and the triheteromer ceiling; the registry gives no receptor site."
+ },
  "ce5809b35a2a": {
   "src": "en",
   "text": "IT21 P3b (G06)"
@@ -1235,9 +1415,17 @@
   "src": "en",
   "text": "Queried: the search layer over CACNA1G, CACNA1H and CACNA1I (190 associations, 66 families); the T-type card and the ethosuximide and apinocaltamide units; the uncarded-items table; the IT9 to IT11 qualification records; a name scan of every card and ranking table for each proposed compound. Both proposals are absent from that WWOX material and are members of a class the module already holds, so this is a proposed probe set to verify, not a new biological relation."
  },
+ "ceff2245e0c8": {
+  "src": "en",
+  "text": "Human-exposure GluN2B negative modulator found by the search, site not recorded"
+ },
  "cf11c4afad7a": {
   "src": "en",
   "text": "Human knockout organoid shows a lower NFE2L2 transcript (0.75x), role unknown; the second system failed its control."
+ },
+ "cf6f4b2cf51e": {
+  "src": "en",
+  "text": "A second modulator with human exposure could extend the comparison, if it acts at the ifenprodil site."
  },
  "d07824ef936c": {
   "src": "en",
@@ -1254,6 +1442,10 @@
  "d2852be44ee8": {
   "src": "en",
   "text": "Wwox-null versus wild-type glial cultures, the probe versus a second chemotype versus Ezh2 knockdown, histone mark and cytokine protein, with a parallel precursor-differentiation read."
+ },
+ "d28f83ebd50b": {
+  "src": "en",
+  "text": "Filing under a target does not make the measurement the target's; no transfer is made."
  },
  "d2c4fa5690e1": {
   "src": "en",
@@ -1291,6 +1483,10 @@
   "src": "en",
   "text": "Lithium (carded): inhibition of inositol monophosphatase as the mediator of its seizure protection"
  },
+ "d674c4c0b3d7": {
+  "src": "en",
+  "text": "A response would not show a defect of the target in these cells."
+ },
  "d71a4eb39ca3": {
   "src": "en",
   "text": "Carded thread: lithium."
@@ -1306,6 +1502,10 @@
  "d8edf429d959": {
   "src": "en",
   "text": "In WWOX-deficient and corrected isogenic organoids or radial-glia cultures: compare MYC within cell-cycle phase strata, then lower MYC by a genetic route with a second construct and read the progenitor fractions and the cell-cycle phase. No compound is needed for this step. Refinement from NB-1: lowering is graded and MYC-specific (not MYCN or MYCL unless measured), in two windows (radial-glia phase; neuron stage only), reading absolute counts of SOX2-, NEUN-, CTIP2- and SATB2-positive cells, cell death, glia and MYCN, in factorial design against restoring cell-cycle timing without touching MYC; the reading is wrong if markers do not move, the pool shrinks, glia rise, or the same lowering in the corrected line gives the same shift. [IT39 dream] In the same lines, read the HIF and glycolytic target genes beside the neuronal genes, and add a HIF1A or EPAS1 knockdown arm for the glycolytic readout: a MYC to HIF1A edge exists at database level (sign context-dependent) and HIF-axis data exist in WWOX cells (non-neural), so the MYC change could act on glycolysis, be reached from it, or follow a shared maturation or composition change; the measurement separates these only if each side is perturbed and the other read, in both directions and in time order: an unchanged readout after one perturbation shows that the first factor is not needed for that readout, not a causal direction (exploratory, no compound)."
+ },
+ "d8f74c2b8b68": {
+  "src": "en",
+  "text": "Block of the hyperpolarisation-activated current, two chemotypes, engagement shown first."
  },
  "d93e57bc7da0": {
   "src": "en",
@@ -1339,13 +1539,25 @@
   "src": "en",
   "text": "Separate the three causes for one of the four needs: check whether the listed targets carry any catalogued action anywhere, then whether the module's target list is the limit."
  },
+ "dd59c554d642": {
+  "src": "en",
+  "text": "Only worth running if sag and rebound stay larger at matched potential and deflection."
+ },
  "dd79afec8e2f": {
   "src": "en",
   "text": "WWOX-system: the myelin deficit is partly prevented when WWOX is restored in neurons in the neonatal window; the treated arms of the source are unquantified, and whether an established deficit re-myelinates is unmeasured. IT29: perturbation evidence from other systems signs several intrinsic precursor-differentiation routes (muscarinic-receptor, lipid-synthesis, thyroid- and RXR-type receptor) in wild-type or injury settings and none in a neuron-driven hypomyelination model; HDAC3 loss is adverse for maturation; an independent screen disagrees with some signs. [IT36] GSK3 sign on oligodendrocyte differentiation is divided (inhibitors raise it in one source, lower it in another after Foxg1 knockdown; genetic loss in mature cells changed survival); recorded as undetermined. [IT39] GSK3 context rows: a GSK3 inhibitor run after Foxg1 knockdown goes the opposite way to the inhibitor-raises-differentiation reports, and a 2026 review holds both directions; the slice paper's finding is neuron-specific wording, not oligodendrocyte-wide."
  },
+ "def9e8fde8fe": {
+  "src": "en",
+  "text": "A burst effect at a smaller removed fraction than the control needs would make a GluN2B-directed comparison the better question."
+ },
  "e0839859cc57": {
   "src": "en",
   "text": "The fall may come from effects on synaptic currents and excitability rather than from coupling. No datum in the sources read supports the gap-junction half. Exploratory."
+ },
+ "e21a2c4dd8c2": {
+  "src": "en",
+  "text": "Measure the abolition threshold (percent of isolated NMDA-receptor current removed) with measured bath magnesium; this is the first number every NAM comparison needs."
  },
  "e22f10004a65": {
   "src": "en",
@@ -1383,6 +1595,10 @@
   "src": "it",
   "text": "Più bassi nell'organoide, più alti nella linea shRNA; effetti piccoli."
  },
+ "e590949996c2": {
+  "src": "en",
+  "text": "Opening of Kv7 channels, or block of connexin and pannexin channels, proposed in earlier readings."
+ },
  "e60681463c5a": {
   "src": "en",
   "text": "No arm exists in which treatment begins after the phenotype is established; the window is stated, not measured against a later start, and P300 readouts are survivor-selected."
@@ -1415,6 +1631,10 @@
   "src": "en",
   "text": "Carded chain: Dichloroacetate (see its card) and inhibition of the pyruvate dehydrogenase kinases on the pyruvate axis."
  },
+ "e9ef048fa3a7": {
+  "src": "en",
+  "text": "Against the wild-type floor about 20 percent of the delayed evoked response remains under it, which is not evidence of incomplete block."
+ },
  "ea55b666039e": {
   "src": "it",
   "text": "; intervallo di confidenza al 90% di SIG, estremo superiore"
@@ -1427,6 +1647,10 @@
   "src": "en",
   "text": "Published assay, approved compounds, three arms added to an existing design."
  },
+ "eb0270547963": {
+  "src": "en",
+  "text": "Antagonism recorded on the two-gene GRIN1/GRIN2B record of a curated mechanism table."
+ },
  "eb885f4effae": {
   "src": "en",
   "text": "In human neural progenitors or neurons, does catalytic inhibition of class IIa HDACs lower the output of HDAC5 at SLC2A1 the way HDAC5 knockdown does, or does it leave it unchanged or raise it?"
@@ -1435,6 +1659,10 @@
   "src": "en",
   "text": "Weak; edge supported outside neural cells; no CNS exposure data for the topical drug"
  },
+ "ec03b76feb89": {
+  "src": "en",
+  "text": "A blocker response shows contribution as in normal cortex, not a defect; the passive-size reading is the rival; the sodium action of one tool is an off-target."
+ },
  "ed04c567319d": {
   "src": "en",
   "text": "NMDA-receptor-regenerative drive (GluN2B- or GluN2A-weighted), a general loss of excitatory drive, and a recording-state artefact. Kainate receptors are not separated from AMPA receptors by the usual tools."
@@ -1442,6 +1670,10 @@
  "ee335183c025": {
   "src": "en",
   "text": "Is there an axonal signal left for a pro-myelinating agent to act on, before any such agent is ordered?"
+ },
+ "f0dc6038ffa7": {
+  "src": "en",
+  "text": "It abolishes the spontaneous bursts, so it fixes how much NMDA-receptor current must go before the burst stops."
  },
  "f0fae297b689": {
   "src": "en",
@@ -1466,6 +1698,10 @@
  "f247dfb7fc72": {
   "src": "en",
   "text": "classe di intervento senza scheda (il nome del composto non è incluso in questa versione)"
+ },
+ "f2679c79a71f": {
+  "src": "en",
+  "text": "Negative modulation of GluN2B-containing receptors; maximum inhibition 82 percent on rat GluN1/GluN2B against 45 percent on rat triheteromers (human GluN1/GluN2B 91 percent)."
  },
  "f2b729e18317": {
   "src": "en",
@@ -1510,6 +1746,10 @@
  "f9ca34bd9d4c": {
   "src": "en",
   "text": "Cytokines rise or precursor differentiation falls."
+ },
+ "f9d9760c80a3": {
+  "src": "en",
+  "text": "Clinical-stage GluN2B negative modulator with species-dependent maximum"
  },
  "fa08a3a261c2": {
   "src": "en",

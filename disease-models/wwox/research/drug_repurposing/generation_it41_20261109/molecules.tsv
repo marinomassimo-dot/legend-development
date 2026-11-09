@@ -112,3 +112,134 @@ S4	GTOPDB:2447	flufenamic acid	GtoPdb interaction	2	down	Human
 S4	GTOPDB:4151	carbenoxolone	GtoPdb interaction	2	down	Human	
 S4	GTOPDB:4278	octanol	GtoPdb interaction	1	down	Human	
 S4	GTOPDB:707	Ca<sup>2+</sup>	GtoPdb interaction	1	down	Human	
+S5	CAT:CHEMBL1102	GLUTETHIMIDE	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL12	DIAZEPAM	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL1200472	QUAZEPAM	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL1200694	SEVOFLURANE	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL1200733	DESFLURANE	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL1200790	METHYPRYLON	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL1200802	TALBUTAL	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL1201293	ACAMPROSATE CALCIUM	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL1201317	TRICLOFOS SODIUM	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL1213252	CLORAZEPATE DIPOTASSIUM	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL1256	ISOFLURANE	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL1257	ENFLURANE	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL13280	FLUNITRAZEPAM	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL1341	METHOXYFLURANE	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL135400	ZOPICLONE	ChEMBL curated mechanism	6	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL1521	ZALEPLON	ChEMBL curated mechanism	2	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL1522	ESZOPICLONE	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL1568698	GANAXOLONE	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL1697737	CLOTIAZEPAM	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL1783256	AZD6280	ChEMBL curated mechanism	2	up	Homo sapiens	single_protein_record
+S5	CAT:CHEMBL1783282	AZD7325	ChEMBL curated mechanism	2	up	Homo sapiens	single_protein_record
+S5	CAT:CHEMBL207538	BREXANOLONE	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL2103791	ADIPIPLON	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL2104745	PAGOCLONE	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL2105527	TETRAZEPAM	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL2106227	ETIFOXINE	ChEMBL curated mechanism	7	down	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL2107801	RESEQUINIL	ChEMBL curated mechanism	7	down	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL220492	TOPIRAMATE	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL262075	INDIPLON	ChEMBL curated mechanism	1	up	Homo sapiens	single_protein_record
+S5	CAT:CHEMBL277062	BROMAZEPAM	ChEMBL curated mechanism	1	up	Homo sapiens	single_protein_record
+S5	CAT:CHEMBL282052	METHAQUALONE | METHAQUALONE HYDROCHLORIDE	ChEMBL curated mechanism	14	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL285674	ESTAZOLAM	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL312443	GABOXADOL	ChEMBL curated mechanism	1	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL315795	CLOMETHIAZOLE	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL356388	ETAZOLATE | ETAZOLATE HYDROCHLORIDE	ChEMBL curated mechanism	2	up	Homo sapiens	single_protein_record
+S5	CAT:CHEMBL3647536	DARIGABAT	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL3989949	CENOBAMATE	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL407	FLUMAZENIL	ChEMBL curated mechanism	7	down	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL4094894	CIPEPOFOL	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL4105630	ZURANOLONE	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL4297255	ABP-700	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL4297521	PADSEVONIL	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL4297526	REMIMAZOLAM BESYLATE	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL4303403	LOREDIPLON	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL440	THIAMYLAL SODIUM	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL441	THIOPENTAL SODIUM	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL447	SECOBARBITAL SODIUM	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL448	PENTOBARBITAL | PENTOBARBITAL SODIUM	ChEMBL curated mechanism	14	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL449	BUTABARBITAL SODIUM	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL450	METHARBITAL	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL451	CHLORDIAZEPOXIDE | CHLORDIAZEPOXIDE HYDROCHLORIDE	ChEMBL curated mechanism	14	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL452	CLONAZEPAM	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL454	BUTALBITAL	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL526	PROPOFOL	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL568	OXAZEPAM	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL580	LORAZEPAM	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL591	ETHCHLORVYNOL	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL646	TRIAZOLAM	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL655	MIDAZOLAM | MIDAZOLAM HYDROCHLORIDE | MIDAZOLAM MALEATE	ChEMBL curated mechanism	21	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL661	ALPRAZOLAM	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL681	ETOMIDATE	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL70418	CLOBAZAM	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL7413	METHOHEXITAL SODIUM	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL856	PRIMIDONE	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL911	ZOLPIDEM TARTRATE	ChEMBL curated mechanism	2	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL931	HALOTHANE	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL967	TEMAZEPAM	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL968	FLURAZEPAM HYDROCHLORIDE	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL969	PRAZEPAM	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL970	HALAZEPAM	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:CHEMBL979	MEPROBAMATE	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	GTOPDB:10427	basmisanil	GtoPdb interaction	1	down	Human	
+S5	GTOPDB:11942	ganaxolone	GtoPdb interaction	1	up	Human	
+S5	GTOPDB:12118	compound 20 [PMID: 35584373]	GtoPdb interaction	1	down	Human	
+S5	GTOPDB:2312	bicuculline	GtoPdb interaction	4	down	Human	GABA site
+S5	GTOPDB:3364	diazepam	GtoPdb interaction	3	up	Human	benzodiazepine site
+S5	GTOPDB:4051	picrotoxin	GtoPdb interaction	7	down	Human	
+S5	GTOPDB:4083	[<sup>3</sup>H]gabazine	GtoPdb interaction	4	down	Human	GABA site
+S5	GTOPDB:4090	[<sup>3</sup>H]muscimol	GtoPdb interaction	4	up	Human	GABA site
+S5	GTOPDB:4094	&alpha;3IA	GtoPdb interaction	4	unclear;up	Human	benzodiazepine site
+S5	GTOPDB:4095	&alpha;5IA	GtoPdb interaction	4	up	Human	benzodiazepine site
+S5	GTOPDB:4108	5&alpha;-pregnan-3&alpha;-ol-20-one	GtoPdb interaction	4	up	Human	
+S5	GTOPDB:4146	bretazenil	GtoPdb interaction	4	up	Human	benzodiazepine site
+S5	GTOPDB:4156	CGS8216	GtoPdb interaction	4	up	Human	
+S5	GTOPDB:4179	DMCM	GtoPdb interaction	4	up	Human	benzodiazepine site
+S5	GTOPDB:4192	flumazenil	GtoPdb interaction	4	down;unclear	Human	benzodiazepine site
+S5	GTOPDB:4193	flunitrazepam	GtoPdb interaction	4	up	Human	benzodiazepine site
+S5	GTOPDB:4197	gabazine	GtoPdb interaction	4	down	Human	GABA site
+S5	GTOPDB:4221	indiplon	GtoPdb interaction	1	up	Human	benzodiazepine site
+S5	GTOPDB:4226	isoguvacine	GtoPdb interaction	4	up	Human	GABA site
+S5	GTOPDB:4227	isonipecotic acid	GtoPdb interaction	4	up	Human	GABA site
+S5	GTOPDB:4238	L655708	GtoPdb interaction	1	up	Human	benzodiazepine site
+S5	GTOPDB:4241	L838417	GtoPdb interaction	4	down;up	Human	benzodiazepine site
+S5	GTOPDB:4257	MRK016	GtoPdb interaction	4	up	Human	benzodiazepine site
+S5	GTOPDB:4259	muscimol	GtoPdb interaction	4	up	Human	GABA site
+S5	GTOPDB:4277	ocinaplon	GtoPdb interaction	4	up	Human	benzodiazepine site
+S5	GTOPDB:4287	piperidine-4-sulphonic acid	GtoPdb interaction	4	up	Human	GABA site
+S5	GTOPDB:4296	Ro15-4513	GtoPdb interaction	4	up	Human	benzodiazepine site
+S5	GTOPDB:4297	Ro19-4603	GtoPdb interaction	4	up	Human	benzodiazepine site
+S5	GTOPDB:4299	RO4938581	GtoPdb interaction	4	up	Human	benzodiazepine site
+S5	GTOPDB:4301	RY024	GtoPdb interaction	1	up	Human	benzodiazepine site
+S5	GTOPDB:4320	TBPS	GtoPdb interaction	7	down	Human	
+S5	GTOPDB:4321	tetrahydrodeoxycorticosterone	GtoPdb interaction	4	up	Human	
+S5	GTOPDB:4322	gaboxadol	GtoPdb interaction	4	up	Human	GABA site
+S5	GTOPDB:4326	TP003	GtoPdb interaction	4	down;up	Human	benzodiazepine site
+S5	GTOPDB:4327	TPA023	GtoPdb interaction	4	down;up	Human	benzodiazepine site
+S5	GTOPDB:4346	ZK93423	GtoPdb interaction	4	up	Human	
+S5	GTOPDB:4347	ZK93426	GtoPdb interaction	4	down	Human	benzodiazepine site
+S5	GTOPDB:4348	zolpidem	GtoPdb interaction	3	up	Human	
+S5	GTOPDB:4360	[<sup>3</sup>H]flunitrazepam	GtoPdb interaction	4	up	Human	benzodiazepine site
+S5	GTOPDB:4362	[<sup>3</sup>H]zolpidem	GtoPdb interaction	1	up	Human	benzodiazepine site
+S5	GTOPDB:4363	[<sup>3</sup>H]L655708	GtoPdb interaction	1	up	Human	benzodiazepine site
+S5	GTOPDB:4364	[<sup>3</sup>H]RY80	GtoPdb interaction	1	unclear	Rat	benzodiazepine site
+S5	GTOPDB:4366	[<sup>3</sup>H]CGS8216	GtoPdb interaction	4	unclear	Human	benzodiazepine site
+S5	GTOPDB:4367	[<sup>11</sup>C]flumazenil	GtoPdb interaction	4	down;unclear	Human	benzodiazepine site
+S5	GTOPDB:4368	[<sup>18</sup>F]fluoroethylflumazenil	GtoPdb interaction	4	unclear	Human	benzodiazepine site
+S5	GTOPDB:4369	[<sup>35</sup>S]TBPS	GtoPdb interaction	4	down	Human	anion channel
+S5	GTOPDB:566	Zn<sup>2+</sup>	GtoPdb interaction	4	down	Human	
+S5	GTOPDB:6963	clonazepam	GtoPdb interaction	3	up	Human	benzodiazepine site
+S5	GTOPDB:7111	alprazolam	GtoPdb interaction	4	up	Human	benzodiazepine site
+S5	GTOPDB:7313	triazolam	GtoPdb interaction	6	up	Human	
+S5	GTOPDB:7336	etazolate	GtoPdb interaction	1	unclear	Human	
+S5	GTOPDB:7712	AZD7325	GtoPdb interaction	2	up	Human	
+S5	GTOPDB:9798	darigabat	GtoPdb interaction	1	up	Human	
+S5	GTOPDB:9908	ONO-8590580	GtoPdb interaction	1	down	Human	benzodiazepine site
+S6	GTOPDB:13840	IAMA-6	GtoPdb interaction	1	down	Human	
+S6	GTOPDB:4589	DIOA	GtoPdb interaction	1	down	Human	
+S6	GTOPDB:4665	VU0240551	GtoPdb interaction	1	down	Human	
+S6	GTOPDB:4742	piretanide	GtoPdb interaction	1	down	Human	
+S6	GTOPDB:4837	bumetanide	GtoPdb interaction	1	down	Human	
+S6	GTOPDB:4839	furosemide	GtoPdb interaction	1	down	Human	
