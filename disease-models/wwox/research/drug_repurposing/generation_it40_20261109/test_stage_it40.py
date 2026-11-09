@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """IT40: conditional physiological proposals, mechanism-first search, identity of named tools, reader view. New behaviours only."""
 import csv, re, sys, unittest
 from pathlib import Path
@@ -106,4 +105,4 @@ class Rendered(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(verbosity=2)

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """IT40: apply the membrane (A) and AMPA/NMDA (B) consumer proposals to needs, investigations, packets and the open-question map. Idempotent; prints before/after sizes."""
 import csv, io, json, sys
 from pathlib import Path

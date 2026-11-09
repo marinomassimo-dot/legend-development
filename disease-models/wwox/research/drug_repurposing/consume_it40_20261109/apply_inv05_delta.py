@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """IT40b: apply the INV-05 narrow-comparison proposals (nmda_composition_discrim_20261109/consumer_delta.md rows 1-8) to their consumers. Idempotent; every added text carries [IT40b]. Row 9 is a built surface and needs regeneration only."""
 import csv, io, json
 from pathlib import Path
@@ -31,7 +30,7 @@ P = "ampa_nmda_discrim_20261108/output/"
 tsv_edit(P + "hypotheses.tsv", "hyp_id", "BH2", "discriminating_experiment", lambda t, r: app(t, T + "Use the like-for-like 82 against 45 percent (rat); the removable share of the NAM is bounded above by 0.88 times the GluN2B diheteromer share plus 0.32 times the triheteromer share (0.50 times the triheteromer share with Zn2+) (INFERENZA); read the percent removed at the burst."))
 tsv_edit(P + "prediction_matrix.tsv", "arm_id", "M04", "readouts_specific", lambda t, r: app(t, T + "Measure the abolition threshold x."))
 tsv_edit(P + "prediction_matrix.tsv", "arm_id", "M05", "same_prediction_note_arm_does_not_separate", lambda t, r: app(t, T + "A NAM plateau below x is unresolved, not support for total gain; a left shift is composition only after the percent removed is measured at the burst."))
-tsv_edit(P + "prediction_matrix.tsv", "arm_id", "M06", "same_prediction_note_arm_does_not_separate", lambda t, r: app(t, T + "TCN-201 maxima in the source: 91 / 72 / 0 percent on GluN2A / triheteromer / GluN2B at 3 uM glycine; the three-share solution is fragile."))
+tsv_edit(P + "prediction_matrix.tsv", "arm_id", "M06", "same_prediction_note_arm_does_not_separate", lambda t, r: app(t, T + "TCN-201 maxima in the source: 91 / 72 / 0 percent on GluN2A / triheteromer / GluN2B at 3 uM glycine; the three-share solution is fragile (near-collinear: determinant about 0.12, condition number about 32, INFERENZA; maxima are low-glycine values; tonic Zn2+ moves the NAM coefficient from 0.32 to 0.50)."))
 tsv_edit(P + "experiments.tsv", "exp_id", "BE2", "comparison_arms", lambda t, r: app(t, T + "Add arms: NAM with and without a Zn2+ chelator; equilibration time and a vehicle arm; burst-level NMDA-receptor charge; glycine or D-serine for both the NAM and the TCN-201 arms; a d-APV series against raised glutamate (new_measurements M-N2, M-N8 to M-N12)."))
 # row 7
 nj = R / "needs/needs.json"; d = json.loads(nj.read_text()); n = next(x for x in d["needs"] if x["id"] == "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR")

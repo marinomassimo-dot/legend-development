@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """IT40 P7: the same cases under (a) the current generator path (S16 = S17), (b) a simple baseline (catalogue lookup by target symbol, free-text cells), (c) the new path (conditional proposals + mechanism-first search). Counts only; no score; no predictive claim."""
 import csv, json, re, sys
 from pathlib import Path

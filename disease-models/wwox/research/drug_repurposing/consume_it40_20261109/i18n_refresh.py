@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """IT40 helper: curated-passage translations after text changed.
   i18n_refresh.py tasks   -> writes consume_it40_20261109/translate_tasks.json (one task per curated passage missing in a language file or stale)
                              mode EDIT when an older passage of HEAD is a prefix of the new one (translate only the added block, compose with the old translation),

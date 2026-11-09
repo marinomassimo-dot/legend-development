@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """IT40 P6: mechanism-first catalogue search. Starts from action-context-hypothesised-benefit relations (rows of RELATIONS), resolves the target group, and lists what the catalogue holds for those targets BEFORE any compound name is chosen; then resolves the tools the packages name and reports identity cautions. Read-only; no score; no ranking.
   python3 mechanism_search.py            -> writes by_action.tsv, named_tools.tsv"""
 import csv, sys

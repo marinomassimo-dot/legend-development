@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """IT40 P7 part: for the 15 tools the packages name, does the catalogue record found BY NAME carry the target the package means? (The simple baseline stops at 'a record was found'.) Symbols come from the ChEMBL mechanism rows (human) and from the DGIdb gene ids resolved through the HGNC service (dgidb_named_tools.tsv)."""
 import csv, re, sys
 from pathlib import Path

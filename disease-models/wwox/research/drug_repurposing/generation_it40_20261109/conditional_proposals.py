@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """IT40 P5: conditional pharmacological proposals from physiological-hypothesis packages, without a gene arc.
 
 Reads each linked hypothesis in place through framework/scripts/hypothesis_package.py (Harness) and the by-action search of

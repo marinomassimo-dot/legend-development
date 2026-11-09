@@ -7,7 +7,7 @@
  "OBJECTIVE": "IT40: from available knowledge to effective pharmacological generation; membrane and AMPA/NMDA deliveries consumed, DREAM-4 C, conditional hypotheses, mechanism-first search, measured contribution.",
  "START_UTC": "2026-11-09T12:00:00Z",
  "RESUME": {
-  "note": "baseline edfa347f"
+  "note": "battery on 1dd89027 FAIL (3 own suites: test_release_runner_verdict, test_release_surface, test_stage_it39: unittest.main without verbosity=2 in the new test, 8 new scripts with a shebang and no +x, questions_it39.md surface not regenerated after INV text changed); fixed; IT40b (INV-05 delivery 38a5f73b) applied on top; new final candidate to be battery-tested"
  },
  "AUTHORISED_QUEUE_20261108": {
   "MANDATE_STATE": "OPEN",
@@ -143,5 +143,6 @@
     }
    ]
   }
- }
+ },
+ "SELF_CALL_CHECK": "mandate_watch.py check --self-call from inside the session returned RESUME ('the caller is the session: continue now') with the record listing an executable step; without --self-call it returned RUNNING 'session busy; busy is not progress' (2026-11-09)"
 }
