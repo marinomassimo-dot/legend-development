@@ -13,6 +13,17 @@ Every claim is explicitly classified:
 
 Never present inferences as data; never present extensions (or hypotheses) as robust inferences.
 
+### Operational results and causal attribution
+
+The same distinction applies to every actor's engineering, evaluation and session report.
+Name what was observed on which input, version or commit before assigning a cause. Read the
+actual failing step or source when available. A later PASS does not erase the earlier FAIL,
+prove a runner fault, or establish that a code change caused recovery. Keep the observed
+failure, non-reproduction and proposed explanation separate; label the cause unresolved when
+the evidence does not discriminate it. An unavailable log is a visibility limit, not evidence
+of an environment fault. Technical checks passing do not establish scientific efficacy,
+predictive improvement, or completion of an unperformed part of the assigned work.
+
 ## 2. The discipline also applies to PREMISES and NEGATIVES
 
 The four levels above cover only **positive assertions**. A knowledge system that accumulates for months is far more endangered by what it **discards** than by what it asserts.

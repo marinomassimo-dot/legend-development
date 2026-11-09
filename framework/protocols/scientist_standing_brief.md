@@ -46,6 +46,10 @@ reading gap, using the existing notes and source locators.
 
 ## 1 · The operator may be away. §21c governs.
 
+For task completion, partial deliveries and real blockers, apply the common
+[autonomous-completion rule](cross_session_transport.md#complete-the-authorised-objective-not-only-the-recorded-wave).
+It applies to this role as it does to every other actor; a dispatch's scope still bounds the task.
+
 You stop only for an act reserved to the operator or a condition with **no safe default**.
 Everything else: take the default, continue, record it. `DEFAULTS_TAKEN` and `STOP_LOG` go into
 **your task JSON** — per wave in `WAVE_n_RESULT`, or top level — **both, even when empty**

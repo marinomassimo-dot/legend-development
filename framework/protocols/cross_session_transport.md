@@ -484,20 +484,40 @@ ended its turn; a turn that ends triggers neither compaction nor resumption, so 
 idle for hours. A queue also closed itself, written as prose that no program could reconcile.
 Every rule that would have prevented both was already loaded in the session.
 
-**The rule.** An assigned Orchestrator receiving a goal, roadmap or work queue runs it to the
-end. The operator is a source of mandates and of the few reserved decisions of §21d, not a step
-in the loop; a human who has to wake the coordinator is the bottleneck this section removes.
-Authority and scientific guarantees stay those of `LEGEND_CORE.md` §21c–§21e, and an explicit
-single-turn or narrower operator mandate still wins.
+**The rule applies to every actor and runtime.** An actor receiving an assigned goal, roadmap,
+work queue or bounded delegated package pursues its authorised scope through completion. The
+operator is a source of mandates and of the few reserved decisions of §21d, not a step in the
+loop. A delegate completes its own package and returns it; it does not acquire the coordinator's
+authority or the rest of the laboratory's queue. Authority and scientific guarantees stay those
+of `LEGEND_CORE.md` §21c–§21e, and an explicit single-turn or narrower operator mandate still wins.
+These instructions survive a chat: apply them at acceptance, after compaction or recall, and
+before reporting completion, through the existing task record and entry/closing skills.
 
 ### Complete the authorised objective, not only the recorded wave
 
-Autonomy is LEGEND's default. Before declaring a mandate complete, the Orchestrator
+Autonomy is LEGEND's default. Before declaring assigned work complete, every actor
 reconciles its **authorised objective** with delivered packages, consumer notes and the
 remaining work in its own report, not just with the steps it happened to record. Executable
-work within that objective goes into the existing `AUTHORISED_QUEUE*` and is pursued in
-the same session; a finished wave does not require a new operator prompt. Do not close a
-queue while parking its executable remainder only in prose or a list of future actions.
+work within that objective is pursued in the same session; a finished wave does not require
+a new operator prompt. Multi-objective mandates keep that work in the existing
+`AUTHORISED_QUEUE*`; a bounded delegate uses its dispatch and package output instead of
+duplicating the coordinator's record. Do not close a queue while parking its executable
+remainder only in prose or a list of future actions.
+
+`DONE` means the assigned result is evidenced, not merely that a useful intermediate exists.
+A dossier does not complete a requested experiment or generation run; a saved proposal does
+not establish implementation or use by its consumer. Keep a partially delivered step
+`IN_PROGRESS` and put its executable remainder in the existing queue. Do not silently narrow
+the acceptance criteria to fit the delivered subset. A supported negative or inconclusive
+result can complete an investigation when the assigned work was performed; never manufacture
+a positive result or an endless search to make it look complete.
+
+Implementation effort is work, not an impediment: code, translations, source reading and
+tests already inside the assignment do not require a new prompt or a future dedicated session.
+A real dependency names what is unavailable and what would unblock it. During CI or a battery,
+keep the tested candidate or copy frozen; that alone does not freeze independent work in the
+actor's own worktree. Respect actual resource constraints and the existing budget, without
+calling an unmeasured concern a runtime refusal.
 
 Waiting for a scientific delivery, a CI run or a reserved decision blocks only the steps
 that depend on it. Continue independent work within scope. A new task outside the
@@ -558,7 +578,11 @@ can be resumed under its own id. An alive idle session needs the existing in-ses
 hourly recall; the host must not start a duplicate of it. A busy session or live job is
 left alone. Closed, paused or cancelled mandates are not reopened by this watch. Workspace
 trust, a powered-off host and an actually exhausted runtime quota remain explicit limits.
-No second scheduler, extra agent, approval gate or new Stop hook is introduced here.
+No second scheduler, extra agent, approval gate or new Stop hook is introduced here. A live
+session or heartbeat is evidence of liveness, not of progress or a completed objective. The
+watch reads recorded states; it cannot judge whether a purported `DONE` actually meets the
+assignment. The actor must reconcile that meaning before closure; do not start a duplicate
+live session to compensate for an idle one.
 
 ### The bounded Stop hook
 
