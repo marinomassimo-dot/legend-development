@@ -51,6 +51,19 @@
   "INTERACTION_MODE": "AUTONOMOUS_COMPLETE",
   "SESSION_PROFILE": "HARNESS",
   "RESUME": {
-    "note": "Shared canonical rules and routes changed; no executable or scientific code changed. All targeted checks passed. Next: clean-copy release verification of the frozen candidate, then landing and publication. Existing IT39 worktree belongs to the other session and is untouched."
+    "note": "Frozen body 7f1e6228 passed the full clean-clone battery (222 targets, 42 environment/corpus/cache skips), gate PASS, LINT no BLOCK, receipts OK. Remaining: integrate and publish this task, observe CI on the integrated commit, then close the record and remove only this task worktree. Later evidence-only edits are not attributed to that body battery."
+  },
+  "RELEASE_EVIDENCE": {
+    "body_commit": "7f1e6228c2b7e5830d982eb1c807a52079d96c62",
+    "battery_verdict": "PASS WITH SKIPS",
+    "battery_targets": 222,
+    "battery_skipped": 42,
+    "battery_log": "/tmp/legend-universal-evidence-_79sws63/battery.log",
+    "battery_elapsed_seconds": 3318.6,
+    "skip_classification": "Case-sensitive filesystem; absent gitignored corpus, figures, snapshots and catalogue cache; uninstalled optional Stop hook. The runner reason-unavailable attribution case is catalogue cache absent, identified in the source and confirmed by a targeted verbose check of its sole cache-dependent test.",
+    "gate_on_body": "PASS, 0 blocks",
+    "lint": "WARN, no BLOCK",
+    "receipts": "verify OK, 1506 events",
+    "clone_cleanup": "Owned release clone removed after its successful battery; evidence log retained."
   }
 }

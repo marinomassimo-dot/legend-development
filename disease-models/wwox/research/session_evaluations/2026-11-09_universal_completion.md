@@ -49,3 +49,14 @@ edit mechanically guarantees obedience by every future agent.
 KEEP the common rule and short routes. No semantic keyword gate: it would confuse honest
 negative results with incomplete work. Continue the existing owner's IT39 implementation;
 this task does not edit its record, worktree or scientific conclusions.
+
+## Frozen-body release evidence
+
+The clean-clone battery on `7f1e6228` returned PASS WITH SKIPS (222 targets, 42
+reported skips), no non-zero target. Skips depend on the case-sensitive filesystem, missing
+gitignored corpus/snapshots/cache and the optional hook not installed. The attribution test
+whose reason the runner did not expand was identified in source and a targeted verbose
+check as catalogue cache absent.
+Gate PASS with zero blocks, LINT WARN without BLOCK, and 1,506 receipts verified. The owned
+battery clone was removed; its log remains under the path in the task record. Later
+evidence-only updates and integration commits do not inherit that exact-SHA battery verdict.

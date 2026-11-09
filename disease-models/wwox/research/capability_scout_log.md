@@ -1788,3 +1788,15 @@ independent-reproduction label for any candidate, supplements and corrections lo
 **Outcome.** DISCARD for this question (examined, no trial needed); not integrated
 
 - **Pointer added 2026-11-08 (DREAM-2):** the E-MTAB-14792 access gap above has an unsent request drafted for the operator: [`drug_repurposing/ebi_access_request_E-MTAB-14792_draft.md`](drug_repurposing/ebi_access_request_E-MTAB-14792_draft.md). The route is a re-check of the public status, then the operator's decision; it is not sent from the module, and no e-mail address is given to any service. Nothing else in this log changes.
+
+
+## 2026-11-09 · Orchestrator · universal completion and operational attribution
+
+**REPEATED gap:** assigned work deferred despite executable steps, and intermediate delivery
+reported as completion. Prior correction: [autonomy/originals session evaluation](session_evaluations/2026-11-08_autonomy_originals.md);
+this pass: [universal completion](session_evaluations/2026-11-09_universal_completion.md).
+**CHANGE:** the existing continuity rule explicitly covers every actor and runtime within
+its scope, with shared entry/delegate/closing routes; operational causal attribution lives
+in epistemic discipline. No new tool, gate, registry or external service. Existing checks
+verify routing and schema behaviour; universal future model obedience is not demonstrated.
+**Next:** observe adoption through existing task evidence; no external scouting needed for this gap.
