@@ -1,0 +1,56 @@
+{
+  "_schema": "orchestrator-task-v1",
+  "TASK_ID": "ORCH-UNIVERSAL-COMPLETION-20261109",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "P1",
+  "OBJECTIVE": "Make autonomous completion, honest partial-delivery status and evidence-based operational attribution permanent for every actor and runtime, through the existing canonical rules and shared entry/closing paths.",
+  "START_UTC": "2026-11-09T06:13:40+00:00",
+  "SCOPE": "Harness instructions and routing only; no change to ratified LEGEND_CORE sections, scientific current files, private runtime settings, schedulers, hooks or other sessions task records.",
+  "ACCEPTANCE_CRITERIA": [
+    "The canonical continuity rule applies to every assigned actor within its own scope, including bounded delegates.",
+    "Partial outputs cannot silently replace assigned results; implementation effort alone is not a blocker; independent work continues while the tested candidate stays frozen.",
+    "Operational observations and causal explanations stay distinct in every actor report.",
+    "Existing entry, delegation, Scientist brief and closing routes reach the single canonical homes; relevant checks, release evidence and publication are attributed to exact commits."
+  ],
+  "DECISIONS_TAKEN": [
+    "Use the existing protocol and epistemic discipline as the only homes; route from existing entry and closing surfaces instead of copying prompts into role contracts.",
+    "Do not add a semantic keyword gate: mandate_continuity already returns CONTINUE for executable steps and cannot prove that a declared DONE satisfies the natural-language goal.",
+    "Leave IT39 implementation and its record to its owner; work in an isolated task worktree from the current published main."
+  ],
+  "DEFAULTS_TAKEN": [],
+  "STOP_LOG": [],
+  "AUTHORISED_QUEUE_20261109": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_1": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "Diagnose the existing completion paths and apply the rule in canonical homes and shared routes",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "framework/protocols/cross_session_transport.md section 12; framework/instruction/epistemic_discipline.md operational attribution; existing router, start, delegate, Scientist brief and takeaways routes updated in this task worktree"
+        },
+        {
+          "step": "Verify existing behaviour and instruction routes with proportionate existing checks",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "Existing suites all passed: mandate_continuity 68 (one hook-not-installed skip), mandate_watch 25, skill packages 6, ratified stop policy 8, link targets 5, agent pipeline 3, stop-policy reachability 11, section references 13. Total 139 tests, one skip. LINT WARN with no BLOCK; fulltext receipts verify OK on 1506 events."
+        },
+        {
+          "step": "Complete clean-copy release verification, integrate, publish, verify CI and remove only this task worktree",
+          "status": "IN_PROGRESS",
+          "owner": "orchestrator"
+        }
+      ]
+    }
+  },
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "CONTEXT_POLICY": "EXPLICIT_OPERATOR_REQUEST",
+  "INTERACTION_MODE": "AUTONOMOUS_COMPLETE",
+  "SESSION_PROFILE": "HARNESS",
+  "RESUME": {
+    "note": "Shared canonical rules and routes changed; no executable or scientific code changed. All targeted checks passed. Next: clean-copy release verification of the frozen candidate, then landing and publication. Existing IT39 worktree belongs to the other session and is untouched."
+  }
+}

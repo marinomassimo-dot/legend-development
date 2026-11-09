@@ -23,6 +23,11 @@ Paths are relative to the repo root.
    The same command prints the daily radar's last run (time, probe errors, items to examine,
    pending log entries) and accepts `--actor orchestrator|integrator|scientist-a..d`: run it
    for any actor who triages. The radar is information, never a gate.
+   Every actor accepting or resuming assigned work also loads
+   [autonomous mandate continuity](../../../framework/protocols/cross_session_transport.md#12--autonomous-mandate-continuity),
+   including completion of the authorised objective and partial-delivery semantics. Reconcile
+   an existing mandate with `mandate_continuity.py status --task <TASK_ID>`; a bounded delegate
+   follows its dispatch scope rather than inventing a second parent mandate.
 4. If the operator provided studies/papers/PMIDs/DOIs/titles:
    - if they want to start the process, use `.claude/skills/legend/SKILL.md` as autopilot;
    - if they ask only for dedup/screening, activate `.claude/skills/legend-study-intake-triage/SKILL.md`.
