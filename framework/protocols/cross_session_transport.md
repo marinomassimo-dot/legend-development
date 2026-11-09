@@ -551,7 +551,9 @@ stale copies; multiple unmerged copies without one authoritative main record rem
 `UNKNOWN`, never a guessed owner. Its decision still comes from recorded queues: it cannot discover
 authorised work omitted from them. On accepting a continuing mandate, keep its queue and
 the session binding current and check `--task <ID> --deliver none --json` once; an
-`UNKNOWN` binding is a visible coverage gap, not proof the session is monitored.
+`UNKNOWN` binding is a visible coverage gap, not proof the session is monitored. The hourly
+in-session cron passes `--self-call`: without it the caller's own turn is reported `RUNNING`
+("session busy") whatever the queue holds, and a session waiting on a monitor reads that as progress.
 
 The present delivery adapter is **Claude Code**, not every runtime. A dead bound session
 can be resumed under its own id. An alive idle session needs the existing in-session

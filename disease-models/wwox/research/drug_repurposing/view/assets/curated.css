@@ -235,3 +235,4 @@ nav .navmain>a:hover{background:var(--accbg)}
 @media (max-width:640px){nav{position:static}nav .navmain{overflow:visible;white-space:normal;flex-wrap:wrap;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:4px;box-sizing:border-box}nav .navmain>a,.navall>summary{box-sizing:border-box;overflow-wrap:anywhere;white-space:normal;min-height:44px;line-height:1.2;display:flex;align-items:center;padding:0 10px;border:1px solid var(--line);border-radius:8px;font-size:.86rem}.navall{margin-left:0}.navall-in{left:0;right:auto}}
 @media print{.navall,.brand-state{display:none}nav{position:static}}
 .card-q{margin:6px 0;font-size:.92rem}
+.inv-cmp-list{margin:.4em 0 0 1.1em;padding:0}.inv-cmp-list li{margin:.35em 0}.cmp-role{font-size:.72rem;border:1px solid currentColor;border-radius:8px;padding:0 6px;margin:0 4px;white-space:nowrap}.inv-class-note{max-width:60ch}.inv-cmp summary{cursor:pointer}

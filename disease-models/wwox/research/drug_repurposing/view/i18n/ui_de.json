@@ -1428,5 +1428,18 @@
  "UI_IT.xp_targets": "Angegebene Zielmoleküle des Bedarfs",
  "UI_IT.xp_targets_none": "kein molekulares Zielmolekül aufgeführt (der Bedarf ist über eine Funktion oder einen Phänotyp definiert)",
  "UI_IT.xp_to": "bis",
- "UI_IT.xp_unknown": "nicht bekannt"
+ "UI_IT.xp_unknown": "nicht bekannt",
+ "UI_IT.iv_fc_h": "Vergleichssubstanzen",
+ "UI_IT.iv_fc_mech": "Mit einem mechanismustrennenden Vergleich",
+ "UI_IT.iv_fc_func": "Nur Vergleiche des funktionellen Ergebnisses",
+ "UI_IT.iv_fc_none": "Kein Vergleich in den Dateien",
+ "UI_IT.iv_cmp_h": "Vergleichssubstanzen",
+ "UI_IT.iv_cmp_sum": "{f} des funktionellen Ergebnisses, {m} mechanismustrennend",
+ "UI_IT.iv_cmp_none": "Kein Vergleich in den für diese Untersuchung konsultierten Dateien.",
+ "UI_IT.iv_cmp_role_functional_outcome": "funktionelles Ergebnis",
+ "UI_IT.iv_cmp_role_mechanism_separating": "trennt den Mechanismus",
+ "UI_IT.iv_cmp_limits": "Selektivitätsgrenzen",
+ "UI_IT.iv_cmp_src": "Quelle",
+ "UI_IT.iv_cmp_names_hidden": "die Namen der Verbindungen sind nicht in der teilbaren Ausgabe",
+ "UI_IT.iv_class_note": "Die Kategorien „neue Kombination“ und „abgeschwächt oder wieder geöffnet“ lassen sich aus den vorhandenen Feldern nicht bestimmen und werden nicht angezeigt; eine Zeile nennt nur ihre Herkunft und ihre Zeilenart."
 }

@@ -1428,5 +1428,18 @@
  "UI_IT.xp_targets": "Cibles déclarées du besoin",
  "UI_IT.xp_targets_none": "aucune cible moléculaire listée (le besoin est défini sur une fonction ou un phénotype)",
  "UI_IT.xp_to": "à",
- "UI_IT.xp_unknown": "non connu"
+ "UI_IT.xp_unknown": "non connu",
+ "UI_IT.iv_fc_h": "Comparateurs",
+ "UI_IT.iv_fc_mech": "Avec un comparateur qui sépare le mécanisme",
+ "UI_IT.iv_fc_func": "Comparateurs du résultat fonctionnel seulement",
+ "UI_IT.iv_fc_none": "Aucun comparateur dans les fichiers",
+ "UI_IT.iv_cmp_h": "Comparateurs",
+ "UI_IT.iv_cmp_sum": "{f} du résultat fonctionnel, {m} qui séparent le mécanisme",
+ "UI_IT.iv_cmp_none": "Aucun comparateur dans les fichiers consultés pour cette enquête.",
+ "UI_IT.iv_cmp_role_functional_outcome": "résultat fonctionnel",
+ "UI_IT.iv_cmp_role_mechanism_separating": "sépare le mécanisme",
+ "UI_IT.iv_cmp_limits": "limites de sélectivité",
+ "UI_IT.iv_cmp_src": "source",
+ "UI_IT.iv_cmp_names_hidden": "les noms des composés ne figurent pas dans l'édition partageable",
+ "UI_IT.iv_class_note": "Les catégories « nouvelle combinaison » et « affaiblie ou rouverte » ne peuvent pas être déterminées à partir des champs disponibles et ne sont pas affichées ; une ligne indique seulement son origine et son type de ligne."
 }

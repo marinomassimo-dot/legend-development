@@ -1475,6 +1475,46 @@ class RealViewports(unittest.TestCase):
         self.assertGreater(n_hidden, 0)
         self.assertTrue(reopened)
 
+    def test_the_comparator_filter_and_the_progressive_detail_in_the_browser_at_390(self):
+        """IT39 P10, in the browser: rows carry data-cmp; the comparator filter hides the rows without a mechanism-separating comparator; the shareable edition shows counts and no compound name;
+        the full edition opens a list in which each comparator keeps its role, its selectivity limits and its source."""
+        if not rv.find_chromium():
+            self.skipTest("no Chromium binary: the comparator filter was NOT exercised")
+        with tempfile.TemporaryDirectory() as td:
+            f = Path(td) / "v.html"
+            f.write_text(rv.build(DR, "shareable", "it"), encoding="utf-8")
+            try:
+                c = rv.Cdp(rv.find_chromium(), td)
+                try:
+                    c.call("Page.enable"); c.call("Emulation.setDeviceMetricsOverride", width=390, height=844, deviceScaleFactor=1, mobile=True)
+                    c.call("Page.navigate", url="file://" + str(f)); c.wait_for("!!document.querySelector('[data-cur-ready]')", 60); c.settle()
+                    bar = c.evaluate("!!document.querySelector('#investigations .inv-filter-cmp') && !document.querySelector('#investigations .inv-filter-cmp').hidden")
+                    c.evaluate("document.querySelector('#investigations .inv-filter-cmp button[data-fc=\"mech\"]').click(); 1")
+                    only = c.evaluate("Array.from(document.querySelectorAll('#investigations .inv-row')).filter(function (r) { return !r.hidden; }).every(function (r) { return r.getAttribute('data-cmp') === 'mech'; })")
+                    n_shown = c.evaluate("Array.from(document.querySelectorAll('#investigations .inv-row')).filter(function (r) { return !r.hidden; }).length")
+                    c.evaluate("document.querySelector('#investigations .inv-filter-cmp button[data-fc=\"\"]').click(); 1")
+                    n_all = c.evaluate("Array.from(document.querySelectorAll('#investigations .inv-row')).filter(function (r) { return !r.hidden; }).length")
+                    names_in_share = c.evaluate("document.querySelectorAll('#investigations .inv-cmp').length")
+                finally:
+                    c.close()
+            except Exception as e:
+                self.skipTest("browser could not be driven: " + str(e)[:120])
+        self.assertTrue(bar)
+        self.assertTrue(only)
+        self.assertGreater(n_shown, 0)
+        self.assertGreater(n_all, n_shown)
+        self.assertEqual(names_in_share, 0)                     # the shareable edition carries counts, not a list of comparators
+
+    def test_the_full_edition_lists_each_comparator_with_role_limits_and_source_and_the_shareable_does_not(self):
+        full, share = rv.build(DR, "full", "en"), rv.build(DR, "shareable", "en")
+        self.assertIn('class="inv-cmp"', full)
+        self.assertIn("cmp-mechanism_separating", full)
+        self.assertIn("Ro 25-6981", full)
+        self.assertNotIn('class="inv-cmp"', share)
+        self.assertNotIn("Ro 25-6981 </b>", share)
+        self.assertIn("compound names are not in the shareable edition", share)
+        self.assertIn("cannot be determined from the available fields", share)               # an undeterminable classification is stated, not invented
+
     def test_no_horizontal_overflow_at_360_and_390(self):
         if not rv.find_chromium():
             self.skipTest("no Chromium binary: viewports were NOT measured")

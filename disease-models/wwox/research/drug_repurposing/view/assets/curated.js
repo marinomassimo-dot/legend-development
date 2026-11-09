@@ -665,14 +665,14 @@ document.body.setAttribute('data-cur-ready', '1');
 (function () {   // IT24 P15, widened in IT35: filters of the WHOLE investigations queue by origin and by kind of row; the buttons exist only when this runs, so every list is complete without JavaScript
   var bars = document.querySelectorAll('#investigations .inv-filter'); if (!bars.length) return;
   var rows = document.querySelectorAll('#investigations .inv-row');
-  var state = { f: '', fs: '' };
-  function apply() { rows.forEach(function (r) { r.hidden = (!!state.f && r.getAttribute('data-origin') !== state.f) || (!!state.fs && r.getAttribute('data-status') !== state.fs); }); }
+  var state = { f: '', fs: '', fc: '' };
+  function apply() { rows.forEach(function (r) { r.hidden = (!!state.f && r.getAttribute('data-origin') !== state.f) || (!!state.fs && r.getAttribute('data-status') !== state.fs) || (!!state.fc && r.getAttribute('data-cmp') !== state.fc); }); }
   bars.forEach(function (bar) {
     bar.hidden = false;
     bar.addEventListener('click', function (e) {
       var b = e.target.closest('button'); if (!b) return;
-      var key = b.hasAttribute('data-fs') ? 'fs' : 'f';
-      state[key] = b.getAttribute(key === 'fs' ? 'data-fs' : 'data-f');
+      var key = b.hasAttribute('data-fc') ? 'fc' : (b.hasAttribute('data-fs') ? 'fs' : 'f');
+      state[key] = b.getAttribute('data-' + key);
       bar.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
       apply();
     });
@@ -682,7 +682,7 @@ document.body.setAttribute('data-cur-ready', '1');
   function open() {
     var m = (location.hash || '').match(/^#((?:inv-\d+)|(?:INV-\d+))$/); if (!m) return;
     var el = document.getElementById(m[1]); var r = el && el.closest ? el.closest('.inv-row') : null; if (!r) return;
-    if (r.hidden) { document.querySelectorAll('#investigations .inv-filter').forEach(function (bar) { var all = bar.querySelector('button[data-f=""], button[data-fs=""]'); if (all) all.click(); }); r.hidden = false; }
+    if (r.hidden) { document.querySelectorAll('#investigations .inv-filter').forEach(function (bar) { var all = bar.querySelector('button[data-f=""], button[data-fs=""], button[data-fc=""]'); if (all) all.click(); }); r.hidden = false; }
     var d = r.querySelector('details.inv-more'); if (d) d.open = true;
     r.setAttribute('tabindex', '-1'); r.scrollIntoView(); r.focus({ preventScroll: true });
   }

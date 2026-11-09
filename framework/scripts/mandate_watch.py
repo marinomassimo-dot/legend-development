@@ -54,6 +54,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import os
 import shlex
 import shutil
@@ -364,7 +365,10 @@ def classify(status: dict, session: dict | None, session_list_ok: bool, bound: b
         j = jobs["alive"][0]
         return {"state": "RUNNING", "action": "NONE", "why": f"job '{j['label']}' is alive (pid {j['pid']}) even if its output is silent"}
     if session is not None and session.get("status") == "busy":
-        return {"state": "RUNNING", "action": "NONE", "why": "session busy"}
+        left = re.search(r"(\d+) executable step", status.get("message", "") or "")
+        # IT39: a busy session is not progress. The hourly in-session cron must pass --self-call (the caller's own turn is then not "busy work"); without it a session waiting on a
+        # monitor is answered RUNNING whatever the queue holds. Say how much authorised work the record still lists, so the answer cannot be read as "nothing to do".
+        return {"state": "RUNNING", "action": "NONE", "why": "session busy" + (f"; the record still lists {left.group(1)} executable step(s): busy is not progress, and an in-session check should use --self-call" if left else "")}
     if idle_seconds is not None and idle_seconds < quiet_minutes * 60:
         return {"state": "RUNNING", "action": "NONE", "why": f"activity {int(idle_seconds // 60)} min ago (quiet threshold {quiet_minutes})"}
     last = pending.get("requested_at")

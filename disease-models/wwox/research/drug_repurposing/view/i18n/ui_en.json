@@ -1428,5 +1428,18 @@
  "UI_IT.xp_targets": "Declared targets of the need",
  "UI_IT.xp_targets_none": "no molecular target listed (the need is defined on a function or a phenotype)",
  "UI_IT.xp_to": "to",
- "UI_IT.xp_unknown": "unknown"
+ "UI_IT.xp_unknown": "unknown",
+ "UI_IT.iv_fc_h": "Comparators",
+ "UI_IT.iv_fc_mech": "With a mechanism-separating comparator",
+ "UI_IT.iv_fc_func": "Functional-outcome comparators only",
+ "UI_IT.iv_fc_none": "No comparator in the files",
+ "UI_IT.iv_cmp_h": "Comparators",
+ "UI_IT.iv_cmp_sum": "{f} functional-outcome, {m} mechanism-separating",
+ "UI_IT.iv_cmp_none": "No comparator in the files consulted for this investigation.",
+ "UI_IT.iv_cmp_role_functional_outcome": "functional outcome",
+ "UI_IT.iv_cmp_role_mechanism_separating": "separates the mechanism",
+ "UI_IT.iv_cmp_limits": "selectivity limits",
+ "UI_IT.iv_cmp_src": "source",
+ "UI_IT.iv_cmp_names_hidden": "compound names are not in the shareable edition",
+ "UI_IT.iv_class_note": "The categories 'new combination' and 'weakened or reopened' cannot be determined from the available fields and are not shown; a row states only its origin and its kind of row."
 }

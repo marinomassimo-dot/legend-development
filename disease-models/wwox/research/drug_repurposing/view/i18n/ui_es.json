@@ -1428,5 +1428,18 @@
  "UI_IT.xp_targets": "Dianas declaradas de la necesidad",
  "UI_IT.xp_targets_none": "ninguna diana molecular enumerada (la necesidad se define sobre una función o un fenotipo)",
  "UI_IT.xp_to": "a",
- "UI_IT.xp_unknown": "no conocido"
+ "UI_IT.xp_unknown": "no conocido",
+ "UI_IT.iv_fc_h": "Comparadores",
+ "UI_IT.iv_fc_mech": "Con un comparador que separa el mecanismo",
+ "UI_IT.iv_fc_func": "Solo comparadores del resultado funcional",
+ "UI_IT.iv_fc_none": "Ningún comparador en los archivos",
+ "UI_IT.iv_cmp_h": "Comparadores",
+ "UI_IT.iv_cmp_sum": "{f} del resultado funcional, {m} que separan el mecanismo",
+ "UI_IT.iv_cmp_none": "Ningún comparador en los archivos consultados para esta investigación.",
+ "UI_IT.iv_cmp_role_functional_outcome": "resultado funcional",
+ "UI_IT.iv_cmp_role_mechanism_separating": "separa el mecanismo",
+ "UI_IT.iv_cmp_limits": "límites de selectividad",
+ "UI_IT.iv_cmp_src": "fuente",
+ "UI_IT.iv_cmp_names_hidden": "los nombres de los compuestos no están en la edición compartible",
+ "UI_IT.iv_class_note": "Las categorías «nueva combinación» y «debilitada o reabierta» no pueden determinarse con los campos disponibles y no se muestran; una fila indica solo su origen y su tipo de fila."
 }

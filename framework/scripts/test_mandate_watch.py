@@ -352,5 +352,21 @@ class Jobs(unittest.TestCase):
         self.assertEqual((paused["state"], paused["action"]), ("PAUSED", "NONE"))
 
 
+class BusyIsNotProgress(unittest.TestCase):
+    """IT39: a session reported busy while its record still lists authorised work must say so (a session that stopped to wait on a monitor read 'session busy' as progress)."""
+
+    def test_the_busy_answer_names_the_work_the_record_still_lists_and_the_self_call_flag(self):
+        st = {"verdict": "CONTINUE", "message": "MANDATE T CONTINUE \u2014 3 executable step(s) remain; next: A"}
+        out = mw.classify(st, {"status": "busy"}, True, True, 0, {}, "sig", 0, 10, jobs=None, push_missing=None)
+        self.assertEqual((out["state"], out["action"]), ("RUNNING", "NONE"))
+        self.assertIn("3 executable step(s)", out["why"])
+        self.assertIn("--self-call", out["why"])
+
+    def test_without_remaining_work_the_busy_answer_is_unchanged(self):
+        st = {"verdict": "CONTINUE", "message": "MANDATE T CONTINUE"}
+        out = mw.classify(st, {"status": "busy"}, True, True, 0, {}, "sig", 0, 10, jobs=None, push_missing=None)
+        self.assertEqual(out["why"], "session busy")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
