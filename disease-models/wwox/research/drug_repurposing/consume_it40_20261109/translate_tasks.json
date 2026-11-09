@@ -1,0 +1,427 @@
+{
+ "1509c69108ad": {
+  "mode": "NEW",
+  "english": "Total NMDA-receptor reduction, a GluN2A-weighted component, a general loss of drive, and a bath-state (magnesium, potassium) effect.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "19df3deb1317": {
+  "mode": "NEW",
+  "english": "A residual fall beyond a control matched to the same measured current reduction, together with a loss of coupling, keeps the connexin question open.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "1b2acaee70e8": {
+  "mode": "NEW",
+  "english": "An explicit statement of the recording conditions, or recordings under blockade with identity by morphology and matched access resistance.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "26884cb86182": {
+  "mode": "NEW",
+  "english": "The burst may also need AMPA-receptor drive. This is exploratory; the premise is not established.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "2d0bcfbcaf77": {
+  "mode": "NEW",
+  "english": "A curve shifted to the left of the full-antagonist curve, with a measured sensitive fraction, makes the GluN2B-directed comparison the better question.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "2d13a2f2e87f": {
+  "mode": "NEW",
+  "english": "Sag and rebound are larger in the knockout; no Ih-blocker arm and no voltage-clamp current exist in the records read. In normal cortex an Ih blocker reduces sag.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "2f60e5178da3": {
+  "mode": "NEW",
+  "english": "Is the NMDA-receptor dependence total receptor gain or GluN2B-weighted?",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "345a9097699c": {
+  "mode": "NEW",
+  "english": "The passive and leak reading (MH1), a T-type contribution to rebound, off-target sodium-current block of the tool, another HCN isoform or compartment.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "368203a08734": {
+  "mode": "NEW",
+  "english": "Smaller cells with a fixed seal leak, a larger Ih, selection by input-resistance criteria, maturation delay, and a cell-type mix.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "3863daef052a": {
+  "mode": "NEW",
+  "english": "A matched-condition excess sag blocked by both chemotypes with a larger voltage-clamp Ih density would move HCN from 'contributes' to 'differs'.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "4a2b9abb49f6": {
+  "mode": "NEW",
+  "english": "Does an Ih (HCN) contribution remain after matching potential and deflection?",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "4ea9ffac88e8": {
+  "mode": "NEW",
+  "english": "The numbers do not fit a pure loss of resting K+ conductance at constant capacitance; smaller cells plus a conductance change is one reading. Capacitance is not an established difference. No drug is proposed.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "4effcdba3c5d": {
+  "mode": "NEW",
+  "english": "In the neuron-specific knockout slice an NMDA-receptor antagonist abolishes the spontaneous bursts. No AMPA/kainate antagonist has been applied; a shift of the knockout excitatory-current amplitude fits an AMPA-type quantum only by inference.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "4f83df16e380": {
+  "mode": "NEW",
+  "english": "Can the gap-junction tool's burst fall be read as a gap-junction result?",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "62aca19854ba": {
+  "mode": "NEW",
+  "english": "Do passive cell size and a resting K+ conductance explain the larger sag and input resistance?",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "681925371373": {
+  "mode": "NEW",
+  "english": "An HCN contribution may remain after matching conditions. This is a tool arm only: two blocker chemotypes, engagement first. No candidate drug and no in-vivo claim.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "6cc825d7ca20": {
+  "mode": "EDIT",
+  "old_key": "31fbc9629e08",
+  "old_english": "Repeat the slice burst assay with the magnesium concentration reported, a d-APV arm and a GluN2B NAM arm, each at matched measured NMDAR-current reduction (two unrelated NAMs), vehicle time-matched, animal as the unit; memantine only afterwards, with the magnesium concentration and holding voltage stated, beside the tool compound, and the untreated same-genotype comparator.",
+  "added_english": "[IT40] B6 Report bath magnesium, K+, temperature and blockers actually present as measured values; use a within-slice paired design; add an AMPA/kainate block arm verified by the fast EPSC (abolition alone is not informative, because loss of magnesium relief would abolish an NMDAR-regenerative burst too); add a matched-effect control read on at least two metrics with a receptor-agnostic release-reducing control; add a GABA-A arm because the sIPSC amplitude is halved; state the order of application and washout as part of the design.",
+  "new_english": "Repeat the slice burst assay with the magnesium concentration reported, a d-APV arm and a GluN2B NAM arm, each at matched measured NMDAR-current reduction (two unrelated NAMs), vehicle time-matched, animal as the unit; memantine only afterwards, with the magnesium concentration and holding voltage stated, beside the tool compound, and the untreated same-genotype comparator. [IT40] B6 Report bath magnesium, K+, temperature and blockers actually present as measured values; use a within-slice paired design; add an AMPA/kainate block arm verified by the fast EPSC (abolition alone is not informative, because loss of magnesium relief would abolish an NMDAR-regenerative burst too); add a matched-effect control read on at least two metrics with a receptor-agnostic release-reducing control; add a GABA-A arm because the sIPSC amplitude is halved; state the order of application and washout as part of the design.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "6ee3608f2a55": {
+  "mode": "NEW",
+  "english": "The Methods drug list contains no synaptic blocker, so the intrinsic recordings were probably made with synapses intact, while most knockout slices burst.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "7a468e0dc06b": {
+  "mode": "NEW",
+  "english": "A genuine cell-autonomous difference (MH1 or MH2), maturation delay, a cell-type mix.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "7feead3ba9ed": {
+  "mode": "EDIT",
+  "old_key": "b4a38f2eeb65",
+  "old_english": "In knockout, heterozygote and wild-type slices: sag, resting potential, input resistance, rebound and burst incidence before and after two Ih blockers of different chemotypes (the second so that an off-target action is not read as Ih), with a current-clamp step that matches the resting potential and the peak potential, with a smaller cell or immature membrane listed as its own candidate beside branch D, and a voltage-clamp read of the blocker-sensitive current in a subset of cells; animals, not cells, are the replicates. Branch D adds the potassium-current arm: the potassium currents sensitive to a Kv7 blocker and to a Kir-channel blocker in voltage clamp, and input resistance read with synaptic transmission blocked. [IT36] A first-generation Ih blocker at 50 uM is about 40 times its sodium-current IC50 in DRG neurons (age not stated); read a second chemotype and the blocker-sensitive current in voltage clamp; nickel/Z944 and Kv7 arms separate.",
+  "added_english": "[IT40] A4 Report access resistance, bridge balance and capacitance by genotype; add a Ba2+- or XE991-sensitive difference current with its zero-crossing against E_K (about -97 to -98 mV from the declared solutions; the recorded potentials need a junction correction of about -13 mV that 34634460 did not measure, which puts the estimated sag peaks about 16-21 mV below E_K, so the prediction applies to the voltage-clamp difference current, not to the sag peak).",
+  "new_english": "In knockout, heterozygote and wild-type slices: sag, resting potential, input resistance, rebound and burst incidence before and after two Ih blockers of different chemotypes (the second so that an off-target action is not read as Ih), with a current-clamp step that matches the resting potential and the peak potential, with a smaller cell or immature membrane listed as its own candidate beside branch D, and a voltage-clamp read of the blocker-sensitive current in a subset of cells; animals, not cells, are the replicates. Branch D adds the potassium-current arm: the potassium currents sensitive to a Kv7 blocker and to a Kir-channel blocker in voltage clamp, and input resistance read with synaptic transmission blocked. [IT36] A first-generation Ih blocker at 50 uM is about 40 times its sodium-current IC50 in DRG neurons (age not stated); read a second chemotype and the blocker-sensitive current in voltage clamp; nickel/Z944 and Kv7 arms separate. [IT40] A4 Report access resistance, bridge balance and capacitance by genotype; add a Ba2+- or XE991-sensitive difference current with its zero-crossing against E_K (about -97 to -98 mV from the declared solutions; the recorded potentials need a junction correction of about -13 mV that 34634460 did not measure, which puts the estimated sag peaks about 16-21 mV below E_K, so the prediction applies to the voltage-clamp difference current, not to the sag peak).",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "80fa15bc6765": {
+  "mode": "NEW",
+  "english": "Reduced release or altered excitability; direct NMDA-receptor channel block (neither shown nor excluded); neuronal electrical coupling; pannexin-1; run-down or a recording artefact.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "81fba8b46d33": {
+  "mode": "NEW",
+  "english": "If the excess vanishes at matched conditions, or the blocker-sensitive current per pF is the same, there is no HCN difference. A blocker response shows contribution, not a defect.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "87177877f044": {
+  "mode": "NEW",
+  "english": "If sag remains at matched potential and deflection, or capacitance is unchanged while input resistance is higher, the passive reading fails.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "896cd43acd21": {
+  "mode": "NEW",
+  "english": "Coincident curves make total NMDA-receptor reduction (with the bath magnesium and voltage) the question; a plateau below abolition moves it to GluN2A-containing receptors. None of this can come from other preparations.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "8c0bcfdd6eff": {
+  "mode": "NEW",
+  "english": "A GluN2B-selective negative modulator may remove the bursts at a smaller measured fraction of the isolated NMDA-receptor current than the full antagonist needs. Exploratory.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "929dc08517c1": {
+  "mode": "NEW",
+  "english": "Capacitance and time constant measured in the same cells, or a Ba2+- or XE991-sensitive difference current in Wwox neurons, would decide whether any pharmacological arm is needed.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "9671de4502ca": {
+  "mode": "NEW",
+  "english": "The burst needs NMDA-receptor activity; about 20 percent of the delayed evoked response remains against the wild-type floor under the antagonist, which is not evidence of incomplete block.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "9c53196383de": {
+  "mode": "EDIT",
+  "old_key": "ec3b8d38c180",
+  "old_english": "WWOX-system, one preparation read in full and re-extracted (PMID 34634460, Table 1 and Figure 6): resting potential -79.25, -75.51, -73.62 mV and sag at a fixed -200 pA step 1.18, 2.04, 2.57 mV grade with gene dose, input resistance saturates at one allele, rebound is marked larger only in the knockout (the printed p cannot be reproduced from the Table 1 means and dispersion under stated assumptions), and bursts occur in 36 of 42 knockout, 4 of 23 heterozygote and 0 of 11 wild-type slices; the authors name control of the resting membrane potential as a factor underlying the hyperexcitability (the frequency-current slope does not differ once the curves are shifted to one step below rheobase; supplement not read) and cite discordant Ih-blocker precedents, including worsening of 4-AP events. Compound side: Ih-acting tools exist in the catalogue (a clinically used HCN blocker and several research blockers, identities resolved), found by the need search without naming any; their cellular potency in a cortical pyramidal neuron and their selectivity among HCN isoforms were not assessed here. No Ih-blocker experiment in a Wwox-deficient preparation is recorded in the entries read. [IT39] Ivabradine blocks sag and hyperpolarises cortical L5 and L6 neurons in normal rat slices, and injection into somatosensory cortex cut absence-seizure time by 96 percent against 40 percent in thalamic VB (abstract); the GAERS authors read Ih as not an adaptive response to spike-wave discharges (input resistance fell, resting potential and sag unchanged), which sits beside the discordant precedents.",
+  "added_english": "[IT40] A7 Tool notes: ZD7288 (20 umol/L in thalamic neurons: about 17 mV hyperpolarisation, sag 0.4-2.1 mV left) is reported to block sodium and T-type current (abstract level for those papers); the Kv7 openers retigabine and SCR2682 were read at abstract level only; K2P and Kir tool papers exist but none is shown to work in layer II/III pyramidal neurons.",
+  "new_english": "WWOX-system, one preparation read in full and re-extracted (PMID 34634460, Table 1 and Figure 6): resting potential -79.25, -75.51, -73.62 mV and sag at a fixed -200 pA step 1.18, 2.04, 2.57 mV grade with gene dose, input resistance saturates at one allele, rebound is marked larger only in the knockout (the printed p cannot be reproduced from the Table 1 means and dispersion under stated assumptions), and bursts occur in 36 of 42 knockout, 4 of 23 heterozygote and 0 of 11 wild-type slices; the authors name control of the resting membrane potential as a factor underlying the hyperexcitability (the frequency-current slope does not differ once the curves are shifted to one step below rheobase; supplement not read) and cite discordant Ih-blocker precedents, including worsening of 4-AP events. Compound side: Ih-acting tools exist in the catalogue (a clinically used HCN blocker and several research blockers, identities resolved), found by the need search without naming any; their cellular potency in a cortical pyramidal neuron and their selectivity among HCN isoforms were not assessed here. No Ih-blocker experiment in a Wwox-deficient preparation is recorded in the entries read. [IT39] Ivabradine blocks sag and hyperpolarises cortical L5 and L6 neurons in normal rat slices, and injection into somatosensory cortex cut absence-seizure time by 96 percent against 40 percent in thalamic VB (abstract); the GAERS authors read Ih as not an adaptive response to spike-wave discharges (input resistance fell, resting potential and sag unchanged), which sits beside the discordant precedents. [IT40] A7 Tool notes: ZD7288 (20 umol/L in thalamic neurons: about 17 mV hyperpolarisation, sag 0.4-2.1 mV left) is reported to block sodium and T-type current (abstract level for those papers); the Kv7 openers retigabine and SCR2682 were read at abstract level only; K2P and Kir tool papers exist but none is shown to work in layer II/III pyramidal neurons.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "a5fde891ed17": {
+  "mode": "NEW",
+  "english": "Part of the contrast may reflect network state or cell selection rather than a cell-autonomous difference. This is a design control; no drug is proposed.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "aedc0c4f5ce9": {
+  "mode": "NEW",
+  "english": "A gap-junction-blocking tool lowered the burst rate in the knockout slice and did not recover. In culture the same tool lowers AMPA and NMDA currents, broadens spikes and lowers input resistance.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "af1905e427d4": {
+  "mode": "NEW",
+  "english": "Does the burst depend on AMPA-receptor drive?",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "b719c7c10191": {
+  "mode": "NEW",
+  "english": "A verified AMPA/kainate block that abolishes the bursts at less total charge removed than the NMDA-receptor antagonist needs would put AMPA receptors first in the next question.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "c49c9b6c64b0": {
+  "mode": "NEW",
+  "english": "Were the intrinsic recordings made under conditions that bias the genotype contrast?",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "d93e57bc7da0": {
+  "mode": "EDIT",
+  "old_key": "2f71bb45ed56",
+  "old_english": "Whether a partial, clinically achievable block suffices, and whether the carded effect is a subunit effect or a pore-block effect. A pore blocker's potency depends on voltage and on magnesium, so the unreported bath is itself the obstacle. [IT36] A GluN2B NAM effect would show participation of GluN2B-containing receptors in sustaining bursts, not that the lesion lies in GluN2B; it needs a target-specific control (matched-current d-APV).",
+  "added_english": "[IT40] B5 Radiprodil is GluN2B-selective in oocytes (the selectivity sentence rests on an unread supplementary figure) with 45 percent maximum inhibition of GluN2A/GluN2B triheteromers and very slow washout; its use or activity dependence was not tested; its slice precedent is CA1 at P17-P22 with bath magnesium stated as 1.5 mM in the Methods and 0.2 mM in the legends. TCN-201 acts on recombinant GluN2A only, potency set by glycine, maximum inhibition 73-81 percent, so a TCN-201 arm needs a measured slice co-agonist level.",
+  "new_english": "Whether a partial, clinically achievable block suffices, and whether the carded effect is a subunit effect or a pore-block effect. A pore blocker's potency depends on voltage and on magnesium, so the unreported bath is itself the obstacle. [IT36] A GluN2B NAM effect would show participation of GluN2B-containing receptors in sustaining bursts, not that the lesion lies in GluN2B; it needs a target-specific control (matched-current d-APV). [IT40] B5 Radiprodil is GluN2B-selective in oocytes (the selectivity sentence rests on an unread supplementary figure) with 45 percent maximum inhibition of GluN2A/GluN2B triheteromers and very slow washout; its use or activity dependence was not tested; its slice precedent is CA1 at P17-P22 with bath magnesium stated as 1.5 mM in the Methods and 0.2 mM in the legends. TCN-201 acts on recombinant GluN2A only, potency set by glycine, maximum inhibition 73-81 percent, so a TCN-201 arm needs a measured slice co-agonist level.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "dab8f9799b5d": {
+  "mode": "NEW",
+  "english": "If a matched non-gap-junction control gives the same fall, the gap-junction attribution is not supported; a pannexin-1 blocker with shown engagement that lowers bursts would support pannexin-1.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "e0839859cc57": {
+  "mode": "NEW",
+  "english": "The fall may come from effects on synaptic currents and excitability rather than from coupling. No datum in the sources read supports the gap-junction half. Exploratory.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "e6aa39a1f3a3": {
+  "mode": "NEW",
+  "english": "Input resistance rises 39 percent in mutants while the time constant is nearly unchanged; resting potential and sag grade with gene dose. Recordings use one fixed current step.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "e814ea2de1be": {
+  "mode": "NEW",
+  "english": "If the contrast is unchanged under blockade with matched access resistance, it is intrinsic to the recorded membrane; if it shrinks, the original contrast was partly synaptic state or selection.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "eaaec5adb8f1": {
+  "mode": "NEW",
+  "english": "Bursts that persist under a verified, pre-specified AMPA/kainate block weaken this reading. Abolition alone does not separate AMPA drive from NMDA-receptor-regenerative drive, because losing the depolarisation also removes magnesium relief.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "ed04c567319d": {
+  "mode": "NEW",
+  "english": "NMDA-receptor-regenerative drive (GluN2B- or GluN2A-weighted), a general loss of excitatory drive, and a recording-state artefact. Kainate receptors are not separated from AMPA receptors by the usual tools.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "f5b6c67dfba6": {
+  "mode": "EDIT",
+  "old_key": "3e1898dcc3b8",
+  "old_english": "Branch A, compensatory Ih: blocking it worsens or leaves bursts; weakened if bursts fall. Branch B, pro-excitatory Ih through the depolarised resting potential: blocking it lowers bursts at matched membrane potential; weakened if bursts do not fall. Branch C, bystander: no effect on bursts although sag falls; weakened by any burst change. The sag itself must first be shown to be Ih (sensitive to the blocker), and a blocker that shifts the resting potential acts on the premises of A and B at once. Branch D, added from an unguided expansion (IT35): the higher input resistance of the knockout and the heterozygote is the opposite of what a larger Ih alone would give (in a rat cortical dysplasia model reduced Ih came with a higher input resistance, reversed by an Ih blocker, PMID 21795624; there the resting potential is hyperpolarised, so it is not a mirror image), so a second or alternative change, such as loss of a resting potassium conductance (Kir, K2P or Kv7 channels), is a rival explanation; weakened if blocker-sensitive potassium currents do not differ.",
+  "added_english": "[IT40] A3 Whether the excess sag and rebound persist at matched potential and matched deflection, whether capacitance differs, and whether the recordings were under synaptic blockade; only then whether a blocker-sensitive current differs. A blocker response shows that the current contributes, not that it is defective in Wwox cells.",
+  "new_english": "Branch A, compensatory Ih: blocking it worsens or leaves bursts; weakened if bursts fall. Branch B, pro-excitatory Ih through the depolarised resting potential: blocking it lowers bursts at matched membrane potential; weakened if bursts do not fall. Branch C, bystander: no effect on bursts although sag falls; weakened by any burst change. The sag itself must first be shown to be Ih (sensitive to the blocker), and a blocker that shifts the resting potential acts on the premises of A and B at once. Branch D, added from an unguided expansion (IT35): the higher input resistance of the knockout and the heterozygote is the opposite of what a larger Ih alone would give (in a rat cortical dysplasia model reduced Ih came with a higher input resistance, reversed by an Ih blocker, PMID 21795624; there the resting potential is hyperpolarised, so it is not a mirror image), so a second or alternative change, such as loss of a resting potassium conductance (Kir, K2P or Kv7 channels), is a rival explanation; weakened if blocker-sensitive potassium currents do not differ. [IT40] A3 Whether the excess sag and rebound persist at matched potential and matched deflection, whether capacitance differs, and whether the recordings were under synaptic blockade; only then whether a blocker-sensitive current differs. A blocker response shows that the current contributes, not that it is defective in Wwox cells.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ }
+}
