@@ -1,0 +1,61 @@
+============================== INV-05
+BEFORE (what a consumer reads today: two free-text cells)
+ decisive_uncertainty (440 chars) + next_test (376 chars); no ids, no per-arm prediction, no rivals as rows
+ next_test: Repeat the slice burst assay with the magnesium concentration reported, a d-APV arm and a GluN2B NAM arm, each at matched measured NMDAR-current reduction (two unrelated NAMs), vehicle time-matched, animal as the unit; memantine only afterwards, with the magnesium concentration and holding voltage s
+AFTER (hypothesis_package.record_for)
+INV-05: LINKED
+  BH1 [ampa_nmda_discrim_20261108] kind=physiological_hypothesis gene_arc=False need=NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR state=PROPOSED_NOT_APPLIED cards=F01_glutamate_receptor_node,F04_nmdar_intervention_class
+    status: IPOTESI; exploratory; premise not established; independent audit: PARTLY (perampanel potency caveat withdrawn, H2 prediction under M07 corre
+    rivals (alternatives): -   other hypotheses: -   matrix columns: H2_NMDAR_regenerative_GluN2B_contribution, H3_NMDAR_dependent_GluN2A_contribution, H1_AMPA_dependent_drive, H4_general_loss_of_excitatory_drive, H7_network_state_or_recording_artefact
+    unresolved refs: F04
+    BE0 arms=M01,M02 alts=- unresolved=-
+    BE1 arms=M07,M08,M15 alts=- unresolved=-
+    BE4 arms=- alts=- unresolved=-
+    BE5 arms=M16,M04,M17,M18 alts=- unresolved=-
+  BH2 [ampa_nmda_discrim_20261108] kind=physiological_hypothesis gene_arc=False need=NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR state=CARRIED_IN_TEXT cards=F04_nmdar_intervention_class,P11_magnesium_nmdar_gate
+    status: IPOTESI; exploratory; the matched-current form already exists in the module as X2; independent audit: PARTLY (the delayed-response residual 
+    rivals (alternatives): AB04, AB05   other hypotheses: BH1   matrix columns: H3_NMDAR_dependent_GluN2A_contribution
+    unresolved refs: X2, S3, F04, P13, P17
+    BE0 arms=M01,M02 alts=- unresolved=-
+    BE2 arms=M04,M05,M06,M14 alts=- unresolved=-
+    BE4 arms=- alts=- unresolved=-
+    BE5 arms=M16,M04,M17,M18 alts=- unresolved=-
+  BH3 [ampa_nmda_discrim_20261108] kind=physiological_hypothesis gene_arc=False need=NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR state=PROPOSED_NOT_APPLIED cards=F04_nmdar_intervention_class
+    status: IPOTESI; exploratory; premise not established; independent audit: PARTLY, close to a withdrawal of the gap-junction attribution. What surviv
+    rivals (alternatives): -   other hypotheses: -   matrix columns: H5_carbenoxolone_off_target, H6_gap_junction_or_pannexin_contribution
+    unresolved refs: S1, CA1, P12, P20
+    BE0 arms=M01,M02 alts=- unresolved=-
+    BE3 arms=M09,M10,M11,M12,M13 alts=- unresolved=-
+    BE4 arms=- alts=- unresolved=-
+============================== INV-18
+BEFORE (what a consumer reads today: two free-text cells)
+ decisive_uncertainty (1071 chars) + next_test (958 chars); no ids, no per-arm prediction, no rivals as rows
+ next_test: In knockout, heterozygote and wild-type slices: sag, resting potential, input resistance, rebound and burst incidence before and after two Ih blockers of different chemotypes (the second so that an off-target action is not read as Ih), with a current-clamp step that matches the resting potential and
+AFTER (hypothesis_package.record_for)
+INV-18: LINKED
+  MH1 [membrane_hypotheses_20261108] kind=physiological_hypothesis gene_arc=False need=NEED-INTRINSIC-EXCITABILITY state=PROPOSED_NOT_APPLIED cards=-
+    status: survives as an exploratory, qualitative hypothesis (flat tau against pure leak loss is supported; implied capacitance, step 5 as first writt
+    rivals (alternatives): A10, A05, A04, A06   other hypotheses: MH3, MH2   matrix columns: -
+    unresolved refs: XE991
+    E1 arms=- alts=A10 unresolved=-
+    E3 arms=- alts=- unresolved=XE991
+  MH2 [membrane_hypotheses_20261108] kind=physiological_hypothesis gene_arc=False need=NEED-INTRINSIC-EXCITABILITY state=CARRIED_IN_TEXT cards=-
+    status: survives only as a conditional, exploratory hypothesis: its premise (a residual excess sag at matched conditions) is not established and is 
+    rivals (alternatives): A09   other hypotheses: MH1   matrix columns: -
+    unresolved refs: CA1, Z944, X4, V1, X1, X2, X5
+    E1 arms=- alts=A10 unresolved=-
+    E2 arms=- alts=- unresolved=-
+    E4 arms=- alts=- unresolved=Z944
+  MH3 [membrane_hypotheses_20261108] kind=physiological_hypothesis gene_arc=False need=NEED-INTRINSIC-EXCITABILITY state=PROPOSED_NOT_APPLIED cards=-
+    status: survives as a design control, strengthened: the probable absence of synaptic blockers in the intrinsic recordings is an inference from the M
+    rivals (alternatives): A04, A07   other hypotheses: MH1, MH2   matrix columns: -
+    unresolved refs: -
+    E1 arms=- alts=A10 unresolved=-
+    E5 arms=- alts=- unresolved=P10,P13,P17
+============================== INV-01
+BEFORE (what a consumer reads today: two free-text cells)
+ decisive_uncertainty (174 chars) + next_test (1311 chars); no ids, no per-arm prediction, no rivals as rows
+ next_test: One added arm of the published design with injection after the first recorded spike-wave discharge, same endpoints, untreated same-genotype comparator kept. Worded per endpoint class: measure the restoration actually achieved at the age of treatment and its regional distribution, because the one com
+AFTER (hypothesis_package.record_for)
+INV-01: UNLINKED
+  no package states a hypothesis for this investigation; that is not evidence against it or its compounds
