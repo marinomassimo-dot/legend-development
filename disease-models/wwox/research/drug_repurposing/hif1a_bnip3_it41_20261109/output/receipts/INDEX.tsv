@@ -1,6 +1,6 @@
-event_id	pmid	evidence_depth	prior_receipt	validated_ok
-FTR-20261109-42792606-82	42792606	partial_fulltext_read	null	yes
-FTR-20261109-38443598-82	38443598	partial_fulltext_read	null	yes
-FTR-20261109-41972676-82	41972676	partial_fulltext_read	null	yes
-FTR-20261109-42323821-82	42323821	abstract_only	null	yes
-FTR-20261109-41324728-82	41324728	partial_fulltext_read	FTR-20261019-41324728-01	yes
+event_id	pmid	evidence_depth	prior_receipt	validated_ok	source_fingerprint_note
+FTR-20261109-42792606-82	42792606	partial_fulltext_read	null	yes	sha256 of the Europe PMC fullTextXML bytes read (not saved in the repository)
+FTR-20261109-38443598-82	38443598	partial_fulltext_read	null	yes	sha256 of the Europe PMC fullTextXML bytes read (not saved in the repository)
+FTR-20261109-41972676-82	41972676	partial_fulltext_read	null	yes	sha256 of the Europe PMC fullTextXML bytes read (not saved in the repository)
+FTR-20261109-42323821-82	42323821	abstract_only	null	yes	null: abstract only, no full-text artefact exists
+FTR-20261109-41324728-82	41324728	partial_fulltext_read	FTR-20261019-41324728-01	yes	sha256 of the held full-text XML of the earlier receipt

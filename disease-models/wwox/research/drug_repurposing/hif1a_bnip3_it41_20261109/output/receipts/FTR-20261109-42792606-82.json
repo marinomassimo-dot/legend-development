@@ -28,7 +28,7 @@
  "prior_receipt": null,
  "record_kind": "contemporaneous_receipt",
  "reread_reason": "first_read",
- "source_fingerprint": null,
+ "source_fingerprint": "9715ce942d6c8404cbc3fe4ed7f666dbe358ea42af38be08fa51be70d22494df",
  "source_kind": "fulltext_remote",
  "source_locator": "Europe PMC fullTextXML for the PMC record, fetched 2026-11-09; bytes not saved; figure images 4 and 5 from the PMC open-data bucket viewed",
  "study_id": {

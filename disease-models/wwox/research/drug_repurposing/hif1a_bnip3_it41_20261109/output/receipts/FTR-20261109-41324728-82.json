@@ -28,7 +28,7 @@
  "prior_receipt": "FTR-20261019-41324728-01",
  "record_kind": "contemporaneous_receipt",
  "reread_reason": "new_question_outside_prior_coverage",
- "source_fingerprint": null,
+ "source_fingerprint": "d6882c356c506f85a85513d3d94d8ad6dabe53f6a3ceea8c971d40da7a931eed",
  "source_kind": "fulltext_local",
  "source_locator": "held full-text XML of the earlier complete read (persisted artefact of the earlier receipt), re-opened 2026-11-09 for Results, Discussion limitation paragraph and, from the PMC open-data bucket, Fig 9",
  "study_id": {

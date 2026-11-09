@@ -29,7 +29,7 @@
  "reread_reason": "first_read",
  "source_fingerprint": null,
  "source_kind": "abstract",
- "source_locator": "PubMed record for the PMID (abstract and metadata as served 2026-11-09); full text unreachable: Europe PMC returned an error, the PMC XML is withheld by the publisher, the PMC article page returned a recaptcha challenge page; not retried by another route",
+ "source_locator": "PubMed record for the PMID (abstract and metadata as served 2026-11-09); full text unreachable: Europe PMC returned an error, the PMC XML is withheld by the publisher, my attempt at the PMC article page returned a recaptcha challenge page and the verifier attempt returned HTTP 403 with an embargo notice (available in PMC June 2027); not retried by another route",
  "study_id": {
   "doi": "10.1080/15548627.2026.2693261",
   "pmid": "42323821"
