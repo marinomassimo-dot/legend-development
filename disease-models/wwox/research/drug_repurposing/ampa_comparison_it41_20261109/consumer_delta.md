@@ -38,3 +38,7 @@ Task record `ORCH-IT41-20261109`. Every row names the consumer file and row, the
 ## Reads still open (none required for this delivery)
 
 Full texts of Donevan 1993, Bleakman 1996, Sheardown 1990 and Hanada 2011 (publisher bot checks; abstract-level statements only); the Yelshanskaya supplement and figures; a primary text on NBQX surmountability and glycine-site action; Hale 2024 and Taniguchi 2022 full texts; 32901915 beyond its abstract.
+
+## Addendum (2026-11-10): identity delivery of Harness reconciled
+
+`identity_it41_20261109/identity_table.tsv` (Harness, live ChEMBL read 2026-11-09) was published after this package was verified. It is consistent with the package: GYKI 52466 = `CHEMBL275006` (record named Gyki53784, label conflict, DGIdb rows unattributed); GYKI 53655 = `CHEMBL267450`, distinct from GYKI 52466; NBQX = `CHEMBL222519`; perampanel = `CHEMBL1214124` (curated mechanism at GRIA1 and GRIA2). **Changes in the conclusions: none.** The `name_mismatch` of row C2 becomes "two distinct compounds, confirmed" and proposals 1 and 3 may cite the ChEMBL references above. Unchanged: every pharmacological statement (the identity table assesses no selectivity). The README sentence that the catalogue record "Gyki53784" is neither compound was wrong for GYKI 52466 and is corrected.
