@@ -2,3 +2,4 @@ package	dir	role	inv_id	why
 membrane_hypotheses_20261108	membrane_hypotheses_20261108	physiological_hypotheses		INV-18 conditional physiological hypotheses MH1-MH3, linked by the package's consumer_links.tsv (IT40 delivery)
 ampa_nmda_discrim_20261108	ampa_nmda_discrim_20261108	physiological_hypotheses		INV-05 physiological hypotheses BH1-BH3 with alternatives and prediction matrix, linked by consumer_links.tsv (IT40 delivery)
 nmda_composition_discrim_20261109	nmda_composition_discrim_20261109	pharmacological_comparison	INV-05	INV-05 pharmacological comparison rows with new_measurements.tsv and decisive.tsv (IT40 comparison package, qualified compounds)
+ampa_comparison_it41_20261109	ampa_comparison_it41_20261109	pharmacological_comparison	INV-05	INV-05 AMPA/kainate tool comparison rows C1-C3 (NBQX, GYKI 53655, perampanel) with new_measurements.tsv and decisive.tsv (IT41 package A, qualified tools; identity per identity_it41_20261109)

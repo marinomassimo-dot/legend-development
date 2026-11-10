@@ -139,10 +139,6 @@
   "src": "it",
   "text": "Linee cellulari e stock di mosca: non nota; nessuna richiesta o contatto eseguiti da qui."
  },
- "14b346bc63cc": {
-  "src": "en",
-  "text": "Block of AMPA and kainate receptors to test whether the burst survives."
- },
  "1509c69108ad": {
   "src": "en",
   "text": "Total NMDA-receptor reduction, a GluN2A-weighted component, a general loss of drive, and a bath-state (magnesium, potassium) effect."
@@ -395,6 +391,10 @@
   "src": "en",
   "text": "A selective inhibitor of the named kinase beside the non-selective agent in the same WWOX-system assay, with the second need's readout measured in the same experiment. IT21 addition: include an arm with the inositol precursor added back, which tests the second action in the same experiment. [IT36] selectivity is biochemical and does not carry to cells (4-6-fold in live cells); attribution needs an isogenic isoform-knockout check per compound or convergent pharmacology. [IT36] in rat organotypic CA1 the GSK3-PI4KIIalpha branch sets synaptic NMDAR current; compare GSK3-route compounds with d-APV at matched NMDAR-current reduction; double GSK3A/B depletion needed."
  },
+ "3cefd82cdb00": {
+  "src": "en",
+  "text": "Block of AMPA and kainate receptors with a noncompetitive 2,3-benzodiazepine and, as the independent partner, the competitive NBQX; perampanel shares the benzodiazepine's pocket and serves as a same-site cross-check."
+ },
  "3d05ab636d8d": {
   "src": "it",
   "text": "Capire se la sensibilità all'etosuccimide riflette il canale T, dato che non esiste alcuna misura del canale T. IT13: il catalogo elenca solo il canale T, ma i dati dello stesso articolo mostrano anche blocco GIRK; i trascritti P17 non decidono."
@@ -586,6 +586,10 @@
  "5e6ff20bb1b1": {
   "src": "en",
   "text": "That the ceiling seen in oocytes holds in the slice; its washout is very slow in oocytes."
+ },
+ "5ea2adccb980": {
+  "src": "en",
+  "text": "AMPA/kainate block arm: a pair of two mechanisms"
  },
  "5ef585ced049": {
   "src": "en",
@@ -903,10 +907,6 @@
   "src": "en",
   "text": "The selectivity statement rests on a supplementary figure that was not read; slice precedent is a different region and age."
  },
- "8955d170b489": {
-  "src": "en",
-  "text": "Two GYKI compounds are registered under one label (different structures); the mechanism papers of two tools are unread; kainate is not separated."
- },
  "896cd43acd21": {
   "src": "en",
   "text": "Coincident curves make total NMDA-receptor reduction (with the bath magnesium and voltage) the question; a plateau below abolition moves it to GluN2A-containing receptors. None of this can come from other preparations."
@@ -926,10 +926,6 @@
  "8a0e5121072a": {
   "src": "en",
   "text": "Selective tool compounds exist; the assay is the carded one."
- },
- "8a11c0989f9a": {
-  "src": "en",
-  "text": "Whether an AMPA-dependent component exists at all."
  },
  "8c0bcfdd6eff": {
   "src": "en",
@@ -1091,6 +1087,10 @@
   "src": "it",
   "text": "Capire se l'attività di GSK3 è davvero aumentata quando WWOX manca (oggi c'è solo un blot di fosfo-Ser9) e in che direzione ogni classe di inibitore sposta la via Wnt; i composti trovati sono strumenti per questo esperimento, non candidati."
  },
+ "9e7db4966b88": {
+  "src": "en",
+  "text": "The nearest tissue precedent, evoked Up states of barrel cortex, persisted under the benzodiazepine (transfer, with limits); two compounds are registered under one GYKI label; kainate is not separated."
+ },
  "9f20a9217bd4": {
   "src": "en",
   "text": "Whether PDH flux is actually reduced. The lever's direction is derived from the chain, not from a measurement, and the available signs contradict it. [IT36] An energy-to-myelin link (glucose or lactate supply to the oligodendrocyte lineage) is a new thread with undetermined sign: WWOX-side lactate data point up, and when glucose falls in the neuron-targeted line is not measured (hypothesis H2 and open question OQ3 of myelin_generative_it36_20261108)."
@@ -1098,10 +1098,6 @@
  "9f6ea7ef32cb": {
   "src": "it",
   "text": "Misure biochimiche su tessuto o cellule dei laboratori d'origine; il materiale non è disponibile qui."
- },
- "a0ea190a3127": {
-  "src": "en",
-  "text": "Qualify tool identity and selectivity first (science package in progress), then test survival under a block verified by the fast current."
  },
  "a32410816420": {
   "src": "it",
@@ -1355,13 +1351,13 @@
   "src": "en",
   "text": "The chain was generated, not observed, and one reference cited by the chain itself reports the opposite sign, so the direction is not predicted. The test is feasible in existing mouse systems and one experiment can serve a second kinase-pathway probe. It sits at rank 7, below the ten-row line: the role of the inflammatory change (harm or protection) is unknown and the readout can wait for the glial measurements already planned."
  },
+ "c3b6f759db0c": {
+  "src": "en",
+  "text": "Measure the achieved block and the NMDA-receptor current at the working concentration; test survival of the bursts under a verified block; d-APV only if bursts persist."
+ },
  "c49c9b6c64b0": {
   "src": "en",
   "text": "Were the intrinsic recordings made under conditions that bias the genotype contrast?"
- },
- "c52f02211fa9": {
-  "src": "en",
-  "text": "AMPA/kainate block arm, tools not yet qualified"
  },
  "c5a4e3d438da": {
   "src": "en",
@@ -1586,6 +1582,10 @@
  "e3d5181822f1": {
   "src": "en",
   "text": "WWOX-system: the cytokine seeds are mouse transcript changes in two Wwox-deficient preparations; the human neural datasets carry no IL6 or TNF reads. Compound side: a selective, cell-active inhibitor of EZH2 with reported lowering of cytokines in a mouse brain model (abstract-level reading); a reference of the chain reports raised cytokines after EZH2 inhibition in glioma and microglia. IT22 P6 correction: the reference that carried the opposite sign used a different EZH2-blocking agent and siRNA, not the probe; in microglia the cytokines did not change and the rise came through medium from EZH2-suppressed tumour cells. Separate hazard: Ezh2 loss delays oligodendrocyte differentiation and Ezh1 compensates (mouse), so dual EZH1/EZH2 blockers are the highest-risk members. The arm is now reached from two different WWOX observations (glial cytokines and NRF2 tone), but through shared network edges, so it is not independent support."
+ },
+ "e3e00de1c518": {
+  "src": "en",
+  "text": "Whether an AMPA-dependent component exists at all; the 90 percent design value of the block is at the edge of what the tool gives in tissue (80-89 percent at 10 uM)."
  },
  "e42d8e04d9a5": {
   "src": "it",

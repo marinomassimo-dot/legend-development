@@ -1,10 +1,7 @@
 {
- "b8d770bbd1e2": {
-  "mode": "EDIT",
-  "old_key": "454ba39f49eb",
-  "old_english": "Ex vivo slice electrophysiology in an existing Wwox neuron-deleted line; tool compounds only; no brain-exposure statement is carried here and none is implied for any clinically used member.",
-  "added_english": "[IT41] Decision: whether any HCN-directed tool arm is run. Possible in silico: an ortholog and isoform census of the tools. New measure: sag and rebound at matched potential and deflection, with capacitance and access resistance by genotype. Reopen if: the excess sag persists at matched conditions. Priority: after the matched recording and after INV-05's minimum experiment; no HCN compound is nominated before it.",
-  "new_english": "Ex vivo slice electrophysiology in an existing Wwox neuron-deleted line; tool compounds only; no brain-exposure statement is carried here and none is implied for any clinically used member. [IT41] Decision: whether any HCN-directed tool arm is run. Possible in silico: an ortholog and isoform census of the tools. New measure: sag and rebound at matched potential and deflection, with capacitance and access resistance by genotype. Reopen if: the excess sag persists at matched conditions. Priority: after the matched recording and after INV-05's minimum experiment; no HCN compound is nominated before it.",
+ "3cefd82cdb00": {
+  "mode": "NEW",
+  "english": "Block of AMPA and kainate receptors with a noncompetitive 2,3-benzodiazepine and, as the independent partner, the competitive NBQX; perampanel shares the benzodiazepine's pocket and serves as a same-site cross-check.",
   "langs": [
    "it",
    "fr",
@@ -12,12 +9,39 @@
    "de"
   ]
  },
- "d6d17948e344": {
-  "mode": "EDIT",
-  "old_key": "3e893fac5fec",
-  "old_english": "The slice preparation exists; the change is a reported bath and one added arm.",
-  "added_english": "[IT41] Decision: whether a GluN2B-directed comparison is the better question (needs the d-APV abolition threshold x and one modulator's removable fraction, read at the burst). Possible in silico or from public sources: a primary source for the site and maximum effect of a second modulator; qualification of the AMPA tools. New measure: isolated NMDA-receptor current, x, removable fraction, measured bath magnesium and pH. Reopen if: a second modulator is shown to have a different ceiling at the same site, or the AMPA-tool qualification is delivered. Priority: first among the compound-facing investigations, because it is the cheapest measurement that decides whether the other arms are asked.",
-  "new_english": "The slice preparation exists; the change is a reported bath and one added arm. [IT41] Decision: whether a GluN2B-directed comparison is the better question (needs the d-APV abolition threshold x and one modulator's removable fraction, read at the burst). Possible in silico or from public sources: a primary source for the site and maximum effect of a second modulator; qualification of the AMPA tools. New measure: isolated NMDA-receptor current, x, removable fraction, measured bath magnesium and pH. Reopen if: a second modulator is shown to have a different ceiling at the same site, or the AMPA-tool qualification is delivered. Priority: first among the compound-facing investigations, because it is the cheapest measurement that decides whether the other arms are asked.",
+ "5ea2adccb980": {
+  "mode": "NEW",
+  "english": "AMPA/kainate block arm: a pair of two mechanisms",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "9e7db4966b88": {
+  "mode": "NEW",
+  "english": "The nearest tissue precedent, evoked Up states of barrel cortex, persisted under the benzodiazepine (transfer, with limits); two compounds are registered under one GYKI label; kainate is not separated.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "c3b6f759db0c": {
+  "mode": "NEW",
+  "english": "Measure the achieved block and the NMDA-receptor current at the working concentration; test survival of the bursts under a verified block; d-APV only if bursts persist.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "e3e00de1c518": {
+  "mode": "NEW",
+  "english": "Whether an AMPA-dependent component exists at all; the 90 percent design value of the block is at the edge of what the tool gives in tissue (80-89 percent at 10 uM).",
   "langs": [
    "it",
    "fr",

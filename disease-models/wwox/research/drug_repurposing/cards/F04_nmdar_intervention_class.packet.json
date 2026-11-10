@@ -430,7 +430,8 @@
   "Whether any partial, subunit-selective or use-dependent block reproduces the effect of the full block.",
   "Whether any such block affects maturation in a developing Wwox-deficient brain.",
   "NBQX and GYKI 52466 have no primary mechanism source read in this work: an AMPA arm that uses them is use-only, mechanism not read.",
-  "The removable share of a GluN2B-selective negative modulator is bounded by receptor composition and by zinc (recombinant values, transfer); no subunit-selective drug has been applied to a Wwox system."
+  "The removable share of a GluN2B-selective negative modulator is bounded by receptor composition and by zinc (recombinant values, transfer); no subunit-selective drug has been applied to a Wwox system.",
+  "The two noncompetitive AMPA tools (perampanel and the 2,3-benzodiazepine) share one binding pocket in structures, so agreement between them is not independent confirmation; no AMPA drug has been applied to a Wwox system."
  ],
  "evidence_against": [
   "NMDAR dependence is not NMDAR gain: depolarised resting potential and reduced inhibition suffice (not tested). The largest synaptic change in the source is inhibitory (sIPSC amplitude 27.5 against 57.3 pA in controls, frequency also reduced), not excitatory.",

@@ -1,0 +1,32 @@
+{
+ "3cefd82cdb00": {
+  "it": "Blocco dei recettori AMPA e del kainato con una 2,3-benzodiazepina non competitiva e, come partner indipendente, con il NBQX competitivo; il perampanel condivide la tasca della benzodiazepina e serve da controllo incrociato sullo stesso sito.",
+  "fr": "Blocage des récepteurs AMPA et du kaïnate avec une 2,3-benzodiazépine non compétitive et, comme partenaire indépendant, le NBQX compétitif ; le pérampanel partage la poche de la benzodiazépine et sert de contrôle croisé au même site.",
+  "es": "Bloqueo de los receptores AMPA y de kainato con una 2,3-benzodiazepina no competitiva y, como socio independiente, el NBQX competitivo; el perampanel comparte el bolsillo de la benzodiazepina y sirve de control cruzado en el mismo sitio.",
+  "de": "Blockade der AMPA- und Kainat-Rezeptoren mit einem nichtkompetitiven 2,3-Benzodiazepin und, als unabhängigem Partner, dem kompetitiven NBQX; Perampanel teilt die Bindungstasche des Benzodiazepins und dient als Gegenprobe an derselben Stelle."
+ },
+ "5ea2adccb980": {
+  "it": "Braccio di blocco AMPA/kainato: una coppia di due meccanismi",
+  "fr": "Bras de blocage AMPA/kaïnate : une paire de deux mécanismes",
+  "es": "Brazo de bloqueo AMPA/kainato: un par de dos mecanismos",
+  "de": "AMPA/Kainat-Blockadearm: ein Paar aus zwei Mechanismen"
+ },
+ "9e7db4966b88": {
+  "it": "Il precedente tissutale più vicino, gli stati Up evocati della corteccia a barili, è persistito sotto la benzodiazepina (trasferimento, con limiti); due composti sono registrati sotto una sola etichetta GYKI; il kainato non è separato.",
+  "fr": "Le précédent tissulaire le plus proche, les états Up évoqués du cortex en tonneaux, a persisté sous la benzodiazépine (transfert, avec limites) ; deux composés sont enregistrés sous une seule étiquette GYKI ; le kaïnate n'est pas séparé.",
+  "es": "El precedente tisular más cercano, los estados Up evocados de la corteza de barriles, persistió bajo la benzodiazepina (transferencia, con límites); dos compuestos están registrados bajo una sola etiqueta GYKI; el kainato no está separado.",
+  "de": "Der nächstliegende Gewebepräzedenzfall, die evozierten Up-States des Barrel-Kortex, blieb unter dem Benzodiazepin bestehen (Übertragung, mit Grenzen); zwei Substanzen sind unter einer GYKI-Bezeichnung registriert; Kainat ist nicht getrennt."
+ },
+ "c3b6f759db0c": {
+  "it": "Misurare il blocco raggiunto e la corrente dei recettori NMDA alla concentrazione di lavoro; verificare la sopravvivenza dei burst sotto un blocco verificato; d-APV solo se i burst persistono.",
+  "fr": "Mesurer le blocage atteint et le courant des récepteurs NMDA à la concentration de travail ; tester la survie des bursts sous un blocage vérifié ; d-APV seulement si les bursts persistent.",
+  "es": "Medir el bloqueo alcanzado y la corriente de los receptores NMDA a la concentración de trabajo; probar la supervivencia de los bursts bajo un bloqueo verificado; d-APV solo si los bursts persisten.",
+  "de": "Den erreichten Block und den NMDA-Rezeptorstrom bei der Arbeitskonzentration messen; das Überleben der Bursts unter verifiziertem Block prüfen; d-APV nur, wenn die Bursts bestehen bleiben."
+ },
+ "e3e00de1c518": {
+  "it": "Se esista del tutto una componente dipendente da AMPA; il valore di progetto del 90 percento di blocco è al limite di ciò che lo strumento dà nel tessuto (80-89 percento a 10 uM).",
+  "fr": "Si une composante dépendant d'AMPA existe seulement ; la valeur de conception de 90 pour cent de blocage est à la limite de ce que l'outil donne dans le tissu (80-89 pour cent à 10 uM).",
+  "es": "Si existe siquiera un componente dependiente de AMPA; el valor de diseño del 90 por ciento de bloqueo está en el límite de lo que da la herramienta en el tejido (80-89 por ciento a 10 uM).",
+  "de": "Ob überhaupt eine AMPA-abhängige Komponente existiert; der Entwurfswert von 90 Prozent Block liegt an der Grenze dessen, was das Werkzeug im Gewebe leistet (80-89 Prozent bei 10 uM)."
+ }
+}

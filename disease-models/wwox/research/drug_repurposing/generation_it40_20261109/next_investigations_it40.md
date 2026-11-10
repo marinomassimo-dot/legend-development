@@ -38,3 +38,5 @@ Ordered by decision changed first, then cost as documented.
 ## What this changes in practice
 
 The next package should be small: A1+A2 (readings and identities that block B3/B5 tool choices), run by the science session or a delegate with the originals; B1/B2/B4 are design statements the laboratory can adopt before any compound is discussed. A new broad batch is not proposed before A1+A2 are consumed.
+
+> **Update 2026-11-10 (IT41):** A1 is partly answered by `ampa_comparison_it41_20261109/` (NBQX binding window, structures and kinetics of the noncompetitive tools read; primary mechanism papers for NBQX and GYKI 52466 stay abstract-level or unreached); A2 is answered in kind by Harness's `identity_it41_20261109/` (GYKI 52466 and GYKI 53655 are different structures; Ro 25-6981 and ifenprodil have measured-activity rows; Brilliant Blue FCF is in ChEMBL without a name); B3 (BE1) is served by `comparison.tsv`.
