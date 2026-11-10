@@ -14,13 +14,14 @@ sys.path.insert(0, str(HERE.parents[4] / "framework/scripts"))
 import compound_catalog as cc  # noqa: E402
 S41 = DR / "generation_it41_20261109"
 
-SALT = re.compile(r"\b(hydrochloride|hcl|hemi\w*|tartrate|maleate|mesylate|sodium|potassium|citrate|sulfate|sulphate|phosphate|fumarate|besylate|acetate|bromide|dihydrate|monohydrate|[rs]|\(\+/?-?\)|\(\+\)|\(-\))\b", re.I)
-def key(n): return re.sub(r"[^a-z0-9]", "", SALT.sub("", re.sub(r"[(),]", " ", n.lower())))
+SALT = re.compile(r"\b(hydrochloride|hcl|hemi\w*|tartrate|maleate|mesylate|sodium|potassium|citrate|sulfate|sulphate|phosphate|fumarate|besylate|acetate|bromide|dihydrate|monohydrate)\b", re.I)
+RACEMATE = re.compile(r"\((?:r\s*,\s*s|rs|\+/-|\+-|\u00b1|rac|dl)\)-?", re.I)   # only a racemate mark merges with the parent; a single (R)/(S)/(+)/(-) names a distinct enantiomer (HE43: parent_form keeps stereo apart)
+def key(n): return re.sub(r"[^a-z0-9()+-]", "", SALT.sub("", RACEMATE.sub("", n.lower()))).replace(" ", "")
 
 def main():
     rel = list(csv.DictReader(open(S41 / "relations_it41.tsv", encoding="utf-8"), delimiter="\t")) + list(csv.DictReader(open(HERE / "relations_it43.tsv", encoding="utf-8"), delimiter="\t"))
     base = defaultdict(set)                       # simple search: names per relation from the molecule tables (IT41 for S1-S8, IT43 s9/ for S9)
-    for mt in (S41 / "molecules.tsv", HERE / "s9" / "molecules.tsv"):
+    for mt in (S41 / "molecules.tsv", HERE / "s9" / "molecules.tsv", HERE / "s10" / "molecules.tsv"):
         for r in csv.DictReader(open(mt, encoding="utf-8"), delimiter="\t"):
             base[r["relation_id"]] |= {key(n) for n in r["names"].split("|")}
     es = cc.load(cc.DEFAULT_CATALOG); rows = []

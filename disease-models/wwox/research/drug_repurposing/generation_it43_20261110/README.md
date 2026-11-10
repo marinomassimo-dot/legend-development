@@ -31,7 +31,7 @@ Measured against the simple search (ChEMBL mechanisms plus GtoPdb, same relation
 | Distinct from the simple search | Count over S1-S8 |
 |---|---|
 | Molecules listed by DGIdb | 353 (relation x molecule) |
-| New molecules reached | 105 (101 are DGIdb-only records: identity not reconciled with another source) |
+| New molecules reached | 106 (DGIdb-only records, identity not reconciled with another source; the count moved from 105 after the name key stopped merging single enantiomers, a fix prompted by Harness's parent_form finding) |
 | Of these with a documented action type | 18 |
 | Qualification improved | 0 (by rule) |
 | New hypotheses generated | 0 (by rule) |
@@ -53,3 +53,5 @@ Limits: names are matched by a normalised string, so a different salt or code na
 
 ## P8 scouting
 Taken from the current weekly scouting table of Harness (`governance/candidates/`), no new search and no dependency. Relevant to this iteration: the lookup retrieval-contract idea (entity, identifier, build and version, count before paging, log of every page) matches what the DGIdb listing rows already carry (source, claim source, cache digest); nothing to install. The ions gap noted by the independent reader is the one implementable defect left: a `non_drug_entity` verdict for inorganic ions in `action_search.qualify()`; it changes IT41/IT42 tables, so it is a separate, dated change with its own battery, not folded into this candidate.
+
+Added after the S10 run: the same listing path over S10 (KEAP1/NFE2L2) returns 857 molecules, none with a typed action: those two symbols are listed for hundreds of compounds by oncology-oriented claim sources, so the listing there is a flood without information. It is not counted in the S1-S8 figures above and is not used for any decision; the typed rows (ChEMBL, GtoPdb) are the 14 molecules of `s10/result_it43.md`.
