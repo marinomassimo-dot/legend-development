@@ -8,14 +8,18 @@
  "START_UTC": "2026-11-10T08:00:00Z",
  "BASELINE": "main f7305230 (development/main same). Worktree .claude/worktrees/sci42, branch task/sci42. IT42 orchestrator session has its own worktree it42 (not touched).",
  "CURRENT_PACKAGE": {
-  "id": "S0",
-  "state": "starting",
-  "delegate_active": "none",
-  "updated": "2026-11-10T08:00:00Z"
+  "id": "S1",
+  "state": "producer running in background",
+  "delegate_active": "producer og-p (sonnet/medium requested)",
+  "updated": "2026-11-10T07:39:04Z"
  },
- "RESUME": "CHECKPOINT 2026-11-10T08:00Z: task record just opened; nothing done. First incomplete step S0. Folder: disease-models/wwox/research/drug_repurposing/glun2b_comparators_sci42_20261110/.",
- "DECISIONS_TAKEN": [],
- "DELEGATIONS": [],
+ "RESUME": "CHECKPOINT: S0 done (06d4d7e6). S1 producer dispatched, running; output expected in glun2b_comparators_sci42_20261110/output/. Next on return: read back model/effort from census, read decisive.tsv/roles.tsv, then draft S3 design myself, then dispatch blind verifier (VERIFIER_BRIEF.md, label og-v, sonnet/high). IT42 orchestrator (legend-development-4e) told the folder; they integrate. Do not push main until frozen tested candidate.",
+ "DECISIONS_TAKEN": [
+  "2026-11-10 S0: IT42 orchestrator requested the same onfasprodil/NP10679 package; folded into this mandate (no duplicate); replied with folder and plan. PubMed identified starting points: 34493631 (NP10679 discovery pharmacology), 39892986 (SAH mouse), 37817426 (MIJ821 first-in-human healthy volunteers), 42976542 (MIJ821 analogues med-chem) \u2014 verified by producer."
+ ],
+ "DELEGATIONS": [
+  "S1 producer og-p: asked sonnet/medium; census readback pending."
+ ],
  "ESCALATIONS": [],
  "STOP_LOG": [],
  "DEFAULTS_TAKEN": [],
@@ -26,15 +30,15 @@
    "steps": [
     {
      "step": "S0 targeted start, dedup, decisive questions list",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "S0_questions_before_search.md committed 06d4d7e6; ledger status for 40767837 and 36642931 empty; Harness compound_identity run for onfasprodil/MIJ821/NP10679/DQP-1105; monitor binding verified (mandate_watch --self-call returned session 9400b253..., host cron 37 * * * *, session recall f7692bfa hourly :23)"
     },
     {
      "step": "S1 producer: onfasprodil and NP10679 at primary sources, identity via Harness component",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "producer dispatched (BRIEF.md), sonnet/medium requested, label og-p, receipts suffix -91"
     },
     {
      "step": "S2-S3 role per compound, discriminating minimum design and prediction matrix (in producer scope)",
