@@ -38,3 +38,15 @@ Measured against the simple search (ChEMBL mechanisms plus GtoPdb, same relation
 
 Examples reached as new listings (known compounds; path coverage, not predictive value): a second ifenprodil-site modulator for S1 (eliprodil) and valproic acid for S7. Part of the "new" list is not a candidate: co-agonists and ions (aspartic acid, a divalent ion), compounds listed against a GRIN gene through other claim sources (typical DTC off-target listings). DGIdb's `claim_source` is kept per row; non-commercial claim sources keep their names out of the shareable edition.
 Limits: names are matched by a normalised string, so a different salt or code name of a known molecule can still count as "new"; the DGIdb export is old (2024-06) and carries ChEMBL 33 claims.
+
+## P3 to P7, short (details in the files named)
+| Piece | Files | Result |
+|---|---|---|
+| P3 | `third_relation_it43.md` (frame before the search, with an addendum after the earlier INV-07 package was read), `relations_it43.tsv`, `s9/`, `apply_p3.py` | PDK inhibition: three typed molecules, all conditional on an unmeasured premise; the lever is known in WWOX and the compounds known in the repository; what changed is that two compounds the older generator listed as unsigned now have typed per-isoform rows; V13 on the cards |
+| P4 | `eval_protocol_it43.md`, `eval_it43.py`, `eval_results.tsv`, `eval_summary_it43.md`, `verify/VERDICTS.md` | source value large, qualification value small on these three questions, generation kept conditional; independent reader: devimistat direction and one species corrected, inorganic ions returned as candidates (open gap) |
+| P5 | `../generation_it42_20261110/README.md` (dated update) | IT42 introductory counts reconciled with run 4 |
+| P6 | `compound_view.tsv` (column `origin`), `repurposing_view.py`, five-language strings | each card says where the hypothesis came from; the label says why this priority and the evidence |
+| P7 | `apply_dream.py` | INV-07 and INV-19 share one isogenic sample series; the reading of each outcome is written in both investigation tables |
+
+## P8 scouting
+Taken from the current weekly scouting table of Harness (`governance/candidates/`), no new search and no dependency. Relevant to this iteration: the lookup retrieval-contract idea (entity, identifier, build and version, count before paging, log of every page) matches what the DGIdb listing rows already carry (source, claim source, cache digest); nothing to install. The ions gap noted by the independent reader is the one implementable defect left: a `non_drug_entity` verdict for inorganic ions in `action_search.qualify()`; it changes IT41/IT42 tables, so it is a separate, dated change with its own battery, not folded into this candidate.
