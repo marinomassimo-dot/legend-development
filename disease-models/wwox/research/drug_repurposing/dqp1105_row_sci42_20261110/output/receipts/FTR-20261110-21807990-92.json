@@ -1,25 +1,25 @@
 {
- "analysis_at": "2026-11-10T08:29:00Z",
+ "analysis_at": "2026-11-10T08:45:30Z",
  "analysis_time_precision": "second",
  "coverage": {
   "abstract": "read",
-  "introduction": "not_read",
-  "methods": "not_read",
-  "results": "not_read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
   "discussion": "not_read",
-  "figures": "not_read",
-  "tables": "not_read",
+  "figures": "captions_only",
+  "tables": "read",
   "references": "not_read",
   "supplementary": "not_read",
   "limitations": "not_present"
  },
- "event_at": "2026-11-10T08:29:30Z",
+ "event_at": "2026-11-10T08:45:55Z",
  "event_id": "FTR-20261110-21807990-92",
  "evidence_basis": [
-  "Abstract only; PMC page behind a bot check, journal page 403, Europe PMC full text 500 and not open access; no methods, tables or figures read.",
-  "verbatim_locator | proposition: DQP-1105 IC50 at GluN2C and GluN2D at least 50-fold lower than at GluN2A or GluN2B | Abstract | \"IC50 values that were at least 50-fold lower than those for recombinant GluN2A-, GluN2B-, GluA1-, or GluK2-containing receptors\""
+  "Read Abstract, Introduction, Materials and Methods, Results through Table 3 in the verifier's saved copy; Table 1 image viewed (row 1105 (19): GluN2A N.E., GluN2B 113, GluN2C 7.0, GluN2D 2.7 uM). Figures 1-2 and supplement not viewed; Discussion not read.",
+  "verbatim_locator | proposition: DQP-1105 fitted IC50 at GluN1/GluN2D in oocytes | Results, Subunit Selectivity | \"inhibited GluN1/GluN2D receptors with an IC 50 value of 2.7 \u00b1 0.2 \u03bcM\""
  ],
- "evidence_depth": "abstract_only",
+ "evidence_depth": "partial_fulltext_read",
  "outputs": [
   "disease-models/wwox/research/drug_repurposing/dqp1105_row_sci42_20261110/output/row_resolution.tsv",
   "disease-models/wwox/research/drug_repurposing/dqp1105_row_sci42_20261110/output/evidence.tsv"
@@ -27,12 +27,12 @@
  "prior_receipt": null,
  "record_kind": "contemporaneous_receipt",
  "reread_reason": "first_read",
- "source_fingerprint": "78a83e4b8dbe189676468be04695ef7712b24f13516c3ae61ecd68ae80bc871e",
- "source_kind": "abstract",
- "source_locator": "Europe PMC REST search record (abstractText) for PMID 21807990, fetched 2026-11-10",
+ "source_fingerprint": "2aa970852b82bd4b66eb18103c074494bb2ec478b33d0d042c50e82a5c4b936a",
+ "source_kind": "fulltext_local",
+ "source_locator": "PMC3198917 article page HTML saved by the blind verifier (plain curl, default user agent, about 08:40 UTC); my own plain curl of the same URL at 08:45 UTC returned a bot-check page, not retried by another route. Table 1 image (t01.jpg, verifier copy) viewed with the Read tool. Limits: the hash identifies one saved copy, not the page (a later fetch by the verifier gave a different hash; only the ncbi_phid meta tag and a CSRF token differ, the article body is identical), so compare text, not hashes; the Table 1 image (a separate file, hash not recorded) and Table 3 text were read, Table 2 and later tables were not; Figures 1-2 not viewed.",
  "study_id": {
   "doi": "10.1124/mol.111.073239",
   "pmid": "21807990"
  },
- "workflow": "SCI42 S5 producer dq-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+ "workflow": "SCI42 S5 producer dq-p, rewrite on coordinator instruction after the blind verifier opened the primary paper. Prepared as a JSON file for the integrator; ledger not written."
 }

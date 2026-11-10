@@ -1,7 +1,6 @@
-Depth: abstract_only for 21807990 (one source read; none of the two allowed second sources opened, because no other source was identified as carrying the numbers).
-Unreachable: Methods, tables, figures (PMC bot check; journal 403; Europe PMC full text 500, not open access; efetch no body). No figures viewed.
-Outcome (c) unresolved; the abstract does show the registry set is not self-consistent with it (P3).
-IPOTESI not entered as evidence: recollection that supplier pages quote micromolar IC50 values for this compound; unverified, would explain a unit error on some rows but was not read.
-Slip: first receipt had event_at after analysis_at; corrected, validator OK.
-Second source: PMC10485906 (PMID 37566734), partial_fulltext_read (Introduction, agonist-dependence Results, Table 2, Methods; Table 1 images, figures and supplement not viewed). No third source opened.
-Finding (INFERENZA): the paper cites Acker 2011 as GluN2C 7.0 uM and GluN2D 2.7 uM; registry has 7.0 nM and 2700 nM, so the GluN2C row differs by unit; own HEK GluN2D value 1.4 / 0.72 uM. The GluN2B 113 nM number is not in this paper. Maxima for DQP-1105 not in text read.
+Depth: 21807990 partial_fulltext_read (Abstract, Introduction, Materials and Methods, Results through Table 3, Table 1 image viewed); figures 1-2 and supplement not viewed, Discussion not read. 37566734 partial_fulltext_read (Introduction, agonist-dependence Results, Table 2 values, Methods; Table 1 image not viewed, 403; supplement unread).
+Source copy: my own plain curl of the PMC page at 08:45 UTC returned a bot check (as at 08:27); I did not retry another way. I read the blind verifier's saved copy (SHA-256 2aa970852b82bd4b66eb18103c074494bb2ec478b33d0d042c50e82a5c4b936a, plain curl by the verifier at about 08:40 UTC) and its Table 1 image; the receipt says so.
+Outcome (b): the registry copy is wrong in unit: GluN2B 113 nM is Table 1 113 uM, GluN2C 7.0 nM is 7.0 uM; GluN2D 2700 nM = 2.7 uM is right. Numeric identity is DATO; the cause (uM stored as nM) is INFERENZA. Statistics differ: Table 1 fitted IC50 (GluN2C 7.0) vs Table 3 mean +/- SEM (8.5).
+37566734 receipt fingerprint now the raw Europe PMC XML hash 29be8433...; the earlier fccfa815... was a tag-stripped derivative.
+Not resolved: maximum inhibition per subunit (fits assume complete inhibition); GluN2B BHK N.E.; supplement Figure S1.
+Earlier slips corrected: P3/P8 hard 50-fold bound dropped; "same field" to "same group"; "independent" to "same-group re-measurement"; receipt validity errors fixed.

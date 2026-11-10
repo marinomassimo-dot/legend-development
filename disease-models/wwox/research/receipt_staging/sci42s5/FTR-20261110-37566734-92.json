@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-10T08:45:35Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "captions_only",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_present"
+ },
+ "event_at": "2026-11-10T08:45:58Z",
+ "event_id": "FTR-20261110-37566734-92",
+ "evidence_basis": [
+  "Introduction, agonist-dependence Results, Table 2 values read from the text (coverage tables recorded as captions_only because the Table 1 image was not viewed), Methods read. Table 1 image of this paper was not viewed (403); the statement that DQP-1105 is not a Table 1 row is an inference from the caption. Figures and supplement not viewed.",
+  "verbatim_locator | proposition: Acker 2011 DQP-1105 IC50 at GluN2C and GluN2D cited in micromolar | Introduction | \"inhibited GluN2C- and GluN2D-containing receptors with IC 50 values of 7.0 and 2.7 \u03bcM, respectively\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/dqp1105_row_sci42_20261110/output/row_resolution.tsv",
+  "disease-models/wwox/research/drug_repurposing/dqp1105_row_sci42_20261110/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "29be8433208c72c8c27aa3ce9e6d4cdcf65a578fb118d5fc3e379b89def7b04f",
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC REST fullTextXML for PMC10485906, plain curl, fetched about 08:31 UTC; fingerprint is the SHA-256 of that raw XML (220240 bytes), identical to the verifier copy. The earlier fingerprint fccfa815 was of my tag-stripped text derivative. Results coverage is limited to the agonist-dependence Results paragraphs and Table 2 (as XML text); the Table 1 image was not viewed (403).",
+ "study_id": {
+  "doi": "10.1021/acschemneuro.3c00181",
+  "pmid": "37566734"
+ },
+ "workflow": "SCI42 S5 producer dq-p, second source. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

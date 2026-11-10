@@ -1,5 +1,5 @@
 {
- "analysis_at": "2026-11-10T08:31:30Z",
+ "analysis_at": "2026-11-10T08:45:35Z",
  "analysis_time_precision": "second",
  "coverage": {
   "abstract": "not_read",
@@ -8,16 +8,16 @@
   "results": "read",
   "discussion": "not_read",
   "figures": "not_read",
-  "tables": "read",
+  "tables": "captions_only",
   "references": "not_read",
   "supplementary": "not_read",
   "limitations": "not_present"
  },
- "event_at": "2026-11-10T08:32:00Z",
+ "event_at": "2026-11-10T08:45:58Z",
  "event_id": "FTR-20261110-37566734-92",
  "evidence_basis": [
-  "Europe PMC fullTextXML text read for Introduction, Results on agonist dependence, Table 2, Methods (TEVC and whole-cell); Table 1 values and figures are images or not in the text and were not viewed; supplement (Figure S1 with DQP-1105) not read.",
-  "verbatim_locator | proposition: Acker 2011 DQP-1105 IC50 at GluN2C and GluN2D cited in micromolar | Introduction | \"inhibited GluN2C- and GluN2D-containing receptors with IC 50 values of 7.0 and 2.7 μM, respectively\""
+  "Introduction, agonist-dependence Results, Table 2 values read from the text (coverage tables recorded as captions_only because the Table 1 image was not viewed), Methods read. Table 1 image of this paper was not viewed (403); the statement that DQP-1105 is not a Table 1 row is an inference from the caption. Figures and supplement not viewed.",
+  "verbatim_locator | proposition: Acker 2011 DQP-1105 IC50 at GluN2C and GluN2D cited in micromolar | Introduction | \"inhibited GluN2C- and GluN2D-containing receptors with IC 50 values of 7.0 and 2.7 \u03bcM, respectively\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [
@@ -27,9 +27,9 @@
  "prior_receipt": null,
  "record_kind": "contemporaneous_receipt",
  "reread_reason": "first_read",
- "source_fingerprint": "fccfa815a54a87e6fe823a48e0fe5c20e9e4f3adbbd22696f710a108f3056f77",
+ "source_fingerprint": "29be8433208c72c8c27aa3ce9e6d4cdcf65a578fb118d5fc3e379b89def7b04f",
  "source_kind": "fulltext_remote",
- "source_locator": "Europe PMC fullTextXML for PMC10485906, fetched 2026-11-10; text copy saved outside the repository",
+ "source_locator": "Europe PMC REST fullTextXML for PMC10485906, plain curl, fetched about 08:31 UTC; fingerprint is the SHA-256 of that raw XML (220240 bytes), identical to the verifier copy. The earlier fingerprint fccfa815 was of my tag-stripped text derivative. Results coverage is limited to the agonist-dependence Results paragraphs and Table 2 (as XML text); the Table 1 image was not viewed (403).",
  "study_id": {
   "doi": "10.1021/acschemneuro.3c00181",
   "pmid": "37566734"
