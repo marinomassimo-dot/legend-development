@@ -73,6 +73,12 @@ plan, and no additional spend is enabled to make a package fit.
 
 **Which figure is output (2026-11-08).** The `subagent_tokens` figure in a delegate's completion notice is a total that includes context; it is not output tokens. IT34's blind verifier was reported as "about 40,000 tokens" and read as output: its transcript census gives 8 responses and 7,309 output tokens (birth context 18.5k, peak 38.6k, cache read 192k); more than half of the output (about 4,100 tokens) was writing the audit file and the final message, and the rest was tool calls; reasoning was a small share (three responses carried thinking). The cost of a proportionate verification is therefore mostly startup context and fetched text, not generation. Quote output from `session_model_census.py`, never from the notice.
 
+**The coordinator's own cost (2026-11-10).** A session with zero delegates still re-reads its whole context on every turn. For one mandate's slice of the IT41 session
+(`session_model_census.py <transcript> --since <ISO time of the mandate>`): 222 turns, start context 169,327 tokens, re-read on every turn = 65% of the cache read; the text of tool
+results, each carried to the end of the slice, was about 14%; the largest results were 4-20 thousand characters. So the cost followed the length of the context a mandate started in, not the
+size of its outputs. The lever is where a mandate starts: an independent mandate begins from the checkpoint (`mandate_continuity.py status`, the record's CHECKPOINT) and opens the originals it needs,
+in a window that does not carry the previous mandate. Originals stay accessible and are opened whenever a decision needs them; a checkpoint points to them and never replaces one.
+
 ## 8 · A verifier checks what decides, not the whole search
 
 The verifier gets the decisive statements as (statement, source, locator) triples, not the producer's reasoning, and is asked to check: every proposition a decision rests on; every number that would change a decision; every inference, claim of absence and transfer of context (species, cell type, paralog, disease); and a declared sample of the simple non-decisive controls (say which rows and how many). It does not rebuild the retrieval. If the sample shows an error, the verification extends to that class (for example every quote of that source type); the decisive premises are never reduced to save cost. A correction of substance made after the review is checked again by the same verifier or another.

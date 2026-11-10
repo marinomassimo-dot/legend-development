@@ -7,6 +7,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent; DR = HERE.parent
 sys.path.insert(0, str(HERE.parents[4] / "framework/scripts"))
 import hypothesis_package as hp  # noqa: E402
+import compound_identity as ci  # noqa: E402
 
 def main():
     rec = hp.comparison_for(hp.load_all(), "INV-05")
@@ -20,12 +21,13 @@ def main():
     for r in csv.DictReader(open(DR / "identity_it41_20261109/identity_table.tsv", encoding="utf-8"), delimiter="\t"): ident.setdefault(r["query_name"].lower(), []).append(r)
     out = []
     for c in csv.DictReader(open(HERE / "compound_view.tsv", encoding="utf-8"), delimiter="\t"):
-        for nm in [re.sub(r"\s*\(.*?\)", "", x).strip() for x in c["name_full"].split(";") if x.strip()]:
-            hits = ident.get(nm.lower()) or next((v for k, v in ident.items() if k and (k in nm.lower() or nm.lower() in k)), None)
-            if not hits: out.append([c["item_id"], nm, "NO_IDENTITY_ROW", "", "", "", ""]); continue
-            for h in hits: out.append([c["item_id"], nm, h["identity_state"], h["label_conflict"], h["expected_gene"], h["evidence_level"], h["selectivity"]])
+        for nm in [x.strip() for x in c["name_full"].split(";") if x.strip()]:
+            for j in ci.join_names(nm, ident):         # EXACT / QUALIFIED attach a row; PROPOSED_ONLY and NO_CANDIDATE attach none (Harness; no substring fallback)
+                hits = ident.get(j["key"]) if j["key"] else None
+                if not hits: out.append([c["item_id"], j["part"], "NO_IDENTITY_ROW", "", "", "", "", j["link"]]); continue
+                for h in hits: out.append([c["item_id"], j["part"], h["identity_state"], h["label_conflict"], h["expected_gene"], h["evidence_level"], h["selectivity"], j["link"]])
     with open(HERE / "compound_identity_join.tsv", "w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f, delimiter="\t", lineterminator="\n"); w.writerow(["item_id", "name", "identity_state", "label_conflict", "expected_gene", "evidence_level", "selectivity"]); w.writerows(out)
+        w = csv.writer(f, delimiter="\t", lineterminator="\n"); w.writerow(["item_id", "name", "identity_state", "label_conflict", "expected_gene", "evidence_level", "selectivity", "link"]); w.writerows(out)
     print(len(rec["rows"]), "comparison rows;", len(out), "identity join rows")
 
 if __name__ == "__main__":

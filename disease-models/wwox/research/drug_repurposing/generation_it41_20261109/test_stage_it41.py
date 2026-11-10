@@ -31,7 +31,7 @@ class CompoundView(unittest.TestCase):
         self.assertTrue(all(c["kind"] in rv.COMPOUND_KINDS for c in full))
         self.assertTrue(all("name_full" in c and "registry_note" in c for c in full))
         self.assertFalse(any("name_full" in c or "registry_note" in c for c in share))
-        self.assertTrue({"emerged", "known_requalified", "probe", "control", "weakened", "unresolved"} <= {c["kind"] for c in full})
+        self.assertTrue({"known_requalified", "probe", "control", "weakened", "unresolved"} <= {c["kind"] for c in full})   # "emerged" stays a valid kind; after SCI42 no entry is in it
 
     def test_no_forced_top_five_and_no_efficacy_claim(self):
         full = rv.compound_view(DR, True)
@@ -61,14 +61,14 @@ class ReaderConsumption(unittest.TestCase):
         j = tsv(HERE / "compound_identity_join.tsv")
         g = [r for r in j if r["name"] == "GYKI 52466"]
         self.assertTrue(g and all(r["label_conflict"] == "yes" for r in g), "the label conflict travels with the name")
-        self.assertTrue(any(r["name"] == "radiprodil" and r["identity_state"] == "NO_IDENTITY_ROW" for r in j), "a name without a row is stated, not dropped")
+        self.assertTrue(any(r["name"] == "Kv7 openers" and r["identity_state"] == "NO_IDENTITY_ROW" for r in j), "a name without a row is stated, not dropped")
 
 class Rendered(unittest.TestCase):
     def test_pages(self):
         n = 0
         for p in sorted((DR / "view").glob("index*.html")):
             h = p.read_text(encoding="utf-8"); n += 1
-            self.assertEqual(len(re.findall(r'class="cv-i ', h)), 10, p.name)
+            self.assertEqual(len(re.findall(r'class="cv-i ', h)), len(rv.compound_view(DR, False)), p.name)
             names = len(re.findall(r'class="cv-name"', h))
             self.assertEqual(names > 0, not p.name.startswith("index_shareable"), p.name)
         self.assertEqual(n, 10)

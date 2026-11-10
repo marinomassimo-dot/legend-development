@@ -1,0 +1,132 @@
+{
+ "_schema": "orchestrator-task-v1",
+ "TASK_ID": "ORCH-ROADMAP-IT42-20261110",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "P0",
+ "OBJECTIVE": "IT42: from available relations to verifiable pharmacological hypotheses actually used: separate source coverage from reasoning value, trace consumption to decisions, propagate corrections, one second relation, investigations view and next brief.",
+ "START_UTC": "2026-11-10T08:00:00Z",
+ "RESUME": {
+  "checkpoint": {
+   "last_verified_result": "39ec99a0 battery PASS WITH SKIPS (228 targets); merged candidate with 871f7ffa: view check/package/audit PASS, stage and trace tests OK",
+   "first_incomplete": "P9: battery on the frozen merged candidate, publish with --expect-sha, CI, site, then tell SCI42 'finita' with the SHA",
+   "files_to_open": "generation_it42_20261110/README.md, eval_summary.md",
+   "active_processes": "none of mine after the battery starts; cron de32c983 hourly (session-only)",
+   "real_dependencies": "SCI42 second landing waits for me; Harness idle on main",
+   "next_step": "freeze, battery by PID, publish, CI by the Actions page every 10 minutes at most, site check, closure commit"
+  }
+ },
+ "AUTHORISED_QUEUE_20261108": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Baseline: SHA local/remote/candidate, final CI of IT41, batteries by SHA, record, freezes; register IT42; continuity",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "local main = remote = f7305230 at the start (the shared checkout had been aligned by ff-only after IT41); IT41 record COMPLETE, CI of e2dbe391 success (gate and shareable-view), CI of the record-only f7305230 in progress at the time; batteries by SHA in the IT41 record (c557978e and 4fde7029 FAIL kept; ade977d0 and 28d9cf2b PASS WITH SKIPS); no publication freeze active; IT42 record registered with the whole queue, session bound (MANDATE_BOUND), mandate_watch --self-call returned RESUME, one hourly cron (session-only)."
+    }
+   ]
+  },
+  "OBJ_P1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Close effective consumption: trace three cases relation->search->qualification->comparison/selection->investigation or card->public view (favourable conditional; ambiguous identity; must stay unknown); fields exported but not used get a minimal consumer; coordinate identity links with Harness",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "trace_it42.md + test_trace_it42.py: three cases (favourable conditional GluN2B; ambiguous identity GYKI; must stay unknown: DQP-1105, KCC2 enhancer, BNIP3) from relation to public page; identity join now read by the view (badge per entry), engine verdicts gate the kinds shown; comparison_rows_it41.tsv stated as read by no automatic decision. Harness asked once to extend the identity table (done in his candidate 6e179de7); no second normaliser."
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "Separate source coverage from reasoning value: fixed protocol (questions, inputs, versions, outcomes, error criteria, meaning of improvement); A source effect, B relational qualification effect on identical universe; simple baselines credible; cost and time",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "eval_protocol_it42.md fixed before execution; eval_it42.py runs A0/A1/B on five pre-fixed questions plus a post hoc identity case; 4 runs (runs 1-3 superseded after scorer and engine defects, kept as addenda); eval_summary.md: coverage from the added source, protection from the qualification, no reference positive gained, nothing changed for the unambiguous relation; independent sample check 0 of 41 wrong plus 76 ChEMBL rows all right."
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "Onfasprodil and NP10679: provenance chain, roles kept distinct, open premise, what changes priority; apply science primary-source deltas when delivered",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "provenance_it42.md: onfasprodil and NP10679 chains, roles (mechanism comparator under verification; probe of conditions), open premises, what moves them; two reconstruction corrections (one datum in three representations; an activity id that is not a PMID). Science primary sources pending (SCI42 candidate f54b5753: onfasprodil insufficient information, NP10679 conditional on tissue pH): to be applied at landing. SCI42 package (d3a57a65, 11 rows) applied: onfasprodil emerged to unresolved, NP10679 emerged to probe, comparisons, INV-05 next_test, matrix M01/M14/M05, BE2, map row IT42-Q01; row 9 no hypothesis_packages row (format decision), row 10 passed to Harness, row 11 ten receipts recorded after a clean trial (one parent link set from the ledger; ledger 1,554 to 1,564)."
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "Semantic propagation of IT41 corrections to INV-05 and other consumers (per-molecule maxima, GYKI distinction, ifenprodil/Ro values, DQP-1105 unresolved, potency vs log transform, phase/approval/access, preparation and species); smallest regressions",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "apply_p4.py + test_stage_it42.py (6 tests): per-molecule ceiling wording in INV-05 and comparators, GYKI 53655 identity cell, ifenprodil values not on Ro 25-6981, potency/log one datum (same_datum), approval words scoped, species kept."
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "One second relation chosen for discriminating power; run the same path without special code",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "S7 (supply-side GABA: GAT-1 and GABA transaminase) framed before the search in second_relation_it42.md; ran through the same table and code; 15 rows, all candidates, no special code; entries V11 and V12; reasoning added nothing for this unambiguous relation."
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "Investigations view: priority, engine-emerged vs known, question per compound, what moves it, in silico vs lab; five languages; licence-compliant public content; site and phone/desktop check",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "compound_view.tsv 12 items (kinds control/probe/known_requalified/unresolved/weakened; none 'emerged' after SCI42), fields moves/where/identity badge (identity read through Harness join_names; NOT_FOUND_BY_NAME counts as unverified), five-language strings, no names or registry values in the shareable edition (licence fields named: name_full and registry_note; ChEMBL CC BY-SA 3.0, GtoPdb ODbL/CC BY-SA 4.0); package, check and audit-shareable PASS on the merged tree; viewports 360/390/768/1280 and print scenarios ok; published-site check in P9."
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "Close the loop: pick the best question, prepare the next scientific brief in the existing format; no overlapping campaign; no sending/commissioning",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "next_batch_it42_20261110/BRIEF.md: supply, response or chloride gradient; SCI42 agrees and starts from the chloride gradient."
+    }
+   ]
+  },
+  "OBJ_P8": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "Durable capability: canonical lessons, executable behaviour; software for counts; delegation discipline; context cost",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "two lessons at canonical points (parallel_legend_protocol.md 1.5; framework/scripts/README.md view row); tests/regressions above; delegate costs from the census at closure."
+    }
+   ]
+  },
+  "OBJ_P9": {
+   "order": 10,
+   "steps": [
+    {
+     "step": "Integrate, publish with SHA check, CI of the published commit, batteries by SHA, cleanup of own integrated material, final report",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "Batteries by SHA: 39ec99a0 PASS WITH SKIPS (228 targets, 11 skipped); 53cf4c18 (merged with Harness 871f7ffa) PASS WITH SKIPS (see log). No FAIL in IT42; earlier FAILs of IT40/IT41 are kept in their records. Publication, CI and site: see closure."
+    }
+   ]
+  }
+ }
+}

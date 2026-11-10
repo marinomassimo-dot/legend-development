@@ -116,6 +116,57 @@ class Target(unittest.TestCase):
         self.assertTrue(any("GRIA1" in u for u in t["unattributed_source_rows"]))
 
 
+class JoinNames(unittest.TestCase):
+    K = ["brilliant blue fcf", "gyki 52466", "gyki 53655", "ifenprodil", "nbqx", "perampanel", "ro 25-6981"]
+
+    def links(self, n):
+        return [(r["link"], r["key"]) for r in ci.join_names(n, self.K)]
+
+    def test_two_compounds_in_one_cell_are_each_resolved(self):
+        # the old substring fallback returned the first key's row for the whole cell
+        self.assertEqual(self.links("GYKI 52466 / GYKI 53655"), [("EXACT", "gyki 52466"), ("EXACT", "gyki 53655")])
+        self.assertEqual(self.links("GYKI 52466 and GYKI 53655"), [("EXACT", "gyki 52466"), ("EXACT", "gyki 53655")])
+
+    def test_prefix_or_fragment_proposes_but_attaches_nothing(self):
+        for n, prop in (("Brilliant Blue", ["brilliant blue fcf"]), ("Ro 25", ["ro 25-6981"]), ("GYKI 5", ["gyki 52466", "gyki 53655"])):
+            r = ci.join_names(n, self.K)[0]
+            self.assertEqual((r["link"], r["key"], r["proposed_keys"]), ("PROPOSED_ONLY", None, prop))
+
+    def test_distinct_compound_stays_unresolved(self):
+        self.assertEqual(self.links("brilliant blue g"), [("NO_CANDIDATE", None)])
+        self.assertEqual(self.links("d-APV"), [("NO_CANDIDATE", None)])
+
+    def test_salt_stereo_label_and_comment_keep_their_qualifier(self):
+        for n, key, q in (("NBQX disodium", "nbqx", "disodium"), ("(R)-ifenprodil", "ifenprodil", "(r)-"),
+                          ("[3H]ifenprodil", "ifenprodil", "[3h]"), ("perampanel-d5", "perampanel", "-d5")):
+            r = ci.join_names(n, self.K)[0]
+            self.assertEqual((r["link"], r["key"], r["qualifier"]), ("QUALIFIED", key, q))
+        self.assertEqual(self.links("ifenprodil (GluN2B)"), [("EXACT", "ifenprodil")])
+
+    def test_parenthetical_comment_with_comma_is_not_split(self):
+        self.assertEqual(self.links("GYKI 52466 (a different structure, not the same compound)"), [("EXACT", "gyki 52466")])
+
+    def test_authentic_exact_name_unchanged(self):
+        self.assertEqual(self.links("Ro 25-6981"), [("EXACT", "ro 25-6981")])
+
+
+class PinnedCacheInput(unittest.TestCase):
+    def test_absent_and_changed_inputs_stop_with_the_recipe(self):
+        import tempfile
+        cc = ci.cc
+        with tempfile.TemporaryDirectory() as d:
+            with self.assertRaises(cc.CacheInputError) as e:
+                cc.cache_file("gtopdb/interactions.csv", d)
+            self.assertIn("absent", str(e.exception)); self.assertIn("sha256", str(e.exception))
+            (Path(d) / "gtopdb").mkdir()
+            (Path(d) / "gtopdb/interactions.csv").write_text("not the pinned content")
+            with self.assertRaises(cc.CacheInputError) as e:
+                cc.cache_file("gtopdb/interactions.csv", d)
+            self.assertIn("differs from the pin", str(e.exception))
+            with self.assertRaises(cc.CacheInputError):
+                cc.cache_file("gtopdb/unpinned.csv", d)
+
+
 class Committed(unittest.TestCase):
     def test_declarations_are_complete_and_dated(self):
         rows = ci._rows(ci.DECLARATIONS)

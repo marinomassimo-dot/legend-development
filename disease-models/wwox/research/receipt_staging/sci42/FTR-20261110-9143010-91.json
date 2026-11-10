@@ -24,9 +24,9 @@
   "disease-models/wwox/research/drug_repurposing/glun2b_comparators_sci42_20261110/output/decisive.tsv",
   "disease-models/wwox/research/drug_repurposing/glun2b_comparators_sci42_20261110/output/evidence.tsv"
  ],
- "prior_receipt": null,
+ "prior_receipt": "FTR-20261106-9143010-30",
  "record_kind": "contemporaneous_receipt",
- "reread_reason": "first_read",
+ "reread_reason": "new_question_outside_prior_coverage",
  "source_fingerprint": null,
  "source_kind": "abstract",
  "source_locator": "Europe PMC record abstract read through the public search service on 2026-11-10; publisher page not opened",

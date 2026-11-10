@@ -51,6 +51,7 @@ Conflicts between branches:
   bounded timeout, via [`process_wait.py`](../scripts/process_wait.py).
 - A process name, including a `pgrep -f` pattern, is not an identity: it can match the waiter
   itself. The reasons and the incidents live in that tool's docstring, not here.
+- Another session's release battery may run as `python3 -B scripts/run_release_regressions.py`; a pattern written for the plain command line misses it and two batteries overlap (2026-11-10). List the processes in both forms, or ask the owner for the PID, before starting one.
 
 ---
 
