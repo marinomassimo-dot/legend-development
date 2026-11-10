@@ -7,7 +7,7 @@ Non-canonical working note. Not medical advice; no dose, schedule or route. Refe
 | P0 | `ledger/tasks/orchestrator/ORCH-ROADMAP-IT42-20261110.json` | record of the whole queue; IT41 reconciled (local main = remote = f7305230; CI of e2dbe391 success; IT41 batteries by SHA in its record) |
 | P1 | `trace_it42.md`, `test_trace_it42.py` | three cases from relation to public page; which output was only exported and what now reads it; a consistency gate between the engine's verdicts and the kinds shown |
 | P2 | `eval_protocol_it42.md` (fixed first), `eval_it42.py`, `eval_results.tsv`, `eval_summary.md`, `eval_table.md` | A (added source) against B (relational qualification) on the same universe; two scorer defects found and recorded as addenda |
-| P3 | `provenance_it42.md` | onfasprodil and NP10679: provenance, roles, what moves them; two reconstruction corrections (one datum in three representations; a reference field that is not a PMID) |
+| P3 | `provenance_it42.md` | onfasprodil and NP10679: provenance, roles, what moves them; two reconstruction corrections (one datum in three representations; an activity id that is not a PMID) |
 | P4 | `apply_p4.py`, `test_stage_it42.py` | the IT41 corrections propagated to INV-05 and the comparator table; the smallest regressions |
 | P5 | `second_relation_it42.md` (before the search), relation S7 | supply-side GABA lever; the relation ran through the same table and code, with the qualification columns as data |
 | P6 | `compound_view.tsv` (12 items, new fields moves/where/identity), view code and five-language strings | public list of compounds and hypotheses in research order |
