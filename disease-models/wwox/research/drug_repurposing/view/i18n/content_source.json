@@ -283,6 +283,10 @@
   "src": "en",
   "text": "Measure the axonal activity-dependent myelination signal in the WWOX-deficient system against an isogenic control, before any compound; then decide whether the class is orderable. IT29: add an arm in Wwox-null precursor monoculture or the Wwox-null neuron co-culture, with a lipid-synthesis comparator beside the muscarinic one, crossed with a neuronal-activity manipulation. [IT36] existing co-culture separates neither contact or substrate integrity nor a soluble product; peripheral seizure-free DRG neurons; add a fixed-neuron arm and a factor arm."
  },
+ "2ae74025fa9d": {
+  "src": "en",
+  "text": "That the dehydrogenase step is actually restrained in a WWOX-deficient human neural cell: no neural measurement of its amount, phosphorylation or activity exists, and the signs conflict (a lower kinase transcript in an organoid; a higher one with unchanged activity in a non-neural fibroblast line)."
+ },
  "2bbdf11dd6e5": {
   "src": "it",
   "text": "Capire se vigabatrin o CPP-115 aggiungono danno alla mielina in un modello giovanile privo di Wwox."
@@ -635,6 +639,10 @@
   "src": "en",
   "text": "AhR-pathway activation is adverse in neural precursors in toxin studies; the pathway-target transcript is higher while NFE2L2 is lower."
  },
+ "59726ce1b34c": {
+  "src": "en",
+  "text": "The reference has a family record only (isoform unresolved); the two others rest on one assay each, different from each other, so their potencies are not compared; two isoforms have no row for one of them (unknown, not zero). Nothing is known about brain exposure or about which isoforms the relevant cells express. In the one randomised human trial of the reference, in a mitochondrial disease, all treated participants stopped the study drug, mostly for nerve toxicity (abstract level; efficacy not judgeable)."
+ },
  "5adc7e0edfc7": {
   "src": "en",
   "text": "Up: the excess sag persisting at matched potential and deflection. Down: it vanishing, or the blocker-sensitive current per capacitance being the same."
@@ -955,6 +963,10 @@
   "src": "en",
   "text": "Measure the tissue pH; if this compound is used, run the ifenprodil-site tool and the full competitive antagonist at the same two controlled pH values, with its recombinant maximum at each pH known first."
  },
+ "834e9fb3fb43": {
+  "src": "en",
+  "text": "Up: a measured restraint of the step. Down: none found, which lowers the lead without refuting it in other cell types. Reopens with the opposite sign if the cells depend on lactate supply."
+ },
  "83ef2e781b00": {
   "src": "en",
   "text": "In knockout, heterozygote and wild-type slices: sag, resting potential, input resistance, rebound and burst incidence before and after two Ih blockers of different chemotypes (the second so that an off-target action is not read as Ih), with a current-clamp step that matches the resting potential and the peak potential, with a smaller cell or immature membrane listed as its own candidate beside branch D, and a voltage-clamp read of the blocker-sensitive current in a subset of cells; animals, not cells, are the replicates. Branch D adds the potassium-current arm: the potassium currents sensitive to a Kv7 blocker and to a Kir-channel blocker in voltage clamp, and input resistance read with synaptic transmission blocked. [IT36] A first-generation Ih blocker at 50 uM is about 40 times its sodium-current IC50 in DRG neurons (age not stated); read a second chemotype and the blocker-sensitive current in voltage clamp; nickel/Z944 and Kv7 arms separate. [IT40] A4 Report access resistance, bridge balance and capacitance by genotype; add a Ba2+- or Kv7-blocker-sensitive difference current with its zero-crossing against E_K (about -97 to -98 mV from the declared solutions; the recorded potentials need a junction correction of about -13 mV that 34634460 did not measure, which puts the estimated sag peaks about 16-21 mV below E_K, so the prediction applies to the voltage-clamp difference current, not to the sag peak)."
@@ -1026,6 +1038,10 @@
  "8c0bcfdd6eff": {
   "src": "en",
   "text": "A GluN2B-selective negative modulator may remove the bursts at a smaller measured fraction of the isolated NMDA-receptor current than the full antagonist needs. Exploratory."
+ },
+ "8c99adf932cf": {
+  "src": "en",
+  "text": "The lever was already carded; the search now gives a reference and a second, unrelated chemotype with rows on each kinase isoform, so a first experiment can compare them once the premise holds."
  },
  "8d27befa6c69": {
   "src": "it",
@@ -1166,6 +1182,10 @@
  "9bc3d7f67697": {
   "src": "en",
   "text": "Development feasibility: a cell-level probe is feasible now, and an approved thyroid-hormone molecule and a clinical-stage analogue exist; systemic hormone action, the early treatment window and the lack of a brain-exposure datum for the analogue limit any later use."
+ },
+ "9c25ba9441fa": {
+  "src": "en",
+  "text": "Inhibition of the pyruvate dehydrogenase kinases, releasing the dehydrogenase step so more pyruvate is oxidised."
  },
  "9cc96d4676c8": {
   "src": "it",
@@ -1358,6 +1378,10 @@
  "b485d29dc9e5": {
   "src": "en",
   "text": "Observations that no generator input carried now reach it: a new question on NRF2 tone (one organoid contrast, adjusted p above the deposit's own alpha, role unknown) produced 20 new conditional proposals (the axis itself was already a carded thread since IT10; the compound routes are new); a failed control (the second neural system's progenitor arm did not show WWOX lower) is attached to 71 proposals and a contested direction to 75 more, as carried limits (recorded in the output; removing their ordering term changes no hand-over); a cell-type marker set can no longer become a gene seed; a premise or class limit now travels wherever its edge or target appears in a chain, not only inside one cluster."
+ },
+ "b48f2fa15fff": {
+  "src": "en",
+  "text": "Lowering the kinases that restrain the pyruvate dehydrogenase step: a carded lever with typed, per-isoform rows, conditional on a premise that is unmeasured"
  },
  "b4c4c771fbc1": {
   "src": "en",
@@ -1846,6 +1870,10 @@
  "f47ca448e0b7": {
   "src": "en",
   "text": "It decides whether any parvalbumin-directed pharmacology, positive modulation or another kind, can be thought about at all, and which of the inhibitory-hypofunction contrasts to run first. Its direction is not assumed: raising parvalbumin-cell activity is not taken to be the right direction. It enters at rank 6 as a premise measurement because the nucleus-level route was closed by the replicate structure of the deposit and what remains is a per-animal measurement."
+ },
+ "f580dd564bdc": {
+  "src": "en",
+  "text": "Measure the step's activity and flux with lactate, pyruvate and redox state in an isogenic human neural pair; only if it is restrained, compare the reference with the second chemotype on the same readout."
  },
  "f5a4dd769acf": {
   "src": "en",

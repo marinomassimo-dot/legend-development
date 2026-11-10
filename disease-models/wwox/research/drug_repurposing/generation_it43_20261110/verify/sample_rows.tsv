@@ -1,0 +1,31 @@
+row_id	relation	source	name	target_symbol	action_as_recorded	species	site_or_note
+R01	S2	ChEMBL curated mechanism	IVABRADINE	HCN4	BLOCKER	Homo sapiens	single_protein_record | Potassium/sodium hyperpolarization-activated cyclic nucleotide-gated channel 4 blocker
+R02	S2	GtoPdb interaction	PIP<sub>2</sub>	Hcn2	Activator/None	Mouse	 | 
+R03	S4	GtoPdb interaction	octanol	GJD2	Inhibitor/None	Human	 | 
+R04	S2	GtoPdb interaction	zatebradine	HCN1	Channel blocker/Antagonist	Human	 | 
+R05	S2	GtoPdb interaction	Cs<sup>+</sup>	HCN3	Channel blocker/Antagonist	Human	 | 
+R06	S2	GtoPdb interaction	zatebradine	HCN2	Channel blocker/Antagonist	Human	 | 
+R07	S2	GtoPdb interaction	Cs<sup>+</sup>	HCN1	Channel blocker/Antagonist	Human	 | 
+R08	S4	GtoPdb interaction	flufenamic acid	GJD2	Inhibitor/None	Human	 | 
+R09	S2	GtoPdb interaction	ZD7288	HCN4	Channel blocker/Antagonist	Human	 | 
+R10	S2	GtoPdb interaction	zatebradine	HCN3	Channel blocker/Antagonist	Human	 | 
+R11	S2	ChEMBL curated mechanism	IVABRADINE HYDROCHLORIDE	HCN4	BLOCKER	Homo sapiens	single_protein_record | Potassium/sodium hyperpolarization-activated cyclic nucleotide-gated channel 4 blocker
+R12	S2	GtoPdb interaction	ZD7288	HCN3	Channel blocker/Antagonist	Human	 | 
+R13	S2	GtoPdb interaction	Mg<sup>2+</sup>	Hcn2	Channel blocker/None	Mouse	 | 
+R14	S4	GtoPdb interaction	Ca<sup>2+</sup>	GJD2	Inhibitor/None	Human	 | 
+R15	S2	GtoPdb interaction	Cs<sup>+</sup>	HCN4	Channel blocker/Antagonist	Human	 | 
+R16	S2	GtoPdb interaction	EC18	Hcn2	Channel blocker/None	Mouse	 | 
+R17	S2	GtoPdb interaction	EC18	Hcn1	Channel blocker/None	Mouse	 | 
+R18	S2	GtoPdb interaction	zatebradine	HCN4	Channel blocker/Antagonist	Human	 | 
+R19	S2	GtoPdb interaction	cilobradine	HCN4	Channel blocker/Antagonist	Human	 | 
+R20	S2	GtoPdb interaction	cyclic AMP	Hcn1	Activator/Agonist	Mouse	 | 
+R21	S2	GtoPdb interaction	MEL57A	Hcn2	Channel blocker/None	Mouse	 | 
+R22	S2	GtoPdb interaction	cilobradine	HCN3	Channel blocker/Antagonist	Human	 | 
+R23	S2	GtoPdb interaction	MEL57A	Hcn1	Channel blocker/None	Mouse	 | 
+R24	S2	GtoPdb interaction	cilobradine	HCN1	Channel blocker/Antagonist	Human	 | 
+R25	S2	GtoPdb interaction	MEL57A	HCN4	Channel blocker/None	Human	 | 
+R26	S2	GtoPdb interaction	clonidine	Hcn1	Channel blocker/Antagonist	Mouse	 | 
+R27	S2	GtoPdb interaction	cyclic GMP	Hcn2	Activator/Agonist	Mouse	 | 
+R28	S2	GtoPdb interaction	cyclic AMP	Hcn2	Activator/Agonist	Mouse	 | 
+R29	S2	GtoPdb interaction	ZD7288	HCN2	Channel blocker/Antagonist	Human	 | 
+R30	S2	GtoPdb interaction	ivabradine	HCN4	Channel blocker/Antagonist	Human	 | 

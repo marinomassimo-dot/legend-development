@@ -1774,3 +1774,22 @@ S8	Ly404187	CAT:DGIDB:fea4e278b586	dgidb_only	GRIA4	GuideToPharmacology	modulato
 S8	Ly404187	CAT:DGIDB:fea4e278b586	dgidb_only	GRIA1	GuideToPharmacology	modulator	UNKNOWN	listing_only	yes	n/a_has_other_source
 S8	Ly404187	CAT:DGIDB:fea4e278b586	dgidb_only	GRIA2	GuideToPharmacology	modulator	UNKNOWN	listing_only	yes	n/a_has_other_source
 S8	Ly404187	CAT:DGIDB:fea4e278b586	dgidb_only	GRIA3	GuideToPharmacology	modulator	UNKNOWN	listing_only	yes	n/a_has_other_source
+S9	Ver-246608	CAT:DGIDB:111f25d9cc39	dgidb_only	PDK3	GuideToPharmacology	inhibitor	UNKNOWN	listing_only	yes	n/a_has_other_source
+S9	Ver-246608	CAT:DGIDB:111f25d9cc39	dgidb_only	PDK2	GuideToPharmacology	inhibitor	UNKNOWN	listing_only	yes	n/a_has_other_source
+S9	Ver-246608	CAT:DGIDB:111f25d9cc39	dgidb_only	PDK4	GuideToPharmacology	inhibitor	UNKNOWN	listing_only	yes	n/a_has_other_source
+S9	Ver-246608	CAT:DGIDB:111f25d9cc39	dgidb_only	PDK1	GuideToPharmacology	inhibitor	UNKNOWN	listing_only	yes	n/a_has_other_source
+S9	Osu-03012	CAT:DGIDB:27b4cd9ba342	dgidb_only	PDK1	TdgClinicalTrial		UNKNOWN	listing_only	no	n/a_has_other_source
+S9	Chembl:Chembl257158	CAT:DGIDB:6102045491fa	dgidb_only	PDK1	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S9	3-Hydroxyanthranilic Acid	CAT:DGIDB:6396e14ba67c	dgidb_only	PDK1	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S9	Azd7545	CAT:DGIDB:6dce3f58cbc3	dgidb_only	PDK1	GuideToPharmacology	inhibitor	UNKNOWN	listing_only	yes	n/a_has_other_source
+S9	Azd7545	CAT:DGIDB:6dce3f58cbc3	dgidb_only	PDK2	GuideToPharmacology	inhibitor	UNKNOWN	listing_only	yes	n/a_has_other_source
+S9	Sodium Dichloroacetate	CAT:DGIDB:901979e6ba30	dgidb_only	PDK3	ChEMBL	inhibitor	UNKNOWN	listing_only	yes	n/a_has_other_source
+S9	Sodium Dichloroacetate	CAT:DGIDB:901979e6ba30	dgidb_only	PDK4	ChEMBL	inhibitor	UNKNOWN	listing_only	yes	n/a_has_other_source
+S9	Sodium Dichloroacetate	CAT:DGIDB:901979e6ba30	dgidb_only	PDK1	ChEMBL	inhibitor	UNKNOWN	listing_only	yes	n/a_has_other_source
+S9	Sodium Dichloroacetate	CAT:DGIDB:901979e6ba30	dgidb_only	PDK2	ChEMBL	inhibitor	UNKNOWN	listing_only	yes	n/a_has_other_source
+S9	Dichloroacetic Acid	CAT:DGIDB:b7c34486f9a7	dgidb_only	PDK1	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S9	Celecoxib	CAT:DGIDB:f9aa3ade458c	dgidb_only	PDK1	PharmGKB		UNKNOWN	listing_only	no	n/a_has_other_source
+S9	Devimistat	CAT:DGIDB:fac46216aa38	dgidb_only	PDK2	TdgClinicalTrial		UNKNOWN	listing_only	no	n/a_has_other_source
+S9	Devimistat	CAT:DGIDB:fac46216aa38	dgidb_only	PDK1	TdgClinicalTrial		UNKNOWN	listing_only	no	n/a_has_other_source
+S9	Devimistat	CAT:DGIDB:fac46216aa38	dgidb_only	PDK3	TdgClinicalTrial		UNKNOWN	listing_only	no	n/a_has_other_source
+S9	Devimistat	CAT:DGIDB:fac46216aa38	dgidb_only	PDK4	TdgClinicalTrial		UNKNOWN	listing_only	no	n/a_has_other_source

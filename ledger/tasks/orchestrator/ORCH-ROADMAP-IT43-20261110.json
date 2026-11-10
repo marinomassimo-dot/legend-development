@@ -13,9 +13,9 @@
    "steps": [
     {
      "step": "Baseline a4799320 verified; reconcile IT42/SCI42/HE42 records; register IT43; continuity",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "local main = remote = a4799320 at start (fetch done); IT42 record COMPLETE 10/10 DONE; SCI42 and HE42 records read; worktree task/it43 created from a4799320."
+     "evidence": "local main = remote = a4799320 at start; IT42 COMPLETE 10/10; SCI42 and HE42 records read; task/it43 worktree; mandate record OPEN registered; SCI43 (INV-18 branch D, K+ conductances) coordinated by message: no overlap, no battery running, SCI43 sequences its battery after mine."
     }
    ]
   },
@@ -24,9 +24,9 @@
    "steps": [
     {
      "step": "Comparison rows reach the engine: role, premise, discriminating experiment, relaunched question; before/after in a consumer; three contrast cases",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "comparison_engine.py + test_comparison_engine.py (7 tests): evidence tier, role, premise, experiment and relaunched question from explicit package fields; before/after: the second ifenprodil-site tool leaves the probe entry V02 for the unresolved entry V08, open question IT43-Q01; reference control derived; gate view<=engine; three contrast cases pass. Commit 8ed06657."
     }
    ]
   },
@@ -35,9 +35,9 @@
    "steps": [
     {
      "step": "DGIdb and Q1 positives: cause of each omission, minimal integration, comparison with simple search, five distinct measures",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Cause of both Q1 omissions: held sources do not carry the datum (ChEMBL no mechanism row; DGIdb lists CYP/MTOR/DRD1 only; GtoPdb ligand without interaction row; the other compound in none). dgidb_listing.py: 353 listing rows S1-S9, 105 new molecules over S1-S8 (18 typed), all UNKNOWN listing_only; 4 tests. Commit 204738b6."
     }
    ]
   },
@@ -46,9 +46,9 @@
    "steps": [
     {
      "step": "New generative trial with relation declared before names (coordinate SCI43, no K-conductance duplication)",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "S9 (PDK inhibition) framed before search (third_relation_it43.md), run through the unchanged path (env vars select input/output); 3 typed molecules; classification in s9/result_it43.md; V13 in the view; INV-07 package consumed afterwards (addendum)."
     }
    ]
   },
@@ -57,9 +57,9 @@
    "steps": [
     {
      "step": "Evaluate source vs qualification vs generation value; independent check; missed opportunities",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "eval_protocol_it43.md fixed before figures; eval_it43.py run (Q7 S2, Q8 S4, Q9 S9); independent reader dispatched (sonnet, high), result pending."
     }
    ]
   },
@@ -68,9 +68,9 @@
    "steps": [
     {
      "step": "Consume SCI43 and Harness deliveries without idle waiting; reconcile IT42 intro counts with final",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "IT42 README intro counts reconciled with run 4 by a dated update; SCI43 delivery pending (will integrate)."
     }
    ]
   },

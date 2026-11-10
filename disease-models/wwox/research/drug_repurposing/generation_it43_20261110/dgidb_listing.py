@@ -18,10 +18,11 @@ SALT = re.compile(r"\b(hydrochloride|hcl|hemi\w*|tartrate|maleate|mesylate|sodiu
 def key(n): return re.sub(r"[^a-z0-9]", "", SALT.sub("", re.sub(r"[(),]", " ", n.lower())))
 
 def main():
-    rel = list(csv.DictReader(open(S41 / "relations_it41.tsv", encoding="utf-8"), delimiter="\t"))
-    base = defaultdict(set)                       # simple search: names per relation from the IT41 molecule table
-    for r in csv.DictReader(open(S41 / "molecules.tsv", encoding="utf-8"), delimiter="\t"):
-        base[r["relation_id"]] |= {key(n) for n in r["names"].split("|")}
+    rel = list(csv.DictReader(open(S41 / "relations_it41.tsv", encoding="utf-8"), delimiter="\t")) + list(csv.DictReader(open(HERE / "relations_it43.tsv", encoding="utf-8"), delimiter="\t"))
+    base = defaultdict(set)                       # simple search: names per relation from the molecule tables (IT41 for S1-S8, IT43 s9/ for S9)
+    for mt in (S41 / "molecules.tsv", HERE / "s9" / "molecules.tsv"):
+        for r in csv.DictReader(open(mt, encoding="utf-8"), delimiter="\t"):
+            base[r["relation_id"]] |= {key(n) for n in r["names"].split("|")}
     es = cc.load(cc.DEFAULT_CATALOG); rows = []
     for r in rel:
         syms = {s.upper() for s in r["target_symbols"].replace(":down", "").replace(":up", "").split(";") if s}

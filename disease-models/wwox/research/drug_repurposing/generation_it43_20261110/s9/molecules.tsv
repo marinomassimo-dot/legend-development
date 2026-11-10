@@ -1,0 +1,4 @@
+relation_id	molecule	names	sources	n_source_rows	directions	species	sites
+S9	CAT:CHEMBL306823	SODIUM DICHLOROACETATE	ChEMBL curated mechanism	4	down	Homo sapiens	family_record_subunit_unresolved
+S9	CAT:DGIDB:111f25d9cc39	VER-246608	GtoPdb interaction	4	down	Human	
+S9	CAT:DGIDB:6dce3f58cbc3	AZD7545	GtoPdb interaction	2	down	Human	

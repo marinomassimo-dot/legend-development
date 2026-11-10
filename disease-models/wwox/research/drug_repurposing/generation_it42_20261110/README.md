@@ -14,6 +14,7 @@ Non-canonical working note. Not medical advice; no dose, schedule or route. Refe
 | P7 | `../next_batch_it42_20261110/BRIEF.md` | the next scientific brief: supply, response or chloride gradient |
 
 Key results are in `eval_summary.md`. In one line: the added source gave the coverage (clean units 4 → 7, 2 → 18, 68 → 101, 0 → 4, 2 → 15 over five questions); the qualification removed every misleading item without losing a clean unit (units with an unflagged error 56, 11, 24, 2, 0 → 0) and kept the unknowns with a reason; it recovered no reference positive that the tables do not hold (ifenprodil and Ro 25-6981 are in neither), and for the unambiguous S7 it changed nothing.
+> **Update 2026-11-10 (IT43 reconciliation).** The line above describes an earlier run of the evaluation. The current outcome is run 4 in `eval_results.tsv` and `eval_summary.md`: clean units A0 → A1 **4 → 7, 2 → 18, 68 → 94, 0 → 4, 2 → 14** (post hoc Q6* 9 → 25); units with an unflagged error A1 → B **48, 11, 21, 2, 0 → 0** (Q6* 30 → 0); in Q3 the shortlist B holds 91 of the 94 clean units, the other 3 being kept with a recorded reason (none lost without a record). The figures 101, 15, 56 and 24 belong to runs before cross-source merging and the removal of radiolabelled forms; they stay in the dated addenda of `eval_protocol_it42.md`, not edited.
 
 ## Added after the science deliveries (SCI42), 2026-11-10
 
