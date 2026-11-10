@@ -13,9 +13,9 @@
    "steps": [
     {
      "step": "Restart and reconciliation: IT43 / SCI43 / HE43 real state, SHAs, processes, staged and recorded receipts, residuals already solved; register IT44",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "Queued behind IT43 (candidate c82a1bff frozen for battery; Harness battery running first); branch task/it44 worktree from c82a1bff; CI #640 of 51d6c3b1 success (1h13m)."
+     "evidence": "Reconciled: IT43 candidate merged with HE43 (landed 273c8b56) as 5f721d0d, battery running (PID 1789201); SCI43 consumed in IT43 (rows 1-7, 11, 26 receipts, ledger 1,599); HE44 (target_activity, quantity columns) and SCI44 (PDH/PDK, Q01) in progress on their branches, not landed; no residual re-proposed that was already solved. Mandate record registered."
     }
    ]
   },
@@ -24,9 +24,9 @@
    "steps": [
     {
      "step": "Close consumption of SCI43 and HE43 deliveries: measurement.py in the quantitative path, parent_form without merging stereoisomers, read-state propagation, KH1-KH5 conditions, shared preparation conditions; before/after",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "HE43 consumed: measurement.measure in the activity path (11,084 rows: 5,000 Potency-kind flagged, 374 censored, 276 no value, 17 unrecognised unit), parent_form in the listing key (106 to 104, enantiomers apart); action_search quantity columns and target_activity.resolve_targets wait for HE44 landing; SCI43 KH1-KH5 consumed in IT43; M01 zinc line added."
     }
    ]
   },
@@ -35,9 +35,9 @@
    "steps": [
     {
      "step": "Recover opportunities the catalogue misses (azetukalner by name, primary-source activities, DGIdb pointers, synonyms/salts/stereoisomers): reproducible path, no single-name exception; known control then a different case",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "activity_search.py: by-target activity path, catalogue join by id, read-state and screening-deposit guard, unread symbols stated; control azetukalner reached (Kv7), different cases S9 S7 S11; 6 offline tests; HE44 resolver to be adopted on landing."
     }
    ]
   },
@@ -46,9 +46,9 @@
    "steps": [
     {
      "step": "One complete generative path chosen from the current queue, frame written before names; second case with a different mechanism if capacity remains",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "S11 (add a resting K+ conductance) framed before, both paths, blind reader (71 tool calls): openers exist only for the Ba2+-weak K2P subfamily, Kir2 has none beyond a Kir2.1-only one; first experiment gains a two-concentration Ba2+ step; V14, IT44-Q01/Q02. S12 (astrocytic K+ buffering): no enhancer; stop point stated (target resolution)."
     }
    ]
   },
@@ -57,9 +57,9 @@
    "steps": [
     {
      "step": "Non-pharmacological entities: role vocabulary (candidate, probe, control or reagent, physiological intervention, unqualified entity), provenance kept, review of false positives and wrongly removed opportunities",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Role vocabulary from data (rule and override tables, effect table), 5 tests; ions no longer candidates; Mg2+ Zn2+ kept as physiological variables."
     }
    ]
   },
@@ -68,9 +68,9 @@
    "steps": [
     {
      "step": "Compare engine against simple alternatives on executed cases with equal inputs; independent premises check in a separate context; graph controls only if a graph is used",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Protocol before figures; four cases x four conditions; S11 changes the next experiment; blind reader on S11 premises; no graph used."
     }
    ]
   },
@@ -79,9 +79,9 @@
    "steps": [
     {
      "step": "Circular relation: priority open questions each give a usable brief (decision, premise, in silico work, indispensable measurement, outcomes favouring alternatives, stop criterion); consume SCI44 when verified; Claude Science material evaluated whole with separate provenance",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "B1-B3 briefs written; SCI44 delivery not landed; Claude Science material not available."
     }
    ]
   },
@@ -90,9 +90,9 @@
    "steps": [
     {
      "step": "Dashboard first screen: which investigations, which compounds or classes, why priority, missing premise, result that would change the decision; five languages, phone readability, names where the qualified path allows",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Investigation cards list their compounds and classes with links; V14 and origin line; five languages; regeneration after IT43 lands."
     }
    ]
   },
@@ -101,9 +101,9 @@
    "steps": [
     {
      "step": "DREAM on material results; autonomous queue (second case, over-severe exclusion, unused structured relation, duplicate simplification, priority card, next batch brief)",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "DREAM: tonic zinc connection applied; S12 second case run."
     }
    ]
   },
