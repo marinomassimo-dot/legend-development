@@ -242,6 +242,7 @@ def _query(request: dict, fetch) -> dict:
         status, payload = _get(fetch, url, "molecule_chembl_id")
         if status == 404:
             out["status"] = "NO_MATCH_FOUND"
+            out["identity_basis"] = "declared_chembl_id_not_found"   # a stale, merged or mistyped id: not "nothing known about the compound"
             out["note"] = f"the declared id {declared} does not exist in this release"
             return out
         if status != 200 or not isinstance(payload, dict) or payload.get("molecule_chembl_id") != declared:

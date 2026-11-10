@@ -34,6 +34,7 @@ file, and the policy file is the licence reading of catalog/README.md.
 from __future__ import annotations
 
 import argparse
+import csv
 import gzip
 import html as htmlmod
 import json
@@ -51,7 +52,7 @@ MAX_VERBATIM_WORDS = 25        # longest unquoted run shared with a third-party 
 WORDING_MAX_WORDS = 8          # a ChEMBL mechanism / target label our own text also contains may be this long (a label, not a passage)
 SHORT_QUOTE_MAX = 12           # a marked quotation up to this long needs no attribution phrase
 ATTRIBUTED_QUOTE_MAX = 30      # a quotation in marks with an attribution phrase may be up to this long
-PUBLIC_HOSTS = {"dgidb.org", "civicdb.org", "www.docm.info", "open.fda.gov", "huggingface.co", "www.ebi.ac.uk", "www.guidetopharmacology.org",
+PUBLIC_HOSTS = {"www.wikidata.org", "dgidb.org", "civicdb.org", "www.docm.info", "open.fda.gov", "huggingface.co", "www.ebi.ac.uk", "www.guidetopharmacology.org",
                 "dsld.od.nih.gov", "pubmed.ncbi.nlm.nih.gov", "doi.org", "www.genenames.org", "www.nlm.nih.gov", "creativecommons.org", "opendatacommons.org",
                 "www.wwox.org"}   # the sponsor's research page, linked from the footer (a presentation link; no data comes from it)
 ATTRIBUTION_WORDS = re.compile(r"(authors? (write|state|note|say|report|conclude)|per the .{0,40}(source|paper|study|abstract)|according to|the abstract|the label)", re.I)
@@ -204,6 +205,9 @@ def named_pairs(P: dict):
 
 
 # ---------------------------------------------------------------------------- reference sets built from the full catalogue
+WD_KEY = "Wikidata label (CC0)"
+
+
 class Reference:
     def __init__(self, dr: Path):
         self.dr = dr
@@ -264,6 +268,12 @@ class Reference:
                         w = norm(t.get(fld) or "")
                         if len(w.split()) >= 3:
                             self.texts.setdefault(w, e["id"])
+        wd = dr / rv.NAME_WD_FILE      # HE43 H5: labels of the class-A name source "Wikidata label (CC0)"; a name is allowed only as that source states it
+        if WD_KEY in (self.allow.get("name_sources") or {}) and wd.exists():
+            with open(wd, encoding="utf-8", newline="") as fh:
+                for r in csv.DictReader(fh, delimiter="\t"):
+                    if r["state"] == "LABEL":
+                        self.allowed_names.add(norm(r["label"]))
         self.allowed_names -= {""}
         for k in list(self.names):
             if k in self.allowed_names:

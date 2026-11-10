@@ -12,6 +12,7 @@ Cards, needs, priorities, positions (F/C/P), dispositions, counts and the Italia
 - **CIViC (via DGIdb)** (20 rows or attributes embedded). Terms: CC0 1.0 Universal (licence field reported by the DGIdb service on 2026-10-28). Credit: CIViC, obtained through DGIdb (export of 2024-06-10); credit given as a courtesy https://civicdb.org/
 - **DoCM (via DGIdb)** (3 rows or attributes embedded). Terms: CC BY 4.0 (licence field reported by the DGIdb service on 2026-10-28). Credit: Database of Curated Mutations (DoCM), CC BY 4.0, obtained through DGIdb (export of 2024-06-10) http://www.docm.info/
 - **openFDA NDC (access categories)** (15 rows or attributes embedded). Terms: Public domain (openFDA licence page). Credit: Data provided by the U.S. Food and Drug Administration. Do not rely on openFDA to make decisions regarding medical care. No FDA endorsement is implied. https://open.fda.gov/license/
+- **Wikidata item labels (English)** (7 rows or attributes embedded). Terms: CC0 / public domain: 'All structured data (i.e. the main, Property, Lexeme, and EntitySchema namespaces) is released into the public domain' (wikidata.org/wiki/Wikidata:Licensing, read 2026-11-10; the page does not mention labels by name and says additional terms may apply). Credit: Compound names from Wikidata (CC0), joined to the compound only through its ChEMBL identifier (Wikidata property P592); the item number is shown with each name. Credit given as a courtesy; no clearance of any other source is implied. https://www.wikidata.org/wiki/Wikidata:Licensing
 
 How the conditions are met:
 
@@ -31,7 +32,7 @@ How the conditions are met:
 - **Record names shown in the page (1,506 values in the row table)**: 1,464 are catalogue identifiers (ChEMBL accession numbers and DGIDB: hashes of DGIdb drug names, no name text); 42 are card names written in this repository (16 molecule families, 26 interventions or classes). A card name that coincides with a ChEMBL preferred name is used as the compound's name, a fact, not as a copied ChEMBL field; ChEMBL names as data travel only in the separate class-B file. LEGEND WWOX repurposing module (this repository); ChEMBL identifiers: EMBL-EBI, https://www.ebi.ac.uk/chembl/
 - **Catalogue record identifiers**: opaque identifiers of this repository's catalogue (CAT:...), no source content. LEGEND WWOX repurposing module (this repository)
 
-Identifier census of `index.html` (distinct values): {"CAT": 2386, "CHEMBL": 371, "DOI": 5, "HGNC": 12, "NCT": 0, "PMID": 153}. No abstract and no passage of an article is embedded. Short quotations are marked by quotation marks and attributed (section 6).
+Identifier census of `index.html` (distinct values): {"CAT": 2386, "CHEMBL": 375, "DOI": 5, "HGNC": 12, "NCT": 0, "PMID": 153}. No abstract and no passage of an article is embedded. Short quotations are marked by quotation marks and attributed (section 6).
 
 ## 4. Class B (share-alike): shipped as a separate file, never merged into the page
 

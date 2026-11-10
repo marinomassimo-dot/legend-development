@@ -608,7 +608,10 @@ class Curated(unittest.TestCase):
         self.assertNotIn("NCI", self.allow["dgidb_claim_sources"])
         self.assertEqual(self.allow["claim_source_policy"]["NCI"]["class"], "C")
         self.assertEqual({k for k, v in self.allow["claim_source_policy"].items() if v["class"] == "A"}, {"FDA", "CIViC", "DoCM"})
-        self.assertEqual(set(self.allow["name_sources"]), {"MATRIX list name", "openFDA NDC single-ingredient active_ingredient name"})
+        # HE43 H5: one name source was added on purpose, Wikidata labels (CC0) joined by ChEMBL id; its entry must carry the terms it rests on and the date they were read
+        self.assertEqual(set(self.allow["name_sources"]), {"MATRIX list name", "openFDA NDC single-ingredient active_ingredient name", "Wikidata label (CC0)"})
+        wd = self.allow["name_sources"]["Wikidata label (CC0)"]
+        self.assertTrue(wd["url"].startswith("https://www.wikidata.org/") and "read 2026-11-10" in wd["licence"] and "P592" in wd["attribution"])
         for v in list(self.allow["dgidb_claim_sources"].values()) + list(self.allow["name_sources"].values()):
             self.assertTrue(v["licence"] and v["attribution"])
 
