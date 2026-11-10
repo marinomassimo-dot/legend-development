@@ -4376,20 +4376,13 @@ def _salt(name: str) -> str:
     return ci.parent_form(name)["salt"]
 
 
-def compound_public_names(dr: Path) -> dict:
-    """HE43 H5: item_id -> [{label, qid, chembl_id}] for the compounds of compound_view whose name a class-A source states. A name reaches an item only through an EXACT identity link,
-    the identity table's ChEMBL id for that name, and a Wikidata item that carries that id (property P592): never by name similarity, never for a qualified or proposed form.
-    A compound without a Wikidata item, without a ChEMBL id or without an exact link stays unnamed, and so does one whose Wikidata label is not the table's bare name (a code name, a salt form or a misspelling is not shown). Absent files: an empty dict."""
-    wd = Path(dr) / NAME_WD_FILE
+def _item_chembl_ids(dr: Path) -> dict:
+    """item_id -> [(name, ChEMBL id)] for names with an EXACT identity link, exactly one ChEMBL id in the identity table, and a row that is not ID_NOT_RESOLVED (an id the ChEMBL release does not hold is
+    not carried to another source or to a link). Absent files: an empty dict."""
     tbl = Path(dr) / IDENTITY_TABLE_FILE
     jf = Path(dr) / IDENTITY_JOIN_FILE
-    if not (wd.exists() and tbl.exists() and jf.exists()):
+    if not (tbl.exists() and jf.exists()):
         return {}
-    label = {}
-    with open(wd, encoding="utf-8", newline="") as fh:
-        for r in csv.DictReader(fh, delimiter="\t"):
-            if r["state"] == "LABEL":
-                label[r["chembl_id"]] = r
     ids_of, unresolved = {}, set()
     with open(tbl, encoding="utf-8", newline="") as fh:
         for r in csv.DictReader(fh, delimiter="\t"):
@@ -4400,20 +4393,42 @@ def compound_public_names(dr: Path) -> dict:
     out = {}
     with open(jf, encoding="utf-8", newline="") as fh:
         for r in csv.DictReader(fh, delimiter="\t"):
-            if r.get("link") != "EXACT":
+            k = r["name"].strip().lower()
+            ids = sorted(ids_of.get(k, ()))
+            if r.get("link") != "EXACT" or k in unresolved or len(ids) != 1:       # none, several (a name that reaches two records) or unresolved: left alone
                 continue
-            ids = sorted(ids_of.get(r["name"].strip().lower(), ()))
-            if r["name"].strip().lower() in unresolved:
-                continue
-            if len(ids) != 1 or ids[0] not in label:       # none, several (a name that reaches two records) or no label: left unnamed
-                continue
-            row = label[ids[0]]
-            if _parent_key(row["label"]) != _parent_key(r["name"]) or _salt(row["label"]):    # a code name, a systematic name, a salt form or another spelling than the table's name: not shown
-                continue
-            entry = {"label": row["label"], "qid": row["qid"], "chembl_id": ids[0]}
-            if entry not in out.setdefault(r["item_id"], []):
-                out[r["item_id"]].append(entry)
+            if (r["name"], ids[0]) not in out.setdefault(r["item_id"], []):
+                out[r["item_id"]].append((r["name"], ids[0]))
     return out
+
+
+def compound_public_names(dr: Path) -> dict:
+    """HE43 H5: item_id -> [{label, qid, chembl_id}] for the compounds of compound_view whose name a class-A source states: the identity link, the identity table's ChEMBL id and a Wikidata item that carries
+    that id (property P592), never name similarity and never a qualified or proposed form. A compound without a Wikidata item stays unnamed, and so does one whose Wikidata label is not the table's bare name
+    (a code name, a salt form or a misspelling is not shown). Absent files: an empty dict."""
+    wd = Path(dr) / NAME_WD_FILE
+    if not wd.exists():
+        return {}
+    label = {}
+    with open(wd, encoding="utf-8", newline="") as fh:
+        for r in csv.DictReader(fh, delimiter="\t"):
+            if r["state"] == "LABEL":
+                label[r["chembl_id"]] = r
+    out = {}
+    for item, pairs in _item_chembl_ids(dr).items():
+        for name, cid in pairs:
+            row = label.get(cid)
+            if not row or _parent_key(row["label"]) != _parent_key(name) or _salt(row["label"]):
+                continue
+            entry = {"label": row["label"], "qid": row["qid"], "chembl_id": cid}
+            if entry not in out.setdefault(item, []):
+                out[item].append(entry)
+    return out
+
+
+def compound_public_links(dr: Path) -> dict:
+    """HE44 H8: item_id -> sorted ChEMBL ids of its compounds, shown as links to the source record (an identifier, class C: no ChEMBL content is embedded). It is what stays when a name is not allowed."""
+    return {item: sorted({cid for _, cid in pairs}) for item, pairs in _item_chembl_ids(dr).items()}
 
 
 def compound_identity_states(dr: Path) -> dict:
@@ -4454,6 +4469,7 @@ def compound_view(dr: Path, full: bool) -> list:
     out = []
     ident = compound_identity_states(dr)
     pub = {} if full else compound_public_names(dr)
+    links = {} if full else compound_public_links(dr)
     with open(fp, encoding="utf-8", newline="") as fh:
         for r in csv.DictReader(fh, delimiter="\t"):
             if r["kind"] not in COMPOUND_KINDS:
@@ -4472,6 +4488,7 @@ def compound_view(dr: Path, full: bool) -> list:
                 d["registry_note"] = r["registry_note"]
             else:
                 d["names_public"] = pub.get(r["item_id"], [])      # HE43 H5: only names a class-A source states (Wikidata, CC0), each with its item number
+                d["chembl_links"] = links.get(r["item_id"], [])    # HE44 H8: the identifier as a link to the source record, for compounds whose name is not shown
             out.append(d)
     return sorted(out, key=lambda x: x["order"])
 
@@ -4741,6 +4758,8 @@ def render_investigations(P: dict) -> str:
             nm = f' <span class="cv-name">{E(c["name_full"])}</span>' if full and c.get("name_full") else ""
             if not full and c.get("names_public"):       # HE43 H5: class-A names, each with its Wikidata item (the credit is in the footer)
                 nm = " " + " ".join(f'<span class="cv-name cv-name-wd" title="Wikidata {E(x["qid"])} (CC0)">{E(x["label"])}</span>' for x in c["names_public"])
+            if not full and c.get("chembl_links"):       # HE44 H8: the identifier as a link to the source record, so an unnamed compound still has a way to its record
+                nm += " " + " ".join(f'<a class="cv-chembl" href="https://www.ebi.ac.uk/chembl/compound_report_card/{E(x)}/">{E(x)}</a>' for x in c["chembl_links"])
             orig = f'<dt>{E(U["cv_orig"])}</dt><dd>{E(U["cv_or_" + c["origin"]])}</dd>' if c.get("origin") else ""
             reg = f'<dt>{E(U["cv_reg"])}</dt><dd>{lx(c["registry_note"])}</dd>' if full and c.get("registry_note") else ""
             lis.append(f'<li class="cv-i cv-k-{E(c["kind"])}" data-kind="{E(c["kind"])}" id="cv-{E(c["item_id"])}"><div class="cv-h"><span class="inv-pos" aria-label="{E(U["cv_order"])} {c["order"]}">{c["order"]}</span> '

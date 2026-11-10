@@ -13,3 +13,6 @@ Not examined: BNIP3, per-compound maxima, source-versus-reasoning candidates (th
 
 ## Retrieval test on a new question (H6)
 Question asked of a fresh delegate (Sonnet, low effort, no hint about files): "Has the reopen condition of the fly Wwox-loss question (Q-FLY of IT41) been met by anything now recorded in the repository, and where?" Result is in section "Retrieval result" below, with files read and tokens as reported.
+
+## Retrieval result
+A fresh delegate (Sonnet, low effort, told only to search with targeted commands) answered in 2 tool calls (`git grep` and `git show`), 0 files opened, 22,291 tokens as reported in the task notification (a notification total, not output tokens), 5.8 s: partly met (stock listing yes; phenotype and rescue no), the two stock identifiers, and the two places where it is recorded (this note and the IT41-Q04 row), plus the package it did not edit. Limits: one run; the question reuses the words of the record ("reopen condition", "Q-FLY"), so it shows that the pointer is findable by that lexicon, not that a differently worded question would find it; the connection was made by a pointer on an existing row, no index was created.

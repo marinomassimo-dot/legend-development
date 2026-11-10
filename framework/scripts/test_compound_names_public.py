@@ -68,6 +68,14 @@ class PublicNames(unittest.TestCase):
         self.assertEqual(got["V01"]["names_public"][0]["label"], "ifenprodil")
         self.assertEqual(got["V02"]["names_public"], [])     # the id is absent from the ChEMBL release read: another source's item for it is not evidence of identity
 
+    def test_an_unnamed_compound_keeps_a_link_to_its_source_record_but_an_unresolved_id_does_not(self):
+        make(self.dr, [("onfasprodil", "EXACT"), ("stale", "EXACT"), ("two", "EXACT")], [["onfasprodil", "CHEMBL7", ""], ["stale", "CHEMBL8", ""], ["two", "CHEMBL5;CHEMBL6", ""]],
+             [["CHEMBL7", "NO_WIKIDATA_ITEM", "", "", "t", "s", "u"]], level={"stale": "ID_NOT_RESOLVED"})
+        got = self.names()
+        self.assertEqual((got["V01"]["names_public"], got["V01"]["chembl_links"]), ([], ["CHEMBL7"]))     # no name, but a way to the record
+        self.assertEqual((got["V02"]["chembl_links"], got["V03"]["chembl_links"]), ([], []))
+        self.assertNotIn("chembl_links", self.names(full=True)["V01"])
+
     def test_absent_name_file_means_no_names_and_no_error(self):
         make(self.dr, [("ifenprodil", "EXACT")], [["ifenprodil", "CHEMBL1", ""]], [])
         (self.dr / rv.NAME_WD_FILE).unlink()
