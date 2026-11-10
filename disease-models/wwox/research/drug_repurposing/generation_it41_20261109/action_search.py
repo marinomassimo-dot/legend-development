@@ -10,24 +10,28 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[4]
 sys.path.insert(0, str(ROOT / "framework/scripts"))
 import compound_catalog as cc, repurposing_search as rs  # noqa: E402
-CACHE = HERE.parent / "catalog/cache/gtopdb/interactions.csv"
-if not CACHE.exists(): CACHE = Path("/home/desktop/legend-development/disease-models/wwox/research/drug_repurposing/catalog/cache/gtopdb/interactions.csv")
+CACHE = None   # resolved in main() from the pinned cache (LEGEND_CATALOG_CACHE or catalog/cache); an absent or changed file stops the run
 
-def gtopdb_rows():
-    with open(CACHE, encoding="utf-8", newline="") as f:
+def gtopdb_rows(path):
+    with open(path, encoding="utf-8", newline="") as f:
         f.readline(); return list(csv.DictReader(f))
 
 def main():
+    try:
+        path, sha = cc.cache_file("gtopdb/interactions.csv")
+    except cc.CacheInputError as e:
+        print(f"INPUT_NOT_AVAILABLE: {e}", file=sys.stderr); return 3
+    print(f"input gtopdb/interactions.csv {path} sha256 {sha[:16]} (pinned in catalog/cache_manifest.json)")
     rel = list(csv.DictReader(open(HERE / "relations_it41.tsv", encoding="utf-8"), delimiter="\t"))
     es = cc.load(cc.DEFAULT_CATALOG); idx = rs.Index(es)
     gt_to_cat = {}
     for e in es:
         for sr in e.get("source_records", []):
             if sr.get("source") in ("gtopdb", "GtoPdb"): gt_to_cat[str(sr["id"])] = e["id"]
-    G = gtopdb_rows(); out = []
+    G = gtopdb_rows(path); out = []
     for r in rel:
         syms = {s.upper() for s in r["target_symbols"].split(";")}
-        for s in syms:
+        for s in sorted(syms):
             for e, t in idx.chembl_human.get(s, []):
                 ca = t.get("action_type") or ""
                 ng = len(t.get("gene_symbols") or [])
@@ -54,9 +58,9 @@ def main():
         M[(o["relation_id"], o["molecule"])].append(o)
     rows = []
     for (rid, mol), rs_ in sorted(M.items()):
-        rows.append(dict(relation_id=rid, molecule=mol, names=" | ".join(sorted({x["name"] for x in rs_}))[:160], sources=";".join(sorted({x["source"] for x in rs_})), n_source_rows=len(rs_), directions=";".join(sorted({x["direction"] for x in rs_})),
-            species=";".join(sorted({x["species"] for x in rs_})), sites=";".join(sorted({x["site_or_granularity"] for x in rs_ if x["site_or_granularity"]}))[:120]))
+        rows.append(dict(relation_id=rid, molecule=mol, names=" | ".join(sorted({x["name"] for x in rs_})), sources=";".join(sorted({x["source"] for x in rs_})), n_source_rows=len(rs_), directions=";".join(sorted({x["direction"] for x in rs_})),
+            species=";".join(sorted({x["species"] for x in rs_})), sites=";".join(sorted({x["site_or_granularity"] for x in rs_ if x["site_or_granularity"]}))))
     with open(HERE / "molecules.tsv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, list(rows[0].keys()), delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(rows)
     print(len(out), "source rows;", len(rows), "molecule x relation rows")
-if __name__ == "__main__": main()
+if __name__ == "__main__": sys.exit(main() or 0)

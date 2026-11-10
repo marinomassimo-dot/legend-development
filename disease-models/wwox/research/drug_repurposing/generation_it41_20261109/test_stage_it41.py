@@ -61,7 +61,7 @@ class ReaderConsumption(unittest.TestCase):
         j = tsv(HERE / "compound_identity_join.tsv")
         g = [r for r in j if r["name"] == "GYKI 52466"]
         self.assertTrue(g and all(r["label_conflict"] == "yes" for r in g), "the label conflict travels with the name")
-        self.assertTrue(any(r["name"] == "radiprodil" and r["identity_state"] == "NO_IDENTITY_ROW" for r in j), "a name without a row is stated, not dropped")
+        self.assertTrue(any(r["name"] == "Kv7 openers" and r["identity_state"] == "NO_IDENTITY_ROW" for r in j), "a name without a row is stated, not dropped")
 
 class Rendered(unittest.TestCase):
     def test_pages(self):
