@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-10T18:43:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-10T19:05:05Z",
+ "event_id": "FTR-20261110-PPR1225217-95",
+ "evidence_basis": [
+  "Preprint abstract read through the Europe PMC search record (resultType core) for the verification; bioRxiv HTTP 429 (error 1015) on two URLs and Europe PMC fullTextXML HTTP 500 and 404, not retried by another route. Full text, figures and supplement not reached.",
+  "verbatim_locator | proposition: Fmr1-KO more hyperpolarised, reduced Rin; Ba2+ 60 uM depolarises and raises Rin | Abstract | \"Bath application of BaCl 2 (60 μM) depolarized the membrane, increased input resistance\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/potassium_conductances_sci43_20261110/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/potassium_conductances_sci43_20261110/verify/verdicts.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "8297732c222a6d34f0bb46c5e72084f336de99bcc3fd9e9fef76768074cd1563",
+ "source_kind": "abstract",
+ "source_locator": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.64898/2026.02.03.703439&format=json&resultType=core fetched 2026-11-10 with plain curl (Europe PMC record PPR1225217); bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.64898/2026.02.03.703439",
+  "pmid": null
+ },
+ "workflow": "SCI43 blind verification (ORCH-SCI43-20261110), verifier kv-v, staged as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

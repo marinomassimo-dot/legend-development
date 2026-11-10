@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-10T18:43:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-10T19:05:05Z",
+ "event_id": "FTR-20261110-37321992-95",
+ "evidence_basis": [
+  "Oh 2023 (PMC10272139) read from the PMC page: Results on intrinsic excitability, XE991 and retigabine, Methods (electrophysiology, drugs, temperature statement), Fig 4 and Fig 7 legends; images viewed from the PMC open-data bucket: Fig 4 and Fig 7 only; Fig 6 not viewed; supplement not opened.",
+  "verbatim_locator | proposition: retigabine did not alter Rin or rest | Results | \"Retigabine, however, did not alter the resting membrane potential, input resistance, AP threshold, or AP shape-related parameters\"",
+  "verbatim_locator | proposition: Rin from I-V slope, -150 to 10 pA | Methods | \"The input resistance was calculated as the linear slope of current-voltage plots generated from a series of increasing current injection steps\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/potassium_conductances_sci43_20261110/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/potassium_conductances_sci43_20261110/verify/verdicts.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "0e1429bfbde913c2b2ef80ee681fdd58072b0a0d5d3243d2cadb51abe7143a5b",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page https://pmc.ncbi.nlm.nih.gov/articles/PMC10272139/ fetched 2026-11-10 with plain curl; figures from the PMC open-data bucket; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1038/s41467-023-39203-z",
+  "pmid": "37321992"
+ },
+ "workflow": "SCI43 blind verification (ORCH-SCI43-20261110), verifier kv-v, staged as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-10T18:43:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-10T19:05:05Z",
+ "event_id": "FTR-20261110-40595546-95",
+ "evidence_basis": [
+  "Brandalise 2025 (PMC12215560, CC-BY) read from the PMC open-data bucket text file: the Results sections on dendritic depolarising potentials, K2P blockers and mGluR1, Fig 5 and Fig 6 legends, drugs list and animal ages; images not viewed; discussion, patch-seq and in vivo parts not read.",
+  "verbatim_locator | proposition: K2P blockers raise dendritic membrane resistance | Fig 5 legend | \"significantly increase the membrane resistance of the recorded dendrites\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/potassium_conductances_sci43_20261110/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/potassium_conductances_sci43_20261110/verify/verdicts.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "1b453b7b219c72ac2d46625233d9c2d612f3d4dbb1c839b1e77262ec05f5841e",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket https://pmc-oa-opendata.s3.amazonaws.com/PMC12215560.1/PMC12215560.1.txt fetched 2026-11-10 with plain curl; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1038/s41467-025-60835-w",
+  "pmid": "40595546"
+ },
+ "workflow": "SCI43 blind verification (ORCH-SCI43-20261110), verifier kv-v, staged as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

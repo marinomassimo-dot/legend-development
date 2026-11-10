@@ -1,0 +1,22 @@
+# Verification items — SCI43 (K+ conductances), for the blind verifier
+
+Each item is a proposition the choice depends on. Check it directly against the source you open yourself; the locator is where the producer says it is, not proof that it is there. Numbers digit by digit with units, species, region, layer, age, temperature, internal solution.
+
+## A. Producer propositions (full text in `output/decisive.tsv`, rows D01–D16; numbers in `output/shares.tsv`)
+
+D01 and S01, S02 · D02 and S03, S04 · D03 and S09 · D04 and S07 · D05 and T01 (tools.tsv) · D06 and S13 · D07 and S05 · D08 and S16 · D09 and S17, S18 (absence: K2P tool in neocortical pyramidal neurons) · D10 and S19, S20 · D11 and S11 · D12 and models M01, M02, M05 (absence and two models) · D13 and M03 · D14, D15 (junction potential) · D16 (synthesis).
+Sources: preprint 10.64898/2026.02.03.703439 (no PMID); 28100740; 21697446; 16177047; 30911152; 37321992; 28483800; 41233736; 35172157; 18417631 (abstract only); 36311015 (abstract only).
+
+## B. Orchestrator propositions to check (from `output/hypotheses.tsv`, `output/tools_roles.tsv`, `output/outcome_matrix.tsv`, `output/implied_reversal_points.tsv`, `implied_reversal.py`)
+
+Q01 The Wwox numbers used by the arithmetic: Rin 102.88 (WT), 143.26 (HT), 143.03 (KO) MOhm; rest -79.25, -75.51, -73.62 mV; tau 18.55, 18.79, 21.25 ms; sag 1.18, 2.04, 2.57 mV at -200 pA; K-gluconate internal composition and bath K+; ages P13–P17; temperature 35 C; the unit of statistics; that HT versus KO was not tested; that there is no AHP or adaptation measurement; that "the frequency-current slope does not differ once the curves are shifted to one step below rheobase". Source: PMID 34634460 (PMC8609180). Report any number that differs, and any of these statements the paper does not support.
+Q02 The single-conductance arithmetic (script `implied_reversal.py`): derive the formula yourself, recompute every row of `output/implied_reversal_points.tsv` from the printed inputs, and state each assumption that could invalidate it. In particular: is it legitimate to read the Kcnq2 row (order of the two rest values), the Ba2+ row (Rin_new derived from a printed delta), the ZD7288 row (baseline read off a panel), and the developmental rows (different preparation, temperature, junction offset)? Is the statement "the Wwox implied reversal lies in the K+ range and apart from the maturation values" a fair reading of the table, given that no variance is carried? Say what interval the data allow if you propagate the printed SEMs (a rough propagation is enough).
+Q03 The ratio argument behind KH4: "HT carries the full Rin change and rarely bursts, so an intrinsic change alone is not sufficient and a network consequence is disfavoured". Is it logically sound given what 34634460 reports for HT? What does it assume?
+Q04 The statement in KH2 that the published F-I slope argues against a Kv7 deficit: does a Kv7 loss predict a steeper F-I slope in the sources the producer read (S07, S12), and is the Wwox statement about the slope what the paper says?
+Q05 Tool identity claims (`output/identity_tools.tsv`, `output/tools_roles.tsv`): re-run `framework/scripts/compound_identity.py "<name>" --genes KCNQ2,KCNQ3` for XE991, retigabine and azetukalner and state whether the table is correct; and whether the sentence "the symbol lookup does not reach azetukalner" is true (`output/catalogue_by_family.tsv`).
+Q06 Three statements marked UNSOURCED_BACKGROUND in `output/hypotheses.tsv` and `output/tools_roles.tsv`: (a) Ba2+ at tens of micromolar also blocks glial Kir4.1 and can raise extracellular K+; (b) a general anaesthetic acts on more than K2P channels; (c) any statement of this kind the producer or Orchestrator wrote without a source. Find a primary source for (a) and (b) within the budget or say the statement must be removed.
+Q07 The producer's own estimate in D15 (Henderson, "about 12–16 mV", limiting conductivities typed from memory): recompute with a stated method or recommend dropping it.
+
+## C. Absence perimeters
+
+Re-run one independent search for each: (i) a K2P tool (TASK, TREK or TRAAK blocker, opener or knockout) applied to neocortical pyramidal neurons with Rin and rest reported (D09); (ii) a model with Rin up and rest depolarised in cortical pyramidal neurons with the cause resolved by a measured K+ or HCN current (D12). Use search strings different from those in `output/queries.tsv`. Say whether the perimeter was adequate and name anything you find.

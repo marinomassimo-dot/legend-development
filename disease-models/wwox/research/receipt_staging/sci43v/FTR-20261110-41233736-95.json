@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-10T18:43:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-10T19:05:05Z",
+ "event_id": "FTR-20261110-41233736-95",
+ "evidence_basis": [
+  "FHM1/CSD paper (PMC12613364) read from the PMC page for the junction-potential, pipette, bath, age and temperature statements only (Methods and abstract); Results and Discussion not read.",
+  "verbatim_locator | proposition: measured junction potential -10 mV not corrected | Methods | \"not corrected for the measured liquid junction potential of -10 mV; this value should be added to all voltages\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/potassium_conductances_sci43_20261110/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/potassium_conductances_sci43_20261110/verify/verdicts.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "02a98bb6a9f5c0ee9c89a8f24ba37b4ed7ba0d31e6e0ec84c7b9711de534b4c3",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page https://pmc.ncbi.nlm.nih.gov/articles/PMC12613364/ fetched 2026-11-10 with plain curl; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1186/s10194-025-02139-4",
+  "pmid": "41233736"
+ },
+ "workflow": "SCI43 blind verification (ORCH-SCI43-20261110), verifier kv-v, staged as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

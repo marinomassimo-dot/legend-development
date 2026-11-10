@@ -1,0 +1,11 @@
+event_id	pmid	evidence_depth	prior_receipt	validated_ok
+FTR-20261110-28100740-94	28100740	partial_fulltext_read	null	yes
+FTR-20261110-21697446-94	21697446	partial_fulltext_read	null	yes
+FTR-20261110-16177047-94	16177047	partial_fulltext_read	null	yes
+FTR-20261110-30911152-94	30911152	partial_fulltext_read	null	yes
+FTR-20261110-37321992-94	37321992	partial_fulltext_read	null	yes
+FTR-20261110-41233736-94	41233736	partial_fulltext_read	null	yes
+FTR-20261110-35172157-94	35172157	partial_fulltext_read	null	yes
+FTR-20261110-28483800-94	28483800	partial_fulltext_read	null	yes
+FTR-20261110-18417631-94	18417631	abstract_only	null	yes
+FTR-20261110-PPR1225217-94	none (DOI 10.64898/2026.02.03.703439, preprint)	partial_fulltext_read	null	yes

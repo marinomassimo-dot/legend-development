@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-10T18:43:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-10T19:05:05Z",
+ "event_id": "FTR-20261110-30911152-95",
+ "evidence_basis": [
+  "Kroon 2019 (PMC6433913) read from the PMC page: Methods (electrophysiology), Results on intrinsic properties, Fig 3-4 legends, Table 2 (every number of the layer 3 and layer 5 rows compared); no figure image viewed; discussion, morphology and synaptic parts not read.",
+  "verbatim_locator | proposition: Rin as slope of the I-V of negative steps | Methods | \"Input resistance was calculated as the linear slope of the current-voltage (I-V) relationship of the last 200 ms of all negative stimuli\"",
+  "verbatim_locator | proposition: recording temperature | Methods | \"heated to 31 ± 1 °C\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/potassium_conductances_sci43_20261110/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/potassium_conductances_sci43_20261110/verify/verdicts.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "fee2049efe53fe5008cbd39f0005c8e1f582ddc27d8c21b1e39ab292aaf92c48",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page https://pmc.ncbi.nlm.nih.gov/articles/PMC6433913/ fetched 2026-11-10 with plain curl; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1038/s41598-019-41661-9",
+  "pmid": "30911152"
+ },
+ "workflow": "SCI43 blind verification (ORCH-SCI43-20261110), verifier kv-v, staged as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
