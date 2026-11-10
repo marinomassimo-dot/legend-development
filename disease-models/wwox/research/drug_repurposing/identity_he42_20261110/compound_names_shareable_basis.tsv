@@ -1,0 +1,18 @@
+item_id	name	identity_state	catalogue_name_source	class	shareable_single_file
+V01	d-APV	NOT_FOUND_BY_NAME		none found	withheld from the single shareable file
+V02	ifenprodil	NAME_EXACT	ChEMBL pref_name|DGIdb drug_name	B (ChEMBL CC BY-SA 3.0)	withheld from the single shareable file
+V02	Ro 25-6981	SYNONYM_EXACT	DGIdb drug_name	B/C (DGIdb drug_name; upstream terms per row)	withheld from the single shareable file
+V03	GYKI 53655	DECLARED	DGIdb drug_name	B/C (DGIdb drug_name; upstream terms per row)	withheld from the single shareable file
+V03	GYKI 52466	SYNONYM_EXACT	DGIdb drug_name	B/C (DGIdb drug_name; upstream terms per row)	withheld from the single shareable file
+V03	NBQX	NAME_EXACT	DGIdb drug_name	B/C (DGIdb drug_name; upstream terms per row)	withheld from the single shareable file
+V03	perampanel	NAME_EXACT	ChEMBL pref_name|DGIdb drug_name	B (ChEMBL CC BY-SA 3.0)	withheld from the single shareable file
+V04	ZD7288	NAME_EXACT	DGIdb drug_name	B/C (DGIdb drug_name; upstream terms per row)	withheld from the single shareable file
+V04	ivabradine	NAME_EXACT	ChEMBL pref_name|DGIdb drug_name	B (ChEMBL CC BY-SA 3.0)	withheld from the single shareable file
+V05	radiprodil	NAME_EXACT	ChEMBL pref_name	B (ChEMBL CC BY-SA 3.0)	withheld from the single shareable file
+V06	onfasprodil	NAME_EXACT	ChEMBL pref_name|DGIdb drug_name	B (ChEMBL CC BY-SA 3.0)	withheld from the single shareable file
+V07	NP10679	SYNONYM_EXACT	ChEMBL pref_name	B (ChEMBL CC BY-SA 3.0)	withheld from the single shareable file
+V08	traxoprodil	NAME_EXACT	ChEMBL pref_name|DGIdb drug_name	B (ChEMBL CC BY-SA 3.0)	withheld from the single shareable file
+V08	rislenemdaz	NAME_EXACT	ChEMBL pref_name|DGIdb drug_name	B (ChEMBL CC BY-SA 3.0)	withheld from the single shareable file
+V08	EVT-101	NAME_EXACT	ChEMBL pref_name|DGIdb drug_name	B (ChEMBL CC BY-SA 3.0)	withheld from the single shareable file
+V09	DQP-1105	NOT_FOUND_BY_NAME		none found	withheld from the single shareable file
+V10	carbenoxolone	NAME_EXACT	ChEMBL pref_name|DGIdb drug_name	B (ChEMBL CC BY-SA 3.0)	withheld from the single shareable file

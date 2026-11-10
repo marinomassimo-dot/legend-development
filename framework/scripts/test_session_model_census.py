@@ -81,6 +81,23 @@ class Census(unittest.TestCase):
             self.assertIn("not a share of any plan", text)
             self.assertEqual(smc.main([str(first), str(second)]), 1)
 
+    def test_since_slices_a_long_session_and_reports_where_the_reread_cost_sits(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            path = Path(td) / "long.jsonl"
+            ctx = [(10, 100), (10, 200), (900, 0), (900, 0), (950, 0), (300, 0)]   # (cache_read, cache_creation) per turn
+            rows = [{"type": "assistant", "timestamp": f"2026-11-06T00:00:{i:02d}Z",
+                     "message": {"id": f"m{i}", "model": "claude-sonnet-5-5",
+                                 "usage": {"input_tokens": 0, "cache_creation_input_tokens": cc, "cache_read_input_tokens": cr, "output_tokens": 1}}}
+                    for i, (cr, cc) in enumerate(ctx)]
+            path.write_text("\n".join(json.dumps(r) for r in rows), encoding="utf-8")
+            whole = smc.census(path)
+            part = smc.census(path, "2026-11-06T00:00:02Z")
+            self.assertEqual((whole["turns"], part["turns"]), (6, 4))
+            self.assertEqual(part["first_turn_context"], 900)
+            self.assertEqual(part["context_drops"], 1)                 # 950 -> 300
+            self.assertEqual(part["start_context_share_of_cache_read"], round(900 * 4 / 3050, 2))
+            self.assertIn("start context re-read", smc.render([part]))
+
     def test_transcript_without_sibling_meta_is_still_read(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             path = write_run(Path(td), "agent-e", ["claude-sonnet-5-5"], asked=None, effort=None)

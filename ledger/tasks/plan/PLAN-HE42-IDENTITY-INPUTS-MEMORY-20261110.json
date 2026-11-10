@@ -1,0 +1,120 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "PLAN-HE42-IDENTITY-INPUTS-MEMORY-20261110",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "plan",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "HE42 Harness: reliable identity links, reproducible inputs, sustainable context cost, Dream with consumers, shareable-view example.",
+ "assigned_on": "2026-11-10",
+ "worktree": ".claude/worktrees/he42",
+ "branch": "he42-task",
+ "CURRENT_STATE": "IN_PROGRESS",
+ "CHECKPOINT": {
+  "last_verified_result": "6e179de7 committed on he42-task; battery running on that SHA (PID 971715, box /tmp/he42bat4_9s6ciy); not yet on main",
+  "first_incomplete_work": "battery verdict, then second commit (census, delegation_budget, notes, record), gate, safe_push, SHA to the Orchestrator",
+  "active_processes": "battery PID 971715",
+  "real_dependencies": "Orchestrator merges main into task/it42 after the push and adopts join_names in consume_reader.py",
+  "next_executable_step": "wait on PID 971715 with process_wait.py, copy battery.log out of the box"
+ },
+ "AUTHORISED_QUEUE_20261110": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_H0": {
+   "order": 1,
+   "title": "Baseline, SHA, coordination with IT42",
+   "steps": [
+    {
+     "step": "Baseline f7305230; worktree he42; IT42 boundary agreed by message",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "commit 6e179de7 base"
+    }
+   ]
+  },
+  "OBJ_H1": {
+   "order": 2,
+   "title": "Identity links: fallback behaviour on hard cases",
+   "steps": [
+    {
+     "step": "Substring fallback reproduced as a latent defect; join_names + fixtures; onfasprodil/NP10679 rows; 28 identity rows",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "identity_he42_20261110/README.md; commit 6e179de7"
+    }
+   ]
+  },
+  "OBJ_H2": {
+   "order": 3,
+   "title": "Reproducible inputs",
+   "steps": [
+    {
+     "step": "Pinned cache input, hash-seed order fix, truncations measured and removed",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "commit 6e179de7"
+    }
+   ]
+  },
+  "OBJ_H3": {
+   "order": 4,
+   "title": "Coordinator cost diagnosis",
+   "steps": [
+    {
+     "step": "Census --since, decomposition, paragraph in delegation_budget.md, four-question recall comparison",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "identity_he42_20261110/README.md section 5"
+    }
+   ]
+  },
+  "OBJ_H4": {
+   "order": 5,
+   "title": "Dream",
+   "steps": [
+    {
+     "step": "Two kept connections, one rejected, with controls",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "dream6_20261110/README.md"
+    }
+   ]
+  },
+  "OBJ_H5": {
+   "order": 6,
+   "title": "Shareable view",
+   "steps": [
+    {
+     "step": "Terms read; 17 names, 0 class A; condition stated",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "identity_he42_20261110/compound_names_shareable_basis.tsv"
+    }
+   ]
+  },
+  "OBJ_H6": {
+   "order": 7,
+   "title": "Durability without bootstrap growth",
+   "steps": [
+    {
+     "step": "Component, fixtures, one paragraph in an existing protocol; no new bootstrap document",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "delegation_budget.md"
+    }
+   ]
+  },
+  "OBJ_H7": {
+   "order": 8,
+   "title": "Verification, integration, closure",
+   "steps": [
+    {
+     "step": "Battery on 6e179de7 then second commit, gate, push, tell Orchestrator the SHA",
+     "status": "IN_PROGRESS",
+     "owner": "plan",
+     "evidence": "battery PID 971715 on 6e179de7"
+    }
+   ]
+  }
+ }
+}
