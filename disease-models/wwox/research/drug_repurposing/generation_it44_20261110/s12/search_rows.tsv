@@ -1,0 +1,8 @@
+relation_id	source	molecule	name	catalogue_id	species	action	direction	site_or_granularity	primary_target	selectivity_comment	affinity	assay_or_note	pubmed	target_symbol	labelled_form	qualification	reason	unknown_fields
+S12	GtoPdb interaction	GTOPDB:2344	Ba<sup>2+</sup>		Rat	Channel blocker/Antagonist	down		false	Not Determined	- (=)		10856114|7608203|12456399	Kcnj10		EXCLUDED	direction_opposite	
+S12	GtoPdb interaction	GTOPDB:2356	Cs<sup>+</sup>		Rat	Channel blocker/Antagonist	down		false	Not Determined	- (=)		7608203	Kcnj10		EXCLUDED	direction_opposite	
+S12	GtoPdb interaction	GTOPDB:2404	nortriptyline		Human	Channel blocker/Antagonist	down		false	Not Determined	pKd (=)		17071817	KCNJ10		EXCLUDED	direction_opposite	
+S12	GtoPdb interaction	CAT:DGIDB:f13709431732	VU0134992	CAT:DGIDB:f13709431732	Human	Channel blocker/Antagonist	down		false	Not Determined	6.010000228881836 pIC50 (=)	Determined using whole-cell patch-clamp electrophysiology	29895592	KCNJ10		EXCLUDED	direction_opposite	
+S12	GtoPdb interaction	GTOPDB:2346	H<sup>+</sup>		Rat	Gating inhibitor/Antagonist	down		false	Not Determined	pEC50 (=)		11306656|10764726	Kcnj10		EXCLUDED	direction_opposite	
+S12	GtoPdb interaction	GTOPDB:2344	Ba<sup>2+</sup>		Rat	Channel blocker/Antagonist	down		false	Not Determined | K<sub>ir</sub>5.1 expressed with PSD-95	- (=)		11988170	Kcnj16		EXCLUDED	direction_opposite	
+S12	GtoPdb interaction	GTOPDB:2356	Cs<sup>+</sup>		Rat	Channel blocker/Antagonist	down		false		-		7874445	Kcnj16		EXCLUDED	direction_opposite	

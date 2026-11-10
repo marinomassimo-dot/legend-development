@@ -1,0 +1,2 @@
+relation_id	case	action_label	target_symbols	wanted_actions	context	hypothesised_benefit	status	wanted_direction	site_policy	subunit_in	subunit_out
+S12	IT44-second-case	astrocytic K+ buffering: enhancing Kir4.1-type uptake	KCNJ10;KCNJ16	Activator;Agonist;Positive;Opener;Activation	slice network with intact synapses; astrocyte compartment; extracellular K+ unmeasured	lower extracellular K+ during bursts (IPOTESI; rivals: neuronal intrinsic change, loss of inhibition, recording condition)	framed in relation_s12_frame_it44.md before the search	KCNJ10:up;KCNJ16:up	any		

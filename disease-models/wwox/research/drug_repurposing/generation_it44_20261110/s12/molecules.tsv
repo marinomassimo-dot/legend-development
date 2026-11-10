@@ -1,0 +1,6 @@
+relation_id	molecule	names	sources	n_source_rows	directions	species	sites
+S12	CAT:DGIDB:f13709431732	VU0134992	GtoPdb interaction	1	down	Human	
+S12	GTOPDB:2344	Ba<sup>2+</sup>	GtoPdb interaction	2	down	Rat	
+S12	GTOPDB:2346	H<sup>+</sup>	GtoPdb interaction	1	down	Rat	
+S12	GTOPDB:2356	Cs<sup>+</sup>	GtoPdb interaction	2	down	Rat	
+S12	GTOPDB:2404	nortriptyline	GtoPdb interaction	1	down	Human	
