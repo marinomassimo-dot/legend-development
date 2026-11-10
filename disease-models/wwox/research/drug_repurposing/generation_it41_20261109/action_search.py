@@ -9,7 +9,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[4]
 sys.path.insert(0, str(ROOT / "framework/scripts"))
-import compound_catalog as cc, repurposing_search as rs  # noqa: E402
+import compound_catalog as cc, repurposing_search as rs, measurement as ms  # noqa: E402
 CACHE = None   # resolved in main() from the pinned cache (LEGEND_CATALOG_CACHE or catalog/cache); an absent or changed file stops the run
 
 def gtopdb_rows(path):
@@ -26,8 +26,17 @@ def wanted_direction(rel, symbol):
     return w
 
 def same_datum(p_value, nm_value, tol=0.05):
-    """True when a pIC50-type value and a nanomolar value are one measurement written two ways (nM = 10^(9 - p)). Potency and its logarithmic transform are one datum and are counted once."""
-    return abs(10 ** (9 - float(p_value)) - float(nm_value)) <= tol * float(nm_value)
+    """True when a pIC50-type value and a nanomolar value are one measurement written two ways. Potency and its logarithmic transform are one datum and are counted once.
+    The conversion is `measurement.measure` (HE44): one convention, not a second formula here."""
+    return abs(ms.measure("pIC50", p_value)["converted_nM"] - float(nm_value)) <= tol * float(nm_value)
+
+def affinity_columns(g):
+    """The registry row's quantity as it was reported (HE44 H2): the log value stays in `affinity` as before; the original quantity type, the registry's own nanomolar column with its relation and range, and the
+    internal agreement of the two are kept beside it. `affinity_check` AGREE means the two columns of the ROW agree with each other; it says nothing about the primary source (a unit slip in both columns is invisible to it)."""
+    v = ms.from_gtopdb(g)
+    nm = g["Original Affinity Median nm"]; lo, hi = g["Original Affinity Low nm"], g["Original Affinity High nm"]
+    nm_txt = (" ".join(x for x in (g["Original Affinity Relation"] if nm else "", nm, "nM" if nm else "") if x) + (f" [{lo}-{hi}]" if lo or hi else "")).strip()
+    return dict(affinity_type=g["Original Affinity Units"] if g["Original Affinity Units"] != "-" else "", affinity_nM_column=nm_txt, affinity_check=v["internal"]["state"])
 
 _NAME_CACHE = {}
 def by_name_parent(es, name):
@@ -106,11 +115,13 @@ def main():
             out.append(dict(relation_id=r["relation_id"], source="GtoPdb interaction", molecule=(par or "GTOPDB:" + g["Ligand ID"]), name=g["Ligand"], catalogue_id=cid, species=g["Target Species"], action=act,
                 direction=("down" if re.search(r"inverse agonist|antagon|inhibit|block|negative", low) else "up" if re.search(r"agonist|activat|positive|potentiat", low) else "unclear"),
                 site_or_granularity=g["Receptor Site"] or "", primary_target=g["Primary Target"], selectivity_comment=g["Selectivity"] + (" | " + g["Action comment"] if g["Action comment"] else ""),
-                affinity=" ".join(x for x in (g["Affinity Median"], g["Affinity Units"], "(" + g["Original Affinity Relation"] + ")" if g["Original Affinity Relation"] else "") if x), assay_or_note=g["Assay Description"], pubmed=g["PubMed ID"], target_symbol=g["Target Gene Symbol"]))
+                affinity=" ".join(x for x in (g["Affinity Median"], g["Affinity Units"], "(" + g["Original Affinity Relation"] + ")" if g["Original Affinity Relation"] else "") if x), assay_or_note=g["Assay Description"], pubmed=g["PubMed ID"], target_symbol=g["Target Gene Symbol"], **affinity_columns(g)))
     for o in out: o["labelled_form"] = "yes" if re.match(r"^\[?<sup>|^\[<sup>", o["name"]) or "[<sup>" in o["name"] else ""
     DRm = HERE.parent; ident = load_identity(DRm); relmap = {r["relation_id"]: r for r in rel}
     for o in out:
         o["qualification"], o["reason"], o["unknown_fields"] = qualify(o, relmap[o["relation_id"]], ident)
+    for o in out:
+        for k in ("affinity_type", "affinity_nM_column", "affinity_check"): o.setdefault(k, "")       # mechanism rows carry no quantity; the columns are appended after the existing ones
     F = list(out[0].keys())
     with open(OUTD / "search_rows.tsv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, F, delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(out)
