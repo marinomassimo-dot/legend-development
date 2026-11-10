@@ -38,6 +38,17 @@ class CompoundView(unittest.TestCase):
         self.assertNotEqual(len(full), 5)
         for c in full: self.assertNotRegex(" ".join(c[k] for k in rv.COMPOUND_TEXT), r"(?i)most effective|best (drug|compound)|recommend")
 
+class ReaderConsumption(unittest.TestCase):
+    def test_comparison_rows_and_identity_join_are_produced_by_calling_the_reader(self):
+        import consume_reader as cr
+        cr.main()
+        rows = tsv(HERE / "comparison_rows_it41.tsv")
+        self.assertTrue({"C1", "C2", "C3", "H_total_gain"} <= {r["key"] for r in rows})
+        j = tsv(HERE / "compound_identity_join.tsv")
+        g = [r for r in j if r["name"] == "GYKI 52466"]
+        self.assertTrue(g and all(r["label_conflict"] == "yes" for r in g), "the label conflict travels with the name")
+        self.assertTrue(any(r["name"] == "radiprodil" and r["identity_state"] == "NO_IDENTITY_ROW" for r in j), "a name without a row is stated, not dropped")
+
 class Rendered(unittest.TestCase):
     def test_pages(self):
         n = 0
