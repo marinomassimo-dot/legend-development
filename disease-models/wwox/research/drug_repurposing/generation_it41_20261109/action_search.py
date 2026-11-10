@@ -26,6 +26,10 @@ def wanted_direction(rel, symbol):
         return d.get(symbol.upper(), "")
     return w
 
+def same_datum(p_value, nm_value, tol=0.05):
+    """True when a pIC50-type value and a nanomolar value are one measurement written two ways (nM = 10^(9 - p)). Potency and its logarithmic transform are one datum and are counted once."""
+    return abs(10 ** (9 - float(p_value)) - float(nm_value)) <= tol * float(nm_value)
+
 def name_key(n):
     """Separator- and case-insensitive key of a compound name (GYKI 53784, GYKI-53784 and Gyki53784 are one key). It joins labels; it never decides identity."""
     return re.sub(r"[^a-z0-9]", "", (n or "").lower())
