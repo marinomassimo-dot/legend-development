@@ -68,7 +68,7 @@ class Rendered(unittest.TestCase):
         n = 0
         for p in sorted((DR / "view").glob("index*.html")):
             h = p.read_text(encoding="utf-8"); n += 1
-            self.assertEqual(len(re.findall(r'class="cv-i ', h)), 10, p.name)
+            self.assertEqual(len(re.findall(r'class="cv-i ', h)), len(rv.compound_view(DR, False)), p.name)
             names = len(re.findall(r'class="cv-name"', h))
             self.assertEqual(names > 0, not p.name.startswith("index_shareable"), p.name)
         self.assertEqual(n, 10)
