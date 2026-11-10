@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-10T23:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-10T23:47:00Z",
+ "event_id": "FTR-20261110-36759610-97",
+ "evidence_basis": [
+  "Results on Ldha deletion, astrocyte and neuron knockdown, MCT2, lactate and BK, electrophysiology Methods and the Fig 2, 4, 6, 7 legends read; Figure 6 image viewed; Source Data workbook read for Figure 2, 6 and 7 values (fAHP means 8.30 and 6.02 mV); supplementary figures and Discussion not read.",
+  "verbatim_locator | proposition: the GFAP-Cre line acts in neural progenitors, not only astrocytes | Results | \"whose activity is present in neural progenitor cells, which give rise to neurons and astrocytes\"",
+  "verbatim_locator | proposition: membrane potential and input resistance unchanged | Results | \"The membrane potential and input resistance were not changed by Ldha deletion\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v2/audit.md",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v2/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v2/queries_verifier.tsv"
+ ],
+ "prior_receipt": "FTR-20261110-36759610-96",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket text, figure image and Source Data workbook of PMC9911790 fetched with plain curl on 2026-11-10; bytes not saved",
+ "study_id": {
+  "doi": "10.1038/s41467-023-36209-5",
+  "pmid": "36759610"
+ },
+ "workflow": "SCI44 package A blind verifier V2 pk-w (pdh_pdk_sci44_20261110). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
