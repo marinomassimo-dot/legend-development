@@ -15,10 +15,14 @@ Two answers, never merged:
              they are in the catalogue, and a `label_conflict` when a declaration says the label sits on two structures.
   target     per expected gene, the highest evidence LEVEL that was read: CURATED_MECHANISM (ChEMBL mechanism table),
              SOURCE_INTERACTION (DGIdb/GtoPdb row in the catalogue), MEASURED_ACTIVITY_HUMAN, MEASURED_ACTIVITY_OTHER_SPECIES,
-             or one of EMPTY_RESULT (read, nothing under the filters) / NOT_READ (no ChEMBL id to read) /
-             READ_ERROR (the query failed). Selectivity is always NOT_ASSESSED, and the other genes measured are listed.
+             or one of EMPTY_RESULT (read completely, nothing under the filters) / NOT_READ (no ChEMBL id to read) /
+             READ_ERROR (the query failed) / ID_NOT_RESOLVED (a ChEMBL id of the record does not exist in the release read: stale,
+             merged or mistyped; that says nothing about the compound) / READ_INCOMPLETE (the adapter states the answer is TRUNCATED, PARTIAL_ERROR or
+             had its target genes missing, and nothing for this gene was found in the part read). Selectivity is always
+             NOT_ASSESSED, and the other genes measured are listed.
 
-Empty, not read and error are three states; none is evidence against a compound.
+Empty, not read, incomplete, unresolved-id and error are five states; none is evidence against a compound. The adapter already says
+how complete an activity answer is (`coverage`); this module only refuses to turn an incomplete one into EMPTY_RESULT.
 
   python3 framework/scripts/compound_identity.py "Ro 25-6981" --genes GRIN2B
   python3 framework/scripts/compound_identity.py ifenprodil --genes GRIN2B --offline
@@ -39,6 +43,8 @@ import compound_catalog as cc  # noqa: E402
 CAT_DIR = cc.DEFAULT_CATALOG.parent
 DECLARATIONS = CAT_DIR / "tool_identity_declarations.tsv"
 RECON = CAT_DIR / "ligand_reconciliation.tsv"
+READ_STATES = ("MATCH_FOUND", "NO_MATCH_FOUND")
+INCOMPLETE_COVERAGE = ("TRUNCATED", "PARTIAL_ERROR", "COMPLETE_TARGET_GENES_MISSING")
 LEVELS = ("CURATED_MECHANISM", "SOURCE_INTERACTION", "MEASURED_ACTIVITY_HUMAN", "MEASURED_ACTIVITY_OTHER_SPECIES")
 
 
@@ -137,13 +143,18 @@ def target_evidence(res: dict, genes: list[str], es: list[dict], chembl_query=No
                 other.update(syms)
     state = "NOT_READ" if chembl_query is None or not ids else "READ"
     errors = 0
+    incomplete, unresolved = [], []
     for cid in ids if chembl_query else []:
         mech = chembl_query({"drug": res["query"], "molecule_id": cid})
         act = chembl_query({"molecule": cid})
         read.append({"chembl_id": cid, "mechanism_status": mech.get("status"), "activity_status": act.get("status"),
                      "activity_coverage": act.get("coverage"), "activity_rows": act.get("total_count")})
-        if mech.get("status") == "QUERY_ERROR" or act.get("status") == "QUERY_ERROR":
-            errors += 1
+        if mech.get("status") not in READ_STATES or act.get("status") not in READ_STATES:
+            errors += 1   # QUERY_ERROR, but also an empty answer or a state the adapter does not define: unread, never "nothing found"
+        if mech.get("identity_basis") == "declared_chembl_id_not_found":
+            unresolved.append(cid)
+        if act.get("coverage") in INCOMPLETE_COVERAGE:
+            incomplete.append(f"{cid}: {act['coverage']} ({act.get('retrieved', '?')} of {act.get('total_count', '?')} activity rows read)")
         for h in mech.get("hits") or []:
             syms = {s.upper() for s in (h.get("target_gene_symbols") or [])}
             for g in want:
@@ -164,12 +175,18 @@ def target_evidence(res: dict, genes: list[str], es: list[dict], chembl_query=No
                 other.update(syms)
     if state == "READ" and errors and not all(level.values()):
         state = "READ_ERROR"
+    elif state == "READ" and unresolved and not all(level.values()):
+        state = "ID_NOT_RESOLVED"
+    elif state == "READ" and incomplete and not all(level.values()):
+        state = "READ_INCOMPLETE"
     per_gene = {}
     for g in want:
         if level[g]:
             per_gene[g] = {"level": level[g], "n_rows": len(detail[g]), "rows": detail[g][:6]}
         else:
-            per_gene[g] = {"level": {"READ": "EMPTY_RESULT", "NOT_READ": "NOT_READ", "READ_ERROR": "READ_ERROR"}[state], "n_rows": 0, "rows": []}
+            per_gene[g] = {"level": {"READ": "EMPTY_RESULT", "NOT_READ": "NOT_READ", "READ_ERROR": "READ_ERROR", "READ_INCOMPLETE": "READ_INCOMPLETE",
+                                                "ID_NOT_RESOLVED": "ID_NOT_RESOLVED"}[state],
+                           "n_rows": 0, "rows": ([f"{c}: id not in this ChEMBL release" for c in unresolved] if state == "ID_NOT_RESOLVED" else incomplete[:6] if state == "READ_INCOMPLETE" else [])}
     return {"expected_genes": want, "per_gene": per_gene, "chembl_read": read, "selectivity": "NOT_ASSESSED", "unattributed_source_rows": unattributed,
             "other_genes_seen": dict(other.most_common(8)),
             "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"}
@@ -188,16 +205,52 @@ def _best(cur, new):
 import re  # noqa: E402
 
 _SPLIT = re.compile(r"\s*(?:/|\+|&|,|\band\b|\bvs\.?\b|\bversus\b)\s*", re.I)
-_PREFIX = re.compile(r"^\s*(?:\((?:[RS]|[+\-\u00b1]|rac|[dl]|\d+[RS])\)-?|\[\d*[A-Za-z]{1,2}\]\s*|rac-|[RS]-)\s*", re.I)
+_PREFIX = re.compile(r"^\s*(?:\((?:RS|[RS]|[+\-±]|[+]/[\-]|rac|[dl]|\d+[RS])\)-?|\[\d*[A-Za-z]{1,2}\]\s*|rac-|[RS]-)\s*", re.I)
 _SUFFIX = re.compile(r"[\s\-]+(?:hydrochloride|hydrobromide|maleate|tartrate|mesylate|besylate|citrate|sulfate|phosphate|"
-                     r"disodium|dipotassium|sodium|potassium|hcl|hydrate|monohydrate|salt|d\d{1,2})\s*$", re.I)
+                     r"dihydrochloride|dimesylate|disodium|dipotassium|sodium|potassium|hcl|hydrate|monohydrate|salt|d\d{1,2})\s*$", re.I)
 
 
-_COMMENT = re.compile(r"\s*\((?!(?:[RS]|[+\-\u00b1]|rac|[dl]|\d+[RS])\))[^)]*\)", re.I)
+_COMMENT = re.compile(r"\s*\((?!(?:RS|[RS]|[+\-±]|[+]/[\-]|rac|[dl]|\d+[RS])\))[^()]*\)\s*$", re.I)   # a trailing comment only: a parenthesis inside a chemical name is nomenclature
 
 
 def _key(s: str) -> str:
     return re.sub(r"\s+", " ", s.strip().lower())
+
+
+def _split_top(name: str) -> list[str]:
+    """Split a cell at "/", "+", "&", ",", "and", "vs" outside parentheses and brackets only: "(+)-X", "(+/-)-X" and "N-(2,4-dimethyl)Y" are one name."""
+    masked, depth = [], 0
+    for ch in name:
+        if ch in "([":
+            depth += 1
+        elif ch in ")]":
+            depth = max(0, depth - 1)
+        masked.append("\x00" if depth and ch not in "([)]" else ch)
+    masked = "".join(masked)
+    out, last = [], 0
+    for m in _SPLIT.finditer(masked):
+        out.append(name[last:m.start()])
+        last = m.end()
+    out.append(name[last:])
+    return out
+
+
+def parent_form(name: str) -> dict:
+    """A name split into what identifies the parent and what qualifies it, for a consumer that must count or group molecules without writing its own normalizer.
+    `key` is the parent name with case, spaces and punctuation removed; a salt or hydrate suffix is dropped (same parent) and returned as `salt`; a stereo, isotope or
+    racemate prefix is NOT dropped from the identity: it is returned as `stereo_isotope` so (key, stereo_isotope) is the grouping unit and (R)-X and (S)-X stay two molecules."""
+    text = _COMMENT.sub("", name)
+    m = _PREFIX.match(text)
+    prefix = m.group(0).strip(" -").lower() if m else ""
+    text = text[m.end():] if m else text
+    salts = []
+    while True:
+        m = _SUFFIX.search(text)
+        if not m:
+            break
+        salts.append(m.group(0).strip(" -").lower())
+        text = text[:m.start()]
+    return {"key": re.sub(r"[^a-z0-9]", "", text.lower()), "stereo_isotope": re.sub(r"[^a-z0-9+\-\u00b1]", "", prefix), "salt": " ".join(reversed(salts))}
 
 
 def join_names(name: str, table_keys) -> list[dict]:
@@ -205,11 +258,11 @@ def join_names(name: str, table_keys) -> list[dict]:
     for EXACT and QUALIFIED; PROPOSED_ONLY carries `proposed_keys` and attaches nothing."""
     keys = {_key(k): k for k in table_keys}
     name = _COMMENT.sub("", name).strip() or name      # "(a different structure, not ...)" is a comment; "(R)-" stays a qualifier
-    parts = [p for p in _SPLIT.split(name) if p.strip()] if _key(name) not in keys else [name]
+    parts = [p for p in _split_top(name) if p.strip()] if _key(name) not in keys else [name]
     multi = len(parts) > 1
     out = []
     for part in parts or [name]:
-        part = re.sub(r"\s*\(.*?\)\s*$", "", part).strip() or part   # trailing parenthetical: a comment, not a name
+        part = _COMMENT.sub("", part).strip() or part   # trailing parenthetical: a comment, not a name
         k = _key(part)
         link, hit, qual = None, None, []
         if k in keys:
