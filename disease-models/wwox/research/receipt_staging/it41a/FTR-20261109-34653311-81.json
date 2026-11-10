@@ -17,8 +17,8 @@
  "event_id": "FTR-20261109-34653311-81",
  "evidence_basis": [
   "Abstract, Introduction, Methods 2.1-2.2, Results (10 uM and 1 uM perampanel), Discussion and figure captions read as text; no figure image viewed; supplement and references not read. Read only for the perampanel slice precedent (concentration, medium, readout, absence of block verification).",
-  "verbatim_locator | proposition: 10 uM perampanel abolished ictal events | Results | \"Upon application of perampanel (10 µM), ictal events were abolished\"",
-  "verbatim_locator | proposition: 1 uM tested | Results | \"we next tested the drug at a lower concentration (1 µM)\""
+  "verbatim_locator | proposition: 10 uM perampanel abolished ictal events | Results | \"Upon application of perampanel (10 \u00b5M), ictal events were abolished\"",
+  "verbatim_locator | proposition: 1 uM tested | Results | \"we next tested the drug at a lower concentration (1 \u00b5M)\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

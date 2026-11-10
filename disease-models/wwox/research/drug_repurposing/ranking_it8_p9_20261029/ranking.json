@@ -6065,7 +6065,7 @@
     "source_artefacts.tsv": "efd24d2cf8eb3fdb",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
-   "receipt_ledger_lines": 1532
+   "receipt_ledger_lines": 1538
   },
   "inventory": {
    "all_families_by_access_category": {
@@ -13390,7 +13390,7 @@
      "wwox_assertions": 1
     },
     "X_counter_evidence": {
-     "need_level_counter_items": 14,
+     "need_level_counter_items": 15,
      "need_level_counter_items_note": "over 1 linked need(s); items of the need record, not of the intervention",
      "opposed_action_needs": [],
      "outside_wwox_null_or_harm": 6,
@@ -13430,7 +13430,7 @@
     "T1_cards": "567af33d373d3063",
     "T2_pertinence": "4744af9e5e721d31",
     "T3_receipts": "4d5a1fae91cf9a7b",
-    "T4_needs": "a6fb27aabf244055",
+    "T4_needs": "a9f2ecba72fedb1c",
     "T5_pharmacology": "83e16cf80f0d93c6",
     "T6_identity": "d72dab466f7f0934"
    },
@@ -15431,7 +15431,7 @@
      "wwox_assertions": 0
     },
     "X_counter_evidence": {
-     "need_level_counter_items": 14,
+     "need_level_counter_items": 15,
      "need_level_counter_items_note": "over 1 linked need(s); items of the need record, not of the intervention",
      "opposed_action_needs": [],
      "outside_wwox_null_or_harm": 0,
@@ -15459,7 +15459,7 @@
     "T1_cards": "31e63eae733b7b80",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "63a645656f9a1189",
-    "T4_needs": "a6fb27aabf244055",
+    "T4_needs": "a9f2ecba72fedb1c",
     "T5_pharmacology": "219331179cc8894b",
     "T6_identity": "bafc117d5dd84908"
    },

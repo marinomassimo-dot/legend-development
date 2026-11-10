@@ -17,8 +17,8 @@
  "event_id": "FTR-20261109-27838344-81",
  "evidence_basis": [
   "Abstract, Introduction, Methods, Results 3.1-3.6, Discussion 4.1-4.7 and all figure captions read; the GYKI-53655 dose-response and Up-state figure (file gr5) viewed as an image; the other seven figures captions only; tables and references not read.",
-  "verbatim_locator | proposition: GYKI-53655 block fraction in slice | Results 3.4 | \"GYKI-53655 (10 μM) blocked more than 80% of the synaptically evoked peak inward current in mEC layer III neurons (IC50, 2.5 μM\"",
-  "verbatim_locator | proposition: BC evoked Up states survive GYKI-53655 | Results 3.4 | \"not altered by 10 μM GYKI-53655 (control, 0.81 ± 0.1 s vs GYKI, 0.86 ± 0.14 s\"",
+  "verbatim_locator | proposition: GYKI-53655 block fraction in slice | Results 3.4 | \"GYKI-53655 (10 \u03bcM) blocked more than 80% of the synaptically evoked peak inward current in mEC layer III neurons (IC50, 2.5 \u03bcM\"",
+  "verbatim_locator | proposition: BC evoked Up states survive GYKI-53655 | Results 3.4 | \"not altered by 10 \u03bcM GYKI-53655 (control, 0.81 \u00b1 0.1 s vs GYKI, 0.86 \u00b1 0.14 s\"",
   "verbatim_locator | proposition: stimulus supplied depolarisation | Discussion 4.6 | \"our stimulating pulse to evoke the Up state likely generated sufficient direct depolarisation to allow such NMDA receptor activation\""
  ],
  "evidence_depth": "partial_fulltext_read",

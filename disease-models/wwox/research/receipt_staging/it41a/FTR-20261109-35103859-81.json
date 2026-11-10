@@ -18,7 +18,7 @@
  "evidence_basis": [
   "Abstract, the Methods paragraphs on animals, slices and recording, the Results on AMPA-receptor drugs and the Discussion paragraph on them read; the Introduction, the other Results, tables and references not read; Fig 6 viewed as an image, the other figures captions only; the experiments on propagation velocity, immunohistochemistry and western blots were not read in detail because they carry no number used here.",
   "verbatim_locator | proposition: reversible dose-dependent latency effect | Results | \"bath application of GYKI53655 resulted in a reversible, dose-dependent increase in the latency of epileptiform discharges\"",
-  "verbatim_locator | proposition: age of slices | Methods | \"Mice (14–16 postnatal days)\""
+  "verbatim_locator | proposition: age of slices | Methods | \"Mice (14\u201316 postnatal days)\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

@@ -17,7 +17,7 @@
  "event_id": "FTR-20261109-36857176-81",
  "evidence_basis": [
   "Abstract, Introduction, Results (GluK2 inhibition by perampanel and the structure paragraphs), Discussion, figure captions and the key resources table read; Methods read only for the sample preparation lines that name the perampanel and DNQX concentrations (cryo-EM processing and modelling not read in detail); Fig 4 viewed as an image, the other figures captions only; the supplementary PDF not read.",
-  "verbatim_locator | proposition: GluK2 IC50 | Results | \"yielded the value of half-maximal inhibitory concentration, IC50 = 58 ± 1 μM (n = 8)\"",
+  "verbatim_locator | proposition: GluK2 IC50 | Results | \"yielded the value of half-maximal inhibitory concentration, IC50 = 58 \u00b1 1 \u03bcM (n = 8)\"",
   "verbatim_locator | proposition: two of four sites occupied | Results | \"PMP was only found bound to the KAR sites associated with subunits A and C, not B and D\""
  ],
  "evidence_depth": "partial_fulltext_read",
