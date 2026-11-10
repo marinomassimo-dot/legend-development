@@ -8,12 +8,12 @@
  "START_UTC": "2026-11-09T22:00:00Z",
  "RESUME": {
   "checkpoint": {
-   "last_verified_result": "battery c557978e FAIL (test_repurposing_view: DeepenedCasesShareable, an injected-name test broken by the spelling d-AP5 on the shareable page; log kept /tmp/bat_it41_c557978e_FAIL.log); fixed (spelling), class re-run OK; package B consumed; new candidate to be frozen and battery-tested",
-   "first_incomplete": "P12: battery on the frozen SHA, publish with --expect-sha, CI, site, final report",
-   "files_to_open": "generation_it41_20261109/README.md, measure_it41.tsv, compound_view.tsv",
-   "active_processes": "cron 9893cd67 hourly :17 (session-only)",
-   "real_dependencies": "HIF1A-BNIP3 package from the science session (optional, not blocking)",
-   "next_step": "run the battery in a fresh no-hardlinks clone, wait by PID"
+   "last_verified_result": "ade977d0 battery PASS WITH SKIPS; publish in progress",
+   "first_incomplete": "light queue consumption on task/it41 (apply_fly_delta.py committed), 11 receipts (it41c) to record, CI, site, final report",
+   "files_to_open": "generation_it41_20261109/README.md; fly_wwox_feasibility_it41_20261110/",
+   "active_processes": "cron 9893cd67 (session-only)",
+   "real_dependencies": "none",
+   "next_step": "record it41c receipts after the push; final battery only if the increment changes tested code"
   }
  },
  "AUTHORISED_QUEUE_20261108": {
@@ -155,9 +155,9 @@
    "steps": [
     {
      "step": "Resources, persistence, battery on frozen SHA, publish with SHA check, CI, site, record only delivered results, final report",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Batteries by SHA: c557978e FAIL (test_repurposing_view DeepenedCasesShareable: the spelling d-AP5 on the shareable page; log /tmp/bat_it41_c557978e_FAIL.log); 4fde7029 FAIL (test_repurposing_view: stale shareable package, own: package regenerated after the commit; log /tmp/bat_it41_4fde7029_FAIL.log); ade977d0 PASS WITH SKIPS (226 targets, 11 skipped: local catalogue cache). Published as a merge of ade977d0 with development/main (science light queue 9e7cdfdf, docs and staged receipts only). Light-queue consumption, 11 receipts (it41c) and CI pending."
     }
    ]
   }
