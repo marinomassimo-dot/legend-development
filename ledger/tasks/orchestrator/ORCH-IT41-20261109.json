@@ -8,12 +8,12 @@
   "START_UTC": "2026-11-09T22:30:00Z",
   "BASELINE": "main 30382215 (development/main same). Worktree .claude/worktrees/it41a, branch task/it41a. IT40 is in its own worktree (task/it40, not yet on main); its final report was not available at S0. Harness identity delivery (worktree idfix) had no commit at S0.",
   "CURRENT_PACKAGE": {
-    "id": "B-landing",
-    "state": "package B delivered; checks, battery on a fresh unique clone, landing; light queue next",
-    "delegate_active": "none",
-    "updated": "2026-11-10T01:00:00Z"
+    "id": "B-battery+C-producer",
+    "state": "B: battery running on frozen candidate 7d989b6e30a76ae6d8dc72e3b17b22ad5158de38 (clone /tmp/bat_it41b, PID 596245, log /tmp/bat_it41b.log); light queue C (fly Wwox feasibility): producer running in worktree it41c",
+    "delegate_active": "producer C a14bfaec80cc0584b (sonnet/medium)",
+    "updated": "2026-11-10T01:15:00Z"
   },
-  "RESUME": "CHECKPOINT 2026-11-10T01:00Z: A landed 9d58c69d. B candidate on task/it41b (worktree it41b); next: freeze the commit, battery on /tmp/bat_it41b, then task_close + safe_push; then the light queue (public feasibility of a Wwox-loss Drosophila model: a question and a preliminary feasibility, no commissioning, no external contact) with one producer and one verifier if resources allow. Active processes: none.",
+  "RESUME": "CHECKPOINT 2026-11-10T01:15Z: A landed 9d58c69d. B delivered; battery PID 596245 (cwd /tmp/bat_it41b) on frozen 7d989b6e; wait with process_wait.py --pid 596245, do not touch the clone. Light queue C: producer a14bfaec80cc0584b writing in worktree .claude/worktrees/it41c (brief committed 6bcd71ee on task/it41c, folder fly_wwox_feasibility_it41_20261110/). Next: when the battery ends, record its verdict line in this record (task/it41b), task_close + safe_push for B; when producer C ends, write VERIFIER_BRIEF.md for C, dispatch one verifier (sonnet/high), recheck only substantive corrections, README/consumer_delta/COST_NOTE, merge main into it41c, checks, battery on a fresh unique clone, land. Then close the mandate (MANDATE_STATE COMPLETE) and give the final report.",
   "DECISIONS_TAKEN": [
     "2026-11-09 S0: the INV-05 closing pass was already delivered and published (30382215); nothing pending. IT40 final report not found in any worktree at S0 (IT40 is unmerged); next_investigations_it40.md read in place from the it40 worktree (read-only): A1 and A2 rows (primary mechanism papers for NBQX and GYKI 52466; catalogue identity of GYKI 52466) are the open needs this package addresses; B3 (BE1) is the experiment the comparison serves. Harness identity delivery not yet available: names used by each paper are recorded so the match can be made without rebuilding the search.",
     "2026-11-09 A1 design written and committed before any source was opened, including the five demonstrations the block control must give, what the result does not separate, and the A3 rule (alternative only by missing property).",
