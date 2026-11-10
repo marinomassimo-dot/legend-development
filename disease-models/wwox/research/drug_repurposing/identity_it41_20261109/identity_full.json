@@ -1,0 +1,621 @@
+{
+ "GYKI 52466": {
+  "identity": {
+   "query": "GYKI 52466",
+   "identity_state": "SYNONYM_EXACT",
+   "candidates": [
+    {
+     "catalogue_id": "CAT:DGIDB:9abeaf54a97b",
+     "record_name": "Gyki53784",
+     "match_kind": "SYNONYM_EXACT",
+     "origin": "dgidb_only",
+     "parent": null,
+     "chembl_refs": [
+      {
+       "chembl_id": "CHEMBL275006",
+       "basis": "gtopdb_ligand_reconciliation",
+       "in_catalogue": "no",
+       "decision": "out_of_selection",
+       "gtopdb_inchikey": "LFBZZHVSGAHQPP-UHFFFAOYSA-N"
+      }
+     ]
+    }
+   ],
+   "declarations": [
+    {
+     "query_name": "GYKI 52466",
+     "role": "identity",
+     "chembl_id": "CHEMBL275006",
+     "inchikey": "LFBZZHVSGAHQPP-UHFFFAOYSA-N",
+     "basis": "ChEMBL pref_name GYKI-52466; the same flat key is GtoPdb ligand 4210 (named GYKI53784 there, synonym GYKI-52466) and PubChem CID 3538 (GYKI 52466, C17H15N3O2)",
+     "retrieved_on": "2026-11-09",
+     "note": "the catalogue record named Gyki53784 (CAT:DGIDB:9abeaf54a97b) carries this structure"
+    },
+    {
+     "query_name": "GYKI 52466",
+     "role": "label_conflict",
+     "chembl_id": "-",
+     "inchikey": "SMGACXZFVXKEAX-LLVKDONJSA-N",
+     "basis": "the label GYKI53784 (and the synonym LY303070) is attached to two structures: GtoPdb 4210 and PubChem CID 3538 list it beside GYKI 52466 (C17H15N3O2), while PubChem CID 3074805 titled GYKI 53784 / LY303070 is C19H20N4O3, the stereo form of the GYKI 53655 structure (GtoPdb 4209, flat key SMGACXZFVXKEAX-UHFFFAOYSA-N)",
+     "retrieved_on": "2026-11-09",
+     "note": "the DGIdb/GtoPdb comment 'active isomer, non-competitive' fits the C19H20N4O3 compound, not the GYKI 52466 structure; the GRIA1-4 antagonist rows of the catalogue record therefore cannot be attributed to GYKI 52466 from that record alone"
+    },
+    {
+     "query_name": "GYKI 52466",
+     "role": "distinct_from",
+     "chembl_id": "CHEMBL267450",
+     "inchikey": "SMGACXZFVXKEAX-UHFFFAOYSA-N",
+     "basis": "GYKI 53655 is C19H20N4O3 (PubChem CID 126758, GtoPdb 4209); GYKI 52466 is C17H15N3O2",
+     "retrieved_on": "2026-11-09",
+     "note": "see the GYKI 53655 identity row"
+    }
+   ],
+   "label_conflict": [
+    {
+     "query_name": "GYKI 52466",
+     "role": "label_conflict",
+     "chembl_id": "-",
+     "inchikey": "SMGACXZFVXKEAX-LLVKDONJSA-N",
+     "basis": "the label GYKI53784 (and the synonym LY303070) is attached to two structures: GtoPdb 4210 and PubChem CID 3538 list it beside GYKI 52466 (C17H15N3O2), while PubChem CID 3074805 titled GYKI 53784 / LY303070 is C19H20N4O3, the stereo form of the GYKI 53655 structure (GtoPdb 4209, flat key SMGACXZFVXKEAX-UHFFFAOYSA-N)",
+     "retrieved_on": "2026-11-09",
+     "note": "the DGIdb/GtoPdb comment 'active isomer, non-competitive' fits the C19H20N4O3 compound, not the GYKI 52466 structure; the GRIA1-4 antagonist rows of the catalogue record therefore cannot be attributed to GYKI 52466 from that record alone"
+    }
+   ],
+   "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+  },
+  "target": {
+   "expected_genes": [
+    "GRIA1",
+    "GRIA2"
+   ],
+   "per_gene": {
+    "GRIA1": {
+     "level": "MEASURED_ACTIVITY_OTHER_SPECIES",
+     "n_rows": 7,
+     "rows": [
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL275006 IC50 Rattus norvegicus",
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL275006 IC50 Rattus norvegicus",
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL275006 IC50 Rattus norvegicus",
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL275006 IC50 Rattus norvegicus",
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL275006 IC50 Rattus norvegicus",
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL275006 IC50 Rattus norvegicus"
+     ]
+    },
+    "GRIA2": {
+     "level": "MEASURED_ACTIVITY_HUMAN",
+     "n_rows": 9,
+     "rows": [
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL275006 IC50 Rattus norvegicus",
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL275006 IC50 Rattus norvegicus",
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL275006 IC50 Rattus norvegicus",
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL275006 IC50 Rattus norvegicus",
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL275006 IC50 Rattus norvegicus",
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL275006 IC50 Rattus norvegicus"
+     ]
+    }
+   },
+   "chembl_read": [
+    {
+     "chembl_id": "CHEMBL275006",
+     "mechanism_status": "MATCH_FOUND",
+     "activity_status": "MATCH_FOUND",
+     "activity_coverage": "COMPLETE",
+     "activity_rows": 18
+    }
+   ],
+   "selectivity": "NOT_ASSESSED",
+   "unattributed_source_rows": [
+    "GRIA2: CAT:DGIDB:9abeaf54a97b (SOURCE_INTERACTION) not attributed: the label of this record sits on two structures",
+    "GRIA1: CAT:DGIDB:9abeaf54a97b (SOURCE_INTERACTION) not attributed: the label of this record sits on two structures"
+   ],
+   "other_genes_seen": {
+    "GRIA3": 1,
+    "CYP2C19": 1,
+    "CYP2C9": 1,
+    "EHMT2": 1,
+    "CYP3A4": 1,
+    "GRIA4": 1
+   },
+   "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+  }
+ },
+ "GYKI 53655": {
+  "identity": {
+   "query": "GYKI 53655",
+   "identity_state": "DECLARED",
+   "candidates": [
+    {
+     "catalogue_id": "CAT:DGIDB:8111763ff62c",
+     "record_name": "Gyki53655",
+     "match_kind": "SEPARATOR_VARIANT",
+     "origin": "dgidb_only",
+     "parent": null,
+     "chembl_refs": [
+      {
+       "chembl_id": "CHEMBL267450",
+       "basis": "gtopdb_ligand_reconciliation",
+       "in_catalogue": "no",
+       "decision": "out_of_selection",
+       "gtopdb_inchikey": "SMGACXZFVXKEAX-UHFFFAOYSA-N"
+      }
+     ]
+    }
+   ],
+   "declarations": [
+    {
+     "query_name": "GYKI 53655",
+     "role": "identity",
+     "chembl_id": "CHEMBL267450",
+     "inchikey": "SMGACXZFVXKEAX-UHFFFAOYSA-N",
+     "basis": "ChEMBL pref_name GYKI-53655 (C19H20N4O3); the same flat key is GtoPdb ligand 4209 (GYKI53655, LY300168) and PubChem CID 126758 (Gyki-53655); the catalogue record is CAT:DGIDB:8111763ff62c",
+     "retrieved_on": "2026-11-09",
+     "note": "the compound the IT41 slice papers name as GYKI 53655; a different structure from GYKI 52466"
+    },
+    {
+     "query_name": "GYKI 53655",
+     "role": "distinct_from",
+     "chembl_id": "CHEMBL275006",
+     "inchikey": "LFBZZHVSGAHQPP-UHFFFAOYSA-N",
+     "basis": "GYKI 52466 is C17H15N3O2 (PubChem CID 3538); GYKI 53655 is C19H20N4O3 (CID 126758)",
+     "retrieved_on": "2026-11-09",
+     "note": "papers that name one do not give evidence for the other"
+    }
+   ],
+   "label_conflict": [],
+   "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+  },
+  "target": {
+   "expected_genes": [
+    "GRIA1",
+    "GRIA2"
+   ],
+   "per_gene": {
+    "GRIA1": {
+     "level": "SOURCE_INTERACTION",
+     "n_rows": 3,
+     "rows": [
+      "SOURCE_INTERACTION: CAT:DGIDB:8111763ff62c",
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL267450 IC50 Rattus norvegicus",
+      "MEASURED_ACTIVITY_HUMAN: CHEMBL267450 EC50 Homo sapiens"
+     ]
+    },
+    "GRIA2": {
+     "level": "SOURCE_INTERACTION",
+     "n_rows": 3,
+     "rows": [
+      "SOURCE_INTERACTION: CAT:DGIDB:8111763ff62c",
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL267450 IC50 Rattus norvegicus",
+      "MEASURED_ACTIVITY_HUMAN: CHEMBL267450 EC50 Homo sapiens"
+     ]
+    }
+   },
+   "chembl_read": [
+    {
+     "chembl_id": "CHEMBL267450",
+     "mechanism_status": "MATCH_FOUND",
+     "activity_status": "MATCH_FOUND",
+     "activity_coverage": "COMPLETE",
+     "activity_rows": 4
+    }
+   ],
+   "selectivity": "NOT_ASSESSED",
+   "unattributed_source_rows": [],
+   "other_genes_seen": {
+    "GRIA3": 1,
+    "GRIA4": 1
+   },
+   "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+  }
+ },
+ "NBQX": {
+  "identity": {
+   "query": "NBQX",
+   "identity_state": "NAME_EXACT",
+   "candidates": [
+    {
+     "catalogue_id": "CAT:DGIDB:ca4c6814d8f6",
+     "record_name": "Nbqx",
+     "match_kind": "NAME_EXACT",
+     "origin": "dgidb_only",
+     "parent": null,
+     "chembl_refs": [
+      {
+       "chembl_id": "CHEMBL222519",
+       "basis": "gtopdb_ligand_reconciliation",
+       "in_catalogue": "no",
+       "decision": "out_of_selection",
+       "gtopdb_inchikey": "UQNAFPHGVPVTAL-UHFFFAOYSA-N"
+      }
+     ]
+    }
+   ],
+   "declarations": [],
+   "label_conflict": [],
+   "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+  },
+  "target": {
+   "expected_genes": [
+    "GRIA1",
+    "GRIA2"
+   ],
+   "per_gene": {
+    "GRIA1": {
+     "level": "SOURCE_INTERACTION",
+     "n_rows": 39,
+     "rows": [
+      "SOURCE_INTERACTION: CAT:DGIDB:ca4c6814d8f6",
+      "SOURCE_INTERACTION: CAT:DGIDB:ca4c6814d8f6",
+      "MEASURED_ACTIVITY_HUMAN: CHEMBL222519 Ki Homo sapiens",
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL222519 Ki Rattus norvegicus",
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL222519 IC50 Rattus norvegicus",
+      "MEASURED_ACTIVITY_HUMAN: CHEMBL222519 IC50 Homo sapiens"
+     ]
+    },
+    "GRIA2": {
+     "level": "SOURCE_INTERACTION",
+     "n_rows": 40,
+     "rows": [
+      "SOURCE_INTERACTION: CAT:DGIDB:ca4c6814d8f6",
+      "MEASURED_ACTIVITY_HUMAN: CHEMBL222519 Ki Homo sapiens",
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL222519 Ki Rattus norvegicus",
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL222519 IC50 Rattus norvegicus",
+      "MEASURED_ACTIVITY_HUMAN: CHEMBL222519 IC50 Homo sapiens",
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL222519 Ki Rattus norvegicus"
+     ]
+    }
+   },
+   "chembl_read": [
+    {
+     "chembl_id": "CHEMBL222519",
+     "mechanism_status": "MATCH_FOUND",
+     "activity_status": "MATCH_FOUND",
+     "activity_coverage": "COMPLETE",
+     "activity_rows": 129
+    }
+   ],
+   "selectivity": "NOT_ASSESSED",
+   "unattributed_source_rows": [],
+   "other_genes_seen": {
+    "GRIK1": 23,
+    "GRIK2": 22,
+    "GRIN1": 20,
+    "GRIK3": 19,
+    "GRIK5": 18,
+    "GRIN2C": 18,
+    "GRIN2A": 17,
+    "GRIN2B": 17
+   },
+   "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+  }
+ },
+ "perampanel": {
+  "identity": {
+   "query": "perampanel",
+   "identity_state": "NAME_EXACT",
+   "candidates": [
+    {
+     "catalogue_id": "CAT:CHEMBL1214124",
+     "record_name": "PERAMPANEL",
+     "match_kind": "NAME_EXACT",
+     "origin": "chembl_selected",
+     "parent": "CAT:CHEMBL1214124",
+     "chembl_refs": [
+      {
+       "chembl_id": "CHEMBL1214124",
+       "basis": "record"
+      }
+     ]
+    },
+    {
+     "catalogue_id": "CAT:DGIDB:768c891abaa7",
+     "record_name": "Perampanel",
+     "match_kind": "NAME_EXACT",
+     "origin": "dgidb_only",
+     "parent": null,
+     "chembl_refs": []
+    }
+   ],
+   "declarations": [],
+   "label_conflict": [],
+   "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+  },
+  "target": {
+   "expected_genes": [
+    "GRIA1",
+    "GRIA2"
+   ],
+   "per_gene": {
+    "GRIA1": {
+     "level": "CURATED_MECHANISM",
+     "n_rows": 9,
+     "rows": [
+      "CURATED_MECHANISM: CAT:CHEMBL1214124",
+      "SOURCE_INTERACTION: CAT:DGIDB:768c891abaa7",
+      "SOURCE_INTERACTION: CAT:DGIDB:768c891abaa7",
+      "SOURCE_INTERACTION: CAT:DGIDB:768c891abaa7",
+      "MEASURED_ACTIVITY_HUMAN: CHEMBL1214124 IC50 Homo sapiens",
+      "MEASURED_ACTIVITY_HUMAN: CHEMBL1214124 IC50 Homo sapiens"
+     ]
+    },
+    "GRIA2": {
+     "level": "CURATED_MECHANISM",
+     "n_rows": 4,
+     "rows": [
+      "CURATED_MECHANISM: CAT:CHEMBL1214124",
+      "SOURCE_INTERACTION: CAT:DGIDB:768c891abaa7",
+      "SOURCE_INTERACTION: CAT:DGIDB:768c891abaa7",
+      "SOURCE_INTERACTION: CAT:DGIDB:768c891abaa7"
+     ]
+    }
+   },
+   "chembl_read": [
+    {
+     "chembl_id": "CHEMBL1214124",
+     "mechanism_status": "MATCH_FOUND",
+     "activity_status": "MATCH_FOUND",
+     "activity_coverage": "COMPLETE",
+     "activity_rows": 14
+    }
+   ],
+   "selectivity": "NOT_ASSESSED",
+   "unattributed_source_rows": [],
+   "other_genes_seen": {
+    "GRIA3": 4,
+    "GRIA4": 3,
+    "REP": 2,
+    "NULL": 1
+   },
+   "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+  }
+ },
+ "Ro 25-6981": {
+  "identity": {
+   "query": "Ro 25-6981",
+   "identity_state": "SYNONYM_EXACT",
+   "candidates": [
+    {
+     "catalogue_id": "CAT:DGIDB:f98b32d5fbc4",
+     "record_name": "Chembl:Chembl305195",
+     "match_kind": "SYNONYM_EXACT",
+     "origin": "dgidb_only",
+     "parent": null,
+     "chembl_refs": [
+      {
+       "chembl_id": "CHEMBL305195",
+       "basis": "dgidb_concept"
+      }
+     ]
+    },
+    {
+     "catalogue_id": "CAT:DGIDB:63cffd33f6b8",
+     "record_name": "Chembl:Chembl1256726",
+     "match_kind": "SEPARATOR_VARIANT",
+     "origin": "dgidb_only",
+     "parent": null,
+     "chembl_refs": [
+      {
+       "chembl_id": "CHEMBL1256726",
+       "basis": "dgidb_concept"
+      }
+     ]
+    }
+   ],
+   "declarations": [
+    {
+     "query_name": "Ro 25-6981",
+     "role": "identity",
+     "chembl_id": "CHEMBL305195",
+     "inchikey": "WVZSEUPGUDIELE-HTAPYJJXSA-N",
+     "basis": "ChEMBL molecule record CHEMBL305195 has no name or synonym; its InChIKey equals PubChem CID 6604887 titled Ro 25-6981 (same key including the stereo layer); DGIdb concept chembl:CHEMBL305195 carries the synonym RO-25-6981",
+     "retrieved_on": "2026-11-09",
+     "note": "GluN2B is not in the ChEMBL curated mechanism table for this molecule; it is in the measured activities (see compound_identity.target_evidence)"
+    }
+   ],
+   "label_conflict": [],
+   "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+  },
+  "target": {
+   "expected_genes": [
+    "GRIN2B"
+   ],
+   "per_gene": {
+    "GRIN2B": {
+     "level": "MEASURED_ACTIVITY_HUMAN",
+     "n_rows": 20,
+     "rows": [
+      "MEASURED_ACTIVITY_HUMAN: CHEMBL305195 Ki Homo sapiens",
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL305195 IC50 Rattus norvegicus",
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL305195 IC50 Rattus norvegicus",
+      "MEASURED_ACTIVITY_HUMAN: CHEMBL305195 Ki Homo sapiens",
+      "MEASURED_ACTIVITY_HUMAN: CHEMBL305195 IC50 Homo sapiens",
+      "MEASURED_ACTIVITY_HUMAN: CHEMBL305195 IC50 Homo sapiens"
+     ]
+    }
+   },
+   "chembl_read": [
+    {
+     "chembl_id": "CHEMBL305195",
+     "mechanism_status": "MATCH_FOUND",
+     "activity_status": "MATCH_FOUND",
+     "activity_coverage": "COMPLETE",
+     "activity_rows": 27
+    }
+   ],
+   "selectivity": "NOT_ASSESSED",
+   "unattributed_source_rows": [],
+   "other_genes_seen": {
+    "GRIN2A": 2,
+    "DRD1": 1,
+    "ADRA1A": 1,
+    "ADRA1D": 1,
+    "ADRA1B": 1,
+    "GRIN1": 1
+   },
+   "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+  }
+ },
+ "ifenprodil": {
+  "identity": {
+   "query": "ifenprodil",
+   "identity_state": "NAME_EXACT",
+   "candidates": [
+    {
+     "catalogue_id": "CAT:CHEMBL305187",
+     "record_name": "IFENPRODIL",
+     "match_kind": "NAME_EXACT",
+     "origin": "chembl_selected",
+     "parent": "CAT:CHEMBL305187",
+     "chembl_refs": [
+      {
+       "chembl_id": "CHEMBL305187",
+       "basis": "record"
+      }
+     ]
+    },
+    {
+     "catalogue_id": "CAT:DGIDB:1b7e72bf50c7",
+     "record_name": "Ifenprodil",
+     "match_kind": "NAME_EXACT",
+     "origin": "dgidb_only",
+     "parent": null,
+     "chembl_refs": []
+    },
+    {
+     "catalogue_id": "CAT:CHEMBL1886888",
+     "record_name": "IFENPRODIL TARTRATE",
+     "match_kind": "NAME_PARTIAL",
+     "origin": "chembl_selected",
+     "parent": "CAT:CHEMBL305187",
+     "chembl_refs": [
+      {
+       "chembl_id": "CHEMBL1886888",
+       "basis": "record"
+      }
+     ]
+    },
+    {
+     "catalogue_id": "CAT:DGIDB:2495e977baa1",
+     "record_name": "(R,S)-Ifenprodil",
+     "match_kind": "NAME_PARTIAL",
+     "origin": "dgidb_only",
+     "parent": null,
+     "chembl_refs": [
+      {
+       "chembl_id": "CHEMBL49623",
+       "basis": "dgidb_concept"
+      }
+     ]
+    }
+   ],
+   "declarations": [],
+   "label_conflict": [],
+   "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+  },
+  "target": {
+   "expected_genes": [
+    "GRIN2B"
+   ],
+   "per_gene": {
+    "GRIN2B": {
+     "level": "MEASURED_ACTIVITY_HUMAN",
+     "n_rows": 36,
+     "rows": [
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL305187 IC50 Rattus norvegicus",
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL305187 Ki Rattus norvegicus",
+      "MEASURED_ACTIVITY_HUMAN: CHEMBL305187 IC50 Homo sapiens",
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL305187 IC50 Rattus norvegicus",
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL305187 IC50 Rattus norvegicus",
+      "MEASURED_ACTIVITY_HUMAN: CHEMBL305187 IC50 Homo sapiens"
+     ]
+    }
+   },
+   "chembl_read": [
+    {
+     "chembl_id": "CHEMBL305187",
+     "mechanism_status": "MATCH_FOUND",
+     "activity_status": "MATCH_FOUND",
+     "activity_coverage": "COMPLETE",
+     "activity_rows": 112
+    }
+   ],
+   "selectivity": "NOT_ASSESSED",
+   "unattributed_source_rows": [],
+   "other_genes_seen": {
+    "SIGMAR1": 20,
+    "TMEM97": 12,
+    "EBP": 6,
+    "DRD1": 2,
+    "ADRA1A": 2,
+    "ADRA1D": 2,
+    "ADRA1B": 2,
+    "GRIN2A": 2
+   },
+   "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+  }
+ },
+ "brilliant blue FCF": {
+  "identity": {
+   "query": "brilliant blue FCF",
+   "identity_state": "DECLARED",
+   "candidates": [],
+   "declarations": [
+    {
+     "query_name": "brilliant blue FCF",
+     "role": "identity",
+     "chembl_id": "CHEMBL3184128",
+     "inchikey": "SGHZXLIDFTYFHQ-UHFFFAOYSA-L",
+     "basis": "ChEMBL record CHEMBL3184128 has no name or synonym and is absent from the catalogue; its InChIKey equals PubChem CID 19700 (titled FD&C Blue No. 1; synonyms include Brilliant Blue FCF and Acid Blue 9)",
+     "retrieved_on": "2026-11-09",
+     "note": "disodium salt; the free-acid parent record is CHEMBL3350615 (CTRXDTYTAAKVSM-UHFFFAOYSA-N, no activities in ChEMBL_37); ChEMBL holds one measured activity row for CHEMBL3184128 (mouse Pannexin-1)"
+    },
+    {
+     "query_name": "brilliant blue FCF",
+     "role": "salt_or_parent",
+     "chembl_id": "CHEMBL3350615",
+     "inchikey": "CTRXDTYTAAKVSM-UHFFFAOYSA-N",
+     "basis": "hierarchy parent of CHEMBL3184128 in ChEMBL_37",
+     "retrieved_on": "2026-11-09",
+     "note": "free acid"
+    },
+    {
+     "query_name": "brilliant blue FCF",
+     "role": "distinct_from",
+     "chembl_id": "CHEMBL4173394",
+     "inchikey": "RWVGQQGBQSJDQV-UHFFFAOYSA-M",
+     "basis": "ChEMBL pref_name BRILLIANT BLUE G (Coomassie G-250, C47H48N3NaO7S2); a different formula and key from CHEMBL3184128",
+     "retrieved_on": "2026-11-09",
+     "note": "a name that begins Brilliant Blue is not an identity; do not merge"
+    }
+   ],
+   "label_conflict": [],
+   "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+  },
+  "target": {
+   "expected_genes": [
+    "PANX1"
+   ],
+   "per_gene": {
+    "PANX1": {
+     "level": "MEASURED_ACTIVITY_OTHER_SPECIES",
+     "n_rows": 1,
+     "rows": [
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL3184128 IC50 Mus musculus"
+     ]
+    }
+   },
+   "chembl_read": [
+    {
+     "chembl_id": "CHEMBL3184128",
+     "mechanism_status": "MATCH_FOUND",
+     "activity_status": "MATCH_FOUND",
+     "activity_coverage": "COMPLETE",
+     "activity_rows": 1
+    }
+   ],
+   "selectivity": "NOT_ASSESSED",
+   "unattributed_source_rows": [],
+   "other_genes_seen": {},
+   "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+  }
+ }
+}

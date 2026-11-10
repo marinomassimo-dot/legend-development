@@ -1,0 +1,169 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "PLAN-IT41-IDENTITY-PACKAGES-20261109",
+ "DIRECTIVE_VERSION": "1",
+ "GENERATION": "1",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "plan",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "IT41 Harness: reliable pharmacological identities and reusable consumption of hypothesis and comparison packages; then the queued transversal Dream",
+ "assigned_on": "2026-11-09",
+ "worktree": ".claude/worktrees/hpkg",
+ "branch": "task/hpkg",
+ "CURRENT_STATE": "IN_PROGRESS",
+ "CHECKPOINT": {
+  "last_verified_result": "merged candidate = task/hpkg 37468be3 (identity + reader + H6 + origin/main 31919734): 22 reader and 10 identity regressions OK on the IT40 data",
+  "first_incomplete_work": "publish identity (push --expect-sha 7586bfe0) then land task/hpkg; H5 depends on IT41 package A",
+  "active_processes": "none of mine; other sessions' batteries are running and untouched",
+  "real_dependencies": "IT40 landing (matrix_column data); IT41 package A output for H5",
+  "next_executable_step": "gate + LINT on the merged tree, release battery on the frozen SHA, task_close, safe_push --expect-sha"
+ },
+ "AUTHORISED_QUEUE_20261109": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_H0": {
+   "order": 1,
+   "title": "Reconcile the earlier reporting residuals: battery tail, observed cost, published references",
+   "steps": [
+    {
+     "step": "Hypothesis-package note with battery tail, skips and observed cost published",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "06ce29d4 reachable from development/main 30382215; battery log of efedf18e was released before the verdict line was read and is recorded as not recoverable"
+    },
+    {
+     "step": "Keep the battery log for every candidate (copy before release_box)",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "battery for 7586bfe0 logs to /tmp/idfix_battery_7586bfe0.log before the box is released"
+    }
+   ]
+  },
+  "OBJ_H1": {
+   "order": 2,
+   "title": "Diagnose the four identity cases (GYKI 52466, Ro 25-6981, ifenprodil, Brilliant Blue FCF)",
+   "steps": [
+    {
+     "step": "Four cases diagnosed against ChEMBL adapter, GtoPdb 2026.3.1 and PubChem keys",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "identity_it41_20261109/README.md, commit 1e011056"
+    }
+   ]
+  },
+  "OBJ_H2": {
+   "order": 3,
+   "title": "First package: identity path and fixed table for IT41",
+   "steps": [
+    {
+     "step": "compound_identity.py, dated declarations, 9 regressions, identity table",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "commit 1e011056 on local main 7586bfe0; gate 0 BLOCK, LINT 0 BLOCK"
+    },
+    {
+     "step": "Publish after release battery on the frozen SHA 7586bfe0",
+     "status": "IN_PROGRESS",
+     "owner": "plan",
+     "evidence": "remote moved (IT40 landed, 18 commits): the battery on 7586bfe0 was stopped at ~83 targets (partial log /tmp/idfix_battery_7586bfe0_STOPPED_PARTIAL.log, not a verdict); one battery on the merged candidate instead"
+    },
+    {
+     "step": "Send the published SHA to the Orchestrator (package A)",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": "pointer already sent; SHA to follow"
+    }
+   ]
+  },
+  "OBJ_H3": {
+   "order": 4,
+   "title": "Reusable package consumption: manifest, row references, physiological vs comparison",
+   "steps": [
+    {
+     "step": "hypothesis_package.py: hypothesis_packages.tsv manifest, source_ref per row, comparison_for, 'all rows' blocks",
+     "status": "IN_PROGRESS",
+     "owner": "plan",
+     "evidence": "worktree .claude/worktrees/hpkg, branch task/hpkg; check passes on 3 manifest packages"
+    },
+    {
+     "step": "Tests and fixture for the new reader paths; before/after",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": "framework/scripts/test_hypothesis_package.py"
+    }
+   ]
+  },
+  "OBJ_H4": {
+   "order": 5,
+   "title": "Consume matrix_column; classify unresolved references",
+   "steps": [
+    {
+     "step": "matrix_column read from alternatives.tsv and validated; ref classes AGE/CARD_ID/PROBE_NAME/BROKEN_REFERENCE/UNCLASSIFIED",
+     "status": "IN_PROGRESS",
+     "owner": "plan",
+     "evidence": "implemented in hpkg; the IT40 data with matrix_column is on task/it40 560601df, not on main"
+    },
+    {
+     "step": "Run against the IT40 data once it is on main (BH1 and BH3 columns)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "IT40 landed (origin/main 31919734); BH1 reaches AB01-AB04,AB11,AB12 and BH3 AB07-AB10 by matrix_column; after_it40_INV-05.txt"
+    }
+   ]
+  },
+  "OBJ_H5": {
+   "order": 6,
+   "title": "One real IT41 use: identity or comparison consumed",
+   "steps": [
+    {
+     "step": "Show before/after with the Orchestrator's IT41 output",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": "depends on package A consuming identity_table.tsv",
+     "blocker": "IT41 package A output not yet delivered"
+    }
+   ]
+  },
+  "OBJ_H6": {
+   "order": 7,
+   "title": "Small recurring operational fixes after the main delivery",
+   "steps": [
+    {
+     "step": "Entrypoint executability, skip reasons, derived surfaces, unique temp dirs in recipes",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "scanned: no shebang/executable mismatch in framework/scripts and scripts (0 of both); one hidden skip reason (test_attribution_it21 ran at verbosity=1) now shows 'catalogue cache absent' through the runner's own parser; unique boxes and PID waits already follow the owned_scratch recipe in this mandate's battery"
+    }
+   ]
+  },
+  "OBJ_H7": {
+   "order": 8,
+   "title": "Cost, publish with SHA-attributed checks, shared recipe",
+   "steps": [
+    {
+     "step": "Observed cost from the transcript census, separating what is not attributable",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": "framework/scripts/session_model_census.py on the slice of this mandate"
+    },
+    {
+     "step": "Publish hpkg through task_close and safe_push",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_DREAM": {
+   "order": 9,
+   "title": "Transversal Dream over the recent Orchestrator, scientific and Harness results (queued mandate)",
+   "steps": [
+    {
+     "step": "Run dream_pass.py and consolidate, after H2-H5",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": "legend-dream skill; delta only for shared points"
+    }
+   ]
+  }
+ }
+}

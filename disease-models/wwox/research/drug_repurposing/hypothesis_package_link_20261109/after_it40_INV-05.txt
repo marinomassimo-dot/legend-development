@@ -1,0 +1,30 @@
+INV-05: LINKED
+  BH1 [ampa_nmda_discrim_20261108] kind=physiological_hypothesis gene_arc=False need=NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR state=CARRIED_IN_TEXT cards=F01_glutamate_receptor_node,F04_nmdar_intervention_class
+    status: IPOTESI; exploratory; premise not established; independent audit: PARTLY (perampanel potency caveat withdrawn, H2 prediction under M07 corre
+    rivals (alternatives): -   via matrix column: AB01, AB02, AB03, AB04, AB11, AB12   other hypotheses: -   matrix columns: H2_NMDAR_regenerative_GluN2B_contribution, H3_NMDAR_dependent_GluN2A_contribution, H1_AMPA_dependent_drive, H4_general_loss_of_excitatory_drive, H7_network_state_or_recording_artefact
+    unresolved refs by class: CARD_ID: F04
+    BE0 arms=M01,M02 alts=- expected_results=10
+    BE1 arms=M07,M08,M15 alts=- expected_results=15
+    BE4 arms=- alts=- expected_results=0
+    BE5 arms=M16,M04,M17,M18 alts=- expected_results=20
+  BH2 [ampa_nmda_discrim_20261108] kind=physiological_hypothesis gene_arc=False need=NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR state=CARRIED_IN_TEXT cards=F04_nmdar_intervention_class,P11_magnesium_nmdar_gate
+    status: IPOTESI; exploratory; the matched-current form already exists in the module as X2; independent audit: PARTLY (the delayed-response residual 
+    rivals (alternatives): AB04, AB05   via matrix column: AB03   other hypotheses: BH1   matrix columns: H3_NMDAR_dependent_GluN2A_contribution
+    unresolved refs by class: AGE: P13,P17; CARD_ID: F04; PROBE_NAME: S3; UNCLASSIFIED: X2
+    BE0 arms=M01,M02 alts=- expected_results=4
+    BE2 arms=M04,M05,M06,M14 alts=- expected_results=8
+    BE4 arms=- alts=- expected_results=0
+    BE5 arms=M16,M04,M17,M18 alts=- expected_results=8
+  BH3 [ampa_nmda_discrim_20261108] kind=physiological_hypothesis gene_arc=False need=NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR state=CARRIED_IN_TEXT cards=F04_nmdar_intervention_class
+    status: IPOTESI; exploratory; premise not established; independent audit: PARTLY, close to a withdrawal of the gap-junction attribution. What surviv
+    rivals (alternatives): -   via matrix column: AB07, AB08, AB09, AB10   other hypotheses: -   matrix columns: H5_carbenoxolone_off_target, H6_gap_junction_or_pannexin_contribution
+    unresolved refs by class: AGE: P12,P20; PROBE_NAME: CA1; UNCLASSIFIED: S1
+    BE0 arms=M01,M02 alts=- expected_results=4
+    BE3 arms=M09,M10,M11,M12,M13 alts=- expected_results=10
+    BE4 arms=- alts=- expected_results=0
+INV-05 pharmacological comparison: COMPARISON_PRESENT
+  H_total_gain [nmda_composition_discrim_20261109] measurements=M-N1,M-N2,M-N6,M-N7,M-N8,M-N10,M-N12 decisive=D09 broken=- ref=disease-models/wwox/research/drug_repurposing/nmda_composition_discrim_20261109/output/comparison.tsv:2
+  H_GluN2B [nmda_composition_discrim_20261109] measurements=M-N1,M-N2,M-N3,M-N4,M-N6,M-N7,M-N8,M-N9,M-N10,M-N11 decisive=D09,D07,D04 broken=- ref=disease-models/wwox/research/drug_repurposing/nmda_composition_discrim_20261109/output/comparison.tsv:3
+  H_GluN2A [nmda_composition_discrim_20261109] measurements=M-N3,M-N4,M-N6,M-N9 decisive=- broken=- ref=disease-models/wwox/research/drug_repurposing/nmda_composition_discrim_20261109/output/comparison.tsv:4
+  H_general_drive [nmda_composition_discrim_20261109] measurements=M-N1,M-N5,M-N6,M-N12 decisive=- broken=- ref=disease-models/wwox/research/drug_repurposing/nmda_composition_discrim_20261109/output/comparison.tsv:5
+  H_state [nmda_composition_discrim_20261109] measurements=M-N6 decisive=D03,D06 broken=- ref=disease-models/wwox/research/drug_repurposing/nmda_composition_discrim_20261109/output/comparison.tsv:6
