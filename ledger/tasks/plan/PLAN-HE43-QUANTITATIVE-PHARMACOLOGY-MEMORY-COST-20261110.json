@@ -1,0 +1,132 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "PLAN-HE43-QUANTITATIVE-PHARMACOLOGY-MEMORY-COST-20261110",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "plan",
+ "PRIORITY": "HIGH",
+ "assigned_on": "2026-11-10",
+ "OBJECTIVE": "HE43: reliable quantitative pharmacology, useful memory at sustainable cost: units and assay conditions kept, query errors that must not become biology, reproducible inputs and identity, measured coordinator cost, attributed compound names on the shareable page, DREAM that acts, continuity.",
+ "worktree": ".claude/worktrees/he43",
+ "branch": "task/he43",
+ "CURRENT_STATE": "DONE",
+ "CHECKPOINT": {
+  "last_verified_result": "battery PASS WITH SKIPS (233 targets, 11 skipped) on 19d09ce3fe4a (merge of 09b17517 and main 380a4ee3); the commit after it (this record) is documentation only; gate PASS",
+  "first_incomplete_work": "none",
+  "active_processes": "none",
+  "real_dependencies": "IT43 adopts measurement/parent_form in action_search/dgidb_listing and regenerates its views after merging main; SCI43 may settle the Cs+ HCN row unit from the primary paper",
+  "next_executable_step": "none; landing and push recorded in the HE44 report"
+ },
+ "AUTHORISED_QUEUE_20261110": {
+  "MANDATE_STATE": "COMPLETE",
+  "OBJ_H0": {
+   "order": 1,
+   "title": "Baseline, SHA, boundary with IT43",
+   "steps": [
+    {
+     "step": "Baseline a4799320 = remote; worktree he43; IT43/SCI43 read-only survey; no shared component duplicated",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "worktree .claude/worktrees/he43 at a4799320"
+    }
+   ]
+  },
+  "OBJ_H1": {
+   "order": 2,
+   "title": "Units, quantities and assay conditions",
+   "steps": [
+    {
+     "step": "measurement.py: kind, original value/unit/relation kept, conversion shown, compare with UNIT_CONFLICT_SUSPECT, registry scan (7 rows x1000 found); DQP-1105 fixtures",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "framework/scripts/measurement.py; test_measurement.py; commit 56fbd11b"
+    }
+   ]
+  },
+  "OBJ_H2": {
+   "order": 3,
+   "title": "Query errors that must not become biology",
+   "steps": [
+    {
+     "step": "Reproduced three silent EMPTY_RESULT paths in compound_identity (incomplete read, stale id, undefined adapter state); fixed with tests; other four cases already covered",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "framework/scripts/compound_identity.py; test_compound_identity.py; commit 56fbd11b"
+    }
+   ]
+  },
+  "OBJ_H3": {
+   "order": 4,
+   "title": "Reproducible inputs and identity",
+   "steps": [
+    {
+     "step": "join_names defect on chemical names found on the IT43 DGIdb names, fixed; parent_form for consumers that group molecules",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "commit 4bab0faa"
+    }
+   ]
+  },
+  "OBJ_H4": {
+   "order": 5,
+   "title": "Coordinator cost",
+   "steps": [
+    {
+     "step": "Three questions x three starts with agents: tokens, tool uses, time, correctness",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "he43_20261110/README.md section 4: 8 delegate runs, tokens/tool calls/time/correctness; paragraph in delegation_budget.md"
+    }
+   ]
+  },
+  "OBJ_H5": {
+   "order": 6,
+   "title": "Compound names on the shareable page",
+   "steps": [
+    {
+     "step": "Wikidata labels (CC0) by ChEMBL id, label guard, footer credit, audit; surfaces regenerated; audit PASS",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "commits fd3ea58c, 55c4f164; view/name_source_wikidata.tsv"
+    }
+   ]
+  },
+  "OBJ_H6": {
+   "order": 7,
+   "title": "DREAM and memory that act",
+   "steps": [
+    {
+     "step": "DREAM pass on the HE43 results and one consumer effect",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "he43_20261110/README.md section 7: three connections with controls, consumers and states"
+    }
+   ]
+  },
+  "OBJ_H7": {
+   "order": 8,
+   "title": "Verification, integration, closure",
+   "steps": [
+    {
+     "step": "Battery on the frozen merged candidate 19d09ce3 (09b17517 + main 380a4ee3): PASS WITH SKIPS (233 targets, 11 skipped); earlier: 09b17517 PASS WITH SKIPS (231 targets, 11 skipped); first battery on d0523cf6 stopped partial (verdict suite, fixed in 09b17517)",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "logs /tmp/he43_keep/he43_battery_19d09ce3.log, he43_battery_09b17517.log, he43_battery_d0523cf6_STOPPED_PARTIAL.log"
+    },
+    {
+     "step": "Handoff message to the IT43 session; note in he43_20261110/README.md section 6",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "he43_20261110/README.md section 6; cross-session message sent"
+    },
+    {
+     "step": "Gate PASS (exit 0), push with --expect-sha, record complete",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "gate: scripts/public_release_gate.py VERDICT PASS on the candidate; push result in the final report"
+    }
+   ]
+  }
+ }
+}

@@ -86,6 +86,46 @@ class Identity(unittest.TestCase):
         self.assertIn("not about the compound", r["note"])
 
 
+class JoinNamesChemicalNames(unittest.TestCase):
+    """HE43: realistic chemical names that the first HE42 splitter mangled (found on a new input, the IT43 DGIdb listing)."""
+    T = ["mk-801", "glycine", "ro 25-6981", "ifenprodil"]
+
+    def test_a_stereo_descriptor_is_a_qualifier_not_a_separator(self):
+        for name, qual in (("(+)-MK-801", "(+)-"), ("(+/-)-MK-801", "(+/-)-"), ("(S)-(+)-MK-801", "(+)-")):
+            (r,) = ci.join_names(name, self.T)
+            self.assertEqual((r["link"], r["key"], r["part"]), ("QUALIFIED", "mk-801", name))
+            self.assertIn(qual, r["qualifier"])
+
+    def test_a_parenthesis_inside_a_chemical_name_is_kept_and_the_part_text_is_the_original(self):
+        (r,) = ci.join_names("(RS)-(Tetrazol-5-yl)glycine", self.T)
+        self.assertEqual((r["link"], r["part"]), ("PROPOSED_ONLY", "(RS)-(Tetrazol-5-yl)glycine"))   # glycine is a candidate to look at, never the identity
+        self.assertIsNone(r["key"])
+        a, b = ci.join_names("N-(2,4-dimethyl)glycine, ifenprodil", self.T)
+        self.assertEqual((a["part"], b["link"]), ("N-(2,4-dimethyl)glycine", "EXACT"))
+
+    def test_a_trailing_comment_is_still_dropped_and_a_cell_still_splits_outside_parentheses(self):
+        self.assertEqual(ci.join_names("Ro 25-6981 (maleate salt)", self.T)[0]["link"], "EXACT")
+        self.assertEqual([r["link"] for r in ci.join_names("MK-801 + ifenprodil", self.T)], ["EXACT", "EXACT"])
+
+    def test_parent_form_does_not_collapse_a_substituted_name_into_its_parent(self):
+        self.assertNotEqual(ci.parent_form("(Rs)-(Tetrazol-5-Yl)Glycine")["key"], ci.parent_form("Glycine")["key"])
+
+
+class ParentForm(unittest.TestCase):
+    def test_salts_merge_into_the_parent_and_stereo_stays_apart(self):
+        a, b = ci.parent_form("(R)-Ef-1520"), ci.parent_form("(S)-Ef-1520")
+        self.assertEqual(a["key"], b["key"])
+        self.assertNotEqual((a["key"], a["stereo_isotope"]), (b["key"], b["stereo_isotope"]))
+        h, p = ci.parent_form("Ivabradine Hydrochloride"), ci.parent_form("Ivabradine")
+        self.assertEqual((h["key"], h["stereo_isotope"]), (p["key"], p["stereo_isotope"]))
+        self.assertEqual(h["salt"], "hydrochloride")
+        self.assertEqual(ci.parent_form("ESKETAMINE HYDROCHLORIDE")["key"], ci.parent_form("Esketamine")["key"])
+
+    def test_a_comment_in_parentheses_is_not_part_of_the_key_and_a_fragment_is_not_made_a_parent(self):
+        self.assertEqual(ci.parent_form("Ro 25-6981 (maleate salt)")["key"], ci.parent_form("Ro 25-6981")["key"])
+        self.assertNotEqual(ci.parent_form("Ro 25")["key"], ci.parent_form("Ro 25-6981")["key"])
+
+
 class Target(unittest.TestCase):
     def test_level_is_the_highest_read_and_selectivity_is_not_assessed(self):
         t = ci.target_evidence(res("memantine"), ["GRIN2B"], ES, None)
@@ -106,6 +146,41 @@ class Target(unittest.TestCase):
         err = {"CHEMBL1": {"status": "QUERY_ERROR", "hits": []}, "act:CHEMBL1": {"status": "QUERY_ERROR", "hits": []}}
         got = [ci.target_evidence(res("ifenprodil"), ["GRIN2B"], ES, q)["per_gene"]["GRIN2B"]["level"] for q in (stub(empty), stub(err), None)]
         self.assertEqual(got, ["EMPTY_RESULT", "READ_ERROR", "NOT_READ"])
+
+    def test_an_incomplete_read_is_not_an_empty_result(self):
+        """Synthetic answers in the shape of the ChEMBL adapter: a truncated, partly failed or gene-less activity read that found nothing for the gene is READ_INCOMPLETE, not EMPTY_RESULT."""
+        def one(coverage, hits):
+            return stub({"CHEMBL1": {"status": "NO_MATCH_FOUND", "hits": []},
+                         "act:CHEMBL1": {"status": "MATCH_FOUND", "coverage": coverage, "total_count": 900, "retrieved": len(hits), "hits": hits}})
+        other = [act("SIGMAR1", "Homo sapiens")]
+        for coverage in ("TRUNCATED", "PARTIAL_ERROR", "COMPLETE_TARGET_GENES_MISSING"):
+            t = ci.target_evidence(res("ifenprodil"), ["GRIN2B"], ES, one(coverage, other))
+            self.assertEqual(t["per_gene"]["GRIN2B"]["level"], "READ_INCOMPLETE", coverage)
+            self.assertIn(coverage, t["per_gene"]["GRIN2B"]["rows"][0])
+        # a complete read of the same rows stays EMPTY_RESULT; a hit in the part read is still a hit
+        self.assertEqual(ci.target_evidence(res("ifenprodil"), ["GRIN2B"], ES, one("COMPLETE", other))["per_gene"]["GRIN2B"]["level"], "EMPTY_RESULT")
+        hit = ci.target_evidence(res("ifenprodil"), ["GRIN2B"], ES, one("TRUNCATED", other + [act("GRIN2B", "Homo sapiens")]))
+        self.assertEqual(hit["per_gene"]["GRIN2B"]["level"], "MEASURED_ACTIVITY_HUMAN")
+
+    def test_a_chembl_id_that_does_not_exist_is_not_an_empty_result(self):
+        """Through the real ChEMBL adapter with a canned fetch: the declared id answers 404 and the activity read finds nothing, with coverage COMPLETE."""
+        from adapters import chembl
+
+        def fetch(url, **kw):
+            if "/molecule/CHEMBL9999999.json" in url:
+                return 404, {"error": "not found"}
+            if "activity.json" in url:
+                return 200, {"activities": [], "page_meta": {"total_count": 0, "next": None}}
+            return 200, {"chembl_db_version": "ChEMBL_37"}
+        stale = {"query": "x", "candidates": [], "declarations": [{"role": "identity", "chembl_id": "CHEMBL9999999", "query_name": "x"}], "label_conflict": []}
+        t = ci.target_evidence(stale, ["GRIN2B"], [], lambda req: chembl.query(req, fetch=fetch))
+        self.assertEqual(t["per_gene"]["GRIN2B"]["level"], "ID_NOT_RESOLVED")
+        self.assertIn("CHEMBL9999999", t["per_gene"]["GRIN2B"]["rows"][0])
+
+    def test_an_answer_with_no_defined_state_is_an_error_never_an_empty_result(self):
+        for answer in ({}, {"status": "TIMEOUT"}, {"status": None, "hits": None}):
+            t = ci.target_evidence(res("ifenprodil"), ["GRIN2B"], ES, lambda req, a=answer: a)
+            self.assertEqual(t["per_gene"]["GRIN2B"]["level"], "READ_ERROR", answer)
 
     def test_label_conflict_keeps_the_record_rows_out_of_the_attribution(self):
         a = {"CHEMBL275006": {"status": "MATCH_FOUND", "hits": []},

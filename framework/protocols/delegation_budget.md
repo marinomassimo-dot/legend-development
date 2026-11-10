@@ -78,6 +78,10 @@ plan, and no additional spend is enabled to make a package fit.
 results, each carried to the end of the slice, was about 14%; the largest results were 4-20 thousand characters. So the cost followed the length of the context a mandate started in, not the
 size of its outputs. The lever is where a mandate starts: an independent mandate begins from the checkpoint (`mandate_continuity.py status`, the record's CHECKPOINT) and opens the originals it needs,
 in a window that does not carry the previous mandate. Originals stay accessible and are opened whenever a decision needs them; a checkpoint points to them and never replaces one.
+Measured on real delegate runs (HE43, 2026-11-10, `disease-models/wwox/research/drug_repurposing/he43_20261110/README.md`: three questions answerable from the repository, Sonnet at low effort, one run per cell): starting from a checkpoint
+with access to the originals cost 20.3-24.6 thousand tokens and 2-4 tool calls and answered correctly; naming the existing reader and its key cost 19.3-21.1 thousand and 2 calls and answered correctly;
+reading three READMEs completely before answering (a simulation of carrying context, not a session) cost 30.0-30.3 thousand and gave an incomplete answer in both questions where it was tried: the facts asked for were in an original it
+had not been pointed to. The floor of a fresh delegate is about 19 thousand tokens, so the savings of a targeted start are 5-15% and the avoided loss is the omission. One run per cell and one model: no variance is claimed.
 
 ## 8 · A verifier checks what decides, not the whole search
 
