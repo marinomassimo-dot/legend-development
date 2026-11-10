@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-10T23:03:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "not_present",
+  "references": "not_read",
+  "results": "not_present",
+  "supplementary": "not_present",
+  "tables": "read"
+ },
+ "event_at": "2026-11-10T23:11:00Z",
+ "event_id": "FTR-20261110-38443647-96",
+ "evidence_basis": [
+  "The LDH section, Table 2, the exposure and concentration paragraph, the antiepileptic section and the ranking sentence read; GABA, ion-channel and CYP sections not read; narrative review, copied numbers.",
+  "verbatim_locator | proposition: LDH inhibition needs high concentrations, other mechanisms involved | Antiepileptic Activity | \"high concentrations (500 µM) of STP were needed, suggesting that other MoAs were involved in its in vivo antiepileptic effects\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a4/levers.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a4/k_coupling.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a4/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a4/evidence.tsv"
+ ],
+ "prior_receipt": "FTR-20261027-38443647-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page PMC10960919 fetched with plain curl",
+ "study_id": {
+  "doi": "10.1007/s12325-024-02813-0",
+  "pmid": "38443647"
+ },
+ "workflow": "SCI44 package A step A4 producer og-r (pdh_pdk_sci44_20261110). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
