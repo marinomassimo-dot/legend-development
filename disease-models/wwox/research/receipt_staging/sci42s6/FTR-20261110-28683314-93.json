@@ -18,7 +18,7 @@
  "evidence_basis": [
   "Mouse prefrontal layer 2/3 chloride development: Results and Methods read as text; the author-manuscript figure images were not reachable (404 on the bucket and the PMC bin route), so numbers come from the Results text.",
   "verbatim_locator | proposition: dendritic E_Cl at rest level from P14 | Results | \"dendritic ECl hyperpolarized to Vrest and remained constant through all subsequent ages\"",
-  "verbatim_locator | proposition: KCC2 in PFC membranes P9 to P23 | Results | \"P9: 43% ± 2%, n = 6; P13–P15: 100% ± 3.6%, n = 13; P23: 143% ± 18%\""
+  "verbatim_locator | proposition: KCC2 in PFC membranes P9 to P23 | Results | \"P9: 43% \u00b1 2%, n = 6; P13\u2013P15: 100% \u00b1 3.6%, n = 13; P23: 143% \u00b1 18%\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

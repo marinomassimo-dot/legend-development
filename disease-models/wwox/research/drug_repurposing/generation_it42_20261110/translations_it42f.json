@@ -1,0 +1,38 @@
+{
+ "25891d6163d1": {
+  "it": "Risolto alla fonte: la tabella dell'articolo dà GluN2B 113, GluN2C 7,0 e GluN2D 2,7 micromolare; le righe del registro per GluN2B e GluN2C contengono numeri micromolari inseriti come nanomolari (inferenza per la causa, dato per l'identità dei numeri).",
+  "fr": "Résolu à la source : le tableau de l'article donne GluN2B 113, GluN2C 7,0 et GluN2D 2,7 micromolaire ; les lignes du registre pour GluN2B et GluN2C contiennent des nombres micromolaires saisis comme nanomolaires (inférence pour la cause, donnée pour l'identité des nombres).",
+  "es": "Resuelto en la fuente: la tabla del artículo da GluN2B 113, GluN2C 7,0 y GluN2D 2,7 micromolar; las filas del registro para GluN2B y GluN2C contienen números micromolares introducidos como nanomolares (inferencia para la causa, dato para la identidad de los números).",
+  "de": "An der Quelle geklärt: Die Tabelle der Arbeit nennt GluN2B 113, GluN2C 7,0 und GluN2D 2,7 mikromolar; die Registerzeilen für GluN2B und GluN2C enthalten mikromolare Zahlen, die als nanomolar eingetragen wurden (Schlussfolgerung für die Ursache, Datum für die Identität der Zahlen)."
+ },
+ "34131fc4458c": {
+  "it": "Non è riportato un massimo per subunità; il valore GluN2B è una IC50 stimata con inibizione completa supposta. Un valore di registro sotto un bersaglio può sbagliare per unità, non solo per subunità.",
+  "fr": "Aucun maximum par sous-unité n'est rapporté ; la valeur GluN2B est une IC50 ajustée avec une inhibition complète supposée. Une valeur de registre sous une cible peut être fausse par l'unité, pas seulement par la sous-unité.",
+  "es": "No se informa un máximo por subunidad; el valor GluN2B es una IC50 ajustada con inhibición completa supuesta. Un valor de registro bajo una diana puede fallar por la unidad, no solo por la subunidad.",
+  "de": "Es wird kein Maximum pro Untereinheit berichtet; der GluN2B-Wert ist eine angepasste IC50 unter Annahme vollständiger Hemmung. Ein Registerwert unter einer Zielstruktur kann an der Einheit scheitern, nicht nur an der Untereinheit."
+ },
+ "44f1841a4f7f": {
+  "it": "Rieseguire la registrazione delle sIPSC con blocco del glutammato, soglia fissa e riassunto per animale per prima, poi E_GABA con patch perforato con gramicidina in animali della stessa nidiata, poi la serie di età; la leva, contro un potenziatore GABA-A e una soppressione non GABAergica appaiati allo stesso effetto misurato, solo dopo.",
+  "fr": "Refaire d'abord l'enregistrement des sIPSC sous blocage du glutamate, avec un seuil fixe et un résumé par animal, puis E_GABA par patch perforé à la gramicidine chez des animaux de la même portée, puis la série d'âges ; le levier, contre un potentialisateur GABA-A et une suppression non GABAergique appariés au même effet mesuré, seulement après.",
+  "es": "Repetir primero el registro de las sIPSC con bloqueo del glutamato, umbral fijo y resumen por animal, luego E_GABA con parche perforado con gramicidina en animales de la misma camada, luego la serie de edades; la palanca, frente a un potenciador GABA-A y una supresión no GABAérgica igualados al mismo efecto medido, solo después.",
+  "de": "Zuerst die sIPSC unter Glutamatblockade mit festem Schwellenwert und Zusammenfassung pro Tier erneut ableiten, dann E_GABA mit Gramicidin-Perforated-Patch bei Wurfgeschwistern, dann die Altersreihe; der Hebel, gegen einen GABA-A-Potenzierer und eine nicht-GABAerge Unterdrückung, jeweils auf denselben gemessenen Effekt abgestimmt, erst danach."
+ },
+ "8469c8e9d812": {
+  "it": "Nessuno; tenuta perché la collocazione nel registro non sia scambiata per evidenza: la riga del registro non è evidenza di potenza su GluN2B in nanomolare.",
+  "fr": "Aucun ; conservée pour que le classement dans le registre ne soit pas pris pour une preuve : la ligne du registre n'est pas une preuve de puissance sur GluN2B en nanomolaire.",
+  "es": "Ninguno; se conserva para que la ubicación en el registro no se confunda con evidencia: la fila del registro no es evidencia de potencia sobre GluN2B en nanomolar.",
+  "de": "Keiner; aufbewahrt, damit die Einordnung im Register nicht für Evidenz gehalten wird: die Registerzeile ist kein Beleg für eine GluN2B-Potenz in nanomolar."
+ },
+ "fea73c1a198c": {
+  "it": "La riga GluN2B del registro è una misura su GluN2B (113 micromolare) salvata come nanomolare; DQP-1105 preferisce GluN2C e GluN2D: escluso dal confronto GluN2B",
+  "fr": "La ligne GluN2B du registre est une mesure sur GluN2B (113 micromolaire) enregistrée en nanomolaire ; DQP-1105 préfère GluN2C et GluN2D : exclu de la comparaison GluN2B",
+  "es": "La fila GluN2B del registro es una medida sobre GluN2B (113 micromolar) guardada como nanomolar; DQP-1105 prefiere GluN2C y GluN2D: excluido de la comparación GluN2B",
+  "de": "Die GluN2B-Zeile des Registers ist eine GluN2B-Messung (113 mikromolar), als nanomolar gespeichert; DQP-1105 bevorzugt GluN2C und GluN2D: vom GluN2B-Vergleich ausgeschlossen"
+ },
+ "a0da570946e1": {
+  "it": "[SCI42] Ordine dell'esperimento minimo inibitorio: M03 (ripetere la registrazione delle sIPSC con blocco del glutammato, soglia fissa, riassunto per animale), poi M01 (E_GABA con patch perforato con gramicidina, knockout, eterozigoti e wild type della stessa nidiata), poi M02 (serie di età con controllo della selezione dei sopravvissuti); M05 e M06 se M03 conferma la perdita di ampiezza.",
+  "fr": "[SCI42] Ordre de l'expérience minimale inhibitrice : M03 (refaire l'enregistrement des sIPSC avec blocage du glutamate, seuil fixe, résumé par animal), puis M01 (E_GABA par patch perforé à la gramicidine, knockout, hétérozygotes et sauvages de la même portée), puis M02 (série d'âges avec contrôle de la sélection des survivants) ; M05 et M06 si M03 confirme la perte d'amplitude.",
+  "es": "[SCI42] Orden del experimento mínimo inhibitorio: M03 (repetir el registro de las sIPSC con bloqueo del glutamato, umbral fijo, resumen por animal), luego M01 (E_GABA con parche perforado con gramicidina, knockout, heterocigotos y silvestres de la misma camada), luego M02 (serie de edades con control de la selección de supervivientes); M05 y M06 si M03 confirma la pérdida de amplitud.",
+  "de": "[SCI42] Reihenfolge des inhibitorischen Minimalexperiments: M03 (sIPSC unter Glutamatblockade mit festem Schwellenwert und Zusammenfassung pro Tier erneut ableiten), dann M01 (E_GABA mit Gramicidin-Perforated-Patch, Knockout, Heterozygote und Wildtyp-Wurfgeschwister), dann M02 (Altersreihe mit Kontrolle der Überlebendenauswahl); M05 und M06, wenn M03 den Amplitudenverlust bestätigt."
+ }
+}

@@ -1,7 +1,7 @@
 {
- "64c806f2ad2b": {
+ "25891d6163d1": {
   "mode": "NEW",
-  "english": "Repeat the slice burst assay with the magnesium concentration reported, a d-APV arm and a GluN2B NAM arm, each at matched measured NMDAR-current reduction (one ifenprodil-site GluN2B NAM; a second NAM of the same site controls chemotype only, and only if its own maximum on triheteromers is known (ifenprodil 32 percent, radiprodil 45 percent in rat: each molecule has its own); compare with d-APV only up to the NAM's measured removable share; measure the d-APV abolition threshold x and the NAM removable fraction first), vehicle time-matched, animal as the unit; memantine only afterwards, with the magnesium concentration and holding voltage stated, beside the tool compound, and the untreated same-genotype comparator. [IT40] B6 Report bath magnesium, K+, temperature and blockers actually present as measured values; use a within-slice paired design; add an AMPA/kainate block arm verified by the fast EPSC (abolition alone is not informative, because loss of magnesium relief would abolish an NMDAR-regenerative burst too); add a matched-effect control read on at least two metrics with a receptor-agnostic release-reducing control; add a GABA-A arm because the sIPSC amplitude is halved; state the order of application and washout as part of the design. [SCI42] Report bath pH (and the buffer system) as a measured value with magnesium and potassium; read the percent of evoked synaptic charge removed for every drug so the matched drive-reduction control can be matched; a pH-dependent GluN2B tool is considered only after the tissue pH is measured, with the ifenprodil-site tool and d-APV at the same two pH values.",
+  "english": "Resolved at source: the paper's table gives GluN2B 113, GluN2C 7.0 and GluN2D 2.7 micromolar; the registry rows for GluN2B and GluN2C hold micromolar numbers entered as nanomolar (inference for the cause, data for the identity of the numbers).",
   "langs": [
    "it",
    "fr",
@@ -9,9 +9,52 @@
    "de"
   ]
  },
- "801774f5754a": {
+ "34131fc4458c": {
   "mode": "NEW",
-  "english": "A second scaffold (sharing a structural arrangement with ifenprodil-type ligands: inference from structure) read after the ifenprodil-site tool, to ask whether a different scaffold removes the same measured percent of the isolated NMDA-receptor current.",
+  "english": "No maximum per subunit is reported; the GluN2B value is a fitted IC50 with complete inhibition assumed. A registry value under a target can fail by unit, not only by subunit.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "44f1841a4f7f": {
+  "mode": "NEW",
+  "english": "Re-record the sIPSC under glutamate block with a fixed threshold and per-animal summary first, then E_GABA by gramicidin perforated patch in littermates, then the age series; the lever, against a GABA-A potentiator and a non-GABAergic suppression matched to the same measured effect, only after these.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "8469c8e9d812": {
+  "mode": "NEW",
+  "english": "None; kept so the filing is not mistaken for evidence: the registry row is not evidence of GluN2B potency in nanomolar.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "a0da570946e1": {
+  "mode": "EDIT",
+  "old_key": "f8998873e611",
+  "old_english": "Per-animal parvalbumin cell counts by immunostaining in neuron-targeted Wwox deletion against Cre-only controls, at least 3 animals per arm (reopening condition (c) of NP3A1), read together with a maturation and identity marker panel in the same animals, and, where the data holders allow, intrinsic-property and inhibitory-input recordings from labelled parvalbumin cells and a circuit-level read. Alternatives that also reopen it: a deposited library or animal index for GSE158684, or an independent neuron-targeted deletion dataset with at least 3 animals per arm and a parvalbumin-enriched capture. The result is read as six separate rows (number, identity and maturation, marker expression, intrinsic properties, synaptic input, circuit function); a change in one is not carried to another. In every animal used (P14 to P17, matching the phenotype window), on the same sections: a parvalbumin marker, the Rosa26 tdTomato reporter and a Wwox read-out, reporting per animal the fraction of parvalbumin cells reporter-positive, the fraction Wwox-negative and their concordance, beside cell number, identity and marker expression; transcript, protein, activity, cell number and circuit function stay separate results.",
+  "added_english": "[SCI42] Order of the inhibitory minimum experiment: M03 (re-record sIPSC with glutamate block, fixed threshold, per-animal summary), then M01 (E_GABA by gramicidin perforated patch, knockout, heterozygote and wild-type littermates), then M02 (age series with a survivor-selection control); M05 and M06 if M03 confirms the amplitude loss.",
+  "new_english": "Per-animal parvalbumin cell counts by immunostaining in neuron-targeted Wwox deletion against Cre-only controls, at least 3 animals per arm (reopening condition (c) of NP3A1), read together with a maturation and identity marker panel in the same animals, and, where the data holders allow, intrinsic-property and inhibitory-input recordings from labelled parvalbumin cells and a circuit-level read. Alternatives that also reopen it: a deposited library or animal index for GSE158684, or an independent neuron-targeted deletion dataset with at least 3 animals per arm and a parvalbumin-enriched capture. The result is read as six separate rows (number, identity and maturation, marker expression, intrinsic properties, synaptic input, circuit function); a change in one is not carried to another. In every animal used (P14 to P17, matching the phenotype window), on the same sections: a parvalbumin marker, the Rosa26 tdTomato reporter and a Wwox read-out, reporting per animal the fraction of parvalbumin cells reporter-positive, the fraction Wwox-negative and their concordance, beside cell number, identity and marker expression; transcript, protein, activity, cell number and circuit function stay separate results. [SCI42] Order of the inhibitory minimum experiment: M03 (re-record sIPSC with glutamate block, fixed threshold, per-animal summary), then M01 (E_GABA by gramicidin perforated patch, knockout, heterozygote and wild-type littermates), then M02 (age series with a survivor-selection control); M05 and M06 if M03 confirms the amplitude loss.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "fea73c1a198c": {
+  "mode": "NEW",
+  "english": "The registry GluN2B row is a GluN2B measurement (113 micromolar) stored as nanomolar; DQP-1105 prefers GluN2C and GluN2D: excluded from the GluN2B comparison",
   "langs": [
    "it",
    "fr",

@@ -15,10 +15,6 @@
   "src": "en",
   "text": "A peptide inhibitor of the chaperone HSC70 (HSPA8) used as a cell-level probe, with lysosomal and genetic controls (identified by its ChEMBL record below)"
  },
- "021013ae30df": {
-  "src": "en",
-  "text": "None; kept so the filing is not mistaken for evidence."
- },
  "028c442d8086": {
   "src": "en",
   "text": "WWOX-system: blocking NMDAR abolished the burst in the WWOX-deficient slice, one drug, one preparation. The recording bath magnesium is not stated in the source, and the incubation solution already contains magnesium. [IT36] Memantine block of extrasynaptic current was about 1.9-fold that of synaptic in one autaptic design; a later paper in culture found little extrasynaptic selectivity at 2 uM; preference is not exclusion and the minutes-scale premise is untested at WWOX burst durations. [IT36] burst duration median 0.66 s (Supplementary Table S1), intermediate between a synaptic pulse and the minutes-scale activation of the memantine premise; the premise is untested at this scale. [IT39] Selfotel: the head-injury trial was stopped after a signal in a stroke study, and a later analysis did not confirm excess mortality in head injury (abstract level). Perzinfotel is NR2A-preferring. The carbenoxolone half of the gap-junction logic carries its own caveat (it is not specific to gap junctions)."
@@ -58,10 +54,6 @@
  "0754c6e712e4": {
   "src": "it",
   "text": "Lavoro su animali; linea con delezione neurone-specifica non disponibile (non nota); denominatori di RM solo a livello di abstract (2 su 2 esposti, in un rapporto selezionato per il reperto; frequenza, non rischio attribuibile); il denominatore di una coorte di 64 bambini è probabilmente quello che li comprende, non verificato."
- },
- "076b4cff6cc3": {
-  "src": "en",
-  "text": "Filing under a target does not make the measurement the target's; the same ligand has its own rows for other subunits, and no transfer is made."
  },
  "0838f09e6cea": {
   "src": "en",
@@ -247,6 +239,10 @@
   "src": "en",
   "text": "Queried: this need's three observation rows; the pro-myelinating class unit and its abstention; the search layer over the six myelination targets (546 associations, 313 families, none direction-coherent). The emptiness is a vocabulary mismatch this package measured, not a claim that no pro-myelinating literature exists."
  },
+ "25891d6163d1": {
+  "src": "en",
+  "text": "Resolved at source: the paper's table gives GluN2B 113, GluN2C 7.0 and GluN2D 2.7 micromolar; the registry rows for GluN2B and GluN2C hold micromolar numbers entered as nanomolar (inference for the cause, data for the identity of the numbers)."
+ },
  "25b2eb3714bd": {
   "src": "en",
   "text": "INV-16"
@@ -307,10 +303,6 @@
   "src": "en",
   "text": "Sag and rebound are larger in the knockout; no Ih-blocker arm and no voltage-clamp current exist in the records read. In normal cortex an Ih blocker reduces sag."
  },
- "2d4cff76776a": {
-  "src": "en",
-  "text": "The registry row's assay text names another subunit; to which subunit the value belongs is unresolved, so no GluN2B statement is drawn."
- },
  "2dae8e3c14af": {
   "src": "en",
   "text": "It separates a deficit of GABA supply from a postsynaptic or chloride-gradient deficit: only the first is helped by more GABA."
@@ -362,6 +354,10 @@
  "33f1d5bb1e2d": {
   "src": "en",
   "text": "Agonist probe for the receptors of thyroid hormone (a clinical-stage analogue, identified by its ChEMBL record below), with liothyronine as the approved comparator"
+ },
+ "34131fc4458c": {
+  "src": "en",
+  "text": "No maximum per subunit is reported; the GluN2B value is a fitted IC50 with complete inhibition assumed. A registry value under a target can fail by unit, not only by subunit."
  },
  "345a9097699c": {
   "src": "en",
@@ -510,6 +506,10 @@
  "44e42297575e": {
   "src": "it",
   "text": "risolvere una premessa"
+ },
+ "44f1841a4f7f": {
+  "src": "en",
+  "text": "Re-record the sIPSC under glutamate block with a fixed threshold and per-animal summary first, then E_GABA by gramicidin perforated patch in littermates, then the age series; the lever, against a GABA-A potentiator and a non-GABAergic suppression matched to the same measured effect, only after these."
  },
  "4519813edc31": {
   "src": "it",
@@ -955,6 +955,10 @@
   "src": "en",
   "text": "In knockout, heterozygote and wild-type slices: sag, resting potential, input resistance, rebound and burst incidence before and after two Ih blockers of different chemotypes (the second so that an off-target action is not read as Ih), with a current-clamp step that matches the resting potential and the peak potential, with a smaller cell or immature membrane listed as its own candidate beside branch D, and a voltage-clamp read of the blocker-sensitive current in a subset of cells; animals, not cells, are the replicates. Branch D adds the potassium-current arm: the potassium currents sensitive to a Kv7 blocker and to a Kir-channel blocker in voltage clamp, and input resistance read with synaptic transmission blocked. [IT36] A first-generation Ih blocker at 50 uM is about 40 times its sodium-current IC50 in DRG neurons (age not stated); read a second chemotype and the blocker-sensitive current in voltage clamp; nickel/Z944 and Kv7 arms separate. [IT40] A4 Report access resistance, bridge balance and capacitance by genotype; add a Ba2+- or Kv7-blocker-sensitive difference current with its zero-crossing against E_K (about -97 to -98 mV from the declared solutions; the recorded potentials need a junction correction of about -13 mV that 34634460 did not measure, which puts the estimated sag peaks about 16-21 mV below E_K, so the prediction applies to the voltage-clamp difference current, not to the sag peak)."
  },
+ "8469c8e9d812": {
+  "src": "en",
+  "text": "None; kept so the filing is not mistaken for evidence: the registry row is not evidence of GluN2B potency in nanomolar."
+ },
  "85aad315b6fd": {
   "src": "it",
   "text": "Marcatori dei progenitori (glia radiale)"
@@ -1187,6 +1191,10 @@
   "src": "it",
   "text": "Misure biochimiche su tessuto o cellule dei laboratori d'origine; il materiale non è disponibile qui."
  },
+ "a0da570946e1": {
+  "src": "en",
+  "text": "Per-animal parvalbumin cell counts by immunostaining in neuron-targeted Wwox deletion against Cre-only controls, at least 3 animals per arm (reopening condition (c) of NP3A1), read together with a maturation and identity marker panel in the same animals, and, where the data holders allow, intrinsic-property and inhibitory-input recordings from labelled parvalbumin cells and a circuit-level read. Alternatives that also reopen it: a deposited library or animal index for GSE158684, or an independent neuron-targeted deletion dataset with at least 3 animals per arm and a parvalbumin-enriched capture. The result is read as six separate rows (number, identity and maturation, marker expression, intrinsic properties, synaptic input, circuit function); a change in one is not carried to another. In every animal used (P14 to P17, matching the phenotype window), on the same sections: a parvalbumin marker, the Rosa26 tdTomato reporter and a Wwox read-out, reporting per animal the fraction of parvalbumin cells reporter-positive, the fraction Wwox-negative and their concordance, beside cell number, identity and marker expression; transcript, protein, activity, cell number and circuit function stay separate results. [SCI42] Order of the inhibitory minimum experiment: M03 (re-record sIPSC with glutamate block, fixed threshold, per-animal summary), then M01 (E_GABA by gramicidin perforated patch, knockout, heterozygote and wild-type littermates), then M02 (age series with a survivor-selection control); M05 and M06 if M03 confirms the amplitude loss."
+ },
  "a28ffc9eb88a": {
   "src": "en",
   "text": "Up: a difference current reversing near the potassium equilibrium potential in Wwox neurons, and a matched-effect control that fails to reproduce the fall. Down: passive size with a seal leak explaining the observations."
@@ -1262,10 +1270,6 @@
  "a8fbe1492038": {
   "src": "en",
   "text": "Premise measurement: the transcript deficit is observed in bulk and in one nuclear pool per arm; cell number, identity, intrinsic properties, synaptic input and circuit function are not measured at animal level by any file read here (no ranked unit, so no evaluation depth applies: this is not a depth of zero)"
- },
- "aad161d764b3": {
-  "src": "en",
-  "text": "Evoked IPSC amplitude, E/I ratio and the chloride reversal potential first; then the lever against a GABA-A potentiator and a non-GABAergic suppression, each matched to the same measured effect."
  },
  "ab1a6c5c29fc": {
   "src": "it",
@@ -1751,10 +1755,6 @@
   "src": "en",
   "text": "E2 - card reviewed, abstention (premise named, no test designed)"
  },
- "e89141767dcf": {
-  "src": "en",
-  "text": "Registry row under GluN2B whose assay text names GluN2C"
- },
  "e9520227b9c9": {
   "src": "en",
   "text": "Development feasibility: a tool compound for in vitro and mouse work only; brain entry is restricted by efflux in vitro and there is no human exposure statement."
@@ -1855,10 +1855,6 @@
   "src": "en",
   "text": "Generated by LEGEND (generator refresh IT21 P2, proposal IT21P2-0195, harm arm of the cytokine question); a thread already generated in IT9 and re-emitted, qualified in IT21 P4a and kept conditional with the scope narrowed to mouse glial systems."
  },
- "f8998873e611": {
-  "src": "en",
-  "text": "Per-animal parvalbumin cell counts by immunostaining in neuron-targeted Wwox deletion against Cre-only controls, at least 3 animals per arm (reopening condition (c) of NP3A1), read together with a maturation and identity marker panel in the same animals, and, where the data holders allow, intrinsic-property and inhibitory-input recordings from labelled parvalbumin cells and a circuit-level read. Alternatives that also reopen it: a deposited library or animal index for GSE158684, or an independent neuron-targeted deletion dataset with at least 3 animals per arm and a parvalbumin-enriched capture. The result is read as six separate rows (number, identity and maturation, marker expression, intrinsic properties, synaptic input, circuit function); a change in one is not carried to another. In every animal used (P14 to P17, matching the phenotype window), on the same sections: a parvalbumin marker, the Rosa26 tdTomato reporter and a Wwox read-out, reporting per animal the fraction of parvalbumin cells reporter-positive, the fraction Wwox-negative and their concordance, beside cell number, identity and marker expression; transcript, protein, activity, cell number and circuit function stay separate results."
- },
  "f8c3ae2a2f19": {
   "src": "en",
   "text": "NMDAR antagonism (the carded tool compound and the clinically used class)"
@@ -1910,5 +1906,9 @@
  "fe2c014ac74e": {
   "src": "en",
   "text": "Potency is pH-dependent (declared about 6-fold; IC50 21 and 130 nM at pH 6.9 and 7.6, abstract level, same developer); for the series prototype the maximum moved little (76 to 83 percent, measured in oocytes)."
+ },
+ "fea73c1a198c": {
+  "src": "en",
+  "text": "The registry GluN2B row is a GluN2B measurement (113 micromolar) stored as nanomolar; DQP-1105 prefers GluN2C and GluN2D: excluded from the GluN2B comparison"
  }
 }
