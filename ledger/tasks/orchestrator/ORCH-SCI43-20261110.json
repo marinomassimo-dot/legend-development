@@ -1,0 +1,77 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-SCI43-20261110",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Operator mandate pasted 2026-11-10 (SCI43): new pharmacological levers from membrane physiology, the potassium-conductance branch (INV-18 branch D). Can a change in K+ conductances explain part of the resting potential / input resistance / sag / rebound combination and offer a lever different from or complementary to HCN? Rivals: Ih, K+ conductances, maturation or cell size, recording conditions, network consequence or compensation. Mission: a concretely usable pharmacological or experimental possibility for the generative engine, not another critical review.",
+ "START_UTC": "2026-11-10T18:14:43Z",
+ "BASELINE": "main a4799320 (development/main same). Worktree .claude/worktrees/sci43, branch task/sci43. IT43 integrator has worktree it43 (locked, not touched); he43 is Harness.",
+ "CURRENT_PACKAGE": {
+  "id": "S0",
+  "state": "started",
+  "delegate_active": "none"
+ },
+ "RESUME": "CHECKPOINT: S0. Read INV-18 (investigations_it20.tsv), generation_it40 CP-MH1 and reader_view MH1, hcn_20261107, comparators_it39 INV-18 rows. Debt confirmed: Kv7 openers abstract only, XE991 unread, Wang 2016 unread, K2P/Kir tool papers unread in cortical L2/3 pyramidal neurons.",
+ "DECISIONS_TAKEN": [],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "AUTHORISED_QUEUE_20261110": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "S0 reconcile SCI42, read INV-18 row and linked dossiers, check the K-conductance debt, write rival explanations and outcome table before any search",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    },
+    {
+     "step": "S1 decisive question and rival explanations written before search",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    },
+    {
+     "step": "S2 primary sources: Kv7 / Kir / K2P in cortical pyramidal neurons (current measured, voltage dependence, modulators, alternative actions)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    },
+    {
+     "step": "S3 hypothesis generation before names, then catalogue and identity, roles",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    },
+    {
+     "step": "S4 minimum discriminating comparison and outcome matrix",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    },
+    {
+     "step": "S5 independent blind verification and recheck of substantive corrections",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    },
+    {
+     "step": "S6 delivery to IT43 (consumer_delta, readable tables, staged receipts)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    },
+    {
+     "step": "S7 tail: remaining premise, obscured alternative, small analysis if public data fit, DREAM, next brief",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  }
+ }
+}
