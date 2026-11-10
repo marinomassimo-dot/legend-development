@@ -7,17 +7,10 @@
  "OBJECTIVE": "IT42: from available relations to verifiable pharmacological hypotheses actually used: separate source coverage from reasoning value, trace consumption to decisions, propagate corrections, one second relation, investigations view and next brief.",
  "START_UTC": "2026-11-10T08:00:00Z",
  "RESUME": {
-  "checkpoint": {
-   "last_verified_result": "2533770c published, CI success, site verified; third increment (S5/S6) applied locally with tests, view check/package/audit PASS",
-   "first_incomplete": "battery on the frozen third increment, publish, CI, site, closure commit, final report",
-   "files_to_open": "generation_it42_20261110/README.md; eval_summary.md",
-   "active_processes": "none until the battery starts",
-   "real_dependencies": "none (SCI42 and Harness idle on main)",
-   "next_step": "freeze, battery by PID, publish with --expect-sha, CI by the Actions page, closure"
-  }
+  "note": "IT42 complete 2026-11-10; residuals: DGIdb claims read by no search path; reference positives for Q1 only; comparison_rows_it41.tsv has no automatic consumer; measurements M01-M07 (tissue pH, d-APV threshold, removable fraction), M03/M01/M02 (inhibitory axis) are new measurements, not commissioned; no predictive validation; worktrees it40..it42 and task branches left in place (removal needs written authorisation)"
  },
  "AUTHORISED_QUEUE_20261108": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P0": {
    "order": 1,
    "steps": [
@@ -122,9 +115,9 @@
    "steps": [
     {
      "step": "Integrate, publish with SHA check, CI of the published commit, batteries by SHA, cleanup of own integrated material, final report",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "Published 2533770c (candidate 53cf4c18 PASS WITH SKIPS 228 targets; 39ec99a0 PASS WITH SKIPS) with CI gate #636 success and shareable-view #27 success; site 200 in five languages with 12 entries, no names, identity badges and the Foundation link. Third increment (SCI42 S5/S6, 9 receipts, view): battery, publication, CI and site recorded at closure. Third increment battery 164a1d1e PASS WITH SKIPS (see log). Publication of the third increment, its CI and the site check: see the closure commit."
+     "evidence": "Batteries by SHA: 39ec99a0 PASS WITH SKIPS (228 targets, 11 skipped); 53cf4c18 (merged with Harness 871f7ffa) PASS WITH SKIPS; 164a1d1e (SCI42 S5/S6 consumed) PASS WITH SKIPS; no FAIL in IT42 (FAILs of IT40/IT41 kept in their records). Published 2533770c and c02c323b (gate PASS, ls-remote verified); CI: release gate #636 success (2533770c) and #638 success (c02c323b), shareable-view workflows #27 and #28 success, #637 (SCI42 f84ee77b) success. Site HTTP 200 in five languages: 12 entries, no compound name in the shareable edition, identity badges (6 verified, 1 conflict, 1 partial, 4 unverified), the chloride-gradient order present, the Foundation link. Independent verifier (sonnet/high, 62 turns, 81,502 output tokens, 7.6 million cache-read, peak context 224,624, effort read back high on every turn)."
     }
    ]
   }
