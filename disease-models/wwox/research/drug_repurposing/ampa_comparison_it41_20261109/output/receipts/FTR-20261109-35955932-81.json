@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-09T22:52:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-09T22:55:00Z",
+ "event_id": "FTR-20261109-35955932-81",
+ "evidence_basis": [
+  "Abstract, Introduction, Results text on compound 28, Methods 3.2.1 (binding) and 3.2.2 (Ca2+ imaging), Table 1 and figure captions read as text; Discussion, supplement and references not read; no figure image viewed. Read for the NBQX reference values only.",
+  "verbatim_locator | proposition: NBQX Ki at recombinant rat iGluRs | Table 1 | \"NBQX 2.6 ± 0.1 5.4 ± 1.2 3.4 ± 0.6 152 ± 23 0.077 ± 0.010\"",
+  "verbatim_locator | proposition: binding assay conditions | Methods 3.2.1 | \"followed by 2 h equilibration at 4 °C\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/comparison.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/figure_notes.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/names_used.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "525660881be39a0f334a5369d15270ab919aa2f5ed87201b30a23debb5ebd2d7",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch (db=pmc, PMC9369419) fetched with plain curl on 2026-11-09; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.3390/ijms23158797",
+  "pmid": "35955932"
+ },
+ "workflow": "IT41 package A extra step (ORCH-IT41-20261109), producer ia-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

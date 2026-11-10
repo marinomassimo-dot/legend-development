@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-09T22:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-09T22:53:00Z",
+ "event_id": "FTR-20261109-36857176-81",
+ "evidence_basis": [
+  "Abstract, Introduction, Results (GluK2 inhibition by perampanel and the structure paragraphs), Discussion, figure captions and the key resources table read; Methods read only for the sample preparation lines that name the perampanel and DNQX concentrations (cryo-EM processing and modelling not read in detail); Fig 4 viewed as an image, the other figures captions only; the supplementary PDF not read.",
+  "verbatim_locator | proposition: GluK2 IC50 | Results | \"yielded the value of half-maximal inhibitory concentration, IC50 = 58 ± 1 μM (n = 8)\"",
+  "verbatim_locator | proposition: two of four sites occupied | Results | \"PMP was only found bound to the KAR sites associated with subunits A and C, not B and D\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/comparison.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/figure_notes.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/names_used.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "b12035533b0ea7ab593fec19354055e1957058ec11ad05608ab0fce4f4b73ba8",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch (db=pmc, PMC10440371) and PMC open-data bucket figure nihms-1878896-f0004, fetched with plain curl on 2026-11-09; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1016/j.celrep.2023.112124",
+  "pmid": "36857176"
+ },
+ "workflow": "IT41 package A, the AMPA comparison (ORCH-IT41-20261109), producer ia-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
