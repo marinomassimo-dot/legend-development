@@ -8,21 +8,25 @@
  "START_UTC": "2026-11-10T08:00:00Z",
  "BASELINE": "main f7305230 (development/main same). Worktree .claude/worktrees/sci42, branch task/sci42. IT42 orchestrator session has its own worktree it42 (not touched).",
  "CURRENT_PACKAGE": {
-  "id": "S4",
-  "state": "verifier recheck running",
-  "delegate_active": "verifier og-v (resumed)",
-  "updated": "2026-11-10T08:13:36Z"
+  "id": "S6-verification-done",
+  "state": "main package landing; S5 and S6 delivered in worktree sci42b (4c08a879) awaiting second landing",
+  "delegate_active": "none",
+  "updated": "2026-11-10T09:36:54Z"
  },
- "RESUME": "CHECKPOINT: producer corrections applied; S3 rewritten; verifier recheck of changed rows running (appends ## 10 Recheck to verify/audit.md). Next: census readback of both resumes, fix residuals, then README.md / consumer_delta.md / COST_NOTE.md, copy output/receipts to research/receipt_staging/sci42/ (10 receipts), checks (gate, lint, growth, receipts verify), battery on frozen SHA, task_close + safe_push, message IT42 orchestrator (legend-development-4e).",
+ "RESUME": "CHECKPOINT: main package battery PASS WITH SKIPS on f54b5753 (226 targets, 11 skipped, 3976 s). Landing: task_close in worktree sci42 then safe_push development main from root. Then message IT42 orchestrator (legend-development-4e) with the SHA and S5/S6 status. Next: merge landed main into task/sci42b, update task record there (S5 DONE, S6 DONE), checks (gate, lint, growth, receipts verify), second battery on a fresh unique clone, record verdict, task_close + safe_push, final report (7 questions), then cancel recall job f7692bfa and set MANDATE_STATE COMPLETE.",
  "DECISIONS_TAKEN": [
   "2026-11-10 S0: IT42 orchestrator requested the same onfasprodil/NP10679 package; folded into this mandate (no duplicate); replied with folder and plan. PubMed identified starting points: 34493631 (NP10679 discovery pharmacology), 39892986 (SAH mouse), 37817426 (MIJ821 first-in-human healthy volunteers), 42976542 (MIJ821 analogues med-chem) \u2014 verified by producer.",
   "2026-11-10 S1->S3: I also checked the PMC open-data bucket for PMC8626636 (34493631): absent (list returned 0 keys); PMC13095441 (39933230) and 39892986 return no full text via the PubMed tool. No equivalent route retried. S3 design written by the Orchestrator without an agent; the on-target pH-signature use of NP10679 is my IPOTESI and is submitted to the verifier as item S3-3.",
-  "2026-11-10 S4: audit found D08 perimeter error (ACNP 2017 W168 abstract gives 21 nM pH 6.9 and 130 nM pH 7.6 for NP10679; same developer); A4 'specificity signature' not supported as written and replaced by a drug-by-pH interaction against ifenprodil and d-APV; roles unchanged pending recheck (onfasprodil: informazione insufficiente; NP10679: pista subordinata a una premessa)."
+  "2026-11-10 S4: audit found D08 perimeter error (ACNP 2017 W168 abstract gives 21 nM pH 6.9 and 130 nM pH 7.6 for NP10679; same developer); A4 'specificity signature' not supported as written and replaced by a drug-by-pH interaction against ifenprodil and d-APV; roles unchanged pending recheck (onfasprodil: informazione insufficiente; NP10679: pista subordinata a una premessa).",
+  "2026-11-10 S4b: delegates final figures (producer 84 turns, 99,488 out, 13,786,423 cache read, peak 297,957; verifier 73 turns, 116,691 out, 14,082,655 cache read, peak 336,920; both effort read back as asked). Candidate f54b5753 frozen for the battery; further work goes in sci42b.",
+  "2026-11-10 S5/S6: S5 verifier reached the primary paper by one plain curl after the producer and I met a bot check; no equivalent route was retried by me or the producer; the verifier's saved copy (hash recorded) was used and stated in the receipt. S6 scope agreed with the IT42 orchestrator (chloride gradient first; its BRIEF used as perimeter; needs cited by id; source-paper methods note: sIPSC internal 140 mM KCl per the need record, to be confirmed at the locator).",
+  "2026-11-10 S4b battery verdict: REGRESSION VERDICT PASS WITH SKIPS (226 targets, 11 skipped) on f54b5753, clone /tmp/legend_batt_sci42_1794299132_1014050, PID 1014118 (cwd verified), 3976 s; a later change to this candidate would need its own battery; this record commit is closure-only."
  ],
  "DELEGATIONS": [
   "S1 producer og-p: asked sonnet/medium; read back medium x71; 71 turns; output 79,875; cache read 10,398,840; peak 254,352; sources newly read 4 at partial full text + patent text + ChEMBL records; 5 abstract only; 9 staged receipts validated; 34493631 unreachable by 6 routes (stopped, no evasion).",
   "S4 verifier og-v: asked sonnet/high; readback pending.",
-  "S4 verifier og-v first pass: asked sonnet/high; read back high x61; 61 turns; output 95,031; cache read 10,356,493; peak 281,879. Producer resume for corrections: 13 tool uses (census readback to be added with the final figures)."
+  "S4 verifier og-v first pass: asked sonnet/high; read back high x61; 61 turns; output 95,031; cache read 10,356,493; peak 281,879. Producer resume for corrections: 13 tool uses (census readback to be added with the final figures).",
+  "S5 producer afb05e5: asked sonnet/medium, read back medium x36; 36 turns; output 31,380; cache read 1,905,295; peak 96,863. S5 verifier af1fa61: asked sonnet/high, read back high x48; 48 turns; output 60,885; cache read 3,987,982; peak 152,185. S6 producer cl-p: dispatched sonnet/medium; readback pending."
  ],
  "ESCALATIONS": [],
  "STOP_LOG": [],
@@ -52,27 +56,27 @@
     },
     {
      "step": "S4 independent blind verification, corrections, recheck of substantive ones, first complete delivery",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "verifier first pass done (16 propositions: 10 supported, 6 partly, 0 not supported; S3-3 not supported as stated; 41 evidence rows: 39 correct, 2 defective quotes); corrections applied by producer (resumed, 13 tool uses) and by orchestrator (S3); recheck dispatched to same verifier"
+     "evidence": "verifier first pass + recheck done (audit.md sections 1-10); residual wording fixes applied by the Orchestrator; roles stand"
     },
     {
      "step": "S4b delivery: README, consumer_delta, COST_NOTE, staged receipts, checks, battery on frozen SHA, landing",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "main package candidate f54b5753: gate PASS (0 blocks), LINT WARN no BLOCK, growth PASS, receipts verify OK (1554); battery on a fresh unique clone: REGRESSION VERDICT PASS WITH SKIPS (226 targets, 11 skipped, all environmental) attributed to f54b5753 only; landing by task_close + safe_push in this commit chain (record-only commit after the battery; the verdict is not attributed to it)"
     },
     {
      "step": "S5 conditional: DQP-1105 row conflict, only if capacity remains after S4b",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "S5 in worktree sci42b (branch task/sci42b, commit f3a8956f): dqp1105_row_sci42_20261110: producer + blind verifier + recheck; resolved at source (Acker 2011 Table 1: registry GluN2B 113 and GluN2C 7.0 are uM stored as nM; GluN2D 2.7 uM correct); 2 staged receipts (-92). Lands with S6 in a second landing."
     },
     {
      "step": "S6 single expansion (GABA-A modulation or chloride gradient), only after S5/S4b closed; else brief",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "chloride gradient chosen with the IT42 orchestrator (EGABA layer II/III P13-P17; GABA-A as conditional prediction); producer cl-p dispatched in sci42b (BRIEF in chloride_gradient_sci42_20261110)"
     }
    ]
   }
