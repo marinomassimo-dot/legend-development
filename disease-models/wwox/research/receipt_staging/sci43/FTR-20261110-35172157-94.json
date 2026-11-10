@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-10T18:23:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-10T18:35:22Z",
+ "event_id": "FTR-20261110-35172157-94",
+ "evidence_basis": [
+  "Methods paragraph on ex-vivo recordings read for the junction potential and solutions (K5 only); nothing else of the paper was read. The Methods coverage is declared read for that one paragraph only, so the depth is partial.",
+  "verbatim_locator | proposition: measured junction potential | Methods | \"Reported voltages were corrected for the measured liquid junction potential (8 mV)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/potassium_conductances_sci43_20261110/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/potassium_conductances_sci43_20261110/output/shares.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "ba4ec0a86d28f8ca15c789d99a7f3aa39b87d89c441113717d7f450345c29080",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page https://pmc.ncbi.nlm.nih.gov/articles/PMC8967317/ fetched 2026-11-10 with plain curl; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1016/j.celrep.2022.110382",
+  "pmid": "35172157"
+ },
+ "workflow": "SCI43 K+ conductance question (ORCH-SCI43-20261110), producer og-k, staged as a JSON file for the integrator; the ledger was not written by the preparing actor. The claim for this PMID was made after the reading began (a slip of the producer, noted in phase_note.md)."
+}

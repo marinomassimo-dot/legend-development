@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-10T18:23:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-10T18:35:22Z",
+ "event_id": "FTR-20261110-28100740-94",
+ "evidence_basis": [
+  "Niday 2017 read from the PMC article page (plain curl): Methods in full, Results first four sections and Figure legends, Discussion paragraphs on XE991. Image viewed: Fig 2 (no Rin or RMP panel). Figs 1, 3-7 images not viewed; introduction not read; references used only to identify Guan 2011.",
+  "verbatim_locator | proposition: input resistance larger in Kcnq2 cKO | Results | \"control, 239 ± 17 MΩ, n = 21; Kcnq2 cKO, 299 ± 18 MΩ, n = 18\"",
+  "verbatim_locator | proposition: potentials were LJP corrected, calculated value | Methods | \"All reported potential values were corrected for the liquid junction potential, calculated to be −14.4 mV.\"",
+  "verbatim_locator | proposition: RMP not different | Figure 2 legend | \"control: −67.3 ± 0.8 mV, n = 49; Kcnq2 cKO: −65.7 ± 1.1 mV, n = 39; p = 0.2\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/potassium_conductances_sci43_20261110/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/potassium_conductances_sci43_20261110/output/shares.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "30c2a0046111a3b09d39f417717cc3cda23616fa949b2b4038a5894b8463bbb1",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page https://pmc.ncbi.nlm.nih.gov/articles/PMC5242407/ fetched 2026-11-10 with plain curl; figure image from the page's own image URL; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1523/JNEUROSCI.1425-16.2016",
+  "pmid": "28100740"
+ },
+ "workflow": "SCI43 K+ conductance question (ORCH-SCI43-20261110), producer og-k, staged as a JSON file for the integrator; the ledger was not written by the preparing actor. The claim for this PMID was made after the reading began (a slip of the producer, noted in phase_note.md)."
+}

@@ -1,0 +1,16 @@
+quantity	value	how
+Wwox capacitance proxy C = tau/Rin (pF)	WT 180.3; HT 131.2; KO 148.6	Table 1 tau and Rin; one compartment; INFERENZA
+C ratio KO/WT	median 0.82; 68% 0.69-0.97; 95% 0.58-1.14; P(<1)=0.88	MC on printed means and SEM; independent
+C ratio HT/WT	median 0.73; 68% 0.59-0.89; 95% 0.49-1.08; P(<1)=0.94	same
+Kroon L3 C proxy P14, P28 (pF)	188.5; 180.2	40.23/213.42; 19.87/110.28
+Welch t, p for HT v WT, Rin	t 2.08, p 0.048 (Bonferroni x2: 0.096)	assuming +/- is SEM and n 13/15 cells; the Table marks it *
+Welch t, p for KO v WT, Rin	t 2.73, p 0.011	n 13/40
+Welch t, p for HT v WT, rest	t 1.39, p 0.18 (Table marks *)	not reproducible from printed SEM and n
+Welch t, p for KO v WT, rest	t 2.34, p 0.028	n 13/40
+Welch t, p for HT v WT, sag	t 1.72, p 0.10 (Table marks *; Fig 6 legend gives p 0.0476 on animal means)	not reproducible from printed SEM and n
+Welch t, p for KO v WT, rebound	t 1.88, p 0.066 (Table marks *)	not reproducible
+tau KO v WT	t 1.25, p 0.22	expected under constant C: +39 percent; observed +14.6 percent; ratio-difference about 1.1 SE
+pure K+ loss prediction of dV (KO), E_K true -97.0, offset 0/8/13/16 mV	+6.9 / +3.8 / +1.9 / +0.7 mV	dV = dG*(V0-E_K,rec)/G1; observed +5.6 +/- 2.4
+size scaling plus fixed shunt reproducing the Wwox WT->KO pair exactly	gs 1.50 nS (15 percent of WT G; seal resistance about 0.67 Gohm), membrane G 8.22 -> 5.49 nS (x0.668), intrinsic rest Vm -93.7 mV	solve Gm0*Vm/G0=V0, Gm1*Vm/G1=V1, Gm0-Gm1 = G0-G1; implied E_x equals Vm algebraically
+tau after dynamic-clamp restoration to WT Rin under a smaller cell (C 148.6 pF)	15.3 ms (WT 18.55; KO 21.25)	tau = C x Rin
+Henderson (planar, monovalent approximation, verifier's own table values; gluconate lambda 20/24/28/33)	16.4-17.1 / 15.3-16.0 / 14.3-14.9 / 13.1-13.7 mV (22 C / 35 C)	pipette K 135, Na 10, Cl 12, gluconate 123; bath Na 148.2, K 3.5, Cl 129.5, HCO3 25; ATP, Mg, HEPES ignored; lambdas typed from memory as in the producer's estimate

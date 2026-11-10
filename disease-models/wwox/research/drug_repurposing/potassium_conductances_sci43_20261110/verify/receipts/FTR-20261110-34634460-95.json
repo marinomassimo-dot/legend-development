@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-10T18:43:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-10T19:05:05Z",
+ "event_id": "FTR-20261110-34634460-95",
+ "evidence_basis": [
+  "Wwox paper (PMC8609180) read from the PMC page for the verification: Table 1, Results 2.1 (burst counts), 2.4-2.6, Fig 6 legend, Discussion on Ih, Methods (slices, solutions, electrophysiology, calculations, statistics). Results 2.2-2.3 and the Introduction not read; supplementary not opened.",
+  "verbatim_locator | proposition: junction potential not corrected | Methods | \"We did not correct for liquid junction potential since all results central to the hypothesis were measured against a change from wildtype littermate controls\"",
+  "verbatim_locator | proposition: AHP amplitude is a Table 1 variable | Methods 6.6 | \"AHP amplitude was measured from the threshold to the most hyperpolarized value immediately after the AP\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/potassium_conductances_sci43_20261110/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/potassium_conductances_sci43_20261110/verify/verdicts.tsv"
+ ],
+ "prior_receipt": "FTR-20261110-34634460-93",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "0846b7002ba787c5ad72cbae2bc13624b9295b901a6b047379f71c0ab19201a1",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page https://pmc.ncbi.nlm.nih.gov/articles/PMC8609180/ fetched 2026-11-10 with plain curl; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1016/j.nbd.2021.105529",
+  "pmid": "34634460"
+ },
+ "workflow": "SCI43 blind verification (ORCH-SCI43-20261110), verifier kv-v, staged as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,24 @@
+id	verdict	depth_read_by_verifier	one_line_reason
+D01	UNVERIFIABLE	abstract	preprint 429/500; arithmetic correct; 'synapses intact' should read no synaptic blocker stated
+D02	UNVERIFIABLE	none	arithmetic -89.6-16.2=-105.8 correct; E_K on concentrations about -104.3 not -106
+D03	UNVERIFIABLE	abstract	Guan full text behind reCAPTCHA; abstract consistent
+D04	UNVERIFIABLE	abstract	Niday full text unreachable; +25.1 percent and share 20.1 recomputed
+D05	PARTLY	full	digits supported; 'whatever the Kv7 share' overstated
+D06	SUPPORTED	full+figure	text verbatim; Fig 7f read-off holds; regimen ambiguity real
+D07	UNVERIFIABLE	abstract	preprint; +6.2 percent and 5.8 share recomputed; baseline is a raster read-off
+D08	UNVERIFIABLE	abstract	Day full text unreachable; L3 no-sag clause verified in Kroon
+D09	NOT SUPPORTED	independent search	40595546 and 33908633 apply K2P tools in neocortical pyramidal neurons
+D10	SUPPORTED	full	every digit of S19/S20 and the percentages equal
+D11	UNVERIFIABLE	none	producer S11 notes only P6-P8 differs by post hoc; inference unsupported statistically
+D12	PARTLY	full+figure (Ank2); abstract (Kcnq2)	Ank2 half verified; Kcnq2 half unreachable; absence adequate but narrow
+D13	UNVERIFIABLE	abstract	preprint; direction confirmed by abstract; -27.9 percent recomputed
+D14	SUPPORTED	full	-10 mV and both compositions verified
+D15	PARTLY	full for 8 and -10 mV	two calculated values unreachable; bracket is a sensitivity range
+D16	PARTLY	derived	shares at different ages, areas and potentials summed; lead with caveat
+Q01	PARTLY	full	all numbers equal; AHP statement false; unit of statistics ambiguous; HT stars not reproducible
+Q02	PARTLY	derived	formula and rows reproduce; reading not fair: offset, equivalence with size plus shunt, intervals, ZD row ill-conditioned
+Q03	PARTLY	full	sufficiency argument sound for Rin; network origin not excluded
+Q04	PARTLY	full+figure	Kv7 loss does predict higher firing; slope statement correct but 'argues against' over-read
+Q05	PARTLY	tool re-run	table correct; add other genes for XE991, human EC50 on KCNQ3 for retigabine; azetukalner sentence true for curated-mechanism symbol index
+Q06	PARTLY	abstract sources	(a) Seifert 2009 abstract supports Kir4.1 block, not K+ rise; (b) Kim 2020 abstract supports GABA(A) for most general anaesthetics
+Q07	PARTLY	own Henderson	13-17 mV with same unverified inputs; keep as sensitivity or drop

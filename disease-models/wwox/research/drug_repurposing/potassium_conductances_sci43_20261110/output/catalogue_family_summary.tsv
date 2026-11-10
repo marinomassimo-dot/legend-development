@@ -1,0 +1,7 @@
+family	label	rows	distinct_parent_molecules	parents_by_direction
+F-Kv7	Kv7 / M-current (KCNQ2-5)	36	7	down=5; up=2
+F-Kir2	Kir2 inward rectifier (KCNJ2, KCNJ12, KCNJ4, KCNJ14)	1	1	down=1
+F-GIRK	GIRK (KCNJ3, KCNJ6, KCNJ9, KCNJ5)	2	1	down=1
+F-K2P-TASK	K2P TASK (KCNK3, KCNK9, KCNK1, KCNK5, KCNK16, KCNK17)	12	6	down=1; up=5
+F-K2P-TREK	K2P TREK/TRAAK (KCNK2, KCNK10, KCNK4)	10	5	up=5
+F-HCN	HCN (comparison arm, not K+)	3	2	down=2
