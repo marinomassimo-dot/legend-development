@@ -49,3 +49,7 @@ Monte Carlo of the implied reversal with printed dispersions (cells as units, "Â
 ## Deliverables and state
 
 `output/`: `hypotheses.tsv` (5), `tools_roles.tsv`, `identity_tools.tsv`, `experiment_ladder.tsv` (8 steps), `outcome_matrix.tsv` (7 outcomes), `shares.tsv` (21), `decisive.tsv` (16, corrected), `tools.tsv`, `models.tsv`, `evidence.tsv` (28), `figure_notes.tsv`, `queries.tsv`, `implied_reversal_points.tsv`, `implied_reversal_mc.tsv`, `implied_reversal_sensitivity.tsv`, `catalogue_by_family.tsv`, `answers.md`, `phase_note.md` (producer; unchanged, partly superseded by `verify/audit.md`). `verify/`: audit, verdicts, recomputations, 16 staged receipts. Receipts: **26 staged (10 producer `-94`, 16 verifier `-95`), validated OK with `staged_receipt_check.py --check-doi`, none recorded**; copies in `research/receipt_staging/sci43/` and `sci43v/`; the preprint receipt has no PMID (DOI only). Proposals: `consumer_delta.md`; applied: 0.
+
+## After the first delivery
+
+`S7_coda.md` (the one premise carried to the next brief, the hidden alternative, the DREAM connection: one condition record for the preparation), `next_brief_sci43_20261110.md` (the next question and the reopen condition for the eight rows the verifier could not reach).
