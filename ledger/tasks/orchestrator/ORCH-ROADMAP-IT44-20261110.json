@@ -1,0 +1,122 @@
+{
+ "_schema": "orchestrator-task-v1",
+ "TASK_ID": "ORCH-ROADMAP-IT44-20261110",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "P0",
+ "START_UTC": "2026-11-10T22:30:00Z",
+ "OBJECTIVE": "IT44: from qualified knowledge to pharmacological hypotheses actually generated and used: close SCI43/HE43 consumption, recover what the catalogue misses without name exceptions, one or two complete generative paths, role vocabulary for non-drug entities, engine against simple baselines, circular open questions, first-screen dashboard.",
+ "AUTHORISED_QUEUE_20261108": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Restart and reconciliation: IT43 / SCI43 / HE43 real state, SHAs, processes, staged and recorded receipts, residuals already solved; register IT44",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "Queued behind IT43 (candidate c82a1bff frozen for battery; Harness battery running first); branch task/it44 worktree from c82a1bff; CI #640 of 51d6c3b1 success (1h13m)."
+    }
+   ]
+  },
+  "OBJ_P1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Close consumption of SCI43 and HE43 deliveries: measurement.py in the quantitative path, parent_form without merging stereoisomers, read-state propagation, KH1-KH5 conditions, shared preparation conditions; before/after",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "Recover opportunities the catalogue misses (azetukalner by name, primary-source activities, DGIdb pointers, synonyms/salts/stereoisomers): reproducible path, no single-name exception; known control then a different case",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "One complete generative path chosen from the current queue, frame written before names; second case with a different mechanism if capacity remains",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "Non-pharmacological entities: role vocabulary (candidate, probe, control or reagent, physiological intervention, unqualified entity), provenance kept, review of false positives and wrongly removed opportunities",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "Compare engine against simple alternatives on executed cases with equal inputs; independent premises check in a separate context; graph controls only if a graph is used",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "Circular relation: priority open questions each give a usable brief (decision, premise, in silico work, indispensable measurement, outcomes favouring alternatives, stop criterion); consume SCI44 when verified; Claude Science material evaluated whole with separate provenance",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "Dashboard first screen: which investigations, which compounds or classes, why priority, missing premise, result that would change the decision; five languages, phone readability, names where the qualified path allows",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P8": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "DREAM on material results; autonomous queue (second case, over-severe exclusion, unused structured relation, duplicate simplification, priority card, next batch brief)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P9": {
+   "order": 10,
+   "steps": [
+    {
+     "step": "Costs and closure: batteries by SHA in unique clones, landing, remote, CI and site checks; final report in Italian starting with the mandated question",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  }
+ }
+}
