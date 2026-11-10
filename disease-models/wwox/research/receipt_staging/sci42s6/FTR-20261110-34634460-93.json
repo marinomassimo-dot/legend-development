@@ -1,0 +1,45 @@
+{
+ "analysis_at": "2026-11-10T08:45:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "read",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-10T09:03:00Z",
+ "event_id": "FTR-20261110-34634460-93",
+ "evidence_basis": [
+  "Re-read for the chloride-gradient and inhibitory-supply question: Methods 5.1-5.4 and 6.5-6.7, Results 2.1-2.6, Discussion, Table 1, all figure legends (Europe PMC XML) and the Fig 4 image viewed. Figs 1-3, 5, 6 and the supplement were not reopened (earlier complete read FTR-20261019-34634460-01). Reference list not read.",
+  "verbatim_locator | proposition: sIPSC internal solution | Methods 5.3 | \"a high-chloride intracellular solution was used, in order to enhance the chemical gradient of chloride\"",
+  "verbatim_locator | proposition: isolation of sIPSC | Methods 5.3 | \"Spontaneous EPSCs and IPSCs were isolated by voltage-clamping pyramidal neurons at -70 mV in K-Gluconate or KCl intracellular solution respectively.\"",
+  "verbatim_locator | proposition: animal numbers of sIPSC | Fig 4 legend | \"S-CTLs n = 14 cells from 7 animals; S-KOs n = 9 cells from 5 animals\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/explanations.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/conditional_prediction.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/figure_notes.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/queries.tsv"
+ ],
+ "prior_receipt": "FTR-20261108-34634460-96",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "1b3a985a5ecda17d930f93b63be4bc22829612a0d864eca1373904dc4cce6c1a",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch db=pmc XML (plain curl) of the PMC record, converted to text locally and saved outside the repository; bytes not saved in the repository (the Fig 4 image from the PMC open-data bucket, plain curl)",
+ "study_id": {
+  "doi": "10.1016/j.nbd.2021.105529",
+  "pmid": "34634460"
+ },
+ "workflow": "SCI42 S6 chloride-gradient question (ORCH-SCI42-20261110), producer cl-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

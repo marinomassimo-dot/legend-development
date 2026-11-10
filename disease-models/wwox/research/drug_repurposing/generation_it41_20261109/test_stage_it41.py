@@ -31,7 +31,7 @@ class CompoundView(unittest.TestCase):
         self.assertTrue(all(c["kind"] in rv.COMPOUND_KINDS for c in full))
         self.assertTrue(all("name_full" in c and "registry_note" in c for c in full))
         self.assertFalse(any("name_full" in c or "registry_note" in c for c in share))
-        self.assertTrue({"emerged", "known_requalified", "probe", "control", "weakened", "unresolved"} <= {c["kind"] for c in full})
+        self.assertTrue({"known_requalified", "probe", "control", "weakened", "unresolved"} <= {c["kind"] for c in full})   # "emerged" stays a valid kind; after SCI42 no entry is in it
 
     def test_no_forced_top_five_and_no_efficacy_claim(self):
         full = rv.compound_view(DR, True)
@@ -68,7 +68,7 @@ class Rendered(unittest.TestCase):
         n = 0
         for p in sorted((DR / "view").glob("index*.html")):
             h = p.read_text(encoding="utf-8"); n += 1
-            self.assertEqual(len(re.findall(r'class="cv-i ', h)), 10, p.name)
+            self.assertEqual(len(re.findall(r'class="cv-i ', h)), len(rv.compound_view(DR, False)), p.name)
             names = len(re.findall(r'class="cv-name"', h))
             self.assertEqual(names > 0, not p.name.startswith("index_shareable"), p.name)
         self.assertEqual(n, 10)

@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-10T08:54:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-10T09:03:00Z",
+ "event_id": "FTR-20261110-32582852-93",
+ "evidence_basis": [
+  "Mouse in vivo interneuron action by region and age: Results (Figs 1-3 legends), Fig 3 image viewed at low resolution, Methods temperature lines. Hippocampus is kept apart from neocortex; Introduction, Discussion and supplement not read.",
+  "verbatim_locator | proposition: visual cortex net inhibitory early | Results | \"GABAergic interneurons have a net inhibitory role in visual cortex at ages at which they are excitatory in hippocampus\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/explanations.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/conditional_prediction.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/figure_notes.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/queries.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "46dbc1426b318dcfd9f9889eccb28b47d6628fa9caf0bdf6126870ff55862226",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch db=pmc XML (plain curl) of the PMC record, converted to text locally and saved outside the repository; bytes not saved in the repository (Fig 3 image from the PMC open-data bucket, plain curl)",
+ "study_id": {
+  "doi": "10.1126/sciadv.aba1430",
+  "pmid": "32582852"
+ },
+ "workflow": "SCI42 S6 chloride-gradient question (ORCH-SCI42-20261110), producer cl-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

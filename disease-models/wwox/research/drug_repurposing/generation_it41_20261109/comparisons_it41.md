@@ -7,7 +7,7 @@ Non-canonical working note. Not medical advice; no dose, schedule or route. All 
 | Element | Entry | Why it is in the comparison |
 |---|---|---|
 | Known reference | An ifenprodil-site GluN2B negative modulator used as a tool (ifenprodil or Ro 25-6981; radiprodil as the compound with human exposure) | Primary values exist for ifenprodil (oocytes: maximum 88 percent on GluN1/GluN2B, 32 percent on triheteromers, 50 percent with 300 nM Zn2+); Ro 25-6981 values were not read (abstract level) and are not borrowed from ifenprodil; radiprodil has its own values (rat 82 against 45 percent, human 91); each modulator's removable share is bounded by its own maxima |
-| Alternative that emerged | A second GluN2B negative modulator with human exposure (onfasprodil), site not recorded | Could add a chemotype or a different ceiling, **only if** a primary source places it at the same site and gives its maximum effect |
+| Alternative that emerged | A second GluN2B negative modulator with human exposure (onfasprodil); no source reached states its site or its maximum effect; read only as a second scaffold after the ifenprodil-site tool (SCI42) | Could add a chemotype or a different ceiling, **only if** a primary source places it at the same site and gives its maximum effect |
 | Functional control | Full competitive block (d-APV) | Defines the abolition threshold x; every modulator is read against it |
 | Control that separates the mechanism | A receptor-agnostic release-reducing manipulation matched to the same measured percent of NMDA-receptor current removed; a Zn2+-chelator arm; bath pH stated and held | Separates receptor composition from a general loss of drive and from a bath-state effect |
 
@@ -34,3 +34,5 @@ Not prerequisites for the module: the AMPA arm (separate question, tool qualific
 ## What this does not claim
 
 No ranking, no recommendation, no dose, no efficacy. A compound that appears here is a candidate for a *comparison*, not for treatment. Novelty against the literature is not asserted.
+
+> **Update 2026-11-10 (IT42, SCI42):** the last row of the table above ("No source places it") is the actual state for onfasprodil. NP10679 enters only after the tissue pH is measured and its recombinant maximum at each pH is known (a pH-dependent comparison, not a candidate). Item 1 of the minimum experiment gains "measured bath and tissue pH".

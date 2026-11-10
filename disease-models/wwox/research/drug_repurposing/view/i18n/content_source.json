@@ -27,6 +27,10 @@
   "src": "it",
   "text": "Capire se l'aumento di MYC nella glia radiale e' una causa, un marcatore dello stato progenitore o una conseguenza del ciclo cellulare, e se il deficit dei marcatori di strato corretto dal gene nei neuroni indica un compartimento raggiungibile dopo la nascita."
  },
+ "0476613c7243": {
+  "src": "en",
+  "text": "Nothing moves it: kept so the filing is not mistaken for evidence. Reopen if the primary paper assigns the value to GluN2B."
+ },
  "050ae835269e": {
   "src": "en",
   "text": "The NRF2 (KEAP1) axis, genetic arm before any compound"
@@ -46,6 +50,10 @@
  "06822686c175": {
   "src": "en",
   "text": "Does lowering KEAP1 or raising NRF2 change a functional readout in a WWOX-deficient neural cell, in the direction the two conditional arms of this need assume?"
+ },
+ "072155990026": {
+  "src": "en",
+  "text": "The pH of the recorded tissue is unmeasured; ifenprodil may itself be pH-sensitive (older abstracts) and a related clinical-stage modulator is declared not to be (a 2015 table not read)."
  },
  "0754c6e712e4": {
   "src": "it",
@@ -255,13 +263,17 @@
   "src": "en",
   "text": "The burst may also need AMPA-receptor drive. This is exploratory; the premise is not established."
  },
+ "273daca93945": {
+  "src": "en",
+  "text": "Up: a low evoked IPSC with a hyperpolarising chloride gradient and a lever effect above the matched non-GABAergic control. Down: a response-side deficit, or depolarising GABA."
+ },
+ "27f0774d6f84": {
+  "src": "en",
+  "text": "Up: a removable fraction at the burst clearly below the abolition threshold. Down: a plateau below the threshold, which stays unresolved rather than refuting the mechanism."
+ },
  "287cc6f5b57a": {
   "src": "it",
   "text": "Dentro il rumore in ogni contesto misurato."
- },
- "2923acfd51a8": {
-  "src": "en",
-  "text": "Find a primary source stating its site and maximum effect on triheteromers (public, in silico); until then it is not a same-site control."
  },
  "29a1f4098294": {
   "src": "en",
@@ -279,6 +291,10 @@
   "src": "it",
   "text": "Capire se vigabatrin o CPP-115 aggiungono danno alla mielina in un modello giovanile privo di Wwox."
  },
+ "2c352964be29": {
+  "src": "en",
+  "text": "Human-exposure GluN2B negative modulator; site, maximum effect and triheteromer behaviour not measured in any source reached"
+ },
  "2c958656b721": {
   "src": "en",
   "text": "Capacitance and time constant measured in the same cells, or a Ba2+- or Kv7-blocker-sensitive difference current in Wwox neurons, would decide whether any pharmacological arm is needed."
@@ -295,6 +311,10 @@
   "src": "en",
   "text": "The registry row's assay text names another subunit; to which subunit the value belongs is unresolved, so no GluN2B statement is drawn."
  },
+ "2dae8e3c14af": {
+  "src": "en",
+  "text": "It separates a deficit of GABA supply from a postsynaptic or chloride-gradient deficit: only the first is helped by more GABA."
+ },
  "2e055fd6bb53": {
   "src": "it",
   "text": "Rami della risposta UPR, trascritti"
@@ -303,6 +323,10 @@
   "src": "en",
   "text": "BTK detected in the NPY-producing cell class with NPY following BTK knockdown; BTK only in microglia moves the idea to another proposal."
  },
+ "2f08c77ece99": {
+  "src": "en",
+  "text": "The repository already records that the older drug resolved spasms in one child and carries a brain-imaging safety signal; the newer one is clinical-stage only (catalogue maximum phase 1)."
+ },
  "2f60e5178da3": {
   "src": "en",
   "text": "Is the NMDA-receptor dependence total receptor gain or GluN2B-weighted?"
@@ -310,6 +334,10 @@
  "2f8732bc88cb": {
   "src": "en",
   "text": "New molecule for LEGEND in a known thread"
+ },
+ "2ffe3a9311d7": {
+  "src": "en",
+  "text": "Phase 1 in healthy adults (partial full text); maximum effect, site, triheteromer and slice data absent; H1 and hERG actions declared."
  },
  "30f82b387e40": {
   "src": "en",
@@ -374,6 +402,10 @@
  "3799ce5fa621": {
   "src": "en",
   "text": "Its strongest documented actions are on other deacetylases than the one the chain needs, the single reference for the edge is a knockdown in non-neural cells, so the attribution fails as written. (The two transcripts also move in opposite directions in the organoid, but that is a descriptive ratio that says nothing about enzyme activity and is not a reason.) This says nothing about whether the compound is inactive."
+ },
+ "37f4c5f1dd66": {
+  "src": "en",
+  "text": "Up: a removable fraction already shown by the tool. Down: a ceiling like the tool's, which adds a chemotype and nothing else."
  },
  "38352ccdb83c": {
   "src": "it",
@@ -446,6 +478,10 @@
  "4125f4ddb460": {
   "src": "en",
   "text": "An inhibitor of the kinase BTK proposed to restore NPY through STAT3"
+ },
+ "4237b5b32e4c": {
+  "src": "en",
+  "text": "Block of the GABA transporter GAT-1 raises GABA availability without touching glutamate-receptor currents; the catalogue records maximum phase 4 for one reference compound and lists several selective tools."
  },
  "42cadd702298": {
   "src": "en",
@@ -531,9 +567,17 @@
   "src": "en",
   "text": "Can the gap-junction tool's burst fall be read as a gap-junction result?"
  },
+ "5027ee57136f": {
+  "src": "en",
+  "text": "Nothing moves it until an inactivation measure exists; then up if the newer compound shows a clearly larger inactivation rate under the same assay."
+ },
  "50926e486c94": {
   "src": "en",
   "text": "Is the MYC rise in WWOX-deficient radial glia a driver of the progenitor shift, a marker of a retained progenitor state, or a consequence of the cell-cycle shift?"
+ },
+ "5098a5a16248": {
+  "src": "en",
+  "text": "Up: a primary source placing it at the ifenprodil site with a clearly different triheteromer maximum, or at a different documented site that gives a different comparison. Down: none reached; it stays a conditional second scaffold after the tool."
  },
  "50b28c98d057": {
   "src": "en",
@@ -563,6 +607,10 @@
   "src": "en",
   "text": "E3 - card reviewed with assertions; no WWOX-side result read beyond abstract; class pharmacology table (IT7 P5)"
  },
+ "57a416d8f1e5": {
+  "src": "en",
+  "text": "Supply-side GABA lever: block of GABA reuptake, a different question from receptor potentiation"
+ },
  "57bbe22323a3": {
   "src": "en",
   "text": "Queried: the ethosuximide and apinocaltamide units, their assertion rows and caveat rows, and the per-need position table. The missing interaction test is recorded in this module's own caveats, not inferred from absence."
@@ -582,6 +630,10 @@
  "595b2de50fd2": {
   "src": "en",
   "text": "AhR-pathway activation is adverse in neural precursors in toxin studies; the pathway-target transcript is higher while NFE2L2 is lower."
+ },
+ "5adc7e0edfc7": {
+  "src": "en",
+  "text": "Up: the excess sag persisting at matched potential and deflection. Down: it vanishing, or the blocker-sensitive current per capacitance being the same."
  },
  "5ba82d5d53ac": {
   "src": "en",
@@ -671,6 +723,14 @@
   "src": "en",
   "text": "Whether the absence is a catalogue coverage limit, a target-listing limit, or a genuine absence of pharmacology. This package did not separate those three."
  },
+ "64c806f2ad2b": {
+  "src": "en",
+  "text": "Repeat the slice burst assay with the magnesium concentration reported, a d-APV arm and a GluN2B NAM arm, each at matched measured NMDAR-current reduction (one ifenprodil-site GluN2B NAM; a second NAM of the same site controls chemotype only, and only if its own maximum on triheteromers is known (ifenprodil 32 percent, radiprodil 45 percent in rat: each molecule has its own); compare with d-APV only up to the NAM's measured removable share; measure the d-APV abolition threshold x and the NAM removable fraction first), vehicle time-matched, animal as the unit; memantine only afterwards, with the magnesium concentration and holding voltage stated, beside the tool compound, and the untreated same-genotype comparator. [IT40] B6 Report bath magnesium, K+, temperature and blockers actually present as measured values; use a within-slice paired design; add an AMPA/kainate block arm verified by the fast EPSC (abolition alone is not informative, because loss of magnesium relief would abolish an NMDAR-regenerative burst too); add a matched-effect control read on at least two metrics with a receptor-agnostic release-reducing control; add a GABA-A arm because the sIPSC amplitude is halved; state the order of application and washout as part of the design. [SCI42] Report bath pH (and the buffer system) as a measured value with magnesium and potassium; read the percent of evoked synaptic charge removed for every drug so the matched drive-reduction control can be matched; a pH-dependent GluN2B tool is considered only after the tissue pH is measured, with the ifenprodil-site tool and d-APV at the same two pH values."
+ },
+ "660538ae768f": {
+  "src": "en",
+  "text": "It is the other way to raise GABA availability, kept so that the two ways are not mixed."
+ },
  "668145b942f2": {
   "src": "it",
   "text": "Rete con segno (solo risorse esterne) contro riferimento senza segno"
@@ -682,6 +742,10 @@
  "67b414367108": {
   "src": "en",
   "text": "Ih (HCN) blocker as a tool arm, after matched-condition recordings"
+ },
+ "67c5102405ea": {
+  "src": "en",
+  "text": "Up for the survival question: bursts persisting under a verified block. Down: abolition, which does not separate the explanations."
  },
  "67fe3b1d1a41": {
   "src": "en",
@@ -710,10 +774,6 @@
  "6a7132220b2b": {
   "src": "it",
   "text": "Imbuto dal catalogo ai valutati: che cosa è contato, in quale unità"
- },
- "6aea8ba0d960": {
-  "src": "en",
-  "text": "Whether ifenprodil-site modulators in general depend on pH enough to matter in the slice."
  },
  "6b35adafc84b": {
   "src": "en",
@@ -775,6 +835,10 @@
   "src": "en",
   "text": "Ethosuximide (see its card) and the carded T-type thread"
  },
+ "72f2870c7a45": {
+  "src": "en",
+  "text": "Whether the halved inhibitory current is a supply deficit; the direction depends on the chloride gradient of the preparation, which is unmeasured."
+ },
  "74417f544e31": {
   "src": "en",
   "text": "The HDAC5 to SLC2A1 thread rests on one muscle knockdown observation and has been carried as a limit, not a veto; the premise measurement it needs is the one open step of the IT28 challenge (WO-30). It sits at rank 7 because no neural line with the constructs is held and the readout does not change another row today."
@@ -810,6 +874,10 @@
  "7a8d260186f6": {
   "src": "en",
   "text": "position unchanged from IT20 (rank 4): No IT21 input changes the position. One IT21 rejection (an inhibitor of class I histone deacetylases proposed to lower SLC2A1) touches the same glycolysis theme and is listed under what the generator rules out."
+ },
+ "7aa113b5a1cd": {
+  "src": "en",
+  "text": "That a lower affinity number means a weaker compound: for irreversible inactivators the number does not measure it."
  },
  "7ad35f135a41": {
   "src": "it",
@@ -851,25 +919,21 @@
   "src": "en",
   "text": "Queried: this need's ten observation rows and their readout levels; the dichloroacetate and HIF-axis units; the search layer over the eight axis targets (209 associations, 180 families, none direction-coherent because the need direction is unresolved)."
  },
+ "8011e2c5a641": {
+  "src": "en",
+  "text": "No comparison before an inactivation parameter is available; start from the supply-side question of V11."
+ },
+ "801774f5754a": {
+  "src": "en",
+  "text": "A second scaffold (sharing a structural arrangement with ifenprodil-type ligands: inference from structure) read after the ifenprodil-site tool, to ask whether a different scaffold removes the same measured percent of the isolated NMDA-receptor current."
+ },
  "80327935bd99": {
   "src": "en",
   "text": "Which of the six layers moves, per animal. A lower transcript does not show fewer cells, lower activity or less inhibition; an absent change in GSE158684 is not evidence of no change; the oligodendrocyte-lineage shift could be consequence or cause of an excitation-inhibition change and the data cannot say which. Whether any parvalbumin-cell change is a deficit, a compensation or a delayed maturation is unresolved, so the need direction stays unresolved and no lever sign is derived. Whether recombination reaches parvalbumin cells, and glia, in this deletion is not known from any source read, and a reporter measured in another context does not measure the excision of Wwox in parvalbumin cells. [IT36] Whether the parvalbumin deficit and the maturation block of the myelin model share a cause is open."
  },
- "80b0ceefbb0c": {
-  "src": "en",
-  "text": "Repeat the slice burst assay with the magnesium concentration reported, a d-APV arm and a GluN2B NAM arm, each at matched measured NMDAR-current reduction (one ifenprodil-site GluN2B NAM; a second NAM controls chemotype only, same site and same triheteromer ceiling; compare with d-APV only up to the NAM's measured removable share; measure the d-APV abolition threshold x and the NAM removable fraction first), vehicle time-matched, animal as the unit; memantine only afterwards, with the magnesium concentration and holding voltage stated, beside the tool compound, and the untreated same-genotype comparator. [IT40] B6 Report bath magnesium, K+, temperature and blockers actually present as measured values; use a within-slice paired design; add an AMPA/kainate block arm verified by the fast EPSC (abolition alone is not informative, because loss of magnesium relief would abolish an NMDAR-regenerative burst too); add a matched-effect control read on at least two metrics with a receptor-agnostic release-reducing control; add a GABA-A arm because the sIPSC amplitude is halved; state the order of application and washout as part of the design."
- },
- "80f1ec09df60": {
-  "src": "en",
-  "text": "Abstract-level source only: a phase 2 study in adults with depression."
- },
  "80fa15bc6765": {
   "src": "en",
   "text": "Reduced release or altered excitability; direct NMDA-receptor channel block (neither shown nor excluded); neuronal electrical coupling; pannexin-1; run-down or a recording artefact."
- },
- "80ff6658f81a": {
-  "src": "en",
-  "text": "It shows that GluN2B-directed potency can depend on the bath pH."
  },
  "81fba8b46d33": {
   "src": "en",
@@ -883,17 +947,13 @@
   "src": "it",
   "text": "Esplorativo: un risultato computazionale non è efficacia terapeutica."
  },
+ "825be1bb0bc3": {
+  "src": "en",
+  "text": "Measure the tissue pH; if this compound is used, run the ifenprodil-site tool and the full competitive antagonist at the same two controlled pH values, with its recombinant maximum at each pH known first."
+ },
  "83ef2e781b00": {
   "src": "en",
   "text": "In knockout, heterozygote and wild-type slices: sag, resting potential, input resistance, rebound and burst incidence before and after two Ih blockers of different chemotypes (the second so that an off-target action is not read as Ih), with a current-clamp step that matches the resting potential and the peak potential, with a smaller cell or immature membrane listed as its own candidate beside branch D, and a voltage-clamp read of the blocker-sensitive current in a subset of cells; animals, not cells, are the replicates. Branch D adds the potassium-current arm: the potassium currents sensitive to a Kv7 blocker and to a Kir-channel blocker in voltage clamp, and input resistance read with synaptic transmission blocked. [IT36] A first-generation Ih blocker at 50 uM is about 40 times its sodium-current IC50 in DRG neurons (age not stated); read a second chemotype and the blocker-sensitive current in voltage clamp; nickel/Z944 and Kv7 arms separate. [IT40] A4 Report access resistance, bridge balance and capacitance by genotype; add a Ba2+- or Kv7-blocker-sensitive difference current with its zero-crossing against E_K (about -97 to -98 mV from the declared solutions; the recorded potentials need a junction correction of about -13 mV that 34634460 did not measure, which puts the estimated sag peaks about 16-21 mV below E_K, so the prediction applies to the voltage-clamp difference current, not to the sag peak)."
- },
- "848bb09c8ce2": {
-  "src": "en",
-  "text": "Phase 1 in healthy volunteers only (abstract)."
- },
- "84cb78f1f49d": {
-  "src": "en",
-  "text": "pH-dependent GluN2B modulator: a condition to state, not a candidate"
  },
  "85aad315b6fd": {
   "src": "it",
@@ -902,6 +962,10 @@
  "85ab04c15263": {
   "src": "en",
   "text": "Reached from the T-type calcium need through the catalogue path; the proposed pair is a proposal to verify (IT20)."
+ },
+ "8705174d767d": {
+  "src": "en",
+  "text": "None found by open routes (a patent and two clinical papers read; an analogue paper not reached); the measurement is the removable fraction in the isolated NMDA-receptor current, after the ifenprodil-site tool."
  },
  "87177877f044": {
   "src": "en",
@@ -947,6 +1011,10 @@
   "src": "en",
   "text": "Selective tool compounds exist; the assay is the carded one."
  },
+ "8b798c978bad": {
+  "src": "en",
+  "text": "In the repository's own records raising GABAergic tone is unresolved (an irreversible inactivator of GABA transaminase resolved spasms in one of two children, partly in the other, with null reports elsewhere, and carries a brain-imaging signal); a compensatory change in tonic inhibition or transporter expression could mask the effect."
+ },
  "8c0bcfdd6eff": {
   "src": "en",
   "text": "A GluN2B-selective negative modulator may remove the bursts at a smaller measured fraction of the isolated NMDA-receptor current than the full antagonist needs. Exploratory."
@@ -958,10 +1026,6 @@
  "8d3f28942f92": {
   "src": "it",
   "text": "la stessa rete con quattro archi HIF1A duplicati (già presenti nella rete esterna; non rappresenta il patrimonio WWOX)"
- },
- "8edbc79d22af": {
-  "src": "en",
-  "text": "State and match the bath pH in every arm; check the literature on pH dependence of the tool actually used."
  },
  "8eedc45e7594": {
   "src": "en",
@@ -1059,6 +1123,10 @@
   "src": "en",
   "text": "Should this thread stay in the selection, given that its only pharmacology acts against a second need of the same objective?"
  },
+ "99419c94b5b8": {
+  "src": "en",
+  "text": "Up: a primary source giving site and maximum effect. Down: nothing needed unless the tool and the clinical-stage compound do not give a chemotype control."
+ },
  "9957585641c0": {
   "src": "it",
   "text": "Famiglia PDK e PDK1, trascritti"
@@ -1118,6 +1186,10 @@
  "9f6ea7ef32cb": {
   "src": "it",
   "text": "Misure biochimiche su tessuto o cellule dei laboratori d'origine; il materiale non è disponibile qui."
+ },
+ "a28ffc9eb88a": {
+  "src": "en",
+  "text": "Up: a difference current reversing near the potassium equilibrium potential in Wwox neurons, and a matched-effect control that fails to reproduce the fall. Down: passive size with a seal leak explaining the observations."
  },
  "a32410816420": {
   "src": "it",
@@ -1190,6 +1262,10 @@
  "a8fbe1492038": {
   "src": "en",
   "text": "Premise measurement: the transcript deficit is observed in bulk and in one nuclear pool per arm; cell number, identity, intrinsic properties, synaptic input and circuit function are not measured at animal level by any file read here (no ranked unit, so no evaluation depth applies: this is not a depth of zero)"
+ },
+ "aad161d764b3": {
+  "src": "en",
+  "text": "Evoked IPSC amplitude, E/I ratio and the chloride reversal potential first; then the lever against a GABA-A potentiator and a non-GABAergic suppression, each matched to the same measured effect."
  },
  "ab1a6c5c29fc": {
   "src": "it",
@@ -1435,6 +1511,10 @@
   "src": "en",
   "text": "Step 1, no compound: BNIP3 and BNIP3L protein and mRNA from the same lysates, WWOX-deficient against add-back human neural cells at 21, 5 and 1 percent oxygen; step 2: HIF1A and EPAS1 knockdown with HIF target readouts; step 3: BNIP3 knockdown with survival, ROS and membrane potential. The full list of measurements is in the package table of the HIF1A-to-BNIP3 delivery."
  },
+ "cc805c25b5f7": {
+  "src": "en",
+  "text": "Two sponsor-authored clinical papers read at partial full text; the only potency is one patent calcium-flux IC50 (8.3 nM) on NR1/NR2B cells without Mg2+, with no stated Zn2+ chelator or pH."
+ },
  "ccdfb67baae8": {
   "src": "it",
   "text": "; intervallo di confidenza al 90% di SIG, estremo inferiore"
@@ -1455,17 +1535,9 @@
   "src": "en",
   "text": "Queried: the search layer over CACNA1G, CACNA1H and CACNA1I (190 associations, 66 families); the T-type card and the ethosuximide and apinocaltamide units; the uncarded-items table; the IT9 to IT11 qualification records; a name scan of every card and ranking table for each proposed compound. Both proposals are absent from that WWOX material and are members of a class the module already holds, so this is a proposed probe set to verify, not a new biological relation."
  },
- "ceff2245e0c8": {
-  "src": "en",
-  "text": "Human-exposure GluN2B negative modulator found by the search, site not recorded"
- },
  "cf11c4afad7a": {
   "src": "en",
   "text": "Human knockout organoid shows a lower NFE2L2 transcript (0.75x), role unknown; the second system failed its control."
- },
- "cf6f4b2cf51e": {
-  "src": "en",
-  "text": "A second modulator with human exposure could extend the comparison, if it acts at the ifenprodil site."
  },
  "d07824ef936c": {
   "src": "en",
@@ -1575,6 +1647,10 @@
   "src": "en",
   "text": "Queried: the two gene-addition cards (C01, C04) and their assertion rows; the deepdive manifest of the source; the work-order statements for this need. Checked for a post-onset arm and found none. Not a statement about the literature beyond the sources this module has read. Extended on 2026-11-05/06 by two bounded external searches (batch_sci_20261105, r1 and r2 query logs, 66 queries in all): conditional, antisense and vector restoration after onset in Mecp2, Ube3a, Fmr1, Tsc1, Pten, Syngap1, Cdkl5, Shank3, Tcf4, Scn1a, Scn1b, Kcnt1, Scn8a and leukodystrophy models. The earlier of the two searches was anchored on gene names and could not reach enzyme, connexin, tubulin or astrocyte-transporter leukodystrophies; an independent review found post-onset white-matter arms there. Bounded searches, not a statement that none exists."
  },
+ "dd1eb579e2d6": {
+  "src": "en",
+  "text": "pH-dependent GluN2B modulator: a pH-linked comparison, subordinate to a measured tissue pH; not a candidate"
+ },
  "dd2c3ac3a06f": {
   "src": "en",
   "text": "Separate the three causes for one of the four needs: check whether the listed targets carry any catalogued action anywhere, then whether the module's target list is the limit."
@@ -1586,6 +1662,10 @@
  "dd79afec8e2f": {
   "src": "en",
   "text": "WWOX-system: the myelin deficit is partly prevented when WWOX is restored in neurons in the neonatal window; the treated arms of the source are unquantified, and whether an established deficit re-myelinates is unmeasured. IT29: perturbation evidence from other systems signs several intrinsic precursor-differentiation routes (muscarinic-receptor, lipid-synthesis, thyroid- and RXR-type receptor) in wild-type or injury settings and none in a neuron-driven hypomyelination model; HDAC3 loss is adverse for maturation; an independent screen disagrees with some signs. [IT36] GSK3 sign on oligodendrocyte differentiation is divided (inhibitors raise it in one source, lower it in another after Foxg1 knockdown; genetic loss in mature cells changed survival); recorded as undetermined. [IT39] GSK3 context rows: a GSK3 inhibitor run after Foxg1 knockdown goes the opposite way to the inhibitor-raises-differentiation reports, and a 2026 review holds both directions; the slice paper's finding is neuron-specific wording, not oligodendrocyte-wide."
+ },
+ "ddbea3abe552": {
+  "src": "en",
+  "text": "Up: a measured tissue pH in the range where the dependence is large, with a drug-by-pH interaction larger than for the ifenprodil-site tool and the full antagonist at the same two pH values. Down: a tissue pH near physiological, or an interaction not larger than theirs. A burst effect that follows the pH is not a specificity signature."
  },
  "def9e8fde8fe": {
   "src": "en",
@@ -1638,6 +1718,10 @@
  "e4e23f45e373": {
   "src": "it",
   "text": "Più bassi nell'organoide, più alti nella linea shRNA; effetti piccoli."
+ },
+ "e55ec824d592": {
+  "src": "en",
+  "text": "A clean abolition threshold, measured on the isolated NMDA-receptor current, fixes the reference; nothing lowers it, it is the control."
  },
  "e590949996c2": {
   "src": "en",
@@ -1719,6 +1803,10 @@
   "src": "en",
   "text": "IT21 P3b (G02)"
  },
+ "f14a046dda3f": {
+  "src": "en",
+  "text": "Inactivation of GABA transaminase raises GABA; the registry rows are affinity values for compounds that act irreversibly."
+ },
  "f1daa8db7ed6": {
   "src": "en",
   "text": "Step 1, no compound: HDAC5 knockdown in human neural progenitors or neurons reading SLC2A1 protein, glucose uptake and transcript, with rescue by wild type, a localisation mutant and a catalytic-site mutant. Step 2, only after cellular engagement of endogenous HDAC5 by the compound is shown with a readout specific to it (bulk histone acetylation is a weak reading for a class IIa enzyme): compound X, a class-I-only inhibitor (an ambiguous comparator) and an HDAC6 inhibitor as a chemotype comparator that needs its own qualification, not as a negative control. A myelin-relevant readout (oligodendrocyte-precursor differentiation, with and without neuron conditioning) is proposed in the IT29 P10 question record for the same experiment. [IT36] H1006Y is a direction control (activity up), not a catalytic-dead arm; a catalytic-dead mutant must show expression, stability, localisation, HDAC3 and MEF2 binding intact. [IT36] Add a HIF1A or EPAS1 knockdown arm for the SLC2A1 readout, and a cytosol-locked and a nuclear-locked HDAC5 beside the catalytic pair, with expression and partner binding shown."
@@ -1742,6 +1830,10 @@
  "f2b729e18317": {
   "src": "en",
   "text": "Net-negative on the myelin axis if both EZH1 and EZH2 are inhibited (oligodendrocyte differentiation blocked in mouse knockouts); cytokines rose after EZH2 suppression in tumour cells."
+ },
+ "f34e67309e90": {
+  "src": "en",
+  "text": "GABA-transaminase block: affinities of irreversible inhibitors are not a potency ranking"
  },
  "f3d66e9fd0ff": {
   "src": "en",
@@ -1814,5 +1906,9 @@
  "fe1eff02f6cc": {
   "src": "en",
   "text": "Does neuronal WWOX restoration started AFTER symptom onset recover any endpoint, or only prevent one when given in the neonatal window?"
+ },
+ "fe2c014ac74e": {
+  "src": "en",
+  "text": "Potency is pH-dependent (declared about 6-fold; IC50 21 and 130 nM at pH 6.9 and 7.6, abstract level, same developer); for the series prototype the maximum moved little (76 to 83 percent, measured in oocytes)."
  }
 }
