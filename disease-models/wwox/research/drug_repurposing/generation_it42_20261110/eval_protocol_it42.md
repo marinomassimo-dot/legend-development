@@ -1,0 +1,59 @@
+# IT42 P2 — protocol: separating the effect of an added source from the effect of relational qualification
+
+Non-canonical working note. Not medical advice. **Fixed before execution (2026-11-10).** Any change after the first run is a dated addendum; results are not used to rewrite the questions, the criteria or the meaning of "improvement".
+
+## Inputs and versions (frozen)
+
+Catalogue `catalog/catalog.jsonl.gz` (ChEMBL_37 2026-05-01, DGIdb 2024-06-10 download in the catalogue); GtoPdb 2026.3.1 `interactions.csv` (cache); `generation_it41_20261109/relations_it41.tsv` rows S1–S7; the identity table `identity_it41_20261109/identity_table.tsv` at the commit of the run; code `action_search.py` at the commit of the run. No new network call is made by the evaluation.
+
+## Questions (small, contrasting)
+
+| Q | Relation | Why it is in the set |
+|---|---|---|
+| Q1 | S1 GluN2B-directed negative modulation | the main case; symbol lookups mix site classes and subunit assays |
+| Q2 | S3 Kv7 opening | a case where the right output is mostly abstention |
+| Q3 | S5 GABA-A positive modulation | a large family where direction is the main trap |
+| Q4 | S6 chloride-gradient control (NKCC1 block, KCC2 enhancement) | a case where the wanted action has no record |
+| Q5 | S7 raising GABA availability (GAT-1, GABA transaminase) | the new relation of P5, chosen before search |
+
+## Paths
+
+* **A0 — previous-source simple search:** all ChEMBL curated-mechanism rows for the target symbols of the relation (the IT40/IT41 baseline). No filtering.
+* **A1 — two-source simple search:** A0 plus all GtoPdb interaction rows for the same symbols. No filtering.
+* **B — action- and context-guided search on the same two sources:** A1 passed through the relation's wanted direction, the site/granularity class of the record, the subunit named by the assay text, cross-source merging by catalogue parent and the identity label-conflict flag, with every excluded row kept with its reason and every row that cannot be classified kept as UNKNOWN (not as negative).
+
+The simple baselines are credible: A1 returns every row a careful analyst would start from. They are not scored zero for lacking a narrative; they are scored on the same objective criteria.
+
+## Units and criteria (checkable from the source rows, not from the path's own rules)
+
+Unit = one distinct parent molecule returned for a question (cross-source merged for scoring; the paths differ in whether they merge, which is itself measured as duplicate counting).
+
+Error types, defined from source fields:
+* **E1 direction error** — the recorded action is the opposite of the wanted one (agonist or positive modulator for a blocking question, and the reverse). Inverse agonists count as reducing.
+* **E2 site-class error** — for a question about allosteric or subunit-directed modulation, the record is an orthosteric ligand, a channel blocker, or a family record whose subunit is unresolved, presented as if it were subunit-directed.
+* **E3 subunit-transfer error** — the assay text of the row names a subunit different from the one the row sits under.
+* **E4 duplicate** — the same parent molecule counted more than once (salts, stereoisomers, radiolabelled forms, cross-source copies).
+* **E5 identity error** — the name resolves to a record that carries a label conflict in the identity table, or to no record carrying the intended target.
+A returned unit is **clean** if it has none of E1–E5; **flagged** if it has at least one and the path says so; **unflagged error** if it has one and the path does not say so.
+
+Reference positives (fixed list, from primary readings of earlier packages, not from the two tables): for Q1 radiprodil, traxoprodil, rislenemdaz, EVT-101 (ChEMBL assembly record), ifenprodil, Ro 25-6981 (primary-paper tools of the INV-05 packages). For the other questions no reference positive list exists, so recall is **not scored** there.
+
+Unknowns: a unit for which a criterion cannot be evaluated (no assay text, no site recorded, no identity row). Preserved = listed as UNKNOWN with the missing field named; lost = dropped or silently classed as clean or as negative.
+
+## Measures
+
+1. Per path and question: units returned; clean; flagged; unflagged errors by type (E1–E5); reference positives returned.
+2. **A (source effect)** = A1 − A0 on the same measures.
+3. **B (qualification effect)** = B − A1 on the same measures, same universe.
+4. Candidates lost by B = reference positives or clean units present in A1 and absent from B's shortlist without an UNKNOWN or exclusion record.
+5. Unknowns preserved / lost.
+6. Useful experimental comparisons: the number of units entering a comparison with a stated role (candidate, mechanism comparator, condition probe, control) that satisfy the necessary conditions fixed in `cases.md`.
+7. Cost: wall-clock seconds to a usable shortlist per path (measured by running the code), rows a reader must open (A0/A1: all returned; B: shortlist + exclusion records counted separately), and the human/agent interventions needed.
+
+## Meaning of "improvement"
+
+B improves on A1 if, on the same universe, unflagged errors are lower, no reference positive or clean unit is lost without a record, and unknowns are preserved. A1 improves on A0 if it returns more reference positives or clean units without more unflagged errors per unit. Neither is a statement about prediction: the sources used to build the method are not independent validation; the result is an **evaluation of retrieval and qualification**. Agreement between paths or between agents is not accuracy.
+
+## Not done on purpose
+
+No graph propagation is used here, so no graph baseline or specificity control applies; if graph propagation is introduced later, the existing controls (simple baselines, specificity) apply then.
