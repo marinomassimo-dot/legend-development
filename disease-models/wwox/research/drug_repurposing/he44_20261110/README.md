@@ -21,6 +21,16 @@ Scale, stated plainly: KCNQ2 gives 352 molecules, 347 without a ChEMBL name (scr
 
 ## 3. The quantity to the point of use (H2)
 Where the value was lost: `action_search.py` reduced a registry row to "6.95 pIC50 (=)". Now `search_rows.tsv` keeps that column as it was and adds `affinity_type`, `affinity_nM_column` (with relation and range) and `affinity_check` (the internal agreement of the row); the old columns are identical row by row, `molecules.tsv` is byte-identical, the IT41/IT42 tests pass. `same_datum` now converts through `measurement` (one convention, not a parallel formula). Effect: the Cs+ rows on HCN1, HCN2 and HCN4 are `UNIT_CONFLICT_SUSPECT`; 126 rows agree, 342 are not checkable. The DQP-1105 rows are `AGREE` while two of them differ from the primary table by 1000: the test says so, and the internal check is not offered as if it would have found them. Pointers for the scientific work: `cs_hcn_pointers.md` (no column is chosen).
+Real cases checked to the consumer (471 GtoPdb rows of the IT41 table; 607 ChEMBL activity rows of the KCNQ2 and SLC6A1 reads):
+| Case | Real instance | What reaches the consumer |
+|---|---|---|
+| log value and concentration | 126 rows with both columns | both kept; `AGREE` |
+| interval | 11 rows with a range | the range, written smallest to largest with its unit (a first version printed `[300000.0-130000.0]`, low and high affinity, found on these rows and corrected) |
+| censored | 1 registry row with `<`; 106 of 607 activity rows | relation kept; `CENSORED` flag; the converted value is a bound, never compared as a value |
+| unit missing | 1 activity row (no value, no unit) | `VALUE_MISSING` / `UNIT_MISSING`; no conversion invented |
+| different systems | activity rows carry target type, organism, assay id and text | kept in `measurement`; no averaging anywhere |
+| registry against source | DQP-1105 (two rows 1000 off the paper), Cs+ HCN (log and nM columns 1000 apart) | DQP-1105 is `AGREE` and stays unseen by the internal check; Cs+ is `UNIT_CONFLICT_SUSPECT` |
+| republished through an intermediary | DGIdb rows whose claim source is ChEMBL | `claim_source` kept in the DGIdb listing; no potency exists there to be counted twice |
 
 ## 4. Identity and coverage (H3)
 `dgidb_listing.py` now uses `parent_form` (salts merge, stereo stays apart) and its summary says `overlap_basis = name_key_estimate_not_identity`. Measured: one DGIdb-only record (clorazepate dipotassium, S5) moved from "new" to "already in the simple search" (a false new); no correct link was lost; the enantiomer pair of the IT43 names was already counted as two molecules and stays two. A comparison by catalogue parent id is not a better reference here: a DGIdb-only record has no parent until it is reconciled.
