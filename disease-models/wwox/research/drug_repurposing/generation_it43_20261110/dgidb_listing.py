@@ -16,7 +16,10 @@ S41 = DR / "generation_it41_20261109"
 
 SALT = re.compile(r"\b(hydrochloride|hcl|hemi\w*|tartrate|maleate|mesylate|sodium|potassium|citrate|sulfate|sulphate|phosphate|fumarate|besylate|acetate|bromide|dihydrate|monohydrate)\b", re.I)
 RACEMATE = re.compile(r"\((?:r\s*,\s*s|rs|\+/-|\+-|\u00b1|rac|dl)\)-?", re.I)   # only a racemate mark merges with the parent; a single (R)/(S)/(+)/(-) names a distinct enantiomer (HE43: parent_form keeps stereo apart)
-def key(n): return re.sub(r"[^a-z0-9()+-]", "", SALT.sub("", RACEMATE.sub("", n.lower()))).replace(" ", "")
+import compound_identity as _ci  # noqa: E402  (HE43 parent_form: salts merge, stereo/isotope prefixes stay apart)
+def key(n):
+    p = _ci.parent_form(n)
+    return p["key"] + ("|" + p["stereo_isotope"] if p.get("stereo_isotope") else "")
 
 def main():
     rel = list(csv.DictReader(open(S41 / "relations_it41.tsv", encoding="utf-8"), delimiter="\t")) + list(csv.DictReader(open(HERE / "relations_it43.tsv", encoding="utf-8"), delimiter="\t"))

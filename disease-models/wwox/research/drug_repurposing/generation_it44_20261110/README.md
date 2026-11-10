@@ -34,3 +34,12 @@ IT43's independent reader found inorganic ions returned as drug candidates. The 
 |---|---|---|
 | S11 adding a resting K+ conductance | `relation_s11_frame_it44.md` (before), `relations_s11_it44.tsv`, `s11/`, `relation_s11_result_it44.md`, `verify_s11/VERDICTS.md`, `apply_it44_s11.py` | openers exist only for the weakly Ba2+-sensitive K2P subfamily; the Ba2+ concentration at which a lost current is blocked decides whether any opener is relevant; the first experiment gains a two-concentration Ba2+ step; V14 on the cards; open questions IT44-Q01/Q02 |
 | S12 astrocytic K+ buffering | `relation_s12_frame_it44.md` (before), `relations_s12_it44.tsv`, `s12/`, `relation_s12_result_it44.md` | no enhancer in the held tables; the engine's excluded blockers become discriminators; the activity path stopped at target resolution (KCNJ10/KCNJ16 unread): reopen when the HE44 resolver is on main |
+
+## P1: consumption of the HE43 components (what changed, before/after)
+| Component | Consumer | Before | After |
+|---|---|---|---|
+| `measurement.measure` | `activity_search.py` (activity rows and molecule table) | a value and unit printed as served; no converted scale; no flags | every row carries `converted_nM` (labelled conversion) and `measurement_flags`; over the three runs (11,084 rows): 5,413 clean, 5,000 of kind Potency (a screening potency, not an affinity: flagged `KIND_UNRECOGNISED`), 374 censored bounds, 276 with no value, 17 with an unrecognised unit, 4 approximate; the molecule table gains `n_measurement_flags` and `best_nM` (censored values never count) |
+| `compound_identity.parent_form` | `dgidb_listing.py` key | salts merged, a single stereo letter stripped by a pattern (two enantiomers merged) | key = parent name plus its stereo/isotope prefix: the new-molecule count over S1-S8 moves 106 to 104 and an enantiomer pair stays two molecules |
+| READ_INCOMPLETE / ID_NOT_RESOLVED | identity join | EMPTY_RESULT | already carried as non-evidence states by the view; nothing else to change here |
+| `action_search.py` quantity columns | not yet | the affinity is one string | Harness's HE44 edits that file (quantity columns); IT44 takes them when HE44 lands rather than editing the same lines |
+Not yet consumed: the seven registry rows whose nM column is exactly 1000 off (Cs+ on HCN1/2/4 among them) enter the S2 search table only through HE44's change; no S2 verdict depends on them.

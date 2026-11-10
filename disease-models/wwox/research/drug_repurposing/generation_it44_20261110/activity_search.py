@@ -11,6 +11,8 @@ import argparse, csv, gzip, hashlib, json, os, re, sys, time, urllib.parse, urll
 from collections import defaultdict
 from pathlib import Path
 HERE = Path(__file__).resolve().parent; DR = HERE.parent
+sys.path.insert(0, str(HERE.parents[4] / "framework/scripts"))
+import measurement as ms  # noqa: E402  (HE43: a quantity keeps its original value, unit and relation; the nM conversion is labelled, flags are never silent)
 API = "https://www.ebi.ac.uk/chembl/api/data/activity.json"
 TYPES = ("IC50", "EC50", "Ki", "Kd", "Potency")
 UNKNOWN_FIELDS = "direction;site;target_composition_in_assay;transfer_to_WWOX_context"
@@ -75,7 +77,8 @@ def main():
                 rows, cov, files = fetch(tid, types, a.max_pages, a.refetch); manifest[tid] = {"coverage": cov, "files": files, "rows": len(rows)}
                 gran = "single_protein" if ncomp == 1 and ttype == "SINGLE PROTEIN" else "complex_or_family_record"
                 for x in rows:
-                    act_rows.append(dict(relation_id=r["relation_id"], target_symbol=sym, target_chembl_id=tid, target_granularity=gran, molecule_chembl_id=x.get("molecule_chembl_id") or "",
+                    q = ms.measure(x.get("standard_type") or "", x.get("standard_value"), x.get("standard_units"), x.get("standard_relation") or "=", target=sym, species=x.get("assay_organism") or "", source="ChEMBL activity")
+                    act_rows.append(dict(converted_nM=("" if q["converted_nM"] is None else f"{q['converted_nM']:.6g}"), measurement_flags=";".join(q["flags"]),relation_id=r["relation_id"], target_symbol=sym, target_chembl_id=tid, target_granularity=gran, molecule_chembl_id=x.get("molecule_chembl_id") or "",
                         parent_chembl_id=x.get("parent_molecule_chembl_id") or x.get("molecule_chembl_id") or "", name=x.get("molecule_pref_name") or "", type=x.get("standard_type") or "", relation=x.get("standard_relation") or "",
                         value=x.get("standard_value") or "", units=x.get("standard_units") or "", assay_type=x.get("assay_type") or "", assay_organism=x.get("assay_organism") or "", validity=x.get("data_validity_comment") or "",
                         assay_description=(x.get("assay_description") or "")[:160].replace("\t", " ").replace("\n", " "), document=x.get("document_chembl_id") or "", pubmed=x.get("pubmed_id") or "", coverage=cov))
@@ -96,7 +99,7 @@ def main():
         nm = sorted({x["name"] for x in xs if x["name"]}); fun = [x for x in xs if x["assay_type"] == "F"]
         cn, cs, co = cat.get(par, ("", "", ""))
         mrows.append(dict(relation_id=rid, parent_chembl_id=par, name=" | ".join(nm)[:80], catalogue_name=cn[:60], catalogue_status=cs or ("none" if not cn else "unstated"), catalogue_origin=co, n_documents=len({x["document"] for x in xs if x["document"]}), n_activities=len(xs), n_functional=len(fun), types=";".join(sorted({x["type"] for x in xs})), organisms=";".join(sorted({x["assay_organism"] for x in xs if x["assay_organism"]}))[:80],
-            targets=";".join(sorted({x["target_symbol"] for x in xs})), n_flagged_validity=sum(1 for x in xs if x["validity"]), unit_variants=";".join(sorted({x["units"] for x in xs if x["units"]}))[:40],
+            targets=";".join(sorted({x["target_symbol"] for x in xs})), n_flagged_validity=sum(1 for x in xs if x["validity"]), n_measurement_flags=sum(1 for x in xs if x["measurement_flags"]), best_nM=min([float(x["converted_nM"]) for x in xs if x["converted_nM"] and "CENSORED" not in x["measurement_flags"]] or [float("nan")]), unit_variants=";".join(sorted({x["units"] for x in xs if x["units"]}))[:40],
             coverage=";".join(sorted({x["coverage"] for x in xs})), read_state=("TRUNCATED" if any(x["coverage"] != "COMPLETE" for x in xs) else "SCREEN_DEPOSIT" if all(len(doc_mols[(rid, x["document"])]) > DEPOSIT for x in xs) else "OK"), verdict="ACTIVITY_ONLY", unknown_fields=UNKNOWN_FIELDS))
     with open(out / "activity_molecules.tsv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, list(mrows[0].keys()), delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(mrows)
