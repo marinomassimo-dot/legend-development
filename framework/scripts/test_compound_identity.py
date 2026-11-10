@@ -107,6 +107,41 @@ class Target(unittest.TestCase):
         got = [ci.target_evidence(res("ifenprodil"), ["GRIN2B"], ES, q)["per_gene"]["GRIN2B"]["level"] for q in (stub(empty), stub(err), None)]
         self.assertEqual(got, ["EMPTY_RESULT", "READ_ERROR", "NOT_READ"])
 
+    def test_an_incomplete_read_is_not_an_empty_result(self):
+        """Synthetic answers in the shape of the ChEMBL adapter: a truncated, partly failed or gene-less activity read that found nothing for the gene is READ_INCOMPLETE, not EMPTY_RESULT."""
+        def one(coverage, hits):
+            return stub({"CHEMBL1": {"status": "NO_MATCH_FOUND", "hits": []},
+                         "act:CHEMBL1": {"status": "MATCH_FOUND", "coverage": coverage, "total_count": 900, "retrieved": len(hits), "hits": hits}})
+        other = [act("SIGMAR1", "Homo sapiens")]
+        for coverage in ("TRUNCATED", "PARTIAL_ERROR", "COMPLETE_TARGET_GENES_MISSING"):
+            t = ci.target_evidence(res("ifenprodil"), ["GRIN2B"], ES, one(coverage, other))
+            self.assertEqual(t["per_gene"]["GRIN2B"]["level"], "READ_INCOMPLETE", coverage)
+            self.assertIn(coverage, t["per_gene"]["GRIN2B"]["rows"][0])
+        # a complete read of the same rows stays EMPTY_RESULT; a hit in the part read is still a hit
+        self.assertEqual(ci.target_evidence(res("ifenprodil"), ["GRIN2B"], ES, one("COMPLETE", other))["per_gene"]["GRIN2B"]["level"], "EMPTY_RESULT")
+        hit = ci.target_evidence(res("ifenprodil"), ["GRIN2B"], ES, one("TRUNCATED", other + [act("GRIN2B", "Homo sapiens")]))
+        self.assertEqual(hit["per_gene"]["GRIN2B"]["level"], "MEASURED_ACTIVITY_HUMAN")
+
+    def test_a_chembl_id_that_does_not_exist_is_not_an_empty_result(self):
+        """Through the real ChEMBL adapter with a canned fetch: the declared id answers 404 and the activity read finds nothing, with coverage COMPLETE."""
+        from adapters import chembl
+
+        def fetch(url, **kw):
+            if "/molecule/CHEMBL9999999.json" in url:
+                return 404, {"error": "not found"}
+            if "activity.json" in url:
+                return 200, {"activities": [], "page_meta": {"total_count": 0, "next": None}}
+            return 200, {"chembl_db_version": "ChEMBL_37"}
+        stale = {"query": "x", "candidates": [], "declarations": [{"role": "identity", "chembl_id": "CHEMBL9999999", "query_name": "x"}], "label_conflict": []}
+        t = ci.target_evidence(stale, ["GRIN2B"], [], lambda req: chembl.query(req, fetch=fetch))
+        self.assertEqual(t["per_gene"]["GRIN2B"]["level"], "ID_NOT_RESOLVED")
+        self.assertIn("CHEMBL9999999", t["per_gene"]["GRIN2B"]["rows"][0])
+
+    def test_an_answer_with_no_defined_state_is_an_error_never_an_empty_result(self):
+        for answer in ({}, {"status": "TIMEOUT"}, {"status": None, "hits": None}):
+            t = ci.target_evidence(res("ifenprodil"), ["GRIN2B"], ES, lambda req, a=answer: a)
+            self.assertEqual(t["per_gene"]["GRIN2B"]["level"], "READ_ERROR", answer)
+
     def test_label_conflict_keeps_the_record_rows_out_of_the_attribution(self):
         a = {"CHEMBL275006": {"status": "MATCH_FOUND", "hits": []},
              "act:CHEMBL275006": {"status": "MATCH_FOUND", "coverage": "COMPLETE", "total_count": 1, "hits": [act("GRIA2", "Homo sapiens")]}}

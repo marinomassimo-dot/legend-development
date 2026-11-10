@@ -15,10 +15,14 @@ Two answers, never merged:
              they are in the catalogue, and a `label_conflict` when a declaration says the label sits on two structures.
   target     per expected gene, the highest evidence LEVEL that was read: CURATED_MECHANISM (ChEMBL mechanism table),
              SOURCE_INTERACTION (DGIdb/GtoPdb row in the catalogue), MEASURED_ACTIVITY_HUMAN, MEASURED_ACTIVITY_OTHER_SPECIES,
-             or one of EMPTY_RESULT (read, nothing under the filters) / NOT_READ (no ChEMBL id to read) /
-             READ_ERROR (the query failed). Selectivity is always NOT_ASSESSED, and the other genes measured are listed.
+             or one of EMPTY_RESULT (read completely, nothing under the filters) / NOT_READ (no ChEMBL id to read) /
+             READ_ERROR (the query failed) / ID_NOT_RESOLVED (a ChEMBL id of the record does not exist in the release read: stale,
+             merged or mistyped; that says nothing about the compound) / READ_INCOMPLETE (the adapter states the answer is TRUNCATED, PARTIAL_ERROR or
+             had its target genes missing, and nothing for this gene was found in the part read). Selectivity is always
+             NOT_ASSESSED, and the other genes measured are listed.
 
-Empty, not read and error are three states; none is evidence against a compound.
+Empty, not read, incomplete, unresolved-id and error are five states; none is evidence against a compound. The adapter already says
+how complete an activity answer is (`coverage`); this module only refuses to turn an incomplete one into EMPTY_RESULT.
 
   python3 framework/scripts/compound_identity.py "Ro 25-6981" --genes GRIN2B
   python3 framework/scripts/compound_identity.py ifenprodil --genes GRIN2B --offline
@@ -39,6 +43,8 @@ import compound_catalog as cc  # noqa: E402
 CAT_DIR = cc.DEFAULT_CATALOG.parent
 DECLARATIONS = CAT_DIR / "tool_identity_declarations.tsv"
 RECON = CAT_DIR / "ligand_reconciliation.tsv"
+READ_STATES = ("MATCH_FOUND", "NO_MATCH_FOUND")
+INCOMPLETE_COVERAGE = ("TRUNCATED", "PARTIAL_ERROR", "COMPLETE_TARGET_GENES_MISSING")
 LEVELS = ("CURATED_MECHANISM", "SOURCE_INTERACTION", "MEASURED_ACTIVITY_HUMAN", "MEASURED_ACTIVITY_OTHER_SPECIES")
 
 
@@ -137,13 +143,18 @@ def target_evidence(res: dict, genes: list[str], es: list[dict], chembl_query=No
                 other.update(syms)
     state = "NOT_READ" if chembl_query is None or not ids else "READ"
     errors = 0
+    incomplete, unresolved = [], []
     for cid in ids if chembl_query else []:
         mech = chembl_query({"drug": res["query"], "molecule_id": cid})
         act = chembl_query({"molecule": cid})
         read.append({"chembl_id": cid, "mechanism_status": mech.get("status"), "activity_status": act.get("status"),
                      "activity_coverage": act.get("coverage"), "activity_rows": act.get("total_count")})
-        if mech.get("status") == "QUERY_ERROR" or act.get("status") == "QUERY_ERROR":
-            errors += 1
+        if mech.get("status") not in READ_STATES or act.get("status") not in READ_STATES:
+            errors += 1   # QUERY_ERROR, but also an empty answer or a state the adapter does not define: unread, never "nothing found"
+        if mech.get("identity_basis") == "declared_chembl_id_not_found":
+            unresolved.append(cid)
+        if act.get("coverage") in INCOMPLETE_COVERAGE:
+            incomplete.append(f"{cid}: {act['coverage']} ({act.get('retrieved', '?')} of {act.get('total_count', '?')} activity rows read)")
         for h in mech.get("hits") or []:
             syms = {s.upper() for s in (h.get("target_gene_symbols") or [])}
             for g in want:
@@ -164,12 +175,18 @@ def target_evidence(res: dict, genes: list[str], es: list[dict], chembl_query=No
                 other.update(syms)
     if state == "READ" and errors and not all(level.values()):
         state = "READ_ERROR"
+    elif state == "READ" and unresolved and not all(level.values()):
+        state = "ID_NOT_RESOLVED"
+    elif state == "READ" and incomplete and not all(level.values()):
+        state = "READ_INCOMPLETE"
     per_gene = {}
     for g in want:
         if level[g]:
             per_gene[g] = {"level": level[g], "n_rows": len(detail[g]), "rows": detail[g][:6]}
         else:
-            per_gene[g] = {"level": {"READ": "EMPTY_RESULT", "NOT_READ": "NOT_READ", "READ_ERROR": "READ_ERROR"}[state], "n_rows": 0, "rows": []}
+            per_gene[g] = {"level": {"READ": "EMPTY_RESULT", "NOT_READ": "NOT_READ", "READ_ERROR": "READ_ERROR", "READ_INCOMPLETE": "READ_INCOMPLETE",
+                                                "ID_NOT_RESOLVED": "ID_NOT_RESOLVED"}[state],
+                           "n_rows": 0, "rows": ([f"{c}: id not in this ChEMBL release" for c in unresolved] if state == "ID_NOT_RESOLVED" else incomplete[:6] if state == "READ_INCOMPLETE" else [])}
     return {"expected_genes": want, "per_gene": per_gene, "chembl_read": read, "selectivity": "NOT_ASSESSED", "unattributed_source_rows": unattributed,
             "other_genes_seen": dict(other.most_common(8)),
             "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"}
