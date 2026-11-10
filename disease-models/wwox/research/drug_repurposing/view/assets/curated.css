@@ -236,3 +236,4 @@ nav .navmain>a:hover{background:var(--accbg)}
 @media print{.navall,.brand-state{display:none}nav{position:static}}
 .card-q{margin:6px 0;font-size:.92rem}
 .inv-cmp-list{margin:.4em 0 0 1.1em;padding:0}.inv-cmp-list li{margin:.35em 0}.cmp-role{font-size:.72rem;border:1px solid currentColor;border-radius:8px;padding:0 6px;margin:0 4px;white-space:nowrap}.inv-class-note{max-width:60ch}.inv-cmp summary{cursor:pointer}
+.inv-phys summary{cursor:pointer}.inv-phys-list{margin:.4em 0 0 1.1em;padding:0}.inv-phys-i{margin:.6em 0}.inv-phys-dl dt{font-size:.8rem}.inv-phys-dl dd{margin:0 0 .35em 0;max-width:62ch}

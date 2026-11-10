@@ -17,8 +17,8 @@
  "event_id": "FTR-20261108-22553026-61",
  "evidence_basis": [
   "Abstract, Introduction, Methods, Results and Discussion read as text; figure images unavailable in the bucket and not opened elsewhere.",
-  "verbatim_locator | proposition: GluN2A selectivity of TCN-201 | Results | \"TCN-201 displays strong selectivity, estimated to be >1000-fold, for GluN2A-containing NMDA receptors at a glycine concentration of 3 μM\"",
-  "verbatim_locator | proposition: glycine dependence | Results | \"There was no detectable inhibition of GluN1/GluN2A by 10 μM TCN-201 in the presence of 300 μM glycine\""
+  "verbatim_locator | proposition: GluN2A selectivity of TCN-201 | Results | \"TCN-201 displays strong selectivity, estimated to be >1000-fold, for GluN2A-containing NMDA receptors at a glycine concentration of 3 \u03bcM\"",
+  "verbatim_locator | proposition: glycine dependence | Results | \"There was no detectable inhibition of GluN1/GluN2A by 10 \u03bcM TCN-201 in the presence of 300 \u03bcM glycine\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

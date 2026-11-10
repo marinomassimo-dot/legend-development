@@ -1,0 +1,21 @@
+# IT40 independent verification — brief
+
+Work in the worktree `/home/desktop/legend-development/.claude/worktrees/it40` (read-only except your output folder). Write only to `disease-models/wwox/research/drug_repurposing/generation_it40_20261109/verify/`. Do not start agents. Do not contact anyone; no e-mail, no personal data. Not medical advice. Paths below are relative to `disease-models/wwox/research/drug_repurposing/`.
+
+## What was built (a producer's output; treat as claims to test, not as facts)
+
+1. `generation_it40_20261109/conditional_proposals_it40.tsv`: six conditional proposals (rows CP-BH1..3, CP-MH1..3) built by `conditional_proposals.py` from the package tables in `ampa_nmda_discrim_20261108/output/` and `membrane_hypotheses_20261108/output/` (hypotheses.tsv, alternatives.tsv, experiments.tsv, prediction_matrix.tsv).
+2. `mechsearch_it40_20261109/by_action.tsv` (catalogue rows per action-context relation R1..R6) and `identity_check.tsv` (does the catalogue record found by name for each of 15 named tools carry the intended target).
+3. The text added to `needs/needs.json` (strings starting `[IT40] `), `ranking_it8_p9_20261029/investigations_it20.tsv` (INV-05, INV-18 cells, `[IT40]`), and two card packets (`cards/F01_glutamate_receptor_node.packet.json`, `cards/F04_nmdar_intervention_class.packet.json`, last entry of `not_known`), taken from `ampa_nmda_discrim_20261108/output/consumer_delta.md` and `membrane_hypotheses_20261108/output/consumer_delta.md`. `consume_it40_20261109/RECONCILIATION.md` states what was changed from the proposals and why.
+
+## Questions (answer each with file, row and quoted text; "cannot tell" is an allowed answer)
+
+Q1. Gene arcs and directions: does any row of conditional_proposals_it40.tsv assert a gene–gene link, a sign or a direction of effect that its source row does not contain? Compare each cell with its source cell.
+Q2. Lost conditions and counter-evidence: for each of the six rows, list conditions or counter-evidence present in the source `hypotheses.tsv` row (counter_evidence, weakening_result, status) that the proposal row lost or weakened. For each `[IT40]` text in needs.json/investigations, compare with the corresponding row of `consumer_delta.md` and the source package tables: is any number, condition or limit changed or dropped?
+Q3. Transfer between molecules, paralogues or preparations: does any text carry a result from one molecule, subunit, preparation or species to another without saying so? Check especially radiprodil/ifenprodil/Ro 25-6981, TCN-201 (recombinant), carbenoxolone (culture), ivabradine (rat), perampanel (culture).
+Q4. Unknown turned into negative: does any text say "no effect", "absent", "not in catalogue" or "no datum" where the source only says not tested/not read? In particular `identity_check.tsv` NOT_IN_CATALOGUE and RECORD_WITHOUT_THE_INTENDED_TARGET verdicts: re-derive 4 of them from `catalog/catalog.jsonl.gz` (use `framework/scripts/compound_catalog.py`; a record named differently is not the same compound) and say whether the verdict wording over- or understates.
+Q5. Same datum counted as several confirmations: in by_action.tsv (relation, catalogue_id, target symbol rows) and in the proposals, is one catalogue record or one source counted more than once as if independent (salts and parents of one molecule, one ChEMBL target record repeated per gene symbol)? Count distinct molecules for R1 and R3.
+Q6. Burst suppression presented as proof of a defect: does any text move from "d-APV/carbenoxolone/ivabradine changes bursts or sag" to "the target is defective or the mechanism is X"?
+Q7. In `by_action.tsv`, R1: the claim "targets whose catalogue record has at most two genes are subunit-specific records and the rest are multi-gene complex records, not subunit-selective". Check on the catalogue records for radiprodil, traxoprodil, rislenemdaz, EVT-101 and memantine whether the target record supports that reading; say what the 2-gene record actually is. Report if the inference is wrong.
+
+Output: `verify/VERDICTS.md` with one section per question: SUPPORTED / PARTLY / NOT SUPPORTED / CANNOT TELL, the evidence, and the exact correction you would make. Be adversarial: the producer wants these to pass.

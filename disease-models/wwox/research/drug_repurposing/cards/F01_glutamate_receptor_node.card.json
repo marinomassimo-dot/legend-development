@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "87fc19836b6170c97fa52602ab0a56d7100bd65e15614c44d1f54f7fd40c6647",
+  "input_sha256": "00e632ce6b5b4756010df617d14f68118f791eb417755a6238f557fb82ed8c09",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -400,7 +400,8 @@
       "Whether a partial pore block reproduces the full block's effect on bursting.",
       "Whether either drug affects maturation in a developing Wwox-deficient brain.",
       "The GRIN2A variant class behind the burst-suppression association in the cohort abstract.",
-      "Whether the physiological NMDAR gate, extracellular Mg2+, can be raised enough to offset the knockout's depolarised resting potential and halved inhibitory current (see the IT6-P11 magnesium card and README in drug_repurposing/supplement_diet_it6_p11_20261029)."
+      "Whether the physiological NMDAR gate, extracellular Mg2+, can be raised enough to offset the knockout's depolarised resting potential and halved inhibitory current (see the IT6-P11 magnesium card and README in drug_repurposing/supplement_diet_it6_p11_20261029).",
+      "Whether slice exposure to perampanel is adequate: it is a noncompetitive AMPA/kainate antagonist with no effect on NMDA currents in culture and slow onset and offset (seconds), so exposure must be verified by the evoked response; the potency in the source is from submicromolar to just above one micromolar (a text-versus-figure conflict was withdrawn as a probable axis misread, inference), while a kinetic dissociation constant in the same paper is several-fold higher and is not reconciled there."
     ],
     "evidence_against": [
       "The only memantine-responsive genetic NMDAR group is defined by receptor gain of function; loss-of-function and indeterminate GRIN variants did not respond, so 'an NMDAR gene causes the same phenotype' (DL-MECH-002) does not give the sign.",

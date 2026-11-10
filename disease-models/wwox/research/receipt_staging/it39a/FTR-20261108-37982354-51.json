@@ -20,16 +20,16 @@
   "verbatim_locator | proposition: open HCN channels depolarise rest | Resting viewpoint | \"which results in a depolarization of RMP in the presence of HCN channels\"",
   "verbatim_locator | proposition: sag and rebound can be modulated by co-expressed channels | Dynamic viewpoint: sag, rebound | \"interactions with other ion channels that co-express with HCN channels can also modulate the ability of neurons to manifest sag or rebound\"",
   "verbatim_locator | proposition: report at multiple voltages | Interactions viewpoint | \"we suggest reporting of measurements at multiple voltages and not just one single voltage\"",
-  "verbatim_locator | proposition: reversal potential statement | Introduction | \"setting their reversal potential (the voltage at which the current reverses its direction) to be unique at around −20 to −30 mV\""
+  "verbatim_locator | proposition: reversal potential statement | Introduction | \"setting their reversal potential (the voltage at which the current reverses its direction) to be unique at around \u221220 to \u221230 mV\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [
   "disease-models/wwox/research/drug_repurposing/membrane_hypotheses_20261108/output/evidence.tsv",
   "disease-models/wwox/research/drug_repurposing/membrane_hypotheses_20261108/output/observations.tsv"
  ],
- "prior_receipt": null,
+ "prior_receipt": "FTR-20261108-37982354-41",
  "record_kind": "contemporaneous_receipt",
- "reread_reason": "first_read",
+ "reread_reason": "new_question_outside_prior_coverage",
  "source_fingerprint": "fd59c370c8f7276a05d2dcc2d7295175232706f65b1f4f26059e331b02d18597",
  "source_kind": "fulltext_remote",
  "source_locator": "NCBI efetch XML for the PMC record, fetched 2026-11-08; bytes not saved in the repository",
