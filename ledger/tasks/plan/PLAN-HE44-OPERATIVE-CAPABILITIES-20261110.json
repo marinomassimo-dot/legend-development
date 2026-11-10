@@ -12,11 +12,11 @@
  "branch": "task/he44",
  "CURRENT_STATE": "IN_PROGRESS",
  "CHECKPOINT": {
-  "last_verified_result": "HE43 candidate 19d09ce3 (merge of main 380a4ee3): unit and view suites green, gate PASS, package audit PASS; release battery on 19d09ce3 running (PID in /tmp/he43_battery_pid, log /tmp/he43_battery_19d09ce3.log)",
-  "first_incomplete_work": "HE43 landing (battery result, task_close, push --expect-sha, remote check); then H1",
-  "active_processes": "battery 19d09ce3 (mine)",
+  "last_verified_result": "HE43 landed and pushed 273c8b56 (gate PASS, ls-remote). HE44 candidate on task/he44 with surfaces regenerated and audited PASS; battery not yet run",
+  "first_incomplete_work": "HE44 battery on a frozen SHA, gate, push, report",
+  "active_processes": "none",
   "real_dependencies": "IT44 owns generation/consumption/dashboard and action_search/dgidb_listing consumers; SCI44 owns biology; the azetukalner case comes from SCI43 consumer_delta row 9",
-  "next_executable_step": "wait on the battery PID, land HE43, then H1 pre-registered test of an activity-by-target path"
+  "next_executable_step": "freeze the SHA, clone, run the battery waiting by event, then task_close and push with --expect-sha"
  },
  "AUTHORISED_QUEUE_20261110": {
   "MANDATE_STATE": "OPEN",
@@ -32,8 +32,9 @@
     },
     {
      "step": "HE44 record, session-mandate binding verified",
-     "status": "IN_PROGRESS",
-     "owner": "plan"
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "watch check: session 29e50812 RUNNING for HE44; HE43 UNKNOWN (binding not written)"
     }
    ]
   },
@@ -43,8 +44,9 @@
    "steps": [
     {
      "step": "Existing path studied; minimal activity-by-target component; control and a pre-registered different case",
-     "status": "TODO",
-     "owner": "plan"
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "he44_20261110/README.md section 2; target_activity.py + test; H1_preregistration.md met; commits f454fb8a, ce8b1173"
     }
    ]
   },
@@ -54,8 +56,9 @@
    "steps": [
     {
      "step": "Measurement carried through the consumer that drops it; Cs+/HCN pointers for science",
-     "status": "TODO",
-     "owner": "plan"
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "he44_20261110/README.md section 3; action_search.py columns; test_quantity_to_consumer.py; cs_hcn_pointers.md; commit c7926be4"
     }
    ]
   },
@@ -65,8 +68,9 @@
    "steps": [
     {
      "step": "DGIdb listing on the shared normalizer; overlap estimate not identity; lost links and false new candidates measured",
-     "status": "TODO",
-     "owner": "plan"
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "dgidb_listing.py on parent_form; test_listing_key.py; commit 3e26925a"
     }
    ]
   },
@@ -76,8 +80,9 @@
    "steps": [
     {
      "step": "One complete path traced; no error becomes absence or negative evidence",
-     "status": "TODO",
-     "owner": "plan"
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "repurposing_search need notes + tests (70a7ef3d); public names guard (5da8cd4f); README section 5"
     }
    ]
   },
@@ -87,8 +92,9 @@
    "steps": [
     {
      "step": "One real activity with owner consent, split coordinator/delegate, one improvement",
-     "status": "TODO",
-     "owner": "plan"
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "README section 6: census by phase, dominant factor, event-driven wait measured"
     }
    ]
   },
@@ -98,8 +104,9 @@
    "steps": [
     {
      "step": "Connections with consumers; retrieval without reading the corpus",
-     "status": "TODO",
-     "owner": "plan"
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "he44_20261110/DREAM.md; retrieval test 2 calls; pointer on IT41-Q04 (7f8d4b08)"
     }
    ]
   },
@@ -109,8 +116,9 @@
    "steps": [
     {
      "step": "Existing mechanism checked, harmless isolated test",
-     "status": "TODO",
-     "owner": "plan"
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "mandate_watch events (20, all NONE) and 95 continuity tests OK; no second monitor or cron"
     }
    ]
   },
@@ -120,8 +128,9 @@
    "steps": [
     {
      "step": "Names path on a new or changed case; one concrete duplication removed",
-     "status": "TODO",
-     "owner": "plan"
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "ChEMBL id links (ff1aebe5), names statement corrected in five languages (348914fb), regenerated surfaces audited PASS (88aaa003); duplications removed: same_datum formula, DGIdb key regex"
     }
    ]
   },
@@ -131,7 +140,7 @@
    "steps": [
     {
      "step": "Battery by SHA, gate, push with --expect-sha, remote check, final report",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan"
     }
    ]

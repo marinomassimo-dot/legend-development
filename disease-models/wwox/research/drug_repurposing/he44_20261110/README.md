@@ -36,7 +36,7 @@ Perimeter: this coordinator transcript from the HE43 mandate (258 turns, one mod
 | first battery, verdict failure, fix, second battery | 28 | 13.2 M | 10.3 k |
 | merge and regeneration | 17 | 8.4 M | 11.3 k |
 Dominant factor: re-reading a context that grows from 203 k to 603 k tokens: the start context alone is 49% of the cache read; output is 0.2%; tool-result text carried is about 11% and the ten longest-carried results are 36% of that (whole-file dumps where a key lookup sufficed). The waiting for the second battery (73 minutes) cost 14 turns and 6.5 M cache read.
-Improvement applied: wait for a battery by event (`Monitor` on the battery PID), not by repeated 10-minute polls. Comparison on the same kind of wait (HE43 merged battery): see section 8 (filled in when measured). Not applied, and why: a fresh window cannot be forced by the runtime; the decisive premises and the originals are untouched.
+Improvement applied: wait for a battery by event (`Monitor` on the battery PID), not by repeated 10-minute polls. Comparison on the same kind of wait (the HE43 merged battery, 17 minutes from the monitor start to its event, with no polling): 2 turns and 1.3 M cache read, against 14 turns and 6.5 M cache read for the 73-minute poll-waited second battery (about 0.12 against 0.19 turns per waiting minute; the 2 turns include writing this note). Exploratory, one wait of each kind, different context lengths: it supports the practice, it does not validate a saving. Not applied, and why: a fresh window cannot be forced by the runtime; the decisive premises and the originals are untouched.
 
 ## 7. DREAM, continuity, names (H6, H7, H8)
 `DREAM.md`: four connections with controls and consumers; the reopen condition of the fly question is half met (public stock listing; no phenotype or rescue), recorded as a pointer on IT41-Q04; retrieval test 2 calls, 22,291 notification tokens, correct, limits stated.
@@ -45,3 +45,6 @@ Names: a compound whose name is not allowed now shows its ChEMBL id as a link to
 
 ## 8. How to remove each upgrade
 `target_activity.py` and its test (nothing calls it yet); the three columns of `search_rows.tsv` and `affinity_columns` in `action_search.py` (the `affinity` column is untouched); `overlap_basis` in the DGIdb summary and the `key()` swap; `listing_notes` in `repurposing_search.py`; `compound_public_links` and its rendering; the Monitor wait is a habit, not code.
+
+## 9. Landing
+HE43: release battery PASS WITH SKIPS (233 targets, 11 skipped) on the frozen merged candidate `19d09ce3`; the record commit after it is documentation only; gate PASS; pushed as `273c8b56` with `--expect-sha`, verified by ls-remote. The live page was read after the push: its generic statement that the edition omits all compound names was out of date once names appear; it is corrected in the page source and the five languages (HE44), pending the next push.
