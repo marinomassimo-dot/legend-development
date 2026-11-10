@@ -29,6 +29,10 @@ class Offline(unittest.TestCase):
         self.assertIn("TRUNCATED", m[0]["coverage"])
     def test_complete_read_is_named(self):
         m = self.run_path([page([act("CHEMBL_A", "alpha", "EC50", "40")])]); self.assertEqual(m[0]["coverage"], "COMPLETE")
+    def test_screening_deposit_is_flagged_and_a_small_document_is_not(self):
+        big = [act(f"CHEMBL_S{i}", "", "IC50", "9", doc="BIGSCREEN") for i in range(250)] + [act("CHEMBL_KEEP", "keep", "EC50", "40", doc="SMALLDOC")]
+        m = {x["parent_chembl_id"]: x for x in self.run_path([page(big)])}
+        self.assertEqual(m["CHEMBL_S1"]["read_state"], "SCREEN_DEPOSIT"); self.assertEqual(m["CHEMBL_KEEP"]["read_state"], "OK")
     def test_unnamed_molecule_without_catalogue_row_is_status_none(self):
         m = self.run_path([page([act("CHEMBL_ZZ_NOT_IN_CATALOGUE", "", "Ki", "5", atype="B")])]); self.assertEqual((m[0]["catalogue_status"], m[0]["n_functional"]), ("none", "0"))
 

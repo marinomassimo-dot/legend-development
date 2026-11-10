@@ -86,13 +86,16 @@ def main():
     mrows = []
     per_rel = defaultdict(set)
     for (rid, par) in mol: per_rel[rid].add(par)
-    FLOOD = 1000   # a relation whose targets are measured against more molecules than this is a screening or reporter-assay target: the list is a pointer to the assay, not a set of candidates
+    DEPOSIT = 200   # a document that measures more molecules than this on the relation's targets is a screening deposit: its molecules are pointers to the screen, not candidates
+    doc_mols = defaultdict(set)
+    for (rid, par), xs in mol.items():
+        for x in xs: doc_mols[(rid, x["document"])].add(par)
     for (rid, par), xs in sorted(mol.items()):
         nm = sorted({x["name"] for x in xs if x["name"]}); fun = [x for x in xs if x["assay_type"] == "F"]
         cn, cs, co = cat.get(par, ("", "", ""))
         mrows.append(dict(relation_id=rid, parent_chembl_id=par, name=" | ".join(nm)[:80], catalogue_name=cn[:60], catalogue_status=cs or ("none" if not cn else "unstated"), catalogue_origin=co, n_documents=len({x["document"] for x in xs if x["document"]}), n_activities=len(xs), n_functional=len(fun), types=";".join(sorted({x["type"] for x in xs})), organisms=";".join(sorted({x["assay_organism"] for x in xs if x["assay_organism"]}))[:80],
             targets=";".join(sorted({x["target_symbol"] for x in xs})), n_flagged_validity=sum(1 for x in xs if x["validity"]), unit_variants=";".join(sorted({x["units"] for x in xs if x["units"]}))[:40],
-            coverage=";".join(sorted({x["coverage"] for x in xs})), read_state=("FLOOD" if len(per_rel[rid]) > FLOOD or any(x["coverage"] != "COMPLETE" for x in xs) else "OK"), verdict="ACTIVITY_ONLY", unknown_fields=UNKNOWN_FIELDS))
+            coverage=";".join(sorted({x["coverage"] for x in xs})), read_state=("TRUNCATED" if any(x["coverage"] != "COMPLETE" for x in xs) else "SCREEN_DEPOSIT" if all(len(doc_mols[(rid, x["document"])]) > DEPOSIT for x in xs) else "OK"), verdict="ACTIVITY_ONLY", unknown_fields=UNKNOWN_FIELDS))
     with open(out / "activity_molecules.tsv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, list(mrows[0].keys()), delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(mrows)
     json.dump(manifest, open(out / "activity_manifest.json", "w"), indent=1)

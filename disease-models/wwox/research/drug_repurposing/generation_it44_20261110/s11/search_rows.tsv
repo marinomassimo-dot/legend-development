@@ -1,0 +1,105 @@
+relation_id	source	molecule	name	catalogue_id	species	action	direction	site_or_granularity	primary_target	selectivity_comment	affinity	assay_or_note	pubmed	target_symbol	labelled_form	qualification	reason	unknown_fields
+S11	ChEMBL curated mechanism	CAT:CHEMBL184412	DRONEDARONE HYDROCHLORIDE	CAT:CHEMBL1201729	Homo sapiens	BLOCKER	down	single_protein_record				Inward rectifier potassium channel 2 blocker		KCNJ2		EXCLUDED	direction_opposite	
+S11	ChEMBL curated mechanism	CAT:CHEMBL1200694	SEVOFLURANE	CAT:CHEMBL1200694	Homo sapiens	OPENER	up	single_protein_record				Potassium channel subfamily K member 10 opener		KCNK10		CANDIDATE	ok	
+S11	ChEMBL curated mechanism	CAT:CHEMBL1200733	DESFLURANE	CAT:CHEMBL1200733	Homo sapiens	OPENER	up	single_protein_record				Potassium channel subfamily K member 10 opener		KCNK10		CANDIDATE	ok	
+S11	ChEMBL curated mechanism	CAT:CHEMBL1256	ISOFLURANE	CAT:CHEMBL1256	Homo sapiens	OPENER	up	single_protein_record				Potassium channel subfamily K member 10 opener		KCNK10		CANDIDATE	ok	
+S11	ChEMBL curated mechanism	CAT:CHEMBL1257	ENFLURANE	CAT:CHEMBL1257	Homo sapiens	OPENER	up	single_protein_record				Potassium channel subfamily K member 10 opener		KCNK10		CANDIDATE	ok	
+S11	ChEMBL curated mechanism	CAT:CHEMBL931	HALOTHANE	CAT:CHEMBL931	Homo sapiens	OPENER	up	single_protein_record				Potassium channel subfamily K member 10 opener		KCNK10		CANDIDATE	ok	
+S11	ChEMBL curated mechanism	CAT:CHEMBL1200694	SEVOFLURANE	CAT:CHEMBL1200694	Homo sapiens	OPENER	up	single_protein_record				Potassium channel subfamily K member 2 opener		KCNK2		CANDIDATE	ok	
+S11	ChEMBL curated mechanism	CAT:CHEMBL1200733	DESFLURANE	CAT:CHEMBL1200733	Homo sapiens	OPENER	up	single_protein_record				Potassium channel subfamily K member 2 opener		KCNK2		CANDIDATE	ok	
+S11	ChEMBL curated mechanism	CAT:CHEMBL1256	ISOFLURANE	CAT:CHEMBL1256	Homo sapiens	OPENER	up	single_protein_record				Potassium channel subfamily K member 2 opener		KCNK2		CANDIDATE	ok	
+S11	ChEMBL curated mechanism	CAT:CHEMBL1257	ENFLURANE	CAT:CHEMBL1257	Homo sapiens	OPENER	up	single_protein_record				Potassium channel subfamily K member 2 opener		KCNK2		CANDIDATE	ok	
+S11	ChEMBL curated mechanism	CAT:CHEMBL931	HALOTHANE	CAT:CHEMBL931	Homo sapiens	OPENER	up	single_protein_record				Potassium channel subfamily K member 2 opener		KCNK2		CANDIDATE	ok	
+S11	ChEMBL curated mechanism	CAT:CHEMBL1200694	SEVOFLURANE	CAT:CHEMBL1200694	Homo sapiens	OPENER	up	single_protein_record				Potassium channel subfamily K member 3 opener		KCNK3		CANDIDATE	ok	
+S11	ChEMBL curated mechanism	CAT:CHEMBL1200733	DESFLURANE	CAT:CHEMBL1200733	Homo sapiens	OPENER	up	single_protein_record				Potassium channel subfamily K member 3 opener		KCNK3		CANDIDATE	ok	
+S11	ChEMBL curated mechanism	CAT:CHEMBL1256	ISOFLURANE	CAT:CHEMBL1256	Homo sapiens	OPENER	up	single_protein_record				Potassium channel subfamily K member 3 opener		KCNK3		CANDIDATE	ok	
+S11	ChEMBL curated mechanism	CAT:CHEMBL1257	ENFLURANE	CAT:CHEMBL1257	Homo sapiens	OPENER	up	single_protein_record				Potassium channel subfamily K member 3 opener		KCNK3		CANDIDATE	ok	
+S11	ChEMBL curated mechanism	CAT:CHEMBL1754	DOXAPRAM HYDROCHLORIDE	CAT:CHEMBL3989519	Homo sapiens	BLOCKER	down	single_protein_record				Potassium channel subfamily K member 3 blocker		KCNK3		EXCLUDED	direction_opposite	
+S11	ChEMBL curated mechanism	CAT:CHEMBL931	HALOTHANE	CAT:CHEMBL931	Homo sapiens	OPENER	up	single_protein_record				Potassium channel subfamily K member 3 opener		KCNK3		CANDIDATE	ok	
+S11	ChEMBL curated mechanism	CAT:CHEMBL1200694	SEVOFLURANE	CAT:CHEMBL1200694	Homo sapiens	OPENER	up	single_protein_record				Potassium channel subfamily K member 9 opener		KCNK9		CANDIDATE	ok	
+S11	ChEMBL curated mechanism	CAT:CHEMBL1200733	DESFLURANE	CAT:CHEMBL1200733	Homo sapiens	OPENER	up	single_protein_record				Potassium channel subfamily K member 9 opener		KCNK9		CANDIDATE	ok	
+S11	ChEMBL curated mechanism	CAT:CHEMBL1256	ISOFLURANE	CAT:CHEMBL1256	Homo sapiens	OPENER	up	single_protein_record				Potassium channel subfamily K member 9 opener		KCNK9		CANDIDATE	ok	
+S11	ChEMBL curated mechanism	CAT:CHEMBL1257	ENFLURANE	CAT:CHEMBL1257	Homo sapiens	OPENER	up	single_protein_record				Potassium channel subfamily K member 9 opener		KCNK9		CANDIDATE	ok	
+S11	ChEMBL curated mechanism	CAT:CHEMBL1754	DOXAPRAM HYDROCHLORIDE	CAT:CHEMBL3989519	Homo sapiens	BLOCKER	down	single_protein_record				Potassium channel subfamily K member 9 blocker		KCNK9		EXCLUDED	direction_opposite	
+S11	ChEMBL curated mechanism	CAT:CHEMBL931	HALOTHANE	CAT:CHEMBL931	Homo sapiens	OPENER	up	single_protein_record				Potassium channel subfamily K member 9 opener		KCNK9		CANDIDATE	ok	
+S11	GtoPdb interaction	GTOPDB:14099	Nb-Activator-67		Human	Activator/Activation	up		false	Not Determined	7.0 pEC50 (=)		38755204	KCNK10		CANDIDATE	ok	
+S11	GtoPdb interaction	GTOPDB:14100	Nb-Activator-76		Human	Activator/Activation	up		false	Not Determined	6.389999866485596 pEC50 (=)		38755204	KCNK10		CANDIDATE	ok	
+S11	GtoPdb interaction	GTOPDB:14094	ONO-2920632		Human	Activator/Activation	up		false	Not Determined	6.519999980926514 pEC50 (=)		39981749	KCNK10		CANDIDATE	ok	
+S11	GtoPdb interaction	GTOPDB:2391	arachidonic acid		Human	Activator/None	up		false	Non-selective | studied at 1-10 &micro;M	- (=)		10880510	KCNK10		CANDIDATE	ok	
+S11	GtoPdb interaction	CAT:DGIDB:3e6764ccb88c	BL-1249	CAT:DGIDB:3e6764ccb88c	Human	Activator/None	up		false	Not Determined	5.099999904632568 pEC50 (=)		30089357	KCNK10		CANDIDATE	ok	
+S11	GtoPdb interaction	GTOPDB:1051	docosahexaenoic acid		Human	Activator/None	up		false	Not Determined	- (=)		10880510	KCNK10		CANDIDATE	ok	
+S11	GtoPdb interaction	CAT:DGIDB:586e6db3aff7	GI‐530159	CAT:DGIDB:586e6db3aff7	Human	Activator/None	up		false	Not Determined	- (=)	Whole‐cell recording from tsA‐201 cells shows a 42% enhancement in hTREK2 channel current upon activation by 1 &mu;M GI‐530139.	29150838	KCNK10		CANDIDATE	ok	
+S11	GtoPdb interaction	GTOPDB:2401	halothane		Human	Activator/None	up		true	Non-selective | studied at 1-5 mM	- (=)		10880510	KCNK10		CANDIDATE	ok	
+S11	GtoPdb interaction	GTOPDB:1052	linoleic acid		Human	Activator/None	up		false	Not Determined	- (=)		10880510	KCNK10		CANDIDATE	ok	
+S11	GtoPdb interaction	GTOPDB:2508	lysophosphatidylcholine		Human	Activator/None	up		false	Not Determined	- (=)		10880510	KCNK10		CANDIDATE	ok	
+S11	GtoPdb interaction	GTOPDB:2342	quinidine		Rat	Channel blocker/None	down		false	Not Determined	- (=)		12122143	Kcnk10		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:14101	Nb-Inhibitor-61		Human	Inhibitor/Inhibition	down		false	Not Determined	6.159999847412109 pIC50 (=)		38755204	KCNK10		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:14095	ONO-TR-772		Human	Inhibitor/Inhibition	down		false	Not Determined	6.769999980926514 pIC50 (=)		40365404	KCNK10		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	CAT:DGIDB:4a75dc7e0832	magnolol	CAT:DGIDB:4a75dc7e0832	Human	Inhibitor/Inhibition	down		false	Not Determined	5.210000038146973 pIC50 (=)		37836658	KCNK1		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:13373	CVN293		Mouse	Inhibitor/Inhibition	down		false	Not Determined	7.550000190734863 pIC50 (=)	Dertermined in HEK cells overexpressing mouse kcnk13	38746889	Kcnk13		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:13373	CVN293		Human	Inhibitor/Inhibition	down		false	Not Determined	7.309999942779541 pIC50 (=)	Determined in HEK cells overexpressing hKCNK13	38746889	KCNK13		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2401	halothane		Human	Inhibitor/None	down		false	Not Determined | studied at ~5 mM	- (=)		25148687	KCNK13		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2391	arachidonic acid		Human	Activator/Activation	up		false	Not Determined | studied at 1-10 &micro;M	5.0 pEC50 (=)		9687497	KCNK2		CANDIDATE	ok	
+S11	GtoPdb interaction	GTOPDB:14093	LPS2336		Human	Activator/Activation	up		false	Not Determined	4.929999828338623 pEC50 (=)		40427633	KCNK2		CANDIDATE	ok	
+S11	GtoPdb interaction	GTOPDB:14094	ONO-2920632		Human	Activator/Activation	up		false	Not Determined	5.550000190734863 pEC50 (=)		39981749	KCNK2		CANDIDATE	ok	
+S11	GtoPdb interaction	CAT:DGIDB:3e6764ccb88c	BL-1249	CAT:DGIDB:3e6764ccb88c	Human	Activator/None	up		false	Not Determined	5.260000228881836 pEC50 (=)		30089357	KCNK2		CANDIDATE	ok	
+S11	GtoPdb interaction	GTOPDB:2503	chloroform		Human	Activator/None	up		false	Not Determined | studied at 1-5 mM	- (=)		10321245	KCNK2		CANDIDATE	ok	
+S11	GtoPdb interaction	CAT:DGIDB:586e6db3aff7	GI‐530159	CAT:DGIDB:586e6db3aff7	Human	Activator/None	up		false	Not Determined	6.050000190734863 pEC50 (=)	Measuring GI‐530139-induced enhanced current via single hTREK1 channels measured at +60 mV in the inside‐out manual patch configuration, in a concentration–response experiment.	29150838	KCNK2		CANDIDATE	ok	
+S11	GtoPdb interaction	CAT:DGIDB:586e6db3aff7	GI‐530159	CAT:DGIDB:586e6db3aff7	Human	Activator/None	up		false	Not Determined	6.119999885559082 pEC50 (=)	Measuring <sup>86</sup>Rb efflux by TREK1 induced by GI‐530159 at 70 mM potassium.	29150838	KCNK2		CANDIDATE	ok	
+S11	GtoPdb interaction	GTOPDB:2401	halothane		Human	Activator/None	up		false	Non-selective | studied at 1-5 mM	- (=)		10321245	KCNK2		CANDIDATE	ok	
+S11	GtoPdb interaction	GTOPDB:2505	isoflurane		Human	Activator/None	up		false	Not Determined | studied at 1-5 mM	- (=)		10321245	KCNK2		CANDIDATE	ok	
+S11	GtoPdb interaction	GTOPDB:2326	riluzole		Human	Activator/None	up		false	Non-selective	- (=)			KCNK2		CANDIDATE	ok	
+S11	GtoPdb interaction	GTOPDB:14096	Cpd8l [PMID: 40040241]		Rat	Inhibitor/Inhibition	down		false	Not Determined	6.099999904632568 pIC50 (=)		40040241	Kcnk2		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:14095	ONO-TR-772		Rat	Inhibitor/Inhibition	down		false	Not Determined	7.820000171661377 pIC50 (=)		40365404	Kcnk2		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:208	norfluoxetine		Human	Inhibitor/None	down		false	Not Determined	5.050000190734863 pIC50 (=)		15685212	KCNK2		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2401	halothane		Human	Activator/None	up		false	Not Determined | studied at 1-10 mM	- (=)		20519544	KCNK3		CANDIDATE	ok	
+S11	GtoPdb interaction	GTOPDB:2401	halothane		Rat	Activator/Positive	up		false	Non-selective | studied at 1-10 mM	3.0 pEC50 (=)		11850453|9687497	Kcnk3		CANDIDATE	ok	
+S11	GtoPdb interaction	GTOPDB:2505	isoflurane		Rat	Activator/Positive	up		false		2.7 pEC50		11850453	Kcnk3		CANDIDATE	ok	
+S11	GtoPdb interaction	GTOPDB:2364	anandamide		Human	Channel blocker/Inhibition	down		false	Non-selective	5.599999904632568 pIC50 (=)		11226154	KCNK3		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2364	anandamide		Human	Channel blocker/None	down		false	Not Determined	6.150000095367432 pIC50 (~)		11226154	KCNK3		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2504	angiotensin II		Rat	Channel blocker/None	down		false		-		10847588	Kcnk3		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2391	arachidonic acid		Human	Channel blocker/None	down		false		1.0 pIC50		11226154	KCNK3		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	CAT:DGIDB:95aa9b8f0940	AVE1231	CAT:DGIDB:95aa9b8f0940	Human	Channel blocker/None	down		false	Not Determined	6.699999809265137 pIC50 (=)	Inhibition of hK<sub>2P</sub>3.1 currents in Xenopus oocytes by patch-clamp assay.	31001961	KCNK3		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2344	Ba<sup>2+</sup>		Human	Channel blocker/None	down		false		0.3 pIC50			KCNK3		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2506	<i>R</i>-(+)-methanandamide		Human	Channel blocker/None	down		false	Not Determined	6.150000095367432 pIC50 (~)		11226154	KCNK3		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:14097	KU124		Human	Inhibitor/Inhibition	down		false	Not Determined	5.849999904632568 pIC50 (=)		40635742	KCNK3		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2391	arachidonic acid		Human	Activator/None	up		false	Not Determined | studied at 1-10 &micro;M	- (=)		9628867	KCNK4		CANDIDATE	ok	
+S11	GtoPdb interaction	GTOPDB:2326	riluzole		Human	Activator/None	up		false	Not Determined | studied at 1-100 &micro;M	- (=)		10779373	KCNK4		CANDIDATE	ok	
+S11	GtoPdb interaction	GTOPDB:2391	arachidonic acid		Rat	Activator/Positive	up		false	Not Determined	- (=)		7623282	Kcnk4		CANDIDATE	ok	
+S11	GtoPdb interaction	GTOPDB:2326	riluzole		Human	Activator/Positive	up		false	Non-selective	- (=)		10779373	KCNK4		CANDIDATE	ok	
+S11	GtoPdb interaction	GTOPDB:2344	Ba<sup>2+</sup>		Rat	Channel blocker/None	down		false		-		7623282	Kcnk4		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2401	halothane		Human	Activator/None	up		true	Non-selective | studied at 1-5 mM	- (=)		11886861	KCNK9		CANDIDATE	ok	
+S11	GtoPdb interaction	GTOPDB:10069	A-769662		Human	Inhibitor/Inhibition	down		false	Not Determined | effective at 300 &mu;M	3.5199999809265137 pIC50 (=)		39362502	KCNK9		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:14098	benzimidazole 991		Human	Inhibitor/Inhibition	down		false	Not Determined | effective concentration range 3-30 &mu;M	- (=)		39362502	KCNK9		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2364	anandamide		Human	Inhibitor/None	down		false	Non-selective | studied at 1-10 &micro;M	- (=)		10747866	KCNK9		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2506	<i>R</i>-(+)-methanandamide		Human	Inhibitor/None	down		false	Not Determined | studied at 1-10 &micro;M	- (=)		10747866	KCNK9		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	CAT:DGIDB:b30f50adb672	ruthenium red	CAT:DGIDB:b30f50adb672	Human	Inhibitor/None	down		false	Non-selective	- (=)			KCNK9		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2387	PIP<sub>2</sub>		Mouse	Activator/Agonist	up		false	Not Determined	- (=)		15980413|9486652|11172809	Kcnj2		CANDIDATE	ok	
+S11	GtoPdb interaction	GTOPDB:2344	Ba<sup>2+</sup>		Mouse	Channel blocker/Antagonist	down		false	Not Determined	pKd (=)		11454958	Kcnj2		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2356	Cs<sup>+</sup>		Mouse	Channel blocker/Antagonist	down		false	Not Determined	pKd (=)		8799888	Kcnj2		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:708	Mg<sup>2+</sup>		Mouse	Channel blocker/Antagonist	down		false	Non-selective	4.800000190734863 pKd (=)		7748552	Kcnj2		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2388	putrescine		Mouse	Channel blocker/Antagonist	down		false	Not Determined	5.099999904632568 pKd (=)		7748552|8866861	Kcnj2		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2389	Rb<sup>+</sup>		Mouse	Channel blocker/Antagonist	down		false		-		8799888	Kcnj2		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2390	spermidine		Mouse	Channel blocker/Antagonist	down		false	Not Determined	8.100000381469727 pKd (=)		7748552	Kcnj2		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:710	spermine		Mouse	Channel blocker/Antagonist	down		false	Not Determined	9.100000381469727 pKd (=)		7748552|8866861	Kcnj2		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2386	oleoyl-CoA		Mouse	Gating inhibitor/Antagonist	down		false		-		15980413|16777940	Kcnj2		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2344	Ba<sup>2+</sup>		Rat	Gating inhibitor/Antagonist	down		false		5.2 pKi		9592090	Kcnj12		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2344	Ba<sup>2+</sup>		Mouse	Gating inhibitor/Antagonist	down		false	Not Determined	- (=)		8083233	Kcnj12		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2356	Cs<sup>+</sup>		Mouse	Gating inhibitor/Antagonist	down		false	Not Determined	- (=)		8083233	Kcnj12		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:708	Mg<sup>2+</sup>		Human	Inhibitor/None	down		false	Non-selective	4.960000038146973 pIC50 (=)		8735700	KCNJ12		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2391	arachidonic acid		Human	Activator/Agonist	up		false		6.35 pEC50		11306688	KCNJ4		CANDIDATE	ok	
+S11	GtoPdb interaction	GTOPDB:2395	tenidap		Human	Activator/Agonist	up		false		pEC50		11821021	KCNJ4		CANDIDATE	ok	
+S11	GtoPdb interaction	GTOPDB:2344	Ba<sup>2+</sup>		Mouse	Channel blocker/Antagonist	down		false		5.19 pIC50		8013643|7926018	Kcnj4		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2344	Ba<sup>2+</sup>		Human	Channel blocker/Antagonist	down		false	Not Determined	4.989999771118164 pIC50 (=)		12032359|8051145|8034048	KCNJ4		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2356	Cs<sup>+</sup>		Mouse	Channel blocker/Antagonist	down		false	Not Determined	4.960000038146973 pIC50 (=)		8013643|7926018	Kcnj4		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2356	Cs<sup>+</sup>		Human	Channel blocker/Antagonist	down		false	Not Determined	pKi (=)		8051145	KCNJ4		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:708	Mg<sup>2+</sup>		Human	Channel blocker/Antagonist	down		false	Not Determined	5.0 pKd (=)		7969496	KCNJ4		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2388	putrescine		Human	Channel blocker/Antagonist	down		false	Not Determined	- (=)		7969496	KCNJ4		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:943	SCH-23390		Human	Channel blocker/Antagonist	down		false		-		12065762	KCNJ4		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2390	spermidine		Human	Channel blocker/Antagonist	down		false	Not Determined	- (=)		7969496	KCNJ4		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:710	spermine		Human	Channel blocker/Antagonist	down		false	Not Determined	- (=)		7969496	KCNJ4		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2343	tetraethylammonium		Human	Channel blocker/Antagonist	down		false		4.21 pKi		8051145	KCNJ4		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:566	Zn<sup>2+</sup>		Human	Channel blocker/Antagonist	down		false		-		7576658	KCNJ4		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2346	H<sup>+</sup>		Human	Gating inhibitor/Antagonist	down		false	Not Determined	pKi (=)		10200419|10896660	KCNJ4		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2346	H<sup>+</sup>		Human	Gating inhibitor/Antagonist	down		false	Not Determined	pKi (=)		7576658|10200419	KCNJ4		EXCLUDED	direction_opposite	
+S11	GtoPdb interaction	GTOPDB:2393	rose bengal (photoactivated)		Mouse	Gating inhibitor/Antagonist	down		false		-		8524851	Kcnj4		EXCLUDED	direction_opposite	

@@ -6,6 +6,9 @@ S3	CHEMBL255044	FLUPIRTINE	approved_any_source	chembl_selected	no	OK	4	0	2	EC50	
 S3	CHEMBL266510	FLINDOKALNER	clinical_candidate	chembl_selected	yes	OK	3	0	1	EC50	KCNQ2;KCNQ4;KCNQ5	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
 S3	CHEMBL41355	EZOGABINE	approved_any_source	chembl_selected	yes	OK	22	0	10	EC50	KCNQ2;KCNQ3;KCNQ4;KCNQ5	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
 S3	CHEMBL5095264	AZETUKALNER	clinical_candidate	chembl_selected	no	OK	1	0	1	EC50	KCNQ2	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S10	CHEMBL1093059	BARDOXOLONE	clinical_candidate	chembl_selected	no	OK	1	0	1	Kd	KEAP1	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S10	CHEMBL1232461	MOLIBRESIB	clinical_candidate	chembl_selected	no	OK	1	0	1	IC50	KEAP1	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S10	CHEMBL3819587		tool_probe	chembl_selected	no	OK	7	0	3	EC50;IC50;Kd;Ki	KEAP1	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
 S2	CHEMBL4169078	SRA-737	clinical_candidate	chembl_selected	no	OK	1	0	1	IC50	HCN4	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
 S2	CHEMBL471737	IVABRADINE	approved_any_source	chembl_selected	yes	OK	1	0	1	EC50	HCN4	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
 S2	CHEMBL6195028		tool_probe	chembl_selected	no	OK	2	2	1	IC50	HCN4	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
@@ -24,3 +27,33 @@ S7	CHEMBL96	GAMMA-AMINOBUTYRIC ACID	clinical_candidate	chembl_selected	no	OK	5	0
 S9	CHEMBL13960	DICHLOROACETIC ACID	clinical_candidate	chembl_selected	no	OK	4	0	1	IC50	PDK1;PDK2;PDK3;PDK4	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
 S9	CHEMBL306823	SODIUM DICHLOROACETATE	clinical_candidate	chembl_selected	yes	OK	12	4	2	EC50;IC50	PDK1;PDK2;PDK3;PDK4	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
 S9	CHEMBL757	NANDROLONE	clinical_candidate	chembl_selected	no	OK	4	0	1	IC50	PDK1;PDK2;PDK3;PDK4	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL1008	BEPRIDIL	approved_any_source	chembl_selected	no	OK	1	0	1	IC50	KCNK2	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL1077896	ROPIVACAINE	approved_any_source	chembl_selected	no	OK	1	0	1	IC50	KCNK3	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL1087	MEPIVACAINE	approved_any_source	chembl_selected	no	OK	1	0	1	IC50	KCNK3	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL1098	BUPIVACAINE	approved_any_source	chembl_selected	no	OK	1	0	1	IC50	KCNK3	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL1423	PIMOZIDE	approved_any_source	chembl_selected	no	OK	2	0	2	IC50	KCNK2	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL1491	AMLODIPINE	approved_any_source	chembl_selected	no	OK	3	0	2	IC50	KCNK2	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL193	NIFEDIPINE	approved_any_source	chembl_selected	no	OK	1	0	1	IC50	KCNK2	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL23588	FLUFENAMIC ACID	clinical_candidate	chembl_selected	no	OK	1	0	1	EC50	KCNK2	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL28854	SIPATRIGINE	clinical_candidate	chembl_selected	no	OK	1	0	1	IC50	KCNK2	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL41	FLUOXETINE	approved_any_source	chembl_selected	no	OK	3	0	2	IC50	KCNK2	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL4105630	ZURANOLONE	approved_any_source	chembl_selected	no	OK	1	0	1	IC50	KCNJ2	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL4169078	SRA-737	clinical_candidate	chembl_selected	no	OK	1	0	1	IC50	KCNJ2	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL4514203	BAY-390	tool_probe	chembl_selected	no	OK	1	0	1	IC50	KCNK9	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL45816	MIBEFRADIL	approved_any_source	chembl_selected	no	OK	1	0	1	IC50	KCNK9	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL492	ETIDOCAINE	approved_any_source	chembl_selected	no	OK	1	0	1	IC50	KCNK3	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL5095055	BAFREKALANT	clinical_candidate	chembl_selected	no	OK	4	0	1	IC50	KCNK3;KCNK9	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL54	HALOPERIDOL	approved_any_source	chembl_selected	no	OK	2	0	2	IC50	KCNK2	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL54440	MEVASTATIN	clinical_candidate	chembl_selected	no	OK	1	0	1	IC50	KCNK9	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL558	MEXILETINE	approved_any_source	chembl_selected	no	OK	3	0	2	IC50	KCNK2;KCNK3	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL6066864	FLUPENTIXOL	clinical_candidate	chembl_selected	no	OK	1	0	1	IC50	KCNK2	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL631	PROPAFENONE	approved_any_source	chembl_selected	no	OK	3	0	2	IC50	KCNK2;KCNK3	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL64249	CLOROTEPINE	clinical_candidate	chembl_selected	no	OK	2	0	1	IC50	KCNK9	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL698	TETRACAINE	approved_any_source	chembl_selected	no	OK	1	0	1	IC50	KCNK3	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL71	CHLORPROMAZINE	approved_any_source	chembl_selected	no	OK	2	0	2	IC50	KCNK2	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL723	CARVEDILOL	approved_any_source	chembl_selected	no	OK	4	0	1	IC50	KCNK10;KCNK2	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL726	FLUPHENAZINE	approved_any_source	chembl_selected	no	OK	1	0	1	IC50	KCNK2	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL744	RILUZOLE	approved_any_source	chembl_selected	no	OK	1	0	1	EC50	KCNK2	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL79	LIDOCAINE	approved_any_source	chembl_selected	no	OK	3	0	3	IC50	KCNK2;KCNK3	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL831	LOXAPINE	approved_any_source	chembl_selected	no	OK	2	0	2	IC50	KCNK2	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S11	CHEMBL998	LORATADINE	approved_any_source	chembl_selected	no	OK	1	0	1	IC50	KCNK9	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context

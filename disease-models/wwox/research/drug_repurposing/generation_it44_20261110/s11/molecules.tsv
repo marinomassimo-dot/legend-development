@@ -1,0 +1,52 @@
+relation_id	molecule	names	sources	n_source_rows	directions	species	sites
+S11	CAT:CHEMBL1200694	SEVOFLURANE	ChEMBL curated mechanism	4	up	Homo sapiens	single_protein_record
+S11	CAT:CHEMBL1200733	DESFLURANE	ChEMBL curated mechanism	4	up	Homo sapiens	single_protein_record
+S11	CAT:CHEMBL1256	ISOFLURANE	ChEMBL curated mechanism	4	up	Homo sapiens	single_protein_record
+S11	CAT:CHEMBL1257	ENFLURANE	ChEMBL curated mechanism	4	up	Homo sapiens	single_protein_record
+S11	CAT:CHEMBL1754	DOXAPRAM HYDROCHLORIDE	ChEMBL curated mechanism	2	down	Homo sapiens	single_protein_record
+S11	CAT:CHEMBL184412	DRONEDARONE HYDROCHLORIDE	ChEMBL curated mechanism	1	down	Homo sapiens	single_protein_record
+S11	CAT:CHEMBL931	HALOTHANE	ChEMBL curated mechanism	4	up	Homo sapiens	single_protein_record
+S11	CAT:DGIDB:3e6764ccb88c	BL-1249	GtoPdb interaction	2	up	Human	
+S11	CAT:DGIDB:4a75dc7e0832	magnolol	GtoPdb interaction	1	down	Human	
+S11	CAT:DGIDB:586e6db3aff7	GI‐530159	GtoPdb interaction	3	up	Human	
+S11	CAT:DGIDB:95aa9b8f0940	AVE1231	GtoPdb interaction	1	down	Human	
+S11	CAT:DGIDB:b30f50adb672	ruthenium red	GtoPdb interaction	1	down	Human	
+S11	GTOPDB:10069	A-769662	GtoPdb interaction	1	down	Human	
+S11	GTOPDB:1051	docosahexaenoic acid	GtoPdb interaction	1	up	Human	
+S11	GTOPDB:1052	linoleic acid	GtoPdb interaction	1	up	Human	
+S11	GTOPDB:13373	CVN293	GtoPdb interaction	2	down	Human;Mouse	
+S11	GTOPDB:14093	LPS2336	GtoPdb interaction	1	up	Human	
+S11	GTOPDB:14094	ONO-2920632	GtoPdb interaction	2	up	Human	
+S11	GTOPDB:14095	ONO-TR-772	GtoPdb interaction	2	down	Human;Rat	
+S11	GTOPDB:14096	Cpd8l [PMID: 40040241]	GtoPdb interaction	1	down	Rat	
+S11	GTOPDB:14097	KU124	GtoPdb interaction	1	down	Human	
+S11	GTOPDB:14098	benzimidazole 991	GtoPdb interaction	1	down	Human	
+S11	GTOPDB:14099	Nb-Activator-67	GtoPdb interaction	1	up	Human	
+S11	GTOPDB:14100	Nb-Activator-76	GtoPdb interaction	1	up	Human	
+S11	GTOPDB:14101	Nb-Inhibitor-61	GtoPdb interaction	1	down	Human	
+S11	GTOPDB:208	norfluoxetine	GtoPdb interaction	1	down	Human	
+S11	GTOPDB:2326	riluzole	GtoPdb interaction	3	up	Human	
+S11	GTOPDB:2342	quinidine	GtoPdb interaction	1	down	Rat	
+S11	GTOPDB:2343	tetraethylammonium	GtoPdb interaction	1	down	Human	
+S11	GTOPDB:2344	Ba<sup>2+</sup>	GtoPdb interaction	7	down	Human;Mouse;Rat	
+S11	GTOPDB:2346	H<sup>+</sup>	GtoPdb interaction	2	down	Human	
+S11	GTOPDB:2356	Cs<sup>+</sup>	GtoPdb interaction	4	down	Human;Mouse	
+S11	GTOPDB:2364	anandamide	GtoPdb interaction	3	down	Human	
+S11	GTOPDB:2386	oleoyl-CoA	GtoPdb interaction	1	down	Mouse	
+S11	GTOPDB:2387	PIP<sub>2</sub>	GtoPdb interaction	1	up	Mouse	
+S11	GTOPDB:2388	putrescine	GtoPdb interaction	2	down	Human;Mouse	
+S11	GTOPDB:2389	Rb<sup>+</sup>	GtoPdb interaction	1	down	Mouse	
+S11	GTOPDB:2390	spermidine	GtoPdb interaction	2	down	Human;Mouse	
+S11	GTOPDB:2391	arachidonic acid	GtoPdb interaction	6	down;up	Human;Rat	
+S11	GTOPDB:2393	rose bengal (photoactivated)	GtoPdb interaction	1	down	Mouse	
+S11	GTOPDB:2395	tenidap	GtoPdb interaction	1	up	Human	
+S11	GTOPDB:2401	halothane	GtoPdb interaction	6	down;up	Human;Rat	
+S11	GTOPDB:2503	chloroform	GtoPdb interaction	1	up	Human	
+S11	GTOPDB:2504	angiotensin II	GtoPdb interaction	1	down	Rat	
+S11	GTOPDB:2505	isoflurane	GtoPdb interaction	2	up	Human;Rat	
+S11	GTOPDB:2506	<i>R</i>-(+)-methanandamide	GtoPdb interaction	2	down	Human	
+S11	GTOPDB:2508	lysophosphatidylcholine	GtoPdb interaction	1	up	Human	
+S11	GTOPDB:566	Zn<sup>2+</sup>	GtoPdb interaction	1	down	Human	
+S11	GTOPDB:708	Mg<sup>2+</sup>	GtoPdb interaction	3	down	Human;Mouse	
+S11	GTOPDB:710	spermine	GtoPdb interaction	2	down	Human;Mouse	
+S11	GTOPDB:943	SCH-23390	GtoPdb interaction	1	down	Human	
