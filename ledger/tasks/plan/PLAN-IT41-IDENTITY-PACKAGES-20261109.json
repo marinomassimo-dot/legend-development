@@ -12,11 +12,11 @@
  "branch": "task/hpkg",
  "CURRENT_STATE": "IN_PROGRESS",
  "CHECKPOINT": {
-  "last_verified_result": "merged candidate = task/hpkg 37468be3 (identity + reader + H6 + origin/main 31919734): 22 reader and 10 identity regressions OK on the IT40 data",
-  "first_incomplete_work": "publish identity (push --expect-sha 7586bfe0) then land task/hpkg; H5 depends on IT41 package A",
-  "active_processes": "none of mine; other sessions' batteries are running and untouched",
+  "last_verified_result": "frozen candidate e2b1faaf (origin 31919734 + identity + reader + H6): 22 reader and 10 identity regressions OK; local main has moved to 9d58c69d (IT41 package A landed on top by the Orchestrator, not tested with mine)",
+  "first_incomplete_work": "push e2b1faaf, then land task/dream5 (Dream note af326b16)",
+  "active_processes": "release battery PID 503364 (identity 503364:109795043), wait with process_wait --pid 503364 (NOT --identity, which only prints)",
   "real_dependencies": "IT40 landing (matrix_column data); IT41 package A output for H5",
-  "next_executable_step": "gate + LINT on the merged tree, release battery on the frozen SHA, task_close, safe_push --expect-sha"
+  "next_executable_step": "on battery PASS: git worktree add --detach .claude/worktrees/pushe2b e2b1faaf; safe_push.py development main --expect-sha e2b1faaf from there; tell the Orchestrator the SHA"
  },
  "AUTHORISED_QUEUE_20261109": {
   "MANDATE_STATE": "OPEN",
@@ -61,10 +61,10 @@
      "evidence": "commit 1e011056 on local main 7586bfe0; gate 0 BLOCK, LINT 0 BLOCK"
     },
     {
-     "step": "Publish after release battery on the frozen SHA 7586bfe0",
+     "step": "Publish identity + reader + H6 after the release battery on the frozen SHA e2b1faaf (push from a detached checkout of e2b1faaf, because local main has moved)",
      "status": "IN_PROGRESS",
      "owner": "plan",
-     "evidence": "remote moved (IT40 landed, 18 commits): the battery on 7586bfe0 was stopped at ~83 targets (partial log /tmp/idfix_battery_7586bfe0_STOPPED_PARTIAL.log, not a verdict); one battery on the merged candidate instead"
+     "evidence": "battery PID 503364 in box /tmp/legend-battery-pdtpcwh8 (205 of ~217 targets at 00:25 UTC); log copied to /tmp/idfix_battery_e2b1faaf.log on exit"
     },
     {
      "step": "Send the published SHA to the Orchestrator (package A)",
