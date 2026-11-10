@@ -8,22 +8,26 @@
   "START_UTC": "2026-11-09T22:30:00Z",
   "BASELINE": "main 30382215 (development/main same). Worktree .claude/worktrees/it41a, branch task/it41a. IT40 is in its own worktree (task/it40, not yet on main); its final report was not available at S0. Harness identity delivery (worktree idfix) had no commit at S0.",
   "CURRENT_PACKAGE": {
-    "id": "A-landing+B-delivered",
-    "state": "A landing; B delivered and verified on task/it41b, lands after A",
+    "id": "B-landing",
+    "state": "package B delivered; checks, battery on a fresh unique clone, landing; light queue next",
     "delegate_active": "none",
-    "updated": "2026-11-10T00:30:00Z"
+    "updated": "2026-11-10T01:00:00Z"
   },
-  "RESUME": "CHECKPOINT 2026-11-10T00:30Z: A battery PASS WITH SKIPS on fb6454b9; landing A now (task_close + safe_push). B is delivered and verified on task/it41b (worktree it41b, last commit 287b155e): after A lands, merge main in it41b, update this record (B step DONE, delegations with B census: producer 78 turns/77,931 out/12,661,989 cache/peak 273,899; verifier 79 turns/82,748 out/11,260,712 cache/peak 266,992), run LINT/receipts/growth/gate, battery on a fresh unique clone, land. Then the light queue (public feasibility of a Wwox-loss Drosophila model) if resources allow. Active processes: none.",
+  "RESUME": "CHECKPOINT 2026-11-10T01:00Z: A landed 9d58c69d. B candidate on task/it41b (worktree it41b); next: freeze the commit, battery on /tmp/bat_it41b, then task_close + safe_push; then the light queue (public feasibility of a Wwox-loss Drosophila model: a question and a preliminary feasibility, no commissioning, no external contact) with one producer and one verifier if resources allow. Active processes: none.",
   "DECISIONS_TAKEN": [
     "2026-11-09 S0: the INV-05 closing pass was already delivered and published (30382215); nothing pending. IT40 final report not found in any worktree at S0 (IT40 is unmerged); next_investigations_it40.md read in place from the it40 worktree (read-only): A1 and A2 rows (primary mechanism papers for NBQX and GYKI 52466; catalogue identity of GYKI 52466) are the open needs this package addresses; B3 (BE1) is the experiment the comparison serves. Harness identity delivery not yet available: names used by each paper are recorded so the match can be made without rebuilding the search.",
     "2026-11-09 A1 design written and committed before any source was opened, including the five demonstrations the block control must give, what the result does not separate, and the A3 rule (alternative only by missing property).",
     "2026-11-09 monitor verified concretely: host cron has the hourly mandate_watch --all --deliver resume (37 * * * *); the session wrote MANDATE_BOUND for this task and mandate_watch check --self-call then returned this session id (state STOPPED_RESUMABLE because the caller is idle by definition, action RESUME); no in-session recall existed, so one session-only hourly recall (17 * * * *, job 40c5c308, expires in 7 days) was created; the old mandate ORCH-IT40INV05 is COMPLETE/RELEASED and needs none. Automatic resume of a dead session is configured, not proven by a test; in-session cron fires only while the REPL is idle.",
     "2026-11-09 A3 not triggered: the verifier checked the five demonstrations of A1 against the known options and none is defeated; the producer's premise (a higher concentration was not tested) was wrong and was corrected. No new molecule. Package A delivered (README, consumer_delta with 10 proposals, COST_NOTE); nothing applied to any consumer; staged receipts in research/receipt_staging/it41a/ not recorded.",
-    "2026-11-10 battery on the frozen candidate fb6454b93d71a78645ae8ef38511cba6ee2206fa (clone /tmp/bat_it41a, PID 490108): REGRESSION VERDICT PASS WITH SKIPS (223 targets, 11 skipped, all environmental: corpus artefacts and catalogue cache absent in the clone, Stop hook not installed). The verdict belongs to fb6454b9 only; the landing SHA differs by record lines and any merge, covered by the gate on its exact SHA plus LINT, receipts, growth and targeted suites."
+    "2026-11-10 battery on the frozen candidate fb6454b93d71a78645ae8ef38511cba6ee2206fa (clone /tmp/bat_it41a, PID 490108): REGRESSION VERDICT PASS WITH SKIPS (223 targets, 11 skipped, all environmental: corpus artefacts and catalogue cache absent in the clone, Stop hook not installed). The verdict belongs to fb6454b9 only; the landing SHA differs by record lines and any merge, covered by the gate on its exact SHA plus LINT, receipts, growth and targeted suites.",
+    "2026-11-10 package A landed (9d58c69d, gate PASS, battery PASS WITH SKIPS on fb6454b9). Harness identity delivery reconciled in A's consumer_delta addendum (GYKI 52466 = CHEMBL275006, GYKI 53655 = CHEMBL267450 distinct); a README sentence that wrongly called the Gyki53784 record 'neither' was corrected.",
+    "2026-11-10 package B delivered: abstention with a discriminating question (no pharmacological direction at BNIP3 is sustainable now); no compound proposed; 6 proposals in consumer_delta, 0 applied; staged receipts in research/receipt_staging/it41b/ not recorded."
   ],
   "DELEGATIONS": [
     "Package A producer: asked sonnet/medium, read back medium on every turn; 76 turns; output 95,239; cache read 9,332,864; peak 253,785; 6 sources newly read (partial full text), 6 staged receipts validated, 4 publisher texts unreached (bot checks), 1 targeted NBQX step on open routes, 15 audit corrections applied.",
-    "Package A verifier: asked sonnet/high, read back high on every turn; 62 turns; output 70,647; cache read 8,081,133; peak 239,104; first pass 9 supported / 7 partly / 0 not supported of 16, 3 defective evidence rows of 40; recheck of substantive rows 11 of 11 correct, three cosmetic leftovers fixed by the Orchestrator."
+    "Package A verifier: asked sonnet/high, read back high on every turn; 62 turns; output 70,647; cache read 8,081,133; peak 239,104; first pass 9 supported / 7 partly / 0 not supported of 16, 3 defective evidence rows of 40; recheck of substantive rows 11 of 11 correct, three cosmetic leftovers fixed by the Orchestrator.",
+    "Package B producer: asked sonnet/medium, read back medium on every turn; 78 turns; output 77,931; cache read 12,661,989; peak 273,899; 3 sources newly read (partial full text) plus one partial re-read and one abstract-only source, 5 staged receipts validated, 9 audit corrections applied.",
+    "Package B verifier: asked sonnet/high, read back high on every turn; 79 turns; output 82,748; cache read 11,260,712; peak 266,992; first pass 9 supported / 5 partly / 0 not supported of 14, 3 defective evidence notes of 22, BNIP3 contrast re-derived from the GEO deposits; recheck 10 of 13 rows fully corrected, residuals fixed by the Orchestrator."
   ],
   "ESCALATIONS": [],
   "STOP_LOG": [],
@@ -70,8 +74,9 @@
       "steps": [
         {
           "step": "B HIF1A to BNIP3 premise package (after A is delivered, if sustainable)",
-          "status": "TODO",
-          "owner": "orchestrator"
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "hif1a_bnip3_it41_20261109 delivered and verified (14 decisive rows, 5 explanations, recheck); landing in this chain"
         }
       ]
     },
