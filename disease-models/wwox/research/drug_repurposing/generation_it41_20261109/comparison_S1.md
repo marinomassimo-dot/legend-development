@@ -34,3 +34,5 @@ What would make onfasprodil more interesting: a primary source stating the ifenp
 ## Limits
 
 No ranking, no recommendation, no dose. The cached GtoPdb snapshot is version 2026.3.1 (a share-alike licence: the shareable edition carries no compound names; see P9). "New for LEGEND" means absent from the repository's discussion, not new to the literature; the latter needs its own check. The two abstracts were read via the PubMed tools and are not a full-text reading.
+
+> **Update 2026-11-10 (IT42, SCI42 S5):** the DQP-1105 row was resolved at source: the registry GluN2B and GluN2C rows are micromolar numbers stored as nanomolar (a unit slip, not a subunit transfer); the compound is excluded from the GluN2B comparison. See entry V09 of the public list.

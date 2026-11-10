@@ -6,5 +6,5 @@ of which channel blockers			6
 of which antagonists with no receptor site recorded (unclassified)			1
 molecules recorded as GluN1/GluN2B antagonists on the two-gene assembly record (ChEMBL action: antagonist)	4		4
 negative-modulator rows in the GtoPdb table under GluN2B (subunit of the value to be checked per row)	0	0	3
-rows whose assay was on another subunit than the target they sit under (transfer avoided)	not seen	not seen	1
-compounds that entered the view as emerged from the search (not previously discussed as comparators)	0	0	2
+rows whose assay text names another subunit than the target they sit under (value not read as GluN2B; SCI42 S5 resolved the counted case at source: a registry unit slip, not a subunit transfer)	not seen	not seen	1
+compounds that entered the view as emerged from the search (not previously discussed as comparators)	0	0	0

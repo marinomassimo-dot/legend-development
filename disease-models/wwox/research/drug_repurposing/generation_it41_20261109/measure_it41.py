@@ -20,7 +20,7 @@ out = [
  ["of which antagonists with no receptor site recorded (unclassified)", "", "", mol(unclass)],
  ["molecules recorded as GluN1/GluN2B antagonists on the two-gene assembly record (ChEMBL action: antagonist)", mol(assembly), "", mol(assembly)],
  ["negative-modulator rows in the GtoPdb table under GluN2B (subunit of the value to be checked per row)", 0, 0, mol(nam)],
- ["rows whose assay text names another subunit than the target they sit under (value not read as GluN2B; subunit of the value unresolved)", "not seen", "not seen", sum(1 for r in nam if "GluN2C" in r["assay_or_note"])],
+ ["rows whose assay text names another subunit than the target they sit under (value not read as GluN2B; SCI42 S5 resolved the counted case at source: a registry unit slip, not a subunit transfer)", "not seen", "not seen", sum(1 for r in nam if "GluN2C" in r["assay_or_note"])],
  ["compounds that entered the view as emerged from the search (not previously discussed as comparators)", 0, 0, emerged],
 ]
 with open(HERE / "measure_it41.tsv", "w", newline="") as f:

@@ -3383,7 +3383,7 @@
      "readout_level": "functional",
      "direction_observed": "decreased",
      "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-     "limits": "Pooled events, not animals; amplitude, not GABA concentration or reversal potential; the authors caution that this age group may mimic a late-stage disorder (map CHAIN B). [IT36] mIPSC not recorded; 140 mM KCl internal; no antagonist named for isolation; recorded interneurons (5 cells, 4 animals) not PV-identified; presynaptic, postsynaptic or cell-number change all fit. [IT36] The unit of the KS test is not declared; the size of the reported p values is compatible with events and not with one value per cell, and 10 of 18 lie below that floor; no contradiction of the paper is asserted.",
+     "limits": "Pooled events, not animals; amplitude, not GABA concentration or reversal potential; the authors caution that this age group may mimic a late-stage disorder (map CHAIN B). [IT36] mIPSC not recorded; 140 mM KCl internal; no antagonist named for isolation; recorded interneurons (5 cells, 4 animals) not PV-identified; presynaptic, postsynaptic or cell-number change all fit. [IT36] The unit of the KS test is not declared; the size of the reported p values is compatible with events and not with one value per cell, and 10 of 18 lie below that floor; no contradiction of the paper is asserted. [SCI42] Consequences of the 140 mM KCl internal solution with no antagonist named: unblocked excitatory events at -70 mV, a 4 x SD threshold that makes counted frequency amplitude-dependent, an undeclared frequency metric; the higher knockout input resistance argues against a pure artefact.",
      "pmid": "34634460",
      "locators": [
       {
@@ -3707,7 +3707,7 @@
      "readout_level": "none",
      "direction_observed": "not measured",
      "evidence_scope": "UNVERIFIED_HYPOTHESIS",
-     "limits": "Placeholder observation: the absence is the datum.",
+     "limits": "Placeholder observation: the absence is the datum. [SCI42] The only inhibitory recording in the WWOX neocortical slice (34634460) used a 140 mM KCl pipette at -70 mV, so its amplitude cannot report the native chloride gradient; a raised native postsynaptic chloride cannot lower it through the driving force; a presynaptic chloride effect is not excluded.",
      "pmid": "34268881",
      "locators": [
       {
