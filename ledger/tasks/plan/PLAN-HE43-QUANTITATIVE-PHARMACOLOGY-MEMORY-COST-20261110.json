@@ -12,11 +12,11 @@
  "branch": "task/he43",
  "CURRENT_STATE": "DONE",
  "CHECKPOINT": {
-  "last_verified_result": "battery PASS WITH SKIPS (231 targets, 11 skipped) on 09b17517454836234f11c4f287fd125e031d2bc1; the commits after it (record) are documentation only; gate PASS; unit suites green",
+  "last_verified_result": "battery PASS WITH SKIPS (233 targets, 11 skipped) on 19d09ce3fe4a (merge of 09b17517 and main 380a4ee3); the commit after it (this record) is documentation only; gate PASS",
   "first_incomplete_work": "none",
   "active_processes": "none",
   "real_dependencies": "IT43 adopts measurement/parent_form in action_search/dgidb_listing and regenerates its views after merging main; SCI43 may settle the Cs+ HCN row unit from the primary paper",
-  "next_executable_step": "none; mandate complete"
+  "next_executable_step": "none; landing and push recorded in the HE44 report"
  },
  "AUTHORISED_QUEUE_20261110": {
   "MANDATE_STATE": "COMPLETE",
@@ -109,10 +109,10 @@
    "title": "Verification, integration, closure",
    "steps": [
     {
-     "step": "Battery on frozen SHA 09b17517 in a unique clone: PASS WITH SKIPS (231 targets, 11 skipped); the first battery on d0523cf6 was stopped partial after one suite verdict failure (two new suites without verbosity=2), fixed in 09b17517",
+     "step": "Battery on the frozen merged candidate 19d09ce3 (09b17517 + main 380a4ee3): PASS WITH SKIPS (233 targets, 11 skipped); earlier: 09b17517 PASS WITH SKIPS (231 targets, 11 skipped); first battery on d0523cf6 stopped partial (verdict suite, fixed in 09b17517)",
      "status": "DONE",
      "owner": "plan",
-     "evidence": "logs /tmp/he43_keep/he43_battery_09b17517.log and he43_battery_d0523cf6_STOPPED_PARTIAL.log"
+     "evidence": "logs /tmp/he43_keep/he43_battery_19d09ce3.log, he43_battery_09b17517.log, he43_battery_d0523cf6_STOPPED_PARTIAL.log"
     },
     {
      "step": "Handoff message to the IT43 session; note in he43_20261110/README.md section 6",
