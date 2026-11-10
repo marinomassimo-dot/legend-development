@@ -124,7 +124,7 @@
      "step": "Integrate, publish with SHA check, CI of the published commit, batteries by SHA, cleanup of own integrated material, final report",
      "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": "Published 2533770c (candidate 53cf4c18 PASS WITH SKIPS 228 targets; 39ec99a0 PASS WITH SKIPS) with CI gate #636 success and shareable-view #27 success; site 200 in five languages with 12 entries, no names, identity badges and the Foundation link. Third increment (SCI42 S5/S6, 9 receipts, view): battery, publication, CI and site recorded at closure."
+     "evidence": "Published 2533770c (candidate 53cf4c18 PASS WITH SKIPS 228 targets; 39ec99a0 PASS WITH SKIPS) with CI gate #636 success and shareable-view #27 success; site 200 in five languages with 12 entries, no names, identity badges and the Foundation link. Third increment (SCI42 S5/S6, 9 receipts, view): battery, publication, CI and site recorded at closure. Third increment battery 164a1d1e PASS WITH SKIPS (see log). Publication of the third increment, its CI and the site check: see the closure commit."
     }
    ]
   }
