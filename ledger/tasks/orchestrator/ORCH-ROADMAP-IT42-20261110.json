@@ -8,12 +8,12 @@
  "START_UTC": "2026-11-10T08:00:00Z",
  "RESUME": {
   "checkpoint": {
-   "last_verified_result": "39ec99a0 battery PASS WITH SKIPS (228 targets); merged candidate with 871f7ffa: view check/package/audit PASS, stage and trace tests OK",
-   "first_incomplete": "P9: battery on the frozen merged candidate, publish with --expect-sha, CI, site, then tell SCI42 'finita' with the SHA",
-   "files_to_open": "generation_it42_20261110/README.md, eval_summary.md",
-   "active_processes": "none of mine after the battery starts; cron de32c983 hourly (session-only)",
-   "real_dependencies": "SCI42 second landing waits for me; Harness idle on main",
-   "next_step": "freeze, battery by PID, publish, CI by the Actions page every 10 minutes at most, site check, closure commit"
+   "last_verified_result": "2533770c published, CI success, site verified; third increment (S5/S6) applied locally with tests, view check/package/audit PASS",
+   "first_incomplete": "battery on the frozen third increment, publish, CI, site, closure commit, final report",
+   "files_to_open": "generation_it42_20261110/README.md; eval_summary.md",
+   "active_processes": "none until the battery starts",
+   "real_dependencies": "none (SCI42 and Harness idle on main)",
+   "next_step": "freeze, battery by PID, publish with --expect-sha, CI by the Actions page, closure"
   }
  },
  "AUTHORISED_QUEUE_20261108": {
@@ -58,7 +58,7 @@
      "step": "Onfasprodil and NP10679: provenance chain, roles kept distinct, open premise, what changes priority; apply science primary-source deltas when delivered",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "provenance_it42.md: onfasprodil and NP10679 chains, roles (mechanism comparator under verification; probe of conditions), open premises, what moves them; two reconstruction corrections (one datum in three representations; an activity id that is not a PMID). Science primary sources pending (SCI42 candidate f54b5753: onfasprodil insufficient information, NP10679 conditional on tissue pH): to be applied at landing. SCI42 package (d3a57a65, 11 rows) applied: onfasprodil emerged to unresolved, NP10679 emerged to probe, comparisons, INV-05 next_test, matrix M01/M14/M05, BE2, map row IT42-Q01; row 9 no hypothesis_packages row (format decision), row 10 passed to Harness, row 11 ten receipts recorded after a clean trial (one parent link set from the ledger; ledger 1,554 to 1,564)."
+     "evidence": "provenance_it42.md: onfasprodil and NP10679 chains, roles (mechanism comparator under verification; probe of conditions), open premises, what moves them; two reconstruction corrections (one datum in three representations; an activity id that is not a PMID). Science primary sources pending (SCI42 candidate f54b5753: onfasprodil insufficient information, NP10679 conditional on tissue pH): to be applied at landing. SCI42 package (d3a57a65, 11 rows) applied: onfasprodil emerged to unresolved, NP10679 emerged to probe, comparisons, INV-05 next_test, matrix M01/M14/M05, BE2, map row IT42-Q01; row 9 no hypothesis_packages row (format decision), row 10 passed to Harness, row 11 ten receipts recorded after a clean trial (one parent link set from the ledger; ledger 1,554 to 1,564). SCI42 second landing (f84ee77b): S5 DQP-1105 resolved at source as a registry unit slip (micromolar stored as nanomolar), excluded from the GluN2B comparison; S6 chloride gradient: undetermined, sIPSC amplitude with a 140 mM KCl pipette cannot test the gradient, order M03, M01, M02; applied (V09, V11, INV-15 next_test, two needs, AB06, M16, three map rows IT42-Q01..Q03); 9 receipts recorded (ledger 1,573)."
     }
    ]
   },
@@ -124,7 +124,7 @@
      "step": "Integrate, publish with SHA check, CI of the published commit, batteries by SHA, cleanup of own integrated material, final report",
      "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": "Batteries by SHA: 39ec99a0 PASS WITH SKIPS (228 targets, 11 skipped); 53cf4c18 (merged with Harness 871f7ffa) PASS WITH SKIPS (see log). No FAIL in IT42; earlier FAILs of IT40/IT41 are kept in their records. Publication, CI and site: see closure."
+     "evidence": "Published 2533770c (candidate 53cf4c18 PASS WITH SKIPS 228 targets; 39ec99a0 PASS WITH SKIPS) with CI gate #636 success and shareable-view #27 success; site 200 in five languages with 12 entries, no names, identity badges and the Foundation link. Third increment (SCI42 S5/S6, 9 receipts, view): battery, publication, CI and site recorded at closure."
     }
    ]
   }
