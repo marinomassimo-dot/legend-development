@@ -1,0 +1,47 @@
+item	verdict	depth	note
+V1 D01-D04 digit by digit (item 1)	SUPPORTED	own extraction of all 17 mouse GEO sheets and the human GEO table; all 360 producer expression rows compared (126 GEO, 117 HPA snRNA, 63 HPA scRNA, 54 IHC)	0 numeric mismatches; column counts per class correct (mouse 2 per class; human 12 mature astro, 6 fetal, 1 neuron, 5 oligo, 3 myeloid, 2 endo; 45 of 45 columns allocated); Pdk1 is the dehydrogenase kinase (NM_172665) not Pdpk1 (NM_011062); FPKM and nCPM not mixed inside any comparison
+V1 HPA snRNA design (item 1)	PARTLY	HPA pages opened (about/download, single nuclei brain, its data page); region file extracted	design statement is findable: source Siletti 2023 (abstract: three postmortem donors), 11 brain regions, cortex a random 500000-nuclei subset, 34 supercluster types; the cluster-type file is an 11-region aggregate so 'cortical' in D02 is wrong; cortex-only file gives the same ranking; file header nCPM versus page text nTPM
+V2 AZD7545 sign (item 2)	PARTLY	Kato 2007 Results, Discussion, Experimental Procedures, Fig 2A-D viewed; Wynn 2008 Table 3	numbers right; the paper itself calls AZD7545 a dual-role ligand only for PDK3; PDK1 1.3-fold is called marginal (mean of two experiments, 10 uM, no error bars); PDK2 is not tested in the paper (earlier proposition cited); authors say PDK3 is scaffold-bound in vivo so inhibition is the physiological reading
+V2 'PDK3/PDK4 rows must not be filled with inhibitor' (A3D05)	PARTLY	as above	justified for PDK4 (core-free kcat 2.8-fold up; no core-bound measurement); not justified for PDK3: Kato measured IC50 0.60 uM with the core (31% residual at 10 uM) next to the 10-fold core-free stimulation
+V3 A3D04 Morrell 2003 and value origin (item 3)	SUPPORTED	one plain request to the doi route: HTTP 403, not retried	7.43 corresponds to about 37 nM and Kato's 87 nM is 2.3-fold higher, consistent with his sentence; species and PDK2 8.19 remain unverifiable
+V3 ChEMBL fan-out A3D14 (item 3)	SUPPORTED	REST records for 6 activities, 4 assays, 3 documents, target	one measurement per record repeated over the four family components confirmed; relations (= and >), organisms (Sus scrofa assays; Homo sapiens recorded for the EC50 assay and the target) and documents confirmed
+V4 VER-246608 Table 1 and pIC50 (item 4)	SUPPORTED	Table 1 text and PDF; Methods; Figs 2 and 3 viewed	IC50 35, 84, 40, 91 nM and pIC50 7.46, 7.08, 7.40, 7.04 reproduced; conditions as stated; both quoted inconsistencies are real (Nov3r 55 nM in text versus 5 nM in Table 1; the Kato radicicol IC50 text swaps the isoforms and writes mM against the figure's uM)
+V4 A3D07 label	PARTLY	Fig 3A viewed	138-148 percent PDH activity is a raster read and must be INFERENZA, not DATO; text 66 percent O2 rise sits beside P=0.08 in Fig 3B
+V5 PDK1 symbol (item 5)	SUPPORTED	HGNC, UniProt, ChEMBL, DGIdb queried; celecoxib, Kim 2010 passage read; abstracts for the others	celecoxib source says PDK1 encoded by PDPK1; HGNC alias confirmed; UniProt Q15118-Q15120, Q16654 are the kinases and O15530 is PDPK1 with synonym PDK1
+V5 CHEMBL257158 identity	NOT SUPPORTED	ChEMBL molecule record	the structure has sulfur (C8H13NO4S): GlcNAc-thiazoline, compound 1 of the paper, not the selenazoline; the conclusion (PDK1 means PDPK1) is unaffected
+V5 devimistat	SUPPORTED	Stuart 2014 Background read	the sponsor-affiliated paper says induces inactivating PDH phosphorylation via stimulation of PDKs 1 to 4, an earlier-work statement; DGIdb rows carry no interaction type
+V6 D07 and D15 absence (item 6)	PARTLY	5 PubMed strings plus text search of Sharma 2015	no per-cell-type PDK protein amounts found: D07 stands; D15 logic stands but 25 of 44 hits were screened and records bearing on isoform choice were missed
+V7 lower-depth rows (item 7)	PARTLY	open-access texts checked; abstracts for the others	numbers confirmed; D09 sample sizes wrong for the measured panels; D05 species wording; A3D09 omits the PDK4 DCA datum
+V8 priors P1-P5 (item 8)	SUPPORTED	own values	P1 failed, P2 failed, P3 held, P4 failed, P5 held stand with my values
+V9 evidence rows and receipts (item 9)	PARTLY	53 evidence rows checked against sources; 3 staged receipts of each producer inspected	51 correct, 2 defective (EV10 and EV11 drop the 50 subscript so are not verbatim); receipts: A2 receipt for the 2014 paper lists results not_read yet cites a Results locator; all receipts in each package share one analysis time and one event time
+V10 transfers and labels (item 10)	PARTLY	see audit	D02 brain-wide aggregate called cortical; D05 species and preparation confounded; D03 mouse age course opposite to the human one in the same table (flagged by producer); sample-size carry-over in D09
+D01	SUPPORTED	GEO tables, own extraction	13.75 5.31 4.27 2.17 FPKM reproduced; two pools; L1CAM-selected neurons from P7
+D02	PARTLY	GEO, HPA aggregate and cortex-only	all numbers reproduced; 'cortical' wrong for the aggregate; PDK3-first also holds cortex-only (59.6-121.1 against PDK2 16.2-31.4 and PDK4 0.0-2.6 nCPM); 'AZD7545 has no PDK3 row' is true of the repository only
+D03	SUPPORTED	same	22.59 against 7.52; 63.70 against 17.27; 151.4 against 23.7; fetal 1.42 against 6.80 reproduced; cortex-only astrocyte PDK4 138.2 against PDK2 35.2
+D04	SUPPORTED	same	mouse and human values reproduced; independence of the three 63-year-old oligodendrocyte columns is not verifiable from the labels
+D05	PARTLY	same	numbers reproduced; 'differ by species' is confounded: the two human datasets differ 3-8 fold for macrophage PDK4 (192.5 FPKM immunopanned myeloid, 22.6 nCPM aggregate, 57.9 cortex-only)
+D06	SUPPORTED	HPA IHC file	all 54 IHC rows reproduced
+D07	SUPPORTED	own searches and text search	absence within the stated perimeter; supplementary tables of the mouse proteome were not retried by me
+D08	SUPPORTED	open-access text	infarct 10.8 to 5.0 mm3, group sizes, PDH activity p, PDK2 and PDH sentence found
+D09	PARTLY	text and all legends	percentages found; n is 5 sham and 8 seizure in Methods and the behaviour panel only, the blot panels use n=3 or 4 and the staining panels n=4 sham and 5 to 7 seizure
+D10	SUPPORTED	abstract	as labelled abstract_only; the authors tie the 6 Hz result to lower total PDH
+D11	SUPPORTED	abstract	declared, labelled as such
+D12	SUPPORTED	abstract	numbers found; strict absence holds (a 2025 demyelination paper names a PDK4 axis without a PDK loss test)
+D13	SUPPORTED	open-access text	10.33 against 5.363 and n=8 found; the 32-mice and df(4,35) mismatch stays open
+D14	SUPPORTED	open-access text	N=3 and the substitute-for-primary-microglia limitation found
+D15	PARTLY	HGNC, UniProt, abstracts of two PDPK1 papers	PDK1 alias confirmed and two oligodendrocyte 'PDK1' papers are the other kinase; the perimeter note must add that hits 26-44 were unscreened
+D16	SUPPORTED	abstract	as stated
+A3D01	SUPPORTED	Kato Fig 2A viewed	IC50 0.087 and 0.60 uM; plateau about 29 and 37 percent read from the raster
+A3D02	PARTLY	see V2	stimulation figures right; sign-depends-on-scaffold is the authors' statement for PDK3 only
+A3D03	SUPPORTED	Wynn Table 3	35.1 to 98.3 min-1 (2.80-fold; E1p only, 10 uM); Kd 48 nM is footnote 5 unpublished
+A3D04	SUPPORTED	see V3	
+A3D05	PARTLY	see V2	
+A3D06	PARTLY	Moore Table 1 and Methods	values and conditions right; PDK-4 construct is residues 1-412, full length (human 411, rodent 412), not truncated; PDK-4 enzyme 20 nM against 10 nM; the species is unnamed
+A3D07	PARTLY	see V4	
+A3D08	SUPPORTED	Moore Results	INFERENZA label right; Nov3r stimulation concerns PDK-3 and PDK-4 only and is data not shown; the 3 nM value is PDK-1 in the E1/E2 assay
+A3D09	PARTLY	Li Table 1, Kato Fig 2C-D, 1998 abstract, Wynn Table 3	numbers right; 'rat-isoenzyme' is not in the abstract; the PDK4 DCA datum (kcat 35.1 to 2.6 min-1 at 0.25 mM, core-free) is omitted
+A3D10	PARTLY	Kato abstract and text	helix bundle and N-terminal domain right; 'closes the kinase' belongs to the PDK2 and PDK4 structures not to Kato's PDK1 structure
+A3D11	PARTLY	see V5	four of six rows concern the other kinase; one compound identity wrong
+A3D12	SUPPORTED	see V5	
+A3D13	SUPPORTED	UniProt, HGNC, ChEMBL target	accessions confirmed; GtoPdb pages not tried by me
+A3D14	SUPPORTED	see V3	
