@@ -17,7 +17,8 @@
  "event_id": "FTR-20261110-16007179-83",
  "evidence_basis": [
   "Abstract only: full text paywalled (Europe PMC isOpenAccess N). An abstract is not a verification of genotype or rescue.",
-  "verbatim_locator | proposition: fly mutants viable and radiation-sensitive | Abstract | \"The resultant DmWWOX1 mutants were viable but exhibited an increased sensitivity to ionizing radiation.\""
+  "verbatim_locator | proposition: fly mutants viable and radiation-sensitive | Abstract | \"The resultant DmWWOX1 mutants were viable but exhibited an increased sensitivity to ionizing radiation.\"",
+  "PubMed lists an erratum (Oncogene 2006;25:7662), not opened; the 2011 paper (21075834) attributes the radiation phenotype to background mutations. Not carried as a Wwox-loss datum."
  ],
  "evidence_depth": "abstract_only",
  "outputs": [
