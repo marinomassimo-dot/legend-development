@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-10T07:43:56Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-10T07:51:56Z",
+ "event_id": "FTR-20261110-9143010-91",
+ "evidence_basis": [
+  "Abstract only.",
+  "verbatim_locator | proposition: ifenprodil inhibition of NR1/NR2B in oocytes is smaller at alkaline pH | Abstract | \"ifenprodil inhibition was found to be pH sensitive with a smaller inhibition at alkaline pH\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/glun2b_comparators_sci42_20261110/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/glun2b_comparators_sci42_20261110/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "Europe PMC record abstract read through the public search service on 2026-11-10; publisher page not opened",
+ "study_id": {
+  "doi": "10.1016/s0304-3940(97)00176-6",
+  "pmid": "9143010"
+ },
+ "workflow": "SCI42 producer og-p, S1/S2 onfasprodil and NP10679 (glun2b_comparators_sci42_20261110). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

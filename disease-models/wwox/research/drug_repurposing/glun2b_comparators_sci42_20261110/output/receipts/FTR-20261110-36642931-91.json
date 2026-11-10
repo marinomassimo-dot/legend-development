@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-10T07:43:56Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-10T07:51:56Z",
+ "event_id": "FTR-20261110-36642931-91",
+ "evidence_basis": [
+  "Introduction, Methods, Results and Discussion read; tables and the supplementary item not read.",
+  "verbatim_locator | proposition: developer-affiliated authors declare NP10679 about 6-fold more potent at pH 6.9 than at pH 7.6 | Introduction | \"approximately 6-fold more potent at blocking the receptor at pH 6.9 than at pH 7.6\"",
+  "verbatim_locator | proposition: no dissociative or cognitive-test signal was reported in the two phase 1 studies | Results | \"no evidence of dissociative symptoms or cognitive impairment related to NP10679\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/glun2b_comparators_sci42_20261110/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/glun2b_comparators_sci42_20261110/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC10329973 full text through the PMC full-text tool on 2026-11-10; the open bucket holds no figure images for this record; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1002/cpdd.1217",
+  "pmid": "36642931"
+ },
+ "workflow": "SCI42 producer og-p, S1/S2 onfasprodil and NP10679 (glun2b_comparators_sci42_20261110). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

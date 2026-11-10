@@ -8,17 +8,19 @@
  "START_UTC": "2026-11-10T08:00:00Z",
  "BASELINE": "main f7305230 (development/main same). Worktree .claude/worktrees/sci42, branch task/sci42. IT42 orchestrator session has its own worktree it42 (not touched).",
  "CURRENT_PACKAGE": {
-  "id": "S1",
-  "state": "producer running in background",
-  "delegate_active": "producer og-p (sonnet/medium requested)",
-  "updated": "2026-11-10T07:39:04Z"
+  "id": "S4",
+  "state": "blind verifier dispatching",
+  "delegate_active": "verifier og-v (sonnet/high requested)",
+  "updated": "2026-11-10T07:54:32Z"
  },
- "RESUME": "CHECKPOINT: S0 done (06d4d7e6). S1 producer dispatched, running; output expected in glun2b_comparators_sci42_20261110/output/. Next on return: read back model/effort from census, read decisive.tsv/roles.tsv, then draft S3 design myself, then dispatch blind verifier (VERIFIER_BRIEF.md, label og-v, sonnet/high). IT42 orchestrator (legend-development-4e) told the folder; they integrate. Do not push main until frozen tested candidate.",
+ "RESUME": "CHECKPOINT: S1 producer done (71 turns sonnet/medium read back). S3_design.md written. Blind verifier og-v dispatched with VERIFIER_BRIEF.md and verify/items.md; writes verify/audit.md. Next on return: census readback, apply corrections, recheck substantive ones with same verifier (SendMessage), then README/consumer_delta/COST_NOTE, staging receipts copy to research/receipt_staging/sci42/, checks, battery on frozen SHA, landing.",
  "DECISIONS_TAKEN": [
-  "2026-11-10 S0: IT42 orchestrator requested the same onfasprodil/NP10679 package; folded into this mandate (no duplicate); replied with folder and plan. PubMed identified starting points: 34493631 (NP10679 discovery pharmacology), 39892986 (SAH mouse), 37817426 (MIJ821 first-in-human healthy volunteers), 42976542 (MIJ821 analogues med-chem) \u2014 verified by producer."
+  "2026-11-10 S0: IT42 orchestrator requested the same onfasprodil/NP10679 package; folded into this mandate (no duplicate); replied with folder and plan. PubMed identified starting points: 34493631 (NP10679 discovery pharmacology), 39892986 (SAH mouse), 37817426 (MIJ821 first-in-human healthy volunteers), 42976542 (MIJ821 analogues med-chem) \u2014 verified by producer.",
+  "2026-11-10 S1->S3: I also checked the PMC open-data bucket for PMC8626636 (34493631): absent (list returned 0 keys); PMC13095441 (39933230) and 39892986 return no full text via the PubMed tool. No equivalent route retried. S3 design written by the Orchestrator without an agent; the on-target pH-signature use of NP10679 is my IPOTESI and is submitted to the verifier as item S3-3."
  ],
  "DELEGATIONS": [
-  "S1 producer og-p: asked sonnet/medium; census readback pending."
+  "S1 producer og-p: asked sonnet/medium; read back medium x71; 71 turns; output 79,875; cache read 10,398,840; peak 254,352; sources newly read 4 at partial full text + patent text + ChEMBL records; 5 abstract only; 9 staged receipts validated; 34493631 unreachable by 6 routes (stopped, no evasion).",
+  "S4 verifier og-v: asked sonnet/high; readback pending."
  ],
  "ESCALATIONS": [],
  "STOP_LOG": [],
@@ -36,15 +38,15 @@
     },
     {
      "step": "S1 producer: onfasprodil and NP10679 at primary sources, identity via Harness component",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "producer dispatched (BRIEF.md), sonnet/medium requested, label og-p, receipts suffix -91"
+     "evidence": "producer og-p returned: decisive.tsv 16, compounds 9, roles 2, new_measurements 7, evidence 41, queries 18, 9 staged receipts validated (suffix -91); 34493631 unreachable (recorded, not retried)"
     },
     {
      "step": "S2-S3 role per compound, discriminating minimum design and prediction matrix (in producer scope)",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "S3_design.md written by orchestrator (no agent); roles are producer proposals pending verification"
     },
     {
      "step": "S4 independent blind verification, corrections, recheck of substantive ones, first complete delivery",
