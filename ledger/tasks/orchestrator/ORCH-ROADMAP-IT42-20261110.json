@@ -1,0 +1,132 @@
+{
+ "_schema": "orchestrator-task-v1",
+ "TASK_ID": "ORCH-ROADMAP-IT42-20261110",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "P0",
+ "OBJECTIVE": "IT42: from available relations to verifiable pharmacological hypotheses actually used: separate source coverage from reasoning value, trace consumption to decisions, propagate corrections, one second relation, investigations view and next brief.",
+ "START_UTC": "2026-11-10T08:00:00Z",
+ "RESUME": {
+  "checkpoint": {
+   "last_verified_result": "remote = local main = f7305230 (IT41 record complete; CI e2dbe391 success; CI of f7305230 record-only still running)",
+   "first_incomplete": "IT42 P0 registration and P1 tracing",
+   "files_to_open": "generation_it41_20261109/README.md, compound_view.tsv, consume_reader.py",
+   "active_processes": "none",
+   "real_dependencies": "science primary sources on onfasprodil/NP10679 (P3); Harness identity links (P1)",
+   "next_step": "P1 trace"
+  }
+ },
+ "AUTHORISED_QUEUE_20261108": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Baseline: SHA local/remote/candidate, final CI of IT41, batteries by SHA, record, freezes; register IT42; continuity",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Close effective consumption: trace three cases relation->search->qualification->comparison/selection->investigation or card->public view (favourable conditional; ambiguous identity; must stay unknown); fields exported but not used get a minimal consumer; coordinate identity links with Harness",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "Separate source coverage from reasoning value: fixed protocol (questions, inputs, versions, outcomes, error criteria, meaning of improvement); A source effect, B relational qualification effect on identical universe; simple baselines credible; cost and time",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "Onfasprodil and NP10679: provenance chain, roles kept distinct, open premise, what changes priority; apply science primary-source deltas when delivered",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "Semantic propagation of IT41 corrections to INV-05 and other consumers (per-molecule maxima, GYKI distinction, ifenprodil/Ro values, DQP-1105 unresolved, potency vs log transform, phase/approval/access, preparation and species); smallest regressions",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "One second relation chosen for discriminating power; run the same path without special code",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "Investigations view: priority, engine-emerged vs known, question per compound, what moves it, in silico vs lab; five languages; licence-compliant public content; site and phone/desktop check",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "Close the loop: pick the best question, prepare the next scientific brief in the existing format; no overlapping campaign; no sending/commissioning",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P8": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "Durable capability: canonical lessons, executable behaviour; software for counts; delegation discipline; context cost",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P9": {
+   "order": 10,
+   "steps": [
+    {
+     "step": "Integrate, publish with SHA check, CI of the published commit, batteries by SHA, cleanup of own integrated material, final report",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  }
+ }
+}
