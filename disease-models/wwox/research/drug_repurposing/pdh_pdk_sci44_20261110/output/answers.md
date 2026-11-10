@@ -17,3 +17,6 @@ P1 failed (PDK2 top in mouse neurons and oligodendrocyte lineage only). P2 faile
 
 ## Not done
 Neural progenitors and radial glia were not reached with an open small table (only fetal astrocyte precursors, n=6); the human adult region of the HPA cluster and donor numbers are not documented in the pages opened; AZD7545 and VER-246608 primary papers were not reread (outside this question). Counts: isoform_expression 360 rows, function_neural 15, symbols 11, decisive 16, priors 5, evidence 31, queries 24, receipts 12.
+
+## Corrections after independent verification (V1, V2; Orchestrator, 2026-11-10)
+* HPA single-nucleus numbers are a 34-supercluster, 11-region aggregate (Siletti 2023, three postmortem donors), not cortex; cortex-only values keep the ranks. Two human datasets disagree 3-8 fold for myeloid PDK4. D11: "no isoform-selective loss found in neurons" is withdrawn (11197747 and 37188779, abstract level); the abstract's "PDK2 low in neurons" is not contradicted by the mouse table. D09 n values: see decisive.tsv. All logged in CORRECTIONS_V1.tsv and CORRECTIONS_V2.tsv.
