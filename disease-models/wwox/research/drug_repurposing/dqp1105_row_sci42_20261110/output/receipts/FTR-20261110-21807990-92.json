@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-10T08:29:00Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_present"
+ },
+ "event_at": "2026-11-10T08:29:30Z",
+ "event_id": "FTR-20261110-21807990-92",
+ "evidence_basis": [
+  "Abstract only; PMC page behind a bot check, journal page 403, Europe PMC full text 500 and not open access; no methods, tables or figures read.",
+  "verbatim_locator | proposition: DQP-1105 IC50 at GluN2C and GluN2D at least 50-fold lower than at GluN2A or GluN2B | Abstract | \"IC50 values that were at least 50-fold lower than those for recombinant GluN2A-, GluN2B-, GluA1-, or GluK2-containing receptors\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/dqp1105_row_sci42_20261110/output/row_resolution.tsv",
+  "disease-models/wwox/research/drug_repurposing/dqp1105_row_sci42_20261110/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "78a83e4b8dbe189676468be04695ef7712b24f13516c3ae61ecd68ae80bc871e",
+ "source_kind": "abstract",
+ "source_locator": "Europe PMC REST search record (abstractText) for PMID 21807990, fetched 2026-11-10",
+ "study_id": {
+  "doi": "10.1124/mol.111.073239",
+  "pmid": "21807990"
+ },
+ "workflow": "SCI42 S5 producer dq-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

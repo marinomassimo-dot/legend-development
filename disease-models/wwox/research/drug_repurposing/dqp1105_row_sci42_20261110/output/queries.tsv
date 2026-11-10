@@ -1,0 +1,11 @@
+query_id	database_or_route	string_or_url	run_at_utc	hits	what_was_done
+Q1	PubMed tool convert ids	21807990	2026-11-10T08:27:24Z	1	got PMC3198917 and DOI
+Q2	PubMed tool full text	PMC3198917	2026-11-10T08:27:30Z	0	returned abstract only, empty full text
+Q3	Europe PMC REST fullTextXML	PMC3198917	2026-11-10T08:27:34Z	0	HTTP 500 twice (08:27 and 08:28); not retried by another route; supplementaryFiles says not open access
+Q4	PMC article page, plain curl	pmc.ncbi.nlm.nih.gov/articles/PMC3198917	2026-11-10T08:27:50Z	0	bot check page; recorded unreachable
+Q5	NCBI efetch db=pmc	PMC3198917	2026-11-10T08:28:00Z	0	publisher does not allow download; no body
+Q6	journal page molpharm.aspetjournals.org	content/80/5/782.full	2026-11-10T08:28:05Z	0	403 bot check; unreachable
+Q7	Europe PMC search EXT_ID	21807990	2026-11-10T08:28:12Z	1	abstract saved outside repository, SHA-256 in receipt
+Q8	ChEMBL document API	pubmed_id=21807990	2026-11-10T08:28:30Z	0	no document
+Q9	Europe PMC REST fullTextXML	PMC10485906	2026-11-10T08:31:00Z	1	open full text returned 220 kB; text copy saved outside repository, SHA-256 fccfa815a54a87e6fe823a48e0fe5c20e9e4f3adbbd22696f710a108f3056f77
+Q10	local string search of that text	DQP-1105; Acker; Table 1; Table 2	2026-11-10T08:31:20Z	2 numeric hits	Table 1 holds analogues (compound 2a), not DQP-1105; DQP-1105 in introduction (cited) and Table 2
