@@ -191,3 +191,67 @@ No sentence turns a burst reduction into developmental recovery or a drug respon
 - Whether any source gives NP10679's amine pKa, temperature coefficient of the pH shift, or cleft pH in cortical slices: not found in the files reached.
 
 Verifier: og-v. No claims were released; no receipt, registry, ledger or consumer file touched; all scratch bytes are in the scratchpad subdirectory `ogv_sci42_a1`.
+
+## 10. Recheck (verifier og-v, after the producer's corrections; roles.tsv, compounds.tsv and phase_note.md opened only now)
+
+Scope: changed rows only, each against my own copies (patent text, ChEMBL, efetch XML of 25728572 and 36642931, 37817426 XML/figure, publisher page of 40767837, ClinicalTrials.gov API, the ACNP 2017 page). Fingerprint digests in the receipts cannot be recomputed by me (the copies read sit outside the repository), so they are recorded as present, not verified.
+
+### 10.1 `output/decisive.tsv` (15 rows rechecked)
+Counts: CORRECT 13; STILL DEFECTIVE 2 (both minor wording, no number wrong); NEW ERROR 0.
+
+| Row | Verdict | Note |
+|---|---|---|
+| D01 | CORRECT | Resemblance kept INFERENZA. Patent Example 10 and the ChEMBL structure match (I verified both). Style: the row cites "reported by the verifier"; cite patent Example 10 directly |
+| D02 | CORRECT | "only NR2B activity assay", Example 20 named, GtoPdb link marked inferred |
+| D03 | CORRECT | "not reported (diheteromer)" / "not tested (triheteromer)" |
+| D05 | CORRECT | 70 vs 72 inconsistency stated; numbers match the publisher page |
+| D07 | CORRECT | Non-exhaustiveness of the registry search and NCT05666687 stated, as a lead not a claim |
+| D08 | **STILL DEFECTIVE (minor)** | The IC50 pair is correctly added (verbatim in the abstract). But "the 23 and 21 nM are one measurement reported twice" is stated as fact: 23 nM is pIC50 7.64 (22.9 nM) and the abstract says 21 nM; the two numbers differ by about 9 percent and nothing in either source says they are the same recording. Label it INFERENZA ("probably the same measurement, numbers differ") here and in `compounds.tsv` N1 and the `roles.tsv` NP10679 row |
+| D09 | CORRECT | 76 vs footnote 79-100 and the swapped N noted |
+| D10 | CORRECT | CIP caveat added |
+| D11 | CORRECT | Conclusion now INFERENZA; Mott 1998 cited by 36642931 stated |
+| D12 | CORRECT | Ratios 2.6, 1.0, 1.5 against 9.5; E206A/D206A noted; sensor "strong candidate" |
+| D13 | CORRECT | "rat" and "retention-tag" marked INFERENZA |
+| D14 | **STILL DEFECTIVE (minor)** | The 40 nM / 621 nM are verbatim in the poster ("interacts with the histamine H1 receptor (40 nM) and the hERG channel (621 nM)"), but the poster does not say "antagonist" or "IC50" for those two numbers; the row's "the two H1 values differ 1.8-fold" compares an IC50 (73 nM, paper) with an unlabelled potency figure. Say "a 2017 abstract of the same group gives 40 nM for H1 (measure not named)" and drop "differ 1.8-fold" or label it as arithmetic on unlike quantities. The 30-fold/pH arithmetic is correctly INFERENZA |
+| D15 | CORRECT | In-vivo list (mouse SAH, mouse MCAO, rat nicotine reinstatement, mouse rotarod, rat safety) matches the poster; ASENT and 39933230 named in the perimeter |
+| D16 | CORRECT | MAD placebo somnolence and SAD dose-dependence stated |
+| D17 (new) | CORRECT | Yuan Results: ratio of maximum receptor current at pH 6.9 to 7.6 is 0.21 +/- 0.01 (n=8) for GluN1(G112A)/GluN2B and identical for wild type (0.21 +/- 0.01, n=8, p=0.92). Rat GluN1/GluN2B in oocytes; transfer to a slice stated as untested |
+
+### 10.2 `output/evidence.tsv` (42 rows, 9 columns each)
+Counts: rechecked 10 rows, CORRECT 10, STILL DEFECTIVE 0.
+- E11 now verbatim ("Following 10 minutes pre-incubation in the dark, plates are loaded onto the Hamamatsu FDSS 6000.", 15 words, found in the patent text). E12 shortened to 19 words, verbatim.
+- Notes E18, E20, E25, E29, E30, E34, E39 correct against my copies (E25: the sentence cites Yuan 2015, Myers 2021, Mott 1998 and Wang 2014 — the XML reference list confirms; E39's "stated reference compound" is a light paraphrase of the abstract's first sentences and the benchmark use is tagged INFERENZA).
+- E42: quote verbatim in the ACNP 2017 page ("NP10679 is 6.2-fold more potent (IC50=21 nM) at pH 6.9 than at pH 7.6 (130 nM)."), 16 words; note lists H1 40 nM, hERG 621 nM and the in-vivo models correctly; role support for D08, D14, D15 is right.
+- **Event id `FTR-20261110-11c8f1d78b91-91`: acceptable.** The first 12 hex characters of SHA-256 of the string `10.1038/npp.2017.266` (no newline, as written) are `11c8f1d78b91` (I reproduced it); the validator's pattern accepts `[A-Za-z0-9._-]+` between date and NN; `BRIEF_COMMON.md` of the batch allows a DOI-hash form for a source without PMID (I could not locate a hex exemplar in the repository, so the form rests on the brief and the pattern, not on an existing precedent); the id is unique in the package; `source_locator` has no slash; evidence depth abstract_only with `source_fingerprint` null is right for an abstract. Two cautions, neither a defect: (1) `study_id.doi` identifies the whole abstract book, so a later receipt for another abstract in the same book would share the study key; the abstract is distinguished only by "W168" in the locator and evidence basis; (2) the hash hides the DOI, so keep the DOI in the INDEX note (it is) for anyone matching by event id.
+
+### 10.3 `new_measurements.tsv` M03 and `receipts/INDEX.tsv`
+- M03 CORRECT: asks for the maximum at two pH values with conditions, states that the IC50 pair exists at abstract level, same origin; consistent with D08.
+- INDEX: fingerprints present for 40767837 and 25728572 (64-hex values; not recomputable by me). Absent for 37817426 and 36642931 with the stated reason (read through the PMC full-text tool, not saved as a file, so no digest of that copy exists): **the reason is adequate and honest**; a receipt should not carry a digest of a copy that was not the one read. It leaves those two readings untied to bytes; an optional repair that costs nothing is to record the public versioned copies in the notes (the open bucket holds `PMC10651655.1` and `PMC10329973.319` txt/xml), not as the read copy. The 37817426 note also states correctly that the saved supplement and Fig 2 are not the reading copy. The ACNP receipt (no PMID) is listed with `none (doi ...)`; fine.
+
+### 10.4 `roles.tsv` and `compounds.tsv` against the corrected rows
+- **Onfasprodil, "informazione insufficiente": follows.** Decided by D01 (no site), D03 (diheteromer maximum not reported, triheteromer not tested), D04, D02 (one patent flux IC50), D05-D07 (other populations). Nothing stronger than its rows. The "second scaffold sharing the hydroxyaryl-ethanolamine arrangement" wording is INFERENZA and is kept as one in D01, roles, compounds O1 and S3 A5 ("INFERENZA from structure; site not measured"). The sentence "supports a target-level reading, i.e. not a single-chemotype off-target effect" is hedged and acceptable; it must not be read as site independence (the same sentence says so).
+- **NP10679, "pista subordinata a una premessa": follows**, and the premise (preparation pH unmeasured, no pathological pH assumed) is the right one. Statements stronger than their rows, to fix as wording only:
+  1. `roles.tsv` NP10679 datum column: "the series maximum moved little" is the prototype 93-31 (D09), not NP10679: write "the prototype's maximum".
+  2. `roles.tsv` and `compounds.tsv` N1: "the registry 7.64 (23 nM) is the same measurement as the 21 nM reported again, not a second one" - INFERENZA (see D08), not DATO.
+  3. `compounds.tsv` N1: "the pH-sensing site belongs to the ifenprodil-site region" - D12 says the Glu106:Glu235 sensor is a strong candidate for the prototype, INFERENZA; write "is proposed to lie in".
+  4. `roles.tsv`: "probable ifenprodil-site action" carries no label; add INFERENZA (docking of the prototype plus chemotype, D12).
+  5. `compounds.tsv` N2: H1 "73 and 40 nM" listed as "same-origin repeats": same caution as D14 (the 40 nM measure is not named).
+  6. `compounds.tsv` O5 repeats "no non-psychiatric context found in the registry or literature perimeter" without D07's caveat that the first-in-human study is not retrieved by the registry strings; add the clause.
+- Everything else in both tables (O2, O3, O4, N3, N4, novelty perimeters, what-would-change columns) matches the corrected rows. **The roles stand.**
+
+### 10.5 `S3_design.md` (rewritten), re-judging S3-2 to S3-6
+- **S3-2: SUPPORTED** with two residual fixes. Resolved: A1 now "from the same animals" and states d-APV surmountability; E2 is defined for the recorded layer II/III pyramidal cell population with the knockout-only limit; A3 is relabelled a calibration; the "same ceiling" contradiction is gone (A5 and "May wait": "its ceiling is not assumed equal"); H1 for slices is "low-prior" consistent with D14. Residual: (i) in A4 the 0.21 ratio is cited to `D09`; it is now row `D17` (`D09` does not contain it): **NEW ERROR (citation)**; (ii) the statement in section 5 that the NP10679 literature "invokes acidic vesicle content at active synapses" has no D or E row (it comes from the 34493631 abstract, which is E26's source); add a row or cite E26.
+- **S3-3 (A4): SUPPORTED as reworded.** A4 is now a drug-by-pH interaction of NP10679 against ifenprodil (or Ro 25-6981) and d-APV at the same two pH values; "not a specificity signature (IPOTESI)"; it states that the contrast cannot separate E2 from proton-receptor coupling or E3; that protons alone cut the oocyte current to about 0.21; that an acidic value may leave no window; that d-APV may follow pH in the opposite direction (Yuan class sentence, INFERENZA); that ifenprodil may be pH-sensitive (D11); and that the recombinant shift and the bath pH do not transfer (section 5). The four presuppositions of my first reading are now stated or removed. Remaining small point: the E4 cell ("an off-target effect with a different pH profile would give a different interaction") is only a conditional; it does not claim off-target pH independence, which is right.
+- **S3-4 (start set): PARTLY.** Resolved: bicarbonate/HEPES, same animals, washout, comparators at both pH inside A4's conditions, A6 now has an instrument. Residual defects in item 5/A6:
+  1. **The common axis is not carried back to A1-A3.** A6 is matched to the same measured percent of *evoked synaptic charge*, but the x-axis defined for A1 and A2 (items 1 and 3) is the percent of *isolated NMDAR current*. Unless every drug (d-APV, the NAM, A6's AMPA/kainate pair) is also measured as percent of evoked synaptic charge removed in the same preparation, A6 cannot be matched to anything. Add that readout to item 3.
+  2. "its qualified instrument" overstates `ampa_comparison_it41_20261109/`: that package finds the tool does not reach near-complete block at 10 uM in tissue (80.5 and 89 percent in two mouse slice preparations, other regions and ages), and no verified block with a burst readout in any slice paper read. Say "the candidate pair named there", with block fraction to be measured here.
+  3. The text itself already states the Mg2+-relief limit of an AMPA cut; keep it. Item 5's last sentence (if A6 is not run, report compatible with E2 and E4, not separating them) is right.
+- **S3-5: SUPPORTED.** Section 5 now lists the number of pH values, concentration steps, definition of "abolition", plateau, that x is a single graded threshold (with the hysteresis caveat), that the burst depends on both charge and peak, and that tonic Zn2+ is a state variable, as assumptions; animal as unit, nested slices/cells, feasibility noted. Only A6's "because the burst may depend on both (design assumption)" duplicates it consistently.
+- **S3-6: SUPPORTED.** The "unique contribution" sentence is gone; A4 is "a condition-linked comparison, not a proof of target"; E2 is no longer a Wwox-specific claim without A7; section 5 keeps "not a developmental recovery". One housekeeping point: section 5 calls `output/roles.tsv` "verified"; that is true only after this section 10.
+
+### 10.6 Final counts for the recheck
+- decisive rows: 15 rechecked, 13 CORRECT, 2 STILL DEFECTIVE (D08, D14, minor labelling), 0 new errors in rows.
+- evidence rows: 10 rechecked, 10 CORRECT; event-id form acceptable; null-fingerprint reason adequate.
+- M03 correct; INDEX correct.
+- roles: stand; six wording fixes (10.4).
+- S3: S3-3, S3-5, S3-6 SUPPORTED; S3-2 SUPPORTED with one NEW ERROR (D09 -> D17 citation) and one uncited sentence; S3-4 PARTLY (A6 axis not carried to A1-A3; "qualified instrument").
