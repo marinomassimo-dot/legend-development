@@ -1,0 +1,2 @@
+relation_id	case	action_label	target_symbols	wanted_actions	context	hypothesised_benefit	status	wanted_direction	site_policy	subunit_in	subunit_out
+S3	4	Kv7 (KCNQ) opening	KCNQ2;KCNQ3;KCNQ4;KCNQ5	Positive;Activator;Agonist	same	none nominated	listed to show what is not proposed	up	any	KCNQ|Kv7	

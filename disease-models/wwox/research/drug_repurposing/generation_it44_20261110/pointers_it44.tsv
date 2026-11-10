@@ -1,0 +1,26 @@
+relation_id	parent_chembl_id	catalogue_name	catalogue_status	catalogue_origin	in_mechanism_path	read_state	n_activities	n_functional	n_documents	types	targets	coverage	verdict	unknown_fields
+S3	CHEMBL1294	QUINIDINE	approved_any_source	chembl_selected	no	OK	1	0	1	IC50	KCNQ2	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S3	CHEMBL2070953		tool_probe	chembl_selected	no	OK	2	0	1	EC50	KCNQ2;KCNQ4	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S3	CHEMBL2164048		tool_probe	chembl_selected	yes	OK	4	4	1	IC50	KCNQ2;KCNQ3;KCNQ4	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S3	CHEMBL255044	FLUPIRTINE	approved_any_source	chembl_selected	no	OK	4	0	2	EC50	KCNQ2;KCNQ3	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S3	CHEMBL266510	FLINDOKALNER	clinical_candidate	chembl_selected	yes	OK	3	0	1	EC50	KCNQ2;KCNQ4;KCNQ5	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S3	CHEMBL41355	EZOGABINE	approved_any_source	chembl_selected	yes	OK	22	0	10	EC50	KCNQ2;KCNQ3;KCNQ4;KCNQ5	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S3	CHEMBL5095264	AZETUKALNER	clinical_candidate	chembl_selected	no	OK	1	0	1	EC50	KCNQ2	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL4169078	SRA-737	clinical_candidate	chembl_selected	no	OK	1	0	1	IC50	HCN4	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL471737	IVABRADINE	approved_any_source	chembl_selected	yes	OK	1	0	1	EC50	HCN4	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL6195028		tool_probe	chembl_selected	no	OK	2	2	1	IC50	HCN4	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL69679	ZATEBRADINE	clinical_candidate	chembl_selected	no	OK	1	0	1	EC50	HCN4	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S7	CHEMBL1027	TIAGABINE	approved_any_source	chembl_selected	yes	OK	9	0	6	IC50;Kd;Ki	SLC6A1	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S7	CHEMBL13883	VANILLIN	phase_unknown	chembl_selected	no	OK	1	0	1	IC50	ABAT	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S7	CHEMBL312311	PAROXYPROPIONE	clinical_candidate	chembl_selected	no	OK	1	0	1	IC50	ABAT	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S7	CHEMBL3589752	IPP/CNRS-A017	tool_probe	chembl_selected	no	OK	1	0	1	Ki	ABAT	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S7	CHEMBL4165749	BI 2545	tool_probe	chembl_selected	no	OK	1	0	1	Ki	ABAT	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S7	CHEMBL4522930	BI-605906	tool_probe	chembl_selected	no	OK	1	0	1	Ki	ABAT	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S7	CHEMBL4580220	BAY-3827	tool_probe	chembl_selected	no	OK	1	0	1	Ki	ABAT	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S7	CHEMBL542	AMINOBENZOIC ACID	phase_unknown	chembl_selected	no	OK	1	0	1	IC50	ABAT	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S7	CHEMBL8260	BAICALEIN	clinical_candidate	chembl_selected	no	OK	1	0	1	IC50	ABAT	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S7	CHEMBL89598	VIGABATRIN	approved_any_source	chembl_selected	yes	OK	3	0	3	Ki	ABAT	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S7	CHEMBL96	GAMMA-AMINOBUTYRIC ACID	clinical_candidate	chembl_selected	no	OK	5	0	4	IC50	SLC6A1	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S9	CHEMBL13960	DICHLOROACETIC ACID	clinical_candidate	chembl_selected	no	OK	4	0	1	IC50	PDK1;PDK2;PDK3;PDK4	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S9	CHEMBL306823	SODIUM DICHLOROACETATE	clinical_candidate	chembl_selected	yes	OK	12	4	2	EC50;IC50	PDK1;PDK2;PDK3;PDK4	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S9	CHEMBL757	NANDROLONE	clinical_candidate	chembl_selected	no	OK	4	0	1	IC50	PDK1;PDK2;PDK3;PDK4	COMPLETE	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context

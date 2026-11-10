@@ -1,0 +1,72 @@
+{
+ "CHEMBL2221348": {
+  "coverage": "COMPLETE",
+  "files": [
+   [
+    "CHEMBL2221348/p0.json",
+    "aa8625e13b167123f830276a32d5036cf194885371d16d5c6176028a83b3fb21"
+   ]
+  ],
+  "rows": 247
+ },
+ "CHEMBL2362996": {
+  "coverage": "COMPLETE",
+  "files": [
+   [
+    "CHEMBL2362996/p0.json",
+    "e56a142855f5f52da1533efdb6f9cda59e74a0ae4d418565008165b314cb52ba"
+   ]
+  ],
+  "rows": 10
+ },
+ "CHEMBL2363063": {
+  "coverage": "COMPLETE",
+  "files": [
+   [
+    "CHEMBL2363063/p0.json",
+    "037003a7f3631e9dad89108fdea19fea07b7bdc2b8ba71c985fc55d69c999ba9"
+   ]
+  ],
+  "rows": 0
+ },
+ "CHEMBL2476": {
+  "coverage": "COMPLETE",
+  "files": [
+   [
+    "CHEMBL2476/p0.json",
+    "87bd3453eafb4f30cc522b434040cdb4314643705bb0fbe1c11626cd352b4e05"
+   ]
+  ],
+  "rows": 130
+ },
+ "CHEMBL3707192": {
+  "coverage": "COMPLETE",
+  "files": [
+   [
+    "CHEMBL3707192/p0.json",
+    "037003a7f3631e9dad89108fdea19fea07b7bdc2b8ba71c985fc55d69c999ba9"
+   ]
+  ],
+  "rows": 0
+ },
+ "CHEMBL3576": {
+  "coverage": "COMPLETE",
+  "files": [
+   [
+    "CHEMBL3576/p0.json",
+    "76bdfffe64f72e2862d8ece11aa0df829cbcdfc65105f9991ef0edb75216a52e"
+   ]
+  ],
+  "rows": 33
+ },
+ "CHEMBL2925": {
+  "coverage": "COMPLETE",
+  "files": [
+   [
+    "CHEMBL2925/p0.json",
+    "d8db82c69e73d4e401a98066dec619c94398c4de0e5b3423801d3a1f8a43afef"
+   ]
+  ],
+  "rows": 13
+ }
+}

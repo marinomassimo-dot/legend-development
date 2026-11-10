@@ -1,0 +1,7 @@
+relation_id	activity_molecules	read_state	with_catalogue_status	pointers_listed	new_vs_mechanism_path	research_compounds_no_status
+S3	359	OK	7	7	4	352
+S2	55	OK	4	4	3	51
+S4	0	NO_ROWS	0	0	0	0
+S7	221	OK	11	11	9	210
+S9	433	OK	3	3	2	430
+S10	5566	FLOOD	154	0	0	5412
