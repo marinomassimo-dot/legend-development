@@ -1,0 +1,140 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "PLAN-HE44-OPERATIVE-CAPABILITIES-20261110",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "plan",
+ "PRIORITY": "HIGH",
+ "assigned_on": "2026-11-10",
+ "OBJECTIVE": "HE44: make the capabilities operative: reach activities when no mechanism row exists, carry quantities and identity to the consumer, retrieval states to the generator's output, one measured cost reduction, DREAM with a retrieval test, continuity checked, simplification.",
+ "worktree": ".claude/worktrees/he44",
+ "branch": "task/he44",
+ "CURRENT_STATE": "IN_PROGRESS",
+ "CHECKPOINT": {
+  "last_verified_result": "HE43 candidate 19d09ce3 (merge of main 380a4ee3): unit and view suites green, gate PASS, package audit PASS; release battery on 19d09ce3 running (PID in /tmp/he43_battery_pid, log /tmp/he43_battery_19d09ce3.log)",
+  "first_incomplete_work": "HE43 landing (battery result, task_close, push --expect-sha, remote check); then H1",
+  "active_processes": "battery 19d09ce3 (mine)",
+  "real_dependencies": "IT44 owns generation/consumption/dashboard and action_search/dgidb_listing consumers; SCI44 owns biology; the azetukalner case comes from SCI43 consumer_delta row 9",
+  "next_executable_step": "wait on the battery PID, land HE43, then H1 pre-registered test of an activity-by-target path"
+ },
+ "AUTHORISED_QUEUE_20261110": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_H0": {
+   "order": 1,
+   "title": "What is operative: HE43 consumption on the real tree",
+   "steps": [
+    {
+     "step": "Callers of measurement / parent_form / states / name source checked on the merged tree: measurement has none outside tests, dgidb_listing keeps its own key()",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "he44_20261110/README.md section 1"
+    },
+    {
+     "step": "HE44 record, session-mandate binding verified",
+     "status": "IN_PROGRESS",
+     "owner": "plan"
+    }
+   ]
+  },
+  "OBJ_H1": {
+   "order": 2,
+   "title": "Activities reachable without a mechanism row (azetukalner case)",
+   "steps": [
+    {
+     "step": "Existing path studied; minimal activity-by-target component; control and a pre-registered different case",
+     "status": "TODO",
+     "owner": "plan"
+    }
+   ]
+  },
+  "OBJ_H2": {
+   "order": 3,
+   "title": "Quantities to the point of use",
+   "steps": [
+    {
+     "step": "Measurement carried through the consumer that drops it; Cs+/HCN pointers for science",
+     "status": "TODO",
+     "owner": "plan"
+    }
+   ]
+  },
+  "OBJ_H3": {
+   "order": 4,
+   "title": "Identity and coverage incl. lost opportunities",
+   "steps": [
+    {
+     "step": "DGIdb listing on the shared normalizer; overlap estimate not identity; lost links and false new candidates measured",
+     "status": "TODO",
+     "owner": "plan"
+    }
+   ]
+  },
+  "OBJ_H4": {
+   "order": 5,
+   "title": "Retrieval errors through to the generator output",
+   "steps": [
+    {
+     "step": "One complete path traced; no error becomes absence or negative evidence",
+     "status": "TODO",
+     "owner": "plan"
+    }
+   ]
+  },
+  "OBJ_H5": {
+   "order": 6,
+   "title": "Cost of a real package",
+   "steps": [
+    {
+     "step": "One real activity with owner consent, split coordinator/delegate, one improvement",
+     "status": "TODO",
+     "owner": "plan"
+    }
+   ]
+  },
+  "OBJ_H6": {
+   "order": 7,
+   "title": "DREAM and a retrieval test on a new question",
+   "steps": [
+    {
+     "step": "Connections with consumers; retrieval without reading the corpus",
+     "status": "TODO",
+     "owner": "plan"
+    }
+   ]
+  },
+  "OBJ_H7": {
+   "order": 8,
+   "title": "Continuity of the three sessions",
+   "steps": [
+    {
+     "step": "Existing mechanism checked, harmless isolated test",
+     "status": "TODO",
+     "owner": "plan"
+    }
+   ]
+  },
+  "OBJ_H8": {
+   "order": 9,
+   "title": "Names, publication, simplicity",
+   "steps": [
+    {
+     "step": "Names path on a new or changed case; one concrete duplication removed",
+     "status": "TODO",
+     "owner": "plan"
+    }
+   ]
+  },
+  "OBJ_H9": {
+   "order": 10,
+   "title": "Landing and delivery",
+   "steps": [
+    {
+     "step": "Battery by SHA, gate, push with --expect-sha, remote check, final report",
+     "status": "TODO",
+     "owner": "plan"
+    }
+   ]
+  }
+ }
+}
