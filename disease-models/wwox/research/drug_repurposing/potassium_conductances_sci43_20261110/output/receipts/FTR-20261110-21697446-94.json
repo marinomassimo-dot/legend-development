@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-10T18:23:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "read"
+ },
+ "event_at": "2026-11-10T18:35:22Z",
+ "event_id": "FTR-20261110-21697446-94",
+ "evidence_basis": [
+  "Guan 2011 read from the PMC page: Abstract, Introduction, Methods, Results (voltage-clamp kinetics read in part, current-clamp and age paragraphs in full), Discussion paragraphs on XE-991 potency and current clamp, Table 1. Image viewed: Fig 6 only; Figs 1-5, 7 images not viewed.",
+  "verbatim_locator | proposition: XE-991 5 uM did not change resting potential | Results | \"XE-991 had no significant effect on resting membrane potential (−83.4 ± 2 mV in control vs. −82.4 ± 1.8 mV in XE-991, n = 6 cells)\"",
+  "verbatim_locator | proposition: slope resistance near rest unchanged | Results | \"Near resting potential the slope resistance (the slope of the curve) showed little change\"",
+  "verbatim_locator | proposition: Kv7 density rises with age | Results | \"increased from 6.9 ± 1.6 pS at P6–P8 (n = 13), to 8.7 ± 2.3 pS at P11–P14, 17.9 ± 3.1 pS at P20–P24\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/potassium_conductances_sci43_20261110/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/potassium_conductances_sci43_20261110/output/shares.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "d1b83d384df6a9ceed5f021799ddf254e29593c9955a24048f682cc1d3579b72",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page https://pmc.ncbi.nlm.nih.gov/articles/PMC3191833/ fetched 2026-11-10 with plain curl; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1152/jn.00211.2011",
+  "pmid": "21697446"
+ },
+ "workflow": "SCI43 K+ conductance question (ORCH-SCI43-20261110), producer og-k, staged as a JSON file for the integrator; the ledger was not written by the preparing actor. The claim for this PMID was made after the reading began (a slip of the producer, noted in phase_note.md)."
+}

@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-10T18:23:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-10T18:35:22Z",
+ "event_id": "FTR-20261110-30911152-94",
+ "evidence_basis": [
+  "Kroon 2019 read from the PMC page: Methods (electrophysiology), Results on intrinsic properties and Figure 3 and 4 legends, Table 2 for layers 3 and 5. No figure image viewed (the numbers come from Table 2); synaptic and morphology parts not read.",
+  "verbatim_locator | proposition: input resistance falls with age | Figure 3 legend | \"Input resistance decreases strongly during the second postnatal week in both layers, and decreases further until week 4\"",
+  "verbatim_locator | proposition: recording temperature | Methods | \"heated to 31 ± 1 °C\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/potassium_conductances_sci43_20261110/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/potassium_conductances_sci43_20261110/output/shares.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "e6bd4356d1c911d4b18f9e130f3fd4b049b1144a1d7eedeae724d1a9bdf7c679",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page https://pmc.ncbi.nlm.nih.gov/articles/PMC6433913/ fetched 2026-11-10 with plain curl; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1038/s41598-019-41661-9",
+  "pmid": "30911152"
+ },
+ "workflow": "SCI43 K+ conductance question (ORCH-SCI43-20261110), producer og-k, staged as a JSON file for the integrator; the ledger was not written by the preparing actor. The claim for this PMID was made after the reading began (a slip of the producer, noted in phase_note.md)."
+}

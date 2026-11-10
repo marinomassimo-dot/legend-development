@@ -1,0 +1,11 @@
+case	source	Rin_old_MOhm	Rin_new_MOhm	V_old_mV	V_new_mV	G_old_nS	G_new_nS	dG_nS	dG_percent	dV_mV	implied_E_x_recorded_scale_mV	kind	note
+Wwox WT->KO (P13-P17 L2/3, 35 C)	34634460 Table 1	102.88	143.03	-79.25	-73.62	9.72	6.99	-2.73	-28	+5.63	-93.7	net loss	tau 18.55 -> 21.25 ms
+Wwox WT->HT	34634460 Table 1	102.88	143.26	-79.25	-75.51	9.72	6.98	-2.74	-28	+3.74	-88.8	net loss	HT vs KO untested in the paper
+Fmr1 WT->KO (P28-42 L2/3 auditory, 34 C)	10.64898/2026.02.03.703439 Fig 1	172.7	124.5	-78.3	-82.0	5.79	8.03	+2.24	+39	-3.70	-91.6	net gain	Ba2+-sensitive current larger in KO (measured); K+ gain of known sign
+Ba2+ 60 uM on WT (same preparation)	10.64898/2026.02.03.703439 Fig 1	172.7	223.8	-78.3	-76.8	5.79	4.47	-1.32	-23	+1.50	-83.4	loss by block	Rin_new derived from printed delta; rest +1.5 mV; measured Ba2+ reversal -89.6 +/- 2.4 mV (voltage clamp)
+Kcnq2 cKO vs control (P15-20 L2/3, RT)	28100740 Fig 2	239.0	299.0	-67.3	-65.7	4.18	3.34	-0.84	-20	+1.60	-73.7	net loss	rest change not significant (p 0.2); corrected scale; order of the two values to be checked by the verifier
+Development L3 P7->P14 (prelimbic, 31 C)	30911152 Table 2	405.85	213.42	-61.63	-69.96	2.46	4.69	+2.22	+90	-8.33	-79.2	net gain	tau 40.2 at P14; no tool
+Development L3 P14->P28	30911152 Table 2	213.42	110.28	-69.96	-73.02	4.69	9.07	+4.38	+94	-3.06	-76.3	net gain	
+Development L5 P7->P14	30911152 Table 2	161.83	78.33	-61.3	-67.08	6.18	12.77	+6.59	+107	-5.78	-72.5	net gain	
+Development L5 P14->P28	30911152 Table 2	78.33	52.6	-67.08	-69.62	12.77	19.01	+6.24	+49	-2.54	-74.8	net gain	
+ZD7288 10 uM on WT (Ih block)	10.64898/2026.02.03.703439 Fig 5	130.0	138.0	-78.3	-83.0	7.69	7.25	-0.45	-6	-4.70	-1.9	loss by block	baseline Rin read off Fig 5C (about 130, +8 printed); V_old taken as the preprint WT mean; rest -4.7 mV
