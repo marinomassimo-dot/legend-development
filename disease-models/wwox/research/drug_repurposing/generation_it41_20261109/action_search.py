@@ -26,12 +26,17 @@ def wanted_direction(rel, symbol):
         return d.get(symbol.upper(), "")
     return w
 
+def name_key(n):
+    """Separator- and case-insensitive key of a compound name (GYKI 53784, GYKI-53784 and Gyki53784 are one key). It joins labels; it never decides identity."""
+    return re.sub(r"[^a-z0-9]", "", (n or "").lower())
+
 def load_identity(dr):
     p = dr / "identity_it41_20261109/identity_table.tsv"
     out = {}
     if p.exists():
         for r in csv.DictReader(open(p, encoding="utf-8"), delimiter="\t"):
-            out.setdefault(r["query_name"].lower(), []).append(r)
+            for k in {name_key(r["query_name"]), name_key(r.get("record_name", ""))}:
+                if k: out.setdefault(k, []).append(r)
     return out
 
 def qualify(o, rel, ident):
@@ -52,8 +57,8 @@ def qualify(o, rel, ident):
     out_rx = rel.get("subunit_out") or ""
     if out_rx and re.search(out_rx, o["assay_or_note"] or "", re.I): return "UNKNOWN", "assay_names_other_subunit", ",".join(unk)
     if o["source"].startswith("GtoPdb") and rel.get("subunit_in") and not (o["assay_or_note"] or "").strip(): unk.append("assay_text")
-    for nm in (o["name"] or "").lower().split(" | "):
-        for r in ident.get(nm, []):
+    for nm in (o["name"] or "").split(" | "):
+        for r in ident.get(name_key(nm), []):
             if r.get("label_conflict") == "yes": return "UNKNOWN", "label_conflict", ",".join(unk)
     return ("CANDIDATE" if not unk else "CANDIDATE"), ("ok" if not unk else "unknown_fields"), ",".join(unk)
 

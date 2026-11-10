@@ -11,7 +11,7 @@ def tsv(p): return list(csv.DictReader(open(p, encoding="utf-8"), delimiter="\t"
 rel = {r["relation_id"]: r for r in tsv(IT41 / "relations_it41.tsv")}
 ident = A.load_identity(DR)
 REF = {"S1": {"radiprodil", "traxoprodil", "rislenemdaz", "evt-101", "ifenprodil", "ro 25-6981"}}   # fixed in the protocol: primary readings of earlier packages
-QS = {"Q1": "S1", "Q2": "S3", "Q3": "S5", "Q4": "S6", "Q5": "S7"}
+QS = {"Q1": "S1", "Q2": "S3", "Q3": "S5", "Q4": "S6", "Q5": "S7", "Q6*": "S8"}   # Q6* is post hoc (addendum 2): added for the P1 identity trace, not part of the pre-fixed set
 DOWN = re.compile(r"inverse agonist|antagon|inhibit|block|negative|blocker", re.I); UP = re.compile(r"(?<!ant)(?<!inverse )agonist|activat|positive|potentiat|opener", re.I)
 def wdir(rid, sym):
     w = rel[rid]["wanted_direction"]

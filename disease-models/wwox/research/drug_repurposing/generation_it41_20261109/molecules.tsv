@@ -239,3 +239,58 @@ S7	GTOPDB:6512	(R)-EF-1520	GtoPdb interaction	1	down	Human
 S7	GTOPDB:6513	(S)-EF-1520	GtoPdb interaction	1	down	Human	
 S7	GTOPDB:8284	CPP-115	GtoPdb interaction	1	down	Human	
 S7	GTOPDB:8841	4-acryloylphenol	GtoPdb interaction	1	down	Human	
+S8	CAT:CHEMBL119625	ZONAMPANEL	ChEMBL curated mechanism	4	down	Homo sapiens	family_record_subunit_unresolved
+S8	CAT:CHEMBL1214124	PERAMPANEL	ChEMBL curated mechanism	4	down	Homo sapiens	family_record_subunit_unresolved
+S8	CAT:CHEMBL1276138	FARAMPATOR	ChEMBL curated mechanism	4	up	Homo sapiens	family_record_subunit_unresolved
+S8	CAT:CHEMBL1277001	MIBAMPATOR	ChEMBL curated mechanism	4	up	Homo sapiens	family_record_subunit_unresolved
+S8	CAT:CHEMBL14935	TEZAMPANEL	ChEMBL curated mechanism	9	down	Homo sapiens	family_record_subunit_unresolved
+S8	CAT:CHEMBL2103869	DASOLAMPANEL	ChEMBL curated mechanism	5	down	Homo sapiens	family_record_subunit_unresolved;single_protein_record
+S8	CAT:CHEMBL220492	TOPIRAMATE	ChEMBL curated mechanism	9	down	Homo sapiens	family_record_subunit_unresolved
+S8	CAT:CHEMBL29741	IRAMPANEL	ChEMBL curated mechanism	4	down	Homo sapiens	family_record_subunit_unresolved
+S8	CAT:CHEMBL3545042	SELURAMPANEL	ChEMBL curated mechanism	9	down	Homo sapiens	family_record_subunit_unresolved
+S8	CAT:CHEMBL3707399	CX1739	ChEMBL curated mechanism	4	up	Homo sapiens	family_record_subunit_unresolved
+S8	CAT:CHEMBL3707401	MK-8777	ChEMBL curated mechanism	4	up	Homo sapiens	family_record_subunit_unresolved
+S8	CAT:CHEMBL3989682	BECAMPANEL	ChEMBL curated mechanism	4	down	Homo sapiens	family_record_subunit_unresolved
+S8	CAT:CHEMBL4594403	OSAVAMPATOR	ChEMBL curated mechanism	4	up	Homo sapiens	family_record_subunit_unresolved
+S8	CAT:CHEMBL5095022	PESAMPATOR	ChEMBL curated mechanism	4	up	Homo sapiens	family_record_subunit_unresolved
+S8	CAT:CHEMBL61872	TALAMPANEL	ChEMBL curated mechanism	2	down	Homo sapiens	single_protein_record
+S8	GTOPDB:11309	4‐BCCA	GtoPdb interaction	1	down	Human	
+S8	GTOPDB:13392	BPAM344	GtoPdb interaction	1	up	Human	
+S8	GTOPDB:4069	(<i>S</i>)-4-AHCP	GtoPdb interaction	1	up	Human	
+S8	GTOPDB:4070	(<i>S</i>)-5-fluorowillardiine	GtoPdb interaction	4	up	Human	
+S8	GTOPDB:4071	(<i>S</i>)-5-iodowillardiine	GtoPdb interaction	1	up	Human	
+S8	GTOPDB:4102	2,4-epi-neodysiherbaine	GtoPdb interaction	2	down	Human	
+S8	GTOPDB:4112	8-deoxy-neodysiherbaine	GtoPdb interaction	1	up	Human	
+S8	GTOPDB:4123	ACET	GtoPdb interaction	1	down	Human	
+S8	GTOPDB:4131	AMPA	GtoPdb interaction	4	up	Human	
+S8	GTOPDB:4133	aniracetam	GtoPdb interaction	4	up	Human	
+S8	GTOPDB:4138	argiotoxin	GtoPdb interaction	4	down	Human	
+S8	GTOPDB:4140	ATPA	GtoPdb interaction	1	up	Human	
+S8	GTOPDB:4141	ATPO	GtoPdb interaction	4	down	Human	
+S8	GTOPDB:4162	concanavalin A	GtoPdb interaction	2	up	Human	
+S8	GTOPDB:4165	CX516	GtoPdb interaction	4	up	Human	
+S8	GTOPDB:4166	CX546	GtoPdb interaction	4	up	Human	
+S8	GTOPDB:4167	cyclothiazide	GtoPdb interaction	4	up	Human	
+S8	GTOPDB:4181	domoic acid	GtoPdb interaction	5	up	Human;Rat	
+S8	GTOPDB:4185	dysiherbaine	GtoPdb interaction	5	up	Human;Rat	
+S8	GTOPDB:4209	GYKI53655	GtoPdb interaction	4	down	Human	
+S8	GTOPDB:4210	GYKI53784	GtoPdb interaction	4	down	Human	
+S8	GTOPDB:4219	IDRA-21	GtoPdb interaction	4	up	Human	
+S8	GTOPDB:4229	joro spider toxin	GtoPdb interaction	3	down	Human	
+S8	GTOPDB:4231	kainate	GtoPdb interaction	6	up	Human;Rat	
+S8	GTOPDB:4245	tezampanel	GtoPdb interaction	4	down	Human	
+S8	GTOPDB:4246	LY339434	GtoPdb interaction	2	up	Human	
+S8	GTOPDB:4247	LY382884	GtoPdb interaction	1	down	Human	
+S8	GTOPDB:4248	LY392098	GtoPdb interaction	4	up	Human	
+S8	GTOPDB:4249	LY404187	GtoPdb interaction	4	up	Human	
+S8	GTOPDB:4250	LY466195	GtoPdb interaction	1	down	Human	
+S8	GTOPDB:4251	LY503430	GtoPdb interaction	4	up	Human	
+S8	GTOPDB:4258	MSVIII-19	GtoPdb interaction	1	down	Human	
+S8	GTOPDB:4264	NBQX	GtoPdb interaction	4	down	Human	
+S8	GTOPDB:4274	NS3763	GtoPdb interaction	1	down	Human	
+S8	GTOPDB:4288	piracetam	GtoPdb interaction	4	up	Human	
+S8	GTOPDB:4304	S18986	GtoPdb interaction	4	up	Human	
+S8	GTOPDB:4317	SYM2081	GtoPdb interaction	8	up	Human;Rat	
+S8	GTOPDB:4333	UBP302	GtoPdb interaction	1	down	Human	
+S8	GTOPDB:4334	UBP310	GtoPdb interaction	1	down	Human	
+S8	GTOPDB:8279	talampanel	GtoPdb interaction	1	down	Rat	
