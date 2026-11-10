@@ -179,10 +179,6 @@
   "src": "en",
   "text": "Queried: this need's eleven observation rows and their readout levels; the ISR card and its assertions; the search layer over the eight ISR targets (78 associations, 56 families, none direction-coherent because the need direction is unresolved). The gap is a missing measurement in the sources this module has read, not a claim about the ISR literature."
  },
- "1c3755c6628d": {
-  "src": "en",
-  "text": "Nominate nothing before a difference current reversing near the potassium equilibrium potential and a matched-effect control that fails to reproduce the fall."
- },
  "1ce3795a7d2b": {
   "src": "en",
   "text": "INV-14"
@@ -391,6 +387,10 @@
   "src": "en",
   "text": "Smaller cells with a fixed seal leak, a larger Ih, selection by input-resistance criteria, maturation delay, and a cell-type mix."
  },
+ "375799a41918": {
+  "src": "en",
+  "text": "Nominate nothing before a Ba2+- or XE-991-sensitive difference current smaller per pF in Wwox neurons with capacitance measured directly and the junction potential measured; a reversal near E_K alone does not separate a K+ loss from a smaller cell with a shunt; a matched-effect control that fails to reproduce the fall."
+ },
  "375c36b55dc4": {
   "src": "en",
   "text": "Outside WWOX for the pharmacology; WWOX-system only for the raised reactive-oxygen readouts, whose sign differs by context between a fly and late-passage fibroblasts and does not reconcile. IT22: the organoid NFE2L2 transcript (0.75x) is now a generator input (new question, role unknown, second system failed its control); the generator returns a topical AhR-pathway agent and agents that block EZH2 as conditional rows, and the canonical NRF2 activators only as diagnostic direct hits on the seed gene itself. [IT39] The Src and Fyn chain to NRF2 from an external report rests on a retracted article (21690096); no consumer carries the chain now, its other support is a 2007 paper from the same laboratory line (not independent), and reductive stress is a transfer from cardiac models."
@@ -515,6 +515,10 @@
   "src": "it",
   "text": "Esperimento già pubblicato da un solo laboratorio; animali e linea non disponibili (non nota). Denominatori presso gli autori delle serie; contatto fuori ambito."
  },
+ "452a0056392d": {
+  "src": "en",
+  "text": "Branch A, compensatory Ih: blocking it worsens or leaves bursts; weakened if bursts fall. Branch B, pro-excitatory Ih through the depolarised resting potential: blocking it lowers bursts at matched membrane potential; weakened if bursts do not fall. Branch C, bystander: no effect on bursts although sag falls; weakened by any burst change. The sag itself must first be shown to be Ih (sensitive to the blocker), and a blocker that shifts the resting potential acts on the premises of A and B at once. Branch D, added from an unguided expansion (IT35): the higher input resistance of the knockout and the heterozygote is the opposite of what a larger Ih alone would give (in a rat cortical dysplasia model reduced Ih came with a higher input resistance, reversed by an Ih blocker, PMID 21795624; there the resting potential is hyperpolarised, so it is not a mirror image), so a second or alternative change, such as loss of a resting potassium conductance (Kir, K2P or Kv7 channels), is a rival explanation; weakened if blocker-sensitive potassium currents do not differ. [IT40] A3 Whether the excess sag and rebound persist at matched potential and matched deflection, whether capacitance differs, and whether the recordings were under synaptic blockade; only then whether a blocker-sensitive current differs. A blocker response shows that the current contributes, not that it is defective in Wwox cells. [SCI43] Measured shares in wild-type neurons of other preparations: a Ba2+-sensitive resting conductance about 23 percent (adult mouse L2/3 auditory cortex, one preprint, verifier could not open it), a KCNQ2-dependent share about 20 percent when the cell rests near −67 mV (P15–P20), Ih about 6 percent (same preprint), Kv7 expected small at the Wwox rest (activation near −70 mV; XE-991 weak at hyperpolarised potentials). The Wwox pair implies a net loss of about 28 percent of the resting conductance (2.7 nS). A blocker effect shows contribution, not alteration."
+ },
  "4619c9114dc4": {
   "src": "en",
   "text": "WWOX-system: organoid transcript +0.46 log2, not robust; the raw neuron-library sign is a scale artefact; no protein or flux. Non-WWOX neural: protein up in hypoxia with glucose and down in oxygen-glucose deprivation in HT22, with BNIP3 loss harmful in the deprivation arm; rat epilepsy HIF-inhibitor test lowered HIF-1alpha and raised BNIP3 (hif1a_bnip3_it41_20261109, partial full texts, one embargoed)."
@@ -590,6 +594,10 @@
  "53e618810345": {
   "src": "it",
   "text": "Laboratorio con linee neurali isogeniche e una fonte di microglia; disponibilità non nota."
+ },
+ "53f18a227752": {
+  "src": "en",
+  "text": "Up: a difference current reversing near the potassium equilibrium potential in Wwox neurons, and a matched-effect control that fails to reproduce the fall. Down: passive size with a seal leak explaining the observations. Down: a smaller cell with a shunt gives the same implied reversal."
  },
  "54c7b0203090": {
   "src": "en",
@@ -823,10 +831,6 @@
   "src": "en",
   "text": "That the burst needs NMDA-receptor activity does not show a gain of receptor function."
  },
- "712bbfd48945": {
-  "src": "en",
-  "text": "That a leak deficit or coupling drives the burst: neither is shown; the burst fall under the gap-junction tool has no supporting datum for coupling."
- },
  "714571f82c43": {
   "src": "it",
   "text": "ratto"
@@ -962,10 +966,6 @@
  "834e9fb3fb43": {
   "src": "en",
   "text": "Up: a measured restraint of the step. Down: none found, which lowers the lead without refuting it in other cell types. Reopens with the opposite sign if the cells depend on lactate supply."
- },
- "83ef2e781b00": {
-  "src": "en",
-  "text": "In knockout, heterozygote and wild-type slices: sag, resting potential, input resistance, rebound and burst incidence before and after two Ih blockers of different chemotypes (the second so that an off-target action is not read as Ih), with a current-clamp step that matches the resting potential and the peak potential, with a smaller cell or immature membrane listed as its own candidate beside branch D, and a voltage-clamp read of the blocker-sensitive current in a subset of cells; animals, not cells, are the replicates. Branch D adds the potassium-current arm: the potassium currents sensitive to a Kv7 blocker and to a Kir-channel blocker in voltage clamp, and input resistance read with synaptic transmission blocked. [IT36] A first-generation Ih blocker at 50 uM is about 40 times its sodium-current IC50 in DRG neurons (age not stated); read a second chemotype and the blocker-sensitive current in voltage clamp; nickel/Z944 and Kv7 arms separate. [IT40] A4 Report access resistance, bridge balance and capacitance by genotype; add a Ba2+- or Kv7-blocker-sensitive difference current with its zero-crossing against E_K (about -97 to -98 mV from the declared solutions; the recorded potentials need a junction correction of about -13 mV that 34634460 did not measure, which puts the estimated sag peaks about 16-21 mV below E_K, so the prediction applies to the voltage-clamp difference current, not to the sag peak)."
  },
  "8469c8e9d812": {
   "src": "en",
@@ -1215,10 +1215,6 @@
   "src": "en",
   "text": "Per-animal parvalbumin cell counts by immunostaining in neuron-targeted Wwox deletion against Cre-only controls, at least 3 animals per arm (reopening condition (c) of NP3A1), read together with a maturation and identity marker panel in the same animals, and, where the data holders allow, intrinsic-property and inhibitory-input recordings from labelled parvalbumin cells and a circuit-level read. Alternatives that also reopen it: a deposited library or animal index for GSE158684, or an independent neuron-targeted deletion dataset with at least 3 animals per arm and a parvalbumin-enriched capture. The result is read as six separate rows (number, identity and maturation, marker expression, intrinsic properties, synaptic input, circuit function); a change in one is not carried to another. In every animal used (P14 to P17, matching the phenotype window), on the same sections: a parvalbumin marker, the Rosa26 tdTomato reporter and a Wwox read-out, reporting per animal the fraction of parvalbumin cells reporter-positive, the fraction Wwox-negative and their concordance, beside cell number, identity and marker expression; transcript, protein, activity, cell number and circuit function stay separate results. [SCI42] Order of the inhibitory minimum experiment: M03 (re-record sIPSC with glutamate block, fixed threshold, per-animal summary), then M01 (E_GABA by gramicidin perforated patch, knockout, heterozygote and wild-type littermates), then M02 (age series with a survivor-selection control); M05 and M06 if M03 confirms the amplitude loss."
  },
- "a28ffc9eb88a": {
-  "src": "en",
-  "text": "Up: a difference current reversing near the potassium equilibrium potential in Wwox neurons, and a matched-effect control that fails to reproduce the fall. Down: passive size with a seal leak explaining the observations."
- },
  "a32410816420": {
   "src": "it",
   "text": "In questa edizione i casi riportano la classe di composti e non i singoli nomi. Il precedente esterno e le misure farmacologiche (valori e testi derivati da ChEMBL, CC BY-SA 3.0, e da lavori di terzi) restano nell'edizione completa locale: nessun valore di potenza è riportato qui."
@@ -1447,6 +1443,10 @@
   "src": "en",
   "text": "Queried on 2026-11-09 to 2026-11-10 in the package hif1a_bnip3_it41_20261109 (search of this module and open sources, not a statement about the literature)."
  },
+ "bd6266199402": {
+  "src": "en",
+  "text": "That a leak deficit or coupling drives the burst: neither is shown; the burst fall under the gap-junction tool has no supporting datum for coupling. Kv7 current starts near −70 mV, so an opener's expected action is in the spiking range, not at the Wwox rest."
+ },
  "bdc0737e6ae2": {
   "src": "en",
   "text": "A clinical-stage compound (catalogue maximum phase 2) that could serve as the in-slice modulator once the tool result is in."
@@ -1506,6 +1506,10 @@
  "c668d9eb574e": {
   "src": "en",
   "text": "In isogenic WWOX-deficient against add-back human neural cells at matched oxygen: does BNIP3 protein rise, does it fall on HIF1A and EPAS1 knockdown, and does BNIP3 knockdown make survival, ROS and membrane potential better or worse?"
+ },
+ "c6c82d3bb69b": {
+  "src": "en",
+  "text": "In knockout, heterozygote and wild-type slices: sag, resting potential, input resistance, rebound and burst incidence before and after two Ih blockers of different chemotypes (the second so that an off-target action is not read as Ih), with a current-clamp step that matches the resting potential and the peak potential, with a smaller cell or immature membrane listed as its own candidate beside branch D, and a voltage-clamp read of the blocker-sensitive current in a subset of cells; animals, not cells, are the replicates. Branch D adds the potassium-current arm: the potassium currents sensitive to a Kv7 blocker and to a Kir-channel blocker in voltage clamp, and input resistance read with synaptic transmission blocked. [IT36] A first-generation Ih blocker at 50 uM is about 40 times its sodium-current IC50 in DRG neurons (age not stated); read a second chemotype and the blocker-sensitive current in voltage clamp; nickel/Z944 and Kv7 arms separate. [IT40] A4 Report access resistance, bridge balance and capacitance by genotype; add a Ba2+- or Kv7-blocker-sensitive difference current with its zero-crossing against E_K (about -97 to -98 mV from the declared solutions; the recorded potentials need a junction correction of about -13 mV that 34634460 did not measure, which puts the estimated sag peaks about 16-21 mV below E_K, so the prediction applies to the voltage-clamp difference current, not to the sag peak). [SCI43] Order of arms: (0) capacitance measured directly by genotype and the cell-selection rule stated (pyramidal identity was confirmed from Rin and tau); (1) the same cells with and without synaptic blockers, in bursting and non-bursting slices; (2) Ba2+-sensitive current per pF and Rin share (a low micromolar concentration; a higher concentration and a K2P-blocker group as 2b); (3) XE-991-sensitive current at about −55 to −45 mV, not at rest, with a second Kv7 blocker; (4) current sensitive to an Ih blocker, repeated with a second Ih blocker; (5) dynamic-clamp leak of about 2.7 nS as sufficiency only, with a control leak at the WT rest; (6) an opener only after step 3. An implied reversal near E_K does not separate a K+ loss from a smaller cell with a shunt."
  },
  "c7f9760e7c63": {
   "src": "en",
@@ -1874,10 +1878,6 @@
  "f5a4dd769acf": {
   "src": "en",
   "text": "Queried: a whole-word name search of this module and its registries on 2026-11-03 (no hit for the peptide), the need file, and the catalogue, where a curated inhibitor row was filed as not evaluable by the compound-to-need route. A name search in this module, not a statement about the literature."
- },
- "f5b6c67dfba6": {
-  "src": "en",
-  "text": "Branch A, compensatory Ih: blocking it worsens or leaves bursts; weakened if bursts fall. Branch B, pro-excitatory Ih through the depolarised resting potential: blocking it lowers bursts at matched membrane potential; weakened if bursts do not fall. Branch C, bystander: no effect on bursts although sag falls; weakened by any burst change. The sag itself must first be shown to be Ih (sensitive to the blocker), and a blocker that shifts the resting potential acts on the premises of A and B at once. Branch D, added from an unguided expansion (IT35): the higher input resistance of the knockout and the heterozygote is the opposite of what a larger Ih alone would give (in a rat cortical dysplasia model reduced Ih came with a higher input resistance, reversed by an Ih blocker, PMID 21795624; there the resting potential is hyperpolarised, so it is not a mirror image), so a second or alternative change, such as loss of a resting potassium conductance (Kir, K2P or Kv7 channels), is a rival explanation; weakened if blocker-sensitive potassium currents do not differ. [IT40] A3 Whether the excess sag and rebound persist at matched potential and matched deflection, whether capacitance differs, and whether the recordings were under synaptic blockade; only then whether a blocker-sensitive current differs. A blocker response shows that the current contributes, not that it is defective in Wwox cells."
  },
  "f5fa1532a11a": {
   "src": "en",

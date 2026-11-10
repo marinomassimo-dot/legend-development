@@ -17,7 +17,7 @@
  "event_id": "FTR-20261110-28483800-94",
  "evidence_basis": [
   "Greene 2017 read from the PMC page: Abstract, Methods (electrophysiology), Results on voltage dependence and retigabine shift, Discussion lines on resting potential. Image viewed: Fig 1; Figs 2-7 not viewed; washout and imaging sections read in part.",
-  "verbatim_locator | proposition: no XE991 effect at -70 mV | Results | \"Exposure to 10 µM XE991 for 25 seconds had no effects when cells were held at −70 mV\"",
+  "verbatim_locator | proposition: no XE991 effect at -70 mV | Results | \"Exposure to 10 \u00b5M XE991 for 25 seconds had no effects when cells were held at \u221270 mV\"",
   "verbatim_locator | proposition: not efficacious near rest | Abstract | \"Neither inhibitor was efficacious around the resting membrane potential of cells in physiologic conditions.\""
  ],
  "evidence_depth": "partial_fulltext_read",

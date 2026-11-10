@@ -17,9 +17,9 @@
  "event_id": "FTR-20261110-21697446-94",
  "evidence_basis": [
   "Guan 2011 read from the PMC page: Abstract, Introduction, Methods, Results (voltage-clamp kinetics read in part, current-clamp and age paragraphs in full), Discussion paragraphs on XE-991 potency and current clamp, Table 1. Image viewed: Fig 6 only; Figs 1-5, 7 images not viewed.",
-  "verbatim_locator | proposition: XE-991 5 uM did not change resting potential | Results | \"XE-991 had no significant effect on resting membrane potential (−83.4 ± 2 mV in control vs. −82.4 ± 1.8 mV in XE-991, n = 6 cells)\"",
+  "verbatim_locator | proposition: XE-991 5 uM did not change resting potential | Results | \"XE-991 had no significant effect on resting membrane potential (\u221283.4 \u00b1 2 mV in control vs. \u221282.4 \u00b1 1.8 mV in XE-991, n = 6 cells)\"",
   "verbatim_locator | proposition: slope resistance near rest unchanged | Results | \"Near resting potential the slope resistance (the slope of the curve) showed little change\"",
-  "verbatim_locator | proposition: Kv7 density rises with age | Results | \"increased from 6.9 ± 1.6 pS at P6–P8 (n = 13), to 8.7 ± 2.3 pS at P11–P14, 17.9 ± 3.1 pS at P20–P24\""
+  "verbatim_locator | proposition: Kv7 density rises with age | Results | \"increased from 6.9 \u00b1 1.6 pS at P6\u2013P8 (n = 13), to 8.7 \u00b1 2.3 pS at P11\u2013P14, 17.9 \u00b1 3.1 pS at P20\u2013P24\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

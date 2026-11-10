@@ -18,7 +18,7 @@
  "evidence_basis": [
   "Kroon 2019 read from the PMC page: Methods (electrophysiology), Results on intrinsic properties and Figure 3 and 4 legends, Table 2 for layers 3 and 5. No figure image viewed (the numbers come from Table 2); synaptic and morphology parts not read.",
   "verbatim_locator | proposition: input resistance falls with age | Figure 3 legend | \"Input resistance decreases strongly during the second postnatal week in both layers, and decreases further until week 4\"",
-  "verbatim_locator | proposition: recording temperature | Methods | \"heated to 31 ± 1 °C\""
+  "verbatim_locator | proposition: recording temperature | Methods | \"heated to 31 \u00b1 1 \u00b0C\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

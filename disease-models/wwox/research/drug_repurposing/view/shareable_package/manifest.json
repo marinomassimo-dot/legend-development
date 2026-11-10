@@ -18,7 +18,7 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 13014,
+    "values": 13018,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -224,7 +224,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3599,
+    "forbidden-name": 3601,
     "forbidden-wording": 21
    },
    "co_attested_wording": [
@@ -470,7 +470,7 @@
   "BIBLIO": 2696,
   "COUNT": 12405,
   "ID": 4861,
-  "OWN": 89854,
+  "OWN": 89858,
   "ROWNAME": 2408,
   "SRC_A": 189,
   "SRC_META": 256,
@@ -552,24 +552,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 5066649,
-   "sha256": "6b2114ad09bd1ef058c64d2e3d3eb8ba7f91cec964d76c8127b4dcba37687d1e"
+   "bytes": 5070422,
+   "sha256": "9cba78e6c5df9170443a145c3d207eac61a1c0a525b62f031b72f4226098d688"
   },
   "es.html": {
-   "bytes": 5052849,
-   "sha256": "0ade644a709cf1ca33ab115f153c774f91ce8aeb862976ead0c5978cc95f5030"
+   "bytes": 5056737,
+   "sha256": "3ab742bc22e966e87585fc5652e498b760fd6017328ee19f42a2ffbb8d698e57"
   },
   "fr.html": {
-   "bytes": 5081101,
-   "sha256": "4e1125eb70c350b73e7677cabf705e78232f916c67723271bc672d32a64cc473"
+   "bytes": 5085050,
+   "sha256": "071bf1214010303612f8f08a74b25dcd5dbdeb11c3166e42877e8f9a1f9a4d56"
   },
   "index.html": {
-   "bytes": 4973840,
-   "sha256": "7364dc1c32b2a2d8dd3729898c9a1fa8a1e30293cc495e3274bd02ec1719c2d0"
+   "bytes": 4977437,
+   "sha256": "9290b8de3ffbbd7e68c0e9b370fa2900a478a650d8a0d71875798b29455c238a"
   },
   "it.html": {
-   "bytes": 5027083,
-   "sha256": "03b946eb9cc1a88abde9cbbf925c8f006fb8382aaf6138479cbba9003b0ea4ae"
+   "bytes": 5030941,
+   "sha256": "30b3b91f6a65b22e736a8013b34904fc51a878e436dc2c06719e45a9209993f0"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",

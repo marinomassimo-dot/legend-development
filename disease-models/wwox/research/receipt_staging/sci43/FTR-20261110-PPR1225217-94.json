@@ -17,7 +17,7 @@
  "event_id": "FTR-20261110-PPR1225217-94",
  "evidence_basis": [
   "bioRxiv preprint (not peer reviewed) read from its source XML: Introduction, Methods, Results, Discussion, figure legends. Images viewed: Fig 1 and Fig 5; Figs 2, 3, 4, 6, 7 images not viewed (Fig 4 downloaded, not viewed). Supplement listed in the XML (703439_file03.pdf) not opened.",
-  "verbatim_locator | proposition: WT Ba2+ effect on Rin and RMP | Results section 1 | \"effects in WT were smaller (ΔRMP: 1.5 mV; ΔRin: 51.1 MΩ; Fig. 1A-C)\"",
+  "verbatim_locator | proposition: WT Ba2+ effect on Rin and RMP | Results section 1 | \"effects in WT were smaller (\u0394RMP: 1.5 mV; \u0394Rin: 51.1 M\u03a9; Fig. 1A-C)\"",
   "verbatim_locator | proposition: junction potential calculated, not subtracted | Methods | \"The liquid junction potential (LJP) was calculated as 16.2 mV using the stationary Nernst-Planck equation and LJPcalc\""
  ],
  "evidence_depth": "partial_fulltext_read",

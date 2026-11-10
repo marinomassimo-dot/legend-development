@@ -70,7 +70,7 @@
      "step": "Consume SCI43 and Harness deliveries without idle waiting; reconcile IT42 intro counts with final",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "IT42 intro counts reconciled by dated update; SCI43 (ORCH-SCI43-20261110, INV-18 branch D) not delivered yet: its delivery will be integrated from consumer_delta; no idle waiting, battery sequencing agreed by PID."
+     "evidence": "IT42 intro counts reconciled by dated update. SCI43 (ORCH-SCI43-20261110, landed dcaca553/380a4ee3) consumed by generation_it43_20261110/apply_sci43.py: delta rows 1-7 and 11 applied (INV-18 next_test and decisive_uncertainty in both tables, V10, comparators with three tool rows, probe P05, three open questions IT43-Q03..Q05, CP-MH1, matrix M01); row 8 no change; row 9 is for Harness; row 10: 26 staged receipts recorded in event order after a clean trial (ledger 1,599 verified; the 10 verifier receipts needed prior_receipt set to the producer receipt, reason adversarial_reanalysis); two defects of my own found by the checks and fixed (a comparator role outside the UI vocabulary; a catalogue name in public text, reworded). Translations in four languages."
     }
    ]
   },
