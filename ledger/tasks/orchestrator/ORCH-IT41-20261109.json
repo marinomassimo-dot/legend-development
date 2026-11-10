@@ -8,12 +8,12 @@
   "START_UTC": "2026-11-09T22:30:00Z",
   "BASELINE": "main 30382215 (development/main same). Worktree .claude/worktrees/it41a, branch task/it41a. IT40 is in its own worktree (task/it40, not yet on main); its final report was not available at S0. Harness identity delivery (worktree idfix) had no commit at S0.",
   "CURRENT_PACKAGE": {
-    "id": "B-landing+C-delivered",
-    "state": "B landing; C delivered, awaiting its own battery on a fresh clone",
+    "id": "C-landing",
+    "state": "packages A and B landed (9d58c69d, 52e04148); C battery then landing; then final report",
     "delegate_active": "none",
-    "updated": "2026-11-10T02:15:00Z"
+    "updated": "2026-11-10T02:25:00Z"
   },
-  "RESUME": "CHECKPOINT 2026-11-10T02:15Z: B battery PASS WITH SKIPS on 7d989b6e; landing B now. C (fly feasibility) delivered on task/it41c (worktree it41c, last commit after 626e7eaa): next merge main into it41c, update this record (OBJ_3 DONE, MANDATE_STATE COMPLETE only after C lands), LINT/receipts/growth/gate, battery on /tmp/bat_it41c, task_close, safe_push; then final report. Active processes: none.",
+  "RESUME": "CHECKPOINT 2026-11-10T02:25Z: A landed 9d58c69d, B landed 52e04148 (IT41 orchestrator told). C delivered on task/it41c; this commit freezes the candidate: battery on /tmp/bat_it41c, then record the verdict line, task_close + safe_push, then the final report. All queue steps are DONE; MANDATE_STATE COMPLETE is set at the candidate and becomes true only on landing. Active processes: none.",
   "DECISIONS_TAKEN": [
     "2026-11-09 S0: the INV-05 closing pass was already delivered and published (30382215); nothing pending. IT40 final report not found in any worktree at S0 (IT40 is unmerged); next_investigations_it40.md read in place from the it40 worktree (read-only): A1 and A2 rows (primary mechanism papers for NBQX and GYKI 52466; catalogue identity of GYKI 52466) are the open needs this package addresses; B3 (BE1) is the experiment the comparison serves. Harness identity delivery not yet available: names used by each paper are recorded so the match can be made without rebuilding the search.",
     "2026-11-09 A1 design written and committed before any source was opened, including the five demonstrations the block control must give, what the result does not separate, and the A3 rule (alternative only by missing property).",
@@ -35,7 +35,7 @@
   "STOP_LOG": [],
   "DEFAULTS_TAKEN": [],
   "AUTHORISED_QUEUE_20261109B": {
-    "MANDATE_STATE": "OPEN",
+    "MANDATE_STATE": "COMPLETE",
     "OBJ_1": {
       "order": 1,
       "steps": [
@@ -87,8 +87,9 @@
       "steps": [
         {
           "step": "Light queue: public feasibility of a Wwox-loss Drosophila model (only after A and B)",
-          "status": "IN_PROGRESS",
-          "owner": "orchestrator"
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "fly_wwox_feasibility_it41_20261110 delivered and verified (12 decisive rows, 23 resources, 12 feasibility rows, recheck); battery and landing in this chain"
         }
       ]
     }
