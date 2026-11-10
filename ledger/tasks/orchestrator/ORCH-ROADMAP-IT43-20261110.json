@@ -1,0 +1,122 @@
+{
+ "_schema": "orchestrator-task-v1",
+ "TASK_ID": "ORCH-ROADMAP-IT43-20261110",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "P0",
+ "START_UTC": "2026-11-10T12:00:00Z",
+ "OBJECTIVE": "IT43: from qualified knowledge to effective pharmacological generation: comparisons drive the engine, recover DGIdb and Q1 coverage, one new generative case, evaluation by value of source/qualification/generation, dashboard and open questions.",
+ "AUTHORISED_QUEUE_20261108": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Baseline a4799320 verified; reconcile IT42/SCI42/HE42 records; register IT43; continuity",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "local main = remote = a4799320 at start (fetch done); IT42 record COMPLETE 10/10 DONE; SCI42 and HE42 records read; worktree task/it43 created from a4799320."
+    }
+   ]
+  },
+  "OBJ_P1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Comparison rows reach the engine: role, premise, discriminating experiment, relaunched question; before/after in a consumer; three contrast cases",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "DGIdb and Q1 positives: cause of each omission, minimal integration, comparison with simple search, five distinct measures",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "New generative trial with relation declared before names (coordinate SCI43, no K-conductance duplication)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "Evaluate source vs qualification vs generation value; independent check; missed opportunities",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "Consume SCI43 and Harness deliveries without idle waiting; reconcile IT42 intro counts with final",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "Investigations view and open questions: compound, reason, origin, evidence, premise, next work, movers; five languages",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 8,
+   "steps": [
+    {
+     "step": "DREAM on materially new results",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P8": {
+   "order": 9,
+   "steps": [
+    {
+     "step": "Autonomous queue: second case, false exclusion, scouting integration, simplification; scouting GitHub/HF/Nature",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P9": {
+   "order": 10,
+   "steps": [
+    {
+     "step": "Integrate, battery by SHA, publish with SHA check, CI and site, final report",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  }
+ }
+}

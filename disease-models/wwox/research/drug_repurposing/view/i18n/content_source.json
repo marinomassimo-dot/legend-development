@@ -551,6 +551,10 @@
   "src": "en",
   "text": "E3 - card reviewed with assertions; no WWOX-side result read beyond abstract"
  },
+ "4b71e3104420": {
+  "src": "en",
+  "text": "Read primary sources for maximum effect and site only if a further chemotype is needed. For that second tool the first step is reading its primary source; no new measurement is needed for that."
+ },
  "4d6578e29718": {
   "src": "en",
   "text": "INV-13"
@@ -1043,6 +1047,10 @@
   "src": "en",
   "text": "Against the wild-type floor about 20 percent of the delayed evoked response remains under it (figure-read, inference), which is not evidence of incomplete block."
  },
+ "8fb495099fdd": {
+  "src": "en",
+  "text": "No maximum effect, species or assay context in the catalogue; no approval statement in the catalogue. A second ifenprodil-site tool, moved here from the tool entry: only abstract-level values were reached and its triheteromer behaviour is transferred from another compound, so it is not a tool for this comparison until its primary source is read."
+ },
  "8fb812a48744": {
   "src": "en",
   "text": "INV-11"
@@ -1142,10 +1150,6 @@
  "99973bd6aa30": {
   "src": "en",
   "text": "A WWOX-deficient neural measurement showing over-active checkpoint signalling that harms the cell."
- },
- "9a3b125b4b5f": {
-  "src": "en",
-  "text": "Read primary sources for maximum effect and site only if a further chemotype is needed."
  },
  "9a753a5daea3": {
   "src": "en",
@@ -1894,10 +1898,6 @@
  "fdba233e1765": {
   "src": "en",
   "text": "In cells the compound stabilises HIF1alpha, the opposite of the intended effect, because concentrations that inhibit the intended demethylase overlap those that inhibit the prolyl hydroxylases; the intended target is also the least expressed family member in the WWOX-deficient organoid and absent in the human progenitor data. The route is the one that made another HIF-pathway agent a drop in IT9."
- },
- "fdd45467216d": {
-  "src": "en",
-  "text": "No maximum effect, species or assay context in the catalogue; no approval statement in the catalogue."
  },
  "fe1eff02f6cc": {
   "src": "en",
