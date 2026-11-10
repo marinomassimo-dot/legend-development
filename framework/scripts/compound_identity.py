@@ -207,7 +207,7 @@ import re  # noqa: E402
 _SPLIT = re.compile(r"\s*(?:/|\+|&|,|\band\b|\bvs\.?\b|\bversus\b)\s*", re.I)
 _PREFIX = re.compile(r"^\s*(?:\((?:RS|[RS]|[+\-±]|[+]/[\-]|rac|[dl]|\d+[RS])\)-?|\[\d*[A-Za-z]{1,2}\]\s*|rac-|[RS]-)\s*", re.I)
 _SUFFIX = re.compile(r"[\s\-]+(?:hydrochloride|hydrobromide|maleate|tartrate|mesylate|besylate|citrate|sulfate|phosphate|"
-                     r"disodium|dipotassium|sodium|potassium|hcl|hydrate|monohydrate|salt|d\d{1,2})\s*$", re.I)
+                     r"dihydrochloride|dimesylate|disodium|dipotassium|sodium|potassium|hcl|hydrate|monohydrate|salt|d\d{1,2})\s*$", re.I)
 
 
 _COMMENT = re.compile(r"\s*\((?!(?:RS|[RS]|[+\-±]|[+]/[\-]|rac|[dl]|\d+[RS])\))[^()]*\)\s*$", re.I)   # a trailing comment only: a parenthesis inside a chemical name is nomenclature

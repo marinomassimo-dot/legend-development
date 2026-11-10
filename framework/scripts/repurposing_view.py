@@ -2700,6 +2700,9 @@ def build_payload(dr: Path = DEFAULT_DR, source: str = "full", with_ranking: boo
         rk = build_ranking(dr, cur, source)
         if rk:
             cur["ranking"] = rk
+    if cur.get("wd_name_rows"):
+        emitted["name:" + WD_SOURCE_KEY] += cur["wd_name_rows"]
+    cur.pop("wd_name_rows", None)
     cur["footer"] = build_footer(source, allow, emitted, srcs)
     P_out = {
         "source": source, "cur": cur,
@@ -3943,7 +3946,7 @@ def build_ranking(dr: Path, cur: dict, source: str):
         "investigations": investigations_view(J.get("investigations"), cur["cands"], full, load_allowlist(dr)),
         "investigations_context": investigations_context_view(J.get("investigations_context"), full),
         "investigation_comparators": comparators_view(dr, full),     # IT39 P10: comparators by investigation; names and details only in the full edition, counts in both
-        "compound_view": compound_view(dr, full),     # IT41 P9: short list of compounds and hypotheses by research order, kinds marked; names and registry notes only in the full edition
+        "compound_view": credit_name_source(cur, compound_view(dr, full), load_allowlist(dr)),     # IT41 P9: short list of compounds and hypotheses by research order, kinds marked; names and registry notes only in the full edition
         "investigation_physiological": physiological_view(dr),     # IT40 P9: conditional physiological hypotheses by investigation (observed, hypothesised, alternatives, what strengthens, what weakens)
         "conditional_hypotheses": conditional_hypotheses_view(J.get("conditional_hypotheses"), cur["cands"], full, load_allowlist(dr)),
         "further_investigations": further_investigations_view(J.get("further_investigations"), cur["cands"], full, load_allowlist(dr)),
@@ -4356,6 +4359,58 @@ IDENTITY_JOIN_FILE = "generation_it41_20261109/compound_identity_join.tsv"
 NO_IDENTITY_STATES = ("NO_IDENTITY_ROW", "NOT_FOUND_BY_NAME")   # a name that reaches no record is not a verified identity
 
 
+NAME_WD_FILE = "view/name_source_wikidata.tsv"      # HE43 H5: English labels from Wikidata (CC0), joined by ChEMBL id (framework/scripts/name_source_wikidata.py)
+IDENTITY_TABLE_FILE = "identity_it41_20261109/identity_table.tsv"
+WD_SOURCE_KEY = "Wikidata label (CC0)"
+
+
+def _parent_key(name: str):
+    import compound_identity as ci     # the identity component's own split into parent, stereo/isotope qualifier and salt: no second normalizer here
+    f = ci.parent_form(name)
+    return f["key"], f["stereo_isotope"]
+
+
+def _salt(name: str) -> str:
+    import compound_identity as ci
+    return ci.parent_form(name)["salt"]
+
+
+def compound_public_names(dr: Path) -> dict:
+    """HE43 H5: item_id -> [{label, qid, chembl_id}] for the compounds of compound_view whose name a class-A source states. A name reaches an item only through an EXACT identity link,
+    the identity table's ChEMBL id for that name, and a Wikidata item that carries that id (property P592): never by name similarity, never for a qualified or proposed form.
+    A compound without a Wikidata item, without a ChEMBL id or without an exact link stays unnamed, and so does one whose Wikidata label is not the table's bare name (a code name, a salt form or a misspelling is not shown). Absent files: an empty dict."""
+    wd = Path(dr) / NAME_WD_FILE
+    tbl = Path(dr) / IDENTITY_TABLE_FILE
+    jf = Path(dr) / IDENTITY_JOIN_FILE
+    if not (wd.exists() and tbl.exists() and jf.exists()):
+        return {}
+    label = {}
+    with open(wd, encoding="utf-8", newline="") as fh:
+        for r in csv.DictReader(fh, delimiter="\t"):
+            if r["state"] == "LABEL":
+                label[r["chembl_id"]] = r
+    ids_of = {}
+    with open(tbl, encoding="utf-8", newline="") as fh:
+        for r in csv.DictReader(fh, delimiter="\t"):
+            found = {x.strip() for c in (r["record_chembl_refs"], r["declared_chembl_id"]) for x in c.replace(";", ",").split(",") if x.strip().startswith("CHEMBL")}
+            ids_of.setdefault(r["query_name"].strip().lower(), set()).update(found)
+    out = {}
+    with open(jf, encoding="utf-8", newline="") as fh:
+        for r in csv.DictReader(fh, delimiter="\t"):
+            if r.get("link") != "EXACT":
+                continue
+            ids = sorted(ids_of.get(r["name"].strip().lower(), ()))
+            if len(ids) != 1 or ids[0] not in label:       # none, several (a name that reaches two records) or no label: left unnamed
+                continue
+            row = label[ids[0]]
+            if _parent_key(row["label"]) != _parent_key(r["name"]) or _salt(row["label"]):    # a code name, a systematic name, a salt form or another spelling than the table's name: not shown
+                continue
+            entry = {"label": row["label"], "qid": row["qid"], "chembl_id": ids[0]}
+            if entry not in out.setdefault(r["item_id"], []):
+                out[r["item_id"]].append(entry)
+    return out
+
+
 def compound_identity_states(dr: Path) -> dict:
     """IT42 P1: the identity join (Harness identity table read for the names of each item) reduced to a class label per item, so that a decision-facing page says whether the identity of the compounds
     behind an entry was checked: conflict (a registry label shared by two structures), unverified (a name without an identity row), partial, or checked. No name travels with it."""
@@ -4375,6 +4430,15 @@ def compound_identity_states(dr: Path) -> dict:
     return out
 
 
+def credit_name_source(cur: dict, cv: list, allow: dict) -> list:
+    """HE43 H5: count the Wikidata labels a shareable compound view shows. build_payload adds the count to `emitted`, which is what puts the source's credit in the footer
+    (an attribution is never left out because the licence asks for none). The footer is built after the ranking, so the count travels in `cur` until then."""
+    n = sum(len(c.get("names_public") or []) for c in cv)
+    if n and WD_SOURCE_KEY in (allow.get("name_sources") or {}):
+        cur["wd_name_rows"] = cur.get("wd_name_rows", 0) + n
+    return cv
+
+
 def compound_view(dr: Path, full: bool) -> list:
     """IT41 P9: the short list of compounds and hypotheses to investigate, in research order (the order of the next investigation, not an efficacy order). The full edition carries the compound
     names and the registry-derived notes (ChEMBL: CC BY-SA 3.0; GtoPdb 2026.3.1: ODbL / CC BY-SA 4.0); the shareable edition carries only the own-text fields and the kind: names and registry
@@ -4384,6 +4448,7 @@ def compound_view(dr: Path, full: bool) -> list:
         return []
     out = []
     ident = compound_identity_states(dr)
+    pub = {} if full else compound_public_names(dr)
     with open(fp, encoding="utf-8", newline="") as fh:
         for r in csv.DictReader(fh, delimiter="\t"):
             if r["kind"] not in COMPOUND_KINDS:
@@ -4397,6 +4462,8 @@ def compound_view(dr: Path, full: bool) -> list:
             if full:
                 d["name_full"] = r["name_full"]
                 d["registry_note"] = r["registry_note"]
+            else:
+                d["names_public"] = pub.get(r["item_id"], [])      # HE43 H5: only names a class-A source states (Wikidata, CC0), each with its item number
             out.append(d)
     return sorted(out, key=lambda x: x["order"])
 
@@ -4664,6 +4731,8 @@ def render_investigations(P: dict) -> str:
         lis = []
         for c in cv:
             nm = f' <span class="cv-name">{E(c["name_full"])}</span>' if full and c.get("name_full") else ""
+            if not full and c.get("names_public"):       # HE43 H5: class-A names, each with its Wikidata item (the credit is in the footer)
+                nm = " " + " ".join(f'<span class="cv-name cv-name-wd" title="Wikidata {E(x["qid"])} (CC0)">{E(x["label"])}</span>' for x in c["names_public"])
             reg = f'<dt>{E(U["cv_reg"])}</dt><dd>{lx(c["registry_note"])}</dd>' if full and c.get("registry_note") else ""
             lis.append(f'<li class="cv-i cv-k-{E(c["kind"])}" data-kind="{E(c["kind"])}" id="cv-{E(c["item_id"])}"><div class="cv-h"><span class="inv-pos" aria-label="{E(U["cv_order"])} {c["order"]}">{c["order"]}</span> '
                        f'<span class="cv-kind">{E(U["cv_kind_" + c["kind"]])}</span> <span class="cv-id cv-id-{E(c["identity"])}" title="{E(U["cv_id_h"])}">{E(U["cv_id_" + c["identity"]])}</span> {lx(c["label"], "b")}{nm}</div>'
