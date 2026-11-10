@@ -1,0 +1,7 @@
+case	inputs	median_E_x_mV	p2.5	p97.5	width_95	P_Ex_le_-85	P_Ex_ge_-80	fraction_draws_kept	interval_contains_E_K_recorded_by_offset(-97.5+delta)
+Wwox WT->KO	34634460 Table 1 (+/- read as SEM)	-93.6	-143.1	-77.6	65	0.838	0.048	1.000	d0:yes; d8:yes; d13:yes; d16:yes
+Wwox WT->HT	34634460 Table 1 (+/- read as SEM)	-88.4	-150.6	-66.0	85	0.646	0.168	1.000	d0:yes; d8:yes; d13:yes; d16:yes
+Fmr1 WT->KO (calibration)	preprint Fig 1; Rin 95% CI/1.96; rest SE from p 0.0457	-91.2	-155.7	-70.0	86	0.799	0.065	1.000	d0:yes; d8:yes; d13:yes; d16:yes
+Kcnq2 cKO (calibration)	28100740 Fig 2 legend, SEM	-73.6	-105.2	-60.3	45	0.115	0.788	1.000	d0:yes; d8:yes; d13:yes; d16:yes
+Development L3 P7->P14	30911152 Table 2, SEM	-79.2	-94.8	-73.2	22	0.143	0.570	1.000	d0:no; d8:yes; d13:yes; d16:yes
+Development L3 P14->P28	30911152 Table 2, SEM	-76.3	-83.1	-71.4	12	0.011	0.885	1.000	d0:no; d8:no; d13:no; d16:yes
