@@ -1,1 +1,4 @@
 question	unit	name	B_verdicts	actions
+Q3	GTOPDB:4192	flumazenil	EXCLUDED:direction_opposite;UNKNOWN:direction_unclear	Allosteric modulator/Antagonist;Allosteric modulator/None
+Q3	CAT:DGIDB:d5491b8998f7	&alpha;3IA	EXCLUDED:direction_opposite;UNKNOWN:direction_unclear	Allosteric modulator/Inverse agonist;Allosteric modulator/No
+Q3	GTOPDB:7336	etazolate	UNKNOWN:direction_unclear	Allosteric modulator/Binding

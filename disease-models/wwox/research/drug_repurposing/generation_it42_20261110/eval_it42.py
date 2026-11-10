@@ -29,11 +29,11 @@ def errors(rid, r):
     return e
 rows_all = tsv(IT41 / "search_rows.tsv"); out = []; md = []
 for q, rid in QS.items():
-    R = [r for r in rows_all if r["relation_id"] == rid]
+    R = [r for r in rows_all if r["relation_id"] == rid and r["labelled_form"] != "yes"]   # radiolabelled forms duplicate another record of the same ligand: dropped in every path
     paths = {"A0": [r for r in R if r["source"].startswith("ChEMBL")], "A1": R, "B": [r for r in R if r["qualification"] == "CANDIDATE"]}
     for p, rows in paths.items():
         parents = defaultdict(list)
-        for r in rows: parents[r["molecule"] if not r["labelled_form"] == "yes" else r["molecule"] + "#labelled"].append(r)
+        for r in rows: parents[r["molecule"]].append(r)
         dup = len(rows) - len(parents)
         errs = defaultdict(int); unflagged = 0; clean = 0
         for par, rs in parents.items():
@@ -47,9 +47,10 @@ for q, rid in QS.items():
         refs = REF.get(rid, set()); ref_found = sorted(x for x in refs if any(x in n for n in names))
         unk = [r for r in R if r["qualification"] == "UNKNOWN"] if p == "B" else []
         unk_cf = len({r["molecule"] for r in unk}) if p == "B" else 0
+        unk_fields = len({r["molecule"] for r in rows if r["qualification"] == "CANDIDATE" and r["unknown_fields"]}) if p == "B" else 0
         excl = len({r["molecule"] for r in R if r["qualification"] == "EXCLUDED"}) if p == "B" else 0
-        out.append([q, rid, p, len(rows), len(parents), dup, clean, errs["E1"], errs["E2"], errs["E3"], errs["E5"], unflagged, ";".join(ref_found) if refs else "n/a", unk_cf, excl])
-H = ["question", "relation", "path", "rows_returned", "distinct_units", "E4_duplicates", "clean_units", "E1_direction", "E2_site_class", "E3_subunit_transfer", "E5_identity", "units_with_unflagged_error", "reference_positives_returned", "unknown_units_kept_with_reason", "excluded_units_with_reason"]
+        out.append([q, rid, p, len(rows), len(parents), dup, clean, errs["E1"], errs["E2"], errs["E3"], errs["E5"], unflagged, ";".join(ref_found) if refs else "n/a", unk_cf, unk_fields, excl])
+H = ["question", "relation", "path", "rows_returned", "distinct_units", "E4_duplicates", "clean_units", "E1_direction", "E2_site_class", "E3_subunit_transfer", "E5_identity", "units_with_unflagged_error", "reference_positives_returned", "unknown_verdict_units", "candidate_units_with_named_unknown_fields", "excluded_units_with_reason"]
 with open(HERE / "eval_results.tsv", "w", newline="") as f:
     w = csv.writer(f, delimiter="\t", lineterminator="\n"); w.writerow(H); w.writerows(out)
 elapsed = time.time() - t0

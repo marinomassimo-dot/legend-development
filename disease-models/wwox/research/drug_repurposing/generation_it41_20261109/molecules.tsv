@@ -19,86 +19,86 @@ S1	CAT:CHEMBL3989872	APIMOSTINEL	ChEMBL curated mechanism	1	up	Homo sapiens	fami
 S1	CAT:CHEMBL41306	CNS-5161	ChEMBL curated mechanism	1	down	Homo sapiens	family_record_subunit_unresolved
 S1	CAT:CHEMBL452461	PERZINFOTEL	ChEMBL curated mechanism	1	down	Homo sapiens	family_record_subunit_unresolved
 S1	CAT:CHEMBL467084	LANICEMINE	ChEMBL curated mechanism	1	down	Homo sapiens	family_record_subunit_unresolved
+S1	CAT:CHEMBL5095254	NP10679	GtoPdb interaction	1	down	Human	
 S1	CAT:CHEMBL660	AMANTADINE HYDROCHLORIDE	ChEMBL curated mechanism	1	down	Homo sapiens	family_record_subunit_unresolved
 S1	CAT:CHEMBL742	KETAMINE HYDROCHLORIDE	ChEMBL curated mechanism	1	down	Homo sapiens	family_record_subunit_unresolved
 S1	CAT:CHEMBL807	MEMANTINE HYDROCHLORIDE	ChEMBL curated mechanism	1	down	Homo sapiens	family_record_subunit_unresolved
 S1	CAT:CHEMBL900	ORPHENADRINE CITRATE | ORPHENADRINE HYDROCHLORIDE	ChEMBL curated mechanism	2	down	Homo sapiens	family_record_subunit_unresolved
-S1	GTOPDB:11720	S-deschloroketamine	GtoPdb interaction	1	down	Human	
+S1	CAT:DGIDB:11dcd9a41857	d-CCPene	GtoPdb interaction	1	down	Human	glutamate site
+S1	CAT:DGIDB:357b0cb8489b	NVP-AAM077	GtoPdb interaction	1	down	Human	glutamate site
+S1	CAT:DGIDB:3aa598685369	homoquinolinic acid	GtoPdb interaction	1	up	Human	glutamate site
+S1	CAT:DGIDB:42d5d5465a4d	5,7-dichlorokynurenic acid	GtoPdb interaction	1	down	Human	glycine site
+S1	CAT:DGIDB:52d01b8327f7	CGP37849	GtoPdb interaction	1	down	Human	glutamate site
+S1	CAT:DGIDB:79d9fde1e294	UBP141	GtoPdb interaction	1	down	Human	glutamate site
+S1	CAT:DGIDB:80f00139fe06	S-deschloroketamine	GtoPdb interaction	1	down	Human	
+S1	CAT:DGIDB:a4e912f8d9f7	(+)-HA966	GtoPdb interaction	1	up	Human	glycine site
+S1	CAT:DGIDB:b0ca5cf2303c	d-AP5	GtoPdb interaction	1	down	Human	glutamate site
+S1	CAT:DGIDB:c074cb76e927	conantokin-G	GtoPdb interaction	1	down	Human	glutamate site
+S1	CAT:DGIDB:ca0cbcf4f1e9	GV196771A	GtoPdb interaction	1	down	Human	glycine site
+S1	CAT:DGIDB:f5aacf22df23	LY233053	GtoPdb interaction	1	down	Human	glutamate site
+S1	CAT:DGIDB:f9ecb57f1990	L701324	GtoPdb interaction	1	down	Human	glycine site
 S1	GTOPDB:12050	SAGE-718	GtoPdb interaction	1	up	Human	
 S1	GTOPDB:12156	onfasprodil	GtoPdb interaction	1	down	Human	
-S1	GTOPDB:13847	NP10679	GtoPdb interaction	1	down	Human	
-S1	GTOPDB:2361	5,7-dichlorokynurenic acid	GtoPdb interaction	1	down	Human	glycine site
 S1	GTOPDB:2403	dizocilpine	GtoPdb interaction	1	down	Human	
 S1	GTOPDB:3309	L-aspartic acid	GtoPdb interaction	1	up	Human	glutamate site
-S1	GTOPDB:4066	(+)-HA966	GtoPdb interaction	1	up	Human	glycine site
 S1	GTOPDB:4068	(<i>RS</i>)-(tetrazol-5-yl)glycine	GtoPdb interaction	1	up	Human	glutamate site
 S1	GTOPDB:4128	amantadine	GtoPdb interaction	1	down	Human	
-S1	GTOPDB:4154	CGP37849	GtoPdb interaction	1	down	Human	glutamate site
 S1	GTOPDB:4155	selfotel	GtoPdb interaction	1	down	Human	glutamate site
-S1	GTOPDB:4161	conantokin-G	GtoPdb interaction	1	down	Human	glutamate site
-S1	GTOPDB:4168	d-AP5	GtoPdb interaction	1	down	Human	glutamate site
-S1	GTOPDB:4170	d-CCPene	GtoPdb interaction	1	down	Human	glutamate site
 S1	GTOPDB:4171	D-serine	GtoPdb interaction	1	up	Human	glycine site
-S1	GTOPDB:4208	GV196771A	GtoPdb interaction	1	down	Human	glycine site
-S1	GTOPDB:4216	homoquinolinic acid	GtoPdb interaction	1	up	Human	glutamate site
 S1	GTOPDB:4233	ketamine	GtoPdb interaction	1	down	Human	
 S1	GTOPDB:4239	L689560	GtoPdb interaction	1	down	Human	glycine site
-S1	GTOPDB:4240	L701324	GtoPdb interaction	1	down	Human	glycine site
-S1	GTOPDB:4243	LY233053	GtoPdb interaction	1	down	Human	glutamate site
 S1	GTOPDB:4260	N<sup>1</sup>-dansyl-spermine	GtoPdb interaction	1	down	Human	
 S1	GTOPDB:4268	NMDA	GtoPdb interaction	1	up	Human	glutamate site
-S1	GTOPDB:4276	NVP-AAM077	GtoPdb interaction	1	down	Human	glutamate site
 S1	GTOPDB:4282	phencyclidine	GtoPdb interaction	1	down	Human	
-S1	GTOPDB:4332	UBP141	GtoPdb interaction	1	down	Human	glutamate site
 S1	GTOPDB:6511	D-aspartic acid	GtoPdb interaction	1	up	Human	glutamate site
 S1	GTOPDB:708	Mg<sup>2+</sup>	GtoPdb interaction	1	down	Human	
 S1	GTOPDB:727	glycine	GtoPdb interaction	1	up	Human	glycine site
 S1	GTOPDB:7843	DQP-1105	GtoPdb interaction	1	down	Rat	
 S2	CAT:CHEMBL184412	DRONEDARONE HYDROCHLORIDE	ChEMBL curated mechanism	1	down	Homo sapiens	single_protein_record
+S2	CAT:CHEMBL2107085	cyclic AMP	GtoPdb interaction	2	up	Mouse	
 S2	CAT:CHEMBL471737	IVABRADINE | IVABRADINE HYDROCHLORIDE	ChEMBL curated mechanism	2	down	Homo sapiens	single_protein_record
-S2	GTOPDB:2347	cyclic GMP	GtoPdb interaction	1	up	Mouse	
-S2	GTOPDB:2352	cyclic AMP	GtoPdb interaction	2	up	Mouse	
+S2	CAT:DGIDB:5dad25f2b336	ZD7288	GtoPdb interaction	4	down	Human	
+S2	CAT:DGIDB:822c79170ace	MEL57A	GtoPdb interaction	3	down	Human;Mouse	
+S2	CAT:DGIDB:92f1a44459a2	EC18	GtoPdb interaction	3	down	Human;Mouse	
+S2	CAT:DGIDB:d6d8c1fe321f	cyclic GMP	GtoPdb interaction	1	up	Mouse	
 S2	GTOPDB:2355	cilobradine	GtoPdb interaction	4	down	Human	
 S2	GTOPDB:2356	Cs<sup>+</sup>	GtoPdb interaction	4	down	Human	
 S2	GTOPDB:2357	ivabradine	GtoPdb interaction	5	down	Human;Mouse	
 S2	GTOPDB:2358	zatebradine	GtoPdb interaction	4	down	Human	
-S2	GTOPDB:2359	ZD7288	GtoPdb interaction	4	down	Human	
 S2	GTOPDB:2387	PIP<sub>2</sub>	GtoPdb interaction	1	up	Mouse	
 S2	GTOPDB:516	clonidine	GtoPdb interaction	3	down	Mouse	
 S2	GTOPDB:5464	propofol	GtoPdb interaction	1	down	Mouse	
-S2	GTOPDB:6260	MEL57A	GtoPdb interaction	3	down	Human;Mouse	
 S2	GTOPDB:6261	cyclic CMP	GtoPdb interaction	1	up	Mouse	
-S2	GTOPDB:6262	EC18	GtoPdb interaction	3	down	Human;Mouse	
 S2	GTOPDB:708	Mg<sup>2+</sup>	GtoPdb interaction	2	down	Mouse	
 S3	CAT:CHEMBL113461	TEDISAMIL | TEDISAMIL SESQUIFUMARATE	ChEMBL curated mechanism	8	down	Homo sapiens	family_record_subunit_unresolved
+S3	CAT:CHEMBL1356238	zinc pyrithione	GtoPdb interaction	3	up	Human	
 S3	CAT:CHEMBL2107762	NERISPIRDINE	ChEMBL curated mechanism	4	down	Homo sapiens	family_record_subunit_unresolved
+S3	CAT:CHEMBL2164048	ML252	GtoPdb interaction	2	down	Human	
 S3	CAT:CHEMBL266510	FLINDOKALNER	ChEMBL curated mechanism	7	up	Homo sapiens	single_protein_record;two_gene_assembly_record
 S3	CAT:CHEMBL284348	DALFAMPRIDINE	ChEMBL curated mechanism	4	down	Homo sapiens	family_record_subunit_unresolved
 S3	CAT:CHEMBL354077	AMIFAMPRIDINE | AMIFAMPRIDINE PHOSPHATE	ChEMBL curated mechanism	8	down	Homo sapiens	family_record_subunit_unresolved
 S3	CAT:CHEMBL41355	EZOGABINE	ChEMBL curated mechanism	4	up	Homo sapiens	family_record_subunit_unresolved
 S3	CAT:CHEMBL821	GUANIDINE HYDROCHLORIDE	ChEMBL curated mechanism	4	down	Homo sapiens	family_record_subunit_unresolved
-S3	GTOPDB:11479	retigabine derivative 10g	GtoPdb interaction	2	up	Human	
+S3	CAT:DGIDB:03de5423ac6d	NC00075159	GtoPdb interaction	1	up	Human	
+S3	CAT:DGIDB:0ece3f999b25	QO-58	GtoPdb interaction	1	up	Human	
+S3	CAT:DGIDB:2908937e0365	ML213	GtoPdb interaction	1	up	Human	
+S3	CAT:DGIDB:45c82cc94b86	retigabine derivative 10g	GtoPdb interaction	2	up	Human	
+S3	CAT:DGIDB:6067b4b58fc4	XE991	GtoPdb interaction	3	down	Human	
+S3	CAT:DGIDB:8712206499e2	(S)-N-[1-(3-morpholin-4-yl-phenyl)-ethyl]-3-phenyl-acrylamide	GtoPdb interaction	3	up	Human	
+S3	CAT:DGIDB:af9ba6795d38	ICA-27243	GtoPdb interaction	1	up	Human	
+S3	CAT:DGIDB:c4e4873faa15	L735821	GtoPdb interaction	1	down	Human	
 S3	GTOPDB:12650	azetukalner	GtoPdb interaction	2	up	Human	
 S3	GTOPDB:14111	ICA-069673	GtoPdb interaction	1	up	Human	
-S3	GTOPDB:14112	ML252	GtoPdb interaction	2	down	Human	
 S3	GTOPDB:14136	JNJ-37822681	GtoPdb interaction	1	up	Human	
 S3	GTOPDB:14475	opakalim	GtoPdb interaction	2	up	Human	
 S3	GTOPDB:2307	flindokalner	GtoPdb interaction	3	up	Human	
 S3	GTOPDB:2337	bepridil	GtoPdb interaction	1	down	Human	
 S3	GTOPDB:2343	tetraethylammonium	GtoPdb interaction	4	down	Human	
 S3	GTOPDB:2387	PIP<sub>2</sub>	GtoPdb interaction	2	up	Human	
-S3	GTOPDB:2592	L735821	GtoPdb interaction	1	down	Human	
-S3	GTOPDB:2596	XE991	GtoPdb interaction	3	down	Human	
-S3	GTOPDB:2597	zinc pyrithione	GtoPdb interaction	3	up	Human	
 S3	GTOPDB:2598	flupirtine	GtoPdb interaction	1	up	Human	
 S3	GTOPDB:2599	linopirdine	GtoPdb interaction	4	down	Human;Rat	
-S3	GTOPDB:2600	(S)-N-[1-(3-morpholin-4-yl-phenyl)-ethyl]-3-phenyl-acrylamide	GtoPdb interaction	3	up	Human	
 S3	GTOPDB:2601	retigabine	GtoPdb interaction	4	up	Human	
 S3	GTOPDB:5483	gabapentin	GtoPdb interaction	2	up	Human	
-S3	GTOPDB:7664	NC00075159	GtoPdb interaction	1	up	Human	
-S3	GTOPDB:7665	ML213	GtoPdb interaction	1	up	Human	
-S3	GTOPDB:7667	ICA-27243	GtoPdb interaction	1	up	Human	
-S3	GTOPDB:7669	QO-58	GtoPdb interaction	1	up	Human	
 S4	GTOPDB:13604	EG-2184	GtoPdb interaction	1	down	Human	
 S4	GTOPDB:2447	flufenamic acid	GtoPdb interaction	2	down	Human	
 S4	GTOPDB:4151	carbenoxolone	GtoPdb interaction	2	down	Human	
@@ -175,41 +175,42 @@ S5	CAT:CHEMBL968	FLURAZEPAM HYDROCHLORIDE	ChEMBL curated mechanism	7	up	Homo sap
 S5	CAT:CHEMBL969	PRAZEPAM	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
 S5	CAT:CHEMBL970	HALAZEPAM	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
 S5	CAT:CHEMBL979	MEPROBAMATE	ChEMBL curated mechanism	7	up	Homo sapiens	family_record_subunit_unresolved
+S5	CAT:DGIDB:0b8d4dab26d5	tetrahydrodeoxycorticosterone	GtoPdb interaction	4	up	Human	
+S5	CAT:DGIDB:26cf687d06ed	isonipecotic acid	GtoPdb interaction	4	up	Human	GABA site
+S5	CAT:DGIDB:2d977c42affa	L838417	GtoPdb interaction	4	down;up	Human	benzodiazepine site
+S5	CAT:DGIDB:490d48d164f9	&alpha;5IA	GtoPdb interaction	4	down	Human	benzodiazepine site
+S5	CAT:DGIDB:60e9ed3b5551	RY024	GtoPdb interaction	1	down	Human	benzodiazepine site
+S5	CAT:DGIDB:671a539afc5b	ONO-8590580	GtoPdb interaction	1	down	Human	benzodiazepine site
+S5	CAT:DGIDB:7aa02f4f447c	compound 20 [PMID: 35584373]	GtoPdb interaction	1	down	Human	
+S5	CAT:DGIDB:a1c0a843ebca	gabazine	GtoPdb interaction	4	down	Human	GABA site
+S5	CAT:DGIDB:b38ed95ceb80	MRK016	GtoPdb interaction	4	down	Human	benzodiazepine site
+S5	CAT:DGIDB:b700ab89f270	piperidine-4-sulphonic acid	GtoPdb interaction	4	up	Human	GABA site
+S5	CAT:DGIDB:c41282e1dd2e	ZK93426	GtoPdb interaction	4	down	Human	benzodiazepine site
+S5	CAT:DGIDB:c4d693e729d1	bicuculline	GtoPdb interaction	4	down	Human	GABA site
+S5	CAT:DGIDB:c73a21e5eddc	TP003	GtoPdb interaction	4	down;up	Human	benzodiazepine site
+S5	CAT:DGIDB:d5491b8998f7	&alpha;3IA	GtoPdb interaction	4	down;unclear	Human	benzodiazepine site
+S5	CAT:DGIDB:e3d240bd97a6	Ro19-4603	GtoPdb interaction	4	down	Human	benzodiazepine site
+S5	CAT:DGIDB:e8ebcce39b2b	isoguvacine	GtoPdb interaction	4	up	Human	GABA site
+S5	CAT:DGIDB:f145992f79fd	ZK93423	GtoPdb interaction	4	up	Human	
+S5	CAT:DGIDB:f61dce56c78f	Ro15-4513	GtoPdb interaction	4	down	Human	benzodiazepine site
+S5	CAT:DGIDB:f975183cfdf2	DMCM	GtoPdb interaction	4	down	Human	benzodiazepine site
 S5	GTOPDB:10427	basmisanil	GtoPdb interaction	1	down	Human	
 S5	GTOPDB:11942	ganaxolone	GtoPdb interaction	1	up	Human	
-S5	GTOPDB:12118	compound 20 [PMID: 35584373]	GtoPdb interaction	1	down	Human	
-S5	GTOPDB:2312	bicuculline	GtoPdb interaction	4	down	Human	GABA site
 S5	GTOPDB:3364	diazepam	GtoPdb interaction	3	up	Human	benzodiazepine site
 S5	GTOPDB:4051	picrotoxin	GtoPdb interaction	7	down	Human	
-S5	GTOPDB:4094	&alpha;3IA	GtoPdb interaction	4	down;unclear	Human	benzodiazepine site
-S5	GTOPDB:4095	&alpha;5IA	GtoPdb interaction	4	down	Human	benzodiazepine site
 S5	GTOPDB:4108	5&alpha;-pregnan-3&alpha;-ol-20-one	GtoPdb interaction	4	up	Human	
 S5	GTOPDB:4146	bretazenil	GtoPdb interaction	4	up	Human	benzodiazepine site
 S5	GTOPDB:4156	CGS8216	GtoPdb interaction	4	down	Human	
-S5	GTOPDB:4179	DMCM	GtoPdb interaction	4	down	Human	benzodiazepine site
 S5	GTOPDB:4192	flumazenil	GtoPdb interaction	4	down;unclear	Human	benzodiazepine site
 S5	GTOPDB:4193	flunitrazepam	GtoPdb interaction	4	up	Human	benzodiazepine site
-S5	GTOPDB:4197	gabazine	GtoPdb interaction	4	down	Human	GABA site
 S5	GTOPDB:4221	indiplon	GtoPdb interaction	1	up	Human	benzodiazepine site
-S5	GTOPDB:4226	isoguvacine	GtoPdb interaction	4	up	Human	GABA site
-S5	GTOPDB:4227	isonipecotic acid	GtoPdb interaction	4	up	Human	GABA site
 S5	GTOPDB:4238	L655708	GtoPdb interaction	1	down	Human	benzodiazepine site
-S5	GTOPDB:4241	L838417	GtoPdb interaction	4	down;up	Human	benzodiazepine site
-S5	GTOPDB:4257	MRK016	GtoPdb interaction	4	down	Human	benzodiazepine site
 S5	GTOPDB:4259	muscimol	GtoPdb interaction	4	up	Human	GABA site
 S5	GTOPDB:4277	ocinaplon	GtoPdb interaction	4	up	Human	benzodiazepine site
-S5	GTOPDB:4287	piperidine-4-sulphonic acid	GtoPdb interaction	4	up	Human	GABA site
-S5	GTOPDB:4296	Ro15-4513	GtoPdb interaction	4	down	Human	benzodiazepine site
-S5	GTOPDB:4297	Ro19-4603	GtoPdb interaction	4	down	Human	benzodiazepine site
 S5	GTOPDB:4299	RO4938581	GtoPdb interaction	4	down	Human	benzodiazepine site
-S5	GTOPDB:4301	RY024	GtoPdb interaction	1	down	Human	benzodiazepine site
 S5	GTOPDB:4320	TBPS	GtoPdb interaction	7	down	Human	
-S5	GTOPDB:4321	tetrahydrodeoxycorticosterone	GtoPdb interaction	4	up	Human	
 S5	GTOPDB:4322	gaboxadol	GtoPdb interaction	4	up	Human	GABA site
-S5	GTOPDB:4326	TP003	GtoPdb interaction	4	down;up	Human	benzodiazepine site
 S5	GTOPDB:4327	TPA023	GtoPdb interaction	4	down;up	Human	benzodiazepine site
-S5	GTOPDB:4346	ZK93423	GtoPdb interaction	4	up	Human	
-S5	GTOPDB:4347	ZK93426	GtoPdb interaction	4	down	Human	benzodiazepine site
 S5	GTOPDB:4348	zolpidem	GtoPdb interaction	3	up	Human	
 S5	GTOPDB:566	Zn<sup>2+</sup>	GtoPdb interaction	4	down	Human	
 S5	GTOPDB:6963	clonazepam	GtoPdb interaction	3	up	Human	benzodiazepine site
@@ -218,27 +219,26 @@ S5	GTOPDB:7313	triazolam	GtoPdb interaction	6	up	Human
 S5	GTOPDB:7336	etazolate	GtoPdb interaction	1	unclear	Human	
 S5	GTOPDB:7712	AZD7325	GtoPdb interaction	2	up	Human	
 S5	GTOPDB:9798	darigabat	GtoPdb interaction	1	up	Human	
-S5	GTOPDB:9908	ONO-8590580	GtoPdb interaction	1	down	Human	benzodiazepine site
+S6	CAT:DGIDB:ce51fb98be2e	VU0240551	GtoPdb interaction	1	down	Human	
 S6	GTOPDB:13840	IAMA-6	GtoPdb interaction	1	down	Human	
 S6	GTOPDB:4589	DIOA	GtoPdb interaction	1	down	Human	
-S6	GTOPDB:4665	VU0240551	GtoPdb interaction	1	down	Human	
 S6	GTOPDB:4742	piretanide	GtoPdb interaction	1	down	Human	
 S6	GTOPDB:4837	bumetanide	GtoPdb interaction	1	down	Human	
 S6	GTOPDB:4839	furosemide	GtoPdb interaction	1	down	Human	
 S7	CAT:CHEMBL1027	TIAGABINE HYDROCHLORIDE	ChEMBL curated mechanism	1	down	Homo sapiens	single_protein_record
 S7	CAT:CHEMBL89598	VIGABATRIN	ChEMBL curated mechanism	1	down	Homo sapiens	single_protein_record
+S7	CAT:DGIDB:1ed8821eb3f7	SKF89976A	GtoPdb interaction	1	down	Human	
+S7	CAT:DGIDB:50d46a0f452e	4-acryloylphenol	GtoPdb interaction	1	down	Human	
+S7	CAT:DGIDB:6312c9709928	(R)-EF-1520	GtoPdb interaction	1	down	Human	
+S7	CAT:DGIDB:8be37a5ba9d4	CI-966	GtoPdb interaction	1	down	Human	
+S7	CAT:DGIDB:c75ed65ed37e	NNC-711	GtoPdb interaction	1	down	Human	
+S7	CAT:DGIDB:ea834d6e5109	(R/S) EF-1500	GtoPdb interaction	1	down	Human	
+S7	CAT:DGIDB:fe68f5f47407	(S)-EF-1520	GtoPdb interaction	1	down	Human	
 S7	GTOPDB:14485	E2730	GtoPdb interaction	2	down	Human	
-S7	GTOPDB:4583	(R/S) EF-1500	GtoPdb interaction	1	down	Human	
-S7	GTOPDB:4612	CI-966	GtoPdb interaction	1	down	Human	
-S7	GTOPDB:4669	NNC-711	GtoPdb interaction	1	down	Human	
-S7	GTOPDB:4705	SKF89976A	GtoPdb interaction	1	down	Human	
 S7	GTOPDB:4756	LU32-176B	GtoPdb interaction	1	down	Mouse	
 S7	GTOPDB:4818	tiagabine	GtoPdb interaction	1	down	Human	
 S7	GTOPDB:4821	vigabatrin	GtoPdb interaction	1	down	Human	
-S7	GTOPDB:6512	(R)-EF-1520	GtoPdb interaction	1	down	Human	
-S7	GTOPDB:6513	(S)-EF-1520	GtoPdb interaction	1	down	Human	
 S7	GTOPDB:8284	CPP-115	GtoPdb interaction	1	down	Human	
-S7	GTOPDB:8841	4-acryloylphenol	GtoPdb interaction	1	down	Human	
 S8	CAT:CHEMBL119625	ZONAMPANEL	ChEMBL curated mechanism	4	down	Homo sapiens	family_record_subunit_unresolved
 S8	CAT:CHEMBL1214124	PERAMPANEL	ChEMBL curated mechanism	4	down	Homo sapiens	family_record_subunit_unresolved
 S8	CAT:CHEMBL1276138	FARAMPATOR	ChEMBL curated mechanism	4	up	Homo sapiens	family_record_subunit_unresolved
@@ -254,43 +254,43 @@ S8	CAT:CHEMBL3989682	BECAMPANEL	ChEMBL curated mechanism	4	down	Homo sapiens	fam
 S8	CAT:CHEMBL4594403	OSAVAMPATOR	ChEMBL curated mechanism	4	up	Homo sapiens	family_record_subunit_unresolved
 S8	CAT:CHEMBL5095022	PESAMPATOR	ChEMBL curated mechanism	4	up	Homo sapiens	family_record_subunit_unresolved
 S8	CAT:CHEMBL61872	TALAMPANEL	ChEMBL curated mechanism	2	down	Homo sapiens	single_protein_record
-S8	GTOPDB:11309	4‐BCCA	GtoPdb interaction	1	down	Human	
+S8	CAT:DGIDB:1593ee971c0c	LY339434	GtoPdb interaction	2	up	Human	
+S8	CAT:DGIDB:230c371b9bf5	argiotoxin	GtoPdb interaction	4	down	Human	
+S8	CAT:DGIDB:5f82c75ae4c0	LY382884	GtoPdb interaction	1	down	Human	
+S8	CAT:DGIDB:6b2efd0aa438	CX546	GtoPdb interaction	4	up	Human	
+S8	CAT:DGIDB:7b4e4169ab34	4‐BCCA	GtoPdb interaction	1	down	Human	
+S8	CAT:DGIDB:7dddea50fc40	LY503430	GtoPdb interaction	4	up	Human	
+S8	CAT:DGIDB:7fd52929a5ea	IDRA-21	GtoPdb interaction	4	up	Human	
+S8	CAT:DGIDB:8111763ff62c	GYKI53655	GtoPdb interaction	4	down	Human	
+S8	CAT:DGIDB:911f4aea2fe2	2,4-epi-neodysiherbaine	GtoPdb interaction	2	down	Human	
+S8	CAT:DGIDB:9abeaf54a97b	GYKI53784	GtoPdb interaction	4	down	Human	
+S8	CAT:DGIDB:9b3dc0b36bf7	S18986	GtoPdb interaction	4	up	Human	
+S8	CAT:DGIDB:a1f6ed083a85	joro spider toxin	GtoPdb interaction	3	down	Human	
+S8	CAT:DGIDB:a422eb95aefb	UBP302	GtoPdb interaction	1	down	Human	
+S8	CAT:DGIDB:ae8741c6373e	MSVIII-19	GtoPdb interaction	1	down	Human	
+S8	CAT:DGIDB:c16439d7b98f	8-deoxy-neodysiherbaine	GtoPdb interaction	1	up	Human	
+S8	CAT:DGIDB:c82dd39a32d8	UBP310	GtoPdb interaction	1	down	Human	
+S8	CAT:DGIDB:c90c235374de	NS3763	GtoPdb interaction	1	down	Human	
+S8	CAT:DGIDB:ca4c6814d8f6	NBQX	GtoPdb interaction	4	down	Human	
+S8	CAT:DGIDB:e1a5ca5593c0	concanavalin A	GtoPdb interaction	2	up	Human	
+S8	CAT:DGIDB:e20d717f9484	LY466195	GtoPdb interaction	1	down	Human	
+S8	CAT:DGIDB:e8d7c0c70a91	LY392098	GtoPdb interaction	4	up	Human	
+S8	CAT:DGIDB:eca0f4b4983f	domoic acid	GtoPdb interaction	5	up	Human;Rat	
+S8	CAT:DGIDB:ef7702afc3e6	ATPO	GtoPdb interaction	4	down	Human	
+S8	CAT:DGIDB:fea4e278b586	LY404187	GtoPdb interaction	4	up	Human	
 S8	GTOPDB:13392	BPAM344	GtoPdb interaction	1	up	Human	
 S8	GTOPDB:4069	(<i>S</i>)-4-AHCP	GtoPdb interaction	1	up	Human	
 S8	GTOPDB:4070	(<i>S</i>)-5-fluorowillardiine	GtoPdb interaction	4	up	Human	
 S8	GTOPDB:4071	(<i>S</i>)-5-iodowillardiine	GtoPdb interaction	1	up	Human	
-S8	GTOPDB:4102	2,4-epi-neodysiherbaine	GtoPdb interaction	2	down	Human	
-S8	GTOPDB:4112	8-deoxy-neodysiherbaine	GtoPdb interaction	1	up	Human	
 S8	GTOPDB:4123	ACET	GtoPdb interaction	1	down	Human	
 S8	GTOPDB:4131	AMPA	GtoPdb interaction	4	up	Human	
 S8	GTOPDB:4133	aniracetam	GtoPdb interaction	4	up	Human	
-S8	GTOPDB:4138	argiotoxin	GtoPdb interaction	4	down	Human	
 S8	GTOPDB:4140	ATPA	GtoPdb interaction	1	up	Human	
-S8	GTOPDB:4141	ATPO	GtoPdb interaction	4	down	Human	
-S8	GTOPDB:4162	concanavalin A	GtoPdb interaction	2	up	Human	
 S8	GTOPDB:4165	CX516	GtoPdb interaction	4	up	Human	
-S8	GTOPDB:4166	CX546	GtoPdb interaction	4	up	Human	
 S8	GTOPDB:4167	cyclothiazide	GtoPdb interaction	4	up	Human	
-S8	GTOPDB:4181	domoic acid	GtoPdb interaction	5	up	Human;Rat	
 S8	GTOPDB:4185	dysiherbaine	GtoPdb interaction	5	up	Human;Rat	
-S8	GTOPDB:4209	GYKI53655	GtoPdb interaction	4	down	Human	
-S8	GTOPDB:4210	GYKI53784	GtoPdb interaction	4	down	Human	
-S8	GTOPDB:4219	IDRA-21	GtoPdb interaction	4	up	Human	
-S8	GTOPDB:4229	joro spider toxin	GtoPdb interaction	3	down	Human	
 S8	GTOPDB:4231	kainate	GtoPdb interaction	6	up	Human;Rat	
 S8	GTOPDB:4245	tezampanel	GtoPdb interaction	4	down	Human	
-S8	GTOPDB:4246	LY339434	GtoPdb interaction	2	up	Human	
-S8	GTOPDB:4247	LY382884	GtoPdb interaction	1	down	Human	
-S8	GTOPDB:4248	LY392098	GtoPdb interaction	4	up	Human	
-S8	GTOPDB:4249	LY404187	GtoPdb interaction	4	up	Human	
-S8	GTOPDB:4250	LY466195	GtoPdb interaction	1	down	Human	
-S8	GTOPDB:4251	LY503430	GtoPdb interaction	4	up	Human	
-S8	GTOPDB:4258	MSVIII-19	GtoPdb interaction	1	down	Human	
-S8	GTOPDB:4264	NBQX	GtoPdb interaction	4	down	Human	
-S8	GTOPDB:4274	NS3763	GtoPdb interaction	1	down	Human	
 S8	GTOPDB:4288	piracetam	GtoPdb interaction	4	up	Human	
-S8	GTOPDB:4304	S18986	GtoPdb interaction	4	up	Human	
 S8	GTOPDB:4317	SYM2081	GtoPdb interaction	8	up	Human;Rat	
-S8	GTOPDB:4333	UBP302	GtoPdb interaction	1	down	Human	
-S8	GTOPDB:4334	UBP310	GtoPdb interaction	1	down	Human	
 S8	GTOPDB:8279	talampanel	GtoPdb interaction	1	down	Rat	

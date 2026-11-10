@@ -30,6 +30,15 @@ def same_datum(p_value, nm_value, tol=0.05):
     """True when a pIC50-type value and a nanomolar value are one measurement written two ways (nM = 10^(9 - p)). Potency and its logarithmic transform are one datum and are counted once."""
     return abs(10 ** (9 - float(p_value)) - float(nm_value)) <= tol * float(nm_value)
 
+_NAME_CACHE = {}
+def by_name_parent(es, name):
+    """Catalogue parent id of a GtoPdb ligand reached through its name (exact, case- and separator-insensitive), or '' when the name reaches none or several different parents. The name only joins the two sources; identity stays with the identity route."""
+    k = name_key(name)
+    if k in _NAME_CACHE: return _NAME_CACHE[k]
+    parents = {((e.get("relations") or {}).get("parent") or e["id"]) for e in cc.find(es, name=name)} if k and not k.startswith("3h") else set()
+    _NAME_CACHE[k] = next(iter(parents)) if len(parents) == 1 else ""
+    return _NAME_CACHE[k]
+
 def name_key(n):
     """Separator- and case-insensitive key of a compound name (GYKI 53784, GYKI-53784 and Gyki53784 are one key). It joins labels; it never decides identity."""
     return re.sub(r"[^a-z0-9]", "", (n or "").lower())
@@ -60,11 +69,12 @@ def qualify(o, rel, ident):
         if o["source"].startswith("GtoPdb") and not o["site_or_granularity"]: unk.append("receptor_site")
     out_rx = rel.get("subunit_out") or ""
     if out_rx and re.search(out_rx, o["assay_or_note"] or "", re.I): return "UNKNOWN", "assay_names_other_subunit", ",".join(unk)
-    if o["source"].startswith("GtoPdb") and rel.get("subunit_in") and not (o["assay_or_note"] or "").strip(): unk.append("assay_text")
+    if o["source"].startswith("GtoPdb") and out_rx and not (o["assay_or_note"] or "").strip(): unk.append("assay_text")   # needed only when the relation fixes a subunit check on the assay text
     for nm in (o["name"] or "").split(" | "):
         for r in ident.get(name_key(nm), []):
             if r.get("label_conflict") == "yes": return "UNKNOWN", "label_conflict", ",".join(unk)
-    return ("CANDIDATE" if not unk else "CANDIDATE"), ("ok" if not unk else "unknown_fields"), ",".join(unk)
+    if "direction" in unk: return "UNKNOWN", "direction_unclear", ",".join(unk)      # a check the relation fixes cannot be evaluated: kept as unknown, never as negative
+    return "CANDIDATE", ("ok" if not unk else "unknown_fields"), ",".join(unk)   # passes every check that could be evaluated; missing fields are named
 
 def main():
     rel = list(csv.DictReader(open(HERE / "relations_it41.tsv", encoding="utf-8"), delimiter="\t"))
@@ -87,7 +97,7 @@ def main():
             if not gs & syms: continue
             act = f"{g['Type']}/{g['Action']}"
             low = act.lower()
-            cid = gt_to_cat.get(g["Ligand ID"], "")
+            cid = gt_to_cat.get(g["Ligand ID"], "") or by_name_parent(es, g["Ligand"])
             par = ((idx.by_id.get(cid) or {}).get("relations") or {}).get("parent") or cid
             out.append(dict(relation_id=r["relation_id"], source="GtoPdb interaction", molecule=(par or "GTOPDB:" + g["Ligand ID"]), name=g["Ligand"], catalogue_id=cid, species=g["Target Species"], action=act,
                 direction=("down" if re.search(r"inverse agonist|antagon|inhibit|block|negative", low) else "up" if re.search(r"agonist|activat|positive|potentiat", low) else "unclear"),

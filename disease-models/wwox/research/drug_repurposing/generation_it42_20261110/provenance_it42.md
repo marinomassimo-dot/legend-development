@@ -7,20 +7,20 @@ Non-canonical working note. Not medical advice; no dose, schedule or route. Oppo
 | Step | onfasprodil | NP10679 |
 |---|---|---|
 | Relation that produced it | S1, negative modulation of GluN2B-containing receptors (IT41, fixed in `cases.md` before the search) | same |
-| Data already in the repository before IT41 | IT15 target-first relations table (`target_first_it15_qa_nmdar_20261101/relations_qa.tsv`): a ChEMBL activity row (molecule CHEMBL5095074, GRIN1/GRIN2B record, IC50 8.3 nM, human, reference field 27475601), a GtoPdb row (negative, pIC50, `value_nM` 8.3176) and a DGIdb row; also the coverage matrix. Never discussed as a comparator. | the same table: a GtoPdb row (inhibition, `value_nM` 22.9, PMID 34493631) and raw DGIdb lookups under the spelling NP-10679 |
+| Data already in the repository before IT41 | IT15 target-first relations table (`target_first_it15_qa_nmdar_20261101/relations_qa.tsv`): a ChEMBL activity row (molecule CHEMBL5095074, GRIN1/GRIN2B record, IC50 8.3 nM, human, reference field 27475601), a GtoPdb row (negative, pIC50, `value_nM` 8.3176) and a DGIdb row; also the coverage matrix. Never discussed as a comparator. | the same table: a GtoPdb row (inhibition, `value_nM` 22.9, PMID 34493631) and a raw DGIdb listing under the spelling NP-10679 in `gse156243/kg_lookup/GRIN2A.txt` (not in the same table) |
 | Step that brought it into the comparison | `action_search.py` over the GtoPdb interaction table: row type "Allosteric modulator", action "Negative", GluN2B, human; receptor site not recorded | same table: row "Inhibition", GluN2B, human, assay text "at pH 6.9" |
-| Qualification verdict (engine) | CANDIDATE with `unknown_fields: receptor_site` | CANDIDATE (assay text present) |
+| Qualification verdict (engine) | CANDIDATE with `unknown_fields: receptor_site` | CANDIDATE with `unknown_fields: receptor_site` (assay text present, site not recorded) |
 | Identity (Harness) | catalogue record present; table row added in HE42 (CHEMBL5095074); the identity route is Harness's | CHEMBL5095254; same |
 
 ## Two corrections this reconstruction forces
 
 * **One datum, three representations.** The IT15 table's `value_nM` of the GtoPdb row (8.3176 nM for onfasprodil; 22.9 nM for NP10679) is the nanomolar form of the GtoPdb pIC50 (10^(9 − 8.08) = 8.32; 10^(9 − 7.64) = 22.9) although the row's `measure_type` says pIC50; the ChEMBL activity row (IC50 8.3 nM) is the same magnitude. Potency and its logarithmic transform are the same datum and must be counted once; whether the ChEMBL and GtoPdb rows are one measurement or two independent ones is for the science session (question O5) to settle from the primary source.
-* **A reference field is not a PMID.** The reference field of that ChEMBL activity row (27475601) resolves in PubMed to an unrelated paper (a displacement sensor for spindle metrology). It is a registry document identifier and is not to be followed as a PubMed id.
+* **An activity identifier is not a PMID.** In the IT15 table the number 27475601 of that ChEMBL activity row is the `activity_id` column (the row's references are ChEMBL document ids); read as a PubMed id it resolves to an unrelated paper (a displacement sensor for spindle metrology). It is a registry identifier and is not to be followed as a PubMed id.
 
 ## What the abstracts say (abstract level only)
 
 * onfasprodil (MIJ821): a selective NR2B negative allosteric modulator; a phase 2 study in adults with treatment-resistant depression (PMID 40767837).
-* NP10679: a series of GluN2B-selective negative allosteric modulators "with enhanced potency at acidic pH" relative to physiological pH, designed for ischaemic penumbra and high-frequency synapses; oral bioavailability and brain penetration in mouse (PMID 34493631); a phase 1 study in healthy volunteers (PMID 36642931). So the pH dependence is a designed property of this series, not shown for ifenprodil-site modulators in general.
+* NP10679: a series of GluN2B-selective negative allosteric modulators "with enhanced potency at acidic pH" relative to physiological pH, which the authors relate to ischaemic penumbra and high-frequency synapses; oral bioavailability and brain penetration are claimed for the clinical candidate NP10679 (PMID 34493631); a phase 1 study in healthy volunteers (PMID 36642931). So the pH dependence is stated for this series; the abstracts do not say whether it extends to other ifenprodil-site modulators.
 
 ## Roles (from the rationale, not from the catalogue label)
 
