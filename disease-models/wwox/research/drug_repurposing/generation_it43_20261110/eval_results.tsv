@@ -1,0 +1,13 @@
+question	relation	condition	units	clean_units	units_with_unflagged_error	units_added_by_listing	listing_units_with_typed_action	B_candidates	B_unknown	B_excluded_with_reason	clean_lost_without_record
+Q7	S2	A0	2	2	0						
+Q7	S2	A1	16	12	4						
+Q7	S2	A2	19	12	4	3	1				
+Q7	S2	B	12	12	0			12	0	4	0
+Q8	S4	A0	0	0	0						
+Q8	S4	A1	5	5	0						
+Q8	S4	A2	6	5	0	1	1				
+Q8	S4	B	5	5	0			5	0	0	0
+Q9	S9	A0	1	1	0						
+Q9	S9	A1	3	3	0						
+Q9	S9	A2	9	3	0	6	0				
+Q9	S9	B	3	3	0			3	0	0	0

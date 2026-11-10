@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-10T18:23:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-10T18:35:22Z",
+ "event_id": "FTR-20261110-18417631-94",
+ "evidence_basis": [
+  "PubMed record abstract only, read through the PubMed metadata tool; the PMC page returned a reCAPTCHA check and was not retried by another route.",
+  "verbatim_locator | proposition: Rin, tau and RMP fall between P10 and P29 | Abstract | \"The input resistance, membrane time constant, and resting membrane potential decreased, leading to reduced neural excitability in older animals.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/potassium_conductances_sci43_20261110/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/potassium_conductances_sci43_20261110/output/shares.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record for the PMID fetched 2026-11-10 through the PubMed metadata tool; PMC full text blocked by a bot check, not reached",
+ "study_id": {
+  "doi": "10.1152/jn.01160.2007",
+  "pmid": "18417631"
+ },
+ "workflow": "SCI43 K+ conductance question (ORCH-SCI43-20261110), producer og-k, staged as a JSON file for the integrator; the ledger was not written by the preparing actor. The claim for this PMID was made after the reading began (a slip of the producer, noted in phase_note.md)."
+}

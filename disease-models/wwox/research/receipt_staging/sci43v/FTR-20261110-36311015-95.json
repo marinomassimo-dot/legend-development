@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-10T18:43:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-10T19:05:05Z",
+ "event_id": "FTR-20261110-36311015-95",
+ "evidence_basis": [
+  "PubMed record abstract only, read through the PubMed metadata tool for the verification; re-read to check the producer's description.",
+  "verbatim_locator | proposition: WNK3 KO more hyperpolarised rest by 7 mV, increased IRK conductance | Abstract | \"the resting membrane potential of neurons was more hyperpolarized by 7 mV\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/potassium_conductances_sci43_20261110/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/potassium_conductances_sci43_20261110/verify/verdicts.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record fetched 2026-11-10 through the PubMed metadata tool; full text not reached",
+ "study_id": {
+  "doi": "10.3389/fnmol.2022.856262",
+  "pmid": "36311015"
+ },
+ "workflow": "SCI43 blind verification (ORCH-SCI43-20261110), verifier kv-v, staged as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -6,6 +6,9 @@ sys.path.insert(0, str(IT41)); sys.path.insert(0, str(HERE.parents[4] / "framewo
 import action_search as A  # noqa: E402
 def tsv(p): return list(csv.DictReader(open(p, encoding="utf-8"), delimiter="\t"))
 ROWS = tsv(IT41 / "search_rows.tsv"); CV = tsv(IT41 / "compound_view.tsv"); REL = {r["relation_id"] for r in tsv(IT41 / "relations_it41.tsv")}
+IT43 = IT41.parent / "generation_it43_20261110"   # IT43 relations (S9) run through the same path with their own input and output folders; the gate reads them too
+if (IT43 / "relations_it43.tsv").exists():
+    REL |= {r["relation_id"] for r in tsv(IT43 / "relations_it43.tsv")}; ROWS += tsv(IT43 / "s9" / "search_rows.tsv")
 def rows_for(item):
     keys = {A.name_key(n.strip()) for n in re.sub(r"\s*\(.*?\)", "", item["name_full"]).split(";") if n.strip()}
     return [r for r in ROWS if r["relation_id"] == item["relation_id"] and any(k and (k in A.name_key(r["name"])) for k in keys)]

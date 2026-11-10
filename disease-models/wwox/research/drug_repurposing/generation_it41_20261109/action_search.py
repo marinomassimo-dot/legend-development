@@ -3,7 +3,7 @@ For each relation it reads (a) the ChEMBL curated mechanism rows through the sea
 (species, type, action, receptor site, selectivity comment, primary-target flag, affinity, assay text). Source rows stay separate; molecules are counted distinct;
 nothing is scored or ranked. A catalogue row on a receptor family is not subunit selectivity; an absent row is not an absent action.
   python3 action_search.py   -> writes search_rows.tsv (one row per source row) and molecules.tsv (one row per distinct molecule per relation)"""
-import csv, re, sys
+import csv, os, re, sys
 from collections import defaultdict
 from pathlib import Path
 HERE = Path(__file__).resolve().parent
@@ -81,7 +81,7 @@ def main():
     except cc.CacheInputError as e:
         print(f"INPUT_NOT_AVAILABLE: {e}", file=sys.stderr); return 3
     print(f"input gtopdb/interactions.csv {path} sha256 {sha[:16]} (pinned in catalog/cache_manifest.json)")
-    rel = list(csv.DictReader(open(HERE / "relations_it41.tsv", encoding="utf-8"), delimiter="\t"))
+    OUTD = Path(os.environ.get("LEGEND_SEARCH_OUT", str(HERE))); rel = list(csv.DictReader(open(os.environ.get("LEGEND_RELATIONS", str(HERE / "relations_it41.tsv")), encoding="utf-8"), delimiter="\t"))
     es = cc.load(cc.DEFAULT_CATALOG); idx = rs.Index(es)
     gt_to_cat = {}
     for e in es:
@@ -112,7 +112,7 @@ def main():
     for o in out:
         o["qualification"], o["reason"], o["unknown_fields"] = qualify(o, relmap[o["relation_id"]], ident)
     F = list(out[0].keys())
-    with open(HERE / "search_rows.tsv", "w", newline="", encoding="utf-8") as f:
+    with open(OUTD / "search_rows.tsv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, F, delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(out)
     M = defaultdict(list)
     for o in out:
@@ -122,7 +122,7 @@ def main():
     for (rid, mol), rs_ in sorted(M.items()):
         rows.append(dict(relation_id=rid, molecule=mol, names=" | ".join(sorted({x["name"] for x in rs_})), sources=";".join(sorted({x["source"] for x in rs_})), n_source_rows=len(rs_), directions=";".join(sorted({x["direction"] for x in rs_})),
             species=";".join(sorted({x["species"] for x in rs_})), sites=";".join(sorted({x["site_or_granularity"] for x in rs_ if x["site_or_granularity"]}))))
-    with open(HERE / "molecules.tsv", "w", newline="", encoding="utf-8") as f:
+    with open(OUTD / "molecules.tsv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, list(rows[0].keys()), delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(rows)
     print(len(out), "source rows;", len(rows), "molecule x relation rows")
 if __name__ == "__main__": sys.exit(main() or 0)

@@ -1,0 +1,10 @@
+name	identity_state	chembl_selected_ids	dgidb_only_records	curated_mechanism_on_expected_genes	measured_activity_rows	selectivity	note
+XE991	NAME_EXACT	none	CAT:DGIDB:6067b4b58fc4	none	ChEMBL human IC50 row on KCNQ2 (CHEMBL342375), not read; the DGIdb record also names other genes (ADRA1A/B/D, DRD3, KCNQ1/4/5; verifier)	NOT_ASSESSED	no ChEMBL-selected record
+linopirdine	NAME_EXACT	CAT:CHEMBL319111	CAT:DGIDB:62f941a3c095	none	none returned	NOT_ASSESSED	
+retigabine	SYNONYM_EXACT (to ezogabine)	CAT:CHEMBL41355	CAT:DGIDB:0986d2506c1a; CAT:DGIDB:45c82cc94b86 (a derivative record)	KCNQ2 CURATED_MECHANISM	other-species EC50 rows; a human EC50 row on KCNQ3 and a mouse EC50 row on KCNQ2 (verifier)	NOT_ASSESSED	a derivative DGIdb record shares the label: not merged
+azetukalner	NAME_EXACT	CAT:CHEMBL5095264	CAT:DGIDB:79c7cbc464e5	none (zero catalogue target rows)	ChEMBL human EC50 on KCNQ2, not read	NOT_ASSESSED	invisible to the symbol lookup; reached by name only
+flindokalner	NAME_EXACT	CAT:CHEMBL266510	CAT:DGIDB:ea4a5dfb1784	KCNQ2-5 CURATED_MECHANISM (activator)	human EC50 row, not read	NOT_ASSESSED	BMS-204352 resolves to this record
+ZD7288	NAME_EXACT	none	CAT:DGIDB:5dad25f2b336	none	NOT_READ	NOT_ASSESSED	
+ivabradine	NAME_EXACT	CAT:CHEMBL471737; CAT:CHEMBL2145077	CAT:DGIDB:fcc164e2d2b6; CAT:DGIDB:69500b506e04	HCN4 only (record granularity)	other-species EC50 on HCN1 (CHEMBL471737)	NOT_ASSESSED	
+ML213	NAME_EXACT	none	CAT:DGIDB:2908937e0365	none	human and rat EC50 rows on KCNQ2 (CHEMBL1703636), not read	NOT_ASSESSED	not carried as a tool: no neuronal source read
+ML297	NAME_EXACT	none	CAT:DGIDB:4e99738bec0c	none	none on the expected genes	NOT_ASSESSED	a GIRK name; not used

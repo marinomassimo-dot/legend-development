@@ -1,0 +1,11 @@
+row_id	source	name	target_symbol	action_as_recorded	species	affinity	assay_or_note	pubmed
+P01	ChEMBL curated mechanism	SODIUM DICHLOROACETATE	PDK1	INHIBITOR	Homo sapiens		Pyruvate dehydrogenase kinase inhibitor	
+P02	ChEMBL curated mechanism	SODIUM DICHLOROACETATE	PDK2	INHIBITOR	Homo sapiens		Pyruvate dehydrogenase kinase inhibitor	
+P03	ChEMBL curated mechanism	SODIUM DICHLOROACETATE	PDK3	INHIBITOR	Homo sapiens		Pyruvate dehydrogenase kinase inhibitor	
+P04	ChEMBL curated mechanism	SODIUM DICHLOROACETATE	PDK4	INHIBITOR	Homo sapiens		Pyruvate dehydrogenase kinase inhibitor	
+P05	GtoPdb interaction	AZD7545	PDK1	Inhibitor/Inhibition	Human	7.429999828338623 pIC50 (=)	In a biochemical enzyme assay	14641019
+P06	GtoPdb interaction	VER-246608	PDK1	Inhibitor/Inhibition	Human	7.460000038146973 pIC50 (=)	<i>In vitro</i> functional assay	25404640
+P07	GtoPdb interaction	AZD7545	PDK2	Inhibitor/Inhibition	Human	8.1899995803833 pIC50 (=)	In a biochemical enzyme assay	14641019
+P08	GtoPdb interaction	VER-246608	PDK2	Inhibitor/Inhibition	Human	7.079999923706055 pIC50 (=)	<i>In vitro</i> functional assay	25404640
+P09	GtoPdb interaction	VER-246608	PDK3	Inhibitor/Inhibition	Human	7.400000095367432 pIC50 (=)	<i>In vitro</i> functional assay	25404640
+P10	GtoPdb interaction	VER-246608	PDK4	Inhibitor/Inhibition	Human	7.039999961853027 pIC50 (=)	<i>In vitro</i> functional assay	25404640
