@@ -103,7 +103,7 @@
      "step": "Autonomous queue: second case, false exclusion, scouting integration, simplification; scouting GitHub/HF/Nature",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "Scouting taken from the Harness weekly table, no dependency; ions gap recorded as the one implementable defect (separate dated change). Second generative case not run: capacity left for the publication and CI path; recorded as residual."
+     "evidence": "Scouting taken from the Harness weekly table, no dependency. Second generative case run: S10 (KEAP1/NRF2) framed before the search (fourth_relation_it43.md) after reading the existing INV-08 package, one relation row and no code: 20 source rows, per-target direction kept, the NRF2 inhibitor tool kept as a control for H5; all compounds known in the repository, nothing new claimed. Ions gap recorded as the one implementable defect (separate dated change)."
     }
    ]
   },

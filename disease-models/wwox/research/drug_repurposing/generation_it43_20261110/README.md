@@ -48,5 +48,8 @@ Limits: names are matched by a normalised string, so a different salt or code na
 | P6 | `compound_view.tsv` (column `origin`), `repurposing_view.py`, five-language strings | each card says where the hypothesis came from; the label says why this priority and the evidence |
 | P7 | `apply_dream.py` | INV-07 and INV-19 share one isogenic sample series; the reading of each outcome is written in both investigation tables |
 
+## P8 second generative case
+`fourth_relation_it43.md` (frame before the search), `relations_it43.tsv` row S10, `s10/result_it43.md`: a transcription-factor axis ran through the unchanged path with a row and no code; the opposite-direction rows became controls for the one rival explanation (a benefit independent of NRF2) that a search cannot detect; no compound is new.
+
 ## P8 scouting
 Taken from the current weekly scouting table of Harness (`governance/candidates/`), no new search and no dependency. Relevant to this iteration: the lookup retrieval-contract idea (entity, identifier, build and version, count before paging, log of every page) matches what the DGIdb listing rows already carry (source, claim source, cache digest); nothing to install. The ions gap noted by the independent reader is the one implementable defect left: a `non_drug_entity` verdict for inorganic ions in `action_search.qualify()`; it changes IT41/IT42 tables, so it is a separate, dated change with its own battery, not folded into this candidate.
