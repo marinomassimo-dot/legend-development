@@ -65,6 +65,15 @@ class CatalogueReach(unittest.TestCase):
         self.assertEqual(ta.catalogue_reach(es, "slc6a1"), {"CHEMBL1695", "CHEMBL1027"})
 
 
+class ResolveTargets(unittest.TestCase):
+    def test_a_symbol_that_resolves_to_no_target_says_why(self):
+        self.assertEqual(ta.resolve_targets("NOPE", fake(TG, {}), GTOPDB)["state"], "UNRESOLVED_SYMBOL")
+        self.assertEqual(ta.resolve_targets("KCNQ2", lambda req: {"status": "QUERY_ERROR", "error": "x", "hits": []}, GTOPDB)["state"], "READ_ERROR")
+        r = ta.resolve_targets("KCNQ2", fake([], {}), GTOPDB)
+        self.assertEqual(r["state"], "NO_TARGET_FOR_ACCESSION")        # a gene without a ChEMBL target: counted as unread, not as "no compounds"
+        self.assertEqual(ta.resolve_targets("KCNQ2", fake(TG, {}), GTOPDB)["targets"][0]["target_chembl_id"], "CHEMBL2476")
+
+
 class FailureBehaviour(unittest.TestCase):
     def test_a_symbol_without_one_accession_is_unresolved_not_empty(self):
         for sym in ("NOPE", "DUP"):

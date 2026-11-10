@@ -64,10 +64,10 @@ def catalogue_reach(entries: list[dict], symbol: str) -> set[str]:
     return out
 
 
-def activities_for_gene(symbol: str, query, accessions: list[dict], *, reached: set[str] | None = None, catalogue_ids: set[str] | None = None, types=None, max_rows: int = 400,
-                        organism: str = "Homo sapiens") -> dict:
-    """`query(request) -> adapter answer`. `accessions` is the GtoPdb target table."""
-    out = {"gene": symbol, "state": "OK", "accession": None, "targets": [], "reads": [], "molecules": [], "note": ""}
+def resolve_targets(symbol: str, query, accessions: list[dict], organism: str = "Homo sapiens") -> dict:
+    """Exact ChEMBL targets of a gene: the pinned table's one accession, then the adapter by accession. The answer always says WHY it has no target
+    (UNRESOLVED_SYMBOL, READ_ERROR, NO_TARGET_FOR_ACCESSION) so a consumer can count a symbol as unread instead of as "no compounds"."""
+    out = {"gene": symbol, "state": "OK", "accession": None, "targets": [], "note": "", "source_version": None}
     acc, st = accession_for(symbol, accessions)
     if not acc:
         out["state"] = st
@@ -78,13 +78,24 @@ def activities_for_gene(symbol: str, query, accessions: list[dict], *, reached: 
     if tg.get("status") not in ("MATCH_FOUND", "NO_MATCH_FOUND"):
         out["state"], out["note"] = "READ_ERROR", f"target lookup by accession failed: {str(tg.get('error'))[:160]}"
         return out
-    targets = [h for h in tg.get("hits") or [] if h.get("kind") == "target"]
-    out["targets"] = [{k: h.get(k) for k in ("target_chembl_id", "pref_name", "organism", "target_type", "accessions")} for h in targets]
     out["source_version"] = tg.get("source_version")
-    todo = [h for h in targets if h.get("organism") == organism]
-    if not todo:
-        out["state"], out["note"] = "NO_ACTIVITY_ROWS", f"no {organism} ChEMBL target carries accession {acc}"
+    hits = [h for h in tg.get("hits") or [] if h.get("kind") == "target"]
+    out["targets"] = [{k: h.get(k) for k in ("target_chembl_id", "pref_name", "organism", "target_type", "accessions")} for h in hits if h.get("organism") == organism]
+    if not out["targets"]:
+        out["state"], out["note"] = "NO_TARGET_FOR_ACCESSION", f"no {organism} ChEMBL target carries accession {acc}"
+    return out
+
+
+def activities_for_gene(symbol: str, query, accessions: list[dict], *, reached: set[str] | None = None, catalogue_ids: set[str] | None = None, types=None, max_rows: int = 400,
+                        organism: str = "Homo sapiens") -> dict:
+    """`query(request) -> adapter answer`. `accessions` is the GtoPdb target table."""
+    rt = resolve_targets(symbol, query, accessions, organism)
+    out = {"gene": symbol, "state": rt["state"], "accession": rt["accession"], "targets": rt["targets"], "reads": [], "molecules": [], "note": rt["note"], "source_version": rt["source_version"]}
+    if rt["state"] == "NO_TARGET_FOR_ACCESSION":
+        out["state"] = "NO_ACTIVITY_ROWS"
+    if rt["state"] != "OK":
         return out
+    todo = rt["targets"]
     by_mol: dict[str, dict] = {}
     errors = incomplete = 0
     for h in todo:
