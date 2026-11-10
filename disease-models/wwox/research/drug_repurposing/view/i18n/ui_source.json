@@ -595,6 +595,7 @@
  "UI_IT.iv_cmp_role_mechanism_separating": "separa il meccanismo",
  "UI_IT.iv_cmp_src": "fonte",
  "UI_IT.iv_cmp_sum": "{f} dell'esito funzionale, {m} che separano il meccanismo",
+ "UI_IT.iv_cmpds": "Composti o classi coinvolti (ordine di ricerca)",
  "UI_IT.iv_cond_h": "Ipotesi condizionali generate (non in graduatoria)",
  "UI_IT.iv_cond_id": "Riferimento",
  "UI_IT.iv_cond_lead": "Proposte condizionate mostrate accanto all'elenco ordinato, non al suo interno: il limite di dieci righe le tiene fuori dalla numerazione, e nessuna posizione è implicata né dall'ordine in cui compaiono né dalla loro assenza dalla lista. Ogni riga è una domanda di ricerca con una sonda, non una cura né un'ipotesi qualificata: ciò che non si sa non è inefficace.",

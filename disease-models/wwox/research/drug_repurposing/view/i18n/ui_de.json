@@ -1490,5 +1490,6 @@
  "UI_IT.cv_or_carded_lever": "Ein bereits in einer Karte geführter Hebel, durch die Suche neu eingestuft",
  "UI_IT.cv_or_relation_search": "Entstanden aus einer von einer biologischen Beziehung geleiteten Suche",
  "UI_IT.cv_or_physiological_hypothesis": "Entstanden aus einer bedingten physiologischen Hypothese",
- "UI_IT.cv_or_comparison_package": "Entstanden aus einem pharmakologischen Vergleich zwischen Werkzeugen"
+ "UI_IT.cv_or_comparison_package": "Entstanden aus einem pharmakologischen Vergleich zwischen Werkzeugen",
+ "UI_IT.iv_cmpds": "Beteiligte Verbindungen oder Klassen (Forschungsreihenfolge)"
 }

@@ -1490,5 +1490,6 @@
  "UI_IT.cv_or_carded_lever": "Una palanca ya en ficha, recalificada por la búsqueda",
  "UI_IT.cv_or_relation_search": "Nacida de una búsqueda guiada por una relación biológica",
  "UI_IT.cv_or_physiological_hypothesis": "Nacida de una hipótesis fisiológica condicional",
- "UI_IT.cv_or_comparison_package": "Nacida de una comparación farmacológica entre herramientas"
+ "UI_IT.cv_or_comparison_package": "Nacida de una comparación farmacológica entre herramientas",
+ "UI_IT.iv_cmpds": "Compuestos o clases implicados (orden de investigación)"
 }

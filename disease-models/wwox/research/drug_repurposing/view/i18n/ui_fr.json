@@ -1490,5 +1490,6 @@
  "UI_IT.cv_or_carded_lever": "Un levier déjà en fiche, requalifié par la recherche",
  "UI_IT.cv_or_relation_search": "Née d'une recherche guidée par une relation biologique",
  "UI_IT.cv_or_physiological_hypothesis": "Née d'une hypothèse physiologique conditionnelle",
- "UI_IT.cv_or_comparison_package": "Née d'une comparaison pharmacologique entre outils"
+ "UI_IT.cv_or_comparison_package": "Née d'une comparaison pharmacologique entre outils",
+ "UI_IT.iv_cmpds": "Composés ou classes concernés (ordre de recherche)"
 }

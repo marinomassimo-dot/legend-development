@@ -1490,5 +1490,6 @@
  "UI_IT.cv_or_carded_lever": "A lever already on a card, requalified by the search",
  "UI_IT.cv_or_relation_search": "Born of a search guided by a biological relation",
  "UI_IT.cv_or_physiological_hypothesis": "Born of a conditional physiological hypothesis",
- "UI_IT.cv_or_comparison_package": "Born of a pharmacological comparison between tools"
+ "UI_IT.cv_or_comparison_package": "Born of a pharmacological comparison between tools",
+ "UI_IT.iv_cmpds": "Compounds or classes involved (research order)"
 }
