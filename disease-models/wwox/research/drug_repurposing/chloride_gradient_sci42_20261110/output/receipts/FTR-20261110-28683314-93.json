@@ -1,0 +1,44 @@
+{
+ "analysis_at": "2026-11-10T08:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_present",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-10T09:03:00Z",
+ "event_id": "FTR-20261110-28683314-93",
+ "evidence_basis": [
+  "Mouse prefrontal layer 2/3 chloride development: Results and Methods read as text; the author-manuscript figure images were not reachable (404 on the bucket and the PMC bin route), so numbers come from the Results text.",
+  "verbatim_locator | proposition: dendritic E_Cl at rest level from P14 | Results | \"dendritic ECl hyperpolarized to Vrest and remained constant through all subsequent ages\"",
+  "verbatim_locator | proposition: KCC2 in PFC membranes P9 to P23 | Results | \"P9: 43% ± 2%, n = 6; P13–P15: 100% ± 3.6%, n = 13; P23: 143% ± 18%\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/explanations.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/conditional_prediction.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/figure_notes.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/queries.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "1bdcc88c3a05661c24923abb3055602bdb6abd72183a9f75c292a1ffe21a7371",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch db=pmc XML (plain curl) of the PMC record, converted to text locally and saved outside the repository; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1016/j.celrep.2017.06.030",
+  "pmid": "28683314"
+ },
+ "workflow": "SCI42 S6 chloride-gradient question (ORCH-SCI42-20261110), producer cl-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
