@@ -4390,17 +4390,21 @@ def compound_public_names(dr: Path) -> dict:
         for r in csv.DictReader(fh, delimiter="\t"):
             if r["state"] == "LABEL":
                 label[r["chembl_id"]] = r
-    ids_of = {}
+    ids_of, unresolved = {}, set()
     with open(tbl, encoding="utf-8", newline="") as fh:
         for r in csv.DictReader(fh, delimiter="\t"):
             found = {x.strip() for c in (r["record_chembl_refs"], r["declared_chembl_id"]) for x in c.replace(";", ",").split(",") if x.strip().startswith("CHEMBL")}
             ids_of.setdefault(r["query_name"].strip().lower(), set()).update(found)
+            if r.get("evidence_level") == "ID_NOT_RESOLVED":      # HE44 H4: an id the ChEMBL release does not hold must not carry a name from another source
+                unresolved.add(r["query_name"].strip().lower())
     out = {}
     with open(jf, encoding="utf-8", newline="") as fh:
         for r in csv.DictReader(fh, delimiter="\t"):
             if r.get("link") != "EXACT":
                 continue
             ids = sorted(ids_of.get(r["name"].strip().lower(), ()))
+            if r["name"].strip().lower() in unresolved:
+                continue
             if len(ids) != 1 or ids[0] not in label:       # none, several (a name that reaches two records) or no label: left unnamed
                 continue
             row = label[ids[0]]
