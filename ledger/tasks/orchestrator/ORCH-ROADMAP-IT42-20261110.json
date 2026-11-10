@@ -8,12 +8,12 @@
  "START_UTC": "2026-11-10T08:00:00Z",
  "RESUME": {
   "checkpoint": {
-   "last_verified_result": "local tests of stage_it42, trace_it42, stage_it41, stage_it40, routing and documented-commands OK; no battery yet on the IT42 candidate",
-   "first_incomplete": "P6 rebuild (view, translations for V11/V12 wording, package, audit) and P9 publication",
-   "files_to_open": "generation_it42_20261110/README.md; generation_it41_20261109/compound_view.tsv",
-   "active_processes": "others' batteries: 971715 (Harness he42), 1014118 (SCI42 f54b5753); mine: none",
-   "real_dependencies": "Harness push (identity table + action_search.py edits) and SCI42 landing; neither blocks the view rebuild",
-   "next_step": "after the batteries: merge main, resolve action_search.py, rebuild view, package/audit, freeze, battery"
+   "last_verified_result": "39ec99a0 battery PASS WITH SKIPS (228 targets); merged candidate with 871f7ffa: view check/package/audit PASS, stage and trace tests OK",
+   "first_incomplete": "P9: battery on the frozen merged candidate, publish with --expect-sha, CI, site, then tell SCI42 'finita' with the SHA",
+   "files_to_open": "generation_it42_20261110/README.md, eval_summary.md",
+   "active_processes": "none of mine after the battery starts; cron de32c983 hourly (session-only)",
+   "real_dependencies": "SCI42 second landing waits for me; Harness idle on main",
+   "next_step": "freeze, battery by PID, publish, CI by the Actions page every 10 minutes at most, site check, closure commit"
   }
  },
  "AUTHORISED_QUEUE_20261108": {
@@ -58,7 +58,7 @@
      "step": "Onfasprodil and NP10679: provenance chain, roles kept distinct, open premise, what changes priority; apply science primary-source deltas when delivered",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "provenance_it42.md: onfasprodil and NP10679 chains, roles (mechanism comparator under verification; probe of conditions), open premises, what moves them; two reconstruction corrections (one datum in three representations; an activity id that is not a PMID). Science primary sources pending (SCI42 candidate f54b5753: onfasprodil insufficient information, NP10679 conditional on tissue pH): to be applied at landing."
+     "evidence": "provenance_it42.md: onfasprodil and NP10679 chains, roles (mechanism comparator under verification; probe of conditions), open premises, what moves them; two reconstruction corrections (one datum in three representations; an activity id that is not a PMID). Science primary sources pending (SCI42 candidate f54b5753: onfasprodil insufficient information, NP10679 conditional on tissue pH): to be applied at landing. SCI42 package (d3a57a65, 11 rows) applied: onfasprodil emerged to unresolved, NP10679 emerged to probe, comparisons, INV-05 next_test, matrix M01/M14/M05, BE2, map row IT42-Q01; row 9 no hypothesis_packages row (format decision), row 10 passed to Harness, row 11 ten receipts recorded after a clean trial (one parent link set from the ledger; ledger 1,554 to 1,564)."
     }
    ]
   },
@@ -89,9 +89,9 @@
    "steps": [
     {
      "step": "Investigations view: priority, engine-emerged vs known, question per compound, what moves it, in silico vs lab; five languages; licence-compliant public content; site and phone/desktop check",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "compound_view.tsv 12 items with moves, where, identity badge; five-language strings; rebuild, package, audit, site check pending the batteries of other sessions."
+     "evidence": "compound_view.tsv 12 items (kinds control/probe/known_requalified/unresolved/weakened; none 'emerged' after SCI42), fields moves/where/identity badge (identity read through Harness join_names; NOT_FOUND_BY_NAME counts as unverified), five-language strings, no names or registry values in the shareable edition (licence fields named: name_full and registry_note; ChEMBL CC BY-SA 3.0, GtoPdb ODbL/CC BY-SA 4.0); package, check and audit-shareable PASS on the merged tree; viewports 360/390/768/1280 and print scenarios ok; published-site check in P9."
     }
    ]
   },
@@ -122,9 +122,9 @@
    "steps": [
     {
      "step": "Integrate, publish with SHA check, CI of the published commit, batteries by SHA, cleanup of own integrated material, final report",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Batteries by SHA: 39ec99a0 PASS WITH SKIPS (228 targets, 11 skipped). Merged tree with Harness 871f7ffa: battery pending on the frozen merged candidate. SCI42 second landing (DQP-1105, chloride gradient) waits for the word 'finita'."
     }
    ]
   }
