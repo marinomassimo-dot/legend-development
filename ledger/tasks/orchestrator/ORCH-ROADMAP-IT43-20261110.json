@@ -46,9 +46,9 @@
    "steps": [
     {
      "step": "New generative trial with relation declared before names (coordinate SCI43, no K-conductance duplication)",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "S9 (PDK inhibition) framed before search (third_relation_it43.md), run through the unchanged path (env vars select input/output); 3 typed molecules; classification in s9/result_it43.md; V13 in the view; INV-07 package consumed afterwards (addendum)."
+     "evidence": "S9 framed before the search, run through the unchanged path; 3 typed molecules classified (known in WWOX / known in the repository; nothing new claimed); false exclusion of two older 'unsigned' rows corrected at path level; INV-07 package read after the frame and recorded as addendum; V13 in the view; IT43-Q02."
     }
    ]
   },
@@ -57,9 +57,9 @@
    "steps": [
     {
      "step": "Evaluate source vs qualification vs generation value; independent check; missed opportunities",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "eval_protocol_it43.md fixed before figures; eval_it43.py run (Q7 S2, Q8 S4, Q9 S9); independent reader dispatched (sonnet, high), result pending."
+     "evidence": "Protocol before figures; Q7 S2, Q8 S4, Q9 S9: source large, qualification small, generation conditional; independent reader (sonnet/high, blind to verdicts, ~35 tool calls, ~100k tokens) agreed on 4/4 activators, corrected devimistat direction and one species, found the ions gap (open)."
     }
    ]
   },
@@ -68,9 +68,9 @@
    "steps": [
     {
      "step": "Consume SCI43 and Harness deliveries without idle waiting; reconcile IT42 intro counts with final",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "IT42 README intro counts reconciled with run 4 by a dated update; SCI43 delivery pending (will integrate)."
+     "evidence": "IT42 intro counts reconciled by dated update; SCI43 (ORCH-SCI43-20261110, INV-18 branch D) not delivered yet: its delivery will be integrated from consumer_delta; no idle waiting, battery sequencing agreed by PID."
     }
    ]
   },
@@ -79,9 +79,9 @@
    "steps": [
     {
      "step": "Investigations view and open questions: compound, reason, origin, evidence, premise, next work, movers; five languages",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Compound cards: origin of the hypothesis and evidence label, V13 added, INV-07/INV-19 next_test and uncertainty text; five languages checked; audit-shareable PASS 0 violations on 10 pages; harness name-visibility path left with Harness (licence rule: names stay in the full edition)."
     }
    ]
   },
@@ -90,9 +90,9 @@
    "steps": [
     {
      "step": "DREAM on materially new results",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "One DREAM connection used: INV-07 and INV-19 share one isogenic sample series, outcomes written in both tables (apply_dream.py); nothing invented elsewhere."
     }
    ]
   },
@@ -101,9 +101,9 @@
    "steps": [
     {
      "step": "Autonomous queue: second case, false exclusion, scouting integration, simplification; scouting GitHub/HF/Nature",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Scouting taken from the Harness weekly table, no dependency; ions gap recorded as the one implementable defect (separate dated change). Second generative case not run: capacity left for the publication and CI path; recorded as residual."
     }
    ]
   },
@@ -112,9 +112,9 @@
    "steps": [
     {
      "step": "Integrate, battery by SHA, publish with SHA check, CI and site, final report",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Battery on 8211d2d7: PASS WITH SKIPS (230 targets, 11 skipped); later commits are documentation and record only. Publication, CI and site pending."
     }
    ]
   }
