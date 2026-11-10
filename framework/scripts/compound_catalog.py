@@ -108,5 +108,30 @@ def main(argv=None) -> int:
     return 0
 
 
+class CacheInputError(RuntimeError):
+    """A pinned cache input is missing or its content differs from the manifest: a declared dependency, never a silent fallback."""
+
+
+def cache_file(rel: str, cache_dir=None) -> tuple:
+    """(path, sha256) of one catalogue cache file, checked against catalog/cache_manifest.json.
+    Location: `cache_dir`, else $LEGEND_CATALOG_CACHE, else catalog/cache beside the catalogue. Raises CacheInputError when the file is
+    absent, not pinned, or its SHA-256 differs from the pin; there is no default to another checkout.
+    Recipe when absent: download the file named in the manifest entry's `url` (public, terms in the manifest) into <cache>/<rel>."""
+    import hashlib
+    import os
+    base = Path(cache_dir or os.environ.get("LEGEND_CATALOG_CACHE") or DEFAULT_DIR / "cache")
+    manifest = json.loads((DEFAULT_DIR / "cache_manifest.json").read_text(encoding="utf-8"))
+    pins = {f["path"]: f for src in manifest["sources"].values() for f in (src.get("data") or {}).get("files", [])}
+    if rel not in pins:
+        raise CacheInputError(f"{rel}: not pinned in cache_manifest.json")
+    path = base / rel
+    if not path.exists():
+        raise CacheInputError(f"{rel}: absent at {path}; set LEGEND_CATALOG_CACHE or download {pins[rel].get('url')} (sha256 {pins[rel]['sha256']})")
+    got = hashlib.sha256(path.read_bytes()).hexdigest()
+    if got != pins[rel]["sha256"]:
+        raise CacheInputError(f"{rel}: sha256 {got} differs from the pin {pins[rel]['sha256']} (manifest read {manifest.get('schema_version')})")
+    return path, got
+
+
 if __name__ == "__main__":
     sys.exit(main())

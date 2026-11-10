@@ -179,6 +179,60 @@ def _best(cur, new):
     return new if cur is None or LEVELS.index(new) < LEVELS.index(cur) else cur
 
 
+# --- joining free-text names to a table of resolved identities --------------------------------------------------
+# A substring test between a name and a table key proposes a search; it is not an identity. "GYKI 52466 / GYKI 53655"
+# contains two keys, "Brilliant Blue" is a prefix of one, "Ro" is inside "ifenprodil": any of them silently gets the
+# first key's row. Here a name reaches a row only through EXACT, QUALIFIED (a salt, a stereo or a label prefix the
+# table key does not carry, stated in `qualifier`) or MULTI_PART (a cell naming several compounds, each resolved alone).
+# Everything else is PROPOSED_ONLY: the candidate keys are listed, no row is attached.
+import re  # noqa: E402
+
+_SPLIT = re.compile(r"\s*(?:/|\+|&|,|\band\b|\bvs\.?\b|\bversus\b)\s*", re.I)
+_PREFIX = re.compile(r"^\s*(?:\((?:[RS]|[+\-\u00b1]|rac|[dl]|\d+[RS])\)-?|\[\d*[A-Za-z]{1,2}\]\s*|rac-|[RS]-)\s*", re.I)
+_SUFFIX = re.compile(r"[\s\-]+(?:hydrochloride|hydrobromide|maleate|tartrate|mesylate|besylate|citrate|sulfate|phosphate|"
+                     r"disodium|dipotassium|sodium|potassium|hcl|hydrate|monohydrate|salt|d\d{1,2})\s*$", re.I)
+
+
+_COMMENT = re.compile(r"\s*\((?!(?:[RS]|[+\-\u00b1]|rac|[dl]|\d+[RS])\))[^)]*\)", re.I)
+
+
+def _key(s: str) -> str:
+    return re.sub(r"\s+", " ", s.strip().lower())
+
+
+def join_names(name: str, table_keys) -> list[dict]:
+    """[{part, link, key, qualifier}] for one cell. link is EXACT / QUALIFIED / PROPOSED_ONLY / NO_CANDIDATE; key is set only
+    for EXACT and QUALIFIED; PROPOSED_ONLY carries `proposed_keys` and attaches nothing."""
+    keys = {_key(k): k for k in table_keys}
+    name = _COMMENT.sub("", name).strip() or name      # "(a different structure, not ...)" is a comment; "(R)-" stays a qualifier
+    parts = [p for p in _SPLIT.split(name) if p.strip()] if _key(name) not in keys else [name]
+    multi = len(parts) > 1
+    out = []
+    for part in parts or [name]:
+        part = re.sub(r"\s*\(.*?\)\s*$", "", part).strip() or part   # trailing parenthetical: a comment, not a name
+        k = _key(part)
+        link, hit, qual = None, None, []
+        if k in keys:
+            link, hit = "EXACT", keys[k]
+        else:
+            q, changed = k, True
+            while changed:
+                changed = False
+                for rx in (_PREFIX, _SUFFIX):
+                    m = rx.search(q)
+                    if m and m.group(0).strip():
+                        qual.append(m.group(0).strip()); q = rx.sub("", q, count=1).strip(); changed = True
+            if qual and q in keys:
+                link, hit = "QUALIFIED", keys[q]
+        if link:
+            out.append({"part": part, "link": link, "key": hit, "qualifier": ";".join(qual), "multi_part": multi})
+            continue
+        prop = sorted(orig for kk, orig in keys.items() if kk and (kk in k or k in kk))
+        out.append({"part": part, "link": "PROPOSED_ONLY" if prop else "NO_CANDIDATE", "key": None, "qualifier": "",
+                    "proposed_keys": prop, "multi_part": multi})
+    return out
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("name")
