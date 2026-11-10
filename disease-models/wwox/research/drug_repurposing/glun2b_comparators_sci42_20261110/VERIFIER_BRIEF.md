@@ -1,0 +1,22 @@
+# Brief — blind verifier, SCI42 (onfasprodil, NP10679: primary basis, role, and the minimum discriminating design)
+
+You are an independent Scientist delegate of the Orchestrator of LEGEND (public edition; reference genotype class only). Task record `ledger/tasks/orchestrator/ORCH-SCI42-20261110.json`; working tree `/home/desktop/legend-development/.claude/worktrees/sci42` (absolute paths only). Claim actor label `og-v`; claim each PMID you open (`paper_packet.py claim --pmid <N> --actor og-v --note ORCH-SCI42-20261110`). Write only into `verify/`. Constraints are those of `disease-models/wwox/research/drug_repurposing/membrane_hypotheses_20261108/BRIEF_COMMON.md` (plain curl with the default user agent only, never a browser identity or header; a bot-check page is recorded as unreachable and not retried by another route; no gates, lint or tests; no delegation; no e-mail, registration, spend; labels DATO / INFERENZA / IPOTESI; depth honesty). Figures and supplements of PMC articles are reachable through the public open-data bucket (`https://pmc-oa-opendata.s3.amazonaws.com/<PMCID>.1/`) into a new uniquely named scratchpad subdirectory; view figures with the Read tool.
+
+## What you receive
+
+* `verify/items.md`: the decisive propositions (each with source identifier, locator, stated depth) and the design items (D-items) — extracted by the Orchestrator from the producer's tables, **without the producer's roles or conclusions**.
+* `output/decisive.tsv`, `output/evidence.tsv`, `output/figure_notes.tsv`, `output/new_measurements.tsv`, and `S3_design.md` (the minimum design and prediction matrix).
+* **Do not read** `output/roles.tsv`, `output/compounds.tsv`, `output/phase_note.md`, `README.md` or `consumer_delta.md` before your verdicts are written. You do not rebuild the research: you open each decisive source yourself, at the cited locator, and judge the proposition.
+
+## Check
+
+A. **Each decisive proposition** against the source: SUPPORTED / PARTLY / NOT SUPPORTED / UNVERIFIABLE with the reason and the depth you read (sections, figures, tables, supplements). Numbers (IC50, percent maximum inhibition, pH, glutamate/glycine levels, Zn2+, holding potential, species, n) digit by digit against the table or figure, not against the producer's quote.
+B. **Identity and site**: is each compound the molecule the source studied (name, code, synonym; no analogue or formulation mistaken for it)? Is the site *measured* or only *declared* by the authors? Is any site statement carried from the ifenprodil class without a source?
+C. **Transfers**: any maximum, potency or pH effect carried between compounds, assemblies (diheteromer, triheteromer), species or preparations (oocyte, culture, slice, organism, human) without being stated; any abstract-level statement written as a mechanism verification.
+D. **Absence claims and perimeters**: re-run one query for each stated absence (for instance: no triheteromer data for onfasprodil; no slice datum for NP10679; no non-psychiatric human exposure) and say whether the perimeter was adequate.
+E. **Provenance**: for each decisive number, original measurement vs database copy vs patent vs repetition of one datum counted as two.
+F. **The design (`S3_design.md`)**: for each explanation, is the predicted observation, the compatible-but-not-discriminating result, the weakening result and the null-interpreting control logically right given what the sources say? Does any arm presuppose a property (site, ceiling, pH sensitivity) the sources do not give? Which control is missing from the start set, which is redundant, which threshold is presented as data but is a design assumption? Is the unit of replication appropriate? Does any wording turn a burst reduction into developmental recovery, or a response into a defect in the target?
+G. **Evidence rows**: quotes verbatim at the locator (≤25 words), each carrying its proposition (counts: checked, correct, defective). Spot-check two staged receipts in `output/receipts/` (fingerprint, section list, locators).
+H. If you find an error of a class (e.g. a maximum taken from the wrong assembly), extend the check to every row of that class and say you did.
+
+Finish `verify/audit.md` with a verdict per proposition and per D-item, the corrections the producer/Orchestrator must make (file, row, wording), and what you could not reach. Final message: counts, substantive errors, what changes in the roles or the design, anything unreachable.
