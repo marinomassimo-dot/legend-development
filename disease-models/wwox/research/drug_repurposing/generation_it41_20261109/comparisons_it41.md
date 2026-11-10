@@ -6,7 +6,7 @@ Non-canonical working note. Not medical advice; no dose, schedule or route. All 
 
 | Element | Entry | Why it is in the comparison |
 |---|---|---|
-| Known reference | An ifenprodil-site GluN2B negative modulator used as a tool (ifenprodil or Ro 25-6981; radiprodil as the compound with human exposure) | Primary values exist (maximum 88 percent on GluN1/GluN2B, 32 percent on triheteromers, 50 percent with 300 nM Zn2+; radiprodil rat 82 against 45 percent); its removable share can be bounded |
+| Known reference | An ifenprodil-site GluN2B negative modulator used as a tool (ifenprodil or Ro 25-6981; radiprodil as the compound with human exposure) | Primary values exist for ifenprodil (oocytes: maximum 88 percent on GluN1/GluN2B, 32 percent on triheteromers, 50 percent with 300 nM Zn2+); Ro 25-6981 values were not read (abstract level) and are not borrowed from ifenprodil; radiprodil has its own values (rat 82 against 45 percent, human 91); each modulator's removable share is bounded by its own maxima |
 | Alternative that emerged | A second GluN2B negative modulator with human exposure (onfasprodil), site not recorded | Could add a chemotype or a different ceiling, **only if** a primary source places it at the same site and gives its maximum effect |
 | Functional control | Full competitive block (d-APV) | Defines the abolition threshold x; every modulator is read against it |
 | Control that separates the mechanism | A receptor-agnostic release-reducing manipulation matched to the same measured percent of NMDA-receptor current removed; a Zn2+-chelator arm; bath pH stated and held | Separates receptor composition from a general loss of drive and from a bath-state effect |
@@ -22,7 +22,7 @@ Non-canonical working note. Not medical advice; no dose, schedule or route. All 
 
 ## The INV-05 plateau rule (consumed from the narrow comparison)
 
-A modulator that reaches a plateau **below** the abolition threshold x does not refute the mechanism: its removable share is bounded by composition (at most 0.88 times the GluN2B diheteromer share plus 0.32 times the triheteromer share, 0.50 with Zn2+; INFERENZA). The comparison with d-APV is made only **up to the modulator's measured removable share**, with the percent removed read at the burst. A plateau under x is "unresolved", not support for total gain and not a refutation of GluN2B participation.
+A modulator that reaches a plateau **below** the abolition threshold x does not refute the mechanism: its removable share is bounded by composition; for ifenprodil at most 0.88 times the GluN2B diheteromer share plus 0.32 times the triheteromer share, 0.50 with Zn2+ (INFERENZA); another modulator has its own maxima (radiprodil, for example, 91 percent on human GluN1/GluN2B), so the bound is recomputed per molecule. The comparison with d-APV is made only **up to the modulator's measured removable share**, with the percent removed read at the burst. A plateau under x is "unresolved", not support for total gain and not a refutation of GluN2B participation.
 
 ## Minimum interpretable experiment, and what depends on it
 

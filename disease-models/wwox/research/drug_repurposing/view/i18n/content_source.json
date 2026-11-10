@@ -51,9 +51,17 @@
   "src": "it",
   "text": "Lavoro su animali; linea con delezione neurone-specifica non disponibile (non nota); denominatori di RM solo a livello di abstract (2 su 2 esposti, in un rapporto selezionato per il reperto; frequenza, non rischio attribuibile); il denominatore di una coorte di 64 bambini è probabilmente quello che li comprende, non verificato."
  },
+ "076b4cff6cc3": {
+  "src": "en",
+  "text": "Filing under a target does not make the measurement the target's; the same ligand has its own rows for other subunits, and no transfer is made."
+ },
  "0838f09e6cea": {
   "src": "en",
   "text": "position unchanged from IT20 (rank 2): No IT21 input changes the position. IT29: epilepsy-model screens in other genotypes give no corroboration for this agent (absence of corroboration is not refutation); the position rests on the single pup experiment."
+ },
+ "0874e122f10a": {
+  "src": "en",
+  "text": "A blocker response shows contribution as in normal cortex, not a defect; the passive-size reading is the rival; a sodium-current block is reported for one tool in thalamic neurons (abstract level)."
  },
  "098bc6a615c5": {
   "src": "en",
@@ -98,10 +106,6 @@
  "0df87d071310": {
   "src": "en",
   "text": "Potency is compared only between measures of the same type; unlike measures are kept side by side and never turned into an exclusion. 20 proposals blocked on weak target attribution became 5 (the verifier's lower-bound rule restored one); the cautious case (a pan-HDAC inhibitor 2,769-fold weaker at the listed target, same measure type) stays blocked."
- },
- "0e36f1643568": {
-  "src": "en",
-  "text": "The registry row's assay was on another subunit; the value is not a GluN2B measurement."
  },
  "0fc1e5c79db3": {
   "src": "en",
@@ -158,10 +162,6 @@
  "17ac70f56535": {
   "src": "it",
   "text": "Più alto in organoide e in mosca con amiloide, nessun segno opposto; nel topo nessun segno risolto. Il verdetto prudente del documento P4 è «non risolto tra specie»."
- },
- "18d5f4328934": {
-  "src": "en",
-  "text": "Registry row under GluN2B whose assay was on GluN2C"
  },
  "18f5ff936c8e": {
   "src": "it",
@@ -290,6 +290,10 @@
  "2d13a2f2e87f": {
   "src": "en",
   "text": "Sag and rebound are larger in the knockout; no Ih-blocker arm and no voltage-clamp current exist in the records read. In normal cortex an Ih blocker reduces sag."
+ },
+ "2d4cff76776a": {
+  "src": "en",
+  "text": "The registry row's assay text names another subunit; to which subunit the value belongs is unresolved, so no GluN2B statement is drawn."
  },
  "2e055fd6bb53": {
   "src": "it",
@@ -582,6 +586,10 @@
  "5e1261630425": {
   "src": "it",
   "text": "Le famiglie sono scelte per disponibilità di dati, non per un'analisi del catalogo; una sola concentrazione e poche misure nel tempo."
+ },
+ "5e6dbc965cb9": {
+  "src": "en",
+  "text": "It abolishes the spontaneous bursts, so it bounds how much NMDA-receptor current must go before the burst stops."
  },
  "5e6ff20bb1b1": {
   "src": "en",
@@ -879,10 +887,6 @@
   "src": "en",
   "text": "Reached from the T-type calcium need through the catalogue path; the proposed pair is a proposal to verify (IT20)."
  },
- "8659ddf5881e": {
-  "src": "en",
-  "text": "No maximum effect, species or assay context in the catalogue; none approved."
- },
  "87177877f044": {
   "src": "en",
   "text": "If sag remains at matched potential and deflection, or capacitance is unchanged while input resistance is higher, the passive reading fails."
@@ -918,6 +922,10 @@
  "897c432eaebe": {
   "src": "en",
   "text": "Whether the same step clears the Q230P-class protein in neural cells, and whether spared protein is functional (the degron and the GSK3B docking site may be one conformational event, giving a stable but inert protein). HSC70 also folds proteins, so blocking it may harm instead of help; the mirrored harm arm is carried as a second conditional arm. IT22: the weakest link is the substrate itself: no WWOX missense protein is shown above the assay floor, so gate 0 is a KO-controlled blot for the protein (the G372R line first)."
+ },
+ "897fe4f3bd34": {
+  "src": "en",
+  "text": "Smaller cells with a seal leak, and effects on synaptic currents seen in culture, would give the same observations."
  },
  "89f79fa5b9d5": {
   "src": "en",
@@ -955,6 +963,10 @@
   "src": "en",
   "text": "Cytokine transcripts up in two mouse Wwox-deficient preparations (one significant in the null hippocampus)."
  },
+ "8f938aa08a09": {
+  "src": "en",
+  "text": "Against the wild-type floor about 20 percent of the delayed evoked response remains under it (figure-read, inference), which is not evidence of incomplete block."
+ },
  "8fb812a48744": {
   "src": "en",
   "text": "INV-11"
@@ -986,10 +998,6 @@
  "92ea76c9db7b": {
   "src": "it",
   "text": "sconosciute. Le sconosciute sono lacune, non zeri. Contando i modelli e non le colonne, i sistemi indipendenti sono circa"
- },
- "9337026fc7a1": {
-  "src": "en",
-  "text": "A compound with human exposure that could serve as the in-slice modulator once the tool result is in."
  },
  "93f1ef260d11": {
   "src": "en",
@@ -1155,10 +1163,6 @@
   "src": "en",
   "text": "No lever available (four needs with no catalogue reach)"
  },
- "a87c3e8c8d54": {
-  "src": "en",
-  "text": "Smaller cells with a seal leak and effects on synaptic currents explain the same observations."
- },
  "a884fdfd0770": {
   "src": "en",
   "text": "Inhibitors of the DNA-damage response as levers"
@@ -1315,6 +1319,10 @@
   "src": "en",
   "text": "WWOX-system with a specificity flag: one paper, one laboratory, no drug-by-genotype test, and a wild-type arm whose variability is comparable to the effect."
  },
+ "bdc0737e6ae2": {
+  "src": "en",
+  "text": "A clinical-stage compound (catalogue maximum phase 2) that could serve as the in-slice modulator once the tool result is in."
+ },
  "bf214653e458": {
   "src": "en",
   "text": "Conditional hypothesis: the WWOX-side pattern was read in IT14; the drug-side precedent was read at abstract level only; no WWOX-deficient measurement shows that the block responds to the receptor (no ranked unit, so no evaluation depth applies: this is not a depth of zero)"
@@ -1442,10 +1450,6 @@
  "d2852be44ee8": {
   "src": "en",
   "text": "Wwox-null versus wild-type glial cultures, the probe versus a second chemotype versus Ezh2 knockdown, histone mark and cytokine protein, with a parallel precursor-differentiation read."
- },
- "d28f83ebd50b": {
-  "src": "en",
-  "text": "Filing under a target does not make the measurement the target's; no transfer is made."
  },
  "d2c4fa5690e1": {
   "src": "en",
@@ -1623,6 +1627,10 @@
   "src": "en",
   "text": "E2 - card reviewed, abstention (premise named, no test designed)"
  },
+ "e89141767dcf": {
+  "src": "en",
+  "text": "Registry row under GluN2B whose assay text names GluN2C"
+ },
  "e9520227b9c9": {
   "src": "en",
   "text": "Development feasibility: a tool compound for in vitro and mouse work only; brain entry is restricted by efflux in vitro and there is no human exposure statement."
@@ -1630,10 +1638,6 @@
  "e9d2ada2a64c": {
   "src": "en",
   "text": "Carded chain: Dichloroacetate (see its card) and inhibition of the pyruvate dehydrogenase kinases on the pyruvate axis."
- },
- "e9ef048fa3a7": {
-  "src": "en",
-  "text": "Against the wild-type floor about 20 percent of the delayed evoked response remains under it, which is not evidence of incomplete block."
  },
  "ea55b666039e": {
   "src": "it",
@@ -1659,10 +1663,6 @@
   "src": "en",
   "text": "Weak; edge supported outside neural cells; no CNS exposure data for the topical drug"
  },
- "ec03b76feb89": {
-  "src": "en",
-  "text": "A blocker response shows contribution as in normal cortex, not a defect; the passive-size reading is the rival; the sodium action of one tool is an off-target."
- },
  "ed04c567319d": {
   "src": "en",
   "text": "NMDA-receptor-regenerative drive (GluN2B- or GluN2A-weighted), a general loss of excitatory drive, and a recording-state artefact. Kainate receptors are not separated from AMPA receptors by the usual tools."
@@ -1670,10 +1670,6 @@
  "ee335183c025": {
   "src": "en",
   "text": "Is there an axonal signal left for a pro-myelinating agent to act on, before any such agent is ordered?"
- },
- "f0dc6038ffa7": {
-  "src": "en",
-  "text": "It abolishes the spontaneous bursts, so it fixes how much NMDA-receptor current must go before the burst stops."
  },
  "f0fae297b689": {
   "src": "en",
@@ -1747,10 +1743,6 @@
   "src": "en",
   "text": "Cytokines rise or precursor differentiation falls."
  },
- "f9d9760c80a3": {
-  "src": "en",
-  "text": "Clinical-stage GluN2B negative modulator with species-dependent maximum"
- },
  "fa08a3a261c2": {
   "src": "en",
   "text": "Chase of the Q230P-class protein with HSPA8 and LAMP2 knockdown and a lysosomal-acidification inhibitor, then a docking-function read (phospho-tau, with the L404A docking mutant as control). No rise with knockdown closes the route; a rise without function closes deep recovery on this route; both rising earns a variant-specific preclinical question, still not qualified. IT22: one cycloheximide-chase design with HSPA8 and LAMP2A knockdown and a lysosomal-acidification inhibitor tests every stability lever; the peptide is one arm, not the lead."
@@ -1758,6 +1750,10 @@
  "fb1711428b97": {
   "src": "it",
   "text": "Laboratorio con il vettore e un topo Wwox-nullo; nessuno noto nel repository. Se il vettore sia ottenibile: non nota."
+ },
+ "fb62c3653914": {
+  "src": "en",
+  "text": "Clinical-stage GluN2B negative modulator with an assembly-dependent maximum"
  },
  "fb82f4a9b16b": {
   "src": "it",
@@ -1770,6 +1766,10 @@
  "fdba233e1765": {
   "src": "en",
   "text": "In cells the compound stabilises HIF1alpha, the opposite of the intended effect, because concentrations that inhibit the intended demethylase overlap those that inhibit the prolyl hydroxylases; the intended target is also the least expressed family member in the WWOX-deficient organoid and absent in the human progenitor data. The route is the one that made another HIF-pathway agent a drop in IT9."
+ },
+ "fdd45467216d": {
+  "src": "en",
+  "text": "No maximum effect, species or assay context in the catalogue; no approval statement in the catalogue."
  },
  "fe1eff02f6cc": {
   "src": "en",

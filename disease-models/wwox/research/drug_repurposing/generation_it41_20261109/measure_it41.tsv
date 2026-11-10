@@ -1,9 +1,10 @@
 measure	previous path (ChEMBL mechanism, symbol)	simple baseline (symbol, both tables)	IT41 path (action, site, species, assay text)
-molecules a symbol lookup of GRIN2B returns (ChEMBL mechanisms only, previous path and baseline)	24		
-molecules after adding the GtoPdb interaction table (same symbol)		63	
-of which orthosteric (glutamate- or glycine-site) ligands, not modulators of the ifenprodil kind			27
-of which channel blockers			7
-molecules documented as GluN2B-directed negative modulators (two-gene assembly record)	4		4
-additional documented negative modulators from the GtoPdb table (same species context stated)	0	0	3
+distinct molecules a symbol lookup of GRIN2B returns, ChEMBL mechanisms only (previous path and baseline)	24		
+distinct molecules after adding the GtoPdb interaction table (same symbol; cross-source records merged by catalogue parent, radiolabelled forms left out)		55	
+of which orthosteric (glutamate- or glycine-site) ligands, not modulators of the ifenprodil kind			20
+of which channel blockers			6
+of which antagonists with no receptor site recorded (unclassified)			1
+molecules recorded as GluN1/GluN2B antagonists on the two-gene assembly record (ChEMBL action: antagonist)	4		4
+negative-modulator rows in the GtoPdb table under GluN2B (subunit of the value to be checked per row)	0	0	3
 rows whose assay was on another subunit than the target they sit under (transfer avoided)	not seen	not seen	1
-compounds that entered the comparison as emerged (not previously discussed as comparators)	0	0	2
+compounds that entered the view as emerged from the search (not previously discussed as comparators)	0	0	2

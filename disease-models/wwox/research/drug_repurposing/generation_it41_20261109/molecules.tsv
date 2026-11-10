@@ -32,14 +32,6 @@ S1	GTOPDB:2403	dizocilpine	GtoPdb interaction	1	down	Human
 S1	GTOPDB:3309	L-aspartic acid	GtoPdb interaction	1	up	Human	glutamate site
 S1	GTOPDB:4066	(+)-HA966	GtoPdb interaction	1	up	Human	glycine site
 S1	GTOPDB:4068	(<i>RS</i>)-(tetrazol-5-yl)glycine	GtoPdb interaction	1	up	Human	glutamate site
-S1	GTOPDB:4078	[<sup>3</sup>H]CGP39653	GtoPdb interaction	1	down	Human	glutamate site
-S1	GTOPDB:4079	[<sup>3</sup>H]CGP61594	GtoPdb interaction	1	down	Human	glycine site
-S1	GTOPDB:4080	[<sup>3</sup>H]CGS19755	GtoPdb interaction	1	down	Human	glutamate site
-S1	GTOPDB:4082	[<sup>3</sup>H]CPP	GtoPdb interaction	1	down	Human	glutamate site
-S1	GTOPDB:4084	[<sup>3</sup>H]glycine	GtoPdb interaction	1	up	Human	glycine site
-S1	GTOPDB:4086	[<sup>3</sup>H]L689560	GtoPdb interaction	1	down	Human	glycine site
-S1	GTOPDB:4088	[<sup>3</sup>H]MDL105519	GtoPdb interaction	1	down	Human	glycine site
-S1	GTOPDB:4089	[<sup>3</sup>H]dizocilpine	GtoPdb interaction	1	down	Human	cation channel
 S1	GTOPDB:4128	amantadine	GtoPdb interaction	1	down	Human	
 S1	GTOPDB:4154	CGP37849	GtoPdb interaction	1	down	Human	glutamate site
 S1	GTOPDB:4155	selfotel	GtoPdb interaction	1	down	Human	glutamate site
@@ -189,30 +181,28 @@ S5	GTOPDB:12118	compound 20 [PMID: 35584373]	GtoPdb interaction	1	down	Human
 S5	GTOPDB:2312	bicuculline	GtoPdb interaction	4	down	Human	GABA site
 S5	GTOPDB:3364	diazepam	GtoPdb interaction	3	up	Human	benzodiazepine site
 S5	GTOPDB:4051	picrotoxin	GtoPdb interaction	7	down	Human	
-S5	GTOPDB:4083	[<sup>3</sup>H]gabazine	GtoPdb interaction	4	down	Human	GABA site
-S5	GTOPDB:4090	[<sup>3</sup>H]muscimol	GtoPdb interaction	4	up	Human	GABA site
-S5	GTOPDB:4094	&alpha;3IA	GtoPdb interaction	4	unclear;up	Human	benzodiazepine site
-S5	GTOPDB:4095	&alpha;5IA	GtoPdb interaction	4	up	Human	benzodiazepine site
+S5	GTOPDB:4094	&alpha;3IA	GtoPdb interaction	4	down;unclear	Human	benzodiazepine site
+S5	GTOPDB:4095	&alpha;5IA	GtoPdb interaction	4	down	Human	benzodiazepine site
 S5	GTOPDB:4108	5&alpha;-pregnan-3&alpha;-ol-20-one	GtoPdb interaction	4	up	Human	
 S5	GTOPDB:4146	bretazenil	GtoPdb interaction	4	up	Human	benzodiazepine site
-S5	GTOPDB:4156	CGS8216	GtoPdb interaction	4	up	Human	
-S5	GTOPDB:4179	DMCM	GtoPdb interaction	4	up	Human	benzodiazepine site
+S5	GTOPDB:4156	CGS8216	GtoPdb interaction	4	down	Human	
+S5	GTOPDB:4179	DMCM	GtoPdb interaction	4	down	Human	benzodiazepine site
 S5	GTOPDB:4192	flumazenil	GtoPdb interaction	4	down;unclear	Human	benzodiazepine site
 S5	GTOPDB:4193	flunitrazepam	GtoPdb interaction	4	up	Human	benzodiazepine site
 S5	GTOPDB:4197	gabazine	GtoPdb interaction	4	down	Human	GABA site
 S5	GTOPDB:4221	indiplon	GtoPdb interaction	1	up	Human	benzodiazepine site
 S5	GTOPDB:4226	isoguvacine	GtoPdb interaction	4	up	Human	GABA site
 S5	GTOPDB:4227	isonipecotic acid	GtoPdb interaction	4	up	Human	GABA site
-S5	GTOPDB:4238	L655708	GtoPdb interaction	1	up	Human	benzodiazepine site
+S5	GTOPDB:4238	L655708	GtoPdb interaction	1	down	Human	benzodiazepine site
 S5	GTOPDB:4241	L838417	GtoPdb interaction	4	down;up	Human	benzodiazepine site
-S5	GTOPDB:4257	MRK016	GtoPdb interaction	4	up	Human	benzodiazepine site
+S5	GTOPDB:4257	MRK016	GtoPdb interaction	4	down	Human	benzodiazepine site
 S5	GTOPDB:4259	muscimol	GtoPdb interaction	4	up	Human	GABA site
 S5	GTOPDB:4277	ocinaplon	GtoPdb interaction	4	up	Human	benzodiazepine site
 S5	GTOPDB:4287	piperidine-4-sulphonic acid	GtoPdb interaction	4	up	Human	GABA site
-S5	GTOPDB:4296	Ro15-4513	GtoPdb interaction	4	up	Human	benzodiazepine site
-S5	GTOPDB:4297	Ro19-4603	GtoPdb interaction	4	up	Human	benzodiazepine site
-S5	GTOPDB:4299	RO4938581	GtoPdb interaction	4	up	Human	benzodiazepine site
-S5	GTOPDB:4301	RY024	GtoPdb interaction	1	up	Human	benzodiazepine site
+S5	GTOPDB:4296	Ro15-4513	GtoPdb interaction	4	down	Human	benzodiazepine site
+S5	GTOPDB:4297	Ro19-4603	GtoPdb interaction	4	down	Human	benzodiazepine site
+S5	GTOPDB:4299	RO4938581	GtoPdb interaction	4	down	Human	benzodiazepine site
+S5	GTOPDB:4301	RY024	GtoPdb interaction	1	down	Human	benzodiazepine site
 S5	GTOPDB:4320	TBPS	GtoPdb interaction	7	down	Human	
 S5	GTOPDB:4321	tetrahydrodeoxycorticosterone	GtoPdb interaction	4	up	Human	
 S5	GTOPDB:4322	gaboxadol	GtoPdb interaction	4	up	Human	GABA site
@@ -221,14 +211,6 @@ S5	GTOPDB:4327	TPA023	GtoPdb interaction	4	down;up	Human	benzodiazepine site
 S5	GTOPDB:4346	ZK93423	GtoPdb interaction	4	up	Human	
 S5	GTOPDB:4347	ZK93426	GtoPdb interaction	4	down	Human	benzodiazepine site
 S5	GTOPDB:4348	zolpidem	GtoPdb interaction	3	up	Human	
-S5	GTOPDB:4360	[<sup>3</sup>H]flunitrazepam	GtoPdb interaction	4	up	Human	benzodiazepine site
-S5	GTOPDB:4362	[<sup>3</sup>H]zolpidem	GtoPdb interaction	1	up	Human	benzodiazepine site
-S5	GTOPDB:4363	[<sup>3</sup>H]L655708	GtoPdb interaction	1	up	Human	benzodiazepine site
-S5	GTOPDB:4364	[<sup>3</sup>H]RY80	GtoPdb interaction	1	unclear	Rat	benzodiazepine site
-S5	GTOPDB:4366	[<sup>3</sup>H]CGS8216	GtoPdb interaction	4	unclear	Human	benzodiazepine site
-S5	GTOPDB:4367	[<sup>11</sup>C]flumazenil	GtoPdb interaction	4	down;unclear	Human	benzodiazepine site
-S5	GTOPDB:4368	[<sup>18</sup>F]fluoroethylflumazenil	GtoPdb interaction	4	unclear	Human	benzodiazepine site
-S5	GTOPDB:4369	[<sup>35</sup>S]TBPS	GtoPdb interaction	4	down	Human	anion channel
 S5	GTOPDB:566	Zn<sup>2+</sup>	GtoPdb interaction	4	down	Human	
 S5	GTOPDB:6963	clonazepam	GtoPdb interaction	3	up	Human	benzodiazepine site
 S5	GTOPDB:7111	alprazolam	GtoPdb interaction	4	up	Human	benzodiazepine site

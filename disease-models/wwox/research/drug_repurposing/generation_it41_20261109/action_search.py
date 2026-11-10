@@ -38,15 +38,20 @@ def main():
             if not gs & syms: continue
             act = f"{g['Type']}/{g['Action']}"
             low = act.lower()
-            out.append(dict(relation_id=r["relation_id"], source="GtoPdb interaction", molecule="GTOPDB:" + g["Ligand ID"], name=g["Ligand"], catalogue_id=gt_to_cat.get(g["Ligand ID"], ""), species=g["Target Species"], action=act,
-                direction=("down" if re.search(r"antagon|inhibit|block|negative", low) else "up" if re.search(r"agonist|activat|positive|potentiat", low) else "unclear"),
+            cid = gt_to_cat.get(g["Ligand ID"], "")
+            par = ((idx.by_id.get(cid) or {}).get("relations") or {}).get("parent") or cid
+            out.append(dict(relation_id=r["relation_id"], source="GtoPdb interaction", molecule=(par or "GTOPDB:" + g["Ligand ID"]), name=g["Ligand"], catalogue_id=cid, species=g["Target Species"], action=act,
+                direction=("down" if re.search(r"inverse agonist|antagon|inhibit|block|negative", low) else "up" if re.search(r"agonist|activat|positive|potentiat", low) else "unclear"),
                 site_or_granularity=g["Receptor Site"] or "", primary_target=g["Primary Target"], selectivity_comment=g["Selectivity"] + (" | " + g["Action comment"] if g["Action comment"] else ""),
                 affinity=" ".join(x for x in (g["Affinity Median"], g["Affinity Units"], "(" + g["Original Affinity Relation"] + ")" if g["Original Affinity Relation"] else "") if x), assay_or_note=g["Assay Description"], pubmed=g["PubMed ID"], target_symbol=g["Target Gene Symbol"]))
+    for o in out: o["labelled_form"] = "yes" if re.match(r"^\[?<sup>|^\[<sup>", o["name"]) or "[<sup>" in o["name"] else ""
     F = list(out[0].keys())
     with open(HERE / "search_rows.tsv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, F, delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(out)
     M = defaultdict(list)
-    for o in out: M[(o["relation_id"], o["molecule"])].append(o)
+    for o in out:
+        if o["labelled_form"] == "yes": continue      # radiolabelled forms duplicate another record of the same ligand
+        M[(o["relation_id"], o["molecule"])].append(o)
     rows = []
     for (rid, mol), rs_ in sorted(M.items()):
         rows.append(dict(relation_id=rid, molecule=mol, names=" | ".join(sorted({x["name"] for x in rs_}))[:160], sources=";".join(sorted({x["source"] for x in rs_})), n_source_rows=len(rs_), directions=";".join(sorted({x["direction"] for x in rs_})),
