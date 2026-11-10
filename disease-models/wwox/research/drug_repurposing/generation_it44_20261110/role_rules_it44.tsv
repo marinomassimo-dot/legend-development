@@ -1,0 +1,9 @@
+rule_id	field	value	role	basis
+R1	gtopdb_type	Inorganic	control_or_reagent	GtoPdb ligand type Inorganic: an ion is a reagent or a physiological variable, not a drug to repurpose
+R2	gtopdb_type	Metabolite	physiological_intervention	GtoPdb ligand type Metabolite: an endogenous agent (transmitter, co-agonist, second messenger); raising or lowering it is a physiological manipulation
+R3	gtopdb_type	Antibody	unqualified_entity	modality outside small-molecule repurposing
+R4	gtopdb_type	Nucleic acid	unqualified_entity	modality outside small-molecule repurposing
+R5	gtopdb_type	Peptide	probe	peptide tool: a probe unless approved
+R6	catalogue_status	tool_probe	probe	catalogue origin tool_probe
+R7	catalogue_status	approved_any_source	candidate	approved in any source and not another rule
+R8	catalogue_status	clinical_candidate	candidate	clinical stage and not another rule

@@ -1,0 +1,5 @@
+name	role	reason	source
+Mg2+	physiological_intervention	Bath magnesium is the manipulation of the state hypothesis and a measured condition of the isolated NMDA-receptor arms (package nmda_composition_discrim, M-N6): a physiological variable, not a reagent	nmda_composition_discrim_20261109 new_measurements M-N6
+Ca2+	physiological_intervention	Extracellular calcium is a recording condition of the same preparation, a physiological variable	same
+Zn2+	physiological_intervention	Tonic extracellular zinc changes the maximal inhibition of triheteromers (D03) and is unmeasured in the slice: a physiological variable that decides how a modulator is read	nmda_composition_discrim_20261109 decisive D03
+octanol	control_or_reagent	A lipophilic alcohol used as a chemical gap-junction uncoupler in the cited papers; the registry type Metabolite is a classification, not its use here (INFERENZA from the use, not read per paper)	generation_it41 search_rows S4; registry type
