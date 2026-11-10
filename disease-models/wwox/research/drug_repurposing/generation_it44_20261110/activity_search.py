@@ -66,9 +66,10 @@ def main():
     ap.add_argument("--types", default=",".join(TYPES)); ap.add_argument("--max-pages", type=int, default=5); ap.add_argument("--refetch", action="store_true")
     a = ap.parse_args(); out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
     croot = Path(os.environ.get("LEGEND_CATALOG_CACHE", DR / "catalog/cache")); idx = target_index(croot); types = tuple(a.types.split(","))
-    rels = list(csv.DictReader(open(a.relations, encoding="utf-8"), delimiter="\t")); act_rows, manifest = [], {}
+    rels = list(csv.DictReader(open(a.relations, encoding="utf-8"), delimiter="\t")); act_rows, manifest, symbols = [], {}, {}
     for r in rels:
         for sym in sorted({s.split(":")[0].strip().upper() for s in r["target_symbols"].replace(":down", "").replace(":up", "").split(";") if s.strip()}):
+            symbols[f"{r['relation_id']}:{sym}"] = "TARGETS_FOUND" if any(t[1] in ("SINGLE PROTEIN", "PROTEIN COMPLEX", "PROTEIN FAMILY") for t in idx.get(sym, [])) else "UNRESOLVED_IN_CACHED_INDEX"   # no row for a symbol means unread, never "no compounds"
             for tid, ttype, org, ncomp in idx.get(sym, []):
                 if ttype not in ("SINGLE PROTEIN", "PROTEIN COMPLEX", "PROTEIN FAMILY"): continue
                 rows, cov, files = fetch(tid, types, a.max_pages, a.refetch); manifest[tid] = {"coverage": cov, "files": files, "rows": len(rows)}
@@ -78,7 +79,8 @@ def main():
                         parent_chembl_id=x.get("parent_molecule_chembl_id") or x.get("molecule_chembl_id") or "", name=x.get("molecule_pref_name") or "", type=x.get("standard_type") or "", relation=x.get("standard_relation") or "",
                         value=x.get("standard_value") or "", units=x.get("standard_units") or "", assay_type=x.get("assay_type") or "", assay_organism=x.get("assay_organism") or "", validity=x.get("data_validity_comment") or "",
                         assay_description=(x.get("assay_description") or "")[:160].replace("\t", " ").replace("\n", " "), document=x.get("document_chembl_id") or "", pubmed=x.get("pubmed_id") or "", coverage=cov))
-    if not act_rows: print("no activity rows"); return 1
+    manifest["_symbols"] = symbols
+    if not act_rows: json.dump(manifest, open(out / "activity_manifest.json", "w"), indent=1); print("no activity rows;", {k: v for k, v in symbols.items() if v != "TARGETS_FOUND"}); return 1
     with open(out / "activity_rows.tsv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, list(act_rows[0].keys()), delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(act_rows)
     cat = catalogue_by_chembl(); mol = defaultdict(list)
@@ -99,6 +101,6 @@ def main():
     with open(out / "activity_molecules.tsv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, list(mrows[0].keys()), delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(mrows)
     json.dump(manifest, open(out / "activity_manifest.json", "w"), indent=1)
-    print(len(act_rows), "activity rows;", len(mrows), "molecule x relation rows;", {k: v["coverage"] for k, v in manifest.items()})
+    print(len(act_rows), "activity rows;", len(mrows), "molecule x relation rows;", {k: v["coverage"] for k, v in manifest.items() if k != "_symbols"}, "unresolved symbols:", sorted(k for k, v in symbols.items() if v != "TARGETS_FOUND"))
     return 0
 if __name__ == "__main__": sys.exit(main())

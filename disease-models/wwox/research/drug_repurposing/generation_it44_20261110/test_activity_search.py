@@ -33,6 +33,13 @@ class Offline(unittest.TestCase):
         big = [act(f"CHEMBL_S{i}", "", "IC50", "9", doc="BIGSCREEN") for i in range(250)] + [act("CHEMBL_KEEP", "keep", "EC50", "40", doc="SMALLDOC")]
         m = {x["parent_chembl_id"]: x for x in self.run_path([page(big)])}
         self.assertEqual(m["CHEMBL_S1"]["read_state"], "SCREEN_DEPOSIT"); self.assertEqual(m["CHEMBL_KEEP"]["read_state"], "OK")
+    def test_symbol_without_target_is_unread_not_empty(self):
+        tmp = Path(tempfile.mkdtemp()); (tmp / "cc/chembl").mkdir(parents=True)
+        with gzip.open(tmp / "cc/chembl/targets.jsonl.gz", "wt") as f: f.write("")
+        (tmp / "rel.tsv").write_text("relation_id\ttarget_symbols\nSX\tNOSUCHGENE\n")
+        env = dict(os.environ, LEGEND_CATALOG_CACHE=str(tmp / "cc"), LEGEND_ACTIVITY_CACHE=str(tmp / "act"))
+        subprocess.run([sys.executable, str(HERE / "activity_search.py"), "--relations", str(tmp / "rel.tsv"), "--out", str(tmp / "out")], env=env, capture_output=True, text=True)
+        self.assertEqual(json.load(open(tmp / "out/activity_manifest.json"))["_symbols"], {"SX:NOSUCHGENE": "UNRESOLVED_IN_CACHED_INDEX"})
     def test_unnamed_molecule_without_catalogue_row_is_status_none(self):
         m = self.run_path([page([act("CHEMBL_ZZ_NOT_IN_CATALOGUE", "", "Ki", "5", atype="B")])]); self.assertEqual((m[0]["catalogue_status"], m[0]["n_functional"]), ("none", "0"))
 
