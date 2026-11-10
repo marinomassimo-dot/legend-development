@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-10T00:58:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_present",
+  "limitations": "not_present"
+ },
+ "event_at": "2026-11-10T01:06:00Z",
+ "event_id": "FTR-20261110-17395332-83",
+ "evidence_basis": [
+  "Abstract only: not open access. The abstract is general and does not name Wwox.",
+  "verbatim_locator | proposition: gene targeting by homologous recombination can leave background mutations | Abstract | \"we have found that this is not the case\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/fly_wwox_feasibility_it41_20261110/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/fly_wwox_feasibility_it41_20261110/output/decisive.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "230ea0b388355fd9303e25bb4886cb44edcd98ab4c21823cf321c26615615418",
+ "source_kind": "abstract",
+ "source_locator": "PubMed abstract via NCBI efetch, 2026-11-10",
+ "study_id": {
+  "doi": "10.1016/j.tig.2007.03.007",
+  "pmid": "17395332"
+ },
+ "workflow": "IT41 light queue fly Wwox feasibility, producer ic-p, task ORCH-IT41-20261109, correction pass after the blind audit. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
