@@ -1,10 +1,11 @@
-event_id	pmid	evidence_depth	prior_receipt	validated_ok
-FTR-20261110-37817426-91	37817426	partial_fulltext_read	null	yes
-FTR-20261110-40767837-91	40767837	partial_fulltext_read	null	yes
-FTR-20261110-36642931-91	36642931	partial_fulltext_read	null	yes
-FTR-20261110-25728572-91	25728572	partial_fulltext_read	null	yes
-FTR-20261110-34493631-91	34493631	abstract_only	null	yes
-FTR-20261110-10196581-91	10196581	abstract_only	null	yes
-FTR-20261110-9143010-91	9143010	abstract_only	null	yes
-FTR-20261110-39892986-91	39892986	abstract_only	null	yes
-FTR-20261110-42976542-91	42976542	abstract_only	null	yes
+event_id	pmid	evidence_depth	prior_receipt	validated_ok	note
+FTR-20261110-37817426-91	37817426	partial_fulltext_read	null	yes	source_fingerprint null: main text read through the PMC full-text tool and not saved as a file, so no digest of that copy exists (supplement bytes and Fig 2 were saved but are not the reading copy)
+FTR-20261110-40767837-91	40767837	partial_fulltext_read	null	yes	source_fingerprint = SHA-256 of the copy read (kept outside the repository)
+FTR-20261110-36642931-91	36642931	partial_fulltext_read	null	yes	source_fingerprint null: full text read through the PMC full-text tool and not saved as a file, so no digest of that copy exists
+FTR-20261110-25728572-91	25728572	partial_fulltext_read	null	yes	source_fingerprint = SHA-256 of the copy read (kept outside the repository)
+FTR-20261110-34493631-91	34493631	abstract_only	null	yes	
+FTR-20261110-10196581-91	10196581	abstract_only	null	yes	
+FTR-20261110-9143010-91	9143010	abstract_only	null	yes	
+FTR-20261110-39892986-91	39892986	abstract_only	null	yes	
+FTR-20261110-42976542-91	42976542	abstract_only	null	yes	
+FTR-20261110-11c8f1d78b91-91	none (doi 10.1038/npp.2017.266)	abstract_only	null	yes	no PMID; event id uses a DOI hash; abstract only

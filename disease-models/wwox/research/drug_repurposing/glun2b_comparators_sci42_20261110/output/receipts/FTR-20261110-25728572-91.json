@@ -28,9 +28,9 @@
  "prior_receipt": null,
  "record_kind": "contemporaneous_receipt",
  "reread_reason": "first_read",
- "source_fingerprint": null,
+ "source_fingerprint": "7d450c2fcdc3dae40b2fb3cb71c7498f0b1b3d5f2e90b4f382e602ecfc8c7bf1",
  "source_kind": "fulltext_remote",
- "source_locator": "PMC4368485 author manuscript through NCBI efetch db=pmc on 2026-11-10; no figure image or supplement in the public open-data bucket for this record; bytes not saved in the repository",
+ "source_locator": "PMC4368485 author manuscript through NCBI efetch db=pmc on 2026-11-10; no figure image or supplement in the public open-data bucket for this record; the copy read was kept outside the repository and its SHA-256 is the source_fingerprint",
  "study_id": {
   "doi": "10.1016/j.neuron.2015.02.008",
   "pmid": "25728572"

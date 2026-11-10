@@ -9,18 +9,20 @@
  "BASELINE": "main f7305230 (development/main same). Worktree .claude/worktrees/sci42, branch task/sci42. IT42 orchestrator session has its own worktree it42 (not touched).",
  "CURRENT_PACKAGE": {
   "id": "S4",
-  "state": "blind verifier dispatching",
-  "delegate_active": "verifier og-v (sonnet/high requested)",
-  "updated": "2026-11-10T07:54:32Z"
+  "state": "verifier recheck running",
+  "delegate_active": "verifier og-v (resumed)",
+  "updated": "2026-11-10T08:13:36Z"
  },
- "RESUME": "CHECKPOINT: S1 producer done (71 turns sonnet/medium read back). S3_design.md written. Blind verifier og-v dispatched with VERIFIER_BRIEF.md and verify/items.md; writes verify/audit.md. Next on return: census readback, apply corrections, recheck substantive ones with same verifier (SendMessage), then README/consumer_delta/COST_NOTE, staging receipts copy to research/receipt_staging/sci42/, checks, battery on frozen SHA, landing.",
+ "RESUME": "CHECKPOINT: producer corrections applied; S3 rewritten; verifier recheck of changed rows running (appends ## 10 Recheck to verify/audit.md). Next: census readback of both resumes, fix residuals, then README.md / consumer_delta.md / COST_NOTE.md, copy output/receipts to research/receipt_staging/sci42/ (10 receipts), checks (gate, lint, growth, receipts verify), battery on frozen SHA, task_close + safe_push, message IT42 orchestrator (legend-development-4e).",
  "DECISIONS_TAKEN": [
   "2026-11-10 S0: IT42 orchestrator requested the same onfasprodil/NP10679 package; folded into this mandate (no duplicate); replied with folder and plan. PubMed identified starting points: 34493631 (NP10679 discovery pharmacology), 39892986 (SAH mouse), 37817426 (MIJ821 first-in-human healthy volunteers), 42976542 (MIJ821 analogues med-chem) \u2014 verified by producer.",
-  "2026-11-10 S1->S3: I also checked the PMC open-data bucket for PMC8626636 (34493631): absent (list returned 0 keys); PMC13095441 (39933230) and 39892986 return no full text via the PubMed tool. No equivalent route retried. S3 design written by the Orchestrator without an agent; the on-target pH-signature use of NP10679 is my IPOTESI and is submitted to the verifier as item S3-3."
+  "2026-11-10 S1->S3: I also checked the PMC open-data bucket for PMC8626636 (34493631): absent (list returned 0 keys); PMC13095441 (39933230) and 39892986 return no full text via the PubMed tool. No equivalent route retried. S3 design written by the Orchestrator without an agent; the on-target pH-signature use of NP10679 is my IPOTESI and is submitted to the verifier as item S3-3.",
+  "2026-11-10 S4: audit found D08 perimeter error (ACNP 2017 W168 abstract gives 21 nM pH 6.9 and 130 nM pH 7.6 for NP10679; same developer); A4 'specificity signature' not supported as written and replaced by a drug-by-pH interaction against ifenprodil and d-APV; roles unchanged pending recheck (onfasprodil: informazione insufficiente; NP10679: pista subordinata a una premessa)."
  ],
  "DELEGATIONS": [
   "S1 producer og-p: asked sonnet/medium; read back medium x71; 71 turns; output 79,875; cache read 10,398,840; peak 254,352; sources newly read 4 at partial full text + patent text + ChEMBL records; 5 abstract only; 9 staged receipts validated; 34493631 unreachable by 6 routes (stopped, no evasion).",
-  "S4 verifier og-v: asked sonnet/high; readback pending."
+  "S4 verifier og-v: asked sonnet/high; readback pending.",
+  "S4 verifier og-v first pass: asked sonnet/high; read back high x61; 61 turns; output 95,031; cache read 10,356,493; peak 281,879. Producer resume for corrections: 13 tool uses (census readback to be added with the final figures)."
  ],
  "ESCALATIONS": [],
  "STOP_LOG": [],
@@ -44,15 +46,15 @@
     },
     {
      "step": "S2-S3 role per compound, discriminating minimum design and prediction matrix (in producer scope)",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "S3_design.md written by orchestrator (no agent); roles are producer proposals pending verification"
+     "evidence": "S3_design.md rewritten after audit (A4 drug-by-pH interaction, A6 instrument = IT41 AMPA/kainate pair, start set 1-6, design assumptions listed)"
     },
     {
      "step": "S4 independent blind verification, corrections, recheck of substantive ones, first complete delivery",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "verifier first pass done (16 propositions: 10 supported, 6 partly, 0 not supported; S3-3 not supported as stated; 41 evidence rows: 39 correct, 2 defective quotes); corrections applied by producer (resumed, 13 tool uses) and by orchestrator (S3); recheck dispatched to same verifier"
     },
     {
      "step": "S4b delivery: README, consumer_delta, COST_NOTE, staged receipts, checks, battery on frozen SHA, landing",

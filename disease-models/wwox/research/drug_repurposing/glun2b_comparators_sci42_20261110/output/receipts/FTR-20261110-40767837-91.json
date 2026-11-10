@@ -28,9 +28,9 @@
  "prior_receipt": null,
  "record_kind": "contemporaneous_receipt",
  "reread_reason": "first_read",
- "source_fingerprint": null,
+ "source_fingerprint": "6ffe6b71130ddc1258b452dedb3e6851ac75cb433329aaa6236f8d55b6f5911f",
  "source_kind": "fulltext_remote",
- "source_locator": "Publisher page of the article reached through the DOI redirect with plain curl on 2026-11-10, page text converted locally; supplementary appendices not exposed; bytes not saved in the repository",
+ "source_locator": "Publisher page of the article reached through the DOI redirect with plain curl on 2026-11-10, page text converted locally; supplementary appendices not exposed; the copy read was kept outside the repository and its SHA-256 is the source_fingerprint",
  "study_id": {
   "doi": "10.4088/JCP.23m15246",
   "pmid": "40767837"
