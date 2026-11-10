@@ -41,7 +41,7 @@ add = "\n\n> **Update 2026-11-10 (IT42, SCI42):** the last row of the table abov
 if "Update 2026-11-10 (IT42, SCI42)" not in s: s = s.rstrip() + add; log.append(("comparisons", "update"))
 q.write_text(s)
 # row 4: INV-05 next_test
-NT = T + "Report bath pH (and bicarbonate or HEPES) as a measured value with magnesium and potassium; read the percent of evoked synaptic charge removed for every drug so the matched drive-reduction control can be matched; a pH-dependent GluN2B tool is considered only after the tissue pH is measured, with the ifenprodil-site tool and d-APV at the same two pH values."
+NT = T + "Report bath pH (and the buffer system) as a measured value with magnesium and potassium; read the percent of evoked synaptic charge removed for every drug so the matched drive-reduction control can be matched; a pH-dependent GluN2B tool is considered only after the tissue pH is measured, with the ifenprodil-site tool and d-APV at the same two pH values."
 for f in ("ranking_it8_p9_20261029/investigations_it20.tsv", "ranking_it8_p9_20261029/investigations.tsv"):
     rows = rd(f); h = rows[0]
     for r in rows[1:]:

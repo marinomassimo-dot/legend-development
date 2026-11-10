@@ -287,10 +287,6 @@
   "src": "en",
   "text": "Measure the axonal activity-dependent myelination signal in the WWOX-deficient system against an isogenic control, before any compound; then decide whether the class is orderable. IT29: add an arm in Wwox-null precursor monoculture or the Wwox-null neuron co-culture, with a lipid-synthesis comparator beside the muscarinic one, crossed with a neuronal-activity manipulation. [IT36] existing co-culture separates neither contact or substrate integrity nor a soluble product; peripheral seizure-free DRG neurons; add a fixed-neuron arm and a factor arm."
  },
- "2ab4eaeabcf2": {
-  "src": "en",
-  "text": "A second scaffold (sharing the hydroxyaryl-ethanolamine arrangement of ifenprodil-type ligands: inference from structure) read after the ifenprodil-site tool, to ask whether a different scaffold removes the same measured percent of the isolated NMDA-receptor current."
- },
  "2bbdf11dd6e5": {
   "src": "it",
   "text": "Capire se vigabatrin o CPP-115 aggiungono danno alla mielina in un modello giovanile privo di Wwox."
@@ -555,10 +551,6 @@
   "src": "en",
   "text": "E3 - card reviewed with assertions; no WWOX-side result read beyond abstract"
  },
- "4c4bf97fc4c2": {
-  "src": "en",
-  "text": "Repeat the slice burst assay with the magnesium concentration reported, a d-APV arm and a GluN2B NAM arm, each at matched measured NMDAR-current reduction (one ifenprodil-site GluN2B NAM; a second NAM of the same site controls chemotype only, and only if its own maximum on triheteromers is known (ifenprodil 32 percent, radiprodil 45 percent in rat: each molecule has its own); compare with d-APV only up to the NAM's measured removable share; measure the d-APV abolition threshold x and the NAM removable fraction first), vehicle time-matched, animal as the unit; memantine only afterwards, with the magnesium concentration and holding voltage stated, beside the tool compound, and the untreated same-genotype comparator. [IT40] B6 Report bath magnesium, K+, temperature and blockers actually present as measured values; use a within-slice paired design; add an AMPA/kainate block arm verified by the fast EPSC (abolition alone is not informative, because loss of magnesium relief would abolish an NMDAR-regenerative burst too); add a matched-effect control read on at least two metrics with a receptor-agnostic release-reducing control; add a GABA-A arm because the sIPSC amplitude is halved; state the order of application and washout as part of the design. [SCI42] Report bath pH (and bicarbonate or HEPES) as a measured value with magnesium and potassium; read the percent of evoked synaptic charge removed for every drug so the matched drive-reduction control can be matched; a pH-dependent GluN2B tool is considered only after the tissue pH is measured, with the ifenprodil-site tool and d-APV at the same two pH values."
- },
  "4d6578e29718": {
   "src": "en",
   "text": "INV-13"
@@ -730,6 +722,10 @@
  "6443c1796cd7": {
   "src": "en",
   "text": "Whether the absence is a catalogue coverage limit, a target-listing limit, or a genuine absence of pharmacology. This package did not separate those three."
+ },
+ "64c806f2ad2b": {
+  "src": "en",
+  "text": "Repeat the slice burst assay with the magnesium concentration reported, a d-APV arm and a GluN2B NAM arm, each at matched measured NMDAR-current reduction (one ifenprodil-site GluN2B NAM; a second NAM of the same site controls chemotype only, and only if its own maximum on triheteromers is known (ifenprodil 32 percent, radiprodil 45 percent in rat: each molecule has its own); compare with d-APV only up to the NAM's measured removable share; measure the d-APV abolition threshold x and the NAM removable fraction first), vehicle time-matched, animal as the unit; memantine only afterwards, with the magnesium concentration and holding voltage stated, beside the tool compound, and the untreated same-genotype comparator. [IT40] B6 Report bath magnesium, K+, temperature and blockers actually present as measured values; use a within-slice paired design; add an AMPA/kainate block arm verified by the fast EPSC (abolition alone is not informative, because loss of magnesium relief would abolish an NMDAR-regenerative burst too); add a matched-effect control read on at least two metrics with a receptor-agnostic release-reducing control; add a GABA-A arm because the sIPSC amplitude is halved; state the order of application and washout as part of the design. [SCI42] Report bath pH (and the buffer system) as a measured value with magnesium and potassium; read the percent of evoked synaptic charge removed for every drug so the matched drive-reduction control can be matched; a pH-dependent GluN2B tool is considered only after the tissue pH is measured, with the ifenprodil-site tool and d-APV at the same two pH values."
  },
  "660538ae768f": {
   "src": "en",
@@ -926,6 +922,10 @@
  "8011e2c5a641": {
   "src": "en",
   "text": "No comparison before an inactivation parameter is available; start from the supply-side question of V11."
+ },
+ "801774f5754a": {
+  "src": "en",
+  "text": "A second scaffold (sharing a structural arrangement with ifenprodil-type ligands: inference from structure) read after the ifenprodil-site tool, to ask whether a different scaffold removes the same measured percent of the isolated NMDA-receptor current."
  },
  "80327935bd99": {
   "src": "en",

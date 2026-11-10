@@ -1,7 +1,7 @@
 {
- "072155990026": {
+ "64c806f2ad2b": {
   "mode": "NEW",
-  "english": "The pH of the recorded tissue is unmeasured; ifenprodil may itself be pH-sensitive (older abstracts) and a related clinical-stage modulator is declared not to be (a 2015 table not read).",
+  "english": "Repeat the slice burst assay with the magnesium concentration reported, a d-APV arm and a GluN2B NAM arm, each at matched measured NMDAR-current reduction (one ifenprodil-site GluN2B NAM; a second NAM of the same site controls chemotype only, and only if its own maximum on triheteromers is known (ifenprodil 32 percent, radiprodil 45 percent in rat: each molecule has its own); compare with d-APV only up to the NAM's measured removable share; measure the d-APV abolition threshold x and the NAM removable fraction first), vehicle time-matched, animal as the unit; memantine only afterwards, with the magnesium concentration and holding voltage stated, beside the tool compound, and the untreated same-genotype comparator. [IT40] B6 Report bath magnesium, K+, temperature and blockers actually present as measured values; use a within-slice paired design; add an AMPA/kainate block arm verified by the fast EPSC (abolition alone is not informative, because loss of magnesium relief would abolish an NMDAR-regenerative burst too); add a matched-effect control read on at least two metrics with a receptor-agnostic release-reducing control; add a GABA-A arm because the sIPSC amplitude is halved; state the order of application and washout as part of the design. [SCI42] Report bath pH (and the buffer system) as a measured value with magnesium and potassium; read the percent of evoked synaptic charge removed for every drug so the matched drive-reduction control can be matched; a pH-dependent GluN2B tool is considered only after the tissue pH is measured, with the ifenprodil-site tool and d-APV at the same two pH values.",
   "langs": [
    "it",
    "fr",
@@ -9,109 +9,9 @@
    "de"
   ]
  },
- "2ab4eaeabcf2": {
+ "801774f5754a": {
   "mode": "NEW",
-  "english": "A second scaffold (sharing the hydroxyaryl-ethanolamine arrangement of ifenprodil-type ligands: inference from structure) read after the ifenprodil-site tool, to ask whether a different scaffold removes the same measured percent of the isolated NMDA-receptor current.",
-  "langs": [
-   "it",
-   "fr",
-   "es",
-   "de"
-  ]
- },
- "2c352964be29": {
-  "mode": "NEW",
-  "english": "Human-exposure GluN2B negative modulator; site, maximum effect and triheteromer behaviour not measured in any source reached",
-  "langs": [
-   "it",
-   "fr",
-   "es",
-   "de"
-  ]
- },
- "2ffe3a9311d7": {
-  "mode": "NEW",
-  "english": "Phase 1 in healthy adults (partial full text); maximum effect, site, triheteromer and slice data absent; H1 and hERG actions declared.",
-  "langs": [
-   "it",
-   "fr",
-   "es",
-   "de"
-  ]
- },
- "4c4bf97fc4c2": {
-  "mode": "NEW",
-  "english": "Repeat the slice burst assay with the magnesium concentration reported, a d-APV arm and a GluN2B NAM arm, each at matched measured NMDAR-current reduction (one ifenprodil-site GluN2B NAM; a second NAM of the same site controls chemotype only, and only if its own maximum on triheteromers is known (ifenprodil 32 percent, radiprodil 45 percent in rat: each molecule has its own); compare with d-APV only up to the NAM's measured removable share; measure the d-APV abolition threshold x and the NAM removable fraction first), vehicle time-matched, animal as the unit; memantine only afterwards, with the magnesium concentration and holding voltage stated, beside the tool compound, and the untreated same-genotype comparator. [IT40] B6 Report bath magnesium, K+, temperature and blockers actually present as measured values; use a within-slice paired design; add an AMPA/kainate block arm verified by the fast EPSC (abolition alone is not informative, because loss of magnesium relief would abolish an NMDAR-regenerative burst too); add a matched-effect control read on at least two metrics with a receptor-agnostic release-reducing control; add a GABA-A arm because the sIPSC amplitude is halved; state the order of application and washout as part of the design. [SCI42] Report bath pH (and bicarbonate or HEPES) as a measured value with magnesium and potassium; read the percent of evoked synaptic charge removed for every drug so the matched drive-reduction control can be matched; a pH-dependent GluN2B tool is considered only after the tissue pH is measured, with the ifenprodil-site tool and d-APV at the same two pH values.",
-  "langs": [
-   "it",
-   "fr",
-   "es",
-   "de"
-  ]
- },
- "5098a5a16248": {
-  "mode": "NEW",
-  "english": "Up: a primary source placing it at the ifenprodil site with a clearly different triheteromer maximum, or at a different documented site that gives a different comparison. Down: none reached; it stays a conditional second scaffold after the tool.",
-  "langs": [
-   "it",
-   "fr",
-   "es",
-   "de"
-  ]
- },
- "825be1bb0bc3": {
-  "mode": "NEW",
-  "english": "Measure the tissue pH; if this compound is used, run the ifenprodil-site tool and the full competitive antagonist at the same two controlled pH values, with its recombinant maximum at each pH known first.",
-  "langs": [
-   "it",
-   "fr",
-   "es",
-   "de"
-  ]
- },
- "8705174d767d": {
-  "mode": "NEW",
-  "english": "None found by open routes (a patent and two clinical papers read; an analogue paper not reached); the measurement is the removable fraction in the isolated NMDA-receptor current, after the ifenprodil-site tool.",
-  "langs": [
-   "it",
-   "fr",
-   "es",
-   "de"
-  ]
- },
- "cc805c25b5f7": {
-  "mode": "NEW",
-  "english": "Two sponsor-authored clinical papers read at partial full text; the only potency is one patent calcium-flux IC50 (8.3 nM) on NR1/NR2B cells without Mg2+, with no stated Zn2+ chelator or pH.",
-  "langs": [
-   "it",
-   "fr",
-   "es",
-   "de"
-  ]
- },
- "dd1eb579e2d6": {
-  "mode": "NEW",
-  "english": "pH-dependent GluN2B modulator: a pH-linked comparison, subordinate to a measured tissue pH; not a candidate",
-  "langs": [
-   "it",
-   "fr",
-   "es",
-   "de"
-  ]
- },
- "ddbea3abe552": {
-  "mode": "NEW",
-  "english": "Up: a measured tissue pH in the range where the dependence is large, with a drug-by-pH interaction larger than for the ifenprodil-site tool and the full antagonist at the same two pH values. Down: a tissue pH near physiological, or an interaction not larger than theirs. A burst effect that follows the pH is not a specificity signature.",
-  "langs": [
-   "it",
-   "fr",
-   "es",
-   "de"
-  ]
- },
- "fe2c014ac74e": {
-  "mode": "NEW",
-  "english": "Potency is pH-dependent (declared about 6-fold; IC50 21 and 130 nM at pH 6.9 and 7.6, abstract level, same developer); for the series prototype the maximum moved little (76 to 83 percent, measured in oocytes).",
+  "english": "A second scaffold (sharing a structural arrangement with ifenprodil-type ligands: inference from structure) read after the ifenprodil-site tool, to ask whether a different scaffold removes the same measured percent of the isolated NMDA-receptor current.",
   "langs": [
    "it",
    "fr",
