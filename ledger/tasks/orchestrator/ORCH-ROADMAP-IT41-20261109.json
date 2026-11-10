@@ -8,12 +8,12 @@
  "START_UTC": "2026-11-09T22:00:00Z",
  "RESUME": {
   "checkpoint": {
-   "last_verified_result": "IT40 battery on 1dd89027 FAIL (3 own suites, fixed); IT40 candidate 560601df (task/it40) battery running in /tmp/bat_it40b, wait by PID 404329; origin/development main 38a5f73b at last fetch",
-   "first_incomplete": "IT40 P12: battery result, publish with --expect-sha (include Harness e53950a3 already merged), CI, site; then IT41 P0",
-   "files_to_open": "ledger/tasks/orchestrator/ORCH-ROADMAP-IT40-20261109.json; disease-models/wwox/research/drug_repurposing/generation_it40_20261109/README.md and next_investigations_it40.md",
-   "active_processes": "battery PID 404329 (bat_it40b); cron 9893cd67 hourly :17 session-only (not durable; expires in 7 days; fires only when idle)",
-   "real_dependencies": "IT41 P5 needs Harness identity delivery; P10 HIF1A-BNIP3 needs the science package; neither blocks P2-P4, P6",
-   "next_step": "wait for battery; IT41 P2 case definition on fixed IT40 refs can be drafted meanwhile in an isolated folder"
+   "last_verified_result": "view check/package/audit PASS on the IT41 pages; release_surface, runner_verdict, test_stage_it39/40/41 OK locally; battery pending on the frozen candidate",
+   "first_incomplete": "P12: battery on the frozen SHA, publish with --expect-sha, CI, site, final report",
+   "files_to_open": "generation_it41_20261109/README.md, measure_it41.tsv, compound_view.tsv",
+   "active_processes": "cron 9893cd67 hourly :17 (session-only)",
+   "real_dependencies": "HIF1A-BNIP3 package from the science session (optional, not blocking)",
+   "next_step": "run the battery in a fresh no-hardlinks clone, wait by PID"
   }
  },
  "AUTHORISED_QUEUE_20261108": {
@@ -23,9 +23,9 @@
    "steps": [
     {
      "step": "Reconcile IT40 from record, artefacts and the actual remote main before attributing results; keep FAILs by SHA",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "IT40 reconciled from the record, artefacts and the remote: 560601df battery PASS WITH SKIPS (224 targets, 11 skipped), 1dd89027 FAIL kept; published 31919734, release-gate #625 and shareable-view #24 success, site 200 x5 with the IT40 block live; IT40 record COMPLETE. IT40 reference figures re-read, not carried."
     }
    ]
   },
@@ -34,9 +34,9 @@
    "steps": [
     {
      "step": "Collaboration: Orchestrator generation/priorities/dashboard; Harness identity+reusable links+defects; science: AMPA pharmacological qualification, then HIF1A-BNIP3",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Orchestrator: generation, comparison, priorities, dashboard. Harness delivered identity (e2b1faaf in 9d58c69d, then ce75de83); science delivered package A (562b8800 in 9d58c69d); HIF1A-BNIP3 not delivered at the time of this record. No file edited by two sessions; hypothesis_packages.tsv conflict resolved by taking Harness's row."
     }
    ]
   },
@@ -45,9 +45,9 @@
    "steps": [
     {
      "step": "Four contrasting cases with question, alternatives, universe, necessary conditions, decision (fixed before searching)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "generation_it41_20261109/cases.md fixed before the search (four cases, with question, rivals, universe, conditions, decision); the search results did not rewrite it."
     }
    ]
   },
@@ -56,9 +56,9 @@
    "steps": [
     {
      "step": "Executable path observation->rivals->conditional action->catalogue search->comparison->next experiment; premise kept; identity/action/context separated",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "relations_it41.tsv + action_search.py + conditional proposals + comparison + compound view; premise kept in each conditional record; identity/action/context separated; generation path calls the reader and the identity table (consume_reader.py, test)."
     }
    ]
   },
@@ -67,9 +67,9 @@
    "steps": [
     {
      "step": "Complete action-and-context-guided search beyond known names; distinct molecules, salts, stereoisomers; maximum effect vs potency; exposure; limits",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "action_search.py over ChEMBL mechanisms and the GtoPdb interaction table (876 source rows over six relations, no named-compound restriction); S1 55 distinct molecules classified by site, action and assay text; onfasprodil and NP10679 emerged; a registry row under GluN2B whose assay text names GluN2C kept out of GluN2B evidence."
     }
    ]
   },
@@ -78,9 +78,9 @@
    "steps": [
     {
      "step": "Consume Harness identity delivery: GYKI 52466/53784, Ro 25-6981, ifenprodil, Brilliant Blue FCF; qualified catalogue additions via the existing path",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Harness identity delivery consumed (GYKI 52466 vs 53655 distinct structures; Ro 25-6981 and ifenprodil measured-activity rows, no curated mechanism; Brilliant Blue FCF nameless in ChEMBL); no analogue substituted; no catalogue edit by the Orchestrator."
     }
    ]
   },
@@ -89,9 +89,9 @@
    "steps": [
     {
      "step": "Explicit comparisons (reference, alternative, functional control, mechanism-separating control); INV-05 plateau rule; minimum interpretable experiment",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "comparisons_it41.md (four elements, fixed outcome readings, INV-05 plateau rule, minimum interpretable experiment with dependent steps); science package A applied (10 of 10 proposals, [IT41a]); 6 receipts recorded (1,532 to 1,538)."
     }
    ]
   },
@@ -100,9 +100,9 @@
    "steps": [
     {
      "step": "Measure contribution: previous path vs simple baseline vs new, ablation, cost/time; separate new-for-LEGEND / new combination / known / novelty vs literature",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "measure_it41.tsv: previous path vs simple baseline vs IT41 path on the same case; ablation described; labels known reference / new combination / new for LEGEND; literature novelty not asserted; no predictive claim."
     }
    ]
   },
@@ -111,9 +111,9 @@
    "steps": [
     {
      "step": "Independent verification of decisive conclusions with originals; re-check corrections on modified rows only",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "independent sonnet/high verifier with originals (generation_it41_20261109/verify/VERDICTS.md): seven claims all PARTLY, all corrected (single registry value, assembly-dependent maximum, per-molecule bound, DQP-1105 wording, direction rule for inverse agonists, merged duplicates, unstated transfers)."
     }
    ]
   },
@@ -122,9 +122,9 @@
    "steps": [
     {
      "step": "Dashboard: short ordered view of compounds and hypotheses with distinguishing marks, five languages, phone-readable, published site; diagnose any licence omissions",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "compound view of ten items in research order with kinds marked, five languages, both editions; shareable edition omits names and registry-derived values (fields name_full and registry_note; ChEMBL CC BY-SA 3.0, GtoPdb ODbL / CC BY-SA 4.0); audit PASS; publication and site check pending in P12."
     }
    ]
   },
@@ -133,9 +133,9 @@
    "steps": [
     {
      "step": "Investigations updated (question, decision, in-silico, new measure, reopen condition, priority); HIF1A-BNIP3 package if delivered; two short collaboration questions (fly assay feasibility; public variant case review) without private correspondence",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "INV-05 and INV-18 feasibility cells carry decision, in-silico work, new measure, reopen condition and priority; two short research questions (fly assay; public case review) in collab_questions_it41.md with no private correspondence; HIF1A-BNIP3 package not delivered, not consumed."
     }
    ]
   },
@@ -144,9 +144,9 @@
    "steps": [
     {
      "step": "Queue: second biological family; packages consumable without code lists; one catalogue gap; radar signal only if it answers an observed gap; brief Dream pass",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Second family by table only (S5 GABA-A, S6 chloride gradient: no code change; KCC2 rows are inhibitors, no enhancer in the table); new packages consumed through hypothesis_packages.tsv; a catalogue gap is documented (ifenprodil / Ro 25-6981 / Brilliant Blue FCF) by Harness's declarations, not by me; radar not used (no observed gap); brief Dream pass in the self-evaluation."
     }
    ]
   },
