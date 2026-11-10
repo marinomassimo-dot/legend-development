@@ -1,1 +1,102 @@
-{}
+{
+ "1f62f4468e41": {
+  "mode": "NEW",
+  "english": "Wet-lab measurement on isogenic human neural lines; not executable from this module. Possible in silico first: recompute the neuron-library scale and the EGR1 observation (IPOTESI) on the deposits. Reopen if a WWOX-deficient neural BNIP3 protein or flux datum is published. Priority: below the ten-row line; it gates three proposals, not the module.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "330c78175c31": {
+  "mode": "NEW",
+  "english": "Known in the WWOX system: the organoid transcript observation; the premise question is restated from the IT41 package B.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "35528d7f9a37": {
+  "mode": "NEW",
+  "english": "INV-19",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "4619c9114dc4": {
+  "mode": "NEW",
+  "english": "WWOX-system: organoid transcript +0.46 log2, not robust; the raw neuron-library sign is a scale artefact; no protein or flux. Non-WWOX neural: protein up in hypoxia with glucose and down in oxygen-glucose deprivation in HT22, with BNIP3 loss harmful in the deprivation arm; rat epilepsy HIF-inhibitor test lowered HIF-1alpha and raised BNIP3 (hif1a_bnip3_it41_20261109, partial full texts, one embargoed).",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "62055735b086": {
+  "mode": "NEW",
+  "english": "Three generated proposals (IT21P2-0001 to 0003) carry a HIF1A-to-BNIP3 chain; until now they showed no premise of their own and would have read as the HIF1A-to-HK2 premise. The package finds the transcript signal small and partly an artefact, no protein or flux measurement, and a context-dependent direction: the correct output today is an abstention with this question.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "b7bcebea37ce": {
+  "mode": "NEW",
+  "english": "Premise measurement: transcript only; protein and role not measured. (no ranked unit, so no evaluation depth applies: this is not a depth of zero)",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "bccb9591cef8": {
+  "mode": "NEW",
+  "english": "Queried on 2026-11-09 to 2026-11-10 in the package hif1a_bnip3_it41_20261109 (search of this module and open sources, not a statement about the literature).",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "bfd77a0d95dc": {
+  "mode": "NEW",
+  "english": "Whether BNIP3 is raised at protein level in WWOX-deficient neural cells, whether the rise is HIF-driven, HIF-independent or a culture-state artefact, and whether the function is protective or harmful there; until then no pharmacological direction at BNIP3 is sustainable and no compound is proposed.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "c668d9eb574e": {
+  "mode": "NEW",
+  "english": "In isogenic WWOX-deficient against add-back human neural cells at matched oxygen: does BNIP3 protein rise, does it fall on HIF1A and EPAS1 knockdown, and does BNIP3 knockdown make survival, ROS and membrane potential better or worse?",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ },
+ "cc42c8caccec": {
+  "mode": "NEW",
+  "english": "Step 1, no compound: BNIP3 and BNIP3L protein and mRNA from the same lysates, WWOX-deficient against add-back human neural cells at 21, 5 and 1 percent oxygen; step 2: HIF1A and EPAS1 knockdown with HIF target readouts; step 3: BNIP3 knockdown with survival, ROS and membrane potential. The full list of measurements is in the package table of the HIF1A-to-BNIP3 delivery.",
+  "langs": [
+   "it",
+   "fr",
+   "es",
+   "de"
+  ]
+ }
+}

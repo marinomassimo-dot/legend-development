@@ -373,7 +373,8 @@
   "No activity annotation in the compound database, a mustard alert and no CNS data for the one named compound.",
   "The organoid glycolytic genes also fall with culture time (maturity or composition).",
   "IT12 P2-P47T: the selective hypoxia-response pattern of the human organoid is not reproduced in adult P47T forebrain or in the four P17 deletion contrasts (transcripts; partial-loss allele; seizure, activity and composition rivals not excluded).",
-  "Reports of HIF-linked calcium-channel expression are isoform- and context-specific (Cav3.2 up in three, Cav3.1 down in one; rat cardiac, PC12 and spinal systems, abstract level); no WWOX to T-type link in PubMed title, abstract or MeSH on two routes; full text not searched."
+  "Reports of HIF-linked calcium-channel expression are isoform- and context-specific (Cav3.2 up in three, Cav3.1 down in one; rat cardiac, PC12 and spinal systems, abstract level); no WWOX to T-type link in PubMed title, abstract or MeSH on two routes; full text not searched.",
+  "In the one neural in-vivo test of a HIF inhibitor read (rat epilepsy, abstract level) HIF-1alpha fell and BNIP3 rose with a lower autophagy marker, and in HT22 cells BNIP3 loss was harmful in oxygen-glucose deprivation; both are non-WWOX, so the direction of any BNIP3-directed action is unresolved."
  ],
  "bridge_gaps_exposed": [
   "The WWOX-side rows are non-neural or transcript-level and the compound rows are cancer-model abstracts: no comparison is formed where target, endpoint and every context dimension must match."

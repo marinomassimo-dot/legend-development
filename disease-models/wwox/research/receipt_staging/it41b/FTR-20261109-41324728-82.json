@@ -18,7 +18,7 @@
  "evidence_basis": [
   "Re-read for a new question (direction of BNIP3 under HIF-1 inhibition and in epilepsy); Results and Fig 9 viewed; Methods not re-read; this is a partial re-read inside an earlier complete read",
   "verbatim_locator | proposition: BNIP3 is lower in epileptic rat hippocampus where HIF-1alpha is higher | Results | \"while BNIP3 was significantly repressed (p < 0.001, p < 0.05, respectively, Fig. 6D) in the Hip of EP rats\"",
-  "verbatim_locator | proposition: HIF-1 inhibition raised BNIP3 | Results | \"BNIP3 began to increase immediately after HIF-1α inhibition, with a significant difference relative to the control observed at 24 h\""
+  "verbatim_locator | proposition: HIF-1 inhibition raised BNIP3 | Results | \"BNIP3 began to increase immediately after HIF-1\u03b1 inhibition, with a significant difference relative to the control observed at 24 h\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

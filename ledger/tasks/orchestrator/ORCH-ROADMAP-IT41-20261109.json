@@ -8,7 +8,7 @@
  "START_UTC": "2026-11-09T22:00:00Z",
  "RESUME": {
   "checkpoint": {
-   "last_verified_result": "view check/package/audit PASS on the IT41 pages; release_surface, runner_verdict, test_stage_it39/40/41 OK locally; battery pending on the frozen candidate",
+   "last_verified_result": "battery c557978e FAIL (test_repurposing_view: DeepenedCasesShareable, an injected-name test broken by the spelling d-AP5 on the shareable page; log kept /tmp/bat_it41_c557978e_FAIL.log); fixed (spelling), class re-run OK; package B consumed; new candidate to be frozen and battery-tested",
    "first_incomplete": "P12: battery on the frozen SHA, publish with --expect-sha, CI, site, final report",
    "files_to_open": "generation_it41_20261109/README.md, measure_it41.tsv, compound_view.tsv",
    "active_processes": "cron 9893cd67 hourly :17 (session-only)",
@@ -36,7 +36,7 @@
      "step": "Collaboration: Orchestrator generation/priorities/dashboard; Harness identity+reusable links+defects; science: AMPA pharmacological qualification, then HIF1A-BNIP3",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "Orchestrator: generation, comparison, priorities, dashboard. Harness delivered identity (e2b1faaf in 9d58c69d, then ce75de83); science delivered package A (562b8800 in 9d58c69d); HIF1A-BNIP3 not delivered at the time of this record. No file edited by two sessions; hypothesis_packages.tsv conflict resolved by taking Harness's row."
+     "evidence": "Orchestrator: generation, comparison, priorities, dashboard. Harness delivered identity (e2b1faaf in 9d58c69d, then ce75de83); science delivered package A (562b8800 in 9d58c69d); HIF1A-BNIP3 not delivered at the time of this record. No file edited by two sessions; hypothesis_packages.tsv conflict resolved by taking Harness's row. Package B (HIF1A-BNIP3) landed 52e04148 and was consumed."
     }
    ]
   },
@@ -135,7 +135,7 @@
      "step": "Investigations updated (question, decision, in-silico, new measure, reopen condition, priority); HIF1A-BNIP3 package if delivered; two short collaboration questions (fly assay feasibility; public variant case review) without private correspondence",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "INV-05 and INV-18 feasibility cells carry decision, in-silico work, new measure, reopen condition and priority; two short research questions (fly assay; public case review) in collab_questions_it41.md with no private correspondence; HIF1A-BNIP3 package not delivered, not consumed."
+     "evidence": "INV-05 and INV-18 feasibility cells carry decision, in-silico work, new measure, reopen condition and priority; two short research questions (fly assay; public case review) in collab_questions_it41.md with no private correspondence; HIF1A-BNIP3 package not delivered, not consumed. HIF1A-BNIP3 package B consumed (52e04148): premise rows P11-P14, INV-19 premise measurement, mapping row, K01 packet, PDH need; stage S18 changes exactly three proposals in two columns; 5 receipts recorded (1,543)."
     }
    ]
   },

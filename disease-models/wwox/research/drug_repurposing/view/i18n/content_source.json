@@ -207,6 +207,10 @@
   "src": "en",
   "text": "A decision about one molecule no longer blocks every molecule that shares its target: it travels only as far as its own reason (the molecule's own potency or label stays with it; a refuted premise still closes the arm it belongs to). 69 proposals were blocked by the old rule; 24 stay closed (premise refuted), 45 are released to be judged on their own data, none promoted."
  },
+ "1f62f4468e41": {
+  "src": "en",
+  "text": "Wet-lab measurement on isogenic human neural lines; not executable from this module. Possible in silico first: recompute the neuron-library scale and the EGR1 observation (IPOTESI) on the deposits. Reopen if a WWOX-deficient neural BNIP3 protein or flux datum is published. Priority: below the ten-row line; it gates three proposals, not the module."
+ },
  "1f670c38e9be": {
   "src": "en",
   "text": "Conditional hypothesis: the edge has one muscle origin read at abstract level and the compound side is compiled data; a catalytic-domain mutant of HDAC5 exists in rat neurons for other outputs (PMID 39923817) but none reads SLC2A1 in a human neural cell (no ranked unit, so no evaluation depth applies: this is not a depth of zero)"
@@ -323,6 +327,10 @@
   "src": "en",
   "text": "The assay exists and the compound is carded; this is the control arm the original design omitted."
  },
+ "330c78175c31": {
+  "src": "en",
+  "text": "Known in the WWOX system: the organoid transcript observation; the premise question is restated from the IT41 package B."
+ },
  "33f1d5bb1e2d": {
   "src": "en",
   "text": "Agonist probe for the receptors of thyroid hormone (a clinical-stage analogue, identified by its ChEMBL record below), with liothyronine as the approved comparator"
@@ -338,6 +346,10 @@
  "354174b33207": {
   "src": "en",
   "text": "A concentration window with H3K9me3 up, HIF1alpha unchanged and glycolytic genes down, reproduced by KDM4 knockdown (only if the role of HIF is first shown protective)."
+ },
+ "35528d7f9a37": {
+  "src": "en",
+  "text": "INV-19"
  },
  "356679031808": {
   "src": "en",
@@ -466,6 +478,10 @@
  "4519813edc31": {
   "src": "it",
   "text": "Esperimento già pubblicato da un solo laboratorio; animali e linea non disponibili (non nota). Denominatori presso gli autori delle serie; contatto fuori ambito."
+ },
+ "4619c9114dc4": {
+  "src": "en",
+  "text": "WWOX-system: organoid transcript +0.46 log2, not robust; the raw neuron-library sign is a scale artefact; no protein or flux. Non-WWOX neural: protein up in hypoxia with glucose and down in oxygen-glucose deprivation in HT22, with BNIP3 loss harmful in the deprivation arm; rat epilepsy HIF-inhibitor test lowered HIF-1alpha and raised BNIP3 (hif1a_bnip3_it41_20261109, partial full texts, one embargoed)."
  },
  "46f1eae52d16": {
   "src": "en",
@@ -626,6 +642,10 @@
  "61d2572e7d46": {
   "src": "it",
   "text": "mRNA di ATF4 (singolo gene)"
+ },
+ "62055735b086": {
+  "src": "en",
+  "text": "Three generated proposals (IT21P2-0001 to 0003) carry a HIF1A-to-BNIP3 chain; until now they showed no premise of their own and would have read as the HIF1A-to-HK2 premise. The package finds the transcript signal small and partly an artefact, no protein or flux measurement, and a context-dependent direction: the correct output today is an abstention with this question."
  },
  "6212490d6f18": {
   "src": "en",
@@ -1271,6 +1291,10 @@
   "src": "en",
   "text": "A verified AMPA/kainate block that abolishes the bursts at less total charge removed than the NMDA-receptor antagonist needs would put AMPA receptors first in the next question."
  },
+ "b7bcebea37ce": {
+  "src": "en",
+  "text": "Premise measurement: transcript only; protein and role not measured. (no ranked unit, so no evaluation depth applies: this is not a depth of zero)"
+ },
  "b8355b6e40c2": {
   "src": "it",
   "text": "Capire se nelle cellule neurali carenti di WWOX ci sono ROS, tono di NRF2 o citochine (proteina) alterati, e se attivare NRF2 cambia vitalità o attività di rete in modo dipendente da NRF2."
@@ -1311,6 +1335,10 @@
   "src": "en",
   "text": "WWOX-system with a specificity flag: one paper, one laboratory, no drug-by-genotype test, and a wild-type arm whose variability is comparable to the effect."
  },
+ "bccb9591cef8": {
+  "src": "en",
+  "text": "Queried on 2026-11-09 to 2026-11-10 in the package hif1a_bnip3_it41_20261109 (search of this module and open sources, not a statement about the literature)."
+ },
  "bdc0737e6ae2": {
   "src": "en",
   "text": "A clinical-stage compound (catalogue maximum phase 2) that could serve as the in-slice modulator once the tool result is in."
@@ -1322,6 +1350,10 @@
  "bf7ea87f82fb": {
   "src": "it",
   "text": "Ogni caso risponde alle stesse domande. Il livello dice che tipo di sostegno esiste, non quanto il composto sia promettente: nessun livello è un punteggio di efficacia e la copertura di un percorso descrive collegamenti, non una quota di malattia trattata. Una misura funzionale può essere non specifica (per esempio ridurre le crisi anche nel tipo selvatico). Sconosciuto non significa negativo."
+ },
+ "bfd77a0d95dc": {
+  "src": "en",
+  "text": "Whether BNIP3 is raised at protein level in WWOX-deficient neural cells, whether the rise is HIF-driven, HIF-independent or a culture-state artefact, and whether the function is protective or harmful there; until then no pharmacological direction at BNIP3 is sustainable and no compound is proposed."
  },
  "c061ece9f84d": {
   "src": "en",
@@ -1363,6 +1395,10 @@
   "src": "en",
   "text": "The same provoked-seizure design with both genotypes treated and an interaction term, powered on the published effect size."
  },
+ "c668d9eb574e": {
+  "src": "en",
+  "text": "In isogenic WWOX-deficient against add-back human neural cells at matched oxygen: does BNIP3 protein rise, does it fall on HIF1A and EPAS1 knockdown, and does BNIP3 knockdown make survival, ROS and membrane potential better or worse?"
+ },
  "c7f9760e7c63": {
   "src": "en",
   "text": "Is the carded suppression specific to WWOX loss, or does the same agent act equally in wild type?"
@@ -1394,6 +1430,10 @@
  "cc0a7dd62915": {
   "src": "it",
   "text": "; p esatto a una coda"
+ },
+ "cc42c8caccec": {
+  "src": "en",
+  "text": "Step 1, no compound: BNIP3 and BNIP3L protein and mRNA from the same lysates, WWOX-deficient against add-back human neural cells at 21, 5 and 1 percent oxygen; step 2: HIF1A and EPAS1 knockdown with HIF target readouts; step 3: BNIP3 knockdown with survival, ROS and membrane potential. The full list of measurements is in the package table of the HIF1A-to-BNIP3 delivery."
  },
  "ccdfb67baae8": {
   "src": "it",

@@ -1304,6 +1304,24 @@
    "rank": 7,
    "status": "premise_measurement",
    "why_now": "555 of the 994 generated proposals end in a change of MYC, 314 in a harm arm and 241 in a protect arm (123 eligible for hand-over); whether any change of MYC is wanted depends on this role, so one measurement stands behind all of them and no MYC-directed lever is assumed beneficial."
+  },
+  {
+   "chembl_ids": "",
+   "decisive_uncertainty": "Whether BNIP3 is raised at protein level in WWOX-deficient neural cells, whether the rise is HIF-driven, HIF-independent or a culture-state artefact, and whether the function is protective or harmful there; until then no pharmacological direction at BNIP3 is sustainable and no compound is proposed.",
+   "direction_state": "unresolved",
+   "evidence_available": "WWOX-system: organoid transcript +0.46 log2, not robust; the raw neuron-library sign is a scale artefact; no protein or flux. Non-WWOX neural: protein up in hypoxia with glucose and down in oxygen-glucose deprivation in HT22, with BNIP3 loss harmful in the deprivation arm; rat epilepsy HIF-inhibitor test lowered HIF-1alpha and raised BNIP3 (hif1a_bnip3_it41_20261109, partial full texts, one embargoed).",
+   "evidence_depth": "Premise measurement: transcript only; protein and role not measured. (no ranked unit, so no evaluation depth applies: this is not a depth of zero)",
+   "feasibility": "Wet-lab measurement on isogenic human neural lines; not executable from this module. Possible in silico first: recompute the neuron-library scale and the EGR1 observation (IPOTESI) on the deposits. Reopen if a WWOX-deficient neural BNIP3 protein or flux datum is published. Priority: below the ten-row line; it gates three proposals, not the module.",
+   "intervention": "No compound: measurement of the premise behind the HIF1A-to-BNIP3 chains (BNIP3 protein, mitophagy flux and direction in WWOX-deficient human neural cells)",
+   "inv_id": "INV-19",
+   "next_test": "Step 1, no compound: BNIP3 and BNIP3L protein and mRNA from the same lysates, WWOX-deficient against add-back human neural cells at 21, 5 and 1 percent oxygen; step 2: HIF1A and EPAS1 knockdown with HIF target readouts; step 3: BNIP3 knockdown with survival, ROS and membrane potential. The full list of measurements is in the package table of the HIF1A-to-BNIP3 delivery.",
+   "novelty_perimeter": "Queried on 2026-11-09 to 2026-11-10 in the package hif1a_bnip3_it41_20261109 (search of this module and open sources, not a statement about the literature).",
+   "origin_class": "known_in_wwox",
+   "origin_detail": "Known in the WWOX system: the organoid transcript observation; the premise question is restated from the IT41 package B.",
+   "question": "In isogenic WWOX-deficient against add-back human neural cells at matched oxygen: does BNIP3 protein rise, does it fall on HIF1A and EPAS1 knockdown, and does BNIP3 knockdown make survival, ROS and membrane potential better or worse?",
+   "rank": 7,
+   "status": "premise_measurement",
+   "why_now": "Three generated proposals (IT21P2-0001 to 0003) carry a HIF1A-to-BNIP3 chain; until now they showed no premise of their own and would have read as the HIF1A-to-HK2 premise. The package finds the transcript signal small and partly an artefact, no protein or flux measurement, and a context-dependent direction: the correct output today is an abstention with this question."
   }
  ],
  "investigations": [
@@ -1712,6 +1730,10 @@
    {
     "inv_id": "INV-18",
     "movement": "new in IT21 (no IT20 position): New row, enters at rank 7 below the ten-row line. Reasons: it turns an observation that no consumer used into a discriminating tool experiment with three opposite-sign branches. Not rewarded: novelty. | below the line this evaluation: rank 7 does not fit the ten-row published ceiling"
+   },
+   {
+    "inv_id": "INV-19",
+    "movement": "new in IT21 (no IT20 position): New row, enters at rank 7 below the ten-row line. Reasons: it gives three proposals a premise of their own and records an abstention. Not rewarded: novelty. | below the line this evaluation: rank 7 does not fit the ten-row published ceiling"
    }
   ],
   "ceiling_rule": "risk-flagged and human-report rows are not displaced by conditional probes",
@@ -6065,7 +6087,7 @@
     "source_artefacts.tsv": "efd24d2cf8eb3fdb",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
-   "receipt_ledger_lines": 1538
+   "receipt_ledger_lines": 1543
   },
   "inventory": {
    "all_families_by_access_category": {
@@ -6114,7 +6136,7 @@
    "records": 44211
   },
   "investigations": {
-   "below_the_line": 8,
+   "below_the_line": 9,
    "below_the_line_note": "rows beyond the ten-row ceiling stay in investigations.tsv with their reason; a tie is kept whole rather than split. Below the line is a ceiling on the page, never a finding that an investigation is unpromising.",
    "below_the_line_rows": [
     {
@@ -6139,31 +6161,37 @@
      "intervention": "No lever available (four needs with no catalogue reach)",
      "inv_id": "INV-11",
      "rank": 7,
-     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 5). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
+     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 6). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
     },
     {
      "intervention": "EZH2 (PRC2) inhibitor GSK343 as a probe in mouse glial systems",
      "inv_id": "INV-14",
      "rank": 7,
-     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 5). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
+     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 6). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
     },
     {
      "intervention": "Class IIa-selective tool compound X against HDAC5 knockdown, with catalytic-dead and localisation-mutant HDAC5 rescue, a class-I-only inhibitor and an HDAC6 inhibitor as controls, in human neural cells",
      "inv_id": "INV-16",
      "rank": 7,
-     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 5). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
+     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 6). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
     },
     {
      "intervention": "No compound: measurement of the role of the MYC rise in WWOX-deficient radial glia",
      "inv_id": "INV-17",
      "rank": 7,
-     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 5). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
+     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 6). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
     },
     {
      "intervention": "Ih (HCN) channel blockers of at least two chemotypes as a tool arm in Wwox-deficient cortical slices, read with sag, resting potential and burst incidence in the same slices",
      "inv_id": "INV-18",
      "rank": 7,
-     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 5). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
+     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 6). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
+    },
+    {
+     "intervention": "No compound: measurement of the premise behind the HIF1A-to-BNIP3 chains (BNIP3 protein, mitophagy flux and direction in WWOX-deficient human neural cells)",
+     "inv_id": "INV-19",
+     "rank": 7,
+     "reason": "below the ten-row ceiling the operator set for the published list: rank 7 is the first position that does not fit (10 rows already published, this tie holds 6). The tie is kept whole rather than split, because publishing part of a tie would assert an order inside it that this method does not have. This is a ceiling on the page, not a judgement that the investigation is unpromising: the row stays in investigations.tsv with its question, its decisive uncertainty and its next test."
     }
    ],
    "by_direction_state": {
@@ -6176,13 +6204,13 @@
     "known_in_wwox": 7
    },
    "count": 10,
-   "count_including_below_the_line": 18,
+   "count_including_below_the_line": 19,
    "direction_states": {
     "opposed_risk": "a documented action of this intervention pushes against another need of the same objective",
     "resolved": "the need states an up/down intervention direction",
     "unresolved": "the need's own direction is uncertain: no lever on it can be qualified either way, which is a visible gap and not a negative finding"
    },
-   "order_digest": "772ed238a82037bc",
+   "order_digest": "1df3625ad0e8fa30",
    "origin_classes": {
     "external_transferred": "carried in from another condition or literature by a stated mechanistic analogy",
     "generated_by_legend": "reached from a qualified need through the module's own target and catalogue path, not named in the WWOX material checked",

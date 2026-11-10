@@ -1,0 +1,62 @@
+{
+ "cc42c8caccec": {
+  "it": "Passo 1, nessun composto: proteina e mRNA di BNIP3 e BNIP3L dagli stessi lisati, cellule neurali umane con deficit di WWOX contro cellule con reintroduzione, al 21, 5 e 1 percento di ossigeno; passo 2: knockdown di HIF1A ed EPAS1 con letture dei bersagli di HIF; passo 3: knockdown di BNIP3 con sopravvivenza, ROS e potenziale di membrana. L'elenco completo delle misure è nella tabella del pacchetto HIF1A-BNIP3.",
+  "fr": "Étape 1, aucun composé : protéine et ARNm de BNIP3 et BNIP3L à partir des mêmes lysats, cellules neurales humaines déficientes en WWOX contre cellules avec réintroduction, à 21, 5 et 1 pour cent d'oxygène ; étape 2 : knockdown de HIF1A et d'EPAS1 avec lectures des cibles de HIF ; étape 3 : knockdown de BNIP3 avec survie, ROS et potentiel de membrane. La liste complète des mesures figure dans la table du paquet HIF1A-BNIP3.",
+  "es": "Paso 1, ningún compuesto: proteína y ARNm de BNIP3 y BNIP3L de los mismos lisados, células neurales humanas con déficit de WWOX frente a células con reintroducción, al 21, 5 y 1 por ciento de oxígeno; paso 2: knockdown de HIF1A y EPAS1 con lecturas de las dianas de HIF; paso 3: knockdown de BNIP3 con supervivencia, ROS y potencial de membrana. La lista completa de medidas está en la tabla del paquete HIF1A-BNIP3.",
+  "de": "Schritt 1, keine Substanz: BNIP3- und BNIP3L-Protein und -mRNA aus denselben Lysaten, WWOX-defiziente gegen rekonstituierte menschliche Nervenzellen bei 21, 5 und 1 Prozent Sauerstoff; Schritt 2: HIF1A- und EPAS1-Knockdown mit HIF-Zielgen-Messungen; Schritt 3: BNIP3-Knockdown mit Überleben, ROS und Membranpotenzial. Die vollständige Liste der Messungen steht in der Tabelle des HIF1A-BNIP3-Pakets."
+ },
+ "1f62f4468e41": {
+  "it": "Misura di laboratorio su linee neurali umane isogeniche; non eseguibile da questo modulo. Possibile prima in silico: ricalcolare la scala della libreria dei neuroni e l'osservazione su EGR1 (IPOTESI) sui depositi. Riaprire se viene pubblicato un dato di proteina o di flusso di BNIP3 in cellule neurali con deficit di WWOX. Priorità: sotto la linea delle dieci righe; blocca tre proposte, non il modulo.",
+  "fr": "Mesure de laboratoire sur des lignées neurales humaines isogéniques ; non exécutable depuis ce module. Possible d'abord in silico : recalculer l'échelle de la banque des neurones et l'observation sur EGR1 (IPOTESI) sur les dépôts. Rouvrir si une donnée de protéine ou de flux de BNIP3 est publiée dans des cellules neurales déficientes en WWOX. Priorité : sous la ligne des dix lignes ; elle conditionne trois propositions, non le module.",
+  "es": "Medida de laboratorio en líneas neurales humanas isogénicas; no ejecutable desde este módulo. Posible antes in silico: recalcular la escala de la biblioteca de neuronas y la observación sobre EGR1 (IPOTESI) en los depósitos. Reabrir si se publica un dato de proteína o de flujo de BNIP3 en células neurales con déficit de WWOX. Prioridad: por debajo de la línea de las diez filas; condiciona tres propuestas, no el módulo.",
+  "de": "Labormessung an isogenen menschlichen neuralen Linien; aus diesem Modul nicht ausführbar. Zuerst in silico möglich: die Skalierung der Neuronen-Bibliothek und die EGR1-Beobachtung (IPOTESI) an den Depots neu berechnen. Wiedereröffnen, wenn ein BNIP3-Protein- oder Flussdatum in WWOX-defizienten neuralen Zellen veröffentlicht wird. Priorität: unterhalb der Zehn-Zeilen-Linie; es bedingt drei Vorschläge, nicht das Modul."
+ },
+ "330c78175c31": {
+  "it": "Noto nel sistema WWOX: l'osservazione del trascritto nell'organoide; la domanda sulla premessa è ripresa dal pacchetto B di IT41.",
+  "fr": "Connu dans le système WWOX : l'observation du transcrit dans l'organoïde ; la question de la prémisse est reprise du paquet B d'IT41.",
+  "es": "Conocido en el sistema WWOX: la observación del transcrito en el organoide; la pregunta sobre la premisa se retoma del paquete B de IT41.",
+  "de": "Im WWOX-System bekannt: die Beobachtung des Transkripts im Organoid; die Prämissenfrage stammt aus Paket B von IT41."
+ },
+ "35528d7f9a37": {
+  "it": "INV-19",
+  "fr": "INV-19",
+  "es": "INV-19",
+  "de": "INV-19"
+ },
+ "4619c9114dc4": {
+  "it": "Sistema WWOX: trascritto nell'organoide +0,46 log2, non robusto; il segno grezzo della libreria dei neuroni è un artefatto di scala; nessuna proteina né flusso. Non-WWOX neurale: proteina aumentata in ipossia con glucosio e diminuita nella privazione di ossigeno e glucosio in HT22, con perdita di BNIP3 dannosa nel braccio di privazione; un test di inibitore di HIF in epilessia del ratto ha abbassato HIF-1alfa e aumentato BNIP3 (hif1a_bnip3_it41_20261109, testi parziali, uno sotto embargo).",
+  "fr": "Système WWOX : transcrit dans l'organoïde +0,46 log2, non robuste ; le signe brut de la banque des neurones est un artefact d'échelle ; ni protéine ni flux. Non-WWOX neural : protéine augmentée en hypoxie avec glucose et diminuée en privation d'oxygène et de glucose dans les HT22, avec une perte de BNIP3 nuisible dans le bras de privation ; un test d'inhibiteur de HIF dans l'épilepsie du rat a abaissé HIF-1alpha et augmenté BNIP3 (hif1a_bnip3_it41_20261109, textes partiels, l'un sous embargo).",
+  "es": "Sistema WWOX: transcrito en el organoide +0,46 log2, no robusto; el signo bruto de la biblioteca de neuronas es un artefacto de escala; ni proteína ni flujo. No-WWOX neural: proteína aumentada en hipoxia con glucosa y disminuida en la privación de oxígeno y glucosa en HT22, con pérdida de BNIP3 perjudicial en el brazo de privación; una prueba de inhibidor de HIF en epilepsia de rata bajó HIF-1alfa y subió BNIP3 (hif1a_bnip3_it41_20261109, textos parciales, uno bajo embargo).",
+  "de": "WWOX-System: Transkript im Organoid +0,46 log2, nicht robust; das Rohvorzeichen der Neuronen-Bibliothek ist ein Skalenartefakt; weder Protein noch Fluss. Nicht-WWOX, neural: Protein in Hypoxie mit Glucose erhöht und bei Sauerstoff-Glucose-Entzug in HT22 erniedrigt, mit schädlichem BNIP3-Verlust im Entzugsarm; ein HIF-Inhibitortest bei Ratten-Epilepsie senkte HIF-1alpha und erhöhte BNIP3 (hif1a_bnip3_it41_20261109, Teiltexte, einer unter Embargo)."
+ },
+ "62055735b086": {
+  "it": "Tre proposte generate (IT21P2-0001 a 0003) portano una catena da HIF1A a BNIP3; finora non mostravano una premessa propria e si sarebbero lette come la premessa da HIF1A a HK2. Il pacchetto trova il segnale del trascritto piccolo e in parte un artefatto, nessuna misura di proteina o di flusso e una direzione dipendente dal contesto: l'esito corretto oggi è un'astensione con questa domanda.",
+  "fr": "Trois propositions générées (IT21P2-0001 à 0003) portent une chaîne de HIF1A à BNIP3 ; jusqu'ici elles ne montraient pas de prémisse propre et se seraient lues comme la prémisse de HIF1A à HK2. Le paquet trouve le signal du transcrit faible et en partie un artefact, aucune mesure de protéine ni de flux et une direction dépendante du contexte : la sortie correcte aujourd'hui est une abstention avec cette question.",
+  "es": "Tres propuestas generadas (IT21P2-0001 a 0003) llevan una cadena de HIF1A a BNIP3; hasta ahora no mostraban una premisa propia y se habrían leído como la premisa de HIF1A a HK2. El paquete halla la señal del transcrito pequeña y en parte un artefacto, ninguna medida de proteína ni de flujo y una dirección dependiente del contexto: la salida correcta hoy es una abstención con esta pregunta.",
+  "de": "Drei erzeugte Vorschläge (IT21P2-0001 bis 0003) tragen eine Kette von HIF1A zu BNIP3; bisher zeigten sie keine eigene Prämisse und wären als die Prämisse von HIF1A zu HK2 gelesen worden. Das Paket findet das Transkriptsignal klein und teils ein Artefakt, keine Protein- oder Flussmessung und eine kontextabhängige Richtung: Die richtige Ausgabe ist heute eine Enthaltung mit dieser Frage."
+ },
+ "b7bcebea37ce": {
+  "it": "Misura della premessa: solo trascritto; proteina e ruolo non misurati. (nessuna unità in graduatoria, perciò non si applica una profondità di valutazione: non è una profondità pari a zero)",
+  "fr": "Mesure de la prémisse : transcrit seulement ; protéine et rôle non mesurés. (aucune unité classée, donc aucune profondeur d'évaluation ne s'applique : ce n'est pas une profondeur de zéro)",
+  "es": "Medida de la premisa: solo transcrito; proteína y papel no medidos. (ninguna unidad clasificada, por lo que no se aplica profundidad de evaluación: no es una profundidad de cero)",
+  "de": "Prämissenmessung: nur Transkript; Protein und Rolle nicht gemessen. (keine eingestufte Einheit, daher gilt keine Bewertungstiefe: das ist keine Tiefe null)"
+ },
+ "bccb9591cef8": {
+  "it": "Interrogato dal 2026-11-09 al 2026-11-10 nel pacchetto hif1a_bnip3_it41_20261109 (ricerca in questo modulo e in fonti aperte, non un'affermazione sulla letteratura).",
+  "fr": "Interrogé du 2026-11-09 au 2026-11-10 dans le paquet hif1a_bnip3_it41_20261109 (recherche dans ce module et dans des sources ouvertes, non une affirmation sur la littérature).",
+  "es": "Consultado del 2026-11-09 al 2026-11-10 en el paquete hif1a_bnip3_it41_20261109 (búsqueda en este módulo y en fuentes abiertas, no una afirmación sobre la literatura).",
+  "de": "Abgefragt vom 2026-11-09 bis 2026-11-10 im Paket hif1a_bnip3_it41_20261109 (Suche in diesem Modul und in offenen Quellen, keine Aussage über die Literatur)."
+ },
+ "bfd77a0d95dc": {
+  "it": "Se BNIP3 aumenti a livello di proteina nelle cellule neurali con deficit di WWOX, se l'aumento sia guidato da HIF, indipendente da HIF o un artefatto dello stato di coltura, e se la funzione sia protettiva o dannosa lì; finché non è chiaro nessuna direzione farmacologica su BNIP3 è sostenibile e non si propone alcun composto.",
+  "fr": "Si BNIP3 augmente au niveau protéique dans les cellules neurales déficientes en WWOX, si l'augmentation est pilotée par HIF, indépendante de HIF ou un artefact de l'état de culture, et si la fonction y est protectrice ou nuisible ; tant que ce n'est pas clair, aucune direction pharmacologique sur BNIP3 n'est soutenable et aucun composé n'est proposé.",
+  "es": "Si BNIP3 aumenta a nivel de proteína en las células neurales con déficit de WWOX, si el aumento depende de HIF, es independiente de HIF o es un artefacto del estado de cultivo, y si la función allí es protectora o perjudicial; hasta entonces ninguna dirección farmacológica sobre BNIP3 es sostenible y no se propone ningún compuesto.",
+  "de": "Ob BNIP3 in WWOX-defizienten neuralen Zellen auf Proteinebene erhöht ist, ob die Erhöhung HIF-getrieben, HIF-unabhängig oder ein Kulturzustandsartefakt ist und ob die Funktion dort schützend oder schädlich ist; bis dahin ist keine pharmakologische Richtung an BNIP3 vertretbar, und es wird keine Substanz vorgeschlagen."
+ },
+ "c668d9eb574e": {
+  "it": "In cellule neurali umane isogeniche con deficit di WWOX contro cellule con reintroduzione, a ossigeno appaiato: la proteina BNIP3 aumenta, diminuisce con il knockdown di HIF1A ed EPAS1, e il knockdown di BNIP3 rende migliori o peggiori sopravvivenza, ROS e potenziale di membrana?",
+  "fr": "Dans des cellules neurales humaines isogéniques déficientes en WWOX contre des cellules avec réintroduction, à oxygène apparié : la protéine BNIP3 augmente-t-elle, diminue-t-elle avec le knockdown de HIF1A et d'EPAS1, et le knockdown de BNIP3 améliore-t-il ou aggrave-t-il la survie, les ROS et le potentiel de membrane ?",
+  "es": "En células neurales humanas isogénicas con déficit de WWOX frente a células con reintroducción, con oxígeno igualado: ¿aumenta la proteína BNIP3, disminuye con el knockdown de HIF1A y EPAS1, y el knockdown de BNIP3 mejora o empeora la supervivencia, los ROS y el potencial de membrana?",
+  "de": "In isogenen WWOX-defizienten gegen rekonstituierte menschliche Nervenzellen bei angeglichenem Sauerstoff: Steigt das BNIP3-Protein, sinkt es bei HIF1A- und EPAS1-Knockdown, und verbessert oder verschlechtert der BNIP3-Knockdown Überleben, ROS und Membranpotenzial?"
+ }
+}

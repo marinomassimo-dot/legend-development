@@ -38,6 +38,20 @@ class CompoundView(unittest.TestCase):
         self.assertNotEqual(len(full), 5)
         for c in full: self.assertNotRegex(" ".join(c[k] for k in rv.COMPOUND_TEXT), r"(?i)most effective|best (drug|compound)|recommend")
 
+class StageS18(unittest.TestCase):
+    """S18 = S17 + the BNIP3 premise row: three proposals gain a premise of their own and nothing else moves."""
+    def test_only_the_three_bnip3_proposals_change_in_two_columns(self):
+        A = tsv(DR / "generation_it40_20261109/results_s17/proposals_it21.tsv"); B = tsv(HERE / "results_s18/proposals_it21.tsv")
+        self.assertEqual([a["proposal_id"] for a in A], [b["proposal_id"] for b in B])
+        diff = {(a["proposal_id"], c) for a, b in zip(A, B) for c in a if c in b and a[c] != b[c]}
+        self.assertEqual({p for p, _ in diff}, {"IT21P2-0001", "IT21P2-0002", "IT21P2-0003"})
+        self.assertEqual({c for _, c in diff}, {"shared_premise_investigation", "premise_decisive_test"})
+        for b in B:
+            if b["proposal_id"] in {"IT21P2-0001", "IT21P2-0002", "IT21P2-0003"}: self.assertEqual(b["shared_premise_investigation"], "INV-19")
+            self.assertNotEqual(b["status"], "QUALIFIED")
+        HA = [r["proposal_id"] for r in tsv(DR / "generation_it40_20261109/results_s17/handoff_it21.tsv")]; HB = [r["proposal_id"] for r in tsv(HERE / "results_s18/handoff_it21.tsv")]
+        self.assertEqual(HA, HB)
+
 class ReaderConsumption(unittest.TestCase):
     def test_comparison_rows_and_identity_join_are_produced_by_calling_the_reader(self):
         import consume_reader as cr

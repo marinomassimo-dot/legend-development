@@ -9,3 +9,7 @@ P7	A prolyl-hydroxylase inhibitor raises HIF (disease direction); roxadustat lab
 P8	The six readout genes cannot be used to evaluate a lever (guard `IT7_READOUT6`)	`generation_it9_p1_20261030/guards.tsv`
 P9	The F/C/P position of K01 on `NEED-PDH-PYRUVATE-AXIS` is F3, produced by the existing rule from the pertinence rows	`repurposing_view.py positions`
 P10	The experiment arms are conditional: no outcome is assumed; the need direction stays uncertain	sections 6 and 7
+P11	BNIP3 in the WWOX-deficient human organoid: transcript +0.46 log2 (1.38-fold), not robust (4 against 2 libraries); the raw neuron-library sign is a scale artefact; mouse P17 flat	hif1a_bnip3_it41_20261109/output/decisive.tsv D01-D03; GEO deposits (re-derived by the package verifier)
+P12	No BNIP3 protein or mitophagy-flux measurement exists in a WWOX-deficient neural system (a search result, not a statement about the literature)	hif1a_bnip3_it41_20261109/output/decisive.tsv D14; queries.tsv
+P13	Direction of BNIP3 is context dependent in the neural cells read: protein up in hypoxia with glucose and down in oxygen-glucose deprivation in HT22, with BNIP3 loss harmful in the deprivation arm; the rat epilepsy HIF-inhibitor test lowered HIF-1alpha and raised BNIP3	hif1a_bnip3_it41_20261109/output/decisive.tsv D07, D11-D12
+P14	The HIF1A-to-BNIP3 relation of the engine is non-neural in its primary record	hif1a_bnip3_it41_20261109/output/decisive.tsv D04
