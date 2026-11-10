@@ -40,3 +40,9 @@ Non-canonical working note. Not medical advice; no dose, schedule or route. Oppo
 ## Where it is consumed
 
 `compound_view.tsv` items V06 and V07 (research order 7 and 8, kinds "emerged"), the public page (both editions, names only in the full one), `comparisons_it41.md` (how a result moves the alternative), INV-05 `feasibility` ([IT41]). After the science delivery the deltas are applied to these consumers; if no choice changes, that is stated.
+
+## Update after the primary-source package (SCI42, published d3a57a65; applied in IT42)
+
+* **onfasprodil: "emerged" → "unresolved".** No source reached states its site, a maximum effect, a triheteromer result or a measured selectivity; the only potency is one patent calcium-flux IC50 (8.3 nM, NR1/NR2B cells, no Mg2+, no stated Zn2+ chelator or pH). It can serve at most as a second scaffold (shared hydroxyaryl-ethanolamine arrangement: inference from structure) after the ifenprodil-site tool. The role "mechanism comparator under verification" is therefore **weakened**: it is not yet a comparator.
+* **NP10679: "emerged" → "probe".** Potency is pH-dependent (declared about 6-fold, abstract level, same developer); the maximum of the series prototype moved little in oocytes; a burst effect that follows the pH is not a specificity signature; the tissue pH is unmeasured. It enters the design only after the tissue pH is measured, as a drug-by-pH interaction against the ifenprodil-site tool and d-APV. Not a candidate.
+* **What changed in the choice:** the first experiment of INV-05 is unchanged; the list of measured conditions gains the tissue pH (map row IT42-Q01); neither compound enters the first design. No rank, card or work order moved.
