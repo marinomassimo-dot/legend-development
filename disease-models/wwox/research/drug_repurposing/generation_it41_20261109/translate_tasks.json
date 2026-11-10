@@ -1,7 +1,10 @@
 {
- "076b4cff6cc3": {
-  "mode": "NEW",
-  "english": "Filing under a target does not make the measurement the target's; the same ligand has its own rows for other subunits, and no transfer is made.",
+ "b8d770bbd1e2": {
+  "mode": "EDIT",
+  "old_key": "454ba39f49eb",
+  "old_english": "Ex vivo slice electrophysiology in an existing Wwox neuron-deleted line; tool compounds only; no brain-exposure statement is carried here and none is implied for any clinically used member.",
+  "added_english": "[IT41] Decision: whether any HCN-directed tool arm is run. Possible in silico: an ortholog and isoform census of the tools. New measure: sag and rebound at matched potential and deflection, with capacitance and access resistance by genotype. Reopen if: the excess sag persists at matched conditions. Priority: after the matched recording and after INV-05's minimum experiment; no HCN compound is nominated before it.",
+  "new_english": "Ex vivo slice electrophysiology in an existing Wwox neuron-deleted line; tool compounds only; no brain-exposure statement is carried here and none is implied for any clinically used member. [IT41] Decision: whether any HCN-directed tool arm is run. Possible in silico: an ortholog and isoform census of the tools. New measure: sag and rebound at matched potential and deflection, with capacitance and access resistance by genotype. Reopen if: the excess sag persists at matched conditions. Priority: after the matched recording and after INV-05's minimum experiment; no HCN compound is nominated before it.",
   "langs": [
    "it",
    "fr",
@@ -9,89 +12,12 @@
    "de"
   ]
  },
- "0874e122f10a": {
-  "mode": "NEW",
-  "english": "A blocker response shows contribution as in normal cortex, not a defect; the passive-size reading is the rival; a sodium-current block is reported for one tool in thalamic neurons (abstract level).",
-  "langs": [
-   "it",
-   "fr",
-   "es",
-   "de"
-  ]
- },
- "2d4cff76776a": {
-  "mode": "NEW",
-  "english": "The registry row's assay text names another subunit; to which subunit the value belongs is unresolved, so no GluN2B statement is drawn.",
-  "langs": [
-   "it",
-   "fr",
-   "es",
-   "de"
-  ]
- },
- "5e6dbc965cb9": {
-  "mode": "NEW",
-  "english": "It abolishes the spontaneous bursts, so it bounds how much NMDA-receptor current must go before the burst stops.",
-  "langs": [
-   "it",
-   "fr",
-   "es",
-   "de"
-  ]
- },
- "897fe4f3bd34": {
-  "mode": "NEW",
-  "english": "Smaller cells with a seal leak, and effects on synaptic currents seen in culture, would give the same observations.",
-  "langs": [
-   "it",
-   "fr",
-   "es",
-   "de"
-  ]
- },
- "8f938aa08a09": {
-  "mode": "NEW",
-  "english": "Against the wild-type floor about 20 percent of the delayed evoked response remains under it (figure-read, inference), which is not evidence of incomplete block.",
-  "langs": [
-   "it",
-   "fr",
-   "es",
-   "de"
-  ]
- },
- "bdc0737e6ae2": {
-  "mode": "NEW",
-  "english": "A clinical-stage compound (catalogue maximum phase 2) that could serve as the in-slice modulator once the tool result is in.",
-  "langs": [
-   "it",
-   "fr",
-   "es",
-   "de"
-  ]
- },
- "e89141767dcf": {
-  "mode": "NEW",
-  "english": "Registry row under GluN2B whose assay text names GluN2C",
-  "langs": [
-   "it",
-   "fr",
-   "es",
-   "de"
-  ]
- },
- "fb62c3653914": {
-  "mode": "NEW",
-  "english": "Clinical-stage GluN2B negative modulator with an assembly-dependent maximum",
-  "langs": [
-   "it",
-   "fr",
-   "es",
-   "de"
-  ]
- },
- "fdd45467216d": {
-  "mode": "NEW",
-  "english": "No maximum effect, species or assay context in the catalogue; no approval statement in the catalogue.",
+ "d6d17948e344": {
+  "mode": "EDIT",
+  "old_key": "3e893fac5fec",
+  "old_english": "The slice preparation exists; the change is a reported bath and one added arm.",
+  "added_english": "[IT41] Decision: whether a GluN2B-directed comparison is the better question (needs the d-APV abolition threshold x and one modulator's removable fraction, read at the burst). Possible in silico or from public sources: a primary source for the site and maximum effect of a second modulator; qualification of the AMPA tools. New measure: isolated NMDA-receptor current, x, removable fraction, measured bath magnesium and pH. Reopen if: a second modulator is shown to have a different ceiling at the same site, or the AMPA-tool qualification is delivered. Priority: first among the compound-facing investigations, because it is the cheapest measurement that decides whether the other arms are asked.",
+  "new_english": "The slice preparation exists; the change is a reported bath and one added arm. [IT41] Decision: whether a GluN2B-directed comparison is the better question (needs the d-APV abolition threshold x and one modulator's removable fraction, read at the burst). Possible in silico or from public sources: a primary source for the site and maximum effect of a second modulator; qualification of the AMPA tools. New measure: isolated NMDA-receptor current, x, removable fraction, measured bath magnesium and pH. Reopen if: a second modulator is shown to have a different ceiling at the same site, or the AMPA-tool qualification is delivered. Priority: first among the compound-facing investigations, because it is the cheapest measurement that decides whether the other arms are asked.",
   "langs": [
    "it",
    "fr",

@@ -411,10 +411,6 @@
   "src": "en",
   "text": "What did not change: the number of generated proposals from the old inputs (980, only selection changed), the absence of any qualified hypothesis, and the earlier retrospective result (WWOX seed identity not separable from matched random sets on the measured properties only)."
  },
- "3e893fac5fec": {
-  "src": "en",
-  "text": "The slice preparation exists; the change is a reported bath and one added arm."
- },
  "3eebc821a49d": {
   "src": "en",
   "text": "E4 - card reviewed, 12 WWOX-side assertion(s) read beyond abstract; class pharmacology table (IT7 P5)"
@@ -470,10 +466,6 @@
  "4519813edc31": {
   "src": "it",
   "text": "Esperimento già pubblicato da un solo laboratorio; animali e linea non disponibili (non nota). Denominatori presso gli autori delle serie; contatto fuori ambito."
- },
- "454ba39f49eb": {
-  "src": "en",
-  "text": "Ex vivo slice electrophysiology in an existing Wwox neuron-deleted line; tool compounds only; no brain-exposure statement is carried here and none is implied for any clinically used member."
  },
  "46f1eae52d16": {
   "src": "en",
@@ -1287,6 +1279,10 @@
   "src": "it",
   "text": "Capire se nelle cellule neurali carenti di WWOX ci sono ROS, tono di NRF2 o citochine (proteina) alterati, e se attivare NRF2 cambia vitalità o attività di rete in modo dipendente da NRF2."
  },
+ "b8d770bbd1e2": {
+  "src": "en",
+  "text": "Ex vivo slice electrophysiology in an existing Wwox neuron-deleted line; tool compounds only; no brain-exposure statement is carried here and none is implied for any clinically used member. [IT41] Decision: whether any HCN-directed tool arm is run. Possible in silico: an ortholog and isoform census of the tools. New measure: sag and rebound at matched potential and deflection, with capacitance and access resistance by genotype. Reopen if: the excess sag persists at matched conditions. Priority: after the matched recording and after INV-05's minimum experiment; no HCN compound is nominated before it."
+ },
  "ba92d773997b": {
   "src": "en",
   "text": "The module holds a graded sag, a depolarised resting potential and a larger rebound with no consumer, and the heterozygote shows several of the same intrinsic changes versus wild type (rebound excepted; heterozygote versus knockout untested) yet rarely bursts. Three readings give opposite signs for the same drug class, so no Ih-directed compound can be ranked until one measurement separates them."
@@ -1490,6 +1486,10 @@
  "d674c4c0b3d7": {
   "src": "en",
   "text": "A response would not show a defect of the target in these cells."
+ },
+ "d6d17948e344": {
+  "src": "en",
+  "text": "The slice preparation exists; the change is a reported bath and one added arm. [IT41] Decision: whether a GluN2B-directed comparison is the better question (needs the d-APV abolition threshold x and one modulator's removable fraction, read at the burst). Possible in silico or from public sources: a primary source for the site and maximum effect of a second modulator; qualification of the AMPA tools. New measure: isolated NMDA-receptor current, x, removable fraction, measured bath magnesium and pH. Reopen if: a second modulator is shown to have a different ceiling at the same site, or the AMPA-tool qualification is delivered. Priority: first among the compound-facing investigations, because it is the cheapest measurement that decides whether the other arms are asked."
  },
  "d71a4eb39ca3": {
   "src": "en",
