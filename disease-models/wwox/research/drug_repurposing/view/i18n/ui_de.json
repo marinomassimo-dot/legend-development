@@ -308,7 +308,7 @@
  "UI_IT.cv_next": "Nächster Test und Vergleich",
  "UI_IT.cv_order": "Untersuchungsreihenfolge",
  "UI_IT.cv_prem": "Offene Prämisse",
- "UI_IT.cv_rat": "Warum untersuchen",
+ "UI_IT.cv_rat": "Warum diese Priorität und welche Belege sie stützen",
  "UI_IT.cv_reg": "Registernotizen (nur vollständige Ausgabe)",
  "UI_IT.cv_wh_both": "zuerst in silico, dann ein Labor",
  "UI_IT.cv_wh_in_silico": "in silico oder aus öffentlichen Quellen",
@@ -1485,5 +1485,10 @@
  "UI_IT.xp_targets": "Angegebene Zielmoleküle des Bedarfs",
  "UI_IT.xp_targets_none": "kein molekulares Zielmolekül aufgeführt (der Bedarf ist über eine Funktion oder einen Phänotyp definiert)",
  "UI_IT.xp_to": "bis",
- "UI_IT.xp_unknown": "nicht bekannt"
+ "UI_IT.xp_unknown": "nicht bekannt",
+ "UI_IT.cv_orig": "Herkunft der Hypothese",
+ "UI_IT.cv_or_carded_lever": "Ein bereits in einer Karte geführter Hebel, durch die Suche neu eingestuft",
+ "UI_IT.cv_or_relation_search": "Entstanden aus einer von einer biologischen Beziehung geleiteten Suche",
+ "UI_IT.cv_or_physiological_hypothesis": "Entstanden aus einer bedingten physiologischen Hypothese",
+ "UI_IT.cv_or_comparison_package": "Entstanden aus einem pharmakologischen Vergleich zwischen Werkzeugen"
 }
