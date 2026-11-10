@@ -1,0 +1,15 @@
+relation_id	molecule	names	sources	n_source_rows	directions	species	sites
+S10	CAT:CHEMBL1762621	BARDOXOLONE METHYL	ChEMBL curated mechanism	2	down	Homo sapiens	two_gene_assembly_record
+S10	CAT:CHEMBL2107333	DIMETHYL FUMARATE	ChEMBL curated mechanism	1	down	Homo sapiens	single_protein_record
+S10	CAT:CHEMBL3989944	DIROXIMEL FUMARATE	ChEMBL curated mechanism	1	down	Homo sapiens	single_protein_record
+S10	CAT:CHEMBL4303525	OMAVELOXOLONE	ChEMBL curated mechanism	1	up	Homo sapiens	single_protein_record
+S10	CAT:CHEMBL589586	MONOMETHYL FUMARATE	ChEMBL curated mechanism	1	down	Homo sapiens	single_protein_record
+S10	CAT:DGIDB:2e72a357680d	CPUY192018	GtoPdb interaction	4	unclear	Human	
+S10	CAT:DGIDB:91f99ec2ae1d	Nrf2 peptide [PMID: 23647822]	GtoPdb interaction	1	down	Human	
+S10	CAT:DGIDB:a2a5a1a977f2	RA839	GtoPdb interaction	2	unclear	Human	
+S10	CAT:DGIDB:a3d03ae2ef6c	ML385	GtoPdb interaction	1	down	Human	
+S10	CAT:DGIDB:b48d9bd9a42b	compound 10 [PMID: 31411465]	GtoPdb interaction	1	unclear	Human	
+S10	CAT:DGIDB:fa1dd12aa22a	isoquinoline 17 [PMID: 30122040]	GtoPdb interaction	2	unclear	Human	
+S10	GTOPDB:13066	biKEAP1	GtoPdb interaction	1	down	Human	
+S10	GTOPDB:2717	bardoxolone	GtoPdb interaction	1	unclear	Human	
+S10	GTOPDB:7573	omaveloxolone	GtoPdb interaction	1	up	Human	
