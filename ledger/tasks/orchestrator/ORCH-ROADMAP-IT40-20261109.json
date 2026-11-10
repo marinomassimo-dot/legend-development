@@ -7,10 +7,10 @@
  "OBJECTIVE": "IT40: from available knowledge to effective pharmacological generation; membrane and AMPA/NMDA deliveries consumed, DREAM-4 C, conditional hypotheses, mechanism-first search, measured contribution.",
  "START_UTC": "2026-11-09T12:00:00Z",
  "RESUME": {
-  "note": "IT40 P12: publish record commit over 560601df with --expect-sha, then CI, site, closure; IT41 queued (ORCH-ROADMAP-IT41-20261109)"
+  "note": "IT40 complete 2026-11-10; residual: HIF1A to BNIP3 (science IT41), relations beyond NB-1 (none exist), identity blockers consumed in IT41"
  },
  "AUTHORISED_QUEUE_20261108": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P1": {
    "order": 1,
    "steps": [
@@ -137,9 +137,9 @@
    "steps": [
     {
      "step": "Persistence, battery on frozen SHA, publish with SHA check, CI, site, cleanup, final report",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "Batteries by SHA: 1dd89027 FAIL (3 own suites: test_release_runner_verdict, test_release_surface, test_stage_it39; log kept /tmp/bat_it40_1dd89027_FAIL.log; causes: unittest.main without verbosity=2, 8 new scripts with shebang and no +x, questions_it39.md surface not regenerated after investigation text changed; fixed, not rerun on that SHA); 560601df PASS WITH SKIPS (224 targets, 11 skipped, local catalogue cache). Includes Harness e53950a3 and science closing pass 5ba94fd0 (already on development/main as 30382215). Publish, CI and site pending."
+     "evidence": "Batteries by SHA: 1dd89027 FAIL (3 own suites: test_release_runner_verdict, test_release_surface, test_stage_it39; log kept /tmp/bat_it40_1dd89027_FAIL.log; causes: unittest.main without verbosity=2, 8 new scripts with shebang and no +x, questions_it39.md surface not regenerated after investigation text changed; fixed, not rerun on that SHA); 560601df PASS WITH SKIPS (224 targets, 11 skipped, local catalogue cache). Includes Harness e53950a3 and science closing pass 5ba94fd0 (already on development/main as 30382215). Publish, CI and site pending. Published 31919734 (gate PASS, ls-remote verified; an earlier publish attempt on 924525d1 was REFUSED by the gate for a SMILES string read as a markdown link in generation_it40_20261109/verify/VERDICTS.md, fixed). CI on 31919734: Public release gate #625 success, shareable-view workflow #24 success. Site HTTP 200 in five languages and the IT40 conditional-hypothesis block present in the published pages. Original FAIL on 1dd89027 kept."
     }
    ]
   }
