@@ -205,16 +205,52 @@ def _best(cur, new):
 import re  # noqa: E402
 
 _SPLIT = re.compile(r"\s*(?:/|\+|&|,|\band\b|\bvs\.?\b|\bversus\b)\s*", re.I)
-_PREFIX = re.compile(r"^\s*(?:\((?:[RS]|[+\-\u00b1]|rac|[dl]|\d+[RS])\)-?|\[\d*[A-Za-z]{1,2}\]\s*|rac-|[RS]-)\s*", re.I)
+_PREFIX = re.compile(r"^\s*(?:\((?:RS|[RS]|[+\-±]|[+]/[\-]|rac|[dl]|\d+[RS])\)-?|\[\d*[A-Za-z]{1,2}\]\s*|rac-|[RS]-)\s*", re.I)
 _SUFFIX = re.compile(r"[\s\-]+(?:hydrochloride|hydrobromide|maleate|tartrate|mesylate|besylate|citrate|sulfate|phosphate|"
                      r"disodium|dipotassium|sodium|potassium|hcl|hydrate|monohydrate|salt|d\d{1,2})\s*$", re.I)
 
 
-_COMMENT = re.compile(r"\s*\((?!(?:[RS]|[+\-\u00b1]|rac|[dl]|\d+[RS])\))[^)]*\)", re.I)
+_COMMENT = re.compile(r"\s*\((?!(?:RS|[RS]|[+\-±]|[+]/[\-]|rac|[dl]|\d+[RS])\))[^()]*\)\s*$", re.I)   # a trailing comment only: a parenthesis inside a chemical name is nomenclature
 
 
 def _key(s: str) -> str:
     return re.sub(r"\s+", " ", s.strip().lower())
+
+
+def _split_top(name: str) -> list[str]:
+    """Split a cell at "/", "+", "&", ",", "and", "vs" outside parentheses and brackets only: "(+)-X", "(+/-)-X" and "N-(2,4-dimethyl)Y" are one name."""
+    masked, depth = [], 0
+    for ch in name:
+        if ch in "([":
+            depth += 1
+        elif ch in ")]":
+            depth = max(0, depth - 1)
+        masked.append("\x00" if depth and ch not in "([)]" else ch)
+    masked = "".join(masked)
+    out, last = [], 0
+    for m in _SPLIT.finditer(masked):
+        out.append(name[last:m.start()])
+        last = m.end()
+    out.append(name[last:])
+    return out
+
+
+def parent_form(name: str) -> dict:
+    """A name split into what identifies the parent and what qualifies it, for a consumer that must count or group molecules without writing its own normalizer.
+    `key` is the parent name with case, spaces and punctuation removed; a salt or hydrate suffix is dropped (same parent) and returned as `salt`; a stereo, isotope or
+    racemate prefix is NOT dropped from the identity: it is returned as `stereo_isotope` so (key, stereo_isotope) is the grouping unit and (R)-X and (S)-X stay two molecules."""
+    text = _COMMENT.sub("", name)
+    m = _PREFIX.match(text)
+    prefix = m.group(0).strip(" -").lower() if m else ""
+    text = text[m.end():] if m else text
+    salts = []
+    while True:
+        m = _SUFFIX.search(text)
+        if not m:
+            break
+        salts.append(m.group(0).strip(" -").lower())
+        text = text[:m.start()]
+    return {"key": re.sub(r"[^a-z0-9]", "", text.lower()), "stereo_isotope": re.sub(r"[^a-z0-9+\-\u00b1]", "", prefix), "salt": " ".join(reversed(salts))}
 
 
 def join_names(name: str, table_keys) -> list[dict]:
@@ -222,11 +258,11 @@ def join_names(name: str, table_keys) -> list[dict]:
     for EXACT and QUALIFIED; PROPOSED_ONLY carries `proposed_keys` and attaches nothing."""
     keys = {_key(k): k for k in table_keys}
     name = _COMMENT.sub("", name).strip() or name      # "(a different structure, not ...)" is a comment; "(R)-" stays a qualifier
-    parts = [p for p in _SPLIT.split(name) if p.strip()] if _key(name) not in keys else [name]
+    parts = [p for p in _split_top(name) if p.strip()] if _key(name) not in keys else [name]
     multi = len(parts) > 1
     out = []
     for part in parts or [name]:
-        part = re.sub(r"\s*\(.*?\)\s*$", "", part).strip() or part   # trailing parenthetical: a comment, not a name
+        part = _COMMENT.sub("", part).strip() or part   # trailing parenthetical: a comment, not a name
         k = _key(part)
         link, hit, qual = None, None, []
         if k in keys:

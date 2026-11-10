@@ -86,6 +86,46 @@ class Identity(unittest.TestCase):
         self.assertIn("not about the compound", r["note"])
 
 
+class JoinNamesChemicalNames(unittest.TestCase):
+    """HE43: realistic chemical names that the first HE42 splitter mangled (found on a new input, the IT43 DGIdb listing)."""
+    T = ["mk-801", "glycine", "ro 25-6981", "ifenprodil"]
+
+    def test_a_stereo_descriptor_is_a_qualifier_not_a_separator(self):
+        for name, qual in (("(+)-MK-801", "(+)-"), ("(+/-)-MK-801", "(+/-)-"), ("(S)-(+)-MK-801", "(+)-")):
+            (r,) = ci.join_names(name, self.T)
+            self.assertEqual((r["link"], r["key"], r["part"]), ("QUALIFIED", "mk-801", name))
+            self.assertIn(qual, r["qualifier"])
+
+    def test_a_parenthesis_inside_a_chemical_name_is_kept_and_the_part_text_is_the_original(self):
+        (r,) = ci.join_names("(RS)-(Tetrazol-5-yl)glycine", self.T)
+        self.assertEqual((r["link"], r["part"]), ("PROPOSED_ONLY", "(RS)-(Tetrazol-5-yl)glycine"))   # glycine is a candidate to look at, never the identity
+        self.assertIsNone(r["key"])
+        a, b = ci.join_names("N-(2,4-dimethyl)glycine, ifenprodil", self.T)
+        self.assertEqual((a["part"], b["link"]), ("N-(2,4-dimethyl)glycine", "EXACT"))
+
+    def test_a_trailing_comment_is_still_dropped_and_a_cell_still_splits_outside_parentheses(self):
+        self.assertEqual(ci.join_names("Ro 25-6981 (maleate salt)", self.T)[0]["link"], "EXACT")
+        self.assertEqual([r["link"] for r in ci.join_names("MK-801 + ifenprodil", self.T)], ["EXACT", "EXACT"])
+
+    def test_parent_form_does_not_collapse_a_substituted_name_into_its_parent(self):
+        self.assertNotEqual(ci.parent_form("(Rs)-(Tetrazol-5-Yl)Glycine")["key"], ci.parent_form("Glycine")["key"])
+
+
+class ParentForm(unittest.TestCase):
+    def test_salts_merge_into_the_parent_and_stereo_stays_apart(self):
+        a, b = ci.parent_form("(R)-Ef-1520"), ci.parent_form("(S)-Ef-1520")
+        self.assertEqual(a["key"], b["key"])
+        self.assertNotEqual((a["key"], a["stereo_isotope"]), (b["key"], b["stereo_isotope"]))
+        h, p = ci.parent_form("Ivabradine Hydrochloride"), ci.parent_form("Ivabradine")
+        self.assertEqual((h["key"], h["stereo_isotope"]), (p["key"], p["stereo_isotope"]))
+        self.assertEqual(h["salt"], "hydrochloride")
+        self.assertEqual(ci.parent_form("ESKETAMINE HYDROCHLORIDE")["key"], ci.parent_form("Esketamine")["key"])
+
+    def test_a_comment_in_parentheses_is_not_part_of_the_key_and_a_fragment_is_not_made_a_parent(self):
+        self.assertEqual(ci.parent_form("Ro 25-6981 (maleate salt)")["key"], ci.parent_form("Ro 25-6981")["key"])
+        self.assertNotEqual(ci.parent_form("Ro 25")["key"], ci.parent_form("Ro 25-6981")["key"])
+
+
 class Target(unittest.TestCase):
     def test_level_is_the_highest_read_and_selectivity_is_not_assessed(self):
         t = ci.target_evidence(res("memantine"), ["GRIN2B"], ES, None)
