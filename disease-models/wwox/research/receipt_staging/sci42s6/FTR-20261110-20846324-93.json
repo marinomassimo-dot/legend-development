@@ -1,0 +1,44 @@
+{
+ "analysis_at": "2026-11-10T08:52:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-10T09:03:00Z",
+ "event_id": "FTR-20261110-20846324-93",
+ "evidence_basis": [
+  "Mouse somatosensory layer 5 tonic and phasic GABA-A development: Results and Methods read as text; figure images not reachable; Discussion and supplement not read.",
+  "verbatim_locator | proposition: tonic current fall P2-4 to P7-10 | Results | \"from a peak of 170 ± 36 pA (n = 13) in the first week of postnatal life (P2-4) to only 12 ± 4 pA\"",
+  "verbatim_locator | proposition: sIPSC frequency neonatal against mature | Results | \"Spontaneous IPSC frequencies in neonatal and mature tissue were 0.4 ± 0.07 Hz and 16 ± 2 Hz, respectively\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/explanations.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/conditional_prediction.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/figure_notes.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/queries.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "4200dbde2114b3eafab055d9f573a2f981fe09e3b80b5a20ce3c15d188b49a0f",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch db=pmc XML (plain curl) of the PMC record, converted to text locally and saved outside the repository; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1111/j.1460-9568.2010.07373.x",
+  "pmid": "20846324"
+ },
+ "workflow": "SCI42 S6 chloride-gradient question (ORCH-SCI42-20261110), producer cl-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,7 +1,8 @@
-event_id	pmid	evidence_depth	prior_receipt	validated_ok
-FTR-20261110-20846324-93	20846324	partial_fulltext_read	null	yes
-FTR-20261110-27251618-93	27251618	abstract_only	null	yes
-FTR-20261110-28683314-93	28683314	partial_fulltext_read	null	yes
-FTR-20261110-32582852-93	32582852	partial_fulltext_read	null	yes
-FTR-20261110-34634460-93	34634460	partial_fulltext_read	FTR-20261108-34634460-96	yes
-FTR-20261110-37061088-93	37061088	abstract_only	null	yes
+event_id	pmid	evidence_depth	prior_receipt	validated_ok	note
+FTR-20261110-20846324-93	20846324	partial_fulltext_read	null	yes	fingerprint hashes a local text conversion saved outside the repository
+FTR-20261110-26626485-93	26626485	partial_fulltext_read	null	yes	added after audit; fingerprint of the saved text copy outside the repository
+FTR-20261110-27251618-93	27251618	abstract_only	null	yes	fingerprint hashes a local text conversion saved outside the repository
+FTR-20261110-28683314-93	28683314	partial_fulltext_read	null	yes	discussion corrected to not_read after audit; fingerprint hashes a local text conversion that is saved outside the repository and not reproducible by another reader (verifier hashes differ)
+FTR-20261110-32582852-93	32582852	partial_fulltext_read	null	yes	fingerprint hashes a local text conversion saved outside the repository
+FTR-20261110-34634460-93	34634460	partial_fulltext_read	FTR-20261108-34634460-96	yes	figures coverage "read" covers the Fig 4 image and legends only; Figs 1-3, 5, 6 not reopened; fingerprint hashes a local conversion saved outside the repository
+FTR-20261110-37061088-93	37061088	abstract_only	null	yes	fingerprint hashes a local text conversion saved outside the repository

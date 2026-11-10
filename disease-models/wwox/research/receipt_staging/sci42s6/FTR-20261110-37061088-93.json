@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-10T08:55:30Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-10T09:03:00Z",
+ "event_id": "FTR-20261110-37061088-93",
+ "evidence_basis": [
+  "Abstract only (PubMed); no PMC full text. No proposition beyond the abstract is used.",
+  "verbatim_locator | proposition: control switch time infralimbic L2/3 | Abstract | \"the GABA-switch occurred already between postnatal day (P) 6 and P9, as opposed to P15-P21 in controls\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/explanations.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/conditional_prediction.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/figure_notes.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/queries.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "2a797680a6b5763b3649580628ed04f5a5f0b0ffa6c6ff934c1f84ab8dff09b5",
+ "source_kind": "abstract",
+ "source_locator": "PubMed abstract text saved outside the repository (text copy of key abstract sentences and keywords as returned by the PubMed tool)",
+ "study_id": {
+  "doi": "10.1016/j.neuropharm.2023.109543",
+  "pmid": "37061088"
+ },
+ "workflow": "SCI42 S6 chloride-gradient question (ORCH-SCI42-20261110), producer cl-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

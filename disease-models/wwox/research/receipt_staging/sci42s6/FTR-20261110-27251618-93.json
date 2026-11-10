@@ -1,0 +1,43 @@
+{
+ "analysis_at": "2026-11-10T08:55:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-10T09:03:00Z",
+ "event_id": "FTR-20261110-27251618-93",
+ "evidence_basis": [
+  "Abstract only (PubMed): full text not obtainable by the routes used (PMC efetch returned a stub because the publisher does not allow XML download; the PMC tool full_text field was empty). No proposition beyond the abstract is used.",
+  "verbatim_locator | proposition: functional switch at about P9 | Abstract | \"in P9-P15 mice the response switched to a reduction in EPSC frequency\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/explanations.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/conditional_prediction.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/figure_notes.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/queries.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "a3edd2549627608c94132bb4a895755ee1f2dd71ad42452ec1c09f92ff691c3f",
+ "source_kind": "abstract",
+ "source_locator": "PubMed abstract text saved outside the repository (text copy of the abstract as returned by the PubMed tool)",
+ "study_id": {
+  "doi": "10.1523/JNEUROSCI.3482-15.2016",
+  "pmid": "27251618"
+ },
+ "workflow": "SCI42 S6 chloride-gradient question (ORCH-SCI42-20261110), producer cl-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

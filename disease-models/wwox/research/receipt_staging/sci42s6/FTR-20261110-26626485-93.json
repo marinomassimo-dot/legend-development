@@ -1,0 +1,44 @@
+{
+ "analysis_at": "2026-11-10T09:12:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "read"
+ },
+ "event_at": "2026-11-10T09:18:00Z",
+ "event_id": "FTR-20261110-26626485-93",
+ "evidence_basis": [
+  "Mouse wild-type layer 2/3 mIPSC age series: Abstract, Methods 2.1-2.3 (slices, 35 C, 135 mM CsCl internal, TTX, kynurenic acid), Results 3.1-3.3, Tables 1-2 text and Fig 1 image viewed. Later Results on neurosteroid manipulations, the alpha1 knockout and GAD67-GFP lines and the Discussion were not read; reference list not read. Regions of cortex not stated; n are cells.",
+  "verbatim_locator | proposition: mIPSC frequency P7-8 against P20-24 | Results 3.1 | \"P7 - 8 = 1.2 ± 0.2 Hz, n = 55 neurons; P20 - 24 = 11.7 ± 1.2 Hz, n = 25 neurons\"",
+  "verbatim_locator | proposition: internal solution | Methods 2.3 | \"Intracellular solution (ICS) containing (in mM): 135 CsCl, 10 HEPES, 10 EGTA, 2 MgCl2, 1 CaCl2, 2 Mg-ATP and 5 QX-314\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/explanations.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/conditional_prediction.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/new_measurements.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/figure_notes.tsv",
+  "disease-models/wwox/research/drug_repurposing/chloride_gradient_sci42_20261110/output/queries.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "f058088a39cbab2273451a6c9fc5258a5ae0c84b05b6d23535df35b625502510",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch db=pmc XML (plain curl) of PMC4764649, converted to text locally and saved outside the repository; Fig 1 image from the PMC open-data bucket, plain curl; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1016/j.neuropharm.2015.11.019",
+  "pmid": "26626485"
+ },
+ "workflow": "SCI42 S6 chloride-gradient question, revision after the blind audit (ORCH-SCI42-20261110), producer cl-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

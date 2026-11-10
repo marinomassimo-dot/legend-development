@@ -3,7 +3,7 @@
  "analysis_time_precision": "minute",
  "coverage": {
   "abstract": "read",
-  "discussion": "not_present",
+  "discussion": "not_read",
   "figures": "not_read",
   "introduction": "read",
   "limitations": "not_present",
