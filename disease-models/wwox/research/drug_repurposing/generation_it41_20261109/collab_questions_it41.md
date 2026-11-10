@@ -4,6 +4,8 @@ Non-canonical working note. Not medical advice. Nothing here implies an agreed c
 
 ## Q-FLY — is a fly assay centred on loss of Wwox feasible, with a measurable phenotype and a rescue control?
 
+> **Update 2026-11-10:** the public feasibility was delivered by the science session (`fly_wwox_feasibility_it41_20261110/`): no published rescue of any Wwox-loss phenotype was found; the 2005 radiation phenotype is superseded; two sleep datasets disagree on the light phase; no seizure or electrophysiology test exists; the one question the fly could ask is genetic (Nmdar1 dosage). The bullets below are the question as first written; the delivery answers its in-silico part. Open-question row IT41-Q04.
+
 * **Decision it could change.** Whether a fast in vivo tool arm exists for the physiological hypotheses and the INV-05 / INV-18 comparisons (a drug-arm discrimination that does not need slices), and whether a loss-of-function phenotype is robust enough to read a modulator against.
 * **What would have to be true.** A characterised Wwox loss allele; a phenotype scored blind (candidates to check in the literature, not asserted here: stress- or stimulus-induced seizure-like behaviour, climbing, lifespan, a neural stress readout); a rescue control (fly gene, and human WWOX as a conservation test); vehicle and genotype controls; the fly receptor and channel orthologs of the targets in play stated before any compound is read (NMDA-receptor subunits and Ih / Kv7 channels are not one-to-one with the mouse).
 * **Possible in silico first.** Ortholog and domain mapping of the targets of Cases 1–4; a literature census of existing fly Wwox phenotypes and stocks (public repositories only).
