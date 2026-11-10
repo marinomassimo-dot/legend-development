@@ -1,0 +1,24 @@
+resource	kind	identifier	status	source_locator	note
+Wwox f04545 insertion allele	allele	BL18783	confirmed_in_source	39952983 Methods Fly studies	Number printed in the paper; Bloomington record returned 403 and FlyBase returned an empty search shell, so availability is not confirmed. Strong hypomorph (mRNA about 8 percent, Fig 2A).
+WWOX1 null allele (homologous recombination, DmWWOX1 in 2005)	allele	no stock number in opened sources	confirmed_in_source	26302329 Methods and Fig 1 legend; 16007179 abstract	Described as heterozygous null allele; stock source not given; earlier references not opened.
+WWOX2 insertion allele	allele	no stock number in opened sources	confirmed_in_source	26302329 Fig 1 legend	Described as heterozygous insertion mutation allele; trans-heterozygote WWOX1/WWOX2 scored as adults.
+UAS-WWOX-IR#1	RNAi	VDRC v22536	confirmed_in_source	26302329 Methods	Catalogue number from the paper; VDRC page not opened.
+UAS-WWOX-IR#2 / WwoxKK	RNAi	VDRC 108350 (P{KK108459}VIE-260B)	confirmed_in_source	26302329 Methods; 42909904 Supp Table 1A	Same number in two sources; in the 2026 paper the KK line is listed and not used in assay rows (earlier dossier).
+Wwox TRiP RNAi	RNAi	BDSC 51747 (TRiP.HMC03298, attP2)	confirmed_in_source	42909904 Supp Table 1A	Only line in the assay rows; control BDSC 8622; LacZ BDSC 8530; knockdown about 0.55 of mRNA in heads (earlier dossier).
+UAS-dWwox	rescue	This study (attP2, chr 3)	catalogue_entry_only	42909904 Supp Table 1A	Existence stated; no repository number or availability.
+UAS-hWWOX plus Ser14 and Tyr33 variants	rescue	This study (attP2, chr 3)	catalogue_entry_only	42909904 Supp Table 1A and Table 1B	Used as overexpression in an Abeta42 background, not as rescue of knockdown.
+UAS-WWOX-ORF#1 and UAS-WWOX-cDNA#1	rescue	described in earlier references	catalogue_entry_only	26302329 Methods	Previously described; stock origin not given.
+Wwox CRISPRa (dCas9-VPR plus WwoxgRNA)	rescue	BDSC 66561, BDSC 77229, control gRNA BDSC 67539	confirmed_in_source	42909904 Supp Table 1A	Gain tool about 1.8 to 2-fold mRNA; not a loss tool.
+sima:GFP reporter	reporter	BDSC 42672	confirmed_in_source	42909904 Supp Table 1A	HIF1alpha-orthologue GFP stock (described three ways in the paper).
+mito-roGFP2-Orp1	reporter	BDSC 67667	confirmed_in_source	42909904 Supp Table 1A	Mitochondrial peroxide reporter used in wing veins.
+UAS-Xbp1:GFP:HG	reporter	BDSC 60730	confirmed_in_source	42909904 Supp Table 1A	ER-stress reporter.
+Neuronal, glial, clock, QF drivers	reporter	elav-GAL4 BDSC 458 and 8765; repo-GAL4 BDSC 7415; nSyb-QF2 BDSC 51960; tim-GAL4 Stanewsky lab	confirmed_in_source	42909904 Supp Table 1A	Tissue-specific drivers for knockdown and rescue.
+Y288F catalytic mutant construct	rescue	no identifier	catalogue_entry_only	34210081 SDR paragraph; 26390919 abstract	Reported in a paper I only saw as abstract; construct availability unknown.
+Nmdar1 RNAi lines and Dicer-2	RNAi	VDRC 37333 and 104773; UAS-Dicer-2 VDRC 60008	confirmed_in_source	26023770 Methods	37333 knocks mRNA to about 50 percent; 104773 weaker and not significant at mRNA.
+dNR1 hypomorphs and dNR1 N631Q transgene	allele	dNR1 EP3511 and EP331; UAS-dNR1 N631Q	catalogue_entry_only	22681692 Results	Named in the text; stock numbers not read.
+Sleep and rhythm assay (Trikinetics DAM)	assay	Drosophila Activity Monitor	confirmed_in_source	39952983 Methods; 42909904; 26023770 Methods	Sleep = 5 min or more of inactivity; three sources use it.
+Egr/TNF eye modifier assay	assay	GMR>egr+w, eye area in pixels	confirmed_in_source	26302329 Methods and Fig 1	Egr stock from a named laboratory, no stock number.
+Larval NMJ electrophysiology and GluR immunostaining	assay	Mib1 paper Methods	catalogue_entry_only	26596173 Experimental Methods (headings only)	Method headings seen; no Wwox NMJ data exist.
+Wwox seizure or bang-sensitivity assay	assay	none	not_found	PubMed esearch Q05 (0 hits)	No published test of Wwox-loss flies; a bang-sensitivity assay is a proposal only.
+FlyBase or BDSC stock record for BL18783	allele	none retrieved	not_found	queries.tsv Q01,Q02,Q03	BDSC page 403 (recorded as unreachable, not retried by other route); FlyBase gave a shell with 0 hits.
+Endogenous Wwox protein detection or Wwox-tagged reporter	reporter	none	not_found	26302329 Fig 3 text; 42909904	Endogenous protein too low to detect; no GFP-tag or T2A-GAL4 line found in opened sources (perimeter: opened sources only).
