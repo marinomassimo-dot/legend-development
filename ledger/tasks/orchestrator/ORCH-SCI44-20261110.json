@@ -9,13 +9,17 @@
   "BASELINE": "main 380a4ee3. Worktree .claude/worktrees/sci44, branch task/sci44. IT44 (legend-development-4e, worktree it44, branch task/it44 at 8a883679) owns shared consumers; HE43 is Harness. SCI43 residue check: IT43 consumed SCI43 rows 1-7 and 11 and recorded 26 receipts in c82a1bff.",
   "CURRENT_PACKAGE": {
     "id": "A",
-    "state": "S0 done, A1 being written",
-    "delegate_active": "none",
-    "updated": "2026-11-10T22:22:08Z"
+    "state": "A2 producer done (committed 770c5e46, unverified); A3 producer running; A4 brief ready (BRIEF_A4.md); then one verifier for A2-A4",
+    "delegate_active": "A3 producer (sonnet/medium)",
+    "updated": "2026-11-10"
   },
-  "RESUME": "First incomplete step: write pdh_pdk_sci44_20261110/A1_before_search.md and BRIEF_A2.md, then dispatch producer A2 (legend-delegate, sonnet medium). Materials: metabolic_inv07_20261107/output, generation_it43_20261110/s9, next_batch_it43_20261110/BRIEF.md.",
-  "DECISIONS_TAKEN": [],
-  "DELEGATIONS": [],
+  "RESUME": "First incomplete step: wait for producer A3 (output/a3/), commit, dispatch producer A4 (BRIEF_A4.md, output/a4/), then ONE blind verifier over A2-A4 (verifier receipts: prior_receipt = producer receipt, reread_reason adversarial_reanalysis, per IT44). Then A1 addendum, A5 experiment, README, consumer_delta. Materials: pdh_pdk_sci44_20261110/{A1_before_search.md,BRIEF_A2..A4.md,output/,a4/}.",
+  "DECISIONS_TAKEN": [
+    "2026-11-10 S0: order kept A (PDH/PDK) then B then C; IT44 confirmed no overlap and asked verifier receipts to carry prior_receipt and reread_reason adversarial_reanalysis"
+  ],
+  "DELEGATIONS": [
+    "A2 producer og-p: asked sonnet/medium; read back medium x105; 105 turns; output 121,831; cache read 16,415,700; peak 315,875"
+  ],
   "ESCALATIONS": [],
   "STOP_LOG": [],
   "DEFAULTS_TAKEN": [],
