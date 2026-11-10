@@ -1,0 +1,7 @@
+question	unit	name	B_verdicts	actions
+Q3	CAT:CHEMBL2106227	ETIFOXINE	EXCLUDED:direction_opposite	ANTAGONIST
+Q3	CAT:CHEMBL407	FLUMAZENIL	EXCLUDED:direction_opposite	ALLOSTERIC ANTAGONIST
+Q3	GTOPDB:4156	CGS8216	EXCLUDED:direction_opposite	Agonist/Inverse agonist
+Q3	GTOPDB:4347	ZK93426	EXCLUDED:direction_opposite	Allosteric modulator/Antagonist
+Q3	GTOPDB:2312	bicuculline	EXCLUDED:direction_opposite	Antagonist/Antagonist
+Q3	GTOPDB:4197	gabazine	EXCLUDED:direction_opposite	Antagonist/Antagonist

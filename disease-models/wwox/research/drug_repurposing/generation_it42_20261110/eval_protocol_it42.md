@@ -57,3 +57,9 @@ B improves on A1 if, on the same universe, unflagged errors are lower, no refere
 ## Not done on purpose
 
 No graph propagation is used here, so no graph baseline or specificity control applies; if graph propagation is introduced later, the existing controls (simple baselines, specificity) apply then.
+
+## Addendum 1 (2026-11-10, after the first run; the criteria and the meaning of "improvement" are unchanged)
+
+The first run of `eval_it42.py` (kept as `eval_results_run1.tsv`, `eval_lost_candidates_run1.tsv`) listed six units as "clean but lost by B" in Q3: etifoxine, flumazenil, CGS8216, ZK93426, bicuculline, gabazine. All six are antagonists or inverse agonists in a question about positive modulation and B excluded them correctly; the evaluator's own E1 test had treated them as clean because its pattern for an agonist matched inside the word "antagonist". This is a defect of the scorer, not a change of criterion. The pattern was fixed (a word is an agonist only if not preceded by "ant" or "inverse "); `eval_results.tsv` is run 2. Neither path was tuned: the fix lowers the apparent quality of A0 and A1 and removes a false loss of B.
+
+Addendum 1b (same day): a second scorer defect surfaced by the one remaining "lost" unit (CGS8216, GtoPdb type "Agonist", action "Inverse agonist"): the scorer read the type and the action together. The scorer now reads the action part of the field (after the slash) and falls back to the type part only when the action part is empty or 'None' (a channel blocker has action 'None'). Criteria unchanged; `eval_results.tsv` is run 3, runs 1 and 2 outputs are kept in this folder's history.

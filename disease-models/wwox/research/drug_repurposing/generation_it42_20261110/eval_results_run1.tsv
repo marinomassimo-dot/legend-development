@@ -1,0 +1,16 @@
+question	relation	path	rows_returned	distinct_units	E4_duplicates	clean_units	E1_direction	E2_site_class	E3_subunit_transfer	E5_identity	units_with_unflagged_error	reference_positives_returned	unknown_units_kept_with_reason	excluded_units_with_reason
+Q1	S1	A0	28	24	4	4	3	20	0	0	20	evt-101;radiprodil;rislenemdaz;traxoprodil	0	0
+Q1	S1	A1	67	63	4	7	13	54	1	0	56	evt-101;radiprodil;rislenemdaz;traxoprodil	0	0
+Q1	S1	B	8	7	1	7	0	0	0	0	0	evt-101;radiprodil;rislenemdaz;traxoprodil	1	55
+Q2	S3	A0	39	7	32	2	5	0	0	0	5	n/a	0	0
+Q2	S3	A1	84	29	55	18	11	0	0	0	11	n/a	0	0
+Q2	S3	B	41	18	23	18	0	0	0	0	0	n/a	0	11
+Q3	S5	A0	488	71	417	70	1	0	0	0	1	n/a	0	0
+Q3	S5	A1	671	125	546	108	17	0	0	0	17	n/a	0	0
+Q3	S5	B	567	101	466	101	0	0	0	0	0	n/a	0	30
+Q4	S6	A0	0	0	0	0	0	0	0	0	0	n/a	0	0
+Q4	S6	A1	6	6	0	4	2	0	0	0	2	n/a	0	0
+Q4	S6	B	4	4	0	4	0	0	0	0	0	n/a	0	2
+Q5	S7	A0	2	2	0	2	0	0	0	0	0	n/a	0	0
+Q5	S7	A1	16	15	1	15	0	0	0	0	0	n/a	0	0
+Q5	S7	B	16	15	1	15	0	0	0	0	0	n/a	0	0
