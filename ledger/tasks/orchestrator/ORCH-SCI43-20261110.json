@@ -1,85 +1,86 @@
 {
- "_schema": "task record, Annex A.1c",
- "TASK_ID": "ORCH-SCI43-20261110",
- "OWNER": "orchestrator",
- "ACTOR_ID": "orchestrator",
- "PRIORITY": "HIGH",
- "OBJECTIVE": "Operator mandate pasted 2026-11-10 (SCI43): new pharmacological levers from membrane physiology, the potassium-conductance branch (INV-18 branch D). Can a change in K+ conductances explain part of the resting potential / input resistance / sag / rebound combination and offer a lever different from or complementary to HCN? Rivals: Ih, K+ conductances, maturation or cell size, recording conditions, network consequence or compensation. Mission: a concretely usable pharmacological or experimental possibility for the generative engine, not another critical review.",
- "START_UTC": "2026-11-10T18:14:43Z",
- "BASELINE": "main a4799320 (development/main same). Worktree .claude/worktrees/sci43, branch task/sci43. IT43 integrator has worktree it43 (locked, not touched); he43 is Harness.",
- "CURRENT_PACKAGE": {
-  "id": "landing",
-  "state": "first package and coda in the worktree (ac411d3d); landing after IT43 battery PID 1466947",
-  "delegate_active": "none",
-  "updated": "2026-11-10T19:17:15Z"
- },
- "RESUME": "CHECKPOINT: first package and S7 coda committed (ac411d3d). Next: wait for IT43 battery PID 1466947 to exit (process_wait.py --pid), gate on the frozen SHA, LINT no BLOCK, receipts verify, growth, battery on a fresh unique clone, task_close, safe_push development main, closure-only record commit.",
- "DECISIONS_TAKEN": [
-  "2026-11-10 S0: INV-18 branch D chosen (debt confirmed, quantitative constraint in Table 1, reading-only cost); IT43 (4e) says IT43 takes INV-05/supply-side, not K conductances",
-  "2026-11-10: battery sequenced after IT43 candidate 8211d2d7 (PID 1466947, own clone, waiting by PID)",
-  "2026-11-10: one plain retry of the rate-limited preprint URL on the same route returned 429 again; recorded, stopped"
- ],
- "DELEGATIONS": [
-  "S2 producer og-k: asked sonnet/medium; read back medium x106; 106 turns; output 112,017; cache read 18,058,810; peak 318,931",
-  "S5 verifier kv-v: asked sonnet/high; read back high x86; 86 turns; output 124,986; cache read 14,620,022; peak 314,816"
- ],
- "ESCALATIONS": [],
- "STOP_LOG": [],
- "DEFAULTS_TAKEN": [],
- "AUTHORISED_QUEUE_20261110": {
-  "MANDATE_STATE": "OPEN",
-  "OBJ_1": {
-   "order": 1,
-   "steps": [
-    {
-     "step": "S0 reconcile SCI42, read INV-18 row and linked dossiers, check the K-conductance debt, write rival explanations and outcome table before any search",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "main a4799320 reconciled (SCI42 d3a57a65 and f84ee77b ancestors; IT42 consumed S5/S6 in 3c0a49c8, receipts 1573 verified); INV-18 row read in full; debt confirmed (Kv7 openers abstract-only, XE991 unread, K2P/Kir tools unread, Wang 2016 unread); IT43 informed (legend-development-4e); choice motivated in S0_S1_before_search.md"
-    },
-    {
-     "step": "S1 decisive question and rival explanations written before search",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "S0_S1_before_search.md: question, five rival explanations with favouring and weakening outcomes, written before any search (commit 0f833af6)"
-    },
-    {
-     "step": "S2 primary sources: Kv7 / Kir / K2P in cortical pyramidal neurons (current measured, voltage dependence, modulators, alternative actions)",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "producer og-k sonnet/medium read back medium x106, 106 turns, output 112,017, cache read 18,058,810; 9 sources partial full text, 1 abstract only, 10 staged receipts (-94); blind verifier kv-v sonnet/high read back high x86, 86 turns, output 124,986, cache read 14,620,022; 16 staged receipts (-95); preprint and three J Neurosci sources unreachable for the verifier (429 / reCAPTCHA, not retried by another route)"
-    },
-    {
-     "step": "S3 hypothesis generation before names, then catalogue and identity, roles",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "hypotheses.tsv (KH1-KH5) generated before names; catalogue_by_family.py, tools_roles.tsv, identity_tools.tsv; no candidate; azetukalner reached only by name"
-    },
-    {
-     "step": "S4 minimum discriminating comparison and outcome matrix",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "experiment_ladder.tsv (steps 0-6), outcome_matrix.tsv (O1-O7); antiseizure comparison question stated at class level"
-    },
-    {
-     "step": "S5 independent blind verification and recheck of substantive corrections",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "verify/audit.md: D01-D16 3 supported, 4 partly, 1 not supported, 8 unverifiable by access; substantive errors fixed (K2P absence, degenerate implied reversal, tau prediction, AHP, area wording, HT asterisks, O2/O4 scope, benefit wording); K2P correction rechecked by the Orchestrator on 40595546 text; shunt equivalence rechecked by recomputation"
-    },
-    {
-     "step": "S6 delivery to IT43 (consumer_delta, readable tables, staged receipts)",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "README.md, consumer_delta.md (11 rows, none applied), COST_NOTE.md, 26 staged receipts (unrecorded) in research/receipt_staging/sci43 and sci43v"
-    },
-    {
-     "step": "S7 tail: remaining premise, obscured alternative, small analysis if public data fit, DREAM, next brief",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "S7_PREREGISTRATION.md committed 353f5fe5 before implied_reversal_mc.py ran (P3, P4 failed); S7_coda.md (premise carried, hidden alternative, DREAM: one condition record), next_brief_sci43_20261110.md"
+  "_schema": "task record, Annex A.1c",
+  "TASK_ID": "ORCH-SCI43-20261110",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "HIGH",
+  "OBJECTIVE": "Operator mandate pasted 2026-11-10 (SCI43): new pharmacological levers from membrane physiology, the potassium-conductance branch (INV-18 branch D). Can a change in K+ conductances explain part of the resting potential / input resistance / sag / rebound combination and offer a lever different from or complementary to HCN? Rivals: Ih, K+ conductances, maturation or cell size, recording conditions, network consequence or compensation. Mission: a concretely usable pharmacological or experimental possibility for the generative engine, not another critical review.",
+  "START_UTC": "2026-11-10T18:14:43Z",
+  "BASELINE": "main a4799320 (development/main same). Worktree .claude/worktrees/sci43, branch task/sci43. IT43 integrator has worktree it43 (locked, not touched); he43 is Harness.",
+  "CURRENT_PACKAGE": {
+    "id": "landing",
+    "state": "first package and coda in the worktree (ac411d3d); landing after IT43 battery PID 1466947",
+    "delegate_active": "none",
+    "updated": "2026-11-10T19:17:15Z"
+  },
+  "RESUME": "LANDING: battery on fresh clone of frozen SHA 9414b8ae finished REGRESSION VERDICT: PASS WITH SKIPS (228 targets, 11 skipped, all environmental: absent local corpus artefacts, catalogue cache, Stop hook, case-sensitive filesystem); gate PASS, LINT no BLOCK, receipts chain OK, growth PASS on the same SHA. Later commits are closure-only (task record). Next: task_close.py, then safe_push.py development main.",
+  "DECISIONS_TAKEN": [
+    "2026-11-10 S0: INV-18 branch D chosen (debt confirmed, quantitative constraint in Table 1, reading-only cost); IT43 (4e) says IT43 takes INV-05/supply-side, not K conductances",
+    "2026-11-10: battery sequenced after IT43 candidate 8211d2d7 (PID 1466947, own clone, waiting by PID)",
+    "2026-11-10: one plain retry of the rate-limited preprint URL on the same route returned 429 again; recorded, stopped",
+    "Battery verdict PASS WITH SKIPS attributed to frozen SHA 9414b8ae only (clone /tmp/sci43_batt_9414b8ae, 4160.6s suite time)."
+  ],
+  "DELEGATIONS": [
+    "S2 producer og-k: asked sonnet/medium; read back medium x106; 106 turns; output 112,017; cache read 18,058,810; peak 318,931",
+    "S5 verifier kv-v: asked sonnet/high; read back high x86; 86 turns; output 124,986; cache read 14,620,022; peak 314,816"
+  ],
+  "ESCALATIONS": [],
+  "STOP_LOG": [],
+  "DEFAULTS_TAKEN": [],
+  "AUTHORISED_QUEUE_20261110": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_1": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "S0 reconcile SCI42, read INV-18 row and linked dossiers, check the K-conductance debt, write rival explanations and outcome table before any search",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "main a4799320 reconciled (SCI42 d3a57a65 and f84ee77b ancestors; IT42 consumed S5/S6 in 3c0a49c8, receipts 1573 verified); INV-18 row read in full; debt confirmed (Kv7 openers abstract-only, XE991 unread, K2P/Kir tools unread, Wang 2016 unread); IT43 informed (legend-development-4e); choice motivated in S0_S1_before_search.md"
+        },
+        {
+          "step": "S1 decisive question and rival explanations written before search",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "S0_S1_before_search.md: question, five rival explanations with favouring and weakening outcomes, written before any search (commit 0f833af6)"
+        },
+        {
+          "step": "S2 primary sources: Kv7 / Kir / K2P in cortical pyramidal neurons (current measured, voltage dependence, modulators, alternative actions)",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "producer og-k sonnet/medium read back medium x106, 106 turns, output 112,017, cache read 18,058,810; 9 sources partial full text, 1 abstract only, 10 staged receipts (-94); blind verifier kv-v sonnet/high read back high x86, 86 turns, output 124,986, cache read 14,620,022; 16 staged receipts (-95); preprint and three J Neurosci sources unreachable for the verifier (429 / reCAPTCHA, not retried by another route)"
+        },
+        {
+          "step": "S3 hypothesis generation before names, then catalogue and identity, roles",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "hypotheses.tsv (KH1-KH5) generated before names; catalogue_by_family.py, tools_roles.tsv, identity_tools.tsv; no candidate; azetukalner reached only by name"
+        },
+        {
+          "step": "S4 minimum discriminating comparison and outcome matrix",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "experiment_ladder.tsv (steps 0-6), outcome_matrix.tsv (O1-O7); antiseizure comparison question stated at class level"
+        },
+        {
+          "step": "S5 independent blind verification and recheck of substantive corrections",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "verify/audit.md: D01-D16 3 supported, 4 partly, 1 not supported, 8 unverifiable by access; substantive errors fixed (K2P absence, degenerate implied reversal, tau prediction, AHP, area wording, HT asterisks, O2/O4 scope, benefit wording); K2P correction rechecked by the Orchestrator on 40595546 text; shunt equivalence rechecked by recomputation"
+        },
+        {
+          "step": "S6 delivery to IT43 (consumer_delta, readable tables, staged receipts)",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "README.md, consumer_delta.md (11 rows, none applied), COST_NOTE.md, 26 staged receipts (unrecorded) in research/receipt_staging/sci43 and sci43v"
+        },
+        {
+          "step": "S7 tail: remaining premise, obscured alternative, small analysis if public data fit, DREAM, next brief",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "S7_PREREGISTRATION.md committed 353f5fe5 before implied_reversal_mc.py ran (P3, P4 failed); S7_coda.md (premise carried, hidden alternative, DREAM: one condition record), next_brief_sci43_20261110.md"
+        }
+      ]
     }
-   ]
   }
- }
 }
