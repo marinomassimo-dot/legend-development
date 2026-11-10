@@ -39,6 +39,10 @@ Units with an unflagged error: 56 → 0 (Q1), 11 → 0 (Q2), 24 → 0 (Q3), 2 �
 * Cost: catalogue load and index 4.0 s (shared by all paths), one-symbol ChEMBL lookup 0.01 ms, GtoPdb table read 0.12 s, qualification of 892 rows 4 ms. Computing the guided path costs nothing material after the first load; what it changes is reading burden: for Q3, 671 rows / 125 units for a reader of A1 against 101 shortlisted units plus 30 excluded with a reason for B; for Q1, 67 rows / 63 units against 7 shortlisted units, 1 unknown and 55 exclusions with a reason.
 * No graph propagation is used, so no graph baseline or specificity control applies.
 
+## Post hoc case Q6\* (identity), reported apart
+
+Relation S8 (AMPA/kainate antagonism) was added for the P1 trace and is not part of the pre-fixed set (addendum 2 of the protocol). A0 returns 15 units, A1 60 with 32 units carrying an unflagged error including **one identity error** (the GtoPdb label GYKI53784, which the identity table flags as a label conflict); B returns 28 clean units, flags the GYKI53784 rows UNKNOWN (label conflict) and keeps the distinct structure GYKI53655 as a candidate; 0 clean units lost. It is the only question in which criterion E5 catches anything.
+
 ## Limits
 
 Five questions, one reference list, no outcome independent of the construction of the sources; the guided rules are the relation's own columns (`wanted_direction`, `site_policy`, `subunit_in`, `subunit_out`) plus the identity table, so a mis-specified relation row would be mis-applied uniformly. A sample check by a reader with the originals (below) is the independent part.
