@@ -10,13 +10,13 @@
  "assigned_on": "2026-11-09",
  "worktree": ".claude/worktrees/hpkg",
  "branch": "task/hpkg",
- "CURRENT_STATE": "IN_PROGRESS",
+ "CURRENT_STATE": "DONE_PENDING_LANDING",
  "CHECKPOINT": {
-  "last_verified_result": "merged candidate = task/hpkg 37468be3 (identity + reader + H6 + origin/main 31919734): 22 reader and 10 identity regressions OK on the IT40 data",
-  "first_incomplete_work": "publish identity (push --expect-sha 7586bfe0) then land task/hpkg; H5 depends on IT41 package A",
-  "active_processes": "none of mine; other sessions' batteries are running and untouched",
+  "last_verified_result": "e2b1faaf battery PASS WITH SKIPS (225/11), published within 9d58c69d",
+  "first_incomplete_work": "push task/dream5 (docs + one manifest row), then close",
+  "active_processes": "none of mine",
   "real_dependencies": "IT40 landing (matrix_column data); IT41 package A output for H5",
-  "next_executable_step": "gate + LINT on the merged tree, release battery on the frozen SHA, task_close, safe_push --expect-sha"
+  "next_executable_step": "task_close dream5; gate; safe_push --expect-sha; message the Orchestrator with the SHA"
  },
  "AUTHORISED_QUEUE_20261109": {
   "MANDATE_STATE": "OPEN",
@@ -58,19 +58,19 @@
      "step": "compound_identity.py, dated declarations, 9 regressions, identity table",
      "status": "DONE",
      "owner": "plan",
-     "evidence": "commit 1e011056 on local main 7586bfe0; gate 0 BLOCK, LINT 0 BLOCK"
+     "evidence": "e2b1faaf = origin 31919734 + identity + reader + H6; release battery on that exact SHA: PASS WITH SKIPS (225 targets, 11 skipped), log /tmp/idfix_battery_e2b1faaf.log; published as an ancestor of development/main 9d58c69d (the Orchestrator's push); the Orchestrator told by message"
     },
     {
-     "step": "Publish after release battery on the frozen SHA 7586bfe0",
-     "status": "IN_PROGRESS",
+     "step": "Publish identity + reader + H6 after the release battery on the frozen SHA e2b1faaf (push from a detached checkout of e2b1faaf, because local main has moved)",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": "remote moved (IT40 landed, 18 commits): the battery on 7586bfe0 was stopped at ~83 targets (partial log /tmp/idfix_battery_7586bfe0_STOPPED_PARTIAL.log, not a verdict); one battery on the merged candidate instead"
+     "evidence": "e2b1faaf = origin 31919734 + identity + reader + H6; release battery on that exact SHA: PASS WITH SKIPS (225 targets, 11 skipped), log /tmp/idfix_battery_e2b1faaf.log; published as an ancestor of development/main 9d58c69d (the Orchestrator's push); the Orchestrator told by message"
     },
     {
      "step": "Send the published SHA to the Orchestrator (package A)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": "pointer already sent; SHA to follow"
+     "evidence": "e2b1faaf = origin 31919734 + identity + reader + H6; release battery on that exact SHA: PASS WITH SKIPS (225 targets, 11 skipped), log /tmp/idfix_battery_e2b1faaf.log; published as an ancestor of development/main 9d58c69d (the Orchestrator's push); the Orchestrator told by message"
     }
    ]
   },
@@ -80,15 +80,15 @@
    "steps": [
     {
      "step": "hypothesis_package.py: hypothesis_packages.tsv manifest, source_ref per row, comparison_for, 'all rows' blocks",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": "worktree .claude/worktrees/hpkg, branch task/hpkg; check passes on 3 manifest packages"
+     "evidence": "manifest, file:line source_refs, comparison_for, row_id key, 'all rows'; 22 regressions; commits 12602082, bf57b69a"
     },
     {
      "step": "Tests and fixture for the new reader paths; before/after",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": "framework/scripts/test_hypothesis_package.py"
+     "evidence": "manifest, file:line source_refs, comparison_for, row_id key, 'all rows'; 22 regressions; commits 12602082, bf57b69a"
     }
    ]
   },
@@ -98,15 +98,15 @@
    "steps": [
     {
      "step": "matrix_column read from alternatives.tsv and validated; ref classes AGE/CARD_ID/PROBE_NAME/BROKEN_REFERENCE/UNCLASSIFIED",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": "implemented in hpkg; the IT40 data with matrix_column is on task/it40 560601df, not on main"
+     "evidence": "matrix_column consumed on the landed IT40 data (BH1 reaches AB01-AB04,AB11,AB12; BH3 AB07-AB10); reference classes; no BROKEN_REFERENCE"
     },
     {
      "step": "Run against the IT40 data once it is on main (BH1 and BH3 columns)",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "IT40 landed (origin/main 31919734); BH1 reaches AB01-AB04,AB11,AB12 and BH3 AB07-AB10 by matrix_column; after_it40_INV-05.txt"
+     "evidence": "matrix_column consumed on the landed IT40 data (BH1 reaches AB01-AB04,AB11,AB12; BH3 AB07-AB10); reference classes; no BROKEN_REFERENCE"
     }
    ]
   },
@@ -116,10 +116,9 @@
    "steps": [
     {
      "step": "Show before/after with the Orchestrator's IT41 output",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": "depends on package A consuming identity_table.tsv",
-     "blocker": "IT41 package A output not yet delivered"
+     "evidence": "availability and answers, not a measured effect: package A rows C1-C3 are returned by comparison_for once its folder is a manifest row (added), and its three identity hand-offs are answered in identity_it41_20261109/README.md; the generation path has NOT yet been shown to use them"
     }
    ]
   },
@@ -131,7 +130,7 @@
      "step": "Entrypoint executability, skip reasons, derived surfaces, unique temp dirs in recipes",
      "status": "DONE",
      "owner": "plan",
-     "evidence": "scanned: no shebang/executable mismatch in framework/scripts and scripts (0 of both); one hidden skip reason (test_attribution_it21 ran at verbosity=1) now shows 'catalogue cache absent' through the runner's own parser; unique boxes and PID waits already follow the owned_scratch recipe in this mandate's battery"
+     "evidence": "see earlier evidence"
     }
    ]
   },
@@ -141,15 +140,15 @@
    "steps": [
     {
      "step": "Observed cost from the transcript census, separating what is not attributable",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": "framework/scripts/session_model_census.py on the slice of this mandate"
+     "evidence": "session_model_census on the IT41 slice (2026-11-09T22:38Z to 2026-11-10T00:35Z): 144 turns, all claude-sonnet-5-5, effort medium; birth context 169,327; peak 397,778; cache written 231,341; cache read 43,688,835; output 122,617; zero Agent calls; the batteries' compute time and the Orchestrator's cost are not attributable"
     },
     {
      "step": "Publish hpkg through task_close and safe_push",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "Dream note + manifest row + package A identity answers on task/dream5; push after gate"
     }
    ]
   },
@@ -159,9 +158,9 @@
    "steps": [
     {
      "step": "Run dream_pass.py and consolidate, after H2-H5",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": "legend-dream skill; delta only for shared points"
+     "evidence": "dream5_20261109/README.md: three themes, one control (label-conflict link rejected), one present-but-unused (selectivity wording on F04), one new combination (GYKI 53655 in the papers); deltas, no edit of cards"
     }
    ]
   }

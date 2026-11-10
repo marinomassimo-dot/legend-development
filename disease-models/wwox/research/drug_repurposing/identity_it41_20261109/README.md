@@ -50,3 +50,15 @@ Delete `compound_identity.py`, its test, `catalog/tool_identity_declarations.tsv
 ## Added with the second push (IT41 package A)
 
 The slice papers in `ampa_comparison_it41_20261109/output/names_used.tsv` name **GYKI 53655**, not GYKI 52466. The first name lookup missed its record because the catalogue spells it `Gyki53655` without a space: `SEPARATOR_VARIANT` now finds it (a reproducible defect of space-sensitive normalisation, shared by `compound_catalog.find`, left unchanged there). Two `distinct_from` declarations keep the two GYKI compounds apart in both directions. Unresolved here: `d-APV` is stored as `D-Ap5` and is not found by that name (`NOT_FOUND_BY_NAME`); IT40's identity_check handles it as `d-APV (D-Ap5)` and no declaration was written because the equivalence of the spelling was not re-read in a registry in this package.
+
+## Answers to the identity hand-offs in `ampa_comparison_it41_20261109/output/comparison.tsv` (rows C1 to C3)
+
+The package marks C1, C2 and C3 `unresolved` or `name_mismatch` and leaves "the catalogue match" to Harness. Read with `compound_identity.py` on 2026-11-09, ChEMBL_37 and PubChem keys (identity level only; no selectivity, no potency):
+
+| Row | Compound as the package names it | Identity at parent level | Salt or form | What stays open |
+|---|---|---|---|---|
+| C1 | NBQX | `NAME_EXACT`, catalogue record Nbqx (`CAT:DGIDB:ca4c6814d8f6`), ChEMBL `CHEMBL222519` (C12H8N4O6S, key UQNAFPHGVPVTAL-UHFFFAOYSA-N); ChEMBL lists one child record `CHEMBL1257130` without a name | the papers read give no salt or supplier, so the parent is the only identity that can be claimed; a salt form is not assumed | the form actually applied in the slice papers; the child record's identity was not read |
+| C2 | GYKI 53655 | declared `CHEMBL267450` (C19H20N4O3, key SMGACXZFVXKEAX-UHFFFAOYSA-N; GtoPdb 4209, PubChem CID 126758); catalogue record Gyki53655 found as `SEPARATOR_VARIANT` | hydrochloride typeset in one paper (Tocris), not stated in the others: the parent is the identity | the package's `name_mismatch` is resolved as **two distinct structures**: the earlier probe row's GYKI 52466 (CHEMBL275006, C17H15N3O2) is a different compound, and rate constants measured for it are not values for GYKI 53655. The label GYKI53784 is a third thing (see the diagnosis table) |
+| C3 | perampanel | `NAME_EXACT`, `CHEMBL1214124` (C23H15N3O, key PRMWGUBFXWROHD-UHFFFAOYSA-N) and the DGIdb record Perampanel | no salt or hydrate record exists in ChEMBL for it; the papers state none, one lists a vendor | the supplied form (vendor entry in one key-resources table) |
+
+These answers settle identity only. The package's own doubts about which values belong to which compound stay with the package.
