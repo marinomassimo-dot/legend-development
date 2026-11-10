@@ -146,7 +146,7 @@ Spot-checked receipts (`output/receipts/`): FTR-20261110-39952983-83 (Kim) and F
 
 ## Method notes
 
-Work area: `/tmp/claude-1000/-home-desktop-legend-development/9400b253-25a0-4b03-8822-96361325fc16/scratchpad/icv_work/` (texts, figures, aligner script `scripts/align.py`, alignments `aln_A.txt`, `aln_B.txt`). Python on downloaded files run with `-I`. No gate, lint, test, receipt record, or edit outside `verify/`; no e-mail, registration or contact; no browser identity.
+Work area: `/tmp/claude-1000/-home-desktop-legend-development/9400b253-25a0-4b03-8822-96361325fc16/scratchpad/icv_work/` (texts, figures, aligner script (kept in the scratchpad, not in the repository), alignments `aln_A.txt`, `aln_B.txt`). Python on downloaded files run with `-I`. No gate, lint, test, receipt record, or edit outside `verify/`; no e-mail, registration or contact; no browser identity.
 
 ## Recheck (after producer corrections, commit 9602f07e; verifier ic-v, 2026-11-10)
 
