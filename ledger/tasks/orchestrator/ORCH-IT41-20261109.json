@@ -13,7 +13,7 @@
     "delegate_active": "none",
     "updated": "2026-11-10T02:25:00Z"
   },
-  "RESUME": "CHECKPOINT 2026-11-10T02:25Z: A landed 9d58c69d, B landed 52e04148 (IT41 orchestrator told). C delivered on task/it41c; this commit freezes the candidate: battery on /tmp/bat_it41c, then record the verdict line, task_close + safe_push, then the final report. All queue steps are DONE; MANDATE_STATE COMPLETE is set at the candidate and becomes true only on landing. Active processes: none.",
+  "RESUME": "CHECKPOINT 2026-11-10T02:25Z: A landed 9d58c69d, B landed 52e04148 (IT41 orchestrator told). C delivered on task/it41c; this commit freezes the candidate: battery on /tmp/bat_it41c, then record the verdict line, task_close + safe_push, then the final report. All queue steps are DONE; MANDATE_STATE stays OPEN until the light queue is landed; then it is set COMPLETE in a record-only commit. Active processes: none.",
   "DECISIONS_TAKEN": [
     "2026-11-09 S0: the INV-05 closing pass was already delivered and published (30382215); nothing pending. IT40 final report not found in any worktree at S0 (IT40 is unmerged); next_investigations_it40.md read in place from the it40 worktree (read-only): A1 and A2 rows (primary mechanism papers for NBQX and GYKI 52466; catalogue identity of GYKI 52466) are the open needs this package addresses; B3 (BE1) is the experiment the comparison serves. Harness identity delivery not yet available: names used by each paper are recorded so the match can be made without rebuilding the search.",
     "2026-11-09 A1 design written and committed before any source was opened, including the five demonstrations the block control must give, what the result does not separate, and the A3 rule (alternative only by missing property).",
@@ -35,7 +35,7 @@
   "STOP_LOG": [],
   "DEFAULTS_TAKEN": [],
   "AUTHORISED_QUEUE_20261109B": {
-    "MANDATE_STATE": "COMPLETE",
+    "MANDATE_STATE": "OPEN",
     "OBJ_1": {
       "order": 1,
       "steps": [
@@ -90,6 +90,11 @@
           "status": "DONE",
           "owner": "orchestrator",
           "evidence": "fly_wwox_feasibility_it41_20261110 delivered and verified (12 decisive rows, 23 resources, 12 feasibility rows, recheck); battery and landing in this chain"
+        },
+        {
+          "step": "Light queue landing: checks, battery on a fresh unique clone, task_close, safe_push, message to IT41",
+          "status": "IN_PROGRESS",
+          "owner": "orchestrator"
         }
       ]
     }
