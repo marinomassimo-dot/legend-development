@@ -8,12 +8,12 @@
   "START_UTC": "2026-11-09T22:30:00Z",
   "BASELINE": "main 30382215 (development/main same). Worktree .claude/worktrees/it41a, branch task/it41a. IT40 is in its own worktree (task/it40, not yet on main); its final report was not available at S0. Harness identity delivery (worktree idfix) had no commit at S0.",
   "CURRENT_PACKAGE": {
-    "id": "C-battery-2",
-    "state": "C: second battery running on frozen candidate 5a593da2603a2b4a7c09582148907db7dc6da4c7 (clone /tmp/bat_it41c2, PID 783771, log /tmp/bat_it41c2.log)",
+    "id": "closed",
+    "state": "all packages delivered; A 9d58c69d and B 52e04148 landed; C landing in this commit chain",
     "delegate_active": "none",
-    "updated": "2026-11-10T03:55:00Z"
+    "updated": "2026-11-10T04:55:00Z"
   },
-  "RESUME": "CHECKPOINT 2026-11-10T03:55Z: A landed 9d58c69d, B landed 52e04148. C first battery FAIL on ca1b8d2b (stray path, fixed). Second battery PID 783771 (cwd /tmp/bat_it41c2, wait with process_wait.py --pid 783771, do not touch the clone) on frozen 5a593da2. Next: verdict line (record-only commit), merge main, LINT/receipts/growth, task_close, safe_push, message to IT41 with the SHA, MANDATE_STATE COMPLETE, final report.",
+  "RESUME": "CHECKPOINT 2026-11-10T04:55Z: queue complete. A landed 9d58c69d, B landed 52e04148, C landed by task_close+safe_push in this chain (SHA in the final report). Nothing active. IT41 orchestrator integrates consumers; staged receipts (it41a 6, it41b 5, it41c 11) are not recorded. Worktrees left: it40inv05, it40inv05b, it41a, it41b, it41c and earlier integrated ones, pending written operator authorisation to remove.",
   "DECISIONS_TAKEN": [
     "2026-11-09 S0: the INV-05 closing pass was already delivered and published (30382215); nothing pending. IT40 final report not found in any worktree at S0 (IT40 is unmerged); next_investigations_it40.md read in place from the it40 worktree (read-only): A1 and A2 rows (primary mechanism papers for NBQX and GYKI 52466; catalogue identity of GYKI 52466) are the open needs this package addresses; B3 (BE1) is the experiment the comparison serves. Harness identity delivery not yet available: names used by each paper are recorded so the match can be made without rebuilding the search.",
     "2026-11-09 A1 design written and committed before any source was opened, including the five demonstrations the block control must give, what the result does not separate, and the A3 rule (alternative only by missing property).",
@@ -24,7 +24,8 @@
     "2026-11-10 package B delivered: abstention with a discriminating question (no pharmacological direction at BNIP3 is sustainable now); no compound proposed; 6 proposals in consumer_delta, 0 applied; staged receipts in research/receipt_staging/it41b/ not recorded.",
     "2026-11-10 battery on the frozen candidate 7d989b6e30a76ae6d8dc72e3b17b22ad5158de38 (clone /tmp/bat_it41b, PID 596245): REGRESSION VERDICT PASS WITH SKIPS (225 targets, 11 skipped, all environmental). The verdict belongs to 7d989b6e only; the landing SHA differs by record lines and merges, covered by the gate on its exact SHA plus LINT, receipts, growth.",
     "2026-11-10 light queue (fly Wwox feasibility) delivered and verified on task/it41c (README, consumer_delta with 4 proposals, COST_NOTE; producer 79 turns/79,368 out/9,715,943 cache/peak 247,176; verifier 86 turns/72,489 out/11,472,000 cache/peak 256,613); the 2005 radiation phenotype found superseded; lands after B with its own battery.",
-    "2026-11-10 battery on the frozen candidate ca1b8d2bf8540dfae7ec2790a5a43087ca0a6f4d (clone /tmp/bat_it41c, PID 698584): REGRESSION VERDICT FAIL (225 suites, 3 failed: test_documented_commands, test_fresh_clone_reader_journey, test_repository_surface_determinism, all one cause: the verifier's audit.md for the fly study named a scratchpad script as scripts/align.py, a repository-looking path that does not exist; the determinism suite runs the documented-commands guard). Fixed in the audit text (the script is kept in the scratchpad, not in the repository); a rerun of the two quick suites passes, but the FAIL stays attributed to ca1b8d2b and is not turned into a PASS: a new candidate gets a new full battery on a fresh unique clone."
+    "2026-11-10 battery on the frozen candidate ca1b8d2bf8540dfae7ec2790a5a43087ca0a6f4d (clone /tmp/bat_it41c, PID 698584): REGRESSION VERDICT FAIL (225 suites, 3 failed: test_documented_commands, test_fresh_clone_reader_journey, test_repository_surface_determinism, all one cause: the verifier's audit.md for the fly study named a scratchpad script as scripts/align.py, a repository-looking path that does not exist; the determinism suite runs the documented-commands guard). Fixed in the audit text (the script is kept in the scratchpad, not in the repository); a rerun of the two quick suites passes, but the FAIL stays attributed to ca1b8d2b and is not turned into a PASS: a new candidate gets a new full battery on a fresh unique clone.",
+    "2026-11-10 second battery on the frozen candidate 5a593da2603a2b4a7c09582148907db7dc6da4c7 (clone /tmp/bat_it41c2, PID 783771): REGRESSION VERDICT PASS WITH SKIPS (225 targets, 11 skipped, all environmental). The verdict belongs to 5a593da2 only; the first battery FAIL on ca1b8d2b stays recorded above and is not converted. The landing SHA differs by record lines and merges, covered by the gate on its exact SHA plus LINT, receipts, growth."
   ],
   "DELEGATIONS": [
     "Package A producer: asked sonnet/medium, read back medium on every turn; 76 turns; output 95,239; cache read 9,332,864; peak 253,785; 6 sources newly read (partial full text), 6 staged receipts validated, 4 publisher texts unreached (bot checks), 1 targeted NBQX step on open routes, 15 audit corrections applied.",
@@ -36,7 +37,7 @@
   "STOP_LOG": [],
   "DEFAULTS_TAKEN": [],
   "AUTHORISED_QUEUE_20261109B": {
-    "MANDATE_STATE": "OPEN",
+    "MANDATE_STATE": "COMPLETE",
     "OBJ_1": {
       "order": 1,
       "steps": [
@@ -94,8 +95,9 @@
         },
         {
           "step": "Light queue landing: checks, battery on a fresh unique clone, task_close, safe_push, message to IT41",
-          "status": "IN_PROGRESS",
-          "owner": "orchestrator"
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "battery PASS WITH SKIPS on 5a593da2 (first battery FAIL on ca1b8d2b recorded and fixed); landed in this chain"
         }
       ]
     }
