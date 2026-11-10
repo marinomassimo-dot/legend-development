@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-10T00:58:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_present"
+ },
+ "event_at": "2026-11-10T01:06:00Z",
+ "event_id": "FTR-20261110-21075834-83",
+ "evidence_basis": [
+  "Re-opened for one question: what the 2011 paper says about the Wwox1 radiation phenotype, viability and Wwox protein in mutants. Introduction and the Wwox-mutant Results paragraphs read; Supp Fig S1 not seen.",
+  "verbatim_locator | proposition: 2005 phenotype caused by background mutations | Introduction | \"background mutations, rather than the targeted Wwox mutations, were responsible for this phenotype\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/fly_wwox_feasibility_it41_20261110/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/fly_wwox_feasibility_it41_20261110/output/decisive.tsv"
+ ],
+ "prior_receipt": "FTR-20261106-21075834-26",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "dc52cb20b22601cf4dbac02cdd7de69d18af4c8360339375c7ffca0be608bd5a",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch db=pmc for PMC3016910, fetched 2026-11-10; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1093/hmg/ddq495",
+  "pmid": "21075834"
+ },
+ "workflow": "IT41 light queue fly Wwox feasibility, producer ic-p, task ORCH-IT41-20261109, correction pass after the blind audit. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

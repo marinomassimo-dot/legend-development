@@ -1,0 +1,33 @@
+# Brief — IT41 light queue: public feasibility of a Wwox-loss model in Drosophila (producer)
+
+You are a Scientist delegate of the Orchestrator of LEGEND (public edition; subject: the WWOX-DEE reference genotype class; no individual-level record). Task record `ledger/tasks/orchestrator/ORCH-IT41-20261109.json`. Working tree `/home/desktop/legend-development/.claude/worktrees/it41c` (absolute paths only; never `cd` into another worktree). Your folder: `disease-models/wwox/research/drug_repurposing/fly_wwox_feasibility_it41_20261110/` (write only inside `output/` and `output/receipts/`). Claim actor label `ic-p`; staged receipt event ids end in `-83`. You are the only active delegate. No delegation.
+
+Read first, in this order, and nothing else until these are read: (1) `disease-models/wwox/research/drug_repurposing/membrane_hypotheses_20261108/BRIEF_COMMON.md` — **all its rules apply** (reading sources; figures through the open-data bucket with plain curl, default user agent only, never a browser identity or header; a bot-check page is recorded as unreachable and not retried by another route; depth honesty; receipts; TSV rules; no gates, lint or tests; no e-mail, registration or spend); replace its task record, folder and label by those above; (2) what LEGEND already holds on Drosophila and WWOX: `git grep -il drosophila -- disease-models/wwox/research ':!disease-models/wwox/registries/*' ':!*.json' ':!*.jsonl'` and read only the lines about the fly (for example `commit_candidates/CC-20260811-AQEILAN-LINE-01.md`, `CC-20261003-C-SLEEP-SUGGESTIVE-01.md`, `CC-20261003-C-RESCUE-READOUT-01.md`, `CC-20261003-C-APOPTOSIS-DIRECTION-01.md`); use `python3 framework/scripts/registry_records.py get --pmid <N> --hops 1` for registry records, never grep the two large registries; check `fulltext_receipts.py status --pmid <N>` before opening any source and reuse an earlier reading only where proposition, source and context match.
+
+## The one question
+
+Is a Drosophila model centred on **loss of Wwox** (the fly orthologue) feasible from public resources, which phenotype must be verified before anything else, and what pharmacological question could the fly discriminate that the mouse slice cannot? This is a question and a preliminary feasibility, not a commissioning of experiments. No external contact, no spend, no registration, no private correspondence.
+
+## Questions (answer these and stop; do not widen; no reopening of the AMPA, NMDA or BNIP3 packages)
+
+* **F1 — confirmed resources.** What public resources exist for fly Wwox loss, with identifiers read from the source or a public stock-centre record reachable with plain curl: null or hypomorphic alleles, RNAi lines, rescue constructs (fly Wwox and human WWOX), reporter lines. State what is confirmed in a source you opened and what is only a catalogue entry. Do not assume a stock is available.
+* **F2 — what the published fly work shows**, by study: which genotype (null, RNAi, overexpression), which phenotype (viability, lifespan, locomotion, sleep, seizure-like behaviour, neuronal or glial readouts, stress, metabolism), with what controls. Keep the Alzheimer's/amyloid-model work apart: the amyloid or tau context is a different question, and its result is **not transferred** to a loss-of-function model; say what it is and why it is not a Wwox-loss phenotype.
+* **F3 — the phenotype to verify first.** From F2: the smallest observable that must be shown before any drug is considered (for example viability to adulthood, a locomotor or bang-sensitivity assay, a neural readout). **Do not assume an epileptic phenotype.** The absence of a gross phenotype is not the absence of any studyable function: say what finer readouts the sources support (and which are only proposals).
+* **F4 — recovery control with normal WWOX.** What a rescue must show (fly Wwox and human WWOX transgenes, tissue-specific drivers), and the limit of a comparison between variants (human missense changes have no one-to-one equivalent in the fly protein; conservation of the relevant residues from the sources).
+* **F5 — the pharmacological question the fly could discriminate.** One question at most, built from what LEGEND already asks (glutamate receptor type, NMDAR dependence, mitochondrial/hypoxia axis), stating what the fly can and cannot discriminate (for example the fly larval neuromuscular junction has a non-NMDA glutamate receptor; central NMDAR subunits exist), citing a source for each statement of fly receptor biology. If the fly cannot discriminate any of LEGEND's current questions, write the abstention and what would have to be true.
+
+## Source budget
+
+At most **5 sources newly read** (3-4 read well is the aim). Per source: Methods and the figures or tables carrying the point you use. Write each source's notes to `output/evidence.tsv` and `output/figure_notes.tsv` as you finish it. A source that cannot be reached is recorded as such, with its effect on the conclusion. An abstract is not a verification of a phenotype or a genotype.
+
+## Deliverables (all in `output/`)
+
+1. `decisive.tsv`: `prop_id, statement (one sentence), source_pmid_or_doi, locator_hint, producer_status (read|abstract_only|not_reached), depth, class (WWOX datum | transfer from other system | resource | absence | independent confirmation or same-origin reuse), species_system_age_prep_exposure_readout`. Eight to twelve rows.
+2. `resources.tsv`: `resource, kind (allele|RNAi|rescue|reporter|assay), identifier, status (confirmed_in_source|catalogue_entry_only|not_found), source_locator, note`.
+3. `feasibility.tsv`: `row_id, element (F1..F5), conclusion, label (DATO|INFERENZA|IPOTESI), what_is_missing, next_public_step_or_new_experiment`. One to three rows per question.
+4. `evidence.tsv` (quotes verbatim at the locator, at most 25 words), `figure_notes.tsv`, `queries.tsv` (columns as in the common brief), `receipts/` with `INDEX.tsv` (staged, validated with `staged_receipt_check.py --artifact-root /home/desktop/legend-development/.claude/worktrees/it41c --check-doi`, run from the worktree root, not recorded), `phase_note.md` of at most 12 lines.
+5. Do **not** write `README.md`, `consumer_delta.md` or `COST_NOTE.md`.
+
+## Hard additions
+
+Do not assume an epileptic phenotype. Do not transfer an amyloid-model result to a loss-of-function model. A drug response does not show that a target is altered. No dose, schedule or route for any person. Nothing from this package is promoted anywhere. Never send an e-mail address of the operator or any contact address to a service. When done, stop and report: sources newly read with depth, figures viewed, unreachable items, counts per deliverable, and the answer to F1-F5 in at most ten lines.

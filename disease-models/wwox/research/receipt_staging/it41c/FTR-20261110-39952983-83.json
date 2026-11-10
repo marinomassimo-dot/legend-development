@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-10T00:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "not_read",
+  "figures": "read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_present"
+ },
+ "event_at": "2026-11-10T00:46:00Z",
+ "event_id": "FTR-20261110-39952983-83",
+ "evidence_basis": [
+  "Re-opened for the fly allele and sleep result only: Methods Fly studies, the fly sleep Results paragraph, Fig 2 image viewed.",
+  "verbatim_locator | proposition: allele stock number | Methods | \"loss-of-function mutant Wwox f04545 (BL18783) flies\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/fly_wwox_feasibility_it41_20261110/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/fly_wwox_feasibility_it41_20261110/output/decisive.tsv"
+ ],
+ "prior_receipt": "FTR-20261004-39952983-03",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "752c9661c1da61d3f986ac7d8110e66cdf99e049c0884667d9ba6aa8b03de819",
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC fullTextXML for PMC11828923 and open-data bucket figure, fetched 2026-11-10; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1038/s41598-024-81158-8",
+  "pmid": "39952983"
+ },
+ "workflow": "IT41 light queue fly Wwox feasibility, producer ic-p, task ORCH-IT41-20261109. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,14 @@
+query_id	database_or_route	string_or_url	run_at_utc	hits	what_was_done
+Q01	plain curl BDSC	https://bdsc.indiana.edu/stocks/gen_ent/18783/ and a search page	2026-11-10T00:35:11Z	HTTP 403	Recorded as unreachable; not retried by another route.
+Q02	plain curl FlyBase	https://flybase.org/reports/FBst0018783	2026-11-10T00:35:11Z	HTTP 200, empty search shell (total 0)	No stock record content; the api.flybase.org stock and gene paths returned 404.
+Q03	plain curl Alliance of Genome Resources API	https://www.alliancegenome.org/api/search?q=Wwox&category=gene	2026-11-10T00:35:22Z	HTTP 429 twice (about 30 s apart)	Rate limited; recorded as unreachable.
+Q04	NCBI esearch and esummary gene	Wwox[Gene Name] AND Drosophila melanogaster[Organism]; id 34090	2026-11-10T00:35:35Z	1	Gene record: Wwox, CG7221, 2L, human ortholog WWOX.
+Q05	PubMed esearch	(Wwox OR WWOX) AND Drosophila AND (seizure OR epilep OR bang-sensitive OR convuls)	2026-11-10T00:41:28Z	0	Absence perimeter: PubMed, this string, this date; read as "none found", not "none exists".
+Q06	PubMed esearch	(Wwox OR WWOX OR CG7221) AND Drosophila AND (neuromuscular OR synap OR locomot)	2026-11-10T00:41:29Z	0	Absence perimeter as above.
+Q07	PubMed esearch	(Wwox OR WWOX) AND (Drosophila OR fly OR flies) AND (null OR mutant OR RNAi)	2026-11-10T00:41:30Z	3	Items 39952983, 18008369, 16007179; the string did not return 21075834, 26302329 or 42909904, so a 0-hit string is weak evidence of absence.
+Q08	PubMed MCP search	(Wwox OR WWOX) AND Drosophila	2026-11-10T00:36:00Z	12	Titles scanned; metadata read for 10; 42909904, 39952983 and 26302329 already held.
+Q09	Europe PMC REST	(Wwox OR WWOX) AND (seizure OR epilep OR "bang-sensitive") AND Drosophila	2026-11-10T00:41:33Z	46	Titles only; none is a fly Wwox seizure study; 32899411 (DEE in Drosophila review) not opened.
+Q10	NCBI protein efetch plus local alignment	NP_057457.1 against NP_001285735.1 and NP_609171.1	2026-11-10T00:39:30Z	2 fly isoforms of 409 aa	Pairwise alignment, identity 202 of 405 aligned positions.
+Q11	PubMed MCP and NCBI esummary	Drosophila NMDA receptor olfactory memory; NMJ glutamate receptor subunits; Nmdar1 sleep	2026-11-10T00:37:00Z	13; 2; 17	Chose 22681692, 26023770 and 26596173; 14960613 (Marrus 2004) not opened: full text 403 at Europe PMC render and J Neurosci, recorded unreachable.
+Q12	PMC open-data bucket and Europe PMC fullTextXML	PMC11828923, PMC13684411 (+ supplement zip), PMC4449117, PMC3651368, PMC4698086, PMC4547717, PMC8305172	2026-11-10T00:36:30Z	all reached; PMC6730334 render 403	Figures: Kim Fig 2, Lucas-Clarke Fig 2, sleep paper Figs 2 and 4 viewed.
+Q13	Europe PMC search and NCBI efetch (open routes)	EXT_ID:17395332; PMC3016910 full text; 17395332 abstract	2026-11-10T01:05:00Z	17395332 isOpenAccess N; 21075834 open	21075834 opened (Introduction, Results); 17395332 abstract only; 2006 erratum (Oncogene 25:7662) not opened; the 2020 review 32899411 not opened by the producer.
