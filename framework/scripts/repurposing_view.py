@@ -4353,6 +4353,7 @@ COMPOUND_KINDS = ("control", "probe", "known_requalified", "emerged", "unresolve
 COMPOUND_TEXT = ("label", "action", "rationale", "open_premise", "counter", "next_test", "moves")
 COMPOUND_WHERE = ("in_silico", "laboratory", "both", "in_silico_then_laboratory")
 IDENTITY_JOIN_FILE = "generation_it41_20261109/compound_identity_join.tsv"
+NO_IDENTITY_STATES = ("NO_IDENTITY_ROW", "NOT_FOUND_BY_NAME")   # a name that reaches no record is not a verified identity
 
 
 def compound_identity_states(dr: Path) -> dict:
@@ -4368,8 +4369,8 @@ def compound_identity_states(dr: Path) -> dict:
     out = {}
     for k, rs in by.items():
         if any(r["label_conflict"] == "yes" for r in rs): out[k] = "conflict"
-        elif all(r["identity_state"] == "NO_IDENTITY_ROW" for r in rs): out[k] = "unverified"
-        elif any(r["identity_state"] == "NO_IDENTITY_ROW" for r in rs): out[k] = "partial"
+        elif all(r["identity_state"] in NO_IDENTITY_STATES for r in rs): out[k] = "unverified"
+        elif any(r["identity_state"] in NO_IDENTITY_STATES for r in rs): out[k] = "partial"
         else: out[k] = "checked"
     return out
 
