@@ -144,7 +144,8 @@ def scan_gtopdb(path: Path):
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     sub = ap.add_subparsers(dest="cmd", required=True)
-    sub.add_parser("scan-gtopdb", help="list rows whose log value and nanomolar column disagree (reads the pinned cache file)")
+    sc = sub.add_parser("scan-gtopdb", help="list rows whose log value and nanomolar column disagree (reads the pinned cache file)")
+    sc.add_argument("--tsv", type=Path, default=None, help="also write the rows, with the input digest and registry version, as a TSV")
     c = sub.add_parser("convert", help="print one conversion with its transformation")
     c.add_argument("value")
     c.add_argument("unit", help="pIC50, pKi... or nM, uM, mM, M, pM")
@@ -157,9 +158,20 @@ def main(argv=None) -> int:
     path, digest = cc.cache_file("gtopdb/interactions.csv")
     print(f"input {path} sha256 {digest}")
     n = 0
+    flagged = []
     for r, i in scan_gtopdb(path):
         n += 1
+        flagged.append((r, i))
         print(f"{i['state']:22s} log10(nM column / from p-value) {i['log10_ratio']:+.2f}  {r['Ligand'][:30]} | {r['Target'][:24]} | {r['Target Species'][:10]} | {r['Affinity Units']} {r['Affinity Median'][:5]} | nM column {r['Original Affinity Median nm']}")
+    if a.tsv:
+        with open(path, encoding="utf-8") as f:
+            version = f.readline().strip().strip('"')
+        with open(a.tsv, "w", encoding="utf-8", newline="") as f:
+            w = csv.writer(f, delimiter="\t", lineterminator="\n")
+            w.writerow(["state", "log10_nM_column_over_p_value", "ligand", "target", "species", "affinity_units", "affinity_median", "original_affinity_units", "nM_column", "relation", "pubmed_id", "registry_version", "input_sha256"])
+            for r, i in flagged:
+                w.writerow([i["state"], i["log10_ratio"], r["Ligand"], r["Target"], r["Target Species"], r["Affinity Units"], r["Affinity Median"], r["Original Affinity Units"],
+                            r["Original Affinity Median nm"], r["Original Affinity Relation"], r["PubMed ID"], version, digest])
     print(f"{n} rows; a factor of about 1000 is a unit slip candidate (open the source; the check does not say which column is wrong); the other disagreements are not a power of 1000 and are left unexplained")
     return 0
 
