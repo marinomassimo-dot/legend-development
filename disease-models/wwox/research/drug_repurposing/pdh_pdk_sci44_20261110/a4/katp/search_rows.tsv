@@ -1,0 +1,145 @@
+relation_id	source	molecule	name	catalogue_id	species	action	direction	site_or_granularity	primary_target	selectivity_comment	affinity	assay_or_note	pubmed	target_symbol	labelled_form	qualification	reason	unknown_fields
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL1073	GLIPIZIDE	CAT:CHEMBL1073	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		ABCC8		EXCLUDED	direction_opposite	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL782	TOLBUTAMIDE SODIUM	CAT:CHEMBL1200874	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		ABCC8		EXCLUDED	direction_opposite	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL1272	REPAGLINIDE	CAT:CHEMBL1272	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		ABCC8		EXCLUDED	direction_opposite	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL1481	GLIMEPIRIDE	CAT:CHEMBL1481	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		ABCC8		EXCLUDED	direction_opposite	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL1589	ACETOHEXAMIDE	CAT:CHEMBL1589	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		ABCC8		EXCLUDED	direction_opposite	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL2104449	SARAKALIM	CAT:CHEMBL2104449	Homo sapiens	OPENER	up	family_record_subunit_unresolved				Sulfonylurea receptors; K-ATP channels opener		ABCC8		CANDIDATE	ok	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL2105160	NAMINIDIL	CAT:CHEMBL2105160	Homo sapiens	OPENER	up	family_record_subunit_unresolved				Sulfonylurea receptors; K-ATP channels opener		ABCC8		CANDIDATE	ok	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL427216	GLICLAZIDE	CAT:CHEMBL427216	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		ABCC8		EXCLUDED	direction_opposite	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL4298005	MITIGLINIDE CALCIUM DIHYDRATE	CAT:CHEMBL4298005	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		ABCC8		EXCLUDED	direction_opposite	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL471498	MITIGLINIDE	CAT:CHEMBL471498	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		ABCC8		EXCLUDED	direction_opposite	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL472	GLYBURIDE	CAT:CHEMBL472	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		ABCC8		EXCLUDED	direction_opposite	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL498	CHLORPROPAMIDE	CAT:CHEMBL498	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		ABCC8		EXCLUDED	direction_opposite	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL782	TOLBUTAMIDE	CAT:CHEMBL782	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		ABCC8		EXCLUDED	direction_opposite	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL783	NATEGLINIDE	CAT:CHEMBL783	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		ABCC8		EXCLUDED	direction_opposite	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL817	TOLAZAMIDE	CAT:CHEMBL817	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		ABCC8		EXCLUDED	direction_opposite	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL1159	PINACIDIL	CAT:CHEMBL1200338	Homo sapiens	OPENER	up	two_gene_assembly_record				Sulfonylurea receptor 2, Kir6.2 opener		ABCC9		CANDIDATE	ok	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL2104449	SARAKALIM	CAT:CHEMBL2104449	Homo sapiens	OPENER	up	family_record_subunit_unresolved				Sulfonylurea receptors; K-ATP channels opener		ABCC9		CANDIDATE	ok	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL2105160	NAMINIDIL	CAT:CHEMBL2105160	Homo sapiens	OPENER	up	family_record_subunit_unresolved				Sulfonylurea receptors; K-ATP channels opener		ABCC9		CANDIDATE	ok	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL802	MINOXIDIL	CAT:CHEMBL802	Homo sapiens	OPENER	up	two_gene_assembly_record				Sulfonylurea receptor 2, Kir6.2 opener		ABCC9		CANDIDATE	ok	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL1073	GLIPIZIDE	CAT:CHEMBL1073	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		KCNJ11		EXCLUDED	direction_opposite	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL1159	PINACIDIL	CAT:CHEMBL1200338	Homo sapiens	OPENER	up	two_gene_assembly_record				Sulfonylurea receptor 2, Kir6.2 opener		KCNJ11		CANDIDATE	ok	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL782	TOLBUTAMIDE SODIUM	CAT:CHEMBL1200874	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		KCNJ11		EXCLUDED	direction_opposite	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL1272	REPAGLINIDE	CAT:CHEMBL1272	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		KCNJ11		EXCLUDED	direction_opposite	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL1481	GLIMEPIRIDE	CAT:CHEMBL1481	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		KCNJ11		EXCLUDED	direction_opposite	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL1589	ACETOHEXAMIDE	CAT:CHEMBL1589	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		KCNJ11		EXCLUDED	direction_opposite	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL181	DIAZOXIDE	CAT:CHEMBL181	Homo sapiens	OPENER	up	single_protein_record				Potassium channel, inwardly rectifying, subfamily J, member 11 opener		KCNJ11		CANDIDATE	ok	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL2104449	SARAKALIM	CAT:CHEMBL2104449	Homo sapiens	OPENER	up	family_record_subunit_unresolved				Sulfonylurea receptors; K-ATP channels opener		KCNJ11		CANDIDATE	ok	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL2105160	NAMINIDIL	CAT:CHEMBL2105160	Homo sapiens	OPENER	up	family_record_subunit_unresolved				Sulfonylurea receptors; K-ATP channels opener		KCNJ11		CANDIDATE	ok	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL427216	GLICLAZIDE	CAT:CHEMBL427216	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		KCNJ11		EXCLUDED	direction_opposite	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL181	DIAZOXIDE CHOLINE	CAT:CHEMBL4297276	Homo sapiens	OPENER	up	single_protein_record				Potassium channel, inwardly rectifying, subfamily J, member 11 opener		KCNJ11		CANDIDATE	ok	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL4298005	MITIGLINIDE CALCIUM DIHYDRATE	CAT:CHEMBL4298005	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		KCNJ11		EXCLUDED	direction_opposite	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL471498	MITIGLINIDE	CAT:CHEMBL471498	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		KCNJ11		EXCLUDED	direction_opposite	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL472	GLYBURIDE	CAT:CHEMBL472	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		KCNJ11		EXCLUDED	direction_opposite	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL498	CHLORPROPAMIDE	CAT:CHEMBL498	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		KCNJ11		EXCLUDED	direction_opposite	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL782	TOLBUTAMIDE	CAT:CHEMBL782	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		KCNJ11		EXCLUDED	direction_opposite	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL783	NATEGLINIDE	CAT:CHEMBL783	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		KCNJ11		EXCLUDED	direction_opposite	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL802	MINOXIDIL	CAT:CHEMBL802	Homo sapiens	OPENER	up	two_gene_assembly_record				Sulfonylurea receptor 2, Kir6.2 opener		KCNJ11		CANDIDATE	ok	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL817	TOLAZAMIDE	CAT:CHEMBL817	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		KCNJ11		EXCLUDED	direction_opposite	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL181	DIAZOXIDE	CAT:CHEMBL181	Homo sapiens	OPENER	up	single_protein_record				Potassium channel, inwardly rectifying, subfamily J, member 8 opener		KCNJ8		CANDIDATE	ok	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL2104449	SARAKALIM	CAT:CHEMBL2104449	Homo sapiens	OPENER	up	family_record_subunit_unresolved				Sulfonylurea receptors; K-ATP channels opener		KCNJ8		CANDIDATE	ok	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL2105160	NAMINIDIL	CAT:CHEMBL2105160	Homo sapiens	OPENER	up	family_record_subunit_unresolved				Sulfonylurea receptors; K-ATP channels opener		KCNJ8		CANDIDATE	ok	
+A4-R4	ChEMBL curated mechanism	CAT:CHEMBL181	DIAZOXIDE CHOLINE	CAT:CHEMBL4297276	Homo sapiens	OPENER	up	single_protein_record				Potassium channel, inwardly rectifying, subfamily J, member 8 opener		KCNJ8		CANDIDATE	ok	
+A4-R4	GtoPdb interaction	CAT:DGIDB:74ee1357f0ce	compound 13b [PMID: 19101153]	CAT:DGIDB:74ee1357f0ce	Human	Allosteric modulator/Positive	up		false	Not Determined | Compound 13b is a channel opener.	6.170000076293945 pEC50 (=)		19101153	ABCC9		CANDIDATE	ok	
+A4-R4	GtoPdb interaction	GTOPDB:6801	chlorpropamide		Human	Inhibitor/Inhibition	down		false	Not Determined	- (=)			ABCC8		EXCLUDED	direction_opposite	
+A4-R4	GtoPdb interaction	GTOPDB:6841	repaglinide		Human	Inhibitor/Inhibition	down		true	Selective	6.96999979019165 pIC50 (=)		15380228	ABCC8		EXCLUDED	direction_opposite	
+A4-R4	GtoPdb interaction	GTOPDB:1713	ATP		Mouse	Activator/Agonist	up		false		-		9130167	Kcnj8		CANDIDATE	ok	
+A4-R4	GtoPdb interaction	GTOPDB:2409	diazoxide		Mouse	Activator/Agonist	up		false	Non-selective	- (=)		9130167	Kcnj8		CANDIDATE	ok	
+A4-R4	GtoPdb interaction	GTOPDB:2410	guanosine 5'-diphosphate		Mouse	Activator/Agonist	up		false		-		9130167	Kcnj8		CANDIDATE	ok	
+A4-R4	GtoPdb interaction	GTOPDB:1742	guanosine-5'-triphosphate		Mouse	Activator/Agonist	up		false		-		9130167	Kcnj8		CANDIDATE	ok	
+A4-R4	GtoPdb interaction	GTOPDB:2411	nicorandil		Mouse	Activator/Agonist	up		false	Non-selective	- (=)		9130167	Kcnj8		CANDIDATE	ok	
+A4-R4	GtoPdb interaction	GTOPDB:2412	pinacidil		Mouse	Activator/Agonist	up		false		-		9130167	Kcnj8		CANDIDATE	ok	
+A4-R4	GtoPdb interaction	GTOPDB:1749	UDP		Mouse	Activator/Agonist	up		false		-		9130167	Kcnj8		CANDIDATE	ok	
+A4-R4	GtoPdb interaction	GTOPDB:2413	cromakalim		Human	Activator/None	up		false	Non-selective	- (=)			KCNJ8		CANDIDATE	ok	
+A4-R4	GtoPdb interaction	GTOPDB:4254	minoxidil		Human	Activator/None	up		false	Non-selective	- (=)			KCNJ8		CANDIDATE	ok	
+A4-R4	GtoPdb interaction	GTOPDB:1713	ATP		Mouse	Gating inhibitor/Antagonist	down		false		-		9130167	Kcnj8		EXCLUDED	direction_opposite	
+A4-R4	GtoPdb interaction	GTOPDB:1742	guanosine-5'-triphosphate		Mouse	Gating inhibitor/Antagonist	down		false		-		9130167	Kcnj8		EXCLUDED	direction_opposite	
+A4-R4	GtoPdb interaction	GTOPDB:2414	glibenclamide		Human	Inhibitor/None	down		false	Non-selective	- (=)			KCNJ8		EXCLUDED	direction_opposite	
+A4-R4	GtoPdb interaction	GTOPDB:6848	tolbutamide		Human	Inhibitor/None	down		false	Non-selective	- (=)			KCNJ8		EXCLUDED	direction_opposite	
+A4-R4	GtoPdb interaction	GTOPDB:2413	cromakalim		Mouse	Activator/Agonist	up		false	Non-selective	- (=)		8630239	Kcnj11		CANDIDATE	ok	
+A4-R4	GtoPdb interaction	GTOPDB:2409	diazoxide		Mouse	Activator/Agonist	up		false	Non-selective	4.199999809265137 pEC50 (=)		7502040	Kcnj11		CANDIDATE	ok	
+A4-R4	GtoPdb interaction	GTOPDB:2409	diazoxide		Rat	Activator/Agonist	up		false	Non-selective	- (=)		8798681	Kcnj11		CANDIDATE	ok	
+A4-R4	GtoPdb interaction	GTOPDB:2412	pinacidil		Mouse	Activator/Agonist	up		false		-		8630239	Kcnj11		CANDIDATE	ok	
+A4-R4	GtoPdb interaction	GTOPDB:2412	pinacidil		Rat	Activator/Agonist	up		false		-		8798681	Kcnj11		CANDIDATE	ok	
+A4-R4	GtoPdb interaction	GTOPDB:4254	minoxidil		Human	Activator/None	up		false	Non-selective	- (=)			KCNJ11		CANDIDATE	ok	
+A4-R4	GtoPdb interaction	GTOPDB:2411	nicorandil		Human	Activator/None	up		false	Non-selective	- (=)			KCNJ11		CANDIDATE	ok	
+A4-R4	GtoPdb interaction	GTOPDB:2414	glibenclamide		Mouse	Channel blocker/Antagonist	down		false		5.7 pIC50		7502040|8630239	Kcnj11		EXCLUDED	direction_opposite	
+A4-R4	GtoPdb interaction	GTOPDB:2414	glibenclamide		Rat	Channel blocker/Antagonist	down		false		-		8798681	Kcnj11		EXCLUDED	direction_opposite	
+A4-R4	GtoPdb interaction	GTOPDB:6848	tolbutamide		Rat	Channel blocker/Antagonist	down		false	Not Determined	- (=)		8798681	Kcnj11		EXCLUDED	direction_opposite	
+A4-R4	GtoPdb interaction	GTOPDB:6848	tolbutamide		Mouse	Channel blocker/Antagonist	down		false	Not Determined	4.5 pIC50 (=)		7502040	Kcnj11		EXCLUDED	direction_opposite	
+A4-R4	GtoPdb interaction	GTOPDB:1713	ATP		Mouse	Gating inhibitor/Antagonist	down		false		-		7502040|8630239	Kcnj11		EXCLUDED	direction_opposite	
+A4-R4	GtoPdb interaction	GTOPDB:2414	glibenclamide		Human	Inhibitor/None	down		true	Non-selective	- (=)			KCNJ11		EXCLUDED	direction_opposite	
+A4-R4	GtoPdb interaction	GTOPDB:6848	tolbutamide		Human	Inhibitor/None	down		true	Non-selective	- (=)			KCNJ11		EXCLUDED	direction_opposite	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL1073	GLIPIZIDE	CAT:CHEMBL1073	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		ABCC8		CANDIDATE	ok	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL782	TOLBUTAMIDE SODIUM	CAT:CHEMBL1200874	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		ABCC8		CANDIDATE	ok	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL1272	REPAGLINIDE	CAT:CHEMBL1272	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		ABCC8		CANDIDATE	ok	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL1481	GLIMEPIRIDE	CAT:CHEMBL1481	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		ABCC8		CANDIDATE	ok	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL1589	ACETOHEXAMIDE	CAT:CHEMBL1589	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		ABCC8		CANDIDATE	ok	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL2104449	SARAKALIM	CAT:CHEMBL2104449	Homo sapiens	OPENER	up	family_record_subunit_unresolved				Sulfonylurea receptors; K-ATP channels opener		ABCC8		EXCLUDED	direction_opposite	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL2105160	NAMINIDIL	CAT:CHEMBL2105160	Homo sapiens	OPENER	up	family_record_subunit_unresolved				Sulfonylurea receptors; K-ATP channels opener		ABCC8		EXCLUDED	direction_opposite	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL427216	GLICLAZIDE	CAT:CHEMBL427216	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		ABCC8		CANDIDATE	ok	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL4298005	MITIGLINIDE CALCIUM DIHYDRATE	CAT:CHEMBL4298005	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		ABCC8		CANDIDATE	ok	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL471498	MITIGLINIDE	CAT:CHEMBL471498	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		ABCC8		CANDIDATE	ok	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL472	GLYBURIDE	CAT:CHEMBL472	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		ABCC8		CANDIDATE	ok	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL498	CHLORPROPAMIDE	CAT:CHEMBL498	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		ABCC8		CANDIDATE	ok	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL782	TOLBUTAMIDE	CAT:CHEMBL782	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		ABCC8		CANDIDATE	ok	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL783	NATEGLINIDE	CAT:CHEMBL783	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		ABCC8		CANDIDATE	ok	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL817	TOLAZAMIDE	CAT:CHEMBL817	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		ABCC8		CANDIDATE	ok	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL1159	PINACIDIL	CAT:CHEMBL1200338	Homo sapiens	OPENER	up	two_gene_assembly_record				Sulfonylurea receptor 2, Kir6.2 opener		ABCC9		EXCLUDED	direction_opposite	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL2104449	SARAKALIM	CAT:CHEMBL2104449	Homo sapiens	OPENER	up	family_record_subunit_unresolved				Sulfonylurea receptors; K-ATP channels opener		ABCC9		EXCLUDED	direction_opposite	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL2105160	NAMINIDIL	CAT:CHEMBL2105160	Homo sapiens	OPENER	up	family_record_subunit_unresolved				Sulfonylurea receptors; K-ATP channels opener		ABCC9		EXCLUDED	direction_opposite	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL802	MINOXIDIL	CAT:CHEMBL802	Homo sapiens	OPENER	up	two_gene_assembly_record				Sulfonylurea receptor 2, Kir6.2 opener		ABCC9		EXCLUDED	direction_opposite	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL1073	GLIPIZIDE	CAT:CHEMBL1073	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		KCNJ11		CANDIDATE	ok	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL1159	PINACIDIL	CAT:CHEMBL1200338	Homo sapiens	OPENER	up	two_gene_assembly_record				Sulfonylurea receptor 2, Kir6.2 opener		KCNJ11		EXCLUDED	direction_opposite	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL782	TOLBUTAMIDE SODIUM	CAT:CHEMBL1200874	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		KCNJ11		CANDIDATE	ok	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL1272	REPAGLINIDE	CAT:CHEMBL1272	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		KCNJ11		CANDIDATE	ok	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL1481	GLIMEPIRIDE	CAT:CHEMBL1481	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		KCNJ11		CANDIDATE	ok	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL1589	ACETOHEXAMIDE	CAT:CHEMBL1589	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		KCNJ11		CANDIDATE	ok	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL181	DIAZOXIDE	CAT:CHEMBL181	Homo sapiens	OPENER	up	single_protein_record				Potassium channel, inwardly rectifying, subfamily J, member 11 opener		KCNJ11		EXCLUDED	direction_opposite	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL2104449	SARAKALIM	CAT:CHEMBL2104449	Homo sapiens	OPENER	up	family_record_subunit_unresolved				Sulfonylurea receptors; K-ATP channels opener		KCNJ11		EXCLUDED	direction_opposite	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL2105160	NAMINIDIL	CAT:CHEMBL2105160	Homo sapiens	OPENER	up	family_record_subunit_unresolved				Sulfonylurea receptors; K-ATP channels opener		KCNJ11		EXCLUDED	direction_opposite	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL427216	GLICLAZIDE	CAT:CHEMBL427216	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		KCNJ11		CANDIDATE	ok	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL181	DIAZOXIDE CHOLINE	CAT:CHEMBL4297276	Homo sapiens	OPENER	up	single_protein_record				Potassium channel, inwardly rectifying, subfamily J, member 11 opener		KCNJ11		EXCLUDED	direction_opposite	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL4298005	MITIGLINIDE CALCIUM DIHYDRATE	CAT:CHEMBL4298005	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		KCNJ11		CANDIDATE	ok	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL471498	MITIGLINIDE	CAT:CHEMBL471498	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		KCNJ11		CANDIDATE	ok	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL472	GLYBURIDE	CAT:CHEMBL472	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		KCNJ11		CANDIDATE	ok	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL498	CHLORPROPAMIDE	CAT:CHEMBL498	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		KCNJ11		CANDIDATE	ok	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL782	TOLBUTAMIDE	CAT:CHEMBL782	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		KCNJ11		CANDIDATE	ok	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL783	NATEGLINIDE	CAT:CHEMBL783	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		KCNJ11		CANDIDATE	ok	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL802	MINOXIDIL	CAT:CHEMBL802	Homo sapiens	OPENER	up	two_gene_assembly_record				Sulfonylurea receptor 2, Kir6.2 opener		KCNJ11		EXCLUDED	direction_opposite	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL817	TOLAZAMIDE	CAT:CHEMBL817	Homo sapiens	BLOCKER	down	two_gene_assembly_record				Sulfonylurea receptor 1, Kir6.2 blocker		KCNJ11		CANDIDATE	ok	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL181	DIAZOXIDE	CAT:CHEMBL181	Homo sapiens	OPENER	up	single_protein_record				Potassium channel, inwardly rectifying, subfamily J, member 8 opener		KCNJ8		EXCLUDED	direction_opposite	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL2104449	SARAKALIM	CAT:CHEMBL2104449	Homo sapiens	OPENER	up	family_record_subunit_unresolved				Sulfonylurea receptors; K-ATP channels opener		KCNJ8		EXCLUDED	direction_opposite	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL2105160	NAMINIDIL	CAT:CHEMBL2105160	Homo sapiens	OPENER	up	family_record_subunit_unresolved				Sulfonylurea receptors; K-ATP channels opener		KCNJ8		EXCLUDED	direction_opposite	
+A4-R5	ChEMBL curated mechanism	CAT:CHEMBL181	DIAZOXIDE CHOLINE	CAT:CHEMBL4297276	Homo sapiens	OPENER	up	single_protein_record				Potassium channel, inwardly rectifying, subfamily J, member 8 opener		KCNJ8		EXCLUDED	direction_opposite	
+A4-R5	GtoPdb interaction	CAT:DGIDB:74ee1357f0ce	compound 13b [PMID: 19101153]	CAT:DGIDB:74ee1357f0ce	Human	Allosteric modulator/Positive	up		false	Not Determined | Compound 13b is a channel opener.	6.170000076293945 pEC50 (=)		19101153	ABCC9		EXCLUDED	direction_opposite	
+A4-R5	GtoPdb interaction	GTOPDB:6801	chlorpropamide		Human	Inhibitor/Inhibition	down		false	Not Determined	- (=)			ABCC8		CANDIDATE	ok	
+A4-R5	GtoPdb interaction	GTOPDB:6841	repaglinide		Human	Inhibitor/Inhibition	down		true	Selective	6.96999979019165 pIC50 (=)		15380228	ABCC8		CANDIDATE	ok	
+A4-R5	GtoPdb interaction	GTOPDB:1713	ATP		Mouse	Activator/Agonist	up		false		-		9130167	Kcnj8		EXCLUDED	direction_opposite	
+A4-R5	GtoPdb interaction	GTOPDB:2409	diazoxide		Mouse	Activator/Agonist	up		false	Non-selective	- (=)		9130167	Kcnj8		EXCLUDED	direction_opposite	
+A4-R5	GtoPdb interaction	GTOPDB:2410	guanosine 5'-diphosphate		Mouse	Activator/Agonist	up		false		-		9130167	Kcnj8		EXCLUDED	direction_opposite	
+A4-R5	GtoPdb interaction	GTOPDB:1742	guanosine-5'-triphosphate		Mouse	Activator/Agonist	up		false		-		9130167	Kcnj8		EXCLUDED	direction_opposite	
+A4-R5	GtoPdb interaction	GTOPDB:2411	nicorandil		Mouse	Activator/Agonist	up		false	Non-selective	- (=)		9130167	Kcnj8		EXCLUDED	direction_opposite	
+A4-R5	GtoPdb interaction	GTOPDB:2412	pinacidil		Mouse	Activator/Agonist	up		false		-		9130167	Kcnj8		EXCLUDED	direction_opposite	
+A4-R5	GtoPdb interaction	GTOPDB:1749	UDP		Mouse	Activator/Agonist	up		false		-		9130167	Kcnj8		EXCLUDED	direction_opposite	
+A4-R5	GtoPdb interaction	GTOPDB:2413	cromakalim		Human	Activator/None	up		false	Non-selective	- (=)			KCNJ8		EXCLUDED	direction_opposite	
+A4-R5	GtoPdb interaction	GTOPDB:4254	minoxidil		Human	Activator/None	up		false	Non-selective	- (=)			KCNJ8		EXCLUDED	direction_opposite	
+A4-R5	GtoPdb interaction	GTOPDB:1713	ATP		Mouse	Gating inhibitor/Antagonist	down		false		-		9130167	Kcnj8		CANDIDATE	ok	
+A4-R5	GtoPdb interaction	GTOPDB:1742	guanosine-5'-triphosphate		Mouse	Gating inhibitor/Antagonist	down		false		-		9130167	Kcnj8		CANDIDATE	ok	
+A4-R5	GtoPdb interaction	GTOPDB:2414	glibenclamide		Human	Inhibitor/None	down		false	Non-selective	- (=)			KCNJ8		CANDIDATE	ok	
+A4-R5	GtoPdb interaction	GTOPDB:6848	tolbutamide		Human	Inhibitor/None	down		false	Non-selective	- (=)			KCNJ8		CANDIDATE	ok	
+A4-R5	GtoPdb interaction	GTOPDB:2413	cromakalim		Mouse	Activator/Agonist	up		false	Non-selective	- (=)		8630239	Kcnj11		EXCLUDED	direction_opposite	
+A4-R5	GtoPdb interaction	GTOPDB:2409	diazoxide		Mouse	Activator/Agonist	up		false	Non-selective	4.199999809265137 pEC50 (=)		7502040	Kcnj11		EXCLUDED	direction_opposite	
+A4-R5	GtoPdb interaction	GTOPDB:2409	diazoxide		Rat	Activator/Agonist	up		false	Non-selective	- (=)		8798681	Kcnj11		EXCLUDED	direction_opposite	
+A4-R5	GtoPdb interaction	GTOPDB:2412	pinacidil		Mouse	Activator/Agonist	up		false		-		8630239	Kcnj11		EXCLUDED	direction_opposite	
+A4-R5	GtoPdb interaction	GTOPDB:2412	pinacidil		Rat	Activator/Agonist	up		false		-		8798681	Kcnj11		EXCLUDED	direction_opposite	
+A4-R5	GtoPdb interaction	GTOPDB:4254	minoxidil		Human	Activator/None	up		false	Non-selective	- (=)			KCNJ11		EXCLUDED	direction_opposite	
+A4-R5	GtoPdb interaction	GTOPDB:2411	nicorandil		Human	Activator/None	up		false	Non-selective	- (=)			KCNJ11		EXCLUDED	direction_opposite	
+A4-R5	GtoPdb interaction	GTOPDB:2414	glibenclamide		Mouse	Channel blocker/Antagonist	down		false		5.7 pIC50		7502040|8630239	Kcnj11		CANDIDATE	ok	
+A4-R5	GtoPdb interaction	GTOPDB:2414	glibenclamide		Rat	Channel blocker/Antagonist	down		false		-		8798681	Kcnj11		CANDIDATE	ok	
+A4-R5	GtoPdb interaction	GTOPDB:6848	tolbutamide		Rat	Channel blocker/Antagonist	down		false	Not Determined	- (=)		8798681	Kcnj11		CANDIDATE	ok	
+A4-R5	GtoPdb interaction	GTOPDB:6848	tolbutamide		Mouse	Channel blocker/Antagonist	down		false	Not Determined	4.5 pIC50 (=)		7502040	Kcnj11		CANDIDATE	ok	
+A4-R5	GtoPdb interaction	GTOPDB:1713	ATP		Mouse	Gating inhibitor/Antagonist	down		false		-		7502040|8630239	Kcnj11		CANDIDATE	ok	
+A4-R5	GtoPdb interaction	GTOPDB:2414	glibenclamide		Human	Inhibitor/None	down		true	Non-selective	- (=)			KCNJ11		CANDIDATE	ok	
+A4-R5	GtoPdb interaction	GTOPDB:6848	tolbutamide		Human	Inhibitor/None	down		true	Non-selective	- (=)			KCNJ11		CANDIDATE	ok	

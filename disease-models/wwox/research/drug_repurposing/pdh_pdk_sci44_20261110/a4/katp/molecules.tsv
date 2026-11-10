@@ -1,0 +1,63 @@
+relation_id	molecule	names	sources	n_source_rows	directions	species	sites
+A4-R4	CAT:CHEMBL1073	GLIPIZIDE	ChEMBL curated mechanism	2	down	Homo sapiens	two_gene_assembly_record
+A4-R4	CAT:CHEMBL1159	PINACIDIL	ChEMBL curated mechanism	2	up	Homo sapiens	two_gene_assembly_record
+A4-R4	CAT:CHEMBL1272	REPAGLINIDE	ChEMBL curated mechanism	2	down	Homo sapiens	two_gene_assembly_record
+A4-R4	CAT:CHEMBL1481	GLIMEPIRIDE	ChEMBL curated mechanism	2	down	Homo sapiens	two_gene_assembly_record
+A4-R4	CAT:CHEMBL1589	ACETOHEXAMIDE	ChEMBL curated mechanism	2	down	Homo sapiens	two_gene_assembly_record
+A4-R4	CAT:CHEMBL181	DIAZOXIDE | DIAZOXIDE CHOLINE	ChEMBL curated mechanism	4	up	Homo sapiens	single_protein_record
+A4-R4	CAT:CHEMBL2104449	SARAKALIM	ChEMBL curated mechanism	4	up	Homo sapiens	family_record_subunit_unresolved
+A4-R4	CAT:CHEMBL2105160	NAMINIDIL	ChEMBL curated mechanism	4	up	Homo sapiens	family_record_subunit_unresolved
+A4-R4	CAT:CHEMBL427216	GLICLAZIDE	ChEMBL curated mechanism	2	down	Homo sapiens	two_gene_assembly_record
+A4-R4	CAT:CHEMBL4298005	MITIGLINIDE CALCIUM DIHYDRATE	ChEMBL curated mechanism	2	down	Homo sapiens	two_gene_assembly_record
+A4-R4	CAT:CHEMBL471498	MITIGLINIDE	ChEMBL curated mechanism	2	down	Homo sapiens	two_gene_assembly_record
+A4-R4	CAT:CHEMBL472	GLYBURIDE	ChEMBL curated mechanism	2	down	Homo sapiens	two_gene_assembly_record
+A4-R4	CAT:CHEMBL498	CHLORPROPAMIDE	ChEMBL curated mechanism	2	down	Homo sapiens	two_gene_assembly_record
+A4-R4	CAT:CHEMBL782	TOLBUTAMIDE | TOLBUTAMIDE SODIUM	ChEMBL curated mechanism	4	down	Homo sapiens	two_gene_assembly_record
+A4-R4	CAT:CHEMBL783	NATEGLINIDE	ChEMBL curated mechanism	2	down	Homo sapiens	two_gene_assembly_record
+A4-R4	CAT:CHEMBL802	MINOXIDIL	ChEMBL curated mechanism	2	up	Homo sapiens	two_gene_assembly_record
+A4-R4	CAT:CHEMBL817	TOLAZAMIDE	ChEMBL curated mechanism	2	down	Homo sapiens	two_gene_assembly_record
+A4-R4	CAT:DGIDB:74ee1357f0ce	compound 13b [PMID: 19101153]	GtoPdb interaction	1	up	Human	
+A4-R4	GTOPDB:1713	ATP	GtoPdb interaction	3	down;up	Mouse	
+A4-R4	GTOPDB:1742	guanosine-5'-triphosphate	GtoPdb interaction	2	down;up	Mouse	
+A4-R4	GTOPDB:1749	UDP	GtoPdb interaction	1	up	Mouse	
+A4-R4	GTOPDB:2409	diazoxide	GtoPdb interaction	3	up	Mouse;Rat	
+A4-R4	GTOPDB:2410	guanosine 5'-diphosphate	GtoPdb interaction	1	up	Mouse	
+A4-R4	GTOPDB:2411	nicorandil	GtoPdb interaction	2	up	Human;Mouse	
+A4-R4	GTOPDB:2412	pinacidil	GtoPdb interaction	3	up	Mouse;Rat	
+A4-R4	GTOPDB:2413	cromakalim	GtoPdb interaction	2	up	Human;Mouse	
+A4-R4	GTOPDB:2414	glibenclamide	GtoPdb interaction	4	down	Human;Mouse;Rat	
+A4-R4	GTOPDB:4254	minoxidil	GtoPdb interaction	2	up	Human	
+A4-R4	GTOPDB:6801	chlorpropamide	GtoPdb interaction	1	down	Human	
+A4-R4	GTOPDB:6841	repaglinide	GtoPdb interaction	1	down	Human	
+A4-R4	GTOPDB:6848	tolbutamide	GtoPdb interaction	4	down	Human;Mouse;Rat	
+A4-R5	CAT:CHEMBL1073	GLIPIZIDE	ChEMBL curated mechanism	2	down	Homo sapiens	two_gene_assembly_record
+A4-R5	CAT:CHEMBL1159	PINACIDIL	ChEMBL curated mechanism	2	up	Homo sapiens	two_gene_assembly_record
+A4-R5	CAT:CHEMBL1272	REPAGLINIDE	ChEMBL curated mechanism	2	down	Homo sapiens	two_gene_assembly_record
+A4-R5	CAT:CHEMBL1481	GLIMEPIRIDE	ChEMBL curated mechanism	2	down	Homo sapiens	two_gene_assembly_record
+A4-R5	CAT:CHEMBL1589	ACETOHEXAMIDE	ChEMBL curated mechanism	2	down	Homo sapiens	two_gene_assembly_record
+A4-R5	CAT:CHEMBL181	DIAZOXIDE | DIAZOXIDE CHOLINE	ChEMBL curated mechanism	4	up	Homo sapiens	single_protein_record
+A4-R5	CAT:CHEMBL2104449	SARAKALIM	ChEMBL curated mechanism	4	up	Homo sapiens	family_record_subunit_unresolved
+A4-R5	CAT:CHEMBL2105160	NAMINIDIL	ChEMBL curated mechanism	4	up	Homo sapiens	family_record_subunit_unresolved
+A4-R5	CAT:CHEMBL427216	GLICLAZIDE	ChEMBL curated mechanism	2	down	Homo sapiens	two_gene_assembly_record
+A4-R5	CAT:CHEMBL4298005	MITIGLINIDE CALCIUM DIHYDRATE	ChEMBL curated mechanism	2	down	Homo sapiens	two_gene_assembly_record
+A4-R5	CAT:CHEMBL471498	MITIGLINIDE	ChEMBL curated mechanism	2	down	Homo sapiens	two_gene_assembly_record
+A4-R5	CAT:CHEMBL472	GLYBURIDE	ChEMBL curated mechanism	2	down	Homo sapiens	two_gene_assembly_record
+A4-R5	CAT:CHEMBL498	CHLORPROPAMIDE	ChEMBL curated mechanism	2	down	Homo sapiens	two_gene_assembly_record
+A4-R5	CAT:CHEMBL782	TOLBUTAMIDE | TOLBUTAMIDE SODIUM	ChEMBL curated mechanism	4	down	Homo sapiens	two_gene_assembly_record
+A4-R5	CAT:CHEMBL783	NATEGLINIDE	ChEMBL curated mechanism	2	down	Homo sapiens	two_gene_assembly_record
+A4-R5	CAT:CHEMBL802	MINOXIDIL	ChEMBL curated mechanism	2	up	Homo sapiens	two_gene_assembly_record
+A4-R5	CAT:CHEMBL817	TOLAZAMIDE	ChEMBL curated mechanism	2	down	Homo sapiens	two_gene_assembly_record
+A4-R5	CAT:DGIDB:74ee1357f0ce	compound 13b [PMID: 19101153]	GtoPdb interaction	1	up	Human	
+A4-R5	GTOPDB:1713	ATP	GtoPdb interaction	3	down;up	Mouse	
+A4-R5	GTOPDB:1742	guanosine-5'-triphosphate	GtoPdb interaction	2	down;up	Mouse	
+A4-R5	GTOPDB:1749	UDP	GtoPdb interaction	1	up	Mouse	
+A4-R5	GTOPDB:2409	diazoxide	GtoPdb interaction	3	up	Mouse;Rat	
+A4-R5	GTOPDB:2410	guanosine 5'-diphosphate	GtoPdb interaction	1	up	Mouse	
+A4-R5	GTOPDB:2411	nicorandil	GtoPdb interaction	2	up	Human;Mouse	
+A4-R5	GTOPDB:2412	pinacidil	GtoPdb interaction	3	up	Mouse;Rat	
+A4-R5	GTOPDB:2413	cromakalim	GtoPdb interaction	2	up	Human;Mouse	
+A4-R5	GTOPDB:2414	glibenclamide	GtoPdb interaction	4	down	Human;Mouse;Rat	
+A4-R5	GTOPDB:4254	minoxidil	GtoPdb interaction	2	up	Human	
+A4-R5	GTOPDB:6801	chlorpropamide	GtoPdb interaction	1	down	Human	
+A4-R5	GTOPDB:6841	repaglinide	GtoPdb interaction	1	down	Human	
+A4-R5	GTOPDB:6848	tolbutamide	GtoPdb interaction	4	down	Human;Mouse;Rat	
