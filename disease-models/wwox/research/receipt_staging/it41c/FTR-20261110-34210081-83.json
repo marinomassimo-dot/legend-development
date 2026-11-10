@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-10T00:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_present",
+  "results": "not_present",
+  "discussion": "read",
+  "figures": "not_read",
+  "tables": "not_present",
+  "references": "not_read",
+  "supplementary": "not_present",
+  "limitations": "not_present"
+ },
+ "event_at": "2026-11-10T00:46:00Z",
+ "event_id": "FTR-20261110-34210081-83",
+ "evidence_basis": [
+  "Re-opened for the Drosophila paragraphs only: no-phenotype sentence, catalytic Y288 and Y293, P47T and G372R sentences.",
+  "verbatim_locator | proposition: catalytic tyrosine correspondence | Metabolism section | \"The orthologous tyrosine amino acid is position 293 in human WWOX\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/fly_wwox_feasibility_it41_20261110/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/fly_wwox_feasibility_it41_20261110/output/decisive.tsv"
+ ],
+ "prior_receipt": "FTR-20261019-34210081-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "393f935d20c466db716e258434ca20ada4042e7ba761571ed710c94d899facab",
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC fullTextXML for PMC8305172, fetched 2026-11-10; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.3390/cells10071637",
+  "pmid": "34210081"
+ },
+ "workflow": "IT41 light queue fly Wwox feasibility, producer ic-p, task ORCH-IT41-20261109. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

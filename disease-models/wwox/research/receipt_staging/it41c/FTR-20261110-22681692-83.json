@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-10T00:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_present"
+ },
+ "event_at": "2026-11-10T00:46:00Z",
+ "event_id": "FTR-20261110-22681692-83",
+ "evidence_basis": [
+  "Introduction and the first Results sections (Fig 1-4 text) read in the NCBI PMC author-manuscript XML; later Results, Methods, Discussion not read; figure images not available in the open-data bucket.",
+  "verbatim_locator | proposition: fly has a single NR2 | Introduction | \"Drosophila have a single NR2 homolog, dNR2, which contains a glutamine at the Mg 2+ block site (Q721)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/fly_wwox_feasibility_it41_20261110/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/fly_wwox_feasibility_it41_20261110/output/decisive.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "a59ddf6728c0f8d053d4741db1521788db6f5dab20a467bda8a85c03c6ca471a",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch db=pmc for PMC3651368, fetched 2026-11-10; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1016/j.neuron.2012.03.039",
+  "pmid": "22681692"
+ },
+ "workflow": "IT41 light queue fly Wwox feasibility, producer ic-p, task ORCH-IT41-20261109. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

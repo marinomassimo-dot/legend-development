@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-10T00:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "captions_only",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_present",
+  "limitations": "not_present"
+ },
+ "event_at": "2026-11-10T00:46:00Z",
+ "event_id": "FTR-20261110-26596173-83",
+ "evidence_basis": [
+  "Abstract, Introduction and the opening of Results read for the statement on larval NMJ receptors only; not a read of the screen.",
+  "verbatim_locator | proposition: larval NMJ receptors are non-NMDA | Results | \"Drosophila NMJ GluRs are similar to non-NMDA receptors including AMPA receptors\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/fly_wwox_feasibility_it41_20261110/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/fly_wwox_feasibility_it41_20261110/output/decisive.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "f07ca7d7dee82bc8b77cfd1e3e1970b09a5a467b846087d24a84b6e32c11312c",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch db=pmc for PMC4698086, fetched 2026-11-10; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1016/j.mcn.2015.11.004",
+  "pmid": "26596173"
+ },
+ "workflow": "IT41 light queue fly Wwox feasibility, producer ic-p, task ORCH-IT41-20261109. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
