@@ -2,7 +2,7 @@
 Single-conductance steady-state arithmetic: G = 1/Rin; V_new = (G_old*V_old + dG*E_x)/G_new with dG = G_new - G_old (negative for a loss).
   E_x = V_old + dV * G_new / (G_new - G_old)
 Assumptions (all can fail): one conductance changed, the rest of the cell unchanged, steady state, point means of cells treated as units, no variance carried.
-Labelled INFERENZA; computed once by the Orchestrator at S3 (NOT preregistered; the preregistered uncertainty analysis is S7).
+Labelled INFERENZA; computed once by the Orchestrator at S3 (NOT preregistered; the preregistered uncertainty analysis is S7). After verification the arithmetic is a CONSTRAINT on explanations, not a discriminator between a K+ loss and a smaller cell plus a shunt.
   python3 implied_reversal.py -> output/implied_reversal_points.tsv"""
 import csv
 from pathlib import Path
@@ -18,7 +18,7 @@ CASES = [
  ("Development L3 P14->P28", "30911152 Table 2", 213.42, 110.28, -69.96, -73.02, "net gain", ""),
  ("Development L5 P7->P14", "30911152 Table 2", 161.83, 78.33, -61.30, -67.08, "net gain", ""),
  ("Development L5 P14->P28", "30911152 Table 2", 78.33, 52.60, -67.08, -69.62, "net gain", ""),
- ("ZD7288 10 uM on WT (Ih block)", "10.64898/2026.02.03.703439 Fig 5", 130.0, 138.0, -78.3, -83.0, "loss by block", "baseline Rin read off Fig 5C (about 130, +8 printed); V_old taken as the preprint WT mean; rest -4.7 mV"),
+ ("ZD7288 10 uM on WT (Ih block)", "10.64898/2026.02.03.703439 Fig 5", 130.0, 138.0, -78.3, -83.0, "loss by block", "ILL-CONDITIONED (verifier): baseline Rin read off Fig 5C (about 130, +8 printed); halving the +8 MOhm difference moves E_x from about -2 to about +74 mV; kept only to show that the arithmetic is unstable for a small share; V_old = preprint WT mean; rest -4.7 mV"),
 ]
 OFFSETS = [0, 8, 13, 16]  # recorded = true + delta (candidate junction offsets, mV); E_K true about -97.5 mV for the Wwox solutions
 def main():
@@ -28,6 +28,11 @@ def main():
         dG, dV = g1 - g0, v1 - v0
         ex = v0 + dV * g1 / dG
         rows.append([name, src, r0, r1, v0, v1, f"{g0:.2f}", f"{g1:.2f}", f"{dG:+.2f}", f"{100*dG/g0:+.0f}", f"{dV:+.2f}", f"{ex:.1f}", kind, note])
+    # degenerate reproduction (verifier): a membrane scaled down plus a fixed shunt at 0 mV reproduces the Wwox WT->KO pair exactly,
+    # and its implied reversal is the native rest of the membrane, so a K+-like value does not identify a K+ conductance.
+    gs = 1.5; g0, g1 = 1000 / 102.88, 1000 / 143.03
+    vn = -79.25 * g0 / (g0 - gs); s = (g1 - gs) / (g0 - gs); vko = vn * (g1 - gs) / g1
+    rows.append([f"Size plus shunt: membrane scaled to {s:.2f} with a fixed {gs} nS shunt at 0 mV (reproduces Wwox WT->KO)", "verifier construction", 102.88, 143.03, -79.25, round(vko, 2), f"{g0:.2f}", f"{g1:.2f}", f"{g1-g0:+.2f}", f"{100*(g1-g0)/g0:+.0f}", f"{vko+79.25:+.2f}", f"{vn:.1f}", "net loss", "implied reversal = native rest of the scaled membrane: the arithmetic cannot tell this from a K+ conductance loss"])
     with open(HERE / "output/implied_reversal_points.tsv", "w", newline="") as f:
         w = csv.writer(f, delimiter="\t", lineterminator="\n")
         w.writerow(["case", "source", "Rin_old_MOhm", "Rin_new_MOhm", "V_old_mV", "V_new_mV", "G_old_nS", "G_new_nS", "dG_nS", "dG_percent", "dV_mV", "implied_E_x_recorded_scale_mV", "kind", "note"])

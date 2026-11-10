@@ -1,0 +1,11 @@
+case	source_status	Rin_old	Rin_new	V_old	V_new	dV_mV	dG_nS	E_x_point_recorded_mV	E_x_95pct_interval_mV (printed SEM, independent normal draws, 400000, seed 1)	P(E_x below recorded E_K for offset 8..16 i.e. below -89..-81)	note
+Wwox WT->KO	re-read by verifier (34634460 Table 1)	102.88	143.03	-79.25	-73.62	+5.63	-2.73	-93.7	-142.8 to -77.5 (68%: -107.5 to -85.0)	P(E_x<-81.5)=0.93; P(-80<E_x<-72)=0.04	SEM and n 13/40 assumed; point estimate reproduces
+Wwox WT->HT	re-read by verifier (34634460 Table 1)	102.88	143.26	-79.25	-75.51	+3.74	-2.74	-88.8	-149.4 to -66.2 (68%: -102.2 to -79.7)	P(E_x<-81.5)=0.78; P(-80<E_x<-72)=0.12	dV=3.74 +/- 2.69 (SEM): not distinguishable from 0
+Kcnq2 cKO vs ctrl	printed values copied from the producer; source full text NOT reachable to verifier (28100740 abstract only)	239	299	-67.3	-65.7	+1.6	-0.84	-73.7	-105.2 to -60.3 (68%: -82.2 to -67.6)	not applicable (corrected scale, calculated LJP -14.4)	point estimate reproduces; interval makes the row uninformative; E_K on this solution pair about -103 (22 C, 145/2.5 mM): a pure Kv7 loss would predict +9 mV, observed +1.6 (p 0.2)
+Fmr1 WT->KO	preprint not reachable; printed values copied	172.7	124.5	-78.3	-82.0	-3.70	+2.24	-91.6	not computable (95% CI printed, not SEM; source not reachable)		point estimate reproduces
+Ba2+ 60 uM on WT	preprint not reachable	172.7	223.8	-78.3	-76.8	+1.50	-1.32	-83.4	not computable		Rin_new = 172.7+51.1 reproduces; compare measured Ba2+ reversal -89.6 (6 mV apart)
+L3 P7->P14	Kroon Table 2 re-read	405.85	213.42	-61.63	-69.96	-8.33	+2.22	-79.2	-94.6 to -73.2		reproduces
+L3 P14->P28	Kroon Table 2 re-read	213.42	110.28	-69.96	-73.02	-3.06	+4.38	-76.3	-83.2 to -71.4		reproduces
+L5 P7->P14	Kroon Table 2 re-read	161.83	78.33	-61.30	-67.08	-5.78	+6.59	-72.5	-76.9 to -68.8		reproduces
+L5 P14->P28	Kroon Table 2 re-read	78.33	52.60	-67.08	-69.62	-2.54	+6.24	-74.8	-85.6 to -69.2		reproduces
+ZD7288 10 uM on WT	preprint not reachable; baseline read off a raster	130	138	-78.3	-83.0	-4.70	-0.45	-1.9	ill-conditioned: dG is 0.45 nS from a +8 Mohm difference printed with p 0.035; halving the Rin difference moves E_x from about -2 to about +74 mV		not a usable calibration row; remove or show with an interval
