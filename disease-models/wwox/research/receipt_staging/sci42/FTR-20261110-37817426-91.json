@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-10T07:43:56Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "tables": "read",
+  "references": "not_read",
+  "supplementary": "read",
+  "limitations": "read"
+ },
+ "event_at": "2026-11-10T07:51:56Z",
+ "event_id": "FTR-20261110-37817426-91",
+ "evidence_basis": [
+  "Main text, tables and the three supplementary documents read; Figure 2 viewed; Figures 1 and 3 captions only.",
+  "verbatim_locator | proposition: the sponsor-authored paper declares the compound a highly potent, selective, reversible NR2B negative allosteric modulator without citing a pharmacology source | Introduction | \"highly potent, selective, and reversible low-molecular-weight NR2B NAM\"",
+  "verbatim_locator | proposition: the study population was healthy volunteers of maximum age 56 and small | Discussion | \"study population which included only healthy volunteers, with a maximum age of 56 years\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/glun2b_comparators_sci42_20261110/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/glun2b_comparators_sci42_20261110/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC10651655 full text through the PMC full-text tool; Figure 2 image and the supplementary zip (three Word documents) from the public PMC open-data bucket with plain curl on 2026-11-10; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1111/cts.13623",
+  "pmid": "37817426"
+ },
+ "workflow": "SCI42 producer og-p, S1/S2 onfasprodil and NP10679 (glun2b_comparators_sci42_20261110). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
