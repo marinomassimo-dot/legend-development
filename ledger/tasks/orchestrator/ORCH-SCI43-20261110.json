@@ -13,7 +13,7 @@
     "delegate_active": "none",
     "updated": "2026-11-10T19:17:15Z"
   },
-  "RESUME": "LANDING: battery on fresh clone of frozen SHA 9414b8ae finished REGRESSION VERDICT: PASS WITH SKIPS (228 targets, 11 skipped, all environmental: absent local corpus artefacts, catalogue cache, Stop hook, case-sensitive filesystem); gate PASS, LINT no BLOCK, receipts chain OK, growth PASS on the same SHA. Later commits are closure-only (task record). Next: task_close.py, then safe_push.py development main.",
+  "RESUME": "LANDED: main dcaca553 (merge of task/sci43; frozen candidate 9414b8ae, battery PASS WITH SKIPS), pushed to development with gate PASS (ls-remote verified). Staged receipts in research/receipt_staging/sci43 and sci43v remain unrecorded (IT43 integrates). MANDATE_STATE COMPLETE; no recalls were created for this mandate.",
   "DECISIONS_TAKEN": [
     "2026-11-10 S0: INV-18 branch D chosen (debt confirmed, quantitative constraint in Table 1, reading-only cost); IT43 (4e) says IT43 takes INV-05/supply-side, not K conductances",
     "2026-11-10: battery sequenced after IT43 candidate 8211d2d7 (PID 1466947, own clone, waiting by PID)",
@@ -28,7 +28,7 @@
   "STOP_LOG": [],
   "DEFAULTS_TAKEN": [],
   "AUTHORISED_QUEUE_20261110": {
-    "MANDATE_STATE": "OPEN",
+    "MANDATE_STATE": "COMPLETE",
     "OBJ_1": {
       "order": 1,
       "steps": [
