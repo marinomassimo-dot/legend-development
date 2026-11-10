@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-10T23:22Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-10T23:26Z",
+ "event_id": "FTR-20261110-27153546-97",
+ "evidence_basis": [
+  "Verifier V1 checked the infarct volumes, group sizes and the PDH activity p-value against the Results text and the Fig 1 and Fig 2 legends. Methods, Discussion and figures not read.",
+  "verbatim_locator | proposition: DCA reduced infarct volume in P9 hypoxia-ischemia | Abstract | \"reduced by 54.2% from 10.8 ± 1.9 mm3 in the vehicle-only control group to 5.0 ± 1.0 mm3\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/audit.md",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/recompute_expression.tsv"
+ ],
+ "prior_receipt": "FTR-20261110-27153546-96",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket PMC5077971.1 text (plain curl)",
+ "study_id": {
+  "doi": "10.18632/oncotarget.9150",
+  "pmid": "27153546"
+ },
+ "workflow": "SCI44 blind verifier V1 (actor pk-v). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

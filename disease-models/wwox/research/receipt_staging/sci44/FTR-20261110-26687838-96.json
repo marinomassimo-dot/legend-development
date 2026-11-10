@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-10T22:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-10T22:41:00Z",
+ "event_id": "FTR-20261110-26687838-96",
+ "evidence_basis": [
+  "Results on purification, patient numbers and ages, and the Methods on tissue and RNA-seq mapping were read; figure legends only; the supplementary tables named in the text were not available in the bucket, the GEO table was used instead.",
+  "verbatim_locator | proposition: patient numbers per cell class | Results | \"N=12, 1, 5, 3, and 2 patients for astrocytes, neurons, oligodendrocytes, microglia, and endothelial cells, respectively.\"",
+  "verbatim_locator | proposition: fetal sample size and age | Figure 4 legend | \"Fetal, n=6 patients. Age range: 18.0–18.5 gw.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/isoform_expression.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/function_neural.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket text of PMC4707064 fetched with plain curl on 2026-11-10, plus the GEO processed table GSE73721 Human_and_mouse_table read by script; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1016/j.neuron.2015.11.013",
+  "pmid": "26687838"
+ },
+ "workflow": "SCI44 package A step A2 producer og-p (pdh_pdk_sci44_20261110). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

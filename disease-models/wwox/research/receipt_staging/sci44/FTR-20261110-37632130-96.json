@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-10T23:03:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-10T23:11:00Z",
+ "event_id": "FTR-20261110-37632130-96",
+ "evidence_basis": [
+  "Results and Methods read through keyword-selected passages of the PMC page text; Discussion partly; Introduction not read; Figures 1 and 3 viewed, Figures 2 and 4 legends only.",
+  "verbatim_locator | proposition: oxamate terminated status epilepticus in mice | Abstract | \"Inhibition of pyruvate to lactate conversion with oxamate terminated SE in mice.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a4/levers.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a4/k_coupling.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a4/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a4/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page PMC10578888 fetched with plain curl; figure images from the PMC cdn",
+ "study_id": {
+  "doi": "10.1002/acn3.51881",
+  "pmid": "37632130"
+ },
+ "workflow": "SCI44 package A step A4 producer og-r (pdh_pdk_sci44_20261110). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -71,3 +71,9 @@ Written now so the search cannot choose the frame: (a) lower the kinase activity
 ## What no further literature search can resolve (stated now)
 
 Whether PDH is phosphorylation-limited in a WWOX-deficient neural cell, whether the glycolytic shift is cause or compensation, and whether any PDH acceleration helps a functional outcome. These need the premise measurement (INV-07 step 2, sharing lysates with INV-19) and a functional readout; they are not commissioned here.
+
+## Addendum 2026-11-10 (after A2-A4 and both verifications; the text above is unchanged)
+* **Priors scored:** P1, P2 and P4 failed; P3 and P5 held (`output/priors_scored.tsv`, re-checked by the verifier from its own extraction). The frame's explanation H-D (cell-type division of labour) and H-E (isoform mismatch) rose, as written in the outcome table; the premise sample must be cell-resolved.
+* **Frame statement withdrawn:** "a recollection ... AZD7545 class may activate an isoform under some conditions" was only a recollection; it is now a measured fact for the core-free kinase (PDK3 10-fold, PDK4 2.8-fold stimulation; core-bound PDK1 and PDK3 inhibited), with PDK2 unmeasured.
+* **Alternative actions (a-h):** (a) done; (b) phosphatase activation: no tool reached by the relation path or by name; (c) fuel/ketone: tested as a control (triheptanoin) and as KATP/GIRK/A-type coupling (BHB); (d) cofactors: nothing found by name in neural cells beyond a PDH-deficient mouse acetate rescue (abstract); (e) pyruvate transport: UK5099 read; (f) lactate side: oxamate, stiripentol, astrocytic Ldha read; (g) genetic arm: kept as the reference of the design; (h) HIF upstream stays with INV-19.
+* **The link opened by verification:** lactate-closed KATP (PH4). It was not in the frame; it came from the verifier's counter-example to the producer's absence claim.

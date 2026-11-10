@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-10T23:23Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-10T23:26Z",
+ "event_id": "FTR-20261110-26523646-97",
+ "evidence_basis": [
+  "Verifier V1 checked two Methods sentences (P60 dissection, P1 cultures) and searched the whole text for PDK and pyruvate dehydrogenase strings (zero hits). Supplementary tables not reached (proof-of-work page recorded by the producer, not retried by the verifier).",
+  "verbatim_locator | proposition: no PDK or PDP statement in the text; cell proteomes come from P1 cultures | Methods | \"brains were removed from newborn mice (P1)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/audit.md",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/recompute_expression.tsv"
+ ],
+ "prior_receipt": "FTR-20261110-26523646-96",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket PMC7116867.1 text (plain curl)",
+ "study_id": {
+  "doi": "10.1038/nn.4160",
+  "pmid": "26523646"
+ },
+ "workflow": "SCI44 blind verifier V1 (actor pk-v). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
