@@ -225,3 +225,17 @@ S6	GTOPDB:4665	VU0240551	GtoPdb interaction	1	down	Human
 S6	GTOPDB:4742	piretanide	GtoPdb interaction	1	down	Human	
 S6	GTOPDB:4837	bumetanide	GtoPdb interaction	1	down	Human	
 S6	GTOPDB:4839	furosemide	GtoPdb interaction	1	down	Human	
+S7	CAT:CHEMBL1027	TIAGABINE HYDROCHLORIDE	ChEMBL curated mechanism	1	down	Homo sapiens	single_protein_record
+S7	CAT:CHEMBL89598	VIGABATRIN	ChEMBL curated mechanism	1	down	Homo sapiens	single_protein_record
+S7	GTOPDB:14485	E2730	GtoPdb interaction	2	down	Human	
+S7	GTOPDB:4583	(R/S) EF-1500	GtoPdb interaction	1	down	Human	
+S7	GTOPDB:4612	CI-966	GtoPdb interaction	1	down	Human	
+S7	GTOPDB:4669	NNC-711	GtoPdb interaction	1	down	Human	
+S7	GTOPDB:4705	SKF89976A	GtoPdb interaction	1	down	Human	
+S7	GTOPDB:4756	LU32-176B	GtoPdb interaction	1	down	Mouse	
+S7	GTOPDB:4818	tiagabine	GtoPdb interaction	1	down	Human	
+S7	GTOPDB:4821	vigabatrin	GtoPdb interaction	1	down	Human	
+S7	GTOPDB:6512	(R)-EF-1520	GtoPdb interaction	1	down	Human	
+S7	GTOPDB:6513	(S)-EF-1520	GtoPdb interaction	1	down	Human	
+S7	GTOPDB:8284	CPP-115	GtoPdb interaction	1	down	Human	
+S7	GTOPDB:8841	4-acryloylphenol	GtoPdb interaction	1	down	Human	

@@ -17,6 +17,46 @@ def gtopdb_rows():
     with open(CACHE, encoding="utf-8", newline="") as f:
         f.readline(); return list(csv.DictReader(f))
 
+
+def wanted_direction(rel, symbol):
+    """'down', 'up', or per-symbol 'SYM:down;SYM:up'."""
+    w = rel.get("wanted_direction") or ""
+    if ":" in w:
+        d = dict(x.split(":") for x in w.split(";") if ":" in x)
+        return d.get(symbol.upper(), "")
+    return w
+
+def load_identity(dr):
+    p = dr / "identity_it41_20261109/identity_table.tsv"
+    out = {}
+    if p.exists():
+        for r in csv.DictReader(open(p, encoding="utf-8"), delimiter="\t"):
+            out.setdefault(r["query_name"].lower(), []).append(r)
+    return out
+
+def qualify(o, rel, ident):
+    """Relation-guided qualification of one source row. Returns (verdict, reason, unknown_fields). CANDIDATE: passes every check the relation fixes; EXCLUDED: fails one (the reason is kept);
+    UNKNOWN: a check cannot be evaluated (a field is missing, the assay text names another subunit, or the name carries a label conflict) - never read as negative. Rules come from the
+    relation's own columns (wanted_direction, site_policy, subunit_in, subunit_out), not from code specific to a relation."""
+    unk = []
+    wd = wanted_direction(rel, o["target_symbol"].split("|")[0].strip() if o["source"].startswith("GtoPdb") else o["target_symbol"])
+    if wd and o["direction"] in ("up", "down") and o["direction"] != wd:
+        return "EXCLUDED", "direction_opposite", ""
+    if wd and o["direction"] == "unclear": unk.append("direction")
+    pol = rel.get("site_policy") or "any"
+    if pol == "allosteric_subunit":
+        if o["site_or_granularity"] in ("glutamate site", "glycine site"): return "EXCLUDED", "orthosteric_site", ""
+        if o["action"].startswith("Channel blocker"): return "EXCLUDED", "channel_blocker", ""
+        if o["site_or_granularity"] == "family_record_subunit_unresolved": return "EXCLUDED", "family_record_subunit_unresolved", ""
+        if o["source"].startswith("GtoPdb") and not o["site_or_granularity"]: unk.append("receptor_site")
+    out_rx = rel.get("subunit_out") or ""
+    if out_rx and re.search(out_rx, o["assay_or_note"] or "", re.I): return "UNKNOWN", "assay_names_other_subunit", ",".join(unk)
+    if o["source"].startswith("GtoPdb") and rel.get("subunit_in") and not (o["assay_or_note"] or "").strip(): unk.append("assay_text")
+    for nm in (o["name"] or "").lower().split(" | "):
+        for r in ident.get(nm, []):
+            if r.get("label_conflict") == "yes": return "UNKNOWN", "label_conflict", ",".join(unk)
+    return ("CANDIDATE" if not unk else "CANDIDATE"), ("ok" if not unk else "unknown_fields"), ",".join(unk)
+
 def main():
     rel = list(csv.DictReader(open(HERE / "relations_it41.tsv", encoding="utf-8"), delimiter="\t"))
     es = cc.load(cc.DEFAULT_CATALOG); idx = rs.Index(es)
@@ -45,6 +85,9 @@ def main():
                 site_or_granularity=g["Receptor Site"] or "", primary_target=g["Primary Target"], selectivity_comment=g["Selectivity"] + (" | " + g["Action comment"] if g["Action comment"] else ""),
                 affinity=" ".join(x for x in (g["Affinity Median"], g["Affinity Units"], "(" + g["Original Affinity Relation"] + ")" if g["Original Affinity Relation"] else "") if x), assay_or_note=g["Assay Description"], pubmed=g["PubMed ID"], target_symbol=g["Target Gene Symbol"]))
     for o in out: o["labelled_form"] = "yes" if re.match(r"^\[?<sup>|^\[<sup>", o["name"]) or "[<sup>" in o["name"] else ""
+    DRm = HERE.parent; ident = load_identity(DRm); relmap = {r["relation_id"]: r for r in rel}
+    for o in out:
+        o["qualification"], o["reason"], o["unknown_fields"] = qualify(o, relmap[o["relation_id"]], ident)
     F = list(out[0].keys())
     with open(HERE / "search_rows.tsv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, F, delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(out)
