@@ -9,11 +9,11 @@
  "BASELINE": "main f7305230 (development/main same). Worktree .claude/worktrees/sci42, branch task/sci42. IT42 orchestrator session has its own worktree it42 (not touched).",
  "CURRENT_PACKAGE": {
   "id": "second landing",
-  "state": "S5 and S6 delivered; checks and battery pending on a frozen candidate",
+  "state": "S5 and S6 delivered and checked (gate PASS, LINT WARN, growth PASS, receipts OK at 029d3395); waiting for IT42 battery to finish before merging their main and running mine (no CPU overlap, by agreement)",
   "delegate_active": "none",
-  "updated": "2026-11-10T09:43:45Z"
+  "updated": "2026-11-10T09:47:12Z"
  },
- "RESUME": "CHECKPOINT: main package published d3a57a65. Second landing (S5 dqp1105_row_sci42_20261110 + S6 chloride_gradient_sci42_20261110) in worktree sci42b branch task/sci42b: next run gate, LINT, growth, receipts verify on the frozen candidate, battery on a fresh unique clone, record verdict, task_close + safe_push, then final report and COMPLETE.",
+ "RESUME": "CHECKPOINT: waiting for the IT42 orchestrator (legend-development-4e) to write 'finita' with the published SHA. Then in worktree sci42b: git merge main (after git fetch development and local main fast-forward from root? local main must carry their SHA: ask or pull), rerun gate/LINT/growth/receipts verify, freeze the merged candidate, battery on a fresh unique clone (git clone --no-hardlinks, cp -al files, nice, setsid nohup, verify PID cwd, process_wait), record verdict (closure-only), task_close + safe_push development main, then the final seven-question report, CronDelete f7692bfa, MANDATE_STATE COMPLETE. Nothing else pending; S5 and S6 are delivered.",
  "DECISIONS_TAKEN": [
   "2026-11-10 S0: IT42 orchestrator requested the same onfasprodil/NP10679 package; folded into this mandate (no duplicate); replied with folder and plan. PubMed identified starting points: 34493631 (NP10679 discovery pharmacology), 39892986 (SAH mouse), 37817426 (MIJ821 first-in-human healthy volunteers), 42976542 (MIJ821 analogues med-chem) \u2014 verified by producer.",
   "2026-11-10 S1->S3: I also checked the PMC open-data bucket for PMC8626636 (34493631): absent (list returned 0 keys); PMC13095441 (39933230) and 39892986 return no full text via the PubMed tool. No equivalent route retried. S3 design written by the Orchestrator without an agent; the on-target pH-signature use of NP10679 is my IPOTESI and is submitted to the verifier as item S3-3.",
@@ -21,7 +21,8 @@
   "2026-11-10 S4b: delegates final figures (producer 84 turns, 99,488 out, 13,786,423 cache read, peak 297,957; verifier 73 turns, 116,691 out, 14,082,655 cache read, peak 336,920; both effort read back as asked). Candidate f54b5753 frozen for the battery; further work goes in sci42b.",
   "2026-11-10 S5/S6: S5 verifier reached the primary paper by one plain curl after the producer and I met a bot check; no equivalent route was retried by me or the producer; the verifier's saved copy (hash recorded) was used and stated in the receipt. S6 scope agreed with the IT42 orchestrator (chloride gradient first; its BRIEF used as perimeter; needs cited by id; source-paper methods note: sIPSC internal 140 mM KCl per the need record, to be confirmed at the locator).",
   "2026-11-10 S4b battery verdict: REGRESSION VERDICT PASS WITH SKIPS (226 targets, 11 skipped) on f54b5753, clone /tmp/legend_batt_sci42_1794299132_1014050, PID 1014118 (cwd verified), 3976 s; a later change to this candidate would need its own battery; this record commit is closure-only.",
-  "2026-11-10 S6: the answer to the IT42 question is undetermined (no order change); a verifier-found perimeter gap (Brown 2015 mIPSC age series) was read afterwards; residual wording fixed by the Orchestrator after the recheck."
+  "2026-11-10 S6: the answer to the IT42 question is undetermined (no order change); a verifier-found perimeter gap (Brown 2015 mIPSC age series) was read afterwards; residual wording fixed by the Orchestrator after the recheck.",
+  "2026-11-10 coordination: IT42 batteries and mine would overlap on CPU; agreed that I run mine after theirs on the merged contents (one battery, fast-forward landing)."
  ],
  "DELEGATIONS": [
   "S1 producer og-p: asked sonnet/medium; read back medium x71; 71 turns; output 79,875; cache read 10,398,840; peak 254,352; sources newly read 4 at partial full text + patent text + ChEMBL records; 5 abstract only; 9 staged receipts validated; 34493631 unreachable by 6 routes (stopped, no evasion).",
