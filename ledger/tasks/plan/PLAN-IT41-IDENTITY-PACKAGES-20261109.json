@@ -10,16 +10,16 @@
  "assigned_on": "2026-11-09",
  "worktree": ".claude/worktrees/hpkg",
  "branch": "task/hpkg",
- "CURRENT_STATE": "DONE_PENDING_LANDING",
+ "CURRENT_STATE": "DONE",
  "CHECKPOINT": {
-  "last_verified_result": "e2b1faaf battery PASS WITH SKIPS (225/11), published within 9d58c69d",
-  "first_incomplete_work": "push task/dream5 (docs + one manifest row), then close",
-  "active_processes": "none of mine",
-  "real_dependencies": "IT40 landing (matrix_column data); IT41 package A output for H5",
-  "next_executable_step": "task_close dream5; gate; safe_push --expect-sha; message the Orchestrator with the SHA"
+  "last_verified_result": "development/main ce75de83 published; e2b1faaf battery PASS WITH SKIPS (225 targets, 11 skipped)",
+  "first_incomplete_work": "none",
+  "active_processes": "none",
+  "real_dependencies": "the Orchestrator's generation path using comparison_for and the identity table is pending on their side",
+  "next_executable_step": "none; mandate complete"
  },
  "AUTHORISED_QUEUE_20261109": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_H0": {
    "order": 1,
    "title": "Reconcile the earlier reporting residuals: battery tail, observed cost, published references",
@@ -146,9 +146,9 @@
     },
     {
      "step": "Publish hpkg through task_close and safe_push",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": "Dream note + manifest row + package A identity answers on task/dream5; push after gate"
+     "evidence": "development/main ce75de83 (gate PASS, ls-remote verified); battery on e2b1faaf PASS WITH SKIPS (225/11) attributed to that SHA, not to ce75de83 (documents, one manifest row and the record added after)"
     }
    ]
   },
