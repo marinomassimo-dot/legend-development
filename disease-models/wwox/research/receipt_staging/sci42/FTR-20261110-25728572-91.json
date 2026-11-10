@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-10T07:43:56Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "tables": "read",
+  "references": "not_read",
+  "supplementary": "unavailable",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-10T07:51:56Z",
+ "event_id": "FTR-20261110-25728572-91",
+ "evidence_basis": [
+  "Summary, Results, selected Methods paragraphs (oocyte, HEK, docking, MCAO), Discussion and Tables 1 and 2 read; Introduction and statistics not read; supplement not reached.",
+  "verbatim_locator | proposition: for the series prototype the maximum inhibition ran 79 to 100 percent across analogues while potency shifted with pH | Table 1 footnote d | \"maximum inhibition 79-100%\"",
+  "verbatim_locator | proposition: three GluN2B mutations removed the pH dependence of the prototype | Results | \"eliminated the pH-dependence of inhibition by 93-31\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/glun2b_comparators_sci42_20261110/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/glun2b_comparators_sci42_20261110/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "7d450c2fcdc3dae40b2fb3cb71c7498f0b1b3d5f2e90b4f382e602ecfc8c7bf1",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC4368485 author manuscript through NCBI efetch db=pmc on 2026-11-10; no figure image or supplement in the public open-data bucket for this record; the copy read was kept outside the repository and its SHA-256 is the source_fingerprint",
+ "study_id": {
+  "doi": "10.1016/j.neuron.2015.02.008",
+  "pmid": "25728572"
+ },
+ "workflow": "SCI42 producer og-p, S1/S2 onfasprodil and NP10679 (glun2b_comparators_sci42_20261110). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

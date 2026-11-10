@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-10T08:06:58Z",
+ "analysis_time_precision": "second",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "references": "not_read",
+  "supplementary": "not_read",
+  "limitations": "not_read"
+ },
+ "event_at": "2026-11-10T08:12:58Z",
+ "event_id": "FTR-20261110-11c8f1d78b91-91",
+ "evidence_basis": [
+  "Abstract W168 only, read in the abstract compendium page; no methods, figures or conditions in an abstract.",
+  "verbatim_locator | proposition: the developer reports IC50 21 nM at pH 6.9 and 130 nM at pH 7.6 for NP10679 on human GluN2B in oocytes, abstract level, no maximum effect | Abstract W168 | \"NP10679 is 6.2-fold more potent (IC50=21 nM) at pH 6.9 than at pH 7.6 (130 nM)\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/glun2b_comparators_sci42_20261110/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/glun2b_comparators_sci42_20261110/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "Abstract W168 in the ACNP 2017 abstract compendium, reached by plain curl through the DOI to the publisher page on 2026-11-10 (the compendium is PMC5719067); no PMID for the single abstract, so the event id carries the first twelve hex characters of the SHA-256 of the DOI; page bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1038/npp.2017.266"
+ },
+ "workflow": "SCI42 producer og-p, verification round (glun2b_comparators_sci42_20261110). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
