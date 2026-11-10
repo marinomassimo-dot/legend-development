@@ -135,7 +135,7 @@
      "step": "Investigations updated (question, decision, in-silico, new measure, reopen condition, priority); HIF1A-BNIP3 package if delivered; two short collaboration questions (fly assay feasibility; public variant case review) without private correspondence",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "INV-05 and INV-18 feasibility cells carry decision, in-silico work, new measure, reopen condition and priority; two short research questions (fly assay; public case review) in collab_questions_it41.md with no private correspondence; HIF1A-BNIP3 package not delivered, not consumed. HIF1A-BNIP3 package B consumed (52e04148): premise rows P11-P14, INV-19 premise measurement, mapping row, K01 packet, PDH need; stage S18 changes exactly three proposals in two columns; 5 receipts recorded (1,543)."
+     "evidence": "INV-05 and INV-18 feasibility cells carry decision, in-silico work, new measure, reopen condition and priority; two short research questions (fly assay; public case review) in collab_questions_it41.md with no private correspondence; HIF1A-BNIP3 package not delivered, not consumed. HIF1A-BNIP3 package B consumed (52e04148): premise rows P11-P14, INV-19 premise measurement, mapping row, K01 packet, PDH need; stage S18 changes exactly three proposals in two columns; 5 receipts recorded (1,543). Light queue (fly Wwox-loss feasibility, 9e7cdfdf) consumed: proposals 1-3 applied, 4 not applicable; 11 receipts recorded."
     }
    ]
   },
@@ -157,7 +157,7 @@
      "step": "Resources, persistence, battery on frozen SHA, publish with SHA check, CI, site, record only delivered results, final report",
      "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": "Batteries by SHA: c557978e FAIL (test_repurposing_view DeepenedCasesShareable: the spelling d-AP5 on the shareable page; log /tmp/bat_it41_c557978e_FAIL.log); 4fde7029 FAIL (test_repurposing_view: stale shareable package, own: package regenerated after the commit; log /tmp/bat_it41_4fde7029_FAIL.log); ade977d0 PASS WITH SKIPS (226 targets, 11 skipped: local catalogue cache). Published as a merge of ade977d0 with development/main (science light queue 9e7cdfdf, docs and staged receipts only). Light-queue consumption, 11 receipts (it41c) and CI pending."
+     "evidence": "Batteries by SHA: c557978e FAIL (test_repurposing_view DeepenedCasesShareable: the spelling d-AP5 on the shareable page; log /tmp/bat_it41_c557978e_FAIL.log); 4fde7029 FAIL (test_repurposing_view: stale shareable package, own: package regenerated after the commit; log /tmp/bat_it41_4fde7029_FAIL.log); ade977d0 PASS WITH SKIPS (226 targets, 11 skipped: local catalogue cache). Published as a merge of ade977d0 with development/main (science light queue 9e7cdfdf, docs and staged receipts only). Light-queue consumption, 11 receipts (it41c) and CI pending. Increment 2 (28d9cf2b: science light queue consumed, 11 receipts it41c, ledger 1,554): battery PASS WITH SKIPS (226 targets, 11 skipped). First publication 975535a9 (gate PASS, ls-remote verified). Second publication, CI and site: see closure."
     }
    ]
   }
