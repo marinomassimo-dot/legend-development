@@ -51,7 +51,7 @@ def _asked_not_ran(meta: dict[str, Any], models: dict[str, int]) -> str:
     return ""
 
 
-def census(path: Path) -> dict[str, Any]:
+def census(path: Path, since: str = "") -> dict[str, Any]:
     """Per-turn model and context, from the assistant turns' own usage blocks."""
     turns: list[dict[str, Any]] = []
     prompt_chars = 0
@@ -93,6 +93,8 @@ def census(path: Path) -> dict[str, Any]:
         turns.append(turn)
         if row.get("effort") is not None:
             efforts[str(row["effort"])] = efforts.get(str(row["effort"]), 0) + 1
+    if since:
+        turns = [turn for turn in turns if turn["at"] >= since]
     meta = _dispatch_meta(path)
     if not turns:
         return {"transcript": str(path), "turns": 0, "models": {}, "changed_mid_run": False}
@@ -116,6 +118,9 @@ def census(path: Path) -> dict[str, Any]:
         "asked_not_ran": _asked_not_ran(meta, models),
         "totals": {key: sum(turn[key] for turn in turns)
                    for key in ("cache_creation", "cache_read", "output")},
+        # where the re-read cost sits: every turn re-reads the context it started from, so a long start is paid on each turn
+        "start_context_share_of_cache_read": round(turns[0]["context"] * len(turns) / max(1, sum(turn["cache_read"] for turn in turns)), 2),
+        "context_drops": sum(1 for index, turn in enumerate(turns) if index and turn["context"] < 0.7 * turns[index - 1]["context"]),
     }
 
 
@@ -132,6 +137,8 @@ def render(rows: list[dict[str, Any]]) -> str:
         lines.append(f"    turns {row['turns']} · {models}")
         lines.append(f"    birth context {row['first_turn_context']:,} tokens "
                      f"(prompt {row['prompt_chars']:,} chars) · peak {row['peak_context']:,}")
+        lines.append(f"    the start context re-read on every turn = {int(100 * row['start_context_share_of_cache_read'])}% of cache read · "
+                     f"context drops (compaction or new window) {row['context_drops']}")
         totals = row["totals"]
         lines.append(f"    cache written {totals['cache_creation']:,} · cache read "
                      f"{totals['cache_read']:,} · output {totals['output']:,}")
@@ -172,6 +179,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("transcripts", nargs="*", help="transcript .jsonl files")
     parser.add_argument("--dir", default="", help="a directory of transcripts")
     parser.add_argument("--json", action="store_true")
+    parser.add_argument("--since", default="", help="count only turns at or after this ISO timestamp (a mandate's slice of a long session)")
     args = parser.parse_args(argv)
 
     paths = [Path(item).resolve() for item in args.transcripts]
@@ -181,7 +189,7 @@ def main(argv: list[str] | None = None) -> int:
     if not paths:
         parser.error("name at least one transcript, or a --dir that holds some")
 
-    rows = [census(path) for path in paths]
+    rows = [census(path, args.since) for path in paths]
     print(json.dumps(rows, indent=1, ensure_ascii=False) if args.json else render(rows))
     return 1 if any(row.get("changed_mid_run") or row.get("asked_not_ran") for row in rows) else 0
 
