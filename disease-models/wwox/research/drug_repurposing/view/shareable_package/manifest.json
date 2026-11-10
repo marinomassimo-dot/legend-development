@@ -552,24 +552,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 5053671,
-   "sha256": "c26e290542cc873e31b742c40d83c93cb62a83d1a52b2da47a6584f4cb376827"
+   "bytes": 5053609,
+   "sha256": "7e218e4112dc749ec0e4d2bd2e2a8eb61a831a6dd38087236fc35f144e4b04ae"
   },
   "es.html": {
-   "bytes": 5040112,
-   "sha256": "0bc96001103d2cf8524127b140126988fecb42316181368858391cd71c3498e0"
+   "bytes": 5040067,
+   "sha256": "3a359a183a6527158c7ecf13a4e04e7594101b754d19dfa5c50a758b561f5fae"
   },
   "fr.html": {
-   "bytes": 5067786,
-   "sha256": "482d34b63c31f09c8586370a3775492cdbde462feaec53fe9caaedd6a7b07272"
+   "bytes": 5067736,
+   "sha256": "ec0a882dae8a688aae39ca3447dcb7eeee4bd27a9b665ce1765758f7edbc750e"
   },
   "index.html": {
-   "bytes": 4961892,
-   "sha256": "954a88380162ee25f7a4adf56ff697c53fa776c6de18581e276cf1f59c900f86"
+   "bytes": 4961839,
+   "sha256": "307439ca7b4e1c4b62aed4e604cd6f7b9564b4f1962ac14df3da498131d583eb"
   },
   "it.html": {
-   "bytes": 5014400,
-   "sha256": "df0b9099a3cedb8faf11d90488995e9a84abccda1196493951cbaef92f9f599e"
+   "bytes": 5014349,
+   "sha256": "03d9e09eac42bd5ae43f9e9207bc6ad9c3f06c8193f487df370880e332ea3ebb"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
