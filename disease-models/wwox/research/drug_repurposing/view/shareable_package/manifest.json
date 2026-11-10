@@ -18,7 +18,7 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 12988,
+    "values": 13009,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -68,7 +68,7 @@
    },
    "^\\.cur\\.footer\\.": {
     "class": "SRC_META",
-    "values": 91,
+    "values": 96,
     "why": "attribution footer: sources, licences, credit lines"
    },
    "^\\.cur\\.needs\\[\\]\\.obs\\[\\]\\.(cite)$": {
@@ -199,15 +199,15 @@
   },
   "identifiers": {
    "CAT": 2386,
-   "CHEMBL": 371,
+   "CHEMBL": 375,
    "DOI": 5,
    "HGNC": 12,
    "NCT": 0,
    "PMID": 153
   },
   "links": {
-   "distinct_hrefs": 189,
-   "external_public": 88,
+   "distinct_hrefs": 190,
+   "external_public": 89,
    "hosts": [
     "civicdb.org",
     "open.fda.gov",
@@ -217,6 +217,7 @@
     "www.genenames.org",
     "www.ncbi.nlm.nih.gov",
     "www.nlm.nih.gov",
+    "www.wikidata.org",
     "www.wwox.org"
    ],
    "internal_anchors": 96
@@ -224,7 +225,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3587,
+    "forbidden-name": 3551,
     "forbidden-wording": 21
    },
    "co_attested_wording": [
@@ -246,7 +247,7 @@
     ]
    ],
    "forbidden_identifiers": 100768,
-   "forbidden_names": 126046,
+   "forbidden_names": 126040,
    "forbidden_wordings": 2888,
    "pair_unmarked_attested_or_unchecked": {
     "count": 161,
@@ -470,10 +471,10 @@
   "BIBLIO": 2696,
   "COUNT": 12405,
   "ID": 4861,
-  "OWN": 89828,
+  "OWN": 89849,
   "ROWNAME": 2408,
   "SRC_A": 189,
-  "SRC_META": 256,
+  "SRC_META": 261,
   "UI": 1457
  },
  "embedded_sources": [
@@ -504,6 +505,13 @@
    "licence": "Public domain (openFDA licence page)",
    "rows": 15,
    "url": "https://open.fda.gov/license/"
+  },
+  {
+   "attribution": "Compound names from Wikidata (CC0), joined to the compound only through its ChEMBL identifier (Wikidata property P592); the item number is shown with each name. Credit given as a courtesy; no clearance of any other source is implied.",
+   "label": "Wikidata item labels (English)",
+   "licence": "CC0 / public domain: 'All structured data (i.e. the main, Property, Lexeme, and EntitySchema namespaces) is released into the public domain' (wikidata.org/wiki/Wikidata:Licensing, read 2026-11-10; the page does not mention labels by name and says additional terms may apply)",
+   "rows": 7,
+   "url": "https://www.wikidata.org/wiki/Wikidata:Licensing"
   }
  ],
  "files": {
@@ -528,8 +536,8 @@
    "sha256": "e5dfa90d88e2069a2e4fd13429e8ebaefb7bd92fbbaede065af905656bc7ba87"
   },
   "NOTICE.md": {
-   "bytes": 13087,
-   "sha256": "76651299a60208a54ac1a0fd8f8543bfb8f973d68f7dbd18aa549ccc53e94849"
+   "bytes": 13731,
+   "sha256": "81ce8cd73e11a88750a89ea5d524cee6ab1f3588756af82f3770b51f58837b0d"
   },
   "README.md": {
    "bytes": 5072,
@@ -552,24 +560,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 5055620,
-   "sha256": "9b41347bdaa0af590fc20784b59024991e85b64c9c97970cdcf171541feb42fa"
+   "bytes": 5058255,
+   "sha256": "2e5fa5242644e4b6abb4f4f267f3c37084dffc6fa16ea378b4387647581c4391"
   },
   "es.html": {
-   "bytes": 5042024,
-   "sha256": "9baf2eca75076da4b21653de69564e95013b53194e09e5b0ee480dad33c916d6"
+   "bytes": 5044660,
+   "sha256": "9a9cba8cd505b5315f10848e3f2c1d33150d2a04812a52a9e850553a67ef641c"
   },
   "fr.html": {
-   "bytes": 5069788,
-   "sha256": "bfc4bd36b608f265d9e03873d862164ca92903114fed8dceecc9d7a869276799"
+   "bytes": 5072428,
+   "sha256": "bbb528e7afc05ebe02f93dc9b5247d837b5bb9bb6dd261be7beb1bc2701b177c"
   },
   "index.html": {
-   "bytes": 4963717,
-   "sha256": "b1701a05ce2e919f9da882fc48c6448e8d06f99003e6c33e42c9a4c02cd94f95"
+   "bytes": 4966348,
+   "sha256": "612cd2e58125584e6dd8f10b20f9208f28fb85d1093f2e128cfb6aabd34ead53"
   },
   "it.html": {
-   "bytes": 5016314,
-   "sha256": "f75e455045b954301fbc56b884689da0c50939860900b8895e60bcd9500c8e45"
+   "bytes": 5018949,
+   "sha256": "3dd4337094ca381db8a5b2173771ca42b47a0cfd8003a7b021518098c427ca30"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
