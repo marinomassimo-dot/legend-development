@@ -1,0 +1,42 @@
+file_line	relation	source	name	target_symbol	action	site_or_granularity	species	assay_or_note	engine_verdict	engine_reason
+1027	S8	GtoPdb interaction	tezampanel	GRIA3	Antagonist/Antagonist		Human		CANDIDATE	ok
+290	S5	ChEMBL curated mechanism	AZD6280	GABRA2	POSITIVE ALLOSTERIC MODULATOR	single_protein_record	Homo sapiens	GABA receptor alpha-2 subunit positive allosteric modulator	CANDIDATE	ok
+198	S4	GtoPdb interaction	carbenoxolone	PANX1	Inhibitor/None		Human		CANDIDATE	ok
+466	S5	ChEMBL curated mechanism	ALPRAZOLAM	GABRG2	POSITIVE ALLOSTERIC MODULATOR	family_record_subunit_unresolved	Homo sapiens	GABA-A receptor; anion channel positive allosteric modulator	CANDIDATE	ok
+432	S5	ChEMBL curated mechanism	ADIPIPLON	GABRG2	PARTIAL AGONIST	family_record_subunit_unresolved	Homo sapiens	GABA-A receptor; anion channel partial agonist	CANDIDATE	ok
+410	S5	ChEMBL curated mechanism	MIDAZOLAM HYDROCHLORIDE	GABRG2	POSITIVE ALLOSTERIC MODULATOR	family_record_subunit_unresolved	Homo sapiens	GABA-A receptor; anion channel positive allosteric modulator	CANDIDATE	ok
+91	S2	GtoPdb interaction	ivabradine	Hcn2	Channel blocker/Antagonist		Mouse		CANDIDATE	unknown_fields
+83	S2	GtoPdb interaction	propofol	Hcn1	Channel blocker/None		Mouse		CANDIDATE	unknown_fields
+81	S2	GtoPdb interaction	MEL57A	Hcn1	Channel blocker/None		Mouse		CANDIDATE	unknown_fields
+176	S3	GtoPdb interaction	retigabine	KCNQ4	Activator/None		Human		CANDIDATE	unknown_fields
+74	S2	GtoPdb interaction	clonidine	Hcn1	Channel blocker/Antagonist		Mouse		CANDIDATE	unknown_fields
+73	S2	GtoPdb interaction	cilobradine	HCN1	Channel blocker/Antagonist		Human		CANDIDATE	unknown_fields
+61	S1	GtoPdb interaction	amantadine	GRIN2B	Channel blocker/None		Human		EXCLUDED	channel_blocker
+62	S1	GtoPdb interaction	dizocilpine	GRIN2B	Channel blocker/None		Human		EXCLUDED	channel_blocker
+65	S1	GtoPdb interaction	N<sup>1</sup>-dansyl-spermine	GRIN2B	Channel blocker/None		Human		EXCLUDED	channel_blocker
+63	S1	GtoPdb interaction	ketamine	GRIN2B	Channel blocker/None		Human		EXCLUDED	channel_blocker
+66	S1	GtoPdb interaction	phencyclidine	GRIN2B	Channel blocker/None		Human		EXCLUDED	channel_blocker
+64	S1	GtoPdb interaction	Mg<sup>2+</sup>	GRIN2B	Channel blocker/None		Human		EXCLUDED	channel_blocker
+1021	S8	GtoPdb interaction	piracetam	GRIA3	Allosteric modulator/Positive		Human		EXCLUDED	direction_opposite
+774	S5	GtoPdb interaction	picrotoxin	GABRA2	Channel blocker/None		Human		EXCLUDED	direction_opposite
+1054	S8	GtoPdb interaction	LY339434	GRIK1	Agonist/Agonist		Human		EXCLUDED	direction_opposite
+845	S5	GtoPdb interaction	compound 20 [PMID: 35584373]	GABRA5	Allosteric modulator/Negative		Human		EXCLUDED	direction_opposite
+30	S1	GtoPdb interaction	D-aspartic acid	GRIN2B	Agonist/Agonist	glutamate site	Human		EXCLUDED	direction_opposite
+695	S5	GtoPdb interaction	CGS8216	GABRA1	Agonist/Inverse agonist		Human		EXCLUDED	direction_opposite
+21	S1	ChEMBL curated mechanism	AV-101	GRIN2B	ANTAGONIST	family_record_subunit_unresolved	Homo sapiens	Glutamate [NMDA] receptor antagonist	EXCLUDED	family_record_subunit_unresolved
+16	S1	ChEMBL curated mechanism	RALFINAMIDE	GRIN2B	ANTAGONIST	family_record_subunit_unresolved	Homo sapiens	Glutamate [NMDA] receptor antagonist	EXCLUDED	family_record_subunit_unresolved
+14	S1	ChEMBL curated mechanism	DELUCEMINE HYDROCHLORIDE	GRIN2B	ANTAGONIST	family_record_subunit_unresolved	Homo sapiens	Glutamate [NMDA] receptor antagonist	EXCLUDED	family_record_subunit_unresolved
+7	S1	ChEMBL curated mechanism	AMANTADINE HYDROCHLORIDE	GRIN2B	ANTAGONIST	family_record_subunit_unresolved	Homo sapiens	Glutamate [NMDA] receptor antagonist	EXCLUDED	family_record_subunit_unresolved
+9	S1	ChEMBL curated mechanism	KETAMINE HYDROCHLORIDE	GRIN2B	NEGATIVE ALLOSTERIC MODULATOR	family_record_subunit_unresolved	Homo sapiens	Glutamate [NMDA] receptor negative allosteric modulator	EXCLUDED	family_record_subunit_unresolved
+18	S1	ChEMBL curated mechanism	ESKETAMINE HYDROCHLORIDE	GRIN2B	NEGATIVE ALLOSTERIC MODULATOR	family_record_subunit_unresolved	Homo sapiens	Glutamate [NMDA] receptor negative allosteric modulator	EXCLUDED	family_record_subunit_unresolved
+47	S1	GtoPdb interaction	GV196771A	GRIN2B	Antagonist/Antagonist	glycine site	Human		EXCLUDED	orthosteric_site
+43	S1	GtoPdb interaction	CGP37849	GRIN2B	Antagonist/Antagonist	glutamate site	Human		EXCLUDED	orthosteric_site
+53	S1	GtoPdb interaction	selfotel	GRIN2B	Antagonist/Antagonist	glutamate site	Human		EXCLUDED	orthosteric_site
+48	S1	GtoPdb interaction	L689560	GRIN2B	Antagonist/Antagonist	glycine site	Human		EXCLUDED	orthosteric_site
+51	S1	GtoPdb interaction	NVP-AAM077	GRIN2B	Antagonist/Antagonist	glutamate site	Human		EXCLUDED	orthosteric_site
+44	S1	GtoPdb interaction	conantokin-G	GRIN2B	Antagonist/Antagonist	glutamate site	Human		EXCLUDED	orthosteric_site
+39	S1	GtoPdb interaction	DQP-1105	Grin2b	Allosteric modulator/Negative		Rat	Measured using recombinant GluN1-1a NMDA subunits co-expressed with GluN2C subunits.	UNKNOWN	assay_names_other_subunit
+1025	S8	GtoPdb interaction	GYKI53784	GRIA3	Antagonist/Antagonist		Human		UNKNOWN	label_conflict
+983	S8	GtoPdb interaction	GYKI53784	GRIA1	Antagonist/Antagonist		Human		UNKNOWN	label_conflict
+1005	S8	GtoPdb interaction	GYKI53784	GRIA2	Antagonist/Antagonist		Human		UNKNOWN	label_conflict
+1047	S8	GtoPdb interaction	GYKI53784	GRIA4	Antagonist/Antagonist		Human		UNKNOWN	label_conflict
