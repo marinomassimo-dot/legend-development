@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-11-09T23:05:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-09T23:08:00Z",
+ "event_id": "FTR-20261109-34653311-81",
+ "evidence_basis": [
+  "Abstract, Introduction, Methods 2.1-2.2, Results (10 uM and 1 uM perampanel), Discussion and figure captions read as text; no figure image viewed; supplement and references not read. Read only for the perampanel slice precedent (concentration, medium, readout, absence of block verification).",
+  "verbatim_locator | proposition: 10 uM perampanel abolished ictal events | Results | \"Upon application of perampanel (10 µM), ictal events were abolished\"",
+  "verbatim_locator | proposition: 1 uM tested | Results | \"we next tested the drug at a lower concentration (1 µM)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/comparison.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/figure_notes.tsv",
+  "disease-models/wwox/research/drug_repurposing/ampa_comparison_it41_20261109/output/names_used.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "0f65e68866276e2b4826fe8bbef7790f4978b4a5d88ca9679a6d21c08c2fdfae",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch (db=pmc, PMC9436284) fetched with plain curl on 2026-11-09; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1002/epi4.12549",
+  "pmid": "34653311"
+ },
+ "workflow": "IT41 package A audit-correction step (ORCH-IT41-20261109), producer ia-p. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

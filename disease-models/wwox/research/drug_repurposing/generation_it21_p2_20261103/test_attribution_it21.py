@@ -474,4 +474,4 @@ class CommittedV1Tables(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    unittest.main(argv=[sys.argv[0]], verbosity=1)
+    unittest.main(argv=[sys.argv[0]], verbosity=2)

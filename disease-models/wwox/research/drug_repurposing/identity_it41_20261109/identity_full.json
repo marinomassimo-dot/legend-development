@@ -39,6 +39,15 @@
      "basis": "the label GYKI53784 (and the synonym LY303070) is attached to two structures: GtoPdb 4210 and PubChem CID 3538 list it beside GYKI 52466 (C17H15N3O2), while PubChem CID 3074805 titled GYKI 53784 / LY303070 is C19H20N4O3, the stereo form of the GYKI 53655 structure (GtoPdb 4209, flat key SMGACXZFVXKEAX-UHFFFAOYSA-N)",
      "retrieved_on": "2026-11-09",
      "note": "the DGIdb/GtoPdb comment 'active isomer, non-competitive' fits the C19H20N4O3 compound, not the GYKI 52466 structure; the GRIA1-4 antagonist rows of the catalogue record therefore cannot be attributed to GYKI 52466 from that record alone"
+    },
+    {
+     "query_name": "GYKI 52466",
+     "role": "distinct_from",
+     "chembl_id": "CHEMBL267450",
+     "inchikey": "SMGACXZFVXKEAX-UHFFFAOYSA-N",
+     "basis": "GYKI 53655 is C19H20N4O3 (PubChem CID 126758, GtoPdb 4209); GYKI 52466 is C17H15N3O2",
+     "retrieved_on": "2026-11-09",
+     "note": "see the GYKI 53655 identity row"
     }
    ],
    "label_conflict": [
@@ -105,6 +114,94 @@
     "CYP2C9": 1,
     "EHMT2": 1,
     "CYP3A4": 1,
+    "GRIA4": 1
+   },
+   "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+  }
+ },
+ "GYKI 53655": {
+  "identity": {
+   "query": "GYKI 53655",
+   "identity_state": "DECLARED",
+   "candidates": [
+    {
+     "catalogue_id": "CAT:DGIDB:8111763ff62c",
+     "record_name": "Gyki53655",
+     "match_kind": "SEPARATOR_VARIANT",
+     "origin": "dgidb_only",
+     "parent": null,
+     "chembl_refs": [
+      {
+       "chembl_id": "CHEMBL267450",
+       "basis": "gtopdb_ligand_reconciliation",
+       "in_catalogue": "no",
+       "decision": "out_of_selection",
+       "gtopdb_inchikey": "SMGACXZFVXKEAX-UHFFFAOYSA-N"
+      }
+     ]
+    }
+   ],
+   "declarations": [
+    {
+     "query_name": "GYKI 53655",
+     "role": "identity",
+     "chembl_id": "CHEMBL267450",
+     "inchikey": "SMGACXZFVXKEAX-UHFFFAOYSA-N",
+     "basis": "ChEMBL pref_name GYKI-53655 (C19H20N4O3); the same flat key is GtoPdb ligand 4209 (GYKI53655, LY300168) and PubChem CID 126758 (Gyki-53655); the catalogue record is CAT:DGIDB:8111763ff62c",
+     "retrieved_on": "2026-11-09",
+     "note": "the compound the IT41 slice papers name as GYKI 53655; a different structure from GYKI 52466"
+    },
+    {
+     "query_name": "GYKI 53655",
+     "role": "distinct_from",
+     "chembl_id": "CHEMBL275006",
+     "inchikey": "LFBZZHVSGAHQPP-UHFFFAOYSA-N",
+     "basis": "GYKI 52466 is C17H15N3O2 (PubChem CID 3538); GYKI 53655 is C19H20N4O3 (CID 126758)",
+     "retrieved_on": "2026-11-09",
+     "note": "papers that name one do not give evidence for the other"
+    }
+   ],
+   "label_conflict": [],
+   "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+  },
+  "target": {
+   "expected_genes": [
+    "GRIA1",
+    "GRIA2"
+   ],
+   "per_gene": {
+    "GRIA1": {
+     "level": "SOURCE_INTERACTION",
+     "n_rows": 3,
+     "rows": [
+      "SOURCE_INTERACTION: CAT:DGIDB:8111763ff62c",
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL267450 IC50 Rattus norvegicus",
+      "MEASURED_ACTIVITY_HUMAN: CHEMBL267450 EC50 Homo sapiens"
+     ]
+    },
+    "GRIA2": {
+     "level": "SOURCE_INTERACTION",
+     "n_rows": 3,
+     "rows": [
+      "SOURCE_INTERACTION: CAT:DGIDB:8111763ff62c",
+      "MEASURED_ACTIVITY_OTHER_SPECIES: CHEMBL267450 IC50 Rattus norvegicus",
+      "MEASURED_ACTIVITY_HUMAN: CHEMBL267450 EC50 Homo sapiens"
+     ]
+    }
+   },
+   "chembl_read": [
+    {
+     "chembl_id": "CHEMBL267450",
+     "mechanism_status": "MATCH_FOUND",
+     "activity_status": "MATCH_FOUND",
+     "activity_coverage": "COMPLETE",
+     "activity_rows": 4
+    }
+   ],
+   "selectivity": "NOT_ASSESSED",
+   "unattributed_source_rows": [],
+   "other_genes_seen": {
+    "GRIA3": 1,
     "GRIA4": 1
    },
    "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
@@ -288,6 +385,19 @@
        "basis": "dgidb_concept"
       }
      ]
+    },
+    {
+     "catalogue_id": "CAT:DGIDB:63cffd33f6b8",
+     "record_name": "Chembl:Chembl1256726",
+     "match_kind": "SEPARATOR_VARIANT",
+     "origin": "dgidb_only",
+     "parent": null,
+     "chembl_refs": [
+      {
+       "chembl_id": "CHEMBL1256726",
+       "basis": "dgidb_concept"
+      }
+     ]
     }
    ],
    "declarations": [
@@ -336,9 +446,9 @@
    "other_genes_seen": {
     "GRIN2A": 2,
     "DRD1": 1,
-    "ADRA1B": 1,
-    "ADRA1D": 1,
     "ADRA1A": 1,
+    "ADRA1D": 1,
+    "ADRA1B": 1,
     "GRIN1": 1
    },
    "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
@@ -435,9 +545,9 @@
     "TMEM97": 12,
     "EBP": 6,
     "DRD1": 2,
-    "ADRA1B": 2,
-    "ADRA1D": 2,
     "ADRA1A": 2,
+    "ADRA1D": 2,
+    "ADRA1B": 2,
     "GRIN2A": 2
    },
    "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"

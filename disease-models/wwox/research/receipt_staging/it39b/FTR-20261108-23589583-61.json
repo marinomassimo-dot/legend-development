@@ -17,8 +17,8 @@
  "event_id": "FTR-20261108-23589583-61",
  "evidence_basis": [
   "Abstract, Introduction, Methods, Results and legends read; Fig 2 and Fig 6 images viewed; Figs 1, 3, 4, 5 and 7 captions only (hence the declared figure coverage).",
-  "verbatim_locator | proposition: BB FCF Panx1 potency | Abstract | \"BB FCF is a selective inhibitor of Panx1 channels, with an IC50 of 0.27 µM.\"",
-  "verbatim_locator | proposition: connexin hemichannels unaffected | Fig 5 legend | \"100 µM BB FCF did not affect the currents carried by either connexin\""
+  "verbatim_locator | proposition: BB FCF Panx1 potency | Abstract | \"BB FCF is a selective inhibitor of Panx1 channels, with an IC50 of 0.27 \u00b5M.\"",
+  "verbatim_locator | proposition: connexin hemichannels unaffected | Fig 5 legend | \"100 \u00b5M BB FCF did not affect the currents carried by either connexin\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

@@ -1,0 +1,21 @@
+INV-18: LINKED
+  MH1 [membrane_hypotheses_20261108] kind=physiological_hypothesis gene_arc=False need=NEED-INTRINSIC-EXCITABILITY state=CARRIED_IN_TEXT cards=-
+    status: survives as an exploratory, qualitative hypothesis (flat tau against pure leak loss is supported; implied capacitance, step 5 as first writt
+    rivals (alternatives): A10, A05, A04, A06   via matrix column: -   other hypotheses: MH3, MH2   matrix columns: -
+    unresolved refs by class: PROBE_NAME: XE991
+    E1 arms=- alts=A10 expected_results=0
+    E3 arms=- alts=- expected_results=0
+  MH2 [membrane_hypotheses_20261108] kind=physiological_hypothesis gene_arc=False need=NEED-INTRINSIC-EXCITABILITY state=CARRIED_IN_TEXT cards=-
+    status: survives only as a conditional, exploratory hypothesis: its premise (a residual excess sag at matched conditions) is not established and is 
+    rivals (alternatives): A09   via matrix column: -   other hypotheses: MH1   matrix columns: -
+    unresolved refs by class: PROBE_NAME: CA1,Z944,V1; UNCLASSIFIED: X4,X1,X2,X5
+    E1 arms=- alts=A10 expected_results=0
+    E2 arms=- alts=- expected_results=0
+    E4 arms=- alts=- expected_results=0
+  MH3 [membrane_hypotheses_20261108] kind=physiological_hypothesis gene_arc=False need=NEED-INTRINSIC-EXCITABILITY state=CARRIED_IN_TEXT cards=-
+    status: survives as a design control, strengthened: the probable absence of synaptic blockers in the intrinsic recordings is an inference from the M
+    rivals (alternatives): A04, A07   via matrix column: -   other hypotheses: MH1, MH2   matrix columns: -
+    unresolved refs by class: -
+    E1 arms=- alts=A10 expected_results=0
+    E5 arms=- alts=- expected_results=0
+INV-18 pharmacological comparison: NO_COMPARISON_LISTED

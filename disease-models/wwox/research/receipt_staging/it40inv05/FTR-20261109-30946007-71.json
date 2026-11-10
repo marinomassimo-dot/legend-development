@@ -25,7 +25,7 @@
  },
  "evidence_basis": [
   "Results on NMDAR-EPSCs and Ro 25-6981 (Fig 3), the related Methods paragraph, the Discussion paragraphs on triheteromers read by pattern search; Fig 3 viewed; biochemistry, calcium imaging and spine sections not read.",
-  "verbatim_locator | proposition: Ro 25-6981 3 uM was bath-applied for 30 min and the read-out was percent inhibition of the weighted decay time | Results | \"bath infusion of Ro 25–6981 (30 min, 3μM), then compared the percent inhibition (τw percent of baseline)\""
+  "verbatim_locator | proposition: Ro 25-6981 3 uM was bath-applied for 30 min and the read-out was percent inhibition of the weighted decay time | Results | \"bath infusion of Ro 25\u20136981 (30 min, 3\u03bcM), then compared the percent inhibition (\u03c4w percent of baseline)\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "source_fingerprint": "eb84b445ad9b3fce312b796c08d5f28440227e65a489e0ccbdb1c7f2595f8d78",
