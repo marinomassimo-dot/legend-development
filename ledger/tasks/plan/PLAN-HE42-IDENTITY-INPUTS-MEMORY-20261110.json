@@ -10,16 +10,16 @@
  "assigned_on": "2026-11-10",
  "worktree": ".claude/worktrees/he42",
  "branch": "he42-task",
- "CURRENT_STATE": "IN_PROGRESS",
+ "CURRENT_STATE": "DONE",
  "CHECKPOINT": {
-  "last_verified_result": "6e179de7 committed on he42-task; battery running on that SHA (PID 971715, box /tmp/he42bat4_9s6ciy); not yet on main",
-  "first_incomplete_work": "battery verdict, then second commit (census, delegation_budget, notes, record), gate, safe_push, SHA to the Orchestrator",
-  "active_processes": "battery PID 971715",
-  "real_dependencies": "Orchestrator merges main into task/it42 after the push and adopts join_names in consume_reader.py",
-  "next_executable_step": "wait on PID 971715 with process_wait.py, copy battery.log out of the box"
+  "last_verified_result": "battery PASS WITH SKIPS (226 targets, 11 skipped) on f17380f57978 (= 6e179de7 + fec493cd + 0de32d31 merged with development/main d3a57a65); first battery on 6e179de7 FAIL on one suite (stale example in test_stage_it41, fixed in 0de32d31); the router-row commit 005671b2 followed the battery (docs only); logs /tmp/he42_keep/",
+  "first_incomplete_work": "none",
+  "active_processes": "none",
+  "real_dependencies": "Orchestrator adopts join_names in consume_reader.py and merges main into task/it42; GYKI Methods and d-APV registry row remain scientific",
+  "next_executable_step": "none; mandate complete"
  },
  "AUTHORISED_QUEUE_20261110": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_H0": {
    "order": 1,
    "title": "Baseline, SHA, coordination with IT42",
@@ -110,9 +110,9 @@
    "steps": [
     {
      "step": "Battery on 6e179de7 then second commit, gate, push, tell Orchestrator the SHA",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": "battery PID 971715 on 6e179de7"
+     "evidence": "battery f17380f57978 PASS WITH SKIPS; gate and push recorded in the final report"
     }
    ]
   }
