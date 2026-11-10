@@ -7,17 +7,10 @@
  "OBJECTIVE": "IT41: from mechanism to compounds: conditional generation, comparison and research priorities. Queued behind IT40 (closure not interrupted); includes the common-integration message (continuity, checkpoint, close only what is concluded).",
  "START_UTC": "2026-11-09T22:00:00Z",
  "RESUME": {
-  "checkpoint": {
-   "last_verified_result": "ade977d0 battery PASS WITH SKIPS; publish in progress",
-   "first_incomplete": "light queue consumption on task/it41 (apply_fly_delta.py committed), 11 receipts (it41c) to record, CI, site, final report",
-   "files_to_open": "generation_it41_20261109/README.md; fly_wwox_feasibility_it41_20261110/",
-   "active_processes": "cron 9893cd67 (session-only)",
-   "real_dependencies": "none",
-   "next_step": "record it41c receipts after the push; final battery only if the increment changes tested code"
-  }
+  "note": "IT41 complete 2026-11-10; residuals: S5/S6 have counts only (no narrative); onfasprodil site and maximum effect need a primary source; AMPA arm tools still need the measurements M-A1..M-A7 (new measurements); no predictive validation exists; worktrees it40, it41 and task branches left in place (removal needs written authorisation)"
  },
  "AUTHORISED_QUEUE_20261108": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P0": {
    "order": 1,
    "steps": [
@@ -155,9 +148,9 @@
    "steps": [
     {
      "step": "Resources, persistence, battery on frozen SHA, publish with SHA check, CI, site, record only delivered results, final report",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "Batteries by SHA: c557978e FAIL (test_repurposing_view DeepenedCasesShareable: the spelling d-AP5 on the shareable page; log /tmp/bat_it41_c557978e_FAIL.log); 4fde7029 FAIL (test_repurposing_view: stale shareable package, own: package regenerated after the commit; log /tmp/bat_it41_4fde7029_FAIL.log); ade977d0 PASS WITH SKIPS (226 targets, 11 skipped: local catalogue cache). Published as a merge of ade977d0 with development/main (science light queue 9e7cdfdf, docs and staged receipts only). Light-queue consumption, 11 receipts (it41c) and CI pending. Increment 2 (28d9cf2b: science light queue consumed, 11 receipts it41c, ledger 1,554): battery PASS WITH SKIPS (226 targets, 11 skipped). First publication 975535a9 (gate PASS, ls-remote verified). Second publication, CI and site: see closure."
+     "evidence": "Batteries by SHA: c557978e FAIL (test_repurposing_view DeepenedCasesShareable: the spelling d-AP5 on the shareable page; log /tmp/bat_it41_c557978e_FAIL.log); 4fde7029 FAIL (test_repurposing_view: stale shareable package, own: package regenerated after the commit; log /tmp/bat_it41_4fde7029_FAIL.log); ade977d0 PASS WITH SKIPS (226 targets, 11 skipped: local catalogue cache). Published as a merge of ade977d0 with development/main (science light queue 9e7cdfdf, docs and staged receipts only). Light-queue consumption, 11 receipts (it41c) and CI pending. Increment 2 (28d9cf2b: science light queue consumed, 11 receipts it41c, ledger 1,554): battery PASS WITH SKIPS (226 targets, 11 skipped). First publication 975535a9 (gate PASS, ls-remote verified). Second publication, CI and site: see closure. Second publication e2dbe391 (gate PASS, ls-remote verified). CI on e2dbe391: Public release gate success, shareable-view workflow success; CI on 975535a9 success. Site HTTP 200 in five languages with the ten-item compound view (no names in the shareable edition), the two physiological blocks and the Foundation link. Independent verifier costs read from the census: sonnet/high on every turn, 41 and 49 turns, 60,440 and 60,749 output tokens."
     }
    ]
   }
