@@ -33,6 +33,18 @@ class QuantityKept(unittest.TestCase):
             if x["name"] == "DQP-1105" and x["target_symbol"] in ("Grin2b", "Grin2c"):
                 self.assertEqual(x["affinity_check"], "AGREE")
 
+    def test_a_registry_range_is_written_smallest_to_largest_with_its_unit(self):
+        """The registry's low and high are low and high affinity, so the nM 'low' is the larger number (a real row read [300000.0-130000.0]): the column writes the range ascending and labelled."""
+        rng = [x["affinity_nM_column"] for x in rows() if "range" in x["affinity_nM_column"]]
+        self.assertTrue(rng)
+        import re
+        for c in rng:
+            a, b = map(float, re.search(r"range ([\d.]+)-([\d.]+) nM", c).groups())
+            self.assertLessEqual(a, b, c)
+        g = {"Original Affinity Units": "IC50", "Original Affinity Median nm": "180000.0", "Original Affinity Low nm": "300000.0", "Original Affinity High nm": "130000.0", "Original Affinity Relation": "=",
+             "Affinity Median": "3.7", "Affinity Units": "pIC50", "Affinity Low": "3.5", "Affinity High": "3.9", "Target": "t", "Target Species": "Human"}
+        self.assertIn("(range 130000-300000 nM)", A.affinity_columns(g)["affinity_nM_column"])
+
     def test_potency_and_its_log_transform_use_the_one_conversion(self):
         self.assertTrue(A.same_datum(8.08, 8.3176))
         self.assertFalse(A.same_datum(8.08, 22.9))

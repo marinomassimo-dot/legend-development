@@ -35,7 +35,14 @@ def affinity_columns(g):
     internal agreement of the two are kept beside it. `affinity_check` AGREE means the two columns of the ROW agree with each other; it says nothing about the primary source (a unit slip in both columns is invisible to it)."""
     v = ms.from_gtopdb(g)
     nm = g["Original Affinity Median nm"]; lo, hi = g["Original Affinity Low nm"], g["Original Affinity High nm"]
-    nm_txt = (" ".join(x for x in (g["Original Affinity Relation"] if nm else "", nm, "nM" if nm else "") if x) + (f" [{lo}-{hi}]" if lo or hi else "")).strip()
+    def rng():
+        """The registry's low and high are low and high AFFINITY, so in nM the 'low' end is the larger number: the range is written smallest to largest."""
+        try:
+            a, b = sorted(float(x) for x in (lo, hi) if x not in ("", "-"))[:2] if (lo not in ("", "-") and hi not in ("", "-")) else (None, None)
+        except ValueError:
+            a = b = None
+        return f" (range {a:g}-{b:g} nM)" if a is not None else (f" (range ends {lo or '-'} / {hi or '-'} nM, incomplete)" if lo or hi else "")
+    nm_txt = (" ".join(x for x in (g["Original Affinity Relation"] if nm else "", nm, "nM" if nm else "") if x) + rng()).strip()
     return dict(affinity_type=g["Original Affinity Units"] if g["Original Affinity Units"] != "-" else "", affinity_nM_column=nm_txt, affinity_check=v["internal"]["state"])
 
 _NAME_CACHE = {}
