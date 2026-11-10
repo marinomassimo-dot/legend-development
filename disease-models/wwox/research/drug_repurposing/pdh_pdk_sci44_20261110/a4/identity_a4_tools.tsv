@@ -1,0 +1,19 @@
+name	identity_state	candidate_records	target_levels_reached
+stiripentol	NAME_EXACT	CAT:CHEMBL1983350(chembl_selected);CAT:DGIDB:480750365004(dgidb_only)	none
+oxamate	NAME_PARTIAL	CAT:CHEMBL2104511(chembl_selected);CAT:CHEMBL4594231(chembl_selected);CAT:DGIDB:056bfedb3c03(dgidb_only);CAT:DGIDB:466f6c663ff5(dgidb_only);CAT:DGIDB:976e0bdbb2ba(dgidb_only);CAT:DGIDB:98f5b6a68a78(dgidb_only);CAT:DGIDB:9a0f66de1ec9(dgidb_only);CAT:CHEMBL504369(chembl_selected)	none
+sodium oxamate	NOT_FOUND_BY_NAME		none
+FX11	NOT_FOUND_BY_NAME		none
+GNE-140	NOT_FOUND_BY_NAME		none
+GSK2837808A	NOT_FOUND_BY_NAME		none
+galloflavin	NOT_FOUND_BY_NAME		none
+lipoic acid	SYNONYM_EXACT	CAT:DGIDB:e95b02c97cde(dgidb_only);CAT:CHEMBL33864(chembl_selected);CAT:CHEMBL4650363(chembl_selected);CAT:CHEMBL4650743(chembl_selected);CAT:DGIDB:fcdadaaa3fd1(dgidb_only);CAT:EC:01935(matrix_only);CAT:CHEMBL1403899(chembl_selected)	none
+thiamine	NAME_EXACT	CAT:CHEMBL1588(chembl_selected);CAT:CHEMBL1200941(chembl_selected);CAT:CHEMBL1236378(chembl_selected);CAT:CHEMBL1547(chembl_selected);CAT:CHEMBL2104496(chembl_selected);CAT:CHEMBL2106811(chembl_selected);CAT:CHEMBL2108877(chembl_selected);CAT:DGIDB:027e31878c8e(dgidb_only);CAT:DGIDB:279909efec19(dgidb_only);CAT:DGIDB:7b2915da712d(dgidb_only);CAT:CHEMBL1236376(chembl_selected);CAT:CHEMBL1442890(chembl_selected);CAT:CHEMBL1874002(chembl_selected);CAT:CHEMBL2104407(chembl_selected);CAT:CHEMBL2106533(chembl_selected);CAT:CHEMBL2106586(chembl_selected);CAT:CHEMBL4303665(chembl_selected)	none
+sodium acetate	NAME_EXACT	CAT:CHEMBL1354(chembl_selected);CAT:UNII:4550K0SC9B(openfda_unii_only);CAT:CHEMBL2106653(chembl_selected);CAT:CHEMBL2107054(chembl_selected)	none
+triheptanoin	NAME_EXACT	CAT:CHEMBL4297585(chembl_selected);CAT:DGIDB:208f9f9ea30f(dgidb_only)	none
+devimistat	NAME_EXACT	CAT:DGIDB:fac46216aa38(dgidb_only);CAT:CHEMBL3186849(chembl_selected)	PDK1:SOURCE_INTERACTION;PDK2:SOURCE_INTERACTION;PDK3:SOURCE_INTERACTION;PDK4:SOURCE_INTERACTION;PDHA1:SOURCE_INTERACTION
+PS10	NOT_FOUND_BY_NAME		none
+JX06	NOT_FOUND_BY_NAME		none
+diazoxide	NAME_EXACT	CAT:CHEMBL181(chembl_selected);CAT:DGIDB:9a1848b2e12a(dgidb_only);CAT:CHEMBL4297276(chembl_selected)	none
+AZD3965	NAME_EXACT	CAT:CHEMBL3335793(chembl_selected);CAT:DGIDB:91b7ee851936(dgidb_only)	none
+UK-5099	NOT_FOUND_BY_NAME		none
+lonidamine	NAME_EXACT	CAT:CHEMBL1257030(chembl_selected);CAT:DGIDB:6a9f06277acb(dgidb_only)	none
