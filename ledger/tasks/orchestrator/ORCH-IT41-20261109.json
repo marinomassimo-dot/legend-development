@@ -8,12 +8,12 @@
   "START_UTC": "2026-11-09T22:30:00Z",
   "BASELINE": "main 30382215 (development/main same). Worktree .claude/worktrees/it41a, branch task/it41a. IT40 is in its own worktree (task/it40, not yet on main); its final report was not available at S0. Harness identity delivery (worktree idfix) had no commit at S0.",
   "CURRENT_PACKAGE": {
-    "id": "C-battery",
-    "state": "C: first battery FAIL on ca1b8d2b (one stray path in the verifier audit, fixed); new candidate and new battery next",
+    "id": "C-battery-2",
+    "state": "C: second battery running on frozen candidate 5a593da2603a2b4a7c09582148907db7dc6da4c7 (clone /tmp/bat_it41c2, PID 783771, log /tmp/bat_it41c2.log)",
     "delegate_active": "none",
-    "updated": "2026-11-10T03:40:00Z"
+    "updated": "2026-11-10T03:55:00Z"
   },
-  "RESUME": "CHECKPOINT 2026-11-10T03:40Z: A landed 9d58c69d, B landed 52e04148. C battery on ca1b8d2b FAILED (cause and fix in DECISIONS_TAKEN). Next: commit the fix, run test_repository_surface_determinism locally, freeze the new candidate, battery on /tmp/bat_it41c2 (fresh unique name), then verdict line, task_close, safe_push, message to IT41, MANDATE_STATE COMPLETE, final report. The old clone /tmp/bat_it41c is removed.",
+  "RESUME": "CHECKPOINT 2026-11-10T03:55Z: A landed 9d58c69d, B landed 52e04148. C first battery FAIL on ca1b8d2b (stray path, fixed). Second battery PID 783771 (cwd /tmp/bat_it41c2, wait with process_wait.py --pid 783771, do not touch the clone) on frozen 5a593da2. Next: verdict line (record-only commit), merge main, LINT/receipts/growth, task_close, safe_push, message to IT41 with the SHA, MANDATE_STATE COMPLETE, final report.",
   "DECISIONS_TAKEN": [
     "2026-11-09 S0: the INV-05 closing pass was already delivered and published (30382215); nothing pending. IT40 final report not found in any worktree at S0 (IT40 is unmerged); next_investigations_it40.md read in place from the it40 worktree (read-only): A1 and A2 rows (primary mechanism papers for NBQX and GYKI 52466; catalogue identity of GYKI 52466) are the open needs this package addresses; B3 (BE1) is the experiment the comparison serves. Harness identity delivery not yet available: names used by each paper are recorded so the match can be made without rebuilding the search.",
     "2026-11-09 A1 design written and committed before any source was opened, including the five demonstrations the block control must give, what the result does not separate, and the A3 rule (alternative only by missing property).",
