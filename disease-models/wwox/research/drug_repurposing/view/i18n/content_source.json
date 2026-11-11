@@ -155,6 +155,10 @@
   "src": "en",
   "text": "Total NMDA-receptor reduction, a GluN2A-weighted component, a general loss of drive, and a bath-state (magnesium, potassium) effect."
  },
+ "1597cbdd7a85": {
+  "src": "en",
+  "text": "Nominate nothing before a Ba2+- or XE-991-sensitive difference current smaller per pF in Wwox neurons with capacitance measured directly and the junction potential measured; a reversal near E_K alone does not separate a K+ loss from a smaller cell with a shunt; a matched-effect control that fails to reproduce the fall. [IT45] Joined with RNA by cell class (neurons against astrocytes at an early postnatal age, mouse), the Kv7 genes are neuron-enriched while the Kir4.1 gene is astrocytic: a Kv7-blocker-sensitive difference current is easier to attribute to neurons than a Ba2+-sensitive one. Add an opener arm only against a current-injection hyperpolarisation of equal size, so a Kv7-specific benefit can be told from a generic one. [IT46 cell context] The IT45 join compared neurons with astrocytes only. Against every class of the held tables the Kv7 genes are not cleanly neuronal: KCNQ2 is highest in P7 mouse neurons (30.68 FPKM) but OPC (P17) reaches 10.68 (under the 3-fold convention, so 'shared'); KCNQ3 is 4.27 in neurons against 4.57 in newly formed oligodendrocytes (P17) (shared); the one human neuron sample reads KCNQ2 at 0.10 against 4.30 in astro_fetal_ctx; KCNQ4 and KCNQ5 were not queried (unknown). A Kv7-blocker-sensitive difference current therefore needs a cell-specific control too, as a Ba2+-sensitive one does; RNA class means, P7, not current. Machine reading (un registro del repository (non incluso in questo pacchetto)): KCNQ2 (mouse shared, human enriched elsewhere); KCNQ3 (mouse shared, human shared); not in any table (unknown): KCNQ4, KCNQ5. An effect or difference current attributed to KCNQ2, KCNQ3 cannot be assigned to neurons from these tables (shared, elsewhere, not detected, or the tables disagree): it needs a cell-specific control."
+ },
  "16379e0ed430": {
   "src": "en",
   "text": "A second tool of the same site controls chemotype only; with primary potency and site now read it can be used after the first tool has shown a removable share."
@@ -1574,10 +1578,6 @@
  "c08f350b1a34": {
   "src": "en",
   "text": "Kv7 opening and gap-junction block: abstain"
- },
- "c0a5855d9692": {
-  "src": "en",
-  "text": "Nominate nothing before a Ba2+- or XE-991-sensitive difference current smaller per pF in Wwox neurons with capacitance measured directly and the junction potential measured; a reversal near E_K alone does not separate a K+ loss from a smaller cell with a shunt; a matched-effect control that fails to reproduce the fall. [IT45] Joined with RNA by cell class (neurons against astrocytes at an early postnatal age, mouse), the Kv7 genes are neuron-enriched while the Kir4.1 gene is astrocytic: a Kv7-blocker-sensitive difference current is easier to attribute to neurons than a Ba2+-sensitive one. Add an opener arm only against a current-injection hyperpolarisation of equal size, so a Kv7-specific benefit can be told from a generic one."
  },
  "c10356962f01": {
   "src": "en",
