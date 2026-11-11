@@ -1,0 +1,16 @@
+# SCI44 coda — K-channel RNA by cell class (small public-data reanalysis, 2026-11-11)
+
+Non-canonical research material. RNA only (FPKM class means; two animal pools per mouse class, one human neuron sample); not channel number, current or share; no claim on WWOX; no compound. Predictions were committed before the run (`PREREGISTRATION.md`, commit b789b8a8) and are scored unchanged in `predictions_scored.tsv`. Inputs: the local copies of GSE52564 (mouse cortex, Zhang 2014) and GSE73721 (human, Zhang 2016) already used and hash-recorded in package A; no download. Scripts: `kchan_expression.py`, `score_predictions.py`.
+
+## Result (13 of 15 held; 2 failed)
+* **Held:** Kcnj11 (5.91 FPKM) and Abcc8 (5.50) are neuron-specific in P7 mouse cortex (astrocytes 0.40 and 0.10; Abcc8 below the floor in every glial class); Kcnj10 (Kir4.1) astrocyte 184.8 against neuron 8.1 (mouse) and 126.0 against 9.0 (human, one neuron sample); Kcnj8 and Abcc9 (Kir6.1, SUR2) are vascular (endothelium 25.7 and 12.6 against neuron 0.2-0.3); Kcnk2 (TREK-1, 14.1), Kcnk9 (TASK-3, 17.4) and Kcnk3 (TASK-1, 1.0) are detected in mouse neurons; Kcnj2 neuron 0.74 not below astrocyte 0.46 (P5 held as stated, but see below); Kcnq2 (30.7), Kcnq3 (4.3) and Hcn1 (2.6) are at least 3-fold neuron over astrocyte.
+* **Failed:** P4a, TWIK-1 (Kcnk1): neuron above astrocyte in both species (mouse 3.64 against 0.65; human 6.10 against 0.87, one neuron sample). One wording slip in the committed P3 is recorded: it was scored by the stated rule (neuron below the maximum of endothelium and astrocyte).
+* **Not predicted, noted:** Kcnj10 is also high in the oligodendrocyte lineage (OPC 82, newly formed 99, myelinating 58 FPKM) and Kcnj2 is high only in endothelium (41.8); Kir2.1 mRNA is low in P7 neurons (0.74), and other Kir2 genes (Kcnj4, Kcnj12, Kcnj14) were not queried.
+* QC: Cldn5 (endothelium 3,395), Gfap (astrocytes 126) behave as markers; the neuron marker Rbfox3 is not in the table under that name.
+
+## What it changes (INFERENZA; RNA, small n)
+* The KATP arm of PH4 has an **expressed, neuron-specific substrate** in the mouse preparation (Kir6.2/SUR1 pattern), and Kir6.1/SUR2 is vascular: the neuronal KATP is not a glial or vascular signal.
+* A Ba2+ difference in a slice is **not neuron-only**: Kir4.1 is astrocytic and oligodendrocyte-lineage in both RNA tables; with the positive literature statements of package C this becomes a design requirement (synaptic blockade, a cell-specific control or a dissociated or genetically targeted neuron).
+* The K2P candidates with neuronal RNA at P7 are TASK-3 (Kcnk9, neuron-specific) and TREK-1 (Kcnk2, also glial); TWIK-1 is not astrocyte-enriched. This points ladder step 2b toward TASK-3 and TREK-1 tools as the first K2P arm and away from a TWIK-1 attribution (tool identity and selectivity are separate questions).
+* Kir2.1 mRNA is low in P7 neurons: a Kir2-dominated Ba2+ share would need another Kir2 gene or later age (P13-17 not in this table).
+* Limits: P7 mouse neurons are not P13-17 layer II/III pyramidal neurons; L1CAM-selected neurons include non-pyramidal types; two pools per class.
