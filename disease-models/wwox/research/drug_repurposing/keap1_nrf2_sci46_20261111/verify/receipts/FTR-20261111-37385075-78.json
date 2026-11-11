@@ -1,0 +1,35 @@
+{
+ "analysis_at": "2026-11-11T22:05:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-11T22:23:00Z",
+ "event_id": "FTR-20261111-37385075-78",
+ "evidence_basis": [
+  "abstract or listing read for the question; the scan returned one hit (knockout mice, Introduction), no NRF2-loss arm"
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/keap1_nrf2_sci46_20261111/verify/audit.md"
+ ],
+ "prior_receipt": "FTR-20261111-37385075-79",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC10331597 via the PubMed PMC full-text tool; regex scan of the whole text for siRNA, shRNA, knockout, knockdown, silenc, dominant, deficien, CRISPR, ML385, transfect; not a complete read",
+ "study_id": {
+  "doi": "10.1016/j.redox.2023.102793",
+  "pmid": "37385075"
+ },
+ "workflow": "Blind verifier V8 (ks-y): Part B re-scan, one of two candidates; keyword scan only. Staged for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,35 @@
+{
+ "analysis_at": "2026-11-11T22:05:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-11T22:23:00Z",
+ "event_id": "FTR-20261111-40021790-78",
+ "evidence_basis": [
+  "verbatim_locator | proposition: KI696 used at 1 uM in hiPSC-derived cortical interneurons of schizophrenia donors on a KEAP1-overexpression background; no siRNA, shRNA or knockout of NRF2 found | Methods | \"KI696 was added to the culture media of pcDNA KEAP1 at a concentration of 1 µM\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/keap1_nrf2_sci46_20261111/verify/audit.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC11870791 via Europe PMC fullTextXML; regex scan for KI696 and NRF2-loss strings plus the KI696 Methods and Results passages; not a complete read",
+ "study_id": {
+  "doi": "10.1002/brb3.70311",
+  "pmid": "40021790"
+ },
+ "workflow": "Blind verifier V8 (ks-y): neural use of the binder missed by the producer census; no NRF2-loss arm; KI696 raised Fe2+, MDA and inflammatory mediators and lowered GSH and GPX4 in this design. Staged for the integrator; the ledger was not written by the preparing actor."
+}

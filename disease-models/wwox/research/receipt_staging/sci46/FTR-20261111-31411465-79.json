@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-11T22:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "not_read",
+  "figures": "captions_only",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-11T22:11:00Z",
+ "event_id": "FTR-20261111-31411465-79",
+ "evidence_basis": [
+  "verbatim_locator | proposition: In Tran, compound 7 is Winkel/Szill, not the Davies lead; Davies lead is 9 | Figure 1 legend | \"7: Winkel et al.36, Szill et al.37; 8: Yasuda et al.38; 9: Davies et al.27\"",
+  "verbatim_locator | proposition: Name continues on next line in the manuscript; ESI m/z 551.2 [M+1]+ matches C28H30N4O6S (550.64) | Experimental, compound 9 name | \"3-(7-methoxy-1-methyl-1H-benzo[d][1,2,3]triazol-5-yl)-3-(4-methyl-3-(((R)-4-methyl-1,1-dioxido-3,4-\"",
+  "verbatim_locator | proposition: Single-gene readout caution (prior P8) | Discussion | \"progesterone is known to upregulate NQO1 without activating the Nrf2 pathway\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/keap1_nrf2_sci46_20261111/output/decisive.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "https://univ-rennes.hal.science/hal-02474013v1/document (accepted manuscript PDF, 78 pages, text layer; saved in scratch, not in repository)",
+ "study_id": {
+  "doi": "10.1021/acs.jmedchem.9b00723",
+  "pmid": "31411465"
+ },
+ "workflow": "SCI46 producer P (og-y), ORCH-SCI46-20261111: Tran 2019: identity of compound 9 (Figure 1 legend, Experimental name and mass), Discussion sentences on NQO1 and selectivity. Staged for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-11T22:05:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "unavailable",
+  "results": "unavailable",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-11T22:23:00Z",
+ "event_id": "FTR-20261111-27031670-78",
+ "evidence_basis": [
+  "verbatim_locator | proposition: NRF2-siRNA arm is a categorical label with no knockdown-efficiency assay in the document | ChEMBL assay CHEMBL3822040 description [CH] | \"incubated for 24 hrs in presence of NRF2 siRNA by qRT-PCR method\"",
+  "verbatim_locator | proposition: bardoxolone methyl sits in the same siRNA design at 100 nM [CH] | ChEMBL assay CHEMBL3822044 description [CH] | \"at 100 nM incubated for 48 hrs in presence of NRF2 siRNA by MTT reduction assay\"",
+  "verbatim_locator | proposition: one numeric siRNA-arm row exists (FC 6.0, non-targeting arm) [CH] | ChEMBL assay CHEMBL3822041 description [CH] | \"in presence of non targeting siRNA by MTT reduction assay relative to control\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/keap1_nrf2_sci46_20261111/verify/audit.md"
+ ],
+ "prior_receipt": "FTR-20261111-27031670-79",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "metadata",
+ "source_locator": "ChEMBL REST API document CHEMBL3817762 (document abstract, 97 assays, 115 activities, all fields of the 12 siRNA rows); the paper text was not requested (producer-listed unreachable); database transcription [CH], not the paper",
+ "study_id": {
+  "doi": "10.1021/acs.jmedchem.6b00228",
+  "pmid": "27031670"
+ },
+ "workflow": "ChEMBL document CHEMBL3817762 re-queried independently: 12 siRNA assays, 12 rows (6 KI-696 at 1 uM, 6 bardoxolone methyl at 100 nM); activity 16621152 carries standard_value 6.0 (FC). Staged for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,36 @@
+{
+ "analysis_at": "2026-11-11T22:05:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "supplementary": "captions_only"
+ },
+ "event_at": "2026-11-11T22:23:00Z",
+ "event_id": "FTR-20261111-25920452-78",
+ "evidence_basis": [
+  "verbatim_locator | proposition: antibody blockade reversed MMF effect on Tnf, Il1b, Hmox1 | Results | \"Antibody blockade of HCAR2 fully reversed the effect of MMF on the mRNA expression of inflammatory and oxidative response molecules, Tnf, Il1b, and Hmox1\"",
+  "verbatim_locator | proposition: time of the Fig 3b arm | Fig 3 legend | \"prior to LPS activation for 6 h in the presence or absence of MMF\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/keap1_nrf2_sci46_20261111/verify/audit.md"
+ ],
+ "prior_receipt": "FTR-20261111-25920452-79",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC4503882 via the PubMed PMC full-text tool and Europe PMC fullTextXML (figure legends); figures not viewed",
+ "study_id": {
+  "doi": "10.1007/s00401-015-1422-3",
+  "pmid": "25920452"
+ },
+ "workflow": "Blind verifier V8 (ks-y): MMF 1 uM, N9, LPS 1 ug/ml, anti-HCAR2 1 ug/ml confirmed; no Nrf2-loss arm in the paper. Staged for the integrator; the ledger was not written by the preparing actor."
+}

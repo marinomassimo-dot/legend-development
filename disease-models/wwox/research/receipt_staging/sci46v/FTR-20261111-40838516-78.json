@@ -1,0 +1,35 @@
+{
+ "analysis_at": "2026-11-11T22:05:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-11T22:23:00Z",
+ "event_id": "FTR-20261111-40838516-78",
+ "evidence_basis": [
+  "verbatim_locator | proposition: complete selectivity within Kelch domains; no loss arm named | Abstract | \"complete selectivity for Keap1 in a panel of homologous Kelch domains\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/keap1_nrf2_sci46_20261111/verify/audit.md"
+ ],
+ "prior_receipt": "FTR-20261111-40838516-79",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed abstract via the metadata tool only",
+ "study_id": {
+  "doi": "10.1002/anie.202508121",
+  "pmid": "40838516"
+ },
+ "workflow": "Blind verifier V8 (ks-y): evidence row E31 checked; third Part B candidate not re-scanned for NRF2 loss. Staged for the integrator; the ledger was not written by the preparing actor."
+}

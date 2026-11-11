@@ -1,0 +1,35 @@
+{
+ "analysis_at": "2026-11-11T22:05:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "unavailable",
+  "results": "unavailable",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-11T22:23:00Z",
+ "event_id": "FTR-20261111-26459563-78",
+ "evidence_basis": [
+  "verbatim_locator | proposition: non-covalent Kelch binder with ITC and X-ray, Nrf2 knock-out macrophage arm, CDDO-Me comparator in the same cells | Abstract | \"RA839 regulated only two genes in Nrf2 knock-out macrophages.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/keap1_nrf2_sci46_20261111/verify/audit.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed abstract via the metadata tool and the PMC full-text tool (returned empty text); Europe PMC XML returned HTTP 500; full text not reached by those routes",
+ "study_id": {
+  "doi": "10.1074/jbc.M115.678136",
+  "pmid": "26459563"
+ },
+ "workflow": "Blind verifier V8 (ks-y): Part B candidate missed by the producer; abstract depth only, knock-out verification and CDDO-Me arm design not read. Staged for the integrator; the ledger was not written by the preparing actor."
+}
