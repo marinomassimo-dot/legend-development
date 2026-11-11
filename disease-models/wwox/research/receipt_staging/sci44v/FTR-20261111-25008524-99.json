@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-25008524-99",
  "evidence_basis": [
   "Results, Methods and legends read from the efetch PMC XML; Extended Data Fig 2 (nihms601974f8.jpg) viewed from the open bucket: table 2g prints Ro25-6981 Kd 48 +/- 22 nM (two independent trials, triplicate) for the GluN1 D2/GluN2B D2 construct; other figures captions only; supplement PDF text searched for Ro only.",
-  "verbatim_locator | proposition: Ro 25-6981 SPA assay condition of the diheteromer construct | Methods, binding constants paragraph | \"3H-Ro25-6981 binding was performed in the presence of unlabelled 100 µM L-glutamate and 100 µM glycine.\""
+  "verbatim_locator | proposition: Ro 25-6981 SPA assay condition of the diheteromer construct | Methods, binding constants paragraph | \"3H-Ro25-6981 binding was performed in the presence of unlabelled 100 \u00b5M L-glutamate and 100 \u00b5M glycine.\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-24607230-99",
  "evidence_basis": [
   "Searched the whole main text for Ro 25-6981 (zero occurrences) and re-read the triheteromer ifenprodil and CP-101,606 maxima (Results, Table 1, Fig 3 legend); no image or supplement in the open bucket. Adversarial re-analysis for the absence claim D14 only.",
-  "verbatim_locator | proposition: ifenprodil triheteromer ceiling in the cited paper | Results, ifenprodil paragraph | \"Ifenprodil reduced current responses from wild type 2B/2B with an IC50 of 72 ± 8 nM and maximal inhibition of 88 ± 2%\""
+  "verbatim_locator | proposition: ifenprodil triheteromer ceiling in the cited paper | Results, ifenprodil paragraph | \"Ifenprodil reduced current responses from wild type 2B/2B with an IC50 of 72 \u00b1 8 nM and maximal inhibition of 88 \u00b1 2%\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

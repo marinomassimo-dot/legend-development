@@ -27,9 +27,9 @@
   "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/verify/recompute_katp.tsv",
   "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/verify/queries_verifier.tsv"
  ],
- "prior_receipt": "FTR-20261111-25221474-96",
+ "prior_receipt": null,
  "record_kind": "contemporaneous_receipt",
- "reread_reason": "adversarial_reanalysis",
+ "reread_reason": "first_read",
  "source_fingerprint": "03e85432fb0350ef7890a821da3b21670bd5f9576c0a48b4bd80e03f55aefbc0",
  "source_kind": "fulltext_remote",
  "source_locator": "PMC open-data bucket (plain curl, https://pmc-oa-opendata.s3.amazonaws.com/PMC4145353.1/PMC4145353.1.txt) fetched 2026-11-11; bytes in the scratchpad only, not in the repository",

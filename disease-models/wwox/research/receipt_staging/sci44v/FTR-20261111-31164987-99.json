@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-31164987-99",
  "evidence_basis": [
   "Abstract, Methods (calcium influx), Results, Discussion in part, Tables 1-2 read; Fig 2 viewed from the open bucket, other figures captions only; docking sections skimmed; supplement not read. Found: 1 mM MgCl2 is in the wash buffer only.",
-  "verbatim_locator | proposition: Ro 25-6981 chicken culture assay conditions | Table 1 legend | \"Calcium influx was induced with NMDA and glycine (200 and 100 μmol/L concentration, respectively)\""
+  "verbatim_locator | proposition: Ro 25-6981 chicken culture assay conditions | Table 1 legend | \"Calcium influx was induced with NMDA and glycine (200 and 100 \u03bcmol/L concentration, respectively)\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

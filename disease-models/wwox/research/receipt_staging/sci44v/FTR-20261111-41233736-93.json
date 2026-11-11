@@ -27,7 +27,7 @@
   "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/verify/recompute_katp.tsv",
   "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/verify/queries_verifier.tsv"
  ],
- "prior_receipt": "FTR-20261111-41233736-96",
+ "prior_receipt": "FTR-20261110-41233736-95",
  "record_kind": "contemporaneous_receipt",
  "reread_reason": "adversarial_reanalysis",
  "source_fingerprint": "a51f1d9ec1724caff2ad4cf979a9d64de9771877a15148a9880a5351ce237e6a",

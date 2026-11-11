@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-34766906-93",
  "evidence_basis": [
   "Karagiannis 2021 text read through Abstract, Introduction, Results and Methods in my own copy from the PMC open-data bucket (plain curl); Discussion read only for the 'Mechanism of lactate sensing' paragraph (Sada 2015 sentences) and by search. Images viewed with the Read tool: Fig 2, Fig 3, Fig 4, Fig 5 (Figs 1, 6, 7 not viewed). Source-data workbooks parsed with my own xlrd script: Fig 1 data 1, Fig 2 data 1 and 2, Fig 3 data 2, Fig 4 data 1 and 2, Fig 5 data 1, 3 and 4, Fig 6 data 1 (first rows only); Supplementary file 3 (docx text); Supplementary files 1 (doc) downloaded not read.",
-  "verbatim_locator | proposition: temperature of whole-cell recordings | Methods Whole-cell patch-clamp recording | \"Whole-cell recordings were performed at 25.3 ± 0.2°C\"",
+  "verbatim_locator | proposition: temperature of whole-cell recordings | Methods Whole-cell patch-clamp recording | \"Whole-cell recordings were performed at 25.3 \u00b1 0.2\u00b0C\"",
   "verbatim_locator | proposition: Sada 2015 second-hand | Discussion Mechanism of lactate sensing | \"intracellular ATP was found to be ineffective for reverting KATP channel opening induced by LDH inhibition\""
  ],
  "evidence_depth": "partial_fulltext_read",
@@ -27,7 +27,7 @@
   "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/verify/recompute_katp.tsv",
   "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/verify/queries_verifier.tsv"
  ],
- "prior_receipt": "FTR-20261111-34766906-96",
+ "prior_receipt": "FTR-20261110-34766906-97",
  "record_kind": "contemporaneous_receipt",
  "reread_reason": "adversarial_reanalysis",
  "source_fingerprint": "c761c11be8872fdbe0c9424d87089e78c118712900709a622f4a41c6efcce681",

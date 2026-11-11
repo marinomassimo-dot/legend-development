@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-22197913-96",
  "evidence_basis": [
   "Abstract, Introduction, Methods 2.1-2.4, Results, Discussion read; Table 4 read as text from the NCBI efetch PMC XML; Fig 3 legend read but the image is not in the open bucket.",
-  "verbatim_locator | proposition: Ro 25-6981 IC50 on human and rat GluN1/GluN2B | Table 4 legend | \"N.E. indicates less than 20% inhibition at 100 µM of the antagonist.\""
+  "verbatim_locator | proposition: Ro 25-6981 IC50 on human and rat GluN1/GluN2B | Table 4 legend | \"N.E. indicates less than 20% inhibition at 100 \u00b5M of the antagonist.\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

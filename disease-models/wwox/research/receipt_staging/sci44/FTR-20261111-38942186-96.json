@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-38942186-96",
  "evidence_basis": [
   "Kola 2024: Methods, Results 3.5 and the discussion lines on Kir channels read; the open bucket holds no image files for this article, so figures are unavailable.",
-  "verbatim_locator | proposition: glibenclamide holding current | Results 3.5 | \"glibenclamide (100 μM), a selective Kir6 blocker, elicited an inward current (−26.4 ± 3.8 pA, n = 13\""
+  "verbatim_locator | proposition: glibenclamide holding current | Results 3.5 | \"glibenclamide (100 \u03bcM), a selective Kir6 blocker, elicited an inward current (\u221226.4 \u00b1 3.8 pA, n = 13\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [
@@ -26,9 +26,9 @@
   "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/output/evidence.tsv",
   "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/output/figure_notes.tsv"
  ],
- "prior_receipt": null,
+ "prior_receipt": "FTR-20261111-38942186-93",
  "record_kind": "contemporaneous_receipt",
- "reread_reason": "first_read",
+ "reread_reason": "new_question_outside_prior_coverage",
  "source_fingerprint": "8e2f94481e7aabc6829236a2862dc5c3df9e95bd9ae8a60e74f719e35e3bbf12",
  "source_kind": "fulltext_remote",
  "source_locator": "PMC open-data bucket (plain curl, https://pmc-oa-opendata.s3.amazonaws.com/PMC11401767.1/PMC11401767.1.txt) fetched 2026-11-11; bytes in the scratchpad only, not in the repository",

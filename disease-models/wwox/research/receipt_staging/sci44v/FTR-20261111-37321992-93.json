@@ -18,7 +18,7 @@
  "evidence_basis": [
   "Nat Commun 2023 text read (Results on Kv7 activation, Fig 7 legend, Methods for intrinsic excitability and drug application); Fig 7 image viewed; Supplementary Information PDF page 24 (Supplementary Fig 14) rendered and viewed, legend text extracted with pdftotext; the xlsx source data not opened.",
   "verbatim_locator | proposition: retigabine and Rin and rest | Results | \"Retigabine, however, did not alter the resting membrane potential, input resistance, AP threshold, or AP shape-related parameters\"",
-  "verbatim_locator | proposition: supplementary Fig 14a | Supplementary Fig 14 legend | \"Retigabine treatment (starting from P16–17) does not affect resting membrane potential in Ank2-cKO or WT SSC layer 2/3 pyramidal neurons.\""
+  "verbatim_locator | proposition: supplementary Fig 14a | Supplementary Fig 14 legend | \"Retigabine treatment (starting from P16\u201317) does not affect resting membrane potential in Ank2-cKO or WT SSC layer 2/3 pyramidal neurons.\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [
@@ -27,7 +27,7 @@
   "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/verify/recompute_katp.tsv",
   "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/verify/queries_verifier.tsv"
  ],
- "prior_receipt": "FTR-20261111-37321992-96",
+ "prior_receipt": "FTR-20261110-37321992-95",
  "record_kind": "contemporaneous_receipt",
  "reread_reason": "adversarial_reanalysis",
  "source_fingerprint": "403df05dd47186ee198dba7d725b6b30f60b9a99c00cb94bd1282c93600521b1",

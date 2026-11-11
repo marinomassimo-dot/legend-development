@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-38942186-93",
  "evidence_basis": [
   "Kola 2024 text read (Methods 2.1-2.3, Results 3.5, the Discussion paragraph on Kir6.1/Kir6.2 and pipette ATP, figure legends) from the PMC open-data bucket; no figure image exists in the bucket for this article (json, txt, xml only), so traces and time courses were not seen.",
-  "verbatim_locator | proposition: glibenclamide holding current | Results 3.5 | \"glibenclamide (100 μM), a selective Kir6 blocker, elicited an inward current (−26.4 ± 3.8 pA, n = 13\"",
+  "verbatim_locator | proposition: glibenclamide holding current | Results 3.5 | \"glibenclamide (100 \u03bcM), a selective Kir6 blocker, elicited an inward current (\u221226.4 \u00b1 3.8 pA, n = 13\"",
   "verbatim_locator | proposition: pipette ATP | Methods 2.2 | \"120 K+-gluconate, 10 KCl, 2 MgCl2, 10 HEPES, 0.6 EGTA, 2 ATPNa2, 0.4 GTPNa, and 5 phosphocreatine\""
  ],
  "evidence_depth": "partial_fulltext_read",
@@ -27,9 +27,9 @@
   "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/verify/recompute_katp.tsv",
   "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/verify/queries_verifier.tsv"
  ],
- "prior_receipt": "FTR-20261111-38942186-96",
+ "prior_receipt": null,
  "record_kind": "contemporaneous_receipt",
- "reread_reason": "adversarial_reanalysis",
+ "reread_reason": "first_read",
  "source_fingerprint": "8e2f94481e7aabc6829236a2862dc5c3df9e95bd9ae8a60e74f719e35e3bbf12",
  "source_kind": "fulltext_remote",
  "source_locator": "PMC open-data bucket (plain curl, https://pmc-oa-opendata.s3.amazonaws.com/PMC11401767.1/PMC11401767.1.txt) fetched 2026-11-11; bytes in the scratchpad only, not in the repository",

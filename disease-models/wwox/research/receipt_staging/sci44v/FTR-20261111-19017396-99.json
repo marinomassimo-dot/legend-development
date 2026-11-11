@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-19017396-99",
  "evidence_basis": [
   "Whole text and Tables 1-2 read; Fig 4 viewed (A-C) from the open bucket, other figures captions only; supplement not read. Found: Ro displaces ifenprodil (producer D05 reversed the direction); Buffer-9 chosen by IC50 ratio; fit minimum fixed to 0.",
-  "verbatim_locator | proposition: direction of the Ro and ifenprodil displacement experiment | Results, CD titration paragraph | \"RO25,6891 could displace ifenprodil and bind to 6 × His-ATD2B with comparable affinities\""
+  "verbatim_locator | proposition: direction of the Ro and ifenprodil displacement experiment | Results, CD titration paragraph | \"RO25,6891 could displace ifenprodil and bind to 6 \u00d7 His-ATD2B with comparable affinities\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

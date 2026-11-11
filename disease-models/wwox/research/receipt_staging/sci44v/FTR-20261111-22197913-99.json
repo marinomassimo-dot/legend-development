@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-22197913-99",
  "evidence_basis": [
   "Whole text and Table 4 read from the efetch PMC XML (Methods 2.1-2.4, Results 3.3, Table 4 and legend, Fig 3 legend); no image in the open bucket. Re-check of D01-D03 and D07: values and conditions match; no maximal inhibition reported.",
-  "verbatim_locator | proposition: Ro 25-6981 IC50 and no-effect definition | Table 4 legend | \"N.E. indicates less than 20% inhibition at 100 µM of the antagonist.\""
+  "verbatim_locator | proposition: Ro 25-6981 IC50 and no-effect definition | Table 4 legend | \"N.E. indicates less than 20% inhibition at 100 \u00b5M of the antagonist.\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [
