@@ -14,12 +14,10 @@ sys.path.insert(0, str(HERE.parents[4] / "framework/scripts"))
 import compound_catalog as cc  # noqa: E402
 S41 = DR / "generation_it41_20261109"
 
-SALT = re.compile(r"\b(hydrochloride|hcl|hemi\w*|tartrate|maleate|mesylate|sodium|potassium|citrate|sulfate|sulphate|phosphate|fumarate|besylate|acetate|bromide|dihydrate|monohydrate)\b", re.I)
-RACEMATE = re.compile(r"\((?:r\s*,\s*s|rs|\+/-|\+-|\u00b1|rac|dl)\)-?", re.I)   # only a racemate mark merges with the parent; a single (R)/(S)/(+)/(-) names a distinct enantiomer (HE43: parent_form keeps stereo apart)
-import compound_identity as _ci  # noqa: E402  (HE43 parent_form: salts merge, stereo/isotope prefixes stay apart)
+import compound_identity as ci  # noqa: E402  (the one normalizer: HE44 replaced a local salt/stereo regex that dropped (R)/(S) and did not know dipotassium)
 def key(n):
-    p = _ci.parent_form(n)
-    return p["key"] + ("|" + p["stereo_isotope"] if p.get("stereo_isotope") else "")
+    """(parent name key, stereo/isotope qualifier): salts merge into the parent, stereoisomers stay apart. A match of keys is an ESTIMATE of overlap by name, not a proof that two records are one molecule."""
+    f = ci.parent_form(n); return (f["key"], f["stereo_isotope"])
 
 def main():
     rel = list(csv.DictReader(open(S41 / "relations_it41.tsv", encoding="utf-8"), delimiter="\t")) + list(csv.DictReader(open(HERE / "relations_it43.tsv", encoding="utf-8"), delimiter="\t"))
@@ -47,7 +45,7 @@ def main():
         out.append(dict(relation_id=rid, listing_molecules=len(mol), already_in_simple_search=len(mol - new), new_molecules=len(new),
                         new_dgidb_only_records=len({x["catalogue_id"] for x in rr if x["in_simple_search"] == "no" and x["origin"] == "dgidb_only"}),
                         documented_actions_new=len({x["catalogue_id"] for x in rr if x["in_simple_search"] == "no" and x["interaction_type"]}),
-                        qualification_improved=0, new_hypotheses=0))
+                        qualification_improved=0, new_hypotheses=0, overlap_basis="name_key_estimate_not_identity"))
     with open(HERE / "dgidb_summary_it43.tsv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, list(out[0].keys()), delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(out)
     for o in out: print(o)

@@ -302,7 +302,7 @@
  "UI_IT.cv_kind_weakened": "indebolita o da non trasferire",
  "UI_IT.cv_lead": "Breve elenco in ordine di ricerca: il numero indica quale indagine conviene fare prima per cambiare una decisione, non quanto un composto sia efficace. Non è una graduatoria di cure e non è una top-five: contiene quello che il lavoro ha prodotto.",
  "UI_IT.cv_legend_h": "Come leggere i tipi di voce",
- "UI_IT.cv_lic": "In questa edizione mancano i nomi dei composti e i valori derivati dai registri: ChEMBL (licenza CC BY-SA 3.0) e Guide to Pharmacology 2026.3.1 (ODbL / CC BY-SA 4.0) impongono condizioni di ridistribuzione sulle righe e sui valori. Restano il testo originale, l'azione e il tipo di voce; l'edizione completa porta nomi, valori e fonti.",
+ "UI_IT.cv_lic": "In questa edizione mancano i valori derivati dai registri. I nomi dei composti compaiono solo quando una fonte indipendente li dichiara (etichette di Wikidata, CC0, con il numero dell'elemento); per gli altri resta l'identificativo ChEMBL come collegamento al record. ChEMBL (licenza CC BY-SA 3.0) e Guide to Pharmacology 2026.3.1 (ODbL / CC BY-SA 4.0) impongono condizioni di ridistribuzione sulle righe e sui valori. Restano il testo originale, l'azione e il tipo di voce; l'edizione completa porta nomi, valori e fonti.",
  "UI_IT.cv_more": "Azione, motivo, premessa aperta, controevidenze e prossimo test",
  "UI_IT.cv_moves": "Che cosa lo fa salire o scendere",
  "UI_IT.cv_next": "Prossimo test e comparatore",

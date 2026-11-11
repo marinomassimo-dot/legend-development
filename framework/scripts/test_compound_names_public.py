@@ -20,11 +20,11 @@ def tsv(path, header, rows):
         w.writerows(rows)
 
 
-def make(dr, join, table, wd):
+def make(dr, join, table, wd, level=None):
     tsv(dr / rv.COMPOUND_FILE, CV, [[i + 1, f"V0{i + 1}", "INV-X", "probe", "full name", "own label", "a", "r", "o", "c", "n", "s", "reg", "m", "in_silico", "S1"] for i in range(len(join))])
     tsv(dr / rv.IDENTITY_JOIN_FILE, ["item_id", "name", "identity_state", "label_conflict", "expected_gene", "evidence_level", "selectivity", "link"],
         [[f"V0{i + 1}", n, "NAME_EXACT", "no", "G", "L", "NOT_ASSESSED", link] for i, (n, link) in enumerate(join)])
-    tsv(dr / rv.IDENTITY_TABLE_FILE, ["query_name", "record_chembl_refs", "declared_chembl_id"], table)
+    tsv(dr / rv.IDENTITY_TABLE_FILE, ["query_name", "record_chembl_refs", "declared_chembl_id", "evidence_level"], [row + [(level or {}).get(row[0], "EMPTY_RESULT")] for row in table])
     tsv(dr / rv.NAME_WD_FILE, ["chembl_id", "state", "qid", "label", "retrieved_utc", "source", "licence_url"], wd)
 
 
@@ -60,6 +60,21 @@ class PublicNames(unittest.TestCase):
              [["CHEMBL1", "LABEL", "Q1", "GYKI-2466", "t", "s", "u"], ["CHEMBL2", "LABEL", "Q2", "EVT-101 dihydrochloride", "t", "s", "u"], ["CHEMBL3", "LABEL", "Q3", "CERC-301", "t", "s", "u"]])
         got = self.names()
         self.assertEqual([got[k]["names_public"] for k in ("V01", "V02", "V03")], [[], [], []])     # a misspelling, a salt form and a code name: withheld
+
+    def test_an_identity_row_whose_chembl_id_is_unresolved_gets_no_name(self):
+        make(self.dr, [("ifenprodil", "EXACT"), ("stale", "EXACT")], [["ifenprodil", "CHEMBL1", ""], ["stale", "CHEMBL2", ""]],
+             [["CHEMBL1", "LABEL", "Q1", "ifenprodil", "t", "s", "u"], ["CHEMBL2", "LABEL", "Q2", "stale", "t", "s", "u"]], level={"stale": "ID_NOT_RESOLVED"})
+        got = self.names()
+        self.assertEqual(got["V01"]["names_public"][0]["label"], "ifenprodil")
+        self.assertEqual(got["V02"]["names_public"], [])     # the id is absent from the ChEMBL release read: another source's item for it is not evidence of identity
+
+    def test_an_unnamed_compound_keeps_a_link_to_its_source_record_but_an_unresolved_id_does_not(self):
+        make(self.dr, [("onfasprodil", "EXACT"), ("stale", "EXACT"), ("two", "EXACT")], [["onfasprodil", "CHEMBL7", ""], ["stale", "CHEMBL8", ""], ["two", "CHEMBL5;CHEMBL6", ""]],
+             [["CHEMBL7", "NO_WIKIDATA_ITEM", "", "", "t", "s", "u"]], level={"stale": "ID_NOT_RESOLVED"})
+        got = self.names()
+        self.assertEqual((got["V01"]["names_public"], got["V01"]["chembl_links"]), ([], ["CHEMBL7"]))     # no name, but a way to the record
+        self.assertEqual((got["V02"]["chembl_links"], got["V03"]["chembl_links"]), ([], []))
+        self.assertNotIn("chembl_links", self.names(full=True)["V01"])
 
     def test_absent_name_file_means_no_names_and_no_error(self):
         make(self.dr, [("ifenprodil", "EXACT")], [["ifenprodil", "CHEMBL1", ""]], [])

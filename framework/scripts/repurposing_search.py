@@ -22,6 +22,7 @@ Rules enforced here (each has a regression test in framework/scripts/test_repurp
 from __future__ import annotations
 
 import argparse
+from collections import Counter
 import collections
 import csv
 import json
@@ -911,6 +912,18 @@ def source_states(catalog_dir: Path | None = None) -> dict:
     return {k: v.get("state") for k, v in s["sources"].items()} | {"_catalog_generated_utc": s.get("generated_utc")}
 
 
+def listing_notes(associations: list[dict], targets: list[dict], limit: int) -> list[str]:
+    """HE44 H4: what a printed listing does NOT show. A cut at --limit and a symbol with no catalogue row both read as "no compounds" otherwise."""
+    per = Counter(x["target"] for x in associations)
+    notes = []
+    if len(associations) > limit:
+        notes.append(f"# TRUNCATED: {limit} of {len(associations)} rows printed (--limit); rows per symbol: " + ", ".join(f"{k} {v}" for k, v in sorted(per.items())) + "; use --limit or --json for the rest")
+    silent = [t["symbol"] for t in targets if t.get("symbol") and per.get(t["symbol"], 0) == 0]
+    if silent:
+        notes.append("# SYMBOLS WITHOUT A CATALOGUE TARGET ROW: " + ", ".join(silent) + " (the catalogue's rows, not the compounds that exist: `target_activity.py <symbol>` reads measured ChEMBL activities by target)")
+    return notes
+
+
 def _print_assoc(a: dict) -> str:
     lvl = a.get("target_level") or "-"
     if a.get("record_components"):
@@ -967,6 +980,8 @@ def main(argv=None) -> int:
               f"identity_guard_hits={len(r['identity_guard_hits'])} nonhuman_chembl_set_aside={r['nonhuman_chembl_rows_set_aside']}")
         for x in r["associations"][: a.limit]:
             print(_print_assoc(x))
+        for line in listing_notes(r["associations"], nd.get("targets") or [], a.limit):
+            print(line)
         for x in r["probes"]:
             print(f"# PROBE\t{x['probe']}\t{x['catalogue_id']}\t{x['target_group']} (matched {', '.join(x['matched_in_need'])} of {len(x['group_members'])})\t{x['action_term_in_source']}\t{x['kind']}\t{x['label']}")
         return 0
