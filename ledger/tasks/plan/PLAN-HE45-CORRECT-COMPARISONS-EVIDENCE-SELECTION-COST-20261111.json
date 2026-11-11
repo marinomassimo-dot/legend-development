@@ -12,11 +12,11 @@
  "branch": "task/he45",
  "CURRENT_STATE": "IN_PROGRESS",
  "CHECKPOINT": {
-  "last_verified_result": "battery PASS WITH SKIPS (237 targets, 42 skipped) on 0fd43de6; commits d14685a3 and 120c2e29 after it are covered by targeted suites and the gate, not by a battery",
+  "last_verified_result": "main 4ce390d4 (IT44 landed, battery 239 targets by IT44); HE45 first increment f3173fa8 battery PASS WITH SKIPS on 0fd43de6",
   "first_incomplete_work": "OBJ_H1",
   "active_processes": "none",
   "real_dependencies": "IT44 has not landed (task/it44 holds the engine/ loader and the ATP/scaffold engine edits)",
-  "next_executable_step": "land the increment; then wait for the IT44 landing SHA and patch activity_search.py / entity_roles"
+  "next_executable_step": "freeze task/he45b, battery by SHA, land, push, hand the SHA to IT45"
  },
  "AUTHORISED_QUEUE_20261111": {
   "MANDATE_STATE": "OPEN",
@@ -74,9 +74,9 @@
    "steps": [
     {
      "step": "best_nM, FLOOD threshold, SCREEN_DEPOSIT",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": "findings and summarise() done; activity_search patch (type split, summarise) waits for the IT44 landing SHA"
+     "evidence": "activity_search: dose-response and Potency as two reads, measure_summary instead of best_nM, S10 pointers 0 -> 10 (he45_20261111/README.md section 5, s10_pointers_he45.tsv)"
     }
    ]
   },
@@ -86,9 +86,9 @@
    "steps": [
     {
      "step": "Entity role and the candidate fallback",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": "measured (95 of 195 engine-CANDIDATE rows carry the role only by default); patch of role_of default and eval fallback waits for the IT44 landing"
+     "evidence": "role_of default unqualified_entity; eval fallback; S11-S13 in role sources; false candidates measured per relation (section 5)"
     }
    ]
   },
@@ -98,9 +98,9 @@
    "steps": [
     {
      "step": "Cache and adapters of the activity path",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": "cache-key defect reproduced; routing through chembl.query waits for the IT44 landing"
+     "evidence": "activity_search routed through chembl.query; cache per release; test of another-query cache"
     }
    ]
   },

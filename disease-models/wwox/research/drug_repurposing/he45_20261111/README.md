@@ -53,3 +53,16 @@ Also: `decisive.tsv` is read from the chosen folder only, so a package whose `en
 * Retrieval test on a new question ("which Nrf2 activators with a measured human EC50 are in the catalogue, and where do they touch WWOX?"): two helper calls (`dream_pass.py pairs NFE2L2 WWOX`, `consumers`) and three greps of the catalogue, the S10 molecule table and `open_questions_map.tsv` led to the originals (axis_it10 candidates, DL-MECH-153, WO-36) without reading the corpus.
 * Revival triggers: the dismissal ledger holds no NRF2 or fumarate dismissal; none fired.
 * Conditions left "unknown" in consumers: `CONDITIONS_INSUFFICIENT` now names the missing field per pair (AZD7545 scaffold, VER-246608 ATP); the ledger text of the PDH cards was not rewritten.
+
+## 5. Patches onto the landed IT44 candidate (4ce390d4) — H4, H5, H6
+
+| Point | Before | After |
+|---|---|---|
+| S10 pointers (NFE2L2 + KEAP1, ChEMBL_37) | 0 listed; every molecule of the NFE2L2 record `TRUNCATED` (5,000 of 93,391 rows read) | 10 listed (7 clinical-stage, 2 approved, 1 tool probe); NFE2L2 dose-response COMPLETE (763 rows, 7 requests), KEAP1 COMPLETE (823 rows, 10 requests); the NFE2L2 Potency sample is `NOT_READ` (timeout of the 1,000-row sample), stated in the manifest |
+| Potency flood | contaminated the dose-response state | own read and own coverage; a molecule seen only in a sampled screen is `SCREEN_PARTIAL` (counted, not listed) |
+| `best_nM` | one minimum across types, targets, organisms, assay types, no source row | `measure_summary`: a range per comparable group with the `activity_id` of its lowest value; `n_measure_groups` |
+| Cache | per target and page only; a second run with other types read the first run's page and said COMPLETE | the adapter's cache, keyed by the full request, one directory per ChEMBL release (status read fresh with bounded retry); test: a run with IC50 then a run with IC50,EC50 returns the second set |
+| Role fallback | `candidate` by default (197 of 349 role rows; 95 of the 195 engine-`CANDIDATE` rows only by default) | `unqualified_entity` ("no rule classified it"); engine verdicts unchanged, no row removed |
+| Eval fallback | a molecule absent from the role table counted as a drug candidate | counted as unclassified (new column) |
+
+Engine-CANDIDATE molecules by role, `eval_it44.py` before/after (drug-role = candidate or probe): S3 18 (17 → 3 drug role, 14 unclassified), S9 3 (3 → 1; 2), S10 8 (8 → 5; 3), S11 21 (21 → 5; 5 physiological, 11 unclassified: S11 was not in the role sources, so its 21 candidates counted as drug candidates by absence). False candidates fall; lost opportunities: none removed, because the role never filtered a list. Limit: the roles were assigned by catalogue status and ligand type, not by reading papers.
