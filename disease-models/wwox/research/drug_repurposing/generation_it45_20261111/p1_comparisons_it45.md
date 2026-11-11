@@ -9,7 +9,7 @@ Non-canonical working note. Not medical advice. Components: Harness HE45 (`frame
 | Compound (item) | Before | After | Why |
 |---|---|---|---|
 | VER-246608 (V13) | COMPARABLE | CONDITIONS_INSUFFICIENT: ATP stated on one side only; nothing shared beyond the system | a missing condition is neither agreement nor refutation |
-| AZD7545 (V13) | NOT_COMPARABLE (core-bound against core-both) | NOT_COMPARABLE (core-bound against core-free) | still a documented incompatibility; the pair named differs because the reader now reports the first documented difference |
+| AZD7545 (V13) | NOT_COMPARABLE (core-bound against core-both) | NOT_COMPARABLE (core-bound against core-free) | still a documented incompatibility; the pair named in the reason differs (D01–D03 instead of D01–D02), both are documented incompatibilities |
 | oxamate, stiripentol (V15) | COMPARABLE | NO_POTENCY_PAIR | the old code printed COMPARABLE with no pair examined |
 | ifenprodil (V02) | COMPARABLE | NO_POTENCY_PAIR | same |
 | radiprodil (V05) | SINGLE_OR_NONE | NO_POTENCY_PAIR | only one side carries a potency statement |
