@@ -12,11 +12,13 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[4]
 sys.path.insert(0, str(ROOT / "framework/scripts"))
 import hypothesis_package as hp  # noqa: E402
+sys.path.insert(0, str(HERE.parent / "generation_it46_20261111"))
+import cell_context as cc  # noqa: E402  IT46: relation targets joined to a held cell-class expression table
 
 RELATIONS = {"MH1": ["R5"], "MH2": ["R4"], "MH3": [], "BH1": ["R3"], "BH2": ["R1", "R2"], "BH3": ["R6"]}
 INVS = ("INV-05", "INV-18")
 FIELDS = ["corrections_it40", "proposal_id", "kind", "need_id", "inv_id", "cards", "status", "starting_observation_and_chain", "context", "competing_explanations", "premise_and_action",
-          "compound_or_probe_named_by_package", "catalogue_by_action", "source_and_limits", "expected_result_by_explanation", "decision_measure", "experiments", "unresolved_refs", "nomination"]
+          "compound_or_probe_named_by_package", "catalogue_by_action", "cell_context", "source_and_limits", "expected_result_by_explanation", "decision_measure", "experiments", "unresolved_refs", "nomination"]
 
 CORR_ALL = (" Predictions in the arms are INFERENZA from the hypothesis definitions; no cell is a measured result.")
 CORRECTIONS = {
@@ -44,6 +46,12 @@ def catalogue_summary(rels, ba):
                      + ", ".join(f"{k}: {len(v)}" for k, v in sorted(gran.items())) + ". A catalogue target record says where the mechanism was attached (one protein, a two-gene assembly or a family), not how selective the molecule is")
     return " | ".join(parts) if parts else "no relation searched (no pharmacological action proposed)"
 
+def cell_context_text(rels):
+    """IT46: where a held table says the relation's target genes are read (per table, unknown stays unknown); one sentence per relation."""
+    rel = cc.relations()
+    return " | ".join(f"{rid}: " + cc.context_for(rel[rid], rid)[1] for rid in rels if rid in rel) or "no relation searched (no target genes to place)"
+
+
 def rows(link=True):
     ba = by_action(); pk = hp.load_all(); out = []
     for inv in INVS:
@@ -61,7 +69,7 @@ def rows(link=True):
             nominated = hyp.get("compound_or_probe", "")
             out.append(dict(corrections_it40=CORRECTIONS.get(hid, "") + CORR_ALL, proposal_id="CP-" + hid, kind="conditional_physiological_hypothesis", need_id=h["need_id"], inv_id=inv, cards=";".join(h["card_ids"]) if isinstance(h["card_ids"], list) else h["card_ids"],
                 status=hyp["status"], starting_observation_and_chain=hyp["chain"], context=hyp["context"], competing_explanations=alts or hyp["competing_explanation"],
-                premise_and_action=hyp["pharmacological_action"], compound_or_probe_named_by_package=nominated, catalogue_by_action=catalogue_summary(RELATIONS[hid], ba),
+                premise_and_action=hyp["pharmacological_action"], compound_or_probe_named_by_package=nominated, catalogue_by_action=catalogue_summary(RELATIONS[hid], ba), cell_context=cell_context_text(RELATIONS[hid]),
                 source_and_limits=hyp["counter_evidence"] + " || weakening: " + hyp["weakening_result"], expected_result_by_explanation=" ;; ".join(expected) if link else "",
                 decision_measure=hyp["what_would_change_the_decision"], experiments=" ;; ".join(exps), unresolved_refs=",".join(h["unresolved_refs"]),
                 nomination="ABSTAIN" if nominated.lower().startswith(("none", "no ")) else "NAMED_BY_PACKAGE_ONLY (no ranking, no claim)"))
