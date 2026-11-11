@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-11T11:20Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_present",
+  "results": "not_read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "tables": "read",
+  "limitations": "not_present",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-11T11:21:29Z",
+ "event_id": "FTR-20261111-34753794-84",
+ "evidence_basis": [
+  "Hansen 2021 review: Table 5 (proton and Zn2+ IC50 per construct), section C.1 Modulation by Extracellular Protons and the triheteromer and exon-5 paragraphs read from the PMC XML; the rest of this 190-page review not read; secondary source, no figure opened.",
+  "verbatim_locator | proposition: GluN2A, 2B, 2D proton IC50 in the physiologic range | Section C.1 | \"GluN2A-, GluN2B-, and GluN2D-containing NMDA receptors all have proton IC50 values in the physiologic pH range (7.0–7.4)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/output/proton_sensitivity.tsv",
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/output/native_evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "65eee7d65eb633dd197562edbc8e2c6d71b3cce7d34d903596190ac943e8a24e",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC full-text XML via NCBI efetch (plain curl, default user agent) on 2026-11-11; bytes in scratch only; not stored in the repository",
+ "study_id": {
+  "doi": "10.1124/pharmrev.120.000131",
+  "pmid": "34753794"
+ },
+ "workflow": "SCI45 follow-up package N1 (ORCH-SCI45B-20261111), producer og-z. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
