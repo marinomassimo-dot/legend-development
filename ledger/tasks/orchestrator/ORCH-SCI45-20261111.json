@@ -9,11 +9,11 @@
  "BASELINE": "main 3f8f17fb. Worktree .claude/worktrees/sci45, branch task/sci45. IT44 (legend-development-4e, task/it44) applied SCI44 package A by folder (8edf3852) and awaits B and C; no IT45 branch or task record at start; HE45 worktree exists. SCI44 landed: A d088b964, B+C+coda 34f93af0, closure 3f8f17fb.",
  "CURRENT_PACKAGE": {
   "id": "P1 ph_k2p_sci45_20261111",
-  "state": "S1 written before search",
-  "delegate_active": "none",
+  "state": "producer running (og-u, asked sonnet/medium)",
+  "delegate_active": "producer og-u",
   "updated": "2026-11-11"
  },
- "RESUME": "S0/S1 written in ph_k2p_sci45_20261111/S0_S1_before_search.md; next: commit it, send the perimeter to IT44/IT45, write BRIEF_P.md and dispatch one producer (sonnet/medium).",
+ "RESUME": "Brief committed 873b5dc7; producer og-u dispatched (asked sonnet/medium, background). On return: read back model/effort from census, apply nothing, then write VERIFIER_BRIEF_V5.md (decisive triples), dispatch blind verifier (sonnet/high), then size check (pK, Hill -> required delta-pH), S4 design, S5 hypotheses, README, consumer_delta, delivery to IT44/IT45.",
  "DECISIONS_TAKEN": [
   "2026-11-11 S0: perimeter narrowed to TASK-1, TASK-3, TREK-1 (TASK-1 added to the coda's two); the lactate-to-pH step is read as its own question R4; no general K2P review; the 18 SCI44 tool-name strings are not repeated; new strings are pH-led and TASK-led.",
   "2026-11-11 S0: Wwox Methods already hold 25 mM HCO3-, 35 C, 10 mM glucose, 10 mM HEPES and 2 mM ATP in the pipette (A1.15): not called unknown; bath pH value is not stated."
@@ -29,9 +29,9 @@
    "steps": [
     {
      "step": "S0/S1: verify SCI44 delivery and IT44 consumption, read held inputs, write the chain, explanations and priors before search, tell IT44/IT45 the perimeter",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "S1 b88eb730; perimeter sent to legend-development-4e; IT44 has A by folder, B and C pending; no IT45 branch"
     }
    ]
   },
