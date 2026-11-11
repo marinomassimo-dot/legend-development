@@ -17,7 +17,7 @@
  "event_id": "FTR-20261110-27153546-98",
  "evidence_basis": [
   "Abstract, Results with figure legends (n per panel), the DCA dose in Methods and parts of the Discussion read; images not viewed.",
-  "verbatim_locator | proposition: infarct volume fell with DCA | Abstract | \"reduced by 54.2% from 10.8 ± 1.9 mm3 in the vehicle-only control group to 5.0 ± 1.0 mm3\""
+  "verbatim_locator | proposition: infarct volume fell with DCA | Abstract | \"reduced by 54.2% from 10.8 \u00b1 1.9 mm3 in the vehicle-only control group to 5.0 \u00b1 1.0 mm3\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

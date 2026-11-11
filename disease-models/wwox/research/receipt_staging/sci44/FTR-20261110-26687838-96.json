@@ -18,7 +18,7 @@
  "evidence_basis": [
   "Results on purification, patient numbers and ages, and the Methods on tissue and RNA-seq mapping were read; figure legends only; the supplementary tables named in the text were not available in the bucket, the GEO table was used instead.",
   "verbatim_locator | proposition: patient numbers per cell class | Results | \"N=12, 1, 5, 3, and 2 patients for astrocytes, neurons, oligodendrocytes, microglia, and endothelial cells, respectively.\"",
-  "verbatim_locator | proposition: fetal sample size and age | Figure 4 legend | \"Fetal, n=6 patients. Age range: 18.0–18.5 gw.\""
+  "verbatim_locator | proposition: fetal sample size and age | Figure 4 legend | \"Fetal, n=6 patients. Age range: 18.0\u201318.5 gw.\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

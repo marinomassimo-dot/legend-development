@@ -17,7 +17,7 @@
  "event_id": "FTR-20261110-29368690-96",
  "evidence_basis": [
   "Results on cell autonomy and excitability, Discussion on KATP, Methods for recordings read; Figure 2 viewed; other figures and supplements not opened (Figure 1 washdown values not read as numbers).",
-  "verbatim_locator | proposition: Bad knockout neurons fire less | Results | \"Bad−/− DGNs generated fewer action potentials compared to wild-type DGNs\""
+  "verbatim_locator | proposition: Bad knockout neurons fire less | Results | \"Bad\u2212/\u2212 DGNs generated fewer action potentials compared to wild-type DGNs\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

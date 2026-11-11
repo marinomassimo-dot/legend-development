@@ -17,7 +17,7 @@
  "event_id": "FTR-20261110-27153546-97",
  "evidence_basis": [
   "Verifier V1 checked the infarct volumes, group sizes and the PDH activity p-value against the Results text and the Fig 1 and Fig 2 legends. Methods, Discussion and figures not read.",
-  "verbatim_locator | proposition: DCA reduced infarct volume in P9 hypoxia-ischemia | Abstract | \"reduced by 54.2% from 10.8 ± 1.9 mm3 in the vehicle-only control group to 5.0 ± 1.0 mm3\""
+  "verbatim_locator | proposition: DCA reduced infarct volume in P9 hypoxia-ischemia | Abstract | \"reduced by 54.2% from 10.8 \u00b1 1.9 mm3 in the vehicle-only control group to 5.0 \u00b1 1.0 mm3\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

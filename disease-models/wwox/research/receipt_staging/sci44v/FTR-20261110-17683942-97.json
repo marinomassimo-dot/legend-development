@@ -17,7 +17,7 @@
  "event_id": "FTR-20261110-17683942-97",
  "evidence_basis": [
   "Verifier V1 read Results on inhibition of PDK1 and PDK3, the Discussion paragraph on the dual-role ligand and the AZD7545 assay Experimental Procedures; Figure 2 panels A-D viewed. Structure sections and the other figures not read.",
-  "verbatim_locator | proposition: AZD7545 sign depends on the E2p/E3BP core, stated by the authors for PDK3 | Discussion | \"AZD7545 appears to be a “dual-role” ligand for PDK3\""
+  "verbatim_locator | proposition: AZD7545 sign depends on the E2p/E3BP core, stated by the authors for PDK3 | Discussion | \"AZD7545 appears to be a \u201cdual-role\u201d ligand for PDK3\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

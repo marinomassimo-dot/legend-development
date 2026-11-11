@@ -17,7 +17,7 @@
  "event_id": "FTR-20261110-21653873-96",
  "evidence_basis": [
   "Methods (slices, solutions, whole-cell and perforated), Results on ketone and sAHP, Discussion on whole-cell size read; Figures 5 and 6 legends read; no image opened.",
-  "verbatim_locator | proposition: BHB raised KATP open probability | Results | \"3.14 ± 0.90%, n = 8 in R-βHB, vs 1.09 ± 0.32%, n = 35 in ACSF\""
+  "verbatim_locator | proposition: BHB raised KATP open probability | Results | \"3.14 \u00b1 0.90%, n = 8 in R-\u03b2HB, vs 1.09 \u00b1 0.32%, n = 35 in ACSF\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

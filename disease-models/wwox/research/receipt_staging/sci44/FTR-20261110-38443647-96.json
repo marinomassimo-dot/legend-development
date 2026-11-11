@@ -17,7 +17,7 @@
  "event_id": "FTR-20261110-38443647-96",
  "evidence_basis": [
   "The LDH section, Table 2, the exposure and concentration paragraph, the antiepileptic section and the ranking sentence read; GABA, ion-channel and CYP sections not read; narrative review, copied numbers.",
-  "verbatim_locator | proposition: LDH inhibition needs high concentrations, other mechanisms involved | Antiepileptic Activity | \"high concentrations (500 µM) of STP were needed, suggesting that other MoAs were involved in its in vivo antiepileptic effects\""
+  "verbatim_locator | proposition: LDH inhibition needs high concentrations, other mechanisms involved | Antiepileptic Activity | \"high concentrations (500 \u00b5M) of STP were needed, suggesting that other MoAs were involved in its in vivo antiepileptic effects\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

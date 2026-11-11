@@ -17,7 +17,7 @@
  "event_id": "FTR-20261110-18585399-97",
  "evidence_basis": [
   "Methods (cells, solutions) and the Results on potentiation, EC50, direct gating and legends read; Discussion not read.",
-  "verbatim_locator | proposition: GABA-A potentiation EC50 | Results | \"The average EC 50 for potentiation of the α3β3γ2L receptors was 24.6 ± 7.0 μM (N=5)\""
+  "verbatim_locator | proposition: GABA-A potentiation EC50 | Results | \"The average EC 50 for potentiation of the \u03b13\u03b23\u03b32L receptors was 24.6 \u00b1 7.0 \u03bcM (N=5)\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

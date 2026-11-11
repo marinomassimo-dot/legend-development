@@ -17,7 +17,7 @@
  "event_id": "FTR-20261110-19833728-97",
  "evidence_basis": [
   "Verifier V1 read Table 1 (apparent IC50 for DCA, wild-type PDK2) and the legend stating n = 3-5. Other sections and figures not read.",
-  "verbatim_locator | proposition: DCA apparent IC50 on human PDK2, basal and core-dependent | Table 1 | \"WT 0.29 ± 0.02 0.48 ± 0.08\""
+  "verbatim_locator | proposition: DCA apparent IC50 on human PDK2, basal and core-dependent | Table 1 | \"WT 0.29 \u00b1 0.02 0.48 \u00b1 0.08\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

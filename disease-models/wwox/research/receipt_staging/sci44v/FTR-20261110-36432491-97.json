@@ -17,7 +17,7 @@
  "event_id": "FTR-20261110-36432491-97",
  "evidence_basis": [
   "Verifier V1 read Methods 2.4 and every figure legend giving n, and Results 3.1-3.6 numbers. Methods state n = 5 per sham and n = 8 per seizure group; the legends of the blot and staining panels state n = 3, 4 and 5-7. Figures not viewed.",
-  "verbatim_locator | proposition: group sizes behind the PDK2, PDH and neuron-count panels | Figure legends | \"n = 4 for each sham group. n = 5–7 for each seizure group.\""
+  "verbatim_locator | proposition: group sizes behind the PDK2, PDH and neuron-count panels | Figure legends | \"n = 4 for each sham group. n = 5\u20137 for each seizure group.\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

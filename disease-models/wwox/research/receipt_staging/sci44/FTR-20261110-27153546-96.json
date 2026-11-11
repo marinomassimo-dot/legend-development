@@ -17,7 +17,7 @@
  "event_id": "FTR-20261110-27153546-96",
  "evidence_basis": [
   "Abstract, Introduction start and the Results up to mitochondrial biogenesis were read with figure legends; Methods and Discussion not read; figures not viewed.",
-  "verbatim_locator | proposition: infarct volume fell with DCA after neonatal hypoxia-ischemia | Abstract | \"reduced by 54.2% from 10.8 ± 1.9 mm3 in the vehicle-only control group to 5.0 ± 1.0 mm3 in the DCA-treated group\""
+  "verbatim_locator | proposition: infarct volume fell with DCA after neonatal hypoxia-ischemia | Abstract | \"reduced by 54.2% from 10.8 \u00b1 1.9 mm3 in the vehicle-only control group to 5.0 \u00b1 1.0 mm3 in the DCA-treated group\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

@@ -17,7 +17,7 @@
  "event_id": "FTR-20261110-36432491-98",
  "evidence_basis": [
   "Methods 2.4 (groups), Results on PDK2, PDH and NeuN, the Fig 6 legend and the Discussion sentence on single agents read; Figure 6 image viewed (four arms per condition; only DCA plus pyruvate flagged); the Fig 6 legend gives n = 4 per sham group and n = 5-7 per seizure group, unlike Methods n = 5 and 8.",
-  "verbatim_locator | proposition: group sizes differ between Methods and the NeuN legend | Fig 6 legend | \"n = 4 for each sham group. n = 5–7 for each seizure group.\""
+  "verbatim_locator | proposition: group sizes differ between Methods and the NeuN legend | Fig 6 legend | \"n = 4 for each sham group. n = 5\u20137 for each seizure group.\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

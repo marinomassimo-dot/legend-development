@@ -17,7 +17,7 @@
  "event_id": "FTR-20261110-18658136-97",
  "evidence_basis": [
   "Verifier V1 read Table 3 (kcat 35.1 none, 2.6 with 0.25 mM DCA, 98.3 with 10 uM AZD7545, E1p only, no core) and its legend, the sentence on the PDK4 Kd of 48 nM with the unpublished footnote, and the Introduction statement that PDK4 is only modestly stimulated by the core. Figures not viewed.",
-  "verbatim_locator | proposition: PDK4 kcat with DCA and with AZD7545 in the core-free assay | Table 3 | \"The PDK4-AZD7545 complex shows a higher k cat value (98.3 min –1 ) than PDK4 alone (35.1 min –1 )\""
+  "verbatim_locator | proposition: PDK4 kcat with DCA and with AZD7545 in the core-free assay | Table 3 | \"The PDK4-AZD7545 complex shows a higher k cat value (98.3 min \u20131 ) than PDK4 alone (35.1 min \u20131 )\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

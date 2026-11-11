@@ -17,7 +17,7 @@
  "event_id": "FTR-20261110-18585399-96",
  "evidence_basis": [
   "Results and the legends of Figures 2-9 read from the PMC page text, Methods keyword lines read; figure images not opened; Discussion beyond one paragraph not read.",
-  "verbatim_locator | proposition: stiripentol potentiation EC50 at alpha3beta3gamma2L | Results | \"The average EC50 for potentiation of the α3β3γ2L receptors was 24.6 ± 7.0 μM (N=5)\""
+  "verbatim_locator | proposition: stiripentol potentiation EC50 at alpha3beta3gamma2L | Results | \"The average EC50 for potentiation of the \u03b13\u03b23\u03b32L receptors was 24.6 \u00b1 7.0 \u03bcM (N=5)\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

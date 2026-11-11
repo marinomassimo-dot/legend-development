@@ -17,7 +17,7 @@
  "event_id": "FTR-20261110-25186741-97",
  "evidence_basis": [
   "Verifier V1 re-extraction of Pdk1-4 and Pdpk1 from all 17 GEO per-sample tables (sheet UCSC Genes FPKM, own code); sample titles and series design read from the GEO SOFT file; Methods and the Results design paragraphs of the PMC page read (P7 versus P17, pooling, FPKM floor). Introduction, Discussion and figures not read.",
-  "verbatim_locator | proposition: one replicate is a pool of animals | Methods | \"For all cell types, one biological replicate consists of pooled cells from a litter of 3–12 mice.\""
+  "verbatim_locator | proposition: one replicate is a pool of animals | Methods | \"For all cell types, one biological replicate consists of pooled cells from a litter of 3\u201312 mice.\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

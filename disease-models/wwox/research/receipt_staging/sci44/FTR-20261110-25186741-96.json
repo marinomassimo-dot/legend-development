@@ -1,41 +1,41 @@
 {
-  "analysis_at": "2026-11-10T22:30:00Z",
-  "analysis_time_precision": "minute",
-  "coverage": {
-    "abstract": "read",
-    "discussion": "not_read",
-    "figures": "not_read",
-    "introduction": "not_read",
-    "limitations": "not_present",
-    "methods": "read",
-    "references": "not_read",
-    "results": "read",
-    "supplementary": "read",
-    "tables": "read"
-  },
-  "event_at": "2026-11-10T22:41:00Z",
-  "event_id": "FTR-20261110-25186741-96",
-  "evidence_basis": [
-    "Methods (purification, library, mapping, FPKM threshold) and the Results paragraphs on design, replicate correlation and the Pkm splicing example were read; the cell-type-enriched gene analyses and the figure panels were not. The numbers used are the deposited FPKM tables, not figure values.",
-    "verbatim_locator | proposition: one replicate is a pool of animals, two replicates per cell type | Methods | \"For all cell types, one biological replicate consists of pooled cells from a litter of 3–12 mice.\"",
-    "verbatim_locator | proposition: oligodendrocyte-lineage cells were isolated at P17 | Results | \"Oligodendrocyte-lineage cell isolation occurred at P17 because it represents the earliest time point when the full collection of oligodendrocyte-lineage cells are present.\""
-  ],
-  "evidence_depth": "partial_fulltext_read",
-  "outputs": [
-    "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/isoform_expression.tsv",
-    "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/function_neural.tsv",
-    "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/decisive.tsv",
-    "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/evidence.tsv"
-  ],
-  "prior_receipt": null,
-  "record_kind": "contemporaneous_receipt",
-  "reread_reason": "first_read",
-  "source_fingerprint": null,
-  "source_kind": "fulltext_remote",
-  "source_locator": "PMC article page for PMC4152602 fetched with plain curl on 2026-11-10 (the publisher site returned a bot check; PMC offers no XML for this article), plus the GEO processed per-sample tables of series GSE52564 read by script; bytes not saved in the repository",
-  "study_id": {
-    "doi": "10.1523/JNEUROSCI.1860-14.2014",
-    "pmid": "25186741"
-  },
-  "workflow": "SCI44 package A step A2 producer og-p (pdh_pdk_sci44_20261110). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+ "analysis_at": "2026-11-10T22:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-10T22:41:00Z",
+ "event_id": "FTR-20261110-25186741-96",
+ "evidence_basis": [
+  "Methods (purification, library, mapping, FPKM threshold) and the Results paragraphs on design, replicate correlation and the Pkm splicing example were read; the cell-type-enriched gene analyses and the figure panels were not. The numbers used are the deposited FPKM tables, not figure values.",
+  "verbatim_locator | proposition: one replicate is a pool of animals, two replicates per cell type | Methods | \"For all cell types, one biological replicate consists of pooled cells from a litter of 3\u201312 mice.\"",
+  "verbatim_locator | proposition: oligodendrocyte-lineage cells were isolated at P17 | Results | \"Oligodendrocyte-lineage cell isolation occurred at P17 because it represents the earliest time point when the full collection of oligodendrocyte-lineage cells are present.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/isoform_expression.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/function_neural.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page for PMC4152602 fetched with plain curl on 2026-11-10 (the publisher site returned a bot check; PMC offers no XML for this article), plus the GEO processed per-sample tables of series GSE52564 read by script; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1523/JNEUROSCI.1860-14.2014",
+  "pmid": "25186741"
+ },
+ "workflow": "SCI44 package A step A2 producer og-p (pdh_pdk_sci44_20261110). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
 }
