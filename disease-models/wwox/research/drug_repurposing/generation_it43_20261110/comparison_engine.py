@@ -43,13 +43,18 @@ def conditions(p: dict) -> tuple:
     s = p.get("species_system_age_prep_exposure_readout", "")
     mv = re.findall(r"(-\d+) ?mV", s); gly = re.findall(r"(\d+) uM glycine|glycine (\d+) uM", s)
     system = "oocyte" if re.search(r"oocyte", s, re.I) else "HEK" if "HEK" in s else "slice" if re.search(r"slice", s, re.I) else "other"
-    return (system, tuple(mv), tuple(g for pair in gly for g in pair if g))
+    free = bool(re.search(r"core[- ]free|without (?:the )?(?:E2|E3BP)|E1-only", s, re.I)); bound = bool(re.search(r"core[- ]bound|(?:with|on) (?:the )?(?:E2|E3BP|E2p/E3BP)", s, re.I))
+    scaffold = "core_both" if free and bound else "core_free" if free else "core_bound" if bound else ""
+    atp = tuple(re.findall(r"(\d+(?:\.\d+)?) ?[um]M ATP", s))
+    return (system, tuple(mv), tuple(g for pair in gly for g in pair if g), scaffold, atp)
 
 def comparable(a: dict, b: dict) -> tuple[bool, str]:
     ca, cb = conditions(a), conditions(b)
     if ca[0] != cb[0]: return False, f"{a['prop_id']} and {b['prop_id']} differ in system ({ca[0]} / {cb[0]})"
     if ca[1] and cb[1] and ca[1] != cb[1]: return False, f"{a['prop_id']} and {b['prop_id']} differ in holding potential ({ca[1]} / {cb[1]})"
     if ca[2] and cb[2] and ca[2] != cb[2]: return False, f"{a['prop_id']} and {b['prop_id']} differ in co-agonist ({ca[2]} / {cb[2]})"
+    if ca[3] and cb[3] and ca[3] != cb[3]: return False, f"{a['prop_id']} and {b['prop_id']} differ in assay scaffold ({ca[3]} / {cb[3]}): lipoamide-site compounds change sign with the core"
+    if ca[4] and cb[4] and ca[4] != cb[4]: return False, f"{a['prop_id']} and {b['prop_id']} differ in ATP ({ca[4]} / {cb[4]})"
     return True, ""
 
 def derive(items: list[dict], pkg: dict, tag: str = "") -> list[dict]:
@@ -63,9 +68,9 @@ def derive(items: list[dict], pkg: dict, tag: str = "") -> list[dict]:
             props = [dict(p, shared=any(o != nm and pattern(o).search(p["statement"]) for o in universe)) for p in dec.values()
                      if pat.search(p["statement"]) and not p["class"].startswith("absence") and p["prop_id"] not in limited and "limit of D" not in p["statement"][:40]]
             rows = {k: r for k, r in cmp_.items() if pat.search(next((v for c, v in r.items() if c.startswith("compound_or_probe")), ""))}
-            ref = any(re.search(re.escape(nm) + r"[^.]*\bis the reference\b", next((v for c, v in r.items() if c.startswith("pharmacological_action")), ""), re.I) for r in cmp_.values()) or any(re.search(r"\bd-apv\b", nm, re.I) and "reference" in v for r in cmp_.values() for c, v in r.items() if c.startswith("pharmacological_action"))
+            ref = any(re.search(re.escape(nm) + r"[^.]*\bis the reference\b", next((v for c, v in r.items() if c.startswith(("pharmacological_action", "action_context"))), ""), re.I) for r in cmp_.values()) or any(re.search(r"\bd-apv\b", nm, re.I) and "reference" in v for r in cmp_.values() for c, v in r.items() if c.startswith("pharmacological_action"))
             tier = tier_of(props)
-            nc = [(a, b, comparable(a, b)) for i, a in enumerate(props) for b in props[i + 1:] if all(x["class"].startswith("compound") and not x["shared"] and re.search(r"IC50|\bKi\b|percent|maxim", x["statement"]) for x in (a, b))]
+            nc = [(a, b, comparable(a, b)) for i, a in enumerate(props) for b in props[i + 1:] if all(x["class"].startswith("compound") and not x["shared"] and re.search(r"IC50|\bKi\b|\bKd\b|percent|%|fold|kcat|maxim", x["statement"]) for x in (a, b))]
             bad = [r for _, _, (ok, r) in nc if not ok]
             blocking = [m for m in meas.values() if any(k in hp._blocked_keys(m["blocks_which_comparison_row"], cmp_) for k in rows)]
             if ref: role, why = "control", "named the reference in the comparison design; tier does not apply"
@@ -99,11 +104,13 @@ def merge(rows: list[dict]) -> list[dict]:
     return list(by.values())
 
 def main():
-    items = [r for r in csv.DictReader(open(DR / "generation_it41_20261109/compound_view.tsv", encoding="utf-8"), delimiter="\t") if r["inv_id"] == "INV-05"]
-    pkgs = [p for p in hp.load_all() if p.get("role") == "pharmacological_comparison" and p.get("inv_id") == "INV-05"]
+    inv = (sys.argv[sys.argv.index("--inv") + 1] if "--inv" in sys.argv else "INV-05")
+    items = [r for r in csv.DictReader(open(DR / "generation_it41_20261109/compound_view.tsv", encoding="utf-8"), delimiter="\t") if r["inv_id"] == inv]
+    pkgs = [p for p in hp.load_all() if p.get("role") == "pharmacological_comparison" and p.get("inv_id") == inv]
     res = merge([r for p in pkgs for r in derive(items, p, p["dir"].parent.name.split("_")[0])])
-    with open(HERE / "compound_decisions_it43.tsv", "w", newline="", encoding="utf-8") as f:
+    out = HERE / ("compound_decisions_it43.tsv" if inv == "INV-05" else f"compound_decisions_{inv.lower().replace('-', '')}_it44.tsv")
+    with open(out, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, OUT_FIELDS, delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(res)
-    for r in res: print(r["item_id"], r["name"], r["evidence_tier"], r["role_derived"], "|", r["comparison_state"][:60], "|", r["premise_needed"])
+    for r in res: print(r["item_id"], r["name"], r["evidence_tier"], r["role_derived"], "|", r["comparison_state"][:70], "|", r["premise_needed"])
 
 if __name__ == "__main__": main()

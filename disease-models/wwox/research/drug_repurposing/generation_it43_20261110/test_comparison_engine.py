@@ -25,6 +25,11 @@ class Contrast(unittest.TestCase):
         self.assertTrue(ce.derive([item("V1", "alpha")], p)[0]["comparison_state"].startswith("NOT_COMPARABLE"))
         q = pkg([prop("D01", "DATO: alpha IC50 72 nM"), prop("D02", "DATO: alpha IC50 80 nM")])
         self.assertEqual(ce.derive([item("V1", "alpha")], q)[0]["comparison_state"], "COMPARABLE")
+    def test_assay_scaffold_and_atp_make_values_not_comparable(self):
+        p = pkg([prop("D01", "DATO: alpha IC50 87 nM with the E2p/E3BP core", system="human PDK1, with the E2p/E3BP core, 5 uM ATP"), prop("D02", "DATO: alpha IC50 stimulation core-free, 10 fold", system="human PDK3, core-free, 5 uM ATP")])
+        self.assertTrue(ce.derive([item("V1", "alpha")], p)[0]["comparison_state"].startswith("NOT_COMPARABLE"))
+        q = pkg([prop("D01", "DATO: alpha IC50 87 nM", system="human PDK1, with the E2p/E3BP core, 5 uM ATP"), prop("D02", "DATO: alpha IC50 90 nM", system="human PDK1, with the E2p/E3BP core, 5 uM ATP")])
+        self.assertEqual(ce.derive([item("V1", "alpha")], q)[0]["comparison_state"], "COMPARABLE")
     def test_unknown_premise_stays_conditional_never_refuted(self):
         r = ce.derive([item("V1", "gamma")], pkg([prop("D01", "DATO: alpha IC50 72 nM")]))[0]
         self.assertEqual((r["evidence_tier"], r["role_derived"]), ("NONE", "unresolved"))
@@ -54,5 +59,14 @@ class RealPackages(unittest.TestCase):
     def test_decisions_file_is_current(self):
         _, res = self.rows(); got = list(csv.DictReader(open(HERE / "compound_decisions_it43.tsv", encoding="utf-8"), delimiter="\t"))
         self.assertEqual([(r["item_id"], r["name"], r["role_derived"]) for r in res], [(r["item_id"], r["name"], r["role_derived"]) for r in got])
+
+class SecondInvestigation(unittest.TestCase):
+    def test_inv07_items_are_derived_and_their_file_is_current(self):
+        items = [r for r in csv.DictReader(open(HERE.parent / "generation_it41_20261109/compound_view.tsv", encoding="utf-8"), delimiter="\t") if r["inv_id"] == "INV-07"]
+        pk = [p for p in hp.load_all() if p.get("role") == "pharmacological_comparison" and p.get("inv_id") == "INV-07"]
+        res = ce.merge([x for p in pk for x in ce.derive(items, p, p["dir"].parent.name.split("_")[0])])
+        got = list(csv.DictReader(open(HERE / "compound_decisions_inv07_it44.tsv", encoding="utf-8"), delimiter="\t"))
+        self.assertEqual([(r["item_id"], r["name"], r["role_derived"]) for r in res], [(r["item_id"], r["name"], r["role_derived"]) for r in got])
+        self.assertTrue({r["name"] for r in res} >= {"dichloroacetate", "AZD7545", "VER-246608"})
 
 if __name__ == "__main__": unittest.main(verbosity=2)

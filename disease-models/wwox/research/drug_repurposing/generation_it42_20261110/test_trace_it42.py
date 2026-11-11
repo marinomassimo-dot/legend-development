@@ -10,6 +10,10 @@ IT44 = IT41.parent / "generation_it44_20261110"   # IT44 relations (S11-S13) lik
 for _rf, _sr in (("relations_s11_it44.tsv", "s11"), ("relations_s12_it44.tsv", "s12"), ("relations_s13_it44.tsv", "s13")):
     if (IT44 / _rf).exists():
         REL |= {r["relation_id"] for r in tsv(IT44 / _rf)}; ROWS += tsv(IT44 / _sr / "search_rows.tsv")
+SCI44 = IT41.parent / "pdh_pdk_sci44_20261110" / "a4"   # SCI44 relations A4-R1..R5 and their rows from the unchanged search path (IT44 consumes them as compound-view relations)
+for _rf, _sr in (("relations_a4.tsv", "search_rows.tsv"), ("relations_a4_katp.tsv", "katp/search_rows.tsv")):
+    if (SCI44 / _rf).exists():
+        REL |= {r["relation_id"] for r in tsv(SCI44 / _rf)}; ROWS += tsv(SCI44 / _sr)
 IT43 = IT41.parent / "generation_it43_20261110"   # IT43 relations (S9) run through the same path with their own input and output folders; the gate reads them too
 if (IT43 / "relations_it43.tsv").exists():
     REL |= {r["relation_id"] for r in tsv(IT43 / "relations_it43.tsv")}; ROWS += tsv(IT43 / "s9" / "search_rows.tsv")

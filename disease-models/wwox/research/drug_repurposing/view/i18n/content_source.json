@@ -127,6 +127,10 @@
   "src": "it",
   "text": "Capire se l'aggiunta del gene giova solo se data nei primi giorni di vita (prevenzione) o anche dopo la comparsa del fenotipo, e se la dose intermedia distingue soglia da gradiente."
  },
+ "1307db80f762": {
+  "src": "en",
+  "text": "PDH activity and flux in a WWOX-deficient human neural cell against an isogenic control, with the glycolytic readout measured in the same material. [IT36] ECAR is not a lactate readout without an oxygen correction; measure lactate and pyruvate directly with redox state. [IT43] The isogenic pair and the oxygen series of INV-19 can carry this measurement: amount and phosphorylation of the step at all three sites, activity before and after dephosphorylation, and the four kinase transcripts, read next to BNIP3 from the same lysates. Reading (IPOTESI): BNIP3, kinase and phosphorylation all up supports a HIF-linked restraint and keeps the kinase lever conditional on it; BNIP3 up with the step unrestrained leaves the lever down while INV-19 stands; neither up points to the culture or oxygen condition. The compound arms follow only after a restraint is measured. [SCI44] Read the step on marker-resolved or sorted material; the dominant kinase RNA differs by class and species (mouse neurons PDK2; human neurons PDK3; astrocytes PDK4 in both species; human oligodendrocytes PDK4): include PDK2-4 transcript and protein per class, a genetic knockdown of the dominant isoform before any compound, and the scaffold condition of any lipoamide-site tool. A restraint measured in one class does not transfer to another."
+ },
  "138c33d59c7f": {
   "src": "en",
   "text": "Full competitive NMDA-receptor block, the reference control"
@@ -231,6 +235,10 @@
   "src": "en",
   "text": "IT23 tried six external capabilities on cases frozen beforehand (a knowledge graph, a network simulator, a protein-profile matrix, a signature search, disease-module discovery and a prediction model): none was adopted as a tool. One relation type became a carried limit: spontaneous seizure reports now appear as counter-evidence on 31 proposal rows and one hand-over, without moving any eligibility. The audit of the action table also found five suspect sign rows in LEGEND's own data. A simulation returned the assumed scenario, a profile matrix could not score the hand-over compounds and a signature search did not overlap with LEGEND's list: for these inputs the limit is the missing measurement of the cytokine axis and a larger qualified seed set, not the number of tools."
  },
+ "23dd576c80ca": {
+  "src": "en",
+  "text": "Activity alone cannot separate a restrained dehydrogenase step from a supply problem; a fuel that bypasses the step and a block of entry give the two opposite expectations."
+ },
  "23f13b85d1f9": {
   "src": "en",
   "text": "This is the thread with real human reports behind it and the one most likely to be read as a recommendation. The module already holds a series in which symptomatic response and developmental outcome did not move together, so the useful investigation is the separation itself, not another symptomatic observation."
@@ -279,13 +287,17 @@
   "src": "en",
   "text": "None for the GluN2B comparison."
  },
+ "29f84ab5a3a6": {
+  "src": "en",
+  "text": "Lowering the kinases that restrain the pyruvate dehydrogenase step: a carded lever with typed, per-isoform rows, conditional on an unmeasured premise; the first probe depends on the dominant kinase of the cell class and on the assay scaffold"
+ },
+ "2a25141fd3da": {
+  "src": "en",
+  "text": "Open or occlude ATP-sensitive K+ channels to test whether a lactate-closed resting conductance contributes to input resistance."
+ },
  "2a932a164144": {
   "src": "en",
   "text": "Measure the axonal activity-dependent myelination signal in the WWOX-deficient system against an isogenic control, before any compound; then decide whether the class is orderable. IT29: add an arm in Wwox-null precursor monoculture or the Wwox-null neuron co-culture, with a lipid-synthesis comparator beside the muscarinic one, crossed with a neuronal-activity manipulation. [IT36] existing co-culture separates neither contact or substrate integrity nor a soluble product; peripheral seizure-free DRG neurons; add a fixed-neuron arm and a factor arm."
- },
- "2ae74025fa9d": {
-  "src": "en",
-  "text": "That the dehydrogenase step is actually restrained in a WWOX-deficient human neural cell: no neural measurement of its amount, phosphorylation or activity exists, and the signs conflict (a lower kinase transcript in an organoid; a higher one with unchanged activity in a non-neural fibroblast line)."
  },
  "2bbdf11dd6e5": {
   "src": "it",
@@ -314,6 +326,10 @@
  "2e055fd6bb53": {
   "src": "it",
   "text": "Rami della risposta UPR, trascritti"
+ },
+ "2e072faaf48e": {
+  "src": "en",
+  "text": "Premise measurement per cell class on sorted or marker-resolved material, with a genetic knockdown of the dominant isoform first; compare the reference with the second chemotype only if a restraint is measured."
  },
  "2e7e81130d1a": {
   "src": "en",
@@ -346,6 +362,10 @@
  "3168a29cd7dc": {
   "src": "it",
   "text": "Capire quale di tre letture spiega lo scoppio di attività nelle fette (guadagno NMDAR, dipendenza permissiva, spinta AMPAR) e se dipende dal blocco da magnesio; serve prima la corrente NMDAR isolata (E1). IT13: servono bracci WT+WWOX e WWOX mutato (morto), l'organoide come unità, cieco, e due silenziatori indipendenti con lavaggio; la scarica da sola resta sintomatica."
+ },
+ "320a244de269": {
+  "src": "en",
+  "text": "One verifier-read source; the pyramidal share of the pooled cells is inferred; no Wwox neuron has been tested."
  },
  "32e98ceb59e0": {
   "src": "en",
@@ -475,6 +495,10 @@
   "src": "it",
   "text": "Laboratorio con linee isogeniche di organoidi e una leva MYC inducibile; linee non disponibili (non nota); dati single-cell depositati con possibile richiesta di accesso."
  },
+ "3f95b954d81e": {
+  "src": "en",
+  "text": "ATP-sensitive K+ channel tools: a conditional metabolic upstream of the potassium branch"
+ },
  "40da6e5a79b9": {
   "src": "en",
   "text": "Every partial-benefit lever in this module is ordered as a bridge to, or a substitute for, restoration; whether restoration works after onset decides which of those two framings is the real one, so one result re-reads the whole list."
@@ -486,6 +510,10 @@
  "4125f4ddb460": {
   "src": "en",
   "text": "An inhibitor of the kinase BTK proposed to restore NPY through STAT3"
+ },
+ "413263c627f5": {
+  "src": "en",
+  "text": "Inhibition of lactate dehydrogenase to lower lactate production, as a probe of the supply side of the same metabolic node."
  },
  "4237b5b32e4c": {
   "src": "en",
@@ -514,6 +542,10 @@
  "44a508f73808": {
   "src": "it",
   "text": "riferimento senza segno: sovrapposizione dei bersagli del composto con i regolatori di primo ordine dei geni, corretta per frequenza"
+ },
+ "44c5b2632709": {
+  "src": "en",
+  "text": "Up: function restored by the fuel but not by kinase inhibition. Down: no change with the fuel in cells where the step is unrestrained."
  },
  "44e42297575e": {
   "src": "it",
@@ -655,10 +687,6 @@
   "src": "en",
   "text": "AhR-pathway activation is adverse in neural precursors in toxin studies; the pathway-target transcript is higher while NFE2L2 is lower."
  },
- "59726ce1b34c": {
-  "src": "en",
-  "text": "The reference has a family record only (isoform unresolved); the two others rest on one assay each, different from each other, so their potencies are not compared; two isoforms have no row for one of them (unknown, not zero). Nothing is known about brain exposure or about which isoforms the relevant cells express. In the one randomised human trial of the reference, in a mitochondrial disease, all treated participants stopped the study drug, mostly for nerve toxicity (abstract level; efficacy not judgeable)."
- },
  "5adc7e0edfc7": {
   "src": "en",
   "text": "Up: the excess sag persisting at matched potential and deflection. Down: it vanishing, or the blocker-sensitive current per capacitance being the same."
@@ -799,6 +827,10 @@
   "src": "en",
   "text": "Pro-myelinating agents (a class; no single compound)"
  },
+ "6a1506ae992d": {
+  "src": "en",
+  "text": "Block of mitochondrial pyruvate entry as a probe, and an alternative fuel that bypasses the dehydrogenase step as a control."
+ },
  "6a5533f711c0": {
   "src": "en",
   "text": "Queried: this need's three observation rows; the NRF2-axis unit and the IT10 and IT11 qualification records on it; the search layer over NFE2L2 and KEAP1 (890 associations, 863 families, none direction-coherent because the need direction is unresolved)."
@@ -834,6 +866,10 @@
  "6e4a8421c3c4": {
   "src": "en",
   "text": "Correction in both genotypes (non-specific), or no change, or correction only with the receptor-beta-leaning control."
+ },
+ "6e688d7420f2": {
+  "src": "en",
+  "text": "Neuronal culture and epileptic-mouse data only; protection by the entry block is not benefit; the fuel's effect was measured as enzyme activity, not flux."
  },
  "6ee3608f2a55": {
   "src": "en",
@@ -874,6 +910,10 @@
  "74f2218ad0d4": {
   "src": "en",
   "text": "Whether an interaction term survives; a wild-type effect of the same size would move this thread out of its group without any new compound being involved."
+ },
+ "7737f1d33ff1": {
+  "src": "en",
+  "text": "In knockout, heterozygote and wild-type slices: sag, resting potential, input resistance, rebound and burst incidence before and after two Ih blockers of different chemotypes (the second so that an off-target action is not read as Ih), with a current-clamp step that matches the resting potential and the peak potential, with a smaller cell or immature membrane listed as its own candidate beside branch D, and a voltage-clamp read of the blocker-sensitive current in a subset of cells; animals, not cells, are the replicates. Branch D adds the potassium-current arm: the potassium currents sensitive to a Kv7 blocker and to a Kir-channel blocker in voltage clamp, and input resistance read with synaptic transmission blocked. [IT36] A first-generation Ih blocker at 50 uM is about 40 times its sodium-current IC50 in DRG neurons (age not stated); read a second chemotype and the blocker-sensitive current in voltage clamp; nickel/Z944 and Kv7 arms separate. [IT40] A4 Report access resistance, bridge balance and capacitance by genotype; add a Ba2+- or Kv7-blocker-sensitive difference current with its zero-crossing against E_K (about -97 to -98 mV from the declared solutions; the recorded potentials need a junction correction of about -13 mV that 34634460 did not measure, which puts the estimated sag peaks about 16-21 mV below E_K, so the prediction applies to the voltage-clamp difference current, not to the sag peak). [SCI43] Order of arms: (0) capacitance measured directly by genotype and the cell-selection rule stated (pyramidal identity was confirmed from Rin and tau); (1) the same cells with and without synaptic blockers, in bursting and non-bursting slices; (2) Ba2+-sensitive current per pF and Rin share (a low micromolar concentration; a higher concentration and a K2P-blocker group as 2b); (3) XE-991-sensitive current at about −55 to −45 mV, not at rest, with a second Kv7 blocker; (4) current sensitive to an Ih blocker, repeated with a second Ih blocker; (5) dynamic-clamp leak of about 2.7 nS as sufficiency only, with a control leak at the WT rest; (6) an opener only after step 3. An implied reversal near E_K does not separate a K+ loss from a smaller cell with a shunt. [SCI44] Add a KATP arm to step 2b: perforated or cell-attached recording with ATP undisturbed, diazoxide and a sulfonylurea in KO and wild type, lactate or pyruvate add-back; state pipette ATP and glucose. Juvenile barrel-cortex neurons show KATP modulation of Vm, Rin and firing and lactate-driven KATP closure (34766906); this is a conditional metabolic upstream of the K branch (PH4), not a repair."
  },
  "775302e45683": {
   "src": "it",
@@ -983,6 +1023,10 @@
   "src": "en",
   "text": "Up: a measured restraint of the step. Down: none found, which lowers the lead without refuting it in other cell types. Reopens with the opposite sign if the cells depend on lactate supply."
  },
+ "837c39b0c495": {
+  "src": "en",
+  "text": "Up: an opener-sensitive and sulfonylurea-occluded current smaller per pF in the mutant. Down: no difference with ATP undisturbed."
+ },
  "8469c8e9d812": {
   "src": "en",
   "text": "None; kept so the filing is not mistaken for evidence: the registry row is not evidence of GluN2B potency in nanomolar."
@@ -1019,6 +1063,10 @@
   "src": "en",
   "text": "Survival of the burst under a verified block would remove an AMPA contribution; abolition alone cannot separate AMPA drive from loss of magnesium relief."
  },
+ "886653cacd79": {
+  "src": "en",
+  "text": "Run both with the premise series: a fuel that restores function points to supply; an entry block that protects points away from release of the dehydrogenase step."
+ },
  "89017defe8da": {
   "src": "en",
   "text": "The selectivity statement rests on a supplementary figure that was not read; slice precedent is a different region and age."
@@ -1051,9 +1099,17 @@
   "src": "en",
   "text": "A GluN2B-selective negative modulator may remove the bursts at a smaller measured fraction of the isolated NMDA-receptor current than the full antagonist needs. Exploratory."
  },
+ "8c2825c7d0b8": {
+  "src": "en",
+  "text": "Measure lactate and pyruvate in the slice with the premise series; only then a matched-suppression comparison against a non-metabolic route."
+ },
  "8c99adf932cf": {
   "src": "en",
   "text": "The lever was already carded; the search now gives a reference and a second, unrelated chemotype with rows on each kinase isoform, so a first experiment can compare them once the premise holds."
+ },
+ "8cec882a325d": {
+  "src": "en",
+  "text": "That lactate is raised in the knockout slice and that the burst needs lactate supply: neither is measured."
  },
  "8d27befa6c69": {
   "src": "it",
@@ -1107,10 +1163,6 @@
   "src": "en",
   "text": "Adding a resting K+ conductance with an opener: the openers that exist act on the weakly Ba2+-sensitive channel family"
  },
- "92b60769e3a3": {
-  "src": "en",
-  "text": "Step 1, no compound: BNIP3 and BNIP3L protein and mRNA from the same lysates, WWOX-deficient against add-back human neural cells at 21, 5 and 1 percent oxygen; step 2: HIF1A and EPAS1 knockdown with HIF target readouts; step 3: BNIP3 knockdown with survival, ROS and membrane potential. The full list of measurements is in the package table of the HIF1A-to-BNIP3 delivery. [IT43] The step-1 lysates also serve INV-07 (phosphorylation and activity of the pyruvate dehydrogenase step and the four kinase transcripts); choose the cell material and oxygen series jointly so that one sample set answers both."
- },
  "92be390b33bb": {
   "src": "en",
   "text": "Possible chemotype controls if V02 and V05 do not give one."
@@ -1142,6 +1194,10 @@
  "96d53a7f4305": {
   "src": "en",
   "text": "The sign: falling cytokines reproduced by controls keeps the proposal conditional; rising cytokines reject the harm arm for this axis. The role of the cytokine change in the knockout is itself unmeasured. The compound is a substrate of efflux transporters in vitro and has no human exposure."
+ },
+ "96f665686c59": {
+  "src": "en",
+  "text": "The evidence is outside WWOX (adult mouse status epilepticus and slice activity); resting properties were never measured; the comparator has a mixed mechanism (GABA-A potentiation) and its enzyme value is copied from a review; no typed catalogue row exists for the enzyme, so the search by symbol reaches nothing."
  },
  "96f85cc03e8a": {
   "src": "en",
@@ -1190,6 +1246,10 @@
  "9a753a5daea3": {
   "src": "en",
   "text": "Inhibition of GluN2B-containing receptors, stronger at acidic pH."
+ },
+ "9a82b2af3c61": {
+  "src": "en",
+  "text": "Step 1, no compound: BNIP3 and BNIP3L protein and mRNA from the same lysates, WWOX-deficient against add-back human neural cells at 21, 5 and 1 percent oxygen; step 2: HIF1A and EPAS1 knockdown with HIF target readouts; step 3: BNIP3 knockdown with survival, ROS and membrane potential. The full list of measurements is in the package table of the HIF1A-to-BNIP3 delivery. [IT43] The step-1 lysates also serve INV-07 (phosphorylation and activity of the pyruvate dehydrogenase step and the four kinase transcripts); choose the cell material and oxygen series jointly so that one sample set answers both. [SCI44] The lysates that serve INV-07 step 1 should be cell-class resolved (neurons, astrocytes, oligodendrocyte lineage) and keep lactate and pyruvate from the same wells."
  },
  "9aa65bd593d4": {
   "src": "en",
@@ -1255,10 +1315,6 @@
   "src": "en",
   "text": "New compound routes for the Q8 question; the NRF2 axis and its step 0 were already a carded thread since IT10; the molecule is in an earlier exclusion list"
  },
- "a56180c19940": {
-  "src": "en",
-  "text": "PDH activity and flux in a WWOX-deficient human neural cell against an isogenic control, with the glycolytic readout measured in the same material. [IT36] ECAR is not a lactate readout without an oxygen correction; measure lactate and pyruvate directly with redox state. [IT43] The isogenic pair and the oxygen series of INV-19 can carry this measurement: amount and phosphorylation of the step at all three sites, activity before and after dephosphorylation, and the four kinase transcripts, read next to BNIP3 from the same lysates. Reading (IPOTESI): BNIP3, kinase and phosphorylation all up supports a HIF-linked restraint and keeps the kinase lever conditional on it; BNIP3 up with the step unrestrained leaves the lever down while INV-19 stands; neither up points to the culture or oxygen condition. The compound arms follow only after a restraint is measured."
- },
  "a5a33bf563ba": {
   "src": "it",
   "text": "Elettrofisiologia su fette del knockout neurone-specifico del laboratorio d'origine: la linea non è disponibile qui, se sia ottenibile non nota."
@@ -1299,6 +1355,10 @@
   "src": "en",
   "text": "Is a destabilised Q230P-class WWOX missense protein cleared by an HSC70-linked lysosomal step in neural cells, and when that step is blocked does the spared protein regain GSK3B-docking function?"
  },
+ "a8b44144db93": {
+  "src": "en",
+  "text": "Whether PDH flux is actually reduced. The lever's direction is derived from the chain, not from a measurement, and the available signs contradict it. [IT36] An energy-to-myelin link (glucose or lactate supply to the oligodendrocyte lineage) is a new thread with undetermined sign: WWOX-side lactate data point up, and when glucose falls in the neuron-targeted line is not measured (hypothesis H2 and open question OQ3 of myelin_generative_it36_20261108). [IT43] The signs conflict between systems: the kinase transcript is lower in the organoid, and higher with lactate up and activity unchanged in a non-neural fibroblast line; no neural measurement exists (package metabolic_inv07_20261107). The one randomised human trial of the reference, in a mitochondrial disease, was stopped early for peripheral nerve toxicity (abstract level), a safety limit to read before any arm is proposed. [SCI44] Lowering PDK is also a risk arm: documented harm directions (6 Hz proconvulsant at abstract level, only the combination of DCA and pyruvate helped in rat seizure, peripheral myelin proteins fell, neuropathy in the one randomised trial) and a lactate-supply role make the net direction by class unknown."
+ },
  "a8c69835d4c3": {
   "src": "it",
   "text": "Drosophila (mosca)"
@@ -1310,6 +1370,10 @@
  "a8fbe1492038": {
   "src": "en",
   "text": "Premise measurement: the transcript deficit is observed in bulk and in one nuclear pool per arm; cell number, identity, intrinsic properties, synaptic input and circuit function are not measured at animal level by any file read here (no ranked unit, so no evaluation depth applies: this is not a depth of zero)"
+ },
+ "aa2f9a5c828a": {
+  "src": "en",
+  "text": "Add a perforated or cell-attached arm with ATP undisturbed to the potassium ladder, with an opener, a sulfonylurea and lactate or pyruvate add-back, stating pipette ATP and glucose."
  },
  "ab1a6c5c29fc": {
   "src": "it",
@@ -1395,10 +1459,6 @@
   "src": "en",
   "text": "Observations that no generator input carried now reach it: a new question on NRF2 tone (one organoid contrast, adjusted p above the deposit's own alpha, role unknown) produced 20 new conditional proposals (the axis itself was already a carded thread since IT10; the compound routes are new); a failed control (the second neural system's progenitor arm did not show WWOX lower) is attached to 71 proposals and a contested direction to 75 more, as carried limits (recorded in the output; removing their ordering term changes no hand-over); a cell-type marker set can no longer become a gene seed; a premise or class limit now travels wherever its edge or target appears in a chain, not only inside one cluster."
  },
- "b48f2fa15fff": {
-  "src": "en",
-  "text": "Lowering the kinases that restrain the pyruvate dehydrogenase step: a carded lever with typed, per-isoform rows, conditional on a premise that is unmeasured"
- },
  "b4c4c771fbc1": {
   "src": "en",
   "text": "Carded axis: the NRF2/KEAP1 need with two conditional arms."
@@ -1426,6 +1486,10 @@
  "b8d770bbd1e2": {
   "src": "en",
   "text": "Ex vivo slice electrophysiology in an existing Wwox neuron-deleted line; tool compounds only; no brain-exposure statement is carried here and none is implied for any clinically used member. [IT41] Decision: whether any HCN-directed tool arm is run. Possible in silico: an ortholog and isoform census of the tools. New measure: sag and rebound at matched potential and deflection, with capacitance and access resistance by genotype. Reopen if: the excess sag persists at matched conditions. Priority: after the matched recording and after INV-05's minimum experiment; no HCN compound is nominated before it."
+ },
+ "b9173f6c4de2": {
+  "src": "en",
+  "text": "That any WWOX preparation shows a restraint or a supply defect; the direction label of the entry block is an inference."
  },
  "ba92d773997b": {
   "src": "en",
@@ -1515,6 +1579,14 @@
   "src": "en",
   "text": "Measure the achieved block and the NMDA-receptor current at the working concentration; test survival of the bursts under a verified block; d-APV only if bursts persist."
  },
+ "c3e2690b7bed": {
+  "src": "en",
+  "text": "A lactate-side probe: the sign depends on the cell compartment"
+ },
+ "c47d0c8a430d": {
+  "src": "en",
+  "text": "The pipette ATP and bath glucose of the recordings, and whether lactate is raised in the knockout slice; whole-cell dialysis can mask the effect."
+ },
  "c49c9b6c64b0": {
   "src": "en",
   "text": "Were the intrinsic recordings made under conditions that bias the genotype contrast?"
@@ -1530,10 +1602,6 @@
  "c668d9eb574e": {
   "src": "en",
   "text": "In isogenic WWOX-deficient against add-back human neural cells at matched oxygen: does BNIP3 protein rise, does it fall on HIF1A and EPAS1 knockdown, and does BNIP3 knockdown make survival, ROS and membrane potential better or worse?"
- },
- "c6c82d3bb69b": {
-  "src": "en",
-  "text": "In knockout, heterozygote and wild-type slices: sag, resting potential, input resistance, rebound and burst incidence before and after two Ih blockers of different chemotypes (the second so that an off-target action is not read as Ih), with a current-clamp step that matches the resting potential and the peak potential, with a smaller cell or immature membrane listed as its own candidate beside branch D, and a voltage-clamp read of the blocker-sensitive current in a subset of cells; animals, not cells, are the replicates. Branch D adds the potassium-current arm: the potassium currents sensitive to a Kv7 blocker and to a Kir-channel blocker in voltage clamp, and input resistance read with synaptic transmission blocked. [IT36] A first-generation Ih blocker at 50 uM is about 40 times its sodium-current IC50 in DRG neurons (age not stated); read a second chemotype and the blocker-sensitive current in voltage clamp; nickel/Z944 and Kv7 arms separate. [IT40] A4 Report access resistance, bridge balance and capacitance by genotype; add a Ba2+- or Kv7-blocker-sensitive difference current with its zero-crossing against E_K (about -97 to -98 mV from the declared solutions; the recorded potentials need a junction correction of about -13 mV that 34634460 did not measure, which puts the estimated sag peaks about 16-21 mV below E_K, so the prediction applies to the voltage-clamp difference current, not to the sag peak). [SCI43] Order of arms: (0) capacitance measured directly by genotype and the cell-selection rule stated (pyramidal identity was confirmed from Rin and tau); (1) the same cells with and without synaptic blockers, in bursting and non-bursting slices; (2) Ba2+-sensitive current per pF and Rin share (a low micromolar concentration; a higher concentration and a K2P-blocker group as 2b); (3) XE-991-sensitive current at about −55 to −45 mV, not at rest, with a second Kv7 blocker; (4) current sensitive to an Ih blocker, repeated with a second Ih blocker; (5) dynamic-clamp leak of about 2.7 nS as sufficiency only, with a control leak at the WT rest; (6) an opener only after step 3. An implied reversal near E_K does not separate a K+ loss from a smaller cell with a shunt."
  },
  "c7f9760e7c63": {
   "src": "en",
@@ -1554,6 +1622,10 @@
  "ca1a44149841": {
   "src": "en",
   "text": "WWOX-system: the Q230P class shows no protein band with a normal transcript; a different missense (P252A) over-expressed in non-neural cells is cleared faster and restored by lysosomal inhibitors but not by a proteasome inhibitor. Compound side: a curated inhibitor action on HSPA8 exists; the one reference reports impaired HSC70 refolding and lower lysosomal degradation in lupus-mouse B cells (abstract-level reading). Nothing shows that the route and the allele are the same. IT22 P6: the peptide's measured binding is micromolar (7.32 uM by surface plasmon resonance), refolding is inhibited at 40 uM, and its own paper reads its action as flux slowing like a lysosomal-acidification inhibitor; the one measured rescue of a WWOX missense is over-expressed P252A in non-neural cells."
+ },
+ "cb2d54ca6a19": {
+  "src": "en",
+  "text": "In juvenile barrel cortex these channels change membrane potential, input resistance and firing, and lactate can close them: a metabolic upstream of the resting-conductance question, capped at about half of the implied loss."
  },
  "cb9711fb3acb": {
   "src": "en",
@@ -1598,6 +1670,10 @@
  "d07824ef936c": {
   "src": "en",
   "text": "HDAC5-specific lowering of SLC2A1 at concentrations that engage HDAC5, or class I inhibition changing SLC2A1 in either direction (then a different proposal)."
+ },
+ "d0fbc49638e3": {
+  "src": "en",
+  "text": "The reference has a family record only; the two others rest on one assay each; one of them is an activator when the assay lacks the scaffold core and an inhibitor when it has it; two isoforms have no row for one compound (unknown, not zero). Lowering the kinases is also a risk arm: harm directions are documented (a proconvulsant effect at abstract level, benefit only for a combination in a rat seizure model, a fall of peripheral myelin proteins, nerve toxicity in the one randomised human trial) and a lactate-supply role makes the net direction by class unknown. Nothing is known about brain exposure."
  },
  "d23f1af1ac7e": {
   "src": "en",
@@ -1787,6 +1863,10 @@
   "src": "en",
   "text": "No arm exists in which treatment begins after the phenotype is established; the window is stated, not measured against a later start, and P300 readouts are survivor-selected."
  },
+ "e608a22e6da1": {
+  "src": "en",
+  "text": "A lever on the other side of the node from the kinase: if lactate supply to neurons matters, lowering it could help or harm depending on the compartment."
+ },
  "e6aa39a1f3a3": {
   "src": "en",
   "text": "Input resistance rises 39 percent in mutants while the time constant is nearly unchanged; resting potential and sag grade with gene dose. Recordings use one fixed current step."
@@ -1847,6 +1927,10 @@
   "src": "en",
   "text": "Is there an axonal signal left for a pro-myelinating agent to act on, before any such agent is ordered?"
  },
+ "ef164eefe7bf": {
+  "src": "en",
+  "text": "That the dehydrogenase step is actually restrained in a WWOX-deficient human neural cell, per cell class: no neural measurement of its amount, phosphorylation or activity exists, the dominant kinase differs by class and species, and the signs conflict (a lower kinase transcript in an organoid; a higher one with unchanged activity in a non-neural fibroblast line)."
+ },
  "f0fae297b689": {
   "src": "en",
   "text": "The chain as written: that this inhibitor lowers SLC2A1 by acting on HDAC5 in a WWOX-deficient neural cell."
@@ -1895,10 +1979,6 @@
   "src": "en",
   "text": "It decides whether any parvalbumin-directed pharmacology, positive modulation or another kind, can be thought about at all, and which of the inhibitory-hypofunction contrasts to run first. Its direction is not assumed: raising parvalbumin-cell activity is not taken to be the right direction. It enters at rank 6 as a premise measurement because the nucleus-level route was closed by the replicate structure of the deposit and what remains is a per-animal measurement."
  },
- "f580dd564bdc": {
-  "src": "en",
-  "text": "Measure the step's activity and flux with lactate, pyruvate and redox state in an isogenic human neural pair; only if it is restrained, compare the reference with the second chemotype on the same readout."
- },
  "f5a4dd769acf": {
   "src": "en",
   "text": "Queried: a whole-word name search of this module and its registries on 2026-11-03 (no hit for the peptide), the need file, and the catalogue, where a curated inhibitor row was filed as not evaluable by the compound-to-need route. A name search in this module, not a statement about the literature."
@@ -1906,10 +1986,6 @@
  "f5fa1532a11a": {
   "src": "en",
   "text": "Generated by LEGEND (generator refresh IT21 P2, proposal IT21P2-0195, harm arm of the cytokine question); a thread already generated in IT9 and re-emitted, qualified in IT21 P4a and kept conditional with the scope narrowed to mouse glial systems."
- },
- "f651bcf3ba26": {
-  "src": "en",
-  "text": "Whether PDH flux is actually reduced. The lever's direction is derived from the chain, not from a measurement, and the available signs contradict it. [IT36] An energy-to-myelin link (glucose or lactate supply to the oligodendrocyte lineage) is a new thread with undetermined sign: WWOX-side lactate data point up, and when glucose falls in the neuron-targeted line is not measured (hypothesis H2 and open question OQ3 of myelin_generative_it36_20261108). [IT43] The signs conflict between systems: the kinase transcript is lower in the organoid, and higher with lactate up and activity unchanged in a non-neural fibroblast line; no neural measurement exists (package metabolic_inv07_20261107). The one randomised human trial of the reference, in a mitochondrial disease, was stopped early for peripheral nerve toxicity (abstract level), a safety limit to read before any arm is proposed."
  },
  "f8c3ae2a2f19": {
   "src": "en",
@@ -1962,6 +2038,14 @@
  "fea73c1a198c": {
   "src": "en",
   "text": "The registry GluN2B row is a GluN2B measurement (113 micromolar) stored as nanomolar; DQP-1105 prefers GluN2C and GluN2D: excluded from the GluN2B comparison"
+ },
+ "ff307447049c": {
+  "src": "en",
+  "text": "A probe at the opposite end of the node and a fuel control, to separate a dehydrogenase defect from a supply defect"
+ },
+ "ff88b54a40c8": {
+  "src": "en",
+  "text": "Up: lactate raised in the knockout and a burst fall that tracks lactate supply. Down: lactate unchanged, or a fall explained by GABA-A potentiation or pH."
  },
  "ffe61ba5c2e6": {
   "src": "en",

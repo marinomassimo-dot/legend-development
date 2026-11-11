@@ -60,3 +60,19 @@ The SCI43 tables are not `comparison.tsv`, so no registry row was added (SCI43 r
 
 ## P8 an over-severe exclusion, tested as its own relation (S13)
 `relation_s13_frame_it44.md` (before), `relations_s13_it44.tsv`, `s13/`, `relation_s13_result_it44.md`, `apply_it44_s13.py`: the 20 rows excluded for S1 as family records are the candidates for the H_total_gain question; with a relation row that carries it the engine returns the clinically available pore-blocker class (22 ChEMBL candidates), the exclusion was right for S1 and the question was missing a row, not wrong. New: the Mg2+ coupling (a pore blocker's apparent potency depends on bath magnesium) stated as a condition of the drug comparison; consumers: one INV-05 comparator row and the M01 condition record. Nothing is new against LEGEND (the arm is at card level).
+
+## P1/P6: SCI44 package A consumed (`pdh_pdk_sci44_20261110/consumer_delta.md`, 15 rows)
+| Row | Consumer | Before → after |
+|---|---|---|
+| 1, 2 | INV-07 `next_test`, `decisive_uncertainty` (both tables) | generic "measure PDH in a neural cell" → per cell class (the dominant kinase differs by class and species), genetic knockdown of the dominant isoform first, scaffold condition of lipoamide-site tools; and the lever stated as a risk arm with its documented harm directions |
+| 3 | open question (the need file has no field: format limit) | IT44-Q03/Q04/Q05 rows (pipette ATP and glucose; lactate supply at matched suppression; kinase protein by cell type); IT43-Q02 concluded at RNA level |
+| 4, 5 | INV-19 and INV-18 `next_test` | INV-19 lysates cell-class resolved with lactate and pyruvate; INV-18 ladder gains a KATP arm with ATP undisturbed (a conditional metabolic upstream of KH1, capped at about half of the implied loss) |
+| 6, 7 | `compound_view.tsv` V13 refined; V15 (lactate-side probe), V16 (pyruvate-entry probe and fuel control), V17 (KATP tools) | V13 now states the cell-class and scaffold dependence and the risk arm; three new entries, five languages |
+| 8 | `hypothesis_packages.tsv` | the SCI44 `engine/` folder registered for INV-07 |
+| 9 | `comparison_engine.py` | (a) `--inv` parameter: INV-07 items are derived (`compound_decisions_inv07_it44.tsv`); (b) assay scaffold and ATP are conditions: **AZD7545 core-bound versus core-free values are now NOT_COMPARABLE (was COMPARABLE)**; (c) the reference control is read from either design column; two tests added |
+| 10 | identity facts (documented here, not edited: the identity declarations are Harness's) | the PDK1 symbol in four DGIdb rows means PDPK1; devimistat's four rows carry kinase stimulation; AZD7545 "human" unsupported; the acid and the salt of the reference are one pharmacology; UK-5099 and oxamate are NOT_FOUND_BY_NAME although typed in GtoPdb or present in ChEMBL (a name-route gap for Harness) |
+| 11 | relations | A4-R1..R5 are read from `pdh_pdk_sci44_20261110/a4/` by the trace gate (V15-V17 carry them); not copied into `relations_it43.tsv` to keep the DGIdb listing path unchanged |
+| 12, 13 | open questions, M01 | as above; M01 gains pipette ATP, bath glucose, lactate and pyruvate and the recording mode |
+| 14 | information | the SCI43 README already carries the dated KATP line |
+| 15 | 93 staged receipts | recorded after a clean trial (below) |
+Not verified independently here: the SCI44 scientific content (its own blind verifiers did); IT44's consumption is informatic. Open engine limits kept: the engine still filters by investigation and reads the producers' own labels.
