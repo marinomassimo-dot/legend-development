@@ -6,7 +6,7 @@ Non-canonical research material. Not medical advice; no dose or clinical prefere
 
 1. **Pointer qualification (S8 item 1)**: `../k2p_pointers_sci45_20261111/` (ONO-TR-772 and four more primary reads, verified).
 2. **Decisive open premise (item 2)**: the TREK-1 slope was not obtainable (no stated slope; no 30-37 C source), but the verifier's new source gave the residual current (Imin 0.25), which changed the size check (`size_check_imin.tsv`). Corrected in the package.
-3. **Not done, with reason**: Harness anomalies (item 3: none pointed at a number that changes this decision); a public-data reanalysis (item 4: the local GEO raw tables used by SCI44 are no longer on this disk, and the one new fact needed, Kcnk3 class means, already sits in `kchan_expression_mouse.tsv`; the 15 predictions were not rerun).
+3. **Not done, with reason**: Harness anomalies (item 3: none pointed at a number that changes this decision); a public-data reanalysis (item 4: the raw GEO tables used by SCI44 were not found by a bounded search of this disk (depth 6), and the one new fact needed, Kcnk3 class means, already sits in `kchan_expression_mouse.tsv`; the 15 predictions were not rerun).
 
 ## 2. A lever different from the first mechanism (DREAM, item 5)
 
