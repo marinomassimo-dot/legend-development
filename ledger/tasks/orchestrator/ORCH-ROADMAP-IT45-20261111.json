@@ -7,7 +7,7 @@
   "START_UTC": "2026-11-11T06:00:00Z",
   "OBJECTIVE": "IT45: turn recovered activities into contextualised pharmacological hypotheses and understandable research priorities: comparisons corrected and recomputed, one pointer carried to a hypothesis, a new combination, coarse filters measured, four-condition evaluation, priority dashboard.",
   "AUTHORISED_QUEUE_20261108": {
-    "MANDATE_STATE": "OPEN",
+    "MANDATE_STATE": "COMPLETE",
     "OBJ_P0": {
       "order": 1,
       "steps": [
@@ -79,9 +79,9 @@
       "steps": [
         {
           "step": "Investigation ranking and dashboard: what / compound or class / why / missing premise / outcome that changes the decision / what LEGEND can do now / what needs a measurement; five languages, phone, site verified",
-          "status": "IN_PROGRESS",
+          "status": "DONE",
           "owner": "orchestrator",
-          "evidence": "Views regenerated 5239fbb0 (check/package current, audit 0 violations); V19, V10, INV-08/18 clauses, IT45-Q01..Q04; waits for battery and Harness he45b."
+          "evidence": "Views regenerated five languages (check/package current, audit 0 violations); V19, V10, INV-08/INV-18 clauses, IT45-Q01..Q08 landed on main bfd5304e. Site publish and phone check after CI."
         }
       ]
     },
@@ -90,9 +90,9 @@
       "steps": [
         {
           "step": "Consume SCI45 and HE45 deliveries when verified, naming the snapshot; Claude Science material kept distinct",
-          "status": "TODO",
+          "status": "DONE",
           "owner": "orchestrator",
-          "evidence": ""
+          "evidence": "SCI45 P1 (a092e709) and Q1 consumed: INV-18 pHo arm, IT45-Q05..Q07, 39 receipts; SCI45 N1 (4cbc8ba4) consumed: INV-18 burst/NMDAR arm, S3 design A4 update, IT45-Q08, 15 receipts (ledger 1,787). HE45 f76439c2 consumed (my role_of edit dropped for unqualified_entity). Claude Science material: none arrived."
         }
       ]
     },
@@ -101,9 +101,9 @@
       "steps": [
         {
           "step": "DREAM after material results",
-          "status": "TODO",
+          "status": "DONE",
           "owner": "orchestrator",
-          "evidence": ""
+          "evidence": "disease-models/wwox/research/drug_repurposing/generation_it45_20261111/README.md DREAM section; session_evaluations/2026-11-11_orchestrator_it45.md; self_eval PASS."
         }
       ]
     },
@@ -112,9 +112,9 @@
       "steps": [
         {
           "step": "Autonomous queue: second case, a different relation pointer, an over-severe exclusion, a revival trigger, a duplication, a priority card, next-batch brief",
-          "status": "TODO",
+          "status": "DONE",
           "owner": "orchestrator",
-          "evidence": ""
+          "evidence": "Over-severe exclusion, revival trigger, duplication and priority-card items: second case (S12/S2), a pointer on a different relation (HCN1 probe), IT45-Q01..Q08, next-batch brief next_batch_it45_20261111/BRIEFS.md. The S2/Q04 probe-page reading stays an executable reading task in the brief."
         }
       ]
     },
@@ -123,9 +123,9 @@
       "steps": [
         {
           "step": "Closure: batteries by SHA in unique clones, landing, push, CI, site; no executable item left open; ordinary cleanup of own clean integrated worktrees",
-          "status": "TODO",
+          "status": "DONE",
           "owner": "orchestrator",
-          "evidence": ""
+          "evidence": "Battery of candidate 73b07211 = PASS WITH SKIPS (239 targets, 11 environmental skips). Landed bfd5304e (merge of main 4cbc8ba4 and the SCI45 N1 consumption are NOT covered by a battery; covered by touched-folder suites, view suite, lint, ledger, growth anchors and the push gate PASS). CI pending at the time of writing."
         }
       ]
     }
