@@ -1,0 +1,60 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-SCI45B-20261111",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Operator instruction 2026-11-11 after SCI45: proceed with the three next actions (1 integrate P1/Q1 in IT45 = confirm hand-off, no shared-consumer edit by me; 2 brief successivo: proton sensitivity of NMDA receptors and ASIC1a, then a net-sign table by software; 3 minimal measurement: a research-design protocol sheet, no laboratory commission) and remove worktrees sci45 and sci45q if no longer needed (authorised, done).",
+ "START_UTC": "2026-11-11T20:00:00Z",
+ "BASELINE": "main a092e709 (SCI45 landed). Worktree .claude/worktrees/sci45n, branch task/sci45n. Worktrees sci45 and sci45q removed under the operator's written authorisation of 2026-11-11 (clean, contained in main); branch task/sci45q deleted (merged). IT44 branch task/it44 at 8edf3852 has not yet consumed SCI45.",
+ "CURRENT_PACKAGE": {
+  "id": "N1 nmda_asic_ph_sci45_20261111",
+  "state": "brief and preregistration written",
+  "delegate_active": "none",
+  "updated": "2026-11-11"
+ },
+ "RESUME": "Dispatch producer og-z (sonnet/medium) with BRIEF_N1.md; then verifier (sonnet/high) on the decisive rows; then net_sign.py by the preregistered rule; then MEASUREMENT_PROTOCOL.md (action 3); then gate/LINT/receipts/growth, battery on the frozen SHA in a fresh clone, task_close, safe_push, message IT44.",
+ "DECISIONS_TAKEN": [
+  "2026-11-11 operator authorised removal of worktrees sci45 and sci45q: both clean, contained in main; removed with git worktree remove (no force); /tmp/sci45_batt_* clones left (not covered by the authorisation)."
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "AUTHORISED_QUEUE_20261111B": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_A1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Action 1: confirm IT44/IT45 hand-off of P1 and Q1 (receipts, delta rows); I record no receipts and edit no shared consumer",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "IT44 branch has not consumed SCI45 at 8edf3852; messages sent with main SHA a092e709"
+    }
+   ]
+  },
+  "OBJ_A2": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Action 2: N1 producer, verifier, corrections, net-sign table, README, consumer delta",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_A3": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "Action 3: minimal measurement as a research-design protocol sheet (pHo record, pH step, perforated patch, burst readout), no commission",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  }
+ }
+}
