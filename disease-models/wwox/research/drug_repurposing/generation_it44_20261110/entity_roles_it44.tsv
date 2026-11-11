@@ -11,14 +11,14 @@ S1	CAT:CHEMBL2107771	RALFINAMIDE		clinical_candidate	EXCLUDED	candidate	candidat
 S1	CAT:CHEMBL2110814	DELUCEMINE		clinical_candidate	EXCLUDED	candidate	candidate	rule R8
 S1	CAT:CHEMBL2110814	DELUCEMINE HYDROCHLORIDE		phase_unknown	EXCLUDED	unqualified_entity	unqualified_entity	rule default
 S1	CAT:CHEMBL2110954	NERAMEXANE MESYLATE		clinical_candidate	EXCLUDED	candidate	candidate	rule R8
-S1	CAT:CHEMBL3544917	RAPASTINEL		clinical_candidate	EXCLUDED	candidate	candidate	rule R8
+S1	CAT:CHEMBL3544917	RAPASTINEL		clinical_candidate	EXCLUDED	probe	probe	rule R9
 S1	CAT:CHEMBL3545350	EVT-101		clinical_candidate	CANDIDATE	candidate	candidate	rule R8
 S1	CAT:CHEMBL3545351	AV-101		clinical_candidate	EXCLUDED	candidate	candidate	rule R8
 S1	CAT:CHEMBL3707355	AZD8108		clinical_candidate	EXCLUDED	candidate	candidate	rule R8
 S1	CAT:CHEMBL3707400	INDANTADOL		clinical_candidate	EXCLUDED	candidate	candidate	rule R8
 S1	CAT:CHEMBL395091	ESKETAMINE		approved_any_source	EXCLUDED	candidate	candidate	rule R7
 S1	CAT:CHEMBL395091	ESKETAMINE HYDROCHLORIDE		approved_any_source	EXCLUDED	candidate	candidate	rule R7
-S1	CAT:CHEMBL3989872	APIMOSTINEL		clinical_candidate	EXCLUDED	candidate	candidate	rule R8
+S1	CAT:CHEMBL3989872	APIMOSTINEL		clinical_candidate	EXCLUDED	probe	probe	rule R9
 S1	CAT:CHEMBL41306	CNS-5161		phase_unknown	EXCLUDED	unqualified_entity	unqualified_entity	rule default
 S1	CAT:CHEMBL452461	PERZINFOTEL		clinical_candidate	EXCLUDED	candidate	candidate	rule R8
 S1	CAT:CHEMBL467084	LANICEMINE		clinical_candidate	EXCLUDED	candidate	candidate	rule R8
@@ -148,14 +148,14 @@ S13	CAT:CHEMBL2107771	RALFINAMIDE		clinical_candidate	CANDIDATE	candidate	candid
 S13	CAT:CHEMBL2110814	DELUCEMINE		clinical_candidate	CANDIDATE	candidate	candidate	rule R8
 S13	CAT:CHEMBL2110814	DELUCEMINE HYDROCHLORIDE		phase_unknown	CANDIDATE	unqualified_entity	unqualified_entity	rule default
 S13	CAT:CHEMBL2110954	NERAMEXANE MESYLATE		clinical_candidate	CANDIDATE	candidate	candidate	rule R8
-S13	CAT:CHEMBL3544917	RAPASTINEL		clinical_candidate	EXCLUDED	candidate	candidate	rule R8
+S13	CAT:CHEMBL3544917	RAPASTINEL		clinical_candidate	EXCLUDED	probe	probe	rule R9
 S13	CAT:CHEMBL3545350	EVT-101		clinical_candidate	CANDIDATE	candidate	candidate	rule R8
 S13	CAT:CHEMBL3545351	AV-101		clinical_candidate	CANDIDATE	candidate	candidate	rule R8
 S13	CAT:CHEMBL3707355	AZD8108		clinical_candidate	CANDIDATE	candidate	candidate	rule R8
 S13	CAT:CHEMBL3707400	INDANTADOL		clinical_candidate	CANDIDATE	candidate	candidate	rule R8
 S13	CAT:CHEMBL395091	ESKETAMINE		approved_any_source	CANDIDATE	candidate	candidate	rule R7
 S13	CAT:CHEMBL395091	ESKETAMINE HYDROCHLORIDE		approved_any_source	CANDIDATE	candidate	candidate	rule R7
-S13	CAT:CHEMBL3989872	APIMOSTINEL		clinical_candidate	EXCLUDED	candidate	candidate	rule R8
+S13	CAT:CHEMBL3989872	APIMOSTINEL		clinical_candidate	EXCLUDED	probe	probe	rule R9
 S13	CAT:CHEMBL41306	CNS-5161		phase_unknown	CANDIDATE	unqualified_entity	unqualified_entity	rule default
 S13	CAT:CHEMBL452461	PERZINFOTEL		clinical_candidate	CANDIDATE	candidate	candidate	rule R8
 S13	CAT:CHEMBL467084	LANICEMINE		clinical_candidate	CANDIDATE	candidate	candidate	rule R8
