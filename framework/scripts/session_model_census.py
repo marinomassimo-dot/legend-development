@@ -104,8 +104,18 @@ def census(path: Path, since: str = "") -> dict[str, Any]:
         models[str(turn["model"])] = models.get(str(turn["model"]), 0) + 1
     changes = [(turns[index - 1]["model"], turn["model"], turn["at"])
                for index, turn in enumerate(turns) if index and turn["model"] != turns[index - 1]["model"]]
+    # a new window starts where the context falls below 70% of the previous turn's (compaction or a restart from a checkpoint): the re-read cost is per window
+    windows, begin = [], 0
+    for index in range(1, len(turns) + 1):
+        if index == len(turns) or turns[index]["context"] < 0.7 * turns[index - 1]["context"]:
+            part = turns[begin:index]
+            windows.append({"turns": len(part), "birth_context": part[0]["context"], "peak_context": max(t["context"] for t in part),
+                            "cache_read": sum(t["cache_read"] for t in part), "output": sum(t["output"] for t in part),
+                            "mean_context": sum(t["context"] for t in part) // len(part)})
+            begin = index
     return {
         "transcript": str(path),
+        "windows": windows,
         "turns": len(turns),
         "models": models,
         "changed_mid_run": bool(changes),
@@ -139,6 +149,10 @@ def render(rows: list[dict[str, Any]]) -> str:
                      f"(prompt {row['prompt_chars']:,} chars) · peak {row['peak_context']:,}")
         lines.append(f"    the start context re-read on every turn = {int(100 * row['start_context_share_of_cache_read'])}% of cache read · "
                      f"context drops (compaction or new window) {row['context_drops']}")
+        if len(row.get("windows", [])) > 1:
+            for number, window in enumerate(row["windows"], 1):
+                lines.append(f"    window {number}: {window['turns']} turns · birth {window['birth_context']:,} → peak {window['peak_context']:,} · mean per turn "
+                             f"{window['mean_context']:,} · cache read {window['cache_read']:,} · output {window['output']:,}")
         totals = row["totals"]
         lines.append(f"    cache written {totals['cache_creation']:,} · cache read "
                      f"{totals['cache_read']:,} · output {totals['output']:,}")

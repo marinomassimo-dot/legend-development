@@ -112,5 +112,33 @@ class RegistryRows(unittest.TestCase):
             self.assertEqual(got, ["Cs+"])
 
 
+class SummariseTests(unittest.TestCase):
+    def q(self, kind, v, unit, rel="=", target="KCNQ2", species="Homo sapiens", system="B", src=""):
+        return m.measure(kind, v, unit, rel, target=target, species=species, system=system, source=src)
+
+    def test_groups_are_not_pooled_into_one_minimum(self):
+        rows = [self.q("IC50", 5, "uM", src="act1"), self.q("Ki", 2, "nM", src="act2"), self.q("IC50", 50, "nM", target="KCNQ3", src="act3"), self.q("IC50", 90, "nM", species="Rattus norvegicus", src="act4")]
+        g = m.summarise(rows)
+        self.assertEqual(len(g), 4)                    # a Ki, another target and another species do not lower the IC50 of KCNQ2 in human
+        human = next(x for x in g if x["kind"] == "IC50" and x["target"] == "KCNQ2" and x["species"] == "Homo sapiens")
+        self.assertEqual((human["lowest_nM"], human["lowest_ref"]), (5000.0, "act1"))
+
+    def test_extremes_carry_their_row_and_bounds_are_counted_not_taken(self):
+        rows = [self.q("IC50", 30, "uM", src="a1"), self.q("IC50", 200, "nM", src="a2"), self.q("IC50", 10, "nM", rel=">", src="a3"), self.q("IC50", None, "nM", src="a4")]
+        (g,) = m.summarise(rows)
+        self.assertEqual((g["lowest_nM"], g["lowest_ref"], g["highest_nM"], g["highest_ref"]), (200.0, "a2", 30000.0, "a1"))
+        self.assertEqual((g["n"], g["n_plain"], g["n_bounds_or_ranges"], g["n_unusable"]), (4, 2, 1, 1))
+
+    def test_all_censored_group_has_no_extreme(self):
+        (g,) = m.summarise([self.q("EC50", 10, "uM", rel=">", src="x")])
+        self.assertIsNone(g["lowest_nM"])
+        self.assertIn("no plain value", m.render_summary([g]))
+
+    def test_render_names_every_group_and_the_lowest_row(self):
+        text = m.render_summary(m.summarise([self.q("IC50", 5, "uM", src="act1"), self.q("Ki", 2, "nM", src="act2")]))
+        self.assertIn("IC50 [KCNQ2 Homo sapiens B] n=1: 5000 nM (lowest at act1)", text)
+        self.assertIn("Ki [", text)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

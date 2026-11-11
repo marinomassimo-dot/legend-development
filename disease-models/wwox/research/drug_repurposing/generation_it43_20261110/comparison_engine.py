@@ -13,7 +13,7 @@ Evidence tier of a compound for the comparison (lowest rung that is true, stated
   NONE      no proposition names it (not stated here, never 'tested and absent')
 Role ceiling: only PRIMARY may be a probe or comparator; every other tier is 'unresolved' with the missing datum named.
 A reference control is assigned by the comparison design (the row's action cell calls it the reference), not by tier.
-Two potency propositions of one compound are NOT_COMPARABLE when their recording conditions (holding potential, glycine, system) differ.
+Two potency propositions of one compound are NOT_COMPARABLE when a recording condition stated on both sides differs (system, holding potential, glycine, glutamate, ATP, scaffold...); CONDITIONS_INSUFFICIENT when the conditions are missing on one side or the system is not recognised (a premise to name, not a block); COMPARABLE only when the conditions are documented and equal (framework/scripts/assay_conditions.py).
 A premise that no source resolves keeps the role conditional: the engine never writes 'weakened' without an explicit ABSENCE or measured-negative row."""
 from __future__ import annotations
 import csv, re, sys
@@ -21,6 +21,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent; DR = HERE.parent
 sys.path.insert(0, str(HERE.parents[4] / "framework/scripts"))
 import hypothesis_package as hp  # noqa: E402
+import assay_conditions as ac  # noqa: E402
 
 ALIASES = {"d-apv": ["d-apv", "d-ap5", "apv"], "ro 25-6981": ["ro 25-6981", "ro25-6981", "ro 25 6981"], "uk-5099": ["uk-5099", "uk5099", "uk 5099"], "oxamate": ["oxamate", "sodium oxamate"]}
 OUT_FIELDS = ["item_id", "name", "evidence_tier", "tier_props", "role_derived", "role_reason", "comparison_state", "premise_needed", "discriminating_measure", "public_source_work", "relaunch_question"]
@@ -39,23 +40,15 @@ def tier_of(props: list[dict]) -> str:
     if props: return "ABSTRACT"
     return "NONE"
 
-def conditions(p: dict) -> tuple:
-    s = p.get("species_system_age_prep_exposure_readout", "")
-    mv = re.findall(r"(-\d+) ?mV", s); gly = re.findall(r"(\d+) uM glycine|glycine (\d+) uM", s)
-    system = "oocyte" if re.search(r"oocyte", s, re.I) else "HEK" if "HEK" in s else "slice" if re.search(r"slice", s, re.I) else "other"
-    free = bool(re.search(r"core[- ]free|without (?:the )?(?:E2|E3BP)|E1-only", s, re.I)); bound = bool(re.search(r"core[- ]bound|(?:with|on) (?:the )?(?:E2|E3BP|E2p/E3BP)", s, re.I))
-    scaffold = "core_both" if free and bound else "core_free" if free else "core_bound" if bound else ""
-    atp = tuple(re.findall(r"(\d+(?:\.\d+)?) ?[um]M ATP", s))
-    return (system, tuple(mv), tuple(g for pair in gly for g in pair if g), scaffold, atp)
+def compare_props(a: dict, b: dict, cells: dict | None = None) -> dict:
+    """Two propositions' recording conditions, read by the generic assay_conditions: DOCUMENTED_AGREEMENT / DOCUMENTED_INCOMPATIBILITY / INSUFFICIENT."""
+    field = "species_system_age_prep_exposure_readout"
+    return ac.compare(ac.parse(a.get(field, ""), cells), ac.parse(b.get(field, ""), cells))
 
 def comparable(a: dict, b: dict) -> tuple[bool, str]:
-    ca, cb = conditions(a), conditions(b)
-    if ca[0] != cb[0]: return False, f"{a['prop_id']} and {b['prop_id']} differ in system ({ca[0]} / {cb[0]})"
-    if ca[1] and cb[1] and ca[1] != cb[1]: return False, f"{a['prop_id']} and {b['prop_id']} differ in holding potential ({ca[1]} / {cb[1]})"
-    if ca[2] and cb[2] and ca[2] != cb[2]: return False, f"{a['prop_id']} and {b['prop_id']} differ in co-agonist ({ca[2]} / {cb[2]})"
-    if ca[3] and cb[3] and ca[3] != cb[3]: return False, f"{a['prop_id']} and {b['prop_id']} differ in assay scaffold ({ca[3]} / {cb[3]}): lipoamide-site compounds change sign with the core"
-    if ca[4] and cb[4] and ca[4] != cb[4]: return False, f"{a['prop_id']} and {b['prop_id']} differ in ATP ({ca[4]} / {cb[4]})"
-    return True, ""
+    """Kept for callers of the earlier name: False only for a documented incompatibility (insufficient information is not a block)."""
+    r = compare_props(a, b)
+    return r["state"] != ac.INCOMPATIBILITY, "; ".join(f"{a['prop_id']} and {b['prop_id']} differ in {x}" for x in r["reasons"]) if r["state"] == ac.INCOMPATIBILITY else ""
 
 def derive(items: list[dict], pkg: dict, tag: str = "") -> list[dict]:
     """items: compound_view rows (item_id, name_full, kind...); pkg: a loaded pharmacological_comparison package (hp.load_comparison)."""
@@ -70,8 +63,10 @@ def derive(items: list[dict], pkg: dict, tag: str = "") -> list[dict]:
             rows = {k: r for k, r in cmp_.items() if pat.search(next((v for c, v in r.items() if c.startswith("compound_or_probe")), ""))}
             ref = any(re.search(re.escape(nm) + r"[^.]*\bis the reference\b", next((v for c, v in r.items() if c.startswith(("pharmacological_action", "action_context"))), ""), re.I) for r in cmp_.values()) or any(re.search(r"\bd-apv\b", nm, re.I) and "reference" in v for r in cmp_.values() for c, v in r.items() if c.startswith("pharmacological_action"))
             tier = tier_of(props)
-            nc = [(a, b, comparable(a, b)) for i, a in enumerate(props) for b in props[i + 1:] if all(x["class"].startswith("compound") and not x["shared"] and re.search(r"IC50|\bKi\b|\bKd\b|percent|%|fold|kcat|maxim", x["statement"]) for x in (a, b))]
-            bad = [r for _, _, (ok, r) in nc if not ok]
+            cells = {i: q.get("species_system_age_prep_exposure_readout", "") for i, q in dec.items()}
+            nc = [(a, b, compare_props(a, b, cells)) for i, a in enumerate(props) for b in props[i + 1:] if all(x["class"].startswith("compound") and not x["shared"] and re.search(r"IC50|\bKi\b|\bKd\b|percent|%|fold|kcat|maxim", x["statement"]) for x in (a, b))]
+            bad = [f"{a['prop_id']} and {b['prop_id']} differ in " + "; ".join(r["reasons"]) for a, b, r in nc if r["state"] == ac.INCOMPATIBILITY]
+            thin = [f"{a['prop_id']} and {b['prop_id']}: " + "; ".join(r["reasons"]) for a, b, r in nc if r["state"] == ac.INSUFFICIENT]
             blocking = [m for m in meas.values() if any(k in hp._blocked_keys(m["blocks_which_comparison_row"], cmp_) for k in rows)]
             if ref: role, why = "control", "named the reference in the comparison design; tier does not apply"
             elif tier == "PRIMARY": role, why = it["kind"] if it["kind"] in ("probe", "known_requalified") else "probe", f"mechanism read in a primary source ({', '.join(p['prop_id'] for p in props)})"
@@ -80,11 +75,15 @@ def derive(items: list[dict], pkg: dict, tag: str = "") -> list[dict]:
                 role, why = "unresolved", miss
             first = min(blocking, key=lambda m: -len([k for k in hp._blocked_keys(m["blocks_which_comparison_row"], cmp_)])) if blocking else None
             out.append({"item_id": it["item_id"], "name": nm, "evidence_tier": tier, "tier_props": ",".join(f"{tag}:{p['prop_id']}" for p in props), "role_derived": role, "role_reason": why,
-                        "comparison_state": ("NOT_COMPARABLE: " + "; ".join(bad)) if bad else ("COMPARABLE" if len(props) > 1 else "SINGLE_OR_NONE"),
+                        "comparison_state": ("NOT_COMPARABLE: " + "; ".join(bad)) if bad else ("CONDITIONS_INSUFFICIENT: " + "; ".join(thin)) if thin else ("COMPARABLE" if nc else "NO_POTENCY_PAIR" if len(props) > 1 else "SINGLE_OR_NONE"),
                         "premise_needed": ",".join(m["meas_id"] for m in blocking), "discriminating_measure": first["measurement"] if first else "",
                         "public_source_work": "read the primary source for the named propositions" if tier in ("ABSTRACT", "TRANSFER", "NONE") and not ref else "",
                         "relaunch_question": first["why_no_literature_can_substitute"] if first else ""})
     return out
+
+def _STATE_RANK(state: str) -> int:
+    """Across packages the weakest answer wins: a documented incompatibility, then insufficient information, then agreement."""
+    return 3 if state.startswith("NOT_COMPARABLE") else 2 if state.startswith("CONDITIONS_INSUFFICIENT") else 1 if state == "COMPARABLE" else 0
 
 RANK = {"PRIMARY": 3, "TRANSFER": 2, "ABSTRACT": 1, "NONE": 0}
 
@@ -100,7 +99,7 @@ def merge(rows: list[dict]) -> list[dict]:
         if "control" in (m["role_derived"], r["role_derived"]): best = m if m["role_derived"] == "control" else r
         for f in ("evidence_tier", "role_derived", "role_reason", "public_source_work"): m[f] = best[f]
         for f in ("discriminating_measure", "relaunch_question"): m[f] = m[f] or r[f]
-        m["comparison_state"] = m["comparison_state"] if m["comparison_state"].startswith("NOT") else r["comparison_state"]
+        m["comparison_state"] = max(m["comparison_state"], r["comparison_state"], key=_STATE_RANK)
     return list(by.values())
 
 def main():

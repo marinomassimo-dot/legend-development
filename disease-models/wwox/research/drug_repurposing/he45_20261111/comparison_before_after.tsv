@@ -1,0 +1,88 @@
+package	inv	item_id	compound	state_before	state_after	reason_after
+ro25_6981_sci44_20261110	INV-05	V01	d-APV	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ro25_6981_sci44_20261110	INV-05	V02	ifenprodil	COMPARABLE	NO_POTENCY_PAIR	
+ro25_6981_sci44_20261110	INV-05	V03	GYKI 53655	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ro25_6981_sci44_20261110	INV-05	V03	GYKI 52466	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ro25_6981_sci44_20261110	INV-05	V03	NBQX	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ro25_6981_sci44_20261110	INV-05	V03	perampanel	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ro25_6981_sci44_20261110	INV-05	V05	radiprodil	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ro25_6981_sci44_20261110	INV-05	V06	onfasprodil	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ro25_6981_sci44_20261110	INV-05	V07	NP10679	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ro25_6981_sci44_20261110	INV-05	V08	traxoprodil	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ro25_6981_sci44_20261110	INV-05	V08	rislenemdaz	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ro25_6981_sci44_20261110	INV-05	V08	EVT-101	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ro25_6981_sci44_20261110	INV-05	V08	Ro 25-6981	NOT_COMPARABLE	NOT_COMPARABLE	D01 and D03 differ in composition: GluN2B / GluN2A/GluN2C/GluN2D; D01 and D10 differ in holding_potential_mV: -40 mV / -60 mV; system: values overlap without being equal (oocyte / oocyte/purified_protein); EDTA stated only in a (10 uM EDTA); glutamate stated only in a (100 uM glutamate); glycine sta
+ro25_6981_sci44_20261110	INV-05	V09	DQP-1105	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ro25_6981_sci44_20261110	INV-05	V11	tiagabine	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ro25_6981_sci44_20261110	INV-05	V11	NNC-711	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ro25_6981_sci44_20261110	INV-05	V11	other selective GAT-1 inhibitors as tools	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ro25_6981_sci44_20261110	INV-05	V12	vigabatrin	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ro25_6981_sci44_20261110	INV-05	V12	CPP-115	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ro25_6981_sci44_20261110	INV-05	V12	4-acryloylphenol	SINGLE_OR_NONE	SINGLE_OR_NONE	
+pdh_pdk_sci44_20261110	INV-07	V13	dichloroacetate	SINGLE_OR_NONE	SINGLE_OR_NONE	
+pdh_pdk_sci44_20261110	INV-07	V13	AZD7545	COMPARABLE	CONDITIONS_INSUFFICIENT	D01 and D04: scaffold stated only in a (core_bound); system stated only in a (purified_protein); system not recognised or not the same on both sides
+pdh_pdk_sci44_20261110	INV-07	V13	VER-246608	COMPARABLE	CONDITIONS_INSUFFICIENT	D05 and D06: ATP stated only in a (5 uM ATP); no condition shared beyond the system
+pdh_pdk_sci44_20261110	INV-07	V15	oxamate	COMPARABLE	NO_POTENCY_PAIR	
+pdh_pdk_sci44_20261110	INV-07	V15	stiripentol	COMPARABLE	NO_POTENCY_PAIR	
+pdh_pdk_sci44_20261110	INV-07	V16	UK-5099	SINGLE_OR_NONE	SINGLE_OR_NONE	
+pdh_pdk_sci44_20261110	INV-07	V16	triheptanoin	SINGLE_OR_NONE	SINGLE_OR_NONE	
+nmda_composition_discrim_20261109	INV-05	V01	d-APV	SINGLE_OR_NONE	SINGLE_OR_NONE	
+nmda_composition_discrim_20261109	INV-05	V02	ifenprodil	COMPARABLE	NO_POTENCY_PAIR	
+nmda_composition_discrim_20261109	INV-05	V03	GYKI 53655	SINGLE_OR_NONE	SINGLE_OR_NONE	
+nmda_composition_discrim_20261109	INV-05	V03	GYKI 52466	SINGLE_OR_NONE	SINGLE_OR_NONE	
+nmda_composition_discrim_20261109	INV-05	V03	NBQX	SINGLE_OR_NONE	SINGLE_OR_NONE	
+nmda_composition_discrim_20261109	INV-05	V03	perampanel	SINGLE_OR_NONE	SINGLE_OR_NONE	
+nmda_composition_discrim_20261109	INV-05	V05	radiprodil	COMPARABLE	NO_POTENCY_PAIR	
+nmda_composition_discrim_20261109	INV-05	V06	onfasprodil	SINGLE_OR_NONE	SINGLE_OR_NONE	
+nmda_composition_discrim_20261109	INV-05	V07	NP10679	SINGLE_OR_NONE	SINGLE_OR_NONE	
+nmda_composition_discrim_20261109	INV-05	V08	traxoprodil	SINGLE_OR_NONE	SINGLE_OR_NONE	
+nmda_composition_discrim_20261109	INV-05	V08	rislenemdaz	SINGLE_OR_NONE	SINGLE_OR_NONE	
+nmda_composition_discrim_20261109	INV-05	V08	EVT-101	SINGLE_OR_NONE	SINGLE_OR_NONE	
+nmda_composition_discrim_20261109	INV-05	V08	Ro 25-6981	COMPARABLE	NO_POTENCY_PAIR	
+nmda_composition_discrim_20261109	INV-05	V09	DQP-1105	SINGLE_OR_NONE	SINGLE_OR_NONE	
+nmda_composition_discrim_20261109	INV-05	V11	tiagabine	SINGLE_OR_NONE	SINGLE_OR_NONE	
+nmda_composition_discrim_20261109	INV-05	V11	NNC-711	SINGLE_OR_NONE	SINGLE_OR_NONE	
+nmda_composition_discrim_20261109	INV-05	V11	other selective GAT-1 inhibitors as tools	SINGLE_OR_NONE	SINGLE_OR_NONE	
+nmda_composition_discrim_20261109	INV-05	V12	vigabatrin	SINGLE_OR_NONE	SINGLE_OR_NONE	
+nmda_composition_discrim_20261109	INV-05	V12	CPP-115	SINGLE_OR_NONE	SINGLE_OR_NONE	
+nmda_composition_discrim_20261109	INV-05	V12	4-acryloylphenol	SINGLE_OR_NONE	SINGLE_OR_NONE	
+glun2b_comparators_sci42_20261110	INV-05	V01	d-APV	SINGLE_OR_NONE	SINGLE_OR_NONE	
+glun2b_comparators_sci42_20261110	INV-05	V02	ifenprodil	SINGLE_OR_NONE	SINGLE_OR_NONE	
+glun2b_comparators_sci42_20261110	INV-05	V03	GYKI 53655	SINGLE_OR_NONE	SINGLE_OR_NONE	
+glun2b_comparators_sci42_20261110	INV-05	V03	GYKI 52466	SINGLE_OR_NONE	SINGLE_OR_NONE	
+glun2b_comparators_sci42_20261110	INV-05	V03	NBQX	SINGLE_OR_NONE	SINGLE_OR_NONE	
+glun2b_comparators_sci42_20261110	INV-05	V03	perampanel	SINGLE_OR_NONE	SINGLE_OR_NONE	
+glun2b_comparators_sci42_20261110	INV-05	V05	radiprodil	SINGLE_OR_NONE	SINGLE_OR_NONE	
+glun2b_comparators_sci42_20261110	INV-05	V06	onfasprodil	COMPARABLE	NO_POTENCY_PAIR	
+glun2b_comparators_sci42_20261110	INV-05	V07	NP10679	NOT_COMPARABLE	NOT_COMPARABLE	D08 and D14 differ in system: oocyte / slice; composition stated only in a (GluN2B); system not recognised or not the same on both sides; D09 and D14 differ in system: oocyte / slice; EDTA stated only in a (10 uM EDTA); Mg stated only in a (Mg2+-free); composition stated only in a (GluN2B); glutamat
+glun2b_comparators_sci42_20261110	INV-05	V08	traxoprodil	SINGLE_OR_NONE	SINGLE_OR_NONE	
+glun2b_comparators_sci42_20261110	INV-05	V08	rislenemdaz	SINGLE_OR_NONE	SINGLE_OR_NONE	
+glun2b_comparators_sci42_20261110	INV-05	V08	EVT-101	SINGLE_OR_NONE	SINGLE_OR_NONE	
+glun2b_comparators_sci42_20261110	INV-05	V08	Ro 25-6981	SINGLE_OR_NONE	SINGLE_OR_NONE	
+glun2b_comparators_sci42_20261110	INV-05	V09	DQP-1105	SINGLE_OR_NONE	SINGLE_OR_NONE	
+glun2b_comparators_sci42_20261110	INV-05	V11	tiagabine	SINGLE_OR_NONE	SINGLE_OR_NONE	
+glun2b_comparators_sci42_20261110	INV-05	V11	NNC-711	SINGLE_OR_NONE	SINGLE_OR_NONE	
+glun2b_comparators_sci42_20261110	INV-05	V11	other selective GAT-1 inhibitors as tools	SINGLE_OR_NONE	SINGLE_OR_NONE	
+glun2b_comparators_sci42_20261110	INV-05	V12	vigabatrin	SINGLE_OR_NONE	SINGLE_OR_NONE	
+glun2b_comparators_sci42_20261110	INV-05	V12	CPP-115	SINGLE_OR_NONE	SINGLE_OR_NONE	
+glun2b_comparators_sci42_20261110	INV-05	V12	4-acryloylphenol	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ampa_comparison_it41_20261109	INV-05	V01	d-APV	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ampa_comparison_it41_20261109	INV-05	V02	ifenprodil	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ampa_comparison_it41_20261109	INV-05	V03	GYKI 53655	COMPARABLE	NO_POTENCY_PAIR	
+ampa_comparison_it41_20261109	INV-05	V03	GYKI 52466	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ampa_comparison_it41_20261109	INV-05	V03	NBQX	COMPARABLE	NO_POTENCY_PAIR	
+ampa_comparison_it41_20261109	INV-05	V03	perampanel	NOT_COMPARABLE	NOT_COMPARABLE	D10 and D11 differ in system: HEK/purified_protein / neurons; composition: values overlap without being equal (GluA2/GluK2 / GluK1/GluK2); system not recognised or not the same on both sides; D10 and D18 differ in composition: GluA2/GluK2 / GluA1/GluA4; system: values overlap without being equal (HE
+ampa_comparison_it41_20261109	INV-05	V05	radiprodil	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ampa_comparison_it41_20261109	INV-05	V06	onfasprodil	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ampa_comparison_it41_20261109	INV-05	V07	NP10679	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ampa_comparison_it41_20261109	INV-05	V08	traxoprodil	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ampa_comparison_it41_20261109	INV-05	V08	rislenemdaz	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ampa_comparison_it41_20261109	INV-05	V08	EVT-101	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ampa_comparison_it41_20261109	INV-05	V08	Ro 25-6981	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ampa_comparison_it41_20261109	INV-05	V09	DQP-1105	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ampa_comparison_it41_20261109	INV-05	V11	tiagabine	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ampa_comparison_it41_20261109	INV-05	V11	NNC-711	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ampa_comparison_it41_20261109	INV-05	V11	other selective GAT-1 inhibitors as tools	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ampa_comparison_it41_20261109	INV-05	V12	vigabatrin	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ampa_comparison_it41_20261109	INV-05	V12	CPP-115	SINGLE_OR_NONE	SINGLE_OR_NONE	
+ampa_comparison_it41_20261109	INV-05	V12	4-acryloylphenol	SINGLE_OR_NONE	SINGLE_OR_NONE	

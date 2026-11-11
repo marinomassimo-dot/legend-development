@@ -363,6 +363,20 @@ class ChemblActivities(unittest.TestCase):
         self.assertNotIn("target_chembl_id=", act)
         self.assertEqual((out["scope"]["target"], out["scope"]["molecule"]), (None, "CHEMBL807"))
 
+    def test_a_molecule_set_is_read_in_batches_of_fifty_and_bounded_to_those_molecules(self):
+        seen = []
+        base = self._fetch(total=3)
+        def fetch(url, params=None, body=None, timeout=20):
+            seen.append(url)
+            return base(url, params, body, timeout)
+        ids = [f"CHEMBL{i}" for i in range(1, 121)]
+        out = ra.load("chembl", ADAPTERS).query({"target": "CHEMBL1904", "molecules": ids, "max_rows": 1000}, fetch=fetch)
+        act = [u for u in seen if "activity.json" in u]
+        self.assertEqual(len(act), 3)                                   # 120 ids -> 50 + 50 + 20
+        self.assertTrue(all("molecule_chembl_id__in=" in u and "target_chembl_id=CHEMBL1904" in u for u in act))
+        self.assertEqual(out["scope"]["molecules"], 120)
+        self.assertEqual(out["total_count"], 9)                         # the totals of the batches add up, so truncation is still visible
+
     def test_a_hit_page_cap_is_reported_as_truncated(self):
         out = ra.load("chembl", ADAPTERS).query({"target": "CHEMBL1904", "max_rows": 2}, fetch=self._fetch(total=5))
         self.assertEqual((out["retrieved"], out["total_count"], out["truncated"]), (2, 5, True))
