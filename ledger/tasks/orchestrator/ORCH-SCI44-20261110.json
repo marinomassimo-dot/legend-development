@@ -8,12 +8,12 @@
   "START_UTC": "2026-11-10T22:22:08Z",
   "BASELINE": "main 380a4ee3. Worktree .claude/worktrees/sci44, branch task/sci44. IT44 (legend-development-4e, worktree it44, branch task/it44 at 8a883679) owns shared consumers; HE43 is Harness. SCI43 residue check: IT43 consumed SCI43 rows 1-7 and 11 and recorded 26 receipts in c82a1bff.",
   "CURRENT_PACKAGE": {
-    "id": "landing B+C+coda",
-    "state": "battery verdict recorded; task_close and safe_push next",
+    "id": "closed",
+    "state": "all packages landed",
     "delegate_active": "none",
     "updated": "2026-11-11"
   },
-  "RESUME": "Landing: task_close then safe_push development main; then message IT44 (B and C landed), final Italian report. MANDATE_STATE COMPLETE after landing.",
+  "RESUME": "LANDED: A d088b964, B+C+coda 34f93af0; MANDATE_STATE COMPLETE. Staged receipts (50 producer in receipt_staging/sci44, 84 verifier in sci44v) are unrecorded; IT44 integrates. Hold dir /tmp/sci44_hold_bc and clones /tmp/sci44_batt_* can be removed by the operator (not removed here).",
   "DECISIONS_TAKEN": [
     "2026-11-10 S0: order kept A (PDH/PDK) then B then C; IT44 confirmed no overlap and asked verifier receipts to carry prior_receipt and reread_reason adversarial_reanalysis",
     "2026-11-10 A: verifier overturned the producer's KATP absence claim; PH4 (lactate-closed KATP and the SCI43 K branch) kept as IPOTESI with Karagiannis 2021 read once only",
@@ -38,7 +38,7 @@
   "STOP_LOG": [],
   "DEFAULTS_TAKEN": [],
   "AUTHORISED_QUEUE_20261110": {
-    "MANDATE_STATE": "OPEN",
+    "MANDATE_STATE": "COMPLETE",
     "OBJ_S0": {
       "order": 1,
       "steps": [
@@ -99,9 +99,9 @@
       "steps": [
         {
           "step": "Closure: batteries by SHA in a unique clone, landing, final Italian report opening with the mandated question",
-          "status": "IN_PROGRESS",
+          "status": "DONE",
           "owner": "orchestrator",
-          "evidence": ""
+          "evidence": "A landed d088b964 (frozen 9f1cdff5, battery PASS WITH SKIPS 230); B, C and coda landed 34f93af0 (frozen 0a4a3a18, battery PASS WITH SKIPS 233); both pushed with gate PASS, ls-remote verified; no recalls were created"
         }
       ]
     }
