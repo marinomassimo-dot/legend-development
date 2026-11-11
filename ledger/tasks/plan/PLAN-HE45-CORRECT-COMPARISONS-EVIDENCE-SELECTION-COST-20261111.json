@@ -10,16 +10,16 @@
  "OBJECTIVE": "HE45: correct comparisons (units and conditions, composition, loader engine/), evidence selection (aggregates, volume filters, entity role), cache of the activity path, one measured cost reduction, DREAM, cleanup.",
  "worktree": ".claude/worktrees/he45",
  "branch": "task/he45",
- "CURRENT_STATE": "IN_PROGRESS",
+ "CURRENT_STATE": "DONE",
  "CHECKPOINT": {
-  "last_verified_result": "battery PASS WITH SKIPS (237 targets, 42 skipped) on 0fd43de6; commits d14685a3 and 120c2e29 after it are covered by targeted suites and the gate, not by a battery",
-  "first_incomplete_work": "OBJ_H1",
+  "last_verified_result": "battery PASS WITH SKIPS (239 targets, 42 skipped) on frozen cbc62fcb; first increment f3173fa8 battery PASS WITH SKIPS (237 targets) on 0fd43de6; main moved to a092e709 (SCI45) and was merged: the merge result is covered by targeted suites (comparison engine, roles, hypothesis_package, assay_conditions, release surface, tool routing, view suite), lint and the gate, not by a battery",
+  "first_incomplete_work": "none",
   "active_processes": "none",
-  "real_dependencies": "IT44 has not landed (task/it44 holds the engine/ loader and the ATP/scaffold engine edits)",
-  "next_executable_step": "land the increment; then wait for the IT44 landing SHA and patch activity_search.py / entity_roles"
+  "real_dependencies": "IT45 regenerates compound_decisions and p4 figures from the landed code",
+  "next_executable_step": "none; mandate complete"
  },
  "AUTHORISED_QUEUE_20261111": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_H0": {
    "order": 1,
    "title": "Reconcile HE44, IT44, SCI44 on the real tree",
@@ -74,9 +74,9 @@
    "steps": [
     {
      "step": "best_nM, FLOOD threshold, SCREEN_DEPOSIT",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": "findings and summarise() done; activity_search patch (type split, summarise) waits for the IT44 landing SHA"
+     "evidence": "activity_search: dose-response and Potency as two reads, measure_summary instead of best_nM, S10 pointers 0 -> 10 (he45_20261111/README.md section 5, s10_pointers_he45.tsv)"
     }
    ]
   },
@@ -86,9 +86,9 @@
    "steps": [
     {
      "step": "Entity role and the candidate fallback",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": "measured (95 of 195 engine-CANDIDATE rows carry the role only by default); patch of role_of default and eval fallback waits for the IT44 landing"
+     "evidence": "role_of default unqualified_entity; eval fallback; S11-S13 in role sources; false candidates measured per relation (section 5)"
     }
    ]
   },
@@ -98,9 +98,9 @@
    "steps": [
     {
      "step": "Cache and adapters of the activity path",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": "cache-key defect reproduced; routing through chembl.query waits for the IT44 landing"
+     "evidence": "activity_search routed through chembl.query; cache per release; test of another-query cache"
     }
    ]
   },
@@ -112,7 +112,7 @@
      "step": "Real cost reduction on a limited perimeter",
      "status": "DONE",
      "owner": "plan",
-     "evidence": "census per window (706k vs 195k mean context per turn); event wait used for the battery"
+     "evidence": "census per window: end of HE44 706k mean context per turn (35 turns, 24.7M cache read) vs HE45 after the restart 195k (94 turns, 18.1M); event waits for batteries; no quality comparison possible (different tasks)"
     }
    ]
   },
@@ -134,9 +134,9 @@
    "steps": [
     {
      "step": "Cleanup and simplification",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": "he42/he43/he44 removed (clean, integrated, no flag); scratch he45-it44check to remove at the end"
+     "evidence": "he42/he43/he44 and the scratch he45-it44check removed with git worktree remove, no flag, no refusal; he45 stays until landed"
     }
    ]
   }

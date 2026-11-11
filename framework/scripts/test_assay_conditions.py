@@ -90,6 +90,12 @@ class OtherFieldTests(unittest.TestCase):
         self.assertEqual(state(OOC + "human GluN1/GluN2B", OOC + "rat NR1-1a plus NR2B"), ac.AGREEMENT)
         self.assertEqual(state(OOC + "GluN1/GluN2A, GluN1/GluN2B", OOC + "GluN1/GluN2B"), ac.INSUFFICIENT)   # one proposition spans compositions
 
+    def test_enzyme_wordings_without_the_word_purified_are_a_known_system(self):
+        for text in ("PDK1 kinase assay, 5 uM ATP", "recombinant human PDK1, 5 uM ATP", "enzyme assay, 5 uM ATP", "PDH complex activity assay, 5 uM ATP"):
+            self.assertEqual(ac.parse(text)["fields"]["system"]["values"], ["purified_protein"], text)
+        self.assertEqual(ac.parse("Recombinant rat GluK2 in HEK-293")["fields"]["system"]["values"], ["HEK"])   # recombinant alone is not an enzyme
+        self.assertEqual(state("recombinant human PDK1, 5 uM ATP", "PDK1 kinase assay, 5 mM ATP"), ac.INCOMPATIBILITY)
+
     def test_a_negated_system_is_not_a_system(self):
         self.assertEqual(ac.parse("Recombinant rat GluK2 in HEK-293; no neuron datum")["fields"]["system"]["values"], ["HEK"])
 
