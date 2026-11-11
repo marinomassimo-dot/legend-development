@@ -63,16 +63,34 @@ def catalogue_by_chembl():
                 if sr.get("source") == "chembl": out[sr["id"]] = (r.get("name") or "", r.get("status_class") or "", r.get("origin") or "")
     return out
 
+def make_resolver():
+    """HE44's exact resolver (symbol -> the pinned GtoPdb accession -> ChEMBL targets by accession, with a state per symbol); None when it cannot be built (a test cache, no network) or LEGEND_ACTIVITY_RESOLVER=0."""
+    if os.environ.get("LEGEND_ACTIVITY_RESOLVER", "1") == "0": return None
+    try:
+        import compound_catalog as cc, target_activity as ta
+        from adapters import _http, chembl
+        path, _ = cc.cache_file("gtopdb/targets_and_families.csv"); acc = ta.load_gtopdb_targets(path); fetch = _http.make_fetch()
+        return lambda sym: ta.resolve_targets(sym, lambda req: chembl.query(req, fetch=fetch), acc)
+    except Exception:
+        return None
+
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--relations", required=True); ap.add_argument("--out", required=True)
     ap.add_argument("--types", default=",".join(TYPES)); ap.add_argument("--max-pages", type=int, default=5); ap.add_argument("--refetch", action="store_true")
     a = ap.parse_args(); out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
     croot = Path(os.environ.get("LEGEND_CATALOG_CACHE", DR / "catalog/cache")); idx = target_index(croot); types = tuple(a.types.split(","))
+    resolver = make_resolver()
     rels = list(csv.DictReader(open(a.relations, encoding="utf-8"), delimiter="\t")); act_rows, manifest, symbols = [], {}, {}
     for r in rels:
         for sym in sorted({s.split(":")[0].strip().upper() for s in r["target_symbols"].replace(":down", "").replace(":up", "").split(";") if s.strip()}):
-            symbols[f"{r['relation_id']}:{sym}"] = "TARGETS_FOUND" if any(t[1] in ("SINGLE PROTEIN", "PROTEIN COMPLEX", "PROTEIN FAMILY") for t in idx.get(sym, [])) else "UNRESOLVED_IN_CACHED_INDEX"   # no row for a symbol means unread, never "no compounds"
-            for tid, ttype, org, ncomp in idx.get(sym, []):
+            tl = list(idx.get(sym, [])); state = "TARGETS_FOUND" if any(t[1] in ("SINGLE PROTEIN", "PROTEIN COMPLEX", "PROTEIN FAMILY") for t in tl) else "UNRESOLVED_IN_CACHED_INDEX"
+            if resolver is not None:                       # the exact resolver adds the targets the cached index lacks and says why when it finds none
+                rr = resolver(sym)
+                for t in rr["targets"]:
+                    if all(t["target_chembl_id"] != x[0] for x in tl): tl.append((t["target_chembl_id"], t.get("target_type", ""), t.get("organism", ""), len(t.get("accessions") or [1])))
+                state = "TARGETS_FOUND" if tl else rr["state"]
+            symbols[f"{r['relation_id']}:{sym}"] = state   # no row for a symbol means unread, never "no compounds"
+            for tid, ttype, org, ncomp in sorted(set(tl)):
                 if ttype not in ("SINGLE PROTEIN", "PROTEIN COMPLEX", "PROTEIN FAMILY"): continue
                 rows, cov, files = fetch(tid, types, a.max_pages, a.refetch); manifest[tid] = {"coverage": cov, "files": files, "rows": len(rows)}
                 gran = "single_protein" if ncomp == 1 and ttype == "SINGLE PROTEIN" else "complex_or_family_record"

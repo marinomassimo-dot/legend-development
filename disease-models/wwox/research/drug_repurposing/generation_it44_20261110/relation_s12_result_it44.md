@@ -14,3 +14,6 @@ Known in WWOX: no. Known in the repository: the KH4 action and its "no activator
 
 ## Honest limits
 One cell type of the question only; the research blocker's selectivity was not read; the tricyclic's many other targets are not listed here; no primary paper was read for any of the five molecules.
+
+## Addendum (2026-11-11): the exact resolver adopted, and what it said
+`activity_search.py` now adds HE44's `target_activity.resolve_targets` to the cached index (exact ChEMBL targets by UniProt accession, with a state per symbol). Run for S12 it returned **READ_ERROR for KCNJ10 and KCNJ16**: the public target-by-accession endpoint answered HTTP 500 (a direct request, a minute apart, gave the same answer): a service error, not an absence. S12 therefore stays unread on the activity side; the manifest records `READ_ERROR`, so nothing reads it as "no compounds". Reopen condition: the endpoint answers; rerun `activity_search.py --relations relations_s12_it44.tsv`. The mechanism-path result above is unchanged.
