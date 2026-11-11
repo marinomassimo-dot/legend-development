@@ -8,21 +8,24 @@
  "START_UTC": "2026-11-11T09:00:00Z",
  "BASELINE": "main 3f8f17fb. Worktree .claude/worktrees/sci45, branch task/sci45. IT44 (legend-development-4e, task/it44) applied SCI44 package A by folder (8edf3852) and awaits B and C; no IT45 branch or task record at start; HE45 worktree exists. SCI44 landed: A d088b964, B+C+coda 34f93af0, closure 3f8f17fb.",
  "CURRENT_PACKAGE": {
-  "id": "P1 delivered; queue Q1 running",
-  "state": "P1 candidate 8331c500 frozen, battery running in /tmp/sci45_batt_8331c500; queue Q1 producer (og-x) on branch task/sci45q",
-  "delegate_active": "Q1 producer",
+  "id": "P1+Q1 merged on task/sci45",
+  "state": "re-freezing for battery",
+  "delegate_active": "none",
   "updated": "2026-11-11"
  },
- "RESUME": "P1 candidate 8331c500: battery running (clone /tmp/sci45_batt_8331c500, log /tmp/sci45_batt_8331c500.log, wait by PID of run_release_regressions started in that clone). On PASS: record verdict as closure-only commit, task_close.py task/sci45, safe_push.py development main, message IT44 the main SHA. Queue Q1 (worktree sci45q): on producer return, census read-back, dispatch narrow verifier (high) on decisive rows, README/consumer_delta delta, own battery, land second.",
+ "RESUME": "task/sci45 holds P1 and Q1 (merged); the battery of 8331c500 failed on shebang modes (fixed). Next: gate/LINT/receipts/growth on the new HEAD, battery in a fresh clone (/tmp/sci45_batt_<sha>), wait by the PID of the battery started in that clone (check pgrep cwd), record verdict, task_close.py task/sci45, safe_push.py development main, message IT44 the main SHA. Queue left: item 6 done (next_brief_sci45_20261111.md); cleanup of worktrees sci45, sci45q per standing authorisation after landing.",
  "DECISIONS_TAKEN": [
   "2026-11-11 S0: perimeter narrowed to TASK-1, TASK-3, TREK-1 (TASK-1 added to the coda's two); the lactate-to-pH step is read as its own question R4; no general K2P review; the 18 SCI44 tool-name strings are not repeated; new strings are pH-led and TASK-led.",
   "2026-11-11 S0: Wwox Methods already hold 25 mM HCO3-, 35 C, 10 mM glucose, 10 mM HEPES and 2 mM ATP in the pipette (A1.15): not called unknown; bath pH value is not stated.",
-  "2026-11-11 P1: verifier finding Yao 2017 rechecked by the Orchestrator in the PMC text; size check run1 preregistered (S1 failed), run2 and pools are dated addenda; README states TASK-3 refuted as sufficient, TREK-1 route marginal; P1 delivered to IT44 before landing, queue on branch task/sci45q (battery of P1 stays attributed to 8331c500)."
+  "2026-11-11 P1: verifier finding Yao 2017 rechecked by the Orchestrator in the PMC text; size check run1 preregistered (S1 failed), run2 and pools are dated addenda; README states TASK-3 refuted as sufficient, TREK-1 route marginal; P1 delivered to IT44 before landing, queue on branch task/sci45q (battery of P1 stays attributed to 8331c500).",
+  "2026-11-11 battery of frozen P1 candidate 8331c500: FAIL (one test: shebang entrypoints without executable mode in four analysis scripts); shebangs removed; P1 and queue Q1 merged into task/sci45 and re-frozen for one battery; TREK-1 Imin 0.25 (Q1 verifier) narrowed the P1 size check, correction recorded and IT44 told."
  ],
  "DELEGATIONS": [
   "P1 producer og-u: asked sonnet/medium; read back medium x95; 95 turns; output 135,385; cache read 16,244,279; 14 sources partial full text, 21 abstract-level; 14 staged receipts -88",
   "P1 verifier ks-w (V5): asked sonnet/high; read back high x104; 104 turns; output 120,794; cache read 19,599,752; 63 rows checked, 51 correct, 12 defective; 13 staged receipts -87",
-  "Q1 producer og-x: asked sonnet/medium (queue; K2P tool pointers and TREK-1 slope), receipts -86"
+  "Q1 producer og-x: asked sonnet/medium (queue; K2P tool pointers and TREK-1 slope), receipts -86",
+  "Q1 producer og-x read back: sonnet/medium x87; 87 turns; output 62,422; cache read 10,888,346; 5 sources partial full text; staged receipts -86",
+  "Q1 verifier ks-y (V6): asked sonnet/high; read back high x73; 73 turns; output 59,026; cache read 9,653,390; no substantive error; staged receipts -85"
  ],
  "ESCALATIONS": [],
  "STOP_LOG": [],
@@ -56,9 +59,9 @@
    "steps": [
     {
      "step": "Queue S8, one at a time, only after P1 delivery: pointer qualification, open premise, Harness anomaly, small public-data reanalysis, DREAM to another lever, next brief",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "Q1 producer dispatched on sci45q: K2P tool pointers (ONO-TR-772 etc.) and TREK-1 pH slope"
+     "evidence": "Q1 pointers verified (V6), S8_coda.md, next_brief_sci45_20261111.md; items 3 and 4 not done with reasons"
     }
    ]
   }
