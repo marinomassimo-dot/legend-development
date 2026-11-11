@@ -1,0 +1,7 @@
+relation_id	parent_chembl_id	name	catalogue_name	catalogue_status	catalogue_origin	n_documents	n_activities	n_functional	types	organisms	targets	n_flagged_validity	n_measurement_flags	best_nM	unit_variants	coverage	read_state	verdict	unknown_fields
+S12	CHEMBL2441437			none		1	1	0	IC50		KCNJ10	0	1	nan	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S12	CHEMBL3612810			none		1	1	0	IC50		KCNJ10	0	1	nan	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S12	CHEMBL3913475			none		1	1	0	IC50		KCNJ10	0	1	nan	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S12	CHEMBL3933749			none		1	1	0	IC50		KCNJ10	0	1	nan	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S12	CHEMBL5563848			none		1	1	0	IC50		KCNJ10	0	1	nan	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S12	CHEMBL5878325			none		1	1	0	IC50		KCNJ10	0	1	nan	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context

@@ -1,0 +1,16 @@
+{
+ "CHEMBL2146348": {
+  "coverage": "COMPLETE",
+  "files": [
+   [
+    "CHEMBL2146348/p0.json",
+    "04b9985e92f91499a7f61f35b7d38a8b4d62d6b21d5f1ee98da266c2b3b90cac"
+   ]
+  ],
+  "rows": 6
+ },
+ "_symbols": {
+  "S12:KCNJ10": "TARGETS_FOUND",
+  "S12:KCNJ16": "NO_TARGET_FOR_ACCESSION"
+ }
+}

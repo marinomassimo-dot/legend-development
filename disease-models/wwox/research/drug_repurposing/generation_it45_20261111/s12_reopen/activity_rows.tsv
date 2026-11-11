@@ -1,0 +1,7 @@
+converted_nM	measurement_flags	relation_id	target_symbol	target_chembl_id	target_granularity	molecule_chembl_id	parent_chembl_id	name	type	relation	value	units	assay_type	assay_organism	validity	assay_description	document	pubmed	coverage
+10000	CENSORED	S12	KCNJ10	CHEMBL2146348	single_protein	CHEMBL2441437	CHEMBL2441437		IC50	>	10000.0	nM	B			Inhibition of Kir4.1 channel (unknown origin)	CHEMBL2439970		COMPLETE
+10000	CENSORED	S12	KCNJ10	CHEMBL2146348	single_protein	CHEMBL3612810	CHEMBL3612810		IC50	>	10000.0	nM	B			Inhibition of Kir4.1 potassium channel (unknown origin)	CHEMBL3612018		COMPLETE
+100000	CENSORED	S12	KCNJ10	CHEMBL2146348	single_protein	CHEMBL3933749	CHEMBL3933749		IC50	>	100000.0	nM	B			Inhibition of Kir4.1 (unknown origin)	CHEMBL3868612		COMPLETE
+100000	CENSORED	S12	KCNJ10	CHEMBL2146348	single_protein	CHEMBL3913475	CHEMBL3913475		IC50	>	100000.0	nM	B			Inhibition of Kir4.1 (unknown origin)	CHEMBL5038592		COMPLETE
+10000	CENSORED	S12	KCNJ10	CHEMBL2146348	single_protein	CHEMBL5563848	CHEMBL5563848		IC50	>	10000.0	nM	B			Inhibition of Kir 4.1 (unknown origin)	CHEMBL5512682		COMPLETE
+30000	CENSORED	S12	KCNJ10	CHEMBL2146348	single_protein	CHEMBL5878325	CHEMBL5878325		IC50	>	30000.0	nM	B			thallium-flux assay: The thallium flux assay is an in vitro method of measuring conductance through a potassium ion channel. Potassium channels are also permeab	CHEMBL5729670		COMPLETE
