@@ -40,7 +40,7 @@
    "steps": [
     {
      "step": "Package P1 K2P x pH: producer (R1 channels, R2 native, R3 tool identity, R4 lactate-pH in tissue), blind verifier, corrections, S4 design, S5 hypotheses, delivery to IT45",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "orchestrator",
      "evidence": ""
     }
@@ -51,7 +51,7 @@
    "steps": [
     {
      "step": "Queue S8, one at a time, only after P1 delivery: pointer qualification, open premise, Harness anomaly, small public-data reanalysis, DREAM to another lever, next brief",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "orchestrator",
      "evidence": ""
     }
