@@ -8,17 +8,18 @@
  "START_UTC": "2026-11-11T09:00:00Z",
  "BASELINE": "main 3f8f17fb. Worktree .claude/worktrees/sci45, branch task/sci45. IT44 (legend-development-4e, task/it44) applied SCI44 package A by folder (8edf3852) and awaits B and C; no IT45 branch or task record at start; HE45 worktree exists. SCI44 landed: A d088b964, B+C+coda 34f93af0, closure 3f8f17fb.",
  "CURRENT_PACKAGE": {
-  "id": "P1+Q1 merged on task/sci45",
-  "state": "re-freezing for battery",
+  "id": "closed",
+  "state": "P1 and Q1 landed after this record",
   "delegate_active": "none",
   "updated": "2026-11-11"
  },
- "RESUME": "task/sci45 holds P1 and Q1 (merged); the battery of 8331c500 failed on shebang modes (fixed). Next: gate/LINT/receipts/growth on the new HEAD, battery in a fresh clone (/tmp/sci45_batt_<sha>), wait by the PID of the battery started in that clone (check pgrep cwd), record verdict, task_close.py task/sci45, safe_push.py development main, message IT44 the main SHA. Queue left: item 6 done (next_brief_sci45_20261111.md); cleanup of worktrees sci45, sci45q per standing authorisation after landing.",
+ "RESUME": "Frozen SHA a7573431 battery PASS WITH SKIPS (236). Land via task_close.py then safe_push.py development main; then message IT44 with the main SHA. Unrecorded staged receipts: sci45 (14), sci45v (13), sci45q (5), sci45qv (7). Local artefacts for the operator: /tmp/sci45_batt_* clones; worktrees sci45, sci45q after landing.",
  "DECISIONS_TAKEN": [
   "2026-11-11 S0: perimeter narrowed to TASK-1, TASK-3, TREK-1 (TASK-1 added to the coda's two); the lactate-to-pH step is read as its own question R4; no general K2P review; the 18 SCI44 tool-name strings are not repeated; new strings are pH-led and TASK-led.",
   "2026-11-11 S0: Wwox Methods already hold 25 mM HCO3-, 35 C, 10 mM glucose, 10 mM HEPES and 2 mM ATP in the pipette (A1.15): not called unknown; bath pH value is not stated.",
   "2026-11-11 P1: verifier finding Yao 2017 rechecked by the Orchestrator in the PMC text; size check run1 preregistered (S1 failed), run2 and pools are dated addenda; README states TASK-3 refuted as sufficient, TREK-1 route marginal; P1 delivered to IT44 before landing, queue on branch task/sci45q (battery of P1 stays attributed to 8331c500).",
-  "2026-11-11 battery of frozen P1 candidate 8331c500: FAIL (one test: shebang entrypoints without executable mode in four analysis scripts); shebangs removed; P1 and queue Q1 merged into task/sci45 and re-frozen for one battery; TREK-1 Imin 0.25 (Q1 verifier) narrowed the P1 size check, correction recorded and IT44 told."
+  "2026-11-11 battery of frozen P1 candidate 8331c500: FAIL (one test: shebang entrypoints without executable mode in four analysis scripts); shebangs removed; P1 and queue Q1 merged into task/sci45 and re-frozen for one battery; TREK-1 Imin 0.25 (Q1 verifier) narrowed the P1 size check, correction recorded and IT44 told.",
+  "2026-11-11 battery on frozen SHA a7573431 (fresh --no-hardlinks clone, files hard-linked): PASS WITH SKIPS, 236 targets, 11 skipped (catalogue cache and corpus artefacts absent in the clone). Later commits are closure-only (this record)."
  ],
  "DELEGATIONS": [
   "P1 producer og-u: asked sonnet/medium; read back medium x95; 95 turns; output 135,385; cache read 16,244,279; 14 sources partial full text, 21 abstract-level; 14 staged receipts -88",
@@ -31,7 +32,7 @@
  "STOP_LOG": [],
  "DEFAULTS_TAKEN": [],
  "AUTHORISED_QUEUE_20261111": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_S0": {
    "order": 1,
    "steps": [
@@ -65,5 +66,6 @@
     }
    ]
   }
- }
+ },
+ "MANDATE_STATE_NOTE": "see AUTHORISED_QUEUE_20261111"
 }
