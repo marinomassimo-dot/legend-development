@@ -9,14 +9,15 @@
  "BASELINE": "main a092e709 (SCI45 landed). Worktree .claude/worktrees/sci45n, branch task/sci45n. Worktrees sci45 and sci45q removed under the operator's written authorisation of 2026-11-11 (clean, contained in main); branch task/sci45q deleted (merged). IT44 branch task/it44 at 8edf3852 has not yet consumed SCI45.",
  "CURRENT_PACKAGE": {
   "id": "closed",
-  "state": "N1 landing after battery",
+  "state": "landing",
   "delegate_active": "none",
   "updated": "2026-11-11"
  },
  "RESUME": "N1 + measurement sheet on task/sci45n: after gate/LINT/receipts/growth and a battery on the frozen SHA (fresh clone), task_close.py, safe_push.py development main, message IT44. Staged receipts unrecorded: sci45n (7), sci45nv (8). /tmp/sci45_batt_* clones remain for the operator.",
  "DECISIONS_TAKEN": [
   "2026-11-11 operator authorised removal of worktrees sci45 and sci45q: both clean, contained in main; removed with git worktree remove (no force); /tmp/sci45_batt_* clones left (not covered by the authorisation).",
-  "2026-11-11 N1: verifier overturned the GluN2B-less-sensitive prior; Regan 2019 Table 4 rechecked by the Orchestrator in the text; the Orchestrator's own brief named the wrong source (Cheriyan for Evlanenkov), corrected in README; net sign not defined (different axes); measurement sheet written (action 3, design only)."
+  "2026-11-11 N1: verifier overturned the GluN2B-less-sensitive prior; Regan 2019 Table 4 rechecked by the Orchestrator in the text; the Orchestrator's own brief named the wrong source (Cheriyan for Evlanenkov), corrected in README; net sign not defined (different axes); measurement sheet written (action 3, design only).",
+  "2026-11-11 battery on frozen SHA 8ebe57c3 (task/sci45n merged with main f76439c2; fresh --no-hardlinks clone, files hard-linked): PASS WITH SKIPS, 239 targets, 11 skipped (catalogue cache and corpus artefacts absent in the clone). Later commits are closure-only (this record)."
  ],
  "DELEGATIONS": [
   "N1 producer og-z: asked sonnet/medium; read back medium x78; 78 turns; output 90,993; cache read 10,268,306; 7 sources partial full text; staged receipts -84",
