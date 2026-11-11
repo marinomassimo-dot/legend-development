@@ -6,6 +6,10 @@ sys.path.insert(0, str(IT41)); sys.path.insert(0, str(HERE.parents[4] / "framewo
 import action_search as A  # noqa: E402
 def tsv(p): return list(csv.DictReader(open(p, encoding="utf-8"), delimiter="\t"))
 ROWS = tsv(IT41 / "search_rows.tsv"); CV = tsv(IT41 / "compound_view.tsv"); REL = {r["relation_id"] for r in tsv(IT41 / "relations_it41.tsv")}
+IT44 = IT41.parent / "generation_it44_20261110"   # IT44 relations (S11-S13) likewise
+for _rf, _sr in (("relations_s11_it44.tsv", "s11"), ("relations_s12_it44.tsv", "s12"), ("relations_s13_it44.tsv", "s13")):
+    if (IT44 / _rf).exists():
+        REL |= {r["relation_id"] for r in tsv(IT44 / _rf)}; ROWS += tsv(IT44 / _sr / "search_rows.tsv")
 IT43 = IT41.parent / "generation_it43_20261110"   # IT43 relations (S9) run through the same path with their own input and output folders; the gate reads them too
 if (IT43 / "relations_it43.tsv").exists():
     REL |= {r["relation_id"] for r in tsv(IT43 / "relations_it43.tsv")}; ROWS += tsv(IT43 / "s9" / "search_rows.tsv")

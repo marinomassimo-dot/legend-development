@@ -1595,10 +1595,6 @@
   "src": "en",
   "text": "Human knockout organoid shows a lower NFE2L2 transcript (0.75x), role unknown; the second system failed its control."
  },
- "d01f469e975b": {
-  "src": "en",
-  "text": "The approved K2P-active compound also blocks sodium channels and glutamate release at lower concentrations and needs about 100 micromolar for the K2P effect; its activation of one family member is transient; some potencies rest on a review, not a primary paper; selectivity of the research activator against other channels is not fully reached."
- },
  "d07824ef936c": {
   "src": "en",
   "text": "HDAC5-specific lowering of SLC2A1 at concentrations that engage HDAC5, or class I inhibition changing SLC2A1 in either direction (then a different proposal)."
@@ -1966,5 +1962,9 @@
  "fea73c1a198c": {
   "src": "en",
   "text": "The registry GluN2B row is a GluN2B measurement (113 micromolar) stored as nanomolar; DQP-1105 prefers GluN2C and GluN2D: excluded from the GluN2B comparison"
+ },
+ "ffe61ba5c2e6": {
+  "src": "en",
+  "text": "The glutamate-release modulator active on K2P channels also blocks sodium channels and glutamate release at lower concentrations and needs about 100 micromolar for the K2P effect; its activation of one family member is transient; some potencies rest on a review, not a primary paper; selectivity of the research activator against other channels is not fully reached."
  }
 }
