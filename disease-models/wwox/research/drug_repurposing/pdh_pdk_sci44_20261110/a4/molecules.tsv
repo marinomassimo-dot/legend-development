@@ -1,0 +1,14 @@
+relation_id	molecule	names	sources	n_source_rows	directions	species	sites
+A4-R3	CAT:DGIDB:09a092df2430	7ACC2	GtoPdb interaction	1	down	Human	
+A4-R3	CAT:DGIDB:e1da0e7d5335	BAY-8002	GtoPdb interaction	3	down	Human	
+A4-R3	GTOPDB:10605	AZD3965	GtoPdb interaction	2	down	Human	
+A4-R3	GTOPDB:10917	nitrofurantoin	GtoPdb interaction	1	down	Human	
+A4-R3	GTOPDB:11299	&alpha;-cyanocinnamate	GtoPdb interaction	2	down	Rat	
+A4-R3	GTOPDB:11300	&alpha;-cyano-4-hydroxycinnamate	GtoPdb interaction	2	down	Rat	
+A4-R3	GTOPDB:11301	&alpha;-Cyano-5-phenyl-2,4-pentadienic acid	GtoPdb interaction	2	down	Rat	
+A4-R3	GTOPDB:11302	UK-5099	GtoPdb interaction	3	down	Human;Rat	
+A4-R3	GTOPDB:11303	mitoglitazone	GtoPdb interaction	2	down	Mouse	
+A4-R3	GTOPDB:12601	lonidamine	GtoPdb interaction	2	down	Human;Rat	
+A4-R3	GTOPDB:2919	zaprinast	GtoPdb interaction	1	down	Human	
+A4-R3	GTOPDB:6647	entacapone	GtoPdb interaction	1	down	Human	
+A4-R3	GTOPDB:8813	compound 30 [PMID: 16455256]	GtoPdb interaction	1	down	Human	

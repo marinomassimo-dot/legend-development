@@ -1,0 +1,5 @@
+figure_id	source	what_was_opened	what_it_showed	used_for
+FN01	35355991 Fig 7 (fimmu-13-862316-g007.jpg, sha256 998b29d41c5eb38e2fe99a25075f4f9b00878a17b19befb648633cbd034b6eff)	image viewed with the Read tool	active and total PDC activity, 8 points per group; active PDC about 10 in EAE-PBS, 5 in control, 3 in EAE-melatonin, 12 in EAE-melatonin plus DADA; units munits per mg cellular protein; matches the text values 10.33, 5.363, 2.83, 11.70	F11 and decisive D13
+FN02	35355991 Fig 6 (fimmu-13-862316-g006.jpg, sha256 da08f18a9a234e261a20013cae411e1cbb15da5bbfef85287bfbc7e164411060)	image viewed with the Read tool	PDK4 mRNA and protein relative to beta-actin, 8 points per group; EAE-PBS about 0.8 (mRNA) and 0.6 (protein), melatonin about 1.4 and 1.26; one representative blot	F12 and decisive D13
+FN03	all other sources	no figure opened	expression numbers come from deposited tables read by script (GEO sample tables, HPA downloads), not from figures; the figure panels of Zhang 2014 and 2016 were not viewed	isoform_expression.tsv
+FN04	27153546, 34712383, 36432491, 39177920	figure files located in the bucket, not opened	text and legends only	partial_fulltext_read depth

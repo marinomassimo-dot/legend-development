@@ -1,0 +1,106 @@
+{
+  "_schema": "task record, Annex A.1c",
+  "TASK_ID": "ORCH-SCI44-20261110",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "HIGH",
+  "OBJECTIVE": "Operator mandate pasted 2026-11-10 (SCI44): deep batch from the metabolic premise to pharmacological levers. Package A PDH/PDK (which cells, which isoform, which action), package B (IT43-Q01 Ro 25-6981 primary source, engine-readable rows), package C (SCI43 residue, only if capacity), then a short coda. Operator absent about ten hours; one package at a time to verification and delivery; no spend, no contact, no personal data.",
+  "START_UTC": "2026-11-10T22:22:08Z",
+  "BASELINE": "main 380a4ee3. Worktree .claude/worktrees/sci44, branch task/sci44. IT44 (legend-development-4e, worktree it44, branch task/it44 at 8a883679) owns shared consumers; HE43 is Harness. SCI43 residue check: IT43 consumed SCI43 rows 1-7 and 11 and recorded 26 receipts in c82a1bff.",
+  "CURRENT_PACKAGE": {
+    "id": "A landing, B and C delivered unlanded",
+    "state": "A battery PASS WITH SKIPS on 9f1cdff5; B (ro25_6981_sci44_20261110) and C (potassium_shares_sci44_20261110) produced, verified (V3, V4), corrected, untracked in the worktree; receipts staged (50 producer, 84 verifier)",
+    "delegate_active": "none",
+    "updated": "2026-11-11"
+  },
+  "RESUME": "First incomplete step: task_close and safe_push of A (9f1cdff5 plus closure commit), then switch -c task/sci44-bc from main, commit B and C folders and the staged receipts (8+9 producer, 8+16 verifier, already in receipt_staging/sci44 and sci44v), preregister and run the small K-channel expression reanalysis, DREAM, next brief, battery on a fresh unique clone, land. Materials: ro25_6981_sci44_20261110/, potassium_shares_sci44_20261110/, pdh_pdk_sci44_20261110/.",
+  "DECISIONS_TAKEN": [
+    "2026-11-10 S0: order kept A (PDH/PDK) then B then C; IT44 confirmed no overlap and asked verifier receipts to carry prior_receipt and reread_reason adversarial_reanalysis",
+    "2026-11-10 A: verifier overturned the producer's KATP absence claim; PH4 (lactate-closed KATP and the SCI43 K branch) kept as IPOTESI with Karagiannis 2021 read once only",
+    "2026-11-10 A: engine-readable folder built and engine derive run read-only on V13; engine limits go to IT44 as proposals, no engine code edited",
+    "2026-11-10/11 A: battery on a fresh no-hardlinks clone of frozen SHA 9f1cdff5 finished REGRESSION VERDICT: PASS WITH SKIPS (230 targets, 11 skipped, all environmental; suite time 3718 s); gate PASS, LINT no BLOCK, receipts OK (1573), growth PASS on the same SHA. Later commits to the branch before landing: this task record and one dated README line of package A (documentation only)."
+  ],
+  "DELEGATIONS": [
+    "A2 producer og-p: asked sonnet/medium; read back medium x105; 105 turns; output 121,831; cache read 16,415,700; peak 315,875",
+    "A3 producer og-q: asked sonnet/medium; read back medium x85; 85 turns; output 92,392; cache read 11,528,378",
+    "A4 producer og-r: asked sonnet/medium; read back medium x75; 75 turns; output 67,853; cache read 9,558,167",
+    "V1 verifier pk-v: asked sonnet/high; read back high x123; 123 turns; output 127,841; cache read 23,866,549",
+    "V2 verifier pk-w: asked sonnet/high; read back high x96; 96 turns; output 103,522; cache read 19,199,522",
+    "B producer og-s: asked sonnet/medium; read back medium x46; 46 turns; output 55,669; cache read 5,661,890",
+    "V3 verifier rb-v: asked sonnet/high; read back high x66; 66 turns; output 71,495; cache read 10,283,129",
+    "C producer og-t: asked sonnet/medium; read back medium x74; 74 turns; output 74,898; cache read 11,118,510",
+    "V4 verifier ks-v: asked sonnet/high; read back high x96; 96 turns; output 113,545; cache read 17,797,030"
+  ],
+  "ESCALATIONS": [],
+  "STOP_LOG": [],
+  "DEFAULTS_TAKEN": [],
+  "AUTHORISED_QUEUE_20261110": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_S0": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "S0: close SCI43 residues (IT43 consumed SCI43 in c82a1bff: 26 receipts recorded), read state of IT43/IT44, SCI43, HE43; choose package order; tell IT44 the perimeter",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "main 380a4ee3 reconciled; IT43 consumed SCI43 in c82a1bff; IT44 informed, no overlap; order A then B then C kept"
+        }
+      ]
+    },
+    "OBJ_A": {
+      "order": 2,
+      "steps": [
+        {
+          "step": "Package A PDH/PDK: A1 premise and frame before search; A2 isoforms by cell type; A3 primary pharmacology (AZD7545, VER-246608, DCA) and PDK1 symbol check; A4 alternative actions then compounds; A5 minimum discriminating comparison; verify; deliver",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "A1-A5 done; A2/A3/A4 producers and V1/V2 verifiers; corrections applied; README, consumer_delta (15 rows), engine/, receipts staged (33 + 60)"
+        }
+      ]
+    },
+    "OBJ_B": {
+      "order": 3,
+      "steps": [
+        {
+          "step": "Package B: IT43-Q01 primary source for Ro 25-6981 (check IT44 has not closed it); rows compatible with the comparison engine",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "Ro 25-6981: diheteromer potency/site PRIMARY, no maximum, triheteromer unresolved; engine_check TRANSFER/unresolved -> PRIMARY/probe; V3 verified and corrected; unlanded until A lands"
+        }
+      ]
+    },
+    "OBJ_C": {
+      "order": 4,
+      "steps": [
+        {
+          "step": "Package C: SCI43 residue (Ba2+/K2P share in juvenile L2/3 pyramidal neurons; drug-name-led strings; second verification of D01-D04, D07, D08, D11, D13 if originals can be made available legally), only if capacity remains",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "KATP share about 11-17 percent upper bound; K2P no selective juvenile somatic share; preprint 429 again; eight SCI43 rows still producer-read; V4 verified and corrected"
+        }
+      ]
+    },
+    "OBJ_D": {
+      "order": 5,
+      "steps": [
+        {
+          "step": "Coda: fragile premise recheck, neglected pharmacological alternative, small public-data reanalysis, revival trigger, DREAM, next brief",
+          "status": "IN_PROGRESS",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_E": {
+      "order": 6,
+      "steps": [
+        {
+          "step": "Closure: batteries by SHA in a unique clone, landing, final Italian report opening with the mandated question",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    }
+  }
+}

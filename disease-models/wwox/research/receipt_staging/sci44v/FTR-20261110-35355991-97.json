@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-10T23:22Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-10T23:26Z",
+ "event_id": "FTR-20261110-35355991-97",
+ "evidence_basis": [
+  "Verifier V1 checked the active PDC values (10.33 against 5.363), the group size and the ANOVA degrees of freedom in the text. Figures not viewed by the verifier.",
+  "verbatim_locator | proposition: DADA alone had no effect; EAE raised PDC activity | Results | \"whereas DADA alone did not have any effect\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/audit.md",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/recompute_expression.tsv"
+ ],
+ "prior_receipt": "FTR-20261110-35355991-96",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket PMC8959827.1 text (plain curl)",
+ "study_id": {
+  "doi": "10.3389/fimmu.2022.862316",
+  "pmid": "35355991"
+ },
+ "workflow": "SCI44 blind verifier V1 (actor pk-v). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,8 @@
+figure_id	source	what_was_opened	what_it_showed	used_for
+FN01	36759610 Fig 2 (41467_2023_36209_Fig2_HTML.jpg from the PMC cdn)	image viewed with the Read tool	panels b-j western, lactate, behaviour; l RMP about -68 mV both groups; m input resistance about 0.14 GOhm both; n firing-frequency curves, about 19 Hz (Ldha f/f) vs about 16.5 Hz (cKO) at 120 pA	A4D04, A4D11, K05
+FN02	36759610 Fig 6 (..._Fig6_HTML.jpg)	image viewed	MCT2 shRNA in pyramidal neurons lowers firing (about 17 vs 14 Hz at 120 pA) and lactate infusion does not restore it	A4D05
+FN03	36759610 Fig 7 (..._Fig7_HTML.jpg)	image viewed	a-b RMP and Rin unchanged by lactate; c firing curves higher with lactate; f fAHP about 8.3 to about 5.7 mV; j-m no effect with iberiotoxin	A4D11, K06
+FN04	37632130 Fig 1 (ACN3-10-1873-g002.jpg)	image viewed	biosensor traces: extracellular lactate rises and glucose falls during a seizure and during SE; panels g and j normalised changes	A4D01 (context)
+FN05	37632130 Fig 3 (ACN3-10-1873-g003.jpg)	image viewed	B: dF/F about +10 percent in 5 mM K+, about -10 percent with 3 mM oxamate, recovery on wash-out; C cumulative inter-event interval shifts	A4D02, L02
+FN06	29368690 Fig 2 (elife-32721-fig2.jpg)	image viewed	B: spikes per pulse WT about 9.6/13.2/14.9 and Bad-/- about 4.5/6.3/8.8 at 100/150/200 pA; glibenclamide restores Bad-/-; n=7 per group printed in the key	A4D10, K04
+FN07	37632130 Fig 2 and Fig 4; 21653873 Fig 5 and 6; 28254829 Figs; 30890077 Table 3; 25170119 figures	legend text read from the PMC page; images not opened (Table 3 read as text)	numbers taken from legends or text only	A4D01, A4D02, A4D08, A4D13, A4D14

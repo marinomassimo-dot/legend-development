@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-10T23:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "read"
+ },
+ "event_at": "2026-11-10T23:47:00Z",
+ "event_id": "FTR-20261110-30890077-97",
+ "evidence_basis": [
+  "Table 3 with its header (n = 7, 8, 7, 6), the footnotes, the Results and Discussion paragraphs on PDH and the Methods on mitochondria and animals read; images not viewed.",
+  "verbatim_locator | proposition: PDH maximal activity in untreated SE mice | Table 3 note | \"Untreated SE mice had lower activity of both pyruvate dehydrogenase\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v2/audit.md",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v2/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v2/queries_verifier.tsv"
+ ],
+ "prior_receipt": "FTR-20261110-30890077-96",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page PMC7026856 fetched with plain curl on 2026-11-10; converted locally; bytes not saved",
+ "study_id": {
+  "doi": "10.1177/0271678X19837380",
+  "pmid": "30890077"
+ },
+ "workflow": "SCI44 package A blind verifier V2 pk-w (pdh_pdk_sci44_20261110). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

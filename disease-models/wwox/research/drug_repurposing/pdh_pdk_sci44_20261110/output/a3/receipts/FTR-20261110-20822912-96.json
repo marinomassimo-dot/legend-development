@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-10T22:53:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-10T22:58:00Z",
+ "event_id": "FTR-20261110-20822912-96",
+ "evidence_basis": [
+  "The GLUT4 results paragraph and the blotting method read; the chemistry and enzymology not read.",
+  "verbatim_locator | proposition: PDK1 here is an insulin-signalling kinase, data not shown | Results | \"The inhibitors also reduced the activation of PDK1 and AKT (data not shown).\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a3/activity_primary.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a3/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a3/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page PMC4210863 fetched with plain curl; only passages with PDK1 and the Western blot method read",
+ "study_id": {
+  "doi": "10.1016/j.bmc.2010.08.010",
+  "pmid": "20822912"
+ },
+ "workflow": "SCI44 package A step A3 producer og-q (pdh_pdk_sci44_20261110). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
