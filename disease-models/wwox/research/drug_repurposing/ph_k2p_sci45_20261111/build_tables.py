@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Builds the Orchestrator-level tables of SCI45 package P1 from statements that are in the verified tables (output/, verify/). Re-run after any correction."""
 import csv, pathlib
 HERE = pathlib.Path(__file__).resolve().parent

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Dated addendum 2026-11-11 (after V5), NOT part of the preregistered grid: pool sizes taken from native knock-out data held in the verified tables.
 TASK-1/3 pool: Yao 2017 (28276488), holding current at -60 mV 58.4 -> 43.3 pA in TASK-1/3 double knock-out, so a 0.26 share of the holding current (INFERENZA: current at -60 mV, not conductance; layer V, P9-15, room temperature; compensation possible).
 TREK-1 pool: Labbaf 2025 (40998695), Rin of persistent-firing S1 layers 2-4 pyramidal neurons 121.4 (WT, n 16) -> 257.2 MOhm (knock-out, n 33); conductance share removed = 1 - 121.4/257.2 = 0.53 (INFERENZA: adult, selected firing class, constitutive knock-out, compensation possible).

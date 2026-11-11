@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Size check of SIZE_CHECK_PREREGISTRATION.md. Writes size_check_<run>.tsv and size_check_predictions_<run>.tsv (run1 = preregistered grid; run2 = dated addendum after verification)."""
 import csv, sys, pathlib
 HERE = pathlib.Path(__file__).resolve().parent

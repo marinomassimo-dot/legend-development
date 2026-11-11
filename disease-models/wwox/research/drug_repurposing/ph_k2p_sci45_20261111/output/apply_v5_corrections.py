@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Apply the V5 corrections (verify/audit.md section 9) to the producer tables as annotations; never delete producer text.
 Appends ' [V5: ...]' to a named column of a named row, and adds rows. Idempotent (skips rows already annotated)."""
 import csv, pathlib
