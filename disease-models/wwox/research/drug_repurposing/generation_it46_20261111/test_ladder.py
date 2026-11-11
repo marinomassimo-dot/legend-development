@@ -57,6 +57,13 @@ class Ladder(unittest.TestCase):
         self.assertNotIn("off-target panel", rows["VANILLIN"]["next_verification"])
         self.assertNotIn("off-target panel", rows["TIAGABINE HYDROCHLORIDE"]["next_verification"])
 
+    def test_a_name_variant_of_a_catalogue_molecule_is_not_a_missing_identity(self):
+        v = [r for r in self.rows if r["relation_id"] == "S7" and r["name"] in ("vigabatrin", "tiagabine")]
+        self.assertTrue(v)
+        for r in v:
+            self.assertIn("same family as a catalogue entry", r["identity"])
+            self.assertNotEqual("qualify identity first (not in catalogue)", r["next_verification"])
+
     def test_the_hcn1_probe_pointer_is_a_probe_with_a_context_sentence(self):
         r = [x for x in self.rows if "CHEMBL6195028" in x["molecule"]]
         self.assertEqual(1, len(r))

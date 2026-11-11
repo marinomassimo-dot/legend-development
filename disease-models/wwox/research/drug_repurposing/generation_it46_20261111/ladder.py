@@ -125,6 +125,16 @@ def build():
                             possible_benefit="IPOTESI: " + (rel.get("hypothesised_benefit") or "not stated"),
                             next_verification=("likely an off-target panel entry, not a measurement on this target: confirm the target mapping before any use" if pan else "qualify as a tool: identity, selectivity, system" if sit == "C_probe_or_reagent" else "read the primary documents (activity only)"),
                             role="(no role row)", role_basis="activity pointer not in the role table", engine_verdicts="", downstream_mentions=hits))
+    # a row with no catalogue entry of its own that is the same family (same name once case, radiolabel and salt are removed) as a catalogue row of the same relation inherits that identity
+    cat_of = {}
+    for r in out:
+        if r["identity"] not in ("not in catalogue", ""):
+            cat_of.setdefault((r["relation_id"], r["molecule_group"]), r["identity"])
+    for r in out:
+        if r["identity"] == "not in catalogue" and (r["relation_id"], r["molecule_group"]) in cat_of:
+            r["identity"] = cat_of[(r["relation_id"], r["molecule_group"])] + " (same family as a catalogue entry of this relation)"
+            if r["next_verification"] == "qualify identity first (not in catalogue)":
+                r["next_verification"] = "qualify role and status first (no rule classified it)" if r["role"] == "unqualified_entity" else "measure in the context; premise first"
     return out
 
 
