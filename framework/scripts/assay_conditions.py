@@ -15,6 +15,14 @@ provenance, and compares two readings:
 A field that is not stated stays not stated: it never agrees with a stated value and never differs from one. An
 unrecognised system is not a category: two unrecognised systems are not "the same".
 
+pH and temperature are their own fields, not concentrations: pH is dimensionless and never goes through the nM table. A pH
+value keeps its side when the text gives one (`pH_extracellular`, `pH_intracellular`, otherwise `pH`); a step ("pH 7.4 to
+7.2", "pHo step") is `pH_step` and a difference ("0.2 pH unit fall") is `pH_delta`, so none of the three agrees with, or
+differs from, another. "Room temperature" is read as 18-26 C and says so. A clause that describes another preparation or an
+untested transfer ("transfer to a slice at 35 C is untested") and a loading or incubation temperature never become the assay
+condition; they are listed under `contrast`. "not stated" and "not applicable" stay apart, and a reference to another
+proposition ("As D01") that is missing or circular is named in the reasons, not dropped.
+
 Concentrations are converted with the unit table of measurement.py (mM, uM, µM, μM, nM...) and kept with their original
 text. Ranges (`50-100 uM`, `-70 to +20 mV`) are intervals; two intervals agree only when equal, differ when disjoint, and are
 INSUFFICIENT when they overlap without being equal. Fields are read from the cases present in the packages; this is not a
@@ -61,6 +69,20 @@ _NOT_STATED = re.compile(r"not (?:stated|named|reported|given|read)|unread|unkno
 _OPEN_POTENTIALS = re.compile(r"other potentials|various potentials", re.I)
 _SUBUNIT = re.compile(r"\b(?:GluN2[A-D]|NR2[A-D]|GluN3[AB]|GluA[1-4]|GluR[1-4]|GluK[1-5])\b")
 _STOP = {"and", "plus", "with", "for", "at", "in", "from", "each", "or", "then"}
+_NUMPH = r"\d{1,2}(?:[.,]\d+)?"
+_PH_STEP = re.compile(rf"\s*(?:step\b\W{{0,8}}|from\s+(?:pH\s*)?)(?P<a>{_NUMPH})\s*(?:to|→|->)\s*(?P<b>{_NUMPH})", re.I)
+_PH_SERIES = re.compile(rf"\s*(?:of |=|:|at |\()?\s*(?P<a>{_NUMPH})(?!\d|[.,]\d)(?:\s*(?P<sep>to|-|–)\s*(?P<b>{_NUMPH})(?!\d|[.,]\d)|(?P<more>(?:\s*(?:,|or|and)\s*{_NUMPH}(?!\d|[.,]\d)(?!\s*(?:[pnuµμm]M\b|mV\b|C\b)))+))?")
+_PH_DELTA = re.compile(r"(?P<lo>\d+(?:\.\d+)?)(?:\s*(?:to|-|–)\s*(?P<hi>\d+(?:\.\d+)?))?\s*(?:pH\s*)?units?\b", re.I)
+_TEMP = re.compile(rf"(?<![\w.])(?P<lo>{NUM})(?:\s*(?:to|-|–)\s*(?P<hi>{NUM}))?\s*(?:°\s*C|º\s*C|˚\s*C|C)(?![\w+/-])")
+_ROOM = re.compile(r"\broom temperature\b|\bambient temperature\b|\bRT\b", re.I)
+ROOM_C = (18.0, 26.0)
+_CONTRAST = re.compile(r"\btransfer\b|\buntested\b|\bnot tested\b|\bnot measured\b|\bunlike\b|\bwhereas\b|\bin contrast\b|\bversus\b|\bcompared with\b|\bas opposed to\b", re.I)
+_NOT_ASSAY_TEMP = re.compile(r"loading|incubat|slicing|\bsliced\b|storage|stored|recover|housed|housing|rearing|reared|culture medium", re.I)
+_SIDE_IN = re.compile(r"pipette|internal|intracellular|cytosol|patch solution", re.I)
+_SIDE_EX = re.compile(r"extracellular|external|\bbath|aCSF|recording solution|perfus|medium|buffer|bicarbonate|Ringer", re.I)
+_NS = r"(?:not (?:stated|named|reported|given|read|measured)|unread|unknown|not in (?:the |any )?(?:abstract|text|file))"
+PH_FIELDS = ("pH", "pH_extracellular", "pH_intracellular")
+NON_CONC = ("system", "scaffold", "composition", "holding_potential_mV", "temperature_C", "pH_step", "pH_delta") + PH_FIELDS
 _FREE = re.compile(r"\b(Mg|Ca|Zn)(?:2\+)?(?:/(Mg|Ca|Zn)(?:2\+)?)?[- ]free\b", re.I)
 
 
@@ -75,6 +97,95 @@ def _interval(lo: float, hi: float | None) -> tuple[float, float]:
     return (lo, lo) if hi is None else (min(lo, hi), max(lo, hi))
 
 
+def _clauses(s: str):
+    """(start, end) of the clauses of a cell: split on ';' and on a full stop that is not a decimal point."""
+    start = 0
+    for m in re.finditer(r";|(?<!\d)\.(?=\s|$)", s):
+        yield start, m.start()
+        start = m.end()
+    yield start, len(s)
+
+
+def _side(clause: str, at: int, token: str | None) -> str | None:
+    """'extracellular' | 'intracellular' | None for the pH written at `at` in `clause`: its own suffix (pHo, pHi) first, otherwise the nearest side word."""
+    if token:
+        return "extracellular" if token == "o" else "intracellular"
+    best = None
+    for side, rx in (("intracellular", _SIDE_IN), ("extracellular", _SIDE_EX)):
+        for m in rx.finditer(clause):
+            d = min(abs(m.start() - at), abs(m.end() - at))
+            if d <= 45 and (best is None or d < best[0]):
+                best = (d, side)
+    return best[1] if best else None
+
+
+def _add(fields: dict, name: str, value, text: str) -> None:
+    v = fields.setdefault(name, {"state": "STATED", "values": [], "text": []})
+    if v["state"] != "STATED":
+        return
+    if value not in v["values"]:
+        v["values"].append(value)
+        v["text"].append(text)
+
+
+def _read_ph_temperature(s: str, fields: dict, unplaced: list, contrast: list) -> None:
+    """pH (side, absolute values, step, difference) and assay temperature, clause by clause."""
+    for a, b in _clauses(s):
+        clause = s[a:b]
+        has_ph = re.search(r"\bpH", clause)
+        temps = list(_TEMP.finditer(clause))
+        room = _ROOM.search(clause)
+        if _CONTRAST.search(clause):
+            if (has_ph and re.search(r"\bpH[io]?\b\W{0,3}" + _NUMPH, clause)) or temps or room:
+                contrast.append(clause.strip())
+            continue
+        for m in re.finditer(r"\bpH([io])?\b", clause):
+            after = clause[m.end():m.end() + 70]
+            st = _PH_STEP.match(after)
+            if st:
+                _add(fields, "pH_step", (_f(st.group("a")), _f(st.group("b"))), f"pH{m.group(1) or ''} {after.strip()[:st.end()].strip()}")
+                continue
+            sv = _PH_SERIES.match(after)
+            if not sv:
+                continue
+            lo = _f(sv.group("a"))
+            name = {"extracellular": "pH_extracellular", "intracellular": "pH_intracellular"}.get(_side(clause, m.start(), m.group(1)), "pH")
+            quote = f"pH{m.group(1) or ''} {after[:sv.end()].strip()}"
+            if sv.group("sep"):
+                hi = _f(sv.group("b"))
+                if hi < lo:
+                    unplaced.append(f"{quote} (a range or a step: not stated)")
+                    continue
+                vals = [(lo, hi)]
+            else:
+                vals = [(lo, lo)] + [(_f(x), _f(x)) for x in re.findall(_NUMPH, sv.group("more") or "")]
+            if any(v[1] > 14 or v[0] < 0 for v in vals):
+                unplaced.append(quote)
+                continue
+            for v in vals:
+                _add(fields, name, v, quote)
+        if has_ph or re.search(r"acid|alkal", clause, re.I):
+            for m in _PH_DELTA.finditer(clause):
+                lo = float(m.group("lo")); hi = float(m.group("hi")) if m.group("hi") else lo
+                _add(fields, "pH_delta", (min(lo, hi), max(lo, hi)), m.group(0))
+        for m in temps:
+            if _NOT_ASSAY_TEMP.search(clause[max(0, m.start() - 25):m.end() + 25]):
+                unplaced.append(f"{m.group(0)} (not an assay temperature)")
+                continue
+            lo, hi = _interval(_f(m.group("lo")), _f(m.group("hi")) if m.group("hi") else None)
+            if -5 <= lo and hi <= 100:
+                _add(fields, "temperature_C", (lo, hi), m.group(0))
+        if room and not temps:
+            _add(fields, "temperature_C", ROOM_C, f"{room.group(0)} (read as {ROOM_C[0]:g}-{ROOM_C[1]:g} C)")
+    for name, key in (("pH", r"\bpH\b"), ("temperature_C", r"\btemperature\b")):
+        if name in fields or (name == "pH" and any(f in fields for f in PH_FIELDS)):
+            continue
+        if re.search(key + r"[^;.)]{0," + ("30" if name == "pH" else "70") + r"}?" + _NS, s, re.I) or (name == "pH" and re.search(r"\bno\b[^;.]{0,40}\bpH\b[^;.]{0,10}\bstated", s, re.I)):
+            fields[name] = {"state": "NOT_STATED", "values": [], "text": []}
+        elif re.search(key + r"[^;.)]{0,25}?not applicable", s, re.I):
+            fields[name] = {"state": "NOT_APPLICABLE", "values": [], "text": []}
+
+
 _INHERIT = re.compile(r"^\s*As (D\d+)\b|[Cc]onditions as (D\d+)\b")
 
 
@@ -83,6 +194,7 @@ def parse(text: str, cells: dict[str, str] | None = None, _seen: tuple = ()) -> 
     s = (text or "").replace("µ", "u").replace("μ", "u")
     fields: dict[str, dict] = {}
     placed: list[tuple[int, int]] = []
+    contrast: list[str] = []
 
     labels = [name for name, pat in SYSTEMS if re.search(pat, s, re.I)]
     if labels:
@@ -150,17 +262,27 @@ def parse(text: str, cells: dict[str, str] | None = None, _seen: tuple = ()) -> 
                     fields[name] = {"state": "NOT_STATED", "values": [], "text": []}
             if "holding_potential_mV" not in fields and re.search(r"holding potential", clause, re.I):
                 fields["holding_potential_mV"] = {"state": "NOT_STATED", "values": [], "text": []}
+    _read_ph_temperature(s, fields, unplaced, contrast)
     ref = _INHERIT.search(text or "")
-    inherited = ""
+    inherited, ref_state = "", "NONE"
     if ref and cells is not None:
-        inherited = ref.group(1) or ref.group(2)
-        if inherited in cells and inherited not in _seen:
-            base = parse(cells[inherited], cells, _seen + (inherited,))["fields"]
-            own = {k: v for k, v in fields.items() if k not in ("system", "scaffold")}
-            fields = {**base, **own}
+        target = ref.group(1) or ref.group(2)
+        if target in _seen:
+            ref_state, unplaced = "CIRCULAR", unplaced + [f"reference {target} is circular"]
+        elif target not in cells:
+            ref_state, unplaced = "MISSING", unplaced + [f"reference {target} not found among the propositions of this package"]
         else:
-            inherited = ""   # reference not resolvable here: the cell keeps only what it states
-    return {"source_text": text or "", "fields": fields, "unplaced": unplaced, "inherits": inherited}
+            inherited, ref_state = target, "RESOLVED"
+            base_read = parse(cells[target], cells, _seen + (target,))
+            base = base_read["fields"]
+            if base_read["inherit_state"] in ("MISSING", "CIRCULAR"):
+                ref_state = base_read["inherit_state"]
+                unplaced = unplaced + [f"reference {target} itself has an unresolved reference ({ref_state.lower()})"]
+            own = {k: v for k, v in fields.items() if k not in ("system", "scaffold")}
+            if any(k in own for k in ("pH", "pH_extracellular")):      # a pH the cell states itself replaces the inherited bath pH, whatever the side wording
+                base = {k: v for k, v in base.items() if k not in ("pH", "pH_extracellular")}
+            fields = {**base, **own}
+    return {"source_text": text or "", "fields": fields, "unplaced": unplaced, "inherits": inherited, "inherit_state": ref_state, "contrast": contrast}
 
 
 def _fmt(field: str, values) -> str:
@@ -172,8 +294,11 @@ def _fmt(field: str, values) -> str:
             out.append("none")
             continue
         lo, hi = v
-        unit = "mV" if field == "holding_potential_mV" else "nM"
-        out.append(f"{lo:g} {unit}" if lo == hi else f"{lo:g} to {hi:g} {unit}")
+        if field == "pH_step":
+            out.append(f"pH {lo:g} to {hi:g}")
+            continue
+        unit = {"holding_potential_mV": "mV", "temperature_C": "C", "pH_delta": "pH units"}.get(field, "" if field in PH_FIELDS else "nM")
+        out.append((f"{lo:g}" if lo == hi else f"{lo:g} to {hi:g}") + (f" {unit}" if unit else ""))
     return "; ".join(out)
 
 
@@ -184,6 +309,8 @@ def _show(field: str, f: dict) -> str:
 
 def _same(field: str, a: list, b: list) -> str:
     """'equal' | 'disjoint' | 'overlap' for two lists of values of one field."""
+    if field == "pH_step":
+        return "equal" if set(a) == set(b) else "disjoint"
     if field in ("system", "scaffold", "composition") or "none" in a or "none" in b:
         sa, sb = set(a), set(b)
         return "equal" if sa == sb else "disjoint" if not sa & sb else "overlap"
@@ -198,8 +325,12 @@ def compare(a: dict, b: dict) -> dict:
     """a, b: parse() results (or strings). Returns the state, with what agreed, what differs, what is stated on one side only."""
     a = parse(a) if isinstance(a, str) else a
     b = parse(b) if isinstance(b, str) else b
-    fa, fb = a["fields"], b["fields"]
-    agreed, differ, one_sided, partial = [], [], [], []
+    fa, fb = dict(a["fields"]), dict(b["fields"])
+    agreed, differ, one_sided, partial, notes = [], [], [], [], []
+    for x, y in ((fa, fb), (fb, fa)):     # a pH with no side on one side meets the extracellular pH of the other: same bath, side not documented
+        if "pH" in x and "pH_extracellular" in y and "pH_extracellular" not in x and "pH" not in y:
+            x["pH_extracellular"] = {**x.pop("pH"), "side_not_stated": True}
+
     for field in sorted(set(fa) | set(fb)):
         x, y = fa.get(field), fb.get(field)
         sx, sy = bool(x and x["state"] == "STATED"), bool(y and y["state"] == "STATED")
@@ -207,9 +338,13 @@ def compare(a: dict, b: dict) -> dict:
             rel = _same(field, x["values"], y["values"])
             if rel == "equal":
                 agreed.append(field)
+                if x.get("side_not_stated") or y.get("side_not_stated"):
+                    notes.append(f"{field}: side stated on one side only")
+            elif rel == "disjoint" and (x.get("side_not_stated") or y.get("side_not_stated")):
+                partial.append({"field": field, "a": _show(field, x), "b": _show(field, y), "why": "differ, and the side (bath or pipette) is not stated on one side"})
             elif rel == "disjoint" and not (x.get("open") or y.get("open")):
                 note = ""
-                if field not in ("system", "scaffold", "composition") and x["values"] != ["none"] and y["values"] != ["none"]:
+                if field not in NON_CONC and x["values"] != ["none"] and y["values"] != ["none"]:
                     px, py = x["values"][0][0], y["values"][0][0]
                     if px and py and any(abs(px / py - r) <= 0.05 * r or abs(py / px - r) <= 0.05 * r for r in (1e3, 1e6)):
                         note = " (ratio is a power of 1000: read both originals for a unit slip)"
@@ -218,24 +353,27 @@ def compare(a: dict, b: dict) -> dict:
                 partial.append({"field": field, "a": _show(field, x), "b": _show(field, y)})
         elif sx or sy:
             side, f = ("a", x) if sx else ("b", y)
-            declared = "declared not stated on the other side" if (x if sy else y) else "absent on the other side"
+            other = x if sy else y
+            declared = ("declared " + other["state"].lower().replace("_", " ") + " on the other side") if other else "absent on the other side"
             one_sided.append({"field": field, "stated_in": side, "value": _show(field, f), "other": declared})
     system_known = "system" in agreed
+    unresolved = [f"reference to another proposition unresolved ({r.lower()})" for r in {a.get("inherit_state"), b.get("inherit_state")} if r in ("MISSING", "CIRCULAR")]
     if differ:
         state = INCOMPATIBILITY
-    elif not system_known or partial or one_sided or not [f for f in agreed if f != "system"]:
+    elif not system_known or partial or one_sided or unresolved or not [f for f in agreed if f != "system"]:
         state = INSUFFICIENT
     else:
         state = AGREEMENT
     reasons = [f"{d['field']}: {d['a']} / {d['b']}" for d in differ]
-    reasons += [f"{p['field']}: values overlap without being equal ({p['a']} / {p['b']})" for p in partial]
+    reasons += [f"{p['field']}: {p.get('why', 'values overlap without being equal')} ({p['a']} / {p['b']})" for p in partial]
     reasons += [f"{o['field']} stated only in {o['stated_in']} ({o['value']})" for o in one_sided]
+    reasons += unresolved
     if not system_known:
         reasons.append("system not recognised or not the same on both sides")
     elif not [f for f in agreed if f != "system"]:
         reasons.append("no condition shared beyond the system")
-    return {"state": state, "agreed": agreed, "differ": differ, "partial": partial, "one_sided": one_sided,
-            "reasons": reasons, "unplaced": a["unplaced"] + b["unplaced"]}
+    return {"state": state, "agreed": agreed, "differ": differ, "partial": partial, "one_sided": one_sided, "notes": notes,
+            "reasons": reasons, "unplaced": a["unplaced"] + b["unplaced"], "contrast": a.get("contrast", []) + b.get("contrast", [])}
 
 
 def main(argv=None) -> int:

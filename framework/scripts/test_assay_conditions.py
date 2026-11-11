@@ -119,5 +119,113 @@ class OtherFieldTests(unittest.TestCase):
         self.assertEqual(state("", ""), ac.INSUFFICIENT)
 
 
+class PhAndTemperature(unittest.TestCase):
+    """Cases from the decisive.tsv files of the repurposing packages (ro25_6981, glun2b_comparators, nmda_composition, ampa_comparison)."""
+    D09 = "Rat GluN1-1a/GluN2B in Xenopus oocytes, two-electrode voltage clamp at -40 mV, 23 C, 50-100 uM glutamate plus 30 uM glycine, 10 uM EDTA, Mg2+-free (0.5 mM Ba2+), pH 7.6 or 6.9 set with HCl at constant Na+"
+    D17 = "Rat GluN1-1a/GluN2B in Xenopus oocytes, conditions as D09; transfer to a slice (bicarbonate buffer, 35 C, Mg2+) is untested; the design needs this as a control for any pH arm"
+
+    def f(self, text, cells=None):
+        return ac.parse(text, cells)["fields"]
+
+    def test_ph_is_a_value_not_a_concentration(self):
+        f = self.f("Xenopus oocytes, pH 7.4, 10 uM EDTA, 10 mM HEPES")
+        self.assertEqual(f["pH"]["values"], [(7.4, 7.4)])
+        self.assertEqual(f["EDTA"]["values"], [(1e4, 1e4)])
+        self.assertEqual(f["pH"]["values"] + f["EDTA"]["values"], [(7.4, 7.4), (1e4, 1e4)])
+
+    def test_a_series_of_ph_values_agrees_only_with_itself(self):
+        self.assertEqual(state(self.D09, self.D09), ac.AGREEMENT)
+        self.assertEqual(state("Xenopus oocytes, pH 6.9, -40 mV", "Xenopus oocytes, pH 7.6 or 6.9, -40 mV"), ac.INSUFFICIENT)   # one value of the series is not the series
+        self.assertEqual(state("Xenopus oocytes, pH 7.4, -40 mV", "Xenopus oocytes, pH 7.3, -40 mV"), ac.INCOMPATIBILITY)
+
+    def test_a_ph_stated_on_one_side_only_is_not_agreement(self):
+        r = ac.compare("Xenopus oocytes, -40 mV, 23 C", "Xenopus oocytes, -40 mV, 23 C, pH 7.4")
+        self.assertEqual(r["state"], ac.INSUFFICIENT)
+        self.assertIn("pH stated only in b", " ".join(r["reasons"]))
+
+    def test_not_stated_is_declared_and_not_a_value(self):
+        f = self.f("HEK293, 3 uM glutamate, 20 mM HEPES (pH not stated), no Zn2+ chelator stated")
+        self.assertEqual((f["pH"]["state"], f["pH"]["values"]), ("NOT_STATED", []))
+        r = ac.compare("HEK293, 3 uM glutamate, pH 7.4", "HEK293, 3 uM glutamate, 20 mM HEPES (pH not stated)")
+        self.assertEqual(r["state"], ac.INSUFFICIENT)
+        self.assertEqual(r["one_sided"][0]["other"], "declared not stated on the other side")
+        self.assertEqual(self.f("age, temperature, holding potential, Mg2+ and agonist conditions not in the abstract")["temperature_C"]["state"], "NOT_STATED")
+
+    def test_not_applicable_is_not_not_stated(self):
+        self.assertEqual(self.f("Purified protein, circular dichroism; pH not applicable to the docking")["pH"]["state"], "NOT_APPLICABLE")
+
+    def test_bath_and_pipette_ph_do_not_meet(self):
+        r = ac.compare("Slice, bath pH 7.4, pipette pH 7.2", "Slice, bath pH 7.4")
+        self.assertEqual(r["state"], ac.INSUFFICIENT)
+        self.assertIn("pH_extracellular", r["agreed"])
+        self.assertNotEqual(ac.compare("Slice, pipette solution pH 7.2-7.3", "Slice, bath pH 7.4")["state"], ac.INCOMPATIBILITY)
+
+    def test_unqualified_ph_meets_the_extracellular_one_only_when_equal(self):
+        eq = ac.compare("Oocytes, pH 7.4, -40 mV", "Oocytes, aCSF pH 7.4, -40 mV")
+        self.assertEqual(eq["state"], ac.AGREEMENT)
+        self.assertEqual(eq["notes"], ["pH_extracellular: side stated on one side only"])
+        diff = ac.compare("Oocytes, pH 7.2, -40 mV", "Oocytes, aCSF pH 7.4, -40 mV")
+        self.assertEqual(diff["state"], ac.INSUFFICIENT)     # the 7.2 may be a pipette, so no documented incompatibility
+        self.assertIn("side", diff["reasons"][0])
+
+    def test_a_step_and_a_difference_are_not_absolute_values(self):
+        step = self.f("pHo step (7.4 to 7.1, with 7.7) per cell")
+        self.assertEqual(step["pH_step"]["values"], [(7.4, 7.1)])
+        self.assertNotIn("pH", step)
+        self.assertNotIn("pH_extracellular", step)
+        self.assertEqual(self.f("a 0.2 pH unit fall of pHo")["pH_delta"]["values"], [(0.2, 0.2)])
+        self.assertEqual(state("Slice, pHo step (7.4 to 7.1)", "Slice, pH 7.4"), ac.INSUFFICIENT)
+        self.assertEqual(state("Slice, a 0.2 pH unit fall", "Slice, pH 7.2"), ac.INSUFFICIENT)
+        self.assertEqual(state("Slice, pHo step (7.4 to 7.1)", "Slice, pHo step (7.4 to 7.2)"), ac.INCOMPATIBILITY)
+
+    def test_a_range_or_a_step_that_the_text_does_not_say_is_left_unplaced(self):
+        p = ac.parse("Oocytes, pH 7.4 to 7.2")
+        self.assertNotIn("pH", p["fields"])
+        self.assertTrue(any("range or a step" in u for u in p["unplaced"]))
+        self.assertEqual(self.f("Cs pipette solution, pH 7.2-7.3")["pH_intracellular"]["values"], [(7.2, 7.3)])
+
+    def test_temperature_is_read_where_the_assay_is_run(self):
+        self.assertEqual(self.f("slice, 30-32 C, current clamp")["temperature_C"]["values"], [(30.0, 32.0)])
+        self.assertEqual(state("Mouse slice, 35 C", "Mouse slice, 35 C"), ac.AGREEMENT)
+        self.assertEqual(state("Mouse slice, 35 C", "Mouse slice, room temperature"), ac.INCOMPATIBILITY)
+        r = ac.compare("Xenopus oocytes, 23 C", "Xenopus oocytes, room temperature")
+        self.assertEqual(r["state"], ac.INSUFFICIENT)     # 23 C is inside the nominal room range: not equal, not different
+        self.assertIn("read as 18-26 C", r["reasons"][0])
+
+    def test_loading_temperature_is_not_the_assay_temperature(self):
+        p = ac.parse("Fura-2 plate reader; buffer 1 mM Mg2+, pH 7.4; assay temperature not stated (Fura-2 loading 37 C)")
+        self.assertEqual(p["fields"]["temperature_C"]["state"], "NOT_STATED")
+        self.assertIn("37 C (not an assay temperature)", p["unplaced"])
+        self.assertEqual(self.f("oocytes, -40 mV, 23 C, assay 3-4 days after injection")["temperature_C"]["values"], [(23.0, 23.0)])
+
+    def test_a_contrast_clause_is_not_the_assay_condition(self):
+        cells = {"D09": self.D09, "D17": self.D17}
+        p = ac.parse(self.D17, cells)
+        self.assertEqual(p["fields"]["temperature_C"]["values"], [(23.0, 23.0)])      # inherited from D09, not the 35 C of the untested transfer
+        self.assertEqual(p["contrast"], ["transfer to a slice (bicarbonate buffer, 35 C, Mg2+) is untested"])
+        self.assertEqual(ac.compare(p, ac.parse(self.D09, cells))["state"], ac.AGREEMENT)
+
+    def test_a_local_override_replaces_only_what_it_states(self):
+        cells = {"D09": self.D09, "D20": "As D09; 35 C", "D21": "As D09; pH 7.4"}
+        a, b = ac.parse(cells["D20"], cells)["fields"], ac.parse(cells["D21"], cells)["fields"]
+        self.assertEqual((a["temperature_C"]["values"], a["pH"]["values"]), ([(35.0, 35.0)], [(7.6, 7.6), (6.9, 6.9)]))
+        self.assertEqual((b["pH"]["values"], b["temperature_C"]["values"]), ([(7.4, 7.4)], [(23.0, 23.0)]))
+
+    def test_missing_and_circular_references_are_named(self):
+        cells = {"D01": "As D02", "D02": "As D01; 5 uM ATP", "D03": "oocytes; 1 mM ATP, 23 C"}
+        circ = ac.parse(cells["D01"], cells)
+        self.assertEqual(circ["inherit_state"], "CIRCULAR")
+        r = ac.compare(ac.parse("oocytes; 1 mM ATP, 23 C", cells), ac.parse("As D99; 1 mM ATP, 23 C", {**cells}))
+        self.assertEqual(r["state"], ac.INSUFFICIENT)       # the stated fields agree, but a missing reference must not read as agreement
+        self.assertIn("unresolved (missing)", " ".join(r["reasons"]))
+        self.assertTrue(any("D99" in u for u in r["unplaced"]))
+        self.assertEqual(ac.compare(ac.parse("oocytes; 1 mM ATP, 23 C", cells), ac.parse("oocytes; 1 mM ATP, 23 C", cells))["state"], ac.AGREEMENT)
+
+    def test_partly_overlapping_compositions_stay_insufficient(self):
+        r = ac.compare("HEK293, GluA2/GluK1, 4 C", "HEK293, GluA2, 4 C")
+        self.assertEqual(r["state"], ac.INSUFFICIENT)
+        self.assertEqual(r["partial"][0]["field"], "composition")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

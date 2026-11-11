@@ -1,0 +1,156 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "PLAN-HE46-SCIENTIFIC-CONDITIONS-PROPAGATION-GENERATIVE-CAPACITY-20261111",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "plan",
+ "PRIORITY": "HIGH",
+ "assigned_on": "2026-11-11",
+ "OBJECTIVE": "HE46: pH/temperature conditions, propagation of a correction to consumers, one unused capability made visible, references/compositions, reading debts, evaluation without circular truth, one cost factor, continuity.",
+ "worktree": ".claude/worktrees/he46",
+ "branch": "task/he46",
+ "CURRENT_STATE": "IN_PROGRESS",
+ "CHECKPOINT": {
+  "last_verified_result": "HE45 COMPLETE, landed f76439c2; main at 142f6c5f (IT45 COMPLETE)",
+  "first_incomplete_work": "H0",
+  "active_processes": "none",
+  "real_dependencies": "IT46 (ORCH-ROADMAP-IT46-20261111) consumes conditions and engine; SCI46 pharmacology",
+  "next_executable_step": "H0 reconcile; then H1"
+ },
+ "AUTHORISED_QUEUE_20261111": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_H0": {
+   "order": 1,
+   "title": "Verify real use of HE45 components (reader calls, insufficiency consumption, aggregation, cache, unqualified roles, loader, consumers)",
+   "steps": [
+    {
+     "step": "Verify real use of HE45 components (reader calls, insufficiency consumption, aggregation, cache, unqualified roles, loader, consumers)",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_H1": {
+   "order": 2,
+   "title": "pH and temperature in the conditions reader, from propositions present in packages; before/after on real packages",
+   "steps": [
+    {
+     "step": "pH and temperature in the conditions reader, from propositions present in packages; before/after on real packages",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_H2": {
+   "order": 3,
+   "title": "Propagate the TREK-1 Imin correction from source to consumers (SCI45 package) with a targeted reference/input fix",
+   "steps": [
+    {
+     "step": "Propagate the TREK-1 Imin correction from source to consumers (SCI45 package) with a targeted reference/input fix",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_H3": {
+   "order": 4,
+   "title": "One concrete unused-information path with IT46: minimal link, second-input proof, trace and removal point",
+   "steps": [
+    {
+     "step": "One concrete unused-information path with IT46: minimal link, second-input proof, trace and removal point",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_H4": {
+   "order": 5,
+   "title": "References and compositions: missing/circular/duplicate local ids, override, partial overlap, contrast sentences",
+   "steps": [
+    {
+     "step": "References and compositions: missing/circular/duplicate local ids, override, partial overlap, contrast sentences",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_H5": {
+   "order": 6,
+   "title": "Reading debts: mechanical support to Orchestrator on receipts, parents, staged/recorded, declared coverage",
+   "steps": [
+    {
+     "step": "Reading debts: mechanical support to Orchestrator on receipts, parents, staged/recorded, declared coverage",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_H6": {
+   "order": 7,
+   "title": "Engine evaluation without circular truth: input/rules/result/reference/independent judgement separated; support IT46",
+   "steps": [
+    {
+     "step": "Engine evaluation without circular truth: input/rules/result/reference/independent judgement separated; support IT46",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_H7": {
+   "order": 8,
+   "title": "Cost: one real circumscribed activity, dominant factor measured, proportionate fix",
+   "steps": [
+    {
+     "step": "Cost: one real circumscribed activity, dominant factor measured, proportionate fix",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_H8": {
+   "order": 9,
+   "title": "Continuity: COMPLETE records with pending CI/site verification; canonical state use",
+   "steps": [
+    {
+     "step": "Continuity: COMPLETE records with pending CI/site verification; canonical state use",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_H9": {
+   "order": 10,
+   "title": "DREAM, simplification, retrieval on a new question; external scouting only for an uncovered need",
+   "steps": [
+    {
+     "step": "DREAM, simplification, retrieval on a new question; external scouting only for an uncovered need",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_H10": {
+   "order": 11,
+   "title": "Queue order, delegation budget, batteries by SHA, landing, push, cleanup, final report",
+   "steps": [
+    {
+     "step": "Queue order, delegation budget, batteries by SHA, landing, push, cleanup, final report",
+     "status": "TODO",
+     "owner": "plan",
+     "evidence": ""
+    }
+   ]
+  }
+ }
+}
