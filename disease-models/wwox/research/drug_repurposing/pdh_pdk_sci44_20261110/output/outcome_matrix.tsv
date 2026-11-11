@@ -1,0 +1,9 @@
+measured_outcome	favours_explanation	hypothesis_that_rises	hypothesis_that_falls_or_stays_open
+PDH phosphorylation higher and activity lower in the KO class, restored by dephosphorylation, with the dominant kinase transcript and protein raised	phosphorylation-limited PDH in that class (INV-07 H-A)	PH2 (tool by isoform) becomes the first arm; PH1 confirmed for that class	PH5 weakens for that class; PH3 stays open
+PDH phosphorylation and activity equal to control in every class	PDH not limited; shift compensatory or lactate-side (H-B, H-C)	PH5 (no-effect or harm reading); PH3 stays testable	PH1 and PH2 fall to 'no premise'; the PDK lever is a negative control only
+Restraint present in astrocytes or oligodendrocyte lineage but not in neurons (or the reverse)	cell-type division of labour (H-D)	PH1 and PH3 rise; the lever is class-directed	a bulk-sample design is shown inadequate
+Diazoxide-sensitive current per pF smaller or sulfonylurea-occluded in KO, with lactate raised in the same slice	a lactate-closed KATP share in the Rin and rest change	PH4 rises; SCI43 KH1 gains a metabolic upstream	a Kir/K2P-only reading is incomplete, not refuted
+No genotype difference in the diazoxide-sensitive current, or in whole-cell dialysed ATP recordings	no KATP share	PH4 falls	SCI43 step 2b (Ba2+, K2P) remains the K-branch test
+Burst incidence falls with the LDH or lactate-transport tool and returns with pyruvate or lactate add-back	lactate supply is necessary for the burst (H-D, H-C)	PH3 rises as a lever and as a probe of cell roles	a receptor-route-only explanation of the suppression
+Burst unchanged at achieved block, or a functional readout worsens	lactate supply not the burst driver; or harm direction	PH5	PH3 falls
+A mouse neuronal preparation shows PDK2-dominant regulation and a human one PDK3-dominant	species difference in the kinase set	PH1 (species limit on transfer)	any claim that transfers an isoform result from mouse to human neurons

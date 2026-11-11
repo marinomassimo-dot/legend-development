@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-10T23:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-10T23:47:00Z",
+ "event_id": "FTR-20261110-34766906-97",
+ "evidence_basis": [
+  "Results on KATP expression, whole-cell KATP conductance, membrane potential and resistance effects of KATP modulators, lactate in perforated patch, the Methods on whole-cell (25.3 C) and perforated patch, and the Discussion paragraph on Sada 2015 read; images not viewed; supplementary files not read.",
+  "verbatim_locator | proposition: lactate enhances firing through KATP closure | Results | \"These observations indicate that lactate enhances neuronal activity via a closure of KATP channels\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v2/audit.md",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v2/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v2/queries_verifier.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket text of PMC8651295 fetched with plain curl on 2026-11-10; bytes not saved",
+ "study_id": {
+  "doi": "10.7554/eLife.71424",
+  "pmid": "34766906"
+ },
+ "workflow": "SCI44 package A blind verifier V2 pk-w (pdh_pdk_sci44_20261110). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

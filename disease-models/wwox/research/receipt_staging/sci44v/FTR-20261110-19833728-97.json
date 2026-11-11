@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-10T23:22Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-10T23:26Z",
+ "event_id": "FTR-20261110-19833728-97",
+ "evidence_basis": [
+  "Verifier V1 read Table 1 (apparent IC50 for DCA, wild-type PDK2) and the legend stating n = 3-5. Other sections and figures not read.",
+  "verbatim_locator | proposition: DCA apparent IC50 on human PDK2, basal and core-dependent | Table 1 | \"WT 0.29 ± 0.02 0.48 ± 0.08\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/audit.md",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/recompute_expression.tsv"
+ ],
+ "prior_receipt": "FTR-20261110-19833728-96",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page PMC2797213 (plain curl)",
+ "study_id": {
+  "doi": "10.1074/jbc.M109.065557",
+  "pmid": "19833728"
+ },
+ "workflow": "SCI44 blind verifier V1 (actor pk-v). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

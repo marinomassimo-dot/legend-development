@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-10T22:53:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-10T22:58:00Z",
+ "event_id": "FTR-20261110-24612826-96",
+ "evidence_basis": [
+  "Background, the passages on PDK and PDH, and the Conclusions read; results sections and figures not read in detail.",
+  "verbatim_locator | proposition: CPI-613 acts on PDKs by stimulation according to the authors | Background | \"specifically induces inactivating phosphorylation of tumor cell PDH via stimulation of PDKs 1 to 4\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a3/activity_primary.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a3/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a3/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket text (PMC4108059.1) fetched with plain curl; figures and supplements not opened",
+ "study_id": {
+  "doi": "10.1186/2049-3002-2-4",
+  "pmid": "24612826"
+ },
+ "workflow": "SCI44 package A step A3 producer og-q (pdh_pdk_sci44_20261110). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-10T23:14Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-10T23:26Z",
+ "event_id": "FTR-20261110-26687838-97",
+ "evidence_basis": [
+  "Verifier V1 re-extraction from the GEO table GSE73721_Human_and_mouse_table.csv.gz with explicit column ranges (12 mature astrocyte, 6 fetal, 1 neuron, 5 oligodendrocyte, 3 myeloid, 2 endothelial, 4 mouse astrocyte columns, 45 of 45 columns allocated); text of Results, Methods paragraph on tissue and Fig 1 and Fig 4 legends read from the PMC open-data bucket text. Figures not viewed.",
+  "verbatim_locator | proposition: neurons were Thy1-purified; n per class | Figure 4 legend | \"N=12, 1, 5, 3, and 2 patients for astrocytes, neurons, oligodendrocytes, microglia, and endothelial cells, respectively.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/audit.md",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/recompute_expression.tsv"
+ ],
+ "prior_receipt": "FTR-20261110-26687838-96",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket PMC4707064.1 text and GEO GSE73721 table (plain curl)",
+ "study_id": {
+  "doi": "10.1016/j.neuron.2015.11.013",
+  "pmid": "26687838"
+ },
+ "workflow": "SCI44 blind verifier V1 (actor pk-v). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

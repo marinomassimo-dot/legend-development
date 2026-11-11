@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-10T23:20Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-10T23:26Z",
+ "event_id": "FTR-20261110-20822912-97",
+ "evidence_basis": [
+  "Verifier V1 read the Abstract, the passage naming PDK1 and the statement that compounds 1 (GlcNAc-thiazoline) and 2 (GlcNAc-selenazoline) are the paper's inhibitors; the ChEMBL structure for CHEMBL257158 has a sulfur atom (formula C8H13NO4S), so it is the thiazoline, not the selenazoline. Rest not read.",
+  "verbatim_locator | proposition: PDK1 in the source means the insulin-signalling kinase | Results | \"The inhibitors also reduced the activation of PDK1 and AKT (data not shown).\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/audit.md",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/recompute_expression.tsv"
+ ],
+ "prior_receipt": "FTR-20261110-20822912-96",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket PMC4210863.1 text (plain curl)",
+ "study_id": {
+  "doi": "10.1016/j.bmc.2010.08.010",
+  "pmid": "20822912"
+ },
+ "workflow": "SCI44 blind verifier V1 (actor pk-v). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

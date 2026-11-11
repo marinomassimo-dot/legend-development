@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-10T23:13Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-10T23:26Z",
+ "event_id": "FTR-20261110-25186741-97",
+ "evidence_basis": [
+  "Verifier V1 re-extraction of Pdk1-4 and Pdpk1 from all 17 GEO per-sample tables (sheet UCSC Genes FPKM, own code); sample titles and series design read from the GEO SOFT file; Methods and the Results design paragraphs of the PMC page read (P7 versus P17, pooling, FPKM floor). Introduction, Discussion and figures not read.",
+  "verbatim_locator | proposition: one replicate is a pool of animals | Methods | \"For all cell types, one biological replicate consists of pooled cells from a litter of 3–12 mice.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/audit.md",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/recompute_expression.tsv"
+ ],
+ "prior_receipt": "FTR-20261110-25186741-96",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page PMC4152602 (plain curl) and GEO GSE52564 RAW tar plus SOFT (plain curl); bytes kept outside the repository",
+ "study_id": {
+  "doi": "10.1523/JNEUROSCI.1860-14.2014",
+  "pmid": "25186741"
+ },
+ "workflow": "SCI44 blind verifier V1 (actor pk-v). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

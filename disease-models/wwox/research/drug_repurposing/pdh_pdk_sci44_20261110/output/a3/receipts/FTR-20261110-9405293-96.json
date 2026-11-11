@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-10T22:53:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-10T22:58:00Z",
+ "event_id": "FTR-20261110-9405293-96",
+ "evidence_basis": [
+  "Abstract only.",
+  "verbatim_locator | proposition: DCA apparent Ki spans 0.2 mM (PDK2) to 8 mM (PDK3) | Abstract | \"from 0.2 mM for PDK2 to 8 mM for PDK3\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a3/activity_primary.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a3/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a3/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record (abstract); PMC page is scanned images and the PDF returned a reCAPTCHA, not retried",
+ "study_id": {
+  "doi": "10.1042/bj3290191",
+  "pmid": "9405293"
+ },
+ "workflow": "SCI44 package A step A3 producer og-q (pdh_pdk_sci44_20261110). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

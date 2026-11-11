@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-10T23:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-10T23:47:00Z",
+ "event_id": "FTR-20261110-36551928-97",
+ "evidence_basis": [
+  "Abstract only (PubMed record read through the PubMed tool); no full text opened.",
+  "verbatim_locator | proposition: PDK1 variant in a patient with epilepsy | Abstract | \"de novo heterozygous missense variant in PDK1\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v2/audit.md",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v2/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v2/queries_verifier.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record (abstract) read through the PubMed tool on 2026-11-10",
+ "study_id": {
+  "doi": "10.3390/biomedicines10123171",
+  "pmid": "36551928"
+ },
+ "workflow": "SCI44 package A blind verifier V2 pk-w (pdh_pdk_sci44_20261110). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

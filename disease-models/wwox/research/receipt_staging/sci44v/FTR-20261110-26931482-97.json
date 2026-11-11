@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-10T23:24Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-10T23:26Z",
+ "event_id": "FTR-20261110-26931482-97",
+ "evidence_basis": [
+  "Abstract only (efetch text).",
+  "verbatim_locator | proposition: Pdk2 and Pdk4 deficient mice exist and show a nociceptive phenotype | Abstract | \"Deficiency in Pdk2 and/or Pdk4 in mice led to attenuation of formalin-induced nociceptive behaviors\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/audit.md",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/recompute_expression.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record",
+ "study_id": {
+  "doi": "10.1002/jnr.23727",
+  "pmid": "26931482"
+ },
+ "workflow": "SCI44 blind verifier V1 (actor pk-v). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
