@@ -1,0 +1,10 @@
+item	value
+S1	False
+S1_max_L_at_s0.5	0.04435
+S2	True
+S3	True
+S3_min_s_star_n1_d<=0.2	1.0
+S4_f_gt_0.8_only_when_d0.5_n2	True
+any_cell_reaches_0.28_s<=0.5_d<=0.3	True
+max_f_d<=0.2	0.5472
+max_f_d<=0.3	0.7044
