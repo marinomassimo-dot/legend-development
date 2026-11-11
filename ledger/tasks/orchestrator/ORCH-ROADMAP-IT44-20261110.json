@@ -26,7 +26,7 @@
      "step": "Close consumption of SCI43 and HE43 deliveries: measurement.py in the quantitative path, parent_form without merging stereoisomers, read-state propagation, KH1-KH5 conditions, shared preparation conditions; before/after",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "HE43 consumed (measurement.measure, parent_form); HE44 consumed (exact resolver; quantity columns come with main); SCI43 KH1-KH5 mapped to consumers; SCI44 A rows 1-9, 11-14 applied, 93 receipts recorded (trial after fixing two parent links), loader generalised to an engine folder; SCI44 B and C (consumer deltas, 41 further staged receipts) deferred to the next integration, stated in the README."
+     "evidence": "HE43 consumed (measurement.measure, parent_form); HE44 consumed (exact resolver; its S12 first use hit an endpoint 500 and was recorded READ_ERROR); SCI43 KH1-KH5 mapped to consumers; SCI44 A rows 1-9, 11-14 applied; SCI44 B and C consumed (V18 Ro 25-6981 split out of the V08 group, V17 and INV-18 updated for the 2 mM Na2ATP internal and the 11-17 percent KATP bound, M01/M05, IT43-Q01 in progress, IT44-Q06; package B registered for INV-05: the engine re-derives Ro 25-6981 as PRIMARY probe with NOT_COMPARABLE potencies at different holding potentials); 134 SCI44 receipts recorded in two trials after normalising parent links (ledger 1,733 OK); loader reads an engine/ folder."
     }
    ]
   },
@@ -114,7 +114,7 @@
      "step": "Costs and closure: batteries by SHA in unique clones, landing, remote, CI and site checks; final report in Italian starting with the mandated question",
      "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": "Battery and landing pending for the IT44 candidate."
+     "evidence": "IT43 landed ed708dfc (CI #645 success). IT44 candidate: task/it44b tip (this commit); battery to be run on the frozen SHA; the battery on 8edf3852 (IT44 before B/C) was stopped at about 30 percent in favour of the combined candidate (no verdict)."
     }
    ]
   }
