@@ -143,7 +143,7 @@ def load_package(pkg: Path) -> dict:
 def load_comparison(pkg: Path) -> dict:
     """A pharmacological comparison: comparison.tsv rows (keyed by the first column, the text before ' ('), new_measurements.tsv, decisive.tsv."""
     pkg = Path(pkg)
-    out = pkg / "output" if (pkg / "output").is_dir() else pkg
+    out = next((c for c in (pkg / "output", pkg / "engine") if (c / "comparison.tsv").exists()), pkg / "output" if (pkg / "output").is_dir() else pkg)   # IT44: a package may keep its comparison rows in `engine/` beside its producer tables in `output/` (SCI44 package A)
     refs, rows, meas, dec = {}, {}, {}, {}
     for r, ref in _tsv_lined(out / "comparison.tsv"):
         k = r[next(iter(r))].split(" (")[0].strip()   # the first column is the row key (hyp_id in one package, row_id in another)

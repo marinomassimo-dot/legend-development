@@ -15,7 +15,7 @@
      "step": "Restart and reconciliation: IT43 / SCI43 / HE43 real state, SHAs, processes, staged and recorded receipts, residuals already solved; register IT44",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "Reconciled: IT43 candidate merged with HE43 (landed 273c8b56) as 5f721d0d, battery running (PID 1789201); SCI43 consumed in IT43 (rows 1-7, 11, 26 receipts, ledger 1,599); HE44 (target_activity, quantity columns) and SCI44 (PDH/PDK, Q01) in progress on their branches, not landed; no residual re-proposed that was already solved. Mandate record registered."
+     "evidence": "IT43 landed ed708dfc (battery 24d814f3 PASS WITH SKIPS; merge docs-only); HE43 landed 273c8b56, HE44 landed 50f517f8, SCI44 A d088b964, SCI44 B/C/coda 34f93af0 all merged into task/it44; ledger 1,692; no solved residual re-proposed."
     }
    ]
   },
@@ -24,9 +24,9 @@
    "steps": [
     {
      "step": "Close consumption of SCI43 and HE43 deliveries: measurement.py in the quantitative path, parent_form without merging stereoisomers, read-state propagation, KH1-KH5 conditions, shared preparation conditions; before/after",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "HE43 consumed: measurement.measure in the activity path (11,084 rows: 5,000 Potency-kind flagged, 374 censored, 276 no value, 17 unrecognised unit), parent_form in the listing key (106 to 104, enantiomers apart); action_search quantity columns and target_activity.resolve_targets wait for HE44 landing; SCI43 KH1-KH5 consumed in IT43; M01 zinc line added."
+     "evidence": "HE43 consumed (measurement.measure, parent_form); HE44 consumed (exact resolver; quantity columns come with main); SCI43 KH1-KH5 mapped to consumers; SCI44 A rows 1-9, 11-14 applied, 93 receipts recorded (trial after fixing two parent links), loader generalised to an engine folder; SCI44 B and C (consumer deltas, 41 further staged receipts) deferred to the next integration, stated in the README."
     }
    ]
   },
@@ -79,9 +79,9 @@
    "steps": [
     {
      "step": "Circular relation: priority open questions each give a usable brief (decision, premise, in silico work, indispensable measurement, outcomes favouring alternatives, stop criterion); consume SCI44 when verified; Claude Science material evaluated whole with separate provenance",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "B1-B3 briefs written; SCI44 delivery not landed; Claude Science material not available."
+     "evidence": "B1-B3 briefs; open questions IT44-Q01..Q05 and IT43-Q02 concluded; SCI44 A consumed; Claude Science material not available this iteration."
     }
    ]
   },
@@ -90,9 +90,9 @@
    "steps": [
     {
      "step": "Dashboard first screen: which investigations, which compounds or classes, why priority, missing premise, result that would change the decision; five languages, phone readability, names where the qualified path allows",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "Investigation cards list their compounds and classes with links; V14 and origin line; five languages; regeneration after IT43 lands."
+     "evidence": "Investigation cards list compounds and classes with links; cards show per-compound roles from the engine (no names in the shareable payload); V13-V17; five languages; audit PASS static (10 pages)."
     }
    ]
   },
@@ -101,9 +101,9 @@
    "steps": [
     {
      "step": "DREAM on material results; autonomous queue (second case, over-severe exclusion, unused structured relation, duplicate simplification, priority card, next batch brief)",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "DREAM: tonic zinc connection applied; S12 second case run."
+     "evidence": "DREAM tonic-zinc connection; S12 and S13 second cases; S13 from an over-severe-exclusion survey."
     }
    ]
   },
@@ -112,9 +112,9 @@
    "steps": [
     {
      "step": "Costs and closure: batteries by SHA in unique clones, landing, remote, CI and site checks; final report in Italian starting with the mandated question",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Battery and landing pending for the IT44 candidate."
     }
    ]
   }
