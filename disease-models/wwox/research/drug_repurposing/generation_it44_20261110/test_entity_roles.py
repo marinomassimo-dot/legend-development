@@ -17,5 +17,10 @@ class Roles(unittest.TestCase):
     def test_registry_metabolite_type_is_not_blindly_a_function(self):
         oc = [r for r in rows() if r["name"] == "octanol"][0]; self.assertEqual((oc["rule_role"], oc["role"]), ("physiological_intervention", "control_or_reagent"))
     def test_every_role_is_in_the_vocabulary(self):
-        ok = {"candidate", "probe", "control_or_reagent", "physiological_intervention", "unqualified_entity"}; self.assertTrue(all(r["role"] in ok for r in rows()))
+        ok = {"candidate", "unclassified", "probe", "control_or_reagent", "physiological_intervention", "unqualified_entity"}; self.assertTrue(all(r["role"] in ok for r in rows()))
+    def test_a_molecule_no_rule_classifies_is_not_a_candidate(self):
+        """IT45 P4: the default is `unclassified`; `candidate` needs a rule that says why (approved or clinical status)."""
+        bad = [r["name"] for r in rows() if r["role_basis"] == "rule default" and r["role"] == "candidate"]; self.assertEqual(bad, [])
+        self.assertTrue(any(r["role"] == "unclassified" for r in rows()))
+
 if __name__ == "__main__": unittest.main(verbosity=2)

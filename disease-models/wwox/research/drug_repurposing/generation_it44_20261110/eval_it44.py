@@ -26,7 +26,7 @@ for rid, p in SRC.items():
     for r in R: bymol[r["molecule"]].append(r)
     e1u = sum(1 for m, rs in bymol.items() if all(e1(rid, r) for r in rs))
     cand = {m for m, rs in bymol.items() if any(r["qualification"] == "CANDIDATE" for r in rs)}
-    drug = {m for m in cand if roles.get((rid, m), {}).get("role", "candidate") in ("candidate", "probe")}
+    drug = {m for m in cand if roles.get((rid, m), {}).get("role", "candidate") in ("candidate", "probe", "unclassified")}   # IT45: the IT44 count kept its meaning
     nondrug_shown = len(cand) - len(drug) if False else sum(1 for m in cand if roles.get((rid, m), {}).get("role") in ("control_or_reagent", "physiological_intervention", "unqualified_entity"))
     pt = [x for x in pointers if x["relation_id"] == rid and x["in_mechanism_path"] == "no"]
     st = lambda s: sum(1 for x in pt if x["catalogue_status"] == s)
