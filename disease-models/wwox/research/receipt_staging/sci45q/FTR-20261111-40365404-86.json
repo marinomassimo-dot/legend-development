@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-11T07:30Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_present",
+  "figures": "read",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-11T07:55:00Z",
+ "event_id": "FTR-20261111-40365404-86",
+ "evidence_basis": [
+  "ONO-TR-772 Tanaka 2025: full main text; Fig 1,3,4,5 and Table 3 images viewed; SI Tables S2-S3, S29 NMR drawing, Fig S3 viewed; SI chemistry not read."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/k2p_pointers_sci45_20261111/output/pointers.tsv",
+  "disease-models/wwox/research/drug_repurposing/k2p_pointers_sci45_20261111/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/k2p_pointers_sci45_20261111/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "0fd006949e81c64d5a3b6f962c2ef45df2a15f7066a7663bbfcc704deb706399",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket text 2026-11-11 plus SI pdf (plain curl); not stored in the repository",
+ "study_id": {
+  "doi": "10.1021/acsmedchemlett.5c00215",
+  "pmid": "40365404"
+ },
+ "workflow": "SCI45 queue package Q1, K2P tool pointers (ORCH-SCI45-20261111), producer og-x. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
