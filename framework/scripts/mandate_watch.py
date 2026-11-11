@@ -148,6 +148,41 @@ def find_bound_transcript(task: str, projects_dir: Path | None = None, max_age_d
     return None
 
 
+def find_near_marker(task: str, projects_dir: Path | None = None, max_age_days: int = 5) -> dict | None:
+    """When no session binds the task: the newest line that names `MANDATE_BOUND: <task>` but is not a marker (it sits inside a longer line, or the id carries trailing
+    punctuation). The canonical reader refuses such a line on purpose (a quoted or negated mention must not bind), so the owner has to write the plain line again; saying
+    which session wrote the near-miss turns "unknown" into an instruction. Nothing is bound by this."""
+    base = projects_dir or Path(os.path.expanduser("~/.claude/projects"))
+    cutoff = time.time() - max_age_days * 86400
+    try:
+        cands = [p for p in base.glob("*/*.jsonl") if p.stat().st_mtime >= cutoff]
+    except OSError:
+        return None
+    rx = re.compile(r"MANDATE_BOUND:\s*" + re.escape(task))
+    for p in sorted(cands, key=lambda q: q.stat().st_mtime, reverse=True):
+        found = None
+        try:
+            with p.open(encoding="utf-8", errors="replace") as fh:
+                for line in fh:
+                    if task not in line or "MANDATE_BOUND" not in line:
+                        continue
+                    try:
+                        entry = json.loads(line)
+                    except ValueError:
+                        continue
+                    if not isinstance(entry, dict):
+                        continue
+                    for text in mc._text_blocks(entry):
+                        for l in mc._outside_fences(text).splitlines():
+                            if rx.search(l) and not mc.MARKER_RE.match(l):
+                                found = {"session": p.stem, "at": entry.get("timestamp", ""), "line": l.strip()[:100]}
+        except OSError:
+            continue
+        if found:
+            return found
+    return None
+
+
 def transcript_cwd(transcript: Path) -> str | None:
     """The working directory the session ran in (a revival must start there: the runtime
     resolves workspace trust and the project's permissions from it)."""
@@ -337,7 +372,7 @@ def push_confirmation_missing(root: Path, record_rel: str | None, timeout: int =
 # ---------------------------------------------------------------- the decision (pure)
 def classify(status: dict, session: dict | None, session_list_ok: bool, bound: bool,
              idle_seconds: float | None, pending: dict, signature: str, now: float,
-             quiet_minutes: int = QUIET_MINUTES, jobs: dict | None = None, push_missing: str | None = None) -> dict:
+             quiet_minutes: int = QUIET_MINUTES, jobs: dict | None = None, push_missing: str | None = None, near_marker: dict | None = None) -> dict:
     """Return {state, action, why}. action is RESUME or NONE. No I/O."""
     v = status.get("verdict")
     jobs = jobs or {"alive": [], "to_collect": [], "dead": []}
@@ -358,7 +393,9 @@ def classify(status: dict, session: dict | None, session_list_ok: bool, bound: b
     if v != "CONTINUE":
         return {"state": "UNKNOWN", "action": "NONE", "why": f"record verdict {v}: {status.get('message', '')}"[:300]}
     if not bound:
-        return {"state": "UNKNOWN", "action": "NONE", "why": "no session transcript carries MANDATE_BOUND for this task (the line must start a line of the session's own persisted text; after writing it, run `mandate_watch.py check --task <id> --deliver none --json` and expect a session id, else write it again in a message of its own)"}
+        hint = (f"; session {near_marker['session']} wrote `{near_marker['line']}` at {near_marker['at'][:19]}: not a marker, because the line must contain only `MANDATE_BOUND: <id>` "
+                "(nothing before or after it, no trailing punctuation, not in a code fence), so that session must write that plain line again" if near_marker else "")
+        return {"state": "UNKNOWN", "action": "NONE", "why": "no session transcript carries MANDATE_BOUND for this task (the line must start a line of the session's own persisted text; after writing it, run `mandate_watch.py check --task <id> --deliver none --json` and expect a session id, else write it again in a message of its own)" + hint}
     if not session_list_ok:
         return {"state": "UNKNOWN", "action": "NONE", "why": "the session listing could not be read"}
     if jobs["alive"]:
@@ -422,10 +459,13 @@ def check(task: str, *, root: Path = ROOT, deliver: str = "none", quiet_minutes:
     push_missing = None
     if status.get("verdict") == "RELEASED" and "COMPLETE" in status.get("message", "").upper():
         push_missing = push_confirmation_missing(root, rec_rel)
+    near = find_near_marker(task, projects_dir) if transcript is None and status.get("verdict") not in ("RELEASED", "COMPLETE_PENDING") else None
     out = classify(status, session, live is not None, transcript is not None, idle, pend, signature, now, quiet_minutes,
-                   jobs=jobs, push_missing=push_missing)
+                   jobs=jobs, push_missing=push_missing, near_marker=near)
     out.update({"task": task, "session": sid, "signature": signature[:12],
                 "record_verdict": status.get("verdict")})
+    if near:
+        out["near_marker"] = near
     if out["action"] == "RESUME" and deliver == "resume":
         if session is not None:
             out["delivery"] = "not sent: the session is alive; the in-session cron delivers to a live session"

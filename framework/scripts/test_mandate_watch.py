@@ -258,6 +258,25 @@ class Watch(unittest.TestCase):
         r = e.check(None) if False else mw.classify({"verdict": "CONTINUE", "message": ""}, None, False, True, 9999, {}, "s", NOW)
         self.assertEqual((r["state"], r["action"]), ("UNKNOWN", "NONE"))
 
+    def test_a_marker_inside_a_sentence_is_refused_and_the_diagnosis_names_the_session(self):
+        # 2026-11-11, IT46: `MANDATE_BOUND: <id>. Identity: ... ` as the start of a sentence left the mandate UNKNOWN with no hint why
+        e = self.env(record(), bound=False)
+        e.tr.write_text(json.dumps({"type": "assistant", "timestamp": "2026-11-11T21:48:36.000Z", "message": {"content": [{"type": "text", "text": f"MANDATE_BOUND: {TASK}. Identity: orchestrator. The residue is clean."}]}}) + "\n")
+        r = e.check([])
+        self.assertEqual((r["state"], r["session"]), ("UNKNOWN", None))
+        self.assertEqual(r["near_marker"]["session"], SID)
+        self.assertIn(f"session {SID} wrote", r["why"])
+        self.assertIn("must write that plain line again", r["why"])
+        e.tr.write_text(e.tr.read_text() + json.dumps({"type": "assistant", "message": {"content": [{"type": "text", "text": f"MANDATE_BOUND: {TASK}"}]}}) + "\n")
+        bound = e.check([{"sessionId": SID, "status": "idle"}])
+        self.assertEqual(bound["session"], SID)                   # the plain line binds, and the near-miss is no longer reported
+        self.assertNotIn("near_marker", bound)
+
+    def test_a_fenced_or_unrelated_mention_is_not_a_near_marker(self):
+        e = self.env(record(), bound=False)
+        e.tr.write_text(json.dumps({"type": "assistant", "message": {"content": [{"type": "text", "text": f"```\nMANDATE_BOUND: {TASK} extra\n```\nand MANDATE_BOUND: OTHER-TASK. Hello"}]}}) + "\n")
+        self.assertNotIn("near_marker", e.check([]))
+
     def test_self_call_ignores_its_own_work_but_not_subagents_running_before_the_turn(self):
         e = self.env(record(), age_minutes=0)
         d = e.tasks / "proj" / SID / "tasks"

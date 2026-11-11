@@ -595,6 +595,18 @@ watch reads recorded states; it cannot judge whether a purported `DONE` actually
 assignment. The actor must reconcile that meaning before closure; do not start a duplicate
 live session to compensate for an idle one.
 
+### Accepting a mandate: write the marker, then prove it was recognised
+
+On accepting or resuming a mandate, write `MANDATE_BOUND: <TASK_ID>` as **a line of its own in a message of its own**: nothing before it or after it on the line, no trailing
+punctuation (a `.` becomes part of the id), not inside a code fence, not as the start of a sentence. A longer line is deliberately not a marker (a quoted or negated mention
+must not bind), and the session then reads as `UNKNOWN` with `session: null` while its work goes on; 2026-11-11 the IT46 session wrote `MANDATE_BOUND: <id>. Identity: ...` and the
+SCI46 session wrote none, and the monitor could see neither. Then run `python3 framework/scripts/mandate_watch.py check --task <TASK_ID> --root <the checkout that holds the
+record> --deliver none --json` and read three things, not one: `session` is your own session id, `record_verdict` is the record you mean (a record of an unmerged worktree is read
+only with that worktree as `--root`; from the root checkout it says `NO_RECORD`), and `state` is `RUNNING` while you work or wait on a battery (a job registered with
+`mandate_watch.py job`, or recent background-task output, keeps an idle session `RUNNING`). When `state` is still `UNKNOWN` the `why` now names the session that wrote a near-miss
+line and what to change. The check proves the association and the classification; it does not prove that a dead session will be resumed (that needs a live runtime, a trusted
+workspace and the bound session id, none of which this file can guarantee).
+
 ### The bounded Stop hook
 
 Where it is installed (block in
