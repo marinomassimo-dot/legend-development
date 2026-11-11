@@ -53,3 +53,26 @@ Case: SCI45 `ph_k2p_sci45_20261111`, dated update after the Q1 verification. Bag
 Outcome: the correction had reached INV-18, the open question and the dashboard; it had not reached two earlier SCI44 documents that still described the refuted TASK-3 route as current. Remedy proportional to the defect: two dated lines, one clarification, one test of three assertions. No versioning system, no new register. The experiments and preregistrations of SCI45 are not rewritten.
 
 Remove: delete `test_trek1_correction_reach.py`; the dated Update lines are history and stay.
+
+## 3. A hypothesis nobody could reach (H3, with IT46)
+
+**Path chosen:** physiological hypotheses written by Scientists in their own table layout, to the generation that reads `hypothesis_package.py`. The loader required `hyp_id` plus `alternatives.tsv` and `experiments.tsv` (an absent file stopped the read), so a package with another layout could not be registered at all; five packages with 24 hypotheses sat outside the manifest (`check` listed their names only).
+
+| | before | after |
+|---|---|---|
+| hypotheses returned for INV-18 | 3 (MH1-MH3) | 3 + 13 in their own layout: SCI43 KH1-KH5 (key `hyp_id`), SCI45 KP1-KP5 (key `id`), HCN HY1-HY3 (key `hypothesis_id`) |
+| hypotheses returned for INV-08 (NRF2/KEAP1) | 0 | 6 (`nrf2_inv08_20261107`, key `hyp_id`) |
+| `check` on unread folders | names | names and counts: `gsk3_eif2b_20261107 (5 hypotheses unreachable)` |
+
+* Link: manifest role `hypotheses_only` (four rows added to `hypothesis_packages.tsv`; this is the delta row 9 consumer edit of SCI45 for KP1-KP5, made here because it is a loader registration, not a scientific edit). Rows are verbatim, with their file:line; the key is `package::key` because local ids repeat (H1 appears in three packages); duplicates in one table, a missing key column and an empty table are stated, never hidden.
+* **Second input.** The same path reads packages with three different key columns and no compound in common (K2P/pH tools, Ih blockers, NRF2/KEAP1 hypotheses), and a synthetic package with unrelated ids and names (`ZQ1`, `tool-alpha`) in `test_hypothesis_package.py::HypothesesOwnLayout`: nothing in the path depends on a compound name or on `KP1`.
+* Not registered: `gsk3_eif2b_20261107` (its README names INV-02 once and the subject is GSK3 (INV-09): two investigations, the manifest takes one; left to the Orchestrator); `aed_compare_it31_20261107` has no hypotheses table; `nmda_asic_ph_sci45_20261111` has none either (`net_sign.tsv` is a computed table, not hypotheses), so it is not a `hypotheses_only` package.
+* What the loader does **not** do: it maps no column. Which cell of a KP row answers which question of a conditional proposal (observation, relation, premise, action, expected result) is the consumer's choice. IT46's generator (`conditional_proposals`) still reads only `record_for`; until it also calls `hypotheses_for(pk, inv)`, the 13 + 6 rows are reachable but not yet used. Trace for IT46:
+
+```
+python3 framework/scripts/hypothesis_package.py check            # 39 rows over 10 packages; unread folders with counts
+python3 framework/scripts/hypothesis_package.py show --inv INV-18   # block "hypotheses in their own layout"
+python3 -c "import sys; sys.path.insert(0,'framework/scripts'); import hypothesis_package as hp; r=hp.hypotheses_for(hp.load_all(),'INV-18'); print(len(r['rows']), r['rows'][0]['columns'])"
+```
+
+Remove: delete the four `hypotheses_only` rows of `hypothesis_packages.tsv` (the loader then returns what it returned before) and revert `hypothesis_package.py` and its test.
