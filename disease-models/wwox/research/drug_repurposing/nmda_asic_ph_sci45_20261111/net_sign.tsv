@@ -1,0 +1,50 @@
+target	direction_of_acid_fall	pH50	hill	Imin	pH0	delta_pH	fraction_of_own_current_lost	pool_or_size_note	axis
+TREK-1 (K2P)	depolarising (outward K+ current lost)	7.51	1.0	0.25	7.4	0.1	0.072	pool 0.53 of resting conductance, adult KO (INFERENZA); slope not tabulated (1 assumed)	conductance at rest
+TREK-1 (K2P)	depolarising (outward K+ current lost)	7.51	1.0	0.25	7.4	0.2	0.141	pool 0.53 of resting conductance, adult KO (INFERENZA); slope not tabulated (1 assumed)	conductance at rest
+TREK-1 (K2P)	depolarising (outward K+ current lost)	7.51	1.0	0.25	7.4	0.3	0.204	pool 0.53 of resting conductance, adult KO (INFERENZA); slope not tabulated (1 assumed)	conductance at rest
+TREK-1 (K2P)	depolarising (outward K+ current lost)	7.51	1.0	0.25	7.2	0.1	0.074	pool 0.53 of resting conductance, adult KO (INFERENZA); slope not tabulated (1 assumed)	conductance at rest
+TREK-1 (K2P)	depolarising (outward K+ current lost)	7.51	1.0	0.25	7.2	0.2	0.14	pool 0.53 of resting conductance, adult KO (INFERENZA); slope not tabulated (1 assumed)	conductance at rest
+TREK-1 (K2P)	depolarising (outward K+ current lost)	7.51	1.0	0.25	7.2	0.3	0.199	pool 0.53 of resting conductance, adult KO (INFERENZA); slope not tabulated (1 assumed)	conductance at rest
+TASK-1 (K2P)	depolarising (outward K+ current lost)	7.3	1.0	0.0	7.4	0.1	0.103	TASK-1/3 pool 0.26 of holding current at -60 mV, juvenile layer V (INFERENZA); TASK-1 RNA 1/17 of TASK-3; Imin not available (upper bound)	holding current
+TASK-1 (K2P)	depolarising (outward K+ current lost)	7.3	1.0	0.0	7.4	0.2	0.206	TASK-1/3 pool 0.26 of holding current at -60 mV, juvenile layer V (INFERENZA); TASK-1 RNA 1/17 of TASK-3; Imin not available (upper bound)	holding current
+TASK-1 (K2P)	depolarising (outward K+ current lost)	7.3	1.0	0.0	7.4	0.3	0.306	TASK-1/3 pool 0.26 of holding current at -60 mV, juvenile layer V (INFERENZA); TASK-1 RNA 1/17 of TASK-3; Imin not available (upper bound)	holding current
+TASK-1 (K2P)	depolarising (outward K+ current lost)	7.3	1.0	0.0	7.2	0.1	0.126	TASK-1/3 pool 0.26 of holding current at -60 mV, juvenile layer V (INFERENZA); TASK-1 RNA 1/17 of TASK-3; Imin not available (upper bound)	holding current
+TASK-1 (K2P)	depolarising (outward K+ current lost)	7.3	1.0	0.0	7.2	0.2	0.246	TASK-1/3 pool 0.26 of holding current at -60 mV, juvenile layer V (INFERENZA); TASK-1 RNA 1/17 of TASK-3; Imin not available (upper bound)	holding current
+TASK-1 (K2P)	depolarising (outward K+ current lost)	7.3	1.0	0.0	7.2	0.3	0.357	TASK-1/3 pool 0.26 of holding current at -60 mV, juvenile layer V (INFERENZA); TASK-1 RNA 1/17 of TASK-3; Imin not available (upper bound)	holding current
+TASK-3 (K2P)	depolarising (outward K+ current lost)	6.47	1.0	0.0	7.4	0.1	0.027	as above	holding current
+TASK-3 (K2P)	depolarising (outward K+ current lost)	6.47	1.0	0.0	7.4	0.2	0.058	as above	holding current
+TASK-3 (K2P)	depolarising (outward K+ current lost)	6.47	1.0	0.0	7.4	0.3	0.095	as above	holding current
+TASK-3 (K2P)	depolarising (outward K+ current lost)	6.47	1.0	0.0	7.2	0.1	0.039	as above	holding current
+TASK-3 (K2P)	depolarising (outward K+ current lost)	6.47	1.0	0.0	7.2	0.2	0.084	as above	holding current
+TASK-3 (K2P)	depolarising (outward K+ current lost)	6.47	1.0	0.0	7.2	0.3	0.135	as above	holding current
+NMDAR GluN1-1a/GluN2A (Kostakis 2011)	inhibitory (inward current lost)	7.21	1.45	0.0	7.4	0.1	0.121	oocytes 22-24 C, Mg-free, pH 9 reference; zero floor assumed (INFERENZA)	recombinant current, Mg-free
+NMDAR GluN1-1a/GluN2A (Kostakis 2011)	inhibitory (inward current lost)	7.21	1.45	0.0	7.4	0.2	0.248	oocytes 22-24 C, Mg-free, pH 9 reference; zero floor assumed (INFERENZA)	recombinant current, Mg-free
+NMDAR GluN1-1a/GluN2A (Kostakis 2011)	inhibitory (inward current lost)	7.21	1.45	0.0	7.4	0.3	0.374	oocytes 22-24 C, Mg-free, pH 9 reference; zero floor assumed (INFERENZA)	recombinant current, Mg-free
+NMDAR GluN1-1a/GluN2A (Kostakis 2011)	inhibitory (inward current lost)	7.21	1.45	0.0	7.2	0.1	0.168	oocytes 22-24 C, Mg-free, pH 9 reference; zero floor assumed (INFERENZA)	recombinant current, Mg-free
+NMDAR GluN1-1a/GluN2A (Kostakis 2011)	inhibitory (inward current lost)	7.21	1.45	0.0	7.2	0.2	0.326	oocytes 22-24 C, Mg-free, pH 9 reference; zero floor assumed (INFERENZA)	recombinant current, Mg-free
+NMDAR GluN1-1a/GluN2A (Kostakis 2011)	inhibitory (inward current lost)	7.21	1.45	0.0	7.2	0.3	0.467	oocytes 22-24 C, Mg-free, pH 9 reference; zero floor assumed (INFERENZA)	recombinant current, Mg-free
+NMDAR GluN1-1b/GluN2A (Kostakis 2011)	inhibitory (inward current lost)	6.96	2.7	0.0	7.4	0.1	0.05	exon-5 form; as above	recombinant current, Mg-free
+NMDAR GluN1-1b/GluN2A (Kostakis 2011)	inhibitory (inward current lost)	6.96	2.7	0.0	7.4	0.2	0.131	exon-5 form; as above	recombinant current, Mg-free
+NMDAR GluN1-1b/GluN2A (Kostakis 2011)	inhibitory (inward current lost)	6.96	2.7	0.0	7.4	0.3	0.249	exon-5 form; as above	recombinant current, Mg-free
+NMDAR GluN1-1b/GluN2A (Kostakis 2011)	inhibitory (inward current lost)	6.96	2.7	0.0	7.2	0.1	0.137	exon-5 form; as above	recombinant current, Mg-free
+NMDAR GluN1-1b/GluN2A (Kostakis 2011)	inhibitory (inward current lost)	6.96	2.7	0.0	7.2	0.2	0.312	exon-5 form; as above	recombinant current, Mg-free
+NMDAR GluN1-1b/GluN2A (Kostakis 2011)	inhibitory (inward current lost)	6.96	2.7	0.0	7.2	0.3	0.5	exon-5 form; as above	recombinant current, Mg-free
+NMDAR GluN2A (Tian 2021, GluN1 K178AzF mutant before UV)	inhibitory (inward current lost)	7.0	1.91	0.0	7.4	0.1	0.075	oocytes room temperature, -60 mV, 0.3 mM Ba2+, Mg-free (V7)	recombinant current, Mg-free
+NMDAR GluN2A (Tian 2021, GluN1 K178AzF mutant before UV)	inhibitory (inward current lost)	7.0	1.91	0.0	7.4	0.2	0.172	oocytes room temperature, -60 mV, 0.3 mM Ba2+, Mg-free (V7)	recombinant current, Mg-free
+NMDAR GluN2A (Tian 2021, GluN1 K178AzF mutant before UV)	inhibitory (inward current lost)	7.0	1.91	0.0	7.4	0.3	0.287	oocytes room temperature, -60 mV, 0.3 mM Ba2+, Mg-free (V7)	recombinant current, Mg-free
+NMDAR GluN2A (Tian 2021, GluN1 K178AzF mutant before UV)	inhibitory (inward current lost)	7.0	1.91	0.0	7.2	0.1	0.139	oocytes room temperature, -60 mV, 0.3 mM Ba2+, Mg-free (V7)	recombinant current, Mg-free
+NMDAR GluN2A (Tian 2021, GluN1 K178AzF mutant before UV)	inhibitory (inward current lost)	7.0	1.91	0.0	7.2	0.2	0.293	oocytes room temperature, -60 mV, 0.3 mM Ba2+, Mg-free (V7)	recombinant current, Mg-free
+NMDAR GluN2A (Tian 2021, GluN1 K178AzF mutant before UV)	inhibitory (inward current lost)	7.0	1.91	0.0	7.2	0.3	0.446	oocytes room temperature, -60 mV, 0.3 mM Ba2+, Mg-free (V7)	recombinant current, Mg-free
+NMDAR GluN2B (Tian 2021, same background)	inhibitory (inward current lost)	7.6	1.37	0.0	7.4	0.1	0.195	as above (V7)	recombinant current, Mg-free
+NMDAR GluN2B (Tian 2021, same background)	inhibitory (inward current lost)	7.6	1.37	0.0	7.4	0.2	0.365	as above (V7)	recombinant current, Mg-free
+NMDAR GluN2B (Tian 2021, same background)	inhibitory (inward current lost)	7.6	1.37	0.0	7.4	0.3	0.507	as above (V7)	recombinant current, Mg-free
+NMDAR GluN2B (Tian 2021, same background)	inhibitory (inward current lost)	7.6	1.37	0.0	7.2	0.1	0.224	as above (V7)	recombinant current, Mg-free
+NMDAR GluN2B (Tian 2021, same background)	inhibitory (inward current lost)	7.6	1.37	0.0	7.2	0.2	0.407	as above (V7)	recombinant current, Mg-free
+NMDAR GluN2B (Tian 2021, same background)	inhibitory (inward current lost)	7.6	1.37	0.0	7.2	0.3	0.551	as above (V7)	recombinant current, Mg-free
+NMDAR GluN1-4a/GluN2B WT (Regan 2019 Table 4)	inhibitory (inward current lost)	7.5	1.0	0.0	7.4	0.1	0.126	oocytes about 23 C, -40 mV, 0.5 mM Ba2+, Mg-free; slope not reported (1 assumed); pH IC50 7.50 +/- 0.02, n 6, rechecked by the Orchestrator in the text	recombinant current, Mg-free
+NMDAR GluN1-4a/GluN2B WT (Regan 2019 Table 4)	inhibitory (inward current lost)	7.5	1.0	0.0	7.4	0.2	0.246	oocytes about 23 C, -40 mV, 0.5 mM Ba2+, Mg-free; slope not reported (1 assumed); pH IC50 7.50 +/- 0.02, n 6, rechecked by the Orchestrator in the text	recombinant current, Mg-free
+NMDAR GluN1-4a/GluN2B WT (Regan 2019 Table 4)	inhibitory (inward current lost)	7.5	1.0	0.0	7.4	0.3	0.357	oocytes about 23 C, -40 mV, 0.5 mM Ba2+, Mg-free; slope not reported (1 assumed); pH IC50 7.50 +/- 0.02, n 6, rechecked by the Orchestrator in the text	recombinant current, Mg-free
+NMDAR GluN1-4a/GluN2B WT (Regan 2019 Table 4)	inhibitory (inward current lost)	7.5	1.0	0.0	7.2	0.1	0.147	oocytes about 23 C, -40 mV, 0.5 mM Ba2+, Mg-free; slope not reported (1 assumed); pH IC50 7.50 +/- 0.02, n 6, rechecked by the Orchestrator in the text	recombinant current, Mg-free
+NMDAR GluN1-4a/GluN2B WT (Regan 2019 Table 4)	inhibitory (inward current lost)	7.5	1.0	0.0	7.2	0.2	0.28	oocytes about 23 C, -40 mV, 0.5 mM Ba2+, Mg-free; slope not reported (1 assumed); pH IC50 7.50 +/- 0.02, n 6, rechecked by the Orchestrator in the text	recombinant current, Mg-free
+NMDAR GluN1-4a/GluN2B WT (Regan 2019 Table 4)	inhibitory (inward current lost)	7.5	1.0	0.0	7.2	0.3	0.399	oocytes about 23 C, -40 mV, 0.5 mM Ba2+, Mg-free; slope not reported (1 assumed); pH IC50 7.50 +/- 0.02, n 6, rechecked by the Orchestrator in the text	recombinant current, Mg-free
+ASIC1a	inward current only near and below pH 7.0 (about 2-3 percent of maximum; model 0.9 percent); 7.4 to 7.2 opens none and, after 60 s, leaves 84 percent of channels available (about 21 percent at equilibrium per the authors)				7.4	0.2	0 current	native cortical neurons: no significant current at 7.1	fraction of channels available, not current

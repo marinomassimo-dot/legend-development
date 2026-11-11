@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-11T11:31Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-11T11:34:35Z",
+ "event_id": "FTR-20261111-30659174-83",
+ "evidence_basis": [
+  "Regan 2019 Nat Commun: Table 4 (TEVC proton concentration-response of wild-type GluN1-4a/GluN2B, pH IC50 7.50 +/- 0.02, n=6) and Methods (oocytes, 0.5 mM Ba2+, -40 mV, about 23 C, 100 uM Glu + 30 uM Gly) read from the XML; no figure opened.",
+  "verbatim_locator | proposition: GluN1-4a/GluN2B wild-type proton IC50 | Table 4 | \"GluN1-4a/GluN2B (WT) 40 ± 1.7 (6) 7.50 ± 0.02 (6)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/verify/recompute_proton.tsv",
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/verify/queries_verifier.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "cf8afd511fbf76db9fbe5c1fc8b5e6983a29c70683699370ef4a9763c4a7c02c",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC full-text XML via NCBI efetch (plain curl, default user agent) on 2026-11-11; bytes in scratch only; not stored in the repository",
+ "study_id": {
+  "doi": "10.1038/s41467-019-08291-1",
+  "pmid": "30659174"
+ },
+ "workflow": "SCI45 follow-up package N1 verification V7 (ORCH-SCI45B-20261111), blind verifier ks-z. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

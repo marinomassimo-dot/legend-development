@@ -8,29 +8,33 @@
  "START_UTC": "2026-11-11T20:00:00Z",
  "BASELINE": "main a092e709 (SCI45 landed). Worktree .claude/worktrees/sci45n, branch task/sci45n. Worktrees sci45 and sci45q removed under the operator's written authorisation of 2026-11-11 (clean, contained in main); branch task/sci45q deleted (merged). IT44 branch task/it44 at 8edf3852 has not yet consumed SCI45.",
  "CURRENT_PACKAGE": {
-  "id": "N1 nmda_asic_ph_sci45_20261111",
-  "state": "brief and preregistration written",
+  "id": "closed",
+  "state": "N1 landing after battery",
   "delegate_active": "none",
   "updated": "2026-11-11"
  },
- "RESUME": "Dispatch producer og-z (sonnet/medium) with BRIEF_N1.md; then verifier (sonnet/high) on the decisive rows; then net_sign.py by the preregistered rule; then MEASUREMENT_PROTOCOL.md (action 3); then gate/LINT/receipts/growth, battery on the frozen SHA in a fresh clone, task_close, safe_push, message IT44.",
+ "RESUME": "N1 + measurement sheet on task/sci45n: after gate/LINT/receipts/growth and a battery on the frozen SHA (fresh clone), task_close.py, safe_push.py development main, message IT44. Staged receipts unrecorded: sci45n (7), sci45nv (8). /tmp/sci45_batt_* clones remain for the operator.",
  "DECISIONS_TAKEN": [
-  "2026-11-11 operator authorised removal of worktrees sci45 and sci45q: both clean, contained in main; removed with git worktree remove (no force); /tmp/sci45_batt_* clones left (not covered by the authorisation)."
+  "2026-11-11 operator authorised removal of worktrees sci45 and sci45q: both clean, contained in main; removed with git worktree remove (no force); /tmp/sci45_batt_* clones left (not covered by the authorisation).",
+  "2026-11-11 N1: verifier overturned the GluN2B-less-sensitive prior; Regan 2019 Table 4 rechecked by the Orchestrator in the text; the Orchestrator's own brief named the wrong source (Cheriyan for Evlanenkov), corrected in README; net sign not defined (different axes); measurement sheet written (action 3, design only)."
  ],
- "DELEGATIONS": [],
+ "DELEGATIONS": [
+  "N1 producer og-z: asked sonnet/medium; read back medium x78; 78 turns; output 90,993; cache read 10,268,306; 7 sources partial full text; staged receipts -84",
+  "N1 verifier ks-z (V7): asked sonnet/high; read back high x74; 74 turns; output 93,552; cache read 10,825,978; 73 rows checked, 63 correct; staged receipts -83"
+ ],
  "ESCALATIONS": [],
  "STOP_LOG": [],
  "DEFAULTS_TAKEN": [],
  "AUTHORISED_QUEUE_20261111B": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_A1": {
    "order": 1,
    "steps": [
     {
      "step": "Action 1: confirm IT44/IT45 hand-off of P1 and Q1 (receipts, delta rows); I record no receipts and edit no shared consumer",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "IT44 branch has not consumed SCI45 at 8edf3852; messages sent with main SHA a092e709"
+     "evidence": "P1 and Q1 handed to IT44 by message with main a092e709; IT44 branch had not consumed at 8edf3852; I record no receipts and edit no shared consumer; N1 hand-off follows landing"
     }
    ]
   },
@@ -39,9 +43,9 @@
    "steps": [
     {
      "step": "Action 2: N1 producer, verifier, corrections, net-sign table, README, consumer delta",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "N1 producer + V7 verifier + corrections + net_sign.tsv + README + consumer_delta; GluN2B at least as proton-sensitive as GluN2A; ASIC silent 7.4-7.2; net sign not defined"
     }
    ]
   },
@@ -50,9 +54,9 @@
    "steps": [
     {
      "step": "Action 3: minimal measurement as a research-design protocol sheet (pHo record, pH step, perforated patch, burst readout), no commission",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "ph_k2p_sci45_20261111/MEASUREMENT_PROTOCOL_SHEET.md (design only, no commission)"
     }
    ]
   }
