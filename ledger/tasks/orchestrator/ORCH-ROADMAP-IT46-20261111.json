@@ -1,0 +1,133 @@
+{
+  "_schema": "orchestrator-task-v1",
+  "TASK_ID": "ORCH-ROADMAP-IT46-20261111",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "P0",
+  "START_UTC": "2026-11-11T20:00:00Z",
+  "OBJECTIVE": "IT46: from hand-built combinations to a reusable generative capability: measure how much of the IT45 generation was executable, make one missing step operational with a real consumer, keep exploration visible without artificial favourability, prove on a new case fixed in advance, audit the decisive causal comparisons, consume SCI46 to the generator, close reading debts, priority dashboard. Drug repurposing for WWOX loss of function; gene therapy outside the pharmacological proposals.",
+  "AUTHORISED_QUEUE_20261108": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_P0": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "Reconcile on real state (remote head, IT45 residuals, HE45/SCI45 consumed), verify unit/loader/cache/role-fallback usage without redoing; register IT46 with steps, checkpoints, real dependencies; session-mandate association verified",
+          "status": "IN_PROGRESS",
+          "owner": "orchestrator",
+          "evidence": "Remote head 142f6c5f at start; IT45 CI #654/#655 success, record COMPLETE, own worktrees removed. Dependencies: P5 waits for SCI46 delivery (not blocking P1-P4, P6-P9); P10 waits for batteries and CI. MANDATE_BOUND stated in chat for ORCH-ROADMAP-IT46-20261111."
+        }
+      ]
+    },
+    "OBJ_P1": {
+      "order": 2,
+      "steps": [
+        {
+          "step": "Provenance of the IT45 S10 and Kv7 paths (code / reader / agent decision / manual / narrative only); make the highest-value non-reusable step operational in the existing path with a real consumer",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_P2": {
+      "order": 3,
+      "steps": [
+        {
+          "step": "Four situations through generation (known compound with action; activity-only compound; discriminating probe; unresolved verifiable premise) with explicit roles and limits; unqualified_entity must not hide them",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_P3": {
+      "order": 4,
+      "steps": [
+        {
+          "step": "New case not used to build the method: need, snapshot, reason, simple baseline, expected difference and failure outcomes fixed before execution; compare simple target search / evidence / qualification / contextualised combination; measure and report, simplify if no value",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_P4": {
+      "order": 5,
+      "steps": [
+        {
+          "step": "Targeted audit of the decisive causal comparisons (Kv7 slice drug vs single-cell current injection; same unit, level, local vs whole, exposure, cell vs network, alternatives); independent verification and propagation of substantive corrections",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_P5": {
+      "order": 6,
+      "steps": [
+        {
+          "step": "Consume SCI46 NRF2/KEAP1 to the generator when verified (inputs, engine, regenerate roles/premises/questions, show change against IT45); continue P1-P4 while waiting",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_P6": {
+      "order": 7,
+      "steps": [
+        {
+          "step": "Close reading and provenance debts: three IT45 readings not persisted as receipts (link, protocol with stated nature, or keep the debt and schedule the read); Harness for the mechanical part",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_P7": {
+      "order": 8,
+      "steps": [
+        {
+          "step": "Priority dashboard: hypothesis to explore / tool to qualify / priority experiment / in-silico question / indispensable new measurement; first screen; per-investigation fields; stability explained; five languages, phone, site verified; README links; no new registry",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_P8": {
+      "order": 9,
+      "steps": [
+        {
+          "step": "DREAM generation-oriented after material results; each kept connection must change a search, comparison, proposal or consumer",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_P9": {
+      "order": 10,
+      "steps": [
+        {
+          "step": "Autonomous queue after the first verified increment: second new case, pointer on another relation, two-lever comparison, lost proposal by representation limit, revival trigger update, duplicate simplification, new brief",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_P10": {
+      "order": 11,
+      "steps": [
+        {
+          "step": "Execution and closure: delegation budget, batteries by SHA in unique clones, land, push, CI, site; distinguish battery SHA / merge SHA / published SHA; ordinary cleanup; no artificial consumption of time",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    }
+  }
+}
