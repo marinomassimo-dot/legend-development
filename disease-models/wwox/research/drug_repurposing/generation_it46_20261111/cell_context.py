@@ -13,7 +13,7 @@ Three conventions, stated here so a reader can change them (they are not biology
   FLOOR = 1.0 FPKM  below this in every class the gene is "not detected in this table" (unknown, not absent)
   FOLD  = 3.0       a class value this many times the best other class counts as enriched
   a gene that is not in a table is NOT_IN_TABLE: nobody queried it; it is never read as low."""
-import ast, csv, re, sys
+import ast, csv, functools, re, sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -26,12 +26,21 @@ TABLES = [
 FIELDS = ["relation_id", "gene", "table", "species", "state", "neuron_class", "neuron_fpkm", "best_other_class", "best_other_fpkm", "n_samples_neuron", "attributable_to_neuron", "caveat"]
 
 
+@functools.lru_cache(maxsize=None)
+def _load_cached(path, cls, val, n, skip):
+    return _read(path, cls, val, n, skip)
+
+
 def _load(t):
+    return _load_cached(str(t["path"]), t["cls"], t["val"], t["n"], t["skip"])
+
+
+def _read(path, cls, val, n, skip):
     out = {}
-    for r in csv.DictReader(open(t["path"], encoding="utf-8"), delimiter="\t"):
-        if re.search(t["skip"], r[t["cls"]]):
+    for r in csv.DictReader(open(path, encoding="utf-8"), delimiter="\t"):
+        if re.search(skip, r[cls]):
             continue
-        out.setdefault(r["gene"].upper(), {})[r[t["cls"]]] = (float(r[t["val"]]), r[t["n"]])
+        out.setdefault(r["gene"].upper(), {})[r[cls]] = (float(r[val]), r[n])
     return out
 
 
