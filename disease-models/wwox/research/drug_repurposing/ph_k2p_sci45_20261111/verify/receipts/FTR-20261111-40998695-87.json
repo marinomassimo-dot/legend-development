@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-11T06:54Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-11T06:57:19Z",
+ "event_id": "FTR-20261111-40998695-87",
+ "evidence_basis": [
+  "Labbaf 2025: Methods (ACSF pH 7.25, pipette), Results on S1 pyramidal firing and the Rin sentence after the Fig 10 legend, Fig 10 image viewed (panels G and H); thalamic sections skimmed by keyword only.",
+  "verbatim_locator | proposition: Rin of S1 pyramidal neurons in the knock-out | Results, increased excitability | \"Analysis of Rin further revealed higher values in both persistent firing neurons (121.4 ± 10.1 MΩ, n = 16 cells WT\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/verify/recompute_ph.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/verify/queries_verifier.tsv"
+ ],
+ "prior_receipt": "FTR-20261111-40998695-88",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "8f9a40636d9eb7ea0f612ad19d936a8605cf4bf3b9c8494fa48c3f2712b7f3fa",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket (plain curl, https://pmc-oa-opendata.s3.amazonaws.com/PMC12590121.1/PMC12590121.1.txt) fetched 2026-11-11; bytes in the scratchpad only, not in the repository",
+ "study_id": {
+  "doi": "10.1523/JNEUROSCI.0432-24.2025",
+  "pmid": "40998695"
+ },
+ "workflow": "SCI45 package P1 blind verifier V5 (ORCH-SCI45-20261111), actor ks-w. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

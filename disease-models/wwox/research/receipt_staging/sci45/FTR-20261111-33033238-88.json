@@ -1,0 +1,45 @@
+{
+ "analysis_at": "2026-11-11T06:21Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "read",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-11T06:35:22Z",
+ "event_id": "FTR-20261111-33033238-88",
+ "evidence_basis": [
+  "Theparambil 2020: Results on regulation of brain pHe, Fig 1 image viewed, Discussion lines on activity-induced pH; NBCe1 mechanism, Figs 2-8 and supplements not read.",
+  "verbatim_locator | proposition: in vivo pHe with activity | Results, regulation of brain extracellular pH | \"during periods of increased neuronal activity the extracellular pH remains unchanged or shifts in the alkaline direction\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/ph_sensitivity.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/native_evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/tools.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/tissue_ph.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/figure_notes.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/queries.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/answers.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "818976b423b542fa9c0807f29e0764a1eac24cc64fb319f59547d97a2cc0e984",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket (plain curl, https://pmc-oa-opendata.s3.amazonaws.com/PMC7545092.1/PMC7545092.1.txt) fetched 2026-11-11; bytes in the scratchpad only, not in the repository",
+ "study_id": {
+  "doi": "10.1038/s41467-020-18756-3",
+  "pmid": "33033238"
+ },
+ "workflow": "SCI45 package P1, K2P x pH (ORCH-SCI45-20261111), producer og-u. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,7 @@
+fig_id	source	item	how_opened	what_was_seen	values_carried	kind	limitation
+F01	PMID 40365404	SI Table S2 and S3 (page image)	PDF page rendered, viewed with Read	K2P QPatch and MPC table; cardiac MPC table	IC50 0.15 and 0.17 uM; percentages at 10 uM	m	values typed from a rendered table image, legible
+F02	PMID 40365404	Fig 1, Fig 3, Fig 4, Fig 5, Table 3 images; SI S29 and Fig S3	bucket jpg and rendered SI page, viewed	structures, NOR bar chart, Table 3, NMR drawing, Irwin table	4-F aryl; 0.26 uM; MED 10 mg/kg; near-zero Irwin scores	m	NOR bars not read numerically; Irwin read off a raster
+F03	PMID 41104520	Fig 1 and Scheme (jm_f01, jm_f06)	bucket jpg, viewed	ONO-TR-772 drawn with Tl+ IC50 0.26 uM; Cpd8 drawn	structure agreement	m	compound 10 and 11 figures not opened
+F04	PMID 39981749	Table 2 (image 11) and scaffold (image 10)	bucket jpg, viewed	19b: 2.8 and 0.30 uM	EC50 values	m	Figs 1-5 and SI figures not opened
+F05	PMID 40635742	Fig 2 and Fig 7	bucket jpg, viewed	structure; dose-response with four points	about 23, 55, 63, 80 percent (raster, INFERENZA)	m	Figs 1, 3-6 not opened (docking, MD, cell images)
+F06	PMID 31001961	Fig 1 (page render) and Supplementary Figs 1-2 and Table 1	PDF pages rendered, viewed	structure, time course, IC50 table	IC50 0.2 uM, Hill 1.1	m	Figs 2-5 captions only

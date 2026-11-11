@@ -1,0 +1,109 @@
+pool_source	pool_share	channel	pH50	pH0	hill_n	delta_pH	closure_f	loss_L	reaches_0.28
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.3	7.2	0.7	0.1	0.086	0.022	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.3	7.2	0.7	0.2	0.17	0.044	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.3	7.2	0.7	0.3	0.251	0.065	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.3	7.2	1	0.1	0.126	0.033	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.3	7.2	1	0.2	0.246	0.064	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.3	7.2	1	0.3	0.357	0.093	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.3	7.2	2	0.1	0.264	0.069	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.3	7.2	2	0.2	0.481	0.125	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.3	7.2	2	0.3	0.646	0.168	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.3	7.4	0.7	0.1	0.074	0.019	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.3	7.4	0.7	0.2	0.149	0.039	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.3	7.4	0.7	0.3	0.222	0.058	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.3	7.4	1	0.1	0.103	0.027	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.3	7.4	1	0.2	0.206	0.053	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.3	7.4	1	0.3	0.306	0.08	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.3	7.4	2	0.1	0.185	0.048	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.3	7.4	2	0.2	0.369	0.096	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.3	7.4	2	0.3	0.536	0.139	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.4	7.2	0.7	0.1	0.092	0.024	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.4	7.2	0.7	0.2	0.181	0.047	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.4	7.2	0.7	0.3	0.265	0.069	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.4	7.2	1	0.1	0.137	0.036	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.4	7.2	1	0.2	0.264	0.069	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.4	7.2	1	0.3	0.379	0.099	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.4	7.2	2	0.1	0.295	0.077	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.4	7.2	2	0.2	0.52	0.135	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.4	7.2	2	0.3	0.681	0.177	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.4	7.4	0.7	0.1	0.08	0.021	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.4	7.4	0.7	0.2	0.16	0.042	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.4	7.4	0.7	0.3	0.237	0.062	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.4	7.4	1	0.1	0.115	0.03	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.4	7.4	1	0.2	0.226	0.059	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.4	7.4	1	0.3	0.332	0.086	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.4	7.4	2	0.1	0.226	0.059	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.4	7.4	2	0.2	0.431	0.112	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	7.4	7.4	2	0.3	0.598	0.156	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	6.6	7.2	0.7	0.1	0.046	0.012	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	6.6	7.2	0.7	0.2	0.095	0.025	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	6.6	7.2	0.7	0.3	0.146	0.038	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	6.6	7.2	1	0.1	0.049	0.013	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	6.6	7.2	1	0.2	0.105	0.027	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	6.6	7.2	1	0.3	0.167	0.043	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	6.6	7.2	2	0.1	0.034	0.009	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	6.6	7.2	2	0.2	0.082	0.021	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	6.6	7.2	2	0.3	0.15	0.039	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	6.6	7.4	0.7	0.1	0.036	0.009	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	6.6	7.4	0.7	0.2	0.076	0.02	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	6.6	7.4	0.7	0.3	0.118	0.031	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	6.6	7.4	1	0.1	0.034	0.009	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	6.6	7.4	1	0.2	0.074	0.019	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	6.6	7.4	1	0.3	0.12	0.031	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	6.6	7.4	2	0.1	0.014	0.004	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	6.6	7.4	2	0.2	0.036	0.009	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-1	6.6	7.4	2	0.3	0.068	0.018	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.47	7.2	0.7	0.1	0.04	0.01	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.47	7.2	0.7	0.2	0.082	0.021	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.47	7.2	0.7	0.3	0.128	0.033	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.47	7.2	1	0.1	0.039	0.01	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.47	7.2	1	0.2	0.084	0.022	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.47	7.2	1	0.3	0.135	0.035	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.47	7.2	2	0.1	0.019	0.005	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.47	7.2	2	0.2	0.048	0.013	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.47	7.2	2	0.3	0.091	0.024	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.47	7.4	0.7	0.1	0.031	0.008	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.47	7.4	0.7	0.2	0.065	0.017	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.47	7.4	0.7	0.3	0.102	0.027	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.47	7.4	1	0.1	0.027	0.007	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.47	7.4	1	0.2	0.058	0.015	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.47	7.4	1	0.3	0.095	0.025	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.47	7.4	2	0.1	0.008	0.002	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.47	7.4	2	0.2	0.02	0.005	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.47	7.4	2	0.3	0.039	0.01	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.9	7.2	0.7	0.1	0.063	0.016	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.9	7.2	0.7	0.2	0.127	0.033	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.9	7.2	0.7	0.3	0.192	0.05	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.9	7.2	1	0.1	0.08	0.021	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.9	7.2	1	0.2	0.163	0.042	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.9	7.2	1	0.3	0.249	0.065	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.9	7.2	2	0.1	0.105	0.027	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.9	7.2	2	0.2	0.233	0.061	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.9	7.2	2	0.3	0.374	0.097	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.9	7.4	0.7	0.1	0.051	0.013	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.9	7.4	0.7	0.2	0.105	0.027	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.9	7.4	0.7	0.3	0.161	0.042	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.9	7.4	1	0.1	0.059	0.015	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.9	7.4	1	0.2	0.123	0.032	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.9	7.4	1	0.3	0.193	0.05	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.9	7.4	2	0.1	0.05	0.013	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.9	7.4	2	0.2	0.121	0.031	no
+TASK-1/3 (Yao KO, holding current)	0.26	TASK-3	6.9	7.4	2	0.3	0.213	0.055	no
+TREK-1 (Labbaf KO, Rin)	0.53	TREK-1	7.5	7.2	0.7	0.1	0.098	0.052	no
+TREK-1 (Labbaf KO, Rin)	0.53	TREK-1	7.5	7.2	0.7	0.2	0.19	0.101	no
+TREK-1 (Labbaf KO, Rin)	0.53	TREK-1	7.5	7.2	0.7	0.3	0.278	0.147	no
+TREK-1 (Labbaf KO, Rin)	0.53	TREK-1	7.5	7.2	1	0.1	0.147	0.078	no
+TREK-1 (Labbaf KO, Rin)	0.53	TREK-1	7.5	7.2	1	0.2	0.28	0.149	no
+TREK-1 (Labbaf KO, Rin)	0.53	TREK-1	7.5	7.2	1	0.3	0.399	0.211	no
+TREK-1 (Labbaf KO, Rin)	0.53	TREK-1	7.5	7.2	2	0.1	0.319	0.169	no
+TREK-1 (Labbaf KO, Rin)	0.53	TREK-1	7.5	7.2	2	0.2	0.547	0.29	yes
+TREK-1 (Labbaf KO, Rin)	0.53	TREK-1	7.5	7.2	2	0.3	0.704	0.373	yes
+TREK-1 (Labbaf KO, Rin)	0.53	TREK-1	7.5	7.4	0.7	0.1	0.086	0.046	no
+TREK-1 (Labbaf KO, Rin)	0.53	TREK-1	7.5	7.4	0.7	0.2	0.17	0.09	no
+TREK-1 (Labbaf KO, Rin)	0.53	TREK-1	7.5	7.4	0.7	0.3	0.251	0.133	no
+TREK-1 (Labbaf KO, Rin)	0.53	TREK-1	7.5	7.4	1	0.1	0.126	0.067	no
+TREK-1 (Labbaf KO, Rin)	0.53	TREK-1	7.5	7.4	1	0.2	0.246	0.13	no
+TREK-1 (Labbaf KO, Rin)	0.53	TREK-1	7.5	7.4	1	0.3	0.357	0.189	no
+TREK-1 (Labbaf KO, Rin)	0.53	TREK-1	7.5	7.4	2	0.1	0.264	0.14	no
+TREK-1 (Labbaf KO, Rin)	0.53	TREK-1	7.5	7.4	2	0.2	0.481	0.255	no
+TREK-1 (Labbaf KO, Rin)	0.53	TREK-1	7.5	7.4	2	0.3	0.646	0.343	yes
