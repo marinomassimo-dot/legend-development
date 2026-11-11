@@ -47,3 +47,13 @@ Not yet consumed: the seven registry rows whose nM column is exactly 1000 off (C
 ## P8 DREAM: one connection used, one found already consumed
 * **Used.** Observation: tonic extracellular zinc is unmeasured in the slice and appears in two investigations that were written apart: it raises the maximal inhibition of a GluN2B-site modulator on triheteromers (INV-05, decisive row D03) and it is a physiological modulator excluded as a "candidate" by the GABA-A relation (S5) but visible as a physiological variable after the role vocabulary. Relation proposed: one measured condition serves both. Competing explanations: the zinc effect is a recombinant (chelated) artefact; slice zinc is negligible; it matters only for one receptor. Lever or question: not a compound, a measured condition. Discriminating measure: chelator-sensitive zinc at the recording site (with the genotype comparison). Consumer updated: the M01 condition record of the prediction matrix (one added sentence, marker [IT44]); the earlier package already listed zinc among the measured bath values (M-N6), so the gap was that the matrix row did not.
 * **Already consumed, said and stopped.** SCI43's capacitance step and the SCI42 pH and chloride questions already share M01 (SCI43 row 11, applied in IT43); nothing further to add. The IT43 PDH/BNIP3 shared sample series is applied in both investigations.
+
+## P1: where each SCI43 hypothesis (KH1-KH5) is consumed
+| Hypothesis | Consumer | What it changed |
+|---|---|---|
+| KH1 a lost resting K+ conductance | relation S11 (generative input) and INV-18 ladder step 2 | S11's frame, comparison and the two-concentration Ba2+ step; V14 |
+| KH2 Kv7 in the spiking range | V10 (abstention kept, texts from SCI43 row 3) and `comparators.tsv` (state-dependent XE-991 reading) | the opener's expected action is in the spiking range, not at rest |
+| KH3 Ih as a tool arm | INV-18 main arm, unchanged; its share of the conductance (about 6 percent) in `decisive_uncertainty` | Ih cannot carry the whole change |
+| KH4 network consequence | relation S12 (generative input) | S12's frame; the engine's excluded blockers become discriminators |
+| KH5 development and recording | ladder step 0 (capacitance) and the M01 condition record | capacitance first; the single-conductance arithmetic is not used as a discriminator |
+The SCI43 tables are not `comparison.tsv`, so no registry row was added (SCI43 row 9 format decision): the consumers above read the hypotheses through the relation rows and the investigation text, not through a new export.
