@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-10T22:53:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-10T22:58:00Z",
+ "event_id": "FTR-20261110-17683942-96",
+ "evidence_basis": [
+  "Results on isoform inhibition and Experimental Procedures (assays) read; Figure 2 viewed; structure sections, Figures 1 and 3-7, Table 1 and the supplement not opened.",
+  "verbatim_locator | proposition: AZD7545 IC50 for human PDK1 and PDK3 with the E2p/E3BP core | Results | \"Under our assay conditions, AZD7545 shows an IC 50 of 87 nM for PDK1 and 600 nM for PDK3\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a3/activity_primary.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a3/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a3/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page PMC2871385 (NIH author manuscript) fetched with plain curl; Figure 2 image from the PMC cdn viewed; Europe PMC XML returned an error and efetch declined the full text",
+ "study_id": {
+  "doi": "10.1016/j.str.2007.07.001",
+  "pmid": "17683942"
+ },
+ "workflow": "SCI44 package A step A3 producer og-q (pdh_pdk_sci44_20261110). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

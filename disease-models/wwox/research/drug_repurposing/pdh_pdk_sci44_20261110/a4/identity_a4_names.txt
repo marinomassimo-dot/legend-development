@@ -1,0 +1,1658 @@
+## stiripentol
+{
+ "identity": {
+  "query": "stiripentol",
+  "identity_state": "NAME_EXACT",
+  "candidates": [
+   {
+    "catalogue_id": "CAT:CHEMBL1983350",
+    "record_name": "STIRIPENTOL",
+    "match_kind": "NAME_EXACT",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1983350",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL1983350",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:480750365004",
+    "record_name": "Stiripentol",
+    "match_kind": "NAME_EXACT",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   }
+  ],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "LDHA",
+   "LDHB",
+   "PDK1",
+   "PDK2",
+   "PDK3",
+   "PDK4",
+   "PDHA1",
+   "PDP1"
+  ],
+  "per_gene": {
+   "LDHA": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "LDHB": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK1": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK2": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK3": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK4": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDHA1": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDP1": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   }
+  },
+  "chembl_read": [
+   {
+    "chembl_id": "CHEMBL1983350",
+    "mechanism_status": "MATCH_FOUND",
+    "activity_status": "MATCH_FOUND",
+    "activity_coverage": "COMPLETE",
+    "activity_rows": 5
+   }
+  ],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {
+   "CISD1": 2,
+   "GABRG3": 1,
+   "GABRG2": 1,
+   "GABRB2": 1,
+   "GABRA1": 1
+  },
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}
+## oxamate
+{
+ "identity": {
+  "query": "oxamate",
+  "identity_state": "NAME_PARTIAL",
+  "candidates": [
+   {
+    "catalogue_id": "CAT:CHEMBL2104511",
+    "record_name": "DIOXAMATE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL2104511",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL2104511",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL4594231",
+    "record_name": "IODOXAMATE MEGLUMINE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1615487",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL4594231",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:056bfedb3c03",
+    "record_name": "Benzohydroxamate",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL16300",
+      "basis": "dgidb_concept"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:466f6c663ff5",
+    "record_name": "L-Threonohydroxamate 4-Phosphate",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:976e0bdbb2ba",
+    "record_name": "Cinnamic Acid Hydroxamate",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL237370",
+      "basis": "dgidb_concept"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:98f5b6a68a78",
+    "record_name": "Glutamine Hydroxamate",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:9a0f66de1ec9",
+    "record_name": "Xylarohydroxamate",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL504369",
+    "record_name": "NICOXAMAT",
+    "match_kind": "SYNONYM_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL504369",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL504369",
+      "basis": "record"
+     }
+    ]
+   }
+  ],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "LDHA",
+   "LDHB",
+   "PDK1",
+   "PDK2",
+   "PDK3",
+   "PDK4",
+   "PDHA1",
+   "PDP1"
+  ],
+  "per_gene": {
+   "LDHA": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "LDHB": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK2": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK3": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK4": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDHA1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDP1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   }
+  },
+  "chembl_read": [],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {},
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}
+## sodium oxamate
+{
+ "identity": {
+  "query": "sodium oxamate",
+  "identity_state": "NOT_FOUND_BY_NAME",
+  "candidates": [],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "LDHA",
+   "LDHB",
+   "PDK1",
+   "PDK2",
+   "PDK3",
+   "PDK4",
+   "PDHA1",
+   "PDP1"
+  ],
+  "per_gene": {
+   "LDHA": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "LDHB": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK2": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK3": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK4": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDHA1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDP1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   }
+  },
+  "chembl_read": [],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {},
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}
+## FX11
+{
+ "identity": {
+  "query": "FX11",
+  "identity_state": "NOT_FOUND_BY_NAME",
+  "candidates": [],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "LDHA",
+   "LDHB",
+   "PDK1",
+   "PDK2",
+   "PDK3",
+   "PDK4",
+   "PDHA1",
+   "PDP1"
+  ],
+  "per_gene": {
+   "LDHA": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "LDHB": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK2": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK3": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK4": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDHA1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDP1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   }
+  },
+  "chembl_read": [],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {},
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}
+## GNE-140
+{
+ "identity": {
+  "query": "GNE-140",
+  "identity_state": "NOT_FOUND_BY_NAME",
+  "candidates": [],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "LDHA",
+   "LDHB",
+   "PDK1",
+   "PDK2",
+   "PDK3",
+   "PDK4",
+   "PDHA1",
+   "PDP1"
+  ],
+  "per_gene": {
+   "LDHA": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "LDHB": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK2": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK3": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK4": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDHA1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDP1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   }
+  },
+  "chembl_read": [],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {},
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}
+## GSK2837808A
+{
+ "identity": {
+  "query": "GSK2837808A",
+  "identity_state": "NOT_FOUND_BY_NAME",
+  "candidates": [],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "LDHA",
+   "LDHB",
+   "PDK1",
+   "PDK2",
+   "PDK3",
+   "PDK4",
+   "PDHA1",
+   "PDP1"
+  ],
+  "per_gene": {
+   "LDHA": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "LDHB": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK2": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK3": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK4": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDHA1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDP1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   }
+  },
+  "chembl_read": [],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {},
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}
+## galloflavin
+{
+ "identity": {
+  "query": "galloflavin",
+  "identity_state": "NOT_FOUND_BY_NAME",
+  "candidates": [],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "LDHA",
+   "LDHB",
+   "PDK1",
+   "PDK2",
+   "PDK3",
+   "PDK4",
+   "PDHA1",
+   "PDP1"
+  ],
+  "per_gene": {
+   "LDHA": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "LDHB": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK2": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK3": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK4": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDHA1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDP1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   }
+  },
+  "chembl_read": [],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {},
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}
+## lipoic acid
+{
+ "identity": {
+  "query": "lipoic acid",
+  "identity_state": "SYNONYM_EXACT",
+  "candidates": [
+   {
+    "catalogue_id": "CAT:DGIDB:e95b02c97cde",
+    "record_name": "Thioctic Acid",
+    "match_kind": "SYNONYM_EXACT",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL33864",
+    "record_name": "LIPOIC ACID, ALPHA",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL33864",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL33864",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL4650363",
+    "record_name": "ARLIPOIC ACID CHOLINE ESTER CHLORIDE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL4650743",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL4650363",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL4650743",
+    "record_name": "ARLIPOIC ACID CHOLINE ESTER",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": null,
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL4650743",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:fcdadaaa3fd1",
+    "record_name": "Dihydrolipoic Acid",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:EC:01935",
+    "record_name": "Alpha-lipoic acid",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "matrix_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL1403899",
+    "record_name": "THIOCTIC ACID AMIDE",
+    "match_kind": "SYNONYM_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1403899",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL1403899",
+      "basis": "record"
+     }
+    ]
+   }
+  ],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "LDHA",
+   "LDHB",
+   "PDK1",
+   "PDK2",
+   "PDK3",
+   "PDK4",
+   "PDHA1",
+   "PDP1"
+  ],
+  "per_gene": {
+   "LDHA": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "LDHB": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK2": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK3": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK4": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDHA1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDP1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   }
+  },
+  "chembl_read": [],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {
+   "SLC2A1": 1
+  },
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}
+## thiamine
+{
+ "identity": {
+  "query": "thiamine",
+  "identity_state": "NAME_EXACT",
+  "candidates": [
+   {
+    "catalogue_id": "CAT:CHEMBL1588",
+    "record_name": "THIAMINE",
+    "match_kind": "NAME_EXACT",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1547",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL1588",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL1200941",
+    "record_name": "THIAMINE HYDROCHLORIDE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1547",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL1200941",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL1236378",
+    "record_name": "MONOPHOSPHOTHIAMINE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1236378",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL1236378",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL1547",
+    "record_name": "THIAMINE ION",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1547",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL1547",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL2104496",
+    "record_name": "THIAMINE MONONITRATE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1547",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL2104496",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL2106811",
+    "record_name": "MONOPHOSPHOTHIAMINE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1236378",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL2106811",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL2108877",
+    "record_name": "THIAMINE COBALT CHLOROPHYLLIN COMPLEX",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL2108877",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL2108877",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:027e31878c8e",
+    "record_name": "Pyrithiamine Pyrophosphate",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:279909efec19",
+    "record_name": "Thiamine(1+) Monophosphate",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:7b2915da712d",
+    "record_name": "Thiamine Pyrophosphate",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL1236376",
+    "record_name": "COCARBOXYLASE",
+    "match_kind": "SYNONYM_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1236376",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL1236376",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL1442890",
+    "record_name": "PROSULTIAMINE",
+    "match_kind": "SYNONYM_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1442890",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL1442890",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL1874002",
+    "record_name": "SULBUTIAMINE",
+    "match_kind": "SYNONYM_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1874002",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL1874002",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL2104407",
+    "record_name": "BISBUTYTIAMINE",
+    "match_kind": "SYNONYM_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL2104407",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL2104407",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL2106533",
+    "record_name": "BENTIAMINE",
+    "match_kind": "SYNONYM_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL2106533",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL2106533",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL2106586",
+    "record_name": "CYCOTIAMINE",
+    "match_kind": "SYNONYM_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL2106586",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL2106586",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL4303665",
+    "record_name": "BENFOTIAMINE",
+    "match_kind": "SYNONYM_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL4303665",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL4303665",
+      "basis": "record"
+     }
+    ]
+   }
+  ],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "LDHA",
+   "LDHB",
+   "PDK1",
+   "PDK2",
+   "PDK3",
+   "PDK4",
+   "PDHA1",
+   "PDP1"
+  ],
+  "per_gene": {
+   "LDHA": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "LDHB": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK1": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK2": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK3": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK4": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDHA1": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDP1": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   }
+  },
+  "chembl_read": [
+   {
+    "chembl_id": "CHEMBL1588",
+    "mechanism_status": "MATCH_FOUND",
+    "activity_status": "MATCH_FOUND",
+    "activity_coverage": "COMPLETE",
+    "activity_rows": 6
+   }
+  ],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {
+   "ACHE": 4,
+   "NULL": 1,
+   "NFE2L2": 1,
+   "SLC19A3": 1,
+   "SLC19A2": 1
+  },
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}
+## sodium acetate
+{
+ "identity": {
+  "query": "sodium acetate",
+  "identity_state": "NAME_EXACT",
+  "candidates": [
+   {
+    "catalogue_id": "CAT:CHEMBL1354",
+    "record_name": "SODIUM ACETATE",
+    "match_kind": "NAME_EXACT",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1354",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL1354",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:UNII:4550K0SC9B",
+    "record_name": "SODIUM ACETATE",
+    "match_kind": "NAME_EXACT",
+    "origin": "openfda_unii_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL2106653",
+    "record_name": "THEOBROMINE SODIUM ACETATE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1114",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL2106653",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL2107054",
+    "record_name": "SODIUM ACETATE C 11",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL1354",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL2107054",
+      "basis": "record"
+     }
+    ]
+   }
+  ],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "LDHA",
+   "LDHB",
+   "PDK1",
+   "PDK2",
+   "PDK3",
+   "PDK4",
+   "PDHA1",
+   "PDP1"
+  ],
+  "per_gene": {
+   "LDHA": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "LDHB": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK1": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK2": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK3": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK4": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDHA1": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDP1": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   }
+  },
+  "chembl_read": [
+   {
+    "chembl_id": "CHEMBL1354",
+    "mechanism_status": "MATCH_FOUND",
+    "activity_status": "MATCH_FOUND",
+    "activity_coverage": "COMPLETE",
+    "activity_rows": 12
+   }
+  ],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {
+   "CA1": 2,
+   "CA2": 2,
+   "CA4": 1,
+   "CA5A": 1,
+   "CA9": 1,
+   "NCE103": 1,
+   "FFAR3": 1
+  },
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}
+## triheptanoin
+{
+ "identity": {
+  "query": "triheptanoin",
+  "identity_state": "NAME_EXACT",
+  "candidates": [
+   {
+    "catalogue_id": "CAT:CHEMBL4297585",
+    "record_name": "TRIHEPTANOIN",
+    "match_kind": "NAME_EXACT",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL4297585",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL4297585",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:208f9f9ea30f",
+    "record_name": "Triheptanoin",
+    "match_kind": "NAME_EXACT",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   }
+  ],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "LDHA",
+   "LDHB",
+   "PDK1",
+   "PDK2",
+   "PDK3",
+   "PDK4",
+   "PDHA1",
+   "PDP1"
+  ],
+  "per_gene": {
+   "LDHA": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "LDHB": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK1": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK2": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK3": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK4": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDHA1": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDP1": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   }
+  },
+  "chembl_read": [
+   {
+    "chembl_id": "CHEMBL4297585",
+    "mechanism_status": "MATCH_FOUND",
+    "activity_status": "NO_MATCH_FOUND",
+    "activity_coverage": "COMPLETE",
+    "activity_rows": 0
+   }
+  ],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {},
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}
+## devimistat
+{
+ "identity": {
+  "query": "devimistat",
+  "identity_state": "NAME_EXACT",
+  "candidates": [
+   {
+    "catalogue_id": "CAT:DGIDB:fac46216aa38",
+    "record_name": "Devimistat",
+    "match_kind": "NAME_EXACT",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL3186849",
+    "record_name": "CPI 613",
+    "match_kind": "SYNONYM_EXACT",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL3186849",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL3186849",
+      "basis": "record"
+     }
+    ]
+   }
+  ],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "LDHA",
+   "LDHB",
+   "PDK1",
+   "PDK2",
+   "PDK3",
+   "PDK4",
+   "PDHA1",
+   "PDP1"
+  ],
+  "per_gene": {
+   "LDHA": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "LDHB": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK1": {
+    "level": "SOURCE_INTERACTION",
+    "n_rows": 1,
+    "rows": [
+     "SOURCE_INTERACTION: CAT:DGIDB:fac46216aa38"
+    ]
+   },
+   "PDK2": {
+    "level": "SOURCE_INTERACTION",
+    "n_rows": 1,
+    "rows": [
+     "SOURCE_INTERACTION: CAT:DGIDB:fac46216aa38"
+    ]
+   },
+   "PDK3": {
+    "level": "SOURCE_INTERACTION",
+    "n_rows": 1,
+    "rows": [
+     "SOURCE_INTERACTION: CAT:DGIDB:fac46216aa38"
+    ]
+   },
+   "PDK4": {
+    "level": "SOURCE_INTERACTION",
+    "n_rows": 1,
+    "rows": [
+     "SOURCE_INTERACTION: CAT:DGIDB:fac46216aa38"
+    ]
+   },
+   "PDHA1": {
+    "level": "SOURCE_INTERACTION",
+    "n_rows": 1,
+    "rows": [
+     "SOURCE_INTERACTION: CAT:DGIDB:fac46216aa38"
+    ]
+   },
+   "PDP1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   }
+  },
+  "chembl_read": [],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {
+   "PDHA2": 1,
+   "PDHB": 1,
+   "OGDH": 1
+  },
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}
+## PS10
+{
+ "identity": {
+  "query": "PS10",
+  "identity_state": "NOT_FOUND_BY_NAME",
+  "candidates": [],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "LDHA",
+   "LDHB",
+   "PDK1",
+   "PDK2",
+   "PDK3",
+   "PDK4",
+   "PDHA1",
+   "PDP1"
+  ],
+  "per_gene": {
+   "LDHA": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "LDHB": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK2": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK3": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK4": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDHA1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDP1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   }
+  },
+  "chembl_read": [],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {},
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}
+## JX06
+{
+ "identity": {
+  "query": "JX06",
+  "identity_state": "NOT_FOUND_BY_NAME",
+  "candidates": [],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "LDHA",
+   "LDHB",
+   "PDK1",
+   "PDK2",
+   "PDK3",
+   "PDK4",
+   "PDHA1",
+   "PDP1"
+  ],
+  "per_gene": {
+   "LDHA": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "LDHB": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK2": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK3": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK4": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDHA1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDP1": {
+    "level": "NOT_READ",
+    "n_rows": 0,
+    "rows": []
+   }
+  },
+  "chembl_read": [],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {},
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}
+## diazoxide
+{
+ "identity": {
+  "query": "diazoxide",
+  "identity_state": "NAME_EXACT",
+  "candidates": [
+   {
+    "catalogue_id": "CAT:CHEMBL181",
+    "record_name": "DIAZOXIDE",
+    "match_kind": "NAME_EXACT",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL181",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL181",
+      "basis": "record"
+     }
+    ]
+   },
+   {
+    "catalogue_id": "CAT:DGIDB:9a1848b2e12a",
+    "record_name": "Diazoxide",
+    "match_kind": "NAME_EXACT",
+    "origin": "dgidb_only",
+    "parent": null,
+    "chembl_refs": []
+   },
+   {
+    "catalogue_id": "CAT:CHEMBL4297276",
+    "record_name": "DIAZOXIDE CHOLINE",
+    "match_kind": "NAME_PARTIAL",
+    "origin": "chembl_selected",
+    "parent": "CAT:CHEMBL181",
+    "chembl_refs": [
+     {
+      "chembl_id": "CHEMBL4297276",
+      "basis": "record"
+     }
+    ]
+   }
+  ],
+  "declarations": [],
+  "label_conflict": [],
+  "note": "NOT_FOUND_BY_NAME is a statement about the name and the sources read, not about the compound"
+ },
+ "target": {
+  "expected_genes": [
+   "LDHA",
+   "LDHB",
+   "PDK1",
+   "PDK2",
+   "PDK3",
+   "PDK4",
+   "PDHA1",
+   "PDP1"
+  ],
+  "per_gene": {
+   "LDHA": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "LDHB": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK1": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK2": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK3": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDK4": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDHA1": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   },
+   "PDP1": {
+    "level": "EMPTY_RESULT",
+    "n_rows": 0,
+    "rows": []
+   }
+  },
+  "chembl_read": [
+   {
+    "chembl_id": "CHEMBL181",
+    "mechanism_status": "MATCH_FOUND",
+    "activity_status": "MATCH_FOUND",
+    "activity_coverage": "COMPLETE",
+    "activity_rows": 362
+   }
+  ],
+  "selectivity": "NOT_ASSESSED",
+  "unattributed_source_rows": [],
+  "other_genes_seen": {
+   "KCNJ11": 14,
+   "ABCC8": 11,
+   "NOS2": 3,
+   "CYP2D6": 3,
+   "CYP1A2": 3,
+   "ABCB11": 3,
+   "KCNJ8": 2,
+   "SLC12A3": 2
+  },
+  "note": "a record or activity row naming a gene shows the gene was reported for the compound, not that the compound is selective for it"
+ }
+}

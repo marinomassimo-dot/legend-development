@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-10T22:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-10T22:41:00Z",
+ "event_id": "FTR-20261110-39177920-96",
+ "evidence_basis": [
+  "Introduction, Methods (BV2 model), the PDK4 results and Fig 1 legend, and the Discussion limitations read; figures and the supplementary document not read.",
+  "verbatim_locator | proposition: PDK4 knockdown lowered M1 markers in BV2 | Results | \"knocking down PDK4 in BV2 cells reduced markers related to M1-type polarization\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/isoform_expression.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/function_neural.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket text of PMC12234639 fetched with plain curl on 2026-11-10; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1007/s10753-024-02105-3",
+  "pmid": "39177920"
+ },
+ "workflow": "SCI44 package A step A2 producer og-p (pdh_pdk_sci44_20261110). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

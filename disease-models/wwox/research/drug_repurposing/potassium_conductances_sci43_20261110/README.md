@@ -53,3 +53,5 @@ Monte Carlo of the implied reversal with printed dispersions (cells as units, "Â
 ## After the first delivery
 
 `S7_coda.md` (the one premise carried to the next brief, the hidden alternative, the DREAM connection: one condition record for the preparation), `next_brief_sci43_20261110.md` (the next question and the reopen condition for the eight rows the verifier could not reach).
+
+Update 2026-11-10 (SCI44): a lactate-closed ATP-sensitive K+ conductance is a conditional metabolic upstream of KH1 (SCI44 hypothesis PH4, `pdh_pdk_sci44_20261110/`). In juvenile (P13-24) rat and mouse barrel cortex KATP modulators change membrane potential, resistance and firing, diazoxide roughly doubles whole-cell conductance and 15 mM lactate roughly doubles firing through KATP closure (34766906, text read once, by the SCI44 verifier; pooled cell types). The statement in `S7_coda.md` and the K-branch ladder that the metabolic link is closed is superseded for this family; the Ba2+ and K2P share question of the next brief is unchanged.

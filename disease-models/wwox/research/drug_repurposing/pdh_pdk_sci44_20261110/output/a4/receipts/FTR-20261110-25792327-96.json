@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-10T23:03:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-10T23:11:00Z",
+ "event_id": "FTR-20261110-25792327-96",
+ "evidence_basis": [
+  "Abstract only (PubMed record); publisher page HTTP 403 Cloudflare, Europe PMC not open access; not retried by another route.",
+  "verbatim_locator | proposition: LDH inhibition hyperpolarised neurons, reversed by pyruvate | Abstract | \"Inhibition of the enzyme LDH hyperpolarized neurons, which was reversed by the downstream metabolite pyruvate.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a4/levers.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a4/k_coupling.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a4/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a4/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record (abstract); publisher page plain curl HTTP 403 Cloudflare",
+ "study_id": {
+  "doi": "10.1126/science.aaa1299",
+  "pmid": "25792327"
+ },
+ "workflow": "SCI44 package A step A4 producer og-r (pdh_pdk_sci44_20261110). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

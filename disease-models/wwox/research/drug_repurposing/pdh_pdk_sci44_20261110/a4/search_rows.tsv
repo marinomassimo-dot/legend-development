@@ -1,0 +1,24 @@
+relation_id	source	molecule	name	catalogue_id	species	action	direction	site_or_granularity	primary_target	selectivity_comment	affinity	assay_or_note	pubmed	target_symbol	labelled_form	qualification	reason	unknown_fields
+A4-R3	GtoPdb interaction	GTOPDB:11300	&alpha;-cyano-4-hydroxycinnamate		Rat	Inhibitor/Inhibition	down		false	Not Determined	5.820000171661377 pIC50 (=)		1156402	Mpc1		CANDIDATE	ok	
+A4-R3	GtoPdb interaction	GTOPDB:11301	&alpha;-Cyano-5-phenyl-2,4-pentadienic acid		Rat	Inhibitor/Inhibition	down		false	Not Determined	6.699999809265137 pIC50 (=)		1156402	Mpc1		CANDIDATE	ok	
+A4-R3	GtoPdb interaction	GTOPDB:11299	&alpha;-cyanocinnamate		Rat	Inhibitor/Inhibition	down		false	Not Determined	6.699999809265137 pIC50 (=)		1156402	Mpc1		CANDIDATE	ok	
+A4-R3	GtoPdb interaction	GTOPDB:11303	mitoglitazone		Mouse	Inhibitor/Inhibition	down		false	Not Determined	5.889999866485596 pIC50 (=)		23513224	Mpc1		CANDIDATE	ok	
+A4-R3	GtoPdb interaction	GTOPDB:11302	UK-5099		Rat	Inhibitor/Inhibition	down		false	Not Determined	7.300000190734863 pIC50 (=)		1156402	Mpc1		CANDIDATE	ok	
+A4-R3	GtoPdb interaction	GTOPDB:11300	&alpha;-cyano-4-hydroxycinnamate		Rat	Inhibitor/Inhibition	down		false	Not Determined	5.820000171661377 pIC50 (=)		1156402	Mpc2		CANDIDATE	ok	
+A4-R3	GtoPdb interaction	GTOPDB:11301	&alpha;-Cyano-5-phenyl-2,4-pentadienic acid		Rat	Inhibitor/Inhibition	down		false	Not Determined	6.699999809265137 pIC50 (=)		1156402	Mpc2		CANDIDATE	ok	
+A4-R3	GtoPdb interaction	GTOPDB:11299	&alpha;-cyanocinnamate		Rat	Inhibitor/Inhibition	down		false	Not Determined	6.699999809265137 pIC50 (=)		1156402	Mpc2		CANDIDATE	ok	
+A4-R3	GtoPdb interaction	GTOPDB:6647	entacapone		Human	Inhibitor/Inhibition	down		false	Not Determined	6.21999979019165 pIC50 (=)		35278701	MPC2		CANDIDATE	ok	
+A4-R3	GtoPdb interaction	GTOPDB:12601	lonidamine		Human	Inhibitor/Inhibition	down		false	Not Determined	5.340000152587891 pIC50 (=)		35278701	MPC2		CANDIDATE	ok	
+A4-R3	GtoPdb interaction	GTOPDB:12601	lonidamine		Rat	Inhibitor/Inhibition	down		false	Not Determined	5.599999904632568 pIC50 (=)		26831515	Mpc2		CANDIDATE	ok	
+A4-R3	GtoPdb interaction	GTOPDB:11303	mitoglitazone		Mouse	Inhibitor/Inhibition	down		false	Not Determined	5.889999866485596 pIC50 (=)		23513224	Mpc2		CANDIDATE	ok	
+A4-R3	GtoPdb interaction	GTOPDB:10917	nitrofurantoin		Human	Inhibitor/Inhibition	down		false	Not Determined	5.480000019073486 pIC50 (=)		35278701	MPC2		CANDIDATE	ok	
+A4-R3	GtoPdb interaction	GTOPDB:11302	UK-5099		Human	Inhibitor/Inhibition	down		false	Not Determined	7.28000020980835 pIC50 (=)	Determined in human MPC1L/MPC2 proteoliposomes	35278701	MPC2		CANDIDATE	ok	
+A4-R3	GtoPdb interaction	GTOPDB:11302	UK-5099		Rat	Inhibitor/Inhibition	down		false	Not Determined	7.300000190734863 pIC50 (=)		1156402	Mpc2		CANDIDATE	ok	
+A4-R3	GtoPdb interaction	GTOPDB:2919	zaprinast		Human	Inhibitor/Inhibition	down		false	Not Determined	6.519999980926514 pIC50 (=)		35278701	MPC2		CANDIDATE	ok	
+A4-R3	GtoPdb interaction	GTOPDB:10605	AZD3965		Human	Inhibitor/Inhibition	down		false	Not Determined	8.489999771118164 pKi (=)	AZD3965 binding affinity to yeast membranes expressing recombinant human MCT1 by displacement of [<sup>3</sup>H]-MCT1 ligand.	29050199	SLC16A1		CANDIDATE	ok	
+A4-R3	GtoPdb interaction	GTOPDB:8813	compound 30 [PMID: 16455256]		Human	Inhibitor/Inhibition	down		false	Not Determined | Compound 30 is a channel blocker.	8.319999694824219 pKi (=)		16455256	SLC16A1		CANDIDATE	ok	
+A4-R3	GtoPdb interaction	CAT:DGIDB:e1da0e7d5335	BAY-8002	CAT:DGIDB:e1da0e7d5335	Human	Inhibitor/None	down		false	Not Determined	9.0 pIC50 (=)	Inhibition of lactate transport in <i>X. laevis</i> oocytes expressing hMCT1.	30115664	SLC16A1		CANDIDATE	ok	
+A4-R3	GtoPdb interaction	CAT:DGIDB:e1da0e7d5335	BAY-8002	CAT:DGIDB:e1da0e7d5335	Human	Inhibitor/None	down		false	Not Determined	8.300000190734863 pKi (=)	Inhibition of [3H]-BAY-8002 binding to membranes prepared from human MCT1-expressing DLD-1 cells.	30115664	SLC16A1		CANDIDATE	ok	
+A4-R3	GtoPdb interaction	CAT:DGIDB:09a092df2430	7ACC2	CAT:DGIDB:09a092df2430	Human	Inhibitor/Inhibition	down		false	Not Determined	7.960000038146973 pIC50 (=)		24095010	SLC16A7		CANDIDATE	ok	
+A4-R3	GtoPdb interaction	GTOPDB:10605	AZD3965		Human	Inhibitor/Inhibition	down		false	Not Determined	7.699999809265137 pKi (=)	AZD3965 binding affinity to yeast membranes expressing recombinant human MCT2 by displacement of [<sup>3</sup>H]-MCT2 ligand.	29050199	SLC16A7		CANDIDATE	ok	
+A4-R3	GtoPdb interaction	CAT:DGIDB:e1da0e7d5335	BAY-8002	CAT:DGIDB:e1da0e7d5335	Human	Inhibitor/None	down		false	Not Determined	8.300000190734863 pIC50 (=)	Inhibition of lactate transport in <i>X. laevis</i> oocytes expressing hMCT2.	30115664	SLC16A7		CANDIDATE	ok	

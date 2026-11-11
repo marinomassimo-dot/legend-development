@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-10T23:19Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-10T23:26Z",
+ "event_id": "FTR-20261110-25404640-97",
+ "evidence_basis": [
+  "Verifier V1 read Table 1 (text and PDF layer), Methods for the four-isoform DELFIA assay and the constructs (residue ranges), Results and Discussion on Nov3r and DCA; Figs 2 and 3 viewed (Fig 3A bar heights read from the raster). Supplement not opened.",
+  "verbatim_locator | proposition: VER-246608 IC50 per isoform in an E1-substrate assay | Table 1 | \"PDK-1 35 (n=5)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/audit.md",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/recompute_expression.tsv"
+ ],
+ "prior_receipt": "FTR-20261110-25404640-96",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket PMC4350332.1 text, PDF and figure images (plain curl)",
+ "study_id": {
+  "doi": "10.18632/oncotarget.2656",
+  "pmid": "25404640"
+ },
+ "workflow": "SCI44 blind verifier V1 (actor pk-v). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
