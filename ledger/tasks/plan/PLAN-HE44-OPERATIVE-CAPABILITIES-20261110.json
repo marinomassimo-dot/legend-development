@@ -10,16 +10,16 @@
  "OBJECTIVE": "HE44: make the capabilities operative: reach activities when no mechanism row exists, carry quantities and identity to the consumer, retrieval states to the generator's output, one measured cost reduction, DREAM with a retrieval test, continuity checked, simplification.",
  "worktree": ".claude/worktrees/he44",
  "branch": "task/he44",
- "CURRENT_STATE": "IN_PROGRESS",
+ "CURRENT_STATE": "DONE",
  "CHECKPOINT": {
-  "last_verified_result": "HE43 landed and pushed 273c8b56 (gate PASS, ls-remote). HE44 candidate on task/he44 with surfaces regenerated and audited PASS; battery not yet run",
-  "first_incomplete_work": "HE44 battery on a frozen SHA, gate, push, report",
+  "last_verified_result": "battery PASS WITH SKIPS (236 targets, 11 skipped) on 8f5036867faadb6a7136bc2d91695c3a0aa2cb5e; the commit after it (this record) is documentation only; HE43 landed 273c8b56; gate PASS",
+  "first_incomplete_work": "none",
   "active_processes": "none",
-  "real_dependencies": "IT44 owns generation/consumption/dashboard and action_search/dgidb_listing consumers; SCI44 owns biology; the azetukalner case comes from SCI43 consumer_delta row 9",
-  "next_executable_step": "freeze the SHA, clone, run the battery waiting by event, then task_close and push with --expect-sha"
+  "real_dependencies": "IT44 adopts resolve_targets and takes target_activity.py; SCI44/SCI45 may settle the Cs+ HCN unit from the primary paper",
+  "next_executable_step": "none; mandate complete"
  },
  "AUTHORISED_QUEUE_20261110": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_H0": {
    "order": 1,
    "title": "What is operative: HE43 consumption on the real tree",
@@ -139,9 +139,10 @@
    "title": "Landing and delivery",
    "steps": [
     {
-     "step": "Battery by SHA, gate, push with --expect-sha, remote check, final report",
-     "status": "IN_PROGRESS",
-     "owner": "plan"
+     "step": "Battery on the frozen SHA 8f503686 (unique clone): PASS WITH SKIPS (236 targets, 11 skipped); gate PASS; push with --expect-sha and remote check recorded in the final report",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "log /tmp/he44_keep/he44_battery_8f503686.log; gate scripts/public_release_gate.py VERDICT PASS"
     }
    ]
   }
