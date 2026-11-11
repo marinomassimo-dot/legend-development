@@ -1,133 +1,133 @@
 {
- "_schema": "orchestrator-task-v1",
- "TASK_ID": "ORCH-ROADMAP-IT45-20261111",
- "OWNER": "orchestrator",
- "ACTOR_ID": "orchestrator",
- "PRIORITY": "P0",
- "START_UTC": "2026-11-11T06:00:00Z",
- "OBJECTIVE": "IT45: turn recovered activities into contextualised pharmacological hypotheses and understandable research priorities: comparisons corrected and recomputed, one pointer carried to a hypothesis, a new combination, coarse filters measured, four-condition evaluation, priority dashboard.",
- "AUTHORISED_QUEUE_20261108": {
-  "MANDATE_STATE": "OPEN",
-  "OBJ_P0": {
-   "order": 1,
-   "steps": [
-    {
-     "step": "Restart on real state: reconcile IT44 / HE44 / SCI44 with Git, records, outputs and code calls; confirm what IT44 already applied (SCI44 B/C, 134 receipts); register IT45",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator",
-     "evidence": "IT44 battery d15894e0 = FAIL (stale views after the identity join); fix a47a92a0, battery running."
+  "_schema": "orchestrator-task-v1",
+  "TASK_ID": "ORCH-ROADMAP-IT45-20261111",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "P0",
+  "START_UTC": "2026-11-11T06:00:00Z",
+  "OBJECTIVE": "IT45: turn recovered activities into contextualised pharmacological hypotheses and understandable research priorities: comparisons corrected and recomputed, one pointer carried to a hypothesis, a new combination, coarse filters measured, four-condition evaluation, priority dashboard.",
+  "AUTHORISED_QUEUE_20261108": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_P0": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "Restart on real state: reconcile IT44 / HE44 / SCI44 with Git, records, outputs and code calls; confirm what IT44 already applied (SCI44 B/C, 134 receipts); register IT45",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "IT44 landed on main 4ce390d4 (battery PASS WITH SKIPS on that SHA; d15894e0 FAIL kept; a47a92a0 stopped, no verdict). IT45 registered."
+        }
+      ]
+    },
+    "OBJ_P1": {
+      "order": 2,
+      "steps": [
+        {
+          "step": "Real comparisons through the old ATP/scaffold code: keep the before, consume HE45 assay_conditions, regenerate decisions, report changed roles/premises/questions/priorities; insufficiency is neither equivalence nor refutation",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "disease-models/wwox/research/drug_repurposing/generation_it45_20261111/p1_comparisons_it45.md: 0 role/tier/premise changes, a false COMPARABLE removed on 4 compounds; before copies in p1_before/."
+        }
+      ]
+    },
+    "OBJ_P2": {
+      "order": 3,
+      "steps": [
+        {
+          "step": "Carry an activity pointer to a pharmacological hypothesis: select a small set before deep reading; one case complete from observation to reopened question; keep opposite-action, wrong-target and probe-only cases; not the SCI45 pH-K2P package",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "disease-models/wwox/research/drug_repurposing/generation_it45_20261111/s10_dose/result_it45.md complete chain, independent reader verify_s10/VERDICTS.md; s12_reopen, s2_dose (HCN1-selective probe pointer) as other relations."
+        }
+      ]
+    },
+    "OBJ_P3": {
+      "order": 4,
+      "steps": [
+        {
+          "step": "New generative combination: relations, alternatives and discriminating results written before names; show known / unused / newly acquired / combination / proposal / falsifier; second case only if the first is complete",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "disease-models/wwox/research/drug_repurposing/generation_it45_20261111/p3_lever_it45.md Kv7 lever x cell class, R1-R5, falsifiers; second case s12/s2."
+        }
+      ]
+    },
+    "OBJ_P4": {
+      "order": 5,
+      "steps": [
+        {
+          "step": "Coarse filters with Harness: SCREEN_DEPOSIT, best_nM pooling, default candidate role; measure one recovered opportunity or avoided false proposal, or state no effect",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "disease-models/wwox/research/drug_repurposing/generation_it45_20261111/p4_filters_it45.md: 7 S10 pointers recovered from the flood, 1 wrong-target proposal avoided, default role candidate 335 -> 138 (pending Harness unqualified_entity vocabulary)."
+        }
+      ]
+    },
+    "OBJ_P5": {
+      "order": 6,
+      "steps": [
+        {
+          "step": "Evaluate four conditions on the executed cases with equal inputs; separate measures; independent premises check",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "disease-models/wwox/research/drug_repurposing/generation_it45_20261111/eval_it45.md; reader corrections applied."
+        }
+      ]
+    },
+    "OBJ_P6": {
+      "order": 7,
+      "steps": [
+        {
+          "step": "Investigation ranking and dashboard: what / compound or class / why / missing premise / outcome that changes the decision / what LEGEND can do now / what needs a measurement; five languages, phone, site verified",
+          "status": "IN_PROGRESS",
+          "owner": "orchestrator",
+          "evidence": "Views regenerated 5239fbb0 (check/package current, audit 0 violations); V19, V10, INV-08/18 clauses, IT45-Q01..Q04; waits for battery and Harness he45b."
+        }
+      ]
+    },
+    "OBJ_P7": {
+      "order": 8,
+      "steps": [
+        {
+          "step": "Consume SCI45 and HE45 deliveries when verified, naming the snapshot; Claude Science material kept distinct",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_P8": {
+      "order": 9,
+      "steps": [
+        {
+          "step": "DREAM after material results",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_P9": {
+      "order": 10,
+      "steps": [
+        {
+          "step": "Autonomous queue: second case, a different relation pointer, an over-severe exclusion, a revival trigger, a duplication, a priority card, next-batch brief",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
+    },
+    "OBJ_P10": {
+      "order": 11,
+      "steps": [
+        {
+          "step": "Closure: batteries by SHA in unique clones, landing, push, CI, site; no executable item left open; ordinary cleanup of own clean integrated worktrees",
+          "status": "TODO",
+          "owner": "orchestrator",
+          "evidence": ""
+        }
+      ]
     }
-   ]
-  },
-  "OBJ_P1": {
-   "order": 2,
-   "steps": [
-    {
-     "step": "Real comparisons through the old ATP/scaffold code: keep the before, consume HE45 assay_conditions, regenerate decisions, report changed roles/premises/questions/priorities; insufficiency is neither equivalence nor refutation",
-     "status": "TODO",
-     "owner": "orchestrator",
-     "evidence": "Waits for HE45 landing; before/after rows at he45_20261111/comparison_before_after.tsv (87 rows)."
-    }
-   ]
-  },
-  "OBJ_P2": {
-   "order": 3,
-   "steps": [
-    {
-     "step": "Carry an activity pointer to a pharmacological hypothesis: select a small set before deep reading; one case complete from observation to reopened question; keep opposite-action, wrong-target and probe-only cases; not the SCI45 pH-K2P package",
-     "status": "TODO",
-     "owner": "orchestrator",
-     "evidence": ""
-    }
-   ]
-  },
-  "OBJ_P3": {
-   "order": 4,
-   "steps": [
-    {
-     "step": "New generative combination: relations, alternatives and discriminating results written before names; show known / unused / newly acquired / combination / proposal / falsifier; second case only if the first is complete",
-     "status": "TODO",
-     "owner": "orchestrator",
-     "evidence": ""
-    }
-   ]
-  },
-  "OBJ_P4": {
-   "order": 5,
-   "steps": [
-    {
-     "step": "Coarse filters with Harness: SCREEN_DEPOSIT, best_nM pooling, default candidate role; measure one recovered opportunity or avoided false proposal, or state no effect",
-     "status": "TODO",
-     "owner": "orchestrator",
-     "evidence": "Harness findings in hand: single-type flood on NFE2L2, best_nM pooling, per-target cache."
-    }
-   ]
-  },
-  "OBJ_P5": {
-   "order": 6,
-   "steps": [
-    {
-     "step": "Evaluate four conditions on the executed cases with equal inputs; separate measures; independent premises check",
-     "status": "TODO",
-     "owner": "orchestrator",
-     "evidence": ""
-    }
-   ]
-  },
-  "OBJ_P6": {
-   "order": 7,
-   "steps": [
-    {
-     "step": "Investigation ranking and dashboard: what / compound or class / why / missing premise / outcome that changes the decision / what LEGEND can do now / what needs a measurement; five languages, phone, site verified",
-     "status": "TODO",
-     "owner": "orchestrator",
-     "evidence": ""
-    }
-   ]
-  },
-  "OBJ_P7": {
-   "order": 8,
-   "steps": [
-    {
-     "step": "Consume SCI45 and HE45 deliveries when verified, naming the snapshot; Claude Science material kept distinct",
-     "status": "TODO",
-     "owner": "orchestrator",
-     "evidence": ""
-    }
-   ]
-  },
-  "OBJ_P8": {
-   "order": 9,
-   "steps": [
-    {
-     "step": "DREAM after material results",
-     "status": "TODO",
-     "owner": "orchestrator",
-     "evidence": ""
-    }
-   ]
-  },
-  "OBJ_P9": {
-   "order": 10,
-   "steps": [
-    {
-     "step": "Autonomous queue: second case, a different relation pointer, an over-severe exclusion, a revival trigger, a duplication, a priority card, next-batch brief",
-     "status": "TODO",
-     "owner": "orchestrator",
-     "evidence": ""
-    }
-   ]
-  },
-  "OBJ_P10": {
-   "order": 11,
-   "steps": [
-    {
-     "step": "Closure: batteries by SHA in unique clones, landing, push, CI, site; no executable item left open; ordinary cleanup of own clean integrated worktrees",
-     "status": "TODO",
-     "owner": "orchestrator",
-     "evidence": ""
-    }
-   ]
   }
- }
 }
