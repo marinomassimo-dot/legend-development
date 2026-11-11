@@ -12,11 +12,11 @@
  "branch": "task/he46",
  "CURRENT_STATE": "IN_PROGRESS",
  "CHECKPOINT": {
-  "last_verified_result": "HE45 COMPLETE, landed f76439c2; main at 142f6c5f (IT45 COMPLETE)",
-  "first_incomplete_work": "H0",
-  "active_processes": "none",
+  "last_verified_result": "targeted suites for H1-H8; battery on 33428d06 running (log /tmp/he46_bat2.log)",
+  "first_incomplete_work": "H7 cost, H9 DREAM, H10 battery/landing",
+  "active_processes": "battery clone /tmp/he46_batb_220916 pid 2926912; class timing /tmp/he46_classtime.log",
   "real_dependencies": "IT46 (ORCH-ROADMAP-IT46-20261111) consumes conditions and engine; SCI46 pharmacology",
-  "next_executable_step": "H0 reconcile; then H1"
+  "next_executable_step": "H7 measure test_repurposing_view per class; then H9; battery verdict; land"
  },
  "AUTHORISED_QUEUE_20261111": {
   "MANDATE_STATE": "OPEN",
@@ -26,9 +26,9 @@
    "steps": [
     {
      "step": "Verify real use of HE45 components (reader calls, insufficiency consumption, aggregation, cache, unqualified roles, loader, consumers)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "HE45 COMPLETE/landed f76439c2, IT45 COMPLETE 142f6c5f (CI #655 success); reader called by comparison_engine only (4 research scripts + engine); insufficiency consumed by IT45 p1/p4 tables; 4 unqualified_entity consumers; he46 README 1-2"
     }
    ]
   },
@@ -38,9 +38,9 @@
    "steps": [
     {
      "step": "pH and temperature in the conditions reader, from propositions present in packages; before/after on real packages",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "432181c0 assay_conditions pH/temperature, 37 tests; before/after 898 pairs (8 changed), 0 of 67 compound rows changed; he46_20261111/README.md 1"
     }
    ]
   },
@@ -50,9 +50,9 @@
    "steps": [
     {
      "step": "Propagate the TREK-1 Imin correction from source to consumers (SCI45 package) with a targeted reference/input fix",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "bd4befd1 TREK-1 Imin chain traced; INV-18 and view already carried it; two SCI44 documents given dated updates; test_trek1_correction_reach.py"
     }
    ]
   },
@@ -62,9 +62,9 @@
    "steps": [
     {
      "step": "One concrete unused-information path with IT46: minimal link, second-input proof, trace and removal point",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "cfbbe060 hypotheses_only role; INV-18 3->3+13, INV-08 0->6; second input proof in test; trace and removal in README 3"
     }
    ]
   },
@@ -74,9 +74,9 @@
    "steps": [
     {
      "step": "References and compositions: missing/circular/duplicate local ids, override, partial overlap, contrast sentences",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "432181c0 tests: missing/circular reference, local override, contrast clause, partial composition, series; ids package-qualified in cfbbe060"
     }
    ]
   },
@@ -86,9 +86,9 @@
    "steps": [
     {
      "step": "Reading debts: mechanical support to Orchestrator on receipts, parents, staged/recorded, declared coverage",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "7322af82 3 S10 readings: debt kept, 58 source files preserved by digest, reading_debt_check.py; Orchestrator removed his staged legacy receipts"
     }
    ]
   },
@@ -98,9 +98,9 @@
    "steps": [
     {
      "step": "Engine evaluation without circular truth: input/rules/result/reference/independent judgement separated; support IT46",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "58739e0b/1acf6414 role_reference_check.py: 5 of 175 disagree, 197 no reference; frame for IT46"
     }
    ]
   },
@@ -110,7 +110,7 @@
    "steps": [
     {
      "step": "Cost: one real circumscribed activity, dominant factor measured, proportionate fix",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan",
      "evidence": ""
     }
@@ -122,9 +122,9 @@
    "steps": [
     {
      "step": "Continuity: COMPLETE records with pending CI/site verification; canonical state use",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "c07165c3 cross_session_transport 12 paragraph, ci_runs.py, four pending clauses verified as history (CI runs success)"
     }
    ]
   },
