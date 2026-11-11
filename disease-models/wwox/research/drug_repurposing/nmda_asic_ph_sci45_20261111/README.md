@@ -1,0 +1,31 @@
+# SCI45 follow-up N1 — proton sensitivity of NMDA receptors and ASIC1a, and the net-sign table (2026-11-11)
+
+Non-canonical research material. Not medical advice; no dose, schedule, route or clinical preference; no claim on WWOX; nothing promoted. Labels DATO / INFERENZA / IPOTESI. Task record `ledger/tasks/orchestrator/ORCH-SCI45B-20261111.json`. One producer (sonnet/medium, 78 turns) and one blind verifier V7 (sonnet/high, 74 turns), sequential; the substantive verifier findings were applied as annotations (`output/apply_v7_corrections.py`) and the GluN2B value was rechecked by the Orchestrator in the text of Regan 2019. Paths relative to this folder.
+
+## Answer first
+
+1. **The prior was wrong in the direction that matters.** For recombinant diheteromers GluN2B is *at least as* proton-sensitive as GluN2A, not less (Hansen 2021 Table 5: 2A pH 6.74-7.20, 2B 7.3-7.5; same-lab pairs Tian 2021 2B 7.60 vs 2A 7.00 and Yi 2018 7.54 vs 6.80; Regan 2019 Table 4: GluN1-4a/GluN2B pH IC50 7.50 +/- 0.02, n 6). Fraction of current remaining (verified ranges; Hill 1 assumed at some ends): at pH 7.4 / 7.2 / 7.0 GluN2A 0.61-0.85 / 0.47-0.74 / 0.31-0.65; GluN2B 0.35-0.56 / 0.22-0.44 / 0.13-0.33. A fall from 7.4 to 7.2 removes 9-26 percent of GluN2A and **21-36 percent of GluN2B** current, and GluN2B is already 44-65 percent inhibited at 7.4. All oocyte data, Mg2+-free, 22-24 C. No proton midpoint, slope or residual for a triheteromer in any source read.
+2. **ASIC1a is silent for 7.4 to 7.2.** Activation half-point 6.51 (recombinant, slope 4.14), about 2-3 percent of maximum at pH 7.0; native cortical neurons show no significant current at 7.1. Steady-state desensitisation after 60 s: about 0.84 of channels available at 7.2 and 0.46 at 7.1; at equilibrium about 0.21 at 7.2 (the authors' own correction). So a mild acid fall opens none and desensitises some.
+3. **Native NMDA proton sensitivity** exists in acutely isolated P13-P19 rat prefrontal pyramidal neurons (22-24 C, Mg-free, reference pH 7.6): pH50 6.97, 22-26 percent removed for 7.6 to 7.1, with a slow development (peak unchanged at 7.1, steady state -28 percent). No subunit separation, no 30-37 C figure, no layer II/III figure.
+4. **Net sign: not defined; directions only** (`net_sign.tsv`, preregistered rule). For a 0.2 unit fall from 7.4: K2P closure removes 0.06-0.21 of each K2P pool's current (TREK-1 pool 0.53, TASK-1/3 pool 0.26: 0.01-0.11 of the resting conductance, depolarising); NMDAR inhibition removes 0.13-0.37 of NMDAR current (inhibitory); ASIC none. The targets sit on different axes (resting conductance versus Mg-free recombinant current), so no sum is written. **The fractional change of the NMDAR current (0.13-0.37) is of the same size as or larger than the K2P closure (0.06-0.21; the ranges overlap and the largest K2P figure is an upper bound with Imin 0)**, and the burst phenotype depends on NMDAR drive (d-APV abolishes spontaneous bursts in the Wwox paper): so for the network readout a mild interstitial acidification is, on the sources read, more likely inhibitory than excitatory (IPOTESI; Mg2+ at 1.3 mM and 35 C would change the NMDAR number, and no source measures this).
+5. **Consequence for the experiment:** the pHo-step arm must read burst incidence and the NMDAR component, with a vehicle and d-APV at each pH (as the SCI42 A4 design already requires); a pH difference between genotypes could be a protective state against bursts, so "restoring" pH or K2P could unmask NMDAR gain (wrong-sign risk).
+
+## Priors (re-scored by the verifier)
+
+N1 partly (exon 5 lowers sensitivity; the 2A midpoint is 7.21 in one study and 6.74-7.00 elsewhere; "2B less sensitive" contradicted); N2 partly (2A loses 17-25 percent, inside 15-35; 2B loses more; native about 8 percent by interpolation); N3 held with a time qualifier; N4 held within the perimeter (242, 2156, 51 and 42 hits; about 2131 of the 2156-hit string unscreened); N5 held in detail differently (acutely isolated somata, room temperature).
+
+## Verification
+
+Producer: 7 sources at partial full text (efetch PMC XML), 8 abstract-only, 12 publisher-restricted stubs unreachable (not retried by another route; the 1990-1995 founding primaries not read, values via reviews and Kostakis 2011). Verifier: 73 rows checked, 63 correct, 10 defective; all 19 full-text quotes verbatim; 7 of 7 producer fingerprints reproduce. Corrections (`output/apply_v7_corrections.py`): column mapping of Hansen Table 5 (PS03, PS07), arithmetic (PS04), agonist (PS12, EV08), an unnormalised Hill comparison (PS13), the misread ASIC offset (PS17, D11), an overclaimed temperature statement (D15), and two primary GluN2B/GluN2A rows added (V7-1..3). **Error of the Orchestrator's brief:** it named Cheriyan 2016 for the P13-P19 prefrontal neurons; the source is Evlanenkov 2023. Receipts: 7 producer (`-84`) and 8 verifier (`-83`) staged in `research/receipt_staging/sci45n` and `sci45nv`, valid under `staged_receipt_check.py --check-doi`, none recorded; `figures` is `captions_only` throughout because the receipt vocabulary has no partial value. Route note: the producer fetched PMC XML through NCBI efetch (a documented API; no source it used had failed on another route).
+
+## What no further literature can resolve
+
+The proton response of GluN2B-containing and triheteromeric receptors at 35 C and 1.3 mM Mg2+ in layer II/III neurons; the NMDAR share of the burst; whether pH differs between genotypes; the sign for the neuron as a whole. These need the measurement sheet (`../ph_k2p_sci45_20261111/MEASUREMENT_PROTOCOL_SHEET.md`).
+
+## Novelty (three levels)
+
+Known relations, unused by the module: proton inhibition of NMDAR and GluN2B > GluN2A recombinant sensitivity; ASIC1a thresholds. New combination for LEGEND: K2P, NMDAR and ASIC fractional changes for the same pHo step against the Wwox pair and the NMDAR-dependent burst (`net_sign.tsv`). Acquired now: verified pK ranges, the GluN2B direction against the prior. Novelty against the literature: not asserted (perimeter: `output/queries.tsv`, `verify/queries_verifier.tsv`).
+
+## Files
+
+`PREREGISTRATION.md`, `BRIEF_N1.md`, `VERIFIER_BRIEF_V7.md`; `output/` (tables with annotated corrections, `apply_v7_corrections.py`, receipts); `verify/`; `net_sign.py`, `net_sign.tsv`; `consumer_delta.md`; `COST_NOTE.md`.

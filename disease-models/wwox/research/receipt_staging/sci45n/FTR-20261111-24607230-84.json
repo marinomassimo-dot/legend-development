@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-11T11:20Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "tables": "read",
+  "limitations": "not_present",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-11T11:21:29Z",
+ "event_id": "FTR-20261111-24607230-84",
+ "evidence_basis": [
+  "Hansen 2014 reread for one new question (does the paper hold a proton curve for triheteromers): the PMC XML text was searched for pH and proton and the Zn2+-at-pH paragraphs read; Table 1 not re-extracted; Experimental Procedures stub only in the PMC text; no figure opened. Prior coverage FTR-20261109-24607230-71 and FTR-20261111-24607230-99.",
+  "verbatim_locator | proposition: Zn2+ maximal inhibition at pH 6.8 lower for triheteromer than for GluN1/2A | Results Zn2+ | \"maximal inhibition of 93 ± 2% and 65 ± 1%, respectively\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/output/proton_sensitivity.tsv",
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/output/native_evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/output/evidence.tsv"
+ ],
+ "prior_receipt": "FTR-20261111-24607230-99",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "53c1465c1a4a18751f5cfc606ed55ba0efa67f93ba76094ef4003aad1185df39",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC full-text XML via NCBI efetch (plain curl, default user agent) on 2026-11-11; bytes in scratch only; not stored in the repository",
+ "study_id": {
+  "doi": "10.1016/j.neuron.2014.01.035",
+  "pmid": "24607230"
+ },
+ "workflow": "SCI45 follow-up package N1 (ORCH-SCI45B-20261111), producer og-z. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
