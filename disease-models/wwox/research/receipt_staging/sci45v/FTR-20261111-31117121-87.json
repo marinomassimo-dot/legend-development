@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-31117121-87",
  "evidence_basis": [
   "Yarishkin 2019: Methods (cell source, solutions, 22-23 C), Results on pHo, Vrest, shRNA and pHi read by keyword-located passages; figure images not viewed by the verifier.",
-  "verbatim_locator | proposition: temperature | Methods, patch clamp | \"All experiments were performed at room temperature (22–23°C).\""
+  "verbatim_locator | proposition: temperature | Methods, patch clamp | \"All experiments were performed at room temperature (22\u201323\u00b0C).\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-17541788-88",
  "evidence_basis": [
   "Yuill 2007: Methods (solutions, 20 C, fitting equation) and the pH Results paragraph and Fig 6 legend read; Fig 6 image not available (manuscript version); rest of selectivity results not read.",
-  "verbatim_locator | proposition: TASK-1 pKa 6.66/6.57 | Results, response to acidification | \"pKa of 6.66 ± 0.05 and 6.57 ± 0.06 (13) at membrane potentials of -40 and +40mV respectively\""
+  "verbatim_locator | proposition: TASK-1 pKa 6.66/6.57 | Results, response to acidification | \"pKa of 6.66 \u00b1 0.05 and 6.57 \u00b1 0.06 (13) at membrane potentials of -40 and +40mV respectively\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

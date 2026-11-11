@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-39535276-88",
  "evidence_basis": [
   "Farkas and Rose 2025: keyword-located passages on pHe and lactate in ischaemia and spreading depolarisation read; the rest of the review not read.",
-  "verbatim_locator | proposition: SD pHe amplitudes copied | Section on spreading depolarization | \"The pHe variation includes an initial brief acidic shift (∼0.1 pH units), a subsequent equally brief alkalotic deflection (∼0.13 pH units)\""
+  "verbatim_locator | proposition: SD pHe amplitudes copied | Section on spreading depolarization | \"The pHe variation includes an initial brief acidic shift (\u223c0.1 pH units), a subsequent equally brief alkalotic deflection (\u223c0.13 pH units)\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

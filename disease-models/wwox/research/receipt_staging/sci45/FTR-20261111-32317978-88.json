@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-32317978-88",
  "evidence_basis": [
   "Ma and Lewis 2020: Introduction, TEVC Methods, Results on spadin and TREK-2 read; figures and Supplementary Figure 1 not opened; Discussion not read.",
-  "verbatim_locator | proposition: spadin on mTREK-1 | Results, spadin on mTREK-1 | \"mTREK-1 basal channel activity was also insensitive to spadin, with channel currents at 0 mV measured as 1.4 ± 0.1 μA\""
+  "verbatim_locator | proposition: spadin on mTREK-1 | Results, spadin on mTREK-1 | \"mTREK-1 basal channel activity was also insensitive to spadin, with channel currents at 0 mV measured as 1.4 \u00b1 0.1 \u03bcA\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

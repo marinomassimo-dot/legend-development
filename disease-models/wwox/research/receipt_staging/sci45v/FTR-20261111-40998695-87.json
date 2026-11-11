@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-40998695-87",
  "evidence_basis": [
   "Labbaf 2025: Methods (ACSF pH 7.25, pipette), Results on S1 pyramidal firing and the Rin sentence after the Fig 10 legend, Fig 10 image viewed (panels G and H); thalamic sections skimmed by keyword only.",
-  "verbatim_locator | proposition: Rin of S1 pyramidal neurons in the knock-out | Results, increased excitability | \"Analysis of Rin further revealed higher values in both persistent firing neurons (121.4 ± 10.1 MΩ, n = 16 cells WT\""
+  "verbatim_locator | proposition: Rin of S1 pyramidal neurons in the knock-out | Results, increased excitability | \"Analysis of Rin further revealed higher values in both persistent firing neurons (121.4 \u00b1 10.1 M\u03a9, n = 16 cells WT\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

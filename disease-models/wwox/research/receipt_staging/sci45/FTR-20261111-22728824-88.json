@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-22728824-88",
  "evidence_basis": [
   "Bagriantsev 2012 EMBO J: Methods (oocyte solutions, 22.5 C), Results on PH1/C-type gate and tandems, Table 1 image and Fig 2 image viewed; Figs 1, 3-6 captions only; Supplement not opened; Discussion not read.",
-  "verbatim_locator | proposition: pH50 table: TREK-1 7.51, TASK-3 6.29, TASK-1 7.30 | Fig 2 legend | \"Data (mean±s.e., n⩾6, N⩾2) was taken at 0 mV, normalized to activity at pH 9.0, and fitted to the Hill equation.\""
+  "verbatim_locator | proposition: pH50 table: TREK-1 7.51, TASK-3 6.29, TASK-1 7.30 | Fig 2 legend | \"Data (mean\u00b1s.e., n\u2a7e6, N\u2a7e2) was taken at 0 mV, normalized to activity at pH 9.0, and fitted to the Hill equation.\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

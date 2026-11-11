@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-35495038-87",
  "evidence_basis": [
   "Yang 2022: Methods (slices, ACSF, pipette), Results TASK background and PK-THPP/ML365 paragraph, Fig 5 image viewed, Fig 6 legend only; SP/NK results and Discussion not read.",
-  "verbatim_locator | proposition: holding current values at the pH step | Results, TASK background current | \"The mean holding currents at pH 7.4 and 6.8 were 43.5 ± 67.3 and 1.1 ± 61.6 pA, respectively.\""
+  "verbatim_locator | proposition: holding current values at the pH step | Results, TASK background current | \"The mean holding currents at pH 7.4 and 6.8 were 43.5 \u00b1 67.3 and 1.1 \u00b1 61.6 pA, respectively.\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

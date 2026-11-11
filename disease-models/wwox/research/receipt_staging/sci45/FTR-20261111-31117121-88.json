@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-31117121-88",
  "evidence_basis": [
   "Yarishkin 2019: Methods electrophysiology, Results pHo and pHi sections, Discussion paragraphs read; Fig 1 image viewed; Figs 2-7 captions only; supplementary PDFs not opened.",
-  "verbatim_locator | proposition: TREK-1 pHo 872.2 to 585.2 pA | Results, pHo modulates TM pressure sensing | \"Acidification decreased the current amplitude from 872.2 ± 140.6 (control) to 585.2 ± 99.0 pA, whereas alkalinization increased it to 1361.8 ± 181.2 pA\""
+  "verbatim_locator | proposition: TREK-1 pHo 872.2 to 585.2 pA | Results, pHo modulates TM pressure sensing | \"Acidification decreased the current amplitude from 872.2 \u00b1 140.6 (control) to 585.2 \u00b1 99.0 pA, whereas alkalinization increased it to 1361.8 \u00b1 181.2 pA\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

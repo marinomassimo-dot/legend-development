@@ -44,6 +44,19 @@ class Unrecorded(unittest.TestCase):
             ids = [item[0] for item in m.unrecorded(root, NOW)]
             self.assertEqual(["FTR-1-A", "FTR-1-C"], ids)
 
+    def test_a_verifier_numbered_below_its_producer_is_recorded_after_it(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / m.LEDGER).parent.mkdir(parents=True)
+            (root / m.LEDGER).write_text("", encoding="utf-8")
+            stage = root / m.STAGING / "scientist-x"
+            stage.mkdir(parents=True)
+            (stage / "FTR-1-A-87.json").write_text(json.dumps({"event_id": "FTR-1-A-87", "prior_receipt": "FTR-1-A-88"}), encoding="utf-8")
+            (stage / "FTR-1-A-88.json").write_text(json.dumps({"event_id": "FTR-1-A-88"}), encoding="utf-8")
+            (stage / "FTR-1-B-86.json").write_text(json.dumps({"event_id": "FTR-1-B-86"}), encoding="utf-8")
+            ids = [item[0] for item in m.unrecorded(root, NOW)]
+            self.assertEqual(["FTR-1-A-88", "FTR-1-A-87", "FTR-1-B-86"], ids)
+
 
 class Collisions(unittest.TestCase):
     def _root(self, tmp, ledger_rows, staged):

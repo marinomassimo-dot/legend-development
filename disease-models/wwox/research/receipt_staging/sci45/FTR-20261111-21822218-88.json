@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-21822218-88",
  "evidence_basis": [
   "Piechotta 2011: pH-gating Results paragraphs, extracellular-pH gate paragraph, Methods electrophysiology lines and Discussion pH lines read; figures not opened; QA-blocker results not read.",
-  "verbatim_locator | proposition: TREK-1 pHi EC50 5.9 Hill 2.3 | Results, bundle-crossing gate | \"TREK-1 channels are completely closed at pH 8 and maximally activated at a pH of 5 with EC50 of 5.9±0.1\""
+  "verbatim_locator | proposition: TREK-1 pHi EC50 5.9 Hill 2.3 | Results, bundle-crossing gate | \"TREK-1 channels are completely closed at pH 8 and maximally activated at a pH of 5 with EC50 of 5.9\u00b10.1\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

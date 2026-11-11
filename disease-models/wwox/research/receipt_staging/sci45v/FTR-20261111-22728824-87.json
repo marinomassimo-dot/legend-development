@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-22728824-87",
  "evidence_basis": [
   "Bagriantsev 2012: Methods (solutions, 22.5 C, modified Hill equation with free Imin and H, murine K2P clones), Results grep passages, Table 1 image and Fig 2 image viewed and digitised by pixel calibration; Discussion, Figs 1 and 3-6 and supplements not read.",
-  "verbatim_locator | proposition: pH50 table and fit form | Methods, electrophysiology | \"Data were fitted with a modified Hill’s equation: I=Imin+(Imax−Imin)/(1+10ˆ((pHoIC50−pHo)*H))\""
+  "verbatim_locator | proposition: pH50 table and fit form | Methods, electrophysiology | \"Data were fitted with a modified Hill\u2019s equation: I=Imin+(Imax\u2212Imin)/(1+10\u02c6((pHoIC50\u2212pHo)*H))\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

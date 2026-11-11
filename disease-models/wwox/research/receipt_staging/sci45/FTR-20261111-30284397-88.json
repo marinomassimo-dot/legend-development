@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-30284397-88",
  "evidence_basis": [
   "O'Donohoe 2018: Methods (HEK, cell-attached, Tyrode 36-37 C), Results on HEK and type-1 cells, Discussion on A1899/PK-THPP/ML365 read; figures not opened.",
-  "verbatim_locator | proposition: PK-THPP and A1899 inhibition | Results, HEK cell-attached | \"PK-THPP inhibited TASK-3 channel activity by 85.1 ± 2.6% (n = 3; P < 0.001). A1899 inhibited TASK-1 channel activity by 63.4 ± 7.7%\""
+  "verbatim_locator | proposition: PK-THPP and A1899 inhibition | Results, HEK cell-attached | \"PK-THPP inhibited TASK-3 channel activity by 85.1 \u00b1 2.6% (n = 3; P < 0.001). A1899 inhibited TASK-1 channel activity by 63.4 \u00b1 7.7%\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

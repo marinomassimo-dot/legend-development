@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-32317978-87",
  "evidence_basis": [
   "Ma and Lewis 2020: Methods (oocyte TEVC, bath pH 7.6) and the spadin Results paragraphs; figures not viewed.",
-  "verbatim_locator | proposition: conditions | Methods, electrophysiology | \"Currents were recorded at room temperature (21 ± 1°C) with constant solution flow at 1–2 ml/min\""
+  "verbatim_locator | proposition: conditions | Methods, electrophysiology | \"Currents were recorded at room temperature (21 \u00b1 1\u00b0C) with constant solution flow at 1\u20132 ml/min\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

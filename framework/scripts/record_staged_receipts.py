@@ -108,7 +108,28 @@ def unrecorded(root: Path, now: datetime) -> list[tuple[str, Path, dict, list[st
             continue
         fixed, changed = normalise(receipt, now)
         found.append((eid, path, fixed, changed))
-    return sorted(found, key=lambda item: item[0])
+    return after_their_priors(sorted(found, key=lambda item: item[0]))
+
+
+def after_their_priors(items):
+    """A receipt whose prior_receipt is also unrecorded goes after that prior, whatever the id order
+    (a verifier numbered below its producer would otherwise cite an event that does not exist yet)."""
+    staged = {eid for eid, _, _, _ in items}
+    ordered, placed = [], set()
+    pending = list(items)
+    while pending:
+        for item in pending:
+            prior = str(item[2].get("prior_receipt") or "")
+            if prior in staged and prior not in placed and prior != item[0]:
+                continue
+            ordered.append(item)
+            placed.add(item[0])
+            pending.remove(item)
+            break
+        else:
+            ordered.extend(pending)  # a cycle: keep id order, let the trial report it
+            break
+    return ordered
 
 
 def record(root: Path, receipt_file: Path) -> tuple[bool, str]:
