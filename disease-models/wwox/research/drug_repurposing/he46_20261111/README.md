@@ -32,3 +32,24 @@ Non-canonical. Harness work: generic components and checks. Scientific meaning s
 Tests: `framework/scripts/test_assay_conditions.py` (37, 15 new, each from a wording found in the packages).
 
 Remove: revert the commit of `assay_conditions.py` and its test; no data file depends on it, `comparison_engine.py` calls `parse`/`compare` unchanged.
+
+## 2. A correction followed to its consumers: TREK-1 residual current (H2)
+
+Case: SCI45 `ph_k2p_sci45_20261111`, dated update after the Q1 verification. Bagriantsev 2011 (21765396) Table S1 gives mouse TREK-1 pK1/2 7.51 and **Imin 0.25** (residual current at acid); with it a pool of 0.53 loses 0.03-0.18 for a 0.1-0.3 unit fall of pHo, never the 0.28 of the Wwox pair (first run, Imin 0, had let slope 2 reach it).
+
+| Link | Where | Carries the corrected value or conclusion? |
+|---|---|---|
+| source | Bagriantsev 2011 Table S1 (read by the Q1 verifier V6; receipt `k2p_pointers_sci45_20261111/verify/receipts/FTR-20261111-21765396-85.json`) | origin |
+| parameter | `ph_k2p_sci45_20261111/size_check_imin.py`, `size_check_imin.tsv` | yes (24 rows with Imin 0.25 reproduce from the formula: `test_trek1_correction_reach.py`) |
+| analysis | `ph_k2p_sci45_20261111/README.md` answer 2, dated update; `output/premises.tsv` row 6 | yes; answer 4 carried a slope-1 bound as "at most 0.04": clarified by a dated line (0.03-0.08) |
+| hypothesis | `output/hypotheses.tsv` KP1 context | yes ("partial contributor only, size check with Imin 0.25") |
+| delta | `consumer_delta.md` rows 1 and 2 | yes |
+| investigation | INV-18 `next_test` "[IT45 from SCI45] ... partial contributor only (TREK-1 Imin 0.25)" | yes |
+| open questions | IT45-Q05 | yes (excluded below 0.1 unit, partial contributor above) |
+| dashboard | `view/index.html` and `content_source.json` (two hits of "Imin 0.25") | yes |
+| card / brief | no compound card and no next brief carries a TREK-1 pool statement (the K2P tools are not in the catalogue; `next_brief_sci45` is about NMDA and ASIC) | not applicable |
+| **older consumers** | `pdh_pdk_sci44_20261110/S7_coda.md` section 5 (the TASK-3 "new chain through pH"); `kchan_expression_sci44_20261111/README.md` ("points ladder step 2b toward TASK-3 and TREK-1 tools") | **no, until now.** SCI45's delta row 5 asked for a dated update of the coda; IT45 consumed rows 1, 5, 6 and 11 in INV-18 but the coda itself was not touched. Both now have a dated Update line (original text kept) pointing at the SCI45 package and at INV-18 |
+
+Outcome: the correction had reached INV-18, the open question and the dashboard; it had not reached two earlier SCI44 documents that still described the refuted TASK-3 route as current. Remedy proportional to the defect: two dated lines, one clarification, one test of three assertions. No versioning system, no new register. The experiments and preregistrations of SCI45 are not rewritten.
+
+Remove: delete `test_trek1_correction_reach.py`; the dated Update lines are history and stay.
