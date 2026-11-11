@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
-"""Size check of SIZE_CHECK_PREREGISTRATION.md. Writes size_check.tsv and size_check_required_share.tsv."""
+"""Size check of SIZE_CHECK_PREREGISTRATION.md. Writes size_check_<run>.tsv and size_check_predictions_<run>.tsv (run1 = preregistered grid; run2 = dated addendum after verification)."""
 import csv, sys, pathlib
 HERE = pathlib.Path(__file__).resolve().parent
 PH50 = {"TASK-1": [6.6, 7.3, 7.4], "TASK-3": [6.3, 6.5], "TREK-1": [7.5]}
-if len(sys.argv) > 1:  # optional override: channel=v1,v2;channel=v1
-    PH50 = {kv.split("=")[0]: [float(x) for x in kv.split("=")[1].split(",")] for kv in sys.argv[1].split(";")}
-PH0 = [7.2, 7.4]; D = [0.05, 0.1, 0.2, 0.3, 0.5]; N = [1, 2]; S = [0.05, 0.1, 0.23, 0.5]
+SUFFIX = "run1"; 
+if len(sys.argv) > 1 and sys.argv[1] == "run2":
+    # dated addendum 2026-11-11 after verification V5: verified pH50 set, TASK-3 6.9 as an abstract-level sensitivity case, Hill 0.7 for the poor TREK-1 fit
+    SUFFIX = "run2"
+    PH50 = {"TASK-1": [6.6, 7.3, 7.4], "TASK-3": [6.3, 6.47, 6.9], "TREK-1": [7.5]}
+PH0 = [7.2, 7.4]; D = [0.05, 0.1, 0.2, 0.3, 0.5]; N = [0.7, 1, 2] if SUFFIX == "run2" else [1, 2]; S = [0.05, 0.1, 0.23, 0.5]
 TARGET = 0.28
 
 def o(ph, ph50, n):
@@ -26,7 +29,7 @@ for ch, vals in PH50.items():
                     row.append(round(TARGET / f, 2) if f > 0 else "inf")
                     rows.append(row)
 hdr = ["channel", "pH50", "pH0", "hill_n", "delta_pH", "closure_f"] + [f"L_at_s{s}" for s in S] + ["required_share_s_star"]
-with open(HERE / "size_check.tsv", "w", newline="") as fh:
+with open(HERE / f"size_check_{SUFFIX}.tsv", "w", newline="") as fh:
     w = csv.writer(fh, delimiter="\t"); w.writerow(hdr); w.writerows(rows)
 # predictions
 def cells(ch, cond):
@@ -44,7 +47,7 @@ p["S4_f_gt_0.8_only_when_d0.5_n2"] = (any(r[5] > 0.8 for r in t5) and not any(r[
 p["any_cell_reaches_0.28_s<=0.5_d<=0.3"] = any(r[5] * 0.5 >= TARGET for r in rows if r[4] <= 0.3)
 p["max_f_d<=0.2"] = max(r[5] for r in rows if r[4] <= 0.2)
 p["max_f_d<=0.3"] = max(r[5] for r in rows if r[4] <= 0.3)
-with open(HERE / "size_check_predictions.tsv", "w", newline="") as fh:
+with open(HERE / f"size_check_predictions_{SUFFIX}.tsv", "w", newline="") as fh:
     w = csv.writer(fh, delimiter="\t"); w.writerow(["item", "value"])
     for k, v in p.items(): w.writerow([k, v])
 for k, v in p.items(): print(k, v)

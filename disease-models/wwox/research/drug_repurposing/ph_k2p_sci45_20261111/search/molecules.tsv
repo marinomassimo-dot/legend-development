@@ -1,0 +1,55 @@
+relation_id	molecule	names	sources	n_source_rows	directions	species	sites
+P1-R1	CAT:CHEMBL1200694	SEVOFLURANE	ChEMBL curated mechanism	3	up	Homo sapiens	single_protein_record
+P1-R1	CAT:CHEMBL1200733	DESFLURANE	ChEMBL curated mechanism	3	up	Homo sapiens	single_protein_record
+P1-R1	CAT:CHEMBL1256	ISOFLURANE	ChEMBL curated mechanism	3	up	Homo sapiens	single_protein_record
+P1-R1	CAT:CHEMBL1257	ENFLURANE	ChEMBL curated mechanism	3	up	Homo sapiens	single_protein_record
+P1-R1	CAT:CHEMBL1754	DOXAPRAM HYDROCHLORIDE	ChEMBL curated mechanism	2	down	Homo sapiens	single_protein_record
+P1-R1	CAT:CHEMBL931	HALOTHANE	ChEMBL curated mechanism	3	up	Homo sapiens	single_protein_record
+P1-R1	CAT:DGIDB:3e6764ccb88c	BL-1249	GtoPdb interaction	1	up	Human	
+P1-R1	CAT:DGIDB:586e6db3aff7	GI‐530159	GtoPdb interaction	2	up	Human	
+P1-R1	CAT:DGIDB:95aa9b8f0940	AVE1231	GtoPdb interaction	1	down	Human	
+P1-R1	CAT:DGIDB:b30f50adb672	ruthenium red	GtoPdb interaction	1	down	Human	
+P1-R1	GTOPDB:10069	A-769662	GtoPdb interaction	1	down	Human	
+P1-R1	GTOPDB:14093	LPS2336	GtoPdb interaction	1	up	Human	
+P1-R1	GTOPDB:14094	ONO-2920632	GtoPdb interaction	1	up	Human	
+P1-R1	GTOPDB:14095	ONO-TR-772	GtoPdb interaction	1	down	Rat	
+P1-R1	GTOPDB:14096	Cpd8l [PMID: 40040241]	GtoPdb interaction	1	down	Rat	
+P1-R1	GTOPDB:14097	KU124	GtoPdb interaction	1	down	Human	
+P1-R1	GTOPDB:14098	benzimidazole 991	GtoPdb interaction	1	down	Human	
+P1-R1	GTOPDB:208	norfluoxetine	GtoPdb interaction	1	down	Human	
+P1-R1	GTOPDB:2326	riluzole	GtoPdb interaction	1	up	Human	
+P1-R1	GTOPDB:2344	Ba<sup>2+</sup>	GtoPdb interaction	1	down	Human	
+P1-R1	GTOPDB:2364	anandamide	GtoPdb interaction	3	down	Human	
+P1-R1	GTOPDB:2391	arachidonic acid	GtoPdb interaction	2	down;up	Human	
+P1-R1	GTOPDB:2401	halothane	GtoPdb interaction	4	up	Human;Rat	
+P1-R1	GTOPDB:2503	chloroform	GtoPdb interaction	1	up	Human	
+P1-R1	GTOPDB:2504	angiotensin II	GtoPdb interaction	1	down	Rat	
+P1-R1	GTOPDB:2505	isoflurane	GtoPdb interaction	2	up	Human;Rat	
+P1-R1	GTOPDB:2506	<i>R</i>-(+)-methanandamide	GtoPdb interaction	2	down	Human	
+P1-R2	CAT:CHEMBL1200694	SEVOFLURANE	ChEMBL curated mechanism	3	up	Homo sapiens	single_protein_record
+P1-R2	CAT:CHEMBL1200733	DESFLURANE	ChEMBL curated mechanism	3	up	Homo sapiens	single_protein_record
+P1-R2	CAT:CHEMBL1256	ISOFLURANE	ChEMBL curated mechanism	3	up	Homo sapiens	single_protein_record
+P1-R2	CAT:CHEMBL1257	ENFLURANE	ChEMBL curated mechanism	3	up	Homo sapiens	single_protein_record
+P1-R2	CAT:CHEMBL1754	DOXAPRAM HYDROCHLORIDE	ChEMBL curated mechanism	2	down	Homo sapiens	single_protein_record
+P1-R2	CAT:CHEMBL931	HALOTHANE	ChEMBL curated mechanism	3	up	Homo sapiens	single_protein_record
+P1-R2	CAT:DGIDB:3e6764ccb88c	BL-1249	GtoPdb interaction	1	up	Human	
+P1-R2	CAT:DGIDB:586e6db3aff7	GI‐530159	GtoPdb interaction	2	up	Human	
+P1-R2	CAT:DGIDB:95aa9b8f0940	AVE1231	GtoPdb interaction	1	down	Human	
+P1-R2	CAT:DGIDB:b30f50adb672	ruthenium red	GtoPdb interaction	1	down	Human	
+P1-R2	GTOPDB:10069	A-769662	GtoPdb interaction	1	down	Human	
+P1-R2	GTOPDB:14093	LPS2336	GtoPdb interaction	1	up	Human	
+P1-R2	GTOPDB:14094	ONO-2920632	GtoPdb interaction	1	up	Human	
+P1-R2	GTOPDB:14095	ONO-TR-772	GtoPdb interaction	1	down	Rat	
+P1-R2	GTOPDB:14096	Cpd8l [PMID: 40040241]	GtoPdb interaction	1	down	Rat	
+P1-R2	GTOPDB:14097	KU124	GtoPdb interaction	1	down	Human	
+P1-R2	GTOPDB:14098	benzimidazole 991	GtoPdb interaction	1	down	Human	
+P1-R2	GTOPDB:208	norfluoxetine	GtoPdb interaction	1	down	Human	
+P1-R2	GTOPDB:2326	riluzole	GtoPdb interaction	1	up	Human	
+P1-R2	GTOPDB:2344	Ba<sup>2+</sup>	GtoPdb interaction	1	down	Human	
+P1-R2	GTOPDB:2364	anandamide	GtoPdb interaction	3	down	Human	
+P1-R2	GTOPDB:2391	arachidonic acid	GtoPdb interaction	2	down;up	Human	
+P1-R2	GTOPDB:2401	halothane	GtoPdb interaction	4	up	Human;Rat	
+P1-R2	GTOPDB:2503	chloroform	GtoPdb interaction	1	up	Human	
+P1-R2	GTOPDB:2504	angiotensin II	GtoPdb interaction	1	down	Rat	
+P1-R2	GTOPDB:2505	isoflurane	GtoPdb interaction	2	up	Human;Rat	
+P1-R2	GTOPDB:2506	<i>R</i>-(+)-methanandamide	GtoPdb interaction	2	down	Human	

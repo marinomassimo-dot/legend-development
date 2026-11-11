@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-11T06:54Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-11T06:57:19Z",
+ "event_id": "FTR-20261111-21822218-87",
+ "evidence_basis": [
+  "Piechotta 2011: keyword-located passages only (rat TREK-1 construct, room temperature giant patches, EC50 5.9 and Hill 2.3 passage); figures not viewed.",
+  "verbatim_locator | proposition: pHi activation of TREK-1 | Results, bundle-crossing gate | \"TREK-1 channels are completely closed at pH 8 and maximally activated at a pH of 5 with EC50 of 5.9±0.1\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/verify/recompute_ph.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/verify/queries_verifier.tsv"
+ ],
+ "prior_receipt": "FTR-20261111-21822218-88",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "d29a7f8bae1172dd992767fb9a66d1898da609b2193495a2402ebc782f27c3a1",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket (plain curl, https://pmc-oa-opendata.s3.amazonaws.com/PMC3181484.1/PMC3181484.1.txt) fetched 2026-11-11; bytes in the scratchpad only, not in the repository",
+ "study_id": {
+  "doi": "10.1038/emboj.2011.268",
+  "pmid": "21822218"
+ },
+ "workflow": "SCI45 package P1 blind verifier V5 (ORCH-SCI45-20261111), actor ks-w. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
