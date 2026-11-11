@@ -17,7 +17,7 @@
  "event_id": "FTR-20261110-37321992-94",
  "evidence_basis": [
   "Oh 2023 read from the PMC page: Methods (electrophysiology solutions, drugs), Results on intrinsic excitability, XE991 and retigabine, Discussion lines on input resistance. Images viewed: Fig 4 and Fig 7; Fig 6 downloaded but not viewed; Supplementary Fig 14 not opened. Proteomics and behaviour sections not read.",
-  "verbatim_locator | proposition: input resistance up in cKO | Figure 4 legend | \"Increased input resistance in Ank2-cKO SSC layer 2/3 neurons (P19–22).\"",
+  "verbatim_locator | proposition: input resistance up in cKO | Figure 4 legend | \"Increased input resistance in Ank2-cKO SSC layer 2/3 neurons (P19\u201322).\"",
   "verbatim_locator | proposition: retigabine did not alter Rin or RMP | Results | \"Retigabine, however, did not alter the resting membrane potential, input resistance, AP threshold, or AP shape-related parameters\""
  ],
  "evidence_depth": "partial_fulltext_read",

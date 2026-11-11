@@ -17,9 +17,9 @@
  "event_id": "FTR-20261110-16177047-94",
  "evidence_basis": [
   "Day 2005 read from the PMC page: Methods (slice, solutions, junction potential, drugs), Results sections on HCN, Kir2/Kleak, Ba2+ depolarisation, Discussion paragraphs on Ba2+ components; the simulation and single-cell PCR sections were read in part. Images viewed: Fig 4 and Fig 5; other figure images not viewed.",
-  "verbatim_locator | proposition: slope resistance at -80 mV after ZD-7288 | Results | \"the median resistance was 55 MΩ before HCN channel block and 244 MΩ after block (n = 8; p < 0.01\"",
-  "verbatim_locator | proposition: Ba2+ depolarises | Results | \"Ba2+ not only reduced currents evoked by hyperpolarizing current steps but also depolarized neurons (∼10–15 mV)\"",
-  "verbatim_locator | proposition: junction potential not corrected | Methods | \"Records were not corrected for the liquid junction potential, which was estimated to be 6–7 mV.\""
+  "verbatim_locator | proposition: slope resistance at -80 mV after ZD-7288 | Results | \"the median resistance was 55 M\u03a9 before HCN channel block and 244 M\u03a9 after block (n = 8; p < 0.01\"",
+  "verbatim_locator | proposition: Ba2+ depolarises | Results | \"Ba2+ not only reduced currents evoked by hyperpolarizing current steps but also depolarized neurons (\u223c10\u201315 mV)\"",
+  "verbatim_locator | proposition: junction potential not corrected | Methods | \"Records were not corrected for the liquid junction potential, which was estimated to be 6\u20137 mV.\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

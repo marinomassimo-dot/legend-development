@@ -335,9 +335,9 @@ S5	Methaqualone	CAT:DGIDB:1b246c981b29	dgidb_only	GABRB3	ChEMBL	positive modulat
 S5	Methaqualone	CAT:DGIDB:1b246c981b29	dgidb_only	GABRG2	ChEMBL	positive modulator	UNKNOWN	listing_only	yes	n/a_has_other_source
 S5	Methaqualone	CAT:DGIDB:1b246c981b29	dgidb_only	GABRA3	ChEMBL	positive modulator	UNKNOWN	listing_only	yes	n/a_has_other_source
 S5	Methaqualone	CAT:DGIDB:1b246c981b29	dgidb_only	GABRA5	ChEMBL	positive modulator	UNKNOWN	listing_only	yes	n/a_has_other_source
-S5	Zk-93423	CAT:DGIDB:1c50c91251c5	dgidb_only	GABRA1	TTD		UNKNOWN	listing_only	yes	n/a_has_other_source
-S5	Zk-93423	CAT:DGIDB:1c50c91251c5	dgidb_only	GABRG2	TTD		UNKNOWN	listing_only	yes	n/a_has_other_source
-S5	Zk-93423	CAT:DGIDB:1c50c91251c5	dgidb_only	GABRB2	TTD		UNKNOWN	listing_only	yes	n/a_has_other_source
+S5	Zk-93423	CAT:DGIDB:1c50c91251c5	dgidb_only	GABRA1	TTD		UNKNOWN	listing_only	no	n/a_has_other_source
+S5	Zk-93423	CAT:DGIDB:1c50c91251c5	dgidb_only	GABRG2	TTD		UNKNOWN	listing_only	no	n/a_has_other_source
+S5	Zk-93423	CAT:DGIDB:1c50c91251c5	dgidb_only	GABRB2	TTD		UNKNOWN	listing_only	no	n/a_has_other_source
 S5	Mephobarbital	CAT:DGIDB:1dd9e5add469	dgidb_only	GABRA1	TdgClinicalTrial		UNKNOWN	listing_only	no	n/a_has_other_source
 S5	Mephobarbital	CAT:DGIDB:1dd9e5add469	dgidb_only	GABRA1	TTD		UNKNOWN	listing_only	no	n/a_has_other_source
 S5	Mephobarbital	CAT:DGIDB:1dd9e5add469	dgidb_only	GABRA1	TEND		UNKNOWN	listing_only	no	n/a_has_other_source
@@ -1793,3 +1793,879 @@ S9	Devimistat	CAT:DGIDB:fac46216aa38	dgidb_only	PDK2	TdgClinicalTrial		UNKNOWN	l
 S9	Devimistat	CAT:DGIDB:fac46216aa38	dgidb_only	PDK1	TdgClinicalTrial		UNKNOWN	listing_only	no	n/a_has_other_source
 S9	Devimistat	CAT:DGIDB:fac46216aa38	dgidb_only	PDK3	TdgClinicalTrial		UNKNOWN	listing_only	no	n/a_has_other_source
 S9	Devimistat	CAT:DGIDB:fac46216aa38	dgidb_only	PDK4	TdgClinicalTrial		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	MERCAPTOPURINE	CAT:CHEMBL1200751	chembl_selected	NFE2L2	DTC		UNKNOWN	listing_only	no	yes
+S10	METHYLPREDNISOLONE ACETATE	CAT:CHEMBL1364144	chembl_selected	NFE2L2	DTC		UNKNOWN	listing_only	no	yes
+S10	PARAROSANILINE	CAT:CHEMBL1368322	chembl_selected	NFE2L2	DTC		UNKNOWN	listing_only	no	yes
+S10	DICHLORISONE ACETATE	CAT:CHEMBL1385514	chembl_selected	NFE2L2	DTC		UNKNOWN	listing_only	no	yes
+S10	INDIUM CHLORIDE	CAT:CHEMBL1447815	chembl_selected	NFE2L2	DTC		UNKNOWN	listing_only	no	yes
+S10	STIROFOS	CAT:CHEMBL1452359	chembl_selected	NFE2L2	DTC		UNKNOWN	listing_only	no	yes
+S10	METHYL ALCOHOL	CAT:CHEMBL14688	chembl_selected	NFE2L2	DTC		UNKNOWN	listing_only	no	yes
+S10	THIAMINE	CAT:CHEMBL1588	chembl_selected	NFE2L2	DTC		UNKNOWN	listing_only	no	yes
+S10	CARBENOXOLONE SODIUM	CAT:CHEMBL1697717	chembl_selected	NFE2L2	DTC		UNKNOWN	listing_only	no	yes
+S10	ALFUZOSIN HYDROCHLORIDE	CAT:CHEMBL1723	chembl_selected	NFE2L2	DTC		UNKNOWN	listing_only	no	yes
+S10	AZAMETHIPHOS	CAT:CHEMBL1867031	chembl_selected	NFE2L2	DTC		UNKNOWN	listing_only	no	yes
+S10	FOSPIRATE	CAT:CHEMBL1873189	chembl_selected	NFE2L2	DTC		UNKNOWN	listing_only	no	yes
+S10	DIELDRIN	CAT:CHEMBL1873703	chembl_selected	NFE2L2	DTC		UNKNOWN	listing_only	no	yes
+S10	METHOPRENE	CAT:CHEMBL1875086	chembl_selected	NFE2L2	DTC		UNKNOWN	listing_only	no	yes
+S10	OUABAIN OCTAHYDRATE	CAT:CHEMBL1889436	chembl_selected	NFE2L2	DTC		UNKNOWN	listing_only	no	yes
+S10	OCTABENZONE	CAT:CHEMBL1977129	chembl_selected	NFE2L2	DTC		UNKNOWN	listing_only	no	yes
+S10	PICONOL	CAT:CHEMBL2103981	chembl_selected	NFE2L2	DTC		UNKNOWN	listing_only	no	yes
+S10	LIPOIC ACID, ALPHA	CAT:CHEMBL33864	chembl_selected	NFE2L2	DTC		UNKNOWN	listing_only	no	yes
+S10	EUFLAVINE	CAT:CHEMBL354349	chembl_selected	NFE2L2	DTC		UNKNOWN	listing_only	no	yes
+S10	PENTAMIDINE ISETHIONATE	CAT:CHEMBL361506	chembl_selected	NFE2L2	DTC		UNKNOWN	listing_only	no	yes
+S10	DIBENZOYLMETHANE	CAT:CHEMBL371523	chembl_selected	NFE2L2	DTC		UNKNOWN	listing_only	no	yes
+S10	METHYLENE BLUE ANHYDROUS	CAT:CHEMBL405110	chembl_selected	NFE2L2	DTC		UNKNOWN	listing_only	no	yes
+S10	CHLOROPHENOTHANE	CAT:CHEMBL416898	chembl_selected	NFE2L2	DTC		UNKNOWN	listing_only	no	yes
+S10	EMETINE HYDROCHLORIDE	CAT:CHEMBL493439	chembl_selected	NFE2L2	DTC		UNKNOWN	listing_only	no	yes
+S10	ORTHOTOLIDINE	CAT:CHEMBL85109	chembl_selected	NFE2L2	DTC		UNKNOWN	listing_only	no	yes
+S10	Chembl:Chembl576208	CAT:DGIDB:007e0a21bd32	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Flavone	CAT:DGIDB:00a6ae197cc1	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl604528	CAT:DGIDB:00aeb0702ef1	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl586982	CAT:DGIDB:00b969899976	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dibucaine Hydrochloride	CAT:DGIDB:014ef0cf74dc	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Phenylalanine	CAT:DGIDB:0159dfc8f441	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Pendimethalin	CAT:DGIDB:02a030393ea6	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Papaverine Hydrochloride	CAT:DGIDB:038330a47e0c	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Cytoprotective Agent	CAT:DGIDB:03aea7e11dee	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Daidzein	CAT:DGIDB:0413f496225a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dichlorodimethylstannane	CAT:DGIDB:049a3ea070a1	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	E319	CAT:DGIDB:05ff331b290b	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Epoetin Alfa	CAT:DGIDB:0618d47f3890	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tolfenamic Acid	CAT:DGIDB:06b90c3e972f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl261692	CAT:DGIDB:070f110ee283	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Azacitidine	CAT:DGIDB:073beac86e8f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Carboquone	CAT:DGIDB:07512d07959d	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dichlorophen	CAT:DGIDB:076d356d4c03	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Phenylmercuric Acetate	CAT:DGIDB:0770accda403	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tetradecanoylphorbol Acetate	CAT:DGIDB:0788c7732488	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Azinphos-Ethyl	CAT:DGIDB:0797c833d069	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	2-Mercaptobenzothiazole	CAT:DGIDB:083964b532af	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Benoxacor	CAT:DGIDB:084779de9925	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Aromaticin	CAT:DGIDB:084a435408b4	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl600306	CAT:DGIDB:086d7d05a838	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Guggulsterone	CAT:DGIDB:08a7e229f44e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Guggulsterone	CAT:DGIDB:08a7e229f44e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Diflunisal	CAT:DGIDB:08b539bf9ff8	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl585240	CAT:DGIDB:08ddd119f7c2	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Fipronil	CAT:DGIDB:0928e3616307	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Phenformin Hydrochloride	CAT:DGIDB:09c799dba53a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Sb 242084	CAT:DGIDB:09cdf5e60f03	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Digitoxigenin	CAT:DGIDB:0a212f07e1a7	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Prednisolone Acetate	CAT:DGIDB:0a31a3ff2d4c	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Rabeprazole	CAT:DGIDB:0a77d333b9fe	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Lopinavir	CAT:DGIDB:0ab22dd7ae20	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Cholesterol	CAT:DGIDB:0addb0a44032	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Bardoxolone Methyl	CAT:DGIDB:0b47633248cd	dgidb_only	NFE2L2	ChEMBL	inhibitor	UNKNOWN	listing_only	yes	n/a_has_other_source
+S10	Bardoxolone Methyl	CAT:DGIDB:0b47633248cd	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	yes	n/a_has_other_source
+S10	Bardoxolone Methyl	CAT:DGIDB:0b47633248cd	dgidb_only	KEAP1	ChEMBL	inhibitor	UNKNOWN	listing_only	yes	n/a_has_other_source
+S10	Dehydroepiandrosterone Acetate	CAT:DGIDB:0b865a9e4b0e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Sorafenib	CAT:DGIDB:0bc1cf72f3bb	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Enniatin B	CAT:DGIDB:0bfa783332a4	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Triflumizole	CAT:DGIDB:0c201a267fa9	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl578636	CAT:DGIDB:0c2907568ecc	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Camrelizumab	CAT:DGIDB:0c9f23d43af0	dgidb_only	KEAP1	JAX-CKB		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	8-Cyclopentyltheophylline	CAT:DGIDB:0cb62ef37c5d	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dextran Sulfate Sodium	CAT:DGIDB:0cc48bd891e3	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Rimexolone	CAT:DGIDB:0cde89492d21	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Isopropyl Palmitate	CAT:DGIDB:0d4bcacae3de	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Questiomycin B	CAT:DGIDB:0dd3cc338c81	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Nepaprazole	CAT:DGIDB:0dfd7f921eb2	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Aloe-Emodin	CAT:DGIDB:0e16ca17ba0e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl589711	CAT:DGIDB:0e19a62fe5ba	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl581574	CAT:DGIDB:0e20aa81971d	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl275260	CAT:DGIDB:0e421adbb9d1	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Kaempherol	CAT:DGIDB:0f747e61ac7b	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	(2S)-1-(1H-Indol-3-Yl)-3-{[5-(3-Methyl-1H-Indazol-5-Yl)Pyridin-3-Yl]Oxy}Propan-2-Amine	CAT:DGIDB:0f9e15880dbb	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl225563	CAT:DGIDB:0fcd8b1f186d	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl148831	CAT:DGIDB:0fd007210059	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl118417	CAT:DGIDB:100b0806d8a3	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Sapanisertib	CAT:DGIDB:10541308fcdc	dgidb_only	KEAP1	JAX-CKB		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Sapanisertib	CAT:DGIDB:10541308fcdc	dgidb_only	NFE2L2	CIViC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl590184	CAT:DGIDB:1059ecdef3b7	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl220845	CAT:DGIDB:10826f851ed0	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl600692	CAT:DGIDB:11bb69a1f92a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl529986	CAT:DGIDB:11c3553cf884	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dibenz[A,H]Anthracene	CAT:DGIDB:1213fe0e3d18	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Resactin A	CAT:DGIDB:12cc46146d2d	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl73380	CAT:DGIDB:12e2fa1eed5e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Sirolimus	CAT:DGIDB:13284e35045a	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl530682	CAT:DGIDB:132af25155b0	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl530291	CAT:DGIDB:1365b3169ac1	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl584458	CAT:DGIDB:13a0efd314f3	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl515617	CAT:DGIDB:145fdf6e61c8	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Colchicine	CAT:DGIDB:14863088806e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Benzethonium Chloride	CAT:DGIDB:152be02dde20	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Fenbuconazole	CAT:DGIDB:1564ad93a112	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Pamicogrel	CAT:DGIDB:15a3f6009b54	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tbbt	CAT:DGIDB:15fe7a74993c	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl600908	CAT:DGIDB:16161e7d48f0	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	E1501	CAT:DGIDB:16641810bf5a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Betanaphthol	CAT:DGIDB:170c138405e0	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Benzoquinone	CAT:DGIDB:1739cacb3ad0	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Hydroxyflutamide	CAT:DGIDB:183a26e0745c	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Atorvastatin Calcium Trihydrate	CAT:DGIDB:1847a77c8ff1	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Carfentrazone-Ethyl	CAT:DGIDB:188d98ed6464	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Phenothiazine	CAT:DGIDB:18a3f276d2db	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl443949	CAT:DGIDB:18a446310a86	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl587389	CAT:DGIDB:18c8f6bbca10	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl601550	CAT:DGIDB:19312e19024a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Phenazine-1-Carboxylic Acid	CAT:DGIDB:197f144b1e30	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Coumarin	CAT:DGIDB:19cad4eb7d58	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Mepanipyrim	CAT:DGIDB:1a02470f7659	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl602383	CAT:DGIDB:1a0581f70633	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Quinoxyfen	CAT:DGIDB:1a56f2ab5ae1	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Ketoconazole	CAT:DGIDB:1b0dc09636fc	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Sofalcone	CAT:DGIDB:1b137b617cc3	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Nanaomycin	CAT:DGIDB:1b249db654cb	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Benzo[E]Pyrene	CAT:DGIDB:1b47d8b2a289	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl609570	CAT:DGIDB:1b64b2bdeedb	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	6-Chloroflavone	CAT:DGIDB:1b805bc4f86b	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Anisocoumarin H	CAT:DGIDB:1b99797e3c37	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Calcipotriene	CAT:DGIDB:1c4444d46e12	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Drometrizole	CAT:DGIDB:1cc4e2c66ea4	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Nitrofen	CAT:DGIDB:1d2c3c448ed9	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Methabenzthiazuron	CAT:DGIDB:1d8afcb48f09	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Endrin	CAT:DGIDB:1dddc3eea81d	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dicyclohexylcarbodiimide	CAT:DGIDB:1deb40933728	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Propiconazole	CAT:DGIDB:1e12b88c95b0	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl1453126	CAT:DGIDB:1e6566e2bf20	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Bromaminic Acid	CAT:DGIDB:1e6d5deaadf6	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dienestrol	CAT:DGIDB:1ec94dc07392	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl601547	CAT:DGIDB:1ee996b88e92	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Ergocalciferol	CAT:DGIDB:1f6977ce50ed	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tretazicar	CAT:DGIDB:1f9c10810fc3	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Protein Phosphatase Inhibitor	CAT:DGIDB:1fa8944a1dd0	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl582055	CAT:DGIDB:1fdf6cdc5c4d	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl172988	CAT:DGIDB:20a96aaba199	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl600734	CAT:DGIDB:20bbe60b3f39	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Brefeldin A	CAT:DGIDB:211b581f7f46	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dibromoacetic Acid	CAT:DGIDB:2174ed119114	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl581880	CAT:DGIDB:2299dbd631d4	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Phenazine	CAT:DGIDB:23226739acc6	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Fipexide Hydrochloride	CAT:DGIDB:249427c529d7	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Oxymetholone	CAT:DGIDB:24f41c19eaf2	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	1,10-Phenanthroline	CAT:DGIDB:2514beb7a96a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	13-Cis-Retinal	CAT:DGIDB:259dd51bbb85	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Docebenone	CAT:DGIDB:25b5374f02ef	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl168075	CAT:DGIDB:25c6423d5754	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl529918	CAT:DGIDB:25dac7d4edf2	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tribromoacetic Acid	CAT:DGIDB:25ef71ee933b	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Ancitabine	CAT:DGIDB:26359a6be211	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Fludarabine	CAT:DGIDB:26b63791975e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Ly-294002	CAT:DGIDB:26b8e51c0081	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Metolachor	CAT:DGIDB:273ddb2213b7	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Estradiol Valerate	CAT:DGIDB:276e3560fbd5	dgidb_only	NFE2L2	PharmGKB		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Prochloraz	CAT:DGIDB:279f5c9d1939	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Diacetylrhein	CAT:DGIDB:27ea3236139d	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Piritrexim Isethionate	CAT:DGIDB:283b3422ad1e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl2094567	CAT:DGIDB:285167c8ca13	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	2-Chloro-5-Nitro-N-Phenylbenzamide	CAT:DGIDB:28bb4889c50d	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Docusate Sodium	CAT:DGIDB:28ee66bc0439	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Thioinosine	CAT:DGIDB:28fa03d9acf8	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	1-Naphthylisothiocyanate	CAT:DGIDB:291a09618047	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl128729	CAT:DGIDB:2969e8361989	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Nihydrazone	CAT:DGIDB:29b696559d7e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Digoxigenin	CAT:DGIDB:2a091808d41c	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Isoflupredone Acetate	CAT:DGIDB:2a37e9d98693	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Thiocyclam Hydrogen Oxalate	CAT:DGIDB:2a3d69b8a2fa	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl70582	CAT:DGIDB:2a529bd667ec	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tributylchlorostannane	CAT:DGIDB:2a89c97840e4	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Clorgyline Hydrochloride	CAT:DGIDB:2ab8293b0f57	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Ceritinib	CAT:DGIDB:2bf31432994d	dgidb_only	KEAP1	JAX-CKB		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Diflorasone Diacetate	CAT:DGIDB:2bfd17a5789f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Metoprine	CAT:DGIDB:2c05ac2d42b6	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Flumethasone Pivalate	CAT:DGIDB:2c661a452b1f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Anethole Trithione	CAT:DGIDB:2c87f76f1723	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl531710	CAT:DGIDB:2cb34120ec90	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dexbudesonide	CAT:DGIDB:2d506e3459aa	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Fenticlor	CAT:DGIDB:2d6a45b75116	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	{4-[3-(4-Acetyl-3-Hydroxy-2-Propylphenoxy)Propoxy]Phenoxy}Acetic Acid	CAT:DGIDB:2dd506576cb6	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl42355	CAT:DGIDB:2ddfd232aeab	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Cpuy192018	CAT:DGIDB:2e72a357680d	dgidb_only	KEAP1	GuideToPharmacology		UNKNOWN	listing_only	yes	n/a_has_other_source
+S10	Rotenone	CAT:DGIDB:2ec480e35281	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Metacresol	CAT:DGIDB:2edd7a7e8a72	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Hpte	CAT:DGIDB:2f5204af23a0	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Omaveloxolone	CAT:DGIDB:300a1f119a63	dgidb_only	NFE2L2	GuideToPharmacology	activator	UNKNOWN	listing_only	yes	n/a_has_other_source
+S10	Omaveloxolone	CAT:DGIDB:300a1f119a63	dgidb_only	NFE2L2	ChEMBL	activator	UNKNOWN	listing_only	yes	n/a_has_other_source
+S10	Triamcinolone	CAT:DGIDB:30277a03dc85	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Triamcinolone	CAT:DGIDB:30277a03dc85	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Ethynodiol Diacetate	CAT:DGIDB:3076a7e09188	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl578929	CAT:DGIDB:311825acc769	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Clioxanide	CAT:DGIDB:3154e5f81cea	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Vorinostat	CAT:DGIDB:316b73312895	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Mercuric Chloride	CAT:DGIDB:316d6691e120	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl19954	CAT:DGIDB:31e8a82629c8	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Fluoranthene	CAT:DGIDB:3238934a7455	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chrysophanol	CAT:DGIDB:32afb32f2c88	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tetrazolium Red	CAT:DGIDB:34bcba10ad21	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Prednisolone Sodium Succinate	CAT:DGIDB:35400b18013f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Nitrofurantoin, Macrocrystals	CAT:DGIDB:35a9e181414e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Resveratrol	CAT:DGIDB:363cac102941	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Lead Diacetate Trihydrate	CAT:DGIDB:363dc8d0cb62	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	E232	CAT:DGIDB:36d1a52af29a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Cyclofenil	CAT:DGIDB:3701bff0c6c0	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Flufenamic Acid	CAT:DGIDB:37352f589f92	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Aurin	CAT:DGIDB:3823658d1337	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dimethyl Fumarate	CAT:DGIDB:383151119697	dgidb_only	KEAP1	ChEMBL	inhibitor	UNKNOWN	listing_only	yes	n/a_has_other_source
+S10	Dimethyl Fumarate	CAT:DGIDB:383151119697	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	yes	n/a_has_other_source
+S10	Dimethyl Fumarate	CAT:DGIDB:383151119697	dgidb_only	KEAP1	DTC		UNKNOWN	listing_only	yes	n/a_has_other_source
+S10	Chembl:Chembl259865	CAT:DGIDB:38b967172ff2	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	5,7-Dihydroxy-4-Methylcoumarin	CAT:DGIDB:38e2874d3799	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Saquinavir Mesylate	CAT:DGIDB:3933e937ce48	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Oxycarboxin	CAT:DGIDB:399c5d0a1070	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Digoxin	CAT:DGIDB:39ac892e7a73	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Butachlor	CAT:DGIDB:3a0e63175eea	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chloranil	CAT:DGIDB:3a82867c4245	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Furazolidone	CAT:DGIDB:3a9b482eabb4	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Selective Estrogen Receptor Modulator	CAT:DGIDB:3ace1663c307	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Carboplatin	CAT:DGIDB:3b379cb87968	dgidb_only	KEAP1	JAX-CKB		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Efavirenz	CAT:DGIDB:3b6f52308670	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Mitogen-Activated Protein Kinase Inhibitor	CAT:DGIDB:3bdfb5253ec6	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl578944	CAT:DGIDB:3c068448f1ed	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Nitromide	CAT:DGIDB:3c282e6ab183	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chlorpyrifos	CAT:DGIDB:3c4b26dbb1f8	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Betamethasone	CAT:DGIDB:3c56953da57a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Moricizine Hydrochloride	CAT:DGIDB:3c7f000af89b	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Bronopol	CAT:DGIDB:3ced638dbe1a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl428064	CAT:DGIDB:3cfc5dc4bec1	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Andalusol	CAT:DGIDB:3d092cb97eeb	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Zafirlukast	CAT:DGIDB:3d9c85c09eeb	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Desacetoxymatricarin	CAT:DGIDB:3dec28f09a66	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dinitro Cresol	CAT:DGIDB:3df402938bec	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dihydroxanthohumol	CAT:DGIDB:3e36cc1dad4f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Omeprazole	CAT:DGIDB:3e8a906cc685	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl426404	CAT:DGIDB:3fa3ddcc321f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chloroxuron	CAT:DGIDB:403db6138c2f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Sufentanil Citrate	CAT:DGIDB:405ebab347a1	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Kamebanin	CAT:DGIDB:4084062b4eb3	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Angustibalin	CAT:DGIDB:4092a94cb49b	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Staurosporine	CAT:DGIDB:40b59f7e194e	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl68096	CAT:DGIDB:40f71353aacf	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Bitertanol	CAT:DGIDB:410b0c431200	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl601757	CAT:DGIDB:4123820ccbc1	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Camptothecin	CAT:DGIDB:4147770c81ab	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl586135	CAT:DGIDB:41c39c68108f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl601970	CAT:DGIDB:41f3a39638d5	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Naled	CAT:DGIDB:4222b4a73e80	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tubercidin	CAT:DGIDB:4269c79d16f2	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Benzothiazyl Disulfide	CAT:DGIDB:42723a68d53b	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Genistein	CAT:DGIDB:42788f518ac3	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Vanoxerine	CAT:DGIDB:4285ac1d3d9f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Cymoxanil	CAT:DGIDB:42ba089b4fe4	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Citric Acid	CAT:DGIDB:42ed4796f91b	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl285157	CAT:DGIDB:431c7f4c8aee	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	5-Fluorouridine	CAT:DGIDB:43fc9255f7ec	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	S-Metolachlor	CAT:DGIDB:443931eff850	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dimethenamid	CAT:DGIDB:443c3816eee7	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl582983	CAT:DGIDB:45c51b501718	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Guanfacine Hydrochloride	CAT:DGIDB:45e7e999a7df	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dazomet	CAT:DGIDB:462fc3110f48	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Coumestrol	CAT:DGIDB:4665902fd3d1	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tryptanthrin	CAT:DGIDB:4667b8586257	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Medroxyprogesterone Acetate	CAT:DGIDB:469b27f0fb57	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl528181	CAT:DGIDB:46a980ea3810	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Harmine	CAT:DGIDB:46ad0bbbecb2	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Vitamin K3	CAT:DGIDB:46bb5b96c788	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl531268	CAT:DGIDB:46d1d2282737	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl588038	CAT:DGIDB:46d844372b39	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl578512	CAT:DGIDB:46ee1d93e8e5	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	2-Nitrofluorene	CAT:DGIDB:479842953836	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl585439	CAT:DGIDB:47b130e70e28	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Papaverine	CAT:DGIDB:47c86420cb2a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Trametinib Dimethyl Sulfoxide	CAT:DGIDB:47f20bb25e42	dgidb_only	KEAP1	JAX-CKB		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Halazone	CAT:DGIDB:48296154abf2	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Pyrogallol	CAT:DGIDB:487acf7a5492	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl297304	CAT:DGIDB:48b8d48e422f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Hexylresorcinol	CAT:DGIDB:48bd86f1be66	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Nilutamide	CAT:DGIDB:48cee98fb72f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Triclosan	CAT:DGIDB:49d8942e10ec	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Cladribine	CAT:DGIDB:4a626ed30a2c	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	2-Aminoanthracene	CAT:DGIDB:4b2745509197	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Cadmium Dichloride	CAT:DGIDB:4b9c9f472050	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tebufenozide	CAT:DGIDB:4bc696dfed94	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Pelubiprofen	CAT:DGIDB:4d85d78adb8f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Kresoxim-Methyl	CAT:DGIDB:4e722189b1b4	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Hydroxyprogesterone Caproate (Usp)	CAT:DGIDB:4eb06a9000b0	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Emodin	CAT:DGIDB:4ecdfc1049b0	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dydrogesterone	CAT:DGIDB:4ee7280b4d26	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Glutaral	CAT:DGIDB:4ef342684974	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Triamterene	CAT:DGIDB:4eff52d87bd5	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl1098875	CAT:DGIDB:4f704900e1ba	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Fenhexamid	CAT:DGIDB:4fa9878241ef	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Triprolidine Hydrochloride	CAT:DGIDB:5065ab109e02	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Propargite	CAT:DGIDB:50cf758d2c3b	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl586061	CAT:DGIDB:50d7c4580b6f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl583584	CAT:DGIDB:510e09d98ffc	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Indole-3-Carbinol	CAT:DGIDB:5190ea6d8a9c	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl127579	CAT:DGIDB:51aabbe18f92	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Phenmedipham	CAT:DGIDB:52420c2d4269	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl582073	CAT:DGIDB:52b9314cc60e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Namodenoson	CAT:DGIDB:5309d7c0853c	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Melphalan	CAT:DGIDB:533964dcb660	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl547269	CAT:DGIDB:5354aadc20dd	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Darglitazone	CAT:DGIDB:54115762a7c8	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl1537417	CAT:DGIDB:5413a8d6ca39	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Rosiglitazone Maleate	CAT:DGIDB:54452476176f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Lintitript	CAT:DGIDB:54875d65ff64	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Epigallocatechin Gallate	CAT:DGIDB:54e40726316e	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Beclomethasone	CAT:DGIDB:5515878335cb	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Epinephrine	CAT:DGIDB:5557b4e2f7ac	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	1-Nitropyrene	CAT:DGIDB:55cf4386aaff	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Kinetin Riboside	CAT:DGIDB:5662bf679db3	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Finasteride	CAT:DGIDB:56759f1cbf60	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl167529	CAT:DGIDB:57544c3507af	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Atovaquone	CAT:DGIDB:575ac52429d0	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Phentolamine Mesylate	CAT:DGIDB:57cd2d88c196	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Nonsteroidal Antiinflammatory Drug	CAT:DGIDB:57ed339fc5f3	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl531079	CAT:DGIDB:5925a6b464c1	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl606167	CAT:DGIDB:5925c40393c7	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Pyridaben	CAT:DGIDB:598033a8c91a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Butylparaben	CAT:DGIDB:59b71f203e39	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl1363033	CAT:DGIDB:5a56fe36f7f7	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Ginsenoside Rg3	CAT:DGIDB:5a756dab8f7a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	2,4-Hexadienal	CAT:DGIDB:5b580c81e067	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Hydrocortisone Valerate	CAT:DGIDB:5b596b82de07	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Cisplatin	CAT:DGIDB:5ba35e7a459e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tioxolone	CAT:DGIDB:5bbe239e6bd0	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl584269	CAT:DGIDB:5c0c08b1de79	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Neostigmine	CAT:DGIDB:5c1b2a36fc4b	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Bromochloroacetic Acid	CAT:DGIDB:5c2b6ab71282	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Disulfiram	CAT:DGIDB:5c9c898449fc	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Bis(Dimethylaminethiocarbonyl)Monosulfide	CAT:DGIDB:5cea3d3e9a2f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl591631	CAT:DGIDB:5d86b178fd18	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Oxyquinoline	CAT:DGIDB:5db7c96eb4fb	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	1-Naphthol	CAT:DGIDB:5dc96ed85f68	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Neuroprotective Agent	CAT:DGIDB:5dcc0b04d014	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dinoseb	CAT:DGIDB:5e0a960750ca	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Calcimycin	CAT:DGIDB:5e4760cd5eea	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Stilonium Iodide	CAT:DGIDB:5e8e08404878	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Nitrogen Mustard Hn-3	CAT:DGIDB:5f38b66f85c8	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Ronnel	CAT:DGIDB:5fe8206d3a35	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Gitoxigenin	CAT:DGIDB:5ff5cda63f7b	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Pantoprazole Sodium	CAT:DGIDB:606ed28047d7	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Prednicarbate	CAT:DGIDB:6081d8079492	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Propantheline Bromide	CAT:DGIDB:6125734591fd	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl530361	CAT:DGIDB:617866aee9cd	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl1287980	CAT:DGIDB:61941ba37a55	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Proroxan Hydrochloride	CAT:DGIDB:61c69bf7e929	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Cis/Trans-Isoeugenol	CAT:DGIDB:622c4561c653	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Pyrazole	CAT:DGIDB:62803860c0a3	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Alsterpaullone	CAT:DGIDB:633c645744ec	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl1492017	CAT:DGIDB:6370c70985d5	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl398363	CAT:DGIDB:63ef414d38f9	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Vitamin A	CAT:DGIDB:63f7075aecd7	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Curcumin	CAT:DGIDB:64200871fc18	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chrysin	CAT:DGIDB:651b3228ea26	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Carbendazim	CAT:DGIDB:658192f95e98	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	4-Chloromercuribenzoic Acid	CAT:DGIDB:66ec3312b309	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Rimsulfuron	CAT:DGIDB:671e713286f3	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dactolisib	CAT:DGIDB:67a3ed5bd011	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl81782	CAT:DGIDB:67bca235bc4d	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tributyltin-Oxide	CAT:DGIDB:67c381be1099	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Triciribine	CAT:DGIDB:67cd69a109d9	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl601146	CAT:DGIDB:67eddf8e460a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Lithocholic Acid	CAT:DGIDB:6802569a3c41	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Etoxazole	CAT:DGIDB:685188bd73cb	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Su9516	CAT:DGIDB:6879eaabc07e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dimethisterone	CAT:DGIDB:695a30dc4e1d	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Indigo	CAT:DGIDB:697b27b26bd5	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Simvastatin	CAT:DGIDB:69bf70938387	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Alpha-Phellandrene	CAT:DGIDB:69f61fd60e8a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dichlorodiphenyldichloroethylene	CAT:DGIDB:6a48d01dedd7	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Lonidamine	CAT:DGIDB:6a9f06277acb	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl529138	CAT:DGIDB:6ac9828cbc63	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chloroxylenol	CAT:DGIDB:6ad55c1d3489	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	(1R)-Trans-Tetramethrin	CAT:DGIDB:6b052e03cd3e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Cyprodinil	CAT:DGIDB:6b304be1c95e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Jnj1661010	CAT:DGIDB:6b3b83237c69	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Methyl Abietate	CAT:DGIDB:6bd151de69f2	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Pyraflufen-Ethyl	CAT:DGIDB:6bd4d74b629c	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Aldicarb	CAT:DGIDB:6c84ecc5849b	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Bioallethrin S-Cyclopentenyl Isomer	CAT:DGIDB:6cff0222487c	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Bromodiolone	CAT:DGIDB:6dcf24b1c7f9	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl577662	CAT:DGIDB:6eee4cdfbf02	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Salicylanilide	CAT:DGIDB:6f70adc46139	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Stanolone	CAT:DGIDB:70ce494df19e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl533226	CAT:DGIDB:7109deba567e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Crizotinib	CAT:DGIDB:71595450f018	dgidb_only	KEAP1	JAX-CKB		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl600313	CAT:DGIDB:7164adb314ae	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Buthionine Sulfoximine	CAT:DGIDB:71cb7c0e8f30	dgidb_only	KEAP1	JAX-CKB		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Acetochlor	CAT:DGIDB:71d4df8377c2	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl443436	CAT:DGIDB:72379fa6ee8e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Bupirimate	CAT:DGIDB:724d08688691	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chlorpyrifos-Methyl	CAT:DGIDB:725fb8d1810f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Pd-169316	CAT:DGIDB:729db5263295	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Afatinib	CAT:DGIDB:72c83bc38f32	dgidb_only	KEAP1	JAX-CKB		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chlordane	CAT:DGIDB:72de4e6d0a71	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Il-6	CAT:DGIDB:732ecd5282f3	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl538965	CAT:DGIDB:735bfc0db70c	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Malathion	CAT:DGIDB:73bdab0abaef	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Acrolein	CAT:DGIDB:74352b437f36	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Oxyphenbutazone	CAT:DGIDB:74884b88e01f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Hycanthone	CAT:DGIDB:74cd13aa42d2	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tectoquinone	CAT:DGIDB:74d1839ea9e2	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Simetride	CAT:DGIDB:750c19fb89dd	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Gene Transduction Agent	CAT:DGIDB:754db57240b8	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl166112	CAT:DGIDB:75b759441d72	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Pentachlorophenol	CAT:DGIDB:75d1fe074b63	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Mefenamic Acid	CAT:DGIDB:75d99cd0749e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl599102	CAT:DGIDB:7629526e4ec0	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl601320	CAT:DGIDB:762aa0eb1d71	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	2-Acetylaminofluorene	CAT:DGIDB:764ba9495d30	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	While Olivetol	CAT:DGIDB:7686ac8cb71b	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dacthal	CAT:DGIDB:76b198fca86a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl597035	CAT:DGIDB:770a486ce7c0	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Pregnenolone	CAT:DGIDB:7723c945d850	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Fumagillin	CAT:DGIDB:775f61b0d3ec	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Benzo[B]Fluoranthene	CAT:DGIDB:77c5cf66ff90	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tosufloxacin Tosylate	CAT:DGIDB:77c950518e31	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Bisphenol A	CAT:DGIDB:78cf90272935	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl590706	CAT:DGIDB:78e9e2e7b8e1	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl602424	CAT:DGIDB:79708d2f4128	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Baclofen	CAT:DGIDB:7a497e1f9879	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl299853	CAT:DGIDB:7aa99b5376a8	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chemopreventive Agent	CAT:DGIDB:7b6667d30fed	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Diroximel Fumarate	CAT:DGIDB:7bf6e7bc5d5b	dgidb_only	KEAP1	ChEMBL	inhibitor	UNKNOWN	listing_only	yes	n/a_has_other_source
+S10	Ethacrynic Acid	CAT:DGIDB:7c1593e7df90	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Pyriproxyfen	CAT:DGIDB:7c62a7a4a9e0	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl601353	CAT:DGIDB:7d3afc203485	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl591361	CAT:DGIDB:7da16585369c	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Cyproterone Acetate	CAT:DGIDB:7e3c67305ca1	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tretinoin	CAT:DGIDB:7f061bf749aa	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tretinoin	CAT:DGIDB:7f061bf749aa	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Furazabol	CAT:DGIDB:7fcc455db28c	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Carfilzomib	CAT:DGIDB:8093000b995f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl601137	CAT:DGIDB:80eaa9d904f6	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Lansoprazole	CAT:DGIDB:81152c783e87	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Cyclosporine	CAT:DGIDB:811ca6a4d45c	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	2-Bromoethanol	CAT:DGIDB:819eab7f00c2	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Hydrocortisone Hemisuccinate	CAT:DGIDB:81e92cf34036	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Pyrithione Sodium	CAT:DGIDB:8243912db9e0	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Isofenphos	CAT:DGIDB:824f4f5a947e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Molinate	CAT:DGIDB:82b0e58180d9	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Haplamine	CAT:DGIDB:82e655742917	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Thioguanine	CAT:DGIDB:8355ca849495	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Lufenuron	CAT:DGIDB:836bf7335f6f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl2095095	CAT:DGIDB:83b7cd8ed839	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl296021	CAT:DGIDB:840939dc9cf4	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dilazep	CAT:DGIDB:8412169f9f7d	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Desmedipham	CAT:DGIDB:8447eca73685	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl429095	CAT:DGIDB:84508ad13ac5	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tridecan-1-Ol	CAT:DGIDB:84509365c613	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Bromocriptine Mesylate	CAT:DGIDB:846aac0eab78	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Berberine Chloride	CAT:DGIDB:84ba68768541	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Phenazopyridine Hydrochloride	CAT:DGIDB:8582759cd1a4	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl528390	CAT:DGIDB:858dd97abb79	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Telaglenastat	CAT:DGIDB:8633bb609052	dgidb_only	KEAP1	JAX-CKB		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Peruvoside	CAT:DGIDB:8637d502e515	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Ascorbic Acid	CAT:DGIDB:8643362103b5	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	To-901317	CAT:DGIDB:8662f470cb85	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Azathioprine	CAT:DGIDB:86a5e47dd9b6	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl585502	CAT:DGIDB:86ec81dacd1f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Methiocarb	CAT:DGIDB:88676ee2fda8	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Methyclothiazide	CAT:DGIDB:88a300be41dc	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl295337	CAT:DGIDB:89a2f61787fc	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Fluorodifen	CAT:DGIDB:89d1d30c9eb3	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Medrysone	CAT:DGIDB:89e6d66f8457	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl587229	CAT:DGIDB:89ff7806d02e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Difenoconazole	CAT:DGIDB:8a137b69f4a2	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Bardoxolone	CAT:DGIDB:8a437019f56c	dgidb_only	KEAP1	GuideToPharmacology		UNKNOWN	listing_only	yes	n/a_has_other_source
+S10	Fenpyroxymate	CAT:DGIDB:8aa7dd7fa727	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl584442	CAT:DGIDB:8adc2497b5e6	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Pembrolizumab	CAT:DGIDB:8afdf8779086	dgidb_only	KEAP1	JAX-CKB		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Bleomycin	CAT:DGIDB:8bf40375467a	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Hydrocortisone Acetate	CAT:DGIDB:8c16382b2c45	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Methoxychlor	CAT:DGIDB:8c24a1e275d2	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Cephalochromin	CAT:DGIDB:8c4cd7039256	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Floctafenine	CAT:DGIDB:8ce1703a9c1e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Pentachloronitrobenzene	CAT:DGIDB:8cfad694abe4	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Phenytoin Sodium	CAT:DGIDB:8ddd1e9e1ab7	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Aristolochic Acid	CAT:DGIDB:8e5f3c1abac2	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl87568	CAT:DGIDB:8eac7e8b8fcc	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chlorophacinone	CAT:DGIDB:8f30684da17d	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Melengestrol Acetate	CAT:DGIDB:8f8c01408a95	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl1329443	CAT:DGIDB:8fcbd94569f3	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Nocodazole	CAT:DGIDB:9062c5749733	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Biphenyl	CAT:DGIDB:9073d39d94f1	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl580727	CAT:DGIDB:90be6bce39f4	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Amlexanox	CAT:DGIDB:911606f13247	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl138061	CAT:DGIDB:91283c3d451d	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Norgestrel	CAT:DGIDB:9136df9c9bbf	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Propachlor	CAT:DGIDB:915287f01880	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Nefazodone Hydrochloride	CAT:DGIDB:916644031c74	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Nrf2 Peptide [Pmid: 23647822]	CAT:DGIDB:91f99ec2ae1d	dgidb_only	KEAP1	GuideToPharmacology	inhibitor	UNKNOWN	listing_only	yes	n/a_has_other_source
+S10	4-Aminophenol	CAT:DGIDB:92263ebd2ab1	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl584883	CAT:DGIDB:9239733af4c7	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	(S)-Roscovitine	CAT:DGIDB:9258413fadd4	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Bumetanide	CAT:DGIDB:92875b1258c0	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Stanozolol	CAT:DGIDB:92b410ffb4a4	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Phosalone	CAT:DGIDB:92b96718d9bf	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Helenalin	CAT:DGIDB:92f8d5e1cddc	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Fgf-1	CAT:DGIDB:9320499fbeae	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl591370	CAT:DGIDB:9383b48074e1	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Buspirone	CAT:DGIDB:93fc796fa46f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Megestrol Acetate	CAT:DGIDB:944f7457d2bd	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dexamethasone Sodium Phosphate	CAT:DGIDB:9453a175b05e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Pyridalyl	CAT:DGIDB:9467d77d38cf	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl582030	CAT:DGIDB:94b491e9a4ea	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Phenylpyruvate	CAT:DGIDB:94d709b528fa	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl591178	CAT:DGIDB:956f40526f73	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Streptonigrin	CAT:DGIDB:95fc2fba1cca	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Oryzalin	CAT:DGIDB:9609ee2d6b86	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Exemestane	CAT:DGIDB:963fc21b98b5	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Oxyquinoline Sulfate	CAT:DGIDB:9645e802b54f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Nizofenone	CAT:DGIDB:96761c997dcc	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Triton X	CAT:DGIDB:970486ac46f2	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Trovafloxacin Mesylate	CAT:DGIDB:970f6de35a89	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Doxorubicin Hydrochloride	CAT:DGIDB:97323b9f8bcf	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Doxorubicin Hydrochloride	CAT:DGIDB:97323b9f8bcf	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	4-Nonylphenol	CAT:DGIDB:9737cbf19784	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl269881	CAT:DGIDB:973b280c724a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl609438	CAT:DGIDB:97639da196b8	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Naphthoquinone	CAT:DGIDB:97b87eb16f8f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	2-Methoxy-1,4-Naphthoquinone	CAT:DGIDB:97ba115df2d7	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl536599	CAT:DGIDB:97cf3921193d	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Gefitinib	CAT:DGIDB:98328e2d16e4	dgidb_only	KEAP1	JAX-CKB		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Deferoxamine	CAT:DGIDB:984e67631bd3	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Deferoxamine	CAT:DGIDB:984e67631bd3	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	2,4,6-Tribromophenol	CAT:DGIDB:9874484c8001	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Methyl Yellow	CAT:DGIDB:989aa8e310f9	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Trichlorfon	CAT:DGIDB:98c193ff807a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	P-Toluenesulfonamide	CAT:DGIDB:98f570dd1963	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Kavain	CAT:DGIDB:993fa6d27c81	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Ro 40-6055	CAT:DGIDB:99960e67dd34	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Pifexole	CAT:DGIDB:9a7ac2d00146	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Linoleic Acid	CAT:DGIDB:9af8d64cc8f0	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl577660	CAT:DGIDB:9b33ab8c128f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tyrphostin A9	CAT:DGIDB:9b3a22073d94	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Catechol	CAT:DGIDB:9ba20a4b86e8	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Danthron	CAT:DGIDB:9bb23bc68779	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Leflunomide	CAT:DGIDB:9cdc3086bd9d	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Demeton-S-Methyl	CAT:DGIDB:9df18a01bee4	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	7-Benzyloxycoumarin	CAT:DGIDB:9e608f1d75c9	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tibolone	CAT:DGIDB:9e65758dbf1b	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Nifuroxazide	CAT:DGIDB:9eab2338e500	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Decynium 22	CAT:DGIDB:9f013975f403	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl598903	CAT:DGIDB:9fa4fee1fc05	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl1761683	CAT:DGIDB:9fb495ab0f3e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Fluoxastrobin	CAT:DGIDB:9ff972ec487b	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl156959	CAT:DGIDB:a0558414aa76	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Digitoxin	CAT:DGIDB:a075765a1913	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl596839	CAT:DGIDB:a0a84788d10f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	E324	CAT:DGIDB:a197bdfbae24	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	2-Methoxyestradiol	CAT:DGIDB:a1e262f6a584	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Prednisolone	CAT:DGIDB:a1e26933427a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Trilostane	CAT:DGIDB:a1ebee0bf610	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tazarotene	CAT:DGIDB:a2252eb573a8	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tenatoprazole	CAT:DGIDB:a23044fa4e3a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Recombinant Prothymosin Alpha	CAT:DGIDB:a238c61c53ac	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Ra839	CAT:DGIDB:a2a5a1a977f2	dgidb_only	KEAP1	GuideToPharmacology		UNKNOWN	listing_only	yes	n/a_has_other_source
+S10	Flutamide	CAT:DGIDB:a2dc5518a040	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Flutamide	CAT:DGIDB:a2dc5518a040	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Nitazoxanide	CAT:DGIDB:a2df1f598ff7	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Temefos	CAT:DGIDB:a2e55dd27249	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Mitotane	CAT:DGIDB:a313d2e30012	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Ipconazole	CAT:DGIDB:a314dfde95d7	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Apigenin	CAT:DGIDB:a321bd41d971	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Gitoxin	CAT:DGIDB:a3589b9857e2	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Epirubicin Hydrochloride	CAT:DGIDB:a35df2221316	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Ml385	CAT:DGIDB:a3d03ae2ef6c	dgidb_only	NFE2L2	GuideToPharmacology	inhibitor	UNKNOWN	listing_only	yes	n/a_has_other_source
+S10	Iodoform	CAT:DGIDB:a581953b48e2	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Elliptecine	CAT:DGIDB:a587f675a12a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Kepone	CAT:DGIDB:a5ba63865d4e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Cholecalciferol	CAT:DGIDB:a61a8b72fd3f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Protease Inhibitor	CAT:DGIDB:a652145799fa	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl582081	CAT:DGIDB:a6df83d837fb	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Phenoxybenzamine Hydrochloride	CAT:DGIDB:a7001b94485c	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl591412	CAT:DGIDB:a73a14268237	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tiratricol	CAT:DGIDB:a7fad23af16a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Harmine Hydrochloride	CAT:DGIDB:a85ee7a8f266	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl253989	CAT:DGIDB:a898bdf1467c	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Methotrexate	CAT:DGIDB:a8dc348e5418	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Methotrexate	CAT:DGIDB:a8dc348e5418	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl167316	CAT:DGIDB:a8dfa85dfb3c	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Bromocriptine	CAT:DGIDB:a922f34d6abc	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Corticosterone	CAT:DGIDB:a9380f3b92c1	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Bromethalin	CAT:DGIDB:a93983621dba	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Lycopene	CAT:DGIDB:a93b8915380f	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Endosulfan	CAT:DGIDB:a9bfc5a9a74a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tetradifon	CAT:DGIDB:a9da9ba03e0e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl1873684	CAT:DGIDB:a9e5e61a5988	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Norethindrone	CAT:DGIDB:aa0e15795ab3	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Retinyl Acetate	CAT:DGIDB:aa1055092a81	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tricyclazole	CAT:DGIDB:aa388b25f315	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Desoximetasone	CAT:DGIDB:aa465c989153	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Indole-3-Butyric Acid	CAT:DGIDB:aa58905dc088	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dexamethasone	CAT:DGIDB:aa99c27c9065	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dexamethasone	CAT:DGIDB:aa99c27c9065	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Niclosamide	CAT:DGIDB:aa9c72b3c53a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Indomethacin	CAT:DGIDB:aaedf4c249a8	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Abscisic Acid	CAT:DGIDB:ab392be8f6c4	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tpck	CAT:DGIDB:ac2f86ed7bcb	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Diethylstilbestrol	CAT:DGIDB:ac709b57803d	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dicumarol	CAT:DGIDB:acab19724be9	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dicumarol	CAT:DGIDB:acab19724be9	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Azosemide	CAT:DGIDB:ad0f8246e4b8	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Anguidin	CAT:DGIDB:ad95c359cca0	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl1079460	CAT:DGIDB:ade3237d3473	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Monomethyl Fumarate	CAT:DGIDB:ae0d6efd8da4	dgidb_only	KEAP1	ChEMBL	inhibitor	UNKNOWN	listing_only	yes	n/a_has_other_source
+S10	Chembl:Chembl259784	CAT:DGIDB:af26c4befa6f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl581872	CAT:DGIDB:af27c9abf029	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl84685	CAT:DGIDB:af3942301604	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Pyraclostrobin	CAT:DGIDB:af481b3be9cf	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chrysene	CAT:DGIDB:afa0b947726b	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Halcinonide	CAT:DGIDB:afb3a2efa45e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Fenamidone	CAT:DGIDB:aff2d0928607	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Hydrocortisone Sodium Succinate	CAT:DGIDB:b0e7c0202f3d	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl584635	CAT:DGIDB:b0fe8a80e288	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Lagascatriol	CAT:DGIDB:b15c47803e01	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl578504	CAT:DGIDB:b193669ed6a4	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl163970	CAT:DGIDB:b1d9f67b13df	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Carbaril	CAT:DGIDB:b1f8cbe871e8	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Pipoxolan Hydrochloride	CAT:DGIDB:b27dd687c2c2	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl184450	CAT:DGIDB:b2ff43ca8b59	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Capsaicin	CAT:DGIDB:b30bd9d0163a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Capsaicin	CAT:DGIDB:b30bd9d0163a	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tannin Pyrogallol	CAT:DGIDB:b33c2135b7d0	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Bromodichloroacetic Acid	CAT:DGIDB:b34b122dbac9	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl53738	CAT:DGIDB:b36dd3455adc	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Clorophene	CAT:DGIDB:b39a8c74eed2	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Azoxystrobin	CAT:DGIDB:b3a96db20fa2	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl225257	CAT:DGIDB:b3f91afa486e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Spiperone	CAT:DGIDB:b440245821e8	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Maneb	CAT:DGIDB:b45b4257f384	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Irofulven	CAT:DGIDB:b460183a3c58	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl124006	CAT:DGIDB:b4853950c113	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Compound 10 [Pmid: 31411465]	CAT:DGIDB:b48d9bd9a42b	dgidb_only	KEAP1	GuideToPharmacology		UNKNOWN	listing_only	yes	n/a_has_other_source
+S10	Etodolac	CAT:DGIDB:b4ddbab6b12e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Thonzonium Bromide	CAT:DGIDB:b4e58dfd78cc	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Thiram	CAT:DGIDB:b531a6e10532	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dichlon	CAT:DGIDB:b56b84d670f4	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Phenoxybenzamine	CAT:DGIDB:b60fe1e20b1f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dichlorvos	CAT:DGIDB:b61ae53beb8b	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Alachlor	CAT:DGIDB:b6338a3cd0bf	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tcdd	CAT:DGIDB:b63d26abc373	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Adefovir Dipivoxil	CAT:DGIDB:b66004027b37	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl224318	CAT:DGIDB:b687c1b0b12a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Pinafide	CAT:DGIDB:b698085da55d	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Recombinant Cytokine	CAT:DGIDB:b6d7d9d303d6	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Ionomycin	CAT:DGIDB:b6fa6c58a06e	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl598263	CAT:DGIDB:b7abfb2dd1e7	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Beclomethasone Dipropionate	CAT:DGIDB:b7b1e7e5089f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chlormidazole	CAT:DGIDB:b8488a79f1b9	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Cloxyquin	CAT:DGIDB:b87c9eb931e7	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Progesterone	CAT:DGIDB:b8ad886b94a3	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	2'-Hydroxychalcone	CAT:DGIDB:b8de65a182c5	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Lasalocid A Sodium	CAT:DGIDB:b98dac320438	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	2-Phenylphenol	CAT:DGIDB:b9f3913c06ed	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Clioquinol	CAT:DGIDB:ba1991a252b1	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tolonium Chloride	CAT:DGIDB:baa2deb8d429	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl1990783	CAT:DGIDB:bac21a613acc	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Trifloxystrobin	CAT:DGIDB:bac434be222e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Canrenone	CAT:DGIDB:bb0735669e4a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Iobenguane	CAT:DGIDB:bb9cfb6da4e3	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Nifedipine	CAT:DGIDB:bba2534bfcbc	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Oxadiazon	CAT:DGIDB:bbc139f557eb	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Cinobufotalin	CAT:DGIDB:bc0ee6b1065e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Loteprednol	CAT:DGIDB:bc3921481ef1	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl254077	CAT:DGIDB:bc5aa4334079	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tolperisone Hydrochloride	CAT:DGIDB:bc9563ae8b19	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl388823	CAT:DGIDB:bdd1c81e37b9	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Yangonin	CAT:DGIDB:be4b1c706202	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Lithium	CAT:DGIDB:be65bb20ae7f	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl600334	CAT:DGIDB:be8e2bb99f7e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Ioxynil	CAT:DGIDB:bff5479dcb7e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dipyrithione	CAT:DGIDB:bffd091e6a3c	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Cycloheximide	CAT:DGIDB:c005a9838d09	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl547977	CAT:DGIDB:c0236bf0719d	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tiliquinol	CAT:DGIDB:c04c4863235f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tamoxifen	CAT:DGIDB:c06ca323bd87	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Gw0742X	CAT:DGIDB:c10dad8dac32	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl29878	CAT:DGIDB:c124db7e8dd2	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Gamma-Cyhalothrin	CAT:DGIDB:c1662b206a3a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl1523215	CAT:DGIDB:c1668e7e82b5	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl580918	CAT:DGIDB:c1b54845c66d	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl1563896	CAT:DGIDB:c29dd2065fcb	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dinitrophenylene	CAT:DGIDB:c2e793de43b1	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Pioglitazone Hydrochloride	CAT:DGIDB:c2f11d75ab0a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl583558	CAT:DGIDB:c318cdee8dd8	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Topotecan Hydrochloride	CAT:DGIDB:c42b10052b8a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl578502	CAT:DGIDB:c42f3f8be996	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl1362503	CAT:DGIDB:c49cd6008566	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl555242	CAT:DGIDB:c4c828edebb5	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Clocortolone	CAT:DGIDB:c589f0e64dc4	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Homidium Bromide	CAT:DGIDB:c5e961cb6cbe	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Pipobroman	CAT:DGIDB:c5ea4422d000	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Hypericin	CAT:DGIDB:c6636ae2b4de	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Alpha-Endosulfan	CAT:DGIDB:c6943c2abc79	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Suforaphane Isoselenocyanate	CAT:DGIDB:c699af490049	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Nisoldipine	CAT:DGIDB:c6f7af63738e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chloroacetic Acid	CAT:DGIDB:c72d33ee3692	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl590422	CAT:DGIDB:c75af11c9ea5	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Mechlorethamine Hydrochloride	CAT:DGIDB:c7f4138e41d4	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl535307	CAT:DGIDB:c8203c76e09c	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Rosiglitazone	CAT:DGIDB:c8511f5afd4f	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Fluorouracil	CAT:DGIDB:c867ae541e32	dgidb_only	KEAP1	JAX-CKB		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Feprazone	CAT:DGIDB:c8ea7e3a5ee6	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Alpha-Terthienyl	CAT:DGIDB:c94e871a7f42	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl388979	CAT:DGIDB:c9571ca277a5	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl578915	CAT:DGIDB:c9e4f881984f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chlorotriphenylstannane	CAT:DGIDB:c9ed8c15b904	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Hexachlorophene	CAT:DGIDB:cb5e46153c39	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Bufogenin	CAT:DGIDB:cb5e64ed71b1	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Benodanil	CAT:DGIDB:cc1b0b582bc5	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	3-Methylcholanthrene	CAT:DGIDB:ccbb3fe011cd	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Anisomycin	CAT:DGIDB:cce9b4b9ab76	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Flumazenil	CAT:DGIDB:cd074b94196c	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Pregnenolone-16&Alpha;-Carbonitrile	CAT:DGIDB:d01f31584c3b	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Benzofuran	CAT:DGIDB:d08b309cf6a1	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Cetylpyridinium Bromide	CAT:DGIDB:d0c8a417a0cf	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Liothyronine Sodium	CAT:DGIDB:d194aebee6eb	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Idazoxan	CAT:DGIDB:d1b2bc6c9971	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Triclofenol	CAT:DGIDB:d203799c04fc	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl600971	CAT:DGIDB:d21f8ba4ae59	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl1170485	CAT:DGIDB:d22e846bfa61	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl593366	CAT:DGIDB:d2b2a4b3f6e3	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Sulforaphane	CAT:DGIDB:d3c32c469155	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl482050	CAT:DGIDB:d3e4238e8164	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl1304363	CAT:DGIDB:d4127325e0d0	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	2-[(Formyl-Hydroxy-Amino)-Methyl]-Heptanoic Acid [1-(2-Hydroxymethyl-Pyrrolidine-1-Carbonyl)-2-Methyl-Propyl]-Amide	CAT:DGIDB:d414cff16034	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Omega-Chloroacetophenone	CAT:DGIDB:d436b8321dd5	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tris(2,3-Dibromopropyl)Phosphate	CAT:DGIDB:d494f0593159	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Acamprosate Calcium	CAT:DGIDB:d4a136aae03c	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Diphenadione	CAT:DGIDB:d4c30b183f3d	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dibutyldichlorostannane	CAT:DGIDB:d52a37fa5702	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Euparotin Acetate	CAT:DGIDB:d54f5dabf859	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Osimertinib	CAT:DGIDB:d56d09211aad	dgidb_only	KEAP1	JAX-CKB		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Cycloaspeptide A	CAT:DGIDB:d57bd2ec20fa	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Quinizarin	CAT:DGIDB:d5dfea6b525d	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Nelfinavir Mesylate	CAT:DGIDB:d66aa622ff5b	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl2002487	CAT:DGIDB:d6810262552d	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Antimycin A	CAT:DGIDB:d69493695e2e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	1-Hydroxy-4-Ethoxybenzene	CAT:DGIDB:d6a6742add0e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl601822	CAT:DGIDB:d7141dea6fc5	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dimethyl Yellow	CAT:DGIDB:d7ae8971cf05	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Oxendolone	CAT:DGIDB:d7c0c9d7f64c	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl83761	CAT:DGIDB:d82aa175cda5	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl443343	CAT:DGIDB:d82fde415865	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Bromoxynil	CAT:DGIDB:da8272e653ea	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Lanatoside C	CAT:DGIDB:da99730f5d23	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Benzo(K)Fluoranthene	CAT:DGIDB:dadfb72e0830	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl598270	CAT:DGIDB:dae2d41780d4	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Teroxirone	CAT:DGIDB:dbd9f64581cd	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Siduron	CAT:DGIDB:dc446fd86f5a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dopamine	CAT:DGIDB:dc7851b40eae	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dopamine	CAT:DGIDB:dc7851b40eae	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Amcinafide	CAT:DGIDB:dcf43c562cd3	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Methylparaben	CAT:DGIDB:dd67bbc78a9a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl607253	CAT:DGIDB:dde30a64f2b8	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Crufomate	CAT:DGIDB:de6e6dd05aad	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	9,10-Phenanthrenequinone	CAT:DGIDB:de99380a4611	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Mifepristone	CAT:DGIDB:dec36b8731e9	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	2,4-Dinitrophenol	CAT:DGIDB:decac890ffd2	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl536166	CAT:DGIDB:deeb1abf8a93	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Morniflumate	CAT:DGIDB:df20506a6bdf	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	All-Trans-Retinal	CAT:DGIDB:df33ab96a9cb	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Mitonafide	CAT:DGIDB:df4c13ac7537	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Phenol	CAT:DGIDB:df6fa35b6092	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Flufenacet	CAT:DGIDB:df7e96ac6658	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Diethylcarbamazine Citrate	CAT:DGIDB:dfa4387fe078	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl599943	CAT:DGIDB:dfc96f5add89	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl1198140	CAT:DGIDB:e01fe32bc60b	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Mesotrione	CAT:DGIDB:e0582d425f2e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Methanesulfonic Acid Methyl Ester	CAT:DGIDB:e0b01900f7a8	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl199592	CAT:DGIDB:e0f778338398	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Dehydrated Alcohol	CAT:DGIDB:e1004681bbc7	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	9-Aminocamptothecin	CAT:DGIDB:e1961d4f968b	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl601933	CAT:DGIDB:e1b8a47d3b8d	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl609027	CAT:DGIDB:e24c7d6a1a93	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl329673	CAT:DGIDB:e2e89d2acc3e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Nitroxoline	CAT:DGIDB:e2f2c7ff9856	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl584514	CAT:DGIDB:e314050cedbd	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl585656	CAT:DGIDB:e377142d59d4	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Troglitazone	CAT:DGIDB:e463eab308de	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Strophanthidin Acetate	CAT:DGIDB:e4717aca0404	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl579318	CAT:DGIDB:e64eef051dab	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Tetranitromethane	CAT:DGIDB:e6f4bde5064f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Allo-Ocimene	CAT:DGIDB:e714e8742cbc	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl583351	CAT:DGIDB:e74a40523581	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Strophanthidin	CAT:DGIDB:e757369832d8	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Iopanoic Acid	CAT:DGIDB:e7b2a2575873	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl533388	CAT:DGIDB:e7ffb1474dfb	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Nitrilotriacetic Acid	CAT:DGIDB:e80dbebcca80	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Rocaglamide	CAT:DGIDB:e831d973cc8c	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Nitrofurazone	CAT:DGIDB:e87746c5529f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl1531222	CAT:DGIDB:e8fabc6d2b17	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Nandrolone Decanoate	CAT:DGIDB:e8fc14d39448	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl592363	CAT:DGIDB:e9560afebb7c	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl1863271	CAT:DGIDB:e96d24013971	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Bortezomib	CAT:DGIDB:e976fa1e6bc6	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Debrisoquin Sulfate	CAT:DGIDB:e9f28425f4a6	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl1481509	CAT:DGIDB:e9f78e9333ee	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl22062	CAT:DGIDB:ea0e7ea6bf52	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Hydroquinone	CAT:DGIDB:ea46ad804244	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Phenoxycarb	CAT:DGIDB:ea7d946d18da	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Rhein	CAT:DGIDB:eae2621003cd	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl578675	CAT:DGIDB:eaebab0b0f85	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Malinamide	CAT:DGIDB:eb105e98bf70	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Amitraz	CAT:DGIDB:eb5d7df83cef	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl599100	CAT:DGIDB:ecb59f50967f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Benzyl Isothiocyanate	CAT:DGIDB:ecfd82ad38db	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl592305	CAT:DGIDB:ed13cd8d0bc1	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl591630	CAT:DGIDB:ed4d947b5ef0	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Methacholine Chloride	CAT:DGIDB:ed4dbaf556f3	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Benzo[B]Triphenylene	CAT:DGIDB:edab18ee2cbe	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl320361	CAT:DGIDB:edff3efddc95	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Monobenzone	CAT:DGIDB:ee1dffae23ca	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Pyrrolidine Dithiocarbamic Acid, Ammonium Salt	CAT:DGIDB:ee272e4824ba	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Thiophanate Methyl	CAT:DGIDB:ee859c8e1043	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl591876	CAT:DGIDB:eecdb595dbf8	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Arotinoid Acid	CAT:DGIDB:ef1566b62f47	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Arteannuin B	CAT:DGIDB:ef9ff1146ab3	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Wortmannin	CAT:DGIDB:efcb9d1ef8ac	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Wortmannin	CAT:DGIDB:efcb9d1ef8ac	dgidb_only	NFE2L2	NCI		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Levothyroxine	CAT:DGIDB:efcd0ff275b7	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Aminocarb	CAT:DGIDB:efe442bb564a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Linolenic Acid	CAT:DGIDB:efff895f8223	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Noviflumuron	CAT:DGIDB:f04b6d94bdf3	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Mometasone	CAT:DGIDB:f0a2b29421af	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	4-Phenylenediamine	CAT:DGIDB:f1923ea8cfab	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Prazepam	CAT:DGIDB:f2cd96f52f63	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Rivoceranib	CAT:DGIDB:f2d0f945cf6f	dgidb_only	KEAP1	JAX-CKB		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Resmethrin	CAT:DGIDB:f2e8cc735eb9	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Gallic Acid	CAT:DGIDB:f328a9ea1921	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Phloretin	CAT:DGIDB:f446bd6b4a9b	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Propyl Gallate	CAT:DGIDB:f52b5da609e4	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl607140	CAT:DGIDB:f5d4beb0c15f	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Aminacrine Hydrochloride	CAT:DGIDB:f678d278459e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	2,4-Dihydroxybenzophenone	CAT:DGIDB:f70caf2e0981	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl609606	CAT:DGIDB:f73cf9515d68	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Methyleugenol	CAT:DGIDB:f77f045fafd0	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Isatin	CAT:DGIDB:f8db288896c5	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Hexestrol	CAT:DGIDB:f8f8a78bd93d	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Bifenazate	CAT:DGIDB:f99c454d1c50	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Celecoxib	CAT:DGIDB:f9aa3ade458c	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl77675	CAT:DGIDB:f9db59660f5a	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Isoquinoline 17 [Pmid: 30122040]	CAT:DGIDB:fa1dd12aa22a	dgidb_only	KEAP1	GuideToPharmacology		UNKNOWN	listing_only	yes	n/a_has_other_source
+S10	Oxyphenonium Bromide	CAT:DGIDB:fa44e33f4db6	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Ancitabine Hydrochloride	CAT:DGIDB:fab29a2d8b38	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Prochlorperazine	CAT:DGIDB:fbbc73c7ef91	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Thiorphan	CAT:DGIDB:fbc8e9fcd4f2	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Telmisartan	CAT:DGIDB:fbe2959afe68	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl1287983	CAT:DGIDB:fc21db5c6c12	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Buprofezin	CAT:DGIDB:fc5fcb53d9e9	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Aldrin	CAT:DGIDB:fc608e8cbcb0	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Uccf-029	CAT:DGIDB:fcbe3cd1df90	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Methylprednisolone	CAT:DGIDB:fd310066a390	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Hydrocortisone Butyrate	CAT:DGIDB:fd628e474df6	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Hydrocortisone Butyrate	CAT:DGIDB:fd628e474df6	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Vatalanib	CAT:DGIDB:fd90a2ccc728	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Vemurafenib	CAT:DGIDB:fda7acb60b31	dgidb_only	KEAP1	JAX-CKB		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl527585	CAT:DGIDB:fdbae753e6dd	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl528647	CAT:DGIDB:fdc3c38ea5cc	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl530499	CAT:DGIDB:fdcba2b981d4	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl585591	CAT:DGIDB:fde8c76ba94e	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Spiramide	CAT:DGIDB:feaca39afdd1	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Chembl:Chembl1257022	CAT:DGIDB:ff4b20b1573b	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Methysticin	CAT:DGIDB:ffc60cd6a1be	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
+S10	Propylparaben	CAT:DGIDB:ffcd3b979a1b	dgidb_only	NFE2L2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source

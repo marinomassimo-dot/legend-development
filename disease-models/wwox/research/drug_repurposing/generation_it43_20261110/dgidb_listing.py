@@ -22,7 +22,7 @@ def key(n):
 def main():
     rel = list(csv.DictReader(open(S41 / "relations_it41.tsv", encoding="utf-8"), delimiter="\t")) + list(csv.DictReader(open(HERE / "relations_it43.tsv", encoding="utf-8"), delimiter="\t"))
     base = defaultdict(set)                       # simple search: names per relation from the molecule tables (IT41 for S1-S8, IT43 s9/ for S9)
-    for mt in (S41 / "molecules.tsv", HERE / "s9" / "molecules.tsv"):
+    for mt in (S41 / "molecules.tsv", HERE / "s9" / "molecules.tsv", HERE / "s10" / "molecules.tsv"):
         for r in csv.DictReader(open(mt, encoding="utf-8"), delimiter="\t"):
             base[r["relation_id"]] |= {key(n) for n in r["names"].split("|")}
     es = cc.load(cc.DEFAULT_CATALOG); rows = []

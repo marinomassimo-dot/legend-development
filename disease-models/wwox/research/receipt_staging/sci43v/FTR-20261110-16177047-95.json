@@ -24,9 +24,9 @@
   "disease-models/wwox/research/drug_repurposing/potassium_conductances_sci43_20261110/verify/audit.md",
   "disease-models/wwox/research/drug_repurposing/potassium_conductances_sci43_20261110/verify/verdicts.tsv"
  ],
- "prior_receipt": null,
+ "prior_receipt": "FTR-20261110-16177047-94",
  "record_kind": "contemporaneous_receipt",
- "reread_reason": "first_read",
+ "reread_reason": "adversarial_reanalysis",
  "source_fingerprint": null,
  "source_kind": "abstract",
  "source_locator": "PubMed record fetched 2026-11-10 through the PubMed metadata tool; full text not reached",
