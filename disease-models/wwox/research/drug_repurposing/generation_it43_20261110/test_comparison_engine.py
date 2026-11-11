@@ -51,10 +51,16 @@ class RealPackages(unittest.TestCase):
                 self.assertRegex(src[r["item_id"]], r"(?i)search_rows|PMID|sci42", f'{r["item_id"]} {r["name"]} has no cited source outside the perimeter'); continue
             if kind[r["item_id"]] in ("probe", "known_requalified"):
                 self.assertEqual(r["role_derived"] in ("probe", "known_requalified"), True, f'{r["item_id"]} {r["name"]}: view says {kind[r["item_id"]]}, engine tier {r["evidence_tier"]}')
-    def test_before_after_ro_25_6981(self):
+    def test_ro_25_6981_follows_its_evidence(self):
+        """IT43: only abstract-level values and a transferred behaviour, so unresolved. IT44b: SCI44 package B (primary potency and site) is registered for INV-05 and the engine re-derives the role by itself."""
         _, res = self.rows(); d = {r["name"]: r for r in res}
         self.assertEqual(d["ifenprodil"]["role_derived"], "probe")
-        self.assertEqual(d["Ro 25-6981"]["role_derived"], "unresolved")
+        registered = {p["dir"].parent.name for p in hp.load_all()}
+        if "ro25_6981_sci44_20261110" in registered:
+            self.assertEqual((d["Ro 25-6981"]["evidence_tier"], d["Ro 25-6981"]["role_derived"]), ("PRIMARY", "probe"))
+            self.assertIn("M-R1", d["Ro 25-6981"]["premise_needed"]); self.assertTrue(d["Ro 25-6981"]["comparison_state"].startswith("NOT_COMPARABLE"))   # potencies at different holding potentials are not merged
+        else:
+            self.assertEqual(d["Ro 25-6981"]["role_derived"], "unresolved")
         self.assertEqual(d["d-APV"]["role_derived"], "control")
     def test_decisions_file_is_current(self):
         _, res = self.rows(); got = list(csv.DictReader(open(HERE / "compound_decisions_it43.tsv", encoding="utf-8"), delimiter="\t"))

@@ -7,6 +7,10 @@
   "src": "en",
   "text": "Not executable from this module: no animals or tissue are held and the raw reads are not public. Feasible only by data holders or a new dataset; nothing is sent to anyone from here. Zero-spend preparation is limited to fixing the readout table before any data arrive."
  },
+ "015b28dff8dd": {
+  "src": "en",
+  "text": "The percent of the isolated current removed in the Wwox slice (not measured) and the maximum on triheteromers (not reached in any text read)."
+ },
  "01fe147e4f17": {
   "src": "en",
   "text": "A peptide inhibitor of the chaperone HSC70 (HSPA8) used as a cell-level probe, with lysosomal and genetic controls (identified by its ChEMBL record below)"
@@ -146,6 +150,10 @@
  "1509c69108ad": {
   "src": "en",
   "text": "Total NMDA-receptor reduction, a GluN2A-weighted component, a general loss of drive, and a bath-state (magnesium, potassium) effect."
+ },
+ "16379e0ed430": {
+  "src": "en",
+  "text": "A second tool of the same site controls chemotype only; with primary potency and site now read it can be used after the first tool has shown a removable share."
  },
  "166039e85da5": {
   "src": "en",
@@ -362,10 +370,6 @@
  "3168a29cd7dc": {
   "src": "it",
   "text": "Capire quale di tre letture spiega lo scoppio di attività nelle fette (guadagno NMDAR, dipendenza permissiva, spinta AMPAR) e se dipende dal blocco da magnesio; serve prima la corrente NMDAR isolata (E1). IT13: servono bracci WT+WWOX e WWOX mutato (morto), l'organoide come unità, cieco, e due silenziatori indipendenti con lavaggio; la scarica da sola resta sintomatica."
- },
- "320a244de269": {
-  "src": "en",
-  "text": "One verifier-read source; the pyramidal share of the pooled cells is inferred; no Wwox neuron has been tested."
  },
  "32e98ceb59e0": {
   "src": "en",
@@ -595,10 +599,6 @@
   "src": "en",
   "text": "E3 - card reviewed with assertions; no WWOX-side result read beyond abstract"
  },
- "4b71e3104420": {
-  "src": "en",
-  "text": "Read primary sources for maximum effect and site only if a further chemotype is needed. For that second tool the first step is reading its primary source; no new measurement is needed for that."
- },
  "4d6578e29718": {
   "src": "en",
   "text": "INV-13"
@@ -730,6 +730,10 @@
  "5fafbc4d14eb": {
   "src": "en",
   "text": "Queried on 2026-11-07: the IT28 P3 HDAC5 batch, the IT29 P10 question record, the IT29 P11 residue and identity records of compound X, the IT22 P6 reverse record and rows WO-29 and WO-30 of the open-questions map. A search of this module, not a statement about the literature. The vorinostat thread is an already-known internal reference, not an independent source of support."
+ },
+ "5fd2e3b6e3a1": {
+  "src": "en",
+  "text": "Use only after the first tool has shown a removable share, in the same preparation at a saturating concentration, with a zinc-chelator arm to read the triheteromer ceiling."
  },
  "5fe4b6e74a85": {
   "src": "en",
@@ -910,10 +914,6 @@
  "74f2218ad0d4": {
   "src": "en",
   "text": "Whether an interaction term survives; a wild-type effect of the same size would move this thread out of its group without any new compound being involved."
- },
- "7737f1d33ff1": {
-  "src": "en",
-  "text": "In knockout, heterozygote and wild-type slices: sag, resting potential, input resistance, rebound and burst incidence before and after two Ih blockers of different chemotypes (the second so that an off-target action is not read as Ih), with a current-clamp step that matches the resting potential and the peak potential, with a smaller cell or immature membrane listed as its own candidate beside branch D, and a voltage-clamp read of the blocker-sensitive current in a subset of cells; animals, not cells, are the replicates. Branch D adds the potassium-current arm: the potassium currents sensitive to a Kv7 blocker and to a Kir-channel blocker in voltage clamp, and input resistance read with synaptic transmission blocked. [IT36] A first-generation Ih blocker at 50 uM is about 40 times its sodium-current IC50 in DRG neurons (age not stated); read a second chemotype and the blocker-sensitive current in voltage clamp; nickel/Z944 and Kv7 arms separate. [IT40] A4 Report access resistance, bridge balance and capacitance by genotype; add a Ba2+- or Kv7-blocker-sensitive difference current with its zero-crossing against E_K (about -97 to -98 mV from the declared solutions; the recorded potentials need a junction correction of about -13 mV that 34634460 did not measure, which puts the estimated sag peaks about 16-21 mV below E_K, so the prediction applies to the voltage-clamp difference current, not to the sag peak). [SCI43] Order of arms: (0) capacitance measured directly by genotype and the cell-selection rule stated (pyramidal identity was confirmed from Rin and tau); (1) the same cells with and without synaptic blockers, in bursting and non-bursting slices; (2) Ba2+-sensitive current per pF and Rin share (a low micromolar concentration; a higher concentration and a K2P-blocker group as 2b); (3) XE-991-sensitive current at about −55 to −45 mV, not at rest, with a second Kv7 blocker; (4) current sensitive to an Ih blocker, repeated with a second Ih blocker; (5) dynamic-clamp leak of about 2.7 nS as sufficiency only, with a control leak at the WT rest; (6) an opener only after step 3. An implied reversal near E_K does not separate a K+ loss from a smaller cell with a shunt. [SCI44] Add a KATP arm to step 2b: perforated or cell-attached recording with ATP undisturbed, diazoxide and a sulfonylurea in KO and wild type, lactate or pyruvate add-back; state pipette ATP and glucose. Juvenile barrel-cortex neurons show KATP modulation of Vm, Rin and firing and lactate-driven KATP closure (34766906); this is a conditional metabolic upstream of the K branch (PH4), not a repair."
  },
  "775302e45683": {
   "src": "it",
@@ -1131,10 +1131,6 @@
   "src": "en",
   "text": "Against the wild-type floor about 20 percent of the delayed evoked response remains under it (figure-read, inference), which is not evidence of incomplete block."
  },
- "8fb495099fdd": {
-  "src": "en",
-  "text": "No maximum effect, species or assay context in the catalogue; no approval statement in the catalogue. A second ifenprodil-site tool, moved here from the tool entry: only abstract-level values were reached and its triheteromer behaviour is transferred from another compound, so it is not a tool for this comparison until its primary source is read."
- },
  "8fb812a48744": {
   "src": "en",
   "text": "INV-11"
@@ -1227,6 +1223,10 @@
   "src": "en",
   "text": "Should this thread stay in the selection, given that its only pharmacology acts against a second need of the same objective?"
  },
+ "993d13c777dd": {
+  "src": "en",
+  "text": "No maximum inhibition in any text read; a native value reported by eye is not transferable; two of the sources share one recording solution and are not independent; the salt differs between papers."
+ },
  "99419c94b5b8": {
   "src": "en",
   "text": "Up: a primary source giving site and maximum effect. Down: nothing needed unless the tool and the clinical-stage compound do not give a chemotype control."
@@ -1239,9 +1239,17 @@
   "src": "en",
   "text": "Clinical reports only. Children counted once across 14 reports: 36 to 38 exposed to at least one of vigabatrin, hormonal therapy, ketogenic diet or cannabidiol (partial full-text depth in 11 reports, one source at abstract level). Both a symptomatic and a developmental outcome are recorded for 6. In 4 of them, a partial or transient improvement came with no developmental progress recorded; in 2, neither moved. No sustained, instrumented response is recorded, and no developmental gain follows any of the four classes. Vigabatrin: 5 children with both endpoints in 4 reports (4 discordant, 1 concordant non-response); these are not independent of the other classes, since three of the five also supply them and all five were on co-therapy. Children with both endpoints, by class, of those exposed: hormonal 3 of 11; ketogenic diet 2 of 12; cannabidiol 1 of 7. Counts only, no percentage (n below 10). Developmental statements are clinical narratives without a scale. A brain-imaging safety signal is recorded beside them in two children (abstract level, a report selected for the finding), so it is not a frequency. No WWOX child is recorded with a developmental gain after a symptomatic improvement. Four children in three reports (two of them in one report) had a partial, transient or clinically-defined improvement with development not progressing; two had neither. That is what the baseline in other genetic and structural early-onset encephalopathies predicts (a responder with poor development is the majority outcome in infantile spasms and near-universal in genetic strata), so it is not by itself a WWOX-specific feature. The comparison holds only as a binary: the baseline uses standardised scores with a cut, every WWOX developmental statement is a clinician narrative, and no WWOX child had a sustained, instrumented response. Non-WWOX DEE baseline (batch_sci_20261105 a2_baseline; not WWOX evidence): in a prospective IESS cohort read at partial full-text depth, 72 percent of responders (126 of 175, computed from its Table 1) were below the developmental cut at 3 years, and no genetic-aetiology child reached a favourable outcome (0 of 49, a count over all genetic-aetiology children, not a responder rate). In two randomised IESS trials (abstract level), arms that raised early spasm cessation by 15 to 19 points showed no demonstrated developmental difference, with about one chance in four of detecting the difference that full mediation would predict. In TSC, two randomised trials of pre-onset prevention changed seizure endpoints without changing development to 36 months; they test prevention before onset, not response after onset. The person-level association (ICISS, abstract level: 15.9 VABS points higher with early cessation) is carried by unknown aetiology and a normal first neurological examination. [IT36] the 2024 vigabatrin case: developmental statements uninstrumented, stall from spasm onset before drug; seizure-free at home while video-EEG still showed events. [IT39] The transfer from KCNQ2 and TSC is analogy; genotype stratification is established for mortality only; lithium is not the only existing-drug node (ethosuximide was also tested)."
  },
+ "998e6b4ee869": {
+  "src": "en",
+  "text": "A second ifenprodil-site tool: primary potency and site are read, no maximum inhibition and no triheteromer figure"
+ },
  "99973bd6aa30": {
   "src": "en",
   "text": "A WWOX-deficient neural measurement showing over-active checkpoint signalling that harms the cell."
+ },
+ "9a3b125b4b5f": {
+  "src": "en",
+  "text": "Read primary sources for maximum effect and site only if a further chemotype is needed."
  },
  "9a753a5daea3": {
   "src": "en",
@@ -1339,6 +1347,10 @@
   "src": "en",
   "text": "IT21 P4a (IT21P2-0057)"
  },
+ "a7e995a23448": {
+  "src": "en",
+  "text": "In knockout, heterozygote and wild-type slices: sag, resting potential, input resistance, rebound and burst incidence before and after two Ih blockers of different chemotypes (the second so that an off-target action is not read as Ih), with a current-clamp step that matches the resting potential and the peak potential, with a smaller cell or immature membrane listed as its own candidate beside branch D, and a voltage-clamp read of the blocker-sensitive current in a subset of cells; animals, not cells, are the replicates. Branch D adds the potassium-current arm: the potassium currents sensitive to a Kv7 blocker and to a Kir-channel blocker in voltage clamp, and input resistance read with synaptic transmission blocked. [IT36] A first-generation Ih blocker at 50 uM is about 40 times its sodium-current IC50 in DRG neurons (age not stated); read a second chemotype and the blocker-sensitive current in voltage clamp; nickel/Z944 and Kv7 arms separate. [IT40] A4 Report access resistance, bridge balance and capacitance by genotype; add a Ba2+- or Kv7-blocker-sensitive difference current with its zero-crossing against E_K (about -97 to -98 mV from the declared solutions; the recorded potentials need a junction correction of about -13 mV that 34634460 did not measure, which puts the estimated sag peaks about 16-21 mV below E_K, so the prediction applies to the voltage-clamp difference current, not to the sag peak). [SCI43] Order of arms: (0) capacitance measured directly by genotype and the cell-selection rule stated (pyramidal identity was confirmed from Rin and tau); (1) the same cells with and without synaptic blockers, in bursting and non-bursting slices; (2) Ba2+-sensitive current per pF and Rin share (a low micromolar concentration; a higher concentration and a K2P-blocker group as 2b); (3) XE-991-sensitive current at about −55 to −45 mV, not at rest, with a second Kv7 blocker; (4) current sensitive to an Ih blocker, repeated with a second Ih blocker; (5) dynamic-clamp leak of about 2.7 nS as sufficiency only, with a control leak at the WT rest; (6) an opener only after step 3. An implied reversal near E_K does not separate a K+ loss from a smaller cell with a shunt. [SCI44] Add a KATP arm to step 2b: perforated or cell-attached recording with ATP undisturbed, diazoxide and a sulfonylurea in KO and wild type, lactate or pyruvate add-back; state pipette ATP and glucose. Juvenile barrel-cortex neurons show KATP modulation of Vm, Rin and firing and lactate-driven KATP closure (34766906); this is a conditional metabolic upstream of the K branch (PH4), not a repair. [SCI44-C] The KATP arm of step 2b carries a size expectation: in juvenile barrel cortex the KATP share of resting conductance is about 11-17 percent (INFERENZA, upper bound, ATP-free whole-cell, glutamatergic regular-spiking cells, species and temperature unstated), so a KATP deficit alone would not account for 28 percent; state pipette ATP, record per-cell temperature and cell identity. The Wwox whole-cell internal solution contains 2 mM Na2ATP, so a lactate-closed KATP conductance is weakened for the published values and kept for ATP-undisturbed recordings."
+ },
  "a82ca696fd04": {
   "src": "en",
   "text": "Known in the WWOX system: the observations are in the need record (O1 to O4); the row restates work-order question WO-33 as the one question behind the MYC-directed proposals."
@@ -1406,6 +1418,10 @@
  "aca79cf8612e": {
   "src": "en",
   "text": "WWOX-system: a T-type blocker suppressed the late phase of the provoked seizure score in the null mouse, one experiment, genotype specificity not established by an interaction. Catalogue: direction-coherent blocker actions on CACNA1G, CACNA1H and CACNA1I, at group and single-protein level, from curated mechanism rows. [IT39] The panel of 'structurally unrelated' antagonists is not independent: two of the listed antagonists are the same molecule under different names (one of them is Z944), and Z944 and TTA-P2 share a core chemical scaffold."
+ },
+ "ad2c57c724a7": {
+  "src": "en",
+  "text": "One laboratory's pooled cells; the pyramidal share is inferred and the KATP share of resting conductance is about 11-17 percent (upper bound), so alone it would not account for the 28 percent loss; the two sulfonylureas also act on other currents and a bath drug may act through network or astrocytic routes; no Wwox neuron has been tested."
  },
  "ad96353e723f": {
   "src": "en",
@@ -1582,10 +1598,6 @@
  "c3e2690b7bed": {
   "src": "en",
   "text": "A lactate-side probe: the sign depends on the cell compartment"
- },
- "c47d0c8a430d": {
-  "src": "en",
-  "text": "The pipette ATP and bath glucose of the recordings, and whether lactate is raised in the knockout slice; whole-cell dialysis can mask the effect."
  },
  "c49c9b6c64b0": {
   "src": "en",
@@ -1919,6 +1931,10 @@
   "src": "en",
   "text": "Weak; edge supported outside neural cells; no CNS exposure data for the topical drug"
  },
+ "ebea0e6c4579": {
+  "src": "en",
+  "text": "Negative allosteric modulation of GluN2B-containing receptors at the interface site, as a second tool of the same site."
+ },
  "ed04c567319d": {
   "src": "en",
   "text": "NMDA-receptor-regenerative drive (GluN2B- or GluN2A-weighted), a general loss of excitatory drive, and a recording-state artefact. Kainate receptors are not separated from AMPA receptors by the usual tools."
@@ -1942,6 +1958,10 @@
  "f14a046dda3f": {
   "src": "en",
   "text": "Inactivation of GABA transaminase raises GABA; the registry rows are affinity values for compounds that act irreversibly."
+ },
+ "f15f337a42a6": {
+  "src": "en",
+  "text": "Up: a removable share already seen with the first tool and a second tool of the same site agreeing. Down: a ceiling like the first tool's, which adds a chemotype and nothing else."
  },
  "f1daa8db7ed6": {
   "src": "en",
@@ -1987,6 +2007,10 @@
   "src": "en",
   "text": "Generated by LEGEND (generator refresh IT21 P2, proposal IT21P2-0195, harm arm of the cytokine question); a thread already generated in IT9 and re-emitted, qualified in IT21 P4a and kept conditional with the scope narrowed to mouse glial systems."
  },
+ "f887b5168bee": {
+  "src": "en",
+  "text": "The published whole-cell recordings used 2 mM Na2ATP in the pipette, which would mask a lactate-closed conductance; bath glucose and whether lactate is raised in the knockout slice are not measured."
+ },
  "f8c3ae2a2f19": {
   "src": "en",
   "text": "NMDAR antagonism (the carded tool compound and the clinically used class)"
@@ -2026,6 +2050,10 @@
  "fdba233e1765": {
   "src": "en",
   "text": "In cells the compound stabilises HIF1alpha, the opposite of the intended effect, because concentrations that inhibit the intended demethylase overlap those that inhibit the prolyl hydroxylases; the intended target is also the least expressed family member in the WWOX-deficient organoid and absent in the human progenitor data. The route is the one that made another HIF-pathway agent a drop in IT9."
+ },
+ "fdd45467216d": {
+  "src": "en",
+  "text": "No maximum effect, species or assay context in the catalogue; no approval statement in the catalogue."
  },
  "fe1eff02f6cc": {
   "src": "en",
