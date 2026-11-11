@@ -335,9 +335,9 @@ S5	Methaqualone	CAT:DGIDB:1b246c981b29	dgidb_only	GABRB3	ChEMBL	positive modulat
 S5	Methaqualone	CAT:DGIDB:1b246c981b29	dgidb_only	GABRG2	ChEMBL	positive modulator	UNKNOWN	listing_only	yes	n/a_has_other_source
 S5	Methaqualone	CAT:DGIDB:1b246c981b29	dgidb_only	GABRA3	ChEMBL	positive modulator	UNKNOWN	listing_only	yes	n/a_has_other_source
 S5	Methaqualone	CAT:DGIDB:1b246c981b29	dgidb_only	GABRA5	ChEMBL	positive modulator	UNKNOWN	listing_only	yes	n/a_has_other_source
-S5	Zk-93423	CAT:DGIDB:1c50c91251c5	dgidb_only	GABRA1	TTD		UNKNOWN	listing_only	no	n/a_has_other_source
-S5	Zk-93423	CAT:DGIDB:1c50c91251c5	dgidb_only	GABRG2	TTD		UNKNOWN	listing_only	no	n/a_has_other_source
-S5	Zk-93423	CAT:DGIDB:1c50c91251c5	dgidb_only	GABRB2	TTD		UNKNOWN	listing_only	no	n/a_has_other_source
+S5	Zk-93423	CAT:DGIDB:1c50c91251c5	dgidb_only	GABRA1	TTD		UNKNOWN	listing_only	yes	n/a_has_other_source
+S5	Zk-93423	CAT:DGIDB:1c50c91251c5	dgidb_only	GABRG2	TTD		UNKNOWN	listing_only	yes	n/a_has_other_source
+S5	Zk-93423	CAT:DGIDB:1c50c91251c5	dgidb_only	GABRB2	TTD		UNKNOWN	listing_only	yes	n/a_has_other_source
 S5	Mephobarbital	CAT:DGIDB:1dd9e5add469	dgidb_only	GABRA1	TdgClinicalTrial		UNKNOWN	listing_only	no	n/a_has_other_source
 S5	Mephobarbital	CAT:DGIDB:1dd9e5add469	dgidb_only	GABRA1	TTD		UNKNOWN	listing_only	no	n/a_has_other_source
 S5	Mephobarbital	CAT:DGIDB:1dd9e5add469	dgidb_only	GABRA1	TEND		UNKNOWN	listing_only	no	n/a_has_other_source
