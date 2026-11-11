@@ -12,7 +12,7 @@ import cell_context as cc
 HERE = Path(__file__).resolve().parent; DR = HERE.parent
 csv.field_size_limit(10**9)
 R = lambda f: list(csv.DictReader(open(f, encoding="utf-8"), delimiter="\t"))
-F = ["relation_id", "molecule", "name", "situation", "reached_by", "identity", "action", "transfer_to_context", "possible_benefit", "next_verification", "role", "role_basis", "engine_verdicts", "downstream_mentions"]
+F = ["relation_id", "molecule", "name", "molecule_group", "situation", "reached_by", "identity", "action", "transfer_to_context", "possible_benefit", "next_verification", "role", "role_basis", "engine_verdicts", "downstream_mentions"]
 DOWN = [DR / "generation_it41_20261109/compound_view.tsv", DR / "ranking_it8_p9_20261029/investigations_it20.tsv", DR / "batch_sci_20261105/map/open_questions_map.tsv",
         DR / "generation_it40_20261109/conditional_proposals_it40.tsv", DR / "view/index.en.html"]
 
@@ -36,6 +36,15 @@ def situation(role, status, verdicts, pointer, in_mech):
     if "UNKNOWN" in verdicts:
         return "U_verdict_unknown"
     return "E_excluded_and_kept"            # the engine says opposite or unsupported action; the row stays, with its reason in the engine columns
+
+
+SALTS = r"\b(hydrochloride|hydrobromide|sodium|calcium|potassium|mesylate|maleate|tartrate|sulfate|acetate|citrate)\b"
+
+
+def group_key(name):
+    """one key per molecule family inside a relation: case, a radiolabel bracket and a salt word do not make a new molecule (two structures that differ otherwise stay two)"""
+    n = re.sub(r"\[[0-9]*h\]", "", name.lower()); n = re.sub(SALTS, "", n)
+    return re.sub(r"[^a-z0-9]+", " ", n).strip()
 
 
 def mentions(names, txt):
@@ -68,7 +77,7 @@ def build():
                "none unless the exclusion premise changes (see the engine columns)")
         names = {r["name"].lower(), mol.lower()}
         hits = mentions(names, txt)
-        out.append(dict(relation_id=rid, molecule=r["molecule"], name=r["name"], situation=sit, reached_by=reached, identity=ident, action=action,
+        out.append(dict(relation_id=rid, molecule=r["molecule"], name=r["name"], molecule_group=group_key(r["name"]), situation=sit, reached_by=reached, identity=ident, action=action,
                         transfer_to_context=ctx.get(rid, "no target symbols for this relation"), possible_benefit="IPOTESI: " + (rel.get("hypothesised_benefit") or "not stated"),
                         next_verification=nxt, role=r["role"], role_basis=r["role_basis"], engine_verdicts=v, downstream_mentions=hits))
     # activity-only pointers have no row in the role table: give them one, with the same six fields (situation B)
@@ -88,7 +97,7 @@ def build():
             nm = p.get("catalogue_name") or p.get("name") or p["parent_chembl_id"]
             sit = "C_probe_or_reagent" if p["catalogue_status"] == "tool_probe" else "B_reached_by_activity_only"
             hits = mentions({nm.lower(), p["parent_chembl_id"].lower()}, txt)
-            out.append(dict(relation_id=rid, molecule="CAT:" + p["parent_chembl_id"], name=nm, situation=sit, reached_by="activity read", identity=p["catalogue_status"],
+            out.append(dict(relation_id=rid, molecule="CAT:" + p["parent_chembl_id"], name=nm, molecule_group=group_key(nm), situation=sit, reached_by="activity read", identity=p["catalogue_status"],
                             action="activity only, direction not read (ACTIVITY_ONLY)", transfer_to_context=ctx.get(rid, "no target symbols for this relation"),
                             possible_benefit="IPOTESI: " + (rel.get("hypothesised_benefit") or "not stated"),
                             next_verification="qualify as a tool: identity, selectivity, system" if sit == "C_probe_or_reagent" else "read the primary documents (activity only)",
@@ -101,7 +110,7 @@ if __name__ == "__main__":
     with open(HERE / "ladder_it46.tsv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, F, delimiter="\t", lineterminator="\n"); w.writeheader(); w.writerows(rows)
     from collections import Counter
-    print(len(rows), "rows;", dict(Counter(r["situation"] for r in rows)))
+    print(len(rows), "rows;", len({(r["relation_id"], r["molecule_group"]) for r in rows}), "distinct molecule groups;", dict(Counter(r["situation"] for r in rows)))
     for s in sorted({r["situation"] for r in rows}):
         sub = [r for r in rows if r["situation"] == s]
         print(f"  {s}: {len(sub)} rows, {sum(1 for r in sub if r['downstream_mentions'] == 0)} with no downstream mention")

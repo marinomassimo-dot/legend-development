@@ -44,6 +44,11 @@ class Ladder(unittest.TestCase):
         self.assertTrue(u)
         self.assertTrue(all(r["next_verification"] != "none unless the exclusion premise changes (see the engine columns)" for r in u))
 
+    def test_the_same_molecule_under_four_names_is_one_group(self):
+        g = {r["name"]: r["molecule_group"] for r in self.rows if r["relation_id"] == "S7" and "tiagabine" in r["name"].lower()}
+        self.assertGreaterEqual(len(g), 3)
+        self.assertEqual({"tiagabine"}, set(g.values()))
+
     def test_the_hcn1_probe_pointer_is_a_probe_with_a_context_sentence(self):
         r = [x for x in self.rows if "CHEMBL6195028" in x["molecule"]]
         self.assertEqual(1, len(r))
