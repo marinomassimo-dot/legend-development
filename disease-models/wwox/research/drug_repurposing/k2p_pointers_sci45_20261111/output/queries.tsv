@@ -1,0 +1,15 @@
+query_id	database_or_route	string_or_url	run_at_utc	hits	what_was_done
+Q01	PubMed MCP convert_article_ids	PMIDs 40365404, 40040241, 39981749, 40635742, 31001961 and Q3 candidates	2026-11-11	PMC ids for 3 of 5 pointers	chose the PMC open-data bucket for the PMC papers
+Q02	PMC open-data bucket, plain curl	PMC12067145, PMC11887051, PMC12237960, PMC12621189 text, jpg and SI pdf	2026-11-11	4 of 4 reachable	text, figures and SI read in scratch
+Q03	Europe PMC REST search	EXT_ID 40040241 and 31001961	2026-11-11	neither in PMC	chose publisher routes
+Q04	doi.org to publisher plain curl	10.1021/acs.jmedchem.4c03146	2026-11-11	403 bot check	Cpd8l recorded unreachable; not retried
+Q05	doi.org to publisher plain curl	10.33594/000000083	2026-11-11	200 open access	article and supplement PDFs read
+Q06	doi.org and jbc.org plain curl	10.1074/jbc.M801273200	2026-11-11	403 bot check on jbc.org	Cohen 2008 unreachable; not retried
+Q07	PubMed search	Cohen/Zilberberg K2P2.1 histidine; Sandoz G Lesage F TREK1 TREK2; Maingret F Lazdunski M; Enyedi P; Zilberberg N; Piechotta (author-led, name-led)	2026-11-11	1, 1, 1, 0, 0, 0	identified 18474599, 19667202, 10480871 (intracellular acid, not used)
+Q08	PubMed search	TREK-1 extracellular pH sensitivity (target-led, 33 hits, both pages titled); KCNK2 acidification (4); other strings on Hill coefficient, temperature, neurons (0 hits)	2026-11-11	37 titles screened	candidates 27129242, 19667202, 42973185 checked; none OA-readable with a slope
+Q09	NCBI efetch pmc XML	PMC2732798, PMC4919449	2026-11-11	publisher disallows XML	not a bot check; one further plain attempt per article only
+Q10	Europe PMC fullTextXML	PMC2732798	2026-11-11	HTTP 500	no further use
+Q11	PMC PDF plain curl	PMC2732798	2026-11-11	captcha page	Sandoz full text unreachable; not retried by another route
+Q12	doi.org plain curl	10.1111/bph.70698 (TREK-1/TASK-4 heterodimers, 2026)	2026-11-11	403 bot check	unreachable; not retried
+Q13	PubMed search	ONO-TR-772; VU6018042	2026-11-11	2; 1	found the follow-up PMID 41104520 and read it
+Q14	PubMed search	TREK-1 inhibitor neurons patch clamp brain slice selective (2025 on)	2026-11-11	2	neither concerns ONO-TR-772
