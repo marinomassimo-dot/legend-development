@@ -9,7 +9,7 @@ for r in rows:
     if "CANDIDATE" in r["engine_verdicts"].split(";"): by[r["relation_id"]][r["role"]] += 1
     elif r["role"] == "physiological_intervention": vis[r["relation_id"]].append(r["name"])
 with open(HERE / "effect_roles_it44.tsv", "w", newline="", encoding="utf-8") as f:
-    w = csv.writer(f, delimiter="\t", lineterminator="\n"); w.writerow(["relation_id", "engine_candidates", "of_which_drug_candidate", "shown_as_probe", "shown_as_reagent_or_control", "shown_as_physiological", "excluded_but_physiological_variable"])
+    w = csv.writer(f, delimiter="\t", lineterminator="\n"); w.writerow(["relation_id", "engine_candidates", "of_which_drug_candidate", "shown_as_probe", "shown_as_reagent_or_control", "shown_as_physiological", "unclassified_by_any_rule", "excluded_but_physiological_variable"])
     for rid in sorted(by, key=lambda s: int(s[1:])):
-        c = by[rid]; w.writerow([rid, sum(c.values()), c["candidate"], c["probe"], c["control_or_reagent"], c["physiological_intervention"], "; ".join(vis[rid])])
+        c = by[rid]; w.writerow([rid, sum(c.values()), c["candidate"], c["probe"], c["control_or_reagent"], c["physiological_intervention"], c["unqualified_entity"], "; ".join(vis[rid])])
 print(open(HERE / "effect_roles_it44.tsv").read())

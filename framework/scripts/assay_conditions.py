@@ -41,7 +41,7 @@ SYSTEMS = (  # ordered: the first pattern that matches names the system; a cell 
     ("HEK", r"\bHEK"),
     ("slice", r"\bslices?\b"),
     ("neurons", r"(?<!no )\bneurons?\b|primary culture|cultured|\bDIV\b"),
-    ("purified_protein", r"purified|crystal|cryo-EM|DELFIA|radiolabel|kinase assay|in vitro enzyme|circular dichroism"),
+    ("purified_protein", r"purified|crystal|cryo-EM|DELFIA|radiolabel|(?:kinase|enzyme|activity|coupled) assay|in vitro enzyme|circular dichroism|recombinant (?:human |rat |mouse )?(?:SUMO-)?PDK\d|recombinant [\w-]+ (?:kinase|enzyme)"),
 )
 SOLUTES = (  # canonical name, pattern of how it is written
     ("glycine", r"glycine|\bGly\b"),
