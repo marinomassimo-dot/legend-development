@@ -8,17 +8,22 @@
  "START_UTC": "2026-11-11T09:00:00Z",
  "BASELINE": "main 3f8f17fb. Worktree .claude/worktrees/sci45, branch task/sci45. IT44 (legend-development-4e, task/it44) applied SCI44 package A by folder (8edf3852) and awaits B and C; no IT45 branch or task record at start; HE45 worktree exists. SCI44 landed: A d088b964, B+C+coda 34f93af0, closure 3f8f17fb.",
  "CURRENT_PACKAGE": {
-  "id": "P1 ph_k2p_sci45_20261111",
-  "state": "producer running (og-u, asked sonnet/medium)",
-  "delegate_active": "producer og-u",
+  "id": "P1 delivered; queue Q1 running",
+  "state": "P1 candidate 8331c500 frozen, battery running in /tmp/sci45_batt_8331c500; queue Q1 producer (og-x) on branch task/sci45q",
+  "delegate_active": "Q1 producer",
   "updated": "2026-11-11"
  },
- "RESUME": "Brief committed 873b5dc7; producer og-u dispatched (asked sonnet/medium, background). On return: read back model/effort from census, apply nothing, then write VERIFIER_BRIEF_V5.md (decisive triples), dispatch blind verifier (sonnet/high), then size check (pK, Hill -> required delta-pH), S4 design, S5 hypotheses, README, consumer_delta, delivery to IT44/IT45.",
+ "RESUME": "P1 candidate 8331c500: battery running (clone /tmp/sci45_batt_8331c500, log /tmp/sci45_batt_8331c500.log, wait by PID of run_release_regressions started in that clone). On PASS: record verdict as closure-only commit, task_close.py task/sci45, safe_push.py development main, message IT44 the main SHA. Queue Q1 (worktree sci45q): on producer return, census read-back, dispatch narrow verifier (high) on decisive rows, README/consumer_delta delta, own battery, land second.",
  "DECISIONS_TAKEN": [
   "2026-11-11 S0: perimeter narrowed to TASK-1, TASK-3, TREK-1 (TASK-1 added to the coda's two); the lactate-to-pH step is read as its own question R4; no general K2P review; the 18 SCI44 tool-name strings are not repeated; new strings are pH-led and TASK-led.",
-  "2026-11-11 S0: Wwox Methods already hold 25 mM HCO3-, 35 C, 10 mM glucose, 10 mM HEPES and 2 mM ATP in the pipette (A1.15): not called unknown; bath pH value is not stated."
+  "2026-11-11 S0: Wwox Methods already hold 25 mM HCO3-, 35 C, 10 mM glucose, 10 mM HEPES and 2 mM ATP in the pipette (A1.15): not called unknown; bath pH value is not stated.",
+  "2026-11-11 P1: verifier finding Yao 2017 rechecked by the Orchestrator in the PMC text; size check run1 preregistered (S1 failed), run2 and pools are dated addenda; README states TASK-3 refuted as sufficient, TREK-1 route marginal; P1 delivered to IT44 before landing, queue on branch task/sci45q (battery of P1 stays attributed to 8331c500)."
  ],
- "DELEGATIONS": [],
+ "DELEGATIONS": [
+  "P1 producer og-u: asked sonnet/medium; read back medium x95; 95 turns; output 135,385; cache read 16,244,279; 14 sources partial full text, 21 abstract-level; 14 staged receipts -88",
+  "P1 verifier ks-w (V5): asked sonnet/high; read back high x104; 104 turns; output 120,794; cache read 19,599,752; 63 rows checked, 51 correct, 12 defective; 13 staged receipts -87",
+  "Q1 producer og-x: asked sonnet/medium (queue; K2P tool pointers and TREK-1 slope), receipts -86"
+ ],
  "ESCALATIONS": [],
  "STOP_LOG": [],
  "DEFAULTS_TAKEN": [],
@@ -40,9 +45,9 @@
    "steps": [
     {
      "step": "Package P1 K2P x pH: producer (R1 channels, R2 native, R3 tool identity, R4 lactate-pH in tissue), blind verifier, corrections, S4 design, S5 hypotheses, delivery to IT45",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "producer + V5 verifier + corrections + Orchestrator recheck of Yao 2017; README, consumer_delta (12 rows), tables; delivered to IT44; landing pending battery"
     }
    ]
   },
@@ -51,9 +56,9 @@
    "steps": [
     {
      "step": "Queue S8, one at a time, only after P1 delivery: pointer qualification, open premise, Harness anomaly, small public-data reanalysis, DREAM to another lever, next brief",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "Q1 producer dispatched on sci45q: K2P tool pointers (ONO-TR-772 etc.) and TREK-1 pH slope"
     }
    ]
   }
