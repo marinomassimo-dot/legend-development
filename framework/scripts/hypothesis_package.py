@@ -140,24 +140,66 @@ def load_package(pkg: Path) -> dict:
             "links": links, "refs": refs, "probe_text": probe_text}
 
 
-def load_comparison(pkg: Path) -> dict:
-    """A pharmacological comparison: comparison.tsv rows (keyed by the first column, the text before ' ('), new_measurements.tsv, decisive.tsv."""
+def _file_state(path: Path) -> tuple[str, int]:
+    """MISSING / EMPTY (no data row) / OK, with the number of data rows."""
+    if not path.is_file():
+        return "MISSING", 0
+    with open(path, newline="", encoding="utf-8") as f:
+        n = sum(1 for _ in csv.DictReader(f, delimiter="\t"))
+    return ("OK" if n else "EMPTY"), n
+
+
+def comparison_source(pkg: Path) -> dict:
+    """Which folder holds the comparison rows of a package, declared and never guessed.
+
+    Candidates, in this order: `output/` (the historical layout), `engine/`, the package folder itself. A folder is a candidate when it holds a comparison.tsv.
+    One candidate: it is the source. Several byte-identical: the first, with the copies named. Several that differ: AMBIGUOUS_SOURCE, nothing is read from any of
+    them (a silent pick would change the data); the manifest can end the ambiguity by naming the exact folder as the package `dir`. None: COMPARISON_FILE_MISSING.
+    A source with no data row is EMPTY_COMPARISON, and a missing new_measurements.tsv is MEASUREMENTS_FILE_MISSING: both are states of the read, never 'no comparisons'."""
     pkg = Path(pkg)
-    out = pkg / "output" if (pkg / "output").is_dir() else pkg
+    found = [c for c in (pkg / "output", pkg / "engine", pkg) if (c / "comparison.tsv").is_file()]
+    legacy = pkg / "output" if (pkg / "output").is_dir() else pkg
+    info = {"candidates": [c.name if c != pkg else "." for c in found], "dir": legacy, "state": "OK", "diagnosis": ""}
+    if not found:
+        info.update(state="COMPARISON_FILE_MISSING", diagnosis=f"no comparison.tsv in {', '.join(str(c.relative_to(pkg)) or '.' for c in (pkg / 'output', pkg / 'engine', pkg))}")
+        return info
+    if len(found) > 1:
+        blobs = {c: (c / "comparison.tsv").read_bytes() for c in found}
+        if len(set(blobs.values())) > 1:
+            rows = {c.name: _file_state(c / "comparison.tsv")[1] for c in found}
+            info.update(state="AMBIGUOUS_SOURCE", diagnosis=f"comparison.tsv differs between {', '.join(rows)} (data rows {rows}); name the folder in the manifest")
+            return info
+        info["diagnosis"] = f"identical copies in {', '.join(c.name for c in found[1:])}; {found[0].name} read"
+    info["dir"] = found[0]
+    st, n = _file_state(found[0] / "comparison.tsv")
+    if st == "EMPTY":
+        info.update(state="EMPTY_COMPARISON", diagnosis=f"{found[0].name}/comparison.tsv has no data row: a read state, not evidence that no comparison exists")
+    elif not (found[0] / "new_measurements.tsv").is_file():
+        info.update(state="MEASUREMENTS_FILE_MISSING", diagnosis=f"{found[0].name}/new_measurements.tsv is missing")
+    return info
+
+
+def load_comparison(pkg: Path) -> dict:
+    """A pharmacological comparison: comparison.tsv rows (keyed by the first column, the text before ' ('), new_measurements.tsv, decisive.tsv.
+    The folder read, the candidates seen and a state with its diagnosis travel with the rows (`source`, `candidates`, `state`, `diagnosis`)."""
+    info = comparison_source(Path(pkg))
+    out = info["dir"]
     refs, rows, meas, dec = {}, {}, {}, {}
-    for r, ref in _tsv_lined(out / "comparison.tsv"):
-        k = r[next(iter(r))].split(" (")[0].strip()   # the first column is the row key (hyp_id in one package, row_id in another)
-        rows[k] = r
-        refs[f"cmp:{k}"] = ref
-    for r, ref in _tsv_lined(out / "new_measurements.tsv"):
-        meas[r["meas_id"]] = r
-        refs[f"meas:{r['meas_id']}"] = ref
-    dp = out / "decisive.tsv"
-    if dp.exists():
-        for r, ref in _tsv_lined(dp):
-            dec[r["prop_id"]] = r
-            refs[f"dec:{r['prop_id']}"] = ref
-    return {"role": "pharmacological_comparison", "dir": out, "cmp": rows, "meas": meas, "dec": dec, "refs": refs}
+    if info["state"] != "AMBIGUOUS_SOURCE":
+        for r, ref in (_tsv_lined(out / "comparison.tsv") if (out / "comparison.tsv").is_file() else []):
+            k = r[next(iter(r))].split(" (")[0].strip()   # the first column is the row key (hyp_id in one package, row_id in another)
+            rows[k] = r
+            refs[f"cmp:{k}"] = ref
+        for r, ref in (_tsv_lined(out / "new_measurements.tsv") if (out / "new_measurements.tsv").is_file() else []):
+            meas[r["meas_id"]] = r
+            refs[f"meas:{r['meas_id']}"] = ref
+        dp = out / "decisive.tsv"
+        if dp.exists():
+            for r, ref in _tsv_lined(dp):
+                dec[r["prop_id"]] = r
+                refs[f"dec:{r['prop_id']}"] = ref
+    return {"role": "pharmacological_comparison", "dir": out, "cmp": rows, "meas": meas, "dec": dec, "refs": refs,
+            "source": out.name, "candidates": info["candidates"], "state": info["state"], "diagnosis": info["diagnosis"]}
 
 
 def _need_ids() -> set[str]:
@@ -199,6 +241,8 @@ def validate(pkg: dict, needs: set[str] | None = None, invs: dict | None = None,
     errs = []
     if pkg.get("role") == "pharmacological_comparison":
         w = f"{pkg['dir'].parent.name} comparison"
+        if pkg.get("state", "OK") != "OK":
+            errs.append(f"{w}: {pkg['state']}: {pkg['diagnosis']}")
         if pkg.get("inv_id") not in invs:
             errs.append(f"{w}: manifest inv_id {pkg.get('inv_id')!r} not in the investigations table")
         for k, r in pkg["meas"].items():
@@ -330,8 +374,9 @@ def record_for(pkgs: list[dict], inv_id: str) -> dict:
 
 def comparison_for(pkgs: list[dict], inv_id: str) -> dict:
     """The pharmacological comparison rows of the packages the manifest ties to this investigation: a different kind of record, not merged with hypotheses."""
-    out = []
+    out, sources = [], []
     for pkg in (p for p in pkgs if p.get("role") == "pharmacological_comparison" and p.get("inv_id") == inv_id):
+        sources.append({"package": pkg["dir"].parent.name, "source": pkg.get("source"), "state": pkg.get("state", "OK"), "diagnosis": pkg.get("diagnosis", "")})
         known_d = set(pkg["dec"])
         for k, r in pkg["cmp"].items():
             meas = [m for m in pkg["meas"].values() if k in _blocked_keys(m["blocks_which_comparison_row"], pkg["cmp"])]
@@ -344,7 +389,9 @@ def comparison_for(pkgs: list[dict], inv_id: str) -> dict:
                         "qualifier_cells": {c: r[c] for c in r if c.startswith("compound_or_probe") or c.endswith("_limits") or c.startswith("conditions") or c.startswith("outcome_")},
                         "source_refs": {f"cmp:{k}": pkg["refs"][f"cmp:{k}"], **{f"meas:{m['meas_id']}": pkg["refs"][f"meas:{m['meas_id']}"] for m in meas},
                                         **{f"dec:{t}": pkg["refs"][f"dec:{t}"] for t in d_hit}}})
-    return {"inv_id": inv_id, "state": "COMPARISON_PRESENT" if out else "NO_COMPARISON_LISTED", "rows": out}
+    unread = [x for x in sources if x["state"] != "OK"]
+    state = "COMPARISON_PRESENT" if out else "COMPARISON_NOT_READ" if unread else "NO_COMPARISON_LISTED"   # a package that could not be read is not a package with no comparison
+    return {"inv_id": inv_id, "state": state, "rows": out, "sources": sources}
 
 
 def _brief(rec: dict) -> str:

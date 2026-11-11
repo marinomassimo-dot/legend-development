@@ -124,27 +124,34 @@ def _activities(request: dict, out: dict, fetch) -> dict:
         params = f"target_chembl_id={quote(target)}&{params}"
     if request.get("molecule"):
         params += f"&molecule_chembl_id={quote(str(request['molecule']))}"
+    # `molecules` (a list of ChEMBL ids): the read is restricted to those molecules, in batches of 50 ids (a bounded read of the part that matters when the whole target is too large)
+    mols = [str(x).strip() for x in (request.get("molecules") or []) if str(x).strip()]
+    batches = [f"{params}&molecule_chembl_id__in={quote(','.join(mols[i:i + 50]))}" for i in range(0, len(mols), 50)] or [params]
     rows, total, offset = [], None, 0
-    while len(rows) < cap:
-        url = f"{BASE}/activity.json?{params}&limit={min(200, cap - len(rows))}&offset={offset}"
-        out["requests_sent"].append(url)
-        status, payload = _get(fetch, url, "activities")
-        if status != 200 or not isinstance(payload, dict):
-            out["error"] = f"HTTP {status}: {str(payload)[:300]}"
-            out["hits"] = [dict(h) for h in rows]
-            out["retrieved"] = len(rows)
-            out["total_count"] = total
-            out["coverage"] = "PARTIAL_ERROR" if rows else "NOT_READ"
-            out["next_offset"] = offset
-            out["scope"] = {"target": target or None, "types": types, "molecule": request.get("molecule")}
-            out["note"] = (out.get("note", "") + f" PARTIAL: the page at offset {offset} failed; {len(rows)} of {total} rows read. A rerun through a caching fetch reads only what is missing.").strip()
-            return out
-        total = (payload.get("page_meta") or {}).get("total_count", total)
-        page = payload.get("activities") or []
-        rows += page
-        offset += len(page)
-        if not page or not (payload.get("page_meta") or {}).get("next"):
-            break
+    for batch_params in batches:
+        offset, batch_total = 0, None
+        while len(rows) < cap:
+            url = f"{BASE}/activity.json?{batch_params}&limit={min(200, cap - len(rows))}&offset={offset}"
+            out["requests_sent"].append(url)
+            status, payload = _get(fetch, url, "activities")
+            if status != 200 or not isinstance(payload, dict):
+                out["error"] = f"HTTP {status}: {str(payload)[:300]}"
+                out["hits"] = [dict(h) for h in rows]
+                out["retrieved"] = len(rows)
+                so_far = total if batch_total is None else (total or 0) + batch_total   # totals of the batches read, plus the part of this one that answered
+                out["total_count"] = so_far
+                out["coverage"] = "PARTIAL_ERROR" if rows else "NOT_READ"
+                out["next_offset"] = offset
+                out["scope"] = {"target": target or None, "types": types, "molecule": request.get("molecule"), "molecules": len(mols) or None}
+                out["note"] = (out.get("note", "") + f" PARTIAL: the page at offset {offset} failed; {len(rows)} of {so_far} rows read. A rerun through a caching fetch reads only what is missing.").strip()
+                return out
+            batch_total = (payload.get("page_meta") or {}).get("total_count", batch_total)
+            page = payload.get("activities") or []
+            rows += page
+            offset += len(page)
+            if not page or not (payload.get("page_meta") or {}).get("next"):
+                break
+        total = (total or 0) + (batch_total or 0) if batch_total is not None or total is not None else None
     assays, assay_failed = {}, 0
     ids = sorted({r.get("assay_chembl_id") for r in rows if r.get("assay_chembl_id")})
     for i in range(0, len(ids), 40):
@@ -174,7 +181,7 @@ def _activities(request: dict, out: dict, fetch) -> dict:
                             "non_gene_target": tg["non_gene_target"] if tg else None})
     out["total_count"], out["retrieved"] = total, len(rows)
     out["truncated"] = bool(total is not None and len(rows) < total)
-    out["scope"] = {"target": target or None, "types": types, "molecule": request.get("molecule")}
+    out["scope"] = {"target": target or None, "types": types, "molecule": request.get("molecule"), "molecules": len(mols) or None}
     out["status"] = "MATCH_FOUND" if rows else "NO_MATCH_FOUND"
     out["coverage"] = ("TRUNCATED" if out["truncated"] else "COMPLETE_ASSAY_CONTEXT_MISSING" if assay_failed else
                        "COMPLETE_TARGET_GENES_MISSING" if genes_failed else "COMPLETE")

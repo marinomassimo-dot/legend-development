@@ -1,0 +1,144 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "PLAN-HE45-CORRECT-COMPARISONS-EVIDENCE-SELECTION-COST-20261111",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "plan",
+ "PRIORITY": "HIGH",
+ "assigned_on": "2026-11-11",
+ "OBJECTIVE": "HE45: correct comparisons (units and conditions, composition, loader engine/), evidence selection (aggregates, volume filters, entity role), cache of the activity path, one measured cost reduction, DREAM, cleanup.",
+ "worktree": ".claude/worktrees/he45",
+ "branch": "task/he45",
+ "CURRENT_STATE": "IN_PROGRESS",
+ "CHECKPOINT": {
+  "last_verified_result": "battery PASS WITH SKIPS (237 targets, 42 skipped) on 0fd43de6; commits d14685a3 and 120c2e29 after it are covered by targeted suites and the gate, not by a battery",
+  "first_incomplete_work": "OBJ_H1",
+  "active_processes": "none",
+  "real_dependencies": "IT44 has not landed (task/it44 holds the engine/ loader and the ATP/scaffold engine edits)",
+  "next_executable_step": "land the increment; then wait for the IT44 landing SHA and patch activity_search.py / entity_roles"
+ },
+ "AUTHORISED_QUEUE_20261111": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_H0": {
+   "order": 1,
+   "title": "Reconcile HE44, IT44, SCI44 on the real tree",
+   "steps": [
+    {
+     "step": "Reconcile HE44, IT44, SCI44 on the real tree",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "HE44 COMPLETE/released; IT44 not landed (battery on a47a92a0 running); SCI44 COMPLETE; consumed: measurement.measure and parent_form by IT44 branch, resolver adopted (e3155dd5); he45_20261111/README.md"
+    }
+   ]
+  },
+  "OBJ_H1": {
+   "order": 2,
+   "title": "Units and conditions in comparisons (ATP mM/uM, missing, generic other)",
+   "steps": [
+    {
+     "step": "Units and conditions in comparisons (ATP mM/uM, missing, generic other)",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "assay_conditions.py + engine call; 21+13 tests; comparison_before_after.tsv; battery 0fd43de6 PASS WITH SKIPS (237 targets, 42 skipped)"
+    }
+   ]
+  },
+  "OBJ_H2": {
+   "order": 3,
+   "title": "Composition and conditions without improper transfer",
+   "steps": [
+    {
+     "step": "Composition and conditions without improper transfer",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "composition and scaffold fields; no structured conditions column exists (README section 1)"
+    }
+   ]
+  },
+  "OBJ_H3": {
+   "order": 4,
+   "title": "Loader engine/ check (six cases)",
+   "steps": [
+    {
+     "step": "Loader engine/ check (six cases)",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "comparison_source in hypothesis_package.py; six cases + tests; README section 2; IT44 merge instruction sent"
+    }
+   ]
+  },
+  "OBJ_H4": {
+   "order": 5,
+   "title": "best_nM, FLOOD threshold, SCREEN_DEPOSIT",
+   "steps": [
+    {
+     "step": "best_nM, FLOOD threshold, SCREEN_DEPOSIT",
+     "status": "IN_PROGRESS",
+     "owner": "plan",
+     "evidence": "findings and summarise() done; activity_search patch (type split, summarise) waits for the IT44 landing SHA"
+    }
+   ]
+  },
+  "OBJ_H5": {
+   "order": 6,
+   "title": "Entity role and the candidate fallback",
+   "steps": [
+    {
+     "step": "Entity role and the candidate fallback",
+     "status": "IN_PROGRESS",
+     "owner": "plan",
+     "evidence": "measured (95 of 195 engine-CANDIDATE rows carry the role only by default); patch of role_of default and eval fallback waits for the IT44 landing"
+    }
+   ]
+  },
+  "OBJ_H6": {
+   "order": 7,
+   "title": "Cache and adapters of the activity path",
+   "steps": [
+    {
+     "step": "Cache and adapters of the activity path",
+     "status": "IN_PROGRESS",
+     "owner": "plan",
+     "evidence": "cache-key defect reproduced; routing through chembl.query waits for the IT44 landing"
+    }
+   ]
+  },
+  "OBJ_H7": {
+   "order": 8,
+   "title": "Real cost reduction on a limited perimeter",
+   "steps": [
+    {
+     "step": "Real cost reduction on a limited perimeter",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "census per window (706k vs 195k mean context per turn); event wait used for the battery"
+    }
+   ]
+  },
+  "OBJ_H8": {
+   "order": 9,
+   "title": "DREAM and continuity",
+   "steps": [
+    {
+     "step": "DREAM and continuity",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "DREAM in README section 4; retrieval test; no revival trigger fired"
+    }
+   ]
+  },
+  "OBJ_H9": {
+   "order": 10,
+   "title": "Cleanup and simplification",
+   "steps": [
+    {
+     "step": "Cleanup and simplification",
+     "status": "IN_PROGRESS",
+     "owner": "plan",
+     "evidence": "he42/he43/he44 removed (clean, integrated, no flag); scratch he45-it44check to remove at the end"
+    }
+   ]
+  }
+ }
+}

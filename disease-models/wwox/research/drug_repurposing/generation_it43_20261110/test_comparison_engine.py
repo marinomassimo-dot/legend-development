@@ -33,6 +33,31 @@ class Contrast(unittest.TestCase):
         p = pkg([prop("D15", "DATO: nbqx Ki 0.077 uM at GluA2"), prop("D16", "INFERENZA (limit of D15): nbqx used only as a comparator", cls="absence")])
         self.assertEqual(ce.derive([item("V1", "nbqx")], p)[0]["evidence_tier"], "NONE")
 
+class Conditions(unittest.TestCase):
+    """HE45: the reported behaviours of the ATP / unit / missing / generic-system cases, through the engine."""
+    def state(self, sys_a, sys_b, role="PRIMARY"):
+        p = pkg([prop("D01", "DATO: alpha IC50 72 nM", system=sys_a), prop("D02", "DATO: alpha IC50 80 nM", system=sys_b)])
+        r = ce.derive([item("V1", "alpha")], p)[0]
+        return r["comparison_state"], r["role_derived"]
+    def test_one_mM_against_one_uM_atp_is_not_comparable(self):
+        self.assertTrue(self.state("recombinant kinase assay, 1 mM ATP", "recombinant kinase assay, 1 uM ATP")[0].startswith("NOT_COMPARABLE"))
+    def test_one_mM_equals_1000_uM_atp(self):
+        self.assertEqual(self.state("purified kinase assay, 1 mM ATP", "purified kinase assay, 1000 uM ATP")[0], "COMPARABLE")
+    def test_atp_declared_against_missing_is_insufficient_and_does_not_block_the_role(self):
+        st, role = self.state("purified kinase assay, 5 uM ATP", "purified kinase assay")
+        self.assertTrue(st.startswith("CONDITIONS_INSUFFICIENT") and "ATP" in st)
+        self.assertEqual(role, "probe")   # a proposal stays possible; the premise is named in the state
+    def test_two_unrecognised_preparations_are_not_equivalent(self):
+        self.assertTrue(self.state("a hepatic preparation, 5 uM ATP", "a mitochondrial preparation, 5 uM ATP")[0].startswith("CONDITIONS_INSUFFICIENT"))
+    def test_two_propositions_without_a_potency_pair_are_not_called_comparable(self):
+        p = pkg([prop("D01", "DATO: alpha binds GluN2B"), prop("D02", "DATO: alpha reduces seizures")])
+        self.assertEqual(ce.derive([item("V1", "alpha")], p)[0]["comparison_state"], "NO_POTENCY_PAIR")
+    def test_merge_keeps_the_weakest_answer(self):
+        a = {"item_id": "V1", "name": "alpha", "evidence_tier": "PRIMARY", "role_derived": "probe", "role_reason": "", "public_source_work": "", "tier_props": "", "premise_needed": "", "discriminating_measure": "", "relaunch_question": "", "comparison_state": "COMPARABLE"}
+        b = dict(a, comparison_state="CONDITIONS_INSUFFICIENT: x"); c = dict(a, comparison_state="NOT_COMPARABLE: y")
+        self.assertTrue(ce.merge([a, b])[0]["comparison_state"].startswith("CONDITIONS_INSUFFICIENT"))
+        self.assertTrue(ce.merge([b, c, a])[0]["comparison_state"].startswith("NOT_COMPARABLE"))
+
 class RealPackages(unittest.TestCase):
     def rows(self):
         items = [r for r in csv.DictReader(open(HERE.parent / "generation_it41_20261109/compound_view.tsv", encoding="utf-8"), delimiter="\t") if r["inv_id"] == "INV-05"]

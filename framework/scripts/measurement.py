@@ -110,6 +110,41 @@ def compare(a: dict, b: dict) -> dict:
                     "a conversion to nM makes values commensurable in scale only, not the same measurement"}
 
 
+def summarise(measures: list[dict]) -> list[dict]:
+    """Descriptive range of many measurements of one molecule, per comparable group — never one minimum across groups.
+
+    A group is (kind, target, species, system): an IC50 and a Ki, two targets, two species or a binding and a functional assay are different groups, and the lowest
+    value of the union is not a potency. Inside a group the lowest and highest plain value are given with the row they come from (`source` of that measurement,
+    which the caller sets to the original row's id); censored, approximate and range values are counted, never taken as an extreme. Whether the values of a group
+    are comparable with each other (conditions) is `compare()`'s question: a group's range is a description of what was reported, not a ranking."""
+    groups: dict[tuple, list[tuple[int, dict]]] = {}
+    for i, m in enumerate(measures):
+        key = (m["kind"], (m["target"] or "").strip(), (m["species"] or "").strip(), (m["system"] or "").strip())
+        groups.setdefault(key, []).append((i, m))
+    out = []
+    for (kind, target, species, system), items in groups.items():
+        plain = [(i, m) for i, m in items if m["converted_nM"] is not None and not ({"CENSORED", "APPROXIMATE", "RANGE"} & set(m["flags"]))]
+        lo = min(plain, key=lambda t: t[1]["converted_nM"], default=None)
+        hi = max(plain, key=lambda t: t[1]["converted_nM"], default=None)
+        out.append({"kind": kind, "target": target, "species": species, "system": system, "n": len(items), "n_plain": len(plain),
+                    "n_bounds_or_ranges": sum(1 for _, m in items if {"CENSORED", "APPROXIMATE", "RANGE"} & set(m["flags"])),
+                    "n_unusable": sum(1 for _, m in items if m["converted_nM"] is None),
+                    "lowest_nM": lo[1]["converted_nM"] if lo else None, "lowest_ref": lo[1]["source"] if lo else "",
+                    "highest_nM": hi[1]["converted_nM"] if hi else None, "highest_ref": hi[1]["source"] if hi else ""})
+    return sorted(out, key=lambda g: (g["kind"], g["target"], g["species"], g["system"]))
+
+
+def render_summary(groups: list[dict]) -> str:
+    """One cell for a table: each group on its own, with the row of its lowest value. Values stay nM as converted; the original rows hold value and unit."""
+    parts = []
+    for g in groups:
+        span = "no plain value" if g["lowest_nM"] is None else (f"{g['lowest_nM']:.4g} nM" if g["n_plain"] == 1 or g["lowest_nM"] == g["highest_nM"] else f"{g['lowest_nM']:.4g}-{g['highest_nM']:.4g} nM")
+        extra = (f", {g['n_bounds_or_ranges']} bound/range" if g["n_bounds_or_ranges"] else "") + (f", {g['n_unusable']} without a usable value" if g["n_unusable"] else "")
+        where = " ".join(x for x in (g["target"], g["species"], g["system"]) if x)
+        parts.append(f"{g['kind']} [{where}] n={g['n']}: {span}{extra} (lowest at {g['lowest_ref'] or 'row not named'})")
+    return " | ".join(parts)
+
+
 def from_gtopdb(row: dict) -> dict:
     """The two quantitative views of one GtoPdb interactions.csv row, side by side: the log value and the original nanomolar column."""
     kind = (row.get("Original Affinity Units") or "").strip()
