@@ -98,6 +98,18 @@ class Census(unittest.TestCase):
             self.assertEqual(part["start_context_share_of_cache_read"], round(900 * 4 / 3050, 2))
             self.assertIn("start context re-read", smc.render([part]))
 
+    def test_windows_separate_the_cost_before_and_after_a_restart(self) -> None:
+        with tempfile.TemporaryDirectory() as d:
+            path = Path(d) / "t.jsonl"
+            rows = [("t1", 900), ("t2", 950), ("t3", 300), ("t4", 320)]
+            path.write_text("\n".join(json.dumps({"type": "assistant", "timestamp": f"2026-11-11T00:00:0{i}", "message": {"id": k, "model": "m", "usage": {"input_tokens": 1, "cache_creation_input_tokens": 0, "cache_read_input_tokens": c, "output_tokens": 5}}})
+                                       for i, (k, c) in enumerate(rows)) + "\n")
+            part = smc.census(path)
+            w = part["windows"]
+            self.assertEqual([x["turns"] for x in w], [2, 2])
+            self.assertEqual((w[0]["birth_context"], w[1]["birth_context"]), (901, 301))
+            self.assertIn("window 2: 2 turns", smc.render([part]))
+
     def test_transcript_without_sibling_meta_is_still_read(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             path = write_run(Path(td), "agent-e", ["claude-sonnet-5-5"], asked=None, effort=None)
