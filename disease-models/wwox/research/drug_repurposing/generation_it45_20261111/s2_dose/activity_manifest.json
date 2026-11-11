@@ -1,0 +1,48 @@
+{
+ "CHEMBL1795171": {
+  "coverage": "COMPLETE",
+  "files": [
+   [
+    "CHEMBL1795171/p0.json",
+    "2f003bd71645f21d980fc1e7088f82bbfe3bdeeb6a21f2dff098a3fbe4ca2cd3"
+   ]
+  ],
+  "rows": 51
+ },
+ "CHEMBL1795172": {
+  "coverage": "COMPLETE",
+  "files": [
+   [
+    "CHEMBL1795172/p0.json",
+    "76dc58fd012b2a181ad4721051cbdd87b6cb99d8cdb51cb9d25c93ea5cd33e6f"
+   ]
+  ],
+  "rows": 12
+ },
+ "CHEMBL1795173": {
+  "coverage": "COMPLETE",
+  "files": [
+   [
+    "CHEMBL1795173/p0.json",
+    "fac7d4e858961a27f86bcca08c0f40da3b864c74f963392b245bcd805dcfba51"
+   ]
+  ],
+  "rows": 3
+ },
+ "CHEMBL1250417": {
+  "coverage": "COMPLETE",
+  "files": [
+   [
+    "CHEMBL1250417/p0.json",
+    "a88b1715b6e0f4845776fa172d6fe7996914b9becea38549343d5be785b0643a"
+   ]
+  ],
+  "rows": 61
+ },
+ "_symbols": {
+  "S2:HCN1": "TARGETS_FOUND",
+  "S2:HCN2": "TARGETS_FOUND",
+  "S2:HCN3": "TARGETS_FOUND",
+  "S2:HCN4": "TARGETS_FOUND"
+ }
+}

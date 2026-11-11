@@ -1,0 +1,58 @@
+relation_id	parent_chembl_id	name	catalogue_name	catalogue_status	catalogue_origin	n_documents	n_activities	n_functional	types	organisms	targets	n_flagged_validity	n_measurement_flags	best_nM	unit_variants	coverage	read_state	verdict	unknown_fields
+S2	CHEMBL1253475			none		1	1	0	EC50		HCN4	1	0	103780.0	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1253476			none		1	1	0	EC50		HCN4	1	0	135730.0	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1253477			none		1	1	0	EC50		HCN4	0	0	70670.0	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1253992			none		1	1	0	EC50		HCN4	0	0	24940.0	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1253993			none		1	1	0	EC50		HCN4	0	0	7230.0	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1254085			none		1	1	0	EC50		HCN4	0	0	7140.0	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1254180			none		1	1	0	EC50		HCN4	0	0	31590.0	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1314022			none		1	2	0	IC50		HCN1;HCN4	0	0	31.62	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1332972			none		1	2	0	IC50		HCN1;HCN4	1	1	50118.7	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1435630			none		1	2	0	IC50		HCN1;HCN4	0	0	398.11	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823665			none		1	2	0	IC50		HCN1;HCN4	0	0	1258.93	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823666			none		1	2	0	IC50		HCN1;HCN4	0	0	398.11	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823667			none		1	2	0	IC50		HCN1;HCN4	0	0	630.96	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823668			none		1	2	0	IC50		HCN1;HCN4	1	1	25118.9	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823669			none		1	2	0	IC50		HCN1;HCN4	1	1	63095.7	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823670			none		1	2	0	IC50		HCN1;HCN4	1	1	100000.0	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823671			none		1	2	0	IC50		HCN1;HCN4	1	0	19952.6	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823672			none		1	2	0	IC50		HCN1;HCN4	2	2	nan	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823673			none		1	2	0	IC50		HCN1;HCN4	1	1	25118.9	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823674			none		1	2	0	IC50		HCN1;HCN4	0	0	630.96	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823675			none		1	2	0	IC50		HCN1;HCN4	1	1	50118.7	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823676			none		1	2	0	IC50		HCN1;HCN4	0	0	15848.9	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823677			none		1	2	0	IC50		HCN1;HCN4	0	0	125.89	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823678			none		1	2	0	IC50		HCN1;HCN4	1	1	63095.7	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823679			none		1	2	0	IC50		HCN1;HCN4	1	1	31622.8	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823874			none		1	2	0	IC50		HCN1;HCN4	0	0	15.85	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823875			none		1	2	0	IC50		HCN1;HCN4	0	0	31.62	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823876			none		1	2	0	IC50		HCN1;HCN4	0	0	251.19	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823877			none		1	2	0	IC50		HCN1;HCN4	1	1	79432.8	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823878			none		1	2	0	IC50		HCN1;HCN4	0	0	31.62	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823879			none		1	2	0	IC50		HCN1;HCN4	0	0	50.12	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823880			none		1	2	0	IC50		HCN1;HCN4	0	0	79.43	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823881			none		1	2	0	IC50		HCN1;HCN4	0	0	199.53	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823882			none		1	4	0	IC50		HCN1;HCN2;HCN3;HCN4	0	0	398.11	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823883			none		1	2	0	IC50		HCN1;HCN4	0	0	15848.9	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823884			none		1	2	0	IC50		HCN1;HCN4	1	1	100000.0	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823885			none		1	2	0	IC50		HCN1;HCN4	0	0	1584.89	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823886			none		1	2	0	IC50		HCN1;HCN4	0	0	398.11	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823887			none		1	2	0	IC50		HCN1;HCN4	0	0	316.23	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823888			none		1	2	0	IC50		HCN1;HCN4	0	0	630.96	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823889			none		1	2	0	IC50		HCN1;HCN4	0	0	2511.89	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL1823890			none		1	2	0	IC50		HCN1;HCN4	2	2	nan	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL2165063			none		1	1	0	IC50		HCN4	0	1	nan	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL2337981			none		1	1	0	IC50		HCN4	0	1	nan	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL2386850			none		1	2	0	IC50		HCN2;HCN4	0	2	nan	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL3355573			none		1	1	0	IC50		HCN4	0	1	nan	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL3355575			none		1	1	0	IC50		HCN4	0	1	nan		COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL4105630	ZURANOLONE	ZURANOLONE	approved_any_source	chembl_selected	1	1	0	IC50		HCN2	0	1	nan	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL4169078	SRA-737	SRA-737	clinical_candidate	chembl_selected	1	1	0	IC50		HCN4	0	1	nan	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL4453882			none		1	1	0	EC50		HCN4	0	0	3980.0	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL4474619			none		1	1	0	IC50		HCN4	0	1	nan	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL4542281			none		1	1	0	IC50		HCN4	0	1	nan	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL471737	IVABRADINE	IVABRADINE	approved_any_source	chembl_selected	1	1	0	EC50		HCN4	0	0	4280.0	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL5095095	DALZANEMDOR	DALZANEMDOR	clinical_candidate	chembl_selected	1	1	0	IC50		HCN2	0	1	nan	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL6195028			tool_probe	chembl_selected	1	16	16	IC50		HCN1;HCN2;HCN3;HCN4	0	0	43.0	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL6195037			none		1	18	18	IC50		HCN1;HCN2;HCN4	0	12	40000.0	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
+S2	CHEMBL69679	ZATEBRADINE	ZATEBRADINE	clinical_candidate	chembl_selected	1	1	0	EC50		HCN4	0	0	8570.0	nM	COMPLETE	OK	ACTIVITY_ONLY	direction;site;target_composition_in_assay;transfer_to_WWOX_context
