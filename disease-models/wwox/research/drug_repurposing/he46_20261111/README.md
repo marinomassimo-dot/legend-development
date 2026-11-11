@@ -76,3 +76,24 @@ python3 -c "import sys; sys.path.insert(0,'framework/scripts'); import hypothesi
 ```
 
 Remove: delete the four `hypotheses_only` rows of `hypothesis_packages.tsv` (the loader then returns what it returned before) and revert `hypothesis_package.py` and its test.
+
+## 4. Reading debts and provenance (H5)
+
+**The three S10 readings IT45 reports as not recorded** (PMIDs 38116420 [Markovtsov 2023], 31411465 [Tran 2019], 21964340 [Dawson 2011]; reader: IT45 delegate, `generation_it45_20261111/verify_s10/VERDICTS.md`):
+
+| Check | Result |
+|---|---|
+| Ledger receipts naming the paper | 0, 0, 0 |
+| Staged receipts naming the paper | 0, 0, 0 |
+| Deep-dive manifests naming the paper | none (the PMIDs occur only in `generation_it45_20261111`, and for 31411465 in the IT43 pointer tables and the view) |
+| Source bytes the reader worked from | exist: `pmc_html.txt`/`pmc.html` (38116420), `tran.pdf`/`tran.txt` (31411465, HAL accepted manuscript), `nat.xml` (21964340), plus eight figure/table images of 38116420, in the scratchpad of session 4325d70d; digests in `reading_debt_s10.tsv` |
+| Reader's quotations found verbatim in those bytes (`reading_debt_check.py`, after whitespace/case/markup folding; a quotation is a quoted span of 40 characters or more inside one line) | 7 of 13, 1 of 16, 0 of 3. The misses are abridged quotations ("..." elisions, bracketed edits, compound numbers) whose first 60-90 percent matches; they are not exact spans |
+| Supplementary files | not reached in any of the three (the reader says so) |
+
+**Disposition: the debt is kept.** What exists is the reader's report and the bytes; there is no contemporaneous receipt with a source fingerprint written when the reading happened, and the report's locators are not all exact spans. A receipt dated now would present a reconstruction as a reading. If the Orchestrator wants the paper counted at all, the supported route is `record_kind: legacy_reconstruction` (it never upgrades the depth), not a `complete_fulltext_read`. Nothing was written to the ledger.
+
+**Preservation, which was the real risk.** The bytes lived only in a session scratchpad of the kind the disk plan (`DISK.md`) lists as removable. 160 ledger and staged receipts (45 distinct source fingerprints, 80 events each recorded in both ledger and staged files) name a scratchpad as the source, all 45 are currently held in session 9400b253's scratchpad. All 45, and the S10 bytes above, are now copied (digest-verified) to `files/fulltext/rescued_from_scratch_he46/` (14 MB, untracked store; `evidence_presence.py --search files/fulltext/rescued_from_scratch_he46` finds them by SHA-256). Inventory: `scratch_sources_preserved.tsv` (58 rows). The scratchpads themselves were not touched.
+
+**Same origin, not independence.** In `verify_s10/VERDICTS.md` the ChEMBL curated record ([CH]) is a human transcription of the paper's tables; where a row says "[CH] agrees" (for example MMF 127,200 nM) the two routes share one origin and add no independence. The reader labels the tiers ([FT], [AB], [CH]) and no result in `s10_dose/result_it45.md` counts a [CH] agreement as a second confirmation; nothing needed correcting.
+
+Remove: delete `reading_debt_check.py` and the two TSVs; the preserved files are copies and may be removed once the operator no longer wants the 45 sources kept outside the scratchpads.
