@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-34354080-83",
  "evidence_basis": [
   "Tian 2021 Nat Commun (Paoletti lab): Methods (TEVC, oocytes, 0.3 mM Ba2+, RT, -60 mV, 100 uM Glu+Gly, rat GluN1-1a, rat GluN2A, mouse GluN2B) and the Fig 3d proton results read from the XML; Fig 3 viewed (curves of wt overlap the pre-UV mutant). Not the whole paper.",
-  "verbatim_locator | proposition: GluN1-K178AzF/GluN2B pH IC50 before UV (GluN2A pre-UV 7.00 +/- 0.02, Hill 1.91) | Results; Figure 3d legend | \"pH IC50s of 7.60 ± 0.01 [n = 7–9] pre-UV\""
+  "verbatim_locator | proposition: GluN1-K178AzF/GluN2B pH IC50 before UV (GluN2A pre-UV 7.00 +/- 0.02, Hill 1.91) | Results; Figure 3d legend | \"pH IC50s of 7.60 \u00b1 0.01 [n = 7\u20139] pre-UV\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

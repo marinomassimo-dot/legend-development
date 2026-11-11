@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-30659174-83",
  "evidence_basis": [
   "Regan 2019 Nat Commun: Table 4 (TEVC proton concentration-response of wild-type GluN1-4a/GluN2B, pH IC50 7.50 +/- 0.02, n=6) and Methods (oocytes, 0.5 mM Ba2+, -40 mV, about 23 C, 100 uM Glu + 30 uM Gly) read from the XML; no figure opened.",
-  "verbatim_locator | proposition: GluN1-4a/GluN2B wild-type proton IC50 | Table 4 | \"GluN1-4a/GluN2B (WT) 40 ± 1.7 (6) 7.50 ± 0.02 (6)\""
+  "verbatim_locator | proposition: GluN1-4a/GluN2B wild-type proton IC50 | Table 4 | \"GluN1-4a/GluN2B (WT) 40 \u00b1 1.7 (6) 7.50 \u00b1 0.02 (6)\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

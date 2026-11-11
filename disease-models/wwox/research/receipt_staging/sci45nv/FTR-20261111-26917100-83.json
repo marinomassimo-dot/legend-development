@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-26917100-83",
  "evidence_basis": [
   "Cheriyan 2016: Methods and the pH 7.3 versus 6.4 spermine Results read from the PMC XML. Finding: the pH 6.4 spermine experiments used 100 uM glutamate plus 10 uM glycine (not NMDA); extracellular solution without Mg2+, pH 7.35; Vh -70 mV; HEK cells. This is a triheteromer spermine paper, not the native juvenile PFC neuron paper (that is Evlanenkov 2023).",
-  "verbatim_locator | proposition: agonist for the spermine pH 6.4 experiments | Methods | \"100 µM Glu/10 µM Gly was used to activate NMDAR currents for experiments using spermine\""
+  "verbatim_locator | proposition: agonist for the spermine pH 6.4 experiments | Methods | \"100 \u00b5M Glu/10 \u00b5M Gly was used to activate NMDAR currents for experiments using spermine\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

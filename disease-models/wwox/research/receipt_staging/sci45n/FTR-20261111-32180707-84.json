@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-32180707-84",
  "evidence_basis": [
   "Alijevic 2020: Methods, Results and Discussion read from the PMC XML; Table 1 (page 8 of the open-data PDF, zoomed) and Figures 2, 3, 4 and 6 viewed; Figures 1, 5, 7-11 captions only; Supplementary Table 1 not read. Coverage figures set to read for the figures that carry numbers used.",
-  "verbatim_locator | proposition: ASIC1a model needs pH 6.7 or lower for current | Results | \"To induce ion current or charge transport, an acidification to ≤pH 6.7 was necessary in the model.\""
+  "verbatim_locator | proposition: ASIC1a model needs pH 6.7 or lower for current | Results | \"To induce ion current or charge transport, an acidification to \u2264pH 6.7 was necessary in the model.\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

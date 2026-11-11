@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-24607230-83",
  "evidence_basis": [
   "Hansen 2014: Zn2+ at pH 7.8, 7.3, 6.8 paragraph and Table 1 Zn2+ rows read to confirm 93 +/- 2 and 65 +/- 1 percent; no proton curve for triheteromers found in the text searched. prior_receipt is the ledger-recorded FTR-20261111-24607230-99 (the producer staged FTR-20261111-24607230-84 on top of it, not yet recorded).",
-  "verbatim_locator | proposition: Zn2+ maximal inhibition at pH 6.8: GluN1/2A versus triheteromer | Results (Zn2+) | \"maximal inhibition of 93 ± 2% and 65 ± 1%, respectively\""
+  "verbatim_locator | proposition: Zn2+ maximal inhibition at pH 6.8: GluN1/2A versus triheteromer | Results (Zn2+) | \"maximal inhibition of 93 \u00b1 2% and 65 \u00b1 1%, respectively\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-37629153-84",
  "evidence_basis": [
   "Evlanenkov 2023: Methods, Results and Discussion read from the PMC XML; Figures 3 and 4 viewed (points read at pH 7.4, 7.1, 6.8); Figures 1, 2, 5, 6 captions only; no supplement.",
-  "verbatim_locator | proposition: NMDA proton pH50 in juvenile cortical pyramidal neurons | Results | \"The steady-state responses to NMDA demonstrated a pH50 of 6.97 (IC50 = 0.11 ± 0.04 µM)\""
+  "verbatim_locator | proposition: NMDA proton pH50 in juvenile cortical pyramidal neurons | Results | \"The steady-state responses to NMDA demonstrated a pH50 of 6.97 (IC50 = 0.11 \u00b1 0.04 \u00b5M)\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

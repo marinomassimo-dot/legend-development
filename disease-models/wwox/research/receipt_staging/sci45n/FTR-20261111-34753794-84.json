@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-34753794-84",
  "evidence_basis": [
   "Hansen 2021 review: Table 5 (proton and Zn2+ IC50 per construct), section C.1 Modulation by Extracellular Protons and the triheteromer and exon-5 paragraphs read from the PMC XML; the rest of this 190-page review not read; secondary source, no figure opened.",
-  "verbatim_locator | proposition: GluN2A, 2B, 2D proton IC50 in the physiologic range | Section C.1 | \"GluN2A-, GluN2B-, and GluN2D-containing NMDA receptors all have proton IC50 values in the physiologic pH range (7.0–7.4)\""
+  "verbatim_locator | proposition: GluN2A, 2B, 2D proton IC50 in the physiologic range | Section C.1 | \"GluN2A-, GluN2B-, and GluN2D-containing NMDA receptors all have proton IC50 values in the physiologic pH range (7.0\u20137.4)\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

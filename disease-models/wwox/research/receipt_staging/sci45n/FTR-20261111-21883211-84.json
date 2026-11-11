@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-21883211-84",
  "evidence_basis": [
   "Kostakis 2011: Methods (Electrophysiology), Results (proton inhibition, exon-5, Fig 5, Fig 8 legends) and Table 1 read from the PMC XML; the open-data bucket holds no images for this article so figures are captions_only; supplementary (Supplementary Fig S1) not read.",
-  "verbatim_locator | proposition: NR1-1a/NR2A pIC50 and Hill slope in oocytes | Table 1 | \"NR1-1a/NR2A (− exon-5) 7.21 ± 0.02 1.45 ± 0.06\""
+  "verbatim_locator | proposition: NR1-1a/NR2A pIC50 and Hill slope in oocytes | Table 1 | \"NR1-1a/NR2A (\u2212 exon-5) 7.21 \u00b1 0.02 1.45 \u00b1 0.06\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

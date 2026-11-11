@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-21883211-83",
  "evidence_basis": [
   "Kostakis 2011: Table 1, Methods (oocytes, 22-24 C, Mg-free Ba-Ringer, 200 uM NMDA + 10 uM glycine, -70 mV, pH 7.5 base), Results (proton inhibition, exon 5) and Fig 5 and Fig 8 legends read from the PMC XML; the open-data bucket has no images, so figures are captions_only; supplement not read. Fractions at pH 7.4, 7.2, 7.0 recomputed with own code.",
-  "verbatim_locator | proposition: pK and Hill slope of GluN1-1a/GluN2A proton inhibition | Table 1 | \"NR1-1a/NR2A (- exon-5) 7.21 ± 0.02 1.45 ± 0.06\""
+  "verbatim_locator | proposition: pK and Hill slope of GluN1-1a/GluN2A proton inhibition | Table 1 | \"NR1-1a/NR2A (- exon-5) 7.21 \u00b1 0.02 1.45 \u00b1 0.06\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

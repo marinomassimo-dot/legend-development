@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-30037851-84",
  "evidence_basis": [
   "Hansen 2018 review: section Modulation by protons and the exon-5 paragraph read from the PMC XML; remaining sections not read; secondary source; no figure opened.",
-  "verbatim_locator | proposition: native NMDA proton IC50 about 50 nM | Modulation by protons | \"Extracellular protons inhibit NMDA receptor function with an IC50 of ∼50 nM, corresponding to a pH of ∼7.3\""
+  "verbatim_locator | proposition: native NMDA proton IC50 about 50 nM | Modulation by protons | \"Extracellular protons inhibit NMDA receptor function with an IC50 of \u223c50 nM, corresponding to a pH of \u223c7.3\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [

@@ -17,7 +17,7 @@
  "event_id": "FTR-20261111-24607230-84",
  "evidence_basis": [
   "Hansen 2014 reread for one new question (does the paper hold a proton curve for triheteromers): the PMC XML text was searched for pH and proton and the Zn2+-at-pH paragraphs read; Table 1 not re-extracted; Experimental Procedures stub only in the PMC text; no figure opened. Prior coverage FTR-20261109-24607230-71 and FTR-20261111-24607230-99.",
-  "verbatim_locator | proposition: Zn2+ maximal inhibition at pH 6.8 lower for triheteromer than for GluN1/2A | Results Zn2+ | \"maximal inhibition of 93 ± 2% and 65 ± 1%, respectively\""
+  "verbatim_locator | proposition: Zn2+ maximal inhibition at pH 6.8 lower for triheteromer than for GluN1/2A | Results Zn2+ | \"maximal inhibition of 93 \u00b1 2% and 65 \u00b1 1%, respectively\""
  ],
  "evidence_depth": "partial_fulltext_read",
  "outputs": [
