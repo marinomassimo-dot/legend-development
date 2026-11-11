@@ -12,7 +12,7 @@
  "branch": "task/he44",
  "CURRENT_STATE": "DONE",
  "CHECKPOINT": {
-  "last_verified_result": "battery PASS WITH SKIPS (236 targets, 11 skipped) on 8f5036867faadb6a7136bc2d91695c3a0aa2cb5e; the commit after it (this record) is documentation only; HE43 landed 273c8b56; gate PASS",
+  "last_verified_result": "battery PASS WITH SKIPS (236 targets, 11 skipped) on 8f5036867faa; merged with main ed708dfc (IT43 landing and SCI44): view suite OK, targeted suites OK, gate PASS, audit PASS; the merge result itself is not covered by a full battery",
   "first_incomplete_work": "none",
   "active_processes": "none",
   "real_dependencies": "IT44 adopts resolve_targets and takes target_activity.py; SCI44/SCI45 may settle the Cs+ HCN unit from the primary paper",
@@ -139,7 +139,7 @@
    "title": "Landing and delivery",
    "steps": [
     {
-     "step": "Battery on the frozen SHA 8f503686 (unique clone): PASS WITH SKIPS (236 targets, 11 skipped); gate PASS; push with --expect-sha and remote check recorded in the final report",
+     "step": "Battery on the frozen SHA 8f503686 (unique clone): PASS WITH SKIPS (236 targets, 11 skipped). Main then moved twice (SCI44, IT43); the merged candidate was checked with targeted suites (view suite 221 tests OK, identity/measurement/activity/names/search/adapter/routing suites, gate, audit static and dynamic), not by a second full battery; push with --expect-sha and remote check recorded in the final report",
      "status": "DONE",
      "owner": "plan",
      "evidence": "log /tmp/he44_keep/he44_battery_8f503686.log; gate scripts/public_release_gate.py VERDICT PASS"
