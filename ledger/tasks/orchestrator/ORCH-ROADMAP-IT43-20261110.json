@@ -1,122 +1,123 @@
 {
- "_schema": "orchestrator-task-v1",
- "TASK_ID": "ORCH-ROADMAP-IT43-20261110",
- "OWNER": "orchestrator",
- "ACTOR_ID": "orchestrator",
- "PRIORITY": "P0",
- "START_UTC": "2026-11-10T12:00:00Z",
- "OBJECTIVE": "IT43: from qualified knowledge to effective pharmacological generation: comparisons drive the engine, recover DGIdb and Q1 coverage, one new generative case, evaluation by value of source/qualification/generation, dashboard and open questions.",
- "AUTHORISED_QUEUE_20261108": {
-  "MANDATE_STATE": "OPEN",
-  "OBJ_P0": {
-   "order": 1,
-   "steps": [
-    {
-     "step": "Baseline a4799320 verified; reconcile IT42/SCI42/HE42 records; register IT43; continuity",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "local main = remote = a4799320 at start; IT42 COMPLETE 10/10; SCI42 and HE42 records read; task/it43 worktree; mandate record OPEN registered; SCI43 (INV-18 branch D, K+ conductances) coordinated by message: no overlap, no battery running, SCI43 sequences its battery after mine."
-    }
-   ]
-  },
-  "OBJ_P1": {
-   "order": 2,
-   "steps": [
-    {
-     "step": "Comparison rows reach the engine: role, premise, discriminating experiment, relaunched question; before/after in a consumer; three contrast cases",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "comparison_engine.py + test_comparison_engine.py (7 tests): evidence tier, role, premise, experiment and relaunched question from explicit package fields; before/after: the second ifenprodil-site tool leaves the probe entry V02 for the unresolved entry V08, open question IT43-Q01; reference control derived; gate view<=engine; three contrast cases pass. Commit 8ed06657."
-    }
-   ]
-  },
-  "OBJ_P2": {
-   "order": 3,
-   "steps": [
-    {
-     "step": "DGIdb and Q1 positives: cause of each omission, minimal integration, comparison with simple search, five distinct measures",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "Cause of both Q1 omissions: held sources do not carry the datum (ChEMBL no mechanism row; DGIdb lists CYP/MTOR/DRD1 only; GtoPdb ligand without interaction row; the other compound in none). dgidb_listing.py: 353 listing rows S1-S9, 105 new molecules over S1-S8 (18 typed), all UNKNOWN listing_only; 4 tests. Commit 204738b6."
-    }
-   ]
-  },
-  "OBJ_P3": {
-   "order": 4,
-   "steps": [
-    {
-     "step": "New generative trial with relation declared before names (coordinate SCI43, no K-conductance duplication)",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "S9 framed before the search, run through the unchanged path; 3 typed molecules classified (known in WWOX / known in the repository; nothing new claimed); false exclusion of two older 'unsigned' rows corrected at path level; INV-07 package read after the frame and recorded as addendum; V13 in the view; IT43-Q02."
-    }
-   ]
-  },
-  "OBJ_P4": {
-   "order": 5,
-   "steps": [
-    {
-     "step": "Evaluate source vs qualification vs generation value; independent check; missed opportunities",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "Protocol before figures; Q7 S2, Q8 S4, Q9 S9: source large, qualification small, generation conditional; independent reader (sonnet/high, blind to verdicts, ~35 tool calls, ~100k tokens) agreed on 4/4 activators, corrected devimistat direction and one species, found the ions gap (open)."
-    }
-   ]
-  },
-  "OBJ_P5": {
-   "order": 6,
-   "steps": [
-    {
-     "step": "Consume SCI43 and Harness deliveries without idle waiting; reconcile IT42 intro counts with final",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "IT42 intro counts reconciled by dated update. SCI43 (ORCH-SCI43-20261110, landed dcaca553/380a4ee3) consumed by generation_it43_20261110/apply_sci43.py: delta rows 1-7 and 11 applied (INV-18 next_test and decisive_uncertainty in both tables, V10, comparators with three tool rows, probe P05, three open questions IT43-Q03..Q05, CP-MH1, matrix M01); row 8 no change; row 9 is for Harness; row 10: 26 staged receipts recorded in event order after a clean trial (ledger 1,599 verified; the 10 verifier receipts needed prior_receipt set to the producer receipt, reason adversarial_reanalysis); two defects of my own found by the checks and fixed (a comparator role outside the UI vocabulary; a catalogue name in public text, reworded). Translations in four languages."
-    }
-   ]
-  },
-  "OBJ_P6": {
-   "order": 7,
-   "steps": [
-    {
-     "step": "Investigations view and open questions: compound, reason, origin, evidence, premise, next work, movers; five languages",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "Compound cards: origin of the hypothesis and evidence label, V13 added, INV-07/INV-19 next_test and uncertainty text; five languages checked; audit-shareable PASS 0 violations on 10 pages; harness name-visibility path left with Harness (licence rule: names stay in the full edition)."
-    }
-   ]
-  },
-  "OBJ_P7": {
-   "order": 8,
-   "steps": [
-    {
-     "step": "DREAM on materially new results",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "One DREAM connection used: INV-07 and INV-19 share one isogenic sample series, outcomes written in both tables (apply_dream.py); nothing invented elsewhere."
-    }
-   ]
-  },
-  "OBJ_P8": {
-   "order": 9,
-   "steps": [
-    {
-     "step": "Autonomous queue: second case, false exclusion, scouting integration, simplification; scouting GitHub/HF/Nature",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "Scouting taken from the Harness weekly table, no dependency. Second generative case run: S10 (KEAP1/NRF2) framed before the search (fourth_relation_it43.md) after reading the existing INV-08 package, one relation row and no code: 20 source rows, per-target direction kept, the NRF2 inhibitor tool kept as a control for H5; all compounds known in the repository, nothing new claimed. Ions gap recorded as the one implementable defect (separate dated change)."
-    }
-   ]
-  },
-  "OBJ_P9": {
-   "order": 10,
-   "steps": [
-    {
-     "step": "Integrate, battery by SHA, publish with SHA check, CI and site, final report",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator",
-     "evidence": "Batteries by SHA: 8211d2d7 PASS WITH SKIPS (230 targets, 11 skipped; docs and record only after it); c82a1bff stopped partial (superseded by the HE43 landing; no verdict); 5f721d0d (merge with HE43-landed main) FAIL: one target, generation_it39 test_stage_it39 (question dossiers stale; kept as that SHA's verdict); 24d814f3 (dossiers regenerated) PASS WITH SKIPS (233 targets, 11 skipped). Landing candidate 599968be = 24d814f3 merged with SCI44-landed main d088b964: the merge adds only SCI44 package files, its receipt staging, its task record and one dated line in the SCI43 README (no code, no generated view file); verified for that SHA by gate (safe_push), LINT no BLOCK, receipts chain OK 1,599, growth anchors PASS and 0 failing among the related local tests (not by a battery). CI of 51d6c3b1: success (#640, 1h13m)."
-    }
-   ]
+  "_schema": "orchestrator-task-v1",
+  "TASK_ID": "ORCH-ROADMAP-IT43-20261110",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "P0",
+  "START_UTC": "2026-11-10T12:00:00Z",
+  "OBJECTIVE": "IT43: from qualified knowledge to effective pharmacological generation: comparisons drive the engine, recover DGIdb and Q1 coverage, one new generative case, evaluation by value of source/qualification/generation, dashboard and open questions.",
+  "AUTHORISED_QUEUE_20261108": {
+    "MANDATE_STATE": "COMPLETE",
+    "OBJ_P0": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "Baseline a4799320 verified; reconcile IT42/SCI42/HE42 records; register IT43; continuity",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "local main = remote = a4799320 at start; IT42 COMPLETE 10/10; SCI42 and HE42 records read; task/it43 worktree; mandate record OPEN registered; SCI43 (INV-18 branch D, K+ conductances) coordinated by message: no overlap, no battery running, SCI43 sequences its battery after mine."
+        }
+      ]
+    },
+    "OBJ_P1": {
+      "order": 2,
+      "steps": [
+        {
+          "step": "Comparison rows reach the engine: role, premise, discriminating experiment, relaunched question; before/after in a consumer; three contrast cases",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "comparison_engine.py + test_comparison_engine.py (7 tests): evidence tier, role, premise, experiment and relaunched question from explicit package fields; before/after: the second ifenprodil-site tool leaves the probe entry V02 for the unresolved entry V08, open question IT43-Q01; reference control derived; gate view<=engine; three contrast cases pass. Commit 8ed06657."
+        }
+      ]
+    },
+    "OBJ_P2": {
+      "order": 3,
+      "steps": [
+        {
+          "step": "DGIdb and Q1 positives: cause of each omission, minimal integration, comparison with simple search, five distinct measures",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "Cause of both Q1 omissions: held sources do not carry the datum (ChEMBL no mechanism row; DGIdb lists CYP/MTOR/DRD1 only; GtoPdb ligand without interaction row; the other compound in none). dgidb_listing.py: 353 listing rows S1-S9, 105 new molecules over S1-S8 (18 typed), all UNKNOWN listing_only; 4 tests. Commit 204738b6."
+        }
+      ]
+    },
+    "OBJ_P3": {
+      "order": 4,
+      "steps": [
+        {
+          "step": "New generative trial with relation declared before names (coordinate SCI43, no K-conductance duplication)",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "S9 framed before the search, run through the unchanged path; 3 typed molecules classified (known in WWOX / known in the repository; nothing new claimed); false exclusion of two older 'unsigned' rows corrected at path level; INV-07 package read after the frame and recorded as addendum; V13 in the view; IT43-Q02."
+        }
+      ]
+    },
+    "OBJ_P4": {
+      "order": 5,
+      "steps": [
+        {
+          "step": "Evaluate source vs qualification vs generation value; independent check; missed opportunities",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "Protocol before figures; Q7 S2, Q8 S4, Q9 S9: source large, qualification small, generation conditional; independent reader (sonnet/high, blind to verdicts, ~35 tool calls, ~100k tokens) agreed on 4/4 activators, corrected devimistat direction and one species, found the ions gap (open)."
+        }
+      ]
+    },
+    "OBJ_P5": {
+      "order": 6,
+      "steps": [
+        {
+          "step": "Consume SCI43 and Harness deliveries without idle waiting; reconcile IT42 intro counts with final",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "IT42 intro counts reconciled by dated update. SCI43 (ORCH-SCI43-20261110, landed dcaca553/380a4ee3) consumed by generation_it43_20261110/apply_sci43.py: delta rows 1-7 and 11 applied (INV-18 next_test and decisive_uncertainty in both tables, V10, comparators with three tool rows, probe P05, three open questions IT43-Q03..Q05, CP-MH1, matrix M01); row 8 no change; row 9 is for Harness; row 10: 26 staged receipts recorded in event order after a clean trial (ledger 1,599 verified; the 10 verifier receipts needed prior_receipt set to the producer receipt, reason adversarial_reanalysis); two defects of my own found by the checks and fixed (a comparator role outside the UI vocabulary; a catalogue name in public text, reworded). Translations in four languages."
+        }
+      ]
+    },
+    "OBJ_P6": {
+      "order": 7,
+      "steps": [
+        {
+          "step": "Investigations view and open questions: compound, reason, origin, evidence, premise, next work, movers; five languages",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "Compound cards: origin of the hypothesis and evidence label, V13 added, INV-07/INV-19 next_test and uncertainty text; five languages checked; audit-shareable PASS 0 violations on 10 pages; harness name-visibility path left with Harness (licence rule: names stay in the full edition)."
+        }
+      ]
+    },
+    "OBJ_P7": {
+      "order": 8,
+      "steps": [
+        {
+          "step": "DREAM on materially new results",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "One DREAM connection used: INV-07 and INV-19 share one isogenic sample series, outcomes written in both tables (apply_dream.py); nothing invented elsewhere."
+        }
+      ]
+    },
+    "OBJ_P8": {
+      "order": 9,
+      "steps": [
+        {
+          "step": "Autonomous queue: second case, false exclusion, scouting integration, simplification; scouting GitHub/HF/Nature",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "Scouting taken from the Harness weekly table, no dependency. Second generative case run: S10 (KEAP1/NRF2) framed before the search (fourth_relation_it43.md) after reading the existing INV-08 package, one relation row and no code: 20 source rows, per-target direction kept, the NRF2 inhibitor tool kept as a control for H5; all compounds known in the repository, nothing new claimed. Ions gap recorded as the one implementable defect (separate dated change)."
+        }
+      ]
+    },
+    "OBJ_P9": {
+      "order": 10,
+      "steps": [
+        {
+          "step": "Integrate, battery by SHA, publish with SHA check, CI and site, final report",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "Batteries by SHA: 8211d2d7 PASS WITH SKIPS (230 targets, 11 skipped; docs and record only after it); c82a1bff stopped partial (superseded by the HE43 landing; no verdict); 5f721d0d (merge with HE43-landed main) FAIL: one target, generation_it39 test_stage_it39 (question dossiers stale; kept as that SHA's verdict); 24d814f3 (dossiers regenerated) PASS WITH SKIPS (233 targets, 11 skipped). Landing candidate 599968be = 24d814f3 merged with SCI44-landed main d088b964: the merge adds only SCI44 package files, its receipt staging, its task record and one dated line in the SCI43 README (no code, no generated view file); verified for that SHA by gate (safe_push), LINT no BLOCK, receipts chain OK 1,599, growth anchors PASS and 0 failing among the related local tests (not by a battery). CI of 51d6c3b1: success (#640, 1h13m). Residual queue items carried into IT44 and IT45 queues."
+        }
+      ]
+    },
+    "CLOSURE_EVIDENCE": "IT43 Public release gate #645 success; closed with the IT44 landing 4ce390d4."
   }
- }
 }

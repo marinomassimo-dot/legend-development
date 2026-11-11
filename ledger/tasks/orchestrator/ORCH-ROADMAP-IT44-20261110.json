@@ -1,122 +1,123 @@
 {
- "_schema": "orchestrator-task-v1",
- "TASK_ID": "ORCH-ROADMAP-IT44-20261110",
- "OWNER": "orchestrator",
- "ACTOR_ID": "orchestrator",
- "PRIORITY": "P0",
- "START_UTC": "2026-11-10T22:30:00Z",
- "OBJECTIVE": "IT44: from qualified knowledge to pharmacological hypotheses actually generated and used: close SCI43/HE43 consumption, recover what the catalogue misses without name exceptions, one or two complete generative paths, role vocabulary for non-drug entities, engine against simple baselines, circular open questions, first-screen dashboard.",
- "AUTHORISED_QUEUE_20261108": {
-  "MANDATE_STATE": "OPEN",
-  "OBJ_P0": {
-   "order": 1,
-   "steps": [
-    {
-     "step": "Restart and reconciliation: IT43 / SCI43 / HE43 real state, SHAs, processes, staged and recorded receipts, residuals already solved; register IT44",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "IT43 landed ed708dfc (battery 24d814f3 PASS WITH SKIPS; merge docs-only); HE43 landed 273c8b56, HE44 landed 50f517f8, SCI44 A d088b964, SCI44 B/C/coda 34f93af0 all merged into task/it44; ledger 1,692; no solved residual re-proposed."
-    }
-   ]
-  },
-  "OBJ_P1": {
-   "order": 2,
-   "steps": [
-    {
-     "step": "Close consumption of SCI43 and HE43 deliveries: measurement.py in the quantitative path, parent_form without merging stereoisomers, read-state propagation, KH1-KH5 conditions, shared preparation conditions; before/after",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "HE43 consumed (measurement.measure, parent_form); HE44 consumed (exact resolver; its S12 first use hit an endpoint 500 and was recorded READ_ERROR); SCI43 KH1-KH5 mapped to consumers; SCI44 A rows 1-9, 11-14 applied; SCI44 B and C consumed (V18 Ro 25-6981 split out of the V08 group, V17 and INV-18 updated for the 2 mM Na2ATP internal and the 11-17 percent KATP bound, M01/M05, IT43-Q01 in progress, IT44-Q06; package B registered for INV-05: the engine re-derives Ro 25-6981 as PRIMARY probe with NOT_COMPARABLE potencies at different holding potentials); 134 SCI44 receipts recorded in two trials after normalising parent links (ledger 1,733 OK); loader reads an engine/ folder."
-    }
-   ]
-  },
-  "OBJ_P2": {
-   "order": 3,
-   "steps": [
-    {
-     "step": "Recover opportunities the catalogue misses (azetukalner by name, primary-source activities, DGIdb pointers, synonyms/salts/stereoisomers): reproducible path, no single-name exception; known control then a different case",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "activity_search.py: by-target activity path, catalogue join by id, read-state and screening-deposit guard, unread symbols stated; control azetukalner reached (Kv7), different cases S9 S7 S11; 6 offline tests; HE44 resolver to be adopted on landing."
-    }
-   ]
-  },
-  "OBJ_P3": {
-   "order": 4,
-   "steps": [
-    {
-     "step": "One complete generative path chosen from the current queue, frame written before names; second case with a different mechanism if capacity remains",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "S11 (add a resting K+ conductance) framed before, both paths, blind reader (71 tool calls): openers exist only for the Ba2+-weak K2P subfamily, Kir2 has none beyond a Kir2.1-only one; first experiment gains a two-concentration Ba2+ step; V14, IT44-Q01/Q02. S12 (astrocytic K+ buffering): no enhancer; stop point stated (target resolution)."
-    }
-   ]
-  },
-  "OBJ_P4": {
-   "order": 5,
-   "steps": [
-    {
-     "step": "Non-pharmacological entities: role vocabulary (candidate, probe, control or reagent, physiological intervention, unqualified entity), provenance kept, review of false positives and wrongly removed opportunities",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "Role vocabulary from data (rule and override tables, effect table), 5 tests; ions no longer candidates; Mg2+ Zn2+ kept as physiological variables."
-    }
-   ]
-  },
-  "OBJ_P5": {
-   "order": 6,
-   "steps": [
-    {
-     "step": "Compare engine against simple alternatives on executed cases with equal inputs; independent premises check in a separate context; graph controls only if a graph is used",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "Protocol before figures; four cases x four conditions; S11 changes the next experiment; blind reader on S11 premises; no graph used."
-    }
-   ]
-  },
-  "OBJ_P6": {
-   "order": 7,
-   "steps": [
-    {
-     "step": "Circular relation: priority open questions each give a usable brief (decision, premise, in silico work, indispensable measurement, outcomes favouring alternatives, stop criterion); consume SCI44 when verified; Claude Science material evaluated whole with separate provenance",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "B1-B3 briefs; open questions IT44-Q01..Q05 and IT43-Q02 concluded; SCI44 A consumed; Claude Science material not available this iteration."
-    }
-   ]
-  },
-  "OBJ_P7": {
-   "order": 8,
-   "steps": [
-    {
-     "step": "Dashboard first screen: which investigations, which compounds or classes, why priority, missing premise, result that would change the decision; five languages, phone readability, names where the qualified path allows",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "Investigation cards list compounds and classes with links; cards show per-compound roles from the engine (no names in the shareable payload); V13-V17; five languages; audit PASS static (10 pages)."
-    }
-   ]
-  },
-  "OBJ_P8": {
-   "order": 9,
-   "steps": [
-    {
-     "step": "DREAM on material results; autonomous queue (second case, over-severe exclusion, unused structured relation, duplicate simplification, priority card, next batch brief)",
-     "status": "DONE",
-     "owner": "orchestrator",
-     "evidence": "DREAM tonic-zinc connection; S12 and S13 second cases; S13 from an over-severe-exclusion survey."
-    }
-   ]
-  },
-  "OBJ_P9": {
-   "order": 10,
-   "steps": [
-    {
-     "step": "Costs and closure: batteries by SHA in unique clones, landing, remote, CI and site checks; final report in Italian starting with the mandated question",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator",
-     "evidence": "IT43 landed ed708dfc (CI #645 success). IT44 candidate: task/it44b tip (this commit); battery to be run on the frozen SHA; the battery on 8edf3852 (IT44 before B/C) was stopped at about 30 percent in favour of the combined candidate (no verdict)."
-    }
-   ]
+  "_schema": "orchestrator-task-v1",
+  "TASK_ID": "ORCH-ROADMAP-IT44-20261110",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "P0",
+  "START_UTC": "2026-11-10T22:30:00Z",
+  "OBJECTIVE": "IT44: from qualified knowledge to pharmacological hypotheses actually generated and used: close SCI43/HE43 consumption, recover what the catalogue misses without name exceptions, one or two complete generative paths, role vocabulary for non-drug entities, engine against simple baselines, circular open questions, first-screen dashboard.",
+  "AUTHORISED_QUEUE_20261108": {
+    "MANDATE_STATE": "COMPLETE",
+    "OBJ_P0": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "Restart and reconciliation: IT43 / SCI43 / HE43 real state, SHAs, processes, staged and recorded receipts, residuals already solved; register IT44",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "IT43 landed ed708dfc (battery 24d814f3 PASS WITH SKIPS; merge docs-only); HE43 landed 273c8b56, HE44 landed 50f517f8, SCI44 A d088b964, SCI44 B/C/coda 34f93af0 all merged into task/it44; ledger 1,692; no solved residual re-proposed."
+        }
+      ]
+    },
+    "OBJ_P1": {
+      "order": 2,
+      "steps": [
+        {
+          "step": "Close consumption of SCI43 and HE43 deliveries: measurement.py in the quantitative path, parent_form without merging stereoisomers, read-state propagation, KH1-KH5 conditions, shared preparation conditions; before/after",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "HE43 consumed (measurement.measure, parent_form); HE44 consumed (exact resolver; its S12 first use hit an endpoint 500 and was recorded READ_ERROR); SCI43 KH1-KH5 mapped to consumers; SCI44 A rows 1-9, 11-14 applied; SCI44 B and C consumed (V18 Ro 25-6981 split out of the V08 group, V17 and INV-18 updated for the 2 mM Na2ATP internal and the 11-17 percent KATP bound, M01/M05, IT43-Q01 in progress, IT44-Q06; package B registered for INV-05: the engine re-derives Ro 25-6981 as PRIMARY probe with NOT_COMPARABLE potencies at different holding potentials); 134 SCI44 receipts recorded in two trials after normalising parent links (ledger 1,733 OK); loader reads an engine/ folder."
+        }
+      ]
+    },
+    "OBJ_P2": {
+      "order": 3,
+      "steps": [
+        {
+          "step": "Recover opportunities the catalogue misses (azetukalner by name, primary-source activities, DGIdb pointers, synonyms/salts/stereoisomers): reproducible path, no single-name exception; known control then a different case",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "activity_search.py: by-target activity path, catalogue join by id, read-state and screening-deposit guard, unread symbols stated; control azetukalner reached (Kv7), different cases S9 S7 S11; 6 offline tests; HE44 resolver to be adopted on landing."
+        }
+      ]
+    },
+    "OBJ_P3": {
+      "order": 4,
+      "steps": [
+        {
+          "step": "One complete generative path chosen from the current queue, frame written before names; second case with a different mechanism if capacity remains",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "S11 (add a resting K+ conductance) framed before, both paths, blind reader (71 tool calls): openers exist only for the Ba2+-weak K2P subfamily, Kir2 has none beyond a Kir2.1-only one; first experiment gains a two-concentration Ba2+ step; V14, IT44-Q01/Q02. S12 (astrocytic K+ buffering): no enhancer; stop point stated (target resolution)."
+        }
+      ]
+    },
+    "OBJ_P4": {
+      "order": 5,
+      "steps": [
+        {
+          "step": "Non-pharmacological entities: role vocabulary (candidate, probe, control or reagent, physiological intervention, unqualified entity), provenance kept, review of false positives and wrongly removed opportunities",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "Role vocabulary from data (rule and override tables, effect table), 5 tests; ions no longer candidates; Mg2+ Zn2+ kept as physiological variables."
+        }
+      ]
+    },
+    "OBJ_P5": {
+      "order": 6,
+      "steps": [
+        {
+          "step": "Compare engine against simple alternatives on executed cases with equal inputs; independent premises check in a separate context; graph controls only if a graph is used",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "Protocol before figures; four cases x four conditions; S11 changes the next experiment; blind reader on S11 premises; no graph used."
+        }
+      ]
+    },
+    "OBJ_P6": {
+      "order": 7,
+      "steps": [
+        {
+          "step": "Circular relation: priority open questions each give a usable brief (decision, premise, in silico work, indispensable measurement, outcomes favouring alternatives, stop criterion); consume SCI44 when verified; Claude Science material evaluated whole with separate provenance",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "B1-B3 briefs; open questions IT44-Q01..Q05 and IT43-Q02 concluded; SCI44 A consumed; Claude Science material not available this iteration."
+        }
+      ]
+    },
+    "OBJ_P7": {
+      "order": 8,
+      "steps": [
+        {
+          "step": "Dashboard first screen: which investigations, which compounds or classes, why priority, missing premise, result that would change the decision; five languages, phone readability, names where the qualified path allows",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "Investigation cards list compounds and classes with links; cards show per-compound roles from the engine (no names in the shareable payload); V13-V17; five languages; audit PASS static (10 pages)."
+        }
+      ]
+    },
+    "OBJ_P8": {
+      "order": 9,
+      "steps": [
+        {
+          "step": "DREAM on material results; autonomous queue (second case, over-severe exclusion, unused structured relation, duplicate simplification, priority card, next batch brief)",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "DREAM tonic-zinc connection; S12 and S13 second cases; S13 from an over-severe-exclusion survey."
+        }
+      ]
+    },
+    "OBJ_P9": {
+      "order": 10,
+      "steps": [
+        {
+          "step": "Costs and closure: batteries by SHA in unique clones, landing, remote, CI and site checks; final report in Italian starting with the mandated question",
+          "status": "DONE",
+          "owner": "orchestrator",
+          "evidence": "IT43 landed ed708dfc (CI #645 success). IT44 candidate: task/it44b tip (this commit); battery to be run on the frozen SHA; the battery on 8edf3852 (IT44 before B/C) was stopped at about 30 percent in favour of the combined candidate (no verdict). Residual queue items carried into ORCH-ROADMAP-IT45-20261111 (P9) with their evidence; none left only here."
+        }
+      ]
+    },
+    "CLOSURE_EVIDENCE": "IT44 landed on development/main 4ce390d4: battery PASS WITH SKIPS (239 targets, 11 environmental skips); d15894e0 = FAIL (3 stale-view assertions) kept attributed; a47a92a0 stopped, no verdict; push gate PASS; Public release gate #650 success; shareable view publish #33 success."
   }
- }
 }
