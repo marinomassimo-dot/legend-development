@@ -14,9 +14,9 @@ Independence: S10 premises were read by a separate reader (`verify_s10/VERDICTS.
 ## Results
 | Measure | S10 (KEAP1/NRF2) | S3-Kv7 | S12 (Kir4.1) |
 |---|---|---|---|
-| C1 mechanism-table molecules | 5 | 7 (IT40 mechsearch, 2 openers offered) | 0 (no Kir4.1 enhancer row) |
+| C1 mechanism-table molecules | 5 | 7 (IT40 mechsearch, 2 openers offered) | no enhancer row (IT44 S12; molecule count not re-derived) |
 | C2 molecules with a catalogue status (mechanism + interaction + dose-response) | 14 from tables (IT43) + 7 only from the activity read = 21 | 7 from the mechanism path + 4 only from the activity read (IT44) | 0; 6 activity rows, none with a catalogue status |
-| Identity | 10 activity-read molecules carry a catalogue status; 1 is a tool probe without a name; the acid and the methyl ester of one triterpenoid are two structures, not merged | the activity path found one opener (azetukalner) and one withdrawn-class opener (flupirtine) the tables missed | KCNJ10 resolved; KCNJ16 `NO_TARGET_FOR_ACCESSION` (unresolved, a state) |
+| Identity | 10 activity-read molecules carry a catalogue status; 1 is a tool probe without a name; the acid and the methyl ester of one triterpenoid are two structures, not merged | the activity path found one opener (azetukalner) and a second opener (flupirtine) the tables missed | KCNJ10 resolved; KCNJ16 `NO_TARGET_FOR_ACCESSION` (unresolved, a state) |
 | Premises resolved / open | resolved: 8 statements corrected or confirmed by reading (see `s10_dose/result_it45.md`); open: NRF2 in a WWOX neural system, neuron/astrocyte data (none) | resolved: cell-class substrate (RNA, P7 mouse); open: Kv7 current at rest, expression at P13–17, whether bursts are intrinsic | resolved: no activator row in the held data; open: Kir4.1/Kir5.1 function in Wwox astrocytes |
 | Opportunities missed by C1 and recovered | 7 catalogue-status molecules (the IT44 read listed none: Potency flood) | 4 | 0 |
 | False proposals avoided | 1 wrong-target row (a BET inhibitor listed on KEAP1); 1 weak control (the only catalogued NRF2-lowering row lowers general protein synthesis); 197 default rows no longer `candidate` across S1–S13 | quinidine row is an IC50, not an opener row | none |
