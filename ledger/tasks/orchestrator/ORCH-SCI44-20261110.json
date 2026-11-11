@@ -8,19 +8,20 @@
   "START_UTC": "2026-11-10T22:22:08Z",
   "BASELINE": "main 380a4ee3. Worktree .claude/worktrees/sci44, branch task/sci44. IT44 (legend-development-4e, worktree it44, branch task/it44 at 8a883679) owns shared consumers; HE43 is Harness. SCI43 residue check: IT43 consumed SCI43 rows 1-7 and 11 and recorded 26 receipts in c82a1bff.",
   "CURRENT_PACKAGE": {
-    "id": "B+C+coda landing",
-    "state": "branch task/sci44-bc holds B, C, coda; gate/LINT/receipts/growth then battery on a fresh unique clone, then task_close and safe_push",
+    "id": "landing B+C+coda",
+    "state": "battery verdict recorded; task_close and safe_push next",
     "delegate_active": "none",
     "updated": "2026-11-11"
   },
-  "RESUME": "First incomplete step: gate, LINT, receipts verify, growth on the frozen SHA of task/sci44-bc, battery in a fresh unique clone (git clone --no-hardlinks, cp -al files), record verdict (closure-only commit), task_close, safe_push development main, message IT44, final Italian report opening with the mandated question.",
+  "RESUME": "Landing: task_close then safe_push development main; then message IT44 (B and C landed), final Italian report. MANDATE_STATE COMPLETE after landing.",
   "DECISIONS_TAKEN": [
     "2026-11-10 S0: order kept A (PDH/PDK) then B then C; IT44 confirmed no overlap and asked verifier receipts to carry prior_receipt and reread_reason adversarial_reanalysis",
     "2026-11-10 A: verifier overturned the producer's KATP absence claim; PH4 (lactate-closed KATP and the SCI43 K branch) kept as IPOTESI with Karagiannis 2021 read once only",
     "2026-11-10 A: engine-readable folder built and engine derive run read-only on V13; engine limits go to IT44 as proposals, no engine code edited",
     "2026-11-10/11 A: battery on a fresh no-hardlinks clone of frozen SHA 9f1cdff5 finished REGRESSION VERDICT: PASS WITH SKIPS (230 targets, 11 skipped, all environmental; suite time 3718 s); gate PASS, LINT no BLOCK, receipts OK (1573), growth PASS on the same SHA. Later commits to the branch before landing: this task record and one dated README line of package A (documentation only).",
     "2026-11-11 coda: Wwox pipette ATP found in the held Methods audit (2 mM Na2ATP): PH4 weakened for published values, kept for ATP-undisturbed arms; hypotheses and ladder regenerated",
-    "2026-11-11: package A was landed from the candidate SHA by moving untracked B/C files to /tmp/sci44_hold_bc (not deleted) because task_close refuses untracked files; restored on branch task/sci44-bc"
+    "2026-11-11: package A was landed from the candidate SHA by moving untracked B/C files to /tmp/sci44_hold_bc (not deleted) because task_close refuses untracked files; restored on branch task/sci44-bc",
+    "2026-11-11 B+C+coda: battery on a fresh no-hardlinks clone of frozen SHA 0a4a3a18 finished REGRESSION VERDICT: PASS WITH SKIPS (233 targets, 11 skipped, environmental; suite time 4021 s); gate PASS, LINT no BLOCK, receipts OK (1573), growth PASS on the same SHA. Later commit: this task record only (closure)."
   ],
   "DELEGATIONS": [
     "A2 producer og-p: asked sonnet/medium; read back medium x105; 105 turns; output 121,831; cache read 16,415,700; peak 315,875",
