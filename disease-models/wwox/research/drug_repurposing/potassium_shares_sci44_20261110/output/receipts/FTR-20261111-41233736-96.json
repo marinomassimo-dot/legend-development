@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-11T00:19:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-11T00:30:12Z",
+ "event_id": "FTR-20261111-41233736-96",
+ "evidence_basis": [
+  "CSD paper: Methods (slices, patch-clamp, junction potential) read; Results searched by words for resting potential, resistance and baseline (no Rin or rest value); figure legends not read in detail; images not opened.",
+  "verbatim_locator | proposition: measured junction potential | Methods | \"The voltage values in the Figures and text were also not corrected for the measured liquid junction potential of -10 mV\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/output/shares.tsv",
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/output/figure_notes.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "a51f1d9ec1724caff2ad4cf979a9d64de9771877a15148a9880a5351ce237e6a",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket (plain curl, https://pmc-oa-opendata.s3.amazonaws.com/PMC12613364.1/PMC12613364.1.txt) fetched 2026-11-11; bytes in the scratchpad only, not in the repository",
+ "study_id": {
+  "doi": "10.1186/s10194-025-02139-4",
+  "pmid": "41233736"
+ },
+ "workflow": "SCI44 package C, K+ conductance shares (ORCH-SCI44-20261110), producer og-t. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor. "
+}

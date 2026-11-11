@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-11T00:19:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-11T00:30:12Z",
+ "event_id": "FTR-20261111-19571146-96",
+ "evidence_basis": [
+  "PubMed record abstract only, read through the PubMed metadata tool; full text not opened.",
+  "verbatim_locator | proposition: astrocyte Ba2+ sensitivity | Abstract | \"the astrocyte passive conductance showed low sensitivity to extracellular Ba(2+)\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/output/shares.tsv",
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/output/figure_notes.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record fetched 2026-11-11 through the PubMed metadata tool",
+ "study_id": {
+  "doi": "10.1523/JNEUROSCI.5784-08.2009",
+  "pmid": "19571146"
+ },
+ "workflow": "SCI44 package C, K+ conductance shares (ORCH-SCI44-20261110), producer og-t. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor. "
+}

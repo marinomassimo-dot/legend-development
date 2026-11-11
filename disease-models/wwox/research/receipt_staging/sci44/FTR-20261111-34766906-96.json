@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-11T00:19:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-11T00:30:12Z",
+ "event_id": "FTR-20261111-34766906-96",
+ "evidence_basis": [
+  "Karagiannis 2021 text read in full (abstract, results, discussion, methods). Images viewed: Fig 2 and Fig 4 (Fig 3 and Fig 5 downloaded, not viewed; Figs 1, 6, 7 not opened). Source data workbooks read through a reader of mine (Fig 2 data 1 and 2, Fig 3 data 2, Fig 4 data 1 and 2, Fig 5 data 1-4) and Supplementary file 3 (docx); Supplementary files 1, 2, 4-7 and the figure-supplement workbooks not opened.",
+  "verbatim_locator | proposition: age of animals | Methods | \"Animals were used for experimentation at 13–24 days of age.\"",
+  "verbatim_locator | proposition: whole-cell temperature | Methods | \"Whole-cell recordings were performed at 25.3 ± 0.2°C\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/output/shares.tsv",
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/output/figure_notes.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "c761c11be8872fdbe0c9424d87089e78c118712900709a622f4a41c6efcce681",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket (plain curl, https://pmc-oa-opendata.s3.amazonaws.com/PMC8651295.1/PMC8651295.1.txt) fetched 2026-11-11; bytes in the scratchpad only, not in the repository",
+ "study_id": {
+  "doi": "10.7554/eLife.71424",
+  "pmid": "34766906"
+ },
+ "workflow": "SCI44 package C, K+ conductance shares (ORCH-SCI44-20261110), producer og-t. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor. Another actor (pk-w) holds a claim on this PMID in another worktree; I did not find a staged reading of theirs and read it independently."
+}

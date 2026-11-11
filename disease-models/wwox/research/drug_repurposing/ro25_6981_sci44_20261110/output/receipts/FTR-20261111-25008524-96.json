@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-11T00:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-11T00:06:00Z",
+ "event_id": "FTR-20261111-25008524-96",
+ "evidence_basis": [
+  "Abstract, main text, Methods and figure and Extended Data legends read from the NCBI efetch PMC XML (author manuscript); no figures viewed; Extended Data tables not read; no Ro 25-6981 KD or inhibition value found in the text.",
+  "verbatim_locator | proposition: Ro at the GluN1/GluN2B ATD interface, structure | Results | \"There is prominent electron density at the interface between the GluN1 and GluN2B subunits for the allosteric antagonist, Ro25-6981\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/output/comparison.tsv",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/output/figure_notes.tsv",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/output/new_measurements.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "ad761bc382a01c6074a7f35237a17515b78b3a36ad4d8d2b9766d124cecd80ef",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch (db=pmc, PMC4263351) fetched with plain curl on 2026-11-11; converted to text in the scratchpad; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1038/nature13548",
+  "pmid": "25008524"
+ },
+ "workflow": "SCI44 package B, IT43-Q01 Ro 25-6981 primary source, producer og-s. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

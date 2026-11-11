@@ -1,0 +1,9 @@
+pmid	paper	compound_as_named	abbreviation_or_variant_in_text	chemical_name_or_salt_stated	supplier_or_source_stated	other_names_stated	locator	depth
+22197913	Hedegaard 2012 Neurochem Int	Ro 25-6981	Ro 25-6981 (en dash)	(alphaR,betaS)-alpha-(4-hydroxyphenyl)-beta-methyl-4-(phenylmethyl)-1-piperidinepropanol maleate	Tocris Bioscience	none	Methods 2.1 compounds paragraph	partial_fulltext_read
+18989370	Chamberlain 2008 Neural Plast	Ro 25-6981	Ro 25-6981 ('Ro 25-691' once in a legend, typographical)	(alphaR,betaS)-alpha-(4-hydroxyphenyl)-beta-methyl-4-(phenylmethyl)-1-piperidinepropanol hydrochloride	Tocris (Bristol, UK)	none	Methods drugs paragraph	partial_fulltext_read
+19017396	Structural insights 2008 Mol Brain	RO25,6981	RO25,6981	no chemical name or salt	Sigma	none	Methods materials paragraph	partial_fulltext_read
+31164987	Chicken forebrain culture 2019 Pharmacol Res Perspect	Ro 25-6981	Ro 25-6981 (non-breaking hyphen)	no salt stated in the text read	not located in the text read	none	Methods compounds not located; Table 1	partial_fulltext_read
+28232581	Lu 2017 Science	Ro 25-6981	Ro	no chemical name or salt in the text read	not located	none	Abstract; Methods grid preparation and SPA	partial_fulltext_read
+25008524	Lee 2014 Nature	Ro25-6981	Ro25-6981	no salt	not located	none	Methods crystallization	partial_fulltext_read
+27062927	Zhu 2016 Cell	Ro25-6981	Ro25-6981	no salt	not located	none	Methods cryo-EM sample, TEVC	partial_fulltext_read
+26912815	Stroebel 2016 Mol Pharmacol	Ro25-6981	Ro25-6981 as a literature entry (compound 20 of a table)	not a compound of the paper's own measurements	not applicable	none	Table of literature activities	partial_fulltext_read

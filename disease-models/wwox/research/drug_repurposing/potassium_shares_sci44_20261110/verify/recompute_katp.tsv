@@ -1,0 +1,65 @@
+block	cell_or_group	n	metric	recomputed_value	sd	sem	producer_value	match	source_workbook_or_text	note
+F4_per_cell	AB005	1	R_ctrl/R_tol/R_dz MOhm	266.7/454.2/107.0					elife-71424-fig4-data1.xls	Vm ctrl/tol/dz mV -64.6/-59.1/-76.8; dRm_tol 70.3%; dRm_dz -59.9%; share tol 1-R0/Rtol 41.3%; Responsive
+F4_per_cell	AB007	1	R_ctrl/R_tol/R_dz MOhm	172.9/268.6/81.7					elife-71424-fig4-data1.xls	Vm ctrl/tol/dz mV -59.1/-51.9/-62.4; dRm_tol 55.4%; dRm_dz -52.8%; share tol 1-R0/Rtol 35.6%; Responsive
+F4_per_cell	AK179	1	R_ctrl/R_tol/R_dz MOhm	265.8/318.9/155.2					elife-71424-fig4-data1.xls	Vm ctrl/tol/dz mV -67.8/-55.0/-67.7; dRm_tol 19.9%; dRm_dz -41.6%; share tol 1-R0/Rtol 16.6%; Responsive
+F4_per_cell	AK192	1	R_ctrl/R_tol/R_dz MOhm	501.8/412.6/369.0					elife-71424-fig4-data1.xls	Vm ctrl/tol/dz mV -73.5/-61.9/-77.1; dRm_tol -17.8%; dRm_dz -26.5%; share tol 1-R0/Rtol -21.6%; Responsive
+F4_per_cell	AK196	1	R_ctrl/R_tol/R_dz MOhm	216.3/225.5/213.7					elife-71424-fig4-data1.xls	Vm ctrl/tol/dz mV -73.0/-73.3/-77.3; dRm_tol 4.3%; dRm_dz -1.2%; share tol 1-R0/Rtol 4.1%; Responsive
+F4_per_cell	AK203	1	R_ctrl/R_tol/R_dz MOhm	291.2/281.8/272.0					elife-71424-fig4-data1.xls	Vm ctrl/tol/dz mV -72.8/-71.8/-72.6; dRm_tol -3.2%; dRm_dz -6.6%; share tol 1-R0/Rtol -3.3%; Responsive
+F4_per_cell	AK207	1	R_ctrl/R_tol/R_dz MOhm	194.7/211.2/174.7					elife-71424-fig4-data1.xls	Vm ctrl/tol/dz mV -78.1/-79.0/-82.0; dRm_tol 8.4%; dRm_dz -10.3%; share tol 1-R0/Rtol 7.8%; Responsive
+F4_per_cell	AK208	1	R_ctrl/R_tol/R_dz MOhm	210.9/220.6/191.1					elife-71424-fig4-data1.xls	Vm ctrl/tol/dz mV -73.9/-75.0/-78.2; dRm_tol 4.6%; dRm_dz -9.4%; share tol 1-R0/Rtol 4.4%; Responsive
+F4_per_cell	AK296	1	R_ctrl/R_tol/R_dz MOhm	809.0/1999.5/1543.8					elife-71424-fig4-data1.xls	Vm ctrl/tol/dz mV -71.1/-81.4/-79.6; dRm_tol 147.2%; dRm_dz 90.8%; share tol 1-R0/Rtol 59.5%; Not Responsive
+F4_summary	RS_all_9	9	dRm tolbutamide %	32.1	51.5	17.2	32+/-17	yes	elife-71424-fig4-data1.xls	mean of per-cell values; sem = sd/sqrt(n)
+F4_summary	RS_all_9	9	dRm diazoxide %	-13.0	44.4	14.8	-13+/-15	yes	elife-71424-fig4-data1.xls	mean of per-cell values; sem = sd/sqrt(n)
+F4_summary	RS_all_9	9	dVm tolbutamide mV	2.8	7.2	2.4	2.8+/-2.4	yes	elife-71424-fig4-data1.xls	mean of per-cell values; sem = sd/sqrt(n)
+F4_summary	RS_all_9	9	dVm diazoxide mV	-4.4	3.9	1.3	-4.4+/-1.3	yes	elife-71424-fig4-data1.xls	mean of per-cell values; sem = sd/sqrt(n)
+F4_summary	RS_all_9	9	share 1-R0/Rtol %	16.0	25.1	8.4	16+/-8	yes	elife-71424-fig4-data1.xls	mean of per-cell values; sem = sd/sqrt(n)
+F4_summary	RS_all_9	9	conductance-weighted share sum(G0-Gtol)/sum(G0) %	15.2					elife-71424-fig4-data1.xls	alternative weighting; not a producer figure
+F4_summary	RS_all_9	9	median share %	7.8					elife-71424-fig4-data1.xls	
+F4_summary	RS_all_9	9	bootstrap 95% CI of mean share % (20000 resamples, seed 1)	0.9 to 31.9					elife-71424-fig4-data1.xls	percentile bootstrap over cells
+F4_summary	RS_all_9	9	one-sample t of share vs 0	1.92					elife-71424-fig4-data1.xls	df 8; two-sided p about 0.09 (from t table, not exact)
+F4_summary	RS_responsive_8	8	dRm tolbutamide %	17.7	30.1	10.6	17.7+/-10.6	yes	elife-71424-fig4-data1.xls	mean of per-cell values; sem = sd/sqrt(n)
+F4_summary	RS_responsive_8	8	dRm diazoxide %	-26.0	22.8	8.0	-26+/-8	yes	elife-71424-fig4-data1.xls	mean of per-cell values; sem = sd/sqrt(n)
+F4_summary	RS_responsive_8	8	dVm tolbutamide mV	4.5	5.7	2.0	4.5+/-2.0	yes	elife-71424-fig4-data1.xls	mean of per-cell values; sem = sd/sqrt(n)
+F4_summary	RS_responsive_8	8	dVm diazoxide mV	-3.9	3.8	1.4	-3.9+/-1.4	yes	elife-71424-fig4-data1.xls	mean of per-cell values; sem = sd/sqrt(n)
+F4_summary	RS_responsive_8	8	share 1-R0/Rtol %	10.6	20.4	7.2	11+/-7	yes	elife-71424-fig4-data1.xls	mean of per-cell values; sem = sd/sqrt(n)
+F4_summary	RS_responsive_8	8	conductance-weighted share sum(G0-Gtol)/sum(G0) %	13.5					elife-71424-fig4-data1.xls	alternative weighting; not a producer figure
+F4_summary	RS_responsive_8	8	median share %	6.1					elife-71424-fig4-data1.xls	
+F4_summary	RS_responsive_8	8	bootstrap 95% CI of mean share % (20000 resamples, seed 1)	-2.5 to 24.0					elife-71424-fig4-data1.xls	percentile bootstrap over cells
+F4_summary	RS_responsive_8	8	one-sample t of share vs 0	1.47					elife-71424-fig4-data1.xls	df 7; two-sided p about 0.19 (from t table, not exact)
+F4_summary	pooled_39	39	dRm tolbutamide %	20.7	31.5	5.0	20.7+/-5.0	yes	elife-71424-fig4-data1.xls	mean of per-cell values; sem = sd/sqrt(n)
+F4_summary	pooled_39	39	dRm diazoxide %	-15.9	28.2	4.5	-15.9+/-4.5	yes	elife-71424-fig4-data1.xls	mean of per-cell values; sem = sd/sqrt(n)
+F4_summary	pooled_39	39	dVm tolbutamide mV	2.6	4.8	0.8	2.6+/-0.8	yes	elife-71424-fig4-data1.xls	mean of per-cell values; sem = sd/sqrt(n)
+F4_summary	pooled_39	39	dVm diazoxide mV	-4.0	3.6	0.6	-4.0+/-0.6	yes	elife-71424-fig4-data1.xls	mean of per-cell values; sem = sd/sqrt(n)
+F4_summary	pooled_39	39	share 1-R0/Rtol %	13.0	17.1	2.7			elife-71424-fig4-data1.xls	mean of per-cell values; sem = sd/sqrt(n)
+F4_summary	pooled_39	39	conductance-weighted share sum(G0-Gtol)/sum(G0) %	13.4					elife-71424-fig4-data1.xls	alternative weighting; not a producer figure
+F4_summary	pooled_39	39	median share %	7.8					elife-71424-fig4-data1.xls	
+F4_summary	pooled_39	39	bootstrap 95% CI of mean share % (20000 resamples, seed 1)	7.9 to 18.4					elife-71424-fig4-data1.xls	percentile bootstrap over cells
+F4_summary	pooled_39	39	one-sample t of share vs 0	4.75					elife-71424-fig4-data1.xls	df 38; two-sided p about 0.19 (from t table, not exact)
+F4_summary	pooled_39	39	dRm tolbutamide MOhm	77.5	196.0	31.4	78+/-32	mean yes; workbook SEM 31.8 = sd/sqrt(n-1)	elife-71424-fig4-data1.xls	workbook 'mean/s.e.m.' row; the workbook and the paper compute s.e.m. as sd/sqrt(n-1); the sem column here is sd/sqrt(n)
+F4_summary	pooled_39	39	dRm diazoxide MOhm	-39.1	144.4	23.1	-39+/-23	mean yes; workbook SEM 23.4 = sd/sqrt(n-1)	elife-71424-fig4-data1.xls	workbook 'mean/s.e.m.' row; the workbook and the paper compute s.e.m. as sd/sqrt(n-1); the sem column here is sd/sqrt(n)
+F4_summary	pooled_39	39	responsive cells	32 of 39			32 of 39	yes	elife-71424-fig4-data1.xls	7 not responsive: AK180 AK185 AK189 AK193 AK197 AK238 AK296
+F4_summary	RS_all_9	9	cell group label in Fig 4 source data 2	Glu for all 9 RS			regular-spiking glutamatergic	yes	elife-71424-fig4-data2.xls	also the text: RS and IB cells have glutamatergic molecular features (Results, Expression section)
+F2_RS	RS7	7	G_KATP pS	3211.2	2752.6	1040.4	3211+/-1124	mean yes; stated SEM = sd/sqrt(n-1)	elife-71424-fig2-data2.xls	stated +/- reproduces only with sd/sqrt(n-1) (G_KATP 1124, ratio 0.082, E_rev 5.0); sd/sqrt(n) is in the sem column; RS cell AK011 G_KATP 8733 pS; median G_KATP 2886 pS
+F2_RS	RS7	7	G_KATP/G_total under diazoxide	0.519	0.201	0.076	0.519+/-0.082	mean yes; stated SEM = sd/sqrt(n-1)	elife-71424-fig2-data2.xls	stated +/- reproduces only with sd/sqrt(n-1) (G_KATP 1124, ratio 0.082, E_rev 5.0); sd/sqrt(n) is in the sem column; RS cell AK011 G_KATP 8733 pS; median G_KATP 2886 pS
+F2_RS	RS5	5	E_rev mV (n 5)	-101.7	10.0	4.5	-101.7+/-5.0	mean yes; stated SEM = sd/sqrt(n-1)	elife-71424-fig2-data2.xls	stated +/- reproduces only with sd/sqrt(n-1) (G_KATP 1124, ratio 0.082, E_rev 5.0); sd/sqrt(n) is in the sem column; RS cell AK011 G_KATP 8733 pS; median G_KATP 2886 pS
+F2_pooled	63 neurons by type	63	G_KATP/G_total by type (workbook summary)	RS 0.519; IB 0.499; Burst Vip 0.459; Adapt Vip 0.460; Adapt Sst 0.439; Adapt Npy 0.429; FS-Pvalb 0.315			pooled 0.43-0.52 by type	NO: range is 0.32-0.52 (FS-Pvalb 0.315 omitted)	elife-71424-fig2-data2.xls	defect in shares.tsv SC03 note
+F2_n18_all_types	tolbutamide alone, voltage clamp	18	dRm tolbutamide %	20.5	31.0	7.3	20.5+/-7.5 (text)	yes	elife-71424-fig2-data1.xls	text says tolbutamide 'did not change' basal current or Rm (p 0.156; p 0.039 uncorrected for Rm)
+F2_n18_all_types	tolbutamide alone	18	dI tolbutamide pA at -60 mV	-6.6	12.5	2.9	-6.6+/-3.0 (text)	yes	elife-71424-fig2-data1.xls	an independent voltage-clamp resting estimate the producer rows do not carry
+F2_n18_all_types	diazoxide	18	dI diazoxide pA	45.0	40.5	9.6	45.0+/-9.6 (text)	yes	elife-71424-fig2-data1.xls	ratio |tolbutamide|/diazoxide current = 15%
+F2_n18_all_types	tolbutamide alone	18	share 1-1/(1+dRm_tol) %	12.9	17.9	4.2			elife-71424-fig2-data1.xls	per-cell mean; conductance-weighted 16.6%
+F2_n18_all_types	diazoxide-evoked KATP pool	18	(G_dz-G_tol)/G_ctrl	0.78	0.44	0.10			elife-71424-fig2-data1.xls	resting tolbutamide-sensitive conductance about 17% of this pool (sum-ratio)
+F2_n18_all_types	AK219	1	RS/IB cell: tol dRm% / dz dRm%	19.9/0.7					elife-71424-fig2-data1.xls	type RS; share 16.6%
+F2_n18_all_types	AK266	1	RS/IB cell: tol dRm% / dz dRm%	111.4/-35.0					elife-71424-fig2-data1.xls	type RS; share 52.7%
+F2_n18_all_types	AK269	1	RS/IB cell: tol dRm% / dz dRm%	5.3/-42.0					elife-71424-fig2-data1.xls	type RS; share 5.0%
+F2_n18_all_types	AK270	1	RS/IB cell: tol dRm% / dz dRm%	3.2/-64.3					elife-71424-fig2-data1.xls	type IB; share 3.1%
+F3	WT washout current pA	26	mean at -50 mV	46.7	97.0	19.0	46.7+/-19.0, 19 of 26 outward	yes	elife-71424-fig3-data2.xls	19 positive, 7 negative; median 16.1
+F3	Kcnj11-/- washout current pA	22	mean at -50 mV	-59.9	56.0	11.9	-59.9+/-11.9, 20 of 22 inward	yes	elife-71424-fig3-data2.xls	2 positive, 20 negative; median -61.9
+F5	15L	11	normalised firing %	209	155	47	209+/-49	mean yes; stated SEM = sd/sqrt(n-1)	elife-71424-fig5-data3.xls	workbook column header names the 10 mM glucose condition as 1.0; producer rows say 2.5 mM glucose baseline (text: 'increase ... by lactate (209 +/- 49%)')
+F5	15L+D	11	normalised firing %	71	56	17	71+/-18	mean yes; stated SEM = sd/sqrt(n-1)	elife-71424-fig5-data3.xls	workbook column header names the 10 mM glucose condition as 1.0; producer rows say 2.5 mM glucose baseline (text: 'increase ... by lactate (209 +/- 49%)')
+F5	15L+T	10	normalised firing %	160	51	16	160+/-17	mean yes; stated SEM = sd/sqrt(n-1)	elife-71424-fig5-data3.xls	workbook column header names the 10 mM glucose condition as 1.0; producer rows say 2.5 mM glucose baseline (text: 'increase ... by lactate (209 +/- 49%)')
+F5	WT	9	lactate normalised firing %	147	71	24	147+/-25 (n 9)	yes	elife-71424-fig5-data4.xls	
+F5	Kcnj11 KO	10	lactate normalised firing %	112	96	30	112+/-32 (n 10)	yes	elife-71424-fig5-data4.xls	
+F1_context	277 characterised neurons	277	per-cell recording temperature C	25.23	3.48	0.21	25.3+/-0.2 (Methods: whole-cell at 25.3 +/- 0.2 C)	mean matches; the +/- is the SEM, not a regulation tolerance	elife-71424-fig1-data1.xls	range 20.3 to 34.1; 38 of 277 cells above 30 C; Fig 2 and Fig 4 cells are mostly not in this workbook, so their per-cell temperature is not tabulated
+F1_context	RS cells (n 63)	63	IR morphology	{'Pyramidal': 26, 'Fusiform': 13, 'Multipolar': 10, 'Inverted Pyr.': 3, 'Round': 7, 'Ovoid': 4}			RS called pyramidal-type in shares.tsv SC01 cell_type_note	NOT SUPPORTED as stated	elife-71424-fig1-data1.xls	only 26 of 63 RS cells are Pyramidal by IR morphology; the paper calls RS glutamatergic
+F1_context	RS cells (n 63)	63	layer	{'II-III': 30, 'I-II': 3, 'III': 1, 'III-IV': 5, 'II': 3, 'I': 1, 'IV': 19, 'IV-V': 1}					elife-71424-fig1-data1.xls	
+F1_context	RS cells (n 63)	63	break-in RMP / Rin	-81.5 mV / 319 MOhm			-81.5+/-0.9 / 319+/-7 (Supp file 3)	yes	elife-71424-fig1-data1.xls	Fig 4 RS control Vm is -70.4 mV (n 9), about 11 mV more depolarised than break-in RMP; whether Fig 4 Vm values carry the -15.6 mV junction correction is not stated for Fig 4
