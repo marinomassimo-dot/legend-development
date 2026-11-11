@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-10T22:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-10T22:41:00Z",
+ "event_id": "FTR-20261110-38372421-96",
+ "evidence_basis": [
+  "Abstract only.",
+  "verbatim_locator | proposition: PDK2 siRNA in SOD1G93A rat astrocytes supports motor neuron survival | Abstract | \"Significantly, PDK2 knockdown increased the ability of SOD1G93A astrocytes to support MN survival\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/isoform_expression.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/function_neural.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed record (abstract); publisher page not opened (not open access in Europe PMC)",
+ "study_id": {
+  "doi": "10.1002/glia.24516",
+  "pmid": "38372421"
+ },
+ "workflow": "SCI44 package A step A2 producer og-p (pdh_pdk_sci44_20261110). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

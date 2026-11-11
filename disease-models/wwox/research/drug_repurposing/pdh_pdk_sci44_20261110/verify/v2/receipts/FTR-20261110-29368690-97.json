@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-10T23:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_present",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-10T23:47:00Z",
+ "event_id": "FTR-20261110-29368690-97",
+ "evidence_basis": [
+  "Results paragraph on neuronal excitability and glibenclamide, the perforated-patch and whole-cell Methods, Figure 2 legend and Figure 2 image viewed (n=7 per group); other Results and Discussion not read.",
+  "verbatim_locator | proposition: KATP almost completely inactive in wild-type cells is the authors inference | Results | \"almost completely inactive in wild-type cells\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v2/audit.md",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v2/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v2/queries_verifier.tsv"
+ ],
+ "prior_receipt": "FTR-20261110-29368690-96",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket text and figure image of PMC5785210 fetched with plain curl on 2026-11-10; bytes not saved",
+ "study_id": {
+  "doi": "10.7554/eLife.32721",
+  "pmid": "29368690"
+ },
+ "workflow": "SCI44 package A blind verifier V2 pk-w (pdh_pdk_sci44_20261110). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-10T22:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-10T22:41:00Z",
+ "event_id": "FTR-20261110-34712383-96",
+ "evidence_basis": [
+  "Methods 2.1-2.8 start, Results 3.1-3.7 and the first Discussion paragraphs read with legends; figures not viewed.",
+  "verbatim_locator | proposition: PDK2 protein rose and PDH fell after MCAO | Results 3.4 | \"the expression of mitochondrial metabolism-related protein PDK2 increased, and PDH decreased in the MCAO cohort\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/isoform_expression.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/function_neural.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket text of PMC8548159 fetched with plain curl on 2026-11-10; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1155/2021/5173035",
+  "pmid": "34712383"
+ },
+ "workflow": "SCI44 package A step A2 producer og-p (pdh_pdk_sci44_20261110). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

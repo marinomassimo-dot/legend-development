@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-10T23:17Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "read",
+  "introduction": "read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-10T23:26Z",
+ "event_id": "FTR-20261110-17683942-97",
+ "evidence_basis": [
+  "Verifier V1 read Results on inhibition of PDK1 and PDK3, the Discussion paragraph on the dual-role ligand and the AZD7545 assay Experimental Procedures; Figure 2 panels A-D viewed. Structure sections and the other figures not read.",
+  "verbatim_locator | proposition: AZD7545 sign depends on the E2p/E3BP core, stated by the authors for PDK3 | Discussion | \"AZD7545 appears to be a “dual-role” ligand for PDK3\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/audit.md",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v1/recompute_expression.tsv"
+ ],
+ "prior_receipt": "FTR-20261110-17683942-96",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC article page PMC2871385 (author manuscript, plain curl); Fig 2 image from the PMC cdn viewed",
+ "study_id": {
+  "doi": "10.1016/j.str.2007.07.001",
+  "pmid": "17683942"
+ },
+ "workflow": "SCI44 blind verifier V1 (actor pk-v). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

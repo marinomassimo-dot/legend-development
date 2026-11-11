@@ -1,0 +1,38 @@
+catalogue_id	name	origin	symbols	source	action	mechanism_or_target_name	reference_ids
+CAT:CHEMBL306823	SODIUM DICHLOROACETATE	chembl_selected	PDK1;PDK2;PDK3;PDK4	ChEMBL curated mechanism	INHIBITOR	Pyruvate dehydrogenase kinase inhibitor	PubMed:20533281;PubMed:27803917
+CAT:DGIDB:0788c7732488	Tetradecanoylphorbol Acetate	dgidb_only	SLC16A1	DGIdb interaction / NCI			
+CAT:DGIDB:09a092df2430	7Acc2	dgidb_only	SLC16A7	DGIdb interaction / GuideToPharmacology	inhibitor		
+CAT:DGIDB:0d5f54a40eeb	Sodium Butyrate	dgidb_only	SLC16A1	DGIdb interaction / NCI			
+CAT:DGIDB:111f25d9cc39	Ver-246608	dgidb_only	PDK3	DGIdb interaction / GuideToPharmacology	inhibitor		
+CAT:DGIDB:111f25d9cc39	Ver-246608	dgidb_only	PDK2	DGIdb interaction / GuideToPharmacology	inhibitor		
+CAT:DGIDB:111f25d9cc39	Ver-246608	dgidb_only	PDK4	DGIdb interaction / GuideToPharmacology	inhibitor		
+CAT:DGIDB:111f25d9cc39	Ver-246608	dgidb_only	PDK1	DGIdb interaction / GuideToPharmacology	inhibitor		
+CAT:DGIDB:27b4cd9ba342	Osu-03012	dgidb_only	PDK1	DGIdb interaction / TdgClinicalTrial			
+CAT:DGIDB:35a9e181414e	Nitrofurantoin, Macrocrystals	dgidb_only	MPC2	DGIdb interaction / GuideToPharmacology	inhibitor		
+CAT:DGIDB:6102045491fa	Chembl:Chembl257158	dgidb_only	PDK1	DGIdb interaction / DTC			
+CAT:DGIDB:6396e14ba67c	3-Hydroxyanthranilic Acid	dgidb_only	PDK1	DGIdb interaction / DTC			
+CAT:DGIDB:6a9f06277acb	Lonidamine	dgidb_only	MPC2	DGIdb interaction / GuideToPharmacology	inhibitor		
+CAT:DGIDB:6b518066e3b8	Anthracycline Antineoplastic Antibiotic	dgidb_only	LDHA	DGIdb interaction / NCI			
+CAT:DGIDB:6dce3f58cbc3	Azd7545	dgidb_only	PDK1	DGIdb interaction / GuideToPharmacology	inhibitor		
+CAT:DGIDB:6dce3f58cbc3	Azd7545	dgidb_only	PDK2	DGIdb interaction / GuideToPharmacology	inhibitor		
+CAT:DGIDB:76a21e3d5414	Compound 30 [Pmid: 16455256]	dgidb_only	SLC16A1	DGIdb interaction / GuideToPharmacology	inhibitor		
+CAT:DGIDB:7c2f13d2f706	Entacapone	dgidb_only	MPC2	DGIdb interaction / GuideToPharmacology	inhibitor		
+CAT:DGIDB:803f8d009404	Butyric Acid	dgidb_only	SLC16A1	DGIdb interaction / NCI			
+CAT:DGIDB:901979e6ba30	Sodium Dichloroacetate	dgidb_only	PDK3	DGIdb interaction / ChEMBL	inhibitor		
+CAT:DGIDB:901979e6ba30	Sodium Dichloroacetate	dgidb_only	PDK4	DGIdb interaction / ChEMBL	inhibitor		
+CAT:DGIDB:901979e6ba30	Sodium Dichloroacetate	dgidb_only	PDK1	DGIdb interaction / ChEMBL	inhibitor		
+CAT:DGIDB:901979e6ba30	Sodium Dichloroacetate	dgidb_only	PDK2	DGIdb interaction / ChEMBL	inhibitor		
+CAT:DGIDB:91b7ee851936	Azd3965	dgidb_only	SLC16A7	DGIdb interaction / GuideToPharmacology	inhibitor		
+CAT:DGIDB:91b7ee851936	Azd3965	dgidb_only	SLC16A1	DGIdb interaction / GuideToPharmacology	inhibitor		
+CAT:DGIDB:9737946af688	Chembl:Chembl2058994	dgidb_only	LDHA	DGIdb interaction / DTC			
+CAT:DGIDB:a8dc348e5418	Methotrexate	dgidb_only	SLC16A7	DGIdb interaction / PharmGKB			
+CAT:DGIDB:b7c34486f9a7	Dichloroacetic Acid	dgidb_only	PDK1	DGIdb interaction / DTC			
+CAT:DGIDB:d168983afbe9	Zaprinast	dgidb_only	MPC2	DGIdb interaction / GuideToPharmacology	inhibitor		
+CAT:DGIDB:e1da0e7d5335	Bay-8002	dgidb_only	SLC16A1	DGIdb interaction / GuideToPharmacology	inhibitor		
+CAT:DGIDB:e1da0e7d5335	Bay-8002	dgidb_only	SLC16A7	DGIdb interaction / GuideToPharmacology	inhibitor		
+CAT:DGIDB:f9aa3ade458c	Celecoxib	dgidb_only	PDK1	DGIdb interaction / PharmGKB			
+CAT:DGIDB:fac46216aa38	Devimistat	dgidb_only	PDHA1	DGIdb interaction / TdgClinicalTrial			
+CAT:DGIDB:fac46216aa38	Devimistat	dgidb_only	PDK2	DGIdb interaction / TdgClinicalTrial			
+CAT:DGIDB:fac46216aa38	Devimistat	dgidb_only	PDK1	DGIdb interaction / TdgClinicalTrial			
+CAT:DGIDB:fac46216aa38	Devimistat	dgidb_only	PDK3	DGIdb interaction / TdgClinicalTrial			
+CAT:DGIDB:fac46216aa38	Devimistat	dgidb_only	PDK4	DGIdb interaction / TdgClinicalTrial			

@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-10T23:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-10T23:47:00Z",
+ "event_id": "FTR-20261110-39177920-98",
+ "evidence_basis": [
+  "Results paragraph on PDK4 and microglia with the Fig 1 legend (N = 3 for panels D, F-G and H), the Discussion limitations sentence read; images not viewed.",
+  "verbatim_locator | proposition: BV2 is a substitute for primary microglia | Discussion | \"BV2 cells were used as substitutes for primary microglia\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v2/audit.md",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v2/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/verify/v2/queries_verifier.tsv"
+ ],
+ "prior_receipt": "FTR-20261110-39177920-96",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket text of PMC12234639 fetched with plain curl on 2026-11-10; bytes not saved",
+ "study_id": {
+  "doi": "10.1007/s10753-024-02105-3",
+  "pmid": "39177920"
+ },
+ "workflow": "SCI44 package A blind verifier V2 pk-w (pdh_pdk_sci44_20261110). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

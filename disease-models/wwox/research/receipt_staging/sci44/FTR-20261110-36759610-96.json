@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-10T23:03:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_present",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-10T23:11:00Z",
+ "event_id": "FTR-20261110-36759610-96",
+ "evidence_basis": [
+  "Results and the electrophysiology Methods read; legends of all eight figures read; Figures 2, 6 and 7 viewed; Discussion (beyond keyword lines), Introduction and Supplement not opened.",
+  "verbatim_locator | proposition: neuron-targeted Ldha knockdown did not change lactate, firing or behaviour | Results | \"failed to change lactate level, neuronal excitability, or depressive-like behaviors\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a4/levers.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a4/k_coupling.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a4/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a4/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PubMed full-text tool (PMC9911790) for text; PMC page via plain curl for legends and figure images",
+ "study_id": {
+  "doi": "10.1038/s41467-023-36209-5",
+  "pmid": "36759610"
+ },
+ "workflow": "SCI44 package A step A4 producer og-r (pdh_pdk_sci44_20261110). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

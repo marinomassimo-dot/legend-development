@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-10T22:53:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_present",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_read",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-10T22:58:00Z",
+ "event_id": "FTR-20261110-22336956-96",
+ "evidence_basis": [
+  "One passage on celecoxib targets and the reference list entries for PDPK1 read; the rest of the pathway review not read.",
+  "verbatim_locator | proposition: the source means PDPK1 by PDK1 | text | \"PDK1 (encoded by gene PDPK1 )\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a3/activity_primary.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a3/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/pdh_pdk_sci44_20261110/output/a3/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch XML of PMC3303994 (the PMC page itself showed a reCAPTCHA; efetch is the documented API)",
+ "study_id": {
+  "doi": "10.1097/FPC.0b013e32834f94cb",
+  "pmid": "22336956"
+ },
+ "workflow": "SCI44 package A step A3 producer og-q (pdh_pdk_sci44_20261110). Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
