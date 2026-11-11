@@ -114,7 +114,7 @@
      "step": "Integrate, battery by SHA, publish with SHA check, CI and site, final report",
      "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": "Battery on 8211d2d7: PASS WITH SKIPS (230 targets, 11 skipped); later commits are documentation and record only. Publication, CI and site pending."
+     "evidence": "Batteries by SHA: 8211d2d7 PASS WITH SKIPS (230 targets, 11 skipped; docs and record only after it); c82a1bff STOPPED partial (superseded by the HE43 landing, no verdict); 5f721d0d (merge with HE43 landed main) FAIL: one target, generation_it39 test_stage_it39 (question dossiers stale after the comparators and investigations edits: build_questions.py --write not rerun), kept as the verdict of that SHA. Fix: dossiers regenerated, 0 failing among the related local tests; new candidate and battery follow. CI: #640 of 51d6c3b1 success (1h13m)."
     }
    ]
   }
