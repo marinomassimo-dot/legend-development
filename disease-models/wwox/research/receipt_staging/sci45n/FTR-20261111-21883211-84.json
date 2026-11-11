@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-11T11:20Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "tables": "read",
+  "limitations": "not_present",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-11T11:21:29Z",
+ "event_id": "FTR-20261111-21883211-84",
+ "evidence_basis": [
+  "Kostakis 2011: Methods (Electrophysiology), Results (proton inhibition, exon-5, Fig 5, Fig 8 legends) and Table 1 read from the PMC XML; the open-data bucket holds no images for this article so figures are captions_only; supplementary (Supplementary Fig S1) not read.",
+  "verbatim_locator | proposition: NR1-1a/NR2A pIC50 and Hill slope in oocytes | Table 1 | \"NR1-1a/NR2A (− exon-5) 7.21 ± 0.02 1.45 ± 0.06\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/output/proton_sensitivity.tsv",
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/output/native_evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "97738593920aef5a1afb75c2467c7ba9456b761783119042197b8a6778b6f9c4",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC full-text XML via NCBI efetch (plain curl, default user agent) on 2026-11-11; bytes in scratch only; not stored in the repository",
+ "study_id": {
+  "doi": "10.1111/j.1471-4159.2011.07442.x",
+  "pmid": "21883211"
+ },
+ "workflow": "SCI45 follow-up package N1 (ORCH-SCI45B-20261111), producer og-z. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

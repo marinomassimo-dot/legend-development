@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-11T11:20Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "figures": "read",
+  "tables": "read",
+  "limitations": "not_present",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-11T11:21:29Z",
+ "event_id": "FTR-20261111-32180707-84",
+ "evidence_basis": [
+  "Alijevic 2020: Methods, Results and Discussion read from the PMC XML; Table 1 (page 8 of the open-data PDF, zoomed) and Figures 2, 3, 4 and 6 viewed; Figures 1, 5, 7-11 captions only; Supplementary Table 1 not read. Coverage figures set to read for the figures that carry numbers used.",
+  "verbatim_locator | proposition: ASIC1a model needs pH 6.7 or lower for current | Results | \"To induce ion current or charge transport, an acidification to ≤pH 6.7 was necessary in the model.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/output/proton_sensitivity.tsv",
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/output/native_evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "eaeb788248ae5a769f4a83f71afcd2e241446a3dcb7dfbd86f2f0d33a218a3d2",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC full-text XML via NCBI efetch (plain curl, default user agent) on 2026-11-11; bytes in scratch only; not stored in the repository; figures from the public PMC open-data bucket",
+ "study_id": {
+  "doi": "10.3389/fncel.2020.00041",
+  "pmid": "32180707"
+ },
+ "workflow": "SCI45 follow-up package N1 (ORCH-SCI45B-20261111), producer og-z. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

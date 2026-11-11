@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-11T11:31Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-11T11:34:35Z",
+ "event_id": "FTR-20261111-34354080-83",
+ "evidence_basis": [
+  "Tian 2021 Nat Commun (Paoletti lab): Methods (TEVC, oocytes, 0.3 mM Ba2+, RT, -60 mV, 100 uM Glu+Gly, rat GluN1-1a, rat GluN2A, mouse GluN2B) and the Fig 3d proton results read from the XML; Fig 3 viewed (curves of wt overlap the pre-UV mutant). Not the whole paper.",
+  "verbatim_locator | proposition: GluN1-K178AzF/GluN2B pH IC50 before UV (GluN2A pre-UV 7.00 +/- 0.02, Hill 1.91) | Results; Figure 3d legend | \"pH IC50s of 7.60 ± 0.01 [n = 7–9] pre-UV\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/verify/recompute_proton.tsv",
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/verify/queries_verifier.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "80f808a11675fc6a7f08934073ae7cd475954794e17cfdfa1e83566121da910c",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC full-text XML via NCBI efetch (plain curl, default user agent) on 2026-11-11; bytes in scratch only; not stored in the repository",
+ "study_id": {
+  "doi": "10.1038/s41467-021-25058-9",
+  "pmid": "34354080"
+ },
+ "workflow": "SCI45 follow-up package N1 verification V7 (ORCH-SCI45B-20261111), blind verifier ks-z. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

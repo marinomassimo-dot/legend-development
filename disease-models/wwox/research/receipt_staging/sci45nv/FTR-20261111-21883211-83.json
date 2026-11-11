@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-11T11:31Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-11T11:34:35Z",
+ "event_id": "FTR-20261111-21883211-83",
+ "evidence_basis": [
+  "Kostakis 2011: Table 1, Methods (oocytes, 22-24 C, Mg-free Ba-Ringer, 200 uM NMDA + 10 uM glycine, -70 mV, pH 7.5 base), Results (proton inhibition, exon 5) and Fig 5 and Fig 8 legends read from the PMC XML; the open-data bucket has no images, so figures are captions_only; supplement not read. Fractions at pH 7.4, 7.2, 7.0 recomputed with own code.",
+  "verbatim_locator | proposition: pK and Hill slope of GluN1-1a/GluN2A proton inhibition | Table 1 | \"NR1-1a/NR2A (- exon-5) 7.21 ± 0.02 1.45 ± 0.06\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/verify/recompute_proton.tsv",
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/verify/queries_verifier.tsv"
+ ],
+ "prior_receipt": "FTR-20261111-21883211-84",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "97738593920aef5a1afb75c2467c7ba9456b761783119042197b8a6778b6f9c4",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC full-text XML via NCBI efetch (plain curl, default user agent) on 2026-11-11; bytes in scratch only; not stored in the repository",
+ "study_id": {
+  "doi": "10.1111/j.1471-4159.2011.07442.x",
+  "pmid": "21883211"
+ },
+ "workflow": "SCI45 follow-up package N1 verification V7 (ORCH-SCI45B-20261111), blind verifier ks-z. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

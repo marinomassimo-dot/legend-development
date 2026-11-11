@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-11T11:20Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "limitations": "not_present",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-11T11:21:29Z",
+ "event_id": "FTR-20261111-37629153-84",
+ "evidence_basis": [
+  "Evlanenkov 2023: Methods, Results and Discussion read from the PMC XML; Figures 3 and 4 viewed (points read at pH 7.4, 7.1, 6.8); Figures 1, 2, 5, 6 captions only; no supplement.",
+  "verbatim_locator | proposition: NMDA proton pH50 in juvenile cortical pyramidal neurons | Results | \"The steady-state responses to NMDA demonstrated a pH50 of 6.97 (IC50 = 0.11 ± 0.04 µM)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/output/proton_sensitivity.tsv",
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/output/native_evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/nmda_asic_ph_sci45_20261111/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "43ff32a601fe6fba71d5e8559977aae3411f25d3ae802c1b5e907d1f765d723f",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC full-text XML via NCBI efetch (plain curl, default user agent) on 2026-11-11; bytes in scratch only; not stored in the repository; figures from the public PMC open-data bucket",
+ "study_id": {
+  "doi": "10.3390/ijms241612974",
+  "pmid": "37629153"
+ },
+ "workflow": "SCI45 follow-up package N1 (ORCH-SCI45B-20261111), producer og-z. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}
