@@ -17,6 +17,23 @@ BR = [{"gene_a": "BBB", "hgnc_a": "HGNC:2", "relation": "phosphorylates", "gene_
        "context": "other tissue", "evidence_ref": "x", "note": "n"}]
 
 
+class ListingNotes(unittest.TestCase):
+    """HE44: a listing cut at --limit, or a symbol with no catalogue row, is said, so neither reads as "no compounds"."""
+    def test_a_truncated_listing_says_how_many_rows_each_symbol_has(self):
+        rows = [{"target": "AAA"}] * 40 + [{"target": "BBB"}] * 3
+        n = rs.listing_notes(rows, [{"symbol": "AAA"}, {"symbol": "BBB"}], 30)
+        self.assertEqual(len(n), 1)
+        self.assertIn("30 of 43", n[0])
+        self.assertIn("AAA 40, BBB 3", n[0])
+
+    def test_a_symbol_without_a_row_is_named_and_a_complete_listing_with_all_symbols_says_nothing(self):
+        n = rs.listing_notes([{"target": "AAA"}], [{"symbol": "AAA"}, {"symbol": "CCC"}], 30)
+        self.assertEqual(len(n), 1)
+        self.assertIn("CCC", n[0])
+        self.assertNotIn("AAA", n[0].split("(")[0])
+        self.assertEqual(rs.listing_notes([{"target": "AAA"}], [{"symbol": "AAA"}], 30), [])
+
+
 class Bridges(unittest.TestCase):
     def test_the_other_gene_is_added_as_a_pathway_member_carrying_the_bridge(self):
         t = rs.targets_with_bridges(NEED, BR)

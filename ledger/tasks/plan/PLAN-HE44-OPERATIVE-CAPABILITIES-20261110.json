@@ -1,0 +1,150 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "PLAN-HE44-OPERATIVE-CAPABILITIES-20261110",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "plan",
+ "PRIORITY": "HIGH",
+ "assigned_on": "2026-11-10",
+ "OBJECTIVE": "HE44: make the capabilities operative: reach activities when no mechanism row exists, carry quantities and identity to the consumer, retrieval states to the generator's output, one measured cost reduction, DREAM with a retrieval test, continuity checked, simplification.",
+ "worktree": ".claude/worktrees/he44",
+ "branch": "task/he44",
+ "CURRENT_STATE": "DONE",
+ "CHECKPOINT": {
+  "last_verified_result": "battery PASS WITH SKIPS (236 targets, 11 skipped) on 8f5036867faa; merged with main ed708dfc (IT43 landing and SCI44): view suite OK, targeted suites OK, gate PASS, audit PASS; the merge result itself is not covered by a full battery",
+  "first_incomplete_work": "none",
+  "active_processes": "none",
+  "real_dependencies": "IT44 adopts resolve_targets and takes target_activity.py; SCI44/SCI45 may settle the Cs+ HCN unit from the primary paper",
+  "next_executable_step": "none; mandate complete"
+ },
+ "AUTHORISED_QUEUE_20261110": {
+  "MANDATE_STATE": "COMPLETE",
+  "OBJ_H0": {
+   "order": 1,
+   "title": "What is operative: HE43 consumption on the real tree",
+   "steps": [
+    {
+     "step": "Callers of measurement / parent_form / states / name source checked on the merged tree: measurement has none outside tests, dgidb_listing keeps its own key()",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "he44_20261110/README.md section 1"
+    },
+    {
+     "step": "HE44 record, session-mandate binding verified",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "watch check: session 29e50812 RUNNING for HE44; HE43 UNKNOWN (binding not written)"
+    }
+   ]
+  },
+  "OBJ_H1": {
+   "order": 2,
+   "title": "Activities reachable without a mechanism row (azetukalner case)",
+   "steps": [
+    {
+     "step": "Existing path studied; minimal activity-by-target component; control and a pre-registered different case",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "he44_20261110/README.md section 2; target_activity.py + test; H1_preregistration.md met; commits f454fb8a, ce8b1173"
+    }
+   ]
+  },
+  "OBJ_H2": {
+   "order": 3,
+   "title": "Quantities to the point of use",
+   "steps": [
+    {
+     "step": "Measurement carried through the consumer that drops it; Cs+/HCN pointers for science",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "he44_20261110/README.md section 3; action_search.py columns; test_quantity_to_consumer.py; cs_hcn_pointers.md; commit c7926be4"
+    }
+   ]
+  },
+  "OBJ_H3": {
+   "order": 4,
+   "title": "Identity and coverage incl. lost opportunities",
+   "steps": [
+    {
+     "step": "DGIdb listing on the shared normalizer; overlap estimate not identity; lost links and false new candidates measured",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "dgidb_listing.py on parent_form; test_listing_key.py; commit 3e26925a"
+    }
+   ]
+  },
+  "OBJ_H4": {
+   "order": 5,
+   "title": "Retrieval errors through to the generator output",
+   "steps": [
+    {
+     "step": "One complete path traced; no error becomes absence or negative evidence",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "repurposing_search need notes + tests (70a7ef3d); public names guard (5da8cd4f); README section 5"
+    }
+   ]
+  },
+  "OBJ_H5": {
+   "order": 6,
+   "title": "Cost of a real package",
+   "steps": [
+    {
+     "step": "One real activity with owner consent, split coordinator/delegate, one improvement",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "README section 6: census by phase, dominant factor, event-driven wait measured"
+    }
+   ]
+  },
+  "OBJ_H6": {
+   "order": 7,
+   "title": "DREAM and a retrieval test on a new question",
+   "steps": [
+    {
+     "step": "Connections with consumers; retrieval without reading the corpus",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "he44_20261110/DREAM.md; retrieval test 2 calls; pointer on IT41-Q04 (7f8d4b08)"
+    }
+   ]
+  },
+  "OBJ_H7": {
+   "order": 8,
+   "title": "Continuity of the three sessions",
+   "steps": [
+    {
+     "step": "Existing mechanism checked, harmless isolated test",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "mandate_watch events (20, all NONE) and 95 continuity tests OK; no second monitor or cron"
+    }
+   ]
+  },
+  "OBJ_H8": {
+   "order": 9,
+   "title": "Names, publication, simplicity",
+   "steps": [
+    {
+     "step": "Names path on a new or changed case; one concrete duplication removed",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "ChEMBL id links (ff1aebe5), names statement corrected in five languages (348914fb), regenerated surfaces audited PASS (88aaa003); duplications removed: same_datum formula, DGIdb key regex"
+    }
+   ]
+  },
+  "OBJ_H9": {
+   "order": 10,
+   "title": "Landing and delivery",
+   "steps": [
+    {
+     "step": "Battery on the frozen SHA 8f503686 (unique clone): PASS WITH SKIPS (236 targets, 11 skipped). Main then moved twice (SCI44, IT43); the merged candidate was checked with targeted suites (view suite 221 tests OK, identity/measurement/activity/names/search/adapter/routing suites, gate, audit static and dynamic), not by a second full battery; push with --expect-sha and remote check recorded in the final report",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "log /tmp/he44_keep/he44_battery_8f503686.log; gate scripts/public_release_gate.py VERDICT PASS"
+    }
+   ]
+  }
+ }
+}

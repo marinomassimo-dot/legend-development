@@ -18,7 +18,7 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 13039,
+    "values": 13053,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -199,15 +199,15 @@
   },
   "identifiers": {
    "CAT": 2386,
-   "CHEMBL": 375,
+   "CHEMBL": 380,
    "DOI": 5,
    "HGNC": 12,
    "NCT": 0,
    "PMID": 153
   },
   "links": {
-   "distinct_hrefs": 190,
-   "external_public": 89,
+   "distinct_hrefs": 204,
+   "external_public": 103,
    "hosts": [
     "civicdb.org",
     "open.fda.gov",
@@ -471,7 +471,7 @@
   "BIBLIO": 2696,
   "COUNT": 12405,
   "ID": 4861,
-  "OWN": 89879,
+  "OWN": 89893,
   "ROWNAME": 2408,
   "SRC_A": 189,
   "SRC_META": 261,
@@ -537,7 +537,7 @@
   },
   "NOTICE.md": {
    "bytes": 13731,
-   "sha256": "81ce8cd73e11a88750a89ea5d524cee6ab1f3588756af82f3770b51f58837b0d"
+   "sha256": "11c582ea172afb1aa31b6c6dba316177251f6fb51748738568b34b766df645e0"
   },
   "README.md": {
    "bytes": 5072,
@@ -560,24 +560,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 5073075,
-   "sha256": "da549ac50480f0581867f6e7236cc2b9bf83223d115a939b5127f6eb64915b4c"
+   "bytes": 5075417,
+   "sha256": "abd80d26facd58db28fdbbfd63ac214686fa6454eb47a2f04b723079c1541289"
   },
   "es.html": {
-   "bytes": 5059391,
-   "sha256": "50f4ce7aeff514fdda5ecb884b83c0e32f039963d0cc71d68402438ac98da681"
+   "bytes": 5061737,
+   "sha256": "111556c4a6d6b5b714538a788f3331e1bad72c72a9a8d562e63f492d5f6229a9"
   },
   "fr.html": {
-   "bytes": 5087708,
-   "sha256": "d1d44ec5d42451ac3cfc286aedf0d2633f1b686d087d3507e75bea8081a1009a"
+   "bytes": 5090080,
+   "sha256": "6f63fcbd669c07d79a8bcd0ec76f46cacd38ddc092e84f3d5bd10994c3167945"
   },
   "index.html": {
-   "bytes": 4980086,
-   "sha256": "aff1152e363b8746b3bd1411bec5d1c72b122cf3517de20cd9092a62bb7ad47c"
+   "bytes": 4982388,
+   "sha256": "dd24eb6725e2d232d9affbde0253827ae4f26f596e70ee37a6ac8a219294b104"
   },
   "it.html": {
-   "bytes": 5033594,
-   "sha256": "637174bebdcca4f52aa92858c2d4c54af5b99ed522202862ffec562803f3f43e"
+   "bytes": 5035952,
+   "sha256": "7ca62cfef840eeca6cb77335fb96547713b8ca7895902d36f0456006a510759d"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",

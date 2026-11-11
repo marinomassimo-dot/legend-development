@@ -235,20 +235,20 @@ S5	ALOGABAT	CAT:CHEMBL5095259	chembl_selected	GABRA5	TTD		UNKNOWN	listing_only	n
 S5	Chembl:Chembl2170369	CAT:DGIDB:004d97d0faae	dgidb_only	GABRA1	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
 S5	Chembl:Chembl2170369	CAT:DGIDB:004d97d0faae	dgidb_only	GABRB2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
 S5	Chembl:Chembl2170369	CAT:DGIDB:004d97d0faae	dgidb_only	GABRG2	DTC		UNKNOWN	listing_only	no	n/a_has_other_source
-S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRA3	TEND		UNKNOWN	listing_only	no	n/a_has_other_source
-S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRA1	TEND		UNKNOWN	listing_only	no	n/a_has_other_source
-S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRA5	TEND		UNKNOWN	listing_only	no	n/a_has_other_source
-S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRB3	TEND		UNKNOWN	listing_only	no	n/a_has_other_source
-S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRA2	TEND		UNKNOWN	listing_only	no	n/a_has_other_source
-S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRB2	TEND		UNKNOWN	listing_only	no	n/a_has_other_source
-S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRG2	TEND		UNKNOWN	listing_only	no	n/a_has_other_source
-S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRA3	TdgClinicalTrial		UNKNOWN	listing_only	no	n/a_has_other_source
-S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRA1	TdgClinicalTrial		UNKNOWN	listing_only	no	n/a_has_other_source
-S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRA5	TdgClinicalTrial		UNKNOWN	listing_only	no	n/a_has_other_source
-S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRB3	TdgClinicalTrial		UNKNOWN	listing_only	no	n/a_has_other_source
-S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRB2	TdgClinicalTrial		UNKNOWN	listing_only	no	n/a_has_other_source
-S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRA2	TdgClinicalTrial		UNKNOWN	listing_only	no	n/a_has_other_source
-S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRG2	TdgClinicalTrial		UNKNOWN	listing_only	no	n/a_has_other_source
+S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRA3	TEND		UNKNOWN	listing_only	yes	n/a_has_other_source
+S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRA1	TEND		UNKNOWN	listing_only	yes	n/a_has_other_source
+S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRA5	TEND		UNKNOWN	listing_only	yes	n/a_has_other_source
+S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRB3	TEND		UNKNOWN	listing_only	yes	n/a_has_other_source
+S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRA2	TEND		UNKNOWN	listing_only	yes	n/a_has_other_source
+S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRB2	TEND		UNKNOWN	listing_only	yes	n/a_has_other_source
+S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRG2	TEND		UNKNOWN	listing_only	yes	n/a_has_other_source
+S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRA3	TdgClinicalTrial		UNKNOWN	listing_only	yes	n/a_has_other_source
+S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRA1	TdgClinicalTrial		UNKNOWN	listing_only	yes	n/a_has_other_source
+S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRA5	TdgClinicalTrial		UNKNOWN	listing_only	yes	n/a_has_other_source
+S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRB3	TdgClinicalTrial		UNKNOWN	listing_only	yes	n/a_has_other_source
+S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRB2	TdgClinicalTrial		UNKNOWN	listing_only	yes	n/a_has_other_source
+S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRA2	TdgClinicalTrial		UNKNOWN	listing_only	yes	n/a_has_other_source
+S5	Clorazepate	CAT:DGIDB:00ae24be8e99	dgidb_only	GABRG2	TdgClinicalTrial		UNKNOWN	listing_only	yes	n/a_has_other_source
 S5	Sevoflurane	CAT:DGIDB:0231bd0f6d67	dgidb_only	GABRG2	ChEMBL	positive modulator	UNKNOWN	listing_only	yes	n/a_has_other_source
 S5	Sevoflurane	CAT:DGIDB:0231bd0f6d67	dgidb_only	GABRA3	ChEMBL	positive modulator	UNKNOWN	listing_only	yes	n/a_has_other_source
 S5	Sevoflurane	CAT:DGIDB:0231bd0f6d67	dgidb_only	GABRB2	ChEMBL	positive modulator	UNKNOWN	listing_only	yes	n/a_has_other_source
@@ -335,9 +335,9 @@ S5	Methaqualone	CAT:DGIDB:1b246c981b29	dgidb_only	GABRB3	ChEMBL	positive modulat
 S5	Methaqualone	CAT:DGIDB:1b246c981b29	dgidb_only	GABRG2	ChEMBL	positive modulator	UNKNOWN	listing_only	yes	n/a_has_other_source
 S5	Methaqualone	CAT:DGIDB:1b246c981b29	dgidb_only	GABRA3	ChEMBL	positive modulator	UNKNOWN	listing_only	yes	n/a_has_other_source
 S5	Methaqualone	CAT:DGIDB:1b246c981b29	dgidb_only	GABRA5	ChEMBL	positive modulator	UNKNOWN	listing_only	yes	n/a_has_other_source
-S5	Zk-93423	CAT:DGIDB:1c50c91251c5	dgidb_only	GABRA1	TTD		UNKNOWN	listing_only	no	n/a_has_other_source
-S5	Zk-93423	CAT:DGIDB:1c50c91251c5	dgidb_only	GABRG2	TTD		UNKNOWN	listing_only	no	n/a_has_other_source
-S5	Zk-93423	CAT:DGIDB:1c50c91251c5	dgidb_only	GABRB2	TTD		UNKNOWN	listing_only	no	n/a_has_other_source
+S5	Zk-93423	CAT:DGIDB:1c50c91251c5	dgidb_only	GABRA1	TTD		UNKNOWN	listing_only	yes	n/a_has_other_source
+S5	Zk-93423	CAT:DGIDB:1c50c91251c5	dgidb_only	GABRG2	TTD		UNKNOWN	listing_only	yes	n/a_has_other_source
+S5	Zk-93423	CAT:DGIDB:1c50c91251c5	dgidb_only	GABRB2	TTD		UNKNOWN	listing_only	yes	n/a_has_other_source
 S5	Mephobarbital	CAT:DGIDB:1dd9e5add469	dgidb_only	GABRA1	TdgClinicalTrial		UNKNOWN	listing_only	no	n/a_has_other_source
 S5	Mephobarbital	CAT:DGIDB:1dd9e5add469	dgidb_only	GABRA1	TTD		UNKNOWN	listing_only	no	n/a_has_other_source
 S5	Mephobarbital	CAT:DGIDB:1dd9e5add469	dgidb_only	GABRA1	TEND		UNKNOWN	listing_only	no	n/a_has_other_source

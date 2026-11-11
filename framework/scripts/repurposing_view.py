@@ -4376,40 +4376,59 @@ def _salt(name: str) -> str:
     return ci.parent_form(name)["salt"]
 
 
-def compound_public_names(dr: Path) -> dict:
-    """HE43 H5: item_id -> [{label, qid, chembl_id}] for the compounds of compound_view whose name a class-A source states. A name reaches an item only through an EXACT identity link,
-    the identity table's ChEMBL id for that name, and a Wikidata item that carries that id (property P592): never by name similarity, never for a qualified or proposed form.
-    A compound without a Wikidata item, without a ChEMBL id or without an exact link stays unnamed, and so does one whose Wikidata label is not the table's bare name (a code name, a salt form or a misspelling is not shown). Absent files: an empty dict."""
-    wd = Path(dr) / NAME_WD_FILE
+def _item_chembl_ids(dr: Path) -> dict:
+    """item_id -> [(name, ChEMBL id)] for names with an EXACT identity link, exactly one ChEMBL id in the identity table, and a row that is not ID_NOT_RESOLVED (an id the ChEMBL release does not hold is
+    not carried to another source or to a link). Absent files: an empty dict."""
     tbl = Path(dr) / IDENTITY_TABLE_FILE
     jf = Path(dr) / IDENTITY_JOIN_FILE
-    if not (wd.exists() and tbl.exists() and jf.exists()):
+    if not (tbl.exists() and jf.exists()):
+        return {}
+    ids_of, unresolved = {}, set()
+    with open(tbl, encoding="utf-8", newline="") as fh:
+        for r in csv.DictReader(fh, delimiter="\t"):
+            found = {x.strip() for c in (r["record_chembl_refs"], r["declared_chembl_id"]) for x in c.replace(";", ",").split(",") if x.strip().startswith("CHEMBL")}
+            ids_of.setdefault(r["query_name"].strip().lower(), set()).update(found)
+            if r.get("evidence_level") == "ID_NOT_RESOLVED":      # HE44 H4: an id the ChEMBL release does not hold must not carry a name from another source
+                unresolved.add(r["query_name"].strip().lower())
+    out = {}
+    with open(jf, encoding="utf-8", newline="") as fh:
+        for r in csv.DictReader(fh, delimiter="\t"):
+            k = r["name"].strip().lower()
+            ids = sorted(ids_of.get(k, ()))
+            if r.get("link") != "EXACT" or k in unresolved or len(ids) != 1:       # none, several (a name that reaches two records) or unresolved: left alone
+                continue
+            if (r["name"], ids[0]) not in out.setdefault(r["item_id"], []):
+                out[r["item_id"]].append((r["name"], ids[0]))
+    return out
+
+
+def compound_public_names(dr: Path) -> dict:
+    """HE43 H5: item_id -> [{label, qid, chembl_id}] for the compounds of compound_view whose name a class-A source states: the identity link, the identity table's ChEMBL id and a Wikidata item that carries
+    that id (property P592), never name similarity and never a qualified or proposed form. A compound without a Wikidata item stays unnamed, and so does one whose Wikidata label is not the table's bare name
+    (a code name, a salt form or a misspelling is not shown). Absent files: an empty dict."""
+    wd = Path(dr) / NAME_WD_FILE
+    if not wd.exists():
         return {}
     label = {}
     with open(wd, encoding="utf-8", newline="") as fh:
         for r in csv.DictReader(fh, delimiter="\t"):
             if r["state"] == "LABEL":
                 label[r["chembl_id"]] = r
-    ids_of = {}
-    with open(tbl, encoding="utf-8", newline="") as fh:
-        for r in csv.DictReader(fh, delimiter="\t"):
-            found = {x.strip() for c in (r["record_chembl_refs"], r["declared_chembl_id"]) for x in c.replace(";", ",").split(",") if x.strip().startswith("CHEMBL")}
-            ids_of.setdefault(r["query_name"].strip().lower(), set()).update(found)
     out = {}
-    with open(jf, encoding="utf-8", newline="") as fh:
-        for r in csv.DictReader(fh, delimiter="\t"):
-            if r.get("link") != "EXACT":
+    for item, pairs in _item_chembl_ids(dr).items():
+        for name, cid in pairs:
+            row = label.get(cid)
+            if not row or _parent_key(row["label"]) != _parent_key(name) or _salt(row["label"]):
                 continue
-            ids = sorted(ids_of.get(r["name"].strip().lower(), ()))
-            if len(ids) != 1 or ids[0] not in label:       # none, several (a name that reaches two records) or no label: left unnamed
-                continue
-            row = label[ids[0]]
-            if _parent_key(row["label"]) != _parent_key(r["name"]) or _salt(row["label"]):    # a code name, a systematic name, a salt form or another spelling than the table's name: not shown
-                continue
-            entry = {"label": row["label"], "qid": row["qid"], "chembl_id": ids[0]}
-            if entry not in out.setdefault(r["item_id"], []):
-                out[r["item_id"]].append(entry)
+            entry = {"label": row["label"], "qid": row["qid"], "chembl_id": cid}
+            if entry not in out.setdefault(item, []):
+                out[item].append(entry)
     return out
+
+
+def compound_public_links(dr: Path) -> dict:
+    """HE44 H8: item_id -> sorted ChEMBL ids of its compounds, shown as links to the source record (an identifier, class C: no ChEMBL content is embedded). It is what stays when a name is not allowed."""
+    return {item: sorted({cid for _, cid in pairs}) for item, pairs in _item_chembl_ids(dr).items()}
 
 
 def compound_identity_states(dr: Path) -> dict:
@@ -4450,6 +4469,7 @@ def compound_view(dr: Path, full: bool) -> list:
     out = []
     ident = compound_identity_states(dr)
     pub = {} if full else compound_public_names(dr)
+    links = {} if full else compound_public_links(dr)
     with open(fp, encoding="utf-8", newline="") as fh:
         for r in csv.DictReader(fh, delimiter="\t"):
             if r["kind"] not in COMPOUND_KINDS:
@@ -4468,6 +4488,7 @@ def compound_view(dr: Path, full: bool) -> list:
                 d["registry_note"] = r["registry_note"]
             else:
                 d["names_public"] = pub.get(r["item_id"], [])      # HE43 H5: only names a class-A source states (Wikidata, CC0), each with its item number
+                d["chembl_links"] = links.get(r["item_id"], [])    # HE44 H8: the identifier as a link to the source record, for compounds whose name is not shown
             out.append(d)
     return sorted(out, key=lambda x: x["order"])
 
@@ -4486,7 +4507,7 @@ UI_IT20B = {
     "iv_pending": "In preparazione: l'elenco è generato da un'analisi in corso e non è ancora nei dati di questa versione. Nessuna voce viene mostrata al suo posto.",
     "iv_pos": "Posizione", "iv_tie": "pari merito", "iv_int": "Composto o intervento", "iv_q": "Domanda", "iv_why": "Motivo della priorità", "iv_ev": "Evidenza disponibile",
     "iv_depth": "Solidità dell'evidenza (profondità di lettura)", "iv_unc": "Incertezza decisiva", "iv_next": "Prossimo test", "iv_nov": "Novità, nel perimetro verificato", "iv_move": "Motivo dello spostamento",
-    "iv_more": "Dettagli scientifici della riga", "iv_fs_h": "Tipo di riga", "iv_fc_h": "Comparatori", "iv_fc_mech": "Con comparatore che separa il meccanismo", "iv_fc_func": "Solo comparatori dell'esito funzionale", "iv_fc_none": "Nessun comparatore nei file", "cv_moves": "Che cosa lo fa salire o scendere", "cv_where": "Dove si può fare", "cv_wh_in_silico": "in silico o da fonti pubbliche", "cv_wh_laboratory": "richiede un laboratorio", "cv_wh_both": "prima in silico, poi laboratorio", "cv_wh_in_silico_then_laboratory": "in silico per la fonte, poi laboratorio", "cv_id_h": "Stato del controllo d'identità dei composti dietro questa voce", "cv_id_conflict": "identità: conflitto di etichetta", "cv_id_unverified": "identità: non verificata", "cv_id_partial": "identità: verificata in parte", "cv_id_checked": "identità: verificata", "cv_h": "Composti e ipotesi da indagare", "cv_lead": "Breve elenco in ordine di ricerca: il numero indica quale indagine conviene fare prima per cambiare una decisione, non quanto un composto sia efficace. Non è una graduatoria di cure e non è una top-five: contiene quello che il lavoro ha prodotto.", "cv_order": "Ordine di ricerca", "cv_more": "Azione, motivo, premessa aperta, controevidenze e prossimo test", "cv_act": "Azione", "cv_rat": "Perché questa priorità e quali prove la sostengono", "cv_orig": "Origine dell'ipotesi", "cv_or_carded_lever": "Leva già in scheda, riqualificata dalla ricerca", "cv_or_relation_search": "Nata dalla ricerca guidata da una relazione biologica", "cv_or_physiological_hypothesis": "Nata da un'ipotesi fisiologica condizionata", "cv_or_comparison_package": "Nata da un confronto farmacologico tra strumenti", "cv_prem": "Premessa aperta", "cv_cnt": "Controevidenze e limiti", "cv_next": "Prossimo test e comparatore", "cv_reg": "Note dai registri (solo edizione completa)", "cv_legend_h": "Come leggere i tipi di voce", "cv_lic": "In questa edizione mancano i nomi dei composti e i valori derivati dai registri: ChEMBL (licenza CC BY-SA 3.0) e Guide to Pharmacology 2026.3.1 (ODbL / CC BY-SA 4.0) impongono condizioni di ridistribuzione sulle righe e sui valori. Restano il testo originale, l'azione e il tipo di voce; l'edizione completa porta nomi, valori e fonti.", "cv_kind_control": "controllo", "cv_kind_probe": "sonda", "cv_kind_known_requalified": "candidato già noto, riqualificato", "cv_kind_emerged": "emersa dalla ricerca", "cv_kind_unresolved": "ancora irrisolta", "cv_kind_weakened": "indebolita o da non trasferire", "cv_kd_control": "riferimento con cui si leggono gli altri bracci", "cv_kd_probe": "strumento sperimentale, non un candidato", "cv_kd_known_requalified": "composto già presente nei materiali, con qualificazione aggiornata", "cv_kd_emerged": "trovata dalla ricerca per azione e contesto; nuova per LEGEND o nuova combinazione, non verificata come novità nella letteratura", "cv_kd_unresolved": "mancano identità, meccanismo o massimo effetto", "cv_kd_weakened": "una lettura precedente o una riga di registro che non regge; tenuta per non essere scambiata per evidenza", "iv_ph_h": "Ipotesi fisiologiche condizionali", "iv_ph_sum": "{n} ipotesi condizionali, con alternative e criteri per rafforzarle o indebolirle", "iv_ph_note": "Sono domande formulate con le loro condizioni, non dati acquisiti: nessun composto è proposto qui e nessun legame fra geni è dedotto. L'assenza di un esperimento non è un danno dimostrato.", "iv_ph_status": "ipotesi esplorativa", "iv_ph_obs": "Che cosa è osservato", "iv_ph_hyp": "Che cosa è ipotizzato", "iv_ph_alt": "Alternative che restano", "iv_ph_str": "Che cosa la rafforzerebbe", "iv_ph_weak": "Che cosa la indebolirebbe", "iv_cmp_h": "Comparatori", "iv_cmp_sum": "{f} dell'esito funzionale, {m} che separano il meccanismo", "iv_cmp_none": "Nessun comparatore nei file consultati per questa indagine.", "iv_cmp_role_functional_outcome": "esito funzionale", "iv_cmp_role_mechanism_separating": "separa il meccanismo", "iv_cmp_limits": "limiti di selettività", "iv_cmp_src": "fonte", "iv_cmp_names_hidden": "i nomi dei composti non sono nell'edizione condivisibile", "iv_class_note": "Le categorie «nuova combinazione» e «indebolita o riaperta» non sono determinabili dai campi disponibili e non sono mostrate; la riga indica soltanto origine e tipo di riga.", "iv_f_h": "Mostra", "iv_f_all": "Tutte", "iv_legend_h": "Come leggere l'origine di ogni riga",
+    "iv_more": "Dettagli scientifici della riga", "iv_fs_h": "Tipo di riga", "iv_fc_h": "Comparatori", "iv_fc_mech": "Con comparatore che separa il meccanismo", "iv_fc_func": "Solo comparatori dell'esito funzionale", "iv_fc_none": "Nessun comparatore nei file", "cv_moves": "Che cosa lo fa salire o scendere", "cv_where": "Dove si può fare", "cv_wh_in_silico": "in silico o da fonti pubbliche", "cv_wh_laboratory": "richiede un laboratorio", "cv_wh_both": "prima in silico, poi laboratorio", "cv_wh_in_silico_then_laboratory": "in silico per la fonte, poi laboratorio", "cv_id_h": "Stato del controllo d'identità dei composti dietro questa voce", "cv_id_conflict": "identità: conflitto di etichetta", "cv_id_unverified": "identità: non verificata", "cv_id_partial": "identità: verificata in parte", "cv_id_checked": "identità: verificata", "cv_h": "Composti e ipotesi da indagare", "cv_lead": "Breve elenco in ordine di ricerca: il numero indica quale indagine conviene fare prima per cambiare una decisione, non quanto un composto sia efficace. Non è una graduatoria di cure e non è una top-five: contiene quello che il lavoro ha prodotto.", "cv_order": "Ordine di ricerca", "cv_more": "Azione, motivo, premessa aperta, controevidenze e prossimo test", "cv_act": "Azione", "cv_rat": "Perché questa priorità e quali prove la sostengono", "cv_orig": "Origine dell'ipotesi", "cv_or_carded_lever": "Leva già in scheda, riqualificata dalla ricerca", "cv_or_relation_search": "Nata dalla ricerca guidata da una relazione biologica", "cv_or_physiological_hypothesis": "Nata da un'ipotesi fisiologica condizionata", "cv_or_comparison_package": "Nata da un confronto farmacologico tra strumenti", "cv_prem": "Premessa aperta", "cv_cnt": "Controevidenze e limiti", "cv_next": "Prossimo test e comparatore", "cv_reg": "Note dai registri (solo edizione completa)", "cv_legend_h": "Come leggere i tipi di voce", "cv_lic": "In questa edizione mancano i valori derivati dai registri. I nomi dei composti compaiono solo quando una fonte indipendente li dichiara (etichette di Wikidata, CC0, con il numero dell'elemento); per gli altri resta l'identificativo ChEMBL come collegamento al record. ChEMBL (licenza CC BY-SA 3.0) e Guide to Pharmacology 2026.3.1 (ODbL / CC BY-SA 4.0) impongono condizioni di ridistribuzione sulle righe e sui valori. Restano il testo originale, l'azione e il tipo di voce; l'edizione completa porta nomi, valori e fonti.", "cv_kind_control": "controllo", "cv_kind_probe": "sonda", "cv_kind_known_requalified": "candidato già noto, riqualificato", "cv_kind_emerged": "emersa dalla ricerca", "cv_kind_unresolved": "ancora irrisolta", "cv_kind_weakened": "indebolita o da non trasferire", "cv_kd_control": "riferimento con cui si leggono gli altri bracci", "cv_kd_probe": "strumento sperimentale, non un candidato", "cv_kd_known_requalified": "composto già presente nei materiali, con qualificazione aggiornata", "cv_kd_emerged": "trovata dalla ricerca per azione e contesto; nuova per LEGEND o nuova combinazione, non verificata come novità nella letteratura", "cv_kd_unresolved": "mancano identità, meccanismo o massimo effetto", "cv_kd_weakened": "una lettura precedente o una riga di registro che non regge; tenuta per non essere scambiata per evidenza", "iv_ph_h": "Ipotesi fisiologiche condizionali", "iv_ph_sum": "{n} ipotesi condizionali, con alternative e criteri per rafforzarle o indebolirle", "iv_ph_note": "Sono domande formulate con le loro condizioni, non dati acquisiti: nessun composto è proposto qui e nessun legame fra geni è dedotto. L'assenza di un esperimento non è un danno dimostrato.", "iv_ph_status": "ipotesi esplorativa", "iv_ph_obs": "Che cosa è osservato", "iv_ph_hyp": "Che cosa è ipotizzato", "iv_ph_alt": "Alternative che restano", "iv_ph_str": "Che cosa la rafforzerebbe", "iv_ph_weak": "Che cosa la indebolirebbe", "iv_cmp_h": "Comparatori", "iv_cmp_sum": "{f} dell'esito funzionale, {m} che separano il meccanismo", "iv_cmp_none": "Nessun comparatore nei file consultati per questa indagine.", "iv_cmp_role_functional_outcome": "esito funzionale", "iv_cmp_role_mechanism_separating": "separa il meccanismo", "iv_cmp_limits": "limiti di selettività", "iv_cmp_src": "fonte", "iv_cmp_names_hidden": "i nomi dei composti non sono nell'edizione condivisibile", "iv_class_note": "Le categorie «nuova combinazione» e «indebolita o riaperta» non sono determinabili dai campi disponibili e non sono mostrate; la riga indica soltanto origine e tipo di riga.", "iv_f_h": "Mostra", "iv_f_all": "Tutte", "iv_legend_h": "Come leggere l'origine di ogni riga",
     "iv_ol_known_in_wwox": "parte da un risultato già osservato in un sistema WWOX (letteratura WWOX o scheda)",
     "iv_ol_generated_by_legend": "nata dal calcolo di LEGEND: ipotesi generata, senza conferma sperimentale",
     "iv_ol_external_transferred": "precedente di un'altra malattia o di un altro sistema, trasferito al contesto WWOX: la rilevanza per WWOX è da verificare",
@@ -4737,6 +4758,8 @@ def render_investigations(P: dict) -> str:
             nm = f' <span class="cv-name">{E(c["name_full"])}</span>' if full and c.get("name_full") else ""
             if not full and c.get("names_public"):       # HE43 H5: class-A names, each with its Wikidata item (the credit is in the footer)
                 nm = " " + " ".join(f'<span class="cv-name cv-name-wd" title="Wikidata {E(x["qid"])} (CC0)">{E(x["label"])}</span>' for x in c["names_public"])
+            if not full and c.get("chembl_links"):       # HE44 H8: the identifier as a link to the source record, so an unnamed compound still has a way to its record
+                nm += " " + " ".join(f'<a class="cv-chembl" href="https://www.ebi.ac.uk/chembl/compound_report_card/{E(x)}/">{E(x)}</a>' for x in c["chembl_links"])
             orig = f'<dt>{E(U["cv_orig"])}</dt><dd>{E(U["cv_or_" + c["origin"]])}</dd>' if c.get("origin") else ""
             reg = f'<dt>{E(U["cv_reg"])}</dt><dd>{lx(c["registry_note"])}</dd>' if full and c.get("registry_note") else ""
             lis.append(f'<li class="cv-i cv-k-{E(c["kind"])}" data-kind="{E(c["kind"])}" id="cv-{E(c["item_id"])}"><div class="cv-h"><span class="inv-pos" aria-label="{E(U["cv_order"])} {c["order"]}">{c["order"]}</span> '
