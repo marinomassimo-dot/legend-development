@@ -57,3 +57,6 @@ Not yet consumed: the seven registry rows whose nM column is exactly 1000 off (C
 | KH4 network consequence | relation S12 (generative input) | S12's frame; the engine's excluded blockers become discriminators |
 | KH5 development and recording | ladder step 0 (capacitance) and the M01 condition record | capacitance first; the single-conductance arithmetic is not used as a discriminator |
 The SCI43 tables are not `comparison.tsv`, so no registry row was added (SCI43 row 9 format decision): the consumers above read the hypotheses through the relation rows and the investigation text, not through a new export.
+
+## P8 an over-severe exclusion, tested as its own relation (S13)
+`relation_s13_frame_it44.md` (before), `relations_s13_it44.tsv`, `s13/`, `relation_s13_result_it44.md`, `apply_it44_s13.py`: the 20 rows excluded for S1 as family records are the candidates for the H_total_gain question; with a relation row that carries it the engine returns the clinically available pore-blocker class (22 ChEMBL candidates), the exclusion was right for S1 and the question was missing a row, not wrong. New: the Mg2+ coupling (a pore blocker's apparent potency depends on bath magnesium) stated as a condition of the drug comparison; consumers: one INV-05 comparator row and the M01 condition record. Nothing is new against LEGEND (the arm is at card level).

@@ -1,0 +1,14 @@
+# IT44 P8: a possibly over-severe exclusion, tested as its own relation (S13: clinically available NMDA-receptor block, any subunit)
+
+Non-canonical working note. Not medical advice; no dose, schedule or route. Written 2026-11-10 before the run. Trigger: the survey of exclusion reasons found 20 rows excluded as `family_record_subunit_unresolved` for relation S1 (GluN2B-directed negative modulation): the NMDA-receptor channel blockers and antagonists that are clinically available. For S1 the exclusion is right (a family record shows no subunit selectivity). But INV-05 also asks a different question, the H_total_gain arm: does a partial, clinically achievable block of the NMDA-receptor current suppress the bursts? For that question subunit selectivity is not required, and the same rows are the candidates. No relation row carried that question, so they were excluded for the wrong reason, never evaluated for the right one.
+
+| Item | Statement |
+|---|---|
+| Observation | Spontaneous bursts in knockout layer II/III slices are abolished by a full competitive antagonist; the burst fall under a partial block is not known (INV-05; the abolition threshold x is unmeasured). |
+| Competing explanations | total NMDA-receptor gain (H_total_gain); GluN2B-weighted (H_GluN2B); GluN2A-weighted; a general drive reduction (H_general_drive); a permissive state set by Mg2+ and depolarisation (H_state). |
+| Action that could correct or discriminate | A use-dependent or uncompetitive channel block (the clinically available class) removes current in proportion to activity and acts at or near the Mg2+ site; a competitive antagonist is the reference control (tool). A partial block reaching x at a clinically plausible exposure would make the total-block arm useful as a comparison. |
+| Contexts where it is inert or worse | If x requires near-complete block (cognitive, psychotomimetic and sedative liabilities of high-affinity blockers); if bath Mg2+ is low (the blockers' use-dependence interacts with the Mg2+ site, so the bath Mg2+ changes the apparent potency: H_state couples to the drug); an immature preparation with different composition; antagonism of other targets of the same compounds. |
+| Information needed | The abolition threshold x with measured bath Mg2+; the removable fraction at clinically plausible exposure (not stated here); the compound's other documented actions. |
+| Outcome | Burst incidence versus percent of the isolated NMDA-receptor current removed, with a matched-effect control. |
+
+Relation row S13 (`relations_s13_it44.tsv`): targets GRIN1, GRIN2A, GRIN2B, GRIN2C, GRIN2D, wanted direction down, site policy any (no subunit requirement), no special code. Output: a role per compound (candidate for the comparison, not a nomination), the premise, the experiment, and the exclusions kept (the competitive antagonist tool and the glycine-site agents are reference or manipulation, not candidates).

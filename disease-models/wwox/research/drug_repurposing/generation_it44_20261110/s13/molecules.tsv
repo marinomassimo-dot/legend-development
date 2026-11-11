@@ -1,0 +1,67 @@
+relation_id	molecule	names	sources	n_source_rows	directions	species	sites
+S13	CAT:CHEMBL1094	FELBAMATE	ChEMBL curated mechanism	5	down	Homo sapiens	family_record_subunit_unresolved
+S13	CAT:CHEMBL1201293	ACAMPROSATE CALCIUM	ChEMBL curated mechanism	5	down	Homo sapiens	family_record_subunit_unresolved
+S13	CAT:CHEMBL1207366	GW468816	ChEMBL curated mechanism	5	down	Homo sapiens	family_record_subunit_unresolved
+S13	CAT:CHEMBL1255840	NEBOGLAMINE	ChEMBL curated mechanism	5	up	Homo sapiens	family_record_subunit_unresolved
+S13	CAT:CHEMBL17350	TRAXOPRODIL | TRAXOPRODIL MESYLATE	ChEMBL curated mechanism	4	down	Homo sapiens	two_gene_assembly_record
+S13	CAT:CHEMBL182066	RADIPRODIL	ChEMBL curated mechanism	2	down	Homo sapiens	two_gene_assembly_record
+S13	CAT:CHEMBL2068839	RISLENEMDAZ	ChEMBL curated mechanism	2	down	Homo sapiens	two_gene_assembly_record
+S13	CAT:CHEMBL2107771	RALFINAMIDE	ChEMBL curated mechanism	5	down	Homo sapiens	family_record_subunit_unresolved
+S13	CAT:CHEMBL2110814	DELUCEMINE | DELUCEMINE HYDROCHLORIDE	ChEMBL curated mechanism	10	down	Homo sapiens	family_record_subunit_unresolved
+S13	CAT:CHEMBL2110954	NERAMEXANE MESYLATE	ChEMBL curated mechanism	5	down	Homo sapiens	family_record_subunit_unresolved
+S13	CAT:CHEMBL3544917	RAPASTINEL	ChEMBL curated mechanism	5	up	Homo sapiens	family_record_subunit_unresolved
+S13	CAT:CHEMBL3545350	EVT-101	ChEMBL curated mechanism	2	down	Homo sapiens	two_gene_assembly_record
+S13	CAT:CHEMBL3545351	AV-101	ChEMBL curated mechanism	5	down	Homo sapiens	family_record_subunit_unresolved
+S13	CAT:CHEMBL3707355	AZD8108	ChEMBL curated mechanism	5	down	Homo sapiens	family_record_subunit_unresolved
+S13	CAT:CHEMBL3707400	INDANTADOL	ChEMBL curated mechanism	5	down	Homo sapiens	family_record_subunit_unresolved
+S13	CAT:CHEMBL395091	ESKETAMINE | ESKETAMINE HYDROCHLORIDE	ChEMBL curated mechanism	10	down	Homo sapiens	family_record_subunit_unresolved
+S13	CAT:CHEMBL3989872	APIMOSTINEL	ChEMBL curated mechanism	5	up	Homo sapiens	family_record_subunit_unresolved
+S13	CAT:CHEMBL41306	CNS-5161	ChEMBL curated mechanism	5	down	Homo sapiens	family_record_subunit_unresolved
+S13	CAT:CHEMBL452461	PERZINFOTEL	ChEMBL curated mechanism	5	down	Homo sapiens	family_record_subunit_unresolved
+S13	CAT:CHEMBL467084	LANICEMINE	ChEMBL curated mechanism	5	down	Homo sapiens	family_record_subunit_unresolved
+S13	CAT:CHEMBL5095254	NP10679	GtoPdb interaction	1	down	Human	
+S13	CAT:CHEMBL52440	DEXTROMETHORPHAN HYDROBROMIDE | DEXTROMETHORPHAN POLISTIREX	ChEMBL curated mechanism	2	down	Homo sapiens	single_protein_record
+S13	CAT:CHEMBL660	AMANTADINE HYDROCHLORIDE	ChEMBL curated mechanism	5	down	Homo sapiens	family_record_subunit_unresolved
+S13	CAT:CHEMBL742	KETAMINE HYDROCHLORIDE	ChEMBL curated mechanism	5	down	Homo sapiens	family_record_subunit_unresolved
+S13	CAT:CHEMBL807	MEMANTINE HYDROCHLORIDE	ChEMBL curated mechanism	5	down	Homo sapiens	family_record_subunit_unresolved
+S13	CAT:CHEMBL900	ORPHENADRINE CITRATE | ORPHENADRINE HYDROCHLORIDE	ChEMBL curated mechanism	10	down	Homo sapiens	family_record_subunit_unresolved
+S13	CAT:DGIDB:11dcd9a41857	d-CCPene	GtoPdb interaction	4	down	Human	glutamate site
+S13	CAT:DGIDB:357b0cb8489b	NVP-AAM077	GtoPdb interaction	2	down	Human	glutamate site
+S13	CAT:DGIDB:3aa598685369	homoquinolinic acid	GtoPdb interaction	5	up	Human	glutamate site
+S13	CAT:DGIDB:3edafe18a179	TCN-201	GtoPdb interaction	1	down	Human	
+S13	CAT:DGIDB:42d5d5465a4d	5,7-dichlorokynurenic acid	GtoPdb interaction	5	down	Human	glycine site
+S13	CAT:DGIDB:4de972be2747	compound 8 [PMID: 17562362}	GtoPdb interaction	1	down	Human	
+S13	CAT:DGIDB:52d01b8327f7	CGP37849	GtoPdb interaction	4	down	Human	glutamate site
+S13	CAT:DGIDB:79d9fde1e294	UBP141	GtoPdb interaction	4	down	Human	glutamate site
+S13	CAT:DGIDB:80f00139fe06	S-deschloroketamine	GtoPdb interaction	1	down	Human	
+S13	CAT:DGIDB:a4e912f8d9f7	(+)-HA966	GtoPdb interaction	3	up	Human	glycine site
+S13	CAT:DGIDB:b0ca5cf2303c	d-AP5	GtoPdb interaction	4	down	Human	glutamate site
+S13	CAT:DGIDB:c074cb76e927	conantokin-G	GtoPdb interaction	4	down	Human	glutamate site
+S13	CAT:DGIDB:ca0cbcf4f1e9	GV196771A	GtoPdb interaction	5	down	Human;Rat	glycine site
+S13	CAT:DGIDB:f5aacf22df23	LY233053	GtoPdb interaction	4	down	Human	glutamate site
+S13	CAT:DGIDB:f9ecb57f1990	L701324	GtoPdb interaction	5	down	Human;Rat	glycine site
+S13	GTOPDB:11289	NYX-2925	GtoPdb interaction	1	up	Human	
+S13	GTOPDB:11700	TCN-213	GtoPdb interaction	1	down	Rat	
+S13	GTOPDB:12050	SAGE-718	GtoPdb interaction	2	up	Human	
+S13	GTOPDB:12051	plazinemdor	GtoPdb interaction	1	up	Human	
+S13	GTOPDB:12156	onfasprodil	GtoPdb interaction	1	down	Human	
+S13	GTOPDB:2403	dizocilpine	GtoPdb interaction	4	down	Human	
+S13	GTOPDB:3309	L-aspartic acid	GtoPdb interaction	5	up	Human	glutamate site
+S13	GTOPDB:4068	(<i>RS</i>)-(tetrazol-5-yl)glycine	GtoPdb interaction	5	up	Human	glutamate site
+S13	GTOPDB:4128	amantadine	GtoPdb interaction	4	down	Human	
+S13	GTOPDB:4155	selfotel	GtoPdb interaction	4	down	Human	glutamate site
+S13	GTOPDB:4171	D-serine	GtoPdb interaction	5	up	Human	glycine site
+S13	GTOPDB:4233	ketamine	GtoPdb interaction	4	down	Human	
+S13	GTOPDB:4239	L689560	GtoPdb interaction	5	down	Human;Rat	glycine site
+S13	GTOPDB:4253	memantine	GtoPdb interaction	1	down	Rat	
+S13	GTOPDB:4260	N<sup>1</sup>-dansyl-spermine	GtoPdb interaction	4	down	Human	
+S13	GTOPDB:4268	NMDA	GtoPdb interaction	5	up	Human	glutamate site
+S13	GTOPDB:4282	phencyclidine	GtoPdb interaction	4	down	Human	
+S13	GTOPDB:6511	D-aspartic acid	GtoPdb interaction	5	up	Human	glutamate site
+S13	GTOPDB:6953	dextromethorphan	GtoPdb interaction	1	down	Human	
+S13	GTOPDB:708	Mg<sup>2+</sup>	GtoPdb interaction	4	down	Human	
+S13	GTOPDB:727	glycine	GtoPdb interaction	5	up	Human	glycine site
+S13	GTOPDB:7595	levorphanol	GtoPdb interaction	1	down	Human	
+S13	GTOPDB:7843	DQP-1105	GtoPdb interaction	3	down	Rat	
+S13	GTOPDB:7845	QNZ 46	GtoPdb interaction	1	down	Rat	
+S13	GTOPDB:9052	dextrorphan	GtoPdb interaction	1	down	Human	
