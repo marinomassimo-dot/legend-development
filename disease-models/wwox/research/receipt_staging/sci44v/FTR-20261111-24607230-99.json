@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-11T00:09:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "unavailable",
+  "tables": "read"
+ },
+ "event_at": "2026-11-11T00:17:00Z",
+ "event_id": "FTR-20261111-24607230-99",
+ "evidence_basis": [
+  "Searched the whole main text for Ro 25-6981 (zero occurrences) and re-read the triheteromer ifenprodil and CP-101,606 maxima (Results, Table 1, Fig 3 legend); no image or supplement in the open bucket. Adversarial re-analysis for the absence claim D14 only.",
+  "verbatim_locator | proposition: ifenprodil triheteromer ceiling in the cited paper | Results, ifenprodil paragraph | \"Ifenprodil reduced current responses from wild type 2B/2B with an IC50 of 72 ± 8 nM and maximal inhibition of 88 ± 2%\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/verify/queries_verifier.tsv"
+ ],
+ "prior_receipt": "FTR-20261109-24607230-71",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "53c1465c1a4a18751f5cfc606ed55ba0efa67f93ba76094ef4003aad1185df39",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch (db=pmc, PMC3957490) fetched with plain curl on 2026-11-11; converted to text in the scratchpad; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1016/j.neuron.2014.01.035",
+  "pmid": "24607230"
+ },
+ "workflow": "SCI44 package B, IT43-Q01 blind verifier V3 (rb-v), adversarial re-analysis of the producer's reading. Prepared as a JSON file for the integrator."
+}

@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-11T00:09:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-11T00:17:00Z",
+ "event_id": "FTR-20261111-25008524-99",
+ "evidence_basis": [
+  "Results, Methods and legends read from the efetch PMC XML; Extended Data Fig 2 (nihms601974f8.jpg) viewed from the open bucket: table 2g prints Ro25-6981 Kd 48 +/- 22 nM (two independent trials, triplicate) for the GluN1 D2/GluN2B D2 construct; other figures captions only; supplement PDF text searched for Ro only.",
+  "verbatim_locator | proposition: Ro 25-6981 SPA assay condition of the diheteromer construct | Methods, binding constants paragraph | \"3H-Ro25-6981 binding was performed in the presence of unlabelled 100 µM L-glutamate and 100 µM glycine.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/verify/queries_verifier.tsv"
+ ],
+ "prior_receipt": "FTR-20261111-25008524-96",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "ad761bc382a01c6074a7f35237a17515b78b3a36ad4d8d2b9766d124cecd80ef",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch (db=pmc, PMC4263351) fetched with plain curl on 2026-11-11; converted to text in the scratchpad; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1038/nature13548",
+  "pmid": "25008524"
+ },
+ "workflow": "SCI44 package B, IT43-Q01 blind verifier V3 (rb-v), adversarial re-analysis of the producer's reading. Prepared as a JSON file for the integrator."
+}

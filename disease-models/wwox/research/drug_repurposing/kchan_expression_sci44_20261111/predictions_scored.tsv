@@ -1,0 +1,16 @@
+prediction	statement	result	values
+P1a	Kcnj11 >= 1 FPKM in mouse neurons	held	Kcnj11 neuron 5.91, astro 0.40
+P1b	Abcc8 >= 1 FPKM in mouse neurons and neuron >= astrocyte	held	Abcc8 neuron 5.50, astro 0.10
+P2m	Kcnj10 astro >= 10 x neuron, mouse	held	Kcnj10 astro 184.76, neuron 8.12
+P2h	KCNJ10 astro >= 10 x neuron, human	held	KCNJ10 astro 126.02, neuron 9.00 (neuron n=1)
+P3_Kcnj8	Kcnj8 neuron < max(endothelium, astrocyte), mouse	held	Kcnj8 neuron 0.23, astro 0.57, endo 25.71
+P3_Abcc9	Abcc9 neuron < max(endothelium, astrocyte), mouse	held	Abcc9 neuron 0.30, astro 0.63, endo 12.59
+P4a_m	Kcnk1 astro > neuron, mouse	failed	Kcnk1 astro 0.65, neuron 3.64
+P4a_h	KCNK1 astro > neuron, human	failed	KCNK1 astro 0.87, neuron 6.10 (neuron n=1)
+P4b_Kcnk2	Kcnk2 >= 1 FPKM in mouse neurons	held	Kcnk2 neuron 14.07
+P4b_Kcnk3	Kcnk3 >= 1 FPKM in mouse neurons	held	Kcnk3 neuron 1.01
+P4b_Kcnk9	Kcnk9 >= 1 FPKM in mouse neurons	held	Kcnk9 neuron 17.35
+P5	Kcnj2 neuron >= astrocyte, mouse	held	Kcnj2 neuron 0.74, astro 0.46
+P6_Kcnq2	Kcnq2 neuron >= 3 x astrocyte, mouse	held	Kcnq2 neuron 30.68, astro 0.22
+P6_Kcnq3	Kcnq3 neuron >= 3 x astrocyte, mouse	held	Kcnq3 neuron 4.27, astro 0.24
+P6_Hcn1	Hcn1 neuron >= 3 x astrocyte, mouse	held	Hcn1 neuron 2.62, astro 0.10

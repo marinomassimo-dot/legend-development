@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-11T00:31:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-11T00:44:00Z",
+ "event_id": "FTR-20261111-41233736-93",
+ "evidence_basis": [
+  "J Headache Pain 2025 text read (Methods Animals, slice preparation, Patch-clamp recordings; Results text searched by word and read in the sections with membrane potential values); figures not opened; the paper contains no input-resistance or resting-potential value for the L2/3 neurons in Results.",
+  "verbatim_locator | proposition: junction potential not corrected | Methods Patch-clamp recordings | \"The voltage values in the Figures and text were also not corrected for the measured liquid junction potential of -10 mV\"",
+  "verbatim_locator | proposition: age and temperature | Methods | \"Acute coronal slices containing the somatosensory barrel cortex were prepared from postnatal day P17-20 male and female mice\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/verify/recompute_katp.tsv",
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/verify/queries_verifier.tsv"
+ ],
+ "prior_receipt": "FTR-20261111-41233736-96",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "a51f1d9ec1724caff2ad4cf979a9d64de9771877a15148a9880a5351ce237e6a",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket (plain curl, https://pmc-oa-opendata.s3.amazonaws.com/PMC12613364.1/PMC12613364.1.txt) fetched 2026-11-11; bytes in the scratchpad only, not in the repository",
+ "study_id": {
+  "doi": "10.1186/s10194-025-02139-4",
+  "pmid": "41233736"
+ },
+ "workflow": "SCI44 package C, K+ conductance shares (ORCH-SCI44-20261110), blind verifier V4, actor ks-v. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-11T00:09:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-11T00:17:00Z",
+ "event_id": "FTR-20261111-19017396-99",
+ "evidence_basis": [
+  "Whole text and Tables 1-2 read; Fig 4 viewed (A-C) from the open bucket, other figures captions only; supplement not read. Found: Ro displaces ifenprodil (producer D05 reversed the direction); Buffer-9 chosen by IC50 ratio; fit minimum fixed to 0.",
+  "verbatim_locator | proposition: direction of the Ro and ifenprodil displacement experiment | Results, CD titration paragraph | \"RO25,6891 could displace ifenprodil and bind to 6 × His-ATD2B with comparable affinities\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/verify/queries_verifier.tsv"
+ ],
+ "prior_receipt": "FTR-20261111-19017396-96",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "f397b02be93f2ce2273947f1182492a8bf20d8b333cdf833520ab69f272b7ae5",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch (db=pmc, PMC2603005) fetched with plain curl on 2026-11-11; converted to text in the scratchpad; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1186/1756-6606-1-16",
+  "pmid": "19017396"
+ },
+ "workflow": "SCI44 package B, IT43-Q01 blind verifier V3 (rb-v), adversarial re-analysis of the producer's reading. Prepared as a JSON file for the integrator."
+}

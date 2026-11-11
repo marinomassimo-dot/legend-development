@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-11T00:09:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-11T00:17:00Z",
+ "event_id": "FTR-20261111-18989370-99",
+ "evidence_basis": [
+  "Abstract, Methods, Results and Discussion (postsynaptic paragraph) read from the efetch PMC XML; Fig 5 viewed from the open bucket (bars and the 100 nM versus 200 nM Zn2+ label), Fig 2 and others captions only; reference 83 identified as Hatton and Paoletti 2005.",
+  "verbatim_locator | proposition: authors' reading of the native postsynaptic composition | Discussion | \"This could suggest that the postsynaptic receptors could be largely triheteromeric NR1/NR2A/NR2B receptors.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/verify/queries_verifier.tsv"
+ ],
+ "prior_receipt": "FTR-20261111-18989370-96",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "51b79fe8b1fb9e9c27a55f8f7c0f4ecc266e86fe3f6c9e43dbf0f340d6897e0e",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch (db=pmc, PMC2577183) fetched with plain curl on 2026-11-11; converted to text in the scratchpad; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1155/2008/872456",
+  "pmid": "18989370"
+ },
+ "workflow": "SCI44 package B, IT43-Q01 blind verifier V3 (rb-v), adversarial re-analysis of the producer's reading. Prepared as a JSON file for the integrator."
+}

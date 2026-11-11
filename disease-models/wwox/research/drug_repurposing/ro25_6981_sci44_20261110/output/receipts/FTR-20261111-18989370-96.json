@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-11T00:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "read",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-11T00:06:00Z",
+ "event_id": "FTR-20261111-18989370-96",
+ "evidence_basis": [
+  "Abstract, Methods, Results and parts of the Discussion read from the NCBI efetch PMC XML; Fig 5 viewed from the open-data bucket; Fig 2 and other figures captions only; coverage figures set to read for Fig 5 only (the other figures not viewed).",
+  "verbatim_locator | proposition: Ro 25-6981 on native entorhinal NMDAR EPSC | Results 3.2 | \"In 5 neurones, we first perfused a low concentration of Ro 25-6981 (200 nM)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/output/comparison.tsv",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/output/figure_notes.tsv",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/output/new_measurements.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "51b79fe8b1fb9e9c27a55f8f7c0f4ecc266e86fe3f6c9e43dbf0f340d6897e0e",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch (db=pmc, PMC2577183) fetched with plain curl on 2026-11-11; converted to text in the scratchpad; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1155/2008/872456",
+  "pmid": "18989370"
+ },
+ "workflow": "SCI44 package B, IT43-Q01 Ro 25-6981 primary source, producer og-s. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

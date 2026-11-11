@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-11T00:31:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-11T00:44:00Z",
+ "event_id": "FTR-20261111-37321992-93",
+ "evidence_basis": [
+  "Nat Commun 2023 text read (Results on Kv7 activation, Fig 7 legend, Methods for intrinsic excitability and drug application); Fig 7 image viewed; Supplementary Information PDF page 24 (Supplementary Fig 14) rendered and viewed, legend text extracted with pdftotext; the xlsx source data not opened.",
+  "verbatim_locator | proposition: retigabine and Rin and rest | Results | \"Retigabine, however, did not alter the resting membrane potential, input resistance, AP threshold, or AP shape-related parameters\"",
+  "verbatim_locator | proposition: supplementary Fig 14a | Supplementary Fig 14 legend | \"Retigabine treatment (starting from P16–17) does not affect resting membrane potential in Ank2-cKO or WT SSC layer 2/3 pyramidal neurons.\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/verify/recompute_katp.tsv",
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/verify/queries_verifier.tsv"
+ ],
+ "prior_receipt": "FTR-20261111-37321992-96",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "403df05dd47186ee198dba7d725b6b30f60b9a99c00cb94bd1282c93600521b1",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket (plain curl, https://pmc-oa-opendata.s3.amazonaws.com/PMC10272139.1/PMC10272139.1.txt) fetched 2026-11-11; bytes in the scratchpad only, not in the repository",
+ "study_id": {
+  "doi": "10.1038/s41467-023-39203-z",
+  "pmid": "37321992"
+ },
+ "workflow": "SCI44 package C, K+ conductance shares (ORCH-SCI44-20261110), blind verifier V4, actor ks-v. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

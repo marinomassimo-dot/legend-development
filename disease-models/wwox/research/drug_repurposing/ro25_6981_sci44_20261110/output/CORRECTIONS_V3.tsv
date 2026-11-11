@@ -1,0 +1,11 @@
+file	row	column	correction
+decisive.tsv	D01	statement	'steady inhibition' is not in the paper; the receptor is GluN1-1a with GluN2B; no maximal inhibition is reported
+decisive.tsv	D04	statement	'steady-state' is not in the paper; the 100 percent inhibition is a fit assumption (bottom fixed to 0) and the highest R
+decisive.tsv	D05	statement	REVERSED DIRECTION in the first draft: the paper says Ro 25-6981 displaced ifenprodil from the isolated ATD (Ki 2-4 nM; 
+decisive.tsv	D06	statement	the 1 mM Mg2+ is in the wash buffer only; the test buffer during NMDA stimulation lists none
+decisive.tsv	D07	statement	the 49 and 42 nM copy is in 31164987 Table 1, not in Hedegaard's own Table 4
+decisive.tsv	D08	statement	the sentence is verbatim in Science 2017 (28232581), whose reference 26 is Lee 2014; Lee 2014 Extended Data Fig 2g (not 
+decisive.tsv	D09	statement	nominal resolutions: 4.5 A (non-Ro) and 6.0 A (Ro-bound; model fitted from the non-Ro structure)
+decisive.tsv	D13	statement	the abstract says 'parallel studies': the Ro binding is not stated on the same immunopurified complexes
+decisive.tsv	D14	statement	supported within the stated perimeter only, not as a general absence; the perimeter should say that a diheteromer bindin
+comparison.tsv	C-RO1	functional_comparison	too strong a ceiling statement
