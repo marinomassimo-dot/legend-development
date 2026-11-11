@@ -22,6 +22,9 @@ FLOOR, FOLD = 1.0, 3.0
 TABLES = [
     dict(key="mouse", species="mouse", path=DR / "kchan_expression_sci44_20261111/kchan_expression_mouse.tsv", cls="cell_class", val="mean_fpkm", n="n_samples", neuron=r"^neurons?\b", skip=r"^$"),
     dict(key="human", species="human", path=DR / "kchan_expression_sci44_20261111/kchan_expression_human.tsv", cls="group", val="mean_fpkm", n="n_columns", neuron=r"^neuron_", skip=r"^(whole_cortex|mouse_astro)$"),
+    # IT46 P8: the same inputs and extraction, GABA and chloride-transport genes (chloride_gaba_expression.py)
+    dict(key="mouse_gaba", species="mouse", path=HERE / "expr/chloride_gaba_expression_mouse.tsv", cls="cell_class", val="mean_fpkm", n="n_samples", neuron=r"^neurons?\b", skip=r"^$"),
+    dict(key="human_gaba", species="human", path=HERE / "expr/chloride_gaba_expression_human.tsv", cls="group", val="mean_fpkm", n="n_columns", neuron=r"^neuron_", skip=r"^(whole_cortex|mouse_astro)$"),
 ]
 FIELDS = ["relation_id", "gene", "table", "species", "state", "neuron_class", "neuron_fpkm", "best_other_class", "best_other_fpkm", "n_samples_neuron", "attributable_to_neuron", "caveat"]
 
@@ -119,7 +122,7 @@ def relations():
         if isinstance(node, ast.Assign) and getattr(node.targets[0], "id", "") == "RELATIONS":
             for rid, _a, syms, *_ in ast.literal_eval(node.value):
                 out[rid] = list(syms)
-    for f in sorted(DR.glob("generation_it4[3-9]_*/relations*.tsv")):
+    for f in sorted(DR.glob("generation_it4[1-9]_*/relations*.tsv")):
         for r in csv.DictReader(open(f, encoding="utf-8"), delimiter="\t"):
             if r.get("relation_id") and r.get("target_symbols"):
                 out[r["relation_id"]] = [s for s in re.split(r"[;,]", r["target_symbols"]) if s]

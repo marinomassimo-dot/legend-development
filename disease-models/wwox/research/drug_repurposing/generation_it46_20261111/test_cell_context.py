@@ -58,6 +58,15 @@ class RealTables(unittest.TestCase):
         self.assertEqual("OTHER_ENRICHED", s[("HCN2", "mouse")])     # myelinating oligodendrocytes 66.3 against neurons 17.9
         self.assertEqual("OTHER_ENRICHED", s[("KCNJ10", "mouse")])
 
+    def test_gaba_and_chloride_genes_as_held(self):
+        s = {(r["gene"], r["table"]): r["state"] for r in cc.join(["SLC12A5", "SLC12A2", "SLC6A1", "ABAT"])}
+        self.assertEqual("NEURON_ENRICHED", s[("SLC12A5", "mouse_gaba")])
+        self.assertEqual("OTHER_ENRICHED", s[("SLC12A2", "mouse_gaba")])    # newly formed oligodendrocytes 100 against neurons 5
+        self.assertEqual("OTHER_ENRICHED", s[("SLC6A1", "mouse_gaba")])     # astrocytes 420 against neurons 129
+        self.assertEqual("SHARED", s[("ABAT", "mouse_gaba")])
+        _, text = cc.context_for(["SLC12A5", "SLC12A2"])
+        self.assertIn("SLC12A5 (mouse neuron-enriched, human neuron-enriched)", text)
+
     def test_the_kv7_relation_is_not_assignable_to_neurons_from_these_tables(self):
         _, text = cc.context_for(["KCNQ2", "KCNQ3", "KCNQ4", "KCNQ5"])
         self.assertIn("cannot be assigned to neurons", text)
