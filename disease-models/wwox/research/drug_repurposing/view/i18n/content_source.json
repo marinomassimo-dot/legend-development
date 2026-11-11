@@ -1,4 +1,8 @@
 {
+ "000a7c69c00d": {
+  "src": "en",
+  "text": "A compound benefit can be independent of NRF2 (the readout was raised by compounds that do not bind KEAP1); the only catalogued NRF2-lowering row lowers many proteins and is not a control; no neuron or astrocyte data exist for any of these compounds; a binding assay at the Kelch domain cannot see covalent modifiers."
+ },
  "002544584dfc": {
   "src": "en",
   "text": "Conditional hypothesis: the drug-side action is curated and its one reference was read at abstract level; no measurement in a WWOX-deficient neural cell connects the lysosomal step to the allele (no ranked unit, so no evaluation depth applies: this is not a depth of zero)"
@@ -419,10 +423,6 @@
   "src": "en",
   "text": "Smaller cells with a fixed seal leak, a larger Ih, selection by input-resistance criteria, maturation delay, and a cell-type mix."
  },
- "375799a41918": {
-  "src": "en",
-  "text": "Nominate nothing before a Ba2+- or XE-991-sensitive difference current smaller per pF in Wwox neurons with capacitance measured directly and the junction potential measured; a reversal near E_K alone does not separate a K+ loss from a smaller cell with a shunt; a matched-effect control that fails to reproduce the fall."
- },
  "375c36b55dc4": {
   "src": "en",
   "text": "Outside WWOX for the pharmacology; WWOX-system only for the raised reactive-oxygen readouts, whose sign differs by context between a fly and late-passage fibroblasts and does not reconcile. IT22: the organoid NFE2L2 transcript (0.75x) is now a generator input (new question, role unknown, second system failed its control); the generator returns a topical AhR-pathway agent and agents that block EZH2 as conditional rows, and the canonical NRF2 activators only as diagnostic direct hits on the seed gene itself. [IT39] The Src and Fyn chain to NRF2 from an external report rests on a retracted article (21690096); no consumer carries the chain now, its other support is a 2007 paper from the same laboratory line (not independent), and reductive stress is a transfer from cardiac models."
@@ -502,6 +502,14 @@
  "3f95b954d81e": {
   "src": "en",
   "text": "ATP-sensitive K+ channel tools: a conditional metabolic upstream of the potassium branch"
+ },
+ "403228a08dd1": {
+  "src": "en",
+  "text": "Up: a difference current reversing near the potassium equilibrium potential in Wwox neurons, and a matched-effect control that fails to reproduce the fall. Down: passive size with a seal leak explaining the observations. Down: a smaller cell with a shunt gives the same implied reversal. [IT45] Up: a smaller Kv7-blocker-sensitive current in the mutant, or an opener that lowers bursts by more than an equal current-injection hyperpolarisation. Down: bursts persisting under AMPA/NMDA block, or the same fall under the equal hyperpolarisation."
+ },
+ "4033a467f20a": {
+  "src": "en",
+  "text": "Raising NRF2 activity: a covalent KEAP1 modifier and a non-covalent KEAP1 binder, told apart by a knockdown of NRF2, not by binding potency"
  },
  "40da6e5a79b9": {
   "src": "en",
@@ -639,9 +647,9 @@
   "src": "it",
   "text": "Laboratorio con linee neurali isogeniche e una fonte di microglia; disponibilità non nota."
  },
- "53f18a227752": {
+ "549b44212073": {
   "src": "en",
-  "text": "Up: a difference current reversing near the potassium equilibrium potential in Wwox neurons, and a matched-effect control that fails to reproduce the fall. Down: passive size with a seal leak explaining the observations. Down: a smaller cell with a shunt gives the same implied reversal."
+  "text": "Up: a benefit lost under NFE2L2 knockdown for both compounds. Down: a benefit unchanged by the knockdown (independent of NRF2) or a worsening. Reopens: an effect confined to one compartment."
  },
  "54c7b0203090": {
   "src": "en",
@@ -915,6 +923,10 @@
   "src": "en",
   "text": "Whether an interaction term survives; a wild-type effect of the same size would move this thread out of its group without any new compound being involved."
  },
+ "75b9787411ed": {
+  "src": "en",
+  "text": "That NRF2 is under-active and compartment-specific in a WWOX-deficient neural system: no NRF2 protein, nuclear NRF2 or target-gene measurement exists there. Reporter and translocation values come from different cell lines and documents and are not comparable; induction of one enzyme can occur without NRF2."
+ },
  "775302e45683": {
   "src": "it",
   "text": "via della firma trascrizionale: opposizione del modulo in cellule simili ai progenitori, valutata in cellule simili ai neuroni"
@@ -1006,10 +1018,6 @@
  "81fba8b46d33": {
   "src": "en",
   "text": "If the excess vanishes at matched conditions, or the blocker-sensitive current per pF is the same, there is no HCN difference. A blocker response shows contribution, not a defect."
- },
- "820a0ae2704b": {
-  "src": "en",
-  "text": "Whether the axis is engaged at all in a WWOX-deficient neural cell, and whether engaging it helps or harms. No compound in the record acts in such a cell. IT22: the AhR-target transcript is higher in the knockout while NFE2L2 is lower, so engagement of the axis is not even directionally clear."
  },
  "8241608ee158": {
   "src": "it",
@@ -1247,6 +1255,10 @@
   "src": "en",
   "text": "A WWOX-deficient neural measurement showing over-active checkpoint signalling that harms the cell."
  },
+ "9a212f4e4cf0": {
+  "src": "en",
+  "text": "The activity path now reaches catalogued compounds on these targets that the mechanism tables did not (the earlier read was cut off by a screening deposit). A non-covalent binder of a different binding mode from the covalent forms exists in the primary literature, with a knockdown arm in its source; the reasons to doubt each readout were found by reading the documents."
+ },
  "9a3b125b4b5f": {
   "src": "en",
   "text": "Read primary sources for maximum effect and site only if a further chemotype is needed."
@@ -1258,10 +1270,6 @@
  "9a82b2af3c61": {
   "src": "en",
   "text": "Step 1, no compound: BNIP3 and BNIP3L protein and mRNA from the same lysates, WWOX-deficient against add-back human neural cells at 21, 5 and 1 percent oxygen; step 2: HIF1A and EPAS1 knockdown with HIF target readouts; step 3: BNIP3 knockdown with survival, ROS and membrane potential. The full list of measurements is in the package table of the HIF1A-to-BNIP3 delivery. [IT43] The step-1 lysates also serve INV-07 (phosphorylation and activity of the pyruvate dehydrogenase step and the four kinase transcripts); choose the cell material and oxygen series jointly so that one sample set answers both. [SCI44] The lysates that serve INV-07 step 1 should be cell-class resolved (neurons, astrocytes, oligodendrocyte lineage) and keep lactate and pyruvate from the same wells."
- },
- "9aa65bd593d4": {
-  "src": "en",
-  "text": "Standard genetic perturbation; the readout is the constraint, not the reagent."
  },
  "9b1360b42239": {
   "src": "en",
@@ -1479,6 +1487,10 @@
   "src": "en",
   "text": "Carded axis: the NRF2/KEAP1 need with two conditional arms."
  },
+ "b53c24c5b8a5": {
+  "src": "en",
+  "text": "Ex vivo slice electrophysiology in an existing Wwox neuron-deleted line; tool compounds only; no brain-exposure statement is carried here and none is implied for any clinically used member. [IT41] Decision: whether any HCN-directed tool arm is run. Possible in silico: an ortholog and isoform census of the tools. New measure: sag and rebound at matched potential and deflection, with capacitance and access resistance by genotype. Reopen if: the excess sag persists at matched conditions. Priority: after the matched recording and after INV-05's minimum experiment; no HCN compound is nominated before it. [IT45] Possible in silico: done: the Kv7 lever joined to the cell class (neuron-enriched RNA for the Kv7 genes against astrocytic Kir4.1) fixes the order of difference currents. New measure: the Ba2+-, Kv7-blocker- and Ih-blocker-sensitive difference currents in the same slices, and a Kv7 opener arm only against an equal current-injection hyperpolarisation. Reopen if: Kv7 expression at P13-17 layer II/III, or the Kv7 current at rest, is measured."
+ },
  "b5adb8d69b29": {
   "src": "it",
   "text": "Più bassi nei quattro contrasti murini, che sono un solo modello; nessun altro contesto è stato calcolato."
@@ -1498,10 +1510,6 @@
  "b8355b6e40c2": {
   "src": "it",
   "text": "Capire se nelle cellule neurali carenti di WWOX ci sono ROS, tono di NRF2 o citochine (proteina) alterati, e se attivare NRF2 cambia vitalità o attività di rete in modo dipendente da NRF2."
- },
- "b8d770bbd1e2": {
-  "src": "en",
-  "text": "Ex vivo slice electrophysiology in an existing Wwox neuron-deleted line; tool compounds only; no brain-exposure statement is carried here and none is implied for any clinically used member. [IT41] Decision: whether any HCN-directed tool arm is run. Possible in silico: an ortholog and isoform census of the tools. New measure: sag and rebound at matched potential and deflection, with capacitance and access resistance by genotype. Reopen if: the excess sag persists at matched conditions. Priority: after the matched recording and after INV-05's minimum experiment; no HCN compound is nominated before it."
  },
  "b9173f6c4de2": {
   "src": "en",
@@ -1571,6 +1579,10 @@
   "src": "en",
   "text": "Kv7 opening and gap-junction block: abstain"
  },
+ "c0a5855d9692": {
+  "src": "en",
+  "text": "Nominate nothing before a Ba2+- or XE-991-sensitive difference current smaller per pF in Wwox neurons with capacitance measured directly and the junction potential measured; a reversal near E_K alone does not separate a K+ loss from a smaller cell with a shunt; a matched-effect control that fails to reproduce the fall. [IT45] Joined with RNA by cell class (neurons against astrocytes at an early postnatal age, mouse), the Kv7 genes are neuron-enriched while the Kir4.1 gene is astrocytic: a Kv7-blocker-sensitive difference current is easier to attribute to neurons than a Ba2+-sensitive one. Add an opener arm only against a current-injection hyperpolarisation of equal size, so a Kv7-specific benefit can be told from a generic one."
+ },
  "c10356962f01": {
   "src": "en",
   "text": "The removable share of such a modulator is bounded by receptor composition and zinc, so a plateau below the control is unresolved, not support for total gain."
@@ -1602,6 +1614,10 @@
  "c49c9b6c64b0": {
   "src": "en",
   "text": "Were the intrinsic recordings made under conditions that bias the genotype contrast?"
+ },
+ "c574948de032": {
+  "src": "en",
+  "text": "Lowering KEAP1 repression of NRF2 (covalent modification or a non-covalent binder at the Kelch domain), or activating NFE2L2."
  },
  "c5a4e3d438da": {
   "src": "en",
@@ -1747,9 +1763,17 @@
   "src": "en",
   "text": "Carded thread: lithium."
  },
+ "d769097da323": {
+  "src": "en",
+  "text": "Whether the axis is engaged at all in a WWOX-deficient neural cell, and whether engaging it helps or harms. No compound in the record acts in such a cell. IT22: the AhR-target transcript is higher in the knockout while NFE2L2 is lower, so engagement of the axis is not even directionally clear. [IT45] Induction of one enzyme can occur without NRF2 (reported for compounds that do not bind KEAP1), a Kelch-domain binding assay cannot see covalent modifiers, and the one catalogued NRF2-lowering row lowers protein synthesis in general: none of these is a control for an NRF2-independent benefit."
+ },
  "d7efa24460cc": {
   "src": "en",
   "text": "The position of this thread rests on a single laboratory and a single paper in which the comparison drug acted better, and the specificity flag is an unknown rather than a clean reading. The thread is already ordered, so the result changes a standing position rather than adding a new one."
+ },
+ "d869c908ea34": {
+  "src": "en",
+  "text": "Genetic arm first (KEAP1 lowering or NFE2L2 raising, with NFE2L2 knockdown as the dependence control); then one covalent and one non-covalent compound, each with and without the knockdown, read on a target-gene set, in neurons and astrocytes separately, under one oxidative challenge."
  },
  "d8bcf6b0301e": {
   "src": "en",
@@ -1902,6 +1926,10 @@
  "e9520227b9c9": {
   "src": "en",
   "text": "Development feasibility: a tool compound for in vitro and mouse work only; brain entry is restricted by efflux in vitro and there is no human exposure statement."
+ },
+ "e983db57ab72": {
+  "src": "en",
+  "text": "Standard genetic perturbation; the readout is the constraint, not the reagent. [IT45] Decision: whether the genetic NRF2 arm precedes any compound, and which KEAP1 pair separates an NRF2-dependent from an independent benefit. Possible in silico: done for the catalogue (a dose-response activity read reaches catalogued covalent modifiers and a non-covalent binder, each with a primary document, five of eight read only as abstract or database copy). New measure: NRF2 protein, nuclear NRF2 and target-gene activity per compartment in a WWOX-deficient neural system, then each compound with and without NFE2L2 knockdown. Reopen if: the primary text of the abstract-only documents or neural-cell data change a premise."
  },
  "e9d2ada2a64c": {
   "src": "en",
