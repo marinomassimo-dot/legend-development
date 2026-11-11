@@ -22,7 +22,7 @@ HERE = Path(__file__).resolve().parent; DR = HERE.parent
 sys.path.insert(0, str(HERE.parents[4] / "framework/scripts"))
 import hypothesis_package as hp  # noqa: E402
 
-ALIASES = {"d-apv": ["d-apv", "d-ap5", "apv"], "ro 25-6981": ["ro 25-6981", "ro25-6981", "ro 25 6981"]}
+ALIASES = {"d-apv": ["d-apv", "d-ap5", "apv"], "ro 25-6981": ["ro 25-6981", "ro25-6981", "ro 25 6981"], "uk-5099": ["uk-5099", "uk5099", "uk 5099"], "oxamate": ["oxamate", "sodium oxamate"]}
 OUT_FIELDS = ["item_id", "name", "evidence_tier", "tier_props", "role_derived", "role_reason", "comparison_state", "premise_needed", "discriminating_measure", "public_source_work", "relaunch_question"]
 
 def names_of(name_full: str) -> list[str]:

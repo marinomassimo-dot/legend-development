@@ -1491,5 +1491,9 @@
  "UI_IT.xp_targets_none": "kein molekulares Zielmolekül aufgeführt (der Bedarf ist über eine Funktion oder einen Phänotyp definiert)",
  "UI_IT.xp_to": "bis",
  "UI_IT.xp_unknown": "nicht bekannt",
- "UI_IT.iv_cmpds": "Beteiligte Verbindungen oder Klassen (Forschungsreihenfolge)"
+ "UI_IT.iv_cmpds": "Beteiligte Verbindungen oder Klassen (Forschungsreihenfolge)",
+ "UI_IT.cv_roles_h": "Rollen der Verbindungen auf dieser Karte (aus dem Vergleich abgeleitet)",
+ "UI_IT.cv_role_control": "Referenz oder Kontrolle",
+ "UI_IT.cv_role_probe": "Sonde oder Komparator",
+ "UI_IT.cv_role_unresolved": "ungeklärt (Primärquelle nicht erreicht)"
 }

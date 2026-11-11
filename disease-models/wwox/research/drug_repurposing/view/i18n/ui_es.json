@@ -1491,5 +1491,9 @@
  "UI_IT.xp_targets_none": "ninguna diana molecular enumerada (la necesidad se define sobre una función o un fenotipo)",
  "UI_IT.xp_to": "a",
  "UI_IT.xp_unknown": "no conocido",
- "UI_IT.iv_cmpds": "Compuestos o clases implicados (orden de investigación)"
+ "UI_IT.iv_cmpds": "Compuestos o clases implicados (orden de investigación)",
+ "UI_IT.cv_roles_h": "Funciones de los compuestos de esta ficha (derivadas de la comparación)",
+ "UI_IT.cv_role_control": "referencia o control",
+ "UI_IT.cv_role_probe": "sonda o comparador",
+ "UI_IT.cv_role_unresolved": "sin resolver (fuente primaria no alcanzada)"
 }

@@ -1491,5 +1491,9 @@
  "UI_IT.xp_targets_none": "aucune cible moléculaire listée (le besoin est défini sur une fonction ou un phénotype)",
  "UI_IT.xp_to": "à",
  "UI_IT.xp_unknown": "non connu",
- "UI_IT.iv_cmpds": "Composés ou classes concernés (ordre de recherche)"
+ "UI_IT.iv_cmpds": "Composés ou classes concernés (ordre de recherche)",
+ "UI_IT.cv_roles_h": "Rôles des composés de cette fiche (dérivés de la comparaison)",
+ "UI_IT.cv_role_control": "référence ou contrôle",
+ "UI_IT.cv_role_probe": "sonde ou comparateur",
+ "UI_IT.cv_role_unresolved": "non résolu (source primaire non atteinte)"
 }

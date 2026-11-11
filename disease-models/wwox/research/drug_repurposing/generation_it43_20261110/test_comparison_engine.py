@@ -69,4 +69,12 @@ class SecondInvestigation(unittest.TestCase):
         self.assertEqual([(r["item_id"], r["name"], r["role_derived"]) for r in res], [(r["item_id"], r["name"], r["role_derived"]) for r in got])
         self.assertTrue({r["name"] for r in res} >= {"dichloroacetate", "AZD7545", "VER-246608"})
 
+class CardRoles(unittest.TestCase):
+    def test_the_view_loader_carries_the_engine_roles_so_a_card_never_merges_roles_silently(self):
+        sys.path.insert(0, str(HERE.parents[4] / "framework/scripts")); import repurposing_view as rv
+        cv = {c["item_id"]: c for c in rv.compound_view(HERE.parent, True)}
+        roles = {x["name"]: x["role"] for x in cv["V13"]["roles"]}
+        self.assertEqual(roles["dichloroacetate"], "control"); self.assertEqual(roles["AZD7545"], "known_requalified")
+        self.assertTrue({x["role"] for x in cv["V16"]["roles"]} >= {"known_requalified", "unresolved"} or len({x["role"] for x in cv["V16"]["roles"]}) >= 2)
+
 if __name__ == "__main__": unittest.main(verbosity=2)

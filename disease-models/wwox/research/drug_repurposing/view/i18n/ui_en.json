@@ -1491,5 +1491,9 @@
  "UI_IT.xp_targets_none": "no molecular target listed (the need is defined on a function or a phenotype)",
  "UI_IT.xp_to": "to",
  "UI_IT.xp_unknown": "unknown",
- "UI_IT.iv_cmpds": "Compounds or classes involved (research order)"
+ "UI_IT.iv_cmpds": "Compounds or classes involved (research order)",
+ "UI_IT.cv_roles_h": "Roles of the compounds on this card (derived from the comparison)",
+ "UI_IT.cv_role_control": "reference or control",
+ "UI_IT.cv_role_probe": "probe or comparator",
+ "UI_IT.cv_role_unresolved": "unresolved (primary source not reached)"
 }
