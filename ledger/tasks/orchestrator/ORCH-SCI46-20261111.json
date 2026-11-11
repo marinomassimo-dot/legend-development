@@ -16,7 +16,8 @@
  "RESUME": "S0/S1 and briefs on task/sci46; producer P then blind verifier V8; corrections rechecked; engine-shape tables by script; consumer_delta; gate/LINT/receipts/growth, battery on a fresh clone, task_close, safe_push, message IT46. Then one queue item.",
  "DECISIONS_TAKEN": [
   "2026-11-11 Winkel 2015 full text: Europe PMC HTTP 500 on two attempts, tool empty; not retried by another route; abstract-level row D20 only.",
-  "2026-11-11 verifier's SMILES line removed from verify/audit.md (the release gate read its brackets as a link)."
+  "2026-11-11 verifier's SMILES line removed from verify/audit.md (the release gate read its brackets as a link).",
+  "2026-11-11 battery verdict PASS WITH SKIPS (239 targets) attributed to frozen SHA 5ee09044; this record update is closure-only."
  ],
  "DELEGATIONS": [
   "P producer og-y: asked sonnet/medium; read back medium x84; 84 turns; output 104,391; cache read 13,384,762; 13 sources; staged receipts -79 (12)",
@@ -61,9 +62,9 @@
    "steps": [
     {
      "step": "Gate, LINT, receipts, growth, battery on a fresh clone, task_close, safe_push, message IT46 with the landing SHA",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "frozen SHA 5ee09044: gate PASS (0 blocks), LINT WARN (no BLOCK), receipts verify OK (1787), growth PASS; battery on a fresh --no-hardlinks clone with files hard-linked: PASS WITH SKIPS, 239 targets, 11 skipped (catalogue cache, corpus artefacts, Stop hook absent in the clone); later commits closure-only"
     }
    ]
   },
