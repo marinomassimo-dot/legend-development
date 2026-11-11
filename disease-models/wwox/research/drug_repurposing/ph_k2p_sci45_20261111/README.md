@@ -55,6 +55,10 @@ Producer: 14 sources newly read at partial full text, 21 abstract-level; the ver
 
 Preregistered grid (run 1) and a dated addendum with the verified pH50 set and slopes 0.7, 1, 2 (run 2). Predictions: S1 (TASK-3 L below 0.01) **failed** (0.044 at share 0.5, 0.116 with pH50 6.9); S2, S3 and S4 held. With pools from native knock-outs (addendum, INFERENZA): TASK-1/3 pool 0.26, maximum loss 0.18 at the highest pH50, slope 2 and 0.3 unit; TREK-1 pool 0.53, loss 0.29-0.37 only at slope 2 (0.2 unit from baseline 7.2; 0.3 unit from 7.2 or 7.4), at most 0.21 at slope 1 and 0.3 unit. A threshold, not an estimate: it says what a pH change must be, not what it is.
 
+## RNA context for the three channels (existing tables, no new run; `../kchan_expression_sci44_20261111/kchan_expression_mouse.tsv`)
+
+P7 mouse cortex class means (FPKM, two pools): Kcnk9 (TASK-3) neurons 17.35, all other classes at or below 0.23; Kcnk2 (TREK-1) neurons 14.07, astrocytes 20.97, OPC 19.55; **Kcnk3 (TASK-1) neurons 1.01**, other classes 0.13-0.78. In human sorted cortex (single neuron sample) Kcnk9 and Kcnk3 are at floor (0.1-0.5) and Kcnk2 is 3.0. RNA is not channel number or current and heteromers are not resolved, but the ratio suggests the TASK pool of a mouse cortical neuron is mostly the pH-insensitive TASK-3 subunit (INFERENZA), which lowers the pH-closable share of the 0.26 TASK-1/3 pool, and TREK-1 is the channel expressed in both neurons and glia (so a glial TREK-1 contribution to pHo and K+ handling is possible while the Syn-Cre deletion leaves glia wild type).
+
 ## What no further literature can resolve
 
 pHo and pHi of the recorded slice by genotype; pH-sensitive current per pF in layer II/III; lactate in the Wwox slice; the Hill slope of TREK-1 at 35 C; the tools' own pH dependence. These need the measurements of the ladder.
