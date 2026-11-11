@@ -1,0 +1,61 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-SCI45-20261111",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Operator mandate pasted 2026-11-11 (SCI45): narrow deep batch on pH, K2P conductances (TASK-1, TASK-3, TREK-1) and pharmacological instruments that separate the explanations in the Wwox preparation. One central package (S1 chain, S2 pH sensitivity, S3 few tools, S4 minimum discriminating design, S5 generation) to verification and early delivery to IT45, then an autonomous queue (S8). Zero spend, no external contact, no personal data. Final report opens: Quale nuova ipotesi farmacologica o scelta sperimentale diventa possibile, e quale passaggio della catena resta ancora da dimostrare?",
+ "START_UTC": "2026-11-11T09:00:00Z",
+ "BASELINE": "main 3f8f17fb. Worktree .claude/worktrees/sci45, branch task/sci45. IT44 (legend-development-4e, task/it44) applied SCI44 package A by folder (8edf3852) and awaits B and C; no IT45 branch or task record at start; HE45 worktree exists. SCI44 landed: A d088b964, B+C+coda 34f93af0, closure 3f8f17fb.",
+ "CURRENT_PACKAGE": {
+  "id": "P1 ph_k2p_sci45_20261111",
+  "state": "S1 written before search",
+  "delegate_active": "none",
+  "updated": "2026-11-11"
+ },
+ "RESUME": "S0/S1 written in ph_k2p_sci45_20261111/S0_S1_before_search.md; next: commit it, send the perimeter to IT44/IT45, write BRIEF_P.md and dispatch one producer (sonnet/medium).",
+ "DECISIONS_TAKEN": [
+  "2026-11-11 S0: perimeter narrowed to TASK-1, TASK-3, TREK-1 (TASK-1 added to the coda's two); the lactate-to-pH step is read as its own question R4; no general K2P review; the 18 SCI44 tool-name strings are not repeated; new strings are pH-led and TASK-led.",
+  "2026-11-11 S0: Wwox Methods already hold 25 mM HCO3-, 35 C, 10 mM glucose, 10 mM HEPES and 2 mM ATP in the pipette (A1.15): not called unknown; bath pH value is not stated."
+ ],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "AUTHORISED_QUEUE_20261111": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_S0": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "S0/S1: verify SCI44 delivery and IT44 consumption, read held inputs, write the chain, explanations and priors before search, tell IT44/IT45 the perimeter",
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Package P1 K2P x pH: producer (R1 channels, R2 native, R3 tool identity, R4 lactate-pH in tissue), blind verifier, corrections, S4 design, S5 hypotheses, delivery to IT45",
+     "status": "PENDING",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_Q": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "Queue S8, one at a time, only after P1 delivery: pointer qualification, open premise, Harness anomaly, small public-data reanalysis, DREAM to another lever, next brief",
+     "status": "PENDING",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  }
+ }
+}
