@@ -12,11 +12,11 @@
  "branch": "task/he45",
  "CURRENT_STATE": "IN_PROGRESS",
  "CHECKPOINT": {
-  "last_verified_result": "none yet",
+  "last_verified_result": "battery PASS WITH SKIPS (237 targets, 42 skipped) on 0fd43de6; commits d14685a3 and 120c2e29 after it are covered by targeted suites and the gate, not by a battery",
   "first_incomplete_work": "OBJ_H1",
   "active_processes": "none",
   "real_dependencies": "IT44 has not landed (task/it44 holds the engine/ loader and the ATP/scaffold engine edits)",
-  "next_executable_step": "assay_conditions.py + engine call"
+  "next_executable_step": "land the increment; then wait for the IT44 landing SHA and patch activity_search.py / entity_roles"
  },
  "AUTHORISED_QUEUE_20261111": {
   "MANDATE_STATE": "OPEN",
@@ -26,9 +26,9 @@
    "steps": [
     {
      "step": "Reconcile HE44, IT44, SCI44 on the real tree",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "HE44 COMPLETE/released; IT44 not landed (battery on a47a92a0 running); SCI44 COMPLETE; consumed: measurement.measure and parent_form by IT44 branch, resolver adopted (e3155dd5); he45_20261111/README.md"
     }
    ]
   },
@@ -38,9 +38,9 @@
    "steps": [
     {
      "step": "Units and conditions in comparisons (ATP mM/uM, missing, generic other)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "assay_conditions.py + engine call; 21+13 tests; comparison_before_after.tsv; battery 0fd43de6 PASS WITH SKIPS (237 targets, 42 skipped)"
     }
    ]
   },
@@ -50,9 +50,9 @@
    "steps": [
     {
      "step": "Composition and conditions without improper transfer",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "composition and scaffold fields; no structured conditions column exists (README section 1)"
     }
    ]
   },
@@ -62,9 +62,9 @@
    "steps": [
     {
      "step": "Loader engine/ check (six cases)",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "comparison_source in hypothesis_package.py; six cases + tests; README section 2; IT44 merge instruction sent"
     }
    ]
   },
@@ -74,9 +74,9 @@
    "steps": [
     {
      "step": "best_nM, FLOOD threshold, SCREEN_DEPOSIT",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "findings and summarise() done; activity_search patch (type split, summarise) waits for the IT44 landing SHA"
     }
    ]
   },
@@ -86,9 +86,9 @@
    "steps": [
     {
      "step": "Entity role and the candidate fallback",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "measured (95 of 195 engine-CANDIDATE rows carry the role only by default); patch of role_of default and eval fallback waits for the IT44 landing"
     }
    ]
   },
@@ -98,9 +98,9 @@
    "steps": [
     {
      "step": "Cache and adapters of the activity path",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "cache-key defect reproduced; routing through chembl.query waits for the IT44 landing"
     }
    ]
   },
@@ -110,9 +110,9 @@
    "steps": [
     {
      "step": "Real cost reduction on a limited perimeter",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "census per window (706k vs 195k mean context per turn); event wait used for the battery"
     }
    ]
   },
@@ -122,9 +122,9 @@
    "steps": [
     {
      "step": "DREAM and continuity",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "DREAM in README section 4; retrieval test; no revival trigger fired"
     }
    ]
   },
@@ -134,9 +134,9 @@
    "steps": [
     {
      "step": "Cleanup and simplification",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan",
-     "evidence": ""
+     "evidence": "he42/he43/he44 removed (clean, integrated, no flag); scratch he45-it44check to remove at the end"
     }
    ]
   }
