@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-11T00:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "read",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-11T00:06:00Z",
+ "event_id": "FTR-20261111-19017396-96",
+ "evidence_basis": [
+  "Abstract, Introduction, Results, Discussion, Methods and Tables 1-2 read from the NCBI efetch PMC XML; Fig 4 viewed from the open-data bucket; other figures captions only; supplement not read.",
+  "verbatim_locator | proposition: Ro 25-6981 oocyte IC50 and ATD binding | Results | \"The negative allosteric antagonists inhibited NR1/NR2B receptor current responses with IC50 values 105 nM and 59 nM at pH7.3, respectively\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/output/comparison.tsv",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/output/figure_notes.tsv",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/output/new_measurements.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "f397b02be93f2ce2273947f1182492a8bf20d8b333cdf833520ab69f272b7ae5",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch (db=pmc, PMC2603005) fetched with plain curl on 2026-11-11; converted to text in the scratchpad; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1186/1756-6606-1-16",
+  "pmid": "19017396"
+ },
+ "workflow": "SCI44 package B, IT43-Q01 Ro 25-6981 primary source, producer og-s. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

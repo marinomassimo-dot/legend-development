@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-11T00:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-11T00:06:00Z",
+ "event_id": "FTR-20261111-26912815-96",
+ "evidence_basis": [
+  "Introduction, Methods, Results and tables read as text from the NCBI efetch PMC XML; no figure opened; supplement not read; Ro25-6981 appears only as a literature entry, not as a compound of the paper's measurements.",
+  "verbatim_locator | proposition: Ro 25-6981 only a literature entry | Table | \"20 (Ro25-6981) (Fischer et al., 1997)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/output/comparison.tsv",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/output/figure_notes.tsv",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/output/new_measurements.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "d6dfb08efd2f484bb2278cf65c537136bcf833e6a36bc8994cce868a0c5bfb27",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch (db=pmc, PMC4859819) fetched with plain curl on 2026-11-11; converted to text in the scratchpad; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1124/mol.115.103036",
+  "pmid": "26912815"
+ },
+ "workflow": "SCI44 package B, IT43-Q01 Ro 25-6981 primary source, producer og-s. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-11T00:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-11T00:06:00Z",
+ "event_id": "FTR-20261111-27062927-96",
+ "evidence_basis": [
+  "Abstract, Introduction, Results, Discussion and Methods read as text from the NCBI efetch PMC XML; figure legends read; no image files in the open bucket; supplement (Fig S1D with the TEVC inhibition) not read.",
+  "verbatim_locator | proposition: Ro inhibition maintained, no percent in text | Results | \"we confirmed that the Ro25-6981 inhibition is maintained in the NMDAEM construct (Figure S1D)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/output/comparison.tsv",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/output/figure_notes.tsv",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/output/new_measurements.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "d0a85a9943a024cd04b3fac7886d79e42f76554abe4fdd43101adbf96cde7fed",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch (db=pmc, PMC4914038) fetched with plain curl on 2026-11-11; converted to text in the scratchpad; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1016/j.cell.2016.03.028",
+  "pmid": "27062927"
+ },
+ "workflow": "SCI44 package B, IT43-Q01 Ro 25-6981 primary source, producer og-s. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

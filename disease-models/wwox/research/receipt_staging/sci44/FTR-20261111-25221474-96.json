@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-11T00:19:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-11T00:30:12Z",
+ "event_id": "FTR-20261111-25221474-96",
+ "evidence_basis": [
+  "Lemak 2014: Methods, Results text and Discussion read; five figure images exist in the bucket and were not opened.",
+  "verbatim_locator | proposition: tolbutamide with 4 mM ATP | Discussion | \"the drug was effective even at high ATP concentrations in the patch electrode (4 mM)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/output/shares.tsv",
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/output/figure_notes.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "03e85432fb0350ef7890a821da3b21670bd5f9576c0a48b4bd80e03f55aefbc0",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket (plain curl, https://pmc-oa-opendata.s3.amazonaws.com/PMC4145353.1/PMC4145353.1.txt) fetched 2026-11-11; bytes in the scratchpad only, not in the repository",
+ "study_id": {
+  "doi": "10.3389/fncel.2014.00255",
+  "pmid": "25221474"
+ },
+ "workflow": "SCI44 package C, K+ conductance shares (ORCH-SCI44-20261110), producer og-t. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor. "
+}

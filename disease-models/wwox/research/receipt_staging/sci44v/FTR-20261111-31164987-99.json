@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-11-11T00:09:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-11T00:17:00Z",
+ "event_id": "FTR-20261111-31164987-99",
+ "evidence_basis": [
+  "Abstract, Methods (calcium influx), Results, Discussion in part, Tables 1-2 read; Fig 2 viewed from the open bucket, other figures captions only; docking sections skimmed; supplement not read. Found: 1 mM MgCl2 is in the wash buffer only.",
+  "verbatim_locator | proposition: Ro 25-6981 chicken culture assay conditions | Table 1 legend | \"Calcium influx was induced with NMDA and glycine (200 and 100 μmol/L concentration, respectively)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/ro25_6981_sci44_20261110/verify/queries_verifier.tsv"
+ ],
+ "prior_receipt": "FTR-20261111-31164987-96",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "5a1a88e1ecee9c067e6337616e610bb22b97a8d7bf9b357a6c853ff1a2625d9d",
+ "source_kind": "fulltext_remote",
+ "source_locator": "NCBI efetch (db=pmc, PMC6543015) fetched with plain curl on 2026-11-11; converted to text in the scratchpad; bytes not saved in the repository",
+ "study_id": {
+  "doi": "10.1002/prp2.480",
+  "pmid": "31164987"
+ },
+ "workflow": "SCI44 package B, IT43-Q01 blind verifier V3 (rb-v), adversarial re-analysis of the producer's reading. Prepared as a JSON file for the integrator."
+}

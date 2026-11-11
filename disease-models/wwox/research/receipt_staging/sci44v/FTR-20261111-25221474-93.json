@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-11-11T00:31:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "not_read",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-11T00:44:00Z",
+ "event_id": "FTR-20261111-25221474-93",
+ "evidence_basis": [
+  "Lemak 2014 text read (Methods, Results on firing, Discussion paragraph on pipette ATP) from the PMC open-data bucket; the five figure images exist in the bucket and were not opened.",
+  "verbatim_locator | proposition: tolbutamide effective at 4 mM pipette ATP | Discussion | \"the drug was effective even at high ATP concentrations in the patch electrode (4 mM)\"",
+  "verbatim_locator | proposition: resting potential unaffected | Results (regular firing) | \"RMP of regularly firing neurons was not affected by tolbutamide (n = 12, p = 0.397, t-test)\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/verify/recompute_katp.tsv",
+  "disease-models/wwox/research/drug_repurposing/potassium_shares_sci44_20261110/verify/queries_verifier.tsv"
+ ],
+ "prior_receipt": "FTR-20261111-25221474-96",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "03e85432fb0350ef7890a821da3b21670bd5f9576c0a48b4bd80e03f55aefbc0",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket (plain curl, https://pmc-oa-opendata.s3.amazonaws.com/PMC4145353.1/PMC4145353.1.txt) fetched 2026-11-11; bytes in the scratchpad only, not in the repository",
+ "study_id": {
+  "doi": "10.3389/fncel.2014.00255",
+  "pmid": "25221474"
+ },
+ "workflow": "SCI44 package C, K+ conductance shares (ORCH-SCI44-20261110), blind verifier V4, actor ks-v. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

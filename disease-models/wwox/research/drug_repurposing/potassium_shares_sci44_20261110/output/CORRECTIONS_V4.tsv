@@ -1,0 +1,16 @@
+file	row	correction
+decisive.tsv	C01	'pyramidal-type' is unsupported: RS means glutamatergic regular-spiking and only 26 of the 63 RS cells are pyr
+decisive.tsv	C02	PARTLY: Fig 4G-J plot the glutamatergic group but only as diazoxide-minus-tolbutamide differences
+decisive.tsv	C04	the authors' caveat that the knockout inward current means other conductances were also altered is omitted; th
+decisive.tsv	C06	Lemak 2014 reports resting potential 'not affected by tolbutamide (n 12, p 0.397)'; 'P10-13 for most firing re
+decisive.tsv	C07	Source Data Fig 5f separates the arms (dendritic Rm: A1899 n 4 +8 percent; fluoxetine n 4 +44 percent; Ba2+ 1 
+decisive.tsv	C10	'chronic in-vivo exposure from P16-17' is not supported: the Methods describe bath retigabine 10 uM after DMSO
+decisive.tsv	C12	true only of the sources read: abstracts found by the verifier state Ba2+ or K2P-blocker actions on astrocytic
+decisive.tsv	C13	temperature: see C01 (cohort mean; per-cell range 20.3-34.1 C)
+shares.tsv	SC01	glutamatergic RS cells; only 26 of 63 RS cells pyramidal by morphology; species not stated for the Fig 4 and F
+shares.tsv	SC02	as SC01
+shares.tsv	SC03	'0.43-0.52 by type' should read 0.32 to 0.52 (FS-Pvalb 0.315)
+shares.tsv	SC05	as SC01 (temperature)
+shares.tsv	SC08	Lemak: resting potential not affected by tolbutamide (n 12, p 0.397); 'P10-13 for most firing recordings' not 
+shares.tsv	SC09	arms separable in Source Data Fig 5f (A1899 +8, fluoxetine +44, cocktail +41 percent); pooling of broad-tuft a
+shares.tsv	SC10	acute bath retigabine in the same neurons, not chronic in-vivo exposure
