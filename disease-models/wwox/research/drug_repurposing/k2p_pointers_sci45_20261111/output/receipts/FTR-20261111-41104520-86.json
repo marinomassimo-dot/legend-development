@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-11T07:30Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-11T07:55:00Z",
+ "event_id": "FTR-20261111-41104520-86",
+ "evidence_basis": [
+  "ONO-TR-772 follow-up Tanaka 2025 J Med Chem: text read for ONO-TR-772 statements and ancillary pharmacology; Fig 1 and scheme viewed; SI patch clamp and Tl+ methods read; compound 10 and 11 figures not opened."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/k2p_pointers_sci45_20261111/output/pointers.tsv",
+  "disease-models/wwox/research/drug_repurposing/k2p_pointers_sci45_20261111/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/k2p_pointers_sci45_20261111/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "376b6c0091389456cfb75137f9e2c362726e63700d3f3de04108bf0c4b1207f3",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket text 2026-11-11 plus SI pdf (plain curl); not stored in the repository",
+ "study_id": {
+  "doi": "10.1021/acs.jmedchem.5c02535",
+  "pmid": "41104520"
+ },
+ "workflow": "SCI45 queue package Q1, K2P tool pointers (ORCH-SCI45-20261111), producer og-x. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

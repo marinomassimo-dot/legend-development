@@ -1,0 +1,45 @@
+{
+ "analysis_at": "2026-11-11T06:21Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-11T06:35:22Z",
+ "event_id": "FTR-20261111-30284397-88",
+ "evidence_basis": [
+  "O'Donohoe 2018: Methods (HEK, cell-attached, Tyrode 36-37 C), Results on HEK and type-1 cells, Discussion on A1899/PK-THPP/ML365 read; figures not opened.",
+  "verbatim_locator | proposition: PK-THPP and A1899 inhibition | Results, HEK cell-attached | \"PK-THPP inhibited TASK-3 channel activity by 85.1 ± 2.6% (n = 3; P < 0.001). A1899 inhibited TASK-1 channel activity by 63.4 ± 7.7%\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/ph_sensitivity.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/native_evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/tools.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/tissue_ph.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/figure_notes.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/queries.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/answers.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "0c585f64170505f81d19874b2eca4952055c704a3d04f4a42cddd9c7c261cf3d",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket (plain curl, https://pmc-oa-opendata.s3.amazonaws.com/PMC6170881.1/PMC6170881.1.txt) fetched 2026-11-11; bytes in the scratchpad only, not in the repository",
+ "study_id": {
+  "doi": "10.14814/phy2.13876",
+  "pmid": "30284397"
+ },
+ "workflow": "SCI45 package P1, K2P x pH (ORCH-SCI45-20261111), producer og-u. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-11T07:25Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_present",
+  "figures": "read",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-11T07:42:00Z",
+ "event_id": "FTR-20261111-40365404-85",
+ "evidence_basis": [
+  "ONO-TR-772 Tanaka 2025: full main text; Tables 1-3 and Fig 4 images viewed; SI Tables S2-S3 (p. S4) viewed, SI procedures text, S24 name, S29 NMR drawing, Fig S3 viewed; SI synthesis and PK not read in full."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/k2p_pointers_sci45_20261111/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/k2p_pointers_sci45_20261111/verify/verdicts.tsv",
+  "disease-models/wwox/research/drug_repurposing/k2p_pointers_sci45_20261111/verify/queries_verifier.tsv"
+ ],
+ "prior_receipt": "FTR-20261111-40365404-86",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "0fd006949e81c64d5a3b6f962c2ef45df2a15f7066a7663bbfcc704deb706399",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket text 2026-11-11 (plain curl); bytes in scratch only; not stored in the repository plus SI pdf",
+ "study_id": {
+  "doi": "10.1021/acsmedchemlett.5c00215",
+  "pmid": "40365404"
+ },
+ "workflow": "SCI45 queue package Q1 verification V6 (ORCH-SCI45-20261111), blind verifier ks-y. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

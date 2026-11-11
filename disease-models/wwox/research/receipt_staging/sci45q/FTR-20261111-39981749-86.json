@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-11T07:30Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "read",
+  "tables": "read"
+ },
+ "event_at": "2026-11-11T07:55:00Z",
+ "event_id": "FTR-20261111-39981749-86",
+ "evidence_basis": [
+  "ONO-2920632 Yashiro 2025: full main text; Table 2 and scaffold images viewed; SI text read for assays; SI figures not opened; erratum text read."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/k2p_pointers_sci45_20261111/output/pointers.tsv",
+  "disease-models/wwox/research/drug_repurposing/k2p_pointers_sci45_20261111/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/k2p_pointers_sci45_20261111/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "822941d98b2be97a6d037b211b12a697ffcf28cf1d58f387b3287997b93abecd",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket text 2026-11-11 plus SI pdf (plain curl); not stored in the repository",
+ "study_id": {
+  "doi": "10.1021/acschemneuro.5c00032",
+  "pmid": "39981749"
+ },
+ "workflow": "SCI45 queue package Q1, K2P tool pointers (ORCH-SCI45-20261111), producer og-x. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

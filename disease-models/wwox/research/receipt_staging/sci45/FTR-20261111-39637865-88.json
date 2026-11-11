@@ -1,0 +1,45 @@
+{
+ "analysis_at": "2026-11-11T06:21Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "not_read",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "not_read",
+  "references": "not_read",
+  "results": "not_read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-11T06:35:22Z",
+ "event_id": "FTR-20261111-39637865-88",
+ "evidence_basis": [
+  "Hall 2024: two Introduction/Results passages (pKa statement and the H98 conformation sentence) read by keyword; the structures and the remainder not read.",
+  "verbatim_locator | proposition: TASK-1/3 pKa copied | Introduction | \"TASK-1 and TASK-3 channels have pKa values of ~7.4 and 6.7 respectively\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/ph_sensitivity.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/native_evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/tools.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/tissue_ph.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/figure_notes.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/queries.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/answers.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "3d35ff2aa112511dbd2be631d406db8240a33bd90f7bfed767cbea50cc119882",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket (plain curl, https://pmc-oa-opendata.s3.amazonaws.com/PMC7617898.1/PMC7617898.1.txt) fetched 2026-11-11; bytes in the scratchpad only, not in the repository",
+ "study_id": {
+  "doi": "10.1016/j.str.2024.11.005",
+  "pmid": "39637865"
+ },
+ "workflow": "SCI45 package P1, K2P x pH (ORCH-SCI45-20261111), producer og-u. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

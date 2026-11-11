@@ -1,0 +1,45 @@
+{
+ "analysis_at": "2026-11-11T06:21Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "not_read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-11T06:35:22Z",
+ "event_id": "FTR-20261111-19703964-88",
+ "evidence_basis": [
+  "Ashmole 2009: Methods lines (cDNA, temperature), the Fig 6 pH paragraph and legend read; the voltage-gating Results not read; images not opened.",
+  "verbatim_locator | proposition: TASK-3 pKa 6.46 | Fig 6 legend | \"pKa was 6.46 for wild-type and 6.42 for G117A at the voltage illustrated (-40 mV).\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/ph_sensitivity.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/native_evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/tools.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/tissue_ph.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/figure_notes.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/queries.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/answers.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "8368afe3a5a2cb705355746acd46697713da8f76d04b25353cf532d3c8470107",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket (plain curl, https://pmc-oa-opendata.s3.amazonaws.com/PMC2770146.2/PMC2770146.2.txt) fetched 2026-11-11; bytes in the scratchpad only, not in the repository",
+ "study_id": {
+  "doi": "10.1113/jphysiol.2009.175430",
+  "pmid": "19703964"
+ },
+ "workflow": "SCI45 package P1, K2P x pH (ORCH-SCI45-20261111), producer og-u. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

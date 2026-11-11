@@ -1,0 +1,45 @@
+{
+ "analysis_at": "2026-11-11T06:21Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "not_read",
+  "limitations": "not_present",
+  "methods": "read",
+  "references": "not_read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_present"
+ },
+ "event_at": "2026-11-11T06:35:22Z",
+ "event_id": "FTR-20261111-21822218-88",
+ "evidence_basis": [
+  "Piechotta 2011: pH-gating Results paragraphs, extracellular-pH gate paragraph, Methods electrophysiology lines and Discussion pH lines read; figures not opened; QA-blocker results not read.",
+  "verbatim_locator | proposition: TREK-1 pHi EC50 5.9 Hill 2.3 | Results, bundle-crossing gate | \"TREK-1 channels are completely closed at pH 8 and maximally activated at a pH of 5 with EC50 of 5.9±0.1\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/ph_sensitivity.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/native_evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/tools.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/tissue_ph.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/decisive.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/figure_notes.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/queries.tsv",
+  "disease-models/wwox/research/drug_repurposing/ph_k2p_sci45_20261111/output/answers.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "d29a7f8bae1172dd992767fb9a66d1898da609b2193495a2402ebc782f27c3a1",
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC open-data bucket (plain curl, https://pmc-oa-opendata.s3.amazonaws.com/PMC3181484.1/PMC3181484.1.txt) fetched 2026-11-11; bytes in the scratchpad only, not in the repository",
+ "study_id": {
+  "doi": "10.1038/emboj.2011.268",
+  "pmid": "21822218"
+ },
+ "workflow": "SCI45 package P1, K2P x pH (ORCH-SCI45-20261111), producer og-u. Prepared as a JSON file for the integrator; the ledger was not written by the preparing actor."
+}

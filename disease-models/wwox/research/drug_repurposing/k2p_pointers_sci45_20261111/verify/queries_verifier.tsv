@@ -1,0 +1,15 @@
+query_id	database_or_route	string_or_url	run_at_utc	hits	what_was_done
+VQ01	PubMed MCP convert_article_ids	PMIDs 40365404, 39981749, 40635742, 31001961, 41104520	2026-11-11	PMC ids for 4 of 5	used PMC open-data bucket for the four, publisher route for 31001961
+VQ02	PMC open-data bucket, plain curl	PMC12067145, PMC11887051, PMC12237960, PMC12621189 (text, SI pdf, jpg); PMC3181481, PMC3411076, PMC7608817, PMC6532698, PMC11711774, PMC5376757 (text)	2026-11-11	all 200	read in scratch; Table 1-3, Fig 4, Table 2, Fig 7, Fig 1 (follow-up), Table 1 (2012) viewed
+VQ03	doi.org then publisher, plain curl	10.33594/000000083 article and supplement PDF	2026-11-11	200, 200	read in scratch (same route the producer used; not on its unreachable list)
+VQ04	PubMed MCP search	TREK-1 extracellular proton inhibition Hill coefficient pH50	2026-11-11	0	string translated to an AND of all terms; no hit
+VQ05	PubMed MCP search	K2P2.1 acid-sensitivity pH dependence current physiological temperature	2026-11-11	0	no hit
+VQ06	PubMed MCP search	ONO-TR-772 OR VU6018042 OR ONO-2920632 OR VU6011887 OR AVE1231 pH	2026-11-11	11	translation dropped the ONO-TR-772 terms; titles show only the two ONO papers, the follow-up, the AVE1231 paper and unrelated TASK-1 items; no pH-dependence study of the compounds
+VQ07	PubMed MCP search	ML365 TASK-1 inhibitor pH dependence	2026-11-11	3	abstracts read via metadata (IL-10 hippocampal neurons, spinal pain, human islets); none a pH-dependence study of ML365
+VQ08	PubMed MCP search	KCNK2 acidosis hill slope AND TREK-1[Title/Abstract]	2026-11-11	0	no hit
+VQ09	PubMed MCP search	TREK-1 AND (pH OR acidosis OR protons) AND (37 degrees OR physiological temperature OR 35 degrees)	2026-11-11	22 (20 shown)	titles not screened beyond identifiers; noisy translation; no candidate opened from this list
+VQ10	Europe PMC REST search (plain curl)	(TREK-1 OR K2P2.1 OR KCNK2) AND (pHo OR extracellular pH OR acidification) AND Hill	2026-11-11	141	25 titles screened; opened PMC3181481, PMC3411076, PMC7608817, PMC5376757
+VQ11	Europe PMC REST search (plain curl)	(TREK-1 OR K2P2.1) AND (pHo OR extracellular pH) AND (temperature OR 37 C OR physiological temperature) AND HAS_FT:Y	2026-11-11	245	25 titles screened; opened PMC6532698, PMC11711774 text (no Hill, no slope; room temperature 22-23 C in PMC6532698)
+VQ12	Europe PMC REST search (plain curl)	title TREK-1 with pH, proton or acid	2026-11-11	13	titles screened; 31117121 opened (TM cells, room temperature, no Hill)
+VQ13	Europe PMC REST search (plain curl)	ONO-TR-772 OR VU6018042 OR ONO-2920632 OR VU6011887 OR ML365 OR AVE1231 OR A293 with pH OR acidosis OR acidic	2026-11-11	396	25 titles screened; no pH-dependence study of any of these compounds
+VQ14	Europe PMC REST search (plain curl)	first TREK-1 pH query with Hill/Hill slope phrase	2026-11-11	service error 503	one repeat in a different phrasing (VQ10); not retried further
