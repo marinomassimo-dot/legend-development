@@ -17,7 +17,7 @@ def wdir(rid, sym):
 def e1(rid, r):
     parts = (r["action"] or "").split("/"); act = parts[-1] if parts[-1].strip().lower() not in ("none", "") else parts[0]; w = wdir(rid, r["target_symbol"].split("|")[0].strip().upper())
     return (w == "down" and UP.search(act) and not DOWN.search(act)) or (w == "up" and DOWN.search(act) and not UP.search(act))
-H = ["case", "C1_units", "C2_units", "C2_units_with_E1", "C3_candidate_units", "C3_of_which_drug_role", "C3_non_drug_role_shown_as_candidate", "C4_pointers_not_in_C2", "C4_pointers_approved", "C4_pointers_clinical", "C4_pointers_tool", "pointers_shown_as_favourable"]
+H = ["case", "C1_units", "C2_units", "C2_units_with_E1", "C3_candidate_units", "C3_of_which_drug_role", "C3_non_drug_role_shown_as_candidate", "C3_unclassified", "C4_pointers_not_in_C2", "C4_pointers_approved", "C4_pointers_clinical", "C4_pointers_tool", "pointers_shown_as_favourable"]
 out = []
 for rid, p in SRC.items():
     R = [r for r in tsv(p) if r["relation_id"] == rid and r["labelled_form"] != "yes"]
@@ -26,11 +26,12 @@ for rid, p in SRC.items():
     for r in R: bymol[r["molecule"]].append(r)
     e1u = sum(1 for m, rs in bymol.items() if all(e1(rid, r) for r in rs))
     cand = {m for m, rs in bymol.items() if any(r["qualification"] == "CANDIDATE" for r in rs)}
-    drug = {m for m in cand if roles.get((rid, m), {}).get("role", "candidate") in ("candidate", "probe")}
-    nondrug_shown = len(cand) - len(drug) if False else sum(1 for m in cand if roles.get((rid, m), {}).get("role") in ("control_or_reagent", "physiological_intervention", "unqualified_entity"))
+    drug = {m for m in cand if roles.get((rid, m), {}).get("role", "unqualified_entity") in ("candidate", "probe")}
+    nondrug_shown = len(cand) - len(drug) if False else sum(1 for m in cand if roles.get((rid, m), {}).get("role") in ("control_or_reagent", "physiological_intervention"))
+    unclassified = sum(1 for m in cand if roles.get((rid, m), {}).get("role", "unqualified_entity") == "unqualified_entity")   # HE45: no rule classified it; not a drug candidate, not a non-drug either
     pt = [x for x in pointers if x["relation_id"] == rid and x["in_mechanism_path"] == "no"]
     st = lambda s: sum(1 for x in pt if x["catalogue_status"] == s)
-    out.append([rid, len(c1), len(c2), e1u, len(cand), len(drug), nondrug_shown, len(pt), st("approved_any_source"), st("clinical_candidate"), st("tool_probe"), 0])
+    out.append([rid, len(c1), len(c2), e1u, len(cand), len(drug), nondrug_shown, unclassified, len(pt), st("approved_any_source"), st("clinical_candidate"), st("tool_probe"), 0])
 with open(HERE / "eval_results_it44.tsv", "w", newline="") as f:
     w = csv.writer(f, delimiter="\t", lineterminator="\n"); w.writerow(H); w.writerows(out)
 print("\t".join(H)); [print("\t".join(map(str, o))) for o in out]
