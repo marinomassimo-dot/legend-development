@@ -18,8 +18,8 @@ class Ladder(unittest.TestCase):
             sit.setdefault(r["situation"], set()).add(r["next_verification"])
         for s in ("A_engine_candidate", "B_reached_by_activity_only", "C_probe_or_reagent"):
             self.assertIn(s, sit)
-        self.assertEqual({"read the primary documents (activity only)"}, sit["B_reached_by_activity_only"])
-        self.assertEqual({"qualify as a tool: identity, selectivity, system"}, sit["C_probe_or_reagent"])
+        self.assertIn("read the primary documents (activity only)", sit["B_reached_by_activity_only"])
+        self.assertIn("qualify as a tool: identity, selectivity, system", sit["C_probe_or_reagent"])
         # the fourth situation is a hypothesis, not a molecule: it lives in the conditional proposals with its decision measure
         cp = R(DR / "generation_it40_20261109/conditional_proposals_it40.tsv")
         self.assertTrue(any(r["nomination"] == "ABSTAIN" and r["decision_measure"] for r in cp))
@@ -48,6 +48,14 @@ class Ladder(unittest.TestCase):
         g = {r["name"]: r["molecule_group"] for r in self.rows if r["relation_id"] == "S7" and "tiagabine" in r["name"].lower()}
         self.assertGreaterEqual(len(g), 3)
         self.assertEqual({"tiagabine"}, set(g.values()))
+
+    def test_selectivity_panel_rows_are_not_read_as_target_measurements(self):
+        """S7: four donated-probe rows on 'ABAT' come from a GPCR selectivity panel (EUbOPEN document CHEMBL5465560); the blind reader found it, the ladder now flags it"""
+        rows = {r["name"]: r for r in self.rows if r["relation_id"] == "S7"}
+        for n in ("BAY-3827", "BI 2545", "BI-605906", "IPP/CNRS-A017"):
+            self.assertIn("off-target panel", rows[n]["next_verification"], n)
+        self.assertNotIn("off-target panel", rows["VANILLIN"]["next_verification"])
+        self.assertNotIn("off-target panel", rows["TIAGABINE HYDROCHLORIDE"]["next_verification"])
 
     def test_the_hcn1_probe_pointer_is_a_probe_with_a_context_sentence(self):
         r = [x for x in self.rows if "CHEMBL6195028" in x["molecule"]]

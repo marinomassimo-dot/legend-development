@@ -47,12 +47,34 @@ def group_key(name):
     return re.sub(r"[^a-z0-9]+", " ", n).strip()
 
 
+PANEL = re.compile(r"selectivity (interaction|assay)|\bpanel\b|\bPDSP\b|\bscreen(ed|ing)?\b", re.I)
+
+
+def assay_descriptions():
+    """(relation, parent chembl id) -> assay descriptions of the activity rows kept in a case folder (the IT44 activity tables are not committed: only the cases with a committed row file can be checked)"""
+    out = {}
+    files = [(DR / "generation_it45_20261111/s10_dose/activity_rows.tsv", None), (DR / "generation_it45_20261111/s2_dose/activity_rows.tsv", None), (HERE / "s7_case/s7_activity_rows.tsv", "S7")]
+    for f, fixed in files:
+        if not f.exists():
+            continue
+        for r in R(f):
+            rid = fixed or r.get("relation_id")
+            mol = r.get("parent_chembl_id") or r.get("molecule_chembl_id")
+            out.setdefault((rid, mol), []).append(r.get("assay_description", ""))
+    return out
+
+
+def panel_only(descs):
+    return bool(descs) and all(PANEL.search(d or "") for d in descs)
+
+
 def mentions(names, txt):
     """substring first (fast), word boundary only on a hit"""
     return sum(1 for n in names if n and n in txt and re.search(r"\b" + re.escape(n) + r"\b", txt))
 
 
 def build():
+    ad = assay_descriptions()
     rels = relation_rows(); txt = " ".join(open(f, encoding="utf-8").read().lower() for f in DOWN)
     ptr = {(r["relation_id"], r["parent_chembl_id"]): r for r in R(DR / "generation_it44_20261110/pointers_it44.tsv")}
     ctx = {}
@@ -96,11 +118,12 @@ def build():
                 ctx[rid] = cc.context_for([s for s in re.split(r"[;,]", rel["target_symbols"]) if s], rid)[1]
             nm = p.get("catalogue_name") or p.get("name") or p["parent_chembl_id"]
             sit = "C_probe_or_reagent" if p["catalogue_status"] == "tool_probe" else "B_reached_by_activity_only"
+            pan = panel_only(ad.get((rid, p["parent_chembl_id"])))
             hits = mentions({nm.lower(), p["parent_chembl_id"].lower()}, txt)
             out.append(dict(relation_id=rid, molecule="CAT:" + p["parent_chembl_id"], name=nm, molecule_group=group_key(nm), situation=sit, reached_by="activity read", identity=p["catalogue_status"],
-                            action="activity only, direction not read (ACTIVITY_ONLY)", transfer_to_context=ctx.get(rid, "no target symbols for this relation"),
+                            action="activity only, direction not read (ACTIVITY_ONLY)" + ("; every committed row is a selectivity-panel or screening row" if pan else ""), transfer_to_context=ctx.get(rid, "no target symbols for this relation"),
                             possible_benefit="IPOTESI: " + (rel.get("hypothesised_benefit") or "not stated"),
-                            next_verification="qualify as a tool: identity, selectivity, system" if sit == "C_probe_or_reagent" else "read the primary documents (activity only)",
+                            next_verification=("likely an off-target panel entry, not a measurement on this target: confirm the target mapping before any use" if pan else "qualify as a tool: identity, selectivity, system" if sit == "C_probe_or_reagent" else "read the primary documents (activity only)"),
                             role="(no role row)", role_basis="activity pointer not in the role table", engine_verdicts="", downstream_mentions=hits))
     return out
 
