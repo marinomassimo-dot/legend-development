@@ -1564,7 +1564,7 @@
    "need_direction": "uncertain",
    "need_id": "NEED-PDH-PYRUVATE-AXIS",
    "need_short": "Pyruvate entry into the TCA cycle",
-   "next_test": "PDH activity and flux in a WWOX-deficient human neural cell against an isogenic control, with the glycolytic readout measured in the same material. [IT36] ECAR is not a lactate readout without an oxygen correction; measure lactate and pyruvate directly with redox state. [IT43] The isogenic pair and the oxygen series of INV-19 can carry this measurement: amount and phosphorylation of the step at all three sites, activity before and after dephosphorylation, and the four kinase transcripts, read next to BNIP3 from the same lysates. Reading (IPOTESI): BNIP3, kinase and phosphorylation all up supports a HIF-linked restraint and keeps the kinase lever conditional on it; BNIP3 up with the step unrestrained leaves the lever down while INV-19 stands; neither up points to the culture or oxygen condition. The compound arms follow only after a restraint is measured. [SCI44] Read the step on marker-resolved or sorted material; the dominant kinase RNA differs by class and species (mouse neurons PDK2; human neurons PDK3; astrocytes PDK4 in both species; human oligodendrocytes PDK4): include PDK2-4 transcript and protein per class, a genetic knockdown of the dominant isoform before any compound, and the scaffold condition of any lipoamide-site tool. A restraint measured in one class does not transfer to another.",
+   "next_test": "PDH activity and flux in a WWOX-deficient human neural cell against an isogenic control, with the glycolytic readout measured in the same material. [IT36] ECAR is not a lactate readout without an oxygen correction; measure lactate and pyruvate directly with redox state. [IT43] The isogenic pair and the oxygen series of INV-19 can carry this measurement: amount and phosphorylation of the step at all three sites, activity before and after dephosphorylation, and the four kinase transcripts, read next to BNIP3 from the same lysates. Reading (IPOTESI): BNIP3, kinase and phosphorylation all up supports a HIF-linked restraint and keeps the kinase lever conditional on it; BNIP3 up with the step unrestrained leaves the lever down while INV-19 stands; neither up points to the culture or oxygen condition. The compound arms follow only after a restraint is measured. [SCI44] Read the step on marker-resolved or sorted material; the dominant kinase RNA differs by class and species (mouse neurons PDK2; human neurons PDK3; astrocytes PDK4 in both species; human oligodendrocytes PDK4): include PDK2-4 transcript and protein per class, a genetic knockdown of the dominant isoform before any compound, and the scaffold condition of any tool that acts through the enzyme-complex scaffold. A restraint measured in one class does not transfer to another.",
    "novelty_perimeter": "Queried: this need's ten observation rows and their readout levels; the dichloroacetate and HIF-axis units; the search layer over the eight axis targets (209 associations, 180 families, none direction-coherent because the need direction is unresolved).",
    "objective": "partial",
    "origin_class": "known_in_wwox",
@@ -6087,7 +6087,7 @@
     "source_artefacts.tsv": "efd24d2cf8eb3fdb",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
-   "receipt_ledger_lines": 1599
+   "receipt_ledger_lines": 1692
   },
   "inventory": {
    "all_families_by_access_category": {
@@ -10530,7 +10530,7 @@
    "inputs": {
     "T1_cards": "244d2932c63df1b0",
     "T2_pertinence": "1959a04e90dbf178",
-    "T3_receipts": "d76ea98d9101caf9",
+    "T3_receipts": "8cac08a9bf29874b",
     "T4_needs": "a3face7aa0d2e275",
     "T5_pharmacology": "07a3719a2976ec86",
     "T6_identity": "b95d3d12430d688c"
@@ -10698,7 +10698,7 @@
     "42035940",
     "42909904"
    ],
-   "receipts_on_cited_pmids": 39,
+   "receipts_on_cited_pmids": 43,
    "research_objective": "useful_partial_benefit",
    "tracks": [
     "A"
@@ -10928,7 +10928,7 @@
    "inputs": {
     "T1_cards": "5e55e286fa1f3808",
     "T2_pertinence": "4f588d870d868008",
-    "T3_receipts": "5ab297f777c2dcdb",
+    "T3_receipts": "a034efc054758506",
     "T4_needs": "364bca1d317075b9",
     "T5_pharmacology": "dd38ed70d7c73b56",
     "T6_identity": "5947102b41b2b474"
@@ -11135,7 +11135,7 @@
     "42909904",
     "625308"
    ],
-   "receipts_on_cited_pmids": 67,
+   "receipts_on_cited_pmids": 73,
    "research_objective": "useful_partial_benefit",
    "tracks": [
     "A"

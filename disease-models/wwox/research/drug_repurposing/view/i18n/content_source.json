@@ -91,6 +91,10 @@
   "src": "it",
   "text": "solo se esistono archi WWOX curati che raggiungono i bersagli dei composti"
  },
+ "0d10657f347d": {
+  "src": "en",
+  "text": "PDH activity and flux in a WWOX-deficient human neural cell against an isogenic control, with the glycolytic readout measured in the same material. [IT36] ECAR is not a lactate readout without an oxygen correction; measure lactate and pyruvate directly with redox state. [IT43] The isogenic pair and the oxygen series of INV-19 can carry this measurement: amount and phosphorylation of the step at all three sites, activity before and after dephosphorylation, and the four kinase transcripts, read next to BNIP3 from the same lysates. Reading (IPOTESI): BNIP3, kinase and phosphorylation all up supports a HIF-linked restraint and keeps the kinase lever conditional on it; BNIP3 up with the step unrestrained leaves the lever down while INV-19 stands; neither up points to the culture or oxygen condition. The compound arms follow only after a restraint is measured. [SCI44] Read the step on marker-resolved or sorted material; the dominant kinase RNA differs by class and species (mouse neurons PDK2; human neurons PDK3; astrocytes PDK4 in both species; human oligodendrocytes PDK4): include PDK2-4 transcript and protein per class, a genetic knockdown of the dominant isoform before any compound, and the scaffold condition of any tool that acts through the enzyme-complex scaffold. A restraint measured in one class does not transfer to another."
+ },
  "0d49c490f477": {
   "src": "en",
   "text": "WWOX-system: a glycolytic signature; the kinase transcript lower in the organoid; no difference in the one human PDH activity measurement, which is a non-neural fibroblast pool with partial WWOX depletion (n not stated) and says nothing about neurons. The kinase-to-PDH link has no WWOX observation. [IT39] A ketogenic-diet response is reported in 3 of 5 WOREE individuals (lactate 2.4 to 3.3 mmol/L in one individual); the Pdk1 transcript and serum-lactate datum in the Wwox-null MEF and mouse paper is non-neural and measures no PDH."
@@ -126,10 +130,6 @@
  "12a627fd20ce": {
   "src": "it",
   "text": "Capire se l'aggiunta del gene giova solo se data nei primi giorni di vita (prevenzione) o anche dopo la comparsa del fenotipo, e se la dose intermedia distingue soglia da gradiente."
- },
- "1307db80f762": {
-  "src": "en",
-  "text": "PDH activity and flux in a WWOX-deficient human neural cell against an isogenic control, with the glycolytic readout measured in the same material. [IT36] ECAR is not a lactate readout without an oxygen correction; measure lactate and pyruvate directly with redox state. [IT43] The isogenic pair and the oxygen series of INV-19 can carry this measurement: amount and phosphorylation of the step at all three sites, activity before and after dephosphorylation, and the four kinase transcripts, read next to BNIP3 from the same lysates. Reading (IPOTESI): BNIP3, kinase and phosphorylation all up supports a HIF-linked restraint and keeps the kinase lever conditional on it; BNIP3 up with the step unrestrained leaves the lever down while INV-19 stands; neither up points to the culture or oxygen condition. The compound arms follow only after a restraint is measured. [SCI44] Read the step on marker-resolved or sorted material; the dominant kinase RNA differs by class and species (mouse neurons PDK2; human neurons PDK3; astrocytes PDK4 in both species; human oligodendrocytes PDK4): include PDK2-4 transcript and protein per class, a genetic knockdown of the dominant isoform before any compound, and the scaffold condition of any lipoamide-site tool. A restraint measured in one class does not transfer to another."
  },
  "138c33d59c7f": {
   "src": "en",

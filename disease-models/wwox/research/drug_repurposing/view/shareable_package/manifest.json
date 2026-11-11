@@ -18,7 +18,7 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 13039,
+    "values": 13095,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -193,7 +193,7 @@
    },
    "^\\.ui\\.": {
     "class": "UI",
-    "values": 1462,
+    "values": 1463,
     "why": "Italian orientation text (builder data UI_IT and siblings)"
    }
   },
@@ -206,7 +206,7 @@
    "PMID": 153
   },
   "links": {
-   "distinct_hrefs": 190,
+   "distinct_hrefs": 203,
    "external_public": 89,
    "hosts": [
     "civicdb.org",
@@ -220,12 +220,12 @@
     "www.wikidata.org",
     "www.wwox.org"
    ],
-   "internal_anchors": 96
+   "internal_anchors": 109
   },
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 3564,
+    "forbidden-name": 3572,
     "forbidden-wording": 21
    },
    "co_attested_wording": [
@@ -471,11 +471,11 @@
   "BIBLIO": 2696,
   "COUNT": 12405,
   "ID": 4861,
-  "OWN": 89879,
+  "OWN": 89935,
   "ROWNAME": 2408,
   "SRC_A": 189,
   "SRC_META": 261,
-  "UI": 1462
+  "UI": 1463
  },
  "embedded_sources": [
   {
@@ -560,24 +560,24 @@
    "sha256": "1aaeafb9a68df269e135be5c0ef90fa37ee5deeaf7f6a28dfd9c8a37ada82f38"
   },
   "de.html": {
-   "bytes": 5073075,
-   "sha256": "da549ac50480f0581867f6e7236cc2b9bf83223d115a939b5127f6eb64915b4c"
+   "bytes": 5096499,
+   "sha256": "98ee7f75a6c9a8fd5c96ff1d018b56bee1fd59ac185347dec9e0e903061c580a"
   },
   "es.html": {
-   "bytes": 5059391,
-   "sha256": "50f4ce7aeff514fdda5ecb884b83c0e32f039963d0cc71d68402438ac98da681"
+   "bytes": 5082846,
+   "sha256": "194dacf852ee6a88a166f95671dd2da42ce9de63f824b385f44e05dae4468e91"
   },
   "fr.html": {
-   "bytes": 5087708,
-   "sha256": "d1d44ec5d42451ac3cfc286aedf0d2633f1b686d087d3507e75bea8081a1009a"
+   "bytes": 5112057,
+   "sha256": "824e882166ff90e3036759d9b1860f2e2dc236bcdf9a91095ce9aa682c54a040"
   },
   "index.html": {
-   "bytes": 4980086,
-   "sha256": "aff1152e363b8746b3bd1411bec5d1c72b122cf3517de20cd9092a62bb7ad47c"
+   "bytes": 5001802,
+   "sha256": "5f24a306743de3bdd20caee95a28f4e4bc2bbf39426dfb9fedbc9d9510d241c8"
   },
   "it.html": {
-   "bytes": 5033594,
-   "sha256": "637174bebdcca4f52aa92858c2d4c54af5b99ed522202862ffec562803f3f43e"
+   "bytes": 5056900,
+   "sha256": "2ff31a63eb4920322b220bd632ed2517a02c5181e742de4805af13ef376edb80"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
