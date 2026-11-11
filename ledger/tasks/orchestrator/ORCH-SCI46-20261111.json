@@ -1,0 +1,82 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-SCI46-20261111",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Operator mandate SCI46 2026-11-11 (about ten hours): NRF2/KEAP1, from a promising pointer to an interpretable pharmacological comparison. One central package to verification and delivery (producer, blind verifier, corrections, tables in the engine's shape, consumer_delta), then one selective queue item. Question of IT45 brief B1: which comparison of interventions on KEAP1/NRF2 separates an NRF2-dependent effect from an alternative one, and which pharmacological hypotheses stay useful for WWOX.",
+ "START_UTC": "2026-11-11T22:00:00Z",
+ "BASELINE": "main 142f6c5f (IT45 COMPLETE; SCI45 P1/Q1/N1 consumed in IT45: 54 receipts recorded, ledger 1,787, IT45-Q05..Q08). Worktree .claude/worktrees/sci46, branch task/sci46. IT46 registered (legend-development-4e); asks for comparison rows in the engine shape plus consumer_delta and the landing SHA.",
+ "CURRENT_PACKAGE": {
+  "id": "P1-central",
+  "state": "landing",
+  "delegate_active": "none",
+  "updated": "2026-11-11"
+ },
+ "RESUME": "S0/S1 and briefs on task/sci46; producer P then blind verifier V8; corrections rechecked; engine-shape tables by script; consumer_delta; gate/LINT/receipts/growth, battery on a fresh clone, task_close, safe_push, message IT46. Then one queue item.",
+ "DECISIONS_TAKEN": [
+  "2026-11-11 Winkel 2015 full text: Europe PMC HTTP 500 on two attempts, tool empty; not retried by another route; abstract-level row D20 only.",
+  "2026-11-11 verifier's SMILES line removed from verify/audit.md (the release gate read its brackets as a link)."
+ ],
+ "DELEGATIONS": [
+  "P producer og-y: asked sonnet/medium; read back medium x84; 84 turns; output 104,391; cache read 13,384,762; 13 sources; staged receipts -79 (12)",
+  "V8 verifier ks-y: asked sonnet/high; read back high x67; 67 turns; output 76,570; cache read 10,320,024; 15 staged receipts -78; 37+29+12+19 rows checked"
+ ],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "AUTHORISED_QUEUE_20261111C": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_A1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "S0/S1: frame, competing explanations, priors fixed before any search",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "keap1_nrf2_sci46_20261111/S0_S1_before_search.md; perimeter sent to IT46 (legend-development-4e)"
+    },
+    {
+     "step": "Producer P: identity and source of the non-covalent binder, knockdown arm, comparators, neural transfer",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "producer og-y: 13 sources, 12 staged receipts (-79) validated; identity confirmed (ChEMBL synonym KI-696, InChIKey match to PDB L6I and Wu); Davies siRNA arms categorical [CH]"
+    },
+    {
+     "step": "Blind verifier V8 and recheck of substantive corrections",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "V8 verifier ks-y: asked sonnet/high, read back high x67, 67 turns, output 76,570, cache read 10,320,024; 15 staged receipts (-78); substantive corrections (D17 Winkel, D18 Zhu, D09 wording, D08 baselines, D10, D11, D15) applied in output/apply_v8_corrections.py and rechecked by the Orchestrator in the texts"
+    },
+    {
+     "step": "README, hypotheses, outcome matrix, engine-shape tables, consumer_delta, cost note",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "README, hypotheses NH1-NH4, outcome_matrix O1-O10, experiment_ladder, engine/ (comparison, new_measurements, decisive, id_map, assay_rows, derived_roles_check), consumer_delta (12 rows), COST_NOTE"
+    }
+   ]
+  },
+  "OBJ_A2": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Gate, LINT, receipts, growth, battery on a fresh clone, task_close, safe_push, message IT46 with the landing SHA",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_A3": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "One selective queue item chosen by use after delivery (S8)",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  }
+ }
+}

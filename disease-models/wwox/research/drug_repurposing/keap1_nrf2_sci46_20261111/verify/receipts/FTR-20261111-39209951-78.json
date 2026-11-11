@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-11T22:05:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "supplementary": "read"
+ },
+ "event_at": "2026-11-11T22:23:00Z",
+ "event_id": "FTR-20261111-39209951-78",
+ "evidence_basis": [
+  "verbatim_locator | proposition: authors state independence could not be excluded because of apparent insufficient knockdown | Discussion | \"Due to an apparent insufficient Nrf2-knockdown, we were not capable to definitely exclude the existence of an alternative protection mechanism independent of Nrf2 activation.\"",
+  "verbatim_locator | proposition: the Results call the same knockdown successful | Results last paragraph | \"Treatment with Nrf2 siRNA successfully downregulated the transcriptional levels of\"",
+  "verbatim_locator | proposition: enantiomers from Orion Pharma, no structure given | Methods Pharmacological treatments | \"The enantiomers Ki 696–1 and Ki 696–2, and the compound HPP-D were kindly provided by Orion Pharma\"",
+  "verbatim_locator | proposition: Costa links the name Ki 696 to Davies by citation only | Introduction | \"non-electrophilic Nrf2-activators (e.g. Ki 696), which weaken KEAP1-Nrf2 binding\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/keap1_nrf2_sci46_20261111/verify/audit.md"
+ ],
+ "prior_receipt": "FTR-20261111-39209951-79",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC11362529 via the PubMed PMC full-text tool and Europe PMC fullTextXML (reference list) and supplementaryFiles zip (plain curl, scratch only); Fig 1 and Fig 6 viewed; Supplementary Fig S4 viewed (image4 of the docx) and all supplementary captions read; S1-S3 and S5 images not examined",
+ "study_id": {
+  "doi": "10.1038/s41598-024-70837-1",
+  "pmid": "39209951"
+ },
+ "workflow": "Blind verifier V8 (ks-y): Fig 6 and Supp S4 re-read; own figure values in recompute_figures.tsv. Staged for the integrator; the ledger was not written by the preparing actor."
+}

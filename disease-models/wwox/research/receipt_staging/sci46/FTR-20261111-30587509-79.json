@@ -1,0 +1,35 @@
+{
+ "analysis_at": "2026-11-11T22:00:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-11T22:11:00Z",
+ "event_id": "FTR-20261111-30587509-79",
+ "evidence_basis": [
+  "verbatim_locator | proposition: Abstract only; text not reached | Abstract | \"we identified 24 novel proteins that were modified by DMF in neurons and astrocytes\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/keap1_nrf2_sci46_20261111/output/decisive.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "Europe PMC search record abstract; PMC body not retrievable by efetch",
+ "study_id": {
+  "doi": "10.1074/mcp.RA118.000922",
+  "pmid": "30587509"
+ },
+ "workflow": "SCI46 producer P (og-y), ORCH-SCI46-20261111: DMF-modified proteins in neurons and astrocytes; abstract only. Staged for the integrator; the ledger was not written by the preparing actor."
+}

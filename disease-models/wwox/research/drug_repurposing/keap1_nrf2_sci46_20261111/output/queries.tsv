@@ -1,0 +1,17 @@
+query_id	database_or_route	string_or_url	run_at_utc	hits	what_was_done
+Q01	ChEMBL REST	molecule/CHEMBL3819587.json; compound_record by molecule; document/CHEMBL3817762.json; activity by document (limit 1000, 115 rows); assay by document (97 assays)	2026-11-11T21:53:04Z	115 activities, 97 lead rows	all fields printed for lead rows; 18 rows of comparators (bardoxolone methyl, acetylcysteine, buthionine sulfoximine, 4 other compounds' ITC/FP) read
+Q02	PubMed full-text tool	PMC id 27031670 (the tool accepts only PMC ids; PMID given)	2026-11-11T21:5x:00Z (time not logged)	0 articles	recorded unreachable; not retried by another route
+Q03	RCSB PDB REST and PubChem PUG REST	entry/5FNU; chemcomp/L6I; compound/cid/118170767/property	2026-11-11T21:5x:00Z (time not logged)	1 each	InChIKey compared with ChEMBL
+Q04	PubMed search tool	KI-696 KEAP1	2026-11-11T21:54:00Z (approx)	1 (42720473)	abstract read through the metadata tool
+Q05	Europe PMC REST	"KI-696"	2026-11-11T21:54:45Z	48	titles scanned; neural-related hits opened: 39209951; others not opened
+Q06	Europe PMC REST	"KI696"	2026-11-11T21:54:45Z	93	titles scanned
+Q07	Europe PMC REST	(KEAP1 AND "Kelch" AND "monoacid")	2026-11-11T21:54:45Z	9	titles scanned
+Q08	Europe PMC REST	TITLE_ABS dimethyl/monomethyl fumarate AND Nrf2 knockout/null/knockdown/siRNA/deficient AND astrocyte/neuron/microglia/oligodendrocyte	2026-11-11T21:59:14Z	103 (25 shown)	titles scanned; Linker 2011 found by title search in PubMed; not opened further
+Q09	Europe PMC REST	TITLE_ABS fumarate AND (HCAR2 OR GPR109A OR NF-kB OR GAPDH OR Nrf2-independent) AND neural/myeloid terms	2026-11-11T21:59:14Z	24	Parodi 2015 and 30587509 chosen
+Q10	Europe PMC REST	TITLE_ABS ML385 AND neuron/astrocyte/microglia	2026-11-11T21:59:14Z	210 (15 shown)	titles scanned; none opened
+Q11	Europe PMC REST	TITLE_ABS ML385 AND KEAP1 AND NSCLC	2026-11-11T21:59:14Z	2	27552339 chosen
+Q12	Europe PMC REST	TITLE_ABS Keap1-Nrf2 PPI inhibitor AND Nrf2 loss terms AND neural/primary terms	2026-11-11T22:00:23Z	12	candidates 37385075 and 40174476 opened by keyword scan
+Q13	Europe PMC REST	TITLE_ABS Keap1-Nrf2 inhibitor or Kelch AND Nrf2 knockout mice/siRNA/cells AND brain/neuron terms	2026-11-11T22:00:23Z	5	titles scanned; none opened
+Q14	PubMed search tool	dimethyl fumarate Nrf2 knockout astrocytes OR neurons OR microglia neuroprotection	2026-11-11T21:5x:00Z (time not logged)	1,064,097	query defect (OR scope); discarded; replaced by Q08
+Q15	PubMed search tool	dimethyl fumarate[Title/Abstract] AND Nrf2 loss terms AND neural terms	2026-11-11T21:59:00Z (approx)	144 (15 shown)	PMIDs only; replaced by Q08 with titles
+Q16	Europe PMC REST supplementaryFiles; PubMed/Europe PMC/NCBI fetch for Kraft	PMC6793572 fullTextXML (HTTP 500); NCBI efetch PMC (body withheld by publisher); PMC PDF page (interstitial)	2026-11-11T21:58:53Z	n/a	PubMed full-text tool returned an empty full_text (not a bot block); Europe PMC XML gave HTTP 500; NCBI efetch withheld the body (publisher); the PMC PDF URL returned a 1.8 kB HTML page that was not examined or solved. Kraft 2004 stays abstract only

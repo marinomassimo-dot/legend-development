@@ -1,0 +1,35 @@
+{
+ "analysis_at": "2026-11-11T22:05:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "unavailable",
+  "results": "unavailable",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-11T22:23:00Z",
+ "event_id": "FTR-20261111-30587509-78",
+ "evidence_basis": [
+  "verbatim_locator | proposition: 24 novel DMF-modified proteins in neurons and astrocytes | Abstract | \"we identified 24 novel proteins that were modified by DMF in neurons and astrocytes\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/keap1_nrf2_sci46_20261111/verify/audit.md"
+ ],
+ "prior_receipt": "FTR-20261111-30587509-79",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed abstract via the metadata tool only; body not requested (producer-listed unreachable)",
+ "study_id": {
+  "doi": "10.1074/mcp.RA118.000922",
+  "pmid": "30587509"
+ },
+ "workflow": "Blind verifier V8 (ks-y): D15 wording checked; MeSH lists Mice and Rats, so species is not mouse alone. Staged for the integrator; the ledger was not written by the preparing actor."
+}

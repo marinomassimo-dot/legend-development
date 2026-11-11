@@ -1,0 +1,36 @@
+{
+ "analysis_at": "2026-11-11T22:05:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-11T22:23:00Z",
+ "event_id": "FTR-20261111-27552339-78",
+ "evidence_basis": [
+  "verbatim_locator | proposition: kinase panel size and concentration | Results | \"ML385 (5 μM) did not exhibit significant inhibition of any of the ~170 kinases that were evaluated\"",
+  "verbatim_locator | proposition: authors name an unstudied selectivity limit | Discussion | \"we did not evaluate the effects of ML385 on the activity of other transcription factors\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/keap1_nrf2_sci46_20261111/verify/audit.md"
+ ],
+ "prior_receipt": "FTR-20261111-27552339-79",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC5367156 via the PubMed PMC full-text tool; figures and supplement not examined",
+ "study_id": {
+  "doi": "10.1021/acschembio.6b00651",
+  "pmid": "27552339"
+ },
+ "workflow": "Blind verifier V8 (ks-y): FP IC50 1.9 uM is on the NRF2-MAFG-ARE DNA complex; pull-down used a biotin analogue at 10 uM; isogenic H460 KEAP1-mutant versus knock-in WT confirmed. Staged for the integrator; the ledger was not written by the preparing actor."
+}
