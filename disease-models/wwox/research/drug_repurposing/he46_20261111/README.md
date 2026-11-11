@@ -97,3 +97,15 @@ Remove: delete the four `hypotheses_only` rows of `hypothesis_packages.tsv` (the
 **Same origin, not independence.** In `verify_s10/VERDICTS.md` the ChEMBL curated record ([CH]) is a human transcription of the paper's tables; where a row says "[CH] agrees" (for example MMF 127,200 nM) the two routes share one origin and add no independence. The reader labels the tiers ([FT], [AB], [CH]) and no result in `s10_dose/result_it45.md` counts a [CH] agreement as a second confirmation; nothing needed correcting.
 
 Remove: delete `reading_debt_check.py` and the two TSVs; the preserved files are copies and may be removed once the operator no longer wants the 45 sources kept outside the scratchpads.
+
+## 5. COMPLETE records with a pending verification (H8)
+
+**Is it history or open work?** History. Four closed Orchestrator records carry a "pending" clause: IT40 ("Publish, CI and site pending"), IT41 ("publication and site check pending in P12"; "CI pending"), IT45 ("CI pending at the time of writing") and IT18 ("Pages site not creatable by the workflow token: pending one account operation"). Read against the public API on 2026-11-11 (`ci_runs.py status`): the runs on the commits those records name concluded `success` (IT40: gate #625 and publication #24 on 31919734; IT41: gate #632 and publication #26 on e2dbe391, #631/#25 on 975535a9; IT45: gate #654 and publication #34 on bfd5304e, #655 on 142f6c5f); the publication workflow has run successfully since #24, so the IT18 site exists. No run is still open.
+
+**What was wrong at the canonical point.** `mandate_continuity.py` already reads a record by step status: a step `BLOCKED` with a named blocker keeps the mandate incomplete, and `COMPLETE` beside such a step is `INCONSISTENT_COMPLETE`. What §12 of `cross_session_transport.md` did not say is how a technical wait is written, so the wait went into prose and the record closed over it. Added there (one paragraph): a pending CI run, publication or battery is its own `BLOCKED` step (blocker = run number or process identity, unblock = observed conclusion), closed `DONE` with run number, workflow, full SHA and conclusion, and only then `COMPLETE`; a "pending" clause in a record that later closes is replaced by the observed result. The wait itself uses `ci_runs.py wait <sha> --timeout N` or `process_wait.py`, no second monitor.
+
+**New tool.** `framework/scripts/ci_runs.py` (`status`, `wait`; stdlib, no token, the repository read from the `development` remote; exit codes 0/1/3/124/2; `no run seen` is never success; 7 tests without network). Before it, each closure checked the run with an ad hoc call.
+
+**Not done, on purpose.** The four records were not edited (they are the Orchestrator's, and the clause is dated history); no heuristic over prose ("a COMPLETE record that says pending") was added, because `locator_propagation.py` records that this kind of heuristic was measured and rejected. The mandate hook is not touched, and nothing was stopped to test it.
+
+Remove: delete `ci_runs.py`, its test and its README row, and the paragraph in §12; nothing depends on them.

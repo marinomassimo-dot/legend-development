@@ -1,0 +1,88 @@
+#!/usr/bin/env python3
+"""What the CI and publication workflows concluded for a commit — read from the public API, with a mandatory deadline when waiting.
+
+A mandate record that says COMPLETE while "CI pending" is written in its prose describes the moment it was written, and nobody can tell afterwards whether
+the run ever ended. The supported way to hold such a wait is a BLOCKED step whose blocker names the run and whose unblock is its conclusion
+(cross_session_transport.md section 12); this tool reads the conclusion so that the step can be closed with evidence (run number, workflow, SHA, conclusion).
+
+    python3 framework/scripts/ci_runs.py status <sha>                 # one line per workflow run on that commit
+    python3 framework/scripts/ci_runs.py wait <sha> --timeout 1800    # polls every 60 s; exit 0 all runs concluded success
+
+Exit codes: 0 every run on the commit concluded success · 1 a run concluded with anything else · 3 no run seen for the commit · 124 the deadline passed with a run
+still in progress (or none yet) · 2 invalid invocation or the API unreadable. No token is used (the repository is public; the unauthenticated limit is 60 requests an
+hour, so `wait` polls once a minute). `no run seen` is not `success`: a push whose workflow has not started yet reads exit 3, and `wait` keeps polling it.
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import re
+import subprocess
+import sys
+import time
+import urllib.request
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parents[2]
+
+
+def slug(remote: str = "development") -> str:
+    url = subprocess.run(["git", "-C", str(REPO), "remote", "get-url", remote], capture_output=True, text=True).stdout.strip()
+    m = re.search(r"github\.com[:/]([^/]+/[^/.]+?)(?:\.git)?$", url)
+    if not m:
+        raise SystemExit(f"cannot read a GitHub repository from remote {remote!r}: {url!r}")
+    return m.group(1)
+
+
+def fetch_runs(sha: str, repo: str) -> list[dict]:
+    url = f"https://api.github.com/repos/{repo}/actions/runs?head_sha={sha}&per_page=50"
+    with urllib.request.urlopen(urllib.request.Request(url, headers={"Accept": "application/vnd.github+json"}), timeout=30) as r:
+        return json.load(r)["workflow_runs"]
+
+
+def verdict(runs: list[dict]) -> tuple[int, list[str]]:
+    """(exit code, lines) from the workflow_runs of one commit."""
+    if not runs:
+        return 3, ["no workflow run seen for this commit"]
+    lines = [f"#{r['run_number']} {r['name']}: {r['status']}" + (f" {r['conclusion']}" if r.get("conclusion") else "") + f" ({r['head_sha'][:8]})" for r in sorted(runs, key=lambda r: r["run_number"])]
+    if any(r["status"] != "completed" for r in runs):
+        return 124, lines
+    return (0 if all(r["conclusion"] == "success" for r in runs) else 1), lines
+
+
+def main(argv=None) -> int:
+    ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
+    sub = ap.add_subparsers(dest="cmd", required=True)
+    for name in ("status", "wait"):
+        p = sub.add_parser(name)
+        p.add_argument("sha")
+        p.add_argument("--remote", default="development")
+        if name == "wait":
+            p.add_argument("--timeout", type=int, required=True)
+    a = ap.parse_args(argv)
+    if not re.fullmatch(r"[0-9a-f]{7,40}", a.sha):
+        print("a commit SHA (7-40 hex digits) is required", file=sys.stderr)
+        return 2
+    if len(a.sha) < 40:     # the API matches the full SHA only
+        full = subprocess.run(["git", "-C", str(REPO), "rev-parse", "--verify", "-q", a.sha + "^{commit}"], capture_output=True, text=True).stdout.strip()
+        if not full:
+            print(f"{a.sha} is not a commit of this repository: give the full 40-digit SHA", file=sys.stderr)
+            return 2
+        a.sha = full
+    repo = slug(a.remote)
+    end = time.time() + (a.timeout if a.cmd == "wait" else 0)
+    while True:
+        try:
+            runs = fetch_runs(a.sha, repo)
+        except Exception as exc:  # network or rate limit: say so, never read it as "no run"
+            print(f"cannot read the API: {exc}", file=sys.stderr)
+            return 2
+        code, lines = verdict(runs)
+        if a.cmd == "status" or code in (0, 1) or time.time() >= end:
+            print("\n".join(lines))
+            return code if not (a.cmd == "wait" and code == 3) else 124
+        time.sleep(60)
+
+
+if __name__ == "__main__":
+    sys.exit(main())

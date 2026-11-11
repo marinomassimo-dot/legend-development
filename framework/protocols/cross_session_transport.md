@@ -525,6 +525,15 @@ operator's mandate is not authorised by this rule, and a genuinely completed obj
 does not call for invented work or an endless busy loop. Existing budget limits and
 §21c–§21e still apply; there is no additional approval or closing ceremony.
 
+A technical verification that has not concluded (a CI run, the publication workflow, a battery) is a step of its own:
+`BLOCKED`, with the run number or the process identity that will end it as the blocker and its observed conclusion as the
+unblock, so the record stays `OPEN` and the verdict says what is awaited. When it concludes, mark the step `DONE` with its
+evidence (workflow, run number, full SHA, conclusion; `python3 framework/scripts/ci_runs.py status <sha>`), then set
+`COMPLETE`. `COMPLETE` beside an open verification is `INCONSISTENT_COMPLETE` by design. A clause such as "CI pending" written
+into a record that later closes describes the moment it was written: replace it with the observed result when you close, do
+not leave it as the last word. Wait for the event with `ci_runs.py wait <sha> --timeout N` or a process identity
+(`process_wait.py`), never by polling a name, and add no second monitor.
+
 ### Decision table — apply it before ending any turn
 
 | Observed condition | Action |
