@@ -114,7 +114,7 @@
      "step": "Integrate, battery by SHA, publish with SHA check, CI and site, final report",
      "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": "Battery on 8211d2d7: PASS WITH SKIPS (230 targets, 11 skipped); later commits are documentation and record only. Publication, CI and site pending."
+     "evidence": "Batteries by SHA: 8211d2d7 PASS WITH SKIPS (230 targets, 11 skipped; docs and record only after it); c82a1bff stopped partial (superseded by the HE43 landing; no verdict); 5f721d0d (merge with HE43-landed main) FAIL: one target, generation_it39 test_stage_it39 (question dossiers stale; kept as that SHA's verdict); 24d814f3 (dossiers regenerated) PASS WITH SKIPS (233 targets, 11 skipped). Landing candidate 599968be = 24d814f3 merged with SCI44-landed main d088b964: the merge adds only SCI44 package files, its receipt staging, its task record and one dated line in the SCI43 README (no code, no generated view file); verified for that SHA by gate (safe_push), LINT no BLOCK, receipts chain OK 1,599, growth anchors PASS and 0 failing among the related local tests (not by a battery). CI of 51d6c3b1: success (#640, 1h13m)."
     }
    ]
   }
