@@ -109,3 +109,21 @@ Remove: delete `reading_debt_check.py` and the two TSVs; the preserved files are
 **Not done, on purpose.** The four records were not edited (they are the Orchestrator's, and the clause is dated history); no heuristic over prose ("a COMPLETE record that says pending") was added, because `locator_propagation.py` records that this kind of heuristic was measured and rejected. The mandate hook is not touched, and nothing was stopped to test it.
 
 Remove: delete `ci_runs.py`, its test and its README row, and the paragraph in §12; nothing depends on them.
+
+## 6. Evaluation without circular truth (H6, support for IT46's trial on a new case)
+
+**The trap, found in the existing scorer.** `generation_it44_20261110/eval_it44.py` counts "drug-role" and "non-drug-role" molecules from `entity_roles_it44.tsv`, which is the engine's own output; those counts restate the engine's labels, so they cannot show that a label is right (IT45's `eval_it45.md` says the scorer is "not an independent truth"; this makes the consequence measurable).
+
+**What was added, with existing parts only.** `role_reference_check.py` keeps five things apart: *input* (the entity rows), *rules* (`role_rules_it44.tsv`: gtopdb_type and catalogue_status only), *result* (`role`), *reference* (the catalogue's `modality`, `molecule_type`, `chemistry.inorganic`, which no rule reads) and *judgement* (a reviewer reading the disagreements, recorded apart; none here). A molecule missing from the catalogue is `NO_REFERENCE`, never an agreement. Same-inputs, two-refs reproduction is the existing pattern of `conditions_before_after.py --old-ref`; no eval platform, no new store (output: `role_reference_check.tsv`, 484 rows, 0.5 s).
+
+**Result on the 484 role rows** (`role_reference_check.tsv`): candidate/probe roles agree with the reference for 163 rows, **disagree for 5, are unverifiable for 6** (modality unknown), have no reference for 1; 8 rows the rules left `unqualified_entity` are small molecules in the catalogue (a coverage gap, not an error). 197 rows (activity-only molecules, not in the catalogue) have no reference at all: the check is silent about HE45's `unqualified_entity` default for them, so "197 default rows no longer candidate" is a claim the reference cannot confirm or refute.
+
+| Disagreement | Reading of the reference | Judgement (mine, to be confirmed by IT46's reviewer) |
+|---|---|---|
+| rapastinel, apimostinel (S1, S13) role `candidate` | catalogue `protein_or_peptide` | the reference is right: no GtoPdb row, so the peptide rule R5 (peptide, probe unless approved) never fired and the clinical-stage rule R8 made them candidates. A rule on the catalogue modality would close it; the rules file is not mine |
+| ML252 (S3) role `probe` | `chemistry.inorganic` flag set | the reference is wrong here (an organic small-molecule Kv7 inhibitor): a flagged field is not a truth either |
+| AZD8108, indantadol, CX1739, MK-8777 `candidate` | modality unknown | unverified: cannot be settled from the catalogue |
+
+**What this does and does not establish.** It shows that an independent field can separate right labels from doubtful ones on data already held (5 doubtful of 169, one of which is the reference's own error), and that the reference is itself fallible and shares a source (ChEMBL) with `catalogue_status`. It is not an improvement test: the engine was not changed here. For IT46's new case the same frame applies as it stands: name the reference before running, keep the engine's labels out of the scorer, and report `NO_REFERENCE` counts beside agreements. A gain measured on the case used to design the change is not a result on a new case.
+
+Remove: delete `role_reference_check.py` and `role_reference_check.tsv`.
