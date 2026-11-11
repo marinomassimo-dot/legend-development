@@ -10,7 +10,7 @@ Non-canonical working note. Not medical advice; no dose, schedule or route. Same
 | a CHK1 inhibitor in clinical development, a neurosteroid, a neuropsychiatric clinical candidate | HCN4 or HCN2 IC50 "greater than" 10–30 µM | counter-screens that found no inhibition; they are negative-selectivity rows, not candidates. |
 
 ## What it adds to INV-18 (INFERENZA)
-* INV-18 asks for Ih blockers "of at least two chemotypes" and lists an "ortholog and isoform census of the tools" as possible in silico work. The census now exists for the catalogue: the held tools are non-selective blockers (the clinical ones act at micromolar concentrations on HCN4) and **one HCN1-selective probe**.
+* INV-18 asks for Ih blockers "of at least two chemotypes" and lists an "ortholog and isoform census of the tools" as possible in silico work. The census now exists for the catalogue: the activity rows hold two clinical-stage blockers measured on HCN4 only (micromolar) and **one HCN1-selective probe** measured on all four isoforms; isoform selectivity of the other tools named in the repository was not read here.
 * RNA by cell class (SCI44 coda): Hcn1 neurons 2.62 against astrocytes 0.10; Hcn2 neurons 17.9 against 1.1 (mouse P7 FPKM). An HCN1-selective probe can in principle separate an HCN1-carried from an HCN2-carried sag in the same slices, which a non-selective blocker cannot; the sag growth with gene dose (INV-18) then gets an isoform question.
 * Limits: the primary source is a probe data deposit, not a paper (no methods text was read); the probe's behaviour in neurons, its stability in slices and its off-target profile are not held; ChEMBL's selectivity is within one assay system; nothing here nominates a tool.
 
