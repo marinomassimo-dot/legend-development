@@ -260,5 +260,66 @@ class Reader(unittest.TestCase):
         self.assertEqual(Path(hp.REPO / path).read_text(encoding="utf-8").split("\n")[int(line) - 1].split("\t")[0], first["row"]["hyp_id"])
 
 
+class ComparisonSource(unittest.TestCase):
+    """HE45 H3: which folder holds a package's comparison rows is declared, and a read that finds nothing says why."""
+    H = "row_id\tcompound_or_probe\tneeds_new_experiment\n"
+    M = "meas_id\tmeasurement\twhy_no_literature_can_substitute\tblocks_which_comparison_row\n"
+
+    def pkg(self, files):
+        d = Path(tempfile.mkdtemp(prefix="hp_cmp_"))
+        self.addCleanup(lambda: __import__("shutil").rmtree(d, ignore_errors=True))
+        for sub, name, text in files:
+            (d / sub).mkdir(parents=True, exist_ok=True)
+            (d / sub / name).write_text(text, encoding="utf-8")
+        return d
+
+    def test_historical_package_reads_output_as_before(self):
+        p = hp.load_comparison(self.pkg([("output", "comparison.tsv", self.H + "R1\talpha\tno\n"), ("output", "new_measurements.tsv", self.M)]))
+        self.assertEqual((p["source"], p["state"], list(p["cmp"])), ("output", "OK", ["R1"]))
+
+    def test_comparison_kept_in_engine_is_read_and_declared(self):
+        p = hp.load_comparison(self.pkg([("engine", "comparison.tsv", self.H + "R1\talpha\tno\n"), ("engine", "new_measurements.tsv", self.M),
+                                         ("output", "decisive.tsv", "prop_id\tstatement\nD01\tx\n")]))
+        self.assertEqual((p["source"], p["state"], p["candidates"]), ("engine", "OK", ["engine"]))
+
+    def test_missing_comparison_is_a_state_with_a_diagnosis_not_a_crash(self):
+        p = hp.load_comparison(self.pkg([("output", "new_measurements.tsv", self.M)]))
+        self.assertEqual((p["state"], p["cmp"]), ("COMPARISON_FILE_MISSING", {}))
+        self.assertIn("no comparison.tsv", p["diagnosis"])
+
+    def test_missing_measurements_is_a_state(self):
+        p = hp.load_comparison(self.pkg([("output", "comparison.tsv", self.H + "R1\talpha\tno\n")]))
+        self.assertEqual((p["state"], list(p["cmp"])), ("MEASUREMENTS_FILE_MISSING", ["R1"]))
+
+    def test_empty_file_is_empty_comparison_never_no_comparisons(self):
+        for text in ("", self.H):
+            p = hp.load_comparison(self.pkg([("engine", "comparison.tsv", text), ("engine", "new_measurements.tsv", self.M)]))
+            self.assertEqual(p["state"], "EMPTY_COMPARISON")
+            self.assertIn("not evidence", p["diagnosis"])
+
+    def test_identical_copies_in_output_and_engine_are_named(self):
+        text = self.H + "R1\talpha\tno\n"
+        p = hp.load_comparison(self.pkg([("output", "comparison.tsv", text), ("engine", "comparison.tsv", text), ("output", "new_measurements.tsv", self.M)]))
+        self.assertEqual((p["state"], p["source"]), ("OK", "output"))
+        self.assertIn("identical copies in engine", p["diagnosis"])
+
+    def test_differing_copies_are_ambiguous_and_read_nothing(self):
+        p = hp.load_comparison(self.pkg([("output", "comparison.tsv", self.H + "R1\talpha\tno\n"), ("engine", "comparison.tsv", self.H + "R1\tbeta\tyes\nR2\tgamma\tno\n"),
+                                         ("output", "new_measurements.tsv", self.M)]))
+        self.assertEqual((p["state"], p["cmp"]), ("AMBIGUOUS_SOURCE", {}))
+        self.assertIn("name the folder in the manifest", p["diagnosis"])
+
+    def test_output_empty_and_engine_full_is_ambiguous_not_silently_empty(self):
+        p = hp.load_comparison(self.pkg([("output", "comparison.tsv", self.H), ("engine", "comparison.tsv", self.H + "R1\tbeta\tyes\n"), ("engine", "new_measurements.tsv", self.M)]))
+        self.assertEqual(p["state"], "AMBIGUOUS_SOURCE")
+
+    def test_check_fails_on_an_unreadable_package_and_the_consumer_sees_not_read(self):
+        p = hp.load_comparison(self.pkg([("output", "new_measurements.tsv", self.M)]))
+        p.update({"name": "x", "inv_id": "INV-05"})
+        errs = hp.validate(p, needs=set(), invs={"INV-05": {}}, cards=Path("."))
+        self.assertTrue(any("COMPARISON_FILE_MISSING" in e for e in errs))
+        self.assertEqual(hp.comparison_for([p], "INV-05")["state"], "COMPARISON_NOT_READ")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
