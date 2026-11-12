@@ -76,7 +76,9 @@ class RealTables(unittest.TestCase):
     def test_the_kv7_relation_is_not_assignable_to_neurons_from_these_tables(self):
         _, text = cc.context_for(["KCNQ2", "KCNQ3", "KCNQ4", "KCNQ5"])
         self.assertIn("cannot be assigned to neurons", text)
-        self.assertIn("KCNQ4, KCNQ5", text)
+        # IT47 B1 gave KCNQ4 and KCNQ5 rows: KCNQ4 shared in mouse and not detected in the human sample; KCNQ5 neuron-enriched in both
+        self.assertIn("KCNQ4 (mouse shared, human not detected)", text)
+        self.assertIn("KCNQ5 (mouse neuron-enriched, human neuron-enriched)", text)
 
     def test_relations_are_read_without_the_catalogue_cache(self):
         rel = cc.relations()

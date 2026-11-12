@@ -26,6 +26,9 @@ TABLES = [
     # IT46 P5 (SCI46 queue item): the NRF2-axis genes, same inputs and extraction (nrf2_expression_sci46_20261111)
     dict(key="mouse_nrf2", species="mouse", path=DR / "nrf2_expression_sci46_20261111/nrf2_expression_mouse.tsv", cls="cell_class", val="mean_fpkm", n="n_samples", neuron=r"^neurons?\b", skip=r"^$"),
     dict(key="human_nrf2", species="human", path=DR / "nrf2_expression_sci46_20261111/nrf2_expression_human.tsv", cls="group", val="mean_fpkm", n="n_columns", neuron=r"^neuron_", skip=r"^(whole_cortex|mouse_astro)$"),
+    # IT47 queue B1: the 30 target genes that had no row (generation_it47_20261112/b1_cellclass), same inputs and extraction
+    dict(key="mouse_targets", species="mouse", path=DR / "generation_it47_20261112/b1_cellclass/targets_expression_mouse.tsv", cls="cell_class", val="mean_fpkm", n="n_samples", neuron=r"^neurons?\b", skip=r"^$"),
+    dict(key="human_targets", species="human", path=DR / "generation_it47_20261112/b1_cellclass/targets_expression_human.tsv", cls="group", val="mean_fpkm", n="n_columns", neuron=r"^neuron_", skip=r"^(whole_cortex|mouse_astro)$"),
     dict(key="human_gaba", species="human", path=HERE / "expr/chloride_gaba_expression_human.tsv", cls="group", val="mean_fpkm", n="n_columns", neuron=r"^neuron_", skip=r"^(whole_cortex|mouse_astro)$"),
 ]
 FIELDS = ["relation_id", "gene", "table", "species", "state", "neuron_class", "neuron_fpkm", "best_other_class", "best_other_fpkm", "n_samples_neuron", "attributable_to_neuron", "caveat"]

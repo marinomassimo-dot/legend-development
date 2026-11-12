@@ -4,12 +4,16 @@ R1	GRIN2B	human	human	NOT_IN_TABLE						unknown	not queried in this table: unkno
 R1	GRIN2B	mouse_gaba	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 R1	GRIN2B	mouse_nrf2	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 R1	GRIN2B	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+R1	GRIN2B	mouse_targets	mouse	NEURON_ENRICHED	neurons (P7)	2.98	microglia	0.84	2	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R1	GRIN2B	human_targets	human	NEURON_ENRICHED	neuron_ctx	10.60	endo_ctx	0.55	1	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
 R1	GRIN2B	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 R2	GRIN2A	mouse	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 R2	GRIN2A	human	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 R2	GRIN2A	mouse_gaba	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 R2	GRIN2A	mouse_nrf2	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 R2	GRIN2A	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+R2	GRIN2A	mouse_targets	mouse	NOT_DETECTED_IN_TABLE	neurons (P7)	0.76	OPC (P17)	0.11	2	unknown	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R2	GRIN2A	human_targets	human	NEURON_ENRICHED	neuron_ctx	25.30	astro_fetal_ctx	1.95	1	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
 R2	GRIN2A	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 R3	GRIA1	mouse	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 R3	GRIA2	mouse	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
@@ -56,6 +60,24 @@ R3	GRIK2	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: u
 R3	GRIK3	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 R3	GRIK4	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 R3	GRIK5	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+R3	GRIA1	mouse_targets	mouse	NEURON_ENRICHED	neurons (P7)	52.64	OPC (P17)	10.33	2	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R3	GRIA2	mouse_targets	mouse	SHARED	neurons (P7)	57.50	astrocytes (P7)	167.22	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R3	GRIA3	mouse_targets	mouse	OTHER_ENRICHED	neurons (P7)	4.52	OPC (P17)	54.65	2	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R3	GRIA4	mouse_targets	mouse	SHARED	neurons (P7)	22.15	OPC (P17)	37.82	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R3	GRIK1	mouse_targets	mouse	SHARED	neurons (P7)	9.50	OPC (P17)	12.67	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R3	GRIK2	mouse_targets	mouse	SHARED	neurons (P7)	8.68	newly formed oligodendrocytes (P17)	15.98	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R3	GRIK3	mouse_targets	mouse	SHARED	neurons (P7)	7.35	newly formed oligodendrocytes (P17)	17.84	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R3	GRIK4	mouse_targets	mouse	OTHER_ENRICHED	neurons (P7)	5.88	OPC (P17)	19.12	2	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R3	GRIK5	mouse_targets	mouse	SHARED	neurons (P7)	47.91	OPC (P17)	46.53	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R3	GRIA1	human_targets	human	NEURON_ENRICHED	neuron_ctx	29.20	astro_tumor	7.45	1	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R3	GRIA2	human_targets	human	SHARED	neuron_ctx	85.60	astro_mature_ctx	28.59	1	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R3	GRIA3	human_targets	human	NEURON_ENRICHED	neuron_ctx	27.80	astro_tumor	9.25	1	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R3	GRIA4	human_targets	human	NEURON_ENRICHED	neuron_ctx	24.10	astro_hippocampus_epilepsy_region	7.98	1	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R3	GRIK1	human_targets	human	NEURON_ENRICHED	neuron_ctx	18.90	astro_hippocampus_epilepsy_region	2.75	1	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R3	GRIK2	human_targets	human	NEURON_ENRICHED	neuron_ctx	38.60	oligo_ctx	3.80	1	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R3	GRIK3	human_targets	human	SHARED	neuron_ctx	1.30	astro_tumor	3.00	1	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R3	GRIK4	human_targets	human	NOT_DETECTED_IN_TABLE	neuron_ctx	0.20	astro_hippocampus_epilepsy_region	0.58	1	unknown	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R3	GRIK5	human_targets	human	OTHER_ENRICHED	neuron_ctx	0.20	astro_fetal_ctx	3.03	1	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
 R3	GRIA1	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 R3	GRIA2	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 R3	GRIA3	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
@@ -85,6 +107,14 @@ R4	HCN1	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: un
 R4	HCN2	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 R4	HCN3	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 R4	HCN4	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+R4	HCN1	mouse_targets	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+R4	HCN2	mouse_targets	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+R4	HCN3	mouse_targets	mouse	NEURON_ENRICHED	neurons (P7)	16.17	OPC (P17)	3.66	2	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R4	HCN4	mouse_targets	mouse	NEURON_ENRICHED	neurons (P7)	16.81	OPC (P17)	0.36	2	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R4	HCN1	human_targets	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+R4	HCN2	human_targets	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+R4	HCN3	human_targets	human	SHARED	neuron_ctx	2.50	astro_fetal_ctx	1.87	1	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R4	HCN4	human_targets	human	NOT_DETECTED_IN_TABLE	neuron_ctx	0.60	astro_fetal_ctx	0.80	1	unknown	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
 R4	HCN1	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 R4	HCN2	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 R4	HCN3	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
@@ -109,6 +139,14 @@ R5	KCNQ2	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: u
 R5	KCNQ3	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 R5	KCNQ4	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 R5	KCNQ5	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+R5	KCNQ2	mouse_targets	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+R5	KCNQ3	mouse_targets	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+R5	KCNQ4	mouse_targets	mouse	SHARED	neurons (P7)	5.24	astrocytes (P7)	6.21	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R5	KCNQ5	mouse_targets	mouse	NEURON_ENRICHED	neurons (P7)	9.40	newly formed oligodendrocytes (P17)	0.98	2	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R5	KCNQ2	human_targets	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+R5	KCNQ3	human_targets	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+R5	KCNQ4	human_targets	human	NOT_DETECTED_IN_TABLE	neuron_ctx	0.20	astro_tumor	0.23	1	unknown	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R5	KCNQ5	human_targets	human	NEURON_ENRICHED	neuron_ctx	15.00	endo_ctx	0.45	1	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
 R5	KCNQ2	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 R5	KCNQ3	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 R5	KCNQ4	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
@@ -123,6 +161,10 @@ R6	GJD2	mouse_nrf2	mouse	NOT_IN_TABLE						unknown	not queried in this table: un
 R6	PANX1	mouse_nrf2	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 R6	GJD2	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 R6	PANX1	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+R6	GJD2	mouse_targets	mouse	NEURON_ENRICHED	neurons (P7)	3.24	OPC (P17)	0.29	2	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R6	PANX1	mouse_targets	mouse	SHARED	neurons (P7)	25.74	newly formed oligodendrocytes (P17)	37.21	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R6	GJD2	human_targets	human	NOT_DETECTED_IN_TABLE	neuron_ctx	0.60	astro_tumor	0.10	1	unknown	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+R6	PANX1	human_targets	human	OTHER_ENRICHED	neuron_ctx	9.10	myeloid_ctx	42.77	1	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
 R6	GJD2	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 R6	PANX1	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S1	GRIN2B	mouse	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
@@ -130,6 +172,8 @@ S1	GRIN2B	human	human	NOT_IN_TABLE						unknown	not queried in this table: unkno
 S1	GRIN2B	mouse_gaba	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S1	GRIN2B	mouse_nrf2	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S1	GRIN2B	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S1	GRIN2B	mouse_targets	mouse	NEURON_ENRICHED	neurons (P7)	2.98	microglia	0.84	2	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S1	GRIN2B	human_targets	human	NEURON_ENRICHED	neuron_ctx	10.60	endo_ctx	0.55	1	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
 S1	GRIN2B	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S2	HCN1	mouse	mouse	NEURON_ENRICHED	neurons (P7)	2.62	OPC (P17)	0.23	2	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
 S2	HCN2	mouse	mouse	OTHER_ENRICHED	neurons (P7)	17.88	myelinating oligodendrocytes (P17)	66.29	2	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
@@ -151,6 +195,14 @@ S2	HCN1	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: un
 S2	HCN2	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S2	HCN3	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S2	HCN4	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S2	HCN1	mouse_targets	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S2	HCN2	mouse_targets	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S2	HCN3	mouse_targets	mouse	NEURON_ENRICHED	neurons (P7)	16.17	OPC (P17)	3.66	2	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S2	HCN4	mouse_targets	mouse	NEURON_ENRICHED	neurons (P7)	16.81	OPC (P17)	0.36	2	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S2	HCN1	human_targets	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S2	HCN2	human_targets	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S2	HCN3	human_targets	human	SHARED	neuron_ctx	2.50	astro_fetal_ctx	1.87	1	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S2	HCN4	human_targets	human	NOT_DETECTED_IN_TABLE	neuron_ctx	0.60	astro_fetal_ctx	0.80	1	unknown	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
 S2	HCN1	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S2	HCN2	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S2	HCN3	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
@@ -175,6 +227,14 @@ S3	KCNQ2	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: u
 S3	KCNQ3	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S3	KCNQ4	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S3	KCNQ5	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S3	KCNQ2	mouse_targets	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S3	KCNQ3	mouse_targets	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S3	KCNQ4	mouse_targets	mouse	SHARED	neurons (P7)	5.24	astrocytes (P7)	6.21	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S3	KCNQ5	mouse_targets	mouse	NEURON_ENRICHED	neurons (P7)	9.40	newly formed oligodendrocytes (P17)	0.98	2	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S3	KCNQ2	human_targets	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S3	KCNQ3	human_targets	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S3	KCNQ4	human_targets	human	NOT_DETECTED_IN_TABLE	neuron_ctx	0.20	astro_tumor	0.23	1	unknown	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S3	KCNQ5	human_targets	human	NEURON_ENRICHED	neuron_ctx	15.00	endo_ctx	0.45	1	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
 S3	KCNQ2	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S3	KCNQ3	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S3	KCNQ4	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
@@ -189,6 +249,10 @@ S4	GJD2	mouse_nrf2	mouse	NOT_IN_TABLE						unknown	not queried in this table: un
 S4	PANX1	mouse_nrf2	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S4	GJD2	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S4	PANX1	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S4	GJD2	mouse_targets	mouse	NEURON_ENRICHED	neurons (P7)	3.24	OPC (P17)	0.29	2	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S4	PANX1	mouse_targets	mouse	SHARED	neurons (P7)	25.74	newly formed oligodendrocytes (P17)	37.21	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S4	GJD2	human_targets	human	NOT_DETECTED_IN_TABLE	neuron_ctx	0.60	astro_tumor	0.10	1	unknown	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S4	PANX1	human_targets	human	OTHER_ENRICHED	neuron_ctx	9.10	myeloid_ctx	42.77	1	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
 S4	GJD2	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S4	PANX1	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S5	GABRA1	mouse	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
@@ -226,6 +290,20 @@ S5	GABRA5	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: 
 S5	GABRB2	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S5	GABRB3	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S5	GABRG2	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S5	GABRA1	mouse_targets	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S5	GABRA2	mouse_targets	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S5	GABRA3	mouse_targets	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S5	GABRA5	mouse_targets	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S5	GABRB2	mouse_targets	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S5	GABRB3	mouse_targets	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S5	GABRG2	mouse_targets	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S5	GABRA1	human_targets	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S5	GABRA2	human_targets	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S5	GABRA3	human_targets	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S5	GABRA5	human_targets	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S5	GABRB2	human_targets	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S5	GABRB3	human_targets	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S5	GABRG2	human_targets	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S5	GABRA1	human_gaba	human	NEURON_ENRICHED	neuron_ctx	110.60	endo_ctx	1.85	1	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
 S5	GABRA2	human_gaba	human	OTHER_ENRICHED	neuron_ctx	14.60	astro_mature_ctx	46.06	1	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
 S5	GABRA3	human_gaba	human	SHARED	neuron_ctx	11.30	astro_hippocampus_epilepsy_region	4.28	1	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
@@ -243,6 +321,10 @@ S6	SLC12A2	mouse_nrf2	mouse	NOT_IN_TABLE						unknown	not queried in this table:
 S6	SLC12A5	mouse_nrf2	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S6	SLC12A2	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S6	SLC12A5	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S6	SLC12A2	mouse_targets	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S6	SLC12A5	mouse_targets	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S6	SLC12A2	human_targets	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S6	SLC12A5	human_targets	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S6	SLC12A2	human_gaba	human	OTHER_ENRICHED	neuron_ctx	3.60	astro_hippocampus_epilepsy_region	28.55	1	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
 S6	SLC12A5	human_gaba	human	NEURON_ENRICHED	neuron_ctx	11.70	endo_ctx	0.60	1	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
 S7	SLC6A1	mouse	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
@@ -255,6 +337,10 @@ S7	SLC6A1	mouse_nrf2	mouse	NOT_IN_TABLE						unknown	not queried in this table: 
 S7	ABAT	mouse_nrf2	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S7	SLC6A1	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S7	ABAT	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S7	SLC6A1	mouse_targets	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S7	ABAT	mouse_targets	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S7	SLC6A1	human_targets	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S7	ABAT	human_targets	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S7	SLC6A1	human_gaba	human	SHARED	neuron_ctx	79.60	astro_mature_ctx	58.83	1	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
 S7	ABAT	human_gaba	human	SHARED	neuron_ctx	36.80	astro_mature_ctx	22.10	1	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
 S8	GRIA1	mouse	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
@@ -302,6 +388,24 @@ S8	GRIK2	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: u
 S8	GRIK3	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S8	GRIK4	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S8	GRIK5	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S8	GRIA1	mouse_targets	mouse	NEURON_ENRICHED	neurons (P7)	52.64	OPC (P17)	10.33	2	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S8	GRIA2	mouse_targets	mouse	SHARED	neurons (P7)	57.50	astrocytes (P7)	167.22	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S8	GRIA3	mouse_targets	mouse	OTHER_ENRICHED	neurons (P7)	4.52	OPC (P17)	54.65	2	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S8	GRIA4	mouse_targets	mouse	SHARED	neurons (P7)	22.15	OPC (P17)	37.82	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S8	GRIK1	mouse_targets	mouse	SHARED	neurons (P7)	9.50	OPC (P17)	12.67	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S8	GRIK2	mouse_targets	mouse	SHARED	neurons (P7)	8.68	newly formed oligodendrocytes (P17)	15.98	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S8	GRIK3	mouse_targets	mouse	SHARED	neurons (P7)	7.35	newly formed oligodendrocytes (P17)	17.84	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S8	GRIK4	mouse_targets	mouse	OTHER_ENRICHED	neurons (P7)	5.88	OPC (P17)	19.12	2	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S8	GRIK5	mouse_targets	mouse	SHARED	neurons (P7)	47.91	OPC (P17)	46.53	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S8	GRIA1	human_targets	human	NEURON_ENRICHED	neuron_ctx	29.20	astro_tumor	7.45	1	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S8	GRIA2	human_targets	human	SHARED	neuron_ctx	85.60	astro_mature_ctx	28.59	1	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S8	GRIA3	human_targets	human	NEURON_ENRICHED	neuron_ctx	27.80	astro_tumor	9.25	1	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S8	GRIA4	human_targets	human	NEURON_ENRICHED	neuron_ctx	24.10	astro_hippocampus_epilepsy_region	7.98	1	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S8	GRIK1	human_targets	human	NEURON_ENRICHED	neuron_ctx	18.90	astro_hippocampus_epilepsy_region	2.75	1	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S8	GRIK2	human_targets	human	NEURON_ENRICHED	neuron_ctx	38.60	oligo_ctx	3.80	1	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S8	GRIK3	human_targets	human	SHARED	neuron_ctx	1.30	astro_tumor	3.00	1	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S8	GRIK4	human_targets	human	NOT_DETECTED_IN_TABLE	neuron_ctx	0.20	astro_hippocampus_epilepsy_region	0.58	1	unknown	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S8	GRIK5	human_targets	human	OTHER_ENRICHED	neuron_ctx	0.20	astro_fetal_ctx	3.03	1	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
 S8	GRIA1	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S8	GRIA2	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S8	GRIA3	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
@@ -331,6 +435,14 @@ S9	PDK1	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: un
 S9	PDK2	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S9	PDK3	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S9	PDK4	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S9	PDK1	mouse_targets	mouse	SHARED	neurons (P7)	5.31	microglia	9.87	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S9	PDK2	mouse_targets	mouse	SHARED	neurons (P7)	13.75	newly formed oligodendrocytes (P17)	36.22	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S9	PDK3	mouse_targets	mouse	OTHER_ENRICHED	neurons (P7)	4.27	myelinating oligodendrocytes (P17)	23.97	2	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S9	PDK4	mouse_targets	mouse	OTHER_ENRICHED	neurons (P7)	2.17	astrocytes (P7)	63.70	2	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S9	PDK1	human_targets	human	SHARED	neuron_ctx	2.50	astro_tumor	5.12	1	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S9	PDK2	human_targets	human	OTHER_ENRICHED	neuron_ctx	1.10	astro_mature_ctx	7.52	1	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S9	PDK3	human_targets	human	SHARED	neuron_ctx	5.60	myeloid_ctx	3.23	1	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S9	PDK4	human_targets	human	OTHER_ENRICHED	neuron_ctx	3.30	myeloid_ctx	192.50	1	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
 S9	PDK1	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S9	PDK2	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S9	PDK3	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
@@ -345,6 +457,10 @@ S10	NFE2L2	mouse_nrf2	mouse	OTHER_ENRICHED	neurons (P7)	2.11	microglia	55.57	2	n
 S10	KEAP1	mouse_nrf2	mouse	SHARED	neurons (P7)	11.24	myelinating oligodendrocytes (P17)	13.01	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
 S10	NFE2L2	human_nrf2	human	OTHER_ENRICHED	neuron_ctx	7.60	myeloid_ctx	46.73	1	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
 S10	KEAP1	human_nrf2	human	OTHER_ENRICHED	neuron_ctx	0.10	astro_hippocampus_epilepsy_region	2.00	1	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S10	NFE2L2	mouse_targets	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S10	KEAP1	mouse_targets	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S10	NFE2L2	human_targets	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S10	KEAP1	human_targets	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S10	NFE2L2	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S10	KEAP1	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S11	KCNJ2	mouse	mouse	OTHER_ENRICHED	neurons (P7)	0.74	endothelium	41.80	2	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
@@ -397,6 +513,26 @@ S11	KCNK4	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: 
 S11	KCNK9	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S11	KCNK10	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S11	KCNK13	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S11	KCNJ2	mouse_targets	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S11	KCNJ4	mouse_targets	mouse	SHARED	neurons (P7)	1.67	myelinating oligodendrocytes (P17)	1.73	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S11	KCNJ12	mouse_targets	mouse	SHARED	neurons (P7)	1.54	newly formed oligodendrocytes (P17)	1.39	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S11	KCNK1	mouse_targets	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S11	KCNK2	mouse_targets	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S11	KCNK3	mouse_targets	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S11	KCNK4	mouse_targets	mouse	NOT_DETECTED_IN_TABLE	neurons (P7)	0.99	microglia	0.71	2	unknown	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S11	KCNK9	mouse_targets	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S11	KCNK10	mouse_targets	mouse	SHARED	neurons (P7)	3.63	OPC (P17)	7.87	2	partly	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S11	KCNK13	mouse_targets	mouse	OTHER_ENRICHED	neurons (P7)	0.41	microglia	33.22	2	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S11	KCNJ2	human_targets	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S11	KCNJ4	human_targets	human	NOT_DETECTED_IN_TABLE	neuron_ctx	0.10	astro_fetal_ctx	0.30	1	unknown	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S11	KCNJ12	human_targets	human	NOT_DETECTED_IN_TABLE	neuron_ctx	0.20	astro_tumor	0.10	1	unknown	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S11	KCNK1	human_targets	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S11	KCNK2	human_targets	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S11	KCNK3	human_targets	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S11	KCNK4	human_targets	human	NOT_DETECTED_IN_TABLE	neuron_ctx	0.10	astro_tumor	0.10	1	unknown	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S11	KCNK9	human_targets	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S11	KCNK10	human_targets	human	OTHER_ENRICHED	neuron_ctx	0.70	astro_fetal_ctx	3.03	1	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S11	KCNK13	human_targets	human	OTHER_ENRICHED	neuron_ctx	0.10	myeloid_ctx	1.47	1	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
 S11	KCNJ2	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S11	KCNJ4	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S11	KCNJ12	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
@@ -417,6 +553,10 @@ S12	KCNJ10	mouse_nrf2	mouse	NOT_IN_TABLE						unknown	not queried in this table:
 S12	KCNJ16	mouse_nrf2	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S12	KCNJ10	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S12	KCNJ16	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S12	KCNJ10	mouse_targets	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S12	KCNJ16	mouse_targets	mouse	OTHER_ENRICHED	neurons (P7)	0.25	OPC (P17)	7.02	2	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S12	KCNJ10	human_targets	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S12	KCNJ16	human_targets	human	OTHER_ENRICHED	neuron_ctx	2.00	astro_mature_ctx	9.74	1	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
 S12	KCNJ10	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S12	KCNJ16	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S13	GRIN1	mouse	mouse	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
@@ -444,6 +584,16 @@ S13	GRIN2A	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table:
 S13	GRIN2B	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S13	GRIN2C	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S13	GRIN2D	human_nrf2	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
+S13	GRIN1	mouse_targets	mouse	NEURON_ENRICHED	neurons (P7)	63.50	OPC (P17)	16.02	2	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S13	GRIN2A	mouse_targets	mouse	NOT_DETECTED_IN_TABLE	neurons (P7)	0.76	OPC (P17)	0.11	2	unknown	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S13	GRIN2B	mouse_targets	mouse	NEURON_ENRICHED	neurons (P7)	2.98	microglia	0.84	2	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S13	GRIN2C	mouse_targets	mouse	OTHER_ENRICHED	neurons (P7)	0.39	astrocytes (P7)	26.68	2	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S13	GRIN2D	mouse_targets	mouse	NEURON_ENRICHED	neurons (P7)	14.20	OPC (P17)	3.76	2	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S13	GRIN1	human_targets	human	NOT_DETECTED_IN_TABLE	neuron_ctx	0.20	endo_ctx	0.20	1	unknown	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S13	GRIN2A	human_targets	human	NEURON_ENRICHED	neuron_ctx	25.30	astro_fetal_ctx	1.95	1	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S13	GRIN2B	human_targets	human	NEURON_ENRICHED	neuron_ctx	10.60	endo_ctx	0.55	1	yes	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S13	GRIN2C	human_targets	human	OTHER_ENRICHED	neuron_ctx	0.10	astro_mature_ctx	3.97	1	no	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
+S13	GRIN2D	human_targets	human	NOT_DETECTED_IN_TABLE	neuron_ctx	0.10	astro_fetal_ctx	0.33	1	unknown	RNA class mean, not current or share; the class label carries the age; not the age or layer of the phenotype record
 S13	GRIN1	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S13	GRIN2A	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
 S13	GRIN2B	human_gaba	human	NOT_IN_TABLE						unknown	not queried in this table: unknown, not low
