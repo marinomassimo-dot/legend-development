@@ -37,7 +37,7 @@
      "step": "Stage A #1 (headless, opus/high), Stage B #1 (sonnet/medium), decision accepted/adapted/rejected with reason, increment 1 to its consumer",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "Chain: problem (the K branch is ordered by a share read once, eight SCI43 rows producer-read only, reopen condition dated 2026-11-10) -> choice (adapted from advisor A1/B1; sealed action differed) -> work (distinct verifier delegate sonnet/high, originals in full, 13 files with SHA-256 under files/fulltext/reopen_it48; 4 SUPPORTED, 3 PARTLY, 0 NOT_SUPPORTED; verifier 60 tool uses, 199,009 subagent tokens, 14.3 min; I spot-checked bytes: 172.7/124.5 Ohm and the -89.6 mV reversal, 13/13 SHA-256 match) -> verified result (23 percent survives as a one-dose increment at P28-P42, not a Kir2 share; no row measures a juvenile layer II/III Ba2+ share; juvenile evidence Kv7 only) -> consumers (KH1 premise, INV-18 next_test in both investigations tables, SCI43 README dated update, open question IT48-Q01, five-language view passage; no rank, sign or qualification changed) -> next decision (the resting-lever magnitude stays a transfer; the Kir2 drug-name search is open as IT48-Q01). Not shown: any juvenile Ba2+ share, any better prediction. Advisor's 'never executed' claim was partly wrong (SCI44 C ran part of it)."
+     "evidence": "Chain: problem (the K branch is ordered by a share read once, eight SCI43 rows producer-read only, reopen condition dated 2026-11-10) -> choice (adapted from advisor A1/B1; sealed action differed) -> work (distinct verifier delegate sonnet/high, originals in full, 13 files with SHA-256 under files/fulltext/reopen_it48; 5 SUPPORTED, 3 PARTLY, 0 NOT_SUPPORTED; verifier 60 tool uses, 199,009 subagent tokens, 14.3 min; I spot-checked bytes: 172.7/124.5 Ohm and the -89.6 mV reversal, 13/13 SHA-256 match) -> verified result (23 percent survives as a one-dose increment at P28-P42, not a Kir2 share; no row measures a juvenile layer II/III Ba2+ share; juvenile evidence Kv7 only) -> consumers (KH1 premise, INV-18 next_test in both investigations tables, SCI43 README dated update, open question IT48-Q01, five-language view passage; no rank, sign or qualification changed) -> next decision (the resting-lever magnitude stays a transfer; the Kir2 drug-name search is open as IT48-Q01). Not shown: any juvenile Ba2+ share, any better prediction. Advisor's 'never executed' claim was partly wrong (SCI44 C ran part of it)."
     }
    ]
   },
@@ -103,7 +103,7 @@
    }
   ],
   "dashboard_source_revision": "54b985c707f21d5f2fdc422c33f1503aadfd8301 2026-11-12T21:19:28+00:00",
-  "scientific_baseline": "increment 1 done (eight SCI43 rows reread: 4 supported, 3 partly; KH1/INV-18/README/IT48-Q01 updated; juvenile Ba2+ share still unmeasured); SCI48 delivered on main, not consumed (37 receipts unrecorded, consumer rows proposed); IT47 closed except CI #672 and site check on b67d209a",
+  "scientific_baseline": "increment 1 done (eight SCI43 rows reread: 5 supported, 3 partly; KH1/INV-18/README/IT48-Q01 updated; juvenile Ba2+ share still unmeasured); SCI48 delivered on main, not consumed (37 receipts unrecorded, consumer rows proposed); IT47 closed except CI #672 and site check on b67d209a",
   "intended_action_sealed": {
    "path": "disease-models/wwox/research/drug_repurposing/advisor_campaign_it48_20261112/advisor_sealed/INTENDED_ACTION_2.md",
    "sha256": "8abc08afc9f2bc32f0d35862110a20ec0c493be26a131aee774a1d0274514ddc",

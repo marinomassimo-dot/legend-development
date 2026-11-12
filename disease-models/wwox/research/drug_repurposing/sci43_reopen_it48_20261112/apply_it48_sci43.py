@@ -2,7 +2,7 @@
 import csv, sys
 from pathlib import Path
 HERE = Path(__file__).resolve().parent; DR = HERE.parent
-TXT = ("[IT48 update] The eight SCI43 rows that stood producer-read only were read again against the original full texts by a distinct verifier: 4 supported, 3 partly, none unsupported, 13 files kept with SHA-256 (sci43_reopen_it48_20261112/verify). "
+TXT = ("[IT48 update] The eight SCI43 rows that stood producer-read only were read again against the original full texts by a distinct verifier: 5 supported, 3 partly, none unsupported, 13 files kept with SHA-256 (sci43_reopen_it48_20261112/verify). "
        "The 23 percent figure survives as printed arithmetic but is the increment of one 60 uM Ba2+ dose in P28-P42 mouse auditory cortex (the preprint itself calls that age juvenile), not a measured Kir2 share; the cohorts of the Ba2+ and Ih panels are different cells. "
        "No row measures a Ba2+-sensitive resting conductance in layer II/III at about P13-P17; the juvenile evidence is Kv7 only (about 20 percent at a rest of -67 mV with synaptic blockers at room temperature, one study; the developmental Kv7 difference is not significant). "
        "The size of a resting lever in the juvenile slice therefore stays a transfer from an older age, not a measurement; the Kir2 drug-name search has not been run. No rank, sign or qualification changed.")
