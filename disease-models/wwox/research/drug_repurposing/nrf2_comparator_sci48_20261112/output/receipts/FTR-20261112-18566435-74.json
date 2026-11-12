@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-12T17:12:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-12T17:16:29Z",
+ "event_id": "FTR-20261112-18566435-74",
+ "evidence_basis": [
+  "verbatim_locator | proposition: Nrf2 KO mice hypersensitive to LPS; SFN-by-KO arm not in abstract | Abstract | \"Nrf2 knockout mice were hypersensitive to the neuroinflammation induced by LPS\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/output/sfn_table.tsv",
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/output/matrix.tsv",
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "Europe PMC search record abstract (article has no PMC copy per the ID converter)",
+ "study_id": {
+  "doi": "10.4049/jimmunol.181.1.680",
+  "pmid": "18566435"
+ },
+ "workflow": "SCI48 producer P (nr-z): Innamorato 2008 abstract only. Staged for the integrator; the ledger was not appended at preparation time."
+}

@@ -50,3 +50,7 @@ Davies 2016 text and Supporting Information (first step: a route the operator au
 ## Files
 
 `S0_S1_before_search.md`; `BRIEF_P.md`, `VERIFIER_BRIEF_V8.md`; `output/` (producer's tables with V8 annotations; `apply_v8_corrections.py`; receipts); `verify/` (audit, verdicts, `recompute_figures.tsv`, receipts); `hypotheses.tsv`, `outcome_matrix.tsv`, `experiment_ladder.tsv`; `build_tables.py`; `engine/`; `consumer_delta.md`; `COST_NOTE.md`. Staged receipts in `research/receipt_staging/sci46` (12, event ids -79) and `sci46v` (15, -78), all validated with `staged_receipt_check.py --check-doi`, none recorded.
+
+## Update 2026-11-12 (SCI48; the text above is kept)
+
+**Winkel 2015 (RA839) is now read beyond the abstract** (text and nine figures from the PMC page; supplement Tables S1–S4 unreachable): the knock-out is germline Nrf2-/- macrophages with **no printed check**, CDDO-Me is in **no knock-out arm** and not in the array, two genes (Zfp192, Pank1) survive in the knock-out (direction not printed), the cells are myeloid. The sentence "Winkel 2015 reaches C1 and C2 at abstract depth" (D20, "the model for the specificity readout") stands for the design (a genome-wide survivor set) and is **corrected for the knock-out criterion**: not shown as printed. Sulforaphane (prior P6, "not tested") now has germline-null neural in-vivo designs (comparator, not probe). Details, matrix and the minimum comparison: `../nrf2_comparator_sci48_20261112/README.md`. Reading debt "Winkel 2015 full text" under "Not done" is closed except the supplement.

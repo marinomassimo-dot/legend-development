@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-12T17:33:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "discussion": "read",
+  "figures": "captions_only",
+  "introduction": "read",
+  "limitations": "not_present",
+  "methods": "read",
+  "results": "read",
+  "supplementary": "not_read",
+  "tables": "not_read"
+ },
+ "event_at": "2026-11-12T17:35:45Z",
+ "event_id": "FTR-20261112-33627628-73",
+ "evidence_basis": [
+  "verbatim_locator | proposition: SFN alone had no effect in control mice, so the KO arm is unmatched | Results | \"SFN alone did not affect the immobility time during the TST and FST in control mice\"",
+  "verbatim_locator | proposition: N2a effect blocked by siRNA | Results first section | \"these effects by SFN were blocked by siRNA-Nrf2\"",
+  "verbatim_locator | proposition: slice recordings in KO | Results | \"SFN (10 mg/kg) did not alter the frequency of sEPSC in Nrf2 KO mice\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/verify/audit.md",
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/verify/verdicts.tsv"
+ ],
+ "prior_receipt": "FTR-20261112-33627628-74",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "Europe PMC fullTextXML for PMC7904924 (one request, HTTP 200, 2026-11-12T17:24Z); figure legends read, images not opened; supplementary information not read.",
+ "study_id": {
+  "doi": "10.1038/s41398-021-01261-6",
+  "pmid": "33627628"
+ },
+ "workflow": "SCI48 blind verifier V10 (claim actor nr-y), ORCH-SCI48-20261112. Staged for the integrator; the ledger was not appended at preparation time."
+}
