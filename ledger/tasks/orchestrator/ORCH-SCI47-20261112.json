@@ -9,11 +9,11 @@
  "BASELINE": "main 940182af (SCI46 landed and verified). Worktree .claude/worktrees/sci47, branch task/sci47. IT46 package not yet on main: read read-only from worktree it46 (task/it46 cfac505c). Coordinates with IT47 (integrator of shared consumers). The pasted HE47 mandate was for the plan actor, not this session; ignored by the operator's statement.",
  "CURRENT_PACKAGE": {
   "id": "A",
-  "state": "start",
-  "delegate_active": "none",
+  "state": "producer",
+  "delegate_active": "producer ib-z (sonnet/medium asked)",
   "updated": "2026-11-12"
  },
- "RESUME": "Start: bind marker, check existing reads and receipts for PMID 34634460, read IT46 s5_case/s7_case/p9_two_levers, then brief the producer for package A.",
+ "RESUME": "Wait for the producer notification; then census read-back, validate its receipts (-77), brief and run the blind verifier (-76) on source_table, inversion_check, matrix premises and lever transfers. IT46 files are copies at cfac505c; do not edit shared consumers.",
  "DECISIONS_TAKEN": [],
  "DELEGATIONS": [],
  "ESCALATIONS": [],
@@ -26,21 +26,21 @@
    "steps": [
     {
      "step": "Bind marker; check prior readings and receipts of 34634460; read IT46 s5/s7/p9 and INV-10/INV-18",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "marker recognised (mandate_watch RUNNING); prior receipt FTR-20260810-34634460-02 (text, figures read, supplement unavailable); IT46 files copied from cfac505c to inputs_it46/; INV-10/INV-18 located; perimeter sent to legend-development-4e"
     },
     {
      "step": "Frame and priors for package A written before reading the source",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "inhibitory_defect_sci47_20261112/S0_before_reading.md committed 52fcc7f9 before the source was reopened (E1-E6, P1-P7)"
     },
     {
      "step": "Producer for package A (original data reconstruction, inversion check, matrix, lever comparison)",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "producer ib-z asked sonnet/medium, dispatched 2026-11-12; brief BRIEF_P.md"
     },
     {
      "step": "Blind verifier on decisive premises and numbers, recheck of substantive corrections",
