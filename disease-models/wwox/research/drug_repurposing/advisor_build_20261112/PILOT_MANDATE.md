@@ -162,4 +162,5 @@ Keep configured capability, successful invocation, consumed advice and improved 
 
 Do not launch a 72-hour campaign automatically.
 
-BUILD_SHA: pending until landing
+BUILD_SHA: 4633abf7e18b65be0b51dde8c5dc47c89de6872e (integration and publication commit on the development repository's main; publication gate PASS, verified by ls-remote)
+BUILD_VERIFICATION: release battery on candidate 2513fe1fb7552058681a64e4d535677a00e38776 gave FAIL on two suites, both red on the base main without this change (the ranking regeneration check, fixed on main by another session; four browser tests, because the host's Chromium snap refresh needs a newer C library). Targeted reruns passed: the view suite (221 tests) with the older Chromium revision, the ranking suite after merging the fix, the advisor suite (17 tests), and the quick pre-freeze suites. No full battery was rerun on the landed SHA.
