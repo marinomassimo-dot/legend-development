@@ -1,0 +1,113 @@
+{
+  "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+  "TASK_ID": "PLAN-STRATEGIC-ADVISOR-PHASE1-20261112",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "plan",
+  "PRIORITY": "HIGH",
+  "assigned_on": "2026-11-12",
+  "OBJECTIVE": "Phase 1 of the Strategic Advisor: a callable, read-only strategic perspective (agent definition plus one invocation procedure) wired into the Orchestrator's planning loop, with captured assessments, a Stage A/Stage B protocol, and the Pilot Mandate delivered to the active main Orchestrator. Phase 2 (the bounded research pilot) belongs to the Orchestrator and is not executed here.",
+  "worktree": ".claude/worktrees/sadv",
+  "branch": "task/sadv",
+  "CURRENT_STATE": "IN_PROGRESS",
+  "CHECKPOINT": {
+    "last_verified_result": "HE47 closed and published fefbf6a0; main at d280c7c3 when this mandate was registered",
+    "first_incomplete_work": "OBJ_1_INSPECT",
+    "active_processes": "none",
+    "real_dependencies": "a new .claude/agents file is invisible to the running session (smoke needs a fresh process); Pilot Mandate delivery needs the active Orchestrator session",
+    "next_executable_step": "read the DREAM, radar, transport and dashboard entry points; probe the runtime restrictions"
+  },
+  "AUTHORISED_QUEUE_20261112": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_1_INSPECT": {
+      "order": 1,
+      "title": "Inspect current instruction chain, agent/skill formats, DREAM, radar, transport, dashboard source records",
+      "steps": [
+        {
+          "step": "Inspect current instruction chain, agent/skill formats, DREAM, radar, transport, dashboard source records",
+          "status": "IN_PROGRESS",
+          "owner": "plan"
+        }
+      ]
+    },
+    "OBJ_2_RUNTIME": {
+      "order": 2,
+      "title": "Verify what the runtime actually restricts for a custom agent profile (tools, model, effort, context isolation, new-agent visibility)",
+      "steps": [
+        {
+          "step": "Verify what the runtime actually restricts for a custom agent profile (tools, model, effort, context isolation, new-agent visibility)",
+          "status": "TODO",
+          "owner": "plan"
+        }
+      ]
+    },
+    "OBJ_3_BUILD": {
+      "order": 3,
+      "title": "Agent definition (800-1200 words), invocation procedure/skill, snapshot+capture helper, minimal routing",
+      "steps": [
+        {
+          "step": "Agent definition (800-1200 words), invocation procedure/skill, snapshot+capture helper, minimal routing",
+          "status": "TODO",
+          "owner": "plan"
+        }
+      ]
+    },
+    "OBJ_4_TEST": {
+      "order": 4,
+      "title": "Fixture tests for plumbing (snapshot, capture, Stage B reads saved Stage A), ordinary execution without advisor, removal",
+      "steps": [
+        {
+          "step": "Fixture tests for plumbing (snapshot, capture, Stage B reads saved Stage A), ordinary execution without advisor, removal",
+          "status": "TODO",
+          "owner": "plan"
+        }
+      ]
+    },
+    "OBJ_5_SMOKE": {
+      "order": 5,
+      "title": "One authorised smoke invocation with the actual profile; record result, model/effort read-back, capture fidelity, limits",
+      "steps": [
+        {
+          "step": "One authorised smoke invocation with the actual profile; record result, model/effort read-back, capture fidelity, limits",
+          "status": "TODO",
+          "owner": "plan"
+        }
+      ]
+    },
+    "OBJ_6_LAND": {
+      "order": 6,
+      "title": "Quick suites, battery on a frozen candidate, land on main, publish to development, CI",
+      "steps": [
+        {
+          "step": "Quick suites, battery on a frozen candidate, land on main, publish to development, CI",
+          "status": "TODO",
+          "owner": "plan"
+        }
+      ]
+    },
+    "OBJ_7_HANDOFF": {
+      "order": 7,
+      "title": "Add factual build metadata to the Pilot Mandate, deliver to the active main Orchestrator via existing transport, record handoff state",
+      "steps": [
+        {
+          "step": "Add factual build metadata to the Pilot Mandate, deliver to the active main Orchestrator via existing transport, record handoff state",
+          "status": "TODO",
+          "owner": "plan"
+        }
+      ]
+    },
+    "OBJ_8_REPORT": {
+      "order": 8,
+      "title": "Italian implementation report: components, mechanisms reused, mechanical vs procedural, smoke, SHAs, handoff, removal",
+      "steps": [
+        {
+          "step": "Italian implementation report: components, mechanisms reused, mechanical vs procedural, smoke, SHAs, handoff, removal",
+          "status": "TODO",
+          "owner": "plan"
+        }
+      ]
+    }
+  },
+  "VERIFICATION_EVIDENCE": []
+}
