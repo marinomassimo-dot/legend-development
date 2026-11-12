@@ -525,6 +525,15 @@ operator's mandate is not authorised by this rule, and a genuinely completed obj
 does not call for invented work or an endless busy loop. Existing budget limits and
 §21c–§21e still apply; there is no additional approval or closing ceremony.
 
+A technical verification that has not concluded (a CI run, the publication workflow, a battery) is a step of its own:
+`BLOCKED`, with the run number or the process identity that will end it as the blocker and its observed conclusion as the
+unblock, so the record stays `OPEN` and the verdict says what is awaited. When it concludes, mark the step `DONE` with its
+evidence (workflow, run number, full SHA, conclusion; `python3 framework/scripts/ci_runs.py status <sha>`), then set
+`COMPLETE`. `COMPLETE` beside an open verification is `INCONSISTENT_COMPLETE` by design. A clause such as "CI pending" written
+into a record that later closes describes the moment it was written: replace it with the observed result when you close, do
+not leave it as the last word. Wait for the event with `ci_runs.py wait <sha> --timeout N` or a process identity
+(`process_wait.py`), never by polling a name, and add no second monitor.
+
 ### Decision table — apply it before ending any turn
 
 | Observed condition | Action |
@@ -585,6 +594,18 @@ session or heartbeat is evidence of liveness, not of progress or a completed obj
 watch reads recorded states; it cannot judge whether a purported `DONE` actually meets the
 assignment. The actor must reconcile that meaning before closure; do not start a duplicate
 live session to compensate for an idle one.
+
+### Accepting a mandate: write the marker, then prove it was recognised
+
+On accepting or resuming a mandate, write `MANDATE_BOUND: <TASK_ID>` as **a line of its own in a message of its own**: nothing before it or after it on the line, no trailing
+punctuation (a `.` becomes part of the id), not inside a code fence, not as the start of a sentence. A longer line is deliberately not a marker (a quoted or negated mention
+must not bind), and the session then reads as `UNKNOWN` with `session: null` while its work goes on; 2026-11-11 the IT46 session wrote `MANDATE_BOUND: <id>. Identity: ...` and the
+SCI46 session wrote none, and the monitor could see neither. Then run `python3 framework/scripts/mandate_watch.py check --task <TASK_ID> --root <the checkout that holds the
+record> --deliver none --json` and read three things, not one: `session` is your own session id, `record_verdict` is the record you mean (a record of an unmerged worktree is read
+only with that worktree as `--root`; from the root checkout it says `NO_RECORD`), and `state` is `RUNNING` while you work or wait on a battery (a job registered with
+`mandate_watch.py job`, or recent background-task output, keeps an idle session `RUNNING`). When `state` is still `UNKNOWN` the `why` now names the session that wrote a near-miss
+line and what to change. The check proves the association and the classification; it does not prove that a dead session will be resumed (that needs a live runtime, a trusted
+workspace and the bound session id, none of which this file can guarantee).
 
 ### The bounded Stop hook
 

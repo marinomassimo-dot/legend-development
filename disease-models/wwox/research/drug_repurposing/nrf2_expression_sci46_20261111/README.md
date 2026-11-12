@@ -1,0 +1,35 @@
+# SCI46 queue item — NRF2-axis RNA by cell class: is a neuron-specific target readout above the floor? (2026-11-12)
+
+Non-canonical research material. Not medical advice; no compound; no claim on WWOX. Reference genotype class only. Labels DATO / INFERENZA / IPOTESI. RNA only: class means of FPKM (mouse, two animal pools per class; human, one neuron sample), not protein, localisation, activity or current. Predictions: `PREREGISTRATION.md` (committed 32e6f589 before the run, unedited), scored by rule in `predictions_scored.tsv`. Inputs: the local copies of GSE52564 (mouse, Zhang 2014) and GSE73721 (human, Zhang 2016) already used in SCI44; no download. Task record `ledger/tasks/orchestrator/ORCH-SCI46-20261111.json`.
+
+## Answer first
+
+1. **The four classical readouts of the NRF2 axis are at or near the floor in mouse neurons, and astrocyte-biased; a bulk or neuron-enriched readout of them is weak** (DATO, mouse P7): Nqo1 0.84 FPKM in neurons (3.02 in astrocytes; below 3.1 in every class, so astrocyte over neuron is 3.6-fold but both are low), Hmox1 2.43 (astrocytes 14.85, microglia 260.42), Nfe2l2 2.11 (astrocytes 11.87, microglia 55.57), Slc7a11 1.10 (astrocytes 34.38). The genes readable in neurons (at least 5 FPKM) are Gclm 19.55, Txnrd1 19.46, Gpx4 19.48, Keap1 11.24, G6pdx 7.97, Srxn1 7.12 and Gclc 5.98 (`neuron_readability.tsv`). **Choice changed (INFERENZA):** for a neuron the target panel of INV-08 X0/X1 should not rest on NQO1 and HMOX1, whose baseline is near the floor; fold changes on a floor denominator are unstable. Use readable targets (Gclm, Txnrd1, Gpx4, G6pdx, Srxn1) beside nuclear NRF2, and read NQO1 and HMOX1 as induced-state readouts with the baseline stated. This agrees with SCI46's rule that NQO1 alone is not a mechanism readout, and gives a reason from expression.
+2. **Composition can move HMOX1, NFE2L2 and SLC7A11 on their own** (INFERENZA from class means): they are 5- to 31-fold higher in astrocytes than neurons and 100-fold (HMOX1) higher in microglia. The organoid HMOX1 rise (INV-08 W01, no microglia) and the "target score tracks astrocytes" note (W05) are therefore compatible with a shift of cell classes; the NFE2L2 and NQO1 falls in the same organoid are not what an astrocyte shift in these class means would give for NFE2L2 (higher in astrocytes). Neither reading is shown; it strengthens the INV-08 requirement that a transcript target score be read with a composition count.
+3. **The target is present in both neurons and astrocytes (KEAP1), but NFE2L2 RNA is mouse-neuron-low** (DATO): Keap1 11.24 in neurons against 6.31 in astrocytes (1.8-fold), Nfe2l2 2.11 against 11.87 (5.6-fold). The human neuron sample reads NFE2L2 25.60 against 30.22 in mature cortical astrocytes (one neuron sample, one age; no class difference seen). A mouse and a human neuron differ here, and a single sample cannot say which is typical. For SCI46: KEAP1 is available to a Kelch-pocket binder in neurons and astrocytes at RNA level; whether NRF2 protein is limiting in a neuron is the unmeasured premise (M-K1).
+4. **The HCAR2 arm of the fumarate comparison belongs to microglia-like cells** (DATO): mouse Hcar2 (listed in the table as Niacr1; UniProt carries Hcar2, Gpr109a and Niacr1 as one mouse protein) is 18.12 in microglia and 0.10 in neurons and astrocytes, 0.21 in OPC. Choice changed: in a neuron-astrocyte culture without microglia the HCAR2 route of monomethyl fumarate (Parodi, N9 microglia) has no expressing cell class; an NRF2-independent residual of a fumarate there must be sought elsewhere (protein modification, the abstract of 30587509). Human HCAR2 is absent from the human table (not zero).
+5. **Wwox is not neuron-restricted at RNA level** (DATO): 4.63 in neurons, 3.30 in astrocytes, 5.59 in OPC (mouse; ratio 1.4); human single neuron 4.60 against 1.85 in mature cortical astrocytes. Relevance: the neuron-specific deletion carries the phenotype (W09) although the gene is expressed in astrocytes at a similar level; astrocytic NRF2 as a compartment (NH4) is not excluded by absence of Wwox there.
+
+## Predictions scored (`predictions_scored.tsv`)
+
+NP1 held (Nfe2l2 and Keap1 detected in all four classes). NP2 held (Nqo1 astrocytes 3.6-fold over neurons). NP3 held (Hmox1 highest in microglia, 260.42). NP4 held on the table symbol Niacr1 (a stated deviation: Hcar2 is absent under its current symbol; the alias was checked in UniProt). **NP5 failed**: Nqo1 in astrocytes is 3.02, not above 20 (the neuron half held, 0.84). **NP6 failed**: Nfe2l2 differs 5.6-fold between neurons and astrocytes (Keap1 does not). **NP7 failed**: the human neuron NQO1 (3.30) is below mature cortical, hippocampal and tumour astrocytes but above fetal astrocytes (0.52). NP8 partly: detected in both, the neuron-over-astrocyte ratio is 1.4 (the preregistered factor was two). NP9 descriptive held.
+
+## Verification and limits
+
+* **Reproduction check (software):** for the genes also run in SCI44 (Gfap, Rbfox3) the new tables reproduce the SCI44 class means and input hashes exactly (14 mouse rows, 20 human rows, 0 mismatches). No second delegate was used: the question is a count on a hash-recorded input, and the decisive numbers are in the tables.
+* **Limits:** P7 mouse neurons, astrocytes and microglia and P17 OPC are not the P13-17 layer II/III context nor a WWOX-deficient cell; purified classes carry some carry-over (Gfap 5.86 in neurons against 125.82 in astrocytes); two pools per class; one human neuron sample from a 25-year-old cortex; the human table has no G6PD or HCAR2 row. RNA is not protein or nuclear NRF2. The classes in the human table are not matched to the mouse ones.
+* **Not done:** a larger cell-class resource at P14-P28 (the IT45 B2 need) is not on this disk; nothing was downloaded.
+
+## Consumer delta (proposals; nothing applied)
+
+| # | Recipient | Proposal |
+|---|---|---|
+| 1 | INV-08 steps X0 and X1 (IT46) | A neuron-readable target panel (Gclm, Txnrd1, Gpx4, G6pdx, Srxn1, Gclc) beside nuclear NRF2; NQO1 and HMOX1 as induced-state readouts with the baseline per class; GSH and GPX4 risk panel unchanged |
+| 2 | `keap1_nrf2_sci46_20261111/engine/new_measurements.tsv` M-K1 and `hypotheses.tsv` NH1 (IT46 consumes; SCI-owned note) | Dated update: target presence per class supports KEAP1 in neurons and astrocytes; NFE2L2 RNA mouse-neuron-low, human single sample not; the readout must be per class |
+| 3 | `nrf2_inv08_20261107` W01 and W05 notes (IT46) | HMOX1, NFE2L2 and SLC7A11 are astrocyte-biased in class means; keep the composition caveat on the transcript target score |
+| 4 | Comparison C-K2 (fumarate comparator) | HCAR2 route requires a microglia-like cell; absent from neuron and astrocyte class means |
+| 5 | `kchan_expression_sci44_20261111` pattern | Reuse: the same loader with another gene list answers a presence question in minutes on the hash-recorded inputs; no second delegate needed |
+
+## Files
+
+`PREREGISTRATION.md`; `nrf2_expression.py`; `nrf2_expression_mouse.tsv`, `nrf2_expression_human.tsv`; `score_predictions.py`; `predictions_scored.tsv`; `neuron_readability.tsv`.

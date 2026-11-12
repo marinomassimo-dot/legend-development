@@ -17,6 +17,12 @@ competing_explanation, a hypothesis id inside an experiment's `hypothesis` cell,
 comparison_arms). A token that matches no known id is listed in `unresolved_refs`, never guessed. The matrix
 columns (H1..H7) are the producer's own labels and are not mapped to alternative ids.
 
+A third role, `hypotheses_only`, is for a package whose hypotheses table has no alternatives, experiments or arms to join (it keeps
+its own layout: the key column is hyp_id, hypothesis_id or id). Its rows are returned verbatim with their columns, the key as
+`package::key` (local ids repeat across packages) and the investigation the manifest names; no field is mapped to another here:
+which cell answers which question of a consumer is that consumer's reviewable choice. `check` states how many hypotheses sit in
+folders the manifest does not name, because a hypothesis nobody can reach is capacity that is not used.
+
 Which packages are consumed is explicit: `hypothesis_packages.tsv` lists each folder, its role and why. A folder
 that is merely present is not read. Two roles are kept apart, because their rows mean different things:
 `physiological_hypotheses` (hypotheses, alternatives, experiments, matrix; linked to investigations by the package's
@@ -47,7 +53,8 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 DR = REPO / "disease-models/wwox/research/drug_repurposing"
 MANIFEST = DR / "hypothesis_packages.tsv"
-ROLES = ("physiological_hypotheses", "pharmacological_comparison")
+ROLES = ("physiological_hypotheses", "pharmacological_comparison", "hypotheses_only")
+HYP_KEY_COLUMNS = ("hyp_id", "hypothesis_id", "id")   # the key column of a hypotheses table differs by producer; the first one present is the key
 MANIFEST_FIELDS = ("package", "dir", "role", "inv_id", "why")
 LINK_FIELDS = ("hyp_id", "kind", "need_id", "inv_id", "card_ids", "link_state", "carried_check", "source")
 LINK_STATES = ("PROPOSED_NOT_APPLIED", "CARRIED_IN_TEXT")
@@ -202,6 +209,29 @@ def load_comparison(pkg: Path) -> dict:
             "source": out.name, "candidates": info["candidates"], "state": info["state"], "diagnosis": info["diagnosis"]}
 
 
+def load_hypotheses_only(pkg: Path) -> dict:
+    """hypotheses.tsv of a package kept in its own layout: rows verbatim, the key column named, duplicates and an empty table stated."""
+    pkg = Path(pkg)
+    out = pkg / "output" if (pkg / "output").is_dir() else pkg
+    path = out / "hypotheses.tsv"
+    state, rows, refs, dup, key = "MISSING", {}, {}, [], ""
+    if path.is_file():
+        with open(path, newline="", encoding="utf-8") as f:
+            header = next(csv.reader(f, delimiter="\t"), [])
+        key = next((c for c in HYP_KEY_COLUMNS if c in header), "")
+        state = "NO_KEY_COLUMN" if not key else "OK"
+        for r, ref in (_tsv_lined(path) if key else []):
+            k = (r[key] or "").strip()
+            if k in rows:
+                dup.append(k)
+            rows[k] = r
+            refs[k] = ref
+        if state == "OK" and not rows:
+            state = "EMPTY"
+    return {"role": "hypotheses_only", "dir": out, "hyps": rows, "key_column": key, "refs": refs, "duplicates": dup, "state": state,
+            "columns": list(next(iter(rows.values()))) if rows else []}
+
+
 def _need_ids() -> set[str]:
     with open(DR / "needs/needs.json", encoding="utf-8") as f:
         return {n["id"] for n in json.load(f)["needs"]}
@@ -223,7 +253,7 @@ def load_all(manifest: Path = MANIFEST) -> list[dict]:
     out = []
     for m in read_manifest(manifest):
         d = DR / m["dir"]
-        p = load_package(d) if m["role"] == "physiological_hypotheses" else load_comparison(d)
+        p = (load_package(d) if m["role"] == "physiological_hypotheses" else load_hypotheses_only(d) if m["role"] == "hypotheses_only" else load_comparison(d))
         p.update({"name": m["package"], "inv_id": m.get("inv_id") or "", "why": m.get("why") or ""})
         out.append(p)
     return out
@@ -248,6 +278,14 @@ def validate(pkg: dict, needs: set[str] | None = None, invs: dict | None = None,
         for k, r in pkg["meas"].items():
             blocked = _blocked_keys(r["blocks_which_comparison_row"], pkg["cmp"])
             errs += [f"{w}: measurement {k} blocks {b!r}, not a comparison row key" for b in blocked if b not in pkg["cmp"]]
+        return errs
+    if pkg.get("role") == "hypotheses_only":
+        w = f"{pkg['dir'].parent.name} hypotheses"
+        if pkg["state"] != "OK":
+            errs.append(f"{w}: {pkg['state']} ({pkg['dir'].name}/hypotheses.tsv)")
+        if pkg.get("inv_id") not in invs:
+            errs.append(f"{w}: manifest inv_id {pkg.get('inv_id')!r} not in the investigations table")
+        errs += [f"{w}: key {k!r} appears more than once ({pkg['key_column']}); the later row would hide the earlier" for k in dict.fromkeys(pkg["duplicates"])]
         return errs
     cols = set(_matrix_columns(pkg).values())
     for a, c in alt_columns(pkg).items():
@@ -291,8 +329,8 @@ def validate_manifest(manifest: Path = MANIFEST) -> list[str]:
             errs.append(f"{w}: role {m.get('role')!r}")
         if not (DR / (m.get("dir") or "x")).is_dir():
             errs.append(f"{w}: directory {m.get('dir')!r} not found")
-        if m.get("role") == "pharmacological_comparison" and not (m.get("inv_id") or "").strip():
-            errs.append(f"{w}: a comparison names the investigation it belongs to")
+        if m.get("role") in ("pharmacological_comparison", "hypotheses_only") and not (m.get("inv_id") or "").strip():
+            errs.append(f"{w}: this role names the investigation the package belongs to")
     return errs
 
 
@@ -394,6 +432,38 @@ def comparison_for(pkgs: list[dict], inv_id: str) -> dict:
     return {"inv_id": inv_id, "state": state, "rows": out, "sources": sources}
 
 
+def unlisted_hypothesis_counts(manifest: Path = MANIFEST) -> dict[str, int]:
+    """Hypotheses in the folders the manifest does not name: rows of hypotheses.tsv, whatever the key column is called."""
+    out = {}
+    for d in unlisted_packages(manifest):
+        p = load_hypotheses_only(DR / d)
+        if p["state"] in ("OK", "EMPTY"):
+            out[d] = len(p["hyps"])
+    return out
+
+
+def hypotheses_for(pkgs: list[dict], inv_id: str) -> dict:
+    """Hypotheses of the `hypotheses_only` packages the manifest ties to this investigation, verbatim, each as `package::key`. A different kind of record from
+    `record_for` (no alternatives, experiments or arms are joined, none is invented) and from the comparison rows."""
+    out, sources = [], []
+    for pkg in (p for p in pkgs if p.get("role") == "hypotheses_only" and p.get("inv_id") == inv_id):
+        name = pkg["dir"].parent.name
+        sources.append({"package": name, "state": pkg["state"], "key_column": pkg["key_column"], "rows": len(pkg["hyps"])})
+        for k, r in pkg["hyps"].items():
+            out.append({"id": f"{name}::{k}", "key": k, "package": name, "kind": "hypothesis_row_verbatim", "gene_arc": False, "inv_id": inv_id,
+                        "row": r, "columns": pkg["columns"], "key_column": pkg["key_column"], "source_ref": pkg["refs"][k]})
+    unread = [x for x in sources if x["state"] != "OK"]
+    state = "HYPOTHESES_PRESENT" if out else "HYPOTHESES_NOT_READ" if unread else "NO_HYPOTHESES_LISTED"
+    return {"inv_id": inv_id, "state": state, "rows": out, "sources": sources}
+
+
+def _brief_hyp(rec: dict) -> str:
+    L = [f"{rec['inv_id']} hypotheses in their own layout: {rec['state']}"]
+    for r in rec["rows"]:
+        L.append(f"  {r['id']} columns={len(r['columns'])} key_column={r['key_column']} at {r['source_ref']}")
+    return "\n".join(L)
+
+
 def _brief(rec: dict) -> str:
     L = [f"{rec['inv_id']}: {rec['state']}"]
     if rec["state"] == "UNLINKED":
@@ -437,16 +507,20 @@ def main(argv=None) -> int:
             for inv in {l["inv_id"] for l in p["links"]}:
                 for h in record_for([p], inv)["hypotheses"]:
                     broken += [f"{h['package']} {h['hyp_id']}: BROKEN_REFERENCE {t}" for t, c in h["ref_classes"].items() if c == "BROKEN_REFERENCE"]
+        for inv in {p["inv_id"] for p in pkgs if p["role"] == "hypotheses_only"}:
+            ids = [r["id"] for r in hypotheses_for(pkgs, inv)["rows"]]
+            broken += [f"{i}: hypothesis id appears in more than one package for {inv}" for i in dict.fromkeys(ids) if ids.count(i) > 1]
         for inv in {p["inv_id"] for p in pkgs if p["role"] == "pharmacological_comparison"}:
             for r in comparison_for(pkgs, inv)["rows"]:
                 broken += [f"{r['package']} {r['key']}: BROKEN_REFERENCE {t}" for t in r["broken_decisive_refs"]]
-        n = sum(len(p.get("links", [])) + len(p.get("cmp", {})) for p in pkgs)
+        n = sum(len(p.get("links", [])) + len(p.get("cmp", {})) + len(p.get("hyps", {})) * (p["role"] == "hypotheses_only") for p in pkgs)
         print("\n".join(errs + [f"WARN {b}" for b in broken]) if errs or broken else f"OK: {n} rows over {len(pkgs)} manifest packages")
+        counts = unlisted_hypothesis_counts()
         for d in unlisted_packages():
-            print(f"INFO not in manifest, not read: {d}")
+            print(f"INFO not in manifest, not read: {d}" + (f" ({counts[d]} hypotheses unreachable)" if counts.get(d) else ""))
         return 1 if errs else 0
-    rec, cmp_ = record_for(pkgs, a.inv), comparison_for(pkgs, a.inv)
-    print(json.dumps({"hypotheses": rec, "comparison": cmp_}, indent=1, ensure_ascii=False) if a.json else _brief(rec) + "\n" + _brief_cmp(cmp_))
+    rec, cmp_, own = record_for(pkgs, a.inv), comparison_for(pkgs, a.inv), hypotheses_for(pkgs, a.inv)
+    print(json.dumps({"hypotheses": rec, "comparison": cmp_, "hypotheses_own_layout": own}, indent=1, ensure_ascii=False) if a.json else _brief(rec) + "\n" + _brief_hyp(own) + "\n" + _brief_cmp(cmp_))
     return 0
 
 

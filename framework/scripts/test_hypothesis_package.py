@@ -11,6 +11,7 @@ from __future__ import annotations
 import copy
 import hashlib
 import sys
+import csv
 import tempfile
 import unittest
 from pathlib import Path
@@ -319,6 +320,63 @@ class ComparisonSource(unittest.TestCase):
         errs = hp.validate(p, needs=set(), invs={"INV-05": {}}, cards=Path("."))
         self.assertTrue(any("COMPARISON_FILE_MISSING" in e for e in errs))
         self.assertEqual(hp.comparison_for([p], "INV-05")["state"], "COMPARISON_NOT_READ")
+
+
+class HypothesesOwnLayout(unittest.TestCase):
+    """role hypotheses_only: a package that keeps its own hypotheses layout is reachable, verbatim, without a mapping."""
+
+    def pkg(self, root, name, header, rows):
+        o = Path(root) / name / "output"
+        o.mkdir(parents=True)
+        (o / "hypotheses.tsv").write_text("\t".join(header) + "\n" + "".join("\t".join(r) + "\n" for r in rows))
+        p = hp.load_hypotheses_only(Path(root) / name)
+        p["inv_id"] = "INV-9"
+        return p
+
+    def test_real_packages_reach_their_investigation_in_their_own_layout(self):
+        pk = hp.load_all()
+        own = hp.hypotheses_for(pk, "INV-18")
+        self.assertEqual(own["state"], "HYPOTHESES_PRESENT")
+        by_pkg = {}
+        for r in own["rows"]:
+            by_pkg.setdefault(r["package"], set()).add(r["key_column"])
+        self.assertEqual(by_pkg["ph_k2p_sci45_20261111"], {"id"})                 # three producers, three key columns
+        self.assertEqual(by_pkg["hcn_20261107"], {"hypothesis_id"})
+        self.assertEqual(by_pkg["potassium_conductances_sci43_20261110"], {"hyp_id"})
+        self.assertTrue(all(r["gene_arc"] is False and r["kind"] == "hypothesis_row_verbatim" for r in own["rows"]))
+        self.assertEqual(hp.validate_manifest(), [])
+        first = own["rows"][0]
+        path, _, line = first["source_ref"].rpartition(":")
+        self.assertEqual(Path(hp.REPO / path).read_text(encoding="utf-8").split("\n")[int(line) - 1].split("\t")[0], first["key"])
+        linked = {h["hyp_id"] for h in hp.record_for(pk, "INV-18")["hypotheses"]}
+        self.assertTrue(linked and linked.isdisjoint({r["key"] for r in own["rows"]}))   # the two records are not merged
+
+    def test_a_second_input_with_other_ids_and_other_names_reaches_the_same_path(self):
+        with tempfile.TemporaryDirectory() as t:
+            a = self.pkg(t, "a", ["hypothesis_id", "claim", "probe"], [["ZQ1", "x lowers y", "tool-alpha"], ["ZQ2", "y needs z", "tool-beta"]])
+            b = self.pkg(t, "b", ["id", "statement"], [["ZQ1", "a different claim with the same local id"]])
+            own = hp.hypotheses_for([a, b], "INV-9")
+            self.assertEqual([r["id"] for r in own["rows"]], ["a::ZQ1", "a::ZQ2", "b::ZQ1"])      # local ids repeat across packages: the qualified id does not
+            self.assertEqual(own["rows"][2]["row"], {"id": "ZQ1", "statement": "a different claim with the same local id"})
+            self.assertEqual(hp.hypotheses_for([a, b], "INV-7")["state"], "NO_HYPOTHESES_LISTED")
+
+    def test_a_table_that_cannot_be_read_is_not_an_empty_one(self):
+        with tempfile.TemporaryDirectory() as t:
+            nokey = self.pkg(t, "nokey", ["statement"], [["only text"]])
+            empty = self.pkg(t, "empty", ["hyp_id", "statement"], [])
+            dup = self.pkg(t, "dup", ["hyp_id", "statement"], [["H1", "first"], ["H1", "second"]])
+            self.assertEqual((nokey["state"], empty["state"]), ("NO_KEY_COLUMN", "EMPTY"))
+            self.assertEqual(hp.hypotheses_for([nokey], "INV-9")["state"], "HYPOTHESES_NOT_READ")
+            invs = {"INV-9": {}}
+            self.assertTrue(any("NO_KEY_COLUMN" in e for e in hp.validate(nokey, invs=invs)))
+            self.assertTrue(any("more than once" in e for e in hp.validate(dup, invs=invs)))
+            self.assertEqual(hp.validate(self.pkg(t, "ok", ["hyp_id", "x"], [["H1", "a"]]), invs=invs), [])
+
+    def test_unreachable_hypotheses_are_counted_where_they_sit(self):
+        counts = hp.unlisted_hypothesis_counts()
+        for d, n in counts.items():
+            with open(hp.DR / d / "output/hypotheses.tsv", newline="", encoding="utf-8") as f:
+                self.assertEqual(n, sum(1 for _ in csv.DictReader(f, delimiter="\t")), d)
 
 
 if __name__ == "__main__":

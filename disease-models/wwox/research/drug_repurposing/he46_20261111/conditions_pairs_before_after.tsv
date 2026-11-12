@@ -1,0 +1,9 @@
+package	prop_a	prop_b	state_before	state_after	reasons_after
+ampa_comparison_it41_20261109	D05	D15	INSUFFICIENT	DOCUMENTED_INCOMPATIBILITY	temperature_C: 30-32 C / 4 C; Ca stated only in a (2 mM Ca); Mg stated only in a (2 mM Mg); composition stated only in b (GluA2/GluK1); holding_potential_mV stated only in a (-90 mV); system stated on
+ampa_comparison_it41_20261109	D06	D15	INSUFFICIENT	DOCUMENTED_INCOMPATIBILITY	temperature_C: 30-32 C / 4 C; Ca stated only in a (1.2 mM Ca); Mg stated only in a (1 mM Mg); composition stated only in b (GluA2/GluK1); system stated only in a (slice); system not recognised or not 
+ampa_comparison_it41_20261109	D09	D15	INSUFFICIENT	DOCUMENTED_INCOMPATIBILITY	temperature_C: 30-34 C / 4 C; composition stated only in b (GluA2/GluK1); system stated only in a (slice); system not recognised or not the same on both sides
+ampa_comparison_it41_20261109	D15	D16	INSUFFICIENT	DOCUMENTED_INCOMPATIBILITY	temperature_C: 4 C / room temperature (read as 18-26 C); composition: values overlap without being equal (GluA2/GluK1 / GluA2); system stated only in b (HEK); system not recognised or not the same on 
+ampa_comparison_it41_20261109	D15	D20	INSUFFICIENT	DOCUMENTED_INCOMPATIBILITY	temperature_C: 4 C / 30-32 C; composition stated only in a (GluA2/GluK1); holding_potential_mV stated only in b (-90 mV); system stated only in b (slice); system not recognised or not the same on both
+chloride_gradient_sci42_20261110	P01	P08	INSUFFICIENT	DOCUMENTED_INCOMPATIBILITY	temperature_C: 35 C / 32-34 C; no condition shared beyond the system
+chloride_gradient_sci42_20261110	P03	P08	INSUFFICIENT	DOCUMENTED_INCOMPATIBILITY	temperature_C: 35 C / 32-34 C; system stated only in b (slice); system not recognised or not the same on both sides
+glun2b_comparators_sci42_20261110	D08	D11	DOCUMENTED_AGREEMENT	INSUFFICIENT	pH stated only in a (pH 6.9)
