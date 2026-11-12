@@ -1,0 +1,11 @@
+role	cell_class	rows	with_loss_arm	loss_verified_yes	database_copy
+covalent	astrocyte	4	2	0	0
+covalent	microglia	1	1	0	0
+covalent	neuron_or_brain	2	1	0	0
+covalent	non_neural	7	4	0	6
+genetic	neuron_or_brain	1	1	0	0
+non_covalent	microglia	8	6	4	0
+non_covalent	neuron_or_brain	11	2	0	0
+non_covalent	non_neural	19	3	0	17
+opposite	microglia	1	1	0	0
+opposite	non_neural	3	1	0	0

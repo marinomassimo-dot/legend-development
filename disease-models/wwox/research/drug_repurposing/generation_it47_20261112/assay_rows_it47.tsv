@@ -1,0 +1,58 @@
+row_id	compound_or_tool	role	cell_class	cell	loss_arm	loss_arm_present	loss_verified	database_copy	depth	readout_class
+A01	KI-696 (CHEMBL3819587)	non_covalent	non_neural	cell-free protein	none	no	n/a	yes	database_record_only	binding
+A02	KI-696 (CHEMBL3819587)	non_covalent	non_neural	cell-free protein	none	no	n/a	yes	database_record_only	binding
+A03	KI-696 = Tran compound 9	non_covalent	non_neural	cell-free protein	none	no	n/a	no	IT45_reader_full_text	binding
+A04	KI-696	non_covalent	non_neural	NHBE (normal human bronchial epithelial)	none	no	n/a	yes	database_record_only	translocation
+A05	KI-696	non_covalent	non_neural	bronchial epithelial cells from a COPD patient	none	no	n/a	yes	database_record_only	mRNA
+A06	KI-696	non_covalent	non_neural	bronchial epithelial cells from a COPD patient	none	no	n/a	yes	database_record_only	mRNA
+A07	KI-696	non_covalent	non_neural	bronchial epithelial cells from a COPD patient	none	no	n/a	yes	database_record_only	mRNA
+A08	KI-696	non_covalent	non_neural	bronchial epithelial cells from a COPD patient	none	no	n/a	yes	database_record_only	mRNA
+A09	KI-696	non_covalent	non_neural	BEAS2B (human bronchial epithelial line)	none	no	n/a	yes	database_record_only	enzyme activity
+A10	KI-696	non_covalent	non_neural	NHBE	none (non-targeting control arm)	no	unstated in ChEMBL (no knockdown efficiency field)	yes	database_record_only	mRNA
+A11	KI-696	non_covalent	non_neural	NHBE	siRNA	yes	unstated in ChEMBL (no knockdown efficiency field)	yes	database_record_only	mRNA
+A12	KI-696	non_covalent	non_neural	NHBE	none (non-targeting control arm)	no	unstated in ChEMBL (no knockdown efficiency field)	yes	database_record_only	mRNA
+A13	KI-696	non_covalent	non_neural	NHBE	siRNA	yes	unstated in ChEMBL (no knockdown efficiency field)	yes	database_record_only	mRNA
+A14	KI-696	non_covalent	non_neural	NHBE	none (non-targeting control arm)	no	unstated in ChEMBL (no knockdown efficiency field)	yes	database_record_only	enzyme activity
+A15	KI-696	non_covalent	non_neural	NHBE	siRNA	yes	unstated in ChEMBL (no knockdown efficiency field)	yes	database_record_only	enzyme activity
+A16	bardoxolone methyl (CHEMBL1762621; ChEMBL synonym CDDO-Me)	covalent	non_neural	NHBE	none (non-targeting control arm)	no	unstated in ChEMBL	yes	database_record_only	mRNA
+A17	bardoxolone methyl (CHEMBL1762621; ChEMBL synonym CDDO-Me)	covalent	non_neural	NHBE	siRNA	yes	unstated in ChEMBL	yes	database_record_only	mRNA
+A18	bardoxolone methyl (CHEMBL1762621; ChEMBL synonym CDDO-Me)	covalent	non_neural	NHBE	none (non-targeting control arm)	no	unstated in ChEMBL	yes	database_record_only	mRNA
+A19	bardoxolone methyl (CHEMBL1762621; ChEMBL synonym CDDO-Me)	covalent	non_neural	NHBE	siRNA	yes	unstated in ChEMBL	yes	database_record_only	mRNA
+A20	bardoxolone methyl (CHEMBL1762621; ChEMBL synonym CDDO-Me)	covalent	non_neural	NHBE	none (non-targeting control arm)	no	unstated in ChEMBL	yes	database_record_only	enzyme activity
+A21	bardoxolone methyl (CHEMBL1762621; ChEMBL synonym CDDO-Me)	covalent	non_neural	NHBE	siRNA	yes	unstated in ChEMBL	yes	database_record_only	enzyme activity
+A22	KI-696	non_covalent	non_neural	NHBE	none for this endpoint	no	n/a	yes	database_record_only	viability/morphology and GSH
+A23	KI-696	non_covalent	non_neural	BEAS2B	none	no	n/a	yes	database_record_only	viability
+A24	KI-696	non_covalent	non_neural	lung	none	no	n/a	yes	database_record_only	mRNA
+A25	Ki 696-2	non_covalent	neuron_or_brain	LUHMES differentiated	none	no	n/a	no	figure viewed	viability
+A26	Ki 696-1	non_covalent	neuron_or_brain	LUHMES differentiated	none	no	n/a	no	figure viewed	viability
+A27	Ki 696-2	non_covalent	neuron_or_brain	LUHMES	none	no	n/a	no	full text + figure	morphology (neurite)
+A28	Ki 696-2	non_covalent	neuron_or_brain	LUHMES	none	no	n/a	no	figure viewed	translocation (protein)
+A29	Ki 696-2	non_covalent	neuron_or_brain	LUHMES	none	no	n/a	no	figure viewed	translocation (protein)
+A30	Ki 696-2	non_covalent	neuron_or_brain	LUHMES	none	no	n/a	no	figure viewed	mRNA
+A31	Ki 696-2	non_covalent	neuron_or_brain	LUHMES	none	no	n/a	no	figure viewed	mRNA
+A32	Ki 696-2	non_covalent	neuron_or_brain	LUHMES	none	no	n/a	no	figure viewed	mRNA
+A33	NRF2 siRNA (25 nM) in LUHMES	genetic	neuron_or_brain	LUHMES	siRNA	yes	partial: nuclear NRF2 protein about 0.68 of NTC (N=3, **); authors: 'apparent insufficient Nrf2-knockdown'	no	figure viewed	mRNA
+A34	Ki 696-2 under NRF2 siRNA	non_covalent	neuron_or_brain	LUHMES	siRNA	yes	inadequate (A33)	no	figure viewed	viability
+A35	Ki 696-2 under NRF2 siRNA, with annonacin	non_covalent	neuron_or_brain	LUHMES	siRNA	yes	partial	no	figure viewed	mRNA
+A36	bardoxolone methyl	covalent	neuron_or_brain	LUHMES	none	no	n/a	no	full text + figure	viability
+A37	C7 = KI-696	non_covalent	microglia	primary rat microglia (neonatal SD rat spinal cord, Iba1 > 90%)	none	no	n/a	no	full text, figure not viewed	reporter / enzyme activity
+A38	C7 = KI-696	non_covalent	microglia	primary rat microglia	none	no	n/a	no	full text, figure not viewed	binding in cells (Co-IP; not a Kelch binding constant)
+A39	C7 = KI-696	non_covalent	microglia	primary rat microglia, stable shRNA lines	shRNA (control arm)	yes	n/a	no	figure viewed	mRNA
+A40	C7 = KI-696 under sh-Nrf2	non_covalent	microglia	primary rat microglia	shRNA	yes	yes: Nrf2 mRNA about 0.1 of sh-C (Fig 5B), protein band reduced (Fig 5A); text: over 95% knockdown (declared)	no	figure viewed	mRNA
+A41	C7 = KI-696 under ko-Nrf2	non_covalent	microglia	primary rat microglia	knockout	yes	yes: Nrf2 mRNA about 0.05 of sh-C; NRF2 band faint, NQO1 band near absent (Fig 5A,B)	no	figure viewed	mRNA
+A42	C7 = KI-696	non_covalent	microglia	primary rat microglia	shRNA and CRISPR KO	yes	yes (A40, A41)	no	figure viewed	viability
+A43	C7 = KI-696	non_covalent	microglia	primary rat microglia	shRNA and CRISPR KO	yes	yes	no	figure viewed	apoptosis (TUNEL)
+A44	C7 = KI-696 under ko-Keap1	non_covalent	microglia	primary rat microglia	KEAP1 knockout (epistasis arm)	yes	KEAP1 mRNA about 0.05 of control (Fig 5I)	no	figure viewed	mRNA and viability
+A45	ML385 with C7	opposite	microglia	primary rat microglia	inhibitor	yes	no verification of NRF2 inhibition in the passages read (an immunofluorescence Nrf2 abolition is claimed, Fig 4B not viewed)	no	full text, figure not viewed	viability / apoptosis
+A46	C7 = KI-696	non_covalent	non_neural	spinal cord	none in vivo	no	n/a	no	full text, figure not viewed	function (locomotor) and histology
+A47	tBHQ and sulforaphane	covalent	astrocyte	mixed neuron-astrocyte cortical cultures	knockout	yes	genotype-based (cultures from Nrf2 knock-out mice)	no	abstract_only	reporter and viability
+A48	tBHQ	covalent	neuron_or_brain	primary cortical cultures	knockout, rescue, dominant_negative	yes	not stated in abstract	no	abstract_only	reporter and viability
+A49	tBHQ	covalent	astrocyte	astrocytes and neurons from the same cultures	dominant_negative (astrocyte-targeted)	yes	not stated in abstract	no	abstract_only	mRNA (microarray)
+A50	dimethyl fumarate (and monomethyl fumarate)	covalent	non_neural	whole animal (CNS)	knockout	yes	genotype-based	no	abstract_only	function and histology
+A51	monomethyl fumarate	covalent	astrocyte	murine neurons; human or rodent astrocytes	none in these in vitro assays (abstract)	no	n/a	no	abstract_only	viability; mass spectrometry (modification)
+A52	monomethyl fumarate	covalent	microglia	N9 microglial line (embryonic day 13, v-myc immortalised)	antibody (HCAR2 blockade, not an NRF2-loss arm)	yes	antibody efficacy shown only by reversal of the MMF effect	no	full text via XML, figures not viewed	mRNA
+A53	dimethyl fumarate	covalent	astrocyte	neurons (N1E-115 line) and astrocytes	none	no	n/a	no	abstract_only	protein modification (mass spectrometry)
+A54	ML385	opposite	non_neural	cell-free	none	no	n/a	no	full text via XML, figures not viewed	binding (protein-DNA)
+A55	ML385	opposite	non_neural	A549 lysate	none	no	n/a	no	full text via XML	enzyme activity (probe labelling)
+A56	ML385	opposite	non_neural	H460 and BEAS2B	isogenic KEAP1 context	yes	knock-in documented (Suppl Fig 6)	no	full text via XML	mRNA and viability (colony)
+A57	4-95 (phosphodiester Keap1-Nrf2 PPI inhibitor)	non_covalent	neuron_or_brain	cell-free; SH-SY5Y for cell data	none (a KEAP1 shRNA line is described in Methods; its result was not located)	no	n/a	no	partial_fulltext_read (keyword scan plus paragraphs)	binding (MST)
