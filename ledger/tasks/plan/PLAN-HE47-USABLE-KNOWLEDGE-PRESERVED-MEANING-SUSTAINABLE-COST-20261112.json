@@ -7,7 +7,7 @@
   "ACTOR_ID": "plan",
   "PRIORITY": "HIGH",
   "assigned_on": "2026-11-12",
-  "OBJECTIVE": "HE47: capabilities already built are actually used; scientific meaning of inputs is preserved; repeated work, context cost and useless temporaries go down. First increment H1: replace the textual 'independent route' recognition in the IT46 comparison engine with an explicit structured intention.",
+  "OBJECTIVE": "HE47 (full mandate H1-H8 received 2026-11-12): capabilities already built are actually used; scientific meaning of inputs preserved; repeated work, context cost and useless temporaries reduced.",
   "worktree": ".claude/worktrees/he47",
   "branch": "task/he47",
   "CURRENT_STATE": "IN_PROGRESS",
@@ -22,21 +22,87 @@
     "MANDATE_STATE": "OPEN",
     "OBJ_H1": {
       "order": 1,
-      "title": "H1: structured intention replaces the textual 'independent route' guard; keep separate source reading depth, what the proposition measures, relation to the target (the operator message was cut after the third item)",
+      "title": "Explicit structured intention replaces the textual 'independent route' guard in the IT46 comparison engine; keep apart source reading depth, what the proposition measures, relation to the mechanism, direction of evidence, reagent role in the comparison, support for a therapeutic proposal; counter-evidence kept, a mention does not promote a role, unclassified case explicit, old packages still readable, no new gate; fields agreed with IT47 and Science; proven on two packages of different mechanisms",
       "steps": [
         {
-          "step": "H1: structured intention replaces the textual 'independent route' guard; keep separate source reading depth, what the proposition measures, relation to the target (the operator message was cut after the third item)",
+          "step": "Explicit structured intention replaces the textual 'independent route' guard in the IT46 comparison engine; keep apart source reading depth, what the proposition measures, relation to the mechanism, direction of evidence, reagent role in the comparison, support for a therapeutic proposal; counter-evidence kept, a mention does not promote a role, unclassified case explicit, old packages still readable, no new gate; fields agreed with IT47 and Science; proven on two packages of different mechanisms",
           "status": "IN_PROGRESS",
           "owner": "plan"
         }
       ]
     },
-    "OBJ_RECEIVED": {
+    "OBJ_H2": {
       "order": 2,
-      "title": "Operator message received only through H1 (list cut at 'relazione'); H2+ not received - ask nothing, work H1, report the gap",
+      "title": "From reader to real consumer: support IT47 at the technical boundary (qualified local ids, cell provenance, explicit ambiguity and missing columns, empty vs absent file, no silent equivalence); verify one real generator run; examine the GSK3/eIF2B multi-investigation package with minimum reuse of the current format",
       "steps": [
         {
-          "step": "Operator message received only through H1 (list cut at 'relazione'); H2+ not received - ask nothing, work H1, report the gap",
+          "step": "From reader to real consumer: support IT47 at the technical boundary (qualified local ids, cell provenance, explicit ambiguity and missing columns, empty vs absent file, no silent equivalence); verify one real generator run; examine the GSK3/eIF2B multi-investigation package with minimum reuse of the current format",
+          "status": "TODO",
+          "owner": "plan"
+        }
+      ]
+    },
+    "OBJ_H3": {
+      "order": 3,
+      "title": "Comparisons keep scope and uncertainty: find a concretely misleading comparison_engine output first (valid comparison hidden by an incompatible one, pair-not-comparable vs compound-not-usable, verified perturbation vs endpoint adequacy, endpoint/time/cell/unit association); parser assumptions (room temperature, conventional range, pHo/pHi/pH shift/difference, inherited reference provenance and overrides)",
+      "steps": [
+        {
+          "step": "Comparisons keep scope and uncertainty: find a concretely misleading comparison_engine output first (valid comparison hidden by an incompatible one, pair-not-comparable vs compound-not-usable, verified perturbation vs endpoint adequacy, endpoint/time/cell/unit association); parser assumptions (room temperature, conventional range, pHo/pHi/pH shift/difference, inherited reference provenance and overrides)",
+          "status": "TODO",
+          "owner": "plan"
+        }
+      ]
+    },
+    "OBJ_H4": {
+      "order": 4,
+      "title": "Reuse public RNA-table loading: measure real duplication across SCI44/SCI46/IT46; implement one parametric function only if it removes copies without losing provenance, else document the command and declare CHANGE = NONE; reproduce two concluded analyses and one small input with missing/ambiguous ids",
+      "steps": [
+        {
+          "step": "Reuse public RNA-table loading: measure real duplication across SCI44/SCI46/IT46; implement one parametric function only if it removes copies without losing provenance, else document the command and declare CHANGE = NONE; reproduce two concluded analyses and one small input with missing/ambiguous ids",
+          "status": "TODO",
+          "owner": "plan"
+        }
+      ]
+    },
+    "OBJ_H5": {
+      "order": 5,
+      "title": "Cost: one demonstrable dominant factor, comparable task measured before/after, correctness and coverage preserved; no re-proposal of the withdrawn audit memoisation without new evidence",
+      "steps": [
+        {
+          "step": "Cost: one demonstrable dominant factor, comparable task measured before/after, correctness and coverage preserved; no re-proposal of the withdrawn audit memoisation without new evidence",
+          "status": "TODO",
+          "owner": "plan"
+        }
+      ]
+    },
+    "OBJ_H6": {
+      "order": 6,
+      "title": "Verification, temporaries and continuity: verify_run in the three sessions, actor-sharing safety, no indiscriminate cleanup; continuity on IT47 and SCI47 (marker, record location, live-process wait, no duplicate restart, pending verification as open step); ci_runs single wait per workflow/SHA and API reset respected",
+      "steps": [
+        {
+          "step": "Verification, temporaries and continuity: verify_run in the three sessions, actor-sharing safety, no indiscriminate cleanup; continuity on IT47 and SCI47 (marker, record location, live-process wait, no duplicate restart, pending verification as open step); ci_runs single wait per workflow/SHA and API reset respected",
+          "status": "TODO",
+          "owner": "plan"
+        }
+      ]
+    },
+    "OBJ_H7": {
+      "order": 7,
+      "title": "DREAM oriented to use: recent correction not reaching a consumer, capability available but not called, association that changes the next brief, habit that repeats work; show where behaviour changes; System One optional",
+      "steps": [
+        {
+          "step": "DREAM oriented to use: recent correction not reaching a consumer, capability available but not called, association that changes the next brief, habit that repeats work; show where behaviour changes; System One optional",
+          "status": "TODO",
+          "owner": "plan"
+        }
+      ]
+    },
+    "OBJ_H8": {
+      "order": 8,
+      "title": "Claude Science comparison preparation, light: reuse existing path, snapshot/originals/tools/code/parameters, retrieval vs inference vs proposal vs validation; Auto mode issue belongs to the external runtime",
+      "steps": [
+        {
+          "step": "Claude Science comparison preparation, light: reuse existing path, snapshot/originals/tools/code/parameters, retrieval vs inference vs proposal vs validation; Auto mode issue belongs to the external runtime",
           "status": "TODO",
           "owner": "plan"
         }
