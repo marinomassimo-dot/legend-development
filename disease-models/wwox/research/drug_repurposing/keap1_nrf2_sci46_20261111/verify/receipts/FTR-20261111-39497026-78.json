@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-11T22:05:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-11T22:23:00Z",
+ "event_id": "FTR-20261111-39497026-78",
+ "evidence_basis": [
+  "verbatim_locator | proposition: C7 equals KI-696 per the document, citing Davies | Introduction | \"Compound 7 (C7), also known as KI-696, a highly potent and selective inhibitor of the Keap1-Nrf2 interaction\"",
+  "verbatim_locator | proposition: knockdown efficiency is declared, not shown as a number | Methods shRNA | \"Over 95% Nrf2/Keap1 knockdown in the stable cells was confirmed by western blotting and qPCR analyses.\"",
+  "verbatim_locator | proposition: 10 Gy in Methods versus 5 Gy in Results; 50 Gy in vivo | Methods Irradiation | \"cells in this research were irradiated with a single dose of 10 Gy\"",
+  "verbatim_locator | proposition: occlusion arm | Results 5 | \"C7 (1 μM) failed to further increase Nrf2 activation\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/keap1_nrf2_sci46_20261111/verify/audit.md"
+ ],
+ "prior_receipt": "FTR-20261111-39497026-79",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC11536861 via Europe PMC fullTextXML and supplementaryFiles zip (plain curl, scratch only); Fig 5 and Fig 6 viewed; other figures and the supplement docx not opened",
+ "study_id": {
+  "doi": "10.1186/s10020-024-00951-3",
+  "pmid": "39497026"
+ },
+ "workflow": "Blind verifier V8 (ks-y): Fig 5 and Fig 6 re-read; own figure values in recompute_figures.tsv. Staged for the integrator; the ledger was not written by the preparing actor."
+}

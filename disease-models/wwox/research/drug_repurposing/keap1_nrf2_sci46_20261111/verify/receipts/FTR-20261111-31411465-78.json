@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-11T22:05:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "not_read",
+  "figures": "captions_only",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-11T22:23:00Z",
+ "event_id": "FTR-20261111-31411465-78",
+ "evidence_basis": [
+  "verbatim_locator | proposition: Davies lead is compound 9 in Tran; Tran compound 7 is Winkel/Szill | Figure 1 legend | \"7: Winkel et al.36, Szill et al.37; 8: Yasuda et al.38; 9: Davies et al.27\"",
+  "verbatim_locator | proposition: compound 9 is crystallised as PDB 5FNU | Figure 1B legend | \"9 (right, violet, PDB code 5FNU)\"",
+  "verbatim_locator | proposition: Experimental name of 9 has the (R) oxathiazepine stereocentre and no stereodescriptor on the propanoic carbon | Experimental compound 9 | \"(R)-4-methyl-1,1-dioxido-3,4-\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/keap1_nrf2_sci46_20261111/verify/audit.md"
+ ],
+ "prior_receipt": "FTR-20261111-31411465-79",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "HAL accepted manuscript PDF (univ-rennes.hal.science hal-02474013v1, 78 pages, plain curl, text layer; scratch only). Read: Figure 1 legend, Experimental compound 9 paragraph, Table 1 row for compound 9, Discussion sentence on NQO1; other sections not read",
+ "study_id": {
+  "doi": "10.1021/acs.jmedchem.9b00723",
+  "pmid": "31411465"
+ },
+ "workflow": "Blind verifier V8 (ks-y): identity check of compound 9 against ChEMBL, PDB L6I and PubChem; Table 1 row 9 (FP Ki ~0.001, TSA EC50 1.9, dTm 25, SPR Kd 0.0014) agrees with assay_rows A03; 1H NMR methyl signal 1.14 (dd, J 59.0, 6.4 Hz) is compatible with a diastereomer mixture (inference, not stated by the authors). Staged for the integrator; the ledger was not written by the preparing actor."
+}

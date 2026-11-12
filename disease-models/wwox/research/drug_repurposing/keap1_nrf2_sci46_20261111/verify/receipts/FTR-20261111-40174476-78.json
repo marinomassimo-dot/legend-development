@@ -1,0 +1,35 @@
+{
+ "analysis_at": "2026-11-11T22:05:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-11T22:23:00Z",
+ "event_id": "FTR-20261111-40174476-78",
+ "evidence_basis": [
+  "verbatim_locator | proposition: only a KEAP1 shRNA line, no NRF2 loss arm | Results | \"we established Keap1 knockdown SH-SY5Y cell line (KD) by shRNA\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/keap1_nrf2_sci46_20261111/verify/audit.md"
+ ],
+ "prior_receipt": "FTR-20261111-40174476-79",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC11999321 via the PubMed PMC full-text tool; regex scan of the whole text with the same strings; the shRNA paragraph and Methods 4.3 read; not a complete read",
+ "study_id": {
+  "doi": "10.1016/j.redox.2025.103620",
+  "pmid": "40174476"
+ },
+ "workflow": "Blind verifier V8 (ks-y): Part B re-scan, second of two candidates; keyword scan only. Staged for the integrator; the ledger was not written by the preparing actor."
+}
