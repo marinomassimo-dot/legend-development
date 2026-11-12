@@ -1,0 +1,37 @@
+{
+ "analysis_at": "2026-11-12T17:39:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-12T17:42:04Z",
+ "event_id": "FTR-20261112-20953205-74",
+ "evidence_basis": [
+  "verbatim_locator | proposition: SFN in WT and KO mice after TBI | Abstract | \"Nrf2-knockout mice showed more severe oxidative stress and neurologic deficits after TBI and did not benefit from the effects of SFN.\""
+ ],
+ "evidence_depth": "abstract_only",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/output/sfn_table.tsv",
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/output/matrix.tsv",
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "abstract",
+ "source_locator": "PubMed tool abstract; the PubMed full-text tool for PMC4003325 returned an empty full_text and one plain-curl request of the PMC article page returned a reCAPTCHA challenge: bot check, unreachable, no other route",
+ "study_id": {
+  "doi": "10.1038/aps.2010.101",
+  "pmid": "20953205"
+ },
+ "workflow": "SCI48 Verifier V10 staged FTR-20261112-20953205-73 (partial_fulltext_read, not in the ledger, so not a prior). Correction round, producer P (nr-z). Staged for the integrator; the ledger was not appended at preparation time."
+}

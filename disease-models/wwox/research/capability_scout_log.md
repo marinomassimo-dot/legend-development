@@ -1800,3 +1800,8 @@ its scope, with shared entry/delegate/closing routes; operational causal attribu
 in epistemic discipline. No new tool, gate, registry or external service. Existing checks
 verify routing and schema behaviour; universal future model obedience is not demonstrated.
 **Next:** observe adoption through existing task evidence; no external scouting needed for this gap.
+
+
+## 2026-11-12 · Orchestrator · SCI48 (KEAP1/NRF2 comparator) · session capability outcome
+
+**GAP-NEW:** to freeze a candidate on a base that is behind `development/main` without paying a battery for faults main already fixed, a session lacks a check that says so. Evidence: the first SCI48 battery (run 20261112-175935-cbb802c5, SHA e2b0ce41) failed two suites that were already failing at its base 0bed3857 and had been fixed on main hours earlier (`ranking.json` receipt count 1816 against 1818 by `3b877bfc`; Chromium launcher by `4ff3ced5`), costing about 70 minutes. The pre-freeze recipe (`framework/scripts/README.md` section 13) covers the four quick suites, not the distance to main. **Candidate (not implemented here):** `verify_run.py run` prints one line, before the clone, "base is N commits behind development/main; generated surfaces touched on main since: …", never blocking. **Change made in this session:** none to the harness; the lesson is in the Orchestrator's memory and in the session evaluation. Owner of a fix: Harness engineering. No external scouting, no cost, no privacy risk.

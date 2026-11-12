@@ -24,7 +24,7 @@ sys.path.insert(0, str(HERE.parents[4] / "framework/scripts"))
 import hypothesis_package as hp  # noqa: E402
 import assay_conditions as ac  # noqa: E402
 
-ALIASES = {"d-apv": ["d-apv", "d-ap5", "apv"], "ro 25-6981": ["ro 25-6981", "ro25-6981", "ro 25 6981"], "uk-5099": ["uk-5099", "uk5099", "uk 5099"], "oxamate": ["oxamate", "sodium oxamate"], "ki-696": ["ki-696", "ki696", "l6i"], "dimethyl fumarate": ["dimethyl fumarate", "dmf"], "monomethyl fumarate": ["monomethyl fumarate", "mmf"]}
+ALIASES = {"d-apv": ["d-apv", "d-ap5", "apv"], "ro 25-6981": ["ro 25-6981", "ro25-6981", "ro 25 6981"], "uk-5099": ["uk-5099", "uk5099", "uk 5099"], "oxamate": ["oxamate", "sodium oxamate"], "ki-696": ["ki-696", "ki696", "l6i"], "dimethyl fumarate": ["dimethyl fumarate", "dmf"], "monomethyl fumarate": ["monomethyl fumarate", "mmf"], "ra839": ["ra839", "ra-839", "ra 839"], "sulforaphane": ["sulforaphane", "r-sulforaphane"], "bardoxolone methyl": ["bardoxolone methyl", "cddo-me"]}
 OUT_FIELDS = ["item_id", "name", "evidence_tier", "tier_props", "role_derived", "role_reason", "comparison_state", "premise_needed", "discriminating_measure", "public_source_work", "relaunch_question", "uncounted_props", "counter_props", "unclassified_props"]
 
 def names_of(name_full: str) -> list[str]:

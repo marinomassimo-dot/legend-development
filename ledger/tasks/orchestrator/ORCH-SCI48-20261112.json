@@ -7,14 +7,14 @@
  "OBJECTIVE": "Operator mandate SCI48 2026-11-12: resolve one pharmacological comparison (INV-08, KEAP1/NRF2) and return the result to generation. Which comparison between a non-covalent KEAP1/NRF2 binder, an electrophile already used as comparator and a genetic or orthogonal control can separate an NRF2-dependent effect from another action in a neural system. Entry points: (A) Winkel 2015 (RA839) full text and controls, IT46-Q06; (B) sulforaphane with NRF2 loss in neural cells, molecular vs viability vs function, IT46-Q09. Deliver a compact matrix (measured; supports/weakens; cannot conclude; transfer; role: probe/comparator/conditional hypothesis/not interpretable; missing datum), a minimal experimental comparison if justified, consumer_delta with applied vs consumed kept apart, DREAM, one optional cheap tail (IT46-Q02, target named ABAT in EUbOPEN), short Italian report. One producer + one blind verifier, sonnet medium/high, one active delegate. Zero spend, no contact, no personal data, no new infrastructure or gate. Independent of the Strategic Advisor.",
  "START_UTC": "2026-11-12T17:00:00Z",
  "BASELINE": "main 0bed3857 (SCI47 landed; IT47 d280c7c3 consumed SCI47 A, B and tail in part). Worktree .claude/worktrees/sci48, branch task/sci48. IT46-Q06 and IT46-Q09 still OPEN and unassigned on 2026-11-12. Folder disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/.",
- "MANDATE_STATE": "OPEN",
+ "MANDATE_STATE": "COMPLETE",
  "CURRENT_PACKAGE": {
-  "id": "landing",
-  "state": "battery PASS WITH SKIPS on 2d6de16a; landing",
+  "id": "closed",
+  "state": "main package landed 3f12c196; tail and closure on task/sci48t",
   "delegate_active": "none",
   "updated": "2026-11-12"
  },
- "RESUME": "Main package written and verified. Next: pre-freeze suites, gate, LINT, receipts verify, growth, freeze SHA, verify_run battery, task_close, safe_push; then message the integrator (delivery with SHA), then the optional tail IT46-Q02 only if cheap; then self-eval, DREAM, report.",
+ "RESUME": "Main package landed 3f12c196 (verified 2d6de16a). Closure increment (tail note, self-evaluation, scout log, record COMPLETE) on task/sci48t; lands with the four quick suites and gate after the closure commit. Pending outside this session: integrator recording of receipts -74 then -73 and the consumer rows; worktrees sci48 (task/sci48t) and older ones need operator authorisation to remove; /tmp/legend-verify-keep evidence intentionally kept.",
  "DECISIONS_TAKEN": [
   "2026-11-12 18:35 widening of the sulforaphane perimeter (S0 addendum 2): at most five further sources opened beyond abstract, chosen by PMC id, closeness to a WWOX-relevant preparation and SFN in both genotypes; reason: the verifier found the producer list incomplete (error class: candidate list), the cap of 8 assumed completeness; reversible: unopened candidates stay at the depth the verifier read. Narrow recheck of changed rows by the same verifier follows.",
   "2026-11-12 first battery on e2b0ce41 FAIL (two pre-existing base failures, fixed on main); merged development/main (832d7d43) into task/sci48 and re-run the four quick suites and the battery on the merge candidate; no scientific guard weakened"
@@ -29,7 +29,7 @@
   "producer exceeded the 40-candidate screening limit (100 titles displayed, 20 abstracts read, 4 opened) and had one query defect; kept: opened-beyond-abstract count (4) is within the S0 limit, so no result is discarded; stated in the README limits"
  ],
  "AUTHORISED_QUEUE_20261112B": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_A": {
    "order": 1,
    "steps": [
@@ -76,8 +76,9 @@
     },
     {
      "step": "Message the integrator with the delivery and deltas (applied vs consumed kept apart)",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "message to legend-development-4e (msg 79ab785c) after landing 3f12c196: answer, proposals rows 1-7 and 9, receipts order -74 then -73, costs; applied (two dated lines in SCI46 README) and consumed kept apart"
     }
    ]
   },
@@ -86,8 +87,9 @@
    "steps": [
     {
      "step": "Optional tail IT46-Q02 (EUbOPEN panel entry labelled ABAT): open only if cheap, not already resolved and able to change a consumer; else record why not",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "tail_sci48_20261112/README.md: IT46-Q02 not resolved; ChEMBL records read (label-only mapping, target CHEMBL2044 by symbol, confidence 9, no construct/protocol); SGC page is a single-page application, PDSP Ki download HTTP 403 (not retried), PDSP assays page dynamic; proposal: sharper blocking reason on the open-question row; no consumer change beyond it"
     }
    ]
   },
@@ -96,13 +98,15 @@
    "steps": [
     {
      "step": "Landing: pre-freeze four suites, gate PASS, LINT, receipts verify, growth, verify_run on the frozen SHA, task_close, safe_push",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "pre-freeze four suites OK, gate PASS, LINT WARN no BLOCK, receipts OK 1818, growth PASS; battery e2b0ce41 FAIL kept (2 base faults fixed on main), battery 2d6de16a PASS WITH SKIPS 247/12; task_close merge b875a4bb; remote moved (IT47 B1); merged, safe_push PUBLISHED 3f12c196 gate PASS ls-remote equal"
     },
     {
      "step": "Self-evaluation, DREAM, capability scout, takeaways, cleanup of own rebuildable temporaries, final Italian report",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "self_eval_orchestrator_sci48_20261112.md (Part 1 PASS); DREAM chain in README (survivor-set readout shared with INV-08 X0/INV-19; sIPSC functional endpoint shared with the slice work; kindling paper unreachable); capability scout GAP-NEW (verify_run base-distance line) logged; memory sci48-pitfalls; takeaways in the final report"
     }
    ]
   }
@@ -129,6 +133,16 @@
    "log_sha256": "c2d5bd7524e1db84bb8794805700c9436b8ff577b86700a5f5c69789e1f0777f",
    "clone": "REMOVED",
    "attribution": "PASS WITH SKIPS (247 targets, 12 skipped), on the merge candidate 2d6de16a; verdict attributed to that SHA only; later commits are closure-only (record, tail note)"
+  },
+  {
+   "run_id": "20261112-205956-e81247da",
+   "label": "battery",
+   "sha": "e1a854fd7cf0bb077b7e203caef6a5383a7d3804",
+   "state": "CONCLUDED",
+   "exit_code": 0,
+   "evidence_dir": "/tmp/legend-verify-keep/20261112-205956-e81247da",
+   "log_sha256": "24dc7e2a55c46f57df6ab6ce8776a8be3aa12839fbb8afe09f05569f7239db8c",
+   "clone": "KEPT"
   }
  ]
 }

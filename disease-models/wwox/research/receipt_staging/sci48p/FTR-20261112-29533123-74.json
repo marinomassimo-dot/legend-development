@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-11-12T17:18:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present"
+ },
+ "event_at": "2026-11-12T17:20:56Z",
+ "event_id": "FTR-20261112-29533123-74",
+ "evidence_basis": [
+  "verbatim_locator | proposition: Nrf2 loss in neurons by shRNA largely abolished the Sfn protection; no verification printed | Results, Sfn treatment reduces neuronal death | \"sh-Nrf2 largely abolished the protection of Sfn\"",
+  "verbatim_locator | proposition: loss timing only | Methods, In vitro Nrf2 knockdown | \"Experiments were performed 72-96 h after the transduction.\"",
+  "verbatim_locator | proposition: Sfn in both sh-Sc and sh-Nrf2 endothelial arms | Results, Sfn treatment preserves BBB integrity | \"Nrf2 knockdown significantly blunted the protective role of Sfn against OGD\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/output/sfn_table.tsv",
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/output/matrix.tsv",
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/output/evidence.tsv",
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/output/figure_notes.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "0b35481c9250fc0a353964a4359964bef9bc21749394bdccb36f9bded1ccbfc4",
+ "source_kind": "fulltext_local",
+ "source_locator": "stored PMC article page /home/desktop/legend-development/files/fulltext/PMC6365596_PMID29533123_pmc_html_2026-11-12.html (retrieved once by the Orchestrator, plain curl, default user agent) and six figure images in files/fulltext/PMC6365596_mao2019_figures/, all opened with the Read tool; the page carries no supplement; reference list not read (the loss verification, if any, would sit in cited earlier papers, refs 44 and 45, which were not read)",
+ "study_id": {
+  "doi": "10.1177/0271678x18764083",
+  "pmid": "29533123"
+ },
+ "workflow": "SCI48 producer P extension (nr-z): Mao 2019 read in full from the stored copy; replaces the earlier abstract-only receipt of the same event id, which was only a file and was not appended to the ledger. Staged for the integrator; the ledger was not appended at preparation time."
+}

@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-11-12T17:39:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-11-12T17:42:04Z",
+ "event_id": "FTR-20261112-25328080-74",
+ "evidence_basis": [
+  "verbatim_locator | proposition: SFN did not enhance hematoma cleanup in KO mice | Results, Nrf2 promotes hematoma clearance after ICH in animals | \"treatment with SF did not result in enhanced hematoma cleanup in the Nrf2-KO mice\"",
+  "verbatim_locator | proposition: ARE decoy attenuated the SFN effect in primary microglia (inhibitor, second reagent class) | Results, first section | \"the ARE-DNA decoy attenuated the ability of SF treatment to enhance phagocytosis\""
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/output/sfn_table.tsv",
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/output/matrix.tsv",
+  "disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/output/evidence.tsv"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": null,
+ "source_kind": "fulltext_remote",
+ "source_locator": "PMC4361377 via the PubMed PMC full-text tool (text only; figure images not displayed; Table 1 primers not displayed)",
+ "study_id": {
+  "doi": "10.1111/jnc.12974",
+  "pmid": "25328080"
+ },
+ "workflow": "SCI48 Verifier V10 staged FTR-20261112-25328080-73 (targeted text reading; not in the ledger, so not a prior). Correction round, producer P (nr-z). Staged for the integrator; the ledger was not appended at preparation time."
+}
