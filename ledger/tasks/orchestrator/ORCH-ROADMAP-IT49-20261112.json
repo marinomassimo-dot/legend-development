@@ -1,0 +1,89 @@
+{
+ "_schema": "orchestrator-task-v1",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "P0",
+ "TASK_ID": "ORCH-ROADMAP-IT49-20261112",
+ "START_UTC": "2026-11-12T23:00:00Z",
+ "OBJECTIVE": "LEGEND IT49 (operator mandate, queued after IT48): turn available knowledge and verified deliveries into better pharmacological hypotheses, comparisons and experimental decisions; test whether the capability generalises on one bounded case. Indicative window up to ten hours from the effective start; finish earlier when done. The Strategic Advisor ceiling (A1,B1,A2,B2) is reached: no further invocation. No ranking, sign or qualification changes to show an effect; no predictive-improvement claim from better access to knowledge. Final report in Italian opens with: 'Quale capacita generativa e diventata utilizzabile, e quale decisione farmacologica o sperimentale cambia?'.",
+ "AUTHORISED_QUEUE_20261108": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Close the IT48 pilot: reconcile the record with the work; keep apart advice differing from the plan, decision actually changed, verified result, demonstrated improvement; Stage B agreement after reading the plan is not independent confirmation; A2 exposure stays declared",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "IT48 landed 6882ef56; provisional pilot balance in ORCH-ROADMAP-IT48-20261112.json (PILOT_BALANCE_PROVISIONAL); CI pending on 6882ef56"
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Reconcile two discrepancies: (A) VERDICTS counts 5 SUPPORTED/3 PARTLY vs the Counts line (done: corrected, five consumers); (B) record the A2 input-availability limit in the balance (done)",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "sci43_reopen_it48_20261112/verify/VERDICTS.md correction paragraph; generation_it48_20261112/README.md"
+    }
+   ]
+  },
+  "OBJ_P3": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "Consume SCI48 to the end with a concrete disposition per row; check RA839 qualification, comparator vs probe, Q06/Q09 without closing new unknowns, propositions in the comparisons run, counter-evidence and limits, receipts through the writers",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "generation_it48_20261112/README.md dispositions table (rows 1-10); engine rerun; 37 receipts recorded; open: engine comparator role (Harness)"
+    }
+   ]
+  },
+  "OBJ_P4": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "Make the remaining hypotheses act: recompute the unmapped KH/HY state from the manifest and readers; smallest coherent set; cells kept per hypothesis (observation and source, relation, cell context/development/preparation, pharmacological action, unresolved premise, declared rivals, discriminating measure, reopening/abandonment condition); KH1 carries the IT48 SCI43 corrections; show consumption by running the path",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P5": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "One bounded generalisation case chosen before looking, not used to build the mapping: simple target search vs previous path vs path with hypotheses, context and premises; independent reference only if adequate; retrospective case claims no predictive superiority",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P6": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "Return results to the research loop: SCI49 when available (no duplication); open questions with decision, result, residual uncertainty, next step, reason; readable-now vs reanalysis vs measurement; dashboard shows the filone, the comparison made more interpretable, the premise blocking a proposal, the result that would change the decision; no parallel register",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  },
+  "OBJ_P7": {
+   "order": 7,
+   "steps": [
+    {
+     "step": "Closure: derivatives regenerated after the last receipts/data, browser verified in the real runtime, batteries attributed by SHA, landing, CI, cleanup of own temporaries; final report in Italian",
+     "status": "TODO",
+     "owner": "orchestrator",
+     "evidence": ""
+    }
+   ]
+  }
+ }
+}
