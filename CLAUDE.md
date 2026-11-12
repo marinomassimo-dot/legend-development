@@ -96,9 +96,10 @@ Three facts bind before you have finished reading anything else:
 | A session or batch changed something material (verified result, corrected premise, moved limit, repeated error, resolved question) — or "dream" / "what was not consumed" on request | [`legend-dream`](.claude/skills/legend-dream/SKILL.md) — called from self-eval; ends in one line when nothing changed |
 | Every session, final response | [`legend-session-takeaways`](.claude/skills/legend-session-takeaways/SKILL.md) |
 | ⚪ **Optional, never required** — about to write *first / novel / absent / untested / unique*; one mechanism reached too fast; an adjacent literature may hold the assay; a prediction should be fixed before searching; an experiment must discriminate rather than measure; a new question makes a read paper worth reopening | [`legend-discovery-method`](.claude/skills/legend-discovery-method/SKILL.md) — pick one primitive; using one alone is the normal case |
+| ⚪ **Optional, never required** — the Orchestrator wants a separate strategic view of which question, method or branch deserves investment next (campaign start, after an increment, or after a material result) | [`legend-strategic-advisor`](.claude/skills/legend-strategic-advisor/SKILL.md) — read-only; Stage A independent, Stage B dialogue; advises, never gates |
 
-> ⚪ **The last row is the only optional entry in this table.** `legend-discovery-method` is a
-> toolkit, not a bootstrap: it gates nothing, is required by nothing, and a session that never
+> ⚪ **The last two rows are the only optional entries in this table.** `legend-discovery-method` is a
+> toolkit and `legend-strategic-advisor` a consultation, not bootstraps: each gates nothing, is required by nothing, and a session that never
 > invokes it has broken no rule. Every other row above applies without being asked.
 
 ---
