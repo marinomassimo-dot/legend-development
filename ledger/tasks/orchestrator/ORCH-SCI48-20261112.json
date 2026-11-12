@@ -1,0 +1,97 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-SCI48-20261112",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Operator mandate SCI48 2026-11-12: resolve one pharmacological comparison (INV-08, KEAP1/NRF2) and return the result to generation. Which comparison between a non-covalent KEAP1/NRF2 binder, an electrophile already used as comparator and a genetic or orthogonal control can separate an NRF2-dependent effect from another action in a neural system. Entry points: (A) Winkel 2015 (RA839) full text and controls, IT46-Q06; (B) sulforaphane with NRF2 loss in neural cells, molecular vs viability vs function, IT46-Q09. Deliver a compact matrix (measured; supports/weakens; cannot conclude; transfer; role: probe/comparator/conditional hypothesis/not interpretable; missing datum), a minimal experimental comparison if justified, consumer_delta with applied vs consumed kept apart, DREAM, one optional cheap tail (IT46-Q02, target named ABAT in EUbOPEN), short Italian report. One producer + one blind verifier, sonnet medium/high, one active delegate. Zero spend, no contact, no personal data, no new infrastructure or gate. Independent of the Strategic Advisor.",
+ "START_UTC": "2026-11-12T17:00:00Z",
+ "BASELINE": "main 0bed3857 (SCI47 landed; IT47 d280c7c3 consumed SCI47 A, B and tail in part). Worktree .claude/worktrees/sci48, branch task/sci48. IT46-Q06 and IT46-Q09 still OPEN and unassigned on 2026-11-12. Folder disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/.",
+ "MANDATE_STATE": "OPEN",
+ "CURRENT_PACKAGE": {
+  "id": "S0",
+  "state": "frame written",
+  "delegate_active": "none",
+  "updated": "2026-11-12"
+ },
+ "RESUME": "S0_before_search.md written (priors S1-S8, stop rule); next: commit it, bind marker, access recon of Winkel 2015 (one retry each of Europe PMC XML and PubMed tool), brief and producer.",
+ "DECISIONS_TAKEN": [],
+ "DELEGATIONS": [],
+ "ESCALATIONS": [],
+ "STOP_LOG": [],
+ "DEFAULTS_TAKEN": [],
+ "AUTHORISED_QUEUE_20261112B": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_A": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Bind marker; reconcile SCI46/SCI47/IT47 and the open-question rows IT46-Q06, Q09, Q02",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "S0 frame, priors and stop rule written and committed before any new search",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Access reconnaissance of Winkel 2015 (one retry per allowed route, reason stated) and sulforaphane candidate list; entry points confirmed or replaced with a written reason",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Briefs; one producer (sonnet medium) reads sources into tables; staged receipts validated",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "One blind verifier (sonnet high) with full originals; corrections applied to the decisive propositions only",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_B": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Matrix, minimal comparison, hypotheses/limits, README answer first, consumer_delta",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Message the integrator with the delivery and deltas (applied vs consumed kept apart)",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_C": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "Optional tail IT46-Q02 (EUbOPEN panel entry labelled ABAT): open only if cheap, not already resolved and able to change a consumer; else record why not",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_D": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "Landing: pre-freeze four suites, gate PASS, LINT, receipts verify, growth, verify_run on the frozen SHA, task_close, safe_push",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "Self-evaluation, DREAM, capability scout, takeaways, cleanup of own rebuildable temporaries, final Italian report",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ },
+ "VERIFICATION_EVIDENCE": []
+}
