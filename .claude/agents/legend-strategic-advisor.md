@@ -61,7 +61,8 @@ a branch, another question in the same branch, another branch, and a shared upst
 Do not recommend clinical treatment, dose, route or schedule, and do not analyse patient-level
 data. Do not propose to change a scientific conclusion, ranking, need direction or candidate state
 by advice: say what evidence would. Do not propose a new gate, approval step, scheduler or
-permanent session. Do not copy private identifiers, addresses or personal data into the assessment.
+permanent session. Do not copy private identifiers, addresses or personal data into the assessment, and never put the
+operator's address or any identifier in a URL or a fetch prompt: your context may contain them, and a fetch sends them out.
 
 ## What to return
 

@@ -384,7 +384,8 @@ def check(campaign: Path) -> int:
             problems.append(f"{meta_path.parent.name}: result event and session transcript disagree")
         if meta["runtime_readback"].get("census", {}).get("changed_mid_run"):
             problems.append(f"{meta_path.parent.name}: the model changed mid-run")
-        opened = {str((c.get("input") or {}).get("file_path") or (c.get("input") or {}).get("path") or "") for c in meta["tool_calls"]}
+        # an attempt the runtime refused (is_error) is the deny rule working; only a call that went through counts as having opened it
+        opened = {str((c.get("input") or {}).get("file_path") or (c.get("input") or {}).get("path") or "") for c in meta["tool_calls"] if not c.get("is_error")}
         text = assessment.read_text(encoding="utf-8")
         if "Inspected" not in text:
             problems.append(f"{meta_path.parent.name}: no 'Inspected' section")

@@ -90,6 +90,17 @@ class Capture(Base):
         self.assertIs(json.loads((self.campaign / "A1" / "meta.json").read_text())["capture"]["transcript_cross_check"], False)
         self.assertEqual(sa.check(self.campaign), 1)
 
+    def test_sealed_path_refused_is_fine_but_opened_is_a_problem(self) -> None:
+        self.run_stage()
+        meta_path = self.campaign / "A1" / "meta.json"
+        meta = json.loads(meta_path.read_text())
+        meta["tool_calls"].append({"name": "Read", "input": {"file_path": f"x/{sa.SEALED}/INTENDED_ACTION_1.md"}, "is_error": True})
+        meta_path.write_text(json.dumps(meta))
+        self.assertEqual(sa.check(self.campaign), 0)
+        meta["tool_calls"][-1]["is_error"] = False
+        meta_path.write_text(json.dumps(meta))
+        self.assertEqual(sa.check(self.campaign), 1)
+
     def test_editing_the_saved_assessment_is_detected(self) -> None:
         self.run_stage()
         with (self.campaign / "A1" / "assessment.md").open("a") as handle:
