@@ -9,15 +9,18 @@
  "BASELINE": "main 0bed3857 (SCI47 landed; IT47 d280c7c3 consumed SCI47 A, B and tail in part). Worktree .claude/worktrees/sci48, branch task/sci48. IT46-Q06 and IT46-Q09 still OPEN and unassigned on 2026-11-12. Folder disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/.",
  "MANDATE_STATE": "OPEN",
  "CURRENT_PACKAGE": {
-  "id": "V",
-  "state": "verifier dispatching",
-  "delegate_active": "nr-y (sonnet high)",
+  "id": "P-corr",
+  "state": "producer correction round running",
+  "delegate_active": "nr-z (resumed)",
   "updated": "2026-11-12"
  },
- "RESUME": "Verifier nr-y running (VERIFIER_BRIEF.md; receipts -73; blind to answers.md/phase_note/minimum_comparison). On return: census read-back, apply corrections to decisive propositions only (script, idempotent), then README/matrix final/minimum comparison/consumer_delta.",
- "DECISIONS_TAKEN": [],
+ "RESUME": "Producer correction round running (verifier corrections, 5 more openings, CORRECTIONS.tsv). On return: census, narrow verifier recheck of changed/new rows (resume ab28c0d5), then README/final matrix/consumer_delta.",
+ "DECISIONS_TAKEN": [
+  "2026-11-12 18:35 widening of the sulforaphane perimeter (S0 addendum 2): at most five further sources opened beyond abstract, chosen by PMC id, closeness to a WWOX-relevant preparation and SFN in both genotypes; reason: the verifier found the producer list incomplete (error class: candidate list), the cap of 8 assumed completeness; reversible: unopened candidates stay at the depth the verifier read. Narrow recheck of changed rows by the same verifier follows."
+ ],
  "DELEGATIONS": [
-  "P producer nr-z (agent aa8b34b0): asked sonnet/medium; read back sonnet x-all, effort medium; three runs (first, two bounded extensions by SendMessage); see COST_NOTE for final census. Outputs: winkel_table, sfn_table, matrix 29 rows (probe 2, comparator 11, not interpretable 13, conditional 3), 10 staged receipts (-74) validated. Extension 1: four abstracts could not be opened (no PMC id); extension 2: Mao 2019 read from the PMC page fetched once by the Orchestrator (new mode, no block bypassed)"
+  "P producer nr-z (agent aa8b34b0): asked sonnet/medium; read back sonnet x-all, effort medium; three runs (first, two bounded extensions by SendMessage); see COST_NOTE for final census. Outputs: winkel_table, sfn_table, matrix 29 rows (probe 2, comparator 11, not interpretable 13, conditional 3), 10 staged receipts (-74) validated. Extension 1: four abstracts could not be opened (no PMC id); extension 2: Mao 2019 read from the PMC page fetched once by the Orchestrator (new mode, no block bypassed)",
+  "V verifier nr-y (agent ab28c0d5): asked sonnet/high; read back sonnet x58, effort high x58; 58 turns, output 108,884, cache read 11,462,530, birth context 18,604; verdicts 100 rows (Winkel 31/33 correct, 1 minor defect, 1 unverifiable; SFN rows 22/23; absence claims 1 of 3 correct; matrix 23/29), 25 staged receipts (-73) validated. Found 9+ neural SFN-in-null studies missing from the producer list"
  ],
  "ESCALATIONS": [],
  "STOP_LOG": [],
