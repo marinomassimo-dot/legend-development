@@ -9,14 +9,16 @@
  "BASELINE": "main 0bed3857 (SCI47 landed; IT47 d280c7c3 consumed SCI47 A, B and tail in part). Worktree .claude/worktrees/sci48, branch task/sci48. IT46-Q06 and IT46-Q09 still OPEN and unassigned on 2026-11-12. Folder disease-models/wwox/research/drug_repurposing/nrf2_comparator_sci48_20261112/.",
  "MANDATE_STATE": "OPEN",
  "CURRENT_PACKAGE": {
-  "id": "S0",
-  "state": "frame written",
-  "delegate_active": "none",
+  "id": "P",
+  "state": "producer running",
+  "delegate_active": "nr-z (sonnet medium)",
   "updated": "2026-11-12"
  },
- "RESUME": "S0_before_search.md written (priors S1-S8, stop rule); next: commit it, bind marker, access recon of Winkel 2015 (one retry each of Europe PMC XML and PubMed tool), brief and producer.",
+ "RESUME": "Producer nr-z running (Winkel table, sulforaphane table, matrix, minimum comparison). On return: census read-back, check outputs, write VERIFIER_BRIEF.md (full originals, blind to answers.md), dispatch verifier nr-y (sonnet high, receipts -73).",
  "DECISIONS_TAKEN": [],
- "DELEGATIONS": [],
+ "DELEGATIONS": [
+  "P producer nr-z: asked sonnet/medium; dispatched 2026-11-12 17:20Z; brief BRIEF_P.md; staged receipts end -74"
+ ],
  "ESCALATIONS": [],
  "STOP_LOG": [],
  "DEFAULTS_TAKEN": [],
@@ -27,22 +29,25 @@
    "steps": [
     {
      "step": "Bind marker; reconcile SCI46/SCI47/IT47 and the open-question rows IT46-Q06, Q09, Q02",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "marker recognised; SCI46/SCI47/IT47 reconciled (p2_sci46_it47.md, README SCI46, decisive.tsv D20); IT46-Q06 and Q09 read OPEN and unassigned in open_questions_map.tsv, BRIEFS B5 lists both; IT46-Q02 OPEN"
     },
     {
      "step": "S0 frame, priors and stop rule written and committed before any new search",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "S0_before_search.md committed 74999d3b before any new search (priors S1-S8)"
     },
     {
      "step": "Access reconnaissance of Winkel 2015 (one retry per allowed route, reason stated) and sulforaphane candidate list; entry points confirmed or replaced with a written reason",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "Winkel: Europe PMC XML HTTP 500 (3rd) and PubMed tool empty (retry once each); PMC article page HTTP 200 with body and 9 figures via plain curl (new mode, no block bypassed); stored in files/fulltext; supplement interstitial not requested again; addendum f66867c6. Entry points kept: both answer the same decision"
     },
     {
      "step": "Briefs; one producer (sonnet medium) reads sources into tables; staged receipts validated",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator"
     },
     {
