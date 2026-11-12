@@ -20,37 +20,37 @@
  "STOP_LOG": [],
  "DEFAULTS_TAKEN": [],
  "AUTHORISED_QUEUE_20261112A": {
-  "MANDATE_STATE": "CONTINUE",
+  "MANDATE_STATE": "OPEN",
   "OBJ_A": {
    "order": 1,
    "steps": [
     {
      "step": "Bind marker; check prior readings and receipts of 34634460; read IT46 s5/s7/p9 and INV-10/INV-18",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "orchestrator",
      "evidence": ""
     },
     {
      "step": "Frame and priors for package A written before reading the source",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "orchestrator",
      "evidence": ""
     },
     {
      "step": "Producer for package A (original data reconstruction, inversion check, matrix, lever comparison)",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "orchestrator",
      "evidence": ""
     },
     {
      "step": "Blind verifier on decisive premises and numbers, recheck of substantive corrections",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "orchestrator",
      "evidence": ""
     },
     {
      "step": "Review of p9 two-lever design, minimal design, consumer_delta, deliver A (gate, LINT, receipts, growth, verify_run on frozen SHA, task_close, safe_push)",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "orchestrator",
      "evidence": ""
     }
@@ -61,19 +61,19 @@
    "steps": [
     {
      "step": "Choose the single highest-value case and fix question, panel, comparison and contrary result before any search",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "orchestrator",
      "evidence": ""
     },
     {
      "step": "Public processed resource analysis or stated perimeter; correct nrf2_expression_sci46 wording",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "orchestrator",
      "evidence": ""
     },
     {
      "step": "Verification and delivery of B",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "orchestrator",
      "evidence": ""
     }
@@ -84,7 +84,7 @@
    "steps": [
     {
      "step": "Selective tail: one or two items that change a consumer (text/supplements of an open NRF2 question; IT45 debts 38116420 and 21964340 as effective-coverage receipts; adequacy criterion; compensatory lever)",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "orchestrator",
      "evidence": ""
     }
@@ -95,7 +95,7 @@
    "steps": [
     {
      "step": "Self-evaluation, DREAM, capability scout, takeaways, cleanup of own rebuildable temporaries, final short report",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "orchestrator",
      "evidence": ""
     }
